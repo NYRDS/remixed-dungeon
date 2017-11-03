@@ -25,4 +25,6 @@
     <string name="RabbitEars_Name">토끼 귀 머리띠</string>
     <string name="RabbitEars_Info">전설에 따르면 토끼들은 운이 좋은 짐승으로 알려져 있다. 아니면 토끼의 몸 일부를 가지는 게 행운을 가져다 준다는 믿음이 있다. 생각해 보니 잡혀서 장식으로 만들어진 토끼한테는 그다지 운이 좋다곤 할  수 없을 듯 하다.</string>
 	
-	</resources>
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">호박</string>
+    </resources>

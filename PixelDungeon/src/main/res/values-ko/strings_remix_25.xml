@@ -19,4 +19,7 @@
     <string name="DeathKnight_Name">죽음의 기사</string>
     <string name="DeathKnight_Gender">남성</string>
     <string name="DeathKnight_Name_Objective">죽음의 기사</string>
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">공포의 기사</string>
+    <string name="DreadKnight_Name_Objective">공포의 기사</string>
     </resources>

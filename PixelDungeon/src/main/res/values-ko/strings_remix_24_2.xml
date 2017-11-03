@@ -3,11 +3,27 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF GoldenSword -->
     <string name="GoldenSword_Name">금 칼</string>
-    <string name="GoldenSword_Info">보통 금과 같은 무른 금속들은 장식으로만 쓰입니다. 하지만 이 칼은 여러가지를 꽤나 잘 베어버릴 수 있습니다.</string>
+    <string name="GoldenSword_Info">보통 금과 같은 무른 금속으로 만들어진 무기는 장식으로만 쓰입니다. 하지만 이 칼은 여러가지를 꽤나 잘 베어버릴 수 있습니다.</string>
     <string name="GoldenSword_Gender">남성</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF GoldenStatue CLASS -->
     <string name="GoldenStatue_Name">황금 상</string>
+    <string name="GoldenStatue_Gender">여성</string>
+    <string name="GoldenStatue_Name_Objective">황금 상</string>
+    <string name="GoldenStatue_Desc">믿기 어렵겠지만, 이 웅장한 상은 전시품이 아니라 순진한 모험가들을 기다리는 사악한 생명체입니다. 언뜻 봐도 _%s_이  석상이 들고 있던 무기의 일부였던 것처럼 보입니다.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Name">강령술사</string>
+    <string name="NecromancerNPC_Gender">남성</string>
+    <string name="NecromancerNPC_Name_Objective">강령술사</string>
+    <string name="NecromancerNPC_Desc">이 중년 남자는 약간 짜증을 내면서 흥분하는 것 같습니다. 그는 뼈 조각으로 만든 합성 갑옷을 입고 있습니다.</string>
+    <string name="NecromancerNPC_Intro">아! 보기 드문 광경이군! 죽지 않은 동료 모험가라니. 대단하군! 아... 미안하네. 가끔 너무 흥분할 때가 있어서. 보시다시피 나는 강령술사라네. 시체와 죽음을 연구하는 것은 내가 살면서 해야하는 것이지만, 같은 것을 계속 보다보니 결국 질려버리고 말았지. 하지만 내가 여기에 있는 이유도 그것 때문이야. 몇 주간의 내 계산에 따르면, 이 던전의 어딘가에서 굉장한 일이 벌어질 거야. 네크로폴리스, 고대 도시의 시체가 문을 열거야. 그리고... 더 많은 말은 못하겠군. 이미 충분히 시간을 낭비했거든. 나는 준비를 해야 하니, 나중에 돌아오게.</string>
+    <string name="NecromancerNPC_Message1">시간이 없어, 시간이 없어...</string>
+    <string name="NecromancerNPC_Message2">난 준비되어 있어야만해.</string>
+    <string name="NecromancerNPC_Message3">나는 죽은 자들의 부름을 들을 수 있어.</string>
+    <string name="NecromancerNPC_Message4">네크로폴리스 안에는 매우 특별한 게 있을 거야.</string>
+
     <string name="RatKing_Name_Objective">쥐 대왕</string>
-    </resources>
+    <string name="RatKing_Gender">남성</string>
+</resources>

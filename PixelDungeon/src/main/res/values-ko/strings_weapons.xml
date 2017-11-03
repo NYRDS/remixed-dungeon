@@ -189,10 +189,19 @@
   <string name="Kusarigama_Gender">여성</string>
   <string name="Kusarigama_Pull">당기다</string>
   <!--STRINGS OF ChaosSword CLASS-->
-  <string name="ChaosSword_Name">혼돈검</string>
+  <string name="ChaosSword_Name">혼돈 검</string>
   <string name="ChaosSword_Info">이 검의 칼날은 순수한 혼돈으로 만들어졌으며 때때로 가끔 진동합니다. 큰 힘은 무기 안에 저장되어 거의 모든 것을 반으로 줄입니다. 무기의 강력한 힘에 대처하기 위해서는 훌륭한 기술이 필요합니다.</string>
+  <string name="ChaosSword_Gender">남성</string>
   <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">혼돈 활</string>
+  <string name="ChaosBow_Info">이 공포스러운 활은 혼돈의 힘으로 차있습니다. 화살들은 혼돈의 기운을 담아 목표물에게 발사 될 것입니다. 하지만 만약 빗나가게 되면...</string>
+  <string name="ChaosBow_Gender">남성</string>
   <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">혼돈 지팡이</string>
+  <string name="ChaosStaff_Info">지팡이에 혼돈의 힘이 스며들었습니다! 어떤 마법사가 꿈꾸거나 두려워할 수나있을까요?</string>
+  <string name="ChaosStaff_Gender">남성</string>
   <!--STRINGS OF SacrificialSword CLASS-->
   <string name="SacrificialSword_Name">희생의 검</string>
+  <string name="SacrificialSword_Info">얼핏 보기엔 푸른 녹이 슨 이 낡은 동 검은 전혀 쓸모없어 보입니다. 하지만 오래된 고대의 힘이 잠들어 있습니다. 이 검의 힘은 거의 모든 생명체들을 무기력한 노예로 만들 수 있습니다. 그들을 깨울 올바른 방법을 찾아야겠군요...</string>
+  <string name="SacrificialSword_Gender">남성</string>
 </resources>

@@ -1,3 +1,51 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">혼돈 투구</string>
+    <string name="ChaosHelmet_Info">붉은 피의 투구. 혼돈의 전사의 상징입니다.</string>
+
+
+    <string name="Mana_Title">마나</string>
+    <string name="Mana_Cost">마나 소모:</string>
+    <string name="Spells_NotEnoughSP">\"%1$s\" 주문을 사용할 마나가 없습니다.</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">점화</string>
+    <string name="Ignite_Info">선택한 위치를 점화시킵니다. 풀이나 캐릭터, 물체를 태울 수 있습니다.</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">속박</string>
+    <string name="RootSpell_Info">선택한 캐릭터를 잠시 속박시킵니다.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">돌풍</string>
+    <string name="WindGust_Info">돌풍을 일으켜 선택한 캐릭터를 밀쳐냅니다.</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">냉동</string>
+    <string name="FreezeGlobe_Info">선택한 캐릭터를 잠시 아무런 행동을 하지 못하게 냉동시킵니다.</string>
+
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">마법 횃불</string>
+    <string name="MagicTorch_Info">어두운 던전에서 빛을 밝힙니다.</string>
+
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">회복</string>
+    <string name="Healing_Info">이 주문은 모든 모험가들에게 중요합니다. 시전자의 최대 체력의 1/3을 회복합니다.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">마나가 부족합니다!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">마신다</string>
+    <string name="Drink_Message">상쾌한 기분이 든다!</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">지식의 고서</string>
+    <string name="TomeOfKnowledge_Info">이 고서는 비밀의 수수께끼와 미스터리로 가득 차있습니다! 읽는 건 어려울 수 있지만, 이해할 수 있게 되면 마력이 증가할 것입니다!</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">마법서</string>
     </resources>
