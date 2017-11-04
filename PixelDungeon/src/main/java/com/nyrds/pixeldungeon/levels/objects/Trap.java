@@ -1,7 +1,9 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.Util;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -17,6 +19,8 @@ import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Locale;
 
 /**
  * Created by mike on 01.07.2016.
@@ -40,6 +44,12 @@ public class Trap extends LevelObject {
 	private int    targetCell;
 	@Packable
 	private int    uses;
+
+	@Packable
+	private String script;
+
+	@Packable
+	private String data;
 
 	@Packable
 	private boolean activatedByItem = false;
@@ -66,7 +76,7 @@ public class Trap extends LevelObject {
 		interact(chr);
 
 		if (chr instanceof Hero) {
-			Hero hero = (Hero)chr;
+			Hero hero = (Hero) chr;
 			hero.interrupt();
 		}
 		return true;
@@ -95,7 +105,15 @@ public class Trap extends LevelObject {
 
 		if (uses != 0) {
 			uses--;
-			ITrigger trigger = Util.byNameFromList(traps, kind);
+			ITrigger trigger = null;
+
+			if (kind.equals("scriptFile")) {
+				trigger = new ScriptTrap(script, data);
+				LuaEngine.getEngine().runScriptFile(script);
+			} else {
+				trigger = Util.byNameFromList(traps, kind);
+			}
+
 			if (trigger != null) {
 				trigger.doTrigger(targetCell, hero);
 			}
@@ -123,7 +141,10 @@ public class Trap extends LevelObject {
 		uses = obj.optInt("uses", 1);
 		secret = obj.optBoolean("secret", false);
 		activatedByItem = obj.optBoolean("activatedByItem", false);
-		activatedByMob  = obj.optBoolean("activatedByMob", false);
+		activatedByMob = obj.optBoolean("activatedByMob", false);
+
+		script = obj.optString("script", "");
+		data = StringsManager.maybeId(obj.optString("data", ""));
 	}
 
 	@Override
@@ -150,7 +171,7 @@ public class Trap extends LevelObject {
 
 	@Override
 	public int image() {
-		if(uses>0) {
+		if (uses > 0) {
 			int nKind = Util.indexOf(traps, kind);
 			return nKind + 1;
 		} else {
@@ -165,5 +186,22 @@ public class Trap extends LevelObject {
 	@Override
 	public boolean nonPassable() {
 		return uses > 0;
+	}
+
+	class ScriptTrap implements ITrigger {
+		private String scriptFile;
+		private String data;
+
+		ScriptTrap(String _scriptFile, String _data) {
+			scriptFile = _scriptFile;
+			data = _data;
+		}
+
+		@Override
+		public void doTrigger(int cell, Char ch) {
+			LuaEngine.getEngine().runScriptText(String.format(Locale.ROOT, "require(\"%s\")", scriptFile));
+			LuaEngine.getEngine().call("setData", data);
+			LuaEngine.getEngine().call("trap", cell, ch);
+		}
 	}
 }

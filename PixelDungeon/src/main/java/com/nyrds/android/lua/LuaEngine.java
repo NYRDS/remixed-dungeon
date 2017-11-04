@@ -5,7 +5,7 @@ package com.nyrds.android.lua;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-import android.support.annotation.Nullable;
+import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -22,6 +22,7 @@ import org.luaj.vm2.lib.PackageLib;
 import org.luaj.vm2.lib.ResourceFinder;
 import org.luaj.vm2.lib.StringLib;
 import org.luaj.vm2.lib.TableLib;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JseBaseLib;
 import org.luaj.vm2.lib.jse.JseIoLib;
 import org.luaj.vm2.lib.jse.JseMathLib;
@@ -39,6 +40,24 @@ public class LuaEngine implements ResourceFinder {
 		return globals.get(method).call().tojstring();
 	}
 
+	synchronized public void call(String method, Object arg1) {
+		try {
+			LuaValue methodForData = globals.get(method);
+			methodForData.call(CoerceJavaToLua.coerce(arg1));
+		} catch (LuaError err) {
+			reportLuaError(err);
+		}
+	}
+
+	synchronized public void call(String method, Object arg1, Object arg2) {
+		try {
+			LuaValue methodForData = globals.get(method);
+			methodForData.call(CoerceJavaToLua.coerce(arg1),CoerceJavaToLua.coerce(arg2));
+		} catch (LuaError err) {
+			reportLuaError(err);
+		}
+	}
+
 	private class log extends OneArgFunction {
 		public LuaValue call(LuaValue x) {
 			GLog.i("lua: " + x.tojstring());
@@ -52,9 +71,11 @@ public class LuaEngine implements ResourceFinder {
 		}
 	}
 
-	;
+	public static LuaEngine getEngine() {
+		return engine;
+	}
 
-	public void reset(@Nullable String scriptFile) {
+	private LuaEngine() {
 		globals = new Globals();
 		globals.load(new JseBaseLib());
 		globals.load(new PackageLib());
@@ -72,33 +93,28 @@ public class LuaEngine implements ResourceFinder {
 		globals.finder = this;
 		globals.set("log", new log());
 		globals.set("loadResource", new resLoader());
-
-		if(scriptFile==null) {
-			return;
-		}
-
-		try {
-			globals.loadfile(scriptFile).call();
-		} catch (LuaError err) {
-			reportLuaError(err);
-		}
-	}
-
-	public static LuaEngine getEngine() {
-		return engine;
-	}
-
-	private LuaEngine() {
-		reset(null);
 	}
 
 	private void reportLuaError(LuaError err) {
 		GLog.w(err.getMessage());
 	}
 
-	synchronized public void runScriptFile(String fileName) {
-		reset(fileName);
+	synchronized public void runScriptFile(@NonNull String fileName) {
+		try {
+			globals.loadfile(fileName).call();
+		} catch (LuaError err) {
+			reportLuaError(err);
+		}
 	}
+
+	synchronized public void runScriptText(String script) {
+		try {
+			globals.load(script, "user chunk").call();
+		} catch (LuaError err) {
+			reportLuaError(err);
+		}
+	}
+
 
 	@Override
 	public InputStream findResource(String filename) {
