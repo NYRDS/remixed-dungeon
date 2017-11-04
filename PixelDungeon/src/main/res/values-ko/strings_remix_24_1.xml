@@ -7,6 +7,23 @@
     <string name="ArmoredStatue_Name_Objective">살아있는 석상</string>
     <string name="ArmoredStatue_Desc">당신은 이 조각상이 다른 조각상과 다르다고 생각할 것이다. 붉은 눈 뿐만 아니라 손에는 진짜 %s 이/가 들려 있기 때문이다.</string>
 
+    <!-- STRINGS OF SpiderSoldier -->
+    <string name="SpiderGuard_Name">거미 경비병</string>
+    <string name="SpiderGuard_Gender">남성</string>
+    <string name="SpiderGuard_Name_Objective">거미 경비병</string>
+    <string name="SpiderGuard_Desc">병사들처럼 거미 경비병도 그들의 왕국을 지킨다고 맹세했습니다. 거미 경비병의 독은 목표물을 마비시켜 움직이지 못하게 하는데 사용됩니다.</string>
+
+    <!-- STRINGS OF SpiderMindAmber -->
+    <string name="SpiderMindAmber_Name">호박 거미</string>
+    <string name="SpiderMindAmber_Gender">남성</string>
+    <string name="SpiderMindAmber_Name_Objective">호박 거미</string>
+    <string name="SpiderMindAmber_Desc">호박 거미는 사이코 파워를 가진 신비롭고 희귀한 동물입니다. 하지만 평범한 같은 종 보다는 훨씬 강합니다. \"호박\"이라는 이름은 공격당한 희생자들이 본 호박 거미의 커다란 뇌의 색을 말합니다.</string>
+
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF PirateSet CLASS -->
+    <string name="PirateSet_Name">해적 세트</string>
+    <string name="PirateSet_Info">아르! 너는 동료처럼 느껴지나... 아니면 그냥 망할 풋내기 선원처럼 느껴지나!? 그렇지 않길 빌어, 이 물건들은 해적들을 위한 것이거든. 그러니까 내 말은... 아르!</string>
+
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
     <string name="WndSaveSlotSelect_Delete_Yes">네. 지우겠습니다.</string>

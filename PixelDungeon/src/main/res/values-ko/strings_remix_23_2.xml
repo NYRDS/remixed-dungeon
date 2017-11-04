@@ -21,5 +21,20 @@
     <string name="CompositeCrossbow_Info">이 개조된 쇠뇌는 나무 쇠뇌에 비해서 더 효율적인 도구임이 입증된 바 있다.</string>
     <string name="CompositeCrossbow_Gender">남성</string>
 
+    <!-- STRINGS OF RubyCrossbow CLASS -->
+    <string name="RubyCrossbow_Name">루비 석궁</string>
     <string name="RubyCrossbow_Info">이 무시무시한 무기는 확실히 드워프의 기술로 만들어진 걸작입니다.</string>
-    </resources>
+    <string name="RubyCrossbow_Gender">남성</string>
+
+    <!-- STRINGS OF GothicArmor CLASS -->
+    <string name="GothicArmor_Name">고딕 갑옷</string>
+    <string name="GothicArmor_Info">고딕 갑옷은 갑옷 제련 기술의 정점입니다.</string>
+
+    <!-- STRINGS OF ChaosArmor CLASS -->
+    <string name="ChaosArmor_Name">혼돈 갑옷</string>
+    <string name="ChaosArmor_Info">이 갑옷의 붉은 피의 금속판은 검고 붉은 사슬로 얽혀있습니다. 이것을 만질 때 마다 혼돈스러운 기운이 악화됩니다.</string>
+
+    <!-- STRINGS OF ChaosCrystal CLASS -->
+    <string name="ChaosCrystal_ArmorFused">크리스탈의 당신의 갑옷을 흡수하고, 합성된 갑옷의 형태가 되었습니다.</string>
+
+</resources>

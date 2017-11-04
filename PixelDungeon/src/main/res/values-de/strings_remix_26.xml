@@ -47,6 +47,7 @@
     <string name="CagedKobold_Name_Objective">eingesperrter Kobold</string>
     <string name="CagedKobold_Desc">Ein Kobold, in einem Käfig.</string>
     <string name="CagedKobold_Message1">Bitte...</string>
+    <string name="CagedKobold_Message2">Hey, du könntest mir hier heraushelfen.</string>
     <string name="CagedKobold_Message3">Ich hasse diesen Käfig über alles</string>
 
     <string name="Journal_Caged_Kobold">Eingesperrter Kobold</string>

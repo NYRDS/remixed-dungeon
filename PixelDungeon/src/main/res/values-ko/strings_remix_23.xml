@@ -9,6 +9,7 @@
   <string name="Guts_TileDescDeco">이 장소는 좀...잘못된 것 같다.</string>
   <string name="Guts_TileDescBookshelf">그 책장은 완전히 두꺼운 살점 그물로 덮혀 있어, 책을 꺼낼 방법이 없다.</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">고대신은 패배하여 산산조각 났습니다. 그리고 완전히 파괴되지 않은 채로 감옥의 가장 깊은 곳에 봉인되었습니다. 하지만 얼마 전 봉인이 파괴되었고 고대신은 통로를 지나 악마의 둥지를 열었습니다. 고대신이 잠든 동안 창조된 악몽의 괴물들은 수가 너무 많았고, 탈출할 길이 없던 괴물들은 이 괴기한 홀을 형성하기 위해 융합을 하였습니다. 그들의 살아있는 살 위로 걷는 동안 고대신의 심장 박동을 느낄 수 있을 것입니다.</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
   <string name="MimicAmulet_Name">미믹</string>
@@ -16,10 +17,20 @@
   <string name="MimicAmulet_Name_Objective">미믹</string>
   <string name="MimicAmulet_Desc">당신이 한 모험의 가장 영광스러운 순간은 그저 함정이었을 뿐이었다.</string>
   <!--STRINGS OF Nightmare CLASS-->
+  <string name="Nightmare_Name">악몽</string>
+  <string name="Nightmare_Gender">남성</string>
+  <string name="Nightmare_Name_Objective">악몽</string>
   <!--STRINGS OF TENGU CLASS-->
   <string name="Tengu_Info3">잡았다, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Name">놀 좀비</string>
+  <string name="ZombieGnoll_Gender">남성</string>
+  <string name="ZombieGnoll_Name_Objective">놀 좀비</string>
+  <string name="ZombieGnoll_Desc">좀비 놀의 뒤틀리고 부숴진 몸은 더 이상 사람으로도, 하이에나로도 보이지 않는다. 죽이고 먹고 싶어하는 잔혹한 충동으로 가득 찬 썩은 살과 뼈의 더미일 뿐이다.</string>
   <!--STRINGS OF Worm CLASS-->
+  <string name="Worm_Name">애벌래</string>
+  <string name="Worm_Gender">남성</string>
+  <string name="Worm_Name_Objective">애벌래</string>
   <!--STRINGS OF YogsBrain CLASS-->
   <!--STRINGS OF YogsEye CLASS-->
   <!--STRINGS OF YogsHeart CLASS-->

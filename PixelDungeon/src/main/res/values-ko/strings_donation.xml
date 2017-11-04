@@ -30,4 +30,5 @@
   <string name="DonateButton_pleaseDonate">기부 부탁드립니다</string>
   <string name="DonateButton_thanks">당신의 후원에 감사드립니다!!</string>
   <!--STRINGS OF WndSaveSlotSelect-->
+  <string name="WndSaveSlotSelect_dontLike">광고가 싫으신가요? 기부를 하신다면, 영구적으로 없어질 것입니다.</string>
 </resources>
