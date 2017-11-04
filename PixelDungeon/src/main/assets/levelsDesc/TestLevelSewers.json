@@ -70,6 +70,11 @@
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},
     {"kind" : "Barrel", "x" : 13, "y" : 10},
-    {"kind" : "ConcreteBlock", "x" : 13, "y" : 9, "str":100}
+
+    {"kind":"Trap","x":13,"y":9, "uses":1,
+      "trapKind":"scriptFile",
+      "script":"scripts/TrapSandbox",
+      "data":"test"
+    }
   ]
 }
