@@ -32,10 +32,8 @@ public class FireTrap implements ITrigger {
 	// 0xFF7708
 	
 	public static void trigger( int pos, @Nullable Char ch ) {
-		
 		GameScene.add( Blob.seed( pos, 2, Fire.class ) );
 		CellEmitter.get( pos ).burst( FlameParticle.FACTORY, 5 );
-		
 	}
 
 	@Override
