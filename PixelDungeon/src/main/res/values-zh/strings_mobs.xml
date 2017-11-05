@@ -58,7 +58,7 @@
   <string name="Elemental_Desc">这些游荡的火元素是在召唤某种更强大存在时的副产品。由于其特性太过混乱，以至于最强大的恶魔学者都无法驱使。</string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">邪眼</string>
-  <string name="Eye_Gender">neuter</string>
+  <string name="Eye_Gender">中性的</string>
   <string name="Eye_Name_Objective">邪眼</string>
   <string name="Eye_Desc">这种恶魔的另一个别名为\"憎恶之球\"，因为它一旦看到敌人就会毫无顾忌地使用它们的死亡凝视，即使这会伤害到它的友军。</string>
   <string name="Eye_Kill">%s的死亡凝视杀死了你……</string>

@@ -19,18 +19,27 @@
   <string name="SpiritOfPain_Name">고통의 영혼</string>
   <string name="SpiritOfPain_Gender">남성</string>
   <string name="SpiritOfPain_Name_Objective">고통의 영혼</string>
+  <string name="SpiritOfPain_Desc">살아있는 어둠의 조각이다.</string>
   <!--STRINGS OF SuspiciousRat CLASS-->
   <string name="SuspiciousRat_Name">수상한 쥐</string>
   <string name="SuspiciousRat_Gender">여성</string>
+  <string name="SuspiciousRat_Name_Objective">수상한 쥐</string>
+  <string name="SuspiciousRat_Desc">쥐를 던전에서 보는 것이 희귀한 광경은 아니지만 깊은 곳에서 살기 위해서는... 쥐가 움직일 때마다 어떻게 경련을 일으키는지 볼 수 있을 것입니다.</string>
+  <string name="SuspiciousRat_Info1">수상한 쥐가 맹렬하게 경련을 일으키고 있습니다.</string>
   <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">가짜 쥐</string>
   <string name="PseudoRat_Gender">여성</string>
+  <string name="PseudoRat_Name_Objective">가짜 쥐</string>
+  <string name="PseudoRat_Desc">쥐의 시체에서 나온 끔찍한 짐승은 설치류나 다른 동물처럼 보이지 않습니다. 커다란 입, 뾰족한 이빨이 그것의 몸의 대부분을 차지합니다.</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Info">놀 좀비가 부활했다!</string>
   <!--Items-->
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">어둠의 심장</string>
+  <string name="HeartOfDarkness_Info">무서운 영혼의 검은 고동치는 심장</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">암흑의 덮개</string>
   <!--Badges-->
   <string name="Badges_Yog_Slain">요그제바 처치</string>
   <string name="Badges_ShadowLord_Slain">그림자 군주 처치</string>
