@@ -4,7 +4,8 @@
 -- Time: 22:26
 -- This file is part of Remixed Pixel Dungeon.
 --
-GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
+require "scripts/commonClasses"
+
 local data
 
 function setData(_data)

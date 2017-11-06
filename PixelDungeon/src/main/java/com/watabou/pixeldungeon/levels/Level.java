@@ -25,6 +25,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -93,8 +94,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 public abstract class Level implements Bundlable {
+
+	private static final String SCRIPTS = "SCRIPTS";
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
@@ -133,13 +137,13 @@ public abstract class Level implements Bundlable {
 
 	@Nullable
 	public LevelObject getLevelObject(int pos) {
-		return getLevelObject(pos,0);
+		return getLevelObject(pos, 0);
 	}
 
 	@Nullable
 	public LevelObject getLevelObject(int pos, int layer) {
 		SparseArray<LevelObject> objectsLayer = objects.get(layer);
-		if(objectsLayer == null) {
+		if (objectsLayer == null) {
 			return null;
 		}
 		return objectsLayer.get(pos);
@@ -153,10 +157,10 @@ public abstract class Level implements Bundlable {
 			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
 
 			LevelObject candidate = objectLayer.get(pos);
-			if(top == null) {
+			if (top == null) {
 				top = candidate;
 			} else {
-				if(candidate!= null && candidate.getLayer() > top.getLayer()) {
+				if (candidate != null && candidate.getLayer() > top.getLayer()) {
 					top = candidate;
 				}
 			}
@@ -166,9 +170,9 @@ public abstract class Level implements Bundlable {
 
 	public void putLevelObject(LevelObject levelObject) {
 		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
-		if(objectsLayer == null) {
+		if (objectsLayer == null) {
 			objectsLayer = new SparseArray<>();
-			objects.put(levelObject.getLayer(),objectsLayer);
+			objects.put(levelObject.getLayer(), objectsLayer);
 		}
 
 		objectsLayer.put(levelObject.getPos(), levelObject);
@@ -239,7 +243,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getViewDistance() {
-		if (viewDistance == 0){
+		if (viewDistance == 0) {
 			viewDistance = rollViewDistance();
 		}
 		viewDistance = DungeonGenerator.getLevelProperty(levelId, "viewDistance", viewDistance);
@@ -263,7 +267,7 @@ public abstract class Level implements Bundlable {
 	public static int[] NEIGHBOURS9;
 
 	protected static final int MAX_VIEW_DISTANCE = 8;
-	public static final int MIN_VIEW_DISTANCE = 3;
+	public static final    int MIN_VIEW_DISTANCE = 3;
 
 	private static final float TIME_TO_RESPAWN = 50;
 
@@ -303,11 +307,12 @@ public abstract class Level implements Bundlable {
 
 	public String levelId;
 
-	public  HashSet<Mob>                            mobs    = new HashSet<>();
-	public  Map<Class<? extends Blob>, Blob>        blobs   = new HashMap<>();
-	public  SparseArray<Plant>                      plants  = new SparseArray<>();
-	private SparseArray<Heap>                       heaps   = new SparseArray<>();
-	public  SparseArray<SparseArray<LevelObject>>   objects = new SparseArray<>();
+	private Set<ScriptedActor>                    scripts = new HashSet<>();
+	public  HashSet<Mob>                          mobs    = new HashSet<>();
+	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
+	public  SparseArray<Plant>                    plants  = new SparseArray<>();
+	private SparseArray<Heap>                     heaps   = new SparseArray<>();
+	public  SparseArray<SparseArray<LevelObject>> objects = new SparseArray<>();
 
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -500,10 +505,12 @@ public abstract class Level implements Bundlable {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 
+		scripts = new HashSet<>();
 		mobs = new HashSet<>();
 		heaps = new SparseArray<>();
 		blobs = new HashMap<>();
 		plants = new SparseArray<>();
+
 
 		width = bundle.optInt(WIDTH, 32); // old levels compat
 		height = bundle.optInt(HEIGHT, 32);
@@ -562,6 +569,10 @@ public abstract class Level implements Bundlable {
 			blobs.put(blob.getClass(), blob);
 		}
 
+		for (ScriptedActor actor : bundle.getCollection(SCRIPTS, ScriptedActor.class)) {
+			addScriptedActor(actor);
+		}
+
 		buildFlagMaps();
 		cleanWalls();
 	}
@@ -614,6 +625,8 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
+
+		bundle.put(SCRIPTS, scripts);
 
 		bundle.put(WIDTH, width);
 		bundle.put(HEIGHT, height);
@@ -787,7 +800,8 @@ public abstract class Level implements Bundlable {
 				return -1;
 			}
 			cell = Random.Int(getLength());
-		} while (!selectFrom[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null || getLevelObject(cell) != null);
+		}
+		while (!selectFrom[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null || getLevelObject(cell) != null);
 		return cell;
 	}
 
@@ -1018,7 +1032,7 @@ public abstract class Level implements Bundlable {
 
 		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
 
-		if(objectsLayer == null) {
+		if (objectsLayer == null) {
 			return;
 		}
 
@@ -1089,7 +1103,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void charPress(int cell, @Nullable Char actor) {
-		if(actor!= null) {
+		if (actor != null) {
 			pressLevelObject(cell, actor);
 		}
 
@@ -1627,11 +1641,16 @@ public abstract class Level implements Bundlable {
 		return DungeonGenerator.isStatic(levelId);
 	}
 
-	private int rollViewDistance(){
-		if (this.isSafe()){
+	private int rollViewDistance() {
+		if (this.isSafe()) {
 			return 8;
 		} else {
-			return Dungeon.isChallenged(Challenges.DARKNESS) ? 2 : Random.Int(3,8);
+			return Dungeon.isChallenged(Challenges.DARKNESS) ? 2 : Random.Int(3, 8);
 		}
+	}
+
+	public void addScriptedActor(ScriptedActor actor) {
+		scripts.add(actor);
+		Actor.add(actor);
 	}
 }
