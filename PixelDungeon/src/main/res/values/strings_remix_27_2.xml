@@ -67,10 +67,6 @@
     <!-- STRINGS OF Torch CLASS -->
     <string name="Torch_Info2">It\'s an indispensable item in the dungeon, which is notorious for it\'s poor ambient lighting.</string>
 
-    <!-- STRINGS OF ScrollOfSummoning CLASS -->
-    <string name="ScrollOfSummoning_Name">Scroll of Summoning</string>
-    <string name="ScrollOfSummoning_Info">When read aloud, this scroll will summon one of the monsters from the current dungeon level. And if monsters will is weak enough it will become your servant</string>
-    
     <!-- Window descriptions -->
     <!-- STRINGS OF WndHeroSpells CLASS -->
     <string name="WndSpells_Title">Spells</string>
