@@ -4,7 +4,7 @@
 -- Time: 22:26
 -- This file is part of Remixed Pixel Dungeon.
 --
-require "scripts/commonClasses"
+local RPD = require "scripts/commonClasses"
 
 local trap = require"scripts/TrapCommon"
 

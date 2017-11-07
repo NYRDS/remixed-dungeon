@@ -14,6 +14,7 @@ public class MultiDexLuajavaLib extends LuajavaLib {
 
 	@Override
 	protected Class classForName(String name) throws ClassNotFoundException {
-		return Class.forName(name, true, Thread.currentThread().getContextClassLoader());
+		Class clazz = Class.forName(name, true, Thread.currentThread().getContextClassLoader());
+		return clazz;
 	}
 }

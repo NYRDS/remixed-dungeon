@@ -98,7 +98,7 @@ import java.util.Set;
 
 public abstract class Level implements Bundlable {
 
-	private static final String SCRIPTS = "SCRIPTS";
+	private static final String SCRIPTS = "scripts";
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
@@ -1651,6 +1651,15 @@ public abstract class Level implements Bundlable {
 
 	public void addScriptedActor(ScriptedActor actor) {
 		scripts.add(actor);
-		Actor.add(actor);
+		if(Dungeon.level!=null) {
+			Actor.add(actor);
+		}
 	}
+
+	public void activateScripts() {
+		for(ScriptedActor scriptedActor:scripts) {
+			Actor.add(scriptedActor);
+		}
+	}
+
 }

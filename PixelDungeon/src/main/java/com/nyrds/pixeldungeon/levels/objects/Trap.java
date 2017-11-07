@@ -110,7 +110,6 @@ public class Trap extends LevelObject {
 
 			if (kind.equals("scriptFile")) {
 				trigger = new ScriptTrap(script, data);
-				LuaEngine.getEngine().runScriptFile(script);
 			} else {
 				trigger = Util.byNameFromList(traps, kind);
 			}

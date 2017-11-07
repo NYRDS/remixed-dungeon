@@ -256,6 +256,7 @@ public class Dungeon {
 		hero.viewDistance = light == null ? level.getViewDistance() : Math.max(level.MIN_VIEW_DISTANCE + 1, level.getViewDistance());
 
 		Dungeon.level = level;
+		Dungeon.level.activateScripts();
 	}
 
 	public static boolean posNeeded() {
