@@ -6,20 +6,18 @@
 --
 require "scripts/commonClasses"
 
-local data
-function setData(_data)
-    data = _data
-end
+local trap = require"scripts/TrapCommon"
 
-function trap(cell, char)
-    local x = Dungeon.level:cellX(cell)
-    local y = Dungeon.level:cellY(cell)
-    for i = x - 1, x + 1 do
-        for j = y - 1, y + 1 do
-            if i~=x or j~=y then
-                GameScene:add( Blob:seed( Dungeon.level:cell(i,j),cell, Fire ) );
+return trap.init(
+    function (cell, char, data)
+        local x = RPD.Dungeon.level:cellX(cell)
+        local y = RPD.Dungeon.level:cellY(cell)
+        for i = x - 1, x + 1 do
+            for j = y - 1, y + 1 do
+                if i~=x or j~=y then
+                    RPD.GameScene:add( RPD.Blobs.Blob:seed( RPD.Dungeon.level:cell(i,j), 10 , RPD.Blobs.Fire ) );
+                end
             end
         end
     end
-end
-
+)

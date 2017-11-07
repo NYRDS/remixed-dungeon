@@ -19,8 +19,9 @@ import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Locale;
+import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 /**
  * Created by mike on 01.07.2016.
@@ -199,9 +200,10 @@ public class Trap extends LevelObject {
 
 		@Override
 		public void doTrigger(int cell, Char ch) {
-			LuaEngine.getEngine().runScriptText(String.format(Locale.ROOT, "require(\"%s\")", scriptFile));
-			LuaEngine.getEngine().call("setData", data);
-			LuaEngine.getEngine().call("trap", cell, ch);
+			LuaTable trap = LuaEngine.getEngine().call("require", scriptFile).checktable();
+
+			trap.get("setData").call(trap,LuaValue.valueOf(data));
+			trap.get("trigger").call(trap,LuaValue.valueOf(cell), CoerceJavaToLua.coerce(ch));
 		}
 	}
 }

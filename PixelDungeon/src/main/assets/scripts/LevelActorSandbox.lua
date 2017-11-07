@@ -9,8 +9,8 @@ require "scripts/commonClasses"
 
 return luajava.createProxy("com.nyrds.pixeldungeon.mechanics.actors.IScriptedActor", {
     act = function()
-        local levelSize = Dungeon.level:getLength()
-        GameScene:add( Blob:seed(math.random(levelSize)-1,10, Fire ) );
+        local levelSize = RPD.Dungeon.level:getLength()
+        RPD.GameScene:add( RPD.Blobs.Blob:seed(math.random(levelSize)-1,10, RPD.Blobs.Fire ) );
         return true
     end,
     actionTime = function()

@@ -6,14 +6,11 @@
 --
 require "scripts/commonClasses"
 
-local data
+local trap = require"scripts/TrapCommon"
 
-function setData(_data)
-    data = _data
-end
-
-function trap(cell, char)
-    wnd = luajava.newInstance("com.watabou.pixeldungeon.windows.WndMessage",data)
-    GameScene:show(wnd)
-end
-
+return trap.init(
+    function (cell, char, data)
+        wnd = luajava.newInstance("com.watabou.pixeldungeon.windows.WndMessage",data)
+        RPD.GameScene:show(wnd)
+    end
+)
