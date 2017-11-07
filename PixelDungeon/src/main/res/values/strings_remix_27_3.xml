@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Scroll of Summoning</string>
+    <string name="ScrollOfSummoning_Info">When read aloud, this scroll will summon one of the monsters from the current dungeon level. And if monsters will is weak enough it will become your servant.</string>
+    <string name="ScrollOfSummoning_Info_2">The monster answered your summons!</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">A powerful magic prevents you from using \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">You cannot use \"%s\" while blinded.</string>
+
+    <string name="Mob_Cannot_Be_Pet">The will of a \"%s\" is to strong to control!.</string>
+
+</resources>
