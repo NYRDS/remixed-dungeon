@@ -290,6 +290,7 @@ public abstract class Actor implements Bundlable {
 				buff.onAdd();
 			}
 		}
+
 	}
 	
 	public static void remove( Actor actor ) {

@@ -1,6 +1,9 @@
 package com.nyrds.pixeldungeon.mechanics.actors;
 
+import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.utils.Bundle;
 
 /**
  * Created by mike on 05.11.2017.
@@ -9,10 +12,25 @@ import com.watabou.pixeldungeon.actors.Actor;
 
 public class ScriptedActor extends Actor {
 
-	IScriptedActor scriptedActor;
+	private IScriptedActor scriptedActor;
 
-	public ScriptedActor(IScriptedActor sActor) {
-		scriptedActor = sActor;
+	@Packable
+	private String sourceFile;
+
+	public ScriptedActor(String sSourceFile) {
+		sourceFile = sSourceFile;
+		scriptedActor = fromSource(sourceFile);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+
+		scriptedActor=fromSource(sourceFile);
+	}
+
+	private IScriptedActor fromSource(String sourceFile) {
+		return (IScriptedActor) LuaEngine.getEngine().call("require", sourceFile).checkuserdata(IScriptedActor.class);
 	}
 
 	@Override

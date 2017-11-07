@@ -36,26 +36,28 @@ public class LuaEngine implements ResourceFinder {
 
 	private Globals globals;
 
-	public String call(String method) {
-		return globals.get(method).call().tojstring();
+	public LuaValue call(String method) {
+		return globals.get(method).call();
 	}
 
-	synchronized public void call(String method, Object arg1) {
+	synchronized public LuaValue call(String method, Object arg1) {
 		try {
 			LuaValue methodForData = globals.get(method);
-			methodForData.call(CoerceJavaToLua.coerce(arg1));
+			return methodForData.call(CoerceJavaToLua.coerce(arg1));
 		} catch (LuaError err) {
 			reportLuaError(err);
 		}
+		return LuaValue.NIL;
 	}
 
-	synchronized public void call(String method, Object arg1, Object arg2) {
+	synchronized public LuaValue call(String method, Object arg1, Object arg2) {
 		try {
 			LuaValue methodForData = globals.get(method);
 			methodForData.call(CoerceJavaToLua.coerce(arg1),CoerceJavaToLua.coerce(arg2));
 		} catch (LuaError err) {
 			reportLuaError(err);
 		}
+		return LuaValue.NIL;
 	}
 
 	private class log extends OneArgFunction {
