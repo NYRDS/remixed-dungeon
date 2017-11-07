@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 467
-        versionName "remix.27.2.fix.4"
+        versionName "remix.27.3.alpha.1"
 
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
     }
