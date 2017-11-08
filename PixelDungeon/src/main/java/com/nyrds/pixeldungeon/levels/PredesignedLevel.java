@@ -55,6 +55,7 @@ public class PredesignedLevel extends CustomLevel {
 		cleanWalls();
 		createMobs();
 		createItems();
+		createScript();
 	}
 
 	private void readLevelParams() throws JSONException {
