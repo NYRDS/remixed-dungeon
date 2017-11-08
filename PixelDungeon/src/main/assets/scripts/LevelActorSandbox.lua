@@ -11,7 +11,9 @@ return {
     act = function()
         print("act")
         local levelSize = RPD.Dungeon.level:getLength()
-        RPD.GameScene:add( RPD.Blobs.Blob:seed(math.random(levelSize)-1,10, RPD.Blobs.Fire ) )
+        --RPD.GameScene:add( RPD.Blobs.Blob:seed(math.random(levelSize)-1,10, RPD.Blobs.Fire ) )
+        local emitter = RPD.Sfx.CellEmitter:get(math.random(levelSize)-1)
+        emitter:pour(RPD.Sfx.FlameParticle.FACTORY, 0.2)
         return true
     end,
     actionTime = function()
