@@ -67,10 +67,11 @@ android {
 
 dependencies {
     compile 'ch.acra:acra:4.9.0@aar'
-    compile 'com.android.support:support-v4:27.0.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'org.luaj:luaj-jse:3.0.1'
 
+    //noinspection GradleDependency
+    googlePlayRetroCompile 'com.android.support:support-v4:25.0.1'
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
     //noinspection GradleDependency
@@ -80,9 +81,10 @@ dependencies {
     //noinspection GradleDependency
     googlePlayRetroCompile "com.google.android.gms:play-services-games:9.0.2"
 
-
+    googlePlayCompile 'com.android.support:support-v4:27.0.0'
     googlePlayCompile project(':adcolony-sdk-3.1.2')
     googlePlayCompile 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
+
 
     googlePlayCompile 'com.google.android.gms:play-services-ads:10.2.1'
     googlePlayCompile 'com.google.android.gms:play-services-base:10.2.1'
@@ -90,7 +92,6 @@ dependencies {
     googlePlayCompile "com.google.android.gms:play-services-games:10.2.1"
 
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
-    googlePlayCompile fileTree(dir: 'lib/optional', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.2'
 
     compile project(':annotation')

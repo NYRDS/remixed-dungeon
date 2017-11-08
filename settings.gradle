@@ -1,1 +1,1 @@
-include ':PixelDungeon', ':cheetah-mobile-3.4.7', ':appodeal-1.15.8', ':processor', ':annotation', ':adcolony-sdk-3.1.2'
+include ':PixelDungeon', ':processor', ':annotation', ':adcolony-sdk-3.1.2'
