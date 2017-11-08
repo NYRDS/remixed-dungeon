@@ -353,6 +353,9 @@ public class GameScene extends PixelScene {
 		}
 
 		Camera.main.target = Dungeon.hero.getHeroSprite();
+
+		level.activateScripts();
+
 		fadeIn();
 
 		Dungeon.observe();
