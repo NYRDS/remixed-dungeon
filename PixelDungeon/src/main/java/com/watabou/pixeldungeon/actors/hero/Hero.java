@@ -1667,8 +1667,8 @@ public class Hero extends Char {
 
 		Level level = Dungeon.level;
 
-		int cx = getPos() % level.getWidth();
-		int cy = getPos() / level.getWidth();
+		int cx = level.cellX(getPos());
+		int cy = level.cellY(getPos());
 		int ax = cx - distance;
 		if (ax < 0) {
 			ax = 0;
@@ -1694,8 +1694,6 @@ public class Hero extends Char {
 					if (intentional) {
 						getSprite().getParent().addToBack(new CheckedCell(p));
 					}
-
-
 
 					if (intentional || Random.Float() < searchLevel) {
 
