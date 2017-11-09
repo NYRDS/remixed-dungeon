@@ -18,7 +18,8 @@ RPD = {
     Sfx = {
         CellEmitter   = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
         Emitter       = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
-        FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle")
+        FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
+        SnowParticle  = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle")
     }
 }
 

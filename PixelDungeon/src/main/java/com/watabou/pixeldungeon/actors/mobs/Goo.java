@@ -49,7 +49,7 @@ public class Goo extends Boss {
 		spriteClass = GooSprite.class;
 
 		loot = Generator.random(Generator.Category.POTION);
-		
+
 		lootChance = 0.8f;
 		
 		RESISTANCES.add( ToxicGas.class );

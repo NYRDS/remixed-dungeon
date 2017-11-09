@@ -1667,6 +1667,7 @@ public abstract class Level implements Bundlable {
 	public void activateScripts() {
 		for(ScriptedActor scriptedActor:scripts) {
 			Actor.add(scriptedActor);
+			scriptedActor.activate();
 		}
 	}
 
