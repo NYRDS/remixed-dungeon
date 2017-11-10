@@ -1520,14 +1520,24 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getNearestTerrain(int x, int y, int terr) {
-		int minima = getDistToNearestTerrain(x, y, terr);
+		return getNearestTerrain(x, y, terr, -1);
+	}
+
+	public int getNearestTerrain(int x, int y, int terr, int ignoreCell) {
+		int minima = getLength();
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		int cell = cell(x, y);
 		for (int i = 0; i < getLength(); i++) {
-			if (map[i] == terr) {
+			if (i != ignoreCell && map[i] == terr) {
 				int delta = distance(cell, i);
+
+				if(delta < minima) {
+					candidates.clear();
+					minima = delta;
+				}
+
 				if (delta == minima) {
 					candidates.add(i);
 				}
