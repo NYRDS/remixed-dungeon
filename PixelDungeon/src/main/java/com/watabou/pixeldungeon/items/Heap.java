@@ -188,12 +188,8 @@ public class Heap implements Bundlable {
 			items.remove( item );
 		}
 		
-		if (item instanceof Dewdrop) {
-			items.add( item );
-		} else {
-			items.addFirst( item );
-		}
-		
+		items.add( item );
+
 		if (sprite != null) {
 			sprite.view(item);
 		}
