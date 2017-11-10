@@ -158,7 +158,6 @@ public class Trap extends LevelObject {
 		return secret;
 	}
 
-
 	@Override
 	public String desc() {
 		return "Trap";
@@ -185,7 +184,7 @@ public class Trap extends LevelObject {
 
 	@Override
 	public boolean nonPassable() {
-		return uses > 0;
+		return !secret && uses > 0;
 	}
 
 	class ScriptTrap implements ITrigger {
