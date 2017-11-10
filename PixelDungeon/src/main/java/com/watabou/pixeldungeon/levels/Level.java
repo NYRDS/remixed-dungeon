@@ -1555,7 +1555,7 @@ public abstract class Level implements Bundlable {
 		return -1;
 	}
 
-	public int getRandomTerrainCell(int terrainType) {
+	public ArrayList<Integer> getAllTerrainCells(int terrainType) {
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		for (int i = 0; i < getLength(); i++) {
@@ -1563,8 +1563,11 @@ public abstract class Level implements Bundlable {
 				candidates.add(i);
 			}
 		}
+		return candidates;
+	}
 
-		return oneCellFrom(candidates);
+	public int getRandomTerrainCell(int terrainType) {
+		return oneCellFrom(getAllTerrainCells(terrainType));
 	}
 
 	public int get(int i, int j) {

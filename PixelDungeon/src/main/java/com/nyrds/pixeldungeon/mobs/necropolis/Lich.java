@@ -1,8 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -18,17 +21,22 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
+import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Pushing;
+import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -41,11 +49,13 @@ public class Lich extends Boss {
     private static final int SKULLS_MAX	= 4;
     private static final int HEALTH	= 200;
     private static final int SKULL_DELAY = 5;
-    private static final int JUMP_DELAY = 6;
 
     private RunicSkull activatedSkull;
 
-    public HashSet<RunicSkull> skulls   = new HashSet<>();
+    @Packable
+    private boolean skullsSpawned = false;
+
+	private HashSet<RunicSkull> skulls = new HashSet<>();
 
     public Lich() {
         hp(ht(HEALTH));
@@ -118,7 +128,12 @@ public class Lich extends Boss {
     //Runic skulls handling
     //***
 
-    protected void activateRandomSkull(){
+    private void activateRandomSkull(){
+       if(!skullsSpawned) {
+           skullsSpawned = true;
+           spawnSkulls();
+    }
+
         if (!skulls.isEmpty()){
             if (activatedSkull != null){
                 activatedSkull.Deactivate();
@@ -134,7 +149,7 @@ public class Lich extends Boss {
         }
     }
 
-    public RunicSkull getRandomSkull() {
+    private RunicSkull getRandomSkull() {
         while(!skulls.isEmpty()){
             RunicSkull skull = Random.element(skulls);
             if(skull.isAlive()){
@@ -147,8 +162,8 @@ public class Lich extends Boss {
         return null;
     }
 
-    public void useSkull(){
-        PlayZap();
+    private void useSkull(){
+        getSprite().zap(getPos(), null);
 
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:
@@ -247,9 +262,7 @@ public class Lich extends Boss {
         Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
     }
 
-
-    public void spawnSkulls(){
-
+    private void spawnSkulls(){
         int nSkulls = SKULLS_BY_DEFAULT;
         if(Game.getDifficulty() == 0){
             nSkulls = 2;
@@ -258,26 +271,21 @@ public class Lich extends Boss {
             nSkulls = SKULLS_MAX;
         }
 
-        List<Integer> occupiedPedestals = new ArrayList<>();
-        int i = 0;
-        while (i < nSkulls){
-            int skullCell = Dungeon.level.getRandomTerrainCell(Terrain.PEDESTAL);
-            if (Dungeon.level.cellValid(skullCell)) {
-                if (!occupiedPedestals.contains(skullCell)) {
-                    RunicSkull skull = RunicSkull.makeNewSkull(i);
-                    Dungeon.level.spawnMob(skull);
-                    WandOfBlink.appear(skull, skullCell);
-                    occupiedPedestals.add(skullCell);
-                    skulls.add(skull);
+        Level level = Dungeon.level;
+        ArrayList<Integer> pedestals = level.getAllTerrainCells(Terrain.PEDESTAL);
 
-                }
-            }
-            i++;
+        Collections.shuffle(pedestals);
+
+        Sample.INSTANCE.play( Assets.SND_CURSED );
+
+        for (int i = 0;i < nSkulls && i < pedestals.size();++i) {
+            RunicSkull skull = RunicSkull.makeNewSkull(i);
+            level.spawnMob(skull);
+
+            CellEmitter.center(pedestals.get(i)).burst( ShadowParticle.CURSE, 8 );
+            WandOfBlink.appear(skull, pedestals.get(i));
+
+            skulls.add(skull);
         }
-        occupiedPedestals.clear();
-    }
-
-    public void PlayZap() {
-        getSprite().zap(getPos(), null);
     }
 }
