@@ -330,6 +330,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="DriedRose_Info2">Und es hat seinen Charm nicht verloren. Es guckt so schön, dass du es fürimmer behalten willst.</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">Zwergenmünze</string>
+  <string name="DwarfToken_Info">Viele Zwerge und ihre größeren Kreaturen tragen diese kleinen Metallstücke unbekanntem Zweck herum. Vielleicht sind sie Juwelen oder irgendeine Art Ausweis. Zwerge sind ein seltsames Volk.</string>
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">Spitzhacke</string>
   <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch alls Waffe genutzt werden.</string>
