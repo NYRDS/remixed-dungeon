@@ -269,9 +269,10 @@ public class Lich extends Boss {
                     WandOfBlink.appear(skull, skullCell);
                     occupiedPedestals.add(skullCell);
                     skulls.add(skull);
-                    i++;
+
                 }
             }
+            i++;
         }
         occupiedPedestals.clear();
     }
