@@ -187,12 +187,10 @@ public class Heap implements Bundlable {
 			}
 			items.remove( item );
 		}
-		
-		items.add( item );
 
-		if (sprite != null) {
-			sprite.view(item);
-		}
+		items.addFirst(item);
+
+		updateHeap();
 	}
 	
 	public void replace( Item a, Item b ) {
@@ -244,11 +242,11 @@ public class Heap implements Bundlable {
 			if(!item.equals(burntItem) && !(item instanceof Dewdrop)){
 				burnt = true;
 			}
-			
+
 			if(item instanceof Dewdrop){
 				evaporated = true;
 			}
-			
+
 			replaceOrRemoveItem(item, burntItem);
 		}
 		
