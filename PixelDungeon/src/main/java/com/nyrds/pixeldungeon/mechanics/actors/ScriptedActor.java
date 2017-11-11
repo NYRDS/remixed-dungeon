@@ -41,5 +41,4 @@ public class ScriptedActor extends Actor {
 		LuaTable actor = LuaEngine.getEngine().call("require",  sourceFile).checktable();
 		actor.get("activate").call();
 	}
-
 }
