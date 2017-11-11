@@ -82,7 +82,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
-import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
@@ -775,10 +774,6 @@ public class Hero extends Char {
 	}
 
 	public void itemPickedUp(Item item) {
-		if (item instanceof Dewdrop) {
-			return;
-		}
-
 		if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
 				|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
 			GLog.p(TXT_YOU_NOW_HAVE, item.name());
