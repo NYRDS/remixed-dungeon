@@ -20,7 +20,10 @@ public abstract class LevelObject implements Bundlable, Presser {
 	@Packable
 	protected int layer = 0;
 
+	@Packable(defaultValue = "levelObjects/objects.png")
 	protected String textureFile = "levelObjects/objects.png";
+
+	@Packable(defaultValue = "0")
 	protected int imageIndex = 0;
 	
 	public LevelObjectSprite sprite;

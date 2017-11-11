@@ -61,14 +61,18 @@ public class Trap extends LevelObject {
 	@Packable
 	private boolean secret = false;
 
+	@Packable(defaultValue = "-1")
+	private int usedImageIndex;
+
 	public Trap() {
 		this(-1);
 	}
 
 	public Trap(int pos) {
 		super(pos);
-		imageIndex = 0;
+		imageIndex  = -1;
 		textureFile = "levelObjects/traps.png";
+
 		layer = -1;
 	}
 
@@ -106,7 +110,7 @@ public class Trap extends LevelObject {
 
 		if (uses != 0) {
 			uses--;
-			ITrigger trigger = null;
+			ITrigger trigger;
 
 			if (kind.equals("scriptFile")) {
 				trigger = new ScriptTrap(script, data);
@@ -145,6 +149,8 @@ public class Trap extends LevelObject {
 
 		script = obj.optString("script", "");
 		data = StringsManager.maybeId(obj.optString("data", ""));
+
+		usedImageIndex = obj.optInt("usedImageIndex", usedImageIndex);
 	}
 
 	@Override
@@ -171,6 +177,9 @@ public class Trap extends LevelObject {
 	@Override
 	public int image() {
 		if (uses > 0) {
+			if(imageIndex >= 0) {
+				return imageIndex;
+			}
 			int nKind = Util.indexOf(traps, kind);
 			return nKind + 1;
 		} else {
@@ -179,6 +188,9 @@ public class Trap extends LevelObject {
 	}
 
 	private int usedImage() {
+		if(usedImageIndex >= 0) {
+			return usedImageIndex;
+		}
 		return 0;
 	}
 
