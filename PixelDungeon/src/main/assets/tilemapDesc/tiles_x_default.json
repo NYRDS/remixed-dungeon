@@ -34,7 +34,7 @@
    "LOCKED_DOOR":{"base":[16,17,18],"deco":[82]},
    "WALL_DECO":{"base":[16,17,18],"deco":[160,161,162]},
    "LOCKED_EXIT":{"base":[16,17,18],"deco":[83]},
-   "UNLOCKED_EXIT":{"base":[16,17,18],"deco":[84]},      
+   "UNLOCKED_EXIT":{"base":[16,17,18],"deco":[84]},
    "SECRET_DOOR":{"base":[16,17,18],"deco":[15]},
    
    "EMPTY_SP":{"base":[32,33,34],"deco":[15]},

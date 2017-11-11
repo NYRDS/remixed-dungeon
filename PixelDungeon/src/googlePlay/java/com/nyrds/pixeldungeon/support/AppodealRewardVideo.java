@@ -31,7 +31,7 @@ public class AppodealRewardVideo {
 			return;
 		}
 
-		Game.executeInGlThread(new Runnable() {
+		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
 
@@ -74,7 +74,7 @@ public class AppodealRewardVideo {
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
-		Game.executeInGlThread(new Runnable() {
+		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
 				if(isReady()) {

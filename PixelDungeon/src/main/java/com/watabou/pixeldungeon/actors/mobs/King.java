@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
@@ -32,24 +33,30 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
-import com.watabou.pixeldungeon.levels.CityBossLevel;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.KingSprite;
 import com.watabou.pixeldungeon.sprites.UndeadSprite;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class King extends Boss {
 	
 	private static final int MAX_ARMY_SIZE	= 5;
-	
+
+	@Packable
+	private int lastPedestal;
+
+	@Packable
+	private int targetPedestal;
+
 	public King() {
 		spriteClass = KingSprite.class;
 		
@@ -58,29 +65,17 @@ public class King extends Boss {
 		defenseSkill = 25;
 		
 		Undead.count = 0;
-		
+
+		lastPedestal   = -1;
+		targetPedestal = -1;
+
 		RESISTANCES.add( ToxicGas.class );
 		RESISTANCES.add( WandOfDisintegration.class );
 		
 		IMMUNITIES.add( Paralysis.class );
 	}
-	
-	private boolean nextPedestal = true;
-	
-	private static final String PEDESTAL = "pedestal";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( PEDESTAL, nextPedestal );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		nextPedestal = bundle.getBoolean( PEDESTAL );
-	}
-	
+
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 20, 38 );
@@ -99,21 +94,34 @@ public class King extends Boss {
 	
 	@Override
 	protected boolean getCloser( int target ) {
-		return canTryToSummon() ? 
-			super.getCloser( ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal ) ) : 
-			super.getCloser( target );
+
+		Level level = Dungeon.level;
+		int x = level.cellX(getPos());
+		int y = level.cellY(getPos());
+
+ 		targetPedestal = level.getNearestTerrain(x,y, Terrain.PEDESTAL, lastPedestal);
+
+		if(canTryToSummon()) {
+			return super.getCloser( targetPedestal );
+		}
+
+		return super.getCloser(target);
 	}
 	
 	@Override
 	protected boolean canAttack( Char enemy ) {
 		return canTryToSummon() ? 
-			getPos() == ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal ) : 
+			getPos() == targetPedestal :
 			Dungeon.level.adjacent( getPos(), enemy.getPos() );
 	}
 	
 	private boolean canTryToSummon() {
+		if (!Dungeon.level.cellValid(targetPedestal)) {
+			return false;
+		}
+
 		if (Undead.count < maxArmySize()) {
-			Char ch = Actor.findChar( ((CityBossLevel)(Dungeon.level)).pedestal( nextPedestal ) );
+			Char ch = Actor.findChar(targetPedestal);
 			return ch == this || ch == null;
 		} else {
 			return false;
@@ -139,7 +147,7 @@ public class King extends Boss {
 	}
 	
 	private int maxArmySize() {
-		return 1 + MAX_ARMY_SIZE * (ht() - hp()) / ht();
+		return (int) (1 + MAX_ARMY_SIZE * (ht() - hp()) / ht() * Game.instance().getDifficultyFactor());
 	}
 
 	@Override
@@ -149,47 +157,29 @@ public class King extends Boss {
 	}
 
 	private void summon() {
-
-		nextPedestal = !nextPedestal;
+		lastPedestal = targetPedestal;
 
 		getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );		
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 		
-		boolean[] passable = Dungeon.level.passable.clone();
-		for (Actor actor : Actor.all()) {
-			if (actor instanceof Char) {
-				passable[((Char)actor).getPos()] = false;
-			}
-		}
-		
 		int undeadsToSummon = maxArmySize() - Undead.count;
 
-		PathFinder.buildDistanceMap( getPos(), passable, undeadsToSummon );
-		PathFinder.distance[getPos()] = Integer.MAX_VALUE;
-		int dist = 1;
-		
-	undeadLabel:
-		for (int i=0; i < undeadsToSummon; i++) {
-			do {
-				for (int j=0; j < Dungeon.level.getLength(); j++) {
-					if (PathFinder.distance[j] == dist) {
-						
-						Undead undead = new Undead();
-						undead.setPos(j);
-						Dungeon.level.spawnMob(undead, 0);
+		Level level = Dungeon.level;
 
-						WandOfBlink.appear( undead, j );
-						new Flare( 3, 32 ).color( 0x000000, false ).show( undead.getSprite(), 2f ) ;
-						
-						PathFinder.distance[j] = Integer.MAX_VALUE;
-						
-						continue undeadLabel;
-					}
-				}
-				dist++;
-			} while (dist < undeadsToSummon);
+		for (int i=0; i < undeadsToSummon; i++) {
+			int pos = level.getEmptyCellNextTo(lastPedestal);
+
+			if (level.cellValid(pos)) {
+				Mob servant = new Undead();
+				servant.setPos(pos);
+				level.spawnMob(servant, 0);
+
+				WandOfBlink.appear(servant, pos);
+				new Flare(3, 32).color(0x000000, false).show(servant.getSprite(), 2f);
+
+				Actor.addDelayed(new Pushing(servant, lastPedestal, servant.getPos()), -1);
+			}
 		}
-		
 		yell(Game.getVar(R.string.King_Info2));
 	}
 	

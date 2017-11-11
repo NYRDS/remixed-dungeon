@@ -99,6 +99,7 @@ public abstract class LevelObject implements Bundlable, Presser {
 
 	public boolean push(Char hero){
 		Level level = Dungeon.level;
+
 		int hx = level.cellX(hero.getPos());
 		int hy = level.cellY(hero.getPos());
 

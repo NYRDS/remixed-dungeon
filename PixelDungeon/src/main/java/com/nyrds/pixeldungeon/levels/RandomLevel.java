@@ -93,6 +93,7 @@ public class RandomLevel extends RegularLevel {
 		cleanWalls();
 		createMobs();
 		createItems();
+		createScript();
 	}
 
 	@Override

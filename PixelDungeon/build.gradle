@@ -12,10 +12,8 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 467
-        versionName "remix.27.3.alpha.1"
-
-        testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+        versionCode 453
+        versionName "remix.27.2.alpha.1"
     }
     buildTypes {
         release {
@@ -43,12 +41,14 @@ android {
 
     flavorDimensions "minApi"
 
+
     productFlavors {
         googlePlayRetro {
             minSdkVersion 9
             compileSdkVersion 23
             targetSdkVersion 23
             dimension "minApi"
+
         }
         googlePlay {
             targetSdkVersion 26
@@ -59,17 +59,19 @@ android {
             // Enabling multidex support.
             multiDexEnabled true
             dimension "minApi"
+
         }
 
     }
 }
 
 dependencies {
-    compile 'ch.acra:acra:4.8.1@aar'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.google.code.gson:gson:2.7'
+    compile 'ch.acra:acra:4.9.0@aar'
+    compile 'com.google.code.gson:gson:2.8.0'
     compile 'org.luaj:luaj-jse:3.0.1'
 
+    //noinspection GradleDependency
+    googlePlayRetroCompile 'com.android.support:support-v4:25.0.1'
     //noinspection GradleDependency
     googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
     //noinspection GradleDependency
@@ -78,11 +80,17 @@ dependencies {
     googlePlayRetroCompile 'com.google.android.gms:play-services-analytics:9.0.2'
     //noinspection GradleDependency
     googlePlayRetroCompile "com.google.android.gms:play-services-games:9.0.2"
-    googlePlayCompile 'com.google.android.gms:play-services-ads:9.8.0'
-    googlePlayCompile 'com.google.android.gms:play-services-base:9.8.0'
-    googlePlayCompile 'com.google.android.gms:play-services-analytics:9.8.0'
-    googlePlayCompile "com.google.android.gms:play-services-games:9.8.0"
-    googlePlayCompile project(':cheetah-mobile-3.4.7')
+
+    googlePlayCompile 'com.android.support:support-v4:27.0.0'
+    googlePlayCompile project(':adcolony-sdk-3.1.2')
+    googlePlayCompile 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
+
+
+    googlePlayCompile 'com.google.android.gms:play-services-ads:10.2.1'
+    googlePlayCompile 'com.google.android.gms:play-services-base:10.2.1'
+    googlePlayCompile 'com.google.android.gms:play-services-analytics:10.2.1'
+    googlePlayCompile "com.google.android.gms:play-services-games:10.2.1"
+
     googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
     googlePlayCompile 'com.android.support:multidex:1.0.2'
 

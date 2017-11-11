@@ -41,7 +41,7 @@ public class WindGust extends Spell{
 					ch.getSprite().burst( 0xFF99FFFF, 3 );
 					Sample.INSTANCE.play( Assets.SND_MELD );
 
-					if ((level.passable[next] || level.avoid[next])
+					if (ch.isMovable() && (level.passable[next] || level.avoid[next])
 							&& Actor.findChar(next) == null) {
 						ch.move(next);
 						ch.getSprite().move(ch.getPos(), next);

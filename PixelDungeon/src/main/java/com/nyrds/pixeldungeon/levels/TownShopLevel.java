@@ -10,8 +10,10 @@ import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
+import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
+import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -81,7 +83,9 @@ public class TownShopLevel extends Level {
 		items.add( new Keyring());
 		items.add( new ScrollHolder());
 		items.add( new PotionBelt());
-		items.add( new SeedPouch() );
+		items.add( new SeedPouch());
+		items.add( new Quiver());
+		items.add( new WandHolster());
 
 		Item[] range = items.toArray(new Item[items.size()]);
 

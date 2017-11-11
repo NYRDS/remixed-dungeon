@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('adcolony-sdk-3.1.2.aar'))

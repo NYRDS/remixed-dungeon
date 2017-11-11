@@ -98,7 +98,7 @@ import java.util.Set;
 
 public abstract class Level implements Bundlable {
 
-	private static final String SCRIPTS = "SCRIPTS";
+	private static final String SCRIPTS = "scripts";
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
@@ -490,6 +490,14 @@ public abstract class Level implements Bundlable {
 
 		createMobs();
 		createItems();
+		createScript();
+	}
+
+	protected void createScript() {
+		String script = DungeonGenerator.getLevelProperty(levelId,"script", null);
+		if(script !=null) {
+			addScriptedActor(new ScriptedActor(script));
+		}
 	}
 
 	public void reset() {
@@ -1512,14 +1520,24 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getNearestTerrain(int x, int y, int terr) {
-		int minima = getDistToNearestTerrain(x, y, terr);
+		return getNearestTerrain(x, y, terr, -1);
+	}
+
+	public int getNearestTerrain(int x, int y, int terr, int ignoreCell) {
+		int minima = getLength();
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		int cell = cell(x, y);
 		for (int i = 0; i < getLength(); i++) {
-			if (map[i] == terr) {
+			if (i != ignoreCell && map[i] == terr) {
 				int delta = distance(cell, i);
+
+				if(delta < minima) {
+					candidates.clear();
+					minima = delta;
+				}
+
 				if (delta == minima) {
 					candidates.add(i);
 				}
@@ -1537,7 +1555,7 @@ public abstract class Level implements Bundlable {
 		return -1;
 	}
 
-	public int getRandomTerrainCell(int terrainType) {
+	public ArrayList<Integer> getAllTerrainCells(int terrainType) {
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		for (int i = 0; i < getLength(); i++) {
@@ -1545,8 +1563,11 @@ public abstract class Level implements Bundlable {
 				candidates.add(i);
 			}
 		}
+		return candidates;
+	}
 
-		return oneCellFrom(candidates);
+	public int getRandomTerrainCell(int terrainType) {
+		return oneCellFrom(getAllTerrainCells(terrainType));
 	}
 
 	public int get(int i, int j) {
@@ -1651,6 +1672,16 @@ public abstract class Level implements Bundlable {
 
 	public void addScriptedActor(ScriptedActor actor) {
 		scripts.add(actor);
-		Actor.add(actor);
+		if(Dungeon.level!=null) {
+			Actor.add(actor);
+		}
 	}
+
+	public void activateScripts() {
+		for(ScriptedActor scriptedActor:scripts) {
+			Actor.add(scriptedActor);
+			scriptedActor.activate();
+		}
+	}
+
 }

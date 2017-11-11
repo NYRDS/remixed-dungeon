@@ -21,6 +21,9 @@
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
+    <facet type="Lua" name="Lua">
+      <configuration SdkName="Kahlua" />
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/googlePlay/debug" />
@@ -91,13 +94,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
@@ -105,6 +101,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
@@ -147,40 +150,58 @@
       <excludeFolder url="file://$MODULE_DIR$/build/reports" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 26 Platform (1)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="com.android.support:multidex-1.0.2" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\appodeal-1.15.9.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\flurry-analytics-6.5.0.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-base-9.8.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\android-support-v7-recyclerview-23.1.1.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\chartboost-6.6.1.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="ch.acra:acra-4.8.1" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-analytics-impl-9.8.0" level="project" />
-    <orderEntry type="library" name="com.android.support:support-core-ui-25.3.1" level="project" />
-    <orderEntry type="library" name="com.android.support:support-compat-25.3.1" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-basement-9.8.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\unity-ads-2.0.4.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\applovin-6.3.0.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-core-utils-25.3.1" level="project" />
-    <orderEntry type="library" name="com.google.code.gson:gson:2.7@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-v4-25.3.1" level="project" />
-    <orderEntry type="library" name="com.android.support:support-fragment-25.3.1" level="project" />
-    <orderEntry type="library" name="com.android.support:support-media-compat-25.3.1" level="project" />
-    <orderEntry type="library" name="artifacts:cheetah-mobile-3.4.7" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-gass-9.8.0" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-drive-9.8.0" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-tasks-9.8.0" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-ads-9.8.0" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.8.0@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-tagmanager-v4-impl-10.2.1" level="project" />
+    <orderEntry type="library" name="android.arch.lifecycle:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-core-utils-27.0.0" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-base-10.2.1" level="project" />
+    <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.0" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-drive-10.2.1" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\avocarrot-3.8.2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-compat-27.0.0" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-ads-10.2.1" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\applovin-7.4.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-tasks-10.2.1" level="project" />
+    <orderEntry type="library" name="artifacts:adcolony-sdk-3.1.2" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\yandex-metrica-2.73.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-analytics-impl-10.2.1" level="project" />
+    <orderEntry type="library" name="com.android.support:support-core-ui-27.0.0" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\appnext-2.0.3.459.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="android.arch.core:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-games-10.2.1" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\startapp-3.6.2.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="org.luaj:luaj-jse:3.0.1@jar" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-clearcut-9.8.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-media-compat-27.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support:multidex-instrumentation-1.0.2" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\yandex-metrica-2.62.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-analytics-9.8.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:C.\Work\pixel-dungeon-remix\PixelDungeon\lib\my-target-4.5.10.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-ads-lite-9.8.0" level="project" />
-    <orderEntry type="library" name="com.google.android.gms:play-services-games-9.8.0" level="project" />
-    <orderEntry type="library" name="com.android.support:support-annotations:25.3.1@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\javax.inject-1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.squareup.picasso:picasso:2.5.2@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-v4-27.0.0" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\android-support-v7-recyclerview-23.1.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-fragment-27.0.0" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\tapjoy-11.11.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\appodeal-2.1.7.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\rxjava-1.2.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-clearcut-10.2.1" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-analytics-10.2.1" level="project" />
+    <orderEntry type="library" name="ch.acra:acra-4.9.0" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\unity_ads-2.1.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-gass-10.2.1" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\eventbus-2.2.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-ads-lite-10.2.1" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\ironsource-6.6.2.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.google.android.gms:play-services-basement-10.2.1" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\dagger-2.7.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\facebook-4.26.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\inmobi-6.2.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\vungle-sdk-android-5.1.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\chartboost-6.6.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\yandex-mobileads-2.61.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-annotations:27.0.0@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\Nyrds\Remixed Pixel Dungeon\PixelDungeon\lib\mailru-4.6.17.jar:unspecified@jar" level="project" />
     <orderEntry type="module" module-name="annotation" />
+    <orderEntry type="library" name="android-android-26" level="project" />
   </component>
 </module>

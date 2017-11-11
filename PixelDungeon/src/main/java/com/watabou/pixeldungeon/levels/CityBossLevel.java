@@ -93,14 +93,14 @@ public class CityBossLevel extends Level {
 			map[y * getWidth() + _Center() + 2] = Terrain.STATUE_SP;
 			y += 2;
 		}
-		
+
 		int left = pedestal( true );
 		int right = pedestal( false );
 		map[left] = map[right] = Terrain.PEDESTAL;
 		for (int i=left+1; i < right; i++) {
 			map[i] = Terrain.EMPTY_SP;
 		}
-		
+
 		setExit((TOP - 1) * getWidth() + _Center(),0);
 		map[getExit(0)] = Terrain.LOCKED_EXIT;
 		
@@ -131,7 +131,7 @@ public class CityBossLevel extends Level {
 		int sign = arenaDoor + getWidth() + 1;
 		addLevelObject(new Sign(sign,Dungeon.tip(this)));
 	}
-	
+
 	public int pedestal( boolean left ) {
 		if (left) {
 			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
@@ -139,7 +139,7 @@ public class CityBossLevel extends Level {
 			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
 		}
 	}
-	
+
 	@Override
 	protected void createMobs() {	
 	}

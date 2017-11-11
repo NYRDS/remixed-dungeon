@@ -147,7 +147,6 @@ public class NecroBossLevel extends Level {
 			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
 			Dungeon.level.spawnMob(boss);
-			boss.spawnSkulls();
 
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );

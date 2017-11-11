@@ -36,8 +36,6 @@ import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.ScaleArmor;
-import com.watabou.pixeldungeon.items.bags.Quiver;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -116,7 +114,7 @@ public class ShopPainter extends Painter {
 		case 11:
 			items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
 			items.add( new MailArmor().identify() );
-			items.add( new Quiver() );
+			items.add( new Weightstone() );
 			items.add( new TomeOfKnowledge().identify() );
 			break;
 			
@@ -139,7 +137,7 @@ public class ShopPainter extends Painter {
 				items.add( new PlateArmor().identify() );
 				break;
 			}
-			items.add( new WandHolster() );
+			items.add( new Weightstone() );
 			items.add( new Torch() );
 			items.add( new Torch() );
 			break;

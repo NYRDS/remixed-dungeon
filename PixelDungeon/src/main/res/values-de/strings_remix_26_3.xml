@@ -55,6 +55,10 @@
     <string name="BellaNPC_Yes_End_Game">Sicher (Beende das Spiel)</string>
     <string name="BellaNPC_No">Nein, nicht mit dir</string>
 
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">Es tut mir leid, aber du kannst momentan unseren Service nicht beanspruchen. (Internetverbindung benötigt)</string>
+
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_common_door_name">Tür</string>

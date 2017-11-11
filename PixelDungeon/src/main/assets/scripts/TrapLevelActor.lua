@@ -4,13 +4,12 @@
 -- Time: 14:46
 -- This file is part of Remixed Pixel Dungeon.
 --
-require "scripts/commonClasses"
+local RPD = require "scripts/commonClasses"
 
-local data
-function setData(_data)
-    data = _data
-end
+local trap = require"scripts/TrapCommon"
 
-function trap(cell, char)
-    Dungeon.level:addScriptedActor(luajava.newInstance("com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor","scripts/LevelActorSandbox"))
-end
+return trap.init(
+    function (cell, char, data)
+        RPD.Dungeon.level:addScriptedActor(luajava.newInstance("com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor","scripts/LevelActorSandbox"))
+    end
+)

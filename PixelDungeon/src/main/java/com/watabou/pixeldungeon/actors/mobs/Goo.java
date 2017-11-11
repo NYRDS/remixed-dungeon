@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -30,9 +29,8 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.LloydsBeacon;
+import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
-import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.GooSprite;
@@ -50,18 +48,7 @@ public class Goo extends Boss {
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
 
-
-		if (ModdingMode.inMod()){
-			float dice = Random.Float();
-			if( dice < 0.5 ) {
-				loot = new LloydsBeacon();
-			} else {
-				loot = new RingOfStoneWalking();
-			}
-		} else{
-			loot = new RingOfStoneWalking();
-		}
-
+		loot = Generator.random(Generator.Category.POTION);
 
 		lootChance = 0.8f;
 		
