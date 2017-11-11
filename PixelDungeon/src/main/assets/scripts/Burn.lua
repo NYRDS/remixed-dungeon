@@ -18,5 +18,9 @@ return actor.init({
     end,
     actionTime = function()
         return 1
+    end,
+    activate = function()
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,"It gonna be hot here...")
+       RPD.GameScene:show(wnd)
     end
 })
