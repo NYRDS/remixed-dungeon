@@ -24,7 +24,11 @@ RPD = {
 
     Objects = {
         Ui = {
-            WndMessage = "com.watabou.pixeldungeon.windows.WndMessage"
+            WndMessage = "com.watabou.pixeldungeon.windows.WndMessage",
+            WndStory   = "com.watabou.pixeldungeon.windows.WndStory"
+        },
+        Actors = {
+          ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
         },
     },
     new = function(class, ...)

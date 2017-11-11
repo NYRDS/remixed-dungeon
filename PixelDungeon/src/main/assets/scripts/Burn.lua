@@ -6,14 +6,17 @@
 --
 
 local RPD = require "scripts/commonClasses"
-
-return {
+local actor = require "scripts/ActorCommon"
+return actor.init({
     act = function()
         local levelSize = RPD.Dungeon.level:getLength()
-        RPD.GameScene:add( RPD.Blobs.Blob:seed(math.random(levelSize)-1,10, RPD.Blobs.Fire ) )
+        local cell = math.random(levelSize)-1
+        if not RPD.Dungeon.level.solid[cell] then
+            RPD.GameScene:add( RPD.Blobs.Blob:seed(cell,10, RPD.Blobs.Fire ))
+        end
         return true
     end,
     actionTime = function()
         return 1
     end
-}
+})

@@ -7,7 +7,7 @@
     "church":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true, "isStatic":true, "file":"levelsDesc/empty_interior.json", "music":"ost_town_1.mp3"},
 
     "movie_theater":{"kind":"PredesignedLevel", "depth":0,  "size":[12,8], "isSafe":true, "file":"levelsDesc/Theater.json", "music":"ost_town_1.mp3"},
-    "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "music":"ost_town_1.mp3", "script":"scripts/Snow"},
+    "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/TestLevelSewers.json", "noFogOfWar":true, "isSafe":true, "music":"ost_town_1.mp3", "script":"scripts/Burn"},
     "town_shop":{"kind":"TownShopLevel", "depth":0, "size":[32,32], "isSafe":true, "music":"ost_town_1.mp3"},
     "fortune_shop":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/FortuneShop.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
     "portal_shrine":{"kind":"PredesignedLevel", "size":[24,24], "depth":0, "file":"levelsDesc/PortalShrine.json", "isSafe":true},

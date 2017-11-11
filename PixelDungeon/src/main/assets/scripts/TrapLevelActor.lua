@@ -10,6 +10,6 @@ local trap = require"scripts/TrapCommon"
 
 return trap.init(
     function (cell, char, data)
-        RPD.Dungeon.level:addScriptedActor(luajava.newInstance("com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor","scripts/LevelActorSandbox"))
+        RPD.Dungeon.level:addScriptedActor(RPD.new(RPD.Objects.Actors.ScriptedActor,"scripts/Burn"))
     end
 )
