@@ -20,8 +20,19 @@ RPD = {
         Emitter       = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
         FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
         SnowParticle  = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle")
-    }
+    },
+
+    Objects = {
+        Ui = {
+            WndMessage = "com.watabou.pixeldungeon.windows.WndMessage"
+        },
+    },
+    new = function(class, ...)
+        return luajava.newInstance(class, ...)
+    end
 }
+
+
 
 return RPD
 

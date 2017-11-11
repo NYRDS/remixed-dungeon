@@ -57,12 +57,14 @@
    "water":"water0.png",
    "entrance":[1,1],
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
-   "mobs" : [
+   "obs" : [
       {"kind":"GoldenStatue","x":10,"y":10, "loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} },
       {"kind":"Mimic","x":8,"y":8, "level":3, "loot":{"kind":"Codex","text":"Это кодекс отобранный у толстого мимика"} }
    ],
   "items": [
+
     {"kind":"ScrollOfIdentify","quantity":"99","x":13,"y":10},
+    {"kind":"Dewdrop","x":13,"y":10},
     {"kind":"IronKey", "levelId":"2", "depth":2, "x":13,"y":11},
     {"kind":"WarHammer", "level":"4", "x":13,"y":11, "enchantment":"Horror"},
     {"kind":"LeatherArmor", "level":"5", "x":13,"y":12, "glyph":"Potential"}
@@ -78,7 +80,9 @@
     {"kind":"Trap","x":9,"y":9, "uses":1,
       "trapKind":"scriptFile",
       "script":"scripts/TrapMessage",
-      "data":"test"},
+      "data":"This is test Message",
+      "secret":true
+    },
 
     {"kind":"Trap","x":5,"y":9, "uses":1,
       "trapKind":"scriptFile",

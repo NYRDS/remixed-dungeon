@@ -10,7 +10,7 @@ local trap = require"scripts/TrapCommon"
 
 return trap.init(
     function (cell, char, data)
-        local wnd = luajava.newInstance("com.watabou.pixeldungeon.windows.WndMessage",data)
+        local wnd = RPD.new(RPD.Objects.Ui.WndMessage,data)
         RPD.GameScene:show(wnd)
     end
 )
