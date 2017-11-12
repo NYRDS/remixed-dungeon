@@ -36,6 +36,12 @@ public class AppodealRewardVideo {
 			public void run() {
 
 				String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
+
+				String disableNetworks[] = {"facebook","flurry","startapp","avocarrot","ogury"};
+
+				for(String net:disableNetworks) {
+					Appodeal.disableNetwork(PixelDungeon.instance(), net);
+				}
 				Appodeal.disableLocationPermissionCheck();
 
 				if(BuildConfig.DEBUG) {

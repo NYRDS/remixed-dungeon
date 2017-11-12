@@ -1,3 +1,8 @@
+-keep class com.nyrds.** { *; }
+-keep class com.watabou.** { *; }
+-keep class org.luaj.** { *; }
+
+
 # Appodeal
 -keep class com.appodeal.** { *; }
 -keep class org.nexage.** { *; }
@@ -37,12 +42,6 @@
 -keep class com.unity3d.** { *; }
 -dontwarn com.unity3d.**
 
-# Yandex
--keep class com.yandex.metrica.** { *; }
--dontwarn com.yandex.metrica.**
--keep class com.yandex.mobile.ads.** { *; }
--dontwarn com.yandex.mobile.ads.**
--keepattributes *Annotation*
 
 # StartApp
 -keep class com.startapp.** { *;}

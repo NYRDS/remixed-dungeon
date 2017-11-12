@@ -23,7 +23,7 @@ android {
         }
         debug {
             debuggable true
-            jniDebuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.release
         }
     }
@@ -59,7 +59,6 @@ android {
             // Enabling multidex support.
             multiDexEnabled true
             dimension "minApi"
-
         }
 
     }
