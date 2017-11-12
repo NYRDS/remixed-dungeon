@@ -3,5 +3,5 @@
     <!-- Item descriptions -->
     <!-- STRINGS OF WandOfShadowbolt CLASS -->
     <string name="WandOfShadowbolt_Name">Stab des Schattenblitzes</string>
-    <string name="WandOfShadowbolt_Info">Dieser Stab emittiert dunkle, böse Energie.</string>
+    <string name="WandOfShadowbolt_Info">Dieser Stab strahlt dunkle, böse Energie aus.</string>
 </resources>

@@ -2,10 +2,10 @@
 <resources>
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->
-    <string name="ServiceManNPC_NotReady">Die Leute machen gerade Pause, komm in ein paar Minuten zurück. Warum bekomme ich eigentlich nie eine Pause? Was? Spielregeln?</string>
-    <string name="ServiceManNPC_Limit">Jeder neue Abenteuer kann insgesamt nur 1%d Filme schauen.</string>
-    <string name="WndMovieTheatre_Sorry">Mann ist das peinlich... Wir können dich nicht auszahlen. Irgendwas ist schiefgelaufen.</string>
-    <string name="WndMovieTheatre_Ok">Du hast erfolgreich ein \"Belohnung\" Video angeschaut.</string>
+    <string name="ServiceManNPC_NotReady">Tut mir leid, aber der Film läuft gerade nicht. Komm einfach in ein paar Minuten wieder.</string>
+    <string name="ServiceManNPC_Limit">Ich entschuldige mich, aber jeder neue Abenteuer kann insgesamt nur %d Filme schauen.</string>
+    <string name="WndMovieTheatre_Sorry">Irgendwas ist schiefgelaufen, deshalb können wir dir nicht die Belohnung vom Video geben...</string>
+    <string name="WndMovieTheatre_Ok">Du hast erfolgreich ein \"Belohnungs\" Video angeschaut!</string>
 
     <!-- Accessories descriptions -->
     <!-- STRINGS OF GnollCostume CLASS -->

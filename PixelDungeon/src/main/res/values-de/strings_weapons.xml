@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">Du kannst %1$s nun identifizieren. Es handelt sich um %2$s.</string>
+  <string name="Weapon_Identify">Du kannst dein %1$s nun identifizieren. Es handelt sich um %2$s.</string>
   <string name="Weapon_Incompatible">Die Wechselwirkung verschiedener Magietypen hat die Verzauberung dieser Waffe aufgehoben.</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->

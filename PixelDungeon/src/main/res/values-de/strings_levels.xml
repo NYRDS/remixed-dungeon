@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /levels-->
   <!--STRINGS OF Level CLASS-->
-  <string name="Level_HiddenPlate">Eine verborgene Druckplatte knackt.</string>
+  <string name="Level_HiddenPlate">Eine verborgene Druckplatte wurde ausgelöst!.</string>
   <string name="Level_TileChasm">Abgrund</string>
   <string name="Level_TileFloor">Boden</string>
   <string name="Level_TileGrass">Gras</string>
@@ -19,7 +19,7 @@
   <string name="Level_TileHighGrass">Hohes Gras</string>
   <string name="Level_TileLockedExit">Verschlossener Ausgang aus der Tiefe</string>
   <string name="Level_TileUnlockedExit">Geöffneter Ausgang aus der Tiefe</string>
-  <string name="Level_TileSign">Wegweiser</string>
+  <string name="Level_TileSign">Schild</string>
   <string name="Level_TileWell">Brunnen</string>
   <string name="Level_TileEmptyWell">Leerer Brunnen</string>
   <string name="Level_TileStatue">Statue</string>
