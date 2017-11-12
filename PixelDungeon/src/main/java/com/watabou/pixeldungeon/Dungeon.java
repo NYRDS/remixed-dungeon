@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -81,7 +82,8 @@ import java.util.concurrent.FutureTask;
 
 public class Dungeon {
 
-	public static int     potionOfStrength;
+	private static final String SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
+	public static int potionOfStrength;
 	public static int     scrollsOfUpgrade;
 	public static int     arcaneStyli;
 	public static boolean dewVial; // true if the dew vial can be spawned
@@ -285,20 +287,21 @@ public class Dungeon {
 		return Random.Int(12 * (1 + arcaneStyli)) < depth;
 	}
 
-	private static final String VERSION    = "version";
-	private static final String CHALLENGES = "challenges";
-	private static final String HERO       = "hero";
-	private static final String GOLD       = "gold";
-	private static final String DEPTH      = "depth";
-	private static final String LEVEL      = "level";
-	private static final String POS        = "potionsOfStrength";
-	private static final String SOU        = "scrollsOfEnhancement";
-	private static final String AS         = "arcaneStyli";
-	private static final String DV         = "dewVial";
-	private static final String WT         = "transmutation";
-	private static final String CHAPTERS   = "chapters";
-	private static final String QUESTS     = "quests";
-	private static final String BADGES     = "badges";
+	private static final String VERSION      = "version";
+	private static final String CHALLENGES   = "challenges";
+	private static final String HERO         = "hero";
+	private static final String GOLD         = "gold";
+	private static final String DEPTH        = "depth";
+	private static final String LEVEL        = "level";
+	private static final String POS          = "potionsOfStrength";
+	private static final String SOU          = "scrollsOfEnhancement";
+	private static final String AS           = "arcaneStyli";
+	private static final String DV           = "dewVial";
+	private static final String WT           = "transmutation";
+	private static final String CHAPTERS     = "chapters";
+	private static final String QUESTS       = "quests";
+	private static final String BADGES       = "badges";
+	private static final String SCRIPTS_DATA = "scripts_data";
 
 	public static void gameOver() {
 		Dungeon.deleteGame(true);
@@ -353,6 +356,9 @@ public class Dungeon {
 
 		GLog.toFile("saving game: %s", fileName);
 
+		bundle.put(SCRIPTS_DATA,
+				LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
+
 		OutputStream output = FileSystem.getOutputStream(fileName);
 		Bundle.write(bundle, output);
 		output.close();
@@ -370,6 +376,10 @@ public class Dungeon {
 				current.levelId);
 
 		GLog.toFile("saving level: %s", saveTo);
+
+		bundle.put(SCRIPTS_DATA,
+				LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("serializeLevelData").call().checkjstring());
+
 
 		OutputStream output = FileSystem.getOutputStream(saveTo);
 		Bundle.write(bundle, output);
@@ -436,7 +446,6 @@ public class Dungeon {
 
 
 	public static void loadGame() throws IOException {
-		GLog.toFile("load Game");
 		loadGame(SaveUtils.gameFile(heroClass), true);
 	}
 
@@ -511,11 +520,10 @@ public class Dungeon {
 
 		Statistics.restoreFromBundle(bundle);
 		Journal.restoreFromBundle(bundle);
+		LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 	}
 
 	public static void loadGame(String fileName, boolean fullLoad) throws IOException {
-		GLog.toFile("load Game %s", fileName);
-
 		Bundle bundle = gameBundle(fileName);
 
 		loadGameFromBundle(bundle, fullLoad);
@@ -553,6 +561,7 @@ public class Dungeon {
 		}
 
 		Level level = Level.fromBundle(bundle, "level");
+		LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
 
 		if (level == null) {
 			level = newLevel(next);

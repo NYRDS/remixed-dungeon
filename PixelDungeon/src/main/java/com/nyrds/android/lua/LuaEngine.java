@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LoadState;
 import org.luaj.vm2.LuaError;
+import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.compiler.LuaC;
 import org.luaj.vm2.lib.Bit32Lib;
@@ -40,7 +41,7 @@ public class LuaEngine implements ResourceFinder {
 		return globals.get(method).call();
 	}
 
-	synchronized public LuaValue call(String method, Object arg1) {
+	public LuaValue call(String method, Object arg1) {
 		try {
 			LuaValue methodForData = globals.get(method);
 			return methodForData.call(CoerceJavaToLua.coerce(arg1));
@@ -50,7 +51,7 @@ public class LuaEngine implements ResourceFinder {
 		return LuaValue.NIL;
 	}
 
-	synchronized public LuaValue call(String method, Object arg1, Object arg2) {
+	public LuaValue call(String method, Object arg1, Object arg2) {
 		try {
 			LuaValue methodForData = globals.get(method);
 			methodForData.call(CoerceJavaToLua.coerce(arg1),CoerceJavaToLua.coerce(arg2));
@@ -58,13 +59,6 @@ public class LuaEngine implements ResourceFinder {
 			reportLuaError(err);
 		}
 		return LuaValue.NIL;
-	}
-
-	private class log extends OneArgFunction {
-		public LuaValue call(LuaValue x) {
-			GLog.i("lua: " + x.tojstring());
-			return LuaValue.NIL;
-		}
 	}
 
 	private class resLoader extends OneArgFunction {
@@ -93,7 +87,6 @@ public class LuaEngine implements ResourceFinder {
 		LuaC.install(globals);
 
 		globals.finder = this;
-		globals.set("log", new log());
 		globals.set("loadResource", new resLoader());
 	}
 
@@ -101,17 +94,13 @@ public class LuaEngine implements ResourceFinder {
 		GLog.w(err.getMessage());
 	}
 
-	synchronized public void runScriptFile(@NonNull String fileName) {
-		try {
-			globals.loadfile(fileName).call();
-		} catch (LuaError err) {
-			reportLuaError(err);
-		}
+	public LuaTable require(String module) {
+		return LuaEngine.getEngine().call("require", module).checktable();
 	}
 
-	synchronized public void runScriptText(String script) {
+	public void runScriptFile(@NonNull String fileName) {
 		try {
-			globals.load(script, "user chunk").call();
+			globals.loadfile(fileName).call();
 		} catch (LuaError err) {
 			reportLuaError(err);
 		}

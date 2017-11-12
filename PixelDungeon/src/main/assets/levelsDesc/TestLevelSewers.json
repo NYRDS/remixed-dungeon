@@ -77,10 +77,9 @@
       "trapKind":"scriptFile",
       "script":"scripts/TrapLevelActor"},
 
-    {"kind":"Trap","x":9,"y":9, "uses":1,
+    {"kind":"Trap","x":9,"y":9, "uses":2000,
       "trapKind":"scriptFile",
-      "script":"scripts/TrapMessage",
-      "data":"This is test Message",
+      "script":"scripts/traps/Counter",
       "secret":true
     },
 

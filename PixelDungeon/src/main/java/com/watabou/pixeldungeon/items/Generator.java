@@ -169,10 +169,6 @@ public class Generator {
 		public Class<?>[] classes;
 		public float[]    probs;
 
-		public void addItemClass(Class<?> item, float prob) {
-
-		}
-
 		private float                 prob;
 		private Class<? extends Item> superClass;
 
