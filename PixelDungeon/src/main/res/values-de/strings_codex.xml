@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Codex CLASS-->
-  <string name="Codex_Name">Codex</string>
+  <string name="Codex_Name">Kodex</string>
   <string name="Codex_ACRead">LESEN</string>
-  <string name="Codex_Info">Eines von vielen Büchern, das man in der Bibliothek finden kann</string>
+  <string name="Codex_Info">Eines von vielen Büchern, das man in Bibliotheken finden kann</string>
   <string name="Codex_Blinded">Du kannst nicht lesen, während du geblendet bist</string>
   <string-array name="Codex_Story">
     <item>Und er erschuf den Watabou Pixel Dungeon. Und er sah sich sein Werk an. Und er sah, dass es gut war!</item>
@@ -14,7 +14,7 @@
     <item>Glyphe der Macht - Dies befreit einen blitzartigen Strahl, welcher den Gegner verletzt, der den Helden angegriffen hat. Der Held wird um ca. die Hälfte des Schadens verletzt, der dem Gegner zugefügt wurde.</item>
     <item>Glyphe des Stoffwechsels - Der Held wird teilweise geheilt, bevor der Gegner ihm Schaden zufügt, allerdings steigt auch der Hunger des Helden beachtlich. Funktioniert nur, wenn der Held keinen starken Hunger hat.</item>
     <item>Glyphe des Gestanks - Wenn er getroffen wird, lässt der Held eine Wolke mit giftigem Gas frei</item>
-    <item>Glyphe der Zähigkeit - Der Held erhält einen negativen Effekt, der eine Verzögerung des erhaltenen Schadens bewirkt. Dieser führt dazu, dass der Held in jeder Runde 1 Schadenspunkt erleidet anstatt den vollen Schaden auf einmal ab zu bekommen.</item>
+    <item>Glyphe der Zähigkeit - Der Held erhält einen negativen Effekt, der eine Verzögerung des erhaltenen Schadens bewirkt. Dieser führt dazu, dass der Held in jeder Runde 1 Schadenspunkt erleidet anstatt den vollen Schaden auf einmal zu bekommen.</item>
     <item>Glyphe der Versetzung - Immer wenn der Held Schaden erleidet, besteht die Chance, dass er an einen zufälligen anderen Ort in Sichtweite teleportiert wird. Diese Glyphe funktioniert nicht in Boss-Ebenen.</item>
     <item>Glyphe der Verschränkung - Der Held erhält möglicherweise Rindenhaut, wird währenddessen aber festgehalten.</item>
     <item>Grausige Waffe - Ein erfolgreicher Treffer kann das Ziel direkt töten (oder bis zu 2x Schaden an einem Boss verursachen).</item>
@@ -23,7 +23,7 @@
     <item>Instabile Waffe - Ein erfolgreicher Treffer kann den Effekt jeder anderen Verzauberung zufügen.</item>
     <item>Vampirische Waffe - Ein erfolgreicher Treffer heilt den Helden um einen Teil des zugefügten Schadens.</item>
     <item>Glücksbringende Waffe - Ignoriert die Waffe des Gegners fast komplett und verursacht deutlich mehr Schaden.</item>
-    <item>Betäubende Waffe - Ein erfolgreicher Treffer paralysiert den Gegner.</item>
+    <item>Betäubende Waffe - Ein erfolgreicher Treffer betäubt den Gegner.</item>
     <item>Durchdringende Waffe - Ein erfolgreicher Treffer kann allen Gegnern, die sich in direkter Linie hinter dem Ziel befinden Schaden zufügen.</item>
     <item>Vergiftete Waffe - Ein erfolgreicher Treffer kann das Ziel vergiften.</item>
     <item>Eisige Waffe - Ein erfolgreicher Treffer verlangsamt das Ziel und verhindert, dass es verbrennt.</item>
@@ -31,16 +31,16 @@
     <item>Dieses Buch ist in der Sprache der Dämonen geschrieben</item>
     <item>Dieses Buch ist in der Sprache der Zwerge geschrieben</item>
     <item>Dieses Buch ist in der Sprache der Elfen geschrieben</item>
-    <item>She stopped, frozen, at the heavy oaken door, and eyed the light emerging from the door\'s borders. From some neglected corner of her mind, recognition.\n
-\"Sunlight..\" she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
-She remembered their voices, their commands, and their warnings, but not their faces, nor their touch.\n
-Pain had trained her. Remember the dangers, always the dangers. Rabid animals, undead, insane brigands, and cunning ninjas had fallen before her. She had cut, burned, stabbed, and poisoned her way through abominations, demons, clockwork abominations, and insane necromancers. Even Gods had fallen before her.\n
-She had tracked Yog through Heaven and Hell, before silencing his corrupting whispers forever. Even then, there was work to be done. Yog was a servant of one even more occult and powerful than himself.\n
-So she delved further, deeper. The old wizard\'s journal, still radiating power, had shown her the path. With the magic in it\'s pages, she traveled to a wild new land, a tiny village ensconced in a mighty forest. There, she finally tracked the evil to its labyrinthine source, and vanquished all who stood before her.\n
-Now, in the faint daylight, she examined herself in a pool of cavewater. Her body was warped almost beyond recognition by magic. Her skin, pale to he point of translucency, was caked with dirt, grime, and soot. Her necklace of rings could pay a kings ransom, and her holster of wands contained enough magical energy to lay waste to armies. She gripped her weapons, literally fine enough to cut down the very gods. Truly, she had become master of this dark realm, this wasteland of despair.\n
-She had chased evil to the far corners of the multiverse, but now she was paralyzed with fear. What if they reject her? What if they don\'t? How could she interact with these people anymore? Hell, she had lost count of the times death had claimed her, only to be pulled from its icy grasp.\n
-No, there was no place for her in the light, not anymore. She turned from the meager light, and descended into the dark, perhaps for the last time.\n
-\n\n\tby drazool from reddit
+    <item>Sie stoppte, gefroren an der schweren Eichentür und sah das Licht um die Ränder der Tür.Daran erinnert sie sich aus einem dunklen Winkel in ihrem Geist.\n
+\"Sonnenlicht...\" Murmelt sie zu sich selbst. Wie lang ist es her? In der ewigen Dunkelheit des Dungeons, hat sie schon lange aufgegeben die Tage zu zählen. Das Licht scheint auf ihre ungenutzte Erinnerungen. Sie erinnert sich an ihr Training, lange anstrengende Tage mit Übungen und Karten erstellen. Sie erinnert sich an an ihre Mantras und Disziplinen die ihr erlauben den Anschein der Geistigen Gesundheit zu wahren, als sie die unbekannten Tiefen ausgelotet hat. An was sie sich nicht erinnern kann, sind Menschen.\n
+Sie erinnert sich an ihre Stimmen, ihre Befehle und ihre Warnungen, aber nicht ihre Gesichter, oder ihre Berührung.\n
+Schmerz hat sie trainiert. Erinnere dich an dich an die Gefahren, immer die Gefahren. Wilde Tiere, Untote, verrückte Räuber und Geschickte Ninjas sind vor ihr gefallen. Sie hat sich ihren Weg durch Abscheulichkeiten, Dämonen, Uhrwerk-Abscheulichkeiten und verrückte Nekromanten geschnitten, verbrannt, erstochen und vergiftet. Sogar Götter sind vor ihr Gefallen.\n
+Sie hat Yog durch Himmel und Hölle verfolgt, bevor sein korrumpierendes Flüstern für immer verstummt ist. Sogar dann war noch Arbeit da, die erledigt werden will. Yog war ein Diener eines verborgenen und mächtigeren als sich selbst.\n
+Also forschte sie weiter und tiefer. Der alte Zauberjournal, der immer noch Energie abstrahlt, zeigte ihr den Weg. Mit der Magie in diesen Seiten, reiste sie in wildes neues Land, wo ein kleines Dorf sich in einem Wald niedergelassen hat. Dort, fand sie endlich die Labyrinthquelle des Bösen und tötete alle, die ihr im Weg standen.\n
+Nun im schwachen Tageslicht, fand sie sich selbst in einem Pool aus Höhlenwasser. Ihr Körper war durch Magie verzerrt worden. Ihre Haut, weiß und fast durchsichtig war mit Erde, Schmutz und Ruß verdreckt. Ihre Halskette aus Ringen könnte einen König Freikaufen und ihr Holster voller Stäbe enthielt genug Magische Energie um Armeen zu verschwenden. Sie nahm ihre Waffen, womit sie sogar die größten Götter töten könnte. Wahrhaftig ist sie ein Meister dieses dunklen Reichs geworden, dem Ödland der Verzweiflung.\n
+Sie jagte das Böse in die fernen Ecken des Multiversum, aber jetzt ist sie gelähmt durch Angst. Was wenn sie sie zurückweisen? Was wenn nicht? Wie könnte sie jetzt mit diesen Leuten interagieren? Sie hat vergessen, wie oft der Tod sie erobert hat, um dann von ihrem eisigen Griff zurückgezogen zu werden.\n
+Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihrem spärlichen Licht weg und stieg hinab in die Dunkelheit, vielleicht für das letzte Mal.\n
+\n\n\tby drazool von Reddit
 </item>
   </string-array>
 </resources>
