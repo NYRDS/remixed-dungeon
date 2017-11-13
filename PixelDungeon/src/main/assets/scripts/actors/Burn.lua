@@ -5,8 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/commonClasses"
-local actor = require "scripts/ActorCommon"
+local RPD = require "scripts/lib/commonClasses"
+local actor = require "scripts/lib/actor"
 return actor.init({
     act = function()
         local levelSize = RPD.Dungeon.level:getLength()

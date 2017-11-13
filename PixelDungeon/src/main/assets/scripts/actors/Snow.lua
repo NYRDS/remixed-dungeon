@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/commonClasses"
+local RPD = require "scripts/lib/commonClasses"
 print("Loading Snow")
 return {
     activate = function()

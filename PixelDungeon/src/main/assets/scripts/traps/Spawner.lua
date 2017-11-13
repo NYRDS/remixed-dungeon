@@ -5,9 +5,9 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/commonClasses"
+local RPD = require "scripts/lib/commonClasses"
 
-local trap = require"scripts/TrapCommon"
+local trap = require"scripts/lib/trap"
 
 return trap.init(
     function (cell, char, data)

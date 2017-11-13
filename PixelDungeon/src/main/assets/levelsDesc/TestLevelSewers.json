@@ -75,17 +75,17 @@
 
     {"kind":"Trap","x":13,"y":9, "uses":1,
       "trapKind":"scriptFile",
-      "script":"scripts/TrapLevelActor"},
+      "script":"scripts/traps/Message"},
 
     {"kind":"Trap","x":9,"y":9, "uses":2000,
       "trapKind":"scriptFile",
-      "script":"scripts/traps/Counter",
+      "script":"scripts/traps/Spawner",
       "secret":true
     },
 
     {"kind":"Trap","x":5,"y":9, "uses":1,
       "trapKind":"scriptFile",
-      "script":"scripts/TrapSandbox"}
+      "script":"scripts/traps/Sandbox"}
     
   ]
 }
