@@ -12,17 +12,27 @@ RPD = {
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
     MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
     ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
+
     Blobs = {
         Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),
         Fire = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Fire"),
-        Foliage = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Foliage")
+        Foliage = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Foliage"),
+        ConfusionGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ConfusionGas"),
+        LiquidFlame = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.LiquidFlam"),
+        ParalyticGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ParalyticGas"),
+        Darkness = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Darkness"),
+        Web = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Web"),
+        ToxicGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ToxicGas"),
+        Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
     },
+
     Sfx = {
         CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
         Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
         FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
         SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle")
     },
+
     Objects = {
         Ui = {
             WndMessage = "com.watabou.pixeldungeon.windows.WndMessage",
