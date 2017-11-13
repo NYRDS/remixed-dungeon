@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.dialog;
 
+import com.nyrds.Packable;
 import com.watabou.noosa.Image;
 
 public class Dialog {
@@ -8,11 +9,11 @@ public class Dialog {
     // Диалог имеет изображение, которое содержит набор спрайтов, которые должны быть показаны во время диалога
     // Диалог имеет массив Диалоговых карточек, каждая из которых хранит описание конкретного "этапа" диалога
     // Диалог движется путём смены диалоговых карточек, будь то последовательное пролистывание или вызов конкретного набора карт при нажатии диалоговой опции ("варианта ответа")
-
-    private Image portrait;
-
+    @Packable
+    private String imageName;
+    @Packable
     private DialogCard[] cardTable;
-
+    @Packable
     private String dialogID;
 
     private void setUpFromJson() {

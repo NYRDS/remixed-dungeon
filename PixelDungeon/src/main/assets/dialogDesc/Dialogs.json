@@ -1,54 +1,55 @@
 {
-	"dialog" : {
-		"id" : "Test1",
-		"image" : "mobs/dialogAvatars.png",
-		"dialogCards" : [{
-			"imageIndex" : 1,
-			"portraitPos" : "right",
-			"title" : "Buddy",
-			"text" : "Hey guy."
-			},
-			{"imageIndex" : 1,
-			"portraitPos" : "right",
-			"title" : "Buddy",
-			"text" : "Sup guy."
-			},
-			{"imageIndex" : 0,
-			"portraitPos" : "left",
-			"title" : "You",
-			"text" : "What kind of monstrosity are you?"
-			},
-			{"imageIndex" : 1,
-			"portraitPos" : "right",
-			"title" : "Buddy",
-			"text" : "Thanks guy."
-			},
-			{"imageIndex" : 0,
-			"portraitPos" : "left",
-			"title" : "You",
-			"text" : "Begone. Demon!"
-			},
-			{"imageIndex" : 1,
-			"portraitPos" : "right",
-			"title" : "Buddy",
-			"text" : "Bye guy."
-			}
+	"dialogs" : [{
+			"id" : "Test1",
+			"image" : "mobs/dialogAvatars.png",
+			"dialogCards" : [{
+				"imageIndex" : 1,
+				"portraitPos" : "right",
+				"title" : "Buddy",
+				"text" : "Hey guy."
+				},
+				{"imageIndex" : 1,
+				"portraitPos" : "right",
+				"title" : "Buddy",
+				"text" : "Sup guy."
+				},
+				{"imageIndex" : 0,
+				"portraitPos" : "left",
+				"title" : "You",
+				"text" : "What kind of monstrosity are you?"
+				},
+				{"imageIndex" : 1,
+				"portraitPos" : "right",
+				"title" : "Buddy",
+				"text" : "Thanks guy."
+				},
+				{"imageIndex" : 0,
+				"portraitPos" : "left",
+				"title" : "You",
+				"text" : "Begone. Demon!"
+				},
+				{"imageIndex" : 1,
+				"portraitPos" : "right",
+				"title" : "Buddy",
+				"text" : "Bye guy."
+				}
 			],
-
-	"dialog" : {
-		"id" : "Test2",
-		"image" : "mobs/dialogAvatars.png",
-		"dialogCards" : [{
-			"imageIndex" : 1,
-			"portraitPos" : "right",
-			"title" : "Buddy",
-			"text" : "Oh my gooood."
-			},
-			{"imageIndex" : 0,
-			"portraitPos" : "left",
-			"title" : "You",
-			"text" : "Oh your gooood."
-			}
+		},
+		{
+			"id" : "Test2",
+			"image" : "mobs/dialogAvatars.png",
+			"dialogCards" : [{
+				"imageIndex" : 1,
+				"portraitPos" : "right",
+				"title" : "Buddy",
+				"text" : "Oh my gooood."
+				},
+				{"imageIndex" : 0,
+				"portraitPos" : "left",
+				"title" : "You",
+				"text" : "Oh your gooood."
+				}
 			]				
-   }
+		}
+	]
 }
