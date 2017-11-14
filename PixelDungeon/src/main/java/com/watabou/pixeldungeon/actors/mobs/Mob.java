@@ -503,7 +503,7 @@ public abstract class Mob extends Char {
 			//TODO we should move this block out of Mob class
 			Hero hero = Dungeon.hero;
 			if (hero.heroClass == HeroClass.NECROMANCER){
-				if (hero != null && hero.isAlive()) {
+				if (hero.isAlive()) {
 					if(hero.belongings.armor instanceof NecromancerRobe){
 						hero.accumulateSoulPoints();
 					}

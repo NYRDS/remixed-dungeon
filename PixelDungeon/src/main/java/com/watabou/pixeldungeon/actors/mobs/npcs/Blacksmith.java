@@ -91,7 +91,7 @@ public class Blacksmith extends NPC {
 				}
 			} );
 			
-			Journal.add( Journal.Feature.TROLL );
+			Journal.add( Journal.Feature.TROLL.desc() );
 			
 		} else if (!Quest.completed) {
 			if (Quest.alternative) {
@@ -208,7 +208,7 @@ public class Blacksmith extends NPC {
 		
 		Quest.reforged = true;
 		
-		Journal.remove( Journal.Feature.TROLL );
+		Journal.remove( Journal.Feature.TROLL.desc() );
 	}
 	
 	@Override

@@ -172,7 +172,7 @@ public class Ghost extends NPC {
 			GameScene.show( new WndQuest( this, Quest.alternative ? TXT_RAT1 : TXT_ROSE1 ) );
 			Quest.given = true;
 			
-			Journal.add( Journal.Feature.GHOST );
+			Journal.add( Journal.Feature.GHOST.desc() );
 		}
 		return true;
 	}
@@ -354,7 +354,7 @@ public class Ghost extends NPC {
 			weapon = null;
 			armor = null;
 			
-			Journal.remove( Journal.Feature.GHOST );
+			Journal.remove( Journal.Feature.GHOST.desc() );
 		}
 	}
 	

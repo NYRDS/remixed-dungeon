@@ -93,7 +93,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.given = true;
 			Quest.process(hero.getPos());
-			Journal.add(Journal.Feature.SCARECROW);
+			Journal.add(Journal.Feature.SCARECROW.desc());
 		}
 		return true;
 	}
@@ -159,7 +159,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 
 		static void complete() {
 			completed = true;
-			Journal.remove(Journal.Feature.SCARECROW);
+			Journal.remove(Journal.Feature.SCARECROW.desc());
 		}
 	}
 }

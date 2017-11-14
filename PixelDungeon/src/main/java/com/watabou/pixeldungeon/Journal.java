@@ -19,8 +19,11 @@ package com.watabou.pixeldungeon;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
@@ -28,6 +31,7 @@ import java.util.ArrayList;
 
 public class Journal {
 
+	@Deprecated
 	public enum Feature {
 		WELL_OF_HEALTH			(Game.getVar(R.string.Journal_WellHealt)),
 		WELL_OF_AWARENESS		(Game.getVar(R.string.Journal_WellAwareness)),
@@ -35,7 +39,7 @@ public class Journal {
 		ALCHEMY					(Game.getVar(R.string.Journal_Alchemy)),
 		GARDEN					(Game.getVar(R.string.Journal_Garden)),
 		STATUE					(Game.getVar(R.string.Journal_Statue)),
-		
+
 		GHOST					(Game.getVar(R.string.Journal_Ghost)),
 		WANDMAKER				(Game.getVar(R.string.Journal_Wandmaker)),
 		TROLL					(Game.getVar(R.string.Journal_Troll)),
@@ -45,9 +49,9 @@ public class Journal {
 		SCARECROW				(Game.getVar(R.string.Journal_ScarecrowNPC)),
 		PLAGUEDOCTOR			(Game.getVar(R.string.Journal_PlagueDoctorNPC));
 
-		
+
 		private String desc;
-		
+
 		Feature(String desc) {
 			this.desc = desc;
 		}
@@ -58,19 +62,27 @@ public class Journal {
 	}
 
 	public static class Record implements Comparable<Record>, Bundlable {
-		
+
+		@Deprecated
 		private static final String FEATURE	= "feature";
+
 		private static final String DEPTH	= "depth";
-		
-		public Feature feature;
+
+		@Packable
+		private String feature;
+
 		public int depth;
-		
+
 		public Record() {
 		}
-		
-		public Record( Feature feature, int depth ) {
-			this.feature = feature;
+
+		public Record( String featureDesc, int depth ) {
+			this.feature = featureDesc;
 			this.depth = depth;
+		}
+
+		public String getFeature() {
+			return StringsManager.maybeId(feature);
 		}
 
 		@Override
@@ -80,13 +92,18 @@ public class Journal {
 
 		@Override
 		public void restoreFromBundle( Bundle bundle ) {
-			feature = Feature.valueOf( bundle.getString( FEATURE ) );
+
+			try {
+				feature = Feature.valueOf( bundle.getString( FEATURE ) ).desc();
+			} catch (Exception e) {
+				EventCollector.logException(e, "old save");
+			}
+
 			depth = bundle.getInt( DEPTH );
 		}
 
 		@Override
 		public void storeInBundle( Bundle bundle ) {
-			bundle.put( FEATURE, feature.toString() );
 			bundle.put( DEPTH, depth );
 		}
 		
@@ -109,20 +126,18 @@ public class Journal {
 	
 	public static void restoreFromBundle( Bundle bundle ) {
 		records = new ArrayList<>();
-		for (Record rec : bundle.getCollection( JOURNAL, Record.class ) ) {
-			records.add(  rec );
-		}
+		records.addAll(bundle.getCollection(JOURNAL, Record.class));
 	}
 	
 	public static boolean dontPack() {
 		return false;
 	}
 	
-	public static void add( Feature feature ) {
+	public static void add( String feature ) {
 		int size = records.size();
 		for (int i=0; i < size; i++) {
 			Record rec = records.get( i );
-			if (rec.feature == feature && rec.depth == Dungeon.depth) {
+			if (rec.feature.equals(feature) && rec.depth == Dungeon.depth) {
 				return;
 			}
 		}
@@ -130,11 +145,11 @@ public class Journal {
 		records.add( new Record( feature, Dungeon.depth ) );
 	}
 	
-	public static void remove( Feature feature ) {
+	public static void remove( String feature ) {
 		int size = records.size();
 		for (int i=0; i < size; i++) {
 			Record rec = records.get( i );
-			if (rec.feature == feature && rec.depth == Dungeon.depth) {
+			if (rec.feature.equals(feature) && rec.depth == Dungeon.depth) {
 				records.remove( i );
 				return;
 			}

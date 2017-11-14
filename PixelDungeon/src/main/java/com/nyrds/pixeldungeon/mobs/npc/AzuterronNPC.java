@@ -121,7 +121,7 @@ public class AzuterronNPC extends NPC {
 			GameScene.show( new WndQuest( this, TXT_QUEST_START ) );
 			Quest.given = true;
 			Quest.process();
-			Journal.add( Journal.Feature.AZUTERRON );
+			Journal.add( Journal.Feature.AZUTERRON.desc() );
 		}
 		return true;
 	}
@@ -193,7 +193,7 @@ public class AzuterronNPC extends NPC {
 
 		public static void complete() {
 			completed = true;
-			Journal.remove( Journal.Feature.AZUTERRON );
+			Journal.remove( Journal.Feature.AZUTERRON.desc() );
 		}
 	}
 }

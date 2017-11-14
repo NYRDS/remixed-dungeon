@@ -62,7 +62,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.process(hero.getPos());
 			Quest.given = true;
-			Journal.add(Journal.Feature.PLAGUEDOCTOR);
+			Journal.add(Journal.Feature.PLAGUEDOCTOR.desc());
 		}
 		return true;
 	}
@@ -129,7 +129,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 
 		static void complete() {
 			completed = true;
-			Journal.remove(Journal.Feature.PLAGUEDOCTOR);
+			Journal.remove(Journal.Feature.PLAGUEDOCTOR.desc());
 		}
 	}
 }

@@ -46,7 +46,7 @@ public class Alchemy extends Blob {
 		volume = off[pos] = cur[pos];
 		
 		if (Dungeon.visible[pos]) {
-			Journal.add( Journal.Feature.ALCHEMY );
+			Journal.add( Journal.Feature.ALCHEMY.desc() );
 		}
 	}
 	

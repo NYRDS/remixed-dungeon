@@ -58,7 +58,7 @@ public class WndJournal extends Window {
 		
 		float pos = 0;
 		for (Journal.Record rec : Journal.records) {
-			ListItem item = new ListItem( rec.feature, rec.depth );
+			ListItem item = new ListItem( rec.getFeature(), rec.depth );
 			item.setRect( 0, pos, width, ITEM_HEIGHT );
 			content.add( item );
 			
@@ -80,10 +80,10 @@ public class WndJournal extends Window {
 		
 		private Image icon;
 		
-		public ListItem( Journal.Feature f, int d ) {
+		public ListItem( String text, int d ) {
 			super();
 			
-			feature.text( f.desc() );
+			feature.text( text );
 			feature.measure();
 			
 			depth.text( Integer.toString( d ) );

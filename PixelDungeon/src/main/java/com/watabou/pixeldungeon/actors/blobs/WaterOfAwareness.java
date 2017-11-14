@@ -71,7 +71,7 @@ public class WaterOfAwareness extends WellWater {
 	
 		GLog.p( TXT_PROCCED );
 		
-		Journal.remove( Feature.WELL_OF_AWARENESS );
+		Journal.remove( Feature.WELL_OF_AWARENESS.desc() );
 		
 		return true;
 	}
@@ -86,7 +86,7 @@ public class WaterOfAwareness extends WellWater {
 			
 			emitter.getParent().add( new Identification( DungeonTilemap.tileCenterToWorld( pos ) ) );
 			
-			Journal.remove( Feature.WELL_OF_AWARENESS );
+			Journal.remove( Feature.WELL_OF_AWARENESS.desc() );
 			
 			return item;
 		}
