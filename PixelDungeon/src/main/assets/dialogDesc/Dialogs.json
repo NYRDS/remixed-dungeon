@@ -6,34 +6,39 @@
 				"imageIndex" : 1,
 				"portraitPos" : "right",
 				"title" : "Buddy",
-				"text" : "Hey guy."
+				"text" : "Hey guy.",
+				"replies" : [2 , 4]
 				},
 				{"imageIndex" : 1,
 				"portraitPos" : "right",
 				"title" : "Buddy",
-				"text" : "Sup guy."
+				"text" : "Sup guy.",
+				"replies" : [2 , 4]
 				},
 				{"imageIndex" : 0,
 				"portraitPos" : "left",
 				"title" : "You",
-				"text" : "What kind of monstrosity are you?"
+				"text" : "What kind of monstrosity are you?",
+				"next" : 3
 				},
 				{"imageIndex" : 1,
 				"portraitPos" : "right",
 				"title" : "Buddy",
-				"text" : "Thanks guy."
+				"text" : "Thanks guy.",
+				"next" : 1
 				},
 				{"imageIndex" : 0,
 				"portraitPos" : "left",
 				"title" : "You",
-				"text" : "Begone. Demon!"
+				"text" : "Begone. Demon!",
+				"next" : 5
 				},
 				{"imageIndex" : 1,
 				"portraitPos" : "right",
 				"title" : "Buddy",
 				"text" : "Bye guy."
 				}
-			],
+			]
 		},
 		{
 			"id" : "Test2",
@@ -42,8 +47,9 @@
 				"imageIndex" : 1,
 				"portraitPos" : "right",
 				"title" : "Buddy",
-				"text" : "Oh my gooood."
-				},
+				"text" : "Oh my gooood.",
+				"next" : 1
+			},
 				{"imageIndex" : 0,
 				"portraitPos" : "left",
 				"title" : "You",
