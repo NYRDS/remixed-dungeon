@@ -7,6 +7,7 @@
 
 local RPD = require "scripts/lib/commonClasses"
 local actor = require "scripts/lib/actor"
+
 return actor.init({
     act = function()
         local levelSize = RPD.Dungeon.level:getLength()

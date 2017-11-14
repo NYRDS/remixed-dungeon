@@ -6,8 +6,9 @@
 --
 
 local RPD = require "scripts/lib/commonClasses"
-print("Loading Snow")
-return {
+local actor = require "scripts/lib/actor"
+
+return actor.init({
     activate = function()
         local levelSize = RPD.Dungeon.level:getLength()
         for i = 0 , levelSize - 1 do
@@ -16,13 +17,8 @@ return {
                 emitter:pour(RPD.Sfx.SnowParticle.FACTORY, 2)
             end
         end
-
-        return true
-    end,
-    act = function()
-        return true
     end,
     actionTime = function()
         return math.huge
     end
-}
+})
