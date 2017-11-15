@@ -8,7 +8,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Dialog {
-
     public int imageIndex;
 
     public String dialogID;
@@ -16,6 +15,15 @@ public class Dialog {
     public String title;
     public String text;
     public String portraitPos;
+
+    // Параметр next - казывает индекс следующей карточки
+    // Параметр replies - массив указывающий на наличие кнопок, указывающих на индекс следующей карточки
+    // Если нету ни next ни replies - "следующее" действие это не смена карточки, а завершение диалога
+    // Все текстовые данные надо вынести в strings
+    // Сделать по подобию Ice Wind Dale? У игрока портрета не будет. У NPC портрет только для порядка. Текст пишется сверху. Варианты ответа снизу
+    // Список вариантов, так же как и текст сообщения - лист с прокруткой, так можно уместить ответы любой длины
+    // После выбора ответа, он показывается снизу, пока NPC чиатет соотвествующую реплику, при условии, что эта реплика не сопровождается своими вариантами ответов
+    // Изображение и "Заголовок" указываем в начале диалога, и не меняем пока оно явно не казано в карточках. Т.е можно освободить место.
 
     public Dialog getFromJson(String targetID, int cardNum) {
         JSONObject initDialogs = JsonHelper.readJsonFromAsset("dialogDesc/Dialogs.json");
@@ -40,7 +48,6 @@ public class Dialog {
                         for (int j = 0; j < cards.length(); ++j) {
                             if(j == cardNum) {
                                 dialog.imageIndex = cards.getJSONObject(j).optInt("imageIndex", 0);
-                                dialog.portraitPos = cards.getJSONObject(j).optString("portraitPos", "right");
                                 dialog.title = cards.getJSONObject(j).optString("title", "N/A");
                                 dialog.text = cards.getJSONObject(j).optString("text", "No text found");
                                 return dialog;

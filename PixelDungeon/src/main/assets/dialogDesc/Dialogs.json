@@ -2,60 +2,60 @@
 	"dialogs" : [{
 			"id" : "Test1",
 			"image" : "mobs/dialogAvatars.png",
-			"dialogCards" : [{
-				"imageIndex" : 1,
-				"portraitPos" : "right",
-				"title" : "Buddy",
-				"text" : "Hey guy.",
-				"replies" : [2 , 4]
+			"imageIndex" : 1,
+			"title" : "Buddy",
+			"dialogCards" : [
+				{
+					"text" : "Hey guy.",
+					"replies" : "1"
 				},
-				{"imageIndex" : 1,
-				"portraitPos" : "right",
-				"title" : "Buddy",
-				"text" : "Sup guy.",
-				"replies" : [2 , 4]
+				{
+					"text" : "Sup guy?",
+					"replies" : "1"
 				},
-				{"imageIndex" : 0,
-				"portraitPos" : "left",
-				"title" : "You",
-				"text" : "What kind of monstrosity are you?",
-				"next" : 3
+				{
+					"text" : "Thanks guy.",
+					"next" : 1
 				},
-				{"imageIndex" : 1,
-				"portraitPos" : "right",
-				"title" : "Buddy",
-				"text" : "Thanks guy.",
-				"next" : 1
-				},
-				{"imageIndex" : 0,
-				"portraitPos" : "left",
-				"title" : "You",
-				"text" : "Begone. Demon!",
-				"next" : 5
-				},
-				{"imageIndex" : 1,
-				"portraitPos" : "right",
-				"title" : "Buddy",
-				"text" : "Bye guy."
+				{
+					"imageIndex" : 2,
+					"title" : "Happy Buddy",
+					"text" : "Bye guy."
 				}
 			]
 		},
 		{
 			"id" : "Test2",
 			"image" : "mobs/dialogAvatars.png",
-			"dialogCards" : [{
-				"imageIndex" : 1,
-				"portraitPos" : "right",
-				"title" : "Buddy",
-				"text" : "Oh my gooood.",
-				"next" : 1
-			},
-				{"imageIndex" : 0,
-				"portraitPos" : "left",
-				"title" : "You",
-				"text" : "Oh your gooood."
+			"imageIndex" : 3,
+			"title" : "Fellow",
+			"dialogCards" : [
+				{
+					"text" : "Oh my gooood.",
+					"next" : 1
+				},
+				{
+					"imageIndex" : 0,
+					"title" : "You",
+					"text" : "Oh your gooood."
 				}
 			]				
 		}
+	],
+
+	"replies" : [{
+		"1" : [
+			["What kind of monstrosity are you?", 3],
+			["Begone, demon!", 4]
+		],
+		"2" : [
+			["Please tell me about this place.", 1],
+			["What exactly is going on here?", 2],
+			["Who are you?", 3],
+			["I have no time for this.", 4]
+		]
+
+	}
 	]
+
 }
