@@ -14,7 +14,6 @@ public class Dialog {
     public String imagePath;
     public String title;
     public String text;
-    public String portraitPos;
 
     // Параметр next - казывает индекс следующей карточки
     // Параметр replies - массив указывающий на наличие кнопок, указывающих на индекс следующей карточки

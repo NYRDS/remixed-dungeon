@@ -3,38 +3,38 @@
 			"id" : "Test1",
 			"image" : "mobs/dialogAvatars.png",
 			"imageIndex" : 1,
-			"title" : "Buddy",
+			"title" : "Dialog_Test_1_Title",
 			"dialogCards" : [
 				{
-					"text" : "Hey guy.",
+					"text" : "Dialog_Test_1_Card_0",
 					"replies" : "1"
 				},
 				{
-					"text" : "Sup guy?",
+					"text" : "Dialog_Test_1_Card_1",
 					"replies" : "1"
 				},
 				{
-					"text" : "I am your buddy, guy.",
+					"text" : "Dialog_Test_1_Card_2",
 					"replies" : "2"
 				},
 				{
-					"text" : "Thanks guy.",
+					"text" : "Dialog_Test_1_Card_3",
 					"next" : 1
 				},
 				{
 					"imageIndex" : 2,
-					"title" : "Happy Buddy",
-					"text" : "Bye guy."
+					"title" : "Dialog_Test_1_Title_2",
+					"text" : "Dialog_Test_1_Card_4"
 				}
 			],
 			"replies" : [
 				{
 					"1" :[
-							["What kind of monstrosity are you?", 1],
-							["Begone, demon!", 4]
-						],
+						["Dialog_Test_1_Reply_0", 1],
+						["Dialog_Test_1_Reply_1", 4]
+					],
 					"2" :[
-							["Terrific!...", 1]
+						["Dialog_Test_1_Reply_2", 1]
 					]
 				}
 			]
@@ -43,39 +43,39 @@
 			"id" : "Test2",
 			"image" : "mobs/dialogAvatars.png",
 			"imageIndex" : 0,
-			"title" : "Fellow",
+			"title" : "Dialog_Test_2_Title",
 			"dialogCards" : [
 				{
-					"text" : "Hello, hello old chap! So nice to see you around.",
+					"text" : "Dialog_Test_2_Card_0",
 					"replies" : "1"
 				},
 				{
-					"text" : "Why would I? You are such a git after all.",
+					"text" : "Dialog_Test_2_Card_1",
 					"next" : 5
 				},
 				{
-					"text" : "Oh you know, a little bit of this, a little bit of that.",
+					"text" : "Dialog_Test_2_Card_2",
 					"next" : 5
 				},
 				{
-					"text" : "I am your buddy - Fellow. Don't you remember me? Jeez, you're a total bigot, you are, you are.",
+					"text" : "Dialog_Test_2_Card_3",
 					"next" : 5
 				},
 				{
-					"text" : "Well go to hell."
+					"text" : "Dialog_Test_2_Card_4"
 				},
 				{
-					"text" : "Anything else I can help you with, bugger?",
+					"text" : "Dialog_Test_2_Card_5",
 					"replies" : "1"
 				}
 			],
 			"replies" : [
 				{
 					"1" : [
-							["Please tell me about this place.",	1],
-							["What exactly is going on here?", 2],
-							["Who are you?", 3],
-							["I have no time for this.", 4]
+						["Dialog_Test_2_Reply_0", 1],
+						["Dialog_Test_2_Reply_1", 2],
+						["Dialog_Test_2_Reply_2", 3],
+						["Dialog_Test_2_Reply_3", 4]
 					]
 				}
 			]
