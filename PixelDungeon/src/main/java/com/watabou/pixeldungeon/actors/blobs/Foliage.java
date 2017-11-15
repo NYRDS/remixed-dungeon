@@ -70,7 +70,7 @@ public class Foliage extends Blob {
 		}
 		
 		if (visible) {
-			Journal.add( Journal.Feature.GARDEN );
+			Journal.add( Journal.Feature.GARDEN.desc() );
 		}
 	}
 	

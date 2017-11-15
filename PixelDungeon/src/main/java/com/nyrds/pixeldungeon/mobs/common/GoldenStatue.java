@@ -60,7 +60,7 @@ public class GoldenStatue extends Mob {
 	@Override
 	protected boolean act() {
 		if (!isPet() && Dungeon.visible[getPos()]) {
-			Journal.add( Journal.Feature.STATUE );
+			Journal.add( Journal.Feature.STATUE.desc() );
 		}
 		return super.act();
 	}
@@ -107,7 +107,7 @@ public class GoldenStatue extends Mob {
 
 	@Override
 	public void destroy() {
-		Journal.remove( Journal.Feature.STATUE );
+		Journal.remove( Journal.Feature.STATUE.desc() );
 		super.destroy();
 	}
 

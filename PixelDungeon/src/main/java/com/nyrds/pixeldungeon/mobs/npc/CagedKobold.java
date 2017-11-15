@@ -97,7 +97,7 @@ public class CagedKobold extends ImmortalNPC {
 			GameScene.show( new WndQuest( this, TXT_QUEST_START ) );
 			Quest.given = true;
 			Quest.process();
-			Journal.add( Journal.Feature.CAGEDKOBOLD );
+			Journal.add( Journal.Feature.CAGEDKOBOLD.desc() );
 		}
 		return true;
 	}
@@ -167,7 +167,7 @@ public class CagedKobold extends ImmortalNPC {
 
 		public static void complete() {
 			completed = true;
-			Journal.remove( Journal.Feature.CAGEDKOBOLD );
+			Journal.remove( Journal.Feature.CAGEDKOBOLD.desc() );
 		}
 	}
 }

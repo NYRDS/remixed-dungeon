@@ -120,7 +120,7 @@ public class WandMaker extends NPC {
 			
 			Quest.placeItem();
 			
-			Journal.add( Journal.Feature.WANDMAKER );
+			Journal.add( Journal.Feature.WANDMAKER.desc() );
 		}
 		
 		return true;
@@ -284,7 +284,7 @@ public class WandMaker extends NPC {
 		}
 		
 		public static void complete() {			
-			Journal.remove( Journal.Feature.WANDMAKER );
+			Journal.remove( Journal.Feature.WANDMAKER.desc() );
 		}
 	}
 	

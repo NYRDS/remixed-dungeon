@@ -12,6 +12,7 @@ RPD = {
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
     MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
     ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
+    Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
 
     Blobs = {
         Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),

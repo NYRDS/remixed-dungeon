@@ -21,7 +21,7 @@ actor.init = function(desc)
     return ret
 end
 
-actor.act = function() end
+actor.act = function() return true end
 
 
 actor.actionTime = function()

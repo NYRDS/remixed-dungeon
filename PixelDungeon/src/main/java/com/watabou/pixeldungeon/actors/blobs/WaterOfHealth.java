@@ -54,7 +54,7 @@ public class WaterOfHealth extends WellWater {
 	
 		GLog.p( TXT_PROCCED );
 		
-		Journal.remove( Feature.WELL_OF_HEALTH );
+		Journal.remove( Feature.WELL_OF_HEALTH.desc() );
 		
 		return true;
 	}
