@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
-import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -9,7 +8,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -47,7 +45,7 @@ public class ScrollOfSummoning extends Scroll {
 		SpellSprite.show( getCurUser(), SpellSprite.SUMMON );
 		Sample.INSTANCE.play( Assets.SND_READ );
 		Invisibility.dispel(getCurUser());
-		
+
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
 }
