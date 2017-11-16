@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dialog STRINGS -->
+
+    <!-- STRINGS OF Test 1-->
+    <string name="Dialog_Test_1_Title">Buddy</string>
+    <string name="Dialog_Test_1_Title_2">Happy Buddy</string>
+
+    <string name="Dialog_Test_1_Card_0">Hey guy.</string>
+    <string name="Dialog_Test_1_Card_1">Sup guy?</string>
+    <string name="Dialog_Test_1_Card_2">I am your buddy, guy.</string>
+    <string name="Dialog_Test_1_Card_3">Thanks guy.</string>
+    <string name="Dialog_Test_1_Card_4">Bye guy.</string>
+
+    <string name="Dialog_Test_1_Reply_0">What kind of monstrosity are you?</string>
+    <string name="Dialog_Test_1_Reply_1">Begone, demon!</string>
+    <string name="Dialog_Test_1_Reply_2">Terrific...</string>
+
+    <!-- STRINGS OF Test 2-->
+    <string name="Dialog_Test_2_Title">Fellow</string>
+
+    <string name="Dialog_Test_2_Card_0">Hello, hello old chap! So nice to see you around.</string>
+    <string name="Dialog_Test_2_Card_1">Why would I? You are such a git after all.</string>
+    <string name="Dialog_Test_2_Card_2">Oh you know, a little bit of this, a little bit of that.</string>
+    <string name="Dialog_Test_2_Card_3">I am your buddy - Fellow. Don\'t you remember me? Jeez, you\'re a total bigot, you are, you are.</string>
+    <string name="Dialog_Test_2_Card_4">Well go to hell.</string>
+    <string name="Dialog_Test_2_Card_5">Anything else I can help you with, bugger?</string>
+
+    <string name="Dialog_Test_2_Reply_0">Please tell me about this place.</string>
+    <string name="Dialog_Test_2_Reply_1">What exactly is going on here?</string>
+    <string name="Dialog_Test_2_Reply_2">Who are you?</string>
+    <string name="Dialog_Test_2_Reply_3">I have no time for this.</string>
+
+
+</resources>
