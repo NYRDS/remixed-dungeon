@@ -454,7 +454,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);
-			if (feeling == Feeling.UNDEFINED) {
+			if (! isBossLevel() && feeling == Feeling.UNDEFINED) {
 				if (Dungeon.depth > 1) {
 					switch (Random.Int(10)) {
 						case 0:
