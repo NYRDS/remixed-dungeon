@@ -71,7 +71,8 @@ Remix.23.1:\n
 - Alle Monster und Bossgegner in den leveln 27-32 und ihre Fähigkeiten sind stärker geworden\n
 - Bessere Boss Errungenschaften\n
 - Einige visuelle Verbesserungen\n
-- Mehrere Bugs wurden behoben\n</string>
+- Mehrere Bugs wurden behoben\n
+</string>
   <string name="Welcome_Text_23_2">
 remix.23.2:
 - Stufe 6 Waffen und Rüstungen hinzugefügt
@@ -79,7 +80,7 @@ remix.23.2:
 - Chaosrüstung hinzugefügt</string>
   <string name="Welcome_Text_24">
 remix.24:
-- Kopfbedeckungen hinzugefügt! (eigennützige Gegenstände)
+- Kopfbedeckungen hinzugefügt! (Dekorative Gegenstände)
 - Übersetzungen aktualisiert
 - einige Fehlerbehebungen</string>
   <string name="Welcome_Text_24_1">

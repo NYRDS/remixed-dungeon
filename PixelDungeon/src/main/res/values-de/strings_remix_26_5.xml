@@ -21,7 +21,7 @@
     <string name="RingOfFrost_Info">Dieser Ring ist von magischen Eis geschnitzt. Der Träger ist damit durch eine Frost-Aura geschützt, die gegner verlangsamt und ihnen Schaden zufügt.</string>
 
     <!-- STRINGS OF SpiderQueenCarapace CLASS -->
-    <string name="SpiderQueenCarapace_Name">Spinnenkönigin Panzer</string>
+    <string name="SpiderQueenCarapace_Name">Panzer der Spinnenkönigin</string>
     <string name="SpiderQueenCarapace_Info">Ein splitter des Panzers der Spinnenkönigin. Du kannst einen Teil der Spinnendrüse im Panzer sehen, es ist noch am Leben.</string>
 
     <!-- STRINGS OF LibrarianNPC CLASS -->

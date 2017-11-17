@@ -3,7 +3,7 @@
   <!--STRINGS OF ResultDescriptions CLASS-->
   <string name="ResultDescriptions_Mob">Ist durch %1$s auf Ebene %2$d gestorben</string>
   <string name="ResultDescriptions_Boss">Ist von dem %1$s auf Ebene %2$d getötet worden</string>
-  <string name="ResultDescriptions_Wand">Ist durch seine eigene %1$s auf Ebene %2$d gestorben</string>
+  <string name="ResultDescriptions_Wand">Ist durch sein eigenen %1$s auf Ebene %2$d gestorben</string>
   <string name="ResultDescriptions_Glyph">Ist von dem %1$s auf Ebene %2$d getötet worden</string>
   <string name="ResultDescriptions_Trap">Ist durch eine Entladung von %1$s auf Ebene %2$d gestorben</string>
   <string name="ResultDescriptions_Burning">Ist auf Ebene %d verbrannt</string>
