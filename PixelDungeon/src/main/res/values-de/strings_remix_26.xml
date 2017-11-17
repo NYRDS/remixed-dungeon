@@ -3,7 +3,7 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
     <string name="SantaHat_Name">Weihnachtsmann Hut</string>
-    <string name="SantaHat_Info">Nichts sagt Dungeonachten mehr, als ein roter seidiger Hut von Santa den Lord der Tiefe.</string>
+    <string name="SantaHat_Info">Nichts sagt Weihdungeon mehr, als ein roter seidiger Hut von Santa den Lord der Tiefe.</string>
 
     <!-- STRINGS OF Rudolph CLASS -->
     <string name="Rudolph_Name">Rote Nase und Geweih</string>
@@ -17,11 +17,11 @@
     <string name="Kobold_Desc">Kobolde sind bekannt aber eine Legende zugleich. Als Vorfahren von Gnolls leben Kobolde in tiefen und kalten Hölen. Es wird geglaubt, dass ihre Leute schon lange vor den Zwergen die Technik und den Maschinenbau beherrschten. Trotzdem weiss niemand, warum sie vor vielen Jahren verschwanden...</string>
 
     <!-- STRINGS OF KoboldIcemancer CLASS -->
-    <string name="KoboldIcemancer_Name">Kobold-Eismant</string>
+    <string name="KoboldIcemancer_Name">Kobold-Eiszauberer</string>
     <string name="KoboldIcemancer_Gender">männlich</string>
-    <string name="KoboldIcemancer_Name_Objective">Kobold-Eismant</string>
-    <string name="KoboldIcemancer_Desc">Kobold-Eismanten zählten zur Elite in ihrer Gesellschaft. Krieger, Magier und am wichtigstem Wissenschaftler. Antike Eismanten haben das Handwerk des Formens und Verzauberns von raffinierten Mechanismen aus Eis gemeistert.</string>
-    <string name="KoboldIcemancer_Killed">%s\'s Eis-Bolzen hat dich getötet..</string>
+    <string name="KoboldIcemancer_Name_Objective">Kobold-Eiszauberer</string>
+    <string name="KoboldIcemancer_Desc">Kobold-Eiszauberer zählten zur Elite in ihrer Gesellschaft. Krieger, Magier und am wichtigstem Wissenschaftler. Antike Eiszauberer haben das Handwerk des Formens und Verzauberns von raffinierten Mechanismen aus Eis gemeistert.</string>
+    <string name="KoboldIcemancer_Killed">%s\'s Eis-Strahl hat dich getötet..</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
     <string name="ColdSpirit_Name">kalte Seele</string>
@@ -54,10 +54,10 @@
 
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
-    <string name="IceCaves_TileDescDeco">Dieser Gnoll wurde lebend eingefroren. Er ist wahrscheinlich schon einel weile drin.</string>
+    <string name="IceCaves_TileDescDeco">Dieser Gnoll wurde lebend eingefroren. Er ist wahrscheinlich schon eine Weile eingefroren.</string>
     <string name="IceCaves_TileHighGrass">Gefrorenes hohes Gras</string>
     <string name="IceCaves_TileGrass">gefrorenes Gras.</string>
-    <string name="IceCaves_TileDescHighGrass">Dichte gefrorene Vegetation versperrt die Sicht.</string>
+    <string name="IceCaves_TileDescHighGrass">Dichter gefrorener Pflanzenbewuchs versperrt die Sicht.</string>
     <string name="IceCaves_TileStatue">Gefrorener Gnoll</string>
     <string name="IceCaves_TileDescStatue">Noch eine schreckliche Statue... Oh warte, das ist ein gefrorener Gnoll.</string>
 
@@ -70,7 +70,7 @@
 
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
-    <string name="WandOfIcebolt_Name">Zauberstab des Eisballs</string>
+    <string name="WandOfIcebolt_Name">Zauberstab des Eisstrahls</string>
     <string name="WandOfIcebolt_Info">Dieser Stab schießt ein Eisprojektil, das einer Kreatur leichten Schaden zufügt. Das hat die Chance das Ziel zu verlangsamen oder sogar einzufrieren.</string>
     <string name="WandOfIcebolt_Info1">Du hast dich mit deinem eigenen Eisstab getötet...</string>
 
