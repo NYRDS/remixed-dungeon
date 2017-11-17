@@ -75,7 +75,7 @@ public class WandOfFlock extends SimpleWand  {
 						sheep.lifespan = lifespan;
 						sheep.setPos(j);
 						Dungeon.level.spawnMob(sheep);
-						Dungeon.level.mobPress( sheep );
+						Dungeon.level.press(sheep.getPos(), sheep );
 						
 						CellEmitter.get( j ).burst( Speck.factory( Speck.WOOL ), 4 );
 						

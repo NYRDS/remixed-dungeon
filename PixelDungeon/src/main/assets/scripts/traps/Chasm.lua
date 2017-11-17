@@ -11,6 +11,8 @@ local trap = require"scripts/lib/trap"
 return trap.init(
     function (cell, char, data)
         RPD.Dungeon.level:set(cell, RPD.Terrain.CHASM)
+        RPD.GameScene:updateMap(cell)
+        RPD.Dungeon:observe()
         RPD.Dungeon.level:press(cell, char)
     end
 )

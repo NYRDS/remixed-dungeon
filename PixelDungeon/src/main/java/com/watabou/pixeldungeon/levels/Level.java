@@ -731,7 +731,7 @@ public abstract class Level implements Bundlable {
 
 		if (GameScene.isSceneReady()) {
 			if (mob.isPet() || fieldOfView[mob.getPos()]) {
-				mobPress(mob);
+				press(mob.getPos(),mob);
 			}
 		}
 	}
@@ -1003,7 +1003,7 @@ public abstract class Level implements Bundlable {
 		heap.drop(item);
 
 		if (Dungeon.level != null) {
-			itemPress(cell, item);
+			press(cell, item);
 		}
 
 		return heap;
@@ -1059,93 +1059,80 @@ public abstract class Level implements Bundlable {
 		return randomRespawnCell();
 	}
 
-	public void press(int cell, Char obj) {
-		if (obj instanceof Hero) {
-			pressHero(cell, (Hero) obj);
-		}
-
-		if (obj instanceof Mob) {
-			mobPress((Mob) obj);
-		}
-	}
-
-	public void pressHero(int cell, Hero hero) {
-
-		if (pit[cell]) {
-			Chasm.charFall(cell, hero);
-			return;
-		}
-
+	protected void pressHero(int cell, Hero hero) {
 		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
 			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
 			set(cell, Terrain.discover(map[cell]));
 			TrapHelper.heroPressed();
 		}
-
-		charPress(cell, hero);
 	}
 
-	public boolean objectPress(int cell, LevelObject levelObject) {
-		if (map[cell] == Terrain.CHASM || pit[cell]) {
-			levelObject.fall();
-			return false;
-		}
-		itemPress(cell, levelObject);
-		return true;
-	}
+	public void press(int cell, Presser actor) {
+		Char chr = null;
 
-
-	public void itemPress(int cell, Presser presser) {
-		pressLevelObject(cell, presser);
-		set(cell, Terrain.discover(map[cell]));
-		charPress(cell, null);
-	}
-
-	private void pressLevelObject(int cell, Presser presser) {
-		if (presser.affectLevelObjects()) {
-			LevelObject levelObject = getTopLevelObject(cell);
-			if (levelObject != null) {
-				levelObject.bump(presser);
-			}
-		}
-	}
-
-	public void charPress(int cell, @Nullable Char actor) {
 		if (actor != null) {
-			pressLevelObject(cell, actor);
+			if(actor instanceof Char) {
+				chr = (Char) actor;
+				if (pit[cell] && !chr.flying) {
+					Chasm.charFall(chr.getPos(), chr);
+					return;
+				}
+
+				if(actor instanceof Hero) {
+					pressHero(cell,(Hero)chr);
+				}
+			}
+
+			if(actor instanceof LevelObject) {
+				if (pit[cell]) {
+					((LevelObject)actor).fall();
+					return;
+				}
+			}
+
+			if(actor instanceof Item || actor instanceof LevelObject) {
+				set(cell, Terrain.discover(map[cell]));
+			}
+
+			if (actor.affectLevelObjects()) {
+				LevelObject levelObject = getTopLevelObject(cell);
+				if (levelObject != null && levelObject != actor) {
+					levelObject.bump(actor);
+				}
+			}
 		}
 
 		switch (map[cell]) {
 			case Terrain.TOXIC_TRAP:
-				ToxicTrap.trigger(cell, actor);
+				ToxicTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.FIRE_TRAP:
-				FireTrap.trigger(cell, actor);
+				FireTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.PARALYTIC_TRAP:
-				ParalyticTrap.trigger(cell, actor);
+				ParalyticTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.POISON_TRAP:
-				PoisonTrap.trigger(cell, actor);
+				PoisonTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.ALARM_TRAP:
-				AlarmTrap.trigger(cell, actor);
+				AlarmTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.LIGHTNING_TRAP:
-				LightningTrap.trigger(cell, actor);
+				LightningTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.GRIPPING_TRAP:
-				GrippingTrap.trigger(cell, actor);
+				GrippingTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.SUMMONING_TRAP:
-				SummoningTrap.trigger(cell, actor);
+				SummoningTrap.trigger(cell, chr);
 				break;
 
 			case Terrain.DOOR:
@@ -1156,7 +1143,7 @@ public abstract class Level implements Bundlable {
 		if (!(actor instanceof Mob)) {
 			switch (map[cell]) {
 				case Terrain.HIGH_GRASS:
-					HighGrass.trample(this, cell, actor);
+					HighGrass.trample(this, cell, chr);
 					break;
 
 				case Terrain.WELL:
@@ -1184,24 +1171,8 @@ public abstract class Level implements Bundlable {
 
 		Plant plant = plants.get(cell);
 		if (plant != null) {
-			plant.activate(actor);
+			plant.activate(chr);
 		}
-	}
-
-	public void mobPress(Mob mob) {
-
-		if (mob.flying) {
-			return;
-		}
-
-		int cell = mob.getPos();
-
-		if (pit[cell]) {
-			Chasm.charFall(mob.getPos(),mob);
-			return;
-		}
-
-		charPress(cell, mob);
 	}
 
 	private void markFovCellSafe(int p) {

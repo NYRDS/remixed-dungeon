@@ -134,7 +134,7 @@ public class NecroBossLevel extends Level {
 	}
 	
 	@Override
-	public void pressHero(int cell, Hero hero ) {
+	protected void pressHero(int cell, Hero hero) {
 
 		super.pressHero( cell, hero );
 
