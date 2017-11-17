@@ -1072,7 +1072,7 @@ public abstract class Level implements Bundlable {
 	public void pressHero(int cell, Hero hero) {
 
 		if (pit[cell]) {
-			Chasm.heroFall(cell, hero);
+			Chasm.charFall(cell, hero);
 			return;
 		}
 
@@ -1197,7 +1197,7 @@ public abstract class Level implements Bundlable {
 		int cell = mob.getPos();
 
 		if (pit[cell]) {
-			Chasm.mobFall(mob);
+			Chasm.charFall(mob.getPos(),mob);
 			return;
 		}
 

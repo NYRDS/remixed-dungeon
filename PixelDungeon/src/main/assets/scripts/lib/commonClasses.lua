@@ -5,6 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
+local classesCache = {}
+
 RPD = {
     GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene"),
     Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon"),
@@ -13,6 +15,7 @@ RPD = {
     MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
     ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
+    Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
 
     Blobs = {
         Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),
@@ -43,9 +46,49 @@ RPD = {
             ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
         },
     },
+
     new = function(class, ...)
         return luajava.newInstance(class, ...)
+    end,
+--[[
+    instanceof = function (obj, name)
+        print(obj)
+        local objClass = obj:getClass()
+        print(objClass)
+
+        objClass:getName()
+        objClass:isInstance(obj)
+        objClass = objClass:getSimpleName()
+        local objClassDesc = classesCache[objClass] or {}
+
+        if not objClassDesc.interfaces then
+            objClassDesc.interfaces = {}
+
+            for i, iface in pairs(obj:getClass():getInterfaces()) do
+                print(iface)
+                objClassDesc.interfaces[iface:getCanonicalName()] = true
+            end
+        end
+
+        if not objClassDesc.superclasses then
+            objClassDesc.superclasses = {}
+
+            local function fillSuperclasses(class, tbl)
+                local superclass = class:getSuperclass()
+                if not superclass then
+                    return
+                end
+                print(superclass:getCanonicalName())
+                tbl[superclass] = true
+                fillSuperclasses(superclass,tbl)
+            end
+
+            fillSuperclasses(obj:getClass())
+        end
+
+        return objClassDesc.interfaces[name] or objClassDesc.superclasses[name]
     end
+]]
 }
 
 

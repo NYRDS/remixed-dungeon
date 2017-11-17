@@ -17,14 +17,15 @@
  */
 package com.watabou.pixeldungeon.levels.features;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -61,29 +62,18 @@ public class Chasm {
 			}
 		);
 	}
-	
-	public static void heroFall(int pos, Hero hero) {
-		
-		jumpConfirmed = false;
-				
-		Sample.INSTANCE.play( Assets.SND_FALLING );
-		hero.releasePets();
 
-		if (hero.isAlive()) {
-			hero.clearActions();
-			InterlevelScene.mode = InterlevelScene.Mode.FALL;
-			if (Dungeon.level instanceof RegularLevel) {
-				Room room = ((RegularLevel)Dungeon.level).room( pos );
-				InterlevelScene.fallIntoPit = room != null && room.type == Room.Type.WEAK_FLOOR;
-			} else {
-				InterlevelScene.fallIntoPit = false;
-			}
-			Game.switchScene( InterlevelScene.class );
-		} else {
-			hero.getSprite().setVisible(false);
+	public static void charFall(int pos, Char chr) {
+		if (chr instanceof Hero) {
+			heroFall(pos, (Hero)chr);
+			return;
+		}
+
+		if(chr instanceof Mob) {
+			mobFall((Mob)chr);
 		}
 	}
-	
+
 	public static void heroLand() {
 		
 		Hero hero = Dungeon.hero;
@@ -107,11 +97,34 @@ public class Chasm {
 		InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 	}
 
-	public static void mobFall( Mob mob ) {
+	private static void mobFall( Mob mob ) {
 		// Destroy instead of kill to prevent dropping loot
 		mob.destroy();
 		
 		mob.getSprite().removeAllStates();
 		((MobSprite)mob.getSprite()).fall();
 	}
+
+	private static void heroFall(int pos, Hero hero) {
+
+		jumpConfirmed = false;
+
+		Sample.INSTANCE.play( Assets.SND_FALLING );
+		hero.releasePets();
+
+		if (hero.isAlive()) {
+			hero.clearActions();
+			InterlevelScene.mode = InterlevelScene.Mode.FALL;
+			if (Dungeon.level instanceof RegularLevel) {
+				Room room = ((RegularLevel)Dungeon.level).room( pos );
+				InterlevelScene.fallIntoPit = room != null && room.type == Room.Type.WEAK_FLOOR;
+			} else {
+				InterlevelScene.fallIntoPit = false;
+			}
+			Game.switchScene( InterlevelScene.class );
+		} else {
+			hero.getSprite().setVisible(false);
+		}
+	}
+
 }
