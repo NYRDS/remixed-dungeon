@@ -8,7 +8,7 @@
   <string name="Armor_Incompatible">Eine Überlagerung verschiedener Magiearten hat die Glyphe von dieser Rüstung entfernt.</string>
   <string name="Armor_Info1">Diese %1$s bietet bis zu \"%2$d\" Schadensreduzierung pro Angriff.</string>
   <string name="Armor_Info2">
-\n\nDeine Stärke ist zu gering. Deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit sind verringert, solange du diese Rüstung anhast.</string>
+\n\nDeine Stärke ist zu gering. Deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit sind verringert, solange du diese Rüstung trägst.</string>
   <string name="Armor_Info3">
 \n\nDa deine Stärke zu gering ist, wird das Tragen dieser Rüstung deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit verringern.</string>
   <string name="Armor_Info4">
@@ -36,7 +36,7 @@
   <!--STRINGS OF HuntressArmor CLASS-->
   <string name="HuntressArmor_Name">Seidenhülle der Jägerin</string>
   <string name="HuntressArmor_Desc">Eine Jägerin in solch einem Umhang kann einen Fächer aus geisterhaften Klingen erschaffen. Jede dieser Klingen wird einen einzelnen Gegner im Sichtfeld anvisieren und Schaden an ihm verursachen.  Dieser Schaden hängt von ihrer momentan ausgerüsteten Nahkampfwaffe ab.</string>
-  <string name="HuntressArmor_ACSpecial">GEISTERHAFTE KLINGEN</string>
+  <string name="HuntressArmor_ACSpecial">GEISTER KLINGEN</string>
   <string name="HuntressArmor_NoEnemies">Es ist kein Gegner zu sehen.</string>
   <string name="HuntressArmor_NotHuntress">Diese Rüstung kann nur von Jägerinnen benutzt werden!</string>
   <!--STRINGS OF LeatherArmor CLASS-->
@@ -87,7 +87,7 @@
   <!--STRINGS OF Potential CLASS-->
   <string name="Potential_Txt">%s der Macht</string>
   <!--STRINGS OF Stench CLASS-->
-  <string name="Stench_Txt">%s des fauligen Geruches</string>
+  <string name="Stench_Txt">%s des fauligen Gestankes</string>
   <!--STRINGS OF Viscosity CLASS-->
   <string name="Viscosity_Txt">%s der Zähigkeit</string>
   <string name="Viscosity_Status">%d verzögert</string>

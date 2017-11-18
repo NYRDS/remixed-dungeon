@@ -13,6 +13,7 @@ RPD = {
     MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
     ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
+    Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
 
     Blobs = {
         Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),
@@ -43,9 +44,10 @@ RPD = {
             ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
         },
     },
+
     new = function(class, ...)
         return luajava.newInstance(class, ...)
-    end
+    end,
 }
 
 

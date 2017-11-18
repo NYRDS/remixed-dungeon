@@ -15,9 +15,9 @@
   <string name="Acidic_Name_Objective">Giftiger Skorpion</string>
   <string name="Acidic_Desc">Dieses riesige, spinnenartige, dämonische Wesen vermeidet Nahkampf mit allen Mitteln. Es schießt gezackte Dornen mit lähmender Wirkung aus großer Entfernung ab.</string>
   <!--STRINGS OF Albino CLASS-->
-  <string name="Albino_Name">Albino Rattenjäger</string>
+  <string name="Albino_Name">Albino Ratte</string>
   <string name="Albino_Gender">männlich</string>
-  <string name="Albino_Name_Objective">Albino Rattenkrieger</string>
+  <string name="Albino_Name_Objective">Albino Ratte</string>
   <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte scheint ein Albino zu sein. Sie hat ausserdem aussergewöhnlich scharfe Zähne.</string>
   <!--STRINGS OF Bandit CLASS-->
   <string name="Bandit_Name">Verrückter Bandit</string>

@@ -12,12 +12,12 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF PlagueDoctorNPC CLASS -->
     <string name="PlagueDoctorNPC_Name">Virendoktor</string>
-    <string name="PlagueDoctorNPC_Gender">Maskulin</string>
+    <string name="PlagueDoctorNPC_Gender">männlich</string>
     <string name="PlagueDoctorNPC_Name_Objective">Virendoktor</string>
     <string name="PlagueDoctorNPC_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
-    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann. \ N
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann.\n
 </string>
-    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann. \ N
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann.\n
 </string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Bring mir%dRattenhäute.</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, danke, ich hoffe, dass die eine Spur einer Krankheit haben werden. Frühere Beispiele waren absolut harmlos. Also habe ich das für Sie gemacht, während ich auf neue Proben gewartet habe.</string>
@@ -41,7 +41,7 @@
     <string name="TownsfolkSilentNPC_Name_Objective">Dorfbewohner</string>
     <string name="TownsfolkSilentNPC_Message1">Hmpf!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
-    <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
+    <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>
 
     <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
     <string name="ServiceManNotReadyNPC_Message">Tut mir leid, aber dieses Gebäude ist noch nicht fertig.</string>

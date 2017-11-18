@@ -48,7 +48,7 @@ public class ScrollOfSummoning extends Scroll {
 		SpellSprite.show( getCurUser(), SpellSprite.SUMMON );
 		Sample.INSTANCE.play( Assets.SND_READ );
 		Invisibility.dispel(getCurUser());
-		
+
 		getCurUser().spendAndNext( TIME_TO_READ );
 	}
 }

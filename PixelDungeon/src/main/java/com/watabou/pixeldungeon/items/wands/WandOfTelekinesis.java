@@ -98,7 +98,7 @@ public class WandOfTelekinesis extends Wand {
 				}
 			}
 
-			level.itemPress(c, new Effect());
+			level.press(c, new Effect());
 
 			if (before == Terrain.OPEN_DOOR && Actor.findChar(c) == null) {
 				level.set(c, Terrain.DOOR);

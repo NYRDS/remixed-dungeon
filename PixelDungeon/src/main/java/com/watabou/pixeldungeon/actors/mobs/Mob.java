@@ -420,7 +420,7 @@ public abstract class Mob extends Char {
 		super.move(step);
 
 		if (!flying) {
-			Dungeon.level.mobPress(this);
+			Dungeon.level.press(getPos(),this);
 		}
 	}
 

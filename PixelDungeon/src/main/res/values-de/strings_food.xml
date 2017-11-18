@@ -8,7 +8,7 @@
   <string name="Ration_Name">Nahrungsration</string>
   <string name="Ration_Info">Nichts ausgefallenes: getrocknetes Fleisch, einige Kekse - solche Dinge eben.</string>
   <!--STRINGS OF ChargrilledMeat CLASS-->
-  <string name="ChargrilledMeat_Name">Geröstetes Fleisch</string>
+  <string name="ChargrilledMeat_Name">Gebratenes Fleisch</string>
   <string name="ChargrilledMeat_Info">Es sieht nach einem annehmbaren Steak aus.</string>
   <!--STRINGS OF FrozenCarpaccio CLASS-->
   <string name="FrozenCarpaccio_Name">Gefrorene Fleischscheiben</string>

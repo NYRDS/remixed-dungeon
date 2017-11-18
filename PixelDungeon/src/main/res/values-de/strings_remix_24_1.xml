@@ -4,7 +4,7 @@
     <!-- STRINGS OF ArmoredStatue -->
     <string name="ArmoredStatue_Name">Lebendige Statue</string>
     <string name="ArmoredStatue_Gender">weiblich</string>
-    <string name="ArmoredStatue_Name_Objective">animierte Statue</string>
+    <string name="ArmoredStatue_Name_Objective">Lebendige Statue</string>
     <string name="ArmoredStatue_Desc">Denke bloß nicht, dass es nur noch so eine häßliche Statue ist.
 Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niemand eine neue _%s_ diesem Ding geben würde.</string>
 

@@ -29,8 +29,8 @@
   <string name="Level_TilePoisonTrap">Giftpfeil-Falle</string>
   <string name="Level_TileAlarmTrap">Alarmfalle</string>
   <string name="Level_TileLightningTrap">Blitzfalle</string>
-  <string name="Level_TileGrippingTrap">Lähmende Falle</string>
-  <string name="Level_TileSummoningTrap">Falle der Beschwörung</string>
+  <string name="Level_TileGrippingTrap">Fesselnde Falle</string>
+  <string name="Level_TileSummoningTrap">Beschwörungsfalle</string>
   <string name="Level_TileInactiveTrap">Ausgelöste Falle</string>
   <string name="Level_TileBookshelf">Buchregal</string>
   <string name="Level_TileAlchemy">Alchemiekessel</string>

@@ -294,7 +294,7 @@ public class PrisonBossLevel extends RegularLevel {
 	}
 
 	@Override
-	public void pressHero(int cell, Hero ch ) {
+	protected void pressHero(int cell, Hero ch) {
 		
 		super.pressHero( cell, ch );
 		
@@ -313,7 +313,7 @@ public class PrisonBossLevel extends RegularLevel {
 			Dungeon.level.spawnMob(boss);
 			boss.notice();
 			
-			mobPress( boss );
+			press( boss.getPos(), boss );
 			
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );

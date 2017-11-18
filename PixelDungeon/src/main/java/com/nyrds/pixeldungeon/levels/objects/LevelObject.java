@@ -14,147 +14,162 @@ import org.json.JSONObject;
 
 public abstract class LevelObject implements Bundlable, Presser {
 
-	@Packable
-	private int pos = -1;
+    @Packable
+    private int pos = -1;
 
-	@Packable
-	protected int layer = 0;
+    @Packable
+    protected int layer = 0;
 
-	@Packable(defaultValue = "levelObjects/objects.png")
-	protected String textureFile = "levelObjects/objects.png";
+    @Packable(defaultValue = "levelObjects/objects.png")
+    protected String textureFile = "levelObjects/objects.png";
 
-	@Packable(defaultValue = "0")
-	protected int imageIndex = 0;
-	
-	public LevelObjectSprite sprite;
+    @Packable(defaultValue = "0")
+    protected int imageIndex = 0;
 
-	public LevelObject(int pos) {
-		this.pos = pos;
-	}
+    public LevelObjectSprite sprite;
 
-	public int image() {
-		return imageIndex;
-	}
+    public LevelObject(int pos) {
+        this.pos = pos;
+    }
 
-	void setupFromJson(Level level, JSONObject obj) throws JSONException {
-		textureFile = obj.optString("textureFile", textureFile);
-		imageIndex  = obj.optInt("imageIndex", imageIndex);
-	}
+    public int image() {
+        return imageIndex;
+    }
 
-	public boolean interact(Char hero ) {return true;}
-	public boolean stepOn(Char hero) {return true;}
-	public boolean nonPassable() {
-		return false;
-	}
+    void setupFromJson(Level level, JSONObject obj) throws JSONException {
+        textureFile = obj.optString("textureFile", textureFile);
+        imageIndex = obj.optInt("imageIndex", imageIndex);
+    }
 
-	protected void remove() {
-		Dungeon.level.remove(this);
-		sprite.kill();
-	}
+    public boolean interact(Char hero) {
+        return true;
+    }
 
-	public void burn() {}
-	public void freeze() {}
-	public void poison(){}
-	public void bump(Presser presser) {}
+    public boolean stepOn(Char hero) {
+        return true;
+    }
 
-	public void discover() {}
+    public boolean nonPassable() {
+        return false;
+    }
 
-	public boolean secret() {
-		return false;
-	}
+    protected void remove() {
+        Dungeon.level.remove(this);
+        sprite.kill();
+    }
 
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-	}
+    public void burn() {
+    }
 
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-	}
+    public void freeze() {
+    }
 
-	public boolean dontPack() {
-		return false;
-	}
+    public void poison() {
+    }
 
-	public int getPos() {
-		return pos;
-	}
+    public void bump(Presser presser) {
+    }
 
-	public void setPos(int pos) {
-		if(sprite!=null) {
-			sprite.move(this.pos,pos);
-			Dungeon.level.levelObjectMoved(this);
-		}
+    public void discover() {
+    }
 
-		this.pos = pos;
-	}
+    public boolean secret() {
+        return false;
+    }
 
-	public abstract String desc();
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+    }
 
-	public abstract String name();
+    @Override
+    public void storeInBundle(Bundle bundle) {
+    }
 
-	public String texture(){
-		return textureFile;
-	}
+    public boolean dontPack() {
+        return false;
+    }
 
-	public boolean pushable(Char hero) {
-		return false;
-	}
+    public int getPos() {
+        return pos;
+    }
 
-	public boolean push(Char hero){
-		Level level = Dungeon.level;
+    public void setPos(int pos) {
+        if (sprite != null) {
+            sprite.move(this.pos, pos);
+            Dungeon.level.levelObjectMoved(this);
+        }
 
-		int hx = level.cellX(hero.getPos());
-		int hy = level.cellY(hero.getPos());
+        this.pos = pos;
+    }
 
-		int x = level.cellX(getPos());
-		int y = level.cellY(getPos());
+    public abstract String desc();
 
-		int dx = x - hx;
-		int dy = y - hy;
+    public abstract String name();
 
-		if (dx * dy != 0) {
-			return false;
-		}
+    public String texture() {
+        return textureFile;
+    }
 
-		int nextCell = level.cell(x + Util.signum(dx), y + Util.signum(dy));
+    public boolean pushable(Char hero) {
+        return false;
+    }
 
-		if (!level.cellValid(nextCell)) {
-			return false;
-		}
+    public boolean push(Char hero) {
+        Level level = Dungeon.level;
 
-		if (level.solid[nextCell] || level.getLevelObject(nextCell,layer) != null) {
-			return false;
-		} else {
+        int hx = level.cellX(hero.getPos());
+        int hy = level.cellY(hero.getPos());
 
-			if (level.objectPress(nextCell, this)) {
-				setPos(nextCell);
-				level.levelObjectMoved(this);
-			}
+        int x = level.cellX(getPos());
+        int y = level.cellY(getPos());
 
-		}
+        int dx = x - hx;
+        int dy = y - hy;
 
-		return true;
-	}
+        if (dx * dy != 0) {
+            return false;
+        }
 
-	public void fall() {
-		if(sprite != null) {
-			sprite.fall();
-			Dungeon.level.remove(this);
-		}
-	}
+        int nextCell = level.cell(x + Util.signum(dx), y + Util.signum(dy));
 
-	@Override
-	public boolean affectLevelObjects() {
-		return false;
-	}
+        if (!level.cellValid(nextCell)) {
+            return false;
+        }
 
-	public int getSpriteXS() {
-		return 16;
-	}
+        if (level.solid[nextCell] || level.getLevelObject(nextCell, layer) != null) {
+            return false;
+        } else {
 
-	public int getSpriteYS() {
-		return 16;
-	}
+            setPos(nextCell);
+            level.levelObjectMoved(this);
+            level.press(nextCell, this);
 
-	public int getLayer() {return layer;}
+        }
+
+        return true;
+    }
+
+    public void fall() {
+        if (sprite != null) {
+            sprite.fall();
+            Dungeon.level.remove(this);
+        }
+    }
+
+    @Override
+    public boolean affectLevelObjects() {
+        return false;
+    }
+
+    public int getSpriteXS() {
+        return 16;
+    }
+
+    public int getSpriteYS() {
+        return 16;
+    }
+
+    public int getLayer() {
+        return layer;
+    }
 }

@@ -14,7 +14,7 @@
   <string name="Hero_Wait">...</string>
   <string name="Hero_Search">suchen</string>
   <string name="Hero_StaBurning">Du fängst Feuer!</string>
-  <string name="Hero_StaParalysis">Du bist paralysiert!</string>
+  <string name="Hero_StaParalysis">Du bist gelähmt!</string>
   <string name="Hero_StaPoison">Du bist vergiftet!</string>
   <string name="Hero_StaOoze">Ätzender Schlamm frisst sich in dein Fleisch. Wasch ihn ab!</string>
   <string name="Hero_StaRoots">Du kannst dich nicht bewegen!</string>
@@ -23,7 +23,7 @@
   <string name="Hero_StaFury">Du wirst wütend!</string>
   <string name="Hero_StaFurious">wütend</string>
   <string name="Hero_StaCharm">Du bist verzaubert!</string>
-  <string name="Hero_StaCripple">Du bist verkrüppelt</string>
+  <string name="Hero_StaCripple">Du bist angeschlagen!</string>
   <string name="Hero_StaBleeding">Du blutest!</string>
   <string name="Hero_StaVertigo">Alles dreht sich um dich!</string>
   <!--STRINGS OF HeroClass CLASS-->

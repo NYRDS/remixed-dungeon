@@ -79,7 +79,7 @@
 
     {"kind":"Trap","x":9,"y":9, "uses":2000,
       "trapKind":"scriptFile",
-      "script":"scripts/traps/Spawner",
+      "script":"scripts/traps/Chasm",
       "secret":true
     },
 
