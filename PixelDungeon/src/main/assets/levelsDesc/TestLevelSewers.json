@@ -64,7 +64,7 @@
   "items": [
 
     {"kind":"ScrollOfIdentify","quantity":"99","x":13,"y":10},
-    {"kind":"Dewdrop","x":13,"y":10},
+    {"kind":"RatHide","x":13,"y":10},
     {"kind":"IronKey", "levelId":"2", "depth":2, "x":13,"y":11},
     {"kind":"WarHammer", "level":"4", "x":13,"y":11, "enchantment":"Horror"},
     {"kind":"LeatherArmor", "level":"5", "x":13,"y":12, "glyph":"Potential"}
@@ -73,14 +73,15 @@
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},
     {"kind" : "Barrel", "x" : 13, "y" : 10},
 
-    {"kind":"Trap","x":13,"y":9, "uses":1,
+    {"kind":"Trap","x":13,"y":9, "uses":10,
       "trapKind":"scriptFile",
       "script":"scripts/traps/Message"},
 
     {"kind":"Trap","x":9,"y":9, "uses":2000,
       "trapKind":"scriptFile",
-      "script":"scripts/traps/Chasm",
-      "secret":true
+      "script":"scripts/traps/DemoTransmute",
+      "secret":true,
+      "activatedByItem":true
     },
 
     {"kind":"Trap","x":5,"y":9, "uses":1,
