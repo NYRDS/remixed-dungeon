@@ -18,7 +18,7 @@ public class ScrollOfSummoning extends Scroll {
 	private static final String TXT_SUMMON = Game.getVar(R.string.ScrollOfSummoning_Info_2);
 	private static final String TXT_FAILED_CAST = Game.getVar(R.string.Using_Failed_Because_Magic);
 	private static final String TXT_FAILED_PET = Game.getVar(R.string.Mob_Cannot_Be_Pet);
-	private static final String TXT_FAILED_CELL = Game.getVar(R.string.Mob_Cannot_Be_Pet);
+	private static final String TXT_FAILED_CELL = Game.getVar(R.string.No_Valid_Cell);
 
 	@Override
 	protected void doRead() {
