@@ -12,5 +12,6 @@
     <string name="Using_Failed_Because_Blind">You cannot use \"%s\" while blinded.</string>
 
     <string name="Mob_Cannot_Be_Pet">The will of a \"%s\" is to strong to control!.</string>
+    <string name="No_Valid_Cell">There is no suitable cell nearby.</string>
 
 </resources>
