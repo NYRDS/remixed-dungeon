@@ -7,6 +7,7 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.AlarmTrap;
 import com.watabou.pixeldungeon.levels.traps.FireTrap;
@@ -99,7 +100,7 @@ public class Trap extends LevelObject {
 			return;
 		}
 
-		if (activatedByItem) {
+		if (presser instanceof Item && activatedByItem) {
 			interact(null);
 		}
 	}
