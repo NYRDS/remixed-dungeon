@@ -74,7 +74,7 @@
   <string name="Halls_TileHighGrass">Aschepilz</string>
   <string name="Halls_TileStatue">Säule</string>
   <string name="Halls_TileDescWater">Es schaut nach Lava aus, aber sie ist kalt und wahrscheinlich kann man sie gefahrlos berühren.</string>
-  <string name="Halls_TileDescStatue">Diese Säule ist aus echter Menschenhaut gemacht. Beeindruckend.</string>
+  <string name="Halls_TileDescStatue">Diese Säule ist aus echten Menschenschädeln gemacht. Beeindruckend.</string>
   <string name="Halls_TileDescBookshelf">Bücher in verschiedenen Sprachen vermodern im Bücherregal.</string>
   <!--STRINGS OF LastLevel CLASS-->
   <string name="LastLevel_TileWater">Erkaltete Lava</string>
@@ -82,7 +82,7 @@
   <string name="LastLevel_TileHighGrass">Aschepilz</string>
   <string name="LastLevel_TileStatue">Säule</string>
   <string name="LastLevel_TileDescWater">Es schaut nach Lava aus, aber sie ist kalt und wahrscheinlich kann man sie gefahrlos berühren.</string>
-  <string name="LastLevel_TileDescStatue">Diese Säule ist aus echter Menschenhaut gemacht. Beeindruckend.</string>
+  <string name="LastLevel_TileDescStatue">Diese Säule ist aus echten Menschenschädeln gemacht. Beeindruckend.</string>
   <!--STRINGS OF LastShopLevel CLASS-->
   <string name="LastShopLevel_TileWater">Merkwürdig gefärbtes Wasser</string>
   <string name="LastShopLevel_TileHighGrass">Große, blühende Blumen</string>

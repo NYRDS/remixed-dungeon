@@ -36,7 +36,7 @@
   </string-array>
   <string name="Char_YouMissed">%1$s %2$s deinen Angriff</string>
   <string name="Char_SmbMissed">%1$s %2$s %3$s\'s Angriff</string>
-  <string name="Char_OutParalysis">Der Schmerz riss %s aus der Paralyse</string>
+  <string name="Char_OutParalysis">Der Schmerz riss %s aus der Lähmung</string>
   <string-array name="Char_StaDodged">
     <item>wich aus</item>
     <item>wich aus</item>
@@ -50,7 +50,7 @@
   <string name="Char_StaParalysed">gelähmt</string>
   <string name="Char_StaFrightened">verängstigt</string>
   <string name="Char_StaRooted">festgewachsen</string>
-  <string name="Char_StaCrippled">verkrüppelt</string>
+  <string name="Char_StaCrippled">angeschlagen</string>
   <string name="Char_StaBleeding">blutend</string>
   <string name="Char_StaDizzy">verwirrt</string>
   <string name="Char_StaInvisible">unsichtbar</string>
@@ -60,9 +60,9 @@
   <string-array name="Dungeon_Tips">
     <item>Überschätze deine Stärke nicht - verwende nur Waffen und Rüstungen mit denen du umgehen kannst.</item>
     <item>Nicht alle Türen im Dungeon sind sofort erkennbar. Wenn du nicht weiterkommst, suche nach versteckten Türen.</item>
-    <item>Bedenke, dass das Erhöhen deiner Stärke nicht der einzige Weg ist, bessere Ausrüstung zu verwenden. Du kannst es auch anders herum versuchen, indem du die Stärkenanforderung der Ausrüstung mit Schriftrollen der Aufwertung senkst.</item>
+    <item>Bedenke, dass das Erhöhen deiner Stärke nicht der einzige Weg ist, bessere Ausrüstung zu verwenden. Du kannst es auch anders herum versuchen, indem du die Stärkenanforderung der Ausrüstung mit Schriftrollen der Verbesserung senkst.</item>
     <item>Du kannst dein Gold in Läden in tieferen Ebenen des Dungeons ausgeben. Der erste befindet sich auf Ebene 6.</item>
-    <item>Nimm dich vor \'Goo\' in Acht!</item>
+    <item>Nimm dich vor dem \'Goo\' in Acht!</item>
     <item>Pixel-Mart - alles, was du für ein erfolgreiches Abenteuer benötigst!</item>
     <item>Identifiziere deine Tränke und Schriftrollen so schnell wie möglich. Warte nicht auf den Moment, in dem du sie wirklich brauchst.</item>
     <item>Hungrig zu sein tut dir nicht weh, zu verhungern jedoch schon.</item>
@@ -71,12 +71,12 @@
     <item>Pixel-Mart. Gib Geld aus. Lebe länger.</item>
     <item>Wenn du von mehreren Monstern angegriffen wirst, versuche, dich hinter eine Tür zurückzuziehen.</item>
     <item>Wenn du Feuer gefangen hast, während du schwebst, kannst du es nicht durch Wasser löschen.</item>
-    <item>Es macht keinen Sinn, mehr als einen Ankh gleichzeitig zu besitzen, da du sie ohnehin bei einer Auferstehung verlieren wirst.</item>
-    <item>ACHTUNG! Schwere Maschinen verursachen Verletzungen bis hin zu Verlust von Gliedmaßen oder Tod!</item>
+    <item>Es macht keinen Sinn, mehr als ein Ankh gleichzeitig zu besitzen, da du sie ohnehin bei einer Auferstehung verlieren wirst.</item>
+    <item>ACHTUNG! Schwere Maschinen verursachen Verletzungen bis hin zu Verlust von Gliedmaßen oder dem Tod!</item>
     <item>Pixel-Mart. Ein sichereres Leben im Dungeon.</item>
     <item>Wenn du eine verzauberte Waffe aufrüstest, besteht eine Chance, dass die Verzauberung dabei zerstört wird.</item>
     <item>Durch einen Brunnen der Verwandlung kannst du einen Gegenstand erhalten, den du auf keine andere Art erlangen kannst.</item>
-    <item>Der einzige Weg, eine Waffe zu verzaubern, ist, sie durch eine Schriftrolle der Aufwertung aufzurüsten.</item>
+    <item>Der einzige Weg, eine Waffe zu verzaubern, ist, sie durch eine Schriftrolle der Verbesserung aufzurüsten.</item>
     <item>Im Beisein Ihrer Majestät sind keine Waffen erlaubt!</item>
     <item>Pixel-Mart. Spezialpreise für Dämonenjäger!</item>
     <item>Der Text ist in dämonischer Sprache verfasst.</item>
@@ -87,7 +87,7 @@
   <string-array name="Challenges_Names">
     <item>Auf Diät</item>
     <item>Der Glaube ist meine Rüstung</item>
-    <item>Pharmakophobie</item>
+    <item>Pharmacophobie</item>
     <item>Unfruchtbare Erde</item>
     <item>Schwarm Intelligenz</item>
     <item>In die Dunkelheit</item>
@@ -188,8 +188,8 @@
   <!--STRINGS OF WndStory CLASS-->
   <string name="WndStory_Sewers">Der Dungeon liegt direkt unter der Stadt, die oberen Ebenen bilden sozusagen das Abwassersystem der Stadt. Daher sollten sie nicht allzu schwer sein. Keiner nennt sie einen sicheren Platz, aber du wirst hier nicht gegen mächtige Magie kämpfen müssen.</string>
   <string name="WndStory_Prision">Vor vielen Jahren wurde hier für die gefährlichsten Verbrecher ein unterirdisches Gefängnis gebaut. Zu der Zeit schien es wie eine sehr kluge Idee, denn dieser Ort war wirklich sehr schwer zu entkommen. Doch bald fing es an, von unten her dunkles Miasma zu durchdringen, Gefangene und Wächter zu töten. Schließlich wurde das Gefängnis verlassen, obwohl einige Sträflinge hier eingesperrt waren.</string>
-  <string name="WndStory_Spiders">Vor vielen, vielen Jahren gab es eine reichhaltige Mine, voll mit magischen Steinen. Aber als die Mineral-Venen erschöpft waren verliessen die Minenarbeiter die Mine und hinterliessen ein weites Netzwerk an Tunneln.
-Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen, lauernd in der Dunkelheit, waren nicht genug um die Mutigen und Wahnsinnigen davon abzuhalten, sehensüchtig nach den Schätzen zu suchen, die hier vieleicht zu finden sind. Für die Größe der Gefahr gibt es immer eine proportionelle Menge an Gerüchten über magische Artefakte. An einer Zeit wanderte mal eine böse Hexe in die Tunnel, um vor Hexenjägern zu flüchten. Die Abergläubischen wagten es nicht in die Dunkelheit zu treten. Also warteten sie. Aber niemand hat sie je wieder gesehen. Vieleicht hat die Hexe einen Weg raus gefunden, vieleicht hat sie sich an den Wachen vorbeigeschliechen... Oder sie starb, umgeben vom rascheln der Kreaturen der Dunkelheit.</string>
+  <string name="WndStory_Spiders">Vor vielen, vielen Jahren gab es eine reichhaltige Mine, voll mit magischen Steinen. Aber als die Mineral-Minen erschöpft waren verliessen die Minenarbeiter die Mine und hinterliessen ein weites Netzwerk an Tunneln.
+Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen, lauernd in der Dunkelheit, waren nicht genug um die Mutigen und Wahnsinnigen davon abzuhalten, sehensüchtig nach den Schätzen zu suchen, die hier vieleicht zu finden sind. Für die Größe der Gefahr gibt es immer eine große Menge an Gerüchten über magische Artefakte. Vor langer Zeit wanderte mal eine böse Hexe in die Tunnel, um vor Hexenjägern zu flüchten. Die Abergläubischen wagten es nicht in die Dunkelheit zu treten. Also warteten sie. Aber niemand hat sie je wieder gesehen. Vieleicht hat die Hexe einen Weg raus gefunden, vieleicht hat sie sich an den Wachen vorbeigeschliechen... Oder sie starb, umgeben vom Rascheln der Kreaturen in der Dunkelheit.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">IM ANGEBOT: %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">Kaufen für %dg</string>
@@ -218,7 +218,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="EquipableItem_ACUnequip">AUSZIEHEN</string>
   <string name="EquipableItem_Unequip">Du kannst die verfluchte %s nicht entfernen!</string>
   <!--STRINGS OF Heap CLASS-->
-  <string name="Heap_Mimic">Das ist ein Imitator!</string>
+  <string name="Heap_Mimic">Das ist ein Mimic!</string>
   <!--STRINGS OF Amulet CLASS-->
   <string name="Amulet_Name">Amulett von Yendor</string>
   <string name="Amulet_ACEnd">SPIEL BEENDEN</string>
@@ -230,7 +230,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="ArmorKit_Name">Rüstungsset</string>
   <string name="ArmorKit_ACAplly">ANWENDEN</string>
   <string name="ArmorKit_SelectArmor">Wähle eine Rüstung zum verbessern</string>
-  <string name="ArmorKit_Upgraded">Du hast dein Rüstungsset benutzt. %s wurde verbessert.</string>
+  <string name="ArmorKit_Upgraded">Du hast dein Rüstungsset benutzt, um deine %s zu verbessern.</string>
   <!--STRINGS OF Dewdrop CLASS-->
   <string name="Dewdrop_Name">Tautropfen</string>
   <string name="Dewdrop_Info">Ein kristallklarer Tautropfen.</string>
@@ -261,11 +261,11 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
 
 Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetzt.</string>
   <!--STRINGS OF Stylus CLASS-->
-  <string name="Stylus_Name">Mysteriöser Stift</string>
-  <string name="Stylus_ACInscribe">BESCHRIFTEN</string>
-  <string name="Stylus_Info">Dieser mysteriöse Stift wurde aus schwarzem, sehr harten Stein gemacht. Du kannst mit ihm eine Glyphe oder eine Rune schreiben, aber nicht bestimmen, welche es sein soll, da sie sich der Stift aussucht.</string>
-  <string name="Stylus_SelectArmor">Wähle einen Gegenstand zum Beschriften</string>
-  <string name="Stylus_Inscribed">Du trägst in dein %2$s die %1$s ein.</string>
+  <string name="Stylus_Name">Arkaner Stift</string>
+  <string name="Stylus_ACInscribe">GRAVIEREN</string>
+  <string name="Stylus_Info">Dieser arkane Stift wurde aus schwarzem, sehr harten Stein gemacht. Du kannst mit ihm eine Glyphe oder eine Rune schreiben, aber nicht bestimmen, welche es sein soll, da sie sich der Stift aussucht.</string>
+  <string name="Stylus_SelectArmor">Wähle einen Gegenstand zum Gravieren</string>
+  <string name="Stylus_Inscribed">Du gravierst in dein %2$s die %1$s ein.</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Buch der Meisterschaft</string>
   <string name="TomeOfMastery_ACRead">LESEN</string>
@@ -274,7 +274,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="TomeOfMastery_Choose">Du hast dich entschieden den Weg des %s einzuschlagen!</string>
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">Fackel</string>
-  <string name="Torch_ACLight">ERLEUCHTEN</string>
+  <string name="Torch_ACLight">ANZÜNDEN</string>
   <string name="Torch_Info">Dies ist ein unverzichtbarer Gegenstand in den Dämonen Hallen, der für seine schlechte Beleuchtung bekannt ist.</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">Gewichtsstein</string>
@@ -285,7 +285,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Weightstone_Accurate">Die Attribute vom %s wurden abgestimmt, es ist jetzt genauer.</string>
   <string name="Weightstone_WndChoice">Wie möchtest du dein %s ausgleichen?</string>
   <string name="Weightstone_WndSpeed">Für Schnelligkeit</string>
-  <string name="Weightstone_WndAccuracy">Für Präzision</string>
+  <string name="Weightstone_WndAccuracy">Für Genauigkeit</string>
   <string name="Weightstone_WndCancel">Vergiss es</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
@@ -312,7 +312,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF IronKey CLASS-->
   <string name="IronKey_Name">Eisener Schlüssel</string>
   <string name="IronKey_Info">Die Kerben auf diesem antiken Eisenschlüssel sind stark beschädigt; die Lederkordel ist durchs Alter abgenutzt. Welche Tür wird es öffnen?</string>
-  <string name="IronKey_FromDepth">Schlüssel von Tiefe %d</string>
+  <string name="IronKey_FromDepth">Schlüssel von Ebene %d</string>
   <!--STRINGS OF SkeletonKey CLASS-->
   <string name="SkeletonKey_Name">Skelettschlüssel</string>
   <string name="SkeletonKey_Info">Dieser Schlüssel sieht seriös aus: Der Kopf ist wie ein Schädel geformt. Wahrscheinlich lässt sich damit eine seriöse Tür öffnen.</string>
@@ -320,7 +320,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">Leichenstaub</string>
   <string name="CorpseDust_Info">Dieser Ball aus Leichenstaub unterscheidet sich äußerlich nicht von einem normalen Staubball. Warum auch immer, weißt du, dass du diesen Ball so schnell wie möglich loswerden solltest.</string>
-  <string name="CorpseDust_Info2">Vielleicht weil du es gerade hälst macht es dich Müde un Wütend.</string>
+  <string name="CorpseDust_Info2">Vielleicht weil du es gerade hälst macht es dich Müde und Wütend.</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">Dunkles Golderz</string>
   <string name="DarkGold_Info">Dieses Metall wird nicht wegen seiner Farbe dunkel genannt (Es unterscheidet sich nicht von normalem Gold), sondern weil es bei Tageslicht schmilzt, was es unnütz auf der Oberfläche macht.</string>
@@ -333,7 +333,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="DwarfToken_Info">Viele Zwerge und ihre größeren Kreaturen tragen diese kleinen Metallstücke unbekanntem Zweck herum. Vielleicht sind sie Juwelen oder irgendeine Art Ausweis. Zwerge sind ein seltsames Volk.</string>
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">Spitzhacke</string>
-  <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch alls Waffe genutzt werden.</string>
+  <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch als Waffe genutzt werden.</string>
   <string name="Pickaxe_ACMine">ABBAUEN</string>
   <string name="Pickaxe_Gender">weiblich</string>
   <string name="Pickaxe_NoVein">Es gibt keine Goldader in der Nähe.</string>
@@ -347,12 +347,12 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Ein Feuer wütet hier.</string>
   <!--STRINGS OF Foliage CLASS-->
-  <string name="Foliage_Info">Schäfte aus Licht durchstoßen die Düsternis des Untergrundgartens.</string>
+  <string name="Foliage_Info">Strahlen aus Licht durchstoßen die Düsternis des Untergrundgartens.</string>
   <!--STRINGS OF ParalyticGas CLASS-->
-  <string name="ParalyticGas_Info">Eine Wolke paralysierendes Gas wirbelt hier. </string>
+  <string name="ParalyticGas_Info">Eine Wolke lähmendes Gas wirbelt hier. </string>
   <!--STRINGS OF ToxicGas CLASS-->
-  <string name="ToxicGas_Info">Eine grüne Wolke Giftgas wirbelt hier. </string>
-  <string name="ToxicGas_Info1">Du bist gestorben weil du giftige Luft eingeatmet hast.</string>
+  <string name="ToxicGas_Info">Eine grünliche Wolke Giftgas wirbelt hier. </string>
+  <string name="ToxicGas_Info1">Du bist gestorben weil du giftige Luft eingeatmet hast...</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
   <string name="WaterOfAwareness_Info">Die Kraft des Wissens strömt durch das Wasser dieses Brunnens. Nimm einen Schluck, um alle Geheimnisse über deine ausgerüsteten Gegenstände zu erfahren.</string>
   <string name="WaterOfAwareness_Procced">Als du einen Schluck nimmst, fühlst du, dass Wissen in deinen Kopf fließt. Du weißt nun alles über deine ausgerüsteten Gegenstände. Außerdem spürst du alle Gegenstände auf diesem Level und kennst alle Geheimnisse.</string>
@@ -383,7 +383,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Combo_Info">Kombo</string>
   <string name="Combo_Combo">%d Treffer Kombo!</string>
   <!--STRINGS OF Cripple CLASS-->
-  <string name="Cripple_Info">Verkrüppelt</string>
+  <string name="Cripple_Info">Angeschlagen</string>
   <!--STRINGS OF Frost CLASS-->
   <string name="Frost_Info">Eingefroren</string>
   <string name="Frost_Shatter">Die Kälte lässt %s zerspringen!</string>
@@ -394,8 +394,8 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <!--STRINGS OF Hunger CLASS-->
   <string-array name="Hunger_Hungry">
     <item>Du bist Hungrig.</item>
-    <item>Du bist Hungrig</item>
-    <item>Du bist Hungrig</item>
+    <item>Du bist Hungrig.</item>
+    <item>Du bist Hungrig.</item>
   </string-array>
   <string-array name="Hunger_Starving">
     <item>Du verhungerst!</item>
@@ -420,7 +420,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetz
   <string name="Paralysis_Info">Gelähmt</string>
   <!--STRINGS OF Poison CLASS-->
   <string name="Poison_Info">Vergiftet </string>
-  <string name="Poison_Death">Du bist durch Vergiftung gestorben...</string>
+  <string name="Poison_Death">Du bist durch eine Vergiftung gestorben...</string>
   <!--STRINGS OF Roots CLASS-->
   <string name="Roots_Info">Festgewachsen</string>
   <!--STRINGS OF Shadows CLASS-->

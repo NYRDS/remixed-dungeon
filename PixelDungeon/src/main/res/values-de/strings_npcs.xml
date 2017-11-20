@@ -65,7 +65,7 @@
   <string name="RatKing_Info3">Wie kannst du kümmerliche Kreatur es wagen unseren Rattenkönig zu stören.</string>
   <string name="RatKing_Died">Der König ist tot. Lang lebe der König!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
-  <string name="Shopkeeper_Name">Krämer</string>
+  <string name="Shopkeeper_Name">Verkäufer</string>
   <string name="Shopkeeper_Desc">Dieser dicke Typ sieht eher danach aus als würde er in einer grossen Stadt handel treiben als in einem Verliess.
 Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
   <string name="Shopkeeper_Sell">Wähle einen Gegenstand zum Verkaufen</string>
@@ -74,12 +74,12 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
   <string name="WandMaker_Desc">Dieser alte aber kräftige Gentleman schaut leicht verstört aus. Er wird durch ein magisches Schild beschützt.</string>
   <string name="WandMaker_Defense">absorbiert</string>
   <string name="WandMaker_Berry1">Oh was für eine angenehme Überraschung eine so anständige Person an so einem Ort zu treffen.
-Ich bin hier weil ich eine seltene Zutat suche a _Rotbeerensamen_. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
-  <string name="WandMaker_Berry2">Hattest du Glück mit den Rottbeerensamen, %s? Nein? Kein Problem, ich habs nicht eilig.</string>
+Ich bin hier weil ich eine seltene Zutat suche: einen _Faulbeerensamen_. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
+  <string name="WandMaker_Berry2">Hattest du Glück mit den Faulbeerensamen, %s? Nein? Kein Problem, ich habs nicht eilig.</string>
   <string name="WandMaker_Dust1">Oh was für eine angenehme Überraschung eine so anständige Person an so einem Ort zu treffen.
 Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Überresten von Skelletten auffindbar von denen es hier eine Menge gibt. Da ich mich der Kunst des Zaubern bediene, kann ich mich zwar gegen die Monster verteidigen, würde mich aber ganz schnell verlaufen. Das ist echt beschämend. Vielleicht könntest du mir ja helfen. Ich würde liebend gerne diesen Dienst mit meinem besten Zauberstab vergüten.</string>
   <string name="WandMaker_Dust2">Hattest du Glück mit dem Leichenstaub, %s? Knochenhaufen sind der offensichtlichste Ort zum Nachschauen.</string>
-  <string name="WandMaker_RotberryName">Rotbeere</string>
+  <string name="WandMaker_RotberryName">Faulbeere</string>
   <string name="WandMaker_RotberryDesc">Die Beeren dieses Strauchs schmecken wie süßer, süßer Tod.</string>
   <string name="WandMaker_RotberryInfo">Der Samen entfesselt ein Brüllen das durch den gesamten Dungeon hallt!</string>
 </resources>
