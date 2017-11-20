@@ -363,5 +363,18 @@
         - Hero initialization also takes the \“magicAffinity\” attribute, which can be set to: \“Elemental\”, \“Necromancy\” or \“Common\” (\“Common\” means that character can only use spells from the spell books)\n
         - New game object in mods – Trap. Unlike regular in-game trap, this object can be adjusted in several ways. You can set: the number of activations (uses), the target cell on which the trap\'s effect should trigger(target), and whatever you can or cannot active the trap by throwing item at it (activatedByItem)\n
     </string>
+    <string name="Welcome_Text_27_3">
+         remix.27.3\n
+  - New Item: Scroll of Summoning\n
+  - Dewdrop is no longer has higher priority in loot heap. So if there is an item, lying above the dewdrop, said item will be collected first\n
+  - Every single kind of container is now available at the town\'s shop\n
+  - Goo can no longer drop the Ring of Stone Blood  ( this item is only available through modding ), instead, player will be able to receive a random potion\n
+  - The \"Wing Gust\" spell can only move characters, that can be moved (IsMovable)\n
+  - Mobs can no longer spawn on the same spot with level objects\n
+  - Necromancer\'s Robe is no longer set to a quick slot by default\n
+  - Fixing the view distance randomizer\n
+  - Fixing bug that caused boss level to spawn an elemental instead of a boss\n
+  - The reward, player gets for watching an ad is now being processed on in-game tap\n
+    </string>
 
 </resources>

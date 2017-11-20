@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Свиток Призыва</string>
+    <string name="ScrollOfSummoning_Info">При прочтении данный свиток призовёт одного из монстров с текущего уровня. Если воля этого монстра достаточно слаба, он станет служить призывателю.</string>
+    <string name="ScrollOfSummoning_Info_2">Монстр отозвался на твой зов!</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">Могущественная магия не позволяет использовать \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">Ты не можешь использовать \"%s\" при слепоте.</string>
+
+    <string name="Mob_Cannot_Be_Pet">\"%s\" обладает слишком сильной волей!.</string>
+    <string name="No_Valid_Cell">Поблизости нету походящей клетки.</string>
+
+</resources>
