@@ -955,6 +955,17 @@ public abstract class Level implements Bundlable {
 	}
 
 	public Heap drop(Item item, int cell) {
+		if (map[cell] == Terrain.WALL){
+			for (int n : Level.NEIGHBOURS8) {
+				int p = n + cell;
+				if (cellValid(p)){
+					if (map[p] != Terrain.WALL){
+						cell = p;
+						break;
+					}
+				}
+			}
+		}
 
 		if (Dungeon.isChallenged(Challenges.NO_FOOD) && item instanceof Food) {
 			item = new Gold(item.price());
