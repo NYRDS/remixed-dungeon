@@ -9,9 +9,9 @@
 
     <!-- Generic warnings -->
     <string name="Using_Failed_Because_Magic">Могущественная магия не позволяет использовать \"%s\".</string>
-    <string name="Using_Failed_Because_Blind">Ты не можешь использовать \"%s\" при слепоте.</string>
+    <string name="Using_Failed_Because_Blind">Ты не можешь использовать \"%s\" во время слепоте.</string>
 
-    <string name="Mob_Cannot_Be_Pet">\"%s\" обладает слишком сильной волей!.</string>
+    <string name="Mob_Cannot_Be_Pet">\"%s\" обладает слишком сильной волей!</string>
     <string name="No_Valid_Cell">Поблизости нету походящей клетки.</string>
 
 </resources>
