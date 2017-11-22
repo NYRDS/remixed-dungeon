@@ -14,31 +14,31 @@
 
     <!-- STRINGS OF SummonDeathling CLASS -->
     <string name="SummonDeathling_Name">Beschwöre einen Untoten</string>
-    <string name="SummonDeathling_Info">Beschwört einen Untoten, der dir folgt. Untoten LP und sein Schaden erhöht sich mit dem Helden Level. \n\nBeschwörungslimit: %1$d (+1 Jeden Magie Level)</string>
+    <string name="SummonDeathling_Info">Beschwört einen Untoten, der dir folgt. Untoten LP und sein Schaden erhöht sich mit dem Level des Helden. \n\nBeschwörungslimit: %1$d (+1 je Magie Level)</string>
 
     <!-- STRINGS OF Ignite CLASS -->
     <string name="Ignite_Name">Anzünden</string>
-    <string name="Ignite_Info">Zündet selektiertes Feld an. Kann benutzt werden um Gras, Charaktere und Objekte anzuzünden.</string>
+    <string name="Ignite_Info">Zündet ausgewähltes Feld an. Kann benutzt werden um Gras, Charaktere und Objekte anzuzünden.</string>
 
     <!-- STRINGS OF RootSpell CLASS -->
     <string name="RootSpell_Name">Festwachsen</string>
-    <string name="RootSpell_Info">Verwurzelt selektierten Chrakter und macht es ihm unmöglich für eine kurze weile sich zu Bewegen.</string>
+    <string name="RootSpell_Info">Verwurzelt ausgewählten Charakter und macht es ihm unmöglich für eine kurze Weile sich zu Bewegen.</string>
 
     <!-- STRINGS OF WindGust CLASS -->
-    <string name="WindGust_Name">Winstoß</string>
-    <string name="WindGust_Info">Bläst einen Windstoß gegen den selektierten Charakter und stößt in weg.</string>
+    <string name="WindGust_Name">Windstoß</string>
+    <string name="WindGust_Info">Bläst einen Windstoß gegen den ausgewählten Charakter und stößt in weg.</string>
 
     <!-- STRINGS OF FreezeGlobe CLASS -->
     <string name="FreezeGlobe_Name">Einfrieren</string>
-    <string name="FreezeGlobe_Info">Friert selektierten Charakter ein und macht es ihm für eine kurze Zeit unmöglich jedwede Aktion auszuführen.</string>
+    <string name="FreezeGlobe_Info">Friert ausgewählten Charakter ein und macht es ihm für eine kurze Zeit unmöglich jedwede Aktion auszuführen.</string>
 
     <!-- STRINGS OF MagicTorch CLASS -->
     <string name="MagicTorch_Name">Magische Fackel</string>
-    <string name="MagicTorch_Info">Ein Zauberspruch, der Licht produziert, um Dunkle Dungeon Level zu erhellen.</string>
+    <string name="MagicTorch_Info">Ein Zauberspruch, der Licht produziert, um dunkle Dungeon-Level zu erhellen.</string>
 
     <!-- STRINGS OF Healing CLASS -->
     <string name="Healing_Name">Heilung</string>
-    <string name="Healing_Info">Dieser Spruch ist wichtig für jeden Abenteurer. Er wird den Leser um 1/3 der maximalen Leben Heilen.</string>
+    <string name="Healing_Info">Dieser Spruch ist wichtig für jeden Abenteurer. Er wird den Helden um 1/3 der maximalen Leben Heilen.</string>
 
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
@@ -66,7 +66,7 @@
     <string name="Mushroom_Eat_Message">Dieser Pilz hat komisch geschmeckt!</string>
 
     <!-- STRINGS OF Torch CLASS -->
-    <string name="Torch_Info2">Dies ist ein unverzichtbarer Gegenstand in diesem Dungeon, der dafür bekannt ist, für seine schlechte Beleuchtung.</string>
+    <string name="Torch_Info2">Dies ist ein unverzichtbarer Gegenstand in diesem Dungeon, der für seine schlechte Beleuchtung bekannt ist.</string>
 
     
     <!-- Window descriptions -->

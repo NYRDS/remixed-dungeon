@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Pergamino de Invocación</string>
+    <string name="ScrollOfSummoning_Info">Cuando es leído en voz altas, este pergamino invocará a uno de los monstruos del nivel actual de la mazmorra. Si la voluntad del monstruo es suficientemente débil, se convertirá en tu siervo.</string>
+    <string name="ScrollOfSummoning_Info_2">¡El monstruo ha respondido a tu llamada!</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">Una fuerza mágica te impide usar \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">No puedes usar \"%s\" estando cegado.</string>
+
+    <string name="Mob_Cannot_Be_Pet">¡La voluntad de \"%s\"  es demasiado fuerte para controlarla!</string>
+    <string name="No_Valid_Cell">No hay ninguna celda cercana libre.</string>
+
+</resources>

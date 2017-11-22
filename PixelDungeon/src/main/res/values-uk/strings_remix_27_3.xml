@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Сувій позиву</string>
+    <string name="ScrollOfSummoning_Info">Прочитавши, кличе одного з монстрів поточного рівня. Якщо його воля заслабка, він служитиме вам.</string>
+    <string name="ScrollOfSummoning_Info_2">Монстр відповів на ваш позив!</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">Могутня магія не дозволяє використовувати \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">Ти не можеш використати \"%s\", поки осліплений.</string>
+
+    <string name="No_Valid_Cell">Поблизу немає необхідної клітинки.</string>
+
+</resources>

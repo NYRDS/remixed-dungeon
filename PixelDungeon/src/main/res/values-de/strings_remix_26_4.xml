@@ -6,19 +6,19 @@
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF FortuneTellerNPC CLASS -->
-    <string name="FortuneTellerNPC_Name">Wahrsager</string>
+    <string name="FortuneTellerNPC_Name">Wahrsagerin</string>
     <string name="FortuneTellerNPC_Gender">weiblich</string>
-    <string name="FortuneTellerNPC_Name_Objective">Wahrsager</string>
-    <string name="FortuneTellerNPC_Desc">Diese Frau trägt eine lange helle Robe. Sie sieht überraschend jung aus, für jemanden, der die Kunst des Wahrsagens gemeistert hat. Wenn man näher kommt, kann man sie murmeln höhren, währand sie in ihre Kristall-Kugel starrt.</string>
+    <string name="FortuneTellerNPC_Name_Objective">Wahrsagerin</string>
+    <string name="FortuneTellerNPC_Desc">Diese Frau trägt eine lange helle Robe. Sie sieht überraschend jung aus, für jemanden, der die Kunst des Wahrsagens gemeistert hat. Wenn man näher kommt, kann man sie murmeln hören, währand sie in ihre Kristall-Kugel starrt.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
-    <string name="ServiceManNPC_Limit_Reached">Ich entschuldige mich, aber du hast das momentane Limit erreicht. Aber du solltest in der Lage sein unseren Service für jeden Helden Level den du erreichst zu nutzen.</string>
+    <string name="ServiceManNPC_Limit_Reached">Ich entschuldige mich, aber du hast das momentane Limit erreicht. Aber du solltest in der Lage sein unseren Service für jeden Level den du erreichst zu nutzen.</string>
 
     <!-- Window descriptions -->
     <!-- STRINGS OF WndFortuneTeller CLASS -->
     <string name="WndFortuneTeller_Instruction">Ich kann Geheimnisse hinter Gegenständen enthüllen, wenn du es willst.\nEine Identifikation wird dich %d Münzen kosten.</string>
-    <string name="WndFortuneTeller_No_Item">Pass auf, du willst doch nicht dein Geld für nichts ausgeben, oder doch? Du hast keine unidentifizierten Gegenstände in deinem Inventar.</string>
-    <string name="WndFortuneTeller_Title">Wahrsager.</string>
+    <string name="WndFortuneTeller_No_Item">Pass auf, du willst dein Geld doch nicht verschwenden, oder? Du hast keine unidentifizierten Gegenstände in deinem Inventar.</string>
+    <string name="WndFortuneTeller_Title">Wahrsagerin.</string>
 
     <!-- STRINGS OF Generic Button labels -->
     <string name="Wnd_Button_Yes">Ja</string>
@@ -36,7 +36,7 @@
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
 
     <!-- STRINGS OF WndMovieTheatre CLASS -->
-    <string name="WndMovieTheatre_Instruction_2">Du hast %1$d mal von %2$d geguckt. Du wirst zusätzliche Gelegenheiten um Filme zu gucken erhalten, für jeden neuen Helden Level.</string>
+    <string name="WndMovieTheatre_Instruction_2">Du hast %1$d von %2$d mal geguckt. Du wirst zusätzliche Gelegenheiten um Filme zu gucken erhalten, für jeden neuen Level.</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
