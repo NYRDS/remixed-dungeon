@@ -4,8 +4,10 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 
 import org.json.JSONException;
@@ -38,6 +40,14 @@ public class PortalGate extends LevelObject {
 		super(pos);
 		textureFile = "levelObjects/portals.png";
 	}
+
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		textureFile = "levelObjects/portals.png";
+	}
+
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
