@@ -8,10 +8,8 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">siyah kurukafa</string>
-    <string name="BlackSkull_Info">küçük obsidyen kurukafa.</string>
     <string name="BlackSkull_Gender">erkeksi</string>
 
-    <string name="BlackSkull_Name_Awakened">uyanmış siyah kurukafa</string>
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">ruh parçacığı</string>
     <string name="SoulShard_Info">Bu Ruh Vazosuna ait bir vazo kırığı. Mistik bir enerji ile parlıyor. Belki buralarda bunun gibi ilginç şeylere ilgi dyan birileri olabilir</string>

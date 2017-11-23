@@ -15,15 +15,15 @@
 	
 	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">Fez</string>
-    <string name="Fez_Info">Es ist ein Filzschmuck in Form eines Kegelstumpfes aus rotem Filz, an dessen Spitze eine Quaste befestigt ist. Und nein, es macht die Welt nicht dreidimensional.</string>
+    <string name="Fez_Info">Es ist ein Filzschmuck in Form eines Kegelstumpfes aus rotem Filz, an dessen Spitze eine Quaste befestigt ist. Und nein, es macht die Welt nicht 3D.</string>
 	
 	<!-- STRINGS OF NekoEars CLASS -->
-    <string name="NekoEars_Name">Neko Ohren</string>
+    <string name="NekoEars_Name">Katzenohren</string>
     <string name="NekoEars_Info">Manchmal möchtest du all das Monsterblut und den Schmutz abwaschen und dich einfach niedlich und fluffig fühlen... oder du kannst niedliche Katzenohren tragen. Das wäre das Mindeste.</string>
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">Hasenohren</string>
-    <string name="RabbitEars_Info">Es ist ein allgemein gültiger Glaube, dass Hasen glückliche Wesen sind und ihr Glück auf diejenigen übergeht, die einen Teil ihres Körpers bei sich tragen. Bei genauerer Betrachtung ist das Töten für eine Dekoration aus deinen Ohren nicht sehr glückbringend.</string>
+    <string name="RabbitEars_Info">Es ist ein allgemein gültiger Glaube, dass Hasen glückliche Wesen sind und ihr Glück auf diejenigen übergeht, die einen Teil ihres Körpers bei sich tragen. Bei genauerer Betrachtung ist das Töten für eine Dekoration aus deren Ohren nicht sehr glückbringend.</string>
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">Kürbis</string>
@@ -46,7 +46,7 @@
 
     <string name="WndHats_BackButton">Zurück</string>
     <string name="WndHats_BuyButton">Kaufen</string>
-    <string name="WndHats_EquipButton">Rüste aus</string>
+    <string name="WndHats_EquipButton">Ausrüsten</string>
     <string name="WndHats_InfoButton">Untersuche</string>
     <string name="WndHats_UnequipButton">Ablegen</string>
 </resources>

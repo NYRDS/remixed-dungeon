@@ -13,27 +13,27 @@
   <string name="AboutScene_Music">Musik:</string>
   <string name="AboutScene_Sound">Sound:</string>
   <string name="AboutScene_Thanks">besonderen Dank an:</string>
-  <string name="AboutScene_Email_Us">kontaktiert uns:</string>
+  <string name="AboutScene_Email_Us">Kontaktiert uns:</string>
   <string name="AboutScene_OurSite">Unsere Internetseite:</string>
   <string name="AboutScene_Snd">E-Mail senden</string>
   <string name="AboutScene_Translation">Lokalisierung von:</string>
   <string name="AboutScene_Translation_Names">NYRDS &amp;amp: Omen267901</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">Spitzenplatzierungen</string>
-  <string name="RankingsScene_Total">Gespielte Spiele (insgesamt): </string>
+  <string name="RankingsScene_Total">insgesamt Gespielte Spiele: </string>
   <string name="RankingsScene_NoGames">Es wurden bisher keine Spiele gespielt.</string>
   <string name="RankingsScene_NoInfo">Keine zusätzlichen Informationen</string>
   <!--STRINGS OF StartScene CLASS-->
   <string name="StartScene_Load">Spiel laden</string>
   <string name="StartScene_New">Neues Spiel</string>
   <string name="StartScene_Erase">Aktuelles Spiel löschen</string>
-  <string name="StartScene_Depth">Tiefe: %1$d\nLevel: %2$d</string>
+  <string name="StartScene_Depth">Ebene: %1$d\nLevel: %2$d</string>
   <string name="StartScene_Really">Willst du wirklich ein neues Spiel starten?</string>
   <string name="StartScene_Warning">Dein aktueller Spielfortschritt wird gelöscht.</string>
   <string name="StartScene_Yes">Ja, starte ein neues Spiel</string>
   <string name="StartScene_No">Nein, kehr zum Hauptmenü zurück</string>
-  <string name="StartScene_Unlock">Um diese Klasse freizuschalten, besiege den 3. Endgegner mit einer beliebigen anderen Klasse</string>
-  <string name="StartScene_UnlockElf">Um diese Klasse freizuschalten, besieg den 4. Endgegner mit einer beliebigen anderen Klasse</string>
+  <string name="StartScene_Unlock">Um diese Klasse freizuschalten, besiege den 3. Bossgegner mit einer beliebigen anderen Klasse</string>
+  <string name="StartScene_UnlockElf">Um diese Klasse freizuschalten, besieg den 4. Bossgegner mit einer beliebigen anderen Klasse</string>
   <string name="StartScene_WinGame">Um »Herausforderungen« freizuschalten, gewinne das Spiel mit einer beliebigen Klasse.</string>
   <string name="StartScene_DifficultySelect">Wähle deine Bestimmung</string>
   <string name="StartScene_DifficultyEasy">Einfach (mit Werbung)</string>
@@ -61,8 +61,8 @@
   <string name="WndSettings_Music">Musik</string>
   <string name="WndSettings_Sound">Toneffekte</string>
   <string name="WndSettings_Brightness">Helligkeit</string>
-  <string name="WndSettings_SwitchPort">Zum Portrait wechseln</string>
-  <string name="WndSettings_SwitchLand">Zur Landschaft wechseln</string>
+  <string name="WndSettings_SwitchPort">Zum Hochformat wechseln</string>
+  <string name="WndSettings_SwitchLand">Zum Querformat wechseln</string>
   <string name="WndSettings_SelectLanguage">Sprache wählen</string>
   <string name="WndSettings_SecondQuickslot">Zweite Schnellauswahl</string>
   <string name="WndSettings_ThirdQuickslot">Dritte Schnellauswahl</string>

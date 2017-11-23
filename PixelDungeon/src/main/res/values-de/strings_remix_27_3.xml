@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Schriftrolle der Beschwörung</string>
+    <string name="ScrollOfSummoning_Info">Wenn diese Schriftrolle laut vorgelesen wird, Beschwört sie ein Monster der jetzigen Ebene. Wenn der Wille des Monsters schwach genug ist, wird es dein Diener werden.</string>
+    <string name="ScrollOfSummoning_Info_2">Das Monster antwortet auf deine Beschwörungen!</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">Eine mächtige Magie hindert dich daran, die \"%s\" zu benutzen.</string>
+    <string name="Using_Failed_Because_Blind">Du kannst die \"%s\" nicht benutzen, wenn du geblendet bist.</string>
+
+    <string name="Mob_Cannot_Be_Pet">Der Wille eines \"%s\" ist schwach genug um es zu kontrolieren!</string>
+    <string name="No_Valid_Cell">Hier ist kein passendes Feld in der nähe.</string>
+
+</resources>
