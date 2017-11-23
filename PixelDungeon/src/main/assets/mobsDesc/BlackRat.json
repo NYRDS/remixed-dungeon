@@ -17,5 +17,6 @@
    "lootChance"    :1,
    "loot"          : {"kind":"RatHide"},
    "attackRange"   :5,
-   "walkingType"   :"ABSOLUTE"
+   "walkingType"   :"NORMAL",
+   "scriptFile"    :"scripts/mobs/Hydra"
 }

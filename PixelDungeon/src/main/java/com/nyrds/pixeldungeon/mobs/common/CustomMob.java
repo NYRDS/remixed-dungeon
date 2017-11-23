@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -15,6 +17,8 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.json.JSONObject;
+import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 /**
  * Created by mike on 11.04.2017.
@@ -37,6 +41,9 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	private int     attackRange     = 1;
 
+	@Packable
+	String scriptFile;
+
 	//For restoreFromBundle
 	public CustomMob() {
 	}
@@ -44,6 +51,15 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	public CustomMob(String mobClass) {
 		this.mobClass = mobClass;
 		fillMobStats();
+	}
+
+	@Override
+	public void die(Object cause) {
+		if(scriptFile!=null && !scriptFile.isEmpty()) {
+			LuaTable mobScript = LuaEngine.getEngine().call("require", scriptFile).checktable();
+			mobScript.get("onDie").call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(cause));
+		}
+		super.die(cause);
 	}
 
 	@Override
@@ -152,6 +168,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			attackRange = classDesc.optInt("attackRange",attackRange);
 
 			hp(ht(classDesc.optInt("ht", 1)));
+
+			scriptFile = classDesc.getString("scriptFile");
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);

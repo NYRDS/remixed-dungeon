@@ -57,9 +57,12 @@
    "water":"water0.png",
    "entrance":[1,1],
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
-   "obs" : [
-      {"kind":"GoldenStatue","x":10,"y":10, "loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} },
-      {"kind":"Mimic","x":8,"y":8, "level":3, "loot":{"kind":"Codex","text":"Это кодекс отобранный у толстого мимика"} }
+   "mobs" : [
+      {"kind":"BlackRat",
+        "x":10,
+        "y":10,
+        "scriptFile":"scripts/mobs/Phoenix"
+      }
    ],
   "items": [
 
