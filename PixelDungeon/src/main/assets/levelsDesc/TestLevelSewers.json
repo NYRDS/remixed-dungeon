@@ -60,8 +60,7 @@
    "mobs" : [
       {"kind":"BlackRat",
         "x":10,
-        "y":10,
-        "scriptFile":"scripts/mobs/Phoenix"
+        "y":10
       }
    ],
   "items": [
