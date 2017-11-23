@@ -1,4 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Zwój przyzwania</string>
+    <string name="ScrollOfSummoning_Info">Gdy przeczytany na głos, ten zwój przywoła jednego z potworów z obecnego piętra.Oczywiście jeżeli wola potwora jest dość słaba aby został on twoim sługą.</string>
+    <string name="ScrollOfSummoning_Info_2">Potwór odpowiedział na twoje przyzwanie !</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">Potężna magia uniemożliwia ci użycie  \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">Nie możesz użyć  \"%s\"  kiedy jesteś oślepiony.</string>
+
+    <string name="Mob_Cannot_Be_Pet">Wola  \"%s\"  jest zbyt silna aby ją kontrolować!</string>
+    <string name="No_Valid_Cell">W pobliżu nie ma odpowiedniej komórki/miejsca.</string>
+
+</resources>

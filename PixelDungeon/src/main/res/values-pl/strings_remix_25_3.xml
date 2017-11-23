@@ -7,7 +7,7 @@
 
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">Czaszka wampira</string>
-    <string name="VampireSkull_Info">Maska ta jest stworzona z pełni z naturalnych wampirzych czaszek. W sumie to wampirza czaszka... czaszka wielkogłowego wampira.  Straszne.</string>
+    <string name="VampireSkull_Info">Maska ta jest stworzona w pełni z naturalnych wampirzych czaszek. W sumie to wampirza czaszka... czaszka wielkogłowego wampira.  Straszne.</string>
 
     <!-- STRINGS OF ZombieMask CLASS -->
     <string name="ZombieMask_Name">Maska zombie</string>
