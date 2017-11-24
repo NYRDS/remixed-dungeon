@@ -9,18 +9,18 @@
   <string name="Guts_TileDescDeco">Dieser Ort sieht... verwundet aus</string>
   <string name="Guts_TileDescBookshelf">Dieses Bücherregal ist vollständig mit einem dichten und fleischigen Netz bedeckt. Aussichtslos, eines der Bücher zu erreichen.</string>
   <!--STRINGS OF WndStory CLASS-->
-  <string name="WndStory_Guts">Besiegt, in Stücke zerfallen, jedoch nicht vollständig zerstört, wurde der Alte Gott in die tiefsten Ebenen des Dungeons versiegelt. Doch vor kurzem wurde das Siegel gebrochen, die Passage zum Nest des Dämons verlassen, weit geöffnet. Die alptraumhaften Monster, geschaffen vom Alten Gott während seines Schlummers, waren so zahlreich, dass sie gezwungen waren, sich zu diesen grotesken Hallen zusammenzufügen. Wenn du über ihr lebendes Fleisch läufst, kannst du den Herzschlag vom Herz des Alten Gottes spüren, der durch sie hallt.</string>
+  <string name="WndStory_Guts">Besiegt, in Stücke zerfallen, jedoch nicht vollständig zerstört, wurde der Alte Gott in die tiefsten Ebenen des Dungeons gesperrt und die Öffnung versiegelt. Doch vor kurzem wurde das Siegel gebrochen und die Passage zum Dämonennest weit geöffnet. Die alptraumhaften Monster, geschaffen vom Alten Gott während seines Schlummers, waren so zahlreich, dass sie gezwungen waren, sich zu diesen grotesken Hallen zusammenzufügen. Wenn du über ihr lebendes Fleisch läufst, kannst du den Herzschlag vom Herz des Alten Gottes spüren, der durch sie hallt.</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
-  <string name="MimicAmulet_Name">Imitator</string>
+  <string name="MimicAmulet_Name">Mimic</string>
   <string name="MimicAmulet_Gender">männlich</string>
-  <string name="MimicAmulet_Name_Objective">Imitator </string>
+  <string name="MimicAmulet_Name_Objective">Mimic</string>
   <string name="MimicAmulet_Desc">Der glorreichste Moment deiner Karriere als Abenteurer erwies sich gerade als eine Falle.</string>
   <!--STRINGS OF Nightmare CLASS-->
   <string name="Nightmare_Name">Nachtmahr</string>
   <string name="Nightmare_Gender">männlich</string>
   <string name="Nightmare_Name_Objective">Nachtmahr</string>
-  <string name="Nightmare_Desc">Groteske Kreatur, von zuckenden fleischigen Tentakeln. Der Nachtmahr ist eine arge Manifestiation der finsteren Gedanken des Alten Gottes.</string>
+  <string name="Nightmare_Desc">Groteske Kreatur, von zuckenden fleischigen Tentakeln. Der Nachtmahr ist eine schreckliche Manifestiation der finsteren Gedanken des Alten Gottes.</string>
   <!--STRINGS OF TENGU CLASS-->
   <string name="Tengu_Info3">Hab dich, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
@@ -37,7 +37,7 @@
   <string name="YogsBrain_Name">Yogs Gehirn</string>
   <string name="YogsBrain_Gender">männlich</string>
   <string name="YogsBrain_Name_Objective">Yogs Gehirn</string>
-  <string name="YogsBrain_Desc">Gehirn von Yog-Dzewa. Die Quelle alles Bösen, das jemals aus dem Dungeon kam.</string>
+  <string name="YogsBrain_Desc">Das Gehirn von Yog-Dzewa. Die Quelle alles Bösen, das jemals aus dem Dungeon kam.</string>
   <!--STRINGS OF YogsEye CLASS-->
   <string name="YogsEye_Name">Yogs Auge</string>
   <string name="YogsEye_Gender">männlich</string>

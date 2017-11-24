@@ -42,6 +42,6 @@
   <string name="DarkVeil_Buff">Dunkler Schleier</string>
   <!--Badges-->
   <string name="Badges_Yog_Slain">Yog-Dzewa getötet </string>
-  <string name="Badges_ShadowLord_Slain">Schattenkönig getötet</string>
+  <string name="Badges_ShadowLord_Slain">Schattenherr getötet</string>
   <string name="Badges_SpiderQueen_Slain">Spinnenkönigin getötet</string>
 </resources>
