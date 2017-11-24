@@ -6,6 +6,8 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
+import java.util.ArrayList;
+
 /**
  * Created by mike on 27.02.2016.
  */
@@ -24,6 +26,7 @@ public class Tools {
 
 		int im = (int) (Math.floor((float)(w)/roomStep)*roomStep+2);
 		int jm = (int) (Math.floor((float)(h)/roomStep)*roomStep+2);
+
 		for (int i = 0; i <im; i++) {
 			for (int j = 0; j <jm; j++) {
 				if (i == 0 || j == 0 || i == im-1 || j == jm-1) {
@@ -68,24 +71,9 @@ public class Tools {
 			}
 		}
 
-		for (int i = 0; i < im; i++) {
-			for (int j = 0; j < jm; j++) {
-
-				if ((i - 1) % roomStep == roomStep/2 && (j - 1) % roomStep == roomStep/2 ) {
-
-					if(level.getDistToNearestTerrain(i,j,Terrain.DOOR)!=level.getDistToNearestTerrain(i, j, Terrain.WALL)){
-						int doorCell = level.getNearestTerrain(i, j, Terrain.WALL);
-						level.set(doorCell,Terrain.DOOR);
-						for(int k = 0;k<2;k++) {
-							int secondDoorCell = level.getNearestTerrain(i, j, Terrain.WALL);
-							if (level.getDistToNearestTerrain(secondDoorCell, Terrain.DOOR) > 1) {
-								level.set(secondDoorCell, Terrain.DOOR);
-							}
-						}
-					}
-					continue;
-				}
-			}
+		int[] doorPositions = {144, 87, 150, 93, 156, 264, 207, 270, 213, 276, 327, 333};
+		for (int i = 0; i < doorPositions.length; i++) {
+			level.set(doorPositions[i], Terrain.DOOR);
 		}
 
 		GameScene.updateMap();
