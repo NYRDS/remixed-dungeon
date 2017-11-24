@@ -18,5 +18,6 @@
    "loot"          : {"kind":"RatHide"},
    "attackRange"   :5,
    "walkingType"   :"NORMAL",
-   "scriptFile"    :"scripts/mobs/Hydra"
+   "scriptFile"    :"scripts/mobs/Talkie",
+   "friendly"      :"true"
 }
