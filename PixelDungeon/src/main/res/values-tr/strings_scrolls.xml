@@ -2,10 +2,7 @@
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
-  <string name="Scroll_Name">parşömen\"%s\"</string>
-  <string name="Scroll_Info">bu parşömen çözülemez yazıtlarla dolu ve başlığı ayılar. %s acaba okuyunca ne olacak ?</string>
-  <string name="Scroll_ACRead">OKU</string>
-  <string name="Scroll_Blinded">Kör Olmuşken Bir Parşömeni okuyamazsın</string>
+  <string name="Scroll_Name">parşömen \"%s\"</string>
   <string-array name="Scroll_Runes">
     <item>KAUNAN</item>
     <item>SOWILO</item>
@@ -26,35 +23,19 @@
     <item>SAHEZ</item>
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
-  <string name="InventoryScroll_Title">Bir Eşya Seç</string>
-  <string name="InventoryScroll_Warning">Gerçekten Bu Parşömeni Kullanmaktan Vaz mı Geçiceksin ?  Parşömen Kaybolacak.</string>
-  <string name="InventoryScroll_Yes">Evet Yapalım Şunu</string>
-  <string name="InventoryScroll_No">Hayır,Fikrimi Değiştirdim</string>
   <!--STRINGS OF BlankScroll CLASS-->
-  <string name="BlankScroll_Name">Boş Parşömen</string>
-  <string name="BlankScroll_Info">Sadece Boş Bir Parşömen.Belki Üzerine Birşeyler yazılabilir</string>
-  <string name="BlankScroll_ReallyBlank">Bu Parşömen Boş</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
-  <string name="ScrollOfChallenge_Name">Rekabet Parşömeni</string>
   <string name="ScrollOfChallenge_Info">Bu parşömeni okuduğunda , meydan okuyan bir kükreme salınacak ki bu d tüm yaratıkları alarma geçirecek ve senin konumun da açığa çıkacak.</string>
   <string name="ScrollOfChallenge_Info1">Parşömen tüm zindanda yankılanan meydan okuyan bir kükreme yayıyor !</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
-  <string name="ScrollOfIdentify_Name">Tanımlama Parşömeni</string>
   <string name="ScrollOfIdentify_Info">Bir nesnenin tüm sırlarını öğrenmeni sağlar.</string>
-  <string name="ScrollOfIdentify_InvTitle">Tanımlamak İçin bir Eşya Seç</string>
-  <string name="ScrollOfIdentify_Info1">Bu%s</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
-  <string name="ScrollOfLullaby_Name">Ninni Parşömeni</string>
   <string name="ScrollOfLullaby_Info">Uyku getiren bir melodi ile etraftaki yaratıkları uyutur ve sana kaçma veya sürpriz saldırı imkanı verir.</string>
   <string name="ScrollOfLullaby_Info1">Parşömen bir melodi yayıyor.</string>
-  <string name="ScrollOfLullaby_Info2">bu parşömen tatlı bir melodi yayıyor ve %s uykuya dalıyor</string>
-  <string name="ScrollOfLullaby_Info3">bu parşömen tatlı bir melodi yayıyor ve yaratıklar  uykuya dalıyor</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
-  <string name="ScrollOfMagicMapping_Name">Sihirli Harita Parşömeni</string>
-  <string name="ScrollOfMagicMapping_Info">Bu Parşömeni okuduğunda haritadaki tüm değerli şeyler hafızana kazınır. Yaratıkların yerleri hala senin için belirsiz kalır.</string>
-  <string name="ScrollOfMagicMapping_Layout">Artık bu seviyenin haritasını biliyorsun.</string>
+  <string name="ScrollOfMagicMapping_Info">Bu parşömen okunduğunda, bölümün bir haritası ve tüm gizemleri billur gibi bir resmi aklına kazınır. Yaratık ve eşyaların yerleri belirsiz kalır.</string>
+  <string name="ScrollOfMagicMapping_Layout">Artık bu bölümün haritasını biliyorsun.</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
-  <string name="ScrollOfMirrorImage_Name">Ayna Yansıması Parşömeni</string>
   <string name="ScrollOfMirrorImage_Info">Bu Parşömeni okuyanın bir ilüzyon ikizi oluşur ve bu ikiz de senin düşmanlarına saldırır.</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
   <string name="ScrollOfPsionicBlast_Name">Fizyonik Patlama Parşömeni</string>
@@ -66,35 +47,25 @@
   <string name="ScrollOfRecharging_Info1b">Çantana dalgalanan enerji tüm asanlarını tamamen şarj etti</string>
   <string name="ScrollOfRecharging_Info2">Çantana dalgalanan enerjiyi gördün ancak hiç birşey olmadı</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
-  <string name="ScrollOfRemoveCurse_Name">Laneti Kaldırma Parşömeni</string>
   <string name="ScrollOfRemoveCurse_Info">Bu Parşömen nesneleri çıkartmanı engelleyenler dahil çantandaki tüm nesnelerdeki laneti kaldırır.</string>
   <string name="ScrollOfRemoveCurse_Proced">Çantan arındırıcı bir ışıkla aydınlandı ve lanetli büyüler yok oldu.</string>
   <string name="ScrollOfRemoveCurse_NoProced">Çantan arındırıcı bir ışıkla aydınlandı ancak hiç birşey olmadı.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
-  <string name="ScrollOfTeleportation_Name">ışınlanma parşömeni</string>
   <string name="ScrollOfTeleportation_Info">Bu parşömendeki büyü okuyanı anında labirentte rastgele bir yere ışınlar. Tehlikeli durumlardan kaçmak için kullanılabilir ancak gideceğin yerin de güvenli olacağının bir garantisi yok.</string>
   <string name="ScrollOfTeleportation_Teleport">Bir göz kırpması süüresinde labirentte rastgele bir yere ışınlandın.</string>
   <string name="ScrollOfTeleportation_NoTeleport">Buradaki güçlü büyü ışınlanmadı engelledi!</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
-  <string name="ScrollOfTerror_Name">Terör Parşömeni</string>
   <string name="ScrollOfTerror_Info">Bir kırmızı ışık patlaması  görüş alanındaki tüm yaratıkların kaçmasını sağlar. Kaçan yaratıklara saldırırsan büyü bozulacaktır.</string>
   <string name="ScrollOfTerror_Info1">Parşömen parlak bir kırmızı ışık yaydı</string>
   <string name="ScrollOfTerror_Info2">Parşömen parlak bir kırmızı ışık yaydı ve %s kaçmaya başladı!</string>
   <string name="ScrollOfTerror_Info3">Parşömen parlak bir kırmızı ışık yaydı ve yaratıklar kaçmaya başladı!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
-  <string name="ScrollOfUpgrade_Name">geliştirme parşömeni</string>
   <string name="ScrollOfUpgrade_Info">Bu parşömen tek bir nesnenin kalitesini yükseltir. Bir asanın güç ve şarj sayısı, bir silahın gücü veya hedefi bulma yeteneği artar. Zırhların koruma seviyesi yükselir. Yüzüklerin takan kişiye yaptığı etki güçlenir.Ayrıca silah ve zırhların kullanılması için gereken güç miktarı azalır,  üzerlerinde kötü büyüler kalkar.</string>
-  <string name="ScrollOfUpgrade_InvTitle">geliştirmek için bir eşya seç</string>
-  <string name="ScrollOfUpgrade_LooksBetter">senin  %s kesinlikle daha iyi görünüyor.</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
-  <string name="ScrollOfWeaponUpgrade_Name">silah geliştirme parşömeni</string>
   <string name="ScrollOfWeaponUpgrade_Info">Bu parşömen silahın kalitesini yükseltir ve Yükseltme Parşömeni gibi silahtaki efsunu yok etmez aksine rastgele bir efsun aşılar.</string>
-  <string name="ScrollOfWeaponUpgrade_InvTitle">geliştirmek için bir silah seç</string>
-  <string name="ScrollOfWeaponUpgrade_LooksBetter">senin  %s kesinlikle daha iyi gözüküyor.</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
   <string name="ScrollOfDomination_Name">Hakimiyet Parşömeni</string>
   <string name="ScrollOfDomination_Info">Bu parşömen görüş alanındaki yaratıkların zihinlerinde hakimiyet kurar ve onların ölene kadar senin için savaşmasını sağlar.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
-  <string name="ScrollOfCurse_Name">lanet parşömeni</string>
   <string name="ScrollOfCurse_Info">Bu parşömen yeterince aptal , büyüden anlamayan hırsızları özellikle cezalandırma için yapılmıştır.Büyüsü tamamen kullanışsız ve sıradan maceracılar için tehlikelidir, ancak tüccarlar buna iyi ödeme yapmaya hazırdırlar.</string>
 </resources>

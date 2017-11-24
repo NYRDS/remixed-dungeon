@@ -3,21 +3,19 @@
   <!--PACKAGE /items/potions-->
   <!--STRINGS OF Potion CLASS-->
   <string name="Potion_Name">%s iksiri</string>
-  <string name="Potion_Info">bu şişe dönen bir %s sıvıyla dolu. içerek ya da fırlatarak işe yarıyacağını kim bilir ?</string>
-  <string name="Potion_ACDrink">İÇ</string>
+  <string name="Potion_Info">Bu şişe girdap gibi dönen %s sıvısıyla dolu. İçildiğinde veya fırlatıldığında ne olacağını kim bilir?</string>
   <string name="Potion_Harmfull">Zararlı iksir!</string>
   <string name="Potion_Beneficial">Faydalı iksir</string>
-  <string name="Potion_Yes">Evet,ben ne yaptığımı biliyorum.</string>
-  <string name="Potion_No">hayır,fikrimi değiştirdim</string>
-  <string name="Potion_SureDrink">İçmek istediğine emin misin ?Genellikle bu tarz iksirler düşmana fırlatılarak kullanılır.</string>
-  <string name="Potion_SureThrow">Fırlatmat istedğine emin misin ? Genelde bu iksirleri içmek daha mantıklıdır.</string>
+  <string name="Potion_Yes">Evet, ne yaptığımı biliyorum</string>
+  <string name="Potion_SureDrink">İçmek istediğine emin misin? Genellikle bu tarz iksirleri düşmanlarına fırlatmalısın.</string>
+  <string name="Potion_SureThrow">Fırlatmat istedğine emin misin? Genelde bu iksirleri içmek daha mantıklıdır.</string>
   <string name="Potion_Shatter">Şişe kırıldı ve %s sıvı zararsızca etrafa sıçradı</string>
   <string-array name="Potion_Colors">
     <item>turkuaz</item>
-    <item>kıpkırmızı</item>
-    <item>masmavi</item>
-    <item>yeşil</item>
-    <item>altın rengi</item>
+    <item>kızıl</item>
+    <item>gökmavisi</item>
+    <item>yeşim yeşili</item>
+    <item>altın sarısı</item>
     <item>eflatun</item>
     <item>kara</item>
     <item>fildişi</item>
@@ -30,22 +28,15 @@
   <string name="PotionOfExperience_Name">Deneyim İksiri</string>
   <string name="PotionOfExperience_Info">Efsanevi savaşların deneyiminin sıvı formu, bu iksir deneyim puanını anında arttıracaktır.</string>
   <!--STRINGS OF PotionOfFrost CLASS-->
-  <string name="PotionOfFrost_Name">buz potu</string>
   <string name="PotionOfFrost_Info">Bu iksirle temas eden herhangi bir yaratık donarak hareket yeteneğini kaybedecektir.</string>
   <!--STRINGS OF PotionOfHealing CLASS-->
   <string name="PotionOfHealing_Name">Kırmızı Pot </string>
   <string name="PotionOfHealing_Info">Bu iksir anında iyileşmeni ve zehirlerden arınmanı sağlayacak.</string>
-  <string name="PotionOfHealing_Apply">yaraların tamamen iyileşti</string>
   <!--STRINGS OF PotionOfInvisibility CLASS-->
-  <string name="PotionOfInvisibility_Name">görünmezlik iksiri</string>
   <string name="PotionOfInvisibility_Info">Bu iksiri içmek seni geçici olarak görünmez kılacakGörünmez olduğunda düşmanların seni onlara herhangi bir saldırı yapana kadar göremeyecektir.</string>
-  <string name="PotionOfInvisibility_Apply">ellerinin görünmez olduğunu görüyorsun !</string>
   <!--STRINGS OF PotionOfLevitation CLASS-->
-  <string name="PotionOfLevitation_Name">uçma iksiri</string>
   <string name="PotionOfLevitation_Info">Bu garip iksir senin havada süzülmeni sağlar, tuzaklardan bu yolla kurtulabilirsin ancak zehirli gazlar havada da seni ekileyecektir.</string>
-  <string name="PotionOfLevitation_Apply">havada süzülüyorsun !</string>
   <!--STRINGS OF PotionOfLiquidFlame CLASS-->
-  <string name="PotionOfLiquidFlame_Name">sıvı ateş iksiri</string>
   <string name="PotionOfLiquidFlame_Info">Bu şise etrafı yakıp kavuracak kararsız bir sıvı içerir.</string>
   <!--STRINGS OF PotionOfMight CLASS-->
   <string name="PotionOfMight_Name">Kudret İksiri</string>
@@ -53,7 +44,6 @@
   <string name="PotionOfMight_Apply">Yeni bulduğun gün vücudundan taşıyor.</string>
   <string name="PotionOfMight_StaApply">+1 güç, +5 sağlık</string>
   <!--STRINGS OF PotionOfMindVision CLASS-->
-  <string name="PotionOfMindVision_Name">görüş iksiri </string>
   <string name="PotionOfMindVision_Info">Bunu içtikten sonra zihnin bu zindandaki yaratıkların fiziksel özelliklerin sezme yeteneğine kavuşacak onları bu seviyede nerede olursa olsun görebileceksin.</string>
   <string name="PotionOfMindVision_Apply1">Bir şekilde diğer yaratıkların zihinlerini okuyabiliyorsun!</string>
   <string name="PotionOfMindVision_Apply2">Şu anda bu seviyede yanlız olduğunu hissediyorsun.</string>
@@ -66,7 +56,6 @@
   <string name="PotionOfPurity_Freshness">Havada alışılmadık bir tazelik hissediliyor.</string>
   <string name="PotionOfPurity_NoSmell">Hiç bir kokuyu alamıyorsun!</string>
   <!--STRINGS OF PotionOfStrength CLASS-->
-  <string name="PotionOfStrength_Name">Güç İksiri</string>
   <string name="PotionOfStrength_Info">Bu güçlü sıvı damarlarından aktığında kalıcı olarak gücünü bir puan arttırır.</string>
   <string name="PotionOfStrength_Apply">Yeni bulduğun güçle kasların dalgalandı.</string>
   <string name="PotionOfStrength_StaApply">+1 güç</string>

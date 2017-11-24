@@ -74,7 +74,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroAction.Attack;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
@@ -1318,9 +1317,7 @@ public class Hero extends Char {
 
 			Mob mob = (Mob) ch;
 
-			if (ch instanceof NPC && ((NPC) ch).friendly()) {
-				curAction = new HeroAction.Interact(mob);
-			} else if (mob.isPet()) {
+			if (mob.friendly(this)) {
 				curAction = new HeroAction.Interact(mob);
 			} else {
 				curAction = new HeroAction.Attack(ch);

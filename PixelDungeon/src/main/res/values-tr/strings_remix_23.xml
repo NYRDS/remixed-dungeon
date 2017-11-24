@@ -1,36 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
-  <string name="Guts_TileGrass">kurutulmuş şurup</string>
-  <string name="Guts_TileHighGrass">kurutulmuş şurup</string>
-  <string name="Guts_TileWater">Garip sümüksü sıvı</string>
+  <string name="Guts_TileGrass">Kurutulmuş çalı</string>
+  <string name="Guts_TileWater">Garip yapışkan sıvı</string>
   <string name="Guts_TileDescEntrance">Zeminden yukarıya çıkan açıklık</string>
-  <string name="Guts_TileDescExit">aşağı seviyelere açılan bir delik </string>
   <string name="Guts_TileDescDeco">Bu yer yaralı gibi görünüyor</string>
   <string name="Guts_TileDescBookshelf">Bu kitaplık kalın ağlarla kaplı , herhangi bir kitaba erişmenin bir yolu yok</string>
   <!--STRINGS OF WndStory CLASS-->
   <string name="WndStory_Guts">Yenildi, parçalara ayrıldı ama tamamen yokedilmedi. Eski tanrı bu zindanın en derinlerinde hapsedildi.Ama mühür kırıldı ve karabasanlardan fırlayan yaratıklar dışarıya çıkmaya başladır. Bu koridorlarda yürüdüğünde Eski Tanrının kapl atışlarının yankısını duyabiliyorsun.</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
-  <string name="MimicAmulet_Name">canavar</string>
-  <string name="MimicAmulet_Gender">erkeksi</string>
-  <string name="MimicAmulet_Name_Objective">canavar</string>
   <string name="MimicAmulet_Desc">Macera kariyerindeki en heyacanlı an bir tuzağa dönüyor.</string>
   <!--STRINGS OF Nightmare CLASS-->
-  <string name="Nightmare_Name">kabus</string>
-  <string name="Nightmare_Gender">erkeksi</string>
-  <string name="Nightmare_Name_Objective">kabus</string>
   <string name="Nightmare_Desc">Titreşen dokunaçlardan yapılmış karabasanlar Eski Tanrının uğursuz düşüncelerinin göstergesi gibidir.</string>
   <!--STRINGS OF TENGU CLASS-->
   <string name="Tengu_Info3">Yakaladım, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
   <string name="ZombieGnoll_Name">gnoll-zombi</string>
-  <string name="ZombieGnoll_Gender">erkeksi</string>
   <string name="ZombieGnoll_Name_Objective">gnoll-zombi</string>
   <string name="ZombieGnoll_Desc">Bükülmü ve kırılmış vücudu artık insansı veya sırtlansı görünümünden uzaktır.Zombi gnoll öldürme ve tüketme dürtüsü ile varolan bir kemik ve et yığını gibidir</string>
   <!--STRINGS OF Worm CLASS-->
   <string name="Worm_Name">solucan</string>
-  <string name="Worm_Gender">erkeksi</string>
   <string name="Worm_Name_Objective">solucan</string>
   <string name="Worm_Desc">Bu solucanın ne kadar büyük olduğunu söylemenin imkanı yok. Zeminden  çıkan bir parçası çürümüş et ve balçıkile kaplanmış. Dev çeneleri yüzeye doğru nasıl yol açtığına dair çok net fikir verebilir.</string>
   <!--STRINGS OF YogsBrain CLASS-->
@@ -40,17 +30,14 @@
   <string name="YogsBrain_Desc">Yog-Dzewa\'nın beyni. Bu zindandaki tüm şeytani şeylerin kaynağı.</string>
   <!--STRINGS OF YogsEye CLASS-->
   <string name="YogsEye_Name">yog\'un gözü</string>
-  <string name="YogsEye_Gender">erkeksi</string>
   <string name="YogsEye_Name_Objective">Yog\'un gözü</string>
   <string name="YogsEye_Desc">Eski Tanrının gözü, ebedi nefret ile dolu olarak senin içinden ruhuna doğru baktığını hissedebilirsin</string>
   <!--STRINGS OF YogsHeart CLASS-->
   <string name="YogsHeart_Name">yog\'un kalbi</string>
-  <string name="YogsHeart_Gender">erkeksi</string>
   <string name="YogsHeart_Name_Objective">Yog\'un kalbi</string>
   <string name="YogsHeart_Desc">Asırlar boyu insanlar gerçekten kalpsiz olanların saf şeytani eylemleri yapabileceğine ınanmıştır.Ve iste burada , Eski tanrının devasa kalbi tam önünde atıyor.</string>
   <!--STRINGS OF YogsTeeth CLASS-->
   <string name="YogsTeeth_Name">yog\'un dişleri</string>
-  <string name="YogsTeeth_Gender">erkeksi</string>
   <string name="YogsTeeth_Name_Objective">Yog\'un dişleri</string>
   <string name="YogsTeeth_Desc">Eski Tanrının keskin dişler ile dolu muazzam çenesi. Onun yok etme ve yiyip bitirme arzusunun tam bir belirtisi olarak tam karşında.</string>
 </resources>

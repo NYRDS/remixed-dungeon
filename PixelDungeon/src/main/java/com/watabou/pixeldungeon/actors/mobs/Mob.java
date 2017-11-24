@@ -897,6 +897,10 @@ public abstract class Mob extends Char {
 		return fraction == Fraction.HEROES;
 	}
 
+	public boolean friendly(Char chr) {
+		return isPet();
+	}
+
 	public boolean canBePet() {
 		return true;
 	}

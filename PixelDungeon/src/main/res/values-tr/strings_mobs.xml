@@ -2,32 +2,27 @@
 <resources>
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
-  <string name="Mob_Desc">gerçek açıklama yakında gelicek !</string>
-  <string name="Mob_Died">Uzakta Birinin öldüğünü duydun</string>
-  <string name="Mob_Yell">%1$s: \"%2$s\"</string>
-  <string name="Mob_StaSleepingStatus">Bu %s uyuyor</string>
+  <string name="Mob_Desc">Gerçek açıklama yakında gelecek!</string>
+  <string name="Mob_Died">Uzakta birşeyin öldüğünü duydun</string>
+  <string name="Mob_StaSleepingStatus">%s uyuyor</string>
   <string name="Mob_StaWanderingStatus">%s geziniyor</string>
-  <string name="Mob_StaHuntingStatus">Bu %s avlanıyor</string>
-  <string name="Mob_StaFleeingStatus">Bu %s kaçıyor.</string>
+  <string name="Mob_StaHuntingStatus">%s avlanıyor</string>
+  <string name="Mob_StaFleeingStatus">%s kaçıyor</string>
   <string name="Mob_StaPassiveStatus">%s pasif</string>
   <!--STRINGS OF Acidic CLASS-->
   <string name="Acidic_Name">asidik akrep</string>
-  <string name="Acidic_Gender">erkeksi</string>
+  <string name="Acidic_Gender">erkek</string>
   <string name="Acidic_Name_Objective">asidik akrep</string>
   <string name="Acidic_Desc">Bu devasa eklembacaklı-gibi şeytani yaratıklar ne olusa olsun yakın dövüşten sakınıp uzun menzilden sakatlayan tırtıklı dikenler fırlatırlar.</string>
   <!--STRINGS OF Albino CLASS-->
-  <string name="Albino_Name">Albino fare</string>
-  <string name="Albino_Gender">erkeksi</string>
-  <string name="Albino_Name_Objective">Albino Fare</string>
+  <string name="Albino_Name">albino sıçan</string>
+  <string name="Albino_Gender">undefined</string>
+  <string name="Albino_Name_Objective">albino sıçan</string>
   <string name="Albino_Desc">Keseli sıçanlar argesif, ama zayıf lağım sakinleridir. Sadece büyük sayılarda tehlikeli olabilirler. Bu sıçan albinoya benziyor. Bu arada anormal derecede keskin dişleri var. </string>
   <!--STRINGS OF Bandit CLASS-->
-  <string name="Bandit_Name">Çılgın Haydut</string>
-  <string name="Bandit_Gender">erkeksi</string>
-  <string name="Bandit_Name_Objective">Çılgın Haydut</string>
   <string name="Bandit_Desc">Zindanın derin seviyeleri her zaman her türden suçlular için bir saklanma noktası olmuştur. Bazıları gün ışığından uzaktaki uzun sürelerde berrak bir zihinle düşünmeyi başaramamıştır. Uzun süre önce, bu çılgın hırsız ve haydutlar kim olduğunu ve niye çaldıklarını unuttular. Bu haydut belli ki hançerini birşey ile kaplamış!</string>
   <!--STRINGS OF Bat CLASS-->
   <string name="Bat_Name">vampir yarasa</string>
-  <string name="Bat_Gender">erkeksi</string>
   <string name="Bat_Name_Objective">vampir yarasa</string>
   <string name="Bat_Desc">Bu mağara kubbeleri altında yaşayan inatçı ve hareketli yaratıklar kendilerinde çok büyük düşmanları başarılı her saldırılarında canlarını yenileyerek atl edebilir</string>
   <string name="Bat_Defense">savuşturdu</string>
@@ -35,13 +30,10 @@
   <string name="Brute_Name">gnoll kabadayı</string>
   <string name="Brute_Name_Objective">gnoll kabadayı</string>
   <string name="Brute_Desc">Yabaniler en büyük ve güçlü gnoll türüdür.  Çok kötü yaralandıklarında çılgına döner ve düşmanlarına çok büyük zarar verebilir.</string>
-  <string name="Brute_Gender">erkeksi</string>
   <string name="Brute_Enraged">%s çıldırdı!</string>
   <string name="Brute_StaEnraged">kudurmuş</string>
   <!--STRINGS OF Crab CLASS-->
-  <string name="Crab_Name">lağım yengeci</string>
   <string name="Crab_Gender">erkek</string>
-  <string name="Crab_Name_Objective">lağım yengeci</string>
   <string name="Crab_Desc">Bu devasa yengeçler lağımlarda besin zincirinin başındadır.
 Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabilir.</string>
   <string name="Crab_Defense">savuşturdu</string>
@@ -51,63 +43,40 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="DM300_Name_Objective">DM-300</string>
   <string name="DM300_Desc">Bu makine birkaç yüzyıl önce Cüceler tarafından yapıldı. Sonra Cüceler golemleri, elementalleri ve hatta şeytanları makineler yerine kullanmaya başladı. Bu eninde sonunda onların uygarlıklarını düşüşe zorladı. DM-300 ve benzeri makineler genellikle inşaat ve madencilikte ve bazı durumlarda şehir savunmasında kullanıldı.</string>
   <string name="DM300_Info1">DM-300 kendini onardı!</string>
-  <string name="DM300_Info2">Görev başarısız.kapatılıyor.</string>
   <string name="DM300_Info3">Yetkisiz personel tespit edildi.</string>
   <!--STRINGS OF Elemental CLASS-->
-  <string name="Elemental_Name">ateş elementi</string>
   <string name="Elemental_Gender">masculine</string>
-  <string name="Elemental_Name_Objective">ateş elementi</string>
   <string name="Elemental_Desc">Göçebe ateş elementleri en ulu varlıkların çağrısının ürünüdür. Doğaları gereği en güçlü şeytani ilimler ustaları tarafından bile kontrol edilmek için çok karışıktırlar.</string>
   <!--STRINGS OF Eye CLASS-->
-  <string name="Eye_Name">şeytani göz</string>
   <string name="Eye_Gender">neuter</string>
-  <string name="Eye_Name_Objective">şeytani göz</string>
   <string name="Eye_Desc">Bu şeytanın diğer adı da Nefret Küresidir . Düşmanını farkettiğinde etrafındaki dost kuvvetlerin yaralanmasını dahi umursamadan ölümcük bakışlarını pervasızça etrafa saçar.</string>
   <string name="Eye_Kill">%s ölümcül bakış ile seni öldürdü...</string>
   <!--STRINGS OF Gnoll CLASS-->
   <string name="Gnoll_Name">gnoll izci</string>
-  <string name="Gnoll_Gender">erkeksi</string>
   <string name="Gnoll_Name_Objective">gnoll izci</string>
   <string name="Gnoll_Desc">Gnoller sırtlan benzeri insansılardır.Lağımlar ve zindanlar yaşam alanlarıdır.Zaman zaman yüzeye saldırılar yapmayada cüret ederler. Gnoll izciler sürüleri içinde normal güçteki üyeleridir, vahşi gnoller kadar güçlü , şamanlar kadar zeki değillerdir.</string>
   <!--STRINGS OF Golem CLASS-->
-  <string name="Golem_Name">Golem</string>
   <string name="Golem_Gender">masculine</string>
-  <string name="Golem_Name_Objective">Golem</string>
   <string name="Golem_Desc">Cüceler elementler üzerinde yeni keşfettikleri bilgieri mekanik bilgileri ile birleştirmeyi denediklerinde , yerin ruhlarını mekanik vücutlar ile birleştirerek Golem\'leri yarattılar.Bu ritueldeki en ufak bir hata bir isyan başlatabilirdi.</string>
-  <string name="Golem_Defense">Kapanmış</string>
   <!--STRINGS OF Goo CLASS-->
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">erkek</string>
   <string name="Goo_Name_Objective">Goo</string>
   <string name="Goo_Desc">Goo hakkında çok az şey bilinir.Lağımdaki maddelerin özgür iradesi ile bir araya gelmesinden oluşmuştur. </string>
   <string name="Goo_Info1">Goo kendini şişiriyor!</string>
-  <string name="Goo_Info2">gluk gluk</string>
-  <string name="Goo_Info3">GLURP-GLURP!</string>
-  <string name="Goo_StaInfo1">!!!</string>
   <!--STRINGS OF King CLASS-->
-  <string name="King_Name">Cücelerin Kralı</string>
   <string name="King_Gender">masculine</string>
-  <string name="King_Name_Objective">Cüce Kral</string>
   <string name="King_Desc">Cücelerin son kralı , hayat ve ölüm üzerindeki büyük bilgisi ile tanınırdı.Sarayındaki tebasını sonsuz gençlik vaadi ile bu çalışmalarına katılmak için ikna etmişti. Bunun sonunda sadece kendisi bu ödülü kazandı, ek olarakta bir ölümsüzler ordusuna kavuştu.</string>
   <string name="King_Defense">savuşturdu</string>
-  <string name="King_Info1">Beni Öldüremezsin %s ben .. ölümsüzüm</string>
   <string name="King_Info2">Köleler , kalkın!</string>
-  <string name="King_Info3">Ne Cüretle !</string>
-  <string name="Undead_Name">Ölümsüz Cüce</string>
   <string name="Undead_Gender">masculine</string>
-  <string name="Undead_Name_Objective">ölümsüz cüce</string>
   <string name="Undead_Desc">Bu ölümsüz cücler , Cüce Kralının çağrısı üzerne mezarlarından kalkmış. Hatırı sayılır bir sakal ve kemiklerden oluşan bir iskelet görünümündeler.</string>
   <string name="Undead_Defense">engellendi</string>
   <!--STRINGS OF Mimic CLASS-->
-  <string name="Mimic_Name">canavar</string>
   <string name="Mimic_Gender">masculine</string>
-  <string name="Mimic_Name_Objective">canavar</string>
   <string name="Mimic_Desc">Mimik\'ler istedikleri şeyin şeklini alabilen sihirli yaratıklardır. Maceracıların dikkatini çekmek için genellikle hazine sandığı şeklini alırlar;</string>
   <!--STRINGS OF MimicPie CLASS-->
-  <string name="MimicPie_Name">canavar</string>
   <string name="MimicPie_Gender">masculine</string>
-  <string name="MimicPie_Name_Objective">canavar</string>
-  <string name="MimicPie_Desc">canavarlar sihirli yaratıklardır. istedikleri şekle ve kılığa girebilirler. lezzetli ve büyük bir pasta gibi gözükebilirler</string>
   <!--STRINGS OF Monk CLASS-->
   <string name="Monk_Name">cüce keşiş</string>
   <string name="Monk_Gender">masculine</string>
@@ -116,9 +85,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Monk_Defense">savuşturdu</string>
   <string name="Monk_Disarm">%1$s , ellerinden %2$s nesnesini çaldı!</string>
   <!--STRINGS OF Piranha CLASS-->
-  <string name="Piranha_Name">dev pirana</string>
   <string name="Piranha_Gender">erkek</string>
-  <string name="Piranha_Name_Objective">dev pirana</string>
   <string name="Piranha_Desc">Bu etobur balıklar yeraltı sularının doğal canlıları değildir, hazineleri korumak için özel olarak üretilmişlerdir.</string>
   <!--STRINGS OF Rat CLASS-->
   <string name="Rat_Name">keseli sıçan</string>
@@ -126,9 +93,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Rat_Name_Objective">keseli sıçan</string>
   <string name="Rat_Desc">Keseli sıçanlar lağımların sinirli ancak zayıf müdavimleridir.Çok fazla sayıda olduklarında tehlikeli olabilirler.</string>
   <!--STRINGS OF Scorpio CLASS-->
-  <string name="Scorpio_Name">akrep</string>
   <string name="Scorpio_Gender">masculine</string>
-  <string name="Scorpio_Name_Objective">akrep</string>
   <string name="Scorpio_Desc">Bu devasa örümcek benzeri yaratık her koşulda yakın dövüşten kaçınmasa ile ünlüdür.Uzaktan felce uğratan oklar fırlatarak düşmanı ile savaşır.</string>
   <!--STRINGS OF Senior CLASS-->
   <string name="Senior_Name">kıdemli keşiş</string>
@@ -138,14 +103,12 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <!--STRINGS OF Shadow CLASS-->
   <string name="Shadow_Name">gölge</string>
   <string name="Shadow_Gender">erkek</string>
-  <string name="Shadow_Name_Objective">gölge</string>
   <string name="Shadow_Desc">Gölgeler antik hapishanenin yıkıntıları arasında sessizce dolanırlar. Bazen maceracılara , onların son macerası olarak göründükleri olur.</string>
   <!--STRINGS OF Shaman CLASS-->
   <string name="Shaman_Name">gnoll şaman</string>
   <string name="Shaman_Gender">masculine</string>
   <string name="Shaman_Name_Objective">gnoll şaman</string>
   <string name="Shaman_Desc">En zeki gnoller şaman büyülerinde uzmanlaşabilir. Gnoll şamanlar kabilelerinde onları sorgulayanlar üzerinde bu büyülerini kullanmaktan çekinmezler.</string>
-  <string name="Shaman_Killed">%s şimşek çarparak seni öldürdü</string>
   <!--STRINGS OF Shielded CLASS-->
   <string name="Shielded_Name">zırhlı vahşi</string>
   <string name="Shielded_Gender">masculine</string>
@@ -153,9 +116,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Shielded_Defense">engellendi</string>
   <string name="Shielded_Desc">Vahşiler tüm gnollerin en büyük ve güçlüleridir. Çok fazla yaralanırlarsa çılgına dönüp düşmanlarına büyük zararlar verebilir.Bu vahşi dev bir zırh giyiyor!</string>
   <!--STRINGS OF Skeleton CLASS-->
-  <string name="Skeleton_Name">iskelet</string>
   <string name="Skeleton_Gender">masculine</string>
-  <string name="Skeleton_Name_Objective">iskelet</string>
   <string name="Skeleton_Desc">İskeletler şansız maceracılar ve mağarının eski sakinlerinin kemiklerinin bir araya gelmesinden oluşur. Derinlerden fışkıran şeytani büyü sayesinde hayat bulurlar. Yeterince hasar görürlerse kemikler patlayarak iskelet yok olur.</string>
   <string name="Skeleton_Defense">engellendi</string>
   <string name="Skeleton_Killed">Kemiklerin patlaması ile öldün...</string>
@@ -228,7 +189,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <!--STRINGS OF SpiderEgg CLASS-->
   <string name="SpiderEgg_Name">örümcek yumurtası</string>
   <string name="SpiderEgg_Gender">neuter</string>
-  <string name="SpiderEgg_Name_Objective">örümcek yumurtası</string>
   <string name="SpiderEgg_Desc">Bu kırılgan yumurta kabaca titreşiyor. İçinde çok fazla bacağı olan birşeyler olduğunu görebiliyorsun</string>
   <!--STRINGS OF SpiderNest CLASS-->
   <string name="SpiderNest_Name">örümcek kozası</string>
@@ -262,7 +222,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="WaterElemental_Desc">Su elementleri büyük su kütlelerinde bulunur. Ortalıkta gezinen birbirlerinebağlanmış dalgalardır.</string>
   <!--STRINGS OF AirElemental CLASS-->
   <string name="AirElemental_Name">hava elementi</string>
-  <string name="AirElemental_Gender">erkek</string>
   <string name="AirElemental_Name_Objective">hava elementi</string>
   <string name="AirElemental_Desc">Hava elementi , canlı havadan yaratılmış sihirli oluşumlardır.</string>
   <!--STRINGS OF EarthElemental CLASS-->
