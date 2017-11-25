@@ -3,8 +3,15 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">sen</string>
   <string name="Hero_Name_Objective">sen</string>
+  <string name="Hero_LevelUp">Seviye Atladın !</string>
   <string name="Hero_NewLevel">%d. bölüme hoşgeldiniz! Artık daha canlı ve odaklısınız. Düşmanlara vurmak ve saldırılardan kaçmak senin için artık daha kolay.</string>
   <string name="Hero_YouNowHave">%s buldun!</string>
+  <string name="Hero_LockedDoor">Buraya Uyan Bir Anahtarın Yok</string>
+  <string name="Hero_NoticedSmth">Birşeyler Farkettin</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">Ara</string>
+  <string name="Hero_StaBurning">Tutuştun !</string>
+  <string name="Hero_StaParalysis">Felç Oldun.</string>
   <!--STRINGS OF HeroClass CLASS-->
   <string-array name="HeroClass_WarPerks">
     <item>Savaşçılar 11 Güç Puanı İle Başlar.</item>
