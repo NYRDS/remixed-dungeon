@@ -1,18 +1,11 @@
 package com.nyrds.pixeldungeon.items.common.armor;
 
-import com.nyrds.pixeldungeon.mechanics.Necromancy;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.common.Deathling;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.Collection;
@@ -27,16 +20,24 @@ public class NecromancerArmor extends ClassArmor {
 
 	public NecromancerArmor() {
 		image = 22;
-	}	
-	
+	}
+
+	public String desc() {
+		return info2;
+	}
+
 	@Override
 	public String special() {
 		return AC_SPECIAL;
 	}
-	
+
 	@Override
 	public void doSpecial() {
-		//TODO: Let's generate some souls
+		//TODO: Let's create a "Necrotism" ability, shall we? So it works fairly simple
+		//TODO: The caster get a "Necrotism" buff, which inflicts 1/20th of it's maximum health as a damage, each turn on a course of 3 turns
+		//TODO: Every turn it has 50% chance of infecting any character, in a 3 cell radius, including caster
+		//TODO: It cannot infect target that has an active "Necrotism" buff
+
 	}
 	
 	@Override
