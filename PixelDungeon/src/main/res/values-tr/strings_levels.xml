@@ -50,6 +50,7 @@
   <string name="Caves_TileWater">Dondurucu soğuk su.</string>
   <string name="Caves_TileDescExit">Aşağı seviyelere inen bir merdiven.</string>
   <string name="Caves_TileDescDeco">Duvarda bir maden damarı gözüküyor, Altın olmasın?</string>
+  <string name="Caves_TileDescBookshelf">Kim bir mağarada kitaplık ister ki?</string>
   <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
   <string name="City_TileHighGrass">Çok açan çicekler</string>
   <string name="City_TileDescEntrance">Yukarıya çıkan bir rampa.</string>
@@ -76,6 +77,8 @@
   <string name="Chasm_Chasm">Uçurum</string>
   <string name="Chasm_Yes">Evet, ne yaptığımı biliyorum</string>
   <string name="Chasm_No">Hayır, fikrimi değiştirdim</string>
+  <string name="Chasm_Jump">Gerçekten uçurumdan atlamak istiyor musun? Muhtemelen ölebilirsin</string>
+  <string name="Chasm_Info">Ölümü hissediyorsun.</string>
   <!--PACKAGE /levels/traps-->
   <!--STRINGS OF AlarmTrap CLASS-->
   <string name="AlarmTrap_Desc">Tuzağın çıkardığı kulak kanatan ses zindan boyunca yankılanıyor!</string>

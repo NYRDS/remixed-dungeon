@@ -74,7 +74,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Undead_Defense">engellendi</string>
   <!--STRINGS OF Mimic CLASS-->
   <string name="Mimic_Gender">masculine</string>
-  <string name="Mimic_Desc">Mimik\'ler istedikleri şeyin şeklini alabilen sihirli yaratıklardır. Maceracıların dikkatini çekmek için genellikle hazine sandığı şeklini alırlar;</string>
+  <string name="Mimic_Desc">Taklit\'ler istedikleri şeyin şeklini alabilen sihirli yaratıklardır. Maceracıların dikkatini çekmek için genellikle hazine sandığı şeklini alırlar;</string>
   <!--STRINGS OF MimicPie CLASS-->
   <string name="MimicPie_Gender">masculine</string>
   <!--STRINGS OF Monk CLASS-->
@@ -233,5 +233,5 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Crystal_Name">süzülen kristal</string>
   <string name="Crystal_Gender">masculine</string>
   <string name="Crystal_Name_Objective">Crippled</string>
-  <string name="Crystal_Desc">Büyük parlak bir kristal havada süzülüyor. Çok güçlü bir büyüyle dolu.</string>
+  <string name="Crystal_Desc">Büyük parlak bir kristal havada süzülüyor. Muhtemelen Çok güçlü bir büyüyle dolu.</string>
 </resources>

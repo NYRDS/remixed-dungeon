@@ -11,8 +11,23 @@
   <string name="Hero_Wait">...</string>
   <string name="Hero_Search">Ara</string>
   <string name="Hero_StaBurning">Tutuştun !</string>
-  <string name="Hero_StaParalysis">Felç Oldun.</string>
+  <string name="Hero_StaParalysis">Felç Oldun!</string>
+  <string name="Hero_StaPoison">Zehirlendin!</string>
+  <string name="Hero_StaRoots">Kıpırdayamıyorsun!</string>
+  <string name="Hero_StaWeakness">Zayıfladığını hissediyorsun!</string>
+  <string name="Hero_StaBlindness">Kör oldun!</string>
+  <string name="Hero_StaFury">Öfkelendin!</string>
+  <string name="Hero_StaFurious">Öfke</string>
+  <string name="Hero_StaCharm">Aşık oldun!</string>
+  <string name="Hero_StaCripple">Sakatlandın!</string>
+  <string name="Hero_StaBleeding">Kanıyorsun!</string>
+  <string name="Hero_StaVertigo">Herşey etrafında dönmeye başladı!</string>
   <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">Savaşçı</string>
+  <string name="HeroClass_Mag">Büyücü</string>
+  <string name="HeroClass_Rog">Hırsız</string>
+  <string name="HeroClass_Hun">Avcı</string>
+  <string name="HeroClass_Elf">Elf</string>
   <string-array name="HeroClass_WarPerks">
     <item>Savaşçılar 11 Güç Puanı İle Başlar.</item>
     <item>Savaşçılar Antik Kısa Kılıç İle Başlar.Bu Kılıcın Özellikleri Başka Bir Kılıca Aktarılabilir..</item>
@@ -50,4 +65,8 @@
     <item>Diğer saldırı silahları ile daha az başarılıdırlar.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_DescGlad">Yakın silah ile yapılan her başarılı vuruş _Gladyatör\'ün_ kombo yapmasına olanak sağlar, her başarılı vuruş ek hasar verir.</string>
+  <string name="HeroSubClass_NameBers">Vahşi savaşçı</string>
+  <string name="HeroSubClass_NameWarL">Ruh sömüren</string>
+  <string name="HeroSubClass_NameShaman">Şaman</string>
 </resources>
