@@ -9,6 +9,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
@@ -44,6 +45,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Packable
 	String scriptFile;
 
+	private boolean friendly;
+
 	//For restoreFromBundle
 	public CustomMob() {
 	}
@@ -53,13 +56,24 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		fillMobStats();
 	}
 
-	@Override
-	public void die(Object cause) {
+	private boolean runMobScript(String method, Object arg) {
 		if(scriptFile!=null && !scriptFile.isEmpty()) {
 			LuaTable mobScript = LuaEngine.getEngine().call("require", scriptFile).checktable();
-			mobScript.get("onDie").call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(cause));
+			mobScript.get(method).call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg));
+			return true;
 		}
+		return false;
+	}
+
+	@Override
+	public void die(Object cause) {
+		runMobScript("onDie",cause);
 		super.die(cause);
+	}
+
+	@Override
+	public boolean interact(Hero hero) {
+		return runMobScript("onInteract", hero) || super.interact(hero);
 	}
 
 	@Override
@@ -114,6 +128,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	@Override
 	protected boolean canAttack( Char enemy ) {
+
+		if(friendly(enemy)) {
+			return false;
+		}
+
 		int enemyPos = enemy.getPos();
 		int distance = Dungeon.level.distance(getPos(), enemyPos);
 
@@ -122,6 +141,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		}
 
 		return false;
+	}
+
+	@Override
+	public boolean friendly(Char chr) {
+		return friendly || super.friendly(chr);
 	}
 
 	private void fillMobStats() {
@@ -170,6 +194,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			hp(ht(classDesc.optInt("ht", 1)));
 
 			scriptFile = classDesc.getString("scriptFile");
+
+			friendly = classDesc.optBoolean("friendly",friendly);
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);

@@ -2,48 +2,5 @@
 <resources>
     <!-- Accessories descriptions -->
     <!-- STRINGS OF Ushanka CLASS -->
-    <string name="Ushanka_Name">Ushanka</string>
-    <string name="Ushanka_Info">Sıcak ve Kırmızı Bir yıldızla Süslenmiş bir ushanka.Zindanda Düşmana Karşı Birleşmek İçin Güzel Bir Yoldaş.</string>
-
-    <!-- STRINGS OF VampireSkull CLASS -->
-    <string name="VampireSkull_Name">vampir kurukafa</string>
-    <string name="VampireSkull_Info">Bu Maske Bir Vampirin Kafatasından Yapılmış.Bu Bir Vampir Kurukafa... Koca Kafalı Bir Vampirin Kafatası. Korkutucu.</string>
-
-    <!-- STRINGS OF ZombieMask CLASS -->
-    <string name="ZombieMask_Name">Zombi Maskesi</string>
-    <string name="ZombieMask_Info">Hiç Ölü Bir Kahraman Gibi Gözükmek İstedin Mi ? Görevlerinde Ölüp Ölüp Baştan Başlayan ?  O Zaman Bu Tam Sana Göre.</string>
-
-    <!-- Item descriptions -->
-    <!-- STRINGS OF Candy CLASS -->
-    <string name="Candy_Name">Şeker</string>
-    <string name="Candy_Info">bu şeker çok güzel görünüyor ve harika kokuyor. cidden bunu başkasına vermen gerekli mi ?</string>
-    <string name="Candy_Warning_1">o şekeri yememeliydin. başkasına vereceğine söz vermiştin.hiçbir işe yaramadı açlığın azalmadı.sadece basit bir şeker</string>
-    <string name="Candy_Warning_2">şimdi çok fazla.miden ağrıyor çünkü çok fazla şeker yedin</string>
-
-    <!-- STRINGS OF PumpkinPie CLASS -->
-    <string name="PumpkinPie_Name">Balkabağı Turtası</string>
-    <string name="PumpkinPie_Info">Lezzetli Bir Balkabağı Pastası, tıpkı annenin önceden pişirdiği gibi</string>
-
-    <!-- STRINGS OF RottenPumpkinPie CLASS -->
-    <string name="RottenPumpkinPie_Name">çürümüş balkabağı turtası</string>
-    <!-- STRINGS OF CandleOfMindVision CLASS -->
-    <string name="CandleOfMindVision_Name">görüş mumu</string>
-    <string name="CandleOfMindVision_Info">karanlık bir zindanda bulabileceğini ummadığın türden, normal bir mum gibi görünüyor</string>
-    <string name="CandleOfMindVision_Info_Lighted">çantandan çıkardığın anda mum yanmaya başlıyor. mumun alevi mor bir ışık saçıyor ve yakındaki düşmanları görebiliyorsun </string>
-    <string name="CandleOfMindVision_Info_Exhausted">meşale söndü, artık ışık yaymayı kesti.görünüşe göre kullanılamaz halde</string>
-
-    <!-- Object descriptions -->
-    <!-- STRINGS OF Barrel CLASS -->
-    <string name="Barrel_Name">varil</string>
-    <string name="Barrel_Desc">görünüşe göre basit bir tahta varil. yaklaştığında içindeki yağın kokusunu alabiliyorsun.yanıcı duruyor ayrıca ittirebilirsin</string>
-
-    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
-    <string name="Barrel_Pumpkin_Name">bal kabağı</string>
-    <!-- Mobs descriptions -->
-    <!-- STRINGS OF ScarecrowNPC CLASS -->
-    <string name="ScarecrowNPC_Name">korkuluk</string>
-    <string name="ScarecrowNPC_Name_Objective">korkuluk</string>
-    <string name="ScarecrowNPC_Quest_Reminder">tek gereken 5 şeker.\n ah. ödülü çok tatlı olacak</string>
-    <string name="Journal_ScarecrowNPC">korkuluk</string>
-
-</resources>
+    <string name="Ushanka_Name">Rus kalpağı</string>
+    </resources>

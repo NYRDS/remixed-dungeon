@@ -6,7 +6,7 @@
    "dmgMin"        :1,
    "dmgMax"        :1,
    "dr"            :1,
-   "baseSpeed"     :10,
+   "baseSpeed"     :0.2,
    "attackDelay"   :1,
    "ht"            :5,
    "name"          :"Black Rat",
@@ -14,9 +14,6 @@
    "description"   :"Just a common house rat, not marsupial",
    "gender"        :"feminine",
    "spriteDesc"    :"spritesDesc/BlackRat.json",
-   "lootChance"    :1,
-   "loot"          : {"kind":"RatHide"},
-   "attackRange"   :5,
    "walkingType"   :"NORMAL",
-   "scriptFile"    :"scripts/mobs/Hydra"
+   "scriptFile"    :"scripts/mobs/Dummy"
 }

@@ -1,0 +1,12 @@
+{
+   "baseSpeed"     :0,
+   "attackDelay"   :1,
+   "ht"            :5,
+   "name"          :"Quest giver",
+   "name_objective":"Quest giver",
+   "description"   :"Just a common Quest giver, as supposed to be in RPG",
+   "gender"        :"masculine",
+   "spriteDesc"    :"spritesDesc/TownsfolkNPC.json",
+   "scriptFile"    :"scripts/npc/QuestGiverDemo",
+   "friendly"      :"true"
+}

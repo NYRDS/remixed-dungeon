@@ -62,7 +62,7 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public boolean friendly(){
+	public boolean friendly(Char chr){
 		return anger < 2;
 	}
 	
@@ -73,7 +73,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	protected Char chooseEnemy() {
-		if(friendly()) {
+		if(friendly(null)) {
 			return DUMMY;
 		} else {
 			return super.chooseEnemy();
@@ -82,7 +82,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void damage( int dmg, Object src ) {
-		if(friendly()){
+		if(friendly(null)){
 			anger=2;
 		} else {
 			super.damage(dmg, src);
@@ -91,7 +91,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void add( Buff buff ) {
-		if (!friendly()) {
+		if (!friendly(null)) {
 			super.add(buff);
 		}
 	}
@@ -105,7 +105,7 @@ public class RatKing extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		
-		if (!friendly()) {
+		if (!friendly(null)) {
 			return false;
 		}
 		
@@ -115,7 +115,7 @@ public class RatKing extends NPC {
 			setState(WANDERING);
 		} else {
 			anger++;
-			if(friendly()) {
+			if(friendly(null)) {
 				say(Game.getVar(R.string.RatKing_Info2));
 			} else {
 				setFraction(Fraction.DUNGEON);

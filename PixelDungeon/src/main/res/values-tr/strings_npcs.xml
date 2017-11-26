@@ -2,41 +2,28 @@
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
-  <string name="Blacksmith_Name">troll demirci </string>
-  <string name="Blacksmith_Desc">troll demirci normal troll gibi gözüküyor. uzun yağsız ve derisi renki taşlara benzeyen. troll demirci orantısız küçük aletleriyle tamir işleriyle uğraşıyor.</string>
-  <string name="Blacksmith_Gold1">Hey İnsan ! biraz işe yaramak ister misin eh ? bu kazmayı al ve bana biraz _koyu altın madeni_kaz , _15 parça_yeterli olur. nasıl mı ödiyeceğim ?... \n tamam.ödemek için yeterli param yok ama birşeyler üretebilirim. şanslısın ki etraftaki tek demirci benim.</string>
-  <string name="Blacksmith_Blood1">Hey İnsan ! biraz işe yaramak ister misin hıh ? bu kazmayı al ve bana biraz _koyu altın madeni_kaz , _15 parça_yeterli olur. nasıl mı ödiyeceğim ?... \n tamam.ödemek için yeterli param yok ama birşeyler üretebilirim. şanslısın ki etraftaki tek demirci benim.</string>
+  <string name="Blacksmith_Name">trol demirci</string>
+  <string name="Blacksmith_Desc">Trol demirci diğer troller gibi gözüküyor: uzun cılız, ve derisi taş rengine ve dokusuna sahip. Trol demirci orantısız küçük aletleri düzeltmeye çalışıyor.</string>
   <string name="Blacksmith_Txt2">Benimle dalga mı geçiyorsun? Kazmam nerede?!</string>
-  <string name="Blacksmith_Txt3">kara altın madeni. 15 parça cidden, bu kadar zor mu ?</string>
-  <string name="Blacksmith_Txt4">Sana Bu kazma üstünde yarasa kanına ihtiyaç var dedim. Chop chop !</string>
-  <string name="Blacksmith_Completed">OH, geri döndün... hiç olmamasından iyidir.</string>
-  <string name="Blacksmith_GetLost">Meşgulüm. Kaybol!</string>
+  <string name="Blacksmith_GetLost">Meşgulüm. Uza!</string>
   <string name="Blacksmith_LooksBetter">%s şu anda çok daha iyi görünüyor</string>
   <string name="Blacksmith_Verify1">2 farklı eşya seç, aynısını iki defa değil.</string>
-  <string name="Blacksmith_Verify2">aynı tipte 2 eşya seç !</string>
-  <string name="Blacksmith_Verify3">nasıl çalıştığını bilmem gerek. önce tanımlamalıyım !</string>
-  <string name="Blacksmith_Verify4">lanetli eşyalarla çalışmam !</string>
+  <string name="Blacksmith_Verify3">Ne ile çalıştığımı bilmem gerek, getirmeden önce tanımla!</string>
   <string name="Blacksmith_Verify5">Çöp, kalitesi çok düşük.</string>
   <string name="Blacksmith_Verify6">Bu malzemeleri dövemem</string>
   <!--STRINGS OF Ghost CLASS-->
-  <string name="Ghost_Name">üzgün hayalet</string>
   <string name="Ghost_Desc">Hayalet zorlukla görülüyor.Üzgün yüzlü soluk ve şekilsiz bir ışık gibi görünüyor.</string>
-  <string name="Ghost_Rose1">Merhaba Maceracı... Bir zamanlar senin gibi güçlü ve kararlıydım... Ve şu anda ölüyüm... Ama burayı şu anda terkedemiyorum... Kurtulmuş gülümü bulana kadar... Benim için çok önemli... Bir canavar onu benim cesedimden çaldı...</string>
+  <string name="Ghost_Rose1">Merhaba Maceracı... Bir zamanlar senin gibi güçlü ve kararlıydım... Ve şu anda ölüyüm... Ama burayı terkedemiyorum... _Kurutulmuş gülümü_ bulana kadar... Benim için çok önemli... Bir canavar onu benim cesedimden çaldı...</string>
   <string name="Ghost_Rose2">Lütfen... Bana yardım et... Gülü bul...</string>
-  <string name="Ghost_Rat1">Merhaba Maceracı... Bir zamanlar senin gibi güçlü ve kararlıydım... Ve şu anda ölüyüm... Ama burayı şu anda terkedemiyorum...İntikamım alınana kadar... Beni öldüren Kokuşmuş sıçanı öldür...</string>
+  <string name="Ghost_Rat1">Merhaba Maceracı... Bir zamanlar senin gibi güçlü ve kararlıydım... Ve şu anda ölüyüm... Ama burayı terkedemiyorum... İntikamım alınana kadar... Beni öldüren _kokuşmuş sıçanı_ öldür...</string>
   <string name="Ghost_Rat2">Lütfen... Yardım et... Nefret ettiğim sıçanı öldür...</string>
   <string name="Ghost_Defense">savuşturdu</string>
-  <string name="FetidRat_Name">kokuşmuş fare</string>
-  <string name="FetidRat_Name_Objective">kokuşmuş fare</string>
-  <string name="FetidRat_Gender">kadınsı</string>
   <string name="FetidRat_Desc">Bu keseli sıçan diğerlerinden daha büyük. Kokuşmuş bir bulut ile çevrili.</string>
   <!--STRINGS OF Hedgehog CLASS-->
   <string name="Hedgehog_Name">kirpi</string>
   <string name="Hedgehog_Desc">Bu kirpi gergin görünüyor.</string>
-  <string name="Hedgehog_Info1">sende mi ayıya bakıyorsun ?</string>
   <string name="Hedgehog_Info2">Sisteki at nasıldır?</string>
   <string name="Hedgehog_Info3">Ahududu reçeli ile çay sever misin?</string>
-  <string name="Hedgehog_Info4">bu turtayı al.</string>
   <string name="Hedgehog_ImLate">Geciktim..çok geç kaldım...</string>
   <!--STRINGS OF Imp CLASS-->
   <string name="Imp_Name">hırslı küçük şeytan</string>
@@ -51,14 +38,11 @@
   <!--STRINGS OF ImpShopkeeper CLASS-->
   <string name="ImpShopkeeper_Name">Hırslı küçük şeytan</string>
   <string name="ImpShopkeeper_Desc">Güç ve sihirli yetenekleri ile değil , akıllı ve sosyal olmaları ile tanınırlar.Birçokları şeytanlar ile yaşamayı tercih etmez.</string>
-  <string name="ImpShopkeeper_Greetings">selam,arkadaşım !</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">ayna görüntüsü</string>
   <string name="MirrorImage_Name_Objective">ayna görüntüsü</string>
-  <string name="MirrorImage_Gender">erkeksi</string>
   <string name="MirrorImage_Desc">Bu ilüzyon sana soluk olması ve hafif titreşmesi dışında oldukça benzer.</string>
   <!--STRINGS OF RatKing CLASS-->
-  <string name="RatKing_Name">Fare Kral</string>
   <string name="RatKing_Desc">Bu sıçan normal keseli sıçanlardan biraz daha büyük ve kafasında garip küçük bir taç var.</string>
   <string name="RatKing_Info1">Uyumuyorum!</string>
   <string name="RatKing_Info2">Bu nedir ? Bu anlamsız şeylerle uğraşamam, krallığım kendi kendini yönetemez!</string>

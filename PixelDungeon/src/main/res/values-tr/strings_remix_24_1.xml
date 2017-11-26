@@ -2,11 +2,9 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ArmoredStatue -->
-    <string name="ArmoredStatue_Name">canlandırılmış heykel </string>
+    <string name="ArmoredStatue_Name">canlandırılmış heykel</string>
     <string name="ArmoredStatue_Gender">kadınsı</string>
     <string name="ArmoredStatue_Name_Objective">canlandırılmış heykel</string>
-    <string name="ArmoredStatue_Desc">Ne kadar çirkin bir heykel olduğunu düşünmeden edemiyorsun, sadece parlayan kırmızı gözleri değil , kim böyle bir şeyin üstüne _%s_ koyar.</string>
-
     <!-- STRINGS OF SpiderSoldier -->
     <string name="SpiderGuard_Name">örümcek gardiyan</string>
     <string name="SpiderGuard_Gender">erkeksi</string>
@@ -21,12 +19,12 @@
 
     <!-- Accessories descriptions -->
     <!-- STRINGS OF PirateSet CLASS -->
-    <string name="PirateSet_Name">korsan seti</string>
-    <string name="PirateSet_Info">Arr! Bir korsan gibi misin yoksa lanet olası bir kara adamı mı ? Öyle olmadığını umuyorum. Bu şey korsanlar içindir. Arr.</string>
+    <string name="PirateSet_Name">Korsan Seti</string>
+    <string name="PirateSet_Info">Arr! Bir korsan gibi misin yoksa lanet olası bir kara adamı mı? Umuyorum ki öyle değilsindir. Bu şey korsanlar içindir, yani. Arr!</string>
 
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->
-    <string name="WndSaveSlotSelect_Delete_Yes">evet sil !</string>
-    <string name="WndSaveSlotSelect_Delete_No">hayır.</string>
-    <string name="WndSaveSlotSelect_Delete_Title">Bu Kayıt Dosyasını Silmek İstediğinden Emin Misin ?</string>
+    <string name="WndSaveSlotSelect_Delete_Yes">Evet, sil!</string>
+    <string name="WndSaveSlotSelect_Delete_No">Hayır</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Bu kaydı silmek istediğinizden emin misiniz?</string>
 </resources>

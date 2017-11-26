@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.mechanics.quest.Quest;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -57,7 +58,12 @@ public abstract class NPC extends Mob {
 			Dungeon.level.drop( heap.pickUp(), n ).sprite.drop( getPos() );
 		}
 	}
-	
+
+	@Override
+	public boolean friendly(Char chr) {
+		return true;
+	}
+
 	@Override
 	public void beckon( int cell ) {
 	}
@@ -65,10 +71,6 @@ public abstract class NPC extends Mob {
 	@Override
 	public boolean interact(final Hero hero){
 		swapPosition(hero);
-		return true;
-	}
-
-	public boolean friendly() {
 		return true;
 	}
 
