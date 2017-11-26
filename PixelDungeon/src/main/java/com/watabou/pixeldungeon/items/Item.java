@@ -80,6 +80,7 @@ public class Item implements Bundlable, Presser {
 
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
+	protected String info2 = getClassParam("Info2", Game.getVar(R.string.Item_Info2), false);
 
 	protected int image = 0;
 	protected String imageFile;
