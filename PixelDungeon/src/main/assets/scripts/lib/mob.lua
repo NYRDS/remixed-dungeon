@@ -27,12 +27,12 @@ end
 
 mob.onDie = function(self,mob,cause)
     quest.mobDied(mob, cause)
-    return self.die and self.die(mob, cause)
+    return not not (self.die and self.die(mob, cause))
 end
 
 mob.onInteract = function(self,mob,chr)
     print(self, mob, chr)
-    return self.interact and self.interact(mob, chr)
+    return not not (self.interact and self.interact(mob, chr))
 end
 
 return mob
