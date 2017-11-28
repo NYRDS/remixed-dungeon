@@ -10,5 +10,7 @@
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Info2">This robe will allow Necromancer to consume souls of the fallen monsters.</string>
 
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">Necrotism</string>
 
 </resources>

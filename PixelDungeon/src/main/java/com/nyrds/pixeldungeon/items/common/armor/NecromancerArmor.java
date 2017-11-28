@@ -1,17 +1,24 @@
 package com.nyrds.pixeldungeon.items.common.armor;
 
+import com.nyrds.pixeldungeon.mechanics.buffs.Necrotism;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.utils.GLog;
 
-import java.util.Collection;
 import java.util.HashSet;
 
 public class NecromancerArmor extends ClassArmor {
+
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
 	private static final String AC_SPECIAL = Game.getVar(R.string.Necromancer_ACSpecial);
@@ -33,11 +40,14 @@ public class NecromancerArmor extends ClassArmor {
 
 	@Override
 	public void doSpecial() {
-		//TODO: Let's create a "Necrotism" ability, shall we? So it works fairly simple
-		//TODO: The caster get a "Necrotism" buff, which inflicts 1/20th of it's maximum health as a damage, each turn on a course of 3 turns
-		//TODO: Every turn it has 50% chance of infecting any character, in a 3 cell radius, including caster
-		//TODO: It cannot infect target that has an active "Necrotism" buff
+		Buff.affect( getCurUser(), Necrotism.class ).set(Necrotism.duration);
 
+		getCurUser().spend( Actor.TICK );
+		getCurUser().getSprite().operate( getCurUser().getPos() );
+		getCurUser().busy();
+
+		getCurUser().getSprite().centerEmitter().start( BloodParticle.FACTORY, 0.25f, 7 );
+		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	
 	@Override
