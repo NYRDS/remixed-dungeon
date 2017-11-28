@@ -424,6 +424,8 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void move(int step) {
+		runMobScript("onMove", step);
+
 		super.move(step);
 
 		if (!flying) {

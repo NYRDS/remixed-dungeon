@@ -48,6 +48,10 @@ RPD = {
     new = function(class, ...)
         return luajava.newInstance(class, ...)
     end,
+
+    placeBlob = function (blobClass, cell, amount)
+        RPD.GameScene:add( RPD.Blobs.Blob:seed(cell, amount , blobClass ) );
+    end
 }
 
 

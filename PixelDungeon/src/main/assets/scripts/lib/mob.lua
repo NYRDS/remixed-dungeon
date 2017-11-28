@@ -35,4 +35,9 @@ mob.onInteract = function(self,mob,chr)
     return not not (self.interact and self.interact(mob, chr))
 end
 
+mob.onMove = function(self,mob,cell)
+    return not not (self.move and self.move(mob, cell))
+end
+
+
 return mob

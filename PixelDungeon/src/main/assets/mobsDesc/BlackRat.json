@@ -15,5 +15,5 @@
    "gender"        :"feminine",
    "spriteDesc"    :"spritesDesc/BlackRat.json",
    "walkingType"   :"NORMAL",
-   "scriptFile"    :"scripts/mobs/Dummy"
+   "scriptFile"    :"scripts/mobs/NatureAura"
 }
