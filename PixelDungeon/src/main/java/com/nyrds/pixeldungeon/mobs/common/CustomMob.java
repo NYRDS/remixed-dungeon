@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
-import com.nyrds.Packable;
-import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -9,7 +7,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
@@ -18,8 +15,6 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.json.JSONObject;
-import org.luaj.vm2.LuaTable;
-import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 /**
  * Created by mike on 11.04.2017.
@@ -42,9 +37,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	private int     attackRange     = 1;
 
-	@Packable
-	String scriptFile;
-
 	private boolean friendly;
 
 	//For restoreFromBundle
@@ -54,26 +46,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	public CustomMob(String mobClass) {
 		this.mobClass = mobClass;
 		fillMobStats();
-	}
-
-	private boolean runMobScript(String method, Object arg) {
-		if(scriptFile!=null && !scriptFile.isEmpty()) {
-			LuaTable mobScript = LuaEngine.getEngine().call("require", scriptFile).checktable();
-			mobScript.get(method).call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg));
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	public void die(Object cause) {
-		runMobScript("onDie",cause);
-		super.die(cause);
-	}
-
-	@Override
-	public boolean interact(Hero hero) {
-		return runMobScript("onInteract", hero) || super.interact(hero);
 	}
 
 	@Override

@@ -61,6 +61,10 @@ public class LuaEngine implements ResourceFinder {
 		return LuaValue.NIL;
 	}
 
+	public static LuaTable module(String module) {
+		return getEngine().call("require", module).checktable();
+	}
+
 	private class resLoader extends OneArgFunction {
 		public LuaValue call(LuaValue x) {
 			return LuaValue.valueOf(ModdingMode.getResource(x.tojstring()));

@@ -6,36 +6,36 @@
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">Der Seelenbringer</string>
-    <string name="BlackSkullOfMastery_Info">Ein uraltes Artefakt, erschaffen von den ersten Totenbeschwörern die die Seelen der Gefallenen sammelten. Es hat deine Totenbeschwörerischen Fähigkeiten wahrgenommen und sich mit einem starken Zauber geschützt. Da es ein alter zauber ist, ist er von primitiver Struktur, und ist einfach zu brechen. </string>
-    <string name="BlackSkullOfMastery_Title">Du könntest den Zauberspruch kaputt machen. Oder du könntest die magische Formel so verändern, dass du die Vorzüge des Zauberspruches und des Artefakts genießen kannst, aber du dich in einen untoten Zauberer verwandelst. Gruselig, nicht?</string>
+    <string name="BlackSkullOfMastery_Info">Ein uraltes Artefakt, erschaffen von den ersten Nekromanten, die die Seelen der Gefallenen sammelten. Es hat deine Nekromantischen Fähigkeiten wahrgenommen und sich mit einem starken Zauber geschützt. Da es ein alter Zauber ist, ist er von primitiver Struktur, und ist einfach zu brechen. </string>
+    <string name="BlackSkullOfMastery_Title">Du könntest den Zauberspruch kaputt machen. Oder du könntest die magische Formel so verändern, dass du den Spruch und das Artefakt in dich aufnimmst und dich in einen Lich verwandelst.</string>
 
     <string name="BlackSkullOfMastery_Lich">Werde zum Lich</string>
-    <string name="BlackSkullOfMastery_Necromancer">Unterbrich den Zauber</string>
-    <string name="BlackSkullOfMastery_BecomeLichDesc">Der _Untote Zauberer_ ist ein Nekromant, der den Höhepunkt seiner Fähigkeiten erreicht hat. Existierend zwischen Leben und Tod, zeichnet sich der _Untote Zauberer_ durch Nekromantie aus, aber seine Fähigkeiten im Kampf sind echt nicht die Besten.</string>
-    <string name="BlackSkullOfMastery_RemainHumanDesc">Oder wenn du den _Zauberspruch brichst_ kannst du das Artefakt normal Benützen.</string>
+    <string name="BlackSkullOfMastery_Necromancer">Zerstöre den Zauber</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">Der _Lich_ ist ein Nekromant, der den Höhepunkt seiner Fähigkeiten erreicht hat. Existierend zwischen Leben und Tod, zeichnet sich der _Lich_ durch Nekromantie aus, aber seine Fähigkeiten im Kampf sind stark reduziert..</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Oder wenn du den _Zauber zerstörst_ kannst du das Artefakt normal Benutzen.</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
-    <string name="BlackSkull_Activated">Der schwarze Schädel wurde erweckt!</string>
-    <string name="BlackSkull_Ressurrect">Der schwarze Schädel hat die toten Monster erweckt um dir zu dienen!</string>
+    <string name="BlackSkull_Activated">Der schwarze Schädel ist erwacht!</string>
+    <string name="BlackSkull_Ressurrect">Der schwarze Schädel hat das tote Monster erweckt um dir zu dienen!</string>
     <string name="BlackSkull_Deactivated">Der schwarze Schädel ruht wieder...</string>
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Knochenrüstung</string>
-    <string name="NecromancerArmor_Info">Dieser Harnisch erlaubt es dem Nekromanten, bis zu 2 Untote mit einem Kosten von je 5 Seelen zu erschaffen, die dir folgen und Gegner angreifen werden. Umso höher sein Level ist, desto stärker sind auch deine \"Diener\"</string>
+    <string name="NecromancerArmor_Info">Dieser Harnisch erlaubt es dem Nekromanten, bis zu 2 Untote zu erschaffen, die dir folgen und Gegner angreifen wobei jeder 5 Seelen kostet. Die Untoten werden mit jedem Level stärker.</string>
     <string name="NecromancerArmor_NotNecromancer">Nur Totenbeschwörer können diese Rüstung nutzen!</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">Robe des Totenbeschwörers</string>
-    <string name="NecromancerRobe_Info">Diese Robe wird Nekromanten erlauben, einen Untoten für 5 Seelen zu beschwören. Die Untoten sind  Diener, der neben seinem Meister stärker werden.</string>
+    <string name="NecromancerRobe_Info">Diese Robe erlaubt es Nekromanten, einen Untoten für 5 Seelen zu beschwören. Die Untoten sind  Diener, der neben seinem Meister stärker werden.</string>
 
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
-    <string name="HeroClass_Necromancer">Totenbeschwörer</string>
+    <string name="HeroClass_Necromancer">Nekromant</string>
 
     <string name="HeroSubClass_NameLich">Lich</string>
 
     <string-array name="HeroClass_NecromancerPerks">
-        <item>Totenbeschwörer starten mit 15 Lebenspunkten.</item>
+        <item>Nekromanten starten mit 15 Lebenspunkten.</item>
         <item>Nekromanten haben eine exklusive Ressource \"Seelen\", die benutzt wird, um Zauber zu erzeugen. Der Tod eines jeden Mobs gewährt 1 Seele.</item>
         <item>Totenbeschwörer starten mit einer einzigartigen Totenbeschwörerrobe.</item>
         <item>Totenbeschwörer starten mit einem Level 7 Skelettschlüssel.</item>

@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -65,6 +67,8 @@ import com.watabou.utils.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -84,6 +88,9 @@ public abstract class Mob extends Char {
 	public AiState WANDERING = new Wandering();
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
+	@Packable
+	protected
+	String scriptFile;
 
 	private AiState state = SLEEPING;
 
@@ -417,6 +424,8 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void move(int step) {
+		runMobScript("onMove", step);
+
 		super.move(step);
 
 		if (!flying) {
@@ -496,8 +505,22 @@ public abstract class Mob extends Char {
 		super.die(this);
 	}
 
+	protected boolean runMobScript(String method, Object arg) {
+		LuaTable mobScript;
+		if(scriptFile!=null && !scriptFile.isEmpty()) {
+			mobScript = LuaEngine.module(scriptFile);
+		} else {
+			mobScript = LuaEngine.module("scrips/mobs/Dummy");
+		}
+
+		mobScript.get(method).call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg));
+
+		return false;
+	}
+
 	@Override
 	public void die(Object cause) {
+		runMobScript("onDie",cause);
 
 		{
 			//TODO we should move this block out of Mob class
@@ -920,6 +943,11 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean interact(Hero hero) {
+
+		if(runMobScript("onInteract", hero)) {
+			return true;
+		}
+
 		if (fraction == Fraction.HEROES) {
 			swapPosition(hero);
 			return true;

@@ -2,8 +2,8 @@
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
-  <string name="Scroll_Name">Schriftrolle »%s«</string>
-  <string name="Scroll_Info">Dieses Pergament ist mit nicht entzifferbaren Schriftzeichen übersät die von einer Rune %s überschattet wird. Wer kann wissen was passiert, wenn diese laut vorgelesen wird? </string>
+  <string name="Scroll_Name">Schriftrolle \"%s\"</string>
+  <string name="Scroll_Info">Dieses Pergament ist mit nicht entzifferbaren Schriftzeichen übersät und enthält die Rune %s. Wer weiß, was passiert, wenn diese laut vorgelesen wird? </string>
   <string name="Scroll_ACRead">LESEN</string>
   <string name="Scroll_Blinded">Du kannst keine Schriftrolle lesen, solange Du geblendet bist</string>
   <string-array name="Scroll_Runes">
@@ -26,16 +26,16 @@
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
   <string name="InventoryScroll_Title">Wähle einen Gegenstand</string>
-  <string name="InventoryScroll_Warning">Du willst die Schriftrolle nicht lesen? Sie verbraucht sich aber in jedem Fall.</string>
+  <string name="InventoryScroll_Warning">Willst du die Schriftrolle wirklich nicht lesen? Sie wird trotzdem verbraucht.</string>
   <string name="InventoryScroll_Yes">Ja.</string>
   <string name="InventoryScroll_No">Nein, ich habe es mir anders überlegt.</string>
   <!--STRINGS OF BlankScroll CLASS-->
   <string name="BlankScroll_Name">Leere Schriftrolle</string>
-  <string name="BlankScroll_Info">Lediglich eine leere Schriftrolle. Jemand könnte etwas darauf schreiben.</string>
+  <string name="BlankScroll_Info">Lediglich eine leere Schriftrolle. Vielleicht kann  etwas darauf schreiben.</string>
   <string name="BlankScroll_ReallyBlank">Diese Schriftrolle ist leer.</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
   <string name="ScrollOfChallenge_Name">Schriftrolle der Herausforderung</string>
-  <string name="ScrollOfChallenge_Info">Wenn laut gelesen wird diese Schriftrolle einen Schlachtruf von sich geben der alle Monster in der Umgebung alarmiert und auf Deine Position aufmerksam macht.</string>
+  <string name="ScrollOfChallenge_Info">Wenn die Schriftrolle laut gelesen wird es einen Schlachtruf von sich geben der alle Monster in der Umgebung alarmiert und auf Deine Position aufmerksam macht.</string>
   <string name="ScrollOfChallenge_Info1">Die Schriftrolle gibt einen herausfordernden Schlachtruf von sich dessen Echo die Umgebung füllt.</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
   <string name="ScrollOfIdentify_Name">Schriftrolle der Identifikation</string>

@@ -30,9 +30,9 @@
     <item>%s hat dich getötet...</item>
   </string-array>
   <string-array name="Char_Defeat">
-    <item>%1$s vernichtete %2$s</item>
-    <item>%1$s vernichtete %2$s</item>
-    <item>%1$s vernichtete %2$s</item>
+    <item>%1$s vernichtest %2$s</item>
+    <item>%1$s vernichtest %2$s</item>
+    <item>%1$s vernichtest %2$s</item>
   </string-array>
   <string name="Char_YouMissed">%1$s %2$s deinen Angriff</string>
   <string name="Char_SmbMissed">%1$s %2$s %3$s\'s Angriff</string>
