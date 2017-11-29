@@ -29,7 +29,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 	@Packable
 	protected int iteration;
 
-	public static int duration = 10;
+	public static int duration = 9;
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -45,7 +45,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 	}
 
 	public void set( float duration, int i ) {
-		this.left = duration;
+		this.left = duration + i;
 		iteration = i;
 	}
 

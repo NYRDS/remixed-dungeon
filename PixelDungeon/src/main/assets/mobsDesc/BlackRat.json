@@ -8,7 +8,7 @@
    "dr"            :1,
    "baseSpeed"     :0.2,
    "attackDelay"   :1,
-   "ht"            :5,
+   "ht"            :55555,
    "name"          :"Black Rat",
    "name_objective":"Black Rat",
    "description"   :"Just a common house rat, not marsupial",

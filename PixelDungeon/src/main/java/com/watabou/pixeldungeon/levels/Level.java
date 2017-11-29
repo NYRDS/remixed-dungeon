@@ -265,6 +265,7 @@ public abstract class Level implements Bundlable {
 	public static int[] NEIGHBOURS4;
 	public static int[] NEIGHBOURS8;
 	public static int[] NEIGHBOURS9;
+	public static int[] NEIGHBOURS16;
 
 	protected static final int MAX_VIEW_DISTANCE = 8;
 	public static final    int MIN_VIEW_DISTANCE = 3;
@@ -389,6 +390,13 @@ public abstract class Level implements Bundlable {
 		NEIGHBOURS9 = new int[]{0, +1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
 				-1 - getWidth()};
+		NEIGHBOURS16 = new int[]{+1, +2, -1, -2,
+				+getWidth(), -getWidth(), -getWidth()*2, +getWidth()*2,
+				+1 + getWidth(), +1 -getWidth(), +2 +getWidth(), +2 -getWidth(),
+				+1 + getWidth()*2, +1 -getWidth()*2, +2 +getWidth()*2, +2 -getWidth()*2,
+				-1 + getWidth(), -1 -getWidth(), -2 +getWidth(), -2 -getWidth(),
+				-1 + getWidth()*2, -1 -getWidth()*2, -2 +getWidth()*2, -2 -getWidth()*2};
+
 
 		map = new int[getLength()];
 
