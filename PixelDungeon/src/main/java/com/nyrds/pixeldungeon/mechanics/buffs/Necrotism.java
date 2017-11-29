@@ -64,7 +64,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 	public boolean act() {
 		if (target.isAlive()) {
 
-			target.getSprite().centerEmitter().start( BloodParticle.FACTORY, 0.25f, 5 );
+			target.getSprite().burst( 0x6935a5, 1 + iteration );
 
 			int damage;
 			if (target instanceof Boss){

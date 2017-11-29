@@ -46,7 +46,7 @@ public class NecromancerArmor extends ClassArmor {
 
 		Buff.affect( getCurUser(), Necrotism.class ).set(Necrotism.duration, 1);
 
-		getCurUser().getSprite().centerEmitter().start( BloodParticle.FACTORY, 0.25f, 7 );
+		getCurUser().getSprite().burst( 0x6935a5, 5 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	
