@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -9,6 +10,8 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -19,11 +22,14 @@ import com.watabou.utils.Random;
 
 public class Necrotism extends Buff implements Hero.Doom {
 
-	protected float left;
-
 	private static final String LEFT	= "left";
 
-	public static int duration = 5;
+	protected float left;
+
+	@Packable
+	protected int iteration;
+
+	public static int duration = 10;
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -38,8 +44,9 @@ public class Necrotism extends Buff implements Hero.Doom {
 		left = bundle.getFloat( LEFT );
 	}
 
-	public void set( float duration ) {
+	public void set( float duration, int i ) {
 		this.left = duration;
+		iteration = i;
 	}
 
 	@Override
@@ -56,17 +63,24 @@ public class Necrotism extends Buff implements Hero.Doom {
 	public boolean act() {
 		if (target.isAlive()) {
 
-			target.damage( Math.max(1,target.hp()/20), this );
+			int damage;
+			if (target instanceof Boss){
+				damage = (target.hp()/1000);
+			} else{
+				damage = ( target.hp() / (30 - iteration) );
+			}
+
+			target.damage( Math.max(1, damage * iteration), this );
 			spend( TICK );
 
 			int cell = target.getPos();
 
-			for (int n : Level.NEIGHBOURS8) {
+			for (int n : Level.NEIGHBOURS16) {
 				int p = n + cell;
 				Char ch = Actor.findChar(p);
-				if (Dungeon.level.cellValid(p) && ch != null && !(ch instanceof  Hero)){
+				if (Dungeon.level.cellValid(p) && ch != null && !(ch instanceof  Hero) && !(ch instanceof NPC)){
 					if(Random.Int(1) == 0 && ch.buff(Necrotism.class) == null){
-						Buff.affect( ch, Necrotism.class ).set(duration);
+						Buff.affect( ch, Necrotism.class ).set(duration, iteration + 1);
 					}
 				}
 			}
