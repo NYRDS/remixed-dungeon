@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -24,7 +23,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 
 	private static final String LEFT	= "left";
 
-	public static int duration = 3;
+	public static int duration = 5;
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -65,8 +64,8 @@ public class Necrotism extends Buff implements Hero.Doom {
 			for (int n : Level.NEIGHBOURS8) {
 				int p = n + cell;
 				Char ch = Actor.findChar(p);
-				if (Dungeon.level.cellValid(p) && ch != null){
-					if(Random.Int(1) == 0){
+				if (Dungeon.level.cellValid(p) && ch != null && !(ch instanceof  Hero)){
+					if(Random.Int(1) == 0 && ch.buff(Necrotism.class) == null){
 						Buff.affect( ch, Necrotism.class ).set(duration);
 					}
 				}

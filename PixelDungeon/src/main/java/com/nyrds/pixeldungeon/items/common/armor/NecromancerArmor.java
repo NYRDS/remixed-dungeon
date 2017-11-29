@@ -40,11 +40,11 @@ public class NecromancerArmor extends ClassArmor {
 
 	@Override
 	public void doSpecial() {
-		Buff.affect( getCurUser(), Necrotism.class ).set(Necrotism.duration);
-
 		getCurUser().spend( Actor.TICK );
 		getCurUser().getSprite().operate( getCurUser().getPos() );
 		getCurUser().busy();
+
+		Buff.affect( getCurUser(), Necrotism.class ).set(Necrotism.duration);
 
 		getCurUser().getSprite().centerEmitter().start( BloodParticle.FACTORY, 0.25f, 7 );
 		Sample.INSTANCE.play( Assets.SND_READ );
