@@ -165,7 +165,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			hp(ht(classDesc.optInt("ht", 1)));
 
-			scriptFile = classDesc.getString("scriptFile");
+			scriptFile = classDesc.optString("scriptFile", scriptFile);
 
 			friendly = classDesc.optBoolean("friendly",friendly);
 

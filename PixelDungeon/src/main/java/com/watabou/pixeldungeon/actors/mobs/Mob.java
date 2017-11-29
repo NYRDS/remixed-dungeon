@@ -88,9 +88,9 @@ public abstract class Mob extends Char {
 	public AiState WANDERING = new Wandering();
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
-	@Packable
-	protected
-	String scriptFile;
+
+	@Packable (defaultValue = "scripts/mobs/Dummy")
+	protected String scriptFile;
 
 	private AiState state = SLEEPING;
 
@@ -510,7 +510,7 @@ public abstract class Mob extends Char {
 		if(scriptFile!=null && !scriptFile.isEmpty()) {
 			mobScript = LuaEngine.module(scriptFile);
 		} else {
-			mobScript = LuaEngine.module("scrips/mobs/Dummy");
+			mobScript = LuaEngine.module("scripts/mobs/Dummy");
 		}
 
 		mobScript.get(method).call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg));
