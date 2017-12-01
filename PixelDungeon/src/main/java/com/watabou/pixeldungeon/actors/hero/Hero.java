@@ -1386,6 +1386,9 @@ public class Hero extends Char {
 			getSprite().showStatus(CharSprite.POSITIVE, TXT_LEVEL_UP);
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
+			this.setMaxSoulPoints(getSoulPointsMax() + lvl());
+			this.accumulateSoulPoints(getSoulPointsMax()/3);
+
 			Badges.validateLevelReached();
 		}
 
