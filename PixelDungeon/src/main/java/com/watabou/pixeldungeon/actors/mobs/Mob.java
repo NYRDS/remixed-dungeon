@@ -530,9 +530,6 @@ public abstract class Mob extends Char {
 					if(hero.belongings.armor instanceof NecromancerRobe){
 						hero.accumulateSoulPoints();
 					}
-					if(hero.belongings.armor instanceof NecromancerArmor){
-						hero.accumulateSoulPoints(2);
-					}
 				}
 			}
 			for (Item item : hero.belongings) {

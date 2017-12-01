@@ -64,13 +64,13 @@ public class Necrotism extends Buff implements Hero.Doom {
 	public boolean act() {
 		if (target.isAlive()) {
 
-			target.getSprite().burst( 0x6935a5, 1 + iteration );
+			target.getSprite().burst( 0x6935a5, 3 );
 
 			int damage;
 			if (target instanceof Boss){
 				damage = (target.hp()/1000);
 			} else{
-				damage = ( target.hp() / (30 - iteration) );
+				damage = ( target.hp() / Math.max(3, (30 - iteration)) );
 			}
 
 			target.damage( Math.max(1, damage * iteration), this );

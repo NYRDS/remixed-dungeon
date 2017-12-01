@@ -21,9 +21,7 @@ public class NecromancerArmor extends ClassArmor {
 
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
-	private static final String AC_SPECIAL = Game.getVar(R.string.Necromancer_ACSpecial);
-
-	public HashSet<Mob> pets   = new HashSet<>();
+	private static final String AC_SPECIAL = Game.getVar(R.string.Necrotism_ACSpecial);
 
 	public NecromancerArmor() {
 		image = 22;
@@ -46,7 +44,7 @@ public class NecromancerArmor extends ClassArmor {
 
 		Buff.affect( getCurUser(), Necrotism.class ).set(Necrotism.duration, 1);
 
-		getCurUser().getSprite().burst( 0x6935a5, 5 );
+		getCurUser().getSprite().burst( 0x6935a5, 3 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	
