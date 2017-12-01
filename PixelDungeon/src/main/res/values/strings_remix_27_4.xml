@@ -5,12 +5,13 @@
     <string name="Item_Info2">something</string>
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
-    <string name="NecromancerArmor_Info2">Wearing this armor allows necromancer to use a \"Necrotism\" ability, which will spread a deadly plague, which might infect any creature in vicinity, dead or alive. This armor will also consume souls of the fallen monsters.</string>
+    <string name="NecromancerArmor_Info2">Wearing this armor allows necromancer to use a \"Necrotism\" ability, which will spread a deadly plague, which might infect any creature in vicinity, dead or alive.</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Info2">This robe will allow Necromancer to consume souls of the fallen monsters.</string>
 
     <!-- STRINGS OF Necrotism CLASS -->
     <string name="Necrotism_Info">Necrotism</string>
+    <string name="Necrotism_ACSpecial">NECROTISM</string>
 
 </resources>
