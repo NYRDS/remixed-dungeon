@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
+  <string name="Guts_TileGrass">枯れ草</string>
+  <string name="Guts_TileHighGrass">枯れ草</string>
+  <string name="Guts_TileWater">不気味なねばねば</string>
   <!--STRINGS OF WndStory CLASS-->
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
