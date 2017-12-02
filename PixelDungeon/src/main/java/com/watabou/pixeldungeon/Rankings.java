@@ -65,7 +65,7 @@ public enum Rankings {
 		rec.score	    = score(winLevel);
 		rec.mod			= PixelDungeon.activeMod();
 
-		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.getClass().getSimpleName(), resultDescription);
+		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.toString(), resultDescription);
 
 		if (!ModdingMode.inMod()){
 			PlayGames.submitScores(Game.getDifficulty(), rec.score);
