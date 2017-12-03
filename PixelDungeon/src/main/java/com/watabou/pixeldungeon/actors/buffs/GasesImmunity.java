@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
@@ -43,6 +42,6 @@ public class GasesImmunity extends FlavourBuff {
 	static {
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( ConfusionGas.class );
+		IMMUNITIES.add( Vertigo.class );
 	}
 }
