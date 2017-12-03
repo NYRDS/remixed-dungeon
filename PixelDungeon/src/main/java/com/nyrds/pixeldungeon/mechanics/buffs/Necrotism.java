@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
-import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -30,7 +29,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 	@Packable
 	protected int iteration;
 
-	public static int duration = 9;
+	public static int duration = 4;
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -68,7 +67,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 
 			int damage;
 			if (target instanceof Boss){
-				damage = (target.hp()/1000);
+				damage = (target.hp()/200);
 			} else{
 				damage = ( target.hp() / Math.max(3, (30 - iteration)) );
 			}
