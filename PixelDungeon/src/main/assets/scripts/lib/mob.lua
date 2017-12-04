@@ -40,8 +40,7 @@ mob.onMove = function(self,mob,cell)
 end
 
 mob.onDamage = function(self,mob,dmg,src)
-    print(mob, dmg, src)
-    return true
+    return not not (self.damage and self.damage(mob, dmg, src))
 end
 
 return mob
