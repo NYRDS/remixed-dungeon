@@ -103,6 +103,20 @@ remix.24.2:\n
 - Der Tengu lässt nun jedes mal den Wälzer der Meisterschaft fallen. Unterklassen können den Wälzer nicht benutzen um ihre spezialität zu ändern\n
 -  Der Schattenherr hat nun einen größeren Startraum (Spieler können jetzt nicht zu ihm hinrennen um in den nächsten Level zu kommen, man muss jetzt kämpfen)\n
 - Spinnen Talisman wurde visuell verändert und wird jetzt von der Spinnenkönigin fallen gelassen (Davor hat man es vom Goo erhalten)\n</string>
+  <string name="Welcome_Text_25">
+remix.25:\n
+- Neuer Dungeon Typ: Nekropole, um die Nekropole zu betreten musst du den Nekromanten auf Ebene 7 finden, damit er dir den Skelett-Schlüssel gibt\n
+- Neue Gegenstände: Spinnenrüstung und Schwarzer Schädel\n
+- Goldenes Schwert ist jetzt stärker und braucht mehr Stärke\n
+- Das Wasser in der Spinnenhöhle ist besser dargestellt\n
+- Knochenhaufen können keine Artefakte und Quest-Gegenstände mehr enthalten\n
+- Haustiermechanik wurde verändert. Einige Wesen waren Immun gegen Gedankenkontrolle\n
+- Zeit die Feuer brennt wurde verkürzt und es brennt weniger in Wasser\n
+Gedankenkontrollen-Icon, das über dem Haustier erscheint, wurde zu einem Herz verändert\n
+- Verbesserte Visualität von «Neue Schriftart»\n
+-Verbesserte Übersetzung\n
+- Entfernte Option: «Immersionmodus» und «UI-Größe»\n
+</string>
   <string name="Welcome_Text_25_3">
 remix.25.3:\n
 - Neues Objekt hinzugefügt: Explosive Fässer (werden an Halloween durch Kürbisse ersetzt)\n
