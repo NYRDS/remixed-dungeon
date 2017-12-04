@@ -333,9 +333,7 @@ public abstract class Mob extends Char {
 		}
 
 		if (buff(Amok.class) != null) {
-			//if (getEnemy() == Dungeon.hero) {
 				return chooseNearestEnemyFromFraction(Fraction.ANY);
-			//}
 		}
 
 		if (getEnemy() instanceof Mob) {
@@ -520,20 +518,10 @@ public abstract class Mob extends Char {
 
 		return mobScript.invokemethod(method,new LuaValue[]{
 				CoerceJavaToLua.coerce(this),
-				CoerceJavaToLua.coerce(arg1), CoerceJavaToLua.coerce(arg2)})
+				CoerceJavaToLua.coerce(arg1),
+				CoerceJavaToLua.coerce(arg2)})
 				.arg1()
 				.checkboolean();
-		/*
-		return mobScript.get(method).invoke(new LuaValue[]{mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg1), CoerceJavaToLua.coerce(arg2)}).arg1().checkboolean();
-
-		if(arg2 ==  null) {
-			return mobScript.get(method).call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg1)).checkboolean();
-		} else {
-			return mobScript.get(method).in..call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg1), CoerceJavaToLua.coerce(arg2)).checkboolean();
-
-		}
-		*/
-
 	}
 
 	protected boolean runMobScript(String method, Object arg) {
