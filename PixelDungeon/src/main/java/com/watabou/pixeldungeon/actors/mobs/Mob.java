@@ -26,7 +26,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -68,6 +67,7 @@ import com.watabou.utils.Random;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.HashMap;
@@ -91,6 +91,8 @@ public abstract class Mob extends Char {
 
 	@Packable (defaultValue = "scripts/mobs/Dummy")
 	protected String scriptFile;
+
+	private LuaTable mobScript;
 
 	private AiState state = SLEEPING;
 
@@ -481,6 +483,8 @@ public abstract class Mob extends Char {
 	@Override
 	public void damage(int dmg, Object src) {
 
+		runMobScript("onDamage", dmg, src);
+
 		Terror.recover(this);
 
 		AiState state = getState();
@@ -505,17 +509,35 @@ public abstract class Mob extends Char {
 		super.die(this);
 	}
 
-	protected boolean runMobScript(String method, Object arg) {
-		LuaTable mobScript;
-		if(scriptFile!=null && !scriptFile.isEmpty()) {
-			mobScript = LuaEngine.module(scriptFile);
-		} else {
-			mobScript = LuaEngine.module("scripts/mobs/Dummy");
+	private boolean runMobScript(String method, Object arg1, Object arg2) {
+		if (mobScript == null) {
+			if (scriptFile != null && !scriptFile.isEmpty()) {
+				mobScript = LuaEngine.module(scriptFile);
+			} else {
+				mobScript = LuaEngine.module("scripts/mobs/Dummy");
+			}
 		}
 
-		mobScript.get(method).call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg));
+		return mobScript.invokemethod(method,new LuaValue[]{
+				CoerceJavaToLua.coerce(this),
+				CoerceJavaToLua.coerce(arg1), CoerceJavaToLua.coerce(arg2)})
+				.arg1()
+				.checkboolean();
+		/*
+		return mobScript.get(method).invoke(new LuaValue[]{mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg1), CoerceJavaToLua.coerce(arg2)}).arg1().checkboolean();
 
-		return false;
+		if(arg2 ==  null) {
+			return mobScript.get(method).call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg1)).checkboolean();
+		} else {
+			return mobScript.get(method).in..call(mobScript, CoerceJavaToLua.coerce(this), CoerceJavaToLua.coerce(arg1), CoerceJavaToLua.coerce(arg2)).checkboolean();
+
+		}
+		*/
+
+	}
+
+	protected boolean runMobScript(String method, Object arg) {
+		return runMobScript(method, arg, null);
 	}
 
 	@Override
