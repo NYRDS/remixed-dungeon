@@ -28,6 +28,10 @@ RPD = {
         Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
     },
 
+    Buffs = {
+        Roots = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Roots")
+    },
+
     Sfx = {
         CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
         Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),

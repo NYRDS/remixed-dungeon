@@ -524,8 +524,12 @@ public abstract class Mob extends Char {
 				.checkboolean();
 	}
 
-	protected boolean runMobScript(String method, Object arg) {
+	private boolean runMobScript(String method, Object arg) {
 		return runMobScript(method, arg, null);
+	}
+
+	private boolean runMobScript(String method) {
+		return runMobScript(method, null, null);
 	}
 
 	@Override
@@ -732,6 +736,10 @@ public abstract class Mob extends Char {
 		}
 
 		return defMap.get(getMobClassName());
+	}
+
+	public void onSpawn() {
+		runMobScript("onSpawn");
 	}
 
 	public interface AiState {
