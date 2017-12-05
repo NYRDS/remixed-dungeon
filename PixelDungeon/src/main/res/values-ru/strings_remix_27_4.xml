@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Items descriptions -->
+    <string name="Item_Info2">something</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">Некромант, облачённый в эти доспехи, сможет использовать способность \"Некротизм\", которая распространяет магическую чуму, способную заразить любое существо, оказавшееся поблихости, живое и мёртвое.</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">Чёрная магия, пронизывающая эту робу, позволит Некроманту поглощать души павших монстров.</string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">Некротизм</string>
+    <string name="Necrotism_ACSpecial">НЕКРОТИЗМ</string>
+
+</resources>
