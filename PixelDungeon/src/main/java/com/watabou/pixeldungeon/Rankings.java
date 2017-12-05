@@ -22,6 +22,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -56,16 +57,20 @@ public enum Rankings {
 		
 		load();
 
+		Hero hero = Dungeon.hero;
+
 		Record rec = new Record();
 		
 		rec.info	    = resultDescription;
 		rec.win		    = winLevel  != gameOver.LOSE;
-		rec.heroClass	= Dungeon.hero.heroClass;
-		rec.armorTier	= Dungeon.hero.tier();
+		rec.heroClass	= hero.heroClass;
+		rec.armorTier	= hero.tier();
 		rec.score	    = score(winLevel);
 		rec.mod			= PixelDungeon.activeMod();
 
-		EventCollector.logEvent("gameover", Dungeon.hero.heroClass.toString(), resultDescription);
+		String classId = hero.heroClass.toString() + "_" +Dungeon.hero.subClass.toString();
+
+		EventCollector.logEvent("gameover", classId, resultDescription);
 
 		if (!ModdingMode.inMod()){
 			PlayGames.submitScores(Game.getDifficulty(), rec.score);

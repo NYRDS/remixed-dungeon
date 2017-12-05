@@ -737,6 +737,8 @@ public abstract class Level implements Bundlable {
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 
+		mob.onSpawn();
+
 		if (GameScene.isSceneReady()) {
 			if (mob.isPet() || fieldOfView[mob.getPos()]) {
 				press(mob.getPos(),mob);

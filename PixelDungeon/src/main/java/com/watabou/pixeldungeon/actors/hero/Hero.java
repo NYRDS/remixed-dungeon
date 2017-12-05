@@ -423,7 +423,7 @@ public class Hero extends Char {
 				if (Random.Int(100) < 10 + powerLevel) {
 					Buff.affect(enemy, Frost.class, Frost.duration(enemy) / 5 + powerLevel);
 				}
-				enemy.damage(powerLevel / 2, this);
+				enemy.damage(powerLevel / 2, Frost.class);
 			}
 		}
 
