@@ -29,7 +29,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 	@Packable
 	protected int iteration;
 
-	public static int duration = 4;
+	public static int duration = 3;
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -69,7 +69,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 			if (target instanceof Boss){
 				damage = (target.hp()/200);
 			} else{
-				damage = ( target.hp() / Math.max(3, (30 - iteration)) );
+				damage = ( target.hp() / Math.max(3, (21 - iteration)) );
 			}
 
 			target.damage( Math.max(1, damage * iteration), this );
