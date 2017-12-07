@@ -8,7 +8,7 @@
     <string name="NecromancerArmor_Info2">Wearing this armor allows necromancer to use the \"Necrotism\" ability, which will spread a magic plague, which might infect any creature in vicinity, dead or alive.</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
-    <string name="NecromancerRobe_Info2">This кщиу is imbued with dark magic and will allow Necromancer to consume souls of the fallen monsters.</string>
+    <string name="NecromancerRobe_Info2">This robe is imbued with dark magic and will allow Necromancer to consume souls of the fallen monsters.</string>
 
     <!-- STRINGS OF Necrotism CLASS -->
     <string name="Necrotism_Info">Necrotism</string>
