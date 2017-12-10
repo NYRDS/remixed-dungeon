@@ -44,6 +44,7 @@ abstract public class Food extends Item {
 	
 	{
 		stackable = true;
+		defaultAction = AC_EAT;
 	}
 	
 	@Override
