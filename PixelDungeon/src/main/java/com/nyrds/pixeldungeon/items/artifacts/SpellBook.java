@@ -25,6 +25,7 @@ public class SpellBook extends Artifact {
 	public SpellBook() {
 		imageFile = "items/books.png";
 		image = 3;
+		defaultAction = AC_USE;
 	}
 
 	public void spell(String spellName){
