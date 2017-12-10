@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
-import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -100,16 +99,11 @@ public class Necrotism extends Buff implements Hero.Doom {
 		return true;
 	}
 
-	public static float durationFactor( Char ch ) {
-		RingOfElements.Resistance r = ch.buff( RingOfElements.Resistance.class );
-		return r != null ? r.durationFactor() : 1;
-	}
-
 	@Override
 	public void onDeath() {
-		Badges.validateDeathFromPoison();
+		Badges.validateDeathFromNecrotism();
 
-		Dungeon.fail( Utils.format( ResultDescriptions.POISON, Dungeon.depth ) );
-		GLog.n(Game.getVar(R.string.Poison_Death));
+		Dungeon.fail( Utils.format( ResultDescriptions.NECROTISM, Dungeon.depth ) );
+		GLog.n(Game.getVar(R.string.Necrotism_Death));
 	}
 }
