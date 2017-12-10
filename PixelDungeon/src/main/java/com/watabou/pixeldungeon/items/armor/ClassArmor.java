@@ -90,7 +90,7 @@ abstract public class ClassArmor extends Armor {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(special())) {
 			
-			if (hero.getSoulPoints() != 0 && hero.getSoulPoints() < hero.getSoulPointsMax()/specialCostModifier) {
+			if (hero.getSoulPoints() <= 0 && hero.getSoulPoints() < hero.getSoulPointsMax()/specialCostModifier) {
 				GLog.w( TXT_LOW_MANA );
 			} else if (!isEquipped( hero )) {
 				GLog.w( TXT_NOT_EQUIPPED );
