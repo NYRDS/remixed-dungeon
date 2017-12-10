@@ -169,7 +169,7 @@ public class Badges {
 		SPIDER_QUEEN_SLAIN(Game.getVar(R.string.Badges_SpiderQueen_Slain), 66),
 		SHADOW_LORD_SLAIN(Game.getVar(R.string.Badges_ShadowLord_Slain), 67),
 		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 65),
-		DEATH_FROM_NECROTISM(Game.getVar(R.string.Badges_DeathPoison), 71),
+		DEATH_FROM_NECROTISM(Game.getVar(R.string.Badges_DeathNecrotism), 71),
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
 		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH;
 

@@ -15,6 +15,6 @@
     <string name="Necrotism_ACSpecial">NECROTISM</string>
     <string name="ResultDescriptions_Necrotism">Died from necrotism on level %d</string>
     <string name="Necrotism_Death">You died from necrotism...</string>
-    <string name="Badges_DeathPoison">Death from necrotism</string>
+    <string name="Badges_DeathNecrotism">Death from necrotism</string>
 
 </resources>
