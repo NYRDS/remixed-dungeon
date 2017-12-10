@@ -11,6 +11,7 @@
     <string name="Using_Failed_Because_Magic">Могутня магія не дозволяє використовувати \"%s\".</string>
     <string name="Using_Failed_Because_Blind">Ти не можеш використати \"%s\", поки осліплений.</string>
 
+    <string name="Mob_Cannot_Be_Pet">\"%s\" занадто сильний, аби контролювати його!</string>
     <string name="No_Valid_Cell">Поблизу немає необхідної клітинки.</string>
 
 </resources>
