@@ -1,4 +1,4 @@
-Remixed Pixel Dungeon [![Build Status](https://travis-ci.org/NYRDS/pixel-dungeon-remix.svg?branch=master)](https://travis-ci.org/NYRDS/pixel-dungeon-remix) [![codebeat badge](https://codebeat.co/badges/53dde841-192d-4c22-8025-b4036864919f)](https://codebeat.co/projects/github-com-nyrds-pixel-dungeon-remix-master)]
+Remixed Pixel Dungeon [![Build Status](https://travis-ci.org/NYRDS/pixel-dungeon-remix.svg?branch=master)](https://travis-ci.org/NYRDS/pixel-dungeon-remix) [![codebeat badge](https://codebeat.co/badges/53dde841-192d-4c22-8025-b4036864919f)](https://codebeat.co/projects/github-com-nyrds-pixel-dungeon-remix-master)
 =====================
 
 Classic roguelike with pixel graphics and simple interface.
