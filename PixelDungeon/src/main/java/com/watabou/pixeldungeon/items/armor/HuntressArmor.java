@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
-import java.util.HashMap;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -31,10 +29,12 @@ import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
+import java.util.HashMap;
+
 public class HuntressArmor extends ClassArmor {
 	
 	private static final String TXT_NO_ENEMIES   = Game.getVar(R.string.HuntressArmor_NoEnemies);
-	private static final String TXT_NOT_HUNTRESS = Game.getVar(R.string.HuntressArmor_NotHuntress);
+	protected static final String TXT_NOT_HUNTRESS = Game.getVar(R.string.HuntressArmor_NotHuntress);
 	
 	private static final String AC_SPECIAL = Game.getVar(R.string.HuntressArmor_ACSpecial); 
 	
@@ -50,7 +50,7 @@ public class HuntressArmor extends ClassArmor {
 	public String special() {
 		return AC_SPECIAL;
 	}
-	
+
 	@Override
 	public void doSpecial() {
 		
