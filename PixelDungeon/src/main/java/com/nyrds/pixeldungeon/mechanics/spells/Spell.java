@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS   = Game.getVar(R.string.Spells_NotEnoughSP);
+    private static final String TXT_SELECT_CELL   = Game.getVar(R.string.Spell_SelectACell);
 
     protected int level = 1;
     protected int spellCost = 5;
@@ -81,7 +82,7 @@ public class Spell {
 
                     @Override
                     public String prompt() {
-                        return "select cell to cast spell on";
+                        return TXT_SELECT_CELL;
                     }
                 });
                 return false;

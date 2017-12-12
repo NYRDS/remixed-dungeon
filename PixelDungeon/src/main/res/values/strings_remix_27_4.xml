@@ -13,8 +13,11 @@
     <!-- STRINGS OF Necrotism CLASS -->
     <string name="Necrotism_Info">Necrotism</string>
     <string name="Necrotism_ACSpecial">NECROTISM</string>
-    <string name="ResultDescriptions_Necrotism">Died from necrotism on level %d</string>
+    <string name="ResultDescriptions_Necrotism">Died from Necrotism on level %d</string>
     <string name="Necrotism_Death">You died from necrotism...</string>
     <string name="Badges_DeathNecrotism">Death from necrotism</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">Select a target cell.</string>
 
 </resources>

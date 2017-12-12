@@ -13,5 +13,11 @@
     <!-- STRINGS OF Necrotism CLASS -->
     <string name="Necrotism_Info">Некротизм</string>
     <string name="Necrotism_ACSpecial">НЕКРОТИЗМ</string>
+    <string name="ResultDescriptions_Necrotism">Умер от некротизма на %d уровне</string>
+    <string name="Necrotism_Death">Тебя погубил некротизм...</string>
+    <string name="Badges_DeathNecrotism">Смерть от некротизма</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">Выберите цель.</string>
 
 </resources>
