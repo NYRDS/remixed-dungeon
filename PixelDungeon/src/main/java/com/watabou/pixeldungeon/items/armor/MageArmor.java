@@ -36,7 +36,7 @@ public class MageArmor extends ClassArmor {
 	
 	private static final String AC_SPECIAL = Game.getVar(R.string.MageArmor_ACSpecial); 
 	
-	private static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
+	protected static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
 	
 	{
 		image = 11;

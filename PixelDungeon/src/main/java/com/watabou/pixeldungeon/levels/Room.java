@@ -21,7 +21,6 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
 import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;
-import com.watabou.pixeldungeon.levels.painters.BossExitPainter;
 import com.watabou.pixeldungeon.levels.painters.CryptPainter;
 import com.watabou.pixeldungeon.levels.painters.EntrancePainter;
 import com.watabou.pixeldungeon.levels.painters.ExitPainter;
@@ -76,7 +75,6 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		EXIT		( ExitPainter.class ),
 		SEWER_BOSS_EXIT	( SewerBossExitPainter.class ),
 		PRISON_BOSS_EXIT( PrisonBossExitPainter.class ),
-		BOSS_EXIT       ( BossExitPainter.class ),
 		TUNNEL		( TunnelPainter.class ),
 		PASSAGE		( PassagePainter.class ),
 		SHOP		( ShopPainter.class ),

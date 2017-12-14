@@ -45,7 +45,7 @@ public class WarriorArmor extends ClassArmor {
 	
 	private static final String AC_SPECIAL = Game.getVar(R.string.WarriorArmor_ACSpecial); 
 	
-	private static final String TXT_NOT_WARRIOR	= Game.getVar(R.string.WarriorArmor_NotWarrior);
+	protected static final String TXT_NOT_WARRIOR	= Game.getVar(R.string.WarriorArmor_NotWarrior);
 	
 	{
 		image = 5;

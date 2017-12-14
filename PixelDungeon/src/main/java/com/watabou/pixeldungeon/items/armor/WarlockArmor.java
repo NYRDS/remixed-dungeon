@@ -16,49 +16,17 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class WarlockArmor extends ClassArmor {
-	
-	private static final String AC_SPECIAL = Game.getVar(R.string.MageArmor_ACSpecial); 
-	
-	private static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
-	
+public class WarlockArmor extends MageArmor {
+
 	{
 		name = Game.getVar(R.string.MageArmor_Name);
 		hasCollar = true;
 		image = 13;
 	}
-	
-	@Override
-	public String special() {
-		return AC_SPECIAL;
-	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.MageArmor_Desc);
-	}
-	
-	@Override
-	public void doSpecial() {	
 
-		for (Mob mob : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[mob.getPos()]) {
-				Buff.affect( mob, Burning.class ).reignite( mob );
-				Buff.prolong( mob, Roots.class, 3 );
-			}
-		}
-
-		getCurUser().spend( Actor.TICK );
-		getCurUser().getSprite().operate( getCurUser().getPos() );
-		getCurUser().busy();
-		
-		getCurUser().getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
-		Sample.INSTANCE.play( Assets.SND_READ );
-	}
-	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.MAGE && hero.subClass == HeroSubClass.WARLOCK) {
+		if (hero.subClass == HeroSubClass.WARLOCK) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( TXT_NOT_MAGE );

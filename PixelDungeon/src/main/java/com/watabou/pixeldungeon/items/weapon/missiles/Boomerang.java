@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
+import com.watabou.utils.Callback;
 
 public class Boomerang extends MissileWeapon {
 
@@ -91,17 +92,24 @@ public class Boomerang extends MissileWeapon {
 		circleBack( cell, getCurUser() );
 	}
 	
-	private void circleBack(int from, Hero owner) {
+	private void circleBack(int from, final Hero owner) {
 
 		((MissileSprite) getCurUser().getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, getCurUser().getPos(),
-				curItem, null);
+				curItem, new Callback() {
+					@Override
+					public void call() {
+						if (throwEquiped) {
+							owner.belongings.weapon = Boomerang.this;
+						} else {
+							getCurUser().collect(Boomerang.this);
+						}
+						updateQuickslot();
+					}
+				});
 
 		if (throwEquiped) {
-			owner.belongings.weapon = this;
 			owner.spend(-TIME_TO_EQUIP);
-		} else {
-			getCurUser().collect(this);
 		}
 	}
 	

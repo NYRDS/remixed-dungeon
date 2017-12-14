@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ElfArmor extends ClassArmor {
 	
-	private static final String TXT_NOT_ELF = Game.getVar(R.string.ElfArmor_NotElf);
+	protected static final String TXT_NOT_ELF = Game.getVar(R.string.ElfArmor_NotElf);
 	private static final String AC_SPECIAL = Game.getVar(R.string.ElfArmor_ACSpecial); 
 	
 	public ElfArmor() {

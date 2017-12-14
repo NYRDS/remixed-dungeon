@@ -36,6 +36,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shielded;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
@@ -87,6 +88,7 @@ public class Badges {
 		BAG_BOUGHT_SCROLL_HOLDER,
 		BAG_BOUGHT_WAND_HOLSTER,
 		BAG_BOUGHT_POTION_BELT,
+		BAG_BOUGHT_KEY_RING,
 		BAG_BOUGHT_QUIVER,
 		ALL_BAGS_BOUGHT(Game.getVar(R.string.Badges_AllBags), 23),
 		DEATH_FROM_FIRE(Game.getVar(R.string.Badges_DeathFire), 24),
@@ -537,6 +539,8 @@ public class Badges {
 			badge = Badge.BAG_BOUGHT_POTION_BELT;
 		} else if (bag instanceof Quiver) {
 			badge = Badge.BAG_BOUGHT_QUIVER;
+		} else if (bag instanceof Keyring) {
+			badge = Badge.BAG_BOUGHT_KEY_RING;
 		}
 
 		if (badge != null) {
@@ -548,7 +552,9 @@ public class Badges {
 					local.contains(Badge.BAG_BOUGHT_SEED_POUCH) &&
 					local.contains(Badge.BAG_BOUGHT_WAND_HOLSTER) &&
 					local.contains(Badge.BAG_BOUGHT_POTION_BELT) &&
-					local.contains(Badge.BAG_BOUGHT_QUIVER)) {
+					local.contains(Badge.BAG_BOUGHT_QUIVER) &&
+					local.contains(Badge.BAG_BOUGHT_KEY_RING)
+					) {
 
 				badge = Badge.ALL_BAGS_BOUGHT;
 				local.add(badge);

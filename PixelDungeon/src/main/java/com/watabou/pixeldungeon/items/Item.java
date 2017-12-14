@@ -475,11 +475,12 @@ public class Item implements Bundlable, Presser {
 		}
 		final float finalDelay = delay;
 
+		final Item item = detach(user.belongings.backpack);
+
 		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
 				reset(user.getPos(), cell, this, new Callback() {
 					@Override
 					public void call() {
-						Item item = Item.this.detach(user.belongings.backpack);
 						item.onThrow(cell);
 						user.spendAndNext(finalDelay);
 					}

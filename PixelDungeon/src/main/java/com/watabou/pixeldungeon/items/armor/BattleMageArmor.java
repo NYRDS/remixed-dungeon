@@ -16,53 +16,20 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class BattleMageArmor extends ClassArmor {	
-	
-	private static final String AC_SPECIAL = Game.getVar(R.string.MageArmor_ACSpecial); 
-	
-	private static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
-	
-	{
-		name = Game.getVar(R.string.MageArmor_Name);
-		hasCollar = true;
-		image = 12;
-	}
-	
-	@Override
-	public String special() {
-		return AC_SPECIAL;
-	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.MageArmor_Desc);
-	}
-	
-	@Override
-	public void doSpecial() {	
+public class BattleMageArmor extends MageArmor {
+    {
+        name = Game.getVar(R.string.MageArmor_Name);
+        hasCollar = true;
+        image = 12;
+    }
 
-		for (Mob mob : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[mob.getPos()]) {
-				Buff.affect( mob, Burning.class ).reignite( mob );
-				Buff.prolong( mob, Roots.class, 3 );
-			}
-		}
-		
-		getCurUser().spend( Actor.TICK );
-		getCurUser().getSprite().operate( getCurUser().getPos() );
-		getCurUser().busy();
-		
-		getCurUser().getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
-		Sample.INSTANCE.play( Assets.SND_READ );
-	}
-	
-	@Override
-	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.MAGE && hero.subClass == HeroSubClass.BATTLEMAGE) {
-			return super.doEquip( hero );
-		} else {
-			GLog.w( TXT_NOT_MAGE );
-			return false;
-		}
-	}
+    @Override
+    public boolean doEquip(Hero hero) {
+        if (hero.subClass == HeroSubClass.BATTLEMAGE) {
+            return super.doEquip(hero);
+        } else {
+            GLog.w(TXT_NOT_MAGE);
+            return false;
+        }
+    }
 }
