@@ -17,7 +17,7 @@
     <!-- Window descriptions -->
     <!-- STRINGS OF WndFortuneTeller CLASS -->
     <string name="WndFortuneTeller_Instruction">I can reveal secrets behind items, that you posses.\nOne identification will cost you %d coins.</string>
-    <string name="WndFortuneTeller_No_Item">Careful, you don\'t want to spend your money for nothing, right? There is no unidentified items in your inventory.</string>
+    <string name="WndFortuneTeller_No_Item">Careful, you don\'t want to spend your money for nothing, right? There are no unidentified items in your inventory.</string>
     <string name="WndFortuneTeller_Title">Fortune-teller.</string>
 
     <!-- STRINGS OF Generic Button labels -->
