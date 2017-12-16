@@ -34,6 +34,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 		if(level() > 5) {
 			if(charge == 0) {
 				degrade();
+				enchant(null);
 				charge = chargeForLevel();
 				selectImage();
 			}

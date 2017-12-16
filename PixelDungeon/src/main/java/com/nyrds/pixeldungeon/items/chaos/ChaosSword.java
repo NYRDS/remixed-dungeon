@@ -34,6 +34,7 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 		if(level() > 3) {
 			if(charge == 0) {
 				degrade();
+				enchant(null);
 				charge = chargeForLevel();
 				selectImage();
 			}

@@ -34,6 +34,7 @@ public class ChaosArmor extends Armor implements IChaosItem {
 		if(level() > 3) {
 			if(charge == 0) {
 				degrade();
+				inscribe(null);
 				charge = chargeForLevel();
 				selectImage();
 			}
