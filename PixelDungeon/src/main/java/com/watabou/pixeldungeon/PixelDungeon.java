@@ -24,7 +24,6 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -32,7 +31,6 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -88,7 +86,6 @@ public class PixelDungeon extends Game {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		RewardVideo.init();
 		PlayGames.init(this);
 
 		if(!isAlpha()) {
@@ -127,7 +124,6 @@ public class PixelDungeon extends Game {
 		if (PixelDungeon.version() != Game.versionCode) {
 			switchScene(WelcomeScene.class);
 		}
-		LuaEngine l = LuaEngine.getEngine();
 	}
 
 	@Override

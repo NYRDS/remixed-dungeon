@@ -22,6 +22,7 @@ public class ServiceManNPC extends ImmortalNPC {
 	private static final int BASIC_GOLD_REWARD = 150;
 
 	public ServiceManNPC() {
+		RewardVideo.init();
 	}
 
 	private int getReward(){
