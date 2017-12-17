@@ -31,8 +31,11 @@ mob.onDie = function(self,mob,cause)
 end
 
 mob.onInteract = function(self,mob,chr)
-    print(self, mob, chr)
-    return not not (self.interact and self.interact(mob, chr))
+    if self.interact == nil then
+        return false
+    end
+    self.interact(mob, chr)
+    return true
 end
 
 mob.onMove = function(self,mob,cell)
