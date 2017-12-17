@@ -84,7 +84,7 @@ public class AttackIndicator extends Tag {
 		for (int i=0; i < v; i++) {
 			Mob mob = hero.visibleEnemy( i );
 
-			if (hero.canAttack(mob) && !mob.isPet()) {
+			if (hero.canAttack(mob) && !mob.friendly(hero)) {
 				candidates.add( mob );
 			}
 		}
