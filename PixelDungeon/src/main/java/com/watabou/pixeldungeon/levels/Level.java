@@ -118,6 +118,20 @@ public abstract class Level implements Bundlable {
 		return exitMap.containsKey(index);
 	}
 
+	// Get compass target for this level
+	public int getCompassTarget() {
+		if (hasCompassTarget()) {
+			return compassTarget;
+		}
+
+		throw new TrackedRuntimeException("no compass target, current value of compassTarget: " + compassTarget);
+	}
+
+	// Check whether the level has a compass target
+	public boolean hasCompassTarget() {
+		return cellValid(compassTarget);
+	}
+
 	public void setExit(int exit, Integer index) {
 		exitMap.put(index, exit);
 	}
@@ -303,6 +317,7 @@ public abstract class Level implements Bundlable {
 	protected Feeling feeling = Feeling.UNDEFINED;
 
 	public int entrance;
+	public int compassTarget = -1;	// Where compass should point
 
 	private HashMap<Integer, Integer> exitMap = new HashMap<>();
 
@@ -330,6 +345,7 @@ public abstract class Level implements Bundlable {
 	private static final String VISITED        = "visited";
 	private static final String MAPPED         = "mapped";
 	private static final String ENTRANCE       = "entrance";
+	private static final String COMPASS_TARGET = "compassTarget";
 	private static final String EXIT           = "exit";
 	private static final String HEAPS          = "heaps";
 	private static final String PLANTS         = "plants";
@@ -547,6 +563,7 @@ public abstract class Level implements Bundlable {
 		mapped = bundle.getBooleanArray(MAPPED);
 
 		entrance = bundle.getInt(ENTRANCE);
+		compassTarget = bundle.getInt(COMPASS_TARGET);
 
 		int exits[] = bundle.getIntArray(EXIT);
 		if (exits != null) {
@@ -615,6 +632,7 @@ public abstract class Level implements Bundlable {
 		bundle.put(VISITED, visited);
 		bundle.put(MAPPED, mapped);
 		bundle.put(ENTRANCE, entrance);
+		bundle.put(COMPASS_TARGET, compassTarget);
 
 		int[] exits = new int[exitMap.size()];
 

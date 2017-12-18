@@ -104,6 +104,15 @@ public class PredesignedLevel extends CustomLevel {
 				setExit(cell(exitDesc.getInt(0), exitDesc.getInt(1)), i);
 			}
 		}
+
+		// Set compass target if the level description has it
+		if(mLevelDesc.has("compassTarget")){
+			JSONArray compassTargetCoordinates = mLevelDesc.getJSONArray("compassTarget");
+			int x, y;	// Calculate cell ID from coordinates
+			x = compassTargetCoordinates.getInt(0);
+			y = compassTargetCoordinates.getInt(1);
+			compassTarget = y * width + x;
+		}
 	}
 
 	@Override
