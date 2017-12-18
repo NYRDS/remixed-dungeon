@@ -129,7 +129,7 @@ public abstract class Level implements Bundlable {
 
 	// Check whether the level has a compass target
 	public boolean hasCompassTarget() {
-		return -1 != compassTarget;
+		return cellValid(compassTarget);
 	}
 
 	public void setExit(int exit, Integer index) {
