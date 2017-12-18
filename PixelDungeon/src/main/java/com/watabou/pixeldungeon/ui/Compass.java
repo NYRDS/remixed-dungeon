@@ -50,8 +50,8 @@ public class Compass extends Image {
 
 	// Set the cell with x,y coordinates
 	public void setCell( int x, int y) {
-		int width = Dungeon.level.getWidth();
-		setCell( y*width + x );	// Since x = cell%width and y = cell/width
+		int cell = Dungeon.level.cell(x, y);	// Calculating cell by x,y coordinates
+		setCell( cell );
 	}
 	
 	@Override
