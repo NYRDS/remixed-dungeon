@@ -118,6 +118,20 @@ public abstract class Level implements Bundlable {
 		return exitMap.containsKey(index);
 	}
 
+	// Get compass target for this level
+	public int getCompassTarget() {
+		if (hasCompassTarget()) {
+			return compassTarget;
+		}
+
+		throw new TrackedRuntimeException("no compass target, current value of compssTarget: " + compassTarget);
+	}
+
+	// Check whether the level has a compass target
+	public boolean hasCompassTarget() {
+		return -1 != compassTarget;
+	}
+
 	public void setExit(int exit, Integer index) {
 		exitMap.put(index, exit);
 	}
@@ -303,6 +317,7 @@ public abstract class Level implements Bundlable {
 	protected Feeling feeling = Feeling.UNDEFINED;
 
 	public int entrance;
+	public int compassTarget = -1;	// Where compass should point
 
 	private HashMap<Integer, Integer> exitMap = new HashMap<>();
 
