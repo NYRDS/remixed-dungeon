@@ -101,13 +101,15 @@ public class StatusPane extends Component {
 		blood.on = false;
 		add( blood );
 
-		int mainExit = Dungeon.level.entrance;
+		int compassTarget = Dungeon.level.entrance;
 
-		if(Dungeon.level.hasExit(0)) {
-			mainExit = Dungeon.level.getExit(0);
+		if(Dungeon.level.hasCompassTarget()){
+			compassTarget = Dungeon.level.getCompassTarget();	// Set to compass target if exists
+		} else if(Dungeon.level.hasExit(0)) {
+			compassTarget = Dungeon.level.getExit(0);	// Set to first exit if exists
 		}
 
-		compass = new Compass(mainExit);
+		compass = new Compass(compassTarget);
 		add(compass);
 
 
