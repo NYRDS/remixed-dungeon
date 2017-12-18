@@ -47,6 +47,12 @@ public class Compass extends Image {
 		this.cell = cell;
 		cellCenter = DungeonTilemap.tileCenterToWorld( cell );	// Exact location of the center of the tile
 	}
+
+	// Set the cell with x,y coordinates
+	public void setCell( int x, int y) {
+		int width = Dungeon.level.getWidth();
+		setCell( y*width * x);	// Since x = cell%width and y = cell/width
+	}
 	
 	@Override
 	public void update() {
