@@ -39,9 +39,13 @@ public class Compass extends Image {
 		copy( Icons.COMPASS.get() );
 		origin.set( width / 2, RADIUS );
 		
-		this.cell = cell;
-		cellCenter = DungeonTilemap.tileCenterToWorld( cell );
+		setCell(cell);
 		setVisible(false);
+	}
+
+	public void setCell(int cell) {
+		this.cell = cell;
+		cellCenter = DungeonTilemap.tileCenterToWorld( cell );	// Exact location of the center of the tile
 	}
 	
 	@Override
