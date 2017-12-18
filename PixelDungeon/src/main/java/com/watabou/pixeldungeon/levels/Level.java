@@ -124,7 +124,7 @@ public abstract class Level implements Bundlable {
 			return compassTarget;
 		}
 
-		throw new TrackedRuntimeException("no compass target, current value of compssTarget: " + compassTarget);
+		throw new TrackedRuntimeException("no compass target, current value of compassTarget: " + compassTarget);
 	}
 
 	// Check whether the level has a compass target
