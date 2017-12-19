@@ -54,7 +54,11 @@ public class Compass extends Image {
 	@Override
 	public void update() {
 		super.update();
-		
+
+		if(level.hasCompassTarget()) {
+			setCell(level.getCompassTarget());
+		}
+
 		if(!level.cellValid(cell)){
 			return;
 		}
@@ -62,7 +66,9 @@ public class Compass extends Image {
 		if (!getVisible()) {
 			setVisible(level.visited[cell] || level.mapped[cell]);
 		}
-		
+
+
+
 		if (getVisible()) {			
 			PointF scroll = Camera.main.scroll;
 			if (!scroll.equals( lastScroll )) {

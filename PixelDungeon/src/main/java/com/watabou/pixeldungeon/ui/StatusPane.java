@@ -104,12 +104,12 @@ public class StatusPane extends Component {
 		blood.on = false;
 		add( blood );
 
-		int compassTarget = Dungeon.level.entrance;
+		int compassTarget = currentLevel.entrance;
 
-		if(Dungeon.level.hasCompassTarget()){
-			compassTarget = Dungeon.level.getCompassTarget();	// Set to compass target if exists
-		} else if(Dungeon.level.hasExit(0)) {
-			compassTarget = Dungeon.level.getExit(0);	// Set to first exit if exists
+		if(currentLevel.hasCompassTarget()){
+			compassTarget = currentLevel.getCompassTarget();	// Set to compass target if exists
+		} else if(currentLevel.hasExit(0)) {
+			compassTarget = currentLevel.getExit(0);	// Set to first exit if exists
 		}
 
 		compass = new Compass(compassTarget, currentLevel);
@@ -249,10 +249,6 @@ public class StatusPane extends Component {
 			keys.text( Integer.toString( lastKeys ) );
 			keys.measure();
 			keys.x = width - 8 - keys.width()    - 18;
-		}
-
-		if(currentLevel.hasCompassTarget()) {
-			compass.setCell(currentLevel.getCompassTarget());
 		}
 	}
 
