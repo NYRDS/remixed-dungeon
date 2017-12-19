@@ -270,7 +270,7 @@ public class GameScene extends PixelScene {
 
 		Dungeon.hero.updateLook();
 
-		sb = new StatusPane(Dungeon.hero);
+		sb = new StatusPane(Dungeon.hero, level);
 		sb.camera = uiCamera;
 		sb.setSize(uiCamera.width, 0);
 		add(sb);

@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.ui;
 
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.PointF;
 
 public class Compass extends Image {
@@ -30,12 +30,15 @@ public class Compass extends Image {
 	
 	private int cell;
 	private PointF cellCenter;
-	
+	private Level level;
+
 	private PointF lastScroll = new PointF();
 	
-	public Compass( int cell ) {
+	public Compass(int cell, Level level) {
 		
 		super();
+		this.level = level;
+
 		copy( Icons.COMPASS.get() );
 		origin.set( width / 2, RADIUS );
 		
@@ -48,22 +51,16 @@ public class Compass extends Image {
 		cellCenter = DungeonTilemap.tileCenterToWorld( cell );	// Exact location of the center of the tile
 	}
 
-	// Set the cell with x,y coordinates
-	public void setCell( int x, int y) {
-		int cell = Dungeon.level.cell(x, y);	// Calculating cell by x,y coordinates
-		setCell( cell );
-	}
-	
 	@Override
 	public void update() {
 		super.update();
 		
-		if(!Dungeon.level.cellValid(cell)){
+		if(!level.cellValid(cell)){
 			return;
 		}
 		
 		if (!getVisible()) {
-			setVisible(Dungeon.level.visited[cell] || Dungeon.level.mapped[cell]); 
+			setVisible(level.visited[cell] || level.mapped[cell]);
 		}
 		
 		if (getVisible()) {			

@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.keys.IronKey;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndGame;
@@ -66,11 +67,13 @@ public class StatusPane extends Component {
 	private MenuButton btnHats;
 	private MenuButton btnSpells;
 
-	private Hero hero;
+	private Level currentLevel;
+	private Hero  hero;
 
-	public StatusPane(Hero _hero) {
+	public StatusPane(Hero hero, Level level) {
 		super(true);
-		hero = _hero;
+		this.hero = hero;
+		this.currentLevel = level;
 		createChildren();
 	}
 
@@ -109,7 +112,7 @@ public class StatusPane extends Component {
 			compassTarget = Dungeon.level.getExit(0);	// Set to first exit if exists
 		}
 
-		compass = new Compass(compassTarget);
+		compass = new Compass(compassTarget, currentLevel);
 		add(compass);
 
 
@@ -223,7 +226,7 @@ public class StatusPane extends Component {
 		hp.Scale().x = health;
 		sp.Scale().x = sPoints;
 		exp.Scale().x = (width / exp.width) * hero.getExp() / hero.maxExp();
-		
+
 		if (hero.lvl() != lastLvl) {
 			
 			if (lastLvl != -1) {
@@ -246,6 +249,10 @@ public class StatusPane extends Component {
 			keys.text( Integer.toString( lastKeys ) );
 			keys.measure();
 			keys.x = width - 8 - keys.width()    - 18;
+		}
+
+		if(currentLevel.hasCompassTarget()) {
+			compass.setCell(currentLevel.getCompassTarget());
 		}
 	}
 
