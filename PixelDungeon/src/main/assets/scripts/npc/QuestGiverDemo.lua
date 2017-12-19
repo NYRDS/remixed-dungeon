@@ -11,7 +11,6 @@ local mob = require"scripts/lib/mob"
 
 local quest = require"scripts/lib/quest"
 
-
 local questName = "Demo Quest"
 
 return mob.init({
@@ -40,6 +39,8 @@ return mob.init({
             RPD.Dungeon.level:drop(RPD.ItemFactory:itemByName("RatArmor"),chr:getPos())
             quest.complete(questName)
         end
-
+    end,
+    spawn = function (self,level)
+        level:setCompassTarget(self:getPos())
     end
 })

@@ -738,8 +738,8 @@ public abstract class Mob extends Char {
 		return defMap.get(getMobClassName());
 	}
 
-	public void onSpawn() {
-		runMobScript("onSpawn");
+	public void onSpawn(Level level) {
+		runMobScript("onSpawn",level);
 	}
 
 	public interface AiState {

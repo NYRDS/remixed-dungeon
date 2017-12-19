@@ -46,8 +46,8 @@ mob.onDamage = function(self,mob,dmg,src)
     return not not (self.damage and self.damage(mob, dmg, src))
 end
 
-mob.onSpawn = function(self,mob,dmg,src)
-    return not not (self.spawn and self.spawn(mob, dmg, src))
+mob.onSpawn = function(self,mob,level)
+    return not not (self.spawn and self.spawn(mob,level))
 end
 
 return mob

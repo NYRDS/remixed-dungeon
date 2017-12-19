@@ -111,7 +111,8 @@ public class PredesignedLevel extends CustomLevel {
 			int x, y;	// Calculate cell ID from coordinates
 			x = compassTargetCoordinates.getInt(0);
 			y = compassTargetCoordinates.getInt(1);
-			compassTarget = cell(x, y);
+
+			setCompassTarget(x,y);
 		}
 	}
 

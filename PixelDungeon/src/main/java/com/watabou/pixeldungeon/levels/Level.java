@@ -119,6 +119,15 @@ public abstract class Level implements Bundlable {
 		return exitMap.containsKey(index);
 	}
 
+
+	public void setCompassTarget(int cell) {
+		compassTarget = cell;
+	}
+
+	public void setCompassTarget(int x, int y) {
+		setCompassTarget(cell(x,y));
+	}
+
 	// Get compass target for this level
 	public int getCompassTarget() {
 		if (hasCompassTarget()) {
@@ -318,7 +327,8 @@ public abstract class Level implements Bundlable {
 	protected Feeling feeling = Feeling.UNDEFINED;
 
 	public int entrance;
-	public int compassTarget = INVALID_CELL;	// Where compass should point
+
+	private int compassTarget = INVALID_CELL;	// Where compass should point
 
 	private HashMap<Integer, Integer> exitMap = new HashMap<>();
 
@@ -756,7 +766,7 @@ public abstract class Level implements Bundlable {
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 
-		mob.onSpawn();
+		mob.onSpawn(this);
 
 		if (GameScene.isSceneReady()) {
 			if (mob.isPet() || fieldOfView[mob.getPos()]) {
