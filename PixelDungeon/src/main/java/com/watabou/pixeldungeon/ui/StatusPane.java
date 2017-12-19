@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.ui;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.input.Touchscreen.Touch;
+import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
@@ -125,17 +126,17 @@ public class StatusPane extends Component {
 		exp = new Image( Assets.XP_BAR );
 		add( exp );
 		
-		level = Text.createBasicText(PixelScene.font1x);
+		level = new BitmapText(PixelScene.font1x);
 		level.hardlight( 0xFFEBA4 );
 		add( level );
 		
-		depth = Text.createBasicText( Integer.toString( Dungeon.depth ), PixelScene.font1x);
+		depth = new BitmapText( Integer.toString( Dungeon.depth ), PixelScene.font1x);
 		depth.hardlight( 0xCACFC2 );
 		depth.measure();
 		add( depth );
 		
 		hero.belongings.countIronKeys();
-		keys = Text.createBasicText( PixelScene.font1x);
+		keys = new BitmapText( PixelScene.font1x);
 		keys.hardlight( 0xCACFC2 );
 		add( keys );
 		
