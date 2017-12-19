@@ -99,6 +99,7 @@ import java.util.Set;
 public abstract class Level implements Bundlable {
 
 	private static final String SCRIPTS = "scripts";
+	private static final int INVALID_CELL = -1;
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
@@ -317,7 +318,7 @@ public abstract class Level implements Bundlable {
 	protected Feeling feeling = Feeling.UNDEFINED;
 
 	public int entrance;
-	public int compassTarget = -1;	// Where compass should point
+	public int compassTarget = INVALID_CELL;	// Where compass should point
 
 	private HashMap<Integer, Integer> exitMap = new HashMap<>();
 
@@ -389,7 +390,7 @@ public abstract class Level implements Bundlable {
 		if (cellValid(cell)) {
 			return cell;
 		}
-		return -1;
+		return INVALID_CELL;
 	}
 
 	public void create() {
@@ -563,7 +564,7 @@ public abstract class Level implements Bundlable {
 		mapped = bundle.getBooleanArray(MAPPED);
 
 		entrance = bundle.getInt(ENTRANCE);
-		compassTarget = bundle.getInt(COMPASS_TARGET);
+		compassTarget = bundle.optInt(COMPASS_TARGET, INVALID_CELL);
 
 		int exits[] = bundle.getIntArray(EXIT);
 		if (exits != null) {
@@ -572,7 +573,7 @@ public abstract class Level implements Bundlable {
 			}
 		} else {
 			setExit(bundle.getInt(EXIT), 0);
-			int secondaryExit = bundle.optInt(SECONDARY_EXIT, -1);
+			int secondaryExit = bundle.optInt(SECONDARY_EXIT, INVALID_CELL);
 			if (cellValid(secondaryExit)) {
 				setExit(secondaryExit, 1);
 			}
@@ -593,7 +594,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (Mob mob : bundle.getCollection(MOBS, Mob.class)) {
-			if (mob != null && mob.getPos() != -1) {
+			if (mob != null && mob.getPos() != INVALID_CELL) {
 				mobs.add(mob);
 			}
 		}
@@ -805,7 +806,7 @@ public abstract class Level implements Bundlable {
 
 					Mob mob = createMob();
 					mob.setState(mob.WANDERING);
-					if (Dungeon.hero.isAlive() && mob.getPos() != -1) {
+					if (Dungeon.hero.isAlive() && cellValid(mob.getPos())) {
 						spawnMob(mob);
 						if (Statistics.amuletObtained) {
 							mob.beckon(Dungeon.hero.getPos());
@@ -826,14 +827,14 @@ public abstract class Level implements Bundlable {
 	public int randomRespawnCell(boolean[] selectFrom) {
 
 		if (isBossLevel() || noFogOfWar()) {
-			return -1;
+			return INVALID_CELL;
 		}
 
 		int counter = 0;
 		int cell;
 		do {
 			if (++counter > 1000) {
-				return -1;
+				return INVALID_CELL;
 			}
 			cell = Random.Int(getLength());
 		}
@@ -1530,7 +1531,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getNearestTerrain(int x, int y, int terr) {
-		return getNearestTerrain(x, y, terr, -1);
+		return getNearestTerrain(x, y, terr, INVALID_CELL);
 	}
 
 	public int getNearestTerrain(int x, int y, int terr, int ignoreCell) {
@@ -1562,7 +1563,7 @@ public abstract class Level implements Bundlable {
 			return Random.element(candidates);
 		}
 
-		return -1;
+		return INVALID_CELL;
 	}
 
 	public ArrayList<Integer> getAllTerrainCells(int terrainType) {
@@ -1585,7 +1586,7 @@ public abstract class Level implements Bundlable {
 		if (cellValid(cell)) {
 			return map[cell];
 		}
-		return -1;
+		return INVALID_CELL;
 	}
 
 	public int cellX(int cell) {
