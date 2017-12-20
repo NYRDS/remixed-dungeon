@@ -55,7 +55,7 @@
     <!-- STRINGS OF SpellBook CLASS -->
     <string name="SpellBook_Name">Livre des sorts</string>
     <string name="SpellBook_Info">On dirait plus une compilation de feuilles qui ont été cousues ensemble qu\'un véritable livre. Vous pourrez éventuellement en tirer quelque chose si vous en prenez le temps. </string>
-    <string name="SpellBook_Info_Identified">Dans ces pages, vous aveu découvert le texte complet du sort \"%1$s\". \n\" %2$s\"</string>
+    <string name="SpellBook_Info_Identified">Dans ces pages, vous avez découvert le texte complet du sort \"%1$s\". \n\" %2$s\"</string>
 
 
     <!-- STRINGS OF ManaPotion CLASS -->

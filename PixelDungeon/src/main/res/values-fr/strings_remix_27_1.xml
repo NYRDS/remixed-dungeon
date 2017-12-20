@@ -22,6 +22,10 @@
     <string name="PortalExit_Desc_IceCaves">Caves glacées</string>
 
 
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Dévorer</string>
+
     <!-- STRINGS OF StoneBlood CLASS -->
     <string name="StoneBlood_Buff">Pierre de sang</string>
 </resources>

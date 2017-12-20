@@ -1,4 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Parchemin d\'invocation</string>
+    <string name="ScrollOfSummoning_Info">Lorsqu\'il est lu à voix haute, ce parchemin va invoquer un des monstres du niveau du donjon auquel vous vous trouvez. Et si la volonté de ce monstre est suffisamment faible, il deviendra votre serviteur.</string>
+    <string name="ScrollOfSummoning_Info_2">Le monstre a répondu à votre invocation !</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">Une magie puissante vous empêche d\'utiliser \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">Vous ne pouvez pas utiliser \"%s\" en étant aveuglé.</string>
+
+    <string name="Mob_Cannot_Be_Pet">La volonté de \"%s\" est trop forte pour être contrôlée.</string>
+    <string name="No_Valid_Cell">Il n\'y a aucune case disponible à proximité. </string>
+
+</resources>
