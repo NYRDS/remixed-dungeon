@@ -27,6 +27,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.noosa.tweeners.AlphaTweener;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -36,19 +37,16 @@ public class DungeonTilemap extends Tilemap {
 
 	public static final int SIZE = 16;
 
-	private static DungeonTilemap instance;
-
 	private Tilemap mGroundLayer;
 	private Tilemap mDecoLayer;
 
-	private static XTilemapConfiguration xTilemapConfiguration;
+	private XTilemapConfiguration xTilemapConfiguration;
 
 	private int[] mGroundMap;
 	private int[] mDecoMap;
 
 	public DungeonTilemap(String tiles) {
 		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
-		instance = this;
 		int levelWidth = Dungeon.level.getWidth();
 		map(Dungeon.level.map, levelWidth);
 
@@ -75,11 +73,11 @@ public class DungeonTilemap extends Tilemap {
 		}
 	}
 
-	private static boolean useExTiles() {
-		return instance.mGroundLayer != null && instance.mDecoLayer != null;
+	private boolean useExTiles() {
+		return mGroundLayer != null && mDecoLayer != null;
 	}
 
-	private static int currentDecoCell(int cell) {
+	private int currentDecoCell(int cell) {
 		return xTilemapConfiguration.decoTile(Dungeon.level, cell);
 	}
 
@@ -91,7 +89,7 @@ public class DungeonTilemap extends Tilemap {
 		return mDecoMap;
 	}
 
-	private static int currentGroundCell(int cell) {
+	private int currentGroundCell(int cell) {
 		return xTilemapConfiguration.baseTile(Dungeon.level, cell);
 	}
 
@@ -140,33 +138,32 @@ public class DungeonTilemap extends Tilemap {
 				(pos / Dungeon.level.getWidth() + 0.5f) * SIZE);
 	}
 
-	public static CompositeImage tile(int cell) {
+	public CompositeImage tile(int cell) {
 		return tile(cell, -1);
 	}
 
-	private static CompositeImage createTileImage(int groundCell, int decoCell) {
-		CompositeImage img = new CompositeImage(instance.mGroundLayer.getTexture());
+	private CompositeImage createTileImage(int groundCell, int decoCell) {
+		CompositeImage img = new CompositeImage(mGroundLayer.getTexture());
 
-		RectF frame = instance.mGroundLayer.getTileset().get(groundCell);
+		RectF frame = mGroundLayer.getTileset().get(groundCell);
 		img.frame(frame);
 
-		frame = instance.mDecoLayer.getTileset().get(decoCell);
-		Image deco = new Image(instance.mDecoLayer.getTexture());
+		frame = mDecoLayer.getTileset().get(decoCell);
+		Image deco = new Image(mDecoLayer.getTexture());
 		deco.frame(frame);
 		img.addLayer(deco);
 		return img;
 
 	}
 
-	public static CompositeImage tile(int cell, int tileType) {
-
+	private CompositeImage tile(int cell, int tileType) {
 		if (tileType == -1) {
 			if (useExTiles()) {
 				return createTileImage(currentGroundCell(cell), currentDecoCell(cell));
 			}
 
-			CompositeImage img = new CompositeImage(instance.getTexture());
-			img.frame(instance.getTileset().get(Dungeon.level.map[cell]));
+			CompositeImage img = new CompositeImage(getTexture());
+			img.frame(getTileset().get(Dungeon.level.map[cell]));
 			return img;
 		} else {
 			if (useExTiles()) {
@@ -175,8 +172,8 @@ public class DungeonTilemap extends Tilemap {
 						xTilemapConfiguration.decoTile(Dungeon.level, cell));
 			}
 
-			CompositeImage img = new CompositeImage(instance.getTexture());
-			img.frame(instance.getTileset().get(tileType));
+			CompositeImage img = new CompositeImage(getTexture());
+			img.frame(getTileset().get(tileType));
 			return img;
 		}
 	}
@@ -208,14 +205,18 @@ public class DungeonTilemap extends Tilemap {
 
 	}
 
-	public void updateCell(int cell) {
+	public void updateCell(int cell, Level level) {
+
+		int x = level.cellX(cell);
+		int y = level.cellY(cell);
+
 		if (useExTiles()) {
 			mGroundMap[cell] = currentGroundCell(cell);
 			mDecoMap[cell] = currentDecoCell(cell);
-			mGroundLayer.updateRegion().union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
-			mDecoLayer.updateRegion().union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
+			mGroundLayer.updateRegion().union(x, y);
+			mDecoLayer.updateRegion().union(x, y);
 		} else {
-			updated.union(cell % Dungeon.level.getWidth(), cell / Dungeon.level.getWidth());
+			updated.union(x, y);
 		}
 	}
 }

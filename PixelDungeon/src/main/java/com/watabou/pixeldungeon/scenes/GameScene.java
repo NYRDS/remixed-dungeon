@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
@@ -586,7 +587,7 @@ public class GameScene extends PixelScene {
 
 	public static void updateMap(int cell) {
 		if (isSceneReady()) {
-			scene.tiles.updateCell(cell);
+			scene.tiles.updateCell(cell, Dungeon.level);
 		} else {
 			EventCollector.logException(new Exception("updateMap(int)"));
 		}
@@ -725,5 +726,12 @@ public class GameScene extends PixelScene {
 		if (isSceneReady()) {
 			scene.mobs.add(sprite);
 		}
+	}
+
+	public static Image getTile(int cell) {
+		if(isSceneReady()) {
+			return scene.tiles.tile(cell);
+		}
+		throw new TrackedRuntimeException("getTile");
 	}
 }
