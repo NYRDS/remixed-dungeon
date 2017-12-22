@@ -57,7 +57,7 @@ public class Stylus extends Item {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action == AC_INSCRIBE) {
+		if (action.equals(AC_INSCRIBE)) {
 
 			setCurUser(hero);
 			GameScene.selectItem( itemSelector, WndBag.Mode.INSCRIBABLE, TXT_SELECT_ARMOR );
