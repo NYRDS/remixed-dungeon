@@ -42,11 +42,9 @@ public class Dewdrop extends Item {
 	
 	@Override
 	public boolean doPickUp( Hero hero ) {
-		
-		DewVial vial = hero.belongings.getItem( DewVial.class );
-		
-		if (hero.hp() < hero.ht() || vial == null || vial.isFull()) {
-			
+		boolean collected = false;
+
+		if(hero.hp() < hero.ht()) {
 			int value = 1 + (Dungeon.depth - 1) / 5;
 
 			if (hero.heroClass == HeroClass.HUNTRESS || hero.heroClass == HeroClass.ELF) {
@@ -56,21 +54,29 @@ public class Dewdrop extends Item {
 			if(hero.subClass == HeroSubClass.WARDEN || hero.subClass == HeroSubClass.SHAMAN) {
 				value++;
 			}
-			
+
 			int effect = Math.min( hero.ht() - hero.hp(), value * quantity() );
 			if (effect > 0) {
 				hero.hp(hero.hp() + effect);
 				hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 				hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
+				collected = true;
 			}
-		} else {
+		}
+
+		DewVial vial = hero.belongings.getItem( DewVial.class );
+
+		if (!collected && vial != null && !vial.isFull()) {
 			vial.collectDew( this );
+			collected = true;
+		}
+
+		if (collected) {
+			Sample.INSTANCE.play(Assets.SND_DEWDROP);
+			hero.spendAndNext(TIME_TO_PICK_UP);
 		}
 		
-		Sample.INSTANCE.play( Assets.SND_DEWDROP );
-		hero.spendAndNext( TIME_TO_PICK_UP );
-		
-		return true;
+		return collected;
 	}
 	
 	@Override
