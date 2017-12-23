@@ -55,7 +55,7 @@ public class Heap implements Bundlable {
 	private static final int SEEDS_TO_POTION = 3;
 	
 	private static final String TXT_MIMIC = Game.getVar(R.string.Heap_Mimic);
-	
+
 	public enum Type {
 		HEAP, 
 		FOR_SALE, 
@@ -168,7 +168,14 @@ public class Heap implements Bundlable {
 		
 		return item;
 	}
-	
+
+	public void pickUpFailed() {
+		Item item = items.removeFirst();
+		items.addLast(item);
+
+		updateHeap();
+	}
+
 	public Item peek() {
 		return items.peek();
 	}
