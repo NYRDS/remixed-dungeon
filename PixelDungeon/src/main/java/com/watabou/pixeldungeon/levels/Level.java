@@ -993,12 +993,13 @@ public abstract class Level implements Bundlable {
 				|| terrain >= Terrain.WATER_TILES;
 	}
 
+	@NonNull
 	public Heap drop(Item item, int cell) {
-		if (map[cell] == Terrain.WALL){
+		if (solid[cell]){
 			for (int n : Level.NEIGHBOURS8) {
 				int p = n + cell;
 				if (cellValid(p)){
-					if (map[p] != Terrain.WALL){
+					if (!solid[p]){
 						cell = p;
 						break;
 					}
