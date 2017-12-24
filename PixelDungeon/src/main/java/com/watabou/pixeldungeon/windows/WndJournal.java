@@ -138,15 +138,19 @@ public class WndJournal extends WndTabbed {
 		
 		@Override
 		protected void layout() {
-			
-			icon.x = width - icon.width;
-			
-			depth.x = icon.x - 1 - depth.width();
-			depth.y = PixelScene.align( y + (height - depth.height()) / 2 );
-			
-			icon.y = depth.y - 1;
-			
-			feature.y = PixelScene.align( depth.y + depth.baseLine() - feature.baseLine() );
+
+			if(showLevels) {	// Only layout depth and icon if showing level entries
+				icon.x = width - icon.width;
+
+				depth.x = icon.x - 1 - depth.width();
+				depth.y = PixelScene.align(y + (height - depth.height()) / 2);
+
+				icon.y = depth.y - 1;
+
+				feature.y = PixelScene.align( depth.y + depth.baseLine() - feature.baseLine() );
+			} else {	// Layout needed only for feature text which is the log book entry
+				feature.y = PixelScene.align( y );
+			}
 		}
 	}
 
