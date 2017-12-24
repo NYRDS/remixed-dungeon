@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -172,7 +173,16 @@ public class WndJournal extends WndTabbed {
 
 			content.setSize(width, pos);
 		} else {	// Showing log book
+			float pos = 0;
+			for (String rec : GLog.logbookEntries) {
+				ListItem item = new ListItem( rec );
+				item.setRect(0, pos, width, LOGBOOK_ITEM_HEIGHT);
+				content.add(item);
 
+				pos += item.height();
+			}
+
+			content.setSize(width, pos);
 		}
 	}
 }
