@@ -126,4 +126,8 @@ public class WndJournal extends WndTabbed {
 			feature.y = PixelScene.align( depth.y + depth.baseLine() - feature.baseLine() );
 		}
 	}
+
+	private void updateList(){
+
+	}
 }
