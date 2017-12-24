@@ -158,6 +158,7 @@ public class WndJournal extends WndTabbed {
 	private void updateList(){	// Update the list according to the selected tab
 		Component content = list.content();
 		content.clear();
+		list.scrollTo( 0, 0);	// Scroll to beginning in both cases
 
 		if(showLevels) {	// Showing levels
 			Collections.sort(Journal.records);
@@ -183,6 +184,9 @@ public class WndJournal extends WndTabbed {
 			}
 
 			content.setSize(width, pos);
+			if( pos >= list.height() ) {	// If scrollable, scroll to bottom to see the latest message
+				list.scrollTo( 0, pos - list.height() );
+			}
 		}
 	}
 }
