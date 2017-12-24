@@ -43,6 +43,7 @@ public class WndJournal extends WndTabbed {
 	private static final String TXT_LEVELS	= Game.getVar(R.string.WndJournal_Levels);
 	private static final String TXT_LOGBOOK	= Game.getVar(R.string.WndJournal_Logbook);
 
+	private Text       txtTitle;
 	private ScrollPane list;
 
 	private static boolean showLevels = true;	// Indicates which tab is visible
@@ -54,7 +55,7 @@ public class WndJournal extends WndTabbed {
 		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - 4*MARGIN);
 
 
-		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
+		txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		txtTitle.measure();
 		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (width - txtTitle.width()) / 2 );
@@ -83,26 +84,6 @@ public class WndJournal extends WndTabbed {
 		}
 
 		select(showLevels ? 0 : 1);
-		
-		Component content = new Component();
-		
-		Collections.sort( Journal.records );
-		
-		float pos = 0;
-		for (Journal.Record rec : Journal.records) {
-			ListItem item = new ListItem( rec.getFeature(), rec.depth );
-			item.setRect( 0, pos, width, ITEM_HEIGHT );
-			content.add( item );
-			
-			pos += item.height();
-		}
-		
-		content.setSize( width, pos );
-
-		ScrollPane list = new ScrollPane(content);
-		add(list);
-		
-		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 	}
 	
 	private static class ListItem extends Component {
@@ -153,7 +134,25 @@ public class WndJournal extends WndTabbed {
 		}
 	}
 
-	private void updateList(){
+	private void updateList(){	// Update the list according to the selected tab
+		Component content = new Component();
 
+		Collections.sort( Journal.records );
+
+		float pos = 0;
+		for (Journal.Record rec : Journal.records) {
+			ListItem item = new ListItem( rec.getFeature(), rec.depth );
+			item.setRect( 0, pos, width, ITEM_HEIGHT );
+			content.add( item );
+
+			pos += item.height();
+		}
+
+		content.setSize( width, pos );
+
+		ScrollPane list = new ScrollPane(content);
+		add(list);
+
+		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 	}
 }
