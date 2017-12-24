@@ -61,6 +61,11 @@ public class WndJournal extends WndTabbed {
 		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (width - txtTitle.width()) / 2 );
 		add(txtTitle);
 
+		list = new ScrollPane(new Component());
+
+		add(list);
+		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
+
 		boolean showLevels = WndJournal.showLevels;
 		Tab[] tabs = {	// Create two tabs that will be in the bottom of the window
 				new LabeledTab(this, TXT_LEVELS) {
@@ -135,7 +140,8 @@ public class WndJournal extends WndTabbed {
 	}
 
 	private void updateList(){	// Update the list according to the selected tab
-		Component content = new Component();
+		Component content = list.content();
+		content.clear();
 
 		Collections.sort( Journal.records );
 
@@ -149,10 +155,5 @@ public class WndJournal extends WndTabbed {
 		}
 
 		content.setSize( width, pos );
-
-		ScrollPane list = new ScrollPane(content);
-		add(list);
-
-		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 	}
 }
