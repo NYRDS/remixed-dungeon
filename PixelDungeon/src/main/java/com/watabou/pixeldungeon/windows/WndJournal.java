@@ -98,7 +98,7 @@ public class WndJournal extends WndTabbed {
 		
 		private Image icon;
 		
-		public ListItem( String text, int d ) {
+		public ListItem( String text, int d ) {	// This constructor is for level item - should include depth
 			super();
 			
 			feature.text( text );
@@ -111,6 +111,13 @@ public class WndJournal extends WndTabbed {
 				feature.hardlight( TITLE_COLOR );
 				depth.hardlight( TITLE_COLOR );
 			}
+		}
+
+		public ListItem( String text ) {	// This constructor is for log book messages, no depth
+			super();
+
+			feature.text( text );	// Add the text of log book entry
+			feature.measure();
 		}
 		
 		@Override
