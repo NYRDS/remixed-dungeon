@@ -37,7 +37,8 @@ import java.util.Collections;
 
 public class WndJournal extends WndTabbed {
 
-	private static final int ITEM_HEIGHT	= 18;
+	private static final int LEVEL_ITEM_HEIGHT	= 18;	// Height of a level entry
+	private static final int LOGBOOK_ITEM_HEIGHT = 12;	// Height of a log book entry
 
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
 	private static final String TXT_LEVELS	= Game.getVar(R.string.WndJournal_Levels);
@@ -159,7 +160,7 @@ public class WndJournal extends WndTabbed {
 			float pos = 0;
 			for (Journal.Record rec : Journal.records) {
 				ListItem item = new ListItem(rec.getFeature(), rec.depth);
-				item.setRect(0, pos, width, ITEM_HEIGHT);
+				item.setRect(0, pos, width, LEVEL_ITEM_HEIGHT);
 				content.add(item);
 
 				pos += item.height();
