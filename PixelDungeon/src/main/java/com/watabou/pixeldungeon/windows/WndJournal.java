@@ -62,7 +62,7 @@ public class WndJournal extends WndTabbed {
 		add(txtTitle);
 
 		boolean showLevels = WndJournal.showLevels;
-		Tab[] tabs = {
+		Tab[] tabs = {	// Create two tabs that will be in the bottom of the window
 				new LabeledTab(this, TXT_LEVELS) {
 					public void select(boolean value) {
 						super.select(value);
@@ -78,12 +78,12 @@ public class WndJournal extends WndTabbed {
 					}
 				}
 		};
-		for (Tab tab : tabs) {
+		for (Tab tab : tabs) {	// Add the tab buttons to the window
 			tab.setSize(width / tabs.length, tabHeight());
 			add(tab);
 		}
 
-		select(showLevels ? 0 : 1);
+		select(showLevels ? 0 : 1);	// Select the first tab and update the list
 	}
 	
 	private static class ListItem extends Component {
