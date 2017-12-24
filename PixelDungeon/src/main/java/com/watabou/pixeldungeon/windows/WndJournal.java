@@ -143,17 +143,21 @@ public class WndJournal extends WndTabbed {
 		Component content = list.content();
 		content.clear();
 
-		Collections.sort( Journal.records );
+		if(showLevels) {	// Showing levels
+			Collections.sort(Journal.records);
 
-		float pos = 0;
-		for (Journal.Record rec : Journal.records) {
-			ListItem item = new ListItem( rec.getFeature(), rec.depth );
-			item.setRect( 0, pos, width, ITEM_HEIGHT );
-			content.add( item );
+			float pos = 0;
+			for (Journal.Record rec : Journal.records) {
+				ListItem item = new ListItem(rec.getFeature(), rec.depth);
+				item.setRect(0, pos, width, ITEM_HEIGHT);
+				content.add(item);
 
-			pos += item.height();
+				pos += item.height();
+			}
+
+			content.setSize(width, pos);
+		} else {	// Showing log book
+
 		}
-
-		content.setSize( width, pos );
 	}
 }
