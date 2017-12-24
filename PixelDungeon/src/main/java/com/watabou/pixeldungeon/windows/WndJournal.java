@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.windows.elements.LabeledTab;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import java.util.Collections;
 
@@ -57,6 +59,30 @@ public class WndJournal extends WndTabbed {
 		txtTitle.measure();
 		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (width - txtTitle.width()) / 2 );
 		add(txtTitle);
+
+		boolean showLevels = WndJournal.showLevels;
+		Tab[] tabs = {
+				new LabeledTab(this, TXT_LEVELS) {
+					public void select(boolean value) {
+						super.select(value);
+						WndJournal.showLevels = value;
+						updateList();
+					}
+				},
+				new LabeledTab(this, TXT_LOGBOOK) {
+					public void select(boolean value) {
+						super.select(value);
+						WndJournal.showLevels = !value;
+						updateList();
+					}
+				}
+		};
+		for (Tab tab : tabs) {
+			tab.setSize(width / tabs.length, tabHeight());
+			add(tab);
+		}
+
+		select(showLevels ? 0 : 1);
 		
 		Component content = new Component();
 		
