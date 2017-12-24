@@ -33,11 +33,17 @@ import com.watabou.pixeldungeon.ui.Window;
 
 import java.util.Collections;
 
-public class WndJournal extends Window {
+public class WndJournal extends WndTabbed {
 
 	private static final int ITEM_HEIGHT	= 18;
-	
+
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
+	private static final String TXT_LEVELS	= Game.getVar(R.string.WndJournal_Levels);
+	private static final String TXT_LOGBOOK	= Game.getVar(R.string.WndJournal_Logbook);
+
+	private ScrollPane list;
+
+	private static boolean showLevels = true;	// Indicates which tab is visible
 
 	public WndJournal() {
 		
