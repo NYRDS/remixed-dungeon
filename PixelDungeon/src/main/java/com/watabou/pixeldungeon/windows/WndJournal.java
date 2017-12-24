@@ -118,6 +118,9 @@ public class WndJournal extends WndTabbed {
 
 			feature.text( text );	// Add the text of log book entry
 			feature.measure();
+
+			this.remove(depth);	// Remove depth and icon - log book entry has none of these
+			this.remove(icon);
 		}
 		
 		@Override
