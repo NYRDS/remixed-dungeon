@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.effects.NewFireball;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -40,14 +39,9 @@ import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.ui.PlayGamesButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
-import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.StatisticsButton;
 
 public class TitleScene extends PixelScene {
-
-	private static final    int GAP           = 2;
-	private static final int BTN_HEIGHT	= 16;
-	private static final int WIDTH		= 120;
 
 	private static final String TXT_PLAY = Game
 			.getVar(R.string.TitleScene_Play);
@@ -62,7 +56,7 @@ public class TitleScene extends PixelScene {
 
 	Text            pleaseSupport;
 	DonateButton    btnDonate;
-	
+
 	@Override
 	public void create() {
 		super.create();
@@ -91,40 +85,42 @@ public class TitleScene extends PixelScene {
 		placeTorch(title.x + title.width/2 - 5, title.y + title.height/2 + 5);
 		placeTorch(title.x + title.width/2 - 14, title.y + title.height/2 + 14) ;
 
-		RedButton btnBadges = new RedButton( TXT_BADGES ) {
+		DashboardItem btnBadges = new DashboardItem(TXT_BADGES, 3) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(BadgesScene.class);
 			}
 		};
-		btnBadges.setRect( 0, 0, WIDTH/2, BTN_HEIGHT );
+		btnBadges.setPos(w / 2 - btnBadges.width(), (h + height) / 2
+				- DashboardItem.SIZE);
 		add(btnBadges);
 
-		RedButton btnAbout = new RedButton(TXT_ABOUT) {
+		DashboardItem btnAbout = new DashboardItem(TXT_ABOUT, 1) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(AboutScene.class);
 			}
 		};
-		btnAbout.setRect( 0, 0, WIDTH/2, BTN_HEIGHT );
+		btnAbout.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
 		add(btnAbout);
 
-		RedButton btnPlay = new RedButton(TXT_PLAY) {
+		DashboardItem btnPlay = new DashboardItem(TXT_PLAY, 0) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(StartScene.class);
 			}
 		};
-		btnPlay.setRect( 0, 0, WIDTH/2, BTN_HEIGHT );
+		btnPlay.setPos(w / 2 - btnPlay.width(), btnAbout.top()
+				- DashboardItem.SIZE);
 		add(btnPlay);
 
-		RedButton btnHighscores = new RedButton(TXT_HIGHSCORES) {
+		DashboardItem btnHighscores = new DashboardItem(TXT_HIGHSCORES, 2) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(RankingsScene.class);
 			}
 		};
-		btnHighscores.setRect( 0, 0, WIDTH/2, BTN_HEIGHT );
+		btnHighscores.setPos(w / 2, btnPlay.top());
 		add(btnHighscores);
 
 		btnDonate = new DonateButton();
@@ -138,18 +134,19 @@ public class TitleScene extends PixelScene {
 		btnDonate.setPos((w - btnDonate.width()) / 2, pleaseSupport.y
 				- btnDonate.height());
 
-		float dashBaseline = btnDonate.top();
+		float dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 
 		if (PixelDungeon.landscape()) {
-			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline);
-			btnBadges.setPos(w / 2, dashBaseline);
-			btnPlay.setPos(btnHighscores.left() - btnPlay.width(), dashBaseline);
+			btnPlay.setPos(w / 2 - btnPlay.width() * 2, dashBaseline);
+			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
+			btnBadges.setPos(w / 2, dashBaseline + btnBadges.height()/3);
 			btnAbout.setPos(btnBadges.right(), dashBaseline);
 		} else {
-			btnPlay.setPos(w / 4, title.bottom() * 0.85f + GAP);
-			btnHighscores.setPos(w / 4, btnPlay.bottom());
-			btnBadges.setPos(w / 4, btnHighscores.bottom());
-			btnAbout.setPos(w / 4, btnBadges.bottom());
+			btnPlay.setPos(w / 2 - btnPlay.width(), btnAbout.top()
+					- DashboardItem.SIZE + 5);
+			btnHighscores.setPos(w / 2, btnPlay.top());
+			btnBadges.setPos(w / 2 - btnBadges.width(), dashBaseline + 5);
+			btnAbout.setPos(w / 2, dashBaseline + 5);
 		}
 
 		Archs archs = new Archs();
@@ -235,5 +232,59 @@ public class TitleScene extends PixelScene {
 		NewFireball fb = new NewFireball();
 		fb.setPos(x, y);
 		add(fb);
+	}
+
+	private static class DashboardItem extends Button {
+
+		public static final float SIZE = 48;
+
+		private static final int IMAGE_SIZE = 32;
+
+		private Image image;
+		private Text label;
+
+		public DashboardItem(String text, int index) {
+			super();
+
+			image.frame(image.texture.uvRect(index * IMAGE_SIZE, 0, (index + 1)
+					* IMAGE_SIZE, IMAGE_SIZE));
+			this.label.text(text);
+			this.label.measure();
+
+			setSize(SIZE, SIZE);
+		}
+
+		@Override
+		protected void createChildren() {
+			super.createChildren();
+
+			image = new Image(Assets.DASHBOARD);
+			add(image);
+
+			label = createText(GuiProperties.titleFontSize());
+			add(label);
+		}
+
+		@Override
+		protected void layout() {
+			super.layout();
+
+			image.x = align(x + (width - image.width()) / 2);
+			image.y = align(y);
+
+			label.x = align(x + (width - label.width()) / 2);
+			label.y = align(image.y + image.height() + 2);
+		}
+
+		@Override
+		protected void onTouchDown() {
+			image.brightness(1.5f);
+			Sample.INSTANCE.play(Assets.SND_CLICK, 1, 1, 0.8f);
+		}
+
+		@Override
+		protected void onTouchUp() {
+			image.resetColor();
+		}
 	}
 }
