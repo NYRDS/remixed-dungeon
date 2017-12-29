@@ -95,8 +95,8 @@ public class Journal {
 
 			try {
 				feature = Feature.valueOf( bundle.getString( FEATURE ) ).desc();
-			} catch (Exception e) {
-				EventCollector.logException(e, "old save");
+				EventCollector.logEvent("saves","old save: Journal.Feature");
+			} catch (Exception ignored) {
 			}
 
 			depth = bundle.getInt( DEPTH );
