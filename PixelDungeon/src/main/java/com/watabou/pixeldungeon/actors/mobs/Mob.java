@@ -509,11 +509,7 @@ public abstract class Mob extends Char {
 
 	private boolean runMobScript(String method, Object arg1, Object arg2) {
 		if (mobScript == null) {
-			if (scriptFile != null && !scriptFile.isEmpty()) {
-				mobScript = LuaEngine.module(scriptFile);
-			} else {
-				mobScript = LuaEngine.module("scripts/mobs/Dummy");
-			}
+			mobScript=LuaEngine.module(scriptFile,"scripts/mobs/Dummy");
 		}
 
 		return mobScript.invokemethod(method,new LuaValue[]{

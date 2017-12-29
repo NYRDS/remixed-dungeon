@@ -8,6 +8,7 @@ package com.nyrds.android.lua;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.luaj.vm2.Globals;
@@ -61,8 +62,13 @@ public class LuaEngine implements ResourceFinder {
 		return LuaValue.NIL;
 	}
 
-	public static LuaTable module(String module) {
-		return getEngine().call("require", module).checktable();
+	public static LuaTable module(String module, String fallback) {
+		try {
+			return getEngine().call("require", module).checktable();
+		} catch (org.luaj.vm2.LuaError error) {
+			EventCollector.logException(error);
+			return getEngine().call("require", fallback).checktable();
+		}
 	}
 
 	private class resLoader extends OneArgFunction {
