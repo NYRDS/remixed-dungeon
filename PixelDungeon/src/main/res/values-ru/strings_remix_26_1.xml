@@ -6,7 +6,7 @@
     <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Name_Objective">стражника</string>
     <string name="TownGuardNPC_Desc">Типичный городской стражник.</string>
-    <string name="TownGuardNPC_Message1">Проходим не задерживаемся.</string>
+    <string name="TownGuardNPC_Message1">Проходим, не задерживаемся.</string>
     <string name="TownGuardNPC_Message2">Благодаря таким людям, как ты, город стал гораздо безопаснее.</string>
     <string name="TownGuardNPC_Message3">Думаешь здесь слишком много стражников? Это ведь единственный город в котором находится спуск в гигантское подземелье, захваченное монстрами, не так ли?</string>
 

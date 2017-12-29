@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
-  <string name="Guts_TileGrass">Высохший кустарник.</string>
+  <string name="Guts_TileGrass">Высохший кустарник</string>
   <string name="Guts_TileHighGrass">Высохший кустарник</string>
   <string name="Guts_TileWater">Странная склизкая жидкость.</string>
   <string name="Guts_TileDescEntrance">Дыра в потолке ведёт к верхним уровням.</string>
