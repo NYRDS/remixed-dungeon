@@ -31,6 +31,7 @@ public class AzuterronNPC extends NPC {
 	private static final String TXT_QUEST = Game.getVar(R.string.AzuterronNPC_Quest_Reminder);
 	
 	public AzuterronNPC() {
+		movable = false;
 	}
 	
 	@Override
