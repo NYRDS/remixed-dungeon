@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.effects.NewFireball;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -51,9 +52,11 @@ public class TitleScene extends PixelScene {
 	private static final String TXT_ABOUT = Game
 			.getVar(R.string.TitleScene_About);
 
+	private static final String REMIXED_TITLE = "title.png";
+
 	Text            pleaseSupport;
 	DonateButton    btnDonate;
-	
+
 	@Override
 	public void create() {
 		super.create();
@@ -68,18 +71,19 @@ public class TitleScene extends PixelScene {
 
 		float height = 180;
 
-		Image title = BannerSprites.get(BannerSprites.Type.PIXEL_DUNGEON);
+		Image title = new Image(REMIXED_TITLE);
 		add(title);
 
 		title.x = (w - title.width()) / 2;
-		title.y = (title.height() * 0.3f) / 2;
+		title.y = (title.height() * 0.10f) / 2;
 
 		if (PixelDungeon.landscape()){
 			title.y = -(title.height() * 0.05f);
 		}
 
-		placeTorch(title.x + 18, title.y + 50);
-		placeTorch(title.x + title.width - 18, title.y + 50);
+		placeTorch(title.x + title.width/2 + 3, title.y + title.height/2 - 3);
+		placeTorch(title.x + title.width/2 - 5, title.y + title.height/2 + 5);
+		placeTorch(title.x + title.width/2 - 14, title.y + title.height/2 + 14) ;
 
 		DashboardItem btnBadges = new DashboardItem(TXT_BADGES, 3) {
 			@Override
@@ -133,16 +137,16 @@ public class TitleScene extends PixelScene {
 		float dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 
 		if (PixelDungeon.landscape()) {
-			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline);
-			btnBadges.setPos(w / 2, dashBaseline);
-			btnPlay.setPos(btnHighscores.left() - btnPlay.width(), dashBaseline);
+			btnPlay.setPos(w / 2 - btnPlay.width() * 2, dashBaseline);
+			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
+			btnBadges.setPos(w / 2, dashBaseline + btnBadges.height()/3);
 			btnAbout.setPos(btnBadges.right(), dashBaseline);
 		} else {
-			btnBadges.setPos(w / 2 - btnBadges.width(), dashBaseline);
-			btnAbout.setPos(w / 2, dashBaseline);
 			btnPlay.setPos(w / 2 - btnPlay.width(), btnAbout.top()
-					- DashboardItem.SIZE);
+					- DashboardItem.SIZE + 5);
 			btnHighscores.setPos(w / 2, btnPlay.top());
+			btnBadges.setPos(w / 2 - btnBadges.width(), dashBaseline + 5);
+			btnAbout.setPos(w / 2, dashBaseline + 5);
 		}
 
 		Archs archs = new Archs();
@@ -225,7 +229,7 @@ public class TitleScene extends PixelScene {
 	}
 
 	private void placeTorch(float x, float y) {
-		Fireball fb = new Fireball();
+		NewFireball fb = new NewFireball();
 		fb.setPos(x, y);
 		add(fb);
 	}
