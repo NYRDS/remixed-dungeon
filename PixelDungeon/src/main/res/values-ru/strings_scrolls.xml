@@ -65,7 +65,7 @@
   <string name="ScrollOfRecharging_Info1b">поток энергии пробежал сквозь твой рюкзак, перезарядив волшебные палочки</string>
   <string name="ScrollOfRecharging_Info2">поток энергии пробежал сквозь твой рюкзак, но ничего не изменилось</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
-  <string name="ScrollOfRemoveCurse_Name">Свиток Снятия Проклятия</string>
+  <string name="ScrollOfRemoveCurse_Name">Свиток Снятия Проклятья</string>
   <string name="ScrollOfRemoveCurse_Info">Прочитав этот свиток, ты призовёшь волшебную силу, которая развеет проклятья со всех предметов, позволяя тебе их снять.</string>
   <string name="ScrollOfRemoveCurse_Proced">Очистительный свет озаряет твой рюкзак, изгоняя зловещую силу.</string>
   <string name="ScrollOfRemoveCurse_NoProced">Очистительный свет озаряет твой рюкзак, но ничего не изменилось.</string>

@@ -70,7 +70,7 @@
     <string name="Necromancy_Title">Некромантия</string>
 
     <!-- STRINGS OF WndSadGhostNecro CLASS -->
-    <string name="WndSadGhostNecro_Text">\"Над этим призраком тяготит проклятие. Кажется, что он хочет о чём-то меня попросить. С помощью некромантии, я  мог бы убедить его, что просьба исполнена. Это сэкономит мне время. Но стоит ли так поступать?\"</string>
+    <string name="WndSadGhostNecro_Text">\"Над этим призраком тяготит проклятье. Кажется, что он хочет о чём-то меня попросить. С помощью некромантии, я  мог бы убедить его, что просьба исполнена. Это сэкономит мне время. Но стоит ли так поступать?\"</string>
     <string name="WndSadGhostNecro_Yes">Да, подчинить его волю.</string>
     <string name="WndSadGhostNecro_No">Нет, пусть говорит.</string>
     <string name="WndSadGhostNecro_Persuaded">Печальный призрак был подчинён!</string>
