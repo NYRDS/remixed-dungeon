@@ -46,7 +46,7 @@ public class Kusarigama extends SpecialWeapon {
 				if (Dungeon.level.distance(getCurUser().getPos(), hitCell) < 4) {
 					Char chr = Actor.findChar(hitCell);
 					
-					if (chr != null) {
+					if (chr != null && chr.isMovable()) {
 						chr.move(Ballistica.trace[1]);
 						chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
 
@@ -58,7 +58,6 @@ public class Kusarigama extends SpecialWeapon {
 					drawChain(Ballistica.trace[4]);
 				}
 			}
-
 		}
 
 		@Override
