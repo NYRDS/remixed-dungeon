@@ -80,7 +80,7 @@ abstract public class ClassArmor extends Armor {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if (hero.getSoulPoints() > 0 && hero.getSoulPoints() >= hero.getSoulPointsMax()/specialCostModifier && isEquipped( hero )) {
+		if (hero.getSoulPoints() >= hero.getSoulPointsMax()/specialCostModifier && isEquipped( hero )) {
 			actions.add( special() );
 		}
 		return actions;
@@ -89,15 +89,17 @@ abstract public class ClassArmor extends Armor {
 	@Override
 	public void execute( Hero hero, String action ) {
 		if (action.equals(special())) {
-			
-			if (hero.getSoulPoints() <= 0 && hero.getSoulPoints() < hero.getSoulPointsMax()/specialCostModifier) {
+
+			int cost = hero.getSoulPointsMax()/specialCostModifier;
+
+			if (hero.getSoulPoints() < cost) {
 				GLog.w( TXT_LOW_MANA );
 			} else if (!isEquipped( hero )) {
 				GLog.w( TXT_NOT_EQUIPPED );
 			} else {
 				setCurUser(hero);
 				doSpecial();
-				hero.spendSoulPoints(hero.getSoulPointsMax()/specialCostModifier);
+				hero.spendSoulPoints(cost);
 			}
 			
 		} else {	
