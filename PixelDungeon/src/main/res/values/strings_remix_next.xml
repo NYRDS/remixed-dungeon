@@ -2,4 +2,7 @@
 <resources>
 
 
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Levels</string>
+    <string name="WndJournal_Logbook">Logbook</string>
 </resources>

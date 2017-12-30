@@ -184,8 +184,6 @@
 
     <!-- STRINGS OF WndJournal CLASS -->
     <string name="WndJournal_Title">Journal</string>
-    <string name="WndJournal_Levels">Levels</string>
-    <string name="WndJournal_Logbook">Logbook</string>
 
     <!-- STRINGS OF WndRanking CLASS -->
     <string name="WndRanking_Error">Unable to load additional information</string>
