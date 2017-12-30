@@ -328,11 +328,7 @@ public class Hero extends Char {
 		levelId = bundle.optString(LEVEL_ID, "unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
-		Collection<Mob> _pets = bundle.getCollection(PETS, Mob.class);
-
-		for (Mob pet : _pets) {
-			pets.add(pet);
-		}
+		pets.addAll(bundle.getCollection(PETS, Mob.class));
 
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
 		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
@@ -1856,18 +1852,18 @@ public class Hero extends Char {
 		this.gender = gender;
 	}
 
-	public void spawnPets() {
+	public void spawnPets(Level level) {
 		refreshPets();
 
 		for (Mob pet : pets) {
-			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
-			if (cell == -1) {
+			int cell = level.getEmptyCellNextTo(getPos());
+			if (!level.cellValid(cell)) {
 				cell = getPos();
 			}
 			pet.setPos(cell);
 
 			pet.setState(pet.WANDERING);
-			Dungeon.level.spawnMob(pet);
+			level.spawnMob(pet);
 			pet.regenSprite();
 		}
 	}

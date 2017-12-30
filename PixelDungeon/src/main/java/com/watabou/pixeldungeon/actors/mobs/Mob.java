@@ -535,9 +535,10 @@ public abstract class Mob extends Char {
 	public void die(Object cause) {
 		runMobScript("onDie",cause);
 
+		Hero hero = Dungeon.hero;
+
 		{
 			//TODO we should move this block out of Mob class
-			Hero hero = Dungeon.hero;
 			if (hero.heroClass == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
 					if(hero.belongings.armor instanceof NecromancerRobe){
@@ -553,7 +554,6 @@ public abstract class Mob extends Char {
 		}
 
 		{
-			Hero hero = Dungeon.hero;
 			if (hero.isAlive()) {
 				if (isHostile()) {
 					Statistics.enemiesSlain++;
@@ -582,11 +582,11 @@ public abstract class Mob extends Char {
 
 		Library.identify(Library.MOB,getMobClassName());
 
-		if (Dungeon.hero.lvl() <= maxLvl + 2) {
+		if (hero.lvl() <= maxLvl + 2) {
 			dropLoot();
 		}
 
-		if (Dungeon.hero.isAlive() && !Dungeon.visible[getPos()]) {
+		if (hero.isAlive() && !Dungeon.visible[getPos()]) {
 			GLog.i(TXT_DIED);
 		}
 	}

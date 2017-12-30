@@ -246,12 +246,14 @@ public class InterlevelScene extends PixelScene {
 
 		Dungeon.switchLevel(level, level.entrance, next.levelId);
 		
-		Dungeon.hero.spawnPets();
+		Dungeon.hero.spawnPets(level);
 	}
 
 	private void fall() throws IOException {
 
 		Actor.fixTime();
+
+		Dungeon.level.removePets();
 		Dungeon.saveLevel();
 		
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
@@ -277,13 +279,14 @@ public class InterlevelScene extends PixelScene {
 
 		Dungeon.switchLevel(level, level.getExit(exitIndex), next.levelId);
 
-		Dungeon.hero.spawnPets();
+		Dungeon.hero.spawnPets(level);
 	}
 
 	private void returnTo() throws IOException {
 
 		Actor.fixTime();
 
+		Dungeon.level.removePets();
 		Dungeon.saveLevel();
 		Dungeon.depth = DungeonGenerator.getLevelDepth(returnTo.levelId);
 		
@@ -292,6 +295,7 @@ public class InterlevelScene extends PixelScene {
 		returnTo.computeCell(level);
 
 		Dungeon.switchLevel(level, returnTo.cellId, returnTo.levelId);
+		Dungeon.hero.spawnPets(level);
 	}
 
 	private void problemWithSave() {
