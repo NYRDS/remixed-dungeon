@@ -82,6 +82,7 @@ public abstract class Mob extends Char {
 	protected static final String TXT_EXP  = "%+dEXP";
 
 	private static final float SPLIT_DELAY = 1f;
+	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 
 	public AiState SLEEPING  = new Sleeping();
 	public AiState HUNTING   = new Hunting();
@@ -89,8 +90,8 @@ public abstract class Mob extends Char {
 	public AiState FLEEING   = new Fleeing();
 	public AiState PASSIVE   = new Passive();
 
-	@Packable (defaultValue = "scripts/mobs/Dummy")
-	protected String scriptFile;
+	@Packable (defaultValue = DEFAULT_MOB_SCRIPT)
+	protected String scriptFile = DEFAULT_MOB_SCRIPT;
 
 	private LuaTable mobScript;
 
@@ -507,12 +508,14 @@ public abstract class Mob extends Char {
 		super.die(this);
 	}
 
+	private boolean mobScriptLoaded;
 	private boolean runMobScript(String method, Object arg1, Object arg2) {
-		if (mobScript == null) {
-			mobScript=LuaEngine.module(scriptFile,"scripts/mobs/Dummy");
+		if (!mobScriptLoaded) {
+			mobScript=LuaEngine.module(scriptFile, DEFAULT_MOB_SCRIPT);
+			mobScriptLoaded = true;
 		}
 
-		return mobScript.invokemethod(method,new LuaValue[]{
+		return mobScript!= null && mobScript.invokemethod(method,new LuaValue[]{
 				CoerceJavaToLua.coerce(this),
 				CoerceJavaToLua.coerce(arg1),
 				CoerceJavaToLua.coerce(arg2)})

@@ -6,6 +6,7 @@ package com.nyrds.android.lua;
  */
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -62,13 +63,24 @@ public class LuaEngine implements ResourceFinder {
 		return LuaValue.NIL;
 	}
 
+	@Nullable
 	public static LuaTable module(String module, String fallback) {
-		try {
-			return getEngine().call("require", module).checktable();
-		} catch (org.luaj.vm2.LuaError error) {
-			EventCollector.logException(error);
-			return getEngine().call("require", fallback).checktable();
+		LuaValue luaModule = getEngine().call("require", module);
+
+		if(luaModule.istable()) {
+			return luaModule.checktable();
 		}
+
+		EventCollector.logEvent("LuaError","failed to load lua module:",module);
+
+		luaModule = getEngine().call("require", fallback);
+
+		if(luaModule.istable()) {
+			return luaModule.checktable();
+		}
+
+		EventCollector.logEvent("LuaError","failed to load fallback lua module:",fallback);
+		return null;
 	}
 
 	private class resLoader extends OneArgFunction {
