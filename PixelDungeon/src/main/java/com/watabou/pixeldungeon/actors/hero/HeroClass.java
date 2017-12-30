@@ -22,13 +22,9 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
-import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
 import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -43,19 +39,9 @@ import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
-import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.potions.PotionOfMight;
-import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.Artifact;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfSummoning;
-import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
-import com.watabou.pixeldungeon.items.weapon.melee.Spear;
-import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -77,7 +63,7 @@ public enum HeroClass {
 
 	private String    title;
 	private Abilities abilities;
-	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset("hero/initHeroes.json");
+	static private JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG ? "hero/initHeroesDebug.json":"hero/initHeroes.json");
 
 	private        boolean isSpellUser;
 	private static String  magicAffinity;
@@ -102,19 +88,13 @@ public enum HeroClass {
 	}
 
 	public boolean allowed() {
-		if (initHeroes.has(name())) {
-			return true;
-		}
-		return false;
+		return initHeroes.has(name());
 	}
 
 	public void initHero(Hero hero) {
 		hero.heroClass = this;
 		initCommon(hero);
 		initForClass(hero, hero.heroClass.name());
-
-		if (BuildConfig.DEBUG) initDebug(hero);
-
 
 		hero.setGender(getGender());
 
@@ -126,33 +106,6 @@ public enum HeroClass {
 			}
 		}
 		hero.updateAwareness();
-	}
-
-	private static void initDebug(Hero hero) {
-		for (int i = 0; i < 100; i++) {
-			hero.collect(new ScrollOfMagicMapping().identify());
-			hero.collect(new ScrollOfIdentify().identify());
-			hero.collect(new ManaPotion());
-			hero.collect(new ScrollOfSummoning());
-		}
-
-		hero.collect(new BlackSkull().identify());
-		hero.collect(new TomeOfKnowledge());
-		hero.collect(new TomeOfKnowledge());
-		hero.collect(new SpellBook());
-		hero.collect(new SpellBook());
-		hero.collect(new SpellBook());
-		hero.collect(new Spear().identify().upgrade(100));
-		hero.collect(new Sword().identify().upgrade(7));
-
-		hero.collect(new NecromancerArmor().identify().upgrade(9));
-
-		hero.ht(1000);
-		hero.hp(1000);
-		hero.attackSkill = 1000;
-
-		Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
-		hero.defenseSkill = 10;
 	}
 
 	private static void initForClass(Hero hero, String className) {
@@ -167,7 +120,6 @@ public enum HeroClass {
 				if (classDesc.has("weapon")) {
 					KindOfWeapon weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
 					hero.belongings.weapon = weapon;
-					weapon.actions(hero);
 				}
 
 				if (classDesc.has("ring1")) {
