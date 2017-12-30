@@ -3,26 +3,26 @@
   <!--PACKAGE /items/Wands-->
   <!--STRINGS OF Wand CLASS-->
   <string name="Wand_Name">%s Zauberstab</string>
-  <string name="Wand_ACZap">zappen</string>
+  <string name="Wand_ACZap">ZAPP</string>
   <string name="Wand_Wood">Dieser %s Zauberstab fühlt sich warm an. Was wohl passiert wenn man ihn benutzt?</string>
   <string name="Wand_Damage">Wenn dieser Zauberstab im Nahkampf benutzt wird, beträgt der durchschnittliche Schaden %d Punkte pro Treffer.</string>
   <string name="Wand_Weapon">Du kannst diesen Zauberstab als Nahkampfwaffe benutzen.</string>
   <string name="Wand_Fizzles">Dein Zauberstab funkelt nur, seine Ladungen sind wohl verbraucht.</string>
   <string name="Wand_SelfTarget">Du kannst dich nicht selber anvisieren</string>
-  <string name="Wand_Prompt">Entscheide wohin du zappen möchtest</string>
+  <string name="Wand_Prompt">Entscheide wohin du schießen möchtest</string>
   <string-array name="Wand_Wood_Types">
-    <item>Stichpalme</item>
-    <item>Eibe</item>
+    <item>Stechpalmen</item>
+    <item>Eiben</item>
     <item>Ebenholz</item>
-    <item>Kirsche</item>
+    <item>Kirschen</item>
     <item>Teak</item>
     <item>Vogelbeere</item>
-    <item>Weide</item>
+    <item>Weiden</item>
     <item>Mahagoni</item>
     <item>Bambus</item>
     <item>Purpurherz</item>
-    <item>Eiche</item>
-    <item>Birke</item>
+    <item>Eichen</item>
+    <item>Birken</item>
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
   <string name="WandOfAmok_Name">Zauberstab des Amoklaufs</string>
