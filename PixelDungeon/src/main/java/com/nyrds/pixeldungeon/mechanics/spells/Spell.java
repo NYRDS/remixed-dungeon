@@ -59,6 +59,11 @@ public class Spell {
 	}
 
     public boolean cast(@NonNull final Char chr){
+
+        if(!chr.isAlive()) {
+            return false;
+        }
+
 	    if(chr instanceof Hero) {
 		    final Hero hero = (Hero)chr;
 
