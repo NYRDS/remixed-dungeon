@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
 
     <!-- Items descriptions -->
-    <string name="Item_Info2">something</string>
+    <string name="Item_Info2">нечто</string>
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
-    <string name="NecromancerArmor_Info2">Некромант, облачённый в эти доспехи, сможет использовать способность \"Некротизм\", которая распространяет магическую чуму, способную заразить любое существо, оказавшееся поблизости, живое или мёртвое.</string>
+    <string name="NecromancerArmor_Info2">В этой броне некромант может призвать \"Некротизм\", ужасающую болезнь поражающую любое существо в поле зрения, мертвое или живое.</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
-    <string name="NecromancerRobe_Info2">Чёрная магия, пронизывающая эту робу, позволит Некроманту поглощать души павших монстров.</string>
+    <string name="NecromancerRobe_Info2">Это роба напитана темной магией позволяющей Некроманту пленять души падших от его руки существ.</string>
 
     <!-- STRINGS OF Necrotism CLASS -->
     <string name="Necrotism_Info">Некротизм</string>
     <string name="Necrotism_ACSpecial">НЕКРОТИЗМ</string>
-    <string name="ResultDescriptions_Necrotism">Умер от некротизма на %d уровне</string>
-    <string name="Necrotism_Death">Тебя погубил некротизм...</string>
+    <string name="ResultDescriptions_Necrotism">Умер от Некротизма на уровне %d</string>
+    <string name="Necrotism_Death">Вы умерли от некротизма...</string>
     <string name="Badges_DeathNecrotism">Смерть от некротизма</string>
 
     <!-- STRINGS OF Spell CLASS -->
-    <string name="Spell_SelectACell">Выберите цель.</string>
+    <string name="Spell_SelectACell">Выберете цель</string>
 
 </resources>

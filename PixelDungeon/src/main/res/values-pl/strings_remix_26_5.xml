@@ -1,3 +1,44 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">Lodowa Poświata</string>
+
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenDagger CLASS -->
+    <string name="ElvenDagger_Name">elficki sztylet</string>
+    <string name="ElvenDagger_Info">Broń tą wykonano ze specyficznego stopu metali, sprawiając że jest dużo lżejszy w porównaniu do zwykłego sztyletu.</string>
+    <string name="ElvenDagger_Gender">męski</string>
+
+
+    <!-- STRINGS OF IceGuardianCoreModule CLASS -->
+    <string name="IceGuardianCoreModule_Name">Rdzeń Lodowwgo Strażnika</string>
+    <string name="IceGuardianCoreModule_Info">To skomplikowana struktura utworzona z magicznego lodu. Świecący kryształ umiejscowiony jest w samym środku tego dziwnego urządzenia.</string>
+
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">Pierścień Zimna</string>
+    <string name="RingOfFrost_Info">Pierścień ten został wykuty z magicznego lodu. Jego posiadacz chroniony jest przez lodową poświatę, spowalniając oraz raniąc atakujących go przeciwników.</string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">Pancerz Królowej Pająków</string>
+    <string name="SpiderQueenCarapace_Info">Fragmęt pancerza Królowej Pająków. Możesz dostrzec kawałki pajęczy wewnątrz, wygląda nadwyraz żywo.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">Cz-cześć. Witam w Bibliotece. Możesz tu znaleść informacje o różnorakich rzeczach, które moższ znaleść w lochach... tak naprawde możemy ostarczyć informacji tylko o ty co zostało odkryte przez podróżników. To.. to jest troche żenujące. Więc za każdym razem kiedy nas odwiedzisz, to pewnie znajdziesz coś nowego do czyania.</string>
+
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF LibraryBook CLASS -->
+    <string name="LibraryBook_Name">Książka z biblioteki</string>
+    <string name="LibraryBook_Description">Jest naprawde ogromna książka. Trzyma ona całą wiedzę, jaką podróżnicy zdobyli w podziemiach.</string>
+
+
+    <!-- Wnd descriptions -->
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_moveTimeout">Przerwa w ruchu:%s</string>
+
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">Pułapka</string>
+    <string name="TrapWnd_Step">Czy naprawde chxesz stanąć na tę pułapę? Prawdopodobnie zginesz.</string>
+</resources>

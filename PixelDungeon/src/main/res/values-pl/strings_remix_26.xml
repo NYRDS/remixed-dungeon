@@ -41,6 +41,12 @@
     <string name="IceGuardian_Name_Objective">lodowy gwardzista</string>
     <string name="IceGuardian_Desc">Lodowa Gwardia została stworzona przez starożytne koboldy w celu obrony i patrolowania jaskiń. Ich cała energia życiowa jest przechowywana w specjalnych rdzeniach, które pozwalają Lodowym Gwardzistom na odbudowanie swoich ciał po śmierci, o ile będą miały wystarczająco dużo mocy.</string>
 
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">Lodowy strażnik</string>
+    <string name="IceGuardianCore_Gender">męski</string>
+    <string name="IceGuardianCore_Name_Objective">Lodowy strażnik</string>
+    <string name="IceGuardianCore_Desc">Lodowi strażnicy stworzone przez starożytne kobolty do obrony ich jaskiń. Energia zgromadzona w jego rdzeniu pozwala lodowemu strażnikowi na rekonstrukcje dopuki posiada wystarczająco energii.</string>
+
     <!-- STRINGS OF CagedKobold CLASS -->
     <string name="CagedKobold_Name">uwięziony kobold</string>
     <string name="CagedKobold_Gender">męski</string>

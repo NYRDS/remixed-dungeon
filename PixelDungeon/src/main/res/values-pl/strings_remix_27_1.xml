@@ -1,3 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">Portal</string>
+    <string name="WndPortal_Info">Ten portal pozwala na powrót do miasta. Wygląda raczej nie stabilnie, pewnie nie będzie za długo atywny.\nChciałbyś go użyć ?</string>
+    <string name="WndPortal_Info_Return">Ten portal zabierze cię spowotem do podziemia.\nChciałbyś go użyć ?</string>
+
+    <string name="WndPortal_Warning_Title">Uwaga Portal!</string>
+    <string name="WndPortal_Warning_Info">Nie użyłeś portalu na tym poziomie. Po oouszczeniu niebbędziesz mógł użyć go ponownie!\n Napewno chcesz odejść ?</string>
+
+    <string name="PortalGate_Name">Portal</string>
+    <string name="PortalGate_Desc">Żłobienia na powierzchni portau tworzą dziwaczny wzrór. Wygląda on jak gigantyczny tunel prowadzący w odchłań. Jednak spoglądając na niego z boku widzisz że jego tafla jest niemal idealne płaska.</string>
+    <string name="PortalGate_Desc_Activated">Portal ten emanuje jakiegoś rodzaju świecącą materią. Wygląda na to że jest perfekcujnie równy , nielicząc falowania emanującego z jego wnętrza.</string>
+
+    <string name="PortalGate_Activated">Aktywowano starożytny portal !</string>
+    <string name="PortalGate_Used">Dotkąłeś portalu iii... nic się nie stało...</string>
+
+    <string name="PortalExit_Desc">.Ten portal zabierze cię na pierwszy poziom %s</string>
+    <string name="PortalExit_Desc_SpiderNest">Leżę Pająków</string>
+    <string name="PortalExit_Desc_Necropolis">Nekropolis</string>
+    <string name="PortalExit_Desc_IceCaves">Lodowe Jaskinie</string>
+
+
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Pożerać ?</string>
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Kamienna Krew.</string>
+</resources>

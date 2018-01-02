@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <!-- Items descriptions -->
+    <string name="Item_Info2">etwas</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">Diese Rüstung  verleiht dem Nekromanten die Fähigkeit \"Nekrose\", welche eine magische Seuche, welche einige Kreaturen in der näheren Umgebung infiziert, tot oder lebendig.</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">Diese Robe ist voller dunkler Magie und erlaubt dem Nekromanten die Seelen der gefallenen Monster zu absorbieren.</string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">Nekrose</string>
+    <string name="Necrotism_ACSpecial">NEKROSE</string>
+    <string name="ResultDescriptions_Necrotism">An Nekrose gestorben auf level %d</string>
+    <string name="Necrotism_Death">Du bist an Nekrose gestorben...</string>
+    <string name="Badges_DeathNecrotism">Tod durch Nekrose</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">Wähle ein Zielfeld.</string>
+
+</resources>

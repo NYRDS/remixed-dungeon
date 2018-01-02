@@ -6,9 +6,9 @@
 -Elfy</string>
   <string name="Welcome_Text_19">
         remix.17:\n
-        - Nowa raza mimików\n
+        - Nowa rasa mimików\n
         remix.18:\n
-        - Żywiłaki\n
+        - Żywiołaki\n
         remix.19:\n
         - Pająki\n
         - Pajęcze poziomy\n
@@ -40,4 +40,82 @@
         remix.21.2:\n
         - Możliwość wybrania modów do gry (na razie tylko zmiana tekstur ) ( Tylko dla doświadczonych moderów) \n
         </string>
+  <string name="Welcome_Text_21_3">
+        remix.21.3:\n
+        - Tryb mini PD dostępny do pobrania (jeszcze nie ukończony jednak i tak pełen frajdy  )\n
+        - Poprawione tekstury ścieków
+        </string>
+  <string name="Welcome_Text_21_4">
+        remix.21.4:\n
+        - Nowa rzadka broń - miecz ofiarny</string>
+  <string name="Welcome_Text_21_5">
+        remix.21.5:\n
+        - Nowe parametry dla starszych przedmiotów
+        </string>
+  <string name="Welcome_Text_22">
+        remix.22:\n
+        - Nowy ukryty boss
+        </string>
+  <string name="Welcome_Text_23">
+        remix.23:\n
+        - Loch ma teraz 32 pozomy (zamiast 26)\n
+        - Ukryty boss przeniesiony na 25 poziom\n
+        - Znacznie zwiększona ilość mini-bossów dla finalnej walki( zamiast 2 pięści, Yog może teraz wybierać z 5 mini bossów do przyzwania)\n
+        - Nowe ustawienia i potwory dla poziomów 27-31
+        </string>
+  <string name="Welcome_Text_23_1">
+        remix.23.1:\n
+        - Nowy sklep,NPC oraz zadania na poziomi 27\n
+        - Nowy potwór dla Legowiska Demonów(27-31)\n
+        -  Wszystkie potwory oraz bossownie na poziomie 27-32 oraz ich umiejętności stały się potężniejsze\n
+		- Zaktualizowane odznaki bossów\n
+		- Kilka drobnych ulepszeń graficznych\n
+		- Naprawiono różnorakie błędy\n
+        </string>
+  <string name="Welcome_Text_23_2">
+        remix.23.2:\n
+        - Dodano 6 Poziom broni oraz zbroi\n
+        - Dodano kusze\n
+        - Dodano Zbroję Chaosu\n
+        </string>
+  <string name="Welcome_Text_24">
+        remix.24:\n
+        - Mamy Kapelusze ! (przedmioty wizualne)\n
+        -  Naprawiono różnorakie błędny\n
+        -  Zaktualizowane tłumaczenia \n
+        </string>
+  <string name="Welcome_Text_24_1">
+        remix.24.1:\n
+        --Gra--\n
+        - Nowe stworzenie: Uzbrojona statua \n
+        - Nowe rzadkie stworzenia: Pajęczy strażnik (Rzadki odpowiednik Pajęczego żołnierza) oraz Bursztynowy Pająk (Rzadki odpowiednik Mentalnego Pająka)\n
+        -Gracz może teraz usuwać zapisane pliki\n
+        - Poprawiona oprawa wizualna dla Legowiska Pająków\n
+        --Przedmioty wizualne--\n
+        - Kupno nowego przedmiotu automatycznie go wyposaży \n
+        - Nowy przedmiot \"Zestaw Pirata\"\n
+        - Poprawiona oprawa graficzna dla Kocich oraz Króliczych Uszu\n
+        </string>
+  <string name="Welcome_Text_27_3">
+         remix.27.3\n
+  - Nowy przedmiot: Zwój Przyzwania\n
+  - Krople Rosy nie mają już priorytetu podczas podnoszenia . Jeśli na rosie leży przedmiot to ów przedmiot zostanie podniesiony jako pierwszy\n
+  - Każdy typ pojemnika jest teraz dostępny w miejskim sklepie \n
+  - Maź nie może już upuścić Pierścienia Kamiennej Krwi Goo ( Przedmiot ten jest dostępny tylko przez modyfikację), zamiast tego gracz otrzyma losową miksturę\n
+  - \"Podmuch Wiatru\" może przesuwać tylko przesuwalne przedmioty(IsMovable) \n
+  - Moby nie mogą się już odradzać się w tym samym miejscu z przedmiotami danego poziomu\n
+  - Szata Nekromanty nie jest już domyślnie ustawiona na szybkie wybieranie \n
+  - Naprawiono system losujący zasięg widzeniar\n
+  - Naprawiono błąd który na poziomie bossa tworzył żywiołaka zamiast bossa\n
+  -  Nagroda jaką gracz otrzyma za obejrzenie reklamy jest teraz przetwarzana poprzez kliknięcie w grze\n
+    </string>
+  <string name="Welcome_Text_27_4">
+    remix.27.4\n
+    - Zmiana nazwy na Remixed Dungeon\n
+    - Nekroza - nowa umiejętność zbroi dla Nekromanty\n
+    - Nowe odznaki do odkrycia\n
+    - Umiejętność zbroi klasowej zużywa teraz Manę a nie punkty życia \n
+    - Przedmioty chaosu tracą teraz zaklętą umiejętność po ich ziszczeniu\n
+    - Mentalny Pająk teraz może używać tylko zaklęć Oślepienia, Spowolnienia oraz Osłabienia\n
+    </string>
 </resources>
