@@ -376,5 +376,14 @@
   - Fixing bug that caused boss level to spawn an elemental instead of a boss\n
   - The reward, player gets for watching an ad is now being processed on in-game tap\n
     </string>
+    <string name="Welcome_Text_27_4">
+    remix.27.4\n
+    - Rebranding to Remixed Dungeon\n
+    - Necrotism - new Necromancer Class Armor ability\n
+    - New Badge to discover\n
+    - Class Armor ability now consume Mana instead of HP\n
+    - Chaos items now lose enchantment on degrade\n
+    - Psi-Spiders now can cast only Blindness, Slow and Weakness spells\n
+    </string>>
 
 </resources>
