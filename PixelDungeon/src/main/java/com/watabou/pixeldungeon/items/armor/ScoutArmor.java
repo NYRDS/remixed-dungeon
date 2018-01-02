@@ -12,6 +12,7 @@ public class ScoutArmor extends ElfArmor {
 	{
 		name = Game.getVar(R.string.ElfArmor_Name);
 		image = 18;
+		hasHelmet = false;
 	}	
 
 	@Override
