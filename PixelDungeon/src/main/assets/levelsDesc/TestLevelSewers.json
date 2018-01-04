@@ -87,7 +87,8 @@
       "trapKind":"scriptFile",
       "script":"scripts/traps/Disarm",
       "secret":true,
-      "activatedByItem":true
+      "activatedByItem":true,
+      "data":"IronKey"
     },
 
     {"kind":"Trap","x":5,"y":9, "uses":1,
