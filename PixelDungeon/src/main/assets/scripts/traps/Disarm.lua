@@ -38,8 +38,6 @@ return trap.init(function(cell, char, data)
     end
 
     local itemsToRemove = {}
-    print(belongings.backpack.items)
-    print(belongings.backpack.items:size())
 
     for i = 0, belongings.backpack.items:size()-1 do
        table.insert(itemsToRemove,belongings.backpack.items:get(i))
