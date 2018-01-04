@@ -1,4 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <string name="Item_Info2">дещо</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">В цій броні некромант може викликати \"Некротизм\", жахливу хворобу, яка вражає будь-яку істоту в полі зору, неважливо мертве вони чи живе.</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">Ця роба сповнена темною магією, яка дозволяє некроманту захоплювати душі вбитих власноруч істот.</string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">Некротизм</string>
+    <string name="Necrotism_ACSpecial">НЕКРОТИЗМ</string>
+    <string name="ResultDescriptions_Necrotism">Помер від некротизму на рівні %d</string>
+    <string name="Necrotism_Death">Ви померли від некротизму...</string>
+    <string name="Badges_DeathNecrotism">Смерть від некротизму</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">Оберіть ціль.</string>
+
+</resources>

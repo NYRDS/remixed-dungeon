@@ -1,4 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <string name="Item_Info2">quelque chose</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">En portant cette armure, le nécromancier devient capable d\'employer la capacité \"Nécrotisme\", diffusant une fléau magique qui peut infectuer toute créature à proximité, morte ou vivante. </string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">Cette robe est imprégnée de magie noire et permet au nécromancier d\'absorber les âmes des monstres trépassés. </string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">Nécrotisme</string>
+    <string name="Necrotism_ACSpecial">NECROTISME</string>
+    <string name="ResultDescriptions_Necrotism">Mort de Nécrotisme au niveau %d</string>
+    <string name="Necrotism_Death">Le Nécrotisme vous a tué(e)...</string>
+    <string name="Badges_DeathNecrotism">Mort de nécrotisme</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">Ciblez une case.</string>
+
+</resources>
