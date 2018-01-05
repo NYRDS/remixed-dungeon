@@ -39,25 +39,20 @@ import java.util.Collections;
 public class WndJournal extends WndTabbed {
 
 	private static final int LEVEL_ITEM_HEIGHT	= 18;	// Height of a level entry
-	private static final int LOGBOOK_ITEM_HEIGHT = 12;	// Height of a log book entry
 
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
 	private static final String TXT_LEVELS	= Game.getVar(R.string.WndJournal_Levels);
 	private static final String TXT_LOGBOOK	= Game.getVar(R.string.WndJournal_Logbook);
 
-	private Text       txtTitle;
 	private ScrollPane list;
-
-	private static boolean showLevels = true;	// Indicates which tab is visible
 
 	public WndJournal() {
 		
 		super();
 
-		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - 4*MARGIN);
+		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - tabHeight() -MARGIN);
 
-
-		txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
+		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		txtTitle.measure();
 		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (width - txtTitle.width()) / 2 );
@@ -69,52 +64,10 @@ public class WndJournal extends WndTabbed {
 		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 
 		Tab[] tabs = {	// Create two tabs that will be in the bottom of the window
-				new LabeledTab(this, TXT_LEVELS) {
-					public void select(boolean value) {
-						super.select(value);
-
-						Component content = list.content();
-						content.clear();
-						list.scrollTo( 0, 0);	// Scroll to the beginning
-
-						Collections.sort(Journal.records);
-
-						float pos = 0;
-						for (Journal.Record rec : Journal.records) {
-							ListLevelItem item = new ListLevelItem(rec.getFeature(), rec.depth);
-							item.setRect(0, pos, width, LEVEL_ITEM_HEIGHT);
-							content.add(item);
-
-							pos += item.height();
-						}
-
-						content.setSize(width, pos);
-					}
-				},
-				new LabeledTab(this, TXT_LOGBOOK) {
-					public void select(boolean value) {
-						super.select(value);
-						Component content = list.content();
-						content.clear();
-
-						float pos = 0;
-						for (String rec : GLog.logbookEntries) {
-							ListLogItem item = new ListLogItem( rec );
-							item.setRect(0, pos, width, LOGBOOK_ITEM_HEIGHT);
-							content.add(item);
-
-							pos += item.height();
-						}
-
-						content.setSize(width, pos);
-						if( pos >= list.height() ) {	// If scrollable, scroll to bottom to see the latest message
-							list.scrollTo( 0, pos - list.height() );
-						} else {
-							list.scrollTo( 0, 0);	// Scroll to beginning
-						}
-					}
-				}
+				new JournalTab(),
+				new LogbookTab()
 		};
+
 		for (Tab tab : tabs) {	// Add the tab buttons to the window
 			tab.setSize(width / tabs.length, tabHeight());
 			add(tab);
@@ -122,7 +75,7 @@ public class WndJournal extends WndTabbed {
 
 		select(0);	// Select the first tab and update the list
 	}
-	
+
 	private static class ListLevelItem extends Component {
 		
 		private Text feature;
@@ -130,7 +83,7 @@ public class WndJournal extends WndTabbed {
 		
 		private Image icon;
 		
-		public ListLevelItem(String text, int d ) {
+		ListLevelItem(String text, int d) {
 			super();
 			
 			feature.text( text );
@@ -174,22 +127,103 @@ public class WndJournal extends WndTabbed {
 
 		private Text logEntry;
 
-		public ListLogItem( String text ) {
+		ListLogItem(String text, int maxWidth) {
 			super();
 
 			logEntry.text( text );	// Add the text of log book entry
-			logEntry.measure();
+			logEntry.maxWidth(maxWidth);
+		}
+
+		@Override
+		public float height() {
+			return logEntry.height();
 		}
 
 		@Override
 		protected void createChildren() {
-			logEntry = PixelScene.createText(GuiProperties.titleFontSize());
+			logEntry = PixelScene.createMultiline(GuiProperties.titleFontSize());
 			add( logEntry );
 		}
 
 		@Override
 		protected void layout() {
 			logEntry.y = PixelScene.align( y );
+		}
+	}
+
+	private abstract class ContentTab extends LabeledTab {
+		protected float y;
+
+		ContentTab(WndTabbed tabbed, String label) {
+			super(tabbed,label);
+		}
+
+		@Override
+		public void select(boolean value) {
+			super.select(value);
+			if(!value) {
+				return;
+			}
+			y = 0;
+			list.content().clear();
+			createContent();
+			list.content().setSize(WndJournal.this.width, y);
+			setScrollPosition();
+		}
+
+		protected void setScrollPosition() {
+		}
+
+		abstract protected void createContent();
+	}
+
+	private class JournalTab extends ContentTab {
+		JournalTab() {
+			super(WndJournal.this, WndJournal.TXT_LEVELS);
+		}
+
+		@Override
+		protected void createContent() {
+			Collections.sort(Journal.records);
+
+			for (Journal.Record rec : Journal.records) {
+				ListLevelItem item = new ListLevelItem(rec.getFeature(), rec.depth);
+				item.setRect(0, y, WndJournal.this.width, LEVEL_ITEM_HEIGHT);
+				list.content().add(item);
+
+				y += item.height();
+			}
+		}
+
+		@Override
+		protected void setScrollPosition() {
+			list.scrollTo( 0, 0);	// Scroll to the beginning
+		}
+	}
+
+	private class LogbookTab extends ContentTab {
+		LogbookTab() {
+			super(WndJournal.this, WndJournal.TXT_LOGBOOK);
+		}
+
+		@Override
+		protected void setScrollPosition() {
+			if( y >= list.height() ) {	// If scrollable, scroll to bottom to see the latest message
+				list.scrollTo( 0, y - list.height() );
+			} else {
+				list.scrollTo( 0, 0);	// Scroll to beginning
+			}
+		}
+
+		@Override
+		protected void createContent() {
+			for (String rec : GLog.logbookEntries) {
+				ListLogItem item = new ListLogItem( rec, WndJournal.this.width );
+				item.setRect(0, y, WndJournal.this.width, item.height());
+				list.content().add(item);
+
+				y += item.height();
+			}
 		}
 	}
 }

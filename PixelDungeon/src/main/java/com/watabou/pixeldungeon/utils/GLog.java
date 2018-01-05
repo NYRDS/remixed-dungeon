@@ -27,29 +27,30 @@ import com.watabou.utils.Signal;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 public class GLog {
 
 	private static final String RE_PD_LOG_FILE_LOG = "RePdLogFile.log";
 
-	public static final String TAG = "GAME";
+	private static final String TAG = "GAME";
 	
 	public static final String POSITIVE		= "++ ";
 	public static final String NEGATIVE		= "-- ";
 	public static final String WARNING		= "** ";
 	public static final String HIGHLIGHT	= "@@ ";
 
-	public static final int LOGBOOK_SIZE	= 30;	// Number of log book messages to store
+	private static final int LOGBOOK_SIZE = 30;	// Number of log book messages to store
 	
 	public static Signal<String> update = new Signal<>();
 	
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
 
-	public static ArrayList<String> logbookEntries = new ArrayList<String>();
+	public static List<String> logbookEntries = new LinkedList<>();
 	
 	public static synchronized void toFile(String text, Object... args) {
 		if(readonlySd) {
