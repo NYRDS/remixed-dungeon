@@ -74,14 +74,47 @@ public class WndJournal extends WndTabbed {
 					public void select(boolean value) {
 						super.select(value);
 						WndJournal.showLevels = value;
-						updateList();
+
+						Component content = list.content();
+						content.clear();
+						list.scrollTo( 0, 0);	// Scroll to the beginning
+
+						Collections.sort(Journal.records);
+
+						float pos = 0;
+						for (Journal.Record rec : Journal.records) {
+							ListLevelItem item = new ListLevelItem(rec.getFeature(), rec.depth);
+							item.setRect(0, pos, width, LEVEL_ITEM_HEIGHT);
+							content.add(item);
+
+							pos += item.height();
+						}
+
+						content.setSize(width, pos);
 					}
 				},
 				new LabeledTab(this, TXT_LOGBOOK) {
 					public void select(boolean value) {
 						super.select(value);
 						WndJournal.showLevels = !value;
-						updateList();
+						Component content = list.content();
+						content.clear();
+
+						float pos = 0;
+						for (String rec : GLog.logbookEntries) {
+							ListLogItem item = new ListLogItem( rec );
+							item.setRect(0, pos, width, LOGBOOK_ITEM_HEIGHT);
+							content.add(item);
+
+							pos += item.height();
+						}
+
+						content.setSize(width, pos);
+						if( pos >= list.height() ) {	// If scrollable, scroll to bottom to see the latest message
+							list.scrollTo( 0, pos - list.height() );
+						} else {
+							list.scrollTo( 0, 0);	// Scroll to beginning
+						}
 					}
 				}
 		};
@@ -160,41 +193,6 @@ public class WndJournal extends WndTabbed {
 		@Override
 		protected void layout() {
 			logEntry.y = PixelScene.align( y );
-		}
-	}
-
-	private void updateList(){	// Update the list according to the selected tab
-		Component content = list.content();
-		content.clear();
-		list.scrollTo( 0, 0);	// Scroll to beginning in both cases
-
-		if(showLevels) {	// Showing levels
-			Collections.sort(Journal.records);
-
-			float pos = 0;
-			for (Journal.Record rec : Journal.records) {
-				ListLevelItem item = new ListLevelItem(rec.getFeature(), rec.depth);
-				item.setRect(0, pos, width, LEVEL_ITEM_HEIGHT);
-				content.add(item);
-
-				pos += item.height();
-			}
-
-			content.setSize(width, pos);
-		} else {	// Showing log book
-			float pos = 0;
-			for (String rec : GLog.logbookEntries) {
-				ListLogItem item = new ListLogItem( rec );
-				item.setRect(0, pos, width, LOGBOOK_ITEM_HEIGHT);
-				content.add(item);
-
-				pos += item.height();
-			}
-
-			content.setSize(width, pos);
-			if( pos >= list.height() ) {	// If scrollable, scroll to bottom to see the latest message
-				list.scrollTo( 0, pos - list.height() );
-			}
 		}
 	}
 }
