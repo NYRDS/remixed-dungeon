@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
+import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BannerSprites;
@@ -41,7 +42,6 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndClass;
@@ -348,7 +348,7 @@ public class StartScene extends PixelScene {
 
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
 
-		GLog.logbookEntries.clear();	// Clear the log book before starting a new game
+		Logbook.logbookEntries.clear();	// Clear the log book before starting a new game
 
 		if (PixelDungeon.intro()) {
 			PixelDungeon.intro(false);

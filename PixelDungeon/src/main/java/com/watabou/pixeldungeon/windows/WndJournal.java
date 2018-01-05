@@ -26,11 +26,11 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -127,7 +127,7 @@ public class WndJournal extends WndTabbed {
 
         private Text logEntry;
 
-        ListLogItem(GLog.logBookEntry entry, int maxWidth) {
+        ListLogItem(Logbook.logBookEntry entry, int maxWidth) {
             super();
 
             logEntry.text(entry.text);    // Add the text of log book entry
@@ -219,7 +219,7 @@ public class WndJournal extends WndTabbed {
 
         @Override
         protected void createContent() {
-            for (GLog.logBookEntry rec : GLog.logbookEntries) {
+            for (Logbook.logBookEntry rec : Logbook.logbookEntries) {
                 ListLogItem item = new ListLogItem(rec, WndJournal.this.width);
                 item.setRect(0, y, WndJournal.this.width, item.height());
                 list.content().add(item);

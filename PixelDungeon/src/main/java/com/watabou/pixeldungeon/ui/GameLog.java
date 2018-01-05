@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -81,7 +82,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		text = Utils.capitalize( text ) + 
 			(PUNCTUATION.matcher( text ).matches() ? "" : ".");
 
-		GLog.addPlayerLogMessage( text, color );	// Store the message to show in log book tab
+		Logbook.addPlayerLogMessage( text, color );	// Store the message to show in log book tab
 
 		if (lastEntry != null && color == lastColor) {
 			

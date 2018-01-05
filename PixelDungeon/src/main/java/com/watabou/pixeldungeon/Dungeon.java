@@ -344,6 +344,7 @@ public class Dungeon {
 
 		Statistics.storeInBundle(bundle);
 		Journal.storeInBundle(bundle);
+		Logbook.storeInBundle(bundle);
 
 		Scroll.save(bundle);
 		Potion.save(bundle);
@@ -447,7 +448,6 @@ public class Dungeon {
 
 	public static void loadGame() throws IOException {
 		loadGame(SaveUtils.gameFile(heroClass), true);
-		GLog.logbookEntries.clear();	// Clear the log book when loading the game
 	}
 
 	public static void loadGameForRankings(String fileName) throws IOException {
@@ -521,6 +521,7 @@ public class Dungeon {
 
 		Statistics.restoreFromBundle(bundle);
 		Journal.restoreFromBundle(bundle);
+		Logbook.restoreFromBundle(bundle);
 		LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 	}
 

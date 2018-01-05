@@ -29,8 +29,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
 
 public class GLog {
 
@@ -43,16 +41,12 @@ public class GLog {
 	public static final String WARNING		= "** ";
 	public static final String HIGHLIGHT	= "@@ ";
 
-	private static final int LOGBOOK_SIZE = 30;	// Number of log book messages to store
-	
 	public static Signal<String> update = new Signal<>();
 	
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
 
 
-	public static List<logBookEntry> logbookEntries = new LinkedList<>();
-	
 	public static synchronized void toFile(String text, Object... args) {
 		if(readonlySd) {
 			return;
@@ -137,20 +131,4 @@ public class GLog {
 		i( HIGHLIGHT + text, args );
 	}
 
-	public static void addPlayerLogMessage(String message, int color) {
-		logbookEntries.add( new logBookEntry(message, color) );	// Add the log entry
-		if( logbookEntries.size() > LOGBOOK_SIZE ) {	// Need to remove an item because max size was reached
-			logbookEntries.remove(0 );
-		}
-	}
-
-	static public class logBookEntry {
-		public String text;
-		public int color;
-
-		logBookEntry(String text, int color) {
-			this.text = text;
-			this.color = color;
-		}
-	}
 }
