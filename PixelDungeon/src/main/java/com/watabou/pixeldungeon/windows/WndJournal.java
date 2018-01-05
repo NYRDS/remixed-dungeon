@@ -199,7 +199,7 @@ public class WndJournal extends WndTabbed {
 		} else {	// Showing log book
 			float pos = 0;
 			for (String rec : GLog.logbookEntries) {
-				ListLevelItem item = new ListLevelItem( rec );
+				ListLogItem item = new ListLogItem( rec );
 				item.setRect(0, pos, width, LOGBOOK_ITEM_HEIGHT);
 				content.add(item);
 
