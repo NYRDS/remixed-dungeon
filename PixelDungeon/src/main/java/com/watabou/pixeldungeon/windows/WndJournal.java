@@ -30,14 +30,25 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.windows.elements.LabeledTab;
+import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import java.util.Collections;
 
-public class WndJournal extends Window {
+public class WndJournal extends WndTabbed {
 
-	private static final int ITEM_HEIGHT	= 18;
-	
+	private static final int LEVEL_ITEM_HEIGHT	= 18;	// Height of a level entry
+	private static final int LOGBOOK_ITEM_HEIGHT = 12;	// Height of a log book entry
+
 	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
+	private static final String TXT_LEVELS	= Game.getVar(R.string.WndJournal_Levels);
+	private static final String TXT_LOGBOOK	= Game.getVar(R.string.WndJournal_Logbook);
+
+	private Text       txtTitle;
+	private ScrollPane list;
+
+	private static boolean showLevels = true;	// Indicates which tab is visible
 
 	public WndJournal() {
 		
@@ -46,41 +57,80 @@ public class WndJournal extends Window {
 		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - 4*MARGIN);
 
 
-		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
+		txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		txtTitle.measure();
 		txtTitle.x = PixelScene.align( PixelScene.uiCamera, (width - txtTitle.width()) / 2 );
 		add(txtTitle);
-		
-		Component content = new Component();
-		
-		Collections.sort( Journal.records );
-		
-		float pos = 0;
-		for (Journal.Record rec : Journal.records) {
-			ListItem item = new ListItem( rec.getFeature(), rec.depth );
-			item.setRect( 0, pos, width, ITEM_HEIGHT );
-			content.add( item );
-			
-			pos += item.height();
-		}
-		
-		content.setSize( width, pos );
 
-		ScrollPane list = new ScrollPane(content);
+		list = new ScrollPane(new Component());
+
 		add(list);
-		
 		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
+
+		Tab[] tabs = {	// Create two tabs that will be in the bottom of the window
+				new LabeledTab(this, TXT_LEVELS) {
+					public void select(boolean value) {
+						super.select(value);
+
+						Component content = list.content();
+						content.clear();
+						list.scrollTo( 0, 0);	// Scroll to the beginning
+
+						Collections.sort(Journal.records);
+
+						float pos = 0;
+						for (Journal.Record rec : Journal.records) {
+							ListLevelItem item = new ListLevelItem(rec.getFeature(), rec.depth);
+							item.setRect(0, pos, width, LEVEL_ITEM_HEIGHT);
+							content.add(item);
+
+							pos += item.height();
+						}
+
+						content.setSize(width, pos);
+					}
+				},
+				new LabeledTab(this, TXT_LOGBOOK) {
+					public void select(boolean value) {
+						super.select(value);
+						Component content = list.content();
+						content.clear();
+
+						float pos = 0;
+						for (String rec : GLog.logbookEntries) {
+							ListLogItem item = new ListLogItem( rec );
+							item.setRect(0, pos, width, LOGBOOK_ITEM_HEIGHT);
+							content.add(item);
+
+							pos += item.height();
+						}
+
+						content.setSize(width, pos);
+						if( pos >= list.height() ) {	// If scrollable, scroll to bottom to see the latest message
+							list.scrollTo( 0, pos - list.height() );
+						} else {
+							list.scrollTo( 0, 0);	// Scroll to beginning
+						}
+					}
+				}
+		};
+		for (Tab tab : tabs) {	// Add the tab buttons to the window
+			tab.setSize(width / tabs.length, tabHeight());
+			add(tab);
+		}
+
+		select(0);	// Select the first tab and update the list
 	}
 	
-	private static class ListItem extends Component {
+	private static class ListLevelItem extends Component {
 		
 		private Text feature;
 		private Text depth;
 		
 		private Image icon;
 		
-		public ListItem( String text, int d ) {
+		public ListLevelItem(String text, int d ) {
 			super();
 			
 			feature.text( text );
@@ -109,15 +159,37 @@ public class WndJournal extends Window {
 		
 		@Override
 		protected void layout() {
-			
 			icon.x = width - icon.width;
-			
+
 			depth.x = icon.x - 1 - depth.width();
-			depth.y = PixelScene.align( y + (height - depth.height()) / 2 );
-			
+			depth.y = PixelScene.align(y + (height - depth.height()) / 2);
+
 			icon.y = depth.y - 1;
-			
+
 			feature.y = PixelScene.align( depth.y + depth.baseLine() - feature.baseLine() );
+		}
+	}
+
+	private static class ListLogItem extends Component {	// Class for a row in the log book
+
+		private Text logEntry;
+
+		public ListLogItem( String text ) {
+			super();
+
+			logEntry.text( text );	// Add the text of log book entry
+			logEntry.measure();
+		}
+
+		@Override
+		protected void createChildren() {
+			logEntry = PixelScene.createText(GuiProperties.titleFontSize());
+			add( logEntry );
+		}
+
+		@Override
+		protected void layout() {
+			logEntry.y = PixelScene.align( y );
 		}
 	}
 }

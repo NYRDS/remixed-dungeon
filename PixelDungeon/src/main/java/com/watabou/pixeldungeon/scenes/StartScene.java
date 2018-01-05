@@ -41,6 +41,7 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndClass;
@@ -346,6 +347,8 @@ public class StartScene extends PixelScene {
 		EventCollector.logEvent("game", "difficulty", String.valueOf(difficulty));
 
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
+
+		GLog.logbookEntries.clear();	// Clear the log book before starting a new game
 
 		if (PixelDungeon.intro()) {
 			PixelDungeon.intro(false);
