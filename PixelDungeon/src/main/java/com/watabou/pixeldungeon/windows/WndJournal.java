@@ -100,7 +100,7 @@ public class WndJournal extends WndTabbed {
 		
 		private Image icon;
 		
-		public ListLevelItem(String text, int d ) {	// This constructor is for level item - should include depth
+		public ListLevelItem(String text, int d ) {
 			super();
 			
 			feature.text( text );
@@ -113,16 +113,6 @@ public class WndJournal extends WndTabbed {
 				feature.hardlight( TITLE_COLOR );
 				depth.hardlight( TITLE_COLOR );
 			}
-		}
-
-		public ListLevelItem(String text ) {	// This constructor is for log book messages, no depth
-			super();
-
-			feature.text( text );	// Add the text of log book entry
-			feature.measure();
-
-			this.remove(depth);	// Remove depth and icon - log book entry has none of these
-			this.remove(icon);
 		}
 		
 		@Override
@@ -139,19 +129,14 @@ public class WndJournal extends WndTabbed {
 		
 		@Override
 		protected void layout() {
+			icon.x = width - icon.width;
 
-			if(showLevels) {	// Only layout depth and icon if showing level entries
-				icon.x = width - icon.width;
+			depth.x = icon.x - 1 - depth.width();
+			depth.y = PixelScene.align(y + (height - depth.height()) / 2);
 
-				depth.x = icon.x - 1 - depth.width();
-				depth.y = PixelScene.align(y + (height - depth.height()) / 2);
+			icon.y = depth.y - 1;
 
-				icon.y = depth.y - 1;
-
-				feature.y = PixelScene.align( depth.y + depth.baseLine() - feature.baseLine() );
-			} else {	// Layout needed only for feature text which is the log book entry
-				feature.y = PixelScene.align( y );
-			}
+			feature.y = PixelScene.align( depth.y + depth.baseLine() - feature.baseLine() );
 		}
 	}
 
