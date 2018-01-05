@@ -686,6 +686,6 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public boolean isFlying() {
-		return flying && !paralysed;
+		return !paralysed && (flying || buff(Levitation.class)!=null);
 	}
 }

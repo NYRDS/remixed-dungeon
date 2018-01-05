@@ -30,7 +30,6 @@ public class Levitation extends FlavourBuff {
 	@Override
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
-			target.flying = true;
 			Roots.detach( target, Roots.class );
 			return true;
 		} else {
@@ -41,7 +40,6 @@ public class Levitation extends FlavourBuff {
 	@Override
 	public void detach() {
 		super.detach();
-		target.flying = false;
 		Dungeon.level.press( target.getPos(), target );
 	}
 
