@@ -155,6 +155,29 @@ public class WndJournal extends WndTabbed {
 		}
 	}
 
+	private static class ListLogItem extends Component {	// Class for a row in the log book
+
+		private Text logEntry;
+
+		public ListLogItem( String text ) {
+			super();
+
+			logEntry.text( text );	// Add the text of log book entry
+			logEntry.measure();
+		}
+
+		@Override
+		protected void createChildren() {
+			logEntry = PixelScene.createText(GuiProperties.titleFontSize());
+			add( logEntry );
+		}
+
+		@Override
+		protected void layout() {
+			logEntry.y = PixelScene.align( y );
+		}
+	}
+
 	private void updateList(){	// Update the list according to the selected tab
 		Component content = list.content();
 		content.clear();
