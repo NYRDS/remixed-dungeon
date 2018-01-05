@@ -68,12 +68,10 @@ public class WndJournal extends WndTabbed {
 		add(list);
 		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 
-		boolean showLevels = WndJournal.showLevels;
 		Tab[] tabs = {	// Create two tabs that will be in the bottom of the window
 				new LabeledTab(this, TXT_LEVELS) {
 					public void select(boolean value) {
 						super.select(value);
-						WndJournal.showLevels = value;
 
 						Component content = list.content();
 						content.clear();
@@ -96,7 +94,6 @@ public class WndJournal extends WndTabbed {
 				new LabeledTab(this, TXT_LOGBOOK) {
 					public void select(boolean value) {
 						super.select(value);
-						WndJournal.showLevels = !value;
 						Component content = list.content();
 						content.clear();
 
@@ -123,7 +120,7 @@ public class WndJournal extends WndTabbed {
 			add(tab);
 		}
 
-		select(showLevels ? 0 : 1);	// Select the first tab and update the list
+		select(0);	// Select the first tab and update the list
 	}
 	
 	private static class ListLevelItem extends Component {
