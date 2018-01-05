@@ -27,6 +27,7 @@ import com.watabou.utils.Signal;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -40,11 +41,15 @@ public class GLog {
 	public static final String NEGATIVE		= "-- ";
 	public static final String WARNING		= "** ";
 	public static final String HIGHLIGHT	= "@@ ";
+
+	public static final int LOGBOOK_SIZE	= 30;	// Number of log book messages to store
 	
 	public static Signal<String> update = new Signal<>();
 	
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
+
+	public static ArrayList<String> logbookEntries = new ArrayList<String>();
 	
 	public static synchronized void toFile(String text, Object... args) {
 		if(readonlySd) {
@@ -128,5 +133,12 @@ public class GLog {
 	
 	public static void h( String text, Object... args ) {
 		i( HIGHLIGHT + text, args );
+	}
+
+	public static void addPlayerLogMessage( String message ) {
+		logbookEntries.add( message );	// Add the log entry
+		if( logbookEntries.size() > LOGBOOK_SIZE ) {	// Need to remove an item because max size was reached
+			logbookEntries.remove(0 );
+		}
 	}
 }

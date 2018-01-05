@@ -447,6 +447,7 @@ public class Dungeon {
 
 	public static void loadGame() throws IOException {
 		loadGame(SaveUtils.gameFile(heroClass), true);
+		GLog.logbookEntries.clear();	// Clear the log book when loading the game
 	}
 
 	public static void loadGameForRankings(String fileName) throws IOException {
