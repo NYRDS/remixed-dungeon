@@ -14,12 +14,11 @@ return trap.init(function(cell, char, data)
     local belongings = hero.belongings
     local level = RPD.Dungeon.level
 
-    local notRemoveClass = data
+    local notRemoveClass = data or " "
 
     local items = { "weapon", "armor", "ring1", "ring2" }
 
     local function removeItemFromHero(item)
-
         if item and not string.match(tostring(item:getClass()), notRemoveClass) then
             item:removeItemFrom(hero)
             local cellToDrop = level:getEmptyCellNextTo(cell)
