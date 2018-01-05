@@ -231,7 +231,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	@Override
 	public void move(int from, int to) {
 		super.move(from, to);
-		if (ch.flying) {
+		if (ch.isFlying()) {
 			play(fly);
 		}
 		if(ch instanceof Hero) {
@@ -256,7 +256,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	public void onComplete(Tweener tweener) {
 		if (tweener == jumpTweener) {
 
-			if (getVisible() && Dungeon.level.water[ch.getPos()] && !ch.flying) {
+			if (getVisible() && Dungeon.level.water[ch.getPos()] && !ch.isFlying()) {
 				GameScene.ripple(ch.getPos());
 			}
 			if (jumpCallback != null) {

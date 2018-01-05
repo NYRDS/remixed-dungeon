@@ -1124,7 +1124,7 @@ public abstract class Level implements Bundlable {
 		if (actor != null) {
 			if(actor instanceof Char) {
 				chr = (Char) actor;
-				if (pit[cell] && !chr.flying) {
+				if (pit[cell] && !chr.isFlying()) {
 					Chasm.charFall(chr.getPos(), chr);
 					return;
 				}

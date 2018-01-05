@@ -164,7 +164,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
 			turnTo(from, to);
 
-			if (getVisible() && Dungeon.level.water[from] && !ch.flying) {
+			if (getVisible() && Dungeon.level.water[from] && !ch.isFlying()) {
 				GameScene.ripple(from);
 			}
 		}

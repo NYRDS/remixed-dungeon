@@ -105,7 +105,7 @@ public class Shaman extends Mob implements IZapper {
 	public boolean zap(@NonNull Char enemy) {
 		if (zapHit(enemy)) {
 			int dmg = damageRoll() * 2;
-			if (Dungeon.level.water[enemy.getPos()] && !enemy.flying) {
+			if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {
 				dmg *= 1.5f;
 			}
 			enemy.damage(dmg, LightningTrap.LIGHTNING);

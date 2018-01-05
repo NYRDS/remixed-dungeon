@@ -64,7 +64,7 @@ public class WandOfLightning extends SimpleWand  {
 		}
 		
 		affected.add( ch );
-		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.flying ? damage * 2 : damage, LightningTrap.LIGHTNING  );
+		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.isFlying() ? damage * 2 : damage, LightningTrap.LIGHTNING  );
 		
 		ch.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
 		ch.getSprite().flash();

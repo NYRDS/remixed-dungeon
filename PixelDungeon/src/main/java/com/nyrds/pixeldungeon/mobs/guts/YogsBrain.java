@@ -93,7 +93,7 @@ public class YogsBrain extends Boss {
 
             if (hit( this, enemy, true )) {
                 int dmg = Random.Int( 20, 36 );
-                if (Dungeon.level.water[enemy.getPos()] && !enemy.flying) {
+                if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {
                     dmg *= 2f;
                 }
                 enemy.damage( dmg, LightningTrap.LIGHTNING );

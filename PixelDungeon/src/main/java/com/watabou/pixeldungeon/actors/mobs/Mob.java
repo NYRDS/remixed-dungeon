@@ -757,7 +757,7 @@ public abstract class Mob extends Char {
 		public boolean act(boolean enemyInFOV, boolean justAlerted) {
 			if (enemyInFOV
 					&& Random.Int(distance(getEnemy()) + getEnemy().stealth()
-					+ (getEnemy().flying ? 2 : 0)) == 0) {
+					+ (getEnemy().isFlying() ? 2 : 0)) == 0) {
 
 				enemySeen = true;
 

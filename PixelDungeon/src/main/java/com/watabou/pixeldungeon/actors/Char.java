@@ -103,11 +103,11 @@ public abstract class Char extends Actor implements Presser{
 	protected float baseSpeed = 1;
 	protected boolean movable = true;
 
-	public boolean paralysed = false;
-	public boolean pacified  = false;
-	public boolean rooted    = false;
-	public boolean flying    = false;
-	public int     invisible = 0;
+	public    boolean paralysed = false;
+	public    boolean pacified  = false;
+	public    boolean rooted    = false;
+	protected boolean flying    = false;
+	public    int     invisible = 0;
 
 	public int viewDistance = 8;
 
@@ -683,5 +683,9 @@ public abstract class Char extends Actor implements Presser{
 	@Override
 	public boolean affectLevelObjects() {
 		return true;
+	}
+
+	public boolean isFlying() {
+		return flying && !paralysed;
 	}
 }

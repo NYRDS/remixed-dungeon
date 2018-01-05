@@ -673,7 +673,7 @@ public class Dungeon {
 			return Actor.findChar(to) == null && (pass[to] || level.avoid[to]) ? to : -1;
 		}
 
-		if (ch.flying || ch.buff(Amok.class) != null) {
+		if (ch.isFlying() || ch.buff(Amok.class) != null) {
 			BArray.or(pass, level.avoid, passable);
 		} else {
 			System.arraycopy(pass, 0, passable, 0, level.getLength());
@@ -693,7 +693,7 @@ public class Dungeon {
 
 	public static int flee(Char ch, int cur, int from, boolean pass[], boolean[] visible) {
 
-		if (ch.flying) {
+		if (ch.isFlying()) {
 			BArray.or(pass, level.avoid, passable);
 		} else {
 			System.arraycopy(pass, 0, passable, 0, level.getLength());
