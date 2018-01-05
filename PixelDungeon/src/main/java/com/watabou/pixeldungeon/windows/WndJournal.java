@@ -93,14 +93,14 @@ public class WndJournal extends WndTabbed {
 		select(showLevels ? 0 : 1);	// Select the first tab and update the list
 	}
 	
-	private static class ListItem extends Component {
+	private static class ListLevelItem extends Component {
 		
 		private Text feature;
 		private Text depth;
 		
 		private Image icon;
 		
-		public ListItem( String text, int d ) {	// This constructor is for level item - should include depth
+		public ListLevelItem(String text, int d ) {	// This constructor is for level item - should include depth
 			super();
 			
 			feature.text( text );
@@ -115,7 +115,7 @@ public class WndJournal extends WndTabbed {
 			}
 		}
 
-		public ListItem( String text ) {	// This constructor is for log book messages, no depth
+		public ListLevelItem(String text ) {	// This constructor is for log book messages, no depth
 			super();
 
 			feature.text( text );	// Add the text of log book entry
@@ -165,7 +165,7 @@ public class WndJournal extends WndTabbed {
 
 			float pos = 0;
 			for (Journal.Record rec : Journal.records) {
-				ListItem item = new ListItem(rec.getFeature(), rec.depth);
+				ListLevelItem item = new ListLevelItem(rec.getFeature(), rec.depth);
 				item.setRect(0, pos, width, LEVEL_ITEM_HEIGHT);
 				content.add(item);
 
@@ -176,7 +176,7 @@ public class WndJournal extends WndTabbed {
 		} else {	// Showing log book
 			float pos = 0;
 			for (String rec : GLog.logbookEntries) {
-				ListItem item = new ListItem( rec );
+				ListLevelItem item = new ListLevelItem( rec );
 				item.setRect(0, pos, width, LOGBOOK_ITEM_HEIGHT);
 				content.add(item);
 
