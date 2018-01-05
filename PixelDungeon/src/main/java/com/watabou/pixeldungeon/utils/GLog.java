@@ -50,7 +50,8 @@ public class GLog {
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
 
-	public static List<String> logbookEntries = new LinkedList<>();
+
+	public static List<logBookEntry> logbookEntries = new LinkedList<>();
 	
 	public static synchronized void toFile(String text, Object... args) {
 		if(readonlySd) {
@@ -136,10 +137,20 @@ public class GLog {
 		i( HIGHLIGHT + text, args );
 	}
 
-	public static void addPlayerLogMessage( String message ) {
-		logbookEntries.add( message );	// Add the log entry
+	public static void addPlayerLogMessage(String message, int color) {
+		logbookEntries.add( new logBookEntry(message, color) );	// Add the log entry
 		if( logbookEntries.size() > LOGBOOK_SIZE ) {	// Need to remove an item because max size was reached
 			logbookEntries.remove(0 );
+		}
+	}
+
+	static public class logBookEntry {
+		public String text;
+		public int color;
+
+		logBookEntry(String text, int color) {
+			this.text = text;
+			this.color = color;
 		}
 	}
 }
