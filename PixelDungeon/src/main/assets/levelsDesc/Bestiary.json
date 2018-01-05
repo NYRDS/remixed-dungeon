@@ -58,19 +58,19 @@
       "10s":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5,"SpiderGuard":0.03,"SpiderMindAmber":0.018}
    },
    "NecroLevel":{
-      "8":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},
-      "9":{"Zombie":1, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKnight":0.5,"DreadKnight":0.015},
-      "10":{"Zombie":2, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKnight":0.5,"DreadKnight":0.015},
-      "11":{"ExplodingSkull":1.3, "EnslavedSoul":0.4, "DeathKnight":1.5,"DreadKnight":0.045}
+      "necro1":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},
+      "necro2":{"Zombie":1, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKnight":0.5,"DreadKnight":0.015},
+      "necro3":{"Zombie":2, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKnight":0.5,"DreadKnight":0.015},
+      "necro4":{"ExplodingSkull":1.3, "EnslavedSoul":0.4, "DeathKnight":1.5,"DreadKnight":0.045}
    },
    "NecroBossLevel":{
       "any":{"Lich":1}
    },
    "IceCavesLevel":{
-      "15":{"Kobold":1,"ColdSpirit":2,"IceElemental":0.1},
-      "16":{"Kobold":2,"KoboldIcemancer":1,"IceElemental":0.2},
-      "17":{"Kobold":2,"KoboldIcemancer":1,"ColdSpirit":1,"IceElemental":0.3},
-      "18":{"Kobold":2,"KoboldIcemancer":1,"ColdSpirit":1,"IceElemental":0.6}
+      "ice1":{"Kobold":1,"ColdSpirit":2,"IceElemental":0.1},
+      "ice2":{"Kobold":2,"KoboldIcemancer":1,"IceElemental":0.2},
+      "ice3":{"Kobold":2,"KoboldIcemancer":1,"ColdSpirit":1,"IceElemental":0.3},
+      "ice4":{"Kobold":2,"KoboldIcemancer":1,"ColdSpirit":1,"IceElemental":0.6}
    },
    "IceCavesBossLevel":{
       "any":{"IceGuardianCore":1}
