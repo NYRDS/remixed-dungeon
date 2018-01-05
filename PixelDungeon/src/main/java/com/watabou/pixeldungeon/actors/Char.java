@@ -688,4 +688,11 @@ public abstract class Char extends Actor implements Presser{
 	public boolean isFlying() {
 		return !paralysed && (flying || buff(Levitation.class)!=null);
 	}
+
+	public void paralyse(boolean paralysed) {
+		if(paralysed && GameScene.isSceneReady()) {
+			Dungeon.level.press(getPos(),this);
+		}
+		this.paralysed = paralysed;
+	}
 }

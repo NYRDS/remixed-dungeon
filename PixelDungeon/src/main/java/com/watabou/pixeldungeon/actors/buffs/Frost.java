@@ -50,7 +50,7 @@ public class Frost extends FlavourBuff {
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
 			
-			target.paralysed = true;
+			target.paralyse(true);
 			Burning.detach( target, Burning.class );
 			
 			applyToCarriedItems(new freezeItem());
@@ -63,7 +63,7 @@ public class Frost extends FlavourBuff {
 	
 	@Override
 	public void detach() {
-		target.paralysed = false;
+		target.paralyse(false);
 		super.detach();
 	}
 	

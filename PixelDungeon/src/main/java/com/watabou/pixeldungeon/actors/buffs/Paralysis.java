@@ -30,7 +30,7 @@ public class Paralysis extends FlavourBuff {
 	@Override
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
-			target.paralysed = true;
+			target.paralyse(true);
 			return true;
 		} else {
 			return false;
@@ -39,7 +39,7 @@ public class Paralysis extends FlavourBuff {
 	
 	@Override
 	public void detach() {
-		target.paralysed = false;
+		target.paralyse(false);
 		super.detach();
 	}
 	
