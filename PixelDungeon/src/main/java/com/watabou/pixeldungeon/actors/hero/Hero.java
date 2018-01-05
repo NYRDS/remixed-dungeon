@@ -183,7 +183,6 @@ public class Hero extends Char {
 	public Belongings belongings;
 
 	private int STR;
-	public boolean weakened = false;
 
 	private float awareness;
 
@@ -236,7 +235,8 @@ public class Hero extends Char {
 
 	public int effectiveSTR() {
 		int str = Scrambler.descramble(STR);
-		return weakened ? str - 2 : str;
+
+		return buff(Weakness.class) != null ? str - 2 : str;
 	}
 
 	public void STR(int sTR) {

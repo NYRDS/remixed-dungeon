@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.food;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -59,10 +60,16 @@ abstract public class Food extends Item {
 		if (action.equals( AC_EAT )) {
 			
 			detach( hero.belongings.backpack );
-			
-			hero.buff( Hunger.class ).satisfy(energy);
+
+			Hunger hunger = hero.buff( Hunger.class );
+			if(hunger != null) {
+				hunger.satisfy(energy);
+			} else {
+				EventCollector.logEvent(EventCollector.BUG,"no hunger",hero.className());
+			}
+
 			GLog.i( message );
-			
+
 			switch (hero.heroClass) {
 			case WARRIOR:
 				if (hero.hp() < hero.ht()) {
@@ -74,9 +81,7 @@ abstract public class Food extends Item {
 				hero.belongings.charge( false );
 				ScrollOfRecharging.charge( hero );
 				break;
-			case ROGUE:
-			case HUNTRESS:
-			case ELF:
+			default:
 				break;
 			}
 			

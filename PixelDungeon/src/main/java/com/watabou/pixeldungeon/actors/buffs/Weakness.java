@@ -42,7 +42,6 @@ public class Weakness extends FlavourBuff {
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
 			Hero hero = (Hero)target;
-			hero.weakened = true;
 			hero.belongings.discharge();
 			
 			return true;
@@ -54,7 +53,6 @@ public class Weakness extends FlavourBuff {
 	@Override
 	public void detach() {
 		super.detach();
-		((Hero)target).weakened = false;
 	}
 	
 	public static float duration( Char ch ) {
