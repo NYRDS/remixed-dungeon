@@ -1061,8 +1061,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void levelObjectMoved(LevelObject obj) {
-		remove(obj);
-		putLevelObject(obj);
+		if(remove(obj)) {
+			putLevelObject(obj);
+		}
 	}
 
 	public void addLevelObject(LevelObject obj) {
@@ -1087,19 +1088,21 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public void remove(LevelObject levelObject) {
+	public boolean remove(LevelObject levelObject) {
 
 		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
 
 		if (objectsLayer == null) {
-			return;
+			return false;
 		}
 
 		int index = objectsLayer.indexOfValue(levelObject);
 
 		if (index >= 0) {
 			objectsLayer.remove(objectsLayer.keyAt(index));
+			return true;
 		}
+		return false;
 	}
 
 	public void uproot(int pos) {

@@ -139,11 +139,10 @@ public abstract class LevelObject implements Bundlable, Presser {
         if (level.solid[nextCell] || level.getLevelObject(nextCell, layer) != null) {
             return false;
         } else {
+            level.press(nextCell, this);
 
             setPos(nextCell);
             level.levelObjectMoved(this);
-            level.press(nextCell, this);
-
         }
 
         return true;
@@ -152,8 +151,8 @@ public abstract class LevelObject implements Bundlable, Presser {
     public void fall() {
         if (sprite != null) {
             sprite.fall();
-            Dungeon.level.remove(this);
         }
+        Dungeon.level.remove(this);
     }
 
     @Override
