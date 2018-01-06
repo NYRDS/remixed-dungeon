@@ -19,5 +19,9 @@
 
     <!-- STRINGS OF Spell CLASS -->
     <string name="Spell_SelectACell">Select a target cell.</string>
+    
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Levels</string>
+    <string name="WndJournal_Logbook">Logbook</string>
 
 </resources>

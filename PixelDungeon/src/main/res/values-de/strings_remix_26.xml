@@ -33,19 +33,27 @@
     <string name="IceElemental_Name">Eisgeist</string>
     <string name="IceElemental_Gender">männlich</string>
     <string name="IceElemental_Name_Objective">EIsgeist</string>
+    <string name="IceElemental_Desc">Eisgeister sind vielleicht nicht die wiederstandsfähigsten Elementare, die in den Dungeons existieren, sie zählen aber mit Sicherheit zu den gefährlichsten. Ihr Körper strahlt Kälte ab, wodurch ihre Feinde verlangsamt werden.</string>
+
     <!-- STRINGS OF IceGuardian CLASS -->
     <string name="IceGuardian_Name">Eiswächter</string>
     <string name="IceGuardian_Gender">männlich</string>
     <string name="IceGuardian_Name_Objective">Eiswächter</string>
+    <string name="IceGuardian_Desc">Eiswächter wurden einst von Kobolden erschaffen, um ihre Höhlen zu bewachen. Die Kraft in ihrem Inneren erlaubt es den Eiswächtern, sich zu erneuern, solang sie über genug Emergie verfügen.</string>
+
     <!-- STRINGS OF IceGuardianCore CLASS -->
     <string name="IceGuardianCore_Name">Eiswächter</string>
     <string name="IceGuardianCore_Gender">männlich</string>
     <string name="IceGuardianCore_Name_Objective">Eiswächter</string>
+    <string name="IceGuardianCore_Desc">Eiswächter wurden einst von Kobolden erschaffen, um ihre Höhlen zu bewachen. Die Kraft in ihrem Inneren erlaubt es den Eiswächtern, sich zu erneuern, solang sie über genug Emergie verfügen.</string>
+
     <!-- STRINGS OF CagedKobold CLASS -->
     <string name="CagedKobold_Name">eingesperrter Kobold</string>
     <string name="CagedKobold_Gender">männlich</string>
     <string name="CagedKobold_Name_Objective">eingesperrter Kobold</string>
     <string name="CagedKobold_Desc">Ein Kobold, in einem Käfig.</string>
+    <string name="CagedKobold_Intro">Hey... HEY! Bist du dieser Abenteurerdingsbums? Tu mir einen Gefallen und hilf mir hier raus, Kumpel. Diese verdammten Militaristen haben mich eingesperrt. Sie wollten eine antike Waffe reaktivieren um die Menschendingsbumse da oben zu unterwerfen! Ich war dagegen, weil es zu gefährlich war, also warfen sie mich aus dem Rat und sperrten mich in diesen Käfig. Bitte finde den Schlüssel für mich, als Gegenleistung helfe ich dir, so gut ich kann.</string>
+    <string name="CagedKobold_Quest_End">Oh vielen, vielen Dank! Wie hast du bloß den Schlüssel gefunden? Du... du hast die Waffe zerstört?! Das ist unglaublich! Weißt du was, ich sagte, dass ich dir helfen werde und ich glaube, ich weiß auch wie ich das am besten mache. Ich werde eine Weile bei dir bleiben. * Eingesperrter Kobold hat sich in eine Kerze verwandelt</string>
     <string name="CagedKobold_Message1">Bitte...</string>
     <string name="CagedKobold_Message2">Hey, du könntest mir hier heraushelfen.</string>
     <string name="CagedKobold_Message3">Ich hasse diesen Käfig über alles</string>
@@ -64,6 +72,8 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">Festlicher Truthahn</string>
+    <string name="ChristmasTurkey_Info">Die beste Art, Weihdungeon zu feiern, ist mit einem großen Bissen gebratener Truthahn. So gedenkst auch du dem Tag, als die Monster in den Dungeon einfielen, was Abenteurer und Helden aus aller Welt angelockt und somit den Tourismus und die lokale Wirtschaft gestärkt hat.</string>
+
     <!-- STRINGS OF IceKey CLASS -->
     <string name="IceKey_Name">Eis Schlüssel</string>
     <string name="IceKey_Info">Es scheint, als ob der Schlüssel aus Eis ist, aber dennoch ist er so hart wie Stahl.</string>

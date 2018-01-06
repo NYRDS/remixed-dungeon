@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-    <!-- STRINGS OF WndJournal CLASS -->
-    <string name="WndJournal_Levels">Levels</string>
-    <string name="WndJournal_Logbook">Logbook</string>
 </resources>

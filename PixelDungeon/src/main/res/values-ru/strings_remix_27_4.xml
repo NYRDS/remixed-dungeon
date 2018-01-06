@@ -19,5 +19,9 @@
 
     <!-- STRINGS OF Spell CLASS -->
     <string name="Spell_SelectACell">Выберете цель</string>
+    
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Уровни</string>
+    <string name="WndJournal_Logbook">Журнал</string>
 
 </resources>
