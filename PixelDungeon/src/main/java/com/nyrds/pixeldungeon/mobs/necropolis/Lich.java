@@ -37,7 +37,6 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -170,21 +169,19 @@ public class Lich extends Boss {
                 break;
 
             case RunicSkull.BLUE_SKULL:
-                List<Integer> occupiedCells = new ArrayList<>();
                 int i = 0;
                 while (i < skulls.size()){
                     int pos = Dungeon.level.getEmptyCellNextTo(getPos());
                     if (Dungeon.level.cellValid(pos)) {
-                        if (!occupiedCells.contains(pos)) {
-                            Skeleton skeleton = new Skeleton();
-                            skeleton.setPos(pos);
-                            Dungeon.level.spawnMob(skeleton, 0);
-                            Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
-                            i++;
-                        }
+                        Skeleton skeleton = new Skeleton();
+                        skeleton.setPos(pos);
+                        Dungeon.level.spawnMob(skeleton, 0);
+                        Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
+                        i++;
+                    } else {
+                        break;
                     }
                 }
-                occupiedCells.clear();
                 break;
 
             case RunicSkull.GREEN_SKULL:
