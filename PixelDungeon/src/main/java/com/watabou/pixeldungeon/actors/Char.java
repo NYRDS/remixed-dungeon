@@ -690,9 +690,9 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public void paralyse(boolean paralysed) {
+		this.paralysed = paralysed;
 		if(paralysed && GameScene.isSceneReady()) {
 			Dungeon.level.press(getPos(),this);
 		}
-		this.paralysed = paralysed;
 	}
 }
