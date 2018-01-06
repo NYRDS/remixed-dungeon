@@ -20,6 +20,7 @@ end
 
 gameStorage.deserializeGameData = function(str)
     res, gameData = seprent.load(str)
+    gameData = gameData or {}
 end
 
 gameStorage.serializeLevelData = function()
@@ -28,6 +29,7 @@ end
 
 gameStorage.deserializeLevelData = function(str)
     res, levelData = seprent.load(str)
+    levelData = levelData or {}
 end
 
 
