@@ -12,8 +12,8 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 480
-        versionName "remix.27.4"
+        versionCode 481
+        versionName "remix.27.4.fix.1"
     }
     buildTypes {
         release {
@@ -63,30 +63,30 @@ android {
 }
 
 dependencies {
-    compile 'ch.acra:acra:4.9.0@aar'
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'org.luaj:luaj-jse:3.0.1'
+    implementation 'ch.acra:acra:4.9.0@aar'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'org.luaj:luaj-jse:3.0.1'
     //noinspection GradleDependency
-    googlePlayRetroCompile 'com.android.support:support-v4:25.3.1'
+    googlePlayRetroImplementation 'com.android.support:support-v4:25.3.1'
     //noinspection GradleDependency
-    googlePlayRetroCompile 'com.google.android.gms:play-services-ads:9.0.2'
+    googlePlayRetroImplementation 'com.google.android.gms:play-services-ads:9.0.2'
     //noinspection GradleDependency
-    googlePlayRetroCompile 'com.google.android.gms:play-services-base:9.0.2'
+    googlePlayRetroImplementation 'com.google.android.gms:play-services-base:9.0.2'
     //noinspection GradleDependency
-    googlePlayRetroCompile 'com.google.android.gms:play-services-analytics:9.0.2'
+    googlePlayRetroImplementation 'com.google.android.gms:play-services-analytics:9.0.2'
     //noinspection GradleDependency
-    googlePlayRetroCompile "com.google.android.gms:play-services-games:9.0.2"
-    googlePlayCompile 'com.android.support:support-v4:27.0.2'
-    googlePlayCompile project(':adcolony-sdk-3.1.2')
-    googlePlayCompile 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
-    googlePlayCompile 'com.google.android.gms:play-services-ads:10.2.1'
-    googlePlayCompile 'com.google.android.gms:play-services-base:10.2.1'
-    googlePlayCompile 'com.google.android.gms:play-services-analytics:10.2.1'
-    googlePlayCompile "com.google.android.gms:play-services-games:10.2.1"
-    googlePlayCompile 'com.android.support:support-v4:27.0.0'
-    googlePlayCompile fileTree(dir: 'lib', include: '*.jar')
-    googlePlayCompile 'com.android.support:multidex:1.0.2'
-    compile project(':annotation')
+    googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
+
+    googlePlayImplementation 'com.android.support:support-v4:27.0.2'
+    googlePlayImplementation project(':adcolony-sdk-3.1.2')
+    googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:10.2.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:10.2.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-analytics:10.2.1'
+    googlePlayImplementation "com.google.android.gms:play-services-games:10.2.1"
+    googlePlayImplementation fileTree(dir: 'lib', include: '*.jar')
+    googlePlayImplementation 'com.android.support:multidex:1.0.2'
+    implementation project(':annotation')
     annotationProcessor project(':processor')
 }
 
