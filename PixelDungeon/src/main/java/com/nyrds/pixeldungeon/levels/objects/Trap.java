@@ -90,6 +90,12 @@ public class Trap extends LevelObject {
 
 	@Override
 	public void bump(Presser presser) {
+
+		if(presser instanceof Hero) {
+			interact((Hero)presser);
+			return;
+		}
+
 		if (presser instanceof LevelObject) {
 			interact(null);
 			return;
