@@ -84,6 +84,7 @@ import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.actors.mobs.Yog.BurningFist;
 import com.watabou.pixeldungeon.actors.mobs.Yog.Larva;
 import com.watabou.pixeldungeon.actors.mobs.Yog.RottingFist;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
@@ -212,6 +213,8 @@ public class MobFactory {
 		registerMobClass(ArtificerNPC.class);
 
 		registerMobClass(Deathling.class);
+
+		registerMobClass(Ghost.class);
 	}
 	
 	public static Mob mobRandom() {

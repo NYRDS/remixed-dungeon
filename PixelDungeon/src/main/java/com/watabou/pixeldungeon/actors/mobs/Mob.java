@@ -93,6 +93,7 @@ public abstract class Mob extends Char {
 	protected String scriptFile = DEFAULT_MOB_SCRIPT;
 
 	private LuaTable mobScript;
+	protected LuaValue scriptResult = LuaValue.NIL;
 
 	private AiState state = SLEEPING;
 
@@ -471,6 +472,13 @@ public abstract class Mob extends Char {
 			damage += Random.Int(1, damage);
 			Wound.hit(this);
 		}
+
+		runMobScript("onDefenceProc", enemy, damage);
+
+		if(scriptResult.isnumber()) {
+			return scriptResult.checknumber().toint();
+		}
+
 		return damage;
 	}
 
@@ -510,12 +518,19 @@ public abstract class Mob extends Char {
 			mobScriptLoaded = true;
 		}
 
-		return mobScript!= null && mobScript.invokemethod(method,new LuaValue[]{
-				CoerceJavaToLua.coerce(this),
-				CoerceJavaToLua.coerce(arg1),
-				CoerceJavaToLua.coerce(arg2)})
-				.arg1()
-				.checkboolean();
+		if(mobScript != null) {
+			scriptResult = mobScript.invokemethod(method, new LuaValue[]{
+					CoerceJavaToLua.coerce(this),
+					CoerceJavaToLua.coerce(arg1),
+					CoerceJavaToLua.coerce(arg2)})
+					.arg1();
+
+			if(scriptResult.isboolean()) {
+				return scriptResult.checkboolean();
+			}
+			return true;
+		}
+		return false;
 	}
 
 	protected boolean runMobScript(String method, Object arg) {

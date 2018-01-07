@@ -99,7 +99,7 @@ import java.util.Set;
 public abstract class Level implements Bundlable {
 
 	private static final String SCRIPTS = "scripts";
-	private static final int INVALID_CELL = -1;
+	public static final int INVALID_CELL = -1;
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -24,6 +25,9 @@ import org.json.JSONObject;
 public class CustomMob extends MultiKindMob implements IZapper {
 
 	private final String MOB_CLASS = "mobClass";
+
+	@Packable
+	private String luaData;
 
 	private int dmgMin, dmgMax;
 	private int attackSkill;
@@ -120,8 +124,12 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-	public void setKind(int i) {
-		kind = i;
+	public void setData(String data) {
+		luaData = data;
+	}
+
+	public String getData() {
+		return luaData;
 	}
 
 	private void fillMobStats(boolean restoring) {

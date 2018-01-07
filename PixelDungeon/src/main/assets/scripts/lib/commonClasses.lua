@@ -29,14 +29,17 @@ RPD = {
     },
 
     Buffs = {
-        Roots = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Roots")
+        Roots     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Roots"),
+        Paralysis = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Paralysis"),
+        Vertigo   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Vertigo")
     },
 
     Sfx = {
         CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
         Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
         FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
-        SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle")
+        SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
+        Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck")
     },
 
     Objects = {

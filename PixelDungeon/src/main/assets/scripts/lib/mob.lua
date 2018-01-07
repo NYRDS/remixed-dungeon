@@ -9,6 +9,8 @@ local RPD = require "scripts/lib/commonClasses"
 
 local quest = require"scripts/lib/quest"
 
+local serpent = require "scripts/lib/serpent"
+
 local mob = {}
 
 mob.__index = mob
@@ -23,6 +25,21 @@ mob.init = function(desc)
     setmetatable(ret, mob)
 
     return ret
+end
+
+mob.storeData = function(chr, data)
+    chr:setData(serpent.dump(data))
+end
+
+mob.restoreData = function(chr)
+    print(chr, serpent, chr.getData)
+    local data = chr:getData()
+    if data == nil then
+        return {}
+    end
+
+    res, data = serpent.load(data)
+    return data or {}
 end
 
 mob.onDie = function(self,mob,cause)
@@ -48,6 +65,13 @@ end
 
 mob.onSpawn = function(self,mob,level)
     return not not (self.spawn and self.spawn(mob,level))
+end
+
+mob.onDefenceProc = function(self,mob, enemy, damage)
+    if self.defenceProc == nil then
+        return damage
+    end
+    return self.defenceProc(mob, enemy, damage)
 end
 
 mob.fillStats = function(self,mob)

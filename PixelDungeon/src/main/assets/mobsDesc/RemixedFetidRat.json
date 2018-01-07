@@ -1,0 +1,19 @@
+{
+  "defenseSkill": 5,
+  "attackSkill": 12,
+  "exp": 0,
+  "maxLvl": 1,
+  "dmgMin": 2,
+  "dmgMax": 6,
+  "dr": 2,
+  "ht": 15,
+  "loot": {"kind":"RatSkull"},
+  "lootChance": 1,
+  "name": "FetidRat_Name",
+  "name_objective": "FetidRat_Name_Objective",
+  "description": "FetidRat_Desc",
+  "gender": "FetidRat_Gender",
+  "spriteDesc": "spritesDesc/Rat.json",
+  "walkingType": "NORMAL",
+  "scriptFile": "scripts/mobs/RemixedFetidRat"
+}
