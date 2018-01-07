@@ -428,10 +428,6 @@ public abstract class Mob extends Char {
 		runMobScript("onMove", step);
 
 		super.move(step);
-
-		if (!flying) {
-			Dungeon.level.press(getPos(),this);
-		}
 	}
 
 	protected float attackDelay() {

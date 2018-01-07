@@ -1215,12 +1215,12 @@ public class Hero extends Char {
 
 			if (Actor.findChar(target) == null) {
 				if (buff(Blindness.class) == null) {
-					if (level.pit[target] && !flying && !Chasm.jumpConfirmed) {
+					if (level.pit[target] && !isFlying()&& !Chasm.jumpConfirmed) {
 						Chasm.heroJump(this);
 						interrupt();
 						return false;
 					}
-					if (TrapHelper.isVisibleTrap(level.map[target]) && !flying && !TrapHelper.stepConfirmed) {
+					if (TrapHelper.isVisibleTrap(level.map[target]) && !isFlying() && !TrapHelper.stepConfirmed) {
 						TrapHelper.heroTriggerTrap(this);
 						interrupt();
 						return false;
@@ -1559,14 +1559,13 @@ public class Hero extends Char {
 	public void move(int step) {
 		super.move(step);
 
-		if (!flying) {
+		if (!isFlying()) {
 
 			if (Dungeon.level.water[getPos()]) {
 				Sample.INSTANCE.play(Assets.SND_WATER, 1, 1, Random.Float(0.8f, 1.25f));
 			} else {
 				Sample.INSTANCE.play(Assets.SND_STEP);
 			}
-			Dungeon.level.press(getPos(), this);
 		}
 	}
 

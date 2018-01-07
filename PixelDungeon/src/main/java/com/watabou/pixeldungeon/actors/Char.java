@@ -563,7 +563,11 @@ public abstract class Char extends Actor implements Presser{
 
 		setPos(step);
 
-		if (flying && Dungeon.level.map[getPos()] == Terrain.DOOR) {
+		if (!isFlying()) {
+			Dungeon.level.press(getPos(),this);
+		}
+
+		if (isFlying() && Dungeon.level.map[getPos()] == Terrain.DOOR) {
 			Door.enter(getPos());
 		}
 
