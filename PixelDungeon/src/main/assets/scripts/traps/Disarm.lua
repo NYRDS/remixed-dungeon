@@ -19,7 +19,7 @@ return trap.init(function(cell, char, data)
     local items = { "weapon", "armor", "ring1", "ring2" }
 
     local function removeItemFromHero(item)
-        if item and not string.match(tostring(item:getClass()), notRemoveClass) then
+        if item and not ( string.len(notRemoveClass) > 0 and string.match(tostring(item:getClass()), notRemoveClass) ) then
             item:removeItemFrom(hero)
             local cellToDrop = level:getEmptyCellNextTo(cell)
 
