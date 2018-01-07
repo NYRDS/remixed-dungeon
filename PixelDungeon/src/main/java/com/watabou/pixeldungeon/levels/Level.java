@@ -995,7 +995,7 @@ public abstract class Level implements Bundlable {
 
 	@NonNull
 	public Heap drop(Item item, int cell) {
-		if (solid[cell]){
+		if (solid[cell] && map[cell] != Terrain.DOOR){
 			for (int n : Level.NEIGHBOURS8) {
 				int p = n + cell;
 				if (cellValid(p)){
