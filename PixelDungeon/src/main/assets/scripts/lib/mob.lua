@@ -50,4 +50,8 @@ mob.onSpawn = function(self,mob,level)
     return not not (self.spawn and self.spawn(mob,level))
 end
 
+mob.fillStats = function(self,mob)
+    return not not (self.stats and self.stats(mob))
+end
+
 return mob

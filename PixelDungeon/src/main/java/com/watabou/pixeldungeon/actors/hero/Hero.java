@@ -138,6 +138,7 @@ import java.util.Set;
 
 public class Hero extends Char {
 
+	private static final String TXT_EXP   = "%+dEXP";
 	private static final String TXT_LEAVE = Game.getVar(R.string.Hero_Leave);
 
 	private static final String TXT_LEVEL_UP  = Game.getVar(R.string.Hero_LevelUp);
@@ -1362,6 +1363,8 @@ public class Hero extends Char {
 	public void earnExp(int exp) {
 
 		this.setExp(this.getExp() + exp);
+
+		getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP, exp);
 
 		boolean levelUp = false;
 		while (this.getExp() >= maxExp()) {

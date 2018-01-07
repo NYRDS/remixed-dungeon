@@ -79,7 +79,6 @@ public abstract class Mob extends Char {
 	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
 
 	protected static final String TXT_RAGE = "#$%^";
-	protected static final String TXT_EXP  = "%+dEXP";
 
 	private static final float SPLIT_DELAY = 1f;
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
@@ -505,7 +504,7 @@ public abstract class Mob extends Char {
 	}
 
 	private boolean mobScriptLoaded;
-	private boolean runMobScript(String method, Object arg1, Object arg2) {
+	protected boolean runMobScript(String method, Object arg1, Object arg2) {
 		if (!mobScriptLoaded) {
 			mobScript=LuaEngine.module(scriptFile, DEFAULT_MOB_SCRIPT);
 			mobScriptLoaded = true;
@@ -519,11 +518,11 @@ public abstract class Mob extends Char {
 				.checkboolean();
 	}
 
-	private boolean runMobScript(String method, Object arg) {
+	protected boolean runMobScript(String method, Object arg) {
 		return runMobScript(method, arg, null);
 	}
 
-	private boolean runMobScript(String method) {
+	protected boolean runMobScript(String method) {
 		return runMobScript(method, null, null);
 	}
 
@@ -566,8 +565,6 @@ public abstract class Mob extends Char {
 
 				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
 					if (hero.lvl() <= maxLvl && exp > 0) {
-						hero.getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP,
-								exp);
 						hero.earnExp(exp);
 					}
 				}
@@ -965,6 +962,7 @@ public abstract class Mob extends Char {
 
 		return false;
 	}
+
 
 	@NonNull
 	protected Char getEnemy() {

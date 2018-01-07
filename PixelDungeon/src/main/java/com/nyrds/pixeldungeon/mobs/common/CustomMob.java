@@ -45,7 +45,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	public CustomMob(String mobClass) {
 		this.mobClass = mobClass;
-		fillMobStats();
+		fillMobStats(false);
 	}
 
 	@Override
@@ -78,7 +78,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		mobClass = bundle.getString(MOB_CLASS);
-		fillMobStats();
+		fillMobStats(true);
 
 		super.restoreFromBundle(bundle);
 	}
@@ -120,7 +120,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-	private void fillMobStats() {
+	public void setKind(int i) {
+		kind = i;
+	}
+
+	private void fillMobStats(boolean restoring) {
 		try {
 			JSONObject classDesc = getClassDef();
 
@@ -163,11 +167,16 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			attackRange = classDesc.optInt("attackRange",attackRange);
 
-			hp(ht(classDesc.optInt("ht", 1)));
-
 			scriptFile = classDesc.optString("scriptFile", scriptFile);
 
 			friendly = classDesc.optBoolean("friendly",friendly);
+
+
+			if(!restoring) {
+				hp(ht(classDesc.optInt("ht", 1)));
+			}
+
+			runMobScript("fillStats");
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
