@@ -194,8 +194,8 @@ public class StartScene extends PixelScene {
 			add(challenge);
 
 		} else {
-			int classesPerRow = (int) Math.ceil(usableClasses/2.f);
-			float shieldW = width / classesPerRow;
+			int classesPerRow = (int) Math.ceil(usableClasses / 2.f);
+			float shieldW = width / (classesPerRow);
 			float shieldH = Math.min(centralHeight / classesPerRow, shieldW * 1.2f);
 			top = title.y + title.height() + centralHeight / 2 - shieldH;
 			int i = 0;
@@ -416,7 +416,7 @@ public class StartScene extends PixelScene {
 
 		private static final int WIDTH  = 24;
 		private static final int HEIGHT = 28;
-		private static final int SCALE  = 2;
+		private static final float SCALE  = 1.5f;
 
 		private HeroClass cl;
 

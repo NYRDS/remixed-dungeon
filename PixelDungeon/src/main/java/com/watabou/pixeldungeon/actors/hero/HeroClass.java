@@ -84,6 +84,8 @@ public enum HeroClass {
             .getVars(R.array.HeroClass_ElfPerks);
     private static final String[] NECROMANCER_PERKS = Game
             .getVars(R.array.HeroClass_NecromancerPerks);
+    private static final String[] GNOLL_PERKS = Game
+            .getVars(R.array.HeroClass_GnollPerks);
 
     HeroClass(String title, Class<? extends ClassArmor> armorClass, Abilities abilities) {
         this.title = title;
@@ -229,21 +231,18 @@ public enum HeroClass {
                 return ELF_PERKS;
             case NECROMANCER:
                 return NECROMANCER_PERKS;
+            case GNOLL:
+                return GNOLL_PERKS;
         }
     }
 
     public int getGender() {
         switch (this) {
-            case WARRIOR:
-            case MAGE:
-            case ROGUE:
-            case ELF:
-            case NECROMANCER:
+            default:
                 return Utils.MASCULINE;
             case HUNTRESS:
                 return Utils.FEMININE;
         }
-        return Utils.NEUTER;
     }
 
     private static final String CLASS          = "class";

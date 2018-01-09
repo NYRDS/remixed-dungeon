@@ -4,4 +4,5 @@
     <string name="HeroClass_Gnoll">Gnoll</string>
     <string name="GnollArmor_ACSpecial">Special</string>
     <string name="GnollArmor_NotGnoll">Only gnolls can equip Gnoll Armor!</string>
+    <string-array name="HeroClass_GnollPerks">Gnoll Perks</string-array>
 </resources>
