@@ -1,29 +1,58 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Ushanka</string>
+    <string name="Ushanka_Info">Um chapéu Ushanka, quente e acolhedor, decorado com uma elegante estrela vermelha. A companhia perfeita para alguém nesse calabouço frio e tenebroso.</string>
+
     <!-- STRINGS OF VampireSkull CLASS -->
-    <string name="VampireSkull_Name">Esqueleto Vampiro</string>
+    <string name="VampireSkull_Name">Crânio de Vampiro</string>
+    <string name="VampireSkull_Info">Esta máscara é feita a partir do crânio de um vampiro. É realmente o crânio de um vampiro... o crânio de um vampiro com a cabeça grande. Assustador.</string>
+
     <!-- STRINGS OF ZombieMask CLASS -->
     <string name="ZombieMask_Name">Máscara de zumbi</string>
+    <string name="ZombieMask_Info">Alguma vez você já quis ser um herói morto-vivo, que falhou em sua missão repetidamente? Bem, essa é sua chance.</string>
+
     <!-- Item descriptions -->
     <!-- STRINGS OF Candy CLASS -->
     <string name="Candy_Name">Doce</string>
+    <string name="Candy_Info">Este doce parece tão gostoso e tem o cheiro muito bom. Você realmente precisa dar a alguém?</string>
+    <string name="Candy_Warning_1">Você não devia ter comido o doce. Você prometeu dá-lo a alguém. Ele não parece ter lhe afetado de qualquer maneira, porém, você ainda está com fome, afinal, é apenas doce.</string>
+    <string name="Candy_Warning_2">Realmente eram muitos. Sua barriga dói por você ter comido muitos doces.</string>
+
     <!-- STRINGS OF PumpkinPie CLASS -->
     <string name="PumpkinPie_Name">torta de abóbora</string>
     <string name="PumpkinPie_Info">Uma torta de abóbora deliciosa, tal como a mãe costuma assar.</string>
 
     <!-- STRINGS OF RottenPumpkinPie CLASS -->
     <string name="RottenPumpkinPie_Name">torta de abóbora podre</string>
+    <string name="RottenPumpkinPie_Info">Não importa quão bom era quando estava fresca, não ha como isto ainda ser comestível.</string>
+
     <!-- STRINGS OF CandleOfMindVision CLASS -->
-    <string name="CandleOfMindVision_Name">Vela das visões</string>
+    <string name="CandleOfMindVision_Name">Vela das Visões</string>
+    <string name="CandleOfMindVision_Info">Parece uma vela normal, não é algo que você esperaria encontrar em um calabouço perigoso. Curiosamente é muito quente, apesar de não estar acesa.</string>
+    <string name="CandleOfMindVision_Info_Lighted">A vela acendeu o momento que você a tirou da mochila. A chama emite uma fraca luz roxa, e ao olhar através dela, os monstros próximos se tornam visíveis para você.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">A vela derreteu completamente, ela já não acende quando você a segura. Parece que você não pode mais usá-la.</string>
+
     <!-- Object descriptions -->
     <!-- STRINGS OF Barrel CLASS -->
     <string name="Barrel_Name">Barril</string>
+    <string name="Barrel_Desc">Parece um barril de madeira simples. Ao aproximar-se é possível sentir um leve cheiro de óleo. O barril parece ser bastante leve, você  deve ser capaz de empurra-lo.</string>
+
     <!-- STRINGS OF Barrel_Pumpkin CLASS -->
     <string name="Barrel_Pumpkin_Name">Abóbora</string>
+    <string name="Barrel_Pumpkin_Desc">É realmente estranho e assustador ver uma abóboras esculpidas em um calabouço.  Você pode sentir o perigo ao aproximando-se dessa coisa. Mas você sempre pode evitá-lo, certo?</string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ScarecrowNPC CLASS -->
     <string name="ScarecrowNPC_Name">Espantalho</string>
+    <string name="ScarecrowNPC_Gender">neutro</string>
     <string name="ScarecrowNPC_Name_Objective">Espantalho</string>
+    <string name="ScarecrowNPC_Desc">Não há dúvidas... este espantalho observa cada movimento seu. Seus olhos vermelhos brilhantes veem através de você, mas você não se sente em perigo.</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Olá garotinho, como vai?\n Eu tenho algo emocionante para você!\n\n Oh, não sei o quão grato eu seria,\n Se você fosse pegar alguns doces para mim!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Olá garotinha, como vai?\n Eu tenho algo emocionante para você!\n\n Oh, não sei o quão grato eu seria,\n Se você fosse pegar alguns doces para mim!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Cinco doces são tudo que eu preciso.\n Oh, a recompensa será tão doce!</string>
+    <string name="ScarecrowNPC_Quest_End">Que alegria! Que bom!\n Sua recompensa será comida de verdade!</string>
     <string name="Journal_ScarecrowNPC">Espantalho</string>
 
 </resources>

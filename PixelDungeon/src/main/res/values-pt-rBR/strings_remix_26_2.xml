@@ -4,6 +4,7 @@
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="ServiceManNPC_NotReady">Desculpe, o filme ainda não está pronto, poderás tentar de novo dentro de alguns minutos.</string>
     <string name="ServiceManNPC_Limit">Eu peço desculpa, mas todos os novos aventureiros poder apenas ver %d filmes no total.</string>
+    <string name="WndMovieTheatre_Sorry">Algo deu errado, não conseguimos obter a sua recompensa do vídeo...</string>
     <string name="WndMovieTheatre_Ok">Você assistiu o vídeo de \"recompensa\" com sucesso!</string>
 
     <!-- Accessories descriptions -->

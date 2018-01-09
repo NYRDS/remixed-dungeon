@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF BadgesScene CLASS-->
-  <string name="BadgesScene_Title">Seus Distintivos</string>
+  <string name="BadgesScene_Title">Suas Medalhas.</string>
   <!--STRINGS OF Badges CLASS-->
   <string name="Badges_Info1">Medalha: %s</string>
   <string name="Badges_Info2">Nova super medalha: %s</string>
@@ -32,7 +32,7 @@
   <string name="Badges_DeathGas">Morto por Gás Tóxico</string>
   <string name="Badges_DeathHunger">Morto de Fome</string>
   <string name="Badges_DeathGlyph">Morto por Encantamento</string>
-  <string name="Badges_DeathFalling">Morto por Cair</string>
+  <string name="Badges_DeathFalling">Morto por Queda.</string>
   <string name="Badges_Yasd">Morto por Fogo, Envenenamento, Gás Tóxico &amp; Fome</string>
   <!--<string name="Badges_BossSlain1War"></string>-->
   <!--<string name="Badges_BossSlain1Mag"></string>-->

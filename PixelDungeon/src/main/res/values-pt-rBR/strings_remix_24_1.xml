@@ -5,6 +5,8 @@
     <string name="ArmoredStatue_Name">estátua animada</string>
     <string name="ArmoredStatue_Gender">feminino</string>
     <string name="ArmoredStatue_Name_Objective">estátua animada</string>
+    <string name="ArmoredStatue_Desc">Você não poderia sequer pensar que isso é apenas mais uma estátua feia. Não são apenas os olhos vermelhos brilhantes, mas o fato é que ninguém iria colocaria um _%s_ nisso.</string>
+
     <!-- STRINGS OF SpiderSoldier -->
     <string name="SpiderGuard_Name">aranha Guardião </string>
     <string name="SpiderGuard_Gender">masculino</string>

@@ -3,6 +3,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF GoldenSword -->
     <string name="GoldenSword_Name">Espada dourada</string>
+    <string name="GoldenSword_Info">Normalmente, uma arma feita de um metal macio como ouro, é considerada apenas uma decoração. Apesar disso, a lâmina dessa espada parece ser capaz de cortar muito bem.</string>
     <string name="GoldenSword_Gender">masculino</string>
 
     <!-- Mobs descriptions -->
@@ -10,11 +11,14 @@
     <string name="GoldenStatue_Name">Estátua Dourada</string>
     <string name="GoldenStatue_Gender">feminino</string>
     <string name="GoldenStatue_Name_Objective">Estátua Dourada</string>
+    <string name="GoldenStatue_Desc">É bastante difícil de acreditar que esta estátua magnífica não é apenas uma decoração, mas sim uma criatura maligna esperando por um aventureiro desavisado. À primeira vista você poderia jurar que a _%s_ era apenas parte de seu braço.</string>
+
     <!-- STRINGS OF NecromancerNPC CLASS -->
     <string name="NecromancerNPC_Name">necromante</string>
     <string name="NecromancerNPC_Gender">masculino</string>
     <string name="NecromancerNPC_Name_Objective">necromante</string>
     <string name="NecromancerNPC_Desc">Este homem de meia idade parece estar meio irritado e animado ao mesmo tempo. Ele verte uma armadura composta feita de fragmentos de ossos.</string>
+    <string name="NecromancerNPC_Intro">Ah! Que visão rara! Um companheiro aventureiro que não está morto. Excepcional! Oh ... Eu peço desculpas, às vezes eu fico muito animado. Como pode ver, eu sou um necromante. Apesar de estudar os mortos e a morte ser minha maneira de ganhar a vida, ver a mesma coisa várias e várias vezes, é extremamente chato. Entretanto, é exatamente por isso que estou aqui. De acordo com meus cálculos em apenas um par de semanas, em algum lugar neste calabouço, algo espetacular vai acontecer. A _Necropolis_, uma antiga cidade dos mortos, vai abrir as suas portas. E... eu não posso falar muito, já perdi muito tempo. Preciso me preparar para, volte mais tarde.</string>
     <string name="NecromancerNPC_Message1">tão pouco tempo, tão pouco tempo...</string>
     <string name="NecromancerNPC_Message2">Eu tenho que estar preparado.</string>
     <string name="NecromancerNPC_Message3">Eu consigo ouvir o chamado dos mortos.</string>

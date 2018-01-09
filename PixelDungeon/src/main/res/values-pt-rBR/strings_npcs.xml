@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
-  <string name="Blacksmith_Name">troll ferreiro</string>
+  <string name="Blacksmith_Name">Troll Ferreiro.</string>
   <string name="Blacksmith_Desc">Este Troll Ferreiro se parece muito com todos os trolls: ele é alto e magro, e sua pele se assemelha a pedra na cor e textura. O ferreiro trolls mexe com suas pequenas ferramentas de tamanho desproporcinal.</string>
   <string name="Blacksmith_Gold1">Ei humano! Quer ser útil, não é? Tome este picareta e me consiga algumas pedras de _Ouro Escuro_, _15 peças_ devem ser suficiente. O que quer dizer, como é que eu vou te pagar? Você gananciosos...\nOk, ok, eu não tenho dinheiro para pagar, mas posso forjar para você. Considere-se com sorte, eu sou o único ferreiro por perto.</string>
   <string name="Blacksmith_Blood1">Ei humano! Quer ser útil, não é? Tome este picareta e _mate um Morcego_, e me mostre seu sague na ponta da picareta. O que quer dizer, como é que eu vou te pagar? Você gananciosos...\nOk, ok, eu não tenho dinheiro para pagar, mas posso forjar para você. Considere-se com sorte, eu sou o único ferreiro por perto.</string>
@@ -27,7 +27,7 @@
   <string name="Ghost_Rat2">Por favor... Ajude-me... Mate essa abominação...</string>
   <string name="Ghost_Defense">evitou</string>
   <string name="FetidRat_Name">rato fedorento</string>
-  <string name="FetidRat_Name_Objective">rato fedorento</string>
+  <string name="FetidRat_Name_Objective">Rato fedido.</string>
   <string name="FetidRat_Gender">feminino</string>
   <string name="FetidRat_Desc">O rato marsupial é muito maior que um normal. É cercado por uma nuvem poluída.</string>
   <!--STRINGS OF Hedgehog CLASS-->

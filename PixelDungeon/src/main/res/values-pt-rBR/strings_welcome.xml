@@ -70,4 +70,6 @@ remix.21:\n
         remix.22:\n
         - Novo chefe oculto
         </string>
+  <string name="Welcome_Text_23">
+Remix Atualização                                                                                                             - Dungeon Agora Tem 32 Leveis Mais Profundos.(Em Vez de 26)                                 - Boss Secreto Movido Para o Level 25                                                                          - Maior Variação de Mini-Bosses Para a Luta Final (Em vez de 2 Punhos, Yog Agora consegue ter um total de 5 mini bosses ao spawnar)                                                     -Novas Configurações Para Monstros do Nivel 27-31</string>
 </resources>

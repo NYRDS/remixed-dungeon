@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">Pergaminho da Invocação</string>
+    <string name="ScrollOfSummoning_Info">Quando lido em Voz Alta, Esse Pergaminho Invocar um dos Monstros Da Dungeon Atual. E se a Vontande do Monstro ser Fraca o Suficiente Ele Se Torna seu Servo.</string>
+    <string name="ScrollOfSummoning_Info_2">O Monstro responde aos seus Invocados!</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">A Poderosa Magia Prevenir Você de usar \"%s\"</string>
+    <string name="Using_Failed_Because_Blind">Você não pode usar \"%s\" enquanto está cego!</string>
+
+    </resources>

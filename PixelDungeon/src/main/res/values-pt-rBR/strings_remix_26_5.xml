@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Buffs -->
+    <!-- STRINGS OF FrostAura CLASS -->
+    <string name="FrostAura_Buff">Aura Gelada</string>
+
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF ElvenDagger CLASS -->
+    <string name="ElvenDagger_Name">adaga élfica </string>
+    <string name="ElvenDagger_Info">Esta arma é feita de liga de metálica especial, tornando-a muito mais leve em comparação a uma adaga comum.</string>
+    <string name="ElvenDagger_Gender">masculino</string>
+
+
+    <!-- STRINGS OF IceGuardianCoreModule CLASS -->
+    <string name="IceGuardianCoreModule_Name">Núcleo do Guardião de Gelo</string>
+    <string name="IceGuardianCoreModule_Info">É uma estrutura complexa feita de gelo mágico. Há uma joia brilhante no centro deste dispositivo estranho.</string>
+
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">Anel Congelado</string>
+    <string name="RingOfFrost_Info">Este anel é esculpido de gelo mágico. Seu portador é protegido pela aura gelada, retardando e causando dano aos inimigos.</string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">Carapaça da Aranha Rainha</string>
+    <string name="SpiderQueenCarapace_Info">Um pedaço de carapaça da aranha rainha. Você pode ver um pedaço de glândula de teia dentro dela, quase parece estar vivo.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">O-Olá. Bem-vindo à Biblioteca. Aqui você pode encontrar informações sobre todo tipo de coisas, coisas que podem ser encontradas no calabouço... na verdade, nós só podemos fornecer conhecimento do que foi descoberto pelos aventureiros. É... é um pouco embaraçoso. Então, cada vez que você nos visitar, provavelmente, haverá coisas novas para ler.</string>
+
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF LibraryBook CLASS -->
+    <string name="LibraryBook_Name">Livro da biblioteca</string>
+    <string name="LibraryBook_Description">Este volume é realmente enorme. Ele contém todo o conhecimento que os aventureiros descobriram no calabouço.</string>
+
+
+    <!-- Wnd descriptions -->
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_moveTimeout">Tempo agir: %s</string>
+
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">Armadilha</string>
+    <string name="TrapWnd_Step">Você realmente quer pisar nesta armadilha? Provavelmente, você vai morrer.</string>
+</resources>

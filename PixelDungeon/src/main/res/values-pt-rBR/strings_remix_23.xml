@@ -9,6 +9,7 @@
   <string name="Guts_TileDescDeco">Parece que esse lugar foi... ferido</string>
   <string name="Guts_TileDescBookshelf">Esta estante de livros está completamente coberta em Teia espessa e carnuda, Não tem maneira de alcançar qualquer um dos livros</string>
   <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Guts">Derrotado, quebrado em pedaços, mas não completamente destruído, o Deus Antigo foi selado nos níveis mais profundos da masmorra. Mas, recentemente, o selo foi quebrado, deixando a passagem, para ninho dos demônios, aberta. Os monstros tenebrosos, criados pelo Deus Antigo em seu sono, eram tão numerosos que, sem nenhuma maneira de escapar, foram forçados a se fundir para formar esses salões grotescos. E ao caminhar sobre sua carne viva, você pode sentir a batida do coração do Deus Antigo ecoando através deles.</string>
   <!--Mob descriptions-->
   <!--STRINGS OF MimicAmulet CLASS-->
   <string name="MimicAmulet_Name">mímico</string>
@@ -26,6 +27,7 @@
   <string name="ZombieGnoll_Name">Gnoll-zumbi</string>
   <string name="ZombieGnoll_Gender">masculino</string>
   <string name="ZombieGnoll_Name_Objective">Gnoll-Zumbi</string>
+  <string name="ZombieGnoll_Desc">O corpo torcido e quebrado de um Gnoll-Zumbi já não se parece com humanoide ou hiena. É apenas um monte de carne podre e ossos cheios de desejo maligno de matar e comer.</string>
   <!--STRINGS OF Worm CLASS-->
   <string name="Worm_Name">minhoca</string>
   <string name="Worm_Gender">masculino</string>
@@ -40,6 +42,7 @@
   <string name="YogsEye_Name">Olho de Yog</string>
   <string name="YogsEye_Gender">masculino</string>
   <string name="YogsEye_Name_Objective">Olho de Yog</string>
+  <string name="YogsEye_Desc">O olho do Deus Antigo, com o olhar preenchido de ódio eterno. Você pode sentir isso ver através de sua alma.</string>
   <!--STRINGS OF YogsHeart CLASS-->
   <string name="YogsHeart_Name">Coração de Yog</string>
   <string name="YogsHeart_Gender">masculino</string>
@@ -49,4 +52,5 @@
   <string name="YogsTeeth_Name">dente de yog</string>
   <string name="YogsTeeth_Gender">masculino</string>
   <string name="YogsTeeth_Name_Objective">Dente de Yog</string>
+  <string name="YogsTeeth_Desc">A enorme boca do Deus Antigo cheia de dentes afiados. Uma manifestação muito adequada do seu desejo de destruir e devorar todo.</string>
 </resources>

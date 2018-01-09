@@ -3,6 +3,8 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
     <string name="SantaHat_Name">Chapéu do Papai Noel</string>
+    <string name="SantaHat_Info">Nada diz que Dungeonatal é como o chapéu de seda vermelho do Papai Noel, o Senhor das Profundezas.</string>
+
     <!-- STRINGS OF Rudolph CLASS -->
     <string name="Rudolph_Name">Nariz vermelho e chifres</string>
     <string name="Rudolph_Info">O que poderia ser mais festivo do que um nariz brilhante vermelho? e um par de chifres, naturalmente.</string>
@@ -12,10 +14,13 @@
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Gender">masculino</string>
     <string name="Kobold_Name_Objective">kobold</string>
+    <string name="Kobold_Desc">Kobold são considerados lendas. Um ancestral comum dos gnolls, kobolds vivem em cavernas profundas e frias. Acredita-se que o seu povo dominou a engenharia e maquinaria  muito antes dos anões. No entanto, não se sabe por que eles desapareceram há anos atrás...</string>
+
     <!-- STRINGS OF KoboldIcemancer CLASS -->
     <string name="KoboldIcemancer_Name">mago-do-gelo Kobold </string>
     <string name="KoboldIcemancer_Gender">masculino</string>
     <string name="KoboldIcemancer_Name_Objective">mago-do-gelo Kobold </string>
+    <string name="KoboldIcemancer_Desc">Kobold magos do gelo eram a elite da sua sociedade. Guerreiros, magos e cientistas importantes. Magos do gelo antigo, dominam a arte de moldar o gelo, criando mecanismos sofisticados de gelo e os reforçando com magia.</string>
     <string name="KoboldIcemancer_Killed">Dardos de gelo de %s matou você...</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
@@ -67,6 +72,8 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">Perú festivo</string>
+    <string name="ChristmasTurkey_Info">A melhor maneira de celebrar o Dungeonatal, é com um belo peru assado. Assim, você pode homenagear o dia em que monstros invadiram o calabouço, atraindo aventureiros e heróis do mundo todo, aumentando o turismo e beneficiando comércios locais.</string>
+
     <!-- STRINGS OF IceKey CLASS -->
     <string name="IceKey_Name">chave de gelo</string>
     <string name="IceKey_Info">Essa chave parece ter sido feita de gelo. mas é dura como aço.</string>

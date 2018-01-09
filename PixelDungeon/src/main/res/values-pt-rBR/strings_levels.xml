@@ -2,12 +2,14 @@
 <resources>
   <!--PACKAGE /levels-->
   <!--STRINGS OF Level CLASS-->
-  <string name="Level_HiddenPlate">Uma oculta placa de pressão faz Click!</string>
+  <string name="Level_HiddenPlate">Uma placa de pressão oculta faz click!</string>
   <string name="Level_TileChasm">Abismo</string>
   <string name="Level_TileFloor">Piso</string>
   <string name="Level_TileGrass">Grama</string>
   <string name="Level_TileWater">Água</string>
-  <string name="Level_TileWall">Murro</string>
+  <string name="Level_TileWall">
+Parede
+</string>
   <string name="Level_TileClosedDoor">Porta fechada</string>
   <string name="Level_TileOpenDoor">Porta aberta</string>
   <string name="Level_TileEntrance">Entrada </string>
