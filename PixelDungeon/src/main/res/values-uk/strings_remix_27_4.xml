@@ -20,4 +20,8 @@
     <!-- STRINGS OF Spell CLASS -->
     <string name="Spell_SelectACell">Оберіть ціль.</string>
     
-    </resources>
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Рівні</string>
+    <string name="WndJournal_Logbook">Формуляр</string>
+
+</resources>

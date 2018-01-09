@@ -13,6 +13,6 @@
   <string name="ResultDescriptions_Bleeding">Wykrwawił się na śmierć na poziomie %d</string>
   <string name="ResultDescriptions_Ooze">Zabity przez żrący śluz na poziomie %d</string>
   <string name="ResultDescriptions_Fall">Śmierć przez upadek na poziomie %d</string>
-  <string name="ResultDescriptions_Win">Uzyskano Amulet Yendora</string>
+  <string name="ResultDescriptions_Win">Uzyskano Amulet Yendoru</string>
   <string name="ResultDescriptions_Immured">Śmierć przez wejście w ścianę na poziomie %d</string>
 </resources>

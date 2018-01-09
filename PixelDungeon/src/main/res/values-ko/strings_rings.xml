@@ -19,7 +19,7 @@
     <item>석영</item>
     <item>마노</item>
   </string-array>
-  <string name="Ring_Info1">반지는 동시에 2개까지 착용할 수 있습니다.</string>
+  <string name="Ring_Info1">반지는 동시에 2개까지만 착용할 수 있습니다.</string>
   <string name="Ring_Info2">%s 이/가 당신의 손가락을 고통스럽게 조여옵니다.</string>
   <string name="Ring_Info3a">%1$s\n\n %2$s 은/는 당신의 손가락 %3$s에 있습니다.</string>
   <string name="Ring_Info3b">그리고 저주로 인해, 당신은 그것을 벗을 수가 없습니다</string>

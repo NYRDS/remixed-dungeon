@@ -53,7 +53,7 @@
   <!--<string name="Badges_BossSlain3Ward"></string>-->
   <string name="Badges_BossSlain3All">3-ci Boss zabity przez Gladiatora, Berserkera, Czarnoksiężnika, Maga Bitewnego, Sprintera, Zabójcę, Snajpera &amp; i Strażniczkę</string>
   <string name="Badges_RingHaggler">Pierścień Szantażu zdobyty</string>
-  <string name="Badges_RingThorns">Pierścień kolców zdobyty</string>
+  <string name="Badges_RingThorns">Pierścień Cierni zdobyty</string>
   <string name="Badges_StrengthAttained1">Zdobyto 13 punktów siły</string>
   <string name="Badges_StrengthAttained2">Zdobyto 15 punktów siły</string>
   <string name="Badges_StrengthAttained3">Zdobyto 17 punktów siły</string>
@@ -81,7 +81,7 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amulet Yendora zdobyty</string>
-  <string name="Badges_VictoryAll">Amulet Yendora zdobyty przez Wojownika, Maga, Złodzieja  &amp; i Łowczynię</string>
+  <string name="Badges_VictoryAll">Amulet Yendoru zdobyty przez Wojownika, Maga, Złodzieja  &amp; i Łowczynię</string>
   <string name="Badges_MasteryCombo">Kombinacja 7 uderzeń</string>
   <string name="Badges_PotionsCooked1">Zrobiono 3 mikstury</string>
   <string name="Badges_PotionsCooked2">Zrobiono 6 mikstur</string>

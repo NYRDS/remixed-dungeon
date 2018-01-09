@@ -14,10 +14,14 @@
     <string name="Necrotism_Info">Nekroza</string>
     <string name="Necrotism_ACSpecial">NEKROZA</string>
     <string name="ResultDescriptions_Necrotism">Umarłeś na wskutek nekrozy na poziomie %d</string>
-    <string name="Necrotism_Death">Unarłeś od nekrozy...</string>
+    <string name="Necrotism_Death">Umarłeś od nekrozy...</string>
     <string name="Badges_DeathNecrotism">Śmierć od nekrozy</string>
 
     <!-- STRINGS OF Spell CLASS -->
     <string name="Spell_SelectACell">Wybierz cel </string>
     
-    </resources>
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Poziomy</string>
+    <string name="WndJournal_Logbook">Dziennik</string>
+
+</resources>

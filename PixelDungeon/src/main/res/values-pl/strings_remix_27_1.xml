@@ -3,7 +3,7 @@
     <!-- Window descriptions -->
     <!-- STRINGS OF WndPlayGames CLASS -->
     <string name="WndPortal_Title">Portal</string>
-    <string name="WndPortal_Info">Ten portal pozwala na powrót do miasta. Wygląda raczej nie stabilnie, pewnie nie będzie za długo atywny.\nChciałbyś go użyć ?</string>
+    <string name="WndPortal_Info">Ten portal pozwala na powrót do miasta. Nie jest zbyt stabilny i pewnie nie będzie za długo atywny.\nChciałbyś go użyć ?</string>
     <string name="WndPortal_Info_Return">Ten portal zabierze cię spowotem do podziemia.\nChciałbyś go użyć ?</string>
 
     <string name="WndPortal_Warning_Title">Uwaga Portal!</string>
@@ -16,7 +16,7 @@
     <string name="PortalGate_Activated">Aktywowano starożytny portal !</string>
     <string name="PortalGate_Used">Dotkąłeś portalu iii... nic się nie stało...</string>
 
-    <string name="PortalExit_Desc">.Ten portal zabierze cię na pierwszy poziom %s</string>
+    <string name="PortalExit_Desc">Ten portal zabierze cię na pierwszy poziom %s.</string>
     <string name="PortalExit_Desc_SpiderNest">Leżę Pająków</string>
     <string name="PortalExit_Desc_Necropolis">Nekropolis</string>
     <string name="PortalExit_Desc_IceCaves">Lodowe Jaskinie</string>

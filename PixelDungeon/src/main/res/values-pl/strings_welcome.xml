@@ -96,6 +96,16 @@
         - Nowy przedmiot \"Zestaw Pirata\"\n
         - Poprawiona oprawa graficzna dla Kocich oraz Króliczych Uszu\n
         </string>
+  <string name="Welcome_Text_24_2">
+ remix.24.2:\n
+ - Nowe monstrum : Złota Statua (rzadka statua)\n
+ - Nowy przedmiot: Złoty Miecz (można go naleść w rzadkim loocie, lub ze złotego golema z 100% szansą)\n
+ - Nowy NPC: Nekromanta(Spotkasz go na 7 poziome z niesamowotymi weśćmi)\n
+ - Osłabiono Szlam\n
+ - Tengu teraz upuszca Tom za każdym razem. Podklasy nie mogą użyć Tomu aby zmienić ich specjalność.\n
+ - Mroczny Lord ma teraz bardziej czuły początkowy pokuj (teraz gracze nie mogą go minąć aby prześć na następny poziom, teraz MUSISZ z nim walczyć)\n
+ - Pajęczy Urok dostal zaktualizowaną taksturę a można fo zdobyć z Królowej Pająków (Wcześniej mogłaś go zdobyć ze Szlamu)\n
+ </string>
   <string name="Welcome_Text_27_3">
          remix.27.3\n
   - Nowy przedmiot: Zwój Przyzwania\n
