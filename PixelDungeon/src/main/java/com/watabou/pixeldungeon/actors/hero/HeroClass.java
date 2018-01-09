@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
+import com.watabou.pixeldungeon.items.armor.GnollArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
@@ -50,6 +51,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Locale;
+
 public enum HeroClass {
 
     WARRIOR(Game.getVar(R.string.HeroClass_War), WarriorArmor.class, Ordinary.instance),
@@ -57,7 +60,8 @@ public enum HeroClass {
     ROGUE(Game.getVar(R.string.HeroClass_Rog), RogueArmor.class, Ordinary.instance),
     HUNTRESS(Game.getVar(R.string.HeroClass_Hun), HuntressArmor.class, Ordinary.instance),
     ELF(Game.getVar(R.string.HeroClass_Elf), ElfArmor.class, Ordinary.instance),
-    NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer), NecromancerArmor.class, Ordinary.instance);
+    NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer), NecromancerArmor.class, Ordinary.instance),
+    GNOLL(Game.getVar(R.string.HeroClass_Gnoll), GnollArmor.class, Ordinary.instance);
 
     private final Class<? extends ClassArmor> armorClass;
 
@@ -113,13 +117,11 @@ public enum HeroClass {
             try {
                 JSONObject classDesc = initHeroes.getJSONObject(className);
                 if (classDesc.has("armor")) {
-                    Armor armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
-                    hero.belongings.armor = armor;
+                    hero.belongings.armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
                 }
 
                 if (classDesc.has("weapon")) {
-                    KindOfWeapon weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
-                    hero.belongings.weapon = weapon;
+                    hero.belongings.weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
                 }
 
                 if (classDesc.has("ring1")) {
@@ -285,5 +287,13 @@ public enum HeroClass {
 
     public void setMagicAffinity(String affinity) {
         magicAffinity = affinity;
+    }
+
+    public String tag() {
+        if( this == HUNTRESS) {
+            return "ranger";
+        }
+
+        return name().toLowerCase(Locale.ROOT);
     }
 }

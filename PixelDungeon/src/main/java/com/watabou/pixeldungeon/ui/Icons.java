@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -217,21 +218,11 @@ public enum Icons {
 	}
 	
 	public static Image get( HeroClass cl ) {
-		switch (cl) {
-		case WARRIOR:
-			return get( WARRIOR );
-		case MAGE:
-			return get( MAGE );
-		case ROGUE:
-			return get( ROGUE );
-		case HUNTRESS:
-			return get( HUNTRESS );
-		case ELF:
-			return get( ELF );
-		case NECROMANCER:
-			return get( NECROMANCER );
-		default:
-			return null;
+		try {
+			return get(valueOf(cl.name()));
+		} catch (IllegalArgumentException err) {
+			EventCollector.logException(err);
+			return get (NYRDIE);
 		}
 	}
 }

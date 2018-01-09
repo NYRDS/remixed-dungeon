@@ -29,8 +29,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.effects.BannerSprites;
-import com.watabou.pixeldungeon.effects.Fireball;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChangelogButton;
 import com.watabou.pixeldungeon.ui.DonateButton;
@@ -54,8 +52,8 @@ public class TitleScene extends PixelScene {
 
 	private static final String REMIXED_TITLE = "title.png";
 
-	Text            pleaseSupport;
-	DonateButton    btnDonate;
+	private Text         pleaseSupport;
+	private DonateButton btnDonate;
 
 	@Override
 	public void create() {

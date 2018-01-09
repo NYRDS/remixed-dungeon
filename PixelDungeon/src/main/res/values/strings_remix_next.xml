@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="HeroClass_Gnoll">Gnoll</string>
+    <string name="GnollArmor_ACSpecial">Special</string>
+    <string name="GnollArmor_NotGnoll">Only gnolls can equip Gnoll Armor!</string>
 </resources>

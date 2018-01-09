@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -12,41 +11,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 import java.io.File;
 
 public class SaveUtils {
-	private static final String RG_GAME_FILE = "rogue.dat";
-	private static final String RG_DEPTH_FILE = "rogue%d.dat";
-
-	private static final String WR_GAME_FILE = "warrior.dat";
-	private static final String WR_DEPTH_FILE = "warrior%d.dat";
-
-	private static final String MG_GAME_FILE = "mage.dat";
-	private static final String MG_DEPTH_FILE = "mage%d.dat";
-
-	private static final String RN_GAME_FILE = "ranger.dat";
-	private static final String RN_DEPTH_FILE = "ranger%d.dat";
-
-	private static final String EL_GAME_FILE = "elf.dat";
-	private static final String EL_DEPTH_FILE = "elf%d.dat";
-
-	private static final String NC_GAME_FILE = "necromancer.dat";
-	private static final String NC_DEPTH_FILE = "necromancer%d.dat";
 
 	static private boolean hasClassTag(HeroClass cl, String fname) {
-		switch (cl) {
-		case ROGUE:
-			return fname.contains("rogue");
-		case WARRIOR:
-			return fname.contains("warrior");
-		case HUNTRESS:
-			return fname.contains("ranger");
-		case MAGE:
-			return fname.contains("mage");
-		case ELF:
-			return fname.contains("elf");
-		case NECROMANCER:
-			return fname.contains("necromancer");
-		default:
-			throw new TrackedRuntimeException("unknown hero class!");
-		}
+		return fname.contains(cl.tag());
 	}
 
 	public static void loadGame(String slot, HeroClass heroClass) {
@@ -183,23 +150,7 @@ public class SaveUtils {
 	}
 
 	public static String gameFile(HeroClass cl) {
-
-		switch (cl) {
-		case WARRIOR:
-			return WR_GAME_FILE;
-		case ROGUE:
-			return RG_GAME_FILE;
-		case MAGE:
-			return MG_GAME_FILE;
-		case HUNTRESS:
-			return RN_GAME_FILE;
-		case ELF:
-			return EL_GAME_FILE;
-		case NECROMANCER:
-			return NC_GAME_FILE;
-		default:
-			throw new TrackedRuntimeException("unknown hero class!");
-		}
+		return cl.tag()+".dat";
 	}
 
 	public static String depthFileForLoad(HeroClass cl, int depth, String levelKind, String levelId) {
@@ -216,22 +167,6 @@ public class SaveUtils {
 	}
 	
 	private static String _depthFile(HeroClass cl) {
-
-		switch (cl) {
-		case WARRIOR:
-			return WR_DEPTH_FILE;
-		case ROGUE:
-			return RG_DEPTH_FILE;
-		case MAGE:
-			return MG_DEPTH_FILE;
-		case HUNTRESS:
-			return RN_DEPTH_FILE;
-		case ELF:
-			return EL_DEPTH_FILE;
-		case NECROMANCER:
-			return NC_DEPTH_FILE;
-		default:
-			throw new TrackedRuntimeException("unknown hero class!");
-		}
+		return cl.tag()+"%d.dat";
 	}
 }
