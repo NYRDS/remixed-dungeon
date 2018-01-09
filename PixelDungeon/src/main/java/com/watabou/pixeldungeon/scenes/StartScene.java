@@ -180,7 +180,6 @@ public class StartScene extends PixelScene {
 		}
 
 		if (PixelDungeon.landscape()) {
-
 			float shieldW = width / usableClasses;
 			float shieldH = Math.min(centralHeight, shieldW);
 			top = title.y + title.height + (centralHeight - shieldH) / 2;
@@ -195,16 +194,17 @@ public class StartScene extends PixelScene {
 			add(challenge);
 
 		} else {
-			float shieldW = width / 3;
-			float shieldH = Math.min(centralHeight / 3, shieldW * 1.2f);
+			int classesPerRow = (int) Math.ceil(usableClasses/2.f);
+			float shieldW = width / classesPerRow;
+			float shieldH = Math.min(centralHeight / classesPerRow, shieldW * 1.2f);
 			top = title.y + title.height() + centralHeight / 2 - shieldH;
 			int i = 0;
 			for (ClassShield shield : shields) {
-					if (i < 3) {
+					if (i < classesPerRow) {
 						shield.setRect(left + i * shieldW, top - shieldH * 0.5f,
 								shieldW, shieldH);
 					} else {
-						shield.setRect(left + (i - 3) * shieldW, top + shieldH, shieldW, shieldH);
+						shield.setRect(left + (i - classesPerRow) * shieldW, top + shieldH, shieldW, shieldH);
 					}
 				i++;
 			}

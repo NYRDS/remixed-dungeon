@@ -9,6 +9,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -209,6 +210,10 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		if(hero.subClass.equals(HeroSubClass.LICH)) {
 			descriptor = "lich";
+		}
+
+		if(hero.heroClass == HeroClass.GNOLL) {
+			descriptor = "gnoll";
 		}
 
 		return "hero/body/"+descriptor+".png";
