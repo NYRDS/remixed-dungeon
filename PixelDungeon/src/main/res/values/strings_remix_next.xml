@@ -4,5 +4,11 @@
     <string name="HeroClass_Gnoll">Gnoll</string>
     <string name="GnollArmor_ACSpecial">Special</string>
     <string name="GnollArmor_NotGnoll">Only gnolls can equip Gnoll Armor!</string>
-    <string-array name="HeroClass_GnollPerks">Gnoll Perks</string-array>
+    <string-array name="HeroClass_GnollPerks">
+        <item>Gnolls are very strong (starts with 17 str points) </item>
+        <item>Gnolls not very durable (starts with 5 hp)</item>
+        <item>Gnolls can\'t read</item>
+        <item>Gnolls not very charismatic</item>
+        <item>Gnolls will pack together</item>
+     </string-array>
 </resources>
