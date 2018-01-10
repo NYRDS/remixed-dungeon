@@ -114,23 +114,19 @@ public class XTilemapConfiguration {
 
 	public int baseTile(Level level, int cell) {
 		if(level.customTiles()) {
-			if(level.baseTileVariant[cell]>=0) {
-				return level.baseTileVariant[cell];
-			}
+			return level.baseTileVariant[cell];
+		} else {
+			TileDesc desc = tilemapConfiguration.get(level.map[cell]);
+			return desc.baseTiles.get(cell % desc.baseTiles.size());
 		}
-
-		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
-		return desc.baseTiles.get(cell % desc.baseTiles.size());
 	}
 
 	public int decoTile(Level level, int cell) {
 		if(level.customTiles()) {
-			if(level.decoTileVariant[cell]>=0) {
-				return level.decoTileVariant[cell];
-			}
+			return level.decoTileVariant[cell];
+		} else {
+			TileDesc desc = tilemapConfiguration.get(level.map[cell]);
+			return desc.decoTiles.get(cell % desc.decoTiles.size());
 		}
-
-		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
-		return desc.decoTiles.get(cell % desc.decoTiles.size());
 	}
 }

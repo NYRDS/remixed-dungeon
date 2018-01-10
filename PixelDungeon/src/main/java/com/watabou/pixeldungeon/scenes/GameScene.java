@@ -98,7 +98,10 @@ public class GameScene extends PixelScene {
 	private static volatile GameScene scene;
 
 	private SkinnedBlock   water;
-	private DungeonTilemap tiles;
+
+	private DungeonTilemap logicTiles;
+	private DungeonTilemap baseTiles;
+	private DungeonTilemap roofTiles;
 
 	private FogOfWar fog;
 
@@ -173,8 +176,13 @@ public class GameScene extends PixelScene {
 		ripples = new Group();
 		terrain.add(ripples);
 
-		tiles = new DungeonTilemap(level.getTilesTex());
-		terrain.add(tiles);
+		/*
+		logicTiles = new DungeonTilemap(Assets.TILES_CAVES);
+		terrain.add(logicTiles);
+		*/
+		
+		baseTiles = new DungeonTilemap(level.getTilesTex());
+		terrain.add(baseTiles);
 
 		objects = new Group();
 		add(objects);
@@ -213,7 +221,7 @@ public class GameScene extends PixelScene {
 		boolean buggedSave = false;
 		HashSet<Mob> filteredMobs = new HashSet<>();
 		for (Mob mob : level.mobs) {
-			if (mob.getPos() != -1) {
+			if (level.cellValid(mob.getPos())) {
 				filteredMobs.add(mob);
 			} else {
 				buggedSave = true;
@@ -267,7 +275,7 @@ public class GameScene extends PixelScene {
 
 		add(new HealthIndicator());
 
-		add(cellSelector = new CellSelector(tiles));
+		add(cellSelector = new CellSelector(baseTiles));
 
 		Dungeon.hero.updateLook();
 
@@ -423,7 +431,7 @@ public class GameScene extends PixelScene {
 
 	public void brightness(boolean value) {
 
-		water.rm = water.gm = water.bm = tiles.rm = tiles.gm = tiles.bm = value ? 1.5f : 1.0f;
+		water.rm = water.gm = water.bm = baseTiles.rm = baseTiles.gm = baseTiles.bm = value ? 1.5f : 1.0f;
 
 		if (value) {
 			fog.am = +2f;
@@ -579,7 +587,7 @@ public class GameScene extends PixelScene {
 
 	public static void updateMap() {
 		if (isSceneReady()) {
-			scene.tiles.updateAll();
+			scene.baseTiles.updateAll();
 		} else {
 			EventCollector.logException(new Exception("updateMap"));
 		}
@@ -587,7 +595,7 @@ public class GameScene extends PixelScene {
 
 	public static void updateMap(int cell) {
 		if (isSceneReady()) {
-			scene.tiles.updateCell(cell, Dungeon.level);
+			scene.baseTiles.updateCell(cell, Dungeon.level);
 		} else {
 			EventCollector.logException(new Exception("updateMap(int)"));
 		}
@@ -595,7 +603,7 @@ public class GameScene extends PixelScene {
 
 	public static void discoverTile(int pos, int oldValue) {
 		if (isSceneReady()) {
-			scene.tiles.discover(pos, oldValue);
+			scene.baseTiles.discover(pos, oldValue);
 		} else {
 			EventCollector.logException(new Exception("discoverTile"));
 		}
@@ -730,7 +738,7 @@ public class GameScene extends PixelScene {
 
 	public static Image getTile(int cell) {
 		if(isSceneReady()) {
-			return scene.tiles.tile(cell);
+			return scene.baseTiles.tile(cell);
 		}
 		throw new TrackedRuntimeException("getTile");
 	}
