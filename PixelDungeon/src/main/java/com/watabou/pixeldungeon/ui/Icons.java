@@ -68,7 +68,8 @@ public enum Icons {
 	BTN_SYNC_OUT,
 	BTN_SYNC_REFRESH,
 	BTN_TARGET,
-	BTN_QUESTION;
+	BTN_QUESTION,
+	GNOLL;
 
 	
 	public Image get() {
@@ -212,6 +213,9 @@ public enum Icons {
 			break;
 		case BTN_QUESTION:
 			icon.frame( icon.texture.uvRect( 52, 78, 68, 93 ) );
+			break;
+		case GNOLL:
+			icon.frame( icon.texture.uvRect( 110, 78, 126, 94 ) );
 			break;
 		}
 		return icon;

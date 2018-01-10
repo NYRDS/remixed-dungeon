@@ -18,7 +18,10 @@ public class GnollArmor extends ClassArmor {
     private static final String TXT_NOT_GNOLL = Game.getVar(R.string.GnollArmor_NotGnoll);
 
     {
-        image = 5;
+        image = 25;
+        coverHair = false;
+        hasCollar = false;
+        hasHelmet = false;
     }
 
     @Override
