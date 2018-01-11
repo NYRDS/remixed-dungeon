@@ -889,7 +889,7 @@ public abstract class Level implements Bundlable {
 			water[i] = (flags & TerrainFlags.LIQUID) != 0;
 			pit[i] = (flags & TerrainFlags.PIT) != 0;
 		}
-/*
+
 		int lastRow = getLength() - getWidth();
 		for (int i = 0; i < getWidth(); i++) {
 			passable[i] = avoid[i] = false;
@@ -899,7 +899,7 @@ public abstract class Level implements Bundlable {
 			passable[i] = avoid[i] = false;
 			passable[i + getWidth() - 1] = avoid[i + getWidth() - 1] = false;
 		}
-*/
+
 		for (int i = getWidth(); i < getLength() - getWidth(); i++) {
 			allCells[i] = true;
 			nearWalls[i] = false;
