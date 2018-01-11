@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -67,8 +68,12 @@ public class WndItem extends Window {
 		
 		if (Dungeon.hero.isAlive() && owner != null) {
 			for (final String action:item.actions( Dungeon.hero )) {
-				
-				RedButton btn = new RedButton( action ) {
+
+				if(Dungeon.hero.heroClass.forbidden(action)){
+					continue;
+				}
+
+				RedButton btn = new RedButton(StringsManager.getVar(action) ) {
 					@Override
 					protected void onClick() {
 						item.execute( Dungeon.hero, action );

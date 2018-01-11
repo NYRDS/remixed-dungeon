@@ -39,7 +39,7 @@ public class ArmorKit extends Item {
 	
 	private static final float TIME_TO_UPGRADE = 2;
 	
-	private static final String AC_APPLY = Game.getVar(R.string.ArmorKit_ACAplly);
+	private static final String AC_APPLY = "ArmorKit_ACAplly";
 	
 	{
 		name = Game.getVar(R.string.ArmorKit_Name);

@@ -51,7 +51,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
 
 public enum HeroClass {
 
@@ -64,6 +66,7 @@ public enum HeroClass {
     GNOLL(Game.getVar(R.string.HeroClass_Gnoll), GnollArmor.class, Ordinary.instance);
 
     private final Class<? extends ClassArmor> armorClass;
+    private Set<String> forbiddenActions = new HashSet<>();
 
     private String    title;
     private Abilities abilities;
@@ -114,7 +117,7 @@ public enum HeroClass {
         hero.updateAwareness();
     }
 
-    private static void initForClass(Hero hero, String className) {
+    private void initForClass(Hero hero, String className) {
         if (initHeroes.has(className)) {
             try {
                 JSONObject classDesc = initHeroes.getJSONObject(className);
@@ -166,6 +169,13 @@ public enum HeroClass {
                     }
                 }
 
+                if(classDesc.has("forbiddenActions")) {
+                    JSONArray forbidden = classDesc.getJSONArray("forbiddenActions");
+                    for (int i = 0; i < forbidden.length(); ++i) {
+                        forbiddenActions.add(forbidden.getString(i));
+                    }
+                }
+
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.heroClass.isSpellUser(classDesc.optBoolean("isSpellUser", false));
@@ -183,7 +193,7 @@ public enum HeroClass {
         }
     }
 
-    private static void initCommon(Hero hero) {
+    private void initCommon(Hero hero) {
         QuickSlot.cleanStorage();
         initForClass(hero, "common");
         if (hero.getDifficulty() < 3) {
@@ -294,5 +304,9 @@ public enum HeroClass {
         }
 
         return name().toLowerCase(Locale.ROOT);
+    }
+
+    public boolean forbidden(String action) {
+        return forbiddenActions.contains(action);
     }
 }

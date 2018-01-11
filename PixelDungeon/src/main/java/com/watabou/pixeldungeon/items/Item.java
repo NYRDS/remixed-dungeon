@@ -68,12 +68,12 @@ public class Item implements Bundlable, Presser {
 	private static final String TXT_TO_STRING_LVL   = "%s%+d";
 	private static final String TXT_TO_STRING_LVL_X = "%s%+d x%d";
 
-	protected static final float TIME_TO_THROW   = 1.0f;
+	private static final   float TIME_TO_THROW   = 1.0f;
 	protected static final float TIME_TO_PICK_UP = 1.0f;
-	protected static final float TIME_TO_DROP    = 0.5f;
+	private static final   float TIME_TO_DROP    = 0.5f;
 
-	private static final   String AC_DROP  = Game.getVar(R.string.Item_ACDrop);
-	protected static final String AC_THROW = Game.getVar(R.string.Item_ACThrow);
+	private static final   String AC_DROP  = "Item_ACDrop";
+	protected static final String AC_THROW = "Item_ACThrow";
 
 	@NonNull
 	public String defaultAction = AC_THROW;

@@ -38,7 +38,7 @@ abstract public class Food extends Item {
 
 	public static final float TIME_TO_EAT	= 3f;
 	
-	public static final String AC_EAT = Game.getVar(R.string.Food_ACEat);
+	public static final String AC_EAT = "Food_ACEat";
 	
 	public float energy   = 0;
 	public String message = Game.getVar(R.string.Food_Message);

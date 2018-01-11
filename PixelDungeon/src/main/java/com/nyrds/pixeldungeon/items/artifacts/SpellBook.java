@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class SpellBook extends Artifact {
 
-	public static final String AC_USE = Game.getVar(R.string.SpiderCharm_Use);
+	public static final String AC_USE = "SpiderCharm_Use";
 	public static final String IDENTIFIED = Game.getVar(R.string.SpellBook_Info_Identified);
 
 	@Packable

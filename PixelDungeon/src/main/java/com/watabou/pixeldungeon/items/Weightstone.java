@@ -45,7 +45,7 @@ public class Weightstone extends Item {
 	
 	private static final float TIME_TO_APPLY = 2;
 	
-	private static final String AC_APPLY = Game.getVar(R.string.Weightstone_ACApply);
+	private static final String AC_APPLY = "Weightstone_ACApply";
 	
 	{
 		name = Game.getVar(R.string.Weightstone_Name);

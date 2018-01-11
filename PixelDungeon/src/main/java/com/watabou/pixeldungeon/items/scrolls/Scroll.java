@@ -39,7 +39,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
 
-	public static final String AC_READ    	= Game.getVar(R.string.Scroll_ACRead);
+	public static final String AC_READ    	= "Scroll_ACRead";
 	
 	protected static final float TIME_TO_READ	= 1f;
 	

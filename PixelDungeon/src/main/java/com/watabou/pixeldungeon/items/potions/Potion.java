@@ -46,8 +46,8 @@ import java.util.HashSet;
 
 public class Potion extends Item implements UnknownItem {
 
-	public static final String AC_DRINK	  = Game.getVar(R.string.Potion_ACDrink);
-	public static final String AC_MOISTEN = Game.getVar(R.string.Potion_ACMoisten);
+	public static final String AC_DRINK	  = "Potion_ACDrink";
+	public static final String AC_MOISTEN = "Potion_ACMoisten";
 	
 	private static final String TXT_HARMFUL			= Game.getVar(R.string.Potion_Harmfull);
 	private static final String TXT_BENEFICIAL		= Game.getVar(R.string.Potion_Beneficial);

@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -19,7 +17,7 @@ import java.util.ArrayList;
 
 public class Kusarigama extends SpecialWeapon {
 
-	private static final String AC_PULL = Game.getVar(R.string.Kusarigama_Pull);
+	private static final String AC_PULL = "Kusarigama_Pull";
 	private static final float TIME_TO_IMPALE = 1.5f;
 
 	public Kusarigama() {

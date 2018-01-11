@@ -47,8 +47,8 @@ public class LloydsBeacon extends Item {
 
 	private static final float TIME_TO_USE = 1;
 
-	private static final String AC_SET    = Game.getVar(R.string.LloidsBeacon_ACSet);
-	private static final String AC_RETURN = Game.getVar(R.string.LloidsBeacon_ACReturn);
+	private static final String AC_SET    = "LloidsBeacon_ACSet";
+	private static final String AC_RETURN = "LloidsBeacon_ACReturn";
 	
 	private Position returnTo;
 	

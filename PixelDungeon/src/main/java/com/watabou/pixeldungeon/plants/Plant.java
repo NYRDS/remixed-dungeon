@@ -109,8 +109,7 @@ public class Plant implements Bundlable {
 
 	public static class Seed extends Item {
 
-		public static final String AC_PLANT = Game
-				.getVar(R.string.Plant_ACPlant);
+		public static final String AC_PLANT = "Plant_ACPlant";
 		private static final String TXT_INFO = Game.getVar(R.string.Plant_Info);
 		protected static final String TXT_SEED = Game
 				.getVar(R.string.Plant_Seed);

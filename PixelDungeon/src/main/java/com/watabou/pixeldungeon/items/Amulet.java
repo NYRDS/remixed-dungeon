@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 public class Amulet extends Item {
 	
-	private static final String AC_END = Game.getVar(R.string.Amulet_ACEnd);
+	private static final String AC_END = "Amulet_ACEnd";
 	
 	{
 		name = Game.getVar(R.string.Amulet_Name);

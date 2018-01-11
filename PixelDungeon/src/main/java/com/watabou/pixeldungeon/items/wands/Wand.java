@@ -56,7 +56,7 @@ import java.util.ArrayList;
 
 public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
-	public static final String AC_ZAP = Game.getVar(R.string.Wand_ACZap);
+	public static final String AC_ZAP = "Wand_ACZap";
 
 	private static final String TXT_WOOD = Game.getVar(R.string.Wand_Wood);
 	private static final String TXT_DAMAGE = Game.getVar(R.string.Wand_Damage);

@@ -40,7 +40,7 @@ public class Stylus extends Item {
 	
 	private static final float TIME_TO_INSCRIBE = 2;
 	
-	private static final String AC_INSCRIBE = Game.getVar(R.string.Stylus_ACInscribe);
+	private static final String AC_INSCRIBE = "Stylus_ACInscribe";
 	
 	{
 		image = ItemSpriteSheet.STYLUS;

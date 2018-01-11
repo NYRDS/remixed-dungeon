@@ -29,7 +29,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	public static final float TIME_TO_USE = 1;
 
-	public static final String AC_FUSE = Game.getVar(R.string.ChaosCrystal_Fuse);
+	public static final String AC_FUSE = "ChaosCrystal_Fuse";
 	private static final String TXT_SELECT_FOR_FUSE = Game.getVar(R.string.ChaosCrystal_SelectForFuse);
 
 	private static final int CHAOS_CRYSTALL_IMAGE = 9;

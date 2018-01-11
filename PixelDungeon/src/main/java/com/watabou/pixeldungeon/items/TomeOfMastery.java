@@ -36,7 +36,7 @@ import java.util.ArrayList;
 public class TomeOfMastery extends MasteryItem {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.TomeOfMastery_Blinded);
-	public static final String AC_READ                 = Game.getVar(R.string.TomeOfMastery_ACRead);
+	public static final String AC_READ                 = "TomeOfMastery_ACRead";
 	private static final String TXT_WAY_ALREADY_CHOSEN = Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen);
 
 	{

@@ -28,8 +28,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public abstract class EquipableItem extends Item {
 
-	protected static final String AC_EQUIP   = Game.getVar(R.string.EquipableItem_ACEquip);
-	protected static final String AC_UNEQUIP = Game.getVar(R.string.EquipableItem_ACUnequip);
+	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
+	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
 	private static final String TXT_UNEQUIP_CURSED	= Game.getVar(R.string.EquipableItem_Unequip);
 	

@@ -17,14 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
-import java.util.ArrayList;
-
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -38,9 +36,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+
 public class WandOfMagicMissile extends SimpleWand  {
 
-	public static final String AC_DISENCHANT    = Game.getVar(R.string.WandOfMagicMissile_ACDisenchant);
+	public static final String AC_DISENCHANT    = "WandOfMagicMissile_ACDisenchant";
 	
 	private static final String TXT_SELECT_WAND	= Game.getVar(R.string.WandOfMagicMissile_SelectWand);
 	

@@ -15,7 +15,7 @@ abstract public class Book extends Item {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
 
-	public static final String AC_READ    	= Game.getVar(R.string.Scroll_ACRead);
+	public static final String AC_READ    	= "Scroll_ACRead";
 
 	{
 		imageFile = "items/books.png";
