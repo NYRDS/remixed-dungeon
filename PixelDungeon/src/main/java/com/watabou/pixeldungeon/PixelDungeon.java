@@ -86,7 +86,7 @@ public class PixelDungeon extends Game {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		PlayGames.init(this);
+		playGames = new PlayGames(this);
 
 		if(!isAlpha()) {
 			PixelDungeon.realtime(false);
@@ -130,7 +130,7 @@ public class PixelDungeon extends Game {
 	protected void onStart() {
 		super.onStart();
 		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES,false)) {
-			PlayGames.connect();
+			playGames.connect();
 		}
 	}
 
@@ -178,7 +178,7 @@ public class PixelDungeon extends Game {
 			return;
 		}
 
-		if(PlayGames.onActivityResult(requestCode, resultCode, data)) {
+		if(playGames.onActivityResult(requestCode, resultCode, data)) {
 			return;
 		}
 

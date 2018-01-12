@@ -49,6 +49,7 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -77,8 +78,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	private static int width;
 	private static int height;
 
-	public static String version;
-	public static int versionCode;
+	public static String    version;
+	public static int       versionCode;
+	public        PlayGames playGames;
 
 	// Current scene
 	protected Scene scene;

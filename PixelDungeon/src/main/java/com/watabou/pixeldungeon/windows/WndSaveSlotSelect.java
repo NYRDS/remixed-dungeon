@@ -6,7 +6,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -50,7 +49,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		tfTitle.measure();
 		add(tfTitle);
 
-		if(!_saving && PlayGames.isConnected()) {
+		if(!_saving && Game.instance().playGames.isConnected()) {
 			SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
 				@Override
 				protected void onClick() {
@@ -61,7 +60,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 					};
 
 					Game.scene().add(refreshing);
-					PlayGames.loadSnapshots(new Runnable() {
+					Game.instance().playGames.loadSnapshots(new Runnable() {
 						@Override
 						public void run() {
 							Game.executeInGlThread(new Runnable() {
@@ -115,12 +114,12 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				};
 				buttons.add(btn);
 
-				if (PlayGames.isConnected()) {
+				if (Game.instance().playGames.isConnected()) {
 					final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.heroClass.toString();
 
 					if ((_saving && !options[index].isEmpty())
 							|| (!_saving
-							&& PlayGames.haveSnapshot(snapshotId)
+							&& Game.instance().playGames.haveSnapshot(snapshotId)
 					)) {
 
 						Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
@@ -129,14 +128,14 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 								File slotDir = FileSystem.getInternalStorageFile(slotNameFromIndexAndMod(index));
 								boolean res;
 								if (_saving) {
-									res = PlayGames.packFilesToSnapshot(snapshotId, slotDir, new FileFilter() {
+									res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, new FileFilter() {
 										@Override
 										public boolean accept(File pathname) {
 											return SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.heroClass);
 										}
 									});
 								} else {
-									res = PlayGames.unpackSnapshotTo(snapshotId, slotDir);
+									res = Game.instance().playGames.unpackSnapshotTo(snapshotId, slotDir);
 								}
 								refreshWindow();
 								showActionResult(res);

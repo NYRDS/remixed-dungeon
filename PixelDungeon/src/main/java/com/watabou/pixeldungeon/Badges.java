@@ -953,7 +953,7 @@ public class Badges {
 			Log.i("Badge", badge.name());
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
 			Log.i("Badge", achievementCode);
-			PlayGames.unlockAchievement(achievementCode);
+			Game.instance().playGames.unlockAchievement(achievementCode);
 		}
 
 		if (global.contains(badge)) {

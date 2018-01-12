@@ -20,7 +20,7 @@ class WndPlayGames extends Window {
 
     public WndPlayGames() {
 
-        boolean playGamesConnected = PlayGames.isConnected();
+        boolean playGamesConnected = Game.instance().playGames.isConnected();
         resizeLimited(120);
 
         Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndPlayGames_Title), GuiProperties.mediumTitleFontSize());
@@ -40,10 +40,10 @@ class WndPlayGames extends Window {
                 super.checked(value);
 
                 if (value) {
-                    PlayGames.connect();
+                    Game.instance().playGames.connect();
                     Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
                 } else {
-                    PlayGames.disconnect();
+                    Game.instance().playGames.disconnect();
                 }
 
                 hide();
@@ -61,7 +61,7 @@ class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                PlayGames.showBadges();
+                Game.instance().playGames.showBadges();
             }
         });
 
@@ -69,7 +69,7 @@ class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                PlayGames.showLeaderboard();
+                Game.instance().playGames.showLeaderboard();
             }
         });
 
@@ -77,7 +77,7 @@ class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                PlayGames.backupProgress(new ResultHandler());
+                Game.instance().playGames.backupProgress(new ResultHandler());
             }
         });
 
@@ -85,7 +85,7 @@ class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                PlayGames.restoreProgress(new ResultHandler());
+                Game.instance().playGames.restoreProgress(new ResultHandler());
             }
         });
 
