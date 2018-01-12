@@ -55,7 +55,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	private static final int RC_SHOW_BADGES      = 67584;
 	private static final int RC_SHOW_LEADERBOARD = 96543;
 
-	public static final String PROGRESS = "Progress";
+	private static final String PROGRESS = "Progress";
 
 	private GoogleApiClient   googleApiClient;
 	private Activity          activity;
@@ -132,7 +132,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 					if (commitSnapshotResult.getStatus().isSuccess()) {
 						Log.i("Play Games", "commit ok");
 					} else {
-						Log.e("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
+						EventCollector.logEvent("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
 					}
 				}
 			});
@@ -226,10 +226,8 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 						for (SnapshotMetadata m : result.getSnapshots()) {
 							playGames.mSavedGamesNames.add(m.getUniqueName());
 						}
-
-						restoreProgress();
 					} else {
-						Log.e("Play Games", "load " + result.getStatus().getStatusMessage());
+						EventCollector.logEvent("Play Games", "load " + result.getStatus().getStatusMessage());
 					}
 					if (doneCallback != null) {
 						doneCallback.run();
@@ -307,15 +305,16 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		return false;
 	}
 
-	public static void backupProgress() {
+	public static void backupProgress(final IResult resultCallback) {
 		if (!isConnected()) {
+			resultCallback.status(false);
 			return;
 		}
 
 		Game.instance().executor.execute(new Runnable() {
 			@Override
 			public void run() {
-				PlayGames.packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+				boolean res = PlayGames.packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
 					@Override
 					public boolean accept(File pathname) {
 						String filename = pathname.getName();
@@ -337,20 +336,22 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 						return false;
 					}
 				});
-
+				resultCallback.status(res);
 			}
 		});
 	}
 
-	public static void restoreProgress() {
+	public static void restoreProgress(final IResult resultCallback) {
 		if (!isConnected()) {
+			resultCallback.status(false);
 			return;
 		}
 
 		Game.instance().executor.execute(new Runnable() {
 			@Override
 			public void run() {
-				PlayGames.unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(""));
+				boolean res = PlayGames.unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(""));
+				resultCallback.status(res);
 			}
 		});
 	}
@@ -384,5 +385,9 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 					RC_SHOW_LEADERBOARD
 			);
 		}
+	}
+
+	public interface IResult {
+		void status(boolean status);
 	}
 }

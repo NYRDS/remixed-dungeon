@@ -2,6 +2,8 @@ package com.nyrds.android.util;
 
 import android.util.Log;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -51,7 +53,7 @@ public class Unzip {
 			}
 			zin.close();
 		} catch (Exception e) {
-			Log.e(TAG, "unzip", e);
+			EventCollector.logException(e);
 			return false;
 		}
 

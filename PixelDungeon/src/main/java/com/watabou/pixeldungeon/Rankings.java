@@ -74,7 +74,6 @@ public enum Rankings {
 
 		if (!ModdingMode.inMod()){
 			PlayGames.submitScores(Game.getDifficulty(), rec.score);
-			PlayGames.backupProgress();
 		}
 
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now() );
