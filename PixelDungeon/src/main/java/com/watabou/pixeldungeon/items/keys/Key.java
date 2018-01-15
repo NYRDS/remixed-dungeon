@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
@@ -54,7 +55,7 @@ public class Key extends Item {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		levelId = bundle.optString(LEVELID, DungeonGenerator.UNKNOWN);
+		levelId = bundle.optString(LEVELID, Utils.UNKNOWN);
 		depth = bundle.optInt( DEPTH,DungeonGenerator.getLevelDepth(levelId) );
 
 	}

@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.levels.PrisonLevel;
 import com.watabou.pixeldungeon.levels.SewerBossLevel;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 import org.json.JSONArray;
@@ -51,15 +52,13 @@ public class DungeonGenerator {
 	private static final String SPIDER_LEVEL   = "SpiderLevel";
 	private static final String GUTS_LEVEL     = "GutsLevel";
 
-	public static final String UNKNOWN = "unknown";
-
 	static private JSONObject mDungeonMap;
 	static private JSONObject mLevels;
 	static private JSONObject mGraph;
 
 	@NonNull
-	private static String mCurrentLevelId   = UNKNOWN;
-	private static String mCurrentLevelKind = UNKNOWN;
+	private static String mCurrentLevelId   = Utils.UNKNOWN;
+	private static String mCurrentLevelKind = Utils.UNKNOWN;
 
 	private static int    mCurrentLevelDepth;
 

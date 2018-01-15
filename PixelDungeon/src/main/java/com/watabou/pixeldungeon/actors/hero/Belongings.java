@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -119,7 +120,7 @@ public class Belongings implements Iterable<Item> {
 		for (Item item : backpack) {
 			if (item instanceof Key && item.getClass() == kind) {
 				Key key = (Key) item;
-				if (levelId.equals(key.levelId) || (DungeonGenerator.UNKNOWN.equals(key.levelId) && key.depth == depth)) {
+				if (levelId.equals(key.levelId) || (Utils.UNKNOWN.equals(key.levelId) && key.depth == depth)) {
 					return (T) item;
 				}
 			}

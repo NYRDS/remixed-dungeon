@@ -27,7 +27,9 @@ import java.util.Locale;
 
 public class Utils {
 
-	private static final Class<?> strings      = getR_Field("string");
+    public static final String UNKNOWN = "unknown";
+
+    private static final Class<?> strings = getR_Field("string");
 	private static final Class<?> stringArrays = getR_Field("array");
 
 	static private Class<?> getR_Field(String field) {

@@ -48,7 +48,7 @@ public class Util {
 			for (Signature signature : packageInfo.signatures) {
 				md.update(signature.toByteArray());
 			}
-			return Base64.encodeToString(md.digest(), Base64.URL_SAFE);
+			return Base64.encodeToString(md.digest(), Base64.URL_SAFE|Base64.NO_WRAP);
 		} catch (PackageManager.NameNotFoundException e) {
 			throw new TrackedRuntimeException(e);
 		} catch (NoSuchAlgorithmException e) {
