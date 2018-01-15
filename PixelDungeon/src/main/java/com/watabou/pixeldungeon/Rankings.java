@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -63,9 +64,9 @@ public enum Rankings {
 		rec.info	    = resultDescription;
 		rec.win		    = winLevel  != gameOver.LOSE;
 		rec.heroClass	= hero.heroClass;
-		rec.armorTier	= hero.tier();
 		rec.score	    = score(winLevel);
 		rec.mod			= PixelDungeon.activeMod();
+		rec.gameId      = Dungeon.gameId;
 
 		String classId = hero.heroClass.toString() + "_" +Dungeon.hero.subClass.toString();
 
@@ -81,16 +82,33 @@ public enum Rankings {
 			rec.gameFile = gameFile;
 		} catch (IOException e) {
 			rec.gameFile = "";
+			EventCollector.logException(e);
 		}
-		
-		records.add( rec );
-		
+
+		int updateIndex = -1;
+		for (int i = 0;i<records.size();++i) {
+			Record r = records.get(i);
+			if(rec.gameId.equals(r.gameId)) {
+				updateIndex = i;
+			}
+		}
+
+		if(updateIndex >= 0) {
+			records.set(updateIndex,rec);
+		} else {
+			records.add(rec);
+		}
+
+		sortAndSave(winLevel, rec);
+	}
+
+	private void sortAndSave(gameOver winLevel, Record rec) {
 		Collections.sort( records, scoreComparator );
-		
+
 		lastRecord = records.indexOf( rec );
+
 		int size = records.size();
 		if (size > TABLE_SIZE) {
-			
 			Record removedGame;
 			if (lastRecord == size - 1) {
 				removedGame = records.remove( size - 2 );
@@ -98,27 +116,27 @@ public enum Rankings {
 			} else {
 				removedGame = records.remove( size - 1 );
 			}
-			
+
 			if (removedGame.gameFile.length() > 0) {
 				Game.instance().deleteFile( removedGame.gameFile );
 			}
 		}
-		
+
 		totalNumber++;
-		
+
 		if (winLevel != gameOver.LOSE) {
 			wonNumber++;
 		}
-		
+
 		if (winLevel == gameOver.WIN_HAPPY) {
 			happyWonNumber++;
 		}
-		
+
 		Badges.validateGamesPlayed();
-		
+
 		save();
 	}
-	
+
 	private int score(gameOver win ) {
 
 		double winC        = Math.pow(1.4f, win.ordinal());
@@ -172,12 +190,10 @@ public enum Rankings {
 			InputStream input = FileSystem.getInputStream(RANKINGS_FILE);
 			Bundle bundle = Bundle.read( input );
 			input.close();
+
+			records.addAll(bundle.getCollection(RECORDS, Record.class));
 			
-			for (Record record : bundle.getCollection( RECORDS, Record.class )) {
-				records.add( record );
-			}
-			
-			lastRecord     = bundle.getInt( LATEST );	
+			lastRecord     = bundle.getInt( LATEST );
 			totalNumber    = bundle.getInt( TOTAL );
 			wonNumber      = bundle.getInt( WON );
 			happyWonNumber = bundle.getInt( HAPPY );
@@ -192,7 +208,6 @@ public enum Rankings {
 		private static final String REASON	= "reason";
 		private static final String WIN		= "win";
 		private static final String SCORE	= "score";
-		private static final String TIER	= "tier";
 		private static final String GAME	= "gameFile";
 		private static final String MOD		= "mod";
 		
@@ -200,13 +215,15 @@ public enum Rankings {
 		public boolean win;
 		
 		public HeroClass heroClass;
-		public int armorTier;
-		
+
 		public int score;
 		
 		public String gameFile;
 		public String mod;
-		
+
+		@Packable(defaultValue = Utils.UNKNOWN)
+		public String gameId;
+
 		@Override
 		public void restoreFromBundle( Bundle bundle ) {
 			
@@ -215,8 +232,7 @@ public enum Rankings {
 			score	= bundle.getInt     ( SCORE  );
 			
 			heroClass	= HeroClass.restoreFromBundle(bundle);
-			armorTier	= bundle.getInt( TIER );
-			
+
 			gameFile	= bundle.getString( GAME );
 			mod			= bundle.optString(MOD, ModdingMode.REMIXED);
 		}
@@ -229,8 +245,7 @@ public enum Rankings {
 			bundle.put( SCORE, score );
 			
 			heroClass.storeInBundle( bundle );
-			bundle.put( TIER, armorTier );
-			
+
 			bundle.put( GAME, gameFile );
 			bundle.put( MOD, mod );
 		}

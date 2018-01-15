@@ -64,6 +64,7 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -99,6 +100,8 @@ public class Dungeon {
 	private static boolean loading = false;
 	private static long lastSaveTimestamp;
 
+	public static String gameId;
+
 	public static HashSet<Integer> chapters;
 
 	// Hero's field of view
@@ -122,6 +125,8 @@ public class Dungeon {
 	}
 
 	public static void init() {
+		gameId = String.valueOf(SystemTime.now());
+
 		challenges = PixelDungeon.challenges();
 
 		Scroll.initLabels();
@@ -302,6 +307,7 @@ public class Dungeon {
 	private static final String QUESTS       = "quests";
 	private static final String BADGES       = "badges";
 	private static final String SCRIPTS_DATA = "scripts_data";
+	private static final String GAME_ID      = "game_id";
 
 	public static void gameOver() {
 		Dungeon.deleteGame(true);
@@ -310,6 +316,7 @@ public class Dungeon {
 	public static void saveGame(String fileName) throws IOException {
 		Bundle bundle = new Bundle();
 
+		bundle.put(GAME_ID, gameId);
 		bundle.put(VERSION, Game.version);
 		bundle.put(CHALLENGES, challenges);
 		bundle.put(HERO, hero);
@@ -455,6 +462,8 @@ public class Dungeon {
 	}
 
 	public static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
+
+		Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
 		Dungeon.challenges = bundle.getInt(CHALLENGES);
 
 		Dungeon.level = null;
