@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.WndPortal;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.Level;
@@ -15,19 +14,11 @@ import org.json.JSONObject;
 
 public class PortalGateSender extends PortalGate {
 
-	static final String TARGET = "target";
+	private static final String TARGET = "target";
 
 	protected Position target;
 
-	@Override
-	public boolean interact(Char chr) {
-
-		if(!(chr instanceof Char)) {
-			return false;
-		}
-
-		Hero hero = (Hero)chr;
-
+	public boolean portalInteract(Hero hero) {
 		if(!used && hero.belongings.getItem(Amulet.class) == null){
 			if(!animationRunning){
 				if (!activated){

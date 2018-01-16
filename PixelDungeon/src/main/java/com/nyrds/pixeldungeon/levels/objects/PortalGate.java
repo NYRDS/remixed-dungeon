@@ -4,7 +4,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Fraction;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
@@ -13,7 +13,7 @@ import com.watabou.utils.Callback;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class PortalGate extends LevelObject {
+public abstract class PortalGate extends LevelObject {
 
 
 	protected boolean animationRunning = false;
@@ -60,11 +60,14 @@ public class PortalGate extends LevelObject {
 
 	@Override
 	public boolean interact(Char hero) {
+		if(hero instanceof Hero) {
+			return portalInteract((Hero)hero);
+		}
 		return false;
 	}
 
 	public void useUp(){
-		if (infiniteUses == false){
+		if (!infiniteUses){
 			uses = uses - 1;
 			if (uses < 1){
 				used = true;
@@ -131,4 +134,6 @@ public class PortalGate extends LevelObject {
 			}
 		}, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
 	}
+
+	public abstract boolean portalInteract(Hero hero);
 }
