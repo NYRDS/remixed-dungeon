@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items.books;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -13,8 +14,6 @@ abstract public class Book extends Item {
 
 	public static final float TIME_TO_READ	= 2f;
 
-	protected static final String AC_READ = "Scroll_ACRead";
-
 	{
 		imageFile = "items/books.png";
 	}
@@ -22,14 +21,14 @@ abstract public class Book extends Item {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_READ );
+		actions.add( CommonActions.AC_READ );
 		return actions;
 	}
 
 
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action.equals( AC_READ )) {
+		if (action.equals( CommonActions.AC_READ )) {
 
 			if (hero.buff( Blindness.class ) != null) {
 				GLog.w(Game.getVar(R.string.Codex_Blinded));

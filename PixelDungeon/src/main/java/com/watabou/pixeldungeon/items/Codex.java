@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.items.books.Book;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Bundle;
@@ -42,7 +43,7 @@ public class Codex extends Book {
 
 	public Codex(){
 		stackable = false;
-		image     = 5;
+		image     = 4;
 		//TODO Need rework this. Transifex just hates string-arrays
 		maxId     = Game.getVars(R.array.Codex_Story).length;
 		id        = Random.Int(maxId);
@@ -51,7 +52,7 @@ public class Codex extends Book {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_READ );
+		actions.add( CommonActions.AC_READ );
 		return actions;
 	}
 

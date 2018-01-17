@@ -1,8 +1,10 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.watabou.noosa.StringsManager;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -21,7 +23,7 @@ public class Sign extends LevelObject {
 	private String signText;
 
 	public Sign(){
-		super(-1);
+		super(Level.INVALID_CELL);
 	}
 
 	public Sign(int pos, String text) {
@@ -36,8 +38,9 @@ public class Sign extends LevelObject {
 
 	@Override
 	public boolean interact(Char hero) {
-		GameScene.show(new WndMessage(signText));
-
+		if(hero instanceof Hero && !((Hero) hero).heroClass.forbidden(CommonActions.AC_READ)) {
+			GameScene.show(new WndMessage(signText));
+		}
 		return super.interact(hero);
 	}
 

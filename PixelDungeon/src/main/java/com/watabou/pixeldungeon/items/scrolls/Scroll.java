@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -39,8 +40,6 @@ public abstract class Scroll extends Item implements UnknownItem {
 
 	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
 
-	public static final String AC_READ    	= "Scroll_ACRead";
-	
 	protected static final float TIME_TO_READ	= 1f;
 	
 	private static final Class<?>[] scrolls = {
@@ -116,7 +115,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 	
 	public Scroll() {
 		stackable     = true;
-		defaultAction = AC_READ;
+		defaultAction = CommonActions.AC_READ;
 		
 		if (this instanceof BlankScroll){
 			return;
@@ -137,13 +136,13 @@ public abstract class Scroll extends Item implements UnknownItem {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_READ );
+		actions.add( CommonActions.AC_READ );
 		return actions;
 	}
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action.equals( AC_READ )) {
+		if (action.equals( CommonActions.AC_READ )) {
 			
 			if (hero.buff( Blindness.class ) != null) {
 				GLog.w( TXT_BLINDED );
