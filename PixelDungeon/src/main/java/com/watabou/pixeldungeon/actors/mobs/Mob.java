@@ -93,7 +93,7 @@ public abstract class Mob extends Char {
 	protected String scriptFile = DEFAULT_MOB_SCRIPT;
 
 	private LuaTable mobScript;
-	protected LuaValue scriptResult = LuaValue.NIL;
+	private LuaValue scriptResult = LuaValue.NIL;
 
 	private AiState state = SLEEPING;
 
@@ -120,7 +120,7 @@ public abstract class Mob extends Char {
 	// Unreachable target
 	protected static final Mob DUMMY = new Mob() {
 		{
-			setPos(-1);
+			setPos(Level.INVALID_CELL);
 		}
 	};
 
@@ -301,6 +301,10 @@ public abstract class Mob extends Char {
 	}
 
 	private Char chooseEnemyDungeon() {
+		if(Dungeon.hero.heroClass.friendlyTo(getMobClassName())) {
+			return DUMMY;
+		}
+
 		Char newEnemy = chooseNearestEnemyFromFraction(Fraction.HEROES);
 
 		if (newEnemy != DUMMY) {
@@ -343,6 +347,11 @@ public abstract class Mob extends Char {
 				setEnemy(DUMMY);
 			}
 		}
+
+		if(getEnemy() !=DUMMY) {
+			return getEnemy();
+		}
+
 
 		switch (fraction) {
 			default:
@@ -472,6 +481,8 @@ public abstract class Mob extends Char {
 			damage += Random.Int(1, damage);
 			Wound.hit(this);
 		}
+
+		setEnemy(enemy);
 
 		runMobScript("onDefenceProc", enemy, damage);
 
@@ -637,7 +648,7 @@ public abstract class Mob extends Char {
 		return clone;
 	}
 
-	public void ressurrect() {
+	protected void ressurrect() {
 		ressurrect(this);
 	}
 
@@ -943,7 +954,7 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean friendly(Char chr) {
-		return isPet();
+		return isPet() || getEnemy()!= chr && (chr instanceof Hero && ((Hero)chr).heroClass.friendlyTo(getMobClassName()));
 	}
 
 	public boolean canBePet() {
@@ -1012,7 +1023,7 @@ public abstract class Mob extends Char {
 		return false;
 	}
 
-	public boolean zapHit(@NonNull Char enemy) {
+	protected boolean zapHit(@NonNull Char enemy) {
 		if (enemy == DUMMY) {
 			EventCollector.logEvent(EventCollector.BUG, "zapping dummy enemy");
 			return false;

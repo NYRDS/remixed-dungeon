@@ -77,8 +77,8 @@ public class AttackIndicator extends Tag {
 	}
 	
 	private void checkEnemies() {
-		
 		Hero hero = Dungeon.hero;
+
 		candidates.clear();
 		int v = hero.visibleEnemies();
 		for (int i=0; i < v; i++) {

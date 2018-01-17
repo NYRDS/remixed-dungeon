@@ -51,6 +51,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
@@ -65,14 +66,20 @@ public enum HeroClass {
     NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer), NecromancerArmor.class, Ordinary.instance),
     GNOLL(Game.getVar(R.string.HeroClass_Gnoll), GnollArmor.class, Ordinary.instance);
 
+    private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
+    private static final String FRIENDLY_MOBS     = "friendlyMobs";
+    private static final String COMMON            = "common";
+    private static final String NON_EXPERT        = "non_expert";
+
     private final Class<? extends ClassArmor> armorClass;
+
     private Set<String> forbiddenActions = new HashSet<>();
+    private Set<String> friendlyMobs     = new HashSet<>();
 
     private String    title;
     private Abilities abilities;
     static private JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
-    private boolean isSpellUser;
     private String  magicAffinity;
 
     private static final String[] WAR_PERKS         = Game
@@ -87,7 +94,7 @@ public enum HeroClass {
             .getVars(R.array.HeroClass_ElfPerks);
     private static final String[] NECROMANCER_PERKS = Game
             .getVars(R.array.HeroClass_NecromancerPerks);
-    private static final String[] GNOLL_PERKS = Game
+    private static final String[] GNOLL_PERKS       = Game
             .getVars(R.array.HeroClass_GnollPerks);
 
     HeroClass(String title, Class<? extends ClassArmor> armorClass, Abilities abilities) {
@@ -169,16 +176,12 @@ public enum HeroClass {
                     }
                 }
 
-                if(classDesc.has("forbiddenActions")) {
-                    JSONArray forbidden = classDesc.getJSONArray("forbiddenActions");
-                    for (int i = 0; i < forbidden.length(); ++i) {
-                        forbiddenActions.add(forbidden.getString(i));
-                    }
-                }
+                readStringSet(classDesc, FORBIDDEN_ACTIONS, forbiddenActions);
+                readStringSet(classDesc, FRIENDLY_MOBS, friendlyMobs);
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
-                hero.heroClass.isSpellUser(classDesc.optBoolean("isSpellUser", false));
+                hero.spellUser = classDesc.optBoolean("isSpellUser", false);
                 hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
                 hero.setMaxSoulPoints(classDesc.optInt("maxSp", 10));
                 hero.setSoulPoints(classDesc.optInt("startingSp", 0));
@@ -193,11 +196,20 @@ public enum HeroClass {
         }
     }
 
+    private void readStringSet(JSONObject classDesc, String field, Set<String> placeTo) throws JSONException {
+        if (classDesc.has(field)) {
+            JSONArray array = classDesc.getJSONArray(field);
+            for (int i = 0; i < array.length(); ++i) {
+                placeTo.add(array.getString(i));
+            }
+        }
+    }
+
     private void initCommon(Hero hero) {
         QuickSlot.cleanStorage();
-        initForClass(hero, "common");
+        initForClass(hero, COMMON);
         if (hero.getDifficulty() < 3) {
-            initForClass(hero, "non_expert");
+            initForClass(hero, NON_EXPERT);
         }
     }
 
@@ -261,12 +273,19 @@ public enum HeroClass {
     public void storeInBundle(Bundle bundle) {
         bundle.put(CLASS, toString());
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
+        bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[forbiddenActions.size()]));
+        bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[friendlyMobs.size()]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {
         String value = bundle.getString(CLASS);
         HeroClass ret = value.length() > 0 ? valueOf(value) : ROGUE;
+
         ret.setMagicAffinity(bundle.getString(SPELL_AFFINITY));
+
+        Collections.addAll(ret.forbiddenActions,bundle.getStringArray(FORBIDDEN_ACTIONS));
+        Collections.addAll(ret.friendlyMobs,bundle.getStringArray(FRIENDLY_MOBS));
+
         return ret;
     }
 
@@ -282,14 +301,6 @@ public enum HeroClass {
         return abilities;
     }
 
-    public boolean isSpellUser() {
-        return isSpellUser;
-    }
-
-    public void isSpellUser(boolean b) {
-        isSpellUser = b;
-    }
-
     public String getMagicAffinity() {
         return magicAffinity;
     }
@@ -299,7 +310,7 @@ public enum HeroClass {
     }
 
     public String tag() {
-        if( this == HUNTRESS) {
+        if (this == HUNTRESS) {
             return "ranger";
         }
 
@@ -308,5 +319,9 @@ public enum HeroClass {
 
     public boolean forbidden(String action) {
         return forbiddenActions.contains(action);
+    }
+
+    public boolean friendlyTo(String mobClass) {
+        return friendlyMobs.contains(mobClass);
     }
 }

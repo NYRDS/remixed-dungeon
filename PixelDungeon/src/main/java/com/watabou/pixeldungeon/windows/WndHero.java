@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
@@ -32,7 +31,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -40,8 +38,6 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
-
-import java.util.Locale;
 
 public class WndHero extends WndTabbed {
 	
@@ -107,7 +103,7 @@ public class WndHero extends WndTabbed {
 		private final String TXT_CATALOGUS = Game.getVar(R.string.WndHero_StaCatalogus);
 		private final String TXT_JOURNAL   = Game.getVar(R.string.WndHero_StaJournal);
 		
-		private static final int GAP = 5;
+		private static final int GAP = 2;
 		
 		private float pos;
 		
@@ -116,7 +112,7 @@ public class WndHero extends WndTabbed {
 			final Hero hero = Dungeon.hero;
 
 			Text title = PixelScene.createText( 
-				Utils.format( TXT_TITLE, hero.lvl(), hero.className() ).toUpperCase( Locale.ENGLISH ), GuiProperties.titleFontSize());
+				Utils.format( TXT_TITLE, hero.lvl(), hero.className() ).toUpperCase(), GuiProperties.titleFontSize());
 			title.hardlight( TITLE_COLOR );
 			title.measure();
 			add( title );

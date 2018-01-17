@@ -165,8 +165,10 @@ public class Hero extends Char {
 	public HeroClass    heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass  = HeroSubClass.NONE;
 
-	int attackSkill  = 10;
-	int defenseSkill = 5;
+	public boolean spellUser;
+
+	private int attackSkill  = 10;
+	private int defenseSkill = 5;
 
 	private boolean    ready      = false;
 	public  HeroAction curAction  = null;
@@ -187,11 +189,11 @@ public class Hero extends Char {
 
 	private float awareness;
 
-	private int lvl = Scrambler.scramble(1);
+	private int lvl      = Scrambler.scramble(1);
 	private int magicLvl = Scrambler.scramble(1);
-	private int exp = Scrambler.scramble(0);
-	private int sp  = Scrambler.scramble(0);
-	private int maxSp  = Scrambler.scramble(0);
+	private int exp      = Scrambler.scramble(0);
+	private int sp       = Scrambler.scramble(0);
+	private int maxSp    = Scrambler.scramble(0);
 
 	public String levelId;
 
@@ -248,19 +250,19 @@ public class Hero extends Char {
 		return Scrambler.descramble(STR);
 	}
 
-	private static final String ATTACK     		= "attackSkill";
-	private static final String DEFENSE    		= "defenseSkill";
-	private static final String STRENGTH   		= "STR";
-	private static final String LEVEL      		= "lvl";
-	private static final String EXPERIENCE 		= "exp";
-	private static final String LEVEL_ID   		= "levelId";
-	private static final String DIFFICULTY 		= "difficulty";
-	private static final String PETS       		= "pets";
-	private static final String SP         		= "sp";
-	private static final String MAX_SP     		= "maxsp";
-	private static final String PORTAL_LEVEL_POS= "portalLevelPos";
-	private static final String IS_SPELL_USER	= "isspelluser";
-	private static final String MAGIC_LEVEL     = "magicLvl";
+	private static final String ATTACK           = "attackSkill";
+	private static final String DEFENSE          = "defenseSkill";
+	private static final String STRENGTH         = "STR";
+	private static final String LEVEL            = "lvl";
+	private static final String EXPERIENCE       = "exp";
+	private static final String LEVEL_ID         = "levelId";
+	private static final String DIFFICULTY       = "difficulty";
+	private static final String PETS             = "pets";
+	private static final String SP               = "sp";
+	private static final String MAX_SP           = "maxsp";
+	private static final String PORTAL_LEVEL_POS = "portalLevelPos";
+	private static final String IS_SPELL_USER    = "isspelluser";
+	private static final String MAGIC_LEVEL      = "magicLvl";
 
 	private void refreshPets() {
 		ArrayList<Mob> alivePets = new ArrayList<>();
@@ -306,9 +308,8 @@ public class Hero extends Char {
 
 		belongings.storeInBundle(bundle);
 		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
-		bundle.put(IS_SPELL_USER, this.heroClass.isSpellUser());
+		bundle.put(IS_SPELL_USER, spellUser);
 		bundle.put(MAGIC_LEVEL, magicLvl());
-
 	}
 
 	@Override
@@ -340,7 +341,7 @@ public class Hero extends Char {
 
 		portalLevelPos = (Position) bundle.get(PORTAL_LEVEL_POS);
 
-		this.heroClass.isSpellUser(bundle.optBoolean(IS_SPELL_USER, false));
+		spellUser = bundle.optBoolean(IS_SPELL_USER, false);
 
 		setMagicLvl(bundle.getInt(MAGIC_LEVEL));
 	}
@@ -1020,7 +1021,7 @@ public class Hero extends Char {
 	private boolean actSpecialAttack(Attack action) {
 		SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
 
-		if(canAttack(enemy)) {
+		if (canAttack(enemy)) {
 			return applySpecialTo(weapon, enemy);
 		}
 
@@ -1208,15 +1209,15 @@ public class Hero extends Char {
 		Level level = Dungeon.level;
 		Buff wallWalkerBuff = null;
 
-		if(!level.isBossLevel()) {
+		if (!level.isBossLevel()) {
 			wallWalkerBuff = buff(RingOfStoneWalking.StoneWalking.class);
 		}
-		
+
 		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
 				if (buff(Blindness.class) == null) {
-					if (level.pit[target] && !isFlying()&& !Chasm.jumpConfirmed) {
+					if (level.pit[target] && !isFlying() && !Chasm.jumpConfirmed) {
 						Chasm.heroJump(this);
 						interrupt();
 						return false;
@@ -1297,7 +1298,7 @@ public class Hero extends Char {
 
 	public boolean handle(int cell) {
 
-		if(doOnNextAction !=null) {
+		if (doOnNextAction != null) {
 			doOnNextAction.run();
 			doOnNextAction = null;
 			return false;
@@ -1389,9 +1390,9 @@ public class Hero extends Char {
 			getSprite().showStatus(CharSprite.POSITIVE, TXT_LEVEL_UP);
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
-			if(this.getSoulPointsMax() > 0){
+			if (this.getSoulPointsMax() > 0) {
 				this.setMaxSoulPoints(getSoulPointsMax() + 1);
-				this.accumulateSoulPoints(getSoulPointsMax()/3);
+				this.accumulateSoulPoints(getSoulPointsMax() / 3);
 			}
 
 			Badges.validateLevelReached();
@@ -1696,7 +1697,7 @@ public class Hero extends Char {
 
 					if (intentional || Random.Float() < searchLevel) {
 
-						if(level.secret[p]) {
+						if (level.secret[p]) {
 							int oldValue = level.map[p];
 							GameScene.discoverTile(p, oldValue);
 							level.set(p, Terrain.discover(oldValue));
@@ -1706,7 +1707,7 @@ public class Hero extends Char {
 						}
 
 						LevelObject obj = level.getLevelObject(p);
-						if(obj!=null && obj.secret()) {
+						if (obj != null && obj.secret()) {
 							obj.discover();
 							smthFound = true;
 						}
@@ -1804,7 +1805,7 @@ public class Hero extends Char {
 			return true;
 		}
 
-		if(bowEquiped()) {
+		if (bowEquiped()) {
 			return true;
 		}
 
@@ -1900,27 +1901,27 @@ public class Hero extends Char {
 		setSoulPoints(Scrambler.descramble(sp) - cost);
 	}
 
-	public boolean enoughSP(int cost){
-		if (getSoulPoints() < cost){
+	public boolean enoughSP(int cost) {
+		if (getSoulPoints() < cost) {
 			return false;
-		} else{
+		} else {
 			return true;
 		}
 	}
 
-	public void setSoulPoints(int points){
-		if (points < 0){
+	public void setSoulPoints(int points) {
+		if (points < 0) {
 			sp = Scrambler.scramble(0);
 		}
-		if (points < getSoulPointsMax()){
+		if (points < getSoulPointsMax()) {
 			sp = Scrambler.scramble(points);
 		} else {
 			sp = Scrambler.scramble(getSoulPointsMax());
 		}
 	}
 
-	public void setMaxSoulPoints(int points){
-		if (points < 0){
+	public void setMaxSoulPoints(int points) {
+		if (points < 0) {
 			points = 0;
 		}
 		maxSp = Scrambler.scramble(points);
@@ -1937,7 +1938,7 @@ public class Hero extends Char {
 		return false;
 	}
 
-	public void setPortalLevelCoordinates(Position position){
+	public void setPortalLevelCoordinates(Position position) {
 		portalLevelPos = position;
 	}
 
