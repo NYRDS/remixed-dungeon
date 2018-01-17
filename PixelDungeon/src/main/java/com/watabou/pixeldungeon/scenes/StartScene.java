@@ -108,8 +108,11 @@ public class StartScene extends PixelScene {
         add(archs);
 
         Image title = BannerSprites.get(Type.SELECT_YOUR_HERO);
+
+        title.setScale(0.85f, 0.85f);
         title.x = align((w - title.width()) / 2);
         title.y = align(top);
+
         add(title);
 
         buttonX = left;
