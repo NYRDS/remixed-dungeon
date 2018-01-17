@@ -17,13 +17,11 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.pixeldungeon.items.books.Book;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -33,11 +31,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Codex extends Item {
-
-	private static final String TXT_BLINDED	= Game.getVar(R.string.Codex_Blinded);
-
-	public static final String AC_READ	= "Codex_ACRead";
+public class Codex extends Book {
 
 	private static String idTag   = "id";
 	private static String textTag = "text";
@@ -48,7 +42,7 @@ public class Codex extends Item {
 
 	public Codex(){
 		stackable = false;
-		image     = ItemSpriteSheet.CODEX;
+		image     = 5;
 		//TODO Need rework this. Transifex just hates string-arrays
 		maxId     = Game.getVars(R.array.Codex_Story).length;
 		id        = Random.Int(maxId);
@@ -60,28 +54,16 @@ public class Codex extends Item {
 		actions.add( AC_READ );
 		return actions;
 	}
-	
+
 	@Override
-	public void execute( Hero hero, String action ) {
-		if (action.equals( AC_READ )) {
-
-			if (hero.buff( Blindness.class ) != null) {
-				GLog.w( TXT_BLINDED );
-				return;
-			}
-
-			setCurUser(hero);
-			if(text != null) {
-				WndStory.showCustomStory(text);
-			} else {
-				WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[id]);
-			}
-			return;
+	protected void doRead(Hero hero) {
+		if(text != null) {
+			WndStory.showCustomStory(text);
+		} else {
+			WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[id]);
 		}
-
-		super.execute( hero, action );
 	}
-	
+
 	@Override
 	public boolean isIdentified() {
 		return true;

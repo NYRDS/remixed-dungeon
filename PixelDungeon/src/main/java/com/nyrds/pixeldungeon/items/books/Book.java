@@ -13,9 +13,7 @@ abstract public class Book extends Item {
 
 	public static final float TIME_TO_READ	= 2f;
 
-	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
-
-	public static final String AC_READ    	= "Scroll_ACRead";
+	protected static final String AC_READ = "Scroll_ACRead";
 
 	{
 		imageFile = "items/books.png";
@@ -34,10 +32,9 @@ abstract public class Book extends Item {
 		if (action.equals( AC_READ )) {
 
 			if (hero.buff( Blindness.class ) != null) {
-				GLog.w( TXT_BLINDED );
+				GLog.w(Game.getVar(R.string.Codex_Blinded));
 			} else {
 				setCurUser(hero);
-				curItem = detach( hero.belongings.backpack );
 
 				doRead(hero);
 			}
