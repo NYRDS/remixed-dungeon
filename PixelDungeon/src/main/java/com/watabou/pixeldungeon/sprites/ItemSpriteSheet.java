@@ -52,18 +52,6 @@ public class ItemSpriteSheet {
 	public static final int CURARE_DART		= 109;
 	public static final int JAVELIN			= 110;
 	
-	// Armors
-	public static final int ARMOR_CLOTH		= 24;
-	public static final int ARMOR_LEATHER	= 25;
-	public static final int ARMOR_MAIL		= 26;
-	public static final int ARMOR_SCALE		= 27;
-	public static final int ARMOR_PLATE		= 28;
-	public static final int ARMOR_ROGUE		= 96;
-	public static final int ARMOR_WARRIOR	= 97;
-	public static final int ARMOR_MAGE		= 98;
-	public static final int ARMOR_HUNTRESS	= 99;
-	public static final int ARMOR_ELF		= 145;
-	
 	// Wands
 	public static final int WAND_MAGIC_MISSILE	= 3;
 	public static final int WAND_HOLLY			= 48;
@@ -175,7 +163,6 @@ public class ItemSpriteSheet {
 		
 	// Misc
 	public static final int ANKH	= 1;
-	public static final int GOLD	= 14;
 	public static final int STYLUS	= 80;
 	public static final int DEWDROP	= 81;
 	public static final int MASTERY	= 82;
@@ -183,19 +170,8 @@ public class ItemSpriteSheet {
 	public static final int BEACON	= 85;
 	public static final int KIT		= 86;
 	public static final int AMULET	= 87;
-	public static final int VIAL	= 120;
 	public static final int WEIGHT	= 123;
-	public static final int CODEX   = 132;
-	
-	public static final int BOW_WOODEN      = 134;
-	public static final int BOW_COMPOUND    = 135;
-	public static final int BOW_RUBY        = 136;
 
 	public static final int QUIVER_COMMON     = 137;
 
-	public static final int ARROW_FROST      = 140;
-	public static final int ARROW_COMMON     = 141;
-	public static final int ARROW_FIRE       = 142;
-	public static final int ARROW_POISON     = 143;
-	public static final int ARROW_PARALYSIS  = 144;
 }
