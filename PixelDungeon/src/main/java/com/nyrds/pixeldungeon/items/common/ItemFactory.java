@@ -440,6 +440,11 @@ public class ItemFactory {
 
 	public static Item createItemFromDesc(JSONObject itemDesc) throws IllegalAccessException, InstantiationException, JSONException {
 		String kind = itemDesc.getString("kind");
+
+		if(kind.equals("NoItem")) {
+			return null;
+		}
+
 		Item item = ItemFactory.itemsClassByName(kind).newInstance();
 		item.fromJson(itemDesc);
 

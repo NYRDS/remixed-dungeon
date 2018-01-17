@@ -141,11 +141,20 @@
       "kind": "Tamahawk",
       "identified": true
     },
+    "armor": {
+      "kind": "NoItem"
+    },
     "items": [
       {
         "kind": "Dart",
         "identified": true,
         "quantity": 8
+      },
+      {
+        "kind":"Codex"
+      },
+      {
+        "kind":"TomeOfKnowledge"
       }
     ],
     "quickslot": [
@@ -153,6 +162,8 @@
         "kind": "Dart"
       }
     ],
+    "forbiddenActions":["Scroll_ACRead","TomeOfMastery_ACRead","Stylus_ACInscribe"],
+    "friendlyMobs":["Gnoll","Shaman","Brute","Shielded"],
     "str": 17,
     "hp": 5
   }
