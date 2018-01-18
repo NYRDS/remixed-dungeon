@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
@@ -24,10 +25,19 @@ public class ChaosStaff extends Wand implements IChaosItem {
         image = 0;
     }
 
+
     @Override
-    protected void updateLevel() {
-        super.updateLevel();
+    public Item upgrade() {
+        super.upgrade();
         selectImage();
+        return this;
+    }
+
+    @Override
+    public Item degrade() {
+        super.degrade();
+        selectImage();
+        return this;
     }
 
     @Override
