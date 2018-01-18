@@ -56,11 +56,7 @@ import java.util.ArrayList;
 
 public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
-	public static final String AC_ZAP = "Wand_ACZap";
-
-	private static final String TXT_WOOD = Game.getVar(R.string.Wand_Wood);
-	private static final String TXT_DAMAGE = Game.getVar(R.string.Wand_Damage);
-	private static final String TXT_WEAPON = Game.getVar(R.string.Wand_Weapon);
+	private static final String AC_ZAP = "Wand_ACZap";
 
 	private static final String TXT_FIZZLES = Game
 			.getVar(R.string.Wand_Fizzles);
@@ -116,8 +112,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public Wand() {
-		calculateDamage();
-
 		defaultAction = AC_ZAP;
 		
 		try {
@@ -257,21 +251,21 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	@Override
 	public String name() {
-		return isKnown() ? name : Utils.format(
-				Game.getVar(R.string.Wand_Name), wood);
+		return isKnown() ? name : Utils.format(R.string.Wand_Name, wood);
 	}
 
 	@Override
 	public String info() {
 		StringBuilder info = new StringBuilder(isKnown() ? desc()
-				: Utils.format(TXT_WOOD, wood));
+				: Utils.format(R.string.Wand_Wood, wood));
 		if (Dungeon.hero.heroClass == HeroClass.MAGE
 				|| Dungeon.hero.subClass == HeroSubClass.SHAMAN) {
+			damageRoll(Dungeon.hero);
 			info.append("\n\n");
 			if (levelKnown) {
-				info.append(Utils.format(TXT_DAMAGE, MIN + (MAX - MIN) / 2));
+				info.append(Utils.format(R.string.Wand_Damage, MIN + (MAX - MIN) / 2));
 			} else {
-				info.append(TXT_WEAPON);
+				info.append(Game.getVar(R.string.Wand_Weapon));
 			}
 		}
 		return info.toString();
@@ -299,7 +293,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		maxCharges(Math.max(Math.min(maxCharges()+1, 9),maxCharges()));
 		curCharges(Math.max(curCharges(), maxCharges()));
 
-		updateLevel();
 		updateQuickslot();
 
 		return this;
@@ -312,24 +305,13 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		maxCharges(Math.max(maxCharges()-1, 0));
 		curCharges(Math.min(curCharges(), maxCharges()));
 
-		updateLevel();
 		updateQuickslot();
 
 		return this;
 	}
 
-	protected void updateLevel() {
-		calculateDamage();
-	}
-
 	protected int initialCharges() {
 		return 2;
-	}
-
-	private void calculateDamage() {
-		int tier = 1 + effectiveLevel() / 3;
-		MIN = tier;
-		MAX = (tier * tier - tier + 10) / 2 + effectiveLevel();
 	}
 
 	public void mobWandUse(Char user, final int tgt) {
@@ -530,9 +512,17 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
+	public int damageRoll(Hero owner) {
+		int tier = 1 + effectiveLevel() / 3;
+		MIN = tier + owner.magicLvl();
+		MAX = (tier * tier - tier + 10) / 2 + owner.magicLvl()*tier + effectiveLevel();
+
+		return super.damageRoll(owner);
+	}
+
+	@Override
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
-		updateLevel();
 
 		maxCharges(Math.min(initialCharges()+level(), 9));
 		curCharges(maxCharges());

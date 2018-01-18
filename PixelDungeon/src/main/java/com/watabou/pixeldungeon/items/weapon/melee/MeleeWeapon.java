@@ -143,20 +143,20 @@ public class MeleeWeapon extends Weapon {
 		if (levelKnown && Dungeon.hero.belongings.backpack.items.contains( this )) {
 			info.append(p);
 			if (STR > Dungeon.hero.effectiveSTR()) {
-				info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info6a), name));
+				info.append(Utils.format(R.string.MeleeWeapon_Info6a, name));
 			}
 			if (STR < Dungeon.hero.effectiveSTR()) {
-				info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info6b), name));
+				info.append(Utils.format(R.string.MeleeWeapon_Info6b, name));
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(p);
-			info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info7a), name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info7b) : "")) );
+			info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info7b) : "")) );
 		} else {
 			if (cursedKnown && cursed) {
 				info.append(p);
-				info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info7c), name));
+				info.append(Utils.format(R.string.MeleeWeapon_Info7c, name));
 			}
 		}
 		

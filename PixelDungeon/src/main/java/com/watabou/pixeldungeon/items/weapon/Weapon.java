@@ -54,10 +54,6 @@ import org.json.JSONObject;
 
 public class Weapon extends KindOfWeapon {
 
-	private static final String TXT_IDENTIFY     = Game.getVar(R.string.Weapon_Identify);
-	private static final String TXT_INCOMPATIBLE = Game.getVar(R.string.Weapon_Incompatible);
-	private static final String TXT_TO_STRING    = "%s :%d";
-	
 	public int		STR	= 10;
 	public float	ACU	= 1;
 	public float	DLY	= 1f;
@@ -79,7 +75,7 @@ public class Weapon extends KindOfWeapon {
 	public void usedForHit() {
 		if (!levelKnown && --hitsToKnow <= 0) {
 			levelKnown = true;
-			GLog.i(TXT_IDENTIFY, name(), toString());
+			GLog.i(Game.getVar(R.string.Weapon_Identify), name(), toString());
 			Badges.validateItemLevelAcquired(this);
 		}
 	}
@@ -170,7 +166,7 @@ public class Weapon extends KindOfWeapon {
 	public Item upgrade( boolean enchant ) {		
 		if (getEnchantment() != null) {
 			if (!enchant && Random.Int( level() ) > 0) {
-				GLog.w( TXT_INCOMPATIBLE );
+				GLog.w(Game.getVar(R.string.Weapon_Incompatible));
 				enchant( null );
 			}
 		} else {
@@ -184,7 +180,7 @@ public class Weapon extends KindOfWeapon {
 	
 	@Override
 	public String toString() {
-		return levelKnown ? Utils.format( TXT_TO_STRING, super.toString(), STR ) : super.toString();
+		return levelKnown ? Utils.format("%s: %d", super.toString(), STR ) : super.toString();
 	}
 	
 	@Override
