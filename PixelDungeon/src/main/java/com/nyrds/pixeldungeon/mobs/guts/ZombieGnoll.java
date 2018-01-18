@@ -67,9 +67,5 @@ public class ZombieGnoll extends Mob {
             }
 
         }
-
-        if (Dungeon.hero.lvl() <= maxLvl + 2) {
-            dropLoot();
-        }
     }
 }
