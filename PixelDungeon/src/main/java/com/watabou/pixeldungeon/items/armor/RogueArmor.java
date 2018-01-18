@@ -40,16 +40,14 @@ public class RogueArmor extends ClassArmor {
 	
 	private static final String TXT_FOV       = Game.getVar(R.string.RogueArmor_Fov);
 	protected static final String TXT_NOT_ROGUE = Game.getVar(R.string.RogueArmor_NotRogue);
-	
-	private static final String AC_SPECIAL = Game.getVar(R.string.RogueArmor_ACSpecial); 
-	
+
 	{
 		image = 8;
 	}
 	
 	@Override
 	public String special() {
-		return AC_SPECIAL;
+		return "RogueArmor_ACSpecial";
 	}
 	
 	@Override

@@ -5,23 +5,17 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.particles.BloodParticle;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.utils.GLog;
-
-import java.util.HashSet;
 
 public class NecromancerArmor extends ClassArmor {
 
 
 	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
-	private static final String AC_SPECIAL = Game.getVar(R.string.Necrotism_ACSpecial);
 
 	public NecromancerArmor() {
 		image = 22;
@@ -33,7 +27,7 @@ public class NecromancerArmor extends ClassArmor {
 
 	@Override
 	public String special() {
-		return AC_SPECIAL;
+		return "Necrotism_ACSpecial";
 	}
 
 	@Override

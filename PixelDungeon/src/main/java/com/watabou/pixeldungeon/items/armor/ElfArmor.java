@@ -17,8 +17,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ElfArmor extends ClassArmor {
 	
 	protected static final String TXT_NOT_ELF = Game.getVar(R.string.ElfArmor_NotElf);
-	private static final String AC_SPECIAL = Game.getVar(R.string.ElfArmor_ACSpecial); 
-	
+
 	public ElfArmor() {
 		image = 17;
 		hasHelmet = true;
@@ -26,7 +25,7 @@ public class ElfArmor extends ClassArmor {
 	
 	@Override
 	public String special() {
-		return AC_SPECIAL;
+		return "ElfArmor_ACSpecial";
 	}
 	
 	@Override

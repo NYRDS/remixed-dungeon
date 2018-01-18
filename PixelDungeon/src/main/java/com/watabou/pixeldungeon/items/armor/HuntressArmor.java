@@ -35,9 +35,7 @@ public class HuntressArmor extends ClassArmor {
 	
 	private static final String TXT_NO_ENEMIES   = Game.getVar(R.string.HuntressArmor_NoEnemies);
 	protected static final String TXT_NOT_HUNTRESS = Game.getVar(R.string.HuntressArmor_NotHuntress);
-	
-	private static final String AC_SPECIAL = Game.getVar(R.string.HuntressArmor_ACSpecial); 
-	
+
 	{
 		image = 14;
 		hasHelmet = true;
@@ -48,7 +46,7 @@ public class HuntressArmor extends ClassArmor {
 	
 	@Override
 	public String special() {
-		return AC_SPECIAL;
+		return "HuntressArmor_ACSpecial";
 	}
 
 	@Override

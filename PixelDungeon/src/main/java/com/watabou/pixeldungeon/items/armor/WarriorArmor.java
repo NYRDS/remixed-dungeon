@@ -42,9 +42,7 @@ public class WarriorArmor extends ClassArmor {
 	
 	private static int LEAP_TIME	= 1;
 	private static int SHOCK_TIME	= 3;
-	
-	private static final String AC_SPECIAL = Game.getVar(R.string.WarriorArmor_ACSpecial); 
-	
+
 	protected static final String TXT_NOT_WARRIOR	= Game.getVar(R.string.WarriorArmor_NotWarrior);
 	
 	{
@@ -53,7 +51,7 @@ public class WarriorArmor extends ClassArmor {
 	
 	@Override
 	public String special() {
-		return AC_SPECIAL;
+		return "WarriorArmor_ACSpecial";
 	}
 	
 	@Override

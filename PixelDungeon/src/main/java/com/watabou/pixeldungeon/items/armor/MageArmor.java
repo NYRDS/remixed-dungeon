@@ -32,10 +32,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class MageArmor extends ClassArmor {	
-	
-	private static final String AC_SPECIAL = Game.getVar(R.string.MageArmor_ACSpecial); 
-	
+public class MageArmor extends ClassArmor {
+
 	protected static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
 	
 	{
@@ -44,7 +42,7 @@ public class MageArmor extends ClassArmor {
 	
 	@Override
 	public String special() {
-		return AC_SPECIAL;
+		return "MageArmor_ACSpecial";
 	}
 	
 	@Override

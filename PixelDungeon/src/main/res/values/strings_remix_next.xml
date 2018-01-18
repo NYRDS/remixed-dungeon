@@ -2,16 +2,18 @@
 <resources>
 
     <string name="HeroClass_Gnoll">Gnoll</string>
-    <string name="GnollArmor_ACSpecial">Special</string>
+    <string name="GnollArmor_ACSpecial">DOMINATE</string>
     <string name="GnollArmor_NotGnoll">Only gnolls can equip Gnoll Armor!</string>
+    <string name="GnollArmor_Info">Wearers of Gnoll-Lieutenant suit well known for their ability to persuade even angry mobs to be loyal servants of the Crown.</string>
+
     <string name="WndPlayGames_BackupProgress">Backup Game Progress</string>
     <string name="WndPlayGames_RestoreProgress">Restore Game Progress</string>
     <string name="WndPlayGames_WorkInCloud">Working in Cloud... Please wait.</string>
     <string-array name="HeroClass_GnollPerks">
-        <item>Gnolls are very strong (starts with 17 str points) </item>
-        <item>Gnolls not very durable (starts with 5 hp)</item>
+        <item>Gnolls starts with 17 strength points</item>
+        <item>Gnolls starts with 5 health points</item>
+        <item>Gnolls starts without any armor</item>
         <item>Gnolls can\'t read</item>
-        <item>Gnolls not very charismatic</item>
-        <item>Gnolls will pack together</item>
+        <item>Gnolls do not attack another Gnolls until provoked.</item>
      </string-array>
 </resources>

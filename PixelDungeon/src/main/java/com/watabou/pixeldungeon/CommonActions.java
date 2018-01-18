@@ -6,5 +6,7 @@ package com.watabou.pixeldungeon;
  */
 
 public class CommonActions {
-    public static final String AC_READ = "Scroll_ACRead";
+    public static final String AC_READ   = "Scroll_ACRead";
+    public static final String NPC_TALK  = "NPC_Talk";
+    public static final String NPC_TRADE = "NPC_Trade";
 }
