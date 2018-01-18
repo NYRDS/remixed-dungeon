@@ -18,11 +18,16 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.GuiProperties;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
 public class RedButton extends TextButton {
-	
+
+	public RedButton( int labelStringId ) {
+		this(Game.getVar(labelStringId));
+	}
+
 	public RedButton( String label ) {
 		super(label);
 	}
