@@ -134,6 +134,9 @@
       "kind": "Tamahawk",
       "identified": true
     },
+    "armor": {
+      "kind": "NoItem"
+    },
     "items": [
       {
         "kind": "Dart",
@@ -145,6 +148,17 @@
       {
         "kind": "Dart"
       }
+    ],
+    "forbiddenActions": [
+      "Scroll_ACRead",
+      "TomeOfMastery_ACRead",
+      "Stylus_ACInscribe"
+    ],
+    "friendlyMobs": [
+      "Gnoll",
+      "Shaman",
+      "Brute",
+      "Shielded"
     ],
     "str": 17,
     "hp": 5
