@@ -40,19 +40,6 @@ import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndHero extends WndTabbed {
-	
-	private static final String TXT_STATS	= Game.getVar(R.string.WndHero_Stats);
-	private static final String TXT_BUFFS	= Game.getVar(R.string.WndHero_Buffs);
-	private static final String TXT_SPELLS	= Game.getVar(R.string.WndSpells_Title);
-
-	
-	private static final String TXT_EXP		= Game.getVar(R.string.WndHero_Exp);
-	private static final String TXT_STR		= Game.getVar(R.string.WndHero_Str);
-	private static final String TXT_HEALTH	= Game.getVar(R.string.WndHero_Health);
-	private static final String TXT_SOULS	= Game.getVar(R.string.Mana_Title);
-	private static final String TXT_GOLD	= Game.getVar(R.string.WndHero_Gold);
-	private static final String TXT_DEPTH	= Game.getVar(R.string.WndHero_Depth);
-	
 	private static final int WIDTH		= 100;
 	private static final int TAB_WIDTH	= 50;
 	
@@ -75,13 +62,13 @@ public class WndHero extends WndTabbed {
 		buffs = new BuffsTab();
 		add( buffs );
 		
-		add( new LabeledTab( this, TXT_STATS ) {
+		add( new LabeledTab( this, Game.getVar(R.string.WndHero_Stats)) {
 			public void select( boolean value ) {
 				super.select( value );
 				stats.setVisible(stats.active = selected);
 			}
 		} );
-		add( new LabeledTab( this, TXT_BUFFS ) {
+		add( new LabeledTab( this, Game.getVar(R.string.WndHero_Buffs)) {
 			public void select( boolean value ) {
 				super.select( value );
 				buffs.setVisible(buffs.active = selected);
@@ -91,18 +78,13 @@ public class WndHero extends WndTabbed {
 			tab.setSize( TAB_WIDTH, tabHeight() );
 		}
 		
-		resize( WIDTH, (int)Math.max( stats.height(), buffs.height() ) );
+		resize( WIDTH, (int)Math.max( stats.height()+ GAP, buffs.height() + GAP ) );
 		
 		select( 0 );
 	}
 	
 	private class StatsTab extends Group {
-		
-		//Removido o "Static" para poder definir valor a partir ds resouces
-		private final String TXT_TITLE     = Game.getVar(R.string.WndHero_StaTitle);
-		private final String TXT_CATALOGUS = Game.getVar(R.string.WndHero_StaCatalogus);
-		private final String TXT_JOURNAL   = Game.getVar(R.string.WndHero_StaJournal);
-		
+
 		private static final int GAP = 2;
 		
 		private float pos;
@@ -112,12 +94,12 @@ public class WndHero extends WndTabbed {
 			final Hero hero = Dungeon.hero;
 
 			Text title = PixelScene.createText( 
-				Utils.format( TXT_TITLE, hero.lvl(), hero.className() ).toUpperCase(), GuiProperties.titleFontSize());
+				Utils.format( R.string.WndHero_StaTitle, hero.lvl(), hero.className() ).toUpperCase(), GuiProperties.titleFontSize());
 			title.hardlight( TITLE_COLOR );
 			title.measure();
 			add( title );
 			
-			RedButton btnCatalogus = new RedButton( TXT_CATALOGUS ) {
+			RedButton btnCatalogus = new RedButton( R.string.WndHero_StaCatalogus ) {
 				@Override
 				protected void onClick() {
 					hide();
@@ -127,7 +109,7 @@ public class WndHero extends WndTabbed {
 			btnCatalogus.setRect( 0, title.y + title.height(), btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
 			add( btnCatalogus );
 			
-			RedButton btnJournal = new RedButton( TXT_JOURNAL ) {
+			RedButton btnJournal = new RedButton( R.string.WndHero_StaJournal) {
 				@Override
 				protected void onClick() {
 					hide();
@@ -141,16 +123,18 @@ public class WndHero extends WndTabbed {
 			
 			pos = btnCatalogus.bottom() + GAP;
 
-			statSlot( TXT_STR, hero.effectiveSTR() );
-			statSlot( TXT_HEALTH, hero.hp() + "/" + hero.ht() );
-			statSlot( TXT_SOULS, hero.getSoulPoints() + "/" + hero.getSoulPointsMax() );
+			statSlot(Game.getVar(R.string.WndHero_Str), hero.effectiveSTR() );
+			statSlot(Game.getVar(R.string.WndHero_Health), hero.hp() + "/" + hero.ht() );
+			statSlot(Game.getVar(R.string.Mana_Title), hero.getSoulPoints() + "/" + hero.getSoulPointsMax() );
 
-			statSlot( TXT_EXP, hero.getExp() + "/" + hero.maxExp() );
+			statSlot(Game.getVar(R.string.WndHero_Exp), hero.getExp() + "/" + hero.maxExp() );
 
 			pos += GAP;
 			
-			statSlot( TXT_GOLD, Statistics.goldCollected );
-			statSlot( TXT_DEPTH, Statistics.deepestFloor );
+			statSlot(Game.getVar(R.string.WndHero_Gold), Statistics.goldCollected );
+			statSlot(Game.getVar(R.string.WndHero_Depth), Statistics.deepestFloor );
+
+			statSlot("Skill level", hero.magicLvl());
 			
 			pos += GAP;
 		}
