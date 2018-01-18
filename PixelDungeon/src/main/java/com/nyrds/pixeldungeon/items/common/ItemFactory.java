@@ -58,6 +58,7 @@ import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.FreeRunnerArmor;
 import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
+import com.watabou.pixeldungeon.items.armor.GnollArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
@@ -401,6 +402,8 @@ public class ItemFactory {
 		registerItemClass(TomeOfKnowledge.class);
 		registerItemClass(SpellBook.class);
 		registerItemClass(ScrollOfSummoning.class);
+
+		registerItemClass(GnollArmor.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {
