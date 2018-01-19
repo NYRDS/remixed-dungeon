@@ -131,7 +131,6 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void execute(Hero hero, String action) {
-
 		setCurUser(hero);
 		curItem = this;
 
@@ -143,6 +142,9 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void execute(Hero hero) {
+		if(hero.heroClass.forbidden(defaultAction)){
+			defaultAction = AC_THROW;
+		}
 		execute(hero, defaultAction);
 	}
 
