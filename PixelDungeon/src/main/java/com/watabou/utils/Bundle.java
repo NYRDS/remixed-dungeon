@@ -148,25 +148,25 @@ public class Bundle {
 		}
 	}
 
+	@NonNull
 	public int[] getIntArray(String key) {
-		JSONArray array = data.optJSONArray(key);
-		if (array == null) {
+		try {
+			JSONArray array = data.getJSONArray(key);
+
+			int length = array.length();
+			int[] result = new int[length];
+			for (int i = 0; i < length; i++) {
+				result[i] = array.optInt(i);
+			}
+			return result;
+		} catch (JSONException e) {
+			EventCollector.logException(e,key);
 			return new int[0];
 		}
-
-		int length = array.length();
-		int[] result = new int[length];
-		for (int i = 0; i < length; i++) {
-			result[i] = array.optInt(i);
-		}
-		return result;
 	}
-	
-	public boolean[] getBooleanArray( String key ) {
-		if(!data.has(key)) {
-			return new boolean[0];
-		}
 
+	@NonNull
+	public boolean[] getBooleanArray( String key ) {
 		try {
 			JSONArray array = data.getJSONArray( key );
 			int length = array.length();
@@ -176,16 +176,13 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			EventCollector.logException(e,"Bundable.getBooleanArray");
-			return null;
+			EventCollector.logException(e,key);
+			return new boolean[0];
 		}
 	}
-	
-	public String[] getStringArray( String key ) {
-		if(!data.has(key)) {
-			return new String[0];
-		}
 
+	@NonNull
+	public String[] getStringArray( String key ) {
 		try {
 			JSONArray array = data.getJSONArray( key );
 			int length = array.length();
@@ -195,18 +192,13 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			EventCollector.logException(e,"Bundable.getStringArray");
-			return null;
+			EventCollector.logException(e,key);
+			return new String[0];
 		}
 	}
 
 	@NonNull
 	public <T extends Bundlable> Collection<T> getCollection( String key, Class<T> type ) {
-
-		if(!data.has(key)) {
-			return new Vector<>();
-		}
-
 		List<T> list = new ArrayList<>();
 		
 		try {
@@ -218,7 +210,7 @@ public class Bundle {
 				}
 			}
 		} catch (JSONException e) {
-			EventCollector.logException(e,"Bundable.getCollection");
+			EventCollector.logException(e,key);
 			return new Vector<>();
 		}
 		
@@ -347,12 +339,11 @@ public class Bundle {
 		try {
 			BufferedReader reader = new BufferedReader( new InputStreamReader( stream ) );
 			String line = reader.readLine();
-			EventCollector.collectSessionData("Bundle read line",line);
 			JSONObject json = (JSONObject)new JSONTokener(line).nextValue();
 			reader.close();
 			return new Bundle( json );
 		} catch (Exception e) {
-			EventCollector.logException(e,"Bundle Exception");
+			EventCollector.logException(e);
 			return null;
 		}
 	}
