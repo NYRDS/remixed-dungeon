@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -16,16 +16,13 @@ import java.util.ArrayList;
 
 public class SpellBook extends Artifact {
 
-	public static final String AC_USE = "SpiderCharm_Use";
-	public static final String IDENTIFIED = Game.getVar(R.string.SpellBook_Info_Identified);
-
 	@Packable
 	private String spell;
 
 	public SpellBook() {
 		imageFile = "items/books.png";
 		image = 3;
-		defaultAction = AC_USE;
+		defaultAction = CommonActions.AC_READ;
 	}
 
 	public void spell(String spellName){
@@ -44,7 +41,7 @@ public class SpellBook extends Artifact {
 	public ArrayList<String> actions(Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (isEquipped(hero)){
-			actions.add( AC_USE );
+			actions.add(CommonActions.AC_READ );
 		}
 		return actions;
 	}
@@ -52,7 +49,7 @@ public class SpellBook extends Artifact {
 	@Override
 	public void execute(final Hero ch, String action) {
 		setCurUser(ch);
-		if (action.equals(AC_USE)) {
+		if (action.equals(CommonActions.AC_READ)) {
 			spell().cast(ch);
 		} else {
 			super.execute(ch, action);
@@ -62,7 +59,7 @@ public class SpellBook extends Artifact {
 	@Override
 	public String desc(){
 		if(this.isIdentified()){
-			return  Utils.format(IDENTIFIED, spell().name(), spell().desc());
+			return  Utils.format(R.string.SpellBook_Info_Identified, spell().name(), spell().desc());
 		}
 		return super.desc();
 	}
