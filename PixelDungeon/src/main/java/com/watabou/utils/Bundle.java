@@ -151,8 +151,9 @@ public class Bundle {
 	public int[] getIntArray(String key) {
 		JSONArray array = data.optJSONArray(key);
 		if (array == null) {
-			return null;
+			return new int[0];
 		}
+
 		int length = array.length();
 		int[] result = new int[length];
 		for (int i = 0; i < length; i++) {
@@ -162,6 +163,10 @@ public class Bundle {
 	}
 	
 	public boolean[] getBooleanArray( String key ) {
+		if(!data.has(key)) {
+			return new boolean[0];
+		}
+
 		try {
 			JSONArray array = data.getJSONArray( key );
 			int length = array.length();
@@ -178,7 +183,7 @@ public class Bundle {
 	
 	public String[] getStringArray( String key ) {
 		if(!data.has(key)) {
-			return null;
+			return new String[0];
 		}
 
 		try {
