@@ -26,7 +26,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
-import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
@@ -173,7 +172,7 @@ public class Badges {
 		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 65),
 		DEATH_FROM_NECROTISM(Game.getVar(R.string.Badges_DeathNecrotism), 71),
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
-		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH;
+		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL;
 
 		public boolean meta;
 
@@ -237,6 +236,8 @@ public class Badges {
 
 	private static void store(Bundle bundle, HashSet<Badge> badges) {
 		int count = 0;
+
+		badges.remove(null);
 
 		String names[] = new String[badges.size()];
 
@@ -662,6 +663,9 @@ public class Badges {
 				case NECROMANCER:
 					badge = Badge.BOSS_SLAIN_1_NECROMANCER;
 					break;
+				case GNOLL:
+					badge = Badge.BOSS_SLAIN_1_GNOLL;
+					break;
 			}
 			local.add(badge);
 			if (!global.contains(badge)) {
@@ -674,7 +678,8 @@ public class Badges {
 					global.contains(Badge.BOSS_SLAIN_1_ROGUE) &&
 					global.contains(Badge.BOSS_SLAIN_1_HUNTRESS) &&
 					global.contains(Badge.BOSS_SLAIN_1_ELF) &&
-					global.contains(Badge.BOSS_SLAIN_1_NECROMANCER)) {
+					global.contains(Badge.BOSS_SLAIN_1_NECROMANCER) &&
+					global.contains(Badge.BOSS_SLAIN_1_GNOLL)) {
 
 				badge = Badge.BOSS_SLAIN_1_ALL_CLASSES;
 				if (!global.contains(badge)) {
@@ -866,6 +871,9 @@ public class Badges {
 			case NECROMANCER:
 				badge = Badge.VICTORY_NECROMANCER;
 				break;
+			case GNOLL:
+				badge = Badge.VICTORY_GNOLL;
+				break;
 		}
 		local.add(badge);
 		if (!global.contains(badge)) {
@@ -878,7 +886,8 @@ public class Badges {
 				global.contains(Badge.VICTORY_ROGUE) &&
 				global.contains(Badge.VICTORY_HUNTRESS) &&
 				global.contains(Badge.VICTORY_ELF) &&
-				global.contains(Badge.VICTORY_NECROMANCER)) {
+				global.contains(Badge.VICTORY_NECROMANCER) &&
+				global.contains(Badge.VICTORY_GNOLL)) {
 
 			badge = Badge.VICTORY_ALL_CLASSES;
 			displayBadge(badge);

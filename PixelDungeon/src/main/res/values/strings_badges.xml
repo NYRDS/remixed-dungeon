@@ -44,7 +44,7 @@
     <string name="Badges_BossSlain2">2nd boss slain</string>
     <string name="Badges_BossSlain3">3rd boss slain</string>
     <string name="Badges_BossSlain4">4th boss slain</string>
-    <string name="Badges_BossSlain1All">1st boss slain by Warrior, Mage, Rogue &amp; Huntress</string>
+    <string name="Badges_BossSlain1All">1st boss slain by all classes</string>
     <!-- <string name="Badges_BossSlain3Glad"></string> -->
     <!-- <string name="Badges_BossSlain3Bers"></string> -->
     <!-- <string name="Badges_BossSlain3WarL"></string> -->
@@ -53,7 +53,7 @@
     <!-- <string name="Badges_BossSlain3Assa"></string> -->
     <!-- <string name="Badges_BossSlain3Snip"></string> -->
     <!-- <string name="Badges_BossSlain3Ward"></string> -->
-    <string name="Badges_BossSlain3All">3rd boss slain by Gladiator, Berserker, Warlock, Battlemage, Freerunner, Assassin, Sniper &amp; Warden</string>
+    <string name="Badges_BossSlain3All">3rd boss slain by all subclasses</string>
     <string name="Badges_RingHaggler">Ring of Haggler obtained</string>
     <string name="Badges_RingThorns">Ring of Thorns obtained</string>
     <string name="Badges_StrengthAttained1">13 points of Strength attained</string>
@@ -83,7 +83,7 @@
     <!-- <string name="Badges_VictoryRog"></string> -->
     <!-- <string name="Badges_VictoryHun"></string> -->
     <string name="Badges_Victory">Amulet of Yendor obtained</string>
-    <string name="Badges_VictoryAll">Amulet of Yendor obtained by Warrior, Mage, Rogue &amp; Huntress</string>
+    <string name="Badges_VictoryAll">Amulet of Yendor obtained by all classes</string>
     <string name="Badges_MasteryCombo">7-hit combo</string>
     <string name="Badges_PotionsCooked1">3 potions cooked</string>
     <string name="Badges_PotionsCooked2">6 potions cooked</string>
