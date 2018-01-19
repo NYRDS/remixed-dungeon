@@ -35,12 +35,16 @@ public abstract class EquipableItem extends Item {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action.equals( AC_EQUIP )) {
-			doEquip( hero );
-		} else if (action.equals( AC_UNEQUIP )) {
-			doUnequip( hero, true );
-		} else {
-			super.execute( hero, action );
+		switch (action) {
+			case AC_EQUIP:
+				doEquip(hero);
+				break;
+			case AC_UNEQUIP:
+				doUnequip(hero, true);
+				break;
+			default:
+				super.execute(hero, action);
+				break;
 		}
 	}
 	
