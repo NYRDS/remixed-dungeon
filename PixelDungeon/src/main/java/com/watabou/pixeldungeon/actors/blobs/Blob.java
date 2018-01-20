@@ -85,12 +85,11 @@ public class Blob extends Actor {
 		super.restoreFromBundle(bundle);
 
 		int[] data = bundle.getIntArray(CUR);
-		if (data != null) {
-			int start = bundle.getInt(START);
-			for (int i = 0; i < data.length; i++) {
-				cur[i + start] = data[i];
-				volume += data[i];
-			}
+
+		int start = bundle.getInt(START);
+		for (int i = 0; i < data.length; i++) {
+			cur[i + start] = data[i];
+			volume += data[i];
 		}
 	}
 

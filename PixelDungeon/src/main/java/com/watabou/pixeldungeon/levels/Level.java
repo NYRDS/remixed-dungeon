@@ -564,7 +564,7 @@ public abstract class Level implements Bundlable {
 		baseTileVariant = bundle.getIntArray(TILE_VARIANT_BASE);
 		decoTileVariant = bundle.getIntArray(TILE_VARIANT_DECO);
 
-		if (baseTileVariant == null) {
+		if (baseTileVariant.length == 0) {
 			baseTileVariant = new int[map.length];
 			decoTileVariant = new int[map.length];
 			initTilesVariations();
@@ -577,7 +577,7 @@ public abstract class Level implements Bundlable {
 		compassTarget = bundle.optInt(COMPASS_TARGET, INVALID_CELL);
 
 		int exits[] = bundle.getIntArray(EXIT);
-		if (exits != null) {
+		if (exits.length > 0) {
 			for (int i = 0; i < exits.length; ++i) {
 				setExit(exits[i], i);
 			}

@@ -483,13 +483,11 @@ public class Dungeon {
 		if (fullLoad) {
 			chapters = new HashSet<>();
 			int ids[] = bundle.getIntArray(CHAPTERS);
-			if (ids != null) {
-				for (int id : ids) {
-					chapters.add(id);
-				}
-			}
+            for (int id : ids) {
+                chapters.add(id);
+            }
 
-			Bundle quests = bundle.getBundle(QUESTS);
+            Bundle quests = bundle.getBundle(QUESTS);
 			if (!quests.isNull()) {
 				Ghost.Quest.restoreFromBundle(quests);
 				WandMaker.Quest.restoreFromBundle(quests);

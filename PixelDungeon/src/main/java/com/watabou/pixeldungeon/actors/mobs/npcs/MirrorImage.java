@@ -51,7 +51,7 @@ public class MirrorImage extends NPC {
 
 	private int                attack;
 	private int                damage;
-	private String[]           lookDesc;
+	private String[]           lookDesc = new String[0];
 
 	private static final String ATTACK	= "attack";
 	private static final String DAMAGE	= "damage";
@@ -112,7 +112,7 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		if(lookDesc!=null) {
+		if(lookDesc.length > 0) {
 			return new HeroSpriteDef(lookDesc);
 		} else { // handle old saves
 			if(Dungeon.hero != null) {
