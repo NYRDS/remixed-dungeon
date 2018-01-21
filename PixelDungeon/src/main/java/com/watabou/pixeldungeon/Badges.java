@@ -226,11 +226,9 @@ public class Badges {
 
 		String[] names = bundle.getStringArray(BADGES);
 
-		if (names != null) {
-			for (String name : names) {
-				badges.add(Badge.valueOf(name));
-			}
-		}
+		for (String name : names) {
+            badges.add(Badge.valueOf(name));
+        }
 		return badges;
 	}
 
