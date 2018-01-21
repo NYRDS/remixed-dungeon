@@ -75,6 +75,8 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 		super.restoreFromBundle(bundle);
 		
 		charge = bundle.getInt(ChaosCommon.CHARGE_KEY);
+
+		selectImage();
 	}
 
 	@Override

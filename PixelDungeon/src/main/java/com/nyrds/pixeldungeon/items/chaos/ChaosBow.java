@@ -75,6 +75,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 		super.restoreFromBundle(bundle);
 		
 		charge = bundle.getInt(ChaosCommon.CHARGE_KEY);
+		selectImage();
 	}
 
 	@Override

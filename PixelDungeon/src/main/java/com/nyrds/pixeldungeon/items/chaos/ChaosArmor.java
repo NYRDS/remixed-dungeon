@@ -75,6 +75,7 @@ public class ChaosArmor extends Armor implements IChaosItem {
 		super.restoreFromBundle(bundle);
 
 		charge = bundle.getInt(ChaosCommon.CHARGE_KEY);
+		selectImage();
 	}
 
 	@Override

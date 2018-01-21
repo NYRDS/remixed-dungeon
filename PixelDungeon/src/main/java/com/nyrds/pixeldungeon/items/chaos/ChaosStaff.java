@@ -65,6 +65,7 @@ public class ChaosStaff extends Wand implements IChaosItem {
         super.restoreFromBundle(bundle);
 
         charge = bundle.getInt(ChaosCommon.CHARGE_KEY);
+        selectImage();
     }
 
     @Override
