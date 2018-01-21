@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
@@ -42,6 +43,7 @@ public class Golem extends Mob {
 		IMMUNITIES.add( Amok.class );
 		IMMUNITIES.add( Terror.class );
 		IMMUNITIES.add( Sleep.class );
+		IMMUNITIES.add( Bleeding.class );
 	}
 	
 	@Override

@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -62,6 +63,7 @@ public class DM300 extends Boss {
 		lootChance = 0.333f;
 		
 		IMMUNITIES.add( ToxicGas.class );
+		IMMUNITIES.add( Bleeding.class );
 	}
 	
 	@Override
