@@ -386,7 +386,8 @@
     - Psi-Spiders now can cast only Blindness, Slow and Weakness spells\n
     </string>
     <string name="Welcome_Text_28">
-    - New Hero - Gnoll
+    remix.28\n
+    - New Hero - Gnoll\n
     - The damage of magic wands in melee now depends on level of Hero magic skill\n
     - For each Hero, no more than one result will be displayed on the highscores board\n
     - Auto-sync with Google PlayGames is disabled (You can synchronize manually)\n
