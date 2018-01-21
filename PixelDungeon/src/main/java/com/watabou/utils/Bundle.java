@@ -160,7 +160,6 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			EventCollector.logException(e);
 			return new int[0];
 		}
 	}
@@ -176,7 +175,6 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			EventCollector.logException(e);
 			return new boolean[0];
 		}
 	}
@@ -192,7 +190,6 @@ public class Bundle {
 			}
 			return result;
 		} catch (JSONException e) {
-			EventCollector.logException(e);
 			return new String[0];
 		}
 	}
