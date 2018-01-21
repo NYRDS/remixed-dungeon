@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
@@ -37,6 +38,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 		
 		IMMUNITIES.add( Frost.class );
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
+		IMMUNITIES.add( Bleeding.class );
 	}
 
 	@Override

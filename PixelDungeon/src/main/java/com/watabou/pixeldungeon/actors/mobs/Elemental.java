@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import android.support.annotation.NonNull;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
@@ -51,6 +52,7 @@ public class Elemental extends Mob {
 		IMMUNITIES.add( Fire.class );
 		IMMUNITIES.add( WandOfFirebolt.class );
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
+		IMMUNITIES.add( Bleeding.class );
 	}
 	
 	@Override

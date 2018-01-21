@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
@@ -27,6 +28,8 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		
 		loot = new PotionOfLevitation();
 		lootChance = 0.1f;
+
+		IMMUNITIES.add(Bleeding.class);
 	}
 
 	public void adjustStats(int depth) {

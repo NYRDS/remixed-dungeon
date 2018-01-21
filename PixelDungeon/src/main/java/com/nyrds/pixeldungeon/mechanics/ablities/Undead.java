@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mechanics.ablities;
 
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -32,6 +33,7 @@ public class Undead implements Abilities {
 		undead_immunities.add(Sleep.class);
 		undead_immunities.add(Poison.class);
 		undead_immunities.add(Vertigo.class);
+		undead_immunities.add(Bleeding.class);
 	}
 
 
