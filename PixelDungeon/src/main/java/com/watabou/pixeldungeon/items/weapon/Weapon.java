@@ -152,14 +152,18 @@ public class Weapon extends KindOfWeapon {
 	public int damageRoll( Hero hero ) {
 		
 		int damage = super.damageRoll( hero );
-		
+		int exStr = hero.effectiveSTR() - STR;
+
 		if ((hero.rangedWeapon != null) == (hero.heroClass == HeroClass.HUNTRESS)) {
-			int exStr = hero.effectiveSTR() - STR;
 			if (exStr > 0) {
 				damage += Random.IntRange( 0, exStr );
 			}
 		}
-		
+
+		if(hero.heroClass == HeroClass.GNOLL) {
+			damage += Random.IntRange(0, exStr);
+		}
+
 		return damage;
 	}
 	
