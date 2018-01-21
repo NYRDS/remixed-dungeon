@@ -24,6 +24,8 @@ public class SpiderNest extends Mob {
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.2f;
+
+		movable = false;
 	}
 	
 	@Override

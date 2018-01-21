@@ -26,6 +26,8 @@ public class SpiderEgg extends Mob {
 		
 		loot = Generator.random(Generator.Category.SEED);
 		lootChance = 0.2f;
+
+		movable = false;
 	}
 
 	public static void lay(int pos) {
