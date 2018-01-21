@@ -120,8 +120,6 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 					getCurUser().collect(new ChaosStaff());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
 				}
-
-
 			}
 		}
 	};
@@ -226,6 +224,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 		charge = bundle.getInt(CHARGE_KEY);
 		identetifyLevel = bundle.getInt(IDENTETIFY_LEVEL_KEY);
+		charge = 100;
 
 	}
 
