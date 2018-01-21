@@ -349,6 +349,15 @@ public class PixelDungeon extends Game {
         return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
     }
 
+
+	public static void versionString( String value)  {
+		Preferences.INSTANCE.put( Preferences.KEY_VERSION_STRING, value );
+	}
+
+	public static String versionString() {
+		return Preferences.INSTANCE.getString( Preferences.KEY_VERSION_STRING, Utils.UNKNOWN);
+	}
+
 	public static void fontScale(int value) {
 		Preferences.INSTANCE.put(Preferences.KEY_FONT_SCALE, value);
 		SystemText.updateFontScale();
