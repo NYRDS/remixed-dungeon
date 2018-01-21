@@ -12,6 +12,7 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.io.Writer;
 import java.lang.reflect.Field;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -101,6 +102,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 					unpackerBlock = unpackerBlock.toBuilder()
 							.addStatement("$L.setInt(arg,bundle.optInt($S,$L))", fieldName,fieldName,defaultValue)
 							.build();
+					continue;
 				}
 				if(fieldType.equals("boolean")) {
 					if(defaultValue==null || defaultValue.isEmpty()) {
@@ -109,6 +111,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 					unpackerBlock = unpackerBlock.toBuilder()
 							.addStatement("$L.setBoolean(arg,bundle.optBoolean($S,$L))", fieldName,fieldName,defaultValue)
 							.build();
+					continue;
 				}
 				if(fieldType.equals("float")) {
 					if(defaultValue==null || defaultValue.isEmpty()) {
@@ -117,6 +120,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 					unpackerBlock = unpackerBlock.toBuilder()
 							.addStatement("$L.setFloat(arg,bundle.optFloat($S,$L))", fieldName,fieldName,defaultValue)
 							.build();
+					continue;
 				}
 
 				if(fieldType.equals("java.lang.String")) {
@@ -126,6 +130,30 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 					unpackerBlock = unpackerBlock.toBuilder()
 							.addStatement("$L.set(arg,bundle.optString($S,$S))", fieldName,fieldName,defaultValue)
 							.build();
+					continue;
+				}
+
+
+				Set<Class <?>> fieldInterfaces = new HashSet<>();
+				Collections.addAll(fieldInterfaces, field.getClass().getInterfaces());
+
+				Set<String> fieldInterfaceNames = new HashSet<>();
+				for (Class<?> clazzz:fieldInterfaces) {
+					fieldInterfaceNames.add(clazzz.getSimpleName());
+				}
+/*
+				if(fieldType.equals("Collection")) {
+					unpackerBlock = unpackerBlock.toBuilder()
+							.addStatement("$L.set(arg,bundle.getCollection($S,$S))", fieldName,fieldName,fieldType+".class")
+							.build();
+					continue;
+				}
+*/
+				if(fieldType.equals("Bundlable")) {
+					unpackerBlock = unpackerBlock.toBuilder()
+							.addStatement("($S)$L.set(arg,bundle.get($S))",fieldType+".class",fieldName,fieldName)
+							.build();
+					continue;
 				}
 			}
 
