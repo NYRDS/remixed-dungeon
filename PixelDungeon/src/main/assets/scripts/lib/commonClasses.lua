@@ -5,7 +5,9 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-RPD = {
+local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
+
+local RPD = {
     GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene"),
     Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon"),
     Terrain = luajava.bindClass("com.watabou.pixeldungeon.levels.Terrain"),
@@ -58,6 +60,10 @@ RPD = {
 
     placeBlob = function (blobClass, cell, amount)
         RPD.GameScene:add( RPD.Blobs.Blob:seed(cell, amount , blobClass ) );
+    end,
+
+    glog = function (text,...)
+        GLog:i(text,{...})
     end
 }
 
