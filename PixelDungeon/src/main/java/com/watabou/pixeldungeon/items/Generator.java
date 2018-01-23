@@ -369,6 +369,8 @@ public class Generator {
 				SpellBook.class,
 				Torch.class};
 		Category.UNIQUE.probs = new float[]{1, 4};
+
+		reset();
 	}
 
 	public static void reset() {
