@@ -21,9 +21,6 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class CagedKobold extends ImmortalNPC {
 
 	private static final String TXT_QUEST_START = Game.getVar(R.string.CagedKobold_Intro);
@@ -37,6 +34,8 @@ public class CagedKobold extends ImmortalNPC {
 	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
 
 	public CagedKobold() {
+		IMMUNITIES.add( Paralysis.class );
+		IMMUNITIES.add( Roots.class );
 	}
 	
 
@@ -87,7 +86,7 @@ public class CagedKobold extends ImmortalNPC {
 				GameScene.show( new WndQuest( this, TXT_QUEST_END ) );
 
 				CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
-				this.die(null);
+				this.destroy();
 			} else {
 				int index = Random.Int(0, TXT_PHRASES.length);
 				say(TXT_PHRASES[index]);
@@ -101,18 +100,7 @@ public class CagedKobold extends ImmortalNPC {
 		}
 		return true;
 	}
-		
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
-	static {
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( Roots.class );
-	}
-	
-	@Override
-	public Set<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
-	
+
 	public static class Quest {
 
 		private static boolean completed;
