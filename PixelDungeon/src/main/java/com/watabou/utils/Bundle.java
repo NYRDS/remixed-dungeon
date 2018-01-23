@@ -40,7 +40,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 public class Bundle {
 
@@ -207,8 +206,7 @@ public class Bundle {
 				}
 			}
 		} catch (JSONException e) {
-			EventCollector.logException(e);
-			return new Vector<>();
+			return new ArrayList<>();
 		}
 		
 		return list;
