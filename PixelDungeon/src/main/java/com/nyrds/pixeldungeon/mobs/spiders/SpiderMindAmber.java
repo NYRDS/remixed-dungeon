@@ -8,12 +8,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
-import com.watabou.pixeldungeon.actors.buffs.Levitation;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
@@ -22,13 +18,9 @@ import com.watabou.utils.Random;
 
 public class SpiderMindAmber extends MultiKindMob {
 
-	static Class<?> BuffsForEnemy[] = {
+	private static Class<?> BuffsForEnemy[] = {
 		Blindness.class,
-		Charm.class,
-		Levitation.class,
-		Roots.class,
 		Slow.class,
-		Vertigo.class,
 		Weakness.class
 	};
 
