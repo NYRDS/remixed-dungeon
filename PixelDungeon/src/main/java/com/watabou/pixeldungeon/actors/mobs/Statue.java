@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.Journal;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
@@ -63,6 +64,7 @@ public class Statue extends Mob {
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
 		IMMUNITIES.add( Leech.class );
+		IMMUNITIES.add(Bleeding.class);
 	}
 	
 	private static final String WEAPON	= "weapon";
