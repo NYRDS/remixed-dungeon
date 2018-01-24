@@ -42,7 +42,6 @@
   <string name="Badges_BossSlain2">2. boss kesildi</string>
   <string name="Badges_BossSlain3">3. boss kesildi</string>
   <string name="Badges_BossSlain4">4. boss kesildi</string>
-  <string name="Badges_BossSlain1All">1. boss Savaşçı, Büyücü, Casus ve Avcı ile kesildi</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +50,6 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3. boss Gladyatör, Barbar, Falcı, Savaş Büyücüsü, Koşucu, Suikastçi, Sniper ve Müdür ile kesildi</string>
   <string name="Badges_RingHaggler">Pazarlıkçı Yüzüğü kazanıldı</string>
   <string name="Badges_RingThorns">Diken Yüzüğü kazanıldı</string>
   <string name="Badges_StrengthAttained1">13 Güç puanına ulaşıldı</string>
@@ -81,7 +79,6 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Yendor\'un Tılsımı kazanıldı</string>
-  <string name="Badges_VictoryAll">Yendor\'un Tılsımı Savaşçı, Büyücü, Casus &amp; Avcı tarafından kazanıldı</string>
   <string name="Badges_MasteryCombo">7li kombo</string>
   <string name="Badges_PotionsCooked1">3 iksir yapıldı</string>
   <string name="Badges_PotionsCooked2">6 iksir yapıldı</string>

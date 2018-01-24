@@ -42,7 +42,6 @@
   <string name="Badges_BossSlain2">斬殺第2個BOSS</string>
   <string name="Badges_BossSlain3">斬殺第3個BOSS</string>
   <string name="Badges_BossSlain4">斬殺第4個BOSS</string>
-  <string name="Badges_BossSlain1All">分别使用戰士，法師，盜賊和女獵手斬殺第1個BOSS</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +50,6 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">分别使用角鬥士，狂戰士，術士，鬥法师，疾行者，刺客，狙擊手和守望者斬殺第3個BOSS</string>
   <string name="Badges_RingHaggler">獲得討價指環</string>
   <string name="Badges_RingThorns">獲得荊棘指環</string>
   <string name="Badges_StrengthAttained1">達到13點力量</string>
@@ -81,7 +79,6 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">獲得Yendor護符</string>
-  <string name="Badges_VictoryAll">分别使用戰士，法師，盗賊和女獵手獲得Yendor護符</string>
   <string name="Badges_MasteryCombo">使用角鬥士達到7連擊</string>
   <string name="Badges_PotionsCooked1">一場遊戲中釀造3瓶藥水</string>
   <string name="Badges_PotionsCooked2">一場遊戲中釀造6瓶藥水</string>

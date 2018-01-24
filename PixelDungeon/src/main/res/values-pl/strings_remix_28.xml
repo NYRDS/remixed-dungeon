@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="HeroClass_Gnoll">Gnoll</string>
+    <string name="GnollArmor_ACSpecial">ZDOMINUJ</string>
+    <string name="GnollArmor_NotGnoll">Tylko gnolle mogą wyposażyć pancerz gnoli !</string>
+    <string name="GnollArmor_Info">Ci którzy założą ubiór Gnolego Porucznika dobrze wiedzą o jego umiejętności do przekonywania nawet ekstremalnie rozwścieczonych poczwar aby były one posłusznymi sługami Korony.</string>
+
+    <string name="WndPlayGames_BackupProgress">Stwórz kopię Postępu Gry</string>
+    <string name="WndPlayGames_RestoreProgress">Przywróć Progres gry z kopii </string>
+    <string name="WndPlayGames_WorkInCloud">Praca w Chmurze... Proszę czekać.</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>Gnole zaczynają z 17 punktami siły.</item>
+        <item>Gnole zaczynają z 5 punktami życia</item>
+        <item>Gnole zaczynają bez zbroi </item>
+        <item>Gnole nie potrafią czytać </item>
+        <item>Gnole nie atakują innych gnoli bez uprzedniej prowokacji.</item>
+     </string-array>
+</resources>

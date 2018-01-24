@@ -42,7 +42,6 @@
   <string name="Badges_BossSlain2">2º chefe foi morto</string>
   <string name="Badges_BossSlain3">3º chefe foi morto</string>
   <string name="Badges_BossSlain4">4º chefe foi morto</string>
-  <string name="Badges_BossSlain1All">1º chefe foi morto por Guerreiro, Mago, Ladrão &amp; Caçadora</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +50,6 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3º chefe foi morto por Guerreiro, Fúria, Bruxo, Mago, Corredor, Atirador &amp; Guarda.</string>
   <string name="Badges_RingHaggler">Anel da Barganha adquirido</string>
   <string name="Badges_RingThorns">Anel de Espinhos adquirido</string>
   <string name="Badges_StrengthAttained1">13 pontos de Força adquiridos</string>
@@ -81,7 +79,6 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amuleto de Yendor adquirido</string>
-  <string name="Badges_VictoryAll">Amuleto de Yendor obtido por Guerreiro, Mago, Ladrão &amp; Caçadora</string>
   <string name="Badges_MasteryCombo">7-hit combo</string>
   <string name="Badges_PotionsCooked1">3 poções realizadas</string>
   <string name="Badges_PotionsCooked2">6 poções realizadas</string>

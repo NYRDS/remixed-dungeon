@@ -42,7 +42,6 @@
   <string name="Badges_BossSlain2">2番目のボスを倒した</string>
   <string name="Badges_BossSlain3">3番目のボスを倒した</string>
   <string name="Badges_BossSlain4">4番目のボスを倒した</string>
-  <string name="Badges_BossSlain1All">1番目のボスを、ウォリアー、メイジ、ローグ、ハンターで倒した</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +50,6 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3番目のボスを、グラディエーター、バーサーカー、ウォーロック、バトルメイジ、フリーランナー、アサシン、スナイパー、ウォーデンで倒した</string>
   <string name="Badges_RingHaggler">値切りのリングを得た</string>
   <string name="Badges_RingThorns">いばらのリングを得た</string>
   <string name="Badges_StrengthAttained1">力が13ポイントに達した</string>
@@ -81,7 +79,6 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">イェンダーの魔除けを得た</string>
-  <string name="Badges_VictoryAll">イェンダーの魔除けを、ウォリアー、メイジ、ローグ、ハンターで得た</string>
   <string name="Badges_MasteryCombo">7ヒットコンボ</string>
   <string name="Badges_PotionsCooked1">ポーションを3個作った</string>
   <string name="Badges_PotionsCooked2">ポーションを6個作った</string>

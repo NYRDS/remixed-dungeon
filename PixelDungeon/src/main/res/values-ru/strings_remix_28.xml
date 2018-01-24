@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="HeroClass_Gnoll">Гнолл</string>
+    <string name="GnollArmor_ACSpecial">ПОДЧИНИТЬ</string>
+    <string name="GnollArmor_NotGnoll">Только гноллы могут носить гнолью броню!</string>
+    <string name="GnollArmor_Info">Обладатели Гнолл-Лейтенантских мундиров хорошо известны своим умением убеждать самых диких монстров присягнуть Короне.</string>
+
+    <string name="WndPlayGames_BackupProgress">Сохранить Прогресс Игры</string>
+    <string name="WndPlayGames_RestoreProgress">Загрузить Прогресс Игры</string>
+    <string name="WndPlayGames_WorkInCloud">Работаем с облаком... Подождите минутку.</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>Гноллы стартуют с 17 очками силы</item>
+        <item>Гноллы стартуют с 5 очками здоровья</item>
+        <item>Гноллы стартуют без брони</item>
+        <item>Гноллы не умеют читать</item>
+        <item>Гноллы не атакуют других Гноллов просто так</item>
+     </string-array>
+</resources>

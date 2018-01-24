@@ -42,7 +42,6 @@
   <string name="Badges_BossSlain2">2e boss vaincu</string>
   <string name="Badges_BossSlain3">3e boss vaincu</string>
   <string name="Badges_BossSlain4">4e boss vaincu</string>
-  <string name="Badges_BossSlain1All">1er boss vaincu avec tous les personnages</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +50,6 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3e boss vaincu avec les spécialisations de chaque personnage</string>
   <string name="Badges_RingHaggler">Anneau du marchandeur obtenu</string>
   <string name="Badges_RingThorns">Anneau d\'épines obtenu</string>
   <string name="Badges_StrengthAttained1">13 points de force obtenus</string>
@@ -81,7 +79,6 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amulette de Yendor obtenue</string>
-  <string name="Badges_VictoryAll">Amulette de Yendor obtenue par tous les personnages</string>
   <string name="Badges_MasteryCombo">Combo de 7 coups</string>
   <string name="Badges_PotionsCooked1">3 potions préparées</string>
   <string name="Badges_PotionsCooked2">6 potions préparées</string>

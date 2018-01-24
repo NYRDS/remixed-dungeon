@@ -42,7 +42,7 @@
   <string name="Badges_BossSlain2">2-й босс убит</string>
   <string name="Badges_BossSlain3">3-й босс убит</string>
   <string name="Badges_BossSlain4">4-й босс убит</string>
-  <string name="Badges_BossSlain1All">1-й босс убит Воином, Магом, Разбойником и Охотницей</string>
+  <string name="Badges_BossSlain1All">1-й  босс убит всеми классами</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3-й босс убит Гладиатором, Берсерком, Чернокнижником, Боевым Магом, Бегуном, Убийцей, Снайпером и Травницей</string>
+  <string name="Badges_BossSlain3All">3-й босс убит всеми подклассами</string>
   <string name="Badges_RingHaggler">Кольцо Торгаша получено</string>
   <string name="Badges_RingThorns">Кольцо Шипов получено</string>
   <string name="Badges_StrengthAttained1">13 очков Силы достигнуто</string>
@@ -81,7 +81,7 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Амулет Эндора получен</string>
-  <string name="Badges_VictoryAll">Амулет Эндора получен Воином, Магом, Разбойником и Охотницей</string>
+  <string name="Badges_VictoryAll">Амулет Эндора получен всеми классами</string>
   <string name="Badges_MasteryCombo">7 комбо-ударов за серию</string>
   <string name="Badges_PotionsCooked1">3 зелья изготовлено</string>
   <string name="Badges_PotionsCooked2">6 зелий изготовлено</string>

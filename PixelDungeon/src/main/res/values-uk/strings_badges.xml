@@ -42,7 +42,6 @@
   <string name="Badges_BossSlain2">2-го боса вбито</string>
   <string name="Badges_BossSlain3">3-го боса вбито</string>
   <string name="Badges_BossSlain4">4-го боса вбито</string>
-  <string name="Badges_BossSlain1All">1-го боса вбито: Воїном, Магом, Крадієм та Мисливицею</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -51,7 +50,6 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
-  <string name="Badges_BossSlain3All">3-го боса вбито: Гладіатором, Берсеркером, Чорнокнижником, Бойовим магом, Бігуном, Вбивцею, Снайпером та Травницею</string>
   <string name="Badges_RingHaggler">Отримано перстень Торговця</string>
   <string name="Badges_RingThorns">Отримано перстень Шипів</string>
   <string name="Badges_StrengthAttained1">Отримано 13 очок сили</string>
@@ -81,7 +79,6 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Отримано Амулет Ендора </string>
-  <string name="Badges_VictoryAll">Амулет Ендора отримано Воїном, Магом, Крадієм та Мисливицею</string>
   <string name="Badges_MasteryCombo">7 комбо-ударів за серію</string>
   <string name="Badges_PotionsCooked1">Приготовлено 3 зілля</string>
   <string name="Badges_PotionsCooked2">Приготовлено 6 зіль</string>
