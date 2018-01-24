@@ -77,7 +77,13 @@ public class Buff extends Actor {
 			}
 		}
 	}
-	
+
+	public static<T extends FlavourBuff> T permanent( Char target, Class<T> buffClass ) {
+		T buff = affect( target, buffClass );
+		buff.deactivate();
+		return buff;
+	}
+
 	public static<T extends FlavourBuff> T affect( Char target, Class<T> buffClass, float duration ) {
 		T buff = affect( target, buffClass );
 		buff.spend( duration );

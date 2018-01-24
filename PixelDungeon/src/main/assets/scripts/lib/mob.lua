@@ -5,8 +5,6 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
-
 local quest = require"scripts/lib/quest"
 
 local serpent = require "scripts/lib/serpent"
@@ -32,13 +30,12 @@ mob.storeData = function(chr, data)
 end
 
 mob.restoreData = function(chr)
-    print(chr, serpent, chr.getData)
     local data = chr:getData()
     if data == nil then
         return {}
     end
 
-    res, data = serpent.load(data)
+    local _, data = serpent.load(data)
     return data or {}
 end
 
@@ -72,6 +69,13 @@ mob.onDefenceProc = function(self,mob, enemy, damage)
         return damage
     end
     return self.defenceProc(mob, enemy, damage)
+end
+
+mob.onAttackProc = function(self,mob, enemy, damage)
+    if self.attackProc == nil then
+        return damage
+    end
+    return self.attackProc(mob, enemy, damage)
 end
 
 mob.fillStats = function(self,mob)

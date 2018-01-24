@@ -1160,7 +1160,7 @@ public class Hero extends Char {
 		boolean newMob = false;
 
 		for (Mob m : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[m.getPos()] && m.isHostile()) {
+			if (Dungeon.level.fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
 				visible.add(m);
 				if (!visibleEnemies.contains(m)) {
 					newMob = true;
@@ -1881,12 +1881,7 @@ public class Hero extends Char {
 	}
 
 	public void accumulateSoulPoints(int n) {
-		int points = Scrambler.descramble(sp);
-		points = points + n;
-		if (points > getSoulPointsMax()) {
-			points = getSoulPointsMax();
-		}
-		setSoulPoints(points);
+		setSoulPoints(Math.min(Scrambler.descramble(sp)+n,getSoulPointsMax()));
 	}
 
 	public int getSoulPoints() {
@@ -1902,28 +1897,14 @@ public class Hero extends Char {
 	}
 
 	public boolean enoughSP(int cost) {
-		if (getSoulPoints() < cost) {
-			return false;
-		} else {
-			return true;
-		}
+		return getSoulPoints() >= cost;
 	}
 
 	public void setSoulPoints(int points) {
-		if (points < 0) {
-			sp = Scrambler.scramble(0);
-		}
-		if (points < getSoulPointsMax()) {
-			sp = Scrambler.scramble(points);
-		} else {
-			sp = Scrambler.scramble(getSoulPointsMax());
-		}
+		sp = Scrambler.scramble(Math.max(0,Math.min(points,getSoulPointsMax())));
 	}
 
 	public void setMaxSoulPoints(int points) {
-		if (points < 0) {
-			points = 0;
-		}
 		maxSp = Scrambler.scramble(points);
 	}
 

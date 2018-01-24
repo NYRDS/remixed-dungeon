@@ -99,7 +99,7 @@ public class MirrorImage extends NPC {
 		if (getEnemy() == DUMMY || !getEnemy().isAlive()) {
 			HashSet<Mob> enemies = new HashSet<>();
 			for (Mob mob:Dungeon.level.mobs) {
-				if (mob.isHostile() && Dungeon.level.fieldOfView[mob.getPos()]) {
+				if (!mob.friendly(Dungeon.hero) && Dungeon.level.fieldOfView[mob.getPos()]) {
 					enemies.add( mob );
 				}
 			}

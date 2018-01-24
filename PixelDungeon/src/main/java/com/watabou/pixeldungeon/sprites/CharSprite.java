@@ -371,13 +371,13 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		if (iceBlock != null) {
 			iceBlock.setVisible(visible);
 		}
-		if (sleeping) {
+		if (sleeping && visible) {
 			showSleep();
 		} else {
 			hideSleep();
 		}
 
-		if (controlled) {
+		if (controlled && visible) {
 			showMindControl();
 		}
 
@@ -386,20 +386,20 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		}
 	}
 
-	public void showSleep() {
+	private void showSleep() {
 		if (!(emo instanceof EmoIcon.Sleep)) {
 			removeEmo();
 			emo = new EmoIcon.Sleep(this);
 		}
 	}
 
-	public void hideSleep() {
+	private void hideSleep() {
 		if (emo instanceof EmoIcon.Sleep) {
 			removeEmo();
 		}
 	}
 
-	public void showMindControl() {
+	private void showMindControl() {
 		if (!(emo instanceof EmoIcon.Controlled)) {
 			removeEmo();
 

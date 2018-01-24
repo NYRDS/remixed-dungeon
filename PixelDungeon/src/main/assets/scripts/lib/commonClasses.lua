@@ -7,6 +7,15 @@
 
 local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
+local Buffs  = {
+    Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),
+    Roots        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Roots"),
+    Paralysis    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Paralysis"),
+    Vertigo      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Vertigo"),
+    Invisibility = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Invisibility"),
+    Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation")
+}
+
 local RPD = {
     GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene"),
     Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon"),
@@ -16,6 +25,8 @@ local RPD = {
     ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
+
+    Buffs = Buffs,
 
     Blobs = {
         Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),
@@ -28,12 +39,6 @@ local RPD = {
         Web = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Web"),
         ToxicGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ToxicGas"),
         Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
-    },
-
-    Buffs = {
-        Roots     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Roots"),
-        Paralysis = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Paralysis"),
-        Vertigo   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Vertigo")
     },
 
     Sfx = {
@@ -58,8 +63,20 @@ local RPD = {
         return luajava.newInstance(class, ...)
     end,
 
+    affectBuff = function (chr, buffClass, duration)
+        Buffs.Buff:affect(chr, buffClass, duration)
+    end,
+
+    permanentBuff = function (chr, buffClass)
+        Buffs.Buff:permanent(chr, buffClass)
+    end,
+
+    removeBuff = function (chr, buffClass)
+        Buffs.Buff:detach(chr, buffClass)
+    end,
+
     placeBlob = function (blobClass, cell, amount)
-        RPD.GameScene:add( RPD.Blobs.Blob:seed(cell, amount , blobClass ) );
+        RPD.GameScene:add( RPD.Blobs.Blob:seed(cell, amount, blobClass ) )
     end,
 
     glog = function (text,...)

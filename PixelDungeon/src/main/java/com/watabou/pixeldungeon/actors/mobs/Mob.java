@@ -475,6 +475,17 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
+	public int attackProc(@NonNull Char enemy, int damage) {
+		runMobScript("onAttackProc", enemy, damage);
+
+		if(scriptResult.isnumber()) {
+			return scriptResult.checknumber().toint();
+		}
+
+		return damage;
+	}
+
+	@Override
 	public int defenseProc(Char enemy, int damage) {
 		if (!enemySeen && enemy == Dungeon.hero
 				&& ((Hero) enemy).subClass == HeroSubClass.ASSASSIN) {
@@ -576,7 +587,7 @@ public abstract class Mob extends Char {
 
 		{
 			if (hero.isAlive()) {
-				if (isHostile()) {
+				if (!friendly(hero)) {
 					Statistics.enemiesSlain++;
 					Badges.validateMonstersSlain();
 					Statistics.qualifiedForNoKilling = false;
@@ -721,10 +732,6 @@ public abstract class Mob extends Char {
 
 	public void say(String str) {
 		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), str);
-	}
-
-	public boolean isHostile() {
-		return fraction.belongsTo(Fraction.DUNGEON) && !isPet();
 	}
 
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {

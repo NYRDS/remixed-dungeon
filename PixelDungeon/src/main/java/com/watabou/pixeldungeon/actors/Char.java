@@ -265,6 +265,10 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public static boolean hit(Char attacker, Char defender, boolean magic) {
+		if(attacker.invisible>0) {
+			return true;
+		}
+
 		float acuRoll = Random.Float(attacker.attackSkill(defender));
 		float defRoll = Random.Float(defender.defenseSkill(attacker));
 		return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
