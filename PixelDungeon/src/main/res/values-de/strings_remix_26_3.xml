@@ -28,6 +28,9 @@
     <string name="TownsfolkMovieNPC_Name">Dorfbewohner</string>
     <string name="TownsfolkMovieNPC_Gender">männlich</string>
     <string name="TownsfolkMovieNPC_Name_Objective">Dorfbewohner</string>
+    <string name="TownsfolkMovieNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
+    <string name="TownsfolkMovieNPC_Message">Hast du schon von dem speziellen Service gehört, den das Kino bereitstellt? Zu schade, dass sie nach etwas exotischem fragen, dass \"Internet\" genannt wird. Ich hab noch nie was darüber gehört.\"</string>
+
     <!-- STRINGS OF LibrarianNPC CLASS -->
     <string name="LibrarianNPC_Name">Bilbliothekar</string>
     <string name="LibrarianNPC_Gender">männlich</string>
@@ -39,6 +42,7 @@
     <string name="TownsfolkSilentNPC_Name">Dorfbewohner</string>
     <string name="TownsfolkSilentNPC_Gender">männlich</string>
     <string name="TownsfolkSilentNPC_Name_Objective">Dorfbewohner</string>
+    <string name="TownsfolkSilentNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
     <string name="TownsfolkSilentNPC_Message1">Hmpf!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>

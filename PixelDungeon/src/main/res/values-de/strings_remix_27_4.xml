@@ -20,4 +20,8 @@
     <!-- STRINGS OF Spell CLASS -->
     <string name="Spell_SelectACell">Wähle ein Zielfeld.</string>
     
-    </resources>
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Levels</string>
+    <string name="WndJournal_Logbook">Logbuch</string>
+
+</resources>

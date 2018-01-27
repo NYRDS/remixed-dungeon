@@ -42,6 +42,7 @@
   <string name="Badges_BossSlain2">2. Boss besiegt</string>
   <string name="Badges_BossSlain3">3. Boss besiegt</string>
   <string name="Badges_BossSlain4">4. Boss besiegt</string>
+  <string name="Badges_BossSlain1All">1. Boss mit allen Klassen besiegt</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -50,6 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
+  <string name="Badges_BossSlain3All">3. Boss mit allen Unterklassen besiegt</string>
   <string name="Badges_RingHaggler">Ring des Feilschers erhalten</string>
   <string name="Badges_RingThorns">Dornenring erhalten</string>
   <string name="Badges_StrengthAttained1">13 Stärkepunkte erhalten</string>
@@ -79,6 +81,7 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amulett von Yendor erhalten</string>
+  <string name="Badges_VictoryAll">Amulett von Yendor mit allen Klassen erhalten</string>
   <string name="Badges_MasteryCombo">7-Treffer Combo</string>
   <string name="Badges_PotionsCooked1">3 Tränke gebraut</string>
   <string name="Badges_PotionsCooked2">6 Tränke gebraut</string>

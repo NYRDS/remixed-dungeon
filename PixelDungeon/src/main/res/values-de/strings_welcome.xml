@@ -6,15 +6,17 @@
 Remixed Pixel Dungeon ist eine Modifikation von Watabou\'s open source Pixel Dungeon.\n
 Dieses Projekt wurde erstellt um Spieler mit neuen Erfahrungen und Inhalten zu versorgen.\n
 Ein anderer, wichtiger Bestandteil unseres Projekt ist es, eine Mehrsprachenunterstützung für das Spiel zu entwickeln.\n
-Wir versuchen mit jedem Update so nahe wie möglich an unserer Community zu bleiben.\n Und falls Sie eines Tages sehen, dass ihre Idee in das Spiel übernommen wurde... Danke für ihre Kreativität =)\n
-Die aktuelle Version basiert auf Pixel Dungeon 1.7.2 und teilweise 1.7.5.\n
-Unterschiede zum Original: \n
- - Die Möglichkeit die Sprache zu ändern. (aktuell unterstützt: Englisch, Russisch)\n
- - Neues Monster und NPC\n
+Wir versuchen mit jedem Update so nahe wie möglich an unserer Community zu bleiben.\n
+ Und falls Sie eines Tages sehen, dass ihre Idee in das Spiel übernommen wurde... Danke für ihre Kreativität =)\n
+ Die aktuelle Version basiert auf Pixel Dungeon 1.7.2 und teilweise 1.7.5.\n
+ Unterschiede zum Original: \n
+ - Die Möglichkeit die Sprache zu ändern.\n
+ - Neue Monster und NPCs\n
  - Giftiges Gas und Feuer können nun mit mehr Gegenständen interagieren\n
  - Neue Arten von «Nahrung»\n
  - Neue Gegenstände und neue Eigenschaften bei einigen alten Gegenständen\n
- - Samen können jetzt auch gegessen werden =)\n</string>
+ - Samen können jetzt auch gegessen werden =)\n
+ - Elfen</string>
   <string name="Welcome_Text_19">
 remix.17:\n
 -Neue Mimikart\n
@@ -135,4 +137,13 @@ remix.26.6\n
 - Der Kristall der vom Schattenherr erschafft wird, nutzt nun den Stab des Schattenballs anstelle der normalen Attacke. Die Chance diesen Stab zu erhalten ist 25%\n
 - Repariert Fernangriff Fehler für: Luft Element, Kristall, Brennende Faust, PSI-Spinne und Bernsteinspinne\n
 - Magier Rüstung (Version für Hexenmeister: Hexenmeister Rüstung) und Süßigkeit sind nun in Mods verwendbar\n</string>
+  <string name="Welcome_Text_28">
+remix.28\n
+ - Neuer Held - Gnoll\n
+ - Der Schaden von magischen Stäben hängt nun von dem magischem Fähigkeiten des Helden ab\n
+ - Für jeden Helden wird nun nicht mehr als ein Ergebnis bei den Highscores angezeigt\n
+ - Auto-Synchronisation mit Google Spiele ist deaktiviert (Man kann nun manuell Synchronisieren)\n
+ - Ein großes Update für die Brasilianische-Portugiesische Übersetzung\n
+ - Neue Heldenklassen Option für Mods: forbiddenActions, friendlyMobs\n
+</string>
 </resources>

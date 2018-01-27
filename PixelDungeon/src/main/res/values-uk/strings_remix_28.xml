@@ -2,4 +2,17 @@
 <resources>
 
     <string name="HeroClass_Gnoll">Гнолл</string>
-    </resources>
+    <string name="GnollArmor_ACSpecial">ДОМІНУВАТИ</string>
+    <string name="GnollArmor_NotGnoll">Лише гнолл може вдягти броню Гнолла!</string>
+    <string name="WndPlayGames_BackupProgress">Зберегти ігровий поступ</string>
+    <string name="WndPlayGames_RestoreProgress">Відновити ігровий поступ</string>
+    <string name="WndPlayGames_WorkInCloud">Працюю з хмарою... Зачекайте.</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>Гнолл починає із 17 одиницями сили</item>
+        <item>Гнолл починає з 5 одиницями здоров\'я</item>
+        <item>Гнолл починає без броні</item>
+        <item>Гнолл не може читати</item>
+        <item>Гнолл не атакуватиме іншого гнолла, якщо не спровокують.</item>
+     </string-array>
+</resources>
