@@ -32,7 +32,7 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 		kind = Math.min(depth/5, 4);
 		
 		hp(ht(depth * 10 + 1));
-		defenseSkill = depth * 2 + 1;
+		defenseSkill = depth / 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		

@@ -48,7 +48,7 @@ public class GnollArmor extends ClassArmor {
                     new Flare(3, 32).show(mob.getSprite(), 2f);
                 }
 
-                if(mobsDominated > getCurUser().lvl() / 5) {
+                if(mobsDominated > getCurUser().lvl() / 10) {
                     break;
                 }
             }
