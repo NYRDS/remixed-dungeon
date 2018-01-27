@@ -58,10 +58,11 @@ public class Plant implements Bundlable {
 		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.WARDEN) {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 		}
-		
+		wither();
+
 		effect(pos, ch);
 		
-		wither();
+
 	}
 
 	public void wither() {
