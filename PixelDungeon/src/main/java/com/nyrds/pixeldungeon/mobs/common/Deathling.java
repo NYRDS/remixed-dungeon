@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.utils.Random;
 
 /**
@@ -24,8 +25,9 @@ public class Deathling extends UndeadMob {
     }
 
     private int getModifier(){
-        if (Dungeon.hero != null){
-            return Dungeon.hero.lvl();
+        Hero hero = Dungeon.hero;
+        if (hero != null){
+            return hero.lvl() + hero.magicLvl()*hero.magicLvl();
         }
         return 1;
     }

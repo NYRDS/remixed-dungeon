@@ -276,6 +276,7 @@ public class Hero extends Char {
 
 	@NonNull
 	public Collection<Mob> getPets() {
+		refreshPets();
 		return pets;
 	}
 

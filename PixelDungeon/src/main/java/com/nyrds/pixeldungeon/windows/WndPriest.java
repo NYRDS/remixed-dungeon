@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
@@ -19,77 +20,109 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
-public class WndPriest extends Window {
+import java.util.Collection;
+import java.util.Vector;
 
-	private static final String BTN_HEAL       = Game.getVar(R.string.WndPriest_Heal);
-	private static final String BTN_NO          = Game.getVar(R.string.WndMovieTheatre_No);
-	private static final String TXT_BYE         = Game.getVar(R.string.HealerNPC_Message2);
-	private static final String TXT_INSTRUCTION_M = Game.getVar(R.string.WndPriest_Instruction_m);
-	private static final String TXT_INSTRUCTION_F = Game.getVar(R.string.WndPriest_Instruction_f);
-	private static final String TXT_TITLE       = Game.getVar(R.string.WndPriest_Title);
+public class WndPriest extends Window {
 
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
-	private int GOLD_COST  = 75;
 
-	public WndPriest(final HealerNPC npc, final Hero hero) {
+	private int GOLD_COST            = 75;
+	private int GOLD_COST_PER_MINION = 50;
+
+	public WndPriest(final HealerNPC priest, final Hero hero) {
 		
 		super();
 
-		if (Dungeon.hero.belongings.ring1 instanceof RingOfHaggler || Dungeon.hero.belongings.ring2 instanceof RingOfHaggler )
+		float y = 0;
+
+		GOLD_COST_PER_MINION *= Game.instance().getDifficultyFactor();
+		GOLD_COST            *= Game.instance().getDifficultyFactor();
+
+		if (hero.buff( RingOfHaggler.Haggling.class )!= null)
 		{
 			GOLD_COST = (int) (GOLD_COST * 0.9);
+			GOLD_COST_PER_MINION = (int) (GOLD_COST_PER_MINION * 0.9);
 		}
 
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite(new Gold()) );
-		titlebar.label( Utils.capitalize( TXT_TITLE ) );
-		titlebar.setRect( 0, 0, WIDTH, 0 );
+		titlebar.label( Utils.capitalize(Game.getVar(R.string.WndPriest_Title)) );
+		titlebar.setRect( 0, y, WIDTH, 0 );
 		add( titlebar );
 
-		String instruction = TXT_INSTRUCTION_M;
-		if(Dungeon.hero.getGender() == Utils.FEMININE){
-			instruction = TXT_INSTRUCTION_F;
+		y = titlebar.bottom() + GAP;
+
+		int instruction = R.string.WndPriest_Instruction_m;
+		if(hero.getGender() == Utils.FEMININE){
+			instruction = R.string.WndPriest_Instruction_f;
 		}
 
 		Text message = PixelScene.createMultiline( Utils.format(instruction, GOLD_COST), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.measure();
-		message.y = titlebar.bottom() + GAP;
+		message.y = y;
 		add( message );
-		
-		RedButton btnYes = new RedButton(  Utils.format(BTN_HEAL, GOLD_COST) ) {
+
+		y = message.bottom() + GAP;
+
+		RedButton btnHealHero = new RedButton(  Utils.format(R.string.WndPriest_Heal, GOLD_COST) ) {
 			@Override
 			protected void onClick() {
-				npc.say( TXT_BYE );
-				doHeal( hero );
-				Dungeon.gold(Dungeon.gold() - GOLD_COST);
+				Vector<Char> patients = new Vector<>();
+				patients.add(hero);
+				doHeal(priest, patients, GOLD_COST);
 			}
 		};
 
-		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
-		add( btnYes );
-		btnYes.enable(!(Dungeon.gold()< GOLD_COST));
+		btnHealHero.setRect( 0, y, WIDTH, BTN_HEIGHT );
+		btnHealHero.enable(!(Dungeon.gold()< GOLD_COST));
 
+		add( btnHealHero );
 
-		RedButton btnNo = new RedButton( BTN_NO ) {
+		y = btnHealHero.bottom() + GAP;
+
+		int minions = hero.getPets().size();
+
+		if (minions > 0) {
+			final int healAllMinionsCost = GOLD_COST_PER_MINION * minions;
+			RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
+				@Override
+				protected void onClick() {
+					doHeal(priest,hero.getPets(),healAllMinionsCost);
+				}
+			};
+
+			btnHealMinions.setRect(0, y, WIDTH, BTN_HEIGHT);
+			btnHealMinions.enable(!(Dungeon.gold() < GOLD_COST));
+
+			add(btnHealMinions);
+			y = btnHealMinions.bottom() + GAP;
+		}
+
+		RedButton btnLeave = new RedButton(R.string.WndMovieTheatre_No) {
 			@Override
 			protected void onClick() {
-				npc.say( TXT_BYE );
-				hide();
+				doHeal(priest,new Vector<Char>(),0);
 			}
 		};
-		btnNo.setRect( 0, btnYes.bottom() + GAP, WIDTH, BTN_HEIGHT );
-		add( btnNo );
-		
-		resize( WIDTH, (int)btnNo.bottom() );
+		btnLeave.setRect( 0, y, WIDTH, BTN_HEIGHT );
+		add( btnLeave );
+		y = btnLeave.bottom() + GAP;
+		resize( WIDTH, (int) (y));
 	}
 
-	private void doHeal(final Hero hero) {
+	private void doHeal(HealerNPC priest, Collection<? extends Char> patients, int healingCost) {
 		hide();
-		if(hero!=null && hero.isAlive()) {
-			PotionOfHealing.heal(hero,1.0f);
-			hero.buff( Hunger.class ).satisfy(Hunger.STARVING);
+		Dungeon.gold(Dungeon.gold() - healingCost);
+		for(Char patient: patients) {
+			PotionOfHealing.heal(patient, 1.0f);
+			if(patient instanceof Hero) {
+				patient.buff(Hunger.class).satisfy(Hunger.STARVING);
+			}
 		}
+
+		priest.say(Game.getVar(R.string.HealerNPC_Message2));
 	}
 }

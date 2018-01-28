@@ -145,10 +145,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public float getDifficultyFactor() {
 		switch (getDifficulty()) {
 			case 0:
-				return 1;
+				return 1f;
 			case 1:
 			case 2:
-				return 1.25f;
+				return 1.5f;
 			case 3:
 				return 2;
 			default:
