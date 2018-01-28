@@ -118,7 +118,7 @@ public abstract class Mob extends Char {
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
 	// Unreachable target
-	protected static final Mob DUMMY = new Mob() {
+	public static final Mob DUMMY = new Mob() {
 		{
 			setPos(Level.INVALID_CELL);
 		}
@@ -1002,7 +1002,7 @@ public abstract class Mob extends Char {
 		return enemy;
 	}
 
-	protected void setEnemy(@NonNull Char enemy) {
+	public void setEnemy(@NonNull Char enemy) {
 		this.enemy = enemy;
 	}
 

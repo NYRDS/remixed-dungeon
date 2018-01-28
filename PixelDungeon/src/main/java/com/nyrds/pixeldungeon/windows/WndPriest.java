@@ -6,10 +6,12 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
@@ -95,7 +97,7 @@ public class WndPriest extends Window {
 			};
 
 			btnHealMinions.setRect(0, y, WIDTH, BTN_HEIGHT);
-			btnHealMinions.enable(!(Dungeon.gold() < GOLD_COST));
+			btnHealMinions.enable(!(Dungeon.gold() < healAllMinionsCost));
 
 			add(btnHealMinions);
 			y = btnHealMinions.bottom() + GAP;
@@ -120,6 +122,12 @@ public class WndPriest extends Window {
 			PotionOfHealing.heal(patient, 1.0f);
 			if(patient instanceof Hero) {
 				patient.buff(Hunger.class).satisfy(Hunger.STARVING);
+			}
+
+			if(patient instanceof Mob) {
+				if(((Mob) patient).getMobClassName().equals("Brute")) {
+					Badges.validateGnollUnlocked();
+				}
 			}
 		}
 

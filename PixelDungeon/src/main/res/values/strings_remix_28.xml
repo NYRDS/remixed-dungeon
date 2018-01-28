@@ -9,6 +9,9 @@
     <string name="WndPlayGames_BackupProgress">Backup Game Progress</string>
     <string name="WndPlayGames_RestoreProgress">Restore Game Progress</string>
     <string name="WndPlayGames_WorkInCloud">Working in Cloud... Please wait.</string>
+    <string name="StartScene_UnlockGnoll">To unlock this class you must persuade town priest to heal Gnoll Brute</string>
+    <string name="WndPriest_Heal_Minions">Heal all your minions - %d gold only!</string>
+    <string name="Badges_GnollUnlocked">Gnoll unlocked</string>
 
     <string-array name="HeroClass_GnollPerks">
         <item>Gnolls starts with 17 strength points</item>

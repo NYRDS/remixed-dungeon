@@ -301,9 +301,7 @@ public class Hero extends Char {
 		bundle.put(LEVEL_ID, levelId);
 		bundle.put(DIFFICULTY, getDifficulty());
 
-		refreshPets();
-
-		bundle.put(PETS, pets);
+		bundle.put(PETS, getPets());
 		bundle.put(SP, getSoulPoints());
 		bundle.put(MAX_SP, getSoulPointsMax());
 
@@ -1865,6 +1863,7 @@ public class Hero extends Char {
 				cell = getPos();
 			}
 			pet.setPos(cell);
+			pet.setEnemy(Mob.DUMMY);
 
 			pet.setState(pet.WANDERING);
 			level.spawnMob(pet);

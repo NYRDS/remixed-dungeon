@@ -174,7 +174,7 @@ public class Badges {
 		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 65),
 		DEATH_FROM_NECROTISM(Game.getVar(R.string.Badges_DeathNecrotism), 71),
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
-		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL,GNOLL_UNLOCKED;
+		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL,GNOLL_UNLOCKED(Game.getVar(R.string.Badges_GnollUnlocked),72);
 
 		public boolean meta;
 
@@ -1040,5 +1040,9 @@ public class Badges {
 
 	public static void validateDeathInStone() {
 		displayBadge(Badge.IMMURED);
+	}
+
+	public static void validateGnollUnlocked() {
+		displayBadge(Badge.GNOLL_UNLOCKED);
 	}
 }
