@@ -36,7 +36,7 @@ public class PotionOfMight extends PotionOfStrength {
 		hero.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.PotionOfMight_StaApply));
 		GLog.p(Game.getVar(R.string.PotionOfMight_Apply));
 		
-		Badges.validateStrengthAttained();
+		Badges.validateStrengthAttained(hero);
 	}
 	
 	@Override

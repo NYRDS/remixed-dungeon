@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -33,8 +33,8 @@ public class PotionOfStrength extends Potion {
 		hero.STR(hero.STR() + 1);
 		hero.getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.PotionOfStrength_StaApply));
 		GLog.p(Game.getVar(R.string.PotionOfStrength_Apply));
-		
-		Badges.validateStrengthAttained();
+
+		Badges.validateStrengthAttained(hero);
 	}
 	
 	@Override

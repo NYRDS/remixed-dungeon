@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
@@ -34,11 +35,13 @@ public class WndFortuneTeller extends Window {
 	private static final int WIDTH		= 120;
 	private int GOLD_COST  = 50;
 
-	public WndFortuneTeller(FortuneTellerNPC fortune) {
+	public WndFortuneTeller(FortuneTellerNPC fortune, final Hero hero) {
 		
 		super();
 
-		if (Dungeon.hero.belongings.ring1 instanceof RingOfHaggler || Dungeon.hero.belongings.ring2 instanceof RingOfHaggler )
+		GOLD_COST *= Game.instance().getDifficultyFactor();
+
+		if (hero.buff( RingOfHaggler.Haggling.class )!= null)
 		{
 			GOLD_COST = (int) (GOLD_COST * 0.9);
 		}
@@ -62,7 +65,7 @@ public class WndFortuneTeller extends Window {
 			protected void onClick() {
 				boolean hasTarget = false;
 
-				for (Item item : Dungeon.hero.belongings){
+				for (Item item : hero.belongings){
 					if (!item.isIdentified()){
 						hasTarget = true;
 						break;

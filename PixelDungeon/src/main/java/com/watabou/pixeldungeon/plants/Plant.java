@@ -61,8 +61,6 @@ public class Plant implements Bundlable {
 		wither();
 
 		effect(pos, ch);
-		
-
 	}
 
 	public void wither() {

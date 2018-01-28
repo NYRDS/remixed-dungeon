@@ -28,6 +28,8 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
@@ -172,7 +174,7 @@ public class Badges {
 		YOG_SLAIN(Game.getVar(R.string.Badges_Yog_Slain), 65),
 		DEATH_FROM_NECROTISM(Game.getVar(R.string.Badges_DeathNecrotism), 71),
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
-		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL;
+		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL,GNOLL_UNLOCKED;
 
 		public boolean meta;
 
@@ -365,7 +367,11 @@ public class Badges {
 		displayBadge(badge);
 	}
 
-	public static void validateStrengthAttained() {
+	public static void validateStrengthAttained(Hero hero) {
+		if(hero.heroClass == HeroClass.GNOLL) {
+			return;
+		}
+
 		Badge badge = null;
 
 		if (!local.contains(Badge.STRENGTH_ATTAINED_1) && Dungeon.hero.STR() >= 13) {

@@ -72,6 +72,7 @@ public class StartScene extends PixelScene {
 
     private boolean huntressUnlocked;
     private boolean elfUnlocked;
+    private boolean gnollUnlocked;
 
     private float width, height, bottom;
 
@@ -212,7 +213,8 @@ public class StartScene extends PixelScene {
         add(unlock);
 
         huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
-        elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
+        elfUnlocked      = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
+        gnollUnlocked    = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (PixelDungeon.donated() >= 3);
 
         ExitButton btnExit = new ExitButton();
         btnExit.setPos(Camera.main.width - btnExit.width(), 0);
@@ -258,8 +260,6 @@ public class StartScene extends PixelScene {
     }
 
     private void updateShield(ClassShield shield) {
-
-
         if (curShield == shield) {
             add(new WndClass(shield.cl));
             return;
@@ -283,6 +283,11 @@ public class StartScene extends PixelScene {
                 updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockElf));
                 return;
             }
+        }
+
+        if (curShield.cl == HeroClass.GNOLL && !gnollUnlocked) {
+            updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockGnoll));
+            return;
         }
         unlock.setVisible(false);
 
