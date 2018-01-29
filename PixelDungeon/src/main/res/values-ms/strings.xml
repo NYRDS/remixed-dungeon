@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--GENERAL STRINGS VARIABLES-->
+  <string name="app_name">Remixed Pixel Dungeon</string>
+  <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">Ramai adiwira pelbagai bangsa dan keturunan telah memasuki Kurungan Bawah Tanah sebelum ini. Sebahagian daripada mereka berjaya memperoleh harta karun dan artifak ajaib, tetapi ramai yang tidak pernah kembali. Walaubagaimanapun, tiada siapa yang berjaya memperoleh Azimat Yendor, yang diketahui tersembunyi jauh di dalam Kurungan Bawah Tanah ini.\n\nDengan semangat waja dan mahu mengatasi cabaran ini, anda yakin tuah sentiasa bersama anda. Sekarang mari mulakan pengembaraan ini!</string>
+  <!--STRINGS OF AmuletScene CLASS-->
+  <string name="AmuletScene_Exit">Mari kita tamatkan pengembaraan ini</string>
+  <string name="AmuletScene_Stay">Saya belum selesai lagi</string>
+  <string name="AmuletScene_Txt">Akhirnya, Azimat Yendor berada ditangan anda. Dengan kuasa azimat ini anda boleh menguasai dunia atau memberi keamanan dan kesenangan kepada sesiapa sahaja. Dengan azimat ini, kehidupan anda akan berubah selamanya dan juga permainan ini juga berakhir di sini. Ataupun anda masih boleh lagi berkelana di dalam Kurungan Bawah Tanah...</string>
+  <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Selamat datang ke aras %d Pixel Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Selamat kembali ke aras %d Pixel Dungeon!</string>
+  <string name="GameScene_NightMode">Berhati-hatilah, kurungan bawah tanah semakin merbahaya diwaktu malam!</string>
+  <string name="GameScene_Chasm">Langkah anda kedengaran bergema dalam kurungan bawah tanah.</string>
+  <string name="GameScene_Water">Anda mendengar deburan air disekitar anda.</string>
+  <string name="GameScene_Grass">Bau tumbuhan yang kuat dapat dihidu.</string>
+  <string name="GameScene_Secrets">Suasana di sini menunjukkan lantai ini ada tersimpan banyak rahsia.</string>
+  <!--STRINGS OF Char CLASS-->
+  <string name="Char_Name">kelompok rusuh</string>
+  <string name="Char_Name_Objective">kelompok rusuh</string>
+  <string-array name="Char_Hit">
+    <item>%1$s pukul %2$s</item>
+    <item>%1$s pukul %2$s</item>
+    <item>%1$s pukul %2$s</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>%s bunuh anda...</item>
+    <item>%s bunuh anda...</item>
+    <item>%s bunuh anda...</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>%1$s menewaskan %2$s</item>
+    <item>%1$s menewaskan %2$s</item>
+    <item>%1$s menewaskan %2$s</item>
+  </string-array>
+  <string-array name="Char_StaDodged">
+    <item>mengelak</item>
+    <item>mengelak</item>
+    <item>mengelak</item>
+  </string-array>
+  <string name="Char_StaPoisoned">diracun</string>
+  <string name="Char_StaAmok">mengamok</string>
+  <string name="Char_StaSlowed">menjadi lembab</string>
+  <string name="Char_StaParalysed">lumpuh</string>
+  <string name="Char_StaFrightened">ketakutan</string>
+  <string name="Char_StaCrippled">dilumpuhkan</string>
+  <string name="Char_StaBleeding">berdarah</string>
+  <string name="Char_StaDizzy">pening</string>
+  <string name="Char_StaInvisible">halumunan</string>
+  <!--STRINGS OF Dungeon CLASS-->
+  <string name="Dungeon_NoTips">Teks ini tidak dapat ditafsirkan...</string>
+  <string name="Dungeon_DeadEnd">Apa awak buat di sini?!</string>
+  <!--STRINGS OF Challenges CLASS-->
+  <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_WellHealt">Perigi Kesihatan</string>
+  <string name="Journal_WellAwareness">Perigi Kesedaran</string>
+  <string name="Journal_WellTransmut">Perigi Transmutasi</string>
+  <string name="Journal_Alchemy">Periuk alkimia</string>
+  <string name="Journal_Garden">Taman</string>
+  <string name="Journal_Statue">Patung bergerak</string>
+  <string name="Journal_Ghost">Hantu sedu</string>
+  <string name="Journal_Wandmaker">Pembuat tongkat sakti tua</string>
+  <string name="Journal_Troll">Tukang besi troll</string>
+  <string name="Journal_Imp">Momok bercita-cita</string>
+  <!--STRINGS OF WndBlacksmith CLASS-->
+  <string name="WndBlacksmith_Prompt">Baiklah, saya setuju, apa yang boleh saya buat: saya boleh tempa semula 2 item dan jadikannya satu tetapi dengan kualiti lebih baik.</string>
+  <string name="WndBlacksmith_Select">Pilih satu item untuk ditempa semula</string>
+  <string name="WndBlacksmith_Reforge">Tempa semula</string>
+  <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">Posyen</string>
+  <string name="WndCatalogus_Scrolls">Skrol</string>
+  <string name="WndCatalogus_Title">Katalog</string>
+  <!--STRINGS OF WndChallenges CLASS-->
+  <string name="WndChallenges_Title">Cabaran</string>
+  <!--STRINGS OF WndChooseWay CLASS-->
+  <string name="WndChooseWay_Message">Laluan mana yang anda mahu ikut?</string>
+  <string name="WndChooseWay_Cancel">Saya fikirkan kemudian</string>
+  <!--STRINGS OF WndClass CLASS-->
+  <string name="WndClass_Mastery">Kepakaran</string>
+  <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">RALAT</string>
+  <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">Tetapan</string>
+  <string name="WndGame_Challenges">Cabaran</string>
+  <string name="WndGame_Ranking">Kedudukan</string>
+  <string name="WndGame_Start">Mula Permainan Baharu</string>
+  <string name="WndGame_menu">Menu Utama</string>
+  <string name="WndGame_Exit">Keluar dari Pixel Dungeon</string>
+  <string name="WndGame_Return">Kembali ke Permainan</string>
+  <string name="WndGame_Save">Simpan</string>
+  <string name="WndGame_Load">Muat</string>
+  <!--STRINGS OF WndHero CLASS-->
+  <string name="WndHero_Stats">Stat</string>
+  <string name="WndHero_Buffs">Gilap</string>
+  <string name="WndHero_Exp">Pengalaman</string>
+  <string name="WndHero_Str">Kekuatan</string>
+  <string name="WndHero_Health">Hayat</string>
+  <string name="WndHero_Gold">Emas Terkumpul</string>
+  <string name="WndHero_Depth">Kedalaman Maksimum</string>
+  <string name="WndHero_StaTitle">Aras %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">Katalog</string>
+  <string name="WndHero_StaJournal">Jurnal</string>
+  <!--STRINGS OF WndImp CLASS-->
+  <string name="WndImp_Message">Terbaik! Awaklah adiwira saya!\nBerkenaan ganjaran awak. saya tidak membawa wang buat masa ini, tetapi saya boleh tawarkan yang lebih baik. Ini ialah cincin pusaka keluarga saya: datuk saya mencabutnya dari jari pahlawan yang telah lama mati.</string>
+  <string name="WndImp_Reward">Ambil cincin</string>
+  <!--STRINGS OF WndInfoCell CLASS-->
+  <string name="WndInfoCell_Nothing">Tiada apa-apa di sini.</string>
+  <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">Peti</string>
+  <string name="WndInfoItem_LockedChest">Peti berkunci</string>
+  <string name="WndInfoItem_CrystalChest">Peti kristal</string>
+  <string name="WndInfoItem_Tomb">Makam</string>
+  <string name="WndInfoItem_Skeleton">Tulang manusia</string>
+  <string name="WndInfoItem_WontKnow">Anda tidak tahu apa-apa di dalamnya sehinggalah anda membukanya!</string>
+  <string name="WndInfoItem_NeedKey">Tetapi untuk membukanya anda perlukan kunci emas.</string>
+  <string name="WndInfoItem_Inside">Anda boleh melihat isi kandungan %s, tetapi perlukan kunci emas untuk membukanya.</string>
+  <string name="WndInfoItem_Owner">Makam purba ini mengandungi sesuatu yang berguna, tetapi pemiliknya pasti marah jika dicerobohi.</string>
+  <string name="WndInfoItem_Remains">Ini sahaja yang masih tinggal dari salah seorang penggembara sebelum ini. Mungkin berbaloi jika memeriksa kalau ada barang yang bernilai.</string>
+  <!--STRINGS OF WndJournal CLASS-->
+  <string name="WndJournal_Title">Jurnal</string>
+  <!--STRINGS OF WndRanking CLASS-->
+  <string name="WndRanking_Error">Tidak boleh tambah maklumat tambahan</string>
+  <string name="WndRanking_Stats">Stat</string>
+  <string name="WndRanking_Items">Item</string>
+  <string name="WndRanking_Badges">Lencana</string>
+  <string name="WndRanking_StaTitle">Aras %1$d %2$s</string>
+  <string name="WndRanking_StaChallenges">Cabaran</string>
+  <string name="WndRanking_StaHealth">Hayat</string>
+  <string name="WndRanking_StaStr">Kekuatan</string>
+  <string name="WndRanking_StaDuration">Tempoh Permainan</string>
+  <string name="WndRanking_StaDepth">Kedalaman Maksimum</string>
+  <string name="WndRanking_StaEnemies">Kelompok Rusuh Dibunuh</string>
+  <string name="WndRanking_StaGold">Emas Terkumpul</string>
+  <string name="WndRanking_StaFood">Santapan Dimakan</string>
+  <string name="WndRanking_StaAlchemy">Posyen Dimasak</string>
+  <string name="WndRanking_StaAnkhs">Ankh Diguna</string>
+  <!--STRINGS OF WndResurrect CLASS-->
+  <string name="WndResurrect_Message">Anda telah mati, tetapi anda diberi peluang untuk kuasai kurungan bawah tanah ini. Mahu mencuba lagi?</string>
+  <string name="WndResurrect_Yes">Ya, Saya akan terus berlawan!</string>
+  <string name="WndResurrect_No">Tidak, saya menarik diri</string>
+  <!--STRINGS OF WndSadGhost CLASS-->
+  <string name="WndSadGhost_Rose">Semestinya! Inilah dia yang dicari-cari! Tolonglah berikan kepada saya! Awak boleh ambil salah satu item ini, mungkin ianya berguna dalam pengembaraan anda...</string>
+  <string name="WndSadGhost_Rat">Bagus! makhluk hodoh itu telah dibunuh dan saya akhirnya mendapat ketenangan... Ambillah salah satu item ini, mungkin ianya berguna dalam pengembaraan anda...</string>
+  <string name="WndSadGhost_Wepon">Senjata hantu</string>
+  <string name="WndSadGhost_Armor">Perisai hantu</string>
+  <string name="WndSadGhost_Farewell">Selamat tinggal, pengembara!</string>
+  <!--STRINGS OF WndStory CLASS-->
+  <string name="WndStory_Sewers">Kurungan Bawah Tanah betul-betul berada di bawah Pekan ini, bahagian paling atas merupakan sistem pembentungan Pekan. Walaupun ia merupakan sebahagian dari Pekan, aras ini tidaklah begitu merbahaya. Walaubagaimanapun, tidak semestinya ianya sepenuhnya selemat, sekurang-kurangnya anda tidak risau dengan sihir kejahatan di sini. </string>
+  <!--STRINGS OF WndTradeItem CLASS-->
+  <string name="WndTradeItem_Sale">UNTUK DIJUAL: %1$s - %2$dg</string>
+  <string name="WndTradeItem_Buy">Beli dengan harga %dg</string>
+  <string name="WndTradeItem_Sell">Jual dengan harga %dg</string>
+  <string name="WndTradeItem_Sell1">Jual 1 dengan harga %dg</string>
+  <string name="WndTradeItem_SellAll">Jual semua dengan harga %dg</string>
+  <string name="WndTradeItem_Cancel">Tak payah</string>
+  <string name="WndTradeItem_Sold">Anda telah jual %1$s anda dengan harga %2$dg</string>
+  <string name="WndTradeItem_Bought">Anda membeli %1$s dengan harga %2$dg</string>
+  <!--STRINGS OF WndWandmaker CLASS-->
+  <string name="WndWandmaker_Message">Hmm, baiklah awak berjaya! Saya harap ianya tidak menyusahkan anda. Sebagaimana yang telah dijanjikan, awak boleh pilih salah satu tongkat sakti terbaik saya.</string>
+  <string name="WndWandmaker_Battle">Tongkat sakti tempur</string>
+  <string name="WndWandmaker_NonBattle">Tongkat sakti utiliti</string>
+  <string name="WndWandmaker_Farawell">Semoga anda mencapai kejayaan dalam pencarian anda, %s!</string>
+  <!--STRINGS OF QuickSlot CLASS-->
+  <string name="QuickSlot_SelectedItem">Pilih satu item untuk slot pantas</string>
+  <!--STRINGS OF Item CLASS-->
+  <string name="Item_ACDrop">LEPAS</string>
+  <string name="Item_ACThrow">BUANG</string>
+  <string name="Item_DirThrow">Pilih arah untuk dibuang</string>
+  <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">PAKAI</string>
+  <string name="EquipableItem_ACUnequip">TANGGAL</string>
+  <string name="EquipableItem_Unequip">Anda tidak boleh buang sumpahan %s!</string>
+  <!--STRINGS OF Heap CLASS-->
+  <!--STRINGS OF Amulet CLASS-->
+  <string name="Amulet_Name">Azimat Yendor</string>
+  <string name="Amulet_ACEnd">PENGEMBARAAN BERAKHIR</string>
+  <string name="Amulet_Info">Azimat Yendor merupakan artifak terkenal yang sangat berkuasa tetapi tidak diketahui asal usulnya. Dikatakan azimat ini berupaya memenuhi apa jua keinginan pemiliknya dengan syarat dia mampu \"memujuk\" azimat tersebut merealisasikan hasratnya.</string>
+  <!--STRINGS OF Ankh CLASS-->
+  <string name="Ankh_Name">Ankh</string>
+  <string name="Ankh_Info">Simbol purba keabadian yang dapat mengembalikan nyawa selepas kematian. Jika dibangkitkan semula semua item yang dimiliki akan hilang kecuali yang masih dipakai.</string>
+  <!--STRINGS OF ArmorKit CLASS-->
+  <string name="ArmorKit_Name">kit perisai</string>
+  <string name="ArmorKit_ACAplly">GUNA</string>
+  <string name="ArmorKit_Info">Dengan bantuan kit alatan dan material kecil ini sesiapa sahaja dapat mengubah apa jua perisai menjadi \"perisai epik\", sekaligus dapat mengekalkan semua sifat perisal asalnya. Selain itu, ia juga memberikan keupayaan istimewa tetapi bergantung pada jenis kelasnya. Tidak perlu kemahiran menjahit, kemahiran mengendalikan kulit atau kemahiran menempa diperlukan.</string>
+  <string name="ArmorKit_SelectArmor">Pilih perisai untuk ditatarkan</string>
+  <string name="ArmorKit_Upgraded">Anda menggunakan kit perisai untuk tatarkan %s anda</string>
+  <!--STRINGS OF Dewdrop CLASS-->
+  <string name="Dewdrop_Name">titisan embun</string>
+  <string name="Dewdrop_Info">Titisan embun yang jernih.</string>
+  <!--STRINGS OF DewVial CLASS-->
+  <string name="DewVial_Name">bebulu embun</string>
+  <string name="DewVial_ACDRINK">MINUM</string>
+  <string name="DewVial_Info">Anda boleh menyimpan lebihan embun ke dalam bekas kecil ini untuk diminum jika diperlukan. Jika bebuli penuh, ketika berlakunya bencana yang mengancam nyawa air embun ini akan diminum secara automatik.</string>
+  <string name="DewVial_AutoDrink">Bebuli embun telah dihabiskan untuk memulihkan luka anda.</string>
+  <string name="DewVial_Collected">Anda telah mengumpul beberapa titisan embun ke dalam bebuli embun anda.</string>
+  <string name="DewVial_Full">Bebuli embun anda telah penuh!</string>
+  <string name="DewVial_Empty">Bebuli embun telah kosong!</string>
+  <!--STRINGS OF Gold CLASS-->
+  <string name="Gold_Name">emas</string>
+  <string name="Gold_Collect">Kutip syiling emas untuk digunakan semasa membeli-belah dikedai.</string>
+  <string name="Gold_Info">Selonggok %d syiling emas/</string>
+  <string name="Gold_Info1">Satu syiling emas.</string>
+  <!--STRINGS OF KindOfWeapon CLASS-->
+  <!--STRINGS OF LloidsBeacon CLASS-->
+  <string name="LloidsBeacon_ACSet">TETAPKAN</string>
+  <string name="LloidsBeacon_ACReturn">KEMBALI</string>
+  <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_ACInscribe">TULIS</string>
+  <!--STRINGS OF TomeOfMastery CLASS-->
+  <string name="TomeOfMastery_Name">Buku Besar Kepakaran</string>
+  <string name="TomeOfMastery_ACRead">BACA</string>
+  <string name="TomeOfMastery_Info">Buku kulit lusuh ini tidaklah terlalu tebal, tetapi ada rasa, boleh mendapat banyak manafaat di dalamnya. Perlu ingat membaca buku ini mengambil masa yang agak lama.</string>
+  <string name="TomeOfMastery_Blinded">Anda tidak boleh membacanya kerana tidak nampak</string>
+  <string name="TomeOfMastery_Choose">Anda telah memilih laluan %s!</string>
+  <!--STRINGS OF Torch CLASS-->
+  <!--STRINGS OF Weightstone CLASS-->
+  <string name="Weightstone_Name">batu timbang</string>
+  <string name="Weightstone_ACApply">GUNA</string>
+  <string name="Weightstone_Info">Dengan menggunakan batu timbang, anda boleh seimbangkan senjata tempur anda untuk tingkatkan kelajuan dan ketepatannya.</string>
+  <string name="Weightstone_Select">Pilih satu senjata untuk diimbangkan</string>
+  <string name="Weightstone_Fast">anda seimbangkan %s anda supaya jadikannya lebih pantas</string>
+  <string name="Weightstone_Accurate">anda seimbangkan %s anda supaya jadikannya lebih tepat</string>
+  <string name="Weightstone_WndChoice">Bagaimana anda mahu seimbangkan %s anda?</string>
+  <string name="Weightstone_WndSpeed">Untuk kelajuan</string>
+  <string name="Weightstone_WndAccuracy">Untuk ketepatan</string>
+  <string name="Weightstone_WndCancel">Tak payah</string>
+  <!--PACKAGE /items/bags-->
+  <!--STRINGS OF Bag CLASS-->
+  <string name="Bag_ACOpen">BUKA</string>
+  <!--STRINGS OF Keyring CLASS-->
+  <string name="Keyring_Name">gelang kunci</string>
+  <string name="Keyring_Info">Gelang kunci tembaga ini, membolehkan anda himpunkan semua kunci sekaligus dari bercampur dengan item lain.</string>
+  <!--STRINGS OF ScrollHolder CLASS-->
+  <string name="ScrollHolder_Name">pemegang skrol</string>
+  <string name="ScrollHolder_Info">Anda boleh simpan sejumlah skrol ke dalam bekas tiub ini. Ia dapat menjimatkan beg galas anda dan lindunginya dari bencana api.</string>
+  <!--STRINGS OF SeedPouch CLASS-->
+  <string name="SeedPouch_Name">kantung benih</string>
+  <string name="SeedPouch_Info">Kantung baldu kecil ini membolehkan anda simpan sejumlah benih di dalamnya. Sangat menyenangkan.</string>
+  <!--STRINGS OF WandHolster CLASS-->
+  <string name="WandHolster_Name">sarung tongkat sakti</string>
+  <string name="WandHolster_Info">Sarung tongkat sakti nipis ini diperbuat daripada kulit haiwan eksotik. Ia dapat membawa sehingga %d batang tongkat sakti.</string>
+  <!--STRINGS OF PotionBelt CLASS-->
+  <string name="PotionBelt_Info">Tali pinggang kulit yang tebal ini dapat menyimpan semua posyen anda serta melindunginya dari pecah kerana faktor kesejukan.</string>
+  <string name="PotionBelt_Name">tali pinggang posyen</string>
+  <!--PACKAGE /items/keys-->
+  <!--STRINGS OF GoldenKey CLASS-->
+  <string name="GoldenKey_Name">kunci emas</string>
+  <string name="GoldenKey_Info">Gigi kunci tampak kecil dan rumit. Mungkin ia boleh membuka peti berkunci?</string>
+  <!--STRINGS OF IronKey CLASS-->
+  <string name="IronKey_Name">kunci besi</string>
+  <string name="IronKey_Info">gigi kunci purba ini kelihatan sudah lusuh digunakan; tali kulit kunci ini tampak lusuh dimamah usia. Hmm pintu manakah yang boleh dibuka dengan kunci ini?</string>
+  <string name="IronKey_FromDepth">kunci besi dari kedalaman %d</string>
+  <!--STRINGS OF SkeletonKey CLASS-->
+  <string name="SkeletonKey_Name">kunci rangka</string>
+  <string name="SkeletonKey_Info">Kunci ini rupanya unik: kepala kunci macam tengkorak. Ia mungkin dapat membuka pintu penting.</string>
+  <!--PACKAGE /items/quest-->
+  <!--STRINGS OF CorpseDust CLASS-->
+  <string name="CorpseDust_Name">debu mayat</string>
+  <!--STRINGS OF DarkGold CLASS-->
+  <string name="DarkGold_Name">bijih emas gelap</string>
+  <string name="DarkGold_Info">Logam ini disebut gelap bukan kerana warnanya (ia tiada beza dengan emas biasa), tetapi ia menjadi cair dibawah sinaran matahari, oleh itu tidak bernilai di luar sana.</string>
+  <!--STRINGS OF DriedRose CLASS-->
+  <string name="DriedRose_Name">bunga mawar kering</string>
+  <string name="DriedRose_Info">Bunga mawar telah lama kering, yang peliknya ada orang yang menyimpan kelopak bunga ini.</string>
+  <string name="DriedRose_Info2">Walaupun ia kehilangan kuasanya. Tetapi rupanya cantik, dan anda mahu menyimpan untuk dijadikan kenangan.</string>
+  <!--STRINGS OF DwarfToken CLASS-->
+  <!--STRINGS OF Pickaxe CLASS-->
+  <string name="Pickaxe_Name">beliung</string>
+  <string name="Pickaxe_Info">Alat bersaiz besar dan tegap ini digunakan untuk memecahkan batu. Ia juga boleh digunakan sebagai senjata.</string>
+  <string name="Pickaxe_ACMine">MELOMBONG</string>
+  <string name="Pickaxe_Gender">feminin</string>
+  <string name="Pickaxe_NoVein">Tiada telerang emas gelap berhampiran yang boleh digali</string>
+  <!--STRINGS OF RatSkull CLASS-->
+  <string name="RatSkull_Name">tengkorak tikus gergasi</string>
+  <string name="RatSkull_Info">Cantik kalau dijadikan hiasan dinding, tetapi baunya teramat busuk.</string>
+  <string name="RatSkull_Info2">Akan tetapi, boleh dijadikan bukti empunya tengkorak ini berupaya membunuh tikus, walaupun bersaiz besar dan berbau busuk.</string>
+  <!--PACKAGE /actors/blobs-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <string name="Fire_Info">Api semakin marak di sini.</string>
+  <!--STRINGS OF Foliage CLASS-->
+  <!--STRINGS OF ParalyticGas CLASS-->
+  <!--STRINGS OF ToxicGas CLASS-->
+  <string name="ToxicGas_Info1">Anda mati kerana terhidu gas toksik.</string>
+  <!--STRINGS OF WaterOfAwareness CLASS-->
+  <!--STRINGS OF WaterOfHealth CLASS-->
+  <string name="WaterOfHealth_Procced">Bilamana anda menghirupnya, luka anda telah sembuh sepenuhnya.</string>
+  <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <!--STRINGS OF Web CLASS-->
+  <string name="Web_Info">Segalanya di sini diliputi dengan sawang yang tebal.</string>
+  <!--PACKAGE /actors/buffs-->
+  <!--STRINGS OF Amok CLASS-->
+  <string name="Amok_Info">Mengamok</string>
+  <!--STRINGS OF Barkskin CLASS-->
+  <!--STRINGS OF Bleeding CLASS-->
+  <string name="Bleeding_Info">Berdarah</string>
+  <string name="Bleeding_Death">Anda mati kerana pendarahan...</string>
+  <!--STRINGS OF Blindness CLASS-->
+  <string name="Blindness_Info">Menjadi Buta</string>
+  <!--STRINGS OF Burning CLASS-->
+  <string name="Burning_Info">Terbakar</string>
+  <string name="Burning_Burns">%s terbakar!</string>
+  <string name="Burning_Death">Anda mati kerana terbakar...</string>
+  <!--STRINGS OF Charm CLASS-->
+  <!--STRINGS OF Combo CLASS-->
+  <string name="Combo_Info">Kombo</string>
+  <string name="Combo_Combo">Kombo %d-pukulan!</string>
+  <!--STRINGS OF Cripple CLASS-->
+  <!--STRINGS OF Frost CLASS-->
+  <string name="Frost_Info">Membeku</string>
+  <string name="Frost_Shatter">Kesejukan ini menyebabkan %s mula pecah berkecai!</string>
+  <!--STRINGS OF Fury CLASS-->
+  <!--STRINGS OF GasesImmunity CLASS-->
+  <string name="GasesImmunity_Info">kebal gas</string>
+  <!--STRINGS OF Hunger CLASS-->
+  <string-array name="Hunger_Hungry">
+    <item>Anda berasa lapar.</item>
+    <item>Anda berasa lapar.</item>
+    <item>Anda berasa lapar.</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>Anda kebuluran!</item>
+    <item>Anda kebuluran!</item>
+    <item>Anda kebuluran!</item>
+  </string-array>
+  <string name="Hunger_Death">Anda mati kerana kelaparan...</string>
+  <string name="Hunger_Info1">Lapar</string>
+  <string name="Hunger_Info2">Kebuluran</string>
+  <!--STRINGS OF Invisibility CLASS-->
+  <string name="Invisibility_Info">Halimunan</string>
+  <!--STRINGS OF Levitation CLASS-->
+  <string name="Levitation_Info">Terapung</string>
+  <!--STRINGS OF Light CLASS-->
+  <string name="Light_Info">Bercahaya</string>
+  <!--STRINGS OF MindVision CLASS-->
+  <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Death">%s telah membunuh anda...</string>
+  <!--STRINGS OF Paralysis CLASS-->
+  <string name="Paralysis_Info">Lumpuh</string>
+  <!--STRINGS OF Poison CLASS-->
+  <string name="Poison_Info">Terkena Racun</string>
+  <string name="Poison_Death">Anda mati disebabkan keracunan...</string>
+  <!--STRINGS OF Roots CLASS-->
+  <!--STRINGS OF Shadows CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <string name="Slow_Info">Menjadi Lembab</string>
+  <!--STRINGS OF SnipersMark CLASS-->
+  <!--STRINGS OF Vertigo CLASS-->
+  <string name="Vertigo_Info">Pening Gayat</string>
+  <!--STRINGS OF Weakness CLASS-->
+  <string name="Weakness_Info">Lemah</string>
+  <!--PACKAGE /actors/hero-->
+  <!--STRINGS OF Belongings CLASS-->
+  <string name="Belongings_Name">beg galas</string>
+  <!--PACKAGE /sprites-->
+  <!--STRINGS OF ItemSprite CLASS-->
+  <!--PACKAGE /ui-->
+  <!--STRINGS OF Toolbar CLASS-->
+  <string name="Toolbar_Info1">Anda tidak tahu apa yang ada di sana.</string>
+  <string name="Toolbar_Info2">Pilih satu sel untuk diperiksa</string>
+</resources>

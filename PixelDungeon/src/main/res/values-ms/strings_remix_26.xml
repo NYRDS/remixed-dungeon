@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF SantaHat CLASS -->
+    <string name="SantaHat_Name">Top Santa</string>
+    <!-- STRINGS OF Rudolph CLASS -->
+    <string name="Rudolph_Name">Hidung merah dengan tanduk</string>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF Kobold CLASS -->
+    <string name="Kobold_Name">kobold</string>
+    <string name="Kobold_Gender">maskulin</string>
+    <string name="Kobold_Name_Objective">kobold</string>
+    <string name="Kobold_Desc">Kewujudan kobold merupakan satu lagenda.  Leluhur gnoll, kobold tinggal jauh di dalam gua sejuk. Dipercayai mereka menguasai kejuruteraan dan mesin sebelum orang kerdil. Tetapi tidak diketahui kenapa mereka menghilangkan diri...</string>
+
+    <!-- STRINGS OF KoboldIcemancer CLASS -->
+    <string name="KoboldIcemancer_Name">pengguna ais kobold</string>
+    <string name="KoboldIcemancer_Gender">maskulin</string>
+    <string name="KoboldIcemancer_Name_Objective">pengguna ais kobold</string>
+    <string name="KoboldIcemancer_Desc">Pengguna ais kobold merupakan elit dalam masyarakat mereka. Seorang satria, ahli sihir dan paling penting saintis. Pengguna ais purba menguasai seni pembentukan ais dapat mencipta mekanisma canggih dari ais dengan diperkuatkan dengan kuasa ajaib...</string>
+    <string name="KoboldIcemancer_Killed">Bebola ais %s telah membunuh anda..</string>
+
+    <!-- STRINGS OF ColdSpirit CLASS -->
+    <string name="ColdSpirit_Name">semangat sejuk</string>
+    <string name="ColdSpirit_Gender">maskulin</string>
+    <string name="ColdSpirit_Name_Objective">cold spirit</string>
+    <string name="ColdSpirit_Desc">Semangat sejuk merupakan manifestasi dari kesejukan, dalam bentuk paling asli. Mereka ialah jasad tidak berfikiran, dicipta dengan tenaga ajaib, bertindak mengikut kemahuan penciptanya atau melalui naluri dan refleks asasi.</string>
+
+    <!-- STRINGS OF IceElemental CLASS -->
+    <string name="IceElemental_Name">keunsuran ais</string>
+    <string name="IceElemental_Gender">maskulin</string>
+    <string name="IceElemental_Name_Objective">keunsuran ais</string>
+    <string name="IceElemental_Desc">Dalam kalangan keunsuran yang wujud dalam kurungan bawah tanah, keunsuran ais tidaklah begitu kuat, tetapi merupakan yang paling merbahaya. Badannya mengeluarkan haba sejuk, dapat memperlahankan pergerakan pihak musuh.</string>
+
+    <!-- STRINGS OF IceGuardian CLASS -->
+    <string name="IceGuardian_Name">pengawal ais</string>
+    <string name="IceGuardian_Gender">maskulin</string>
+    <string name="IceGuardian_Name_Objective">pengawal ais</string>
+    <!-- STRINGS OF IceGuardianCore CLASS -->
+    <string name="IceGuardianCore_Name">pengawal ais</string>
+    <string name="IceGuardianCore_Gender">maskulin</string>
+    <string name="IceGuardianCore_Name_Objective">pengawal ais</string>
+    <!-- STRINGS OF CagedKobold CLASS -->
+    <string name="CagedKobold_Name">kobold terkurung</string>
+    <string name="CagedKobold_Gender">maskulin</string>
+    <string name="CagedKobold_Name_Objective">kobold terkurung</string>
+    <string name="CagedKobold_Desc">Seekor kobold, di dalam sangkar.</string>
+    <string name="CagedKobold_Message1">Tolong...</string>
+    <string name="CagedKobold_Message2">Awak mesti keluarkan saya dari sini, sahabat</string>
+    <string name="CagedKobold_Message3">Saya benci segala-galanya tentang kurungan ini</string>
+
+    <string name="Journal_Caged_Kobold">Kobold Terkurung</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">Gnoll ini telah dibeku hidup-hidup. Ia baru sahaja berada di situ</string>
+    <string name="IceCaves_TileHighGrass">Lalang beku</string>
+    <string name="IceCaves_TileGrass">Rumput beku.</string>
+    <string name="IceCaves_TileDescHighGrass">Tumbuhan beku tebal yang menghalang pandangan.</string>
+    <string name="IceCaves_TileStatue">Gnoll Beku</string>
+    <string name="IceCaves_TileDescStatue">Ada lagi patung pelik... Alamak rupanya gnoll beku.</string>
+
+    <!-- STRINGS OF IceKey CLASS -->
+    <string name="IceKey_Name">kunci ais</string>
+    <string name="IceKey_Info">Kunci ini diperbuat dari ais, tetapi kerasnya seperti keluli.</string>
+
+
+    <!-- STRINGS OF WandOfIcebolt CLASS -->
+    <string name="WandOfIcebolt_Name">Tongkat sakti bebola ais</string>
+    <string name="WandOfIcebolt_Info">Tongkat sakti ini dapat melancarkan misil ais, menimbulkan kecederaan ringan pada makhluk sasaran. Ia dapat memperlahankan atau membekukan pihak lawan.</string>
+    <string name="WandOfIcebolt_Info1">Anda membunuh diri anda sendiri dengan Tongkat Sakti Bebola Ais...</string>
+
+    <!-- Badges -->
+    <string name="Badges_Ice_Guardian_Slain">Pengawal ais telah dibunuh</string>
+
+</resources>

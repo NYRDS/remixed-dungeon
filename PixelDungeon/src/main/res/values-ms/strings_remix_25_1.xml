@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF TomeOfMastery CLASS -->
+    <string name="TomeOfMastery_WayAlreadyChosen">Anda tidak boleh ubah laluan anda!</string>
+
+    <!-- STRINGS OF BlackSkullOfMastery CLASS -->
+    <string name="BlackSkullOfMastery_Name">Pengutip Roh</string>
+    <string name="BlackSkullOfMastery_Info">Merupakan artifak purba, direka oleh necromancer pertama untuk mengutip roh orang mati. Dapat mengesan keupayaan necromantik anda ia melindungi dirinya dengan mantera yang perkasa. Oleh kerana mantera lama, struktur primitifnya dapat dilerai dengan mudah.</string>
+    <string name="BlackSkullOfMastery_Title">Anda boleh tawarkan mantera. Atau anda boleh manipulasi formula ajaib supaya anda boleh telan kedua-dua mantera dan artifak tersebut, membolehkan diri anda menjadi Lich.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Jadi Lich</string>
+    <string name="BlackSkullOfMastery_Necromancer">Tawarkan mantera</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">_Lich merupakan seorang necromancer yang mencapai puncak keupayaannya. Wujud diantara kehidupan dan kematian _Lich_ cemerlang dalam necromancy, tetapi kemahiran tempurnya sangat rendah.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Jika anda _tawarkan mantera_ anda akan dapat guna artifak ini seperti biasa.</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Activated">Tengkorak Hitam telah dibangunkan!</string>
+    <string name="BlackSkull_Ressurrect">Tengkorak Hitam telah memanggil raksaksa kematian berkhidmat untuk anda!</string>
+    <string name="BlackSkull_Deactivated">Tengkorak Hitam tidur kembali...</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Name">Perisai tulang</string>
+    <string name="NecromancerArmor_Info">Perisai ini membolehkan Necormancer memanggil sehingga 2 unit Makhluk Kematian pada kos 5 roh setiap satu. Pembantu hidup semula ini akan mengikut tuannya dan menyerang musuh tuan. Makhluk kematian ini menjadi semakin kuat jika tahap adiwira meningkat.</string>
+    <string name="NecromancerArmor_NotNecromancer">Hanya necromancer boleh guna perisai ini!</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Name">jubah necromancer</string>
+    <string name="NecromancerRobe_Info">Jubah ini membolehkan Necormancer memanggil  satu unit Makhluk Kematian pada kos 5 roh setiap satu. Makhluk kematian ini adalah pengikut hidup semula yang menjadi semakin kuat mengikut kekuatan tuannya.</string>
+
+    <!-- Hero descriptions -->
+    <!-- STRINGS OF Necromancer CLASS -->
+    <string name="HeroClass_Necromancer">necromancer</string>
+
+    <string name="HeroSubClass_NameLich">lich</string>
+
+    <string-array name="HeroClass_NecromancerPerks">
+        <item>Necromancer bermula dengan 15 mata hayat.</item>
+        <item>Necromancers mempunyai sumber \"roh\" yang unik, diguna pakai untuk  menyihir mantera. Setiap kematian kelompok-rusuh mendapat 1 roh.</item>
+        <item>Necromancer bermula dengan jubah Necromancer yang unik.</item>
+        <item>Necromancer bermula dengan kunci rangka aras 7.</item>
+        <item>Posyen Penyembuhan dapat dikenal pasti pada awal pengembaraan.</item>
+    </string-array>
+
+    <!-- STRINGS OF Deathling CLASS -->
+    <string name="Deathling_Name">makhluk kematian</string>
+    <string name="Deathling_Gender">maskulin</string>
+    <string name="Deathling_Name_Objective">makhluk kematian</string>
+    <string name="Deathling_Desc">Makhluk Kematian ialah roh adiwira yang telah mati, tetapi malangnya telah dipanggil dengan kuasa Necromatik oleh rakan pengembara mereka.</string>
+
+    <!-- Mechanics descriptions -->
+    <!-- STRINGS OF Necromancy CLASS -->
+    <string name="NecromancerRobe_PetLimitReached">Necromancy: had panggilan dicapai (Maks semasa: %d)!</string>
+    <string name="Necromancy_NotEnoughSouls">Anda tidak mempunyai roh yang mencukupi untuk menyihir mantera \"%1$s\".</string>
+
+    <string name="Necromancy_SoulsCountLabel">Roh</string>
+
+    <string name="Necromancer_ACSpecial">NECROMANCY</string>
+    <string name="Necromancy_ReincarnationName">Penjelmaan Semula</string>
+    <string name="Necromancy_ReincarnationTriggered">Kuasa anda melangkaui kematian! Tetapi anda kehilangan semua roh dan barangan yang telah dikumpul</string>
+    <string name="Necromancy_SummonDeathlingName">Panggil Makhluk Kematian</string>
+
+    <string name="Necromancy_BecameALich">Anda bertukar menjadi Lich! Kuasa anda semakin kuat dan muatan roh anda bertambah sekali ganda! Tetapi anda telah kehilangan %1$d mata kekuatan.</string>
+
+    <!-- Scene descriptions -->
+    <!-- STRINGS OF StartScene CLASS -->
+    <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan lain-lain kelas.</string>
+
+    <!-- Window descriptions -->
+    <string name="Necromancy_Title">Necromancy</string>
+
+    <!-- STRINGS OF WndSadGhostNecro CLASS -->
+    <string name="WndSadGhostNecro_Text">\"Semangat ini masih bertarung dengan sumpahannya. Ia tampaknya mahu sesuatu daripada saya. Jika saya gunakan kuasa necromatik, saya boleh pujuk dia dan beritahu saya telah tunaikan permintaannya. Jadi saya tidak perlu bazirkan masa di sini. Patutkah saya lakukannya?\"</string>
+    <string name="WndSadGhostNecro_Yes">Ya, kalahkan dengan kemahuan anda.</string>
+    <string name="WndSadGhostNecro_No">Tidak, mari berbincang.</string>
+    <string name="WndSadGhostNecro_Persuaded">Hantu sedu telah berjaya dikuasai!</string>
+
+    <!-- Badges -->
+
+    <string name="WndSettings_UiScale">Skala Ui</string>
+</resources>

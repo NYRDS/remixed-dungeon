@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF Ushanka CLASS -->
+    <string name="Ushanka_Name">Ushanka</string>
+    <string name="Ushanka_Info">Topi serkup ushanka yang hangat dihiasi dengan bintang merah klasik. Pendamping yang sesuai untuk rakan-rakan yang berjuang melawan kurungan bawah tanah yang sejuk dan jahat. </string>
+
+    <!-- STRINGS OF VampireSkull CLASS -->
+    <string name="VampireSkull_Name">Tengkorang pontiana</string>
+    <string name="VampireSkull_Info">Topeng ini diperbuat daripada tengkorak pontianak asli. Sebenarnya ia adalah tengkorak pontianak... Menakutkan.</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">Topeng Zombie</string>
+    <string name="ZombieMask_Info">Pernahkah sebelum ini anda bercita-cita mahu kelihatan seperti adiwira hidup semula, yang gagal dalam pencariannya berulang-ulang kali? Sekarang inilah peluang anda.</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">gula-gula</string>
+    <string name="Candy_Info">Gula-gula ini nampak cantik dan berbau sedap. Perlu ke hadiahkan gula-gula ini kepada orang lain?</string>
+    <string name="Candy_Warning_1">Anda tidak sepatutnya makan gula-gula tersebut. Anda telah pun berjanji menghadiahkannya kepada seseorang. Ia tidak memberi manafaat kepada anda, rasa lapar masih ada, gula-gula itu tidak mencukupi.</string>
+    <string name="Candy_Warning_2">Oleh kerana anda makan terlalu banyak, perut anda mulai sakit.</string>
+
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">pai labu</string>
+    <string name="PumpkinPie_Info">Pai labu yang sedap, macam pai yang dibakar oleh ibu anda.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">pai labu basi</string>
+    <string name="RottenPumpkinPie_Info">Tak kira betapa sedapnya ketika masih segar, kini tidak lagi sesuai dimakan.</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">Lilin Penglihatan</string>
+    <string name="CandleOfMindVision_Info">Rupanya seperti lilin biasa, anda tidak menjangka ia boleh ditemui dalam kurungan bawah tanah ini. Yang peliknya lilin ini berasa suam bila dipegang walaupun belum lagi dinyalakan.</string>
+    <string name="CandleOfMindVision_Info_Lighted">Lilin bercahaya sebaik sahaja anda keluarkan dari beg galas anda. Nyalaan berwarna ungu, dan ketika anda melihat nyalaan lilin tersebut ada raksaksa berhampiran dapat dilihat.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">Lilin telah habis dibakar, ia tidak dapat lagi menerangi sekitar, Nampaknya anda tidak dapat guna ia lagi.</string>
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">tong</string>
+    <string name="Barrel_Desc">Nampak seperti tong kayu biasa. Tetapi bila anda lihat lebih dekat anda terbau minyak. Tong ini agak ringan, anda boleh menolaknya.</string>
+
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">labu</string>
+    <string name="Barrel_Pumpkin_Desc">Menakutkan dan pelik kerana ada labu yang diukir bertaburan di dalam kurungan bawah tanah. Anda rasakan ada bahaya menanti, ketika menghampiri benda tersebut. Tapi anda boleh tolak ia ketepi, kan?</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">orang-orang</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
+    <string name="ScarecrowNPC_Name_Objective">orang-orang</string>
+    <string name="ScarecrowNPC_Desc">Tak salah lagi... orang-orang ini memang lihat setiap pergerakan saya. Mata merahnya seolah-olah menembuasi anda, tetapi anda tidak rasa terancam.</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Hai budak kecil, apa khabar?\n Saya ada hadiah untuk anda!\n Baiklah,\n Jika awak carikan saya beberapa batang lilin!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Hai budak kecil, apa khabar?\n Saya ada hadiah untuk anda!\n Baiklah,\n Jika awak carikan saya beberapa batang lilin!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Lima lilin sahaja yang saya perlukan.\n Dan, ganjarannya sangat memaniskan!</string>
+    <string name="ScarecrowNPC_Quest_End">Seronoknya!\n Nah, anda akan dapat makanan!</string>
+    <string name="Journal_ScarecrowNPC">Orang-orang</string>
+
+</resources>

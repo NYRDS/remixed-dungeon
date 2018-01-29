@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/potions additional strings-->
+  <string name="Potion_ACMoisten">LEMBABKAN</string>
+  <string name="Potion_SelectForMoisten">Pilih item untuk dilembabkan</string>
+  <string name="Potion_MoistenUseless">Kelihatan anda hanya bazirkan posyen ini.</string>
+  <string name="Potion_RuneDissaperaed">Rune telah hilang daripada %s.</string>
+  <string name="Potion_ArrowMoisten">Anda berjaya melembabkan anak panah.</string>
+  <string name="Potion_ItemFliesAway">%s telah terbang menjauhi tangan anda.</string>
+  <string name="Potion_FoodRefreshed">%s sekarang nampak enak dimakan</string>
+</resources>

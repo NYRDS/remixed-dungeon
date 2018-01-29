@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/rings-->
+  <!--STRINGS OF Ring CLASS-->
+  <string name="Ring_Name">Cincin %s</string>
+  <string name="Ring_Info1">Anda hanya boleh pakai 2 cincin dalam satu masa.</string>
+  <string name="Ring_BuffKnown">Ini ialah %s</string>
+  <!--STRINGS OF RingOfAccuracy CLASS-->
+  <string name="RingOfAccuracy_Name">Cincin Ketepatan</string>
+  <string name="RingOfAccuracy_Info">Cincin ini dapat meningkatkan kebarangkalian pihak musuh terkena pukulan.</string>
+  <!--STRINGS OF RingOfDetection CLASS-->
+  <string name="RingOfDetection_Name">Cincin Pengesanan</string>
+  <string name="RingOfDetection_Info">Dengan memakai cincin ini, pemakai dapat mengesan rahsia yang tersembunyi - perangkap dan pintu rahsia - tanpa perlu mengambil masa mencarinya. Cincin pengesanan yang telah lapuk akan mengurangkan kekuatan deria anda, jadi lebih sukar mengecam rahsia walaupun kerap mencarinya.</string>
+  <!--STRINGS OF RingOfElements CLASS-->
+  <!--STRINGS OF RingOfEvasion CLASS-->
+  <!--STRINGS OF RingOfHaggler CLASS-->
+  <!--STRINGS OF RingOfHaste CLASS-->
+  <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Info">Cincin ini dapat meningkatkan peluang anda mengumpul embun dan benih dari rumput yang dilalui.</string>
+  <!--STRINGS OF RingOfMending CLASS-->
+  <!--STRINGS OF RingOfPower CLASS-->
+  <!--STRINGS OF RingOfSatiety CLASS-->
+  <!--STRINGS OF RingOfShadows CLASS-->
+  <!--STRINGS OF RingOfThorns CLASS-->
+  <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Use">GUNA</string>
+  <!--STRINGS OF ChaosCrystal CLASS-->
+  <string name="ChaosCrystal_Name">Kristal Pelik</string>
+  <string name="ChaosCrystal_Info_2">Ya! Sekarang anda tahu, boleh sepadukannya dengan salah satu item, hmm apa yang berlaku?</string>
+  <string name="ChaosCrystal_Use">GUNA</string>
+  <string name="ChaosCrystal_Fuse">SEPADU</string>
+  <!--STRINGS OF RatKingCrown CLASS-->
+  <string name="RatKingCrown_Name">Mahkota raja tikus</string>
+</resources>

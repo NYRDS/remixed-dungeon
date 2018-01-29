@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /actors/mobs-->
+  <!--STRINGS OF Mob CLASS-->
+  <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
+  <string name="Mob_Died">Anda dengar ada benda yang mati dari jauh</string>
+  <string name="Mob_StaSleepingStatus">%s ini sedang tidur</string>
+  <string name="Mob_StaWanderingStatus">%s ini sedang merayau</string>
+  <string name="Mob_StaHuntingStatus">%s ini sedang memburu</string>
+  <string name="Mob_StaFleeingStatus">%s ini lari ketakutan</string>
+  <string name="Mob_StaPassiveStatus">%s ini kelihatan lembab dan tidak bermaya</string>
+  <!--STRINGS OF Acidic CLASS-->
+  <string name="Acidic_Name">jengking berasid</string>
+  <string name="Acidic_Gender">maskulin</string>
+  <string name="Acidic_Name_Objective">jengking berasid</string>
+  <string name="Acidic_Desc">Makhluk seakan-labah-labah bersaiz besar dan menakutkan itu tidak suka bertempur dalam jarak dekat, ia menembak runcing bergerigi beracun yang dapat melumpuhkan mangsa dari jarak jauh.</string>
+  <!--STRINGS OF Albino CLASS-->
+  <string name="Albino_Name">tikus balar</string>
+  <string name="Albino_Gender">maskulin</string>
+  <string name="Albino_Name_Objective">tikus balar</string>
+  <string name="Albino_Desc">Tikus marsupial bersikap agresif, namun ia merupakan haiwan lemah yang menduduki pembetungan. Mereka boleh menjadi bahaya jika dalam kumpulan besar. Tikus ini nampaknya jenis balar. Ia juga memiliki gigi tajam yang luar biasa.</string>
+  <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Gender">maskulin</string>
+  <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Gender">maskulin</string>
+  <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Gender">maskulin</string>
+  <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Gender">maskulin</string>
+  <!--STRINGS OF DM300 CLASS-->
+  <string name="DM300_Name">DM-300</string>
+  <string name="DM300_Gender">maskulin</string>
+  <string name="DM300_Name_Objective">DM-300</string>
+  <string name="DM300_Info1">DM-300 membaiki dirinya sendiri!</string>
+  <string name="DM300_Info3">Individu tidak dikenali dikesan.</string>
+  <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Gender">maskulin</string>
+  <!--STRINGS OF Eye CLASS-->
+  <!--STRINGS OF Gnoll CLASS-->
+  <string name="Gnoll_Gender">maskulin</string>
+  <!--STRINGS OF Golem CLASS-->
+  <string name="Golem_Gender">maskulin</string>
+  <!--STRINGS OF Goo CLASS-->
+  <string name="Goo_Name">Goo</string>
+  <string name="Goo_Gender">feminin</string>
+  <string name="Goo_Name_Objective">Goo</string>
+  <string name="Goo_StaInfo1">!!!</string>
+  <!--STRINGS OF King CLASS-->
+  <string name="King_Gender">maskulin</string>
+  <string name="Undead_Gender">maskulin</string>
+  <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Gender">maskulin</string>
+  <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Gender">maskulin</string>
+  <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Gender">maskulin</string>
+  <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Gender">feminin</string>
+  <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Gender">feminin</string>
+  <!--STRINGS OF Scorpio CLASS-->
+  <string name="Scorpio_Name">jengking</string>
+  <string name="Scorpio_Gender">maskulin</string>
+  <string name="Scorpio_Name_Objective">jengking</string>
+  <string name="Scorpio_Desc">Makhluk seakan-labah-labah bersaiz besar dan menakutkan itu tidak suka bertempur dalam jarak dekat, ia menembak runcing bergerigi beracun yang dapat melumpuhkan mangsa dari jarak jauh.</string>
+  <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Gender">maskulin</string>
+  <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Gender">feminin</string>
+  <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Gender">maskulin</string>
+  <!--STRINGS OF Shielded CLASS-->
+  <string name="Shielded_Gender">maskulin</string>
+  <!--STRINGS OF Skeleton CLASS-->
+  <string name="Skeleton_Gender">maskulin</string>
+  <!--STRINGS OF Spinner CLASS-->
+  <string name="Spinner_Gender">maskulin</string>
+  <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Gender">feminin</string>
+  <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Gender">maskulin</string>
+  <!--STRINGS OF Swarm CLASS-->
+  <string name="Swarm_Gender">maskulin</string>
+  <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Gender">maskulin</string>
+  <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Gender">maskulin</string>
+  <!--STRINGS OF Warlock CLASS-->
+  <string name="Warlock_Gender">maskulin</string>
+  <!--STRINGS OF Wraith CLASS-->
+  <string name="Wraith_Gender">maskulin</string>
+  <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Gender">maskulin</string>
+  <string name="Yog_Info1">...</string>
+  <string name="RottingFist_Gender">maskulin</string>
+  <string name="BurningFist_Gender">maskulin</string>
+  <string name="Larva_Gender">feminin</string>
+  <!--STRINGS OF SpiderEgg CLASS-->
+  <string name="SpiderEgg_Name">telur lelabah</string>
+  <string name="SpiderEgg_Name_Objective">spider egg</string>
+  <!--STRINGS OF SpiderNest CLASS-->
+  <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Gender">maskulin</string>
+  <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Gender">maskulin</string>
+  <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Gender">maskulin</string>
+  <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Gender">feminin</string>
+  <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Gender">maskulin</string>
+  <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Gender">maskulin</string>
+  <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Gender">maskulin</string>
+  <!--STRINGS OF Crystal CLASS-->
+  <string name="Crystal_Name">Kristal terapung</string>
+  <string name="Crystal_Gender">maskulin</string>
+  <string name="Crystal_Name_Objective">Kristal terapung</string>
+</resources>

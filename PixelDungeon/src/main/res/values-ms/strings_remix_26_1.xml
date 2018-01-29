@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF TownGuardNPC CLASS -->
+    <string name="TownGuardNPC_Name">pengawal pekan</string>
+    <string name="TownGuardNPC_Gender">maskulin</string>
+    <string name="TownGuardNPC_Name_Objective">pengawal pekan</string>
+    <string name="TownGuardNPC_Desc">Seorang pengawal pekan biasa.</string>
+    <string name="TownGuardNPC_Message1">Berambus.</string>
+    <string name="TownGuardNPC_Message2">Terima kasih kepada para pengembara seperti awak, sekarang tempat ini sentiasa aman.</string>
+    <string name="TownGuardNPC_Message3">Anda fikir ada ramai pengawal dalam pekan ini? Sebenarnya hanyalah pekan kecil dengan kurungan bawah tanah gergasi yang dikuasai oleh raksaksa, kan begitu?</string>
+
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">orang pekan</string>
+    <string name="TownsfolkNPC_Gender">maskulin</string>
+    <string name="TownsfolkNPC_Name_Objective">orang pekan</string>
+    <string name="TownsfolkNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal</string>
+    <string name="TownsfolkNPC_Message1">Ohh! Ada pengembara lain, baguslah! Carilah sebanyak mungkin harta rampasan yang bernilai!</string>
+    <!-- STRINGS OF HealerNPC CLASS -->
+    <string name="HealerNPC_Name">paderi pekan</string>
+    <string name="HealerNPC_Gender">maskulin</string>
+    <string name="HealerNPC_Name_Objective">paderi pekan</string>
+    <!-- STRINGS OF ServiceManNPC CLASS -->
+    <string name="ServiceManNPC_Name">pekerja</string>
+    <string name="ServiceManNPC_Gender">maskulin</string>
+    <string name="ServiceManNPC_Name_Objective">pekerja</string>
+    <string name="ServiceManNPC_Desc">Pekerja biasa di pertubuhan tempatan.</string>
+
+    <!-- STRINGS OF TownShopkeeper CLASS -->
+    <string name="TownShopkeeper_Name">pekedai</string>
+    <string name="TownShopkeeper_Desc">Lelaki ini merupakan seorang pekedai biasa. Anda boleh agak dia dah tahu harga yang anda berikan.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="WndMovieTheatre_Watch">tonton cereka</string>
+    <string name="WndMovieTheatre_No">keluar</string>
+    <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
+    <string name="WndMovieTheatre_Title">Panggung Wayang</string>
+    <string name="WndMovieTheatre_Thank_You">Terima kasih atas sumbangan anda!</string>
+
+    <!-- STRINGS OF WndPriest CLASS -->
+    <string name="WndPriest_Heal">sembuh - %d emas</string>
+    <string name="WndPriest_Title">Paderi pekan</string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_roof_name">Bumbung</string>
+    <string name="town_deco_roof_desc">Bumbung jubin biasa.</string>
+
+    <string name="town_deco_wall_name">Dinding</string>
+    <string name="town_deco_wall_desc">Dinding ringkas yang diperbuat dari batang kayu.</string>
+
+    <string name="town_deco_snow_name">Salji</string>
+    <string name="town_deco_cross_name">Palang</string>
+    <string name="town_deco_cross_desc">Palang logam perak, simbol bagai agama tempatan - \"Saksi Santa Tuan Bawah Tanah\".</string>
+
+    <string name="town_deco_bell_name">Loceng</string>
+    <string name="town_deco_bell_desc">Loceng gereja biasa yang tampaknya tiada siapa yang mengetuknya, tali pengikatnya telah hilang.</string>
+
+    <string name="town_deco_bell_tower_name">Menara loceng</string>
+    <string name="town_deco_bell_tower_desc">Loceng gereja tradisional dipasang dalam menara tinggi supaya bunyinya dapat didengar dari jarak jauh.</string>
+
+    <string name="town_deco_chimney_name">Cerobong</string>
+    <string name="town_deco_chimney_desc">Cerobong batu merupakan pasangan rumah yang dibina di wilayah ini yang mengalami cuaca sejuk.</string>
+
+    <string name="town_deco_window_name">Tingkap</string>
+    <string name="town_deco_window_desc">Tingkap kaca biasa, tiada apa-apa yang istimewa.</string>
+
+    <string name="town_deco_door_name">Pintu</string>
+    <string name="town_deco_door_desc">Pintu kayu biasa.</string>
+
+    <string name="town_deco_locked_door_name">Pintu berkunci</string>
+    <string name="town_deco_locked_door_desc">Apa ada disebalik pintu tersebut?</string>
+
+    <string name="town_deco_snowman_name">Orang salji</string>
+    <string name="town_deco_tree_name">Pokok</string>
+    <string name="town_deco_pathway_name">Lorong kecil</string>
+    <string name="town_deco_pathway_desc">Lorong kecil bersalji dengan bekas laluan.</string>
+
+    <string name="town_deco_stone_wall_name">Tembok batu</string>
+    <string name="town_deco_stone_wall_desc">Nampaknya tembok ini mengeluarkan haba kerana telah basah.</string>
+
+    <string name="town_deco_shop_sign_name">Tanda nama kedai</string>
+    <string name="town_deco_shop_sign_desc">Rupanya ada kedai lagi di dalam bangunan tersebut.</string>
+
+    <string name="town_deco_floor_name">Lantai</string>
+    <string name="town_deco_floor_desc">Lantai ini diperbuat daripada kepingan kayu biasa. Awak cari apa ya?</string>
+
+    <string name="town_deco_carpet_name">Permaidani</string>
+    <string name="town_deco_carpet_desc">Permaidani merah yang mewah khusus untuk tetamu istimewa.</string>
+
+    <string name="town_deco_movies_door_name">Pintu</string>
+    </resources>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="Welcome_Ok">Baiklah!</string>
+  <string name="Welcome_Title">Selamat Datang!</string>
+  <string name="Welcome_Text_20_1">
+        remix.20.1:\n
+        - Skrol Dominasi\n
+        - Skrol Sumpahan\n
+        </string>
+  <string name="Welcome_Text_20_2">
+        remix.21:\n
+        - Item Kekacauan jarang ditemui\n
+        - Nyalaan cecair kini sebenarnya sejenis cecair\n
+        </string>
+  <string name="Welcome_Text_21_1">
+        remix.21.1:\n
+        - Mod mudah (dengan iklan)\n
+        - Mod mahir\n
+        </string>
+  <string name="Welcome_Text_21_2">
+        remix.21.2:\n
+        - Keupayaan memilih mod permainan (hanya tukar kulit buat masa ini) ( Sesuai untuk pengubahsuai yang berpengalaman)\n
+        </string>
+  <string name="Welcome_Text_21_3">
+        remix.21.3:\n
+        - Mod mini PD tersedia untuk dimuat turun (belum selesai tetapi seronok main)\n
+        - Grafik Pembentung ditambahbaik
+        </string>
+  <string name="Welcome_Text_21_4">
+        remix.21.4:\n
+        - Senjata jarang ditemui - pedang korban
+        </string>
+  <string name="Welcome_Text_21_5">
+        remix.21.5:\n
+        - Ciri-ciri baharu untuk item lama
+        </string>
+  <string name="Welcome_Text_22">
+        remix.22:\n
+        - Bos tersembunyi baharu
+        </string>
+  <string name="Welcome_Text_23">
+        remix.23:\n
+        - Kurungan bawah tanah kini sedalam 32 aras (sebelum ini 26)\n
+        - Bos tersembunyi bergerak ke aras 25\n
+        - Macam-macam bos-mini yang lebih hebat untuk pertarungan akhir (selain dari 2 tumbukan, Yog kini boleh memilih sehinggaf 5 bos mini untuk dijelmakan)\n
+        - Tetapan dan raksaksa baharu untuk aras 27-31
+        </string>
+  <string name="Welcome_Text_23_1">
+        remix.23.1:\n
+        - Ada kedai, NPC dan pencarian baharu pada aras 27\n
+        - Raksaksa baharu dalam Sarang Hantu (27-31)\n
+        - Semua raksaksa dan bos pada aras 27-32 dan mereka mempunyai keupayaan menjadi lebih kuat\n
+		- Lencana bos dikemaskinikan\n
+		- Bebrapa penataran visual kecil\n
+		- Pelbagai pembaikian pepijat\n
+        </string>
+  <string name="Welcome_Text_23_2">
+        remix.23.2:\n
+        - Senjata dan perisai tahap 6 ditambah\n
+        - Busur silang ditambah\n
+        - Perisai Kekacauan ditambah\n
+        </string>
+  <string name="Welcome_Text_24">
+        remix.24:\n
+        - Kita ada Topi!(Item kemegahan dan solekan)\n
+        - Pelbagai pembaikan pepijat\n
+        - Terjemahan dikemaskini\n
+        </string>
+  <string name="Welcome_Text_25_3">
+        remix.25.3:\n
+        - Objek baharu ditambah: Tong letupan (diganti dengan labu ketika musim halloween)\n
+        - Muzik tulen ditambah dalam aras bos \n
+        - Item baharu: Pai labu\n
+        - NPC baharu: Orang-orang\n
+        - Item kemegahan dan solekan baharu: Topeng zombie, tengkorak pontianak dan topi Ushanka\n
+        </string>
+  <string name="Welcome_Text_26_3">
+        remix.26.3\n
+        - Pekan menjadi lebih besar\n
+        - Kedai dipekan kini menjual lebih banyak item\n
+        - Pencarian baharu di dalam Pekan\n
+        </string>
+</resources>

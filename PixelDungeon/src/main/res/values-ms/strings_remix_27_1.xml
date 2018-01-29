@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPortal_Title">Portal</string>
+    <string name="WndPortal_Info">Portal ini membolehkan anda balik ke pekan. Ia kelihatan tidak stabil, dan berkemungkinan menjadi tidak aktif pada bila-bila masa.\nAnda mahu gunakannya?</string>
+    <string name="WndPortal_Info_Return">Portal ini akan membawa anda kembali ke dalam kurungan bawah tanah.\nAnda mahu gunakannya?</string>
+
+    <string name="WndPortal_Warning_Title">Amaran Portal!</string>
+    <string name="WndPortal_Warning_Info">Anda masih belum guna portal dalam aras ini. Sekiranya anda keluar, anda tidak lagi dapat menggunakan portal ini!\nAnda pasti mahu keluar?</string>
+
+    <string name="PortalGate_Name">Portal</string>
+    <string name="PortalGate_Desc">Ukiran pada permukaan portal ini membentuk corak yang pelik. Ia kelihatan membentuk terowong gergasi yang menuju ke satu tempat. Jika dilihat dari dalam, kelihatan permukaannya seakan-akan rata.</string>
+    <string name="PortalGate_Desc_Activated">Portal merembes zirim yang bercahaya. Nampaknya masih stabil, walaupun seakan-akan bergelombang dari dalam.</string>
+
+    <string name="PortalGate_Activated">Portal purba telah hidup!</string>
+    <string name="PortalGate_Used">Anda menyentuh portal dan... tiada apa-apa berlaku.</string>
+
+    <string name="PortalExit_Desc">Portal ini akan membawa anda ke aras pertama %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Sarang Lelabah</string>
+    <string name="PortalExit_Desc_Necropolis">Nekropolis</string>
+    <string name="PortalExit_Desc_IceCaves">Gua Ais</string>
+
+
+    <!-- Buffs -->
+    <!-- STRINGS OF Devour CLASS -->
+    <string name="Devour_Buff">Baham</string>
+
+    <!-- STRINGS OF StoneBlood CLASS -->
+    <string name="StoneBlood_Buff">Darah batu</string>
+</resources>

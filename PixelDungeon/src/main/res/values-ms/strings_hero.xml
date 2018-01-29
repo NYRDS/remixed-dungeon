@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">anda</string>
+  <string name="Hero_Name_Objective">anda</string>
+  <string name="Hero_Leave">Anda tidak sepatutnya tinggalkan Pixel Dungeon begitu sahaja.</string>
+  <string name="Hero_LevelUp">tahap meningkat!</string>
+  <string name="Hero_NewLevel">Selamat datang ke aras %d! Sekarang anda lebih sihat dan lebih fokus. Lebih mudah anda menyerang pihak musuh dan mengelak serangan mereka.</string>
+  <string name="Hero_YouNowHave">Anda kini mempunyai %s</string>
+  <string name="Hero_SomethingElse">Ada sesuatu di sini</string>
+  <string name="Hero_LockedChest">Peti ini dikunci dan anda tidak mempunyai kunci yang sesuai</string>
+  <string name="Hero_LockedDoor">Anda tidak mempunyai kunci yang sesuai</string>
+  <string name="Hero_NoticedSmth">Anda terasa ada sesuatu</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">cari</string>
+  <string name="Hero_StaBurning">Anda disambar api!</string>
+  <string name="Hero_StaParalysis">Anda menjadi kaku!</string>
+  <string name="Hero_StaPoison">Anda terkena racun!</string>
+  <string name="Hero_StaOoze">Lendir kaustik mengakis badan anda. Basuh sekarang juga!</string>
+  <string name="Hero_StaRoots">Anda tidak dapat bergerak!</string>
+  <string name="Hero_StaWeakness">Anda berasa lemah!</string>
+  <string name="Hero_StaBlindness">Anda menjadi buta!</string>
+  <string name="Hero_StaFury">Anda menjadi marah!</string>
+  <string name="Hero_StaFurious">marah</string>
+  <string name="Hero_StaCharm">Anda telah dipukau!</string>
+  <string name="Hero_StaCripple">Anda telah dilumpukan!</string>
+  <string name="Hero_StaBleeding">Anda berdarah!</string>
+  <string name="Hero_StaVertigo">Anda menjadi keliru dan seolah-olah sekeliling anda berpusing!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">satria</string>
+  <string name="HeroClass_Mag">ahli sihir</string>
+  <string name="HeroClass_Rog">gasar</string>
+  <string name="HeroClass_Hun">pemburu</string>
+  <string name="HeroClass_Elf">bunian</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Satria bermula dengan 11 mata Kekuatan.</item>
+    <item>Satria bermula dengan pedang pendek yang unik. Pedang ini boleh \"ditempa semula\" kemudian untuk ditatar menjadi senjata tempur yang lain.</item>
+    <item>Satria kurang cekap mengendalikan senjata bermisil.</item>
+    <item>Apa jua jenis makanan dapat memulihkan tenaga hayat bila dimakan.</item>
+    <item>Posyen Kekuatan sudah dapat dikenal pasti pada awal pengembaraan.</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Ahli sihir bermula dengan Tongkat Sakti Misil Ajaib. Tongkat sakti ini boleh \"dinyahsihirkan\" supaya dapat ditatar menjadi tongkat sakti lain.</item>
+    <item>Ahli sihir dapat mengecas semula tongkat sakti mereka lebih pantas.</item>
+    <item>Bila makan, apa jua makanan dapat memulihkan 1 cas untuk semua jenis tongkat sakti di dalam simpanan.</item>
+    <item>Ahli sihir oleh gunakan tongkat sakti sebagai senjata tempur.</item>
+    <item>Skrol pengecaman dapat dikenal pasti pada awal pengembaraan.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Gasar bermula dengan Cincin Bayang+1.</item>
+    <item>Gasar boleh mengenal pasti jenis cincin setelah disarung ke jari.</item>
+    <item>Gasar cekap dengan perisai ringan, dapat mengelak dengan baik ketika memakainya.</item>
+    <item>Gasar cekap mengesan pintu dan perangkap tersembunyi.</item>
+    <item>Gasar dapat bertahan lebih lama tanpa makanan.</item>
+    <item>Skrol Pemetaan Ajaib boleh dikenal pasti pada awal pengembaraan.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Pemburu bermula dengan 15 mata Hayat.</item>
+    <item>Pemburu bermula dengan boomerang boleh ditatar yang unik.</item>
+    <item>Pemburu cekap mengendalikan senjata misil dan mendapat bonus kecederaan atas kekuatan luar biasa ketika menggunakannya.</item>
+    <item>Pemburu memperoleh lebih tenaga hayat daripada titisan embun.</item>
+    <item>Pemburu dapat merasakan kehadiran raksaksa berhampiran walaupun ia tersembunyi disebalik halangan.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Bunian bermula dengan 15 mata Hayat dan 9 mata Kekuatan.</item>
+    <item>Bunian kebal dengan pengakaran.</item>
+    <item>Bunian bermula dengan busur kayu boleh ditatar berserta sejumlah anak panah.</item>
+    <item>Bunian sangat cekap dengan busur dan lincah.</item>
+    <item>Bunian kurang cekap menggunakan senjata tempur.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladiator</string>
+  <string name="HeroSubClass_DescGlad">Serangan berjaya dengan senjata jarak dekat membolehkan _Gladiator_ memulakan satu kombo, dimana bagi setiap pukulan yang berjaya dapat hasilkan lebih banyak kecederaan.</string>
+  <string name="HeroSubClass_NameBers">berserker</string>
+  <string name="HeroSubClass_DescBers">Jika mendapat cedera parah, _Berserker_ menjadi marah gila yang dapat meningkatkan output kecederaan yang dikenakan kepada pihak musuh.</string>
+  <string name="HeroSubClass_NameWarL">dukun</string>
+  <string name="HeroSubClass_DescWarL">Selepas membunuh musuh _Dukun_ memakan rohnya. Ia dapat menyembuhkan kecederaan dan memuaskan nafsu laparnya.</string>
+  <string name="HeroSubClass_NameBatM">ahli sihir perang</string>
+  <string name="HeroSubClass_DescBatM">Bila berlawan dengan tongkat sakti ditangannya, _Ahli Sihir Perang_ menambah kecederaan tambahan tetapi bergantung pada bilangan cas semasa. Setiap pukulan yang berjaya dapat memulihkan 1 cas pada tongkat saktinya.</string>
+  <string name="HeroSubClass_NameAssa">pembunuh</string>
+  <string name="HeroSubClass_DescAssa">Ketika melakkan serangan mengejut, _Pembunuh_ menambah lagi kecederaan tambahan kepada sasarannya.</string>
+  <string name="HeroSubClass_NameFreR">pelari bebas</string>
+  <string name="HeroSubClass_DescFreR">_Pelari Bebas_ dapat bergerak dua kali ganda lebih cepat berbanding kebanyakan raksaksa. Ketika berlari, beliau lebih sukar dipukul. Untuk kelebihan ini beliau tidak boleh terlebih beban dan tidak berada dalam keadaan kelaparan.</string>
+  <string name="HeroSubClass_NameSnip">penembak hendap</string>
+  <string name="HeroSubClass_DescSnip">_Penembak Hendap_ dapat mengenalpasti titik lemah pada perisai pihak musuh, dan dapat menembusi perisai jika menggunakan senjata bermisil.</string>
+  <string name="HeroSubClass_NameWard">pelindung</string>
+  <string name="HeroSubClass_DescWard">Oleh kerana ada hubungan istimewa dengan alam membolehkan _Pelindung_ ada keupayaan mengumpul titisan embun dan benih tumbuhan. Kebolehan mengayam lalang, dapat menghasilkan perisai berwarna kuning buat sementara.</string>
+  <string name="HeroSubClass_NameScout">peninjau</string>
+  <string name="HeroSubClass_DescScout">_Peninjau_ Bunian adalah pakar dalam penyelinapan. Pengayaman lalang membolehkan mereka hasilkan halimunan buat sementara. Mereka juga lebih pantas berbanding Bunian biasa.</string>
+  <string name="HeroSubClass_NameShaman">pawang</string>
+  <string name="HeroSubClass_DescShaman">_Pawang_ Bunian boleh menggunakan tongkat sakti sebagai senjata jarak dekat. Serangan yang berjaya dapat peluang mengaktifkan kuasa tongkat sakti pada sasaran tanpa perlu mengecas.</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Item descriptions -->
+    <!-- STRINGS OF WandOfShadowbolt CLASS -->
+    <string name="WandOfShadowbolt_Name">tongkat sakit panahan bayang</string>
+    <string name="WandOfShadowbolt_Info">Tongkat sakti ini memancarkan tenaga gelap yang jahat.</string>
+</resources>

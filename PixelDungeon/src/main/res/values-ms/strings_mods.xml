@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="Mods_CreatedBy">Dicipta oleh:</string>
+  <string name="Mods_AuthorSite">Laman pengarang:</string>
+  <string name="Mods_AuthorEmail">Emel pengarang:</string>
+  <string name="Mods_RestartRequired">Mula semula diperlukan</string>
+</resources>

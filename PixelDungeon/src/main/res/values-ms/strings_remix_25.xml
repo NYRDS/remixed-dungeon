@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF SpiderArmor CLASS -->
+    <string name="SpiderArmor_Name">perisai lelabah</string>
+    <string name="SpiderArmor_Info">Perisai ini diperbuat dari bangkai labah-labah tua dan beberapa kain pelik. Menakjubkan, ia masih ada spineret yang berfungsi. Jika anda kenakan tekanan ia dapat tembak benang sarang labah-labah. Permukaan tapak but yang runcing membolehkan anda bergerak di atas sarang labah-labah dengan mudah.</string>
+    <string name="SpiderArmor_Gender">feminin</string>
+
+    <!-- STRINGS OF BlackSkull CLASS -->
+    <string name="BlackSkull_Name">tengkorak hitam</string>
+    <string name="BlackSkull_Info">Sebuah tengkorak obsidian kecil. Ia merupakan sumber kuasa Necropolis, tetapi selepas Lich dikalahkan ia kehilangan semua kuasanya. Tetapi jika anda memegangnya satu tanggapan pelik melintasi minda anda: \"Aku lapar\".</string>
+    <string name="BlackSkull_Gender">maskulin</string>
+
+    <string name="BlackSkull_Name_Awakened">tengkorak hitam hidup</string>
+    <string name="BlackSkull_Info_Awakened">Tengkorak berdenyut-denyut dengan kuasa, anda dapat lihat ia keluar dari soket mata tengkorak. Jika anda memegangnya dapat mendengar suara menakutkan: \"Kawat maut:</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">serpihan roh</string>
+    <string name="SoulShard_Info">Merupakan serpihan yang anda ambil dari saki-baki Pasu Roh. Ia bercahaya dengan tenaga mistik, mungkin ada orang meminati benda ini.</string>
+    <string name="SoulShard_Gender">maskulin</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF DeathKnight CLASS -->
+    <string name="DeathKnight_Name">kesatria kematian</string>
+    <string name="DeathKnight_Gender">maskulin</string>
+    <string name="DeathKnight_Name_Objective">kesatria kematian</string>
+    <string name="DeathKnight_Desc">Sekali pandang seperti seorang pahlawan dengan perisai lengkap, tetapi dengan ngilaian rangka manusia, Kesatria Kematian adalah manifestasi semangat kesatria yang mungkir janjinya. Oleh itu sumpahan yang dikenakan padanya menyebabkan dia merayau buat selama-lamanya, mencari jalan untuk membersihkan nama ketika bertempur, membunuh orang yang tidak bersalah, dan lupa akan tugasnya adalah untuk melindungi orang lain.</string>
+
+    <!-- STRINGS OF DreadKnight CLASS -->
+    <string name="DreadKnight_Name">kesatria digeruni</string>
+    <string name="DreadKnight_Gender">maskulin</string>
+    <string name="DreadKnight_Name_Objective">kesatria digeruni</string>
+    <string name="DreadKnight_Desc">Kesatria digeruni ialah seorang satria purba, yang tidak pernah bersikap baik atau berakhlak mulia sepanjang hidupnya. Oleh kerana dosa-dosa lampaunya dia disumpah berada dalam jasad hidup semula buat selama-lamanya. Setiap kali kemunculannya yang terkutuk, dia akan diseksa dengan kesakitan dan kesengsaraan yang pernah dilakukan pada mangsa-mangsanya.</string>
+
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">roh hamba</string>
+    <string name="EnslavedSoul_Gender">feminin</string>
+    <string name="EnslavedSoul_Name_Objective">roh hamba</string>
+    <string name="EnslavedSoul_Desc">Anda dapat melihat penjelmaan hantu ini. Kadangkala seakan-akan tengkorak, kemudian muncul wajah tetapi rupa sengsara dan terseksa.</string>
+
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">tengkorak meledak</string>
+    <string name="ExplodingSkull_Gender">maskulin</string>
+    <string name="ExplodingSkull_Name_Objective">tengkorak meledak</string>
+    <string name="ExplodingSkull_Desc">Tengkorak terbakar yang terapung ini kelihatan sangat rapuh, seakan-akan ia akan meledak pada bila-bila masa.</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">pasu roh</string>
+    <string name="JarOfSouls_Gender">maskulin</string>
+    <string name="JarOfSouls_Name_Objective">pasu roh</string>
+    <string name="JarOfSouls_Desc">Ada mata tengkorak bercahaya digambarkan atas pasu lama ini, begitu juga tenaga misteri yang dikeluarkannya, menjadikan anda rasa tidak senang.</string>
+
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">lich</string>
+    <string name="Lich_Gender">maskulin</string>
+    <string name="Lich_Name_Objective">lich</string>
+    <string name="Lich_Desc">Necromancer telah menemui ajalnya di dalam Necropolis, dan tenaga kejahatan tempat ini telah masuk ke dalam jasadnya, dia menjelma sebagai Lich. Iaitu ahli sihir hidup semula, patung hidup tanpa kemahuan, yang dikawal oleh kuasa jahat.</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">tengkorak runik</string>
+    <string name="RunicSkull_Gender">maskulin</string>
+    <string name="RunicSkull_Name_Objective">tengkorak runik</string>
+    <string name="RunicSkull_Desc">Tengkorak tiruan yang menyerupai yang asli. Anda dapat melihat ada cahaya yang mengelilinginya.</string>
+
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">zombi</string>
+    <string name="Zombie_Gender">maskulin</string>
+    <string name="Zombie_Name_Objective">zombi</string>
+    <string name="Zombie_Desc">Kurungan bawah tanah adalah tempat merbahaya dan ramai pengembara telah menemui maut di dalamnya. Yang paling malang menemui ajal di Nekropolis, kini mereka kekal di dalam kurungan bawah tanah dalam bentuk mayat hidup yang mereput.</string>
+
+    <!-- STRINGS OF NecromancerNPC CLASS -->
+    <string name="NecromancerNPC_Intro2">Hmm! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, saya adalah seorang necromancer. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya ke mari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlaku. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, kita berada betul-betul di hadapan pintu masuk. Baiklah, ambil kunci ini dan pergi dulu, maksud saya awak suka cabaran dan khazanah di dalamnya? Saya ikut di belakang awak, cuma saya perlu bersiap siaga.</string>
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">Lich telah dibunuh</string>
+
+</resources>

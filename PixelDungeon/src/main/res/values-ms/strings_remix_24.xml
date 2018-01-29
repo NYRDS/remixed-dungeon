@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+	<!-- Accessories descriptions -->
+	<!-- STRINGS OF BowTie CLASS -->
+    <string name="Bowknot_Name">Simpulan Tali Leher</string>
+    <string name="Bowknot_Info">Reben warna merah jambu berkilauan yang dikat simpul dan dilekat dengan pin rambut.</string>
+	
+	<!-- STRINGS OF Shades CLASS -->
+    <string name="Shades_Name">Bayang</string>
+    <string name="Shades_Info">Sesetengah orang kata kurungan bawah tanah terlalu gelap dan tidak nampak jika memakainya. Anda rasa orang itu memang tidak reti tentang fesyen terkini.</string>
+	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Capotain</string>
+    <string name="Capotain_Info">Topi bertepi lebar dan tinggi. Ia dikaitkan dengan orang alim, tetapi tidak perlu tahu selok-belok agama untuk memakainya. Atas sebab tertentu ia mempunyai tanda nama, iaitu \"Sulaiman\".</string>
+	
+	<!-- STRINGS OF Fez CLASS -->
+    <string name="Fez_Name">Fez</string>
+    <string name="Fez_Info">Hiasan kepala yang dibentuk seperti kon yang diperbuat dari bulu biri-biri merah, dengan rumbai di atasnya. Tidak sesekali, menjadikan dunia ini 3-dimensi.</string>
+	
+	<!-- STRINGS OF NekoEars CLASS -->
+    <string name="NekoEars_Name">Telinga Kucing</string>
+    <string name="NekoEars_Info">Kadangkala anda mahu bersihkan diri dari darah dan kotoran raksaksa dan menjadi kiut miut dan gebu... Atau pun sekurang-kurangnya anda boleh memakai telinga kucing yang comel ini.</string>
+	
+	<!-- STRINGS OF RabbitEars CLASS -->
+    <string name="RabbitEars_Name">Telinga Arnab</string>
+    <string name="RabbitEars_Info">Sememangnya diketahui arnab adalah haiwan yang membawa tuah, dan tuah tersebut boleh diperoleh jika memiliki sebahagian dari bahagian arnab. Sebaliknya dibunuh dan dijadikan hiasan tidak semestinya bertuah kann?</string>
+	
+	<!-- STRINGS OF Pumpkin CLASS -->
+    <string name="Pumpkin_Name">Labu</string>
+    <string name="Pumpkin_Info">Pada zaman dahulu orang Labu mempunyai kerajaan yang makmur dan membanggakan. Tetapi selepas manusia datang segalanya telah hancur musnah. Dan ukiran kepala puak Labu yang telah lama pupus dijadikan sebagai peringatan atas kejadian yang menakutkan itu.</string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">Topi Malam</string>
+    <string name="Nightcap_Info">Menakluki kurungan bawah tanah pada waktu malam adalah pekerjaan yang sangat memenatkan. Oleh yang demikian apa kata pakai topi serkup yang panas dan menenangkan ini supaya semua kerisauan anda dapat dilupakan.</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">Topi Ahli Sihir</string>
+    <string name="WizardHat_Info">Topi sutera yang cantik dengan hiasan bintang-bintang di atasnya. Pada zaman dahulu, ada orang percaya ahli sihir yang terkenal telah mencipta pakaian yang dapat tingkatkan kuasa sihir mereka. Sebenarnya ia adalah cerita palsu yang tidak memberikan apa-apa makna jika memakainya.</string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">Senarai Aksesori</string>
+    <string name="WndHats_SlotTitle">Dipakai</string>
+    <string name="WndHats_NoConnectionMsg">Tidak boleh sambung dengan Google Play.</string>
+    <string name="WndHats_Purchased">Faham!</string>
+
+    <string name="WndHats_BackButton">Undur</string>
+    <string name="WndHats_BuyButton">Beli</string>
+    <string name="WndHats_EquipButton">Pakai</string>
+    <string name="WndHats_InfoButton">Periksa</string>
+    <string name="WndHats_UnequipButton">Tanggalkan</string>
+</resources>

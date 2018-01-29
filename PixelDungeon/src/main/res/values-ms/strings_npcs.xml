@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /mobs/npcs-->
+  <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_GetLost">Saya sibuk. Pergi berambus!</string>
+  <string name="Blacksmith_Verify1">Pilih 2 item berbeza, bukan dua item yang serupa!</string>
+  <string name="Blacksmith_Verify2">Pilih 2 item bagi jenis yang sama!</string>
+  <string name="Blacksmith_Verify6">Saya tidak boleh tempa semula item ini!</string>
+  <!--STRINGS OF Ghost CLASS-->
+  <string name="Ghost_Name">hantu sedu</string>
+  <string name="Ghost_Desc">Hantu hanya separa kelihatan. Ia seakan-akan cahaya pudar tanpa bentuk dengan rupa sedih.</string>
+  <string name="Ghost_Rose2">Tolong... Bantulah saya... Cari bunga mawar...</string>
+  <string name="FetidRat_Name">tikus kohong</string>
+  <string name="FetidRat_Name_Objective">tikus kohong</string>
+  <string name="FetidRat_Gender">feminin</string>
+  <!--STRINGS OF Hedgehog CLASS-->
+  <string name="Hedgehog_Name">landak kecil</string>
+  <string name="Hedgehog_Desc">Landak kecil nampaknya ketakutan.</string>
+  <string name="Hedgehog_Info1">Adakah anda mancari seekor Beruang?</string>
+  <string name="Hedgehog_Info4">Ambil pai ini</string>
+  <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Hey">Psst, %s!</string>
+  <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Greetings">Hai, sahabat!</string>
+  <!--STRINGS OF MirrorImage CLASS-->
+  <string name="MirrorImage_Name">imej cermin</string>
+  <string name="MirrorImage_Name_Objective">imej cermin</string>
+  <string name="MirrorImage_Gender">maskulin</string>
+  <!--STRINGS OF RatKing CLASS-->
+  <string name="RatKing_Name">raja tikus</string>
+  <string name="RatKing_Desc">Raja tikus ini lebih besar dari tikus marsupial biasa dan ia memakai mahkota kecil di atas kepalanya.</string>
+  <string name="RatKing_Info1">Saya tidak tidur!</string>
+  <!--STRINGS OF Shopkeeper CLASS-->
+  <string name="Shopkeeper_Name">pekedai</string>
+  <string name="Shopkeeper_Sell">Pilih satu item untuk dijual</string>
+  <!--STRINGS OF WandMaker CLASS-->
+  <string name="WandMaker_Name">pembuat tongkat sakti tua</string>
+</resources>

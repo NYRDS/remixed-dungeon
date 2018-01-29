@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/scrolls-->
+  <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_ACRead">BACA</string>
+  <string name="Scroll_Blinded">Anda tidak boleh membaca skrol kerana tidak nampak</string>
+  <string-array name="Scroll_Runes">
+    <item>KAUNAN</item>
+    <item>SOWILO</item>
+    <item>LAGUZ</item>
+    <item>YNGVI</item>
+    <item>GYFU</item>
+    <item>RAIDO</item>
+    <item>ISAZ</item>
+    <item>MANNAZ</item>
+    <item>NAUDIZ</item>
+    <item>BERKANAN</item>
+    <item>ODAL</item>
+    <item>TIWAZ</item>
+    <item>ANSUZ</item>
+    <item>IWAZ</item>
+    <item>ALGIZ</item>
+    <item>DAGAZ</item>
+  </string-array>
+  <!--STRINGS OF InventoryScroll CLASS-->
+  <string name="InventoryScroll_Title">Pilih satu item</string>
+  <!--STRINGS OF BlankScroll CLASS-->
+  <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <!--STRINGS OF ScrollOfTerror CLASS-->
+  <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <!--STRINGS OF ScrollOfDomination CLASS-->
+  <!--STRINGS OF ScrollOfCurse CLASS-->
+</resources>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--PACKAGE /items/weapon-->
+  <!--STRINGS OF Weapon CLASS-->
+  <!--PACKAGE /weapon/Enchantment-->
+  <!--STRINGS OF Death CLASS-->
+  <!--STRINGS OF Fire CLASS-->
+  <!--STRINGS OF Horror CLASS-->
+  <string-array name="Horror_Name">
+    <item>Eldritch %s</item>
+    <item>Eldritch %s</item>
+    <item>Eldritch %s</item>
+  </string-array>
+  <!--STRINGS OF Instability CLASS-->
+  <!--STRINGS OF Leech CLASS-->
+  <!--STRINGS OF Luck CLASS-->
+  <!--STRINGS OF Paralysis CLASS-->
+  <!--STRINGS OF Piercing CLASS-->
+  <!--STRINGS OF Poison CLASS-->
+  <!--STRINGS OF Slow CLASS-->
+  <!--STRINGS OF Swing CLASS-->
+  <!--PACKAGE /weapon/melee-->
+  <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1b">a</string>
+  <string name="MeleeWeapon_Info3b">pantas</string>
+  <string name="MeleeWeapon_Info3c">perlahan</string>
+  <string name="MeleeWeapon_Info3d">dan</string>
+  <string name="MeleeWeapon_Info3e">tetapi</string>
+  <string name="MeleeWeapon_Info3f">tepat</string>
+  <string name="MeleeWeapon_Info3g">tidak tepat</string>
+  <string name="MeleeWeapon_Info4a">Ia diseimbangkan supaya menjadi lebih pantas.</string>
+  <string name="MeleeWeapon_Info4b">Ia diseimbangkan supaya menjadi lebih tepat.</string>
+  <string name="MeleeWeapon_Info5">Ia telah disihirkan.</string>
+  <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Gender">maskulin</string>
+  <!--STRINGS OF Dagger CLASS-->
+  <string name="Dagger_Name">pisau</string>
+  <string name="Dagger_Info">Sejenis pisau logam biasa dan mempunyai hulu kayu yang telah lusuh.</string>
+  <string name="Dagger_Gender">maskulin</string>
+  <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Gender">feminin</string>
+  <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Gender">maskulin</string>
+  <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Gender">maskulin</string>
+  <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Gender">feminin</string>
+  <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Gender">maskulin</string>
+  <!--STRINGS OF ShortSword CLASS-->
+  <string name="ShortSword_Name">pedang pendek</string>
+  <string name="ShortSword_Info">Walaupun ia sememangnya pendek, tetapi ia beberapa inci lebih panjang berbanding pisau.</string>
+  <string name="ShortSword_ACReforge">TEMPA SEMULA</string>
+  <string name="ShortSword_Select">Pilih satu senjata untuk ditatarkan</string>
+  <string name="ShortSword_Gender">maskulin</string>
+  <!--STRINGS OF Spear CLASS-->
+  <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Gender">maskulin</string>
+  <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Gender">maskulin</string>
+  <!--PACKAGE /weapon/missiles-->
+  <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang perlu dibuat</string>
+  <string name="MissileWeapon_No">Tidak, Saya ubah pendirian saya</string>
+  <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Gender">maskulin</string>
+  <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Gender">maskulin</string>
+  <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Gender">maskulin</string>
+  <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Gender">maskulin</string>
+  <!--STRINGS OF Javelin CLASS-->
+  <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Gender">maskulin</string>
+  <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Gender">maskulin</string>
+  <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Gender">feminin</string>
+  <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Gender">maskulin</string>
+  <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Gender">maskulin</string>
+  <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Gender">maskulin</string>
+  <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Gender">maskulin</string>
+</resources>

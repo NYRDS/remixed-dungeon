@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--Mobs-->
+  <!--STRINGS OF AzuterronNPC CLASS-->
+  <string name="AzuterronNPC_Name">Orang Asing</string>
+  <string name="AzuterronNPC_Gender">maskulin</string>
+  <string name="AzuterronNPC_Name_Objective">Orang Asing</string>
+  <string name="AzuterronNPC_Desc">FIgura misteri yang diselubungi dengan kabut hitam.</string>
+  <string name="AzuterronNPC_Quest_Start">Haa, kenapa... alamak, awak boleh lihat saya, betul ke ni? Maknanya awak bukanlah salah seorang dari \"mereka\". Hmm awak juga tidak suka dengan raksaksa-raksaksa. Boleh tak tolong saya, nanti saya akan bantu apa yang saya mampu. Pada suatu tempat dalam aras ini, awak akan berjumpa dengan binatang kegelapan, iaitu _Hantu Khianat_. Bunuh dia, ambil _hatinya_ dan beri pada saya. Satu lagi, jika awak mahu membeli bekalan saya, saya akan jual dengan senang hati</string>
+  <string name="AzuterronNPC_Quest_Reminder">Bantu saya dan saya akan bantu anda kelak.</string>
+  <string name="AzuterronNPC_Quest_End">Bagus. Ambil posyen ini, sudah pasti anda mendapat manafaat darinya.</string>
+  <string name="Journal_Azuterron">Orang Asing</string>
+  <!--STRINGS OF TreacherousSpirit CLASS-->
+  <string name="TreacherousSpirit_Name">Hantu khianat</string>
+  <string name="TreacherousSpirit_Gender">maskulin</string>
+  <string name="TreacherousSpirit_Name_Objective">Hantu khianat</string>
+  <string name="TreacherousSpirit_Desc">Makhluk seperti raksaksa ini menyerupai awan hidup kegelapan. Mata yang tidak berkelip memandang anda, berdenyut-denyut bila melihat anda bergerak.</string>
+  <!--STRINGS OF SpiritOfPain CLASS-->
+  <string name="SpiritOfPain_Name">hantu sengsara</string>
+  <string name="SpiritOfPain_Gender">maskulin</string>
+  <string name="SpiritOfPain_Name_Objective">hantu sengsara</string>
+  <string name="SpiritOfPain_Desc">Serpihan kegelapan yang hidup.</string>
+  <!--STRINGS OF SuspiciousRat CLASS-->
+  <string name="SuspiciousRat_Name">Tikus meragukan</string>
+  <string name="SuspiciousRat_Gender">feminin</string>
+  <string name="SuspiciousRat_Name_Objective">Tikus meragukan</string>
+  <string name="SuspiciousRat_Desc">Tikus berada dimana-dalam dalam kurungan bawah tanah ini, tetapi yang ini pelik... Anda dapati keseluruhan badannya bergetar bila ia bergerak.</string>
+  <string name="SuspiciousRat_Info1">Tikus yang meragukan itu melibas-libaskan ekornya dengan kuat.</string>
+  <!--STRINGS OF PseudoRat CLASS-->
+  <string name="PseudoRat_Name">Tikus-palsu</string>
+  <string name="PseudoRat_Gender">feminin</string>
+  <string name="PseudoRat_Name_Objective">Tikus-palsu</string>
+  <string name="PseudoRat_Desc">Seekor makhluk yang menakutkan keluar dari bangkai tikus yang tidak menyerupai pun seekor tikus atau lain-lain haiwan yang anda pernah lihat. Mulut bersaiz besar, giginya tajam, yang lebih besar dari badannya.</string>
+  <!--STRINGS OF ZombieGnoll CLASS-->
+  <string name="ZombieGnoll_Info">Zombie-Gnoll telah hidup kembali!</string>
+  <!--Items-->
+  <!--STRINGS OF HeartOfDarkness CLASS-->
+  <string name="HeartOfDarkness_Name">Hati kegelapan</string>
+  <string name="HeartOfDarkness_Info">Hati hitam Hantu Khianat yang berdenyut-denyut </string>
+  <!--Buffs-->
+  <!--STRINGS OF DarkVeil CLASS-->
+  <string name="DarkVeil_Buff">Selubung gelap</string>
+  <!--Badges-->
+  <string name="Badges_Yog_Slain">Yog-Dzewa telah dibunuh</string>
+  <string name="Badges_ShadowLord_Slain">Hulubalang bayang telah dibunuh</string>
+  <string name="Badges_SpiderQueen_Slain">Permaisuri Lelabah telah dibunuh</string>
+</resources>

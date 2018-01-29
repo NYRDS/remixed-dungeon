@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="HeroClass_Gnoll">Gnoll</string>
+    <string name="GnollArmor_ACSpecial">DOMINASI</string>
+    <string name="GnollArmor_NotGnoll">Hanya gnoll boleh memakai Perisai Gnoll!</string>
+    <string name="GnollArmor_Info">Pemakai suit Leftenan-Gnoll diketahui berkeupayaan memujuk kelompok-rusuh yang terlalu marah menjadi pengikut setia Raja.</string>
+
+    <string name="WndPlayGames_BackupProgress">Sandar Kemajuan Permainan</string>
+    <string name="WndPlayGames_RestoreProgress">Pulihkan Kemajuan Permainan</string>
+    <string name="WndPlayGames_WorkInCloud">Memproses Awan... Tinggu sebentar.</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>Gnoll bermula dengan tahap kekuatan 17</item>
+        <item>Gnoll bermula dengan tahap hayat 5</item>
+        <item>Gnoll bermula tanpa memakai apa-apa perisai</item>
+        <item>Gnoll tidak reti membaca</item>
+        <item>Gnoll tidak menyerang Gnoll lain sehinggalah dia diprovokasi.</item>
+     </string-array>
+</resources>
