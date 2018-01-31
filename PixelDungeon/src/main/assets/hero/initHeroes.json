@@ -131,7 +131,7 @@
   },
   "GNOLL": {
     "weapon": {
-      "kind": "Tamahawk",
+      "kind": "GnollTamahawk",
       "identified": true
     },
     "armor": {
@@ -160,7 +160,7 @@
       "Brute",
       "Shielded"
     ],
-    "str": 17,
+    "str": 15,
     "hp": 5
   }
 }

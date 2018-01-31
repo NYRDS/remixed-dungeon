@@ -404,6 +404,7 @@ public class ItemFactory {
 		registerItemClass(ScrollOfSummoning.class);
 
 		registerItemClass(GnollArmor.class);
+		registerItemClass(GnollTamahawk.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

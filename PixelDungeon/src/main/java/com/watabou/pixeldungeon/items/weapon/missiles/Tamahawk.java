@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -49,12 +47,7 @@ public class Tamahawk extends MissileWeapon {
 		super.proc( attacker, defender, damage );
 		Buff.affect( defender, Bleeding.class ).set( damage );
 	}	
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Tamahawk_Info);
-	}
-	
+
 	@Override
 	public Item random() {
 		quantity(Random.Int( 5, 12 ));

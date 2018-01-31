@@ -76,7 +76,7 @@ public class Bones {
 			OutputStream output = FileSystem.getOutputStream(BONES_FILE);
 			Bundle.write( bundle, output );
 			output.close();
-		} catch (IOException e) {
+		} catch (IOException ignored) {
 
 		}
 	}
