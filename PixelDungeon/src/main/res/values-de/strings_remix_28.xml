@@ -4,11 +4,15 @@
     <string name="HeroClass_Gnoll">Gnoll</string>
     <string name="GnollArmor_ACSpecial">BEHERSCHEN</string>
     <string name="GnollArmor_NotGnoll">Nur Gnolle können Gnollrüstung tragen!</string>
+
     <string name="GnollArmor_Info">Träger des Gnoll-Lieutenant Anzuges sind für ihre Fähigkeit bekannt, sogar extrem wütende Monster zu Überreden loyale Diener der Krone zu werden.</string>
 
     <string name="WndPlayGames_BackupProgress">Sichere Spielfortschritt</string>
     <string name="WndPlayGames_RestoreProgress">Lade Spielfortschritt</string>
     <string name="WndPlayGames_WorkInCloud">Arbeit in der Cloud... Bitte warten.</string>
+    <string name="StartScene_UnlockGnoll">Um diese Klasses freizuschalten musst du den Stadt-Heiler davon überzeugen den Gnoll-Schläger zu heilen</string>
+    <string name="WndPriest_Heal_Minions">Heile alle deine Minions - Nur %d Gold!</string>
+    <string name="Badges_GnollUnlocked">Gnoll freigeschaltet</string>
 
     <string-array name="HeroClass_GnollPerks">
         <item>Gnolle starten mit 17 Stärkepunkten</item>

@@ -26,29 +26,29 @@
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
   <string name="WandOfAmok_Name">Zauberstab des Amoklaufs</string>
-  <string name="WandOfAmok_Info">Das blutrote Licht dieses Zauberstabs lässt das Ziel amoklaufen, sodass es alle Kreaturen in Reichweite angreift.</string>
-  <string name="WandOfAmok_Info1">Es passierte nichts</string>
+  <string name="WandOfAmok_Info">Das blutrote Licht dieses Zauberstabs lässt das Ziel Amoklaufen, sodass es alle Kreaturen in Reichweite angreift.</string>
+  <string name="WandOfAmok_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfAvalanche CLASS-->
   <string name="WandOfAvalanche_Name">Zauberstab der Lawine</string>
-  <string name="WandOfAvalanche_Info">Wenn eine Ladung dieses Zauberstabs auf eine Wand trifft (oder ein anderes Hinderniss), entsteht eine Steinlawine die allen Kreaturen im Effektbereich Schaden zufügt und betäubt.</string>
+  <string name="WandOfAvalanche_Info">Wenn eine Ladung dieses Zauberstabs auf eine Wand trifft (oder ein anderes Hinderniss), entsteht eine Felslawine die allen Kreaturen im Effektbereich Schaden zufügt und betäubt.</string>
   <string name="WandOfAvalanche_Info1">Du hast dich mit dem Zauberstab der Lawine selbst getötet...</string>
   <!--STRINGS OF WandOfBlink CLASS-->
-  <string name="WandOfBlink_Name">Zauberstab des Blinkens</string>
-  <string name="WandOfBlink_Info">Dieser Zauberstab erlaubt es dir, dich in eine gewünschte Richtung zu teleportieren. Kreaturen und Hindernisse blocken den Teleport.</string>
+  <string name="WandOfBlink_Name">Zauberstab des Blinzelns</string>
+  <string name="WandOfBlink_Info">Dieser Zauberstab erlaubt es dir, dich in eine gewünschte Richtung zu teleportieren. Kreaturen und Hindernisse blockieren die Teleportation.</string>
   <!--STRINGS OF WandOfDisintegration CLASS-->
-  <string name="WandOfDisintegration_Name">Zauberstab der Auflösung</string>
-  <string name="WandOfDisintegration_Info">Dieser Zauberstab erzeugt einen Strahl destruktiver Energie, welcher durch alle Kreaturen geht. Je mehr Ziele vom Strahl getroffen werden, umso größer der verursachte Schaden.</string>
+  <string name="WandOfDisintegration_Name">Zauberstab der Zersetzung</string>
+  <string name="WandOfDisintegration_Info">Dieser Zauberstab erzeugt einen Strahl destruktiver Energie, welcher alle Kreaturen durchdringt. Je mehr Ziele vom Strahl getroffen werden, umso größer ist der verursachte Schaden.</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
   <string name="WandOfFirebolt_Name">Zauberstab des Feuerballs</string>
   <string name="WandOfFirebolt_Info">Der Zauberstab entfesselt Stöße magischen Feuers. Er setzt entflammbares Gelände in Brand, und verletzt und verbrennt getroffene Kreaturen.</string>
-  <string name="WandOfFirebolt_Info1">Du hast dich mit deinem eigenen Stab des Feuerblitzes getötet.</string>
+  <string name="WandOfFirebolt_Info1">Du hast dich mit deinem eigenen Stab des Feuerballs getötet.</string>
   <!--STRINGS OF WandOfFlock CLASS-->
   <string name="WandOfFlock_Name">Zauberstab der Herde</string>
   <string name="WandOfFlock_Info">Ein Schnipser dieses Zauberstabes beschwört eine Herde magischer Schafe, und erschafft somit ein temporäres undurchdringliches Hindernis.</string>
   <string name="Sheep_Name">Schaf</string>
   <string name="Sheep_Name_Objective">Schaf</string>
-  <string name="Sheep_Gender">feminin</string>
-  <string name="Sheep_Desc">Das ist ein magisches Schaf. Was daran so magisch ist? Du kannst es töten. Es wird dort stehen, bis es auf magische Weise hinvort scheidet, stets wiederkäuend mit leerem Blick.</string>
+  <string name="Sheep_Gender">weiblich</string>
+  <string name="Sheep_Desc">Das ist ein magisches Schaf. Was daran so magisch ist? Du kannst es nicht töten. Es wird dort stehen, bis es auf magische Weise verschwindet, stets wiederkäuend mit leerem Blick.</string>
   <string-array name="WandOfFlock_SheepBaa">
     <item>Baa!</item>
     <item>Baa?</item>
@@ -59,34 +59,34 @@
   </string-array>
   <!--STRINGS OF WandOfLightning CLASS-->
   <string name="WandOfLightning_Name">Zauberstab des Blitzes</string>
-  <string name="WandOfLightning_Info">Dieser Stab projiziert tödliche Blitze, die gegnern Schaden zufügen, die nah beieinander stehen.</string>
-  <string name="WandOfLightning_Info1">Du hast dich mit deinem eigenen Blitzstab umgebracht...</string>
+  <string name="WandOfLightning_Info">Dieser Stab projiziert tödliche Blitze, die mehreren Gegnern Schaden zufügen, wenn diese nah beieinander stehen.</string>
+  <string name="WandOfLightning_Info1">Du hast dich mit deinem eigenen Stab des Blitzes umgebracht...</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
   <string name="WandOfMagicMissile_Name">Zauberstab des Magischen Geschosses</string>
-  <string name="WandOfMagicMissile_Info">Dieser Stab schießt Projektile aus purer Magie, die gegnern moderaten Schaden zufügen.</string>
+  <string name="WandOfMagicMissile_Info">Dieser Stab schießt Projektile aus purer Magie, die Gegnern mäßigen Schaden zufügen.</string>
   <string name="WandOfMagicMissile_ACDisenchant">ENTZAUBERN</string>
-  <string name="WandOfMagicMissile_Info1">Du hast dich mit deinem eigenen Stab des Magischen Projektils umgebracht...</string>
-  <string name="WandOfMagicMissile_SelectWand">Wähle einen Zauberstab den du verbessern möchtest</string>
-  <string name="WandOfMagicMissile_Desinchanted">Du entzauberst deinen Stab des Magischen Projektils und nutzt diese Essenz um deinen %s zu verbessern.</string>
+  <string name="WandOfMagicMissile_Info1">Du hast dich mit deinem eigenen Stab des Magischen Geschosses umgebracht...</string>
+  <string name="WandOfMagicMissile_SelectWand">Wähle einen Zauberstab zum verbessern</string>
+  <string name="WandOfMagicMissile_Desinchanted">Du entzauberst deinen Stab des Magischen Projektils und nutzt dessen Essenz um deinen %s zu verbessern.</string>
   <!--STRINGS OF WandOfPoison CLASS-->
   <string name="WandOfPoison_Name">Zauberstab des Giftes</string>
-  <string name="WandOfPoison_Info">Ein Schuss dieses Stück Holzes wird das Ziel vergiften. Eine Kreatur, die vergiftet ist erhält durchgehend Schaden bis der Effekt endet. Die Dauer des Effektes erhöht sich mit dem Level des Stabes.</string>
+  <string name="WandOfPoison_Info">Ein Schuss dieses verdrehten Stück Holzes wird das Ziel mit einem tödlichen Gift vergiften. Eine Kreatur, die vergiftet ist erhält durchgehend Schaden bis der Effekt endet. Die Dauer des Effektes erhöht sich mit dem Level des Stabes.</string>
   <string name="WandOfPoison_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfRegrowth CLASS-->
   <string name="WandOfRegrowth_Name">Zauberstab der Begrünung</string>
-  <string name="WandOfRegrowth_Info">Wenn Leben aufhört, fängt neues Leben an zu wachsen... Dieser Zirkel bleibt immer bestehen.</string>
-  <string name="WandOfRegrowth_Info1">Es passierte nichts</string>
+  <string name="WandOfRegrowth_Info">Wenn Leben aufhört, fängt neues Leben an zu wachsen... Dieser Zyklus bleibt immer bestehen.</string>
+  <string name="WandOfRegrowth_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfSlowness CLASS-->
   <string name="WandOfSlowness_Name">Zauberstab der Verlangsamung</string>
   <string name="WandOfSlowness_Info">Dieser Stab zwingt eine Kreatur dazu, sich mit der halben Geschwindigkeit zu Bewegen und zu Attackieren, bis der Effekt endet.</string>
   <string name="WandOfSlowness_Info1">nichts ist geschehen</string>
   <!--STRINGS OF WandOfTelekinesis CLASS-->
   <string name="WandOfTelekinesis_Name">Zauberstab der Telekinese</string>
-  <string name="WandOfTelekinesis_Info">Wellen von Magischer Energie von diesem Stab werden alle Felder auf ihrem Weg beeinflussen. Dies löst Fallen aus, zerstört hohes Grass und Öffnet oder Schließt Türen. Sie stoßen auch Gegner zurück.</string>
+  <string name="WandOfTelekinesis_Info">Wellen von Magischer Energie von diesem Stab werden alle Felder auf ihrem Weg beeinflussen. Dies löst Fallen aus, zerstört hohes Gras und öffnet oder schließt Türen. Sie stoßen auch Gegner zurück.</string>
   <string name="WandOfTelekinesis_YouNowHave">Du hast auf magische Weise %s in deinen Rucksack befördert</string>
   <!--STRINGS OF WandOfTeleportation CLASS-->
   <string name="WandOfTeleportation_Name">Zauberstab der Teleportation</string>
   <string name="WandOfTeleportation_Info">Ein Schuss von diesem Stab wird eine Kreatur gegen ihren Willen an einen zufälligen Platz auf dem momentanen Level Teleportieren.</string>
-  <string name="WandOfTeleportation_Info1">%1$s hat %2$s irgedwohin Teleportiert.</string>
-  <string name="WandOfTeleportation_Info2">Es passierte nichts</string>
+  <string name="WandOfTeleportation_Info1">%1$s hat %2$s irgedwohin Teleportiert</string>
+  <string name="WandOfTeleportation_Info2">nichts ist geschehen</string>
 </resources>

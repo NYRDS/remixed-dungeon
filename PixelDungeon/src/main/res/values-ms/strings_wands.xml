@@ -85,7 +85,7 @@
   <string name="WandOfTelekinesis_Info">Gelombang kuasa magik dari tongkat sakti ini akan mempengaruhi sel-sel yang dilaluinya menyebabkan perangkap terlerai sendiri, mencabut tumbuhan, membuka pintu tertutup dan sebaliknya. Ia juga dapat menolak raksaksa jauh ke belakang.</string>
   <string name="WandOfTelekinesis_YouNowHave">Anda telah memindahkan %s secara magik ke dalam beg galas anda</string>
   <!--STRINGS OF WandOfTeleportation CLASS-->
-  <string name="WandOfTeleportation_Name">Tongkat Sakti Teleportation</string>
+  <string name="WandOfTeleportation_Name">Tongkat Sakti Teleportasi</string>
   <string name="WandOfTeleportation_Info">Tembakan dari tongkat sakti ini akan mengalih makhluk secara paksa ke lokasi lain secara rawak tetapi masih dalam aras yang sama.</string>
   <string name="WandOfTeleportation_Info1">%1$s telah mengalih %2$s ke tempat lain</string>
   <string name="WandOfTeleportation_Info2">tiada apa-apa berlaku</string>

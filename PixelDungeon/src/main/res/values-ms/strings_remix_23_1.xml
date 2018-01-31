@@ -42,6 +42,6 @@
   <string name="DarkVeil_Buff">Selubung gelap</string>
   <!--Badges-->
   <string name="Badges_Yog_Slain">Yog-Dzewa telah dibunuh</string>
-  <string name="Badges_ShadowLord_Slain">Hulubalang bayang telah dibunuh</string>
-  <string name="Badges_SpiderQueen_Slain">Permaisuri Lelabah telah dibunuh</string>
+  <string name="Badges_ShadowLord_Slain">Penguasa bayang telah dibunuh</string>
+  <string name="Badges_SpiderQueen_Slain">Ratu Lelabah telah dibunuh</string>
 </resources>

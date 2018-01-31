@@ -74,7 +74,7 @@
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
   <string name="MeleeWeapon_Info1a">Ten %1$s to %2$s %3$d-ego tieru. Jest bronią białą.</string>
-  <string name="MeleeWeapon_Info1b">(There is no such thing as translating \"a\" in Polish language)</string>
+  <string name="MeleeWeapon_Info1b"> </string>
   <string name="MeleeWeapon_Info1c">ulepszony</string>
   <string name="MeleeWeapon_Info1d">zdegradowany</string>
   <string name="MeleeWeapon_Info2a">Zadaje średnie obrażenia o wartości %d punktów na uderzenie.</string>
@@ -197,7 +197,7 @@
   <string name="ChaosBow_Gender">męski</string>
   <!--STRINGS OF ChaosStaff CLASS-->
   <string name="ChaosStaff_Name">Kostur Chaosu</string>
-  <string name="ChaosStaff_Info">Kostur nasycony potęgą Chaosu! Czegóż innego może pożądać (lub obawiać się) mag?</string>
+  <string name="ChaosStaff_Info">Kostur nasycony potęgą Chaosu! Przerażający dla wielu magów ,a jednak przez wielu także pożądany.</string>
   <string name="ChaosStaff_Gender">męski</string>
   <!--STRINGS OF SacrificialSword CLASS-->
   <string name="SacrificialSword_Name">Ostrze Ofiarne</string>

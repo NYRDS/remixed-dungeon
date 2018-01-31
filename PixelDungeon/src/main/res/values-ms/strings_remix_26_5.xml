@@ -21,8 +21,8 @@
     <string name="RingOfFrost_Info">Cincin ini diukir dari ais magik. Pemakainya dilindungi oleh auro fros, dapat memperlahankan dan mencederakan pihak musuh yang menyerang.</string>
 
     <!-- STRINGS OF SpiderQueenCarapace CLASS -->
-    <string name="SpiderQueenCarapace_Name">Kulit Katung Permaisuri Lelabah</string>
-    <string name="SpiderQueenCarapace_Info">Serpihan kulit katung Permaisuri Lelabah. Anda dapati ada kelenjar sawang di dalamnya, ia kelihatan bergerak dan masih hidup.</string>
+    <string name="SpiderQueenCarapace_Name">Kulit Katung Ratu Lelabah</string>
+    <string name="SpiderQueenCarapace_Info">Serpihan kulit katung Ratu Lelabah. Anda dapati ada kelenjar sawang di dalamnya, ia kelihatan bergerak dan masih hidup.</string>
 
     <!-- STRINGS OF LibrarianNPC CLASS -->
     <string name="LibrarianNPC_Message_Instruction">H-hai. Selamat datang ke Perpustakaan. Di sini anda boleh cari maklumat berkenaan apa jua perkara, terutamanya yang ditemui dalam kurungan bawah tanah... kami dapat menyediakan pengetahuan yang telah diterokai oleh pengembara. Setiap kali anda melawat kami, berkemungkinan akan ada perkara baharu yang boleh dibaca.</string>

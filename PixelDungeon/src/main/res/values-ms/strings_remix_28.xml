@@ -4,11 +4,15 @@
     <string name="HeroClass_Gnoll">Gnoll</string>
     <string name="GnollArmor_ACSpecial">DOMINASI</string>
     <string name="GnollArmor_NotGnoll">Hanya gnoll boleh memakai Perisai Gnoll!</string>
+
     <string name="GnollArmor_Info">Pemakai suit Leftenan-Gnoll diketahui berkeupayaan memujuk kelompok-rusuh yang terlalu marah menjadi pengikut setia Raja.</string>
 
     <string name="WndPlayGames_BackupProgress">Sandar Kemajuan Permainan</string>
     <string name="WndPlayGames_RestoreProgress">Pulihkan Kemajuan Permainan</string>
     <string name="WndPlayGames_WorkInCloud">Memproses Awan... Tinggu sebentar.</string>
+    <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini anda mesti pujuk paderi pekan supaya sembuhkan Gnoll Ganas.</string>
+    <string name="WndPriest_Heal_Minions">Sembuh semua pengikut anda - %d syiling emas sahaja!</string>
+    <string name="Badges_GnollUnlocked">Gnoll dilepaskan</string>
 
     <string-array name="HeroClass_GnollPerks">
         <item>Gnoll bermula dengan tahap kekuatan 17</item>

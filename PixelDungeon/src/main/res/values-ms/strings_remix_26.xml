@@ -3,8 +3,12 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
     <string name="SantaHat_Name">Top Santa</string>
+    <string name="SantaHat_Info">Tiada apa boleh diceritakan berkenaan Dungeonmas seperti topi merah sutera Santa Penguasa Bawah Tanah.</string>
+
     <!-- STRINGS OF Rudolph CLASS -->
     <string name="Rudolph_Name">Hidung merah dengan tanduk</string>
+    <string name="Rudolph_Info">Apa yang lebih meriah selain dari hidung merah menyala? Dan sepasang tanduk rusa, kan..</string>
+
     <!-- Mobs descriptions -->
     <!-- STRINGS OF Kobold CLASS -->
     <string name="Kobold_Name">kobold</string>
@@ -35,15 +39,21 @@
     <string name="IceGuardian_Name">pengawal ais</string>
     <string name="IceGuardian_Gender">maskulin</string>
     <string name="IceGuardian_Name_Objective">pengawal ais</string>
+    <string name="IceGuardian_Desc">Pengawal asi dihasilkan oleh kobold purba bertujuan untuk melindungi gua mereka. Kuasa tersimpan di dalam terasnya membolehkan pengawal ais membina dirinya sendiri selagi tenaganya masih mencukupi.</string>
+
     <!-- STRINGS OF IceGuardianCore CLASS -->
     <string name="IceGuardianCore_Name">pengawal ais</string>
     <string name="IceGuardianCore_Gender">maskulin</string>
     <string name="IceGuardianCore_Name_Objective">pengawal ais</string>
+    <string name="IceGuardianCore_Desc">Pengawal asi dihasilkan oleh kobold purba bertujuan untuk melindungi gua mereka. Kuasa tersimpan di dalam terasnya membolehkan pengawal ais membina dirinya sendiri selagi tenaganya masih mencukupi.</string>
+
     <!-- STRINGS OF CagedKobold CLASS -->
     <string name="CagedKobold_Name">kobold terkurung</string>
     <string name="CagedKobold_Gender">maskulin</string>
     <string name="CagedKobold_Name_Objective">kobold terkurung</string>
     <string name="CagedKobold_Desc">Seekor kobold, di dalam sangkar.</string>
+    <string name="CagedKobold_Intro">Hoi... HOI! Kamu sipengembara? Tolonglah aku kawan, penganut fahaman ketenteraan telah mengurung aku di sini. Mereka cuba menghidupkan senjata purba untuk menawan dunia manusia di atas sana! Aku membangkang kerana ia terlalu bahaya, dan mereka berjaya menjatuhkan ketua pemerintah dan kurung aku dalam sangkar ini. Tolong cari kunci sangkar ini, aku janji akan bantu kamu.</string>
+    <string name="CagedKobold_Quest_End">Oh, terima kasih, terima kasih banyak-banyak! Macamana kamu jumpa kunci ini? Kamu...kamu berjaya musnahkan senjata tu?! Hebat! tahu tak, aku akan bantu kamu, dan aku tahu langkah terbaik ialah mengikut kamu buat masa ini. Kobold terkurung bertukar menjadi lilin</string>
     <string name="CagedKobold_Message1">Tolong...</string>
     <string name="CagedKobold_Message2">Awak mesti keluarkan saya dari sini, sahabat</string>
     <string name="CagedKobold_Message3">Saya benci segala-galanya tentang kurungan ini</string>
@@ -58,6 +68,11 @@
     <string name="IceCaves_TileDescHighGrass">Tumbuhan beku tebal yang menghalang pandangan.</string>
     <string name="IceCaves_TileStatue">Gnoll Beku</string>
     <string name="IceCaves_TileDescStatue">Ada lagi patung pelik... Alamak rupanya gnoll beku.</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ChristmasTurkey CLASS -->
+    <string name="ChristmasTurkey_Name">ayam belanda perayaan</string>
+    <string name="ChristmasTurkey_Info">Cara terbaik meraikan Dungeonmas, ialah makan ayam belanda panggang. Supaya anda dapat menghormati hari kedatangan raksaksa ke kurungan bawah tanah, menarik minat para pengembara dan adiwira dari serata dunia, seterusnya menggalakkan industri perlancongan dan memberi manafaat kepada semua jenis peniaga tempatan.</string>
 
     <!-- STRINGS OF IceKey CLASS -->
     <string name="IceKey_Name">kunci ais</string>

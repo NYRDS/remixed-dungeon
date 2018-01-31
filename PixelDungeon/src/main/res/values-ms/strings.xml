@@ -34,6 +34,7 @@
     <item>%1$s menewaskan %2$s</item>
     <item>%1$s menewaskan %2$s</item>
   </string-array>
+  <string name="Char_YouMissed">%1$s %2$s serangan anda</string>
   <string-array name="Char_StaDodged">
     <item>mengelak</item>
     <item>mengelak</item>
@@ -42,8 +43,11 @@
   <string name="Char_StaPoisoned">diracun</string>
   <string name="Char_StaAmok">mengamok</string>
   <string name="Char_StaSlowed">menjadi lembab</string>
+  <string name="Char_StaMind">minda</string>
+  <string name="Char_StaVision">penglihatan</string>
   <string name="Char_StaParalysed">lumpuh</string>
   <string name="Char_StaFrightened">ketakutan</string>
+  <string name="Char_StaRooted">diakarkan</string>
   <string name="Char_StaCrippled">dilumpuhkan</string>
   <string name="Char_StaBleeding">berdarah</string>
   <string name="Char_StaDizzy">pening</string>
@@ -58,11 +62,11 @@
   <string name="Journal_WellTransmut">Perigi Transmutasi</string>
   <string name="Journal_Alchemy">Periuk alkimia</string>
   <string name="Journal_Garden">Taman</string>
-  <string name="Journal_Statue">Patung bergerak</string>
+  <string name="Journal_Statue">Patung hidup</string>
   <string name="Journal_Ghost">Hantu sedu</string>
   <string name="Journal_Wandmaker">Pembuat tongkat sakti tua</string>
   <string name="Journal_Troll">Tukang besi troll</string>
-  <string name="Journal_Imp">Momok bercita-cita</string>
+  <string name="Journal_Imp">Momok bercita-cita tinggi</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
   <string name="WndBlacksmith_Prompt">Baiklah, saya setuju, apa yang boleh saya buat: saya boleh tempa semula 2 item dan jadikannya satu tetapi dengan kualiti lebih baik.</string>
   <string name="WndBlacksmith_Select">Pilih satu item untuk ditempa semula</string>
@@ -147,6 +151,7 @@
   <string name="WndSadGhost_Farewell">Selamat tinggal, pengembara!</string>
   <!--STRINGS OF WndStory CLASS-->
   <string name="WndStory_Sewers">Kurungan Bawah Tanah betul-betul berada di bawah Pekan ini, bahagian paling atas merupakan sistem pembentungan Pekan. Walaupun ia merupakan sebahagian dari Pekan, aras ini tidaklah begitu merbahaya. Walaubagaimanapun, tidak semestinya ianya sepenuhnya selemat, sekurang-kurangnya anda tidak risau dengan sihir kejahatan di sini. </string>
+  <string name="WndStory_Spiders">Pada zaman dahulu ada sebuah lombong berharga, yang dipenuhi dengan batu ajaib. Tetapi setelah ia habis digali pelombong telah beralih ke tempat lain, meninggalkan satu rangkaian terowong yang luas. Lama-kelamaan tempat ini didiami oleh sejenis lelabah. Walaupun ia merupakan makhluk yang merbahaya, ia tidak dapat menghindari kedatangan pengembara yang berani atau gila masuk mencari harta karun yang boleh ditemui dalam terowong ini. Walaupun semakin tinggi risiko semakin berharga harta ajaib di dalamnya. Sebelum ini, pernah seorang dukun jahat masuk ke dalam terowong untuk lari daripada pendakwa. Mereka mempercayai khabar angin hanya menunggu pintu masuk terowong tersebut. Malangnya sidukun jahat tidak lagi muncul keluar, mungkin dia berjaya lari keluar dari pengawal... atau mati, dimakan makhluk kegelapan terowong itu.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">UNTUK DIJUAL: %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">Beli dengan harga %dg</string>
@@ -166,12 +171,14 @@
   <!--STRINGS OF Item CLASS-->
   <string name="Item_ACDrop">LEPAS</string>
   <string name="Item_ACThrow">BUANG</string>
+  <string name="Item_PackFull">Beg galas anda sudah penuh untuk mengisi %s</string>
   <string name="Item_DirThrow">Pilih arah untuk dibuang</string>
   <!--STRINGS OF EquipableItem CLASS-->
   <string name="EquipableItem_ACEquip">PAKAI</string>
   <string name="EquipableItem_ACUnequip">TANGGAL</string>
   <string name="EquipableItem_Unequip">Anda tidak boleh buang sumpahan %s!</string>
   <!--STRINGS OF Heap CLASS-->
+  <string name="Heap_Mimic">Ini ialah mimik!</string>
   <!--STRINGS OF Amulet CLASS-->
   <string name="Amulet_Name">Azimat Yendor</string>
   <string name="Amulet_ACEnd">PENGEMBARAAN BERAKHIR</string>
@@ -207,6 +214,8 @@
   <string name="LloidsBeacon_ACReturn">KEMBALI</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_ACInscribe">TULIS</string>
+  <string name="Stylus_SelectArmor">Pilih satu item untuk dituliskan</string>
+  <string name="Stylus_Inscribed">anda menulis %1$s di atas %2$s anda</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Buku Besar Kepakaran</string>
   <string name="TomeOfMastery_ACRead">BACA</string>
@@ -214,6 +223,8 @@
   <string name="TomeOfMastery_Blinded">Anda tidak boleh membacanya kerana tidak nampak</string>
   <string name="TomeOfMastery_Choose">Anda telah memilih laluan %s!</string>
   <!--STRINGS OF Torch CLASS-->
+  <string name="Torch_Name">obor</string>
+  <string name="Torch_ACLight">NYALA</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">batu timbang</string>
   <string name="Weightstone_ACApply">GUNA</string>
@@ -265,6 +276,7 @@
   <string name="DriedRose_Info">Bunga mawar telah lama kering, yang peliknya ada orang yang menyimpan kelopak bunga ini.</string>
   <string name="DriedRose_Info2">Walaupun ia kehilangan kuasanya. Tetapi rupanya cantik, dan anda mahu menyimpan untuk dijadikan kenangan.</string>
   <!--STRINGS OF DwarfToken CLASS-->
+  <string name="DwarfToken_Name">token orang kerdil</string>
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">beliung</string>
   <string name="Pickaxe_Info">Alat bersaiz besar dan tegap ini digunakan untuk memecahkan batu. Ia juga boleh digunakan sebagai senjata.</string>
@@ -277,16 +289,23 @@
   <string name="RatSkull_Info2">Akan tetapi, boleh dijadikan bukti empunya tengkorak ini berupaya membunuh tikus, walaupun bersaiz besar dan berbau busuk.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="ConfusionGas_Info">Awan gas kekeliruan berpusaran di sini.</string>
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Api semakin marak di sini.</string>
   <!--STRINGS OF Foliage CLASS-->
   <!--STRINGS OF ParalyticGas CLASS-->
+  <string name="ParalyticGas_Info">Awan gas kelumpuhan berpusaran di sini.</string>
   <!--STRINGS OF ToxicGas CLASS-->
+  <string name="ToxicGas_Info">Awan hijau gas toksid berpusaran di sini.</string>
   <string name="ToxicGas_Info1">Anda mati kerana terhidu gas toksik.</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
+  <string name="WaterOfAwareness_Info">Kuasa pengetahuan memancar keluar dari air perigi ini. Minum ia untuk dedahkan semua rahsia item yang anda pakai atau guna.</string>
+  <string name="WaterOfAwareness_Procced">Anda menghirupnya, anda dapat rasai ada pengetahuan baharu masuk ke dalam minda anda. Kini anda tahu segala-gala berkenaan item yang anda pakai atau guna. Selain itu, anda dapat mengesan semua item yang ada dalam aras ini serta semua rahsianya.</string>
   <!--STRINGS OF WaterOfHealth CLASS-->
+  <string name="WaterOfHealth_Info">Kuasa hayat memancar keluar dari air perigi ini. Minum ia untuk menyembuhkan luka dan hilangkan lapar anda.</string>
   <string name="WaterOfHealth_Procced">Bilamana anda menghirupnya, luka anda telah sembuh sepenuhnya.</string>
   <!--STRINGS OF WaterOfTransmutation CLASS-->
+  <string name="WaterOfTransmutation_Info">Kuasa pertukaran memancar keluar dari air perigi ini. Lempar atau item ke dalam perigi untuk jelmakannya menjadi benda lain.</string>
   <!--STRINGS OF Web CLASS-->
   <string name="Web_Info">Segalanya di sini diliputi dengan sawang yang tebal.</string>
   <!--PACKAGE /actors/buffs-->
@@ -303,14 +322,17 @@
   <string name="Burning_Burns">%s terbakar!</string>
   <string name="Burning_Death">Anda mati kerana terbakar...</string>
   <!--STRINGS OF Charm CLASS-->
+  <string name="Charm_Info">Dipukau</string>
   <!--STRINGS OF Combo CLASS-->
   <string name="Combo_Info">Kombo</string>
   <string name="Combo_Combo">Kombo %d-pukulan!</string>
   <!--STRINGS OF Cripple CLASS-->
+  <string name="Cripple_Info">Dilumpuhkan</string>
   <!--STRINGS OF Frost CLASS-->
   <string name="Frost_Info">Membeku</string>
   <string name="Frost_Shatter">Kesejukan ini menyebabkan %s mula pecah berkecai!</string>
   <!--STRINGS OF Fury CLASS-->
+  <string name="Fury_Info">Keberangan</string>
   <!--STRINGS OF GasesImmunity CLASS-->
   <string name="GasesImmunity_Info">kebal gas</string>
   <!--STRINGS OF Hunger CLASS-->
@@ -334,6 +356,7 @@
   <!--STRINGS OF Light CLASS-->
   <string name="Light_Info">Bercahaya</string>
   <!--STRINGS OF MindVision CLASS-->
+  <string name="MindVision_Info">Penglihatan minda</string>
   <!--STRINGS OF Ooze CLASS-->
   <string name="Ooze_Death">%s telah membunuh anda...</string>
   <!--STRINGS OF Paralysis CLASS-->
@@ -342,10 +365,12 @@
   <string name="Poison_Info">Terkena Racun</string>
   <string name="Poison_Death">Anda mati disebabkan keracunan...</string>
   <!--STRINGS OF Roots CLASS-->
+  <string name="Roots_Info">Diakarkan</string>
   <!--STRINGS OF Shadows CLASS-->
   <!--STRINGS OF Slow CLASS-->
   <string name="Slow_Info">Menjadi Lembab</string>
   <!--STRINGS OF SnipersMark CLASS-->
+  <string name="SnipersMark_Info">Sasaran penembak hendap</string>
   <!--STRINGS OF Vertigo CLASS-->
   <string name="Vertigo_Info">Pening Gayat</string>
   <!--STRINGS OF Weakness CLASS-->
@@ -355,6 +380,7 @@
   <string name="Belongings_Name">beg galas</string>
   <!--PACKAGE /sprites-->
   <!--STRINGS OF ItemSprite CLASS-->
+  <string name="ItemSprite_Info1">buang: %1$.1f %2$.1f</string>
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
   <string name="Toolbar_Info1">Anda tidak tahu apa yang ada di sana.</string>

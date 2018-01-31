@@ -2,6 +2,39 @@
 <resources>
   <string name="Welcome_Ok">Baiklah!</string>
   <string name="Welcome_Title">Selamat Datang!</string>
+  <string name="Welcome_Text">
+        Remixed Pixel Dungeon merupakan satu pengubahsuaian Pixel Dungeon bersumber terbuka Watabou.\n
+        Projek yang dibina bertujuan untuk memberikan pemain satu pengalaman dan kandungan serba baharu.\n
+        Lain-lain bahagian projek kami ialah membangunkan sokongan berbilang bahasa untuk permainan ini.\n
+        Dengan setiap kemaskini kami cuba berdampingan dengan komuniti sebaik mungkin.\n
+        Dan jika anda dapati ide anda direalisasikan dalam permainan... Terima kasih atas kreativiti anda berikan =)\n
+        Versi semasa berdasarkan Pixel Dungeon 1.7.2 dan sebahagian dari 1.7.5.\n 
+        Perbezaan dari yang asal: \n
+        - Pilihan untuk mengubah bahasa.\n
+        - Raksaksa dan NPC baharu\n
+        - Gas toksid dan api dapat berinteraksi dengan lebih banyak item\n
+        - Jenis «food» baharu\n
+        - Item baharu dan ciri-ciri baharu bagi beberapa item lama\n
+        - Benih kini boleh dimakan =)\n 
+        - Orang bunian
+        </string>
+  <string name="Welcome_Text_19">
+        remix.17:\n
+        - Jenis mimik baharu\n
+        remix.18:\n
+        - Keunsuran atau elemental\n
+        remix.19:\n
+        - Lelabah\n
+        - Tahap lelabah\n
+        - Ratu lelabah\n
+        </string>
+  <string name="Welcome_Text_20">
+        remix.20:\n
+        - Senjatan sukar ditemui baharu - kusarigama\n
+        - Kelompok-rusuh sukar ditemui baharu\n
+        - Mod permainan yang mana anda boleh simpan dan muat permainan\n
+        - Dan banyak lagi benda-benda yang kurang ketara\n
+        </string>
   <string name="Welcome_Text_20_1">
         remix.20.1:\n
         - Skrol Dominasi\n
@@ -66,6 +99,28 @@
         - Pelbagai pembaikan pepijat\n
         - Terjemahan dikemaskini\n
         </string>
+  <string name="Welcome_Text_24_1">
+        remix.24.1:\n
+        --Permainan--\n
+        - Kelompok-rusuh baharu: Patung Berperisai\n
+        - Jarang ditemui baharu: Pengawal Lelabah (Askar Lelabah jarang ditemui) dan Lelabah Ambar( Psi-lelabah jarang ditemui)\n
+        - Pemain kini boleh memadam fail tersimpan\n
+        - Visual Sarang Lelabah telah dikemaskinikan\n
+        --Item Sia-Sia--\n
+        - Pembelian item baharu akan dipakaikan secara automatik\n
+        - Item baharu \"Set Lanun\"\n
+        - Visual Telinga Kucing dan Arnab telah dikemaskinikan\n
+        </string>
+  <string name="Welcome_Text_24_2">
+        remix.24.2:\n
+        - kelompok-rusuh baharu: Patung Emas (patung jarang ditemui)\n
+        - Item baharu: Pedang Emas (boleh ditemui sebagai hasil rampasan jarang ditemui, atau ditemui sebagai hasil rampasan daripada patung emas dengan kadar jatuh 100%)\n
+        - NPC baharu: Necromancer (Dia ada berita menarik untuk anda ketahui. Cari dia dalam aras 7)\n
+        - Goo tiada jantina\n
+        - Tengu kini jatuhkan Buku Besar setiap kali dikalahkan. Subkelas tidak boleh guna buku besar untuk menukar keistimewaan mereka\n
+        - Penguasa Bayang bermula pada bilik yang lebih munasabah (kini pemain tidak boleh melepasinya untuk pergi ke aras berikutnya, anda mesti berlawan dengannya)\n
+        - Pukauan Lelabah telah dikemaskini spritenya dan kini dijatuhkan oleh Ratu Lelabah (Sebelum ini tak boleh dapat melalui Goo)\n
+        </string>
   <string name="Welcome_Text_25_3">
         remix.25.3:\n
         - Objek baharu ditambah: Tong letupan (diganti dengan labu ketika musim halloween)\n
@@ -74,10 +129,38 @@
         - NPC baharu: Orang-orang\n
         - Item kemegahan dan solekan baharu: Topeng zombie, tengkorak pontianak dan topi Ushanka\n
         </string>
+  <string name="Welcome_Text_26">
+        remix.26:\n
+        --Permainan\n
+        - Makanan baharu : ayam belanda perayaan\n
+        - Tema muzik asli untuk Gua (oleh Misaerit)\n
+        - Jenis kurungan bawah tanah baharu: Gua Ais!\n
+        - Pada lokasi Gua Ais ini mengandungi:\n
+            - 4 kelompok-rusuh baharu\n
+            - Satu Bos baharu\n
+            - Satu NPC baharu\n
+            - Tongkat Sakti Unik Bebola Ais\n
+            - Satu artifak: Lilin Penglihatan\n
+            - Tema muzik asli! (oleh Misaerit)\n
+        - Pepijat dibaiki yang menghalang lelabah sukar ditemui membiak\n
+        - Goo menjadi lebih kuat\n
+        --Topi\n
+        - Topi Santa ditambah!\n
+        - Hidung Merah dan Tanduk ditambah!\n
+        </string>
   <string name="Welcome_Text_26_3">
         remix.26.3\n
         - Pekan menjadi lebih besar\n
         - Kedai dipekan kini menjual lebih banyak item\n
         - Pencarian baharu di dalam Pekan\n
         </string>
+  <string name="Welcome_Text_27_4">
+    remix.27.4\n
+    - Penjenamaan semula ke Remixed Dungeon\n
+    - Necrotisma - keupayaan Perisai Kelas Necromancer baharu\n
+    - Lambang baharu untuk ditemui\n
+    - Keupayaan Perisai Kelas kini menggunakan Mana berbanding Tenaga Hayat\n
+    - Item Chaos kini kehilangan sihirnya jika dinyahtatar\n
+    - Psi-Lelabah kini hanya boleh sihirkan mantera Kebutaan, Lembab dan Lemah\n
+    </string>
 </resources>

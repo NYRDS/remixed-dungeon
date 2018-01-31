@@ -2,9 +2,9 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF ArmoredStatue -->
-    <string name="ArmoredStatue_Name">patung bergerak</string>
+    <string name="ArmoredStatue_Name">patung hidup</string>
     <string name="ArmoredStatue_Gender">feminin</string>
-    <string name="ArmoredStatue_Name_Objective">patung bergerak</string>
+    <string name="ArmoredStatue_Name_Objective">patung hidup</string>
     <string name="ArmoredStatue_Desc">Anda tidak sangka ianya adalah sebuah patung yang hodoh. Bukan sahaja matanya merah berkilauan, tetapi sebenarnya tiada siapa yang dapat gambarkan _%s_.</string>
 
     <!-- STRINGS OF SpiderSoldier -->

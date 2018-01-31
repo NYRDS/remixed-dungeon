@@ -21,10 +21,10 @@
     <string name="Badges_GnollUnlocked">Gnoll unlocked</string>
 
     <string-array name="HeroClass_GnollPerks">
-        <item>Gnolls starts with 17 strength points</item>
+        <item>Gnolls starts with 15 strength points</item>
         <item>Gnolls starts with 5 health points</item>
-        <item>Gnolls starts without any armor</item>
-        <item>Gnolls can\'t read</item>
-        <item>Gnolls do not attack another Gnolls until provoked.</item>
+        <item>Gnolls starts without any armor but with unique tomahawk</item>
+        <item>Gnolls can\'t read or write</item>
+        <item>Gnolls do not attack another Gnolls until provoked</item>
      </string-array>
 </resources>

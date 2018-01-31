@@ -3,7 +3,27 @@
   <!--PACKAGE /items/rings-->
   <!--STRINGS OF Ring CLASS-->
   <string name="Ring_Name">Cincin %s</string>
+  <string name="Ring_Info">Cincin logam ini dihiasi dengan permata %s besar yang bercahaya dalam kegelapan. Siapa tahu kesannya jika disarung ke jari?</string>
+  <string name="Ring_Identify">anda kini sudah biasa dengan %1$s anda untuk mengecamnya. Ia adalah %2$s.</string>
+  <string-array name="Ring_Gems">
+    <item>berlian</item>
+    <item>baiduri</item>
+    <item>garnet</item>
+    <item>delima</item>
+    <item>kecubung</item>
+    <item>topaz</item>
+    <item>oniks</item>
+    <item>turmalin</item>
+    <item>zamrud</item>
+    <item>nilam</item>
+    <item>kuarza</item>
+    <item>akik</item>
+  </string-array>
   <string name="Ring_Info1">Anda hanya boleh pakai 2 cincin dalam satu masa.</string>
+  <string name="Ring_Info2">%s anda menjerut jari anda dengan kesakitan</string>
+  <string name="Ring_Info3a">%1$s\n\n%2$s berada pada jari %3$s anda</string>
+  <string name="Ring_Info3b">, dan kerana ia telah disumpah, anda tidak berupaya menanggalkannya.</string>
+  <string name="Ring_Info4">%1$s\n\nAnda dapat rasai kuasa ajaib berunsur kejahatan berlingkar-lingkar di dalam %2$s.</string>
   <string name="Ring_BuffKnown">Ini ialah %s</string>
   <!--STRINGS OF RingOfAccuracy CLASS-->
   <string name="RingOfAccuracy_Name">Cincin Ketepatan</string>
@@ -12,24 +32,64 @@
   <string name="RingOfDetection_Name">Cincin Pengesanan</string>
   <string name="RingOfDetection_Info">Dengan memakai cincin ini, pemakai dapat mengesan rahsia yang tersembunyi - perangkap dan pintu rahsia - tanpa perlu mengambil masa mencarinya. Cincin pengesanan yang telah lapuk akan mengurangkan kekuatan deria anda, jadi lebih sukar mengecam rahsia walaupun kerap mencarinya.</string>
   <!--STRINGS OF RingOfElements CLASS-->
+  <string name="RingOfElements_Name">Cincin Unsur</string>
+  <string name="RingOfElements_Info">Cincin ini memberikan ketahanan pada unsur-unsur berbeza, seperti api, elektrik, gas dan lain-lain. Ia juga dapat kurangkan tempoh kesan negatif.</string>
   <!--STRINGS OF RingOfEvasion CLASS-->
+  <string name="RingOfEvasion_Name">Cincin Pengelakan</string>
+  <string name="RingOfEvasion_Info">Cincin ini dapat meningkatkan peluang mengindari serangan pihak musuh.</string>
   <!--STRINGS OF RingOfHaggler CLASS-->
+  <string name="RingOfHaggler_Name">Cincin Tawar-Menawar</string>
+  <string name="RingOfHaggler_Info">Sebenarnya cincin ini tidak memberikan apa-apa kuasa ajaib, tetapi ia memaklumkan pekedai dan penjual yang mana pemilik cincin ini adalah salah seorang ahli Persatuan Pencuri. Biasanya mereka akan memberikan diskaun sebagai jaminan kekebalan sementara. Menatar cincin ini tidak memberikan apa-apa bonus tambahan.</string>
   <!--STRINGS OF RingOfHaste CLASS-->
+  <string name="RingOfHaste_Name">Cincin Pantas</string>
+  <string name="RingOfHaste_Info">Cincin ini mempercepatkan aliran waktu pemakai, membolehkan si pemakai membuat apa jua tindakan lebih pantas.</string>
   <!--STRINGS OF RingOfHerbalism CLASS-->
+  <string name="RingOfHerbalism_Name">Cincin Herba</string>
   <string name="RingOfHerbalism_Info">Cincin ini dapat meningkatkan peluang anda mengumpul embun dan benih dari rumput yang dilalui.</string>
   <!--STRINGS OF RingOfMending CLASS-->
+  <string name="RingOfMending_Name">Cincin Membaiki</string>
+  <string name="RingOfMending_Info">Cincin ini meningkatkan ciri-ciri jana semula badan, membolehkan anda pulihkan tenaga hayat yang hilang pada kadar lebih pantas. Menyahtatar cincin ini boleh kurangkan tenaga hayat atau batutkan penyembuhan kendiri jasad anda.</string>
   <!--STRINGS OF RingOfPower CLASS-->
+  <string name="RingOfPower_Name">Cincin Kuasa</string>
+  <string name="RingOfPower_Info">Tongkat sakti anda menjadi lebih berkuasa dalam medan tenaga yang terhasil dari cincin ini. Menyahtatar cincin kuasa ini akan melemahkan tongkat sakti anda.</string>
   <!--STRINGS OF RingOfSatiety CLASS-->
+  <string name="RingOfSatiety_Name">Cincin Kekenyangan</string>
+  <string name="RingOfSatiety_Info">Menyarung cincin ini membolehkan anda tahan lapar dalam tempoh yang lebih lama. Menyahtatar cincin kekenyangan ini akan memberikan kesan sebaliknya.</string>
   <!--STRINGS OF RingOfShadows CLASS-->
+  <string name="RingOfShadows_Name">Cincin Bayang</string>
+  <string name="RingOfShadows_Info">Pihak musuh kurang perasan kehadiran anda jika anda memakai cincin ini. Menyatatar cincin bayang akan memudahkan pihak musuh mengesan anda.</string>
   <!--STRINGS OF RingOfThorns CLASS-->
+  <string name="RingOfThorns_Name">Cincin Berduri</string>
+  <string name="RingOfThorns_Info">Sebenarnya cincin ini tidak mengeluarkan duri, tetapi sebahagian serangan pihak musuh akan dikembalikan kepada dirinya. Menyahtatar cincin ini tidak memberikan apa-apa bonus tambahan.</string>
   <!--STRINGS OF RingOfStoneWalking CLASS-->
+  <string name="RingOfStoneWalking_Name">Cincin Darah Batu</string>
+  <string name="RingOfStoneWalking_Info">Cincin pelik ini diperbuat dari beberapa jenis batu pejal. Anda jangkakan ia adalah batu delima tetapi sebenarnya cecair darah yang terisi di dalamnya! Di dalamnya ada tanda anak panah yang menunjukkan pada dinding, dengan tanda hati rosak... Apa maksudnya?</string>
+  <string name="RingOfStoneWalking_ImmuredInStone">Anda telah dikurung ke dalam batu. Buat selama-lamanya.</string>
   <!--STRINGS OF SpiderCharm CLASS-->
+  <string name="SpiderCharm_Name">Pukauan Lelabah</string>
+  <string name="SpiderCharm_Info">Barang kodi eksotik ini diselubungi aura misteri. Siapa tahu, apa yang berlaku jika memakainya?</string>
   <string name="SpiderCharm_Use">GUNA</string>
   <!--STRINGS OF ChaosCrystal CLASS-->
   <string name="ChaosCrystal_Name">Kristal Pelik</string>
+  <string name="ChaosCrystal_Name_1">Kristal Chaos</string>
+  <string name="ChaosCrystal_Name_2">Kristal Chaos</string>
+  <string name="ChaosCrystal_Info">Anda rasai aliran tenaga, meluru masuk dari tangan anda ketika memegangnya.</string>
+  <string name="ChaosCrystal_Info_1">Kuasa chaos bersemadi dalam kristal ini. Mungkin ia berguna.</string>
   <string name="ChaosCrystal_Info_2">Ya! Sekarang anda tahu, boleh sepadukannya dengan salah satu item, hmm apa yang berlaku?</string>
   <string name="ChaosCrystal_Use">GUNA</string>
   <string name="ChaosCrystal_Fuse">SEPADU</string>
+  <string name="ChaosCrystal_Prompt">Pilih tempat untuk tetapkan Tanda Chaos</string>
+  <string name="ChaosCrystal_SelectForFuse">Pilih item untuk disepadukan dengan Kristal Chaos</string>
+  <string name="ChaosCrystal_ScrollFused">Kristal menyerap masuk ke dalam huruf tertulis di atas Skrol, dan kini ia menjadi %s</string>
+  <string name="ChaosCrystal_SwordFused">Kristal menyerap masuk ke dalam senjata anda, dan membentuk Pedang</string>
+  <string name="ChaosCrystal_BowFused">Kristal menyerap masuk ke dalam busur anda, dan membentuk Busur</string>
+  <string name="ChaosCrystal_StaffFused">Kristal menyerap masuk ke dalam tongkat sakti anda, dan membentuk Tongkat</string>
+  <string name="CorpseDust_Buff">Gila Darah</string>
+  <string name="DriedRose_Buff">Memukau</string>
+  <string name="DriedRose_CursedBuff">Birahi</string>
+  <string name="RatSkull_Buff">Ratter</string>
+  <string name="RatKingCrown_Buff">Ratness</string>
   <!--STRINGS OF RatKingCrown CLASS-->
   <string name="RatKingCrown_Name">Mahkota raja tikus</string>
+  <string name="RatKingCrown_Info">Mahkota emas Raja Tikus, simbol kekuasaan Raja Tikus</string>
 </resources>

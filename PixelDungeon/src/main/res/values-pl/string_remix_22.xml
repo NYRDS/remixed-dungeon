@@ -14,7 +14,7 @@
 - poprawy wydajności dla specyficznych urządzeń\n
 - publikacji zabawnych statystyk od czasu do czasu\n
 Zawsze możesz zmienić swoją decyzję w dowolnej chwili (naciśnij ikonę wykresu na ekranie tytułowym)</string>
-  <string name="AllowStatisticsCollectionScene_Allow">Pozwól</string>
+  <string name="AllowStatisticsCollectionScene_Allow">Zezwól</string>
   <string name="AllowStatisticsCollectionScene_Deny">Odrzuć</string>
   <string name="Darkness_Info">Wygląda na to, że cząstki wiecznej ciemności unoszą się w powietrzu</string>
   <string name="WndSelectLanguage_ImproveTranslation">Proszę, pomóż udoskonalić tłumaczenia Remixed Pixel Dungeon</string>

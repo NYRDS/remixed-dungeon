@@ -2,9 +2,21 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
+  <string name="Weapon_Identify">anda kini sudah biasa dengan %1$s anda untuk mengecamnya. Ia adalah %2$s.</string>
+  <string name="Weapon_Incompatible">Interaksi pelbagai jenis sihir telah menolak keluar kuasa sihir pada senjata ini!</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
+  <string-array name="Death_Name">
+    <item>%s Menggerunkan</item>
+    <item>%s Menggerunkan</item>
+    <item>%s Menggerunkan</item>
+  </string-array>
   <!--STRINGS OF Fire CLASS-->
+  <string-array name="Fire_Name">
+    <item>%s Berapi</item>
+    <item>%s Berapi</item>
+    <item>%s Berapi</item>
+  </string-array>
   <!--STRINGS OF Horror CLASS-->
   <string-array name="Horror_Name">
     <item>Eldritch %s</item>
@@ -12,16 +24,63 @@
     <item>Eldritch %s</item>
   </string-array>
   <!--STRINGS OF Instability CLASS-->
+  <string-array name="Instability_Name">
+    <item>%s Tak Stabil</item>
+    <item>%s Tak Stabil</item>
+    <item>%s Tak Stabil</item>
+  </string-array>
   <!--STRINGS OF Leech CLASS-->
+  <string-array name="Leech_Name">
+    <item>%s Menghisap</item>
+    <item>%s Menghisap</item>
+    <item>%s Menghisap</item>
+  </string-array>
   <!--STRINGS OF Luck CLASS-->
+  <string-array name="Luck_Name">
+    <item>%s Tuah</item>
+    <item>%s Tuah</item>
+    <item>%s Tuah</item>
+  </string-array>
   <!--STRINGS OF Paralysis CLASS-->
+  <string-array name="Paralysis_Name">
+    <item>%s Memegun</item>
+    <item>%s Memegun</item>
+    <item>%s Memegun</item>
+  </string-array>
   <!--STRINGS OF Piercing CLASS-->
+  <string-array name="Piercing_Name">
+    <item>Menembusi %s</item>
+    <item>Menembusi %s</item>
+    <item>Menembusi %s</item>
+  </string-array>
   <!--STRINGS OF Poison CLASS-->
+  <string-array name="Poison_Name">
+    <item>%s Berbisa</item>
+    <item>%s Berbisa</item>
+    <item>%s Berbisa</item>
+  </string-array>
   <!--STRINGS OF Slow CLASS-->
+  <string-array name="Slow_Name">
+    <item>%s Sejuk</item>
+    <item>%s Sejuk</item>
+    <item>%s Sejuk</item>
+  </string-array>
   <!--STRINGS OF Swing CLASS-->
+  <string-array name="Swing_Name">
+    <item>%s Liar</item>
+    <item>%s Liar</item>
+    <item>%s Liar</item>
+  </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
+  <string name="MeleeWeapon_Info1a">%1$s ini merupakan %2$s iaitu senjata tempur peringkat-%3$d.</string>
   <string name="MeleeWeapon_Info1b">a</string>
+  <string name="MeleeWeapon_Info1c">yang telah ditatar</string>
+  <string name="MeleeWeapon_Info1d">yang telah dinyahtatar</string>
+  <string name="MeleeWeapon_Info2a">Purata kecederaan dikenakan ialah %d mata per pukulan.</string>
+  <string name="MeleeWeapon_Info2b">Kecederaan purata biasanya sebanyak %1$d mata per pukulan dan biasanya ia memerlukan %2$d mata kekuatan.</string>
+  <string name="MeleeWeapon_Info2c">Senjata ini berkemungkinan terlalu berat untuk anda pakai.</string>
+  <string name="MeleeWeapon_Info3a">Ini adalah senjata %s.</string>
   <string name="MeleeWeapon_Info3b">pantas</string>
   <string name="MeleeWeapon_Info3c">perlahan</string>
   <string name="MeleeWeapon_Info3d">dan</string>
@@ -31,58 +90,116 @@
   <string name="MeleeWeapon_Info4a">Ia diseimbangkan supaya menjadi lebih pantas.</string>
   <string name="MeleeWeapon_Info4b">Ia diseimbangkan supaya menjadi lebih tepat.</string>
   <string name="MeleeWeapon_Info5">Ia telah disihirkan.</string>
+  <string name="MeleeWeapon_Info6a">Oleh kerana kekuatan anda tidak mencukupi, kelajuan serangan anda menggunakan %s ini telah berkurangan. </string>
+  <string name="MeleeWeapon_Info6b">Oleh kerana kelebihan kekuatan anda, kecederaan hasil serangan anda dengan %s telah meningkat. </string>
+  <string name="MeleeWeapon_Info7a">Anda memegang %1$s dan %2$s tersedia.</string>
+  <string name="MeleeWeapon_Info7b">, dan kerana ia telah disumpah, anda tidak berupaya membuangnya</string>
+  <string name="MeleeWeapon_Info7c">Anda dapat rasai kuasa ajaib berunsur kejahatan berlingkar-lingkar di dalam %s.</string>
   <!--STRINGS OF BattleAxe CLASS-->
+  <string name="BattleAxe_Name">kapak perang</string>
+  <string name="BattleAxe_Info">Kepala kapak perang keluli bersaiz besar ini memberikan angkatan yang agak sukar bagi setiap pukulan.</string>
   <string name="BattleAxe_Gender">maskulin</string>
   <!--STRINGS OF Dagger CLASS-->
   <string name="Dagger_Name">pisau</string>
   <string name="Dagger_Info">Sejenis pisau logam biasa dan mempunyai hulu kayu yang telah lusuh.</string>
   <string name="Dagger_Gender">maskulin</string>
   <!--STRINGS OF Glaive CLASS-->
+  <string name="Glaive_Name">glaive</string>
+  <string name="Glaive_Info">Galah yang dihujungnya disepadukan dengan pedang.</string>
   <string name="Glaive_Gender">feminin</string>
   <!--STRINGS OF Knuckles CLASS-->
+  <string name="Knuckles_Name">buku lima</string>
+  <string name="Knuckles_Info">Sekeping besi yang pakai erat ketika menggenggam tangan.</string>
   <string name="Knuckles_Gender">maskulin</string>
   <!--STRINGS OF Longsword CLASS-->
+  <string name="Longsword_Name">pedang panjang</string>
+  <string name="Longsword_Info">Bilah panjang ini memberikan kecederaan teruk setiap kali diangkat untuk setiap potongan.</string>
   <string name="Longsword_Gender">maskulin</string>
   <!--STRINGS OF Mace CLASS-->
+  <string name="Mace_Name">cokmar</string>
+  <string name="Mace_Info">Kepala besi senjata ini memberikan kecederaan yang cukup besar.</string>
   <string name="Mace_Gender">feminin</string>
   <!--STRINGS OF Quarterstaff CLASS-->
+  <string name="Quarterstaff_Name">tongkat panjang</string>
+  <string name="Quarterstaff_Info">Tongkat yang diperbuat dari kayu keras, yang mana hujungnya dikemaskan dengan besi.</string>
   <string name="Quarterstaff_Gender">maskulin</string>
   <!--STRINGS OF ShortSword CLASS-->
   <string name="ShortSword_Name">pedang pendek</string>
   <string name="ShortSword_Info">Walaupun ia sememangnya pendek, tetapi ia beberapa inci lebih panjang berbanding pisau.</string>
   <string name="ShortSword_ACReforge">TEMPA SEMULA</string>
   <string name="ShortSword_Select">Pilih satu senjata untuk ditatarkan</string>
+  <string name="ShortSword_Reforged">anda menempa semula pedang pendek untuk tatarkan %s anda</string>
+  <string name="ShortSword_NotBoomerang">anda tidak boleh menatar boomerang dengan kaedah ini</string>
   <string name="ShortSword_Gender">maskulin</string>
   <!--STRINGS OF Spear CLASS-->
+  <string name="Spear_Name">lembing</string>
+  <string name="Spear_Info">batang kayu panjang yang mana salah satu hujungnya dicemat dengan bilah besi tajam.</string>
+  <string name="Spear_Gender">neuter</string>
   <!--STRINGS OF Sword CLASS-->
+  <string name="Sword_Name">pedang</string>
+  <string name="Sword_Info">Bilah keluli tajam yang menakutkan.</string>
   <string name="Sword_Gender">maskulin</string>
   <!--STRINGS OF WarHammer CLASS-->
+  <string name="WarHammer_Name">tukul perang</string>
+  <string name="WarHammer_Info">Sedikit sahaja makhluk yang dapat bertahan dengan kuasa pukulan dari jisim kepala keluli ini, namun hanya pengembara yang terkuat dapat gunakannya secara efektif.</string>
   <string name="WarHammer_Gender">maskulin</string>
   <!--PACKAGE /weapon/missiles-->
   <!--STRINGS OF MissileWeapon CLASS-->
+  <string name="MissileWeapon_Missiles">Senjata misil</string>
   <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang perlu dibuat</string>
   <string name="MissileWeapon_No">Tidak, Saya ubah pendirian saya</string>
+  <string name="MissileWeapon_Sure">Anda pasti mahu memakainya sebagai senjata tempur?</string>
+  <string name="MissileWeapon_Info1">\n\nPurata kecederaan dihasilkan oleh senjata ini menyamai %d mata per pukulan.</string>
+  <string name="MissileWeapon_Info2">Oleh kerana kekuatan anda tidak mencukupi, kelajuan serangan anda menggunakan %s ini telah berkurangan. </string>
+  <string name="MissileWeapon_Info3">Oleh kerana kelebihan kekuatan anda, kecederaan hasil serangan anda dengan %s telah meningkat. </string>
+  <string name="MissileWeapon_Info4">\n\nAnda memegang %s dan bersedia.</string>
   <!--STRINGS OF Boomerang CLASS-->
+  <string name="Boomerang_Name">boomerang</string>
+  <string name="Boomerang_Info">Setelah dilontar kepada pihak musuh, misil kayu rata yang berlekuk ini akan kembali semula kepada pelontarnya.</string>
   <string name="Boomerang_Gender">maskulin</string>
   <!--STRINGS OF CurareDart CLASS-->
+  <string name="CurareDart_Name">damak kurare</string>
+  <string name="CurareDart_Info">Damak kecil ini tidak menghasilkan kecederaan yang ketara, tetapi ia boleh melumpuhkan sasaran dan menyebabkan dia tidak dapat bergerak dalam satu tempoh masa.</string>
   <string name="CurareDart_Gender">maskulin</string>
   <!--STRINGS OF Dart CLASS-->
+  <string name="Dart_Name">damak</string>
+  <string name="Dart_Info">Bilah logam yang tajam hujungnya dan berat pangkalnya untuk digunakan sebagai peluru dengan kekuatan balingan.</string>
   <string name="Dart_Gender">maskulin</string>
   <!--STRINGS OF IncendiaryDart CLASS-->
+  <string name="IncendiaryDart_Name">damak pembakar</string>
+  <string name="IncendiaryDart_Info">Hujung tajam damak ini direka untuk lekat pada sasaran dan sebatian tak stabil yang diikat akan meletup dan menyebabkan kebakaran berlaku.</string>
   <string name="IncendiaryDart_Gender">maskulin</string>
   <!--STRINGS OF Javelin CLASS-->
+  <string name="Javelin_Name">lembing</string>
+  <string name="Javelin_Info">Logam panjang yang diberatkan bahagian hujungnya supaya ia kekal menjunam ketika dilempar.</string>
+  <string name="Javelin_Gender">neuter</string>
   <!--STRINGS OF Shuriken CLASS-->
+  <string name="Shuriken_Name">shuriken</string>
+  <string name="Shuriken_Info">Sekeping logam berbentuk bintang dengan bilah tajam dapat memberikan kecederaan teruk jika mengenai sasaran. Ia boleh dilempar dengan kelajuan sangat tinggi.</string>
   <string name="Shuriken_Gender">maskulin</string>
   <!--STRINGS OF Tamahawk CLASS-->
+  <string name="Tamahawk_Name">tomahawk</string>
+  <string name="Tamahawk_Info">Kapak lontar ini tidaklah begitu berat, tetapi masih memerlukan kekuatan yang mencukupi untuk berkesan.</string>
   <string name="Tamahawk_Gender">maskulin</string>
   <!--STRINGS OF Kusarigama CLASS-->
+  <string name="Kusarigama_Name">kusarigama</string>
+  <string name="Kusarigama_Info">Senjata ini terdiri dari sabit dengan pemberat besi yang mana kedua-duanya disambung dengan rantai.</string>
   <string name="Kusarigama_Gender">feminin</string>
+  <string name="Kusarigama_Pull">TARIK</string>
   <!--STRINGS OF ChaosSword CLASS-->
+  <string name="ChaosSword_Name">pedang chaos</string>
+  <string name="ChaosSword_Info">Bilah pedang ini diperbuat dari chaos tulen dan kadangkala ia bergetar. Kuasa hebat tersimpan di dalamnya senjata ini, yang dapat memotong bersih hampir apa jua benda. Sebaliknya, kemahiran terbaik diperlukan, untuk setanding dengan kekuatan senjata ini.</string>
   <string name="ChaosSword_Gender">maskulin</string>
   <!--STRINGS OF ChaosBow CLASS-->
+  <string name="ChaosBow_Name">busur chaos</string>
+  <string name="ChaosBow_Info">Busur hebat yang diperkasa dengan kuasa Chaos. Setiap anak panah yang ditembak akan membawa tenaga chaos ke sasaran. Sebaliknya jika anda tersilap atau tersasar...</string>
   <string name="ChaosBow_Gender">maskulin</string>
   <!--STRINGS OF ChaosStaff CLASS-->
+  <string name="ChaosStaff_Name">tongkat chaos</string>
+  <string name="ChaosStaff_Info">Tongkat didorong dengan Kuasa Chaos! Tiada ada lagi benda yang ahli sihir mahukan atau takutkan?</string>
   <string name="ChaosStaff_Gender">maskulin</string>
   <!--STRINGS OF SacrificialSword CLASS-->
+  <string name="SacrificialSword_Name">pedang korban</string>
+  <string name="SacrificialSword_Info">Sekali pandang pedang tembaga tua ini, dipenuhi dengan tompokan dan kelihatan tidak boleh digunakan. Sebaliknya ada kuasa kuno tidur di dalamnya. Kuasa ini boleh menukarkan apa jua makhluk menjadi hamba suruhan. Cuma perlu cari cara yang betul untuk aktifkannya.</string>
   <string name="SacrificialSword_Gender">maskulin</string>
 </resources>

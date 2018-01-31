@@ -4,17 +4,27 @@
     <string name="HeroClass_Gnoll">Гнолл</string>
     <string name="GnollArmor_ACSpecial">ПОДЧИНИТЬ</string>
     <string name="GnollArmor_NotGnoll">Только гноллы могут носить гнолью броню!</string>
+
+    <string name="GnollArmor_Name">мундир гнолл-лейтенанта</string>
     <string name="GnollArmor_Info">Обладатели Гнолл-Лейтенантских мундиров хорошо известны своим умением убеждать самых диких монстров присягнуть Короне.</string>
+
+    <string name="GnollTamahawk_Name">гноллский томагавк</string>
+    <string name="GnollTamahawk_Info">Традиционный Томагавк созданный Гноллами-мастерами, у каждого клана есть свой неповторимый дизайн. Этот Томагавк немного легче чем аналоги изготовленные людьми.</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
+
 
     <string name="WndPlayGames_BackupProgress">Сохранить Прогресс Игры</string>
     <string name="WndPlayGames_RestoreProgress">Загрузить Прогресс Игры</string>
     <string name="WndPlayGames_WorkInCloud">Работаем с облаком... Подождите минутку.</string>
+    <string name="StartScene_UnlockGnoll">Чтобы разблокировать этот класс, вам нужно уговорить городского жреца вылечить Gnoll Brute</string>
+    <string name="WndPriest_Heal_Minions">Лечит всех ваш миньонов - всего 1%d золота!</string>
+    <string name="Badges_GnollUnlocked">Gnoll разблокирован</string>
 
     <string-array name="HeroClass_GnollPerks">
-        <item>Гноллы стартуют с 17 очками силы</item>
+        <item>Гноллы стартуют с 15 очками силы</item>
         <item>Гноллы стартуют с 5 очками здоровья</item>
-        <item>Гноллы стартуют без брони</item>
-        <item>Гноллы не умеют читать</item>
+        <item>Гноллы стартуют без брони, зато с уникальным томагавком</item>
+        <item>Гноллы не умеют читать или писать</item>
         <item>Гноллы не атакуют других Гноллов просто так</item>
      </string-array>
 </resources>

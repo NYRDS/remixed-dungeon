@@ -20,99 +20,203 @@
   <string name="Albino_Name_Objective">tikus balar</string>
   <string name="Albino_Desc">Tikus marsupial bersikap agresif, namun ia merupakan haiwan lemah yang menduduki pembetungan. Mereka boleh menjadi bahaya jika dalam kumpulan besar. Tikus ini nampaknya jenis balar. Ia juga memiliki gigi tajam yang luar biasa.</string>
   <!--STRINGS OF Bandit CLASS-->
+  <string name="Bandit_Name">perompak gila</string>
   <string name="Bandit_Gender">maskulin</string>
+  <string name="Bandit_Name_Objective">perompak gila</string>
   <!--STRINGS OF Bat CLASS-->
+  <string name="Bat_Name">kelawar pontianak</string>
   <string name="Bat_Gender">maskulin</string>
+  <string name="Bat_Name_Objective">kelawar pontianak</string>
+  <string name="Bat_Defense">dielak</string>
   <!--STRINGS OF Brute CLASS-->
+  <string name="Brute_Name">gnoll ganas</string>
+  <string name="Brute_Name_Objective">gnoll ganas</string>
   <string name="Brute_Gender">maskulin</string>
+  <string name="Brute_StaEnraged">berang</string>
   <!--STRINGS OF Crab CLASS-->
+  <string name="Crab_Name">ketam pembentung</string>
   <string name="Crab_Gender">maskulin</string>
+  <string name="Crab_Name_Objective">sewer crab</string>
+  <string name="Crab_Defense">ditepis</string>
   <!--STRINGS OF DM300 CLASS-->
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">maskulin</string>
   <string name="DM300_Name_Objective">DM-300</string>
   <string name="DM300_Info1">DM-300 membaiki dirinya sendiri!</string>
+  <string name="DM300_Info2">Misi gagal. Mematikan diri sendiri.</string>
   <string name="DM300_Info3">Individu tidak dikenali dikesan.</string>
   <!--STRINGS OF Elemental CLASS-->
+  <string name="Elemental_Name">keunsuran api</string>
   <string name="Elemental_Gender">maskulin</string>
+  <string name="Elemental_Name_Objective">keunsuran api</string>
   <!--STRINGS OF Eye CLASS-->
+  <string name="Eye_Name">mata jahat</string>
+  <string name="Eye_Gender">neuter</string>
+  <string name="Eye_Name_Objective">mata jahat</string>
   <!--STRINGS OF Gnoll CLASS-->
   <string name="Gnoll_Gender">maskulin</string>
   <!--STRINGS OF Golem CLASS-->
   <string name="Golem_Gender">maskulin</string>
+  <string name="Golem_Defense">disekat</string>
   <!--STRINGS OF Goo CLASS-->
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">feminin</string>
   <string name="Goo_Name_Objective">Goo</string>
+  <string name="Goo_Info1">Goo mengepam dirinya sendiri!</string>
+  <string name="Goo_Info2">glurp... glurp...</string>
+  <string name="Goo_Info3">GLURP-GLURP!</string>
   <string name="Goo_StaInfo1">!!!</string>
   <!--STRINGS OF King CLASS-->
+  <string name="King_Name">Raja Orang Kerdil</string>
   <string name="King_Gender">maskulin</string>
+  <string name="King_Name_Objective">Raja Orang Kerdil</string>
+  <string name="King_Defense">ditepis</string>
+  <string name="King_Info1">Awak tak boleh bunuh saya, %s... Saya...dewa...</string>
+  <string name="King_Info2">Bangun, hamba!</string>
+  <string name="King_Info3">Berani kau!</string>
+  <string name="Undead_Name">orang kerdil hidup semula</string>
   <string name="Undead_Gender">maskulin</string>
+  <string name="Undead_Name_Objective">orang kerdil hidup semula</string>
+  <string name="Undead_Desc">Orang kerdil hidup semula ini, dibangunkan atas kehendak Raja Orang Kerdil, merupakan bekas pengikutnya. Mereka wujud sebagai rangka berjambang.</string>
+  <string name="Undead_Defense">disekat</string>
   <!--STRINGS OF Mimic CLASS-->
+  <string name="Mimic_Name">mimik</string>
   <string name="Mimic_Gender">maskulin</string>
+  <string name="Mimic_Name_Objective">mimik</string>
+  <string name="Mimic_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Dalam kurungan bawah tanah meraka suka memilih rupa peti harta-karun, kerana mereka tahu mengumpan pengembara.\";</string>
   <!--STRINGS OF MimicPie CLASS-->
+  <string name="MimicPie_Name">mimik</string>
   <string name="MimicPie_Gender">maskulin</string>
+  <string name="MimicPie_Name_Objective">mimik</string>
+  <string name="MimicPie_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Yang ini rupa sebijik macam pasty besar yang sedap\".;</string>
   <!--STRINGS OF Monk CLASS-->
+  <string name="Monk_Name">sami orang kerdil</string>
   <string name="Monk_Gender">maskulin</string>
+  <string name="Monk_Name_Objective">sami orang kerdil</string>
+  <string name="Monk_Desc">Sami ini merupakan si fanatik, yang tegar melindungi rahsia bandar mereka dari semua makhluk lain. Mereka tidak memakai perisai atau menggunakan senjata, hanya bersandarkan seni pertempuran tanpa senjata.</string>
+  <string name="Monk_Defense">ditepis</string>
+  <string name="Monk_Disarm">%1$s telah mengetuk jatuh %2$s dari pegangan anda!</string>
   <!--STRINGS OF Piranha CLASS-->
+  <string name="Piranha_Name">pirana gergasi</string>
   <string name="Piranha_Gender">feminin</string>
+  <string name="Piranha_Name_Objective">pirana gergasi</string>
+  <string name="Piranha_Desc">ikan pemangsa ini bukanlah penghuni kolam bawah tanah ini. Mereka dibiak khusus untuk melindungi harta karun di dalam air.</string>
   <!--STRINGS OF Rat CLASS-->
+  <string name="Rat_Name">tikus marsupial</string>
   <string name="Rat_Gender">feminin</string>
+  <string name="Rat_Name_Objective">tikus marsupial</string>
+  <string name="Rat_Desc">Tikus marsupial bersikap agresif, namun ia merupakan haiwan lemah yang menduduki pembetungan. Mereka boleh menjadi bahaya jika dalam kumpulan besar.</string>
   <!--STRINGS OF Scorpio CLASS-->
   <string name="Scorpio_Name">jengking</string>
   <string name="Scorpio_Gender">maskulin</string>
   <string name="Scorpio_Name_Objective">jengking</string>
   <string name="Scorpio_Desc">Makhluk seakan-labah-labah bersaiz besar dan menakutkan itu tidak suka bertempur dalam jarak dekat, ia menembak runcing bergerigi beracun yang dapat melumpuhkan mangsa dari jarak jauh.</string>
   <!--STRINGS OF Senior CLASS-->
+  <string name="Senior_Name">sami kanan</string>
   <string name="Senior_Gender">maskulin</string>
+  <string name="Senior_Name_Objective">sami kanan</string>
+  <string name="Senior_Desc">Sami ini merupakan si fanatik, yang tegar melindungi rahsia bandar mereka dari semua makhluk lain. Mereka tidak memakai perisai atau menggunakan senjata, hanya bersandarkan seni pertempuran tanpa senjata. Sami ini telah menguasai seni melumpuhkan musuhnya.</string>
   <!--STRINGS OF Shadow CLASS-->
+  <string name="Shadow_Name">bayang</string>
   <string name="Shadow_Gender">feminin</string>
+  <string name="Shadow_Name_Objective">bayang</string>
+  <string name="Shadow_Desc">Bayang merayap secara senyap dalam runtuhan penjara purba, jarang menunjukkan dirinya, terutamanya dalam pengembaraan terkini mereka.</string>
   <!--STRINGS OF Shaman CLASS-->
+  <string name="Shaman_Name">pawang gnoll</string>
   <string name="Shaman_Gender">maskulin</string>
+  <string name="Shaman_Name_Objective">pawang gnoll</string>
+  <string name="Shaman_Killed">Bebola kilat %s telah membunuh anda...</string>
   <!--STRINGS OF Shielded CLASS-->
   <string name="Shielded_Gender">maskulin</string>
+  <string name="Shielded_Defense">disekat</string>
   <!--STRINGS OF Skeleton CLASS-->
   <string name="Skeleton_Gender">maskulin</string>
+  <string name="Skeleton_Defense">disekat</string>
   <!--STRINGS OF Spinner CLASS-->
   <string name="Spinner_Gender">maskulin</string>
+  <string name="Spinner_Desc">Lelabah gua berbulu hijau ini cuba menghindari pertempuran bersemuka, lebih suka tunggu dari jarak jauh dan membiarkan mangsanya terperangkap dengan jaringan mereka, mati perlahan-lahan kesan dari gigitan berbisa mereka.</string>
   <!--STRINGS OF Statue CLASS-->
+  <string name="Statue_Name">patung hidup</string>
   <string name="Statue_Gender">feminin</string>
+  <string name="Statue_Name_Objective">patung hidup</string>
   <!--STRINGS OF Succubus CLASS-->
+  <string name="Succubus_Name">succubus</string>
   <string name="Succubus_Gender">maskulin</string>
+  <string name="Succubus_Name_Objective">succubus</string>
+  <string name="Succubus_Desc">Succubi ialah seekor setan yang kelihatan seperti gadis penggoda. Dengan menggunakan sihirnya, succubus boleh memukau adiwira, yang mana dia tidak dapat menyerang sehinggalah pukau itu terpadam.</string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Gender">maskulin</string>
+  <string name="Swarm_Defense">dielak</string>
   <!--STRINGS OF Tengu CLASS-->
+  <string name="Tengu_Name">Tengu</string>
   <string name="Tengu_Gender">maskulin</string>
+  <string name="Tengu_Name_Objective">Tengu</string>
+  <string name="Tengu_Info1">Bebas akhirnya...</string>
+  <string name="Tengu_Info2">Dah jumpa, %s!</string>
   <!--STRINGS OF Thief CLASS-->
+  <string name="Thief_Name">pencuri gila</string>
   <string name="Thief_Gender">maskulin</string>
+  <string name="Thief_Name_Objective">pencuri gila</string>
+  <string name="Thief_Stole">%1$s telah mencuri %2$s daripada anda!</string>
+  <string name="Thief_Carries">\n\n%1$s membawa _%2$s_. Hasil curi.</string>
   <!--STRINGS OF Warlock CLASS-->
   <string name="Warlock_Gender">maskulin</string>
+  <string name="Warlock_Killed">Bebola bayang %s telah membunuh anda...</string>
   <!--STRINGS OF Wraith CLASS-->
   <string name="Wraith_Gender">maskulin</string>
+  <string name="Wraith_Defense">dielak</string>
   <!--STRINGS OF Yog CLASS-->
+  <string name="Yog_Name">Yog-Dzewa</string>
   <string name="Yog_Gender">maskulin</string>
+  <string name="Yog_Name_Objective">Yog-Dzewa</string>
+  <string name="Yog_Desc">Yog-Dzewa ialah Dewa Purba, satu entiti berkuasa dari dunia chaos. Berabad-abad dahulu, orang kerdil purba berjaya mengalahkan tentera setannya walaupun menang tipis, mereka gagal membunuh dewa ini. Sebaliknya, mereka mengurung dewa ini dalam suatu ruangan di bawah bandar mereka, dengan harapan dia terlalu lemah untuk bangkit semula.</string>
   <string name="Yog_Info1">...</string>
+  <string name="Yog_Info2">Harapan adalah sebuah ilusi...</string>
   <string name="RottingFist_Gender">maskulin</string>
   <string name="BurningFist_Gender">maskulin</string>
+  <string name="Larva_Name">larva dewa</string>
   <string name="Larva_Gender">feminin</string>
+  <string name="Larva_Name_Objective">larva dewa</string>
+  <string name="Larva_Desc">Larva Dewa Purba</string>
   <!--STRINGS OF SpiderEgg CLASS-->
   <string name="SpiderEgg_Name">telur lelabah</string>
+  <string name="SpiderEgg_Gender">neuter</string>
   <string name="SpiderEgg_Name_Objective">spider egg</string>
   <!--STRINGS OF SpiderNest CLASS-->
+  <string name="SpiderNest_Name">kokun lelabah</string>
+  <string name="SpiderNest_Gender">neuter</string>
+  <string name="SpiderNest_Name_Objective">kokun lelabah</string>
   <!--STRINGS OF SpiderServant CLASS-->
+  <string name="SpiderServant_Name">askar lelabah</string>
   <string name="SpiderServant_Gender">maskulin</string>
+  <string name="SpiderServant_Name_Objective">askar lelabah</string>
+  <string name="SpiderServant_Desc">Askar merupakan unit paling banyak dalam sarang lelabah. Dilahirkan untuk melindungi wilayahnya. Kelisera askar mengandungi kelenjar berbisa yang dapat meracun musuhnya.</string>
   <!--STRINGS OF SpiderExploding CLASS-->
+  <string name="SpiderExploding_Name">pekerja lelabah</string>
   <string name="SpiderExploding_Gender">maskulin</string>
+  <string name="SpiderExploding_Name_Objective">pekerja lelabah</string>
   <!--STRINGS OF SpiderMind CLASS-->
+  <string name="SpiderMind_Name">Psi-Lelabah</string>
   <string name="SpiderMind_Gender">maskulin</string>
+  <string name="SpiderMind_Name_Objective">Psi-Lelabah</string>
+  <string name="SpiderMind_Desc">Lelabah yang nampak lemah ini memiliki kuasa minda yang unik, membolehkan mereka kawal keseluruhan koloni. Psi-Lelabah berupaya mengawal apa jua makhluk hidup, tetapi mereka penakut.</string>
   <!--STRINGS OF SpiderQueen CLASS-->
+  <string name="SpiderQueen_Name">ratu lelabah</string>
   <string name="SpiderQueen_Gender">feminin</string>
+  <string name="SpiderQueen_Name_Objective">ratu lelabah</string>
+  <string name="SpiderQueen_Desc">Sebahagian jasad perempuan cantik sebahagian lagi jasad lelabah. Setiap benda hidup dalam sarang ialah hambanya. Bertemu dengan wanita luar biasa ini merupakan pengalaman maut. Kerana anda merupakan penceroboh!</string>
   <!--STRINGS OF WaterElemental CLASS-->
+  <string name="WaterElemental_Name">keunsuran air</string>
   <string name="WaterElemental_Gender">maskulin</string>
+  <string name="WaterElemental_Name_Objective">keunsuran air</string>
   <!--STRINGS OF AirElemental CLASS-->
+  <string name="AirElemental_Name">keunsuran udara</string>
   <string name="AirElemental_Gender">maskulin</string>
+  <string name="AirElemental_Name_Objective">keunsuran udara</string>
   <!--STRINGS OF EarthElemental CLASS-->
+  <string name="EarthElemental_Name">keunsuran tanah</string>
   <string name="EarthElemental_Gender">maskulin</string>
+  <string name="EarthElemental_Name_Objective">keunsuran tanah</string>
   <!--STRINGS OF Crystal CLASS-->
   <string name="Crystal_Name">Kristal terapung</string>
   <string name="Crystal_Gender">maskulin</string>

@@ -106,6 +106,71 @@
  - Mroczny Lord ma teraz bardziej czuły początkowy pokuj (teraz gracze nie mogą go minąć aby prześć na następny poziom, teraz MUSISZ z nim walczyć)\n
  - Pajęczy Urok dostal zaktualizowaną taksturę a można fo zdobyć z Królowej Pająków (Wcześniej mogłaś go zdobyć ze Szlamu)\n
  </string>
+  <string name="Welcome_Text_25"> remix.25:\n
+- Nowy typ lochów: Necropolis (by wejść do Necropolis musisz odnaleźć Nekromantę na poziomie 7, aby otrzymać kościany klucz\n
+- Nowe przedmioty: Zbroja Pająka ora Czarna Czaszka\n
+- Zloty miecz jest teraz potężniejszy, ale wymaga więcej Siły\n
+- Poprawne wyświetlanie wody na Pajeczych Poziomach\n
+- Od teraz kupki kości nei moga zawierać artefaktów i przedmiotów fabularnych\n
+- Zmieniona mechanika zwierząt. Rózne typy przeciwników otrzymały odporność na efekty kontroli umysłu\n
+- Skrócono czas działanai Mikstury Płomienia. Ponadto płonie ona mneij w wodzie.\n
+- Ikona kontroli umysłu (widoczna nad przeciwnikami) została zmieniona na serduszko\n
+- Polepszono widoczność «nowej czcionki\n
+- Zaktualizowano tłumaczenia\n
+- Usunięto ustawienia: «tryb immersyjny» oraz «skalowanie UI»\n</string>
+  <string name="Welcome_Text_25_1">
+ remix.25.1:\n
+ --Co nowego--\n
+ - Nowy typ bohatera: Nekromanta\n
+ - Od teraz tylko Nekromanta dostaje XP przeciwników zabitych przez Chowańców\n
+ - Nekromanta ma wieksze szanse na Ostrze Poświęcenia\n
+ --Zbalansowanie--\n
+ - Wszystkie potwory poziomów Necropolis zostały osłabione\n
+ - Od teraz Yog-Dzewa otrzymuje ochronę nie tylko przed Pięściami ale też mini-bosami\n
+ - Po śmierci Yoga unierają inni bossowie (poprzednio: tylko Pięści)\n
+ - Osłabiono Serce Yoga. Uzdrowianie innych przeciwników zostało zredykowane.\n
+ - Od teraz Bossowie już nie \"polują\" domyślnie.\n
+ - Zmniejszono szansę wskrzeszenia dla Gnoll-Zombie\n
+ - Osłabiono Pseudo-Szczura\n
+ - Od teraz Czarna Czaszka wymaga 10 ładunkow do aktywacji (zamiast 15), ale śmierć Chowańców już jej nie ładuje.\n
+ - Treacherous Spirit nie może już być Chowańcem.\n
+ --Wizualne--\n
+ - Zaktualizowano grafiki Kanałów\n
+ --Poprawki--\n
+ - Poprawiono błąd nieznikajacego tekstu\n
+ - Poprawiono błąd, w którym boss Necropolis nie mógł ranić gracza\n
+ - Poprawiono błąd generowanie poziomu 5\n
+ --Modyfikacje--\n
+ - Modyfikacje użytkowników mogą zawierac przedmioty kodeksu z własnym tekstem\n
+ - Modyfikacje użytkowników pozwalaja na własne grafiki, wodę i muzykę dla poziomów\n
+ </string>
+  <string name="Welcome_Text_27_2">
+        remix.27.2\n
+        --Gra:\n
+        - Przedstawiamy system zaklęć \n
+        - Mag i Nekromanta dostają naturalne efekty zaklęć. Ci bohaterowie posiadają unikalne zaklęcia bez potrzeby posiadania specjalnych przedmiotów\n
+        - Każda postać posiada teraz pasek many (Wliczając Nekromantę)\n
+        - Nekromanta nie posiada już pasywnej regeneracji many za zabijanie przeciwników. Efekt ten jest teraz przypisany do Szaty Nekromanty (+1 many przy zabójstwie) oraz do Kościstej Zbroi (+2 many przy zabójstwie) , zamiast umiejętności przyzywania jaką wcześniej posiadały\n
+---------------------------------------------------------------------------------------------
+        - New hero attribute: Magic Level. The higher the Magic Level the more natural spells are unlocked for your hero and more powerful those spells might get\n
+        - New item: Mana Potion\n
+        - New item Tome of Knowledge.  An item that increases your Magic Level by 1\n
+        - New item Spell Book.  This equipable item will allow you to cast a single spell on cost of mana and unlike the scrolls, this item will not expire no matter how much you use it\n
+        - Class Armor is no longer requires health to cast it\'s special ability, it costs 1/3 of your maximum amount of mana instead\n
+        - The \“Wand of Magic Missiles\” are no longer lootable from Crystals\n
+        - From this point on, every level will have their \“view distance\” set randomly, so that player can encounter \“dark\” levels at every point of the game\n
+        - Torches are now available at beginning and can be commonly found throughout the game\n
+        - The \“safe\” (isSafe) levels are unaffected and will be always lit to a maximum extend\n
+        - Damage from burning is scales with dungeon depth now\n\n
+
+        --Vanity Items: \n
+        - New Hat: Chaos Helmet \n\n
+
+        --Mods: \n
+        - You can now add new attributes to your \“iniHeroes\” file: \“maxSP\” - sets a maximum amount of mana, that your character can posses. \“startingSp\” sets starting amount of mana for your character\n
+        - Hero initialization also takes the \“magicAffinity\” attribute, which can be set to: \“Elemental\”, \“Necromancy\” or \“Common\” (\“Common\” means that character can only use spells from the spell books)\n
+        - New game object in mods – Trap. Unlike regular in-game trap, this object can be adjusted in several ways. You can set: the number of activations (uses), the target cell on which the trap\'s effect should trigger(target), and whatever you can or cannot active the trap by throwing item at it (activatedByItem)\n
+    </string>
   <string name="Welcome_Text_27_3">
          remix.27.3\n
   - Nowy przedmiot: Zwój Przyzwania\n
@@ -127,5 +192,15 @@
     - Umiejętność zbroi klasowej zużywa teraz Manę a nie punkty życia \n
     - Przedmioty chaosu tracą teraz zaklętą umiejętność po ich ziszczeniu\n
     - Mentalny Pająk teraz może używać tylko zaklęć Oślepienia, Spowolnienia oraz Osłabienia\n
+    </string>
+  <string name="Welcome_Text_28">
+    remix.28\n
+    - Nowy Bohater - Gnoll\n
+    - Obrażenia zadawane przez wietrzne różdżki podczas walki wręcz zależą teraz od poziomu magicznych umiejętności Bohatera   \n
+    - Dla każdego Bohatera, nie więcej niż jeden wynik będzie wyświetlany w tabeli najlepszych wyników \n
+    - Auto synchronizacja z Google Play Games jest wyłączona (Możesz zsynchronizować dane ręcznie)\n
+    - Wielki zmiany w tłumaczeniu Brazylijsko-Portugalskim\n
+    - Nowe klasy bohatera dla modów: forbiddenActions, friendlyMobs\n
+    - Dodano nowy język: Malajski \n
     </string>
 </resources>

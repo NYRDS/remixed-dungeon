@@ -2,6 +2,8 @@
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
+  <string name="Scroll_Name">skrol \"%s\"</string>
+  <string name="Scroll_Info">Kertas kekulit ini dipenuhi dengan tulis yang sukar dibaca, dan terdapat tajuk rune %s. Siapa tahu apa yang ia lakukan jika dibaca dengan kuat?</string>
   <string name="Scroll_ACRead">BACA</string>
   <string name="Scroll_Blinded">Anda tidak boleh membaca skrol kerana tidak nampak</string>
   <string-array name="Scroll_Runes">
@@ -24,19 +26,74 @@
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
   <string name="InventoryScroll_Title">Pilih satu item</string>
+  <string name="InventoryScroll_Warning">Anda pasti mahu batalkan penggunaan skrol ini? Malangnya ia tetap digunakan.</string>
+  <string name="InventoryScroll_Yes">Ya, Saya pasti</string>
+  <string name="InventoryScroll_No">Tidak, Saya ubah pendirian saya</string>
   <!--STRINGS OF BlankScroll CLASS-->
+  <string name="BlankScroll_Name">Skrol Kosong</string>
+  <string name="BlankScroll_Info">Hanyalah skrol kosong. Mungkin boleh ditulis atas skrol ini?</string>
+  <string name="BlankScroll_ReallyBlank">Skrol ini kosong isinya</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
+  <string name="ScrollOfChallenge_Name">Skrol Cabaran</string>
+  <string name="ScrollOfChallenge_Info">Ketika membacanya dengan kuat, skrol ini melepaskan tempikan cabaran yang membangunkan semua raksaksa dan beritahu mereka lokasi pembaca.</string>
+  <string name="ScrollOfChallenge_Info1">Skrol ini mengeluarkan tempikan cabaran yang bergema di serata kurungan bawah tanah!</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
+  <string name="ScrollOfIdentify_Name">Skrol Pengecaman</string>
+  <string name="ScrollOfIdentify_Info">Dedahkan semua rahsia satu item secara kekal.</string>
+  <string name="ScrollOfIdentify_InvTitle">Pilih satu item untuk dikenal pasti</string>
+  <string name="ScrollOfIdentify_Info1">Ini ialah %s</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
+  <string name="ScrollOfLullaby_Name">Skrol Dodoi</string>
+  <string name="ScrollOfLullaby_Info">Melodi menenangkan akan menyebabkan semua makhluk dalam jangkauan penglihatan anda tidur nyenyak, membolehkan anda lari atau membuat serangan hendap kepada mereka.</string>
+  <string name="ScrollOfLullaby_Info1">Skrol yang mendodoikan melodi menenangkan.</string>
+  <string name="ScrollOfLullaby_Info2">Skrol yang mendodoikan melodi menenangkan dan %s terus tidur nyenyak!</string>
+  <string name="ScrollOfLullaby_Info3">Skrol yang mendodoikan melodi menenangkan dan raksaksa terus tidur nyenyak!</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
+  <string name="ScrollOfMagicMapping_Name">Skrol Pemetaan Ajaib</string>
+  <string name="ScrollOfMagicMapping_Info">Ketika skrol ini dibacakan, satu imej jelas berkenaan bentangan aras dan mendedahkan semua rahsia yang tersembunyi ke dalam ingatan anda. Lokasi item dan mahkluk masih kekal tidak diketahui.</string>
+  <string name="ScrollOfMagicMapping_Layout">Anda kini tahu selok-belok bentangan aras ini.</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
+  <string name="ScrollOfMirrorImage_Name">Skrol Imej Cermin</string>
+  <string name="ScrollOfMirrorImage_Info">Setelah membaca skrol ini akan wujud satu lagi kembar ilusi sipembaca, yang akan dikejar oleh pihak musuh.</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
+  <string name="ScrollOfPsionicBlast_Name">Skrol Ledakan Psionik</string>
+  <string name="ScrollOfPsionicBlast_Info">Skrol ini mengandungi tenaga pemusnahan, yang boleh disalur secara psionik untuk memberikan kecederaan teruk kepada semua makhluk dalam medan penglihatannya. Satu denyar cahaya yang muncul bersama-sama akan membutakan buat sementara semua orang dalam lingkungan termasuklah pembaca skrol.</string>
   <!--STRINGS OF ScrollOfRecharging CLASS-->
+  <string name="ScrollOfRecharging_Name">Skrol Pengecasan Semula</string>
+  <string name="ScrollOfRecharging_Info">Kuasa ajaib mentah yang diikat dalam kertas kekulit ini, bila dilepaskan, akan mengecas semula semua tongkat sakti pembaca menjadi penuh.</string>
+  <string name="ScrollOfRecharging_Info1a">satu pusuan tenaga mengalir masuk ke beg anda, dan mengecas tongkat sakti di dalamnya.</string>
+  <string name="ScrollOfRecharging_Info1b">satu pusuan tenaga mengalir masuk ke beg anda, dan mengecas tongkat sakti di dalamnya</string>
+  <string name="ScrollOfRecharging_Info2">satu pusuan tenaga mengalir masuk ke beg anda, tetapi tiada apa-apa berlaku</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
+  <string name="ScrollOfRemoveCurse_Name">Skrol Pembatalan Sumpahan</string>
+  <string name="ScrollOfRemoveCurse_Info">Setelah skrol ini dibaca, serta-merta apa jua sihir jahat yang disumpah masuk pada senjata, perisai, cincin dan item dibawa akan ditawarkan supaya pemakai dapat menanggalkannya.</string>
+  <string name="ScrollOfRemoveCurse_Proced">Beg galas anda bersinar-sinar dengan cahaya pembersihan, dan tenaga kejahatan telah menghilang.</string>
+  <string name="ScrollOfRemoveCurse_NoProced">Beg galas anda bersinar-sinar dengan cahaya pembersihan, tetapi tiada apa yang berlaku.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
+  <string name="ScrollOfTeleportation_Name">Skrol Teleportasi</string>
+  <string name="ScrollOfTeleportation_Info">Mantera dalam kertas kekulit ini mengalih pembaca serta-merta ke lokasi lain secara rawak dalam aras kurungan bawah tanah. Ia boleh digunakan untuk lari dari situasi merbahaya, tetapi pembaca malang mungkin beralih ke tempat yang lebih bahaya.</string>
+  <string name="ScrollOfTeleportation_Teleport">Dalam sekelip mata anda beralih ke lokasi lain dalam aras ini.</string>
+  <string name="ScrollOfTeleportation_NoTeleport">Aura tenaga ajaib yang kuat dalam tempat ini menghalang anda beralih lokasi!</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
+  <string name="ScrollOfTerror_Name">Skrol Ketakutan</string>
+  <string name="ScrollOfTerror_Info">Satu denyar cahaya merah yang menyelubungi semua makhluk dalam pandangan anda menyebabkan mereka ketakutan, berpatah balik dan lari ketakutan. Jika menyerang musuh yang melarikan diri akan membatalkan kesan ini.</string>
+  <string name="ScrollOfTerror_Info1">Skrol memancarkan denyar cahaya merah yang terang</string>
+  <string name="ScrollOfTerror_Info2">Skrol memancarkan denyar cahaya merah yang terang dan %s terus melarikan diri!</string>
+  <string name="ScrollOfTerror_Info3">Skrol memancarkan denyar cahaya merah yang terang dan raksaksa terus melarikan diri!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
+  <string name="ScrollOfUpgrade_Name">Skrol Penataran</string>
+  <string name="ScrollOfUpgrade_Info">Skrol ini menatar satu item sahaja, menambahbaik kualitinya. Tongkat sakti akan bertambah kuasa dan bilangan casnya; senjata akan memberikan lebih banyak kecederaan atau sasaran lebih tepat; suit perisai dapat menempis lebih banyak pukulan; kesan cincin pada pemakainya akan bertambah kekuatannya. Senjata dan perisai juga mudah digunakan iaitu kurang tenaga kekuatan, dan mana-mana sumpahan pada item akan ditawarkan.</string>
+  <string name="ScrollOfUpgrade_InvTitle">Pilih satu item untuk ditatarkan</string>
+  <string name="ScrollOfUpgrade_LooksBetter">%s anda nampaknya lebih baik berbanding dahulu</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
+  <string name="ScrollOfWeaponUpgrade_Name">Skrol Penataran Senjata</string>
+  <string name="ScrollOfWeaponUpgrade_Info">Skrol ini akan menatar senjata tempur, menambahbaik kualitinya. Berlawanan dengan Skrol Penataran biasa, versi khusus ini tidak sesekali merosakkan sihir sedia ada dalam sesebuah senjata. Sebaliknya, ia berupaya memasukkan sihir secara rawak ke dalam senjata yang tiada kuasa sihir.</string>
+  <string name="ScrollOfWeaponUpgrade_InvTitle">Pilih satu senjata untuk ditatarkan</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">%s anda nampaknya lebih baik berbanding dahulu</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
+  <string name="ScrollOfDomination_Name">Skrol Dominasi</string>
+  <string name="ScrollOfDomination_Info">Skrol ini akan menundukkan kemahuan satu makhluk dalam penglihatan anda. Makhluk tersebut akan bertempur untuk anda sehingga ia mati.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
+  <string name="ScrollOfCurse_Name">Skrol Sumpahan</string>
+  <string name="ScrollOfCurse_Info">Skrol ini dicipta khusus untuk memberi pengajaran kepada pencuri bodoh yang cuba guna sihir yang mereka tidak fahami.  Skrol ajaib sepenuhnya tidak berguna dan memberi kemudaratan kepada pengembara, tetapi bernilai tinggi kepda sipenjual.</string>
 </resources>

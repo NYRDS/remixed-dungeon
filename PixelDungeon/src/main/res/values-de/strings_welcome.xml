@@ -139,11 +139,12 @@ remix.26.6\n
 - Magier Rüstung (Version für Hexenmeister: Hexenmeister Rüstung) und Süßigkeit sind nun in Mods verwendbar\n</string>
   <string name="Welcome_Text_28">
 remix.28\n
- - Neuer Held - Gnoll\n
- - Der Schaden von magischen Stäben hängt nun von dem magischem Fähigkeiten des Helden ab\n
- - Für jeden Helden wird nun nicht mehr als ein Ergebnis bei den Highscores angezeigt\n
- - Auto-Synchronisation mit Google Spiele ist deaktiviert (Man kann nun manuell Synchronisieren)\n
- - Ein großes Update für die Brasilianische-Portugiesische Übersetzung\n
- - Neue Heldenklassen Option für Mods: forbiddenActions, friendlyMobs\n
+- Neuer Held - Gnoll\n
+- Der Schaden von Zauberstäben im Nahkampf hängt nun vom Magielevel des Helden ab\n
+- Für jeden Helden wird nicht mehr als ein Ergebnis bei den Highscores angezeigt\n
+- Auto-Synchronisation mit Google Play Spiele ist deaktiviert(Du kannst manuell Synchronisieren)\n
+- Ein großes Update für die Brasilianisch-Portugiesische Übersetzung\n
+- Neue Heldenklassen Option für Mods: forbiddenActions, friendlyMobs\n
+- Neue Sprache hinzugefügt: Malaiisch\n
 </string>
 </resources>

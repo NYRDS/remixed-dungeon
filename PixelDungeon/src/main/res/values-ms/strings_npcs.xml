@@ -2,14 +2,26 @@
 <resources>
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
+  <string name="Blacksmith_Name">tukang besi troll</string>
+  <string name="Blacksmith_Gold1">Hei manusia! Nak tolong aku tak? Ambil beliung ini dan cari beberapa _bijih emas gelap_, _15 keping_ dah cukup. Apa, nak balasan? Kau tamak...\nBaiklah, baiklah, aku takde duit, tapi boleh buat kerja tempa untuk kau. Anggaplah kau bertuah, aku sorang jer tukang besi kat sini.</string>
+  <string name="Blacksmith_Blood1">Hei manusia! Nak tolong aku tak? Ambil beliung ini dan _bunuh seekor kelawar_ dengannya, nak ada darah kat beliung ni. Apa, nak balasan? Kau tamak...\nBaiklah, baiklah, aku takde duit, tapi boleh buat kerja tempa untuk kau. Anggaplah kau bertuah, aku sorang jer tukang besi kat sini.</string>
+  <string name="Blacksmith_Txt2">Apa? Mana beliung aku?!</string>
+  <string name="Blacksmith_Txt3">Bijih emas gelap. 15 keping. Haa, susah ke dapatkannya?</string>
+  <string name="Blacksmith_Txt4">Aku nak darah kelawar ada dekat beliung ini. Chop chop!</string>
+  <string name="Blacksmith_Completed">Ah, kau dah balik... Biar lambat asal selamat.</string>
   <string name="Blacksmith_GetLost">Saya sibuk. Pergi berambus!</string>
+  <string name="Blacksmith_LooksBetter">%s anda nampaknya lebih baik berbanding dahulu</string>
   <string name="Blacksmith_Verify1">Pilih 2 item berbeza, bukan dua item yang serupa!</string>
   <string name="Blacksmith_Verify2">Pilih 2 item bagi jenis yang sama!</string>
+  <string name="Blacksmith_Verify4">Saya tidak dapat mengendalikan item disumpah!</string>
+  <string name="Blacksmith_Verify5">Ia adalah sampah, kualitinya terlalu teruk!</string>
   <string name="Blacksmith_Verify6">Saya tidak boleh tempa semula item ini!</string>
   <!--STRINGS OF Ghost CLASS-->
   <string name="Ghost_Name">hantu sedu</string>
   <string name="Ghost_Desc">Hantu hanya separa kelihatan. Ia seakan-akan cahaya pudar tanpa bentuk dengan rupa sedih.</string>
+  <string name="Ghost_Rose1">Hai pengembara.... Dulu saya pun seperti awak - kuat dan yakin... Kini saya telah mati... Malangnya saya tidak boleh tinggalkan tempat ini... Sehinggalah saya dapat kembali _mawar kering_... Ia sangat penting buat saya... Ada beberapa ekor raksaksa mencurinya dari jasad saya...</string>
   <string name="Ghost_Rose2">Tolong... Bantulah saya... Cari bunga mawar...</string>
+  <string name="Ghost_Defense">dielak</string>
   <string name="FetidRat_Name">tikus kohong</string>
   <string name="FetidRat_Name_Objective">tikus kohong</string>
   <string name="FetidRat_Gender">feminin</string>
@@ -17,22 +29,42 @@
   <string name="Hedgehog_Name">landak kecil</string>
   <string name="Hedgehog_Desc">Landak kecil nampaknya ketakutan.</string>
   <string name="Hedgehog_Info1">Adakah anda mancari seekor Beruang?</string>
+  <string name="Hedgehog_Info3">Anda mahu teh dengan jem raspberi?</string>
   <string name="Hedgehog_Info4">Ambil pai ini</string>
+  <string name="Hedgehog_ImLate">Saya terlambat, Saya betul-betul terlambat...</string>
   <!--STRINGS OF Imp CLASS-->
+  <string name="Imp_Name">momok bercita-cita tinggi</string>
+  <string name="Imp_Desc">Momok merupakan setan peringkat rendah. Mereka terkenal dengan kelemahan dari segi kekuatan atau bakat sihir. Sebaliknya mereka bijak dan suka bersosial, ramai momok suka bersama-sama dengan makhluk bukan-setan.</string>
+  <string name="Imp_Defense">dielak</string>
+  <string name="Imp_Monks2">Oh, awak masih hidup! Saya tahu kung-fu anda lebih kuat ;) Jangan lupa kutip token sami ini.</string>
+  <string name="Imp_Cya">Jumpa lagi, %s!</string>
   <string name="Imp_Hey">Psst, %s!</string>
   <!--STRINGS OF ImpShopkeeper CLASS-->
+  <string name="ImpShopkeeper_Name">momok bercita-cita tinggi</string>
+  <string name="ImpShopkeeper_Desc">Momok merupakan setan peringkat rendah. Mereka terkenal dengan kelemahan dari segi kekuatan atau bakat sihir. Sebaliknya mereka bijak dan suka bersosial, ramai momok suka bersama-sama dan berurusniaga dengan makhluk bukan-setan.</string>
   <string name="ImpShopkeeper_Greetings">Hai, sahabat!</string>
   <!--STRINGS OF MirrorImage CLASS-->
   <string name="MirrorImage_Name">imej cermin</string>
   <string name="MirrorImage_Name_Objective">imej cermin</string>
   <string name="MirrorImage_Gender">maskulin</string>
+  <string name="MirrorImage_Desc">Beruang ilusi ini hampir menyerupai anda, tetapi lebih pucat dan sedikit bergetar.</string>
   <!--STRINGS OF RatKing CLASS-->
   <string name="RatKing_Name">raja tikus</string>
   <string name="RatKing_Desc">Raja tikus ini lebih besar dari tikus marsupial biasa dan ia memakai mahkota kecil di atas kepalanya.</string>
   <string name="RatKing_Info1">Saya tidak tidur!</string>
+  <string name="RatKing_Info2">Apakah ini? Saya tidak mahu terlibat dengan perkara pelik ini. Kerajaan saya tidak boleh hidup tanpa saya!</string>
+  <string name="RatKing_Info3">Berani kau, makhluk kerdil, ganggu Ratness kami?!</string>
+  <string name="RatKing_Died">Raja telah mati. Daulat Raja baru!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <string name="Shopkeeper_Name">pekedai</string>
   <string name="Shopkeeper_Sell">Pilih satu item untuk dijual</string>
   <!--STRINGS OF WandMaker CLASS-->
   <string name="WandMaker_Name">pembuat tongkat sakti tua</string>
+  <string name="WandMaker_Desc">Sibudiman tua tetapi nampak sihat ini kelihatan keliru. Dia dilindungi dengan perisai ajaib.</string>
+  <string name="WandMaker_Defense">diserap</string>
+  <string name="WandMaker_Berry2">Bernasib baik jumpa benih Rotberi, %s? Belum jumpa lagi? Jangan risau, saya pun tidak terburu-buru.</string>
+  <string name="WandMaker_Dust2">Bernasib baik jumpa debu mayat, %s? Longgokan tulang merupakan tempat terbaik mencarinya.</string>
+  <string name="WandMaker_RotberryName">Rotberi</string>
+  <string name="WandMaker_RotberryDesc">Beri pokok renik ini yang rasanya seakan-akan kemanisan mati.</string>
+  <string name="WandMaker_RotberryInfo">Benih ini mengeluarkan tempikan yang bergema di serata kurungan bawah tanah!</string>
 </resources>

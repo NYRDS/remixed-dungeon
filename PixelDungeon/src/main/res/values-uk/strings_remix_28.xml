@@ -4,9 +4,15 @@
     <string name="HeroClass_Gnoll">Гнолл</string>
     <string name="GnollArmor_ACSpecial">ДОМІНУВАТИ</string>
     <string name="GnollArmor_NotGnoll">Лише гнолл може вдягти броню Гнолла!</string>
+
+    <string name="GnollArmor_Info">Власники Гнолл-Лейтенантських мундирів добре відомі своїми навичками переконувати навіть самих диких монстрів присягнути Короні.</string>
+
     <string name="WndPlayGames_BackupProgress">Зберегти ігровий поступ</string>
     <string name="WndPlayGames_RestoreProgress">Відновити ігровий поступ</string>
     <string name="WndPlayGames_WorkInCloud">Працюю з хмарою... Зачекайте.</string>
+    <string name="StartScene_UnlockGnoll">Для розблокування даного класу необхідно переконати священика вилікувати Гнолла-громилу</string>
+    <string name="WndPriest_Heal_Minions">Вилікувати всіх твоїх прислужників коштуватиме тобі лише %d золота!</string>
+    <string name="Badges_GnollUnlocked">Гнолл розблокований</string>
 
     <string-array name="HeroClass_GnollPerks">
         <item>Гнолл починає із 17 одиницями сили</item>

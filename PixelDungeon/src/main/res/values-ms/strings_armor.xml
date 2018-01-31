@@ -2,28 +2,91 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
+  <string name="Armor_EquipCursed">%s anda menjerut anda dengan kesakitan</string>
+  <string name="Armor_Identify">anda kini sudah biasa dengan %1$s anda untuk mengecamnya. Ia adalah %2$s.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
+  <string name="Armor_Incompatible">Interaksi pelbagai jenis sihir telah memadam glif di atas perisai ini!</string>
+  <string name="Armor_Info1">%1$s ini menawarkan penyerapan kecederaan sehingga \"%2$d\" mata per serangan.</string>
+  <string name="Armor_Info2">\n\nOleh kerana kekuatan anda tidak mencukupi, kelajuan pergerakan dan kemahiran pertahanan anda telah berkurangan. </string>
+  <string name="Armor_Info3">\n\nOleh kerana kekuatan anda tidak mencukupi untuk memakai perisai ini, kelajuan pergerakan dan kemahiran pertahanan anda telah berkurangan. </string>
+  <string name="Armor_Info4">\n\n%1$s biasanya menawarkan penyerapan kecederaan sehingga %2$d mata per serangan dan memerlukan %3$d mata kekuatan.</string>
+  <string name="Armor_Info5">Berkemungkinan perisai ini terlalu berat untuk anda pakai.</string>
+  <string name="Armor_Info6">Ia telah diinskripsi.</string>
+  <string name="Armor_Info7a">\n\nAnda telah memakai %1$s%2$s.</string>
+  <string name="Armor_Info7b">, dan kerana ia telah disumpah, anda tidak berupaya menanggalkannya</string>
+  <string name="Armor_Info8">\n\nAnda dapat rasai kuasa ajaib berunsur kejahatan berlingkar-lingkar di dalam %s.</string>
+  <string name="Armor_Glyph">glif</string>
   <!--STRINGS OF ClassArmor CLASS-->
+  <string name="ClassArmor_Desc">Benda itu nampak hebat!</string>
+  <string name="ClassArmor_LowHealt">Tenaga hayat anda terlalu rendah!</string>
+  <string name="ClassArmor_NotEquipped">Anda perlu memakai perisai ini supaya dapat guna kuasa istimewanya!</string>
   <!--STRINGS OF ClothArmor CLASS-->
+  <string name="ClothArmor_Name">perisai kain</string>
+  <string name="ClothArmor_Desc">Perisai ringan ini hanya menawarkan perlindungan asas.</string>
   <!--STRINGS OF ElfArmor CLASS-->
+  <string name="ElfArmor_Name">Selimut bunian</string>
+  <string name="ElfArmor_Desc">Dengan bantuan selimut ini bunian dapat memanggil kuasa alam. Lalang akan membesar sekelip mata walaupun di atas batu yang mana ia dapat memaku pergerakan pihak musuh dalam jangkauan penglihatan.</string>
+  <string name="ElfArmor_ACSpecial">PANGGILAN ALAM</string>
+  <string name="ElfArmor_NotElf">Hanya bunian boleh guna perisai ini!</string>
   <!--STRINGS OF HuntressArmor CLASS-->
+  <string name="HuntressArmor_Name">selubung pemburu</string>
+  <string name="HuntressArmor_Desc">Pemburu dengan selubung tersebut dapat menghasilkan bilah spektrum. Setiap bilah ini akan mensasarkan satu musuh dalam medan pandangan pemburu, dapat mengenakan kecederaan berdasarkan senjatan tempur yang sedang digunakan.</string>
+  <string name="HuntressArmor_ACSpecial">BILAH SPEKTRUM</string>
+  <string name="HuntressArmor_NoEnemies">Tiada pihak musuh dalam jangkauan pandangan</string>
+  <string name="HuntressArmor_NotHuntress">Hanya pemburu boleh guna perisai ini!</string>
   <!--STRINGS OF LeatherArmor CLASS-->
+  <string name="LeatherArmor_Name">perisai kulit</string>
+  <string name="LeatherArmor_Desc">Perisai yang diperbuat dari kulit raksaksa yang telah disamak. Tidaklah seringan perisai kain tetapi ia menawarkan perlindungan yang lebih baik.</string>
   <!--STRINGS OF MageArmor CLASS-->
+  <string name="MageArmor_Name">jubah ahli sihir</string>
+  <string name="MageArmor_Desc">Jika memakai jubah hebat ini, ahli sihir dapat menyihir mantera tanah lebur: semua musuh dalam pandangan si pemakai akan terbakar dan tidak dapat bergerak pada masa yang sama.</string>
+  <string name="MageArmor_ACSpecial">TANAH LEBUR</string>
+  <string name="MageArmor_NotMage">Hanya ahli sihir boleh guna perisai ini!</string>
   <!--STRINGS OF MailArmor CLASS-->
+  <string name="MailArmor_Name">perisai zirah</string>
+  <string name="MailArmor_Desc">Rantaian logam yang bersambungan menjadikan perisai zirah ini kuat dan mudah dilentur.</string>
   <!--STRINGS OF PlateArmor CLASS-->
+  <string name="PlateArmor_Name">perisai plat</string>
+  <string name="PlateArmor_Desc">Plat logam bersaiz besar digabungkan bersama-sama menjadi satu suit perlindungan terbaik tetapi pemakainya perlu kuat dan dapat tahan beratnya.</string>
   <!--STRINGS OF RogueArmor CLASS-->
+  <string name="RogueArmor_Name">pakaian gasar</string>
+  <string name="RogueArmor_Desc">Jika memakai pakaian gelap ini, gasar boleh melakukan trik, iaitu \"bom asap\" (tiada letupan sebenar digunakan): dia menjadikan pihak musuh buta dan melompat ditepinya.</string>
+  <string name="RogueArmor_ACSpecial">BOM ASAP</string>
+  <string name="RogueArmor_NotRogue">Hanya gasar boleh guna perisai ini!</string>
+  <string name="RogueArmor_Fov">Anda hanya boleh lompat ke lokasi kosong dalam pandangan anda</string>
+  <string name="RogueArmor_Prompt">Pilih satu lokasi untuk melompat</string>
   <!--STRINGS OF ScaleArmor CLASS-->
+  <string name="ScaleArmor_Name">perisai sisik</string>
+  <string name="ScaleArmor_Desc">Sisik logam yang dijahit dengan baju kulit menjadikan perisai yang mudah lentur serta memberi pelindungan yang baik.</string>
   <!--STRINGS OF WarriorArmor CLASS-->
+  <string name="WarriorArmor_Name">suit perisai satria</string>
+  <string name="WarriorArmor_Desc">Walaupun perisai ini kelihatan berat, tetapi ia membolehkan satria melakukan lompatan adiwira ke arah lokasi sasaran yang dapat menjatuhkan pihak musuh berhampiran.</string>
+  <string name="WarriorArmor_ACSpecial">LOMPATAN ADIWIRA</string>
+  <string name="WarriorArmor_NotWarrior">Hanya satria boleh guna perisai ini!</string>
+  <string name="WarriorArmor_Prompt">Pilih arah untuk melompat</string>
   <!--PACKAGE /armor/Gyphs-->
   <!--STRINGS OF Affection CLASS-->
+  <string name="Affection_Txt">%s penyisihan</string>
   <!--STRINGS OF AntiEntropy CLASS-->
+  <string name="AntiEntropy_Txt">%s anti-entropi</string>
   <!--STRINGS OF Bounce CLASS-->
+  <string name="Bounce_Txt">%s lantunan</string>
   <!--STRINGS OF Displacement CLASS-->
+  <string name="Displacement_Txt">%s sesaran</string>
   <!--STRINGS OF Entanglement CLASS-->
+  <string name="Entanglement_Txt">%s keterlibatan</string>
   <!--STRINGS OF Metabolism CLASS-->
+  <string name="Metabolism_Txt">%s metabolisma</string>
   <!--STRINGS OF Multiplicity CLASS-->
+  <string name="Multiplicity_Txt">%s penggandaan</string>
   <!--STRINGS OF Potential CLASS-->
+  <string name="Potential_Txt">%s potensi</string>
   <!--STRINGS OF Stench CLASS-->
+  <string name="Stench_Txt">%s berbau busuk</string>
   <!--STRINGS OF Viscosity CLASS-->
+  <string name="Viscosity_Txt">%s kelikatan</string>
+  <string name="Viscosity_Status">ditangguh %d</string>
   <!--STRINGS OF DeferedDamage CLASS-->
+  <string name="DeferedDamage_Defered_Txt">Kecederaan tertangguh (%d)</string>
+  <string name="DeferedDamage_Killed_Txt">%s telah membunuh anda...</string>
 </resources>
