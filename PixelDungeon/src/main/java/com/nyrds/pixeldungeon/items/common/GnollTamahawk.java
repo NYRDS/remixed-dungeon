@@ -22,8 +22,8 @@ public class GnollTamahawk extends Tamahawk {
     public GnollTamahawk(int quantity) {
         STR = 15;
 
-        MIN = 2;
-        MAX = 15;
+        MIN = 3;
+        MAX = 17;
 
         quantity(quantity);
 
@@ -36,4 +36,6 @@ public class GnollTamahawk extends Tamahawk {
         super.restoreFromBundle(bundle);
         image = imageIndex;
     }
+
+
 }

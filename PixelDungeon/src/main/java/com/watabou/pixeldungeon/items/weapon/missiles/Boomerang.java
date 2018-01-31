@@ -120,12 +120,7 @@ public class Boomerang extends MissileWeapon {
 		throwEquiped = isEquipped( user );
 		super.cast( user, dst );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Boomerang_Info);
-	}
-	
+
 	@Override
 	public boolean isFliesStraight() {
 		return false;
