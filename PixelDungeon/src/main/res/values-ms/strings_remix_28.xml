@@ -5,7 +5,13 @@
     <string name="GnollArmor_ACSpecial">DOMINASI</string>
     <string name="GnollArmor_NotGnoll">Hanya gnoll boleh memakai Perisai Gnoll!</string>
 
+    <string name="GnollArmor_Name">suit leftenan-gnoll</string>
     <string name="GnollArmor_Info">Pemakai suit Leftenan-Gnoll diketahui berkeupayaan memujuk kelompok-rusuh yang terlalu marah menjadi pengikut setia Raja.</string>
+
+    <string name="GnollTamahawk_Name">tomahawk gnoll</string>
+    <string name="GnollTamahawk_Info">Tomahawk tradisional dicipta oleh artisan Gnoll, setiap puak mempunyai rekabentuk unik yang tersendiri. Tomahawk ini lebih ringan berbanding yang dihasilkan oleh manusia.</string>
+    <string name="GnollTamahawk_Gender">maskulin</string>
+
 
     <string name="WndPlayGames_BackupProgress">Sandar Kemajuan Permainan</string>
     <string name="WndPlayGames_RestoreProgress">Pulihkan Kemajuan Permainan</string>
@@ -15,10 +21,10 @@
     <string name="Badges_GnollUnlocked">Gnoll dilepaskan</string>
 
     <string-array name="HeroClass_GnollPerks">
-        <item>Gnoll bermula dengan tahap kekuatan 17</item>
+        <item>Gnoll bermula dengan 15 mata kekuatan</item>
         <item>Gnoll bermula dengan tahap hayat 5</item>
-        <item>Gnoll bermula tanpa memakai apa-apa perisai</item>
-        <item>Gnoll tidak reti membaca</item>
-        <item>Gnoll tidak menyerang Gnoll lain sehinggalah dia diprovokasi.</item>
+        <item>Gnoll bermula tanpa apa-apa perisai tetapi hanya dengan tomahawk unik</item>
+        <item>Gnoll buta huruf</item>
+        <item>Gnoll tidak menyerang Gnoll lain melainkan dia diganggu</item>
      </string-array>
 </resources>

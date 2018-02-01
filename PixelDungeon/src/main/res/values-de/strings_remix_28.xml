@@ -5,7 +5,13 @@
     <string name="GnollArmor_ACSpecial">BEHERSCHEN</string>
     <string name="GnollArmor_NotGnoll">Nur Gnolle können Gnollrüstung tragen!</string>
 
+    <string name="GnollArmor_Name">Gnoll-Leutnant Anzug</string>
     <string name="GnollArmor_Info">Träger des Gnoll-Lieutenant Anzuges sind für ihre Fähigkeit bekannt, sogar extrem wütende Monster zu Überreden loyale Diener der Krone zu werden.</string>
+
+    <string name="GnollTamahawk_Name">Gnoll Tomahawk</string>
+    <string name="GnollTamahawk_Info">Traditionelles Tomahawk von Gnoll-Handwerkern gefertigt, jeder Klan hat sein eigenes einzigartiges Design. Dieses Tomahawk ist deutlich leichter als das Gegenstück, das von Menschen ist.</string>
+    <string name="GnollTamahawk_Gender">männlich</string>
+
 
     <string name="WndPlayGames_BackupProgress">Sichere Spielfortschritt</string>
     <string name="WndPlayGames_RestoreProgress">Lade Spielfortschritt</string>
@@ -15,10 +21,10 @@
     <string name="Badges_GnollUnlocked">Gnoll freigeschaltet</string>
 
     <string-array name="HeroClass_GnollPerks">
-        <item>Gnolle starten mit 17 Stärkepunkten</item>
+        <item>Gnolle starten mit 15 Stärkepunkten</item>
         <item>Gnolle starten mit 5 Lebenspunkten</item>
-        <item>Gnolle starten ohne Rüstung</item>
-        <item>Gnolle können nicht lesen</item>
-        <item>Gnolle greifen keine anderen Gnolle an, bis sie provoziert werden.</item>
+        <item>Gnolle starten ohne Rüstung, aber mit einzigartigem Tomahawk</item>
+        <item>Gnolle können weder Schreiben noch Lesen</item>
+        <item>Gnolle greifen keine anderen Gnolle an, bis sie provoziert werden</item>
      </string-array>
 </resources>

@@ -210,8 +210,11 @@
   <string name="Gold_Info1">Satu syiling emas.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
   <!--STRINGS OF LloidsBeacon CLASS-->
+  <string name="LloidsBeacon_Name">suar lloyd</string>
   <string name="LloidsBeacon_ACSet">TETAPKAN</string>
   <string name="LloidsBeacon_ACReturn">KEMBALI</string>
+  <string name="LloidsBeacon_Info">Suar Lloyd ialah peranti sihir rumit, yang membolehkan anda kembali ke tempat yang pernah anda lalui.</string>
+  <string name="LloidsBeacon_Preventing">Aura tenaga ajaib yang kuat dalam tempat ini menghalang anda menggunakan suar lloyd!</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_ACInscribe">TULIS</string>
   <string name="Stylus_SelectArmor">Pilih satu item untuk dituliskan</string>
@@ -312,6 +315,7 @@
   <!--STRINGS OF Amok CLASS-->
   <string name="Amok_Info">Mengamok</string>
   <!--STRINGS OF Barkskin CLASS-->
+  <string name="Barkskin_Info">Kulit kayu</string>
   <!--STRINGS OF Bleeding CLASS-->
   <string name="Bleeding_Info">Berdarah</string>
   <string name="Bleeding_Death">Anda mati kerana pendarahan...</string>
@@ -358,6 +362,7 @@
   <!--STRINGS OF MindVision CLASS-->
   <string name="MindVision_Info">Penglihatan minda</string>
   <!--STRINGS OF Ooze CLASS-->
+  <string name="Ooze_Info">Ooz kaustik</string>
   <string name="Ooze_Death">%s telah membunuh anda...</string>
   <!--STRINGS OF Paralysis CLASS-->
   <string name="Paralysis_Info">Lumpuh</string>

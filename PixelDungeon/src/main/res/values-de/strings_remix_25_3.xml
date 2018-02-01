@@ -2,7 +2,7 @@
 <resources>
     <!-- Accessories descriptions -->
     <!-- STRINGS OF Ushanka CLASS -->
-    <string name="Ushanka_Name">Uschanka</string>
+    <string name="Ushanka_Name">Ushanka</string>
     <string name="Ushanka_Info">Warmer und gemütlicher Ushanka Hut, dekoriert mit einem edlem rotem Stern. Ein perfekter Begleiter für einen Kameradenkampf gegen den bösen kalten Dungeon.</string>
 
     <!-- STRINGS OF VampireSkull CLASS -->

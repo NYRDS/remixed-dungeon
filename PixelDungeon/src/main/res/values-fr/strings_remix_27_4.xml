@@ -20,4 +20,8 @@
     <!-- STRINGS OF Spell CLASS -->
     <string name="Spell_SelectACell">Ciblez une case.</string>
     
-    </resources>
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Niveaux</string>
+    <string name="WndJournal_Logbook">Journal</string>
+
+</resources>
