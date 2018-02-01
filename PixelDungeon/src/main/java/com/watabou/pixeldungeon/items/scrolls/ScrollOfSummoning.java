@@ -10,37 +10,35 @@ import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class ScrollOfSummoning extends Scroll {
 
-	private static final String TXT_SUMMON = Game.getVar(R.string.ScrollOfSummoning_Info_2);
-	private static final String TXT_FAILED_CAST = Game.getVar(R.string.Using_Failed_Because_Magic);
-	private static final String TXT_FAILED_PET = Game.getVar(R.string.Mob_Cannot_Be_Pet);
-	private static final String TXT_FAILED_CELL = Game.getVar(R.string.No_Valid_Cell);
-
 	@Override
 	protected void doRead() {
-		if(Dungeon.level.isBossLevel()){
-			GLog.w( Utils.format(TXT_FAILED_CAST, this.name()) );
+		Level level = Dungeon.level;
+
+		if(level.isBossLevel() || !level.cellValid(level.randomRespawnCell())) {
+			GLog.w( Utils.format(R.string.Using_Failed_Because_Magic, this.name()) );
 			return;
 		}
 
-		int cell = Dungeon.level.getEmptyCellNextTo(getCurUser().getPos());
+		int cell = level.getEmptyCellNextTo(getCurUser().getPos());
 
-		if(Dungeon.level.cellValid(cell)){
-			Mob mob = Bestiary.mob( Dungeon.level );
-			GLog.i( TXT_SUMMON );
+		if(level.cellValid(cell)){
+			Mob mob = Bestiary.mob( level );
+			GLog.i(Game.getVar(R.string.ScrollOfSummoning_Info_2));
 			if(mob.canBePet()){
 				Mob.makePet(mob, getCurUser());
 			} else {
-				GLog.w( Utils.format(TXT_FAILED_PET, mob.getName()) );
+				GLog.w( Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}
-			Dungeon.level.spawnMob(mob);
+			level.spawnMob(mob);
 			WandOfBlink.appear( mob, cell );
 		} else {
-			GLog.w( TXT_FAILED_CELL );
+			GLog.w(Game.getVar(R.string.No_Valid_Cell));
 		}
 
 		setKnown();
