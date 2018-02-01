@@ -79,7 +79,10 @@ public class WndSelectLanguage extends Window {
 
 		int BUTTON_WIDTH = WIDTH / columns - GAP;
 
+		int lastButtonBottom = 0;
+
 		for (int i = 0; i < options.length / columns + 1; i++) {
+
 			for (int j = 0; j < columns; j++) {
 				final int index = i * columns + j;
 				if (!(index < options.length)) {
@@ -95,11 +98,13 @@ public class WndSelectLanguage extends Window {
 
 				btn.setRect(GAP + j * (BUTTON_WIDTH + GAP), pos, BUTTON_WIDTH, BUTTON_HEIGHT);
 				add(btn);
+
+				lastButtonBottom = (int) btn.bottom();
 			}
 			pos += BUTTON_HEIGHT + GAP;
 		}
 
-		resize(WIDTH, (int) pos);
+		resize(WIDTH, lastButtonBottom + GAP);
 	}
 
 	protected void onSelect(int index) {

@@ -510,6 +510,7 @@ public class StartScene extends PixelScene {
             if (value) {
                 brightness = 1.0f;
                 name.hardlight(highlighted);
+
             } else {
                 brightness = 0.999f;
                 name.hardlight(normal);
