@@ -7,6 +7,9 @@
 
     <string name="GnollArmor_Info">Власники Гнолл-Лейтенантських мундирів добре відомі своїми навичками переконувати навіть самих диких монстрів присягнути Короні.</string>
 
+    <string name="GnollTamahawk_Gender">masculine</string>
+
+
     <string name="WndPlayGames_BackupProgress">Зберегти ігровий поступ</string>
     <string name="WndPlayGames_RestoreProgress">Відновити ігровий поступ</string>
     <string name="WndPlayGames_WorkInCloud">Працюю з хмарою... Зачекайте.</string>
@@ -15,10 +18,8 @@
     <string name="Badges_GnollUnlocked">Гнолл розблокований</string>
 
     <string-array name="HeroClass_GnollPerks">
-        <item>Гнолл починає із 17 одиницями сили</item>
+        <item>Гнолл починає з 15 одиницями сили</item>
         <item>Гнолл починає з 5 одиницями здоров\'я</item>
-        <item>Гнолл починає без броні</item>
-        <item>Гнолл не може читати</item>
-        <item>Гнолл не атакуватиме іншого гнолла, якщо не спровокують.</item>
+        <item>Гнолл починає без броні але з унікальним томагавком</item>
      </string-array>
 </resources>

@@ -327,7 +327,7 @@
   <string name="DarkGold_Info">Этот металл зовётся мрачным не из-за его цвета (он не отличим от простого золота), а из-за того, что тает на солнечном свету, в связи с чем его невозможно использовать на поверхности.</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">сухая роза</string>
-  <string name="DriedRose_Info">Эта роза иссохла много лет тому назад, но, несмотря на это, сохранила каждый лепесток.</string>
+  <string name="DriedRose_Info">Эта роза высохла много лет тому назад, но, несмотря на это, сохранила каждый лепесток.</string>
   <string name="DriedRose_Info2">Однако она не потеряла своего очарования. Она так прекрасна, что ты хочешь оставить её себе... Навсегда.</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">дворфийский жетон</string>
