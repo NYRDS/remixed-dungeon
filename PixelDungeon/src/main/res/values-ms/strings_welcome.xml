@@ -121,6 +121,55 @@
         - Penguasa Bayang bermula pada bilik yang lebih munasabah (kini pemain tidak boleh melepasinya untuk pergi ke aras berikutnya, anda mesti berlawan dengannya)\n
         - Pukauan Lelabah telah dikemaskini spritenya dan kini dijatuhkan oleh Ratu Lelabah (Sebelum ini tak boleh dapat melalui Goo)\n
         </string>
+  <string name="Welcome_Text_25">
+        remix.25:\n
+        - Jenis kurungan bawah tanah baharu: Necropolis, untuk memasuki necropolis anda perlu berjumpa Necromancer pada aras 7,  untuk dapatkan kunci rangka\n
+        - Item baharu: Perisai Lelabah dan Tengkorak Hitam\n
+        - Pedang emas menjadi lebih kuat dan perlukan lebih kekuatan\n
+        - Air dalam Lapisan Lelabah dapat dipaparkan dengan baik\n
+        - Kini longgokan tulang tidak mengandingi artifak dan item pencarian\n
+        - Mekanik peliharaan telah diubah. Ramai kelompok-rusuh telah mendapat kekebalan terhadap kesan kawalan minda\n
+        - Tempoh pembakaran Api Cecair telah disingkatkan, ia juga kurang terbakar di dalam air\n
+        - Ikon kawalan minda, yang muncul di atas kelompok-rusuh «pet» mobs, telah diubah dengan bentuk hati\n
+        - Visual «new font» baharu dikemaskini\n
+        - Terjemahan dikemaskini\n
+        - Pilihan dibuang : «immersive mode» dan «gui scale»\n
+        </string>
+  <string name="Welcome_Text_25_1">
+        remix.25.1:\n
+        --Fitur Baharu--\n
+        - Kelas Adiwira Baharu: Necromancer\n
+        - Kini hanya necromancers akan mendapat xp bagi pembunuhan yang dibuat oleh orang suruhan\n
+        - Necromancer mempunyai peluang lebih tinggi untuk hasilkan Bilah Korban\n
+        --Keseimbangan--\n
+        - Semua raksaksa dalam Necropolis tiada jantina\n
+        - Kini Yog-Dzewa mendapat buff pertahanan bukan sahaja dari tumbukannya tetapi daripada sub-bos yang lain juga\n
+        - Pada waktu kematian Yog semua bos yang lain turut mati (Sebelum ini hanya berkesan pada tumbukan sahaja)\n
+        - Jantung Yog tanpa jantina. Amaun penyembuhan, yang diberi pada kelompok-rusuh lain telah dikurangkan\n
+        - Bos tidak lagi \"Memburu\" secara lalai\n
+        - Zombi-Gnoll berpeluang \"hidup kembali\" telah dikurangkan peluang tersebut\n
+        - Tikus-Pseudo tiada jantina\n
+        - Tengkorak Hitam kini memerlukan 10 cas untuk diaktifkan, sebelum ini 15. Tetapi kematian orang suruhan tidak lagi dapat mengecasnya\n
+        - Semangat Khianat tidak boleh menjadi orang suruhan pemain lagi\n
+        --Visual--\n
+        - Set jubin Pembentung dikemaskinikan\n
+        --Pembaikan--\n
+        - Pepijat \"non-disappearing text\" telah dibaiki\n
+        - Membaiki pepijat yang tidak membenarkan Bos Necropolis mencederakan pemain dengan baik\n
+        - Baiki masalah dengan penjanaan dalam aras 5 kurungan bawah tanah\n
+        --Mod--\n
+        - Mod ciptaan pengguna kini boleh dapatkan item kodeks dengan teks suai\n
+        - Mod ciptaan pengguna kini boleh tetapkan jubin suai, air serta muzik pada aras tertentu\n
+        </string>
+  <string name="Welcome_Text_25_2">
+        remix.25.2:\n
+        --Fitur Baharu--\n
+        - Kini anda boleh saizkan semula UI permainan secara manual ketika sesi permainan. Fitur ini tersedia dalam menu \"Tetapan\"\n
+        --Pembaikan--\n
+        - Baiki pepijat yang menyebabkan adiwira anda memakai topi, selepas mengklik butang \"Periksa\" dalam menu \"Topi\"\n
+        - Baiki pepijat, yang menghalang kelompok-rusuh (dipanggil atau dihiupkan kembali dari sel \"lubang\" cell) daripada terjatuh\n
+        - Terjemahan dikemaskini dan membaiki beberapa kesilapan taip atau tipo\n
+        </string>
   <string name="Welcome_Text_25_3">
         remix.25.3:\n
         - Objek baharu ditambah: Tong letupan (diganti dengan labu ketika musim halloween)\n
@@ -128,6 +177,29 @@
         - Item baharu: Pai labu\n
         - NPC baharu: Orang-orang\n
         - Item kemegahan dan solekan baharu: Topeng zombie, tengkorak pontianak dan topi Ushanka\n
+        </string>
+  <string name="Welcome_Text_25_4">
+        remix.25.4:\n
+        --Permainan--\n
+        - Tong boleh ditolak oleh Tongkat Sakti Telekinesis\n
+        - Tong  kini kurang dijelamkan di koridor\n
+        - Tombak, Glaive dan Halberd kini berada dalam jenis \"Polearms\", membolehkan pemain tingkatkan jarak serangan (sebelum ini hanya boleh dengan Lembing)\n
+        - Kelajuan serangan \"Polearms\" telah dikurangkan untuk seimbangkan peningkatan jarak serangan\n
+        - Skrin \"Tajuk\" kini memaparkan \"Remixed Pixel Dungeon\"\n
+        - Skrin \"Perihal\" telah dikemaskinikan\n
+        - Muzik pertarungan bos kini hanya dimainkan ketika pertempuran bos untuk semua jenis bos, kecuali, except Yog (aras 31 mempunyai muzik pertempuran bos ketika anda masuk)\n
+        - Terjemahan dikemaskini (+bahasa baharu: Turki)\n
+        --Mod--\n
+        - Mod kini menyokong kekunci suai\n
+        - Sesetengah kelompok-rusuh kini boleh ditetapkan secara manual untuk tetapkan tahap kuasa tertentu\n
+        - Kelompok-rusuh \"Albino\" kini tersedia dalam mod\n
+        </string>
+  <string name="Welcome_Text_25_5">
+        remix.25.5:\n
+        - Baiki pepijat yang menyebabkan sprite adiwira hilang jika pemain masuk ke dalam jurang\n
+        - Butang menu kini mempunyai prioriti tertinggi dalam antaramuka permainan, supaya pemain dapat mencapai tetapan GUI walaupun skala GUI ditetapkan pada tinggi\n
+        - Terjemahan dikemaskinikan (+ bahasa Ukraine ditambah)\n
+        - Menu pilih bahasa dikemaskini\n
         </string>
   <string name="Welcome_Text_26">
         remix.26:\n
@@ -148,12 +220,162 @@
         - Topi Santa ditambah!\n
         - Hidung Merah dan Tanduk ditambah!\n
         </string>
+  <string name="Welcome_Text_26_1">
+        remix.26.1:\n
+        - Permainan bermula dalam pekan\n
+        - Pekan mendapat tema muzik unik (oleh Misaerit)\n
+        - Untuk mendapatkan kemenangan 100% selepas memperoleh azimat Yendor, anda perlu ke pintu keluar pekan\n
+        - Barang milik adiwira kin hanya mengandungi kelengkapan kelas-tertentu, setiap adiwira juga akan menerima 200 syiling emas\n
+        - Pekan mempunyai kedai, yang anda boleh dapatkan kelengkapan dan item permulaan\n
+        - Paderi pekan akan sembuh dan beri makan adiwira anda secara percuma\n
+        - Kelompok-rusuh terbang tidak lagi dapat aktifkan perangkap\n
+        - Anda tidak lagi dapat menjual bekas yang mengandungi sesuatu di dalamnya\n
+        - Kelompok-rusuh hidup semula adalah kebal terhadap racun\n
+        - Ketika rangka mati dia menyebarkan kecederaan pada 4 sel disekelilingnya (arah menegak dan mengufuk), sebelum ini 8 arah\n
+        - Visual fon dikemaskinikan\n
+        - Kristal tidak lagi boleh dialih secara telekinesis\n
+        - Posyen penyucian boleh menyembuhkan kesan gas keliru\n
+        - Kelompok-rusuh yang dicipta penggandaan tidak lagi dapat 1 hp kurang semasa dijelmakan\n
+        - Membaiki kesilapan taip atau tipo\n
+        - Membaiki sprit dalam Gua Ais\n
+        - Mod \"The Fallen\" dan  \"Maze\" sepenuhnya menyokong bahasa inggeris\n
+        - Aras sumbangan baharu kini tersedia. Dengan membeli \"Royal Pixel\" anda bukan sahaja membantu projek kami, tetapi dapat membuka setiap jenis topi di dalam permainan, termasuklah setiap jenis topi yang akan dikeluarkan\n
+        </string>
+  <string name="Welcome_Text_26_2">
+        remix.26.2:\n
+        --Permainan\n
+        - Bangunan baharu dibuka dalam Pekan: Panggung wayang\n
+        - Cincin kin boleh disimpan dalam gelang kunci\n
+        - Gelang kunci hanya boleh dibeli ketika berada di Pekan\n
+        - Kedai di pekan telah dikemaskinikan\n
+        - Bila anda menjual item kepada pekedai di Pekan, dia letak item tersebut untuk dijual, jika ruang jualan kedai masih ada\n
+        - Item Sia-sia baharu: Busana Gnoll\n
+        --Mod\n
+        - Senjata mendapat atribut «enchantment»\n
+        - Perisai dapat atribut «glyph»\n
+        - Supaya permainan dapat mengenalpasti mod anda, ia mesti mengandungi fail version.json\n
+        </string>
   <string name="Welcome_Text_26_3">
         remix.26.3\n
         - Pekan menjadi lebih besar\n
         - Kedai dipekan kini menjual lebih banyak item\n
         - Pencarian baharu di dalam Pekan\n
         </string>
+  <string name="Welcome_Text_26_4">
+        remix.26.4\n
+         - Permainan:\n
+         - Pada waktu kematian Yog setiap kelompok-rusuh dalam aras tersebut juga mati, termasuklah yang telah dikawal oleh adiwira\n
+         - Yog dapat jelmakan 2 bos-mini dalam tahap kesukaran mudah dan sederhana (kesukaran «Expert» masih jelmakan 3 bos)\n
+         - Tatar tahap  tongkat sakit yang digunakan dengan Kristal (termasuklah yang dijelma oleh Penguasa Bayang) tidak lagi setara dengan kedalaman kurungan bawah tanah yang mana Kristal tersebut wujud, tetapi dengan separa amaun tersebut\n
+         - Mekanisma disebalik keupayaan Penguasa Bayang «summon Wraith» telah dioptimumkan sedikit\n
+         - Adiwira bermula dengan 100 syiling emas berbanding sebelum ini sebanyak 200\n
+         - Kelengkapan permulaan disertakan dengan Makanan\n
+         - Kini, jika adiwira mati dalam tahap sukar yang mana keadaan simpan dibolehkan dan jika permainan tersimpan ada, selain dari menu, skrin «Muat permainan tersimpan» akan muncul\n
+         - NPC baharu dalam Pekan: Penilik-nasib, dia sanggup mengecam item anda tetapi berbayar/n
+         - Jika adiwiea masih berada di pekan dia tidak akan berasa lapar\n
+         - Penjanaan tenaga hayat dan fitur «rehat sehingga sihat sepenuhnya» telah dilumpuhkan dalam pekan\n
+         - Had tonton dalam Panggung Wayang kini berasaskan tahap adiwira, bagi setiap tahap baharu anda dapat menonton 1 lagi video\n
+         - Jubah Necromancer tidak lagi memeriksa tenaga hayat adiwira untuk melakukan penyeruan\n
+         - Mesej «Anda hanya boleh sarungkan 2 cincin serentak!» kini disebut pada «artifacts»\n
+         - Necromancer mendapat masukan log lebih jelas seusai had penyeruan dicapai\n
+         - Perisai Tikus telah digilap sedikit\n
+         - Penataran tongkat sakti akan memulihkan casnya\n
+         - Membaiki pepijat yang merosakkan bentangan Pekan dalam fail simpan lama\n
+         - Membaiki pepijat yang mencampurkan teks dari mod berlainan\n\n
+         - Mod:\n
+         - CagedKobold ditambah ke dalam MobFactory dan kini tersedia dalam aras suai\n
+         - Pada aras kurungan bawah tanah ditag sebagai adiwira «isSafe» tidak lagi rasa laparnya bertambah, dan tidak lagi menjana semula tenaga hayat atau boleh «rehat sehingga sihat sepenuhnya»\n
+         - Mod yang disahkan boleh mengubah fail imej «banners»\n
+         - Tongkat sakti mendapat atribut «charges» dan «maxCharges»\n
+         - Atribut baharu untuk aras kurungan bawah tanah: «isStatic». Aras ditag dengannya akan dijana-semula setiap kali adiwira memasukinya (Aras kekal «static», berbanding apa yang adiwira dapat lakukan sebelum ini)\n
+         - Menambah langkah tambahan bagi pengawalan kelengkapan permulaan adiwira: item «non_expert». termasuklah dalam langkah ini, akan ditambah ke dalam inventori bagi setiap tahap kesukaran, kecuali untuk kesukaran «Expert»\n
+         - Adiwira tidak lagi merana kelaparan, dalam kesukaran «Expert», selama mana dia masih dalam aras «isSafe»\n
+        </string>
+  <string name="Welcome_Text_26_5">
+        remix.26.5\n
+        - Penampilan  fon “baharu” dikemaskini\n
+        - Item tidak lagi berada di atas kedudukan NPC atau oleh item yang dijual\n
+        - Perpustaka telah dibuka dan kini akan mengandungi maklumat berkenaan item dan kelompok-rusuh yang dihadapi dalam pengembaraan anda\n
+        - Bunian kini bermula dengan Pisau Bunian unik, yang memerlukan 9 mata kekuatan\n
+        - Ketika adiwira hendak memijak perangkap yang kelihatan satu dialog amaran akan muncul untuk mengesahkan tindakan ini\n
+        - Adiwira yang menjadi buta tidak mendapat mesej amaran, semasa memijak perangkap yang tampak atau lubang, “maju ke hadapan secara membuta”\n
+        - Kelompok-rusuh hidup semula tidak lagi dipengaruhi dengan gas keliru\n
+        - Pilihan pengujian yang membenarkan had masa bagi giliran adiwira\n
+        - Terjemahan dikemaskini\n
+        - Skrol Dominasi mendapat kesan visual untuk menunjukkan ia telah digunakan\n
+        - Membaiki pepijat yang menyebabkan adiwira mendapat kecederaan jatuh berkali-kali jika permainan diminimumkan setelah jatuh\n
+        - Kini anda boleh cipta kelompok-rusuh untuk mod anda\n
+        - Mekanisma kelompok-rusuh suai juga boleh hasilkan kelompok-rusuh dengan serangan jauh\n
+        - Menambah atribut modding: canBePet, wallWalker and absoluteWalker untuk mob suai\n
+        - Modding kini menyokong mesej “pertahanan” suai untuk kelompok-rusuh, spt. “Disekat”, “Ditepis”\n
+    </string>
+  <string name="Welcome_Text_26_6">
+        remix.26.6\n
+        - Item unik baharu: Tongkat Sakti Bebola Bayang\n
+        - Kristal yang dijelmakan oleh Penguasa Bayang kini menggunakan Tongkat Sakti Bebola Bayang berbanding serangan jarak jauh biasa. Peluang mendapatkan rampasan tongkat tersebut adalah 25%\n
+        - Membaiki masalah proses serangan jauh untuk: Keunsuran Ais, Kristal, Tumbukan Membakar, Psi-Lelabah dan Lelabah Ambar\n
+        - Perisai Ahli Sihir (versi untuk Dukun: WarlockArmor) dan Gula-Gula kini tersedia di dalam mod\n
+    </string>
+  <string name="Welcome_Text_27">
+        remix.27\n
+        - Permainan kini menggunakan perkhidmatan Google Play Games: Pencapaian, papan tertinggi dan Penyimpanan Awan\n
+        - Saiz bagi semua bekas telah ditingkatkan, kini ia disepadankan dengan beg galas utama\n
+        - Kelas adiwira Necromancer kini tersedia bagi setiap pemain dari awal\n
+        - Posyen kini boleh ditatarkan dengan Skrol Penataran. Posyen ditatar atau dinyahtatar juga boleh ditemui dalam hasil rampasan\n
+        - Baiki masalah kristal chaos yang menghabiskan keseluruhan skrol kosong bila \"disepadukan\" sepatutnya 1\n
+        - Baiki pepijat yang menyebabkan Goo tidak berupaya menyerang adiwira pada jarak tertentu selepas menggunakan \"serangan pam\"\n
+        - Atribut maxLevel ditingkatkan untuk Tikus Kohong dan pelbagai jenis bos (Supaya karakter tahap sangat tinggi masih mendapat hasil rampasan dari karakter tersebut)\n
+        - Atribut baharu bagi aras dan kelompok-rusuh dalam mod ciptaan-pemain: \"viewDistance\" (Tetapkan jarak pandangan dalam julat 1-8)\n
+    </string>
+  <string name="Welcome_Text_27_1">
+        remix.27.1\n
+        - Memperkenalkan sistem Portal\n
+        - Selepas mengalahkan salah satu bos utama anda akan menemui bilik portal. Portal yang membawa kembali ke pekan. Tetapi pintu ini hanya boleh digunakan sekali sahaja\n
+        - Pintu portal yang berada di dalam Pekan akan sentiasa membawa anda ke kedudukan portal yang terakhir digunakan, jika anda pernah gunakannya\n
+        - Selepas mengalahkan bos kurungan bawah tanah kedua, anda boleh guna kunci rangka untuk membuka pintu keluar yang menuju ke aras pertama kurungan bawah tanah yang dimaksudkan\n
+        - Goo tidak lagi menjatuhkan Suar Lloyd. Item ini hanya tersedia melalui mod\n
+        - Membaiki pepijat penyeruan perangkap, yang menyebabkan Bayang terjelma di atas jubin lantai\n
+        - Membaiki pepijat patung \"pet\", yang memenuhi log permainan dengan maklumat pelik\n
+</string>
+  <string name="Welcome_Text_27_2">
+        remix.27.2\n
+        --Permainan:\n
+        - Memperkenalkan sistem mantera\n
+        - Ahli Sihir dan Necromancer mendapat kecenderungan mantera tabii. Adiwira ini berupaya melancarkan mantera unik tanpa perlukan item khusus\n
+        - Setiap karakter kini mempunyai palang mana (termasuklah Necromancer)\n
+        - Necromancer tidak lagi menyimpan mata mana secara pasif setelah berjaya membunuh musuhnya. Kesan ini dilaksana pada jubah Necromancer (+1 mana setiap pembunuhan yang berjaya) dan Perisai Tulang (+2 mana setiap pembunuhan yang berjaya), selain dari keupayaan penyeruan yang mana item tersebut sebelum ini miliki\n
+        - Atribut adiwira baharu: Tahap Kuasa Ajaib. Lebih tinggi Tahap Kuasa Ajaib lebih banyak mantera tabii dibuka kepada adiwira anda dan lebih banyak mantera hebat diperoleh\n
+        - Item baharu: Posyen Mana\n
+        - item Buku Besar Pengetahuan Baharu.  Satu item yang dapat meningkatkan Tahap Kuasa Ajaib anda sebanyak 1\n
+        - Item BUku Mantera Baharu.  Item boleh dipakai ini membolehkan anda lancarkan satu mantera berkos mana dan tidak seperti skrol, item ini tidak akan luput tidak kira berapa kali anda gunakan\n
+        - Perisai Kelas tidak lagi memerlukan tenaga hayat untuk lancarkan keupayaan istimewanya, ia berkos 1/3 dari amaun maksimum mana anda sebagai ganti\n
+        - \“Tongkat Sakti Misil Ajaib\” tidak lagi boleh dirampas daripada Kristal\n
+        - Pada takat ini, setiap aras akan mempunyai \“jarak pandangan\” yang ditetapkan secara rawak, supaya pemain dapat menghadapi aras \“gelap\” pada setiap takat permainan\n
+        - Obor kini tersedia pada permulaan dan mudah ditemui sepanjang permainan\n
+        - Aras \“selamat\” (isSafe) terkesan dan akan sentiasa menyala pada tahap maksimum\n
+        - Kini kecederaan dari pembakaran berdasarkan pada kedalaman kurungan bawah tanah dia beradad\n\n
+
+        --Item Sia-sia: \n
+        - Topi Baharu: Helmet Chaos \n\n
+
+        --Mod: \n
+        - Kini anda boleh menambah atribut baharu pada \“iniHeroes\” fail: \“maxSP\” - tetapkan amaun maksimum mana, yang mana karakter anda miliki. \“startingSp\” tetapkan amaun permulaan mana bagi karakter anda\n
+        - Pengawalan adiwira juga melibatkan atribut \“magicAffinity\”, yang boleh ditetapkan pada: \“Elemental\”, \“Necromancy\” atau \“Common\” (\“Common\” bermaksud karakter hanya boleh guna mentera dari buku mantera)\n
+        - Objek permainan baharu dalam mod – Perangkap. Tidak seperti perangkai dalam permainan biasa, objek ini boleh dilaras dalam pelbagai cara. Anda boleh tetapkan: bilangan pengaktifan (penggunaan), sel sasaran yang mana kesan perangkap dapat dipicu(sasaran), apa jua yang anda boleh atau tidak boleh aktifkan perangkap dengan melempar item padanya (activatedByItem)\n
+    </string>
+  <string name="Welcome_Text_27_3">
+         remix.27.3\n
+  - Item Baharu: Skrol Penyeruan\n
+  - Titisan embun tidak lagi diutamakan dalam timbunan rampasan. Supaya jika ada item, berada di atas titisan embun, item tersebut akan dikutip terlebih dahulu\n
+  - Setiap jenis bekas kini tersedia dalam kedai di pekan\n
+  - Goo tidak lagi jatuhkan Cincin Darah Batu  ( item ini hanya tersedia melalui mod ), sebagai pengganti, pemain akan mendapat posyen secara rawak\n
+  - Mantera \"Tiupan Kepak\" hanya boleh gerakkan karakter, yang boleh bergerak (IsMovable)\n
+  - Kelompok-rusuh tidak lagi dijelmakan pada kedudukan yang sama dengan objek aras\n
+  - Jubah Necromancer tidak lagi ditetapkan dalam slot pantas secara lalai\n
+  - Membaiki perawak jarak pandangan\n
+  - Membaiki pepijat yang menyebabkan bos aras jelmakan keunsuran berbanding bos\n
+  - Ganjaran, yang pemain dapat kerana menonton iklan kini diproses dalam permainan\n
+    </string>
   <string name="Welcome_Text_27_4">
     remix.27.4\n
     - Penjenamaan semula ke Remixed Dungeon\n
@@ -162,5 +384,15 @@
     - Keupayaan Perisai Kelas kini menggunakan Mana berbanding Tenaga Hayat\n
     - Item Chaos kini kehilangan sihirnya jika dinyahtatar\n
     - Psi-Lelabah kini hanya boleh sihirkan mantera Kebutaan, Lembab dan Lemah\n
+    </string>
+  <string name="Welcome_Text_28">
+    remix.28\n
+    - Adiwira Baharu - Gnoll\n
+    - Kecederaan tongkat sakti kenakan ketika pertempuran fizikal kini bergantung pada tahap kemahiran kuasa ajaib Adiwira\n
+    - Bagi setiap Adiwira, tidak lebih dari satu keputusan dipaparkan dalam papan skor tertinggi\n
+    - Auto-segerak dengan PlayGame Google telah dilumpuhkan (Anda boleh segerakkan secara manual)\n
+    - Satu kemaskini besar-besaran untuk terjemahan Portugis-Brazil\n
+    - Pilihan kelas adiwira baharu untuk  modding: forbiddenActions, friendlyMobs\n
+    - Bahasa baharu ditambah: Bahasa Melayu yaaay\n
     </string>
 </resources>

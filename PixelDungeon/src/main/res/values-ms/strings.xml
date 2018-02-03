@@ -35,6 +35,8 @@
     <item>%1$s menewaskan %2$s</item>
   </string-array>
   <string name="Char_YouMissed">%1$s %2$s serangan anda</string>
+  <string name="Char_SmbMissed">serangan %3$s %2$s %1$s</string>
+  <string name="Char_OutParalysis">Kesakitan %s terputus dari kelumpuhan</string>
   <string-array name="Char_StaDodged">
     <item>mengelak</item>
     <item>mengelak</item>
@@ -55,7 +57,41 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Teks ini tidak dapat ditafsirkan...</string>
   <string name="Dungeon_DeadEnd">Apa awak buat di sini?!</string>
+  <string-array name="Dungeon_Tips">
+    <item>Jangan bangga sangat dengan kekuatan anda, guna senjata dan perisai yang mampu digunakan.</item>
+    <item>Bukan semua pintu dalam kurungan bawah tanah terdedah kali pertama. jika anda buntu, cuba cari pintu tersembunyi.</item>
+    <item>Perlu ingat, meningkatkan kekuatan anda bukan salah satunya cara supaya dapat memakai peralatan yang lebih baik, anda juga boleh rendahkan keperluan kekuatan alatan tersebut dengan Skrol Penataran.</item>
+    <item>Anda boleh belanja emas yang diperoleh dalam aras lebih bawah kurungan bawah tanah. Kedai pertama berada dalam aras ke-6.</item>
+    <item>Hati-hati dengan Goo!</item>
+    <item>Pixel-Mart - pusat sehenti buat pengembara bertuah seperti anda!</item>
+    <item>Kenal pasti posyen dan skrol anda secepat mungkin. Kerana ia berguna pada masa-masa terdesak nanti.</item>
+    <item>Rasa lapar tidak menyakitkan, tetapi bila kebuluran ia memang menyakitkan.</item>
+    <item>Serangan mengejut lebih berpeluang berjaya. Sebagai contoh, anda boleh serang hendap musuh disebalik pintu tertutup jika anda tahu dia sedang menghampiri.</item>
+    <item>Jangan biarkan si Tengu keluar!</item>
+    <item>Pixel-Mart. Belanja duit anda. Hidup lebih lama.</item>
+    <item>Bila anda diserang oleh beberapa ekor raksaksa serentak, cuba mengundur disebalik pintu.</item>
+    <item>Jika anda terbakar dan pada masa yang sama terapung, anda sukar padamkan api walaupun berhampiran sumber air.</item>
+    <item>Adalah tidak munasabah memproses lebih dari satu Ankh pada masa yang sama, kerana anda akan kehilangannya ketika dihidupkan semula.</item>
+    <item>BAHAYA! Mesin berat boleh menyebabkan kecederaan, kehilangan anggota badan atau maut!</item>
+    <item>Pixel-Mart. Penyelamat anda ketika berada di kurungan bawah tanah.</item>
+    <item>Bila anda tatar senjata yang ada kuasa sihir, mungkin boleh berlaku kehilangan kuasa sihir tersebut.</item>
+    <item>Perigi Transmutasi boleh mengeluarkan item yang sukar diperoleh dengan cara biasa.</item>
+    <item>Memasukkan kuasa sihir ke dalam senjata hanyalah menerusi Skrol Tatar Senjata.</item>
+    <item>Tiada senjata boleh dibawah semasa menemui Tuanku!</item>
+    <item>Pixel-Mart. Harga istimewa untuk pemburu setan!</item>
+    <item>Teks ditulis dalam bahasa setan.</item>
+    <item>Teks ditulis dalam bahasa setan.</item>
+    <item>Teks ditulis dalam bahasa setan.</item>
+  </string-array>
   <!--STRINGS OF Challenges CLASS-->
+  <string-array name="Challenges_Names">
+    <item>Menjaga pemakanan</item>
+    <item>Kepercayaan ialah perisai saya</item>
+    <item>Takut ubat</item>
+    <item>Tanah tandus</item>
+    <item>Kepintaran kerumun</item>
+    <item>Ke dalam kegelapan</item>
+  </string-array>
   <!--STRINGS OF Journal CLASS-->
   <string name="Journal_WellHealt">Perigi Kesihatan</string>
   <string name="Journal_WellAwareness">Perigi Kesedaran</string>
@@ -151,6 +187,10 @@
   <string name="WndSadGhost_Farewell">Selamat tinggal, pengembara!</string>
   <!--STRINGS OF WndStory CLASS-->
   <string name="WndStory_Sewers">Kurungan Bawah Tanah betul-betul berada di bawah Pekan ini, bahagian paling atas merupakan sistem pembentungan Pekan. Walaupun ia merupakan sebahagian dari Pekan, aras ini tidaklah begitu merbahaya. Walaubagaimanapun, tidak semestinya ianya sepenuhnya selemat, sekurang-kurangnya anda tidak risau dengan sihir kejahatan di sini. </string>
+  <string name="WndStory_Prision">Bertahun-tahun dahulu sebuah penjara bawah tanah telah dibina khas untuk penjenayah paling bahaya. Pada ketika itu, ia adalah ide yang terbaik, kerana sukar melarikan diri. Tetapi semenjak kehadiran miasma yang muncul dari bawah tanah, para warden dan penghuni penjara menjadi gila. Akhirnya penjara ini telah diabaikan, walaupun masih ada tahanan yang terkurung di dalamnya.</string>
+  <string name="WndStory_Caves">Jaringan gua, yang wujud di bawah penjara terbiar itu  berpenghuni. Mereka berada terlalu bawah untuk diusahakan oleh penduduk dan sumber galiannya tidak mendapat perhatian dari pihak orang kerdil. Sebelum ini ada perhubungan dagangan antara dua negara, tetapi telah terhenti semenjak kejatuhan Metropolis Orang Kerdil. Hanya dihuni oleh gnoll dan haiwan bawah tanah sekarang ini.</string>
+  <string name="WndStory_Metropolis">Metropolis Orang Kerdil merupakan negara orang kerdil yang terhebat. Pada waktu kegemilangannya tentera orang kerdil berjaya menghalang serangan dewa purba dengan tentera setannya. Tetapi, kepulangan tentera telah membawa bibit-bibit kemusnahan kerana kemenangan tersebut adalah permulaan kejatuhan kerajaan orang kerdil.</string>
+  <string name="WndStory_Halls">Pada zaman dahulu aras ini merupakan pinggiran Metropolis. Selepas kemenangan terhadap dewa purba, orang kerdil terlalu lemah untuk membersihkan setan-setan yang masih ada. Sedikit demi sedikit setan-setan ini telah menguasai tempat ini dan kini dikenali sebagai Balai Setan.\n\nSangat sedikit pengembara yang berjaya turun ke aras ini.</string>
   <string name="WndStory_Spiders">Pada zaman dahulu ada sebuah lombong berharga, yang dipenuhi dengan batu ajaib. Tetapi setelah ia habis digali pelombong telah beralih ke tempat lain, meninggalkan satu rangkaian terowong yang luas. Lama-kelamaan tempat ini didiami oleh sejenis lelabah. Walaupun ia merupakan makhluk yang merbahaya, ia tidak dapat menghindari kedatangan pengembara yang berani atau gila masuk mencari harta karun yang boleh ditemui dalam terowong ini. Walaupun semakin tinggi risiko semakin berharga harta ajaib di dalamnya. Sebelum ini, pernah seorang dukun jahat masuk ke dalam terowong untuk lari daripada pendakwa. Mereka mempercayai khabar angin hanya menunggu pintu masuk terowong tersebut. Malangnya sidukun jahat tidak lagi muncul keluar, mungkin dia berjaya lari keluar dari pengawal... atau mati, dimakan makhluk kegelapan terowong itu.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">UNTUK DIJUAL: %1$s - %2$dg</string>
@@ -169,6 +209,8 @@
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">Pilih satu item untuk slot pantas</string>
   <!--STRINGS OF Item CLASS-->
+  <string name="Item_Name">smth</string>
+  <string name="Item_Info">smth</string>
   <string name="Item_ACDrop">LEPAS</string>
   <string name="Item_ACThrow">BUANG</string>
   <string name="Item_PackFull">Beg galas anda sudah penuh untuk mengisi %s</string>
@@ -209,14 +251,20 @@
   <string name="Gold_Info">Selonggok %d syiling emas/</string>
   <string name="Gold_Info1">Satu syiling emas.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
+  <string name="KindOfWeapon_EquipCursed">anda mengerenyet bilamana genggaman tak disangka anda menjerut %s anda</string>
   <!--STRINGS OF LloidsBeacon CLASS-->
   <string name="LloidsBeacon_Name">suar lloyd</string>
   <string name="LloidsBeacon_ACSet">TETAPKAN</string>
   <string name="LloidsBeacon_ACReturn">KEMBALI</string>
   <string name="LloidsBeacon_Info">Suar Lloyd ialah peranti sihir rumit, yang membolehkan anda kembali ke tempat yang pernah anda lalui.</string>
   <string name="LloidsBeacon_Preventing">Aura tenaga ajaib yang kuat dalam tempat ini menghalang anda menggunakan suar lloyd!</string>
+  <string name="LloidsBeacon_Creatures">Aura psikik makhluk berhampiran tidak membenarkan anda guna suar lloyd buat masa ini.</string>
+  <string name="LloidsBeacon_Return">Suar lloyd berjaya menetapkan lokasi semasa anda, kini anda boleh kembali ke sini bila-bila masa.</string>
+  <string name="LloidsBeacon_Set">\n\nSuar ini telah ditetapkan di lokasi tertentu pada aras ke %d Pixel Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
+  <string name="Stylus_Name">kalam misteri</string>
   <string name="Stylus_ACInscribe">TULIS</string>
+  <string name="Stylus_Info">Kalam misteri ini diperbuat daripada batu hitam yang sangat keras. Dengan kalam ini anda boleh menulis glif atau rune, tetapi anda tidak berkuasa memilih apa yang akan dihasilkan, kalam tersebut yang menentukannya buat anda.</string>
   <string name="Stylus_SelectArmor">Pilih satu item untuk dituliskan</string>
   <string name="Stylus_Inscribed">anda menulis %1$s di atas %2$s anda</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
@@ -228,6 +276,7 @@
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">obor</string>
   <string name="Torch_ACLight">NYALA</string>
+  <string name="Torch_Info">Merupakan item yang sangat diperlukan dalam Balai Setan, yang mana sangat gelap kerana kurang pencahayaan.</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">batu timbang</string>
   <string name="Weightstone_ACApply">GUNA</string>
@@ -271,6 +320,8 @@
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">debu mayat</string>
+  <string name="CorpseDust_Info">Bebola mayat tidak berbeza dengan bebola debu biasa. Akan tetapi, anda tahu ia perlu dimusnahkan secepat mungkin.</string>
+  <string name="CorpseDust_Info2">Mungkin kerana memegangnya menyebabkan anda rasa resah dan menjadi marah.</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">bijih emas gelap</string>
   <string name="DarkGold_Info">Logam ini disebut gelap bukan kerana warnanya (ia tiada beza dengan emas biasa), tetapi ia menjadi cair dibawah sinaran matahari, oleh itu tidak bernilai di luar sana.</string>
@@ -280,6 +331,7 @@
   <string name="DriedRose_Info2">Walaupun ia kehilangan kuasanya. Tetapi rupanya cantik, dan anda mahu menyimpan untuk dijadikan kenangan.</string>
   <!--STRINGS OF DwarfToken CLASS-->
   <string name="DwarfToken_Name">token orang kerdil</string>
+  <string name="DwarfToken_Info">Ramai orang kerdil dan beberapa penciptaan bersaiz besar mereka tersemat kepingan kecil logam ini tetapi tidak diketahui tujuannya. Mungkin sebagai hiasan ataupun sejenis ID atau pengenalan. Orang kerdil ini memang bangsa yang pelik.</string>
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">beliung</string>
   <string name="Pickaxe_Info">Alat bersaiz besar dan tegap ini digunakan untuk memecahkan batu. Ia juga boleh digunakan sebagai senjata.</string>
@@ -296,6 +348,7 @@
   <!--STRINGS OF Fire CLASS-->
   <string name="Fire_Info">Api semakin marak di sini.</string>
   <!--STRINGS OF Foliage CLASS-->
+  <string name="Foliage_Info">Sinaran cahaya menembusi kemuraman taman bawah tanah ini.</string>
   <!--STRINGS OF ParalyticGas CLASS-->
   <string name="ParalyticGas_Info">Awan gas kelumpuhan berpusaran di sini.</string>
   <!--STRINGS OF ToxicGas CLASS-->
@@ -372,6 +425,7 @@
   <!--STRINGS OF Roots CLASS-->
   <string name="Roots_Info">Diakarkan</string>
   <!--STRINGS OF Shadows CLASS-->
+  <string name="Shadows_Info">Shadowmelded</string>
   <!--STRINGS OF Slow CLASS-->
   <string name="Slow_Info">Menjadi Lembab</string>
   <!--STRINGS OF SnipersMark CLASS-->

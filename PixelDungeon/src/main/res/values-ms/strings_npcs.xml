@@ -3,6 +3,7 @@
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
   <string name="Blacksmith_Name">tukang besi troll</string>
+  <string name="Blacksmith_Desc">Tukang besi troll ini rupa seperti troll biasa: dia tinggi dan kurus, kulitnya menyerupai warna dan tekstur batu. Tukang besi troll sedang menggodek-godek alat-alat kecil kelihatan tidak seimbang.</string>
   <string name="Blacksmith_Gold1">Hei manusia! Nak tolong aku tak? Ambil beliung ini dan cari beberapa _bijih emas gelap_, _15 keping_ dah cukup. Apa, nak balasan? Kau tamak...\nBaiklah, baiklah, aku takde duit, tapi boleh buat kerja tempa untuk kau. Anggaplah kau bertuah, aku sorang jer tukang besi kat sini.</string>
   <string name="Blacksmith_Blood1">Hei manusia! Nak tolong aku tak? Ambil beliung ini dan _bunuh seekor kelawar_ dengannya, nak ada darah kat beliung ni. Apa, nak balasan? Kau tamak...\nBaiklah, baiklah, aku takde duit, tapi boleh buat kerja tempa untuk kau. Anggaplah kau bertuah, aku sorang jer tukang besi kat sini.</string>
   <string name="Blacksmith_Txt2">Apa? Mana beliung aku?!</string>
@@ -13,6 +14,7 @@
   <string name="Blacksmith_LooksBetter">%s anda nampaknya lebih baik berbanding dahulu</string>
   <string name="Blacksmith_Verify1">Pilih 2 item berbeza, bukan dua item yang serupa!</string>
   <string name="Blacksmith_Verify2">Pilih 2 item bagi jenis yang sama!</string>
+  <string name="Blacksmith_Verify3">Aku perlu tahu benda tu dulu, pergi kenal pasti dahulu.</string>
   <string name="Blacksmith_Verify4">Saya tidak dapat mengendalikan item disumpah!</string>
   <string name="Blacksmith_Verify5">Ia adalah sampah, kualitinya terlalu teruk!</string>
   <string name="Blacksmith_Verify6">Saya tidak boleh tempa semula item ini!</string>
@@ -21,14 +23,18 @@
   <string name="Ghost_Desc">Hantu hanya separa kelihatan. Ia seakan-akan cahaya pudar tanpa bentuk dengan rupa sedih.</string>
   <string name="Ghost_Rose1">Hai pengembara.... Dulu saya pun seperti awak - kuat dan yakin... Kini saya telah mati... Malangnya saya tidak boleh tinggalkan tempat ini... Sehinggalah saya dapat kembali _mawar kering_... Ia sangat penting buat saya... Ada beberapa ekor raksaksa mencurinya dari jasad saya...</string>
   <string name="Ghost_Rose2">Tolong... Bantulah saya... Cari bunga mawar...</string>
+  <string name="Ghost_Rat1">Hai pengembara.... Dulu saya pun seperti awak - kuat dan yakin... Kini saya telah mati... Malangnya saya tidak boleh tinggalkan tempat ini... Sehinggalah saya dapat membalas dendam... Bunuh _tikus kohong_, yang telah membunuh saya...</string>
+  <string name="Ghost_Rat2">Tolong... Bantulah saya... Bunuh mahkluk terkutuk itu...</string>
   <string name="Ghost_Defense">dielak</string>
   <string name="FetidRat_Name">tikus kohong</string>
   <string name="FetidRat_Name_Objective">tikus kohong</string>
   <string name="FetidRat_Gender">feminin</string>
+  <string name="FetidRat_Desc">Tikus marsupial ini lebih besar berbanding tikus biasa. Bau pun busuk.</string>
   <!--STRINGS OF Hedgehog CLASS-->
   <string name="Hedgehog_Name">landak kecil</string>
   <string name="Hedgehog_Desc">Landak kecil nampaknya ketakutan.</string>
   <string name="Hedgehog_Info1">Adakah anda mancari seekor Beruang?</string>
+  <string name="Hedgehog_Info2">Bagaimana perkembangan terkini?</string>
   <string name="Hedgehog_Info3">Anda mahu teh dengan jem raspberi?</string>
   <string name="Hedgehog_Info4">Ambil pai ini</string>
   <string name="Hedgehog_ImLate">Saya terlambat, Saya betul-betul terlambat...</string>
@@ -36,6 +42,9 @@
   <string name="Imp_Name">momok bercita-cita tinggi</string>
   <string name="Imp_Desc">Momok merupakan setan peringkat rendah. Mereka terkenal dengan kelemahan dari segi kekuatan atau bakat sihir. Sebaliknya mereka bijak dan suka bersosial, ramai momok suka bersama-sama dengan makhluk bukan-setan.</string>
   <string name="Imp_Defense">dielak</string>
+  <string name="Imp_Golems1">Ohh rupanya si pengembara? Saya suka pengembara! Mereka boleh dipercayai jika mahu sesuatu dibunuh. Betul tak? Tetapi mestilah dengan ganjaran ;)\n dalam situasi saya, _golem_ yang perlu dimusnahkan. Awak tau tak, saya mahu buka perniagaan di sini, tetapi golem bodoh tu mengganggu perniagaan saya! Susah dan beroperasi dengan mahkluk batu yang berkeliaran, mengacau! Oleh itu, tolong musnahkannya... kira-kira _6 ekor golem_ dan ganjarannya selepas itu.</string>
+  <string name="Imp_Golems2">Bagaimana dengan pemburuan golem tu?</string>
+  <string name="Imp_Monks1">Ohh rupanya si pengembara? Saya suka pengembara! Mereka boleh dipercayai jika mahu sesuatu dibunuh. Betul tak? Tetapi mestilah dengan ganjaran ;)\n dalam situasi saya, _sami_ yang perlu dibunuh. Awak tau tak, saya mahu buka perniagaan di sini, tetapi sami gila tak beli apa-apa malahan mengganggu pelanggan saya! Oleh itu, tolong bunuh sama tu... kira-kira _8 orang kesemuanya_ dan ganjarannya selepas itu.</string>
   <string name="Imp_Monks2">Oh, awak masih hidup! Saya tahu kung-fu anda lebih kuat ;) Jangan lupa kutip token sami ini.</string>
   <string name="Imp_Cya">Jumpa lagi, %s!</string>
   <string name="Imp_Hey">Psst, %s!</string>
@@ -57,12 +66,15 @@
   <string name="RatKing_Died">Raja telah mati. Daulat Raja baru!</string>
   <!--STRINGS OF Shopkeeper CLASS-->
   <string name="Shopkeeper_Name">pekedai</string>
+  <string name="Shopkeeper_Desc">Lelaki gempal ini lebih sesuai berniaga di kawasan perniagaan di bandar besar berbanding kurungan bawah tanah ini. Hmm patutlah harga yang ditawarkan memang....</string>
   <string name="Shopkeeper_Sell">Pilih satu item untuk dijual</string>
   <!--STRINGS OF WandMaker CLASS-->
   <string name="WandMaker_Name">pembuat tongkat sakti tua</string>
   <string name="WandMaker_Desc">Sibudiman tua tetapi nampak sihat ini kelihatan keliru. Dia dilindungi dengan perisai ajaib.</string>
   <string name="WandMaker_Defense">diserap</string>
+  <string name="WandMaker_Berry1">Fuh lega, masih ada orang yang baik hati di tempat seperti ini! saya kemari untuk mencari bahan yang jarang ditemui - iaitu _benih Rotberi_. Sebagai seorang pengguna kuasa sihir, saya dapat mempertahankan diri saya dengan serangan raksaksa tempatan ini, tetapi saya tak tahu masa yang berlalu, memalukan. Oleh itu awak boleh tolong saya tak? saya bayar bantuan awak dengan salah satu tongkat sakti terbaik saya.</string>
   <string name="WandMaker_Berry2">Bernasib baik jumpa benih Rotberi, %s? Belum jumpa lagi? Jangan risau, saya pun tidak terburu-buru.</string>
+  <string name="WandMaker_Dust1">Fuh lega, masih ada orang yang baik hati di tempat seperti ini! saya kemari untuk mencari bahan yang jarang ditemui - iaitu _debu mayat_. Ia boleh diperoleh dari saki-baki rangka dan ada banyak bertaburan di dalam kurungan bawah tanah. Sebagai seorang pengguna kuasa sihir, saya dapat mempertahankan diri saya dengan serangan raksaksa tempatan ini, tetapi saya tak tahu masa yang berlalu, memalukan. Oleh itu awak boleh tolong saya tak? saya bayar bantuan awak dengan salah satu tongkat sakti terbaik saya.</string>
   <string name="WandMaker_Dust2">Bernasib baik jumpa debu mayat, %s? Longgokan tulang merupakan tempat terbaik mencarinya.</string>
   <string name="WandMaker_RotberryName">Rotberi</string>
   <string name="WandMaker_RotberryDesc">Beri pokok renik ini yang rasanya seakan-akan kemanisan mati.</string>

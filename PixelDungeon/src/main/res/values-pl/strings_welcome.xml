@@ -151,25 +151,25 @@
         - Mag i Nekromanta dostają naturalne efekty zaklęć. Ci bohaterowie posiadają unikalne zaklęcia bez potrzeby posiadania specjalnych przedmiotów\n
         - Każda postać posiada teraz pasek many (Wliczając Nekromantę)\n
         - Nekromanta nie posiada już pasywnej regeneracji many za zabijanie przeciwników. Efekt ten jest teraz przypisany do Szaty Nekromanty (+1 many przy zabójstwie) oraz do Kościstej Zbroi (+2 many przy zabójstwie) , zamiast umiejętności przyzywania jaką wcześniej posiadały\n
+        -Nowy atrybut bohatera: Poziom Magiczny. Im wyższy tym więcej naturalnych zaklęć zostaje odblokowane dla twojego bohatera oraz te zaklęcia mogą się stać o wiele potężniejsze niż na początku.t\n
+        - Nowy przedmiot: Mikstura Many\n
+        - Nowy przedmiot:  Tom Wiedzy (Powiększa twój poziom Magiczny o 1) \n
+        - Nowy przedmiot: Księga Zaklęć. Pozwala one na rzucanie zaklęć w zamian za punkty Many, w przeciwieństwie do zwojów ma nie limitowaną liczbę użyć. \n
+        -  Zbroja Klasowa nie wymaga już życia aby użyć swojej specjalnej umiejętności, wymaga natomiast 1/3 maksymalnej ilości posiadanej many\n
+        - \“Wand of Magic Missiles\” Różdżka Magicznych Pocisków nie jest już możliwa do zdobycia z Kryształów\n
 ---------------------------------------------------------------------------------------------
-        - New hero attribute: Magic Level. The higher the Magic Level the more natural spells are unlocked for your hero and more powerful those spells might get\n
-        - New item: Mana Potion\n
-        - New item Tome of Knowledge.  An item that increases your Magic Level by 1\n
-        - New item Spell Book.  This equipable item will allow you to cast a single spell on cost of mana and unlike the scrolls, this item will not expire no matter how much you use it\n
-        - Class Armor is no longer requires health to cast it\'s special ability, it costs 1/3 of your maximum amount of mana instead\n
-        - The \“Wand of Magic Missiles\” are no longer lootable from Crystals\n
-        - From this point on, every level will have their \“view distance\” set randomly, so that player can encounter \“dark\” levels at every point of the game\n
-        - Torches are now available at beginning and can be commonly found throughout the game\n
-        - The \“safe\” (isSafe) levels are unaffected and will be always lit to a maximum extend\n
-        - Damage from burning is scales with dungeon depth now\n\n
+        - Od teraz każde piętro będzie miało swój losowo generowany zasięg widzenia \“view distance\” , więc teraz gracz może napotkać  \“dark\” ciemne poziom na każdym momencie gry.\n
+        - Pochodne są teraz dostępne od samego początku i mogą być  często znalezione podczas rozgrywki. \n
+        - \“safe\” (isSafe) Bezpieczne piętra będą zawsze rozjaśnione do  maksymalnego zasięgu.\n
+        - Obrażenia od płonięcia są teraz zależne od głębokości.\n\n
 
-        --Vanity Items: \n
-        - New Hat: Chaos Helmet \n\n
+        --Przedmioty wizualne: \n
+        - Nowa czapka: Hełm Chaosu \n\n
 
-        --Mods: \n
-        - You can now add new attributes to your \“iniHeroes\” file: \“maxSP\” - sets a maximum amount of mana, that your character can posses. \“startingSp\” sets starting amount of mana for your character\n
-        - Hero initialization also takes the \“magicAffinity\” attribute, which can be set to: \“Elemental\”, \“Necromancy\” or \“Common\” (\“Common\” means that character can only use spells from the spell books)\n
-        - New game object in mods – Trap. Unlike regular in-game trap, this object can be adjusted in several ways. You can set: the number of activations (uses), the target cell on which the trap\'s effect should trigger(target), and whatever you can or cannot active the trap by throwing item at it (activatedByItem)\n
+        --Mody: \n
+        - Możesz teraz ustawić nowe atrybuty do \“iniHeroes\” : \“maxSP\” - ustawia maksymalną ilość many, jaką twój bohater może zdobyć . \“startingSp\” - ustawia początkową ilość manty z jaką rozpoczyna dany bohater\n
+        -Ustawienie Bohatera zawiera także atrybut  \“magicAffinity\”, który może przybrać wartość: \“Elemental\” -Elementalizm-, \“Necromancy\” -Nekromancja- lub \“Common\” -Zwyczany-  ((Common) oznacza że może używać tylko zaklęć z ksiąg)\n
+        - Nowe obiekty w modach – Pułapki. W przeciwieństwie do zwyczajnych pułapek, mogą być ustawione na kilka sposobów. Możesz ustawić liczbę użyć, pole które aktywuje daną pułapkę, oraz czy możę być aktywowana poprzez rzucenie na nią przedmiotu (activatedByItem)\n
     </string>
   <string name="Welcome_Text_27_3">
          remix.27.3\n
