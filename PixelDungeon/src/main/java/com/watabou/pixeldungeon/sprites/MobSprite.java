@@ -36,15 +36,6 @@ public class MobSprite extends CharSprite {
 			Mob mob = (Mob) ch;
 			sleeping = mob.getState() == mob.SLEEPING;
 			controlled = mob.isPet();
-
-			if (getVisible() && mob.invisible > 0) {
-				setVisible(false);
-			}
-
-			if(!getVisible() && mob.invisible <=0) {
-				setVisible(true);
-			}
-
 		}
 		super.update();
 	}

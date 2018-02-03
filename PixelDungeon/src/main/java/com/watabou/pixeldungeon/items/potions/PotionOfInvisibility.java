@@ -53,10 +53,13 @@ public class PotionOfInvisibility extends UpgradablePotion {
 	}
 
 	public static void melt(Char ch ) {
+
+		float alpha = ch instanceof Hero ? ALPHA : 0.0f;
+
 		if (ch.getSprite().hasParent()) {
-			ch.getSprite().getParent().add( new AlphaTweener( ch.getSprite(), ALPHA, 0.4f ) );
+			ch.getSprite().getParent().add( new AlphaTweener( ch.getSprite(), alpha, 0.4f ) );
 		} else {
-			ch.getSprite().alpha( ALPHA );
+			ch.getSprite().alpha( alpha );
 		}
 	}
 	

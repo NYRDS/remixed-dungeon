@@ -576,7 +576,7 @@ public abstract class Char extends Actor implements Presser{
 		}
 
 		if (this != Dungeon.hero) {
-			getSprite().setVisible(Dungeon.visible[getPos()]);
+			getSprite().setVisible(Dungeon.visible[getPos()] && invisible >= 0);
 		}
 	}
 
@@ -616,7 +616,7 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	private void updateSprite(CharSprite sprite){
-		sprite.setVisible(Dungeon.visible[getPos()]);
+		sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
 		GameScene.addMobSpriteDirect(sprite);
 		sprite.link(this);
 	}

@@ -44,6 +44,7 @@ public class EmoIcon extends Image {
 		super.update();
 
 		setVisible(owner.getVisible());
+		alpha(owner.alpha());
 
 		if (getVisible()) {
 			x = owner.x + owner.width - width / 2;

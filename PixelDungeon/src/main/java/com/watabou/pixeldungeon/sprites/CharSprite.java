@@ -360,7 +360,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 			resetColor();
 		}
 
-		boolean visible = getVisible();
+		boolean visible = getVisible() && (ch == null || ch.invisible <= 0);
 
 		if (burning != null) {
 			burning.setVisible(visible);
