@@ -208,6 +208,7 @@ public class Badges {
 		playGamesList.add(Badge.SHADOW_LORD_SLAIN);
 		playGamesList.add(Badge.LICH_SLAIN);
 		playGamesList.add(Badge.ICE_GUARDIAN_SLAIN);
+		playGamesList.add(Badge.GNOLL_UNLOCKED);
 	}
 
 	private static HashSet<Badge> global;
