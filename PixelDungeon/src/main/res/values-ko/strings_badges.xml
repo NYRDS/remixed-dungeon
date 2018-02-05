@@ -42,6 +42,7 @@
   <string name="Badges_BossSlain2">2번째 보스 섬멸</string>
   <string name="Badges_BossSlain3">3번째 보스 섬멸</string>
   <string name="Badges_BossSlain4">4번째 보스 섬멸</string>
+  <string name="Badges_BossSlain1All">모든 직업으로 첫번째 보스 처치</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -50,6 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
+  <string name="Badges_BossSlain3All">모든 세부전직으로 세번째 보스 처치</string>
   <string name="Badges_RingHaggler">흥정꾼의 반지 획득</string>
   <string name="Badges_RingThorns">가시의 반지 획득</string>
   <string name="Badges_StrengthAttained1">힘 13 획득</string>
@@ -79,6 +81,7 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">옌더의 아뮬렛 획득</string>
+  <string name="Badges_VictoryAll">모든 직업으로 옌더의 아뮬렛 획득</string>
   <string name="Badges_MasteryCombo">7연타!</string>
   <string name="Badges_PotionsCooked1">물약 3개 제조</string>
   <string name="Badges_PotionsCooked2">물약 6개 제조</string>

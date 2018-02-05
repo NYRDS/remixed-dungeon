@@ -5,4 +5,42 @@
   <string name="Codex_ACRead">읽는다</string>
   <string name="Codex_Info">도서관에서 볼 수 있는 많은 책들 중 하나이다.</string>
   <string name="Codex_Blinded">눈이 먼 상태에서는 읽을 수 없다</string>
+  <string-array name="Codex_Story">
+    <item>And created Watabou Pixel Dungeon. And he looked at his handiwork. And he saw that it was good!</item>
+    <item>반발의 문양 - 공격자를 뒤로 튕겨냅니다.</item>
+    <item>매혹의 문양 - 공격자와 자신을 잠시동안 매혹시킵니다. 공격자가 항상 더 오래 매혹됩니다.</item>
+    <item>반-엔트로피의 문양 - 공격자를 얼리고, 자신을 불태우며 발광시킵니다.</item>
+    <item>다중성의 문양 - 거울상을 하나 생성하지만 피해를 받습니다. 이 효과로 사망할 수 있습니다.</item>
+    <item>전위의 문양 - 공격자에게 전류를 방출해 피해를 줍니다. 가한 피해량의 절반의 피해를 입습니다.</item>
+    <item>신진대사의 문양 - 만복도를 소모하고 피해를 받기전에 회복합니다. 굶주리지 않을때만 발동합니다.</item>
+    <item>악취의 문양 - 독가스를 방출합니다.</item>
+    <item>점성의 문양 - 피해를 한번에 받는 대신 1씩 나누어 받게 됩니다.</item>
+    <item>변위의 문양 - 자신을 시야 내의 무작위 위치로 순간이동 시킵니다. 보스 레벨에서는 발동하지 않습니다.</item>
+    <item>속박의 문양 - 속박 당하고, The hero may receive herbal armor, but also be rooted at the same time.</item>
+    <item>Grim weapon - On successful hit, may instantly kill the target (or deal up to 2x damage to a boss).</item>
+    <item>Blazing weapon - On successful hit, deals extra damage to target and may burn it.</item>
+    <item>Eldritch weapon - On successful hit, enemy may flee in Terror.</item>
+    <item>Unstable weapon - On successful hit, may apply the effect of any random enchantment.</item>
+    <item>Vampiric weapon - On successful hit, may heal the Hero for part of the damage dealt to the enemy.</item>
+    <item>Lucky weapon - almost completely ignores enemy armor, and does much more damage.</item>
+    <item>Stunning weapon - On successful hit, may paralyze target.</item>
+    <item>Piercing weapon -  On successful hit, may damage all enemies in a straight line behind the target.</item>
+    <item>Venomous weapon - On successful hit, may poison target.</item>
+    <item>Chilling weapon - On successful hit, may slow target and will prevent it from burning.</item>
+    <item>Wild weapon - On successful hit, may damage all enemies adjacent to the target.</item>
+    <item>This book is written in demon language</item>
+    <item>This book is written in dwarf language</item>
+    <item>This book is written in elven language</item>
+    <item>She stopped, frozen, at the heavy oaken door, and eyed the light emerging from the door\'s borders. From some neglected corner of her mind, recognition.\n
+\"Sunlight..\" she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
+She remembered their voices, their commands, and their warnings, but not their faces, nor their touch.\n
+Pain had trained her. Remember the dangers, always the dangers. Rabid animals, undead, insane brigands, and cunning ninjas had fallen before her. She had cut, burned, stabbed, and poisoned her way through abominations, demons, clockwork abominations, and insane necromancers. Even Gods had fallen before her.\n
+She had tracked Yog through Heaven and Hell, before silencing his corrupting whispers forever. Even then, there was work to be done. Yog was a servant of one even more occult and powerful than himself.\n
+So she delved further, deeper. The old wizard\'s journal, still radiating power, had shown her the path. With the magic in it\'s pages, she traveled to a wild new land, a tiny village ensconced in a mighty forest. There, she finally tracked the evil to its labyrinthine source, and vanquished all who stood before her.\n
+Now, in the faint daylight, she examined herself in a pool of cavewater. Her body was warped almost beyond recognition by magic. Her skin, pale to he point of translucency, was caked with dirt, grime, and soot. Her necklace of rings could pay a kings ransom, and her holster of wands contained enough magical energy to lay waste to armies. She gripped her weapons, literally fine enough to cut down the very gods. Truly, she had become master of this dark realm, this wasteland of despair.\n
+She had chased evil to the far corners of the multiverse, but now she was paralyzed with fear. What if they reject her? What if they don\'t? How could she interact with these people anymore? Hell, she had lost count of the times death had claimed her, only to be pulled from its icy grasp.\n
+No, there was no place for her in the light, not anymore. She turned from the meager light, and descended into the dark, perhaps for the last time.\n
+\n\n\tby drazool from reddit
+</item>
+  </string-array>
 </resources>

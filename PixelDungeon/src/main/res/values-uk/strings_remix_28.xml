@@ -5,8 +5,11 @@
     <string name="GnollArmor_ACSpecial">ДОМІНУВАТИ</string>
     <string name="GnollArmor_NotGnoll">Лише гнолл може вдягти броню Гнолла!</string>
 
+    <string name="GnollArmor_Name">Обладунок Гнолла-лейтенанта</string>
     <string name="GnollArmor_Info">Власники Гнолл-Лейтенантських мундирів добре відомі своїми навичками переконувати навіть самих диких монстрів присягнути Короні.</string>
 
+    <string name="GnollTamahawk_Name">Томагавк Гнолла</string>
+    <string name="GnollTamahawk_Info">Традиційний Томагавк створений ремісниками Гноллами, кожний клан має свій унікальний дизайн. Цей Томагавк трохи легше за аналог, створений людьми.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
 
 
@@ -21,5 +24,7 @@
         <item>Гнолл починає з 15 одиницями сили</item>
         <item>Гнолл починає з 5 одиницями здоров\'я</item>
         <item>Гнолл починає без броні але з унікальним томагавком</item>
+        <item>Гнолли не можуть читати чи писати</item>
+        <item>Гнолл не атакуватиме іншого гнолла, якщо не спровокують</item>
      </string-array>
 </resources>

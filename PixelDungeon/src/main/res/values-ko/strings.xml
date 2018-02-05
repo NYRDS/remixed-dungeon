@@ -219,8 +219,7 @@
   <string name="EquipableItem_ACUnequip">해제</string>
   <string name="EquipableItem_Unequip">%s 은/는 저주로 인해 해제 할 수 없습니다!</string>
   <!--STRINGS OF Heap CLASS-->
-  <string name="Heap_Mimic">이건 미믹이에요!
-</string>
+  <string name="Heap_Mimic">이건 미믹이에요!</string>
   <!--STRINGS OF Amulet CLASS-->
   <string name="Amulet_Name">옌더의 부적</string>
   <string name="Amulet_ACEnd">END THE GAME</string>
@@ -428,7 +427,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <!--STRINGS OF Slow CLASS-->
   <string name="Slow_Info">느려짐</string>
   <!--STRINGS OF SnipersMark CLASS-->
-  <string name="SnipersMark_Info">저격수의 표시</string>
+  <string name="SnipersMark_Info">저격수의 표식</string>
   <!--STRINGS OF Vertigo CLASS-->
   <string name="Vertigo_Info">어지러움</string>
   <!--STRINGS OF Weakness CLASS-->
