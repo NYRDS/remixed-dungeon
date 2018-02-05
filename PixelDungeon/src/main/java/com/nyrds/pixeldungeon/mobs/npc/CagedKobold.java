@@ -86,7 +86,8 @@ public class CagedKobold extends ImmortalNPC {
 				GameScene.show( new WndQuest( this, TXT_QUEST_END ) );
 
 				CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
-				this.destroy();
+				getSprite().killAndErase();
+				destroy();
 			} else {
 				int index = Random.Int(0, TXT_PHRASES.length);
 				say(TXT_PHRASES[index]);
