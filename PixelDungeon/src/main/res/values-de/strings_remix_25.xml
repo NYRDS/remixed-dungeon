@@ -3,20 +3,20 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">Spinnenrüstung</string>
-    <string name="SpiderArmor_Info">Diese Rüstung besteht aus alten Spinnenkörpern und einem seltsamen Stoff. Überraschenderweise scheint es noch funktionsfähige Spinndrüsen zu enthalten. Wenn Sie genügend Druck auf diese ausüben verschießen sie Spinnweben. Die stachelige Oberfläche der Schuhsohlen erlaubt Ihnen, auf diesem Netz frei zu gehen.</string>
+    <string name="SpiderArmor_Info">Diese Rüstung besteht aus alten Spinnenkörpern und einem seltsamen Stoff. Überraschenderweise scheint es noch funktionsfähige Spinndrüsen zu enthalten. Wenn Du genügend Druck auf diese ausübst, verschießen sie Spinnweben. Die stachelige Oberfläche der Schuhsohlen erlaubt es dir, auf diesem Netz frei zu gehen.</string>
     <string name="SpiderArmor_Gender">weiblich</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">Schwarzer Schädel</string>
-    <string name="BlackSkull_Info">Ein kleiner Obsidianschädel. Er war eine Quelle von Nekropolis-Mächten, aber nach Lichs Niederlage scheint es all seine Kräfte verloren zu haben. Aber wie du es hältst, fährt es dir durch den Kopf: \"es Hungert\".</string>
+    <string name="BlackSkull_Info">Ein kleiner Obsidianschädel. Es war eine Quelle der Nekropolis-Energie, aber nach der Niederlage des Lichs scheint es all seine Kräfte verloren zu haben. Aber als du es hältst, fährt dir ein fremder Gedanke durch den Kopf: \"Es Hungert\".</string>
     <string name="BlackSkull_Gender">männlich</string>
 
     <string name="BlackSkull_Name_Awakened">Erweckter schwarzer Schädel</string>
-    <string name="BlackSkull_Info_Awakened">Der Schädel pulsiert mit Kraft, man sieht sie aus den leeren Augen des Schädels fließen. Und wenn du es in deiner Hand hältst, kannst du eine schreckliche Stimme hören: \"Die Todesmärsche\"</string>
+    <string name="BlackSkull_Info_Awakened">Der Schädel pulsiert kraftvoll, du kannst sie aus den leeren Augen des Schädels fließen sehen. Und wenn du es in deiner Hand hältst, kannst du eine schreckliche Stimme hören: \"Die Todesmärsche\"</string>
 
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">Seelenscherbe</string>
-    <string name="SoulShard_Info">Es ist ein Bruchstück von den Resten vom Seelenglas. Es glüht magisch. Vielleicht gibt es jemanden der sich dafür interessiert.</string>
+    <string name="SoulShard_Info">Es ist ein Bruchstück von den Resten vom Gefäß der Seelen. Es glüht mit magischer Energie, vielleicht gibt es ja jemanden der sich dafür interessiert.</string>
     <string name="SoulShard_Gender">männlich</string>
 
     <!-- Mobs descriptions -->

@@ -137,6 +137,15 @@ remix.26.6\n
 - Der Kristall der vom Schattenherr erschafft wird, nutzt nun den Stab des Schattenballs anstelle der normalen Attacke. Die Chance diesen Stab zu erhalten ist 25%\n
 - Repariert Fernangriff Fehler für: Luft Element, Kristall, Brennende Faust, PSI-Spinne und Bernsteinspinne\n
 - Magier Rüstung (Version für Hexenmeister: Hexenmeister Rüstung) und Süßigkeit sind nun in Mods verwendbar\n</string>
+  <string name="Welcome_Text_27_4">
+remix.27.4\n
+- Änderung des Namens zu Remixed Dungeon\n
+- Nekrose - Neue Nekromanten-Rüstung-Fähigkeit \n
+- Neues Abzeichen zu erkunden\n
+- Fähigkeit der klassenspezifischen Rüstung verbraucht nun Mana statt LP\n
+- Chaosgegenstände verlieren nun ihre Verzauberung, wenn sie degradiert werden\n
+- Psi-Spinnen können nun nur noch Blindheits-, Verlangsamungs- und Schwäche-Zauber wirken\n
+</string>
   <string name="Welcome_Text_28">
 remix.28\n
 - Neuer Held - Gnoll\n
