@@ -17,8 +17,8 @@
         "quantity": 100
       }
     ],
-    "str": 10,
-    "hp": 20,
+    "str": 1000,
+    "hp": 2000,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -138,7 +138,7 @@
   },
   "GNOLL": {
     "weapon": {
-      "kind": "Tamahawk",
+      "kind": "GnollTamahawk",
       "identified": true
     },
     "armor": {
@@ -164,7 +164,7 @@
     ],
     "forbiddenActions":["Scroll_ACRead","TomeOfMastery_ACRead","Stylus_ACInscribe"],
     "friendlyMobs":["Gnoll","Shaman","Brute","Shielded"],
-    "str": 17,
+    "str": 15,
     "hp": 5
   }
 }

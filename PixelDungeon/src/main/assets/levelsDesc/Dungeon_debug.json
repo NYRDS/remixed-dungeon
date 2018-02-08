@@ -4,11 +4,11 @@
     "empty_interior":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true, "file":"levelsDesc/empty_interior.json", "music":"ost_town_1.mp3"},
 
     "library":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "noFogOfWar":true, "isStatic":true, "isSafe":true, "file":"levelsDesc/Town_Library.json", "music":"ost_town_1.mp3"},
-    "church":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true, "isStatic":true, "file":"levelsDesc/empty_interior.json", "music":"ost_town_1.mp3"},
+    "church":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true,"noFogOfWar":true, "isStatic":true, "file":"levelsDesc/empty_interior.json", "music":"ost_town_1.mp3"},
 
-    "movie_theater":{"kind":"PredesignedLevel", "depth":0,  "size":[12,8], "isSafe":true, "file":"levelsDesc/Theater.json", "music":"ost_town_1.mp3"},
-    "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "music":"ost_town_1.mp3", "script_":"scripts/actors/DemoJournal"},
-    "town_shop":{"kind":"TownShopLevel", "depth":0, "size":[32,32], "isSafe":true, "music":"ost_town_1.mp3"},
+    "movie_theater":{"kind":"PredesignedLevel", "depth":0,  "size":[12,8], "isSafe":true,"noFogOfWar":true, "file":"levelsDesc/Theater.json", "music":"ost_town_1.mp3"},
+    "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
+    "town_shop":{"kind":"TownShopLevel", "depth":0, "size":[14,14], "isSafe":true,"noFogOfWar":true, "music":"ost_town_1.mp3"},
     "fortune_shop":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/FortuneShop.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
     "portal_shrine":{"kind":"PredesignedLevel", "size":[24,24], "depth":0, "file":"levelsDesc/PortalShrine.json", "isSafe":true},
 
@@ -39,7 +39,7 @@
     "ice4":{"kind":"IceCavesLevel", "depth":18,     "size":[32,32], "music":"ost_ice_caves.mp3"},
     "ice5":{"kind":"IceCavesBossLevel", "depth":19, "size":[32,32], "music":"ost_ice_caves.mp3"},
 
-    "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32],"feeling":"CHASM"},
+    "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
     "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
     "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
     "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
@@ -71,7 +71,7 @@
     "30":{"kind":"GutsLevel", "depth":30,       "size":[48,48]},
     "31":{"kind":"HallsBossLevel", "depth":31,  "size":[32,32], "music":"ost_boss_1_fight.mp3"},
     "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
-   },
+  },
   "Graph":{
     "0":[["town"],[]],
 
@@ -136,6 +136,6 @@
     "ice3":[["ice4"],["ice2"]],
     "ice4":[["ice5"],["ice3"]],
     "ice5":[["ice1"],["ice4"]]
-   },
-   "Entrance":"0"
+  },
+  "Entrance":"0"
 }
