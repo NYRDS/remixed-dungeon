@@ -1714,4 +1714,8 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	public String getProperty(String key, String defVal) {
+		return defVal;
+	}
+
 }

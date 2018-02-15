@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -89,7 +91,7 @@ public abstract class DungeonTilemap extends Tilemap {
 
 	}
 
-
+	@Nullable
 	public abstract Image tile(int pos);
 
 	public static PointF tileToWorld(int pos) {

@@ -36,6 +36,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.ClassicDungeonTilemap;
 import com.watabou.pixeldungeon.CustomLayerTilemap;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -178,13 +179,13 @@ public class GameScene extends PixelScene {
         terrain.add(ripples);
 
 
-        String logicTilesAtlas = DungeonGenerator.getLevelProperty(level.levelId, "logicTiles", null);
-/*
+        String logicTilesAtlas = level.getProperty("tiles_logic", null);
+
         if(logicTilesAtlas != null) {
 			logicTiles = new ClassicDungeonTilemap(level,logicTilesAtlas);
 			terrain.add(logicTiles);
 		}
-*/
+
         if (!level.customTiles()) {
             baseTiles = DungeonTilemap.factory(level, level.getTilesTex());
         } else {
@@ -192,8 +193,9 @@ public class GameScene extends PixelScene {
             ((CustomLayerTilemap)baseTiles).addLayer(level.getTilesTex(),level.decoTileVariant);
         }
         terrain.add(baseTiles);
+
 /*
-		String roofTilesAtlas = DungeonGenerator.getLevelProperty(level.levelId,"roofTiles", null);
+		String roofTilesAtlas = DungeonGenerator.getProperty(level.levelId,"roofTiles", null);
 
 		if(roofTilesAtlas != null) {
 			roofTiles = new DungeonTilemap(level, roofTilesAtlas, level.roofBaseTileVariant, level.roofDecoTileVariant);

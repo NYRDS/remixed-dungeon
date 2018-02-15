@@ -26,14 +26,25 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
     @Override
     public Image tile(int pos) {
-        CompositeImage img = new CompositeImage(getTexture());
-        img.frame(getTileset().get(data[pos]));
+        ArrayList<Image> imgs = new ArrayList<>();
 
-        for (CustomLayerTilemap layer: mLayers) {
-            img.addLayer(layer.tile(pos));
+        if(data[pos] >= 0) {
+            Image img = new Image(getTexture());
+            img.frame(getTileset().get(data[pos]));
+            imgs.add(img);
         }
 
-        return img;
+        for (CustomLayerTilemap layer : mLayers) {
+            if(layer.data[pos] >= 0) {
+                Image img = new Image(getTexture());
+                img.frame(getTileset().get(layer.data[pos]));
+                imgs.add(img);
+            }
+        }
+        if(!imgs.isEmpty()) {
+            return new CompositeImage(imgs);
+        }
+        return null;
     }
 
     @Override
