@@ -708,7 +708,7 @@ public abstract class Level implements Bundlable {
 		return tilesTexEx();
 	}
 
-	protected String tilesTex() {
+	public String tilesTex() {
 		return Assets.TILES_SEWERS;
 	}
 
