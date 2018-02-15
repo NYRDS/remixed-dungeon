@@ -300,8 +300,13 @@ public abstract class Level implements Bundlable {
 			.getVar(R.string.Level_HiddenPlate);
 
 	public int[]     map;
+
 	public int[]     baseTileVariant;
 	public int[]     decoTileVariant;
+
+	public int[]     roofBaseTileVariant;
+	public int[]     roofDecoTileVariant;
+
 	public boolean[] visited;
 	public boolean[] mapped;
 

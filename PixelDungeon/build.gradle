@@ -1,12 +1,17 @@
 apply plugin: 'com.android.application'
 
+
+def jks_keyAlias    = hasProperty('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
+def jks_keyPassword = hasProperty('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
+def jks_storePassword = hasProperty('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
+
 android {
     signingConfigs {
         release {
-            keyAlias 'testKey'
-            keyPassword '123456'
+            keyAlias jks_keyAlias
+            keyPassword jks_keyPassword
             storeFile file('testKey/test.jks')
-            storePassword '123456'
+            storePassword jks_storePassword
         }
     }
     buildToolsVersion '26.0.2'

@@ -27,7 +27,6 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
@@ -176,13 +175,26 @@ public class GameScene extends PixelScene {
 		ripples = new Group();
 		terrain.add(ripples);
 
-		/*
-		logicTiles = new DungeonTilemap(Assets.TILES_CAVES);
-		terrain.add(logicTiles);
-		*/
+
+		String logicTilesAtlas = DungeonGenerator.getLevelProperty(level.levelId,"logicTiles", null);
+
+		if(logicTilesAtlas != null) {
+			logicTiles = new DungeonTilemap(level,logicTilesAtlas,null,null);
+			terrain.add(logicTiles);
+		}
 		
-		baseTiles = new DungeonTilemap(level.getTilesTex());
+		baseTiles = new DungeonTilemap(level, level.getTilesTex(),level.baseTileVariant, level.decoTileVariant);
 		terrain.add(baseTiles);
+
+
+		String roofTilesAtlas = DungeonGenerator.getLevelProperty(level.levelId,"roofTiles", null);
+
+		if(roofTilesAtlas != null) {
+			roofTiles = new DungeonTilemap(level, roofTilesAtlas, level.roofBaseTileVariant, level.roofDecoTileVariant);
+			terrain.add(roofTiles);
+		}
+
+
 
 		objects = new Group();
 		add(objects);
@@ -603,7 +615,8 @@ public class GameScene extends PixelScene {
 
 	public static void discoverTile(int pos, int oldValue) {
 		if (isSceneReady()) {
-			scene.baseTiles.discover(pos, oldValue);
+			//TODO fix me
+			//scene.baseTiles.discover(pos, oldValue);
 		} else {
 			EventCollector.logException(new Exception("discoverTile"));
 		}
@@ -736,10 +749,4 @@ public class GameScene extends PixelScene {
 		}
 	}
 
-	public static Image getTile(int cell) {
-		if(isSceneReady()) {
-			return scene.baseTiles.tile(cell);
-		}
-		throw new TrackedRuntimeException("getTile");
-	}
 }

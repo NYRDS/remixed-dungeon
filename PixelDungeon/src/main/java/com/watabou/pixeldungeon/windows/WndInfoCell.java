@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -54,7 +53,8 @@ public class WndInfoCell extends Window {
 			water.frame( 0, 0, DungeonTilemap.SIZE, DungeonTilemap.SIZE );
 			titlebar.icon( water );
 		} else {
-			titlebar.icon(GameScene.getTile( cell ) );
+			//TODO get here cell image
+			//titlebar.icon(GameScene.getTile( cell ) );
 		}
 
 		String title = level.tileNameByCell( cell );

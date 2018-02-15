@@ -21,7 +21,6 @@ public class CompositeImage extends Image {
 
 	@Override
 	public void draw() {
-
 		super.draw();
 
 		NoosaScript script = NoosaScript.get();

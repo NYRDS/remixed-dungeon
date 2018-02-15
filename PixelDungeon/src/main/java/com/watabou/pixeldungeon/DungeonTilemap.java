@@ -17,16 +17,11 @@
  */
 package com.watabou.pixeldungeon;
 
-import android.graphics.RectF;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
-import com.watabou.noosa.CompositeImage;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
-import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
@@ -37,20 +32,23 @@ public class DungeonTilemap extends Tilemap {
 
 	public static final int SIZE = 16;
 
-	private Tilemap mGroundLayer;
+	private Tilemap mBaseLayer;
 	private Tilemap mDecoLayer;
 
 	private XTilemapConfiguration xTilemapConfiguration;
 
-	private int[] mGroundMap;
+	private Level level;
+
+	private int[] mBaseMap;
 	private int[] mDecoMap;
 
-	public DungeonTilemap(String tiles) {
+	public DungeonTilemap(Level level, String tiles, int []baseMap, int []decoMap ) {
 		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
-		int levelWidth = Dungeon.level.getWidth();
-		map(Dungeon.level.map, levelWidth);
+		this.level = level;
 
-		int mSize = Dungeon.level.getWidth() * Dungeon.level.getHeight();
+		map(level.map, level.getWidth());
+
+		int mSize = level.getWidth() * level.getHeight();
 
 		if (getTileset().size() == 16 * 16) {
 			try {
@@ -63,22 +61,31 @@ public class DungeonTilemap extends Tilemap {
 				throw new TrackedRuntimeException(e);
 			}
 
-			mGroundLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-			mGroundMap = new int[mSize];
-			mGroundLayer.map(buildGroundMap(), levelWidth);
+			mBaseLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
+
+			if(baseMap != null) {
+				mBaseMap = baseMap;
+			} else {
+				mBaseMap = new int[mSize];
+				mBaseLayer.map(buildGroundMap(), level.getWidth());
+			}
 
 			mDecoLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-			mDecoMap = new int[mSize];
-			mDecoLayer.map(buildDecoMap(), levelWidth);
+			if(decoMap != null) {
+				mDecoMap = decoMap;
+			} else {
+				mDecoMap = new int[mSize];
+				mDecoLayer.map(buildDecoMap(), level.getWidth());
+			}
 		}
 	}
 
 	private boolean useExTiles() {
-		return mGroundLayer != null && mDecoLayer != null;
+		return mBaseLayer != null && mDecoLayer != null;
 	}
 
 	private int currentDecoCell(int cell) {
-		return xTilemapConfiguration.decoTile(Dungeon.level, cell);
+		return xTilemapConfiguration.decoTile(level, cell);
 	}
 
 	private int[] buildDecoMap() {
@@ -89,21 +96,21 @@ public class DungeonTilemap extends Tilemap {
 		return mDecoMap;
 	}
 
-	private int currentGroundCell(int cell) {
-		return xTilemapConfiguration.baseTile(Dungeon.level, cell);
+	private int currentBaseCell(int cell) {
+		return xTilemapConfiguration.baseTile(level, cell);
 	}
 
 	private int[] buildGroundMap() {
-		for (int i = 0; i < mGroundMap.length; i++) {
-			mGroundMap[i] = currentGroundCell(i);
+		for (int i = 0; i < mBaseMap.length; i++) {
+			mBaseMap[i] = currentBaseCell(i);
 		}
 
-		return mGroundMap;
+		return mBaseMap;
 	}
 
 	public int screenToTile(int x, int y) {
 		Point p = camera().screenToCamera(x, y).offset(this.point().negate()).invScale(SIZE).floor();
-		return Dungeon.level.cell(p.x, p.y);
+		return level.cell(p.x, p.y);
 	}
 
 	@Override
@@ -112,7 +119,7 @@ public class DungeonTilemap extends Tilemap {
 	}
 
 	public void discover(int pos, int oldValue) {
-
+/*
 		final Image tile = tile(pos, oldValue);
 		tile.point(tileToWorld(pos));
 
@@ -127,6 +134,7 @@ public class DungeonTilemap extends Tilemap {
 				killAndErase();
 			}
 		});
+*/
 	}
 
 	public static PointF tileToWorld(int pos) {
@@ -138,46 +146,6 @@ public class DungeonTilemap extends Tilemap {
 				(pos / Dungeon.level.getWidth() + 0.5f) * SIZE);
 	}
 
-	public CompositeImage tile(int cell) {
-		return tile(cell, -1);
-	}
-
-	private CompositeImage createTileImage(int groundCell, int decoCell) {
-		CompositeImage img = new CompositeImage(mGroundLayer.getTexture());
-
-		RectF frame = mGroundLayer.getTileset().get(groundCell);
-		img.frame(frame);
-
-		frame = mDecoLayer.getTileset().get(decoCell);
-		Image deco = new Image(mDecoLayer.getTexture());
-		deco.frame(frame);
-		img.addLayer(deco);
-		return img;
-
-	}
-
-	private CompositeImage tile(int cell, int tileType) {
-		if (tileType == -1) {
-			if (useExTiles()) {
-				return createTileImage(currentGroundCell(cell), currentDecoCell(cell));
-			}
-
-			CompositeImage img = new CompositeImage(getTexture());
-			img.frame(getTileset().get(Dungeon.level.map[cell]));
-			return img;
-		} else {
-			if (useExTiles()) {
-				return createTileImage(
-						xTilemapConfiguration.baseTile(Dungeon.level, cell),
-						xTilemapConfiguration.decoTile(Dungeon.level, cell));
-			}
-
-			CompositeImage img = new CompositeImage(getTexture());
-			img.frame(getTileset().get(tileType));
-			return img;
-		}
-	}
-
 	@Override
 	public boolean overlapsScreenPoint(int x, int y) {
 		return true;
@@ -186,7 +154,7 @@ public class DungeonTilemap extends Tilemap {
 	@Override
 	public void draw() {
 		if (useExTiles()) {
-			mGroundLayer.draw();
+			mBaseLayer.draw();
 			mDecoLayer.draw();
 		} else {
 			super.draw();
@@ -197,23 +165,21 @@ public class DungeonTilemap extends Tilemap {
 		if (useExTiles()) {
 			buildGroundMap();
 			buildDecoMap();
-			mGroundLayer.updateRegion().set(0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight());
-			mDecoLayer.updateRegion().set(0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight());
+			mBaseLayer.updateRegion().set(0, 0, level.getWidth(), level.getHeight());
+			mDecoLayer.updateRegion().set(0, 0, level.getWidth(), level.getHeight());
 		} else {
-			updated.set(0, 0, Dungeon.level.getWidth(), Dungeon.level.getHeight());
+			updated.set(0, 0, level.getWidth(), level.getHeight());
 		}
-
 	}
 
 	public void updateCell(int cell, Level level) {
-
 		int x = level.cellX(cell);
 		int y = level.cellY(cell);
 
 		if (useExTiles()) {
-			mGroundMap[cell] = currentGroundCell(cell);
+			mBaseMap[cell] = currentBaseCell(cell);
 			mDecoMap[cell] = currentDecoCell(cell);
-			mGroundLayer.updateRegion().union(x, y);
+			mBaseLayer.updateRegion().union(x, y);
 			mDecoLayer.updateRegion().union(x, y);
 		} else {
 			updated.union(x, y);

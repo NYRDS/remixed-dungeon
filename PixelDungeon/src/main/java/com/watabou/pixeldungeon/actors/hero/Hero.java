@@ -411,6 +411,7 @@ public class Hero extends Char {
 			bonus += ((RingOfEvasion.Evasion) buff).level;
 		}
 
+		//WTF ?? Why it is here?
 		Buff frostAura = buff(RingOfFrost.FrostAura.class);
 
 		if (frostAura != null && enemy.distance(this) < 2) {
