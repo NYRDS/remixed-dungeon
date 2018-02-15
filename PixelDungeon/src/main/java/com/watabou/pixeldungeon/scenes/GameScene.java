@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
@@ -199,8 +200,6 @@ public class GameScene extends PixelScene {
 			terrain.add(roofTiles);
 		}
 */
-
-
         objects = new Group();
         add(objects);
 
@@ -723,7 +722,6 @@ public class GameScene extends PixelScene {
         @Override
         public void onSelect(Integer cell) {
             if (Dungeon.hero.handle(cell)) {
-                // Actor.next();
                 Dungeon.hero.next();
             }
         }
@@ -754,4 +752,11 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static Image getTile(int cell) {
+        Image ret = scene.baseTiles.tile(cell);
+        if (ret == null) {
+            ret = scene.logicTiles.tile(cell);
+        }
+        return ret;
+    }
 }

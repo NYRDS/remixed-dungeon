@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon;
 
+import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.levels.Level;
 
@@ -24,9 +25,14 @@ public class CustomLayerTilemap extends DungeonTilemap {
     }
 
     @Override
-    protected Image tile(int pos, int oldValue) {
-        Image img = new Image(getTexture());
+    public Image tile(int pos) {
+        CompositeImage img = new CompositeImage(getTexture());
         img.frame(getTileset().get(data[pos]));
+
+        for (CustomLayerTilemap layer: mLayers) {
+            img.addLayer(layer.tile(pos));
+        }
+
         return img;
     }
 

@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
+import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
@@ -16,14 +17,12 @@ import org.json.JSONException;
  */
 
 public class VariativeDungeonTilemap extends DungeonTilemap {
-    private Tilemap mBaseLayer;
     private Tilemap mDecoLayer;
 
     private XTilemapConfiguration xTilemapConfiguration;
 
     private Level level;
 
-    private int[] mBaseMap;
     private int[] mDecoMap;
 
     public VariativeDungeonTilemap(Level level, String tiles) {
@@ -42,10 +41,8 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
             throw new TrackedRuntimeException(e);
         }
 
-        mBaseLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-
-        mBaseMap = new int[mSize];
-        mBaseLayer.map(buildGroundMap(), level.getWidth());
+        data = new int[level.getWidth()*level.getHeight()];
+        map(buildGroundMap(),level.getWidth());
 
         mDecoLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
         mDecoMap = new int[mSize];
@@ -53,8 +50,16 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
     }
 
     @Override
-    protected Image tile(int pos, int oldValue) {
-        return null;
+    public Image tile(int pos) {
+        CompositeImage img = new CompositeImage(getTexture());
+        img.frame(getTileset().get(data[pos]));
+
+        Image deco = new Image(getTexture());
+        deco.frame(getTileset().get(mDecoMap[pos]));
+
+        img.addLayer(deco);
+
+        return img;
     }
 
     private int currentDecoCell(int cell) {
@@ -74,32 +79,34 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
     }
 
     private int[] buildGroundMap() {
-        for (int i = 0; i < mBaseMap.length; i++) {
-            mBaseMap[i] = currentBaseCell(i);
+        for (int i = 0; i < data.length; i++) {
+            data[i] = currentBaseCell(i);
         }
 
-        return mBaseMap;
+        return data;
     }
 
     @Override
     public void draw() {
-        mBaseLayer.draw();
+        super.draw();
         mDecoLayer.draw();
     }
 
     public void updateAll() {
         buildGroundMap();
         buildDecoMap();
-        mBaseLayer.updateRegion().set(0, 0, level.getWidth(), level.getHeight());
+        updateRegion().set(0, 0, level.getWidth(), level.getHeight());
         mDecoLayer.updateRegion().set(0, 0, level.getWidth(), level.getHeight());
     }
 
     public void updateCell(int cell, Level level) {
         int x = level.cellX(cell);
         int y = level.cellY(cell);
-        mBaseMap[cell] = currentBaseCell(cell);
+
+        data[cell] = currentBaseCell(cell);
         mDecoMap[cell] = currentDecoCell(cell);
-        mBaseLayer.updateRegion().union(x, y);
+
+        updateRegion().union(x, y);
         mDecoLayer.updateRegion().union(x, y);
     }
 }

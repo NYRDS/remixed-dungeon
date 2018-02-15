@@ -67,7 +67,7 @@ public abstract class DungeonTilemap extends Tilemap {
 
 	public void discover(int pos, int oldValue) {
 
-		final Image tile = tile(pos, oldValue);
+		final Image tile = tile(pos);
 
 		if(tile==null) {
 			return;
@@ -89,7 +89,8 @@ public abstract class DungeonTilemap extends Tilemap {
 
 	}
 
-	protected abstract Image tile(int pos, int oldValue);
+
+	public abstract Image tile(int pos);
 
 	public static PointF tileToWorld(int pos) {
 		return new PointF(pos % level.getWidth(), pos / level.getWidth()).scale(SIZE);

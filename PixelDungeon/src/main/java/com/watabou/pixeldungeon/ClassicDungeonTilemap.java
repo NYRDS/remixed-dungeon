@@ -16,7 +16,7 @@ public class ClassicDungeonTilemap extends DungeonTilemap {
     }
 
     @Override
-    protected Image tile(int pos, int oldValue) {
+    public Image tile(int pos) {
         Image img = new Image(getTexture());
         img.frame(getTileset().get(level.map[pos]));
         return img;
