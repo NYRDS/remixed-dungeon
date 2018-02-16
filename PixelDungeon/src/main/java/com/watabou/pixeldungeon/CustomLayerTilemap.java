@@ -24,6 +24,10 @@ public class CustomLayerTilemap extends DungeonTilemap {
         mLayers.add(new CustomLayerTilemap(level,tiles,map));
     }
 
+    public void setAlpha(int layer, float alpha) {
+        mLayers.get(layer).alpha(alpha);
+    }
+
     @Override
     public Image tile(int pos) {
         ArrayList<Image> imgs = new ArrayList<>();

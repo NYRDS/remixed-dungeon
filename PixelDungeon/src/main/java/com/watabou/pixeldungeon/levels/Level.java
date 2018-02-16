@@ -279,6 +279,10 @@ public abstract class Level implements Bundlable {
 		return MAX_VIEW_DISTANCE;
 	}
 
+	public int[] getTileLayer(LayerId id) {
+		return customLayers.get(id);
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
@@ -301,11 +305,12 @@ public abstract class Level implements Bundlable {
 
 	public int[]     map;
 
-	public int[]     baseTileVariant;
-	public int[]     decoTileVariant;
 
-	public int[]     roofBaseTileVariant;
-	public int[]     roofDecoTileVariant;
+	public enum LayerId {
+		Base,Deco,RoofBase,RoofDeco
+	}
+
+	protected Map<LayerId, int[]> customLayers;
 
 	public boolean[] visited;
 	public boolean[] mapped;
@@ -355,8 +360,6 @@ public abstract class Level implements Bundlable {
 	protected static boolean weakFloorCreated = false;
 
 	private static final String MAP               = "map";
-	private static final String TILE_VARIANT_BASE = "tile_variant_base";
-	private static final String TILE_VARIANT_DECO = "tile_variant_deco";
 
 	private static final String VISITED        = "visited";
 	private static final String MAPPED         = "mapped";
@@ -432,8 +435,6 @@ public abstract class Level implements Bundlable {
 
 		map = new int[getLength()];
 
-		baseTileVariant = new int[getLength()];
-		decoTileVariant = new int[getLength()];
 		initTilesVariations();
 
 		visited = new boolean[getLength()];
@@ -566,13 +567,12 @@ public abstract class Level implements Bundlable {
 		initSizeDependentStuff();
 
 		map = bundle.getIntArray(MAP);
-		baseTileVariant = bundle.getIntArray(TILE_VARIANT_BASE);
-		decoTileVariant = bundle.getIntArray(TILE_VARIANT_DECO);
 
-		if (baseTileVariant.length == 0) {
-			baseTileVariant = new int[map.length];
-			decoTileVariant = new int[map.length];
-			initTilesVariations();
+		for(LayerId layerId: LayerId.values()) {
+			int [] layer = bundle.getIntArray(layerId.name());
+			if(layer.length == map.length) {
+				customLayers.put(layerId, layer);
+			}
 		}
 
 		visited = bundle.getBooleanArray(VISITED);
@@ -642,8 +642,9 @@ public abstract class Level implements Bundlable {
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(MAP, map);
 
-		bundle.put(TILE_VARIANT_BASE, baseTileVariant);
-		bundle.put(TILE_VARIANT_DECO, decoTileVariant);
+		for(LayerId layerId: LayerId.values()) {
+			bundle.put(layerId.name(),customLayers.get(layerId));
+		}
 
 		bundle.put(VISITED, visited);
 		bundle.put(MAPPED, mapped);
@@ -669,7 +670,6 @@ public abstract class Level implements Bundlable {
 				objectsArray.add(objectLayer.valueAt(j));
 			}
 		}
-
 
 		bundle.put(OBJECTS, objectsArray);
 
@@ -1674,9 +1674,13 @@ public abstract class Level implements Bundlable {
 	}
 
 	private void initTilesVariations() {
-		for (int i = 0; i < map.length; ++i) {
-			baseTileVariant[i] = Random.Int(0, Integer.MAX_VALUE);
-			decoTileVariant[i] = Random.Int(0, Integer.MAX_VALUE);
+		customLayers = new HashMap<>();
+		for(LayerId layerId: LayerId.values()) {
+			int [] layer = new int[getLength()];
+			for (int i = 0; i < map.length; ++i) {
+				layer[i] = Random.Int(0, Integer.MAX_VALUE);
+			}
+			customLayers.put(layerId, layer);
 		}
 	}
 

@@ -189,19 +189,19 @@ public class GameScene extends PixelScene {
         if (!level.customTiles()) {
             baseTiles = DungeonTilemap.factory(level, level.getTilesTex());
         } else {
-            baseTiles = new CustomLayerTilemap(level, level.getTilesTex(),level.baseTileVariant);
-            ((CustomLayerTilemap)baseTiles).addLayer(level.getTilesTex(),level.decoTileVariant);
+            baseTiles = new CustomLayerTilemap(level, level.getTilesTex(),level.getTileLayer(Level.LayerId.Base));
+            ((CustomLayerTilemap)baseTiles).addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.Deco));
+
+            roofTiles =  new CustomLayerTilemap(level,level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofBase));
+            ((CustomLayerTilemap)roofTiles).addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofDeco));
+
+            roofTiles.alpha(0.3f);
+            ((CustomLayerTilemap)roofTiles).setAlpha(0,0.3f);
+
         }
         terrain.add(baseTiles);
 
-/*
-		String roofTilesAtlas = DungeonGenerator.getProperty(level.levelId,"roofTiles", null);
 
-		if(roofTilesAtlas != null) {
-			roofTiles = new DungeonTilemap(level, roofTilesAtlas, level.roofBaseTileVariant, level.roofDecoTileVariant);
-			terrain.add(roofTiles);
-		}
-*/
         objects = new Group();
         add(objects);
 
@@ -278,6 +278,10 @@ public class GameScene extends PixelScene {
             level.reveal();
         }
 
+        if(roofTiles!=null) {
+            add(roofTiles);
+        }
+
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
         add(fog);
 
@@ -290,6 +294,8 @@ public class GameScene extends PixelScene {
         add(statuses);
 
         add(emoicons);
+
+
 
         add(new HealthIndicator());
 
@@ -621,8 +627,7 @@ public class GameScene extends PixelScene {
 
     public static void discoverTile(int pos, int oldValue) {
         if (isSceneReady()) {
-            //TODO fix me
-            //scene.baseTiles.discover(pos, oldValue);
+            scene.baseTiles.discover(pos, oldValue);
         } else {
             EventCollector.logException(new Exception("discoverTile"));
         }
