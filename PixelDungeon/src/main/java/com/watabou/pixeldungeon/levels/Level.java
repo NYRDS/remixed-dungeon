@@ -340,7 +340,7 @@ public abstract class Level implements Bundlable {
 	public String levelId;
 
 	private Set<ScriptedActor>                    scripts = new HashSet<>();
-	public  HashSet<Mob>                          mobs    = new HashSet<>();
+	public  Set<Mob>                              mobs    = new HashSet<>();
 	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
 	public  SparseArray<Plant>                    plants  = new SparseArray<>();
 	private SparseArray<Heap>                     heaps   = new SparseArray<>();
@@ -542,7 +542,7 @@ public abstract class Level implements Bundlable {
 
 	public void reset() {
 
-		for (Mob mob : mobs.toArray(new Mob[mobs.size()])) {
+		for (Mob mob : getCopyOfMobsArray()) {
 			if (!mob.reset()) {
 				mobs.remove(mob);
 			}
@@ -1718,4 +1718,8 @@ public abstract class Level implements Bundlable {
 		return defVal;
 	}
 
+
+	public Mob[] getCopyOfMobsArray() {
+		return mobs.toArray(new Mob[mobs.size()]);
+	}
 }

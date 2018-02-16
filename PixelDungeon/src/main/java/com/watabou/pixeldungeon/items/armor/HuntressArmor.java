@@ -54,7 +54,7 @@ public class HuntressArmor extends ClassArmor {
 		
 		Item proto = new Shuriken();
 		
-		for (Mob mob : Dungeon.level.mobs) {
+		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				
 				Callback callback = new Callback() {	

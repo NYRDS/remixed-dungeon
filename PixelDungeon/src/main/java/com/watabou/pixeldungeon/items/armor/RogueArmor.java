@@ -84,7 +84,7 @@ public class RogueArmor extends ClassArmor {
 					return;
 				}
 				
-				for (Mob mob : Dungeon.level.mobs) {
+				for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 					if (Dungeon.level.fieldOfView[mob.getPos()] && !(mob instanceof NPC)) {
 						Buff.prolong( mob, Blindness.class, 2 );
 						mob.setState(mob.WANDERING);

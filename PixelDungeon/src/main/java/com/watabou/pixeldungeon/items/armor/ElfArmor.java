@@ -31,7 +31,7 @@ public class ElfArmor extends ClassArmor {
 	@Override
 	public void doSpecial() {
 		
-		for (Mob mob : Dungeon.level.mobs) {
+		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				GameScene.add( Blob.seed( mob.getPos(), 100, Regrowth.class ) );
 			}

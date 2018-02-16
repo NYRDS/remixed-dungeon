@@ -57,7 +57,7 @@ public class IceGuardian extends MultiKindMob {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
+		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (mob instanceof IceGuardianCore) {
 				mob.damage(150,cause);
 				if (mob.isAlive()){

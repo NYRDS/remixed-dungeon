@@ -58,17 +58,19 @@ public class IceGuardianCore extends Boss {
 	public void die(Object cause) {
 		super.die(cause);
 
-		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
+		Level level = Dungeon.level;
+
+		for (Mob mob : level.getCopyOfMobsArray()) {
 			if (mob instanceof IceGuardian) {
 				mob.die(cause);
 			}
 		}
-		Level level = Dungeon.level;
+
 		level.unseal();
 
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
-		Dungeon.level.drop( new IceKey(), getPos() ).sprite.drop();
+		level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+		level.drop( new IceKey(), getPos() ).sprite.drop();
 
 		Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
 	}

@@ -53,7 +53,7 @@ public class MageArmor extends ClassArmor {
 	@Override
 	public void doSpecial() {	
 
-		for (Mob mob : (Iterable<Mob>) Dungeon.level.mobs.clone()) {
+		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Buff.affect( mob, Burning.class ).reignite( mob );
 				Buff.prolong( mob, Roots.class, 3 );
