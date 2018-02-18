@@ -246,6 +246,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		view = new GLSurfaceView(this);
 		view.setEGLContextClientVersion(2);
+		view.setEGLConfigChooser(8,8,8,8,0,0);
 
 
 		// Hope this allow game work on broader devices list
@@ -376,6 +377,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		NoosaScript.get().resetCamera();
 		GLES20.glScissor(0, 0, width(), height());
+		GLES20.glClearColor(0,0,0,0.0f);
 		GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 		
 		draw();
