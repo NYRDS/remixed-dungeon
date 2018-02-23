@@ -78,12 +78,15 @@ public enum Preferences {
 
 		String defVal = Integer.toString(defValue);
 		String propVal = getString(key, defVal);
+		int value;
 		try {
-			return Integer.parseInt(propVal);
+			value = Integer.parseInt(propVal);
 		} catch (NumberFormatException e) {
 			put(key, defValue);
-			return defValue;
+			value = defValue;
 		}
+		intCache.put(key,value);
+		return value;
 	}
 
 	public double getDouble(String key, double defValue) {
@@ -94,12 +97,17 @@ public enum Preferences {
 
 		String defVal = Double.toString(defValue);
 		String propVal = getString(key, defVal);
+
+		double value;
 		try {
-			return Double.parseDouble(propVal);
+			value = Double.parseDouble(propVal);
 		} catch (NumberFormatException e) {
 			put(key, defValue);
-			return defValue;
+			value = defValue;
 		}
+
+		doubleCache.put(key, value);
+		return value;
 	}
 
 	public boolean getBoolean(String key, boolean defValue) {
@@ -110,8 +118,9 @@ public enum Preferences {
 
 		String defVal = Boolean.toString(defValue);
 		String propVal = getString(key, defVal);
-
-		return Boolean.parseBoolean(propVal);
+		boolean value = Boolean.parseBoolean(propVal);
+		boolCache.put(key, value);
+		return value;
 	}
 
 	public boolean checkString(String key) {
@@ -147,12 +156,16 @@ public enum Preferences {
 			return stringCache.get(key);
 		}
 
+		String value;
+
 		try {
 			String scrambledKey = UserKey.encrypt(key);
 
 			if (get().contains(scrambledKey)) {
 				String encVal = get().getString(scrambledKey, UserKey.encrypt(defValue));
-				return UserKey.decrypt(encVal);
+				value = UserKey.decrypt(encVal);
+				stringCache.put(key,value);
+				return value;
 			}
 
 			if (get().contains(key)) {
