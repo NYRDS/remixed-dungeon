@@ -60,7 +60,8 @@
    "mobs" : [
      {"kind":"BlackRat",
        "x":13,
-       "y":11
+       "y":11,
+       "aiState":"Wandering"
      },
      {"kind":"BlackRat",
        "x":13,
