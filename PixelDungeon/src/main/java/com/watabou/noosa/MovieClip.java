@@ -57,10 +57,7 @@ public class MovieClip extends Image {
 					if (curAnim.looped) {
 						curFrame = 0;
 					}
-					finished = true;
-					if (listener != null) {
-						listener.onComplete( curAnim );
-					}
+					finishAnimation();
 					
 				} else {
 					curFrame++;
@@ -73,7 +70,14 @@ public class MovieClip extends Image {
 			
 		}
 	}
-	
+
+	private void finishAnimation() {
+		finished = true;
+		if (listener != null) {
+            listener.onComplete( curAnim );
+        }
+	}
+
 	public void play(Animation anim ) {
 		play( anim, false );
 	}
@@ -83,13 +87,18 @@ public class MovieClip extends Image {
 		if (!force && (curAnim != null) && (curAnim == anim) && (curAnim.looped || !finished)) {
 			return;
 		}
-		
+
 		curAnim = anim;
 		curFrame = 0;
 		finished = false;
 		
 		frameTimer = 0;
-		
+
+
+		if(!getVisible()) {
+			finishAnimation();
+		}
+
 		if (anim != null) {
 			frame( anim.frames[curFrame] );
 		}
