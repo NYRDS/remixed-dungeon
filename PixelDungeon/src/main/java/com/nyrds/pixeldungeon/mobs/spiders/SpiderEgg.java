@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 import android.util.SparseBooleanArray;
 
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderEggSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
@@ -13,8 +12,6 @@ public class SpiderEgg extends Mob {
 	private static SparseBooleanArray eggsLaid = new SparseBooleanArray();
 
 	public SpiderEgg() {
-		spriteClass = SpiderEggSprite.class;
-
 		hp(ht(2));
 		defenseSkill = 0;
 		baseSpeed = 0f;

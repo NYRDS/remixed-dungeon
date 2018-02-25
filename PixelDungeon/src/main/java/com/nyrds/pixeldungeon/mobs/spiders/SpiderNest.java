@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderNestSprite;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -10,8 +9,6 @@ import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 public class SpiderNest extends Mob {
 
 	public SpiderNest() {
-		
-		spriteClass = SpiderNestSprite.class;
 		
 		hp(ht(10));
 		defenseSkill = 1;

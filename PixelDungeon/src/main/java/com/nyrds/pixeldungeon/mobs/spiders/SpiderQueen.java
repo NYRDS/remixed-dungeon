@@ -4,7 +4,6 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -19,8 +18,6 @@ import com.watabou.utils.Random;
 public class SpiderQueen extends Boss {
 	
 	public SpiderQueen() {
-		spriteClass = SpiderQueenSprite.class;
-		
 		hp(ht(120));
 		defenseSkill = 18;
 		
