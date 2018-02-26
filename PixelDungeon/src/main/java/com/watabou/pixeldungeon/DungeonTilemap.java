@@ -46,7 +46,7 @@ public abstract class DungeonTilemap extends Tilemap {
 	static public DungeonTilemap factory(Level level, String tiles) {
 
 		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
-		if(probe.size() == 32) {
+		if(probe.size() == 64) {
 			return new ClassicDungeonTilemap(level, tiles);
 		}
 
