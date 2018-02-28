@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 public class CustomLayerTilemap extends DungeonTilemap {
 
-    private ArrayList<CustomLayerTilemap> mLayers = new ArrayList<>();
-    public boolean trasparent = false;
+    private ArrayList<CustomLayerTilemap> mLayers    = new ArrayList<>();
+    private boolean                       trasparent = false;
 
     public CustomLayerTilemap(Level level, String tiles, int[] map) {
         super(level, tiles);
@@ -24,7 +24,7 @@ public class CustomLayerTilemap extends DungeonTilemap {
     }
 
     public void addLayer(String tiles, int[] map) {
-        mLayers.add(new CustomLayerTilemap(level,tiles,map));
+        mLayers.add(new CustomLayerTilemap(level, tiles, map));
     }
 
     public void setAlpha(int layer, float alpha) {
@@ -35,20 +35,20 @@ public class CustomLayerTilemap extends DungeonTilemap {
     public Image tile(int pos) {
         ArrayList<Image> imgs = new ArrayList<>();
 
-        if(data[pos] >= 0) {
+        if (data[pos] >= 0) {
             Image img = new Image(getTexture());
             img.frame(getTileset().get(data[pos]));
             imgs.add(img);
         }
 
         for (CustomLayerTilemap layer : mLayers) {
-            if(layer.data[pos] >= 0) {
+            if (layer.data[pos] >= 0) {
                 Image img = new Image(getTexture());
                 img.frame(getTileset().get(layer.data[pos]));
                 imgs.add(img);
             }
         }
-        if(!imgs.isEmpty()) {
+        if (!imgs.isEmpty()) {
             return new CompositeImage(imgs);
         }
         return null;
@@ -56,24 +56,26 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
     @Override
     public void draw() {
+
         if (trasparent) {
-            GLES20.glBlendFunc(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA);
+            GLES20.glBlendFuncSeparate(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA, GLES20.GL_ZERO, GLES20.GL_ZERO);
         }
 
         super.draw();
 
-        for (CustomLayerTilemap layer: mLayers) {
-            layer.draw();
-        }
         if (trasparent) {
             GLES20.glBlendFunc(GLES20.GL_ONE, GLES20.GL_ONE_MINUS_SRC_ALPHA);
+        }
+
+        for (CustomLayerTilemap layer : mLayers) {
+            layer.draw();
         }
     }
 
     public void updateAll() {
         updated.set(0, 0, level.getWidth(), level.getHeight());
 
-        for (CustomLayerTilemap layer: mLayers) {
+        for (CustomLayerTilemap layer : mLayers) {
             layer.updated.set(0, 0, level.getWidth(), level.getHeight());
         }
     }
@@ -83,8 +85,12 @@ public class CustomLayerTilemap extends DungeonTilemap {
         int y = level.cellY(cell);
 
         updated.union(x, y);
-        for (CustomLayerTilemap layer: mLayers) {
-            layer.updated.union(x,y);
+        for (CustomLayerTilemap layer : mLayers) {
+            layer.updated.union(x, y);
         }
+    }
+
+    public void setTrasparent(boolean trasparent) {
+        this.trasparent = trasparent;
     }
 }
