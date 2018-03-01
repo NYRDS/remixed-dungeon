@@ -3,7 +3,8 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -61,9 +62,8 @@ public class SpellFactory {
 		try {
 			Class<? extends Spell> spellClass =  mSpellsList.get(name);
 			if (spellClass == null) {
-				Game.toast("Unknown spell: [%s], getting Magic Torch instead", name);
+				EventCollector.logEvent("bug", Utils.format("Unknown spell: [%s], getting Magic Torch instead"), name);
 				spellClass =  mSpellsList.get("MagicTorch");
-				//throw new TrackedRuntimeException("Unregistered spell class "+name);
 			}
 			return spellClass.newInstance();
 		} catch (InstantiationException e) {
