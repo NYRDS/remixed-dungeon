@@ -18,20 +18,17 @@
 package com.watabou.noosa;
 
 import android.graphics.RectF;
+import android.util.SparseArray;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 
-import java.util.HashMap;
-
 public class TextureFilm {
-	
-	private static final RectF FULL = new RectF( 0, 0, 1, 1 );
-	
+
 	private int texWidth;
 	private int texHeight;
 	
-	protected HashMap<Object,RectF> frames = new HashMap<>();
+	protected SparseArray<RectF> frames = new SparseArray<>();
 	
 	public TextureFilm( Object tx ) {
 		
@@ -39,8 +36,6 @@ public class TextureFilm {
 		
 		texWidth = texture.width;
 		texHeight = texture.height;
-		
-		add( null, FULL );
 	}
 	
 	public TextureFilm( SmartTexture texture, int width ) {
@@ -66,37 +61,16 @@ public class TextureFilm {
 			}
 		}
 	}
-	
-	public TextureFilm( TextureFilm atlas, Object key, int width, int height ) {
-	
-		texWidth = atlas.texWidth;
-		texHeight = atlas.texHeight;
-		
-		RectF patch = atlas.get( key );
-		
-		float uw = (float)width / texWidth;
-		float vh = (float)height / texHeight;
-		int cols = (int)(width( patch ) / width);
-		int rows = (int)(height( patch ) / height);
-		
-		for (int i=0; i < rows; i++) {
-			for (int j=0; j < cols; j++) {
-				RectF rect = new RectF( j * uw, i * vh, (j+1) * uw, (i+1) * vh );
-				rect.offset( patch.left, patch.top );
-				add( i * cols + j, rect );
-			}
-		}
-	}
 
 	public int size() {
 		return frames.size();
 	}
 
-	public void add( Object id, RectF rect ) {
+	public void add( int id, RectF rect ) {
 		frames.put( id, rect );
 	}
 	
-	public RectF get( Object id ) {
+	public RectF get( int id ) {
 		return frames.get( id );
 	}
 	
