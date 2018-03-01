@@ -92,4 +92,13 @@ public class CustomLayerTilemap extends DungeonTilemap {
     public void setTrasparent(boolean trasparent) {
         this.trasparent = trasparent;
     }
+
+    @Override
+    public void brightness(float value) {
+        super.brightness(value);
+
+        for (CustomLayerTilemap layer : mLayers) {
+            layer.brightness(value);
+        }
+    }
 }

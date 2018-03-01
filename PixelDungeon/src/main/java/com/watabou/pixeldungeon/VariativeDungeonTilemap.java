@@ -109,4 +109,10 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
         updateRegion().union(x, y);
         mDecoLayer.updateRegion().union(x, y);
     }
+
+    @Override
+    public void brightness(float value) {
+        super.brightness(value);
+        mDecoLayer.brightness(value);
+    }
 }
