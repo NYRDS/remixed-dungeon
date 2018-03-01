@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon;
 
-import android.opengl.GLES20;
-
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.levels.Level;
@@ -56,18 +54,19 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
     @Override
     public void draw() {
-
+/*
         if (trasparent) {
             GLES20.glBlendFuncSeparate(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA, GLES20.GL_ZERO, GLES20.GL_ZERO);
         }
-
+*/
         super.draw();
-
+/*
         if (trasparent) {
             GLES20.glBlendFunc(GLES20.GL_ONE, GLES20.GL_ONE_MINUS_SRC_ALPHA);
         }
-
+*/
         for (CustomLayerTilemap layer : mLayers) {
+//           GLES20.glBlendFuncSeparate(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA, GLES20.GL_ZERO, GLES20.GL_ZERO);
             layer.draw();
         }
     }

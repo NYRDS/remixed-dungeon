@@ -1,10 +1,6 @@
 package com.watabou.pixeldungeon.effects;
 
-import android.opengl.GLES20;
-
 import com.watabou.pixeldungeon.sprites.CharSprite;
-
-import javax.microedition.khronos.opengles.GL10;
 
 public class RoofMask extends CircleMask {
 
@@ -24,8 +20,10 @@ public class RoofMask extends CircleMask {
 	
 	@Override
 	public void draw() {
+		/*
 		GLES20.glBlendFuncSeparate(GLES20.GL_ZERO, GLES20.GL_ONE, GLES20.GL_ONE, GLES20.GL_ZERO);
 		super.draw();
 		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
+		*/
 	}
 }

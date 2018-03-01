@@ -97,6 +97,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
 	// The sprite is currently in motion
 	public boolean isMoving = false;
+	public RoofMask roofMask;
 
 	public CharSprite() {
 		super();
@@ -110,7 +111,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		turnTo(ch.getPos(), Random.Int(Dungeon.level.getLength()));
 
 		if(ch instanceof Hero) {
-			GameScene.effect(new RoofMask(this));
+			GameScene.effect(roofMask = new RoofMask(this));
 		}
 
 		ch.updateSpriteState();
