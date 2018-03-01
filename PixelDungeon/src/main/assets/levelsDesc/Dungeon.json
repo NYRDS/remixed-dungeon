@@ -77,14 +77,14 @@
    "Graph":{
       "0":[["town"],[]],
 
-      "town_shop":[[],["town"],[1]],
-      "movie_theater":[[],["town"],[2]],
-	  "church":[[],["town"],[4]],
-      "library":[[],["town"],[5]],
-      "fortune_shop":[[],["town"],[6]],
-      "portal_shrine":[[],["town"],[7]],
-	  "inn":[[],["town"],[8]],
-      "town":[["town_shop", "movie_theater", "1", "church", "library", "fortune_shop", "portal_shrine", "inn"],[]],
+      "town_shop":[[],["town"],[4]],
+      "movie_theater":[[],["town"],[6]],
+	  "church":[[],["town"],[5]],
+      "library":[[],["town"],[3]],
+      "fortune_shop":[[],["town"],[7]],
+      "portal_shrine":[[],["town"],[1]],
+	  "inn":[[],["town"],[2]],
+      "town":[["town_shop", "movie_theater", "church", "library", "fortune_shop", "portal_shrine", "inn", "1"],[]],
 
       "1":[["2"],["town"],[3]],
       "2":[["3"],["1"]],
