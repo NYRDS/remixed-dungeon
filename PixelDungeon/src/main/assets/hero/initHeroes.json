@@ -38,6 +38,8 @@
       {
         "kind": "WandOfMagicMissile",
         "identified": true
+		"kind": "Gold",
+        "quantity": 10000000
       }
     ],
     "quickslot": [
@@ -51,9 +53,11 @@
       }
     ],
     "isSpellUser": true,
+	"str": 999,
+    "hp": 9999,
     "magicAffinity": "Elemental",
-    "startingSp": 10,
-    "maxSp": 10
+    "startingSp": 1000,
+    "maxSp": 100000
   },
   "ROGUE": {
     "ring1": {
