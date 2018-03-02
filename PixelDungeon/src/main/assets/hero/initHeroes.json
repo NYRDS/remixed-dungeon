@@ -38,10 +38,11 @@
       {
         "kind": "WandOfMagicMissile",
         "identified": true
-		"kind": "Gold",
+	  },
+	  {"kind": "Gold",
         "quantity": 10000000
       }
-    ],
+	  ],
     "quickslot": [
       {
         "kind": "WandOfMagicMissile"
