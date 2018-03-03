@@ -74,7 +74,7 @@ public class MaskedTilemapScript extends Script {
     }
 
 
-    public void drawQuadSet(FloatBuffer vertices, int size) {
+    public void drawQuadSet(FloatBuffer vertices, FloatBuffer mask, int size) {
 
         if (size == 0) {
             return;
@@ -86,8 +86,10 @@ public class MaskedTilemapScript extends Script {
         vertices.position(2);
         aUV.vertexPointer(2, 4, vertices);
 
-        vertices.position(0);
-        aUV_mask.vertexPointer(2, 4, vertices);
+        mask.position(0);
+        //vertices.position(2);
+        //aUV_mask.vertexPointer(2, 4, vertices);
+        aUV_mask.vertexPointer(2, 2, mask);
 
         GLES20.glDrawElements(
                 GLES20.GL_TRIANGLES,
@@ -157,6 +159,6 @@ public class MaskedTilemapScript extends Script {
                     "uniform vec4 uColorA;" +
                     "void main() {" +
 //                    " gl_FragColor = vec4(0.7,0.7,0.7,0.7);" +
-                    "  gl_FragColor = texture2D( uTex_mask, vUV )*texture2D( uTex, vUV );" +
+                    "  gl_FragColor =texture2D( uTex, vUV ) * texture2D( uTex_mask, vUV_mask ).a;" +
                     "}";
 }

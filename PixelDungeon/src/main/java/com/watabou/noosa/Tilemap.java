@@ -33,11 +33,11 @@ public class Tilemap extends Visual {
 	private TextureFilm tileset;
 
 	protected int[] data;
-	private   int   mapWidth;
+	protected int   mapWidth;
 	protected int   size;
 	
-	private float cellW;
-	private float cellH;
+	protected float cellW;
+	protected float cellH;
 
 	protected float[]     vertices;
 	protected FloatBuffer quads;

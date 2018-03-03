@@ -124,9 +124,17 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 		final int csize = DungeonTilemap.SIZE;
 
 		return new PointF(
-				((cell % Dungeon.level.getWidth()) + 0.5f) * csize - width * 0.5f,
-				((cell / Dungeon.level.getWidth()) + 1.0f) * csize - height
+				(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+				(Dungeon.level.cellY(cell) + 1.0f) * csize - height
 		);
+	}
+
+	public PointF worldCoords() {
+		final int csize = DungeonTilemap.SIZE;
+		PointF point = point();
+		point.x = (point.x + width * 0.5f)/csize - 0.5f;
+		point.y = (point.y + height)/csize - 1.0f;
+		return point;
 	}
 
 	public void place(int cell) {
