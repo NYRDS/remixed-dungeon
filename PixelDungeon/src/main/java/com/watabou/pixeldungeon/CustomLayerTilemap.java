@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon;
 
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.MaskedTilemapScript;
 import com.watabou.pixeldungeon.levels.Level;
 
 import java.util.ArrayList;
@@ -52,25 +53,6 @@ public class CustomLayerTilemap extends DungeonTilemap {
         return null;
     }
 
-    @Override
-    public void draw() {
-/*
-        if (trasparent) {
-            GLES20.glBlendFuncSeparate(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA, GLES20.GL_ZERO, GLES20.GL_ZERO);
-        }
-*/
-        super.draw();
-/*
-        if (trasparent) {
-            GLES20.glBlendFunc(GLES20.GL_ONE, GLES20.GL_ONE_MINUS_SRC_ALPHA);
-        }
-*/
-        for (CustomLayerTilemap layer : mLayers) {
-//           GLES20.glBlendFuncSeparate(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA, GLES20.GL_ZERO, GLES20.GL_ZERO);
-            layer.draw();
-        }
-    }
-
     public void updateAll() {
         updated.set(0, 0, level.getWidth(), level.getHeight());
 
@@ -99,6 +81,33 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
         for (CustomLayerTilemap layer : mLayers) {
             layer.brightness(value);
+        }
+    }
+
+    @Override
+    public void draw() {
+       // super.draw();
+
+        updateMatrix();
+
+        MaskedTilemapScript script = MaskedTilemapScript.get();
+
+        getTexture().bind();
+
+        script.uModel.valueM4( matrix );
+        script.lighting(
+                rm, gm, bm, am,
+                ra, ga, ba, aa );
+
+        if (!updated.isEmpty()) {
+            updateVertices();
+        }
+
+        script.camera( camera );
+        script.drawQuadSet( quads, size );
+
+        for (CustomLayerTilemap layer : mLayers) {
+            layer.draw();
         }
     }
 }
