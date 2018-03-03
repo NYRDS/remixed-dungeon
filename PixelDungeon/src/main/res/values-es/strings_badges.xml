@@ -42,6 +42,7 @@
   <string name="Badges_BossSlain2">2º jefe asesinado</string>
   <string name="Badges_BossSlain3">3er jefe asesinado</string>
   <string name="Badges_BossSlain4">4º jefe asesinado</string>
+  <string name="Badges_BossSlain1All">1er jefe es asesinado por rodas las classes</string>
   <!--<string name="Badges_BossSlain3Glad"></string>-->
   <!--<string name="Badges_BossSlain3Bers"></string>-->
   <!--<string name="Badges_BossSlain3WarL"></string>-->
@@ -50,6 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
+  <string name="Badges_BossSlain3All">3er jefe es asesinado por todas las subclases</string>
   <string name="Badges_RingHaggler">Anillo del Regateador obtenido</string>
   <string name="Badges_RingThorns">Anillo de Espinas obtenido</string>
   <string name="Badges_StrengthAttained1">13 puntos de Fuerza obtenidos</string>
@@ -79,6 +81,7 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amuleto de Yendor conseguido</string>
+  <string name="Badges_VictoryAll">El amuleto de Yendor es recibido po todas las clases</string>
   <string name="Badges_MasteryCombo">Combo de 7 golpes</string>
   <string name="Badges_PotionsCooked1">3 pociones cocinadas</string>
   <string name="Badges_PotionsCooked2">6 pociones cocinadas</string>

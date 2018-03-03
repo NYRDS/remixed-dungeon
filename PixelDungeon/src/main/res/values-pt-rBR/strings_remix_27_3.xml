@@ -11,4 +11,7 @@
     <string name="Using_Failed_Because_Magic">A Poderosa Magia Prevenir Você de usar \"%s\"</string>
     <string name="Using_Failed_Because_Blind">Você não pode usar \"%s\" enquanto está cego!</string>
 
-    </resources>
+    <string name="Mob_Cannot_Be_Pet">A vontade de \"%s\"  é muito forte para controlar-lo!</string>
+    <string name="No_Valid_Cell">Não há células próximas disponíveis.</string>
+
+</resources>
