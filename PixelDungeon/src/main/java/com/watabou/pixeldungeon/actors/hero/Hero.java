@@ -1699,7 +1699,7 @@ public class Hero extends Char {
 
 						if (level.secret[p]) {
 							int oldValue = level.map[p];
-							GameScene.discoverTile(p, oldValue);
+							GameScene.discoverTile(p);
 							level.set(p, Terrain.discover(oldValue));
 							GameScene.updateMap(p);
 							ScrollOfMagicMapping.discover(p);

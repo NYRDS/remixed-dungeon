@@ -634,9 +634,9 @@ public class GameScene extends PixelScene {
         }
     }
 
-    public static void discoverTile(int pos, int oldValue) {
+    public static void discoverTile(int pos) {
         if (isSceneReady()) {
-            scene.baseTiles.discover(pos, oldValue);
+            scene.baseTiles.discover(pos);
         } else {
             EventCollector.logException(new Exception("discoverTile"));
         }
