@@ -189,12 +189,15 @@ public class GameScene extends PixelScene {
         if (!level.customTiles()) {
             baseTiles = DungeonTilemap.factory(level, level.getTilesTex());
         } else {
-            baseTiles = new CustomLayerTilemap(level, level.getTilesTex(),level.getTileLayer(Level.LayerId.Base));
-            ((CustomLayerTilemap)baseTiles).addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.Deco));
+            CustomLayerTilemap tiles = new CustomLayerTilemap(level, level.getTilesTex(),level.getTileLayer(Level.LayerId.Base));
+            tiles.addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.Deco));
+            tiles.addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.Deco2));
+            baseTiles = tiles;
 
-            roofTiles =  new CustomLayerTilemap(level,level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofBase));
-            ((CustomLayerTilemap)roofTiles).addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofDeco));
-            ((CustomLayerTilemap)roofTiles).setTransparent(true);
+            tiles = new CustomLayerTilemap(level,level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofBase));
+            tiles.setTransparent(true);
+            tiles.addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofDeco));
+            roofTiles = tiles;
         }
         terrain.add(baseTiles);
 

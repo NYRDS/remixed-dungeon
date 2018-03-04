@@ -158,7 +158,6 @@ public class MaskedTilemapScript extends Script {
                     "uniform vec4 uColorM;" +
                     "uniform vec4 uColorA;" +
                     "void main() {" +
-//                    " gl_FragColor = vec4(0.7,0.7,0.7,0.7);" +
-                    "  gl_FragColor =texture2D( uTex, vUV ) * texture2D( uTex_mask, vUV_mask ).a;" +
+                    "  gl_FragColor =texture2D( uTex, vUV ) * uColorM  * texture2D( uTex_mask, vUV_mask ).a;" +
                     "}";
 }

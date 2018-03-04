@@ -63,6 +63,7 @@ public class PredesignedLevel extends CustomLevel {
 	private void readLevelParams() throws JSONException {
 		fillMapLayer("baseTileVar", customLayers.get(LayerId.Base));
 		fillMapLayer("decoTileVar", customLayers.get(LayerId.Deco));
+		fillMapLayer("deco2TileVar", customLayers.get(LayerId.Deco2));
 
 		fillMapLayer("roofBaseTileVar", customLayers.get(LayerId.RoofBase));
 		fillMapLayer("roofDecoTileVar", customLayers.get(LayerId.RoofDeco));
@@ -70,12 +71,12 @@ public class PredesignedLevel extends CustomLevel {
 		useCustomTiles = mLevelDesc.optBoolean("customTiles",false);
 	}
 
-	private void fillMapLayer(String layerName, int[] baseTileVariant) throws JSONException {
+	private void fillMapLayer(String layerName, int[] tiles) throws JSONException {
 		if(mLevelDesc.has(layerName)) {
 			JSONArray layer = mLevelDesc.getJSONArray(layerName);
 
 			for (int i = 0; i < layer.length(); i++) {
-				baseTileVariant[i]=layer.getInt(i);
+				tiles[i]=layer.getInt(i);
 			}
 		}
 	}
