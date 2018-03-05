@@ -13,6 +13,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by mike on 15.02.2018.
@@ -25,17 +26,18 @@ public class CustomLayerTilemap extends DungeonTilemap {
     private boolean                       transparent = false;
 
     private FloatBuffer mask;
-    private float maskData[] = new float[8];
-
+    private float maskData[];
 
     public CustomLayerTilemap(Level level, String tiles, int[] map) {
         super(level, tiles);
         map(map, level.getWidth());
 
         mask = ByteBuffer.
-                allocateDirect( size * 16 * Float.SIZE / 8 ).
+                allocateDirect( size * 8 * Float.SIZE / 8 ).
                 order( ByteOrder.nativeOrder() ).
                 asFloatBuffer();
+
+        maskData = new float[size * 8];
     }
 
     public void addLayer(String tiles, int[] map) {
@@ -111,32 +113,36 @@ public class CustomLayerTilemap extends DungeonTilemap {
         float hx = hpos.x;
         float hy = hpos.y;
 
+        Arrays.fill(maskData,0);
+
         mask.position(0);
 
         for (int i=0; i < level.getHeight(); i++) {
             for (int j=0; j < level.getWidth(); j++) {
 
-                maskData[0] = getTCoord(hx, j - 0.5f);
-                maskData[1] = getTCoord(hy, i - 0.5f);
+                int p = (i * level.getHeight() + j) * 8;
 
-                maskData[2] = getTCoord(hx, j + 0.5f);
-                maskData[3] = getTCoord(hy, i - 0.5f);
+                maskData[p+0] = getTCoord(hx, j - 0.5f);
+                maskData[p+1] = getTCoord(hy, i - 0.5f);
 
-                maskData[4] = getTCoord(hx, j + 0.5f);
-                maskData[5] = getTCoord(hy, i + 0.5f);
+                maskData[p+2] = getTCoord(hx, j + 0.5f);
+                maskData[p+3] = getTCoord(hy, i - 0.5f);
 
-                maskData[6] = getTCoord(hx, j - 0.5f);
-                maskData[7] = getTCoord(hy, i + 0.5f);
+                maskData[p+4] = getTCoord(hx, j + 0.5f);
+                maskData[p+5] = getTCoord(hy, i + 0.5f);
 
-                mask.put(maskData);
+                maskData[p+6] = getTCoord(hx, j - 0.5f);
+                maskData[p+7] = getTCoord(hy, i + 0.5f);
             }
         }
+
+        mask.put(maskData);
     }
 
     private float getTCoord(float h, float i) {
         float d = (h - i)  /  (1f) ;
 
-        d = Math.max(-1,Math.min(1,d));
+        d = Math.max(-2,Math.min(2,d));
         d = (d + 1) * 0.5f;
         return d;
     }
@@ -167,7 +173,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
             script.drawQuadSet(quads, mask, size);
 
             for (CustomLayerTilemap layer : mLayers) {
-                layer.draw();
+                layer.updateVertices();
+                script.drawQuadSet(layer.quads, mask, size);
+                //layer.draw();
             }
         } else {
 
