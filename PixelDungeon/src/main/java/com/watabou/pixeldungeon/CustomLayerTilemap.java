@@ -147,6 +147,7 @@ public class CustomLayerTilemap extends DungeonTilemap {
             updateMatrix();
 
             MaskedTilemapScript script = MaskedTilemapScript.get();
+            script.resetCamera();
 
             Texture.activate(1);
             CircleMask.ensureTexture();
@@ -164,6 +165,7 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
             script.camera(camera);
             script.drawQuadSet(quads, mask, size);
+
             for (CustomLayerTilemap layer : mLayers) {
                 layer.draw();
             }

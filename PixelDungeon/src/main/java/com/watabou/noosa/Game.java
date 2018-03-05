@@ -375,7 +375,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		step();
 
 		NoosaScript.get().resetCamera();
-		MaskedTilemapScript.get().resetCamera();
 
 		GLES20.glScissor(0, 0, width(), height());
 		GLES20.glClearColor(0,0,0,0.0f);
