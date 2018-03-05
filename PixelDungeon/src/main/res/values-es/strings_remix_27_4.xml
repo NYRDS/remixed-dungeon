@@ -1,4 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <string name="Item_Info2">Algo</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">Cuando el Nigromante usa esta armadura, puede usar la habilidad especial de Necroticsimo, que nos permite una enfermedad magica que infecta a todos en el campo de la region de los vivos o los muetros.</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">Esta tunica se nutre con la magia que permite al Nigromante cautivar las almas de las criaturas que mato.</string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">Necroticismo</string>
+    <string name="Necrotism_ACSpecial">NECROTICISMO</string>
+    <string name="ResultDescriptions_Necrotism">Murio de Necrotismo en el nivel %d</string>
+    <string name="Necrotism_Death">Moriste de Necroticismo...</string>
+    <string name="Badges_DeathNecrotism">Muerte por Necrotismo</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">Haga clic en la pelota.</string>
+    
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Niveles</string>
+    <string name="WndJournal_Logbook">Diario</string>
+
+</resources>

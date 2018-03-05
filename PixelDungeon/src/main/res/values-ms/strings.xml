@@ -238,7 +238,7 @@
   <string name="Dewdrop_Name">titisan embun</string>
   <string name="Dewdrop_Info">Titisan embun yang jernih.</string>
   <!--STRINGS OF DewVial CLASS-->
-  <string name="DewVial_Name">bebulu embun</string>
+  <string name="DewVial_Name">bebuli embun</string>
   <string name="DewVial_ACDRINK">MINUM</string>
   <string name="DewVial_Info">Anda boleh menyimpan lebihan embun ke dalam bekas kecil ini untuk diminum jika diperlukan. Jika bebuli penuh, ketika berlakunya bencana yang mengancam nyawa air embun ini akan diminum secara automatik.</string>
   <string name="DewVial_AutoDrink">Bebuli embun telah dihabiskan untuk memulihkan luka anda.</string>

@@ -157,7 +157,6 @@
         - Nowy przedmiot: Księga Zaklęć. Pozwala one na rzucanie zaklęć w zamian za punkty Many, w przeciwieństwie do zwojów ma nie limitowaną liczbę użyć. \n
         -  Zbroja Klasowa nie wymaga już życia aby użyć swojej specjalnej umiejętności, wymaga natomiast 1/3 maksymalnej ilości posiadanej many\n
         - \“Wand of Magic Missiles\” Różdżka Magicznych Pocisków nie jest już możliwa do zdobycia z Kryształów\n
----------------------------------------------------------------------------------------------
         - Od teraz każde piętro będzie miało swój losowo generowany zasięg widzenia \“view distance\” , więc teraz gracz może napotkać  \“dark\” ciemne poziom na każdym momencie gry.\n
         - Pochodne są teraz dostępne od samego początku i mogą być  często znalezione podczas rozgrywki. \n
         - \“safe\” (isSafe) Bezpieczne piętra będą zawsze rozjaśnione do  maksymalnego zasięgu.\n

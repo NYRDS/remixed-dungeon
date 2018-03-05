@@ -67,7 +67,7 @@ public abstract class DungeonTilemap extends Tilemap {
 		return true;
 	}
 
-	public void discover(int pos, int oldValue) {
+	public void discover(int pos) {
 
 		final Image tile = tile(pos);
 

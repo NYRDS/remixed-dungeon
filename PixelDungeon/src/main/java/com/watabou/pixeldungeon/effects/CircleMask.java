@@ -20,22 +20,54 @@ public class CircleMask extends Image {
 	protected float radius = RADIUS;
 	protected float brightness = 1;
 
-	public CircleMask() {
+	public static void ensureTexture() {
 		if (!TextureCache.contains( CACHE_KEY )) {
+
 			Bitmap bmp = Bitmap.createBitmap( RADIUS * 2, RADIUS * 2, Bitmap.Config.ARGB_8888 );
 			Canvas canvas = new Canvas( bmp );
 			Paint paint = new Paint();
-			canvas.drawColor(Color.BLACK, PorterDuff.Mode.SRC);
-
+			canvas.drawColor(Color.WHITE, PorterDuff.Mode.SRC);
+/*
 			paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
 			paint.setColor( 0x77ffffff);
 			canvas.drawCircle( RADIUS, RADIUS, RADIUS, paint );
+*/
+/*
+			paint.setColor( Color.BLUE);
+			canvas.drawCircle( RADIUS, RADIUS, RADIUS, paint );
 
-			paint.setColor( Color.TRANSPARENT);
+			paint.setColor( Color.GREEN);
+			canvas.drawCircle( RADIUS, RADIUS, RADIUS*0.75f, paint );
+
+			paint.setColor( Color.RED);
 			canvas.drawCircle( RADIUS, RADIUS, RADIUS*0.5f, paint );
+*/
+			paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
+			paint.setColor( 0xf7ffffff);
+			canvas.drawCircle( RADIUS, RADIUS, RADIUS, paint );
 
+			paint.setColor( 0x77ffffff);
+			canvas.drawCircle( RADIUS, RADIUS, RADIUS*0.75f, paint );
+
+			paint.setColor( 0x00ffffff);
+			canvas.drawCircle( RADIUS, RADIUS, RADIUS*0.5f, paint );
 			TextureCache.add( CACHE_KEY, new SmartTexture( bmp ) );
+			/*
+			int  pixels[] = new int[RADIUS*RADIUS*4];
+
+			for (int i = 0;i<2*RADIUS;++i) {
+				for(int j=0;j<2*RADIUS;++j) {
+					//pixels[i] = (byte) (Math.random() > 0.9 ? 255 : 0);
+					pixels[i] = (int) (Math.random() * 0xffffffff);
+				}
+			}
+			TextureCache.add( CACHE_KEY, new SmartTexture(RADIUS*2,RADIUS*2,pixels));
+			*/
 		}
+	}
+
+	public CircleMask() {
+		ensureTexture();
 
 		texture( CACHE_KEY );
 

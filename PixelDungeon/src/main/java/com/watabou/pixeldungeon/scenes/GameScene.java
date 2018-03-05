@@ -189,12 +189,15 @@ public class GameScene extends PixelScene {
         if (!level.customTiles()) {
             baseTiles = DungeonTilemap.factory(level, level.getTilesTex());
         } else {
-            baseTiles = new CustomLayerTilemap(level, level.getTilesTex(),level.getTileLayer(Level.LayerId.Base));
-            ((CustomLayerTilemap)baseTiles).addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.Deco));
+            CustomLayerTilemap tiles = new CustomLayerTilemap(level, level.getTilesTex(),level.getTileLayer(Level.LayerId.Base));
+            tiles.addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.Deco));
+            tiles.addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.Deco2));
+            baseTiles = tiles;
 
-            roofTiles =  new CustomLayerTilemap(level,level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofBase));
-            ((CustomLayerTilemap)roofTiles).setTrasparent(true);
-            ((CustomLayerTilemap)roofTiles).addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofDeco));
+            tiles = new CustomLayerTilemap(level,level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofBase));
+            tiles.setTransparent(true);
+            tiles.addLayer(level.getTilesTex(),level.getTileLayer(Level.LayerId.RoofDeco));
+            roofTiles = tiles;
         }
         terrain.add(baseTiles);
 
@@ -634,9 +637,9 @@ public class GameScene extends PixelScene {
         }
     }
 
-    public static void discoverTile(int pos, int oldValue) {
+    public static void discoverTile(int pos) {
         if (isSceneReady()) {
-            scene.baseTiles.discover(pos, oldValue);
+            scene.baseTiles.discover(pos);
         } else {
             EventCollector.logException(new Exception("discoverTile"));
         }

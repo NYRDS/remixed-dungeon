@@ -1,9 +1,17 @@
 package com.watabou.pixeldungeon;
 
+import com.watabou.gltextures.TextureCache;
+import com.watabou.glwrap.Texture;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.MaskedTilemapScript;
+import com.watabou.pixeldungeon.effects.CircleMask;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.utils.PointF;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
 /**
@@ -13,12 +21,21 @@ import java.util.ArrayList;
 
 public class CustomLayerTilemap extends DungeonTilemap {
 
-    private ArrayList<CustomLayerTilemap> mLayers    = new ArrayList<>();
-    private boolean                       trasparent = false;
+    private ArrayList<CustomLayerTilemap> mLayers     = new ArrayList<>();
+    private boolean                       transparent = false;
+
+    private FloatBuffer mask;
+    private float maskData[] = new float[8];
+
 
     public CustomLayerTilemap(Level level, String tiles, int[] map) {
         super(level, tiles);
         map(map, level.getWidth());
+
+        mask = ByteBuffer.
+                allocateDirect( size * 16 * Float.SIZE / 8 ).
+                order( ByteOrder.nativeOrder() ).
+                asFloatBuffer();
     }
 
     public void addLayer(String tiles, int[] map) {
@@ -52,25 +69,6 @@ public class CustomLayerTilemap extends DungeonTilemap {
         return null;
     }
 
-    @Override
-    public void draw() {
-/*
-        if (trasparent) {
-            GLES20.glBlendFuncSeparate(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA, GLES20.GL_ZERO, GLES20.GL_ZERO);
-        }
-*/
-        super.draw();
-/*
-        if (trasparent) {
-            GLES20.glBlendFunc(GLES20.GL_ONE, GLES20.GL_ONE_MINUS_SRC_ALPHA);
-        }
-*/
-        for (CustomLayerTilemap layer : mLayers) {
-//           GLES20.glBlendFuncSeparate(GLES20.GL_DST_ALPHA, GLES20.GL_ONE_MINUS_DST_ALPHA, GLES20.GL_ZERO, GLES20.GL_ZERO);
-            layer.draw();
-        }
-    }
-
     public void updateAll() {
         updated.set(0, 0, level.getWidth(), level.getHeight());
 
@@ -89,8 +87,11 @@ public class CustomLayerTilemap extends DungeonTilemap {
         }
     }
 
-    public void setTrasparent(boolean trasparent) {
-        this.trasparent = trasparent;
+    public void setTransparent(boolean transparent) {
+        this.transparent = transparent;
+        for (CustomLayerTilemap layer : mLayers) {
+            layer.setTransparent(transparent);
+        }
     }
 
     @Override
@@ -100,5 +101,79 @@ public class CustomLayerTilemap extends DungeonTilemap {
         for (CustomLayerTilemap layer : mLayers) {
             layer.brightness(value);
         }
+    }
+
+    @Override
+    protected void updateVertices() {
+        super.updateVertices();
+
+        PointF hpos = Dungeon.hero.getHeroSprite().worldCoords();
+        float hx = hpos.x;
+        float hy = hpos.y;
+
+        mask.position(0);
+
+        for (int i=0; i < level.getHeight(); i++) {
+            for (int j=0; j < level.getWidth(); j++) {
+
+                maskData[0] = getTCoord(hx, j - 0.5f);
+                maskData[1] = getTCoord(hy, i - 0.5f);
+
+                maskData[2] = getTCoord(hx, j + 0.5f);
+                maskData[3] = getTCoord(hy, i - 0.5f);
+
+                maskData[4] = getTCoord(hx, j + 0.5f);
+                maskData[5] = getTCoord(hy, i + 0.5f);
+
+                maskData[6] = getTCoord(hx, j - 0.5f);
+                maskData[7] = getTCoord(hy, i + 0.5f);
+
+                mask.put(maskData);
+            }
+        }
+    }
+
+    private float getTCoord(float h, float i) {
+        float d = (h - i)  /  (1f) ;
+
+        d = Math.max(-1,Math.min(1,d));
+        d = (d + 1) * 0.5f;
+        return d;
+    }
+
+    @Override
+    public void draw() {
+        if (transparent) {
+            updateMatrix();
+
+            MaskedTilemapScript script = MaskedTilemapScript.get();
+
+            Texture.activate(1);
+            CircleMask.ensureTexture();
+            TextureCache.get(CircleMask.class).bind();
+
+            Texture.activate(0);
+            getTexture().bind();
+
+            script.uModel.valueM4(matrix);
+            script.lighting(
+                    rm, gm, bm, am,
+                    ra, ga, ba, aa);
+
+            updateVertices();
+
+            script.camera(camera);
+            script.drawQuadSet(quads, mask, size);
+            for (CustomLayerTilemap layer : mLayers) {
+                layer.draw();
+            }
+        } else {
+
+            super.draw();
+            for (CustomLayerTilemap layer : mLayers) {
+                layer.draw();
+            }
+        }
+
     }
 }
