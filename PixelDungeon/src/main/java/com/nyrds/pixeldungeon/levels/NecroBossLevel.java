@@ -146,7 +146,7 @@ public class NecroBossLevel extends Level {
 			boss.setState(boss.HUNTING);
 			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
-			Dungeon.level.spawnMob(boss);
+			spawnMob(boss);
 
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );
