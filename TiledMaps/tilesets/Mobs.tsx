@@ -16,4 +16,44 @@
    <property name="kind" value="Gnoll"/>
   </properties>
  </tile>
+ <tile id="3">
+  <properties>
+   <property name="kind" value="Crab"/>
+  </properties>
+ </tile>
+ <tile id="192">
+  <properties>
+   <property name="kind" value="HealerNPC"/>
+  </properties>
+ </tile>
+ <tile id="193">
+  <properties>
+   <property name="kind" value="PlagueDoctorNPC"/>
+  </properties>
+ </tile>
+ <tile id="194">
+  <properties>
+   <property name="kind" value="TownsfolkMovieNPC"/>
+  </properties>
+ </tile>
+ <tile id="195">
+  <properties>
+   <property name="kind" value="TownsfolkNPC"/>
+  </properties>
+ </tile>
+ <tile id="196">
+  <properties>
+   <property name="kind" value="TownsfolkSilentNPC"/>
+  </properties>
+ </tile>
+ <tile id="197">
+  <properties>
+   <property name="kind" value="TownGuardNPC"/>
+  </properties>
+ </tile>
+ <tile id="198">
+  <properties>
+   <property name="kind" value="FortuneTellerNPC"/>
+  </properties>
+ </tile>
 </tileset>
