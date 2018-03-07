@@ -32,11 +32,9 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.EmoIcon;
 import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.IceBlock;
-import com.watabou.pixeldungeon.effects.RoofMask;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
@@ -97,7 +95,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
 	// The sprite is currently in motion
 	public boolean isMoving = false;
-	public RoofMask roofMask;
 
 	public CharSprite() {
 		super();
@@ -109,10 +106,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
 		place(ch.getPos());
 		turnTo(ch.getPos(), Random.Int(Dungeon.level.getLength()));
-
-		if(ch instanceof Hero) {
-			GameScene.effect(roofMask = new RoofMask(this));
-		}
 
 		ch.updateSpriteState();
 
