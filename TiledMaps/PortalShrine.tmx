@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="left-up" width="24" height="24" tilewidth="16" tileheight="16" nextobjectid="1">
- <tileset firstgid="1" name="tiles0" tilewidth="16" tileheight="16" tilecount="64" columns="16">
-  <image source="../PixelDungeon/src/main/assets/tiles0.png" trans="000000" width="256" height="64"/>
- </tileset>
- <tileset firstgid="65" name="tiles_town_outside_wntr" tilewidth="16" tileheight="16" tilecount="256" columns="16">
-  <image source="../PixelDungeon/src/main/assets/tiles_town_outside_wntr.png" trans="000000" width="256" height="256"/>
- </tileset>
+<map version="1.0" tiledversion="1.1.3" orientation="orthogonal" renderorder="left-up" width="24" height="24" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" source="tilesets/logic.tsx"/>
+ <tileset firstgid="65" source="tilesets/tiles_town_outside_winter.tsx"/>
  <layer name="logic" width="24" height="24">
   <data encoding="csv">
 14,14,14,14,14,15,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,
@@ -34,7 +30,7 @@
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
 </data>
  </layer>
- <layer name="base" width="24" height="24" visible="0">
+ <layer name="base" width="24" height="24">
   <data encoding="csv">
 99,97,99,98,98,129,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,
 98,98,98,98,98,129,97,99,97,98,97,97,97,97,97,97,97,97,98,98,98,98,98,98,
@@ -62,7 +58,7 @@
 98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,99,97,98,98
 </data>
  </layer>
- <layer name="deco" width="24" height="24" visible="0">
+ <layer name="deco" width="24" height="24">
   <data encoding="csv">
 264,265,264,265,266,0,263,264,265,264,264,264,264,264,264,264,264,264,264,264,264,265,264,265,
 280,281,280,281,282,0,279,280,281,280,264,265,264,265,264,265,264,265,264,265,264,265,264,265,
@@ -90,7 +86,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="deco2" width="24" height="24" visible="0">
+ <layer name="deco2" width="24" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -118,7 +114,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="roof_base" width="24" height="24" visible="0">
+ <layer name="roof_base" width="24" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -146,7 +142,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="roof_deco" width="24" height="24" visible="0">
+ <layer name="roof_deco" width="24" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -174,7 +170,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="mobs" width="24" height="24" visible="0">
+ <layer name="mobs" width="24" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
