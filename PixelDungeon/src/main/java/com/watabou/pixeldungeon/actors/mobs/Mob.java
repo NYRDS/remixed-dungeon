@@ -32,6 +32,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -301,7 +302,7 @@ public abstract class Mob extends Char {
 	}
 
 	private Char chooseEnemyDungeon() {
-		if(Dungeon.hero.heroClass.friendlyTo(getMobClassName())) {
+		if(friendly(Dungeon.hero)) {
 			return DUMMY;
 		}
 
@@ -343,12 +344,12 @@ public abstract class Mob extends Char {
 
 		if (getEnemy() instanceof Mob) {
 			Mob enemyMob = (Mob) getEnemy();
-			if (enemyMob.fraction.belongsTo(fraction)) {
+			if (enemyMob.fraction.belongsTo(fraction) || friendly(enemyMob)) {
 				setEnemy(DUMMY);
 			}
 		}
 
-		if(getEnemy() !=DUMMY) {
+		if(getEnemy() != DUMMY) {
 			return getEnemy();
 		}
 
@@ -727,12 +728,21 @@ public abstract class Mob extends Char {
 	}
 
 	public void yell(String str) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), str);
+		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
 	}
 
 	public void say(String str) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), str);
+		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
 	}
+
+	public void yell(String str, int index) {
+		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
+	}
+
+	public void say(String str,int index) {
+		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
+	}
+
 
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		if (mobDesc.has("loot")) {
@@ -961,7 +971,10 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean friendly(Char chr) {
-		return isPet() || getEnemy()!= chr && (chr instanceof Hero && ((Hero)chr).heroClass.friendlyTo(getMobClassName()));
+		if(chr instanceof Hero) {
+			return isPet() || ((Hero)chr).heroClass.friendlyTo(getMobClassName());
+		}
+		return getEnemy()!= chr;
 	}
 
 	public boolean canBePet() {

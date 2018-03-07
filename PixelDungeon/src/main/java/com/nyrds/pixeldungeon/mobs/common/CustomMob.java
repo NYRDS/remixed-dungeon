@@ -149,10 +149,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
 			attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 
-			name = StringsManager.maybeId(classDesc.optString("name", name));
-			name_objective = StringsManager.maybeId(classDesc.optString("name_objective", name));
-			description = StringsManager.maybeId(classDesc.optString("description", description));
-			gender = Utils.genderFromString(classDesc.optString("gender", ""));
+			name = StringsManager.maybeId(classDesc.optString("name", mobClass+"_Name"));
+			name_objective = StringsManager.maybeId(classDesc.optString("name_objective", mobClass+"_Name_Objective"));
+			description = StringsManager.maybeId(classDesc.optString("description", mobClass+"_Desc"));
+			gender = Utils.genderFromString(classDesc.optString("gender", mobClass+"_Gender"));
 
 			spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
 

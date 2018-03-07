@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="BlackCat_Name">Black cat</string>
+    <string name="BlackCat_Gender">feminine</string>
+    <string name="BlackCat_Name_Objective">cat</string>
+    <string name="BlackCat_Desc">This is black cat</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Meow</item>
+        <item>Meow...</item>
+        <item>Meow!</item>
+    </string-array>
+
+</resources>

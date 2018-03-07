@@ -56,4 +56,9 @@
    <property name="kind" value="FortuneTellerNPC"/>
   </properties>
  </tile>
+ <tile id="199">
+  <properties>
+   <property name="kind" value="BlackCat"/>
+  </properties>
+ </tile>
 </tileset>

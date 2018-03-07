@@ -120,7 +120,7 @@ public class CustomLayerTilemap extends DungeonTilemap {
         for (int i=0; i < level.getHeight(); i++) {
             for (int j=0; j < level.getWidth(); j++) {
 
-                int p = (i * level.getHeight() + j) * 8;
+                int p = (i * level.getWidth() + j) * 8;
 
                 maskData[p+0] = getTCoord(hx, j - 0.5f);
                 maskData[p+1] = getTCoord(hy, i - 0.5f);
@@ -173,9 +173,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
             script.drawQuadSet(quads, mask, size);
 
             for (CustomLayerTilemap layer : mLayers) {
-                layer.updateVertices();
-                script.drawQuadSet(layer.quads, mask, size);
-                //layer.draw();
+                //layer.updateVertices();
+                //script.drawQuadSet(layer.quads, mask, size);
+                layer.draw();
             }
         } else {
 
