@@ -61,4 +61,9 @@
    <property name="kind" value="BlackCat"/>
   </properties>
  </tile>
+ <tile id="200">
+  <properties>
+   <property name="kind" value="SociologistNPC"/>
+  </properties>
+ </tile>
 </tileset>

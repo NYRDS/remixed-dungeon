@@ -36,6 +36,7 @@ import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
+import com.nyrds.pixeldungeon.mobs.npc.SociologistNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownGuardNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkMovieNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkNPC;
@@ -215,6 +216,7 @@ public class MobFactory {
 		registerMobClass(Deathling.class);
 
 		registerMobClass(Ghost.class);
+		registerMobClass(SociologistNPC.class);
 	}
 	
 	public static Mob mobRandom() {

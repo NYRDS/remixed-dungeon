@@ -29,6 +29,11 @@
          "y":14
         }, 
         {
+         "kind":"SociologistNPC",
+         "x":12,
+         "y":16
+        }, 
+        {
          "kind":"TownsfolkNPC",
          "x":7,
          "y":18
