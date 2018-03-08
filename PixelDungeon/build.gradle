@@ -71,6 +71,9 @@ dependencies {
     implementation 'ch.acra:acra:4.9.0@aar'
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'org.luaj:luaj-jse:3.0.1'
+
+    implementation 'info.guardianproject.netcipher:netcipher:1.2'
+
     //noinspection GradleDependency
     googlePlayRetroImplementation 'com.android.support:support-v4:25.3.1'
     //noinspection GradleDependency

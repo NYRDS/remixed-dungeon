@@ -4,7 +4,6 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,7 +39,6 @@ public class JsonHelper {
 	@NonNull
 	static public JSONObject readJsonFromFile(File file) throws JSONException {
 		try {
-			GLog.i("Trying to read from %s", file.getAbsoluteFile());
 			return readJsonFromStream(new FileInputStream(file));
 		} catch (FileNotFoundException e) {
 			return new JSONObject();

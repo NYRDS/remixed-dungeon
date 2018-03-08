@@ -6,12 +6,17 @@ import android.util.Log;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import info.guardianproject.netcipher.NetCipher;
 
 public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
@@ -27,9 +32,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 	protected Boolean doInBackground(String... args) {
 		Boolean result = false;
 		m_url = args[0];
-		
-		System.setProperty("https.protocols", "TLSv1");
-		
+
 		publishProgress( 0 );
 		
 		try {
@@ -41,8 +44,8 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 			Log.d(TAG, "download beginning");
 			Log.d(TAG, "download url: " + url);
 			Log.d(TAG, "downloaded file name: " + file);
-			
-			HttpURLConnection ucon = (HttpURLConnection) url.openConnection();
+
+			HttpsURLConnection ucon = NetCipher.getHttpsURLConnection(url);
 
 			ucon.setReadTimeout(2500);
 			ucon.setInstanceFollowRedirects(true);
@@ -72,10 +75,8 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
 				fos.close();
 				publishProgress( 100 );
-				Log.d(TAG,
-						"download ready in: "
-								+ ((System.currentTimeMillis() - startTime) / 1000)
-								+ " sec");
+				Log.d(TAG, Utils.format("%d bytes downloaded in: %3.3f sec",
+						bytesDownloaded, (System.currentTimeMillis() - startTime) / 1000f));
 				result = true;
 			} else {
 				result = false;
