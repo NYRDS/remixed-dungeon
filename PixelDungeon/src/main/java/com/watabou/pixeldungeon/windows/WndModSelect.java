@@ -122,11 +122,9 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 				selectedMod = desc.name;
 				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
 				desc.needUpdate = false;
-				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-					new DownloadTask(this).executeOnExecutor(Game.instance().executor,desc.url, downloadTo);
-				} else {
-					new DownloadTask(this).execute(desc.url, downloadTo);
-				}
+
+				new DownloadTask(this).download(desc.url, downloadTo);
+
 				return;
 			}
 		}

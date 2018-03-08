@@ -1,9 +1,11 @@
 package com.nyrds.android.util;
 
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.noosa.Game;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -99,4 +101,12 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
     	m_listener.DownloadComplete(m_url, result);
     }
 
+
+    public void download(String url, String downloadTo) {
+	    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+		    this.executeOnExecutor(Game.instance().executor,url, downloadTo);
+	    }else {
+		    this.execute(url, downloadTo);
+	    }
+    }
 }
