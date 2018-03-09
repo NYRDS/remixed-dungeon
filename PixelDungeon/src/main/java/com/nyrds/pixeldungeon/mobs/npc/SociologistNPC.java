@@ -1,17 +1,22 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import android.Manifest;
+import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndSurvey;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.windows.WndMessage;
+import com.watabou.pixeldungeon.windows.WndError;
+import com.watabou.pixeldungeon.windows.WndOptions;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 
@@ -24,13 +29,25 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
 
     private static final String SURVEY_JSON = "survey.json";
 
-    @Override
+    @Nullable
+    private JSONObject survey;
+
     public boolean interact(Hero hero) {
 
-        String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET};
-        Game.instance().doPermissionsRequest(this, requiredPermissions);
+        Game.scene().add(new WndOptions(this.name,
+                Game.getVar(R.string.SociologistNPC_Hi),
+                Game.getVar(R.string.Wnd_Button_Yes), Game.getVar(R.string.Wnd_Button_No)
+        ) {
 
-        return super.interact(hero);
+            @Override
+            protected void onSelect(int index) {
+                if (index == 0) {
+                    String[] requiredPermissions = {Manifest.permission.INTERNET};
+                    Game.instance().doPermissionsRequest(SociologistNPC.this, requiredPermissions);
+                }
+            }
+        });
+        return true;
     }
 
     @Override
@@ -43,14 +60,17 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
         Game.executeInGlThread(new Runnable() {
             @Override
             public void run() {
-                if(!Game.isPaused()) {
+                if (!Game.isPaused()) {
                     if (!result) {
-                        Game.toast("Survey list download failed :(");
+                        reportError();
                     } else {
                         try {
-                            Game.scene().add(new WndMessage(JsonHelper.readJsonFromFile(FileSystem.getExternalStorageFile(SURVEY_JSON)).toString()));
+                            survey = JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(SURVEY_JSON));
+
+                            Game.scene().add(new WndSurvey(survey));
+
                         } catch (JSONException e) {
-                            e.printStackTrace();
+                            reportError();
                         }
                     }
                 }
@@ -58,16 +78,20 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
         });
     }
 
+    private void reportError() {
+        Game.scene().add(new WndError(Game.getVar(R.string.SociologistNPC_DownloadError)));
+    }
+
     @Override
     public void returnToWork(boolean result) {
-        if(result) {
-            File survey = FileSystem.getExternalStorageFile(SURVEY_JSON);
+        if (result) {
+            File survey = FileSystem.getInternalStorageFile(SURVEY_JSON);
             survey.delete();
             String downloadTo = survey.getAbsolutePath();
 
             new DownloadTask(this).download("https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json", downloadTo);
         } else {
-            say("No internet - No surveys");
+            say(Game.getVar(R.string.SociologistNPC_InternetRequired));
         }
     }
 }

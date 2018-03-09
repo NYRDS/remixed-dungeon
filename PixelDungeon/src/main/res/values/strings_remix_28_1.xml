@@ -12,4 +12,16 @@
         <item>Meow!</item>
     </string-array>
 
+    <string name="SociologistNPC_Name">Sociologist</string>
+    <string name="SociologistNPC_Gender">feminine</string>
+    <string name="SociologistNPC_Name_Objective">Sociologist</string>
+    <string name="SociologistNPC_Desc">This is sociologist in a holy quest of collecting public opinion</string>
+
+    <string name="SociologistNPC_AlreadyTaken">"You already pass this survey, please come back later"</string>
+    <string name="SociologistNPC_Hi">"Hi!\nDid you want to take your part in our survey?(Internet access will be required)\nYour opinion matter!"</string>
+    <string name="SociologistNPC_InternetRequired">"Sorry, but without access to Internet you cannot pass our survey"</string>
+    <string name="SociologistNPC_DownloadError">"Sorry, something went wrong, please try again later"</string>
+
+
+
 </resources>
