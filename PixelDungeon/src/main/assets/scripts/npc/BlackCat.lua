@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 return mob.init({
     interact = function(self, chr)
-        self:say("BlackCat_Phrases",math.random(3))
+        self:say("BlackCat_Phrases",math.random(0,2))
     end
 })
 
