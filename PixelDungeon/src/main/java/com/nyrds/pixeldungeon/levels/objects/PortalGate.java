@@ -15,7 +15,6 @@ import org.json.JSONObject;
 
 public abstract class PortalGate extends LevelObject {
 
-
 	protected boolean animationRunning = false;
 
 	protected boolean activated = false;
@@ -40,7 +39,6 @@ public abstract class PortalGate extends LevelObject {
 		super(pos);
 		textureFile = "levelObjects/portals.png";
 	}
-
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {

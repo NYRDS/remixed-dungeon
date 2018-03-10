@@ -80,4 +80,17 @@ public class Position implements Bundlable {
 			cellId = x + y*level.getWidth();
 		}
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Position position = (Position) o;
+
+		if (cellId != position.cellId) return false;
+		if (x != position.x) return false;
+		if (y != position.y) return false;
+		return levelId.equals(position.levelId);
+	}
 }

@@ -10,7 +10,7 @@ public class PortalGateReceiver extends PortalGate {
 
 	@Override
 	public boolean portalInteract(Hero hero) {
-		if(!used && hero.belongings.getItem(Amulet.class) == null && hero.portalLevelPos != null){
+		if(!used && hero.belongings.getItem(Amulet.class) == null && hero.portalLevelPos != null && !hero.portalLevelPos.equals(getPosition())){
 			if(!animationRunning){
 				if (!activated){
 					playStartUpAnim();

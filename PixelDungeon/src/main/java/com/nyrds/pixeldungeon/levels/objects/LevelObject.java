@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
@@ -170,5 +171,9 @@ public abstract class LevelObject implements Bundlable, Presser {
 
     public int getLayer() {
         return layer;
+    }
+
+    public Position getPosition() {
+        return new Position(Dungeon.level.levelId, pos);
     }
 }
