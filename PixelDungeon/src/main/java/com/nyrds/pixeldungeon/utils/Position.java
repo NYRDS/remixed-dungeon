@@ -93,4 +93,13 @@ public class Position implements Bundlable {
 		if (y != position.y) return false;
 		return levelId.equals(position.levelId);
 	}
+
+	@Override
+	public int hashCode() {
+		int result = cellId;
+		result = 31 * result + (levelId != null ? levelId.hashCode() : 0);
+		result = 31 * result + x;
+		result = 31 * result + y;
+		return result;
+	}
 }

@@ -68,17 +68,15 @@ public class Signal<T> {
 		Listener<T>[] list = listeners.toArray(new Listener[listeners.size()]);
 		
 		canceled = false;
-		for (int i=0; i < list.length; i++) {
-			
-			Listener<T> listener = list[i];
-			
-			if (listeners.contains( listener )) {
-				listener.onSignal( t );
+		for (Listener<T> listener : list) {
+
+			if (listeners.contains(listener)) {
+				listener.onSignal(t);
 				if (canceled) {
 					return;
 				}
 			}
-			
+
 		}
 	}
 	
