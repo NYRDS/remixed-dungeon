@@ -68,4 +68,9 @@ public class SpellBook extends Artifact {
 	public Item burn(int cell){
 		return null;
 	}
+
+	@Override
+	public int price() {
+		return 500;
+	}
 }
