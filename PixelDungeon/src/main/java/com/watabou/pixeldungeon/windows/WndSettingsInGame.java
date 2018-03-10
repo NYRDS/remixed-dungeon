@@ -113,7 +113,7 @@ public class WndSettingsInGame extends WndSettingsCommon {
 				PixelDungeon.zoom(value - PixelScene.defaultZoom);
 
 				float zoom = Camera.main.zoom;
-				selector.enable(zoom > PixelScene.minZoom, zoom < PixelScene.maxZoom, true);
+				selector.enable(zoom < PixelScene.maxZoom, zoom > PixelScene.minZoom, true);
 			}
 		});
 	}
