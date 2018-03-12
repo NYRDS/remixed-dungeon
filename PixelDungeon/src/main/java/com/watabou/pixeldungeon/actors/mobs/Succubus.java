@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
@@ -48,7 +47,7 @@ public class Succubus extends Mob {
 
 		hp(ht(80));
 		defenseSkill = 25;
-		viewDistance = Dungeon.level.MIN_VIEW_DISTANCE + 1;
+		viewDistance = Dungeon.level.getViewDistance() + 1;
 
 		exp = 12;
 		maxLvl = 25;

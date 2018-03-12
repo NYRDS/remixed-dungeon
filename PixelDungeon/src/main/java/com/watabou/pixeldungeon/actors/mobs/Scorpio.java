@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -38,7 +37,7 @@ public class Scorpio extends Mob implements IZapper {
 
 		hp(ht(95));
 		defenseSkill = 24;
-		viewDistance = Dungeon.level.MIN_VIEW_DISTANCE + 1;
+		viewDistance = Dungeon.level.getViewDistance() + 1;
 		
 		exp = 14;
 		maxLvl = 25;
