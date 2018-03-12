@@ -119,14 +119,6 @@ public class DungeonGenerator {
 
 	}
 
-	public static String getEntryLevelKind() {
-		try {
-			return mLevels.getJSONObject(getEntryLevel()).getString("kind");
-		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
-		}
-	}
-
 	public static String getEntryLevel() {
 		try {
 			return mDungeonMap.getString("Entrance");
@@ -239,17 +231,6 @@ public class DungeonGenerator {
 			//EventCollector.logException(e);
 		}
 		return defaultValue;
-	}
-
-	public static JSONArray getLevelProperty(String id, String property) {
-
-		try {
-			JSONObject levelDesc = mLevels.getJSONObject(id);
-			return levelDesc.getJSONArray(property);
-		} catch (JSONException e) {
-			//EventCollector.logException(e);
-		}
-		return null;
 	}
 
 	public static boolean isStatic(String id) {return getLevelProperty(id,"isStatic",false);}

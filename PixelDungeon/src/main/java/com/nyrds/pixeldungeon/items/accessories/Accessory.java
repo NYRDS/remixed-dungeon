@@ -20,131 +20,129 @@ import java.util.Map;
  */
 public class Accessory {
 
-	protected boolean coverHair;
-	protected int image = 0;
-	protected static String imageFile = "items/accessories.png";
+    protected boolean coverHair;
+    protected int image = 0;
 
-	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
-	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
+    protected static final String imageFile = "items/accessories.png";
 
-	static final private Map<String,Class<? extends Accessory>> allAccessoriesList = new HashMap<>();
+    protected final String name = getClassParam("Name", Game.getVar(R.string.Item_Name));
+    protected final String info = getClassParam("Info", Game.getVar(R.string.Item_Info));
 
-	private static void registerAccessory(Class<? extends Accessory> Clazz) {
-		allAccessoriesList.put(Clazz.getSimpleName(), Clazz);
-	}
+    static final private Map<String, Class<? extends Accessory>> allAccessoriesList = new HashMap<>();
 
-	static {
-		registerAccessory(Fez.class);
-		registerAccessory(Pumpkin.class);
-		registerAccessory(Capotain.class);
-		registerAccessory(Bowknot.class);
-		registerAccessory(Nightcap.class);
-		registerAccessory(RabbitEars.class);
-		registerAccessory(WizardHat.class);
-		registerAccessory(Shades.class);
-		registerAccessory(NekoEars.class);
-		registerAccessory(PirateSet.class);
-		registerAccessory(ZombieMask.class);
-		registerAccessory(VampireSkull.class);
-		registerAccessory(Ushanka.class);
-		registerAccessory(SantaHat.class);
-		registerAccessory(Rudolph.class);
-		registerAccessory(GnollCostume.class);
-		registerAccessory(ChaosHelmet.class);
-	}
+    private static void registerAccessory(Class<? extends Accessory> Clazz) {
+        allAccessoriesList.put(Clazz.getSimpleName(), Clazz);
+    }
 
-	public static List<String> getAccessoriesList() {
-		return new ArrayList<>(allAccessoriesList.keySet());
-	}
+    static {
+        registerAccessory(Fez.class);
+        registerAccessory(Pumpkin.class);
+        registerAccessory(Capotain.class);
+        registerAccessory(Bowknot.class);
+        registerAccessory(Nightcap.class);
+        registerAccessory(RabbitEars.class);
+        registerAccessory(WizardHat.class);
+        registerAccessory(Shades.class);
+        registerAccessory(NekoEars.class);
+        registerAccessory(PirateSet.class);
+        registerAccessory(ZombieMask.class);
+        registerAccessory(VampireSkull.class);
+        registerAccessory(Ushanka.class);
+        registerAccessory(SantaHat.class);
+        registerAccessory(Rudolph.class);
+        registerAccessory(GnollCostume.class);
+        registerAccessory(ChaosHelmet.class);
+    }
 
-	public String getLayerFile() {
-		return "hero/accessories/"+ getClass().getSimpleName() + ".png";
-	}
+    public static List<String> getAccessoriesList() {
+        return new ArrayList<>(allAccessoriesList.keySet());
+    }
 
-    Accessory (){
-		//imageFile = "items/accessories.png";
+    public String getLayerFile() {
+        return "hero/accessories/" + getClass().getSimpleName() + ".png";
+    }
+
+    Accessory() {
         coverHair = false;
     }
 
-	public boolean isCoveringHair() {
-		return coverHair;
-	}
+    public boolean isCoveringHair() {
+        return coverHair;
+    }
 
-	public static Accessory getByName(String name) {
-		try {
-			return allAccessoriesList.get(name).newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
-	}
+    public static Accessory getByName(String name) {
+        try {
+            return allAccessoriesList.get(name).newInstance();
+        } catch (Exception e) {
+            throw new TrackedRuntimeException(e);
+        }
+    }
 
-	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
-	}
+    private String getClassParam(String paramName, String defaultValue) {
+        return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, false);
+    }
 
-	public Image getImage() {
-		return new Image(imageFile, image*28, 0, 28,28);
-	}
+    public Image getImage() {
+        return new Image(imageFile, image * 28, 0, 28, 28);
+    }
 
-	public static Image getSlotImage() {
-		return new Image(imageFile, 0, 0, 28,28);
-	}
+    public static Image getSlotImage() {
+        return new Image(imageFile, 0, 0, 28, 28);
+    }
 
-	public String desc() {
-		return info;
-	}
-	public String name() {
-		return name;
-	}
+    public String desc() {
+        return info;
+    }
 
-	private String prefProperty() {
-		return "Accessory"+getClass().getSimpleName();
-	}
+    public String name() {
+        return name;
+    }
 
-	static public void check() {
-		for(String item:allAccessoriesList.keySet()) {
-			if(Iap.checkPurchase(item)) {
-				getByName(item).ownIt(true);
-			}   else {
-				getByName(item).ownIt(false);
-			}
-		}
-	}
+    private String prefProperty() {
+        return "Accessory" + getClass().getSimpleName();
+    }
 
-	public boolean haveIt() {
-		if (PixelDungeon.donated() == 4){
-			return true;
-		}
-		return Preferences.INSTANCE.getString(prefProperty(),"").equals(getClass().getSimpleName());
-	}
+    static public void check() {
+        for (String item : allAccessoriesList.keySet()) {
+            if (Iap.checkPurchase(item)) {
+                getByName(item).ownIt(true);
+            } else {
+                getByName(item).ownIt(false);
+            }
+        }
+    }
 
-	public void ownIt(boolean reallyOwn) {
-		if(reallyOwn) {
-			Preferences.INSTANCE.put(prefProperty(), getClass().getSimpleName());
-		} else {
-			Preferences.INSTANCE.put(prefProperty(), "");
-		}
-	}
+    public boolean haveIt() {
+        return PixelDungeon.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), "").equals(getClass().getSimpleName());
+    }
 
-	public void equip (){
-		if(!haveIt()) {
-			return;
-		}
+    public void ownIt(boolean reallyOwn) {
+        if (reallyOwn) {
+            Preferences.INSTANCE.put(prefProperty(), getClass().getSimpleName());
+        } else {
+            Preferences.INSTANCE.put(prefProperty(), "");
+        }
+    }
 
-		Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());
-	}
+    public void equip() {
+        if (!haveIt()) {
+            return;
+        }
 
-	public static void unequip (){
-		Preferences.INSTANCE.put(Accessory.class.getSimpleName(), "");
-		Dungeon.hero.updateLook();
-	}
+        Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());
+    }
 
-	static public Accessory equipped() {
-		String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(),"");
-		if(!itemName.equals("")) {
-			return getByName(itemName);
-		}
+    public static void unequip() {
+        Preferences.INSTANCE.put(Accessory.class.getSimpleName(), "");
+        Dungeon.hero.updateLook();
+    }
 
-		return null;
-	}
+    static public Accessory equipped() {
+        String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(), "");
+        if (!itemName.equals("")) {
+            return getByName(itemName);
+        }
+
+        return null;
+    }
 }
