@@ -1722,6 +1722,9 @@ public abstract class Level implements Bundlable {
 		return defVal;
 	}
 
+	public String getTilesetForLayer(LayerId layerId) {
+		return getProperty("tiles_"+layerId.name().toLowerCase(), getTilesTex());
+	}
 
 	public Mob[] getCopyOfMobsArray() {
 		return mobs.toArray(new Mob[mobs.size()]);
