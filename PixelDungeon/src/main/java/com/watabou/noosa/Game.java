@@ -402,10 +402,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		GLES20.glEnable(GL10.GL_SCISSOR_TEST);
 
-		paused = false;
+
 
 		SystemText.invalidate();
 		TextureCache.reload();
+
+		paused = false;
 
 		if(scene!=null) {
 			scene.resume();
