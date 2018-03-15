@@ -35,9 +35,9 @@ public class Tilemap extends Visual {
 	protected int[] data;
 	protected int   mapWidth;
 	protected int   size;
-	
-	protected float cellW;
-	protected float cellH;
+
+	private float cellW;
+	private float cellH;
 
 	protected float[]     vertices;
 	protected FloatBuffer quads;

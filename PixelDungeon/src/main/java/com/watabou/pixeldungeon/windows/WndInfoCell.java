@@ -54,7 +54,6 @@ public class WndInfoCell extends Window {
 			water.frame( 0, 0, DungeonTilemap.SIZE, DungeonTilemap.SIZE );
 			titlebar.icon( water );
 		} else {
-			//TODO get here cell image
 			titlebar.icon(GameScene.getTile( cell ) );
 		}
 

@@ -178,7 +178,6 @@ public class GameScene extends PixelScene {
         ripples = new Group();
         terrain.add(ripples);
 
-
         String logicTilesAtlas = level.getProperty("tiles_logic", null);
 
         if(logicTilesAtlas != null) {
