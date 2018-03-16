@@ -88,12 +88,12 @@ dependencies {
     googlePlayImplementation 'com.android.support:support-v4:27.0.2'
     googlePlayImplementation project(':adcolony-sdk-3.1.2')
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:10.2.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-base:10.2.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-analytics:10.2.1'
-    googlePlayImplementation "com.google.android.gms:play-services-games:10.2.1"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:11.8.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:11.8.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-analytics:11.8.0'
+    googlePlayImplementation "com.google.android.gms:play-services-games:11.8.0"
     googlePlayImplementation fileTree(dir: 'lib', include: '*.jar')
-    googlePlayImplementation 'com.android.support:multidex:1.0.2'
+    googlePlayImplementation 'com.android.support:multidex:1.0.3'
     implementation project(':annotation')
     annotationProcessor project(':processor')
 }

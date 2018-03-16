@@ -28,9 +28,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
     private FloatBuffer mask;
     private float maskData[];
 
-    public CustomLayerTilemap(Level level, String tiles, int[] map) {
-        super(level, tiles);
-        map(map, level.getWidth());
+    public CustomLayerTilemap(Level level, Level.LayerId layerId) {
+        super(level, level.getTilesetForLayer(layerId));
+        map(level.getTileLayer(layerId), level.getWidth());
 
         mask = ByteBuffer.
                 allocateDirect( size * 8 * Float.SIZE / 8 ).
@@ -40,8 +40,8 @@ public class CustomLayerTilemap extends DungeonTilemap {
         maskData = new float[size * 8];
     }
 
-    public void addLayer(String tiles, int[] map) {
-        mLayers.add(new CustomLayerTilemap(level, tiles, map));
+    public void addLayer(Level.LayerId layerId) {
+        mLayers.add(new CustomLayerTilemap(level, layerId));
     }
 
     public void setAlpha(int layer, float alpha) {
@@ -173,8 +173,6 @@ public class CustomLayerTilemap extends DungeonTilemap {
             script.drawQuadSet(quads, mask, size);
 
             for (CustomLayerTilemap layer : mLayers) {
-                //layer.updateVertices();
-                //script.drawQuadSet(layer.quads, mask, size);
                 layer.draw();
             }
         } else {
