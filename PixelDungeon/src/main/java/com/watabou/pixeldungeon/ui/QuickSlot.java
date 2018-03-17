@@ -216,7 +216,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	}
 
 	public static void refresh() {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				for (QuickSlot slot : slots) {

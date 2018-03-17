@@ -107,7 +107,7 @@ class WndPlayGames extends Window {
         }
         @Override
         public void status(final boolean status) {
-            Game.executeInGlThread(new Runnable() {
+            Game.pushUiTask(new Runnable() {
                                        @Override
                                        public void run() {
                                            working.hide();

@@ -143,7 +143,7 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 
 	@Override
 	public void DownloadProgress(String file, final Integer percent) {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 
 			@Override
 			public void run() {
@@ -151,16 +151,15 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 					downloadProgress = new WndMessage("");
 					Game.scene().add(downloadProgress);
 				}
-				if (!Game.isPaused()) {
-					downloadProgress.setText(Utils.format("Downloading %s %d%%", selectedMod, percent));
-				}
+
+				downloadProgress.setText(Utils.format("Downloading %s %d%%", selectedMod, percent));
 			}
 		});
 	}
 
 	@Override
 	public void DownloadComplete(String url, final Boolean result) {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				if (downloadProgress != null) {
@@ -182,7 +181,7 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 
 	@Override
 	public void UnzipComplete(final Boolean result) {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 
 			@Override
 			public void run() {

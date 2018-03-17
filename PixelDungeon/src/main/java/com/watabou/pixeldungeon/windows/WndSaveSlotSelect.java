@@ -63,7 +63,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 					Game.instance().playGames.loadSnapshots(new Runnable() {
 						@Override
 						public void run() {
-							Game.executeInGlThread(new Runnable() {
+							Game.pushUiTask(new Runnable() {
 								@Override
 								public void run() {
 									refreshing.hide();
@@ -291,7 +291,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 	@Override
 	public void returnToWork(boolean res) {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				Game.paused = false;

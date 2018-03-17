@@ -64,6 +64,7 @@ import com.watabou.utils.SystemTime;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -114,6 +115,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public Executor executor = Executors.newSingleThreadExecutor();
 
 	private Runnable doOnResume;
+
+	private ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
 	public Game(Class<? extends Scene> c) {
 		super();
@@ -246,8 +249,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		view = new GLSurfaceView(this);
 		view.setEGLContextClientVersion(2);
-		//view.setEGLConfigChooser(8,8,8,8,0,0);
-
 
 		// Hope this allow game work on broader devices list
 		// view.setEGLConfigChooser( false );
@@ -287,7 +288,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		paused = true;
 
 		if (scene != null) {
-			executeInGlThread(new Runnable() {
+			pushUiTask(new Runnable() {
 				@Override
 				public void run() {
 					scene.pause();
@@ -371,6 +372,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		long rightNow = SystemTime.now();
 		step = (now == 0 ? 0 : rightNow - now);
 		now = rightNow;
+
+		Runnable task;
+		while ((task = uiTasks.poll())!=null) {
+			task.run();
+		}
 
 		step();
 
@@ -588,9 +594,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	static Window currentWindow;
 
+
+	static public void pushUiTask(Runnable task) {
+		instance().uiTasks.add(task);
+	}
+
 	public static void showWindow(final String msg) {
 		hideWindow();
-		Game.executeInGlThread(new Runnable() {
+		pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				currentWindow = new WndMessage(msg);
@@ -600,7 +611,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public static void hideWindow() {
-		Game.executeInGlThread(new Runnable() {
+		pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				if(currentWindow!=null) {

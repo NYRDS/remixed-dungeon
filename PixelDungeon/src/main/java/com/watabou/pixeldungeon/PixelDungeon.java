@@ -438,7 +438,7 @@ public class PixelDungeon extends Game {
 		}
 		
 		if (donated() == 0 && level != 0) {
-			executeInGlThread(new Runnable() {
+			pushUiTask(new Runnable() {
 				
 				@Override
 				public void run() {

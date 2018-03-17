@@ -265,7 +265,7 @@ public class Iap {
                                     PixelDungeon.setDonationLevel(4);
                                 }
                             } else {
-                                Game.executeInGlThread(new Runnable() {
+                                Game.pushUiTask(new Runnable() {
                                     @Override
                                     public void run() {
                                         mIapCallback.onPurchaseOk();

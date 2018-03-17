@@ -97,7 +97,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 	@Override
 	public void returnToWork(final boolean result) {
 		final Group parent = getParent();
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				if (result) {
@@ -122,7 +122,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 
 	@Override
 	public void DownloadProgress(String file, final Integer percent) {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 
 			@Override
 			public void run() {
@@ -130,16 +130,15 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					downloadProgress = new WndMessage("");
 					Game.scene().add(downloadProgress);
 				}
-				if(!Game.isPaused()) {
-					downloadProgress.setText(Utils.format("Downloading  %d%%", percent));
-				}
+
+				downloadProgress.setText(Utils.format("Downloading  %d%%", percent));
 			}
 		});
 	}
 
 	@Override
 	public void DownloadComplete(String file, final Boolean result) {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				if (downloadProgress != null) {
@@ -147,12 +146,10 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					downloadProgress = null;
 				}
 
-				if(!Game.isPaused()) {
-					Game.scene().add(new WndModSelect());
+				Game.scene().add(new WndModSelect());
 
-					if (!result) {
-						Game.toast("Mod list download failed :(");
-					}
+				if (!result) {
+					Game.toast("Mod list download failed :(");
 				}
 			}
 		});

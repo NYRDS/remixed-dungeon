@@ -90,7 +90,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 	@Override
 	public void returnToWork(final boolean result) {
-		PixelDungeon.executeInGlThread(new Runnable() {
+		PixelDungeon.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 
