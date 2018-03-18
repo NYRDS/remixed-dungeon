@@ -30,5 +30,11 @@
  "tiles_roof_base":"tiles_town_inside.png",
  "tiles_roof_deco":"tiles_town_inside.png",
  "water":"water0.png",
- "width":18
+ "width":18,
+ "objects" : [
+  {"kind":"LibraryBook","x":12,"y":2},
+  {"kind":"LibraryBook","x":7,"y":2},
+  {"kind":"LibraryBook","x":4,"y":13},
+  {"kind":"LibraryBook","x":2,"y":2}
+ ]
 }
