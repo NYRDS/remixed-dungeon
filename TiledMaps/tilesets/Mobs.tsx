@@ -66,4 +66,59 @@
    <property name="kind" value="SociologistNPC"/>
   </properties>
  </tile>
+ <tile id="201">
+  <properties>
+   <property name="kind" value="ServiceManNPC"/>
+  </properties>
+ </tile>
+ <tile id="208">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="209">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="210">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="211">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="212">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="213">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="214">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="215">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="216">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
+ <tile id="217">
+  <properties>
+   <property name="kind" value="LibrarianNPC"/>
+  </properties>
+ </tile>
 </tileset>
