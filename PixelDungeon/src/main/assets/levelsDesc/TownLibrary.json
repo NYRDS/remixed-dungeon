@@ -32,9 +32,7 @@
  "water":"water0.png",
  "width":18,
  "objects" : [
-  {"kind":"LibraryBook","x":12,"y":2},
-  {"kind":"LibraryBook","x":7,"y":2},
-  {"kind":"LibraryBook","x":4,"y":13},
-  {"kind":"LibraryBook","x":2,"y":2}
+  {"kind":"LibraryBook","x":10,"y":2},
+  {"kind":"LibraryBook","x":6,"y":2}
  ]
 }
