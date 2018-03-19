@@ -104,6 +104,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	private LinearLayout  layout;
 
 	public static volatile boolean paused = true;
+
+	public static volatile boolean softPaused = false;
+
 	protected static int difficulty;
 
 	// Accumulated touch events
@@ -364,7 +367,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		}
 
 		if(paused) {
-			GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 			return;
 		}
 
@@ -378,7 +380,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			task.run();
 		}
 
-		step();
+		if(!softPaused) {
+			step();
+		}
 
 		NoosaScript.get().resetCamera();
 

@@ -83,7 +83,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 	private void showAd() {
 		hide();
 
-		Game.paused = true;
+		Game.softPaused = true;
 		Ads.removeEasyModeBanner();
 		RewardVideo.showCinemaRewardVideo(this);
 	}

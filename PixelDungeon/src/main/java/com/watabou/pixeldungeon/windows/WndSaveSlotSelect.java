@@ -270,7 +270,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 			}
 		}
 
-		Game.paused = true;
+		Game.softPaused = true;
 
 		slot = getSlotToLoad(index);
 
@@ -291,10 +291,11 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 	@Override
 	public void returnToWork(boolean res) {
+		Game.softPaused = false;
+
 		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
-				Game.paused = false;
 
 				if (!saving) {
 					SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
