@@ -60,9 +60,12 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
         for (CustomLayerTilemap layer : mLayers) {
             if (layer.data[pos] >= 0) {
-                Image img = new Image(getTexture());
-                img.frame(getTileset().get(layer.data[pos]));
-                imgs.add(img);
+                int cellType = layer.data[pos];
+                if (cellType>=0) {
+                    Image img = new Image(getTexture());
+                    img.frame(getTileset().get(cellType));
+                    imgs.add(img);
+                }
             }
         }
         if (!imgs.isEmpty()) {
