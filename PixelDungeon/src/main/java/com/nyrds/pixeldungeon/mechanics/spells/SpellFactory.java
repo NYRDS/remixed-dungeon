@@ -62,7 +62,7 @@ public class SpellFactory {
 		try {
 			Class<? extends Spell> spellClass =  mSpellsList.get(name);
 			if (spellClass == null) {
-				EventCollector.logEvent("bug", Utils.format("Unknown spell: [%s], getting Magic Torch instead"), name);
+				EventCollector.logEvent("bug", Utils.format("Unknown spell: [%s], getting Magic Torch instead",name));
 				spellClass =  mSpellsList.get("MagicTorch");
 			}
 			return spellClass.newInstance();
