@@ -7,6 +7,9 @@
 
 local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
+local Sample = luajava.bindClass("com.watabou.noosa.audio.Sample")
+local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
+
 local Buffs  = {
     Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),
     Roots        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Roots"),
@@ -46,7 +49,8 @@ local RPD = {
         Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
         FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
         SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
-        Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck")
+        Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck"),
+        ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle")
     },
 
     Objects = {
@@ -77,6 +81,14 @@ local RPD = {
 
     placeBlob = function (blobClass, cell, amount)
         RPD.GameScene:add( RPD.Blobs.Blob:seed(cell, amount, blobClass ) )
+    end,
+
+    playSound = function(sound)
+        Sample.INSTANCE:play(sound)
+    end,
+
+    textById = function(id)
+        return StringsManager:getVar(id)
     end,
 
     glog = function (text,...)
