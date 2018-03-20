@@ -26,15 +26,15 @@ public class CustomLayerTilemap extends DungeonTilemap {
     private boolean                       transparent = false;
 
     private FloatBuffer mask;
-    private float maskData[];
+    private float       maskData[];
 
     public CustomLayerTilemap(Level level, Level.LayerId layerId) {
         super(level, level.getTilesetForLayer(layerId));
         map(level.getTileLayer(layerId), level.getWidth());
 
         mask = ByteBuffer.
-                allocateDirect( size * 8 * Float.SIZE / 8 ).
-                order( ByteOrder.nativeOrder() ).
+                allocateDirect(size * 8 * Float.SIZE / 8).
+                order(ByteOrder.nativeOrder()).
                 asFloatBuffer();
 
         maskData = new float[size * 8];
@@ -42,10 +42,6 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
     public void addLayer(Level.LayerId layerId) {
         mLayers.add(new CustomLayerTilemap(level, layerId));
-    }
-
-    public void setAlpha(int layer, float alpha) {
-        mLayers.get(layer).alpha(alpha);
     }
 
     @Override
@@ -60,17 +56,17 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
         for (CustomLayerTilemap layer : mLayers) {
             if (layer.data[pos] >= 0) {
-                int cellType = layer.data[pos];
-                if (cellType>=0) {
-                    Image img = new Image(getTexture());
-                    img.frame(getTileset().get(cellType));
-                    imgs.add(img);
-                }
+                Image img = new Image(layer.getTexture());
+                img.frame(layer.getTileset().get(data[pos]));
+                imgs.add(img);
             }
         }
-        if (!imgs.isEmpty()) {
+
+        if (!imgs.isEmpty())
+        {
             return new CompositeImage(imgs);
         }
+
         return null;
     }
 
@@ -116,26 +112,26 @@ public class CustomLayerTilemap extends DungeonTilemap {
         float hx = hpos.x;
         float hy = hpos.y;
 
-        Arrays.fill(maskData,0);
+        Arrays.fill(maskData, 0);
 
         mask.position(0);
 
-        for (int i=0; i < level.getHeight(); i++) {
-            for (int j=0; j < level.getWidth(); j++) {
+        for (int i = 0; i < level.getHeight(); i++) {
+            for (int j = 0; j < level.getWidth(); j++) {
 
                 int p = (i * level.getWidth() + j) * 8;
 
-                maskData[p+0] = getTCoord(hx, j - 0.5f);
-                maskData[p+1] = getTCoord(hy, i - 0.5f);
+                maskData[p + 0] = getTCoord(hx, j - 0.5f);
+                maskData[p + 1] = getTCoord(hy, i - 0.5f);
 
-                maskData[p+2] = getTCoord(hx, j + 0.5f);
-                maskData[p+3] = getTCoord(hy, i - 0.5f);
+                maskData[p + 2] = getTCoord(hx, j + 0.5f);
+                maskData[p + 3] = getTCoord(hy, i - 0.5f);
 
-                maskData[p+4] = getTCoord(hx, j + 0.5f);
-                maskData[p+5] = getTCoord(hy, i + 0.5f);
+                maskData[p + 4] = getTCoord(hx, j + 0.5f);
+                maskData[p + 5] = getTCoord(hy, i + 0.5f);
 
-                maskData[p+6] = getTCoord(hx, j - 0.5f);
-                maskData[p+7] = getTCoord(hy, i + 0.5f);
+                maskData[p + 6] = getTCoord(hx, j - 0.5f);
+                maskData[p + 7] = getTCoord(hy, i + 0.5f);
             }
         }
 
@@ -143,9 +139,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
     }
 
     private float getTCoord(float h, float i) {
-        float d = (h - i)  /  (1f) ;
+        float d = (h - i) / (1f);
 
-        d = Math.max(-2,Math.min(2,d));
+        d = Math.max(-2, Math.min(2, d));
         d = (d + 1) * 0.5f;
         return d;
     }

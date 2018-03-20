@@ -18,6 +18,7 @@
 package com.watabou.noosa;
 
 import android.graphics.RectF;
+import android.support.annotation.Nullable;
 import android.util.SparseArray;
 
 import com.watabou.gltextures.SmartTexture;
@@ -69,7 +70,8 @@ public class TextureFilm {
 	public void add( int id, RectF rect ) {
 		frames.put( id, rect );
 	}
-	
+
+	@Nullable
 	public RectF get( int id ) {
 		return frames.get( id );
 	}
