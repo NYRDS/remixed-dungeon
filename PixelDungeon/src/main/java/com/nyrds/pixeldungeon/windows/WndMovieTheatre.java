@@ -93,7 +93,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		PixelDungeon.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
-
+				Game.softPaused = false;
 				Dungeon.hero.doOnNextAction = new Runnable() {
 					@Override
 					public void run() {
