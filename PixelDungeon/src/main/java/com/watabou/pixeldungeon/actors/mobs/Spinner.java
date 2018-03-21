@@ -28,14 +28,11 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.SpinnerSprite;
 import com.watabou.utils.Random;
 
 public class Spinner extends Mob {
 	
 	public Spinner() {
-		spriteClass = SpinnerSprite.class;
-		
 		hp(ht(50));
 		defenseSkill = 14;
 		
