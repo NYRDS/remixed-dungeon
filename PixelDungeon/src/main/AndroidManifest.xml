@@ -29,7 +29,7 @@
         android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
 
         <meta-data android:name="com.google.android.gms.games.APP_ID"
-                   android:value="@string/app_id" />
+                   android:value="@string/app_id"/>
 
         <activity
             android:name="com.watabou.pixeldungeon.PixelDungeon"
@@ -42,6 +42,19 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!-- Used for Google Play Store Campaign Measurement-->
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+                  android:enabled="true"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"
+                 android:enabled="true"
+                 android:exported="false"/>
+
 
     </application>
 
