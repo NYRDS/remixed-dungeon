@@ -12,8 +12,8 @@ import com.watabou.utils.Random;
 
 public class RunicSkull extends MultiKindMob {
 
-	protected boolean activated = false;
-	private boolean zapping     = false;
+	private boolean activated = false;
+	private boolean zapping   = false;
 
 	protected static final int RED_SKULL	 = 0;
 	protected static final int BLUE_SKULL	 = 1;
@@ -58,7 +58,7 @@ public class RunicSkull extends MultiKindMob {
 	{
 		if (activated){
 			if (!zapping) {
-				PlayZap();
+				getSprite().zap(getPos(), null);
 				zapping = true;
 			}
 		} else{
@@ -84,13 +84,7 @@ public class RunicSkull extends MultiKindMob {
 	}
 
 	@Override
-	public void onZapComplete() {
-		PlayZap();
-	}
-
-	public void PlayZap() {
-		getSprite().zap(getPos(), null);
-	}
+	public void onZapComplete() {}
 
 	@Override
 	public boolean canBePet(){
