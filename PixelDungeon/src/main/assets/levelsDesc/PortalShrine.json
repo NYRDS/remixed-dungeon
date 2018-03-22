@@ -31,5 +31,8 @@
  "tiles_mobs":"Mobs.png",
  "tiles_roof_deco":"tiles_town_outside_wntr.png",
  "water":"water0.png",
- "width":24
+ "width":24,
+ "objects" : [
+  {"kind":"PortalGateReceiver","x":17,"y":7}
+ ]
 }
