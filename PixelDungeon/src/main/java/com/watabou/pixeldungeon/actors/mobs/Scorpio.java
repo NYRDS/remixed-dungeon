@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
@@ -37,7 +38,6 @@ public class Scorpio extends Mob implements IZapper {
 
 		hp(ht(95));
 		defenseSkill = 24;
-		viewDistance = Dungeon.level.getViewDistance() + 1;
 		
 		exp = 14;
 		maxLvl = 25;
@@ -55,7 +55,13 @@ public class Scorpio extends Mob implements IZapper {
 		RESISTANCES.add( Leech.class );
 		RESISTANCES.add( Poison.class );
 	}
-	
+
+	@Override
+	public void onSpawn(Level level) {
+		super.onSpawn(level);
+		viewDistance = level.getViewDistance() + 1;
+	}
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 20, 32 );
