@@ -26,8 +26,8 @@
 
     <string name="town_deco_library_sign_name">Library sign</string>
     <string name="town_deco_library_sign_desc">Seems like there is a library inside that building.</string>
-    <string name="town_deco_identifier_sign_name">Identifier sign</string>
-    <string name="town_deco_identifier_sign_desc">Seems like there is a identifier inside that building.</string>
+    <string name="town_deco_identifier_sign_name">Forecaster sign</string>
+    <string name="town_deco_identifier_sign_desc">Seems like there is a forecaster inside that building.</string>
     <string name="town_deco_cinema_sign_name">Cinema sign</string>
     <string name="town_deco_cinema_sign_desc">Seems like there is a cinema inside that building.</string>
     <string name="town_deco_INN_sign_name">INN sign</string>
