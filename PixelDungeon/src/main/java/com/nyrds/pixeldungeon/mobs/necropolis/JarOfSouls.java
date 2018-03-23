@@ -46,7 +46,7 @@ public class JarOfSouls extends UndeadMob {
 	}
 
 	private void spawnUndead(){
-		PlayZap();
+		getSprite().zap(getEnemy().getPos(), null);
 
 		Mob newMob = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
 
@@ -78,10 +78,6 @@ public class JarOfSouls extends UndeadMob {
 	@Override
 	public boolean canBePet() {
 		return false;
-	}
-
-	private void PlayZap() {
-		getSprite().zap(getEnemy().getPos(), null);
 	}
 
 	@Override
