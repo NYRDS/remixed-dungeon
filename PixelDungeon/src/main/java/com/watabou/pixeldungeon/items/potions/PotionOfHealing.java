@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -31,6 +31,8 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.HealthArrow;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfHealing extends Potion {
@@ -76,6 +78,13 @@ public class PotionOfHealing extends Potion {
 		if(ch != null) {
 			heal(ch, 0.5f);
 		}
-		
+	}
+
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		int quantity = reallyMoistArrows(arrow);
+
+		HealthArrow moistenArrows = new HealthArrow(quantity);
+		getCurUser().collect(moistenArrows);
 	}
 }
