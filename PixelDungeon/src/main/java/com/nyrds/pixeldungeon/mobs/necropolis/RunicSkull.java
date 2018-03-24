@@ -1,6 +1,9 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -84,7 +87,9 @@ public class RunicSkull extends MultiKindMob {
 	}
 
 	@Override
-	public void onZapComplete() {}
+	public boolean zap(@NonNull Char enemy){
+		return false;
+	}
 
 	@Override
 	public boolean canBePet(){

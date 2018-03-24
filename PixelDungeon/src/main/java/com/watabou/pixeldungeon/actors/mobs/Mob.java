@@ -458,13 +458,13 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void onAttackComplete() {
+	public final void onAttackComplete() {
 		attack(getEnemy());
 		super.onAttackComplete();
 	}
 
 	@Override
-	public void onZapComplete() {
+	public final void onZapComplete() {
 		zap(getEnemy());
 		super.onZapComplete();
 	}

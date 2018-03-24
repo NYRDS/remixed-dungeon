@@ -592,7 +592,7 @@ public abstract class Char extends Actor implements Presser{
 		next();
 	}
 
-	public void onZapComplete() {
+	public  void onZapComplete() {
 		next();
 	}
 
