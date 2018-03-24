@@ -44,7 +44,7 @@ public class PotionOfHealing extends Potion {
 	
 	public static void heal( Char ch, float portion ) {
 
-		ch.hp((int) Math.min(ch.ht(),ch.hp()+ch.ht()*portion));
+		ch.hp((int) Math.min(ch.ht(),ch.hp()+Math.max(ch.ht()*portion,1)));
 		Buff.detach( ch, Poison.class );
 		Buff.detach( ch, Cripple.class );
 		Buff.detach( ch, Weakness.class );

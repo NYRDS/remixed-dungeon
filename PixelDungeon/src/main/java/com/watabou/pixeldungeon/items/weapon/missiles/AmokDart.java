@@ -17,36 +17,45 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
-public class Dart extends MissileWeapon {
+public class AmokDart extends Dart {
 
-	{
-		image = 1;
-		imageFile = "items/ammo.png";
-
-		MIN = 1;
-		MAX = 4;
-	}
-	
-	public Dart() {
+	public AmokDart() {
 		this( 1 );
 	}
-	
-	public Dart( int number ) {
+
+	public AmokDart(int number ) {
 		super();
+
+		image = 16;
+		
+		STR = 14;
+		
+		MIN = 1;
+		MAX = 3;
+		
 		quantity(number);
+	}
+	
+	@Override
+	public void proc( Char attacker, Char defender, int damage ) {
+		Buff.affect(defender, Amok.class,20);
+		super.proc( attacker, defender, damage );
 	}
 
 	@Override
 	public Item random() {
-		quantity(Random.Int( 5, 15 ));
+		quantity(Random.Int( 2, 5 ));
 		return this;
 	}
 	
 	@Override
 	public int price() {
-		return quantity() * 2;
+		return 12 * quantity();
 	}
 }
