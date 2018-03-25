@@ -110,6 +110,10 @@ public class CustomLayerTilemap extends DungeonTilemap {
     protected void updateVertices() {
         super.updateVertices();
 
+        if(Dungeon.hero == null) {
+            return;
+        }
+
         PointF hpos = Dungeon.hero.getHeroSprite().worldCoords();
         float hx = hpos.x;
         float hy = hpos.y;
