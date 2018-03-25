@@ -110,6 +110,7 @@ public class CustomLayerTilemap extends DungeonTilemap {
     protected void updateVertices() {
         super.updateVertices();
 
+        //FIXME
         if(Dungeon.hero == null) {
             return;
         }

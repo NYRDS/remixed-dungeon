@@ -38,13 +38,13 @@
     <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">This dart tip covered in healing potion.</string>
 
-    <string name="AmokDart_Name">Amok Dart</string>
-    <string name="AmokDart_Gender">masculine</string>
-    <string name="AmokDart_Info">Solution on tip of this dart will turn anyone in mindless merciless berserk.</string>
-
     <string name="HealthArrow_Name">Healing Arrow</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">This arrow tip covered in healing potion.</string>
+
+    <string name="AmokDart_Name">Amok Dart</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">Solution on tip of this dart will turn anyone in mindless merciless berserk.</string>
 
     <string name="AmokArrow_Name">Amok Arrow</string>
     <string name="AmokArrow_Gender">feminine</string>
