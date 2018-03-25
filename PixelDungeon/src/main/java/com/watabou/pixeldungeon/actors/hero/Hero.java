@@ -64,6 +64,7 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
@@ -210,6 +211,7 @@ public class Hero extends Char {
 	private int difficulty;
 
 	public Hero() {
+		readCharData();
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 
@@ -352,9 +354,8 @@ public class Hero extends Char {
 	}
 
 	private void live() {
-		if (buff(Hunger.class) == null) {
-			Buff.affect(this, Hunger.class);
-		}
+		Buff.affect(this, Regeneration.class);
+		Buff.affect(this, Hunger.class);
 	}
 
 	public int tier() {

@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -774,6 +775,7 @@ public abstract class Mob extends Char {
 	}
 
 	public void onSpawn(Level level) {
+		Buff.affect(this, Regeneration.class);
 		runMobScript("onSpawn",level);
 	}
 

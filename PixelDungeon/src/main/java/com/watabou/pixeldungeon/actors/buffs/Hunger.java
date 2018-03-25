@@ -191,12 +191,7 @@ public class Hunger extends Buff implements Hero.Doom {
 
 	@Override
 	public boolean attachTo( Char target ) {
-
-		if(target.buff(Hunger.class) != null) {
-			return false;
-		}
-
-		return super.attachTo(target);
+		return target.buff(Hunger.class) == null && super.attachTo(target);
 	}
 
 	@Override
