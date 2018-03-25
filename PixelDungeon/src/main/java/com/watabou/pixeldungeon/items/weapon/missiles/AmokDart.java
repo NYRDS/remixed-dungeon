@@ -48,7 +48,8 @@ public class AmokDart extends Dart {
 	public void proc( Char attacker, Char defender, int damage ) {
 		Buff.affect(defender, Amok.class,20);
 		Buff.affect(defender, Speed.class,20);
-		defender.add(new RageBuff());
+		Buff rage = new RageBuff();
+		rage.attachTo(defender);
 
 		super.proc( attacker, defender, damage );
 	}

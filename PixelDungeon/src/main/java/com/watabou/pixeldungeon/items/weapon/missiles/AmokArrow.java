@@ -32,7 +32,8 @@ public class AmokArrow extends Arrow {
 		if(activateSpecial(attacker, defender, damage)) {
 			Buff.affect(defender, Amok.class,20);
 			Buff.affect(defender, Speed.class,20);
-			defender.add(new RageBuff());
+			Buff rage = new RageBuff();
+			rage.attachTo(defender);
 		}
 		super.proc( attacker, defender, damage );
 	}
