@@ -64,7 +64,6 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
@@ -91,7 +90,6 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
@@ -354,9 +352,6 @@ public class Hero extends Char {
 	}
 
 	private void live() {
-		if (buff(Regeneration.class) == null) {
-			Buff.affect(this, Regeneration.class);
-		}
 		if (buff(Hunger.class) == null) {
 			Buff.affect(this, Hunger.class);
 		}
@@ -463,20 +458,16 @@ public class Hero extends Char {
 		return dr;
 	}
 
-	private boolean inFury() {
-		return (buff(Fury.class) != null) || (buff(CorpseDust.UndeadRageAuraBuff.class) != null);
-	}
-
 	@Override
 	public int damageRoll() {
 		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
-		int dmg;
+		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
+
 		if (wep != null) {
-			dmg = wep.damageRoll(this);
-		} else {
-			dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
+			dmg += wep.damageRoll(this);
 		}
-		return inFury() ? (int) (dmg * 1.5f) : dmg;
+
+		return dmg;
 	}
 
 	@Override

@@ -80,6 +80,11 @@ public class PixelDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.items.books.TomeOfKnowledge.class,
 				"com.nyrds.pixeldungeon.items.books.SpellBook");
+
+		com.watabou.utils.Bundle.addAlias(
+				com.nyrds.pixeldungeon.mechanics.buffs.RageBuff.class,
+			"com.watabou.pixeldungeon.items.quest.CorpseDust.UndeadRageAuraBuff"
+		);
 	}
 
 	@Override

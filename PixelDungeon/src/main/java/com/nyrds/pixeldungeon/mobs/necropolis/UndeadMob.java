@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
@@ -40,6 +41,11 @@ public class UndeadMob extends Mob {
 				damage(Random.NormalIntRange(1, ht() / 8), buff);
 			}
 		}
+
+		if(buff instanceof Regeneration) {
+			return;
+		}
+
 		super.add(buff);
 	}
 }

@@ -99,13 +99,6 @@ public class Artifact extends EquipableItem {
 		return null;
 	}
 
-	public class ArtifactBuff extends Buff {
-		@Override
-		public boolean dontPack() {
-			return true;
-		}
-	}
-
 	public String getText() {
 		return null;
 	}

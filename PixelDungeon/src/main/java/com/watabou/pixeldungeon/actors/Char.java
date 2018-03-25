@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
+import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
@@ -42,6 +43,7 @@ import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Shadows;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
@@ -55,6 +57,7 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
+import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
@@ -119,6 +122,10 @@ public abstract class Char extends Actor implements Presser{
 
 	public int respawnCell(Level level) {
 		return walkingType.respawnCell(level);
+	}
+
+	public Char() {
+		Buff.affect(this, Regeneration.class);
 	}
 
 	@Override
@@ -206,6 +213,11 @@ public abstract class Char extends Actor implements Presser{
 					Random.IntRange(0, enemy.dr());
 
 			int dmg = damageRoll();
+
+			if(inFury()) {
+				dmg *= 1.5f;
+			}
+
 			int effectiveDamage = Math.max(dmg - dr, 0);
 
 			effectiveDamage = attackProc(enemy, effectiveDamage);
@@ -291,6 +303,10 @@ public abstract class Char extends Actor implements Presser{
 
 	public int dr() {
 		return 0;
+	}
+
+	protected boolean inFury() {
+		return (buff(Fury.class) != null) || (buff(RageBuff.class) != null);
 	}
 
 	public int damageRoll() {

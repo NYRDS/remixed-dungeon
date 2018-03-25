@@ -20,9 +20,8 @@ package com.nyrds.pixeldungeon.items.common.rings;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.rings.Artifact;
-import com.watabou.pixeldungeon.items.rings.Ring;
+import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class RingOfFrost extends Artifact {

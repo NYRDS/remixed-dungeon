@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -32,8 +31,6 @@ public class SpiderQueen extends Boss {
 			loot = new SpiderArmor();
 		}
 		lootChance = 1f;
-		
-		Buff.affect(this, Regeneration.class);
 	}
 	
 	@Override

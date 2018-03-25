@@ -26,7 +26,9 @@ public class HealthArrow extends Arrow {
 
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
-		PotionOfHealing.heal(defender, 0.15f);
+		if(activateSpecial(attacker, defender, damage)) {
+			PotionOfHealing.heal(defender, 0.15f);
+		}
 
 		super.proc( attacker, defender, damage );
 	}
