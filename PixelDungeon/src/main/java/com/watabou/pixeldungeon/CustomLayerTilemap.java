@@ -41,7 +41,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
     }
 
     public void addLayer(Level.LayerId layerId) {
-        mLayers.add(new CustomLayerTilemap(level, layerId));
+        if(level.hasTilesetForLayer(layerId)) {
+            mLayers.add(new CustomLayerTilemap(level, layerId));
+        }
     }
 
     @Override
