@@ -609,8 +609,8 @@
  </tile>
  <tile id="115">
   <properties>
-   <property name="deco_desc" value="town_deco_wooden_chair_desc"/>
-   <property name="deco_name" value="town_deco_wooden_chair_name"/>
+   <property name="deco_desc" value="town_deco_purple_covered_table_desc"/>
+   <property name="deco_name" value="town_deco_purple_covered_table_name"/>
   </properties>
  </tile>
  <tile id="116">
@@ -621,8 +621,8 @@
  </tile>
  <tile id="117">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_magic_ball_desc"/>
+   <property name="deco_name" value="town_deco_magic_ball_name"/>
   </properties>
  </tile>
  <tile id="118">
