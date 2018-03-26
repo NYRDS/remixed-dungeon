@@ -15,7 +15,7 @@
     <string name="Str_lose">-1 str</string>
 
     <string name="SociologistNPC_Name">Sociologist</string>
-    <string name="SociologistNPC_Gender">feminine</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name_Objective">Sociologist</string>
     <string name="SociologistNPC_Desc">This is sociologist in a holy quest of collecting public opinion</string>
 
@@ -26,11 +26,29 @@
 
     <string name="town_deco_library_sign_name">Library sign</string>
     <string name="town_deco_library_sign_desc">Seems like there is a library inside that building.</string>
-    <string name="town_deco_identifier_sign_name">Forecaster sign</string>
-    <string name="town_deco_identifier_sign_desc">Seems like there is a forecaster inside that building.</string>
+    <string name="town_deco_identifier_sign_name">Magic Ball sign</string>
+    <string name="town_deco_identifier_sign_desc">Seems like there is a fortune teller inside that building.</string>
     <string name="town_deco_cinema_sign_name">Cinema sign</string>
     <string name="town_deco_cinema_sign_desc">Seems like there is a cinema inside that building.</string>
-    <string name="town_deco_INN_sign_name">INN sign</string>
-    <string name="town_deco_INN_sign_desc">Seems like there is an INN inside that building.</string>
+    <string name="town_deco_INN_sign_name">Inn sign</string>
+    <string name="town_deco_INN_sign_desc">Seems like there is an inn inside that building.</string>
+
+
+    <string name="HealthDart_Name">Healing Dart</string>
+    <string name="HealthDart_Gender">masculine</string>
+    <string name="HealthDart_Info">This dart tip covered in healing potion.</string>
+
+    <string name="HealthArrow_Name">Healing Arrow</string>
+    <string name="HealthArrow_Gender">feminine</string>
+    <string name="HealthArrow_Info">This arrow tip covered in healing potion.</string>
+
+    <string name="AmokDart_Name">Amok Dart</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">Solution on tip of this dart will turn anyone in mindless merciless berserk.</string>
+
+    <string name="AmokArrow_Name">Amok Arrow</string>
+    <string name="AmokArrow_Gender">feminine</string>
+    <string name="AmokArrow_Info">Solution on tip of this arrow will turn anyone in mindless merciless berserk.</string>
+
 
 </resources>

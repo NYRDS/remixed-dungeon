@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -75,7 +77,7 @@ public class SuspiciousRat extends Mob {
 					getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 					GLog.n(Game.getVar(R.string.SuspiciousRat_Info1));
 				}
-				PlayZap();
+				getSprite().zap(getEnemy().getPos(), null);
 				return true;
 			} else {
 				int wereratPos = this.getPos();
@@ -93,11 +95,7 @@ public class SuspiciousRat extends Mob {
 	}
 
 	@Override
-	public void onZapComplete() {
-		PlayZap();
-	}
-
-	public void PlayZap() {
-		getSprite().zap(getEnemy().getPos(), null);
+	public boolean zap(@NonNull Char enemy){
+		return false;
 	}
 }

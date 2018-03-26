@@ -461,7 +461,7 @@ public class Dungeon {
 		loadGame(fileName, false);
 	}
 
-	public static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
+	private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
 		Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
 		Dungeon.challenges = bundle.getInt(CHALLENGES);
@@ -532,7 +532,7 @@ public class Dungeon {
 		LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 	}
 
-	public static void loadGame(String fileName, boolean fullLoad) throws IOException {
+	private static void loadGame(String fileName, boolean fullLoad) throws IOException {
 		Bundle bundle = gameBundle(fileName);
 
 		loadGameFromBundle(bundle, fullLoad);

@@ -166,12 +166,16 @@ import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
+import com.watabou.pixeldungeon.items.weapon.missiles.AmokArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.AmokDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.CurareDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FrostArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.HealthArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.HealthDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.IncendiaryDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Javelin;
 import com.watabou.pixeldungeon.items.weapon.missiles.ParalysisArrow;
@@ -405,6 +409,11 @@ public class ItemFactory {
 
 		registerItemClass(GnollArmor.class);
 		registerItemClass(GnollTamahawk.class);
+
+		registerItemClass(HealthDart.class);
+		registerItemClass(AmokDart.class);
+		registerItemClass(HealthArrow.class);
+		registerItemClass(AmokArrow.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

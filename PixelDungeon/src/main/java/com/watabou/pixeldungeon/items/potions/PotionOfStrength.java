@@ -21,6 +21,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.weapon.missiles.AmokArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -45,5 +47,13 @@ public class PotionOfStrength extends Potion {
 	@Override
 	public int basePrice() {
 		return 100;
+	}
+
+	@Override
+	protected void moistenArrow(Arrow arrow) {
+		int quantity = reallyMoistArrows(arrow);
+
+		AmokArrow moistenArrows = new AmokArrow(quantity);
+		getCurUser().collect(moistenArrows);
 	}
 }

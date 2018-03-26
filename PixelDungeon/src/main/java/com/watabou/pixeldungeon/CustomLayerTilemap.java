@@ -41,7 +41,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
     }
 
     public void addLayer(Level.LayerId layerId) {
-        mLayers.add(new CustomLayerTilemap(level, layerId));
+        if(level.hasTilesetForLayer(layerId)) {
+            mLayers.add(new CustomLayerTilemap(level, layerId));
+        }
     }
 
     @Override
@@ -57,7 +59,7 @@ public class CustomLayerTilemap extends DungeonTilemap {
         for (CustomLayerTilemap layer : mLayers) {
             if (layer.data[pos] >= 0) {
                 Image img = new Image(layer.getTexture());
-                img.frame(layer.getTileset().get(data[pos]));
+                img.frame(layer.getTileset().get(layer.data[pos]));
                 imgs.add(img);
             }
         }
@@ -107,6 +109,11 @@ public class CustomLayerTilemap extends DungeonTilemap {
     @Override
     protected void updateVertices() {
         super.updateVertices();
+
+        //FIXME
+        if(Dungeon.hero == null) {
+            return;
+        }
 
         PointF hpos = Dungeon.hero.getHeroSprite().worldCoords();
         float hx = hpos.x;

@@ -22,6 +22,7 @@ import android.support.annotation.NonNull;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -35,6 +36,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
+import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
@@ -206,6 +208,11 @@ public abstract class Char extends Actor implements Presser{
 					Random.IntRange(0, enemy.dr());
 
 			int dmg = damageRoll();
+
+			if(inFury()) {
+				dmg *= 1.5f;
+			}
+
 			int effectiveDamage = Math.max(dmg - dr, 0);
 
 			effectiveDamage = attackProc(enemy, effectiveDamage);
@@ -291,6 +298,10 @@ public abstract class Char extends Actor implements Presser{
 
 	public int dr() {
 		return 0;
+	}
+
+	protected boolean inFury() {
+		return (buff(Fury.class) != null) || (buff(RageBuff.class) != null);
 	}
 
 	public int damageRoll() {
@@ -592,7 +603,7 @@ public abstract class Char extends Actor implements Presser{
 		next();
 	}
 
-	public void onZapComplete() {
+	public  void onZapComplete() {
 		next();
 	}
 

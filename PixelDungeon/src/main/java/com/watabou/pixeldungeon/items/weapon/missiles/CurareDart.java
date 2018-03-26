@@ -17,16 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
 
-public class CurareDart extends MissileWeapon {
+public class CurareDart extends Dart {
 
 	public static final float DURATION	= 3f;
 
@@ -37,7 +34,7 @@ public class CurareDart extends MissileWeapon {
 	public CurareDart( int number ) {
 		super();
 		
-		image = ItemSpriteSheet.CURARE_DART;
+		image = 4;
 		
 		STR = 14;
 		
@@ -52,12 +49,7 @@ public class CurareDart extends MissileWeapon {
 		Buff.prolong( defender, Paralysis.class, DURATION );
 		super.proc( attacker, defender, damage );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.CurareDart_Info);
-	}
-	
+
 	@Override
 	public Item random() {
 		quantity(Random.Int( 2, 5 ));

@@ -46,8 +46,8 @@ import java.util.HashSet;
 
 public class Potion extends Item implements UnknownItem {
 
-	public static final String AC_DRINK	  = "Potion_ACDrink";
-	public static final String AC_MOISTEN = "Potion_ACMoisten";
+	private static final String AC_DRINK   = "Potion_ACDrink";
+	private static final String AC_MOISTEN = "Potion_ACMoisten";
 	
 	private static final String TXT_HARMFUL			= Game.getVar(R.string.Potion_Harmfull);
 	private static final String TXT_BENEFICIAL		= Game.getVar(R.string.Potion_Beneficial);
@@ -139,34 +139,38 @@ public class Potion extends Item implements UnknownItem {
 	@Override
 	public void execute( final Hero hero, String action ) {
 		setCurUser(hero);
-		
-		if (action.equals( AC_DRINK )) {
-			if (isKnown() && (
-					this instanceof PotionOfLiquidFlame || 
-					this instanceof PotionOfToxicGas || 
-					this instanceof PotionOfParalyticGas)) {
-				
-					GameScene.show( 
-						new WndOptions( TXT_HARMFUL, TXT_R_U_SURE_DRINK, TXT_YES, TXT_NO ) {
-							@Override
-							protected void onSelect(int index) {
-								if (index == 0) {
-									drink( hero );
+
+		switch (action) {
+			case AC_DRINK:
+				if (isKnown() && (
+						this instanceof PotionOfLiquidFlame ||
+								this instanceof PotionOfToxicGas ||
+								this instanceof PotionOfParalyticGas)) {
+
+					GameScene.show(
+							new WndOptions(TXT_HARMFUL, TXT_R_U_SURE_DRINK, TXT_YES, TXT_NO) {
+								@Override
+								protected void onSelect(int index) {
+									if (index == 0) {
+										drink(hero);
+									}
 								}
 							}
-						}
 					);
-					
+
 				} else {
-					drink( hero );
+					drink(hero);
 				}
-			
-		} else if(action.equals(AC_MOISTEN)){
-			moisten (hero);
-		} else {
-			
-			super.execute( hero, action );
-			
+
+				break;
+			case AC_MOISTEN:
+				moisten(hero);
+				break;
+			default:
+
+				super.execute(hero, action);
+
+				break;
 		}
 	}
 	
@@ -391,7 +395,7 @@ public class Potion extends Item implements UnknownItem {
 		moistenUseless();
 	}
 	
-	protected void moistenUseless() {
+	private void moistenUseless() {
 		detach(getCurUser().belongings.backpack );
 		GLog.i(TXT_MOISTEN_USELESS);
 		getCurUser().getSprite().operate( getCurUser().getPos() );		
