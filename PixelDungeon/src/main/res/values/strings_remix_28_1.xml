@@ -50,5 +50,6 @@
     <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">Solution on tip of this arrow will turn anyone in mindless merciless berserk.</string>
 
+    <string name="WndHero_SkillLevel">Skill level</string>
 
 </resources>
