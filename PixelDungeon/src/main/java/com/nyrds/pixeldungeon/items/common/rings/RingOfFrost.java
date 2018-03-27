@@ -19,6 +19,7 @@ package com.nyrds.pixeldungeon.items.common.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -38,7 +39,7 @@ public class RingOfFrost extends Artifact {
 	}
 
 	@Override
-	protected ArtifactBuff buff( ) {
+	protected Buff buff( ) {
 		return new FrostAura();
 	}
 

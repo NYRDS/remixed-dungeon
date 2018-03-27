@@ -19,11 +19,12 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 
 public class RingOfHaste extends Ring {
 	
 	@Override
-	protected RingBuff buff( ) {
+	protected Buff buff( ) {
 		return new Haste();
 	}
 	

@@ -95,7 +95,7 @@ public class Artifact extends EquipableItem {
 		return false;
 	}
 
-	protected ArtifactBuff buff() {
+	protected Buff buff() {
 		return null;
 	}
 
