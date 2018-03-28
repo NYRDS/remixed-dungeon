@@ -118,7 +118,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 					}
 				};
 
-				PixelDungeon.landscape(PixelDungeon.landscape());
+				PixelDungeon.landscape(PixelDungeon.storedLandscape());
 				PixelDungeon.setNeedSceneRestart(true);
 			}
 		});
