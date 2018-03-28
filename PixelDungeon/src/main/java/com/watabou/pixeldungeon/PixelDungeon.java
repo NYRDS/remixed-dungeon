@@ -210,6 +210,10 @@ public class PixelDungeon extends Game {
 		Preferences.INSTANCE.put(Preferences.KEY_LANDSCAPE, value);
 	}
 
+	public static boolean storedLandscape() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_LANDSCAPE, false);
+	}
+
 	public static boolean landscape() {
 		return width() > height();
 	}

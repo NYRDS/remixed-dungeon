@@ -65,8 +65,8 @@ public class PredesignedLevel extends CustomLevel {
 		fillMapLayer("decoTileVar", customLayers.get(LayerId.Deco));
 		fillMapLayer("deco2TileVar", customLayers.get(LayerId.Deco2));
 
-		fillMapLayer("roofBaseTileVar", customLayers.get(LayerId.RoofBase));
-		fillMapLayer("roofDecoTileVar", customLayers.get(LayerId.RoofDeco));
+		fillMapLayer("roofBaseTileVar", customLayers.get(LayerId.Roof_Base));
+		fillMapLayer("roofDecoTileVar", customLayers.get(LayerId.Roof_Deco));
 
 		useCustomTiles = mLevelDesc.optBoolean("customTiles",false);
 	}

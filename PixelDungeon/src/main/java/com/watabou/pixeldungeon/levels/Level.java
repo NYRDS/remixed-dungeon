@@ -307,7 +307,7 @@ public abstract class Level implements Bundlable {
 
 
 	public enum LayerId {
-		Base,Deco,Deco2, RoofBase,RoofDeco
+		Base,Deco,Deco2, Roof_Base, Roof_Deco
 	}
 
 	protected Map<LayerId, int[]> customLayers;
