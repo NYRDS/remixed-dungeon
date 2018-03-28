@@ -6,7 +6,7 @@
  <tileset firstgid="65" source="tilesets/tiles_town_outside_winter.tsx"/>
  <tileset firstgid="321" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="577" source="tilesets/Mobs.tsx"/>
- <layer name="logic" width="13" height="19" visible="0" opacity="0.39">
+ <layer name="logic" width="13" height="19" opacity="0.39">
   <data encoding="csv">
 5,5,5,5,5,5,5,5,5,5,5,5,5,
 5,5,5,5,5,5,5,5,5,5,5,5,5,
@@ -98,7 +98,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="roof_base" width="13" height="19" visible="0">
+ <layer name="roof_base" width="13" height="19">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
