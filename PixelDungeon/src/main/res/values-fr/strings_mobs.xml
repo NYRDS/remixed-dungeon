@@ -18,7 +18,7 @@
   <string name="Albino_Name">rat albinos</string>
   <string name="Albino_Gender">mâle</string>
   <string name="Albino_Name_Objective">rat albinos</string>
-  <string name="Albino_Desc">Les rats géants sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre.</string>
+  <string name="Albino_Desc">Les rats géants sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre. Ce rat particulier semble être albinos. Ses dents sont anormalement aiguisées.</string>
   <!--STRINGS OF Bandit CLASS-->
   <string name="Bandit_Name">bandit fou</string>
   <string name="Bandit_Gender">mâle</string>

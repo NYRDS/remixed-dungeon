@@ -47,6 +47,6 @@
     <string name="WndHats_BackButton">Zurück</string>
     <string name="WndHats_BuyButton">Kaufen</string>
     <string name="WndHats_EquipButton">Ausrüsten</string>
-    <string name="WndHats_InfoButton">Untersuche</string>
+    <string name="WndHats_InfoButton">Betrachten</string>
     <string name="WndHats_UnequipButton">Ablegen</string>
 </resources>

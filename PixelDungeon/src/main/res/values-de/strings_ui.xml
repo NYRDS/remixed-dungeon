@@ -72,5 +72,5 @@
   <string name="WndSaveSlotSelect_SelectSlot">Speicherplatz wählen</string>
   <!--STRINGS OF ModsButton CLASS-->
   <string name="ModsButton_SelectMod">Mod wählen</string>
-  <string name="RemixedPixelDungeonApp_sendCrash">Unser Spiel ist abgestürtzt... \n Entschuldigung. \nBitte sende uns den Absturz-Bericht, um uns zu helfen den Fehler zu beheben.</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Unser Spiel ist abgestürtzt... \n Entschuldigung. \nBitte sende uns den Fehler-Bericht, um uns zu helfen den Fehler zu beheben.</string>
 </resources>

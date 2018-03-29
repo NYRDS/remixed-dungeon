@@ -1,4 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ScrollOfSummoning CLASS -->
+    <string name="ScrollOfSummoning_Name">召唤卷轴</string>
+    <string name="ScrollOfSummoning_Info">召唤一只怪物，几率将其控制</string>
+    <string name="ScrollOfSummoning_Info_2">这只怪物归你了</string>
+
+    <!-- Generic warnings -->
+    <string name="Using_Failed_Because_Magic">强大魔力阻止使用 \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">失明状态下 \"%s\"无法使用</string>
+
+    <string name="Mob_Cannot_Be_Pet">你没法控制住 \"%s\"</string>
+    <string name="No_Valid_Cell">没有召唤的空间</string>
+
+</resources>

@@ -119,6 +119,41 @@ Gedankenkontrollen-Icon, das über dem Haustier erscheint, wurde zu einem Herz v
 -Verbesserte Übersetzung\n
 - Entfernte Option: «Immersionmodus» und «UI-Größe»\n
 </string>
+  <string name="Welcome_Text_25_1">
+remix.25.1:\n
+--Neue Funktionen--\n
+- Neue Heldenklasse: Nekromant\n
+- Jetzt erhalten nur Nekromanten xp für Kills, die von Minions gemacht werden\n
+- Der Nekromant hat höhere Chance, die Opfernde Klinge zu erhalten\n
+--Balance--\n
+- Alle Monster in Necropolis wurden geändert\n
+- Jetzt wird Yog-Dzewa nicht nur von Fäusten, sondern auch von anderen Mini-Boss-Gegnern verteidigt\n
+- Wenn Yog stirbt, sterben alle anderen Boss-Gegner (Zuvor waren davon nur die Fäuste betroffen)\n
+- Yog\'s Herz wurde geändert. Die Anzahl der Leben, um die es andere Gegner heilt, wurde reduziert\n
+- Boss-Gegner sind nicht mehr standardmäßig auf \"Jagend\"\n
+- Die Chance, dass Gnoll-Zombies \"von den Toten auferstehen\" wurde reduziert\n
+- Pseudo-Ratte wurde geändert\n
+- Der Schwarze Schädel benötigt jetzt 10 Aufladungen, um aktiviert zu werden, anstelle von 15. Aber der Tod der Minions des Spielers verursacht keine Aufladungen mehr\n
+- Der heimtückische Geist kann nicht länger zum Diener des Spielers werden\n
+--Optik-- \ n
+- Aktualisierter Texturensatz der Kanalisation\n
+--Fehlerbehebungen--\n
+- Behobener \"nicht verschwindender Text\" -Bug\n
+- Ein Fehler wurde behoben, der es dem Lich nicht erlaubte, den Spieler wirklich zu beschädigen\n
+- Problem mit der Generierung von Ebene 5 behoben\n
+--Mods--\n
+- Von Benutzern erstellte Mods können jetzt Codex-Elemente mit benutzerdefiniertem Text enthalten\n
+- Von Nutzern erstellte Mods können jetzt benutzerdefinierte Texturen, Wasser und Musik für bestimmte Ebenen festlegen\n
+</string>
+  <string name="Welcome_Text_25_2">
+remix.25.2:\n
+--Neue Funktionen--\n
+- Jetzt kannst du die Ui während der Spielsitzung manuell anpassen. Diese Funktion ist im Menü \"Einstellungen\" verfügbar\n
+--Fehlerbehebungen--\n
+- Fehler behoben, der dazu führte, dass Abbilder des Helden entstanden, wenn man \"Bertachten\" drückte, während man einen Hut trug\n
+- Fehler behoben, der verhinderte, dass Gegner (die auf einem \"Abgrund\" -Feld beschworen oder wiederbelebt wurden) herunterfielen\n
+- Übersetzungen aktualisiert und einige Tippfehler korrigiert\n
+</string>
   <string name="Welcome_Text_25_3">
 remix.25.3:\n
 - Neues Objekt hinzugefügt: Explosive Fässer (werden an Halloween durch Kürbisse ersetzt)\n
@@ -126,17 +161,189 @@ remix.25.3:\n
 - Neuer Gegenstand: Kürbiskuchen\n
 - Neuer NPC: Vogelscheuche\n
 - Neue Hüte: Zombiemaske, Vampirschädel und Ushanka Hut\n</string>
+  <string name="Welcome_Text_25_4">
+Remix.25.4:\n
+--Spiel--\n
+- Fässer können nun mit dem Stab der Telekinese verschoben werden\n
+- Fässer erscheinen mit niedrigerer Wahrscheinlichkeit auf Fluren\n
+- Speer, Gleve und Hellebarde gehören nun zum Typ \"Stangenwaffen\", der dem Spieler eine erhöhte Angriffsdistanz gewährt (vorher war das nur mit dem Speer möglich)\n
+- Die Angriffsgeschwindigkeit von \"Stangenwaffen\" wurde reduziert, um die erhöhte Angriffsdistanz auszugleichen\n
+- Auf dem \"Titel\" Bildschirm steht nun \"Remixed Pixel Dungeon\"\n
+- Der \"Info\" Bildschirm wurde aktualisiert\n
+- Boss-Kampf-Musik spielt nun nur noch während Boss-Kämpfen für alle Bosse, außer Yog (Ebene 31 hat Boss-Kampf-Musik in dem Moment, in dem du ihn betrittst)\n
+- Aktualisierte Übersetzung (+ neue Sprache: Türkisch)\n
+--Mods--\n
+- Mods unterstützen jetzt benutzerdefinierte Schlüssel\n
+- Einige Gegner können jetzt manuell auf eine bestimmte Stärke eingestellt werden\n
+- \"Albino\" -Gegner ist jetzt in Mods verfügbar\n
+</string>
+  <string name="Welcome_Text_25_5">
+remix.25.5:\n
+- Fehler behoben, der dazu führte, dass die Textur des Helden verschwindet, wenn der Spieler sich in einen Abgrund teleportierte\n
+- Der Menüknopf hat jetzt die höchste Priorität in der Spieloberfläche, so dass Spieler auf die UI-Einstellungen zugreifen können, selbst wenn die UI-Skalierung zu hoch ist\n
+- Aktualisierte Übersetzungen (+ ukrainische Sprache hinzugefügt)\n
+- Aktualisiertes Sprachauswahlmenü\n
+</string>
+  <string name="Welcome_Text_26">
+remix.26:\n
+--Spiel\n
+- Neues Essen: festlicher Truthahn\n
+- Neue Musik für Höhle (von Misaerit)\n
+- Neuer Dungeon-Typ: Eishöhle!\n
+- Momentan enthält Eishöhle:\n
+- 4 neue Gegner\n
+- Ein neuer Boss-Gegner\n
+- Ein neuer NPC\n
+- Einzigartiger Zauberstab des Eisstrahls\n
+- Ein Artefakt: Kerze der Visionen \ n
+- Neue Musik (von Misaerit)\n
+- Fehler behoben, der verhindert hat, dass seltene Spinnen erscheinen\n
+- Der Goo ist jetzt etwas stärker\n
+--Hüte\n
+- Weihnachtsmütze hinzugefügt!\n
+- Rote Nase und Geweih hinzugefügt!\n
+</string>
+  <string name="Welcome_Text_26_1">
+remix.26.1:\n
+- Das Spiel beginnt in einer Stadt\n
+- Die Stadt erhält eine einzigartige Musik (von Misaerit)\n
+- Um einen 100% igen Sieg zu erreichen, muss man, nachdem man das Amulett von Yendor erhalten hat, den Stadtausgang erreichen\n
+- Die Startgegenstände des Helden enthalten jetzt nur klassenspezifische Ausrüstung, jeder Held erhält außerdem 200 Goldmünzen\n
+- In der Stadt gibt es ein Geschäft, in dem man Ausrüstung und Gegenstände kaufen kann\n
+- Der Stadtpriester heilt und ernährt den Helden gegen eine Gebühr\n
+- Fliegende Gegner können keine Fallen mehr aktivieren\n
+- Man kann keinen Behälter mehr verkaufen, der etwas enthält\n
+- Untote Gegner sind immun gegen Gift\n
+- Wenn ein Skelett stirbt, verursacht es Schaden an 4 benachbarten Feldern (in vertikaler und horizontaler Richtung) statt 8 Felder\n
+- Verbessertes Schriftaussehen\n
+- Kristalle können nicht mehr mit Telekinese bewegt werden\n
+- Trank der Reinheit kann den Effekt eines verwirrenden Gases heilen\n
+- Mobs, die mit Multiplikation erstellt wurden, können nicht länger unter 1 hp bei der Erschaffung haben\n
+- Tippfehler behoben\n
+- Verbesserte Texturen der Eishöhlen \ n
+- Die Mods \"The Fallen\" und \"Maze\" unterstützen nun Englisch\n
+- Neue Spendenstufe ist jetzt verfügbar. Mit dem Kauf des \"Royal Pixel\" werden Sie nicht nur unserem Projekt helfen, sondern Sie werden auch jeden einzelnen Hut im Spiel freischalten, einschließlich jedes Hutes, der jemals veröffentlicht wird\n
+</string>
+  <string name="Welcome_Text_26_2">
+remix.26.2:\n
+--Spiel\n
+- Neues Gebäude in der Stadt eröffnet: Film Theater\n
+- Ringe werden jetz auf dem Schlüsselbund gelagert\n
+- Das Schlüsselbund kann nur in der Stadt gekauft werden\n
+- Der Stadtladen wurde aktualisiert\n
+- Immer wenn ein Gegenstand an einen Händler in der Stadt verkauft wird, wird der Gegenstand zum Verkauf angeboten, wenn dort Platz frei ist\n
+- Neuer Schmuck-Gegenstand: Gnoll-Kostüm\n
+--Mods\n
+- Die Waffen haben das Attribut «enchantment» erhalten\n
+- Die Rüstungen haben das Attribut «glyph» erhalten\n
+- Damit das Spiel einen Mod erkennt, muss der Mod die Datei version.json enthalten\n
+</string>
   <string name="Welcome_Text_26_3">
 remix.26.3\n
 - Stadt ist nun größer\n
 - Stadtladen verkauft jetzt mehr Gegenstände\n
 - Neue Aufgabe in der Stadt\n</string>
+  <string name="Welcome_Text_26_4">
+remix.26.4\n
+- Spiel:\n
+- Wenn Yog stirbt, stirbt jedes Wesen auf dem Level, auch einschließlich derjenigen, die vom Spieler kontrolliert werden\n
+- Yog erschafft 2 Mini-Boss-Gegner auf dem leichten und mittleren Schwierigkeitsgrad (Der Schwierigkeitsgrad \"Experte\" lässt ihn noch 3 davon beschwören)\n
+- Das Upgrade-Level der Zauberstäbe, die von den Kristallen verwendet werden (einschließlich denen, die von Shadow Lord hervorgebracht wurden), entspricht nicht mehr dem Level, auf dem der Kristall erzeugt wurde, sondern nur der Hälfte dieser Menge\n
+- Die Mechanik hinter der Fähigkeit des Schattenlords «Beschwöre Geist» wurde leicht optimiert\n
+- Der Spieler startet mit 100 Goldmünzen anstelle von 200\n
+- Die Start-Ausrüstung enthält wieder Nahrungsrationen\n
+- Wenn der Held nun auf einer Schwierigkeitsstufe stirbt, bei der der Fortschritt gespeichert werden kann, wird statt des Menüs «Gespeichertes Spiel laden» angezeigt\n
+- Neuer NPC in der Stadt: eine Wahrsagerin. Sie ist bereit, deine Gegenstände für eine symbolische Zahlung zu identifizieren\n
+- Wenn der Spieler in der Stadt ist, wird er nicht Hungern\n
+- Die Regeneration der Gesundheit und die Funktion \"Warten bis man gesund ist\", ist in der Stadt deaktiviert\n
+- Maximum der Vidoes, die man im Film Theater sehen kann, basiert jetzt auf dem Level des Spielers. Für jeden neuen Level kann man 1 weiteres Video sehen\n
+- Die Robe des Nekromanten überprüft nicht mehr die Gesundheit des Helden, um Beschwörungen durchzuführen\n
+- In der «Man kann nur 2 Ringe gleichzeitig tragen!» Nachricht wird jetzt «Artefakte» ganannt\n
+- Der Nekromant erhält einen klareren Logeintrag, sobald das Beschwörungslimit erreicht wurde\n
+- Rattenrüstung wurde leicht verbessert\n
+- Durch das Aufrüsten eines Zauberstabs wird die maximale Anzahl Ladungen wiederhergestellt\n
+- Fehler behoben, der das Stadtlayout in älteren Speicherdateien unterbrach\n
+- Fehler behoben, bei dem Texte aus verschiedenen Mods gemischt wurden\n\n
+- Mods:\n
+- Der Gefangene Kobold wurde zu MobFactory hinzugefügt und ist jetzt in benutzerdefinierten Leveln verfügbar\n
+- In Dungeon-Leveln, die das Attribut «isSafe» besitzen, wird der Spieler nicht Hungern und keine Gesundheit mehr regenerieren oder in der Lage sein, zu \"Warten bis man gesund ist\"\n
+- Genehmigte Mods können «Banner» Bilddatei ändern\n
+- Zauberstäbe wurden mit «charges» und «maxCharges» Attributen versehen\n
+- Neues Attribut für Dungeon Level: «isStatic». Level, die damit markiert sind, werden jedes Mal neu generiert, wenn der Held sie betritt (Der Level bleibt \"static\", trotz der Dinge, die der Spieler vorher hätte tun können)\n
+- Ein zusätzlicher Schrittes zur Startinitialisierung des Helden wurde hinzugefügt: «non_expert». Gegenstände, die in diesem Schritt enthalten sind, werden dem Inventar in allen Schwierigkeitsstufen hinzugefügt, mit Ausnahme der Schwierigkeit «Experte»\n
+- Der Spieler leidet nicht mehr unter Hunger-Effekten, die er auf der Schwierigkeitsstufe «Experte» erhalten würde, solange er auf «isSafe» Leveln bleibt\n
+</string>
+  <string name="Welcome_Text_26_5">
+remix.26.5\n
+- Aktualisierte \"neue\" Schriftdarstellung\n
+- Gegenstände können nicht länger auf einer Position landen, die von einem NPC oder einem Gegenstand besetzt ist, der zum Verkauf steht\n
+- Die Bibliothek wurde geöffnet und enthält nun Informationen über Gegenstände und Wesen, auf die du während deiner Abenteuer gestoßen bist\n
+- Der Elf beginnt nun mit einem einzigartigen Elfen-Dolch, der 9 Stärke benötigt\n
+- Wenn ein Held auf eine sichtbare Falle treten will, erscheint eine Warnung, in der gefragt wird, ob man wirklich auf die Falle treten will\n
+- Wenn man geblendet ist, erscheint die Warnung nicht, wenn er auf eine sichtbare Falle treten oder in den Abgrund springen will\n
+- Untote Gegner sind nicht mehr von verwirrendem Gas betroffen\n
+- Testoption, bei der man die Zeit einstellen kann, nach der der Zug automatisch vorbei ist\n 
+- Übersetzungen aktualisiert\n
+- Schriftrolle der Herrschaft hat einen visuellen Effekt erhalten, um deutlicher anzuzeigen, dass sie benutzt wurde\n
+- Fehler behoben, der dazu führte, dass der Held mehrmals Fallschaden erleiden konnte, wenn das Spiel direkt nach dem Fall minimiert wurde\n
+- Benutzerdefinierte Wesen können in eigenen Mods erstellt werden\n
+- Benutzerdefinierte Mob-Mechaniken erlauben auch das Erstellen von Mobs mit Fernkampfangriffen\n
+- Mod-Attribute hinzugefügt: canBePet, wallWalker und absoluteWalker für benutzerdefinierte Wesen\n
+- Die Mods unterstützt nun benutzerdefinierte \"Verteidigungs\" Nachrichten, zB. \"Blockiert\", \"Pariert\"\n
+</string>
   <string name="Welcome_Text_26_6">
 remix.26.6\n
 - neues einzigartiger Gegenstand: Zauberstab des Schattenballs\n
 - Der Kristall der vom Schattenherr erschafft wird, nutzt nun den Stab des Schattenballs anstelle der normalen Attacke. Die Chance diesen Stab zu erhalten ist 25%\n
 - Repariert Fernangriff Fehler für: Luft Element, Kristall, Brennende Faust, PSI-Spinne und Bernsteinspinne\n
 - Magier Rüstung (Version für Hexenmeister: Hexenmeister Rüstung) und Süßigkeit sind nun in Mods verwendbar\n</string>
+  <string name="Welcome_Text_27">
+remix.27\n
+- Das Spiel nutzt nun folgende Google Play Games-Dienste: Erfolge, Bestenlisten und Cloud-Speichern\n
+- Die Größe aller Behälter wurde erhöht, jetzt entspricht sie dem eines Hauptrucksacks\n
+- Der Nekromant ist jetzt für jeden Spieler von Anfang an verfügbar\n
+- Zaubertränke können jetzt mit Schriftrollen der Verbesserung verbessert werden. Die verbesserten und verschlechterten Tränke können auch als Beute gefunden werden\n
+- Fehler mit dem Chaos-Kristall behoben, der den gesamten Stapel leerer Schriftrollen zerstört wenn man \"Fusioniert\" hat, anstatt von 1\n
+- Ein Fehler wurde behoben, der dazu führte, dass der Goo nach der Verwendung seiner \"Aufpumpen-Attacke\" keinen Helden in einer bestimmten Entfernungen angreifen konnte\n
+- Erhöhtes Attribut maxLevel für Stinkende Ratte und verschiedene Boss-Gegner (so dass Charaktere mit ungewöhnlich hohen Levels immer noch Beute von diesen Charakteren bekommen)\n
+- Neues Attribut für Level und Mobs in von Spieler erstellten Mods: \"viewDistance\" (Stellt die Sichtweite im Bereich von 1-8 ein)\n
+</string>
+  <string name="Welcome_Text_27_1">
+remix.27.1\n
+- Portal-System hinzugefügt\n
+- Nachdem ein Boss-Gegner besiegt wurde, betritt man nun einen Portal-Raum. Das Portal bringt einen zurück zur Stadt. Diese Portale können nur einmal genutzt werden\n
+- Das Portal in der Stadt bringt einen zum zuletzt genutzten Portal zurück, wenn man es denn benutzt hat\n
+- Nachdem ein Boss-Gegner im sekundären Dungeon besiegt wurde, kann man einen Skelett-Schlüssel verwenden um einen Ausgang zu öffnen, der zum ersten Level des besagten Dungeons führt\n
+- Der Goo lässt nun nicht mehr Lloyd\'s Beacon fallen. Dieser Gegenstand ist nur durch Mods erhältlich\n
+- Fehler bei der Beschwörungsfalle behoben, der dazu führte, dass Schatten auf Boden-Feldern erzeugt wurden\n
+- \"Tier\" Statuen Fehler behoben, der das Spielprotokoll mit unnötigen Informationen überflutet hat.\n
+</string>
+  <string name="Welcome_Text_27_2">
+remix.27.2\n
+--Spiel:\n
+- Einführung des Zaubersystems\n
+- Der Magier und der Nekromant erhalten natürliche Zauberaffinitäten. Diese Helden können einzigartige Zauber wirken, ohne spezielle Gegenstände zu benötigen\n
+- Jeder Charakter besitzt jetzt eine Mana-Leiste (inklusive des Nekromanten)\n
+- Der Nekromant stellt nicht mehr passiv die Manapunkte für das Töten seiner Feinde wieder her. Dieser Effekt wird jetzt auf eine Nekromantenrobe (+1 Mana pro Tötung) und eine Knochenrüstung (+2 Mana pro Tötung) angewendet, anstatt dieBeschwörungs-Fähigkeit für die zuvor besessenen Gegenstände\n
+- Neues Heldenattribut: Magisches Level. Je höher die Zauberstufe, desto mehr natürliche Zauber werden für deinen Helden freigeschaltet und mächtiger können diese Zauber werden\n
+- Neuer Gegenstand: Manatrank\n
+- Neuer Gegenstand Wälzer des Wissens. Ein Gegenstand, der deine magische Stufe um 1 erhöht\n
+- Neues Zauberbuch für Gegenstände. Dieser ausrüstbare Gegenstand erlaubt es dir, einen einzigen Spruch auf die Kosten von Mana anzuwenden und im Gegensatz zu den Schriftrollen wird dieser Gegenstand nicht ablaufen, egal wie viel du ihn benutzt\n
+- Die Klassenspezifische Rüstung benötigt keine Leben um ihre spezielle Fähigkeit zu verwenden, sondern stattdessen 1/3 der maximalen Mana\n
+- Der \"Zauberstab des magischen Projektils\"\ kann nun nicht mehr von Kristallen fallengelassen werden\n
+- Von nun an wird jeder Level eine zufällig generierte \"Sichtweite\" haben, so dass der Spieler zu jedem Zeitpunkt einen \"dunklen\"\ Level betreten kann\n
+- Fackeln sind jetzt am Anfang verfügbar und können im gesamten Spiel gefunden werden\n
+- Die \"sicheren\" (isSafe) Level sind nicht betroffen und werden immer maximal ausgeleuchtet\n
+- Schaden durch Brennen skaliert sich jetzt mit der Dungeontiefe\n\n
+
+- Kosmetikartikel:\n
+- Neuer Hut: Chaoshelm\n\n
+
+- Mods:\n
+- Der \"iniHeroes\" Datei können jetzt eue Attribute hinzugefügt werden: \"maxSP\" - Legt eine maximale menge Mana fest, die der Spieler besitzen kann. \"startingSP\" legt die Startmenge an Mana für den Charakter fest\n
+- Die Heldeninitialisierung benötigt auch das Attribut \"magicAffinity\", das wie folgt gesetzt werden kann: \"Elemental\", \"Nekromancy\" oder \"Common\" (\"Common\" bedeutet, dass der Charakter nur Zauber vom Zauberbuch verwenden kann)\n
+- Neues Spielobjekt in Mods – Trap. Im Gegensatz zur normalen Falle kann dieses Objekt auf verschiedene Arten eingestellt werden. Es kann festgelegt werden: die Anzahl der Aktivierungen (uses), das Zielfeld, auf die der Effekt ausgelöst werden soll (target) und was die Falle aktivieren oder eben nicht aktivieren kann, indem ein Gegenstand darauf geworfen wird (activatedByItem)\n
+</string>
   <string name="Welcome_Text_27_3">
 remix.27.3\n
 - Neuer Gegenstand: Schriftrolle der Beschwörung\n

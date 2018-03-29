@@ -117,12 +117,13 @@
 - Ikona kontroli umysłu (widoczna nad przeciwnikami) została zmieniona na serduszko\n
 - Polepszono widoczność «nowej czcionki\n
 - Zaktualizowano tłumaczenia\n
-- Usunięto ustawienia: «tryb immersyjny» oraz «skalowanie UI»\n</string>
+- Usunięto ustawienia: «tryb immersyjny» oraz «skalowanie UI»\n
+</string>
   <string name="Welcome_Text_25_1">
  remix.25.1:\n
  --Co nowego--\n
  - Nowy typ bohatera: Nekromanta\n
- - Od teraz tylko Nekromanta dostaje XP przeciwników zabitych przez Chowańców\n
+ - Od teraz tylko Nekromanta dostaje XP zabprzeciwników zabitych przez sługi\n
  - Nekromanta ma wieksze szanse na Ostrze Poświęcenia\n
  --Zbalansowanie--\n
  - Wszystkie potwory poziomów Necropolis zostały osłabione\n
@@ -132,7 +133,7 @@
  - Od teraz Bossowie już nie \"polują\" domyślnie.\n
  - Zmniejszono szansę wskrzeszenia dla Gnoll-Zombie\n
  - Osłabiono Pseudo-Szczura\n
- - Od teraz Czarna Czaszka wymaga 10 ładunkow do aktywacji (zamiast 15), ale śmierć Chowańców już jej nie ładuje.\n
+ - Od teraz Czarna Czaszka wymaga 10 ładunkow do aktywacji zamiast 15, ale śmierć Chowańców już jej nie ładuje.\n
  - Treacherous Spirit nie może już być Chowańcem.\n
  --Wizualne--\n
  - Zaktualizowano grafiki Kanałów\n

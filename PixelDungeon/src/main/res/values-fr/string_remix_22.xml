@@ -16,7 +16,7 @@
 Vous pouvez changer votre décision quand vous voulez (cliquez sur l\'icône diagramme sur la page de menu principal)</string>
   <string name="AllowStatisticsCollectionScene_Allow">Autoriser</string>
   <string name="AllowStatisticsCollectionScene_Deny">Refuser</string>
-  <string name="Darkness_Info">Cela ressemble à des morceaux d\'éternelles ténèbres flottant dans l\'air.</string>
+  <string name="Darkness_Info">Cela ressemble à des parcelles d\'éternelles ténèbres flottant dans l\'air.</string>
   <string name="WndSelectLanguage_ImproveTranslation">S\'il vous plaît, venez contribuer à améliorer les traductions de Remixed Pixel Dungeon</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">Cliquez ici pour rejoindre l\'équipe de traduction de Remixed Pixel Dungeon.</string>

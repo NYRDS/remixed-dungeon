@@ -1,4 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <string name="HeroClass_Gnoll">豺狼人</string>
+    <string name="GnollArmor_ACSpecial">号召</string>
+    <string name="GnollArmor_NotGnoll">只有豺狼人才能穿豺狼甲!</string>
+
+    <string name="GnollArmor_Name">豺狼甲</string>
+    <string name="GnollArmor_Info">让所有视野里面的小怪加入你的队伍。</string>
+
+    <string name="GnollTamahawk_Name">豺狼投斧</string>
+    <string name="GnollTamahawk_Info">豺狼工匠精心制作，重量轻便品质上乘，是豺狼就来打我</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
+
+
+    <string name="WndPlayGames_BackupProgress">备份游戏进程</string>
+    <string name="WndPlayGames_RestoreProgress">恢复游戏进程</string>
+    <string name="WndPlayGames_WorkInCloud">上传中...请等待</string>
+    <string name="StartScene_UnlockGnoll">找一只豺狼暴徒当小弟，并且给它治疗来解锁</string>
+    <string name="WndPriest_Heal_Minions">治疗你所有的随从 - 只需%d金币!</string>
+    <string name="Badges_GnollUnlocked">豺狼人解锁</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>初始15力量</item>
+        <item>初始5生命上限</item>
+        <item>出门没有护甲，但有一把投斧</item>
+        <item>不识字</item>
+        <item>其他豺狼不会主动攻击</item>
+     </string-array>
+</resources>

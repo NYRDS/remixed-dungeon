@@ -30,5 +30,5 @@
   <string name="DonateButton_pleaseDonate">Bitte erwägen Sie es, zu spenden</string>
   <string name="DonateButton_thanks">Danke für Ihre Unterstützung!</string>
   <!--STRINGS OF WndSaveSlotSelect-->
-  <string name="WndSaveSlotSelect_dontLike">Du magst keine Werbung? Spende einen beliebigen Betrag und sie wird verschwinden. Für immer.</string>
+  <string name="WndSaveSlotSelect_dontLike">Du magst keine Werbung? Mache eine beliebige Spende und sie wird verschwinden. Für immer.</string>
 </resources>

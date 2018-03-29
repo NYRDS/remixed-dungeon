@@ -104,7 +104,7 @@
   <string name="Dagger_Info">Ein einfacher eisener Dolch mit einem stark abgenutzten Holzgriff.</string>
   <string name="Dagger_Gender">männlich</string>
   <!--STRINGS OF Glaive CLASS-->
-  <string name="Glaive_Name">Glaive</string>
+  <string name="Glaive_Name">Gleve</string>
   <string name="Glaive_Info">Eine Waffe aus einer Schwertklinge, die am Ende einer Stange befestigt ist.</string>
   <string name="Glaive_Gender">geschlechtslos</string>
   <!--STRINGS OF Knuckles CLASS-->
@@ -199,7 +199,7 @@
   <string name="ChaosStaff_Info">Ein mit der Kraft des Chaos getränkter Stab! Worüber sonst können Magier Träumen oder sich Fürchten?</string>
   <string name="ChaosStaff_Gender">männlich</string>
   <!--STRINGS OF SacrificialSword CLASS-->
-  <string name="SacrificialSword_Name">opferndes Schwert</string>
+  <string name="SacrificialSword_Name">Opfernde Klinge</string>
   <string name="SacrificialSword_Info">Auf den ersten Blick scheint dieses alte Bronzeschwert, das mit Dreck bedeckt ist, absolut nutzlos zu sein. Doch eine gewisse veraltete Kraft schläft darin. Diese Kraft kann beinahe jede Kreatur in eine willenlose Marionette verwandeln. Man muss nur den richtigen finden, um es aufzuwecken...</string>
   <string name="SacrificialSword_Gender">männlich</string>
 </resources>
