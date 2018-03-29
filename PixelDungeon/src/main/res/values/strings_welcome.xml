@@ -394,6 +394,16 @@
     - A large update of the Brazilian-Portuguese translation\n
     - New hero class options for modding: forbiddenActions, friendlyMobs\n
     - New language added: Malay language\n
-    </string>>
+    </string>
+    <string name="Welcome_Text_28_1">
+    remix.28.1\n
+    - Big renovation of Town\n
+    - Lots of gfx improvements and fixes\n
+    - New darts and arrows\n
+    - Now all mob (except undeads) will regenerate\n
+    - Now strength will provide additional damage bonus for all classes\n
+    - Fortune Teller now owns a Cat\n
+    - Gnoll tomahawk will not break when thrown at a target\n
+    </string>
 
 </resources>
