@@ -17,8 +17,8 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 512
-        versionName "remix.28.1.beta.3"
+        versionCode 513
+        versionName "remix.28.1.beta.4"
     }
     buildTypes {
         release {
