@@ -261,7 +261,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 		if (saving) {
 			try {
-				Dungeon.saveAll();
+				Dungeon.save();
 				slot = slotNameFromIndexAndMod(index);
 				SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 

@@ -237,7 +237,7 @@ public class InterlevelScene extends PixelScene {
 			}
 		} else {
 			Dungeon.level.removePets();
-			Dungeon.saveLevel();
+			Dungeon.save();
 		}
 
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
@@ -254,7 +254,7 @@ public class InterlevelScene extends PixelScene {
 		Actor.fixTime();
 
 		Dungeon.level.removePets();
-		Dungeon.saveLevel();
+		Dungeon.save();
 		
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
 		Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
@@ -270,7 +270,7 @@ public class InterlevelScene extends PixelScene {
 		Position next = DungeonGenerator.ascend(Dungeon.currentPosition());
 		
 		Dungeon.level.removePets();
-		Dungeon.saveLevel();
+		Dungeon.save();
 		Dungeon.depth=DungeonGenerator.getLevelDepth(next.levelId);
 		
 		Level level = Dungeon.loadLevel(next);
@@ -287,7 +287,7 @@ public class InterlevelScene extends PixelScene {
 		Actor.fixTime();
 
 		Dungeon.level.removePets();
-		Dungeon.saveLevel();
+		Dungeon.save();
 		Dungeon.depth = DungeonGenerator.getLevelDepth(returnTo.levelId);
 		
 		Level level = Dungeon.loadLevel(returnTo);
