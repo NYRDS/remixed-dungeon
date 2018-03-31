@@ -52,4 +52,8 @@
 
     <string name="WndHero_SkillLevel">Skill level</string>
 
+    <string name="town_deco_sofa_name">Cozy sofa</string>
+    <string name="town_deco_sofa_desc">Looks like this cinema really try to provide best seats for it customers.</string>
+
+
 </resources>
