@@ -1,4 +1,55 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
+    <string name="BlackCat_Name">Schwarze Katze</string>
+    <string name="BlackCat_Gender">weiblich</string>
+    <string name="BlackCat_Name_Objective">Katze</string>
+    <string name="BlackCat_Desc">Das ist eine Schwarze Katze</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Miau</item>
+        <item>Miau...</item>
+        <item>Miau!</item>
+    </string-array>
+
+    <string name="Str_lose">-1 Stä</string>
+
+    <string name="SociologistNPC_Name">Soziologe</string>
+    <string name="SociologistNPC_Gender">männlich</string>
+    <string name="SociologistNPC_Name_Objective">Soziologe</string>
+    <string name="SociologistNPC_Desc">Dies ist ein Soziologe mit der heiligen Aufgabe, öffentliche Meinungen zu sammeln</string>
+
+    <string name="SociologistNPC_AlreadyTaken">Du hast diese Umfrage bereits gemacht, bitte komm später wieder</string>
+    <string name="SociologistNPC_Hi">Hallo!\nWillst du an dieser Umfrage teilnehmen?(Internetverbindung ist erforderlich)\nDeine Meinung zählt!</string>
+    <string name="SociologistNPC_InternetRequired">Es tut mir leid, aber ohne Internetverbindung kannst du nicht an der Umfrage teilnehmen</string>
+    <string name="SociologistNPC_DownloadError">Es tut mir leid, aber etwas ist schief gelaufen, bitte versuche es später erneut</string>
+
+    <string name="town_deco_library_sign_name">Bibliotheksschild</string>
+    <string name="town_deco_library_sign_desc">Es scheint so, als ob eine Bibliothek in dem Gebäude ist.</string>
+    <string name="town_deco_identifier_sign_name">Magischer Ball Schild</string>
+    <string name="town_deco_identifier_sign_desc">Es scheint so, als ob eine Wahrsagerin in dem Gebäude ist.</string>
+    <string name="town_deco_cinema_sign_name">Kino Schild</string>
+    <string name="town_deco_cinema_sign_desc">Es scheint so als ob ein Kino in dem Gebäude ist.</string>
+    <string name="town_deco_INN_sign_name">Bar Schild</string>
+    <string name="town_deco_INN_sign_desc">Es scheint so, als ob eine Bar in dem Gebäude ist.</string>
+
+
+    <string name="HealthDart_Name">Heilungs Dart</string>
+    <string name="HealthDart_Gender">männlich</string>
+    <string name="HealthDart_Info">Die Spitze dieses Dartes ist mit einem Heilungstrank versehen.</string>
+
+    <string name="HealthArrow_Name">Heilungs Pfeil</string>
+    <string name="HealthArrow_Gender">weiblich</string>
+    <string name="HealthArrow_Info">Die Spitze dieses Pfeils ist mit einem Heilungstrank versehen.</string>
+
+    <string name="AmokDart_Name">Amok Dart</string>
+    <string name="AmokDart_Gender">männlich</string>
+    <string name="AmokDart_Info">Die Lösung auf der Spitze dieses Dartes wird jeden in einen geistlosen und gnadenlosen Berserker verwandeln.</string>
+
+    <string name="AmokArrow_Name">Amok Pfeil</string>
+    <string name="AmokArrow_Gender">weiblich</string>
+    <string name="AmokArrow_Info">Die Lösung auf der Spitze dieses Pfeils wird jeden in einen geistlosen und gnadenlosen Berserker verwandeln.</string>
+
+    <string name="WndHero_SkillLevel">Fähigkeiten Level</string>
+
     </resources>

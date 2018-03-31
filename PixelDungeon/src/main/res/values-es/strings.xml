@@ -57,33 +57,6 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">El texto es indescifrable...</string>
   <string name="Dungeon_DeadEnd">¡¿Qué haces aquí?!</string>
-  <string-array name="Dungeon_Tips">
-    <item>No sobrestimes tu fuerza: usa armaduras y armas que puedas manejar. </item>
-    <item>No todas las puertas de la mazmorra son visibles a simple vista. Si estás atascado busca puertas secretas.</item>
-    <item>Recuerda: aumentar tu fuerza no es la única manera de acceder a equipo mejor. También puedes hacerlo rebajando sus requerimientos de fuerza con un Pergamino de Mejora.</item>
-    <item>Puedes gastar tu oro en los niveles más bajos de la mazmorra. La primera tienda está en el nivel 6.</item>
-    <item>¡Cuidado con las viscosidades!</item>
-    <item>Merca-Pixel - ¡Todo lo que necesitas para tener éxito en tu aventura!</item>
-    <item>Identifica tus pergaminos y pociones tan pronto como puedas. No lo pospongas hasta el momento en el que realmente los necesites.</item>
-    <item>Tener hambre no es malo, pero morirse de hambre... sí.</item>
-    <item>Los ataques sorpresa tienes mejores posibilidades de golpear al enemigo. Por ejemplo, puedes emboscar a un enemigo detrás de una puerta por la que sabes que va a pasar.</item>
-    <item>¡No dejes salir a los Tengu!</item>
-    <item>Merca-Pixel - Gasta dinero. Vive más tiempo.</item>
-    <item>Cuando estés siendo atacado por varios monstruos a la vez, intenta retirarte hasta detrás de una puerta.</item>
-    <item>Si estás en llamas y levitando a la vez no podrás apagar el fuego caminando sobre el agua.</item>
-    <item>No tiene sentido tener más de un Ankh a la vez, ya que los perderás una vez resucites.</item>
-    <item>¡PELIGRO! ¡La maquinaria pesada puede causar heridas, pérdida de extremidades e incluso la muerte!</item>
-    <item>Merca-Pixel. Por una vida más segura en la mazmorra.</item>
-    <item>Cuando mejoras un arma encantada hay una posibilidad de destruir ese encantamiento.
-</item>
-    <item>En un Pozo de Transmutación puedes obtener objetos imposibles de conseguir de otra manera.</item>
-    <item>La única manera de encantar un arma es mejorándola con un Pergamino de mejora de arma.</item>
-    <item>¡No se permiten armas en presencia de Su Majestad!</item>
-    <item>Merca-Pixel. ¡Precios especiales para los cazadores de demonios!</item>
-    <item>El texto está escrito en lenguaje demoníaco.</item>
-    <item>El texto está escrito en lenguaje demoníaco</item>
-    <item>El texto está escrito en lenguaje demoníaco</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>A régimen</item>

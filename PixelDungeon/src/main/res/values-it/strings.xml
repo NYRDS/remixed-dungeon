@@ -57,32 +57,6 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Il testo è indecifrabile...</string>
   <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
-  <string-array name="Dungeon_Tips">
-    <item>Non sopravvalutare la tua forza, Usa armi e armature adatte a te.</item>
-    <item>Non tutte le porte si notano a prima vista. Se sei bloccato, cerca porte nascoste.</item>
-    <item>Ricorda che aumentare la tua forza non è l\'unico modo per accedere ad equipaggiamento migliore, puoi anche diminuirne la forza richiesta con Pergamene di Potenziamento.</item>
-    <item>Puoi spendere il tuo oro in mercati di livelli più avanzati del dungeon. Il primo è al piano 6.</item>
-    <item>In guardia! Goo è vicino!</item>
-    <item>Pixel-Mart - ciò che ti serve per un\'avventura fruttuosa!</item>
-    <item>Identifica le tue pozioni e pergamente il prima possibile. Non ridurti al momento in cui ti serviranno davvero.</item>
-    <item>Essere affamati non è doloroso, ma morire di fame lo è.</item>
-    <item>Gli attacchi a sorpresa colpiranno con maggiore probabilità. Per esempio, puoi tendere un imboscata ai nemici aspettandoli dietro a porte chiuse.</item>
-    <item>Non lasciare uscire il Tengu!</item>
-    <item>Pixel-Mart. Spendi denaro. Vivi più a lungo.</item>
-    <item>Quando sei attaccato da più mostri, ritirati dietro una porta.</item>
-    <item>Se bruci mentre leviti, non puoi estinguere il fuoco nell\'acqua.</item>
-    <item>Non ha senso possedere più di un Ankh alla volta, li perderai nella resurrezione.</item>
-    <item>PERICOLO! I macchinari pesanti possono causare infortuni, perdita di arti o morte!</item>
-    <item>Pixel-Mart. Una vita più sicura nei dungeon.</item>
-    <item>Quando potenzi un oggetto incantato, c\'è la possibilità di distruggere quell\'incantesimo.</item>
-    <item>Un pozzo della trasmutazione può farti ottenere oggetti che non potresti ottenere altrimenti.</item>
-    <item>L\'unico modo di potenziare un arma è usare una Pergamena di Potenziamento delle Armi.</item>
-    <item>Le armi non sono ammesse al cospetto di Sua Mestà!</item>
-    <item>Pixel-Mart. Prezzi speciali per Cacciatori di Demoni!</item>
-    <item>Il testo è scritto in linguaggio demoniaco.</item>
-    <item>Il testo è scritto in linguaggio demoniaco.</item>
-    <item>Il testo è scritto in linguaggio demoniaco.</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Sulla dieta</item>

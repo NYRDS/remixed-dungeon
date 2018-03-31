@@ -57,32 +57,6 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">O texto é indecifrável...</string>
   <string name="Dungeon_DeadEnd">O que está fazendo aqui?</string>
-  <string-array name="Dungeon_Tips">
-    <item>Não superestime sua força, user armas e armaduras que voce consiga carregar.</item>
-    <item>Nem todas as portas do calabouço estão visíveis a primeira vista. Se você estiver encurralado, procure por portas escondidas.</item>
-    <item>Lembre-se que aumentar a sua força não é o único meio de conseguir utilizar melhores equipamentos, você pode tentar outra forma reduzindo a forca requerida para usar o item com os Pergaminhos de  Atualização.</item>
-    <item>Você pode gastar o seu ouro em vendas existentes nos níveis mais baixos do calabouço. A primeira fica no sexto nível. </item>
-    <item>Cuidado com o Goo!</item>
-    <item>Pixel-Mart - tudo o que você precisa para ter sucesso em sua aventura!</item>
-    <item>Identifique suas poções e pergaminhos assim que possível. Não deixe para o momento em que você realmente precise usá-los.</item>
-    <item>Estar com fome não lhe causa dano, mas estar faminto causa.</item>
-    <item>Um ataque-surpresa tem maior chance de ser bem sucedido. Você pode por exemplo, emboscar seu inimigo ao ficar atrás de uma porta fechada quando perceber que ele está se aproximando.</item>
-    <item>Não deixe O Tengu escapar!</item>
-    <item>Pixel-Mart. Use seu dinheiro. Viva por mais tempo.</item>
-    <item>Quando você for atacado por muitos monstros ao mesmo tempo, tente se esconder atrás de uma porta.</item>
-    <item>Quando você está em chamas e levitando ao mesmo tempo, não é possivel apagar o fogo usando as poças de água.</item>
-    <item>Não tem sentido possuir mais de um Ankh ao mesmo tempo, pois você irá perdê-los quando ressucitar.</item>
-    <item>PERIGO! Maquinário pesado pode causar ferimento, perda de membros ou a morte!</item>
-    <item>Pixel-Mart. Uma vida mais segura no calabouço.</item>
-    <item>Quando você evolui uma arma encantada, existe uma chance de destruir o encantamento dela.</item>
-    <item>A Transmutação do Bem pode dar-lhe um item que não pode ser obtido de outra maneira.</item>
-    <item>A única forma de encantar uma arma é evoluindo-a com o Pergaminho de Evoluir Armas.</item>
-    <item>Nao é permitido portar armas na presença de Vossa Masjestade!</item>
-    <item>Pixel-Mart. Preços especiais para caçadores de demônios!</item>
-    <item>O texto é escrito em linguagem demoníaca.</item>
-    <item>O texto é escrito em linguagem demoníaca.</item>
-    <item>O texto é escrito em linguagem demoníaca.</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Em dieta</item>

@@ -1,4 +1,55 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
+    <string name="BlackCat_Name">Czarny kot</string>
+    <string name="BlackCat_Gender">kobiecy</string>
+    <string name="BlackCat_Name_Objective">kot</string>
+    <string name="BlackCat_Desc">to jest czarny kot</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Miał</item>
+        <item>Miałł.....</item>
+        <item>Miał!</item>
+    </string-array>
+
+    <string name="Str_lose">-1 siły</string>
+
+    <string name="SociologistNPC_Name">Socjolog</string>
+    <string name="SociologistNPC_Gender">męski</string>
+    <string name="SociologistNPC_Name_Objective">Sociolog</string>
+    <string name="SociologistNPC_Desc">To jest socjolog na świętej misji zbierania opinii publicznej</string>
+
+    <string name="SociologistNPC_AlreadyTaken">Już wypełniłeś ankietę, proszę przyjść później. </string>
+    <string name="SociologistNPC_Hi">Witaj!\nChciałbyś wsiąść udział w naszej ankiecie ?(Wymagany jest dostęp do internetu)\nTwoja opinia ma znaczenie!</string>
+    <string name="SociologistNPC_InternetRequired">Przepraszam, ale bez dostępu do internetu nie możesz wypełnić naszej ankiety</string>
+    <string name="SociologistNPC_DownloadError">Przepraszam, coś poszło nie tak może lepiej spróbować później ?</string>
+
+    <string name="town_deco_library_sign_name">Znak Bbiblioteki</string>
+    <string name="town_deco_library_sign_desc">Wygląda na to że w środku tego budynku znajduje się biblioteka </string>
+    <string name="town_deco_identifier_sign_name">Znak Magicznej Kuli</string>
+    <string name="town_deco_identifier_sign_desc">Wygląda na to, że w tym budynku znajduje się wróżbita </string>
+    <string name="town_deco_cinema_sign_name">Znak Kina</string>
+    <string name="town_deco_cinema_sign_desc">Wygląda na to że w środku tego budynku znajduje się kino</string>
+    <string name="town_deco_INN_sign_name">Znak Tawerny</string>
+    <string name="town_deco_INN_sign_desc">Wygląda na to że w środku tego budynku znajduje się tawerna</string>
+
+
+    <string name="HealthDart_Name">Uzdrawiająca Rzutka </string>
+    <string name="HealthDart_Gender">męska</string>
+    <string name="HealthDart_Info">Czubek tej rzutki pokryty jest leczniczą miksturą </string>
+
+    <string name="HealthArrow_Name">Uzdrawiająca Strzała</string>
+    <string name="HealthArrow_Gender">kobieca</string>
+    <string name="HealthArrow_Info">Czubek tej strzały pokryty jest leczniczą miksturą </string>
+
+    <string name="AmokDart_Name">Rzutka Szału</string>
+    <string name="AmokDart_Gender">męska</string>
+    <string name="AmokDart_Info">Roztwór na grocie tej rzutki zamieni każdego w  bezmyślnego i okrutnego berserka.</string>
+
+    <string name="AmokArrow_Name">Strzała Szału</string>
+    <string name="AmokArrow_Gender">kobieca</string>
+    <string name="AmokArrow_Info">Roztwór na grocie tej strzały zamieni każdego w  bezmyślnego i okrutnego berserka.</string>
+
+    <string name="WndHero_SkillLevel">Poziom Umiejętności  </string>
+
     </resources>
