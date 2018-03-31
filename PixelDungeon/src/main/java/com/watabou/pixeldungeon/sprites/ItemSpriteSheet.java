@@ -45,11 +45,8 @@ public class ItemSpriteSheet {
 	
 	// Missiles
 	public static final int SHURIKEN		= 15;
-	public static final int DART			= 31;
 	public static final int BOOMERANG		= 106;
 	public static final int TOMAHAWK		= 107;
-	public static final int INCENDIARY_DART	= 108;
-	public static final int CURARE_DART		= 109;
 	public static final int JAVELIN			= 110;
 	
 	// Wands
