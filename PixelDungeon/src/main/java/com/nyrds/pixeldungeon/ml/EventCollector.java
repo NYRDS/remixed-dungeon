@@ -81,18 +81,24 @@ public class EventCollector {
 	}
 
 	static public void startTiming(String id) {
-		timings.put(id, SystemClock.elapsedRealtime());
+		if(!mDisabled) {
+			timings.put(id, SystemClock.elapsedRealtime());
+		}
 	}
 
 	static public void stopTiming(String id, String category, String variable, String label) {
-		long time = SystemClock.elapsedRealtime();
-		long delta = time - timings.get(id);
-		mTracker.send(new HitBuilders.TimingBuilder()
-				.setCategory(category)
-				.setValue(delta)
-				.setVariable(variable)
-				.setLabel(label)
-				.build());
+
+		if(!mDisabled) {
+			long time = SystemClock.elapsedRealtime();
+			long delta = time - timings.get(id);
+
+			mTracker.send(new HitBuilders.TimingBuilder()
+					.setCategory(category)
+					.setValue(delta)
+					.setVariable(variable)
+					.setLabel(label)
+					.build());
+		}
 	}
 
 	static public void stopTiming(String id) {
