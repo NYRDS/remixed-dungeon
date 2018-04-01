@@ -19,13 +19,11 @@ package com.watabou.pixeldungeon;
 
 import android.support.annotation.Nullable;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -45,15 +43,12 @@ public abstract class DungeonTilemap extends Tilemap {
 
 	static public DungeonTilemap factory(Level level, String tiles) {
 		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
-		if(probe.size() == 64) {
-			return new ClassicDungeonTilemap(level, tiles);
-		}
 
 		if(probe.size() == 256) {
 			return new VariativeDungeonTilemap(level, tiles);
 		}
 
-		throw new TrackedRuntimeException(Utils.format("unsupported atlas size %d in %s", probe.size(), tiles));
+		return new ClassicDungeonTilemap(level, tiles);
 	}
 
 	public int screenToTile(int x, int y) {

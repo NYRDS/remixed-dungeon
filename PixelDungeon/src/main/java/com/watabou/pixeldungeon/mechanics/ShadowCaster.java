@@ -48,7 +48,7 @@ public final class ShadowCaster {
 
 		losBlocking = Dungeon.level.losBlocking;
 		
-		ShadowCaster.distance = Math.min(distance, MAX_DISTANCE);
+		distance = ShadowCaster.distance = Math.min(distance, MAX_DISTANCE);
 		limits = rounding[distance];
 		
 		ShadowCaster.fieldOfView = fieldOfView;
