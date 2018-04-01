@@ -57,15 +57,13 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 				
 				FileOutputStream fos = new FileOutputStream(file);
 
-				byte buffer[] = new byte[4096];
+				byte buffer[] = new byte[16384];
 				int count;
 				int bytesDownloaded = 0;
 				while ((count = is.read(buffer)) != -1) {
 					fos.write(buffer, 0, count);
 					bytesDownloaded += count;
-					if(count > 0){
-						publishProgress( (100 * bytesDownloaded) / bytesTotal);
-					}
+					publishProgress( (100 * bytesDownloaded) / bytesTotal);
 				}
 
 				fos.close();
