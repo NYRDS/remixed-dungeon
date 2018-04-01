@@ -52,4 +52,8 @@
 
     <string name="WndHero_SkillLevel">Fähigkeiten Level</string>
 
-    </resources>
+    <string name="town_deco_sofa_name">Gemütliches Sofa</string>
+    <string name="town_deco_sofa_desc">Sieht so aus, als ob dieses Kino versucht die besten Plätze für die Kunden anzubieten.</string>
+
+
+</resources>
