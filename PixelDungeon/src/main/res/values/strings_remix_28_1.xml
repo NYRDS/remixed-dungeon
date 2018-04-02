@@ -55,5 +55,11 @@
     <string name="town_deco_sofa_name">Cozy sofa</string>
     <string name="town_deco_sofa_desc">Looks like this cinema really try to provide best seats for it customers.</string>
 
+    <string name="town_deco_book_desc">Book</string>
+    <string name="town_deco_book_name">This book looks like someone negligent left it</string>
+
+    <string name="town_deco_magic_ball_desc">Magic ball</string>
+    <string name="town_deco_magic_ball_desc">Who knows what kind of secrets keeps this magic ball?</string>
+
 
 </resources>
