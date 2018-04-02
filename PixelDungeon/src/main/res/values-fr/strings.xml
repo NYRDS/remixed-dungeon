@@ -21,9 +21,9 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="Char_Name">ennemi</string>
   <string name="Char_Name_Objective">ennemi</string>
   <string-array name="Char_Hit">
-    <item>%1$s frappe %2$s</item>
-    <item>%1$s frappe %2$s</item>
-    <item>%1$s frappe %2$s</item>
+    <item>%1$s%2$s frappe</item>
+    <item>%1$s%2$s frappe</item>
+    <item>%1$s%2$s frappe </item>
   </string-array>
   <string-array name="Char_Kill">
     <item>%s vous a tué...</item>
@@ -44,7 +44,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <item>esquivé</item>
   </string-array>
   <string name="Char_StaPoisoned">empoisonné</string>
-  <string name="Char_StaAmok">contrôle perdu</string>
+  <string name="Char_StaAmok">Folie</string>
   <string name="Char_StaSlowed">ralenti</string>
   <string name="Char_StaMind">vision</string>
   <string name="Char_StaVision">esprit</string>
@@ -58,32 +58,6 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Le texte est indéchiffrable...</string>
   <string name="Dungeon_DeadEnd">Que faites vous ici ?!</string>
-  <string-array name="Dungeon_Tips">
-    <item>Ne surestimez pas votre force. N\'utilisez que des armes et des armures que vous pouvez porter.</item>
-    <item>Toutes les portes du donjon ne sont pas visibles du premier coup. Si vous êtes bloqué, cherchez des portes cachées.</item>
-    <item>Souvenez-vous qu\'augmenter votre force n\'est pas le seul moyen d\'accéder à de meilleurs équipements, vous pouvez faire l\'inverse et diminuer la force requise d\'un objet en l\'améliorant.</item>
-    <item>Vous pouvez dépenser votre or aux marchés du donjon, le premier se trouvant au 6e étage.</item>
-    <item>Prenez garde au Flan !</item>
-    <item>Pixel marché - tout ce dont vous avez besoin pour une aventure réussie !</item>
-    <item>Identifiez vos potions et parchemins le plus tôt possible, ne le faites pas au moment où vous en auriez le plus besoin.</item>
-    <item>Avoir faim n\'est pas dangereux, mais être affamé est dangereux.</item>
-    <item>Une attaque surprise a plus de chances de réussir. Par exemple, vous pouvez embusquer vos ennemis derrière une porte quand vous savez qu\'ils arrivent.</item>
-    <item>Ne laissez pas le Tengu s\'échapper !</item>
-    <item>Pixel-marché - dépensez de l\'argent : vivez plus longtemps !</item>
-    <item>Quand vous êtes attaqué par plusieurs monstres en même temps, essayez de battre en retraite derrière une porte.</item>
-    <item>Si vous brûlez, vous ne pourrez pas éteindre le feu en marchant dans l\'eau tout en lévitant !.</item>
-    <item>Il n\'ya aucun sens à posséder deux Ankhs à la fois car vous les perdrez tous les deux en ressuscitant.</item>
-    <item>DANGER ! La machinerie peut causer des blessures, un démembrement ou même la mort !</item>
-    <item>Pixel-marché - pour un donjon plus tranquille.</item>
-    <item>Quand vous améliorez une arme enchantée, il est possible que l\'enchantement soit détruit.</item>
-    <item>Les puits de transmutation vous permettent d\'obtenir des objets uniques, qui ne pourraient pas être obtenus autrement.</item>
-    <item>La seule manière d\'enchanter une arme est de l\'améliorer avec un parchemin d\'amélioration d\'arme.</item>
-    <item>Aucune arme tolérée en présence de sa majesté !</item>
-    <item>Pixel-marché - Des réductions pour les chasseurs de démons !</item>
-    <item>Le texte est écrit dans une langue démoniaque.</item>
-    <item>Le texte est écrit dans une langue démoniaque.</item>
-    <item>Le texte est écrit dans une langue démoniaque.</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Au régime</item>

@@ -363,8 +363,8 @@
  </tile>
  <tile id="68">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="City_TileDescBookshelf"/>
+   <property name="deco_name" value="Level_TileBookshelf"/>
   </properties>
  </tile>
  <tile id="69">
@@ -375,14 +375,14 @@
  </tile>
  <tile id="70">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="City_TileDescBookshelf"/>
+   <property name="deco_name" value="Level_TileBookshelf"/>
   </properties>
  </tile>
  <tile id="71">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="City_TileDescBookshelf"/>
+   <property name="deco_name" value="Level_TileBookshelf"/>
   </properties>
  </tile>
  <tile id="72">
@@ -447,8 +447,8 @@
  </tile>
  <tile id="84">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="City_TileDescBookshelf"/>
+   <property name="deco_name" value="Level_TileBookshelf"/>
   </properties>
  </tile>
  <tile id="85">
@@ -459,14 +459,14 @@
  </tile>
  <tile id="86">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="City_TileDescBookshelf"/>
+   <property name="deco_name" value="Level_TileBookshelf"/>
   </properties>
  </tile>
  <tile id="87">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="City_TileDescBookshelf"/>
+   <property name="deco_name" value="Level_TileBookshelf"/>
   </properties>
  </tile>
  <tile id="88">

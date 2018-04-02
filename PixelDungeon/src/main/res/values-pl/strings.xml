@@ -57,32 +57,6 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Ten tekst jest niemożliwy do odczytania...</string>
   <string name="Dungeon_DeadEnd">Co ty tutaj robisz?!</string>
-  <string-array name="Dungeon_Tips">
-    <item>Nie przeceniaj swej siły. Używaj broni i pancerzy, które możesz udźwignąć.</item>
-    <item>Nie wszystkie drzwi w Lochu są widoczne na pierwszy rzut oka. Jeśli utkniesz, szukaj ukrytych drzwi.</item>
-    <item>Pamiętaj, że zwiększanie siły to nie jedyny sposób by zyskać dostęp do lepszego rynsztunku. Możesz pójść inną drogą i zmniejszyć wymagania siłowe przedmiotu ulepszając go Zwojem Ulepszenia.</item>
-    <item>Możesz wydać złoto w sklepach znajdujących się na niższych poziomach Lochu. Pierwszy z nich znajduje się na poziomie 6.</item>
-    <item>Do wszystkich sprzątaczy ścieków oraz konserwatorów rur kanalizacyjnych: NATYCHMIAST ZAWRÓĆCIE. Otrzymaliśmy doniesienia, że grasuje tutaj coś na kształt... Ożywionego szlamu, który pożarł żywcem wielu z naszych pracowników. Dla waszego bezpieczeństwa powróćcie do Miasta. Pozdrawiamy - Zarząd Konserwacji Miejskiego Systemu Kanalizacji </item>
-    <item>Pixel-Mart - wszystko czego potrzebujesz do udanej przygody!!</item>
-    <item>Zidentyfikuj swe zwoje i mikstury najszybciej jak możesz. Nie odkładaj ich na czarną godzinę.</item>
-    <item>Bycie głodnym nie boli, lecz konanie z głodu owszem.</item>
-    <item>Atak z zaskoczenia ma znacznie większą szansę powodzenia. Na przykład możesz złapać wroga w pułapkę, chowając się za drzwiami i atakując go kiedy je otworzy.</item>
-    <item>Nie wypuść Tengu na wolność!</item>
-    <item>Pixel-Mart. Wydawaj pieniądze. Żyj dłużej.</item>
-    <item>Kiedy zostaniesz zaatakowany przez kilka potworów, wycofaj się za drzwi.</item>
-    <item>Kiedy lewitujesz, nie możesz wejść do wody by ugasić pożar.</item>
-    <item>Nie ma sensu posiadania więcej niż jednego Ankh jednocześnie bo stracisz je po wskrzeszeniu.</item>
-    <item>UWAGA! Ciężka maszyneria może spowodować zranienie, utratę kończyn lub śmierć!</item>
-    <item>Pixel-Mart. Bezpieczniejsze życie w Lochu.</item>
-    <item>Kiedy ulepszasz zaklęte przedmioty, istnieje szansa na zniszczenie tego zaklęcia.</item>
-    <item>Studnia Transmutacji może być wykorzystana by uzyskać przedmiot niemożliwy do zdobycia naturalnie.</item>
-    <item>Jedynym sposobem na zaklęcie broni jest ulepszenie jej Zwojem Ulepszenia Broni.</item>
-    <item>Posiadanie broni w pobliżu Jego Wysokości jest surowo wzbronione!</item>
-    <item>Pixel-Mart. Specjalne ceny dla łowców demonów!</item>
-    <item>Ten tekst jest napisany w języku demonów.</item>
-    <item>Ten tekst jest napisany w języku demonów.</item>
-    <item>Ten tekst jest napisany w języku demonów.</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Na diecie</item>

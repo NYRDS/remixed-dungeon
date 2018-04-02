@@ -48,6 +48,6 @@
 
     <string name="ConcreteBlock_Name">Lourd bloc de béton.</string>
     <string name="ConcreteBlock_Description">Il semblerait que ce bloc exige %d points de force pour être poussé.</string>
-    <string name="Hero_AnotherTry">Vous êtes mort.\n Voulez-vous encore essayer une fois ?</string>
+    <string name="Hero_AnotherTry">Vous êtes mort.\n Voulez-vous essayer encore une fois ?</string>
 
 </resources>

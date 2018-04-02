@@ -28,7 +28,6 @@ import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
-import com.nyrds.pixeldungeon.mobs.npc.ArtificerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
@@ -211,7 +210,6 @@ public class MobFactory {
 		registerMobClass(LibrarianNPC.class);
 		registerMobClass(FortuneTellerNPC.class);
 		registerMobClass(CagedKobold.class);
-		registerMobClass(ArtificerNPC.class);
 
 		registerMobClass(Deathling.class);
 

@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -39,11 +38,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 			URL url   = new URL(m_url);
 			File file = new File(args[1]);
 
-			long startTime = System.currentTimeMillis();
-			
-			Log.d(TAG, "download beginning");
-			Log.d(TAG, "download url: " + url);
-			Log.d(TAG, "downloaded file name: " + file);
+			EventCollector.startTiming("download");
 
 			HttpsURLConnection ucon = NetCipher.getHttpsURLConnection(url);
 
@@ -62,21 +57,19 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 				
 				FileOutputStream fos = new FileOutputStream(file);
 
-				byte buffer[] = new byte[4096];
+				byte buffer[] = new byte[16384];
 				int count;
 				int bytesDownloaded = 0;
 				while ((count = is.read(buffer)) != -1) {
 					fos.write(buffer, 0, count);
 					bytesDownloaded += count;
-					if(bytesTotal > 0){
-						publishProgress( (100 * bytesDownloaded) / bytesTotal);
-					}
+					publishProgress( (100 * bytesDownloaded) / bytesTotal);
 				}
 
 				fos.close();
+				EventCollector.stopTiming("download","download",m_url,"");
 				publishProgress( 100 );
-				Log.d(TAG, Utils.format("%d bytes downloaded in: %3.3f sec",
-						bytesDownloaded, (System.currentTimeMillis() - startTime) / 1000f));
+
 				result = true;
 			} else {
 				result = false;
@@ -91,14 +84,10 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
     protected void onProgressUpdate(Integer... progress) {
     	m_listener.DownloadProgress(m_url, progress[0]);
+
     }
 
     protected void onPostExecute(Boolean result) {
-    	if(result){
-    		Log.d(TAG, "Download ok");
-    	} else {
-    		Log.d(TAG, "Download failed");
-    	}
     	m_listener.DownloadComplete(m_url, result);
     }
 

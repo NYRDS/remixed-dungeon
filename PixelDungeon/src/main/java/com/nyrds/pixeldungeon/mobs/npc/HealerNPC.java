@@ -17,6 +17,7 @@ public class HealerNPC extends ImmortalNPC {
 	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
 
 	public HealerNPC() {
+		movable = false;
 	}
 	
 	@Override

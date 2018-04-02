@@ -1,3 +1,77 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Accessories descriptions -->
+    <!-- STRINGS OF ChaosHelmet CLASS -->
+    <string name="ChaosHelmet_Name">混沌头盔</string>
+    <string name="ChaosHelmet_Info">血红色的头盔，ck你懂吗</string>
+
+
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s: 召唤上限提升 (最大值: %2$d)!</string>
+    <string name="Mana_Title">魔法</string>
+    <string name="Mana_Cost">魔法消耗：</string>
+    <string name="Spells_NotEnoughSP">你没有魔法来释放 \"%1$s\" 这个技能</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">召唤死灵</string>
+    <string name="SummonDeathling_Info">召唤死灵。 死灵的生命和攻击随你的等级的提升而提升。\n\n召唤上限：%1$d (每点法强提供+1上限)</string>
+
+    <!-- STRINGS OF Ignite CLASS -->
+    <string name="Ignite_Name">引燃</string>
+    <string name="Ignite_Info">引燃一个区域，物品，单位或地形。</string>
+
+    <!-- STRINGS OF RootSpell CLASS -->
+    <string name="RootSpell_Name">缠绕</string>
+    <string name="RootSpell_Info">缠绕一个单位，使其无法移动及进入隐身</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">狂风</string>
+    <string name="WindGust_Info">击退一个单位并将其沉默</string>
+
+    <!-- STRINGS OF FreezeGlobe CLASS -->
+    <string name="FreezeGlobe_Name">冰封</string>
+    <string name="FreezeGlobe_Info">冻结一个单位</string>
+
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">魔法之光</string>
+    <string name="MagicTorch_Info">魔法版火把</string>
+
+    <!-- STRINGS OF Healing CLASS -->
+    <string name="Healing_Name">活血术</string>
+    <string name="Healing_Info">治疗你1/3的最大生命值</string>
+
+    <!-- Items descriptions -->
+    <!-- STRINGS OF ClassArmor CLASS -->
+    <string name="ClassArmor_LowMana">魔法不足！</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="Drink_ACDrink">饮用</string>
+    <string name="Drink_Message">清爽的饮品！</string>
+
+    <!-- STRINGS OF Drink CLASS -->
+    <string name="TomeOfKnowledge_Name">法强书</string>
+    <string name="TomeOfKnowledge_Info">+1法强</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">技能书</string>
+    <string name="SpellBook_Info">装备来释放技能</string>
+    <string name="SpellBook_Info_Identified">在这本书上你了解了\"%1$s\"技能.\n\" %2$s \"</string>
+
+
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">魔法药水</string>
+    <string name="ManaPotion_Info">提供魔法值</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">这个蘑菇吃起来很怪！</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">地牢的组成要素之一，极差的基础照明。</string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">技能</string>
+    <string name="WndSpells_Level">法强：</string>
+
+</resources>

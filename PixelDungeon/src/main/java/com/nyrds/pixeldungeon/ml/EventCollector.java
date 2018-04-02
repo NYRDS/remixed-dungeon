@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ml;
 
 import android.content.Context;
+import android.os.SystemClock;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -20,7 +21,7 @@ public class EventCollector {
 	static private Tracker mTracker;
 	static private boolean mDisabled = true;
 
-	static private HashMap<String, Long> timings;
+	static private HashMap<String, Long> timings = new HashMap<>();
 
 	private static boolean googleAnalyticsUsable() {
 		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
@@ -80,11 +81,28 @@ public class EventCollector {
 	}
 
 	static public void startTiming(String id) {
+		if(!mDisabled) {
+			timings.put(id, SystemClock.elapsedRealtime());
+		}
+	}
 
+	static public void stopTiming(String id, String category, String variable, String label) {
+
+		if(!mDisabled) {
+			long time = SystemClock.elapsedRealtime();
+			long delta = time - timings.get(id);
+
+			mTracker.send(new HitBuilders.TimingBuilder()
+					.setCategory(category)
+					.setValue(delta)
+					.setVariable(variable)
+					.setLabel(label)
+					.build());
+		}
 	}
 
 	static public void stopTiming(String id) {
-
+		stopTiming(id,"timings",id,"none");
 	}
 
 	public static void collectSessionData(String key, String value) {

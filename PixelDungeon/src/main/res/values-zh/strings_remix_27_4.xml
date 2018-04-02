@@ -1,4 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <string name="Item_Info2">啥玩意</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">获得释放瘟疫的能力</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">获得召唤死灵的能力</string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">死亡精灵</string>
+    <string name="Necrotism_ACSpecial">死亡精灵</string>
+    <string name="ResultDescriptions_Necrotism">在%d死亡</string>
+    <string name="Necrotism_Death">你被死亡精灵击杀</string>
+    <string name="Badges_DeathNecrotism">死于瘟疫</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">选择一个位置</string>
+    
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">等级</string>
+    <string name="WndJournal_Logbook">事件记录</string>
+
+</resources>

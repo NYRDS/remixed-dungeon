@@ -117,12 +117,13 @@
 - Ikona kontroli umysłu (widoczna nad przeciwnikami) została zmieniona na serduszko\n
 - Polepszono widoczność «nowej czcionki\n
 - Zaktualizowano tłumaczenia\n
-- Usunięto ustawienia: «tryb immersyjny» oraz «skalowanie UI»\n</string>
+- Usunięto ustawienia: «tryb immersyjny» oraz «skalowanie UI»\n
+</string>
   <string name="Welcome_Text_25_1">
  remix.25.1:\n
  --Co nowego--\n
  - Nowy typ bohatera: Nekromanta\n
- - Od teraz tylko Nekromanta dostaje XP przeciwników zabitych przez Chowańców\n
+ - Od teraz tylko Nekromanta dostaje XP zabprzeciwników zabitych przez sługi\n
  - Nekromanta ma wieksze szanse na Ostrze Poświęcenia\n
  --Zbalansowanie--\n
  - Wszystkie potwory poziomów Necropolis zostały osłabione\n
@@ -132,7 +133,7 @@
  - Od teraz Bossowie już nie \"polują\" domyślnie.\n
  - Zmniejszono szansę wskrzeszenia dla Gnoll-Zombie\n
  - Osłabiono Pseudo-Szczura\n
- - Od teraz Czarna Czaszka wymaga 10 ładunkow do aktywacji (zamiast 15), ale śmierć Chowańców już jej nie ładuje.\n
+ - Od teraz Czarna Czaszka wymaga 10 ładunkow do aktywacji zamiast 15, ale śmierć Chowańców już jej nie ładuje.\n
  - Treacherous Spirit nie może już być Chowańcem.\n
  --Wizualne--\n
  - Zaktualizowano grafiki Kanałów\n
@@ -144,6 +145,39 @@
  - Modyfikacje użytkowników mogą zawierac przedmioty kodeksu z własnym tekstem\n
  - Modyfikacje użytkowników pozwalaja na własne grafiki, wodę i muzykę dla poziomów\n
  </string>
+  <string name="Welcome_Text_25_2">
+        remix.25.2:\n
+        --Nowości--\n
+        - Teraz można manualnie zmniejszać interfejs podczas gry. Funkcja ta jest dostępna w ustawieniach\n
+        -Łatki--\n
+        - Naprawiono bug który tworzył obraz bohatera podczas użycia \"Sprawdź\" w menu czapek\n
+        - Naprawiono buf który uniemożliwiał spadanie poczwar (przywołanych lub wskrzeszonych na dziurawej podłodze) w dół \n
+        - Zaktualizowano tłumaczenia oraz poprawiono kilka literówek\n
+        </string>
+  <string name="Welcome_Text_25_3">
+        remix.25.3:\n
+        - Dodanie wybuchowych beczek (w Halloween zostaną  zamienione  na dynie)\n
+        - Dodano oryginalną muzyką dla bossa poziomu \n
+        - Nowy przedmiot: Placek z Dyni\n
+        - Nowy NPC; Strach na wróble\n
+        - Nowe przedmioty wizualne : Maska Zombie, Wampirza Czaszka oraz Usznaka\n
+        </string>
+  <string name="Welcome_Text_25_4">
+        remix.25.4:\n
+        --Gra--\n
+        - Beczki mogą być teraz popychane przez Różdżkę Telekinezy\n
+        - Mniejsza szansa na pojawienie się beczki w korytarzu \n
+        - Włócznia, Glewia oraz Halabarda należą teraz do podtypu \"Broń Drzewcowa\", zwiększają one zasięg ataku bohatera  (Poprzednio tylko włócznia dawała taką możliwość )\n
+        - Zmniejszono prędkość ataku \"Broni Drzewcowej\" w imię balansu, ze względu na zwiększenie zasięgu ataku\n
+        - Na stronie tytułowej widnieje teraz napis \"Remixed Pixel Dungeon\"\n
+        - Zakładka \"O grze\" została zaktualizowana \n
+        -  Muzyczka bossa gra teraz tylko podczas walki wyjątkiem jest Yog (Poziom 31 posada muzyczkę walki z bossem od momentu wejścia na piętro.\n
+        - Aktualizacja tłumaczenia  (+nowy język: Turecki)\n
+        --Mody--\n
+        - Mody wspierają teraz własne klucze\n
+        - Niektóre poczwary mogą mieć ręcznie ustawiony poziom mocy\n
+        - Poczwary \"Albinosy\" są teraz dostępne w modach.\n
+        </string>
   <string name="Welcome_Text_27_2">
         remix.27.2\n
         --Gra:\n
@@ -201,5 +235,15 @@
     - Wielki zmiany w tłumaczeniu Brazylijsko-Portugalskim\n
     - Nowe klasy bohatera dla modów: forbiddenActions, friendlyMobs\n
     - Dodano nowy język: Malajski \n
+    </string>
+  <string name="Welcome_Text_28_1">
+    remix.28.1\n
+    - Wielka renowacja Miasta\n
+    - Dużo poprawek graficznych oraz łateks\n
+    - Nowe Strzałki i Rzutki \n
+    - Teraz wszystkie poczwary (oprócz nieumarłych) będą się regenerować  \n
+    - Teraz siła będzie zapewniać zwiększone obrażenia dla każdej z klas\n
+    - Wróżbita posada teraz Kota\n
+    - Gnoli tomahawk teraz się nie złamie podczas rzutu w cel   Pozdrawiam Tłumacz\n
     </string>
 </resources>
