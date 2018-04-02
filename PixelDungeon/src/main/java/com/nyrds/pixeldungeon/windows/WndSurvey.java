@@ -82,14 +82,14 @@ public class WndSurvey extends Window {
 
 				float y = questionText.bottom() + GAP*2;
 
-				JSONArray answersArray = questionDesc.getJSONArray("answers");
+				final JSONArray answersArray = questionDesc.getJSONArray("answers");
 
 				for(int i = 0;i<answersArray.length();++i) {
-					final int finalI = i;
-					RedButton button = new RedButton(answersArray.getString(i)) {
+					final String answer = answersArray.getString(i);
+					RedButton button = new RedButton(answer) {
 						@Override
 						protected void onClick() {
-							EventCollector.logEvent("survey",questionString, Integer.toString(finalI));
+							EventCollector.logEvent("survey",questionString, answer);
 							NextQuestion();
 						}
 					};
