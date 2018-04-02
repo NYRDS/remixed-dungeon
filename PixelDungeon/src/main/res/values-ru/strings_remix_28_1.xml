@@ -1,4 +1,59 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <string name="BlackCat_Name">Чёрный кот</string>
+    <string name="BlackCat_Gender">feminine</string>
+    <string name="BlackCat_Name_Objective">кота</string>
+    <string name="BlackCat_Desc">Это чёрный кот</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Мяу</item>
+        <item>Мяу...</item>
+        <item>Мяу!</item>
+    </string-array>
+
+    <string name="Str_lose">-1 сила</string>
+
+    <string name="SociologistNPC_Name">Социолог</string>
+    <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_Name_Objective">Социолог</string>
+    <string name="SociologistNPC_Desc">Этот социолог охвачен священным рвением сбора общественного мнения</string>
+
+    <string name="SociologistNPC_AlreadyTaken">Ты уже участвовал в этом опросе, возвращайся позже</string>
+    <string name="SociologistNPC_Hi">\"Здравствуй!\nТы бы хотел прирять участие в нашем опросе?(Потребуется соединение с интернетом)\nТвоё мнение имеет значение!\"</string>
+    <string name="SociologistNPC_InternetRequired">Сожалею, но без доступа к Интернет ты не сможешь принять участие в нашем опросе.</string>
+    <string name="SociologistNPC_DownloadError">Извините, что-то пошло не так, попробуйте снова позже</string>
+
+    <string name="town_deco_library_sign_name">Вывеска библиотеки</string>
+    <string name="town_deco_library_sign_desc">Вероятно в этом здании находится библиотека.</string>
+    <string name="town_deco_identifier_sign_name">Вывеска магического шара</string>
+    <string name="town_deco_identifier_sign_desc">Вероятно гадалка живёт в этом здании.</string>
+    <string name="town_deco_cinema_sign_name">Вывеска кинотеатра</string>
+    <string name="town_deco_cinema_sign_desc">Вероятно в этом здании находится кинотеатр.</string>
+    <string name="town_deco_INN_sign_name">Вывеска гостиницы</string>
+    <string name="town_deco_INN_sign_desc">Вероятно в этом здании находится гостиница.</string>
+
+
+    <string name="HealthDart_Name">Исцеляющий Дротик</string>
+    <string name="HealthDart_Gender">masculine</string>
+    <string name="HealthDart_Info">Наконечник этого дротика покрыт исцеляющим зельем.</string>
+
+    <string name="HealthArrow_Name">Исцеляющая Стрела</string>
+    <string name="HealthArrow_Gender">feminine</string>
+    <string name="HealthArrow_Info">Наконечник этой стрелы покрыт исцеляющим зельем.</string>
+
+    <string name="AmokDart_Name">Дротик Буйства</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">Раствор на наконечнике этого дротика привратит любого в беспощадного берсерка.</string>
+
+    <string name="AmokArrow_Name">Стрела Буйства</string>
+    <string name="AmokArrow_Gender">feminine</string>
+    <string name="AmokArrow_Info">Раствор на наконечнике этой стрелы привратит любого в беспощадного берсерка.</string>
+
+    <string name="WndHero_SkillLevel">Уровень мастерства</string>
+
+    <string name="town_deco_sofa_name">Уютный диван</string>
+    <string name="town_deco_sofa_desc">Видимо в этом кинотеатр очень стараются чтобы предоставить лучшие сиденья своим посетителям.</string>
+
+
+</resources>
