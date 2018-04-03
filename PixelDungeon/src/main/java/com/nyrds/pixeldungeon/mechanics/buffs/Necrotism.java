@@ -80,7 +80,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 				int p = n + cell;
 				Char ch = Actor.findChar(p);
 				if (Dungeon.level.cellValid(p) && ch != null && !(ch instanceof  Hero) && !(ch instanceof NPC)){
-					if(Random.Int(1) == 0 && ch.buff(Necrotism.class) == null){
+					if(Random.Int(1) == 0 && !ch.hasBuff(Necrotism.class)){
 						Buff.affect( ch, Necrotism.class ).set(duration, iteration + 1);
 					}
 				}

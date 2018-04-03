@@ -42,7 +42,7 @@ public class WndPriest extends Window {
 		GOLD_COST_PER_MINION *= Game.instance().getDifficultyFactor();
 		GOLD_COST            *= Game.instance().getDifficultyFactor();
 
-		if (hero.buff( RingOfHaggler.Haggling.class )!= null)
+		if (hero.hasBuff(RingOfHaggler.Haggling.class ))
 		{
 			GOLD_COST = (int) (GOLD_COST * 0.9);
 			GOLD_COST_PER_MINION = (int) (GOLD_COST_PER_MINION * 0.9);

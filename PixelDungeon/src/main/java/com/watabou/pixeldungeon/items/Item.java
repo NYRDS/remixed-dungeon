@@ -475,7 +475,7 @@ public class Item implements Bundlable, Presser {
 
 			// FIXME
 			delay *= ((MissileWeapon) this).speedFactor(user);
-			if (enemy != null && enemy.buff(SnipersMark.class) != null) {
+			if (enemy != null && enemy.hasBuff(SnipersMark.class)) {
 				delay *= 0.5f;
 			}
 		}

@@ -677,7 +677,7 @@ public class Dungeon {
 			return Actor.findChar(to) == null && (pass[to] || level.avoid[to]) ? to : -1;
 		}
 
-		if (ch.isFlying() || ch.buff(Amok.class) != null) {
+		if (ch.isFlying() || ch.hasBuff(Amok.class)) {
 			BArray.or(pass, level.avoid, passable);
 		} else {
 			System.arraycopy(pass, 0, passable, 0, level.getLength());

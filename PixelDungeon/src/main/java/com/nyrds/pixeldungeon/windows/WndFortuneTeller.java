@@ -41,7 +41,7 @@ public class WndFortuneTeller extends Window {
 
 		GOLD_COST *= Game.instance().getDifficultyFactor();
 
-		if (hero.buff( RingOfHaggler.Haggling.class )!= null)
+		if (hero.hasBuff(RingOfHaggler.Haggling.class ))
 		{
 			GOLD_COST = (int) (GOLD_COST * 0.9);
 		}

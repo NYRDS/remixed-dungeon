@@ -51,6 +51,6 @@ public class Regeneration extends Buff {
 
 	@Override
 	public boolean attachTo( Char target ) {
-        return target.buff(Regeneration.class) == null && super.attachTo(target);
+        return target.hasBuff(Regeneration.class) || super.attachTo(target);
     }
 }

@@ -53,9 +53,9 @@ public class Rat extends Mob {
 
 	@Override
 	protected boolean canAttack(Char enemy) {
-		if(enemy.buff(RatSkull.RatterAura.class) != null) {
+		if(enemy.hasBuff(RatSkull.RatterAura.class)) {
 			setState(FLEEING);
-			if(buff(Terror.class)==null) {
+			if(!hasBuff(Terror.class)) {
 				new Flare(5, 32).color(0xFF0000, true).show(getSprite(), 2f);
 				Terror terror = Buff.affect(this, Terror.class, Terror.DURATION);
 				terror.source = enemy;

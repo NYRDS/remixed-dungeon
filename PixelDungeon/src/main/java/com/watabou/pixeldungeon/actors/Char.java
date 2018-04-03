@@ -54,6 +54,7 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
@@ -82,9 +83,11 @@ public abstract class Char extends Actor implements Presser{
 	private static final String TXT_YOU_MISSED = Game.getVar(R.string.Char_YouMissed);
 	private static final String TXT_SMB_MISSED = Game.getVar(R.string.Char_SmbMissed);
 
-	private static final String TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
+	private static final String   TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
 
-	private int pos = 0;
+
+    private int      pos      = 0;
+	public  Fraction fraction = Fraction.DUNGEON;
 
 	protected CharSprite sprite;
 
@@ -301,7 +304,7 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	protected boolean inFury() {
-		return (buff(Fury.class) != null) || (buff(RageBuff.class) != null);
+		return (hasBuff(Fury.class) || hasBuff(RageBuff.class) );
 	}
 
 	public int damageRoll() {
@@ -323,7 +326,7 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public float speed() {
-		return buff(Cripple.class) == null ? baseSpeed : baseSpeed * 0.5f;
+		return hasBuff(Cripple.class) ? baseSpeed * 0.5f : baseSpeed;
 	}
 
 	public void damage(int dmg, Object src) {
@@ -341,7 +344,7 @@ public abstract class Char extends Actor implements Presser{
 			dmg = Random.IntRange(0, dmg);
 		}
 
-		if (buff(Paralysis.class) != null) {
+		if (hasBuff(Paralysis.class)) {
 			if (Random.Int(dmg) >= Random.Int(hp())) {
 				Buff.detach(this, Paralysis.class);
 				if (Dungeon.visible[getPos()]) {
@@ -381,10 +384,10 @@ public abstract class Char extends Actor implements Presser{
 	public void spend(float time) {
 
 		float timeScale = 1f;
-		if (buff(Slow.class) != null) {
+		if (hasBuff(Slow.class)) {
 			timeScale *= 0.5f;
 		}
-		if (buff(Speed.class) != null) {
+		if (hasBuff(Speed.class)) {
 			timeScale *= 2.0f;
 		}
 
@@ -416,6 +419,14 @@ public abstract class Char extends Actor implements Presser{
 		return null;
 	}
 
+	public boolean hasBuff(Class<? extends Buff> c) {
+		for (Buff b : buffs) {
+			if (c.isInstance(b)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public void add(Buff buff) {
 
@@ -554,7 +565,7 @@ public abstract class Char extends Actor implements Presser{
 			return;
 		}
 
-		if (buff(Vertigo.class) != null && Dungeon.level.adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
+		if (hasBuff(Vertigo.class) && Dungeon.level.adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 			List<Integer> candidates = new ArrayList<>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = getPos() + dir;
@@ -705,7 +716,7 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public boolean isFlying() {
-		return !paralysed && (flying || buff(Levitation.class)!=null);
+		return !paralysed && (flying || hasBuff(Levitation.class));
 	}
 
 	public void paralyse(boolean paralysed) {

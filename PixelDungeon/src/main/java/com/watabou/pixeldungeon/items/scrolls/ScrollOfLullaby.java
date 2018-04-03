@@ -42,7 +42,7 @@ public class ScrollOfLullaby extends Scroll {
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Buff.affect( mob, Sleep.class );
-				if (mob.buff( Sleep.class ) != null) {
+				if (mob.hasBuff( Sleep.class )) {
 					affected = mob;
 					count++;
 				}

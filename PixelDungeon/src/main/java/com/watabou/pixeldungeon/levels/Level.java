@@ -1256,8 +1256,7 @@ public abstract class Level implements Bundlable {
 		int cx = cellX(c.getPos());
 		int cy = cellY(c.getPos());
 
-		boolean sighted = c.buff(Blindness.class) == null
-				&& c.buff(Shadows.class) == null && c.isAlive();
+		boolean sighted = !c.hasBuff(Blindness.class) && !c.hasBuff(Shadows.class) && c.isAlive();
 		if (sighted) {
 			ShadowCaster.castShadow(cx, cy, fieldOfView, c.viewDistance);
 		} else {
@@ -1291,7 +1290,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (c.isAlive()) {
-			if (c.buff(MindVision.class) != null) {
+			if (c.hasBuff(MindVision.class)) {
 				for (Mob mob : mobs) {
 					updateFovForObjectAt(mob.getPos());
 				}
@@ -1304,7 +1303,7 @@ public abstract class Level implements Bundlable {
 					}
 				}
 			}
-			if (c.buff(Awareness.class) != null) {
+			if (c.hasBuff(Awareness.class)) {
 				for (Heap heap : heaps.values()) {
 					updateFovForObjectAt(heap.pos);
 				}

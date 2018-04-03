@@ -143,7 +143,7 @@ public class Hunger extends Buff implements Hero.Doom {
 			}
 			
 			float step = hero.heroClass == HeroClass.ROGUE ? STEP * 1.2f : STEP;
-			spend( target.buff( Shadows.class ) == null ? step : step * 1.5f );
+			spend( target.hasBuff( Shadows.class ) ? step * 1.5f : step );
 			
 		} else {
 			
@@ -191,7 +191,7 @@ public class Hunger extends Buff implements Hero.Doom {
 
 	@Override
 	public boolean attachTo( Char target ) {
-		return target.buff(Hunger.class) == null && super.attachTo(target);
+		return target.hasBuff(Hunger.class) || super.attachTo(target);
 	}
 
 	@Override

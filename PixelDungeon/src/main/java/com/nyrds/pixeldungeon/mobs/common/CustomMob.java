@@ -8,6 +8,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
@@ -177,11 +178,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			scriptFile = classDesc.optString("scriptFile", scriptFile);
 
-			friendly = classDesc.optBoolean("friendly",friendly);
-
-
 			if(!restoring) {
+				setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
+				friendly = classDesc.optBoolean("friendly",friendly);
 				hp(ht(classDesc.optInt("ht", 1)));
+				fromJson(classDesc);
 			}
 
 			runMobScript("fillStats");

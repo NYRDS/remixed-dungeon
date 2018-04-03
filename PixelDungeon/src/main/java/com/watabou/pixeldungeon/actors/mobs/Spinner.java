@@ -67,9 +67,7 @@ public class Spinner extends Mob {
 	protected boolean act() {
 		boolean result = super.act();
 		
-		if (getState() == FLEEING  && buff( Terror.class ) == null &&
-			enemySeen && getEnemy().buff( Poison.class ) == null) {
-			
+		if ((getState() == FLEEING) && !hasBuff(Terror.class) && enemySeen && !getEnemy().hasBuff(Poison.class)) {
 			setState(HUNTING);
 		}
 		return result;
@@ -96,10 +94,10 @@ public class Spinner extends Mob {
 	private class Fleeing extends Mob.Fleeing {
 		@Override
 		protected void nowhereToRun() {
-			if (buff( Terror.class ) == null) {
-				setState(HUNTING);
-			} else {
+			if (hasBuff( Terror.class )) {
 				super.nowhereToRun();
+			} else {
+				setState(HUNTING);
 			}
 		}
 	}

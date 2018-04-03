@@ -59,7 +59,7 @@ public class MimicAmulet extends Mob {
 
 	@Override
 	protected boolean act() {
-		if(buff(Levitation.class)==null) {
+		if(!hasBuff(Levitation.class)) {
 			Buff.affect(this, Levitation.class, 1000000);
 		}
 		return super.act();

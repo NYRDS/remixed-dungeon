@@ -76,12 +76,12 @@ public class Succubus extends Mob {
 		if (Random.Int(3) == 0) {
 			float duration = Charm.durationFactor(enemy) * Random.IntRange(2, 5);
 
-			if (enemy.buff(DriedRose.OneWayCursedLoveBuff.class) != null) {
+			if (enemy.hasBuff(DriedRose.OneWayCursedLoveBuff.class)) {
 				duration *= 2;
 			}
 			Char target = enemy;
 
-			if (enemy.buff(DriedRose.OneWayLoveBuff.class) != null) {
+			if (enemy.hasBuff(DriedRose.OneWayLoveBuff.class)) {
 				target = this;
 			}
 

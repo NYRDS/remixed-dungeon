@@ -55,5 +55,6 @@
     <string name="town_deco_sofa_name">Gemütliches Sofa</string>
     <string name="town_deco_sofa_desc">Sieht so aus, als ob dieses Kino versucht die besten Plätze für die Kunden anzubieten.</string>
 
-
+    <string name="town_deco_book_desc">Buch</string>
+    <string name="town_deco_book_name">Dieses Buch sieht so aus, als ob jemand es aus versehen liegen gelassen hat.</string>
 </resources>

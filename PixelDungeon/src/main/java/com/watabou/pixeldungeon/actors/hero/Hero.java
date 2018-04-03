@@ -215,6 +215,8 @@ public class Hero extends Char {
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 
+		fraction = Fraction.HEROES;
+
 		STR(STARTING_STR);
 		awareness = 0.1f;
 		belongings = new Belongings(this);
@@ -1139,7 +1141,7 @@ public class Hero extends Char {
 
 	public void checkIfFurious() {
 		if (subClass == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
-			if (buff(Fury.class) == null) {
+			if (!hasBuff(Fury.class)) {
 				Buff.affect(this, Fury.class);
 				ready();
 			}

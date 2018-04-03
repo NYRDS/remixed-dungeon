@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    <string name="BlackCat_Name">Чёрный кот</string>
+    <string name="BlackCat_Name">Чёрная кошка</string>
     <string name="BlackCat_Gender">feminine</string>
-    <string name="BlackCat_Name_Objective">кота</string>
-    <string name="BlackCat_Desc">Это чёрный кот</string>
+    <string name="BlackCat_Name_Objective">кошку</string>
+    <string name="BlackCat_Desc">Это чёрная кошка</string>
     
     <string-array name="BlackCat_Phrases">
         <item>Мяу</item>
@@ -55,5 +55,6 @@
     <string name="town_deco_sofa_name">Уютный диван</string>
     <string name="town_deco_sofa_desc">Видимо в этом кинотеатр очень стараются чтобы предоставить лучшие сиденья своим посетителям.</string>
 
-
+    <string name="town_deco_book_desc">Книга</string>
+    <string name="town_deco_book_name">Эта книга выглядит так, как будто кто-то беспечно оставил её тут</string>
 </resources>
