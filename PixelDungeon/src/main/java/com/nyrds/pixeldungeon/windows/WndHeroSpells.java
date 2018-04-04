@@ -75,8 +75,6 @@ public class WndHeroSpells extends Window {
 			xPos = width - 48 - MARGIN * 2;
 		}
 
-		float yPosTemp = yPos;
-
 		Text txtName;
 
 		txtName = PixelScene.createText(spell.name(), GuiProperties.titleFontSize());
@@ -123,7 +121,7 @@ public class WndHeroSpells extends Window {
 		add(txtCost);
 
 		if ( xPos == 0 ){
-			return yPosTemp;
+			return yPos;
 		}
 
 		return txtCost.bottom() + MARGIN;

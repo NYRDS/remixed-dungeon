@@ -241,7 +241,7 @@ public class Hero extends Char {
 	public int effectiveSTR() {
 		int str = Scrambler.descramble(STR);
 
-		return buff(Weakness.class) != null ? str - 2 : str;
+		return hasBuff(Weakness.class) ? str - 2 : str;
 	}
 
 	public void STR(int sTR) {
@@ -410,9 +410,7 @@ public class Hero extends Char {
 		}
 
 		//WTF ?? Why it is here?
-		Buff frostAura = buff(RingOfFrost.FrostAura.class);
-
-		if (frostAura != null && enemy.distance(this) < 2) {
+		if (hasBuff(RingOfFrost.FrostAura.class) && enemy.distance(this) < 2) {
 			int powerLevel = belongings.getItem(RingOfFrost.class).level();
 			if (enemy.isAlive()) {
 				Buff.affect(enemy, Slow.class, Slow.duration(enemy) / 5 + powerLevel);
@@ -1210,7 +1208,7 @@ public class Hero extends Char {
 		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
-				if (buff(Blindness.class) == null) {
+				if (!hasBuff(Blindness.class)) {
 					if (level.pit[target] && !isFlying() && !Chasm.jumpConfirmed) {
 						Chasm.heroJump(this);
 						interrupt();
@@ -1578,7 +1576,7 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		if (enemy instanceof Rat && buff(RatKingCrown.RatKingAuraBuff.class) != null) {
+		if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
 			Rat rat = (Rat) enemy;
 			Mob.makePet(rat, this);
 		} else {
@@ -1749,8 +1747,7 @@ public class Hero extends Char {
 
 	@Override
 	public Set<Class<?>> immunities() {
-		GasesImmunity buff = buff(GasesImmunity.class);
-		if (buff != null) {
+		if (hasBuff(GasesImmunity.class)) {
 			IMMUNITIES.addAll(GasesImmunity.IMMUNITIES);
 		} else {
 			IMMUNITIES.removeAll(GasesImmunity.IMMUNITIES);

@@ -628,10 +628,10 @@ public abstract class Mob extends Char {
 		Dungeon.level.spawnMob(clone, SPLIT_DELAY);
 		Actor.addDelayed(new Pushing(clone, getPos(), clone.getPos()), -1);
 
-		if (buff(Burning.class) != null) {
+		if (hasBuff(Burning.class)) {
 			Buff.affect(clone, Burning.class).reignite(clone);
 		}
-		if (buff(Poison.class) != null) {
+		if (hasBuff(Poison.class)) {
 			Buff.affect(clone, Poison.class).set(2);
 		}
 
