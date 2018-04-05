@@ -328,4 +328,72 @@ remix.26.5\n
         - 您不用再懼怕觸發召喚陷阱時，會令怪物「暗影」在普通地板上出現（暗影要被壁咚(°ཀ°)\n
         - 寵物的相關狀態及信息不會一直把遊戲記事日誌給洗板了 （寵物：主人嫌我嘮叨了！Σヽ(ﾟД ﾟ; )ﾉ \n
 </string>
+  <string name="Welcome_Text_27_2">
+        remix.27.2\n
+        --Game:\n
+        - Introducing spell system\n
+        - Mage and Necromancer gets natural spell affinities. Those heroes are able to cast unique spells with no need for special items\n
+        - Every character now posses a mana bar (including Necromancer)\n
+        - Necromancer is no longer passively restores mana points for killing his enemies. This effect is now applied to a Necromancer robe (+1 mana on kill) and Bone Armor (+2 mana on kill), instead of summoning ability those items previously possessed\n
+        - New hero attribute: Magic Level. The higher the Magic Level the more natural spells are unlocked for your hero and more powerful those spells might get\n
+        - New item: Mana Potion\n
+        - New item Tome of Knowledge.  An item that increases your Magic Level by 1\n
+        - New item Spell Book.  This equipable item will allow you to cast a single spell on cost of mana and unlike the scrolls, this item will not expire no matter how much you use it\n
+        - Class Armor is no longer requires health to cast it\'s special ability, it costs 1/3 of your maximum amount of mana instead\n
+        - The \“Wand of Magic Missiles\” are no longer lootable from Crystals\n
+        - From this point on, every level will have their \“view distance\” set randomly, so that player can encounter \“dark\” levels at every point of the game\n
+        - Torches are now available at beginning and can be commonly found throughout the game\n
+        - The \“safe\” (isSafe) levels are unaffected and will be always lit to a maximum extend\n
+        - Damage from burning is scales with dungeon depth now\n\n
+
+        --Vanity Items: \n
+        - New Hat: Chaos Helmet \n\n
+
+        --Mods: \n
+        - You can now add new attributes to your \“iniHeroes\” file: \“maxSP\” - sets a maximum amount of mana, that your character can posses. \“startingSp\” sets starting amount of mana for your character\n
+        - Hero initialization also takes the \“magicAffinity\” attribute, which can be set to: \“Elemental\”, \“Necromancy\” or \“Common\” (\“Common\” means that character can only use spells from the spell books)\n
+        - New game object in mods – Trap. Unlike regular in-game trap, this object can be adjusted in several ways. You can set: the number of activations (uses), the target cell on which the trap\'s effect should trigger(target), and whatever you can or cannot active the trap by throwing item at it (activatedByItem)\n
+    </string>
+  <string name="Welcome_Text_27_3">
+         remix.27.3\n
+  - New Item: Scroll of Summoning\n
+  - Dewdrop is no longer has higher priority in loot heap. So if there is an item, lying above the dewdrop, said item will be collected first\n
+  - Every single kind of container is now available at the town\'s shop\n
+  - Goo can no longer drop the Ring of Stone Blood  ( this item is only available through modding ), instead, player will be able to receive a random potion\n
+  - The \"Wing Gust\" spell can only move characters, that can be moved (IsMovable)\n
+  - Mobs can no longer spawn on the same spot with level objects\n
+  - Necromancer\'s Robe is no longer set to a quick slot by default\n
+  - Fixing the view distance randomizer\n
+  - Fixing bug that caused boss level to spawn an elemental instead of a boss\n
+  - The reward, player gets for watching an ad is now being processed on in-game tap\n
+    </string>
+  <string name="Welcome_Text_27_4">
+    remix.27.4\n
+    - Rebranding to Remixed Dungeon\n
+    - Necrotism - new Necromancer Class Armor ability\n
+    - New Badge to discover\n
+    - Class Armor ability now consume Mana instead of HP\n
+    - Chaos items now lose enchantment on degrade\n
+    - Psi-Spiders now can cast only Blindness, Slow and Weakness spells\n
+    </string>
+  <string name="Welcome_Text_28">
+    remix.28\n
+    - New Hero - Gnoll\n
+    - The damage of magic wands in melee now depends on level of Hero magic skill\n
+    - For each Hero, no more than one result will be displayed on the highscores board\n
+    - Auto-sync with Google PlayGames is disabled (You can synchronize manually)\n
+    - A large update of the Brazilian-Portuguese translation\n
+    - New hero class options for modding: forbiddenActions, friendlyMobs\n
+    - New language added: Malay language\n
+    </string>
+  <string name="Welcome_Text_28_1">
+    remix.28.1\n
+    - Big renovation of Town\n
+    - Lots of gfx improvements and fixes\n
+    - New darts and arrows\n
+    - Now all mob (except undeads) will regenerate\n
+    - Now strength will provide additional damage bonus for all classes\n
+    - Fortune Teller now owns a Cat\n
+    - Gnoll tomahawk will not break when thrown at a target\n
+    </string>
 </resources>
