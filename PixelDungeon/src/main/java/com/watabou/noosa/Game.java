@@ -457,7 +457,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	private void draw() {
-		scene.draw();
+		if(scene!=null) {
+			scene.draw();
+		}
 	}
 
 	private void switchScene(Scene requestedScene) {
