@@ -1296,18 +1296,20 @@ public class Hero extends Char {
 			return false;
 		}
 
-		if (!Dungeon.level.cellValid(cell)) {
+		Level level = Dungeon.level;
+
+		if (!level.cellValid(cell)) {
 			return false;
 		}
 
 		Char ch;
 		Heap heap;
 
-		if (Dungeon.level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
+		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
 			curAction = new HeroAction.Cook(cell);
 
-		} else if (Dungeon.level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
+		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
 
 			Mob mob = (Mob) ch;
 
@@ -1317,7 +1319,7 @@ public class Hero extends Char {
 				curAction = new HeroAction.Attack(ch);
 			}
 
-		} else if ((heap = Dungeon.level.getHeap(cell)) != null) {
+		} else if ((heap = level.getHeap(cell)) != null) {
 
 			switch (heap.type) {
 				case HEAP:
@@ -1331,15 +1333,15 @@ public class Hero extends Char {
 					curAction = new HeroAction.OpenChest(cell);
 			}
 
-		} else if (Dungeon.level.map[cell] == Terrain.LOCKED_DOOR || Dungeon.level.map[cell] == Terrain.LOCKED_EXIT) {
+		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
 
 			curAction = new HeroAction.Unlock(cell);
 
-		} else if (Dungeon.level.isExit(cell)) {
+		} else if (level.isExit(cell)) {
 
 			curAction = new HeroAction.Descend(cell);
 
-		} else if (cell == Dungeon.level.entrance) {
+		} else if (cell == level.entrance) {
 
 			curAction = new HeroAction.Ascend(cell);
 
