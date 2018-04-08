@@ -33,11 +33,11 @@
     "necro4":{"kind":"NecroLevel", "depth":11,     "size":[32,32]},
     "necro5":{"kind":"NecroBossLevel", "depth":12, "size":[32,32]},
 
-    "ice1":{"kind":"IceCavesLevel", "depth":15,      "size":[32,32], "music":"ost_ice_caves.mp3"},
-    "ice2":{"kind":"IceCavesLevel", "depth":16,      "size":[32,32], "music":"ost_ice_caves.mp3"},
-    "ice3":{"kind":"IceCavesLevel", "depth":17,     "size":[32,32], "music":"ost_ice_caves.mp3"},
-    "ice4":{"kind":"IceCavesLevel", "depth":18,     "size":[32,32], "music":"ost_ice_caves.mp3"},
-    "ice5":{"kind":"IceCavesBossLevel", "depth":19, "size":[32,32], "music":"ost_ice_caves.mp3"},
+    "ice1":{"kind":"IceCavesLevel", "depth":15,      "size":[32,32], "music":"ost_ice_caves.mp3", "maxBrightness":1.05},
+    "ice2":{"kind":"IceCavesLevel", "depth":16,      "size":[32,32], "music":"ost_ice_caves.mp3", "maxBrightness":1.05},
+    "ice3":{"kind":"IceCavesLevel", "depth":17,     "size":[32,32], "music":"ost_ice_caves.mp3", "maxBrightness":1.05},
+    "ice4":{"kind":"IceCavesLevel", "depth":18,     "size":[32,32], "music":"ost_ice_caves.mp3", "maxBrightness":1.05},
+    "ice5":{"kind":"IceCavesBossLevel", "depth":19, "size":[32,32], "music":"ost_ice_caves.mp3", "maxBrightness":1.05},
 
     "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
     "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},

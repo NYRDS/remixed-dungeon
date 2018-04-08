@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.3" orientation="orthogonal" renderorder="left-up" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <properties>
+  <property name="maxBrightness" type="float" value="1.05"/>
+ </properties>
  <tileset firstgid="1" source="tilesets/tiles_town_outside_winter.tsx"/>
  <tileset firstgid="257" source="tilesets/logic.tsx"/>
  <tileset firstgid="321" source="tilesets/Mobs.tsx"/>

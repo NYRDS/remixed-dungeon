@@ -454,11 +454,14 @@ public class GameScene extends PixelScene {
 
     public void brightness(boolean value) {
 
-        float brightnessValue =  value ? 1.5f : 1.0f;
+        float levelLimit = Math.min(Dungeon.level.getPropertyFloat("maxBrightness", 1.5f),
+                DungeonGenerator.getLevelProperty(Dungeon.level.levelId,"maxBrightness",1.5f));
+
+
+        float brightnessValue =  value ? Math.min(1.5f, levelLimit)  : 1.0f;
 
         water.brightness(brightnessValue);
         baseTiles.brightness(brightnessValue);
-
 
         if (logicTiles != null) {
             logicTiles.brightness(brightnessValue);

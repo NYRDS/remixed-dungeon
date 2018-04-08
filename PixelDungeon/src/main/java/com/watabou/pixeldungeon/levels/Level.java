@@ -1717,6 +1717,12 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	public float getPropertyFloat(String key, float defVal) {
+		String propValue = getProperty(key, Float.toString(defVal));
+
+		return Float.parseFloat(propValue);
+	}
+
 	public String getProperty(String key, String defVal) {
 		return defVal;
 	}
