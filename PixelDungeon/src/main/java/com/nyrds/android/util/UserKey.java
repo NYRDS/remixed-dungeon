@@ -1,9 +1,9 @@
 package com.nyrds.android.util;
 
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.UUID;
 
@@ -21,12 +21,12 @@ public class UserKey {
 		if(key.equals(noKey)) { 
 			userId = UUID.randomUUID();
 			
-			prefs.edit().putString("userKey", userId.toString()).commit();
+			prefs.edit().putString("userKey", userId.toString()).apply();
 		} else {
 			userId = UUID.fromString(key);
 		}
-		
-		Log.d("UserKey", userId.toString());
+
+		GLog.debug("UserKey", userId.toString());
 		
 		crypter = new Crypter("RPD_UserKey_"+userId.toString());
 	}

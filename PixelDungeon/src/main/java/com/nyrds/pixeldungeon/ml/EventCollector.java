@@ -31,7 +31,7 @@ public class EventCollector {
 		if (mTracker == null) {
 
 			if(!googleAnalyticsUsable()) {
-				EventCollector.disable();
+				mDisabled = true;
 				return;
 			}
 
@@ -41,10 +41,6 @@ public class EventCollector {
 			mTracker.enableAdvertisingIdCollection(true);
 			mDisabled = false;
 		}
-	}
-
-	static public void disable() {
-		mDisabled = true;
 	}
 
 	static public void logEvent(String category, String event) {
@@ -83,6 +79,17 @@ public class EventCollector {
 	static public void startTiming(String id) {
 		if(!mDisabled) {
 			timings.put(id, SystemClock.elapsedRealtime());
+		}
+	}
+
+	static public void rawTiming(long value,  String category, String variable, String label) {
+		if(!mDisabled) {
+			mTracker.send(new HitBuilders.TimingBuilder()
+					.setCategory(category)
+					.setValue(value)
+					.setVariable(variable)
+					.setLabel(label)
+					.build());
 		}
 	}
 

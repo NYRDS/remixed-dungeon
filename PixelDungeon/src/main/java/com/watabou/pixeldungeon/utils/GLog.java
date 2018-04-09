@@ -129,4 +129,11 @@ public class GLog {
 		i( HIGHLIGHT + text, args );
 	}
 
+	public static void debug( String text, Object... args ) {
+		if(BuildConfig.DEBUG) {
+			i(text, args);
+		}
+	}
+
+
 }

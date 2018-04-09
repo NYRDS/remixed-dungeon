@@ -180,7 +180,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void doRestart() {
-		Intent i = instance().getBaseContext().getPackageManager()
+		Intent i = getBaseContext().getPackageManager()
 				.getLaunchIntentForPackage(getBaseContext().getPackageName());
 		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 

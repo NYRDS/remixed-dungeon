@@ -2,10 +2,10 @@ package com.nyrds.android.util;
 
 import android.os.AsyncTask;
 import android.os.Build;
-import android.util.Log;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -51,7 +51,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 			if (repCode == HttpURLConnection.HTTP_OK) {
 				int bytesTotal = ucon.getContentLength();
 
-				Log.d(TAG, "bytes in file: " + bytesTotal);
+				GLog.debug("bytes in file: " + bytesTotal);
 
 				InputStream is = ucon.getInputStream();
 				

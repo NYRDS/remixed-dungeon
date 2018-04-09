@@ -440,7 +440,7 @@ public class Dungeon {
 		try {
 			EventCollector.startTiming("saveGame");
 			saveAllImpl();
-			EventCollector.stopTiming("saveGame");
+			EventCollector.stopTiming("saveGame",Dungeon.level.levelId,Game.version,"");
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
