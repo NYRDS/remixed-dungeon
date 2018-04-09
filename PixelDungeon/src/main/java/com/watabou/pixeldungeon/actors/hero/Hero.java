@@ -1904,7 +1904,6 @@ public class Hero extends Char {
 
 	@Override
 	protected boolean timeout() {
-		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
 		if (SystemTime.now() - SystemTime.getLastActionTime() > PixelDungeon.getMoveTimeout()) {
 			SystemTime.updateLastActionTime();
 			spend(TIME_TO_REST);

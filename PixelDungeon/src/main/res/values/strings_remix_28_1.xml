@@ -69,4 +69,7 @@
 
     <string name="town_deco_snowy_plate_name">Snowy plate</string>
     <string name="town_deco_snowy_plate_desc">This ancient plate is covered by snow</string>
+
+    <string name="DogeMask_Name">Doge mask</string>
+    <string name="DogeMask_Info">Did you ever want to disguise as famous Doge? Now it is your chance!\nSuch Mask! Many Disguise! Wow!</string>
 </resources>

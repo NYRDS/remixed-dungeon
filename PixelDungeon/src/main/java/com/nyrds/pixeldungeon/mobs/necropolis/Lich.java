@@ -104,19 +104,18 @@ public class Lich extends Boss {
     }
 
     private void jump() {
-        int newPos;
-
         for (int i = 0; i < 15; i++){
+            Level level = Dungeon.level;
+            int newPos = Random.Int( level.getLength() );
 
-            newPos = Random.Int( Dungeon.level.getLength() );
-
-            if(Dungeon.level.fieldOfView[newPos] &&
-                    Dungeon.level.passable[newPos] &&
-                    !Dungeon.level.adjacent( newPos, getEnemy().getPos()) &&
+            if(level.fieldOfView[newPos] &&
+                    level.passable[newPos] &&
+                    !level.adjacent( newPos, getEnemy().getPos()) &&
                     Actor.findChar( newPos ) == null)
             {
                 getSprite().move( getPos(), newPos );
                 move( newPos );
+
                 spend( 1 / speed() );
                 break;
             }
