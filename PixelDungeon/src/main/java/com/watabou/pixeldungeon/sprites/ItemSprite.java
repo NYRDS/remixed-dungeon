@@ -124,7 +124,7 @@ public class ItemSprite extends MovieClip {
 
 	public void drop() {
 
-		if (heap.isEmpty()) {
+		if (heap != null && heap.isEmpty()) {
 			return;
 		}
 
@@ -141,7 +141,7 @@ public class ItemSprite extends MovieClip {
 
 	public void drop(int from) {
 
-		if (heap.pos == from) {
+		if (heap!= null && heap.pos == from) {
 			drop();
 		} else {
 
