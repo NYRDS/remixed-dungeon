@@ -96,6 +96,7 @@ public class GameScene extends PixelScene {
     private static final String TXT_WATER   = Game.getVar(R.string.GameScene_Water);
     private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
     private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
+
     private static final float MAX_BRIGHTNESS = 1.22f;
 
     private static volatile GameScene scene;
@@ -295,8 +296,6 @@ public class GameScene extends PixelScene {
 
         add(emoicons);
 
-
-
         add(new HealthIndicator());
 
         add(cellSelector = new CellSelector(baseTiles));
@@ -384,6 +383,7 @@ public class GameScene extends PixelScene {
                 break;
             default:
         }
+        InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 
         Camera.main.target = Dungeon.hero.getHeroSprite();
 
