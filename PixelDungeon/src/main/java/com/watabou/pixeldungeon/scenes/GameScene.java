@@ -96,6 +96,7 @@ public class GameScene extends PixelScene {
     private static final String TXT_WATER   = Game.getVar(R.string.GameScene_Water);
     private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
     private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
+    private static final float MAX_BRIGHTNESS = 1.22f;
 
     private static volatile GameScene scene;
 
@@ -454,11 +455,11 @@ public class GameScene extends PixelScene {
 
     public void brightness(boolean value) {
 
-        float levelLimit = Math.min(Dungeon.level.getPropertyFloat("maxBrightness", 1.5f),
-                DungeonGenerator.getLevelProperty(Dungeon.level.levelId,"maxBrightness",1.5f));
+        float levelLimit = Math.min(Dungeon.level.getPropertyFloat("maxBrightness", MAX_BRIGHTNESS),
+                DungeonGenerator.getLevelProperty(Dungeon.level.levelId,"maxBrightness", MAX_BRIGHTNESS));
 
 
-        float brightnessValue =  value ? Math.min(1.5f, levelLimit)  : 1.0f;
+        float brightnessValue =  value ? Math.min(MAX_BRIGHTNESS, levelLimit)  : 1.0f;
 
         water.brightness(brightnessValue);
         baseTiles.brightness(brightnessValue);
