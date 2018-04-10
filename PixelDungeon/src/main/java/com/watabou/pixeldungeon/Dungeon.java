@@ -258,8 +258,7 @@ public class Dungeon {
 			hero.setPos(level.entrance);
 		}
 
-		Light light = hero.buff(Light.class);
-		hero.viewDistance = light == null ? level.getViewDistance() : Math.max(Level.MIN_VIEW_DISTANCE + 1, level.getViewDistance());
+		hero.viewDistance = hero.hasBuff(Light.class) ? Math.max(Level.MIN_VIEW_DISTANCE + 1, level.getViewDistance()): level.getViewDistance();
 
 		Dungeon.level = level;
 	}

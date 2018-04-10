@@ -63,10 +63,9 @@ public class PointF {
 		return this;
 	}
 	
-	public PointF set( float x, float y ) {
+	public void set(float x, float y ) {
 		this.x = x;
 		this.y = y;
-		return this;
 	}
 	
 	public PointF set( PointF p ) {

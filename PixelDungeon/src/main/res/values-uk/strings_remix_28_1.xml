@@ -7,7 +7,7 @@
     <string name="BlackCat_Desc">Це чорний кіт</string>
     
     <string-array name="BlackCat_Phrases">
-        <item>Мяу</item>
+        <item>Мр-р-р-р</item>
         <item>Мяу...</item>
         <item>Мяу!</item>
     </string-array>
@@ -55,6 +55,18 @@
     <string name="town_deco_sofa_name">Затишний диван</string>
     <string name="town_deco_sofa_desc">Схоже в цьому кінотеатрі дійсно намагаються надати найкращі місця своїм відвідувачам.</string>
 
-    <string name="town_deco_book_desc">Книга</string>
-    <string name="town_deco_book_name">Книга виглядає так, наче її лишили по недбальству</string>
+    <string name="town_deco_book_name">Книга</string>
+    <string name="town_deco_book_desc">Книга виглядає так, наче її лишили по недбальству</string>
+
+    <string name="town_deco_screen_name">Екран</string>
+    <string name="town_deco_screen_desc">Ця магічна поверхня зветься \"екран\" і він може показувати рухомі картинки</string>
+
+    <string name="town_deco_stove_name">Кам\'яна піч</string>
+    <string name="town_deco_stove_desc">Ця піч, що палає, розповсюджує приємне тепло</string>
+
+    <string name="town_deco_wooden_chair_name">Дерев\'яне крісло</string>
+    <string name="town_deco_wooden_chair_desc">Це крісло зроблено з деревини</string>
+
+    <string name="town_deco_snowy_plate_name">Засніжена плита</string>
+    <string name="town_deco_snowy_plate_desc">Ця старовинна плита вкрита снігом</string>
 </resources>

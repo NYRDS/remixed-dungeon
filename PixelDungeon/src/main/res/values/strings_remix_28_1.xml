@@ -7,7 +7,7 @@
     <string name="BlackCat_Desc">This is black cat</string>
     
     <string-array name="BlackCat_Phrases">
-        <item>Meow</item>
+        <item>Prrrrrrr</item>
         <item>Meow...</item>
         <item>Meow!</item>
     </string-array>
@@ -55,6 +55,18 @@
     <string name="town_deco_sofa_name">Cozy sofa</string>
     <string name="town_deco_sofa_desc">Looks like this cinema really try to provide best seats for it customers.</string>
 
-    <string name="town_deco_book_desc">Book</string>
-    <string name="town_deco_book_name">This book looks like someone negligent left it</string>
+    <string name="town_deco_book_name">Book</string>
+    <string name="town_deco_book_desc">This book looks like someone negligent left it</string>
+
+    <string name="town_deco_screen_name">Screen</string>
+    <string name="town_deco_screen_desc">This mystery canvas called "screen" and it can show moving pictures</string>
+
+    <string name="town_deco_stove_name">Stone stove</string>
+    <string name="town_deco_stove_desc">This stove bring some pleasurable warm</string>
+
+    <string name="town_deco_wooden_chair_name">Wooden chair</string>
+    <string name="town_deco_wooden_chair_desc">This chair is made by wood</string>
+
+    <string name="town_deco_snowy_plate_name">Snowy plate</string>
+    <string name="town_deco_snowy_plate_desc">This ancient plate is covered by snow</string>
 </resources>

@@ -35,10 +35,9 @@ public class Point {
 		this.y = p.y;
 	}
 	
-	public Point set( int x, int y ) {
+	public void set(int x, int y ) {
 		this.x = x;
 		this.y = y;
-		return this;
 	}
 	
 	public Point set( Point p ) {

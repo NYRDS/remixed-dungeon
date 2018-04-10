@@ -241,7 +241,7 @@ public class Hero extends Char {
 	public int effectiveSTR() {
 		int str = Scrambler.descramble(STR);
 
-		return buff(Weakness.class) != null ? str - 2 : str;
+		return hasBuff(Weakness.class) ? str - 2 : str;
 	}
 
 	public void STR(int sTR) {
@@ -410,9 +410,7 @@ public class Hero extends Char {
 		}
 
 		//WTF ?? Why it is here?
-		Buff frostAura = buff(RingOfFrost.FrostAura.class);
-
-		if (frostAura != null && enemy.distance(this) < 2) {
+		if (hasBuff(RingOfFrost.FrostAura.class) && enemy.distance(this) < 2) {
 			int powerLevel = belongings.getItem(RingOfFrost.class).level();
 			if (enemy.isAlive()) {
 				Buff.affect(enemy, Slow.class, Slow.duration(enemy) / 5 + powerLevel);
@@ -1210,7 +1208,7 @@ public class Hero extends Char {
 		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
-				if (buff(Blindness.class) == null) {
+				if (!hasBuff(Blindness.class)) {
 					if (level.pit[target] && !isFlying() && !Chasm.jumpConfirmed) {
 						Chasm.heroJump(this);
 						interrupt();
@@ -1298,18 +1296,20 @@ public class Hero extends Char {
 			return false;
 		}
 
-		if (!Dungeon.level.cellValid(cell)) {
+		Level level = Dungeon.level;
+
+		if (!level.cellValid(cell)) {
 			return false;
 		}
 
 		Char ch;
 		Heap heap;
 
-		if (Dungeon.level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
+		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
 			curAction = new HeroAction.Cook(cell);
 
-		} else if (Dungeon.level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
+		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
 
 			Mob mob = (Mob) ch;
 
@@ -1319,7 +1319,7 @@ public class Hero extends Char {
 				curAction = new HeroAction.Attack(ch);
 			}
 
-		} else if ((heap = Dungeon.level.getHeap(cell)) != null) {
+		} else if ((heap = level.getHeap(cell)) != null) {
 
 			switch (heap.type) {
 				case HEAP:
@@ -1333,15 +1333,15 @@ public class Hero extends Char {
 					curAction = new HeroAction.OpenChest(cell);
 			}
 
-		} else if (Dungeon.level.map[cell] == Terrain.LOCKED_DOOR || Dungeon.level.map[cell] == Terrain.LOCKED_EXIT) {
+		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
 
 			curAction = new HeroAction.Unlock(cell);
 
-		} else if (Dungeon.level.isExit(cell)) {
+		} else if (level.isExit(cell)) {
 
 			curAction = new HeroAction.Descend(cell);
 
-		} else if (cell == Dungeon.level.entrance) {
+		} else if (cell == level.entrance) {
 
 			curAction = new HeroAction.Ascend(cell);
 
@@ -1578,7 +1578,7 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		if (enemy instanceof Rat && buff(RatKingCrown.RatKingAuraBuff.class) != null) {
+		if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
 			Rat rat = (Rat) enemy;
 			Mob.makePet(rat, this);
 		} else {
@@ -1749,8 +1749,7 @@ public class Hero extends Char {
 
 	@Override
 	public Set<Class<?>> immunities() {
-		GasesImmunity buff = buff(GasesImmunity.class);
-		if (buff != null) {
+		if (hasBuff(GasesImmunity.class)) {
 			IMMUNITIES.addAll(GasesImmunity.IMMUNITIES);
 		} else {
 			IMMUNITIES.removeAll(GasesImmunity.IMMUNITIES);

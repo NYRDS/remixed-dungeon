@@ -7,7 +7,7 @@
     <string name="BlackCat_Desc">Das ist eine Schwarze Katze</string>
     
     <string-array name="BlackCat_Phrases">
-        <item>Miau</item>
+        <item>Prrrrrrr</item>
         <item>Miau...</item>
         <item>Miau!</item>
     </string-array>
@@ -55,6 +55,18 @@
     <string name="town_deco_sofa_name">Gemütliches Sofa</string>
     <string name="town_deco_sofa_desc">Sieht so aus, als ob dieses Kino versucht die besten Plätze für die Kunden anzubieten.</string>
 
-    <string name="town_deco_book_desc">Buch</string>
-    <string name="town_deco_book_name">Dieses Buch sieht so aus, als ob jemand es aus versehen liegen gelassen hat.</string>
+    <string name="town_deco_book_name">Buch</string>
+    <string name="town_deco_book_desc">Dieses Buch sieht so aus, als ob jemand es aus versehen liegen gelassen hat</string>
+
+    <string name="town_deco_screen_name">Bildschirm</string>
+    <string name="town_deco_screen_desc">Diese Mysteriöse Leinwand wird \"Bildschirm\" genannt unt kann bewegende Bilder zeigen</string>
+
+    <string name="town_deco_stove_name">Steinofen</string>
+    <string name="town_deco_stove_desc">Dieser Ofen bringt angenehme Wärme</string>
+
+    <string name="town_deco_wooden_chair_name">Holzstuhl</string>
+    <string name="town_deco_wooden_chair_desc">Dieser Stuhl ist aus Holz</string>
+
+    <string name="town_deco_snowy_plate_name">Verschneite Platte</string>
+    <string name="town_deco_snowy_plate_desc">Diese antike Platte ist mit Schnee bedeckt</string>
 </resources>

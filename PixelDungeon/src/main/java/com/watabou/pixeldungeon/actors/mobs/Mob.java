@@ -288,8 +288,11 @@ public abstract class Mob extends Char {
 		float dist = level.getWidth() + level.getHeight();
 
 		if (enemyFraction.belongsTo(Fraction.HEROES)) {
-			bestEnemy = Dungeon.hero;
-			dist = level.distanceL2(getPos(), bestEnemy.getPos());
+			Hero hero = Dungeon.hero;
+			if (!friendly(hero)) {
+				bestEnemy = hero;
+				dist = level.distanceL2(getPos(), bestEnemy.getPos());
+			}
 		}
 
 		for (Mob mob : level.mobs) {
@@ -628,10 +631,10 @@ public abstract class Mob extends Char {
 		Dungeon.level.spawnMob(clone, SPLIT_DELAY);
 		Actor.addDelayed(new Pushing(clone, getPos(), clone.getPos()), -1);
 
-		if (buff(Burning.class) != null) {
+		if (hasBuff(Burning.class)) {
 			Buff.affect(clone, Burning.class).reignite(clone);
 		}
-		if (buff(Poison.class) != null) {
+		if (hasBuff(Poison.class)) {
 			Buff.affect(clone, Poison.class).set(2);
 		}
 
@@ -954,6 +957,8 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean friendly(Char chr) {
+		if(getEnemy() == chr) {return false;}
+
 		if(chr instanceof Hero) {
 			return isPet() || ((Hero)chr).heroClass.friendlyTo(getMobClassName());
 		}
