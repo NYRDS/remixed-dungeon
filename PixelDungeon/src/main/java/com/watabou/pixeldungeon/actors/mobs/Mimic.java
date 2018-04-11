@@ -121,9 +121,9 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		Level level = Dungeon.level;
 		Char ch = Actor.findChar(pos);
 		if (ch != null) {
-			int newPos = Dungeon.level.getEmptyCellNextTo(pos);
+			int newPos = level.getEmptyCellNextTo(pos);
 
-			if (!Dungeon.level.cellValid(newPos)) {
+			if (level.cellValid(newPos)) {
 
 				Actor.addDelayed(new Pushing(ch, ch.getPos(), newPos), -1);
 
