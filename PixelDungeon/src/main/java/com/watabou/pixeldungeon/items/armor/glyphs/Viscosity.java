@@ -17,10 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -32,7 +33,6 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Viscosity extends Glyph {
@@ -83,23 +83,9 @@ public class Viscosity extends Glyph {
 		private static final String TXT_DEFERED_DAMAGE = Game.getVar(R.string.DeferedDamage_Defered_Txt);
 		private static final String TXT_KILLED_YOU     = Game.getVar(R.string.DeferedDamage_Killed_Txt);
 
+		@Packable
 		protected int damage = 0;
-		
-		private static final String DAMAGE	= "damage";
-		
-		@Override
-		public void storeInBundle( Bundle bundle ) {
-			super.storeInBundle( bundle );
-			bundle.put( DAMAGE, damage );
-			
-		}
-		
-		@Override
-		public void restoreFromBundle( Bundle bundle ) {
-			super.restoreFromBundle( bundle );
-			damage = bundle.getInt( DAMAGE );
-		}
-		
+
 		@Override
 		public boolean attachTo( Char target ) {
 			if (super.attachTo( target )) {

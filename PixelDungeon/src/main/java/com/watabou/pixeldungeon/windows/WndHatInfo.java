@@ -88,6 +88,7 @@ public class WndHatInfo extends Window {
 						new Runnable() {
 							@Override
 							public void run() {
+								EventCollector.logEvent("PurchaseClick",item.name());
 								Iap.doPurchase(accessory, new Iap.IapCallback() {
 									@Override
 									public void onPurchaseOk() {

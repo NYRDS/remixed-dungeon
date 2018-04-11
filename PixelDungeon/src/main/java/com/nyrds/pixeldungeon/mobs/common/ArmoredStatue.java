@@ -34,7 +34,7 @@ public class ArmoredStatue extends Mob {
 
 		do {
 			armor = (Armor) Generator.random( Generator.Category.ARMOR );
-		} while (!(armor instanceof Armor) || armor.level() < 0);
+		} while (armor == null || armor.level() < 0);
 
 		armor.identify();
 		armor.inscribe( Armor.Glyph.random() );
