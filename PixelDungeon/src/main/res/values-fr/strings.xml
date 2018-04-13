@@ -58,6 +58,32 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Le texte est indéchiffrable...</string>
   <string name="Dungeon_DeadEnd">Que faites vous ici ?!</string>
+  <string-array name="Dungeon_Tips">
+    <item>Ne surestimez pas votre force. N\'utilisez que des armes et des armures que vous pouvez porter.</item>
+    <item>Toutes les portes du donjon ne sont pas visibles du premier coup. Si vous êtes bloqué, cherchez des portes cachées.</item>
+    <item>Souvenez-vous qu\'augmenter votre force n\'est pas le seul moyen d\'accéder à de meilleurs équipements, vous pouvez faire l\'inverse et diminuer la force requise d\'un objet en l\'améliorant.</item>
+    <item>Vous pouvez dépenser vos pièces d\'or aux marchés parsemant le donjon et au village.</item>
+    <item>renez garde au Flan !</item>
+    <item>Marché Pixel - Tout ce dont vous avez besoin pour une aventure réussie !</item>
+    <item>Identifiez vos potions et parchemins le plus tôt possible, ne le faites pas au moment où vous en auriez le plus besoin.</item>
+    <item>Avoir faim n\'est pas dangereux, mais être affamé est mortel !</item>
+    <item>Une attaque surprise a plus de chances de réussir. Par exemple, vous pouvez embusquer vos ennemis derrière une porte quand vous savez qu\'ils arrivent.</item>
+    <item>Ne laissez pas le Tengu s\'échapper !</item>
+    <item>Marché Pixel - Dépensez plus et vivez plus longtemps.</item>
+    <item>Vous êtes attaqué par plusieurs monstres à la fois ? Essayez de battre en retraite derrière une porte.</item>
+    <item>Si les flammes vous dévorent, vous ne pourrez pas les éteindre en marchant dans l\'eau tout en lévitant !</item>
+    <item>Il ne sert à rien de trimballer deux Ankhs à la fois car vous les perdrez tous les deux en ressuscitant.</item>
+    <item>DANGER ! La machinerie peut causer des blessures, un démembrement ou même la mort !</item>
+    <item>Marché Pixe - Pour un donjon plus sûr.</item>
+    <item>Quand vous améliorez une arme enchantée, il est possible que l\'enchantement soit détruit.</item>
+    <item>Les puits de transmutation vous permettent d\'obtenir des objets uniques, qui ne pourraient pas être obtenus autrement.</item>
+    <item>La seule manière d\'enchanter une arme est de l\'améliorer avec un parchemin d\'amélioration d\'arme.</item>
+    <item>Aucune arme tolérée en présence de sa majesté !</item>
+    <item>Marché Pixel - Réductions spéciales pour les chasseurs de démons !</item>
+    <item>Le texte est écrit dans une langue démoniaque.</item>
+    <item>Le texte est encore écrit dans une langue démoniaque.</item>
+    <item>Le texte est toujours écrit dans une langue démoniaque.</item>
+  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Au régime</item>
@@ -293,15 +319,15 @@ Cette balise a été installée quelque part au %de étage du Pixel Dungeon.</st
   <string name="IronKey_FromDepth">Clé de fer du %de étage</string>
   <!--STRINGS OF SkeletonKey CLASS-->
   <string name="SkeletonKey_Name">Clé squelette</string>
-  <string name="SkeletonKey_Info">Cette clé à un air grave : sa tête est taillée en forme de crâne. Elle ouvrira sûrement une porte importante.</string>
+  <string name="SkeletonKey_Info">Cette clé doit être du sérieur : sa tête est taillée en forme de crâne. Elle ouvrira sûrement une porte importante.</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">Poussière des morts</string>
   <string name="CorpseDust_Info">Ce tas de poussière cadavérique ne se démarque pas plus qu\'un tas de poussière lambda. Mais bon, vous sentez qu\'il vaudrait mieux vous en débarrasser au plus vite.</string>
-  <string name="CorpseDust_Info2">Peut-être parce que le simple fait de la tenir te rend anxieux et énervé</string>
+  <string name="CorpseDust_Info2">Peut-être parce que le simple fait de la tenir vous rend anxieux et en colère.</string>
   <!--STRINGS OF DarkGold CLASS-->
-  <string name="DarkGold_Name">minerai noir</string>
-  <string name="DarkGold_Info">Ce métal n\'est pas appelé noir à cause de sa couleur (en fait, on dirait de l\'or), mais il fond à la lumière du jour, le rendant inutile à la surface.</string>
+  <string name="DarkGold_Name">minerai d\'or noir</string>
+  <string name="DarkGold_Info">Ce métal n\'est pas appelé noir à cause de sa couleur (en fait, on dirait de l\'or), mais pace qu\'il fond à la lumière du jour, le rendant inutile à la surface.</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">rose séchée</string>
   <string name="DriedRose_Info">La rose est fanée depuis longtemps, mais elle a réussi à garder toutes ses pétales.</string>
@@ -314,7 +340,7 @@ Cette balise a été installée quelque part au %de étage du Pixel Dungeon.</st
   <string name="Pickaxe_Info">C\'est un outil grand et robuste fait pour casser la pierre. Il pourrait peut-être servir d\'arme.</string>
   <string name="Pickaxe_ACMine">MINER</string>
   <string name="Pickaxe_Gender">féminin</string>
-  <string name="Pickaxe_NoVein">Il n\'y a aucune veine de minerai noir à proximité</string>
+  <string name="Pickaxe_NoVein">Il n\'y a aucune veine de minerai d\'or noir à proximité</string>
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">crâne de rat géant</string>
   <string name="RatSkull_Info">Cela aurait pu être un beau trophée de chasse, mais l\'odeur qui s\'en dégage est trop désagréable pour être accroché sur un mur.</string>

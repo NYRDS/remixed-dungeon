@@ -17,7 +17,7 @@
     <!-- STRINGS OF Candy CLASS -->
     <string name="Candy_Name">Bonbon</string>
     <string name="Candy_Info">Ce bonbon est si joli et sent aussi si bon. Avez-vous vraiment besoin de le donner à quelqu\'un d\'autre ?</string>
-    <string name="Candy_Warning_1">Vous n\'auriez pas dû manger ce bonbon. Vous aviez promi de le donner à quelqu\'un. Mais il ne semble pas vous faire un effet, et votre faim est toujours là. C\'est juste un bonbon après tout. </string>
+    <string name="Candy_Warning_1">Vous n\'auriez pas dû manger ce bonbon. Vous aviez promi de le donner à quelqu\'un. Mais il ne semble pas vous faire un effet, et votre faim est toujours là. C\'était juste un bonbon après tout. </string>
     <string name="Candy_Warning_2">Là vous en avez vraiment trop avalés. Votre ventre vous fait mal puisque vous avez mangé trop de bonbons.</string>
 
     <!-- STRINGS OF PumpkinPie CLASS -->
@@ -26,7 +26,7 @@
 
     <!-- STRINGS OF RottenPumpkinPie CLASS -->
     <string name="RottenPumpkinPie_Name">Tarte au potiron pourrie</string>
-    <string name="RottenPumpkinPie_Info">Peu importe combien cette tarte était bonne fraîche, aucun chance pour qu\'elle soit encore consommable.</string>
+    <string name="RottenPumpkinPie_Info">Peu importe combien bonne était cette tarte encore fraîche, il n\'y a aucune chance pour qu\'elle soit encore consommable.</string>
 
     <!-- STRINGS OF CandleOfMindVision CLASS -->
     <string name="CandleOfMindVision_Name">Bougie de vision</string>

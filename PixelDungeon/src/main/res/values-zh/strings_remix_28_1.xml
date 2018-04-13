@@ -7,7 +7,7 @@
     <string name="BlackCat_Desc">一只黑猫</string>
     
     <string-array name="BlackCat_Phrases">
-        <item>喵</item>
+        <item>Prrrrrrr</item>
         <item>喵...</item>
         <item>喵!</item>
     </string-array>
@@ -54,4 +54,12 @@
 
     <string name="WndHero_SkillLevel">技能等级</string>
 
+    <string name="town_deco_sofa_name">超爽的沙发</string>
+    <string name="town_deco_sofa_desc">这个沙发超爽的，不坐上去看电guang影gao吗</string>
+
+    <string name="town_deco_book_name">书</string>
+    <string name="town_deco_screen_name">屏幕</string>
+    <string name="town_deco_stove_name">石头火堆</string>
+    <string name="town_deco_wooden_chair_name">木椅</string>
+    <string name="town_deco_snowy_plate_name">附雪石雕</string>
     </resources>

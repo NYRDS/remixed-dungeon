@@ -69,4 +69,7 @@
 
     <string name="town_deco_snowy_plate_name">Verschneite Platte</string>
     <string name="town_deco_snowy_plate_desc">Diese antike Platte ist mit Schnee bedeckt</string>
+
+    <string name="DogeMask_Name">Mask des Dogen</string>
+    <string name="DogeMask_Info">Wolltest du schon immer als ein berühmter Doge verkleiden? Das ist deine Chance!\nWas für eine Maske! Gute Tarnung! Wow!</string>
 </resources>

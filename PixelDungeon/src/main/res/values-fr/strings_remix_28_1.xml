@@ -69,4 +69,7 @@
 
     <string name="town_deco_snowy_plate_name">Plaque couverte de neige</string>
     <string name="town_deco_snowy_plate_desc">La neige recouvre cette plaque ancienne.</string>
+
+    <string name="DogeMask_Name">Masque de Doge</string>
+    <string name="DogeMask_Info">Vous avez toujours eu envie de vous déguiser en un Doge célèbre ?C\'est votre chance! \nQuelle classe ce masque ! So kool! Si Wow !</string>
 </resources>
