@@ -130,7 +130,9 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 					downloadProgress = new WndMessage("");
 					Game.scene().add(downloadProgress);
 				}
-				downloadProgress.setText(Utils.format("Downloading  %d%%", percent));
+				if(downloadProgress.getParent() == Game.scene()) {
+					downloadProgress.setText(Utils.format("Downloading  %d%%", percent));
+				}
 			}
 		});
 	}

@@ -19,7 +19,6 @@ import info.guardianproject.netcipher.NetCipher;
 
 public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
-	private static final String TAG = "DownloadTask";
 	private DownloadStateListener m_listener;
 	private String                m_url;
 	

@@ -151,8 +151,9 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 					downloadProgress = new WndMessage("");
 					Game.scene().add(downloadProgress);
 				}
-
-				downloadProgress.setText(Utils.format("Downloading %s %d%%", selectedMod, percent));
+				if(downloadProgress.getParent() == Game.scene()) {
+					downloadProgress.setText(Utils.format("Downloading %s %d%%", selectedMod, percent));
+				}
 			}
 		});
 	}
