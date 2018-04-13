@@ -12,6 +12,7 @@ import com.nyrds.android.util.UnzipStateListener;
 import com.nyrds.android.util.UnzipTask;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.DownloadProgress;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -26,9 +27,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import java.io.File;
 import java.util.Map;
 
-public class WndModSelect extends Window implements DownloadStateListener, UnzipStateListener {
-
-	private WndMessage downloadProgress;
+public class WndModSelect extends Window implements DownloadStateListener.IDownloadComplete, UnzipStateListener {
 
 	private String selectedMod;
 	private String downloadTo;
@@ -123,7 +122,7 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
 				desc.needUpdate = false;
 
-				new DownloadTask(this).download(desc.url, downloadTo);
+				new DownloadTask(new DownloadProgress(Utils.format("Downloading %s", selectedMod),this)).download(desc.url, downloadTo);
 
 				return;
 			}
@@ -141,32 +140,12 @@ public class WndModSelect extends Window implements DownloadStateListener, Unzip
 		Game.scene().add(new WndModDescription(option, prevMod));
 	}
 
-	@Override
-	public void DownloadProgress(String file, final Integer percent) {
-		Game.pushUiTask(new Runnable() {
-
-			@Override
-			public void run() {
-				if (downloadProgress == null) {
-					downloadProgress = new WndMessage("");
-					Game.scene().add(downloadProgress);
-				}
-				if(downloadProgress.getParent() == Game.scene()) {
-					downloadProgress.setText(Utils.format("Downloading %s %d%%", selectedMod, percent));
-				}
-			}
-		});
-	}
 
 	@Override
 	public void DownloadComplete(String url, final Boolean result) {
 		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
-				if (downloadProgress != null) {
-					downloadProgress.hide();
-					downloadProgress = null;
-				}
 				if (result) {
 					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 						new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);

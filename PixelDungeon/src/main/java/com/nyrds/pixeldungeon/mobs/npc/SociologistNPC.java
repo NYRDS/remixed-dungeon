@@ -8,6 +8,7 @@ import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.DownloadProgress;
 import com.nyrds.pixeldungeon.windows.WndSurvey;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -25,7 +26,7 @@ import java.io.File;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class SociologistNPC extends ImmortalNPC implements DownloadStateListener, InterstitialPoint {
+public class SociologistNPC extends ImmortalNPC implements DownloadStateListener.IDownloadComplete, InterstitialPoint {
 
     private static final String SURVEY_JSON = "survey.json";
 
@@ -50,10 +51,6 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
         return true;
     }
 
-    @Override
-    public void DownloadProgress(String file, Integer percent) {
-
-    }
 
     @Override
     public void DownloadComplete(String file, final Boolean result) {
@@ -86,7 +83,8 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
             File survey = FileSystem.getInternalStorageFile(SURVEY_JSON);
             survey.delete();
             String downloadTo = survey.getAbsolutePath();
-            new DownloadTask(this).download("https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json", downloadTo);
+
+            new DownloadTask(new DownloadProgress("Downloading", this)).download("https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json", downloadTo);
         } else {
             say(Game.getVar(R.string.SociologistNPC_InternetRequired));
         }

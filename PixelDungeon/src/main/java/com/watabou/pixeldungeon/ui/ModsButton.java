@@ -8,6 +8,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Mods;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.windows.DownloadProgress;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -18,14 +19,13 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
 import java.io.File;
 
-public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener {
+public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener.IDownloadComplete {
 
 	private Image image;
 	private Text  text;
@@ -106,7 +106,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 						modsCommon.delete();
 						String downloadTo = modsCommon.getAbsolutePath();
 
-						new DownloadTask(ModsButton.this).download("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
+                        new DownloadTask(new DownloadProgress("Downloading",ModsButton.this)).download("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
 
 					} else {
 						DownloadComplete("no internet", true);
@@ -121,32 +121,10 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 	}
 
 	@Override
-	public void DownloadProgress(String file, final Integer percent) {
-		Game.pushUiTask(new Runnable() {
-
-			@Override
-			public void run() {
-				if (downloadProgress == null) {
-					downloadProgress = new WndMessage("");
-					Game.scene().add(downloadProgress);
-				}
-				if(downloadProgress.getParent() == Game.scene()) {
-					downloadProgress.setText(Utils.format("Downloading  %d%%", percent));
-				}
-			}
-		});
-	}
-
-	@Override
 	public void DownloadComplete(String file, final Boolean result) {
 		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
-				if (downloadProgress != null) {
-					downloadProgress.hide();
-					downloadProgress = null;
-				}
-
 				Game.scene().add(new WndModSelect());
 
 				if (!result) {

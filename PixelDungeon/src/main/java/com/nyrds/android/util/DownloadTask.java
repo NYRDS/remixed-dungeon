@@ -2,10 +2,13 @@ package com.nyrds.android.util;
 
 import android.os.AsyncTask;
 import android.os.Build;
+import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndMessage;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -19,83 +22,83 @@ import info.guardianproject.netcipher.NetCipher;
 
 public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
-	private DownloadStateListener m_listener;
-	private String                m_url;
-	
-	public DownloadTask(DownloadStateListener listener) {
-		m_listener = listener;
-	}
+    private DownloadStateListener m_listener;
+    private String                m_url;
 
-	@Override
-	protected Boolean doInBackground(String... args) {
-		Boolean result = false;
-		m_url = args[0];
+    public DownloadTask(DownloadStateListener listener) {
+        m_listener = listener;
+    }
 
-		publishProgress( 0 );
-		
-		try {
-			URL url   = new URL(m_url);
-			File file = new File(args[1]);
+    @Override
+    protected Boolean doInBackground(String... args) {
+        Boolean result = false;
+        m_url = args[0];
 
-			EventCollector.startTiming("download");
+        publishProgress(0);
 
-			HttpsURLConnection ucon = NetCipher.getHttpsURLConnection(url);
+        try {
+            URL url = new URL(m_url);
+            File file = new File(args[1]);
 
-			ucon.setReadTimeout(2500);
-			ucon.setInstanceFollowRedirects(true);
-			ucon.connect();
+            EventCollector.startTiming("download");
 
-			int repCode = ucon.getResponseCode();
-			
-			if (repCode == HttpURLConnection.HTTP_OK) {
-				int bytesTotal = ucon.getContentLength();
+            HttpsURLConnection ucon = NetCipher.getHttpsURLConnection(url);
 
-				GLog.debug("bytes in file: " + bytesTotal);
+            ucon.setReadTimeout(2500);
+            ucon.setInstanceFollowRedirects(true);
+            ucon.connect();
 
-				InputStream is = ucon.getInputStream();
-				
-				FileOutputStream fos = new FileOutputStream(file);
+            int repCode = ucon.getResponseCode();
 
-				byte buffer[] = new byte[16384];
-				int count;
-				int bytesDownloaded = 0;
-				while ((count = is.read(buffer)) != -1) {
-					fos.write(buffer, 0, count);
-					bytesDownloaded += count;
-					publishProgress( (100 * bytesDownloaded) / bytesTotal);
-				}
+            if (repCode == HttpURLConnection.HTTP_OK) {
+                int bytesTotal = ucon.getContentLength();
 
-				fos.close();
-				EventCollector.stopTiming("download","download",m_url,"");
-				publishProgress( 100 );
+                GLog.debug("bytes in file: " + bytesTotal);
 
-				result = true;
-			} else {
-				result = false;
-			}
-		} catch (Exception e) {
-			EventCollector.logException(e);
-		}
+                InputStream is = ucon.getInputStream();
 
-		return result;
-	}
-	
+                FileOutputStream fos = new FileOutputStream(file);
+
+                byte buffer[] = new byte[16384];
+                int count;
+                int bytesDownloaded = 0;
+                while ((count = is.read(buffer)) != -1) {
+                    fos.write(buffer, 0, count);
+                    bytesDownloaded += count;
+                    publishProgress(bytesDownloaded);
+                }
+
+                fos.close();
+                EventCollector.stopTiming("download", "download", m_url, "");
+                publishProgress(100);
+
+                result = true;
+            } else {
+                result = false;
+            }
+        } catch (Exception e) {
+            EventCollector.logException(e);
+        }
+
+        return result;
+    }
+
 
     protected void onProgressUpdate(Integer... progress) {
-    	m_listener.DownloadProgress(m_url, progress[0]);
-
+        m_listener.DownloadProgress(m_url, progress[0]);
     }
 
     protected void onPostExecute(Boolean result) {
-    	m_listener.DownloadComplete(m_url, result);
+        m_listener.DownloadComplete(m_url, result);
     }
 
 
     public void download(String url, String downloadTo) {
-	    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-		    this.executeOnExecutor(Game.instance().executor,url, downloadTo);
-	    }else {
-		    this.execute(url, downloadTo);
-	    }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            this.executeOnExecutor(Game.instance().executor, url, downloadTo);
+        } else {
+            this.execute(url, downloadTo);
+        }
     }
+
 }
