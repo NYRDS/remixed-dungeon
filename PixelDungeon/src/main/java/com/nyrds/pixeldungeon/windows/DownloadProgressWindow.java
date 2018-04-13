@@ -11,12 +11,12 @@ import com.watabou.pixeldungeon.windows.WndMessage;
  * Created by mike on 14.04.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
-public class DownloadProgress implements DownloadStateListener {
+public class DownloadProgressWindow implements DownloadStateListener {
     private WndMessage        progress;
     private String            prefix;
     private IDownloadComplete onComplete;
 
-    public DownloadProgress(@NonNull String prefix, @NonNull IDownloadComplete onComplete) {
+    public DownloadProgressWindow(@NonNull String prefix, @NonNull IDownloadComplete onComplete) {
         this.prefix = prefix;
         this.onComplete = onComplete;
     }

@@ -8,7 +8,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Mods;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.windows.DownloadProgress;
+import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -106,7 +106,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 						modsCommon.delete();
 						String downloadTo = modsCommon.getAbsolutePath();
 
-                        new DownloadTask(new DownloadProgress("Downloading",ModsButton.this)).download("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
+                        new DownloadTask(new DownloadProgressWindow("Downloading",ModsButton.this)).download("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
 
 					} else {
 						DownloadComplete("no internet", true);

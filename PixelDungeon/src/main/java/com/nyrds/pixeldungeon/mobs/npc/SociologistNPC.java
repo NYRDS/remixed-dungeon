@@ -8,7 +8,7 @@ import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.DownloadProgress;
+import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.WndSurvey;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -84,7 +84,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
             survey.delete();
             String downloadTo = survey.getAbsolutePath();
 
-            new DownloadTask(new DownloadProgress("Downloading", this)).download("https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json", downloadTo);
+            new DownloadTask(new DownloadProgressWindow("Downloading", this)).download("https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json", downloadTo);
         } else {
             say(Game.getVar(R.string.SociologistNPC_InternetRequired));
         }
