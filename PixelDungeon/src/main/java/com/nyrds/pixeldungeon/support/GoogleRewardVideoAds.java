@@ -9,7 +9,6 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.utils.GLog;
 
 /**
  * Created by mike on 30.01.2017.
@@ -93,6 +92,11 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			EventCollector.stopTiming("google reward video","google reward video","fail","");
+		}
+
+		@Override
+		public void onRewardedVideoCompleted() {
+
 		}
 	}
 
