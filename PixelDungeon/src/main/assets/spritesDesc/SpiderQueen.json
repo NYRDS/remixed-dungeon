@@ -1,0 +1,9 @@
+{
+  "texture" : "spider_queen.png",
+  "width"  : 16,
+  "height" : 15,
+  "idle"   : { "fps" : 4,  "looped" : true,     "frames" : [0, 1, 0, 0, 1, 1] },
+  "run"    : { "fps" : 10, "looped" : true,     "frames" : [2, 3, 4, 5, 0] },
+  "attack" : { "fps" : 12, "looped" : false,    "frames" : [0, 1, 6, 7, 6] },
+  "die"    : { "fps" : 15, "looped" : false,    "frames" : [0, 8, 9, 10, 11, 12] }
+}

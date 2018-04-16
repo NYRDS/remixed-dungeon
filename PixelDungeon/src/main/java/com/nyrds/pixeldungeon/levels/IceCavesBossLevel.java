@@ -154,7 +154,7 @@ public class IceCavesBossLevel extends Level {
 						!passable[mob.getPos()] ||
 								!outsideEntraceRoom( mob.getPos() ) ||
 								Dungeon.visible[mob.getPos()]);
-				Dungeon.level.spawnMob(mob);
+				spawnMob(mob);
 				mob = guard;
 			}
 

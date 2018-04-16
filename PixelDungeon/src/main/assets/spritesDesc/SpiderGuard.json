@@ -2,9 +2,9 @@
   "texture" : "spider_servant.png",
   "width"  : 16,
   "height" : 16,
-  "idle"   : { "fps" : 5,  "looped" : true,     "frames" : [0, 1, 0, 2] },
-  "run"    : { "fps" : 10, "looped" : true,     "frames" : [3, 4, 5, 4] },
-  "attack" : { "fps" : 12, "looped" : false,    "frames" : [6, 7, 8] },
-  "die"    : { "fps" : 15, "looped" : false,    "frames" : [0, 9, 10, 11, 12, 13 ] },
+  "idle"   : { "fps" : 5,  "looped" : true,     "frames" : [16, 17, 16, 18] },
+  "run"    : { "fps" : 10, "looped" : true,     "frames" : [19, 20, 21, 20] },
+  "attack" : { "fps" : 12, "looped" : false,    "frames" : [22, 23, 24] },
+  "die"    : { "fps" : 15, "looped" : false,    "frames" : [16, 25, 26, 27, 28, 29 ] },
   "bloodColor" : "0xFFEAFF80"
 }

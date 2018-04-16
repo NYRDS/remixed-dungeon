@@ -144,7 +144,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 	public void execute( Hero hero, String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 			
-			if (hero.buff( Blindness.class ) != null) {
+			if (hero.hasBuff( Blindness.class )) {
 				GLog.w( TXT_BLINDED );
 			} else {
 				setCurUser(hero);

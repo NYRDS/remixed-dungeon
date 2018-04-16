@@ -10,6 +10,8 @@
     <string name="Spells_SummonLimitReached">%1$s:O Limite de Invocação foi Excedido(O Máximo:%2$d)!</string>
     <string name="Mana_Title">Mana</string>
     <string name="Mana_Cost">Custo de Mana: </string>
+    <string name="Spells_NotEnoughSP">Você não tem mana o suficiente para lançar uma \'\'%1$s\'\' magia.</string>
+
     <!-- STRINGS OF SummonDeathling CLASS -->
     <string name="SummonDeathling_Name">Invocar Morto-Vivo</string>
     <string name="SummonDeathling_Info">Invocar um Morto Vivo Seguidor. A Vida e o Dano cresce com o Aumento do Level do Herói. Limite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
@@ -24,6 +26,8 @@
     <string name="FreezeGlobe_Name">Congela</string>
     <string name="FreezeGlobe_Info">Congela o mob selecionado tornando-o incapaz de executar qualquer ação por um curto período de tempo.</string>
 
+    <!-- STRINGS OF MagicTorch CLASS -->
+    <string name="MagicTorch_Name">Tocha magica</string>
     <!-- STRINGS OF Healing CLASS -->
     <string name="Healing_Name">Cura</string>
     <string name="Healing_Info">O Pergaminho e Crucial Para Todos os Aventureiros. Ele Pode Restaurar 1/3 do Máximo do Hp dos Conjuradores.</string>
@@ -33,13 +37,30 @@
     <string name="ClassArmor_LowMana">Mana Insuficiente</string>
 
     <!-- STRINGS OF Drink CLASS -->
-    <string name="Drink_ACDrink">Bebida</string>
+    <string name="Drink_ACDrink">Tomar</string>
     <string name="Drink_Message">Aquela Bebida Estava Refrescante!</string>
 
     <!-- STRINGS OF Drink CLASS -->
     <string name="TomeOfKnowledge_Name">Livro do Conhecimento</string>
+    <string name="TomeOfKnowledge_Info">Este antigo tomo está cheio de enigmas e mistérios arcanos! Pode ser uma leitura difícil, mas se você passar por isso, você definitivamente aumentará seus poderes mágicos.</string>
+
+    <!-- STRINGS OF SpellBook CLASS -->
+    <string name="SpellBook_Name">Livro de feitiços</string>
+    <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas,do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
     <!-- STRINGS OF ManaPotion CLASS -->
     <string name="ManaPotion_Name">Poção de Mana</string>
+    <string name="ManaPotion_Info">Essa poção vai restaurar sua energia espiritual.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">Esse cogumelo tem um gosto estranho! </string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">É um item indispensável na masmorra,que é infame pela sua iluminação ambiente fraca.</string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">Magias</string>
     <string name="WndSpells_Level">Nível Mágico:</string>
 
 </resources>

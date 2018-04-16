@@ -26,13 +26,13 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.SuccubusSprite;
 import com.watabou.utils.Random;
@@ -48,7 +48,6 @@ public class Succubus extends Mob {
 
 		hp(ht(80));
 		defenseSkill = 25;
-		viewDistance = Dungeon.level.MIN_VIEW_DISTANCE + 1;
 
 		exp = 12;
 		maxLvl = 25;
@@ -58,6 +57,12 @@ public class Succubus extends Mob {
 
 		RESISTANCES.add(Leech.class);
 		IMMUNITIES.add(Sleep.class);
+	}
+
+	@Override
+	public void onSpawn(Level level) {
+		super.onSpawn(level);
+		viewDistance = level.getViewDistance() + 1;
 	}
 
 	@Override
@@ -71,12 +76,12 @@ public class Succubus extends Mob {
 		if (Random.Int(3) == 0) {
 			float duration = Charm.durationFactor(enemy) * Random.IntRange(2, 5);
 
-			if (enemy.buff(DriedRose.OneWayCursedLoveBuff.class) != null) {
+			if (enemy.hasBuff(DriedRose.OneWayCursedLoveBuff.class)) {
 				duration *= 2;
 			}
 			Char target = enemy;
 
-			if (enemy.buff(DriedRose.OneWayLoveBuff.class) != null) {
+			if (enemy.hasBuff(DriedRose.OneWayLoveBuff.class)) {
 				target = this;
 			}
 

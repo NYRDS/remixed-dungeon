@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="BlackCat_Name">Schwarze Katze</string>
+    <string name="BlackCat_Gender">weiblich</string>
+    <string name="BlackCat_Name_Objective">Katze</string>
+    <string name="BlackCat_Desc">Das ist eine Schwarze Katze</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Prrrrrrr</item>
+        <item>Miau...</item>
+        <item>Miau!</item>
+    </string-array>
+
+    <string name="Str_lose">-1 Stä</string>
+
+    <string name="SociologistNPC_Name">Soziologe</string>
+    <string name="SociologistNPC_Gender">männlich</string>
+    <string name="SociologistNPC_Name_Objective">Soziologe</string>
+    <string name="SociologistNPC_Desc">Dies ist ein Soziologe mit der heiligen Aufgabe, öffentliche Meinungen zu sammeln</string>
+
+    <string name="SociologistNPC_AlreadyTaken">Du hast diese Umfrage bereits gemacht, bitte komm später wieder</string>
+    <string name="SociologistNPC_Hi">Hallo!\nWillst du an dieser Umfrage teilnehmen?(Internetverbindung ist erforderlich)\nDeine Meinung zählt!</string>
+    <string name="SociologistNPC_InternetRequired">Es tut mir leid, aber ohne Internetverbindung kannst du nicht an der Umfrage teilnehmen</string>
+    <string name="SociologistNPC_DownloadError">Es tut mir leid, aber etwas ist schief gelaufen, bitte versuche es später erneut</string>
+
+    <string name="town_deco_library_sign_name">Bibliotheksschild</string>
+    <string name="town_deco_library_sign_desc">Es scheint so, als ob eine Bibliothek in dem Gebäude ist.</string>
+    <string name="town_deco_identifier_sign_name">Magischer Ball Schild</string>
+    <string name="town_deco_identifier_sign_desc">Es scheint so, als ob eine Wahrsagerin in dem Gebäude ist.</string>
+    <string name="town_deco_cinema_sign_name">Kino Schild</string>
+    <string name="town_deco_cinema_sign_desc">Es scheint so als ob ein Kino in dem Gebäude ist.</string>
+    <string name="town_deco_INN_sign_name">Bar Schild</string>
+    <string name="town_deco_INN_sign_desc">Es scheint so, als ob eine Bar in dem Gebäude ist.</string>
+
+
+    <string name="HealthDart_Name">Heilungs Dart</string>
+    <string name="HealthDart_Gender">männlich</string>
+    <string name="HealthDart_Info">Die Spitze dieses Dartes ist mit einem Heilungstrank versehen.</string>
+
+    <string name="HealthArrow_Name">Heilungs Pfeil</string>
+    <string name="HealthArrow_Gender">weiblich</string>
+    <string name="HealthArrow_Info">Die Spitze dieses Pfeils ist mit einem Heilungstrank versehen.</string>
+
+    <string name="AmokDart_Name">Amok Dart</string>
+    <string name="AmokDart_Gender">männlich</string>
+    <string name="AmokDart_Info">Die Lösung auf der Spitze dieses Dartes wird jeden in einen geistlosen und gnadenlosen Berserker verwandeln.</string>
+
+    <string name="AmokArrow_Name">Amok Pfeil</string>
+    <string name="AmokArrow_Gender">weiblich</string>
+    <string name="AmokArrow_Info">Die Lösung auf der Spitze dieses Pfeils wird jeden in einen geistlosen und gnadenlosen Berserker verwandeln.</string>
+
+    <string name="WndHero_SkillLevel">Fähigkeiten Level</string>
+
+    <string name="town_deco_sofa_name">Gemütliches Sofa</string>
+    <string name="town_deco_sofa_desc">Sieht so aus, als ob dieses Kino versucht die besten Plätze für die Kunden anzubieten.</string>
+
+    <string name="town_deco_book_name">Buch</string>
+    <string name="town_deco_book_desc">Dieses Buch sieht so aus, als ob jemand es aus versehen liegen gelassen hat</string>
+
+    <string name="town_deco_screen_name">Bildschirm</string>
+    <string name="town_deco_screen_desc">Diese Mysteriöse Leinwand wird \"Bildschirm\" genannt unt kann bewegende Bilder zeigen</string>
+
+    <string name="town_deco_stove_name">Steinofen</string>
+    <string name="town_deco_stove_desc">Dieser Ofen bringt angenehme Wärme</string>
+
+    <string name="town_deco_wooden_chair_name">Holzstuhl</string>
+    <string name="town_deco_wooden_chair_desc">Dieser Stuhl ist aus Holz</string>
+
+    <string name="town_deco_snowy_plate_name">Verschneite Platte</string>
+    <string name="town_deco_snowy_plate_desc">Diese antike Platte ist mit Schnee bedeckt</string>
+
+    <string name="DogeMask_Name">Mask des Dogen</string>
+    <string name="DogeMask_Info">Wolltest du schon immer als ein berühmter Doge verkleiden? Das ist deine Chance!\nWas für eine Maske! Gute Tarnung! Wow!</string>
+</resources>

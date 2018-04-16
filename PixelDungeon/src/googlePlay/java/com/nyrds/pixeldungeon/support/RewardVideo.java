@@ -9,8 +9,11 @@ import com.watabou.noosa.InterstitialPoint;
 
 public class RewardVideo {
 	static public void init() {
-		if(!isReady()) {
+		if(!AppodealRewardVideo.isReady()) {
 			AppodealRewardVideo.initCinemaRewardVideo();
+		}
+
+		if(!GoogleRewardVideoAds.isReady()){
 			GoogleRewardVideoAds.initCinemaRewardVideo();
 		}
 	}

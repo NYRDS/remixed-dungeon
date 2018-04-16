@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.support;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.nyrds.android.google.util.IabHelper;
 import com.nyrds.android.google.util.IabResult;
@@ -16,6 +15,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -265,7 +265,7 @@ public class Iap {
                                     PixelDungeon.setDonationLevel(4);
                                 }
                             } else {
-                                Game.executeInGlThread(new Runnable() {
+                                Game.pushUiTask(new Runnable() {
                                     @Override
                                     public void run() {
                                         mIapCallback.onPurchaseOk();
@@ -306,7 +306,7 @@ public class Iap {
 
     private static void complain(String message) {
         EventCollector.logEvent("iap error", message);
-        Log.e("GAME", "**** IAP Error: " + message);
+        GLog.debug("**** IAP Error: " + message);
     }
 
     public static boolean onActivityResult(int requestCode, int resultCode, Intent data) {

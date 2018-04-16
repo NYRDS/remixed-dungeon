@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
 import android.Manifest;
-import android.os.Build;
 
 import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
@@ -9,6 +8,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Mods;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -19,14 +19,13 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
 import java.io.File;
 
-public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener {
+public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener.IDownloadComplete {
 
 	private Image image;
 	private Text  text;
@@ -98,7 +97,7 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 	@Override
 	public void returnToWork(final boolean result) {
 		final Group parent = getParent();
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				if (result) {
@@ -107,11 +106,8 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 						modsCommon.delete();
 						String downloadTo = modsCommon.getAbsolutePath();
 
-						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-							new DownloadTask(ModsButton.this).executeOnExecutor(Game.instance().executor,"https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
-						}else {
-							new DownloadTask(ModsButton.this).execute("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
-						}
+                        new DownloadTask(new DownloadProgressWindow("Downloading",ModsButton.this)).download("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
+
 					} else {
 						DownloadComplete("no internet", true);
 					}
@@ -125,38 +121,14 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 	}
 
 	@Override
-	public void DownloadProgress(String file, final Integer percent) {
-		Game.executeInGlThread(new Runnable() {
-
-			@Override
-			public void run() {
-				if (downloadProgress == null) {
-					downloadProgress = new WndMessage("");
-					Game.scene().add(downloadProgress);
-				}
-				if(!Game.isPaused()) {
-					downloadProgress.setText(Utils.format("Downloading  %d%%", percent));
-				}
-			}
-		});
-	}
-
-	@Override
 	public void DownloadComplete(String file, final Boolean result) {
-		Game.executeInGlThread(new Runnable() {
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
-				if (downloadProgress != null) {
-					downloadProgress.hide();
-					downloadProgress = null;
-				}
+				Game.scene().add(new WndModSelect());
 
-				if(!Game.isPaused()) {
-					Game.scene().add(new WndModSelect());
-
-					if (!result) {
-						Game.toast("Mod list download failed :(");
-					}
+				if (!result) {
+					Game.toast("Mod list download failed :(");
 				}
 			}
 		});

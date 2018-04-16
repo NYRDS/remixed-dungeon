@@ -1,12 +1,11 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.util.Log;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -31,6 +30,7 @@ public class GoogleRewardVideoAds {
 				public void run() {
 					mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
 					mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
+					EventCollector.startTiming("google reward video");
 					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), new AdRequest.Builder().build());
 				}
 			});
@@ -59,23 +59,18 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
-			Log.i("reward video","onRewardedVideoAdLoaded()");
+			EventCollector.stopTiming("google reward video","google reward video","ok","");
 			loaded = true;
 		}
 
 		@Override
-		public void onRewardedVideoAdOpened() {
-			Log.i("reward video","onRewardedVideoAdOpened()");
-		}
+		public void onRewardedVideoAdOpened() { }
 
 		@Override
-		public void onRewardedVideoStarted() {
-			Log.i("reward video","onRewardedVideoStarted()");
-		}
+		public void onRewardedVideoStarted() { }
 
 		@Override
 		public void onRewardedVideoAdClosed() {
-			Log.i("reward video","onRewardedVideoAdClosed()");
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
@@ -87,18 +82,21 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
-			Log.i("reward video","onRewarded(RewardItem rewardItem)");
 			returnTo.returnToWork(true);
 		}
 
 		@Override
 		public void onRewardedVideoAdLeftApplication() {
-			Log.i("reward video","onRewardedVideoAdLeftApplication");
 		}
 
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
-			Log.i("reward video","onRewardedVideoAdFailedToLoad(int i)");
+			EventCollector.stopTiming("google reward video","google reward video","fail","");
+		}
+
+		@Override
+		public void onRewardedVideoCompleted() {
+
 		}
 	}
 

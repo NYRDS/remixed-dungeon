@@ -19,9 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -149,11 +149,11 @@ public class Thief extends Mob {
 	private class Fleeing extends Mob.Fleeing {
 		@Override
 		protected void nowhereToRun() {
-			if (buff( Terror.class ) == null) {
+			if (hasBuff( Terror.class )) {
+				super.nowhereToRun();
+			} else {
 				getSprite().showStatus( CharSprite.NEGATIVE, TXT_RAGE );
 				setState(HUNTING);
-			} else {
-				super.nowhereToRun();
 			}
 		}
 	}

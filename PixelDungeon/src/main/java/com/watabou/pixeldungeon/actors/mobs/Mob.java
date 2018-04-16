@@ -32,6 +32,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -43,6 +44,7 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -129,8 +131,6 @@ public abstract class Mob extends Char {
 	private static final String ENEMY_SEEN = "enemy_seen";
 	private static final String FRACTION   = "fraction";
 
-	protected Fraction fraction = Fraction.DUNGEON;
-
 	public Mob() {
 		readCharData();
 	}
@@ -153,22 +153,27 @@ public abstract class Mob extends Char {
 		setEnemy(DUMMY);
 	}
 
+	private String state2tag(AiState state) {
+		if (state == SLEEPING) {
+			return Sleeping.TAG;
+		} else if (state == WANDERING) {
+			return Wandering.TAG;
+		} else if (state == HUNTING) {
+			return Hunting.TAG;
+		} else if (state == FLEEING) {
+			return Fleeing.TAG;
+		} else if (state == PASSIVE) {
+			return Passive.TAG;
+		}
+		return Passive.TAG;
+	}
+
 	@Override
 	public void storeInBundle(Bundle bundle) {
 
 		super.storeInBundle(bundle);
 
-		if (getState() == SLEEPING) {
-			bundle.put(STATE, Sleeping.TAG);
-		} else if (getState() == WANDERING) {
-			bundle.put(STATE, Wandering.TAG);
-		} else if (getState() == HUNTING) {
-			bundle.put(STATE, Hunting.TAG);
-		} else if (getState() == FLEEING) {
-			bundle.put(STATE, Fleeing.TAG);
-		} else if (getState() == PASSIVE) {
-			bundle.put(STATE, Passive.TAG);
-		}
+		bundle.put(STATE,  state2tag(getState()));
 		bundle.put(TARGET, target);
 
 		bundle.put(ENEMY_SEEN, enemySeen);
@@ -283,12 +288,15 @@ public abstract class Mob extends Char {
 		float dist = level.getWidth() + level.getHeight();
 
 		if (enemyFraction.belongsTo(Fraction.HEROES)) {
-			bestEnemy = Dungeon.hero;
-			dist = level.distanceL2(getPos(), bestEnemy.getPos());
+			Hero hero = Dungeon.hero;
+			if (!friendly(hero)) {
+				bestEnemy = hero;
+				dist = level.distanceL2(getPos(), bestEnemy.getPos());
+			}
 		}
 
 		for (Mob mob : level.mobs) {
-			if (mob.fraction.belongsTo(enemyFraction) && mob != this) {
+			if (!mob.friendly(this)) {
 				float candidateDist = level.distanceL2(getPos(), mob.getPos());
 				if (candidateDist < dist) {
 					bestEnemy = mob;
@@ -298,20 +306,6 @@ public abstract class Mob extends Char {
 		}
 
 		return bestEnemy;
-	}
-
-	private Char chooseEnemyDungeon() {
-		if(Dungeon.hero.heroClass.friendlyTo(getMobClassName())) {
-			return DUMMY;
-		}
-
-		Char newEnemy = chooseNearestEnemyFromFraction(Fraction.HEROES);
-
-		if (newEnemy != DUMMY) {
-			return newEnemy;
-		}
-
-		return Dungeon.hero;
 	}
 
 	private Char chooseEnemyHeroes() {
@@ -337,26 +331,18 @@ public abstract class Mob extends Char {
 			return terror.source;
 		}
 
-		if (buff(Amok.class) != null) {
-				return chooseNearestEnemyFromFraction(Fraction.ANY);
+		if (hasBuff(Amok.class)) {
+			return chooseNearestEnemyFromFraction(Fraction.ANY);
 		}
 
-		if (getEnemy() instanceof Mob) {
-			Mob enemyMob = (Mob) getEnemy();
-			if (enemyMob.fraction.belongsTo(fraction)) {
-				setEnemy(DUMMY);
-			}
-		}
-
-		if(getEnemy() !=DUMMY) {
+		if(getEnemy() != DUMMY) {
 			return getEnemy();
 		}
-
 
 		switch (fraction) {
 			default:
 			case DUNGEON:
-				return chooseEnemyDungeon();
+				return chooseNearestEnemyFromFraction(Fraction.HEROES);
 			case HEROES:
 				return chooseEnemyHeroes();
 		}
@@ -457,13 +443,13 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void onAttackComplete() {
+	public final void onAttackComplete() {
 		attack(getEnemy());
 		super.onAttackComplete();
 	}
 
 	@Override
-	public void onZapComplete() {
+	public final void onZapComplete() {
 		zap(getEnemy());
 		super.onZapComplete();
 	}
@@ -645,10 +631,10 @@ public abstract class Mob extends Char {
 		Dungeon.level.spawnMob(clone, SPLIT_DELAY);
 		Actor.addDelayed(new Pushing(clone, getPos(), clone.getPos()), -1);
 
-		if (buff(Burning.class) != null) {
+		if (hasBuff(Burning.class)) {
 			Buff.affect(clone, Burning.class).reignite(clone);
 		}
-		if (buff(Poison.class) != null) {
+		if (hasBuff(Poison.class)) {
 			Buff.affect(clone, Poison.class).set(2);
 		}
 
@@ -727,12 +713,21 @@ public abstract class Mob extends Char {
 	}
 
 	public void yell(String str) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), str);
+		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
 	}
 
 	public void say(String str) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), str);
+		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
 	}
+
+	public void yell(String str, int index) {
+		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
+	}
+
+	public void say(String str,int index) {
+		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
+	}
+
 
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		if (mobDesc.has("loot")) {
@@ -744,7 +739,7 @@ public abstract class Mob extends Char {
 			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
 		}
 
-		setState(mobDesc.optString("aiState","Sleeping").toUpperCase(Locale.ROOT));
+		setState(mobDesc.optString("aiState",state2tag(getState())).toUpperCase(Locale.ROOT));
 	}
 
 	public AiState getState() {
@@ -764,6 +759,7 @@ public abstract class Mob extends Char {
 	}
 
 	public void onSpawn(Level level) {
+		Buff.affect(this, Regeneration.class);
 		runMobScript("onSpawn",level);
 	}
 
@@ -961,7 +957,12 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean friendly(Char chr) {
-		return isPet() || getEnemy()!= chr && (chr instanceof Hero && ((Hero)chr).heroClass.friendlyTo(getMobClassName()));
+		if(getEnemy() == chr) {return false;}
+
+		if(chr instanceof Hero) {
+			return isPet() || ((Hero)chr).heroClass.friendlyTo(getMobClassName());
+		}
+		return !this.fraction.isEnemy(chr.fraction);
 	}
 
 	public boolean canBePet() {
@@ -988,7 +989,7 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		if (fraction == Fraction.HEROES) {
+		if (friendly(hero)) {
 			swapPosition(hero);
 			return true;
 		}

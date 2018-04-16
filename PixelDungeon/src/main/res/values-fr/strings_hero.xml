@@ -29,7 +29,7 @@
   <!--STRINGS OF HeroClass CLASS-->
   <string name="HeroClass_War">guerrier</string>
   <string name="HeroClass_Mag">mage</string>
-  <string name="HeroClass_Rog">gredin</string>
+  <string name="HeroClass_Rog">voleur</string>
   <string name="HeroClass_Hun">chasseresse</string>
   <string name="HeroClass_Elf">elfe</string>
   <string-array name="HeroClass_WarPerks">
@@ -47,11 +47,11 @@
     <item>Les parchemins d\'identification sont identifiés dès le début.</item>
   </string-array>
   <string-array name="HeroClass_RogPerks">
-    <item>Les gredins commencent avec un anneau des ténèbres +1.</item>
-    <item>Les gredins identifient le type d\'un anneau en l\'équipant.</item>
-    <item>Les gredins sont plus à l\'aise avec les armures légères, ils esquivent mieux quand ils en portent une.</item>
-    <item>Les gredins détectent plus facilement les pièges et les portes cachées.</item>
-    <item>Les gredins survivent plus longtemps sans manger.</item>
+    <item>Les voleurs commencent avec un anneau des ténèbres +1.</item>
+    <item>Les voleurs identifient le type d\'un anneau en l\'équipant.</item>
+    <item>Les voleurs sont plus à l\'aise avec les armures légères, ils esquivent mieux quand ils en portent une.</item>
+    <item>Les voleurs détectent plus facilement les pièges et les portes cachées.</item>
+    <item>Les voleurs survivent plus longtemps sans manger.</item>
     <item>Les parchemins de repérage magique sont identifiés dès le début.</item>
   </string-array>
   <string-array name="HeroClass_HunPerks">

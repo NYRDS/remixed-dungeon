@@ -134,7 +134,7 @@ public class WndHero extends WndTabbed {
 			statSlot(Game.getVar(R.string.WndHero_Gold), Statistics.goldCollected );
 			statSlot(Game.getVar(R.string.WndHero_Depth), Statistics.deepestFloor );
 
-			statSlot("Skill level", hero.magicLvl());
+			statSlot(Game.getVar(R.string.WndHero_SkillLevel), hero.magicLvl());
 			
 			pos += GAP;
 		}

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="BlackCat_Name">Чорний кіт</string>
+    <string name="BlackCat_Gender">masculine</string>
+    <string name="BlackCat_Name_Objective">кіт</string>
+    <string name="BlackCat_Desc">Це чорний кіт</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Мр-р-р-р</item>
+        <item>Мяу...</item>
+        <item>Мяу!</item>
+    </string-array>
+
+    <string name="Str_lose">-1 сили</string>
+
+    <string name="SociologistNPC_Name">Соціолог</string>
+    <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_Name_Objective">Соціолог</string>
+    <string name="SociologistNPC_Desc">Цей соціолог має священну мету, збір суспільної думки</string>
+
+    <string name="SociologistNPC_AlreadyTaken">Ти вже брав участь у опитуванні, приходь пізніше</string>
+    <string name="SociologistNPC_Hi">Привіт!\nМаєш бажання взяти участь в опитуванні?(Необхідно мати підключення до інтернету)\nТвоя думка важлива для нас!</string>
+    <string name="SociologistNPC_InternetRequired">Вибач, але без доступу до мережі не можливо пройти опитування</string>
+    <string name="SociologistNPC_DownloadError">Перепрошую, але щось пішло не так, будь ласка, спробуй пізніше</string>
+
+    <string name="town_deco_library_sign_name">Вивіска бібліотеки</string>
+    <string name="town_deco_library_sign_desc">Скоріш за все тут знаходиться будівля бібліотеки.</string>
+    <string name="town_deco_identifier_sign_name">Вивіска магічної кулі</string>
+    <string name="town_deco_identifier_sign_desc">Схоже ворожка знаходиться в цій будівлі.</string>
+    <string name="town_deco_cinema_sign_name">Вивіска кінотеатру</string>
+    <string name="town_deco_cinema_sign_desc">Схоже тут знаходиться будівля кінотеатру.</string>
+    <string name="town_deco_INN_sign_name">Вивіска готелю</string>
+    <string name="town_deco_INN_sign_desc">Скоріш за все тут знаходиться готель.</string>
+
+
+    <string name="HealthDart_Name">Зцілюючий дротик</string>
+    <string name="HealthDart_Gender">masculine</string>
+    <string name="HealthDart_Info">Вістря дротика змочено зцілюючим зіллям.</string>
+
+    <string name="HealthArrow_Name">Зцілююча стріла</string>
+    <string name="HealthArrow_Gender">feminine</string>
+    <string name="HealthArrow_Info">Вістря стріли змочено зцілюючим зіллям.</string>
+
+    <string name="AmokDart_Name">Шалений дротик</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">Розчин на вістрі дротика здатний перетворити будь кого в розлюченого берсерка.</string>
+
+    <string name="AmokArrow_Name">Шалена стріла</string>
+    <string name="AmokArrow_Gender">feminine</string>
+    <string name="AmokArrow_Info">Розчин на вістрі стріли здатний перетворити будь кого в розлюченого берсерка.</string>
+
+    <string name="WndHero_SkillLevel">Рівень майстерності</string>
+
+    <string name="town_deco_sofa_name">Затишний диван</string>
+    <string name="town_deco_sofa_desc">Схоже в цьому кінотеатрі дійсно намагаються надати найкращі місця своїм відвідувачам.</string>
+
+    <string name="town_deco_book_name">Книга</string>
+    <string name="town_deco_book_desc">Книга виглядає так, наче її лишили по недбальству</string>
+
+    <string name="town_deco_screen_name">Екран</string>
+    <string name="town_deco_screen_desc">Ця магічна поверхня зветься \"екран\" і він може показувати рухомі картинки</string>
+
+    <string name="town_deco_stove_name">Кам\'яна піч</string>
+    <string name="town_deco_stove_desc">Ця піч, що палає, розповсюджує приємне тепло</string>
+
+    <string name="town_deco_wooden_chair_name">Дерев\'яне крісло</string>
+    <string name="town_deco_wooden_chair_desc">Це крісло зроблено з деревини</string>
+
+    <string name="town_deco_snowy_plate_name">Засніжена плита</string>
+    <string name="town_deco_snowy_plate_desc">Ця старовинна плита вкрита снігом</string>
+
+    </resources>

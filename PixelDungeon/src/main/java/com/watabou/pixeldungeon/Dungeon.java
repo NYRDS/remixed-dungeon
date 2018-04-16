@@ -79,7 +79,6 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.concurrent.FutureTask;
 
 public class Dungeon {
 
@@ -259,8 +258,7 @@ public class Dungeon {
 			hero.setPos(level.entrance);
 		}
 
-		Light light = hero.buff(Light.class);
-		hero.viewDistance = light == null ? level.getViewDistance() : Math.max(level.MIN_VIEW_DISTANCE + 1, level.getViewDistance());
+		hero.viewDistance = hero.hasBuff(Light.class) ? Math.max(Level.MIN_VIEW_DISTANCE + 1, level.getViewDistance()): level.getViewDistance();
 
 		Dungeon.level = level;
 	}
@@ -372,18 +370,9 @@ public class Dungeon {
 		output.close();
 	}
 
-	public static void saveLevel() throws IOException {
+	private static void saveLevel(String saveTo) throws IOException {
 		Bundle bundle = new Bundle();
 		bundle.put(LEVEL, level);
-
-		Position current = currentPosition();
-
-		String saveTo = SaveUtils.depthFileForSave(hero.heroClass,
-				DungeonGenerator.getLevelDepth(current.levelId),
-				DungeonGenerator.getLevelKind(current.levelId),
-				current.levelId);
-
-		GLog.toFile("saving level: %s", saveTo);
 
 		bundle.put(SCRIPTS_DATA,
 				LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("serializeLevelData").call().checkjstring());
@@ -398,18 +387,31 @@ public class Dungeon {
 		float MBytesAvailable = Game.getAvailableInternalMemorySize() / 1024f / 1024f;
 
 		if (MBytesAvailable < 2) {
+			EventCollector.logEvent("saveGame","lowMemory");
 			Game.toast("Low memory condition");
-			GLog.toFile("Low memory!!!");
 		}
-
-		GLog.toFile("Saving: %5.2f MBytes available", MBytesAvailable);
 
 		if (hero.isAlive()) {
 
 			Actor.fixTime();
 			try {
-				saveGame(SaveUtils.gameFile(hero.heroClass));
-				saveLevel();
+				Position current = currentPosition();
+				String saveToLevel = SaveUtils.depthFileForSave(hero.heroClass,
+						DungeonGenerator.getLevelDepth(current.levelId),
+						DungeonGenerator.getLevelKind(current.levelId),
+						current.levelId);
+
+				String saveToGame = SaveUtils.gameFile(hero.heroClass);
+
+				saveGame("tmp.game");
+				saveLevel("tmp.level");
+
+				FileSystem.getInternalStorageFile(saveToGame).delete();
+				FileSystem.getInternalStorageFile(saveToLevel).delete();
+
+				FileSystem.getInternalStorageFile("tmp.game").renameTo(FileSystem.getInternalStorageFile(saveToGame));
+				FileSystem.getInternalStorageFile("tmp.level").renameTo(FileSystem.getInternalStorageFile(saveToLevel));
+
 			} catch (IOException e) {
 				throw new TrackedRuntimeException("cannot write save", e);
 			}
@@ -426,27 +428,19 @@ public class Dungeon {
 		Library.saveLibrary();
 	}
 
-	public synchronized static void saveAll() {
+	public synchronized static void save() {
 
 		if (SystemTime.now() - lastSaveTimestamp < 250) {
 			GLog.i("Saving too fast...");
 			return;
 		}
 
-		GLog.i("save time: %d", SystemTime.now());
 		lastSaveTimestamp = SystemTime.now();
 
-		FutureTask<Void> saveTask = new FutureTask<>(new Runnable() {
-			@Override
-			public void run() {
-				saveAllImpl();
-			}
-		}, null);
-
-		Game.instance().executor.execute(saveTask);
-
 		try {
-			saveTask.get();
+			EventCollector.startTiming("saveGame");
+			saveAllImpl();
+			EventCollector.stopTiming("saveGame",Dungeon.level.levelId,Game.version,"");
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
@@ -461,7 +455,7 @@ public class Dungeon {
 		loadGame(fileName, false);
 	}
 
-	public static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
+	private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
 		Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
 		Dungeon.challenges = bundle.getInt(CHALLENGES);
@@ -532,7 +526,7 @@ public class Dungeon {
 		LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 	}
 
-	public static void loadGame(String fileName, boolean fullLoad) throws IOException {
+	private static void loadGame(String fileName, boolean fullLoad) throws IOException {
 		Bundle bundle = gameBundle(fileName);
 
 		loadGameFromBundle(bundle, fullLoad);
@@ -682,7 +676,7 @@ public class Dungeon {
 			return Actor.findChar(to) == null && (pass[to] || level.avoid[to]) ? to : -1;
 		}
 
-		if (ch.isFlying() || ch.buff(Amok.class) != null) {
+		if (ch.isFlying() || ch.hasBuff(Amok.class)) {
 			BArray.or(pass, level.avoid, passable);
 		} else {
 			System.arraycopy(pass, 0, passable, 0, level.getLength());

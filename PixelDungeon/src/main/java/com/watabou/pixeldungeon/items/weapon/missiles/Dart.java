@@ -17,18 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
 
 public class Dart extends MissileWeapon {
 
 	{
-		name = Game.getVar(R.string.Dart_Name);
-		image = ItemSpriteSheet.DART;
-		
+		image = 1;
+		imageFile = "items/ammo.png";
+
 		MIN = 1;
 		MAX = 4;
 	}
@@ -41,12 +38,7 @@ public class Dart extends MissileWeapon {
 		super();
 		quantity(number);
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Dart_Info);
-	}
-	
+
 	@Override
 	public Item random() {
 		quantity(Random.Int( 5, 15 ));

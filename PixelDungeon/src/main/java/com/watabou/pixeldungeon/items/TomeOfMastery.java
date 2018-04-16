@@ -65,7 +65,7 @@ public class TomeOfMastery extends MasteryItem {
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_READ )) {
 			
-			if (hero.buff( Blindness.class ) != null) {
+			if (hero.hasBuff( Blindness.class )) {
 				GLog.w( TXT_BLINDED );
 				return;
 			}

@@ -6,6 +6,7 @@ import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
 import com.appodeal.ads.utils.Log;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -50,27 +51,24 @@ public class AppodealRewardVideo {
 				}
 
 				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
+				EventCollector.startTiming("appodeal reward video");
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 					@Override
 					public void onRewardedVideoLoaded() {
-						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoLoaded");}
+						EventCollector.stopTiming("google reward video","google reward video","ok","");
 					}
 					@Override
 					public void onRewardedVideoFailedToLoad() {
-						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoFailedToLoad");}
+						EventCollector.stopTiming("google reward video","google reward video","fail","");
 					}
 					@Override
 					public void onRewardedVideoShown() {
-						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoShown");}
 					}
 					@Override
 					public void onRewardedVideoFinished(int amount, String name) {
-						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoFinished. Reward: %d %s", amount, name);}
 					}
 					@Override
 					public void onRewardedVideoClosed(final boolean finished) {
-						if(BuildConfig.DEBUG) {GLog.i("onRewardedVideoClosed,  finished: %s", finished);}
-						//PixelDungeon.immerse(PixelDungeon.immersed());
 						returnTo.returnToWork(finished);
 					}
 				});

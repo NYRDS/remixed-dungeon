@@ -1,0 +1,8 @@
+{
+   "baseSpeed"     : 0,
+   "spriteDesc"    :"spritesDesc/BlackCat.json",
+   "scriptFile"    :"scripts/npc/BlackCat",
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "friendly"      :true
+}

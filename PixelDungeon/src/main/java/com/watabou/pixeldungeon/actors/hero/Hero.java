@@ -91,7 +91,6 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
@@ -212,8 +211,11 @@ public class Hero extends Char {
 	private int difficulty;
 
 	public Hero() {
+		readCharData();
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
+
+		fraction = Fraction.HEROES;
 
 		STR(STARTING_STR);
 		awareness = 0.1f;
@@ -239,7 +241,7 @@ public class Hero extends Char {
 	public int effectiveSTR() {
 		int str = Scrambler.descramble(STR);
 
-		return buff(Weakness.class) != null ? str - 2 : str;
+		return hasBuff(Weakness.class) ? str - 2 : str;
 	}
 
 	public void STR(int sTR) {
@@ -354,12 +356,8 @@ public class Hero extends Char {
 	}
 
 	private void live() {
-		if (buff(Regeneration.class) == null) {
-			Buff.affect(this, Regeneration.class);
-		}
-		if (buff(Hunger.class) == null) {
-			Buff.affect(this, Hunger.class);
-		}
+		Buff.affect(this, Regeneration.class);
+		Buff.affect(this, Hunger.class);
 	}
 
 	public int tier() {
@@ -411,9 +409,8 @@ public class Hero extends Char {
 			bonus += ((RingOfEvasion.Evasion) buff).level;
 		}
 
-		Buff frostAura = buff(RingOfFrost.FrostAura.class);
-
-		if (frostAura != null && enemy.distance(this) < 2) {
+		//WTF ?? Why it is here?
+		if (hasBuff(RingOfFrost.FrostAura.class) && enemy.distance(this) < 2) {
 			int powerLevel = belongings.getItem(RingOfFrost.class).level();
 			if (enemy.isAlive()) {
 				Buff.affect(enemy, Slow.class, Slow.duration(enemy) / 5 + powerLevel);
@@ -462,20 +459,16 @@ public class Hero extends Char {
 		return dr;
 	}
 
-	private boolean inFury() {
-		return (buff(Fury.class) != null) || (buff(CorpseDust.UndeadRageAuraBuff.class) != null);
-	}
-
 	@Override
 	public int damageRoll() {
 		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
-		int dmg;
+		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
+
 		if (wep != null) {
-			dmg = wep.damageRoll(this);
-		} else {
-			dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
+			dmg += wep.damageRoll(this);
 		}
-		return inFury() ? (int) (dmg * 1.5f) : dmg;
+
+		return dmg;
 	}
 
 	@Override
@@ -1146,7 +1139,7 @@ public class Hero extends Char {
 
 	public void checkIfFurious() {
 		if (subClass == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
-			if (buff(Fury.class) == null) {
+			if (!hasBuff(Fury.class)) {
 				Buff.affect(this, Fury.class);
 				ready();
 			}
@@ -1215,7 +1208,7 @@ public class Hero extends Char {
 		if (level.adjacent(getPos(), target)) {
 
 			if (Actor.findChar(target) == null) {
-				if (buff(Blindness.class) == null) {
+				if (!hasBuff(Blindness.class)) {
 					if (level.pit[target] && !isFlying() && !Chasm.jumpConfirmed) {
 						Chasm.heroJump(this);
 						interrupt();
@@ -1303,18 +1296,20 @@ public class Hero extends Char {
 			return false;
 		}
 
-		if (!Dungeon.level.cellValid(cell)) {
+		Level level = Dungeon.level;
+
+		if (!level.cellValid(cell)) {
 			return false;
 		}
 
 		Char ch;
 		Heap heap;
 
-		if (Dungeon.level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
+		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
 			curAction = new HeroAction.Cook(cell);
 
-		} else if (Dungeon.level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
+		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
 
 			Mob mob = (Mob) ch;
 
@@ -1324,7 +1319,7 @@ public class Hero extends Char {
 				curAction = new HeroAction.Attack(ch);
 			}
 
-		} else if ((heap = Dungeon.level.getHeap(cell)) != null) {
+		} else if ((heap = level.getHeap(cell)) != null) {
 
 			switch (heap.type) {
 				case HEAP:
@@ -1338,15 +1333,15 @@ public class Hero extends Char {
 					curAction = new HeroAction.OpenChest(cell);
 			}
 
-		} else if (Dungeon.level.map[cell] == Terrain.LOCKED_DOOR || Dungeon.level.map[cell] == Terrain.LOCKED_EXIT) {
+		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
 
 			curAction = new HeroAction.Unlock(cell);
 
-		} else if (Dungeon.level.isExit(cell)) {
+		} else if (level.isExit(cell)) {
 
 			curAction = new HeroAction.Descend(cell);
 
-		} else if (cell == Dungeon.level.entrance) {
+		} else if (cell == level.entrance) {
 
 			curAction = new HeroAction.Ascend(cell);
 
@@ -1583,7 +1578,7 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
-		if (enemy instanceof Rat && buff(RatKingCrown.RatKingAuraBuff.class) != null) {
+		if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
 			Rat rat = (Rat) enemy;
 			Mob.makePet(rat, this);
 		} else {
@@ -1698,7 +1693,7 @@ public class Hero extends Char {
 
 						if (level.secret[p]) {
 							int oldValue = level.map[p];
-							GameScene.discoverTile(p, oldValue);
+							GameScene.discoverTile(p);
 							level.set(p, Terrain.discover(oldValue));
 							GameScene.updateMap(p);
 							ScrollOfMagicMapping.discover(p);
@@ -1754,8 +1749,7 @@ public class Hero extends Char {
 
 	@Override
 	public Set<Class<?>> immunities() {
-		GasesImmunity buff = buff(GasesImmunity.class);
-		if (buff != null) {
+		if (hasBuff(GasesImmunity.class)) {
 			IMMUNITIES.addAll(GasesImmunity.IMMUNITIES);
 		} else {
 			IMMUNITIES.removeAll(GasesImmunity.IMMUNITIES);
@@ -1910,7 +1904,6 @@ public class Hero extends Char {
 
 	@Override
 	protected boolean timeout() {
-		//GLog.i("timeout: %d %d", SystemTime.now(),lastActionTime);
 		if (SystemTime.now() - SystemTime.getLastActionTime() > PixelDungeon.getMoveTimeout()) {
 			SystemTime.updateLastActionTime();
 			spend(TIME_TO_REST);

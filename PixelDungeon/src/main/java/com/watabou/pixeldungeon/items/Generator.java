@@ -122,12 +122,16 @@ import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
 import com.watabou.pixeldungeon.items.weapon.melee.WoodenBow;
+import com.watabou.pixeldungeon.items.weapon.missiles.AmokArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.AmokDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.CurareDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.items.weapon.missiles.FireArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.HealthArrow;
+import com.watabou.pixeldungeon.items.weapon.missiles.HealthDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.IncendiaryDart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Javelin;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -287,8 +291,10 @@ public class Generator {
 				SacrificialSword.class,
 				Claymore.class,
 				Halberd.class,
-				GoldenSword.class};
-		Category.WEAPON.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f, 1, 1, 0.1f};
+				GoldenSword.class,
+				AmokDart.class,
+				HealthDart.class};
+		Category.WEAPON.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0.1f, 0.1f, 1, 1, 0.1f, 0.1f, 0.1f};
 
 		Category.THROWABLE.classes = new Class<?>[]{
 				Dart.class,
@@ -362,8 +368,10 @@ public class Generator {
 				FireArrow.class,
 				PoisonArrow.class,
 				ParalysisArrow.class,
+                HealthArrow.class,
+				AmokArrow.class
 		};
-		Category.BULLETS.probs = new float[]{10, 2, 2, 2};
+		Category.BULLETS.probs = new float[]{10, 2, 2, 2, 2, 2};
 
 		Category.UNIQUE.classes = new Class<?>[]{
 				SpellBook.class,

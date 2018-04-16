@@ -2,7 +2,9 @@ package com.nyrds.pixeldungeon.items.guts;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class HeartOfDarkness extends Artifact {
@@ -18,11 +20,11 @@ public class HeartOfDarkness extends Artifact {
 	}
 
 	@Override
-	protected Artifact.ArtifactBuff buff() {
+	protected Buff buff() {
 		return new HeartOfDarknessBuff();
 	}
 
-	public class HeartOfDarknessBuff extends Artifact.ArtifactBuff {
+	public class HeartOfDarknessBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
 			return BuffIndicator.DARKVEIL;

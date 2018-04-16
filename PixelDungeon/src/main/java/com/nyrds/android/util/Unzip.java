@@ -1,8 +1,7 @@
 package com.nyrds.android.util;
 
-import android.util.Log;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -34,7 +33,7 @@ public class Unzip {
 			byte data[] = new byte[BUFFER_SIZE];
 
 			while ((ze = zin.getNextEntry()) != null) {
-				Log.v(TAG, "Unzipping " + ze.getName());
+				GLog.debug( "Unzipping " + ze.getName());
 
 				if (ze.isDirectory()) {
 					ensureDir(tgtDir + "/" + ze.getName());

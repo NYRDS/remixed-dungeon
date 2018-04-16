@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class SpellBook extends Artifact {
 
-	@Packable
+	@Packable(defaultValue = "")
 	private String spell;
 
 	public SpellBook() {
@@ -67,5 +67,10 @@ public class SpellBook extends Artifact {
 	@Override
 	public Item burn(int cell){
 		return null;
+	}
+
+	@Override
+	public int price() {
+		return 500;
 	}
 }

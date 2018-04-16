@@ -8,6 +8,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
@@ -149,10 +150,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
 			attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 
-			name = StringsManager.maybeId(classDesc.optString("name", name));
-			name_objective = StringsManager.maybeId(classDesc.optString("name_objective", name));
-			description = StringsManager.maybeId(classDesc.optString("description", description));
-			gender = Utils.genderFromString(classDesc.optString("gender", ""));
+			name = StringsManager.maybeId(classDesc.optString("name", mobClass+"_Name"));
+			name_objective = StringsManager.maybeId(classDesc.optString("name_objective", mobClass+"_Name_Objective"));
+			description = StringsManager.maybeId(classDesc.optString("description", mobClass+"_Desc"));
+			gender = Utils.genderFromString(classDesc.optString("gender", mobClass+"_Gender"));
 
 			spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
 
@@ -177,11 +178,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			scriptFile = classDesc.optString("scriptFile", scriptFile);
 
-			friendly = classDesc.optBoolean("friendly",friendly);
-
-
 			if(!restoring) {
+				setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
+				friendly = classDesc.optBoolean("friendly",friendly);
 				hp(ht(classDesc.optInt("ht", 1)));
+				fromJson(classDesc);
 			}
 
 			runMobScript("fillStats");

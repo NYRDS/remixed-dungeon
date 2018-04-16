@@ -19,13 +19,12 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
@@ -33,6 +32,7 @@ import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.EyeSprite;
@@ -49,7 +49,7 @@ public class Eye extends Mob {
 		
 		hp(ht(100));
 		defenseSkill = 20;
-		viewDistance = Dungeon.level.MIN_VIEW_DISTANCE + 1;
+
 		
 		exp = 13;
 		maxLvl = 25;
@@ -65,7 +65,13 @@ public class Eye extends Mob {
 		
 		IMMUNITIES.add( Terror.class );
 	}
-	
+
+	@Override
+	public void onSpawn(Level level) {
+		super.onSpawn(level);
+		viewDistance = level.getViewDistance() + 1;
+	}
+
 	@Override
 	public int dr() {
 		return 10;

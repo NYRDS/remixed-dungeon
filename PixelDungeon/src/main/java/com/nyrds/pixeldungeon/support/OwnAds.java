@@ -63,7 +63,6 @@ class OwnAds {
 
 					                              WebView adView = new WebView(Game.instance());
 
-
 					                              ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 					                              adView.setLayoutParams(params);
 

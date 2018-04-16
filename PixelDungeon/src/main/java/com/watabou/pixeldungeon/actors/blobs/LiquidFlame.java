@@ -43,7 +43,7 @@ public class LiquidFlame extends Blob {
 						observe = true;
 						GameScene.updateMap( cell );
 						if (Dungeon.visible[cell]) {
-							GameScene.discoverTile( cell, oldTile );
+							GameScene.discoverTile( cell);
 						}
 					}
 				}

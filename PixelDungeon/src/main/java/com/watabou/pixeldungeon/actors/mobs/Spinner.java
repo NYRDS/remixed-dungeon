@@ -28,14 +28,11 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.SpinnerSprite;
 import com.watabou.utils.Random;
 
 public class Spinner extends Mob {
 	
 	public Spinner() {
-		spriteClass = SpinnerSprite.class;
-		
 		hp(ht(50));
 		defenseSkill = 14;
 		
@@ -70,9 +67,7 @@ public class Spinner extends Mob {
 	protected boolean act() {
 		boolean result = super.act();
 		
-		if (getState() == FLEEING  && buff( Terror.class ) == null &&
-			enemySeen && getEnemy().buff( Poison.class ) == null) {
-			
+		if ((getState() == FLEEING) && !hasBuff(Terror.class) && enemySeen && !getEnemy().hasBuff(Poison.class)) {
 			setState(HUNTING);
 		}
 		return result;
@@ -99,10 +94,10 @@ public class Spinner extends Mob {
 	private class Fleeing extends Mob.Fleeing {
 		@Override
 		protected void nowhereToRun() {
-			if (buff( Terror.class ) == null) {
-				setState(HUNTING);
-			} else {
+			if (hasBuff( Terror.class )) {
 				super.nowhereToRun();
+			} else {
+				setState(HUNTING);
 			}
 		}
 	}

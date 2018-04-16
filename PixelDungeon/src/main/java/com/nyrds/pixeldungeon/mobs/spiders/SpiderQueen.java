@@ -4,13 +4,11 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
-import com.nyrds.pixeldungeon.mobs.spiders.sprites.SpiderQueenSprite;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -19,8 +17,6 @@ import com.watabou.utils.Random;
 public class SpiderQueen extends Boss {
 	
 	public SpiderQueen() {
-		spriteClass = SpiderQueenSprite.class;
-		
 		hp(ht(120));
 		defenseSkill = 18;
 		
@@ -35,8 +31,6 @@ public class SpiderQueen extends Boss {
 			loot = new SpiderArmor();
 		}
 		lootChance = 1f;
-		
-		Buff.affect(this, Regeneration.class);
 	}
 	
 	@Override

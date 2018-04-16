@@ -59,11 +59,12 @@
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
    "mobs" : [
      {"kind":"BlackRat",
-       "x":11,
-       "y":11
+       "x":13,
+       "y":11,
+       "aiState":"Wandering"
      },
      {"kind":"BlackRat",
-       "x":11,
+       "x":13,
        "y":10
      }
    ],
@@ -93,7 +94,9 @@
 
     {"kind":"Trap","x":5,"y":9, "uses":1,
       "trapKind":"scriptFile",
-      "script":"scripts/traps/Sandbox"}
+      "script":"scripts/traps/SpecialBeacon",
+      "data":"BlackRat"
+    }
     
   ]
 }

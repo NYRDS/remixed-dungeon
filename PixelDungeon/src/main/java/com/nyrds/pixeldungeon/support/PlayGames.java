@@ -80,7 +80,6 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	public void connect() {
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
 		if (!isConnected()) {
-			Log.i("Play Games", "connect");
 			googleApiClient.connect();
 		}
 	}
@@ -88,7 +87,6 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	public void disconnect() {
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
 		if (isConnected()) {
-			Log.i("Play Games", "disconnect");
 			Games.signOut(googleApiClient);
 			googleApiClient.disconnect();
 		}
@@ -105,7 +103,6 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	}
 
 	private void writeToSnapshot(String snapshotId, byte[] content) {
-		Log.i("Play Games", "Streaming to " + snapshotId);
 		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(googleApiClient, snapshotId, true, Snapshots.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED);
 
 		Snapshots.OpenSnapshotResult openResult = result.await(5, TimeUnit.SECONDS);
@@ -120,7 +117,6 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 				@Override
 				public void onResult(@NonNull Snapshots.CommitSnapshotResult commitSnapshotResult) {
 					if (commitSnapshotResult.getStatus().isSuccess()) {
-						Log.i("Play Games", "commit ok");
 					} else {
 						EventCollector.logEvent("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
 					}
@@ -160,7 +156,6 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	@Override
 	public void onConnected(@Nullable Bundle bundle) {
-		Log.i("Play Games", "onConnected");
 		loadSnapshots(null);
 	}
 
@@ -170,7 +165,6 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 				@Override
 				public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
 					if (result.getStatus().isSuccess()) {
-						Log.i("Play Games", "load ok!");
 
 						mSavedGamesNames = new ArrayList<>();
 						for (SnapshotMetadata m : result.getSnapshots()) {
@@ -210,14 +204,11 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 
 	@Override
 	public void onConnectionSuspended(int i) {
-		Log.i("Play Games", "onConnectionSuspended");
 		googleApiClient.connect();
 	}
 
 	@Override
 	public void onConnectionFailed(@NonNull ConnectionResult result) {
-		Log.i("Play Games", "onConnectionFailed: " + result.getErrorMessage());
-
 		int requestCode = RC_SIGN_IN;
 
 		if (result.hasResolution()) {
@@ -243,7 +234,6 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			if (resultCode == RESULT_OK) {
 				googleApiClient.connect();
 			} else {
-				Log.e("Play Games", String.format("%d", resultCode));
 				Dialog dialog = GooglePlayServicesUtil.getErrorDialog(resultCode,
 						activity, requestCode);
 				if (dialog != null) {

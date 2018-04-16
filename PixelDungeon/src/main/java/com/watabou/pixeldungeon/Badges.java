@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon;
 
-import android.util.Log;
-
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -964,9 +962,7 @@ public class Badges {
 		}
 
 		if (playGamesList.contains(badge) && !ModdingMode.inMod()) {
-			Log.i("Badge", badge.name());
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
-			Log.i("Badge", achievementCode);
 			Game.instance().playGames.unlockAchievement(achievementCode);
 		}
 

@@ -58,7 +58,7 @@ public class ScrollOfMagicMapping extends Scroll {
 					GameScene.updateMap( i );
 					
 					if (Dungeon.visible[i]) {
-						GameScene.discoverTile( i, terr );
+						GameScene.discoverTile( i);
 						discover( i );
 						
 						noticed = true;

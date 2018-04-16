@@ -33,14 +33,14 @@ public class Tilemap extends Visual {
 	private TextureFilm tileset;
 
 	protected int[] data;
-	private   int   mapWidth;
+	protected int   mapWidth;
 	protected int   size;
-	
+
 	private float cellW;
 	private float cellH;
 
 	protected float[]     vertices;
-	private   FloatBuffer quads;
+	protected FloatBuffer quads;
 	
 	protected Rect updated;
 	
@@ -77,7 +77,7 @@ public class Tilemap extends Visual {
 		updated.set( 0, 0, mapWidth, mapHeight);
 	}
 	
-	private void updateVertices() {
+	protected void updateVertices() {
 		
 		float y1 = cellH * updated.top;
 		float y2 = y1 + cellH;

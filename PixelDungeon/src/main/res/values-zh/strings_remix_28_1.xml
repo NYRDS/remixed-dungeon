@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="BlackCat_Name">黑猫</string>
+    <string name="BlackCat_Gender">feminine</string>
+    <string name="BlackCat_Name_Objective">猫</string>
+    <string name="BlackCat_Desc">一只黑猫</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Prrrrrrr</item>
+        <item>喵...</item>
+        <item>喵!</item>
+    </string-array>
+
+    <string name="Str_lose">-1力量</string>
+
+    <string name="SociologistNPC_Name">调研员</string>
+    <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_Name_Objective">调研员</string>
+    <string name="SociologistNPC_Desc">这位调研员专门收集你对这款混合地牢的意见和建议</string>
+
+    <string name="SociologistNPC_AlreadyTaken">你已经反馈过了。请稍后再来</string>
+    <string name="SociologistNPC_Hi">你好
+你有什么意见和建议想对混合地牢作者说吗(请确保网络顺畅)
+你的意见十分重要</string>
+    <string name="SociologistNPC_InternetRequired">抱歉，没有网络你没法发送意见和建议</string>
+    <string name="SociologistNPC_DownloadError">抱歉，崩溃了，请稍后再试</string>
+
+    <string name="town_deco_library_sign_name">图书馆招牌</string>
+    <string name="town_deco_library_sign_desc">里面是图书馆</string>
+    <string name="town_deco_identifier_sign_name">占卜屋招牌</string>
+    <string name="town_deco_identifier_sign_desc">里面有先见者</string>
+    <string name="town_deco_cinema_sign_name">影院招牌</string>
+    <string name="town_deco_cinema_sign_desc">里面有个影院</string>
+    <string name="town_deco_INN_sign_name">酒馆招牌</string>
+    <string name="town_deco_INN_sign_desc">里面是酒馆</string>
+
+
+    <string name="HealthDart_Name">治疗弹</string>
+    <string name="HealthDart_Gender">masculine</string>
+    <string name="HealthDart_Info">治疗药水制作的飞弹</string>
+
+    <string name="HealthArrow_Name">治疗箭</string>
+    <string name="HealthArrow_Gender">feminine</string>
+    <string name="HealthArrow_Info">治疗药水做的箭</string>
+
+    <string name="AmokDart_Name">狂乱弹</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">充满菜猫的飞弹</string>
+
+    <string name="AmokArrow_Name">狂乱箭</string>
+    <string name="AmokArrow_Gender">feminine</string>
+    <string name="AmokArrow_Info">充满菜猫的箭</string>
+
+    <string name="WndHero_SkillLevel">技能等级</string>
+
+    <string name="town_deco_sofa_name">超爽的沙发</string>
+    <string name="town_deco_sofa_desc">这个沙发超爽的，不坐上去看电guang影gao吗</string>
+
+    <string name="town_deco_book_name">书</string>
+    <string name="town_deco_screen_name">屏幕</string>
+    <string name="town_deco_stove_name">石头火堆</string>
+    <string name="town_deco_wooden_chair_name">木椅</string>
+    <string name="town_deco_snowy_plate_name">附雪石雕</string>
+    </resources>

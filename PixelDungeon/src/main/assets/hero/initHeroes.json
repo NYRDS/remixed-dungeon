@@ -51,9 +51,7 @@
       }
     ],
     "isSpellUser": true,
-    "magicAffinity": "Elemental",
-    "startingSp": 10,
-    "maxSp": 10
+    "magicAffinity": "Elemental"
   },
   "ROGUE": {
     "ring1": {

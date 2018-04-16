@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">重鑄版像素地牢</string>
+  <string name="app_name">混合的像素地牢</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">在您之前，已經有許多英雄向地牢進發。有些人攜着財寶和魔法物品滿足載而歸，可是他們大部分人卻杳無音訊。
 
@@ -63,30 +63,30 @@
   <string name="Dungeon_NoTips">這些文字無法辦認...</string>
   <string name="Dungeon_DeadEnd">你在這幹三小？！</string>
   <string-array name="Dungeon_Tips">
-    <item>使用武器和防具時要量力而為。</item>
-    <item>地牢裏的門不會明擺在您面前。如果您被困住了，嘗試去尋找隱藏門。</item>
-    <item>記住，想好好使用一件裝備，不應只靠提升力量值，您亦可以嘗試耗用升級卷軸來降低其所需最低力量值。 </item>
-    <item>若您有幸活著，您可在地牢更低層花費金錢購買道具及裝備。小聲告訴您，第一所商店在地牢第６層，親。</item>
+    <item>对于使用武器、防具要量力而为。</item>
+    <item>地牢里的门不会明摆在你面前。如果你被困住了，尝试去寻找隐藏门。</item>
+    <item>记住，提升你的力量值不是唯一让你能正常用一件装备的方法。你也可以尝试升级它们来让它们更轻更好用。 </item>
+    <item>钱可以在商店花。第一个商店在6层。</item>
     <item>小心黏咕!</item>
-    <item>包羅萬有的像素墟市裏，定有東西助您順利冒險!</item>
-    <item>盡早鑒定藥水和卷軸。有備無患。</item>
-    <item>饑餓不損皮毛，但饑腸轆轆時定必有切膚之痛。</item>
-    <item>突襲有更大命中機會。比如說，您可以躲在門後，給下一個開門的敵人一個「小」驚喜。</item>
-    <item>别讓天狗落跑！</item>
-    <item>像素墟市。錢花得愈多，路走得愈長。</item>
-    <item>當您被怪物連續攻擊時，試試躲到門後。</item>
-    <item>若您同時被焚身和飄浮著，踏著水面對滅火沒大幫助。</item>
-    <item>同時擁有多個復活十字架並沒有任何意義，因為您會在復活時會丢失所有道具。</item>
-    <item>危險! 重型機械可使您受傷，殘廢，甚至死亡!</item>
-    <item>像素墟市。 地牢內的一片安全之地。</item>
-    <item>升級附魔過的裝備會有毁壞附魔的可能。</item>
-    <item>您可以從嬗變之井裏獲得平時無法獲得的物品。</item>
-    <item>唯一替武器加上附魔的方法是使用武器升级卷軸。</item>
-    <item>上朝覲見，嚴禁刀具!</item>
-    <item>像素墟市。给予惡魔獵人最好的優惠!</item>
-    <item>這是用惡魔語寫的。</item>
-    <item>這是用惡魔語寫的。</item>
-    <item>這是用惡魔語寫的。</item>
+    <item>像素市场。对你的冒险帮助很大!</item>
+    <item>尽早鉴定药水和卷轴。有备无患。</item>
+    <item>人在饥饿的时候不会痛，但人在饥饿难耐的时候会很痛。</item>
+    <item>袭击必中。比如说，你可以躲在门后来给下一个开门的敌人一个惊喜。</item>
+    <item>别让天狗跑了!</item>
+    <item>像素市场。花更多的钱，走更长的路。</item>
+    <item>当你被怪物攻击时，尝试躲到门后。</item>
+    <item>你在飞行的时候没法通过走进水里来灭火。</item>
+    <item>多个复活十字架没法一起使用，因为你会在复活时丢失所有的道具。.</item>
+    <item>危险! 重型机械会使你受伤，残废，甚至死亡!</item>
+    <item>像素市场。 地牢里的安全房。</item>
+    <item>升级附魔过的装备会有损坏附魔的可能。</item>
+    <item>你可以从转化之井里获得平时无法获得的物品。</item>
+    <item>唯一附魔武器的方法-使用武器升级卷轴。</item>
+    <item>上朝觐见严禁刀具!</item>
+    <item>像素市场。给与恶魔猎手最好的优惠!</item>
+    <item>这是用恶魔语写的。</item>
+    <item>这是用恶魔语写的。</item>
+    <item>这是用恶魔语写的。</item>
   </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
@@ -212,9 +212,8 @@
   <string name="WndTradeItem_Bought">您購買了%1$s花費%2$d金幣</string>
   <!--STRINGS OF WndWandmaker CLASS-->
   <string name="WndWandmaker_Message">終見汝成！望煩沒汝添。誠如吾諾，予君眾善杖擇一。</string>
-  <string name="WndWandmaker_Battle">戰鬥法杖</string>
-  <string name="WndWandmaker_NonBattle">輔助法杖
-</string>
+  <string name="WndWandmaker_Battle">战斗法杖</string>
+  <string name="WndWandmaker_NonBattle">辅助法杖</string>
   <string name="WndWandmaker_Farawell">祝您好運，%s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">選取加入快速使用欄的物品</string>
@@ -282,7 +281,7 @@
   <string name="TomeOfMastery_Name">精通之書</string>
   <string name="TomeOfMastery_ACRead">閱讀</string>
   <string name="TomeOfMastery_Info">這本皮封典籍不算厚, 但您隱約感覺到自己能從中獲益良多。 不過記住：要閱畢這本典籍需要一段相當長的時間。</string>
-  <string name="TomeOfMastery_Blinded">您在失明時無法閱讀 :o)</string>
+  <string name="TomeOfMastery_Blinded">你在失明时无法阅读</string>
   <string name="TomeOfMastery_Choose">您選擇了%s的道路！</string>
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">火把</string>
@@ -335,7 +334,7 @@
   <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">暗金礦</string>
-  <string name="DarkGold_Info">這種金屬名中的暗並非源於其色澤（它看起來和普通金子一樣），而是因為它會在陽光下熔化，在地表上毫無用處。</string>
+  <string name="DarkGold_Info">这种金属名中的暗并非源于其色泽(它看起来和普通金子一样)，而是因为它会在阳光下熔化，令其在地表上毫无用处。</string>
   <!--STRINGS OF DriedRose CLASS-->
   <string name="DriedRose_Name">乾枯玫瑰</string>
   <string name="DriedRose_Info">這玫瑰在很久以前就已經枯萎了，但不知為何它的花瓣卻能完好地保留着。</string>

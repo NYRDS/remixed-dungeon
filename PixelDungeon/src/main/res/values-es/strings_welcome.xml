@@ -340,4 +340,35 @@ remix.26.1:\n
         - La generación del héroe establece el atributo \“magicAffinity\”, el cual puede ser establecido como: \“Elemental\”, \“Necromancy\” o \“Common\” (\“Common\” - el personaje solo puede usar los hechizos de los Libros de Hechizos)\n
         - Nuevo objeto en mods - Trampa. A diferencia de las trampas normales del juego, este tipo permite varios ajustes. Puede establecer: el número de activaciones (uses), la casilla objetivo en la que mostrara el efecto de la trampa (target), y que clase de objetos pueden o no activar la trampa arrojándolo sobre (activatedByItem)\n
     </string>
+  <string name="Welcome_Text_27_3">remix.27.3\n
+- Nuevo elemento : desplazamiento de convocatoria\n
+- La gota de rocio ya no tiene mayor prioridad en el mon ton de botin. Entonces, si hay un articulo, yaciendo sobre la gota de rocio, dicho articulo sera reloctado primero\n
+- Cada tipo de contenedor ya esta disponible en la tienda la ciudad\n
+- Goo ya no puede soltar el Anillo de Sangre de Pierda ( este objeto solo esta disponible a traves del modificador ), en su lugar, se recibra una pocion al azar\n
+- El hechizo \"Wing Gust\" solo puede mover personajes. que se pueden mover (IsMovable)\n
+- Las multitudesnya no pueden generar en el mismo lugar con objetos de nivel\n
+- Nigromante\'s Robe ta no esta configurado para ranura rapida por defecto\n
+- Corregir el aleatorizador de distancia de vista\n
+- Corregir error que causaba que el nivel de jefe generara un elemental en lugar de un jefe\n
+- La recompensa que recube el jugador al ver un anuncio que se esta pocesando en el juego\n
+</string>
+  <string name="Welcome_Text_27_4">
+ remix.27.4\n
+ - Cambio de Remixed Dungeon\n
+ - Necrotismo - nueva capacidad de Nigromante Clase Armadura\n
+ - Nueva insignia para descubrir\n
+ - La hablidad Armadura de clase ahora consume Mana en lugar de HP\n
+ - Los objetos del caos ahora pierden encanto al degradase\n
+ - Las Psi-aranas ahora solo pueden lanzar hechizos de ceguera, lentitud y debledad\n
+ </string>
+  <string name="Welcome_Text_28">
+ remix.28\n
+ - Nuevo heroe - Gnoll\n
+ - El dano de las varitas magicas en combate cuepro a cuepro ahora depende del nivel de habilidad magica del heroe\n
+ - Para cada Heroe, no se mostrara mas de un resultado en el tablero de maximas puntuaciones\n
+ - La sincronizacion automatica con Google PlayGames esta desactivada (Puede sincronizar manualmente)\n
+ - Una gran actualizacion de la traduccion Brasil-Portugues\n
+ - Nuevas opciones de clase de heroe para modding: forbiddenActions, friendlyMobs\n
+ - Nuevo idioma agregado: idioma Malayo\n
+ </string>
 </resources>

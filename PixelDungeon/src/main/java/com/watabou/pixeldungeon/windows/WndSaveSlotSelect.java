@@ -63,7 +63,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 					Game.instance().playGames.loadSnapshots(new Runnable() {
 						@Override
 						public void run() {
-							Game.executeInGlThread(new Runnable() {
+							Game.pushUiTask(new Runnable() {
 								@Override
 								public void run() {
 									refreshing.hide();
@@ -261,7 +261,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 		if (saving) {
 			try {
-				Dungeon.saveAll();
+				Dungeon.save();
 				slot = slotNameFromIndexAndMod(index);
 				SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 
@@ -270,7 +270,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 			}
 		}
 
-		Game.paused = true;
+		Game.softPaused = true;
 
 		slot = getSlotToLoad(index);
 
@@ -291,10 +291,11 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 	@Override
 	public void returnToWork(boolean res) {
-		Game.executeInGlThread(new Runnable() {
+		Game.softPaused = false;
+
+		Game.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
-				Game.paused = false;
 
 				if (!saving) {
 					SaveUtils.loadGame(slot, Dungeon.hero.heroClass);

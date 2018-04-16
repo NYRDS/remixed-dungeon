@@ -32,4 +32,12 @@ remix.27.3\n
 - Gross màs de la traduction Brésilien-Portugais\n
 - Options pour les mods de la nouvelle classe : forbiddenActions, friendlyMobs\n
 - Nouvelle langue ajoutée : Malais\n</string>
+  <string name="Welcome_Text_28_1"> remix.28.1\n
+- Rénovation d\'envergure du village\n
+- Nombre d\'améliorations graphiques et correction de bug\n
+- De nouvelles flèches et fléchettes\n
+- Toutes ls hordes (sauf les morts-vivants) se régénèreront\n
+- La force apportera désormais un bonus de dégât pour toutes les classes\n
+- La diseuse de bonne aventure possède enfin son chat\n
+- Le tomahawk gnoll ne se cassera pas en étant jeté sur un ennemi\n</string>
 </resources>

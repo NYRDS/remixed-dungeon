@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
@@ -59,18 +61,22 @@ public class PredesignedLevel extends CustomLevel {
 	}
 
 	private void readLevelParams() throws JSONException {
-		fillMapLayer("baseTileVar", baseTileVariant);
-		fillMapLayer("decoTileVar", decoTileVariant);
+		fillMapLayer("baseTileVar", customLayers.get(LayerId.Base));
+		fillMapLayer("decoTileVar", customLayers.get(LayerId.Deco));
+		fillMapLayer("deco2TileVar", customLayers.get(LayerId.Deco2));
+
+		fillMapLayer("roofBaseTileVar", customLayers.get(LayerId.Roof_Base));
+		fillMapLayer("roofDecoTileVar", customLayers.get(LayerId.Roof_Deco));
 
 		useCustomTiles = mLevelDesc.optBoolean("customTiles",false);
 	}
 
-	private void fillMapLayer(String layerName, int[] baseTileVariant) throws JSONException {
+	private void fillMapLayer(String layerName, int[] tiles) throws JSONException {
 		if(mLevelDesc.has(layerName)) {
 			JSONArray layer = mLevelDesc.getJSONArray(layerName);
 
 			for (int i = 0; i < layer.length(); i++) {
-				baseTileVariant[i]=layer.getInt(i);
+				tiles[i]=layer.getInt(i);
 			}
 		}
 	}
@@ -201,36 +207,33 @@ public class PredesignedLevel extends CustomLevel {
 
 	}
 
-	@Override
-	public String tileDescByCell(int cell) {
-		if(mLevelDesc.has("decoDesc")) {
+	@Nullable
+	private String tilePropertyByCell(int cell, String property, LayerId layerId) {
+		if(mLevelDesc.has(property)) {
 			try {
-				int tile = decoTileVariant[cell];
-				String descId = mLevelDesc.getJSONArray("decoDesc").getString(tile);
+				int tile = customLayers.get(layerId)[cell];
+				String descId = mLevelDesc.getJSONArray(property).getString(tile);
 				if(!descId.isEmpty()) {
 					return StringsManager.maybeId(descId);
 				}
 			} catch (JSONException e) {
-				return super.tileDescByCell(cell);
+				return null;
 			}
 		}
-		return super.tileDescByCell(cell);
+		return null;
+	}
+
+
+	@Override
+	public String tileDescByCell(int cell) {
+		String ret = tilePropertyByCell(cell, "decoDesc", LayerId.Deco);
+		return ret!=null ? ret :super.tileDescByCell(cell);
 	}
 
 	@Override
 	public String tileNameByCell(int cell) {
-		if(mLevelDesc.has("decoName")) {
-			try {
-				int tile = decoTileVariant[cell];
-				String nameId = mLevelDesc.getJSONArray("decoName").getString(tile);
-				if(!nameId.isEmpty()) {
-					return StringsManager.maybeId(nameId);
-				}
-			} catch (JSONException e) {
-				return super.tileNameByCell(cell);
-			}
-		}
-		return super.tileNameByCell(cell);
+		String ret = tilePropertyByCell(cell, "decoName", LayerId.Deco);
+		return ret!=null ? ret :super.tileNameByCell(cell);
 	}
 
 	@Override

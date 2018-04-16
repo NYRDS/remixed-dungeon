@@ -36,6 +36,8 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.ClassicDungeonTilemap;
+import com.watabou.pixeldungeon.CustomLayerTilemap;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
@@ -86,660 +88,697 @@ import java.util.HashSet;
 
 public class GameScene extends PixelScene {
 
-	private static final String TXT_WELCOME      = Game.getVar(R.string.GameScene_Welcome);
-	private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
-	private static final String TXT_NIGHT_MODE   = Game.getVar(R.string.GameScene_NightMode);
+    private static final String TXT_WELCOME      = Game.getVar(R.string.GameScene_Welcome);
+    private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
+    private static final String TXT_NIGHT_MODE   = Game.getVar(R.string.GameScene_NightMode);
 
-	private static final String TXT_CHASM   = Game.getVar(R.string.GameScene_Chasm);
-	private static final String TXT_WATER   = Game.getVar(R.string.GameScene_Water);
-	private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
-	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
+    private static final String TXT_CHASM   = Game.getVar(R.string.GameScene_Chasm);
+    private static final String TXT_WATER   = Game.getVar(R.string.GameScene_Water);
+    private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
+    private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 
-	private static volatile GameScene scene;
+    private static final float MAX_BRIGHTNESS = 1.22f;
 
-	private SkinnedBlock   water;
+    private static volatile GameScene scene;
 
-	private DungeonTilemap logicTiles;
-	private DungeonTilemap baseTiles;
-	private DungeonTilemap roofTiles;
+    private SkinnedBlock water;
 
-	private FogOfWar fog;
+    private DungeonTilemap logicTiles;
+    private DungeonTilemap baseTiles;
+    private DungeonTilemap roofTiles;
 
-	private static CellSelector cellSelector;
+    private FogOfWar fog;
 
-	private Group ripples;
-	private Group plants;
-	private Group heaps;
-	private Group mobs;
-	private Group emitters;
-	private Group effects;
-	private Group gases;
-	private Group spells;
-	private Group statuses;
-	private Group emoicons;
+    private static CellSelector cellSelector;
 
-	private Group objects;
+    private Group ripples;
+    private Group plants;
+    private Group heaps;
+    private Group mobs;
+    private Group emitters;
+    private Group effects;
+    private Group gases;
+    private Group spells;
+    private Group statuses;
+    private Group emoicons;
 
-	//ui elements
-	private Toolbar         toolbar;
-	private StatusPane      sb;
-	private Toast           prompt;
-	private AttackIndicator attack;
-	private ResumeIndicator resume;
-	private GameLog         log;
-	private BusyIndicator   busy;
+    private Group objects;
 
-	private volatile boolean sceneCreated = false;
-	private          float   waterSx      = 0, waterSy = -5;
+    //ui elements
+    private Toolbar         toolbar;
+    private StatusPane      sb;
+    private Toast           prompt;
+    private AttackIndicator attack;
+    private ResumeIndicator resume;
+    private GameLog         log;
+    private BusyIndicator   busy;
 
-	public void updateUiCamera() {
-		sb.setSize(uiCamera.width, 0);
-		toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
-		attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
-		resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
-		log.setRect(0, toolbar.top(), attack.left(), 0);
-		busy.x = 1;
-		busy.y = sb.bottom() + 18;
-	}
+    private volatile boolean sceneCreated = false;
+    private          float   waterSx      = 0, waterSy = -5;
+
+    public void updateUiCamera() {
+        sb.setSize(uiCamera.width, 0);
+        toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
+        attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
+        resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
+        log.setRect(0, toolbar.top(), attack.left(), 0);
+        busy.x = 1;
+        busy.y = sb.bottom() + 18;
+    }
 
 
-	static public void playLevelMusic() {
-		Music.INSTANCE.play(Dungeon.level.music(), true);
-		Music.INSTANCE.volume(1f);
-	}
+    static public void playLevelMusic() {
+        Music.INSTANCE.play(Dungeon.level.music(), true);
+        Music.INSTANCE.volume(1f);
+    }
 
-	@Override
-	public void create() {
-		playLevelMusic();
+    @Override
+    public void create() {
+        playLevelMusic();
 
-		Level level = Dungeon.level;
+        Level level = Dungeon.level;
 
-		PixelDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
+        PixelDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
 
-		super.create();
+        super.create();
 
-		Camera.main.zoom((float) (defaultZoom + PixelDungeon.zoom()));
+        Camera.main.zoom((float) (defaultZoom + PixelDungeon.zoom()));
 
-		scene = this;
+        scene = this;
 
-		Group terrain = new Group();
-		add(terrain);
+        Group terrain = new Group();
+        add(terrain);
 
-		water = new SkinnedBlock(level.getWidth() * DungeonTilemap.SIZE,
-				level.getHeight() * DungeonTilemap.SIZE, level.getWaterTex());
+        water = new SkinnedBlock(level.getWidth() * DungeonTilemap.SIZE,
+                level.getHeight() * DungeonTilemap.SIZE, level.getWaterTex());
 
-		waterSx = DungeonGenerator.getLevelProperty(level.levelId, "waterSx", waterSx);
-		waterSy = DungeonGenerator.getLevelProperty(level.levelId, "waterSy", waterSy);
+        waterSx = DungeonGenerator.getLevelProperty(level.levelId, "waterSx", waterSx);
+        waterSy = DungeonGenerator.getLevelProperty(level.levelId, "waterSy", waterSy);
 
-		terrain.add(water);
+        terrain.add(water);
 
-		ripples = new Group();
-		terrain.add(ripples);
+        ripples = new Group();
+        terrain.add(ripples);
 
-		/*
-		logicTiles = new DungeonTilemap(Assets.TILES_CAVES);
-		terrain.add(logicTiles);
-		*/
-		
-		baseTiles = new DungeonTilemap(level.getTilesTex());
-		terrain.add(baseTiles);
+        String logicTilesAtlas = level.getProperty("tiles_logic", null);
 
-		objects = new Group();
-		add(objects);
-
-		for (int i = 0; i < level.objects.size(); i++) {
-			SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
-			for(int j = 0; j < objectLayer.size();j++) {
-				addLevelObjectSprite(objectLayer.valueAt(j));
-			}
+        if(logicTilesAtlas != null) {
+			logicTiles = new ClassicDungeonTilemap(level,logicTilesAtlas);
+			terrain.add(logicTiles);
 		}
 
-		level.addVisuals(this);
+        if (!level.customTiles()) {
+            baseTiles = DungeonTilemap.factory(level, level.getTilesetForLayer(Level.LayerId.Base));
+        } else {
+            CustomLayerTilemap tiles = new CustomLayerTilemap(level, Level.LayerId.Base);
+            tiles.addLayer(Level.LayerId.Deco);
+            tiles.addLayer(Level.LayerId.Deco2);
+            baseTiles = tiles;
 
-		plants = new Group();
-		add(plants);
+            tiles = new CustomLayerTilemap(level,Level.LayerId.Roof_Base);
+            tiles.addLayer(Level.LayerId.Roof_Deco);
+            tiles.setTransparent(true);
+            roofTiles = tiles;
+        }
+        terrain.add(baseTiles);
 
-		for (int i = 0; i < level.plants.size(); i++) {
-			addPlantSprite(level.plants.valueAt(i));
-		}
 
-		heaps = new Group();
-		add(heaps);
+        objects = new Group();
+        add(objects);
 
-		for (Heap heap : level.allHeaps()) {
-			addHeapSprite(heap);
-		}
+        for (int i = 0; i < level.objects.size(); i++) {
+            SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
+            for (int j = 0; j < objectLayer.size(); j++) {
+                addLevelObjectSprite(objectLayer.valueAt(j));
+            }
+        }
 
-		emitters = new Group();
-		effects = new Group();
-		emoicons = new Group();
+        level.addVisuals(this);
 
-		mobs = new Group();
-		add(mobs);
+        plants = new Group();
+        add(plants);
 
-		// hack to save bugged saves...
-		boolean buggedSave = false;
-		HashSet<Mob> filteredMobs = new HashSet<>();
-		for (Mob mob : level.mobs) {
-			if (level.cellValid(mob.getPos())) {
-				filteredMobs.add(mob);
-			} else {
-				buggedSave = true;
-			}
-		}
-
-		if (buggedSave) {
-			EventCollector.logEvent(EventCollector.BUG, "bugged save", "mob.pos==-1");
-		}
-
-		level.mobs = filteredMobs;
-
-		for (Mob mob : level.mobs) {
-			if (Statistics.amuletObtained) {
-				mob.beckon(Dungeon.hero.getPos());
-			}
-		}
-
-		Dungeon.hero.updateSprite();
-
-		add(emitters);
-		add(effects);
-
-		gases = new Group();
-		add(gases);
-
-		for (Blob blob : level.blobs.values()) {
-			blob.emitter = null;
-			addBlobSprite(blob);
-		}
-
-
-		fog = new FogOfWar(level.getWidth(), level.getHeight());
-
-		if (level.noFogOfWar()) {
-			level.reveal();
-		}
-
-		fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
-		add(fog);
-
-		brightness(PixelDungeon.brightness());
-
-		spells = new Group();
-		add(spells);
-
-		statuses = new Group();
-		add(statuses);
-
-		add(emoicons);
-
-		add(new HealthIndicator());
-
-		add(cellSelector = new CellSelector(baseTiles));
-
-		Dungeon.hero.updateLook();
-
-		sb = new StatusPane(Dungeon.hero, level);
-		sb.camera = uiCamera;
-		sb.setSize(uiCamera.width, 0);
-		add(sb);
-
-		toolbar = new Toolbar();
-		toolbar.camera = uiCamera;
-		toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
-		add(toolbar);
-
-		attack = new AttackIndicator();
-		attack.camera = uiCamera;
-		attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
-		add(attack);
-
-		resume = new ResumeIndicator();
-		resume.camera = uiCamera;
-		resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
-		add(resume);
-
-		log = new GameLog();
-		log.camera = uiCamera;
-		log.setRect(0, toolbar.top(), attack.left(), 0);
-		add(log);
-
-		if (Dungeon.depth < Statistics.deepestFloor) {
-			GLog.i(TXT_WELCOME_BACK, Dungeon.depth);
-		} else {
-			GLog.i(TXT_WELCOME, Dungeon.depth);
-			Sample.INSTANCE.play(Assets.SND_DESCEND);
-		}
-		switch (level.getFeeling()) {
-			case CHASM:
-				GLog.w(TXT_CHASM);
-				break;
-			case WATER:
-				GLog.w(TXT_WATER);
-				break;
-			case GRASS:
-				GLog.w(TXT_GRASS);
-				break;
-			default:
-		}
-
-		if (level instanceof RegularLevel
-				&& ((RegularLevel) level).secretDoors > Random.IntRange(3, 4)) {
-			GLog.w(TXT_SECRETS);
-		}
-		if (Dungeon.nightMode && !Dungeon.bossLevel()) {
-			GLog.w(TXT_NIGHT_MODE);
-		}
-
-		busy = new BusyIndicator();
-		busy.camera = uiCamera;
-		busy.x = 1;
-		busy.y = sb.bottom() + 18;
-		add(busy);
-
-		sceneCreated = true;
-
-		switch (InterlevelScene.mode) {
-			case RESURRECT:
-				WandOfBlink.appear(Dungeon.hero, level.entrance);
-				new Flare(8, 32).color(0xFFFF66, true).show(Dungeon.hero.getHeroSprite(), 2f);
-				break;
-			case RETURN:
-				WandOfBlink.appear(Dungeon.hero, Dungeon.hero.getPos());
-				break;
-			case FALL:
-				Chasm.heroLand();
-				break;
-			case DESCEND:
-
-				DungeonGenerator.showStory(level);
-
-				if (Dungeon.hero.isAlive() && !level.isSafe() && Dungeon.depth != 22 && Dungeon.depth != 1) {
-					Badges.validateNoKilling();
-				}
-				break;
-			default:
-		}
-
-		Camera.main.target = Dungeon.hero.getHeroSprite();
-
-		level.activateScripts();
-
-		fadeIn();
-
-		Dungeon.observe();
-	}
-
-	public void destroy() {
-
-		scene = null;
-		Badges.saveGlobal();
-
-		super.destroy();
-	}
-
-	@Override
-	public synchronized void pause() {
-		Dungeon.saveAll();
-	}
-
-	@Override
-	public synchronized void update() {
-		if (!sceneCreated) {
-			return;
-		}
-
-		if (Dungeon.hero == null) {
-			return;
-		}
-
-		if (Dungeon.level == null) {
-			return;
-		}
-
-		super.update();
-
-		water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed);
-
-		Actor.process(Game.elapsed);
-
-		if (Dungeon.hero.isReady() && !Dungeon.hero.paralysed) {
-			log.newLine();
-		}
-
-		if (!PixelDungeon.realtime()) {
-			cellSelector.enabled = Dungeon.hero.isReady();
-		} else {
-			cellSelector.enabled = Dungeon.hero.isAlive();
-		}
-
-	}
-
-	@Override
-	protected void onBackPressed() {
-		if (!cancel()) {
-			add(new WndGame());
-		}
-	}
-
-	@Override
-	protected void onMenuPressed() {
-		if (Dungeon.hero.isReady()) {
-			selectItem(null, WndBag.Mode.ALL, null);
-		}
-	}
-
-	public void brightness(boolean value) {
-
-		water.rm = water.gm = water.bm = baseTiles.rm = baseTiles.gm = baseTiles.bm = value ? 1.5f : 1.0f;
-
-		if (value) {
-			fog.am = +2f;
-			fog.aa = -1f;
-		} else {
-			fog.am = +1f;
-			fog.aa = 0f;
-		}
-	}
-
-	private void addLevelObjectSprite(LevelObject obj) {
-		(obj.sprite = (LevelObjectSprite) objects.recycle(LevelObjectSprite.class)).reset(obj);
-	}
-
-	private void addHeapSprite(Heap heap) {
-		ItemSprite sprite = heap.sprite = (ItemSprite) heaps.recycle(ItemSprite.class);
-		sprite.revive();
-		sprite.link(heap);
-		heaps.add(sprite);
-	}
-
-	private void addDiscardedSprite(Heap heap) {
-		heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
-		heap.sprite.revive();
-		heap.sprite.link(heap);
-		heaps.add(heap.sprite);
-	}
-
-	private void addPlantSprite(Plant plant) {
-		(plant.sprite = (PlantSprite) plants.recycle(PlantSprite.class)).reset(plant);
-	}
-
-	private static void addBlobSprite(final Blob gas) {
-		if (isSceneReady())
-			if (gas.emitter == null) {
-				scene.gases.add(new BlobEmitter(gas));
-			}
-	}
-
-	private void prompt(String text) {
-
-		if (prompt != null) {
-			prompt.killAndErase();
-			prompt = null;
-		}
-
-		if (text != null) {
-			prompt = new Toast(text) {
-				@Override
-				protected void onClose() {
-					cancel();
-				}
-			};
-			prompt.camera = uiCamera;
-			prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
-			add(prompt);
-		}
-	}
-
-	private void showBanner(Banner banner) {
-		banner.camera = uiCamera;
-		banner.x = align(uiCamera, (uiCamera.width - banner.width) / 2);
-		banner.y = align(uiCamera, (uiCamera.height - banner.height) / 3);
-		add(banner);
-	}
-
-	// -------------------------------------------------------
-
-	public static void add(Plant plant) {
-		if (scene != null && Dungeon.level != null) {
-			scene.addPlantSprite(plant);
-		} else {
-			EventCollector.logException(new Exception("add(Plant)"));
-		}
-	}
-
-	public static void add(Blob gas) {
-		if (scene != null && Dungeon.level != null) {
-			Actor.add(gas);
-			addBlobSprite(gas);
-		} else {
-			EventCollector.logException(new Exception("add(Blob)"));
-		}
-	}
-
-	public static void add(LevelObject obj) {
-		if (isSceneReady()) {
-			scene.addLevelObjectSprite(obj);
-		} else {
-			throw new TrackedRuntimeException("add(LevelObject)");
-		}
-	}
-
-	public static void add(Heap heap) {
-		if (isSceneReady()) {
-			scene.addHeapSprite(heap);
-		} else {
-			EventCollector.logException(new Exception("add(Heap)"));
-		}
-	}
-
-	public static void discard(Heap heap) {
-		if (isSceneReady()) {
-			scene.addDiscardedSprite(heap);
-		} else {
-			EventCollector.logException(new Exception("discard(Heap)"));
-		}
-	}
-
-	public static boolean isSceneReady() {
-		return scene != null && Dungeon.level != null;
-	}
-
-	public static void add(EmoIcon icon) {
-		scene.emoicons.add(icon);
-	}
-
-	public static void effect(Visual effect) {
-		scene.effects.add(effect);
-	}
-
-	public static Ripple ripple(int pos) {
-		Ripple ripple = (Ripple) scene.ripples.recycle(Ripple.class);
-		ripple.reset(pos);
-		return ripple;
-	}
-
-	public static SpellSprite spellSprite() {
-		return (SpellSprite) scene.spells.recycle(SpellSprite.class);
-	}
-
-	public static Emitter emitter() {
-		if (scene != null) {
-			Emitter emitter = (Emitter) scene.emitters.recycle(Emitter.class);
-			emitter.revive();
-			return emitter;
-		} else {
-			return null;
-		}
-	}
-
-	public static Text status() {
-		if (ModdingMode.getClassicTextRenderingMode()) {
-			return (FloatingText) scene.statuses.recycle(FloatingText.class);
-		} else {
-			return (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class);
-		}
-	}
-
-	public static void pickUp(Item item) {
-		scene.toolbar.pickup(item);
-	}
-
-	public static void updateMap() {
-		if (isSceneReady()) {
-			scene.baseTiles.updateAll();
-		} else {
-			EventCollector.logException(new Exception("updateMap"));
-		}
-	}
-
-	public static void updateMap(int cell) {
-		if (isSceneReady()) {
-			scene.baseTiles.updateCell(cell, Dungeon.level);
-		} else {
-			EventCollector.logException(new Exception("updateMap(int)"));
-		}
-	}
-
-	public static void discoverTile(int pos, int oldValue) {
-		if (isSceneReady()) {
-			scene.baseTiles.discover(pos, oldValue);
-		} else {
-			EventCollector.logException(new Exception("discoverTile"));
-		}
-	}
-
-	public static void show(Window wnd) {
-		cancelCellSelector();
-		scene.add(wnd);
-	}
-
-	public static void afterObserve() {
-		if (scene != null && scene.sceneCreated) {
-
-			scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
-
-			for (Mob mob : Dungeon.level.mobs) {
-				mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
-			}
-		} else {
-			EventCollector.logException(new Exception("afterObserve()"));
-		}
-	}
-
-	public static void flash(int color) {
-		scene.fadeIn(0xFF000000 | color, true);
-	}
-
-	public static void gameOver() {
-		Banner gameOver = new Banner(BannerSprites.get(BannerSprites.Type.GAME_OVER));
-		gameOver.show(0x000000, 1f);
-		scene.showBanner(gameOver);
-
-		Sample.INSTANCE.play(Assets.SND_DEATH);
-	}
-
-	public static void bossSlain() {
-		if (Dungeon.hero.isAlive()) {
-			Banner bossSlain = new Banner(BannerSprites.get(BannerSprites.Type.BOSS_SLAIN));
-			bossSlain.show(0xFFFFFF, 0.3f, 5f);
-			scene.showBanner(bossSlain);
-
-			Sample.INSTANCE.play(Assets.SND_BOSS);
-		}
-	}
-
-	public static void handleCell(int cell) {
-		cellSelector.select(cell);
-	}
-
-	public static void selectCell(CellSelector.Listener listener) {
-		cellSelector.listener = listener;
-		scene.prompt(listener.prompt());
-	}
-
-	private static boolean cancelCellSelector() {
-		if (cellSelector != null && cellSelector.listener != null && cellSelector.listener != defaultCellListener) {
-			cellSelector.cancel();
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	public static void selectItemFromBag(WndBag.Listener listener, Bag bag, Mode mode, String title) {
-		cancelCellSelector();
-		scene.add(new WndBag(bag, listener, mode, title));
-	}
-
-	public static WndBag selectItem(WndBag.Listener listener, WndBag.Mode mode, String title) {
-		cancelCellSelector();
-
-		WndBag wnd = mode == Mode.SEED ? WndBag.seedPouch(listener, mode, title)
-				: WndBag.lastBag(listener, mode, title);
-		scene.add(wnd);
-
-		return wnd;
-	}
-
-	static boolean cancel() {
-		if (Dungeon.hero != null && (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth)) {
-
-			Dungeon.hero.curAction = null;
-			Dungeon.hero.restoreHealth = false;
-			return true;
-
-		} else {
-
-			return cancelCellSelector();
-
-		}
-	}
-
-	public static void ready() {
-		selectCell(defaultCellListener);
-		QuickSlot.cancel();
-	}
-
-	private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
-		@Override
-		public void onSelect(Integer cell) {
-			if (Dungeon.hero.handle(cell)) {
-				// Actor.next();
-				Dungeon.hero.next();
-			}
-		}
-
-		@Override
-		public String prompt() {
-			return null;
-		}
-	};
-
-	public void updateToolbar() {
-		if (toolbar != null) {
-			toolbar.updateLayout();
-		} else {
-			EventCollector.logException(new Exception("updateToolbar(int)"));
-		}
-	}
-
-	@Override
-	public void resume() {
-		super.resume();
-		afterObserve();
-	}
-
-	public static void addMobSpriteDirect(CharSprite sprite) {
-		if (isSceneReady()) {
-			scene.mobs.add(sprite);
-		}
-	}
-
-	public static Image getTile(int cell) {
-		if(isSceneReady()) {
-			return scene.baseTiles.tile(cell);
-		}
-		throw new TrackedRuntimeException("getTile");
-	}
+        for (int i = 0; i < level.plants.size(); i++) {
+            addPlantSprite(level.plants.valueAt(i));
+        }
+
+        heaps = new Group();
+        add(heaps);
+
+        for (Heap heap : level.allHeaps()) {
+            addHeapSprite(heap);
+        }
+
+        emitters = new Group();
+        effects = new Group();
+        emoicons = new Group();
+
+        mobs = new Group();
+        add(mobs);
+
+        // hack to save bugged saves...
+        boolean buggedSave = false;
+        HashSet<Mob> filteredMobs = new HashSet<>();
+        for (Mob mob : level.mobs) {
+            if (level.cellValid(mob.getPos())) {
+                filteredMobs.add(mob);
+            } else {
+                buggedSave = true;
+            }
+        }
+
+        if (buggedSave) {
+            EventCollector.logEvent(EventCollector.BUG, "bugged save", "mob.pos==-1");
+        }
+
+        level.mobs = filteredMobs;
+
+        for (Mob mob : level.mobs) {
+            if (Statistics.amuletObtained) {
+                mob.beckon(Dungeon.hero.getPos());
+            }
+        }
+
+        Dungeon.hero.updateSprite();
+
+        add(emitters);
+        add(effects);
+
+        gases = new Group();
+        add(gases);
+
+        for (Blob blob : level.blobs.values()) {
+            blob.emitter = null;
+            addBlobSprite(blob);
+        }
+
+
+        fog = new FogOfWar(level.getWidth(), level.getHeight());
+
+        if (level.noFogOfWar()) {
+            level.reveal();
+        }
+
+        if(roofTiles!=null) {
+            add(roofTiles);
+        }
+
+        fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+        add(fog);
+
+        brightness(PixelDungeon.brightness());
+
+        spells = new Group();
+        add(spells);
+
+        statuses = new Group();
+        add(statuses);
+
+        add(emoicons);
+
+        add(new HealthIndicator());
+
+        add(cellSelector = new CellSelector(baseTiles));
+
+        Dungeon.hero.updateLook();
+
+        sb = new StatusPane(Dungeon.hero, level);
+        sb.camera = uiCamera;
+        sb.setSize(uiCamera.width, 0);
+        add(sb);
+
+        toolbar = new Toolbar();
+        toolbar.camera = uiCamera;
+        toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
+        add(toolbar);
+
+        attack = new AttackIndicator();
+        attack.camera = uiCamera;
+        attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
+        add(attack);
+
+        resume = new ResumeIndicator();
+        resume.camera = uiCamera;
+        resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
+        add(resume);
+
+        log = new GameLog();
+        log.camera = uiCamera;
+        log.setRect(0, toolbar.top(), attack.left(), 0);
+        add(log);
+
+        if (Dungeon.depth < Statistics.deepestFloor) {
+            GLog.i(TXT_WELCOME_BACK, Dungeon.depth);
+        } else {
+            GLog.i(TXT_WELCOME, Dungeon.depth);
+            Sample.INSTANCE.play(Assets.SND_DESCEND);
+        }
+        switch (level.getFeeling()) {
+            case CHASM:
+                GLog.w(TXT_CHASM);
+                break;
+            case WATER:
+                GLog.w(TXT_WATER);
+                break;
+            case GRASS:
+                GLog.w(TXT_GRASS);
+                break;
+            default:
+        }
+
+        if (level instanceof RegularLevel
+                && ((RegularLevel) level).secretDoors > Random.IntRange(3, 4)) {
+            GLog.w(TXT_SECRETS);
+        }
+        if (Dungeon.nightMode && !Dungeon.bossLevel()) {
+            GLog.w(TXT_NIGHT_MODE);
+        }
+
+        busy = new BusyIndicator();
+        busy.camera = uiCamera;
+        busy.x = 1;
+        busy.y = sb.bottom() + 18;
+        add(busy);
+
+        sceneCreated = true;
+
+        switch (InterlevelScene.mode) {
+            case RESURRECT:
+                WandOfBlink.appear(Dungeon.hero, level.entrance);
+                new Flare(8, 32).color(0xFFFF66, true).show(Dungeon.hero.getHeroSprite(), 2f);
+                break;
+            case RETURN:
+                WandOfBlink.appear(Dungeon.hero, Dungeon.hero.getPos());
+                break;
+            case FALL:
+                Chasm.heroLand();
+                break;
+            case DESCEND:
+
+                DungeonGenerator.showStory(level);
+
+                if (Dungeon.hero.isAlive() && !level.isSafe() && Dungeon.depth != 22 && Dungeon.depth != 1) {
+                    Badges.validateNoKilling();
+                }
+                break;
+            default:
+        }
+        InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
+
+        Camera.main.target = Dungeon.hero.getHeroSprite();
+
+        level.activateScripts();
+
+        fadeIn();
+
+        Dungeon.observe();
+    }
+
+    public void destroy() {
+
+        scene = null;
+        Badges.saveGlobal();
+
+        super.destroy();
+    }
+
+    @Override
+    public synchronized void pause() {
+        Dungeon.save();
+    }
+
+    @Override
+    public synchronized void update() {
+        if (!sceneCreated) {
+            return;
+        }
+
+        if (Dungeon.hero == null) {
+            return;
+        }
+
+        if (Dungeon.level == null) {
+            return;
+        }
+
+        super.update();
+
+        water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed);
+
+        Actor.process(Game.elapsed);
+
+        if (Dungeon.hero.isReady() && !Dungeon.hero.paralysed) {
+            log.newLine();
+        }
+
+        if (!PixelDungeon.realtime()) {
+            cellSelector.enabled = Dungeon.hero.isReady();
+        } else {
+            cellSelector.enabled = Dungeon.hero.isAlive();
+        }
+
+    }
+
+    @Override
+    protected void onBackPressed() {
+        if (!cancel()) {
+            add(new WndGame());
+        }
+    }
+
+    @Override
+    protected void onMenuPressed() {
+        if (Dungeon.hero.isReady()) {
+            selectItem(null, WndBag.Mode.ALL, null);
+        }
+    }
+
+    public void brightness(boolean value) {
+
+        float levelLimit = Math.min(Dungeon.level.getPropertyFloat("maxBrightness", MAX_BRIGHTNESS),
+                DungeonGenerator.getLevelProperty(Dungeon.level.levelId,"maxBrightness", MAX_BRIGHTNESS));
+
+
+        float brightnessValue =  value ? Math.min(MAX_BRIGHTNESS, levelLimit)  : 1.0f;
+
+        water.brightness(brightnessValue);
+        baseTiles.brightness(brightnessValue);
+
+        if (logicTiles != null) {
+            logicTiles.brightness(brightnessValue);
+        }
+
+        if(roofTiles != null) {
+            roofTiles.brightness(brightnessValue);
+        }
+
+        if (value) {
+            fog.am = +2f;
+            fog.aa = -1f;
+        } else {
+            fog.am = +1f;
+            fog.aa = 0f;
+        }
+    }
+
+    private void addLevelObjectSprite(LevelObject obj) {
+        (obj.sprite = (LevelObjectSprite) objects.recycle(LevelObjectSprite.class)).reset(obj);
+    }
+
+    private void addHeapSprite(Heap heap) {
+        ItemSprite sprite = heap.sprite = (ItemSprite) heaps.recycle(ItemSprite.class);
+        sprite.revive();
+        sprite.link(heap);
+        heaps.add(sprite);
+    }
+
+    private void addDiscardedSprite(Heap heap) {
+        heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
+        heap.sprite.revive();
+        heap.sprite.link(heap);
+        heaps.add(heap.sprite);
+    }
+
+    private void addPlantSprite(Plant plant) {
+        (plant.sprite = (PlantSprite) plants.recycle(PlantSprite.class)).reset(plant);
+    }
+
+    private static void addBlobSprite(final Blob gas) {
+        if (isSceneReady())
+            if (gas.emitter == null) {
+                scene.gases.add(new BlobEmitter(gas));
+            }
+    }
+
+    private void prompt(String text) {
+
+        if (prompt != null) {
+            prompt.killAndErase();
+            prompt = null;
+        }
+
+        if (text != null) {
+            prompt = new Toast(text) {
+                @Override
+                protected void onClose() {
+                    cancel();
+                }
+            };
+            prompt.camera = uiCamera;
+            prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
+            add(prompt);
+        }
+    }
+
+    private void showBanner(Banner banner) {
+        banner.camera = uiCamera;
+        banner.x = align(uiCamera, (uiCamera.width - banner.width) / 2);
+        banner.y = align(uiCamera, (uiCamera.height - banner.height) / 3);
+        add(banner);
+    }
+
+    // -------------------------------------------------------
+
+    public static void add(Plant plant) {
+        if (scene != null && Dungeon.level != null) {
+            scene.addPlantSprite(plant);
+        } else {
+            EventCollector.logException(new Exception("add(Plant)"));
+        }
+    }
+
+    public static void add(Blob gas) {
+        if (scene != null && Dungeon.level != null) {
+            Actor.add(gas);
+            addBlobSprite(gas);
+        } else {
+            EventCollector.logException(new Exception("add(Blob)"));
+        }
+    }
+
+    public static void add(LevelObject obj) {
+        if (isSceneReady()) {
+            scene.addLevelObjectSprite(obj);
+        } else {
+            throw new TrackedRuntimeException("add(LevelObject)");
+        }
+    }
+
+    public static void add(Heap heap) {
+        if (isSceneReady()) {
+            scene.addHeapSprite(heap);
+        } else {
+            EventCollector.logException(new Exception("add(Heap)"));
+        }
+    }
+
+    public static void discard(Heap heap) {
+        if (isSceneReady()) {
+            scene.addDiscardedSprite(heap);
+        } else {
+            EventCollector.logException(new Exception("discard(Heap)"));
+        }
+    }
+
+    public static boolean isSceneReady() {
+        return scene != null && Dungeon.level != null;
+    }
+
+    public static void add(EmoIcon icon) {
+        scene.emoicons.add(icon);
+    }
+
+    public static void effect(Visual effect) {
+        scene.effects.add(effect);
+    }
+
+    public static Ripple ripple(int pos) {
+        Ripple ripple = (Ripple) scene.ripples.recycle(Ripple.class);
+        ripple.reset(pos);
+        return ripple;
+    }
+
+    public static SpellSprite spellSprite() {
+        return (SpellSprite) scene.spells.recycle(SpellSprite.class);
+    }
+
+    public static Emitter emitter() {
+        if (scene != null) {
+            Emitter emitter = (Emitter) scene.emitters.recycle(Emitter.class);
+            emitter.revive();
+            return emitter;
+        } else {
+            return null;
+        }
+    }
+
+    public static Text status() {
+        if (ModdingMode.getClassicTextRenderingMode()) {
+            return (FloatingText) scene.statuses.recycle(FloatingText.class);
+        } else {
+            return (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class);
+        }
+    }
+
+    public static void pickUp(Item item) {
+        scene.toolbar.pickup(item);
+    }
+
+    public static void updateMap() {
+        if (isSceneReady()) {
+            scene.baseTiles.updateAll();
+        } else {
+            EventCollector.logException(new Exception("updateMap"));
+        }
+    }
+
+    public static void updateMap(int cell) {
+        if (isSceneReady()) {
+            scene.baseTiles.updateCell(cell, Dungeon.level);
+        } else {
+            EventCollector.logException(new Exception("updateMap(int)"));
+        }
+    }
+
+    public static void discoverTile(int pos) {
+        if (isSceneReady()) {
+            scene.baseTiles.discover(pos);
+        } else {
+            EventCollector.logException(new Exception("discoverTile"));
+        }
+    }
+
+    public static void show(Window wnd) {
+        cancelCellSelector();
+        scene.add(wnd);
+    }
+
+    public static void afterObserve() {
+        if (scene != null && scene.sceneCreated) {
+
+            scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+
+            for (Mob mob : Dungeon.level.mobs) {
+                mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
+            }
+        } else {
+            EventCollector.logException(new Exception("afterObserve()"));
+        }
+    }
+
+    public static void flash(int color) {
+        scene.fadeIn(0xFF000000 | color, true);
+    }
+
+    public static void gameOver() {
+        Banner gameOver = new Banner(BannerSprites.get(BannerSprites.Type.GAME_OVER));
+        gameOver.show(0x000000, 1f);
+        scene.showBanner(gameOver);
+
+        Sample.INSTANCE.play(Assets.SND_DEATH);
+    }
+
+    public static void bossSlain() {
+        if (Dungeon.hero.isAlive()) {
+            Banner bossSlain = new Banner(BannerSprites.get(BannerSprites.Type.BOSS_SLAIN));
+            bossSlain.show(0xFFFFFF, 0.3f, 5f);
+            scene.showBanner(bossSlain);
+
+            Sample.INSTANCE.play(Assets.SND_BOSS);
+        }
+    }
+
+    public static void handleCell(int cell) {
+        cellSelector.select(cell);
+    }
+
+    public static void selectCell(CellSelector.Listener listener) {
+        cellSelector.listener = listener;
+        scene.prompt(listener.prompt());
+    }
+
+    private static boolean cancelCellSelector() {
+        if (cellSelector != null && cellSelector.listener != null && cellSelector.listener != defaultCellListener) {
+            cellSelector.cancel();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void selectItemFromBag(WndBag.Listener listener, Bag bag, Mode mode, String title) {
+        cancelCellSelector();
+        scene.add(new WndBag(bag, listener, mode, title));
+    }
+
+    public static WndBag selectItem(WndBag.Listener listener, WndBag.Mode mode, String title) {
+        cancelCellSelector();
+
+        WndBag wnd = mode == Mode.SEED ? WndBag.seedPouch(listener, mode, title)
+                : WndBag.lastBag(listener, mode, title);
+        scene.add(wnd);
+
+        return wnd;
+    }
+
+    static boolean cancel() {
+        if (Dungeon.hero != null && (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth)) {
+
+            Dungeon.hero.curAction = null;
+            Dungeon.hero.restoreHealth = false;
+            return true;
+
+        } else {
+
+            return cancelCellSelector();
+
+        }
+    }
+
+    public static void ready() {
+        selectCell(defaultCellListener);
+        QuickSlot.cancel();
+    }
+
+    private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
+        @Override
+        public void onSelect(Integer cell) {
+            if (Dungeon.hero.handle(cell)) {
+                Dungeon.hero.next();
+            }
+        }
+
+        @Override
+        public String prompt() {
+            return null;
+        }
+    };
+
+    public void updateToolbar() {
+        if (toolbar != null) {
+            toolbar.updateLayout();
+        } else {
+            EventCollector.logException(new Exception("updateToolbar(int)"));
+        }
+    }
+
+    @Override
+    public void resume() {
+        super.resume();
+        afterObserve();
+    }
+
+    public static void addMobSpriteDirect(CharSprite sprite) {
+        if (isSceneReady()) {
+            scene.mobs.add(sprite);
+        }
+    }
+
+    public static Image getTile(int cell) {
+        Image ret = scene.baseTiles.tile(cell);
+        if (ret == null) {
+            ret = scene.logicTiles.tile(cell);
+        }
+        return ret;
+    }
 }

@@ -78,7 +78,7 @@ public class Tengu extends Boss implements IZapper {
 	@Override
 	public void die( Object cause ) {
 
-		if ( Dungeon.hero.heroClass != HeroClass.NECROMANCER){
+		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
 			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
 		}
 

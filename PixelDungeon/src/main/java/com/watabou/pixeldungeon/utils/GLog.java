@@ -103,16 +103,14 @@ public class GLog {
 			Log.i(TAG, text);
 		}
 
-		if(!Game.isPaused()) {
-			final String finalText = text;
-			Game.executeInGlThread(new Runnable() {
-				                       @Override
-				                       public void run() {
-					                       update.dispatch(finalText);
-				                       }
+		final String finalText = text;
+		Game.pushUiTask(new Runnable() {
+			                       @Override
+			                       public void run() {
+				                       update.dispatch(finalText);
 			                       }
-			);
-		}
+		                       }
+		);
 	}
 	
 	public static void p( String text, Object... args ) {
@@ -130,5 +128,12 @@ public class GLog {
 	public static void h( String text, Object... args ) {
 		i( HIGHLIGHT + text, args );
 	}
+
+	public static void debug( String text, Object... args ) {
+		if(BuildConfig.DEBUG) {
+			i(text, args);
+		}
+	}
+
 
 }

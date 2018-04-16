@@ -101,6 +101,8 @@ public class Warlock extends Mob implements IZapper {
 		if (cell != getPos()){
 			final int tgt = cell;
 			final Char ch = this;
+
+			move(cell);
 			fx(cell, new Callback() {
 				@Override
 				public void call() {

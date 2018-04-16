@@ -64,7 +64,7 @@ public class Armor extends EquipableItem {
 	protected boolean coverHair;
 
 	public int tier;
-	
+
 	public int STR;
 	public int DR;
 
@@ -95,7 +95,7 @@ public class Armor extends EquipableItem {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		glyph = (Glyph)bundle.get( GLYPH );
+		inscribe((Glyph)bundle.get( GLYPH ));
 	}
 	
 	@Override
@@ -368,15 +368,15 @@ public class Armor extends EquipableItem {
 		public String name( String armorName ) {
 			return armorName;
 		}
-		
+
 		@Override
-		public void restoreFromBundle( Bundle bundle ) {	
+		public void restoreFromBundle( Bundle bundle ) {
 		}
 
 		@Override
-		public void storeInBundle( Bundle bundle ) {	
+		public void storeInBundle( Bundle bundle ) {
 		}
-		
+
 		@Override
 		public boolean dontPack() {
 			return false;

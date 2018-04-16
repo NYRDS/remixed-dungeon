@@ -225,6 +225,15 @@ public class StringsManager {
 		return "";
 	}
 
+
+	public static String maybeId(String maybeId, int index) {
+		String[] ret = getVars(maybeId);
+		if (ret.length > index) {
+			return ret[index];
+		}
+		return Utils.format("%s[%d]",maybeId,index);
+	}
+
 	public static String maybeId(String maybeId) {
 
 		String ret = getVar(maybeId);
@@ -239,7 +248,11 @@ public class StringsManager {
 			return sStringsMap.get(id);
 		}
 
-		return new String[1];
+		if(keyToInt.containsKey(id)) {
+			return getVars(keyToInt.get(id));
+		}
+
+		return new String[0];
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.windows.WndHelper;
@@ -64,7 +65,7 @@ public class WndDonate extends WndTabbed {
 			GOLD_DONATE_TEXT_2, RUBY_DONATE_TEXT_2, ROYAL_DONATE_TEXT_2 };
 
 	public WndDonate() {
-		super();
+		EventCollector.logScene(getClass().getCanonicalName());
 
 		resize(WndHelper.getFullscreenWidth(), WndHelper.getFullscreenHeight() - tabHeight() - 2*GAP);
 
@@ -82,10 +83,15 @@ public class WndDonate extends WndTabbed {
 		select(2);
 	}
 
+	@Override
+	public void select(int index) {
+		super.select(index);
+		EventCollector.logScene(getClass().getCanonicalName()+":"+Integer.toString(index));
+	}
+
 	private class DonateTab extends Group {
 
 		DonateTab(final int level) {
-			super();
 
 			IconTitle tabTitle = new IconTitle(Icons.get(icons[level - 1]),
 					title[level - 1]);
@@ -107,6 +113,7 @@ public class WndDonate extends WndTabbed {
 				SystemRedButton donate = new SystemRedButton(btnText) {
 					@Override
 					protected void onClick() {
+						EventCollector.logEvent("DonationClick",Integer.toString(level));
 						Iap.donate(level);
 					}
 				};

@@ -41,7 +41,7 @@ public class GnollArmor extends ClassArmor {
         Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 
         int mobsDominated = 0;
-        for (Mob mob : Dungeon.level.mobs) {
+        for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
             if (Dungeon.level.fieldOfView[mob.getPos()]) {
                 if(mob.canBePet()) {
                     Mob.makePet(mob, getCurUser());

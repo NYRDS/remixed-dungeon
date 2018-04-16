@@ -83,17 +83,17 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 	private void showAd() {
 		hide();
 
-		Game.paused = true;
+		Game.softPaused = true;
 		Ads.removeEasyModeBanner();
 		RewardVideo.showCinemaRewardVideo(this);
 	}
 
 	@Override
 	public void returnToWork(final boolean result) {
-		PixelDungeon.executeInGlThread(new Runnable() {
+		PixelDungeon.pushUiTask(new Runnable() {
 			@Override
 			public void run() {
-
+				Game.softPaused = false;
 				Dungeon.hero.doOnNextAction = new Runnable() {
 					@Override
 					public void run() {
@@ -118,7 +118,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 					}
 				};
 
-				PixelDungeon.landscape(PixelDungeon.landscape());
+				PixelDungeon.landscape(PixelDungeon.storedLandscape());
 				PixelDungeon.setNeedSceneRestart(true);
 			}
 		});

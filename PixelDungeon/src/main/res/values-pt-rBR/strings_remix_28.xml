@@ -1,4 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <string name="HeroClass_Gnoll">Gnoll</string>
+    <string name="GnollArmor_ACSpecial">DOMINAR</string>
+    <string name="GnollArmor_NotGnoll">Apenas gnoll podem usar Armadura de Gnoll!</string>
+
+    <string name="GnollArmor_Name">traje de tenente gnoll</string>
+    <string name="GnollArmor_Info">Os usuários do traje do tenente Gnoll são conhecidos por sua capacidade de persuadir as multidões extremamente irritadas a serem leais servos da Coroa.</string>
+
+    <string name="GnollTamahawk_Name">tomahawk gnoll</string>
+    <string name="GnollTamahawk_Info">Tomahawk tradicional criado por um Gnoll artesão, cada clã possui um design único. Este Tomahawk é um pouco mais leve que as contrapartes feitas pelos humanos.</string>
+    <string name="GnollTamahawk_Gender">masculino</string>
+
+
+    <string name="WndPlayGames_BackupProgress">Criar backup do progresso do jogo</string>
+    <string name="WndPlayGames_RestoreProgress">Restaurar progresso do jogo</string>
+    <string name="WndPlayGames_WorkInCloud">Trabalhando em Cloud... Por favor aguarde.</string>
+    <string name="StartScene_UnlockGnoll">Para desbloquear esta classe você deve persuadir o sacerdote da cidade a curar o Gnoll Brutal</string>
+    <string name="WndPriest_Heal_Minions">Cura todos os seus servos - apenas %d de ouro!</string>
+    <string name="Badges_GnollUnlocked">Gnoll desbloqueado</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>Gnolls começam com 15 pontos de força</item>
+        <item>Gnolls começam com 5 pontos de vida</item>
+        <item>Gnolls começam sem armadura, mas começam com um tomahawk único</item>
+        <item>Gnolls não podem ler ou escrever</item>
+        <item>Gnolls não atacam outros Gnolls, exceto quando provocados</item>
+     </string-array>
+</resources>

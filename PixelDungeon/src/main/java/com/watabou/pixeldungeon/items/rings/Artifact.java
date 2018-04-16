@@ -95,15 +95,8 @@ public class Artifact extends EquipableItem {
 		return false;
 	}
 
-	protected ArtifactBuff buff() {
+	protected Buff buff() {
 		return null;
-	}
-
-	public class ArtifactBuff extends Buff {
-		@Override
-		public boolean dontPack() {
-			return true;
-		}
 	}
 
 	public String getText() {

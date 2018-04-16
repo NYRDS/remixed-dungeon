@@ -85,11 +85,11 @@ public class Sungrass extends Plant {
 			if (action.equals(Food.AC_EAT)) {
 				float duration = 1;
 
-				if (hero.buff(DriedRose.OneWayLoveBuff.class) != null) {
+				if (hero.hasBuff(DriedRose.OneWayLoveBuff.class)) {
 					duration *= 0;
 				}
 
-				if (hero.buff(DriedRose.OneWayCursedLoveBuff.class) != null) {
+				if (hero.hasBuff(DriedRose.OneWayCursedLoveBuff.class)) {
 					duration *= 2;
 				}
 

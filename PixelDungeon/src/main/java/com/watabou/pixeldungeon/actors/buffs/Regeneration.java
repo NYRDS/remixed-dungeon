@@ -29,7 +29,6 @@ public class Regeneration extends Buff {
     @Override
     public boolean act() {
         if (target.isAlive()) {
-
             if (target.hp() < target.ht()) {
                 if ((target instanceof Hero && ((Hero) target).isStarving()) || Dungeon.level.isSafe()) {
                 } else {
@@ -52,11 +51,6 @@ public class Regeneration extends Buff {
 
 	@Override
 	public boolean attachTo( Char target ) {
-
-		if(target.buff(Regeneration.class) != null) {
-			return false;
-		}
-
-		return super.attachTo(target);
-	}
+        return target.hasBuff(Regeneration.class) || super.attachTo(target);
+    }
 }

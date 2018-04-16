@@ -129,5 +129,4 @@ public class Utils {
 				|| localeCode.startsWith("tr"));
 
 	}
-
 }

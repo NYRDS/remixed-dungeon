@@ -117,7 +117,7 @@ public class WndGame extends Window {
 			@Override
 			protected void onClick() {
 				try {
-					Dungeon.saveAll();
+					Dungeon.save();
 				} catch (Exception e) {
 					throw new TrackedRuntimeException(e);
 				}

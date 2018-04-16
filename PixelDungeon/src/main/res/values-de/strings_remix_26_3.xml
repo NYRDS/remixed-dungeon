@@ -23,7 +23,7 @@
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann.\n
 </string>
-    <string name="PlagueDoctorNPC_Quest_Reminder">Bring mir%dRattenhäute.</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Bring mir %d Rattenhäute.</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, danke, ich hoffe, dass die eine Spur einer Krankheit haben werden. Frühere Beispiele waren absolut harmlos. Also habe ich das für Sie gemacht, während ich auf neue Proben gewartet habe.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ich werd\'s ihnen zeigen. Ihnen allen!</string>
     <string name="Journal_PlagueDoctorNPC">Virendoktor</string>
@@ -61,6 +61,8 @@
     <string name="BellaNPC_Name_Objective">Bella</string>
     <string name="BellaNPC_Desc">Ein sehr schick aussehendes Mädchen. Ihr ganzes Aussehen sagt dir: \"Ich bin zu gut für jeden.\"</string>
     <string name="BellaNPC_Message">Ich habe kein Interesse an solchen Pöbeln wie dich!</string>
+    <string name="BellaNPC_Amulet_M">Was hast du Gutaussehender dort drüben? Ah, solch ein schönes Amulett! Und du ... du stehst über diesen Pöbeln. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
+    <string name="BellaNPC_Amulet_F">Was hast du Schöne dort drüben? Ah, solch ein schönes Amulett! Und du ... du strahlst so viel heller als jeder andere. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Angry">Wie kannst du es wagen...du Tölpel!</string>
     <string name="BellaNPC_Yes_End_Game">Sicher (Beende das Spiel)</string>
     <string name="BellaNPC_No">Nein, nicht mit dir</string>

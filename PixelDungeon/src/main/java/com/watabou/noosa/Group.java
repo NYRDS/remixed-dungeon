@@ -33,13 +33,7 @@ public class Group extends Gizmo {
 
 	@Override
 	public void destroy() {
-		for (int i = 0; i < getLength(); i++) {
-			Gizmo g = members.get(i);
-			if (g != null) {
-				g.destroy();
-			}
-		}
-		members.clear();
+		clear();
 	}
 
 	@Override

@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.items.icecaves;
 
-import com.watabou.pixeldungeon.items.rings.Artifact;
+import com.watabou.pixeldungeon.items.Item;
 
-public class IceKey extends Artifact {
+public class IceKey extends Item {
 
 
 	public IceKey() {

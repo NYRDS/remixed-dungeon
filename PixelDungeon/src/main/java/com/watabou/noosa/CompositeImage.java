@@ -1,35 +1,47 @@
 package com.watabou.noosa;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CompositeImage extends Image {
 
-	private ArrayList<Image> mLayers = new ArrayList<>();
+    private ArrayList<Image> mLayers = new ArrayList<>();
 
-	public CompositeImage() {
-		super();
-	}
+    public CompositeImage() {
+        super();
+    }
 
-	public CompositeImage(Object tx) {
-		this();
-		texture(tx);
-	}
+    public CompositeImage(List<Image> imgs) {
+        this();
+        if (imgs.isEmpty()) {
+            return;
+        }
+        copy(imgs.get(0));
+        for (int i = 1; i < imgs.size(); ++i) {
+            addLayer(imgs.get(i));
+        }
+    }
 
-	public void addLayer(Image img) {
-		mLayers.add(img);
-	}
 
-	@Override
-	public void draw() {
+    public CompositeImage(Object tx) {
+        this();
+        texture(tx);
+    }
 
-		super.draw();
+    public void addLayer(Image img) {
+        mLayers.add(img);
+    }
 
-		NoosaScript script = NoosaScript.get();
+    @Override
+    public void draw() {
+        super.draw();
 
-		for (Image img : mLayers) {
-			img.texture.bind();
-			img.updateVerticesBuffer();
-			script.drawQuad(img.verticesBuffer);
-		}
-	}
+        NoosaScript script = NoosaScript.get();
+
+        for (Image img : mLayers) {
+            img.texture.bind();
+            img.updateVerticesBuffer();
+            script.drawQuad(img.verticesBuffer);
+        }
+    }
 }

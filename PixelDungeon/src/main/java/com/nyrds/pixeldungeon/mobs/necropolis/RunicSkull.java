@@ -1,6 +1,9 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -12,8 +15,8 @@ import com.watabou.utils.Random;
 
 public class RunicSkull extends MultiKindMob {
 
-	protected boolean activated = false;
-	private boolean zapping     = false;
+	private boolean activated = false;
+	private boolean zapping   = false;
 
 	protected static final int RED_SKULL	 = 0;
 	protected static final int BLUE_SKULL	 = 1;
@@ -58,7 +61,7 @@ public class RunicSkull extends MultiKindMob {
 	{
 		if (activated){
 			if (!zapping) {
-				PlayZap();
+				getSprite().zap(getPos(), null);
 				zapping = true;
 			}
 		} else{
@@ -84,12 +87,8 @@ public class RunicSkull extends MultiKindMob {
 	}
 
 	@Override
-	public void onZapComplete() {
-		PlayZap();
-	}
-
-	public void PlayZap() {
-		getSprite().zap(getPos(), null);
+	public boolean zap(@NonNull Char enemy){
+		return false;
 	}
 
 	@Override

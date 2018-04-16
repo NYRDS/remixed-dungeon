@@ -30,7 +30,7 @@ abstract public class Book extends Item {
 	public void execute( Hero hero, String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 
-			if (hero.buff( Blindness.class ) != null) {
+			if (hero.hasBuff( Blindness.class )) {
 				GLog.w(Game.getVar(R.string.Codex_Blinded));
 			} else {
 				setCurUser(hero);

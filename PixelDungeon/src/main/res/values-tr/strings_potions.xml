@@ -4,6 +4,7 @@
   <!--STRINGS OF Potion CLASS-->
   <string name="Potion_Name">%s iksiri</string>
   <string name="Potion_Info">Bu şişe girdap gibi dönen %s sıvısıyla dolu. İçildiğinde veya fırlatıldığında ne olacağını kim bilir?</string>
+  <string name="Potion_ACDrink">İÇ</string>
   <string name="Potion_Harmfull">Zararlı iksir!</string>
   <string name="Potion_Beneficial">Faydalı iksir</string>
   <string name="Potion_Yes">Evet, ne yaptığımı biliyorum</string>

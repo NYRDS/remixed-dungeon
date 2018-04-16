@@ -46,6 +46,11 @@ public abstract class CustomLevel extends CommonLevel {
 	}
 
 	@Override
+	public String getProperty(String key, String defVal) {
+		return mLevelDesc.optString(key, defVal);
+	}
+
+	@Override
 	public String tilesTex() {
 		return mLevelDesc.optString("tiles", "tiles0.png");
 	}

@@ -80,6 +80,11 @@ public class PixelDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.items.books.TomeOfKnowledge.class,
 				"com.nyrds.pixeldungeon.items.books.SpellBook");
+
+		com.watabou.utils.Bundle.addAlias(
+				com.nyrds.pixeldungeon.mechanics.buffs.RageBuff.class,
+			"com.watabou.pixeldungeon.items.quest.CorpseDust.UndeadRageAuraBuff"
+		);
 	}
 
 	@Override
@@ -203,6 +208,10 @@ public class PixelDungeon extends Game {
 				.setRequestedOrientation(value ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 						: ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		Preferences.INSTANCE.put(Preferences.KEY_LANDSCAPE, value);
+	}
+
+	public static boolean storedLandscape() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_LANDSCAPE, false);
 	}
 
 	public static boolean landscape() {
@@ -438,7 +447,7 @@ public class PixelDungeon extends Game {
 		}
 		
 		if (donated() == 0 && level != 0) {
-			executeInGlThread(new Runnable() {
+			pushUiTask(new Runnable() {
 				
 				@Override
 				public void run() {

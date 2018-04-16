@@ -22,8 +22,8 @@ public class Devour extends Image {
 	public void reset( int p ) {
 		revive();
 		
-		x = (p % Dungeon.level.getWidth()) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - width) / 2;
-		y = (p / Dungeon.level.getWidth()) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - height) / 2;
+		x = (Dungeon.level.cellX(p)) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - width) / 2;
+		y = (Dungeon.level.cellY(p)) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - height) / 2;
 		
 		time = TIME_TO_FADE;
 	}

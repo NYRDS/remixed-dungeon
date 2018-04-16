@@ -1,13 +1,17 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.Bundle;
 
@@ -39,7 +43,11 @@ public class Sign extends LevelObject {
 	@Override
 	public boolean interact(Char hero) {
 		if(hero instanceof Hero && !((Hero) hero).heroClass.forbidden(CommonActions.AC_READ)) {
-			GameScene.show(new WndMessage(signText));
+			if (hero.hasBuff(Blindness.class )) {
+				GLog.w(Game.getVar(R.string.Codex_Blinded));
+			} else {
+				GameScene.show(new WndMessage(signText));
+			}
 		}
 		return super.interact(hero);
 	}
@@ -60,9 +68,8 @@ public class Sign extends LevelObject {
 	@Override
 	public void burn() {
 		remove();
-		int oldTile = Dungeon.level.map[getPos()];
 		Dungeon.level.set(getPos(),Terrain.EMBERS);
-		GameScene.discoverTile(getPos(),oldTile);
+		GameScene.discoverTile(getPos());
 	}
 
 	@Override

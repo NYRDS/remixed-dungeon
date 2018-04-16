@@ -89,7 +89,11 @@ public class Bundle {
 	public int optInt( String key, int val ) {
 		return data.optInt( key, val );
 	}
-	
+
+	public float optFloat( String key, float val ) {
+		return (float)data.optDouble( key, val );
+	}
+
 	public float getFloat( String key ) {
 		return (float)data.optDouble( key );
 	}

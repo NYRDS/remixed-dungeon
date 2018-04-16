@@ -242,7 +242,7 @@ public class WndTradeItem extends Window {
 	private int price( Item item ) {
 		// This formula is not completely correct...
 		int price = item.price() * 5 * (Dungeon.depth / 5 + 1);
-		if (Dungeon.hero.buff( RingOfHaggler.Haggling.class ) != null && price >= 2) {
+		if (Dungeon.hero.hasBuff( RingOfHaggler.Haggling.class ) && price >= 2) {
 			price /= 2;
 		}
 		return price;

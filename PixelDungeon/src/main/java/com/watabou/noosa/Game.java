@@ -64,6 +64,7 @@ import com.watabou.utils.SystemTime;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -103,6 +104,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	private LinearLayout  layout;
 
 	public static volatile boolean paused = true;
+
+	public static volatile boolean softPaused = false;
+
 	protected static int difficulty;
 
 	// Accumulated touch events
@@ -114,6 +118,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	public Executor executor = Executors.newSingleThreadExecutor();
 
 	private Runnable doOnResume;
+
+	private ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
 	public Game(Class<? extends Scene> c) {
 		super();
@@ -174,7 +180,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void doRestart() {
-		Intent i = instance().getBaseContext().getPackageManager()
+		Intent i = getBaseContext().getPackageManager()
 				.getLaunchIntentForPackage(getBaseContext().getPackageName());
 		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 
@@ -247,7 +253,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		view = new GLSurfaceView(this);
 		view.setEGLContextClientVersion(2);
 
-
 		// Hope this allow game work on broader devices list
 		// view.setEGLConfigChooser( false );
 		view.setRenderer(this);
@@ -286,7 +291,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		paused = true;
 
 		if (scene != null) {
-			executeInGlThread(new Runnable() {
+			pushUiTask(new Runnable() {
 				@Override
 				public void run() {
 					scene.pause();
@@ -362,8 +367,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		}
 
 		if(paused) {
-			GLES20.glScissor(0, 0, width(), height());
-			GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 			return;
 		}
 
@@ -372,10 +375,19 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		step = (now == 0 ? 0 : rightNow - now);
 		now = rightNow;
 
-		step();
+		Runnable task;
+		while ((task = uiTasks.poll())!=null) {
+			task.run();
+		}
+
+		if(!softPaused) {
+			step();
+		}
 
 		NoosaScript.get().resetCamera();
+
 		GLES20.glScissor(0, 0, width(), height());
+		GLES20.glClearColor(0,0,0,0.0f);
 		GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 		
 		draw();
@@ -400,10 +412,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 		GLES20.glEnable(GL10.GL_SCISSOR_TEST);
 
-		paused = false;
+
 
 		SystemText.invalidate();
 		TextureCache.reload();
+
+		paused = false;
 
 		if(scene!=null) {
 			scene.resume();
@@ -443,7 +457,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	private void draw() {
-		scene.draw();
+		if(scene!=null) {
+			scene.draw();
+		}
 	}
 
 	private void switchScene(Scene requestedScene) {
@@ -584,9 +600,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 	static Window currentWindow;
 
+
+	static public void pushUiTask(Runnable task) {
+		instance().uiTasks.add(task);
+	}
+
 	public static void showWindow(final String msg) {
 		hideWindow();
-		Game.executeInGlThread(new Runnable() {
+		pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				currentWindow = new WndMessage(msg);
@@ -596,7 +617,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public static void hideWindow() {
-		Game.executeInGlThread(new Runnable() {
+		pushUiTask(new Runnable() {
 			@Override
 			public void run() {
 				if(currentWindow!=null) {

@@ -68,8 +68,10 @@ public class XTilemapConfiguration {
 		TileDesc waterTileDesc = createTileDescFromKey(terrainDesc, "WATER_TILES");
 		for(int waterBorder = Terrain.WATER_TILES;waterBorder<=Terrain.WATER;++waterBorder) {
 			TileDesc borderPieceDesc = new TileDesc();
+
 			borderPieceDesc.baseTiles = (ArrayList<Integer>) waterTileDesc.baseTiles.clone();
 			borderPieceDesc.decoTiles = (ArrayList<Integer>) waterTileDesc.decoTiles.clone();
+
 			for(int i = 0;i< waterTileDesc.baseTiles.size();++i) {
 				borderPieceDesc.baseTiles.set(i, borderPieceDesc.baseTiles.get(i) + waterBorder - Terrain.WATER_TILES);
 			}
@@ -113,20 +115,12 @@ public class XTilemapConfiguration {
 	}
 
 	public int baseTile(Level level, int cell) {
-		if(level.customTiles()) {
-			return level.baseTileVariant[cell];
-		} else {
-			TileDesc desc = tilemapConfiguration.get(level.map[cell]);
-			return desc.baseTiles.get(cell % desc.baseTiles.size());
-		}
+		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
+		return desc.baseTiles.get(cell % desc.baseTiles.size());
 	}
 
 	public int decoTile(Level level, int cell) {
-		if(level.customTiles()) {
-			return level.decoTileVariant[cell];
-		} else {
-			TileDesc desc = tilemapConfiguration.get(level.map[cell]);
-			return desc.decoTiles.get(cell % desc.decoTiles.size());
-		}
+		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
+		return desc.decoTiles.get(cell % desc.decoTiles.size());
 	}
 }
