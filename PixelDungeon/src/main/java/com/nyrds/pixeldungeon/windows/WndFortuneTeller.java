@@ -54,7 +54,6 @@ public class WndFortuneTeller extends Window {
 
 		Text message = PixelScene.createMultiline( Utils.format(TXT_INSTRUCTION, GOLD_COST), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 

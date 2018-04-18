@@ -45,12 +45,10 @@ public class WndSelectLanguage extends Window {
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = GAP;
 		tfTitle.maxWidth(maxW);
-		tfTitle.measure();
 		add(tfTitle);
 
 		Text pleaseHelpTranslate = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_ImproveTranslation), GuiProperties.titleFontSize());
 		pleaseHelpTranslate.maxWidth(maxW);
-		pleaseHelpTranslate.measure();
 		pleaseHelpTranslate.x = GAP;
 		pleaseHelpTranslate.y = tfTitle.y + tfTitle.height() + GAP;
 		add(pleaseHelpTranslate);
@@ -58,7 +56,6 @@ public class WndSelectLanguage extends Window {
 		Text translateLink = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
 		translateLink.hardlight(TITLE_COLOR);
 		translateLink.maxWidth(maxW);
-		translateLink.measure();
 		translateLink.x = GAP;
 		translateLink.y = pleaseHelpTranslate.y + pleaseHelpTranslate.height() + GAP;
 		add(translateLink);

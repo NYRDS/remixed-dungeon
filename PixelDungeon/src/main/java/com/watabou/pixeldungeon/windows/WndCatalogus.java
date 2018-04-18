@@ -60,7 +60,6 @@ public class WndCatalogus extends WndTabbed {
 
 		txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
-		txtTitle.measure();
 		add(txtTitle);
 
 		list = new ScrollableList(new Component());
@@ -96,7 +95,6 @@ public class WndCatalogus extends WndTabbed {
 	private void updateList() {
 
 		txtTitle.text(Utils.format(TXT_TITLE, showPotions ? TXT_POTIONS : TXT_SCROLLS));
-		txtTitle.measure();
 		txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
 
 		items.clear();

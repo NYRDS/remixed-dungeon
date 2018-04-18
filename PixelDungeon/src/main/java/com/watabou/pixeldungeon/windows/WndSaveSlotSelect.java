@@ -46,7 +46,6 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = GAP;
 		tfTitle.maxWidth(maxW);
-		tfTitle.measure();
 		add(tfTitle);
 
 		if(!_saving && Game.instance().playGames.isConnected()) {
@@ -81,7 +80,6 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 		Text tfMesage = PixelScene.createMultiline(windowText(), GuiProperties.regularFontSize());
 		tfMesage.maxWidth(maxW);
-		tfMesage.measure();
 		tfMesage.x = GAP;
 		tfMesage.y = tfTitle.y + tfTitle.height() + GAP;
 		add(tfMesage);

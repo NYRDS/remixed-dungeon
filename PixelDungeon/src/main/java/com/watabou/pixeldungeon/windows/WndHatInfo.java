@@ -32,7 +32,6 @@ public class WndHatInfo extends Window {
 		Text tfTitle = PixelScene.createMultiline(item.name(), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.measure();
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
 		tfTitle.y = GAP;
 		add(tfTitle);
@@ -43,7 +42,6 @@ public class WndHatInfo extends Window {
 
 		priceTag.hardlight(0xFFFF00);
 		priceTag.maxWidth(WIDTH - GAP);
-		priceTag.measure();
 		priceTag.x = (WIDTH - priceTag.width()) / 2;
 		priceTag.y = tfTitle.bottom() + GAP;
 		add(priceTag);
@@ -63,7 +61,6 @@ public class WndHatInfo extends Window {
 
 		info.y = preview.bottom() + GAP;
 		info.maxWidth(WIDTH - GAP);
-		info.measure();
 		info.x = (WIDTH - info.width()) / 2 ;
 
 		add(info);

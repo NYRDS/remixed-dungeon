@@ -105,7 +105,6 @@ public class AboutScene extends PixelScene {
 	{
 		Text multiline = createMultiline( text, GuiProperties.regularFontSize() );
 		multiline.maxWidth(Camera.main.width * 5 / 6);
-		multiline.measure();
 		add( multiline );
 		if(upper!=null){
 			placeBellow(multiline, upper);

@@ -25,7 +25,6 @@ public class WndLibraryEntry extends Window {
 		Text tfTitle = PixelScene.createMultiline(entry, GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.measure();
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
 		tfTitle.y = GAP;
 		add(tfTitle);
@@ -33,7 +32,6 @@ public class WndLibraryEntry extends Window {
 		//Entry text
 		Text message = PixelScene.createMultiline( entry, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = tfTitle.bottom()+ GAP;
 		add( message );
 

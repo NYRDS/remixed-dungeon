@@ -54,7 +54,6 @@ public class WndJournal extends WndTabbed {
 
         Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
         txtTitle.hardlight(Window.TITLE_COLOR);
-        txtTitle.measure();
         txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
         add(txtTitle);
 
@@ -87,10 +86,8 @@ public class WndJournal extends WndTabbed {
             super();
 
             feature.text(text);
-            feature.measure();
 
             depth.text(Integer.toString(d));
-            depth.measure();
 
             if (d == Dungeon.depth) {
                 feature.hardlight(TITLE_COLOR);

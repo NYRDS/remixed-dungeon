@@ -26,7 +26,6 @@ class WndPlayGames extends Window {
         Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndPlayGames_Title), GuiProperties.mediumTitleFontSize());
         listTitle.hardlight(TITLE_COLOR);
         listTitle.maxWidth(width - GAP * 2);
-        listTitle.measure();
         listTitle.x = (width - listTitle.width()) / 2;
         listTitle.y = y;
 

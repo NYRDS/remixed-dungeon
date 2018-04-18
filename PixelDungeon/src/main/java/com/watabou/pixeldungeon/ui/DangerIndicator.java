@@ -80,7 +80,6 @@ public class DangerIndicator extends Tag {
 				lastNumber = v;
 				if (setVisible(lastNumber > 0)) {
 					number.text( Integer.toString( lastNumber ) );
-					number.measure();
 					placeNumber();
 					
 					flash();

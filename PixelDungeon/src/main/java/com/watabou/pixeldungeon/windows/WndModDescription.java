@@ -121,7 +121,6 @@ public class WndModDescription extends Window {
 	}
 
 	private void place(Text text) {
-		text.measure();
 		text.setPos(0, yPos);
 		yPos += text.height();
 		add(text);

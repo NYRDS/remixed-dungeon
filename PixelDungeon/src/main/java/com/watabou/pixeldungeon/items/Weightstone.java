@@ -138,7 +138,6 @@ public class Weightstone extends Item {
 			
 			Text tfMesage = PixelScene.createMultiline( Utils.format( TXT_CHOICE, weapon.name() ), GuiProperties.regularFontSize());
 			tfMesage.maxWidth(WIDTH - GAP * 2);
-			tfMesage.measure();
 			tfMesage.x = GAP;
 			tfMesage.y = titlebar.bottom() + GAP;
 			add( tfMesage );

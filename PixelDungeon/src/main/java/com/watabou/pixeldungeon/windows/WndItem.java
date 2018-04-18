@@ -58,7 +58,6 @@ public class WndItem extends Window {
 
 		Text info = PixelScene.createMultiline( item.info(), GuiProperties.regularFontSize());
 		info.maxWidth(WIDTH);
-		info.measure();
 		info.x = titlebar.left();
 		info.y = titlebar.bottom() + GAP;
 		add(info);

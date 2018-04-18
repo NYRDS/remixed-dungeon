@@ -40,7 +40,6 @@ public class WndLibrary extends Window {
 		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.measure();
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
 		tfTitle.y = GAP;
 		add(tfTitle);
@@ -48,7 +47,6 @@ public class WndLibrary extends Window {
 		//Instruction text
 		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndLibrary_Catalogue_Instruction), GuiProperties.mediumTitleFontSize() );
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = tfTitle.bottom()+ GAP;
 		add( message );
 

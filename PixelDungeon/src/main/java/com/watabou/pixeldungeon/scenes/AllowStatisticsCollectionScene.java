@@ -31,7 +31,6 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 		int pw = w - 10;
 
 		title.maxWidth(pw);
-		title.measure();
 
 		title.x = align((w - title.width()) / 2);
 		title.y = align(8);
@@ -59,7 +58,6 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 		float yPos = 0;
 		Text text = createMultiline(Game.getVar(R.string.AllowStatisticsCollectionScene_Request), GuiProperties.regularFontSize());
 		text.maxWidth((int) panel.innerWidth());
-		text.measure();
 
 		content.add(text);
 		yPos += text.height() + GAP;

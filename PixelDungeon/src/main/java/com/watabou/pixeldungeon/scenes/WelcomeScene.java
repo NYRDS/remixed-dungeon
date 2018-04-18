@@ -81,7 +81,6 @@ public class WelcomeScene extends PixelScene {
 		int pw = w - 10;
 
 		title.maxWidth(pw);
-		title.measure();
 
 		title.x = align((w - title.width()) / 2);
 		title.y = align(8);
@@ -110,7 +109,6 @@ public class WelcomeScene extends PixelScene {
 		for (int i = 0; i < displayUpdates; i++) {
 			updTexts[i].maxWidth((int) panel.innerWidth());
 			updTexts[i].text(upds[upds.length - i - 1]);
-			updTexts[i].measure();
 
 			updTexts[i].setPos(0, yPos);
 			yPos += updTexts[i].height() + GAP;

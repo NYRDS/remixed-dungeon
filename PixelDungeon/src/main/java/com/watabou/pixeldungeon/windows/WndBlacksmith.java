@@ -64,7 +64,6 @@ public class WndBlacksmith extends Window {
 		
 		Text message = PixelScene.createMultiline( TXT_PROMPT, GuiProperties.regularFontSize());
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		

@@ -105,7 +105,6 @@ public class WndClass extends WndTabbed {
 				dot.x = MARGIN;
 				dot.y = pos;
 				if (dotWidth == 0) {
-					dot.measure();
 					dotWidth = dot.width();
 				}
 				add(dot);
@@ -114,7 +113,6 @@ public class WndClass extends WndTabbed {
 				item.x = dot.x + dotWidth;
 				item.y = pos;
 				item.maxWidth((int) (WIDTH - MARGIN * 2 - dotWidth));
-				item.measure();
 				add(item);
 
 				pos += item.height();
@@ -171,7 +169,6 @@ public class WndClass extends WndTabbed {
 				normal.mask = hl.inverted();
 			}
 			normal.maxWidth(WIDTH - MARGIN * 2);
-			normal.measure();
 			normal.x = MARGIN;
 			normal.y = MARGIN;
 			add(normal);
@@ -181,7 +178,6 @@ public class WndClass extends WndTabbed {
 				highlighted.mask = hl.mask;
 
 				highlighted.maxWidth(normal.getMaxWidth());
-				highlighted.measure();
 				highlighted.x = normal.x;
 				highlighted.y = normal.y;
 				add(highlighted);

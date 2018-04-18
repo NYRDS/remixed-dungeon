@@ -39,8 +39,7 @@ public class WndBadge extends Window {
 		
 		Text info = PixelScene.createMultiline( badge.description, GuiProperties.regularFontSize());
 		info.maxWidth(WIDTH - MARGIN * 2);
-		info.measure();
-		
+
 		float w = Math.max( icon.width(), info.width() ) + MARGIN * 2;
 		
 		icon.x = (w - icon.width()) / 2;

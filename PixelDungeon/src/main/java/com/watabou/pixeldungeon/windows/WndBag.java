@@ -122,7 +122,6 @@ public class WndBag extends WndTabbed {
 		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
 		txtTitle.maxWidth(panelWidth);
 		txtTitle.hardlight( TITLE_COLOR );
-		txtTitle.measure();
 		txtTitle.x = (int)(panelWidth - txtTitle.width()) / 2;
 		if(txtTitle.x<0) {
 			txtTitle.x = 0;

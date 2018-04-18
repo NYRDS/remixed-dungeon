@@ -23,8 +23,6 @@ import java.util.Set;
 
 public class SystemText extends Text {
 
-	private String text;
-
 	static private Map<Float, TextPaint> textPaints = new HashMap<>();
 	private TextPaint textPaint;
 
@@ -138,7 +136,7 @@ public class SystemText extends Text {
 	public void destroy() {
 		destroyLines();
 
-		text = null;
+		text = "";
 		super.destroy();
 		texts.remove(this);
 	}
@@ -147,7 +145,7 @@ public class SystemText extends Text {
 	public void kill() {
 		destroyLines();
 
-		text = null;
+		text = "";
 		super.kill();
 		texts.remove(this);
 	}
@@ -216,10 +214,6 @@ public class SystemText extends Text {
 
 	@SuppressLint("NewApi")
 	private void createText() {
-		if (text == null) {
-			return;
-		}
-
 		if (needWidth && maxWidth == Integer.MAX_VALUE) {
 			return;
 		}
@@ -375,10 +369,6 @@ public class SystemText extends Text {
 		}
 
 		if (dirty) {
-			dirty = false;
-			if (text == null) {
-				text = "";
-			}
 
 			fontHeight = (contourPaint.descent() - contourPaint.ascent())
 					/ oversample;
@@ -386,15 +376,6 @@ public class SystemText extends Text {
 		}
 	}
 
-	public String text() {
-		return text;
-	}
-
-	public void text(String str) {
-		dirty = true;
-		text = str;
-		measure();
-	}
 
 	@Override
 	public float baseLine() {

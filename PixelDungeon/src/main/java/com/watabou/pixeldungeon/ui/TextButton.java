@@ -16,7 +16,6 @@ public class TextButton extends Button {
 		super();
 		
 		text.text( label );
-		text.measure();
 	}
 	
 	@Override
@@ -55,7 +54,6 @@ public class TextButton extends Button {
 	
 	public void text( String value ) {
 		text.text( value );
-		text.measure();
 		layout();
 	}
 	

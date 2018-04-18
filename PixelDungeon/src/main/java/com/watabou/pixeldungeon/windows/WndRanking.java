@@ -227,7 +227,6 @@ public class WndRanking extends WndTabbed {
 			parent.add( txt );
 			
 			txt = PixelScene.createText( value, GuiProperties.regularFontSize() );
-			txt.measure();
 			txt.x = PixelScene.align( WIDTH * 0.65f );
 			txt.y = pos;
 			parent.add( txt );
@@ -348,12 +347,10 @@ public class WndRanking extends WndTabbed {
 			
 			String str = Utils.capitalize( item.name() );
 			name.text( str );
-			name.measure();
 			if (name.width() > width - name.x) {
 				do {
 					str = str.substring( 0, str.length() - 1 );
 					name.text( str + "..." );
-					name.measure();
 				} while (name.width() > width - name.x);
 			}
 			

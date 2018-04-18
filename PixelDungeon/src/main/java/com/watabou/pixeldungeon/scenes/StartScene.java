@@ -237,7 +237,6 @@ public class StartScene extends PixelScene {
     private void updateUnlockLabel(String text) {
         unlock.maxWidth((int) width);
         unlock.text(text);
-        unlock.measure();
 
         float pos = (bottom - BUTTON_HEIGHT)
                 + (BUTTON_HEIGHT - unlock.height()) / 2;
@@ -402,7 +401,6 @@ public class StartScene extends PixelScene {
 
         public void secondary(String text) {
             secondary.text(text);
-            secondary.measure();
         }
     }
 
@@ -448,7 +446,6 @@ public class StartScene extends PixelScene {
             }
 
             name.text(cl.title().toUpperCase(Locale.getDefault()));
-            name.measure();
             name.hardlight(normal);
 
             brightness = MIN_BRIGHTNESS;

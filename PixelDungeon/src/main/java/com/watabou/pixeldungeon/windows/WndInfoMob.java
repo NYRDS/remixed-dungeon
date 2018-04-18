@@ -66,7 +66,6 @@ public class WndInfoMob extends WndTitledMessage {
 			
 			name = PixelScene.createText( Utils.capitalize( mob.getName() ), GuiProperties.titleFontSize());
 			name.hardlight( TITLE_COLOR );
-			name.measure();	
 			add( name );
 			
 			image = mob.sprite();

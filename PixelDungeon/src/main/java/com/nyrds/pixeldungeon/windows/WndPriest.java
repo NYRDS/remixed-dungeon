@@ -63,7 +63,6 @@ public class WndPriest extends Window {
 
 		Text message = PixelScene.createMultiline( Utils.format(instruction, GOLD_COST), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = y;
 		add( message );
 

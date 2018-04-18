@@ -60,7 +60,6 @@ public class SystemFloatingText extends SystemText {
 		text(text);
 		hardlight(color);
 
-		measure();
 		this.x = PixelScene.align(x - width() / 2);
 		this.y = y - height();
 

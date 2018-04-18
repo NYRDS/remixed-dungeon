@@ -68,8 +68,7 @@ public class GoldIndicator extends Component {
 			lastValue = Dungeon.gold();
 			
 			tf.text( Integer.toString( lastValue ) );
-			tf.measure();
-			
+
 			setVisible(true);
 			time = TIME;
 			
