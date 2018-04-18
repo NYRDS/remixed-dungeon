@@ -11,7 +11,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.utils.GLog;
 
 /**
  * Created by mike on 18.02.2017.
@@ -55,11 +54,11 @@ public class AppodealRewardVideo {
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 					@Override
 					public void onRewardedVideoLoaded() {
-						EventCollector.stopTiming("google reward video","google reward video","ok","");
+						EventCollector.stopTiming("appodeal reward video","appodeal reward video","ok","");
 					}
 					@Override
 					public void onRewardedVideoFailedToLoad() {
-						EventCollector.stopTiming("google reward video","google reward video","fail","");
+						EventCollector.stopTiming("appodeal reward video","appodeal reward video","fail","");
 					}
 					@Override
 					public void onRewardedVideoShown() {
