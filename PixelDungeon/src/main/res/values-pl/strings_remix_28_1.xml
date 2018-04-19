@@ -7,7 +7,6 @@
     <string name="BlackCat_Desc">to jest czarny kot</string>
     
     <string-array name="BlackCat_Phrases">
-        <item>Miał</item>
         <item>Miałł.....</item>
         <item>Miał!</item>
     </string-array>
