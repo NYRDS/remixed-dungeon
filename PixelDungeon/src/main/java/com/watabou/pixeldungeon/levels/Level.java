@@ -1358,8 +1358,6 @@ public abstract class Level implements Bundlable {
 				return Game.getVar(R.string.Level_TileFloor);
 			case Terrain.GRASS:
 				return Game.getVar(R.string.Level_TileGrass);
-			case Terrain.WATER:
-				return Game.getVar(R.string.Level_TileWater);
 			case Terrain.WALL:
 			case Terrain.WALL_DECO:
 			case Terrain.SECRET_DOOR:
