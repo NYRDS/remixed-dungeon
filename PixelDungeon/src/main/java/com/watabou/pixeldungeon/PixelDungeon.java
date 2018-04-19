@@ -46,6 +46,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -127,8 +129,32 @@ public class PixelDungeon extends Game {
 		Sample.INSTANCE.enable(soundFx());
 
 		if (PixelDungeon.version() != Game.versionCode) {
-			switchScene(WelcomeScene.class);
+			if(differentVersions(PixelDungeon.versionString(),Game.version)) {
+				switchScene(WelcomeScene.class);
+			}
 		}
+	}
+
+	private static boolean differentVersions(String v1, String v2) {
+		try {
+			Pattern p = Pattern.compile("\\d+(\\.\\d+)?");
+			Matcher m = p.matcher(v1);
+			if (m.find()) {
+				v1 = m.group();
+			}
+
+
+			m = p.matcher(v2);
+			if (m.find()) {
+				v2 = m.group();
+			}
+
+			return !v1.equals(v2);
+
+		} catch (Exception e) {
+			EventCollector.logException(e);
+		}
+		return false;
 	}
 
 	@Override
@@ -159,12 +185,12 @@ public class PixelDungeon extends Game {
 		if (bundle == null) {
 			return null;
 		}
-		String string = "Bundle{";
+		StringBuilder string = new StringBuilder("Bundle{");
 		for (String key : bundle.keySet()) {
-			string += " " + key + " => " + bundle.get(key) + ";";
+			string.append(" ").append(key).append(" => ").append(bundle.get(key)).append(";");
 		}
-		string += " }Bundle";
-		return string;
+		string.append(" }Bundle");
+		return string.toString();
 	}
 
 
@@ -177,7 +203,7 @@ public class PixelDungeon extends Game {
 			extras = bundle2string(data.getExtras());
 		}
 
-		GLog.i("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
+		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
 
 		if(Iap.onActivityResult(requestCode, resultCode, data)) {
 			return;
