@@ -110,7 +110,7 @@ public abstract class Text extends Visual {
 	}
 
 
-	public void text(String str) {
+	public void text(@NonNull String str) {
 		dirty = true;
 
 		if(str == null) {
