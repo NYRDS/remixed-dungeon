@@ -140,7 +140,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createText(float size) {
-		return createText(null, size);
+		return createText("", size);
 	}
 
 	public static Text createText(String text, float size) {
