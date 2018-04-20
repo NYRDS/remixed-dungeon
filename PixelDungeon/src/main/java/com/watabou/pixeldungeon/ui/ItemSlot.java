@@ -195,7 +195,7 @@ public class ItemSlot extends Button {
             bottomRight.text(Utils.format(TXT_LEVEL, level));
             bottomRight.hardlight(level > 0 ? UPGRADED : DEGRADED);
         } else {
-            bottomRight.text(null);
+            bottomRight.text("");
         }
 
         if (item instanceof Artifact) {
