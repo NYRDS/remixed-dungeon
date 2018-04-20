@@ -61,7 +61,6 @@ public class WndSettingsInGame extends WndSettingsCommon {
 
 		add(secondQuickslot);
 
-		if (PixelDungeon.landscape()) {
 			CheckBox thirdQuickslot = new CheckBox(Game
 					.getVar(R.string.WndSettings_ThirdQuickslot)) {
 				@Override
@@ -79,13 +78,6 @@ public class WndSettingsInGame extends WndSettingsCommon {
 			add(thirdQuickslot);
 
 			resize(WIDTH, (int) thirdQuickslot.bottom());
-		} else {
-			if (PixelDungeon.thirdQuickslot()) {
-				PixelDungeon.secondQuickslot(true);
-				secondQuickslot.checked(PixelDungeon.secondQuickslot());
-			}
-			resize(WIDTH, (int) secondQuickslot.bottom());
-		}
 	}
 
 	private float createZoomButtons(float y) {

@@ -18,11 +18,11 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.Flavours;
-import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.CompositeTextureImage;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
@@ -31,16 +31,22 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.WndCatalogus;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHats;
 import com.watabou.pixeldungeon.windows.WndHero;
+import com.watabou.pixeldungeon.windows.elements.Tool;
 
 public class StatusPane extends Component {
 	
@@ -66,10 +72,14 @@ public class StatusPane extends Component {
 	
 	private MenuButton btnMenu;
 	private MenuButton btnHats;
-	private MenuButton btnSpells;
+	//private MenuButton btnSpells;
+
 
 	private Level currentLevel;
 	private Hero  hero;
+
+	private Tool         btnInventory;
+	private PickedUpItem pickedUp;
 
 	public StatusPane(Hero hero, Level level) {
 		super(true);
@@ -153,16 +163,51 @@ public class StatusPane extends Component {
 
 		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
 
-		btnSpells = new MenuButton(new Image(Assets.getStatus(), 2, 33, 12, 11), WndHeroSpells.class);
+
+		btnInventory = new Tool(82, 7, 23, 24) {
+			private GoldIndicator gold;
+
+			@Override
+			protected void onClick() {
+				GameScene.show(new WndBag(Dungeon.hero.belongings.backpack,
+						null, WndBag.Mode.ALL, null));
+			}
+
+			protected boolean onLongClick() {
+				GameScene.show(new WndCatalogus());
+				return true;
+			}
+
+			@Override
+			protected void createChildren() {
+				super.createChildren();
+				gold = new GoldIndicator();
+				add(gold);
+			}
+
+			@Override
+			protected void layout() {
+				super.layout();
+				gold.fill(this);
+			}
+		};
+
+		add(pickedUp = new PickedUpItem());
+
+		add(btnInventory);
+
+		//btnSpells = new MenuButton(new Image(Assets.getStatus(), 2, 33, 12, 11), WndHeroSpells.class);
 
 		if(!Flavours.haveHats()) {
 			btnHats.enable(false);
 		}
+		/*
 		if (!hero.spellUser) {
 			btnSpells.enable(false);
 		}
+*/
+//		add(btnSpells);
 
-		add(btnSpells);
 		add(btnHats);
 	}
 	
@@ -202,9 +247,16 @@ public class StatusPane extends Component {
 		
 		btnMenu.setPos( width - btnMenu.width(), 1 );
 		btnHats.setPos( width - btnHats.width(), btnMenu.bottom() );
-		btnSpells.setPos( 0, 31 );
+
+		btnInventory.setPos(0,31);
+		btnInventory.setSize(32,32);
+//		btnSpells.setPos( 0, 31 );
 	}
-	
+
+	public void pickup(Item item) {
+		pickedUp.reset(item, btnInventory.centerX(), btnInventory.centerY());
+	}
+
 	@Override
 	public void update() {
 		super.update();
@@ -248,6 +300,56 @@ public class StatusPane extends Component {
 			keys.text( Integer.toString( lastKeys ) );
 			keys.x = width - 8 - keys.width()    - 18;
 		}
+
+		btnInventory.enable(hero.isReady() || !hero.isAlive());
 	}
 
+	static class PickedUpItem extends ItemSprite {
+
+		private static final float DISTANCE = DungeonTilemap.SIZE;
+		private static final float DURATION = 0.2f;
+
+		private float dstX;
+		private float dstY;
+		private float left;
+
+		PickedUpItem() {
+			super();
+
+			originToCenter();
+
+			active = setVisible(false);
+		}
+
+		public void reset(Item item, float dstX, float dstY) {
+			view(item);
+
+			active = setVisible(true);
+
+			this.dstX = dstX - ItemSprite.SIZE / 2;
+			this.dstY = dstY - ItemSprite.SIZE / 2;
+			left = DURATION;
+
+			x = this.dstX - DISTANCE;
+			y = this.dstY - DISTANCE;
+			alpha(1);
+		}
+
+		@Override
+		public void update() {
+			super.update();
+
+			if ((left -= Game.elapsed) <= 0) {
+
+				setVisible(active = false);
+
+			} else {
+				float p = left / DURATION;
+				scale.set((float) Math.sqrt(p));
+				float offset = DISTANCE * p;
+				x = dstX - offset;
+				y = dstY - offset;
+			}
+		}
+	}
 }

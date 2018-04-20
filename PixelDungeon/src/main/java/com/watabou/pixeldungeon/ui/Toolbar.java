@@ -17,28 +17,23 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.windows.WndCatalogus;
 import com.watabou.pixeldungeon.windows.WndHero;
 import com.watabou.pixeldungeon.windows.WndInfoCell;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
 import com.watabou.pixeldungeon.windows.WndInfoPlant;
-import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.pixeldungeon.windows.elements.Tool;
@@ -48,27 +43,22 @@ public class Toolbar extends Component {
 	private Tool btnWait;
 	private Tool btnSearch;
 	private Tool btnInfo;
-	private Tool btnInventory;
-	
+
 	private QuickslotTool  btnQuick1;
 	private QuickslotTool  btnQuick2;
 	private QuickslotTool  btnQuick3;
-
-	private PickedUpItem pickedUp;
 
 	private boolean lastEnabled = true;
 
 	public Toolbar() {
 		super();
 
-		height = btnInventory.height();
+		height = btnInfo.height();
 	}
 
 	@Override
 	protected void createChildren() {
 
-		//if(!Dungeon.level.isSafe())
-		{
 			add(btnWait = new Tool(0, 7, 20, 24) {
 				@Override
 				protected void onClick() {
@@ -94,54 +84,21 @@ public class Toolbar extends Component {
 					GameScene.selectCell(informer);
 				}
 			});
-		}
 
-		add(btnInventory = new Tool(82, 7, 23, 24) {
-			private GoldIndicator gold;
 
-			@Override
-			protected void onClick() {
-				GameScene.show(new WndBag(Dungeon.hero.belongings.backpack,
-						null, WndBag.Mode.ALL, null));
-			}
-
-			protected boolean onLongClick() {
-				GameScene.show(new WndCatalogus());
-				return true;
-			}
-
-			@Override
-			protected void createChildren() {
-				super.createChildren();
-				gold = new GoldIndicator();
-				add(gold);
-			}
-
-			@Override
-			protected void layout() {
-				super.layout();
-				gold.fill(this);
-			}
-		});
 
 		btnQuick1 = new QuickslotTool(105, 7, 22, 24);
 		btnQuick2 = new QuickslotTool(105, 7, 22, 24);
 		btnQuick3 = new QuickslotTool(105, 7, 22, 24);
 
-		add(pickedUp = new PickedUpItem());
-		
 		update();
 	}
 
 	@Override
 	protected void layout() {
-		//if(!Dungeon.level.isSafe())
-		{
 			btnWait.setPos(x, y);
 			btnSearch.setPos(btnWait.right(), y);
 			btnInfo.setPos(btnSearch.right(), y);
-			//btnResume.setPos(x, y - 24);
-		}
 
 		remove(btnQuick1);
 		remove(btnQuick2);
@@ -151,12 +108,7 @@ public class Toolbar extends Component {
 		btnQuick1.setPos(width - btnQuick1.width(), y);
 		btnQuick1.show(true);
 		add(btnQuick1);
-		
-		if (! PixelDungeon.landscape() && PixelDungeon.thirdQuickslot()) {
-			PixelDungeon.thirdQuickslot(false);
-			PixelDungeon.secondQuickslot(true);
-		}
-		
+
 		if (PixelDungeon.thirdQuickslot()) {			
 			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
 			btnQuick3.setPos(btnQuick2.left() - btnQuick3.width(), y);
@@ -166,15 +118,10 @@ public class Toolbar extends Component {
 			btnQuick2.show(true);
 			btnQuick3.show(true);
 			
-			btnInventory.setPos(btnQuick3.left() - btnInventory.width(), y);
 		} else if (PixelDungeon.secondQuickslot()) {
 			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
 			add(btnQuick2);
 			btnQuick2.show(true);
-			
-			btnInventory.setPos(btnQuick2.left() - btnInventory.width(), y);
-		} else {			
-			btnInventory.setPos(btnQuick1.left() - btnInventory.width(), y);
 		}
 	}
 
@@ -195,14 +142,6 @@ public class Toolbar extends Component {
 				}
 			}
 		}
-
-		if (!Dungeon.hero.isAlive()) {
-			btnInventory.enable(true);
-		}
-	}
-
-	public void pickup(Item item) {
-		pickedUp.reset(item, btnInventory.centerX(), btnInventory.centerY());
 	}
 
 	private static CellSelector.Listener informer = new CellSelector.Listener() {
@@ -267,7 +206,7 @@ public class Toolbar extends Component {
 
 		private QuickSlot slot;
 
-		public QuickslotTool(int x, int y, int width, int height) {
+		QuickslotTool(int x, int y, int width, int height) {
 			super(x, y, width, height);
 		}
 
@@ -297,52 +236,4 @@ public class Toolbar extends Component {
 		}
 	}
 
-	private static class PickedUpItem extends ItemSprite {
-
-		private static final float DISTANCE = DungeonTilemap.SIZE;
-		private static final float DURATION = 0.2f;
-
-		private float dstX;
-		private float dstY;
-		private float left;
-
-		public PickedUpItem() {
-			super();
-
-			originToCenter();
-
-			active = setVisible(false);
-		}
-
-		public void reset(Item item, float dstX, float dstY) {
-			view(item);
-
-			active = setVisible(true);
-
-			this.dstX = dstX - ItemSprite.SIZE / 2;
-			this.dstY = dstY - ItemSprite.SIZE / 2;
-			left = DURATION;
-
-			x = this.dstX - DISTANCE;
-			y = this.dstY - DISTANCE;
-			alpha(1);
-		}
-
-		@Override
-		public void update() {
-			super.update();
-
-			if ((left -= Game.elapsed) <= 0) {
-
-				setVisible(active = false);
-
-			} else {
-				float p = left / DURATION;
-				scale.set((float) Math.sqrt(p));
-				float offset = DISTANCE * p;
-				x = dstX - offset;
-				y = dstY - offset;
-			}
-		}
-	}
 }

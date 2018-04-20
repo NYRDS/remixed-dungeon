@@ -126,7 +126,7 @@ public class GameScene extends PixelScene {
 
     //ui elements
     private Toolbar         toolbar;
-    private StatusPane      sb;
+    private StatusPane      statusPane;
     private Toast           prompt;
     private AttackIndicator attack;
     private ResumeIndicator resume;
@@ -137,13 +137,13 @@ public class GameScene extends PixelScene {
     private          float   waterSx      = 0, waterSy = -5;
 
     public void updateUiCamera() {
-        sb.setSize(uiCamera.width, 0);
+        statusPane.setSize(uiCamera.width, 0);
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
         attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
         resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
         log.setRect(0, toolbar.top(), attack.left(), 0);
         busy.x = 1;
-        busy.y = sb.bottom() + 18;
+        busy.y = statusPane.bottom() + 18;
     }
 
 
@@ -302,10 +302,10 @@ public class GameScene extends PixelScene {
 
         Dungeon.hero.updateLook();
 
-        sb = new StatusPane(Dungeon.hero, level);
-        sb.camera = uiCamera;
-        sb.setSize(uiCamera.width, 0);
-        add(sb);
+        statusPane = new StatusPane(Dungeon.hero, level);
+        statusPane.camera = uiCamera;
+        statusPane.setSize(uiCamera.width, 0);
+        add(statusPane);
 
         toolbar = new Toolbar();
         toolbar.camera = uiCamera;
@@ -357,7 +357,7 @@ public class GameScene extends PixelScene {
         busy = new BusyIndicator();
         busy.camera = uiCamera;
         busy.x = 1;
-        busy.y = sb.bottom() + 18;
+        busy.y = statusPane.bottom() + 18;
         add(busy);
 
         sceneCreated = true;
@@ -621,7 +621,7 @@ public class GameScene extends PixelScene {
     }
 
     public static void pickUp(Item item) {
-        scene.toolbar.pickup(item);
+        scene.statusPane.pickup(item);
     }
 
     public static void updateMap() {
