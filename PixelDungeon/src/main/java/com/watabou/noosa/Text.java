@@ -104,6 +104,7 @@ public abstract class Text extends Visual {
 	protected abstract void measure();
 	public abstract float baseLine();
 
+	@NonNull
 	public String text() {
 		return text;
 	}

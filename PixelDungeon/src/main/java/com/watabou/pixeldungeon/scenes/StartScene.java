@@ -314,7 +314,7 @@ public class StartScene extends PixelScene {
             btnLoad.setVisible(false);
 
             btnNewGame.setVisible(true);
-            btnNewGame.secondary(null);
+            btnNewGame.secondary("");
             btnNewGame.setRect(buttonX, buttonY, Camera.main.width
                     - buttonX * 2, BUTTON_HEIGHT);
         }
@@ -371,7 +371,7 @@ public class StartScene extends PixelScene {
         public GameButton(String primary) {
             super(primary);
 
-            this.secondary.text(null);
+            this.secondary.text("");
         }
 
         @Override
@@ -387,7 +387,7 @@ public class StartScene extends PixelScene {
         protected void layout() {
             super.layout();
 
-            if (secondary.text() != null && secondary.text().length() > 0) {
+            if (secondary.text().length() > 0) {
                 text.y = align(y
                         + (height - text.height() - secondary.height())
                         / 2);
