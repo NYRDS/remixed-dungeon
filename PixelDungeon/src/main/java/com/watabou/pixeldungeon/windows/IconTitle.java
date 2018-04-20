@@ -69,7 +69,6 @@ public class IconTitle extends Component {
 		
 		tfLabel.x = PixelScene.align( PixelScene.uiCamera, imIcon.x + imIcon.width() + GAP );
 		tfLabel.maxWidth((int)(width - tfLabel.x));
-		tfLabel.measure();
 		tfLabel.y =  PixelScene.align( PixelScene.uiCamera,
 			imIcon.height > tfLabel.height() ?
 				(imIcon.height() - tfLabel.baseLine()) / 2 :

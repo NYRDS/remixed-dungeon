@@ -96,7 +96,6 @@ public class WndHero extends WndTabbed {
 			Text title = PixelScene.createText( 
 				Utils.format( R.string.WndHero_StaTitle, hero.lvl(), hero.className() ).toUpperCase(), GuiProperties.titleFontSize());
 			title.hardlight( TITLE_COLOR );
-			title.measure();
 			add( title );
 			
 			RedButton btnCatalogus = new RedButton( R.string.WndHero_StaCatalogus ) {
@@ -146,7 +145,6 @@ public class WndHero extends WndTabbed {
 			add( txt );
 			
 			txt = PixelScene.createText( value, GuiProperties.regularFontSize() );
-			txt.measure();
 			txt.x = PixelScene.align( WIDTH * 0.65f );
 			txt.y = pos;
 			add( txt );

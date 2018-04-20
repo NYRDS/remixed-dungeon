@@ -26,7 +26,6 @@ public class GenericInfo {
 		
 		Text txtInfo = PixelScene.createMultiline( desc, GuiProperties.regularFontSize() );
 		txtInfo.maxWidth(WIDTH);
-		txtInfo.measure();
 		txtInfo.setPos(0, 0);
 		
 		int wndHeight = (int) Math.min((titlebar.bottom() + txtInfo.height() + 3 * GAP),MAX_HEIGHT);

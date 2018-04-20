@@ -43,7 +43,6 @@ public class WndInfoPlant extends Window {
 		
 		info.text( plant.desc() );
 		info.maxWidth(WIDTH);
-		info.measure();
 		info.x = titlebar.left();
 		info.y = titlebar.bottom() + GAP;
 		

@@ -33,7 +33,6 @@ public class WndMessage extends Window {
 
 		info = PixelScene.createMultiline(text, GuiProperties.regularFontSize());
 		info.maxWidth(WIDTH - MARGIN * 2);
-		info.measure();
 		info.x = info.y = MARGIN;
 		add(info);
 
@@ -44,7 +43,6 @@ public class WndMessage extends Window {
 
 	public void setText(String text) {
 		info.text(text);
-		info.measure();
 		resize(
 				(int) info.width() + MARGIN * 2,
 				(int) info.height() + MARGIN * 2);

@@ -4,7 +4,7 @@
   <string name="ShadowLord_Name">seigneur de l\'ombre</string>
   <string name="ShadowLord_Gender">masculin</string>
   <string name="ShadowLord_Name_Objective">Seigneur de l\'ombre</string>
-  <string name="ShadowLord_Desc">Créature faite exclusivement de mal et de ténèbres, beaucoup croient que c\'est l\'Ancien Dieu en personne, vu comme il est puissant. Alors que les autres pensent que ce n\'est qu\'un gardien des chambres de l\'Ancien Dieu.</string>
+  <string name="ShadowLord_Desc">Créature faite exclusivement de mal et de ténèbres, beaucoup croient qu\'il s\'agit de l\'Ancien Dieu en personne, vu comme il est puissant. D\'autres pensent que ce n\'est qu\'un gardien des chambres de l\'Ancien Dieu.</string>
   <string name="ShadowLord_Intro">En garde !</string>
   <string name="ShadowLord_Death">Nooooon...</string>
   <string name="AllowStatisticsCollectionScene_Title">Collection des statistiques d\'utilisation</string>

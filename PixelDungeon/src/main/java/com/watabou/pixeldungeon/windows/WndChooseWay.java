@@ -81,7 +81,6 @@ public class WndChooseWay extends Window {
 			normal.mask = hl.inverted();
 		}
 		normal.maxWidth(WIDTH);
-		normal.measure();
 		normal.x = titlebar.left();
 		normal.y = titlebar.bottom() + GAP;
 		add( normal );
@@ -92,7 +91,6 @@ public class WndChooseWay extends Window {
 			highlighted.mask = hl.mask;
 			
 			highlighted.maxWidth(normal.getMaxWidth());
-			highlighted.measure();
 			highlighted.x = normal.x;
 			highlighted.y = normal.y;
 			add( highlighted );

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="BlackCat_Name">Чорний кіт</string>
-    <string name="BlackCat_Gender">masculine</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name_Objective">кіт</string>
     <string name="BlackCat_Desc">Це чорний кіт</string>
     
@@ -70,4 +70,6 @@
     <string name="town_deco_snowy_plate_name">Засніжена плита</string>
     <string name="town_deco_snowy_plate_desc">Ця старовинна плита вкрита снігом</string>
 
-    </resources>
+    <string name="DogeMask_Name">Маска Doge</string>
+    <string name="DogeMask_Info">Ви коли-небудь хотіли замаскуватися під знаменитого Doge? Тепер це ваш шанс!\nТака маска! Багато маскування! Оце Так!</string>
+</resources>

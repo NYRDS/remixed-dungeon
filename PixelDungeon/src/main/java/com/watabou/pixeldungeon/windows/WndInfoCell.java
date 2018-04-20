@@ -99,7 +99,6 @@ public class WndInfoCell extends Window {
 
 		info.text( desc.length() > 0 ? desc.toString() : TXT_NOTHING );
 		info.maxWidth(WIDTH);
-		info.measure();
 		info.x = titlebar.left();
 		info.y = yPos + GAP;
 		

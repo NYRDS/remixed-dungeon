@@ -52,7 +52,7 @@ public class Accessory {
         registerAccessory(Rudolph.class);
         registerAccessory(GnollCostume.class);
         registerAccessory(ChaosHelmet.class);
-        //registerAccessory(DogeMask.class);
+        registerAccessory(DogeMask.class);
     }
 
     public static List<String> getAccessoriesList() {

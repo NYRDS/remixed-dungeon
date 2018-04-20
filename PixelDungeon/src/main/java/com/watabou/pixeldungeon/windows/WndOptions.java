@@ -34,12 +34,10 @@ public class WndOptions extends Window {
 		tfTitle.hardlight( TITLE_COLOR );
 		tfTitle.x = tfTitle.y = GAP;
 		tfTitle.maxWidth(WIDTH - GAP * 2);
-		tfTitle.measure();
 		add( tfTitle );
 		
 		Text tfMesage = PixelScene.createMultiline( message, GuiProperties.regularFontSize() );
 		tfMesage.maxWidth(WIDTH - GAP * 2);
-		tfMesage.measure();
 		tfMesage.x = GAP;
 		tfMesage.y = tfTitle.y + tfTitle.height() + GAP;
 		add( tfMesage );

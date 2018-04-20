@@ -28,7 +28,6 @@ public class WndPortalWarning extends Window {
 		Text tfTitle = PixelScene.createMultiline(TXT_TITLE, GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.measure();
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
 		tfTitle.y = GAP;
 		add(tfTitle);
@@ -36,7 +35,6 @@ public class WndPortalWarning extends Window {
 		//Instruction text
 		Text message = PixelScene.createMultiline(TXT_INFO, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = tfTitle.bottom()+ GAP;
 		add( message );
 

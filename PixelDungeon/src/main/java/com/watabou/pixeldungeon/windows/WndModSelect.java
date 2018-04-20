@@ -45,7 +45,6 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = GAP;
 		tfTitle.maxWidth(width - GAP * 2);
-		tfTitle.measure();
 		add(tfTitle);
 
 		float pos = tfTitle.y + tfTitle.height() + GAP;

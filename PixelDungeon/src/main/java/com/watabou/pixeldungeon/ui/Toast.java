@@ -78,7 +78,6 @@ public class Toast extends Component {
 	
 	public void text( String txt ) {
 		text.text( txt );
-		text.measure();
 	}
 	
 	protected void onClose() {}

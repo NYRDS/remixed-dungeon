@@ -12,7 +12,6 @@ public class LabeledTab extends Tab {
 	public LabeledTab(WndTabbed parent, String label) {
 		super(parent);
 		btLabel.text(label);
-		btLabel.measure();
 	}
 
 	@Override

@@ -27,7 +27,6 @@ import java.nio.FloatBuffer;
 
 public class BitmapText extends Text {
 
-	protected String text;
 	protected Font font;
 
 	protected float[] vertices = new float[16];
@@ -49,7 +48,7 @@ public class BitmapText extends Text {
 	
 	@Override
 	public void destroy() {
-		text = null;
+		text = "";
 		font = null;
 		vertices = null;
 		quads = null;
@@ -71,11 +70,9 @@ public class BitmapText extends Text {
 		NoosaScript script = NoosaScript.get();
 		
 		font.texture.bind();
-		
-		if (dirty) {
-			updateVertices();
-		}
-		
+
+		clean();
+
 		script.camera( camera() );
 		
 		script.uModel.valueM4( matrix );
@@ -150,58 +147,16 @@ public class BitmapText extends Text {
 		if (length > 0) {
 			width -= font.tracking;
 		}
-		
-		dirty = false;
-		
 	}
 
-	public void measure() {
-		
-		width = 0;
-		height = 0;
-		
-		int length = text.length();
-		for (int i=0; i < length; i++) {
-			RectF rect = font.get( text.charAt( i ) );
-	
-			//Corrigido
-			if (rect == null) {
-				rect = font.get(INVALID_CHAR);
-			}
-			float w = font.width( rect );
-			float h = font.height( rect ) + glyphShiftY(text.charAt( i ));
-			
-			width += w + font.tracking;
-			if (h > height) {
-				height = h;
-			}
-		}
-		
-		if (length > 0) {
-			width -= font.tracking;
-		}
+	protected void measure() {
+		updateVertices();
 	}
 	
 	public float baseLine() {
 		return font.baseLine * scale.y;
 	}
-	
-	@Override
-	public String text() {
-		return text;
-	}
-	
-	@Override
-	public void text( String str ) {
-		if(str == null){
-			text = "";
-		}
-		else{
-			text = str;
-		}
-		dirty = true;
-	}
-	
+
 	protected float glyphShiftY(char c) {
 		PointF shift = font.glyphShift.get(c);
 		

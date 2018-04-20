@@ -35,12 +35,10 @@ public class WndHeroSpells extends Window {
 
 		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
-		txtTitle.measure();
 		add(txtTitle);
 
 		Text txtLvl = PixelScene.createText(TXT_LVL + hero.magicLvl(), GuiProperties.titleFontSize());
 		txtLvl.hardlight(Window.TITLE_COLOR);
-		txtLvl.measure();
 		txtLvl.x = width - txtLvl.width();
 		add(txtLvl);
 
@@ -78,7 +76,6 @@ public class WndHeroSpells extends Window {
 		Text txtName;
 
 		txtName = PixelScene.createText(spell.name(), GuiProperties.titleFontSize());
-		txtName.measure();
 		txtName.x = xPos;
 		txtName.y = yPos;
 		add(txtName);
@@ -115,7 +112,6 @@ public class WndHeroSpells extends Window {
 		Text txtCost;
 
 		txtCost = PixelScene.createText( Game.getVar(R.string.Mana_Cost) + spell.spellCost(), GuiProperties.titleFontSize());
-		txtCost.measure();
 		txtCost.x = xPos;
 		txtCost.y = icon.bottom();
 		add(txtCost);

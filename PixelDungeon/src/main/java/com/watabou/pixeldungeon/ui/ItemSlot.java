@@ -185,8 +185,6 @@ public class ItemSlot extends Button {
                 topRight.hardlight(WARNING);
 
             }
-            topRight.measure();
-
         } else {
             topRight.text(null);
         }
@@ -195,7 +193,6 @@ public class ItemSlot extends Button {
 
         if (level != 0) {
             bottomRight.text(Utils.format(TXT_LEVEL, level));
-            bottomRight.measure();
             bottomRight.hardlight(level > 0 ? UPGRADED : DEGRADED);
         } else {
             bottomRight.text(null);
@@ -209,7 +206,6 @@ public class ItemSlot extends Button {
                 topLeft.text(artifact.getText());
                 topLeft.hardlight(artifact.getColor());
                 topLeft.setVisible(true);
-                topLeft.measure();
             }
         }
 

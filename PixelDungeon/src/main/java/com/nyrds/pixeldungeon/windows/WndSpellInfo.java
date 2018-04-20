@@ -1,15 +1,11 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.levels.objects.PortalGate;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
@@ -34,7 +30,6 @@ public class WndSpellInfo extends Window {
 		Text tfTitle = PixelScene.createMultiline(spell.name(), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.measure();
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
 		tfTitle.y = GAP;
 		add(tfTitle);
@@ -42,7 +37,6 @@ public class WndSpellInfo extends Window {
 		//Info text
 		Text info = PixelScene.createMultiline(spell.desc(), GuiProperties.regularFontSize() );
 		info.maxWidth(WIDTH);
-		info.measure();
 		info.y = tfTitle.bottom()+ GAP;
 		add( info );
 

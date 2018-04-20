@@ -125,7 +125,6 @@ public class TitleScene extends PixelScene {
 
 		pleaseSupport = PixelScene.createText(GuiProperties.titleFontSize());
 		pleaseSupport.text(btnDonate.getText());
-		pleaseSupport.measure();
 		pleaseSupport.setPos((w - pleaseSupport.width()) / 2,
 				h - pleaseSupport.height() * 2);
 
@@ -152,7 +151,6 @@ public class TitleScene extends PixelScene {
 		addToBack(archs);
 
 		Text version = Text.createBasicText("v " + Game.version, font1x);
-		version.measure();
 		version.hardlight(0x888888);
 		version.setPos(w - version.width(), h - version.height());
 		add(version);
@@ -164,7 +162,6 @@ public class TitleScene extends PixelScene {
 					.createMultiline(GuiProperties.regularFontSize());
 			lowInteralStorageWarning.text(Game
 					.getVar(R.string.TitleScene_InternalStorageLow));
-			lowInteralStorageWarning.measure();
 			lowInteralStorageWarning.setPos(0,
 					h - lowInteralStorageWarning.height());
 			lowInteralStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
@@ -247,7 +244,6 @@ public class TitleScene extends PixelScene {
 			image.frame(image.texture.uvRect(index * IMAGE_SIZE, 0, (index + 1)
 					* IMAGE_SIZE, IMAGE_SIZE));
 			this.label.text(text);
-			this.label.measure();
 
 			setSize(SIZE, SIZE);
 		}

@@ -15,7 +15,7 @@ public class AmokArrow extends Arrow {
 
 	public AmokArrow(int number ) {
 		super();
-
+		quantity(number);
 
 		image = AMOK_ARROW_IMAGE;
 		

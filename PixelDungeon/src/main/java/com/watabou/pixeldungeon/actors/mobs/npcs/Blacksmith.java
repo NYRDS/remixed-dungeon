@@ -204,7 +204,7 @@ public class Blacksmith extends NPC {
 		if (second.isEquipped( Dungeon.hero )) {
 			((EquipableItem)second).doUnequip( Dungeon.hero, false );
 		}
-		second.detachAll( Dungeon.hero.belongings.backpack );
+		second.detach( Dungeon.hero.belongings.backpack );
 		
 		Quest.reforged = true;
 		

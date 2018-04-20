@@ -54,7 +54,6 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		Text message = PixelScene.createMultiline( instruction, GuiProperties.regularFontSize() );
 
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		

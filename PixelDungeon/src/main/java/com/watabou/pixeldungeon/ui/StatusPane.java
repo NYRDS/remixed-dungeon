@@ -132,7 +132,6 @@ public class StatusPane extends Component {
 		
 		depth = new BitmapText( Integer.toString( Dungeon.depth ), PixelScene.font1x);
 		depth.hardlight( 0xCACFC2 );
-		depth.measure();
 		add( depth );
 		
 		hero.belongings.countIronKeys();
@@ -239,7 +238,6 @@ public class StatusPane extends Component {
 			
 			lastLvl = hero.lvl();
 			level.text( Integer.toString( lastLvl ) );
-			level.measure();
 			level.x = PixelScene.align( 27.0f - level.width() / 2 );
 			level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
 		}
@@ -248,7 +246,6 @@ public class StatusPane extends Component {
 		if (k != lastKeys) {
 			lastKeys = k;
 			keys.text( Integer.toString( lastKeys ) );
-			keys.measure();
 			keys.x = width - 8 - keys.width()    - 18;
 		}
 	}

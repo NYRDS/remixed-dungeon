@@ -79,8 +79,7 @@ public class FloatingText extends BitmapText {
 
 		text( text );
 		hardlight( color );
-		
-		measure();
+
 		this.x = PixelScene.align( x - width() / 2 );
 		this.y = y - height();
 		

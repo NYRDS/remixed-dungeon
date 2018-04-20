@@ -19,97 +19,107 @@ import org.json.JSONObject;
 
 public class WndSurvey extends Window {
 
-	protected static final int BTN_HEIGHT	= 18;
-	protected static final int GAP		    = 2;
-	private static final String SURVEY_TAKEN = "survey_taken";
+    protected static final int    BTN_HEIGHT   = 18;
+    protected static final int    GAP          = 2;
+    private static final   String SURVEY_TAKEN = "survey_taken";
+    private static final   String SURVEY       = "survey";
 
-	protected int WIDTH = WndHelper.getFullscreenWidth();
+    protected int WIDTH = WndHelper.getFullscreenWidth();
 
-	private Text questionText;
-	private Component answers;
+    private Text      questionText;
+    private Component answers;
 
-	private JSONArray survey;
-	private int       question;
+    private JSONArray survey;
+    private int       question;
+    private String    questionString;
 
-	public WndSurvey(final JSONObject survey) {
-		super();
+    public WndSurvey(final JSONObject survey) {
+        super();
 
-		String lang = PixelDungeon.uiLanguage();
+        String lang = PixelDungeon.uiLanguage();
 
-		if(!survey.has(lang)) {
-			lang = "en";
-		}
+        if (!survey.has(lang)) {
+            lang = "en";
+        }
 
-		try {
-			String surveyId = survey.getString("survey_id");
+        try {
+            String surveyId = survey.getString("survey_id");
 
-			if(Preferences.INSTANCE.getString(SURVEY_TAKEN,"").equals(surveyId)) {
-				Game.scene().add(new WndMessage(Game.getVar(R.string.SociologistNPC_AlreadyTaken)));
-				hide();
-				return;
-			}
-			Preferences.INSTANCE.put(SURVEY_TAKEN,surveyId);
-			this.survey = survey.getJSONArray(lang);
-		} catch (JSONException e) {
-			this.survey = new JSONArray();
-		}
+            if (Preferences.INSTANCE.getString(SURVEY_TAKEN, "").equals(surveyId)) {
+                Game.scene().add(new WndMessage(Game.getVar(R.string.SociologistNPC_AlreadyTaken)));
+                super.hide();
+                return;
+            }
+            Preferences.INSTANCE.put(SURVEY_TAKEN, surveyId);
+            this.survey = survey.getJSONArray(lang);
+        } catch (JSONException e) {
+            this.survey = new JSONArray();
+        }
 
-		question = 0;
+        question = 0;
 
-		//Title text
-		questionText = PixelScene.createMultiline("", GuiProperties.mediumTitleFontSize());
-		questionText.hardlight(TITLE_COLOR);
-		questionText.maxWidth(WIDTH - GAP);
-		questionText.measure();
-		questionText.x = GAP;
-		questionText.y = GAP;
-		add(questionText);
+        //Title text
+        questionText = PixelScene.createMultiline("", GuiProperties.mediumTitleFontSize());
+        questionText.hardlight(TITLE_COLOR);
+        questionText.maxWidth(WIDTH - GAP);
+        questionText.x = GAP;
+        questionText.y = GAP;
+        add(questionText);
 
-		answers = new Component();
-		add(answers);
-		resize(WIDTH, (int) (questionText.bottom() + GAP));
-		NextQuestion();
-	}
+        answers = new Component();
+        add(answers);
+        resize(WIDTH, (int) (questionText.bottom() + GAP));
+        NextQuestion();
+    }
 
-	private void NextQuestion() {
-		if(question < survey.length()) {
-			try {
-				JSONObject questionDesc = survey.getJSONObject(question);
-				final String questionString = questionDesc.getString("question");
-				questionText.text(questionString);
+    @Override
+    public void hide() {
+        if (question < survey.length()) {
+            EventCollector.logEvent(SURVEY, questionString, "skipped");
+            NextQuestion();
+            return;
+        }
+        super.hide();
+    }
 
-				answers.clear();
+    private void NextQuestion() {
+        if (question < survey.length()) {
+            try {
+                JSONObject questionDesc = survey.getJSONObject(question);
+                questionString = questionDesc.getString("question");
+                questionText.text(questionString);
 
-				float y = questionText.bottom() + GAP*2;
+                answers.clear();
 
-				final JSONArray answersArray = questionDesc.getJSONArray("answers");
+                float y = questionText.bottom() + GAP * 2;
 
-				for(int i = 0;i<answersArray.length();++i) {
-					final String answer = answersArray.getString(i);
-					RedButton button = new RedButton(answer) {
-						@Override
-						protected void onClick() {
-							EventCollector.logEvent("survey",questionString, answer);
-							NextQuestion();
-						}
-					};
+                final JSONArray answersArray = questionDesc.getJSONArray("answers");
 
-					button.setRect(GAP,y,WIDTH - 2*GAP, BTN_HEIGHT);
-					answers.add(button);
+                for (int i = 0; i < answersArray.length(); ++i) {
+                    final String answer = answersArray.getString(i);
+                    RedButton button = new RedButton(answer) {
+                        @Override
+                        protected void onClick() {
+                            EventCollector.logEvent(SURVEY, questionString, answer);
+                            NextQuestion();
+                        }
+                    };
 
-					y = button.bottom() + GAP;
-				}
+                    button.setRect(GAP, y, WIDTH - 2 * GAP, BTN_HEIGHT);
+                    answers.add(button);
 
-				question++;
+                    y = button.bottom() + GAP;
+                }
 
-				resize( WIDTH, (int) (y + GAP));
+                resize(WIDTH, (int) (y + GAP));
+            } catch (JSONException e) {
+                hide();
+            } finally {
+                question++;
+            }
+            return;
+        }
 
-				return;
-			} catch (JSONException e) {
-				hide();
-			}
-		}
-
-		hide();
-	}
+        hide();
+    }
 }

@@ -53,7 +53,6 @@ public class WndImp extends Window {
 		
 		Text message = PixelScene.createMultiline( TXT_MESSAGE, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.measure();
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		

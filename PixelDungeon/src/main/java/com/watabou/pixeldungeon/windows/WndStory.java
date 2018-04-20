@@ -65,7 +65,6 @@ public class WndStory extends Window {
 
 		Text tf = PixelScene.createMultiline(text, GuiProperties.regularFontSize());
 		tf.maxWidth(WIDTH - MARGIN * 2);
-		tf.measure();
 		tf.ra = bgR;
 		tf.ga = bgG;
 		tf.ba = bgB;

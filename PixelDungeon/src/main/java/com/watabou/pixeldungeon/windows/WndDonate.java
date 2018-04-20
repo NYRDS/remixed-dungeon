@@ -128,7 +128,6 @@ public class WndDonate extends WndTabbed {
 			Text commonText = PixelScene.createMultiline(
 					Game.getVar(R.string.WndDonate_commonDonateText), GuiProperties.regularFontSize());
 			commonText.maxWidth(width);
-			commonText.measure();
 			commonText.setPos(0, pos);
 			add(commonText);
 			pos += commonText.height() + GAP;
@@ -137,7 +136,6 @@ public class WndDonate extends WndTabbed {
 					text[level - 1], GuiProperties.regularFontSize());
 			tabText.maxWidth(width - 10);
 			tabText.hardlight( Window.TITLE_COLOR );
-			tabText.measure();
 			tabText.setPos(0, pos);
 			add(tabText);
 			
@@ -146,7 +144,6 @@ public class WndDonate extends WndTabbed {
 			Text tabText2 = PixelScene.createMultiline(
 					text2[level - 1], GuiProperties.regularFontSize());
 			tabText2.maxWidth(width - 10);
-			tabText2.measure();
 			tabText2.setPos(0, pos);
 			add(tabText2);
 		}

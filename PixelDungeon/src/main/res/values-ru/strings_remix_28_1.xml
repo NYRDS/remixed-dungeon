@@ -70,4 +70,6 @@
     <string name="town_deco_snowy_plate_name">Заснеженная плита</string>
     <string name="town_deco_snowy_plate_desc">Эта древняя плита припорошена снегом</string>
 
-    </resources>
+    <string name="DogeMask_Name">Маска Doge</string>
+    <string name="DogeMask_Info">Мечтали ли вы когда-нибудь замаскироваться под знаменитого Doge? Лови момент!\nТакая Маска! Много Маскировки! Вау!</string>
+</resources>

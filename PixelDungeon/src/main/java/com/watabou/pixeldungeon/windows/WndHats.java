@@ -46,7 +46,6 @@ public class WndHats extends Window {
 		Text slotTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_SlotTitle) + equippedName, GuiProperties.titleFontSize());
 		slotTitle.hardlight(0xFFFFFF);
 		slotTitle.maxWidth(WIDTH - GAP * 2);
-		slotTitle.measure();
 		slotTitle.x = (WIDTH - slotTitle.width()) / 2;
 		slotTitle.y = GAP;
 		add(slotTitle);
@@ -75,7 +74,6 @@ public class WndHats extends Window {
 		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_ListTitle), GuiProperties.titleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - GAP * 2);
-		listTitle.measure();
 		listTitle.x = (WIDTH - listTitle.width()) / 2;
 		listTitle.y = slot.y + slot.height() + GAP * 2;
 
@@ -108,7 +106,6 @@ public class WndHats extends Window {
 
 			name.y = hat.y + GAP;
 			name.maxWidth(WIDTH - GAP);
-			name.measure();
 			name.x = hat.x + hat.width() + GAP;
 
 			content.add(name);
@@ -122,7 +119,6 @@ public class WndHats extends Window {
 				priceTag.hardlight(0xFFFF00);
 				priceTag.y = name.bottom() + GAP;
 				priceTag.maxWidth((int) hat.width());
-				priceTag.measure();
 				priceTag.x = name.x;
 
 				content.add(priceTag);

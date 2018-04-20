@@ -17,10 +17,10 @@
 
 package com.watabou.noosa;
 
-import java.util.ArrayList;
+import android.graphics.RectF;
+
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
-import android.graphics.RectF;
 
 public class BitmapTextMultiline extends BitmapText {
 
@@ -34,11 +34,7 @@ public class BitmapTextMultiline extends BitmapText {
 	
 	@Override
 	protected void updateVertices() {
-		
-		if (text == null) {
-			text = "";
-		}
-		
+
 		quads = Quad.createSet( text.length() );
 		realLength = 0;
 		
@@ -132,8 +128,9 @@ public class BitmapTextMultiline extends BitmapText {
 			
 			writer.newLine( 0, font.lineHeight );
 		}
-		
-		dirty = false;
+
+		width = writer.width;
+		height = writer.height;
 	}
 	
 	private void getWordMetrics( String word, PointF metrics ) {
@@ -155,38 +152,6 @@ public class BitmapTextMultiline extends BitmapText {
 		}
 		
 		metrics.set( w, h );
-	}
-	
-	@Override
-	public void measure() {
-		
-		SymbolWriter writer = new SymbolWriter();
-		
-		PointF metrics = new PointF();
-		
-		String paragraphs[] = PARAGRAPH.split( text );
-		
-		for (int i=0; i < paragraphs.length; i++) {
-			
-			String[] words = WORD.split( paragraphs[i] );
-			
-			for (int j=0; j < words.length; j++) {
-				
-				String word = words[j];
-				if (word.length() == 0) {
-					continue;
-				}
-				
-				getWordMetrics( word, metrics );	
-				writer.addSymbol( metrics.x, metrics.y );
-				writer.addSpace( spaceSize );
-			}
-			
-			writer.newLine( 0, font.lineHeight );
-		}
-		
-		width = writer.width;
-		height = writer.height;
 	}
 
 	private class SymbolWriter {
@@ -236,71 +201,6 @@ public class BitmapTextMultiline extends BitmapText {
 			
 			x = 0;
 			y = height;
-		}
-	}
-	
-	public class LineSplitter {
-		
-		private ArrayList<BitmapText> lines;
-		
-		private StringBuilder curLine;
-		private float curLineWidth;
-		
-		private PointF metrics = new PointF();
-		
-		private void newLine( String str, float width ) {
-			BitmapText txt = new BitmapText( curLine.toString(), font );
-			txt.scale.set( scale.x );
-			lines.add( txt );
-			
-			curLine = new StringBuilder( str );
-			curLineWidth = width;
-		}
-		
-		private void append( String str, float width ) {
-			curLineWidth += (curLineWidth > 0 ? font.tracking : 0) + width;
-			curLine.append( str );
-		}
-		
-		public ArrayList<BitmapText> split() {
-			
-			lines = new ArrayList<>();
-					 
-			curLine = new StringBuilder();
-			curLineWidth = 0;
-			
-			String paragraphs[] = PARAGRAPH.split( text );
-			
-			for (int i=0; i < paragraphs.length; i++) {
-				
-				String[] words = WORD.split( paragraphs[i] );
-				
-				for (int j=0; j < words.length; j++) {
-					
-					String word = words[j];
-					if (word.length() == 0) {
-						continue;
-					}
-					
-					getWordMetrics( word, metrics );	
-
-					if (curLineWidth > 0 && curLineWidth + font.tracking + metrics.x > getMaxWidth() / scale.x) {
-						newLine( word, metrics.x );				
-					} else {				
-						append( word,  metrics.x );			
-					}
-					
-					if (curLineWidth > 0 && curLineWidth + font.tracking + spaceSize > getMaxWidth() / scale.x) {						
-						newLine( "", 0 );				
-					} else {		
-						append( " ", spaceSize );
-					}
-				}
-				
-				newLine( "", 0 );
-			}
-			
-			return lines;
 		}
 	}
 }
