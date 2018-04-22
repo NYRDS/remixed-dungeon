@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.Flavours;
+import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
@@ -49,307 +50,314 @@ import com.watabou.pixeldungeon.windows.WndHero;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
 public class StatusPane extends Component {
-	
-	private NinePatch             shield;
-	private CompositeTextureImage avatar;
-	private Emitter               blood;
 
-	private Image hp;
-	private Image sp;
-	private Image exp;
-	
-	private int lastLvl = -1;
-	private int lastKeys = -1;
-	
-	private Text level;
-	private Text depth;
-	private Text keys;
-	
-	private DangerIndicator danger;
-	private LootIndicator loot;
-	private BuffIndicator buffs;
-	private Compass compass;
-	
-	private MenuButton btnMenu;
-	private MenuButton btnHats;
-	//private MenuButton btnSpells;
+    private static final String UI_ICONS = "ui_icons.png";
+    private NinePatch shield;
+    private CompositeTextureImage avatar;
+    private Emitter               blood;
+
+    private Image hp;
+    private Image sp;
+    private Image exp;
+
+    private int lastLvl  = -1;
+    private int lastKeys = -1;
+
+    private Text level;
+    private Text depth;
+    private Text keys;
+
+    private DangerIndicator danger;
+    private LootIndicator   loot;
+    private BuffIndicator   buffs;
+    private Compass         compass;
+
+    private MenuButton btnMenu;
+    private MenuButton btnHats;
 
 
-	private Level currentLevel;
-	private Hero  hero;
+    private Level currentLevel;
+    private Hero  hero;
 
-	private Tool         btnInventory;
-	private PickedUpItem pickedUp;
+    private Tool btnInventory;
+    private Tool btnSpells;
 
-	public StatusPane(Hero hero, Level level) {
-		super(true);
-		this.hero = hero;
-		this.currentLevel = level;
-		createChildren();
-	}
+    private PickedUpItem pickedUp;
 
-	@Override
-	protected void createChildren() {
-		
-		shield = new NinePatch( Assets.getStatus(), 80, 0, 30   + 18, 0 );
-		add( shield );
-		
-		add( new TouchArea( 0, 1, 30, 30 ) {
-			@Override
-			protected void onClick( Touch touch ) {
-				Image sprite = hero.getSprite();
-				if (!sprite.isVisible()) {
-					Camera.main.focusOn( sprite );
-				}
-				GameScene.show( new WndHero() );
-			}
-		} );
+    public StatusPane(Hero hero, Level level) {
+        super(true);
+        this.hero = hero;
+        this.currentLevel = level;
+        createChildren();
+    }
 
-		avatar = hero.getHeroSprite().avatar();
-		add(avatar);
+    @Override
+    protected void createChildren() {
 
-		blood = new Emitter();
-		blood.pos( avatar );
-		blood.pour( BloodParticle.FACTORY, 0.3f );
-		blood.autoKill = false;
-		blood.on = false;
-		add( blood );
+        shield = new NinePatch(Assets.getStatus(), 80, 0, 30 + 18, 0);
+        add(shield);
 
-		int compassTarget = currentLevel.entrance;
+        add(new TouchArea(0, 1, 30, 30) {
+            @Override
+            protected void onClick(Touch touch) {
+                Image sprite = hero.getSprite();
+                if (!sprite.isVisible()) {
+                    Camera.main.focusOn(sprite);
+                }
+                GameScene.show(new WndHero());
+            }
+        });
 
-		if(currentLevel.hasCompassTarget()){
-			compassTarget = currentLevel.getCompassTarget();	// Set to compass target if exists
-		} else if(currentLevel.hasExit(0)) {
-			compassTarget = currentLevel.getExit(0);	// Set to first exit if exists
+        avatar = hero.getHeroSprite().avatar();
+        add(avatar);
+
+        blood = new Emitter();
+        blood.pos(avatar);
+        blood.pour(BloodParticle.FACTORY, 0.3f);
+        blood.autoKill = false;
+        blood.on = false;
+        add(blood);
+
+        int compassTarget = currentLevel.entrance;
+
+        if (currentLevel.hasCompassTarget()) {
+            compassTarget = currentLevel.getCompassTarget();    // Set to compass target if exists
+        } else if (currentLevel.hasExit(0)) {
+            compassTarget = currentLevel.getExit(0);    // Set to first exit if exists
+        }
+
+        compass = new Compass(compassTarget, currentLevel);
+        add(compass);
+
+
+        hp = new Image(Assets.HP_BAR);
+        add(hp);
+
+        sp = new Image(Assets.SP_BAR);
+        add(sp);
+
+        exp = new Image(Assets.XP_BAR);
+        add(exp);
+
+        level = new BitmapText(PixelScene.font1x);
+        level.hardlight(0xFFEBA4);
+        add(level);
+
+        depth = new BitmapText(Integer.toString(Dungeon.depth), PixelScene.font1x);
+        depth.hardlight(0xCACFC2);
+        add(depth);
+
+        hero.belongings.countIronKeys();
+        keys = new BitmapText(PixelScene.font1x);
+        keys.hardlight(0xCACFC2);
+        add(keys);
+
+        danger = new DangerIndicator();
+        add(danger);
+
+        loot = new LootIndicator();
+        add(loot);
+
+        buffs = new BuffIndicator(hero);
+        add(buffs);
+
+        btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
+        add(btnMenu);
+
+        btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
+
+
+        btnInventory = new Tool(UI_ICONS, 0) {
+            private GoldIndicator gold;
+
+            @Override
+            protected void onClick() {
+                GameScene.show(new WndBag(Dungeon.hero.belongings.backpack,
+                        null, WndBag.Mode.ALL, null));
+            }
+
+            protected boolean onLongClick() {
+                GameScene.show(new WndCatalogus());
+                return true;
+            }
+
+            @Override
+            protected void createChildren() {
+                super.createChildren();
+                gold = new GoldIndicator();
+                add(gold);
+            }
+
+            @Override
+            protected void layout() {
+                super.layout();
+                gold.fill(this);
+            }
+        };
+
+        add(pickedUp = new PickedUpItem());
+
+        add(btnInventory);
+
+        btnSpells = new Tool(UI_ICONS, 6) {
+            @Override
+            protected void onClick() {
+                GameScene.show(new WndHeroSpells());
+            }
+        };
+
+        if (!Flavours.haveHats()) {
+            btnHats.enable(false);
+        }
+
+		if (hero.spellUser) {
+            add(btnSpells);
 		}
 
-		compass = new Compass(compassTarget, currentLevel);
-		add(compass);
+        add(btnHats);
+    }
 
+    @Override
+    protected void layout() {
+        shield.size(width, shield.height);
 
-		hp = new Image( Assets.HP_BAR );
-		add( hp );
+        avatar.x = PixelScene.align(camera(), shield.x + 15 - avatar.width / 2);
+        avatar.y = PixelScene.align(camera(), shield.y + 16 - avatar.height / 2);
 
-		sp = new Image( Assets.SP_BAR );
-		add( sp );
-		
-		exp = new Image( Assets.XP_BAR );
-		add( exp );
-		
-		level = new BitmapText(PixelScene.font1x);
-		level.hardlight( 0xFFEBA4 );
-		add( level );
-		
-		depth = new BitmapText( Integer.toString( Dungeon.depth ), PixelScene.font1x);
-		depth.hardlight( 0xCACFC2 );
-		add( depth );
-		
-		hero.belongings.countIronKeys();
-		keys = new BitmapText( PixelScene.font1x);
-		keys.hardlight( 0xCACFC2 );
-		add( keys );
-		
-		danger = new DangerIndicator();
-		add( danger );
-		
-		loot = new LootIndicator();
-		add( loot );
-		
-		buffs = new BuffIndicator( hero );
-		add( buffs );
+        compass.x = avatar.x + avatar.width / 2 - compass.origin.x;
+        compass.y = avatar.y + avatar.height / 2 - compass.origin.y;
 
-		btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
-		add( btnMenu );
+        hp.x = 30;
+        hp.y = 3;
 
-		btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
+        sp.x = 30;
+        sp.y = 9;
 
+        level.x = PixelScene.align(27.0f - level.width() / 2);
+        level.y = PixelScene.align(27.5f - level.baseLine() / 2);
 
-		btnInventory = new Tool(82, 7, 23, 24) {
-			private GoldIndicator gold;
+        depth.x = width - 24 - depth.width() - 18;
+        depth.y = 6;
 
-			@Override
-			protected void onClick() {
-				GameScene.show(new WndBag(Dungeon.hero.belongings.backpack,
-						null, WndBag.Mode.ALL, null));
-			}
+        keys.x = width - 8 - keys.width() - 18;
+        keys.y = 6;
 
-			protected boolean onLongClick() {
-				GameScene.show(new WndCatalogus());
-				return true;
-			}
+        danger.setPos(width - danger.width(), 40);
 
-			@Override
-			protected void createChildren() {
-				super.createChildren();
-				gold = new GoldIndicator();
-				add(gold);
-			}
+        loot.setPos(width - loot.width(), danger.bottom() + 2);
 
-			@Override
-			protected void layout() {
-				super.layout();
-				gold.fill(this);
-			}
-		};
+        buffs.setPos(35, 16);
 
-		add(pickedUp = new PickedUpItem());
+        btnMenu.setPos(width - btnMenu.width(), 1);
+        btnHats.setPos(width - btnHats.width(), btnMenu.bottom());
 
-		add(btnInventory);
+        btnInventory.setPos(2, 33);
+        btnInventory.setSize(16, 16);
 
-		//btnSpells = new MenuButton(new Image(Assets.getStatus(), 2, 33, 12, 11), WndHeroSpells.class);
+        height = btnInventory.bottom();
 
-		if(!Flavours.haveHats()) {
-			btnHats.enable(false);
-		}
-		/*
-		if (!hero.spellUser) {
-			btnSpells.enable(false);
-		}
-*/
-//		add(btnSpells);
+		btnSpells.setPos( width - btnMenu.width(), btnHats.bottom());
+		btnSpells.setSize(16,16);
+    }
 
-		add(btnHats);
-	}
-	
-	@Override
-	protected void layout() {
-		
-		height = 32;
-		
-		shield.size( width, shield.height );
-		
-		avatar.x = PixelScene.align( camera(), shield.x + 15 - avatar.width / 2 );
-		avatar.y = PixelScene.align( camera(), shield.y + 16 - avatar.height / 2 );
-		
-		compass.x = avatar.x + avatar.width / 2 - compass.origin.x;
-		compass.y = avatar.y + avatar.height / 2 - compass.origin.y;
+    public void pickup(Item item) {
+        pickedUp.reset(item, btnInventory.centerX(), btnInventory.centerY());
+    }
 
-		hp.x = 30;
-		hp.y = 3;
+    @Override
+    public void update() {
+        super.update();
 
-		sp.x = 30;
-		sp.y = 9;
+        float health = (float) hero.hp() / hero.ht();
+        float sPoints = (float) hero.getSoulPoints() / hero.getSoulPointsMax();
 
-		level.x = PixelScene.align( 27.0f - level.width() / 2 );
-		level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
+        if (health == 0) {
+            avatar.tint(0x000000, 0.6f);
+            blood.on = false;
+        } else if (health < 0.25f) {
+            avatar.tint(0xcc0000, 0.4f);
+            blood.on = true;
+        } else {
+            avatar.resetColor();
+            blood.on = false;
+        }
 
-		depth.x = width - 24 - depth.width()    - 18;
-		depth.y = 6;
+        hp.Scale().x = health;
+        sp.Scale().x = sPoints;
+        exp.Scale().x = (width / exp.width) * hero.getExp() / hero.maxExp();
 
-		keys.x = width - 8 - keys.width()    - 18;
-		keys.y = 6;
+        if (hero.lvl() != lastLvl) {
 
-		danger.setPos( width - danger.width(), 40 );
-		
-		loot.setPos( width - loot.width(),  danger.bottom() + 2 );
-		
-		buffs.setPos( 35, 16 );
-		
-		btnMenu.setPos( width - btnMenu.width(), 1 );
-		btnHats.setPos( width - btnHats.width(), btnMenu.bottom() );
+            if (lastLvl != -1) {
+                Emitter emitter = (Emitter) recycle(Emitter.class);
+                emitter.revive();
+                emitter.pos(27, 27);
+                emitter.burst(Speck.factory(Speck.STAR), 12);
+            }
 
-		btnInventory.setPos(0,31);
-		btnInventory.setSize(32,32);
-//		btnSpells.setPos( 0, 31 );
-	}
+            lastLvl = hero.lvl();
+            level.text(Integer.toString(lastLvl));
+            level.x = PixelScene.align(27.0f - level.width() / 2);
+            level.y = PixelScene.align(27.5f - level.baseLine() / 2);
+        }
 
-	public void pickup(Item item) {
-		pickedUp.reset(item, btnInventory.centerX(), btnInventory.centerY());
-	}
+        int k = IronKey.curDepthQuantity;
+        if (k != lastKeys) {
+            lastKeys = k;
+            keys.text(Integer.toString(lastKeys));
+            keys.x = width - 8 - keys.width() - 18;
+        }
 
-	@Override
-	public void update() {
-		super.update();
-		
-		float health = (float)hero.hp() / hero.ht();
-		float sPoints = (float)hero.getSoulPoints() / hero.getSoulPointsMax();
+        btnInventory.enable(hero.isReady() || !hero.isAlive());
+        btnSpells.enable(hero.isReady());
+    }
 
-		if (health == 0) {
-			avatar.tint( 0x000000, 0.6f );
-			blood.on = false;
-		} else if (health < 0.25f) {
-			avatar.tint( 0xcc0000, 0.4f );
-			blood.on = true;
-		} else {
-			avatar.resetColor();
-			blood.on = false;
-		}
+    static class PickedUpItem extends ItemSprite {
 
-		hp.Scale().x = health;
-		sp.Scale().x = sPoints;
-		exp.Scale().x = (width / exp.width) * hero.getExp() / hero.maxExp();
+        private static final float DISTANCE = DungeonTilemap.SIZE;
+        private static final float DURATION = 0.2f;
 
-		if (hero.lvl() != lastLvl) {
-			
-			if (lastLvl != -1) {
-				Emitter emitter = (Emitter)recycle( Emitter.class );
-				emitter.revive();
-				emitter.pos( 27, 27 );
-				emitter.burst( Speck.factory( Speck.STAR ), 12 );
-			}
-			
-			lastLvl = hero.lvl();
-			level.text( Integer.toString( lastLvl ) );
-			level.x = PixelScene.align( 27.0f - level.width() / 2 );
-			level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
-		}
-		
-		int k = IronKey.curDepthQuantity;
-		if (k != lastKeys) {
-			lastKeys = k;
-			keys.text( Integer.toString( lastKeys ) );
-			keys.x = width - 8 - keys.width()    - 18;
-		}
+        private float dstX;
+        private float dstY;
+        private float left;
 
-		btnInventory.enable(hero.isReady() || !hero.isAlive());
-	}
+        PickedUpItem() {
+            super();
 
-	static class PickedUpItem extends ItemSprite {
+            originToCenter();
 
-		private static final float DISTANCE = DungeonTilemap.SIZE;
-		private static final float DURATION = 0.2f;
+            active = setVisible(false);
+        }
 
-		private float dstX;
-		private float dstY;
-		private float left;
+        public void reset(Item item, float dstX, float dstY) {
+            view(item);
 
-		PickedUpItem() {
-			super();
+            active = setVisible(true);
 
-			originToCenter();
+            this.dstX = dstX - ItemSprite.SIZE / 2;
+            this.dstY = dstY - ItemSprite.SIZE / 2;
+            left = DURATION;
 
-			active = setVisible(false);
-		}
+            x = this.dstX - DISTANCE;
+            y = this.dstY - DISTANCE;
+            alpha(1);
+        }
 
-		public void reset(Item item, float dstX, float dstY) {
-			view(item);
+        @Override
+        public void update() {
+            super.update();
 
-			active = setVisible(true);
+            if ((left -= Game.elapsed) <= 0) {
 
-			this.dstX = dstX - ItemSprite.SIZE / 2;
-			this.dstY = dstY - ItemSprite.SIZE / 2;
-			left = DURATION;
+                setVisible(active = false);
 
-			x = this.dstX - DISTANCE;
-			y = this.dstY - DISTANCE;
-			alpha(1);
-		}
-
-		@Override
-		public void update() {
-			super.update();
-
-			if ((left -= Game.elapsed) <= 0) {
-
-				setVisible(active = false);
-
-			} else {
-				float p = left / DURATION;
-				scale.set((float) Math.sqrt(p));
-				float offset = DISTANCE * p;
-				x = dstX - offset;
-				y = dstY - offset;
-			}
-		}
-	}
+            } else {
+                float p = left / DURATION;
+                scale.set((float) Math.sqrt(p));
+                float offset = DISTANCE * p;
+                x = dstX - offset;
+                y = dstY - offset;
+            }
+        }
+    }
 }
