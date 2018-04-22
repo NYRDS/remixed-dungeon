@@ -390,7 +390,7 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public String status() {
-		return quantity() != 1 ? Integer.toString(quantity()) : null;
+		return quantity() != 1 ? Integer.toString(quantity()) : "";
 	}
 
 	public void updateQuickslot() {
