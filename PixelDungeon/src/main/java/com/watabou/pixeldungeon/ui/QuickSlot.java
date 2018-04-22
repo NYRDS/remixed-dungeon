@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -31,6 +32,7 @@ import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,6 +40,7 @@ import java.util.HashMap;
 public class QuickSlot extends Button implements WndBag.Listener {
 
 	private static final String TXT_SELECT_ITEM = Game.getVar(R.string.QuickSlot_SelectedItem);
+	private static final String QUICKSLOT = "quickslot";
 
 	private static ArrayList<QuickSlot> slots = new ArrayList<>();
 	private static HashMap<Integer, Object> qsStorage = new HashMap<>();
@@ -279,7 +282,37 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	}
 
 	private void quickslotItem(Object quickslotItem) {
+		if(quickslotItem instanceof Item) {
+			((Item)quickslotItem).setQuickSlotIndex(index);
+		}
 		qsStorage.put(index, quickslotItem);
 		this.quickslotItem = quickslotItem;
+	}
+
+	public static void save(Bundle bundle){
+		ArrayList<String> classes = new ArrayList<>();
+		for(QuickSlot slot:slots) {
+			Object stored = slot.quickslotItem();
+			if(stored instanceof Class) {
+				classes.add(((Class)stored).getCanonicalName());
+			} else {
+				classes.add("");
+			}
+		}
+		bundle.put(QUICKSLOT,classes.toArray(new String[classes.size()]));
+	}
+
+	public static void restore(Bundle bundle){
+		String [] classes = bundle.getStringArray(QUICKSLOT);
+
+		for(int i =0;i< classes.length;i++) {
+			if(!classes[i].isEmpty()) {
+				try {
+					selectItem(Class.forName(classes[i]),i );
+				} catch (ClassNotFoundException e) {
+					EventCollector.logException(e);
+				}
+			}
+		}
 	}
 }

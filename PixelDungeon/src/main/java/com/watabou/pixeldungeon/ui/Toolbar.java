@@ -22,7 +22,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
@@ -38,60 +37,60 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
+import java.util.ArrayList;
+
 public class Toolbar extends Component {
 
 	private Tool btnWait;
 	private Tool btnSearch;
 	private Tool btnInfo;
 
-	private QuickslotTool  btnQuick1;
-	private QuickslotTool  btnQuick2;
-	private QuickslotTool  btnQuick3;
+	private final int MAX_SLOTS = 12;
+	private int active_slots = 12;
+
+
+	private ArrayList<QuickslotTool> slots = new ArrayList<>();
+
 
 	private boolean lastEnabled = true;
 
 	public Toolbar() {
 		super();
 
+		add(btnWait = new Tool(0, 7, 20, 24) {
+			@Override
+			protected void onClick() {
+				Dungeon.hero.rest(false);
+			}
+
+			protected boolean onLongClick() {
+				Dungeon.hero.rest(true);
+				return true;
+			}
+		});
+
+		add(btnSearch = new Tool(20, 7, 20, 24) {
+			@Override
+			protected void onClick() {
+				Dungeon.hero.search(true);
+			}
+		});
+
+		add(btnInfo = new Tool(40, 7, 21, 24) {
+			@Override
+			protected void onClick() {
+				GameScene.selectCell(informer);
+			}
+		});
+
+
+		for(int i = 0;i<MAX_SLOTS;i++) {
+			slots.add(new QuickslotTool());
+		}
+
+		width = Game.width();
+
 		height = btnInfo.height();
-	}
-
-	@Override
-	protected void createChildren() {
-
-			add(btnWait = new Tool(0, 7, 20, 24) {
-				@Override
-				protected void onClick() {
-					Dungeon.hero.rest(false);
-				}
-
-				protected boolean onLongClick() {
-					Dungeon.hero.rest(true);
-					return true;
-				}
-			});
-
-			add(btnSearch = new Tool(20, 7, 20, 24) {
-				@Override
-				protected void onClick() {
-					Dungeon.hero.search(true);
-				}
-			});
-
-			add(btnInfo = new Tool(40, 7, 21, 24) {
-				@Override
-				protected void onClick() {
-					GameScene.selectCell(informer);
-				}
-			});
-
-
-
-		btnQuick1 = new QuickslotTool(105, 7, 22, 24);
-		btnQuick2 = new QuickslotTool(105, 7, 22, 24);
-		btnQuick3 = new QuickslotTool(105, 7, 22, 24);
-
-		update();
 	}
 
 	@Override
@@ -100,29 +99,30 @@ public class Toolbar extends Component {
 			btnSearch.setPos(btnWait.right(), y);
 			btnInfo.setPos(btnSearch.right(), y);
 
-		remove(btnQuick1);
-		remove(btnQuick2);
-		remove(btnQuick3);
-		
-		
-		btnQuick1.setPos(width - btnQuick1.width(), y);
-		btnQuick1.show(true);
-		add(btnQuick1);
-
-		if (PixelDungeon.thirdQuickslot()) {			
-			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
-			btnQuick3.setPos(btnQuick2.left() - btnQuick3.width(), y);
-			
-			add(btnQuick2);
-			add(btnQuick3);
-			btnQuick2.show(true);
-			btnQuick3.show(true);
-			
-		} else if (PixelDungeon.secondQuickslot()) {
-			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y);
-			add(btnQuick2);
-			btnQuick2.show(true);
+		for (QuickslotTool tool:slots) {
+			remove(tool);
 		}
+
+		float slot_x = width;
+		float slot_y = y;
+
+		int i = 0;
+		QuickslotTool slot;
+		do {
+			do {
+				if (!(i < active_slots)) {
+					return;
+				}
+				slot = slots.get(i);
+				slot.setPos(slot_x - slot.width(), slot_y);
+				slot.show(true);
+				add(slot);
+				slot_x = slot.left();
+				i++;
+			} while (slot_x - slot.width()> btnInfo.right());
+			slot_y = slot.top() - slot.height();
+			slot_x = width;
+		} while (true);
 	}
 
 	public void updateLayout() {
@@ -206,13 +206,8 @@ public class Toolbar extends Component {
 
 		private QuickSlot slot;
 
-		QuickslotTool(int x, int y, int width, int height) {
-			super(x, y, width, height);
-		}
-
-		@Override
-		protected void createChildren() {
-			super.createChildren();
+		QuickslotTool() {
+			super(105, 7, 22, 24);
 
 			slot = new QuickSlot();
 			add(slot);

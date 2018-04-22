@@ -62,6 +62,7 @@ import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -355,6 +356,7 @@ public class Dungeon {
 		Potion.save(bundle);
 		Wand.save(bundle);
 		Ring.save(bundle);
+		QuickSlot.save(bundle);
 
 		Bundle badges = new Bundle();
 		Badges.saveLocal(badges);
@@ -467,6 +469,7 @@ public class Dungeon {
 		Potion.restore(bundle);
 		Wand.restore(bundle);
 		Ring.restore(bundle);
+		QuickSlot.restore(bundle);
 
 		potionOfStrength = bundle.getInt(POS);
 		scrollsOfUpgrade = bundle.getInt(SOU);

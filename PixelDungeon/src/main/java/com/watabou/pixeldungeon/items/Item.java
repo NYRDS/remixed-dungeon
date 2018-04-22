@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -93,6 +94,9 @@ public class Item implements Bundlable, Presser {
 
 	public boolean cursed;
 	public boolean cursedKnown;
+
+	@Packable(defaultValue = "-1")
+	private int quickSlotIndex = -1;
 
 	private static Comparator<Item> itemComparator = new Comparator<Item>() {
 		@Override
@@ -402,8 +406,12 @@ public class Item implements Bundlable, Presser {
 	private static final String LEVEL_KNOWN  = "levelKnown";
 	private static final String CURSED       = "cursed";
 	private static final String CURSED_KNOWN = "cursedKnown";
+
+	@Deprecated
 	private static final String QUICKSLOT    = "quickslot";
+	@Deprecated
 	private static final String QUICKSLOT_2  = "quickslot_2";
+	@Deprecated
 	private static final String QUICKSLOT_3  = "quickslot_3";
 
 	@Override
@@ -413,18 +421,6 @@ public class Item implements Bundlable, Presser {
 		bundle.put(LEVEL_KNOWN, levelKnown);
 		bundle.put(CURSED, cursed);
 		bundle.put(CURSED_KNOWN, cursedKnown);
-
-		if (this == QuickSlot.getItem(0)) {
-			bundle.put(QUICKSLOT, true);
-		}
-
-		if (this == QuickSlot.getItem(1)) {
-			bundle.put(QUICKSLOT_2, true);
-		}
-
-		if (this == QuickSlot.getItem(2)) {
-			bundle.put(QUICKSLOT_3, true);
-		}
 	}
 
 	@Override
@@ -443,15 +439,19 @@ public class Item implements Bundlable, Presser {
 		cursed = bundle.getBoolean(CURSED);
 
 		if (bundle.getBoolean(QUICKSLOT)) {
-			QuickSlot.selectItem(this, 0);
+			quickSlotIndex = 0;
 		}
 
 		if (bundle.getBoolean(QUICKSLOT_2)) {
-			QuickSlot.selectItem(this, 1);
+			quickSlotIndex = 1;
 		}
 
 		if (bundle.getBoolean(QUICKSLOT_3)) {
-			QuickSlot.selectItem(this, 2);
+			quickSlotIndex = 2;
+		}
+
+		if(quickSlotIndex >= 0 ) {
+			QuickSlot.selectItem(this, quickSlotIndex);
 		}
 	}
 
@@ -619,5 +619,9 @@ public class Item implements Bundlable, Presser {
 
 	public float emitterInterval() {
 		return 0;
+	}
+
+	public void setQuickSlotIndex(int quickSlotIndex) {
+		this.quickSlotIndex = quickSlotIndex;
 	}
 }
