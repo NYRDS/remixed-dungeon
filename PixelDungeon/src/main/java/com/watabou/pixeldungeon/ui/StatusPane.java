@@ -252,12 +252,10 @@ public class StatusPane extends Component {
         btnHats.setPos(width - btnHats.width(), btnMenu.bottom());
 
         btnInventory.setPos(2, 33);
-        btnInventory.setSize(16, 16);
 
         height = btnInventory.bottom();
 
 		btnSpells.setPos( width - btnMenu.width(), btnHats.bottom());
-		btnSpells.setSize(16,16);
     }
 
     public void pickup(Item item) {
