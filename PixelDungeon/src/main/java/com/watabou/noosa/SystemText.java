@@ -379,7 +379,7 @@ public class SystemText extends Text {
 
 	@Override
 	public float baseLine() {
-		return height * scale.y;
+		return height() * scale.y;
 	}
 
 	static void invalidate() {
