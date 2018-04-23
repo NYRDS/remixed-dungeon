@@ -47,37 +47,32 @@ public class WndSettingsInGame extends WndSettingsCommon {
 		btnBrightness.checked(PixelDungeon.brightness());
 		add(btnBrightness);
 
-		final CheckBox secondQuickslot = new CheckBox(Game
-				.getVar(R.string.WndSettings_SecondQuickslot)) {
+
+		curY = createQuickSlotsSelector(btnBrightness.bottom());
+
+			resize(WIDTH, (int) curY);
+	}
+
+	private float createQuickSlotsSelector(float y) {
+		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
+		return selector.add(y, Game
+				.getVar(R.string.WndSettings_Quickslots), new Selector.PlusMinusDefault() {
+
 			@Override
-			protected void onClick() {
-				super.onClick();
-				PixelDungeon.secondQuickslot(checked());
+			public void onPlus() {
+				PixelDungeon.quickSlots(Math.min(PixelDungeon.quickSlots()+1,12));
 			}
-		};
-		secondQuickslot.setRect(0, btnBrightness.bottom() + SMALL_GAP, WIDTH,
-				BTN_HEIGHT);
-		secondQuickslot.checked(PixelDungeon.secondQuickslot());
 
-		add(secondQuickslot);
+			@Override
+			public void onMinus() {
+				PixelDungeon.quickSlots(Math.max(PixelDungeon.quickSlots()-1,0));
+			}
 
-			CheckBox thirdQuickslot = new CheckBox(Game
-					.getVar(R.string.WndSettings_ThirdQuickslot)) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					secondQuickslot.enable(!checked());
-					PixelDungeon.thirdQuickslot(checked());
-				}
-			};
-
-			secondQuickslot.enable(!PixelDungeon.thirdQuickslot());
-			thirdQuickslot.setRect(0, secondQuickslot.bottom() + SMALL_GAP,
-					WIDTH, BTN_HEIGHT);
-			thirdQuickslot.checked(PixelDungeon.thirdQuickslot());
-			add(thirdQuickslot);
-
-			resize(WIDTH, (int) thirdQuickslot.bottom());
+			@Override
+			public void onDefault() {
+				PixelDungeon.quickSlots(3);
+			}
+		});
 	}
 
 	private float createZoomButtons(float y) {

@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
@@ -46,7 +47,7 @@ public class Toolbar extends Component {
 	private Tool btnInfo;
 
 	private final int MAX_SLOTS = 12;
-	private int active_slots = 12;
+	private int active_slots = 3;
 
 
 	private ArrayList<QuickslotTool> slots = new ArrayList<>();
@@ -103,6 +104,7 @@ public class Toolbar extends Component {
 			remove(tool);
 		}
 
+		active_slots = PixelDungeon.quickSlots();
 		float slot_x = width;
 		float slot_y = y;
 
