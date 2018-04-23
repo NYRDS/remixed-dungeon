@@ -757,6 +757,8 @@ public class GameScene extends PixelScene {
     public void updateToolbar() {
         if (toolbar != null) {
             toolbar.updateLayout();
+            attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
+            resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
         } else {
             EventCollector.logException(new Exception("updateToolbar(int)"));
         }

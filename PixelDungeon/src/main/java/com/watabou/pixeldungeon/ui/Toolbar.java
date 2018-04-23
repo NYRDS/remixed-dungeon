@@ -46,8 +46,7 @@ public class Toolbar extends Component {
 	private Tool btnSearch;
 	private Tool btnInfo;
 
-	private final int MAX_SLOTS = 12;
-	private int active_slots = 3;
+	public static final int MAX_SLOTS = 25;
 
 
 	private ArrayList<QuickslotTool> slots = new ArrayList<>();
@@ -104,7 +103,7 @@ public class Toolbar extends Component {
 			remove(tool);
 		}
 
-		active_slots = PixelDungeon.quickSlots();
+		int active_slots = PixelDungeon.quickSlots();
 		float slot_x = width;
 		float slot_y = y;
 

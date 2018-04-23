@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
+import com.watabou.pixeldungeon.ui.Toolbar;
 
 public class WndSettingsInGame extends WndSettingsCommon {
 
@@ -60,7 +61,7 @@ public class WndSettingsInGame extends WndSettingsCommon {
 
 			@Override
 			public void onPlus() {
-				PixelDungeon.quickSlots(Math.min(PixelDungeon.quickSlots()+1,12));
+				PixelDungeon.quickSlots(Math.min(PixelDungeon.quickSlots()+1, Toolbar.MAX_SLOTS));
 			}
 
 			@Override
