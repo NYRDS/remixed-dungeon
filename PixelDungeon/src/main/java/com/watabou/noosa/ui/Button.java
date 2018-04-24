@@ -17,21 +17,20 @@
 
 package com.watabou.noosa.ui;
 
-import com.watabou.input.Touchscreen;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TouchArea;
 
 public class Button extends Component {
 
-	public static float longClick = 1f;
+	private static float longClick = 1f;
 
-	protected TouchArea hotArea;
+	private TouchArea hotArea;
 
-	protected boolean pressed;
-	protected float pressTime;
+	private boolean pressed;
+	private float   pressTime;
 
-	protected boolean processed;
+	private boolean processed;
 
 	@Override
 	protected void createChildren() {

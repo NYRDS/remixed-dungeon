@@ -143,7 +143,7 @@ public class GameScene extends PixelScene {
         resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
         log.setRect(0, toolbar.top(), attack.left(), 0);
         busy.x = 1;
-        busy.y = statusPane.bottom() + 18;
+        busy.y = statusPane.bottom() + 2;
     }
 
 
@@ -758,7 +758,9 @@ public class GameScene extends PixelScene {
         if (toolbar != null) {
             toolbar.updateLayout();
             attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
+            attack.update();
             resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
+            resume.update();
         } else {
             EventCollector.logException(new Exception("updateToolbar(int)"));
         }

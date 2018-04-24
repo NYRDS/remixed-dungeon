@@ -232,4 +232,8 @@ public class Toolbar extends Component {
 		}
 	}
 
+	@Override
+	public float top() {
+		return Math.min(btnInfo.top(), slots.get(PixelDungeon.quickSlots()-1).top());
+	}
 }

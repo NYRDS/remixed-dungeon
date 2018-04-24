@@ -126,6 +126,7 @@ public class AttackIndicator extends Tag {
 	
 	private boolean enabled = true;
 	private void enable( boolean value ) {
+
 		enabled = value;
 		if (sprite != null) {
 			sprite.alpha( value ? ENABLED : DISABLED );

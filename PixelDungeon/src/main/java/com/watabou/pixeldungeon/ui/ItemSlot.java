@@ -186,7 +186,7 @@ public class ItemSlot extends Button {
 
             }
         } else {
-            topRight.text(null);
+            topRight.text("");
         }
 
         int level = item.visiblyUpgraded();
