@@ -105,7 +105,7 @@ public class Toolbar extends Component {
 
 		int active_slots = PixelDungeon.quickSlots();
 		float slot_x = width;
-		float slot_y = y;
+		float slot_y = y + 4;
 
 		int i = 0;
 		QuickslotTool slot;
@@ -208,7 +208,7 @@ public class Toolbar extends Component {
 		private QuickSlot slot;
 
 		QuickslotTool() {
-			super(105, 7, 22, 24);
+			super(107, 12, 20, 20);
 
 			slot = new QuickSlot();
 			add(slot);
