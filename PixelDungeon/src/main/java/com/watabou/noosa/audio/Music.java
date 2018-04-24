@@ -125,13 +125,13 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 	}
 
 	public void pause() {
-		if (player != null && player.isPlaying()) {
+		if (isPlaying()) {
 			player.pause();
 		}
 	}
 
 	public void resume() {
-		if (player != null && !player.isPlaying()) {
+		if (isPlaying()) {
 			player.start();
 		}
 	}
@@ -151,7 +151,12 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 	}
 
 	public boolean isPlaying() {
-		return player != null && player.isPlaying();
+		try {
+			return player != null && player.isPlaying();
+		} catch (Exception e) {
+			EventCollector.logException(e);
+		}
+		return false;
 	}
 
 	public void enable(boolean value) {
