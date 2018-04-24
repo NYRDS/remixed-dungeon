@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -42,6 +43,7 @@ import java.util.ArrayList;
 
 public class Toolbar extends Component {
 
+	private static final int QUICK_SLOT_HEIGHT = 20;
 	private Tool btnWait;
 	private Tool btnSearch;
 	private Tool btnInfo;
@@ -57,7 +59,7 @@ public class Toolbar extends Component {
 	public Toolbar() {
 		super();
 
-		add(btnWait = new Tool(0, 7, 20, 24) {
+		add(btnWait = new Tool(Assets.UI_ICONS, 10) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.rest(false);
@@ -69,14 +71,14 @@ public class Toolbar extends Component {
 			}
 		});
 
-		add(btnSearch = new Tool(20, 7, 20, 24) {
+		add(btnSearch = new Tool(Assets.UI_ICONS, 11) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.search(true);
 			}
 		});
 
-		add(btnInfo = new Tool(40, 7, 21, 24) {
+		add(btnInfo = new Tool(Assets.UI_ICONS,12) {
 			@Override
 			protected void onClick() {
 				GameScene.selectCell(informer);
@@ -90,14 +92,14 @@ public class Toolbar extends Component {
 
 		width = Game.width();
 
-		height = btnInfo.height();
+		height = Math.max(btnInfo.height(), QUICK_SLOT_HEIGHT);
 	}
 
 	@Override
 	protected void layout() {
-			btnWait.setPos(x, y);
-			btnSearch.setPos(btnWait.right(), y);
-			btnInfo.setPos(btnSearch.right(), y);
+			btnWait.setPos(x, camera.height - btnWait.height());
+			btnSearch.setPos(btnWait.right(), camera.height - btnSearch.height());
+			btnInfo.setPos(btnSearch.right(), camera.height - btnInfo.height());
 
 		for (QuickslotTool tool:slots) {
 			remove(tool);
@@ -105,7 +107,7 @@ public class Toolbar extends Component {
 
 		int active_slots = PixelDungeon.quickSlots();
 		float slot_x = width;
-		float slot_y = y + 4;
+		float slot_y = camera.height - QUICK_SLOT_HEIGHT;
 
 		int i = 0;
 		QuickslotTool slot;

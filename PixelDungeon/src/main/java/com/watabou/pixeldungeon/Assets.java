@@ -175,11 +175,12 @@ public class Assets {
 	public static final String SND_ROTTEN_DROP = "snd_rotten_drop.mp3";
 	public static final String SND_CRYSTAL = "snd_crystal.mp3";
 
-	public static final String SND_BITE = "snd_bite.mp3";			// by sonidotv, from freesound.org
-	public static final String SND_EXPLOSION = "snd_explosion.mp3"; // by kantouth, from freesound.org
+    public static final String SND_BITE      = "snd_bite.mp3";			// by sonidotv, from freesound.org
+    public static final String SND_EXPLOSION = "snd_explosion.mp3"; // by kantouth, from freesound.org
+    public static final String UI_ICONS      = "ui_icons.png";
 
 
-	private static int chromeType = 0;
+    private static int chromeType = 0;
 	private static int statusType = 0;
 	private static int toolbarType = 0;
 	private static int bannersType = 0;

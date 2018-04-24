@@ -51,7 +51,6 @@ import com.watabou.pixeldungeon.windows.elements.Tool;
 
 public class StatusPane extends Component {
 
-    private static final String UI_ICONS = "ui_icons.png";
     private NinePatch shield;
     private CompositeTextureImage avatar;
     private Emitter               blood;
@@ -167,7 +166,7 @@ public class StatusPane extends Component {
         btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
 
 
-        btnInventory = new Tool(UI_ICONS, 0) {
+        btnInventory = new Tool(Assets.UI_ICONS, 0) {
             private GoldIndicator gold;
 
             @Override
@@ -199,7 +198,7 @@ public class StatusPane extends Component {
 
         add(btnInventory);
 
-        btnSpells = new Tool(UI_ICONS, 6) {
+        btnSpells = new Tool(Assets.UI_ICONS, 6) {
             @Override
             protected void onClick() {
                 GameScene.show(new WndHeroSpells());
