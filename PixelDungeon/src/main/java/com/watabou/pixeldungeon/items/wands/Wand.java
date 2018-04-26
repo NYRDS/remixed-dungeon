@@ -281,7 +281,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		if (levelKnown) {
 			return (curChargeKnown ? curCharges() : "?") + "/" + maxCharges();
 		} else {
-			return null;
+			return "";
 		}
 	}
 

@@ -426,7 +426,7 @@ public class WndBag extends WndTabbed {
 		protected boolean onLongClick() {
 			if (listener == null) {
 				hide();
-				QuickSlot.selectItem(item instanceof Wand ? item : item.getClass(),0);
+				QuickSlot.selectItem(item.stackable ? item.getClass() : item,0);
 				return true;
 			} else {
 				return false;
