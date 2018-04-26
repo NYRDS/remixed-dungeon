@@ -156,7 +156,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createMultiline(float size) {
-		return createMultiline(null, size);
+		return createMultiline("", size);
 	}
 
 	public static Text createMultiline(final String text, float size) {
