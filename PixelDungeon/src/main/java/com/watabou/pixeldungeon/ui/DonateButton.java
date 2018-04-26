@@ -2,22 +2,17 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.windows.WndDonate;
 
-public class DonateButton extends Button {
-
-	private Image image;
+public class DonateButton extends ImageButton {
 
 	public DonateButton() {
-		super();
+		super(Icons.SUPPORT.get());
 
-		width = image.width;
-		height = image.height;
+		updateImage();
 	}
 
 	private void updateImage() {
@@ -45,13 +40,6 @@ public class DonateButton extends Button {
 		add(image);
 		layout();
 	}
-	
-	@Override
-	protected void createChildren() {
-		super.createChildren();
-
-		updateImage();
-	}
 
 	public String getText() {
 		switch (PixelDungeon.donated()) {
@@ -62,14 +50,6 @@ public class DonateButton extends Button {
 		default:
 			return Game.getVar(R.string.DonateButton_pleaseDonate);
 		}
-	}
-
-	@Override
-	protected void layout() {
-		super.layout();
-
-		image.x = x;
-		image.y = y;
 	}
 
 	@Override

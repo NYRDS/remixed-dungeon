@@ -34,8 +34,8 @@ public class Spell {
 
     protected String textureFile = "spellsIcons/common.png";
 
-    protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
-    protected String desc = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
+    protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name));
+    protected String desc = getClassParam("Info", Game.getVar(R.string.Item_Info));
 
     private SmartTexture icon = TextureCache.get(texture());
 
@@ -136,8 +136,8 @@ public class Spell {
         return textureResolution;
     }
 
-    protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-        return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+    private String getClassParam(String paramName, String defaultValue) {
+        return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, false);
     }
 
     public int level(){

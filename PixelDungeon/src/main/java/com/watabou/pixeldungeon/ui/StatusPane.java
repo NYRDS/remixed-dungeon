@@ -201,7 +201,7 @@ public class StatusPane extends Component {
         btnSpells = new Tool(Assets.UI_ICONS, 6) {
             @Override
             protected void onClick() {
-                GameScene.show(new WndHeroSpells());
+                GameScene.show(new WndHeroSpells(null));
             }
         };
 

@@ -1,50 +1,25 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.ui.Button;
 import com.watabou.utils.SystemTime;
 
-public class PlayGamesButton extends Button {
+public class PlayGamesButton extends ImageButton {
 
-	private Image image;
 	private long lastUpdatedTime;
 
 	public PlayGamesButton() {
-		super();
-		
-		width = image.width;
-		height = image.height;
+		super(Icons.get(Icons.PLAY_GAMES));
+		updateStatus();
 	}
 
 	private void updateStatus() {
-		if(Game.instance().playGames.isConnected()) {
+		if (Game.instance().playGames.isConnected()) {
 			image.brightness(1.5f);
 		} else {
 			image.brightness(0.5f);
 		}
 	}
 
-	@Override
-	protected void createChildren() {
-		super.createChildren();
-		
-		image = Icons.get(Icons.PLAY_GAMES);
-
-		updateStatus();
-
-		add( image );
-	}
-	
-	@Override
-	protected void layout() {
-		super.layout();
-
-		image.x = x;
-		image.y = y;
-	}
-	
 	@Override
 	public void update() {
 		super.update();

@@ -11,34 +11,29 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
 import java.io.File;
 
-public class ModsButton extends Button implements InterstitialPoint, DownloadStateListener.IDownloadComplete {
+public class ModsButton extends ImageButton implements InterstitialPoint, DownloadStateListener.IDownloadComplete {
 
-	private Image image;
 	private Text  text;
-
-	private WndMessage downloadProgress;
 
 	static private boolean needUpdate;
 
 	public ModsButton() {
-		super();
+		super(Icons.MODDING_MODE.get());
 
-		width = image.width;
-		height = image.height;
+		text = new SystemText(GuiProperties.regularFontSize());
+		text.text(PixelDungeon.activeMod());
+		add(text);
 	}
 
 	static public void modUpdated() {
@@ -54,24 +49,10 @@ public class ModsButton extends Button implements InterstitialPoint, DownloadSta
 		super.update();
 	}
 
-	@Override
-	protected void createChildren() {
-		super.createChildren();
-
-		image = Icons.MODDING_MODE.get();
-		add(image);
-
-		text = new SystemText(GuiProperties.regularFontSize());
-		text.text(PixelDungeon.activeMod());
-		add(text);
-	}
 
 	@Override
 	protected void layout() {
 		super.layout();
-
-		image.x = x;
-		image.y = y;
 
 		text.x = x;
 		text.y = image.y + image.height + 2;

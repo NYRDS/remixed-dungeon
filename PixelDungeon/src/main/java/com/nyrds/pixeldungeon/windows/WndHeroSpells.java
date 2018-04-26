@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -27,8 +28,12 @@ public class WndHeroSpells extends Window {
 	private static final int MARGIN = 2;
 	private static final int WINDOW_MARGIN = 10;
 
-	public WndHeroSpells() {
+	private Listener listener;
+
+	public WndHeroSpells(Listener listener) {
 		super();
+
+		this.listener = listener;
 
 		final Hero hero = Dungeon.hero;
 		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
@@ -62,7 +67,7 @@ public class WndHeroSpells extends Window {
 		}
 	}
 
-	private float addSpell(String spellName ,final Hero hero,  float yPos, int i) {
+	private float addSpell(String spellName, final Hero hero,  float yPos, int i) {
 
 		final Spell spell = SpellFactory.getSpellByName(spellName);
 		if(spell == null || spell.level() > hero.magicLvl()) {
@@ -80,11 +85,20 @@ public class WndHeroSpells extends Window {
 		txtName.y = yPos;
 		add(txtName);
 
-		Image icon = spell.image();
 
-		icon.frame( spell.film.get( spell.imageIndex ) );
-		icon.y = txtName.bottom();
-		icon.x = xPos;
+		Image spellImage = spell.image();
+		spellImage.frame(spell.film.get( spell.imageIndex ));
+		ImageButton icon = new ImageButton(spellImage) {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				if(listener!=null) {
+					listener.onSelect(spell);
+				}
+			}
+		};
+
+		icon.setPos(xPos, txtName.bottom());
 		add( icon );
 
 		SimpleButton btnCast = new SimpleButton(Icons.get(Icons.BTN_TARGET)) {
@@ -94,7 +108,7 @@ public class WndHeroSpells extends Window {
 			}
 		};
 		btnCast.setRect(
-				icon.x + icon.width() + MARGIN, icon.y,
+				icon.right() + MARGIN, icon.top(),
 				16, 15 );
 		add( btnCast );
 
@@ -105,7 +119,7 @@ public class WndHeroSpells extends Window {
 			}
 		};
 		btnInfo.setRect(
-				icon.x + icon.width() + MARGIN, btnCast.bottom() + MARGIN,
+				icon.right() + MARGIN, btnCast.bottom() + MARGIN,
 				16, 15 );
 		add( btnInfo );
 
@@ -121,5 +135,9 @@ public class WndHeroSpells extends Window {
 		}
 
 		return txtCost.bottom() + MARGIN;
+	}
+
+	public interface Listener {
+		void onSelect( Spell spell );
 	}
 }
