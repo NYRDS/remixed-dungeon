@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ImageButton;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -87,13 +88,14 @@ public class WndHeroSpells extends Window {
 
 
 		Image spellImage = spell.image();
-		spellImage.frame(spell.film.get( spell.imageIndex ));
 		ImageButton icon = new ImageButton(spellImage) {
 			@Override
 			protected void onClick() {
 				super.onClick();
 				if(listener!=null) {
 					listener.onSelect(spell);
+				} else {
+					QuickSlot.selectItem(spell,0);
 				}
 			}
 		};

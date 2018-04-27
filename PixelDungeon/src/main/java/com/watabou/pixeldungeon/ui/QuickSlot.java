@@ -17,8 +17,11 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Button;
@@ -37,7 +40,7 @@ import com.watabou.utils.Bundle;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class QuickSlot extends Button implements WndBag.Listener {
+public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.Listener {
 
 	private static final String TXT_SELECT_ITEM = Game.getVar(R.string.QuickSlot_SelectedItem);
 	private static final String QUICKSLOT = "quickslot";
@@ -45,7 +48,7 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	private static ArrayList<QuickSlot> slots = new ArrayList<>();
 	private static HashMap<Integer, Object> qsStorage = new HashMap<>();
 
-	// Either Item or Class<? extends Item>
+	// Either Item or Class<? extends Item> or Spell
 	private Object quickslotItem;
 
 	private Item itemInSlot;
@@ -144,16 +147,25 @@ public class QuickSlot extends Button implements WndBag.Listener {
 
 	@Override
 	protected boolean onLongClick() {
-		GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
+		if(Dungeon.hero.spellUser) {
+			GameScene.selectSpell(this);
+		} else {
+			GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
+		}
 		return true;
 	}
 
 	@SuppressWarnings("unchecked")
 	private Item select() {
-		Object quickslotItem = quickslotItem();
+		Object quickslotItem = this.quickslotItem;
 		
 		if (quickslotItem instanceof Item) {
 			return (Item) quickslotItem;
+		}
+
+		if(quickslotItem instanceof Spell) {
+			Spell spell = (Spell)quickslotItem;
+			return spell.itemForSlot();
 		}
 
 		if (quickslotItem != null) {
@@ -161,15 +173,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 			return item != null ? item : Item.virtual((Class<? extends Item>) quickslotItem);
 		}
 
-		return null;
-	}
 
-	@Override
-	public void onSelect(Item item) {
-		if (item != null) {
-			quickslotItem(item.stackable ? item.getClass() : item);
-			refresh();
-		}
+		return null;
 	}
 
 	public void item(Item item) {
@@ -188,6 +193,12 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	}
 
 	private void enableSlot() {
+
+	    if(itemInSlot instanceof Spell.SpellItem) {
+	        slot.enable(true);
+	        return;
+        }
+
 		slot.enable(itemInSlot != null && itemInSlot.quantity() > 0
 				&& (Dungeon.hero.belongings.backpack.contains(itemInSlot) || itemInSlot.isEquipped(Dungeon.hero)));
 	}
@@ -262,23 +273,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 		return null;
 	}
 
-	public static void selectItem(Object object, int n) {
-		if (n < slots.size()) {
-			QuickSlot slot = slots.get(n);
-			slot.quickslotItem(object);
-			slot.onSelect(slot.select());
-		} else {
-			qsStorage.put(n, object);
-		}
-
-	}
-
 	public static void cleanStorage() {
 		qsStorage.clear();
-	}
-
-	private Object quickslotItem() {
-		return quickslotItem;
 	}
 
 	private void quickslotItem(Object quickslotItem) {
@@ -292,9 +288,11 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	public static void save(Bundle bundle){
 		ArrayList<String> classes = new ArrayList<>();
 		for(QuickSlot slot:slots) {
-			Object stored = slot.quickslotItem();
+			Object stored = slot.quickslotItem;
 			if(stored instanceof Class) {
 				classes.add(((Class)stored).getCanonicalName());
+			} else if (stored instanceof Spell) {
+				classes.add(((Spell)stored).getSpellClass());
 			} else {
 				classes.add("");
 			}
@@ -304,15 +302,46 @@ public class QuickSlot extends Button implements WndBag.Listener {
 
 	public static void restore(Bundle bundle){
 		String [] classes = bundle.getStringArray(QUICKSLOT);
-
 		for(int i =0;i< classes.length;i++) {
 			if(!classes[i].isEmpty()) {
 				try {
+					Spell spell = SpellFactory.getSpellByName(classes[i]);
+					if(spell != null) {
+						selectItem(spell, i);
+						continue;
+					}
 					selectItem(Class.forName(classes[i]),i );
 				} catch (ClassNotFoundException e) {
 					EventCollector.logException(e);
 				}
 			}
+		}
+		refresh();
+	}
+
+	public static void selectItem(Object object, int n) {
+		if (n < slots.size()) {
+			QuickSlot slot = slots.get(n);
+			slot.quickslotItem(object);
+			slot.onSelect(slot.select());
+		} else {
+			qsStorage.put(n, object);
+		}
+	}
+
+	@Override
+	public void onSelect(Item item) {
+		if (item != null) {
+			quickslotItem(item.stackable ? item.getClass() : item);
+			refresh();
+		}
+	}
+
+	@Override
+	public void onSelect(Spell spell) {
+		if(spell != null) {
+			quickslotItem(spell);
+			refresh();
 		}
 	}
 }

@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -716,6 +717,15 @@ public class GameScene extends PixelScene {
 
         WndBag wnd = mode == Mode.SEED ? WndBag.seedPouch(listener, mode, title)
                 : WndBag.lastBag(listener, mode, title);
+        scene.add(wnd);
+
+        return wnd;
+    }
+
+    public static WndHeroSpells selectSpell(WndHeroSpells.Listener listener) {
+        cancelCellSelector();
+
+        WndHeroSpells wnd = new WndHeroSpells(listener);
         scene.add(wnd);
 
         return wnd;
