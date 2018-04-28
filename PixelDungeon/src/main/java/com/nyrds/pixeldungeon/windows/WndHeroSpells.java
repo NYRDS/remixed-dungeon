@@ -93,7 +93,7 @@ public class WndHeroSpells extends Window {
 			protected void onClick() {
 				super.onClick();
 				if(listener!=null) {
-					listener.onSelect(spell);
+					listener.onSelect(spell.itemForSlot());
 				} else {
 					QuickSlot.selectItem(spell,0);
 				}
@@ -140,6 +140,6 @@ public class WndHeroSpells extends Window {
 	}
 
 	public interface Listener {
-		void onSelect( Spell spell );
+		void onSelect( Spell.SpellItem spell );
 	}
 }

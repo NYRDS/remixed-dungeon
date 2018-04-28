@@ -158,8 +158,8 @@ public class Spell {
         return chr.magicLvl() - level;
     }
 
-
-    public Item itemForSlot() {
+    @NonNull
+    public SpellItem itemForSlot() {
         if (spellItem == null) {
             spellItem = new SpellItem() {
                 @Override
@@ -176,11 +176,26 @@ public class Spell {
                 public void execute(Hero hero) {
                     Spell.this.cast(hero);
                 }
+
+                @Override
+                public String name() {
+                    return Spell.this.name();
+                }
+
+                @Override
+                public String info() {
+                    return Spell.this.desc();
+                }
+
+                public Spell spell() {
+                    return Spell.this;
+                }
             };
         }
         return spellItem;
     }
 
-    public class SpellItem extends Item {
+    public abstract class SpellItem extends Item {
+            abstract public Spell spell();
     }
 }

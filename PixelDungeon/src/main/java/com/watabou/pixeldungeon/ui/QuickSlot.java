@@ -281,18 +281,23 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 		if(quickslotItem instanceof Item) {
 			((Item)quickslotItem).setQuickSlotIndex(index);
 		}
+
+		if(this.quickslotItem instanceof Item) {
+			((Item)this.quickslotItem).setQuickSlotIndex(-1);
+		}
+
 		qsStorage.put(index, quickslotItem);
 		this.quickslotItem = quickslotItem;
 	}
 
 	public static void save(Bundle bundle){
 		ArrayList<String> classes = new ArrayList<>();
-		for(QuickSlot slot:slots) {
-			Object stored = slot.quickslotItem;
+		for(Integer index:qsStorage.keySet()) {
+			Object stored = qsStorage.get(index);
 			if(stored instanceof Class) {
 				classes.add(((Class)stored).getCanonicalName());
-			} else if (stored instanceof Spell) {
-				classes.add(((Spell)stored).getSpellClass());
+			} else if (stored instanceof Spell.SpellItem) {
+				classes.add(((Spell.SpellItem)stored).spell().getSpellClass());
 			} else {
 				classes.add("");
 			}
@@ -301,13 +306,14 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 	}
 
 	public static void restore(Bundle bundle){
+		qsStorage.clear();
 		String [] classes = bundle.getStringArray(QUICKSLOT);
 		for(int i =0;i< classes.length;i++) {
 			if(!classes[i].isEmpty()) {
 				try {
-					Spell spell = SpellFactory.getSpellByName(classes[i]);
-					if(spell != null) {
-						selectItem(spell, i);
+					if(SpellFactory.hasSpellForName(classes[i])) {
+						Spell spell = SpellFactory.getSpellByName(classes[i]);
+						selectItem(spell.itemForSlot(), i);
 						continue;
 					}
 					selectItem(Class.forName(classes[i]),i );
@@ -338,7 +344,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 	}
 
 	@Override
-	public void onSelect(Spell spell) {
+	public void onSelect(Spell.SpellItem spell) {
 		if(spell != null) {
 			quickslotItem(spell);
 			refresh();

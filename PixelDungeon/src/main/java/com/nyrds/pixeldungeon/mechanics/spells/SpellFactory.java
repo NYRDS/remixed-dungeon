@@ -57,6 +57,10 @@ public class SpellFactory {
 		//registerSpellClass(TownPortal.class);
 	}
 
+	public static boolean hasSpellForName (String name) {
+		return mSpellsList.get(name) != null;
+	}
+
 	@Nullable
 	public static Spell getSpellByName(String name) {
 		try {
