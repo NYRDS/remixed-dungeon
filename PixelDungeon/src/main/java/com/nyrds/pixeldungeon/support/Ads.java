@@ -11,6 +11,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -35,7 +36,7 @@ public class Ads {
 	}
 
 	public static boolean googleAdsUsable() {
-		return Flavours.haveAds();//&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());// && !EmulatorDetector.isEmulator();
+		return Flavours.haveAds();
 	}
 
 	private static void displayOwnEasyModeBanner() {
