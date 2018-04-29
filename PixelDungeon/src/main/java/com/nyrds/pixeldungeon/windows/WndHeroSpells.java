@@ -97,6 +97,7 @@ public class WndHeroSpells extends Window {
 				} else {
 					QuickSlot.selectItem(spell,0);
 				}
+				hide();
 			}
 		};
 

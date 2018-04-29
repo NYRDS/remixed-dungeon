@@ -278,12 +278,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 	}
 
 	private void quickslotItem(Object quickslotItem) {
+        if(this.quickslotItem instanceof Item) {
+            ((Item)this.quickslotItem).setQuickSlotIndex(-1);
+        }
+
 		if(quickslotItem instanceof Item) {
 			((Item)quickslotItem).setQuickSlotIndex(index);
-		}
-
-		if(this.quickslotItem instanceof Item) {
-			((Item)this.quickslotItem).setQuickSlotIndex(-1);
 		}
 
 		qsStorage.put(index, quickslotItem);
@@ -292,8 +292,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
 	public static void save(Bundle bundle){
 		ArrayList<String> classes = new ArrayList<>();
-		for(Integer index:qsStorage.keySet()) {
-			Object stored = qsStorage.get(index);
+
+		for (int  i=0;i<slots.size();i++) {
+			Object stored = qsStorage.get(i);
 			if(stored instanceof Class) {
 				classes.add(((Class)stored).getCanonicalName());
 			} else if (stored instanceof Spell.SpellItem) {
