@@ -38,7 +38,7 @@ public class Spell {
     protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name));
     protected String desc = getClassParam("Info", Game.getVar(R.string.Item_Info));
 
-   protected int imageIndex = 0;
+    protected int imageIndex = 0;
 
 
     private SpellItem spellItem;

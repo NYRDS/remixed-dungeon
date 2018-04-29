@@ -31,7 +31,6 @@ import static com.watabou.pixeldungeon.ui.Window.GAP;
 
 public class IconTitle extends Component {
 
-
 	protected Image imIcon;
 	protected Text tfLabel;
 	

@@ -142,7 +142,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
 	@Override
 	protected void onClick() {
-		GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
+		if(objectForSlot == null) {
+			GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
+		} else {
+			selectItem(objectForSlot, index);
+			objectForSlot = null;
+		}
 	}
 
 	@Override
@@ -350,5 +355,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 			quickslotItem(spell);
 			refresh();
 		}
+	}
+
+	private static Object objectForSlot;
+	static public void selectSlotFor(Object item) {
+		objectForSlot = item;
+		Game.showWindow("Select quick slot for it");
 	}
 }

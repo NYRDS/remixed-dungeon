@@ -44,9 +44,7 @@ public class WndItem extends Window {
 
 		int WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
 
-		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( item ) );
-		titlebar.label( Utils.capitalize( item.toString() ) );
+		IconTitle titlebar = new IconTitle(new ItemSprite( item ), Utils.capitalize( item.toString() ));
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
