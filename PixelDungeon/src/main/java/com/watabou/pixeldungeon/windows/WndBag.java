@@ -303,11 +303,8 @@ public class WndBag extends WndTabbed {
 		}
 	}
 	
-	private static class Placeholder extends Item {		
-		{
-			name = null;
-		}
-		
+	private static class Placeholder extends Item {
+
 		public Placeholder( int image ) {
 			this.image = image;
 		}
@@ -373,24 +370,23 @@ public class WndBag extends WndTabbed {
 					bg.ra = 0.1f;
 					bg.ba = 0.1f;
 				}
-				
-				if (item.name() == null) {
-					enable( false );
+				if (item instanceof Placeholder) {
+					enable(false);
 				} else {
-					enable( 
-						mode == Mode.FOR_SALE && (item.price() > 0) && (!item.isEquipped( Dungeon.hero ) || !item.cursed) ||
-						mode == Mode.UPGRADEABLE && item.isUpgradable() || 
-						mode == Mode.UNIDENTIFED && !item.isIdentified() ||
-						mode == Mode.QUICKSLOT ||
-						mode == Mode.WEAPON && (item instanceof MeleeWeapon || item instanceof Boomerang) ||
-						mode == Mode.ARMOR && (item instanceof Armor) ||
-						mode == Mode.WAND && (item instanceof Wand) ||
-						mode == Mode.SEED && (item instanceof Seed) ||
-						mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) || 
-						mode == Mode.MOISTABLE && ( item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood ) ||
-						mode == Mode.FUSEABLE && ((item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof Bow || item instanceof Wand) && !(item instanceof IChaosItem)) ||
-						mode == Mode.UPGRADABLE_WEAPON && ((item instanceof MeleeWeapon || item instanceof Boomerang ) && (item.isUpgradable())) ||
-						mode == Mode.ALL
+					enable(
+							mode == Mode.FOR_SALE && (item.price() > 0) && (!item.isEquipped(Dungeon.hero) || !item.cursed) ||
+									mode == Mode.UPGRADEABLE && item.isUpgradable() ||
+									mode == Mode.UNIDENTIFED && !item.isIdentified() ||
+									mode == Mode.QUICKSLOT ||
+									mode == Mode.WEAPON && (item instanceof MeleeWeapon || item instanceof Boomerang) ||
+									mode == Mode.ARMOR && (item instanceof Armor) ||
+									mode == Mode.WAND && (item instanceof Wand) ||
+									mode == Mode.SEED && (item instanceof Seed) ||
+									mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) ||
+									mode == Mode.MOISTABLE && (item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood) ||
+									mode == Mode.FUSEABLE && ((item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof Bow || item instanceof Wand) && !(item instanceof IChaosItem)) ||
+									mode == Mode.UPGRADABLE_WEAPON && ((item instanceof MeleeWeapon || item instanceof Boomerang) && (item.isUpgradable())) ||
+									mode == Mode.ALL
 					);
 				}
 			} else {

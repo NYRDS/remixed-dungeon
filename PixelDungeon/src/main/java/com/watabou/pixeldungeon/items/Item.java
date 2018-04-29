@@ -79,11 +79,15 @@ public class Item implements Bundlable, Presser {
 	@NonNull
 	public String defaultAction = AC_THROW;
 
+	@NonNull
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
+	@NonNull
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
+	@NonNull
 	protected String info2 = getClassParam("Info2", Game.getVar(R.string.Item_Info2), false);
 
 	protected int image = 0;
+
 	protected String imageFile;
 
 	public  boolean stackable = false;
