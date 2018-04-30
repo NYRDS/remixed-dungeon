@@ -209,7 +209,7 @@ public class TitleScene extends PixelScene {
 				super.onClick();
 			}
 		};
-		btnStats.setPos(w - btnSocial.width(), btnStats.bottom() + 2);
+		btnSocial.setPos(w - btnSocial.width(), btnStats.bottom() + 2);
 
 		fadeIn();
 	}
