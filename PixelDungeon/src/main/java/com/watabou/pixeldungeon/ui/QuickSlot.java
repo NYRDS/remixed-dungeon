@@ -90,6 +90,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 		slot = new ItemSlot() {
 			@Override
 			protected void onClick() {
+
+				if(objectForSlot!=null) {
+					updateSlotBySelection();
+					return;
+				}
+
 				if (targeting) {
 					GameScene.handleCell(lastTarget.getPos());
 				} else {
@@ -140,14 +146,20 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 		crossB.y = PixelScene.align(y + (height - crossB.height) / 2);
 	}
 
+
+	private void updateSlotBySelection(){
+		selectItem(objectForSlot, index);
+		objectForSlot = null;
+	}
+
 	@Override
 	protected void onClick() {
-		if(objectForSlot == null) {
-			GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
-		} else {
-			selectItem(objectForSlot, index);
-			objectForSlot = null;
+		if(objectForSlot != null) {
+			updateSlotBySelection();
+			return;
 		}
+
+		GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
 	}
 
 	@Override
