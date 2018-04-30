@@ -308,7 +308,7 @@ public class GameScene extends PixelScene {
         statusPane.setSize(uiCamera.width, 0);
         add(statusPane);
 
-        toolbar = new Toolbar();
+        toolbar = new Toolbar(Dungeon.hero);
         toolbar.camera = uiCamera;
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
         add(toolbar);

@@ -22,7 +22,7 @@ public class SystemFloatingText extends SystemText {
 	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<>();
 
 	public SystemFloatingText() {
-		super(null, GuiProperties.mediumTitleFontSize(), false);
+		super("", GuiProperties.mediumTitleFontSize(), false);
 
 		speed.y = -DISTANCE / LIFESPAN;
 	}
