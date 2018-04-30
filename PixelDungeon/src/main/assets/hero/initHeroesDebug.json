@@ -6,19 +6,23 @@
     },
     "items": [
       {
-        "kind": "Gold",
+        "kind": "AmokDart",
         "quantity": 100
       },
       {
-        "kind": "BlackSkullOfMastery"
+        "kind": "CurareDart",
+        "quantity": 100
       },
       {
-        "kind": "PotionOfLiquidFlame",
+        "kind": "WandOfMagicMissile"
+      },
+      {
+        "kind": "Ankh",
         "quantity": 100
       }
     ],
     "str": 1000,
-    "hp": 2000,
+    "hp": 2,
     "magicAffinity": "Common"
   },
   "non_expert": {

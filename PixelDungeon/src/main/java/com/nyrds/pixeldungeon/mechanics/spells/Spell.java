@@ -24,7 +24,7 @@ public class Spell {
 
     protected int level             = 1;
     protected int spellCost         = 5;
-    protected int textureResolution = 32;
+    protected int textureResolution = 16;
 
     protected float castTime = 1f;
     protected float duration = 10f;
