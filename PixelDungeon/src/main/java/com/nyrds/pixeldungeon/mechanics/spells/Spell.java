@@ -22,9 +22,9 @@ public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS = Game.getVar(R.string.Spells_NotEnoughSP);
     private static final String TXT_SELECT_CELL      = Game.getVar(R.string.Spell_SelectACell);
 
-    protected int level             = 1;
-    protected int spellCost         = 5;
-    protected int textureResolution = 16;
+    protected        int level             = 1;
+    protected        int spellCost         = 5;
+    protected static int textureResolution = 16;
 
     protected float castTime = 1f;
     protected float duration = 10f;
@@ -141,7 +141,7 @@ public class Spell {
         return Utils.format(TXT_NOT_ENOUGH_SOULS, spell);
     }
 
-    public int textureResolution() {
+    static public int textureResolution() {
         return textureResolution;
     }
 

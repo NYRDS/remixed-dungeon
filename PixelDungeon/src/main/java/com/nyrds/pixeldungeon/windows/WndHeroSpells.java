@@ -47,7 +47,6 @@ public class WndHeroSpells extends Window {
 
 		float yPos = txtTitle.bottom() + MARGIN;
 
-		int cols = 2;
 		int col  = 0;
         float nextRowY = yPos;
 
@@ -58,7 +57,7 @@ public class WndHeroSpells extends Window {
 
 				nextRowY = addSpell(spell, hero, col, yPos);
 				col++;
-				if(col == cols) {
+				if( col * (Spell.textureResolution() + MARGIN) > width) {
 				    yPos = nextRowY;
 				    col = 0;
                 }
