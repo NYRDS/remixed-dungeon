@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Spell {
@@ -45,7 +44,7 @@ public class Spell {
 
     private Image spellImage;
 
-    void setupFromJson(JSONObject obj) throws JSONException {
+    void setupFromJson(JSONObject obj) {
         name = obj.optString("name", name);
         desc = obj.optString("name", desc);
         textureFile = obj.optString("textureFile", textureFile);

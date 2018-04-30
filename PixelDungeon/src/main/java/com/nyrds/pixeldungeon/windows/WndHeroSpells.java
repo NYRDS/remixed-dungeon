@@ -47,27 +47,34 @@ public class WndHeroSpells extends Window {
 
 		float yPos = txtTitle.bottom() + MARGIN;
 
+		int cols = 2;
+		int col  = 0;
+        float nextRowY = yPos;
+
 		ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
 		if(spells != null) {
-			int i = 1;
+
 			for (String spell : spells) {
-				yPos = addSpell(spell, hero, yPos, i);
-				i++;
+
+				nextRowY = addSpell(spell, hero, col, yPos);
+				col++;
+				if(col == cols) {
+				    yPos = nextRowY;
+				    col = 0;
+                }
 			}
 		}
-		resize(WndHelper.getLimitedWidth(120), (int) yPos);
+		resize(WndHelper.getLimitedWidth(120), (int) nextRowY);
 	}
 
-	private float addSpell(String spellName, final Hero hero,  float yPos, int i) {
+	private float addSpell(String spellName, final Hero hero,  int col, float yPos) {
 
 		final Spell spell = SpellFactory.getSpellByName(spellName);
 		if(spell == null /*|| spell.level() > hero.magicLvl()*/) {
 			return yPos;
 		}
-		int xPos = 0;
-		if ( i % 2 == 0 ) {
-			xPos = width - 48 - MARGIN * 2;
-		}
+
+		int xPos = col * (spell.textureResolution() + MARGIN);
 
 		Image spellImage = spell.image();
 		ImageButton icon = new ImageButton(spellImage) {
@@ -91,10 +98,6 @@ public class WndHeroSpells extends Window {
 
 		icon.setPos(xPos, yPos);
 		add( icon );
-
-		if ( xPos == 0 ){
-			return yPos;
-		}
 
 		return icon.bottom() + MARGIN;
 	}
