@@ -231,7 +231,9 @@ public class SystemText extends Text {
 			while (startLine < text.length()) {
 
 				int nextLine = fillLine(startLine);
-
+				if(nextLine == startLine) { // WTF???
+					return;
+				}
 				height += fontHeight;
 
 				if (lineWidth > 0) {

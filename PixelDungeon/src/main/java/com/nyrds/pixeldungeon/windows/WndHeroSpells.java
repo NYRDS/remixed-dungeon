@@ -3,10 +3,12 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -14,6 +16,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.windows.IconTitle;
 
 import java.util.ArrayList;
 
@@ -34,18 +37,21 @@ public class WndHeroSpells extends Window {
 
 		final Hero hero = Dungeon.hero;
 
-		Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
-		txtTitle.hardlight(Window.TITLE_COLOR);
-		add(txtTitle);
+		String affinity = hero.heroClass.getMagicAffinity();
+
+		IconTitle title  = new IconTitle(new Image(Assets.UI_ICONS,16, SpellHelper.iconIdByAffinity(affinity)), affinity);
+		title.setRect(0,0,width, WndHelper.getFullscreenHeight());
+
+		add(title);
 
 		Text txtLvl = PixelScene.createText(TXT_LVL +": "+ hero.magicLvl(), GuiProperties.titleFontSize());
 		txtLvl.hardlight(Window.TITLE_COLOR);
 		txtLvl.x = width - txtLvl.width();
 		add(txtLvl);
 
-		String affinity = hero.heroClass.getMagicAffinity();
 
-		float yPos = txtTitle.bottom() + MARGIN;
+
+		float yPos = title.bottom() + MARGIN;
 
 		int col  = 0;
         float nextRowY = yPos;
@@ -73,7 +79,7 @@ public class WndHeroSpells extends Window {
 			return yPos;
 		}
 
-		int xPos = col * (spell.textureResolution() + MARGIN);
+		int xPos = col * (Spell.textureResolution() + MARGIN);
 
 		Image spellImage = spell.image();
 		ImageButton icon = new ImageButton(spellImage) {

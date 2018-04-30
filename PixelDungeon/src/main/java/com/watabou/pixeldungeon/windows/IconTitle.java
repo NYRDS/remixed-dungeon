@@ -31,8 +31,8 @@ import static com.watabou.pixeldungeon.ui.Window.GAP;
 
 public class IconTitle extends Component {
 
-	protected Image imIcon;
-	protected Text tfLabel;
+    private Image imIcon;
+    private Text  tfLabel;
 	
 	public IconTitle() {
 		super();
@@ -63,8 +63,8 @@ public class IconTitle extends Component {
 	
 	@Override
 	protected void layout() {
-		imIcon.x = 0;
-		imIcon.y = 0;
+		imIcon.x = x;
+		imIcon.y = y;
 		
 		tfLabel.x = PixelScene.align( PixelScene.uiCamera, imIcon.x + imIcon.width() + GAP );
 		tfLabel.maxWidth((int)(width - tfLabel.x));

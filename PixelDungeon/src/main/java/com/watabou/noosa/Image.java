@@ -19,9 +19,11 @@ package com.watabou.noosa;
 
 import android.graphics.RectF;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.nio.FloatBuffer;
 
@@ -58,6 +60,18 @@ public class Image extends Visual {
 	public Image( Object tx, int left, int top, int width, int height ) {
 		this( tx );
 		frame( texture.uvRect( left,  top,  left + width, top + height ) );
+	}
+
+	public Image(Object tx, int cellSize, int index) {
+		this(tx);
+
+		TextureFilm film = new TextureFilm(tx, cellSize, cellSize);
+
+		RectF frame = film.get(index);
+		if (frame == null) {
+			throw new TrackedRuntimeException(Utils.format("bad index %d for image %s", index, tx.toString()));
+		}
+		frame(frame);
 	}
 
 	public void texture( Object tx ) {

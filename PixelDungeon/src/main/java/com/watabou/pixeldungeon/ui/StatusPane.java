@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.Flavours;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
@@ -198,7 +199,7 @@ public class StatusPane extends Component {
 
         add(btnInventory);
 
-        btnSpells = new Tool(Assets.UI_ICONS, 6) {
+        btnSpells = new Tool(Assets.UI_ICONS, SpellHelper.iconIdByHero(hero)) {
             @Override
             protected void onClick() {
                 GameScene.show(new WndHeroSpells(null));

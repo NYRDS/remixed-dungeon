@@ -81,4 +81,5 @@ public class SpellFactory {
 	public static ArrayList<String> getSpellsByAffinity(String affinity) {
 		return mSpellsByAffinity.get(affinity);
 	}
+
 }
