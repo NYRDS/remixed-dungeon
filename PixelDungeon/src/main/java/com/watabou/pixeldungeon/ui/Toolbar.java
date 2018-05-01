@@ -123,11 +123,6 @@ public class Toolbar extends Component {
 		toolbar.remove(slotBox);
 		toolbar.remove(actionBox);
 
-		actionBox.setAlign(HBox.Align.Left);
-		actionBox.setSize(width(),btnInfo.height());
-		toolbar.add(actionBox);
-
-
 		slotBox.setAlign(HBox.Align.Center);
 
 		for (QuickslotTool tool:slots) {
@@ -153,8 +148,12 @@ public class Toolbar extends Component {
 		}
 
 
+		actionBox.setAlign(HBox.Align.Left);
+		actionBox.setSize(width(),btnInfo.height());
+		toolbar.add(actionBox);
+
 		toolbar.setAlign(VBox.Align.Bottom);
-		toolbar.setRect(0,0,width(),height());
+		toolbar.setRect(camera.x,camera.y,camera.width,camera.height);
 		add(toolbar);
 	}
 

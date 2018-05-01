@@ -25,7 +25,7 @@ public class VBox extends Component {
     }
 
     private void alignTop() {
-        float pos = y;
+        float pos = top();
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
@@ -36,7 +36,7 @@ public class VBox extends Component {
     }
 
     private void alignBottom() {
-        float pos = height();
+        float pos = bottom();
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
@@ -64,7 +64,7 @@ public class VBox extends Component {
     private void alignCenter() {
         float childsHeight = childsHeight();
 
-        float pos = y + (height() - childsHeight()) / 2;
+        float pos = top() + (height() - childsHeight()) / 2;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {

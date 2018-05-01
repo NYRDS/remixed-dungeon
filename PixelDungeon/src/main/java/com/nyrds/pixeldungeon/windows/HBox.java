@@ -25,7 +25,7 @@ public class HBox extends Component {
     }
 
     private void alignLeft() {
-        float pos = x;
+        float pos = left();
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
@@ -36,7 +36,7 @@ public class HBox extends Component {
     }
 
     private void alignRight() {
-        float pos = width();
+        float pos = right();
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
@@ -64,7 +64,7 @@ public class HBox extends Component {
     private void alignCenter() {
         float childsWidth = childsWidth();
 
-        float pos = x + (width() - childsWidth) / 2;
+        float pos = left() + (width() - childsWidth) / 2;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
