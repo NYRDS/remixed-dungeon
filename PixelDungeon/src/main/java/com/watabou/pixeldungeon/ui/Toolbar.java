@@ -153,7 +153,7 @@ public class Toolbar extends Component {
 		toolbar.add(actionBox);
 
 		toolbar.setAlign(VBox.Align.Bottom);
-		toolbar.setRect(camera.x,camera.y,camera.width,camera.height);
+		toolbar.setRect(x,y,width,height);
 		add(toolbar);
 	}
 
