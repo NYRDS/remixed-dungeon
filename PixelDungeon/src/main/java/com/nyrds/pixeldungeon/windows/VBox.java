@@ -7,13 +7,13 @@ import com.watabou.noosa.ui.Component;
  * Created by mike on 01.05.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
-public class HBox extends Component {
+public class VBox extends Component {
 
     public enum Align {
-      Left,Right,Center
+      Top,Bottom,Center
     }
 
-    private Align align = Align.Left;
+    private Align align = Align.Top;
     private int gap = 0;
 
     public void setAlign(Align align) {
@@ -24,52 +24,52 @@ public class HBox extends Component {
         this.gap = gap;
     }
 
-    private void alignLeft() {
-        float pos = x;
+    private void alignTop() {
+        float pos = y;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
-                ((Component) g).setPos(pos, y);
-                pos += ((Component) g).width() + gap;
+                ((Component) g).setPos(x, pos);
+                pos += ((Component) g).height() + gap;
             }
         }
     }
 
-    private void alignRight() {
-        float pos = width();
+    private void alignBottom() {
+        float pos = height();
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
-                ((Component) g).setPos(pos - ((Component) g).width() - gap, y);
-                pos -= ((Component) g).width() + gap;
+                ((Component) g).setPos(x,pos - ((Component) g).height() - gap);
+                pos -= ((Component) g).height() + gap;
             }
         }
     }
 
-    private float childsWidth() {
-        float childsWidth = 0;
+    private float childsHeight() {
+        float childsHeight = 0;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
-                childsWidth += ((Component) g).width() + gap;
+                childsHeight += ((Component) g).height() + gap;
             }
         }
-        return childsWidth;
+        return childsHeight;
     }
 
     public boolean willFit() {
-        return childsWidth() <= width();
+        return childsHeight() <= height();
     }
 
     private void alignCenter() {
-        float childsWidth = childsWidth();
+        float childsHeight = childsHeight();
 
-        float pos = x + (width() - childsWidth) / 2;
+        float pos = y + (height() - childsHeight()) / 2;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
-                ((Component) g).setPos(pos, y);
-                pos += ((Component) g).width() + gap;
+                ((Component) g).setPos(x, pos);
+                pos += ((Component) g).height() + gap;
             }
         }
     }
@@ -81,11 +81,11 @@ public class HBox extends Component {
 
         switch (align) {
 
-            case Left:
-                alignLeft();
+            case Top:
+                alignTop();
                 break;
-            case Right:
-                alignRight();
+            case Bottom:
+                alignBottom();
                 break;
             case Center:
                 alignCenter();
