@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
@@ -53,6 +54,8 @@ public class Toolbar extends Component {
 	private Tool btnSearch;
 	private Tool btnInfo;
 	private InventoryTool btnInventory;
+
+	private HBox slotBox = new HBox();
 
 	public static final int MAX_SLOTS = 25;
 
@@ -118,16 +121,32 @@ public class Toolbar extends Component {
 			btnInventory.setPos(camera.width -btnInventory.width(), camera.height - btnInventory.height());
 			btnSpells.setPos(camera.width - btnSpells.width(), btnInventory.top() - btnSpells.height());
 
+		remove(slotBox);
 
+		slotBox.setAlign(HBox.Align.Center);
+
+		/*
 		for (QuickslotTool tool:slots) {
 			remove(tool);
 		}
+		*/
 
 		final float start_x = width - btnInventory.width();
+		final float end_x   = btnInfo.right();
+		final int active_slots = PixelDungeon.quickSlots();
+		final float slot_y = camera.height - QUICK_SLOT_HEIGHT;
 
-		int active_slots = PixelDungeon.quickSlots();
+
+		for (int i = 0;i<active_slots;i++) {
+			slotBox.add(slots.get(i));
+		}
+
+		slotBox.setRect(start_x, slot_y,end_x - start_x, QUICK_SLOT_HEIGHT);
+
+		add(slotBox);
+
+		/*
 		float slot_x = start_x;
-		float slot_y = camera.height - QUICK_SLOT_HEIGHT;
 
 		int i = 0;
 		QuickslotTool slot;
@@ -142,10 +161,11 @@ public class Toolbar extends Component {
 				add(slot);
 				slot_x = slot.left();
 				i++;
-			} while (slot_x - slot.width()> btnInfo.right());
+			} while (slot_x - slot.width()> end_x);
 			slot_y = slot.top() - slot.height();
 			slot_x = start_x;
 		} while (true);
+		*/
 	}
 
 	public void updateLayout() {
