@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.ui;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.HBox;
+import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
@@ -31,6 +32,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -55,7 +57,9 @@ public class Toolbar extends Component {
 	private Tool btnInfo;
 	private InventoryTool btnInventory;
 
-	private HBox slotBox = new HBox();
+	private VBox toolbar   = new VBox();
+	private HBox slotBox   = new HBox();
+	private HBox actionBox = new HBox();
 
 	public static final int MAX_SLOTS = 25;
 
@@ -68,7 +72,7 @@ public class Toolbar extends Component {
 	public Toolbar(final Hero hero) {
 		super();
 
-		add(btnWait = new Tool(Assets.UI_ICONS, 10) {
+		actionBox.add(btnWait = new Tool(Assets.UI_ICONS, 10) {
 			@Override
 			protected void onClick() {
 				hero.rest(false);
@@ -80,28 +84,29 @@ public class Toolbar extends Component {
 			}
 		});
 
-		add(btnSearch = new Tool(Assets.UI_ICONS, 11) {
+		actionBox.add(btnSearch = new Tool(Assets.UI_ICONS, 11) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.search(true);
 			}
 		});
 
-		add(btnInfo = new Tool(Assets.UI_ICONS,12) {
+		actionBox.add(btnInfo = new Tool(Assets.UI_ICONS,12) {
 			@Override
 			protected void onClick() {
 				GameScene.selectCell(informer);
 			}
 		});
 
-		add(btnSpells = new Tool(Assets.UI_ICONS, SpellHelper.iconIdByHero(hero)) {
+		if (hero.spellUser) {
+			actionBox.add(btnSpells = new Tool(Assets.UI_ICONS, SpellHelper.iconIdByHero(hero)) {
 			@Override
 			protected void onClick() {
 				GameScene.show(new WndHeroSpells(null));
 			}
 		});
-
-		add(btnInventory = new InventoryTool());
+		}
+		actionBox.add(btnInventory = new InventoryTool());
 
 		for(int i = 0;i<MAX_SLOTS;i++) {
 			slots.add(new QuickslotTool());
@@ -114,58 +119,43 @@ public class Toolbar extends Component {
 
 	@Override
 	protected void layout() {
-			btnWait.setPos(x, camera.height - btnWait.height());
-			btnSearch.setPos(x, btnWait.top() - btnSearch.height());
-			btnInfo.setPos(x, btnSearch.top() - btnInfo.height());
 
-			btnInventory.setPos(camera.width -btnInventory.width(), camera.height - btnInventory.height());
-			btnSpells.setPos(camera.width - btnSpells.width(), btnInventory.top() - btnSpells.height());
+		toolbar.remove(slotBox);
+		toolbar.remove(actionBox);
 
-		remove(slotBox);
+		actionBox.setAlign(HBox.Align.Left);
+		actionBox.setSize(width(),btnInfo.height());
+		toolbar.add(actionBox);
+
 
 		slotBox.setAlign(HBox.Align.Center);
 
-		/*
 		for (QuickslotTool tool:slots) {
-			remove(tool);
+			slotBox.remove(tool);
 		}
-		*/
 
-		final float start_x = width - btnInventory.width();
-		final float end_x   = btnInfo.right();
 		final int active_slots = PixelDungeon.quickSlots();
-		final float slot_y = camera.height - QUICK_SLOT_HEIGHT;
 
+		if(active_slots > 0) {
+			for (int i = 0; i < active_slots; i++) {
+				slots.get(i).show(true);
+				slotBox.add(slots.get(i));
+			}
 
-		for (int i = 0;i<active_slots;i++) {
-			slotBox.add(slots.get(i));
+			slotBox.setSize(width(), QUICK_SLOT_HEIGHT);
+
+			if (!slotBox.willFit()) {
+				PixelDungeon.quickSlots(active_slots - 1);
+				return;
+			}
+
+			toolbar.add(slotBox);
 		}
 
-		slotBox.setRect(start_x, slot_y,end_x - start_x, QUICK_SLOT_HEIGHT);
 
-		add(slotBox);
-
-		/*
-		float slot_x = start_x;
-
-		int i = 0;
-		QuickslotTool slot;
-		do {
-			do {
-				if (!(i < active_slots)) {
-					return;
-				}
-				slot = slots.get(i);
-				slot.setPos(slot_x - slot.width(), slot_y);
-				slot.show(true);
-				add(slot);
-				slot_x = slot.left();
-				i++;
-			} while (slot_x - slot.width()> end_x);
-			slot_y = slot.top() - slot.height();
-			slot_x = start_x;
-		} while (true);
-		*/
+		toolbar.setAlign(VBox.Align.Bottom);
+		toolbar.setRect(0,0,width(),height());
+		add(toolbar);
 	}
 
 	public void updateLayout() {
@@ -244,6 +234,10 @@ public class Toolbar extends Component {
 			return Game.getVar(R.string.Toolbar_Info2);
 		}
 	};
+
+	public void pickup(Item item) {
+		//btnInventory.pickedUpItem.
+	}
 
 	private static class QuickslotTool extends Tool {
 

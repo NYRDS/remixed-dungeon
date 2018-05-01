@@ -622,7 +622,7 @@ public class GameScene extends PixelScene {
     }
 
     public static void pickUp(Item item) {
-        scene.statusPane.pickup(item);
+        scene.toolbar.pickup(item);
     }
 
     public static void updateMap() {
@@ -767,10 +767,14 @@ public class GameScene extends PixelScene {
     public void updateToolbar() {
         if (toolbar != null) {
             toolbar.updateLayout();
-            attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
-            attack.update();
-            resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
-            resume.update();
+            if(attack != null) {
+                attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
+                attack.update();
+            }
+            if(resume != null) {
+                resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
+                resume.update();
+            }
         } else {
             EventCollector.logException(new Exception("updateToolbar(int)"));
         }

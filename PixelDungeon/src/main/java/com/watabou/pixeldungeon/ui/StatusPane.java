@@ -18,8 +18,6 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.Flavours;
-import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
-import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
@@ -35,7 +33,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -43,7 +40,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHats;
 import com.watabou.pixeldungeon.windows.WndHero;
-import com.watabou.pixeldungeon.windows.elements.Tool;
 
 public class StatusPane extends Component {
 
@@ -73,11 +69,6 @@ public class StatusPane extends Component {
 
     private Level currentLevel;
     private Hero  hero;
-
-    private InventoryTool btnInventory;
-    private Tool btnSpells;
-
-    private PickedUpItem pickedUp;
 
     public StatusPane(Hero hero, Level level) {
         super(true);
@@ -161,25 +152,9 @@ public class StatusPane extends Component {
 
         btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
 
-
-        btnInventory = new InventoryTool();
-
-        add(btnInventory);
-
-        btnSpells = new Tool(Assets.UI_ICONS, SpellHelper.iconIdByHero(hero)) {
-            @Override
-            protected void onClick() {
-                GameScene.show(new WndHeroSpells(null));
-            }
-        };
-
         if (!Flavours.haveHats()) {
             btnHats.enable(false);
         }
-
-		if (hero.spellUser) {
-            add(btnSpells);
-		}
 
         add(btnHats);
     }
@@ -217,18 +192,19 @@ public class StatusPane extends Component {
 
         btnMenu.setPos(width - btnMenu.width(), 1);
         btnHats.setPos(width - btnHats.width(), btnMenu.bottom());
-
+/*
         btnInventory.setPos(2, 33);
 
         height = btnInventory.bottom();
 
 		btnSpells.setPos( width - btnMenu.width(), btnHats.bottom());
+*/
     }
-
+/*
     public void pickup(Item item) {
         btnInventory.pickedUpItem.reset(item, btnInventory.centerX(), btnInventory.centerY());
     }
-
+*/
     @Override
     public void update() {
         super.update();
@@ -272,9 +248,6 @@ public class StatusPane extends Component {
             keys.text(Integer.toString(lastKeys));
             keys.x = width - 8 - keys.width() - 18;
         }
-
-        btnInventory.enable(hero.isReady() || !hero.isAlive());
-        btnSpells.enable(hero.isReady());
     }
 
 }
