@@ -78,7 +78,7 @@ public class WndHeroSpells extends Window {
 			return yPos;
 		}
 
-		int xPos = col * (Spell.textureResolution() + MARGIN);
+		int xPos = col * (Spell.textureResolution() + MARGIN) + MARGIN;
 
 		Image spellImage = spell.image();
 		ImageButton icon = new ImageButton(spellImage) {
