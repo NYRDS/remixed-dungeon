@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -25,7 +26,7 @@ public class WndHeroSpells extends Window {
 	private static final String TXT_TITLE   = Game.getVar(R.string.WndSpells_Title);
 	private static final String TXT_LVL   = Game.getVar(R.string.WndHero_SkillLevel);
 
-	private static final int MARGIN = 2;
+	private static final int MARGIN = 8;
 	private static final int WINDOW_MARGIN = 10;
 
 	private Listener listener;
@@ -48,8 +49,6 @@ public class WndHeroSpells extends Window {
 		txtLvl.hardlight(Window.TITLE_COLOR);
 		txtLvl.x = width - txtLvl.width();
 		add(txtLvl);
-
-
 
 		float yPos = title.bottom() + MARGIN;
 
@@ -83,6 +82,27 @@ public class WndHeroSpells extends Window {
 
 		Image spellImage = spell.image();
 		ImageButton icon = new ImageButton(spellImage) {
+
+			protected ColorBlock bg;
+
+			@Override
+			protected void createChildren() {
+				super.createChildren();
+				bg = new ColorBlock(width + 6 ,height + 6,0xFF4A4D44);
+				add(bg);
+			}
+
+			@Override
+			protected void layout() {
+				super.layout();
+					bg.x = x - 3;
+					bg.y = y - 3;
+					bg.size(width + 6, height + 6);
+
+					image.x = x;
+					image.y = y;
+			}
+
 			@Override
 			protected void onClick() {
 				super.onClick();

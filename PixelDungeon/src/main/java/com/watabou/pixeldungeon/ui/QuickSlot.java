@@ -40,6 +40,8 @@ import com.watabou.utils.Bundle;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static com.watabou.pixeldungeon.scenes.PixelScene.uiCamera;
+
 public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.Listener {
 
 	private static final String TXT_SELECT_ITEM = Game.getVar(R.string.QuickSlot_SelectedItem);
@@ -150,6 +152,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 	private void updateSlotBySelection(){
 		selectItem(objectForSlot, index);
 		objectForSlot = null;
+		Game.scene().remove(prompt);
 	}
 
 	@Override
@@ -370,8 +373,14 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 	}
 
 	private static Object objectForSlot;
+	private static Toast prompt;
 	static public void selectSlotFor(Object item) {
 		objectForSlot = item;
-		Game.showWindow("Select quick slot for it");
+		prompt = new Toast("Select quick slot for it");
+		prompt.camera = uiCamera;
+		prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
+
+		Game.scene().add(prompt);
+
 	}
 }

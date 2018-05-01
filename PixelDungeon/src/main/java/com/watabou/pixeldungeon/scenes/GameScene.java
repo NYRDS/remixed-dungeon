@@ -511,7 +511,7 @@ public class GameScene extends PixelScene {
             }
     }
 
-    private void prompt(String text) {
+    public void prompt(String text) {
 
         if (prompt != null) {
             prompt.killAndErase();

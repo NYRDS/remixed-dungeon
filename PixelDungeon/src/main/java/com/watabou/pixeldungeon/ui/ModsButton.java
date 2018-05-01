@@ -14,8 +14,6 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
@@ -56,17 +54,6 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 
 		text.x = x;
 		text.y = image.y + image.height + 2;
-	}
-
-	@Override
-	protected void onTouchDown() {
-		image.brightness(1.5f);
-		Sample.INSTANCE.play(Assets.SND_CLICK);
-	}
-
-	@Override
-	protected void onTouchUp() {
-		image.resetColor();
 	}
 
 	@Override

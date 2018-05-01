@@ -62,8 +62,6 @@ public class VBox extends Component {
     }
 
     private void alignCenter() {
-        float childsHeight = childsHeight();
-
         float pos = top() + (height() - childsHeight()) / 2;
 
         for(Gizmo g :members) {

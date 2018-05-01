@@ -1,7 +1,9 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.watabou.noosa.Image;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
+import com.watabou.pixeldungeon.Assets;
 
 public class ImageButton extends Button {
 
@@ -25,6 +27,17 @@ public class ImageButton extends Button {
 
 		image.x = x;
 		image.y = y;
+	}
+
+	@Override
+	protected void onTouchDown() {
+		image.brightness( 1.5f );
+		Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
+	}
+
+	@Override
+	protected void onTouchUp() {
+		image.resetColor();
 	}
 
 }
