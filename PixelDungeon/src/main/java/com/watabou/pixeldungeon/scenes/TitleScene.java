@@ -202,11 +202,14 @@ public class TitleScene extends PixelScene {
 		btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
 		add(btnStats);
 
-		Icons social = Icons.VK;
+		String lang = PixelDungeon.uiLanguage();
+		final boolean useVk = lang.equals("ru") || lang.equals("fb");
+
+		Icons social =  useVk ? Icons.VK : Icons.FB;
 		ImageButton btnSocial = new ImageButton(social.get()){
 			@Override
 			protected void onClick() {
-				super.onClick();
+				Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://www.facebook.com/RemixedPixelDungeon");
 			}
 		};
 		btnSocial.setPos(w - btnSocial.width(), btnStats.bottom() + 2);
