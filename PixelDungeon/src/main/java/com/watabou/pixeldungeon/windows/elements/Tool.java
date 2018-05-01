@@ -1,13 +1,8 @@
 package com.watabou.pixeldungeon.windows.elements;
 
-import android.graphics.RectF;
-
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.utils.Utils;
 
 public class Tool extends Button {
 
@@ -28,18 +23,8 @@ public class Tool extends Button {
 
     public Tool(String baseImageFile, int index) {
         super();
-
-        TextureFilm film = new TextureFilm(baseImageFile, SIZE, SIZE);
-        base = new Image(baseImageFile);
-
-        RectF frame = film.get(index);
-        if (frame == null) {
-            throw new TrackedRuntimeException(Utils.format("bad index %d for image %s", index, baseImageFile));
-        }
-        base.frame(frame);
-
-        height = film.height(frame);
-        width = film.width(frame);
+        base = new Image(baseImageFile,SIZE,index);
+        width = height = SIZE;
         add(base);
     }
 

@@ -2,8 +2,6 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.windows.WndDonate;
 
@@ -50,17 +48,6 @@ public class DonateButton extends ImageButton {
 		default:
 			return Game.getVar(R.string.DonateButton_pleaseDonate);
 		}
-	}
-
-	@Override
-	protected void onTouchDown() {
-		image.brightness(1.5f);
-		Sample.INSTANCE.play(Assets.SND_CLICK);
-	}
-
-	@Override
-	protected void onTouchUp() {
-		image.resetColor();
 	}
 
 	@Override

@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.scenes;
 
 import android.content.Intent;
-import android.net.Uri;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
@@ -86,9 +85,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
-
-				Game.instance().startActivity( Intent.createChooser(intent, OUR_SITE) );
+				Game.instance().openUrl(OUR_SITE, address);
 			}
 		};
 		add(area);

@@ -308,7 +308,7 @@ public class GameScene extends PixelScene {
         statusPane.setSize(uiCamera.width, 0);
         add(statusPane);
 
-        toolbar = new Toolbar();
+        toolbar = new Toolbar(Dungeon.hero);
         toolbar.camera = uiCamera;
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
         add(toolbar);
@@ -511,7 +511,7 @@ public class GameScene extends PixelScene {
             }
     }
 
-    private void prompt(String text) {
+    public void prompt(String text) {
 
         if (prompt != null) {
             prompt.killAndErase();
@@ -622,7 +622,7 @@ public class GameScene extends PixelScene {
     }
 
     public static void pickUp(Item item) {
-        scene.statusPane.pickup(item);
+        scene.toolbar.pickup(item);
     }
 
     public static void updateMap() {
@@ -767,10 +767,14 @@ public class GameScene extends PixelScene {
     public void updateToolbar() {
         if (toolbar != null) {
             toolbar.updateLayout();
-            attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
-            attack.update();
-            resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
-            resume.update();
+            if(attack != null) {
+                attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
+                attack.update();
+            }
+            if(resume != null) {
+                resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
+                resume.update();
+            }
         } else {
             EventCollector.logException(new Exception("updateToolbar(int)"));
         }

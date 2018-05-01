@@ -220,10 +220,10 @@ public enum Icons {
                 icon.frame(icon.texture.uvRect(110, 78, 126, 94));
                 break;
             case VK:
-                icon.frame(icon.texture.uvRect(110, 78, 126, 94));
+                icon.frame(icon.texture.uvRect(28, 73, 42, 86));
                 break;
             case FB:
-                icon.frame(icon.texture.uvRect(110, 78, 126, 94));
+                icon.frame(icon.texture.uvRect(28, 87, 42, 101));
                 break;
         }
         return icon;

@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChangelogButton;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
+import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.ui.PlayGamesButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
@@ -200,6 +202,18 @@ public class TitleScene extends PixelScene {
 		btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
 		add(btnStats);
 
+		String lang = PixelDungeon.uiLanguage();
+		final boolean useVk = lang.equals("ru") || lang.equals("fb");
+
+		Icons social =  useVk ? Icons.VK : Icons.FB;
+		ImageButton btnSocial = new ImageButton(social.get()){
+			@Override
+			protected void onClick() {
+				Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://www.facebook.com/RemixedPixelDungeon");
+			}
+		};
+		btnSocial.setPos(w - btnSocial.width(), btnStats.bottom() + 2);
+		add(btnSocial);
 		fadeIn();
 	}
 
