@@ -235,7 +235,7 @@ public class Toolbar extends Component {
 	};
 
 	public void pickup(Item item) {
-		//btnInventory.pickedUpItem.
+		btnInventory.pickUp(item);
 	}
 
 	private static class QuickslotTool extends Tool {

@@ -190,7 +190,7 @@ public enum Icons {
                 icon.frame(icon.texture.uvRect(13, 69, 27, 78));
                 break;
             case GRAPHS:
-                icon.frame(icon.texture.uvRect(41, 63, 51, 73));
+                icon.frame(icon.texture.uvRect(13, 97, 25, 109));
                 break;
             case NECROMANCER:
                 icon.frame(icon.texture.uvRect(110, 62, 126, 78));

@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndCatalogus;
@@ -13,10 +14,10 @@ import com.watabou.pixeldungeon.windows.elements.Tool;
  */
 class InventoryTool extends Tool {
     private GoldIndicator gold;
-    public PickedUpItem pickedUpItem = new PickedUpItem();
+    private PickedUpItem  pickedUpItem;
 
     public InventoryTool() {
-        super(Assets.UI_ICONS, 0);
+        super(Assets.UI_ICONS, 16);
     }
 
     @Override
@@ -34,12 +35,21 @@ class InventoryTool extends Tool {
     protected void createChildren() {
         super.createChildren();
         gold = new GoldIndicator();
+        gold.setPos(x,y);
         add(gold);
+
+        pickedUpItem = new PickedUpItem();
+        pickedUpItem.setPos(x,y);
+        add(pickedUpItem);
     }
 
     @Override
     protected void layout() {
         super.layout();
         gold.fill(this);
+    }
+
+    public void pickUp(Item item) {
+        pickedUpItem.reset(item,x,y);
     }
 }

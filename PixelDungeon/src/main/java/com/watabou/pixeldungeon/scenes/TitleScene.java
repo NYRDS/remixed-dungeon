@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.effects.NewFireball;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -170,25 +171,29 @@ public class TitleScene extends PixelScene {
 			add(lowInteralStorageWarning);
 		}
 
-		PrefsButton btnPrefs = new PrefsButton();
-		btnPrefs.setPos(0, 0);
-		add(btnPrefs);
+		VBox leftGroup = new VBox();
 
-		PlayGamesButton btnPlayGames = new PlayGamesButton();
-		btnPlayGames.setPos(btnPrefs.right() + 2, 0);
-		add(btnPlayGames);
+		leftGroup.add(new PrefsButton());
+        if (PixelDungeon.donated() > 0) {
+            leftGroup.add(new PremiumPrefsButton());
+        }
+		leftGroup.add(new PlayGamesButton());
 
-		ModsButton btnMods = new ModsButton();
-		btnMods.setPos(0, btnPrefs.bottom() + 2);
-		
-		add(btnMods);
-		
-		if (PixelDungeon.donated() > 0) {
-			PremiumPrefsButton btnPPrefs = new PremiumPrefsButton();
-			btnPPrefs.setPos(btnPrefs.right() + 2, 0);
-			add(btnPPrefs);
-			btnPlayGames.setPos(btnPPrefs.right() + 2, 0);
-		}
+        String lang = PixelDungeon.uiLanguage();
+        final boolean useVk = lang.equals("ru") || lang.equals("fb");
+
+        Icons social =  useVk ? Icons.VK : Icons.FB;
+        leftGroup.add(new ImageButton(social.get()){
+            @Override
+            protected void onClick() {
+                Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://www.facebook.com/RemixedPixelDungeon");
+            }
+        });
+
+		leftGroup.add(new ModsButton());
+
+		leftGroup.setPos(0,0);
+		add(leftGroup);
 
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(w - btnExit.width(), 0);
@@ -202,18 +207,8 @@ public class TitleScene extends PixelScene {
 		btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
 		add(btnStats);
 
-		String lang = PixelDungeon.uiLanguage();
-		final boolean useVk = lang.equals("ru") || lang.equals("fb");
 
-		Icons social =  useVk ? Icons.VK : Icons.FB;
-		ImageButton btnSocial = new ImageButton(social.get()){
-			@Override
-			protected void onClick() {
-				Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://www.facebook.com/RemixedPixelDungeon");
-			}
-		};
-		btnSocial.setPos(w - btnSocial.width(), btnStats.bottom() + 2);
-		add(btnSocial);
+
 		fadeIn();
 	}
 

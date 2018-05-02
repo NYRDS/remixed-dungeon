@@ -54,6 +54,8 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 
 		text.x = x;
 		text.y = image.y + image.height + 2;
+
+		height = image.height() + text.height() + 2;
 	}
 
 	@Override
