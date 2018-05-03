@@ -9,9 +9,8 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndPremiumSettings extends Window {
 
-	private static final String NOT_AVALIABLE =  Game.getVar(R.string.WndPremiumSettings_notAvailbale);
-	
-	private static final String TOOLBAR = Game.getVar(R.string.WndPremiumSettings_toolbar);
+	private static final String NOT_AVAILABLE =  Game.getVar(R.string.WndPremiumSettings_notAvailbale);
+
 	private static final String STATUS  = Game.getVar(R.string.WndPremiumSettings_status);
 	private static final String CHROME  = Game.getVar(R.string.WndPremiumSettings_chrome);
 	private static final String BANNERS = Game.getVar(R.string.WndPremiumSettings_banners);
@@ -30,7 +29,6 @@ public class WndPremiumSettings extends Window {
 		
 		createAssetsSelector("chrome",  CHROME);
 		createAssetsSelector("status",  STATUS);
-		createAssetsSelector("toolbar", TOOLBAR);
 		createAssetsSelector("banners", BANNERS);
 		
 		resize(WIDTH, curBottom);
@@ -51,7 +49,7 @@ public class WndPremiumSettings extends Window {
 											new WndMessage("ok!"));
 								} else {
 									PixelDungeon.scene().add(
-											new WndMessage(NOT_AVALIABLE));
+											new WndMessage(NOT_AVAILABLE));
 								}
 							}
 						});

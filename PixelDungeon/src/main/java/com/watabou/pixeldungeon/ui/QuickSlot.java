@@ -128,6 +128,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 				icon.resetColor();
 			}
 		};
+		slot.setInQuickSlot(true);
 		add(slot);
 
 		crossB = Icons.TARGET.get();

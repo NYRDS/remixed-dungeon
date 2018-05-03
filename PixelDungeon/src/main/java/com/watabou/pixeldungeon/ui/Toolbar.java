@@ -149,7 +149,7 @@ public class Toolbar extends Component {
 		}
 
 
-		actionBox.setAlign(HBox.Align.Left);
+		actionBox.setAlign(HBox.Align.Right);
 		actionBox.setSize(width(),btnInfo.height());
 		toolbar.add(actionBox);
 
@@ -254,7 +254,6 @@ public class Toolbar extends Component {
 		protected void layout() {
 			super.layout();
 			slot.setRect(base.x,base.y,base.width,base.height);
-			//slot.setRect(x + 1, y + 2, width - 2, height - 2);
 		}
 
 		public void show(boolean value){

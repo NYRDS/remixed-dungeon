@@ -47,6 +47,8 @@ public class ItemSlot extends Button {
     private BitmapText topRight;
     private BitmapText bottomRight;
 
+    private boolean inQuickSlot;
+
     private static final String TXT_STRENGTH    = ":%d";
     private static final String TXT_TYPICAL_STR = "%d?";
 
@@ -165,7 +167,7 @@ public class ItemSlot extends Button {
 
         boolean isArmor = item instanceof Armor;
         boolean isWeapon = item instanceof Weapon;
-        if (isArmor || isWeapon) {
+        if ((isArmor || isWeapon) && !inQuickSlot) {
 
             if (item.levelKnown || (isWeapon && !(item instanceof MeleeWeapon))) {
 
@@ -231,5 +233,9 @@ public class ItemSlot extends Button {
             remove(topRight);
             remove(bottomRight);
         }
+    }
+
+    public void setInQuickSlot(boolean inQuickSlot) {
+        this.inQuickSlot = inQuickSlot;
     }
 }
