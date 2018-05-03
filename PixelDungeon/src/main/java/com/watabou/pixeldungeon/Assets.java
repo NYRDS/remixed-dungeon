@@ -29,26 +29,27 @@ public class Assets {
 	private static final String KEY_TOOLBAR = "toolbar";
 	private static final String KEY_STATUS = "status";
 	private static final String KEY_CHROME = "chrome";
-	public static final String ARCS_BG = "arcs1.png";
-	public static final String ARCS_FG = "arcs2.png";
-	public static final String DASHBOARD = "dashboard.png";
 
-	public static final String BADGES = "badges.png";
+	public static final String ARCS_BG = "ui/arcs1.png";
+	public static final String ARCS_FG = "ui/arcs2.png";
+	public static final String DASHBOARD = "ui/dashboard.png";
+
+	public static final String BADGES = "ui/badges.png";
 	public static final String AMULET = "amulet.png";
 
 	private static final String BANNERS_PREFIX = Game.getVar(R.string.Assets_Prefix);
 
-	public static final String ICONS = "icons.png";
-	public static final String HP_BAR = "hp_bar.png";
-	public static final String SP_BAR = "sp_bar.png";
-	public static final String XP_BAR = "exp_bar.png";
+	public static final String ICONS = "ui/icons.png";
+	public static final String HP_BAR = "ui/hp_bar.png";
+	public static final String SP_BAR = "ui/sp_bar.png";
+	public static final String XP_BAR = "ui/exp_bar.png";
 
-	public static final String AVATARS = "avatars.png";
+	public static final String AVATARS = "ui/avatars.png";
 	public static final String PET = "pet.png";
 
 	public static final String SURFACE = "surface.png";
 
-	public static final String FIREBALL = "fireball.png";
+	public static final String FIREBALL = "ui/fireball.png";
 	public static final String SPECKS = "specks.png";
 	public static final String EFFECTS = "effects.png";
 
@@ -114,12 +115,13 @@ public class Assets {
 	public static final String WATER_NECRO = "water_necropolis.png";
 	public static final String WATER_ICE_CAVES = "water_ice_caves.png";
 
-	public static final String BUFFS_SMALL = "buffs.png";
-	public static final String BUFFS_LARGE = "large_buffs.png";
+	public static final String BUFFS_SMALL = "ui/buffs.png";
+	public static final String BUFFS_LARGE = "ui/large_buffs.png";
+
 	public static final String SPELL_ICONS = "spell_icons.png";
 
-	public static final String FONTS1X = "font1x.png";
-	public static final String FONTS25X = "font25x.png";
+	public static final String FONTS1X = "ui/font1x.png";
+	public static final String FONTS25X = "ui/font25x.png";
 
 	public static final String THEME = "theme.mp3";
 	public static final String TUNE = "game.mp3";
@@ -177,7 +179,8 @@ public class Assets {
 
     public static final String SND_BITE      = "snd_bite.mp3";			// by sonidotv, from freesound.org
     public static final String SND_EXPLOSION = "snd_explosion.mp3"; // by kantouth, from freesound.org
-    public static final String UI_ICONS      = "ui_icons.png";
+
+	public static final String UI_ICONS      = "ui/ui_icons.png";
 
 
     private static int chromeType = 0;
@@ -200,13 +203,13 @@ public class Assets {
 	public static String getBanners() {
 		switch (bannersType) {
 		default:
-			return BANNERS_PREFIX+"banners.png";
+			return "ui/"+BANNERS_PREFIX+"banners.png";
 		case 1:
-			return BANNERS_PREFIX+"banners_supporter_1.png";
+			return "ui/"+BANNERS_PREFIX+"banners_supporter_1.png";
 		case 2:
-			return BANNERS_PREFIX+"banners_supporter_2.png";
+			return "ui/"+BANNERS_PREFIX+"banners_supporter_2.png";
 		case 3:
-			return BANNERS_PREFIX+"banners_supporter_3.png";
+			return "ui/"+BANNERS_PREFIX+"banners_supporter_3.png";
 		}
 	}
 
@@ -214,39 +217,26 @@ public class Assets {
 	public static String getChrome() {
 		switch (chromeType) {
 		default:
-			return "chrome.png";
+			return "ui/chrome.png";
 		case 1:
-			return "chrome_supporter_1.png";
+			return "ui/chrome_supporter_1.png";
 		case 2:
-			return "chrome_supporter_2.png";
+			return "ui/chrome_supporter_2.png";
 		case 3:
-			return "chrome_supporter_3.png";
+			return "ui/chrome_supporter_3.png";
 		}
 	}
 
 	public static String getStatus() {
 		switch (statusType) {
 		default:
-			return "status_pane.png";
+			return "ui/status_pane.png";
 		case 1:
-			return "status_pane_supporter_1.png";
+			return "ui/status_pane_supporter_1.png";
 		case 2:
-			return "status_pane_supporter_2.png";
+			return "ui/status_pane_supporter_2.png";
 		case 3:
-			return "status_pane_supporter_3.png";
-		}
-	}
-
-	public static String getToolbar() {
-		switch (toolbarType) {
-		default:
-			return "toolbar.png";
-		case 1:
-			return "toolbar_supporter_1.png";
-		case 2:
-			return "toolbar_supporter_2.png";
-		case 3:
-			return "toolbar_supporter_3.png";
+			return "ui/status_pane_supporter_3.png";
 		}
 	}
 

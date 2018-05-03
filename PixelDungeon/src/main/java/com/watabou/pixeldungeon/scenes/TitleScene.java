@@ -53,7 +53,7 @@ public class TitleScene extends PixelScene {
 	private static final String TXT_ABOUT = Game
 			.getVar(R.string.TitleScene_About);
 
-	private static final String REMIXED_TITLE = "title.png";
+	private static final String REMIXED_TITLE = "ui/title.png";
 
 	private Text         pleaseSupport;
 	private DonateButton btnDonate;

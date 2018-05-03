@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
@@ -19,7 +21,7 @@ public class ResumeIndicator extends Tag {
 	protected void createChildren() {
 		super.createChildren();
 		
-		add(btnResume = new Tool(61, 7, 21, 24) {
+		add(btnResume = new Tool(Assets.UI_ICONS, 10, Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.resume();

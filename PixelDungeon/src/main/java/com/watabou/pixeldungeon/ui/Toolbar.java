@@ -26,6 +26,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -72,7 +73,7 @@ public class Toolbar extends Component {
 	public Toolbar(final Hero hero) {
 		super();
 
-		actionBox.add(btnWait = new Tool(Assets.UI_ICONS, 10) {
+		actionBox.add(btnWait = new Tool(Assets.UI_ICONS, 10, Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				hero.rest(false);
@@ -84,14 +85,14 @@ public class Toolbar extends Component {
 			}
 		});
 
-		actionBox.add(btnSearch = new Tool(Assets.UI_ICONS, 11) {
+		actionBox.add(btnSearch = new Tool(Assets.UI_ICONS, 11,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.search(true);
 			}
 		});
 
-		actionBox.add(btnInfo = new Tool(Assets.UI_ICONS,12) {
+		actionBox.add(btnInfo = new Tool(Assets.UI_ICONS,12,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				GameScene.selectCell(informer);
@@ -99,7 +100,7 @@ public class Toolbar extends Component {
 		});
 
 		if (hero.spellUser) {
-			actionBox.add(btnSpells = new Tool(Assets.UI_ICONS, SpellHelper.iconIdByHero(hero)) {
+			actionBox.add(btnSpells = new Tool(Assets.UI_ICONS, SpellHelper.iconIdByHero(hero),Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				GameScene.show(new WndHeroSpells(null));
@@ -243,7 +244,7 @@ public class Toolbar extends Component {
 		private QuickSlot slot;
 
 		QuickslotTool() {
-			super(107, 12, 20, 20);
+			super(Assets.UI_ICONS,0, Chrome.Type.QUICKSLOT);
 
 			slot = new QuickSlot();
 			add(slot);
@@ -252,7 +253,8 @@ public class Toolbar extends Component {
 		@Override
 		protected void layout() {
 			super.layout();
-			slot.setRect(x + 1, y + 2, width - 2, height - 2);
+			slot.setRect(base.x,base.y,base.width,base.height);
+			//slot.setRect(x + 1, y + 2, width - 2, height - 2);
 		}
 
 		public void show(boolean value){

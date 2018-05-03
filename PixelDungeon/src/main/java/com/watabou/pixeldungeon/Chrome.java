@@ -32,7 +32,9 @@ public class Chrome {
 		SCROLL,
 		TAB_SET,
 		TAB_SELECTED,
-		TAB_UNSELECTED
+		TAB_UNSELECTED,
+		QUICKSLOT,
+		ACTION_BUTTON
 	}
 	
 	public static NinePatch get( Type type ) {
@@ -57,6 +59,10 @@ public class Chrome {
 			return new NinePatch( Assets.getChrome(), 64, 22, 10, 14, 4, 7, 4, 6 );
 		case TAB_UNSELECTED:
 			return new NinePatch( Assets.getChrome(), 74, 22, 10, 14, 4, 7, 4, 6 );
+		case QUICKSLOT:
+			return new NinePatch( Assets.getChrome(), 107, 44, 20, 20, 3 );
+		case ACTION_BUTTON:
+			return new NinePatch( Assets.getChrome(), 64, 48, 16, 16, 3 );
 		}
 		throw new TrackedRuntimeException("wrong chrome type");
 	}
