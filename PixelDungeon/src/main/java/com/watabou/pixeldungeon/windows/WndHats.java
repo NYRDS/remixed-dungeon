@@ -19,6 +19,7 @@ import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
+import java.util.Collections;
 import java.util.List;
 
 public class WndHats extends Window {
@@ -80,6 +81,7 @@ public class WndHats extends Window {
 		add(listTitle);
 
 		List<String> hats = Accessory.getAccessoriesList();
+		Collections.shuffle(hats);
 
 		Component content = new Component();
 
