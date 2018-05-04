@@ -50,8 +50,6 @@ import java.util.ArrayList;
 
 public class Toolbar extends Component {
 
-	private static final int QUICK_SLOT_HEIGHT = 20;
-
 	private Tool btnSpells;
 	private Tool btnWait;
 	private Tool btnSearch;
@@ -115,7 +113,7 @@ public class Toolbar extends Component {
 
 		width = Game.width();
 
-		height = Math.max(btnInfo.height(), QUICK_SLOT_HEIGHT);
+		height = Math.max(btnInfo.height(), slots.get(0).height());
 	}
 
 	@Override
@@ -138,7 +136,7 @@ public class Toolbar extends Component {
 				slotBox.add(slots.get(i));
 			}
 
-			slotBox.setSize(width(), QUICK_SLOT_HEIGHT);
+			slotBox.setSize(width(), slots.get(0).height());
 
 			if (!slotBox.willFit()) {
 				PixelDungeon.quickSlots(active_slots - 1);
@@ -244,7 +242,7 @@ public class Toolbar extends Component {
 		private QuickSlot slot;
 
 		QuickslotTool() {
-			super(Assets.UI_ICONS,0, Chrome.Type.QUICKSLOT);
+			super(Assets.UI_ICONS,31, Chrome.Type.QUICKSLOT);
 
 			slot = new QuickSlot();
 			add(slot);

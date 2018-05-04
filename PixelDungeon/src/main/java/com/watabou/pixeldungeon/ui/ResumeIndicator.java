@@ -1,13 +1,12 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.windows.elements.Tool;
 
 public class ResumeIndicator extends Tag {
 	
-	private Tool btnResume;
+	private ImageButton btnResume;
 	
 	public ResumeIndicator() {
 		super( 0x00000000);
@@ -21,7 +20,7 @@ public class ResumeIndicator extends Tag {
 	protected void createChildren() {
 		super.createChildren();
 		
-		add(btnResume = new Tool(Assets.UI_ICONS, 10, Chrome.Type.ACTION_BUTTON) {
+		add(btnResume = new ImageButton(new Image(Assets.UI_ICONS,16,0)) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.resume();
@@ -31,7 +30,7 @@ public class ResumeIndicator extends Tag {
 	
 	@Override
 	protected void layout() {
-		btnResume.setPos(x-btnResume.width() + width(), y);
+		btnResume.setPos(x-btnResume.width() + width(), y +(height() - btnResume.height())/2 );
 		
 		super.layout();
 	}

@@ -20,8 +20,11 @@ public class Tool extends Button {
         add(bg);
 
         base = new Image(baseImageFile,SIZE,index);
-        bg.size(base.width + bg.marginHor(),base.height + bg.marginVer());
-        width = height = SIZE;
+
+        width = base.width + bg.marginHor();
+        height = base.height + bg.marginVer();
+
+        bg.size(width,height);
         add(base);
     }
 
@@ -33,16 +36,6 @@ public class Tool extends Button {
 
             base.x = bg.x + bg.marginLeft();
             base.y = bg.y + bg.marginTop();
-    }
-
-    @Override
-    public float width() {
-        return bg.width();
-    }
-
-    @Override
-    public float height() {
-        return bg.height();
     }
 
     @Override

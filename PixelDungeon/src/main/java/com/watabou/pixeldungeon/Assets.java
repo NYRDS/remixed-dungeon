@@ -50,8 +50,8 @@ public class Assets {
 	public static final String SURFACE = "surface.png";
 
 	public static final String FIREBALL = "ui/fireball.png";
-	public static final String SPECKS = "specks.png";
-	public static final String EFFECTS = "effects.png";
+	public static final String SPECKS = "effects/specks.png";
+	public static final String EFFECTS = "effects/effects.png";
 
 	public static final String RAT = "rat.png";
 	public static final String GNOLL = "gnoll.png";
