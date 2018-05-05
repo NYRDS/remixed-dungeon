@@ -58,8 +58,18 @@
     <string name="town_deco_sofa_desc">这个沙发超爽的，不坐上去看电guang影gao吗</string>
 
     <string name="town_deco_book_name">书</string>
+    <string name="town_deco_book_desc">看上去是某人不小心遗漏下的书</string>
+
     <string name="town_deco_screen_name">屏幕</string>
+    <string name="town_deco_screen_desc">这个神秘的画布称之为“屏幕”，它可以显示变动图片</string>
+
     <string name="town_deco_stove_name">石头火堆</string>
+    <string name="town_deco_stove_desc">这个火堆带来了一些令人愉快的温暖</string>
+
     <string name="town_deco_wooden_chair_name">木椅</string>
+    <string name="town_deco_wooden_chair_desc">这把椅子是由木头制成的</string>
+
     <string name="town_deco_snowy_plate_name">附雪石雕</string>
+    <string name="town_deco_snowy_plate_desc">这个古老的石雕被冰雪覆盖着</string>
+
     </resources>

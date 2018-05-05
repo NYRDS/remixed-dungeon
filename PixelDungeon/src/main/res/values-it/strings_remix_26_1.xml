@@ -3,8 +3,13 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">guardia cittadina</string>
+    <string name="TownGuardNPC_Gender">maschile</string>
     <string name="TownGuardNPC_Name_Objective">guardi cittadina</string>
     <string name="TownGuardNPC_Message1">Circolare.</string>
+    <!-- STRINGS OF TownsfolkNPC CLASS -->
+    <string name="TownsfolkNPC_Name">paesani</string>
+    <string name="TownsfolkNPC_Gender">maschile</string>
+    <string name="TownsfolkNPC_Name_Objective">paesani</string>
     <string name="TownsfolkNPC_Message3">Che bella giornata.</string>
     <!-- STRINGS OF TownShopkeeper CLASS -->
     <string name="TownShopkeeper_Name">Negoziante</string>

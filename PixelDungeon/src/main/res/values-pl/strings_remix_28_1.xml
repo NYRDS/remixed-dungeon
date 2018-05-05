@@ -7,7 +7,8 @@
     <string name="BlackCat_Desc">to jest czarny kot</string>
     
     <string-array name="BlackCat_Phrases">
-        <item>Miałł.....</item>
+        <item>Mrrrrrrr</item>
+        <item>Miał.....</item>
         <item>Miał!</item>
     </string-array>
 
@@ -39,7 +40,7 @@
 
     <string name="HealthArrow_Name">Uzdrawiająca Strzała</string>
     <string name="HealthArrow_Gender">kobieca</string>
-    <string name="HealthArrow_Info">Czubek tej strzały pokryty jest leczniczą miksturą </string>
+    <string name="HealthArrow_Info">Grot tej strzały pokryty jest leczniczą miksturą </string>
 
     <string name="AmokDart_Name">Rzutka Szału</string>
     <string name="AmokDart_Gender">męska</string>
@@ -51,4 +52,24 @@
 
     <string name="WndHero_SkillLevel">Poziom Umiejętności  </string>
 
-    </resources>
+    <string name="town_deco_sofa_name">Wygodna sofa</string>
+    <string name="town_deco_sofa_desc">Wygląda na to że kino próbuje zapewnić klientom najlepsze siedzenia</string>
+
+    <string name="town_deco_book_name">Książka</string>
+    <string name="town_deco_book_desc">Ta książka wygląda jakby ktoś niedbale ją porzucił</string>
+
+    <string name="town_deco_screen_name">Ekran</string>
+    <string name="town_deco_screen_desc">To tajemnicze płótno zwane \"ekranem\" na którym poruszają się obrazki</string>
+
+    <string name="town_deco_stove_name">Kamienny piec</string>
+    <string name="town_deco_stove_desc">Ten kamienny piec przynosi trochę miłego ciepła</string>
+
+    <string name="town_deco_wooden_chair_name">Drewniane krzesło</string>
+    <string name="town_deco_wooden_chair_desc">To krzesło jest zrobione z drewna</string>
+
+    <string name="town_deco_snowy_plate_name">Zaśnieżona płytka</string>
+    <string name="town_deco_snowy_plate_desc">Ta starożytna płytka jest pokryta śniegiem</string>
+
+    <string name="DogeMask_Name">Psia maska</string>
+    <string name="DogeMask_Info">Chciałeś się kiedyś przebrać za sławnego pieseła? Masz teraz szansę!\nTak bardzo maska! przebranie mocno! Wow!</string>
+</resources>
