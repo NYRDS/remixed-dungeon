@@ -63,7 +63,7 @@ public class Gold extends Item {
 		Statistics.goldCollected += quantity();
 		Badges.validateGoldCollected();
 
-		GameScene.pickUp( this );
+		GameScene.pickUp( this);
 		hero.getSprite().showStatus( CharSprite.NEUTRAL, TXT_VALUE, quantity() );
 		hero.spendAndNext( TIME_TO_PICK_UP );
 		

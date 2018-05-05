@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 
@@ -11,11 +10,8 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
  */
 class PickedUpItem extends ItemSprite {
 
-    private static final float DISTANCE = DungeonTilemap.SIZE;
     private static final float DURATION = 0.2f;
 
-    private float dstX;
-    private float dstY;
     private float left;
 
     PickedUpItem() {
@@ -31,12 +27,10 @@ class PickedUpItem extends ItemSprite {
 
         active = setVisible(true);
 
-        this.dstX = dstX - ItemSprite.SIZE / 2;
-        this.dstY = dstY - ItemSprite.SIZE / 2;
+        x = dstX;
+        y = dstY;
         left = DURATION;
 
-        x = this.dstX - DISTANCE;
-        y = this.dstY - DISTANCE;
         alpha(1);
     }
 
@@ -45,15 +39,10 @@ class PickedUpItem extends ItemSprite {
         super.update();
 
         if ((left -= Game.elapsed) <= 0) {
-
             setVisible(active = false);
-
         } else {
             float p = left / DURATION;
             scale.set((float) Math.sqrt(p));
-            float offset = DISTANCE * p;
-            x = dstX - offset;
-            y = dstY - offset;
         }
     }
 }

@@ -19,6 +19,13 @@ class InventoryTool extends Tool {
 
     public InventoryTool() {
         super(Assets.UI_ICONS, 16, Chrome.Type.ACTION_BUTTON);
+        gold = new GoldIndicator();
+        gold.setPos(x,y);
+        add(gold);
+
+        pickedUpItem = new PickedUpItem();
+        //pickedUpItem.setPos(x,y);
+        add(pickedUpItem);
     }
 
     @Override
@@ -30,18 +37,6 @@ class InventoryTool extends Tool {
     protected boolean onLongClick() {
         GameScene.show(new WndCatalogus());
         return true;
-    }
-
-    @Override
-    protected void createChildren() {
-        super.createChildren();
-        gold = new GoldIndicator();
-        gold.setPos(x,y);
-        add(gold);
-
-        pickedUpItem = new PickedUpItem();
-        pickedUpItem.setPos(x,y);
-        add(pickedUpItem);
     }
 
     @Override
