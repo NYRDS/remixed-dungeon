@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="WndSettings_Quickslots">Quickslots</string>
+
+    <string name="Abilities_Default">Mastery</string>
+    <string name="Abilities_Common">Common Spells</string>
+    <string name="Abilities_Elemental">Elemental Spells</string>
+    <string name="Abilities_Necromancy">Necromancy</string>
 </resources>

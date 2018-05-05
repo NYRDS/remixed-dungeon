@@ -23,7 +23,6 @@ import java.util.ArrayList;
 
 public class WndHeroSpells extends Window {
 
-	private static final String TXT_TITLE   = Game.getVar(R.string.WndSpells_Title);
 	private static final String TXT_LVL   = Game.getVar(R.string.WndHero_SkillLevel);
 
 	private static final int MARGIN = 8;
@@ -40,7 +39,12 @@ public class WndHeroSpells extends Window {
 
 		String affinity = hero.heroClass.getMagicAffinity();
 
-		IconTitle title  = new IconTitle(new Image(Assets.UI_ICONS,16, SpellHelper.iconIdByAffinity(affinity)), affinity);
+		IconTitle title  = new IconTitle(new Image(
+				Assets.UI_ICONS,
+				16,
+				SpellHelper.iconIdByAffinity(affinity)),
+				SpellHelper.getMasteryTitleByAffinity(affinity));
+
 		title.setRect(0,0,width, WndHelper.getFullscreenHeight());
 
 		add(title);
