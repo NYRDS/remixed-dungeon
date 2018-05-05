@@ -62,7 +62,7 @@ public class Chrome {
 		case QUICKSLOT:
 			return new NinePatch( Assets.getChrome(), 107, 44, 20, 20, 3 );
 		case ACTION_BUTTON:
-			return new NinePatch( Assets.getChrome(), 64, 48, 16, 16, 3 );
+			return new NinePatch( Assets.getChrome(), 65, 49, 14, 14, 0 );
 		}
 		throw new TrackedRuntimeException("wrong chrome type");
 	}
