@@ -511,7 +511,7 @@ public class PixelDungeon extends Game {
 	public static void quickSlots(int slots) {
 		Preferences.INSTANCE.put(Preferences.KEY_QUICKSLOTS, slots);
 		if (scene() instanceof GameScene) {
-			((GameScene) scene()).updateToolbar();
+			((GameScene) scene()).updateToolbar(false);
 		}
 	}
 
@@ -522,7 +522,7 @@ public class PixelDungeon extends Game {
 	public static void toolStyle(String style) {
 		Preferences.INSTANCE.put(Preferences.KEY_TOOL_STYLE, style);
 		if (scene() instanceof GameScene) {
-			((GameScene) scene()).updateToolbar();
+			((GameScene) scene()).updateToolbar(true);
 		}
 	}
 }

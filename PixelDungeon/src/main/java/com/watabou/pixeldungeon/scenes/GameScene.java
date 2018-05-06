@@ -764,12 +764,16 @@ public class GameScene extends PixelScene {
         }
     };
 
-    public void updateToolbar() {
+    public void updateToolbar(boolean reset) {
         if (toolbar != null) {
-            toolbar.destroy();
 
-            toolbar = new Toolbar(Dungeon.hero);
-            toolbar.camera = uiCamera;
+            if(reset) {
+                toolbar.destroy();
+
+                toolbar = new Toolbar(Dungeon.hero);
+                toolbar.camera = uiCamera;
+            }
+
             toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
             add(toolbar);
 

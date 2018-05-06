@@ -16,9 +16,6 @@ public class Selector extends HBox{
 	private RedButton btnMinus;
 	private RedButton btnDefault;
 
-	private PlusMinusDefault actions;
-	private String           text;
-
 	private static final String TXT_PLUS      = Game
 			.getVar(R.string.WndSettings_ZoomIn);
 	private static final String TXT_MINUS     = Game
@@ -27,22 +24,20 @@ public class Selector extends HBox{
 	public Selector(int width, int height, String text, final PlusMinusDefault actions) {
 		this.width = width;
 		this.height = height;
-		this.actions = actions;
-		this.text    = text;
 
-		createButtons(width, height, text, actions);
+		createButtons(text, actions);
 	}
 
-	private void createButtons(int width, int height, final String text, final PlusMinusDefault actions) {
+	private void createButtons(final String text, final PlusMinusDefault actions) {
 		float square_xs = height;
 
-		btnPlus = new RedButton(TXT_PLUS) {
+		btnMinus = new RedButton(TXT_MINUS) {
 			@Override
 			protected void onClick() {
-				actions.onPlus(Selector.this);
+				actions.onMinus(Selector.this);
 			}
 		};
-		add(btnPlus.setSize(square_xs, height));
+		add(btnMinus.setSize(square_xs, height));
 
 		btnDefault = new RedButton(text) {
 			@Override
@@ -52,14 +47,14 @@ public class Selector extends HBox{
 		};
 		btnDefault.setSize( width - 2*square_xs, height);
 		add(btnDefault);
-
-		btnMinus = new RedButton(TXT_MINUS) {
+		btnPlus = new RedButton(TXT_PLUS) {
 			@Override
 			protected void onClick() {
-				actions.onMinus(Selector.this);
+				actions.onPlus(Selector.this);
 			}
 		};
-		add(btnMinus.setSize(square_xs, height));
+		add(btnPlus.setSize(square_xs, height));
+
 		setAlign(Align.Left);
 	}
 

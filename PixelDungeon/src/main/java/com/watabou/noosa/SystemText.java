@@ -223,8 +223,9 @@ public class SystemText extends Text {
 			lineImage.clear();
 			width = 0;
 
-			height = fontHeight / 4;
+			//height = fontHeight / 4;
 
+			height = 0;
 			int charIndex = 0;
 			int startLine = 0;
 
@@ -374,6 +375,7 @@ public class SystemText extends Text {
 
 			fontHeight = (contourPaint.descent() - contourPaint.ascent())
 					/ oversample;
+			//fontHeight = contourPaint.getTextSize() / oversample;
 			createText();
 		}
 	}
