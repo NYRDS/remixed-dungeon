@@ -6,4 +6,6 @@
     <string name="Abilities_Common">Common Spells</string>
     <string name="Abilities_Elemental">Elemental Spells</string>
     <string name="Abilities_Necromancy">Necromancy</string>
+    <string name="WndSettings_UiSettings">Ui settings</string>
+    <string name="WndSettings_ActionButtonSize">Action buttons size</string>
 </resources>

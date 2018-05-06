@@ -1,28 +1,56 @@
 package com.watabou.pixeldungeon.windows.elements;
 
+import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.PixelDungeon;
 
 public class Tool extends Button {
 
+    public enum Size{
+      Std,Tiny
+    }
+
     private static final int BGCOLOR = 0x7B8073;
 
-    static private final int SIZE = 16;
     protected Image     base;
     private   NinePatch bg;
 
-    public Tool(String baseImageFile, int index, Chrome.Type chrome) {
+    public Tool(int index, Chrome.Type chrome) {
+        this(Size.valueOf(PixelDungeon.toolStyle()),index, chrome);
+    }
+
+    public Tool(Size size, int index, Chrome.Type chrome) {
         super();
 
         bg = Chrome.get(chrome);
         add(bg);
 
-        base = new Image(baseImageFile,SIZE,index);
+        String baseImageFile = Assets.UI_ICONS;
+        int icon_size = 16;
 
-        width = base.width + bg.marginHor();
-        height = base.height + bg.marginVer();
+        switch (size) {
+
+            case Std:
+                icon_size = 12;
+                baseImageFile = Assets.UI_ICONS_12;
+                break;
+            case Tiny:
+                icon_size = 6;
+                baseImageFile = Assets.UI_ICONS_6;
+                break;
+        }
+
+        if(index>=0) {
+            base = new Image(baseImageFile, icon_size, index);
+        } else {
+            base = new ColorBlock(16,16, BGCOLOR);
+        }
+        width = base.width() + bg.marginHor();
+        height = base.height() + bg.marginVer();
 
         bg.size(width,height);
         add(base);

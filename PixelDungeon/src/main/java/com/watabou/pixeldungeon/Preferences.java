@@ -52,10 +52,11 @@ public enum Preferences {
 	public static final String KEY_MOVE_TIMEOUT     = "move_timeout";
 	public static final String KEY_USE_PLAY_GAMES   = "use_play_games";
 
-	public static final String KEY_UI_ZOOM     = "ui_zoom";
+	public static final String KEY_UI_ZOOM        = "ui_zoom";
 	public static final String KEY_VERSION_STRING = "version_string";
+    public static final String KEY_TOOL_STYLE        = "tool_style";
 
-	private SharedPreferences prefs;
+    private SharedPreferences prefs;
 
 	private Map<String, Integer> intCache    = new HashMap<>();
 	private Map<String, String>  stringCache = new HashMap<>();

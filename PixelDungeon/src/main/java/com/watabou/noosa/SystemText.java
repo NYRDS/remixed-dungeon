@@ -74,9 +74,9 @@ public class SystemText extends Text {
 			TextPaint tx = new TextPaint();
 
 			tx.setTextSize(textSize);
-			tx.setStyle(Paint.Style.FILL);
+			tx.setStyle(Paint.Style.FILL_AND_STROKE);
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-				//tx.setHinting(Paint.HINTING_ON);
+				tx.setHinting(Paint.HINTING_ON);
 			}
 			tx.setAntiAlias(true);
 
@@ -86,7 +86,7 @@ public class SystemText extends Text {
 
 			TextPaint cp = new TextPaint();
 			cp.set(tx);
-			cp.setStyle(Paint.Style.STROKE);
+			cp.setStyle(Paint.Style.FILL_AND_STROKE);
 			cp.setStrokeWidth(textSize * 0.2f);
 			cp.setColor(Color.BLACK);
 			cp.setAntiAlias(true);
@@ -381,7 +381,7 @@ public class SystemText extends Text {
 
 	@Override
 	public float baseLine() {
-		return height() * scale.y;
+		return height();
 	}
 
 	static void invalidate() {

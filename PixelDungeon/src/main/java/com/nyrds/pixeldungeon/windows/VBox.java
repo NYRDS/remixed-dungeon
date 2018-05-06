@@ -46,7 +46,7 @@ public class VBox extends Component {
         }
     }
 
-    private float childsHeight() {
+    public float childsHeight() {
         float childsHeight = 0;
 
         for(Gizmo g :members) {

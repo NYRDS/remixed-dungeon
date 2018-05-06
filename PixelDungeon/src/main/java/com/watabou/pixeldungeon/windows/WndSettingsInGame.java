@@ -18,120 +18,131 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.Toolbar;
+import com.watabou.pixeldungeon.windows.elements.Tool;
 
 public class WndSettingsInGame extends WndSettingsCommon {
 
 	public WndSettingsInGame() {
 		super();
+		VBox menuItems = new VBox();
 
-		curY = createZoomButtons(curY) + SMALL_GAP;
-		curY = createUiZoomButtons(curY);
+		addSoundControls(menuItems);
 
-		CheckBox btnBrightness = new CheckBox(Game
-				.getVar(R.string.WndSettings_Brightness)) {
+		menuItems.add( new MenuCheckBox(Game
+				.getVar(R.string.WndSettings_Brightness),PixelDungeon.brightness()) {
 			@Override
 			protected void onClick() {
 				super.onClick();
 				PixelDungeon.brightness(checked());
 			}
-		};
-		btnBrightness
-				.setRect(0, curY + SMALL_GAP, WIDTH, BTN_HEIGHT);
-		btnBrightness.checked(PixelDungeon.brightness());
-		add(btnBrightness);
+		});
 
+		menuItems.add(createZoomButtons());
+		menuItems.add(createUiZoomButtons());
+		menuItems.add(createQuickSlotsSelector());
+		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_ActionButtonSize)){
+			@Override
+			protected void onClick() {
+				super.onClick();
 
-		curY = createQuickSlotsSelector(btnBrightness.bottom());
+				int ordinal = Tool.Size.valueOf(PixelDungeon.toolStyle()).ordinal();
+				ordinal++;
+				ordinal %= Tool.Size.values().length;
+				Tool.Size size = Tool.Size.values()[ordinal];
+				PixelDungeon.toolStyle(size.name());
+			}
+		});
 
-			resize(WIDTH, (int) curY);
+		menuItems.setRect(0,0,WIDTH,menuItems.childsHeight());
+
+		add(menuItems);
+
+		resize(WIDTH, (int) menuItems.childsHeight());
 	}
 
-	private float createQuickSlotsSelector(float y) {
-		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
-		return selector.add(y, Game
+	private Selector createQuickSlotsSelector() {
+		return new Selector(WIDTH, BTN_HEIGHT, Game
 				.getVar(R.string.WndSettings_Quickslots), new Selector.PlusMinusDefault() {
 
 			@Override
-			public void onPlus() {
+			public void onPlus(Selector s) {
 				PixelDungeon.quickSlots(Math.min(PixelDungeon.quickSlots()+1, Toolbar.MAX_SLOTS));
 			}
 
 			@Override
-			public void onMinus() {
+			public void onMinus(Selector s) {
 				PixelDungeon.quickSlots(Math.max(PixelDungeon.quickSlots()-1,0));
 			}
 
 			@Override
-			public void onDefault() {
+			public void onDefault(Selector s) {
 				PixelDungeon.quickSlots(3);
 			}
 		});
 	}
 
-	private float createZoomButtons(float y) {
-		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
-		return selector.add(y, Game
+	private Selector createZoomButtons() {
+		return new Selector(WIDTH, BTN_HEIGHT, Game
 				.getVar(R.string.WndSettings_ZoomDef), new Selector.PlusMinusDefault() {
 
 			@Override
-			public void onPlus() {
-				zoom(Camera.main.zoom + 0.1f);
+			public void onPlus(Selector s) {
+				zoom(Camera.main.zoom + 0.1f,s);
 			}
 
 			@Override
-			public void onMinus() {
-				zoom(Camera.main.zoom - 0.1f);
+			public void onMinus(Selector s) {
+				zoom(Camera.main.zoom - 0.1f,s);
 			}
 
 			@Override
-			public void onDefault() {
-				zoom(PixelScene.defaultZoom);
+			public void onDefault(Selector s) {
+				zoom(PixelScene.defaultZoom,s);
 			}
 
-			private void zoom(float value) {
+			private void zoom(float value,Selector s) {
 				Camera.main.zoom(value);
 				PixelDungeon.zoom(value - PixelScene.defaultZoom);
 
 				float zoom = Camera.main.zoom;
-				selector.enable(zoom < PixelScene.maxZoom, zoom > PixelScene.minZoom, true);
+				s.enable(zoom < PixelScene.maxZoom, zoom > PixelScene.minZoom, true);
 			}
 		});
 	}
 
-	private float createUiZoomButtons(float y) {
-		final Selector selector = new Selector(this, WIDTH, BTN_HEIGHT);
-		return selector.add(y, Game.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
+	private Selector createUiZoomButtons() {
+		return new Selector(WIDTH, BTN_HEIGHT, Game.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
 
 			@Override
-			public void onPlus() {
-				uiZoom(PixelScene.uiCamera.zoom + 0.1f);
+			public void onPlus(Selector s) {
+				uiZoom(PixelScene.uiCamera.zoom + 0.1f, s);
 			}
 
 			@Override
-			public void onMinus() {
-				uiZoom(PixelScene.uiCamera.zoom - 0.1f);
+			public void onMinus(Selector s) {
+				uiZoom(PixelScene.uiCamera.zoom - 0.1f, s);
 			}
 
 			@Override
-			public void onDefault() {
-				uiZoom(PixelScene.defaultZoom);
+			public void onDefault(Selector s) {
+				uiZoom(PixelScene.defaultZoom, s);
 			}
 
-			private void uiZoom(float value) {
+			private void uiZoom(float value, Selector s) {
 				PixelScene.uiCamera.updateFullscreenCameraZoom(value);
 				((GameScene) Game.scene()).updateUiCamera();
 				Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
 
 				float zoom = PixelScene.uiCamera.zoom;
-				selector.enable(zoom < PixelScene.maxZoom, zoom > PixelScene.minZoom, true);
+				s.enable(zoom < PixelScene.maxZoom, zoom > PixelScene.minZoom, true);
 			}
 		});
 	}

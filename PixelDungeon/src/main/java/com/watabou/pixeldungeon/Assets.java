@@ -180,7 +180,9 @@ public class Assets {
     public static final String SND_BITE      = "snd_bite.mp3";			// by sonidotv, from freesound.org
     public static final String SND_EXPLOSION = "snd_explosion.mp3"; // by kantouth, from freesound.org
 
-	public static final String UI_ICONS      = "ui/ui_icons.png";
+	public static final String UI_ICONS         = "ui/ui_icons.png";
+	public static final String UI_ICONS_12      = "ui/ui_icons12x12.png";
+	public static final String UI_ICONS_6       = "ui/ui_icons6x6.png";
 
 
     private static int chromeType = 0;

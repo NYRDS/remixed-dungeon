@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
@@ -18,7 +17,7 @@ class InventoryTool extends Tool {
     private PickedUpItem  pickedUpItem;
 
     public InventoryTool() {
-        super(Assets.UI_ICONS, 16, Chrome.Type.ACTION_BUTTON);
+        super(16, Chrome.Type.ACTION_BUTTON);
         gold = new GoldIndicator();
         gold.setPos(x,y);
         add(gold);

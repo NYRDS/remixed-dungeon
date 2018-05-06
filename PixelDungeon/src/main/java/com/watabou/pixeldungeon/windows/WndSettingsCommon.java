@@ -18,11 +18,13 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.ui.CheckBox;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndSettingsCommon extends Window {
@@ -30,43 +32,46 @@ public class WndSettingsCommon extends Window {
 	protected static final int WIDTH      = 112;
 	protected static final int BTN_HEIGHT = 18;
 
-	protected float curY = 0;
-
-	public WndSettingsCommon() {
-		super();
-
-		curY += SMALL_GAP;
-
-		CheckBox btnMusic = new CheckBox(Game
-				.getVar(R.string.WndSettings_Music)) {
-			@Override
-			protected void onClick() {
-				super.onClick();
-				PixelDungeon.music(checked());
-			}
-		};
-		btnMusic.setRect(0, curY, WIDTH, BTN_HEIGHT);
-		btnMusic.checked(PixelDungeon.music());
-		add(btnMusic);
-
-		CheckBox btnSound = new CheckBox(Game
-				.getVar(R.string.WndSettings_Sound)) {
-			@Override
-			protected void onClick() {
-				super.onClick();
-				PixelDungeon.soundFx(checked());
-				Sample.INSTANCE.play(Assets.SND_CLICK);
-			}
-		};
-		btnSound.setRect(0, btnMusic.bottom() + SMALL_GAP, WIDTH, BTN_HEIGHT);
-		btnSound.checked(PixelDungeon.soundFx());
-		add(btnSound);
-
-		curY = btnSound.bottom() + SMALL_GAP;
-	}
 
 	@Override
 	public void onBackPressed() {
 		hide();
 	}
+
+    protected void addSoundControls(VBox menuItems) {
+        menuItems.add(new MenuCheckBox(Game
+                .getVar(R.string.WndSettings_Music), PixelDungeon.music()) {
+            @Override
+            protected void onClick() {
+                super.onClick();
+                PixelDungeon.music(checked());
+            }
+        });
+
+
+        menuItems.add(new MenuCheckBox(Game
+                .getVar(R.string.WndSettings_Sound),PixelDungeon.soundFx()) {
+            @Override
+            protected void onClick() {
+                super.onClick();
+                PixelDungeon.soundFx(checked());
+                Sample.INSTANCE.play(Assets.SND_CLICK);
+            }
+        });
+    }
+
+    public class MenuButton extends RedButton {
+		protected MenuButton(String txt){
+			super(txt);
+			setSize(WIDTH,BTN_HEIGHT);
+		}
+	};
+
+	public class MenuCheckBox extends CheckBox{
+
+		public MenuCheckBox(String label, boolean checked) {
+			super(label, checked);
+			setSize(WIDTH,BTN_HEIGHT);
+		}
+	};
 }

@@ -25,7 +25,6 @@ import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -71,7 +70,7 @@ public class Toolbar extends Component {
 	public Toolbar(final Hero hero) {
 		super();
 
-		actionBox.add(btnWait = new Tool(Assets.UI_ICONS, 10, Chrome.Type.ACTION_BUTTON) {
+		actionBox.add(btnWait = new Tool(10, Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				hero.rest(false);
@@ -83,14 +82,14 @@ public class Toolbar extends Component {
 			}
 		});
 
-		actionBox.add(btnSearch = new Tool(Assets.UI_ICONS, 11,Chrome.Type.ACTION_BUTTON) {
+		actionBox.add(btnSearch = new Tool(11,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.search(true);
 			}
 		});
 
-		actionBox.add(btnInfo = new Tool(Assets.UI_ICONS,12,Chrome.Type.ACTION_BUTTON) {
+		actionBox.add(btnInfo = new Tool(12,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				GameScene.selectCell(informer);
@@ -98,7 +97,7 @@ public class Toolbar extends Component {
 		});
 
 		if (hero.spellUser) {
-			actionBox.add(btnSpells = new Tool(Assets.UI_ICONS, SpellHelper.iconIdByHero(hero),Chrome.Type.ACTION_BUTTON) {
+			actionBox.add(btnSpells = new Tool(SpellHelper.iconIdByHero(hero),Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				GameScene.show(new WndHeroSpells(null));
@@ -154,10 +153,6 @@ public class Toolbar extends Component {
 		toolbar.setAlign(VBox.Align.Bottom);
 		toolbar.setRect(x,y,width,height);
 		add(toolbar);
-	}
-
-	public void updateLayout() {
-		layout();
 	}
 
 	@Override
@@ -242,7 +237,7 @@ public class Toolbar extends Component {
 		private QuickSlot slot;
 
 		QuickslotTool() {
-			super(Assets.UI_ICONS,31, Chrome.Type.QUICKSLOT);
+			super(-1, Chrome.Type.QUICKSLOT);
 
 			slot = new QuickSlot();
 			add(slot);
@@ -251,7 +246,7 @@ public class Toolbar extends Component {
 		@Override
 		protected void layout() {
 			super.layout();
-			slot.setRect(base.x,base.y,base.width,base.height);
+			slot.setRect(base.x,base.y,base.width(),base.height());
 		}
 
 		public void show(boolean value){

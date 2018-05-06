@@ -38,8 +38,18 @@ public class RedButton extends TextButton {
 		
 		bg = Chrome.get( Chrome.Type.BUTTON );
 		add( bg );
-		
+
 		text = PixelScene.createText(GuiProperties.titleFontSize());
 		add( text );
+	}
+
+	public void regenText() {
+		String txt = text.text();
+		text.destroy();
+
+		text = PixelScene.createText(GuiProperties.titleFontSize());
+		text.text(txt);
+		add( text );
+		layout();
 	}
 }

@@ -28,7 +28,8 @@ public class TextButton extends Button {
 		bg.size( width, height );
 		
 		text.x = x + (int)(width - text.width()) / 2;
-		text.y = y + (int)(height - text.baseLine()) / 2;
+		//text.y = y + (int)(height - text.baseLine()) / 2;
+		text.y = y + (int)(height - text.height()) / 2;
 		
 		if (icon != null) {
 			icon.x = x + text.x - icon.width() - 2;

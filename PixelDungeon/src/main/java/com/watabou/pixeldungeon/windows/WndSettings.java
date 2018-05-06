@@ -18,67 +18,43 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.pixeldungeon.windows.WndUiSettings;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.ui.CheckBox;
-import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends WndSettingsCommon {
 
-	private Selector fontScaleSelector = new Selector(this, WIDTH, BTN_HEIGHT);
-
-	private RedButton btnFontMode;
-
 	public WndSettings() {
 		super();
 
-		if (android.os.Build.VERSION.SDK_INT >= 19) {
-			CheckBox btnImmersive = new CheckBox(Game.getVar(R.string.WndSettings_Immersive)) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					PixelDungeon.immerse(checked());
-				}
-			};
+		VBox menuItems = new VBox();
 
-			btnImmersive.setRect(0, curY, WIDTH,
-					BTN_HEIGHT);
-			btnImmersive.checked(PixelDungeon.immersed());
-			add(btnImmersive);
-			curY = btnImmersive.bottom() + SMALL_GAP;
-		}
 
-		curY = createTextScaleButtons(curY);
-
-		RedButton btnOrientation = new RedButton(orientationText()) {
-			@Override
-			protected void onClick() {
-				PixelDungeon.landscape(!PixelDungeon.landscape());
-			}
-		};
-		btnOrientation.setRect(0, curY + SMALL_GAP, WIDTH,
-				BTN_HEIGHT);
-		add(btnOrientation);
-
-		CheckBox btnRealtime = new CheckBox("Realtime!") {
+		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_UiSettings)){
 			@Override
 			protected void onClick() {
 				super.onClick();
-				PixelDungeon.realtime(checked());
+				WndSettings.this.add(new WndUiSettings());
 			}
-		};
-		btnRealtime.setRect(0, btnOrientation.bottom() + SMALL_GAP, WIDTH,
-				BTN_HEIGHT);
-		btnRealtime.checked(PixelDungeon.realtime());
+		});
+
+		addSoundControls(menuItems);
+
 		if (!PixelDungeon.isAlpha()) {
-			btnRealtime.enable(false);
+			menuItems.add(new MenuCheckBox("Realtime!",PixelDungeon.realtime()) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					PixelDungeon.realtime(checked());
+				}
+			});
 		}
-		add(btnRealtime);
 
 		final String selectLanguage = Game.getVar(R.string.WndSettings_SelectLanguage);
 
-		RedButton localeButton = new RedButton(selectLanguage) {
+		menuItems.add(new MenuButton(selectLanguage) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.scene().add(
@@ -95,118 +71,45 @@ public class WndSettings extends WndSettingsCommon {
 							}
 						});
 			}
-		};
-
-		localeButton.setRect(0, btnRealtime.bottom() + SMALL_GAP, WIDTH,
-				BTN_HEIGHT);
-		add(localeButton);
-
-		float y = createFontSelector(localeButton.bottom() + SMALL_GAP);
-		y = createMoveTimeoutSelector(y + SMALL_GAP);
-
-		resize(WIDTH, (int) y);
-	}
-
-	private float createFontSelector(float y) {
-		remove(btnFontMode);
-
-		String text;
-
-		if (PixelDungeon.classicFont()) {
-			text = Game
-					.getVar(R.string.WndSettings_ExperementalFont);
-			fontScaleSelector.enable(false);
-		} else {
-			text = Game
-					.getVar(R.string.WndSettings_ClassicFont);
-			fontScaleSelector.enable(true);
-		}
-
-		btnFontMode = new RedButton(text) {
-			@Override
-			protected void onClick() {
-				PixelDungeon.classicFont(!PixelDungeon.classicFont());
-				createFontSelector(y);
-			}
-		};
-
-		if (!Utils.canUseClassicFont(PixelDungeon.uiLanguage())) {
-			btnFontMode.enable(false);
-		}
-
-		btnFontMode.setRect(0, y, WIDTH,
-				BTN_HEIGHT);
-		add(btnFontMode);
-
-		return btnFontMode.bottom();
-	}
-
-	private float createTextScaleButtons(final float y) {
-		return fontScaleSelector.add(y, Game
-				.getVar(R.string.WndSettings_TextScaleDefault), new Selector.PlusMinusDefault() {
-			@Override
-			public void onPlus() {
-				fontScaleSelector.remove();
-				PixelDungeon.fontScale(PixelDungeon.fontScale() + 1);
-				createTextScaleButtons(y);
-
-			}
-
-			@Override
-			public void onMinus() {
-				fontScaleSelector.remove();
-				PixelDungeon.fontScale(PixelDungeon.fontScale() - 1);
-				createTextScaleButtons(y);
-			}
-
-			@Override
-			public void onDefault() {
-				fontScaleSelector.remove();
-				PixelDungeon.fontScale(0);
-				createTextScaleButtons(y);
-			}
 		});
-	}
 
-	private String orientationText() {
-		return PixelDungeon.landscape() ? Game
-				.getVar(R.string.WndSettings_SwitchPort) : Game
-				.getVar(R.string.WndSettings_SwitchLand);
+		menuItems.add(createMoveTimeoutSelector());
+
+		menuItems.setRect(0,0,width,menuItems.childsHeight());
+		add(menuItems);
+
+		resize(WIDTH, (int) menuItems.childsHeight());
 	}
 
 	private String moveTimeoutText() {
 		return String.format(Game.getVar(R.string.WndSettings_moveTimeout),Double.toString(PixelDungeon.getMoveTimeout()/1000));
 	}
 
-	private float createMoveTimeoutSelector(final float y) {
+	private Selector createMoveTimeoutSelector() {
 
-		final Selector timeoutSelector = new Selector(this, WIDTH, BTN_HEIGHT);
-
-		return timeoutSelector.add(y, moveTimeoutText(), new Selector.PlusMinusDefault() {
+		return new Selector( WIDTH, BTN_HEIGHT, moveTimeoutText(), new Selector.PlusMinusDefault() {
 
 			private int selectedTimeout = PixelDungeon.limitTimeoutIndex(PixelDungeon.moveTimeout());
 
-			private void update() {
+			private void update(Selector s) {
 				PixelDungeon.moveTimeout(selectedTimeout);
-				timeoutSelector.setText(moveTimeoutText());
+				s.setText(moveTimeoutText());
 			}
 
 			@Override
-			public void onPlus() {
+			public void onPlus(Selector s) {
 				selectedTimeout = PixelDungeon.limitTimeoutIndex(selectedTimeout+1);
-
-				update();
+				update(s);
 			}
 
 			@Override
-			public void onMinus() {
+			public void onMinus(Selector s) {
 				selectedTimeout = PixelDungeon.limitTimeoutIndex(selectedTimeout-1);
-
-				update();
+				update(s);
 			}
 
 			@Override
-			public void onDefault() {
+			public void onDefault(Selector s) {
 			}
 		});
 	}

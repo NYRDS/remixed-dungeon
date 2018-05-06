@@ -766,7 +766,13 @@ public class GameScene extends PixelScene {
 
     public void updateToolbar() {
         if (toolbar != null) {
-            toolbar.updateLayout();
+            toolbar.destroy();
+
+            toolbar = new Toolbar(Dungeon.hero);
+            toolbar.camera = uiCamera;
+            toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
+            add(toolbar);
+
             if(attack != null) {
                 attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
                 attack.update();

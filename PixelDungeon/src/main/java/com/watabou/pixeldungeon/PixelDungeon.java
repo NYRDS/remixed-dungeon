@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.Tool;
 
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -509,6 +510,17 @@ public class PixelDungeon extends Game {
 
 	public static void quickSlots(int slots) {
 		Preferences.INSTANCE.put(Preferences.KEY_QUICKSLOTS, slots);
+		if (scene() instanceof GameScene) {
+			((GameScene) scene()).updateToolbar();
+		}
+	}
+
+	public static String toolStyle() {
+		return Preferences.INSTANCE.getString(Preferences.KEY_TOOL_STYLE, Tool.Size.Std.name());
+	}
+
+	public static void toolStyle(String style) {
+		Preferences.INSTANCE.put(Preferences.KEY_TOOL_STYLE, style);
 		if (scene() instanceof GameScene) {
 			((GameScene) scene()).updateToolbar();
 		}
