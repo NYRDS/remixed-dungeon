@@ -60,6 +60,13 @@ public class WndSettingsInGame extends WndSettingsCommon {
 				PixelDungeon.toolStyle(size.name());
 			}
 		});
+		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_Handedness)){
+			@Override
+			protected void onClick() {
+				super.onClick();
+				PixelDungeon.handedness(!PixelDungeon.handedness());
+			}
+		});
 
 		menuItems.setRect(0,0,WIDTH,menuItems.childsHeight());
 

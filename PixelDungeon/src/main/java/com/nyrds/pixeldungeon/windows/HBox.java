@@ -9,12 +9,26 @@ import com.watabou.noosa.ui.Component;
  */
 public class HBox extends Component {
 
+    private float maxWidth;
+
     public enum Align {
-      Left,Right,Center
+      Left,Right,Center,Width
     }
 
     private Align align = Align.Left;
-    private int gap = 0;
+    private float gap = 0;
+
+    public HBox(float maxWidth) {
+        this.maxWidth = maxWidth;
+    }
+
+    public void wrapContent() {
+        maxWidth = childsWidth();
+    }
+
+    public void setMaxWidth(float maxWidth) {
+        this.maxWidth = maxWidth;
+    }
 
     public void setAlign(Align align) {
         this.align = align;
@@ -25,7 +39,7 @@ public class HBox extends Component {
     }
 
     private void alignLeft() {
-        float pos = left();
+        float pos = x;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
@@ -36,7 +50,7 @@ public class HBox extends Component {
     }
 
     private void alignRight() {
-        float pos = right();
+        float pos = x + maxWidth;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
@@ -57,13 +71,9 @@ public class HBox extends Component {
         return childsWidth;
     }
 
-    public boolean willFit() {
-        return childsWidth() <= width();
-    }
-
     private void alignCenter() {
 
-        float pos = left() + (width() - childsWidth()) / 2;
+        float pos = x + (maxWidth - childsWidth()) / 2;
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
@@ -73,6 +83,29 @@ public class HBox extends Component {
         }
     }
 
+    private void alignWidth() {
+        if(members.size() > 1) {
+            gap = 0;
+            float totalGap = maxWidth - childsWidth();
+            gap = totalGap / (members.size() - 1);
+        }
+        alignLeft();
+    }
+
+    @Override
+    public void measure() {
+        width = 0;
+        height = 0;
+
+        for(Gizmo g :members) {
+            if (g instanceof Component) {
+                width += ((Component) g).width() + gap;
+                height = Math.max(height,((Component) g).height());
+            }
+        }
+
+        layout();
+    }
 
     @Override
     protected void layout() {
@@ -88,6 +121,9 @@ public class HBox extends Component {
                 break;
             case Center:
                 alignCenter();
+                break;
+            case Width:
+                alignWidth();
                 break;
         }
     }

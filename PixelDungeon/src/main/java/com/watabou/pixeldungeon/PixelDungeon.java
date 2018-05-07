@@ -525,4 +525,15 @@ public class PixelDungeon extends Game {
 			((GameScene) scene()).updateToolbar(true);
 		}
 	}
+
+	public static Boolean handedness() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_HANDEDNESS, true);
+	}
+
+	public static void handedness(Boolean left) {
+		Preferences.INSTANCE.put(Preferences.KEY_HANDEDNESS, left);
+		if (scene() instanceof GameScene) {
+			((GameScene) scene()).updateToolbar(false);
+		}
+	}
 }

@@ -22,6 +22,7 @@ public class Selector extends HBox{
 			.getVar(R.string.WndSettings_ZoomOut);
 
 	public Selector(int width, int height, String text, final PlusMinusDefault actions) {
+		super(width);
 		this.width = width;
 		this.height = height;
 

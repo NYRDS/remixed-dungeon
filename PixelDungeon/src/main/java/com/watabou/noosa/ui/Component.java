@@ -110,4 +110,7 @@ public class Component extends Group {
 	
 	protected void layout() {	
 	}
+
+	public void measure() {
+	}
 }

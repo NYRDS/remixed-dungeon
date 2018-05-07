@@ -49,12 +49,11 @@ import java.util.ArrayList;
 
 public class Toolbar extends Component {
 
-	private Tool btnInfo;
 	private InventoryTool btnInventory;
 
-	private VBox toolbar   = new VBox();
-	private HBox slotBox   = new HBox();
-	private HBox actionBox = new HBox();
+	private Component toolbar   = new Component();
+	private HBox slotBox;
+	private HBox actionBox;
 
 	public static final int MAX_SLOTS = 25;
 
@@ -64,8 +63,11 @@ public class Toolbar extends Component {
 
 	private boolean lastEnabled = true;
 
-	public Toolbar(final Hero hero) {
+	public Toolbar(final Hero hero, float maxWidth) {
 		super();
+
+		slotBox = new HBox(maxWidth);
+		actionBox = new HBox(maxWidth);
 
 		actionBox.add(new Tool(7, Chrome.Type.ACTION_BUTTON) {
 			@Override
@@ -74,7 +76,7 @@ public class Toolbar extends Component {
 			}
 
 			protected boolean onLongClick() {
-				Dungeon.hero.rest(true);
+				hero.rest(true);
 				return true;
 			}
 		});
@@ -82,11 +84,11 @@ public class Toolbar extends Component {
 		actionBox.add(new Tool(8,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
-				Dungeon.hero.search(true);
+				hero.search(true);
 			}
 		});
 
-		actionBox.add(btnInfo = new Tool(9,Chrome.Type.ACTION_BUTTON) {
+		actionBox.add(new Tool(9,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				GameScene.selectCell(informer);
@@ -101,15 +103,12 @@ public class Toolbar extends Component {
 			}
 		});
 		}
+
 		actionBox.add(btnInventory = new InventoryTool());
 
 		for(int i = 0;i<MAX_SLOTS;i++) {
 			slots.add(new QuickslotTool());
 		}
-
-		width = Game.width();
-
-		height = Math.max(btnInfo.height(), slots.get(0).height());
 	}
 
 	@Override
@@ -117,8 +116,10 @@ public class Toolbar extends Component {
 
 		toolbar.remove(slotBox);
 		toolbar.remove(actionBox);
+		toolbar.destroy();
 
-		slotBox.setAlign(HBox.Align.Center);
+		actionBox.setMaxWidth(width);
+		slotBox.setMaxWidth(width);
 
 		for (QuickslotTool tool:slots) {
 			slotBox.remove(tool);
@@ -131,24 +132,46 @@ public class Toolbar extends Component {
 				slots.get(i).show(true);
 				slotBox.add(slots.get(i));
 			}
-
-			slotBox.setSize(width(), slots.get(0).height());
-
-			if (!slotBox.willFit()) {
-				PixelDungeon.quickSlots(active_slots - 1);
-				return;
-			}
-
-			toolbar.add(slotBox);
 		}
 
+		slotBox.setAlign(HBox.Align.Center);
+		slotBox.measure();
 
-		actionBox.setAlign(HBox.Align.Right);
-		actionBox.setSize(width(),btnInfo.height());
-		toolbar.add(actionBox);
+		if (slotBox.width()>width()) {
+			PixelDungeon.quickSlots(active_slots - 1);
+			return;
+		}
 
-		toolbar.setAlign(VBox.Align.Bottom);
-		toolbar.setRect(x,y,width,height);
+		boolean handness = PixelDungeon.handedness();
+
+		actionBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left );
+		actionBox.measure();
+
+		if(slotBox.width() + actionBox.width() > width()) {
+			toolbar = new VBox();
+
+			toolbar.add(slotBox);
+			toolbar.add(actionBox);
+
+			((VBox)toolbar).setAlign(VBox.Align.Bottom);
+		} else {
+			toolbar = new HBox(width());
+			actionBox.wrapContent();
+			slotBox.wrapContent();
+
+			if(handness) {
+				toolbar.add(slotBox);
+				toolbar.add(actionBox);
+			} else {
+				toolbar.add(actionBox);
+				toolbar.add(slotBox);
+			}
+
+			((HBox)toolbar).setAlign(HBox.Align.Width);
+		}
+
+		toolbar.measure();
+		toolbar.setRect(x,camera.height-toolbar.height(),camera.width,toolbar.height());
 		add(toolbar);
 	}
 

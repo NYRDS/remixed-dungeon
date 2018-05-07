@@ -54,7 +54,8 @@ public enum Preferences {
 
 	public static final String KEY_UI_ZOOM        = "ui_zoom";
 	public static final String KEY_VERSION_STRING = "version_string";
-    public static final String KEY_TOOL_STYLE        = "tool_style";
+    public static final String KEY_TOOL_STYLE     = "tool_style";
+    public static final String KEY_HANDEDNESS     = "handedness";
 
     private SharedPreferences prefs;
 

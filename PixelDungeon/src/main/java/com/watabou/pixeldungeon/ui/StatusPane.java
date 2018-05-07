@@ -192,19 +192,13 @@ public class StatusPane extends Component {
 
         btnMenu.setPos(width - btnMenu.width(), 1);
         btnHats.setPos(width - btnHats.width(), btnMenu.bottom());
-/*
-        btnInventory.setPos(2, 33);
-
-        height = btnInventory.bottom();
-
-		btnSpells.setPos( width - btnMenu.width(), btnHats.bottom());
-*/
     }
-/*
-    public void pickup(Item item) {
-        btnInventory.pickedUpItem.reset(item, btnInventory.centerX(), btnInventory.centerY());
+
+    @Override
+    public float bottom() {
+        return btnHats.bottom();
     }
-*/
+
     @Override
     public void update() {
         super.update();

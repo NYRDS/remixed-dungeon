@@ -81,6 +81,21 @@ public class VBox extends Component {
     }
 
     @Override
+    public void measure() {
+        width = 0;
+        height = 0;
+
+        for(Gizmo g :members) {
+            if (g instanceof Component) {
+                height += ((Component) g).height() + gap;
+                width = Math.max(width,((Component) g).width());
+            }
+        }
+
+        layout();
+    }
+
+    @Override
     protected void layout() {
         super.layout();
 
