@@ -49,9 +49,6 @@ import java.util.ArrayList;
 
 public class Toolbar extends Component {
 
-	private Tool btnSpells;
-	private Tool btnWait;
-	private Tool btnSearch;
 	private Tool btnInfo;
 	private InventoryTool btnInventory;
 
@@ -70,7 +67,7 @@ public class Toolbar extends Component {
 	public Toolbar(final Hero hero) {
 		super();
 
-		actionBox.add(btnWait = new Tool(10, Chrome.Type.ACTION_BUTTON) {
+		actionBox.add(new Tool(7, Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				hero.rest(false);
@@ -82,14 +79,14 @@ public class Toolbar extends Component {
 			}
 		});
 
-		actionBox.add(btnSearch = new Tool(11,Chrome.Type.ACTION_BUTTON) {
+		actionBox.add(new Tool(8,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.search(true);
 			}
 		});
 
-		actionBox.add(btnInfo = new Tool(12,Chrome.Type.ACTION_BUTTON) {
+		actionBox.add(btnInfo = new Tool(9,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				GameScene.selectCell(informer);
@@ -97,7 +94,7 @@ public class Toolbar extends Component {
 		});
 
 		if (hero.spellUser) {
-			actionBox.add(btnSpells = new Tool(SpellHelper.iconIdByHero(hero),Chrome.Type.ACTION_BUTTON) {
+			actionBox.add(new Tool(SpellHelper.iconIdByHero(hero),Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
 				GameScene.show(new WndHeroSpells(null));
@@ -263,11 +260,6 @@ public class Toolbar extends Component {
 
 	@Override
 	public float top() {
-		int qslots = PixelDungeon.quickSlots();
-		if(qslots==0) {
-			return btnInfo.top();
-		} else {
-			return Math.min(btnInfo.top(), slots.get(qslots - 1).top());
-		}
+		return toolbar.top();
 	}
 }

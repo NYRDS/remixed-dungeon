@@ -72,6 +72,13 @@ public class VBox extends Component {
         }
     }
 
+    @Override
+    public float top() {
+        if(align == Align.Bottom) {
+            return bottom() - childsHeight();
+        }
+        return super.top();
+    }
 
     @Override
     protected void layout() {

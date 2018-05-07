@@ -27,8 +27,8 @@ public class SpellHelper {
 
 
     static {
-        affinityToIcon.put(AFFINITY_NECROMANCY, 18);
-        affinityToIcon.put(AFFINITY_RAGE, 20);
+        affinityToIcon.put(AFFINITY_NECROMANCY, 11);
+        affinityToIcon.put(AFFINITY_RAGE, 12);
         affinityToIcon.put(AFFINITY_ELEMENTAL, 6);
         affinityToIcon.put(AFFINITY_COMMON, 6);
     }
