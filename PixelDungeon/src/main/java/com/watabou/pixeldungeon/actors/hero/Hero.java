@@ -73,6 +73,7 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.HeroAction.Attack;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.PetOwner;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -135,7 +136,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 
-public class Hero extends Char {
+public class Hero extends Char implements PetOwner {
 
 	private static final String TXT_EXP   = "%+dEXP";
 	private static final String TXT_LEAVE = Game.getVar(R.string.Hero_Leave);
@@ -203,6 +204,11 @@ public class Hero extends Char {
 
 	@NonNull
 	private Collection<Mob> pets = new ArrayList<>();
+
+	@Override
+	public void removePet(Mob mob) {
+		pets.remove(mob);
+	}
 
 	public void addPet(@NonNull Mob pet) {
 		pets.add(pet);
@@ -1904,7 +1910,7 @@ public class Hero extends Char {
 
 	@Override
 	protected boolean timeout() {
-		if (SystemTime.now() - SystemTime.getLastActionTime() > PixelDungeon.getMoveTimeout()) {
+		if (SystemTime.now() - SystemTime.getLastActionTime() > Dungeon.moveTimeout()) {
 			SystemTime.updateLastActionTime();
 			spend(TIME_TO_REST);
 			return true;

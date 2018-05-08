@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
@@ -36,7 +37,6 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -108,6 +108,9 @@ public abstract class Mob extends Char {
 	protected int exp    = 1;
 	protected int maxLvl = 30;
 
+	@Nullable
+	private PetOwner owner;
+
 	@NonNull
 	private Char enemy = DUMMY;
 
@@ -143,7 +146,8 @@ public abstract class Mob extends Char {
 	public static Mob makePet(@NonNull Mob pet, @NonNull Hero hero) {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
-			hero.addPet(pet);
+			pet.owner = hero;
+			pet.owner.addPet(pet);
 		}
 		return pet;
 	}
@@ -437,7 +441,7 @@ public abstract class Mob extends Char {
 			getSprite().zap( enemy.getPos() );
 		}
 
-		spend(PixelDungeon.realtime() ? attackDelay() * 10 : attackDelay());
+		spend(attackDelay());
 
 		return false;
 	}
@@ -571,27 +575,29 @@ public abstract class Mob extends Char {
 			}
 		}
 
-		{
-			if (hero.isAlive()) {
-				if (!friendly(hero)) {
-					Statistics.enemiesSlain++;
-					Badges.validateMonstersSlain();
-					Statistics.qualifiedForNoKilling = false;
+		if (hero.isAlive()) {
+			if (!friendly(hero)) {
+				Statistics.enemiesSlain++;
+				Badges.validateMonstersSlain();
+				Statistics.qualifiedForNoKilling = false;
 
-					if (Dungeon.nightMode) {
-						Statistics.nightHunt++;
-					} else {
-						Statistics.nightHunt = 0;
-					}
+				if (Dungeon.nightMode) {
+					Statistics.nightHunt++;
 					Badges.validateNightHunter();
-				}
-
-				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
-					if (hero.lvl() <= maxLvl && exp > 0) {
-						hero.earnExp(exp);
-					}
+				} else {
+					Statistics.nightHunt = 0;
 				}
 			}
+
+			if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
+				if (hero.lvl() <= maxLvl && exp > 0) {
+					hero.earnExp(exp);
+				}
+			}
+		}
+
+		if(owner!=null) {
+			owner.removePet(this);
 		}
 
 		super.die(cause);

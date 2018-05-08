@@ -81,6 +81,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 
+import static com.watabou.pixeldungeon.PixelDungeon.MOVE_TIMEOUTS;
+
 public class Dungeon {
 
 	private static final String SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
@@ -101,6 +103,8 @@ public class Dungeon {
 	private static long lastSaveTimestamp;
 
 	public static String gameId;
+	private static boolean realtime;
+	private static int     moveTimeout;
 
 	public static HashSet<Integer> chapters;
 
@@ -166,6 +170,9 @@ public class Dungeon {
 		heroClass.initHero(hero);
 
 		hero.levelId = DungeonGenerator.getEntryLevel();
+
+		realtime    = PixelDungeon.realtime();
+		moveTimeout = PixelDungeon.moveTimeout();
 
 		SaveUtils.deleteLevels(heroClass);
 	}
@@ -307,6 +314,8 @@ public class Dungeon {
 	private static final String BADGES       = "badges";
 	private static final String SCRIPTS_DATA = "scripts_data";
 	private static final String GAME_ID      = "game_id";
+	private static final String REALTIME     = "realtime";
+	private static final String MOVE_TIMEOUT = "move_timeout";
 
 	public static void gameOver() {
 		Dungeon.deleteGame(true);
@@ -362,7 +371,8 @@ public class Dungeon {
 		Badges.saveLocal(badges);
 		bundle.put(BADGES, badges);
 
-		GLog.toFile("saving game: %s", fileName);
+		bundle.put(REALTIME,realtime);
+		bundle.put(MOVE_TIMEOUT,moveTimeout);
 
 		bundle.put(SCRIPTS_DATA,
 				LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
@@ -527,6 +537,9 @@ public class Dungeon {
 		Journal.restoreFromBundle(bundle);
 		Logbook.restoreFromBundle(bundle);
 		LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
+
+		realtime = bundle.optBoolean(REALTIME,false);
+		moveTimeout = bundle.optInt(MOVE_TIMEOUT,Integer.MAX_VALUE);
 	}
 
 	private static void loadGame(String fileName, boolean fullLoad) throws IOException {
@@ -768,4 +781,12 @@ public class Dungeon {
 	public static boolean isLoading() {
 		return loading;
 	}
+
+    public static boolean realtime() {
+		return realtime;
+    }
+
+    public static double moveTimeout(){
+	    return MOVE_TIMEOUTS[moveTimeout];
+    }
 }

@@ -9,4 +9,6 @@
     <string name="WndSettings_UiSettings">Ui settings</string>
     <string name="WndSettings_ActionButtonSize">Action buttons size</string>
     <string name="WndSettings_Handedness">Handedness</string>
+    <string name="WndSettings_InGameUiSettings">Ui settings</string>
+    <string name="WndSettings_GameplaySettings">Gameplay</string>
 </resources>

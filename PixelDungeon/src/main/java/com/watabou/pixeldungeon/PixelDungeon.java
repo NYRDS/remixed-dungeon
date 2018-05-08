@@ -95,10 +95,6 @@ public class PixelDungeon extends Game {
 		super.onCreate(savedInstanceState);
 
 		playGames = new PlayGames(this);
-
-		if(!isAlpha()) {
-			PixelDungeon.realtime(false);
-		}
 		
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());

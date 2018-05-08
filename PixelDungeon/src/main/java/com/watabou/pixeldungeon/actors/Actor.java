@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -148,9 +147,9 @@ public abstract class Actor implements Bundlable {
 	}
 	
 
-	public static void processReaTime(float elapsed) {
+	private static void processReaTime(float elapsed) {
 
-		now += elapsed * 10;
+		now += elapsed;
 
 		do {
 			
@@ -185,7 +184,7 @@ public abstract class Actor implements Bundlable {
 	
 	public static void process(float elapsed) {
 		
-		if(PixelDungeon.realtime()) {
+		if(Dungeon.realtime()) {
 			processReaTime(elapsed);
 			return;
 		}

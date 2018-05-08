@@ -48,5 +48,13 @@ public class GnollTamahawk extends Tamahawk {
         image = imageIndex;
     }
 
+    @Override
+    protected boolean notUsableInMelee() {
+        return false;
+    }
 
+    @Override
+    public boolean isUpgradable() {
+        return true;
+    }
 }

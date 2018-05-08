@@ -36,6 +36,7 @@ public class HealerNPC extends ImmortalNPC {
 				say(Random.element(TXT_PHRASES));
 			}
 		}
+
 		return super.act();
 	}
 }

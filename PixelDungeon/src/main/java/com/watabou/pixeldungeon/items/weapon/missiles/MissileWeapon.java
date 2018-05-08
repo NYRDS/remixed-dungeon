@@ -105,25 +105,32 @@ public class MissileWeapon extends Weapon {
 	
 	@Override
 	public boolean doEquip( final Hero hero ) {
-		GameScene.show( 
-			new WndOptions( TXT_MISSILES, TXT_R_U_SURE, TXT_YES, TXT_NO ) {
-				@Override
-				protected void onSelect(int index) {
-					if (index == 0) {
-						MissileWeapon.super.doEquip( hero );
+		if(notUsableInMelee()) {
+			GameScene.show(
+					new WndOptions(TXT_MISSILES, TXT_R_U_SURE, TXT_YES, TXT_NO) {
+						@Override
+						protected void onSelect(int index) {
+							if (index == 0) {
+								MissileWeapon.super.doEquip(hero);
+							}
+						}
 					}
-				}
-			}
-		);
-		
+			);
+		} else {
+			return MissileWeapon.super.doEquip(hero);
+		}
 		return false;
 	}
-	
+
 	@Override
 	public Item random() {
 		return this;
 	}
-	
+
+	protected boolean notUsableInMelee() {
+		return true;
+	}
+
 	@Override
 	public boolean isUpgradable() {
 		return false;

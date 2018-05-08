@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.pixeldungeon.windows.WndGameplaySettings;
 import com.nyrds.pixeldungeon.windows.WndUiSettings;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -31,6 +32,7 @@ public class WndSettings extends WndSettingsCommon {
 
 		VBox menuItems = new VBox();
 
+		addSoundControls(menuItems);
 
 		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_UiSettings)){
 			@Override
@@ -40,17 +42,14 @@ public class WndSettings extends WndSettingsCommon {
 			}
 		});
 
-		addSoundControls(menuItems);
+		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_GameplaySettings)){
+			@Override
+			protected void onClick() {
+				super.onClick();
+				WndSettings.this.add(new WndGameplaySettings());
+			}
+		});
 
-		if (!PixelDungeon.isAlpha()) {
-			menuItems.add(new MenuCheckBox("Realtime!",PixelDungeon.realtime()) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					PixelDungeon.realtime(checked());
-				}
-			});
-		}
 
 		final String selectLanguage = Game.getVar(R.string.WndSettings_SelectLanguage);
 
@@ -73,44 +72,10 @@ public class WndSettings extends WndSettingsCommon {
 			}
 		});
 
-		menuItems.add(createMoveTimeoutSelector());
 
 		menuItems.setRect(0,0,width,menuItems.childsHeight());
 		add(menuItems);
 
 		resize(WIDTH, (int) menuItems.childsHeight());
-	}
-
-	private String moveTimeoutText() {
-		return String.format(Game.getVar(R.string.WndSettings_moveTimeout),Double.toString(PixelDungeon.getMoveTimeout()/1000));
-	}
-
-	private Selector createMoveTimeoutSelector() {
-
-		return new Selector( WIDTH, BTN_HEIGHT, moveTimeoutText(), new Selector.PlusMinusDefault() {
-
-			private int selectedTimeout = PixelDungeon.limitTimeoutIndex(PixelDungeon.moveTimeout());
-
-			private void update(Selector s) {
-				PixelDungeon.moveTimeout(selectedTimeout);
-				s.setText(moveTimeoutText());
-			}
-
-			@Override
-			public void onPlus(Selector s) {
-				selectedTimeout = PixelDungeon.limitTimeoutIndex(selectedTimeout+1);
-				update(s);
-			}
-
-			@Override
-			public void onMinus(Selector s) {
-				selectedTimeout = PixelDungeon.limitTimeoutIndex(selectedTimeout-1);
-				update(s);
-			}
-
-			@Override
-			public void onDefault(Selector s) {
-			}
-		});
 	}
 }
