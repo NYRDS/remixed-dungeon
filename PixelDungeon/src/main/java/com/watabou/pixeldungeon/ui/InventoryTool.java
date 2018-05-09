@@ -23,7 +23,6 @@ class InventoryTool extends Tool {
         add(gold);
 
         pickedUpItem = new PickedUpItem();
-        //pickedUpItem.setPos(x,y);
         add(pickedUpItem);
     }
 
