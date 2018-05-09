@@ -242,7 +242,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		StringBuilder sb = new StringBuilder(super.toString());
 
 		String status = status();
-		if (status != null) {
+		if (!status.equals("")) {
 			sb.append(" (" + status + ")");
 		}
 

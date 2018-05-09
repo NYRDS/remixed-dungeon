@@ -4,6 +4,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
@@ -78,7 +79,7 @@ public class WndHeroSpells extends Window {
 	private float addSpell(String spellName, final Hero hero,  int col, float yPos) {
 
 		final Spell spell = SpellFactory.getSpellByName(spellName);
-		if(spell == null /*|| spell.level() > hero.magicLvl()*/) {
+		if(spell == null || (!BuildConfig.DEBUG && spell.level() > hero.magicLvl() )) {
 			return yPos;
 		}
 
