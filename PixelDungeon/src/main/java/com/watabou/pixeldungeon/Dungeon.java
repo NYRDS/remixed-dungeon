@@ -104,7 +104,7 @@ public class Dungeon {
 
 	public static String gameId;
 	private static boolean realtime;
-	private static int     moveTimeout;
+	private static int     moveTimeoutIndex;
 
 	public static HashSet<Integer> chapters;
 
@@ -172,7 +172,7 @@ public class Dungeon {
 		hero.levelId = DungeonGenerator.getEntryLevel();
 
 		realtime    = PixelDungeon.realtime();
-		moveTimeout = PixelDungeon.moveTimeout();
+		moveTimeoutIndex = PixelDungeon.limitTimeoutIndex(PixelDungeon.moveTimeout());
 
 		SaveUtils.deleteLevels(heroClass);
 	}
@@ -372,7 +372,7 @@ public class Dungeon {
 		bundle.put(BADGES, badges);
 
 		bundle.put(REALTIME,realtime);
-		bundle.put(MOVE_TIMEOUT,moveTimeout);
+		bundle.put(MOVE_TIMEOUT,moveTimeoutIndex);
 
 		bundle.put(SCRIPTS_DATA,
 				LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
@@ -539,7 +539,7 @@ public class Dungeon {
 		LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 
 		realtime = bundle.optBoolean(REALTIME,false);
-		moveTimeout = bundle.optInt(MOVE_TIMEOUT,Integer.MAX_VALUE);
+		moveTimeoutIndex = PixelDungeon.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT,Integer.MAX_VALUE));
 	}
 
 	private static void loadGame(String fileName, boolean fullLoad) throws IOException {
@@ -787,6 +787,6 @@ public class Dungeon {
     }
 
     public static double moveTimeout(){
-	    return MOVE_TIMEOUTS[moveTimeout];
+	    return MOVE_TIMEOUTS[moveTimeoutIndex];
     }
 }
