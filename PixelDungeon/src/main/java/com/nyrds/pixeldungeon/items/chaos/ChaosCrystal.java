@@ -224,8 +224,6 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 		charge = bundle.getInt(CHARGE_KEY);
 		identetifyLevel = bundle.getInt(IDENTETIFY_LEVEL_KEY);
-		charge = 100;
-
 	}
 
 	@Override
