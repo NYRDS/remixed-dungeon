@@ -135,7 +135,6 @@ public class Toolbar extends Component {
 		}
 
 		slotBox.setAlign(HBox.Align.Center);
-		slotBox.measure();
 
 		if (slotBox.width()>width()) {
 			PixelDungeon.quickSlots(active_slots - 1);
@@ -145,7 +144,6 @@ public class Toolbar extends Component {
 		boolean handness = PixelDungeon.handedness();
 
 		actionBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left );
-		actionBox.measure();
 
 		if(slotBox.width() + actionBox.width() > width()) {
 			toolbar = new VBox();
@@ -170,7 +168,6 @@ public class Toolbar extends Component {
 			((HBox)toolbar).setAlign(HBox.Align.Width);
 		}
 
-		toolbar.measure();
 		toolbar.setRect(x,camera.height-toolbar.height(),camera.width,toolbar.height());
 		add(toolbar);
 	}

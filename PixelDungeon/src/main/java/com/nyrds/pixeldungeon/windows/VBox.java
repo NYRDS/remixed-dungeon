@@ -7,7 +7,7 @@ import com.watabou.noosa.ui.Component;
  * Created by mike on 01.05.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
-public class VBox extends Component {
+public class VBox extends BasicBox {
 
     public enum Align {
       Top,Bottom,Center
@@ -81,7 +81,7 @@ public class VBox extends Component {
     }
 
     @Override
-    public void measure() {
+    protected void _measure() {
         width = 0;
         height = 0;
 
@@ -91,8 +91,6 @@ public class VBox extends Component {
                 width = Math.max(width,((Component) g).width());
             }
         }
-
-        layout();
     }
 
     @Override

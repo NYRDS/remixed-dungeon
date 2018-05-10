@@ -182,8 +182,8 @@ public enum Preferences {
 					val = Boolean.toString(get().getBoolean(key, Boolean.parseBoolean(defValue)));
 				}
 
-				get().edit().putString(scrambledKey, UserKey.encrypt(val)).commit();
-				get().edit().remove(key).commit();
+				get().edit().putString(scrambledKey, UserKey.encrypt(val)).apply();
+				get().edit().remove(key).apply();
 				return val;
 			}
 		} catch (ClassCastException e) {
@@ -224,6 +224,6 @@ public enum Preferences {
 
 		String scrambledVal = UserKey.encrypt(value);
 		String scrambledKey = UserKey.encrypt(key);
-		get().edit().putString(scrambledKey, scrambledVal).commit();
+		get().edit().putString(scrambledKey, scrambledVal).apply();
 	}
 }

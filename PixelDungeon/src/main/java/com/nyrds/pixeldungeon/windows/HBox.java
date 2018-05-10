@@ -7,7 +7,7 @@ import com.watabou.noosa.ui.Component;
  * Created by mike on 01.05.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
-public class HBox extends Component {
+public class HBox extends BasicBox {
 
     private float maxWidth;
 
@@ -93,7 +93,7 @@ public class HBox extends Component {
     }
 
     @Override
-    public void measure() {
+    protected void _measure() {
         width = 0;
         height = 0;
 
@@ -103,8 +103,6 @@ public class HBox extends Component {
                 height = Math.max(height,((Component) g).height());
             }
         }
-
-        layout();
     }
 
     @Override

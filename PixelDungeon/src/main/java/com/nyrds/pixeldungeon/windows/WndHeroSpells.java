@@ -4,7 +4,6 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
@@ -24,115 +23,102 @@ import java.util.ArrayList;
 
 public class WndHeroSpells extends Window {
 
-	private static final String TXT_LVL   = Game.getVar(R.string.WndHero_SkillLevel);
+    private static final String TXT_LVL = Game.getVar(R.string.WndHero_SkillLevel);
 
-	private static final int MARGIN = 8;
-	private static final int WINDOW_MARGIN = 10;
+    private static final int MARGIN        = 8;
+    private static final int WINDOW_MARGIN = 10;
 
-	private Listener listener;
+    private Listener listener;
+    private Hero     hero;
 
-	public WndHeroSpells(Listener listener) {
-		super();
-		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
-		this.listener = listener;
+    public WndHeroSpells(Listener listener) {
+        super();
+        resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
+        this.listener = listener;
+        this.hero = Dungeon.hero;
 
-		final Hero hero = Dungeon.hero;
+        String affinity = hero.heroClass.getMagicAffinity();
 
-		String affinity = hero.heroClass.getMagicAffinity();
+        Text title = PixelScene.createText(TXT_LVL + ": " + hero.magicLvl(), GuiProperties.titleFontSize());
+        title.hardlight(Window.TITLE_COLOR);
+        title.setPos(width - title.width(),0);
+        add(title);
 
-		IconTitle title  = new IconTitle(new Image(
-				Assets.UI_ICONS,
-				16,
-				SpellHelper.iconIdByAffinity(affinity)),
-				SpellHelper.getMasteryTitleByAffinity(affinity));
+        IconTitle masteryTitle = new IconTitle(new Image(
+                Assets.UI_ICONS_12,
+                12,
+                SpellHelper.iconIdByAffinity(affinity)),
+                SpellHelper.getMasteryTitleByAffinity(affinity));
 
-		title.setRect(0,0,width, WndHelper.getFullscreenHeight());
+        masteryTitle.setRect(0, title.bottom() + 2, width, WndHelper.getFullscreenHeight());
 
-		add(title);
+        add(masteryTitle);
 
-		Text txtLvl = PixelScene.createText(TXT_LVL +": "+ hero.magicLvl(), GuiProperties.titleFontSize());
-		txtLvl.hardlight(Window.TITLE_COLOR);
-		txtLvl.x = width - txtLvl.width();
-		add(txtLvl);
 
-		float yPos = title.bottom() + MARGIN;
+        HBox spellsSet = new HBox(WndHelper.getLimitedWidth(120) - chrome.marginHor());
+        spellsSet.setAlign(HBox.Align.Width);
 
-		int col  = 0;
-        float nextRowY = yPos;
-
-		ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
-		if(spells != null) {
-
-			for (String spell : spells) {
-
-				nextRowY = addSpell(spell, hero, col, yPos);
-				col++;
-				if( col * (Spell.textureResolution() + MARGIN) > width) {
-				    yPos = nextRowY;
-				    col = 0;
-                }
-			}
-		}
-		resize(WndHelper.getLimitedWidth(120), (int) nextRowY);
-	}
-
-	private float addSpell(String spellName, final Hero hero,  int col, float yPos) {
-
-		final Spell spell = SpellFactory.getSpellByName(spellName);
-		if(spell == null || (!BuildConfig.DEBUG && spell.level() > hero.magicLvl() )) {
-			return yPos;
-		}
-
-		int xPos = col * (Spell.textureResolution() + MARGIN) + MARGIN;
-
-		Image spellImage = spell.image();
-		ImageButton icon = new ImageButton(spellImage) {
-
-			protected ColorBlock bg;
-
-			@Override
-			protected void createChildren() {
-				super.createChildren();
-				bg = new ColorBlock(width + 6 ,height + 6,0xFF4A4D44);
-				add(bg);
-			}
-
-			@Override
-			protected void layout() {
-				super.layout();
-					bg.x = x - 3;
-					bg.y = y - 3;
-					bg.size(width + 6, height + 6);
-
-					image.x = x;
-					image.y = y;
-			}
-
-			@Override
-			protected void onClick() {
-				super.onClick();
-				if(listener != null) {
-					listener.onSelect(spell.itemForSlot());
-				} else {
-					GameScene.show(new WndSpellInfo(WndHeroSpells.this, hero, spell));
-				}
-			}
-
-            @Override
-            protected boolean onLongClick() {
-	            hide();
-                QuickSlot.selectSlotFor(spell);
-                return true;
+        ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
+        if (spells != null) {
+            for (String spell : spells) {
+                spellsSet.add(new SpellButton(SpellFactory.getSpellByName(spell)));
             }
-        };
 
-		icon.setPos(xPos, yPos);
-		add( icon );
+            spellsSet.setPos(chrome.marginLeft(), Math.max(title.bottom(),masteryTitle.bottom()) + 2);
+            add(spellsSet);
+        }
 
-		return icon.bottom() + MARGIN;
-	}
+        resize(WndHelper.getLimitedWidth(120), (int) (spellsSet.bottom() + chrome.marginBottom()));
+    }
 
-	public interface Listener {
-		void onSelect( Spell.SpellItem spell );
-	}
+    public interface Listener {
+        void onSelect(Spell.SpellItem spell);
+    }
+
+    private class SpellButton extends ImageButton {
+
+        private final Spell      spell;
+        protected     ColorBlock bg;
+
+        public SpellButton(Spell spell) {
+            super(spell.image());
+            this.spell = spell;
+        }
+
+        @Override
+        protected void createChildren() {
+            super.createChildren();
+            bg = new ColorBlock(width + 6, height + 6, 0xFF4A4D44);
+            add(bg);
+        }
+
+        @Override
+        protected void layout() {
+            super.layout();
+            bg.x = x - 3;
+            bg.y = y - 3;
+            bg.size(width + 6, height + 6);
+
+            image.x = x;
+            image.y = y;
+        }
+
+        @Override
+        protected void onClick() {
+            super.onClick();
+            if (listener != null) {
+                listener.onSelect(spell.itemForSlot());
+            } else {
+                GameScene.show(new WndSpellInfo(WndHeroSpells.this, hero, spell));
+            }
+        }
+
+        @Override
+        protected boolean onLongClick() {
+            hide();
+            QuickSlot.selectSlotFor(spell);
+            return true;
+        }
+
+    }
 }

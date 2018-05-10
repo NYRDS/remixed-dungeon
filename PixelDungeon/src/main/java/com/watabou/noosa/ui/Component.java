@@ -108,7 +108,8 @@ public class Component extends Group {
 	protected void createChildren() {	
 	}
 	
-	protected void layout() {	
+	protected void layout() {
+		measure();
 	}
 
 	public void measure() {
