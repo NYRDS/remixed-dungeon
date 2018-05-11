@@ -70,7 +70,6 @@ import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.HeroAction.Attack;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.PetOwner;
@@ -952,7 +951,7 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actMeleeAttack() {
 
-		if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
+		if (canAttack(enemy)) {
 			spend(attackDelay());
 			getSprite().attack(enemy.getPos());
 
@@ -993,9 +992,6 @@ public class Hero extends Char implements PetOwner {
 		enemy = action.target;
 
 		if (enemy.isAlive() && !pacified) {
-			if (belongings.weapon instanceof SpecialWeapon) {
-				return actSpecialAttack(action);
-			}
 
 			if (bowEquiped()
 					&& (!Dungeon.level.adjacent(getPos(), enemy.getPos()) || this.heroClass == HeroClass.ELF)) {
@@ -1004,23 +1000,6 @@ public class Hero extends Char implements PetOwner {
 				return actMeleeAttack();
 			}
 
-		}
-
-		return getCloserToEnemy();
-	}
-
-	private boolean applySpecialTo(SpecialWeapon weapon, Char enemy) {
-		spend(attackDelay());
-		getSprite().attack(enemy.getPos());
-		weapon.applySpecial(this, enemy);
-		return false;
-	}
-
-	private boolean actSpecialAttack(Attack action) {
-		SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
-
-		if (canAttack(enemy)) {
-			return applySpecialTo(weapon, enemy);
 		}
 
 		return getCloserToEnemy();
@@ -1592,6 +1571,11 @@ public class Hero extends Char implements PetOwner {
 			attack(enemy);
 		}
 		curAction = null;
+
+		if(belongings.weapon instanceof SpecialWeapon) {
+			((SpecialWeapon) belongings.weapon).postAttack(this, enemy);
+		}
+
 
 		Invisibility.dispel(this);
 

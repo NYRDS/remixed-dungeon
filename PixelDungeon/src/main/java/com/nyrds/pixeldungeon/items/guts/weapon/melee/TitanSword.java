@@ -16,7 +16,7 @@ public class TitanSword extends SpecialWeapon {
 	}
 
 	@Override
-	public void applySpecial(Hero hero, Char tgt ) {
+	public void postAttack(Hero hero, Char tgt ) {
 
 	}
 

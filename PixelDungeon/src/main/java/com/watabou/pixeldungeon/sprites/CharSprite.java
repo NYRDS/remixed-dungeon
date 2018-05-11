@@ -457,14 +457,14 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             animCallback = null;
         } else {
             if (anim == attack) {
-                idle();
                 ch.onAttackComplete();
+                idle();
             } else if (anim == zap) {
-                idle();
                 ch.onZapComplete();
-            } else if (anim == operate) {
                 idle();
+            } else if (anim == operate) {
                 ch.onOperateComplete();
+                idle();
             }
         }
     }

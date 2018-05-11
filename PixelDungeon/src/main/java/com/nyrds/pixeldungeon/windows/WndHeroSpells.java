@@ -25,7 +25,6 @@ public class WndHeroSpells extends Window {
 
     private static final String TXT_LVL = Game.getVar(R.string.WndHero_SkillLevel);
 
-    private static final int MARGIN        = 8;
     private static final int WINDOW_MARGIN = 10;
 
     private Listener listener;
@@ -54,14 +53,19 @@ public class WndHeroSpells extends Window {
 
         add(masteryTitle);
 
-
         HBox spellsSet = new HBox(WndHelper.getLimitedWidth(120) - chrome.marginHor());
         spellsSet.setAlign(HBox.Align.Width);
 
         ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
         if (spells != null) {
-            for (String spell : spells) {
-                spellsSet.add(new SpellButton(SpellFactory.getSpellByName(spell)));
+            for (String spellName : spells) {
+                if(SpellFactory.hasSpellForName(spellName)) {
+                    Spell spell = SpellFactory.getSpellByName(spellName);
+                    if (spell.level() > hero.magicLvl()) {
+                        continue;
+                    }
+                    spellsSet.add(new SpellButton(spell));
+                }
             }
 
             spellsSet.setPos(chrome.marginLeft(), Math.max(title.bottom(),masteryTitle.bottom()) + 2);

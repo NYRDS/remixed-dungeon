@@ -90,7 +90,7 @@ public class Kusarigama extends SpecialWeapon {
 		return actions;
 	}
 
-	public void applySpecial(Hero hero, Char tgt) {
+	public void postAttack(Hero hero, Char tgt) {
 		setCurUser(hero);
 
 		if (Dungeon.level.distance(getCurUser().getPos(), tgt.getPos()) > 1) {

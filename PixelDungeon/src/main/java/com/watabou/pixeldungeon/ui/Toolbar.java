@@ -23,7 +23,6 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
@@ -33,6 +32,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -57,11 +57,7 @@ public class Toolbar extends Component {
 
 	public static final int MAX_SLOTS = 25;
 
-
 	private ArrayList<QuickslotTool> slots = new ArrayList<>();
-
-
-	private boolean lastEnabled = true;
 
 	public Toolbar(final Hero hero, float maxWidth) {
 		super();
@@ -72,11 +68,15 @@ public class Toolbar extends Component {
 		actionBox.add(new Tool(7, Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
-				hero.rest(false);
+				if(hero.isReady()) {
+					hero.rest(false);
+				}
 			}
 
 			protected boolean onLongClick() {
-				hero.rest(true);
+				if(hero.isReady()) {
+					hero.rest(true);
+				}
 				return true;
 			}
 		});
@@ -84,14 +84,18 @@ public class Toolbar extends Component {
 		actionBox.add(new Tool(8,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
-				hero.search(true);
+				if(hero.isReady()) {
+					hero.search(true);
+				}
 			}
 		});
 
 		actionBox.add(new Tool(9,Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
-				GameScene.selectCell(informer);
+				if(hero.isReady()) {
+					GameScene.selectCell(informer);
+				}
 			}
 		});
 
@@ -99,7 +103,9 @@ public class Toolbar extends Component {
 			actionBox.add(new Tool(SpellHelper.iconIdByHero(hero),Chrome.Type.ACTION_BUTTON) {
 			@Override
 			protected void onClick() {
-				GameScene.show(new WndHeroSpells(null));
+				if(hero.isReady()) {
+					GameScene.show(new WndHeroSpells(null));
+				}
 			}
 		});
 		}
@@ -172,32 +178,17 @@ public class Toolbar extends Component {
 		add(toolbar);
 	}
 
-	@Override
-	public void update() {
-		super.update();
-
-		if (lastEnabled != Dungeon.hero.isReady()) {
-			lastEnabled = Dungeon.hero.isReady();
-
-			for (Gizmo tool : members) {
-				if (tool instanceof Tool) {
-					((Tool) tool).enable(lastEnabled);
-				}
-			}
-		}
-	}
-
 	private static CellSelector.Listener informer = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer cell) {
-
 			if (cell == null) {
 				return;
 			}
 
-			if (cell < 0
-					|| cell > Dungeon.level.getLength()
-					|| (!Dungeon.level.visited[cell] && !Dungeon.level.mapped[cell])) {
+			Level level = Dungeon.level;
+
+			if (!level.cellValid(cell)
+					|| (!level.visited[cell] && !level.mapped[cell])) {
 				GameScene.show(new WndMessage(Game
 						.getVar(R.string.Toolbar_Info1)));
 				return;
@@ -282,4 +273,5 @@ public class Toolbar extends Component {
 	public float top() {
 		return toolbar.top();
 	}
+
 }

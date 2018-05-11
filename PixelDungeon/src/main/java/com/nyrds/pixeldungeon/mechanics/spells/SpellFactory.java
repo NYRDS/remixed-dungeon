@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -61,7 +62,7 @@ public class SpellFactory {
 		return mSpellsList.get(name) != null;
 	}
 
-	@Nullable
+	@NonNull
 	public static Spell getSpellByName(String name) {
 		try {
 			Class<? extends Spell> spellClass =  mSpellsList.get(name);
