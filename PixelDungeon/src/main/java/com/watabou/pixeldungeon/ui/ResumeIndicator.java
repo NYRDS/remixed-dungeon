@@ -30,7 +30,7 @@ public class ResumeIndicator extends Tag {
 	
 	@Override
 	protected void layout() {
-		btnResume.setPos(x-btnResume.width() + width(), y +(height() - btnResume.height())/2 );
+		btnResume.setPos(x+(width() - btnResume.width())/2, y +(height() - btnResume.height())/2 );
 		
 		super.layout();
 	}
