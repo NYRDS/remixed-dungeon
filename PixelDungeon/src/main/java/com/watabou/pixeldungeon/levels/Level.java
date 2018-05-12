@@ -853,7 +853,7 @@ public abstract class Level implements Bundlable {
 			}
 			cell = Random.Int(getLength());
 		}
-		while (!selectFrom[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null || getLevelObject(cell) != null);
+		while (!selectFrom[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null || getTopLevelObject(cell) != null);
 		return cell;
 	}
 
