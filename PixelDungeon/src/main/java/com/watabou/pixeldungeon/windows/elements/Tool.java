@@ -29,11 +29,10 @@ public class Tool extends Button {
         bg = Chrome.get(chrome);
         add(bg);
 
-        String baseImageFile = Assets.UI_ICONS;
-        int icon_size = 16;
+        String baseImageFile = Assets.UI_ICONS_12;
+        int icon_size = 12;
 
         switch (size) {
-
             case Std:
                 icon_size = 12;
                 baseImageFile = Assets.UI_ICONS_12;

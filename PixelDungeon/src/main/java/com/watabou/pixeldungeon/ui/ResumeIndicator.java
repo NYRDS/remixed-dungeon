@@ -20,7 +20,7 @@ public class ResumeIndicator extends Tag {
 	protected void createChildren() {
 		super.createChildren();
 		
-		add(btnResume = new ImageButton(new Image(Assets.UI_ICONS,16,0)) {
+		add(btnResume = new ImageButton(new Image(Assets.UI_ICONS_12,12,0)) {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.resume();
