@@ -57,10 +57,6 @@ public class VBox extends BasicBox {
         return childsHeight;
     }
 
-    public boolean willFit() {
-        return childsHeight() <= height();
-    }
-
     private void alignCenter() {
         float pos = top() + (height() - childsHeight()) / 2;
 

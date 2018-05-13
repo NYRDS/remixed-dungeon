@@ -29,10 +29,9 @@ public class TextButton extends Button {
 		
 		text.x = x + (int)(width - text.width()) / 2;
 		text.y = y + (int)(height - text.baseLine()) / 2;
-		//text.y = y + (int)(height - text.height()) / 2;
-		
+
 		if (icon != null) {
-			icon.x = x + text.x - icon.width() - 2;
+			icon.x = x + text.x - (width - text.x + icon.width())/2;
 			icon.y = y + (height - icon.height()) / 2;
 		}
 	}

@@ -112,6 +112,14 @@ public class Group extends Gizmo {
 		}
 	}
 
+	public void removeAll() {
+		for(Gizmo g:members) {
+			g.setNullParent();
+		}
+		members.clear();
+	}
+
+
 	private Gizmo getFirstAvailable(@NonNull Class<? extends Gizmo> c) {
 
 		for (int i = 0; i < getLength(); i++) {

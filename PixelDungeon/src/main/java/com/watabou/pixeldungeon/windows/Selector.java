@@ -3,7 +3,9 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.SimpleButton;
 
 /**
  * Created by mike on 16.04.2017.
@@ -12,8 +14,8 @@ import com.watabou.pixeldungeon.ui.RedButton;
 
 public class Selector extends HBox{
 
-	private RedButton btnPlus;
-	private RedButton btnMinus;
+	private SimpleButton btnPlus;
+	private SimpleButton btnMinus;
 	private RedButton btnDefault;
 
 	private static final String TXT_PLUS      = Game
@@ -32,7 +34,7 @@ public class Selector extends HBox{
 	private void createButtons(final String text, final PlusMinusDefault actions) {
 		float square_xs = height;
 
-		btnMinus = new RedButton(TXT_MINUS) {
+		btnMinus = new SimpleButton(Icons.MINUS.get()) {
 			@Override
 			protected void onClick() {
 				actions.onMinus(Selector.this);
@@ -48,7 +50,7 @@ public class Selector extends HBox{
 		};
 		btnDefault.setSize( width - 2*square_xs, height);
 		add(btnDefault);
-		btnPlus = new RedButton(TXT_PLUS) {
+		btnPlus = new SimpleButton(Icons.PLUS.get()) {
 			@Override
 			protected void onClick() {
 				actions.onPlus(Selector.this);

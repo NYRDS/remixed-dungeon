@@ -17,10 +17,13 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
@@ -49,229 +52,272 @@ import java.util.ArrayList;
 
 public class Toolbar extends Component {
 
-	private InventoryTool btnInventory;
 
-	private Component toolbar   = new Component();
-	private HBox slotBox;
-	private HBox actionBox;
+    private final Tool btnWait;
+    private final Tool btnSearch;
+    private final Tool btnInfo;
 
-	public static final int MAX_SLOTS = 25;
+    @Nullable
+    private final Tool btnSpells;
 
-	private ArrayList<QuickslotTool> slots = new ArrayList<>();
+    private InventoryTool btnInventory;
 
-	public Toolbar(final Hero hero, float maxWidth) {
-		super();
+    private Component toolbar = new Component();
 
-		slotBox = new HBox(maxWidth);
-		actionBox = new HBox(maxWidth);
+    public static final int MAX_SLOTS = 25;
 
-		actionBox.add(new Tool(7, Chrome.Type.ACTION_BUTTON) {
-			@Override
-			protected void onClick() {
-				if(hero.isReady()) {
-					hero.rest(false);
-				}
-			}
+    private ArrayList<QuickslotTool> slots = new ArrayList<>();
+    final private Hero hero;
 
-			protected boolean onLongClick() {
-				if(hero.isReady()) {
-					hero.rest(true);
-				}
-				return true;
-			}
-		});
+    public Toolbar(final Hero hero, float maxWidth) {
+        super();
 
-		actionBox.add(new Tool(8,Chrome.Type.ACTION_BUTTON) {
-			@Override
-			protected void onClick() {
-				if(hero.isReady()) {
-					hero.search(true);
-				}
-			}
-		});
+        this.hero = hero;
 
-		actionBox.add(new Tool(9,Chrome.Type.ACTION_BUTTON) {
-			@Override
-			protected void onClick() {
-				if(hero.isReady()) {
-					GameScene.selectCell(informer);
-				}
-			}
-		});
+        btnWait = new Tool(7, Chrome.Type.ACTION_BUTTON) {
+            @Override
+            protected void onClick() {
+                if (hero.isReady()) {
+                    hero.rest(false);
+                }
+            }
 
-		if (hero.spellUser) {
-			actionBox.add(new Tool(SpellHelper.iconIdByHero(hero),Chrome.Type.ACTION_BUTTON) {
-			@Override
-			protected void onClick() {
-				if(hero.isReady()) {
-					GameScene.show(new WndHeroSpells(null));
-				}
-			}
-		});
-		}
+            protected boolean onLongClick() {
+                if (hero.isReady()) {
+                    hero.rest(true);
+                }
+                return true;
+            }
+        };
 
-		actionBox.add(btnInventory = new InventoryTool());
+        btnSearch = new Tool(8, Chrome.Type.ACTION_BUTTON) {
+            @Override
+            protected void onClick() {
+                if (hero.isReady()) {
+                    hero.search(true);
+                }
+            }
+        };
 
-		for(int i = 0;i<MAX_SLOTS;i++) {
-			slots.add(new QuickslotTool());
-		}
-	}
+        btnInfo = new Tool(9, Chrome.Type.ACTION_BUTTON) {
+            @Override
+            protected void onClick() {
+                if (hero.isReady()) {
+                    GameScene.selectCell(informer);
+                }
+            }
+        };
 
-	@Override
-	protected void layout() {
+        btnSpells = new Tool(SpellHelper.iconIdByHero(hero), Chrome.Type.ACTION_BUTTON) {
+            @Override
+            protected void onClick() {
+                if (hero.isReady()) {
+                    GameScene.show(new WndHeroSpells(null));
+                }
+            }
+        };
 
-		toolbar.remove(slotBox);
-		toolbar.remove(actionBox);
-		toolbar.destroy();
+        btnInventory = new InventoryTool();
 
-		actionBox.setMaxWidth(width);
-		slotBox.setMaxWidth(width);
+        for (int i = 0; i < MAX_SLOTS; i++) {
+            slots.add(new QuickslotTool());
+        }
+    }
 
-		for (QuickslotTool tool:slots) {
-			slotBox.remove(tool);
-		}
+    @Override
+    protected void layout() {
 
-		final int active_slots = PixelDungeon.quickSlots();
+        toolbar.removeAll();
+        toolbar.destroy();
 
-		if(active_slots > 0) {
-			for (int i = 0; i < active_slots; i++) {
-				slots.get(i).show(true);
-				slotBox.add(slots.get(i));
-			}
-		}
+        final int active_slots = PixelDungeon.quickSlots();
 
-		slotBox.setAlign(HBox.Align.Center);
+        HBox slotBox = new HBox(width());
+        slotBox.setAlign(HBox.Align.Center);
+        if (active_slots > 0) {
+            for (int i = 0; i < active_slots; i++) {
+                slots.get(i).show(true);
+                slotBox.add(slots.get(i));
+            }
+        }
 
-		if (slotBox.width()>width()) {
-			PixelDungeon.quickSlots(active_slots - 1);
-			return;
-		}
+        if (slotBox.width() > width()) {
+            PixelDungeon.quickSlots(active_slots - 1);
+            return;
+        }
 
-		boolean handness = PixelDungeon.handedness();
 
-		actionBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left );
+        VHBox actionBox = new VHBox(width());
+        actionBox.add(btnWait);
+        actionBox.add(btnSearch);
+        actionBox.add(btnInfo);
+        actionBox.setAlign(VBox.Align.Bottom);
 
-		if(slotBox.width() + actionBox.width() > width()) {
-			toolbar = new VBox();
+        VHBox inventoryBox = new VHBox(width());
+        if (hero.spellUser) {
+            inventoryBox.add(btnSpells);
+        }
+        inventoryBox.add(btnInventory);
+        inventoryBox.setAlign(VBox.Align.Bottom);
 
-			toolbar.add(slotBox);
-			toolbar.add(actionBox);
+        boolean handness = PixelDungeon.handedness();
 
-			((VBox)toolbar).setAlign(VBox.Align.Bottom);
-		} else {
-			toolbar = new HBox(width());
-			actionBox.wrapContent();
-			slotBox.wrapContent();
+        actionBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left);
+        inventoryBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left);
 
-			if(handness) {
-				toolbar.add(slotBox);
-				toolbar.add(actionBox);
-			} else {
-				toolbar.add(actionBox);
-				toolbar.add(slotBox);
-			}
+        if (slotBox.width() + actionBox.width() + inventoryBox.width() > width()) {
+            actionBox.setMaxWidth(0);
+            inventoryBox.setMaxWidth(0);
+            actionBox.reset();
+            inventoryBox.reset();
+        }
 
-			((HBox)toolbar).setAlign(HBox.Align.Width);
-		}
+        if (slotBox.width() + actionBox.width() + inventoryBox.width() > width()) {
+            actionBox.setMaxWidth(width());
+            inventoryBox.setMaxWidth(width());
+            actionBox.reset();
+            inventoryBox.reset();
 
-		toolbar.setRect(x,camera.height-toolbar.height(),camera.width,toolbar.height());
-		add(toolbar);
-	}
+            actionBox.wrapContent();
+            inventoryBox.wrapContent();
 
-	private static CellSelector.Listener informer = new CellSelector.Listener() {
-		@Override
-		public void onSelect(Integer cell) {
-			if (cell == null) {
-				return;
-			}
+            toolbar = new VBox();
 
-			Level level = Dungeon.level;
+            HBox buttonsBox = new HBox(width());
+            buttonsBox.setAlign(HBox.Align.Width);
+            buttonsBox.setAlign(VBox.Align.Bottom);
 
-			if (!level.cellValid(cell)
-					|| (!level.visited[cell] && !level.mapped[cell])) {
-				GameScene.show(new WndMessage(Game
-						.getVar(R.string.Toolbar_Info1)));
-				return;
-			}
+            if (handness) {
+                buttonsBox.add(inventoryBox);
+                buttonsBox.add(actionBox);
+            } else {
+                buttonsBox.add(actionBox);
+                buttonsBox.add(inventoryBox);
+            }
 
-			if (!Dungeon.visible[cell]) {
-				GameScene.show(new WndInfoCell(cell));
-				return;
-			}
+            toolbar.add(slotBox);
+            toolbar.add(buttonsBox);
 
-			if (cell == Dungeon.hero.getPos()) {
-				GameScene.show(new WndHero());
-				return;
-			}
+            ((VBox) toolbar).setAlign(VBox.Align.Bottom);
+        } else {
+            toolbar = new HBox(width());
 
-			Mob mob = (Mob) Actor.findChar(cell);
-			if (mob != null) {
-				GameScene.show(new WndInfoMob(mob));
-				return;
-			}
+            actionBox.wrapContent();
+            inventoryBox.wrapContent();
+            slotBox.wrapContent();
 
-			Heap heap = Dungeon.level.getHeap(cell);
-			if (heap != null) {
-				if (heap.type == Heap.Type.FOR_SALE && heap.size() == 1
-						&& heap.peek().price() > 0) {
-					GameScene.show(new WndTradeItem(heap, false));
-				} else {
-					GameScene.show(new WndInfoItem(heap));
-				}
-				return;
-			}
+            if (handness) {
+                toolbar.add(inventoryBox);
+                toolbar.add(slotBox);
+                toolbar.add(actionBox);
+            } else {
+                toolbar.add(actionBox);
+                toolbar.add(slotBox);
+                toolbar.add(inventoryBox);
+            }
 
-			Plant plant = Dungeon.level.plants.get(cell);
-			if (plant != null) {
-				GameScene.show(new WndInfoPlant(plant));
-				return;
-			}
+            ((HBox) toolbar).setAlign(HBox.Align.Width);
+            ((HBox) toolbar).setAlign(VBox.Align.Bottom);
+        }
 
-			GameScene.show(new WndInfoCell(cell));
-		}
+        toolbar.setRect(x, camera.height - toolbar.height(), camera.width, toolbar.height());
+        add(toolbar);
+    }
 
-		@Override
-		public String prompt() {
-			return Game.getVar(R.string.Toolbar_Info2);
-		}
-	};
+    private static CellSelector.Listener informer = new CellSelector.Listener() {
+        @Override
+        public void onSelect(Integer cell) {
+            if (cell == null) {
+                return;
+            }
 
-	public void pickup(Item item) {
-		btnInventory.pickUp(item);
-	}
+            Level level = Dungeon.level;
 
-	private static class QuickslotTool extends Tool {
+            if (!level.cellValid(cell)
+                    || (!level.visited[cell] && !level.mapped[cell])) {
+                GameScene.show(new WndMessage(Game
+                        .getVar(R.string.Toolbar_Info1)));
+                return;
+            }
 
-		private QuickSlot slot;
+            if (!Dungeon.visible[cell]) {
+                GameScene.show(new WndInfoCell(cell));
+                return;
+            }
 
-		QuickslotTool() {
-			super(-1, Chrome.Type.QUICKSLOT);
+            if (cell == Dungeon.hero.getPos()) {
+                GameScene.show(new WndHero());
+                return;
+            }
 
-			slot = new QuickSlot();
-			add(slot);
-		}
+            Mob mob = (Mob) Actor.findChar(cell);
+            if (mob != null) {
+                GameScene.show(new WndInfoMob(mob));
+                return;
+            }
 
-		@Override
-		protected void layout() {
-			super.layout();
-			slot.setRect(base.x,base.y,base.width(),base.height());
-		}
+            Heap heap = Dungeon.level.getHeap(cell);
+            if (heap != null) {
+                if (heap.type == Heap.Type.FOR_SALE && heap.size() == 1
+                        && heap.peek().price() > 0) {
+                    GameScene.show(new WndTradeItem(heap, false));
+                } else {
+                    GameScene.show(new WndInfoItem(heap));
+                }
+                return;
+            }
 
-		public void show(boolean value){
-			setVisible(value);
-			enable(value);
-		}
-		
-		@Override
-		public void enable(boolean value) {
-			slot.enable(value);
-			active = value;
-		}
-	}
+            Plant plant = Dungeon.level.plants.get(cell);
+            if (plant != null) {
+                GameScene.show(new WndInfoPlant(plant));
+                return;
+            }
 
-	@Override
-	public float top() {
-		return toolbar.top();
-	}
+            GameScene.show(new WndInfoCell(cell));
+        }
+
+        @Override
+        public String prompt() {
+            return Game.getVar(R.string.Toolbar_Info2);
+        }
+    };
+
+    public void pickup(Item item) {
+        btnInventory.pickUp(item);
+    }
+
+    private static class QuickslotTool extends Tool {
+
+        private QuickSlot slot;
+
+        QuickslotTool() {
+            super(-1, Chrome.Type.QUICKSLOT);
+
+            slot = new QuickSlot();
+            add(slot);
+        }
+
+        @Override
+        protected void layout() {
+            super.layout();
+            slot.setRect(base.x, base.y, base.width(), base.height());
+        }
+
+        public void show(boolean value) {
+            setVisible(value);
+            enable(value);
+        }
+
+        @Override
+        public void enable(boolean value) {
+            slot.enable(value);
+            active = value;
+        }
+    }
+
+    @Override
+    public float top() {
+        return toolbar.top();
+    }
 
 }

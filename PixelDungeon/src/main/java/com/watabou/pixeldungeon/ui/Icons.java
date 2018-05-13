@@ -71,7 +71,9 @@ public enum Icons {
     BTN_QUESTION,
     GNOLL,
     VK,
-    FB;
+    FB,
+    PLUS,
+    MINUS;
 
 
     public Image get() {
@@ -224,6 +226,12 @@ public enum Icons {
                 break;
             case FB:
                 icon.frame(icon.texture.uvRect(28, 87, 42, 101));
+                break;
+            case PLUS:
+                icon.frame(icon.texture.uvRect(14, 114, 22, 122));
+                break;
+            case MINUS:
+                icon.frame(icon.texture.uvRect(14, 109, 22, 113));
                 break;
         }
         return icon;

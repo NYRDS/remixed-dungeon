@@ -59,9 +59,16 @@ public class SimpleButton extends Component {
 	
 	@Override
 	protected void layout() {
-		image.x = x;
-		image.y = y;
+		image.x = x + (width - image.width()) / 2;
+		image.y = y + (height - image.height()) / 2;
 	}
 	
 	protected void onClick() {}
+
+	public void enable( boolean value ) {
+		active = value;
+		image.alpha( value ? 1.0f : 0.3f );
+	}
+
+
 }

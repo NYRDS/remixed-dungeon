@@ -16,6 +16,7 @@ public class HBox extends BasicBox {
     }
 
     private Align align = Align.Left;
+    private VBox.Align vAlign = VBox.Align.Top;
     private float gap = 0;
 
     public HBox(float maxWidth) {
@@ -34,6 +35,22 @@ public class HBox extends BasicBox {
         this.align = align;
     }
 
+    public void setAlign(VBox.Align vAlgin) {
+        this.vAlign = vAlgin;
+    }
+
+    private float yAlign(Component c) {
+        switch (vAlign) {
+            case Top:
+                return top();
+            case Bottom:
+                return bottom() - c.height();
+            case Center:
+                return top() + (height() - c.height())/2;
+        }
+        return y;
+    }
+
     public void setGap(int gap) {
         this.gap = gap;
     }
@@ -43,7 +60,7 @@ public class HBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
-                ((Component) g).setPos(pos, y);
+                ((Component) g).setPos(pos, yAlign((Component) g));
                 pos += ((Component) g).width() + gap;
             }
         }
@@ -54,7 +71,7 @@ public class HBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
-                ((Component) g).setPos(pos - ((Component) g).width() - gap, y);
+                ((Component) g).setPos(pos - ((Component) g).width() - gap, yAlign((Component) g));
                 pos -= ((Component) g).width() + gap;
             }
         }
@@ -77,7 +94,7 @@ public class HBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof Component) {
-                ((Component) g).setPos(pos, y);
+                ((Component) g).setPos(pos, yAlign((Component) g));
                 pos += ((Component) g).width() + gap;
             }
         }
