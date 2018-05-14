@@ -75,7 +75,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 		}
 	}
 
-	public void load(String asset) {
+	private void load(String asset) {
 
 		if (!ids.containsKey(asset)) {
 			try {

@@ -337,7 +337,7 @@ public class SystemText extends Text {
 
 	@Override
 	public void draw() {
-		measure();
+		clean();
 		if (lineImage != null) {
 			int line = 0;
 
