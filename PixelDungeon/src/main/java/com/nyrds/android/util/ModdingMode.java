@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 import com.watabou.pixeldungeon.PixelDungeon;
 
 import org.json.JSONObject;
@@ -36,7 +37,6 @@ public class ModdingMode {
 
 	@NonNull
 	static private String mActiveMod = REMIXED;
-	static private Context mContext;
 
 	static private boolean mTextRenderingMode = false;
 
@@ -69,7 +69,7 @@ public class ModdingMode {
 	public static boolean isAssetExist(String resName) {
 		InputStream str;
 		try {
-			str = mContext.getAssets().open(resName);
+			str = getContext().getAssets().open(resName);
 			str.close();
 			return true;
 		} catch (IOException e) {
@@ -134,7 +134,7 @@ public class ModdingMode {
 					return new FileInputStream(file);
 				}
 			}
-			return mContext.getAssets().open(resName);
+			return getContext().getAssets().open(resName);
 		} catch (IOException e) {
 			throw new TrackedRuntimeException(e);
 		}
@@ -146,10 +146,6 @@ public class ModdingMode {
 
 	private static boolean trustedMod() {
 		return trustedMods.contains(mActiveMod);
-	}
-
-	public static void setContext(Context context) {
-		mContext = context;
 	}
 
 	public static void setClassicTextRenderingMode(boolean val) {
@@ -181,5 +177,9 @@ public class ModdingMode {
 		}
 
 		return daysDiff < 14;
+	}
+
+	private static Context getContext() {
+		return RemixedPixelDungeonApp.getContext();
 	}
 }

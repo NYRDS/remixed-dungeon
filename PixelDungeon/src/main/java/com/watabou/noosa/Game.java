@@ -21,7 +21,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -43,13 +42,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
@@ -197,7 +195,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		if (instance().scene != null) {
 			instance().scene.pause();
 		}
-
+		instance().finish();
 		System.exit(0);
 	}
 
@@ -206,18 +204,22 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 			@Override
 			public void run() {
 				String toastText = text;
-				Context context = instance().getApplicationContext();
 
 				if (args.length > 0) {
 					toastText = Utils.format(text, args);
 				}
 
-				android.widget.Toast toast = android.widget.Toast.makeText(context, toastText,
+				android.widget.Toast toast = android.widget.Toast.makeText(RemixedPixelDungeonApp.getContext(), toastText,
 						android.widget.Toast.LENGTH_LONG);
 				toast.show();
 			}
 		});
 
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
 	}
 
 	public static boolean isAlpha() {
@@ -229,17 +231,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		Context context = getApplicationContext();
-		StringsManager.setContext(context);
-
 		EventCollector.init(this);
 
 		if(!BuildConfig.DEBUG) {
 			EventCollector.collectSessionData("apk signature",Util.getSignature(this));
 		}
-
-		FileSystem.setContext(context);
-		ModdingMode.setContext(context);
 
 		try {
 			version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;

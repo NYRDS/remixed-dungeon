@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.items.accessories;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
@@ -105,7 +104,7 @@ public class Accessory {
 
     static public void check() {
         for (String item : allAccessoriesList.keySet()) {
-            if (Iap.checkPurchase(item)) {
+            if ( ((PixelDungeon)(PixelDungeon.instance())).iap.checkPurchase(item)) {
                 getByName(item).ownIt(true);
             } else {
                 getByName(item).ownIt(false);

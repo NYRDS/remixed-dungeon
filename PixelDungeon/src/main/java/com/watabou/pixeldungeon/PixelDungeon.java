@@ -56,6 +56,8 @@ public class PixelDungeon extends Game {
 
 	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
 
+	public Iap iap;
+
 	public PixelDungeon() {
 		super(TitleScene.class);
 		
@@ -99,7 +101,8 @@ public class PixelDungeon extends Game {
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
 
-		Iap.initIap(this);
+		iap = new Iap();
+		iap.initIap(this);
 		
 		if(!Utils.canUseClassicFont(uiLanguage())) {
 			PixelDungeon.classicFont(false);
@@ -202,7 +205,7 @@ public class PixelDungeon extends Game {
 
 		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
 
-		if(Iap.onActivityResult(requestCode, resultCode, data)) {
+		if(iap.onActivityResult(requestCode, resultCode, data)) {
 			return;
 		}
 
@@ -219,7 +222,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return Flavours.haveDonations() && Iap.isReady() || BuildConfig.DEBUG;
+		return Flavours.haveDonations() && ((PixelDungeon)instance()).iap.isReady() || BuildConfig.DEBUG;
 	}
 	
 	/*

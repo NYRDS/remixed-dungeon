@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -103,7 +102,7 @@ public class WndDonate extends WndTabbed {
 			pos += GAP;
 
 			if (PixelDungeon.donated() < level) {
-				String price = Iap.getDonationPriceString(level);
+				String price = ((PixelDungeon)(PixelDungeon.instance())).iap.getDonationPriceString(level);
 				String btnText;
 				if( price != null ) {
 					btnText = DONATE + " "+ price;
@@ -114,7 +113,7 @@ public class WndDonate extends WndTabbed {
 					@Override
 					protected void onClick() {
 						EventCollector.logEvent("DonationClick",Integer.toString(level));
-						Iap.donate(level);
+						((PixelDungeon)(PixelDungeon.instance())).iap.donate(level);
 					}
 				};
 				

@@ -32,20 +32,20 @@ public class Iap {
     private static final String SKU_LEVEL_3 = "supporter_level_3";
     private static final String SKU_LEVEL_4 = "supporter_level_4";
 
-    private static IabHelper mHelper = null;
-    private static Inventory mInventory = null;
+    private IabHelper mHelper = null;
+    private Inventory mInventory = null;
 
-    private static Activity mContext;
+    private Activity mContext;
 
-    private static volatile boolean m_iapReady = false;
+    private volatile boolean m_iapReady = false;
 
-    private static IapCallback mIapCallback = null;
+    private IapCallback mIapCallback = null;
 
-	public static boolean isReady() {
+	public  boolean isReady() {
         return m_iapReady;
     }
 
-    private static void initIapPhase2() {
+    private void initIapPhase2() {
         if (mHelper != null) {
             return;
         }
@@ -87,7 +87,7 @@ public class Iap {
         });
     }
 
-    private static void queryItemsPrice(List<String> items) {
+    private void queryItemsPrice(List<String> items) {
         try {
             mHelper.queryInventoryAsync(true, items, null, mGotInventoryListener);
         } catch (IabHelper.IabAsyncInProgressException e) {
@@ -97,7 +97,7 @@ public class Iap {
         }
     }
 
-    private static void queryItems() {
+    private void queryItems() {
         List<String> items = new ArrayList<>();
 
         items.add(SKU_LEVEL_1);
@@ -115,7 +115,7 @@ public class Iap {
     }
 
 
-    public static void initIap(Activity context) {
+    public void initIap(Activity context) {
         mContext = context;
 
         if (!GooglePlayServices.googlePlayServicesUsable(mContext)) {
@@ -133,13 +133,13 @@ public class Iap {
     }
 
 
-    public static boolean checkPurchase(String item) {
+    public boolean checkPurchase(String item) {
         Purchase check = mInventory.getPurchase(item.toLowerCase(Locale.ROOT));
 	    return check != null && verifyDeveloperPayload(check);
 
     }
 
-    private static void checkPurchases() {
+    private void checkPurchases() {
         PixelDungeon.setDonationLevel(0);
 
         if (checkPurchase(SKU_LEVEL_1)) {
@@ -159,7 +159,7 @@ public class Iap {
         }
     }
 
-	private static IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
+	private IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
         @Override
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
             if (mHelper == null)
@@ -178,7 +178,7 @@ public class Iap {
     };
 
     @Nullable
-    private static String formatSkuPrice(SkuDetails sku) {
+    private String formatSkuPrice(SkuDetails sku) {
         if (sku == null) {
             return null;
         }
@@ -186,7 +186,7 @@ public class Iap {
     }
 
     @Nullable
-    public static String getSkuPrice(String item) {
+    public String getSkuPrice(String item) {
         if (mInventory == null) {
             return null;
         }
@@ -195,7 +195,7 @@ public class Iap {
     }
 
     @Nullable
-    public static String getDonationPriceString(int level) {
+    public String getDonationPriceString(int level) {
         if (mInventory == null) {
             return null;
         }
@@ -214,7 +214,7 @@ public class Iap {
     }
 
 
-    public synchronized static void doPurchase(String sku, IapCallback callback) {
+    public synchronized void doPurchase(String sku, IapCallback callback) {
         /*if(BuildConfig.DEBUG) {
             callback.onPurchaseOk();
 			return;
@@ -281,13 +281,13 @@ public class Iap {
         }
     }
 
-    private static boolean verifyDeveloperPayload(Purchase p) {
+    private boolean verifyDeveloperPayload(Purchase p) {
         String payload = p.getDeveloperPayload();
 
         return true;
     }
 
-    public static void donate(int level) {
+    public void donate(int level) {
         switch (level) {
             case 1:
                 doPurchase(SKU_LEVEL_1, null);
@@ -304,12 +304,12 @@ public class Iap {
         }
     }
 
-    private static void complain(String message) {
+    private void complain(String message) {
         EventCollector.logEvent("iap error", message);
         GLog.debug("**** IAP Error: " + message);
     }
 
-    public static boolean onActivityResult(int requestCode, int resultCode, Intent data) {
+    public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (mHelper == null) return false;
 
         // Pass on the activity result to the helper for handling

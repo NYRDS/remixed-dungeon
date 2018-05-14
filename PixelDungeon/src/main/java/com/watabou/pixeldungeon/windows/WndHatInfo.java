@@ -10,6 +10,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
@@ -86,7 +87,7 @@ public class WndHatInfo extends Window {
 							@Override
 							public void run() {
 								EventCollector.logEvent("PurchaseClick",item.name());
-								Iap.doPurchase(accessory, new Iap.IapCallback() {
+								((PixelDungeon)(PixelDungeon.instance())).iap.doPurchase(accessory, new Iap.IapCallback() {
 									@Override
 									public void onPurchaseOk() {
 										item.ownIt(true);

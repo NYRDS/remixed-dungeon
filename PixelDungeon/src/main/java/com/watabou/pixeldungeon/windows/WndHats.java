@@ -4,7 +4,6 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
@@ -87,7 +86,7 @@ public class WndHats extends Window {
 
 		//List
 		for (final String item : hats) {
-			String price = Iap.getSkuPrice(item);
+			String price = ((PixelDungeon)(PixelDungeon.instance())).iap.getSkuPrice(item);
 			Accessory accessory = Accessory.getByName(item);
 
 			if (accessory.haveIt()) {

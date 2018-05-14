@@ -10,6 +10,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -32,7 +33,6 @@ import java.util.Map;
  * Created by mike on 08.03.2016.
  */
 public class StringsManager {
-	private static Context context;
 
 	@SuppressLint("UseSparseArrays")
 	@NonNull
@@ -136,33 +136,33 @@ public class StringsManager {
 
 	private static Locale userSelectedLocale;
 
-	public static void ensureCorrectLocale() {
+	private static void ensureCorrectLocale() {
 		if(userSelectedLocale==null) {
 			return;
 		}
 
-		Configuration config = context.getResources().getConfiguration();
+		Configuration config = getContext().getResources().getConfiguration();
 
-		if(!context.getResources().getConfiguration().locale.equals(userSelectedLocale)) {
+		if(!getContext().getResources().getConfiguration().locale.equals(userSelectedLocale)) {
 			if(BuildConfig.DEBUG){
 				GLog.i("Locale is messed up! Restoring");
 			}
 			config.locale = userSelectedLocale;
-			context.getResources().updateConfiguration(config,
-					context.getResources().getDisplayMetrics());
+			getContext().getResources().updateConfiguration(config,
+					getContext().getResources().getDisplayMetrics());
 		}
 	}
 
 	public static void useLocale(Locale locale, String lang) {
 		userSelectedLocale = locale;
 
-		Configuration config = context.getResources().getConfiguration();
+		Configuration config = getContext().getResources().getConfiguration();
 
 		GLog.i("context locale: %s -> %s", config.locale, locale);
 
 		config.locale = locale;
-		context.getResources().updateConfiguration(config,
-				context.getResources().getDisplayMetrics());
+		getContext().getResources().updateConfiguration(config,
+				getContext().getResources().getDisplayMetrics());
 
 		clearModStrings();
 
@@ -176,10 +176,6 @@ public class StringsManager {
 
 	}
 
-	public static void setContext(Context context) {
-		StringsManager.context = context;
-	}
-
 	public static String getVar(int id) {
 		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
 				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
@@ -191,7 +187,7 @@ public class StringsManager {
 
 		try {
 			ensureCorrectLocale();
-			return context.getResources().getString(id);
+			return getContext().getResources().getString(id);
 		} catch (Resources.NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
 		}
@@ -204,7 +200,7 @@ public class StringsManager {
 			return stringsMap.get(id);
 		}
 		ensureCorrectLocale();
-		return context.getResources().getStringArray(id);
+		return getContext().getResources().getStringArray(id);
 	}
 
 	public static String getVar(String id) {
@@ -255,4 +251,7 @@ public class StringsManager {
 		return new String[0];
 	}
 
+	public static Context getContext() {
+		return RemixedPixelDungeonApp.getContext();
+	}
 }

@@ -3,6 +3,8 @@ package com.nyrds.android.util;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
@@ -16,26 +18,20 @@ import java.util.zip.ZipOutputStream;
 
 public class FileSystem {
 
-	static private Context m_context;
-
-	static public void setContext(Context context) {
-		m_context = context;
-	}
-
 	static public File getInternalStorageFile(String fileName) {
-		File storageDir = m_context.getFilesDir();
+		File storageDir = getContext().getFilesDir();
 		return new File(storageDir, fileName);
 	}
 
 	static public String[] listInternalStorage() {
-		File storageDir = m_context.getFilesDir();
+		File storageDir = getContext().getFilesDir();
 		return storageDir.list();
 	}
 
 	@NonNull
 	static public File[] listExternalStorage() {
 
-		File storageDir = m_context.getExternalFilesDir(null);
+		File storageDir = getContext().getExternalFilesDir(null);
 		if (storageDir != null) {
 			File[] ret = storageDir.listFiles();
 			if(ret != null) {
@@ -64,7 +60,7 @@ public class FileSystem {
 	}
 
 	static public File getExternalStorageFile(String fileName) {
-		File storageDir = m_context.getExternalFilesDir(null);
+		File storageDir = getContext().getExternalFilesDir(null);
 		return new File(storageDir, fileName);
 	}
 
@@ -169,5 +165,9 @@ public class FileSystem {
 		} else {
 			return null;
 		}
+	}
+
+	private static Context getContext() {
+		return RemixedPixelDungeonApp.getContext();
 	}
 }

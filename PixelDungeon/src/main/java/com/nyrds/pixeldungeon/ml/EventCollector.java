@@ -35,7 +35,7 @@ public class EventCollector {
 				return;
 			}
 
-			AnalyticsTrackers.initialize(context);
+			AnalyticsTrackers.initialize();
 
 			mTracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
 			mTracker.enableAdvertisingIdCollection(true);
