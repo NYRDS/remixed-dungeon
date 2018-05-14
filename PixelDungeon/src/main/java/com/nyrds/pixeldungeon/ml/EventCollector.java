@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.ml;
 
-import android.content.Context;
 import android.os.SystemClock;
 
 import com.google.android.gms.analytics.HitBuilders;
@@ -27,7 +26,7 @@ public class EventCollector {
 		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
 	}
 
-	static public void init(Context context) {
+	static public void init() {
 		if (mTracker == null) {
 
 			if(!googleAnalyticsUsable()) {

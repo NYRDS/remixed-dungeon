@@ -40,4 +40,8 @@ public class ImageButton extends Button {
 		image.resetColor();
 	}
 
+	public void enable( boolean value ) {
+		active = value;
+		image.alpha( value ? 1.0f : 0.3f );
+	}
 }
