@@ -181,9 +181,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	}
 
 	public void doRestart() {
-		Intent i = getBaseContext().getPackageManager()
-				.getLaunchIntentForPackage(getBaseContext().getPackageName());
-		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+		Intent i = getBaseContext()
+                .getPackageManager()
+				.getLaunchIntentForPackage(getBaseContext().getPackageName())
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 
 		int piId = 123456;
 		PendingIntent pi = PendingIntent.getActivity(getBaseContext(), piId, i, PendingIntent.FLAG_CANCEL_CURRENT);
@@ -233,7 +234,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		EventCollector.init(this);
+		EventCollector.init();
 
 		if(!BuildConfig.DEBUG) {
 			EventCollector.collectSessionData("apk signature",Util.getSignature(this));

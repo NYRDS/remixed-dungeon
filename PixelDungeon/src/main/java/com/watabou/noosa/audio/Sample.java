@@ -105,13 +105,6 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 		return streamID;
 	}
 
-	public void unload(Object src) {
-		if (ids.containsKey(src)) {
-			pool.unload(ids.get(src));
-			ids.remove(src);
-		}
-	}
-
 	public int play(String id) {
 		return play(id, 1, 1, 1);
 	}
