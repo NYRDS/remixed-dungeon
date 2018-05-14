@@ -86,7 +86,7 @@ public class WndHats extends Window {
 
 		//List
 		for (final String item : hats) {
-			String price = ((PixelDungeon)(PixelDungeon.instance())).iap.getSkuPrice(item);
+			String price = PixelDungeon.instance().iap.getSkuPrice(item);
 			Accessory accessory = Accessory.getByName(item);
 
 			if (accessory.haveIt()) {

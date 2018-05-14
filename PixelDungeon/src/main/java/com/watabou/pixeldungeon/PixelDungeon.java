@@ -56,8 +56,6 @@ public class PixelDungeon extends Game {
 
 	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
 
-	public Iap iap;
-
 	public PixelDungeon() {
 		super(TitleScene.class);
 		
@@ -222,7 +220,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return Flavours.haveDonations() && ((PixelDungeon)instance()).iap.isReady() || BuildConfig.DEBUG;
+		return Flavours.haveDonations() && PixelDungeon.instance().iap.isReady() || BuildConfig.DEBUG;
 	}
 	
 	/*

@@ -87,7 +87,7 @@ public class WndHatInfo extends Window {
 							@Override
 							public void run() {
 								EventCollector.logEvent("PurchaseClick",item.name());
-								((PixelDungeon)(PixelDungeon.instance())).iap.doPurchase(accessory, new Iap.IapCallback() {
+								PixelDungeon.instance().iap.doPurchase(accessory, new Iap.IapCallback() {
 									@Override
 									public void onPurchaseOk() {
 										item.ownIt(true);

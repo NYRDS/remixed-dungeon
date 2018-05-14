@@ -102,7 +102,7 @@ public class WndDonate extends WndTabbed {
 			pos += GAP;
 
 			if (PixelDungeon.donated() < level) {
-				String price = ((PixelDungeon)(PixelDungeon.instance())).iap.getDonationPriceString(level);
+				String price = PixelDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
 				if( price != null ) {
 					btnText = DONATE + " "+ price;
@@ -113,7 +113,7 @@ public class WndDonate extends WndTabbed {
 					@Override
 					protected void onClick() {
 						EventCollector.logEvent("DonationClick",Integer.toString(level));
-						((PixelDungeon)(PixelDungeon.instance())).iap.donate(level);
+						PixelDungeon.instance().iap.donate(level);
 					}
 				};
 				

@@ -104,7 +104,7 @@ public class Accessory {
 
     static public void check() {
         for (String item : allAccessoriesList.keySet()) {
-            if ( ((PixelDungeon)(PixelDungeon.instance())).iap.checkPurchase(item)) {
+            if ( PixelDungeon.instance().iap.checkPurchase(item)) {
                 getByName(item).ownIt(true);
             } else {
                 getByName(item).ownIt(false);
