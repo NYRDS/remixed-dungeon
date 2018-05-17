@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Welcome_Ok">Okay!</string>>
+    <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Welcome!</string>
     <string name="Welcome_Text">
         Remixed Pixel Dungeon is a modification of Watabou\'s open source Pixel Dungeon.\n
@@ -404,6 +404,16 @@
     - Now strength will provide additional damage bonus for all classes\n
     - Fortune Teller now owns a Cat\n
     - Gnoll tomahawk will not break when thrown at a target\n
+    </string>
+
+    <string name="Welcome_Text_28_2">
+    remix.28.2\n
+    - Bug Gui refactoring:\n
+    -- Quickslots quantity limited only by sreen width\n
+    -- Spells and abilities can be placed in quickslots\n
+    -- Handedness option\n
+    - Move time limit now persist in game state\n
+    - Realtime!(still very experimental) mode now available and persistent per game session\n
     </string>
 
 </resources>
