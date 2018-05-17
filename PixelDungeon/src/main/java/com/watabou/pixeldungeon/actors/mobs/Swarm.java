@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.Packable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -36,24 +37,21 @@ public class Swarm extends Mob {
 		
 		flying = true;
 
-		lootChance = 0.1f;
+		lootChance = 0.25f;
 		loot = new PotionOfHealing();
 	}
 
+	@Packable
 	private int generation = 0;
-	
-	private static final String GENERATION	= "generation";
-	
+
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( GENERATION, generation );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
-		generation = bundle.getInt( GENERATION );
 	}
 	
 	@Override
@@ -85,8 +83,8 @@ public class Swarm extends Mob {
 	@Override
 	public Mob split(int cell, int damage) {
 		Swarm clone = (Swarm) super.split(cell, damage);
-		clone.generation = generation + 1;
-		clone.lootChance = 1 / (generation + 1);
+		clone.generation++;
+		clone.lootChance *= 1f / (generation + 1f);
 		return clone;
 	}
 }
