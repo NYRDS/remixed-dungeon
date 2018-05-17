@@ -408,7 +408,7 @@
 
     <string name="Welcome_Text_28_2">
     remix.28.2\n
-    - Bug Gui refactoring:\n
+    - Gui refactoring:\n
     -- Quickslots quantity limited only by sreen width\n
     -- Spells and abilities can be placed in quickslots\n
     -- Handedness option\n
