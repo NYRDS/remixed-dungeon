@@ -17,6 +17,7 @@ public class WndPremiumSettings extends Window {
 	
 	private static final String RUBY   = Game.getVar(R.string.WndPremiumSettings_ruby);
 	private static final String GOLD   = Game.getVar(R.string.WndPremiumSettings_gold);
+	private static final String MARBLE = Game.getVar(R.string.WndPremiumSettings_marble);
 	private static final String SILVER = Game.getVar(R.string.WndPremiumSettings_silver);
 	private static final String STD    = Game.getVar(R.string.WndPremiumSettings_std);
 		

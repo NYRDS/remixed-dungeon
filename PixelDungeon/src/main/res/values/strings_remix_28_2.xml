@@ -11,4 +11,6 @@
     <string name="WndSettings_Handedness">Handedness</string>
     <string name="WndSettings_InGameUiSettings">Ui settings</string>
     <string name="WndSettings_GameplaySettings">Gameplay</string>
+    <string name="WndPremiumSettings_marble">marble</string>
+
 </resources>
