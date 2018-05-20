@@ -18,7 +18,7 @@ import com.watabou.utils.Random;
 
 public class SpiderExploding extends MultiKindMob {
 
-	static Class<?> PLantClasses[] = {
+	private static Class<?> PlantClasses[] = {
 		Firebloom.class, 
 		Icecap.class, 
 		Sorrowmoss.class,
@@ -46,7 +46,7 @@ public class SpiderExploding extends MultiKindMob {
 	public int attackProc(@NonNull Char enemy, int damage ) {
 		
 		try {
-			Plant plant  = (Plant) PLantClasses[getKind()].newInstance();
+			Plant plant  = (Plant) PlantClasses[getKind()].newInstance();
 			plant.pos = enemy.getPos();
 			
 			plant.effect(enemy.getPos(),enemy);
@@ -73,10 +73,4 @@ public class SpiderExploding extends MultiKindMob {
 	public int dr() {
 		return 0;
 	}
-	
-	@Override
-	public void die( Object cause ) {
-		super.die( cause );
-	}
-
 }
