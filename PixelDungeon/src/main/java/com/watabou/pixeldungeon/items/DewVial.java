@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -104,10 +105,10 @@ public class DewVial extends Item {
 				
 				Sample.INSTANCE.play( Assets.SND_DRINK );
 				hero.getSprite().operate( hero.getPos() );
-				
-				updateQuickslot();
-				
-			} else {
+
+                QuickSlot.refresh();
+
+            } else {
 				GLog.w( TXT_EMPTY );
 			}
 			
@@ -140,14 +141,14 @@ public class DewVial extends Item {
 			setVolume(MAX_VOLUME);
 			GLog.p( TXT_FULL );
 		}
-		
-		updateQuickslot();
-	}
+
+        QuickSlot.refresh();
+    }
 	
 	public void fill() {
 		setVolume(MAX_VOLUME);
-		updateQuickslot();
-	}
+        QuickSlot.refresh();
+    }
 	
 	public static void autoDrink( Hero hero ) {
 		DewVial vial = hero.belongings.getItem( DewVial.class );

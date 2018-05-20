@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -89,8 +90,8 @@ public class WandOfMagicMissile extends SimpleWand  {
 			if (hero.belongings.weapon == this) {
 				disenchantEquipped = true;
 				hero.belongings.weapon = null;
-				updateQuickslot();
-			} else {
+                QuickSlot.refresh();
+            } else {
 				disenchantEquipped = false;
 				detach( hero.belongings.backpack );
 			}
@@ -142,8 +143,8 @@ public class WandOfMagicMissile extends SimpleWand  {
 			} else {
 				if (disenchantEquipped) {
 					getCurUser().belongings.weapon = WandOfMagicMissile.this;
-					WandOfMagicMissile.this.updateQuickslot();
-				} else {
+                    QuickSlot.refresh();
+                } else {
 					collect( getCurUser().belongings.backpack );
 				}
 			}

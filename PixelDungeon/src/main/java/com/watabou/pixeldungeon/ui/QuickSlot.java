@@ -198,7 +198,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 		return null;
 	}
 
-	public void item(Item item) {
+	private void item(Item item) {
 		slot.item(item);
 		itemInSlot = item;
 		enableSlot();

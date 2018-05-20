@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
@@ -145,8 +146,8 @@ public class Pickaxe extends Weapon {
 	public void proc( Char attacker, Char defender, int damage ) {
 		if (!bloodStained && defender instanceof Bat && (defender.hp() <= damage)) {
 			bloodStained = true;
-			updateQuickslot();
-		}
+            QuickSlot.refresh();
+        }
 	}
 	
 	private static final String BLOODSTAINED = "bloodStained";

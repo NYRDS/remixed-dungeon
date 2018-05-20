@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Callback;
 
 public class Boomerang extends MissileWeapon {
@@ -57,10 +58,10 @@ public class Boomerang extends MissileWeapon {
 		MIN += 1;
 		MAX += 2;
 		super.upgrade( enchant );
-		
-		updateQuickslot();
-		
-		return this;
+
+        QuickSlot.refresh();
+
+        return this;
 	}
 	
 	@Override
@@ -104,8 +105,8 @@ public class Boomerang extends MissileWeapon {
 						} else {
 							getCurUser().collect(Boomerang.this);
 						}
-						updateQuickslot();
-					}
+                        QuickSlot.refresh();
+                    }
 				});
 
 		if (throwEquiped) {

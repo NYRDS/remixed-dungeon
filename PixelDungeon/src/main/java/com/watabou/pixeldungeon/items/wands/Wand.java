@@ -231,9 +231,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		curChargeKnown = true;
 		super.identify();
 
-		updateQuickslot();
+        QuickSlot.refresh();
 
-		return this;
+        return this;
 	}
 
 	@Override
@@ -293,9 +293,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		maxCharges(Math.max(Math.min(maxCharges()+1, 9),maxCharges()));
 		curCharges(Math.max(curCharges(), maxCharges()));
 
-		updateQuickslot();
+        QuickSlot.refresh();
 
-		return this;
+        return this;
 	}
 
 	@Override
@@ -305,9 +305,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		maxCharges(Math.max(maxCharges()-1, 0));
 		curCharges(Math.min(curCharges(), maxCharges()));
 
-		updateQuickslot();
+        QuickSlot.refresh();
 
-		return this;
+        return this;
 	}
 
 	protected int initialCharges() {
@@ -334,9 +334,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	protected void wandUsed() {
 		curCharges(curCharges() - 1);
-		updateQuickslot();
+        QuickSlot.refresh();
 
-		getCurUser().spendAndNext(TIME_TO_ZAP);
+        getCurUser().spendAndNext(TIME_TO_ZAP);
 	}
 
 	@Override
@@ -422,8 +422,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 				identify();
 			}
 
-			updateQuickslot();
-		}
+            QuickSlot.refresh();
+        }
 
 	}
 
@@ -491,8 +491,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 			if (curCharges() < maxCharges()) {
 				curCharges(curCharges() + 1);
-				updateQuickslot();
-			}
+                QuickSlot.refresh();
+            }
 
 			delay();
 

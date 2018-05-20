@@ -186,7 +186,7 @@ public class Item implements Bundlable, Presser {
 			for (Item item : items) {
 				if (item.getClass() == c && item.level() == level()) {
 					item.quantity(item.quantity() + quantity());
-					item.updateQuickslot();
+					QuickSlot.refresh();
 					return true;
 				}
 			}
@@ -223,7 +223,7 @@ public class Item implements Bundlable, Presser {
 				return detachAll(container);
 			} else {
 				quantity(quantity() - 1);
-				updateQuickslot();
+				QuickSlot.refresh();
 				try {
 					Item detached = getClass().newInstance();
 					detached.level(level());
@@ -251,7 +251,7 @@ public class Item implements Bundlable, Presser {
 				}
 			}
 		}
-
+		QuickSlot.refresh();
 		return this;
 	}
 
@@ -316,7 +316,7 @@ public class Item implements Bundlable, Presser {
 			hero.belongings.removeItem(this);
 		}
 
-		updateQuickslot();
+		QuickSlot.refresh();
 	}
 
 	public Item identify() {
@@ -399,10 +399,6 @@ public class Item implements Bundlable, Presser {
 
 	public String status() {
 		return quantity() != 1 ? Integer.toString(quantity()) : "";
-	}
-
-	public void updateQuickslot() {
-		QuickSlot.refresh();
 	}
 
 	private static final String QUANTITY     = "quantity";

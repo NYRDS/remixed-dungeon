@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -231,8 +232,8 @@ public class Belongings implements Iterable<Item> {
 				if (wand.curCharges() < wand.maxCharges()) {
 					wand.curCharges(full ? wand.maxCharges() : wand.curCharges() + 1);
 					count++;
-					
-					wand.updateQuickslot();
+
+					QuickSlot.refresh();
 				}
 			}
 		}
@@ -250,8 +251,8 @@ public class Belongings implements Iterable<Item> {
 				if (wand.curCharges() > 0) {
 					wand.curCharges(wand.curCharges() - 1);
 					count++;
-					
-					wand.updateQuickslot();
+
+					QuickSlot.refresh();
 				}
 			}
 		}
