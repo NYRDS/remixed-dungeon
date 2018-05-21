@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="WndSettings_Quickslots">Sloty szybkiego wyboru</string>
+
+    <string name="Abilities_Default">Mistrzostwo</string>
+    <string name="Abilities_Common">Pospolite Zaklęcia</string>
+    <string name="Abilities_Elemental">Zaklęcia Elemętarne</string>
+    <string name="Abilities_Necromancy">Nekromancja</string>
+    <string name="WndSettings_UiSettings">Ustawienia Interfejsu</string>
+    <string name="WndSettings_ActionButtonSize">Rozmiar przycisku akcji</string>
+    <string name="WndSettings_Handedness">Ręka której używasz </string>
+    <string name="WndSettings_InGameUiSettings">Ustawienia Interfejsu</string>
+    <string name="WndSettings_GameplaySettings">Rozgrywka</string>
+    <string name="WndPremiumSettings_marble">marmur</string>
+
+</resources>

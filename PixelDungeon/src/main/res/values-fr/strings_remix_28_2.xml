@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="WndSettings_Quickslots">Raccourcis</string>
+
+    <string name="Abilities_Default">Spécialisation </string>
+    <string name="Abilities_Common">Sorts communs</string>
+    <string name="Abilities_Elemental">Sorts d\'élémentaires</string>
+    <string name="Abilities_Necromancy">Nécromancie </string>
+    <string name="WndSettings_UiSettings">Paramètres de l\'interface</string>
+    <string name="WndSettings_ActionButtonSize">Taille des bouton d\'action</string>
+    <string name="WndSettings_Handedness">Orientation</string>
+    <string name="WndSettings_InGameUiSettings">
+Paramètres de l\'interface
+</string>
+    <string name="WndSettings_GameplaySettings">Jouabilité</string>
+    <string name="WndPremiumSettings_marble">marbre</string>
+
+</resources>

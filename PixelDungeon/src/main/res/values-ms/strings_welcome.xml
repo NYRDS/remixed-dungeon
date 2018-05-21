@@ -395,4 +395,14 @@
     - Pilihan kelas adiwira baharu untuk  modding: forbiddenActions, friendlyMobs\n
     - Bahasa baharu ditambah: Bahasa Melayu yaaay\n
     </string>
+  <string name="Welcome_Text_28_1">
+    remix.28.1\n
+    - Renovasi besar-besaran di dalam Pekan\n
+    - Banyak penambahbaikan gfx dan pembaikan\n
+    - Damak dan anak panah baharu\n
+    - Kini semua kelompok rusuh (kecuali mayat hidup) akan dijana semula\n
+    - Kini kekuatan akan sediakan bonus kecederaan tambahan untuk semua kelas\n
+    - Tukang ramal kini membela seekor Kucing\n
+    - Senjata tomahawk Gnoll tidak akan rosak jika dibaling ke arah sasaran\n
+    </string>
 </resources>

@@ -40,4 +40,12 @@ remix.27.3\n
 - La force apportera désormais un bonus de dégât pour toutes les classes\n
 - La diseuse de bonne aventure possède enfin son chat\n
 - Le tomahawk gnoll ne se cassera pas en étant jeté sur un ennemi\n</string>
+  <string name="Welcome_Text_28_2">
+ remix.28.2\n
+- Interface repensée :\n
+-- Nombre de raccourcis limité seulement par la largeur de l\'écran n
+-- Les sorts et les capacités peuvent être placés dans les raccourcis.\n
+-- Option d\'orientation de l\'affichage\n
+- Limite du temps de mouvement persiste maintenant dans l\'état du jeu\n
+- Mode temps réel ! (encore très expérimentale) à présent disponible et persistant durant une partie\n</string>
 </resources>
