@@ -18,19 +18,17 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndInGameUiSettings;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
-public class WndSettingsInGame extends WndSettingsCommon {
+public class WndSettingsInGame extends WndMenuCommon {
 
-	public WndSettingsInGame() {
-		super();
-		VBox menuItems = new VBox();
-
+	@Override
+	protected void createItems()
+	{
 		addSoundControls(menuItems);
 
 		menuItems.add( new MenuCheckBox(Game
@@ -52,12 +50,6 @@ public class WndSettingsInGame extends WndSettingsCommon {
 				WndSettingsInGame.this.add(new WndInGameUiSettings());
 			}
 		});
-
-		menuItems.setRect(0,0,WIDTH,menuItems.childsHeight());
-
-		add(menuItems);
-
-		resize(WIDTH, (int) menuItems.childsHeight());
 	}
 
 	private Selector createZoomButtons() {

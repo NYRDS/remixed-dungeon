@@ -9,15 +9,13 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.windows.Selector;
-import com.watabou.pixeldungeon.windows.WndSettingsCommon;
+import com.watabou.pixeldungeon.windows.WndMenuCommon;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
-public class WndInGameUiSettings extends WndSettingsCommon {
+public class WndInGameUiSettings extends WndMenuCommon {
 
-	public WndInGameUiSettings() {
-		super();
-
-		VBox menuItems = new VBox();
+	@Override
+	protected void createItems() {
 
 		menuItems.add(createUiZoomButtons());
 		menuItems.add(createQuickSlotsSelector());
@@ -41,12 +39,6 @@ public class WndInGameUiSettings extends WndSettingsCommon {
 				PixelDungeon.handedness(!PixelDungeon.handedness());
 			}
 		});
-
-
-		menuItems.setRect(0,0,width,menuItems.childsHeight());
-		add(menuItems);
-
-		resize(WIDTH, (int) menuItems.childsHeight());
 	}
 
 	private Selector createQuickSlotsSelector() {

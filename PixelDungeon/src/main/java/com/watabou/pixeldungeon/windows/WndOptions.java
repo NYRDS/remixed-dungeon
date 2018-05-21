@@ -57,7 +57,7 @@ public class WndOptions extends Window {
 			btn.setRect(GAP, pos, WIDTH - GAP * 2, BUTTON_HEIGHT );
 			add( btn );
 			
-			pos += BUTTON_HEIGHT + GAP;
+			pos += BUTTON_HEIGHT;
 		}
 		
 		resize( WIDTH, (int)pos );

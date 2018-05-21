@@ -5,17 +5,14 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.windows.Selector;
-import com.watabou.pixeldungeon.windows.WndSettingsCommon;
+import com.watabou.pixeldungeon.windows.WndMenuCommon;
 
-public class WndGameplaySettings extends WndSettingsCommon {
+public class WndGameplaySettings extends WndMenuCommon {
 
     private Selector moveTimeoutSelector;
 
-    public WndGameplaySettings() {
-		super();
-
-		VBox menuItems = new VBox();
-
+    @Override
+    protected void createItems() {
         menuItems.add(new MenuCheckBox("Realtime!",PixelDungeon.realtime()) {
             @Override
             protected void onClick() {
@@ -26,11 +23,6 @@ public class WndGameplaySettings extends WndSettingsCommon {
         });
 
         menuItems.add(moveTimeoutSelector=createMoveTimeoutSelector());
-
-        menuItems.setRect(0,0,WIDTH,menuItems.childsHeight());
-		add(menuItems);
-
-		resize(WIDTH, (int) menuItems.childsHeight());
 	}
 
     private Selector createMoveTimeoutSelector() {

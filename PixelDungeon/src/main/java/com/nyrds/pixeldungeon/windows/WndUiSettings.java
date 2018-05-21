@@ -6,14 +6,12 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.Selector;
-import com.watabou.pixeldungeon.windows.WndSettingsCommon;
+import com.watabou.pixeldungeon.windows.WndMenuCommon;
 
-public class WndUiSettings extends WndSettingsCommon {
+public class WndUiSettings extends WndMenuCommon {
 
-	public WndUiSettings() {
-		super();
-
-		VBox menuItems = new VBox();
+	@Override
+	protected void createItems() {
 
 		if (android.os.Build.VERSION.SDK_INT >= 19) {
 			menuItems.add( new MenuCheckBox(Game.getVar(R.string.WndSettings_Immersive),PixelDungeon.immersed()) {
@@ -52,11 +50,6 @@ public class WndUiSettings extends WndSettingsCommon {
 				}
 			});
 		}
-
-		menuItems.setRect(0,0,width,menuItems.childsHeight());
-		add(menuItems);
-
-		resize(WIDTH, (int) menuItems.childsHeight());
 	}
 
 	private Selector createTextScaleButtons() {

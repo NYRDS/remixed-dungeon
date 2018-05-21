@@ -27,13 +27,25 @@ import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
-public class WndSettingsCommon extends Window {
+public abstract class WndMenuCommon extends Window {
 
 	protected static final int WIDTH      = 112;
 	protected static final int BTN_HEIGHT = 18;
+    protected final VBox menuItems;
 
 
-	@Override
+    public WndMenuCommon(){
+        menuItems = new VBox();
+	    createItems();
+
+        menuItems.setRect(0,0,WIDTH,menuItems.childsHeight());
+        add(menuItems);
+        resize(WIDTH, (int) menuItems.childsHeight());
+    }
+
+    abstract protected void createItems();
+
+    @Override
 	public void onBackPressed() {
 		hide();
 	}
@@ -60,18 +72,19 @@ public class WndSettingsCommon extends Window {
         });
     }
 
+
     public class MenuButton extends RedButton {
 		protected MenuButton(String txt){
 			super(txt);
 			setSize(WIDTH,BTN_HEIGHT);
 		}
-	};
+	}
 
-	public class MenuCheckBox extends CheckBox{
+    public class MenuCheckBox extends CheckBox{
 
 		public MenuCheckBox(String label, boolean checked) {
 			super(label, checked);
 			setSize(WIDTH,BTN_HEIGHT);
 		}
-	};
+	}
 }
