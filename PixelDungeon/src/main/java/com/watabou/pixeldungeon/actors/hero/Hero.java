@@ -1177,7 +1177,7 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean getCloser(final int target) {
 
-		if (rooted) {
+		if (hasBuff(Roots.class)) {
 			return false;
 		}
 

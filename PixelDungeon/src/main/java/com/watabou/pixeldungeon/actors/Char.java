@@ -110,7 +110,6 @@ public abstract class Char extends Actor implements Presser{
 
 	public    boolean paralysed = false;
 	public    boolean pacified  = false;
-	public    boolean rooted    = false;
 	protected boolean flying    = false;
 	public    int     invisible = 0;
 
