@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
+import com.nyrds.pixeldungeon.items.common.debug.CandyOfDeath;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
 import com.nyrds.pixeldungeon.items.food.Candy;
@@ -414,6 +415,7 @@ public class ItemFactory {
 		registerItemClass(AmokDart.class);
 		registerItemClass(HealthArrow.class);
 		registerItemClass(AmokArrow.class);
+		registerItemClass(CandyOfDeath.class);
 	}
 
 	public static boolean isValidItemClass(String itemClass) {

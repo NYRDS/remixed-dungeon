@@ -108,6 +108,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 						lastItem = item;
 					}
 					if (item != null) {
+
+						if(!Dungeon.hero.isAlive()) {
+							return;
+						}
+
 						item.execute(Dungeon.hero);
 					}
 				}
