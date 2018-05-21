@@ -977,6 +977,11 @@ public abstract class Mob extends Char {
 
 	protected void swapPosition(final Hero hero) {
 
+
+		if(rooted) {
+			return;
+		}
+
 		int curPos = getPos();
 
 		moveSprite(getPos(), hero.getPos());
@@ -987,6 +992,9 @@ public abstract class Mob extends Char {
 
 		hero.spend(1 / hero.speed());
 		hero.busy();
+
+		spend(1);
+		setState(WANDERING);
 	}
 
 	public boolean interact(Hero hero) {
