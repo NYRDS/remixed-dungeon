@@ -27,60 +27,43 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.RankingsScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
-import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.ui.Window;
 
-public class WndGame extends Window {
+public class WndGame extends WndMenuCommon {
 
-	private static final String TXT_SETTINGS = Game
-			.getVar(R.string.WndGame_Settings);
-	private static final String TXT_CHALLEGES = Game
-			.getVar(R.string.WndGame_Challenges);
-	private static final String TXT_RANKINGS = Game
-			.getVar(R.string.WndGame_Ranking);
-	private static final String TXT_START = Game.getVar(R.string.WndGame_Start);
-	private static final String TXT_MENU = Game.getVar(R.string.WndGame_menu);
-	private static final String TXT_EXIT = Game.getVar(R.string.WndGame_Exit);
-	private static final String TXT_RETURN = Game
-			.getVar(R.string.WndGame_Return);
+	@Override
+	protected void createItems() {
 
-	private static final int WIDTH = 120;
-
-	private int pos;
-
-	public WndGame() {
-		
-		super();
-		
-		addButton( new RedButton( TXT_SETTINGS ) {
+		menuItems.add( new MenuButton(Game
+                .getVar(R.string.WndGame_Settings)) {
 			@Override
 			protected void onClick() {
 				hide();
 				GameScene.show( new WndSettingsInGame() );
 			}
 		} );
-		
-		
+
+
 		if(Dungeon.hero.getDifficulty() < 2 && Dungeon.hero.isAlive()) {
-			addButton( new RedButton( Game.getVar(R.string.WndGame_Save) ) {
+			menuItems.add( new MenuButton( Game.getVar(R.string.WndGame_Save) ) {
 				@Override
 				protected void onClick() {
 					GameScene.show(new WndSaveSlotSelect(true,Game.getVar(R.string.WndSaveSlotSelect_SelectSlot)));
 				}
 			} );
 		}
-		
+
 		if(Dungeon.hero.getDifficulty() < 2) {
-			addButton( new RedButton( Game.getVar(R.string.WndGame_Load) ) {
+			menuItems.add( new MenuButton( Game.getVar(R.string.WndGame_Load) ) {
 				@Override
 				protected void onClick() {
 					GameScene.show(new WndSaveSlotSelect(false,Game.getVar(R.string.WndSaveSlotSelect_SelectSlot)));
 				}
 			} );
 		}
-		
+
 		if (Dungeon.challenges > 0) {
-			addButton( new RedButton( TXT_CHALLEGES ) {
+			menuItems.add( new MenuButton(Game
+                    .getVar(R.string.WndGame_Challenges)) {
 				@Override
 				protected void onClick() {
 					hide();
@@ -88,11 +71,10 @@ public class WndGame extends Window {
 				}
 			} );
 		}
-		
+
 		if (!Dungeon.hero.isAlive()) {
-			
-			RedButton btnStart;
-			addButton( btnStart = new RedButton( TXT_START ) {
+
+			menuItems.add(new MenuButton(Game.getVar(R.string.WndGame_Start),Icons.get( Dungeon.hero.heroClass ) ) {
 				@Override
 				protected void onClick() {
 					Dungeon.hero = null;
@@ -101,10 +83,10 @@ public class WndGame extends Window {
 					InterlevelScene.noStory = true;
 					Game.switchScene( InterlevelScene.class );
 				}
-			} );
-			btnStart.icon( Icons.get( Dungeon.hero.heroClass ) );
-			
-			addButton( new RedButton( TXT_RANKINGS ) {
+			});
+
+			menuItems.add( new MenuButton(Game
+                    .getVar(R.string.WndGame_Ranking)) {
 				@Override
 				protected void onClick() {
 					InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
@@ -112,8 +94,8 @@ public class WndGame extends Window {
 				}
 			} );
 		}
-				
-		addButton( new RedButton( TXT_MENU ) {
+
+		menuItems.add( new MenuButton(Game.getVar(R.string.WndGame_menu)) {
 			@Override
 			protected void onClick() {
 				try {
@@ -124,27 +106,20 @@ public class WndGame extends Window {
 				Game.switchScene( TitleScene.class );
 			}
 		} );
-		
-		addButton( new RedButton( TXT_EXIT ) {
+
+		menuItems.add( new MenuButton(Game.getVar(R.string.WndGame_Exit)) {
 			@Override
 			protected void onClick() {
 				Game.shutdown();
 			}
 		} );
-		
-		addButton( new RedButton( TXT_RETURN ) {
+
+		menuItems.add( new MenuButton(Game
+                .getVar(R.string.WndGame_Return)) {
 			@Override
 			protected void onClick() {
 				hide();
 			}
 		} );
-		
-		resize( WIDTH, pos );
-	}
-
-	private void addButton(RedButton btn) {
-		add(btn);
-		btn.setRect(0, pos > 0 ? pos += GAP : 0, WIDTH, BUTTON_HEIGHT);
-		pos += BUTTON_HEIGHT;
 	}
 }
