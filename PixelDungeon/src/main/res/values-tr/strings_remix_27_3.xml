@@ -4,14 +4,14 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">Çağrı Parşömeni</string>
-    <string name="ScrollOfSummoning_Info">Sesli Okuduğun Zaman Bu Parşömen Bulunduğun Kata Bir Yaratık Çağırır.Ve Bu Yaratığın İradesi Yeteri Kadar Zayıfsa Senin Hizmetkârın Olur.</string>
-    <string name="ScrollOfSummoning_Info_2">Canavar Çağrılarına Cevap Verdi !</string>
+    <string name="ScrollOfSummoning_Info">Sesli okunduğunda, bu parşömen bulunduğun zindan seviyesindeki bir canavarı çağırır. Ve canavarın iradesi düşük ise hizmetkarın olur.</string>
+    <string name="ScrollOfSummoning_Info_2">Canavar çağrılarına yanıt verdi!</string>
 
     <!-- Generic warnings -->
-    <string name="Using_Failed_Because_Magic">%s\'ı kullandığın için güçlü bir büyü etrafını sarıyor.</string>
-    <string name="Using_Failed_Because_Blind">Kör iken %s kullanamazsın</string>
+    <string name="Using_Failed_Because_Magic">Güçlü bir büyü, seni \"%s\" kullanmaktan alıkoyuyor.</string>
+    <string name="Using_Failed_Because_Blind">Kör iken \"%s\" kullanamazsın.</string>
 
-    <string name="Mob_Cannot_Be_Pet">%s \'nin İradesi Kontrol Etmek İçin Çok Güçlü !</string>
-    <string name="No_Valid_Cell">Yakına Buna Uyan Bir Hücre Yok.</string>
+    <string name="Mob_Cannot_Be_Pet">\"%s\" iradesinin kontrol edilmesi için çok güçlü!</string>
+    <string name="No_Valid_Cell">Yakında uygun hücre yok.</string>
 
 </resources>
