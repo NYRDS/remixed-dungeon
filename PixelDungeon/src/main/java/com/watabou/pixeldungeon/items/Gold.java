@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -50,12 +49,12 @@ public class Gold extends Item {
 		imageFile = "items/gold.png";
 		stackable = true;
 	}
-	
+
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		return new ArrayList<>();
 	}
-	
+
 	@Override
 	public boolean doPickUp( Hero hero ) {
 		collect(hero);
@@ -130,19 +129,5 @@ public class Gold extends Item {
 	public Item random() {
 		quantity(Random.Int( 20 + Dungeon.depth * 10, 40 + Dungeon.depth * 20 ));
 		return this;
-	}
-	
-	private static final String VALUE	= "value";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( VALUE, quantity() );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		quantity(bundle.getInt( VALUE ));
 	}
 }
