@@ -25,245 +25,247 @@ import org.json.JSONException;
 
 public class Assets {
 
-	private static final String KEY_BANNERS = "banners";
-	private static final String KEY_TOOLBAR = "toolbar";
-	private static final String KEY_STATUS = "status";
-	private static final String KEY_CHROME = "chrome";
+    private static final String KEY_BANNERS = "banners";
+    private static final String KEY_TOOLBAR = "toolbar";
+    private static final String KEY_STATUS  = "status";
+    private static final String KEY_CHROME  = "chrome";
 
-	public static final String ARCS_BG = "ui/arcs1.png";
-	public static final String ARCS_FG = "ui/arcs2.png";
-	public static final String DASHBOARD = "ui/dashboard.png";
+    public static final String ARCS_BG   = "ui/arcs1.png";
+    public static final String ARCS_FG   = "ui/arcs2.png";
+    public static final String DASHBOARD = "ui/dashboard.png";
 
-	public static final String BADGES = "ui/badges.png";
-	public static final String AMULET = "amulet.png";
+    public static final String BADGES = "ui/badges.png";
+    public static final String AMULET = "amulet.png";
 
-	private static final String BANNERS_PREFIX = Game.getVar(R.string.Assets_Prefix);
+    private static final String BANNERS_PREFIX = Game.getVar(R.string.Assets_Prefix);
 
-	public static final String ICONS = "ui/icons.png";
-	public static final String HP_BAR = "ui/hp_bar.png";
-	public static final String SP_BAR = "ui/sp_bar.png";
-	public static final String XP_BAR = "ui/exp_bar.png";
+    public static final String ICONS  = "ui/icons.png";
+    public static final String HP_BAR = "ui/hp_bar.png";
+    public static final String SP_BAR = "ui/sp_bar.png";
+    public static final String XP_BAR = "ui/exp_bar.png";
 
-	public static final String AVATARS = "ui/avatars.png";
-	public static final String PET = "pet.png";
+    public static final String AVATARS = "ui/avatars.png";
+    public static final String PET     = "pet.png";
 
-	public static final String SURFACE = "ui/surface.png";
+    public static final String SURFACE = "ui/surface.png";
 
-	public static final String FIREBALL = "ui/fireball.png";
-	public static final String SPECKS = "effects/specks.png";
-	public static final String EFFECTS = "effects/effects.png";
+    public static final String FIREBALL = "ui/fireball.png";
+    public static final String SPECKS   = "effects/specks.png";
+    public static final String EFFECTS  = "effects/effects.png";
 
-	public static final String RAT = "rat.png";
-	public static final String GNOLL = "gnoll.png";
-	public static final String GOO = "goo.png";
-	public static final String SWARM = "swarm.png";
-	public static final String SKELETON = "skeleton.png";
-	public static final String THIEF = "thief.png";
-	public static final String TENGU = "tengu.png";
-	public static final String SHEEP = "sheep.png";
-	public static final String KEEPER = "shopkeeper.png";
-	public static final String BRUTE = "brute.png";
-	public static final String DM300 = "dm300.png";
-	public static final String WRAITH = "wraith.png";
-	public static final String ELEMENTAL = "elemental.png";
-	public static final String MONK = "monk.png";
-	public static final String GOLEM = "golem.png";
-	public static final String UNDEAD = "undead.png";
-	public static final String KING = "king.png";
-	public static final String STATUE = "statue.png";
-	public static final String PIRANHA = "piranha.png";
-	public static final String EYE = "eye.png";
-	public static final String SUCCUBUS = "succubus.png";
-	public static final String ROTTING = "rotting_fist.png";
-	public static final String YOG = "yog.png";
-	public static final String LARVA = "larva.png";
-	public static final String GHOST = "ghost.png";
-	public static final String MAKER = "wandmaker.png";
-	public static final String TROLL = "blacksmith.png";
-	public static final String IMP = "demon.png";
-	public static final String RATKING = "ratking.png";
-	public static final String HEDGEHOG = "hedgehog.png";
-	public static final String MIMIC = "mimic.png";
-	public static final String SHADOW = "shadow.png";
+    public static final String RAT       = "rat.png";
+    public static final String GNOLL     = "gnoll.png";
+    public static final String GOO       = "goo.png";
+    public static final String SWARM     = "swarm.png";
+    public static final String SKELETON  = "skeleton.png";
+    public static final String THIEF     = "thief.png";
+    public static final String TENGU     = "tengu.png";
+    public static final String SHEEP     = "sheep.png";
+    public static final String KEEPER    = "shopkeeper.png";
+    public static final String BRUTE     = "brute.png";
+    public static final String DM300     = "dm300.png";
+    public static final String WRAITH    = "wraith.png";
+    public static final String ELEMENTAL = "elemental.png";
+    public static final String MONK      = "monk.png";
+    public static final String GOLEM     = "golem.png";
+    public static final String UNDEAD    = "undead.png";
+    public static final String KING      = "king.png";
+    public static final String STATUE    = "statue.png";
+    public static final String PIRANHA   = "piranha.png";
+    public static final String EYE       = "eye.png";
+    public static final String SUCCUBUS  = "succubus.png";
+    public static final String ROTTING   = "rotting_fist.png";
+    public static final String YOG       = "yog.png";
+    public static final String LARVA     = "larva.png";
+    public static final String GHOST     = "ghost.png";
+    public static final String MAKER     = "wandmaker.png";
+    public static final String TROLL     = "blacksmith.png";
+    public static final String IMP       = "demon.png";
+    public static final String RATKING   = "ratking.png";
+    public static final String HEDGEHOG  = "hedgehog.png";
+    public static final String MIMIC     = "mimic.png";
+    public static final String SHADOW    = "shadow.png";
 
-	public static final String ITEMS = "items.png";
-	public static final String PLANTS = "plants.png";
+    public static final String ITEMS  = "items.png";
+    public static final String PLANTS = "plants.png";
 
-	public static final String TILES_SPIDER_NEST_X = "tiles_spiders_nest_x.png";
-	public static final String TILES_SEWERS = "tiles0.png";
-	public static final String TILES_SEWERS_X = "tiles0_x.png";
-	public static final String TILES_PRISON = "tiles1.png";
-	public static final String TILES_PRISON_X = "tiles1_x.png";
-	public static final String TILES_PRISON_BOSS = "tiles1_boss.png";
-	public static final String TILES_CAVES = "tiles2.png";
-	public static final String TILES_CAVES_X = "tiles2_x.png";
-	public static final String TILES_CITY = "tiles3.png";
-	public static final String TILES_HALLS = "tiles4.png";
-	public static final String TILES_SHADOW_LORD = "tiles_shadow_lord.png";
-	public static final String TILES_GUTS = "tiles_guts_x.png";
-	public static final String TILES_NECRO = "tiles_necropolis.png";
-	public static final String TILES_ICE_CAVES_X = "tiles_ice_caves_x.png";
-	public static final String TILES_GENERIC_TOWN_INTERIOR = "tiles_standalone_interior.png";
+    public static final String TILES_SPIDER_NEST_X         = "tiles_spiders_nest_x.png";
+    public static final String TILES_SEWERS                = "tiles0.png";
+    public static final String TILES_SEWERS_X              = "tiles0_x.png";
+    public static final String TILES_PRISON                = "tiles1.png";
+    public static final String TILES_PRISON_X              = "tiles1_x.png";
+    public static final String TILES_PRISON_BOSS           = "tiles1_boss.png";
+    public static final String TILES_CAVES                 = "tiles2.png";
+    public static final String TILES_CAVES_X               = "tiles2_x.png";
+    public static final String TILES_CITY                  = "tiles3.png";
+    public static final String TILES_HALLS                 = "tiles4.png";
+    public static final String TILES_SHADOW_LORD           = "tiles_shadow_lord.png";
+    public static final String TILES_GUTS                  = "tiles_guts_x.png";
+    public static final String TILES_NECRO                 = "tiles_necropolis.png";
+    public static final String TILES_ICE_CAVES_X           = "tiles_ice_caves_x.png";
+    public static final String TILES_GENERIC_TOWN_INTERIOR = "tiles_standalone_interior.png";
 
-	public static final String WATER_SEWERS = "water0.png";
-	public static final String WATER_PRISON = "water1.png";
-	public static final String WATER_CAVES = "water2.png";
-	public static final String WATER_CITY = "water3.png";
-	public static final String WATER_HALLS = "water4.png";
-	public static final String WATER_SPIDERS = "water_spider_nest.png";
-	public static final String WATER_GUTS = "water_guts.png";
-	public static final String WATER_NECRO = "water_necropolis.png";
-	public static final String WATER_ICE_CAVES = "water_ice_caves.png";
+    public static final String WATER_SEWERS    = "water0.png";
+    public static final String WATER_PRISON    = "water1.png";
+    public static final String WATER_CAVES     = "water2.png";
+    public static final String WATER_CITY      = "water3.png";
+    public static final String WATER_HALLS     = "water4.png";
+    public static final String WATER_SPIDERS   = "water_spider_nest.png";
+    public static final String WATER_GUTS      = "water_guts.png";
+    public static final String WATER_NECRO     = "water_necropolis.png";
+    public static final String WATER_ICE_CAVES = "water_ice_caves.png";
 
-	public static final String BUFFS_SMALL = "ui/buffs.png";
-	public static final String BUFFS_LARGE = "ui/large_buffs.png";
+    public static final String BUFFS_SMALL = "ui/buffs.png";
+    public static final String BUFFS_LARGE = "ui/large_buffs.png";
 
-	public static final String SPELL_ICONS = "spell_icons.png";
+    public static final String SPELL_ICONS = "spell_icons.png";
 
-	public static final String FONTS1X = "ui/font1x.png";
-	public static final String FONTS25X = "ui/font25x.png";
+    public static final String FONTS1X  = "ui/font1x.png";
+    public static final String FONTS25X = "ui/font25x.png";
 
-	public static final String THEME = "theme.mp3";
-	public static final String TUNE = "game.mp3";
-	public static final String HAPPY = "surface.mp3";
+    public static final String THEME = "theme.mp3";
+    public static final String TUNE  = "game.mp3";
+    public static final String HAPPY = "surface.mp3";
 
-	public static final String SND_CLICK = "snd_click.mp3";
-	public static final String SND_BADGE = "snd_badge.mp3";
-	public static final String SND_GOLD = "snd_gold.mp3";
+    public static final String SND_CLICK = "snd_click.mp3";
+    public static final String SND_BADGE = "snd_badge.mp3";
+    public static final String SND_GOLD  = "snd_gold.mp3";
 
-	public static final String SND_OPEN = "snd_door_open.mp3";
-	public static final String SND_UNLOCK = "snd_unlock.mp3";
-	public static final String SND_ITEM = "snd_item.mp3";
-	public static final String SND_DEWDROP = "snd_dewdrop.mp3";
-	public static final String SND_HIT = "snd_hit.mp3";
-	public static final String SND_MISS = "snd_miss.mp3";
-	public static final String SND_STEP = "snd_step.mp3";
-	public static final String SND_WATER = "snd_water.mp3";
-	public static final String SND_DESCEND = "snd_descend.mp3";
-	public static final String SND_EAT = "snd_eat.mp3";
-	public static final String SND_READ = "snd_read.mp3";
-	public static final String SND_LULLABY = "snd_lullaby.mp3";
-	public static final String SND_DRINK = "snd_drink.mp3";
-	public static final String SND_SHATTER = "snd_shatter.mp3";
-	public static final String SND_ZAP = "snd_zap.mp3";
-	public static final String SND_LIGHTNING = "snd_lightning.mp3";
-	public static final String SND_LEVELUP = "snd_levelup.mp3";
-	public static final String SND_DEATH = "snd_death.mp3";
-	public static final String SND_CHALLENGE = "snd_challenge.mp3";
-	public static final String SND_CURSED = "snd_cursed.mp3";
-	public static final String SND_TRAP = "snd_trap.mp3";
-	public static final String SND_EVOKE = "snd_evoke.mp3";
-	public static final String SND_TOMB = "snd_tomb.mp3";
-	public static final String SND_ALERT = "snd_alert.mp3";
-	public static final String SND_MELD = "snd_meld.mp3";
-	public static final String SND_BOSS = "snd_boss.mp3";
-	public static final String SND_BLAST = "snd_blast.mp3";
-	public static final String SND_PLANT = "snd_plant.mp3";
-	public static final String SND_RAY = "snd_ray.mp3";
-	public static final String SND_BEACON = "snd_beacon.mp3";
-	public static final String SND_TELEPORT = "snd_teleport.mp3";
-	public static final String SND_CHARMS = "snd_charms.mp3";
-	public static final String SND_MASTERY = "snd_mastery.mp3";
-	public static final String SND_PUFF = "snd_puff.mp3";
-	public static final String SND_ROCKS = "snd_rocks.mp3";
-	public static final String SND_BURNING = "snd_burning.mp3";
-	public static final String SND_FALLING = "snd_falling.mp3";
-	public static final String SND_GHOST = "snd_ghost.mp3";
-	public static final String SND_SECRET = "snd_secret.mp3";
-	public static final String SND_BONES = "snd_bones.mp3";
-	public static final String SND_MIMIC = "snd_mimic.mp3";
+    public static final String SND_OPEN      = "snd_door_open.mp3";
+    public static final String SND_UNLOCK    = "snd_unlock.mp3";
+    public static final String SND_ITEM      = "snd_item.mp3";
+    public static final String SND_DEWDROP   = "snd_dewdrop.mp3";
+    public static final String SND_HIT       = "snd_hit.mp3";
+    public static final String SND_MISS      = "snd_miss.mp3";
+    public static final String SND_STEP      = "snd_step.mp3";
+    public static final String SND_WATER     = "snd_water.mp3";
+    public static final String SND_DESCEND   = "snd_descend.mp3";
+    public static final String SND_EAT       = "snd_eat.mp3";
+    public static final String SND_READ      = "snd_read.mp3";
+    public static final String SND_LULLABY   = "snd_lullaby.mp3";
+    public static final String SND_DRINK     = "snd_drink.mp3";
+    public static final String SND_SHATTER   = "snd_shatter.mp3";
+    public static final String SND_ZAP       = "snd_zap.mp3";
+    public static final String SND_LIGHTNING = "snd_lightning.mp3";
+    public static final String SND_LEVELUP   = "snd_levelup.mp3";
+    public static final String SND_DEATH     = "snd_death.mp3";
+    public static final String SND_CHALLENGE = "snd_challenge.mp3";
+    public static final String SND_CURSED    = "snd_cursed.mp3";
+    public static final String SND_TRAP      = "snd_trap.mp3";
+    public static final String SND_EVOKE     = "snd_evoke.mp3";
+    public static final String SND_TOMB      = "snd_tomb.mp3";
+    public static final String SND_ALERT     = "snd_alert.mp3";
+    public static final String SND_MELD      = "snd_meld.mp3";
+    public static final String SND_BOSS      = "snd_boss.mp3";
+    public static final String SND_BLAST     = "snd_blast.mp3";
+    public static final String SND_PLANT     = "snd_plant.mp3";
+    public static final String SND_RAY       = "snd_ray.mp3";
+    public static final String SND_BEACON    = "snd_beacon.mp3";
+    public static final String SND_TELEPORT  = "snd_teleport.mp3";
+    public static final String SND_CHARMS    = "snd_charms.mp3";
+    public static final String SND_MASTERY   = "snd_mastery.mp3";
+    public static final String SND_PUFF      = "snd_puff.mp3";
+    public static final String SND_ROCKS     = "snd_rocks.mp3";
+    public static final String SND_BURNING   = "snd_burning.mp3";
+    public static final String SND_FALLING   = "snd_falling.mp3";
+    public static final String SND_GHOST     = "snd_ghost.mp3";
+    public static final String SND_SECRET    = "snd_secret.mp3";
+    public static final String SND_BONES     = "snd_bones.mp3";
+    public static final String SND_MIMIC     = "snd_mimic.mp3";
 
-	public static final String SND_DOMINANCE = "snd_dominance.mp3";
-	public static final String SND_ROTTEN_DROP = "snd_rotten_drop.mp3";
-	public static final String SND_CRYSTAL = "snd_crystal.mp3";
+    public static final String SND_DOMINANCE   = "snd_dominance.mp3";
+    public static final String SND_ROTTEN_DROP = "snd_rotten_drop.mp3";
+    public static final String SND_CRYSTAL     = "snd_crystal.mp3";
 
-    public static final String SND_BITE      = "snd_bite.mp3";			// by sonidotv, from freesound.org
+    public static final String SND_BITE      = "snd_bite.mp3";            // by sonidotv, from freesound.org
     public static final String SND_EXPLOSION = "snd_explosion.mp3"; // by kantouth, from freesound.org
 
-	public static final String UI_ICONS_12      = "ui/ui_icons12x12.png";
-	public static final String UI_ICONS_6       = "ui/ui_icons6x6.png";
+    public static final String UI_ICONS_12 = "ui/ui_icons12x12.png";
+    public static final String UI_ICONS_6  = "ui/ui_icons6x6.png";
 
 
-    private static int chromeType = 0;
-	private static int statusType = 0;
-	private static int toolbarType = 0;
-	private static int bannersType = 0;
-	
-	static {
-		Bundle premiumSettings;
-		try {
-			premiumSettings = new Bundle(Preferences.INSTANCE.getString(Preferences.KEY_PREMIUM_SETTINGS, ""));
-			chromeType = premiumSettings.getInt(KEY_CHROME);
-			statusType = premiumSettings.getInt(KEY_STATUS);
-			toolbarType = premiumSettings.getInt(KEY_TOOLBAR);
-			bannersType = premiumSettings.getInt(KEY_BANNERS);
-		} catch (JSONException e) {
-		}
-	}
-	
-	public static String getBanners() {
-		switch (bannersType) {
-		default:
-			return "ui/"+BANNERS_PREFIX+"banners.png";
-		case 1:
-			return "ui/"+BANNERS_PREFIX+"banners_supporter_1.png";
-		case 2:
-			return "ui/"+BANNERS_PREFIX+"banners_supporter_2.png";
-		case 3:
-			return "ui/"+BANNERS_PREFIX+"banners_supporter_3.png";
-		}
-	}
+    private static int chromeType  = 0;
+    private static int statusType  = 0;
+    private static int toolbarType = 0;
+    private static int bannersType = 0;
 
-	
-	public static String getChrome() {
-		switch (chromeType) {
-		default:
-			return "ui/chrome.png";
-		case 1:
-			return "ui/chrome_supporter_1.png";
-		case 2:
-			return "ui/chrome_supporter_2.png";
-		case 3:
-			return "ui/chrome_supporter_3.png";
-		}
-	}
+    static {
+        Bundle premiumSettings;
+        try {
+            premiumSettings = new Bundle(Preferences.INSTANCE.getString(Preferences.KEY_PREMIUM_SETTINGS, ""));
+            chromeType = premiumSettings.getInt(KEY_CHROME);
+            statusType = premiumSettings.getInt(KEY_STATUS);
+            toolbarType = premiumSettings.getInt(KEY_TOOLBAR);
+            bannersType = premiumSettings.getInt(KEY_BANNERS);
+        } catch (JSONException e) {
+        }
+    }
 
-	public static String getStatus() {
-		switch (statusType) {
-		default:
-			return "ui/status_pane.png";
-		case 1:
-			return "ui/status_pane_supporter_1.png";
-		case 2:
-			return "ui/status_pane_supporter_2.png";
-		case 3:
-			return "ui/status_pane_supporter_3.png";
-		}
-	}
+    public static String getBanners() {
+        switch (bannersType) {
+            default:
+                return "ui/" + BANNERS_PREFIX + "banners.png";
+            case 1:
+                return "ui/" + BANNERS_PREFIX + "banners_supporter_1.png";
+            case 2:
+                return "ui/" + BANNERS_PREFIX + "banners_supporter_2.png";
+            case 3:
+                return "ui/" + BANNERS_PREFIX + "banners_supporter_3.png";
+        }
+    }
 
-	public static void use(String assetKind, int index) {
-		if(assetKind.equals(KEY_CHROME)) {
-			chromeType = index;
-		}
-		if(assetKind.equals(KEY_STATUS)) {
-			statusType = index;
-		}
-		
-		if(assetKind.equals(KEY_TOOLBAR)) {
-			toolbarType = index;
-		}
-		
-		if(assetKind.equals(KEY_BANNERS)) {
-			bannersType = index;
-		}
-		
-		Bundle premiumSettings = new Bundle();
-		premiumSettings.put(KEY_CHROME, chromeType);
-		premiumSettings.put(KEY_STATUS, statusType);
-		premiumSettings.put(KEY_TOOLBAR, toolbarType);
-		premiumSettings.put(KEY_BANNERS, bannersType);
-		
-		Preferences.INSTANCE.put(Preferences.KEY_PREMIUM_SETTINGS, premiumSettings.toString());
-		
-	}
+
+    public static String getChrome() {
+        switch (chromeType) {
+            default:
+                return "ui/chrome.png";
+            case 1:
+                return "ui/chrome_supporter_1.png";
+            case 2:
+                return "ui/chrome_supporter_2.png";
+            case 3:
+                return "ui/chrome_supporter_3.png";
+            case 4:
+                return "ui/chrome_marble.png";
+        }
+    }
+
+    public static String getStatus() {
+        switch (statusType) {
+            default:
+                return "ui/status_pane.png";
+            case 1:
+                return "ui/status_pane_supporter_1.png";
+            case 2:
+                return "ui/status_pane_supporter_2.png";
+            case 3:
+                return "ui/status_pane_supporter_3.png";
+        }
+    }
+
+    public static void use(String assetKind, int index) {
+        if (assetKind.equals(KEY_CHROME)) {
+            chromeType = index;
+        }
+        if (assetKind.equals(KEY_STATUS)) {
+            statusType = index;
+        }
+
+        if (assetKind.equals(KEY_TOOLBAR)) {
+            toolbarType = index;
+        }
+
+        if (assetKind.equals(KEY_BANNERS)) {
+            bannersType = index;
+        }
+
+        Bundle premiumSettings = new Bundle();
+        premiumSettings.put(KEY_CHROME, chromeType);
+        premiumSettings.put(KEY_STATUS, statusType);
+        premiumSettings.put(KEY_TOOLBAR, toolbarType);
+        premiumSettings.put(KEY_BANNERS, bannersType);
+
+        Preferences.INSTANCE.put(Preferences.KEY_PREMIUM_SETTINGS, premiumSettings.toString());
+
+    }
 }

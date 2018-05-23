@@ -7,6 +7,9 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class WndPremiumSettings extends Window {
 
 	private static final String NOT_AVAILABLE =  Game.getVar(R.string.WndPremiumSettings_notAvailbale);
@@ -20,7 +23,17 @@ public class WndPremiumSettings extends Window {
 	private static final String MARBLE = Game.getVar(R.string.WndPremiumSettings_marble);
 	private static final String SILVER = Game.getVar(R.string.WndPremiumSettings_silver);
 	private static final String STD    = Game.getVar(R.string.WndPremiumSettings_std);
-		
+
+	private static Map<String, Integer> material2level = new HashMap<>();
+
+	static {
+		material2level.put(STD,0);
+		material2level.put(SILVER,1);
+		material2level.put(GOLD,2);
+		material2level.put(MARBLE,2);
+		material2level.put(RUBY,3);
+	}
+
 	private static final int WIDTH      = 112;
 
 	private int curBottom = 0;
@@ -28,23 +41,25 @@ public class WndPremiumSettings extends Window {
 	public WndPremiumSettings() {
 		super();
 		
-		createAssetsSelector("chrome",  CHROME);
-		createAssetsSelector("status",  STATUS);
-		createAssetsSelector("banners", BANNERS);
+		createAssetsSelector("chrome",  CHROME, STD, SILVER,
+				GOLD, RUBY, MARBLE);
+		createAssetsSelector("status",  STATUS, STD, SILVER,
+				GOLD, RUBY);
+		createAssetsSelector("banners", BANNERS, STD, SILVER,
+				GOLD, RUBY);
 		
 		resize(WIDTH, curBottom);
 	}
 
-	private void createAssetsSelector(final String assetKind, final String assetName) {
+	private void createAssetsSelector(final String assetKind, final String assetName, final String... options  ) {
 		RedButton btn = new RedButton(assetName) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.scene().add(
-						new WndOptions(assetName, "", STD, SILVER,
-								GOLD, RUBY) {
+						new WndOptions(assetName, "", options) {
 							@Override
 							protected void onSelect(int index) {
-								if (PixelDungeon.donated() >= index) {
+								if (PixelDungeon.donated() >= material2level.get(options[index])) {
 									Assets.use(assetKind, index);
 									PixelDungeon.scene().add(
 											new WndMessage("ok!"));
@@ -59,7 +74,7 @@ public class WndPremiumSettings extends Window {
 
 		btn.setRect(0, curBottom, WIDTH, BUTTON_HEIGHT);
 		add(btn);
-		curBottom += BUTTON_HEIGHT + GAP;
+		curBottom += BUTTON_HEIGHT;
 	}
 	
 	@Override
