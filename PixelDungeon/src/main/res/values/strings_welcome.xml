@@ -409,7 +409,7 @@
     <string name="Welcome_Text_28_2">
     remix.28.2\n
     - Gui refactoring:\n
-    -- Quickslots quantity limited only by sreen width\n
+    -- Quickslots quantity limited only by screen width\n
     -- Spells and abilities can be placed in quickslots\n
     -- Handedness option\n
     - Move time limit now persist in game state\n
