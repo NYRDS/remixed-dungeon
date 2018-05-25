@@ -46,9 +46,10 @@ public class GnollArmor extends ClassArmor {
                 if(mob.canBePet()) {
                     Mob.makePet(mob, getCurUser());
                     new Flare(3, 32).show(mob.getSprite(), 2f);
+                    mobsDominated++;
                 }
 
-                if(mobsDominated > getCurUser().lvl() / 10) {
+                if(mobsDominated > getCurUser().lvl() / 7) {
                     break;
                 }
             }

@@ -407,6 +407,7 @@ public class Item implements Bundlable, Presser {
 	private static final String CURSED       = "cursed";
 	private static final String CURSED_KNOWN = "cursedKnown";
 
+	//TODO remove this in remix.29
 	@Deprecated
 	private static final String QUICKSLOT    = "quickslot";
 	@Deprecated
@@ -460,6 +461,10 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void cast(final Hero user, int dst) {
+
+	    if(quantity()<=0) {
+	        return;
+        }
 
 		setCurUser(user);
 

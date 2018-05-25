@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -78,6 +79,12 @@ public abstract class WndMenuCommon extends Window {
 			super(txt);
 			setSize(WIDTH,BTN_HEIGHT);
 		}
+
+        protected MenuButton(String txt, Image img){
+            super(txt);
+            icon(img);
+            setSize(WIDTH,BTN_HEIGHT);
+        }
 	}
 
     public class MenuCheckBox extends CheckBox{

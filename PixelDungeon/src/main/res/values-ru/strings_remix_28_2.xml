@@ -11,6 +11,6 @@
     <string name="WndSettings_Handedness">Преобладающая рука</string>
     <string name="WndSettings_InGameUiSettings">Настройки интерфейса</string>
     <string name="WndSettings_GameplaySettings">Геймплей</string>
-    <string name="WndPremiumSettings_marble">мрамор</string>
+    <string name="WndPremiumSettings_marble">мраморный</string>
 
 </resources>
