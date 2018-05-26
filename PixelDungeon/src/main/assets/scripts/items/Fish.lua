@@ -24,7 +24,6 @@ end
 
 function fish.execute(tbl, item, hero, action)
     if action == RPD.Actions.eat then
-        item:detach(hero.belongings.backpack)
         hero:eat(item,RPD.Buffs.Hunger.HUNGRY,"Fishy!")
     end
 end
