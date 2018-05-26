@@ -188,10 +188,6 @@ public enum HeroClass {
 
             } catch (JSONException e) {
                 throw new TrackedRuntimeException(e);
-            } catch (InstantiationException e) {
-                throw new TrackedRuntimeException(e);
-            } catch (IllegalAccessException e) {
-                throw new TrackedRuntimeException(e);
             }
         }
     }

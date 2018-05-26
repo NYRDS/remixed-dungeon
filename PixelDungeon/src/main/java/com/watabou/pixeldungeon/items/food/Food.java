@@ -17,20 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.food;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Statistics;
-import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.ArrayList;
 
@@ -55,51 +45,16 @@ abstract public class Food extends Item {
 		return actions;
 	}
 
+
 	@Override
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_EAT )) {
-			
-			detach( hero.belongings.backpack );
-
-			Hunger hunger = hero.buff( Hunger.class );
-			if(hunger != null) {
-				hunger.satisfy(energy);
-			} else {
-				EventCollector.logEvent(EventCollector.BUG,"no hunger",hero.className());
-			}
-
-			GLog.i( message );
-
-			switch (hero.heroClass) {
-			case WARRIOR:
-				if (hero.hp() < hero.ht()) {
-					hero.hp(Math.min( hero.hp() + 5, hero.ht() ));
-					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-				}
-				break;
-			case MAGE:
-				hero.belongings.charge( false );
-				ScrollOfRecharging.charge( hero );
-				break;
-			default:
-				break;
-			}
-			
-			hero.getSprite().operate( hero.getPos() );
-			hero.busy();
-			SpellSprite.show( hero, SpellSprite.FOOD );
-			Sample.INSTANCE.play( Assets.SND_EAT );
-			
-			hero.spend( TIME_TO_EAT );
-			
-			Statistics.foodEaten++;
-			Badges.validateFoodEaten();
-			
+			hero.eat(this, energy, message);
 		} else {
 			super.execute( hero, action );
 		}
 	}
-	
+
 	@Override
 	public boolean isUpgradable() {
 		return false;

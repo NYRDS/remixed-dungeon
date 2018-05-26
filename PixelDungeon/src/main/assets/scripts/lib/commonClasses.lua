@@ -16,7 +16,12 @@ local Buffs  = {
     Paralysis    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Paralysis"),
     Vertigo      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Vertigo"),
     Invisibility = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Invisibility"),
-    Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation")
+    Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation"),
+    Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger")
+}
+
+local actions = {
+    eat = "Food_ACEat"
 }
 
 local RPD = {
@@ -30,6 +35,8 @@ local RPD = {
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
 
     Buffs = Buffs,
+
+    Actions = actions,
 
     Blobs = {
         Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),

@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -78,6 +79,7 @@ import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
@@ -86,6 +88,7 @@ import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
@@ -1806,6 +1809,44 @@ public class Hero extends Char implements PetOwner {
 		}
 
 		return false;
+	}
+
+	public void eat(Item food, float energy, String message) {
+		food.detach( belongings.backpack );
+
+		Hunger hunger = buff( Hunger.class );
+		if(hunger != null) {
+            hunger.satisfy(energy);
+        } else {
+            EventCollector.logEvent(EventCollector.BUG,"no hunger", className());
+        }
+
+		GLog.i( message );
+
+		switch (heroClass) {
+        case WARRIOR:
+            if (hp() < ht()) {
+                hp(Math.min( hp() + 5, ht() ));
+                getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+            }
+            break;
+        case MAGE:
+            belongings.charge( false );
+            ScrollOfRecharging.charge(this);
+            break;
+        default:
+            break;
+        }
+
+		getSprite().operate( getPos() );
+		busy();
+		SpellSprite.show(this, SpellSprite.FOOD );
+		Sample.INSTANCE.play( Assets.SND_EAT );
+
+		spend( Food.TIME_TO_EAT );
+
+		Statistics.foodEaten++;
+		Badges.validateFoodEaten();
 	}
 
 

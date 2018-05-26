@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.CustomItem;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
@@ -36,7 +37,6 @@ import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -200,269 +200,266 @@ import java.util.Map;
 
 public class ItemFactory {
 
-	static private Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
-	static private Map<Class<? extends Item>,String>  mNamesList = new HashMap<>();
-	static {
-		initItemsMap();
-	}
+    static private Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
+    static private Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
 
-	private static void registerItemClass(Class<? extends Item> itemClass) {
-		registerItemClassByName(itemClass, itemClass.getSimpleName());
-	}
+    static {
+        initItemsMap();
+    }
 
-	private static void registerItemClassByName(Class<? extends Item> itemClass, String name) {
-		mItemsList.put(name, itemClass);
-		mNamesList.put(itemClass,name);
-	}
+    private static void registerItemClass(Class<? extends Item> itemClass) {
+        registerItemClassByName(itemClass, itemClass.getSimpleName());
+    }
 
-	private static void initItemsMap() {
+    private static void registerItemClassByName(Class<? extends Item> itemClass, String name) {
+        mItemsList.put(name, itemClass);
+        mNamesList.put(itemClass, name);
+    }
 
-		registerItemClass(Amulet.class);
-		registerItemClass(Ankh.class);
-		registerItemClass(ArmorKit.class);
-		registerItemClass(Codex.class);
-		registerItemClass(Dewdrop.class);
-		registerItemClass(DewVial.class);
-		registerItemClass(Gold.class);
-		registerItemClass(LloydsBeacon.class);
-		registerItemClass(Stylus.class);
-		registerItemClass(TomeOfMastery.class);
-		registerItemClass(Torch.class);
-		registerItemClass(Weightstone.class);
-		registerItemClass(PseudoPasty.class);
-		registerItemClass(MysteryMeat.class);
-		registerItemClass(FrozenCarpaccio.class);
-		registerItemClass(Ration.class);
-		registerItemClass(Pasty.class);
-		registerItemClass(RottenMeat.class);
-		registerItemClass(RottenRation.class);
-		registerItemClass(RottenPasty.class);
-		registerItemClass(ChargrilledMeat.class);
-		registerItemClass(OverpricedRation.class);
-		registerItemClass(ScrollOfTerror.class);
-		registerItemClass(BlankScroll.class);
-		registerItemClass(ScrollOfMagicMapping.class);
-		registerItemClass(ScrollOfRecharging.class);
-		registerItemClass(ScrollOfLullaby.class);
-		registerItemClass(ScrollOfCurse.class);
-		registerItemClass(ScrollOfWeaponUpgrade.class);
-		registerItemClass(ScrollOfIdentify.class);
-		registerItemClass(ScrollOfUpgrade.class);
-		registerItemClass(ScrollOfChallenge.class);
-		registerItemClass(ScrollOfMirrorImage.class);
-		registerItemClass(ScrollOfTeleportation.class);
-		registerItemClass(ScrollOfDomination.class);
-		registerItemClass(ScrollOfRemoveCurse.class);
-		registerItemClass(ScrollOfPsionicBlast.class);
-		registerItemClass(PotionOfLevitation.class);
-		registerItemClass(PotionOfStrength.class);
-		registerItemClass(PotionOfMindVision.class);
-		registerItemClass(PotionOfParalyticGas.class);
-		registerItemClass(PotionOfToxicGas.class);
-		registerItemClass(PotionOfHealing.class);
-		registerItemClass(PotionOfPurity.class);
-		registerItemClass(PotionOfLiquidFlame.class);
-		registerItemClass(PotionOfFrost.class);
-		registerItemClass(PotionOfInvisibility.class);
-		registerItemClass(PotionOfExperience.class);
-		registerItemClass(RatSkull.class);
-		registerItemClass(ChaosCrystal.class);
-		registerItemClass(SpiderCharm.class);
-		registerItemClass(RingOfDetection.class);
-		registerItemClass(RingOfShadows.class);
-		registerItemClass(RingOfHerbalism.class);
-		registerItemClass(RingOfPower.class);
-		registerItemClass(RingOfHaste.class);
-		registerItemClass(RingOfSatiety.class);
-		registerItemClass(RingOfEvasion.class);
-		registerItemClass(RingOfAccuracy.class);
-		registerItemClass(RingOfThorns.class);
-		registerItemClass(RingOfHaggler.class);
-		registerItemClass(RingOfElements.class);
-		registerItemClass(RingOfMending.class);
-		registerItemClass(RingOfStoneWalking.class);
-		registerItemClass(CorpseDust.class);
-		registerItemClass(RatKingCrown.class);
-		registerItemClass(DriedRose.class);
-		registerItemClass(WandOfRegrowth.class);
-		registerItemClass(WandOfPoison.class);
-		registerItemClass(WandOfLightning.class);
-		registerItemClass(WandOfFirebolt.class);
-		registerItemClass(WandOfAmok.class);
-		registerItemClass(WandOfMagicMissile.class);
-		registerItemClass(WandOfFlock.class);
-		registerItemClass(WandOfDisintegration.class);
-		registerItemClass(WandOfAvalanche.class);
-		registerItemClass(WandOfSlowness.class);
-		registerItemClass(WandOfBlink.class);
-		registerItemClass(WandOfTelekinesis.class);
-		registerItemClass(WandOfTeleportation.class);
-		registerItemClass(ChaosStaff.class);
-		registerItemClass(ChaosSword.class);
-		registerItemClass(Spear.class);
-		registerItemClass(SacrificialSword.class);
-		registerItemClass(Kusarigama.class);
-		registerItemClass(Dagger.class);
-		registerItemClass(Longsword.class);
-		registerItemClass(WarHammer.class);
-		registerItemClass(Mace.class);
-		registerItemClass(Quarterstaff.class);
-		registerItemClass(BattleAxe.class);
-		registerItemClass(Glaive.class);
-		registerItemClass(Sword.class);
-		registerItemClass(ShortSword.class);
-		registerItemClass(Knuckles.class);
-		registerItemClass(CompoundBow.class);
-		registerItemClass(WoodenBow.class);
-		registerItemClass(ChaosBow.class);
-		registerItemClass(RubyBow.class);
-		registerItemClass(Pickaxe.class);
-		registerItemClass(IncendiaryDart.class);
-		registerItemClass(Dart.class);
-		registerItemClass(Boomerang.class);
-		registerItemClass(Shuriken.class);
-		registerItemClass(Tamahawk.class);
-		registerItemClass(Javelin.class);
-		registerItemClass(CurareDart.class);
-		registerItemClass(FireArrow.class);
-		registerItemClass(CommonArrow.class);
-		registerItemClass(ParalysisArrow.class);
-		registerItemClass(PoisonArrow.class);
-		registerItemClass(FrostArrow.class);
-		registerItemClass(PlateArmor.class);
-		registerItemClass(MailArmor.class);
-		registerItemClass(ClothArmor.class);
-		registerItemClass(ScaleArmor.class);
-		registerItemClass(LeatherArmor.class);
-		registerItemClass(GladiatorArmor.class);
-		registerItemClass(WarriorArmor.class);
-		registerItemClass(HuntressArmor.class);
-		registerItemClass(WardenArmor.class);
-		registerItemClass(SniperArmor.class);
-		registerItemClass(ShamanArmor.class);
-		registerItemClass(ElfArmor.class);
-		registerItemClass(ScoutArmor.class);
-		registerItemClass(BerserkArmor.class);
-		registerItemClass(RogueArmor.class);
-		registerItemClass(AssasinArmor.class);
-		registerItemClass(FreeRunnerArmor.class);
-		registerItemClass(MageArmor.class);
-		registerItemClass(BattleMageArmor.class);
-		registerItemClass(PotionBelt.class);
-		registerItemClass(Keyring.class);
-		registerItemClass(WandHolster.class);
-		registerItemClass(SeedPouch.class);
-		registerItemClass(Quiver.class);
-		registerItemClass(ScrollHolder.class);
-		registerItemClass(SkeletonKey.class);
-		registerItemClass(GoldenKey.class);
-		registerItemClass(IronKey.class);
-		registerItemClass(DarkGold.class);
-		registerItemClass(GothicArmor.class);
-		registerItemClass(Claymore.class);
-		registerItemClass(Halberd.class);
-		registerItemClass(WoodenCrossbow.class);
-		registerItemClass(CompositeCrossbow.class);
-		registerItemClass(RubyCrossbow.class);
-		registerItemClass(ChaosArmor.class);
-		registerItemClass(PotionOfMight.class);
-		registerItemClass(HeartOfDarkness.class);
-		registerItemClass(GoldenSword.class);
-		registerItemClass(BlackSkull.class);
-		registerItemClass(SpiderArmor.class);
-		registerItemClass(BladeOfSouls.class);
-		registerItemClass(SoulShard.class);
-		registerItemClass(NecromancerArmor.class);
-		registerItemClass(NecromancerRobe.class);
-		registerItemClass(PumpkinPie.class);
-		registerItemClass(RottenPumpkinPie.class);
-		registerItemClass(ChristmasTurkey.class);
-		registerItemClass(WandOfIcebolt.class);
-		registerItemClass(IceKey.class);
-		registerItemClass(ElvenBow.class);
-		registerItemClass(RatHide.class);
-		registerItemClass(BlackSkullOfMastery.class);
-		registerItemClass(CandleOfMindVision.class);
-		
-		registerItemClassByName(WandMaker.Rotberry.Seed.class,"Rotberry.Seed");
-		registerItemClassByName(Earthroot.Seed.class, "Earthroot.Seed");
-		registerItemClassByName(Firebloom.Seed.class, "Firebloom.Seed");
-		registerItemClassByName(Sungrass.Seed.class, "Sungrass.Seed");
-		registerItemClassByName(Dreamweed.Seed.class, "Dreamweed.Seed");
-		registerItemClassByName(Sorrowmoss.Seed.class, "Sorrowmoss.Seed");
-		registerItemClassByName(Icecap.Seed.class, "Icecap.Seed");
-		registerItemClassByName(Fadeleaf.Seed.class, "Fadeleaf.Seed");
+    private static void initItemsMap() {
 
-		registerItemClass(DwarfToken.class);
-		registerItemClass(RatArmor.class);
-		registerItemClass(ElvenDagger.class);
-		registerItemClass(IceGuardianCoreModule.class);
-		registerItemClass(SpiderQueenCarapace.class);
-		registerItemClass(RingOfFrost.class);
-		registerItemClass(WarlockArmor.class);
-		registerItemClass(Candy.class);
-		registerItemClass(WandOfShadowbolt.class);
-		registerItemClass(PseudoAmulet.class);
-		registerItemClass(ManaPotion.class);
-		registerItemClass(TomeOfKnowledge.class);
-		registerItemClass(SpellBook.class);
-		registerItemClass(ScrollOfSummoning.class);
+        registerItemClass(Amulet.class);
+        registerItemClass(Ankh.class);
+        registerItemClass(ArmorKit.class);
+        registerItemClass(Codex.class);
+        registerItemClass(Dewdrop.class);
+        registerItemClass(DewVial.class);
+        registerItemClass(Gold.class);
+        registerItemClass(LloydsBeacon.class);
+        registerItemClass(Stylus.class);
+        registerItemClass(TomeOfMastery.class);
+        registerItemClass(Torch.class);
+        registerItemClass(Weightstone.class);
+        registerItemClass(PseudoPasty.class);
+        registerItemClass(MysteryMeat.class);
+        registerItemClass(FrozenCarpaccio.class);
+        registerItemClass(Ration.class);
+        registerItemClass(Pasty.class);
+        registerItemClass(RottenMeat.class);
+        registerItemClass(RottenRation.class);
+        registerItemClass(RottenPasty.class);
+        registerItemClass(ChargrilledMeat.class);
+        registerItemClass(OverpricedRation.class);
+        registerItemClass(ScrollOfTerror.class);
+        registerItemClass(BlankScroll.class);
+        registerItemClass(ScrollOfMagicMapping.class);
+        registerItemClass(ScrollOfRecharging.class);
+        registerItemClass(ScrollOfLullaby.class);
+        registerItemClass(ScrollOfCurse.class);
+        registerItemClass(ScrollOfWeaponUpgrade.class);
+        registerItemClass(ScrollOfIdentify.class);
+        registerItemClass(ScrollOfUpgrade.class);
+        registerItemClass(ScrollOfChallenge.class);
+        registerItemClass(ScrollOfMirrorImage.class);
+        registerItemClass(ScrollOfTeleportation.class);
+        registerItemClass(ScrollOfDomination.class);
+        registerItemClass(ScrollOfRemoveCurse.class);
+        registerItemClass(ScrollOfPsionicBlast.class);
+        registerItemClass(PotionOfLevitation.class);
+        registerItemClass(PotionOfStrength.class);
+        registerItemClass(PotionOfMindVision.class);
+        registerItemClass(PotionOfParalyticGas.class);
+        registerItemClass(PotionOfToxicGas.class);
+        registerItemClass(PotionOfHealing.class);
+        registerItemClass(PotionOfPurity.class);
+        registerItemClass(PotionOfLiquidFlame.class);
+        registerItemClass(PotionOfFrost.class);
+        registerItemClass(PotionOfInvisibility.class);
+        registerItemClass(PotionOfExperience.class);
+        registerItemClass(RatSkull.class);
+        registerItemClass(ChaosCrystal.class);
+        registerItemClass(SpiderCharm.class);
+        registerItemClass(RingOfDetection.class);
+        registerItemClass(RingOfShadows.class);
+        registerItemClass(RingOfHerbalism.class);
+        registerItemClass(RingOfPower.class);
+        registerItemClass(RingOfHaste.class);
+        registerItemClass(RingOfSatiety.class);
+        registerItemClass(RingOfEvasion.class);
+        registerItemClass(RingOfAccuracy.class);
+        registerItemClass(RingOfThorns.class);
+        registerItemClass(RingOfHaggler.class);
+        registerItemClass(RingOfElements.class);
+        registerItemClass(RingOfMending.class);
+        registerItemClass(RingOfStoneWalking.class);
+        registerItemClass(CorpseDust.class);
+        registerItemClass(RatKingCrown.class);
+        registerItemClass(DriedRose.class);
+        registerItemClass(WandOfRegrowth.class);
+        registerItemClass(WandOfPoison.class);
+        registerItemClass(WandOfLightning.class);
+        registerItemClass(WandOfFirebolt.class);
+        registerItemClass(WandOfAmok.class);
+        registerItemClass(WandOfMagicMissile.class);
+        registerItemClass(WandOfFlock.class);
+        registerItemClass(WandOfDisintegration.class);
+        registerItemClass(WandOfAvalanche.class);
+        registerItemClass(WandOfSlowness.class);
+        registerItemClass(WandOfBlink.class);
+        registerItemClass(WandOfTelekinesis.class);
+        registerItemClass(WandOfTeleportation.class);
+        registerItemClass(ChaosStaff.class);
+        registerItemClass(ChaosSword.class);
+        registerItemClass(Spear.class);
+        registerItemClass(SacrificialSword.class);
+        registerItemClass(Kusarigama.class);
+        registerItemClass(Dagger.class);
+        registerItemClass(Longsword.class);
+        registerItemClass(WarHammer.class);
+        registerItemClass(Mace.class);
+        registerItemClass(Quarterstaff.class);
+        registerItemClass(BattleAxe.class);
+        registerItemClass(Glaive.class);
+        registerItemClass(Sword.class);
+        registerItemClass(ShortSword.class);
+        registerItemClass(Knuckles.class);
+        registerItemClass(CompoundBow.class);
+        registerItemClass(WoodenBow.class);
+        registerItemClass(ChaosBow.class);
+        registerItemClass(RubyBow.class);
+        registerItemClass(Pickaxe.class);
+        registerItemClass(IncendiaryDart.class);
+        registerItemClass(Dart.class);
+        registerItemClass(Boomerang.class);
+        registerItemClass(Shuriken.class);
+        registerItemClass(Tamahawk.class);
+        registerItemClass(Javelin.class);
+        registerItemClass(CurareDart.class);
+        registerItemClass(FireArrow.class);
+        registerItemClass(CommonArrow.class);
+        registerItemClass(ParalysisArrow.class);
+        registerItemClass(PoisonArrow.class);
+        registerItemClass(FrostArrow.class);
+        registerItemClass(PlateArmor.class);
+        registerItemClass(MailArmor.class);
+        registerItemClass(ClothArmor.class);
+        registerItemClass(ScaleArmor.class);
+        registerItemClass(LeatherArmor.class);
+        registerItemClass(GladiatorArmor.class);
+        registerItemClass(WarriorArmor.class);
+        registerItemClass(HuntressArmor.class);
+        registerItemClass(WardenArmor.class);
+        registerItemClass(SniperArmor.class);
+        registerItemClass(ShamanArmor.class);
+        registerItemClass(ElfArmor.class);
+        registerItemClass(ScoutArmor.class);
+        registerItemClass(BerserkArmor.class);
+        registerItemClass(RogueArmor.class);
+        registerItemClass(AssasinArmor.class);
+        registerItemClass(FreeRunnerArmor.class);
+        registerItemClass(MageArmor.class);
+        registerItemClass(BattleMageArmor.class);
+        registerItemClass(PotionBelt.class);
+        registerItemClass(Keyring.class);
+        registerItemClass(WandHolster.class);
+        registerItemClass(SeedPouch.class);
+        registerItemClass(Quiver.class);
+        registerItemClass(ScrollHolder.class);
+        registerItemClass(SkeletonKey.class);
+        registerItemClass(GoldenKey.class);
+        registerItemClass(IronKey.class);
+        registerItemClass(DarkGold.class);
+        registerItemClass(GothicArmor.class);
+        registerItemClass(Claymore.class);
+        registerItemClass(Halberd.class);
+        registerItemClass(WoodenCrossbow.class);
+        registerItemClass(CompositeCrossbow.class);
+        registerItemClass(RubyCrossbow.class);
+        registerItemClass(ChaosArmor.class);
+        registerItemClass(PotionOfMight.class);
+        registerItemClass(HeartOfDarkness.class);
+        registerItemClass(GoldenSword.class);
+        registerItemClass(BlackSkull.class);
+        registerItemClass(SpiderArmor.class);
+        registerItemClass(BladeOfSouls.class);
+        registerItemClass(SoulShard.class);
+        registerItemClass(NecromancerArmor.class);
+        registerItemClass(NecromancerRobe.class);
+        registerItemClass(PumpkinPie.class);
+        registerItemClass(RottenPumpkinPie.class);
+        registerItemClass(ChristmasTurkey.class);
+        registerItemClass(WandOfIcebolt.class);
+        registerItemClass(IceKey.class);
+        registerItemClass(ElvenBow.class);
+        registerItemClass(RatHide.class);
+        registerItemClass(BlackSkullOfMastery.class);
+        registerItemClass(CandleOfMindVision.class);
 
-		registerItemClass(GnollArmor.class);
-		registerItemClass(GnollTamahawk.class);
+        registerItemClassByName(WandMaker.Rotberry.Seed.class, "Rotberry.Seed");
+        registerItemClassByName(Earthroot.Seed.class, "Earthroot.Seed");
+        registerItemClassByName(Firebloom.Seed.class, "Firebloom.Seed");
+        registerItemClassByName(Sungrass.Seed.class, "Sungrass.Seed");
+        registerItemClassByName(Dreamweed.Seed.class, "Dreamweed.Seed");
+        registerItemClassByName(Sorrowmoss.Seed.class, "Sorrowmoss.Seed");
+        registerItemClassByName(Icecap.Seed.class, "Icecap.Seed");
+        registerItemClassByName(Fadeleaf.Seed.class, "Fadeleaf.Seed");
 
-		registerItemClass(HealthDart.class);
-		registerItemClass(AmokDart.class);
-		registerItemClass(HealthArrow.class);
-		registerItemClass(AmokArrow.class);
-		registerItemClass(CandyOfDeath.class);
-	}
+        registerItemClass(DwarfToken.class);
+        registerItemClass(RatArmor.class);
+        registerItemClass(ElvenDagger.class);
+        registerItemClass(IceGuardianCoreModule.class);
+        registerItemClass(SpiderQueenCarapace.class);
+        registerItemClass(RingOfFrost.class);
+        registerItemClass(WarlockArmor.class);
+        registerItemClass(Candy.class);
+        registerItemClass(WandOfShadowbolt.class);
+        registerItemClass(PseudoAmulet.class);
+        registerItemClass(ManaPotion.class);
+        registerItemClass(TomeOfKnowledge.class);
+        registerItemClass(SpellBook.class);
+        registerItemClass(ScrollOfSummoning.class);
 
-	public static boolean isValidItemClass(String itemClass) {
-		return mItemsList.containsKey(itemClass);
-	}
+        registerItemClass(GnollArmor.class);
+        registerItemClass(GnollTamahawk.class);
 
-	public static Item itemByName(String selectedItemClass) {
-		try {
-			return itemsClassByName(selectedItemClass).newInstance();
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException("", e);
-		} catch (IllegalAccessException e) {
-			throw new TrackedRuntimeException("", e);
-		}
-	}
+        registerItemClass(HealthDart.class);
+        registerItemClass(AmokDart.class);
+        registerItemClass(HealthArrow.class);
+        registerItemClass(AmokArrow.class);
+        registerItemClass(CandyOfDeath.class);
+    }
 
-	private static Class<? extends Item> itemsClassByName(String selectedItemClass) {
+    public static boolean isValidItemClass(String itemClass) {
+        return mItemsList.containsKey(itemClass);
+    }
 
-		Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
-		if (itemClass != null) {
-			return itemClass;
-		} else {
-			Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
-			return Gold.class;
-		}
-	}
+    public static Item itemByName(String selectedItemClass) {
+        try {
+            Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
+            if (itemClass != null) {
+                return itemClass.newInstance();
+            } else {
+                return new CustomItem(selectedItemClass);
+                //Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
+                //return Gold.class;
+            }
+        } catch (InstantiationException e) {
+            throw new TrackedRuntimeException("itemFactory", e);
+        } catch (IllegalAccessException e) {
+            throw new TrackedRuntimeException("itemFactory", e);
+        }
+    }
 
-	public static String itemNameByClass(Class<? extends Item> clazz) {
+    public static String itemNameByClass(Class<? extends Item> clazz) {
 
-		String ret = mNamesList.get(clazz);
-		if(ret==null) {
-			EventCollector.logEvent("Unregistered entry",clazz.getCanonicalName());
-			ret = "ClothArmor";
-		}
-		return ret;
-	}
+        String ret = mNamesList.get(clazz);
+        if (ret == null) {
+            EventCollector.logEvent("Unregistered entry", clazz.getCanonicalName());
+            ret = "ClothArmor";
+        }
+        return ret;
+    }
 
-	public static Item createItemFromDesc(JSONObject itemDesc) throws IllegalAccessException, InstantiationException, JSONException {
-		String kind = itemDesc.getString("kind");
+    public static Item createItemFromDesc(JSONObject itemDesc) throws  JSONException {
+        String kind = itemDesc.getString("kind");
 
-		if(kind.equals("NoItem")) {
-			return null;
-		}
+        if (kind.equals("NoItem")) {
+            return null;
+        }
 
-		Item item = ItemFactory.itemsClassByName(kind).newInstance();
-		item.fromJson(itemDesc);
+        Item item = ItemFactory.itemByName(kind);
+        item.fromJson(itemDesc);
 
-		return item;
-	}
+        return item;
+    }
 }

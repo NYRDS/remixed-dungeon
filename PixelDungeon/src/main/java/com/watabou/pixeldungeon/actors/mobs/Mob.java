@@ -681,17 +681,11 @@ public abstract class Mob extends Char {
 		if (loot != null && Random.Float() <= lootChance) {
 			Item item;
 			if (loot instanceof Generator.Category) {
-
 				item = Generator.random((Generator.Category) loot);
-
 			} else if (loot instanceof Class<?>) {
-
 				item = Generator.random((Class<? extends Item>) loot);
-
 			} else {
-
 				item = (Item) loot;
-
 			}
 			Dungeon.level.drop(item, getPos()).sprite.drop();
 		}

@@ -78,10 +78,6 @@ public class RandomLevel extends RegularLevel {
 
 		} catch (JSONException e) {
 			throw new TrackedRuntimeException(e);
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException(e);
-		} catch (IllegalAccessException e) {
-			throw new TrackedRuntimeException(e);
 		}
 
 		do {

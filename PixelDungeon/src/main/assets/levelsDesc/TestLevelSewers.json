@@ -57,7 +57,7 @@
    "water":"water0.png",
    "entrance":[1,1],
    "multiexit":[[3,3],[5,5],[7,7],[9,9]],
-   "mobs" : [
+   "obs" : [
      {"kind":"BlackRat",
        "x":13,
        "y":11,
@@ -69,12 +69,7 @@
      }
    ],
   "items": [
-
-    {"kind":"ScrollOfIdentify","quantity":"99","x":13,"y":10},
-    {"kind":"RatHide","x":13,"y":10},
-    {"kind":"IronKey", "levelId":"2", "depth":2, "x":13,"y":11},
-    {"kind":"WarHammer", "level":"4", "x":13,"y":11, "enchantment":"Horror"},
-    {"kind":"LeatherArmor", "level":"5", "x":13,"y":12, "glyph":"Potential"}
+    {"kind":"scripts/items/Fish","x":13,"y":10}
   ],
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},
