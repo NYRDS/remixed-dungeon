@@ -1,12 +1,14 @@
 package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.Packable;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 
+import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
@@ -67,10 +69,41 @@ public class CustomItem extends Item {
         return actions;
     }
 
-
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
         initItem();
+    }
+
+    private Item applyOnItem(int cell,String effect) {
+        try {
+            script.runScript(effect, cell, null);
+            if(script.getResult().isnil()) {
+                return null;
+            }
+            return (Item) script.getResult().checkuserdata(Item.class);
+        } catch (LuaError e) {
+            throw new TrackedRuntimeException(e);
+        }
+    }
+
+    @Override
+    public Item burn(int cell) {
+        return applyOnItem(cell,"burn");
+    }
+
+    @Override
+    public Item freeze(int cell) {
+        return applyOnItem(cell,"freeze");
+    }
+
+    @Override
+    public Item poison(int cell) {
+        return applyOnItem(cell,"poison");
+    }
+
+    @Override
+    public String getClassName() {
+        return scriptFile;
     }
 }

@@ -11,10 +11,10 @@ local fish = {}
 
 function fish.desc(tbl, item)
     return {
-        image     = 12,
+        image     = 15,
         imageFile = "items/food.png",
-        name      = "fish",
-        info      = "Raw fish, eat at your own risk"
+        name      = "rotten fish",
+        info      = "Rotten fish, smells terrible"
     }
 end
 
@@ -29,15 +29,15 @@ function fish.execute(tbl, item, hero, action)
 end
 
 function fish.burn(tbl, item, hero, action)
-    return RPD.ItemFactory:itemByName("scripts/items/FriedFish")
+    return item
 end
 
 function fish.freeze(tbl, item, hero, action)
-    return RPD.ItemFactory:itemByName("scripts/items/FrozenFish")
+    return item
 end
 
 function fish.poison(tbl, item, hero, action)
-    return RPD.ItemFactory:itemByName("scripts/items/RottenFish")
+    return item
 end
 
 

@@ -225,7 +225,7 @@ public class Item implements Bundlable, Presser {
 				quantity(quantity() - 1);
 				QuickSlot.refresh();
 				try {
-					Item detached = getClass().newInstance();
+					Item detached = ItemFactory.itemByName(getClassName());
 					detached.level(level());
 					detached.onDetach();
 					return detached;
@@ -500,7 +500,7 @@ public class Item implements Bundlable, Presser {
 
 	private static   Hero                  curUser = null;
 	protected static Item                  curItem = null;
-	protected static CellSelector.Listener thrower = new CellSelector.Listener() {
+	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer target) {
 			if (target != null) {
@@ -628,5 +628,9 @@ public class Item implements Bundlable, Presser {
 
 	public void setQuickSlotIndex(int quickSlotIndex) {
 		this.quickSlotIndex = quickSlotIndex;
+	}
+
+	public String getClassName() {
+		return getClass().getSimpleName();
 	}
 }
