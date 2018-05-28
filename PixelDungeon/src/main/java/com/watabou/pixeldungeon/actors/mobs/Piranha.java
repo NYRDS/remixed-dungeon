@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -26,7 +27,6 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.sprites.PiranhaSprite;
 import com.watabou.utils.Random;
 
@@ -43,7 +43,10 @@ public class Piranha extends Mob {
 		baseSpeed = 2f;
 		
 		exp = 0;
-		
+
+		lootChance = 1f;
+		loot = ItemFactory.itemByName("RawFish");
+
 		IMMUNITIES.add( Burning.class );
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );
@@ -78,7 +81,6 @@ public class Piranha extends Mob {
 	
 	@Override
 	public void die( Object cause ) {
-		Dungeon.level.drop( new MysteryMeat(), getPos() ).sprite.drop();
 		super.die( cause );
 		
 		Statistics.piranhasKilled++;

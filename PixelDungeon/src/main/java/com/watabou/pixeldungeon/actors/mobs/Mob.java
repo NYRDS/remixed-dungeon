@@ -107,7 +107,7 @@ public abstract class Mob extends Char {
 	protected int defenseSkill = 0;
 
 	protected int exp    = 1;
-	protected int maxLvl = 30;
+	protected int maxLvl = 50;
 
 	@Nullable
 	private PetOwner owner;

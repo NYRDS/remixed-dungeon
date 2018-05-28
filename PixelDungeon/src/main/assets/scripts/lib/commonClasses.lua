@@ -17,7 +17,8 @@ local Buffs  = {
     Vertigo      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Vertigo"),
     Invisibility = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Invisibility"),
     Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation"),
-    Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger")
+    Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger"),
+    Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison")
 }
 
 local actions = {

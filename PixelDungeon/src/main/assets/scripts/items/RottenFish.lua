@@ -7,38 +7,24 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local fish = {}
+local item = require "scripts/lib/item"
 
-function fish.desc(tbl, item)
-    return {
-        image     = 15,
-        imageFile = "items/food.png",
-        name      = "rotten fish",
-        info      = "Rotten fish, smells terrible"
-    }
-end
 
-function fish.actions()
-    return {RPD.Actions.eat}
-end
-
-function fish.execute(tbl, item, hero, action)
-    if action == RPD.Actions.eat then
-        hero:eat(item,RPD.Buffs.Hunger.HUNGRY,"Fishy!")
+return item.init{
+    desc  = function ()
+        return {
+            image     = 15,
+            imageFile = "items/food.png",
+            name      = "rotten fish",
+            info      = "Rotten fish, smells terrible",
+            stackable = true
+        }
+    end,
+    actions = function() return {RPD.Actions.eat} end,
+    execute = function(self, item, hero, action)
+        if action == RPD.Actions.eat then
+            RPD.Buffs.Buff:affect(hero, RPD.Buffs.Poison):set(2*math.random(1, hero:lvl()))
+            hero:eat(item,RPD.Buffs.Hunger.HUNGRY / 4,"disgusting!")
+        end
     end
-end
-
-function fish.burn(tbl, item, hero, action)
-    return item
-end
-
-function fish.freeze(tbl, item, hero, action)
-    return item
-end
-
-function fish.poison(tbl, item, hero, action)
-    return item
-end
-
-
-return fish
+}

@@ -7,38 +7,28 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local fish = {}
+local item = require "scripts/lib/item"
 
-function fish.desc(tbl, item)
-    return {
-        image     = 14,
-        imageFile = "items/food.png",
-        name      = "frozen fish",
-        info      = "Frozen fish, looks like it alive, but frozen"
-    }
-end
 
-function fish.actions()
-    return {RPD.Actions.eat}
-end
+return item.init{
+    desc  = function ()
+        return {
+            image     = 14,
+            imageFile = "items/food.png",
+            name      = "frozen fish",
+            info      = "Frozen fish, looks like it alive, but frozen",
+            stackable = true
+        }
+    end,
+    onThrow = function(self, item, cell)
+        local level = RPD.Dungeon.level
 
-function fish.execute(tbl, item, hero, action)
-    if action == RPD.Actions.eat then
-        hero:eat(item,RPD.Buffs.Hunger.HUNGRY,"Fishy!")
+        if level.water[cell] then
+            local mob = RPD.MobFactory:mobByName("Piranha")
+            mob:setPos(cell)
+            level:spawnMob(mob)
+        else
+            item:dropTo(cell)
+        end
     end
-end
-
-function fish.burn(tbl, item, hero, action)
-    return item
-end
-
-function fish.freeze(tbl, item, hero, action)
-    return item
-end
-
-function fish.poison(tbl, item, hero, action)
-    return RPD.ItemFactory:itemByName("RottenFish")
-end
-
-
-return fish
+}

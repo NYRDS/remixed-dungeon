@@ -17,10 +17,11 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -28,27 +29,12 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 
 public class Poison extends Buff implements Hero.Doom {
 
+	@Packable
 	protected float left;
-	
-	private static final String LEFT	= "left";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( LEFT, left );
-		
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		left = bundle.getFloat( LEFT );
-	}
-	
+
 	public void set( float duration ) {
 		this.left = duration;
 	}
@@ -75,9 +61,7 @@ public class Poison extends Buff implements Hero.Doom {
 			}
 			
 		} else {
-			
 			detach();
-			
 		}
 		
 		return true;

@@ -69,7 +69,7 @@
      }
    ],
   "items": [
-    {"kind":"scripts/items/Fish","x":13,"y":10}
+    {"kind":"Fish","x":13,"y":10}
   ],
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},

@@ -13,7 +13,7 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 public class LuaScript {
 
     private String scriptFile;
-    boolean scriptLoaded = false;
+    private boolean scriptLoaded = false;
     private LuaTable script;
     private Object   parent;
 
@@ -25,7 +25,7 @@ public class LuaScript {
         this.scriptFile = scriptFile;
     }
 
-    public boolean runScript(String method, Object arg1, Object arg2) {
+    public boolean run(String method, Object arg1, Object arg2) {
         if (!scriptLoaded) {
             script = LuaEngine.module(scriptFile, scriptFile);
             scriptLoaded = true;

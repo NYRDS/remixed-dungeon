@@ -160,7 +160,7 @@ public class Item implements Bundlable, Presser {
 		dropTo(cell);
 	}
 
-	protected void dropTo(int cell) {
+	public void dropTo(int cell) {
 		Heap heap = Dungeon.level.drop(this, cell);
 		if (!heap.isEmpty()) {
 			heap.sprite.drop(cell);

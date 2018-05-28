@@ -35,26 +35,27 @@ public class CustomItem extends Item {
     private void initItem() {
         script = new LuaScript("scripts/items/"+scriptFile, this);
 
-        script.runScript("desc",null,null);
+        script.run("desc",null,null);
         LuaTable desc = script.getResult().checktable();
 
         image     = desc.rawget("image").checkint();
         imageFile = desc.rawget("imageFile").checkjstring();
         name      = StringsManager.maybeId(desc.rawget("name").checkjstring());
         info      = StringsManager.maybeId(desc.rawget("info").checkjstring());
+        stackable = desc.rawget("stackable").checkboolean();
     }
 
     @Override
     public void execute(Hero hero, String action) {
         super.execute(hero,action);
-        script.runScript("execute", hero, action);
+        script.run("execute", hero, action);
     }
 
     @Override
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
 
-        script.runScript("actions", hero, null);
+        script.run("actions", hero, null);
 
         if(script.getResult().istable()) {
             LuaTable luaActions = script.getResult().checktable();
@@ -77,7 +78,7 @@ public class CustomItem extends Item {
 
     private Item applyOnItem(int cell,String effect) {
         try {
-            script.runScript(effect, cell, null);
+            script.run(effect, cell, null);
             if(script.getResult().isnil()) {
                 return null;
             }
@@ -100,6 +101,11 @@ public class CustomItem extends Item {
     @Override
     public Item poison(int cell) {
         return applyOnItem(cell,"poison");
+    }
+
+    @Override
+    protected void onThrow(int cell) {
+        script.run("onThrow", cell, null);
     }
 
     @Override
