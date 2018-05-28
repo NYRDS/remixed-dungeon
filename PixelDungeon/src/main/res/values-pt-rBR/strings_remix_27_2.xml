@@ -22,12 +22,20 @@
 
     <!-- STRINGS OF RootSpell CLASS -->
     <string name="RootSpell_Name">Enraizar</string>
+    <string name="RootSpell_Info">Raízes que seguram um inimigo e tornam seu movimento impossível por um curto período de tempo.</string>
+
+    <!-- STRINGS OF WindGust CLASS -->
+    <string name="WindGust_Name">Rajada de vento</string>
+    <string name="WindGust_Info">Uma rajada de vento que afasta o alvo selecionado.</string>
+
     <!-- STRINGS OF FreezeGlobe CLASS -->
     <string name="FreezeGlobe_Name">Congela</string>
     <string name="FreezeGlobe_Info">Congela o mob selecionado tornando-o incapaz de executar qualquer ação por um curto período de tempo.</string>
 
     <!-- STRINGS OF MagicTorch CLASS -->
     <string name="MagicTorch_Name">Tocha magica</string>
+    <string name="MagicTorch_Info">Feitiço que produz luz para iluminar a escuridão da masmorra.</string>
+
     <!-- STRINGS OF Healing CLASS -->
     <string name="Healing_Name">Cura</string>
     <string name="Healing_Info">O Pergaminho e Crucial Para Todos os Aventureiros. Ele Pode Restaurar 1/3 do Máximo do Hp dos Conjuradores.</string>
@@ -47,6 +55,9 @@
     <!-- STRINGS OF SpellBook CLASS -->
     <string name="SpellBook_Name">Livro de feitiços</string>
     <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas,do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
+    <string name="SpellBook_Info_Identified">Entre as páginas você descobriu um texto completo com o feitiço \"%1$s\".\n\"%2$s\"</string>
+
+
     <!-- STRINGS OF ManaPotion CLASS -->
     <string name="ManaPotion_Name">Poção de Mana</string>
     <string name="ManaPotion_Info">Essa poção vai restaurar sua energia espiritual.</string>

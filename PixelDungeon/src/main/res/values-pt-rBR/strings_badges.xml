@@ -51,6 +51,7 @@
   <!--<string name="Badges_BossSlain3Assa"></string>-->
   <!--<string name="Badges_BossSlain3Snip"></string>-->
   <!--<string name="Badges_BossSlain3Ward"></string>-->
+  <string name="Badges_BossSlain3All">3º chefe morto por todas as subclasses</string>
   <string name="Badges_RingHaggler">Anel da Barganha adquirido</string>
   <string name="Badges_RingThorns">Anel de Espinhos adquirido</string>
   <string name="Badges_StrengthAttained1">13 pontos de Força adquiridos</string>
@@ -80,6 +81,7 @@
   <!--<string name="Badges_VictoryRog"></string>-->
   <!--<string name="Badges_VictoryHun"></string>-->
   <string name="Badges_Victory">Amuleto de Yendor adquirido</string>
+  <string name="Badges_VictoryAll">Amuleto de Yendor adquirido por todas as classes</string>
   <string name="Badges_MasteryCombo">7-hit combo</string>
   <string name="Badges_PotionsCooked1">3 poções realizadas</string>
   <string name="Badges_PotionsCooked2">6 poções realizadas</string>

@@ -1,3 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <string name="WndSettings_Quickslots">Atalho de Itens</string>
+
+    <string name="Abilities_Common">Feitiços Comuns</string>
+    <string name="Abilities_Elemental">Feitiços Elementais</string>
+    <string name="Abilities_Necromancy">Necromancia</string>
+    <string name="WndSettings_UiSettings">Configurações da Interface</string>
+    <string name="WndSettings_ActionButtonSize">Tamanho dos botões</string>
+    <string name="WndSettings_InGameUiSettings">Configurações da Interface</string>
+    <string name="WndSettings_GameplaySettings">Jogabigidade</string>
     </resources>

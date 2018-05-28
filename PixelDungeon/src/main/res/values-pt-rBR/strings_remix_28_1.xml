@@ -1,4 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
+    <string name="town_deco_sofa_name">Sofá confortável</string>
+    <string name="town_deco_sofa_desc">Parece que este cinema realmente tenta fornecer os melhores lugares para seus clientes.</string>
+
+    <string name="town_deco_book_name">Livro</string>
+    <string name="town_deco_book_desc">Parece que alguém desleixado deixou este livro aqui.</string>
+
+    <string name="town_deco_screen_name">Tela</string>
+    <string name="town_deco_screen_desc">Esta pintura misteriosa chamada \"tela\" pode mostrar imagens em movimento</string>
+
+    <string name="town_deco_wooden_chair_name">Cadeira de madeira</string>
+    <string name="town_deco_wooden_chair_desc">Esta cadeira é feita de madeira</string>
+
     </resources>
