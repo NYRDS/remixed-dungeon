@@ -33,7 +33,7 @@ public class CustomItem extends Item {
     }
 
     private void initItem() {
-        script = new LuaScript(scriptFile, this);
+        script = new LuaScript("scripts/items/"+scriptFile, this);
 
         script.runScript("desc",null,null);
         LuaTable desc = script.getResult().checktable();

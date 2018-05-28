@@ -29,11 +29,11 @@ function fish.execute(tbl, item, hero, action)
 end
 
 function fish.burn(tbl, item, hero, action)
-    return RPD.ItemFactory:itemByName("FriedFish")
+    return item
 end
 
 function fish.freeze(tbl, item, hero, action)
-    return RPD.ItemFactory:itemByName("FrozenFish")
+    return item
 end
 
 function fish.poison(tbl, item, hero, action)
