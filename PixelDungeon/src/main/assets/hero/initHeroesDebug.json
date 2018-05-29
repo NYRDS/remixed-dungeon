@@ -6,23 +6,32 @@
     },
     "items": [
       {
-        "kind": "AmokDart",
+        "kind": "PotionOfFrost",
         "quantity": 100
       },
       {
-        "kind": "CurareDart",
+        "kind": "PotionOfLiquidFlame",
         "quantity": 100
       },
       {
-        "kind": "WandOfMagicMissile"
+        "kind": "PotionOfToxicGas",
+        "quantity": 100
       },
       {
-        "kind": "Ankh",
+        "kind": "RawFish",
+        "quantity": 100
+      },
+      {
+        "kind": "WandOfRegrowth",
+        "level": 10
+      },
+      {
+        "kind": "ScrollOfMagicMapping",
         "quantity": 100
       }
     ],
     "str": 1000,
-    "hp": 2,
+    "hp": 200,
     "magicAffinity": "Common"
   },
   "non_expert": {
