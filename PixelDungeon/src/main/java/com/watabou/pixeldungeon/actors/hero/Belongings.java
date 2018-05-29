@@ -101,7 +101,17 @@ public class Belongings implements Iterable<Item> {
 			ring2.activate( owner );
 		}
 	}
-	
+
+
+	public Item getItem( String itemClass ) {
+		for (Item item : this) {
+			if (itemClass.equals( item.getClassName() )) {
+				return item;
+			}
+		}
+		return null;
+	}
+
 	@SuppressWarnings("unchecked")
 	public<T extends Item> T getItem( Class<T> itemClass ) {
 

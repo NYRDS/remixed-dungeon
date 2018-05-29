@@ -32,16 +32,31 @@ function item.onThrow(self, item, cell)
     item:dropTo(cell)
 end
 
-function item.desc(self, item)
+function item.defaultDesc()
     return {
-        image     = 14,
-        imageFile = "items/food.png",
-        name      = "smth",
-        info      = "smth",
-        stackable = false,
+        image      = 14,
+        imageFile  = "items/food.png",
+        name       = "smth",
+        info       = "smth",
+        stackable  = false,
         upgradable = false,
-        identifieyd = false
+        identified = true
     }
+end
+
+function item.itemDesc(self)
+    local ret = item.defaultDesc()
+    local own = self:desc()
+
+    for k,v in pairs(ret) do
+        ret[k] = own[k] or v
+    end
+
+    return ret
+end
+
+function item.desc(self, item)
+    return item.defaultDesc()
 end
 
 item.init = function(desc)

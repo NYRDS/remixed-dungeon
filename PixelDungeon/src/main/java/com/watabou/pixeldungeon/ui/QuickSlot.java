@@ -195,8 +195,8 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 		}
 
 		if (quickslotItem != null) {
-			Item item = Dungeon.hero.belongings.getItem((Class<? extends Item>) quickslotItem);
-			return item != null ? item : Item.virtual((Class<? extends Item>) quickslotItem);
+			Item item = Dungeon.hero.belongings.getItem((String) quickslotItem);
+			return item != null ? item : Item.virtual((String) quickslotItem);
 		}
 
 
@@ -365,7 +365,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 	@Override
 	public void onSelect(Item item) {
 		if (item != null) {
-			quickslotItem(item.stackable ? item.getClass() : item);
+			quickslotItem(item.stackable ? item.getClassName() : item);
 			refresh();
 		}
 	}

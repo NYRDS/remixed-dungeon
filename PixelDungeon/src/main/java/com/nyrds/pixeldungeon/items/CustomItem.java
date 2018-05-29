@@ -22,6 +22,9 @@ public class CustomItem extends Item {
     @Packable
     private String scriptFile;
 
+    private boolean upgradable;
+    private boolean identified;
+
     private LuaScript script;
 
     public CustomItem() {
@@ -35,14 +38,26 @@ public class CustomItem extends Item {
     private void initItem() {
         script = new LuaScript("scripts/items/"+scriptFile, this);
 
-        script.run("desc",null,null);
+        script.run("itemDesc",null,null);
         LuaTable desc = script.getResult().checktable();
 
-        image     = desc.rawget("image").checkint();
-        imageFile = desc.rawget("imageFile").checkjstring();
-        name      = StringsManager.maybeId(desc.rawget("name").checkjstring());
-        info      = StringsManager.maybeId(desc.rawget("info").checkjstring());
-        stackable = desc.rawget("stackable").checkboolean();
+        image        = desc.rawget("image").checkint();
+        imageFile    = desc.rawget("imageFile").checkjstring();
+        name         = StringsManager.maybeId(desc.rawget("name").checkjstring());
+        info         = StringsManager.maybeId(desc.rawget("info").checkjstring());
+        stackable    = desc.rawget("stackable").checkboolean();
+        upgradable   = desc.rawget("upgradable").checkboolean();
+        identified   = desc.rawget("identified").checkboolean();
+    }
+
+    @Override
+    public boolean isUpgradable() {
+        return upgradable;
+    }
+
+    @Override
+    public boolean isIdentified() {
+        return identified;
     }
 
     @Override

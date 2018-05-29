@@ -182,9 +182,9 @@ public class Item implements Bundlable, Presser {
 		}
 
 		if (stackable) {
-			Class<?> c = getClass();
+			String c = getClassName();
 			for (Item item : items) {
-				if (item.getClass() == c && item.level() == level()) {
+				if (item.getClassName().equals(c) && item.level() == level()) {
 					item.quantity(item.quantity() + quantity());
 					QuickSlot.refresh();
 					return true;
@@ -383,9 +383,9 @@ public class Item implements Bundlable, Presser {
 		return 0;
 	}
 
-	public static Item virtual(Class<? extends Item> cl) {
+	public static Item virtual(String cl) {
 		try {
-			Item item = cl.newInstance();
+			Item item = ItemFactory.itemByName(cl);
 			item.quantity(0);
 			return item;
 		} catch (Exception e) {

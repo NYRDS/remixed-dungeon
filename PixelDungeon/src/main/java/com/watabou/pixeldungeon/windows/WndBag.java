@@ -422,7 +422,7 @@ public class WndBag extends WndTabbed {
 		protected boolean onLongClick() {
 			if (listener == null) {
 				hide();
-				QuickSlot.selectSlotFor(item.stackable ? item.getClass() : item);
+				QuickSlot.selectSlotFor(item.stackable ? item.getClassName() : item);
 				return true;
 			} else {
 				return false;
