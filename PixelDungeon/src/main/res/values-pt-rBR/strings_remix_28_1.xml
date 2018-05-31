@@ -1,6 +1,37 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
+    <string name="BlackCat_Name">Gato preto</string>
+    <string name="BlackCat_Gender">feminino</string>
+    <string name="BlackCat_Name_Objective">gato</string>
+    <string name="BlackCat_Desc">Isso é um gato preto</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>Prrrrrrr</item>
+        <item>Miau...</item>
+        <item>Miau!</item>
+    </string-array>
+
+    <string name="SociologistNPC_Name">Sociólogo</string>
+    <string name="SociologistNPC_Gender">masculino</string>
+    <string name="SociologistNPC_Name_Objective">Sociólogo</string>
+    <string name="SociologistNPC_Desc">Esse é um sociólogo em uma busca sagrada de coleta de opinião pública</string>
+
+    <string name="SociologistNPC_AlreadyTaken">Você já participou dessa pesquisa, por favor volte mais tarde</string>
+    <string name="SociologistNPC_Hi">Olá!\nGostaria de participar da nossa pesquisa?(É necessário acesso à Internet)\nSua opinião é importante!</string>
+    <string name="SociologistNPC_InternetRequired">Desculpe, mas sem acesso à Internet, você não pode participar da nossa pesquisa</string>
+    <string name="SociologistNPC_DownloadError">Desculpe, algo deu errado, por favor tente novamente mais tarde</string>
+
+    <string name="town_deco_library_sign_name">Placa de Biblioteca</string>
+    <string name="town_deco_library_sign_desc">Parece que há uma biblioteca dentro daquela pequena construção.</string>
+    <string name="town_deco_identifier_sign_name">Placa de Esfera Mágica</string>
+    <string name="town_deco_identifier_sign_desc">Parece que há uma cartomante dentro daquela pequena construção.</string>
+    <string name="town_deco_cinema_sign_name">Placa de Cinema</string>
+    <string name="town_deco_cinema_sign_desc">Parece que há um cinema dentro daquele prédio.</string>
+    <string name="town_deco_INN_sign_name">Placa de Pousada</string>
+    <string name="town_deco_INN_sign_desc">Parece que há uma pousada dentro daquele prédio.</string>
+
+
     <string name="town_deco_sofa_name">Sofá confortável</string>
     <string name="town_deco_sofa_desc">Parece que este cinema realmente tenta fornecer os melhores lugares para seus clientes.</string>
 

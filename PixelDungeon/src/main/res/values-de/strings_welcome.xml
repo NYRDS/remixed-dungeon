@@ -386,4 +386,13 @@ Neue Darts und Pfeile\n
 - Die Wahrsagerin besitzt jetzt eine Katze\n
 - Das Gnoll-Tomahawk zerbricht nicht, wenn es auf ein Ziel geworfen wird\n
 </string>
+  <string name="Welcome_Text_28_2">
+remix.28.2\n
+- Gui verbesserungen:\n
+-- Schnellzugriffe werden nur durch die Bildschirmbreite begrenzt\n
+-- Zaubersprüche und Fähigkeiten können in der Schnellzugriffsleiste platziert werden\n
+-- Händigkeitsoptionen\n
+- Bewegungszeitbegrenzung besteht nun auch in den Spielstatistiken\n
+- Echtzeit!(immer noch experimentell) Modus ist nun verfügbar und besteht pro Spiel Sitzung\n
+</string>
 </resources>

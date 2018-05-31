@@ -19,14 +19,15 @@ Diferenças do original: \n
 -Elfos
 </string>
   <string name="Welcome_Text_19">
-remix.17:\n
--Novo tipo de mímico\n
-remix.18:\n
--Elementais\n
-remix.19:\n
--Aranhas\n
--Níveis de aranha\n
--Aranha Rainha\n</string>
+        remix.17:\n
+        -Novo tipo de mímico\n
+        remix.18:\n
+        -Elementais\n
+        remix.19:\n
+        -Aranhas\n
+        -Níveis de aranha\n
+        -Rainha das Aranhas\n
+        </string>
   <string name="Welcome_Text_20">
         remix.20:\n
         - Novos itens raros - kusarigama\n
@@ -71,5 +72,43 @@ remix.21:\n
         - Novo chefe oculto
         </string>
   <string name="Welcome_Text_23">
-Remix Atualização                                                                                                             - Dungeon Agora Tem 32 Leveis Mais Profundos.(Em Vez de 26)                                 - Boss Secreto Movido Para o Level 25                                                                          - Maior Variação de Mini-Bosses Para a Luta Final (Em vez de 2 Punhos, Yog Agora consegue ter um total de 5 mini bosses ao spawnar)                                                     -Novas Configurações Para Monstros do Nivel 27-31</string>
+        remix.23:\n
+        - A Dungeon agora tem 32 níveis de profundidade (antes eram 26)\n
+        - Chefe oculto movido para o nível 25\n
+        - Grande variedade de mini chefes para a luta final (em vez dos 2 punhos, o Yog agora pode escolher entre um total de 5 mini chefes para criar)\n
+        - Novas configurações e monstros nos níveis 27-31
+        </string>
+  <string name="Welcome_Text_23_1">
+        remix.23.1:\n
+        - Nova loja, NPC e missão no nível 27\n
+        - Novo monstro no Ninho dos Demônios (27-31)\n
+        - Todos os monstros, chefes nos níveis 27-32 e suas habilidades ficaram mais fortes\n
+		- Emblemas de cada chefe atualizado\n
+		- Algumas pequenas atualizações visuais\n
+		- Várias correções de bugs\n
+        </string>
+  <string name="Welcome_Text_23_2">
+        remix.23.2:\n
+        - Armas e armaduras do nível 6 adicionadas\n
+        - Bestas adicionadas\n
+        - Armadura do Caos adicionada\n
+        </string>
+  <string name="Welcome_Text_24">
+        remix.24:\n
+        - Os chapéus chegaram!(Itens de embelezamento)\n
+        - Várias correções de bugs\n
+        - Traduções atualizadas\n
+        </string>
+  <string name="Welcome_Text_24_1">
+        remix.24.1:\n
+        --Jogo--\n
+        - Novo monstro: Estátua armada\n
+        - Novas esquisitices: Aranha Guardiã (tipo raro de Soldado Aranha) e Aranha Âmbar (tipo raro de Psico-aranha)\n
+        - Agora é possível apagar partidas salvas\n
+        - Atualização visual do Ninho das Aranhas\n
+        --Itens de Embelezamento--\n
+        - Ao comprar um novo item, ele se equipada automaticamente\n
+        - Novo item \"Conjunto de Roupa de Pirata\"\n
+        - Atualização visual das Orelhas de Gato e Orelhas de Coelho\n
+        </string>
 </resources>

@@ -2,11 +2,15 @@
 <resources>
     <string name="WndSettings_Quickslots">Schnellzugriffsleiste</string>
 
+    <string name="Abilities_Default">Meisterschaft</string>
     <string name="Abilities_Common">Normale Zaubersprüche</string>
     <string name="Abilities_Elemental">Elementare Zaubersprüche</string>
     <string name="Abilities_Necromancy">Nekromantie</string>
     <string name="WndSettings_UiSettings">Ui Einstellungen</string>
     <string name="WndSettings_ActionButtonSize">Aktionsknopfgröße</string>
+    <string name="WndSettings_Handedness">Händigkeit</string>
     <string name="WndSettings_InGameUiSettings">Ui Einstellungen</string>
     <string name="WndSettings_GameplaySettings">Spiel</string>
-    </resources>
+    <string name="WndPremiumSettings_marble">Marmor</string>
+
+</resources>

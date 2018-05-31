@@ -57,6 +57,32 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Teks ini tidak dapat ditafsirkan...</string>
   <string name="Dungeon_DeadEnd">Apa awak buat di sini?!</string>
+  <string-array name="Dungeon_Tips">
+    <item>Jangan bangga sangat dengan kekuatan anda, guna senjata dan perisai yang mampu digunakan.</item>
+    <item>Bukan semua pintu dalam kurungan bawah tanah terdedah kali pertama. jika anda buntu, cuba cari pintu tersembunyi.</item>
+    <item>Perlu ingat, meningkatkan kekuatan anda bukan salah satunya cara supaya dapat memakai peralatan yang lebih baik, anda juga boleh rendahkan keperluan kekuatan alatan tersebut dengan Skrol Penataran.</item>
+    <item>Anda boleh belanja emas yang diperoleh dalam aras lebih bawah kurungan bawah tanah. Kedai pertama berada dalam aras ke-6.</item>
+    <item>Hati-hati dengan Goo!</item>
+    <item>Pixel-Mart - pusat sehenti buat pengembara bertuah seperti anda!</item>
+    <item>Kenal pasti posyen dan skrol anda secepat mungkin. Kerana ia berguna pada masa-masa terdesak nanti.</item>
+    <item>Rasa lapar tidak menyakitkan, tetapi bila kebuluran ia memang menyakitkan.</item>
+    <item>Serangan mengejut lebih berpeluang berjaya. Sebagai contoh, anda boleh serang hendap musuh disebalik pintu tertutup jika anda tahu dia sedang menghampiri.</item>
+    <item>Jangan biarkan si Tengu keluar!</item>
+    <item>Pixel-Mart. Belanja duit anda. Hidup lebih lama.</item>
+    <item>Bila anda diserang oleh beberapa ekor raksaksa serentak, cuba mengundur disebalik pintu.</item>
+    <item>Jika anda terbakar dan pada masa yang sama terapung, anda sukar padamkan api walaupun berhampiran sumber air.</item>
+    <item>Adalah tidak munasabah memproses lebih dari satu Ankh pada masa yang sama, kerana anda akan kehilangannya ketika dihidupkan semula.</item>
+    <item>BAHAYA! Mesin berat boleh menyebabkan kecederaan, kehilangan anggota badan atau maut!</item>
+    <item>Pixel-Mart. Penyelamat anda ketika berada di kurungan bawah tanah.</item>
+    <item>Bila anda tatar senjata yang ada kuasa sihir, mungkin boleh berlaku kehilangan kuasa sihir tersebut.</item>
+    <item>Perigi Transmutasi boleh mengeluarkan item yang sukar diperoleh dengan cara biasa.</item>
+    <item>Memasukkan kuasa sihir ke dalam senjata hanyalah menerusi Skrol Tatar Senjata.</item>
+    <item>Tiada senjata boleh dibawah semasa menemui Tuanku!</item>
+    <item>Pixel-Mart. Harga istimewa untuk pemburu setan!</item>
+    <item>Teks ditulis dalam bahasa setan.</item>
+    <item>Teks ditulis dalam bahasa setan.</item>
+    <item>Teks ditulis dalam bahasa setan.</item>
+  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Menjaga pemakanan</item>

@@ -405,4 +405,13 @@
     - Tukang ramal kini membela seekor Kucing\n
     - Senjata tomahawk Gnoll tidak akan rosak jika dibaling ke arah sasaran\n
     </string>
+  <string name="Welcome_Text_28_2">
+    remix.28.2\n
+    - Pemfaktoran semula Gui:\n
+    -- Kuantiti slot pantas dihadkan mengikut lebar skrin\n
+    -- Mantera dan keupayaan boleh diletak ke dalam slot pantas\n
+    -- Pilihan cangkat tangan\n
+    - Had masa gerakan kini ditetapkan dalam keadaan permainan\n
+    - Mod masa nyata!(masih dalam eksperimental) kini tersedia dan ditetapkan per sesi permainan\n
+    </string>
 </resources>
