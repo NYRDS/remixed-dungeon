@@ -1791,10 +1791,6 @@ public class Hero extends Char implements PetOwner {
 			return true;
 		}
 
-		if (bowEquiped()) {
-			return true;
-		}
-
 		if (belongings.weapon instanceof SpecialWeapon) {
 			SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
 
