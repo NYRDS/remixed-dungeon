@@ -52,7 +52,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private Item quickslotItem;
 
-    private Item     itemInSlot;
     private ItemSlot slot;
 
     private Image crossB;
@@ -100,19 +99,18 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                 if (targeting) {
                     GameScene.handleCell(lastTarget.getPos());
                 } else {
-                    Item item = quickslotItem;
-                    if (item == lastItem) {
+                    if (quickslotItem == lastItem) {
                         useTargeting();
                     } else {
-                        lastItem = item;
+                        lastItem = quickslotItem;
                     }
-                    if (item != null) {
+                    if (quickslotItem != null) {
 
                         if (!Dungeon.hero.isAlive()) {
                             return;
                         }
 
-                        item.execute(Dungeon.hero);
+                        quickslotItem.execute(Dungeon.hero);
                     }
                 }
             }
@@ -182,7 +180,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private void item(Item item) {
         slot.item(item);
-        itemInSlot = item;
         enableSlot();
     }
 
@@ -197,13 +194,22 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private void enableSlot() {
 
-        if (itemInSlot instanceof Spell.SpellItem) {
+        if(quickslotItem == null) {
+            slot.enable(false);
+            return;
+        }
+
+        if (quickslotItem instanceof Spell.SpellItem) {
             slot.enable(true);
             return;
         }
 
-        slot.enable(itemInSlot != null && itemInSlot.quantity() > 0
-                && (Dungeon.hero.belongings.backpack.contains(itemInSlot) || itemInSlot.isEquipped(Dungeon.hero)));
+        if(quickslotItem.quantity() < 1) {
+            slot.enable(false);
+            return;
+        }
+
+        slot.enable((Dungeon.hero.belongings.getItem(quickslotItem.getClassName()) != null || quickslotItem.isEquipped(Dungeon.hero)));
     }
 
     private void useTargeting() {
@@ -237,6 +243,16 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             @Override
             public void run() {
                 for (QuickSlot slot : slots) {
+
+                    if(slot.quickslotItem != null) {
+                        Item item = Dungeon.hero.belongings.getItem(slot.quickslotItem.getClassName());
+                        if(item != null) {
+                            slot.quickslotItem = item.quickSlotContent();
+                        } else {
+                            slot.quickslotItem.quantity(0);
+                        }
+                    }
+
                     slot.item(slot.quickslotItem);
                 }
             }
