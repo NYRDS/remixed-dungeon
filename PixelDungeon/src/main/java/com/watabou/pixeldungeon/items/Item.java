@@ -383,16 +383,6 @@ public class Item implements Bundlable, Presser {
 		return 0;
 	}
 
-	public static Item virtual(String cl) {
-		try {
-			Item item = ItemFactory.itemByName(cl);
-			item.quantity(0);
-			return item;
-		} catch (Exception e) {
-			throw new TrackedRuntimeException("Item.virtual");
-		}
-	}
-
 	public Item random() {
 		return this;
 	}
@@ -632,5 +622,17 @@ public class Item implements Bundlable, Presser {
 
 	public String getClassName() {
 		return getClass().getSimpleName();
+	}
+
+	public Item quickSlotContent() {
+		if(!stackable) {
+			return this;
+		}
+
+		if(quantity() > 0) {
+			return this;
+		}
+
+		return ItemFactory.virtual(getClassName());
 	}
 }

@@ -188,6 +188,11 @@ public class Spell {
                 public Spell spell() {
                     return Spell.this;
                 }
+
+                @Override
+                public String getClassName() {
+                    return Spell.this.getSpellClass();
+                }
             };
         }
         return spellItem;

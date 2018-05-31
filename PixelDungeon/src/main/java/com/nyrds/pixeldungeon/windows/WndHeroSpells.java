@@ -120,7 +120,7 @@ public class WndHeroSpells extends Window {
         @Override
         protected boolean onLongClick() {
             hide();
-            QuickSlot.selectSlotFor(spell);
+            QuickSlot.selectSlotFor(spell.itemForSlot());
             return true;
         }
 
