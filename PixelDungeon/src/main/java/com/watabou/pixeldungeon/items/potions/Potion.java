@@ -213,6 +213,7 @@ public class Potion extends Item implements UnknownItem {
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
 		hero.getSprite().operate( hero.getPos() );
+		shatterd = false;
 	}
 	
 	private void moisten(Hero hero) {
@@ -228,17 +229,11 @@ public class Potion extends Item implements UnknownItem {
 	@Override
 	protected void onThrow( int cell ) {
 		if (Dungeon.hero.getPos() == cell) {
-			
 			apply( Dungeon.hero );
-			
 		} else if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
-			
 			super.onThrow( cell );
-			
 		} else  {
-			
 			shatter( cell );
-			
 		}
 	}
 	
