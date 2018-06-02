@@ -8,6 +8,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -59,19 +60,34 @@ public class Spell {
         return true;
     }
 
+    public boolean canCast(@NonNull final Char chr, boolean reallyCast) {
+        if (chr instanceof Hero) {
+            final Hero hero = (Hero) chr;
+
+            if (!hero.enoughSP(spellCost())) {
+                if(reallyCast) {
+                    GLog.w(Utils.format(TXT_NOT_ENOUGH_SOULS, name));
+                }
+                return false;
+            }
+
+            return true;
+        }
+        return true;
+    }
+
     public boolean cast(@NonNull final Char chr) {
 
         if (!chr.isAlive()) {
             return false;
         }
 
+        if(!canCast(chr, true)) {
+            return false;
+        }
+
         if (chr instanceof Hero) {
             final Hero hero = (Hero) chr;
-
-            if (!hero.enoughSP(spellCost())) {
-                GLog.w(notEnoughSouls(name));
-                return false;
-            }
 
             if (targetingType.equals(SpellHelper.TARGET_CELL)) {
                 GameScene.selectCell(new CellSelector.Listener() {
@@ -136,10 +152,6 @@ public class Spell {
         return spellCost;
     }
 
-    public static String notEnoughSouls(String spell) {
-        return Utils.format(TXT_NOT_ENOUGH_SOULS, spell);
-    }
-
     static public int textureResolution() {
         return textureResolution;
     }
@@ -192,6 +204,17 @@ public class Spell {
                 @Override
                 public String getClassName() {
                     return Spell.this.getSpellClass();
+                }
+
+                @Override
+                public Item quickSlotContent() {
+                    quantity(Dungeon.hero.getSoulPoints()/spellCost());
+                    return this;
+                }
+
+                @Override
+                public boolean usableByHero() {
+                    return quantity() > 0 && canCast(Dungeon.hero, false);
                 }
             };
         }

@@ -194,22 +194,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private void enableSlot() {
 
-        if(quickslotItem == null) {
-            slot.enable(false);
-            return;
-        }
-
-        if (quickslotItem instanceof Spell.SpellItem) {
-            slot.enable(true);
-            return;
-        }
-
-        if(quickslotItem.quantity() < 1) {
-            slot.enable(false);
-            return;
-        }
-
-        slot.enable((Dungeon.hero.belongings.getItem(quickslotItem.getClassName()) != null || quickslotItem.isEquipped(Dungeon.hero)));
+        slot.enable(quickslotItem != null && quickslotItem.usableByHero());
     }
 
     private void useTargeting() {
@@ -238,22 +223,24 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         targeting = lastTarget != null && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
     }
 
+    private void refreshSelf() {
+        if(quickslotItem != null) {
+            Item item = Dungeon.hero.belongings.getItem(quickslotItem.getClassName());
+            if(item != null) {
+                quickslotItem = item.quickSlotContent();
+            } else {
+                quickslotItem = quickslotItem.quickSlotContent();                        }
+        }
+
+        item(quickslotItem);
+    }
+
     public static void refresh() {
         Game.pushUiTask(new Runnable() {
             @Override
             public void run() {
                 for (QuickSlot slot : slots) {
-
-                    if(slot.quickslotItem != null) {
-                        Item item = Dungeon.hero.belongings.getItem(slot.quickslotItem.getClassName());
-                        if(item != null) {
-                            slot.quickslotItem = item.quickSlotContent();
-                        } else {
-                            slot.quickslotItem = ItemFactory.virtual(slot.quickslotItem.getClassName());
-                        }
-                    }
-
-                    slot.item(slot.quickslotItem);
+                    slot.refreshSelf();
                 }
             }
         });
@@ -316,6 +303,8 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         for (int i = 0; i < slots.size(); i++) {
             if(qsStorage.containsKey(i)) {
                 classes.add(qsStorage.get(i).getClassName());
+            } else {
+                classes.add("");
             }
         }
 
@@ -369,7 +358,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     static public void selectSlotFor(Item item) {
         objectForSlot = item;
-        prompt = new Toast("Select quick slot for it");
+        prompt = new Toast(Game.getVar(R.string.QuickSlot_SelectSlot));
         prompt.camera = uiCamera;
         prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
 

@@ -1923,6 +1923,7 @@ public class Hero extends Char implements PetOwner {
 
 	public void setSoulPoints(int points) {
 		sp = Scrambler.scramble(Math.max(0,Math.min(points,getSoulPointsMax())));
+		QuickSlot.refresh();
 	}
 
 	public void setMaxSoulPoints(int points) {

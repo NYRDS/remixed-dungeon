@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -315,6 +316,7 @@ public class InterlevelScene extends PixelScene {
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
 			Dungeon.switchLevel(Dungeon.loadLevel(Dungeon.currentPosition()), -1, Dungeon.hero.levelId);
+
 		} else {
 			Level level = Dungeon.loadLevel(Dungeon.currentPosition());
 			if (level == null) { // save file fucked up :(
@@ -322,6 +324,10 @@ public class InterlevelScene extends PixelScene {
 				return;
 			}
 			Dungeon.switchLevel(level, Dungeon.hero.getPos(), Dungeon.hero.levelId);
+
+			if(level instanceof PredesignedLevel) { // PredesignedLevel do not save mobs
+				Dungeon.hero.spawnPets(Dungeon.level);
+			}
 		}
 	}
 

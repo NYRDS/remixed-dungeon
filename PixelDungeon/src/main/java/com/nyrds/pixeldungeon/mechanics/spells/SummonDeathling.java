@@ -15,7 +15,6 @@ public class SummonDeathling extends SummoningSpell {
 		castTime = 3f;
 	}
 
-	@Override
 	public int getSummonLimit(){
 		return 1 + getLevelModifier(Dungeon.hero);
 	}

@@ -12,5 +12,6 @@
     <string name="WndSettings_InGameUiSettings">Ui settings</string>
     <string name="WndSettings_GameplaySettings">Gameplay</string>
     <string name="WndPremiumSettings_marble">marble</string>
+    <string name="QuickSlot_SelectSlot">Select quick slot for it</string>>
 
 </resources>

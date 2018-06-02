@@ -32,19 +32,25 @@ public class SummoningSpell extends Spell {
 	protected String mobKind = "Rat";
 
     @Override
-    public boolean cast(@NonNull Char chr){
+    public boolean canCast(@NonNull Char chr, boolean reallyCast) {
+        if (!super.canCast(chr, reallyCast)) {
+            return false;
+        }
+
         if(chr instanceof Hero) {
             Hero hero = (Hero)chr;
             if (isSummoningLimitReached(hero)) {
-                GLog.w(getLimitWarning(getSummonLimit()));
+                if(reallyCast) {
+                    GLog.w(getLimitWarning(summonLimit));
+                }
                 return false;
             }
-
-            hero.spend(castTime);
-            hero.busy();
-            hero.getSprite().zap(hero.getPos());
         }
+        return true;
+    }
 
+    @Override
+    public boolean cast(@NonNull Char chr){
         if(!super.cast(chr)) {
 	        return false;
         }
@@ -56,7 +62,7 @@ public class SummoningSpell extends Spell {
         Buff.detach(chr, Sungrass.Health.class);
 
         if (level.cellValid(spawnPos)) {
-	        Mob pet = getSummonMob();
+            Mob pet = MobFactory.mobByName(mobKind);
 	        if(chr instanceof Hero) {
 		        Hero hero = (Hero)chr;
 		        pet = Mob.makePet(pet, hero);
@@ -75,14 +81,11 @@ public class SummoningSpell extends Spell {
     }
 
 
-    public boolean isSummoningLimitReached(Hero hero){
-        if (getSummonLimit() <= getNumberOfSummons(hero)){
-            return true;
-        }
-        return false;
+    private boolean isSummoningLimitReached(Hero hero){
+        return summonLimit <= getNumberOfSummons(hero);
     }
 
-    public int getNumberOfSummons(Hero hero){
+    private int getNumberOfSummons(Hero hero){
         Collection<Mob> pets = hero.getPets();
 
         int n = 0;
@@ -95,15 +98,7 @@ public class SummoningSpell extends Spell {
         return n;
     }
 
-    public int getSummonLimit(){
-        return summonLimit;
-    }
-
-    public Mob getSummonMob(){
-        return MobFactory.mobByName(mobKind);
-    }
-
-    public String getLimitWarning(int limit){
+    private String getLimitWarning(int limit){
         return Utils.format(TXT_MAXIMUM_PETS, this.name(), limit);
     }
 }

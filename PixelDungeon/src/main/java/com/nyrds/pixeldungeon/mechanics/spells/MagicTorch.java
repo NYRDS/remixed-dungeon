@@ -26,14 +26,12 @@ public class MagicTorch extends Spell{
 	@Override
 	public boolean cast(@NonNull Char chr){
 		if (super.cast(chr)){
-			if (chr.isAlive()) {
-				castCallback(chr);
-				Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, duration);
+			castCallback(chr);
+			Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, duration);
 
-				Emitter emitter = chr.getSprite().centerEmitter();
-				emitter.start(FlameParticle.FACTORY, 0.2f, 3);
-				return true;
-			}
+			Emitter emitter = chr.getSprite().centerEmitter();
+			emitter.start(FlameParticle.FACTORY, 0.2f, 3);
+			return true;
 		}
 		return false;
 	}

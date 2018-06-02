@@ -624,6 +624,7 @@ public class Item implements Bundlable, Presser {
 		return ItemFactory.itemNameByClass(getClass());
 	}
 
+
 	public Item quickSlotContent() {
 		if(!stackable) {
 			return this;
@@ -634,5 +635,9 @@ public class Item implements Bundlable, Presser {
 		}
 
 		return ItemFactory.virtual(getClassName());
+	}
+
+	public boolean usableByHero() {
+		return quantity() >= 1 && (Dungeon.hero.belongings.getItem(getClassName()) != null || isEquipped(Dungeon.hero));
 	}
 }
