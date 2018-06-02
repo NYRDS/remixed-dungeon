@@ -621,7 +621,7 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public String getClassName() {
-		return getClass().getSimpleName();
+		return ItemFactory.itemNameByClass(getClass());
 	}
 
 	public Item quickSlotContent() {

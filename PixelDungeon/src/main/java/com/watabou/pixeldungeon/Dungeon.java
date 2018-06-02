@@ -733,7 +733,7 @@ public class Dungeon {
 
 	public static void challengeAllMobs(Char ch, String sound) {
 
-		if (Dungeon.level == null) {
+		if (!GameScene.isSceneReady()) {
 			return;
 		}
 

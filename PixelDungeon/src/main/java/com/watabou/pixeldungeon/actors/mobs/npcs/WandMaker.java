@@ -341,6 +341,7 @@ public class WandMaker extends NPC {
 			@Override
 			public boolean collect( Bag container ) {
 				if (super.collect( container )) {
+
 					Dungeon.challengeAllMobs(Dungeon.hero,Assets.SND_CHALLENGE);
 					
 					GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));

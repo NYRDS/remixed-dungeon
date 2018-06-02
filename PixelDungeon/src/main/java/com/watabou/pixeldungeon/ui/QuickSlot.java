@@ -249,7 +249,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                         if(item != null) {
                             slot.quickslotItem = item.quickSlotContent();
                         } else {
-                            slot.quickslotItem.quantity(0);
+                            slot.quickslotItem = ItemFactory.virtual(slot.quickslotItem.getClassName());
                         }
                     }
 
