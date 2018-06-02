@@ -111,4 +111,54 @@ remix.21:\n
         - Novo item \"Conjunto de Roupa de Pirata\"\n
         - Atualização visual das Orelhas de Gato e Orelhas de Coelho\n
         </string>
+  <string name="Welcome_Text_24_2">
+        remix.24.2:\n
+        - Novo monstro: Estátua de Ouro (estátua rara)\n
+        - Novo Item: Espada Dourada (pode ser encontrada a partir de monstros, embora seja raro, ou você pode obtê-la de uma estátua de ouro em 100% das vezes)\n
+        - Novo NPC: Necromante (Ele tem uma notícia excitante para você. Encontre-o no nível 7)\n
+        - A dificuldade do primeiro chefe foi reduzida\n
+        - Tengu agora deixa cair um Livro de Avanço ao ser derrotado. As subclasses não podem usa-lo para alterar sua especialidade\n
+        - O Mestre das Sombas agora tem uma sala mais elaborada (agora, você não pode ir para o próximo nível sem derrota-lo)\n
+        - O Encanto da Aranha tem um novo gráfico e é obtido derrotando a Aranha Rainha (Antes era possível obtê-lo a partir de Goo)\n
+        </string>
+  <string name="Welcome_Text_25">
+        remix.25:\n
+        - Novo tipo de calabouço: Necrópole, para entrar na necrópole você precisa encontrar Necromante no nível 7, para que ele possa lhe dar a chave mestra\n
+        - Novos itens: Armadura de Aranha e Crânio Negro\n
+        - A Espada dourada se tornou mais forte e requer mais força\n
+        - A água no ninho das aranhas está sendo exibida corretamente\n
+        - Agora, as pilhas de ossos não possuem artefatos e itens de missão\n
+        - A mecânica dos monstros domados foi alterada. Vários monstros receberam imunidade a controle mental\n
+        - O tempo de queima da poção de Chama Líquida foi encurtado, também queimará menos na água\n
+        - O ícone de controle da mente, que aparece acima dos monstros \"domados\", foi alterado para um formato de coração\n
+        - Atualizado o visual de «nova fonte»\n
+        - Traduções atualizadas \n
+        - Opções removidas: «modo imersivo» e «escala de interface»\n
+        </string>
+  <string name="Welcome_Text_25_1">
+        remix.25.1:\n
+        --Novas Características--\n
+        - Nova Classe de Herói: Necromante\n
+        - Agora apenas necromantes recebe experiência por mates feitas por servos\n
+        - O necromante tem chance chance de conseguir a Espada do Sacrifício\n
+        --Ajustes de Balanceamento--\n
+        - Todos os monstros em Necrópolis tiveram a dificuldade diminuída\n
+        - Agora Yog-Dzewa obtém maior defesa não apenas dos punhos, mas também de outros sub-chefes\n
+        - Na morte de Yog, todos os outros chefes morrem (Antes, isso afetava apenas seus punhos)\n
+        - O coração de Yog teve suas atribuiçoes diminuidas. A quantidade de cura, fornecida a outros monstros, foi reduzida\n
+        - Os Chefes não \"Caçarão\" mais por padrão\n
+        - A chance do Gnoll-Zumbi de \"ressuscitar\" foi reduzida\n
+        - Pseudo-rato teve seus atributos diminuídos \n
+        - O Crânio Negro agora requer 10 almas para ser ativado, ao invés de 15. Mas a morte dos servos do jogador não dão mais almas\ n
+        - O Espírito Traçoeiro não pode mais se tornar servo do jogador\n
+        --Visual--\n
+        - Conjunto de texturas dos esgotos foram atualizadas\n
+        --Correções--\n
+        - Corrigido o erro \"texto não desaparece\"\n
+        - Corrigido o erro que não permitia que o Chefe da Necrópolis causasse dano o jogador corretamente\n
+        - Corrigido problema com geração de nível 5 do calabouço\n
+        --Modificações--\n
+        - Modificações criadas por usuários aogora podem conter itens do codex com texto personalizado\n
+        - Modificações criadas por usuários agora permitem definir um conjunto de blocos personalizados, água e música para um nível específico\n
+        </string>
 </resources>

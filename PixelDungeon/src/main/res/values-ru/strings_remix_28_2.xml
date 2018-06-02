@@ -12,5 +12,6 @@
     <string name="WndSettings_InGameUiSettings">Настройки интерфейса</string>
     <string name="WndSettings_GameplaySettings">Геймплей</string>
     <string name="WndPremiumSettings_marble">мраморный</string>
+    <string name="QuickSlot_SelectSlot">Выберете слот для этого</string>
 
 </resources>
