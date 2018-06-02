@@ -19,16 +19,11 @@ package com.nyrds.pixeldungeon.mechanics.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
 
 public class Pain extends Buff {
 
@@ -78,12 +73,12 @@ public class Pain extends Buff {
 					Splash.at( target.getSprite().center(), -PointF.PI / 8, PointF.PI / 2,
 							target.getSprite().blood(), Math.min( 10 * level / target.ht(), 10 ) );
 				}
-				
-				//if (target == Dungeon.hero && !target.isAlive()) {
-				//	Dungeon.fail( Utils.format( ResultDescriptions.PAIN, Dungeon.depth ) );
-				//	GLog.n(Game.getVar(R.string.Pain_Death));
-				//}
-				
+				/*
+				if (target == Dungeon.hero && !target.isAlive()) {
+					Dungeon.fail( Utils.format( ResultDescriptions.PAIN, Dungeon.depth ) );
+					GLog.n(Game.getVar(R.string.Pain_Death));
+				}
+				*/
 				spend( TICK );
 				duration--;
 			} else {
