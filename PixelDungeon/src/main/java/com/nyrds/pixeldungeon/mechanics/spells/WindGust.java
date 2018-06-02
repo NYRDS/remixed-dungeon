@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 
 public class WindGust extends Spell{
 
-	WindGust() {
+	public WindGust() {
 		targetingType = SpellHelper.TARGET_CELL;
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
@@ -21,7 +21,7 @@ public class WindGust extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr, int cell) {
+	public boolean cast(Char chr, int cell)  {
 		Level level = Dungeon.level;
 
 		if (level.cellValid(cell)) {
@@ -29,7 +29,7 @@ public class WindGust extends Spell{
 			boolean triggered = false;
 
 			Ballistica.cast(chr.getPos(), cell, true, false);
-			for (int i = 1; i < 3; i++) {
+			for (int i = 1; i < chr.magicLvl() + 2; i++) {
 				int c = Ballistica.trace[i];
 
 				if ((ch = Actor.findChar(c)) != null) {
@@ -37,8 +37,8 @@ public class WindGust extends Spell{
 
 					triggered = true;
 
-					ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 );
-					ch.getSprite().burst( 0xFF99FFFF, 3 );
+					ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 + chr.magicLvl() * 2);
+					ch.getSprite().burst( 0xFF99FFFF, 3 + chr.magicLvl());
 					Sample.INSTANCE.play( Assets.SND_MELD );
 
 					if (ch.isMovable() && (level.passable[next] || level.avoid[next])
@@ -47,7 +47,7 @@ public class WindGust extends Spell{
 						ch.getSprite().move(ch.getPos(), next);
 						Dungeon.observe();
 					} else {
-						ch.damage(2, this);
+						ch.damage(chr.magicLvl() * 2 , this);
 					}
 				}
 
