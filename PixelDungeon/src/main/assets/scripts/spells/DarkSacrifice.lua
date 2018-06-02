@@ -17,18 +17,29 @@ return spell.init{
             name          = "Dark Sacrifice",
             info          = "Sacrifice loyal minion to cause explosion, explosion area depend on servant remaining health and your skill level",
             magicAffinity = "Necromancy",
-            targetingType = "cell",
+            targetingType = "cell"
         }
     end,
     castOnCell = function(self, spell, chr, cell)
         local sacrifice = RPD.Actor:findChar(cell)
 
-        if chr:getPets():contains(sacrifice) or chr == sacrifice then
-           sacrifice:yell("My life is yours!")
+        local goodSacrifice = false
+
+        if chr:getPets():contains(sacrifice) then
+            sacrifice:yell("My life is yours!")
+            goodSacrifice = true
+        end
+
+        if chr == sacrifice then
+            sacrifice:yell("For the Scourge!")
+            goodSacrifice = true
+        end
+
+        if goodSacrifice then
            sacrifice:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
            RPD.playSound( "snd_cursed.mp3" )
            RPD.placeBlob(RPD.Blobs.LiquidFlame, sacrifice:getPos(), sacrifice:hp()*chr:magicLvl())
-           sacrifice:die(chr)
+           sacrifice:damage(sacrifice:hp(),chr)
            return true
         end
         RPD.glog("Select your loyal servant to sacrifice")
