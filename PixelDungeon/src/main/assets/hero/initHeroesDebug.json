@@ -6,15 +6,15 @@
     },
     "items": [
       {
-        "kind": "PotionOfFrost",
+        "kind": "ManaPotion",
         "quantity": 100
       },
       {
-        "kind": "PotionOfLiquidFlame",
+        "kind": "Sungrass.Seed",
         "quantity": 100
       },
       {
-        "kind": "PotionOfToxicGas",
+        "kind": "Firebloom.Seed",
         "quantity": 100
       },
       {

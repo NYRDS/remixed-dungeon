@@ -18,7 +18,7 @@ public class MagicTorch extends Spell{
 		targetingType = SpellHelper.TARGET_SELF;
 		magicAffinity = SpellHelper.AFFINITY_COMMON;
 
-		imageIndex = 0;
+		image = 0;
 		duration = 80f;
 		spellCost = 1;
 	}

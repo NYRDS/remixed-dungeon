@@ -17,7 +17,7 @@ public class CausePainSpell extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_NECROMANCY;
 
 		level = 0;
-		imageIndex = 1;
+		image = 1;
 		spellCost = 0;
 	}
 

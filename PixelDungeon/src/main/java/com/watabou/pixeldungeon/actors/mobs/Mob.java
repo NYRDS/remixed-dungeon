@@ -33,7 +33,6 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -711,22 +710,6 @@ public abstract class Mob extends Char {
 
 	public void notice() {
 		getSprite().showAlert();
-	}
-
-	public void yell(String str) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
-	}
-
-	public void say(String str) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
-	}
-
-	public void yell(String str, int index) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
-	}
-
-	public void say(String str,int index) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
 	}
 
 

@@ -16,7 +16,7 @@ public class WindGust extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
 		level = 1;
-		imageIndex = 0;
+		image = 0;
 		spellCost = 1;
 	}
 

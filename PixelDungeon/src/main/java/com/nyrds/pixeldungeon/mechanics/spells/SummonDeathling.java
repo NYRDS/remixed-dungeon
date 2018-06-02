@@ -11,7 +11,7 @@ public class SummonDeathling extends SummoningSpell {
 		magicAffinity = SpellHelper.AFFINITY_NECROMANCY;
 		mobKind = "Deathling";
 
-		imageIndex = 0;
+		image = 0;
 		castTime = 3f;
 	}
 
@@ -21,7 +21,7 @@ public class SummonDeathling extends SummoningSpell {
 
 	@Override
 	public String desc(){
-		return Utils.format(desc, getSummonLimit());
+		return Utils.format(info, getSummonLimit());
 	}
 
 	@Override

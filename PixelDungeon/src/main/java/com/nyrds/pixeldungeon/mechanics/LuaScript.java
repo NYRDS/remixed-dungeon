@@ -1,7 +1,9 @@
 package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.android.lua.LuaEngine;
+import com.nyrds.android.util.TrackedRuntimeException;
 
+import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
@@ -25,25 +27,32 @@ public class LuaScript {
         this.scriptFile = scriptFile;
     }
 
-    public boolean run(String method, Object arg1, Object arg2) {
-        if (!scriptLoaded) {
-            script = LuaEngine.module(scriptFile, scriptFile);
-            scriptLoaded = true;
-        }
-
-        if (script != null) {
-            scriptResult = script.invokemethod(method, new LuaValue[]{
-                    CoerceJavaToLua.coerce(parent),
-                    CoerceJavaToLua.coerce(arg1),
-                    CoerceJavaToLua.coerce(arg2)})
-                    .arg1();
-
-            if (scriptResult.isboolean()) {
-                return scriptResult.checkboolean();
+    private void run(String method, LuaValue[] args) {
+        try {
+            if (!scriptLoaded) {
+                script = LuaEngine.module(scriptFile, scriptFile);
+                scriptLoaded = true;
             }
-            return true;
+
+            if (script != null) {
+                scriptResult = script.invokemethod(method, args).arg1();
+            }
+        } catch (LuaError e) {
+            throw new TrackedRuntimeException(e.getMessage());
         }
-        return false;
+    }
+
+    public void run(String method, Object arg1) {
+        run(method,new LuaValue[]{
+                CoerceJavaToLua.coerce(parent),
+                CoerceJavaToLua.coerce(arg1)});
+    }
+
+    public void run(String method, Object arg1, Object arg2) {
+        run(method,new LuaValue[]{
+                CoerceJavaToLua.coerce(parent),
+                CoerceJavaToLua.coerce(arg1),
+                CoerceJavaToLua.coerce(arg2)});
     }
 
     public LuaValue getResult() {

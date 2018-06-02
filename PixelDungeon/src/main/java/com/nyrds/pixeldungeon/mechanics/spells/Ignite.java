@@ -14,7 +14,7 @@ public class Ignite extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
 		level = 2;
-		imageIndex = 1;
+		image = 1;
 		spellCost = 2;
 	}
 

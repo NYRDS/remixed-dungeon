@@ -18,8 +18,8 @@ public class Fireball  extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_NECROMANCY;
 
 		name          = "Testing fireball";
-		desc          = "Testing fireball";
-		imageIndex = 0;
+		info = "Testing fireball";
+		image = 0;
 
 		spellCost = 0;
 	}

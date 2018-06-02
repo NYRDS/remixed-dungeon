@@ -17,15 +17,12 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.json.JSONObject;
-
 public class Spell {
     private static final String TXT_NOT_ENOUGH_SOULS = Game.getVar(R.string.Spells_NotEnoughSP);
     private static final String TXT_SELECT_CELL      = Game.getVar(R.string.Spell_SelectACell);
 
     protected      int level             = 1;
     protected      int spellCost         = 5;
-    private static final int textureResolution = 16;
 
     protected float castTime = 1f;
     protected float duration = 10f;
@@ -33,28 +30,16 @@ public class Spell {
     protected String targetingType;
     protected String magicAffinity;
 
-    protected String textureFile = "spellsIcons/common.png";
+    protected String imageFile = "spellsIcons/common.png";
 
     protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name));
-    protected String desc = getClassParam("Info", Game.getVar(R.string.Item_Info));
+    protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info));
 
-    protected int imageIndex = 0;
-
+    protected int image = 0;
 
     private SpellItem spellItem;
 
     private Image spellImage;
-
-    void setupFromJson(JSONObject obj) {
-        name = obj.optString("name", name);
-        desc = obj.optString("name", desc);
-        textureFile = obj.optString("textureFile", textureFile);
-        imageIndex = obj.optInt("imageIndex", imageIndex);
-        magicAffinity = obj.optString("magicAffinity", getMagicAffinity());
-        targetingType = obj.optString("targetingType", targetingType);
-        spellCost = obj.optInt("spellCost", spellCost());
-        duration = obj.optInt("duration", (int) duration);
-    }
 
     protected boolean cast(Char chr, int cell) {
         return true;
@@ -113,7 +98,7 @@ public class Spell {
         return true;
     }
 
-    public void castCallback(Char chr) {
+    protected void castCallback(Char chr) {
         if (chr instanceof Hero) {
             ((Hero) chr).spendSoulPoints(spellCost());
         }
@@ -128,7 +113,7 @@ public class Spell {
     }
 
     public String desc() {
-        return desc;
+        return info;
     }
 
     public String getMagicAffinity() {
@@ -136,24 +121,20 @@ public class Spell {
     }
 
     public String texture() {
-        return textureFile;
+        return imageFile;
     }
 
     public Image image() {
         if(spellImage==null) {
             SmartTexture texture = TextureCache.get(texture());
             spellImage = new Image(texture);
-            spellImage.frame(new TextureFilm(texture, textureResolution(), textureResolution()).get(imageIndex));
+            spellImage.frame(new TextureFilm(texture, 16, 16).get(image));
         }
         return spellImage;
     }
 
     public int spellCost() {
         return spellCost;
-    }
-
-    static public int textureResolution() {
-        return textureResolution;
     }
 
     private String getClassParam(String paramName, String defaultValue) {
@@ -179,7 +160,7 @@ public class Spell {
 
                 @Override
                 public int image() {
-                    return imageIndex;
+                    return Spell.this.image;
                 }
 
                 @Override

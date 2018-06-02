@@ -21,12 +21,27 @@ local Buffs  = {
     Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison")
 }
 
+local Blobs = {
+    Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),
+    Fire = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Fire"),
+    Foliage = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Foliage"),
+    ConfusionGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ConfusionGas"),
+    LiquidFlame = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.LiquidFlame"),
+    ParalyticGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ParalyticGas"),
+    Darkness = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Darkness"),
+    Web = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Web"),
+    ToxicGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ToxicGas"),
+    Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
+}
+
 local actions = {
     eat = "Food_ACEat"
 }
 
+local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
+
 local RPD = {
-    GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene"),
+    GameScene = GameScene,
     Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon"),
     Terrain = luajava.bindClass("com.watabou.pixeldungeon.levels.Terrain"),
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
@@ -39,18 +54,7 @@ local RPD = {
 
     Actions = actions,
 
-    Blobs = {
-        Blob = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Blob"),
-        Fire = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Fire"),
-        Foliage = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Foliage"),
-        ConfusionGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ConfusionGas"),
-        LiquidFlame = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.LiquidFlame"),
-        ParalyticGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ParalyticGas"),
-        Darkness = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Darkness"),
-        Web = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Web"),
-        ToxicGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ToxicGas"),
-        Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
-    },
+    Blobs = Blobs,
 
     Sfx = {
         CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
@@ -88,7 +92,7 @@ local RPD = {
     end,
 
     placeBlob = function (blobClass, cell, amount)
-        RPD.GameScene:add( RPD.Blobs.Blob:seed(cell, amount, blobClass ) )
+        GameScene:add( Blobs.Blob:seed(cell, amount, blobClass ) )
     end,
 
     playSound = function(sound)

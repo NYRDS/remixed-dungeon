@@ -17,7 +17,7 @@ public class RootSpell extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
 		level = 2;
-		imageIndex = 2;
+		image = 2;
 		duration = 10f;
 		spellCost = 2;
 	}

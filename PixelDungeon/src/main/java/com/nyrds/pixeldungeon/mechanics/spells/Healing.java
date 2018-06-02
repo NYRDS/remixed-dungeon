@@ -17,7 +17,7 @@ public class Healing extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_COMMON;
 
 		level = 3;
-		imageIndex = 1;
+		image = 1;
 		spellCost = 10;
 	}
 

@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -195,7 +196,23 @@ public abstract class Char extends Actor implements Presser{
 		defenceVerb = getClassParam("Defense", null, false);
 	}
 
-	public boolean attack(@NonNull Char enemy) {
+    public void yell(String str) {
+        GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
+    }
+
+    public void say(String str) {
+        GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
+    }
+
+    public void yell(String str, int index) {
+        GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
+    }
+
+    public void say(String str, int index) {
+        GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
+    }
+
+    public boolean attack(@NonNull Char enemy) {
 
 		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
 

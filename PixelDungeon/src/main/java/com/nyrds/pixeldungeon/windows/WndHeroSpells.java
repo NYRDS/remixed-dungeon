@@ -23,8 +23,6 @@ import java.util.ArrayList;
 
 public class WndHeroSpells extends Window {
 
-    private static final String TXT_LVL = Game.getVar(R.string.WndHero_SkillLevel);
-
     private static final int WINDOW_MARGIN = 10;
 
     private Listener listener;
@@ -38,9 +36,9 @@ public class WndHeroSpells extends Window {
 
         String affinity = hero.heroClass.getMagicAffinity();
 
-        Text title = PixelScene.createText(TXT_LVL + ": " + hero.magicLvl(), GuiProperties.titleFontSize());
+        Text title = PixelScene.createText(Game.getVar(R.string.WndHero_SkillLevel) + ": " + hero.magicLvl(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);
-        title.setPos(width - title.width(),0);
+        title.setPos(width - title.width(), 0);
         add(title);
 
         IconTitle masteryTitle = new IconTitle(new Image(
@@ -57,20 +55,16 @@ public class WndHeroSpells extends Window {
         spellsSet.setAlign(HBox.Align.Width);
 
         ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
-        if (spells != null) {
-            for (String spellName : spells) {
-                if(SpellFactory.hasSpellForName(spellName)) {
-                    Spell spell = SpellFactory.getSpellByName(spellName);
-                    if (spell.level() > hero.magicLvl()) {
-                        continue;
-                    }
-                    spellsSet.add(new SpellButton(spell));
-                }
+        for (String spellName : spells) {
+            Spell spell = SpellFactory.getSpellByName(spellName);
+            if (spell.level() > hero.magicLvl()) {
+                continue;
             }
-
-            spellsSet.setPos(chrome.marginLeft(), Math.max(title.bottom(),masteryTitle.bottom()) + 2);
-            add(spellsSet);
+            spellsSet.add(new SpellButton(spell));
         }
+
+        spellsSet.setPos(chrome.marginLeft(), Math.max(title.bottom(), masteryTitle.bottom()) + 2);
+        add(spellsSet);
 
         resize(WndHelper.getLimitedWidth(120), (int) (spellsSet.bottom() + chrome.marginBottom()));
     }
