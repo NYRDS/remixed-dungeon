@@ -8,7 +8,7 @@
 local RPD = require "scripts/lib/commonClasses"
 
 local spells = {}
-spells["Necromancy"] = {"DarkSacrifice"}
+spells["Necromancy"] = {"DarkSacrifice","RaiseDead"}
 
 local module = {}
 
@@ -26,6 +26,11 @@ function module.haveSpell(self,parent,spell)
         end
     end
     return false
+end
+
+function module.loadSpells()
+    require "scripts/spells/RaiseDead"
+    require "scripts/spells/DarkSacrifice"
 end
 
 return module

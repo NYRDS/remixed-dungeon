@@ -26,6 +26,7 @@ import android.view.View;
 
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -125,6 +126,8 @@ public class PixelDungeon extends Game {
 
 		Music.INSTANCE.enable(music());
 		Sample.INSTANCE.enable(soundFx());
+
+		SpellFactory.touch();
 
 		if (PixelDungeon.version() != Game.versionCode) {
 			if(differentVersions(PixelDungeon.versionString(),Game.version)) {

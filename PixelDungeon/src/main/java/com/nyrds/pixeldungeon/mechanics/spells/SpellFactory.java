@@ -99,4 +99,8 @@ public class SpellFactory {
 		return spellList;
 	}
 
+	static public void touch() {
+		script.run("loadSpells",null);
+	}
+
 }

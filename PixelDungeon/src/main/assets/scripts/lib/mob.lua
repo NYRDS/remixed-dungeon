@@ -5,6 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
+local RPD = require "scripts/lib/commonClasses"
+
 local quest = require"scripts/lib/quest"
 
 local serpent = require "scripts/lib/serpent"
@@ -25,6 +27,12 @@ mob.init = function(desc)
     return ret
 end
 
+local onDieCallbacks = {}
+
+mob.installOnDieCallback = function(callback)
+    onDieCallbacks[callback] = true
+end
+
 mob.storeData = function(chr, data)
     chr:setData(serpent.dump(data))
 end
@@ -41,6 +49,12 @@ end
 
 mob.onDie = function(self,mob,cause)
     quest.mobDied(mob, cause)
+
+    for k, v in pairs(onDieCallbacks) do
+        RPD.glog("onDie")
+        k(mob,cause)
+    end
+
     return not not (self.die and self.die(mob, cause))
 end
 

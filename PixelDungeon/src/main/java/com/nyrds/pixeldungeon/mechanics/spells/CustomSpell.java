@@ -48,7 +48,11 @@ public class CustomSpell extends Spell {
         }
 
         script.run("cast", chr);
-        return script.getResult().checkboolean();
+        boolean ret = script.getResult().checkboolean();
+        if(ret) {
+            castCallback(chr);
+        }
+        return ret;
     }
 
     @Override

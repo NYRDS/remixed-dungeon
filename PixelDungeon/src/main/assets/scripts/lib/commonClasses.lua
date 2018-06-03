@@ -49,6 +49,7 @@ local RPD = {
     ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
+    Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
 
     Buffs = Buffs,
 

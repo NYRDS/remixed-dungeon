@@ -197,6 +197,11 @@ public class Spell {
                 public boolean usableByHero() {
                     return quantity() > 0 && canCast(Dungeon.hero, false);
                 }
+
+//                @Override
+//                public ItemSprite.Glowing glowing() {
+//                    return new ItemSprite.Glowing(0xffffffff);
+//                }
             };
         }
         return spellItem;
