@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.WraithSprite;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Wraith extends Mob implements IDepthAdjustable {
@@ -43,26 +42,14 @@ public class Wraith extends Mob implements IDepthAdjustable {
 		exp = 0;
 		
 		flying = true;
-		
+
+		level = Dungeon.depth;
+
 		IMMUNITIES.add( Death.class );
 		IMMUNITIES.add( Terror.class );
-	}
-	
-	private static final String LEVEL = "level";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( LEVEL, level );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		level = bundle.getInt( LEVEL );
 		adjustStats( level );
 	}
-	
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 1, 3 + level );
@@ -98,7 +85,6 @@ public class Wraith extends Mob implements IDepthAdjustable {
 		if (Dungeon.level.passable[pos] && Actor.findChar( pos ) == null) {
 			
 			Wraith w = new Wraith();
-			w.adjustStats( Dungeon.depth );
 			w.setPos(pos);
 			w.setState(w.HUNTING);
 			Dungeon.level.spawnMob(w, SPAWN_DELAY );

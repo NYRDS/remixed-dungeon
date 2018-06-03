@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.food.RottenPasty;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class MimicPie extends Mob implements IDepthAdjustable {
@@ -25,22 +24,9 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 
 		IMMUNITIES.add( ToxicGas.class );
 		IMMUNITIES.add( Paralysis.class );
+		adjustStats(level);
 	}
-	
-	private static final String LEVEL	= "level";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
-		bundle.put(LEVEL, level);
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		adjustStats(bundle.getInt(LEVEL));
-	}
-	
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( ht() / 10, ht() / 4 );

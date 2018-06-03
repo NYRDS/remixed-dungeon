@@ -46,19 +46,18 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	public Mimic() {
 		spriteClass = MimicSprite.class;
 		IMMUNITIES.add(ScrollOfPsionicBlast.class);
+		adjustStats(Dungeon.depth);
 	}
 
 	@NonNull
 	public ArrayList<Item> items = new ArrayList<>();
 
-	private static final String LEVEL = "level";
 	private static final String ITEMS = "items";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		bundle.put(ITEMS, items);
-		bundle.put(LEVEL, level);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -66,7 +65,6 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 		items.addAll(bundle.getCollection(ITEMS, Item.class));
-		adjustStats(bundle.optInt(LEVEL,Dungeon.depth));
 	}
 
 	@Override
@@ -137,7 +135,6 @@ public class Mimic extends Mob implements IDepthAdjustable {
 
 		Mimic m = new Mimic();
 		m.items.addAll(items);
-		m.adjustStats(Dungeon.depth);
 		m.hp(m.ht());
 		m.setPos(pos);
 		m.setState(m.HUNTING);

@@ -24,7 +24,7 @@ import java.util.Collection;
  */
 public class SummoningSpell extends Spell {
 
-    protected int summonLimit = 1;
+    private int summonLimit = 1;
 
 
     private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.Spells_SummonLimitReached);
@@ -41,7 +41,7 @@ public class SummoningSpell extends Spell {
             Hero hero = (Hero)chr;
             if (isSummoningLimitReached(hero)) {
                 if(reallyCast) {
-                    GLog.w(getLimitWarning(summonLimit));
+                    GLog.w(getLimitWarning(getSummonLimit()));
                 }
                 return false;
             }
@@ -82,7 +82,7 @@ public class SummoningSpell extends Spell {
 
 
     private boolean isSummoningLimitReached(Hero hero){
-        return summonLimit <= getNumberOfSummons(hero);
+        return getSummonLimit() <= getNumberOfSummons(hero);
     }
 
     private int getNumberOfSummons(Hero hero){
@@ -100,5 +100,9 @@ public class SummoningSpell extends Spell {
 
     private String getLimitWarning(int limit){
         return Utils.format(TXT_MAXIMUM_PETS, this.name(), limit);
+    }
+
+    public int getSummonLimit() {
+        return summonLimit;
     }
 }

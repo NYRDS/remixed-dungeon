@@ -358,7 +358,14 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     static public void selectSlotFor(Item item) {
         objectForSlot = item;
-        prompt = new Toast(Game.getVar(R.string.QuickSlot_SelectSlot));
+        prompt = new Toast(Game.getVar(R.string.QuickSlot_SelectSlot)) {
+            @Override
+            protected void onClose() {
+                Game.scene().remove(this);
+                objectForSlot = null;
+
+            }
+        };
         prompt.camera = uiCamera;
         prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
 

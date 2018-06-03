@@ -339,7 +339,11 @@ public class Hero extends Char implements PetOwner {
 		levelId = bundle.optString(LEVEL_ID, "unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
-		pets.addAll(bundle.getCollection(PETS, Mob.class));
+		ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection(PETS, Mob.class));
+
+		for(Mob pet : loadedPets) {
+			Mob.makePet(pet, this);
+		}
 
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
 		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
@@ -1885,8 +1889,8 @@ public class Hero extends Char implements PetOwner {
 			}
 			pet.setPos(cell);
 			pet.setEnemy(Mob.DUMMY);
-
 			pet.setState(pet.WANDERING);
+
 			level.spawnMob(pet);
 			pet.regenSprite();
 		}
