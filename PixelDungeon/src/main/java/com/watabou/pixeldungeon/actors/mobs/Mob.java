@@ -588,11 +588,11 @@ public abstract class Mob extends Char {
 				} else {
 					Statistics.nightHunt = 0;
 				}
-			}
 
-			if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
-				if (hero.lvl() <= maxLvl && exp > 0) {
-					hero.earnExp(exp);
+				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
+					if (hero.lvl() <= maxLvl && exp > 0) {
+						hero.earnExp(exp);
+					}
 				}
 			}
 		}
