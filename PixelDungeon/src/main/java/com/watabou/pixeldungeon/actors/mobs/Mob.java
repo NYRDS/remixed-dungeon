@@ -282,7 +282,11 @@ public abstract class Mob extends Char {
 
 		boolean enemyInFOV = getEnemy().isAlive() && Dungeon.level.cellValid(getEnemy().getPos()) && Dungeon.level.fieldOfView[getEnemy().getPos()]
 				&& getEnemy().invisible <= 0;
-
+/*
+		if(enemyInFOV) {
+			GLog.i("%s, enemy %s in fov %b", toString(), enemy.toString(), enemyInFOV);
+		}
+*/
 		return getState().act(enemyInFOV, justAlerted);
 	}
 
@@ -301,11 +305,13 @@ public abstract class Mob extends Char {
 		}
 
 		for (Mob mob : level.mobs) {
-			if (!mob.friendly(this)) {
-				float candidateDist = level.distanceL2(getPos(), mob.getPos());
-				if (candidateDist < dist) {
-					bestEnemy = mob;
-					dist = candidateDist;
+			if(Dungeon.level.fieldOfView[mob.getPos()]) {
+				if (!mob.friendly(this)) {
+					float candidateDist = level.distanceL2(getPos(), mob.getPos());
+					if (candidateDist < dist) {
+						bestEnemy = mob;
+						dist = candidateDist;
+					}
 				}
 			}
 		}
