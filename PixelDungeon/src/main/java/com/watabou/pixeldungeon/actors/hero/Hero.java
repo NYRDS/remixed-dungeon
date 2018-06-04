@@ -1263,6 +1263,13 @@ public class Hero extends Char implements PetOwner {
 				}
 			}
 
+			Char actor = Actor.findChar(step);
+			if(actor instanceof Mob) {
+				if (actor.friendly(this)) {
+					((Mob) actor).swapPosition(this);
+				}
+			}
+
 			move(step);
 			getSprite().move(oldPos, getPos());
 

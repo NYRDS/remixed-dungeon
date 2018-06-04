@@ -741,4 +741,8 @@ public abstract class Char extends Actor implements Presser{
 			Dungeon.level.press(getPos(),this);
 		}
 	}
+
+	public boolean friendly(Char chr){
+		return !fraction.isEnemy(chr.fraction);
+	}
 }

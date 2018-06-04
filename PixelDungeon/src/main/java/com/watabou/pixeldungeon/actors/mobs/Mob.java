@@ -32,6 +32,7 @@ import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
@@ -401,7 +402,7 @@ public abstract class Mob extends Char {
 		if (hasBuff(Roots.class)) {
 			return false;
 		}
-		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(Dungeon.level), null);
+		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(Dungeon.level));
 
 		if (step != -1) {
 			move(step);
@@ -412,7 +413,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected boolean getFurther(int target) {
-		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(Dungeon.level), null);
+		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(Dungeon.level));
 
 		if (step != -1) {
 			move(step);
@@ -621,7 +622,7 @@ public abstract class Mob extends Char {
 	public Mob split(int cell, int damage) {
 		Mob clone;
 		try {
-			clone = getClass().newInstance();
+			clone = MobFactory.mobByName(getMobClassName());
 		} catch (Exception e) {
 			throw new TrackedRuntimeException("split issue");
 		}
@@ -642,10 +643,6 @@ public abstract class Mob extends Char {
 		}
 		if (hasBuff(Poison.class)) {
 			Buff.affect(clone, Poison.class).set(2);
-		}
-
-		if (isPet()) {
-			Mob.makePet(clone, Dungeon.hero);
 		}
 
 		return clone;
@@ -940,6 +937,7 @@ public abstract class Mob extends Char {
 		return fraction == Fraction.HEROES;
 	}
 
+	@Override
 	public boolean friendly(Char chr) {
 		if(getEnemy() == chr) {return false;}
 
@@ -953,7 +951,11 @@ public abstract class Mob extends Char {
 		return true;
 	}
 
-	protected void swapPosition(final Hero hero) {
+	public void swapPosition(final Char chr) {
+
+		if(!walkingType.canSpawnAt(Dungeon.level,chr.getPos())) {
+			return;
+		}
 
 		if(hasBuff(Roots.class)) {
 			return;
@@ -961,15 +963,14 @@ public abstract class Mob extends Char {
 
 		int curPos = getPos();
 
-		moveSprite(getPos(), hero.getPos());
-		move(hero.getPos());
+		moveSprite(getPos(), chr.getPos());
+		move(chr.getPos());
 
-		hero.getSprite().move(hero.getPos(), curPos);
-		hero.move(curPos);
+		chr.getSprite().move(chr.getPos(), curPos);
+		chr.move(curPos);
 
-		hero.spend(1 / hero.speed());
-		hero.busy();
-
+		chr.spend(1 / chr.speed());
+		//chr.busy()
 		spend(1);
 		setState(WANDERING);
 	}

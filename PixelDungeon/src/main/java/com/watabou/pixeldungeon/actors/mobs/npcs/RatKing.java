@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -73,7 +74,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	protected Char chooseEnemy() {
-		if(friendly(null)) {
+		if(friendly(Dungeon.hero)) {
 			return DUMMY;
 		} else {
 			return super.chooseEnemy();
@@ -82,7 +83,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void damage( int dmg, Object src ) {
-		if(friendly(null)){
+		if(friendly(Dungeon.hero)){
 			anger=2;
 		} else {
 			super.damage(dmg, src);
@@ -91,7 +92,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void add( Buff buff ) {
-		if (!friendly(null)) {
+		if (!friendly(Dungeon.hero)) {
 			super.add(buff);
 		}
 	}
@@ -105,7 +106,7 @@ public class RatKing extends NPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		
-		if (!friendly(null)) {
+		if (!friendly(hero)) {
 			return false;
 		}
 		
@@ -115,7 +116,7 @@ public class RatKing extends NPC {
 			setState(WANDERING);
 		} else {
 			anger++;
-			if(friendly(null)) {
+			if(friendly(hero)) {
 				say(Game.getVar(R.string.RatKing_Info2));
 			} else {
 				setFraction(Fraction.DUNGEON);
