@@ -750,6 +750,10 @@ public abstract class Mob extends Char {
 		runMobScript("onSpawn",level);
 	}
 
+	public void loot(Item loot) {
+		this.loot = loot;
+	}
+
 	public interface AiState {
 		boolean act(boolean enemyInFOV, boolean justAlerted);
 

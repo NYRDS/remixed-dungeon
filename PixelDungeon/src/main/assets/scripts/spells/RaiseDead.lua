@@ -40,6 +40,7 @@ return spell.init{
             local mobPos = level:getEmptyCellNextTo(chr:getPos())
             if level:cellValid(mobPos) then
                 mob:setPos(mobPos)
+                mob:loot(RPD.ItemFactory:itemByName("Gold"))
                 RPD.Mob:makePet(mob, chr)
                 level:spawnMob(mob)
                 chr:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
