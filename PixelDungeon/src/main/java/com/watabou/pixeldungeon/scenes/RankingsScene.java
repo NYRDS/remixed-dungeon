@@ -47,7 +47,7 @@ public class RankingsScene extends PixelScene {
     private static final int DEFAULT_COLOR = 0xCCCCCC;
     private static final int HAPPY_COLOR   = 0x1CCC1C;
 
-    private static final int recodrsPerPage = 5;
+    private static final int recordsPerPage = 5;
 
     private static final String TXT_TITLE    = Game.getVar(R.string.RankingsScene_Title);
     private static final String TXT_TOTAL    = Game.getVar(R.string.RankingsScene_Total);
@@ -102,14 +102,14 @@ public class RankingsScene extends PixelScene {
                 @Override
                 protected void onClick() {
                     super.onClick();
-                    startFrom += recodrsPerPage;
+                    startFrom += recordsPerPage;
 
-                    if (startFrom > Rankings.TABLE_SIZE - recodrsPerPage) {
-                        startFrom = Rankings.TABLE_SIZE - recodrsPerPage;
+                    if (startFrom > Rankings.TABLE_SIZE - recordsPerPage) {
+                        startFrom = Rankings.TABLE_SIZE - recordsPerPage;
                     }
 
                     if (startFrom > Rankings.INSTANCE.records.size()) {
-                        startFrom -= recodrsPerPage;
+                        startFrom -= recordsPerPage;
                     }
 
                     switch (PixelDungeon.donated()) {
@@ -142,7 +142,7 @@ public class RankingsScene extends PixelScene {
                 @Override
                 protected void onClick() {
                     super.onClick();
-                    startFrom -= recodrsPerPage;
+                    startFrom -= recordsPerPage;
                     if (startFrom < 0) {
                         startFrom = 0;
                     }
@@ -170,7 +170,7 @@ public class RankingsScene extends PixelScene {
             Text total = PixelScene.createText("/" + Rankings.INSTANCE.totalNumber, GuiProperties.titleFontSize());
             total.hardlight(DEFAULT_COLOR);
             total.x = align((w - total.width()) / 2);
-            total.y = align(top + recodrsPerPage * rowHeight + GAP);
+            total.y = align(top + recordsPerPage * rowHeight + GAP);
             add(total);
 
             float tw = label.width() + won.width() + happy.width() + total.width();
@@ -178,7 +178,7 @@ public class RankingsScene extends PixelScene {
             happy.x = label.x + label.width();
             won.x = happy.x + happy.width();
             total.x = won.x + won.width();
-            label.y = happy.y = won.y = total.y = align(top + recodrsPerPage * rowHeight + GAP);
+            label.y = happy.y = won.y = total.y = align(top + recordsPerPage * rowHeight + GAP);
 
         } else {
 
@@ -213,7 +213,7 @@ public class RankingsScene extends PixelScene {
 
         displayedRecords.clear();
 
-        for (int i = startFrom; i < startFrom + recodrsPerPage; ++i) {
+        for (int i = startFrom; i < startFrom + recordsPerPage; ++i) {
             if (i > Rankings.INSTANCE.records.size() - 1) {
                 break;
             }

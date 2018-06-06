@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
@@ -257,16 +258,10 @@ public class WndRanking extends WndTabbed {
 				addItem( stuff.ring2 );
 			}
 			
-			for(int i = 0;i<3;++i) {
-				Object qsItem = QuickSlot.getEarlyLoadItem(i);
-				if(qsItem instanceof Item && Dungeon.hero.belongings.backpack.contains((Item)qsItem)){
-					addItem((Item)qsItem);
-				} else if( qsItem instanceof Class){
-					@SuppressWarnings("unchecked")
-					Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)qsItem );
-					if (item != null) {
-						addItem( item );
-					}					
+			for(int i = 0;i<25;++i) {
+				Item qsItem = QuickSlot.getEarlyLoadItem(i);
+				if(qsItem != null && (Dungeon.hero.belongings.backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
+					addItem(qsItem);
 				}
 			}
 		}

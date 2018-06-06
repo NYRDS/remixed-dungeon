@@ -47,7 +47,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     private static final String TXT_SELECT_ITEM = Game.getVar(R.string.QuickSlot_SelectedItem);
     private static final String QUICKSLOT       = "quickslot";
 
-    private static ArrayList<QuickSlot>     slots     = new ArrayList<>();
+    private static ArrayList<QuickSlot>     slots   = new ArrayList<>();
     private static HashMap<Integer, Item> qsStorage = new HashMap<>();
 
     private Item quickslotItem;
@@ -265,16 +265,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         }
     }
 
-    public static Object getEarlyLoadItem(int n) {
+    public static Item getEarlyLoadItem(int n) {
         if (qsStorage.containsKey(n)) {
             return qsStorage.get(n);
-        }
-        return null;
-    }
-
-    public static Object getItem(int n) {
-        if (n < slots.size()) {
-            return slots.get(n).quickslotItem;
         }
         return null;
     }
