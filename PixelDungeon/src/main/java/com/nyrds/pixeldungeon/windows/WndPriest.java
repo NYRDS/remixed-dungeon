@@ -54,7 +54,7 @@ public class WndPriest extends Window {
 		titlebar.setRect( 0, y, WIDTH, 0 );
 		add( titlebar );
 
-		y = titlebar.bottom() + GAP;
+		y = titlebar.bottom();
 
 		int instruction = R.string.WndPriest_Instruction_m;
 		if(hero.getGender() == Utils.FEMININE){
@@ -66,7 +66,7 @@ public class WndPriest extends Window {
 		message.y = y;
 		add( message );
 
-		y = message.bottom() + GAP;
+		y = message.bottom();
 
 		RedButton btnHealHero = new RedButton(  Utils.format(R.string.WndPriest_Heal, GOLD_COST) ) {
 			@Override
