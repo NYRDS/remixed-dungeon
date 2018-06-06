@@ -27,6 +27,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -239,11 +240,17 @@ public class WndRanking extends WndTabbed {
 	private class ItemsTab extends Group {
 		
 		private float posY;
-		private float posX;
-		
+
+		ScrollPane list;
+
 		public ItemsTab() {
 			super();
-			
+
+			camera = WndRanking.this.camera;
+
+			list = new ScrollPane(new Component());
+			add(list);
+
 			Belongings stuff = Dungeon.hero.belongings;
 			if (stuff.weapon != null) {
 				addItem( stuff.weapon );
@@ -264,12 +271,15 @@ public class WndRanking extends WndTabbed {
 					addItem(qsItem);
 				}
 			}
+			list.content().setSize(width, posY);
+			list.setRect(0,0,width, height);
+			list.scrollTo(0,0);
 		}
 		
 		private void addItem( Item item ) {
 			ItemButton slot = new ItemButton( item );
-			slot.setRect( posX, posY, width, ItemButton.HEIGHT );
-			add( slot );
+			slot.setRect( 0, posY, width, ItemButton.HEIGHT );
+			list.content().add( slot );
 			
 			posY += slot.height() + 1;
 		}

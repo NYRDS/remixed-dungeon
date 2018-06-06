@@ -98,14 +98,10 @@ public class ScrollPane extends Component {
 		@Override
 		protected void onClick( Touch touch ) {
 			if (dragging) {
-				
 				dragging = false;
-				
 			} else {
-				
 				PointF p = content.camera.screenToCamera( (int)touch.current.x, (int)touch.current.y );
 				ScrollPane.this.onClick( p.x, p.y );
-
 			}
 		}	
 		
@@ -133,15 +129,13 @@ public class ScrollPane extends Component {
 				if (c.scroll.y < 0) {
 					c.scroll.y = 0;
 				}
-				
-				
+
 				lastPos.set( t.current );	
 				
 			} else if (PointF.distance( t.current, t.start ) > dragThreshold) {
 				
 				dragging = true;
 				lastPos.set( t.current );
-				
 			}
 		}	
 	}

@@ -13,8 +13,10 @@ import com.nyrds.android.util.UnzipTask;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
+import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -47,11 +49,13 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		tfTitle.maxWidth(width - GAP * 2);
 		add(tfTitle);
 
-		float pos = tfTitle.y + tfTitle.height() + GAP;
+		ScrollableList list = new ScrollableList(new Component());
+		add(list);
 
+        float pos = 0;
 		for (Map.Entry<String, Mods.ModDesc> entry : modsList.entrySet()) {
 			final Mods.ModDesc desc = entry.getValue();
-			float additionalMargin = 0;
+			float additionalMargin = Icons.get(Icons.CLOSE).width() + GAP;
 
 			if (desc.installed && !ModdingMode.REMIXED.equals(desc.name)) {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
@@ -59,9 +63,8 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 						onDelete(desc.name);
 					}
 				};
-				deleteBtn.setPos(width - deleteBtn.width() - GAP, pos);
-				additionalMargin = deleteBtn.width() + GAP;
-				add(deleteBtn);
+				deleteBtn.setPos(width - deleteBtn.width() - GAP, pos + (BUTTON_HEIGHT - deleteBtn.height())/2);
+				list.content().add(deleteBtn);
 			}
 
 			String option = desc.name;
@@ -77,17 +80,22 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 						hide();
 						onSelect(desc.name);
 					}
-
 				};
 
 				btn.setRect(GAP, pos, width - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
-				add(btn);
+                list.content().add(btn);
 
-				pos += BUTTON_HEIGHT + SMALL_GAP;
+				pos += BUTTON_HEIGHT;
 			}
 		}
 
-		resize(width, (int) pos);
+		if(pos + SMALL_GAP + tfTitle.height() + GAP < height ) {
+			resize(120, (int) (pos + SMALL_GAP + tfTitle.height() + GAP));
+		}
+
+		list.content().setSize(width, pos);
+		list.setRect(0, tfTitle.height() + GAP, width, height - tfTitle.height() - GAP);
+		list.scrollTo(0,0);
 	}
 
 	private void onDelete(String name) {
