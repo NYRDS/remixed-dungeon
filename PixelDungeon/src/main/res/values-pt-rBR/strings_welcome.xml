@@ -36,10 +36,10 @@ Diferenças do original: \n
         - E muitas outras coisas não visíveis\n
         </string>
   <string name="Welcome_Text_20_1">
-remix.20.1:\n
-- Pergaminho de Dominação\n
-- Pergaminho de Madilção\n
-</string>
+        remix.20.1:\n
+        - Pergaminho da Dominação\n
+        - Pergaminho da Maldição\n
+        </string>
   <string name="Welcome_Text_20_2">
 remix.21:\n
 - Itens raros do Caos\n
@@ -123,7 +123,7 @@ remix.21:\n
         </string>
   <string name="Welcome_Text_25">
         remix.25:\n
-        - Novo tipo de calabouço: Necrópole, para entrar na necrópole você precisa encontrar Necromante no nível 7, para que ele possa lhe dar a chave mestra\n
+        - Novo tipo de calabouço: Necrópole, para entrar na necrópole você precisa encontrar Necromante no nível 7, para que ele possa lhe dar a chave esqueleto\n
         - Novos itens: Armadura de Aranha e Crânio Negro\n
         - A Espada dourada se tornou mais forte e requer mais força\n
         - A água no ninho das aranhas está sendo exibida corretamente\n
@@ -161,4 +161,257 @@ remix.21:\n
         - Modificações criadas por usuários aogora podem conter itens do codex com texto personalizado\n
         - Modificações criadas por usuários agora permitem definir um conjunto de blocos personalizados, água e música para um nível específico\n
         </string>
+  <string name="Welcome_Text_25_2">
+        remix.25.2:\n
+        --Novos Características--\n
+        - Agora você pode redimensionar a interface do jogo manualmente durante o jogo. Este recurso está disponível no menu de \"Configurações\"\n
+        --Correções--\n
+        - Corrigido o erro que resultava na criação de imagens do seu herói, usando um chapéu, após clicar no botão \"Examinar\" no menu de \"Chapéus\"\n
+        - Corrigido o erro, que estava impedindo que monstros (invocados ou ressuscitados em uma célula \"buraco\") caíssem\n
+        - Traduções atualizadas e corrigidos alguns erros\n
+        </string>
+  <string name="Welcome_Text_25_3">
+        remix.25.3:\n
+        - Novo objeto adicionado: Barris Explosivos (substituídos por abóboras durante o dia das bruxas)\n
+        - Adicionada música original para níveis com chefe\n
+        - Novo item: Torta de Abóbora\n
+        - Novo NPC: Espantalho\n
+        - Novos itens de embelezamento: Máscara de Zumbi, Crânio de Vampiro e chapéu Ushanka\n
+         </string>
+  <string name="Welcome_Text_25_4">
+        remix.25.4:\n
+        --Jogo--\n
+        - Barris podem ser empurrados pela Varinha de Telecinesia\n
+        - Barris estão menos propensos a aparecer em corredores\n
+        - Lança, Glaive e Halberd agora pertencem ao arquétipo \"Polearms\", concedendo ao jogador uma maior distância de ataque (antes isso só era possível com a Lança)\n
+        - A velocidade de ataque das \"Polearms\" foi reduzida para compensar o aumento da distância de ataque\n
+        - A tela de \"Tittulo\" agora diz \"Remixed Pixel Dungeon\"\n
+        - A tela \"Sobre\" foi atualizada\n
+        - A música de luta do chefe agora é reproduzida apenas durante as lutas contra o chefe em todos os chefes , exceto o Yog (o nível 31 tem a música de luta do chefe a partir do momento em que você entrar lá)\n
+        - Tradução atualizada (+nova língua: Turco)\n
+        --Modificações--\n
+        - Mods agora suportam chaves personalizadas\n
+        - Alguns monstros agora podem ser configurados manualmente para um determinado nível de poder\n
+        - Monstro \"Albino\" agora está disponível em modificações\n
+        </string>
+  <string name="Welcome_Text_25_5">
+        remix.25.5:\n
+        - Corrigido o erro que fazia com que o personagem desaparecesse caso o jogador pulasse em um abismo\n
+        - O botão Menu agora tem mais prioridade na interface do jogo, para que os jogadores possam acessar as configurações de interface, mesmo se a escala da da interface esteja configurada como alta\n
+        - Traduções atualizadas (+idioma adicionado Ucraniano)\n
+        - Menu de seleção de idioma atualizado\n
+        </string>
+  <string name="Welcome_Text_26">
+        remix.26:\n
+        --Jogo\n
+        - Nova comida: Peru festivo\n
+        - Tema musical original para Cavernas (por Misaerit)\n
+        - Novo tipo de calabouço: Cavernas de Gelo!\n
+        - Neste ponto, as Cavernas de Gelo incluem:\n
+            - 4 novos monstros\n
+            - Um novo chefe\n
+            - Um novo NPC \n
+            - Varinha de Dardos de Gelo\n
+            - Um artefato: Vela das Visões\n
+           - Tema musical original! (por Misaerit)\n
+        - Corrigido o erro que impedia o surgimento de aranhas raras\n
+        - Goo ficou um pouco mais forte\n
+        --Chapéus\n
+        - Adicionado chapéu de Papai Noel!\n
+        - Adicionado Nariz vermelho e chifres!\n
+        </string>
+  <string name="Welcome_Text_26_1">
+        remix.26.1:\n
+        - O jogo começa em uma cidade\n
+        - A cidade tem um tema musical único (por Misaerit)\n
+        - Para conseguir terminar o jogo em 100%, após de obter o amuleto de Yendor, você tem que chegar à saída da cidade\n
+        - Os itens iniciais de herói agora contêm apenas equipamentos específicos para cada classe, cada herói também recebe 200 moedas de ouro\n
+        - A cidade tem uma loja, onde você pode obter equipamentos básicos e itens\n
+        - O padre da cidade curará e alimentará seu herói, por uma taxa\n
+        - Monstros voadores não podem mais ativar armadilhas\n
+        - Você não pode mais vender um contêiner que contenha algo dentro\n
+        - Monstros mortos-vivos são imunes a veneno\n
+        - Quando um esqueleto morre, ele causa dano a 4 células adjacentes (em linhas verticais e horizontais), em vez de 8\n
+        - Visual da fonte foi atualizado\n
+        - Cristais não podem mais ser movidos com telecinésia\n
+        - Poção de purificação pode curar o efeito do gás de confusão\n
+        - Monstros criados com multiplicação não podem mais receber menos de 1 de vida ao serem criados\n
+        - Corrigindo erros\n
+        - Corrigidos os gráficos das Cavernas de Gelo\n
+        - modificações \"The Fallen\" e \"Maze\" são totalmente compatíveis com o idioma inglês\n
+        - Novo tipo de doação já está disponível. Ao comprar o \"Royal Pixel\", você não apenas ajudará em nosso projeto, como também desbloqueiará todos chapéus do jogo, incluindo todos os chapéus que ainda serão lançados\n
+        </string>
+  <string name="Welcome_Text_26_2">
+        remix.26.2:\n
+        --Jogo\n
+        - Novo edifício aberto na cidade: Cinema\n
+        - Anéis agora podem ser mantidos no chaveiro\n
+        - O chaveiro só pode ser comprado na cidade\n
+        - A loja da cidade foi atualizada\n
+        - Sempre que você vender itens para o lojista na cidade, ele irá colocá-lo à venda, se houver espaço disponível na loja\n
+        - Novo item de embelezamento: traje de Gnoll\n
+        --Modificações\n
+        - Armas recebem o atributo de \"encantamento\"\n
+        - Armaduras obtém o atributo «hieróglifo»\n
+        - Agora, para que o jogo detecte sua modificação, ele deve conter o arquivo version.json\n
+        </string>
+  <string name="Welcome_Text_26_3">
+        remix.26.3\n
+        - Cidade cresceu\n
+        - A loja da cidade agora vende mais itens\n
+        - Nova missão na Cidade\n
+        </string>
+  <string name="Welcome_Text_26_4">
+remix.26.4\n
+        - Jogo:\n
+        - Na morte de Yog, todos os monstros no nível também morrem, incluindo aquele controlados pelo herói\n
+        - Yog invoca 2 mini-chefes nas dificuldades fácil e médio (a dificuldade «Expert» ainda faz com que ele invoque 3 deles)\n
+        - O nível de atualização das varinhas usadas pelos cristais (incluindo aquelas geradas pelo Senhor das Sombras) não corresponde mais ao nível em que o cristal foi criado, mas apenas metade desse valor\n
+        - A mecânica da habilidade do Senhor das Sombras \"invocar Espectro\" foi levemente otimizada\n
+        - O herói agora começa com 100 moedas de ouro em vez de 200\n
+        - Os itens iniciais incluem Ração novamente\n
+        - Agora, se o herói morrer em uma dificuldade que permita salvar o progresso do jogo e houver um jogo salvo disponível, em vez de menu, aparecerá a tela \"Carregar jogo salvo\"\n
+        - Novo NPC na cidade: uma Cartomante, ela está disposta a identificar seus itens, em troca de um pagamento simbólico\n
+        - Enquanto o herói ficar na cidade ele não irá mais acumular fome\n
+        - Regeneração de saúde e recurso \"descansar até se curar\" estão desativados na cidade\n
+        - O limite de visualização no cinema agora de acordo com nível do herói. A cada novo nível, você poderá assistir a mais um vídeo\n
+        - A túnica do Necromante não verifica mais a saúde do herói para realizar a invocação\n
+        - Agora a mensagem «Você pode usar apenas 2 anéis ao mesmo tempo!» menciona «artefatos»\n
+        - O Necromante obtém uma entrada de registro mais clara quando o limite de invocação é atingido\n
+        - A Armadura de Rato foi ligeiramente melhorada\n
+        - Atualizar uma varinha restaurará suas cargas\n
+        - Corrigido o erro que bugava o layout da cidade em arquivos antigos de save\n
+        - Corrigido erro que mesclava textos de diferentes mods\n\n
+        - Modificações:\n
+        - Kobold enjaulado foi adicionado ao MobFactory e agora está disponível em níveis personalizados\n
+        - Nos níveis do calabouço marcados como «Seguros», o herói deixará de acumular fome e de regenerar a saúde ou de poder \"descansar até se curar\"\n
+        - Mods aprovados podem alterar o «banners»\n
+        - Varinhas com atributos «charge» e «maxCharges»\n
+        - Novo atributo para níveis de dungeon: «isStatic». O nível marcado com ele será gerado novamente toda vez que o herói entrar nele (o nível permanece \"estático\", apesar das coisas que foram feitas anteriormente)\n
+        - Adicionando etapa adicional da inicialização do equipamento inicial do herói: «non_expert». Os itens, incluídos nesta etapa, serão adicionados ao inventário em todos os níveis de dificuldade, exceto na dificuldade «Expert»\n
+        - Herói não sofre mais com debuffs de fome, que ele iria entrar na dificuldade «Expert», contanto que ele permaneça em um nível «Seguro»\n
+        </string>
+  <string name="Welcome_Text_26_5">
+        remix.26.5\n
+        -  Aparência da nova fonte atualizada\n
+        - Os itens não podem mais ocupar o mesmo lugar que um NPC ou algum item que esteja à venda\n
+        - A biblioteca está aberta e agora contém informações sobre itens e monstros que você encontra durante suas aventuras\n
+        - Elfos agora começam com a exclusiva Adaga Élfica , que requer 9 pontos de força\n
+        - Quando um herói estiver prestes a pisar na armadilha visível, uma janela de aviso aparecerá pedindo para confirmar esta ação\n
+        - O herói cego não receberá a mensagem de aviso, quando estiver prestes a pisar em uma armadilha visível ou no abismo, \"avançando cegamente\"\n
+        - Monstros mortos-vivos não são mais afetados por gás da confusão\n
+        - Opção de teste que permite limitar o tempo que o herói consegue realizar uma ação\n
+        - Traduções atualizadas\n
+        - Pergaminho da Dominação obteve um efeito visual para indicar mais claramente que foi usado\n
+        - Corrigido o erro que estava causando ao herói dano de queda várias vezes caso o jogo fosse minimizado logo após a queda\n
+        - Agora você pode criar monstros personalizados para suas modificações\n
+        - Mecânicas Customizadas de monstros também permite criar monstros com ataque à distância\n
+        - Adicionando os atributos para modificações: canBePet, wallWalker e absoluteWalker para monstros personalizados\n
+        - Modificações agora suportam mensagens personalizadas de “defesa” para monstros, ex. \"Bloqueado\", \"Evitou\"\n
+        </string>
+  <string name="Welcome_Text_26_6">
+        remix.26.6\n
+        - Novo item exclusivo: Varinha de Dardo da Sombra\n
+        - Cristal gerado pelo Senhor das Sombras agora usa Varinha de Dardo da Sombra em vez do ataque normal. A chance de conseguir essa varinha é de 25%\n
+        - Corrigido problemas de ataque à distância para: Elemental de Ar, Cristal, Punho Ardente, Psico-Aranha e Aranha de Âmbar\n
+        - Mage Armor (versão para Warlock: WarlockArmor) e Candy estão agora disponíveis nas modificações\n
+        </string>
+  <string name="Welcome_Text_27">
+        remix.27 \ n
+        - O jogo agora usa os seguintes serviços do Google Play Games: conquistas, placares e salvamento em nuvem\n
+        - O tamanho de todos os contêineres foram aumentados, agora correspondem ao da mochila n
+        - A classe de herói Necromante está disponível para todos os jogadores desde o início\n
+        - Poções agora podem ser melhoradas com o Pergaminho de Atualização. As poções melhoradas e degradadas também podem ser encontradas pelo calabouço\n
+        - Corrigido problema do cristal do caos que usava todos pergaminhos vazios quando \"fundido\" em vez de 1\n
+        - Corrigido o erro que deixava o Goo incapaz de atacar herói a certa distância após usar \"ataque de bombeamento\"\n
+        - Aumentado o atributo maxLevel para o Rato Fedido e vários chefes (permitindo que personagens com níveis anormalmente altos ainda saquem esses personagens)\n
+        - Novo atributo para níveis e monstros criados pelo jogador: \"viewDistance\" (Definida a distância da visão entre 1-8)\n
+        </string>
+  <string name="Welcome_Text_27_1">
+        remix.27.1\n
+        - Introduzindo o sistema de portal\n
+        - Após derrotar um dos chefes principais, você encontrará a sala do portal. Portal levará você de volta à cidade. Cada portal só podem ser usado uma vez\n
+        - Portal localizado na cidade sempre o levará para o ultimo portal usado, caso você tenha entrado em algum\n
+        - Após de derrotar um chefe secundário, você poderá usar a a chave esqueleto deixada por ele para retornar ao primeiro nível do calabouço do chefe\n 
+        - Goo deixa o Farol Lloyd ao morrer. Este item só está disponível através de modificações\n
+        - Corrigido o erro na de armadilha de invocação, fazendo com que Óculos Escuros aparecessem no chão\n
+        - Corrigido o erro de estátua \"serva\", que inundava o registro do jogo com informações desnecessárias\n
+        </string>
+  <string name="Welcome_Text_27_2">
+        remix.27.2\n
+        --Jogo:\n
+        - Sistema de feitiços introduzido\n
+        - Mago e Necromante possuem afinidades naturais a feitiços. Esses heróis são capazes de conjurar feitiços próprios sem necessidade de itens especiais\n
+        - Cada personagem agora possui uma barra de mana (incluindo Necromante)\n
+        - Necromante não restaura mais sua mana ao matar inimigos. Este efeito agora é aplicado a Túnica do Necromante (+1 de mana ao matar) e a Armadura de Osso (+2 de mana ao matar), em vez da habilidade de invocação que esse itens possuíam anteriormente\n
+        - Novo atributo do herói: Nível Mágico. Quanto maior o Nível Mágico, mais as feitiços naturais são desbloqueadas e mais poderosos serão esses feitiços\n
+        - Novo item: Poção de Mana\n
+        - Novo item: Livro do Conhecimento. Um item que aumenta seu nível magico em 1\n
+        - Novo item: Livro de Feitiços. Este item equipável permitirá que você conjure um feitiço ao custo de mana e, ao contrário dos pergaminhos, este item não expirará, não importa o quanto você use\n
+        - A Armadura de Classe não requer mais pontos de vida para usar sua habilidade especial, invés disso custa 1/3 da sua quantia máxima de mana\n
+        - A \"Varinha de Misseis Mágicos\" não pode mais ser obtida a partir de Cristais\n
+        - A partir de agora, cada nível terá sua \"distância de visão\" definida aleatoriamente, para que o jogador possa encontrar \"níveis escuros\" em todos os pontos do jogo\n
+        - As tochas estão disponíveis desde o começo e podem ser encontradas em todo o jogo\n
+        - Os níveis \"seguros\" (isSafe) não são afetados e estarão sempre claros\n
+ Agora os danos causados ​​pelas chamas são de acordo com a profundidade do calabouço\n\n
+
+        -- Itens de Embelezamento: \ n
+        - Novo Chapéu: Capacete do Caos\n\n
+
+        --Modificações:\n
+        - Agora você pode adicionar novos atributos ao seu arquivo \"iniHeroes\": \"maxSP\" - define uma quantidade máxima de mana que seu personagem pode possuir. \"StartingSp\" define a quantidade inicial de mana para seu personagem\n
+        - A inicialização do herói também recebe o atributo \"magicAffinity\", que pode ser definido como: \"Elemental\", \"Necromancy\" ou \"Common\" (\"Common\" significa que o personagem só pode usar magias dos livros de feitiços)\n
+        - Novo objeto nas modificações - Armadilha. Ao contrário da armadilha comum do jogo, esse objeto pode ser ajustado de várias maneiras. Você pode definir: o número de ativações (usos), a célula alvo na qual o efeito da ativação deve ser acionado(alvo), e se ela pode ou não ser ativada jogando o item nela(activatedByItem)\n
+        </string>
+  <string name="Welcome_Text_27_3">
+        remix.27.3\n
+  - Novo Item: Pergaminho da Invocação\n
+  - Gotas de orvalho não tem menos prioridade em uma pilha de itens. Então, se houver um item sobre a gota de orvalho, o item será coletado primeiro\n
+  - Agora todos os recipientes estão disponíveis na loja da cidade\n
+  - Goo não deixa o mais Anel da Pedra Sangrenta quando morto (este item só está disponível através de modificações), em vez disso, o jogador receberá uma poção aleatória\n
+  - O feitiço \"Rajada de Vento\" só pode mover personagens, que possam ser movidos (IsMovable)\n
+  - Monstros não podem mais aparecem em locais do nível que já possuam objetos\n
+  - A Túnica do Necromante não está mais definida em atalho rápido por padão\n
+  - Corrigindo a aleatoriedade da distância de visão\n
+  - Corregido o erro que fazia com que o nível do chefe gerasse um elemental em vez do chefe\n
+  - A recompensa, o jogador recebe por assistir a um anúncio que está sendo exibido no do jogo\n
+  </string>
+  <string name="Welcome_Text_27_4">
+    remix.27.4\n
+    - Nome alterado para Remixed Dungeon\n
+    - Necrose - nova habilidade Armadura de Classe do Necromante\n
+    - Nova medalha à ser descoberta \ n
+    - A habilidade de Armadura de Classe agora consome Mana ao invés de HP\n
+    - Itens caóticos agora perdem seu encantamento ao serem rebaixados\n
+    - Psico-aranhas agora só podem conjurar feitiços de cegueira, lentidão e fraqueza\n
+    </string>
+  <string name="Welcome_Text_28">
+    remix.28\n
+    - Novo herói - Gnoll\n
+    - O dano de varinhas mágicas, como arma branca agora, depende do nível de habilidade mágica do Herói\n
+    - Para cada Herói, apenas um resultado será exibido no quadro de recordes\n
+    - A sincronização automática com o Google PlayGames está desativada (você pode sincronizar manualmente)\n
+    - Uma grande atualização do idioma Português Brasileiro\n
+    - Novas opções de classe de herói para modificações: forbiddenActions, friendlyMobs\n
+    - Novo idioma adicionado: Idioma Malaio\n
+    </string>
+  <string name="Welcome_Text_28_1">
+    remix.28.1 \ n
+    - Grande renovação na cidade\n
+    - Muitas melhorias e correções de GFX\n
+    - Novos dardos e flechas\n
+    - Agora todos os monstros (exceto mortos-vivos) irão regenerar a vida\n
+    - Agora o atributo de força acrescenta um bônus de dano adicional para todas as classes\n
+    - A Cartomante agora possui um Gato\n
+    - A machadinha de Gnoll não se quebrará quando arremessada em um alvo\n
+    </string>
+  <string name="Welcome_Text_28_2">
+    remix.28.2\n
+    - Reformulação da Interface:\n
+    -- Quantidade de Atalhos rápidos está limitada pela largura da tela\n
+    -- Feitiços e habilidades podem ser colocadas nos atalhos rápidos\ n
+    -- Opção de escolha do lado dos botões\n
+    - Limite de tempo de ação agora ficará nas estatísticas\n
+    - Modo Realtime!(Ainda muito experimental) agora disponível e segue pela sessão de jogo\n
+    </string>
 </resources>

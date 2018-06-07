@@ -3,7 +3,7 @@
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">Muitos heróis de todos os tipos se aventuraram na caverna antes de você. Alguns deles voltaram com tesouros e artefatos mágicos, mas nunca mais se ouviu falar da maioria deles. E nenhum conseguiu recuperar o Amuleto de Yendor, que dizem estar escondido nas profundezas do calabouço.\n\nVocê se considera pronto para o desafio, e o mais importante, você sente que a sorte sorri para você. Está na hora de iniciar a sua própria aventura!</string>
+  <string name="IntroScene_Txt">Muitos heróis de todos os tipos se aventuraram no calabouço antes de você. Alguns deles voltaram com tesouros e artefatos mágicos, mas nunca mais se ouviu falar da maioria deles. E nenhum conseguiu recuperar o Amuleto de Yendor, que dizem estar oculto nas profundezas do calabouço.\n\nVocê se considera pronto para o desafio, e o mais importante, você sente que a sorte sorri para você. Está na hora de iniciar a sua própria aventura!</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">Foi bom enquanto durou</string>
   <string name="AmuletScene_Stay">Eu não acabei ainda</string>
@@ -315,7 +315,7 @@
   <string name="IronKey_Info">Os entalhes nesta chave de ferro antiga estão bem gastos; seu cordão de couro está danificada pelo tempo. Pode abrir portas!?</string>
   <string name="IronKey_FromDepth">chave do nível %d</string>
   <!--STRINGS OF SkeletonKey CLASS-->
-  <string name="SkeletonKey_Name">chave mestra</string>
+  <string name="SkeletonKey_Name">chave esqueleto</string>
   <string name="SkeletonKey_Info">Esta chave parece importante: sua cabeça tem a forma de uma caveira. Provavelmente, ele pode abrir alguma porta importante.</string>
   <!--PACKAGE /items/quest-->
   <!--STRINGS OF CorpseDust CLASS-->

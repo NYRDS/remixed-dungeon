@@ -8,8 +8,8 @@
     <string name="GnollArmor_Name">traje de tenente gnoll</string>
     <string name="GnollArmor_Info">Os usuários do traje do tenente Gnoll são conhecidos por sua capacidade de persuadir as multidões extremamente irritadas a serem leais servos da Coroa.</string>
 
-    <string name="GnollTamahawk_Name">tomahawk gnoll</string>
-    <string name="GnollTamahawk_Info">Tomahawk tradicional criado por um Gnoll artesão, cada clã possui um design único. Este Tomahawk é um pouco mais leve que as contrapartes feitas pelos humanos.</string>
+    <string name="GnollTamahawk_Name">machadinha de gnoll</string>
+    <string name="GnollTamahawk_Info">Machadinha tradicional criada por um Gnoll artesão, cada clã possui um modelo único. Esta Machadinha é um pouco mais leve que as feitas pelos humanos.</string>
     <string name="GnollTamahawk_Gender">masculino</string>
 
 
@@ -23,7 +23,7 @@
     <string-array name="HeroClass_GnollPerks">
         <item>Gnolls começam com 15 pontos de força</item>
         <item>Gnolls começam com 5 pontos de vida</item>
-        <item>Gnolls começam sem armadura, mas começam com um tomahawk único</item>
+        <item>Gnolls começam sem armadura, mas começam com uma machadinha exclusiva</item>
         <item>Gnolls não podem ler ou escrever</item>
         <item>Gnolls não atacam outros Gnolls, exceto quando provocados</item>
      </string-array>

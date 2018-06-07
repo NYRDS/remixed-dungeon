@@ -12,4 +12,6 @@
     <string name="WndSettings_InGameUiSettings">Configurações da Interface</string>
     <string name="WndSettings_GameplaySettings">Jogabigidade</string>
     <string name="WndPremiumSettings_marble">mármore</string>
-    </resources>
+    <string name="QuickSlot_SelectSlot">Escolha um atalho rápido para isso</string>
+
+</resources>
