@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -237,7 +238,7 @@ public class WndRanking extends WndTabbed {
 		}
 	}
 	
-	private class ItemsTab extends Group {
+	private class ItemsTab extends Component {
 		
 		private float posY;
 
@@ -246,9 +247,10 @@ public class WndRanking extends WndTabbed {
 		public ItemsTab() {
 			super();
 
+			setSize(WIDTH,HEIGHT);
 			camera = WndRanking.this.camera;
 
-			list = new ScrollPane(new Component());
+			list = new ScrollableList(new Component());
 			add(list);
 
 			Belongings stuff = Dungeon.hero.belongings;
@@ -271,8 +273,9 @@ public class WndRanking extends WndTabbed {
 					addItem(qsItem);
 				}
 			}
-			list.content().setSize(width, posY);
-			list.setRect(0,0,width, height);
+
+			list.content().setRect(0,0,width, posY);
+			list.setSize(WIDTH,HEIGHT);
 			list.scrollTo(0,0);
 		}
 		
@@ -346,7 +349,12 @@ public class WndRanking extends WndTabbed {
 			bg.y = y;
 			
 			slot.setRect( x, y, HEIGHT, HEIGHT );
-			
+
+			hotArea.x = x;
+			hotArea.y = y;
+			hotArea.width = HEIGHT;
+			hotArea.height = HEIGHT;
+
 			name.x = slot.right() + 2;
 			name.y = y + (height - name.baseLine()) / 2;
 			
@@ -358,10 +366,8 @@ public class WndRanking extends WndTabbed {
 					name.text( str + "..." );
 				} while (name.width() > width - name.x);
 			}
-			
-			super.layout();
 		}
-		
+
 		@Override
 		protected void onTouchDown() {
 			bg.brightness( 1.5f );

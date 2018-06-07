@@ -25,7 +25,7 @@ public class Button extends Component {
 
 	private static float longClick = 1f;
 
-	private TouchArea hotArea;
+	protected TouchArea hotArea;
 
 	private boolean pressed;
 	private float   pressTime;
