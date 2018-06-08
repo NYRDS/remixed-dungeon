@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -18,24 +19,23 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
-import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 
 public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
-	private static final String IDENTETIFY_LEVEL_KEY = "identetifyLevel";
-	private static final String CHARGE_KEY = "charge";
+	private static final float TIME_TO_USE = 1;
 
-	public static final float TIME_TO_USE = 1;
-
-	public static final String AC_FUSE = "ChaosCrystal_Fuse";
+	private static final String AC_FUSE             = "ChaosCrystal_Fuse";
 	private static final String TXT_SELECT_FOR_FUSE = Game.getVar(R.string.ChaosCrystal_SelectForFuse);
 
 	private static final int CHAOS_CRYSTALL_IMAGE = 9;
 	private static final float TIME_TO_FUSE = 10;
 
+	@Packable
 	private int identetifyLevel = 0;
+
+	@Packable
 	private int charge = 0;
 
 	public ChaosCrystal() {
@@ -53,7 +53,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		return new Glowing((int) (Math.random() * 0xffffff));
 	}
 
-	protected CellSelector.Listener chaosMark = new CellSelector.Listener() {
+	private CellSelector.Listener chaosMark = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer cell) {
 			if (cell != null) {
@@ -133,13 +133,16 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	public void execute(final Hero ch, String action) {
 		setCurUser(ch);
 
-		if (action.equals(AC_USE)) {
-			GameScene.selectCell(chaosMark);
-		} else if (action.equals(AC_FUSE)) {
-			fuse(ch);
-		} else {
-
-			super.execute(ch, action);
+		switch (action) {
+			case AC_USE:
+				GameScene.selectCell(chaosMark);
+				break;
+			case AC_FUSE:
+				fuse(ch);
+				break;
+			default:
+				super.execute(ch, action);
+				break;
 		}
 	}
 
@@ -211,32 +214,11 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	}
 
 	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-
-		bundle.put(CHARGE_KEY, charge);
-		bundle.put(IDENTETIFY_LEVEL_KEY, identetifyLevel);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-
-		charge = bundle.getInt(CHARGE_KEY);
-		identetifyLevel = bundle.getInt(IDENTETIFY_LEVEL_KEY);
-	}
-
-	@Override
 	public void ownerDoesDamage(Char ch,int damage) {
 		if (cursed) {
 			if (charge > 0) {
 				ChaosCommon.doChaosMark(ch.getPos(), charge);
 			}
 		}
-	}
-
-	@Override
-	public int getCharge() {
-		return charge;
 	}
 }

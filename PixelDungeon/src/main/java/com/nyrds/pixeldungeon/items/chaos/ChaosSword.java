@@ -1,11 +1,13 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
+import com.nyrds.Packable;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.utils.Bundle;
 
 public class ChaosSword extends SpecialWeapon implements IChaosItem {
 
+	@Packable
 	private int charge = 0;
 	
 	public ChaosSword() {
@@ -62,25 +64,11 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 	private void selectImage() {
 		image = Math.max(0, Math.min(level()/3, 4));
 	}
-	
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		
-		bundle.put(ChaosCommon.CHARGE_KEY, charge);
-	}
-	
+
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		
-		charge = bundle.getInt(ChaosCommon.CHARGE_KEY);
 
 		selectImage();
-	}
-
-	@Override
-	public int getCharge() {
-		return charge;
 	}
 }

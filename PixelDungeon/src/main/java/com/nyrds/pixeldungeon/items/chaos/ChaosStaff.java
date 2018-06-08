@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -18,6 +19,7 @@ import com.watabou.utils.Random;
 
 public class ChaosStaff extends Wand implements IChaosItem {
 
+    @Packable
     private int charge = 0;
 
     public ChaosStaff() {
@@ -54,23 +56,10 @@ public class ChaosStaff extends Wand implements IChaosItem {
     }
 
     @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-
-        bundle.put(ChaosCommon.CHARGE_KEY, charge);
-    }
-
-    @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
 
-        charge = bundle.getInt(ChaosCommon.CHARGE_KEY);
         selectImage();
-    }
-
-    @Override
-    public int getCharge() {
-        return charge;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
+import com.nyrds.Packable;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.utils.Bundle;
@@ -7,6 +8,7 @@ import com.watabou.utils.Bundle;
 
 public class ChaosArmor extends Armor implements IChaosItem {
 
+	@Packable
 	private int charge = 0;
 
 	public ChaosArmor() {
@@ -64,23 +66,9 @@ public class ChaosArmor extends Armor implements IChaosItem {
 	}
 
 	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-
-		bundle.put(ChaosCommon.CHARGE_KEY, charge);
-	}
-
-	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 
-		charge = bundle.getInt(ChaosCommon.CHARGE_KEY);
 		selectImage();
 	}
-
-	@Override
-	public int getCharge() {
-		return charge;
-	}
-
 }
