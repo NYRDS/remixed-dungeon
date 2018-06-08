@@ -1890,6 +1890,11 @@ public class Hero extends Char implements PetOwner {
 		refreshPets();
 
 		for (Mob pet : pets) {
+
+			if(level.mobs.contains(pet)) {
+				continue;
+			}
+
 			int cell = level.getEmptyCellNextTo(getPos());
 			if (!level.cellValid(cell)) {
 				cell = getPos();
