@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.watabou.utils.Random;
 
 import org.luaj.vm2.LuaTable;
 
@@ -14,7 +15,6 @@ import java.util.Map;
 public class SpellFactory {
 
 	static private Map<String, Class<? extends Spell>> mSpellsList = new HashMap<>();
-	static private Map<Class<? extends Spell>,String>  mNamesList = new HashMap<>();
 
 	static private LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
 
@@ -25,7 +25,6 @@ public class SpellFactory {
 
 	private static void registerSpellClass(Class<? extends Spell> spellClass) {
 		mSpellsList.put(spellClass.getSimpleName(), spellClass);
-		mNamesList.put(spellClass, spellClass.getSimpleName());
 
 		try {
 			Spell spell = spellClass.newInstance();
@@ -46,8 +45,6 @@ public class SpellFactory {
 
 	private static void initSpellsMap() {
 		registerSpellClass(SummonDeathling.class);
-		//registerSpellClass(CausePainSpell.class);
-		//registerSpellClass(RaiseDead.class);
 		//registerSpellClass(Desecrate.class);
 
 		registerSpellClass(WindGust.class);
@@ -71,13 +68,16 @@ public class SpellFactory {
 	@NonNull
 	public static Spell getSpellByName(String name) {
 		try {
-			Class<? extends Spell> spellClass =  mSpellsList.get(name);
-			if (spellClass == null) {
-				return new CustomSpell(name);
-				//EventCollector.logEvent("bug", Utils.format("Unknown spell: [%s], getting Magic Torch instead",name));
-				//spellClass =  mSpellsList.get("MagicTorch");
+			if(hasSpellForName(name)) {
+				Class<? extends Spell> spellClass = mSpellsList.get(name);
+				if (spellClass == null) {
+					return new CustomSpell(name);
+				}
+				return spellClass.newInstance();
+			} else {
+				return getSpellByName(Random.element(getSpellsByAffinity(SpellHelper.AFFINITY_COMMON)));
 			}
-			return spellClass.newInstance();
+
 		} catch (InstantiationException e) {
 			throw new TrackedRuntimeException(e);
 		} catch (IllegalAccessException e) {

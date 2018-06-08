@@ -33,7 +33,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
-		Map<Element, String>       defaultValues= new HashMap<>();
+		Map<Element, String>       defaultValues = new HashMap<>();
 		// for each javax.lang.model.element.Element annotated with the CustomAnnotation
 		for (Element element : roundEnvironment.getElementsAnnotatedWith(Packable.class)) {
 			Element parent = element.getEnclosingElement();
