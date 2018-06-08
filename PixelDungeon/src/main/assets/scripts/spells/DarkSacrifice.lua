@@ -35,6 +35,10 @@ return spell.init{
             goodSacrifice = true
         end
 
+        if sacrifice ~= nil and goodSacrifice == false then
+            sacrifice:yell("You have no power over me!")
+        end
+
         if goodSacrifice then
            sacrifice:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
            RPD.playSound( "snd_cursed.mp3" )

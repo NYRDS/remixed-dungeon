@@ -11,11 +11,12 @@ local spell = require "scripts/lib/spell"
 
 local mob = require "scripts/lib/mob"
 
+local storage = require "scripts/lib/storage"
 
-local latestDeadMobClass
+local latest_kill_index = "__latest_dead_mob"
 
 local function updateLatestDeadMob(mob)
-    latestDeadMobClass = mob:getMobClassName()
+    storage.put(latest_kill_index, {class = mob:getMobClassName(), pos = mob:getPos()})
 end
 
 mob.installOnDieCallback(updateLatestDeadMob)
@@ -32,12 +33,15 @@ return spell.init{
         }
     end,
     cast = function(self, spell, chr)
-        if latestDeadMobClass ~= nil then
-            local mob = RPD.MobFactory:mobByName(latestDeadMobClass)
-            latestDeadMobClass = nil
+        local latestDeadMob = storage.get(latest_kill_index) or {}
+
+        if latestDeadMob.class ~= nil then
+            local mob = RPD.MobFactory:mobByName(latestDeadMob.class)
+            storage.put(latest_kill_index, {})
 
             local level = RPD.Dungeon.level
-            local mobPos = level:getEmptyCellNextTo(chr:getPos())
+            local mobPos = latestDeadMob.pos
+
             if level:cellValid(mobPos) then
                 mob:setPos(mobPos)
                 mob:loot(RPD.ItemFactory:itemByName("Gold"))
