@@ -37,6 +37,7 @@ import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -429,9 +430,12 @@ public class ItemFactory {
             if (itemClass != null) {
                 return itemClass.newInstance();
             } else {
-                return new CustomItem(selectedItemClass);
-                //Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
-                //return Gold.class;
+                try {
+                    return new CustomItem(selectedItemClass);
+                } catch (Exception e){
+                    Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
+                    return itemByName("Gold");
+                }
             }
         } catch (InstantiationException e) {
             throw new TrackedRuntimeException("itemFactory", e);

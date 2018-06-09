@@ -51,7 +51,6 @@ mob.onDie = function(self,mob,cause)
     quest.mobDied(mob, cause)
 
     for k, v in pairs(onDieCallbacks) do
-        RPD.glog("onDie")
         k(mob,cause)
     end
 
