@@ -35,7 +35,9 @@ import java.io.InputStream;
 
 public class LuaEngine implements ResourceFinder {
 
-	static private LuaEngine engine = new LuaEngine();
+	public static final String    SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
+
+	static private      LuaEngine engine              = new LuaEngine();
 
 	private Globals globals;
 

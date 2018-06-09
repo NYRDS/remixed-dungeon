@@ -5,6 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
+local RPD = require "scripts/lib/commonClasses"
+
 local seprent = require "scripts/lib/serpent"
 
 local gameData  = {}
@@ -12,32 +14,38 @@ local levelData = {}
 
 local gameStorage = {}
 
-local res
-
 gameStorage.serializeGameData = function()
     return seprent.dump(gameData)
 end
 
 gameStorage.deserializeGameData = function(str)
-    res, gameData = seprent.load(str)
-    gameData = gameData or {}
+    local res, _gameData = seprent.load(str)
+    gameData = _gameData or {}
 end
 
 gameStorage.serializeLevelData = function()
+    --RPD.glog("serealize")
     return seprent.dump(levelData)
 end
 
 gameStorage.deserializeLevelData = function(str)
-    res, levelData = seprent.load(str)
-    levelData = levelData or {}
+    --RPD.glog("deserealize")
+    local res, _levelData = seprent.load(str)
+    levelData = _levelData or {}
 end
 
+gameStorage.resetLevelData = function()
+    levelData = {}
+    --RPD.glog("reset level data")
+end
 
 gameStorage.put = function(k,v)
     levelData[k] = v
+    --RPD.glog("put: %s -> %s", tostring(k), tostring(seprent.dump({v})))
 end
 
 gameStorage.get = function(k)
+    --RPD.glog("get: %s -> %s", tostring(k), tostring(seprent.dump({levelData[k]})))
     return levelData[k]
 end
 

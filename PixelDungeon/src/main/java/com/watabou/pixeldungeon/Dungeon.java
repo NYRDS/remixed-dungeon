@@ -85,7 +85,6 @@ import static com.watabou.pixeldungeon.PixelDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
 
-    private static final String SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
     public static int     potionOfStrength;
     public static int     scrollsOfUpgrade;
     public static int     arcaneStyli;
@@ -375,7 +374,7 @@ public class Dungeon {
         bundle.put(MOVE_TIMEOUT, moveTimeoutIndex);
 
         bundle.put(SCRIPTS_DATA,
-                LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
+                LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
         Bundle.write(bundle, output);
@@ -387,7 +386,7 @@ public class Dungeon {
         bundle.put(LEVEL, level);
 
         bundle.put(SCRIPTS_DATA,
-                LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("serializeLevelData").call().checkjstring());
+                LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeLevelData").call().checkjstring());
 
 
         OutputStream output = FileSystem.getOutputStream(saveTo);
@@ -536,7 +535,7 @@ public class Dungeon {
         Statistics.restoreFromBundle(bundle);
         Journal.restoreFromBundle(bundle);
         Logbook.restoreFromBundle(bundle);
-        LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
+        LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 
         realtime = bundle.optBoolean(REALTIME, false);
         moveTimeoutIndex = PixelDungeon.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
@@ -580,7 +579,7 @@ public class Dungeon {
         }
 
         Level level = Level.fromBundle(bundle, "level");
-        LuaEngine.getEngine().require(SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
+        LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
 
         if (level == null) {
             level = newLevel(next);

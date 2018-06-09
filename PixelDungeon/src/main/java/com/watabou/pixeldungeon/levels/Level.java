@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -458,6 +459,8 @@ public abstract class Level implements Bundlable {
 
 		Blob.setWidth(getWidth());
 		Blob.setHeight(getHeight());
+
+		LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("resetLevelData").call();
 	}
 
 	public void create(int w, int h) {
