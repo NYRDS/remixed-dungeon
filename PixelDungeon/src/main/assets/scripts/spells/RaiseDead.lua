@@ -27,9 +27,13 @@ return spell.init{
             image         = 2,
             imageFile     = "spellsIcons/necromancy.png",
             name          = "Raise Dead",
-            info          = "Attempt to raise latest slain creature",
+            info          = [[Attempt to raise latest slain creature.
+ When using this dark art remember: almost any creature can be raised, but not everyone will is easy to bend]],
             magicAffinity = "Necromancy",
-            targetingType = "none"
+            targetingType = "none",
+            spellCost     = 15,
+            castTime      = 3,
+            level         = 4
         }
     end,
     cast = function(self, spell, chr)

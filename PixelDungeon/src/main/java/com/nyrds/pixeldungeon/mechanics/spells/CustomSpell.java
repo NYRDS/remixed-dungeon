@@ -33,12 +33,20 @@ public class CustomSpell extends Spell {
         magicAffinity = StringsManager.maybeId(desc.rawget("magicAffinity").checkjstring());
         targetingType = desc.rawget("targetingType").checkjstring();
         duration      = (float) desc.rawget("duration").checkdouble();
+
+        level = (int) desc.rawget("level").checkdouble();
+        spellCost = (int) desc.rawget("spellCost").checkdouble();
+        castTime  = (float) desc.rawget("castTime").checkdouble();
     }
 
     @Override
     protected boolean cast(Char chr, int cell) {
         script.run("castOnCell", chr, cell);
-        return script.getResult().checkboolean();
+        boolean ret = script.getResult().checkboolean();
+        if(ret) {
+            castCallback(chr);
+        }
+        return ret;
     }
 
     @Override

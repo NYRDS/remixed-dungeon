@@ -17,9 +17,12 @@ return spell.init{
             imageFile     = "spellsIcons/necromancy.png",
             name          = "Exhumation",
             info          = [[Opening  tomb is sinister act by itself, but not enough for someone serving Death itself.
-Performer of this Dark Ritual have a great chance to subdue poor soul of one lying here.]],
+Performer of this Dark Ritual have a great (chance will grow with performer mastery ) chance to subdue poor soul of one lying here.]],
             magicAffinity = "Necromancy",
-            targetingType = "cell"
+            targetingType = "cell",
+            level         = 2,
+            castTime      = 2,
+            spellCost     = 10
         }
     end,
     castOnCell = function(self, spell, chr, cell)
@@ -40,15 +43,18 @@ Performer of this Dark Ritual have a great chance to subdue poor soul of one lyi
             for k,v in pairs(cellToCheck) do
                 local soul = RPD.Actor:findChar(v)
                 if soul ~=nil and soul:getMobClassName() == "Wraith" then
-                    RPD.Mob:makePet(soul, chr)
-                    soul:say("i will obey you")
+                    if math.random() > 1/(chr:magicLvl() + 1 ) then
+                        RPD.Mob:makePet(soul, chr)
+                        soul:say("i will obey you")
+                    end
                 end
             end
 
             return true
-        else
-            RPD.glog("There is no grave here to perform an Exhumation")
-            return false
         end
+
+        RPD.glog("There is no grave here to perform an Exhumation")
+        return false
+
     end
 }

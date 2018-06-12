@@ -979,9 +979,9 @@ public abstract class Mob extends Char {
 		chr.getSprite().move(chr.getPos(), curPos);
 		chr.move(curPos);
 
-		chr.spend(1 / chr.speed());
-		//chr.busy()
-		spend(1);
+		float timeToSwap = 1 / chr.speed();
+		chr.spend(timeToSwap);
+		spend(timeToSwap);
 		setState(WANDERING);
 	}
 

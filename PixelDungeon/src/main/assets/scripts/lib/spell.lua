@@ -25,7 +25,10 @@ function spell.defaultDesc()
         info          = "unconfigured custom spell",
         magicAffinity = "Common",
         targetingType = "self",
-        duration      = 10
+        duration      = 10,
+        spellCost     = 5,
+        level         = 1,
+        castTime      = 1
     }
 end
 

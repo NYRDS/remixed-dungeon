@@ -15,9 +15,13 @@ return spell.init{
             image         = 1,
             imageFile     = "spellsIcons/necromancy.png",
             name          = "Dark Sacrifice",
-            info          = "Sacrifice loyal minion to cause explosion, explosion area depend on servant remaining health and your skill level",
+            info          = [[Sacrifice loyal minion to cause explosion.
+Explosion area depend on servant remaining health and your skill level]],
             magicAffinity = "Necromancy",
-            targetingType = "cell"
+            targetingType = "cell",
+            level         = 3,
+            spellCost     = 3,
+            castTime      = 0.5
         }
     end,
     castOnCell = function(self, spell, chr, cell)
