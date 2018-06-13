@@ -26,9 +26,8 @@ return spell.init{
         return {
             image         = 2,
             imageFile     = "spellsIcons/necromancy.png",
-            name          = "Raise Dead",
-            info          = [[Attempt to raise latest slain creature.
- When using this dark art remember: almost any creature can be raised, but not everyone will is easy to bend]],
+            name          = "RaiseDead_Name",
+            info          = "RaiseDead_Info",
             magicAffinity = "Necromancy",
             targetingType = "none",
             spellCost     = 15,
@@ -57,12 +56,12 @@ return spell.init{
 
                 return true
             else
-                RPD.glog("Raise Dead failed because no free space nearby")
+                RPD.glog("RaiseDead_NoSpace")
                 return false
             end
         end
 
-        RPD.glog("You need to kill someone before attempt to raise it")
+        RPD.glog("RaiseDead_NoKill")
         return false
     end
 }

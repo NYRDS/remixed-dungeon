@@ -15,9 +15,8 @@ return spell.init{
         return {
             image         = 3,
             imageFile     = "spellsIcons/necromancy.png",
-            name          = "Exhumation",
-            info          = [[Opening  tomb is sinister act by itself, but not enough for someone serving Death itself.
-Performer of this Dark Ritual have a great (chance will grow with performer mastery ) chance to subdue poor soul of one lying here.]],
+            name          = "Exhumation_Name",
+            info          = "Exhumation_Info",
             magicAffinity = "Necromancy",
             targetingType = "cell",
             level         = 2,
@@ -31,7 +30,7 @@ Performer of this Dark Ritual have a great (chance will grow with performer mast
         local heap = level:getHeap(cell)
 
         if heap == nil then
-            RPD.glog("There is no grave here to perform an Exhumation")
+            RPD.glog("Exhumation_NoGrave")
             return false
         end
 
@@ -45,7 +44,7 @@ Performer of this Dark Ritual have a great (chance will grow with performer mast
                 if soul ~=nil and soul:getMobClassName() == "Wraith" then
                     if math.random() > 1/(chr:magicLvl() + 1 ) then
                         RPD.Mob:makePet(soul, chr)
-                        soul:say("i will obey you")
+                        soul:say("Exhumation_Ok")
                     end
                 end
             end
@@ -53,7 +52,7 @@ Performer of this Dark Ritual have a great (chance will grow with performer mast
             return true
         end
 
-        RPD.glog("There is no grave here to perform an Exhumation")
+        RPD.glog("Exhumation_NoGrave")
         return false
 
     end
