@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="DarkSacrifice_Name">Dark Sacrifice</string>
+    <string name="DarkSacrifice_Info">Sacrifice loyal minion to cause explosion. Explosion area depend on servant remaining health and your skill level</string>
+    <string name="DarkSacrifice_Ok">My life is yours!</string>
+    <string name="DarkSacrifice_Self">For the Scourge!</string>
+    <string name="DarkSacrifice_Resist">You have no power over me!</string>
+    <string name="DarkSacrifice_Hint">Select your loyal servant to sacrifice!</string>
+</resources>

@@ -14,9 +14,8 @@ return spell.init{
         return {
             image         = 1,
             imageFile     = "spellsIcons/necromancy.png",
-            name          = "Dark Sacrifice",
-            info          = [[Sacrifice loyal minion to cause explosion.
-Explosion area depend on servant remaining health and your skill level]],
+            name          = "DarkSacrifice_Name",
+            info          = "DarkSacrifice_Info",
             magicAffinity = "Necromancy",
             targetingType = "cell",
             level         = 3,
@@ -30,17 +29,17 @@ Explosion area depend on servant remaining health and your skill level]],
         local goodSacrifice = false
 
         if chr:getPets():contains(sacrifice) then
-            sacrifice:yell("My life is yours!")
+            sacrifice:yell("DarkSacrifice_Ok")
             goodSacrifice = true
         end
 
         if chr == sacrifice then
-            sacrifice:yell("For the Scourge!")
+            sacrifice:yell("DarkSacrifice_Self")
             goodSacrifice = true
         end
 
         if sacrifice ~= nil and goodSacrifice == false then
-            sacrifice:yell("You have no power over me!")
+            sacrifice:yell("DarkSacrifice_Resist")
         end
 
         if goodSacrifice then
@@ -50,7 +49,7 @@ Explosion area depend on servant remaining health and your skill level]],
            sacrifice:damage(sacrifice:hp(),chr)
            return true
         end
-        RPD.glog("Select your loyal servant to sacrifice")
+        RPD.glog("DarkSacrifice_Hint")
         return false
     end
 }

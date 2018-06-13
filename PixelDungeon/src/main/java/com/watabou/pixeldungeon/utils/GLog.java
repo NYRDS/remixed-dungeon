@@ -22,6 +22,7 @@ import android.util.Log;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.utils.Signal;
 
 import java.io.File;
@@ -93,6 +94,8 @@ public class GLog {
 		
 		if (args.length > 0) {
 			text = Utils.format( text, args );
+		} else {
+			text = StringsManager.maybeId(text);
 		}
 
 		if(text.isEmpty()) {
