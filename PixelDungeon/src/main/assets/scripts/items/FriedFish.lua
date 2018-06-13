@@ -15,15 +15,15 @@ return item.init{
         return {
             image     = 13,
             imageFile = "items/food.png",
-            name      = "fried fish",
-            info      = "Fried fish, looks tasty",
+            name      = "FriedFish_Name",
+            info      = "FriedFish_Info",
             stackable = true
         }
     end,
     actions = function() return {RPD.Actions.eat} end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.eat then
-            hero:eat(item,RPD.Buffs.Hunger.STARVING,"Fishy!")
+            hero:eat(item,RPD.Buffs.Hunger.STARVING,"FriedFish_Taste")
         end
     end,
     poison = function() return RPD.ItemFactory:itemByName("RottenFish") end

@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 15,
             imageFile = "items/food.png",
-            name      = "rotten fish",
-            info      = "Rotten fish, smells terrible",
+            name      = "RottenFish_Name",
+            info      = "RottenFish_Info",
             stackable = true
         }
     end,
@@ -24,7 +24,7 @@ return item.init{
     execute = function(self, item, hero, action)
         if action == RPD.Actions.eat then
             RPD.Buffs.Buff:affect(hero, RPD.Buffs.Poison):set(2*math.random(1, hero:lvl()))
-            hero:eat(item,RPD.Buffs.Hunger.HUNGRY / 4,"disgusting!")
+            hero:eat(item,RPD.Buffs.Hunger.HUNGRY / 4,"RottenFish_Taste")
         end
     end
 }

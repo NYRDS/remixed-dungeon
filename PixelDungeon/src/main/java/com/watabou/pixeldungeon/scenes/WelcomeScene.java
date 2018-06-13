@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class WelcomeScene extends PixelScene {
 
@@ -22,8 +21,6 @@ public class WelcomeScene extends PixelScene {
 	@Override
 	public void create() {
 		super.create();
-
-		long start = System.nanoTime();
 
 		String[] upds = {
 				Game.getVar(R.string.Welcome_Text),
@@ -139,11 +136,6 @@ public class WelcomeScene extends PixelScene {
 		Archs archs = new Archs();
 		archs.setSize(Camera.main.width, Camera.main.height);
 		addToBack(archs);
-
-		long end = System.nanoTime();
-
-		GLog.i("Time: %5.3f", (end-start)/100000.f);
-
 
 		fadeIn();
 	}

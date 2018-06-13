@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 14,
             imageFile = "items/food.png",
-            name      = "frozen fish",
-            info      = "Frozen fish, looks like it alive, but frozen",
+            name      = "FrozenFish_Name",
+            info      = "FrozenFish_Info",
             stackable = true
         }
     end,
