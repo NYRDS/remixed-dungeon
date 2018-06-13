@@ -134,6 +134,9 @@ public class Iap {
 
 
     public boolean checkPurchase(String item) {
+	    if (mInventory == null) {
+	        return false;
+        }
         Purchase check = mInventory.getPurchase(item.toLowerCase(Locale.ROOT));
 	    return check != null && verifyDeveloperPayload(check);
 
