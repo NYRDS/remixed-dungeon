@@ -416,4 +416,13 @@
     - Realtime!(still very experimental) mode now available and persistent per game session\n
     </string>
 
+    <string name="Welcome_Text_28_3">
+    remix.28.3\n
+    - New Necromancer abilities:\n
+    -- Dark Sacrifice\n
+    -- Exhumation\n
+    -- Raise Dead\n
+    - Modding:\n
+    -- Moddable Spells\n
+    </string>
 </resources>
