@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="DarkSacrifice_Name">Темная Жертва</string>
+    <string name="DarkSacrifice_Info">Пожертвуй своим верным прислужником чтобы устроить взрыв. Сила взрыва зависит от оставшейся жизненной силы слуги и твоего мастерства.</string>
+    <string name="DarkSacrifice_Ok">Жизнь за тебя!</string>
+    <string name="DarkSacrifice_Self">За Плеть!</string>
+    <string name="DarkSacrifice_Resist">У тебя нет власти надо мной!</string>
+    <string name="DarkSacrifice_Hint">Выбери жертву среди своих слуг!</string>
+
+    <string name="Exhumation_Name">Эксгумация</string>
+    <string name="Exhumation_Info">Вскрытие могил зловеще само по себе, однко для слуг самой Смерти этого мало.
+Исполнитель этого Темного Ритуала имеет отличный шанс (растущий с уровнем мастерства) подчинить бедную душу лежащего здесь.</string>
+    <string name="Exhumation_NoGrave">Здесь нет могилы чтобы её вскрыть.</string>
+    <string name="Exhumation_Ok">Я подчиняюсь.</string>
+
+    <string name="RaiseDead_Name">Поднять мертвеца</string>
+    <string name="RaiseDead_Info">Попытка поднять недавно (Ритуал требует только свежайщий материал) убитое существо. При использовании этого темного искуства не забывайте: почти любое существо можно поднять из мертвых, но далеко не всех можно подчинить своей воле.</string>
+    <string name="RaiseDead_NoSpace">Поднятие мертвеца не удалось потому что здесь нет свобдного места.</string>
+    <string name="RaiseDead_NoKill">Вам нужно сначала убить кого-то, прежде чем пытаться его поднять</string>
+
+    <string name="RawFish_Name">сырая рыба</string>
+    <string name="RawFish_Info">Сырая рыба, ешьте на свой страх и риск</string>
+    <string name="RawFish_Taste">Рыбненько!</string>
+
+    <string name="FrozenFish_Name">замороженная рыба</string>
+    <string name="FrozenFish_Info">Замороженная рыба, выглядит как живая, но замороженная.</string>
+
+    <string name="FriedFish_Name">жареная рыба</string>
+    <string name="FriedFish_Info">Жареная рыба, выглядит аппетитно</string>
+    <string name="FriedFish_Taste">Вкуснечка!</string>
+
+    <string name="RottenFish_Name">тухлая рыба</string>
+    <string name="RottenFish_Info">Тухлая рыба, воняет ужасно.</string>
+    <string name="RottenFish_Taste">Отвратительно!</string>
+</resources>

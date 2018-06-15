@@ -16,7 +16,7 @@
     <string name="WndPlayGames_BackupProgress">Criar backup do progresso do jogo</string>
     <string name="WndPlayGames_RestoreProgress">Restaurar progresso do jogo</string>
     <string name="WndPlayGames_WorkInCloud">Trabalhando em Cloud... Por favor aguarde.</string>
-    <string name="StartScene_UnlockGnoll">Para desbloquear esta classe você deve persuadir o sacerdote da cidade a curar o Gnoll Brutal</string>
+    <string name="StartScene_UnlockGnoll">Para desbloquear esta classe você deve persuadir o padre da cidade a curar o Gnoll Brutamonte</string>
     <string name="WndPriest_Heal_Minions">Cura todos os seus servos - apenas %d de ouro!</string>
     <string name="Badges_GnollUnlocked">Gnoll desbloqueado</string>
 

@@ -127,7 +127,7 @@
   <string name="WndGame_Start">Начать Новую Игру</string>
   <string name="WndGame_menu">Главное Меню</string>
   <string name="WndGame_Exit">Покинуть Pixel Dungeon</string>
-  <string name="WndGame_Return">Вернутся в Игру</string>
+  <string name="WndGame_Return">Вернуться в Игру</string>
   <string name="WndGame_Save">Сохранить</string>
   <string name="WndGame_Load">Загрузить</string>
   <!--STRINGS OF WndHero CLASS-->
