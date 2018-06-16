@@ -69,7 +69,7 @@ public class Toolbar extends Component {
     private ArrayList<QuickslotTool> slots = new ArrayList<>();
     final private Hero hero;
 
-    public Toolbar(final Hero hero, float maxWidth) {
+    public Toolbar(final Hero hero) {
         super();
 
         this.hero = hero;
