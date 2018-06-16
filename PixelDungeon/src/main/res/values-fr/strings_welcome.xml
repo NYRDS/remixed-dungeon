@@ -48,4 +48,14 @@ remix.27.3\n
 -- Option d\'orientation de l\'affichage\n
 - Limite du temps de mouvement persiste maintenant dans l\'état du jeu\n
 - Mode temps réel ! (encore très expérimentale) à présent disponible et persistant durant une partie\n</string>
+  <string name="Welcome_Text_28_3">
+remix.28.3\n
+- Nouvelles capacités du Nécromancier :\n
+* Sacrifice macabre\n
+* Exhumation\n
+* Réveil des morts\n
+- Poisson frit, gelé, pourri et en sashimi\n
+- Modding:\n
+* Sorts peuvent être modifiés\n
+* Objets peuvent être modifiés</string>
 </resources>

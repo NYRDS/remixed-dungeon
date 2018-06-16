@@ -1,3 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <string name="DarkSacrifice_Name">Темна жертва</string>
+    <string name="Exhumation_Name">Ексгумація</string>
+    <string name="RaiseDead_Name">Підняття мерця</string>
+    <string name="RawFish_Name">сира риба</string>
+    <string name="RawFish_Info">Сира риба, їж на свій ризик</string>
+    <string name="RawFish_Taste">Рибка!</string>
+
+    <string name="FrozenFish_Name">морожена риба</string>
+    <string name="FrozenFish_Info">Морожена риба, виглядає як жива, але крижана</string>
+
+    <string name="FriedFish_Name">смажена риба</string>
+    <string name="FriedFish_Info">Смажена риба, виглядає апетитно</string>
+    <string name="FriedFish_Taste">Смачно!</string>
+
+    <string name="RottenFish_Name">зіпсована риба</string>
+    <string name="RottenFish_Info">Зіпсована риба, тхне неймовірно</string>
+    <string name="RottenFish_Taste">Гидота!</string>
+</resources>

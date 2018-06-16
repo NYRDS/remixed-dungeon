@@ -12,4 +12,6 @@
     <string name="WndSettings_InGameUiSettings">Налаштування інтерфейсу</string>
     <string name="WndSettings_GameplaySettings">Ігровий процес</string>
     <string name="WndPremiumSettings_marble">мармуровий</string>
-    </resources>
+    <string name="QuickSlot_SelectSlot">Обери слот швидкого доступу для нього</string>
+
+</resources>

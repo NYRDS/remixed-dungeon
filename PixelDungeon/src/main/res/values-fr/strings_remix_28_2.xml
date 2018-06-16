@@ -9,9 +9,9 @@
     <string name="WndSettings_UiSettings">Paramètres de l\'interface</string>
     <string name="WndSettings_ActionButtonSize">Taille des bouton d\'action</string>
     <string name="WndSettings_Handedness">Orientation</string>
-    <string name="WndSettings_InGameUiSettings">
-Paramètres de l\'interface
-</string>
-    <string name="WndSettings_GameplaySettings">Jouabilité</string>
+    <string name="WndSettings_InGameUiSettings">Paramètres d\'affichage</string>
+    <string name="WndSettings_GameplaySettings">Style de jeu</string>
     <string name="WndPremiumSettings_marble">marbre</string>
-    </resources>
+    <string name="QuickSlot_SelectSlot">Choisissez un raccourci</string>
+
+</resources>
