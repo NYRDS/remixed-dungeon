@@ -1055,7 +1055,7 @@ public class IabHelper {
                     RESPONSE_GET_SKU_DETAILS_LIST);
 
             for (String thisResponse : responseList) {
-                SkuDetails d = new SkuDetails(itemType, thisResponse);
+                SkuDetails d = new SkuDetails(thisResponse);
                 logDebug("Got sku details: " + d);
                 inv.addSkuDetails(d);
             }
