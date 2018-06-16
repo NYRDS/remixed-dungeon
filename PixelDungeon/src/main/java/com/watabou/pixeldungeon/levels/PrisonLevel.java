@@ -37,7 +37,6 @@ import com.watabou.utils.Random;
 
 public class PrisonLevel extends RegularLevel {
 
-	private static final String NECROMACNER_SPAWNED = "necromancerSpawned";
 	private boolean necromancerSpawned = false;
 
 	{
