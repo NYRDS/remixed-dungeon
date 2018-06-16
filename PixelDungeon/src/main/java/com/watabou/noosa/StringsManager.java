@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.os.Build;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
@@ -160,7 +161,11 @@ public class StringsManager {
 
 		GLog.i("context locale: %s -> %s", config.locale, locale);
 
-		config.locale = locale;
+		if(Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
+			config.locale = locale;
+		} else {
+			config.setLocale(locale);
+		}
 		getContext().getResources().updateConfiguration(config,
 				getContext().getResources().getDisplayMetrics());
 
