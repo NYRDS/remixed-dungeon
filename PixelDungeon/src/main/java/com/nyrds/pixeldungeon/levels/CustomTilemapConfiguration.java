@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.android.util.JsonHelper;
 import com.watabou.pixeldungeon.levels.Terrain;
-
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
