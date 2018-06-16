@@ -29,8 +29,7 @@ public final class ShadowCaster {
 	private static int limits[];
 	
 	private static boolean[] losBlocking;
-	private static boolean[] fieldOfView;
-	
+
 	private static int[][] rounding;
 	static {
 		rounding = new int[MAX_DISTANCE+1][];
@@ -50,8 +49,7 @@ public final class ShadowCaster {
 		
 		distance = ShadowCaster.distance = Math.min(distance, MAX_DISTANCE);
 		limits = rounding[distance];
-		
-		ShadowCaster.fieldOfView = fieldOfView;
+
 		Arrays.fill( fieldOfView, false );
 		fieldOfView[y * Dungeon.level.getWidth() + x] = true;
 		
@@ -89,12 +87,6 @@ public final class ShadowCaster {
 					
 					int pos = y * w + x;
 
-					if (obs.isBlocked( a0 ) && obs.isBlocked( a1 ) && obs.isBlocked( a2 )) {
-
-					} else {
-						fieldOfView[pos] = true;
-					}
-
 					if (losBlocking[pos]) {
 						obs.add( a1, a2 );
 					}
@@ -109,7 +101,6 @@ public final class ShadowCaster {
 	private static final class Obstacles {
 		
 		private static int SIZE = (MAX_DISTANCE+1) * (MAX_DISTANCE+1) / 2;
-		private static float[] a1 = new float[SIZE];
 		private static float[] a2 = new float[SIZE];
 		
 		private int length;
@@ -128,23 +119,13 @@ public final class ShadowCaster {
 				
 			} else {
 				
-				a1[length] = o1;
 				a2[length++] = o2;
 				
 			}
 			
 		}
 		
-		public boolean isBlocked( float a ) {
-			for (int i=0; i < limit; i++) {
-				if (a >= a1[i] && a <= a2[i]) {
-					return true;
-				}
-			}
-			return false;
-		}
-		
-		public void nextRow() {
+		private void nextRow() {
 			limit = length;
 		}
 	}
