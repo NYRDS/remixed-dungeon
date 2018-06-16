@@ -24,7 +24,7 @@ public class Crypter {
 		try {
 			cipher = getCipher(Cipher.ENCRYPT_MODE);
 			byte[] encryptedBytes = cipher.doFinal(plainText.getBytes());
-			return android.util.Base64.encodeToString(encryptedBytes,
+			return Base64.encodeToString(encryptedBytes,
 					Base64.NO_WRAP|Base64.URL_SAFE);
 
 		} catch (Exception e) {
