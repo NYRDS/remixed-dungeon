@@ -37,7 +37,6 @@ public class LiquidFlame extends Blob {
 						cur[cell] += 10;
 						burn(cell);
 
-						int oldTile = Dungeon.level.map[cell];
 						Dungeon.level.set( cell, Terrain.EMBERS );
 
 						observe = true;
