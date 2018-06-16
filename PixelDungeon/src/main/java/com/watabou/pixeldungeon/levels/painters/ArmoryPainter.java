@@ -54,14 +54,14 @@ public class ArmoryPainter extends Painter {
 			do {
 				pos = room.random(level);
 			} while (level.map[pos] != Terrain.EMPTY || level.getHeap( pos ) != null);
-			level.drop( prize( level ), pos );
+			level.drop( prize(), pos );
 		}
 		
 		entrance.set( Room.Door.Type.LOCKED );
 		level.addItemToSpawn( new IronKey() );
 	}
 	
-	private static Item prize( Level level ) {
+	private static Item prize() {
 		return Generator.random( Random.oneOf( 
 			Generator.Category.ARMOR, 
 			Generator.Category.WEAPON
