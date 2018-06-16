@@ -2,13 +2,10 @@ package com.nyrds.android.util;
 
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndMessage;
 
 import java.io.File;
 import java.io.FileOutputStream;

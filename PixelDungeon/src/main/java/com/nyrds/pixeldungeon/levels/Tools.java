@@ -6,8 +6,6 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import java.util.ArrayList;
-
 /**
  * Created by mike on 27.02.2016.
  */
