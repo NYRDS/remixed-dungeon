@@ -11,7 +11,6 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
