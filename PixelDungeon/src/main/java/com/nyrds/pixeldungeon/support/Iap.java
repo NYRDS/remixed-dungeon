@@ -285,7 +285,6 @@ public class Iap {
     }
 
     private boolean verifyDeveloperPayload(Purchase p) {
-        String payload = p.getDeveloperPayload();
 
         return true;
     }
