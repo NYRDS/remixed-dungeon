@@ -29,12 +29,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoMob extends WndTitledMessage {
 
-	public WndInfoMob( Mob mob ) {
-		super( new MobTitle( mob ), desc( mob, true ) );
-	}
-
-	public WndInfoMob( Mob mob, int knowledge) {
-		super( new MobTitle( mob ), desc( mob, false) );
+	public WndInfoMob( Mob mob, boolean withStatus ) {
+		super( new MobTitle( mob ), desc( mob, withStatus ) );
 	}
 
 	private static String desc( Mob mob, boolean withStatus ) {

@@ -124,7 +124,7 @@ public class Library {
 		}
 
 		if(category.equals(MOB)) {
-			return new WndInfoMob(MobFactory.mobByName(clazz), getKnowledgeLevel(category, clazz));
+			return new WndInfoMob(MobFactory.mobByName(clazz), false);
 		}
 		throw new TrackedRuntimeException("unknown category: "+category);
 	}

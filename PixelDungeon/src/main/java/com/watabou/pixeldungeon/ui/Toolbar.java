@@ -252,7 +252,7 @@ public class Toolbar extends Component {
 
             Mob mob = (Mob) Actor.findChar(cell);
             if (mob != null) {
-                GameScene.show(new WndInfoMob(mob));
+                GameScene.show(new WndInfoMob(mob, true));
                 return;
             }
 
