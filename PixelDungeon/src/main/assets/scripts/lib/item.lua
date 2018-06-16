@@ -34,13 +34,14 @@ end
 
 function item.defaultDesc()
     return {
-        image      = 14,
-        imageFile  = "items/food.png",
-        name       = "smth",
-        info       = "smth",
-        stackable  = false,
-        upgradable = false,
-        identified = true
+        image         = 14,
+        imageFile     = "items/food.png",
+        name          = "smth",
+        info          = "smth",
+        stackable     = false,
+        upgradable    = false,
+        identified    = true,
+        defaultAction = "Item_ACThrow"
     }
 end
 

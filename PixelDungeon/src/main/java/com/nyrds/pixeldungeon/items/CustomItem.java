@@ -46,8 +46,9 @@ public class CustomItem extends Item {
         name         = StringsManager.maybeId(desc.rawget("name").checkjstring());
         info         = StringsManager.maybeId(desc.rawget("info").checkjstring());
         stackable    = desc.rawget("stackable").checkboolean();
-        upgradable   = desc.rawget("upgradable").checkboolean();
-        identified   = desc.rawget("identified").checkboolean();
+        upgradable    = desc.rawget("upgradable").checkboolean();
+        identified    = desc.rawget("identified").checkboolean();
+        defaultAction = desc.rawget("defaultAction").checkjstring();
     }
 
     @Override

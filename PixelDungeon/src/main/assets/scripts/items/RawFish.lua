@@ -16,7 +16,8 @@ return item.init{
             imageFile = "items/food.png",
             name      = "RawFish_Name",
             info      = "RawFish_Info",
-            stackable = true
+            stackable = true,
+            defaultAction = "Food_ACEat"
         }
     end,
     actions = function() return {RPD.Actions.eat} end,
