@@ -52,7 +52,7 @@ public class WndBlacksmith extends Window {
 	private static final String TXT_SELECT  = Game.getVar(R.string.WndBlacksmith_Select);
 	private static final String TXT_REFORGE = Game.getVar(R.string.WndBlacksmith_Reforge);
 	
-	public WndBlacksmith( Blacksmith troll, Hero hero ) {
+	public WndBlacksmith( Blacksmith troll ) {
 		
 		super();
 		

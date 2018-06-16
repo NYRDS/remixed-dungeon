@@ -135,7 +135,7 @@ public class Blacksmith extends NPC {
 			}
 		} else if (!Quest.reforged) {
 			
-			GameScene.show( new WndBlacksmith( this, hero ) );
+			GameScene.show( new WndBlacksmith( this ) );
 			
 		} else {
 			
