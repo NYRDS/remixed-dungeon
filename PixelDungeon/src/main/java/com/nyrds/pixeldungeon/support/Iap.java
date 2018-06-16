@@ -138,7 +138,7 @@ public class Iap {
 	        return false;
         }
         Purchase check = mInventory.getPurchase(item.toLowerCase(Locale.ROOT));
-	    return check != null && verifyDeveloperPayload(check);
+	    return check != null && verifyDeveloperPayload();
 
     }
 
@@ -246,7 +246,7 @@ public class Iap {
                                 return;
                             }
 
-                            if (!verifyDeveloperPayload(purchase)) {
+                            if (!verifyDeveloperPayload()) {
                                 complain("Error purchasing. Authenticity verification failed.");
                                 return;
                             }
@@ -284,7 +284,7 @@ public class Iap {
         }
     }
 
-    private boolean verifyDeveloperPayload(Purchase p) {
+    private boolean verifyDeveloperPayload() {
 
         return true;
     }

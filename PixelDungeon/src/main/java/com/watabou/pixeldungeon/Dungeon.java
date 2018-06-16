@@ -674,7 +674,7 @@ public class Dungeon {
         }
     }
 
-    private static void markActorsAsUnpassable(Hero ch, boolean[] visible) {
+    private static void markActorsAsUnpassable(boolean[] visible) {
         for (Actor actor : Actor.all()) {
             if (actor instanceof Char) {
                 int pos = ((Char) actor).getPos();
@@ -712,7 +712,7 @@ public class Dungeon {
             System.arraycopy(pass, 0, passable, 0, level.getLength());
         }
 
-        markActorsAsUnpassable(ch, visible);
+        markActorsAsUnpassable(visible);
 
         markObjects();
 
