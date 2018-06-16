@@ -20,8 +20,6 @@ public class CustomTilemapConfiguration {
 
 	static CustomTilemapConfiguration readConfig(String filename) {
 
-		JSONObject config = JsonHelper.readJsonFromAsset(filename);
-
 		CustomTilemapConfiguration ret = new CustomTilemapConfiguration();
 		//ret.tilemapConfiguration.put(Terrain.)
 		return ret;
