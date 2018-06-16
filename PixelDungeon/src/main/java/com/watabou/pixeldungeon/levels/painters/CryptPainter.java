@@ -60,10 +60,10 @@ public class CryptPainter extends Painter {
 			cy = room.top + 2;
 		}
 		
-		level.drop( prize( level ), cx + cy * level.getWidth() ).type = Type.TOMB;
+		level.drop( prize(), cx + cy * level.getWidth() ).type = Type.TOMB;
 	}
 	
-	private static Item prize( Level level ) {
+	private static Item prize() {
 		
 		Item prize = Generator.random( Generator.Category.ARMOR );
 
