@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -325,9 +324,7 @@ public class InterlevelScene extends PixelScene {
 			}
 			Dungeon.switchLevel(level, Dungeon.hero.getPos(), Dungeon.hero.levelId);
 
-			if(level instanceof PredesignedLevel) { // PredesignedLevel do not save mobs
-				Dungeon.hero.spawnPets(Dungeon.level);
-			}
+			Dungeon.hero.spawnPets(Dungeon.level);
 		}
 	}
 
