@@ -3,7 +3,7 @@
     <string name="DarkSacrifice_Name">Sacrifício das Trevas</string>
     <string name="DarkSacrifice_Info">Sacrifique um servo leal para causar uma explosão. A área de explosão dependerá da saúde restante do servo e do nível de sua habilidade.</string>
     <string name="DarkSacrifice_Ok">Minha vida é sua!</string>
-    <string name="DarkSacrifice_Self">Para o Açoite!</string>
+    <string name="DarkSacrifice_Self">Para o Flagelo!</string>
     <string name="DarkSacrifice_Resist">Você não tem poder sobre mim!</string>
     <string name="DarkSacrifice_Hint">Escolha seu servo leal para sacrificar!</string>
 
@@ -12,10 +12,10 @@
     <string name="Exhumation_NoGrave">Não há sepultura aqui para realizar uma Exumação.</string>
     <string name="Exhumation_Ok">Irei obedece-lo.</string>
 
-    <string name="RaiseDead_Name">Levantar dos Mortos</string>
-    <string name="RaiseDead_Info">Tentará levantar a última (Ritual requer material fresco) criatura morta. Ao usar esta arte das trevas, lembre-se: quase qualquer criatura pode ser criada, mas nem todos irão se curvar tão facilmente.</string>
-    <string name="RaiseDead_NoSpace">Levantar dos Mortos falhou porque não há espaço livre nas proximidades.</string>
-    <string name="RaiseDead_NoKill">Você precisa matar alguém antes de tentar levantá-lo.</string>
+    <string name="RaiseDead_Name">Ressuscitar Cadáver</string>
+    <string name="RaiseDead_Info">Tentará ressuscitar a última (o ritual requer material fresco) criatura morta. Ao usar esta arte das trevas, lembre-se: quase qualquer criatura pode ser ressuscitada, mas nem todos irão obedece-lo tão facilmente.</string>
+    <string name="RaiseDead_NoSpace">Ressuscitar Cadáver falhou porque não há espaço livre nas proximidades.</string>
+    <string name="RaiseDead_NoKill">Você precisa matar alguém antes de tentar ressuscita-lo.</string>
 
     <string name="RawFish_Name">peixe cru</string>
     <string name="RawFish_Info">Peixe cru, coma por sua conta e risco</string>
