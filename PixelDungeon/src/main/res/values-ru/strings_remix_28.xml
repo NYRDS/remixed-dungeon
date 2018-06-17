@@ -18,7 +18,7 @@
     <string name="WndPlayGames_WorkInCloud">Работаем с облаком... Подождите минутку.</string>
     <string name="StartScene_UnlockGnoll">Чтобы разблокировать этот класс, вам нужно убедить городского священика подлатать Гнолла-Громилу</string>
     <string name="WndPriest_Heal_Minions">Вылечить всех миньонов - всего %d золота!</string>
-    <string name="Badges_GnollUnlocked">Gnoll разблокирован</string>
+    <string name="Badges_GnollUnlocked">Гнолл разблокирован</string>
 
     <string-array name="HeroClass_GnollPerks">
         <item>Гноллы стартуют с 15 очками силы</item>

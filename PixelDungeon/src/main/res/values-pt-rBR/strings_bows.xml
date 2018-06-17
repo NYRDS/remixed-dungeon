@@ -43,7 +43,7 @@
   <string name="PoisonArrow_Info">Uma gota de um veneno mortal brilha na ponta da flecha.</string>
   <string name="PoisonArrow_Gender">feminino</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
-  <string name="ParalysisArrow_Name">arco paralisante</string>
+  <string name="ParalysisArrow_Name">flecha paralisante</string>
   <string name="ParalysisArrow_Info">Esta flecha é revestida com curare, um veneno paralisante.</string>
   <string name="ParalysisArrow_Gender">feminino</string>
   <!--STRINGS OF FrostArrow CLASS-->
