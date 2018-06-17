@@ -27,7 +27,6 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	private static final float TIME_TO_USE = 1;
 
 	private static final String AC_FUSE             = "ChaosCrystal_Fuse";
-	private static final String TXT_SELECT_FOR_FUSE = Game.getVar(R.string.ChaosCrystal_SelectForFuse);
 
 	private static final int CHAOS_CRYSTALL_IMAGE = 9;
 	private static final float TIME_TO_FUSE = 10;
@@ -125,7 +124,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	};
 
 	private void fuse(Hero hero) {
-		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, TXT_SELECT_FOR_FUSE);
+		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
 		hero.getSprite().operate(hero.getPos());
 	}
 
