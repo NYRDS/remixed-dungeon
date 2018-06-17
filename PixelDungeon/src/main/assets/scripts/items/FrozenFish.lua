@@ -17,7 +17,8 @@ return item.init{
             imageFile = "items/food.png",
             name      = "FrozenFish_Name",
             info      = "FrozenFish_Info",
-            stackable = true
+            stackable = true,
+            price     = 15
         }
     end,
     onThrow = function(self, item, cell)

@@ -41,7 +41,8 @@ function item.defaultDesc()
         stackable     = false,
         upgradable    = false,
         identified    = true,
-        defaultAction = "Item_ACThrow"
+        defaultAction = "Item_ACThrow",
+        price         = 0
     }
 end
 

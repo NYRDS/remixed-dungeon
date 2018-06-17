@@ -17,7 +17,8 @@ return item.init{
             name      = "RawFish_Name",
             info      = "RawFish_Info",
             stackable = true,
-            defaultAction = "Food_ACEat"
+            defaultAction = "Food_ACEat",
+            price         = 7
         }
     end,
     actions = function() return {RPD.Actions.eat} end,

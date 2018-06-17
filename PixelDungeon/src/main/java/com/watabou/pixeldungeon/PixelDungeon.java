@@ -527,7 +527,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static Boolean handedness() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_HANDEDNESS, false);
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_HANDEDNESS, true);
 	}
 
 	public static void handedness(Boolean left) {

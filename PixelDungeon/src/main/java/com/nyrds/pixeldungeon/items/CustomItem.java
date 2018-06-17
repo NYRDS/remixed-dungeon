@@ -26,6 +26,7 @@ public class CustomItem extends Item {
     private boolean identified;
 
     private LuaScript script;
+    private int price;
 
     public CustomItem() {
     }
@@ -49,6 +50,7 @@ public class CustomItem extends Item {
         upgradable    = desc.rawget("upgradable").checkboolean();
         identified    = desc.rawget("identified").checkboolean();
         defaultAction = desc.rawget("defaultAction").checkjstring();
+        price         = desc.rawget("price").checkint();
     }
 
     @Override
@@ -127,5 +129,10 @@ public class CustomItem extends Item {
     @Override
     public String getClassName() {
         return scriptFile;
+    }
+
+    @Override
+    public int price() {
+        return price * quantity();
     }
 }
