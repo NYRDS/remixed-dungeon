@@ -13,7 +13,6 @@ import java.util.zip.ZipInputStream;
 
 public class Unzip {
 
-	private static final String TAG         = "Unzip";
 	private static final int    BUFFER_SIZE = 4096;
 
 	private static void ensureDir(String dir) {

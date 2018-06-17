@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.android.util.JsonHelper;
 import com.watabou.pixeldungeon.levels.Terrain;
-
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,8 +16,6 @@ public class CustomTilemapConfiguration {
 	Map<Terrain,ArrayList<tileProperties>> tilemapConfiguration = new HashMap<>();
 
 	static CustomTilemapConfiguration readConfig(String filename) {
-
-		JSONObject config = JsonHelper.readJsonFromAsset(filename);
 
 		CustomTilemapConfiguration ret = new CustomTilemapConfiguration();
 		//ret.tilemapConfiguration.put(Terrain.)
