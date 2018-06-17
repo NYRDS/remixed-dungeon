@@ -612,7 +612,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (Mob mob : bundle.getCollection(MOBS, Mob.class)) {
-			if (mob != null && mob.getPos() != INVALID_CELL) {
+			if (mob != null && cellValid(mob.getPos())) {
 				mobs.add(mob);
 			}
 		}
