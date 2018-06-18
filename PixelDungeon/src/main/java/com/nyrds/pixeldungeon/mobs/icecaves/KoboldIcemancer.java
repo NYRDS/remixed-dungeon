@@ -20,9 +20,6 @@ import com.watabou.utils.Random;
 
 public class KoboldIcemancer extends Mob implements IZapper {
 
-	private static final String TXT_ICEBOLT_KILLED = Game
-			.getVar(R.string.KoboldIcemancer_Killed);
-
 	public KoboldIcemancer() {
 		hp(ht(70));
 		defenseSkill = 18;
@@ -69,7 +66,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 			if (!enemy.isAlive() && enemy == Dungeon.hero) {
 				Dungeon.fail(Utils.format(ResultDescriptions.MOB,
 						Utils.indefinite(getName()), Dungeon.depth));
-				GLog.n(TXT_ICEBOLT_KILLED, getName());
+				GLog.n(Game.getVar(R.string.KoboldIcemancer_Killed), getName());
 			}
 			return true;
 		}
