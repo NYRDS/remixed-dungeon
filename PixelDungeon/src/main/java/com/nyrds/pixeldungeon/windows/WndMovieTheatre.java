@@ -23,15 +23,6 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 
 public class WndMovieTheatre extends Window implements InterstitialPoint{
 
-	private static final String BTN_WATCH       = Game.getVar(R.string.WndMovieTheatre_Watch);
-	private static final String BTN_NO          = Game.getVar(R.string.WndMovieTheatre_No);
-	private static final String TXT_BYE         = Game.getVar(R.string.WndMovieTheatre_Bye);
-	private static final String TXT_INSTRUCTION = Game.getVar(R.string.WndMovieTheatre_Instruction);
-	private static final String TXT_TITLE       = Game.getVar(R.string.WndMovieTheatre_Title);
-	private static final String TXT_THANK_YOU   = Game.getVar(R.string.WndMovieTheatre_Thank_You);
-	private static final String TXT_SORRY       = Game.getVar(R.string.WndMovieTheatre_Sorry);
-	private static final String TXT_OK       = Game.getVar(R.string.WndMovieTheatre_Ok);
-
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
 
@@ -45,11 +36,11 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite(new Gold()) );
-		titlebar.label( Utils.capitalize( TXT_TITLE ) );
+		titlebar.label( Utils.capitalize( Game.getVar(R.string.WndMovieTheatre_Title) ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		String instruction = Utils.format(TXT_INSTRUCTION, goldReward) + "\n\n" + Utils.format(Game.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit);
+		String instruction = Utils.format(Game.getVar(R.string.WndMovieTheatre_Instruction), goldReward) + "\n\n" + Utils.format(Game.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit);
 
 		Text message = PixelScene.createMultiline( instruction, GuiProperties.regularFontSize() );
 
@@ -57,7 +48,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
-		RedButton btnYes = new RedButton( BTN_WATCH ) {
+		RedButton btnYes = new RedButton( Game.getVar(R.string.WndMovieTheatre_Watch) ) {
 			@Override
 			protected void onClick() {
 				showAd( );
@@ -66,10 +57,10 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnYes );
 
-		RedButton btnNo = new RedButton( BTN_NO ) {
+		RedButton btnNo = new RedButton( Game.getVar(R.string.WndMovieTheatre_No) ) {
 			@Override
 			protected void onClick() {
-				serviceMan.say( TXT_BYE );
+				serviceMan.say( Game.getVar(R.string.WndMovieTheatre_Bye) );
 				hide();
 			}
 		};
@@ -96,15 +87,15 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 				Dungeon.hero.doOnNextAction = new Runnable() {
 					@Override
 					public void run() {
-						GameScene.show(new WndMessage(TXT_THANK_YOU) {
+						GameScene.show(new WndMessage(Game.getVar(R.string.WndMovieTheatre_Thank_You) ) {
 							@Override
 							public void hide() {
 								super.hide();
 								if(result) {
-									serviceMan.say(TXT_OK);
+									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
 									serviceMan.reward();
 								} else {
-									serviceMan.say(TXT_SORRY);
+									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
 								}
 
 								if (PixelDungeon.donated() == 0) {
