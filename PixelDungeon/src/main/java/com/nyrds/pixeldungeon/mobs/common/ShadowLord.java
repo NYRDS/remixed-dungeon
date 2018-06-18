@@ -38,9 +38,6 @@ public class ShadowLord extends Boss implements IZapper {
 
 	private static final String LEVELCREATED   = "levelCreated";
 
-	private static final String TXT_INTRO = Game.getVar(R.string.ShadowLord_Intro);
-	private static final String TXT_DENY = Game.getVar(R.string.ShadowLord_Death);
-
 	public ShadowLord() {
 		hp(ht(260));
 		defenseSkill = 40;
@@ -181,7 +178,7 @@ public class ShadowLord extends Boss implements IZapper {
 					spawnShadow();
 				}
 
-				yell(TXT_INTRO);
+				yell(Game.getVar(R.string.ShadowLord_Intro));
 			}
 		}
 
@@ -216,7 +213,7 @@ public class ShadowLord extends Boss implements IZapper {
 	@Override
 	public void die(Object cause) {
 		super.die(cause);
-		yell(TXT_DENY);
+		yell(Game.getVar(R.string.ShadowLord_Death));
 		Tools.makeEmptyLevel(Dungeon.level);
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}
