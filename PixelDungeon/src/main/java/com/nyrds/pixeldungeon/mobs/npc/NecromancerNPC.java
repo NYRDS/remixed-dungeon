@@ -70,7 +70,7 @@ public class NecromancerNPC extends ImmortalNPC {
 			SkeletonKey key = new SkeletonKey();
 
 			if (key.doPickUp( Dungeon.hero )) {
-				GLog.i( Hero.TXT_YOU_NOW_HAVE, key.name() );
+				GLog.i( Hero.getHeroYouNowHave(), key.name() );
 			} else {
 				Dungeon.level.drop( key, Dungeon.hero.getPos() ).sprite.drop();
 			}

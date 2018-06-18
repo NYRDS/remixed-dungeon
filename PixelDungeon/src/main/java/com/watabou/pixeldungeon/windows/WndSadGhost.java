@@ -86,7 +86,7 @@ public class WndSadGhost extends Window {
 		item.removeItemFrom(Dungeon.hero);
 
 		if (reward.doPickUp( Dungeon.hero )) {
-			GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
+			GLog.i( Hero.getHeroYouNowHave(), reward.name() );
 		} else {
 			Dungeon.level.drop( reward, ghost.getPos() ).sprite.drop();
 		}

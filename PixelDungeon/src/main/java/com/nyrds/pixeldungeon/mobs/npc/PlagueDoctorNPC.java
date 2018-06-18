@@ -38,7 +38,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 				reward.identify();
 
 				if (reward.doPickUp(Dungeon.hero)) {
-					GLog.i(Hero.TXT_YOU_NOW_HAVE, reward.name());
+					GLog.i(Hero.getHeroYouNowHave(), reward.name());
 				} else {
 					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
 				}
