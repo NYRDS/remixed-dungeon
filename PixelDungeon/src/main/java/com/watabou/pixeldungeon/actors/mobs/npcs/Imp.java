@@ -46,14 +46,7 @@ public class Imp extends NPC {
 	public Imp() {
 		spriteClass = ImpSprite.class;
 	}
-	
-	private static final String TXT_GOLEMS1	= Game.getVar(R.string.Imp_Golems1);
-	private static final String TXT_GOLEMS2	= Game.getVar(R.string.Imp_Golems2);
-	private static final String TXT_MONKS1	= Game.getVar(R.string.Imp_Monks1);
-	private static final String TXT_MONKS2	= Game.getVar(R.string.Imp_Monks2);	
-	private static final String TXT_CYA	    = Game.getVar(R.string.Imp_Cya);
-	private static final String TXT_HEY	    = Game.getVar(R.string.Imp_Hey);
-	
+
 	private boolean seenBefore = false;
 	
 	@Override
@@ -61,7 +54,7 @@ public class Imp extends NPC {
 		
 		if (!Quest.given && Dungeon.visible[getPos()]) {
 			if (!seenBefore) {
-				say( Utils.format( TXT_HEY, Dungeon.hero.className() ) );
+				say( Utils.format( Game.getVar(R.string.Imp_Hey), Dungeon.hero.className() ) );
 			}
 			seenBefore = true;
 		} else {
@@ -106,11 +99,11 @@ public class Imp extends NPC {
 			if (tokens != null && (tokens.quantity() >= 8 || (!Quest.alternative && tokens.quantity() >= 6))) {
 				GameScene.show( new WndImp( this, tokens ) );
 			} else {
-				tell( Quest.alternative ? TXT_MONKS2 : TXT_GOLEMS2, hero.className() );
+				tell( Quest.alternative ? Game.getVar(R.string.Imp_Monks2) : Game.getVar(R.string.Imp_Golems2), hero.className() );
 			}
 			
 		} else {
-			tell( Quest.alternative ? TXT_MONKS1 : TXT_GOLEMS1 );
+			tell( Quest.alternative ? Game.getVar(R.string.Imp_Monks1) : Game.getVar(R.string.Imp_Golems1) );
 			Quest.given = true;
 			Quest.completed = false;
 			
@@ -127,7 +120,7 @@ public class Imp extends NPC {
 	
 	public void flee() {
 		
-		say( Utils.format( TXT_CYA, Dungeon.hero.className() ) );
+		say( Utils.format( Game.getVar(R.string.Imp_Cya), Dungeon.hero.className() ) );
 		
 		destroy();
 		getSprite().die();
