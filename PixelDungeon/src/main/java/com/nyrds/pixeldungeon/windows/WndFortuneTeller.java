@@ -24,13 +24,6 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class WndFortuneTeller extends Window {
 
-	private static final String BTN_IDENTIFY     = Game.getVar(R.string.Wnd_Button_Yes);
-	private static final String BTN_NO          = Game.getVar(R.string.Wnd_Button_No);
-	private static final String TXT_INSTRUCTION = Game.getVar(R.string.WndFortuneTeller_Instruction);
-	private static final String TXT_TITLE       = Game.getVar(R.string.WndFortuneTeller_Title);
-	private static final String TXT_NO_ITEM     = Game.getVar(R.string.WndFortuneTeller_No_Item);
-
-
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
 	private int GOLD_COST  = 50;
@@ -48,18 +41,18 @@ public class WndFortuneTeller extends Window {
 
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite(new Gold()) );
-		titlebar.label( Utils.capitalize( TXT_TITLE ) );
+		titlebar.label( Utils.capitalize( Game.getVar(R.string.WndFortuneTeller_Title)) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 
-		Text message = PixelScene.createMultiline( Utils.format(TXT_INSTRUCTION, GOLD_COST), GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline( Utils.format(Game.getVar(R.string.WndFortuneTeller_Instruction), GOLD_COST), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 
 		final FortuneTellerNPC npc = fortune;
 
-		RedButton btnYes = new RedButton( BTN_IDENTIFY + " ( "+ GOLD_COST + " )" ) {
+		RedButton btnYes = new RedButton( Game.getVar(R.string.Wnd_Button_Yes) + " ( "+ GOLD_COST + " )" ) {
 			@Override
 			protected void onClick() {
 				boolean hasTarget = false;
@@ -77,7 +70,7 @@ public class WndFortuneTeller extends Window {
 					Dungeon.gold(Dungeon.gold() - GOLD_COST);
 				} else{
 					hide();
-					GameScene.show(new WndQuest(npc, TXT_NO_ITEM));
+					GameScene.show(new WndQuest(npc, Game.getVar(R.string.WndFortuneTeller_No_Item)));
 				}
 			}
 		};
@@ -86,7 +79,7 @@ public class WndFortuneTeller extends Window {
 		add( btnYes );
 		btnYes.enable(!(Dungeon.gold()< GOLD_COST));
 
-		RedButton btnNo = new RedButton( BTN_NO ) {
+		RedButton btnNo = new RedButton( Game.getVar(R.string.Wnd_Button_No) ) {
 			@Override
 			protected void onClick() {
 				hide();
