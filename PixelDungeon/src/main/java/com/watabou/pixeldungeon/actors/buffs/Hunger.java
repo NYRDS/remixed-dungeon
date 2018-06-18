@@ -38,12 +38,7 @@ public class Hunger extends Buff implements Hero.Doom {
 	
 	public static final float HUNGRY	= 260f;
 	public static final float STARVING	= 360f;
-	
-	private static final String[] TXT_HUNGRY	= Game.getVars(R.array.Hunger_Hungry);
-	private static final String[] TXT_STARVING	= Game.getVars(R.array.Hunger_Starving);
-	
-	private static final String TXT_DEATH		= Game.getVar(R.string.Hunger_Death);
-	
+
 	private float level;
 
 	private static final String LEVEL	= "level";
@@ -69,7 +64,8 @@ public class Hunger extends Buff implements Hero.Doom {
 			if (isStarving()) {
 
 				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
-					
+
+					final String[] TXT_STARVING	= Game.getVars(R.array.Hunger_Starving);
 					GLog.n( TXT_STARVING[hero.getGender()] );
 					
 					if(hero.getDifficulty() >= 3) {
@@ -124,7 +120,7 @@ public class Hunger extends Buff implements Hero.Doom {
 					hero.interrupt();
 					
 				} else if (newLevel >= HUNGRY && level < HUNGRY) {
-					
+					final String[] TXT_HUNGRY = Game.getVars(R.array.Hunger_Hungry);
 					GLog.w( TXT_HUNGRY[hero.getGender()] );
 					statusUpdated = true;
 					
@@ -195,6 +191,6 @@ public class Hunger extends Buff implements Hero.Doom {
 		Badges.validateDeathFromHunger();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.HUNGER, Dungeon.depth ) );
-		GLog.n( TXT_DEATH );
+		GLog.n( Game.getVar(R.string.Hunger_Death) );
 	}
 }
