@@ -26,10 +26,7 @@ public class SummoningSpell extends Spell {
 
     private int summonLimit = 1;
 
-
-    private static final String TXT_MAXIMUM_PETS  	   = Game.getVar(R.string.Spells_SummonLimitReached);
-
-	protected String mobKind = "Rat";
+    protected String mobKind = "Rat";
 
     @Override
     public boolean canCast(@NonNull Char chr, boolean reallyCast) {
@@ -99,7 +96,7 @@ public class SummoningSpell extends Spell {
     }
 
     private String getLimitWarning(int limit){
-        return Utils.format(TXT_MAXIMUM_PETS, this.name(), limit);
+        return Utils.format(Game.getVar(R.string.Spells_SummonLimitReached), this.name(), limit);
     }
 
     public int getSummonLimit() {
