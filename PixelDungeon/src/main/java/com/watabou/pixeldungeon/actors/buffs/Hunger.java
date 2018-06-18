@@ -113,7 +113,7 @@ public class Hunger extends Buff implements Hero.Doom {
 				float newLevel = level + delta;
 				boolean statusUpdated = false;
 				if (newLevel >= STARVING) {
-					
+					final String[] TXT_STARVING = Game.getVars(R.array.Hunger_Starving);
 					GLog.n( TXT_STARVING[hero.getGender()] );
 					statusUpdated = true;
 					
