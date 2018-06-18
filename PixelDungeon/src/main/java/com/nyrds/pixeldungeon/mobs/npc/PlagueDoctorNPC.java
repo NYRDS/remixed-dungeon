@@ -17,12 +17,6 @@ import com.watabou.utils.Random;
 
 public class PlagueDoctorNPC extends ImmortalNPC {
 
-	private static final String TXT_QUEST = Game.getVar(R.string.PlagueDoctorNPC_Quest_Reminder);
-	private static final String TXT_QUEST_END = Game.getVar(R.string.PlagueDoctorNPC_Quest_End);
-	private static final String TXT_QUEST_START_M = Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Male);
-	private static final String TXT_QUEST_START_F = Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Female);
-	private static final String TXT_QUEST_COMPLETED = Game.getVar(R.string.PlagueDoctorNPC_After_Quest);
-
 	public PlagueDoctorNPC() {
 	}
 
@@ -30,7 +24,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo(getPos(), hero.getPos());
 		if (Quest.completed) {
-			GameScene.show(new WndQuest(this, TXT_QUEST_COMPLETED));
+			GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_After_Quest)));
 			return true;
 		}
 
@@ -49,15 +43,15 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
 				}
 				Quest.complete();
-				GameScene.show(new WndQuest(this, TXT_QUEST_END));
+				GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_Quest_End)));
 			} else {
-				GameScene.show(new WndQuest(this, (Utils.format(TXT_QUEST, 5)) ) );
+				GameScene.show(new WndQuest(this, (Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Reminder), 5)) ) );
 			}
 
 		} else {
-			String txtQuestStart = Utils.format(TXT_QUEST_START_M, 5);
+			String txtQuestStart = Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Male), 5);
 			if (Dungeon.hero.getGender() == Utils.FEMININE) {
-				txtQuestStart = Utils.format(TXT_QUEST_START_F, 5);
+				txtQuestStart = Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Female), 5);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.process(hero.getPos());
