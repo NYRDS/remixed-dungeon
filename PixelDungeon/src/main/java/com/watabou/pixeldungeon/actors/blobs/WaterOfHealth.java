@@ -37,8 +37,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class WaterOfHealth extends WellWater {
 
-	private static final String TXT_PROCCED = Game.getVar(R.string.WaterOfHealth_Procced);
-	
 	@Override
 	protected boolean affectHero( Hero hero ) {
 		
@@ -52,7 +50,7 @@ public class WaterOfHealth extends WellWater {
 
 		Dungeon.hero.interrupt();
 	
-		GLog.p( TXT_PROCCED );
+		GLog.p( Game.getVar(R.string.WaterOfHealth_Procced) );
 		
 		Journal.remove( Feature.WELL_OF_HEALTH.desc() );
 		

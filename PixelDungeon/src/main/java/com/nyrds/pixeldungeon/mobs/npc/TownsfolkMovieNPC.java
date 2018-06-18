@@ -8,15 +8,13 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class TownsfolkMovieNPC extends ImmortalNPC {
 
-	private static final String TXT_MESSAGE = Game.getVar(R.string.TownsfolkMovieNPC_Message);
-
 	public TownsfolkMovieNPC() {
 	}
 
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
-		GameScene.show(new WndQuest(this, TXT_MESSAGE));
+		GameScene.show(new WndQuest(this, Game.getVar(R.string.TownsfolkMovieNPC_Message)));
 		return true;
 	}
 }

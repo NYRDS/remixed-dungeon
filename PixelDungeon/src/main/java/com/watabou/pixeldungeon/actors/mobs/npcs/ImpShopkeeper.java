@@ -29,8 +29,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class ImpShopkeeper extends Shopkeeper {
 
-	private static final String TXT_GREETINGS = Game.getVar(R.string.ImpShopkeeper_Greetings);
-	
 	{
 		spriteClass = ImpSprite.class;
 	}
@@ -41,7 +39,7 @@ public class ImpShopkeeper extends Shopkeeper {
 	protected boolean act() {
 
 		if (!seenBefore && Dungeon.visible[getPos()]) {
-			say( Utils.format( TXT_GREETINGS ) );
+			say( Utils.format( Game.getVar(R.string.ImpShopkeeper_Greetings) ) );
 			seenBefore = true;
 		}
 		

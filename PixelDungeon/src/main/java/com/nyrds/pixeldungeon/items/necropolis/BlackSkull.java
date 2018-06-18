@@ -20,9 +20,6 @@ public class BlackSkull extends Artifact {
 
 	private static final String CHARGE_KEY      = "charge";
 	private static final String ACTIVATED_KEY   = "activated";
-	private static final String TXT_SKULL_ACTIVATED = Game.getVar(R.string.BlackSkull_Activated);
-	private static final String TXT_SKULL_DEACTIVATED = Game.getVar(R.string.BlackSkull_Deactivated);
-	private static final String TXT_SKULL_RESSURRECT = Game.getVar(R.string.BlackSkull_Ressurrect);
 
 	private boolean activated = false;
 
@@ -44,16 +41,16 @@ public class BlackSkull extends Artifact {
 		if (mob.canBePet()) {
 			if (activated) {
 				mob.ressurrect(hero);
-				GLog.w( TXT_SKULL_RESSURRECT );
+				GLog.w( Game.getVar(R.string.BlackSkull_Ressurrect) );
 				charge = charge - RESSURRECTION_COST;
 				if (charge <= 0) {
-					GLog.w( TXT_SKULL_DEACTIVATED );
+					GLog.w( Game.getVar(R.string.BlackSkull_Deactivated) );
 					activated = false;
 				}
 			} else {
 				charge++;
 				if (charge >= MAXIMUM_CHARGE) {
-					GLog.w( TXT_SKULL_ACTIVATED );
+					GLog.w( Game.getVar(R.string.BlackSkull_Activated) );
 					activated = true;
 				}
 			}

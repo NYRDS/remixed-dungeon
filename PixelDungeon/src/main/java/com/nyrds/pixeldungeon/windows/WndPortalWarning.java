@@ -16,16 +16,11 @@ public class WndPortalWarning extends Window {
 	private static final int WIDTH		= 100;
 	private static final int GAP		= 2;
 
-	private static final String TXT_TITLE = Game.getVar(R.string.WndPortal_Warning_Title);
-	private static final String TXT_INFO = Game.getVar(R.string.WndPortal_Warning_Info);
-	private static final String BTN_YES = Game.getVar(R.string.Wnd_Button_Yes);
-	private static final String BTN_NO = Game.getVar(R.string.Wnd_Button_No);
-
 	public WndPortalWarning() {
 		super();
 
 		//Title text
-		Text tfTitle = PixelScene.createMultiline(TXT_TITLE, GuiProperties.mediumTitleFontSize());
+		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndPortal_Warning_Title), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
@@ -33,7 +28,7 @@ public class WndPortalWarning extends Window {
 		add(tfTitle);
 
 		//Instruction text
-		Text message = PixelScene.createMultiline(TXT_INFO, GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline(Game.getVar(R.string.WndPortal_Warning_Info), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = tfTitle.bottom()+ GAP;
 		add( message );
@@ -42,7 +37,7 @@ public class WndPortalWarning extends Window {
 
 
 		//Yes Button
-		TextButton btnYes = new RedButton(BTN_YES) {
+		TextButton btnYes = new RedButton(Game.getVar(R.string.Wnd_Button_Yes)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -56,7 +51,7 @@ public class WndPortalWarning extends Window {
 		buttonY = (int) btnYes.bottom()+ GAP;
 
 		//No Button
-		TextButton btnNo = new RedButton(BTN_NO) {
+		TextButton btnNo = new RedButton(Game.getVar(R.string.Wnd_Button_No)) {
 			@Override
 			protected void onClick() {
 				super.onClick();

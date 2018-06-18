@@ -10,12 +10,6 @@ import com.watabou.utils.Random;
 
 public class HealerNPC extends ImmortalNPC {
 
-	private static final String TXT_MESSAGE1 = Game.getVar(R.string.HealerNPC_Message1);
-	private static final String TXT_MESSAGE2 = Game.getVar(R.string.HealerNPC_Message2);
-	private static final String TXT_MESSAGE3 = Game.getVar(R.string.HealerNPC_Message3);
-
-	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
-
 	public HealerNPC() {
 		movable = false;
 	}
@@ -33,6 +27,10 @@ public class HealerNPC extends ImmortalNPC {
 		Hero hero = Dungeon.hero;
 		if (Dungeon.level.distanceL2(hero.getPos(), getPos()) < 4) {
 			if(Random.Int(20) == 0) {
+				final String[] TXT_PHRASES = {Game.getVar(R.string.HealerNPC_Message1),
+						Game.getVar(R.string.HealerNPC_Message2),
+						Game.getVar(R.string.HealerNPC_Message3)
+				};
 				say(Random.element(TXT_PHRASES));
 			}
 		}

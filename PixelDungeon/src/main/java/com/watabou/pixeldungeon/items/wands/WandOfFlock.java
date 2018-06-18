@@ -106,8 +106,6 @@ public class WandOfFlock extends SimpleWand  {
 			spriteClass = SheepSprite.class;
 		}
 
-		private static final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
-		
 		public float lifespan;
 		
 		private boolean initialized = false;
@@ -133,6 +131,7 @@ public class WandOfFlock extends SimpleWand  {
 
 		@Override
 		public boolean interact(final Hero hero) {
+			final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
 			say( Random.element( QUOTES ) );
 			return false;
 		}

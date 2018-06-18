@@ -113,7 +113,7 @@ public class Stylus extends Item {
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
 		getCurUser().collect(inscribedScroll);
-		GLog.i(Hero.TXT_YOU_NOW_HAVE, inscribedScroll.name());	// Let know which scroll was inscribed
+		GLog.i(Hero.getHeroYouNowHave(), inscribedScroll.name());	// Let know which scroll was inscribed
 	}
 	
 	@Override

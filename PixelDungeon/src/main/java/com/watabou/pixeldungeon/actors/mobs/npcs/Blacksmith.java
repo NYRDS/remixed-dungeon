@@ -46,15 +46,6 @@ import java.util.Collection;
 
 public class Blacksmith extends NPC {
 
-	private static final String TXT_GOLD_1       = Game.getVar(R.string.Blacksmith_Gold1);
-	private static final String TXT_BLOOD_1      = Game.getVar(R.string.Blacksmith_Blood1);
-	private static final String TXT2             = Game.getVar(R.string.Blacksmith_Txt2);
-	private static final String TXT3             = Game.getVar(R.string.Blacksmith_Txt3);
-	private static final String TXT4             = Game.getVar(R.string.Blacksmith_Txt4);
-	private static final String TXT_COMPLETED    = Game.getVar(R.string.Blacksmith_Completed);
-	private static final String TXT_GET_LOST     = Game.getVar(R.string.Blacksmith_GetLost);
-	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.Blacksmith_LooksBetter);
-	
 	{
 		spriteClass = BlacksmithSprite.class;
 	}
@@ -73,7 +64,10 @@ public class Blacksmith extends NPC {
 		if (!Quest.given) {
 			
 			GameScene.show( new WndQuest( this, 
-				Quest.alternative ? TXT_BLOOD_1 : TXT_GOLD_1 ) {
+				Quest.alternative ?
+						Game.getVar(R.string.Blacksmith_Blood1) :
+						Game.getVar(R.string.Blacksmith_Gold1) )
+			{
 				
 				@Override
 				public void onBackPressed() {
@@ -84,7 +78,7 @@ public class Blacksmith extends NPC {
 					
 					Pickaxe pick = new Pickaxe();
 					if (pick.doPickUp( hero )) {
-						GLog.i( Hero.TXT_YOU_NOW_HAVE, pick.name() );
+						GLog.i( Hero.getHeroYouNowHave(), pick.name() );
 					} else {
 						Dungeon.level.drop( pick, hero.getPos() ).sprite.drop();
 					}
@@ -98,15 +92,15 @@ public class Blacksmith extends NPC {
 				
 				Pickaxe pick = hero.belongings.getItem( Pickaxe.class );
 				if (pick == null) {
-					tell( TXT2 );
+					tell( Game.getVar(R.string.Blacksmith_Txt2) );
 				} else if (!pick.bloodStained) {
-					tell( TXT4 );
+					tell( Game.getVar(R.string.Blacksmith_Txt4) );
 				} else {
 					if (pick.isEquipped( hero )) {
 						pick.doUnequip( hero, false );
 					}
 					pick.detach( hero.belongings.backpack );
-					tell( TXT_COMPLETED );
+					tell( Game.getVar(R.string.Blacksmith_Completed) );
 					
 					Quest.completed = true;
 					Quest.reforged = false;
@@ -117,16 +111,16 @@ public class Blacksmith extends NPC {
 				Pickaxe pick = hero.belongings.getItem( Pickaxe.class );
 				DarkGold gold = hero.belongings.getItem( DarkGold.class );
 				if (pick == null) {
-					tell( TXT2 );
+					tell( Game.getVar(R.string.Blacksmith_Txt2) );
 				} else if (gold == null || gold.quantity() < 15) {
-					tell( TXT3 );
+					tell( Game.getVar(R.string.Blacksmith_Txt3) );
 				} else {
 					if (pick.isEquipped( hero )) {
 						pick.doUnequip( hero, false );
 					}
 					pick.detach( hero.belongings.backpack );
 					gold.detachAll( hero.belongings.backpack );
-					tell( TXT_COMPLETED );
+					tell( Game.getVar(R.string.Blacksmith_Completed) );
 					
 					Quest.completed = true;
 					Quest.reforged = false;
@@ -139,7 +133,7 @@ public class Blacksmith extends NPC {
 			
 		} else {
 			
-			tell( TXT_GET_LOST );
+			tell( Game.getVar(R.string.Blacksmith_GetLost) );
 			
 		}
 		return true;
@@ -197,7 +191,7 @@ public class Blacksmith extends NPC {
 			((EquipableItem)first).doUnequip( Dungeon.hero, true );
 		}
 		first.upgrade();
-		GLog.p( TXT_LOOKS_BETTER, first.name() );
+		GLog.p( Game.getVar(R.string.Blacksmith_LooksBetter), first.name() );
 		Dungeon.hero.spendAndNext( 2f );
 		Badges.validateItemLevelAcquired( first );
 		

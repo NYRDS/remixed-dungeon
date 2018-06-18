@@ -40,8 +40,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class WaterOfAwareness extends WellWater {
 
-	private static final String TXT_PROCCED = Game.getVar(R.string.WaterOfAwareness_Procced);
-	
 	@Override
 	protected boolean affectHero( Hero hero ) {
 		
@@ -69,8 +67,8 @@ public class WaterOfAwareness extends WellWater {
 
 		Dungeon.hero.interrupt();
 	
-		GLog.p( TXT_PROCCED );
-		
+		GLog.p( Game.getVar(R.string.WaterOfAwareness_Procced) );
+
 		Journal.remove( Feature.WELL_OF_AWARENESS.desc() );
 		
 		return true;

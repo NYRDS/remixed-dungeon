@@ -27,8 +27,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class Frost extends FlavourBuff {
-
-	private static final String TXT_SHATTERS = Game.getVar(R.string.Frost_Shatter);
 	private static final float DURATION	= 5f;
 	
 	class freezeItem implements itemAction{
@@ -40,7 +38,7 @@ public class Frost extends FlavourBuff {
 
 		public String actionText(Item srcItem) {
 			if(srcItem instanceof Potion) {
-				return Utils.format(TXT_SHATTERS, srcItem.toString());
+				return Utils.format(Game.getVar(R.string.Frost_Shatter), srcItem.toString());
 			}
 			return null;
 		}

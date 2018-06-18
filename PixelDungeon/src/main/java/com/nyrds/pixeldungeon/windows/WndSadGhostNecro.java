@@ -15,11 +15,6 @@ import com.watabou.pixeldungeon.windows.IconTitle;
 
 public class WndSadGhostNecro extends Window {
 
-	private static final String TXT_TEXT = Game.getVar(R.string.WndSadGhostNecro_Text);
-	private static final String TXT_YES = Game.getVar(R.string.WndSadGhostNecro_Yes);
-	private static final String TXT_NO = Game.getVar(R.string.WndSadGhostNecro_No);
-	private static final String TXT_PERSUADED = Game.getVar(R.string.WndSadGhostNecro_Persuaded);
-	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
@@ -35,15 +30,15 @@ public class WndSadGhostNecro extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( TXT_TEXT, GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndSadGhostNecro_Text), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
-		RedButton btnWeapon = new RedButton( TXT_YES ) {
+		RedButton btnWeapon = new RedButton( Game.getVar(R.string.WndSadGhostNecro_Yes) ) {
 			@Override
 			protected void onClick() {
-				GLog.w( TXT_PERSUADED );
+				GLog.w( Game.getVar(R.string.WndSadGhostNecro_Persuaded) );
 				persuade = true;
 				hide();
 			}
@@ -51,7 +46,7 @@ public class WndSadGhostNecro extends Window {
 		btnWeapon.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
 		
-		RedButton btnArmor = new RedButton( TXT_NO ) {
+		RedButton btnArmor = new RedButton( Game.getVar(R.string.WndSadGhostNecro_No) ) {
 			@Override
 			protected void onClick() {
 				persuade = false;

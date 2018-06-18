@@ -23,15 +23,7 @@ import com.watabou.utils.Random;
 
 public class CagedKobold extends ImmortalNPC {
 
-	private static final String TXT_QUEST_START = Game.getVar(R.string.CagedKobold_Intro);
-	private static final String TXT_QUEST_END = Game.getVar(R.string.CagedKobold_Quest_End);
-	private static final String TXT_MESSAGE1 = Game.getVar(R.string.CagedKobold_Message1);
-	private static final String TXT_MESSAGE2 = Game.getVar(R.string.CagedKobold_Message2);
-	private static final String TXT_MESSAGE3 = Game.getVar(R.string.CagedKobold_Message3);
-
 	private static boolean spawned;
-
-	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
 
 	public CagedKobold() {
 		IMMUNITIES.add( Paralysis.class );
@@ -78,23 +70,29 @@ public class CagedKobold extends ImmortalNPC {
 				Item reward = new CandleOfMindVision();
 
 				if (reward.doPickUp( Dungeon.hero )) {
-					GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
+					GLog.i( Hero.getHeroYouNowHave(), reward.name() );
 				} else {
 					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
 				}
 				Quest.complete();
-				GameScene.show( new WndQuest( this, TXT_QUEST_END ) );
+				GameScene.show( new WndQuest( this, Game.getVar(R.string.CagedKobold_Quest_End) ) );
 
 				CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 				getSprite().killAndErase();
 				destroy();
 			} else {
+				final String TXT_MESSAGE1 = Game.getVar(R.string.CagedKobold_Message1);
+				final String TXT_MESSAGE2 = Game.getVar(R.string.CagedKobold_Message2);
+				final String TXT_MESSAGE3 = Game.getVar(R.string.CagedKobold_Message3);
+
+				final String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
+
 				int index = Random.Int(0, TXT_PHRASES.length);
 				say(TXT_PHRASES[index]);
 			}
 			
 		} else {
-			GameScene.show( new WndQuest( this, TXT_QUEST_START ) );
+			GameScene.show( new WndQuest( this, Game.getVar(R.string.CagedKobold_Intro)) );
 			Quest.given = true;
 			Quest.process();
 			Journal.add( Journal.Feature.CAGEDKOBOLD.desc() );

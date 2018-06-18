@@ -31,8 +31,6 @@ import com.watabou.utils.Random;
 
 public class Brute extends Mob {
 
-	private static final String TXT_ENRAGED = Game.getVar(R.string.Brute_Enraged);
-	
 	public Brute() {
 		spriteClass = BruteSprite.class;
 		
@@ -81,7 +79,7 @@ public class Brute extends Mob {
 			enraged = true;
 			spend( TICK );
 			if (Dungeon.visible[getPos()]) {
-				GLog.w( TXT_ENRAGED, getName() );
+				GLog.w( Game.getVar(R.string.Brute_Enraged), getName() );
 				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Brute_StaEnraged));
 			}
 		}

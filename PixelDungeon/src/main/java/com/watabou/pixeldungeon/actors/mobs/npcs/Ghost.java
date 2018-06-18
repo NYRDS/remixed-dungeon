@@ -66,11 +66,6 @@ public class Ghost extends NPC {
 		
 		setState(WANDERING);
 	}
-	
-	private static final String TXT_ROSE1 = Game.getVar(R.string.Ghost_Rose1);
-	private static final String TXT_ROSE2 = Game.getVar(R.string.Ghost_Rose2);
-	private static final String TXT_RAT1  = Game.getVar(R.string.Ghost_Rat1);
-	private static final String TXT_RAT2  = Game.getVar(R.string.Ghost_Rat2);
 
 	private static final String INTRODUCED = "introduced";
 	private static final String PERSUADE = "persuade";
@@ -148,7 +143,7 @@ public class Ghost extends NPC {
 			if (persuade || item != null) {
 				GameScene.show( new WndSadGhost( this, item ) );
 			} else {
-				GameScene.show( new WndQuest( this, Quest.alternative ? TXT_RAT2 : TXT_ROSE2 ) );
+				GameScene.show( new WndQuest( this, Quest.alternative ? Game.getVar(R.string.Ghost_Rat2): Game.getVar(R.string.Ghost_Rose2) ) );
 				
 				int newPos = -1;
 				for (int i=0; i < 10; i++) {
@@ -169,7 +164,7 @@ public class Ghost extends NPC {
 			}
 			
 		} else {
-			GameScene.show( new WndQuest( this, Quest.alternative ? TXT_RAT1 : TXT_ROSE1 ) );
+			GameScene.show( new WndQuest( this, Quest.alternative ? Game.getVar(R.string.Ghost_Rat1): Game.getVar(R.string.Ghost_Rose1) ) );
 			Quest.given = true;
 			
 			Journal.add( Journal.Feature.GHOST.desc() );

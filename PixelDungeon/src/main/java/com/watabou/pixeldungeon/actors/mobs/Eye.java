@@ -41,28 +41,26 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Eye extends Mob {
-	
-	private static final String TXT_DEATHGAZE_KILLED = Game.getVar(R.string.Eye_Kill);
-	
+
 	public Eye() {
 		spriteClass = EyeSprite.class;
-		
+
 		hp(ht(100));
 		defenseSkill = 20;
 
-		
+
 		exp = 13;
 		maxLvl = 25;
-		
+
 		flying = true;
-		
+
 		loot = new Dewdrop();
 		lootChance = 0.5f;
-		
+
 		RESISTANCES.add( WandOfDisintegration.class );
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( Leech.class );
-		
+
 		IMMUNITIES.add( Terror.class );
 	}
 
@@ -146,7 +144,7 @@ public class Eye extends Mob {
 				
 				if (!ch.isAlive() && ch == Dungeon.hero) {
 					Dungeon.fail( Utils.format( ResultDescriptions.MOB, Utils.indefinite( getName() ), Dungeon.depth ) );
-					GLog.n( TXT_DEATHGAZE_KILLED, getName() );
+					GLog.n( Game.getVar(R.string.Eye_Kill), getName() );
 				}
 			} else {
 				ch.getSprite().showStatus( CharSprite.NEUTRAL,  ch.defenseVerb() );

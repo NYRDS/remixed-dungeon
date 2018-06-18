@@ -69,12 +69,7 @@ public class WandMaker extends NPC {
 	{	
 		spriteClass = WandmakerSprite.class;
 	}
-	
-	private static final String TXT_BERRY1 = Game.getVar(R.string.WandMaker_Berry1);
-	private static final String TXT_BERRY2 = Game.getVar(R.string.WandMaker_Berry2);
-	private static final String TXT_DUST1  = Game.getVar(R.string.WandMaker_Dust1);
-	private static final String TXT_DUST2  = Game.getVar(R.string.WandMaker_Dust2);
-	
+
 	@Override
 	protected boolean act() {
 		throwItem();
@@ -111,11 +106,11 @@ public class WandMaker extends NPC {
 			if (item != null) {
 				GameScene.show( new WndWandmaker( this, item ) );
 			} else {
-				tell( Quest.alternative ? TXT_DUST2 : TXT_BERRY2, hero.className() );
+				tell( Quest.alternative ? Game.getVar(R.string.WandMaker_Dust2) : Game.getVar(R.string.WandMaker_Berry2), hero.className() );
 			}
 			
 		} else {
-			tell( Quest.alternative ? TXT_DUST1 : TXT_BERRY1 );
+			tell( Quest.alternative ? Game.getVar(R.string.WandMaker_Dust1) : Game.getVar(R.string.WandMaker_Berry1) );
 			Quest.given = true;
 			
 			Quest.placeItem();
@@ -290,12 +285,9 @@ public class WandMaker extends NPC {
 	
 	public static class Rotberry extends Plant {
 		
-		private static final String TXT_NAME = Game.getVar(R.string.WandMaker_RotberryName);
-		private static final String TXT_DESC = Game.getVar(R.string.WandMaker_RotberryDesc);
-		
 		{
 			image = 7;
-			plantName = TXT_NAME;
+			plantName = Game.getVar(R.string.WandMaker_RotberryName);
 		}
 		
 		@Override
@@ -313,12 +305,12 @@ public class WandMaker extends NPC {
 		
 		@Override
 		public String desc() {
-			return TXT_DESC;
+			return Game.getVar(R.string.WandMaker_RotberryDesc);
 		}
 		
 		public static class Seed extends Plant.Seed {
 			{
-				plantName = TXT_NAME;
+				plantName = Game.getVar(R.string.WandMaker_RotberryName);
 				
 				name = Utils.format(TXT_SEED, plantName);
 				image = ItemSpriteSheet.SEED_ROTBERRY;
@@ -353,7 +345,7 @@ public class WandMaker extends NPC {
 			
 			@Override
 			public String desc() {
-				return TXT_DESC;
+				return Game.getVar(R.string.WandMaker_RotberryDesc);
 			}
 		}
 	}

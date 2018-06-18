@@ -8,8 +8,6 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class BellaNPC extends ImmortalNPC {
 
-	private static final String TXT_MESSAGE = Game.getVar(R.string.BellaNPC_Message);
-
 	public BellaNPC() {
 	}
 
@@ -17,7 +15,7 @@ public class BellaNPC extends ImmortalNPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		GameScene.show(new WndQuest(this, TXT_MESSAGE));
+		GameScene.show(new WndQuest(this, Game.getVar(R.string.BellaNPC_Message)));
 		return true;
 	}
 }

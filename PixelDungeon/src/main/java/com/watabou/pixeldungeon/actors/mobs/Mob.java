@@ -79,8 +79,6 @@ import java.util.Map;
 
 public abstract class Mob extends Char {
 
-	private static final String TXT_DIED = Game.getVar(R.string.Mob_Died);
-
 	protected static final String TXT_RAGE = "#$%^";
 
 	private static final float SPLIT_DELAY = 1f;
@@ -616,7 +614,7 @@ public abstract class Mob extends Char {
 		}
 
 		if (hero.isAlive() && !Dungeon.visible[getPos()]) {
-			GLog.i(TXT_DIED);
+			GLog.i(Game.getVar(R.string.Mob_Died));
 		}
 	}
 

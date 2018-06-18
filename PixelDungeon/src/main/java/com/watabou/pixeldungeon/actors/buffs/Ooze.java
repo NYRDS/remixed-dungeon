@@ -26,8 +26,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class Ooze extends Buff {
-	
-	private static final String TXT_DEATH = Game.getVar(R.string.Ooze_Death);
 
 	public int damage	= 1;
 	
@@ -47,7 +45,7 @@ public class Ooze extends Buff {
 			target.damage( damage, this );
 			if (!target.isAlive() && target == Dungeon.hero) {
 				Dungeon.fail( Utils.format( ResultDescriptions.OOZE, Dungeon.depth ) );
-				GLog.n( TXT_DEATH, toString() );
+				GLog.n( Game.getVar(R.string.Ooze_Death), toString() );
 			}
 			spend( TICK );
 		}

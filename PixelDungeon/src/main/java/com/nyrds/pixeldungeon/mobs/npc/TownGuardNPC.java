@@ -9,12 +9,6 @@ import com.watabou.utils.Random;
 
 public class TownGuardNPC extends ImmortalNPC {
 
-	private static final String TXT_MESSAGE1 = Game.getVar(R.string.TownGuardNPC_Message1);
-	private static final String TXT_MESSAGE2 = Game.getVar(R.string.TownGuardNPC_Message2);
-	private static final String TXT_MESSAGE3 = Game.getVar(R.string.TownGuardNPC_Message3);
-
-	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
-
 	public TownGuardNPC() {
 		movable = false;
 	}
@@ -22,6 +16,12 @@ public class TownGuardNPC extends ImmortalNPC {
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
+
+		final String TXT_MESSAGE1 = Game.getVar(R.string.TownGuardNPC_Message1);
+		final String TXT_MESSAGE2 = Game.getVar(R.string.TownGuardNPC_Message2);
+		final String TXT_MESSAGE3 = Game.getVar(R.string.TownGuardNPC_Message3);
+
+		final String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
 
 		int index = Random.Int(0, TXT_PHRASES.length);
 		GameScene.show(new WndQuest(this, TXT_PHRASES[index]));

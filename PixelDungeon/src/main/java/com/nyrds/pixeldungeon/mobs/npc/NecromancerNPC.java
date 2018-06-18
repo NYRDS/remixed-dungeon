@@ -16,14 +16,6 @@ import com.watabou.utils.Random;
 
 public class NecromancerNPC extends ImmortalNPC {
 
-	private static final String TXT_INTRO    = Game.getVar(R.string.NecromancerNPC_Intro2);
-	private static final String TXT_MESSAGE1 = Game.getVar(R.string.NecromancerNPC_Message1);
-	private static final String TXT_MESSAGE2 = Game.getVar(R.string.NecromancerNPC_Message2);
-	private static final String TXT_MESSAGE3 = Game.getVar(R.string.NecromancerNPC_Message3);
-	private static final String TXT_MESSAGE4 = Game.getVar(R.string.NecromancerNPC_Message4);
-
-	private static String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3, TXT_MESSAGE4};
-
 	private static final String NODE       = "necromancernpc";
 	private static final String INTRODUCED = "introduced";
 
@@ -72,18 +64,25 @@ public class NecromancerNPC extends ImmortalNPC {
 		getSprite().turnTo(getPos(), hero.getPos());
 
 		if (!introduced) {
-			GameScene.show(new WndQuest(this, TXT_INTRO));
+			GameScene.show(new WndQuest(this, Game.getVar(R.string.NecromancerNPC_Intro2)));
 			introduced = true;
 
 			SkeletonKey key = new SkeletonKey();
 
 			if (key.doPickUp( Dungeon.hero )) {
-				GLog.i( Hero.TXT_YOU_NOW_HAVE, key.name() );
+				GLog.i( Hero.getHeroYouNowHave(), key.name() );
 			} else {
 				Dungeon.level.drop( key, Dungeon.hero.getPos() ).sprite.drop();
 			}
 
 		} else {
+			final String TXT_MESSAGE1 = Game.getVar(R.string.NecromancerNPC_Message1);
+			final String TXT_MESSAGE2 = Game.getVar(R.string.NecromancerNPC_Message2);
+			final String TXT_MESSAGE3 = Game.getVar(R.string.NecromancerNPC_Message3);
+			final String TXT_MESSAGE4 = Game.getVar(R.string.NecromancerNPC_Message4);
+
+			final String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3, TXT_MESSAGE4};
+
 			int index = Random.Int(0, TXT_PHRASES.length);
 			say(TXT_PHRASES[index]);
 		}
