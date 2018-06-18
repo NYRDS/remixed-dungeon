@@ -139,22 +139,7 @@ import java.util.Collection;
 import java.util.Set;
 
 public class Hero extends Char implements PetOwner {
-
 	private static final String TXT_EXP   = "%+dEXP";
-	private static final String TXT_LEAVE = Game.getVar(R.string.Hero_Leave);
-
-	private static final String TXT_LEVEL_UP  = Game.getVar(R.string.Hero_LevelUp);
-	private static final String TXT_NEW_LEVEL = Game.getVar(R.string.Hero_NewLevel);
-
-	public static final String TXT_YOU_NOW_HAVE = Game.getVar(R.string.Hero_YouNowHave);
-
-	private static final String TXT_SOMETHING_ELSE = Game.getVar(R.string.Hero_SomethingElse);
-	private static final String TXT_LOCKED_CHEST   = Game.getVar(R.string.Hero_LockedChest);
-	private static final String TXT_LOCKED_DOOR    = Game.getVar(R.string.Hero_LockedDoor);
-	private static final String TXT_NOTICED_SMTH   = Game.getVar(R.string.Hero_NoticedSmth);
-
-	private static final String TXT_WAIT   = Game.getVar(R.string.Hero_Wait);
-	private static final String TXT_SEARCH = Game.getVar(R.string.Hero_Search);
 
 	public static final int STARTING_STR = 10;
 
@@ -748,7 +733,7 @@ public class Hero extends Char implements PetOwner {
 						itemPickedUp(item);
 
 						if (!heap.isEmpty()) {
-							GLog.i(TXT_SOMETHING_ELSE);
+							GLog.i(Game.getVar(R.string.Hero_SomethingElse));
 						}
 						curAction = null;
 					} else {
@@ -781,9 +766,9 @@ public class Hero extends Char implements PetOwner {
 	public void itemPickedUp(Item item) {
 		if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
 				|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
-			GLog.p(TXT_YOU_NOW_HAVE, item.name());
+			GLog.p(Game.getVar(R.string.Hero_YouNowHave), item.name());
 		} else {
-			GLog.i(TXT_YOU_NOW_HAVE, item.name());
+			GLog.i(getHeroYouNowHave(), item.name());
 		}
 	}
 
@@ -802,7 +787,7 @@ public class Hero extends Char implements PetOwner {
 					theKey = belongings.getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
 
 					if (theKey == null) {
-						GLog.w(TXT_LOCKED_CHEST);
+						GLog.w(Game.getVar(R.string.Hero_LockedChest));
 						ready();
 						return false;
 					}
@@ -856,7 +841,7 @@ public class Hero extends Char implements PetOwner {
 				getSprite().operate(doorCell);
 				Sample.INSTANCE.play(Assets.SND_UNLOCK);
 			} else {
-				GLog.w(TXT_LOCKED_DOOR);
+				GLog.w(Game.getVar(R.string.Hero_LockedDoor));
 				ready();
 			}
 
@@ -912,7 +897,7 @@ public class Hero extends Char implements PetOwner {
 			if (nextLevel.levelId.equals("0")) {
 
 				if (belongings.getItem(Amulet.class) == null) {
-					GameScene.show(new WndMessage(TXT_LEAVE));
+					GameScene.show(new WndMessage(Game.getVar(R.string.Hero_Leave)));
 					ready();
 				} else {
 					Dungeon.win(ResultDescriptions.WIN, Rankings.gameOver.WIN_HAPPY);
@@ -1015,7 +1000,7 @@ public class Hero extends Char implements PetOwner {
 	public void rest(boolean tillHealthy) {
 		spendAndNext(TIME_TO_REST);
 		if (!tillHealthy) {
-			getSprite().showStatus(CharSprite.DEFAULT, TXT_WAIT);
+			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Wait));
 		}
 		restoreHealth = tillHealthy;
 	}
@@ -1379,8 +1364,8 @@ public class Hero extends Char implements PetOwner {
 
 		if (levelUp) {
 
-			GLog.p(TXT_NEW_LEVEL, lvl());
-			getSprite().showStatus(CharSprite.POSITIVE, TXT_LEVEL_UP);
+			GLog.p(Game.getVar(R.string.Hero_NewLevel), lvl());
+			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_LevelUp));
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
 			if (this.getSoulPointsMax() > 0) {
@@ -1715,7 +1700,7 @@ public class Hero extends Char implements PetOwner {
 		}
 
 		if (intentional) {
-			getSprite().showStatus(CharSprite.DEFAULT, TXT_SEARCH);
+			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Search));
 			getSprite().operate(getPos());
 			if (smthFound) {
 				spendAndNext(Random.Float() < searchLevel ? TIME_TO_SEARCH : TIME_TO_SEARCH * 2);
@@ -1726,7 +1711,7 @@ public class Hero extends Char implements PetOwner {
 		}
 
 		if (smthFound) {
-			GLog.w(TXT_NOTICED_SMTH);
+			GLog.w(Game.getVar(R.string.Hero_NoticedSmth));
 			Sample.INSTANCE.play(Assets.SND_SECRET);
 			interrupt();
 		}
@@ -1787,6 +1772,10 @@ public class Hero extends Char implements PetOwner {
 
 	private void lvl(int lvl) {
 		this.lvl = Scrambler.scramble(lvl);
+	}
+
+	public static final String getHeroYouNowHave() {
+		return Game.getVar(R.string.Hero_YouNowHave);
 	}
 
 	public int getExp() {
