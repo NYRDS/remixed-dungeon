@@ -26,10 +26,6 @@ import java.util.Set;
 
 public class AzuterronNPC extends NPC {
 
-	private static final String TXT_QUEST_START = Game.getVar(R.string.AzuterronNPC_Quest_Start);
-	private static final String TXT_QUEST_END = Game.getVar(R.string.AzuterronNPC_Quest_End);
-	private static final String TXT_QUEST = Game.getVar(R.string.AzuterronNPC_Quest_Reminder);
-	
 	public AzuterronNPC() {
 		movable = false;
 	}
@@ -108,18 +104,18 @@ public class AzuterronNPC extends NPC {
 				Item reward = new PotionOfMight();
 
 				if (reward.doPickUp( Dungeon.hero )) {
-					GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
+					GLog.i( Hero.getHeroYouNowHave(), reward.name() );
 				} else {
 					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
 				}
 				Quest.complete();
-				GameScene.show( new WndQuest( this, TXT_QUEST_END ) );
+				GameScene.show( new WndQuest( this, Game.getVar(R.string.AzuterronNPC_Quest_End) ) );
 			} else {
-				GameScene.show( new WndQuest( this, TXT_QUEST ) );
+				GameScene.show( new WndQuest( this, Game.getVar(R.string.AzuterronNPC_Quest_Reminder) ) );
 			}
 			
 		} else {
-			GameScene.show( new WndQuest( this, TXT_QUEST_START ) );
+			GameScene.show( new WndQuest( this, Game.getVar(R.string.AzuterronNPC_Quest_Start) ) );
 			Quest.given = true;
 			Quest.process();
 			Journal.add( Journal.Feature.AZUTERRON.desc() );
