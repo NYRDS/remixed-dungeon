@@ -77,16 +77,6 @@ import java.util.Set;
 
 public abstract class Char extends Actor implements Presser{
 
-	private static final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
-	private static final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
-	private static final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
-
-	private static final String TXT_YOU_MISSED = Game.getVar(R.string.Char_YouMissed);
-	private static final String TXT_SMB_MISSED = Game.getVar(R.string.Char_SmbMissed);
-
-	private static final String   TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
-
-
     private int      pos      = 0;
 	public  Fraction fraction = Fraction.DUNGEON;
 
@@ -219,6 +209,7 @@ public abstract class Char extends Actor implements Presser{
 		if (hit(this, enemy, false)) {
 
 			if (visibleFight) {
+				final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
 				GLog.i(TXT_HIT[gender], name, enemy.getName_objective());
 			}
 
@@ -248,6 +239,7 @@ public abstract class Char extends Actor implements Presser{
 			if (!enemy.isAlive() && visibleFight) {
 				if (enemy == Dungeon.hero) {
 
+					final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
 					if (Dungeon.hero.killerGlyph != null) {
 
 						Dungeon.fail(Utils.format(ResultDescriptions.GLYPH, Dungeon.hero.killerGlyph.name(), Dungeon.depth));
@@ -265,6 +257,7 @@ public abstract class Char extends Actor implements Presser{
 					}
 
 				} else {
+					final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
 					GLog.i(TXT_DEFEAT[gender], name, enemy.getName_objective());
 				}
 			}
@@ -277,9 +270,9 @@ public abstract class Char extends Actor implements Presser{
 				String defense = enemy.defenseVerb();
 				enemy.getSprite().showStatus(CharSprite.NEUTRAL, defense);
 				if (this == Dungeon.hero) {
-					GLog.i(TXT_YOU_MISSED, enemy.name, defense);
+					GLog.i(Game.getVar(R.string.Char_YouMissed), enemy.name, defense);
 				} else {
-					GLog.i(TXT_SMB_MISSED, enemy.name, defense, name);
+					GLog.i(Game.getVar(R.string.Char_SmbMissed), enemy.name, defense, name);
 				}
 
 				Sample.INSTANCE.play(Assets.SND_MISS);
@@ -364,7 +357,7 @@ public abstract class Char extends Actor implements Presser{
 			if (Random.Int(dmg) >= Random.Int(hp())) {
 				Buff.detach(this, Paralysis.class);
 				if (Dungeon.visible[getPos()]) {
-					GLog.i(TXT_OUT_OF_PARALYSIS, getName_objective());
+					GLog.i(Game.getVar(R.string.Char_OutParalysis), getName_objective());
 				}
 			}
 		}
