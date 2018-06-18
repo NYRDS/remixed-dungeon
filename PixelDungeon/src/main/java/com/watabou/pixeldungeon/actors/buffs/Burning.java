@@ -40,9 +40,6 @@ import com.watabou.utils.Random;
 
 public class Burning extends Buff implements Hero.Doom {
 
-	private static final String TXT_BURNS_UP		= Game.getVar(R.string.Burning_Burns);
-	private static final String TXT_BURNED_TO_DEATH	= Game.getVar(R.string.Burning_Death);
-	
 	private static final float DURATION = 8f;
 	
 	private float left;
@@ -71,7 +68,7 @@ public class Burning extends Buff implements Hero.Doom {
 		}
 		@Override
 		public String actionText(Item srcItem) {
-			return Utils.format(TXT_BURNS_UP, srcItem.toString());
+			return Utils.format(Game.getVar(R.string.Burning_Burns), srcItem.toString());
 		}
 	}
 		
@@ -133,6 +130,6 @@ public class Burning extends Buff implements Hero.Doom {
 		Badges.validateDeathFromFire();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.BURNING, Dungeon.depth ) );
-		GLog.n( TXT_BURNED_TO_DEATH );
+		GLog.n( Game.getVar(R.string.Burning_Death) );
 	}
 }
