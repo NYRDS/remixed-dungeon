@@ -15,8 +15,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class NecromancerArmor extends ClassArmor {
 
 
-	private static final String TXT_NOT_NECROMANCER = Game.getVar(R.string.NecromancerArmor_NotNecromancer);
-
 	public NecromancerArmor() {
 		image = 22;
 	}
@@ -47,7 +45,7 @@ public class NecromancerArmor extends ClassArmor {
 		if (hero.heroClass == HeroClass.NECROMANCER) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_NECROMANCER );
+			GLog.w( Game.getVar(R.string.NecromancerArmor_NotNecromancer) );
 			return false;
 		}
 	}
