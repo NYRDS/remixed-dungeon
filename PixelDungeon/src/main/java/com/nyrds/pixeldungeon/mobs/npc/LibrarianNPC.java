@@ -8,8 +8,6 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class LibrarianNPC extends ImmortalNPC {
 
-	private static final String TXT_MESSAGE = Game.getVar(R.string.LibrarianNPC_Message_Instruction);
-
 	public LibrarianNPC() {
 	}
 
@@ -17,7 +15,7 @@ public class LibrarianNPC extends ImmortalNPC {
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		GameScene.show(new WndQuest(this, TXT_MESSAGE));
+		GameScene.show(new WndQuest(this, Game.getVar(R.string.LibrarianNPC_Message_Instruction)));
 		return true;
 	}
 
