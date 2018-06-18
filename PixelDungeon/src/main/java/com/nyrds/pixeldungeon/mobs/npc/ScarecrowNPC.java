@@ -19,11 +19,6 @@ import com.watabou.utils.Bundle;
 
 public class ScarecrowNPC extends ImmortalNPC {
 
-	private static final String TXT_QUEST_START_M = Game.getVar(R.string.ScarecrowNPC_Quest_Start_Male);
-	private static final String TXT_QUEST_START_F = Game.getVar(R.string.ScarecrowNPC_Quest_Start_Female);
-	private static final String TXT_QUEST_END     = Game.getVar(R.string.ScarecrowNPC_Quest_End);
-	private static final String TXT_QUEST         = Game.getVar(R.string.ScarecrowNPC_Quest_Reminder);
-
 	public ScarecrowNPC() {
 	}
 
@@ -80,15 +75,15 @@ public class ScarecrowNPC extends ImmortalNPC {
 					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
 				}
 				Quest.complete();
-				GameScene.show(new WndQuest(this, TXT_QUEST_END));
+				GameScene.show(new WndQuest(this, Game.getVar(R.string.ScarecrowNPC_Quest_End)));
 			} else {
-				GameScene.show(new WndQuest(this, TXT_QUEST));
+				GameScene.show(new WndQuest(this, Game.getVar(R.string.ScarecrowNPC_Quest_Reminder)));
 			}
 
 		} else {
-			String txtQuestStart = TXT_QUEST_START_M;
+			String txtQuestStart = Game.getVar(R.string.ScarecrowNPC_Quest_Start_Male);
 			if (Dungeon.hero.getGender() == Utils.FEMININE) {
-				txtQuestStart = TXT_QUEST_START_F;
+				txtQuestStart = Game.getVar(R.string.ScarecrowNPC_Quest_Start_Female);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.given = true;
