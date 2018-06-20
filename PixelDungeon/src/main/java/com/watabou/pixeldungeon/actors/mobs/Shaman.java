@@ -36,8 +36,6 @@ import com.watabou.utils.Random;
 
 public class Shaman extends Mob implements IZapper {
 
-	private static final String TXT_LIGHTNING_KILLED = Game.getVar(R.string.Shaman_Killed);
-
 	private int fleeState = 0;
 
 	public Shaman() {
@@ -119,7 +117,7 @@ public class Shaman extends Mob implements IZapper {
 				if (!enemy.isAlive()) {
 					Dungeon.fail(Utils.format(ResultDescriptions.MOB,
 							Utils.indefinite(getName()), Dungeon.depth));
-					GLog.n(TXT_LIGHTNING_KILLED, getName());
+					GLog.n(Game.getVar(R.string.Shaman_Killed), getName());
 				}
 			}
 			return true;
