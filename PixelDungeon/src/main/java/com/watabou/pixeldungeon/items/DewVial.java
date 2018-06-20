@@ -44,11 +44,6 @@ public class DewVial extends Item {
 	private static final String TXT_VALUE	= "%+dHP";
 	private static final String TXT_STATUS	= "%d/%d";
 	
-	private static final String TXT_AUTO_DRINK	= Game.getVar(R.string.DewVial_AutoDrink);
-	private static final String TXT_COLLECTED	= Game.getVar(R.string.DewVial_Collected);
-	private static final String TXT_FULL		= Game.getVar(R.string.DewVial_Full);
-	private static final String TXT_EMPTY		= Game.getVar(R.string.DewVial_Empty);
-	
 	{
 		imageFile = "items/vials.png";
 		image = 0;
@@ -109,7 +104,7 @@ public class DewVial extends Item {
                 QuickSlot.refresh();
 
             } else {
-				GLog.w( TXT_EMPTY );
+				GLog.w( Game.getVar(R.string.DewVial_Empty) );
 			}
 			
 		} else {
@@ -135,11 +130,11 @@ public class DewVial extends Item {
 	
 	public void collectDew( Dewdrop dew ) {
 		
-		GLog.i( TXT_COLLECTED );
+		GLog.i( Game.getVar(R.string.DewVial_Collected) );
 		setVolume(getVolume() + dew.quantity());
 		if (getVolume() >= MAX_VOLUME) {
 			setVolume(MAX_VOLUME);
-			GLog.p( TXT_FULL );
+			GLog.p( Game.getVar(R.string.DewVial_Full) );
 		}
 
         QuickSlot.refresh();
@@ -156,7 +151,7 @@ public class DewVial extends Item {
 			vial.execute( hero );
 			hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
 			
-			GLog.w( TXT_AUTO_DRINK );
+			GLog.w( Game.getVar(R.string.DewVial_AutoDrink) );
 		}
 	}
 	
