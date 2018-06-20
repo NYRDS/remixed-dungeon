@@ -19,7 +19,7 @@ public class WardenArmor extends HuntressArmor {
 		if (hero.subClass == HeroSubClass.WARDEN) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_HUNTRESS );
+			GLog.w( Game.getVar(R.string.HuntressArmor_NotHuntress) );
 			return false;
 		}
 	}
