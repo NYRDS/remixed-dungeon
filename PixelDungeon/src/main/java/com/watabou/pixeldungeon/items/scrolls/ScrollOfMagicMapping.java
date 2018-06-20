@@ -33,8 +33,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfMagicMapping extends Scroll {
 
-	private static final String TXT_LAYOUT = Game.getVar(R.string.ScrollOfMagicMapping_Layout);
-
 	@Override
 	protected void doRead() {
 		
@@ -68,7 +66,7 @@ public class ScrollOfMagicMapping extends Scroll {
 		}
 		Dungeon.observe();
 		
-		GLog.i( TXT_LAYOUT );
+		GLog.i( Game.getVar(R.string.ScrollOfMagicMapping_Layout) );
 		if (noticed) {
 			Sample.INSTANCE.play( Assets.SND_SECRET );
 		}
