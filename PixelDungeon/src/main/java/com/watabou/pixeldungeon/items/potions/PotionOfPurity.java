@@ -128,7 +128,7 @@ public class PotionOfPurity extends UpgradablePotion{
 	protected void moistenRottenFood(RottenFood rfood) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 		moistenEffective();
-		GLog.i(TXT_ROTTEN_FOOD_MOISTEN, rfood.name());
+		GLog.i(Game.getVar(R.string.Potion_FoodRefreshed), rfood.name());
 
 		getCurUser().collect(rfood.purify());
 	}

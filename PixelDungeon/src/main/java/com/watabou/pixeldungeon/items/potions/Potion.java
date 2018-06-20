@@ -49,12 +49,6 @@ public class Potion extends Item implements UnknownItem {
 	private static final String AC_DRINK   = "Potion_ACDrink";
 	private static final String AC_MOISTEN = "Potion_ACMoisten";
 	
-	protected static final String TXT_RUNE_DISAPPEARED    = Game.getVar(R.string.Potion_RuneDissaperaed);
-	protected static final String TXT_ARROW_MOISTEN       = Game.getVar(R.string.Potion_ArrowMoisten);
-	protected static final String TXT_ITEM_FLIES_AWAY     = Game.getVar(R.string.Potion_ItemFliesAway);
-	protected static final String TXT_ROTTEN_FOOD_MOISTEN = Game.getVar(R.string.Potion_FoodRefreshed);
-	
-	
 	private static final float TIME_TO_DRINK = 1f;
 	private static final float TIME_TO_MOISTEN = 1f;
 	
@@ -370,7 +364,7 @@ public class Potion extends Item implements UnknownItem {
 	protected int reallyMoistArrows(Arrow arrow) {
 		int quantity = detachMoistenItems(arrow, (int) (10*qualityFactor()));
 		moistenEffective();
-		GLog.i(TXT_ARROW_MOISTEN);
+		GLog.i(Game.getVar(R.string.Potion_ArrowMoisten));
 		return quantity;
 	}
 
