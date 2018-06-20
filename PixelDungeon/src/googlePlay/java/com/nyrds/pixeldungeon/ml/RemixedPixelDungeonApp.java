@@ -24,7 +24,6 @@ public class RemixedPixelDungeonApp extends MultiDexApplication {
 			ACRA.init(this);
 		}
 
-
 		try {
 			Class.forName("android.os.AsyncTask");
 		} catch (Throwable ignore) {

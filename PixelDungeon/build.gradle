@@ -74,6 +74,8 @@ dependencies {
     implementation 'org.luaj:luaj-jse:3.0.1'
 
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.4'
+
 
     //noinspection GradleDependency
     googlePlayRetroImplementation 'com.android.support:support-v4:23'
