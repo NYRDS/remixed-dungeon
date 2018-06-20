@@ -38,9 +38,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class RogueArmor extends ClassArmor {
 	
-	private static final String TXT_FOV       = Game.getVar(R.string.RogueArmor_Fov);
-	protected static final String TXT_NOT_ROGUE = Game.getVar(R.string.RogueArmor_NotRogue);
-
 	{
 		image = 8;
 	}
@@ -60,7 +57,7 @@ public class RogueArmor extends ClassArmor {
 		if (hero.heroClass == HeroClass.ROGUE) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_ROGUE );
+			GLog.w( Game.getVar(R.string.RogueArmor_NotRogue) );
 			return false;
 		}
 	}
@@ -80,7 +77,7 @@ public class RogueArmor extends ClassArmor {
 					!(Dungeon.level.passable[target] || Dungeon.level.avoid[target]) || 
 					Actor.findChar( target ) != null) {
 					
-					GLog.w( TXT_FOV );
+					GLog.w( Game.getVar(R.string.RogueArmor_Fov) );
 					return;
 				}
 				

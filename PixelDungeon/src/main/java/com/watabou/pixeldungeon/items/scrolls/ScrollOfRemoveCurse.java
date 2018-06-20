@@ -34,9 +34,6 @@ import java.util.Iterator;
 
 public class ScrollOfRemoveCurse extends Scroll {
 
-	private static final String TXT_PROCCED     = Game.getVar(R.string.ScrollOfRemoveCurse_Proced);
-	private static final String TXT_NOT_PROCCED = Game.getVar(R.string.ScrollOfRemoveCurse_NoProced);
-
 	@Override
 	protected void doRead() {
 
@@ -49,10 +46,10 @@ public class ScrollOfRemoveCurse extends Scroll {
 		Weakness.detach(getCurUser(), Weakness.class);
 
 		if (procced) {
-			GLog.p(TXT_PROCCED);
+			GLog.p(Game.getVar(R.string.ScrollOfRemoveCurse_Proced));
 			getCurUser().getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
 		} else {
-			GLog.i(TXT_NOT_PROCCED);
+			GLog.i(Game.getVar(R.string.ScrollOfRemoveCurse_NoProced));
 		}
 
 		setKnown();

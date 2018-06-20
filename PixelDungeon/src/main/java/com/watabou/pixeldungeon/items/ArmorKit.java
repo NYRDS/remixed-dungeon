@@ -34,9 +34,6 @@ import java.util.ArrayList;
 
 public class ArmorKit extends Item {
 	
-	private static final String TXT_SELECT_ARMOR = Game.getVar(R.string.ArmorKit_SelectArmor);
-	private static final String TXT_UPGRADED     = Game.getVar(R.string.ArmorKit_Upgraded);
-	
 	private static final float TIME_TO_UPGRADE = 2;
 	
 	private static final String AC_APPLY = "ArmorKit_ACAplly";
@@ -57,7 +54,7 @@ public class ArmorKit extends Item {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(AC_APPLY)) {
 			setCurUser(hero);
-			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR, TXT_SELECT_ARMOR );
+			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR, Game.getVar(R.string.ArmorKit_SelectArmor) );
 		} else {
 			super.execute( hero, action );
 		}
@@ -81,7 +78,7 @@ public class ArmorKit extends Item {
 		getCurUser().spend( TIME_TO_UPGRADE );
 		getCurUser().busy();
 		
-		GLog.w( TXT_UPGRADED, armor.name() );
+		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
 		Armor classArmor = ClassArmor.upgrade( getCurUser(), armor );
 		if (getCurUser().belongings.armor == armor) {

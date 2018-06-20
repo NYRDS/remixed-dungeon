@@ -32,10 +32,6 @@ public abstract class InventoryScroll extends Scroll {
 	protected String inventoryTitle = Game.getVar(R.string.InventoryScroll_Title);
 	protected WndBag.Mode mode = WndBag.Mode.ALL;
 
-	private static final String TXT_WARNING	= Game.getVar(R.string.InventoryScroll_Warning);
-	private static final String TXT_YES		= Game.getVar(R.string.InventoryScroll_Yes);
-	private static final String TXT_NO		= Game.getVar(R.string.InventoryScroll_No);
-	
 	@Override
 	protected void doRead() {
 		
@@ -50,7 +46,10 @@ public abstract class InventoryScroll extends Scroll {
 	}
 	
 	private void confirmCancelation() {
-		GameScene.show( new WndOptions( name(), TXT_WARNING, TXT_YES, TXT_NO ) {
+		GameScene.show( new WndOptions( name(),
+										Game.getVar(R.string.InventoryScroll_Warning),
+										Game.getVar(R.string.InventoryScroll_Yes),
+										Game.getVar(R.string.InventoryScroll_No) ) {
 			@Override
 			protected void onSelect( int index ) {
 				switch (index) {

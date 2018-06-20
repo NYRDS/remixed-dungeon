@@ -37,10 +37,6 @@ public class ShortSword extends MeleeWeapon {
 
 	public static final String AC_REFORGE = "ShortSword_ACReforge";
 	
-	private static final String TXT_SELECT_WEAPON = Game.getVar(R.string.ShortSword_Select);
-	private static final String TXT_REFORGED      = Game.getVar(R.string.ShortSword_Reforged);
-	private static final String TXT_NOT_BOOMERANG = Game.getVar(R.string.ShortSword_NotBoomerang);
-	
 	private static final float TIME_TO_REFORGE	= 2f;
 	
 	private boolean  equipped;
@@ -78,7 +74,7 @@ public class ShortSword extends MeleeWeapon {
 			
 			setCurUser(hero);
 			
-			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, TXT_SELECT_WEAPON );
+			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select) );
 			
 		} else {
 			
@@ -101,7 +97,7 @@ public class ShortSword extends MeleeWeapon {
 				ScrollOfUpgrade.upgrade( getCurUser() );
 				evoke( getCurUser() );
 				
-				GLog.w( TXT_REFORGED, item.name() );
+				GLog.w( Game.getVar(R.string.ShortSword_Reforged), item.name() );
 				
 				((MeleeWeapon)item).safeUpgrade();
 				getCurUser().spendAndNext( TIME_TO_REFORGE );
@@ -111,7 +107,7 @@ public class ShortSword extends MeleeWeapon {
 			} else {
 				
 				if (item instanceof Boomerang) {
-					GLog.w( TXT_NOT_BOOMERANG );
+					GLog.w( Game.getVar(R.string.ShortSword_NotBoomerang) );
 				}
 				
 				if (equipped) {

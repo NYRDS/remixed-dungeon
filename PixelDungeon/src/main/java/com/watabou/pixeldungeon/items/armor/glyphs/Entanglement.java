@@ -34,8 +34,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Entanglement extends Glyph {
-
-	private static final String TXT_ENTANGLEMENT = Game.getVar(R.string.Entanglement_Txt);
 	
 	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x448822 );
 	
@@ -58,7 +56,7 @@ public class Entanglement extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_ENTANGLEMENT, weaponName );
+		return Utils.format( Game.getVar(R.string.Entanglement_Txt), weaponName );
 	}
 
 	@Override

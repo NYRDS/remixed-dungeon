@@ -51,14 +51,6 @@ import java.util.ArrayList;
 
 public class Armor extends EquipableItem {
 
-	private static final String TXT_EQUIP_CURSED    = Game.getVar(R.string.Armor_EquipCursed);
-		
-	private static final String TXT_IDENTIFY        = Game.getVar(R.string.Armor_Identify);
-	
-	private static final String TXT_TO_STRING       = Game.getVar(R.string.Armor_ToString);
-	
-	private static final String TXT_INCOMPATIBLE    = Game.getVar(R.string.Armor_Incompatible);
-
 	protected boolean hasHelmet;
 	protected boolean hasCollar;
 	protected boolean coverHair;
@@ -117,7 +109,7 @@ public class Armor extends EquipableItem {
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
-				GLog.n( TXT_EQUIP_CURSED, toString() );
+				GLog.n( Game.getVar(R.string.Armor_EquipCursed), toString() );
 			}
 			
 			hero.updateLook();
@@ -164,7 +156,7 @@ public class Armor extends EquipableItem {
 		
 		if (glyph != null) {
 			if (!inscribe && Random.Int( level() ) > 0) {
-				GLog.w( TXT_INCOMPATIBLE );
+				GLog.w( Game.getVar(R.string.Armor_Incompatible) );
 				inscribe( null );
 			}
 		} else {
@@ -196,7 +188,7 @@ public class Armor extends EquipableItem {
 		if (!levelKnown) {
 			if (--hitsToKnow <= 0) {
 				levelKnown = true;
-				GLog.w( TXT_IDENTIFY, name(), toString() );
+				GLog.w( Game.getVar(R.string.Armor_Identify), name(), toString() );
 				Badges.validateItemLevelAcquired( this );
 			}
 		}
@@ -206,7 +198,7 @@ public class Armor extends EquipableItem {
 	
 	@Override
 	public String toString() {
-		return levelKnown ? Utils.format( TXT_TO_STRING, super.toString(), STR ) : super.toString();
+		return levelKnown ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), STR ) : super.toString();
 	}
 	
 	@Override

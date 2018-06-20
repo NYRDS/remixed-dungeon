@@ -20,8 +20,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class GnollArmor extends ClassArmor {
 
-    private static final String TXT_NOT_GNOLL = Game.getVar(R.string.GnollArmor_NotGnoll);
-
     {
         image = 25;
         coverHair = false;
@@ -63,7 +61,7 @@ public class GnollArmor extends ClassArmor {
         if (hero.heroClass == HeroClass.GNOLL) {
             return super.doEquip( hero );
         } else {
-            GLog.w( TXT_NOT_GNOLL);
+            GLog.w( Game.getVar(R.string.GnollArmor_NotGnoll) );
             return false;
         }
     }

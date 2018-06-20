@@ -38,8 +38,6 @@ import java.util.HashSet;
 
 public abstract class Scroll extends Item implements UnknownItem {
 
-	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
-
 	protected static final float TIME_TO_READ	= 1f;
 	
 	private static final Class<?>[] scrolls = {
@@ -145,7 +143,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 		if (action.equals( CommonActions.AC_READ )) {
 			
 			if (hero.hasBuff( Blindness.class )) {
-				GLog.w( TXT_BLINDED );
+				GLog.w( Game.getVar(R.string.Scroll_Blinded) );
 			} else {
 				setCurUser(hero);
 				curItem = detach( hero.belongings.backpack );

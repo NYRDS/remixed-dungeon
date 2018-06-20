@@ -35,8 +35,6 @@ import com.watabou.utils.Random;
 
 public class Affection extends Glyph {
 
-	private static final String TXT_AFFECTION = Game.getVar(R.string.Affection_Txt);
-
 	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing(0xFF4488);
 
 	@Override
@@ -73,7 +71,7 @@ public class Affection extends Glyph {
 
 	@Override
 	public String name(String weaponName) {
-		return Utils.format(TXT_AFFECTION, weaponName);
+		return Utils.format(Game.getVar(R.string.Affection_Txt), weaponName);
 	}
 
 	@Override

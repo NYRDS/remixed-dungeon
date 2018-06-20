@@ -49,14 +49,14 @@ public class PotionOfLevitation extends UpgradablePotion {
 	@Override
 	protected void moistenArrow(Arrow arrow) {
 		detachMoistenItems(arrow, (int) (10*qualityFactor()));
-		GLog.i(TXT_ITEM_FLIES_AWAY , arrow.name());
+		GLog.i(Game.getVar(R.string.Potion_ItemFliesAway) , arrow.name());
 		moistenEffective();
 	}
 	
 	@Override
 	protected void moistenScroll(Scroll scroll) {
 		detachMoistenItems(scroll, (int) (3*qualityFactor()));
-		GLog.i(TXT_ITEM_FLIES_AWAY , scroll.name());
+		GLog.i(Game.getVar(R.string.Potion_ItemFliesAway) , scroll.name());
 		moistenEffective();
 	}
 	
@@ -64,7 +64,7 @@ public class PotionOfLevitation extends UpgradablePotion {
 	protected void moistenRottenFood(RottenFood rfood) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 		
-		GLog.i(TXT_ITEM_FLIES_AWAY , rfood.name());
+		GLog.i(Game.getVar(R.string.Potion_ItemFliesAway) , rfood.name());
 		moistenEffective();
 	}
 }

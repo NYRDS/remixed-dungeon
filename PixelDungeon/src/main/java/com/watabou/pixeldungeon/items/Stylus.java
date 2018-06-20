@@ -35,9 +35,6 @@ import java.util.ArrayList;
 
 public class Stylus extends Item {
 	
-	private static final String TXT_SELECT_ARMOR	= Game.getVar(R.string.Stylus_SelectArmor);
-	private static final String TXT_INSCRIBED		= Game.getVar(R.string.Stylus_Inscribed);
-	
 	private static final float TIME_TO_INSCRIBE = 2;
 	
 	private static final String AC_INSCRIBE = "Stylus_ACInscribe";
@@ -60,7 +57,7 @@ public class Stylus extends Item {
 		if (action.equals(AC_INSCRIBE)) {
 
 			setCurUser(hero);
-			GameScene.selectItem( itemSelector, WndBag.Mode.INSCRIBABLE, TXT_SELECT_ARMOR );
+			GameScene.selectItem( itemSelector, WndBag.Mode.INSCRIBABLE, Game.getVar(R.string.Stylus_SelectArmor) );
 			
 		} else {
 			
@@ -98,7 +95,7 @@ public class Stylus extends Item {
 			glyph = Armor.Glyph.random();
 		}
 		
-		GLog.w( TXT_INSCRIBED, glyph.name(), armor.name() );
+		GLog.w( Game.getVar(R.string.Stylus_Inscribed), glyph.name(), armor.name() );
 		
 		armor.inscribe( glyph );
 		
