@@ -20,6 +20,9 @@ public class ImageButton extends Button {
 		height = image.height;
 	}
 
+	public void brightness( float val ) {
+		image.brightness(val);
+	}
 
 	@Override
 	protected void layout() {

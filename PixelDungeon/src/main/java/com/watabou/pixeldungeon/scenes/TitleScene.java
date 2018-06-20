@@ -57,6 +57,8 @@ public class TitleScene extends PixelScene {
 
 	private Text         pleaseSupport;
 	private DonateButton btnDonate;
+	private boolean      changelogUpdated;
+	private ChangelogButton btnChangelog;
 
 	@Override
 	public void create() {
@@ -198,9 +200,16 @@ public class TitleScene extends PixelScene {
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos(w - btnExit.width(), 0);
 		add(btnExit);
-		
-		ChangelogButton btnChangelog = new ChangelogButton();
+
+		if (PixelDungeon.version() != Game.versionCode) {
+			if(PixelDungeon.differentVersions(PixelDungeon.versionString(),Game.version)) {
+				changelogUpdated = true;
+			}
+		}
+
+		btnChangelog = new ChangelogButton();
 		btnChangelog.setPos(w - btnChangelog.width(), btnExit.bottom() + 2);
+
 		add(btnChangelog);
 
 		StatisticsButton btnStats = new StatisticsButton();
@@ -218,7 +227,7 @@ public class TitleScene extends PixelScene {
 	public void update() {
 		super.update();
 		time += Game.elapsed;
-		
+		float cl = (float) Math.sin(time) * 0.5f + 0.5f;
 		if(!donationAdded) {
 			if (PixelDungeon.canDonate()) {
 				add(pleaseSupport);
@@ -226,8 +235,11 @@ public class TitleScene extends PixelScene {
 			}
 			donationAdded = true;
 		} else {
-			float cl = (float) Math.sin(time) * 0.5f + 0.5f;
 			pleaseSupport.hardlight(cl, cl, cl);
+		}
+
+		if(changelogUpdated) {
+			btnChangelog.brightness(cl + 1);
 		}
 
 	}
