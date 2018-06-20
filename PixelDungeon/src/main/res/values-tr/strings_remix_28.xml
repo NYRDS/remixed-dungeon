@@ -1,4 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <string name="HeroClass_Gnoll">Gnoll</string>
+    <string name="GnollArmor_ACSpecial">HÜKMET</string>
+    <string name="GnollArmor_NotGnoll">Gnoll Zırhını sadece gnollar kullanabilir!</string>
+
+    <string name="GnollArmor_Name">gnoll-teğmen kıyafeti</string>
+    <string name="GnollTamahawk_Name">gnoll savaş baltası</string>
+    <string name="GnollTamahawk_Gender">erkeksi</string>
+
+
+    <string name="WndPlayGames_BackupProgress">İlerleme Yedekleniyor</string>
+    <string name="WndPlayGames_RestoreProgress">İlerleme Yükleniyor</string>
+    <string name="WndPlayGames_WorkInCloud">Bulut Hizmeti Çalışıyor... Lütfen bekleyin</string>
+    <string name="StartScene_UnlockGnoll">Bu sınıfı açmak için kasaba rahibini Yüce Gnoll\'u iyileştirmesi için ikna etmelisin</string>
+    <string name="WndPriest_Heal_Minions">Tüm kölelerini iyileştir - sadece %d altın!</string>
+    <string name="Badges_GnollUnlocked">Gnoll açıldı</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>Gnollar 15 güç puanı ile başlarlar</item>
+        <item>Gnollar 5 can puanı ile başlarlar</item>
+        <item>Gnollar zırhsız ama kendine özgün savaş baltalarıyla başlarlar</item>
+        <item>Gnollar okuyamaz ya da yazamazlar</item>
+        <item>Gnollar tahrik edilmediği sürece diğer Gnollar\'a saldırmazlar</item>
+     </string-array>
+</resources>

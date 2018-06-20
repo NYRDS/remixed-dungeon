@@ -371,4 +371,34 @@ remix.26.1:\n
  - Nuevas opciones de clase de heroe para modding: forbiddenActions, friendlyMobs\n
  - Nuevo idioma agregado: idioma Malayo\n
  </string>
+  <string name="Welcome_Text_28_1">
+    remix.28.1\n
+    - Gran renovación del Pueblo\n
+    - Numerosas mejoras y correcciones en los gfx\n
+    - Nuevos dardos y flechas\n
+    - Ahora todos las criaturas (excepto los no muertos) se regeneraran\n
+    - Ahora la fuerza proporciona una daño adicional para todas\n
+    - La adivina ahora tiene una gata\n
+    - El tomahawk gnoll ya no se romperá al ser lanzado\n
+    </string>
+  <string name="Welcome_Text_28_2">
+    remix.28.2\n
+    - Cambios en el Gui:\n
+    -- Cantidad de ranuras rápidas limitadas solo por el ancho de la pantalla\n
+    -- Hechizos y habilidades pueden ser colocados en las ranuras rápidas\n
+    -- Opción para lado preferido (diestro o zurdo)\n
+    - El tiempo para movimiento ahora persiste en los estados del juego\n
+    - ¡Modo de tiempo real! (aún muy experimental) disponible y persiste en los estados del juego\n
+    </string>
+  <string name="Welcome_Text_28_3">
+    remix.28.3\n
+    - Nuevas habilidades para el Nigromante:\n
+    -- Sacrificio Oscuro\n
+    -- Exhumación\n
+    -- Levantar Muertos\n
+    - Pescado frito, congelado, podrido y crudo\n
+    - Mods:\n
+    -- Hechizos modificables\n
+    -- Objetos modificables\n
+    </string>
 </resources>

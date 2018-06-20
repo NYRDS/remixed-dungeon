@@ -3,6 +3,8 @@
     <!-- Item descriptions -->
     <!-- STRINGS OF ElvenBow CLASS -->
     <string name="ElvenBow_Name">elf yayı</string>
+    <!-- STRINGS OF RatHide CLASS -->
+    <string name="RatHide_Name">fare derisi</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->

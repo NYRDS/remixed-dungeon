@@ -1,3 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <string name="DarkSacrifice_Name">Mroczne Poświęcenie</string>
+    <string name="DarkSacrifice_Info">Poświęć swego sługę aby wywołać eksplozję. Obszar eksplozji będzie zależny od punktów życia jakie posiadał sługa przed poświęceniem oraz na twoim poziomie umiejętności.</string>
+    <string name="DarkSacrifice_Ok">Moje życie spoczywa w twoich rękach !</string>
+    <string name="DarkSacrifice_Self">Za Narnie i za Aslana!</string>
+    <string name="DarkSacrifice_Resist">Nie masz nade mą żadnej władzy.</string>
+    <string name="DarkSacrifice_Hint">Wybierz sługę do poświęcenia !</string>
+
+    <string name="Exhumation_Name">Wygrzebanie zwłok.</string>
+    <string name="Exhumation_Info">Otwarcie grobu samo w sobie jest okropnym czynem, jednak nie dość okropnym dla kogoś kto służy samej Śmierci. Wykonawca tego Mrocznego Rytuału ma ogromną szansę ( oraz zwiększy to poziom mistrzostwa wykonawcy) aby zawładnąć duszą jednego z tu żyjących.  </string>
+    <string name="Exhumation_NoGrave">Nie ma tu grobu aby Wygrzebać zwłoki.</string>
+    <string name="Exhumation_Ok">Będę ci posłuszny.</string>
+
+    <string name="RaiseDead_Name">Wskrześ Zmarłych.</string>
+    <string name="RaiseDead_Info">Próba wskrzeszenia dopiero co (Rytuał wymaga dość świeżej ofiary) zabitej ofiary. Kiedy używasz tej mrocznej sztuki pamiętaj: prawie każde stworzenie może być wskrzeszone, jednak nie każde będzie łatwo kontrolować. </string>
+    <string name="RaiseDead_NoSpace">Wskrzeszenie Zmarłych zawiodło ponieważ w okolicy nie ma wolnego miejsca.</string>
+    <string name="RaiseDead_NoKill">Musisz kogoś zabić przed próbą go wskrzeszenia.</string>
+
+    <string name="RawFish_Name">surowa ryba</string>
+    <string name="RawFish_Info">Surowa ryba, jesz na własne ryzyko</string>
+    <string name="RawFish_Taste">Rybnie!</string>
+
+    <string name="FrozenFish_Name">zamrożona ryba</string>
+    <string name="FrozenFish_Info">Zamrożona ryba, wygląda jak żywa, tylko zamrożona.</string>
+
+    <string name="FriedFish_Name">pieczona ryba</string>
+    <string name="FriedFish_Info">pieczona ryba, wygląda smacznie</string>
+    <string name="FriedFish_Taste">Pychota !</string>
+
+    <string name="RottenFish_Name">zgniła ryba</string>
+    <string name="RottenFish_Info">Zgniła ryba, pachnie okropnie</string>
+    <string name="RottenFish_Taste">Ohyda!</string>
+</resources>

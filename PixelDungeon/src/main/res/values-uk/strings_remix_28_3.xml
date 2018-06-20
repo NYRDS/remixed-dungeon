@@ -1,8 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="DarkSacrifice_Name">Темна жертва</string>
+    <string name="DarkSacrifice_Info">Пожертвуй своїм вірним посіпакою аби влаштувати вибух. Сила вибуху залежить від лишків життєвої сили посіпаки та твоєї майстерності.</string>
+    <string name="DarkSacrifice_Ok">Моє життя в твоїх руках!</string>
+    <string name="DarkSacrifice_Resist">Ти не маєш влади надімною!</string>
+    <string name="DarkSacrifice_Hint">Обери жертву серед своїх посіпак!</string>
+
     <string name="Exhumation_Name">Ексгумація</string>
+    <string name="Exhumation_Info">Відкриття могил і так зловісна справа, проте для слуг самої Смерті цього замало. Виконавець даного Темного ритуалу має чудовий шанс (який росте із майстерністю) приборкати душу бідолаги, що тут спочиває.</string>
+    <string name="Exhumation_NoGrave">Тут немає могил для ексгумації.</string>
+    <string name="Exhumation_Ok">Я корюсь тобі.</string>
+
     <string name="RaiseDead_Name">Підняття мерця</string>
+    <string name="RaiseDead_Info">Спроба підняти нещодавно вбиту істоту (ритуал потребує свіжий матеріал). При використанні даного темного мистецтва не забувайте: майже кожну істоту можна підняти з мертвих, але далеко не кожну можна підкорити своїй волі.</string>
+    <string name="RaiseDead_NoSpace">Підняття мерця не вдалося через брак місця.</string>
+    <string name="RaiseDead_NoKill">Необхідно когось вбити, перш ніж спробувати підняти його.</string>
+
     <string name="RawFish_Name">сира риба</string>
     <string name="RawFish_Info">Сира риба, їж на свій ризик</string>
     <string name="RawFish_Taste">Рибка!</string>
