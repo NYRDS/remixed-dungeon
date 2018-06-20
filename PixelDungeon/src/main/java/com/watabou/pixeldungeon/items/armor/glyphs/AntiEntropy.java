@@ -36,8 +36,6 @@ import com.watabou.utils.Random;
 
 public class AntiEntropy extends Glyph {
 
-	private static final String TXT_ANTI_ENTROPY = Game.getVar(R.string.AntiEntropy_Txt);
-	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0000FF );
 	
 	@Override
@@ -60,7 +58,7 @@ public class AntiEntropy extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_ANTI_ENTROPY, weaponName );
+		return Utils.format( Game.getVar(R.string.AntiEntropy_Txt), weaponName );
 	}
 
 	@Override
