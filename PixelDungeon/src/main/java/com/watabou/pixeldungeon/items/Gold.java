@@ -34,9 +34,6 @@ import java.util.ArrayList;
 
 public class Gold extends Item {
 
-	private static final String TXT_COLLECT	= Game.getVar(R.string.Gold_Collect);
-	private static final String TXT_INFO	= Game.getVar(R.string.Gold_Info)+" "+TXT_COLLECT;
-	private static final String TXT_INFO_1	= Game.getVar(R.string.Gold_Info1)+" "+TXT_COLLECT;
 	private static final String TXT_VALUE	= "%+d";
 	
 	public Gold() {
@@ -92,11 +89,11 @@ public class Gold extends Item {
 	public String info() {
 		switch (quantity()) {
 		case 0:
-			return TXT_COLLECT;
+			return Game.getVar(R.string.Gold_Collect);
 		case 1:
-			return TXT_INFO_1;
+			return Game.getVar(R.string.Gold_Info1)+" "+Game.getVar(R.string.Gold_Collect);
 		default:
-			return Utils.format( TXT_INFO, quantity() );
+			return Utils.format( Game.getVar(R.string.Gold_Info)+" "+Game.getVar(R.string.Gold_Collect), quantity() );
 		}
 	}
 	
