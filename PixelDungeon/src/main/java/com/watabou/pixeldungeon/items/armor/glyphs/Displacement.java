@@ -31,8 +31,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Displacement extends Glyph {
-
-	private static final String TXT_DISPLACEMENT = Game.getVar(R.string.Displacement_Txt);
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66AAFF );
 	
@@ -61,7 +59,7 @@ public class Displacement extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_DISPLACEMENT, weaponName );
+		return Utils.format( Game.getVar(R.string.Displacement_Txt), weaponName );
 	}
 
 	@Override
