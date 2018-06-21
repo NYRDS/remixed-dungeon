@@ -41,17 +41,15 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Random;
 
 public class Chasm {
-	
-	private static final String TXT_CHASM = Game.getVar(R.string.Chasm_Chasm);
-	private static final String TXT_YES   = Game.getVar(R.string.Chasm_Yes);
-	private static final String TXT_NO    = Game.getVar(R.string.Chasm_No);
-	private static final String TXT_JUMP  = Game.getVar(R.string.Chasm_Jump);
-	
+
 	public static boolean jumpConfirmed = false;
 	
 	public static void heroJump( final Hero hero ) {
 		GameScene.show( 
-			new WndOptions( TXT_CHASM, TXT_JUMP, TXT_YES, TXT_NO ) {
+			new WndOptions( Game.getVar(R.string.Chasm_Chasm),
+					Game.getVar(R.string.Chasm_Jump),
+					Game.getVar(R.string.Chasm_Yes),
+					Game.getVar(R.string.Chasm_No) ) {
 				@Override
 				protected void onSelect( int index ) {
 					if (index == 0) {
