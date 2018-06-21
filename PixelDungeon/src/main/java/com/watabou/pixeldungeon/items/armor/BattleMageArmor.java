@@ -18,7 +18,7 @@ public class BattleMageArmor extends MageArmor {
         if (hero.subClass == HeroSubClass.BATTLEMAGE) {
             return super.doEquip(hero);
         } else {
-            GLog.w(TXT_NOT_MAGE);
+            GLog.w(Game.getVar(R.string.MageArmor_NotMage));
             return false;
         }
     }
