@@ -48,10 +48,6 @@ public class WndBlacksmith extends Window {
 	private ItemButton btnItem2;
 	private RedButton btnReforge;
 	
-	private static final String TXT_PROMPT  = Game.getVar(R.string.WndBlacksmith_Prompt);
-	private static final String TXT_SELECT  = Game.getVar(R.string.WndBlacksmith_Select);
-	private static final String TXT_REFORGE = Game.getVar(R.string.WndBlacksmith_Reforge);
-	
 	public WndBlacksmith( Blacksmith troll, Hero hero ) {
 		
 		super();
@@ -62,7 +58,7 @@ public class WndBlacksmith extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( TXT_PROMPT, GuiProperties.regularFontSize());
+		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndBlacksmith_Prompt), GuiProperties.regularFontSize());
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
@@ -71,7 +67,7 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem1;
-				GameScene.selectItem( itemSelector, WndBag.Mode.UPGRADEABLE, TXT_SELECT );
+				GameScene.selectItem( itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select) );
 			}
 		};
 		btnItem1.setRect( (WIDTH - BTN_GAP) / 2 - BTN_SIZE, message.y + message.height() + BTN_GAP, BTN_SIZE, BTN_SIZE );
@@ -81,13 +77,13 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem2;
-				GameScene.selectItem( itemSelector, WndBag.Mode.UPGRADEABLE, TXT_SELECT );
+				GameScene.selectItem( itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select) );
 			}
 		};
 		btnItem2.setRect( btnItem1.right() + BTN_GAP, btnItem1.top(), BTN_SIZE, BTN_SIZE );
 		add( btnItem2 );
 		
-		btnReforge = new RedButton( TXT_REFORGE ) {
+		btnReforge = new RedButton( Game.getVar(R.string.WndBlacksmith_Reforge) ) {
 			@Override
 			protected void onClick() {
 				Blacksmith.upgrade( btnItem1.item, btnItem2.item );
