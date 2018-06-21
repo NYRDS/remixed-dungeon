@@ -35,9 +35,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndImp extends Window {
 
-	private static final String TXT_MESSAGE	= Game.getVar(R.string.WndImp_Message);
-	private static final String TXT_REWARD  = Game.getVar(R.string.WndImp_Reward);
-
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
@@ -51,12 +48,12 @@ public class WndImp extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( TXT_MESSAGE, GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndImp_Message), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
-		RedButton btnReward = new RedButton( TXT_REWARD ) {
+		RedButton btnReward = new RedButton( Game.getVar(R.string.WndImp_Reward) ) {
 			@Override
 			protected void onClick() {
 				takeReward( imp, tokens, Imp.Quest.reward );
