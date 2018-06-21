@@ -67,7 +67,7 @@ public class PotionOfInvisibility extends UpgradablePotion {
 	protected void moistenScroll(Scroll scroll) {
 		int quantity = detachMoistenItems(scroll, (int) (3*qualityFactor()));
 		
-		GLog.i(TXT_RUNE_DISAPPEARED, scroll.name());
+		GLog.i(Game.getVar(R.string.Potion_RuneDissaperaed), scroll.name());
 		
 		moistenEffective();
 		

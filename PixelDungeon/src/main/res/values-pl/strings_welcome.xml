@@ -222,6 +222,43 @@ remix.26.1:\n
 - Naprawiono postacie w Lodowych Jaskiniach\n
 - Mody \"upadły\" oraz \"Labirynt\" w pełni wspierają język angielski\n
 - Nowy poziom dotacji jest dostępny. Poprzez kupienie \"Royal Pixel\" nie tylko wspomożesz projekt ale także odblokujesz każdą czapkę w grze, nawet przyszłe.</string>
+  <string name="Welcome_Text_26_2">
+        remix.26.2:\n
+        --Gra\n
+        - Nowy budynek otwarty w mieście: Kino\n
+        - Pierścienie mogą być teraz trzymane na breloku na klucze\n
+        - Brelok na klucze może być kupiony tylko w Mieście\n
+        - Uaktualniono sklep w Mieśćie\n
+        - Za każdym razem kiedy sprzedaż przedmiot sprzedawcy w mieście, wystawi go na sprzedaż, oczywiście jeżeli w sklepie jest wolne miejce\n
+        - Nowy przedmiot wizualny: Kostium Gnolla\n
+        --Mody\n
+        - Bronie dostał atrybut uwzględniający typ ich «zaklęcia» \n
+        - Zbroje dostały atrybut uwzględniający typ ich «glifu» attribute\n
+        - Gra teraz aby wykryć twoją modyfikację musi zawierać  version.json file\n
+        </string>
+  <string name="Welcome_Text_26_3">
+        remix.26.3\n
+        - Miasto stało się większe\n
+        - Miejski sklep sprzedaje teraz więcej przedmiotów\n
+        - Nowe zadania w Mieście\n
+        </string>
+  <string name="Welcome_Text_26_6">
+        remix.26.6\n
+        - Nowy unikatowy przedmiot: Różdżka Cienistego Piorunu \n
+        - Krysztaly tworzone przez Mrocznego Władcę używają teraz  Różdżki Cienistego Piorunu zamiata zwykłego ataku dystansowego. Szansa na zdobycie ów różdżki wynosi 255\n
+        - Naprawiono ataki zasięgowe dla: Żywiołaka wiatru, Kryształu, Płonącej Pięści, Psi-Pająka i Bursztynowego Pająka\n
+        - Zbroje Maga (Wersja dla Czarodzieja: WarlockArmor) oraz Cukierki dostępne są w modach.\n
+    </string>
+  <string name="Welcome_Text_27_1">
+        remix.27.1\n
+        - Przedstawiamy system Portali \n
+        - Po pokonaniu jednego z głównych Bossów napotkasz pokój z portlem. Portal ten zabierze cię z powrotem do miasta. Te starożytne przejścia mogą być użyte tylko raz.\n
+        -Brama portalu znajduje się w mieście i zawsze przeniesie cię do ostatnio użytego portalu, jeśli go użyłeś\n
+        - Po pokonaniu bossa drugiego lochu możesz użyć kościanego klucza aby otworzy wyjście prowadzące do pierwszego poziomu takowego lochu.\n
+        - Maź nie upuszcza już Rdzenia  Lloyda. Przedmiot ten dostępny jest tylko przez mody\n
+        - Naprawiono błąd przywoływania pułapek , który powodował pojawianie się na podłodze cienia.\n
+        - Naprawiono błąd ze statuetką \"zwierzaka\", który zalewał dziennik zdarzeń gry niepotrzebnymi informacjami.\n
+    </string>
   <string name="Welcome_Text_27_2">
         remix.27.2\n
         --Gra:\n
@@ -298,5 +335,16 @@ remix.26.1:\n
     -- Opcje dotyczące używanej ręki \n
     - Limit czasu ruchu będzie nadal trwał podczas trybu gry\n
     - Czas rzeczywisty!(wciąż bardzo eksperymentalny) tryb ten jest dostępny i będzie trwać przez cały okres rozgrywki\n
+    </string>
+  <string name="Welcome_Text_28_3">
+    remix.28.3\n
+    - Nowe umiejętności Nekromanty:\n
+    --Mroczne poświęcenie\n
+    -- Wygrzebanie Zwłok\n
+    -- Wskrzeszenie \n
+    - Pieczona, Zamrożona,Zgniła i Surowa Ryba\n
+    - Modowanie:\n
+    -- Modyfikowalne Zaklęcia \n
+    -- Modyfikowalne Przedmioty\n
     </string>
 </resources>

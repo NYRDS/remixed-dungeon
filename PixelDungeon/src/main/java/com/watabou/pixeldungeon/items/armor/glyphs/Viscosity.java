@@ -37,8 +37,6 @@ import com.watabou.utils.Random;
 
 public class Viscosity extends Glyph {
 
-	private static final String TXT_VISCOSITY = Game.getVar(R.string.Viscosity_Txt);
-	
 	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
 	
 	@Override
@@ -70,7 +68,7 @@ public class Viscosity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_VISCOSITY, weaponName );
+		return Utils.format( Game.getVar(R.string.Viscosity_Txt), weaponName );
 	}
 
 	@Override
@@ -80,9 +78,6 @@ public class Viscosity extends Glyph {
 	
 	public static class DeferedDamage extends Buff {
 		
-		private static final String TXT_DEFERED_DAMAGE = Game.getVar(R.string.DeferedDamage_Defered_Txt);
-		private static final String TXT_KILLED_YOU     = Game.getVar(R.string.DeferedDamage_Killed_Txt);
-
 		@Packable
 		protected int damage = 0;
 
@@ -107,7 +102,7 @@ public class Viscosity extends Glyph {
 		
 		@Override
 		public String toString() {
-			return Utils.format( TXT_DEFERED_DAMAGE, damage );
+			return Utils.format( Game.getVar(R.string.DeferedDamage_Defered_Txt), damage );
 		}
 		
 		@Override
@@ -119,7 +114,7 @@ public class Viscosity extends Glyph {
 					// FIXME
 					Glyph glyph = new Viscosity();
 					Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, glyph.name(), Dungeon.depth ) );
-					GLog.n( TXT_KILLED_YOU, glyph.name() );
+					GLog.n( Game.getVar(R.string.DeferedDamage_Killed_Txt), glyph.name() );
 					
 					Badges.validateDeathFromGlyph();
 				}

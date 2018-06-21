@@ -29,8 +29,6 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfUpgrade extends InventoryScroll {
 
-	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.ScrollOfUpgrade_LooksBetter);
-	
 	{
 		inventoryTitle = Game.getVar(R.string.ScrollOfUpgrade_InvTitle);
 		mode = WndBag.Mode.UPGRADEABLE;
@@ -42,7 +40,7 @@ public class ScrollOfUpgrade extends InventoryScroll {
 		ScrollOfRemoveCurse.uncurse( Dungeon.hero, item );
 		item.upgrade();
 		
-		GLog.p( TXT_LOOKS_BETTER, item.name() );
+		GLog.p( Game.getVar(R.string.ScrollOfUpgrade_LooksBetter), item.name() );
 		
 		Badges.validateItemLevelAcquired( item );
 		

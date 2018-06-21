@@ -39,12 +39,6 @@ import java.util.ArrayList;
 
 public class LloydsBeacon extends Item {
 
-	private static final String TXT_PREVENTING = Game.getVar(R.string.LloidsBeacon_Preventing);
-	private static final String TXT_CREATURES  = Game.getVar(R.string.LloidsBeacon_Creatures);
-	private static final String TXT_RETURN     = Game.getVar(R.string.LloidsBeacon_Return);
-	private static final String TXT_INFO       = Game.getVar(R.string.LloidsBeacon_Info);
-	private static final String TXT_SET        = Game.getVar(R.string.LloidsBeacon_Set);
-
 	private static final float TIME_TO_USE = 1;
 
 	private static final String AC_SET    = "LloidsBeacon_ACSet";
@@ -92,13 +86,13 @@ public class LloydsBeacon extends Item {
 			
 			if (Dungeon.bossLevel()) {
 				hero.spend( LloydsBeacon.TIME_TO_USE );
-				GLog.w( TXT_PREVENTING );
+				GLog.w( Game.getVar(R.string.LloidsBeacon_Preventing) );
 				return;
 			}
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				if (Actor.findChar( hero.getPos() + Level.NEIGHBOURS8[i] ) != null) {
-					GLog.w( TXT_CREATURES );
+					GLog.w( Game.getVar(R.string.LloidsBeacon_Creatures) );
 					return;
 				}
 			}
@@ -114,7 +108,7 @@ public class LloydsBeacon extends Item {
 			hero.getSprite().operate( hero.getPos() );
 			Sample.INSTANCE.play( Assets.SND_BEACON );
 			
-			GLog.i( TXT_RETURN );
+			GLog.i( Game.getVar(R.string.LloidsBeacon_Return) );
 			
 		} else if (action.equals(AC_RETURN)) {
 			if (returnTo.levelId.equals(Dungeon.level.levelId)) {
@@ -158,6 +152,6 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public String info() {
-		return TXT_INFO + (returnTo.cellId == -1 ? "" : Utils.format( TXT_SET, DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
+		return Game.getVar(R.string.LloidsBeacon_Info) + (returnTo.cellId == -1 ? "" : Utils.format( Game.getVar(R.string.LloidsBeacon_Set), DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
 	}
 }

@@ -49,22 +49,6 @@ public class Potion extends Item implements UnknownItem {
 	private static final String AC_DRINK   = "Potion_ACDrink";
 	private static final String AC_MOISTEN = "Potion_ACMoisten";
 	
-	private static final String TXT_HARMFUL			= Game.getVar(R.string.Potion_Harmfull);
-	private static final String TXT_BENEFICIAL		= Game.getVar(R.string.Potion_Beneficial);
-	private static final String TXT_YES				= Game.getVar(R.string.Potion_Yes);
-	private static final String TXT_NO		   		= Game.getVar(R.string.Potion_No);
-	private static final String TXT_R_U_SURE_DRINK     = Game.getVar(R.string.Potion_SureDrink);
-	private static final String TXT_R_U_SURE_THROW     = Game.getVar(R.string.Potion_SureThrow);
-	
-	private static final String TXT_SELECT_FOR_MOISTEN = Game.getVar(R.string.Potion_SelectForMoisten);
-	private static final String TXT_MOISTEN_USELESS    = Game.getVar(R.string.Potion_MoistenUseless);
-
-	protected static final String TXT_RUNE_DISAPPEARED    = Game.getVar(R.string.Potion_RuneDissaperaed);
-	protected static final String TXT_ARROW_MOISTEN       = Game.getVar(R.string.Potion_ArrowMoisten);
-	protected static final String TXT_ITEM_FLIES_AWAY     = Game.getVar(R.string.Potion_ItemFliesAway);
-	protected static final String TXT_ROTTEN_FOOD_MOISTEN = Game.getVar(R.string.Potion_FoodRefreshed);
-	
-	
 	private static final float TIME_TO_DRINK = 1f;
 	private static final float TIME_TO_MOISTEN = 1f;
 	
@@ -148,7 +132,10 @@ public class Potion extends Item implements UnknownItem {
 								this instanceof PotionOfParalyticGas)) {
 
 					GameScene.show(
-							new WndOptions(TXT_HARMFUL, TXT_R_U_SURE_DRINK, TXT_YES, TXT_NO) {
+							new WndOptions(Game.getVar(R.string.Potion_Harmfull),
+									Game.getVar(R.string.Potion_SureDrink),
+									Game.getVar(R.string.Potion_Yes),
+									Game.getVar(R.string.Potion_No)) {
 								@Override
 								protected void onSelect(int index) {
 									if (index == 0) {
@@ -187,7 +174,10 @@ public class Potion extends Item implements UnknownItem {
 			this instanceof PotionOfMight)) {
 		
 			GameScene.show( 
-				new WndOptions( TXT_BENEFICIAL, TXT_R_U_SURE_THROW, TXT_YES, TXT_NO ) {
+				new WndOptions( Game.getVar(R.string.Potion_Beneficial),
+						Game.getVar(R.string.Potion_SureThrow),
+						Game.getVar(R.string.Potion_Yes),
+						Game.getVar(R.string.Potion_No) ) {
 					@Override
 					protected void onSelect(int index) {
 						if (index == 0) {
@@ -221,7 +211,7 @@ public class Potion extends Item implements UnknownItem {
 		hero.spend( TIME_TO_MOISTEN);
 		hero.busy();
 		
-		GameScene.selectItem( itemSelector, WndBag.Mode.MOISTABLE, TXT_SELECT_FOR_MOISTEN );
+		GameScene.selectItem( itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten) );
 		
 		hero.getSprite().operate( hero.getPos() );
 	}
@@ -374,7 +364,7 @@ public class Potion extends Item implements UnknownItem {
 	protected int reallyMoistArrows(Arrow arrow) {
 		int quantity = detachMoistenItems(arrow, (int) (10*qualityFactor()));
 		moistenEffective();
-		GLog.i(TXT_ARROW_MOISTEN);
+		GLog.i(Game.getVar(R.string.Potion_ArrowMoisten));
 		return quantity;
 	}
 
@@ -392,7 +382,7 @@ public class Potion extends Item implements UnknownItem {
 	
 	private void moistenUseless() {
 		detach(getCurUser().belongings.backpack );
-		GLog.i(TXT_MOISTEN_USELESS);
+		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
 		getCurUser().getSprite().operate( getCurUser().getPos() );		
 		getCurUser().spend( TIME_TO_MOISTEN );
 		getCurUser().busy();	

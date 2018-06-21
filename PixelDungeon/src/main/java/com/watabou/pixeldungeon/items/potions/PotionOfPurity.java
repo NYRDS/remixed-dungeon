@@ -40,9 +40,6 @@ import com.watabou.utils.PathFinder;
 
 public class PotionOfPurity extends UpgradablePotion{
 
-	private static final String TXT_FRESHNESS = Game.getVar(R.string.PotionOfPurity_Freshness);
-	private static final String TXT_NO_SMELL  = Game.getVar(R.string.PotionOfPurity_NoSmell);
-
 	private static final int DISTANCE = 2;
 
 	@Override
@@ -92,7 +89,7 @@ public class PotionOfPurity extends UpgradablePotion{
 			setKnown();
 
 			if (heroAffected) {
-				GLog.p(TXT_FRESHNESS);
+				GLog.p(Game.getVar(R.string.PotionOfPurity_Freshness));
 			}
 
 		} else {
@@ -100,7 +97,7 @@ public class PotionOfPurity extends UpgradablePotion{
 			super.shatter(cell);
 
 			if (heroAffected) {
-				GLog.i(TXT_FRESHNESS);
+				GLog.i(Game.getVar(R.string.PotionOfPurity_Freshness));
 				setKnown();
 			}
 
@@ -109,7 +106,7 @@ public class PotionOfPurity extends UpgradablePotion{
 
 	@Override
 	protected void apply(Hero hero) {
-		GLog.w(TXT_NO_SMELL);
+		GLog.w(Game.getVar(R.string.PotionOfPurity_NoSmell));
 		Buff.prolong(hero, GasesImmunity.class, (float) (GasesImmunity.DURATION * qualityFactor()));
 		setKnown();
 	}
@@ -128,7 +125,7 @@ public class PotionOfPurity extends UpgradablePotion{
 	protected void moistenRottenFood(RottenFood rfood) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 		moistenEffective();
-		GLog.i(TXT_ROTTEN_FOOD_MOISTEN, rfood.name());
+		GLog.i(Game.getVar(R.string.Potion_FoodRefreshed), rfood.name());
 
 		getCurUser().collect(rfood.purify());
 	}

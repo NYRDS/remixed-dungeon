@@ -33,9 +33,6 @@ import java.util.HashMap;
 
 public class HuntressArmor extends ClassArmor {
 	
-	private static final String TXT_NO_ENEMIES   = Game.getVar(R.string.HuntressArmor_NoEnemies);
-	protected static final String TXT_NOT_HUNTRESS = Game.getVar(R.string.HuntressArmor_NotHuntress);
-
 	{
 		image = 14;
 		hasHelmet = true;
@@ -76,7 +73,7 @@ public class HuntressArmor extends ClassArmor {
 		}
 		
 		if (targets.size() == 0) {
-			GLog.w( TXT_NO_ENEMIES );
+			GLog.w( Game.getVar(R.string.HuntressArmor_NoEnemies) );
 			return;
 		}
 
@@ -89,7 +86,7 @@ public class HuntressArmor extends ClassArmor {
 		if (hero.heroClass == HeroClass.HUNTRESS) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_HUNTRESS );
+			GLog.w( Game.getVar(R.string.HuntressArmor_NotHuntress) );
 			return false;
 		}
 	}

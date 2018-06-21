@@ -35,9 +35,7 @@ import com.watabou.utils.Random;
 
 public class Ring extends Artifact implements UnknownItem{
 
-	private static final String TXT_IDENTIFY = Game.getVar(R.string.Ring_Identify);
-	
-	private static final Class<?>[] rings = { 
+	private static final Class<?>[] rings = {
 		RingOfMending.class, 
 		RingOfDetection.class, 
 		RingOfShadows.class,
@@ -222,7 +220,7 @@ public class Ring extends Artifact implements UnknownItem{
 			if (!isIdentified() && --ticksToKnow <= 0) {
 				String gemName = name();
 				identify();
-				GLog.w( TXT_IDENTIFY, gemName, Ring.this.toString() );
+				GLog.w( Game.getVar(R.string.Ring_Identify), gemName, Ring.this.toString() );
 				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			

@@ -41,7 +41,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
-import com.watabou.pixeldungeon.scenes.WelcomeScene;
 import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -128,15 +127,9 @@ public class PixelDungeon extends Game {
 		Sample.INSTANCE.enable(soundFx());
 
 		SpellFactory.touch();
-
-		if (PixelDungeon.version() != Game.versionCode) {
-			if(differentVersions(PixelDungeon.versionString(),Game.version)) {
-				switchScene(WelcomeScene.class);
-			}
-		}
 	}
 
-	private static boolean differentVersions(String v1, String v2) {
+	public static boolean differentVersions(String v1, String v2) {
 		try {
 			Pattern p = Pattern.compile("\\d+(\\.\\d+)?");
 			Matcher m = p.matcher(v1);

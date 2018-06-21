@@ -6,25 +6,25 @@
     <string name="GnollArmor_NotGnoll">Solo los gnolls pueden usar armadura gnoll!</string>
 
     <string name="GnollArmor_Name">disfraz de teniente gnoll</string>
-    <string name="GnollArmor_Info">Los usuarios del traje de Teniente Gnoll son conocidos por su capacidad para persuadir inclusivo a las multitudes extremadamente enojadas para que sean leales servidores de la Corona.</string>
+    <string name="GnollArmor_Info">Los usuarios del traje de Teniente Gnoll son conocidos por su capacidad para persuadir, incluso a las multitudes extremadamente enojadas, para que sean leales servidores de la Corona.</string>
 
     <string name="GnollTamahawk_Name">tomahawk gnoll</string>
-    <string name="GnollTamahawk_Info">Tomahawk tradicional creado por Gnoll Gnoll arisans, cada clan tiene su propio diseno unico. Este Tomahawk es un poco mas ligero que las contrapartes hechas por humanos. </string>
-    <string name="GnollTamahawk_Gender">hombres</string>
+    <string name="GnollTamahawk_Info">Esta hacha arrojadiza tradicional, creada por Gnoll artesanos, cada clan tiene su propio diseño único. Este Tomahawk es un poco mas ligero que las contrapartes hechas por humanos. </string>
+    <string name="GnollTamahawk_Gender">masculino</string>
 
 
-    <string name="WndPlayGames_BackupProgress">Progreso del juego debrespaldo</string>
-    <string name="WndPlayGames_RestoreProgress">Restaurar todo progreso</string>
-    <string name="WndPlayGames_WorkInCloud">Trabajando con Cloud... Por favor espere.</string>
-    <string name="StartScene_UnlockGnoll">Para desbloquear esta clase debes obligar al sacerdote a curar al gnoll brutus.</string>
-    <string name="WndPriest_Heal_Minions">Cura a todos tus secuaces, todo %d oro.</string>
-    <string name="Badges_GnollUnlocked">gnoll esta abierto</string>
+    <string name="WndPlayGames_BackupProgress">Respaldo del progreso del juego</string>
+    <string name="WndPlayGames_RestoreProgress">Restaurar el progreso del juego</string>
+    <string name="WndPlayGames_WorkInCloud">Trabajando en la Nube... Por favor espere.</string>
+    <string name="StartScene_UnlockGnoll">Para desbloquear esta clase debes obligar al sacerdote a curar al bruto gnoll.</string>
+    <string name="WndPriest_Heal_Minions">Cura a todos tus secuaces, todos por %d de oro.</string>
+    <string name="Badges_GnollUnlocked">Gnoll está desbloqueado</string>
 
     <string-array name="HeroClass_GnollPerks">
         <item>Gnoll comienza con 15 puntos de fuerza</item>
         <item>Gnoll comienza con 5 puntos de vida</item>
-        <item>Gnoll comienza sin ningna armadura, pero con un tomagawk unico</item>
-        <item>Gnoll no puede escribir o leer.</item>
-        <item>El gnoll no ataca a otros gnolls asi como asi.</item>
+        <item>Gnoll comienza sin ninguna armadura, pero con un tomagawk único</item>
+        <item>Gnoll no puede escribir o leer</item>
+        <item>Los gnoll no atacan a otros gnolls sin ser provocados.</item>
      </string-array>
 </resources>

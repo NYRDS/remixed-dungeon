@@ -54,8 +54,6 @@ public class Heap implements Bundlable {
 
 	private static final int SEEDS_TO_POTION = 3;
 	
-	private static final String TXT_MIMIC = Game.getVar(R.string.Heap_Mimic);
-
 	public enum Type {
 		HEAP, 
 		FOR_SALE, 
@@ -124,7 +122,7 @@ public class Heap implements Bundlable {
 		switch (type) {
 		case MIMIC:
 			if (Mimic.spawnAt( pos, items ) != null) {
-				GLog.n( TXT_MIMIC );
+				GLog.n( Game.getVar(R.string.Heap_Mimic) );
 				destroy();
 			} else {
 				type = Type.CHEST;

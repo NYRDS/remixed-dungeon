@@ -36,8 +36,6 @@ import com.watabou.utils.Random;
 
 public class Skeleton extends UndeadMob {
 
-	private static final String TXT_HERO_KILLED = Game.getVar(R.string.Skeleton_Killed);
-	
 	public Skeleton() {
 		spriteClass = SkeletonSprite.class;
 		
@@ -93,7 +91,7 @@ public class Skeleton extends UndeadMob {
 		
 		if (heroKilled) {
 			Dungeon.fail( Utils.format( ResultDescriptions.MOB, Utils.indefinite( getName() ), Dungeon.depth ) );
-			GLog.n( TXT_HERO_KILLED );
+			GLog.n( Game.getVar(R.string.Skeleton_Killed) );
 		}
 	}
 

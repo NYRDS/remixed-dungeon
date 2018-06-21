@@ -1,3 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <string name="DarkSacrifice_Name">Sacrificio Oscuro</string>
+    <string name="DarkSacrifice_Info">Sacrifica a tu secuaz para causar una explosión. El alcance de la explosión depende de la salud restante del secuaz y tu nivel de habilidad.</string>
+    <string name="DarkSacrifice_Ok">¡Mi vida es tuya!</string>
+    <string name="DarkSacrifice_Self">¡Por la pena!</string>
+    <string name="DarkSacrifice_Resist">¡No tienes poder sobre mi!</string>
+    <string name="DarkSacrifice_Hint">¡Selecciona a tu leal sirviente a sacrificar!</string>
+
+    <string name="Exhumation_Name">Exhumar</string>
+    <string name="Exhumation_Info">Abrir tumbas es un acto siniestro, pero no para alguien que trabaja con la muerte misma.  El lanzador de este Ritual Oscuro tiene una buena oportunidad (que aumenta con el uso de la habilidad) para subyugar a las pobres almas que se encuentran aquí.</string>
+    <string name="Exhumation_NoGrave">No hay una tumba aquí para exhumar.</string>
+    <string name="Exhumation_Ok">Te obedeceré.</string>
+
+    <string name="RaiseDead_Name">Levantar Muerto</string>
+    <string name="RaiseDead_Info">Intenta levantar a la ultima criatura asesinada (el Ritual necesita de carne fresca). Cuando uses esta arte oscura recuerda: casi cualquier criatura puede ser levantada, pero no todas son fáciles de dominar.</string>
+    <string name="RaiseDead_NoSpace">Levantar muerto fallo por que no hay un espacio vacío cerca.</string>
+    <string name="RaiseDead_NoKill">Tienes que matar a alguien antes de intentar levantar lo.</string>
+
+    <string name="RawFish_Name">pescado crudo</string>
+    <string name="RawFish_Info">Pescado crudo, cómelo bajo tu  propia responsabilidad</string>
+    <string name="RawFish_Taste">¡Pescado!</string>
+
+    <string name="FrozenFish_Name">pescado congelado</string>
+    <string name="FrozenFish_Info">Pescado congelado, parece vivo, pero está congelado.</string>
+
+    <string name="FriedFish_Name">pescado frito</string>
+    <string name="FriedFish_Info">Pescado frito, luce sabroso.</string>
+    <string name="FriedFish_Taste">¡Sabroso!</string>
+
+    <string name="RottenFish_Name">pescado podrido</string>
+    <string name="RottenFish_Info">Pescado podrido, huele terrible</string>
+    <string name="RottenFish_Taste">¡Asqueroso!</string>
+</resources>

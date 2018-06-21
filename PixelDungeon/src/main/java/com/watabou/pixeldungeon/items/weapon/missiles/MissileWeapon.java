@@ -34,11 +34,6 @@ import java.util.ArrayList;
 
 public class MissileWeapon extends Weapon {
 
-	private static final String TXT_MISSILES = Game.getVar(R.string.MissileWeapon_Missiles);
-	private static final String TXT_YES      = Game.getVar(R.string.MissileWeapon_Yes);
-	private static final String TXT_NO       = Game.getVar(R.string.MissileWeapon_No);
-	private static final String TXT_R_U_SURE = Game.getVar(R.string.MissileWeapon_Sure);
-	
 	{
 		stackable = true;
 		levelKnown = true;
@@ -107,7 +102,10 @@ public class MissileWeapon extends Weapon {
 	public boolean doEquip( final Hero hero ) {
 		if(notUsableInMelee()) {
 			GameScene.show(
-					new WndOptions(TXT_MISSILES, TXT_R_U_SURE, TXT_YES, TXT_NO) {
+					new WndOptions(Game.getVar(R.string.MissileWeapon_Missiles),
+							Game.getVar(R.string.MissileWeapon_Sure),
+							Game.getVar(R.string.MissileWeapon_Yes),
+							Game.getVar(R.string.MissileWeapon_No)) {
 						@Override
 						protected void onSelect(int index) {
 							if (index == 0) {

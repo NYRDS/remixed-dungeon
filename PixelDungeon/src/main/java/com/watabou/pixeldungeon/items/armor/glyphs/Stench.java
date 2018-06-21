@@ -33,8 +33,6 @@ import com.watabou.utils.Random;
 
 public class Stench extends Glyph {
 
-	private static final String TXT_STENCH = Game.getVar(R.string.Stench_Txt);
-	
 	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x22CC44 );
 	
 	@Override
@@ -51,7 +49,7 @@ public class Stench extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_STENCH, weaponName );
+		return Utils.format( Game.getVar(R.string.Stench_Txt), weaponName );
 	}
 	
 	@Override

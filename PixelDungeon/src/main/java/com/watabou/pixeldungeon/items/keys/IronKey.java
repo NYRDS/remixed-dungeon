@@ -26,8 +26,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class IronKey extends Key {
 
-	private static final String TXT_FROM_DEPTH = Game.getVar(R.string.IronKey_FromDepth);
-
 	public static int curDepthQuantity = 0;
 	
 	{
@@ -52,6 +50,6 @@ public class IronKey extends Key {
 	
 	@Override
 	public String toString() {
-		return Utils.format( TXT_FROM_DEPTH, depth );
+		return Utils.format( Game.getVar(R.string.IronKey_FromDepth), depth );
 	}
 }

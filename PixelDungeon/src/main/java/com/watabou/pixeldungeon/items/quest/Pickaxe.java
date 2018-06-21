@@ -50,8 +50,6 @@ public class Pickaxe extends Weapon {
 
 	public static final float TIME_TO_MINE = 2;
 	
-	private static final String TXT_NO_VEIN = Game.getVar(R.string.Pickaxe_NoVein);
-	
 	private static final Glowing BLOODY = new Glowing( 0x550000 );
 	
 	{
@@ -79,7 +77,7 @@ public class Pickaxe extends Weapon {
 		if (action.equals(AC_MINE)) {
 			
 			if (!(Dungeon.level instanceof CavesLevel || Dungeon.level instanceof CavesBossLevel) ) {
-				GLog.w( TXT_NO_VEIN );
+				GLog.w( Game.getVar(R.string.Pickaxe_NoVein) );
 				return;
 			}
 			
@@ -123,7 +121,7 @@ public class Pickaxe extends Weapon {
 				}
 			}
 			
-			GLog.w( TXT_NO_VEIN );
+			GLog.w( Game.getVar(R.string.Pickaxe_NoVein) );
 			
 		} else {
 			

@@ -33,8 +33,6 @@ import com.watabou.utils.Random;
 
 public class Potential extends Glyph {
 
-	private static final String TXT_POTENTIAL = Game.getVar(R.string.Potential_Txt);
-	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66CCEE );
 	
 	@Override
@@ -63,7 +61,7 @@ public class Potential extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_POTENTIAL, weaponName );
+		return Utils.format( Game.getVar(R.string.Potential_Txt), weaponName );
 	}
 
 	@Override

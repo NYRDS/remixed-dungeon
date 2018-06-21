@@ -27,9 +27,6 @@ import com.watabou.utils.Bundle;
 import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
-	
-	private static final String TXT_LOW_MANA     = Game.getVar(R.string.ClassArmor_LowMana);
-	private static final String TXT_NOT_EQUIPPED = Game.getVar(R.string.ClassArmor_NotEquipped);
 
 	private int specialCostModifier = 3;
 	
@@ -93,9 +90,9 @@ abstract public class ClassArmor extends Armor {
 			int cost = hero.getSoulPointsMax()/specialCostModifier;
 
 			if (hero.getSoulPoints() < cost) {
-				GLog.w( TXT_LOW_MANA );
+				GLog.w( Game.getVar(R.string.ClassArmor_LowMana) );
 			} else if (!isEquipped( hero )) {
-				GLog.w( TXT_NOT_EQUIPPED );
+				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
 			} else {
 				setCurUser(hero);
 				doSpecial();
