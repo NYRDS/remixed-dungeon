@@ -35,12 +35,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class Dreamweed extends Plant {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Dreamweed_Name);
-	private static final String TXT_DESC = Game.getVar(R.string.Dreamweed_Desc);
-	
 	public Dreamweed() {
 		image = 3;
-		plantName = TXT_NAME;
+		plantName = Game.getVar(R.string.Dreamweed_Name);
 	}
 	
 	public void effect(int pos, Char ch) {
@@ -49,12 +46,12 @@ public class Dreamweed extends Plant {
 	
 	@Override
 	public String desc() {
-		return TXT_DESC;
+		return Game.getVar(R.string.Dreamweed_Desc);
 	}
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = TXT_NAME;
+			plantName = Game.getVar(R.string.Dreamweed_Name);
 			
 			name = Utils.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_DREAMWEED;
@@ -65,7 +62,7 @@ public class Dreamweed extends Plant {
 		
 		@Override
 		public String desc() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Dreamweed_Desc);
 		}
 		
 		@Override
