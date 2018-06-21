@@ -44,7 +44,6 @@ import static com.watabou.pixeldungeon.scenes.PixelScene.uiCamera;
 
 public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.Listener {
 
-    private static final String TXT_SELECT_ITEM = Game.getVar(R.string.QuickSlot_SelectedItem);
     private static final String QUICKSLOT       = "quickslot";
 
     private static ArrayList<QuickSlot>     slots   = new ArrayList<>();
@@ -165,7 +164,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             return;
         }
 
-        GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
+        GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
     }
 
     @Override
@@ -173,7 +172,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         if (Dungeon.hero.spellUser) {
             GameScene.selectSpell(this);
         } else {
-            GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, TXT_SELECT_ITEM);
+            GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
         }
         return true;
     }
