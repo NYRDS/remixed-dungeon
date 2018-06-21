@@ -37,8 +37,6 @@ public class WndInfoCell extends Window {
 
 	private static final int WIDTH = 120;
 	
-	private static final String TXT_NOTHING	= Game.getVar(R.string.WndInfoCell_Nothing);
-	
 	public WndInfoCell( int cell ) {
 		
 		super();
@@ -97,7 +95,7 @@ public class WndInfoCell extends Window {
 			}
 		}
 
-		info.text( desc.length() > 0 ? desc.toString() : TXT_NOTHING );
+		info.text( desc.length() > 0 ? desc.toString() : Game.getVar(R.string.WndInfoCell_Nothing) );
 		info.maxWidth(WIDTH);
 		info.x = titlebar.left();
 		info.y = yPos + GAP;
