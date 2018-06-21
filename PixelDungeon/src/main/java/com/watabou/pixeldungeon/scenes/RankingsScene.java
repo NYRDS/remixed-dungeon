@@ -49,12 +49,6 @@ public class RankingsScene extends PixelScene {
 
     private static final int recordsPerPage = 5;
 
-    private static final String TXT_TITLE    = Game.getVar(R.string.RankingsScene_Title);
-    private static final String TXT_TOTAL    = Game.getVar(R.string.RankingsScene_Total);
-    private static final String TXT_NO_GAMES = Game.getVar(R.string.RankingsScene_NoGames);
-
-    private static String TXT_NO_INFO = Game.getVar(R.string.RankingsScene_NoInfo);
-
     private static final float ROW_HEIGHT_L = 22;
     private static final float ROW_HEIGHT_P = 28;
 
@@ -90,7 +84,7 @@ public class RankingsScene extends PixelScene {
 
             float top = align(rowHeight / 2);
 
-            Text title = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
+            Text title = PixelScene.createText(Game.getVar(R.string.RankingsScene_Title), GuiProperties.titleFontSize());
             title.hardlight(Window.TITLE_COLOR);
             title.x = align((w - title.width()) / 2);
             title.y = align(top - title.height() - GAP);
@@ -155,7 +149,7 @@ public class RankingsScene extends PixelScene {
 
             createRecords();
 
-            Text label = PixelScene.createText(TXT_TOTAL, GuiProperties.titleFontSize());
+            Text label = PixelScene.createText(Game.getVar(R.string.RankingsScene_Total), GuiProperties.titleFontSize());
             label.hardlight(DEFAULT_COLOR);
             add(label);
 
@@ -182,7 +176,7 @@ public class RankingsScene extends PixelScene {
 
         } else {
 
-            Text title = PixelScene.createText(TXT_NO_GAMES, GuiProperties.titleFontSize());
+            Text title = PixelScene.createText(Game.getVar(R.string.RankingsScene_NoGames), GuiProperties.titleFontSize());
             title.hardlight(DEFAULT_COLOR);
             title.x = align((w - title.width()) / 2);
             title.y = align((h - title.height()) / 2);
@@ -324,7 +318,7 @@ public class RankingsScene extends PixelScene {
             if (rec.gameFile.length() > 0) {
                 getParent().add(new WndRanking(rec.gameFile));
             } else {
-                getParent().add(new WndError(TXT_NO_INFO));
+                getParent().add(new WndError(Game.getVar(R.string.RankingsScene_NoInfo)));
             }
         }
     }
