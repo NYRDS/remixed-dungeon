@@ -53,12 +53,6 @@ import java.util.Locale;
 
 public class WndRanking extends WndTabbed {
 	
-	private static final String TXT_ERROR   = Game.getVar(R.string.WndRanking_Error);
-	
-	private static final String TXT_STATS	= Game.getVar(R.string.WndRanking_Stats);
-	private static final String TXT_ITEMS	= Game.getVar(R.string.WndRanking_Items);
-	private static final String TXT_BADGES	= Game.getVar(R.string.WndRanking_Badges);
-
 	private static final int WIDTH			= 112;
 	private static final int HEIGHT			= 144;
 	
@@ -81,7 +75,7 @@ public class WndRanking extends WndTabbed {
 					Badges.loadGlobal();
 					Dungeon.loadGameForRankings( gameFile );
 				} catch (Exception e ) {
-					error = TXT_ERROR + "->" +e.getMessage();
+					error = Game.getVar(R.string.WndRanking_Error) + "->" +e.getMessage();
 					GLog.i(error);
 				}
 			}
@@ -107,7 +101,7 @@ public class WndRanking extends WndTabbed {
 				createControls();
 			} else {
 				hide();
-				Game.scene().add( new WndError( TXT_ERROR ) );
+				Game.scene().add( new WndError( Game.getVar(R.string.WndRanking_Error) ) );
 			}
 		}
 	}
@@ -115,7 +109,9 @@ public class WndRanking extends WndTabbed {
 	private void createControls() {
 		
 		String[] labels = 
-			{TXT_STATS, TXT_ITEMS, TXT_BADGES};
+			{ Game.getVar(R.string.WndRanking_Stats),
+					Game.getVar(R.string.WndRanking_Items),
+					Game.getVar(R.string.WndRanking_Badges) };
 		Group[] pages = 
 			{new StatsTab(), new ItemsTab(), new BadgesTab()};
 		
