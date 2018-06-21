@@ -65,7 +65,7 @@ public class Icecap extends Plant {
 		{
 			plantName = Game.getVar(R.string.Icecap_Name);
 			
-			name = Utils.format(TXT_SEED, plantName);
+			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_ICECAP;
 			
 			plantClass = Icecap.class;

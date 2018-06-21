@@ -62,7 +62,7 @@ public class Earthroot extends Plant {
 		{
 			plantName = Game.getVar(R.string.Earthroot_Name);
 			
-			name = Utils.format(TXT_SEED, plantName);
+			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_EARTHROOT;
 			
 			plantClass = Earthroot.class;
