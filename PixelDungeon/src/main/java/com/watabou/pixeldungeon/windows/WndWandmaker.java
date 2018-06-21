@@ -35,12 +35,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndWandmaker extends Window {
 	
-	private static final String TXT_MESSAGE	   = Game.getVar(R.string.WndWandmaker_Message);
-	private static final String TXT_BATTLE     = Game.getVar(R.string.WndWandmaker_Battle);
-	private static final String TXT_NON_BATTLE = Game.getVar(R.string.WndWandmaker_NonBattle);
-
-	private static final String TXT_FARAWELL   = Game.getVar(R.string.WndWandmaker_Farawell);
-	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 	
@@ -54,12 +48,12 @@ public class WndWandmaker extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( TXT_MESSAGE, GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndWandmaker_Message), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
-		RedButton btnBattle = new RedButton( TXT_BATTLE ) {
+		RedButton btnBattle = new RedButton( Game.getVar(R.string.WndWandmaker_Battle) ) {
 			@Override
 			protected void onClick() {
 				selectReward( wandmaker, item, WandMaker.makeBattleWand() );
@@ -68,7 +62,7 @@ public class WndWandmaker extends Window {
 		btnBattle.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnBattle );
 		
-		RedButton btnNonBattle = new RedButton( TXT_NON_BATTLE ) {
+		RedButton btnNonBattle = new RedButton( Game.getVar(R.string.WndWandmaker_NonBattle) ) {
 			@Override
 			protected void onClick() {
 				selectReward( wandmaker, item, WandMaker.makeNonBattleWand() );
@@ -92,7 +86,7 @@ public class WndWandmaker extends Window {
 			Dungeon.level.drop( reward, wandmaker.getPos() ).sprite.drop();
 		}
 		
-		wandmaker.say(Utils.format( TXT_FARAWELL, Dungeon.hero.className() ) );
+		wandmaker.say(Utils.format( Game.getVar(R.string.WndWandmaker_Farawell), Dungeon.hero.className() ) );
 		wandmaker.destroy();
 		
 		wandmaker.getSprite().die();

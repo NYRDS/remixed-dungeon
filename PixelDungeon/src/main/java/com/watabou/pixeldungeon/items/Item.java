@@ -61,9 +61,6 @@ import java.util.Comparator;
 
 public class Item implements Bundlable, Presser {
 
-	private static final   String TXT_PACK_FULL = Game.getVar(R.string.Item_PackFull);
-	protected static final String TXT_DIR_THROW = Game.getVar(R.string.Item_DirThrow);
-
 	private static final String TXT_TO_STRING       = "%s";
 	private static final String TXT_TO_STRING_X     = "%s x%d";
 	private static final String TXT_TO_STRING_LVL   = "%s%+d";
@@ -205,7 +202,7 @@ public class Item implements Bundlable, Presser {
 
 		} else {
 
-			GLog.n(TXT_PACK_FULL, name());
+			GLog.n(Game.getVar(R.string.Item_PackFull), name());
 			return false;
 
 		}
@@ -500,7 +497,7 @@ public class Item implements Bundlable, Presser {
 
 		@Override
 		public String prompt() {
-			return TXT_DIR_THROW;
+			return Game.getVar(R.string.Item_DirThrow);
 		}
 	};
 

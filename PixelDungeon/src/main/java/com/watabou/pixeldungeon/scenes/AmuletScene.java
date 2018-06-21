@@ -34,10 +34,6 @@ import com.watabou.utils.Random;
 
 public class AmuletScene extends PixelScene {
 
-	private static final String TXT_EXIT = Game.getVar(R.string.AmuletScene_Exit);
-	private static final String TXT_STAY = Game.getVar(R.string.AmuletScene_Stay);
-	private static final String TXT      = Game.getVar(R.string.AmuletScene_Txt);
-	
 	private static final int WIDTH			= 120;
 	private static final int BTN_HEIGHT		= 18;
 	private static final float SMALL_GAP	= 2;
@@ -53,7 +49,7 @@ public class AmuletScene extends PixelScene {
 		
 		Text text = null;
 		if (!noText) {
-			text = createMultiline( TXT, GuiProperties.regularFontSize() );
+			text = createMultiline( Game.getVar(R.string.AmuletScene_Txt), GuiProperties.regularFontSize() );
 			text.maxWidth(WIDTH);
 			add( text );
 		}
@@ -61,7 +57,7 @@ public class AmuletScene extends PixelScene {
 		amulet = new Image( Assets.AMULET );
 		add( amulet );
 		
-		RedButton btnExit = new RedButton( TXT_EXIT ) {
+		RedButton btnExit = new RedButton( Game.getVar(R.string.AmuletScene_Exit) ) {
 			@Override
 			protected void onClick() {
 				Dungeon.win( ResultDescriptions.WIN, Rankings.gameOver.WIN_AMULET );
@@ -72,7 +68,7 @@ public class AmuletScene extends PixelScene {
 		btnExit.setSize( WIDTH, BTN_HEIGHT );
 		add( btnExit );
 		
-		RedButton btnStay = new RedButton( TXT_STAY ) {
+		RedButton btnStay = new RedButton( Game.getVar(R.string.AmuletScene_Stay) ) {
 			@Override
 			protected void onClick() {
 				onBackPressed();

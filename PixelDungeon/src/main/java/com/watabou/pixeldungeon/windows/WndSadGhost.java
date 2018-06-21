@@ -35,12 +35,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSadGhost extends Window {
 	
-	private static final String TXT_ROSE     = Game.getVar(R.string.WndSadGhost_Rose);
-	private static final String TXT_RAT      = Game.getVar(R.string.WndSadGhost_Rat);
-	private static final String TXT_WEAPON   = Game.getVar(R.string.WndSadGhost_Wepon);
-	private static final String TXT_ARMOR    = Game.getVar(R.string.WndSadGhost_Armor);
-	private static final String TXT_FAREWELL = Game.getVar(R.string.WndSadGhost_Farewell);
-	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 	
@@ -54,12 +48,15 @@ public class WndSadGhost extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( item instanceof DriedRose ? TXT_ROSE : TXT_RAT, GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline(
+				item instanceof DriedRose ? Game.getVar(R.string.WndSadGhost_Rose) : Game.getVar(R.string.WndSadGhost_Rat),
+				GuiProperties.regularFontSize()
+		);
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
-		RedButton btnWeapon = new RedButton( TXT_WEAPON ) {
+		RedButton btnWeapon = new RedButton( Game.getVar(R.string.WndSadGhost_Wepon) ) {
 			@Override
 			protected void onClick() {
 				selectReward( ghost, item, Ghost.Quest.weapon );
@@ -68,7 +65,7 @@ public class WndSadGhost extends Window {
 		btnWeapon.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
 		
-		RedButton btnArmor = new RedButton( TXT_ARMOR ) {
+		RedButton btnArmor = new RedButton( Game.getVar(R.string.WndSadGhost_Armor) ) {
 			@Override
 			protected void onClick() {
 				selectReward( ghost, item, Ghost.Quest.armor );
@@ -91,7 +88,7 @@ public class WndSadGhost extends Window {
 			Dungeon.level.drop( reward, ghost.getPos() ).sprite.drop();
 		}
 		
-		ghost.say( TXT_FAREWELL );
+		ghost.say( Game.getVar(R.string.WndSadGhost_Farewell) );
 		ghost.die( null );
 		
 		Ghost.Quest.complete();

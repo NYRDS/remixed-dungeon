@@ -40,10 +40,6 @@ public class WndJournal extends WndTabbed {
 
     private static final int LEVEL_ITEM_HEIGHT = 18;    // Height of a level entry
 
-    private static final String TXT_TITLE   = Game.getVar(R.string.WndJournal_Title);
-    private static final String TXT_LEVELS  = Game.getVar(R.string.WndJournal_Levels);
-    private static final String TXT_LOGBOOK = Game.getVar(R.string.WndJournal_Logbook);
-
     private ScrollPane list;
 
     public WndJournal() {
@@ -52,7 +48,7 @@ public class WndJournal extends WndTabbed {
 
         resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - tabHeight() - MARGIN);
 
-        Text txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
+        Text txtTitle = PixelScene.createText(Game.getVar(R.string.WndJournal_Title), GuiProperties.titleFontSize());
         txtTitle.hardlight(Window.TITLE_COLOR);
         txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
         add(txtTitle);
@@ -178,7 +174,7 @@ public class WndJournal extends WndTabbed {
 
     private class JournalTab extends ContentTab {
         JournalTab() {
-            super(WndJournal.this, WndJournal.TXT_LEVELS);
+            super(WndJournal.this, Game.getVar(R.string.WndJournal_Levels));
         }
 
         @Override
@@ -202,7 +198,7 @@ public class WndJournal extends WndTabbed {
 
     private class LogbookTab extends ContentTab {
         LogbookTab() {
-            super(WndJournal.this, WndJournal.TXT_LOGBOOK);
+            super(WndJournal.this, Game.getVar(R.string.WndJournal_Logbook));
         }
 
         @Override

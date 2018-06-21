@@ -43,8 +43,6 @@ public class WarriorArmor extends ClassArmor {
 	private static int LEAP_TIME	= 1;
 	private static int SHOCK_TIME	= 3;
 
-	protected static final String TXT_NOT_WARRIOR	= Game.getVar(R.string.WarriorArmor_NotWarrior);
-	
 	{
 		image = 5;
 	}
@@ -64,7 +62,7 @@ public class WarriorArmor extends ClassArmor {
 		if (hero.heroClass == HeroClass.WARRIOR) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_WARRIOR );
+			GLog.w( Game.getVar(R.string.WarriorArmor_NotWarrior) );
 			return false;
 		}
 	}

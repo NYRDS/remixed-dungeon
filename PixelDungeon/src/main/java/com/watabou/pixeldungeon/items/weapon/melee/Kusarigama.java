@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -60,7 +62,7 @@ public class Kusarigama extends SpecialWeapon {
 
 		@Override
 		public String prompt() {
-			return TXT_DIR_THROW;
+			return Game.getVar(R.string.Item_DirThrow);
 		}
 	};
 

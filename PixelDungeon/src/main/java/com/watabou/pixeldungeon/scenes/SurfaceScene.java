@@ -54,8 +54,6 @@ public class SurfaceScene extends PixelScene {
 	private static final int NSTARS		= 100;
 	private static final int NCLOUDS	= 5;
 	
-	private static final String TXT_GAME_OVER = Game.getVar(R.string.SurfaceScene_GameOver);
-	
 	private Camera viewport;
 	@Override
 	public void create() {
@@ -154,7 +152,7 @@ public class SurfaceScene extends PixelScene {
 		frame.y = vy - 9;
 		add( frame );
 		
-		RedButton gameOver = new RedButton( TXT_GAME_OVER ) {
+		RedButton gameOver = new RedButton( Game.getVar(R.string.SurfaceScene_GameOver) ) {
 			protected void onClick() {
 				Game.switchScene( TitleScene.class );
 			}

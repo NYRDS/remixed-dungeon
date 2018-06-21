@@ -28,9 +28,6 @@ public abstract class PortalGate extends LevelObject {
 	@Packable
 	protected int uses;
 
-	protected static final String TXT_USED = Game.getVar(R.string.PortalGate_Used);
-	protected static final String TXT_ACTIVATED = Game.getVar(R.string.PortalGate_Activated);
-
 	public PortalGate(){
 		this(-1);
 	}
@@ -119,7 +116,7 @@ public abstract class PortalGate extends LevelObject {
 				playActiveLoop();
 				activated = true;
 				animationRunning = false;
-				GLog.w( TXT_ACTIVATED );
+				GLog.w( Game.getVar(R.string.PortalGate_Activated) );
 			}
 		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4, image() + 5, image() + 6, image() + 7, image() + 8, image() + 9, image() + 10, image() + 11, image() + 12, image() + 13, image() + 14, image() + 15, image() + 16);
 

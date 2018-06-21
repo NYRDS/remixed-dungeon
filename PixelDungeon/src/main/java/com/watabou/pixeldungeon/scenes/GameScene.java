@@ -89,15 +89,6 @@ import java.util.HashSet;
 
 public class GameScene extends PixelScene {
 
-    private static final String TXT_WELCOME      = Game.getVar(R.string.GameScene_Welcome);
-    private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
-    private static final String TXT_NIGHT_MODE   = Game.getVar(R.string.GameScene_NightMode);
-
-    private static final String TXT_CHASM   = Game.getVar(R.string.GameScene_Chasm);
-    private static final String TXT_WATER   = Game.getVar(R.string.GameScene_Water);
-    private static final String TXT_GRASS   = Game.getVar(R.string.GameScene_Grass);
-    private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
-
     private static final float MAX_BRIGHTNESS = 1.22f;
 
     private static volatile GameScene scene;
@@ -329,30 +320,30 @@ public class GameScene extends PixelScene {
         add(log);
 
         if (Dungeon.depth < Statistics.deepestFloor) {
-            GLog.i(TXT_WELCOME_BACK, Dungeon.depth);
+            GLog.i(Game.getVar(R.string.GameScene_WelcomeBack), Dungeon.depth);
         } else {
-            GLog.i(TXT_WELCOME, Dungeon.depth);
+            GLog.i(Game.getVar(R.string.GameScene_Welcome), Dungeon.depth);
             Sample.INSTANCE.play(Assets.SND_DESCEND);
         }
         switch (level.getFeeling()) {
             case CHASM:
-                GLog.w(TXT_CHASM);
+                GLog.w(Game.getVar(R.string.GameScene_Chasm));
                 break;
             case WATER:
-                GLog.w(TXT_WATER);
+                GLog.w(Game.getVar(R.string.GameScene_Water));
                 break;
             case GRASS:
-                GLog.w(TXT_GRASS);
+                GLog.w(Game.getVar(R.string.GameScene_Grass));
                 break;
             default:
         }
 
         if (level instanceof RegularLevel
                 && ((RegularLevel) level).secretDoors > Random.IntRange(3, 4)) {
-            GLog.w(TXT_SECRETS);
+            GLog.w(Game.getVar(R.string.GameScene_Secrets));
         }
         if (Dungeon.nightMode && !Dungeon.bossLevel()) {
-            GLog.w(TXT_NIGHT_MODE);
+            GLog.w(Game.getVar(R.string.GameScene_NightMode));
         }
 
         busy = new BusyIndicator();

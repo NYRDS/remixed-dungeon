@@ -25,8 +25,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class AlchemyPot {
-
-	private static final String TXT_SELECT_SEED	= Game.getVar(R.string.AlchemyPot_SelectSeed); 
 	
 	private static Hero hero;
 	private static int pos;
@@ -36,7 +34,7 @@ public class AlchemyPot {
 		AlchemyPot.hero = hero;
 		AlchemyPot.pos = pos;
 		
-		GameScene.selectItem( itemSelector, WndBag.Mode.SEED, TXT_SELECT_SEED );
+		GameScene.selectItem( itemSelector, WndBag.Mode.SEED, Game.getVar(R.string.AlchemyPot_SelectSeed) );
 	}
 	
 	private static final WndBag.Listener itemSelector = new WndBag.Listener() {

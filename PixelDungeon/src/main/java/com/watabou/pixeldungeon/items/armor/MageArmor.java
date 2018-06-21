@@ -34,8 +34,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class MageArmor extends ClassArmor {
 
-	protected static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
-	
 	{
 		image = 11;
 	}
@@ -73,7 +71,7 @@ public class MageArmor extends ClassArmor {
 		if (hero.heroClass == HeroClass.MAGE) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_MAGE );
+			GLog.w( Game.getVar(R.string.MageArmor_NotMage) );
 			return false;
 		}
 	}

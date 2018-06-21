@@ -33,11 +33,7 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndResurrect extends Window {
-	
-	private static final String TXT_MESSAGE	= Game.getVar(R.string.WndResurrect_Message);
-	private static final String TXT_YES		= Game.getVar(R.string.WndResurrect_Yes);
-	private static final String TXT_NO		= Game.getVar(R.string.WndResurrect_No);
-	
+
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
@@ -62,12 +58,12 @@ public class WndResurrect extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Text message = PixelScene.createMultiline( TXT_MESSAGE, GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndResurrect_Message), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
-		RedButton btnYes = new RedButton( TXT_YES ) {
+		RedButton btnYes = new RedButton( Game.getVar(R.string.WndResurrect_Yes) ) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -81,7 +77,7 @@ public class WndResurrect extends Window {
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnYes );
 		
-		RedButton btnNo = new RedButton( TXT_NO ) {
+		RedButton btnNo = new RedButton( Game.getVar(R.string.WndResurrect_No) ) {
 			@Override
 			protected void onClick() {
 				hide();
