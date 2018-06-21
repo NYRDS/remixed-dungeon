@@ -23,10 +23,8 @@ import com.watabou.pixeldungeon.ui.Icons;
 
 public class WndError extends WndTitledMessage {
 
-	private static final String TXT_TITLE = Game.getVar(R.string.WndError_Title);
-	
 	public WndError( String message ) {
-		super( Icons.WARNING.get(), TXT_TITLE, message );
+		super( Icons.WARNING.get(), Game.getVar(R.string.WndError_Title), message );
 	}
 
 }
