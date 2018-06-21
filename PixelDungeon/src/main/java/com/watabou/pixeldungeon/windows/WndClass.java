@@ -33,8 +33,6 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndClass extends WndTabbed {
 
-	private static final String TXT_MASTERY = Game.getVar(R.string.WndClass_Mastery);
-
 	private static final int WIDTH_P = 112;
 	private static final int WIDTH_L = 160;
 
@@ -63,7 +61,7 @@ public class WndClass extends WndTabbed {
 			MasteryTab tabMastery = new MasteryTab();
 			add(tabMastery);
 
-			tab = new RankingTab(this, TXT_MASTERY, tabMastery);
+			tab = new RankingTab(this, Game.getVar(R.string.WndClass_Mastery), tabMastery);
 			tab.setSize(TAB_WIDTH, tabHeight());
 			add(tab);
 
