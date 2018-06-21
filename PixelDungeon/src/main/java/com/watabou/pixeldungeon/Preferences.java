@@ -57,6 +57,9 @@ public enum Preferences {
     public static final String KEY_TOOL_STYLE     = "tool_style";
     public static final String KEY_HANDEDNESS     = "handedness";
 
+	public static final String KEY_EU_CONSENT_LEVEL = "eu_consent_level";
+
+
     private SharedPreferences prefs;
 
 	private Map<String, Integer> intCache    = new HashMap<>();

@@ -24,9 +24,6 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-import com.google.ads.consent.ConsentInfoUpdateListener;
-import com.google.ads.consent.ConsentInformation;
-import com.google.ads.consent.ConsentStatus;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -93,6 +90,7 @@ public class PixelDungeon extends Game {
 		);
 	}
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -130,21 +128,6 @@ public class PixelDungeon extends Game {
 		Sample.INSTANCE.enable(soundFx());
 
 		SpellFactory.touch();
-
-        ConsentInformation consentInformation = ConsentInformation.getInstance(this);
-        String[] publisherIds = {"pub-0123456789012345"};
-        consentInformation.requestConsentInfoUpdate(publisherIds, new ConsentInfoUpdateListener() {
-            @Override
-            public void onConsentInfoUpdated(ConsentStatus consentStatus) {
-                // User's consent status successfully updated.
-            }
-
-            @Override
-            public void onFailedToUpdateConsentInfo(String errorDescription) {
-                // User's consent status failed to update.
-            }
-        });
-
     }
 
 	public static boolean differentVersions(String v1, String v2) {
