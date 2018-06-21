@@ -41,10 +41,6 @@ public class WndCatalogus extends WndTabbed {
 
 	private static final int ITEM_HEIGHT = 18;
 
-	private static final String TXT_POTIONS = Game.getVar(R.string.WndCatalogus_Potions);
-	private static final String TXT_SCROLLS = Game.getVar(R.string.WndCatalogus_Scrolls);
-	private static final String TXT_TITLE   = Game.getVar(R.string.WndCatalogus_Title);
-
 	private Text       txtTitle;
 	private ScrollPane list;
 
@@ -58,7 +54,7 @@ public class WndCatalogus extends WndTabbed {
 
 		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - tabHeight() - MARGIN);
 
-		txtTitle = PixelScene.createText(TXT_TITLE, GuiProperties.titleFontSize());
+		txtTitle = PixelScene.createText(Game.getVar(R.string.WndCatalogus_Title), GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		add(txtTitle);
 
@@ -69,14 +65,14 @@ public class WndCatalogus extends WndTabbed {
 
 		boolean showPotions = WndCatalogus.showPotions;
 		Tab[] tabs = {
-				new LabeledTab(this, TXT_POTIONS) {
+				new LabeledTab(this, Game.getVar(R.string.WndCatalogus_Potions)) {
 					public void select(boolean value) {
 						super.select(value);
 						WndCatalogus.showPotions = value;
 						updateList();
 					}
 				},
-				new LabeledTab(this, TXT_SCROLLS) {
+				new LabeledTab(this, Game.getVar(R.string.WndCatalogus_Scrolls)) {
 					public void select(boolean value) {
 						super.select(value);
 						WndCatalogus.showPotions = !value;
@@ -94,7 +90,8 @@ public class WndCatalogus extends WndTabbed {
 
 	private void updateList() {
 
-		txtTitle.text(Utils.format(TXT_TITLE, showPotions ? TXT_POTIONS : TXT_SCROLLS));
+		txtTitle.text(Utils.format(Game.getVar(R.string.WndCatalogus_Title), showPotions ?
+				Game.getVar(R.string.WndCatalogus_Potions) : Game.getVar(R.string.WndCatalogus_Scrolls)));
 		txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
 
 		items.clear();
