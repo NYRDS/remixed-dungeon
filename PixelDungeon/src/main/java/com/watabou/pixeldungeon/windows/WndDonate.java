@@ -17,11 +17,6 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndDonate extends WndTabbed {
 
-	private static final String RUBY   = Game.getVar(R.string.WndDonate_ruby);
-	private static final String ROYAL   = Game.getVar(R.string.WndDonate_royal);
-	private static final String GOLD   = Game.getVar(R.string.WndDonate_gold);
-	private static final String SILVER = Game.getVar(R.string.WndDonate_silver);
-
 	private static final String DONATE = Game.getVar(R.string.WndDonate_donate);
 	private static final String NOT_CONNECTED =  Game.getVar(R.string.WndDonate_notConnected);
 
@@ -68,7 +63,12 @@ public class WndDonate extends WndTabbed {
 
 		resize(WndHelper.getFullscreenWidth(), WndHelper.getFullscreenHeight() - tabHeight() - 2*GAP);
 
-		String[] labels = { SILVER, GOLD, RUBY, ROYAL };
+		String[] labels = {
+				Game.getVar(R.string.WndDonate_silver),
+				Game.getVar(R.string.WndDonate_gold),
+				Game.getVar(R.string.WndDonate_ruby),
+				Game.getVar(R.string.WndDonate_royal)
+		};
 		Group[] pages = { new DonateTab(1), new DonateTab(2), new DonateTab(3), new DonateTab(4) };
 
 		for (int i = 0; i < pages.length; i++) {
