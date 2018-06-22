@@ -83,4 +83,12 @@ public final class ResultDescriptions {
 	private ResultDescriptions() throws Exception{
 		throw new Exception("Trying to instantiate a utility class ResultDescription.");
 	}
+
+	public static String getDescription(String reason){
+		if(descriptionsMap.containsKey(reason)){
+			return Game.getVar(descriptionsMap.get(reason));
+		} else {
+			return Game.getVar(R.string.ResultDescriptions_Unknown);	// Unknown reason provided
+		}
+	}
 }
