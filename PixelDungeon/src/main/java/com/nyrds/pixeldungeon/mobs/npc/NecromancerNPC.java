@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
 
 public class NecromancerNPC extends ImmortalNPC {
 
@@ -77,13 +76,10 @@ public class NecromancerNPC extends ImmortalNPC {
 
 		} else {
 
-			final int[] phrasesIds = {R.string.NecromancerNPC_Message1,
-									  R.string.NecromancerNPC_Message2,
-					                  R.string.NecromancerNPC_Message3,
-					                  R.string.NecromancerNPC_Message4};
-
-			int index = Random.Int(0, phrasesIds.length);
-			say(Game.getVar(phrasesIds[index]));
+			sayRandomPhrase(R.string.NecromancerNPC_Message1,
+							R.string.NecromancerNPC_Message2,
+							R.string.NecromancerNPC_Message3,
+							R.string.NecromancerNPC_Message4);
 		}
 		return true;
 	}

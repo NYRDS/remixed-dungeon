@@ -53,7 +53,7 @@ public class WndChallenges extends Window {
 		final String challenges[] = Game.getVars(R.array.Challenges_Names);
 
 		for (int i=0; i < Challenges.MASKS.length; i++) {
-			
+
 			CheckBox cb = new CheckBox( challenges[i] );
 			cb.checked( (checked & Challenges.MASKS[i]) != 0 );
 			cb.active = editable;
