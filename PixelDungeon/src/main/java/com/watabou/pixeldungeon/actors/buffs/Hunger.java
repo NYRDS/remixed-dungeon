@@ -190,7 +190,7 @@ public class Hunger extends Buff implements Hero.Doom {
 		
 		Badges.validateDeathFromHunger();
 		
-		Dungeon.fail( Utils.format( ResultDescriptions.getDescription("Hunger"), Dungeon.depth ) );
+		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.HUNGER), Dungeon.depth ) );
 		GLog.n( Game.getVar(R.string.Hunger_Death) );
 	}
 }

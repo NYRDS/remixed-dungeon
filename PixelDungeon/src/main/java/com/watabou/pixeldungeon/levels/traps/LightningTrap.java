@@ -50,7 +50,7 @@ public class LightningTrap implements ITrigger{
 				Camera.main.shake( 2, 0.3f );
 				
 				if (!ch.isAlive()) {
-					Dungeon.fail( Utils.format( ResultDescriptions.getDescription("Trap"), Game.getVar(R.string.LightningTrap_Name), Dungeon.depth ) );
+					Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.TRAP), Game.getVar(R.string.LightningTrap_Name), Dungeon.depth ) );
 					GLog.n(Game.getVar(R.string.LightningTrap_Desc));
 				} else {
 					((Hero)ch).belongings.charge( false );

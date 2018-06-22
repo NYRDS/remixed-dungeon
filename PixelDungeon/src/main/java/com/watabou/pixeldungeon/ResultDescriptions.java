@@ -29,35 +29,35 @@ public final class ResultDescriptions {
 		NECROTISM, UNKNOWN, WIN
 	}
 
-	private static final HashMap<String, Integer> descriptionsMap;
+	private static final HashMap<Reason, Integer> descriptionsMap;
 
 	static {
 		descriptionsMap = new HashMap<>();
 
 		// Mobs
-		descriptionsMap.put("Mob", R.string.ResultDescriptions_Mob);
-		descriptionsMap.put("Boss", R.string.ResultDescriptions_Boss);
+		descriptionsMap.put(Reason.MOB, R.string.ResultDescriptions_Mob);
+		descriptionsMap.put(Reason.BOSS, R.string.ResultDescriptions_Boss);
 
 		// Items
-		descriptionsMap.put("Wand", R.string.ResultDescriptions_Wand);
-		descriptionsMap.put("Glyph", R.string.ResultDescriptions_Glyph);
+		descriptionsMap.put(Reason.WAND, R.string.ResultDescriptions_Wand);
+		descriptionsMap.put(Reason.GLYPH, R.string.ResultDescriptions_Glyph);
 
 		// Dungeon features
-		descriptionsMap.put("Trap", R.string.ResultDescriptions_Trap);
+		descriptionsMap.put(Reason.TRAP, R.string.ResultDescriptions_Trap);
 
 		// Debuffs & blobs
-		descriptionsMap.put("Burning", R.string.ResultDescriptions_Burning);
-		descriptionsMap.put("Hunger", R.string.ResultDescriptions_Hunger);
-		descriptionsMap.put("Poison", R.string.ResultDescriptions_Poison);
-		descriptionsMap.put("Gas", R.string.ResultDescriptions_Gas);
-		descriptionsMap.put("Bleeding", R.string.ResultDescriptions_Bleeding);
-		descriptionsMap.put("Ooze", R.string.ResultDescriptions_Ooze);
-		descriptionsMap.put("Fall", R.string.ResultDescriptions_Fall);
-		descriptionsMap.put("Immured", R.string.ResultDescriptions_Immured);
-		descriptionsMap.put("Necrotism", R.string.ResultDescriptions_Necrotism);
+		descriptionsMap.put(Reason.BURNING, R.string.ResultDescriptions_Burning);
+		descriptionsMap.put(Reason.HUNGER, R.string.ResultDescriptions_Hunger);
+		descriptionsMap.put(Reason.POISON, R.string.ResultDescriptions_Poison);
+		descriptionsMap.put(Reason.GAS, R.string.ResultDescriptions_Gas);
+		descriptionsMap.put(Reason.BLEEDING, R.string.ResultDescriptions_Bleeding);
+		descriptionsMap.put(Reason.OOZE, R.string.ResultDescriptions_Ooze);
+		descriptionsMap.put(Reason.FALL, R.string.ResultDescriptions_Fall);
+		descriptionsMap.put(Reason.IMMURED, R.string.ResultDescriptions_Immured);
+		descriptionsMap.put(Reason.NECROTISM, R.string.ResultDescriptions_Necrotism);
 
 		// Win
-		descriptionsMap.put("Win", R.string.ResultDescriptions_Win);
+		descriptionsMap.put(Reason.WIN, R.string.ResultDescriptions_Win);
 	}
 
 	// Private constructor to avoid instantiation
@@ -65,7 +65,7 @@ public final class ResultDescriptions {
 		throw new Exception("Trying to instantiate a utility class ResultDescription.");
 	}
 
-	public static String getDescription(String reason){
+	public static String getDescription(Reason reason){
 		if(descriptionsMap.containsKey(reason)){
 			return Game.getVar(descriptionsMap.get(reason));
 		} else {

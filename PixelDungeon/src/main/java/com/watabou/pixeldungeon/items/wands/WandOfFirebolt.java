@@ -63,7 +63,7 @@ public class WandOfFirebolt extends SimpleWand  {
 			ch.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
 			
 			if (ch == getCurUser() && !ch.isAlive()) {
-				Dungeon.fail( Utils.format( ResultDescriptions.getDescription("Wand"), name, Dungeon.depth ) );
+				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfFirebolt_Info1));
 			}
 		}

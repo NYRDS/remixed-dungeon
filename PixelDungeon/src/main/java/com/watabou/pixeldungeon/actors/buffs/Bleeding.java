@@ -75,7 +75,7 @@ public class Bleeding extends Buff {
 				}
 				
 				if (target == Dungeon.hero && !target.isAlive()) {
-					Dungeon.fail( Utils.format( ResultDescriptions.getDescription("Bleeding"), Dungeon.depth ) );
+					Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BLEEDING), Dungeon.depth ) );
 					GLog.n(Game.getVar(R.string.Bleeding_Death));
 				}
 				

@@ -138,7 +138,7 @@ public class Warlock extends Mob implements IZapper {
 			}
 
 			if (!getEnemy().isAlive() && getEnemy() == Dungeon.hero) {
-				Dungeon.fail(Utils.format(ResultDescriptions.getDescription("Mob"),
+				Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
 						Utils.indefinite(getName()), Dungeon.depth));
 				GLog.n(Game.getVar(R.string.Warlock_Killed), getName());
 			}

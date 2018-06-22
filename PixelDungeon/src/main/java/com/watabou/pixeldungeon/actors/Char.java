@@ -242,14 +242,14 @@ public abstract class Char extends Actor implements Presser{
 					final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
 					if (Dungeon.hero.killerGlyph != null) {
 
-						Dungeon.fail(Utils.format(ResultDescriptions.getDescription("Glyph"), Dungeon.hero.killerGlyph.name(), Dungeon.depth));
+						Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), Dungeon.hero.killerGlyph.name(), Dungeon.depth));
 						GLog.n(TXT_KILL[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name());
 
 					} else {
 						if (this instanceof Boss) {
-							Dungeon.fail(Utils.format(ResultDescriptions.getDescription("Boss"), name, Dungeon.depth));
+							Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), name, Dungeon.depth));
 						} else {
-							Dungeon.fail(Utils.format(ResultDescriptions.getDescription("Mob"),
+							Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
 									Utils.indefinite(name), Dungeon.depth));
 						}
 

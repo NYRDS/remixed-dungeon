@@ -90,7 +90,7 @@ public class Skeleton extends UndeadMob {
 		}
 		
 		if (heroKilled) {
-			Dungeon.fail( Utils.format( ResultDescriptions.getDescription("Mob"), Utils.indefinite( getName() ), Dungeon.depth ) );
+			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB), Utils.indefinite( getName() ), Dungeon.depth ) );
 			GLog.n( Game.getVar(R.string.Skeleton_Killed) );
 		}
 	}
