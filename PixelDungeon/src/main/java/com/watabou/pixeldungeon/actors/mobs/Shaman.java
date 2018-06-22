@@ -115,7 +115,7 @@ public class Shaman extends Mob implements IZapper {
 				Camera.main.shake(2, 0.3f);
 
 				if (!enemy.isAlive()) {
-					Dungeon.fail(Utils.format(ResultDescriptions.MOB,
+					Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
 							Utils.indefinite(getName()), Dungeon.depth));
 					GLog.n(Game.getVar(R.string.Shaman_Killed), getName());
 				}

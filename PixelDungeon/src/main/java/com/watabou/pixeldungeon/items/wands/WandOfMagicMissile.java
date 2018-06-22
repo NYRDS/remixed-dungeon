@@ -73,7 +73,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			ch.getSprite().burst( 0xFF99CCFF, level / 2 + 2 );
 			
 			if (ch == getCurUser() && !ch.isAlive()) {
-				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
+				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfMagicMissile_Info1));
 			}
 		}

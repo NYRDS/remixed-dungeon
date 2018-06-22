@@ -44,15 +44,6 @@ import com.watabou.pixeldungeon.ui.StatisticsButton;
 
 public class TitleScene extends PixelScene {
 
-	private static final String TXT_PLAY = Game
-			.getVar(R.string.TitleScene_Play);
-	private static final String TXT_HIGHSCORES = Game
-			.getVar(R.string.TitleScene_Highscores);
-	private static final String TXT_BADGES = Game
-			.getVar(R.string.TitleScene_Badges);
-	private static final String TXT_ABOUT = Game
-			.getVar(R.string.TitleScene_About);
-
 	private static final String REMIXED_TITLE = "ui/title.png";
 
 	private Text         pleaseSupport;
@@ -88,7 +79,7 @@ public class TitleScene extends PixelScene {
 		placeTorch(title.x + title.width/2 - 5, title.y + title.height/2 + 5);
 		placeTorch(title.x + title.width/2 - 14, title.y + title.height/2 + 14) ;
 
-		DashboardItem btnBadges = new DashboardItem(TXT_BADGES, 3) {
+		DashboardItem btnBadges = new DashboardItem(Game.getVar(R.string.TitleScene_Badges), 3) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(BadgesScene.class);
@@ -98,7 +89,7 @@ public class TitleScene extends PixelScene {
 				- DashboardItem.SIZE);
 		add(btnBadges);
 
-		DashboardItem btnAbout = new DashboardItem(TXT_ABOUT, 1) {
+		DashboardItem btnAbout = new DashboardItem(Game.getVar(R.string.TitleScene_About), 1) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(AboutScene.class);
@@ -107,7 +98,7 @@ public class TitleScene extends PixelScene {
 		btnAbout.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
 		add(btnAbout);
 
-		DashboardItem btnPlay = new DashboardItem(TXT_PLAY, 0) {
+		DashboardItem btnPlay = new DashboardItem(Game.getVar(R.string.TitleScene_Play), 0) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(StartScene.class);
@@ -117,7 +108,7 @@ public class TitleScene extends PixelScene {
 				- DashboardItem.SIZE);
 		add(btnPlay);
 
-		DashboardItem btnHighscores = new DashboardItem(TXT_HIGHSCORES, 2) {
+		DashboardItem btnHighscores = new DashboardItem(Game.getVar(R.string.TitleScene_Highscores), 2) {
 			@Override
 			protected void onClick() {
 				PixelDungeon.switchNoFade(RankingsScene.class);

@@ -37,8 +37,6 @@ public class Assets {
     public static final String BADGES = "ui/badges.png";
     public static final String AMULET = "amulet.png";
 
-    private static final String BANNERS_PREFIX = Game.getVar(R.string.Assets_Prefix);
-
     public static final String ICONS  = "ui/icons.png";
     public static final String HP_BAR = "ui/hp_bar.png";
     public static final String SP_BAR = "ui/sp_bar.png";
@@ -204,13 +202,13 @@ public class Assets {
     public static String getBanners() {
         switch (bannersType) {
             default:
-                return "ui/" + BANNERS_PREFIX + "banners.png";
+                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners.png";
             case 1:
-                return "ui/" + BANNERS_PREFIX + "banners_supporter_1.png";
+                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_1.png";
             case 2:
-                return "ui/" + BANNERS_PREFIX + "banners_supporter_2.png";
+                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_2.png";
             case 3:
-                return "ui/" + BANNERS_PREFIX + "banners_supporter_3.png";
+                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_3.png";
         }
     }
 

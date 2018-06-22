@@ -29,9 +29,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfTeleportation extends Scroll {
 
-	public static final String TXT_TELEPORTED = Game.getVar(R.string.ScrollOfTeleportation_Teleport);
-	public static final String TXT_NO_TELEPORT = Game.getVar(R.string.ScrollOfTeleportation_NoTeleport);
-	
 	@Override
 	protected void doRead() {
 
@@ -47,7 +44,7 @@ public class ScrollOfTeleportation extends Scroll {
 	public static void teleportHero( Hero  hero ) {
 
 		if(Dungeon.level.isBossLevel()) {
-			GLog.w( TXT_NO_TELEPORT );
+			GLog.w( Game.getVar(R.string.ScrollOfTeleportation_NoTeleport) );
 			return;
 		}
 
@@ -55,7 +52,7 @@ public class ScrollOfTeleportation extends Scroll {
 
 		if (!Dungeon.level.cellValid(pos)) {
 			
-			GLog.w( TXT_NO_TELEPORT );
+			GLog.w( Game.getVar(R.string.ScrollOfTeleportation_NoTeleport) );
 			
 		} else {
 
@@ -63,7 +60,7 @@ public class ScrollOfTeleportation extends Scroll {
 			Dungeon.level.press( pos, hero );
 			Dungeon.observe();
 			
-			GLog.i( TXT_TELEPORTED );
+			GLog.i( Game.getVar(R.string.ScrollOfTeleportation_Teleport) );
 			
 		}
 	}

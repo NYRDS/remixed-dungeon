@@ -20,29 +20,57 @@ package com.watabou.pixeldungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 
-public class ResultDescriptions {
+import java.util.HashMap;
 
-	// Mobs 
-	public static final String MOB	= Game.getVar(R.string.ResultDescriptions_Mob);
-	public static final String BOSS	= Game.getVar(R.string.ResultDescriptions_Boss);
-	
-	// Items
-	public static final String WAND		= Game.getVar(R.string.ResultDescriptions_Wand);
-	public static final String GLYPH	= Game.getVar(R.string.ResultDescriptions_Glyph);
-	
-	// Dungeon features
-	public static final String TRAP	= Game.getVar(R.string.ResultDescriptions_Trap);
-	
-	// Debuffs & blobs
-	public static final String BURNING	= Game.getVar(R.string.ResultDescriptions_Burning);
-	public static final String HUNGER	= Game.getVar(R.string.ResultDescriptions_Hunger);
-	public static final String POISON	= Game.getVar(R.string.ResultDescriptions_Poison);
-	public static final String GAS		= Game.getVar(R.string.ResultDescriptions_Gas);
-	public static final String BLEEDING	= Game.getVar(R.string.ResultDescriptions_Bleeding);
-	public static final String OOZE		= Game.getVar(R.string.ResultDescriptions_Ooze);
-	public static final String FALL		= Game.getVar(R.string.ResultDescriptions_Fall);
-	public static final String IMMURED  = Game.getVar(R.string.ResultDescriptions_Immured);
-	public static final String NECROTISM	= Game.getVar(R.string.ResultDescriptions_Necrotism);
-	
-	public static final String WIN	= Game.getVar(R.string.ResultDescriptions_Win);
+public final class ResultDescriptions {
+
+	public enum Reason {
+		MOB, BOSS, WAND, GLYPH, TRAP, BURNING, HUNGER, POISON, GAS, BLEEDING, OOZE, FALL, IMMURED,
+		NECROTISM, UNKNOWN, WIN
+	}
+
+	private static final HashMap<Reason, Integer> descriptionsMap;
+
+	static {
+		descriptionsMap = new HashMap<>();
+
+		// Mobs
+		descriptionsMap.put(Reason.MOB, R.string.ResultDescriptions_Mob);
+		descriptionsMap.put(Reason.BOSS, R.string.ResultDescriptions_Boss);
+
+		// Items
+		descriptionsMap.put(Reason.WAND, R.string.ResultDescriptions_Wand);
+		descriptionsMap.put(Reason.GLYPH, R.string.ResultDescriptions_Glyph);
+
+		// Dungeon features
+		descriptionsMap.put(Reason.TRAP, R.string.ResultDescriptions_Trap);
+
+		// Debuffs & blobs
+		descriptionsMap.put(Reason.BURNING, R.string.ResultDescriptions_Burning);
+		descriptionsMap.put(Reason.HUNGER, R.string.ResultDescriptions_Hunger);
+		descriptionsMap.put(Reason.POISON, R.string.ResultDescriptions_Poison);
+		descriptionsMap.put(Reason.GAS, R.string.ResultDescriptions_Gas);
+		descriptionsMap.put(Reason.BLEEDING, R.string.ResultDescriptions_Bleeding);
+		descriptionsMap.put(Reason.OOZE, R.string.ResultDescriptions_Ooze);
+		descriptionsMap.put(Reason.FALL, R.string.ResultDescriptions_Fall);
+		descriptionsMap.put(Reason.IMMURED, R.string.ResultDescriptions_Immured);
+		descriptionsMap.put(Reason.NECROTISM, R.string.ResultDescriptions_Necrotism);
+
+		// Win
+		descriptionsMap.put(Reason.WIN, R.string.ResultDescriptions_Win);
+	}
+
+	// Private constructor to avoid instantiation
+	private ResultDescriptions() throws Exception{
+		throw new Exception("Trying to instantiate a utility class ResultDescription.");
+	}
+
+	public static String getDescription(Reason reason){
+		// Strangely not in the map, probably added a reason to the enum and forgot to add it to the HashMap
+		if(!descriptionsMap.containsKey(reason)){
+			reason = Reason.UNKNOWN;	// This one is definitely in the map. Returning UNKNOWN.
+		}
+
+		return Game.getVar(descriptionsMap.get(reason));
+	}
 }

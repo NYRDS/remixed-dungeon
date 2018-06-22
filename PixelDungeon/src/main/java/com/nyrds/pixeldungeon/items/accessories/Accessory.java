@@ -24,9 +24,6 @@ public class Accessory {
 
     protected static final String imageFile = "items/accessories.png";
 
-    protected final String name = getClassParam("Name", Game.getVar(R.string.Item_Name));
-    protected final String info = getClassParam("Info", Game.getVar(R.string.Item_Info));
-
     static final private Map<String, Class<? extends Accessory>> allAccessoriesList = new HashMap<>();
 
     private static void registerAccessory(Class<? extends Accessory> Clazz) {
@@ -91,11 +88,11 @@ public class Accessory {
     }
 
     public String desc() {
-        return info;
+        return getClassParam("Info", Game.getVar(R.string.Item_Info));
     }
 
     public String name() {
-        return name;
+        return getClassParam("Name", Game.getVar(R.string.Item_Name));
     }
 
     private String prefProperty() {

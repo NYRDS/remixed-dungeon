@@ -37,8 +37,6 @@ import com.watabou.utils.Random;
 
 public class LightningTrap implements ITrigger{
 
-	private static final String name = Game.getVar(R.string.LightningTrap_Name);
-	
 	// 00x66CCEE
 	
 	public static void trigger( int pos, @Nullable Char ch ) {
@@ -52,7 +50,7 @@ public class LightningTrap implements ITrigger{
 				Camera.main.shake( 2, 0.3f );
 				
 				if (!ch.isAlive()) {
-					Dungeon.fail( Utils.format( ResultDescriptions.TRAP, name, Dungeon.depth ) );
+					Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.TRAP), Game.getVar(R.string.LightningTrap_Name), Dungeon.depth ) );
 					GLog.n(Game.getVar(R.string.LightningTrap_Desc));
 				} else {
 					((Hero)ch).belongings.charge( false );

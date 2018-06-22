@@ -129,7 +129,7 @@ public class Burning extends Buff implements Hero.Doom {
 		
 		Badges.validateDeathFromFire();
 		
-		Dungeon.fail( Utils.format( ResultDescriptions.BURNING, Dungeon.depth ) );
+		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BURNING), Dungeon.depth ) );
 		GLog.n( Game.getVar(R.string.Burning_Death) );
 	}
 }

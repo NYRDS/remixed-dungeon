@@ -43,9 +43,6 @@ import com.watabou.utils.Random;
 
 public class Warlock extends Mob implements IZapper {
 
-	private static final String TXT_SHADOWBOLT_KILLED = Game
-			.getVar(R.string.Warlock_Killed);
-
 	public Warlock() {
 		hp(ht(70));
 		defenseSkill = 18;
@@ -141,9 +138,9 @@ public class Warlock extends Mob implements IZapper {
 			}
 
 			if (!getEnemy().isAlive() && getEnemy() == Dungeon.hero) {
-				Dungeon.fail(Utils.format(ResultDescriptions.MOB,
+				Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
 						Utils.indefinite(getName()), Dungeon.depth));
-				GLog.n(TXT_SHADOWBOLT_KILLED, getName());
+				GLog.n(Game.getVar(R.string.Warlock_Killed), getName());
 			}
 			return true;
 		}

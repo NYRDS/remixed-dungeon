@@ -40,7 +40,7 @@ public class RingOfStoneWalking extends Artifact{
 		public void onDeath() {
 			Badges.validateDeathInStone();
 			
-			Dungeon.fail( Utils.format( ResultDescriptions.IMMURED, Dungeon.depth ) );
+			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.IMMURED), Dungeon.depth ) );
 			GLog.n( Game.getVar(R.string.RingOfStoneWalking_ImmuredInStone));
 			
 		}

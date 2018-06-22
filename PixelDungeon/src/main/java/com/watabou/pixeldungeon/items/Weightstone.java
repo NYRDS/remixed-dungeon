@@ -116,12 +116,6 @@ public class Weightstone extends Item {
 	
 	public class WndBalance extends Window {
 
-		private final String TXT_CHOICE   = Game.getVar(R.string.Weightstone_WndChoice);
-		
-		private final String TXT_SPEED    = Game.getVar(R.string.Weightstone_WndSpeed);
-		private final String TXT_ACCURACY = Game.getVar(R.string.Weightstone_WndAccuracy);
-		private final String TXT_CANCEL   = Game.getVar(R.string.Weightstone_WndCancel);
-		
 		private static final int WIDTH         = 120;
 		private static final int BUTTON_WIDTH  = WIDTH - GAP * 2;
 		
@@ -132,7 +126,7 @@ public class Weightstone extends Item {
 			titlebar.setRect( 0, 0, WIDTH, 0 );
 			add( titlebar );
 			
-			Text tfMesage = PixelScene.createMultiline( Utils.format( TXT_CHOICE, weapon.name() ), GuiProperties.regularFontSize());
+			Text tfMesage = PixelScene.createMultiline( Utils.format( Game.getVar(R.string.Weightstone_WndChoice), weapon.name() ), GuiProperties.regularFontSize());
 			tfMesage.maxWidth(WIDTH - GAP * 2);
 			tfMesage.x = GAP;
 			tfMesage.y = titlebar.bottom() + GAP;
@@ -141,7 +135,7 @@ public class Weightstone extends Item {
 			float pos = tfMesage.y + tfMesage.height();
 			
 			if (weapon.imbue != Weapon.Imbue.SPEED) {
-				RedButton btnSpeed = new RedButton( TXT_SPEED ) {
+				RedButton btnSpeed = new RedButton( Game.getVar(R.string.Weightstone_WndSpeed) ) {
 					@Override
 					protected void onClick() {
 						hide();
@@ -155,7 +149,7 @@ public class Weightstone extends Item {
 			}
 			
 			if (weapon.imbue != Weapon.Imbue.ACCURACY) {
-				RedButton btnAccuracy = new RedButton( TXT_ACCURACY ) {
+				RedButton btnAccuracy = new RedButton( Game.getVar(R.string.Weightstone_WndAccuracy) ) {
 					@Override
 					protected void onClick() {
 						hide();
@@ -168,7 +162,7 @@ public class Weightstone extends Item {
 				pos = btnAccuracy.bottom();
 			}
 			
-			RedButton btnCancel = new RedButton( TXT_CANCEL ) {
+			RedButton btnCancel = new RedButton( Game.getVar(R.string.Weightstone_WndCancel) ) {
 				@Override
 				protected void onClick() {
 					hide();
