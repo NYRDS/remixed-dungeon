@@ -25,7 +25,6 @@ import java.util.HashMap;
 public final class ResultDescriptions {
 
 	// Debuffs & blobs
-	public static final String HUNGER	= Game.getVar(R.string.ResultDescriptions_Hunger);
 	public static final String POISON	= Game.getVar(R.string.ResultDescriptions_Poison);
 	public static final String GAS		= Game.getVar(R.string.ResultDescriptions_Gas);
 	public static final String BLEEDING	= Game.getVar(R.string.ResultDescriptions_Bleeding);
