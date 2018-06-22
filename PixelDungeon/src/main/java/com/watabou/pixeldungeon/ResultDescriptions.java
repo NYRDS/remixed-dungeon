@@ -24,9 +24,6 @@ import java.util.HashMap;
 
 public final class ResultDescriptions {
 
-	// Dungeon features
-	public static final String TRAP	= Game.getVar(R.string.ResultDescriptions_Trap);
-	
 	// Debuffs & blobs
 	public static final String BURNING	= Game.getVar(R.string.ResultDescriptions_Burning);
 	public static final String HUNGER	= Game.getVar(R.string.ResultDescriptions_Hunger);
