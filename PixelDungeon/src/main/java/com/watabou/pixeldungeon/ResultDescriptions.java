@@ -24,6 +24,11 @@ import java.util.HashMap;
 
 public final class ResultDescriptions {
 
+	public enum Reason {
+		MOB, BOSS, WAND, GLYPH, TRAP, BURNING, HUNGER, POISON, GAS, BLEEDING, OOZE, FALL, IMMURED,
+		NECROTISM, UNKNOWN, WIN
+	}
+
 	private static final HashMap<String, Integer> descriptionsMap;
 
 	static {
