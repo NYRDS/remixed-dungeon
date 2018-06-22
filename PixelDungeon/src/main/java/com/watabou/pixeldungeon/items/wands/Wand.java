@@ -58,11 +58,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	private static final String AC_ZAP = "Wand_ACZap";
 
-	private static final String TXT_FIZZLES = Game
-			.getVar(R.string.Wand_Fizzles);
-	private static final String TXT_SELF_TARGET = Game
-			.getVar(R.string.Wand_SelfTarget);
-
 	private static final float TIME_TO_ZAP = 1f;
 
 	private int maxCharges = Scrambler.scramble(initialCharges());
@@ -415,7 +410,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		} else {
 
 			getCurUser().spendAndNext(TIME_TO_ZAP);
-			GLog.w(TXT_FIZZLES);
+			GLog.w(Game.getVar(R.string.Wand_Fizzles));
 			levelKnown = true;
 
 			if (Random.Int(5) == 0) {
@@ -433,7 +428,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 			if (target != null) {
 				if (target == getCurUser().getPos()) {
-					GLog.i(TXT_SELF_TARGET);
+					GLog.i(Game.getVar(R.string.Wand_SelfTarget));
 					return;
 				}
 
