@@ -20,6 +20,8 @@ package com.watabou.pixeldungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 
+import java.util.HashMap;
+
 public final class ResultDescriptions {
 
 	// Mobs 
@@ -45,6 +47,37 @@ public final class ResultDescriptions {
 	public static final String NECROTISM	= Game.getVar(R.string.ResultDescriptions_Necrotism);
 	
 	public static final String WIN	= Game.getVar(R.string.ResultDescriptions_Win);
+
+	private static final HashMap<String, Integer> descriptionsMap;
+
+	static {
+		descriptionsMap = new HashMap<>();
+
+		// Mobs
+		descriptionsMap.put("Mob", R.string.ResultDescriptions_Mob);
+		descriptionsMap.put("Boss", R.string.ResultDescriptions_Boss);
+
+		// Items
+		descriptionsMap.put("Wand", R.string.ResultDescriptions_Wand);
+		descriptionsMap.put("Glyph", R.string.ResultDescriptions_Glyph);
+
+		// Dungeon features
+		descriptionsMap.put("Trap", R.string.ResultDescriptions_Trap);
+
+		// Debuffs & blobs
+		descriptionsMap.put("Burning", R.string.ResultDescriptions_Burning);
+		descriptionsMap.put("Hunger", R.string.ResultDescriptions_Hunger);
+		descriptionsMap.put("Poison", R.string.ResultDescriptions_Poison);
+		descriptionsMap.put("Gas", R.string.ResultDescriptions_Gas);
+		descriptionsMap.put("Bleeding", R.string.ResultDescriptions_Bleeding);
+		descriptionsMap.put("Ooze", R.string.ResultDescriptions_Ooze);
+		descriptionsMap.put("Fall", R.string.ResultDescriptions_Fall);
+		descriptionsMap.put("Immured", R.string.ResultDescriptions_Immured);
+		descriptionsMap.put("Necrotism", R.string.ResultDescriptions_Necrotism);
+
+		// Win
+		descriptionsMap.put("Win", R.string.ResultDescriptions_Win);
+	}
 
 	// Private constructor to avoid instantiation
 	private ResultDescriptions() throws Exception{
