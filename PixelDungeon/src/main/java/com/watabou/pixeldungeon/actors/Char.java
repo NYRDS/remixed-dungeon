@@ -242,7 +242,7 @@ public abstract class Char extends Actor implements Presser{
 					final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
 					if (Dungeon.hero.killerGlyph != null) {
 
-						Dungeon.fail(Utils.format(ResultDescriptions.GLYPH, Dungeon.hero.killerGlyph.name(), Dungeon.depth));
+						Dungeon.fail(Utils.format(ResultDescriptions.getDescription("Glyph"), Dungeon.hero.killerGlyph.name(), Dungeon.depth));
 						GLog.n(TXT_KILL[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name());
 
 					} else {
