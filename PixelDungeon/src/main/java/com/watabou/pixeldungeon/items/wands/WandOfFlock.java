@@ -131,8 +131,7 @@ public class WandOfFlock extends SimpleWand  {
 
 		@Override
 		public boolean interact(final Hero hero) {
-			final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
-			say( Random.element( QUOTES ) );
+			say( Random.element(Game.getVars(R.array.WandOfFlock_SheepBaa)) );
 			return false;
 		}
 	}

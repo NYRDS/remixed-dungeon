@@ -81,11 +81,10 @@ public class CagedKobold extends ImmortalNPC {
 				getSprite().killAndErase();
 				destroy();
 			} else {
-				final String TXT_MESSAGE1 = Game.getVar(R.string.CagedKobold_Message1);
-				final String TXT_MESSAGE2 = Game.getVar(R.string.CagedKobold_Message2);
-				final String TXT_MESSAGE3 = Game.getVar(R.string.CagedKobold_Message3);
 
-				final String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
+				final String[] TXT_PHRASES = {  Game.getVar(R.string.CagedKobold_Message1),
+												Game.getVar(R.string.CagedKobold_Message2),
+												Game.getVar(R.string.CagedKobold_Message3)};
 
 				int index = Random.Int(0, TXT_PHRASES.length);
 				say(TXT_PHRASES[index]);

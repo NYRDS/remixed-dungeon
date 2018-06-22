@@ -15,10 +15,8 @@ import com.watabou.utils.Bundle;
 
 public class ServiceManNPC extends ImmortalNPC {
 
-
 	private int filmsSeen = 0;
 	final private String FILMS_SEEN = "films_seen";
-	final private String LIMIT_REACHED = Utils.format(Game.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit());
 	private static final int BASIC_GOLD_REWARD = 150;
 
 	public ServiceManNPC() {
@@ -56,7 +54,7 @@ public class ServiceManNPC extends ImmortalNPC {
 		}
 
 		if(filmsSeen >= getLimit()){
-			GameScene.show(new WndQuest(this, LIMIT_REACHED));
+			GameScene.show(new WndQuest(this, Utils.format(Game.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit())));
 			return true;
 		}
 

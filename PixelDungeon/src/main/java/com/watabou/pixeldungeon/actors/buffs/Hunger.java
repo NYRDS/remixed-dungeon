@@ -65,8 +65,7 @@ public class Hunger extends Buff implements Hero.Doom {
 
 				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
 
-					final String[] TXT_STARVING	= Game.getVars(R.array.Hunger_Starving);
-					GLog.n( TXT_STARVING[hero.getGender()] );
+					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
 					
 					if(hero.getDifficulty() >= 3) {
 						hero.damage(Math.max(hero.effectiveSTR() - 10, 1), this);
@@ -113,15 +112,13 @@ public class Hunger extends Buff implements Hero.Doom {
 				float newLevel = level + delta;
 				boolean statusUpdated = false;
 				if (newLevel >= STARVING) {
-					final String[] TXT_STARVING = Game.getVars(R.array.Hunger_Starving);
-					GLog.n( TXT_STARVING[hero.getGender()] );
+					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
 					statusUpdated = true;
 					
 					hero.interrupt();
 					
 				} else if (newLevel >= HUNGRY && level < HUNGRY) {
-					final String[] TXT_HUNGRY = Game.getVars(R.array.Hunger_Hungry);
-					GLog.w( TXT_HUNGRY[hero.getGender()] );
+					GLog.w( Game.getVars(R.array.Hunger_Hungry)[hero.getGender()] );
 					statusUpdated = true;
 					
 				}

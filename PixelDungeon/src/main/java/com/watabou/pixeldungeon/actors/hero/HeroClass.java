@@ -82,21 +82,6 @@ public enum HeroClass {
 
     private String  magicAffinity;
 
-    private static final String[] WAR_PERKS         = Game
-            .getVars(R.array.HeroClass_WarPerks);
-    private static final String[] MAG_PERKS         = Game
-            .getVars(R.array.HeroClass_MagPerks);
-    private static final String[] ROG_PERKS         = Game
-            .getVars(R.array.HeroClass_RogPerks);
-    private static final String[] HUN_PERKS         = Game
-            .getVars(R.array.HeroClass_HunPerks);
-    private static final String[] ELF_PERKS         = Game
-            .getVars(R.array.HeroClass_ElfPerks);
-    private static final String[] NECROMANCER_PERKS = Game
-            .getVars(R.array.HeroClass_NecromancerPerks);
-    private static final String[] GNOLL_PERKS       = Game
-            .getVars(R.array.HeroClass_GnollPerks);
-
     HeroClass(String title, Class<? extends ClassArmor> armorClass, Abilities abilities) {
         this.title = title;
         this.armorClass = armorClass;
@@ -237,20 +222,27 @@ public enum HeroClass {
 
         switch (this) {
             case WARRIOR:
-                return WAR_PERKS;
+                return Game
+                        .getVars(R.array.HeroClass_WarPerks);
             case MAGE:
-                return MAG_PERKS;
+                return Game
+                        .getVars(R.array.HeroClass_MagPerks);
             case ROGUE:
             default:
-                return ROG_PERKS;
+                return Game
+                        .getVars(R.array.HeroClass_RogPerks);
             case HUNTRESS:
-                return HUN_PERKS;
+                return Game
+                        .getVars(R.array.HeroClass_HunPerks);
             case ELF:
-                return ELF_PERKS;
+                return Game
+                        .getVars(R.array.HeroClass_ElfPerks);
             case NECROMANCER:
-                return NECROMANCER_PERKS;
+                return Game
+                        .getVars(R.array.HeroClass_NecromancerPerks);
             case GNOLL:
-                return GNOLL_PERKS;
+                return Game
+                        .getVars(R.array.HeroClass_GnollPerks);
         }
     }
 

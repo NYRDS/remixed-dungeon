@@ -76,15 +76,14 @@ public class NecromancerNPC extends ImmortalNPC {
 			}
 
 		} else {
-			final String TXT_MESSAGE1 = Game.getVar(R.string.NecromancerNPC_Message1);
-			final String TXT_MESSAGE2 = Game.getVar(R.string.NecromancerNPC_Message2);
-			final String TXT_MESSAGE3 = Game.getVar(R.string.NecromancerNPC_Message3);
-			final String TXT_MESSAGE4 = Game.getVar(R.string.NecromancerNPC_Message4);
 
-			final String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3, TXT_MESSAGE4};
+			final int[] phrasesIds = {R.string.NecromancerNPC_Message1,
+									  R.string.NecromancerNPC_Message2,
+					                  R.string.NecromancerNPC_Message3,
+					                  R.string.NecromancerNPC_Message4};
 
-			int index = Random.Int(0, TXT_PHRASES.length);
-			say(TXT_PHRASES[index]);
+			int index = Random.Int(0, phrasesIds.length);
+			say(Game.getVar(phrasesIds[index]));
 		}
 		return true;
 	}

@@ -209,8 +209,7 @@ public abstract class Char extends Actor implements Presser{
 		if (hit(this, enemy, false)) {
 
 			if (visibleFight) {
-				final String TXT_HIT[]    = Game.getVars(R.array.Char_Hit);
-				GLog.i(TXT_HIT[gender], name, enemy.getName_objective());
+				GLog.i(Game.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
 			}
 
 			// FIXME
@@ -239,11 +238,10 @@ public abstract class Char extends Actor implements Presser{
 			if (!enemy.isAlive() && visibleFight) {
 				if (enemy == Dungeon.hero) {
 
-					final String TXT_KILL[]   = Game.getVars(R.array.Char_Kill);
 					if (Dungeon.hero.killerGlyph != null) {
 
 						Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), Dungeon.hero.killerGlyph.name(), Dungeon.depth));
-						GLog.n(TXT_KILL[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name());
+						GLog.n(Game.getVars(R.array.Char_Kill)[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name());
 
 					} else {
 						if (this instanceof Boss) {
@@ -253,12 +251,11 @@ public abstract class Char extends Actor implements Presser{
 									Utils.indefinite(name), Dungeon.depth));
 						}
 
-						GLog.n(TXT_KILL[gender], name);
+						GLog.n(Game.getVars(R.array.Char_Kill)[gender], name);
 					}
 
 				} else {
-					final String TXT_DEFEAT[] = Game.getVars(R.array.Char_Defeat);
-					GLog.i(TXT_DEFEAT[gender], name, enemy.getName_objective());
+					GLog.i(Game.getVars(R.array.Char_Defeat)[gender], name, enemy.getName_objective());
 				}
 			}
 
