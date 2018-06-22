@@ -143,7 +143,7 @@ public class Eye extends Mob {
 				}
 				
 				if (!ch.isAlive() && ch == Dungeon.hero) {
-					Dungeon.fail( Utils.format( ResultDescriptions.MOB, Utils.indefinite( getName() ), Dungeon.depth ) );
+					Dungeon.fail( Utils.format( ResultDescriptions.getDescription("Mob"), Utils.indefinite( getName() ), Dungeon.depth ) );
 					GLog.n( Game.getVar(R.string.Eye_Kill), getName() );
 				}
 			} else {

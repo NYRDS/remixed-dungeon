@@ -249,7 +249,7 @@ public abstract class Char extends Actor implements Presser{
 						if (this instanceof Boss) {
 							Dungeon.fail(Utils.format(ResultDescriptions.BOSS, name, Dungeon.depth));
 						} else {
-							Dungeon.fail(Utils.format(ResultDescriptions.MOB,
+							Dungeon.fail(Utils.format(ResultDescriptions.getDescription("Mob"),
 									Utils.indefinite(name), Dungeon.depth));
 						}
 

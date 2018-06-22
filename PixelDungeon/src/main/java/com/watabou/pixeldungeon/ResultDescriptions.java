@@ -25,7 +25,6 @@ import java.util.HashMap;
 public final class ResultDescriptions {
 
 	// Mobs 
-	public static final String MOB	= Game.getVar(R.string.ResultDescriptions_Mob);
 	public static final String BOSS	= Game.getVar(R.string.ResultDescriptions_Boss);
 	
 	// Items
