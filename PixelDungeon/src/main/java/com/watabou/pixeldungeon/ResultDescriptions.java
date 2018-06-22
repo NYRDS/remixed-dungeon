@@ -66,10 +66,11 @@ public final class ResultDescriptions {
 	}
 
 	public static String getDescription(Reason reason){
-		if(descriptionsMap.containsKey(reason)){
-			return Game.getVar(descriptionsMap.get(reason));
-		} else {
-			return Game.getVar(R.string.ResultDescriptions_Unknown);	// Unknown reason provided
+		// Strangely not in the map, probably added a reason to the enum and forgot to add it to the HashMap
+		if(!descriptionsMap.containsKey(reason)){
+			reason = Reason.UNKNOWN;	// This one is definitely in the map. Returning UNKNOWN.
 		}
+
+		return Game.getVar(descriptionsMap.get(reason));
 	}
 }
