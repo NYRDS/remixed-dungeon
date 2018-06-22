@@ -17,18 +17,6 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndDonate extends WndTabbed {
 
-	private static final String DONATE = Game.getVar(R.string.WndDonate_donate);
-	private static final String NOT_CONNECTED =  Game.getVar(R.string.WndDonate_notConnected);
-
-	private static final String RUBY_DONATE = Game
-			.getVar(R.string.WndDonate_rubyDonate);
-	private static final String ROYAL_DONATE = Game
-			.getVar(R.string.WndDonate_royalDonate);
-	private static final String GOLD_DONATE = Game
-			.getVar(R.string.WndDonate_goldDonate);
-	private static final String SILVER_DONATE = Game
-			.getVar(R.string.WndDonate_silverDonate);
-
 	private static final String SILVER_DONATE_TEXT = Game
 			.getVar(R.string.WndDonate_silverDonateText);
 	private static final String GOLD_DONATE_TEXT = Game
@@ -49,8 +37,6 @@ public class WndDonate extends WndTabbed {
 
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY, Icons.CHEST_ROYAL };
-	private static final String[] title = { SILVER_DONATE, GOLD_DONATE,
-			RUBY_DONATE, ROYAL_DONATE };
 	
 	private static final String[] text = { SILVER_DONATE_TEXT,
 			GOLD_DONATE_TEXT, RUBY_DONATE_TEXT, ROYAL_DONATE_TEXT };
@@ -92,6 +78,13 @@ public class WndDonate extends WndTabbed {
 
 		DonateTab(final int level) {
 
+			final String[] title = {
+					Game.getVar(R.string.WndDonate_silverDonate),
+					Game.getVar(R.string.WndDonate_goldDonate),
+					Game.getVar(R.string.WndDonate_rubyDonate),
+					Game.getVar(R.string.WndDonate_royalDonate)
+			};
+
 			IconTitle tabTitle = new IconTitle(Icons.get(icons[level - 1]),
 					title[level - 1]);
 			tabTitle.setRect(0, 0, width, 0);
@@ -105,9 +98,9 @@ public class WndDonate extends WndTabbed {
 				String price = PixelDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
 				if( price != null ) {
-					btnText = DONATE + " "+ price;
+					btnText = Game.getVar(R.string.WndDonate_donate) + " " + price;
 				} else {
-					btnText = NOT_CONNECTED;
+					btnText = Game.getVar(R.string.WndDonate_notConnected);
 				}
 				SystemRedButton donate = new SystemRedButton(btnText) {
 					@Override
