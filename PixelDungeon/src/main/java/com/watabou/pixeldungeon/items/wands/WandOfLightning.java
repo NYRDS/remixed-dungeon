@@ -48,7 +48,7 @@ public class WandOfLightning extends SimpleWand  {
 	protected void onZap( int cell ) {
 
 		if (getCurUser()!=null && !getCurUser().isAlive()) {
-			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
+			Dungeon.fail( Utils.format( ResultDescriptions.getDescription("Wand"), name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfLightning_Info1));
 		}
 	}

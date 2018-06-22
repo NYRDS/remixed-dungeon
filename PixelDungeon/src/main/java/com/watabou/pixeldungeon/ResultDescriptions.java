@@ -25,7 +25,6 @@ import java.util.HashMap;
 public final class ResultDescriptions {
 
 	// Items
-	public static final String WAND		= Game.getVar(R.string.ResultDescriptions_Wand);
 	public static final String GLYPH	= Game.getVar(R.string.ResultDescriptions_Glyph);
 	
 	// Dungeon features
