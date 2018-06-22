@@ -26,8 +26,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class Combo extends Buff {
 	
-	private static String TXT_COMBO = Game.getVar(R.string.Combo_Combo);
-
 	public int count = 0;
 	
 	@Override
@@ -48,7 +46,7 @@ public class Combo extends Buff {
 			
 			Badges.validateMasteryCombo( count );
 			
-			GLog.p( TXT_COMBO, count );
+			GLog.p( Game.getVar(R.string.Combo_Combo), count );
 			postpone( 1.41f - count / 10f );
 			return (int)(damage * (count - 2) / 5f);
 			
