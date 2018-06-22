@@ -44,24 +44,6 @@ public class InterlevelScene extends PixelScene {
 
 	private static final float TIME_TO_FADE = 0.3f;
 
-	private static final String TXT_DESCENDING = Game
-			.getVar(R.string.InterLevelScene_Descending);
-	private static final String TXT_ASCENDING = Game
-			.getVar(R.string.InterLevelScene_Ascending);
-	private static final String TXT_LOADING = Game
-			.getVar(R.string.InterLevelScene_Loading);
-	private static final String TXT_RESURRECTING = Game
-			.getVar(R.string.InterLevelScene_Resurrecting);
-	private static final String TXT_RETURNING = Game
-			.getVar(R.string.InterLevelScene_Returning);
-	private static final String TXT_FALLING = Game
-			.getVar(R.string.InterLevelScene_Falling);
-
-	private static final String ERR_FILE_NOT_FOUND = Game
-			.getVar(R.string.InterLevelScene_FileNotFound);
-	private static final String ERR_GENERIC = Game
-			.getVar(R.string.InterLevelScene_ErrorGeneric);
-
 	public enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
 	}
@@ -122,11 +104,11 @@ public class InterlevelScene extends PixelScene {
 
 			} catch (FileNotFoundException e) {
 
-				error = ERR_FILE_NOT_FOUND;
+				error = Game.getVar(R.string.InterLevelScene_FileNotFound);
 
 			} catch (IOException e) {
 				EventCollector.logException(e);
-				error = ERR_GENERIC + "\n" + e.getMessage();
+				error = Game.getVar(R.string.InterLevelScene_ErrorGeneric) + "\n" + e.getMessage();
 			}
 
 			if(mode != Mode.CONTINUE) {
@@ -144,22 +126,22 @@ public class InterlevelScene extends PixelScene {
 		String text = "";
 		switch (mode) {
 		case DESCEND:
-			text = TXT_DESCENDING;
+			text = Game.getVar(R.string.InterLevelScene_Descending);
 			break;
 		case ASCEND:
-			text = TXT_ASCENDING;
+			text = Game.getVar(R.string.InterLevelScene_Ascending);
 			break;
 		case CONTINUE:
-			text = TXT_LOADING;
+			text = Game.getVar(R.string.InterLevelScene_Loading);
 			break;
 		case RESURRECT:
-			text = TXT_RESURRECTING;
+			text = Game.getVar(R.string.InterLevelScene_Resurrecting);
 			break;
 		case RETURN:
-			text = TXT_RETURNING;
+			text = Game.getVar(R.string.InterLevelScene_Returning);
 			break;
 		case FALL:
-			text = TXT_FALLING;
+			text = Game.getVar(R.string.InterLevelScene_Falling);
 			break;
 		}
 
