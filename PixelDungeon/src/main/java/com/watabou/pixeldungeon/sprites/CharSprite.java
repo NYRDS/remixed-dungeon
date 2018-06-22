@@ -501,4 +501,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void draw() {
         super.draw();
     }
+
+    public void reset() {
+        curAnim = null;
+    }
 }

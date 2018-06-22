@@ -149,6 +149,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public void heroUpdated(Hero hero) {
+		reset();
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
 		avatar();
