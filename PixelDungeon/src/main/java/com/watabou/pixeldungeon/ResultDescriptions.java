@@ -24,8 +24,6 @@ import java.util.HashMap;
 
 public final class ResultDescriptions {
 
-	public static final String WIN	= Game.getVar(R.string.ResultDescriptions_Win);
-
 	private static final HashMap<String, Integer> descriptionsMap;
 
 	static {
