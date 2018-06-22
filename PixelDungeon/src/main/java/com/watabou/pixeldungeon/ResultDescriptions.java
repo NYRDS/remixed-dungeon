@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 
-public class ResultDescriptions {
+public final class ResultDescriptions {
 
 	// Mobs 
 	public static final String MOB	= Game.getVar(R.string.ResultDescriptions_Mob);
@@ -45,4 +45,9 @@ public class ResultDescriptions {
 	public static final String NECROTISM	= Game.getVar(R.string.ResultDescriptions_Necrotism);
 	
 	public static final String WIN	= Game.getVar(R.string.ResultDescriptions_Win);
+
+	// Private constructor to avoid instantiation
+	private ResultDescriptions() throws Exception{
+		throw new Exception("Trying to instantiate a utility class ResultDescription.");
+	}
 }
