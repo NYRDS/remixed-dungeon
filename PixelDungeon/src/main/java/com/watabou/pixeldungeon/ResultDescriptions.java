@@ -25,7 +25,6 @@ import java.util.HashMap;
 public final class ResultDescriptions {
 
 	// Debuffs & blobs
-	public static final String FALL		= Game.getVar(R.string.ResultDescriptions_Fall);
 	public static final String IMMURED  = Game.getVar(R.string.ResultDescriptions_Immured);
 	public static final String NECROTISM	= Game.getVar(R.string.ResultDescriptions_Necrotism);
 	
