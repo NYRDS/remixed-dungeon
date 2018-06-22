@@ -33,8 +33,6 @@ public class WndChallenges extends Window {
 
 	private static final int WIDTH		= 108;
 	
-	private static final String TITLE   = Game.getVar(R.string.WndChallenges_Title);
-	
 	private boolean editable;
 	private ArrayList<CheckBox> boxes;
 	
@@ -44,7 +42,7 @@ public class WndChallenges extends Window {
 		
 		this.editable = editable;
 		
-		Text title = PixelScene.createText( TITLE, GuiProperties.titleFontSize() );
+		Text title = PixelScene.createText( Game.getVar(R.string.WndChallenges_Title), GuiProperties.titleFontSize() );
 		title.hardlight( TITLE_COLOR );
 		title.x = PixelScene.align( camera, (WIDTH - title.width()) / 2 );
 		add( title );
