@@ -60,7 +60,7 @@ public class AmuletScene extends PixelScene {
 		RedButton btnExit = new RedButton( Game.getVar(R.string.AmuletScene_Exit) ) {
 			@Override
 			protected void onClick() {
-				Dungeon.win( ResultDescriptions.WIN, Rankings.gameOver.WIN_AMULET );
+				Dungeon.win( ResultDescriptions.getDescription("Win"), Rankings.gameOver.WIN_AMULET );
 				Dungeon.gameOver();
 				Game.switchScene( noText ? TitleScene.class : RankingsScene.class );
 			}
