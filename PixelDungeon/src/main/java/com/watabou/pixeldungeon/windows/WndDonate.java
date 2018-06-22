@@ -17,32 +17,8 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndDonate extends WndTabbed {
 
-	private static final String SILVER_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_silverDonateText);
-	private static final String GOLD_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_goldDonateText);
-	private static final String RUBY_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_rubyDonateText);
-	private static final String ROYAL_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_royalDonateText);
-	
-	private static final String SILVER_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_silverDonateText2);
-	private static final String GOLD_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_goldDonateText2);
-	private static final String RUBY_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_rubyDonateText2);
-	private static final String ROYAL_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_royalDonateText2);
-
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY, Icons.CHEST_ROYAL };
-	
-	private static final String[] text = { SILVER_DONATE_TEXT,
-			GOLD_DONATE_TEXT, RUBY_DONATE_TEXT, ROYAL_DONATE_TEXT };
-	
-	private static final String[] text2 = { SILVER_DONATE_TEXT_2,
-			GOLD_DONATE_TEXT_2, RUBY_DONATE_TEXT_2, ROYAL_DONATE_TEXT_2 };
 
 	public WndDonate() {
 		EventCollector.logScene(getClass().getCanonicalName());
@@ -123,7 +99,14 @@ public class WndDonate extends WndTabbed {
 			commonText.setPos(0, pos);
 			add(commonText);
 			pos += commonText.height() + GAP;
-			
+
+			final String[] text = {
+					Game.getVar(R.string.WndDonate_silverDonateText),
+					Game.getVar(R.string.WndDonate_goldDonateText),
+					Game.getVar(R.string.WndDonate_rubyDonateText),
+					Game.getVar(R.string.WndDonate_royalDonateText)
+			};
+
 			Text tabText = PixelScene.createMultiline(
 					text[level - 1], GuiProperties.regularFontSize());
 			tabText.maxWidth(width - 10);
@@ -132,7 +115,14 @@ public class WndDonate extends WndTabbed {
 			add(tabText);
 			
 			pos += tabText.height() + GAP;
-			
+
+			final String[] text2 = {
+					Game.getVar(R.string.WndDonate_silverDonateText2),
+					Game.getVar(R.string.WndDonate_goldDonateText2),
+					Game.getVar(R.string.WndDonate_rubyDonateText2),
+					Game.getVar(R.string.WndDonate_royalDonateText2)
+			};
+
 			Text tabText2 = PixelScene.createMultiline(
 					text2[level - 1], GuiProperties.regularFontSize());
 			tabText2.maxWidth(width - 10);
