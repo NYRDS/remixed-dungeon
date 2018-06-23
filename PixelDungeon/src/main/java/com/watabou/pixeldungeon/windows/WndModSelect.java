@@ -34,12 +34,14 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	private String selectedMod;
 	private String downloadTo;
 
-	private Map<String, Mods.ModDesc> modsList = Mods.buildModsList();
+	private Map<String, Mods.ModDesc> modsList;
 
 	public WndModSelect() {
 		super();
 
 		resizeLimited(120);
+
+		modsList = Mods.buildModsList();
 
 		boolean haveInternet = Util.isConnectedToInternet();
 

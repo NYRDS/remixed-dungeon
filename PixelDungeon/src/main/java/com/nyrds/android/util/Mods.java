@@ -52,7 +52,7 @@ public class Mods {
 				ModDesc netDesc = entry.getValue();
 				netDesc.needUpdate = true;
 
-				int rpdVersion = PixelDungeon.version();
+				int rpdVersion = PixelDungeon.versionCode;
 				if(rpdVersion>10000) {
 					rpdVersion -= 10000;
 				}
