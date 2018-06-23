@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.items.drinks;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -22,7 +24,7 @@ public class ManaPotion extends Drink {
 	public void execute(Hero hero, String action ) {
 		if (action.equals( AC_DRINK )) {
 			detach( hero.belongings.backpack );
-			GLog.i( message );
+			GLog.i( Game.getVar(R.string.Drink_Message) );
 
 			hero.setSoulPoints(hero.getSoulPoints() + hero.getSoulPointsMax()/3);
 			hero.getSprite().operate( hero.getPos() );

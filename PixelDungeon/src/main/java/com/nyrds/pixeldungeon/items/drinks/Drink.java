@@ -13,8 +13,6 @@ abstract public class Drink extends Item {
 	
 	public static final String AC_DRINK = "Drink_ACDrink";
 
-	public String message 	= Game.getVar(R.string.Drink_Message);
-	
 	{
 		stackable = true;
 		defaultAction = AC_DRINK;
