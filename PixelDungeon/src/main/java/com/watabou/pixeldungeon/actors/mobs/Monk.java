@@ -36,8 +36,6 @@ import com.watabou.utils.Random;
 
 public class Monk extends Mob {
 
-	public static final String TXT_DISARM = Game.getVar(R.string.Monk_Disarm);
-	
 	public Monk() {
 		spriteClass = MonkSprite.class;
 		
@@ -92,7 +90,7 @@ public class Monk extends Mob {
 			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
 				hero.belongings.weapon = null;
 				Dungeon.level.drop( weapon, hero.getPos() ).sprite.drop();
-				GLog.w( TXT_DISARM, getName(), weapon.name() );
+				GLog.w( Game.getVar(R.string.Monk_Disarm), getName(), weapon.name() );
 			}
 		}
 		

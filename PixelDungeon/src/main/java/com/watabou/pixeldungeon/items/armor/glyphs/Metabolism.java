@@ -33,8 +33,6 @@ import com.watabou.utils.Random;
 
 public class Metabolism extends Glyph {
 
-	private static final String TXT_METABOLISM = Game.getVar(R.string.Metabolism_Txt);
-	
 	private static ItemSprite.Glowing RED = new ItemSprite.Glowing( 0xCC0000 );
 	
 	@Override
@@ -66,7 +64,7 @@ public class Metabolism extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_METABOLISM, weaponName );
+		return Utils.format( Game.getVar(R.string.Metabolism_Txt), weaponName );
 	}
 
 	@Override

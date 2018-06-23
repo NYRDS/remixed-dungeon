@@ -30,17 +30,6 @@ import com.watabou.pixeldungeon.windows.elements.GenericInfo;
 
 public class WndInfoItem extends Window {
 
-	private static final String TXT_CHEST			= Game.getVar(R.string.WndInfoItem_Chest);
-	private static final String TXT_LOCKED_CHEST	= Game.getVar(R.string.WndInfoItem_LockedChest);
-	private static final String TXT_CRYSTAL_CHEST	= Game.getVar(R.string.WndInfoItem_CrystalChest);
-	private static final String TXT_TOMB			= Game.getVar(R.string.WndInfoItem_Tomb);
-	private static final String TXT_SKELETON		= Game.getVar(R.string.WndInfoItem_Skeleton);
-	private static final String TXT_WONT_KNOW		= Game.getVar(R.string.WndInfoItem_WontKnow);
-	private static final String TXT_NEED_KEY		= TXT_WONT_KNOW +" "+ Game.getVar(R.string.WndInfoItem_NeedKey);
-	private static final String TXT_INSIDE			= Game.getVar(R.string.WndInfoItem_Inside);
-	private static final String TXT_OWNER           = Game.getVar(R.string.WndInfoItem_Owner);
-	private static final String TXT_REMAINS	        = Game.getVar(R.string.WndInfoItem_Remains);
-	
 	public WndInfoItem( Heap heap ) {
 		
 		super();
@@ -63,20 +52,20 @@ public class WndInfoItem extends Window {
 			String info;
 			
 			if (heap.type == Type.CHEST || heap.type == Type.MIMIC) {
-				title = TXT_CHEST;
-				info = TXT_WONT_KNOW;
+				title = Game.getVar(R.string.WndInfoItem_Chest);
+				info = Game.getVar(R.string.WndInfoItem_WontKnow);
 			} else if (heap.type == Type.TOMB) {
-				title = TXT_TOMB;
-				info = TXT_OWNER;
+				title = Game.getVar(R.string.WndInfoItem_Tomb);
+				info = Game.getVar(R.string.WndInfoItem_Owner);
 			} else if (heap.type == Type.SKELETON) {
-				title = TXT_SKELETON;
-				info = TXT_REMAINS;
+				title = Game.getVar(R.string.WndInfoItem_Skeleton);
+				info = Game.getVar(R.string.WndInfoItem_Remains);
 			} else if (heap.type == Type.CRYSTAL_CHEST) {
-				title = TXT_CRYSTAL_CHEST;
-				info = Utils.format( TXT_INSIDE, Utils.indefinite( heap.peek().name() ) );
+				title = Game.getVar(R.string.WndInfoItem_CrystalChest);
+				info = Utils.format( Game.getVar(R.string.WndInfoItem_Inside), Utils.indefinite( heap.peek().name() ) );
 			} else {
-				title = TXT_LOCKED_CHEST;
-				info = TXT_NEED_KEY;
+				title = Game.getVar(R.string.WndInfoItem_LockedChest);
+				info = Game.getVar(R.string.WndInfoItem_WontKnow) +" "+ Game.getVar(R.string.WndInfoItem_NeedKey);
 			}
 			
 			fillFields( heap, TITLE_COLOR, title, info );

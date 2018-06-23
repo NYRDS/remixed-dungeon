@@ -17,58 +17,20 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndDonate extends WndTabbed {
 
-	private static final String RUBY   = Game.getVar(R.string.WndDonate_ruby);
-	private static final String ROYAL   = Game.getVar(R.string.WndDonate_royal);
-	private static final String GOLD   = Game.getVar(R.string.WndDonate_gold);
-	private static final String SILVER = Game.getVar(R.string.WndDonate_silver);
-
-	private static final String DONATE = Game.getVar(R.string.WndDonate_donate);
-	private static final String NOT_CONNECTED =  Game.getVar(R.string.WndDonate_notConnected);
-
-	private static final String RUBY_DONATE = Game
-			.getVar(R.string.WndDonate_rubyDonate);
-	private static final String ROYAL_DONATE = Game
-			.getVar(R.string.WndDonate_royalDonate);
-	private static final String GOLD_DONATE = Game
-			.getVar(R.string.WndDonate_goldDonate);
-	private static final String SILVER_DONATE = Game
-			.getVar(R.string.WndDonate_silverDonate);
-
-	private static final String SILVER_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_silverDonateText);
-	private static final String GOLD_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_goldDonateText);
-	private static final String RUBY_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_rubyDonateText);
-	private static final String ROYAL_DONATE_TEXT = Game
-			.getVar(R.string.WndDonate_royalDonateText);
-	
-	private static final String SILVER_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_silverDonateText2);
-	private static final String GOLD_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_goldDonateText2);
-	private static final String RUBY_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_rubyDonateText2);
-	private static final String ROYAL_DONATE_TEXT_2 = Game
-			.getVar(R.string.WndDonate_royalDonateText2);
-
 	private static final Icons[] icons = { Icons.CHEST_SILVER,
 			Icons.CHEST_GOLD, Icons.CHEST_RUBY, Icons.CHEST_ROYAL };
-	private static final String[] title = { SILVER_DONATE, GOLD_DONATE,
-			RUBY_DONATE, ROYAL_DONATE };
-	
-	private static final String[] text = { SILVER_DONATE_TEXT,
-			GOLD_DONATE_TEXT, RUBY_DONATE_TEXT, ROYAL_DONATE_TEXT };
-	
-	private static final String[] text2 = { SILVER_DONATE_TEXT_2,
-			GOLD_DONATE_TEXT_2, RUBY_DONATE_TEXT_2, ROYAL_DONATE_TEXT_2 };
 
 	public WndDonate() {
 		EventCollector.logScene(getClass().getCanonicalName());
 
 		resize(WndHelper.getFullscreenWidth(), WndHelper.getFullscreenHeight() - tabHeight() - 2*GAP);
 
-		String[] labels = { SILVER, GOLD, RUBY, ROYAL };
+		String[] labels = {
+				Game.getVar(R.string.WndDonate_silver),
+				Game.getVar(R.string.WndDonate_gold),
+				Game.getVar(R.string.WndDonate_ruby),
+				Game.getVar(R.string.WndDonate_royal)
+		};
 		Group[] pages = { new DonateTab(1), new DonateTab(2), new DonateTab(3), new DonateTab(4) };
 
 		for (int i = 0; i < pages.length; i++) {
@@ -92,6 +54,13 @@ public class WndDonate extends WndTabbed {
 
 		DonateTab(final int level) {
 
+			final String[] title = {
+					Game.getVar(R.string.WndDonate_silverDonate),
+					Game.getVar(R.string.WndDonate_goldDonate),
+					Game.getVar(R.string.WndDonate_rubyDonate),
+					Game.getVar(R.string.WndDonate_royalDonate)
+			};
+
 			IconTitle tabTitle = new IconTitle(Icons.get(icons[level - 1]),
 					title[level - 1]);
 			tabTitle.setRect(0, 0, width, 0);
@@ -105,9 +74,9 @@ public class WndDonate extends WndTabbed {
 				String price = PixelDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
 				if( price != null ) {
-					btnText = DONATE + " "+ price;
+					btnText = Game.getVar(R.string.WndDonate_donate) + " " + price;
 				} else {
-					btnText = NOT_CONNECTED;
+					btnText = Game.getVar(R.string.WndDonate_notConnected);
 				}
 				SystemRedButton donate = new SystemRedButton(btnText) {
 					@Override
@@ -130,7 +99,14 @@ public class WndDonate extends WndTabbed {
 			commonText.setPos(0, pos);
 			add(commonText);
 			pos += commonText.height() + GAP;
-			
+
+			final String[] text = {
+					Game.getVar(R.string.WndDonate_silverDonateText),
+					Game.getVar(R.string.WndDonate_goldDonateText),
+					Game.getVar(R.string.WndDonate_rubyDonateText),
+					Game.getVar(R.string.WndDonate_royalDonateText)
+			};
+
 			Text tabText = PixelScene.createMultiline(
 					text[level - 1], GuiProperties.regularFontSize());
 			tabText.maxWidth(width - 10);
@@ -139,7 +115,14 @@ public class WndDonate extends WndTabbed {
 			add(tabText);
 			
 			pos += tabText.height() + GAP;
-			
+
+			final String[] text2 = {
+					Game.getVar(R.string.WndDonate_silverDonateText2),
+					Game.getVar(R.string.WndDonate_goldDonateText2),
+					Game.getVar(R.string.WndDonate_rubyDonateText2),
+					Game.getVar(R.string.WndDonate_royalDonateText2)
+			};
+
 			Text tabText2 = PixelScene.createMultiline(
 					text2[level - 1], GuiProperties.regularFontSize());
 			tabText2.maxWidth(width - 10);

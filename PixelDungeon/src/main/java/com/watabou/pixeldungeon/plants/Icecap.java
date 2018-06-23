@@ -37,12 +37,9 @@ import com.watabou.utils.Random;
 
 public class Icecap extends Plant {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Icecap_Name);
-	private static final String TXT_DESC = Game.getVar(R.string.Icecap_Desc);
-	
 	public Icecap() {
 		image = 1;
-		plantName = TXT_NAME;
+		plantName = Game.getVar(R.string.Icecap_Name);
 	}
 	
 	@Override
@@ -61,14 +58,14 @@ public class Icecap extends Plant {
 	
 	@Override
 	public String desc() {
-		return TXT_DESC;
+		return Game.getVar(R.string.Icecap_Desc);
 	}
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = TXT_NAME;
+			plantName = Game.getVar(R.string.Icecap_Name);
 			
-			name = Utils.format(TXT_SEED, plantName);
+			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_ICECAP;
 			
 			plantClass = Icecap.class;
@@ -77,7 +74,7 @@ public class Icecap extends Plant {
 		
 		@Override
 		public String desc() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Icecap_Desc);
 		}
 		
 		@Override

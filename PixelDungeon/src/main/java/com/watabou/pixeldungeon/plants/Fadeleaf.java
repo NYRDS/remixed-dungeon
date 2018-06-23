@@ -35,12 +35,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class Fadeleaf extends Plant {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Fadeleaf_Name);
-	private static final String TXT_DESC = Game.getVar(R.string.Fadeleaf_Desc);
-	
 	public Fadeleaf () {
 		image = 6;
-		plantName = TXT_NAME;
+		plantName = Game.getVar(R.string.Fadeleaf_Name);
 	}
 	
 	public void effect(int pos, Char ch) {
@@ -67,14 +64,14 @@ public class Fadeleaf extends Plant {
 	
 	@Override
 	public String desc() {
-		return TXT_DESC;
+		return Game.getVar(R.string.Fadeleaf_Desc);
 	}
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = TXT_NAME;
+			plantName = Game.getVar(R.string.Fadeleaf_Name);
 			
-			name = Utils.format(TXT_SEED, plantName);
+			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_FADELEAF;
 			
 			plantClass = Fadeleaf.class;
@@ -83,7 +80,7 @@ public class Fadeleaf extends Plant {
 		
 		@Override
 		public String desc() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Fadeleaf_Desc);
 		}
 		
 		@Override

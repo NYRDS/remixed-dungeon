@@ -54,8 +54,6 @@ import com.watabou.utils.Random;
 
 public class Yog extends Boss {
 
-	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);
-
 	public Yog() {
 		spriteClass = YogSprite.class;
 
@@ -165,7 +163,7 @@ public class Yog extends Boss {
 
 	@Override
 	public String description() {
-		return TXT_DESC;
+		return Game.getVar(R.string.Yog_Desc);
 	}
 
 	public static class RottingFist extends Boss {
@@ -236,7 +234,7 @@ public class Yog extends Boss {
 
 		@Override
 		public String description() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Yog_Desc);
 		}
 	}
 
@@ -324,7 +322,7 @@ public class Yog extends Boss {
 
 		@Override
 		public String description() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Yog_Desc);
 		}
 	}
 
@@ -358,7 +356,7 @@ public class Yog extends Boss {
 
 		@Override
 		public String description() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Yog_Desc);
 
 		}
 	}

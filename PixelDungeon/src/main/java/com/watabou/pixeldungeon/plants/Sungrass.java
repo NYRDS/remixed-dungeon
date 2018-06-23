@@ -38,12 +38,9 @@ import com.watabou.utils.Random;
 
 public class Sungrass extends Plant {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Sungrass_Name);
-	private static final String TXT_DESC = Game.getVar(R.string.Sungrass_Desc);
-
 	public Sungrass() {
 		image = 4;
-		plantName = TXT_NAME;
+		plantName = Game.getVar(R.string.Sungrass_Name);
 	}
 
 	public void effect(int pos, Char ch) {
@@ -58,14 +55,14 @@ public class Sungrass extends Plant {
 
 	@Override
 	public String desc() {
-		return TXT_DESC;
+		return Game.getVar(R.string.Sungrass_Desc);
 	}
 
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = TXT_NAME;
+			plantName = Game.getVar(R.string.Sungrass_Name);
 
-			name = Utils.format(TXT_SEED, plantName);
+			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_SUNGRASS;
 
 			plantClass = Sungrass.class;
@@ -74,7 +71,7 @@ public class Sungrass extends Plant {
 
 		@Override
 		public String desc() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Sungrass_Desc);
 		}
 
 		@Override

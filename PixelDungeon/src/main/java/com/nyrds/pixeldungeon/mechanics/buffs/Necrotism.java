@@ -87,7 +87,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 	public void onDeath() {
 		Badges.validateDeathFromNecrotism();
 
-		Dungeon.fail( Utils.format( ResultDescriptions.NECROTISM, Dungeon.depth ) );
+		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.NECROTISM), Dungeon.depth ) );
 		GLog.n(Game.getVar(R.string.Necrotism_Death));
 	}
 }

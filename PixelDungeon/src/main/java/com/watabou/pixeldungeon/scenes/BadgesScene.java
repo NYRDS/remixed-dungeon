@@ -35,9 +35,7 @@ import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class BadgesScene extends PixelScene {
-	
-	private static final String TXT_TITLE = Game.getVar(R.string.BadgesScene_Title);
-	
+
 	@Override
 	public void create() {
 		super.create();
@@ -63,7 +61,7 @@ public class BadgesScene extends PixelScene {
 		panel.y = (h - ph) / 2;
 		add( panel );
 		
-		Text title = PixelScene.createText( TXT_TITLE, GuiProperties.titleFontSize());
+		Text title = PixelScene.createText( Game.getVar(R.string.BadgesScene_Title), GuiProperties.titleFontSize());
 		title.hardlight( Window.TITLE_COLOR );
 		title.x = align( (w - title.width()) / 2 );
 		title.y = align( (panel.y - title.baseLine()) / 2 );

@@ -20,7 +20,7 @@ public class ShamanArmor extends ElfArmor {
 		if (hero.subClass == HeroSubClass.SHAMAN) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_ELF );
+			GLog.w( Game.getVar(R.string.ElfArmor_NotElf) );
 			return false;
 		}
 	}

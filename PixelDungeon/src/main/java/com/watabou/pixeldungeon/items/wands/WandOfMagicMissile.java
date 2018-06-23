@@ -43,10 +43,6 @@ public class WandOfMagicMissile extends SimpleWand  {
 
 	public static final String AC_DISENCHANT    = "WandOfMagicMissile_ACDisenchant";
 	
-	private static final String TXT_SELECT_WAND	= Game.getVar(R.string.WandOfMagicMissile_SelectWand);
-	
-	private static final String TXT_DISENCHANTED = Game.getVar(R.string.WandOfMagicMissile_Desinchanted);
-	
 	private static final float TIME_TO_DISENCHANT	= 2f;
 	
 	private boolean disenchantEquipped;
@@ -77,7 +73,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			ch.getSprite().burst( 0xFF99CCFF, level / 2 + 2 );
 			
 			if (ch == getCurUser() && !ch.isAlive()) {
-				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
+				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfMagicMissile_Info1));
 			}
 		}
@@ -97,7 +93,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			}
 			
 			setCurUser(hero);
-			GameScene.selectItem( itemSelector, WndBag.Mode.WAND, TXT_SELECT_WAND );
+			GameScene.selectItem( itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand) );
 			
 		} else {
 		
@@ -133,7 +129,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 				ScrollOfUpgrade.upgrade( getCurUser() );
 				evoke( getCurUser() );
 				
-				GLog.w( TXT_DISENCHANTED, item.name() );
+				GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
 				
 				item.upgrade();
 				getCurUser().spendAndNext( TIME_TO_DISENCHANT );

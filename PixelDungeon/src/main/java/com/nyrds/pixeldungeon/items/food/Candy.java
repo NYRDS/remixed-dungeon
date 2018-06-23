@@ -11,8 +11,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class Candy extends Food {
 
-	private String fMessage = Game.getVar(R.string.Candy_Warning_1);
-
 	public Candy() {
 		imageFile = "items/artifacts.png";
 		image = 21;
@@ -24,7 +22,7 @@ public class Candy extends Food {
 
 			detach( hero.belongings.backpack );
 
-			GLog.w( fMessage );
+			GLog.w(Game.getVar(R.string.Candy_Warning_1));
 
 			hero.getSprite().operate( hero.getPos() );
 			hero.busy();

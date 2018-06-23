@@ -900,7 +900,7 @@ public class Hero extends Char implements PetOwner {
 					GameScene.show(new WndMessage(Game.getVar(R.string.Hero_Leave)));
 					ready();
 				} else {
-					Dungeon.win(ResultDescriptions.WIN, Rankings.gameOver.WIN_HAPPY);
+					Dungeon.win(ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_HAPPY);
 
 					Dungeon.gameOver();
 

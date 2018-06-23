@@ -31,8 +31,6 @@ public abstract class EquipableItem extends Item {
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
-	private static final String TXT_UNEQUIP_CURSED	= Game.getVar(R.string.EquipableItem_Unequip);
-	
 	@Override
 	public void execute( Hero hero, String action ) {
 		switch (action) {
@@ -81,7 +79,7 @@ public abstract class EquipableItem extends Item {
 	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
 		
 		if (cursed) {
-			GLog.w( TXT_UNEQUIP_CURSED, name() );
+			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );
 			return false;
 		}
 		

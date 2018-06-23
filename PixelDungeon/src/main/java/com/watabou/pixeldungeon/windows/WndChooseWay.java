@@ -36,12 +36,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndChooseWay extends Window {
 	
-	private static final String TXT_MESSAGE	= Game.getVar(R.string.WndChooseWay_Message);
-	private static final String TXT_CANCEL	= Game.getVar(R.string.WndChooseWay_Cancel);
-	private static final String TXT_BREAK_SPELL	= Game.getVar(R.string.BlackSkullOfMastery_RemainHumanDesc);
-	private static final String TXT_BREAK_SPELL_BTN	= Game.getVar(R.string.BlackSkullOfMastery_Necromancer);
-	private static final String TXT_BLACKSKULL_TITLE	= Game.getVar(R.string.BlackSkullOfMastery_Title);
-
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
@@ -61,9 +55,10 @@ public class WndChooseWay extends Window {
 			desc = desc + "\n\n" + way2.desc();
 		}
 		if (way1 == HeroSubClass.LICH){
-			desc = TXT_BLACKSKULL_TITLE + "\n\n" + desc + "\n\n" + TXT_BREAK_SPELL;
+			desc = Game.getVar(R.string.BlackSkullOfMastery_Title) + "\n\n"
+					+ desc + "\n\n" + Game.getVar(R.string.BlackSkullOfMastery_RemainHumanDesc);
 		}
-		desc = desc + "\n\n" + TXT_MESSAGE;
+		desc = desc + "\n\n" + Game.getVar(R.string.WndChooseWay_Message);
 		return desc;
 	}
 
@@ -122,7 +117,7 @@ public class WndChooseWay extends Window {
 			btnBreakSpell(btnWay1);
 		}
 
-		RedButton btnCancel = new RedButton( TXT_CANCEL ) {
+		RedButton btnCancel = new RedButton( Game.getVar(R.string.WndChooseWay_Cancel) ) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -135,7 +130,7 @@ public class WndChooseWay extends Window {
 	}
 
 	private void btnBreakSpell(RedButton btnWay1){
-		RedButton btnWay2 = new RedButton( Utils.capitalize( TXT_BREAK_SPELL_BTN ) ) {
+		RedButton btnWay2 = new RedButton( Utils.capitalize( Game.getVar(R.string.BlackSkullOfMastery_Necromancer) ) ) {
 			@Override
 			protected void onClick() {
 				hide();

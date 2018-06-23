@@ -34,12 +34,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class Sorrowmoss extends Plant {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Sorrowmoss_Name);
-	private static final String TXT_DESC = Game.getVar(R.string.Sorrowmoss_Desc);
-	
 	public Sorrowmoss() {
 		image = 2;
-		plantName = TXT_NAME;
+		plantName = Game.getVar(R.string.Sorrowmoss_Name);
 	}
 	
 	public void effect(int pos, Char ch ) {
@@ -54,14 +51,14 @@ public class Sorrowmoss extends Plant {
 	
 	@Override
 	public String desc() {
-		return TXT_DESC;
+		return Game.getVar(R.string.Sorrowmoss_Desc);
 	}
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = TXT_NAME;
+			plantName = Game.getVar(R.string.Sorrowmoss_Name);
 			
-			name = Utils.format(TXT_SEED, plantName);
+			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_SORROWMOSS;
 			
 			plantClass = Sorrowmoss.class;
@@ -70,7 +67,7 @@ public class Sorrowmoss extends Plant {
 		
 		@Override
 		public String desc() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Sorrowmoss_Desc);
 		}
 		
 		@Override

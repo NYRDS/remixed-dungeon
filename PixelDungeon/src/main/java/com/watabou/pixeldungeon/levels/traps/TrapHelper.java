@@ -9,11 +9,6 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 
 public class TrapHelper {
 
-	private static final String TXT_CHASM = Game.getVar(R.string.TrapWnd_Title);
-	private static final String TXT_YES   = Game.getVar(R.string.Chasm_Yes);
-	private static final String TXT_NO    = Game.getVar(R.string.Chasm_No);
-	private static final String TXT_STEP  = Game.getVar(R.string.TrapWnd_Step);
-
 	public static boolean stepConfirmed = false;
 
 	public static boolean isVisibleTrap(int cellType){
@@ -22,7 +17,7 @@ public class TrapHelper {
 
 	public static void heroTriggerTrap( final Hero hero ) {
 		GameScene.show(
-				new WndOptions( TXT_CHASM, TXT_STEP, TXT_YES, TXT_NO ) {
+				new WndOptions( Game.getVar(R.string.TrapWnd_Title), Game.getVar(R.string.TrapWnd_Step), Game.getVar(R.string.Chasm_Yes), Game.getVar(R.string.Chasm_No) ) {
 					@Override
 					protected void onSelect( int index ) {
 						if (index == 0) {

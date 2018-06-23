@@ -346,7 +346,8 @@ public class PixelDungeon extends Game {
 	public static void uiLanguage(String lang) {
 		Preferences.INSTANCE.put(Preferences.KEY_LOCALE, lang);
 
-		instance().doRestart();
+		instance().setSelectedLanguage();
+		resetScene();
 	}
 
 	public static void version( int value)  {
@@ -521,7 +522,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static Boolean handedness() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_HANDEDNESS, true);
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_HANDEDNESS, false);
 	}
 
 	public static void handedness(Boolean left) {

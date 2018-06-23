@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-
 public class Challenges {
 
 	public static final int NO_FOOD				= 1;
@@ -28,9 +25,7 @@ public class Challenges {
 	public static final int NO_HERBALISM		= 8;
 	public static final int SWARM_INTELLIGENCE	= 16;
 	public static final int DARKNESS			= 32;
-	
-	public static final String[] NAMES = Game.getVars(R.array.Challenges_Names);
-	
+
 	public static final int[] MASKS = {
 		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS
 	};

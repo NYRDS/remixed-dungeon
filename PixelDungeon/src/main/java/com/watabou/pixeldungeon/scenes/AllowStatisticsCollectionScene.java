@@ -15,15 +15,13 @@ import com.watabou.pixeldungeon.ui.ScrollPane;
 
 public class AllowStatisticsCollectionScene extends PixelScene {
 
-	private static final String TTL_Welcome = Game.getVar(R.string.AllowStatisticsCollectionScene_Title);
-
 	private static final int GAP = 4;
 
 	@Override
 	public void create() {
 		super.create();
 
-		Text title = createMultiline(TTL_Welcome, GuiProperties.bigTitleFontSize());
+		Text title = createMultiline( Game.getVar(R.string.AllowStatisticsCollectionScene_Title), GuiProperties.bigTitleFontSize());
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;

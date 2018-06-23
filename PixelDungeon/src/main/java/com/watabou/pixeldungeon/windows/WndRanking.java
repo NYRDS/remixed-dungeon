@@ -53,12 +53,6 @@ import java.util.Locale;
 
 public class WndRanking extends WndTabbed {
 	
-	private static final String TXT_ERROR   = Game.getVar(R.string.WndRanking_Error);
-	
-	private static final String TXT_STATS	= Game.getVar(R.string.WndRanking_Stats);
-	private static final String TXT_ITEMS	= Game.getVar(R.string.WndRanking_Items);
-	private static final String TXT_BADGES	= Game.getVar(R.string.WndRanking_Badges);
-
 	private static final int WIDTH			= 112;
 	private static final int HEIGHT			= 144;
 	
@@ -81,7 +75,7 @@ public class WndRanking extends WndTabbed {
 					Badges.loadGlobal();
 					Dungeon.loadGameForRankings( gameFile );
 				} catch (Exception e ) {
-					error = TXT_ERROR + "->" +e.getMessage();
+					error = Game.getVar(R.string.WndRanking_Error) + "->" +e.getMessage();
 					GLog.i(error);
 				}
 			}
@@ -107,7 +101,7 @@ public class WndRanking extends WndTabbed {
 				createControls();
 			} else {
 				hide();
-				Game.scene().add( new WndError( TXT_ERROR ) );
+				Game.scene().add( new WndError( Game.getVar(R.string.WndRanking_Error) ) );
 			}
 		}
 	}
@@ -115,7 +109,9 @@ public class WndRanking extends WndTabbed {
 	private void createControls() {
 		
 		String[] labels = 
-			{TXT_STATS, TXT_ITEMS, TXT_BADGES};
+			{ Game.getVar(R.string.WndRanking_Stats),
+					Game.getVar(R.string.WndRanking_Items),
+					Game.getVar(R.string.WndRanking_Badges) };
 		Group[] pages = 
 			{new StatsTab(), new ItemsTab(), new BadgesTab()};
 		
@@ -135,22 +131,6 @@ public class WndRanking extends WndTabbed {
 		
 		private static final int GAP	= 4;
 
-		private final String TXT_TITLE      = Game.getVar(R.string.WndRanking_StaTitle);
-		private final String TXT_CHALLENGES = Game.getVar(R.string.WndRanking_StaChallenges);
-		
-		private final String TXT_HEALTH	  = Game.getVar(R.string.WndRanking_StaHealth);
-		private final String TXT_STR      = Game.getVar(R.string.WndRanking_StaStr);
-		
-		private final String TXT_DURATION = Game.getVar(R.string.WndRanking_StaDuration);
-		
-		private final String TXT_DEPTH    = Game.getVar(R.string.WndRanking_StaDepth);
-		private final String TXT_ENEMIES  = Game.getVar(R.string.WndRanking_StaEnemies);
-		private final String TXT_GOLD     = Game.getVar(R.string.WndRanking_StaGold);
-		
-		private final String TXT_FOOD     = Game.getVar(R.string.WndRanking_StaFood);
-		private final String TXT_ALCHEMY  = Game.getVar(R.string.WndRanking_StaAlchemy);
-		private final String TXT_ANKHS    = Game.getVar(R.string.WndRanking_StaAnkhs);
-		
 		public StatsTab() {
 			super();
 			
@@ -161,7 +141,7 @@ public class WndRanking extends WndTabbed {
 
 			IconTitle title = new IconTitle();
 			title.icon( heroSprite.avatar() );
-			title.label( Utils.format( TXT_TITLE, hero.lvl(), heroClass ).toUpperCase( Locale.ENGLISH ) );
+			title.label( Utils.format( Game.getVar(R.string.WndRanking_StaTitle), hero.lvl(), heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
 			title.color(0xCC33FF);
 			add( title );
@@ -169,7 +149,7 @@ public class WndRanking extends WndTabbed {
 			float pos = title.bottom();
 			
 			if (Dungeon.challenges > 0) {
-				RedButton btnCatalogus = new RedButton( TXT_CHALLENGES ) {
+				RedButton btnCatalogus = new RedButton( Game.getVar(R.string.WndRanking_StaChallenges) ) {
 					@Override
 					protected void onClick() {
 						Game.scene().add( new WndChallenges( Dungeon.challenges, false ) );
@@ -187,24 +167,24 @@ public class WndRanking extends WndTabbed {
 			
 			pos += GAP;
 			
-			pos = statSlot( this, TXT_STR, Integer.toString( hero.effectiveSTR() ), pos );
-			pos = statSlot( this, TXT_HEALTH, Integer.toString( hero.ht() ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaStr), Integer.toString( hero.effectiveSTR() ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaHealth), Integer.toString( hero.ht() ), pos );
 			
 			pos += GAP;
 			
-			pos = statSlot( this, TXT_DURATION, Integer.toString( (int)Statistics.duration ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaDuration), Integer.toString( (int)Statistics.duration ), pos );
 			
 			pos += GAP;
 			
-			pos = statSlot( this, TXT_DEPTH, Integer.toString( Statistics.deepestFloor ), pos );
-			pos = statSlot( this, TXT_ENEMIES, Integer.toString( Statistics.enemiesSlain ), pos );
-			pos = statSlot( this, TXT_GOLD, Integer.toString( Statistics.goldCollected ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaDepth), Integer.toString( Statistics.deepestFloor ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaEnemies), Integer.toString( Statistics.enemiesSlain ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaGold), Integer.toString( Statistics.goldCollected ), pos );
 			
 			pos += GAP;
 			
-			pos = statSlot( this, TXT_FOOD, Integer.toString( Statistics.foodEaten ), pos );
-			pos = statSlot( this, TXT_ALCHEMY, Integer.toString( Statistics.potionsCooked ), pos );
-			pos = statSlot( this, TXT_ANKHS, Integer.toString( Statistics.ankhsUsed ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaFood), Integer.toString( Statistics.foodEaten ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaAlchemy), Integer.toString( Statistics.potionsCooked ), pos );
+			pos = statSlot( this, Game.getVar(R.string.WndRanking_StaAnkhs), Integer.toString( Statistics.ankhsUsed ), pos );
 		}
 		
 		private String difficultyToText(int difficulty) {

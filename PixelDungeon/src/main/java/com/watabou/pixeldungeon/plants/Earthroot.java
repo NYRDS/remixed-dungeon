@@ -37,12 +37,9 @@ import com.watabou.utils.Bundle;
 
 public class Earthroot extends Plant {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Earthroot_Name);
-	private static final String TXT_DESC = Game.getVar(R.string.Earthroot_Desc);
-	
 	public Earthroot() {
 		image = 5;
-		plantName = TXT_NAME;
+		plantName = Game.getVar(R.string.Earthroot_Name);
 	}
 
 	public void effect(int pos, Char ch) {
@@ -58,14 +55,14 @@ public class Earthroot extends Plant {
 	
 	@Override
 	public String desc() {
-		return TXT_DESC;
+		return Game.getVar(R.string.Earthroot_Desc);
 	}
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = TXT_NAME;
+			plantName = Game.getVar(R.string.Earthroot_Name);
 			
-			name = Utils.format(TXT_SEED, plantName);
+			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_EARTHROOT;
 			
 			plantClass = Earthroot.class;
@@ -74,7 +71,7 @@ public class Earthroot extends Plant {
 		
 		@Override
 		public String desc() {
-			return TXT_DESC;
+			return Game.getVar(R.string.Earthroot_Desc);
 		}
 		
 		@Override

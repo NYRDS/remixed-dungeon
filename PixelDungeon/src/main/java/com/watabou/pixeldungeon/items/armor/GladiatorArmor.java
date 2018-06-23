@@ -19,7 +19,7 @@ public class GladiatorArmor extends WarriorArmor {
 		if (hero.subClass == HeroSubClass.GLADIATOR) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_WARRIOR );
+			GLog.w( Game.getVar(R.string.WarriorArmor_NotWarrior) );
 			return false;
 		}
 	}

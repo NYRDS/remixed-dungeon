@@ -64,7 +64,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 			enemy.damage(damageRoll(), this);
 
 			if (!enemy.isAlive() && enemy == Dungeon.hero) {
-				Dungeon.fail(Utils.format(ResultDescriptions.MOB,
+				Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
 						Utils.indefinite(getName()), Dungeon.depth));
 				GLog.n(Game.getVar(R.string.KoboldIcemancer_Killed), getName());
 			}

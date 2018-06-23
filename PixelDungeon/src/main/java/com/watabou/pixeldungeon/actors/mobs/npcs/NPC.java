@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -79,5 +80,10 @@ public abstract class NPC extends Mob {
 		super.fromJson(mobDesc);
 
 		setState(mobDesc.optString("aiState","Passive").toUpperCase(Locale.ROOT));
+	}
+
+	public void sayRandomPhrase(int ...phrases) {
+		int index = Random.Int(0, phrases.length);
+		say(Game.getVar(phrases[index]));
 	}
 }

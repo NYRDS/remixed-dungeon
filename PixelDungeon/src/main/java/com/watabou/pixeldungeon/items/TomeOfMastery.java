@@ -35,9 +35,7 @@ import java.util.ArrayList;
 
 public class TomeOfMastery extends MasteryItem {
 
-	private static final String TXT_BLINDED	= Game.getVar(R.string.TomeOfMastery_Blinded);
 	public static final String AC_READ                 = "TomeOfMastery_ACRead";
-	private static final String TXT_WAY_ALREADY_CHOSEN = Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen);
 
 	{
 		stackable = false;
@@ -66,12 +64,12 @@ public class TomeOfMastery extends MasteryItem {
 		if (action.equals( AC_READ )) {
 			
 			if (hero.hasBuff( Blindness.class )) {
-				GLog.w( TXT_BLINDED );
+				GLog.w( Game.getVar(R.string.TomeOfMastery_Blinded) );
 				return;
 			}
 
 			if(hero.subClass != HeroSubClass.NONE) {
-				GLog.w( TXT_WAY_ALREADY_CHOSEN );
+				GLog.w( Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen) );
 				return;
 			}
 
@@ -101,7 +99,7 @@ public class TomeOfMastery extends MasteryItem {
 				way2 = HeroSubClass.SHAMAN;
 				break;
 			default:
-				GLog.w( TXT_WAY_ALREADY_CHOSEN );
+				GLog.w( Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen) );
 				return;
 			}
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );

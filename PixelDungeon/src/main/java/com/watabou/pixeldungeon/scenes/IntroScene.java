@@ -23,13 +23,11 @@ import com.watabou.pixeldungeon.windows.WndStory;
 
 public class IntroScene extends PixelScene {
 
-	private static final String TXT = Game.getVar(R.string.IntroScene_Txt);
-	
 	@Override
 	public void create() {
 		super.create();
 		
-		add( new WndStory( TXT ) {
+		add( new WndStory( Game.getVar(R.string.IntroScene_Txt) ) {
 			@Override
 			public void hide() {
 				super.hide();

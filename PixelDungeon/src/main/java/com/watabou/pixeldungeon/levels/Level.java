@@ -301,9 +301,6 @@ public abstract class Level implements Bundlable {
 
 	private static final float TIME_TO_RESPAWN = 50;
 
-	private static final String TXT_HIDDEN_PLATE_CLICKS = Game
-			.getVar(R.string.Level_HiddenPlate);
-
 	public int[]     map;
 
 
@@ -1123,7 +1120,7 @@ public abstract class Level implements Bundlable {
 
 	protected void pressHero(int cell, Hero hero) {
 		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
-			GLog.i(TXT_HIDDEN_PLATE_CLICKS);
+			GLog.i(Game.getVar(R.string.Level_HiddenPlate));
 			set(cell, Terrain.discover(map[cell]));
 			TrapHelper.heroPressed();
 		}

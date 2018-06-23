@@ -34,8 +34,6 @@ import com.watabou.utils.Random;
 
 public class Multiplicity extends Glyph {
 
-	private static final String TXT_MULTIPLICITY = Game.getVar(R.string.Multiplicity_Txt);
-	
 	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xCCAA88 );
 	
 	@Override
@@ -69,7 +67,7 @@ public class Multiplicity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( TXT_MULTIPLICITY, weaponName );
+		return Utils.format( Game.getVar(R.string.Multiplicity_Txt), weaponName );
 	}
 
 	@Override

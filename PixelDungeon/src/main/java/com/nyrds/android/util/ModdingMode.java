@@ -54,7 +54,7 @@ public class ModdingMode {
 
 	public static int activeModVersion() {
 		if (mActiveMod.equals(ModdingMode.REMIXED)) {
-			return PixelDungeon.version();
+			return PixelDungeon.versionCode;
 		}
 
 		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");

@@ -19,7 +19,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
 
 public class CagedKobold extends ImmortalNPC {
 
@@ -81,14 +80,9 @@ public class CagedKobold extends ImmortalNPC {
 				getSprite().killAndErase();
 				destroy();
 			} else {
-				final String TXT_MESSAGE1 = Game.getVar(R.string.CagedKobold_Message1);
-				final String TXT_MESSAGE2 = Game.getVar(R.string.CagedKobold_Message2);
-				final String TXT_MESSAGE3 = Game.getVar(R.string.CagedKobold_Message3);
-
-				final String[] TXT_PHRASES = {TXT_MESSAGE1, TXT_MESSAGE2, TXT_MESSAGE3};
-
-				int index = Random.Int(0, TXT_PHRASES.length);
-				say(TXT_PHRASES[index]);
+				sayRandomPhrase(R.string.CagedKobold_Message1,
+								R.string.CagedKobold_Message2,
+								R.string.CagedKobold_Message3);
 			}
 			
 		} else {

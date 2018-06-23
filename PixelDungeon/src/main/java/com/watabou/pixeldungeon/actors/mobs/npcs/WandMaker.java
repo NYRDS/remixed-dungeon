@@ -312,7 +312,7 @@ public class WandMaker extends NPC {
 			{
 				plantName = Game.getVar(R.string.WandMaker_RotberryName);
 				
-				name = Utils.format(TXT_SEED, plantName);
+				name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 				image = ItemSpriteSheet.SEED_ROTBERRY;
 				
 				plantClass = Rotberry.class;

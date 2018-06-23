@@ -16,8 +16,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ElfArmor extends ClassArmor {
 	
-	protected static final String TXT_NOT_ELF = Game.getVar(R.string.ElfArmor_NotElf);
-
 	public ElfArmor() {
 		image = 17;
 		hasHelmet = true;
@@ -51,7 +49,7 @@ public class ElfArmor extends ClassArmor {
 		if (hero.heroClass == HeroClass.ELF) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( TXT_NOT_ELF );
+			GLog.w( Game.getVar(R.string.ElfArmor_NotElf) );
 			return false;
 		}
 	}
