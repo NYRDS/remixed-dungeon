@@ -17,12 +17,13 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
-public class Visual extends Gizmo {
+public class Visual extends Gizmo implements IPlaceable{
 
 	public float x;
 	public float y;

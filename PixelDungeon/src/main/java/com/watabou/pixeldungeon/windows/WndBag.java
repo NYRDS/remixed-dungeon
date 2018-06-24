@@ -211,8 +211,10 @@ public class WndBag extends WndTabbed {
 		
 		int x = col * (SLOT_SIZE + SLOT_MARGIN);
 		int y = (int) (txtTitle.height() + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
-		
-		add( new ItemButton( item ).setPos( x, y ) );
+
+		ItemButton btnItem = new ItemButton( item );
+		btnItem.setPos(x,y);
+		add( btnItem );
 		
 		if (++col >= nCols) {
 			col = 0;

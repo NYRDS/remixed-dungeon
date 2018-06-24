@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.ui.Component;
 
 /**
  * Created by mike on 01.05.2018.
@@ -28,9 +27,9 @@ public class VBox extends BasicBox {
         float pos = top();
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                ((Component) g).setPos(x, pos);
-                pos += ((Component) g).height() + gap;
+            if (g instanceof IPlaceable) {
+                ((IPlaceable) g).setPos(x, pos);
+                pos += ((IPlaceable) g).height() + gap;
             }
         }
     }
@@ -39,9 +38,9 @@ public class VBox extends BasicBox {
         float pos = bottom();
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                ((Component) g).setPos(x,pos - ((Component) g).height() - gap);
-                pos -= ((Component) g).height() + gap;
+            if (g instanceof IPlaceable) {
+                ((IPlaceable) g).setPos(x,pos - ((IPlaceable) g).height() - gap);
+                pos -= ((IPlaceable) g).height() + gap;
             }
         }
     }
@@ -50,8 +49,8 @@ public class VBox extends BasicBox {
         float childsHeight = 0;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                childsHeight += ((Component) g).height() + gap;
+            if (g instanceof IPlaceable) {
+                childsHeight += ((IPlaceable) g).height() + gap;
             }
         }
         return childsHeight;
@@ -61,9 +60,9 @@ public class VBox extends BasicBox {
         float pos = top() + (height() - childsHeight()) / 2;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                ((Component) g).setPos(x, pos);
-                pos += ((Component) g).height() + gap;
+            if (g instanceof IPlaceable) {
+                ((IPlaceable) g).setPos(x, pos);
+                pos += ((IPlaceable) g).height() + gap;
             }
         }
     }
@@ -82,9 +81,9 @@ public class VBox extends BasicBox {
         height = 0;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                height += ((Component) g).height() + gap;
-                width = Math.max(width,((Component) g).width());
+            if (g instanceof IPlaceable) {
+                height += ((IPlaceable) g).height() + gap;
+                width = Math.max(width,((IPlaceable) g).width());
             }
         }
     }

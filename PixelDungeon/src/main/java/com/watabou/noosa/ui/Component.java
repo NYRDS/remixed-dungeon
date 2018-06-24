@@ -17,9 +17,10 @@
 
 package com.watabou.noosa.ui;
 
+import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.watabou.noosa.Group;
 
-public class Component extends Group {
+public class Component extends Group implements IPlaceable {
 	
 	protected float x;
 	protected float y;
@@ -38,13 +39,10 @@ public class Component extends Group {
 		}
 	}
 
-	
-	public Component setPos( float x, float y ) {
+	public void setPos( float x, float y ) {
 		this.x = x;
 		this.y = y;
 		layout();
-		
-		return this;
 	}
 	
 	public Component setSize( float width, float height ) {
