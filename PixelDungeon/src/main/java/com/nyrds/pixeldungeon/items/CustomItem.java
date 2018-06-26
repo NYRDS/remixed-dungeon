@@ -100,7 +100,10 @@ public class CustomItem extends Item {
             if(script.getResult().isnil()) {
                 return null;
             }
-            return (Item) script.getResult().checkuserdata(Item.class);
+
+            Item item = (Item) script.getResult().checkuserdata(Item.class);
+            item.quantity(quantity());
+            return item;
         } catch (LuaError e) {
             throw new TrackedRuntimeException(e);
         }
