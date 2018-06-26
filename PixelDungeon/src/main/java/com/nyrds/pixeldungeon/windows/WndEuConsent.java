@@ -36,16 +36,29 @@ public class WndEuConsent extends Window {
         message.maxWidth(WIDTH);
         vbox.add( message );
 
-        RedButton agree = new RedButton(R.string.gdpr_agree);
+        RedButton agree = new RedButton(R.string.gdpr_agree) {
+            @Override
+            protected void onClick() {
+                super.onClick();
+                //Preferences.INSTANCE.put(Preferences.KEY_EU_CONSENT_LEVEL,2);
+            }
+        };
         agree.setSize(WIDTH,18);
         vbox.add(agree);
 
-        RedButton disagree = new RedButton(R.string.gdpr_disagree);
+        RedButton disagree = new RedButton(R.string.gdpr_disagree) {
+            @Override
+            protected void onClick() {
+                super.onClick();
+                //Preferences.INSTANCE.put(Preferences.KEY_EU_CONSENT_LEVEL,1);
+            }
+        };
         disagree.setSize(WIDTH,18);
         vbox.add(disagree);
 
         if(donateOption) {
-            RedButton donate = new RedButton(R.string.gdpr_donate);
+            RedButton donate = new RedButton(R.string.gdpr_donate) {
+            };
             donate.setSize(WIDTH,18);
             vbox.add(donate);
         }
