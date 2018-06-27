@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.support.EuConsent;
-import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.scenes.WelcomeScene;
 
 public class ChangelogButton extends ImageButton {
 
@@ -11,7 +11,6 @@ public class ChangelogButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		EuConsent.check(Game.instance());
-		//PixelDungeon.switchScene(WelcomeScene.class);
+		PixelDungeon.switchScene(WelcomeScene.class);
 	}
 }

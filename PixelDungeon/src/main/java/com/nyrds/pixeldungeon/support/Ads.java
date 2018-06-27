@@ -1,9 +1,11 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 
+import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -38,6 +40,18 @@ public class Ads {
 		return Flavours.haveAds();
 	}
 
+
+	public static AdRequest makeAdRequest() {
+		if(EuConsent.getConsentLevel() < EuConsent.PERSONALIZED) {
+			Bundle extras = new Bundle();
+			extras.putString("npa", "1");
+
+			return new AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter.class, extras).build();
+		}
+
+		return new AdRequest.Builder().build();
+	}
+
 	private static void displayOwnEasyModeBanner() {
 		if (isSmallScreen()) {
 		} else {
@@ -69,10 +83,9 @@ public class Ads {
 						adView.setAdSize(AdSize.SMART_BANNER);
 						adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
 						adView.setBackgroundColor(Color.TRANSPARENT);
-						AdRequest adRequest = new AdRequest.Builder().addTestDevice(Game.getVar(R.string.testDevice))
-								.build();
+
 						Game.instance().getLayout().addView(adView, 0);
-						adView.loadAd(adRequest);
+						adView.loadAd(makeAdRequest());
 						Game.setNeedSceneRestart(true);
 					}
 				}
@@ -113,8 +126,6 @@ public class Ads {
 			return;
 		}
 
-		AdRequest adRequest = new AdRequest.Builder().addTestDevice(Game.getVar(R.string.testDevice)).build();
-
 		isAd.setAdListener(new AdListener() {
 			@Override
 			public void onAdClosed() {
@@ -145,7 +156,7 @@ public class Ads {
 		});
 
 		mAdLoadInProgress.put(isAd, true);
-		isAd.loadAd(adRequest);
+		isAd.loadAd(makeAdRequest());
 
 	}
 

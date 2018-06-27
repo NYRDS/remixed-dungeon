@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.EuConsent;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.items.Gold;
@@ -16,11 +17,13 @@ import com.watabou.pixeldungeon.windows.IconTitle;
  * Created by mike on 24.06.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
-public class WndEuConsent extends Window {
+public abstract class WndEuConsent extends Window {
 
     private static final int WIDTH		= 120;
 
-    public WndEuConsent(boolean donateOption) {
+    boolean consentChoosen;
+
+    public WndEuConsent() {
         super();
 
         VBox vbox = new VBox();
@@ -32,7 +35,7 @@ public class WndEuConsent extends Window {
         titlebar.setSize(WIDTH, 0 );
         vbox.add( titlebar );
 
-        Text message = PixelScene.createMultiline( Game.getVar(R.string.gdpr_main_text), GuiProperties.regularFontSize() );
+        Text message = PixelScene.createMultiline( Game.getVar(R.string.gdpr_text), GuiProperties.regularFontSize() );
         message.maxWidth(WIDTH);
         vbox.add( message );
 
@@ -40,7 +43,10 @@ public class WndEuConsent extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                //Preferences.INSTANCE.put(Preferences.KEY_EU_CONSENT_LEVEL,2);
+                EuConsent.setConsentLevel(EuConsent.PERSONALIZED);
+                consentChoosen = true;
+                done();
+                hide();
             }
         };
         agree.setSize(WIDTH,18);
@@ -50,20 +56,27 @@ public class WndEuConsent extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                //Preferences.INSTANCE.put(Preferences.KEY_EU_CONSENT_LEVEL,1);
+                EuConsent.setConsentLevel(EuConsent.NON_PERSONALIZED);
+                consentChoosen = true;
+                done();
+                hide();
             }
         };
         disagree.setSize(WIDTH,18);
         vbox.add(disagree);
 
-        if(donateOption) {
-            RedButton donate = new RedButton(R.string.gdpr_donate) {
-            };
-            donate.setSize(WIDTH,18);
-            vbox.add(donate);
-        }
         vbox.layout();
         resize(WIDTH, (int) (vbox.height() + 4));
     }
 
+
+    abstract public void done();
+
+    @Override
+    public void hide() {
+        if(!consentChoosen) {
+            Game.toast(Game.getVar(R.string.gdpr_choose));
+        }
+        super.hide();
+    }
 }

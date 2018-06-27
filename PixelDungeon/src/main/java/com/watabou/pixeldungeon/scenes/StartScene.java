@@ -334,9 +334,9 @@ public class StartScene extends PixelScene {
             protected void onSelect(final int index) {
 
                 if(index<2 && Preferences.INSTANCE.getInt(Preferences.KEY_EU_CONSENT_LEVEL,-1)<0) {
-                    Game.scene().add(new WndEuConsent(true) {
+                    Game.scene().add(new WndEuConsent() {
                         @Override
-                        public void hide() {
+                        public void done() {
                             startNewGame(index);
                         }
                     });

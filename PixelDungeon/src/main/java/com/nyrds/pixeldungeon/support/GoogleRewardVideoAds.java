@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.support;
 
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
@@ -28,10 +27,12 @@ public class GoogleRewardVideoAds {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
+
 					mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
 					mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
+
 					EventCollector.startTiming("google reward video");
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), new AdRequest.Builder().build());
+					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), Ads.makeAdRequest());
 				}
 			});
 	}
@@ -75,7 +76,7 @@ public class GoogleRewardVideoAds {
 				@Override
 				public void run() {
 					loaded = false;
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), new AdRequest.Builder().build());
+					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), Ads.makeAdRequest());
 				}
 			});
 		}
@@ -92,6 +93,11 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			EventCollector.stopTiming("google reward video","google reward video","fail","");
+		}
+
+		@Override
+		public void onRewardedVideoCompleted() {
+
 		}
 	}
 
