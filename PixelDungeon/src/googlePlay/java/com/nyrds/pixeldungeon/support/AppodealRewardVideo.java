@@ -44,18 +44,22 @@ public class AppodealRewardVideo {
 				}
 				Appodeal.disableLocationPermissionCheck();
 
+
 				if(BuildConfig.DEBUG) {
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
 					//Appodeal.setTesting(true);
 				}
 
-				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO);
+				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);
 				EventCollector.startTiming("appodeal reward video");
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
+
 					@Override
-					public void onRewardedVideoLoaded() {
+					public void onRewardedVideoLoaded(boolean b) {
 						EventCollector.stopTiming("appodeal reward video","appodeal reward video","ok","");
+
 					}
+
 					@Override
 					public void onRewardedVideoFailedToLoad() {
 						EventCollector.stopTiming("appodeal reward video","appodeal reward video","fail","");
@@ -63,9 +67,12 @@ public class AppodealRewardVideo {
 					@Override
 					public void onRewardedVideoShown() {
 					}
+
 					@Override
-					public void onRewardedVideoFinished(int amount, String name) {
+					public void onRewardedVideoFinished(double v, String s) {
+
 					}
+
 					@Override
 					public void onRewardedVideoClosed(final boolean finished) {
 						returnTo.returnToWork(finished);

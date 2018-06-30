@@ -1,0 +1,378 @@
+2.4.3 (Jun 7, 2018)
+    Mopub updated to 5.0.0
+    myTarget updated to 5.1.0
+    Adcolony updated to 3.3.4
+    Tapjoy updated to 11.12.2
+    Add getPredictedEcpm method
+    Remove LoaderActivity
+
+2.4.2 (May 22, 2018)
+    Fixed Banner ads showing on load
+
+2.4.1 (May 19, 2018)
+    Support General Data Protection Regulation (GDPR) compliant
+    Mobvista updated to 8.11.0
+    Startapp updated to 3.8.4
+    Inmobi updated to 7.1.0
+    Applovin update to 8.0.0
+    Chartboost updated to 7.2.0
+    Vungle updated to 6.2.5
+    Flurry updated to 10.1.0
+    Appnext removed
+    Avocarrot removed
+    Millennial Media removed
+
+2.3.3 (May 17, 2018)
+    Support General Data Protection Regulation (GDPR) compliant
+    Mobvista updated to 8.11.0
+    Startapp updated to 3.8.4
+    Inmobi updated to 7.1.0
+    Applovin update to 8.0.0
+    Chartboost updated to 7.2.0
+    Vungle updated to 6.2.5
+    Flurry updated to 10.1.0
+    Appnext removed
+    Avocarrot removed
+    Millennial Media removed
+
+2.3.2 (May 7, 2018)
+    Fix MaxDex build (If you're not using MultiDex in your application and encountering 65K methods limit)
+    Support new D8 compiler
+
+2.3.1 (April 27, 2018)
+    Mobvista updated to 8.9.0
+    Add force test mode support
+    Ogury is no longer optional
+    Support play services version 12.0.0 and above (for Admob rewarded video)
+
+2.4.0 (April 28, 2018)
+    Parallel bidding support
+    Applovin updated to 7.8.5
+
+2.3.0 (February 27, 2018)
+    Segment V2 support
+    Vungle updated to 5.3.2
+    Unity ads updated to 2.1.2
+    Tapjoy updated to 11.11.1
+    myTarget updated to 4.7.2
+    Ironsource updated to 6.7.6
+    Chartboost updated to 7.0.1
+    Appnext updated to 2.1.1.436
+    Applovin updated to 7.7.0
+    Yandex metrica updated to 2.80
+    Startapp updated to 3.6.9
+    Inmobi updated to 7.0.2
+    Flurry updated to 8.2.0
+    Adcolony updated to 3.3.0
+    Fixed some issues
+
+2.2.3 (February 13, 2018)
+    Fix loading assets in Native Ad
+    Fix permission check in Native Ad
+
+2.2.2 (January 22, 2018)
+    NativeAd fixes
+
+2.2.1 (December 27, 2017)
+    Yandex Metrica updated to 2.78
+    Yandex Mobile Ads SDK updated to 2.62
+    Vungle updated to 5.3.0
+    Facebook Audience Network updated to 4.27.0
+    Add AOL api integration (banner and interstitial)
+
+2.2.0 (December 11, 2017)
+    NativeAd integration changed
+    MREC ad type is deprecated, should use NativeAd instead
+    Startapp updated to 3.6.7
+    Inmobi updated to 6.2.4
+    Yandex Metrica updated to 2.76
+    Yandex Mobile Ads SDK updated to 2.61
+    Mobvista updated to 8.3.7
+    Applovin updated to 7.5.0
+    Chartboost updated to 7.0.0
+    Facebook Audience Network updated to 4.26.1
+    IronSource updated to 6.7.3
+    myTarget updated to 4.6.19
+    Bug fixes
+
+2.1.9 (November 30, 2017)
+    Updating com.appodeal.ads.InterstitialActivity and com.appodeal.ads.VideoActivity in AndroidManifest
+    Adding Mobvista support (Interstitial, Rewarded videos), add new activities to AndroidManifest, update ProGuard
+    Adding support for Tapjoy skippable videos
+    Updating Startapp to 3.6.7, add new receiver to AndroidManifest
+    Updating Applovin to 7.5.0
+    Updating Adcolony to 3.2.1, update ProGuard
+    Updating Facebook to 4.26.1
+    Updating IronSource to 6.7.3, update ProGuard
+    
+2.1.7 (October 26, 2017)
+
+    Improving Admob mediation algorithm
+    Adding Appodeal.destroy method that allows to destroy cached banner or MREC ads to avoid memory leaks
+    Android O improvements
+    Appodeal.isPrecache method fix
+    Updating Applovin to 7.4.0
+    Updating Facebook to 4.26.0
+    Updating Yandex Mobile Ads to 2.61
+
+
+2.1.4 (September 15, 2017)
+
+    Updating Ogury to 2.1.15
+    Android O improvements
+    Memory leaks fixes
+    Small fixes
+
+
+2.1.3 (September 1, 2017)
+
+    Updating Applovin to 7.3.2
+    Applovin integration fix
+    Proguard fix for Mopub, please update your Proguard file
+
+
+2.1.2 (September 1, 2017)
+
+    Vungle integration fix
+    Small fixes
+
+
+2.1.1 (August 29, 2017)
+
+    Making Ogury optional, if you're not using Ogury remove Ogury service and receiver from AndroidManifest
+    Fixing Startapp activity in AndroidManifest
+    Small fixes
+
+
+2.1.0 (August 18, 2017)
+
+    Adding Millenial Media support (Interstitial, Banner, MREC, Native) (Optional, user accounts only)
+    Adding Appnext native ads
+    Flurry is now optional, use it only with your own account
+    Adding optional Picaso lib (for Inmobi)
+    Adding Appodeal.setChildDirectedTreatment method to disable user data collection
+    Adding message in log if you're not using latest SDK version
+
+    Updating Applovin to 7.2.0
+    Updating Avocarrot to 3.8.2
+    Updating Chartboost to 6.6.3
+    Updating Facebook to 4.25.0
+    Updating Flurry to 7.0.0
+    Updating Inmobi to 6.2.3
+    Updating IronSource to 6.6.2.1
+    Updating Mopub to 4.15.0
+    Updating myTarget to 4.6.17
+    Updating Startapp to 3.6.2
+    Updating Tapjoy to 11.11.0
+    Updating Unity Ads to 2.1.0
+    Updating Vungle to 5.1.0
+    Updating Yandex Metrica to 2.73 & Yandex Ads to 2.60
+
+    Banner and MREC optimizations
+    Memory leaks fixes
+    Fixing minor crashes and ANRs
+    Fixing issue when banner might appear on top of full screen ads after refresh
+
+
+2.0.2 (May 31, 2017)
+
+    Small fixes
+
+
+2.0.1-beta (May 19, 2017)
+
+    Adding interstitials from Ogury
+    Adding banners and MREC from Applovin
+    Improving support for rewarded videos from Mopub
+    Adding optional ACCESS_WIFI_STATE permission
+    Enabling 728*90 banners on tablets by default
+    Many AndroidManifest and Proguard changes, please do not forget to update them
+
+    Removing Appodeal.confirm method
+    Removing onInterstitialFinished callback from InterstitialCallbacks
+    Removing setEmail, setBirthday, setOccupation, setRelation, setSmoking, setAlcohol, setInterests methods from UserSettings
+    Removing Admob & Mopub mediation adapters
+    Removing Revmob integration
+    Removing Cheetah Mobile integration
+
+    Updating Adcolony to 3.1.2
+    Updating Facebook to 4.22
+
+    Manifest checks improvements
+    Fixes and improvements
+
+
+2.0.0-beta (Apr 12, 2017)
+
+    Removing Appodeal.SKIPPABLE_VIDEO ad type. Static interstitials and skippable videos are now merged into one type: Appodeal.INTERSTITIAL
+    Adding onInterstitialFinished method to InterstitialCallbacks
+    Major native ads improvements
+    onNativeLoaded callback doesn't return loaded ads as an argument anymore, to get loaded native ads use Appodeal.getNativeAds method
+    Adding report button to all ad types, which includes network name and sdk/plugin version
+    Aar build type to simplify integration
+    Removing support for Android OS 2.3.x, SDK will only work on Android 4.0+
+    Many AndroidManifest and Proguard changes, please do not forget to update them
+    Removed support for AdMob Mediation and Mopub Mediation adapters
+
+
+    Adding Appodeal.canShow method which allows to test whether ad can be showed for specific placement
+    Adding Appodeal.getRewardParameters method which allows to get rewarded video reward amount and currency for a specific placement
+    Adding Appodeal.startTestActivity method which shows test activity that allows to test adapters integration
+    Adding Appodeal.getNativeAds method which allows to get loaded native ads
+    Adding Appodeal.setBannerAnimation(false) method that allows to disable banner refresh animation
+    Adding Appodeal.set728x90Banners(true) method that allows to enable 728*90 banners
+    Adding Appodeal.muteVideosIfCallsMuted(true) method that allows to mute videos ads sound if call volume is muted
+    AppodealMediaView class renamed to NativeMediaView
+    Appodeal.setOnLoadedTriggerBoth method renamed to Appodeal.setTriggerOnLoadedOnPrecache
+    NativeAd.setAppodealMediaView method renamed to NativeAd.setNativeMediaView
+
+
+    DFP integration (Interstitial, Banner, MREC)
+    IronSource integration (Interstitial, Rewarded Video)
+    Inmobi integration. Add compile 'com.squareup.picasso:picasso:2.5.2' to your Gradle file
+    Zplay integration (Interstitial, Banner, Native)
+    Adding Rewarded Video support from Facebook
+    Adding Rewarded Video support from Admob
+    Adding video native ads from Applovin
+    Adding support for playable ads
+
+
+    Frequency capping support in placements
+    Adding support for new segment features
+    Add support for new crosspromo features
+
+
+    Updating Adcolony to 3.1.1
+    Updating AmazonAds to 5.8.1.1
+    Updating Applovin to 6.3.2
+    Updating Avocarrot to 3.7.5
+    Updating Chartboost to 6.6.1
+    Updating CheetahMobile to 3.5
+    Updating Facebook to 4.19.0
+    Updating Flurry to 6.6.0
+    Updating Mopub to 4.10.0
+    Updating MyTarget to 4.5.15
+    Updating Startapp to 3.5.1
+    Updating Tapjoy to 11.8.2
+    Updating UnityAds to 2.0.5
+    Updating Vungle to 4.0.3
+    Updating Yandex Metrica to 2.62 & Yandex Ads to 2.50
+
+
+    VAST video player redesign and improvements
+    Logging improvements
+    Migrating from AsyncTasks to separate threads to improve performance
+    Imroved kids apps support
+    Adding Javadoc
+    Startap, Revmob, Tapjoy, Pubnative integration improvements
+    Detecting impression errors
+    Memory leak fixes
+    Default placement fixes
+    Banner refresh animation fix
+    Other optimizations and fixes
+
+
+1.15.9 (Feb 16, 2017)
+
+    Fixing rare OutOfMemoryError
+    Updating Chartboost to 6.61
+    Updating YandexMetrica to 2.62 and YandexAds to 2.50. Do not forget to change metrica:api:level in AndroidManifest to 52
+    Updating Avocarrot to 3.7.6
+    Small fixes
+
+
+1.15.8 (Dec 15, 2016)
+
+    Fixing rare ConcurrentModificationException in native ads
+    Fixing rare OutOfMemoryError in native ads
+    Fixing rare NullPointerException from Adcolony when using Google Play Services 10+
+    Banner animation fixes
+    Updating Revmob to 9.2.3 to fix banner issues
+    Updating Yandex Metrica to 2.51 & Yandex Ads to 2.31 to fix crashes on Android 7. Update your AndroidManifest
+    Adding android:hardwareAccelerated="true" to com.my.target.ads.MyTargetActivity
+    Small fixes
+
+
+1.15.7 (Oct 10, 2016)
+
+    Small fixes
+
+
+1.15.6 (Oct 5, 2016)
+
+    Adding setLogLevel method. Available parameters: LogLevel.none, LogLevel.debug, LogLevel.verbose
+    Removing setLogging method
+    Chartboost integration fixes
+    Adding day and hour segment rules
+    Updating Proguard
+
+
+1.15.5 (Sep 21, 2016)
+
+    Updating Unity Ads to 2.0.4
+
+
+1.15.4 (Sep 16, 2016)
+
+    Integrating Revmob: banners, interstitials, skippable videos, rewarded videos
+    Adding per placement price floors
+    Banner change animation optimization
+    Performance optimizations
+    Updating Unity Ads to 2.0.2. AAR is no longer needed
+    Updating Proguard
+    Updating AndroidManifest
+
+
+1.15.3 (Sep 6, 2016)
+
+    Fixing GoogleApiAvailability NoClassDefFoundError on old Google Play Services during initialization
+    Fixing rare crashes in VASTActivity
+    Renaming setCustomSegment to setCustomRule
+    Adding rewarded videos from Tapjoy. Do not forget to add new activities in AndroidManifest
+    Adding support for refresh period in banners and MRECs configured using placements
+    Sending pricefloor on impression with our offers to improve second price calculation
+    Minor fixes
+    Updating Avocarrot to 3.7.3
+    Updating Tapjoy to 11.8.0
+    Updating MyTarget to 4.5.10
+    Updating Chartboost to 6.5.1
+    Updating Amazon Ads to 5.8.1
+    Updating Applovin to 6.3.0
+    Updating Flurry to 6.5.0
+
+
+1.15.2 (Aug 12, 2016)
+
+    Fixing NPE in cases where some network SDKs are not present
+
+
+1.15.1 (Aug 08, 2016)
+
+    Removing Inmobi SDK. Do not forget to remove inmobi receivers from manifest
+    Adding support of videos from MyTarget
+    Dex loading improvements
+    Keeping screen on during video playback
+    Adding support for disabling network by ad type in segments
+    Adding container interface for native ads
+    Updating Unity Ads to 1.5.8
+    Updating Adcolony to 2.3.6
+    Update MyTarget to 4.5.6
+    Updating Startapp to 3.4.3
+    Updating Applovin to 6.2.4
+    Adding Cheetah Mobile Ads SDK
+
+
+1.15 (June 24, 2016, Internal)
+
+    Adding video native ads. Use AppodealMediaView to show video in your native ads
+    Adding setAppodealMediaView and containsVideo methods to NativeAd object
+    Adding Appodeal.setNativeAdType method to change video native ads settings
+    Renaming setAutoCacheNativeImages to setAutoCacheNativeMedia
+    Updating segment when using setCustomSegment method
+    Fixes
+    Updating Mopub to 4.7.1
+    Updating MyTarget to 4.5.0
+    Updating Avocarrot to 3.7.2
+    Updating Facebook to 4.12.1
+    Removing setVkId and setFacebookId methods from UserSettings
+    Adding com.appodeal.ads.VideoPlayerActivity to manifest

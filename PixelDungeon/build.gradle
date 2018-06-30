@@ -70,11 +70,11 @@ android {
 
 dependencies {
     implementation 'ch.acra:acra:4.9.0@aar'
-    implementation 'com.google.code.gson:gson:2.8.2'
+    //googlePlayRetroImplementation 'com.google.code.gson:gson:2.8.4'
     implementation 'org.luaj:luaj-jse:3.0.1'
 
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
-    implementation 'com.google.android.ads.consent:consent-library:1.0.4'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.6'
 
 
     //noinspection GradleDependency
@@ -89,15 +89,15 @@ dependencies {
     googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
 
     googlePlayImplementation 'com.android.support:support-v4:27.0.1'
-    googlePlayImplementation project(':adcolony-sdk-3.1.2')
-    googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:15.0.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-base:15.0.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-analytics:15.0.0'
-    googlePlayImplementation "com.google.android.gms:play-services-games:15.0.0"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:15.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:15.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.1'
+    googlePlayImplementation "com.google.android.gms:play-services-games:15.0.1"
 
 
     googlePlayImplementation fileTree(dir: 'lib', include: '*.jar')
+    googlePlayImplementation fileTree(dir: 'lib/aar', include: '*.aar')
+
     googlePlayImplementation 'com.android.support:multidex:1.0.3'
     implementation project(':annotation')
     annotationProcessor project(':processor')

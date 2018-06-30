@@ -25,13 +25,6 @@ public class ServiceManNPC extends ImmortalNPC {
 	public ServiceManNPC() {
 		if(EuConsent.getConsentLevel()>EuConsent.UNKNOWN) {
 			RewardVideo.init();
-		} else {
-			Game.scene().add(new WndEuConsent() {
-				@Override
-				public void done() {
-					RewardVideo.init();
-				}
-			});
 		}
 	}
 
@@ -46,6 +39,17 @@ public class ServiceManNPC extends ImmortalNPC {
 
 	@Override
 	public boolean interact(final Hero hero) {
+
+		if(EuConsent.getConsentLevel()==EuConsent.UNKNOWN) {
+			Game.scene().add(new WndEuConsent() {
+				@Override
+				public void done() {
+					RewardVideo.init();
+				}
+			});
+			return true;
+		}
+
 		getSprite().turnTo( getPos(), hero.getPos() );
 
 		if(!Util.isConnectedToInternet()) {
