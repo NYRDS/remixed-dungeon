@@ -33,7 +33,7 @@
     <string name="RottenFish_Taste">Disgusting!</string>
 
     <string name="gdpr_title">Personalize Your Ad Experience</string>
-    <string name="gdpr_text">Remixed Dungeon personalizes your advertising experience using Admob and Appodeal (further Ad providers). Ad providers and their partners may collect and process personal data such as device identifiers, demographic and interest data to provide advertising experience tailored to you. By consenting to this improved ad experience, you`ll see ads that Ad providers and their partners believe are more relevant to you. Learn more.\n\nBy agreeing, you confirm that you are over the age of 16 and would like a personalized ad experience.\n\n</string>
+    <string name="gdpr_text">Remixed Dungeon personalizes your advertising experience using Admob and Appodeal (further Ad providers). Ad providers and their partners may collect and process personal data such as device identifiers, demographic and interest data to provide advertising experience tailored to you. By consenting to this improved ad experience, you`ll see ads that Ad providers and their partners believe are more relevant to you.\n\nBy agreeing, you confirm that you are over the age of 16 and would like a personalized ad experience.\n\n</string>
     <string name="gdpr_agree">Yes, I agree</string>
     <string name="gdpr_disagree">No, thank you</string>
     <string name="gdpr_choose">"Please make your choose"</string>
