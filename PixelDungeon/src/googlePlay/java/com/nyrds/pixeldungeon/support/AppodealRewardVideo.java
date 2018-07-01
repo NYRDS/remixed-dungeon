@@ -49,7 +49,6 @@ public class AppodealRewardVideo {
 
 				if(BuildConfig.DEBUG) {
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
-					//Appodeal.setTesting(true);
 				}
 
 				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);

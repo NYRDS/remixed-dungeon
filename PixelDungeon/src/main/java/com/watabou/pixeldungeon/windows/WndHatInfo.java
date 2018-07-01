@@ -38,8 +38,7 @@ public class WndHatInfo extends Window {
 		add(tfTitle);
 
 		//Pricetag
-		SystemText priceTag = new SystemText(GuiProperties.mediumTitleFontSize());
-		priceTag.text(price);
+		SystemText priceTag = new SystemText(price,GuiProperties.mediumTitleFontSize(),false);
 
 		priceTag.hardlight(0xFFFF00);
 		priceTag.maxWidth(WIDTH - GAP);
