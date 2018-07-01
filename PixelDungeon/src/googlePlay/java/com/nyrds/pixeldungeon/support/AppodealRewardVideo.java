@@ -35,8 +35,7 @@ public class AppodealRewardVideo {
 			@Override
 			public void run() {
 
-				//String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
-				String appKey = "843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3";
+				String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
 
 				//vungle disable due to strange build issue
 				//mopub, mobvista & tapjoy due audiences mismatch

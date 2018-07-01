@@ -57,33 +57,6 @@
 
         <activity android:name="com.amazon.device.ads.AdActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
 
-        <service android:name="com.yandex.metrica.MetricaService" android:enabled="true"
-            android:exported="true" android:process=":Metrica">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="com.yandex.metrica.IMetricaService" />
-                <data android:scheme="metrica" />
-            </intent-filter>
-            <meta-data android:name="metrica:api:level" android:value="64" />
-        </service>
-        <service android:name="com.yandex.metrica.ConfigurationService" android:enabled="true"
-            android:exported="true" android:process=":Metrica" tools:ignore="ExportedService">
-            <meta-data android:name="metrica:configuration:api:level" android:value="1"/>
-            <intent-filter>
-                <action android:name="com.yandex.metrica.configuration.ACTION_START"/>
-            </intent-filter>
-        </service>
-        <receiver android:name="com.yandex.metrica.MetricaEventHandler"
-            android:enabled="true" android:exported="true">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-
-        <!--suppress AndroidDomInspection -->
-        <activity android:name="com.yandex.mobile.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-
         <activity android:name="com.unity3d.ads.adunit.AdUnitActivity"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:hardwareAccelerated="true" />
@@ -163,8 +136,6 @@
         <activity
             android:name="com.my.target.common.MyTargetActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-
-
 
     </application>
 
