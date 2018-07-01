@@ -7,6 +7,7 @@ import com.google.ads.consent.ConsentInfoUpdateListener;
 import com.google.ads.consent.ConsentInformation;
 import com.google.ads.consent.ConsentStatus;
 import com.google.ads.consent.DebugGeography;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -31,9 +32,10 @@ public class EuConsent {
 
             final ConsentInformation consentInformation = ConsentInformation.getInstance(context);
 
-            ConsentInformation.getInstance(context).
-                    setDebugGeography(DebugGeography.DEBUG_GEOGRAPHY_EEA);
-
+            if(BuildConfig.DEBUG) {
+                ConsentInformation.getInstance(context).
+                        setDebugGeography(DebugGeography.DEBUG_GEOGRAPHY_EEA);
+            }
 
             String[] publisherIds = {Game.getVar(R.string.admob_publisher_id)};
             consentInformation.requestConsentInfoUpdate(publisherIds, new ConsentInfoUpdateListener() {
