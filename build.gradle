@@ -23,7 +23,7 @@ allprojects {
 
 
         flatDir {
-            dirs 'lib'
+            dirs 'lib/aar'
         }
     }
 }

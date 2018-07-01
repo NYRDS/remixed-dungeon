@@ -70,7 +70,7 @@ android {
 
 dependencies {
     implementation 'ch.acra:acra:4.9.0@aar'
-    //googlePlayRetroImplementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'com.google.code.gson:gson:2.8.4'
     implementation 'org.luaj:luaj-jse:3.0.1'
 
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
@@ -96,7 +96,8 @@ dependencies {
 
 
     googlePlayImplementation fileTree(dir: 'lib', include: '*.jar')
-    googlePlayImplementation fileTree(dir: 'lib/aar', include: '*.aar')
+    googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
+    googlePlayImplementation name: 'adcolony-sdk-3.3.4', ext: 'aar'
 
     googlePlayImplementation 'com.android.support:multidex:1.0.3'
     implementation project(':annotation')

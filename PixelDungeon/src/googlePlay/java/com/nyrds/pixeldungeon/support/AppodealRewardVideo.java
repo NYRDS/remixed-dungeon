@@ -35,9 +35,12 @@ public class AppodealRewardVideo {
 			@Override
 			public void run() {
 
-				String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
+				//String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
+				String appKey = "843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3";
 
-				String disableNetworks[] = {"facebook","flurry","startapp","avocarrot","ogury"};
+				//vungle disable due to strange build issue
+				//mopub, mobvista & tapjoy due audiences mismatch
+				String disableNetworks[] = {"facebook","flurry","startapp","vungle","mopub","mobvista","tapjoy"};
 
 				for(String net:disableNetworks) {
 					Appodeal.disableNetwork(PixelDungeon.instance(), net);
