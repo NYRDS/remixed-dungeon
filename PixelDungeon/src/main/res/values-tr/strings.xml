@@ -3,11 +3,14 @@
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
+  <string name="IntroScene_Txt">Her türden kahraman senden önce bu zindana girmeye cesaret etti. Bazıları hazineler ve senin adını ile bilmediğin sihirli eserlerle geri döndüler. Ama kimse zindanın derinliklerinde olduğu söylenen Yendor\'un Tılsımını almayı başaramadı. \n\n Kendinizi meydan okumaya hazır olarak görüyorsunuz, ama en önemlisi, bu talihin size gülümsediğini hissediyorsunuz. Şimdi kendi maceranıza başlama zamanı!</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">Bugünlük bu kadar yeter</string>
   <string name="AmuletScene_Stay">Daha işim bitmedi</string>
   <string name="AmuletScene_Txt">Sonunda ellerinde tutuyorsun, Yendor\'un Tılsımı. Bu tılsımın gücüyle dünyayı ele geçirebilir veya insanlara falan barış ve refah getirebilirsin. Her neyse, hayatın sonsuza kadar değişecek ve oyun burada bitecek. Veya önemsiz bir ölümlü olarak biraz daha buralarda kalabilirsin.</string>
   <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Pixel Dungeon\'ın %d seviyesine hoşgeldiniz!</string>
+  <string name="GameScene_WelcomeBack">Pixel Dungeon\'ın %d seviyesine tekrar hoşgeldiniz!</string>
   <string name="GameScene_NightMode">Dikkatli ol, zindan geceleri daha tehlikelidir!</string>
   <string name="GameScene_Chasm">Adımların zindan boyunca yankılanıyor.</string>
   <string name="GameScene_Water">Etrafındaki su şarıltılarını duyuyorsun.</string>
@@ -41,16 +44,46 @@
   </string-array>
   <string name="Char_StaPoisoned">zehirlendi</string>
   <string name="Char_StaAmok">cinnet</string>
+  <string name="Char_StaSlowed">yavaşladı</string>
   <string name="Char_StaMind">zihin</string>
+  <string name="Char_StaVision">görüş</string>
   <string name="Char_StaParalysed">çarpık</string>
   <string name="Char_StaFrightened">korkmuş</string>
   <string name="Char_StaRooted">kök salmış</string>
   <string name="Char_StaCrippled">sakat</string>
+  <string name="Char_StaBleeding">kanama</string>
   <string name="Char_StaDizzy">sersem</string>
   <string name="Char_StaInvisible">görünmez</string>
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Yazı okunmaz halde... </string>
   <string name="Dungeon_DeadEnd">Burada ne yapıyorsun?! </string>
+  <string-array name="Dungeon_Tips">
+    <item>Gücünü abartma, seviyene uygun silahlar kullan.</item>
+    <item>Zindandaki tüm kapılar ilk bakıştan görünmeyebilir. Sıkışırsan gizli kapıları araştır.</item>
+    <item>Gücünü arttırmak iyi ekipmanlara erişim için tek yol değildir. Yükseltme parşomeni ile ekipmanların güç gereksinimini azaltabilirsin</item>
+    <item>İlki 6. seviyede olan dükkanlarda topladığın altınları harcayabilirsin.</item>
+    <item>Goo \' ya dikkat!</item>
+    <item>Pixel-Mart - başarılı bir macera için tüm ihtiyacın olanlar burada!</item>
+    <item> Gerçekten ihtiyacın olduğundan kullanabilmek için, İksir ve parşömenlerini bir an önce tanımla..</item>
+    <item>Acıkmaya başladığında canın azalmaz ama açlıktan kıvranmaya başladığında
+canın düşecektir.</item>
+    <item>Süpriz saldırılar isabet şansını arttırır. Örneğin düşmanında kapalı bir kapıdan ani saldırıda bulun.</item>
+    <item>Tengu \'yu dışarı salma!</item>
+    <item>Pixel-Mart. Para harca, uzun yaşa.</item>
+    <item>Birden fazla yaratık saldırdığında , bir kapı arkasına geri çekilmeyi dene.</item>
+    <item>Eğer uçuyorsan , yanma durumunda kendini suda söndüremezsin.</item>
+    <item>Birden fazla \"Ankh\" ı aynı anda taşımanın bir anlamı yok.Dirildiğinde çantandaki tüm ekipman yok olacak.</item>
+    <item>DİKKAT! ağır iş makinası, uzuv kaybı veya ölüme sebebiyet verebilir</item>
+    <item>Pixel-Mart. Zindanda güvenli bir hayat.</item>
+    <item>Efsunlu bir silahı güncellediğinde , silahın efsunu yok olabilir.</item>
+    <item>Dönüşüm kuyusu başka yerde bulamayacağın nesneleri elde etmeni sağlayabilir.</item>
+    <item>Bir silahı efsunlamanın tek yolu onu yükseltme parşomeni ile güncellemektir.</item>
+    <item>Majesteleri huzurunda silah bulundurmak yasaktır!</item>
+    <item>Pixel-Mart. Şeytan avcıları için özel fiyatlar!</item>
+    <item>Metin şeytani bir dille yazılmış.</item>
+    <item>Metin şeytani bir dille yazılmış.</item>
+    <item>Metin şeytani bir dille yazılmış.</item>
+  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Diyette</item>
@@ -61,10 +94,13 @@
     <item>Karanlığın içinde</item>
   </string-array>
   <!--STRINGS OF Journal CLASS-->
+  <string name="Journal_WellHealt">Hayat Kuyusu</string>
   <string name="Journal_WellAwareness">Farkındalık Kuyusu</string>
   <string name="Journal_WellTransmut">Dönüşüm Kuyusu</string>
   <string name="Journal_Alchemy">Simya potası</string>
+  <string name="Journal_Garden">Bahçe</string>
   <string name="Journal_Statue">Canlı Heykel</string>
+  <string name="Journal_Ghost">Üzgün Hayalet</string>
   <string name="Journal_Wandmaker">Yaşlı Asa Ustası</string>
   <string name="Journal_Troll">Troll Demirci</string>
   <string name="Journal_Imp">Hırslı afacan</string>
@@ -73,6 +109,8 @@
   <string name="WndBlacksmith_Select">Dönüştürülecek nesneleri seç</string>
   <string name="WndBlacksmith_Reforge">Bunları dönüştür</string>
   <!--STRINGS OF WndCatalogus CLASS-->
+  <string name="WndCatalogus_Potions">İksirler</string>
+  <string name="WndCatalogus_Scrolls">Parşömenler</string>
   <string name="WndCatalogus_Title">Kataloglar</string>
   <!--STRINGS OF WndChallenges CLASS-->
   <string name="WndChallenges_Title">Meydan Okumalar</string>
@@ -82,14 +120,23 @@
   <!--STRINGS OF WndClass CLASS-->
   <string name="WndClass_Mastery">Uzmanlık</string>
   <!--STRINGS OF WndError CLASS-->
+  <string name="WndError_Title">HATA</string>
   <!--STRINGS OF WndGame CLASS-->
+  <string name="WndGame_Settings">Ayarlar</string>
   <string name="WndGame_Challenges">Meydan Okumalar</string>
   <string name="WndGame_Ranking">Sıralama</string>
   <string name="WndGame_Start">Yeni Oyun</string>
+  <string name="WndGame_menu">Ana Menü</string>
   <string name="WndGame_Exit">Oyundan Çık</string>
+  <string name="WndGame_Return">Oyuna Geri Dön</string>
+  <string name="WndGame_Save">Kaydet</string>
+  <string name="WndGame_Load">Yükle</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">Durum</string>
   <string name="WndHero_Buffs">Buff\'lar</string>
+  <string name="WndHero_Exp">Deneyim</string>
+  <string name="WndHero_Str">Güç</string>
+  <string name="WndHero_Health">Sağlık</string>
   <string name="WndHero_Gold">Toplanan Altın</string>
   <string name="WndHero_Depth">Maksimum Derinlik</string>
   <string name="WndHero_StaTitle">%1$d seviye %2$s</string>
@@ -101,8 +148,10 @@
   <!--STRINGS OF WndInfoCell CLASS-->
   <string name="WndInfoCell_Nothing">Burada birşey yok.</string>
   <!--STRINGS OF WndInfoItem CLASS-->
+  <string name="WndInfoItem_Chest">Sandık</string>
   <string name="WndInfoItem_LockedChest">Kilitli sandık</string>
   <string name="WndInfoItem_CrystalChest">Kristal sandık</string>
+  <string name="WndInfoItem_Tomb">Mezar</string>
   <string name="WndInfoItem_Skeleton">İskelet Kalıntısı</string>
   <string name="WndInfoItem_WontKnow">Açmadan içinde ne olduğunu bilemezsin!</string>
   <string name="WndInfoItem_NeedKey"> Açmak için altın anahtara ihtiyacın var.</string>
@@ -118,6 +167,7 @@
   <string name="WndRanking_Badges">Rozetler</string>
   <string name="WndRanking_StaTitle">%1$d seviye %2$s</string>
   <string name="WndRanking_StaChallenges">Meydan okumalar</string>
+  <string name="WndRanking_StaHealth">Sağlık</string>
   <string name="WndRanking_StaStr">Güç</string>
   <string name="WndRanking_StaDuration">Oyun süresi</string>
   <string name="WndRanking_StaDepth">Maksimum derinlik</string>
@@ -163,9 +213,11 @@
   <string name="Item_Name">smth</string>
   <string name="Item_Info">smth</string>
   <string name="Item_ACDrop">BIRAK</string>
+  <string name="Item_ACThrow">FIRLAT</string>
   <string name="Item_PackFull">%s için çantan dolu</string>
   <string name="Item_DirThrow">Fırlatılacak yeri seçin</string>
   <!--STRINGS OF EquipableItem CLASS-->
+  <string name="EquipableItem_ACEquip">KUŞAN</string>
   <string name="EquipableItem_ACUnequip">ÇIKART</string>
   <string name="EquipableItem_Unequip">%s lanetli çıkartamıyorsun !</string>
   <!--STRINGS OF Heap CLASS-->
@@ -188,12 +240,14 @@
   <string name="Dewdrop_Info">Kristal berraklığında çiy damlası.</string>
   <!--STRINGS OF DewVial CLASS-->
   <string name="DewVial_Name">Çiy Damlası Şişesi</string>
+  <string name="DewVial_ACDRINK">İÇ</string>
   <string name="DewVial_Info">Fazla çiy damlalarını bu şisede saklayablir ve sonra içerbilirsin.Şişe dolu olduğunda ölümcl durumda otomatik olarak kullanılır.</string>
   <string name="DewVial_AutoDrink">Yaralarını iyileştirmek için tüm çiy damlaları tüketildi.</string>
   <string name="DewVial_Collected">Şişede 1 adet çiy damlası topladın.</string>
   <string name="DewVial_Full">Çiy damlası şişesi dolu!</string>
   <string name="DewVial_Empty">Çiy damlası şişesi boş!</string>
   <!--STRINGS OF Gold CLASS-->
+  <string name="Gold_Name">altın</string>
   <string name="Gold_Collect">Daha sonra dükkanda harcamak için altınları topla.</string>
   <string name="Gold_Info">%d adet altın.</string>
   <string name="Gold_Info1">Bir adet altın sikke.</string>
@@ -216,11 +270,13 @@
   <string name="Stylus_Inscribed">%2$s üzerine %1$s kazıdın</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Ustalık Kitabı</string>
+  <string name="TomeOfMastery_ACRead">OKU</string>
   <string name="TomeOfMastery_Info">Bu eski deri kitap o kadarda kalın değil. Yine de bunu okumanın zaman alacağını unutma.</string>
   <string name="TomeOfMastery_Blinded">Körken okuyamazsın</string>
   <string name="TomeOfMastery_Choose">%s yolunu seçtin!</string>
   <!--STRINGS OF Torch CLASS-->
   <string name="Torch_Name">meşale</string>
+  <string name="Torch_ACLight">YAK</string>
   <string name="Torch_Info">Zayıf aydınlatması ile meşhur Şeytan Salonları için gerekli bir nesne.</string>
   <!--STRINGS OF Weightstone CLASS-->
   <string name="Weightstone_Name">ayar taşı</string>
@@ -235,6 +291,7 @@
   <string name="Weightstone_WndCancel">Boşver</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
+  <string name="Bag_ACOpen">AÇ</string>
   <!--STRINGS OF Keyring CLASS-->
   <string name="Keyring_Name">Anahtarlık</string>
   <string name="Keyring_Info">Bu bakır anahtarlık ile anahtarlarını diğer eşyalarında ayrı olarak saklayabilirsin.</string>
@@ -279,6 +336,7 @@
   <!--STRINGS OF Pickaxe CLASS-->
   <string name="Pickaxe_Name">kazma</string>
   <string name="Pickaxe_Info">Bu büyük ve sağlam araç ile kayaları kırabilirsin.Bir silah olarakta kullanılabilir.</string>
+  <string name="Pickaxe_ACMine">KAZ</string>
   <string name="Pickaxe_Gender">dişi</string>
   <string name="Pickaxe_NoVein">Yakında kazılacak bir kara altın damarı yok</string>
   <!--STRINGS OF RatSkull CLASS-->
@@ -350,9 +408,11 @@
   <string name="Hunger_Info1">Aç</string>
   <string name="Hunger_Info2">Çok aç</string>
   <!--STRINGS OF Invisibility CLASS-->
+  <string name="Invisibility_Info">Görünmez</string>
   <!--STRINGS OF Levitation CLASS-->
   <string name="Levitation_Info">Uçuyor</string>
   <!--STRINGS OF Light CLASS-->
+  <string name="Light_Info">Aydınlanmış</string>
   <!--STRINGS OF MindVision CLASS-->
   <string name="MindVision_Info">Durugörü</string>
   <!--STRINGS OF Ooze CLASS-->

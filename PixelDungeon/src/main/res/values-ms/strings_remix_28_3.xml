@@ -1,3 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <string name="DarkSacrifice_Name">Korban Kegelapan</string>
+    <string name="DarkSacrifice_Info">Korbankan pengikut setia supaya menjadi bahan letupan. Kawasan letupan bergantung pada baki hayatnya dan tahap kemahiran anda.</string>
+    <string name="DarkSacrifice_Ok">Nyawa saya milik milik kau!</string>
+    <string name="DarkSacrifice_Self">Untuk Kesengsaraan!</string>
+    <string name="DarkSacrifice_Resist">Kau tak boleh menguasai aku!</string>
+    <string name="DarkSacrifice_Hint">Pilih pengikut setia anda untuk dikorbankan!</string>
+
+    <string name="Exhumation_Name">Penggalian Mayat</string>
+    <string name="Exhumation_Info">Membuka makam adalah perbuatan terkutuk, tetapi memadai bagi seseorang yang terlibat dengan dunia Kematian. Pelaku upacara ini mempunyai peluang cerah (dan semakin baik jika pelaku mahir) menakluki roh malang yang bersemayam di dalamnya.</string>
+    <string name="Exhumation_NoGrave">Tiada kubur berdekatan untuk melakukan Penggalian mayat.</string>
+    <string name="Exhumation_Ok">Aku menurut perintah kau.</string>
+
+    <string name="RaiseDead_Name">Hidup Semula</string>
+    <string name="RaiseDead_Info">Percubaan menghidupkan semula (Upacara memerlukan bahan yang masih segar) makhluk mati. Jika menggunakan seni kegelapan ini perlu diingat: hampir semua makhluk boleh dihidupkan kembali, tetapi tidak semua yang akan menurut perintah.</string>
+    <string name="RaiseDead_NoSpace">Hidup Semula gagal kerana ketiadaan ruang bebas yang berhampiran.</string>
+    <string name="RaiseDead_NoKill">Anda perlu membunuh seseorang sebelum cuba menghidupkannya kembali.</string>
+
+    <string name="RawFish_Name">ikan mentah</string>
+    <string name="RawFish_Info">Ikan mentah, makanlah tetapi tanggung risiko sendiri</string>
+    <string name="RawFish_Taste">Berbau ikan!</string>
+
+    <string name="FrozenFish_Name">ikan beku</string>
+    <string name="FrozenFish_Info">Ikan beku, macam hidup, tetap beku.</string>
+
+    <string name="FriedFish_Name">ikan goreng</string>
+    <string name="FriedFish_Info">Ikan goreng, sedapnya</string>
+    <string name="FriedFish_Taste">Sedapnya!</string>
+
+    <string name="RottenFish_Name">ikan busuk</string>
+    <string name="RottenFish_Info">Ikan busuk, baunya...</string>
+    <string name="RottenFish_Taste">Jijiknya!</string>
+</resources>

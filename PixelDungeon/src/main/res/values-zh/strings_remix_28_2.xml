@@ -1,3 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <string name="WndSettings_Quickslots">快捷栏</string>
+
+    <string name="Abilities_Default">精通</string>
+    <string name="WndSettings_UiSettings">界面设置</string>
+    <string name="WndSettings_ActionButtonSize">按钮大小</string>
+    <string name="WndSettings_GameplaySettings">游戏选项</string>
     </resources>

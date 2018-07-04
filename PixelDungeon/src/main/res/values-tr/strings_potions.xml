@@ -8,6 +8,7 @@
   <string name="Potion_Harmfull">Zararlı iksir!</string>
   <string name="Potion_Beneficial">Faydalı iksir</string>
   <string name="Potion_Yes">Evet, ne yaptığımı biliyorum</string>
+  <string name="Potion_No">Hayır, fikrimi değiştirdim</string>
   <string name="Potion_SureDrink">İçmek istediğine emin misin? Genellikle bu tarz iksirleri düşmanlarına fırlatmalısın.</string>
   <string name="Potion_SureThrow">Fırlatmat istedğine emin misin? Genelde bu iksirleri içmek daha mantıklıdır.</string>
   <string name="Potion_Shatter">Şişe kırıldı ve %s sıvı zararsızca etrafa sıçradı</string>
@@ -29,15 +30,22 @@
   <string name="PotionOfExperience_Name">Deneyim İksiri</string>
   <string name="PotionOfExperience_Info">Efsanevi savaşların deneyiminin sıvı formu, bu iksir deneyim puanını anında arttıracaktır.</string>
   <!--STRINGS OF PotionOfFrost CLASS-->
+  <string name="PotionOfFrost_Name">Ayaz İksiri</string>
   <string name="PotionOfFrost_Info">Bu iksirle temas eden herhangi bir yaratık donarak hareket yeteneğini kaybedecektir.</string>
   <!--STRINGS OF PotionOfHealing CLASS-->
   <string name="PotionOfHealing_Name">Kırmızı Pot </string>
   <string name="PotionOfHealing_Info">Bu iksir anında iyileşmeni ve zehirlerden arınmanı sağlayacak.</string>
+  <string name="PotionOfHealing_Apply">Yaraların tamamen iyileşti.</string>
   <!--STRINGS OF PotionOfInvisibility CLASS-->
+  <string name="PotionOfInvisibility_Name">Görünmezlik İksiri</string>
   <string name="PotionOfInvisibility_Info">Bu iksiri içmek seni geçici olarak görünmez kılacakGörünmez olduğunda düşmanların seni onlara herhangi bir saldırı yapana kadar göremeyecektir.</string>
+  <string name="PotionOfInvisibility_Apply">Ellerinin görünmez olduğunu görüyorsun!</string>
   <!--STRINGS OF PotionOfLevitation CLASS-->
+  <string name="PotionOfLevitation_Name">Süzülme İksiri</string>
   <string name="PotionOfLevitation_Info">Bu garip iksir senin havada süzülmeni sağlar, tuzaklardan bu yolla kurtulabilirsin ancak zehirli gazlar havada da seni ekileyecektir.</string>
+  <string name="PotionOfLevitation_Apply">Havada süzülüyorsun!</string>
   <!--STRINGS OF PotionOfLiquidFlame CLASS-->
+  <string name="PotionOfLiquidFlame_Name">Sıvı Ateş İksiri</string>
   <string name="PotionOfLiquidFlame_Info">Bu şise etrafı yakıp kavuracak kararsız bir sıvı içerir.</string>
   <!--STRINGS OF PotionOfMight CLASS-->
   <string name="PotionOfMight_Name">Kudret İksiri</string>
@@ -45,6 +53,7 @@
   <string name="PotionOfMight_Apply">Yeni bulduğun gün vücudundan taşıyor.</string>
   <string name="PotionOfMight_StaApply">+1 güç, +5 sağlık</string>
   <!--STRINGS OF PotionOfMindVision CLASS-->
+  <string name="PotionOfMindVision_Name">Görüş İksiri</string>
   <string name="PotionOfMindVision_Info">Bunu içtikten sonra zihnin bu zindandaki yaratıkların fiziksel özelliklerin sezme yeteneğine kavuşacak onları bu seviyede nerede olursa olsun görebileceksin.</string>
   <string name="PotionOfMindVision_Apply1">Bir şekilde diğer yaratıkların zihinlerini okuyabiliyorsun!</string>
   <string name="PotionOfMindVision_Apply2">Şu anda bu seviyede yanlız olduğunu hissediyorsun.</string>
@@ -57,6 +66,7 @@
   <string name="PotionOfPurity_Freshness">Havada alışılmadık bir tazelik hissediliyor.</string>
   <string name="PotionOfPurity_NoSmell">Hiç bir kokuyu alamıyorsun!</string>
   <!--STRINGS OF PotionOfStrength CLASS-->
+  <string name="PotionOfStrength_Name">Güç İksiri</string>
   <string name="PotionOfStrength_Info">Bu güçlü sıvı damarlarından aktığında kalıcı olarak gücünü bir puan arttırır.</string>
   <string name="PotionOfStrength_Apply">Yeni bulduğun güçle kasların dalgalandı.</string>
   <string name="PotionOfStrength_StaApply">+1 güç</string>

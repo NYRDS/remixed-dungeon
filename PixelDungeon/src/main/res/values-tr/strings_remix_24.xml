@@ -9,6 +9,10 @@
     <string name="Shades_Name">Gölgeler</string>
     <string name="Shades_Info">Bazıları zindanların bunun gibi koyu giysiler giymek için karanık olduğunu söyler, sende onlara onların senin kadar \"cool\" olmadıklarını söyle.</string>
 	
+	<!-- STRINGS OF Capotain CLASS -->
+    <string name="Capotain_Name">Capotain</string>
+    <string name="Capotain_Info">Uzun taçlı, dar kenarlı bir şapka. Genelde Püritiler ile ilişkilidir, ancak onu giymek için dindar olmanız gerekmez. Bazı nedenlerden dolayı \"Solomon\" yazan bir isim levhası var.</string>
+	
 	<!-- STRINGS OF Fez CLASS -->
     <string name="Fez_Name">fes</string>
     <string name="Fez_Info">Bildiğimiz fes.Hayır, bu dünyayı 3 boyutlu filan da yapmıyor.</string>

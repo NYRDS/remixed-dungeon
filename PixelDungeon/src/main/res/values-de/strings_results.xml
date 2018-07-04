@@ -15,4 +15,5 @@
   <string name="ResultDescriptions_Fall">Ist auf Ebene %d in den Tod gestürzt</string>
   <string name="ResultDescriptions_Win">Hat das Amulett von Yendor erlangt</string>
   <string name="ResultDescriptions_Immured">Eingemauert in Stein auf Ebene %d</string>
+  <string name="ResultDescriptions_Unknown">Ist auf Ebene %d unter mysteriösen Umständen gestorben</string>
 </resources>

@@ -13,7 +13,7 @@
     <!-- STRINGS OF Necrotism CLASS -->
     <string name="Necrotism_Info">Nekrose</string>
     <string name="Necrotism_ACSpecial">NEKROSE</string>
-    <string name="ResultDescriptions_Necrotism">An Nekrose gestorben auf level %d</string>
+    <string name="ResultDescriptions_Necrotism">Ist auf Ebene %d an Nekrose gestorben</string>
     <string name="Necrotism_Death">Du bist an Nekrose gestorben...</string>
     <string name="Badges_DeathNecrotism">Tod durch Nekrose</string>
 

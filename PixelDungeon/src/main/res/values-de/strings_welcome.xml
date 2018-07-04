@@ -289,7 +289,7 @@ remix.26.5\n
 - Benutzerdefinierte Wesen können in eigenen Mods erstellt werden\n
 - Benutzerdefinierte Mob-Mechaniken erlauben auch das Erstellen von Mobs mit Fernkampfangriffen\n
 - Mod-Attribute hinzugefügt: canBePet, wallWalker und absoluteWalker für benutzerdefinierte Wesen\n
-- Die Mods unterstützt nun benutzerdefinierte \"Verteidigungs\" Nachrichten, zB. \"Blockiert\", \"Pariert\"\n
+- Die Mods unterstützen nun benutzerdefinierte \"Verteidigungs\" Nachrichten, zB. \"Blockiert\", \"Pariert\"\n
 </string>
   <string name="Welcome_Text_26_6">
 remix.26.6\n
@@ -392,7 +392,18 @@ remix.28.2\n
 -- Schnellzugriffe werden nur durch die Bildschirmbreite begrenzt\n
 -- Zaubersprüche und Fähigkeiten können in der Schnellzugriffsleiste platziert werden\n
 -- Händigkeitsoptionen\n
-- Bewegungszeitbegrenzung besteht nun auch in den Spielstatistiken\n
-- Echtzeit!(immer noch experimentell) Modus ist nun verfügbar und besteht pro Spiel Sitzung\n
+- Bewegungszeitbegrenzung steht nun auch in den Spielstatistiken\n
+- Echtzeit!(immer noch experimentell) -modus ist nun verfügbar und besteht pro Spiel Sitzung\n
+</string>
+  <string name="Welcome_Text_28_3">
+remix.28.3\n
+- Neue Nekromanten-Fähigkeiten:\n
+-- Dunkle Opferung\n
+-- Exhumierung\n
+-- Wiederauferstehung der Toten\n
+- Gebratener, gefrorener, verrotteter und roher Fisch\n
+- Mods:\n
+-- Modifizierbare Zaubersprüche\n
+-- Modifizierbare Gegenstände\n
 </string>
 </resources>

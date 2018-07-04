@@ -15,4 +15,5 @@
   <string name="ResultDescriptions_Fall">Розбився на рівні %d</string>
   <string name="ResultDescriptions_Win">Отримав амулет Ендора</string>
   <string name="ResultDescriptions_Immured">Замуровано в камені на рівні %d</string>
+  <string name="ResultDescriptions_Unknown">Загинув за містичних обставин на рівні %d</string>
 </resources>

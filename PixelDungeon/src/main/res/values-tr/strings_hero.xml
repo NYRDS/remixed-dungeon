@@ -3,9 +3,12 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">sen</string>
   <string name="Hero_Name_Objective">sen</string>
+  <string name="Hero_Leave">Pixel Dungeon\'dan çıkmak o kadar kolay değil.</string>
   <string name="Hero_LevelUp">Seviye Atladın !</string>
   <string name="Hero_NewLevel">%d. bölüme hoşgeldiniz! Artık daha canlı ve odaklısınız. Düşmanlara vurmak ve saldırılardan kaçmak senin için artık daha kolay.</string>
   <string name="Hero_YouNowHave">%s buldun!</string>
+  <string name="Hero_SomethingElse">Burada başka bir şey var.</string>
+  <string name="Hero_LockedChest">Bu sandık kilitli ve ona uygun bir anahtarın yok.</string>
   <string name="Hero_LockedDoor">Buraya Uyan Bir Anahtarın Yok</string>
   <string name="Hero_NoticedSmth">Birşeyler Farkettin</string>
   <string name="Hero_Wait">...</string>
@@ -13,6 +16,7 @@
   <string name="Hero_StaBurning">Tutuştun !</string>
   <string name="Hero_StaParalysis">Felç Oldun!</string>
   <string name="Hero_StaPoison">Zehirlendin!</string>
+  <string name="Hero_StaOoze">Asit derine döküldü. Hemen derini yıka!</string>
   <string name="Hero_StaRoots">Kıpırdayamıyorsun!</string>
   <string name="Hero_StaWeakness">Zayıfladığını hissediyorsun!</string>
   <string name="Hero_StaBlindness">Kör oldun!</string>
@@ -65,8 +69,24 @@
     <item>Diğer saldırı silahları ile daha az başarılıdırlar.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">Gladyatör</string>
   <string name="HeroSubClass_DescGlad">Yakın silah ile yapılan her başarılı vuruş _Gladyatör\'ün_ kombo yapmasına olanak sağlar, her başarılı vuruş ek hasar verir.</string>
   <string name="HeroSubClass_NameBers">Vahşi savaşçı</string>
+  <string name="HeroSubClass_DescBers">Vahşi Savaşçı, ağır yara aldığında bir vahşi öfkeye kapılır ve bu onun hasarını arttırır.</string>
   <string name="HeroSubClass_NameWarL">Ruh sömüren</string>
+  <string name="HeroSubClass_DescWarL">Bir düşmanı öldürdükten sonra _Warlock_ ruhunu tüketir. Yaralarını iyileştirir ve açlığını tatmin eder.</string>
+  <string name="HeroSubClass_NameBatM">Savaş Büyücüsü</string>
+  <string name="HeroSubClass_DescBatM">Elinde bir asa ile savaşırken, _Savaş Büyücüsü_ o anki şarj sayısına bağlı olarak ek hasar verir. Her başarılı isabet, bu asaya 1 şarj yükler.</string>
+  <string name="HeroSubClass_NameAssa">Suikastçı</string>
+  <string name="HeroSubClass_DescAssa">_Suikastçı_ sürpriz saldırı yaparken hedefe ek hasar verir.</string>
+  <string name="HeroSubClass_NameFreR">Serbest Koşucu</string>
+  <string name="HeroSubClass_DescFreR">_Serbest Koşucu_ 2 katı hızlı hareket edebilir.Koşucu koşarken vurulması zordur.Bunun için aç ve düşman etkisinde olmamak gerekir.</string>
+  <string name="HeroSubClass_NameSnip">Keskin Nişancı</string>
+  <string name="HeroSubClass_DescSnip">_Keskin Nişancı_ düşmanın zırhındaki zayıf noktayı tespit ederek menzilli silah kullanırken zırhı yok sayar.</string>
+  <string name="HeroSubClass_NameWard">Müdür</string>
+  <string name="HeroSubClass_DescWard">Doğayla güçlü bağlantısı _Müdür\'e_ çalılardan tohum ve çiy damlası toplama yeteneği verir. Ayrıca uzun çalıları çiğnemek onlara geçici armor verir.</string>
+  <string name="HeroSubClass_NameScout">İzci</string>
+  <string name="HeroSubClass_DescScout">Elf _İzciler_ gizliliğin ustasıdırlar. Uzun çimleri ezmek onlara gizlik bonusu verir. Aynı zamanda normal elflerden daha hızlıdırlar.</string>
   <string name="HeroSubClass_NameShaman">Şaman</string>
+  <string name="HeroSubClass_DescShaman">Elf _Şamanlar_ asaları yakın dövüş silahı olarak kullanabilirler. Başarılı vuruşlar şarj kullanmadan hedefte asa nın gücünü kullanmasına olanak verir.</string>
 </resources>

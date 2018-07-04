@@ -12,4 +12,6 @@
     <string name="WndSettings_InGameUiSettings">Tetapan Ui</string>
     <string name="WndSettings_GameplaySettings">Permainan</string>
     <string name="WndPremiumSettings_marble">marmar</string>
-    </resources>
+    <string name="QuickSlot_SelectSlot">Pilih slot pantas untuk ia</string>
+
+</resources>

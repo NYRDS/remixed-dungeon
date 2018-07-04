@@ -12,9 +12,9 @@
     <string name="Exhumation_NoGrave">Não há sepultura aqui para realizar uma Exumação.</string>
     <string name="Exhumation_Ok">Irei obedece-lo.</string>
 
-    <string name="RaiseDead_Name">Ressuscitar Cadáver</string>
-    <string name="RaiseDead_Info">Tentará ressuscitar a última (o ritual requer material fresco) criatura morta. Ao usar esta arte das trevas, lembre-se: quase qualquer criatura pode ser ressuscitada, mas nem todos irão obedece-lo tão facilmente.</string>
-    <string name="RaiseDead_NoSpace">Ressuscitar Cadáver falhou porque não há espaço livre nas proximidades.</string>
+    <string name="RaiseDead_Name">Levantar os Mortos</string>
+    <string name="RaiseDead_Info">Tentará levantar a última (o ritual requer material fresco) criatura morta. Ao usar esta arte das trevas, lembre-se: quase qualquer criatura pode ser ressuscitada, mas nem todos irão obedece-lo tão facilmente.</string>
+    <string name="RaiseDead_NoSpace">Levantar os Mortos falhou porque não há espaço livre nas proximidades.</string>
     <string name="RaiseDead_NoKill">Você precisa matar alguém antes de tentar ressuscita-lo.</string>
 
     <string name="RawFish_Name">peixe cru</string>

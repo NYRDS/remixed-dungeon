@@ -1,3 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <string name="DarkSacrifice_Name">黑暗献祭</string>
+    <string name="DarkSacrifice_Ok">我的此生归你了！</string>
+    <string name="RawFish_Name">生鱼</string>
+    <string name="FrozenFish_Name">冻鱼</string>
+    <string name="FriedFish_Name">熟鱼</string>
+    <string name="RottenFish_Name">烂鱼</string>
     </resources>

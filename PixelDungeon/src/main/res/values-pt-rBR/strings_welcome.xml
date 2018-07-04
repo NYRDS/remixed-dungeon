@@ -380,7 +380,7 @@ remix.26.4\n
     remix.27.4\n
     - Nome alterado para Remixed Dungeon\n
     - Necrose - nova habilidade Armadura de Classe do Necromante\n
-    - Nova medalha à ser descoberta \ n
+    - Nova medalha à ser descoberta\n
     - A habilidade de Armadura de Classe agora consome Mana ao invés de HP\n
     - Itens caóticos agora perdem seu encantamento ao serem rebaixados\n
     - Psico-aranhas agora só podem conjurar feitiços de cegueira, lentidão e fraqueza\n
@@ -396,7 +396,7 @@ remix.26.4\n
     - Novo idioma adicionado: Idioma Malaio\n
     </string>
   <string name="Welcome_Text_28_1">
-    remix.28.1 \ n
+    remix.28.1\n
     - Grande renovação na cidade\n
     - Muitas melhorias e correções de GFX\n
     - Novos dardos e flechas\n
@@ -409,7 +409,7 @@ remix.26.4\n
     remix.28.2\n
     - Reformulação da Interface:\n
     -- Quantidade de Atalhos rápidos está limitada pela largura da tela\n
-    -- Feitiços e habilidades podem ser colocadas nos atalhos rápidos\ n
+    -- Feitiços e habilidades podem ser colocadas nos atalhos rápidos\n
     -- Opção de escolha do lado dos botões\n
     - Limite de tempo de ação agora ficará nas estatísticas\n
     - Modo Realtime!(Ainda muito experimental) agora disponível e segue pela sessão de jogo\n
@@ -419,7 +419,7 @@ remix.26.4\n
     - Novas habilidades do Necromante:\n
     -- Sacrifício das Trevas\n
     -- Exumação\n
-    -- Levantar Cadáver\n
+    -- Levantar os Mortos\n
     - Peixe Frito, Congelado, Podre e Cru\n
     - Modificações:\n
     -- Feitiços modificáveis\n
