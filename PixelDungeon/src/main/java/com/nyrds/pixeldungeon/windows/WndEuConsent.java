@@ -21,7 +21,7 @@ public abstract class WndEuConsent extends Window {
 
     private static final int WIDTH		= 120;
 
-    boolean consentChoosen;
+    private boolean consentChoosen;
 
     public WndEuConsent() {
         super();
@@ -77,6 +77,5 @@ public abstract class WndEuConsent extends Window {
         if(!consentChoosen) {
             Game.toast(Game.getVar(R.string.gdpr_choose));
         }
-        super.hide();
     }
 }

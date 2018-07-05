@@ -41,6 +41,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
@@ -213,7 +214,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 				}
 
 				android.widget.Toast toast = android.widget.Toast.makeText(RemixedPixelDungeonApp.getContext(), toastText,
-						android.widget.Toast.LENGTH_LONG);
+						Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});
