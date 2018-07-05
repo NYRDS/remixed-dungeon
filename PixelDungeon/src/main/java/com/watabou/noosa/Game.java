@@ -226,11 +226,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		super.onSaveInstanceState(outState);
 	}
 
-	public static boolean isAlpha() {
-		return version.contains("alpha");
-	}
-
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
