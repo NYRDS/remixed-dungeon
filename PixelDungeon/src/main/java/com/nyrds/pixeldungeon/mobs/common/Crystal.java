@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -29,20 +30,38 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	public Crystal() {
 		adjustStats(Dungeon.depth);
-
-		loot = SimpleWand.createRandomSimpleWand();
-		((Wand) loot).upgrade(Dungeon.depth / 3);
-
-		lootChance = 0.25f;
+		ensureWand();
 	}
 
 	static public Crystal makeShadowLordCrystal() {
 		Crystal crystal = new Crystal();
 		crystal.kind = 2;
-		crystal.lootChance = 0.12f;
-		crystal.loot = new WandOfShadowbolt();
-		((Wand) crystal.loot).upgrade(Dungeon.depth / 3);
+		crystal.ensureWand();
 		return crystal;
+	}
+
+	@NonNull
+	private Wand ensureWand() {
+		if (loot instanceof  Wand) {
+			return (Wand) loot;
+		}
+
+		if(loot != null) {
+			EventCollector.logEvent("bug", "crystal loot", loot.getClass().getSimpleName());
+		}
+
+		if(kind == 2) {
+			lootChance = 0.12f;
+			loot = new WandOfShadowbolt();
+			((Wand) loot).upgrade(Dungeon.depth / 3);
+			return (Wand) loot;
+		}
+
+		loot = SimpleWand.createRandomSimpleWand();
+		((Wand) loot).upgrade(Dungeon.depth / 3);
+
+		lootChance = 0.25f;
+		return ((Wand) loot);
 	}
 
 	public void adjustStats(int depth) {
@@ -56,6 +75,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		IMMUNITIES.add(ScrollOfPsionicBlast.class);
 		IMMUNITIES.add(ToxicGas.class);
 		IMMUNITIES.add(Paralysis.class);
+		IMMUNITIES.add(ConfusionGas.class);
 	}
 
 	@Override
@@ -136,18 +156,13 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		}
 
 		if (hit(this, enemy, true)) {
-			useWand(enemy);
+			ensureWand().mobWandUse(this, enemy.getPos());
+
 			return true;
 		} else {
 			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 			return false;
 		}
-
-	}
-
-	public void useWand(Char enemy){
-		final Wand wand = ((Wand) loot);
-		wand.mobWandUse(this, enemy.getPos());
 
 	}
 
