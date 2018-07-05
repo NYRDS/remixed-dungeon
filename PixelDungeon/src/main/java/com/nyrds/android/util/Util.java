@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Base64;
@@ -90,4 +91,16 @@ public class Util {
 		}
 		return -1;
 	}
+
+    public static String bundle2string(Bundle bundle) {
+        if (bundle == null) {
+            return null;
+        }
+        StringBuilder string = new StringBuilder("Bundle{");
+        for (String key : bundle.keySet()) {
+            string.append(" ").append(key).append(" => ").append(bundle.get(key)).append(";");
+        }
+        string.append(" }Bundle");
+        return string.toString();
+    }
 }

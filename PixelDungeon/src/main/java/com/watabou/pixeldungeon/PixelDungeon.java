@@ -26,6 +26,7 @@ import android.view.View;
 
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -175,27 +176,12 @@ public class PixelDungeon extends Game {
 	}
 
 
-
-	public static String bundle2string(Bundle bundle) {
-		if (bundle == null) {
-			return null;
-		}
-		StringBuilder string = new StringBuilder("Bundle{");
-		for (String key : bundle.keySet()) {
-			string.append(" ").append(key).append(" => ").append(bundle.get(key)).append(";");
-		}
-		string.append(" }Bundle");
-		return string.toString();
-	}
-
-
-
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 		String extras = "";
 		if(data!=null) {
-			extras = bundle2string(data.getExtras());
+			extras = Util.bundle2string(data.getExtras());
 		}
 
 		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
