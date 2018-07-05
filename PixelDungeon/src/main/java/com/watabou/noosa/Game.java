@@ -291,12 +291,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 		paused = true;
 
 		if (scene != null) {
-			pushUiTask(new Runnable() {
-				@Override
-				public void run() {
-					scene.pause();
-				}
-			});
+			scene.pause();
 
 			Music.INSTANCE.pause();
 			Sample.INSTANCE.pause();
