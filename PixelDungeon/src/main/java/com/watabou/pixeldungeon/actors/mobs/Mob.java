@@ -488,7 +488,9 @@ public abstract class Mob extends Char {
 			Wound.hit(this);
 		}
 
-		setEnemy(enemy);
+		if(owner!=enemy) {
+			setEnemy(enemy);
+		}
 
 		runMobScript("onDefenceProc", enemy, damage);
 
