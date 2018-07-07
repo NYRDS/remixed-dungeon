@@ -44,11 +44,11 @@
 
     <string name="AmokDart_Name">Дротик Буйства</string>
     <string name="AmokDart_Gender">masculine</string>
-    <string name="AmokDart_Info">Раствор на наконечнике этого дротика привратит любого в беспощадного берсерка.</string>
+    <string name="AmokDart_Info">Раствор на наконечнике этого дротика превратит любого в беспощадного берсерка.</string>
 
     <string name="AmokArrow_Name">Стрела Буйства</string>
     <string name="AmokArrow_Gender">feminine</string>
-    <string name="AmokArrow_Info">Раствор на наконечнике этой стрелы привратит любого в беспощадного берсерка.</string>
+    <string name="AmokArrow_Info">Раствор на наконечнике этой стрелы превратит любого в беспощадного берсерка.</string>
 
     <string name="WndHero_SkillLevel">Уровень мастерства</string>
 

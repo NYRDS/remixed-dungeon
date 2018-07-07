@@ -87,6 +87,6 @@
   <!--STRINGS OF WandOfTeleportation CLASS-->
   <string name="WandOfTeleportation_Name">Палочка Телепортации</string>
   <string name="WandOfTeleportation_Info">Разряд этой палочки перенесёт указанное существо в случайную точку текущего уровня, хочет оно того или нет.</string>
-  <string name="WandOfTeleportation_Info1">%1$s куда-то телепортирует %2$s</string>
+  <string name="WandOfTeleportation_Info1">%1$s куда-то телепортировал %2$s</string>
   <string name="WandOfTeleportation_Info2">ничего не произошло</string>
 </resources>

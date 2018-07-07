@@ -166,7 +166,7 @@
   <string name="Statue_Name">ожившая статуя</string>
   <string name="Statue_Gender">feminine</string>
   <string name="Statue_Name_Objective">статую</string>
-  <string name="Statue_Desc">Может показаться, что это просто очередная неприметная статуя, но красные светящиеся глаза выдают её намерения. Хоть статуя и сработана из камня, её _%s_ выглядит настоящим.</string>
+  <string name="Statue_Desc">Может показаться, что это просто очередная неприметная статуя, но красные светящиеся глаза выдают её намерения. Хоть статуя и сработана из камня, её оружие, _%s_, выглядит настоящим.</string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">суккуб</string>
   <string name="Succubus_Gender">masculine</string>
