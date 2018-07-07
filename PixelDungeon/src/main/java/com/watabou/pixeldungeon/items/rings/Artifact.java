@@ -14,8 +14,7 @@ import java.util.ArrayList;
 
 public class Artifact extends EquipableItem {
 
-	static final float TIME_TO_EQUIP = 1f;
-	protected Buff buff;
+	private static final float TIME_TO_EQUIP = 1f;
 
 	@Override
 	public boolean doEquip(Hero hero) {
@@ -62,8 +61,7 @@ public class Artifact extends EquipableItem {
 				}
 			}
 
-			hero.remove(buff);
-			buff = null;
+			hero.remove(buff());
 
 			return true;
 		} else {
@@ -84,7 +82,7 @@ public class Artifact extends EquipableItem {
 	}
 
 	public void activate(Char ch) {
-		buff = buff();
+		Buff buff = buff();
 		if (buff != null) {
 			buff.attachTo(ch);
 		}
