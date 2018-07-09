@@ -96,9 +96,9 @@ public class Ring extends Artifact implements UnknownItem{
 	
 	@Override
 	public Item upgrade() {
-		
+
 		super.upgrade();
-		
+
 		if (buff != null) {
 			
 			Char owner = buff.target;
