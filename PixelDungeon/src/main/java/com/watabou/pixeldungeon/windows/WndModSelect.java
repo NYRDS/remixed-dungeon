@@ -112,6 +112,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			SaveUtils.deleteGameAllClasses();
 			SaveUtils.copyAllClassesFromSlot(ModdingMode.REMIXED);
 			PixelDungeon.activeMod(ModdingMode.REMIXED);
+			PixelDungeon.instance().doRestart();
 		}
 
 		if (getParent() != null) {
