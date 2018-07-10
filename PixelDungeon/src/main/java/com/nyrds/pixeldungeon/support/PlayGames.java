@@ -253,29 +253,34 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 		Game.instance().executor.execute(new Runnable() {
 			@Override
 			public void run() {
-				boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
-					@Override
-					public boolean accept(File pathname) {
-						String filename = pathname.getName();
-						if (filename.equals(Badges.BADGES_FILE)) {
-							return true;
-						}
+				try {
+					boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+						@Override
+						public boolean accept(File pathname) {
+							String filename = pathname.getName();
+							if (filename.equals(Badges.BADGES_FILE)) {
+								return true;
+							}
 
-						if (filename.equals(Library.getLibraryFile())) {
-							return true;
-						}
+							if (filename.equals(Library.getLibraryFile())) {
+								return true;
+							}
 
-						if (filename.equals(Rankings.RANKINGS_FILE)) {
-							return true;
-						}
+							if (filename.equals(Rankings.RANKINGS_FILE)) {
+								return true;
+							}
 
-						if (filename.startsWith("game_") && filename.endsWith(".dat")) {
-							return true;
+							if (filename.startsWith("game_") && filename.endsWith(".dat")) {
+								return true;
+							}
+							return false;
 						}
-						return false;
-					}
-				});
-				resultCallback.status(res);
+					});
+					resultCallback.status(res);
+				}catch (Exception e) {
+					EventCollector.logException(e);
+					Game.toast("Error while uploading save to cloud: ", e.getMessage());
+				}
 			}
 		});
 	}
