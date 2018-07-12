@@ -42,6 +42,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_COLLAR      = "collar";
 	private static final String LAYER_ACCESSORY   = "accessory";
 
+	private static final String LAYER_LEFT_HAND   = "left_hand";
+	private static final String LAYER_RIGHT_HAND  = "right_hand";
+
 	private Animation fly;
 
 	private static final String[] layersOrder = {
@@ -132,6 +135,11 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/weapons/left_hand.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/weapons/right_hand.png");
+
+
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 	}
