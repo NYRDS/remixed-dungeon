@@ -45,6 +45,13 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_LEFT_HAND   = "left_hand";
 	private static final String LAYER_RIGHT_HAND  = "right_hand";
 
+	private static final String LAYER_LEFT_ARMOR   = "left_hand_armor";
+	private static final String LAYER_RIGHT_ARMOR  = "right_hand_armor";
+
+	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
+	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
+
+
 	private Animation fly;
 
 	private static final String[] layersOrder = {
@@ -55,6 +62,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 		LAYER_ARMOR,
 		LAYER_FACIAL_HAIR,
 		LAYER_HELMET,
+		LAYER_LEFT_ARMOR,
+		LAYER_RIGHT_ARMOR,
+		LAYER_LEFT_HAND,
+		LAYER_RIGHT_HAND,
+		LAYER_LEFT_ITEM,
+		LAYER_RIGHT_ITEM,
 		LAYER_DEATH,
 		LAYER_ACCESSORY
 	};
@@ -136,8 +149,16 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
+		layersDesc.put(LAYER_LEFT_ARMOR,  "hero/weapons/left_hand_armor.png");
+		layersDesc.put(LAYER_RIGHT_ARMOR, "hero/weapons/right_hand_armor.png");
+
 		layersDesc.put(LAYER_LEFT_HAND,  "hero/weapons/left_hand.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero/weapons/right_hand.png");
+
+
+		layersDesc.put(LAYER_LEFT_ITEM,  "hero/weapons/left_hand_item.png");
+		layersDesc.put(LAYER_RIGHT_ITEM, "hero/weapons/right_hand_item.png");
+
 
 
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
