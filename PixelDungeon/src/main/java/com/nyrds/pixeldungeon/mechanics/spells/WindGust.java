@@ -29,7 +29,7 @@ public class WindGust extends Spell{
 			boolean triggered = false;
 
 			Ballistica.cast(chr.getPos(), cell, true, false);
-			for (int i = 1; i < chr.magicLvl() + 2; i++) {
+			for (int i = 1; i < Math.min(chr.magicLvl() + 2, Ballistica.distance); i++) {
 				int c = Ballistica.trace[i];
 
 				if ((ch = Actor.findChar(c)) != null) {
