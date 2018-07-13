@@ -1,5 +1,6 @@
 package com.nyrds.android.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -7,12 +8,16 @@ import android.content.pm.Signature;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StatFs;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Base64;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
+import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.security.MessageDigest;
@@ -102,5 +107,22 @@ public class Util {
         }
         string.append(" }Bundle");
         return string.toString();
+    }
+
+    @SuppressLint("NewApi")
+    @SuppressWarnings("deprecation")
+    public static long getAvailableInternalMemorySize() {
+        File path = Environment.getDataDirectory();
+        StatFs stat = new StatFs(path.getPath());
+        long ret;
+        if (android.os.Build.VERSION.SDK_INT < 18) {
+            long blockSize = stat.getBlockSize();
+            long availableBlocks = stat.getAvailableBlocks();
+            ret = availableBlocks * blockSize;
+        } else {
+            ret = stat.getAvailableBytes();
+        }
+        EventCollector.collectSessionData("FreeInternalMemorySize", Long.toString(ret));
+        return ret;
     }
 }
