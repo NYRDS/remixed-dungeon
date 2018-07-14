@@ -653,6 +653,10 @@ public class GameScene extends PixelScene {
             for (Mob mob : Dungeon.level.mobs) {
                 mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
             }
+
+            for (Mob mob: Dungeon.hero.getPets()) {
+                mob.getSprite().setVisible(true);
+            }
         } else {
             EventCollector.logException(new Exception("afterObserve()"));
         }

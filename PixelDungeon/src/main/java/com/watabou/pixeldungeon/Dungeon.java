@@ -23,6 +23,7 @@ import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
@@ -397,7 +398,7 @@ public class Dungeon {
     }
 
     private static void saveAllImpl() {
-        float MBytesAvailable = Game.getAvailableInternalMemorySize() / 1024f / 1024f;
+        float MBytesAvailable = Util.getAvailableInternalMemorySize() / 1024f / 1024f;
 
         if (MBytesAvailable < 2) {
             EventCollector.logEvent("saveGame", "lowMemory");

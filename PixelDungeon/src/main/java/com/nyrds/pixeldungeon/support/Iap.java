@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.google.util.IabHelper;
@@ -180,18 +181,18 @@ public class Iap {
         }
     };
 
-    @Nullable
+    @NonNull
     private String formatSkuPrice(SkuDetails sku) {
         if (sku == null) {
-            return null;
+            return "";
         }
         return sku.getPrice();
     }
 
-    @Nullable
+    @NonNull
     public String getSkuPrice(String item) {
         if (mInventory == null) {
-            return null;
+            return "";
         }
 
         return formatSkuPrice(mInventory.getSkuDetails(item.toLowerCase(Locale.ROOT)));

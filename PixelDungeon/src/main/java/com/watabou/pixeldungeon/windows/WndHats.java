@@ -112,10 +112,9 @@ public class WndHats extends Window {
 			content.add(name);
 			float rbY = name.bottom() + GAP * 2;
 
-			if (price != null) {
+			if (!price.isEmpty()) {
 				//Pricetag
-				SystemText priceTag = new SystemText(GuiProperties.titleFontSize());
-				priceTag.text(price);
+				SystemText priceTag = new SystemText(price, GuiProperties.titleFontSize(), false);
 
 				priceTag.hardlight(0xFFFF00);
 				priceTag.y = name.bottom() + GAP;

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.NewFireball;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
@@ -151,7 +152,7 @@ public class TitleScene extends PixelScene {
 		version.setPos(w - version.width(), h - version.height());
 		add(version);
 
-		float freeInternalStorage = Game.getAvailableInternalMemorySize();
+		float freeInternalStorage = Util.getAvailableInternalMemorySize();
 
 		if (freeInternalStorage < 2) {
 			Text lowInteralStorageWarning = PixelScene
