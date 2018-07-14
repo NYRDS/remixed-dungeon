@@ -1875,7 +1875,7 @@ public class Hero extends Char implements PetOwner {
 		this.gender = gender;
 	}
 
-	public void spawnPets(Level level) {
+	public void spawnPets(Level level, boolean regroup) {
 		refreshPets();
 
 		for (Mob pet : pets) {
@@ -1884,13 +1884,16 @@ public class Hero extends Char implements PetOwner {
 				continue;
 			}
 
-			int cell = level.getEmptyCellNextTo(getPos());
-			if (!level.cellValid(cell)) {
-				cell = getPos();
+			if(regroup) {
+				int cell = level.getEmptyCellNextTo(getPos());
+				if (!level.cellValid(cell)) {
+					cell = getPos();
+				}
+				pet.setPos(cell);
+
+				pet.setEnemy(Mob.DUMMY);
+				pet.setState(pet.WANDERING);
 			}
-			pet.setPos(cell);
-			pet.setEnemy(Mob.DUMMY);
-			pet.setState(pet.WANDERING);
 
 			level.spawnMob(pet);
 			pet.regenSprite();
