@@ -19,7 +19,7 @@
 	
 	<!-- STRINGS OF NekoEars CLASS -->
     <string name="NekoEars_Name">고양이 귀 머리띠</string>
-    <string name="NekoEars_Info">가끔은 괴물들의 피와 흙을 씻어내고 귀여운 척을 할 수도 있다... 대신 귀여운 고양이 귀를 쓸 수도 있고.</string>
+    <string name="NekoEars_Info">가끔씩 당신은 모든 몬스터의 피와 흙을 씻고 귀엽고 복실복실함을 느끼고 싶으실 겁니다... 최소한 당신은 귀여운 고양이 귀를 쓸 수 있겠죠.</string>
 	
 	<!-- STRINGS OF RabbitEars CLASS -->
     <string name="RabbitEars_Name">토끼 귀 머리띠</string>
@@ -27,4 +27,26 @@
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">호박</string>
-    </resources>
+    <string name="Pumpkin_Info">옛날에는 호박인간들이 자랑스럽고 번영된 국가를 가지고 있었습니다. 그러나 인간들이 오자 모든것이 파멸을 맞이하게 되었습니다. 그리고 잘게 갈라진 오래 전에 사라져버린 호박 부족들의 머리는 그러한 끔찍한 사건들을 나누는 역할을  했습니다.  </string>
+	
+	<!-- STRINGS OF SleepyHat CLASS -->
+    <string name="Nightcap_Name">잠옷 모자</string>
+    <string name="Nightcap_Info">밤에 던전을 정복하는 것은 매우 피곤한 일일 겁니다. 따뜻하고 아늑한 모자를 써서 진정되고 당신의 걱정들을 없애 보는건 어떨까요?</string>
+	
+	<!-- STRINGS OF WizardHat CLASS -->
+    <string name="WizardHat_Name">마법사 모자</string>
+    <string name="WizardHat_Info">별 장식으로 장식된 아름다운 실크 햇입니다. 옛날의 사람들은 대단한 마법사들이  그들의 힘을 증진시키는 특별 제작된 옷을 입었다고 믿었습니다. 하지만 사실 이 모자는 당신의 마법 능력을 증가시키지는 않습니다.하지만, 그런 느낌을 줍니다. </string>
+
+    <!-- System Text-->
+    <!-- STRINGS OF WndHats CLASS -->
+    <string name="WndHats_ListTitle">악세사리의 리스트</string>
+    <string name="WndHats_SlotTitle">착용됨</string>
+    <string name="WndHats_NoConnectionMsg">Google Play에 연결할 수 없음</string>
+    <string name="WndHats_Purchased">얻었습니다!</string>
+
+    <string name="WndHats_BackButton">뒤로가기</string>
+    <string name="WndHats_BuyButton">구매하기</string>
+    <string name="WndHats_EquipButton">착용</string>
+    <string name="WndHats_InfoButton">검사</string>
+    <string name="WndHats_UnequipButton">벗기</string>
+</resources>

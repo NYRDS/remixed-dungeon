@@ -7,4 +7,52 @@
 
     <!-- STRINGS OF VampireSkull CLASS -->
     <string name="VampireSkull_Name">흡혈귀의 해골</string>
-    </resources>
+    <string name="VampireSkull_Info">이 마스크는 모든 자연산 뱀파이어 뼈로 만들어졌습니다. 사실 이건 뱀파이어의 해골... 그것도 대두 뱀파이어의 해골입니다. 무섭군요.</string>
+
+    <!-- STRINGS OF ZombieMask CLASS -->
+    <string name="ZombieMask_Name">좀비 가면</string>
+    <string name="ZombieMask_Info">당신은 언젠가 계속 목적 달성에 실패한 언데드 영웅처럼 보이고 싶었습니까? 여기 당신에게 기회가 있습니다.</string>
+
+    <!-- Item descriptions -->
+    <!-- STRINGS OF Candy CLASS -->
+    <string name="Candy_Name">사탕</string>
+    <string name="Candy_Info">이 사탕은 정말 이쁘고 향기도 좋습니다. 당신은 정말로 이걸 누군가에게 줄 것인가요?</string>
+    <string name="Candy_Warning_1">당신은 사탕을 먹지 말았어야 합니다. 당신은 누군가에게 이것을 주기로 약속했습니다. 이건 당신을 어떻게든 유혹한 것처럼 보이지 않지만, 당신의 허기는 사라지지 않습니다. 이건 그냥 사탕입니다.</string>
+    <string name="Candy_Warning_2">당신은 정말 많은 사탕을 먹었고, 당신의 배가 많은 사탕때문에 아픕니다.</string>
+
+    <!-- STRINGS OF PumpkinPie CLASS -->
+    <string name="PumpkinPie_Name">호박 파이</string>
+    <string name="PumpkinPie_Info">맛있는 호박 파이입니다. 당신의 어머니가 만들곤 하셨던 것처럼요.</string>
+
+    <!-- STRINGS OF RottenPumpkinPie CLASS -->
+    <string name="RottenPumpkinPie_Name">썩은 호박 파이</string>
+    <string name="RottenPumpkinPie_Info">신선했을 때 얼마나 좋았을지 몰라도,이것을 아직도 먹을수 있다고 해도 절대 먹고싶지는 않을 것입니다.</string>
+
+    <!-- STRINGS OF CandleOfMindVision CLASS -->
+    <string name="CandleOfMindVision_Name">시야의 촛불</string>
+    <string name="CandleOfMindVision_Info">일반적인 촛불과 같아 보이지만, 위험한 던전에서 당신이 찾을 것으로 예상한 것이 아닙니다. 이상하게도 불이 붙지 않았는데도 따뜻합니다.</string>
+    <string name="CandleOfMindVision_Info_Lighted">당신이 촛불을 가방에서 꺼낸 순간 촛불에 불이 붙었습니다. 불꽃이 은은하게 빛나는 보라색 빛을 내뿜었고, 당신이 이를 꿰뚫어보자 주변의 몬스터들이 보이게 되었습니다.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">촛불이 다 꺼졌습니다. 당신이 들 때 더이상 불이 붙지 않습니다. 당신이 더이상  이걸  쓸 수 없을 것 같아 보입니다.</string>
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF Barrel CLASS -->
+    <string name="Barrel_Name">통</string>
+    <string name="Barrel_Desc">간단한 나무 통처럼 보입니다. 가까이 다가가면 희미한 기름의 냄새를 맡을 수 있습니다.통은 꽤 가벼워 보여서 당신은 아마도 이걸 밀 수 있을 것입니다.</string>
+
+    <!-- STRINGS OF Barrel_Pumpkin CLASS -->
+    <string name="Barrel_Pumpkin_Name">호박</string>
+    <string name="Barrel_Pumpkin_Desc">던전에 조각된 호박이 있는 것을 보는 건 정말 이상하고 무섭습니다. 당신은 위험을 느낄 수 있지만, 당신은 이것을 항상 그렇듯이 밀수 있을 것입니다. 맞죠?</string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF ScarecrowNPC CLASS -->
+    <string name="ScarecrowNPC_Name">허수아비</string>
+    <string name="ScarecrowNPC_Gender">중성</string>
+    <string name="ScarecrowNPC_Name_Objective">허수아비</string>
+    <string name="ScarecrowNPC_Desc">빼도박도못하게 이 허수아비는 당신의 모든 움직임을 보고 있습니다. 이것의 붉게 반짝이는 눈은 당신을 꿰뚫어보고 있습니다. 그러나 놀랍게도, 당신은 위협을 느끼지 않습니다.</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">안녕 소년, 요즘 어때? \n 나는 너를 위해 대단한걸 준비했어!\n\n 내가 얼마나 고마울까!\nㅡ, 가서 나를 위해 촛불을 조금 모아와!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">안녕 소녀, 요즘 어때? \n 나는 너를 위해 대단한걸 준비했어!\n\n 내가 얼마나 고마울까!\nㅡ, 가서 나를 위해 촛불을 조금 모아와!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Reminder">내가 필요한건 다섯개의 촛불이 전부야.\n 아, 보상은 꽤 달콤할 거야!</string>
+    <string name="ScarecrowNPC_Quest_End">와 신난다, 좋아!\n 이제 넌 진짜 음식을 얻을 거야!</string>
+    <string name="Journal_ScarecrowNPC">허수아비</string>
+
+</resources>
