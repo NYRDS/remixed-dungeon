@@ -12,6 +12,11 @@
     <string name="BlackSkull_Gender">남성</string>
 
     <string name="BlackSkull_Name_Awakened">깨어난 검은 해골</string>
+    <string name="BlackSkull_Info_Awakened">당신은 해골의 빈 눈으로부터 강한 힘이 진동하는 것을 볼 수 있습니다. 그리고 당신이 해골을 들 때마다 당신은 \"죽음이 행진한다\"라는 공포스러운 목소리를 들을 수 있습니다.</string>
+
+    <!-- STRINGS OF SoulShard CLASS -->
+    <string name="SoulShard_Name">영혼 조각</string>
+    <string name="SoulShard_Info">이것은 당신이 영혼의 단지의 잔존물으로부터 얻은 조각입니다.이것이 신비한 힘으로 빛나고 있는 것을 보면 아마도 여러가지 물건들에 흥미를 가질 수 도 있는 누군가가 있을 것 같습니다.</string>
     <string name="SoulShard_Gender">남성</string>
 
     <!-- Mobs descriptions -->
@@ -21,5 +26,47 @@
     <string name="DeathKnight_Name_Objective">죽음의 기사</string>
     <!-- STRINGS OF DreadKnight CLASS -->
     <string name="DreadKnight_Name">공포의 기사</string>
+    <string name="DreadKnight_Gender">남성</string>
     <string name="DreadKnight_Name_Objective">공포의 기사</string>
-    </resources>
+    <string name="DreadKnight_Desc">공포의 기사는 고대의 전사로, 그의 일생동안 정의롭지도 선하지도 않았습니다. 그리고 그의 죄로 인해 그는 영원히 부서진 언데드의 육신으로 살게 되었습니다. 그리고 그의 저주받은 존재의 매 순간마다 그는 그가 그의 희생자들에게 가한 고통과 괴로움에 고통받을 것입니다.</string>
+
+    <!-- STRINGS OF EnslavedSoul CLASS -->
+    <string name="EnslavedSoul_Name">노예화된 영혼</string>
+    <string name="EnslavedSoul_Gender">여성</string>
+    <string name="EnslavedSoul_Name_Objective">노예화된 영혼</string>
+    <string name="EnslavedSoul_Desc">당신은 이 유령의 속을 꿰뚫어 볼 수 있습니다. 해골같은 모습을 하고 있으나 가끔씩 순간적으로 해골 대신 고통과 괴로움으로 가득찬 얼굴이 나타납니다.</string>
+
+    <!-- STRINGS OF ExplodingSkull CLASS -->
+    <string name="ExplodingSkull_Name">폭발하는 해골</string>
+    <string name="ExplodingSkull_Gender">남성</string>
+    <string name="ExplodingSkull_Name_Objective">폭발하는 해골</string>
+    <string name="ExplodingSkull_Desc">이 떠다니는, 불타는 해골은 매우 불안정해 보이고 언제든지 폭발할 것 같습니다.</string>
+
+    <!-- STRINGS OF JarOfSouls CLASS -->
+    <string name="JarOfSouls_Name">영혼의 단지</string>
+    <string name="JarOfSouls_Gender">남성</string>
+    <string name="JarOfSouls_Name_Objective">영혼의 단지</string>
+    <string name="JarOfSouls_Desc">빛나는 해골의 눈이 장식된 이 오래된 단지는 당신을 불안하게 만드는 이상한 힘을 방출합니다.</string>
+
+    <!-- STRINGS OF Lich CLASS -->
+    <string name="Lich_Name">리치</string>
+    <string name="Lich_Gender">남성</string>
+    <string name="Lich_Name_Objective">리치</string>
+    <string name="Lich_Desc">네크로맨서는 그의 죽음을 네크로폴리스에서 맞이하였고,  이 장소의 사악한 힘이 그의 몸속으로 흘러들어갔습니다. 그는 결국  사악한 힘에 의해 조종당하는 의지가 없는 언데드 마법사인 리치로 변했습니다.</string>
+
+    <!-- STRINGS OF RunicSkull CLASS -->
+    <string name="RunicSkull_Name">신비한 해골</string>
+    <string name="RunicSkull_Gender">남성</string>
+    <string name="RunicSkull_Name_Objective">신비한 해골</string>
+    <string name="RunicSkull_Desc">인공적으로 만들어진 이 해골은 진짜 해골과 닮았습니다. 당신은 희미한 빛이 이것을 둘러싸고 있는 것을 볼 수 있습니다.</string>
+
+    <!-- STRINGS OF Zombie CLASS -->
+    <string name="Zombie_Name">좀비</string>
+    <string name="Zombie_Gender">남성</string>
+    <string name="Zombie_Name_Objective">좀비</string>
+    <string name="Zombie_Desc">던전은 위험한 장소이고 많은 모험가들이 이곳에서 죽었습니다. 가장 불운한 모험가들이 네크로폴리스에서 운명을 맞이하게 되었고, 그들은 이제 썩어가는 시체의 형태로 복도를 돌아다니는 운명을 맞이하게 되었습니다.</string>
+
+    <!-- Badges -->
+    <string name="Badges_Lich_Slain">리치 처치</string>
+
+</resources>

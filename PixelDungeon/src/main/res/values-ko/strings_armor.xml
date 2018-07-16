@@ -32,11 +32,11 @@
   <string name="HuntressArmor_Name">사냥꾼의 망토</string>
   <string name="HuntressArmor_Desc">이 망토를 착용한 사냥꾼은 귀검 부채를 만들어낼 수 있다.각 칼날 하나마다 시야에 들어온 적 하나씩을 노리고, 착용중인 근접 무기의 공격력에 따라 피해를 준다.</string>
   <string name="HuntressArmor_ACSpecial">귀검</string>
-  <string name="HuntressArmor_NoEnemies">시야 내에 적 없음</string>
+  <string name="HuntressArmor_NoEnemies">시야 내에 적이 없다.</string>
   <string name="HuntressArmor_NotHuntress">이 갑옷은 사냥꾼만 착용 가능하다.</string>
   <!--STRINGS OF LeatherArmor CLASS-->
   <string name="LeatherArmor_Name">가죽 갑옷</string>
-  <string name="LeatherArmor_Desc">무두질한 몬스터 가죽으로 만든 갑옷. 천 갑옷만큼 가볍지는 않지만 더 나은 방어력을 제공한다.</string>
+  <string name="LeatherArmor_Desc">무두질한 몬스터의 가죽으로 만든 갑옷. 천 갑옷만큼 가볍지는 않지만 더 나은 방어력을 제공한다.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">마법사의 로브</string>
   <string name="MageArmor_Desc">이 멋진 로브를 입고있는 마법사는 용암 분출 주문을 사용할 수 있다; 시야의 모든 적에 불을 붙이고 움직일 수 없게 한다.</string>
