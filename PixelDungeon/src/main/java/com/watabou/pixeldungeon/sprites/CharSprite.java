@@ -23,6 +23,7 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
 import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
@@ -490,7 +491,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void selectKind(int i) {
     }
 
-    public CompositeTextureImage avatar() {
+    public Image avatar() {
         CompositeTextureImage avatar = new CompositeTextureImage(texture);
         avatar.frame(idle.frames[0]);
         avatar.addLayer(texture);

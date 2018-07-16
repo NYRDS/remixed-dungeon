@@ -57,7 +57,9 @@ public class KindOfWeapon extends EquipableItem {
 			activate( hero );
 			
 			QuickSlot.refresh();
-			
+
+			hero.updateLook();
+
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
@@ -79,6 +81,7 @@ public class KindOfWeapon extends EquipableItem {
 		if (super.doUnequip( hero, collect, single )) {
 			
 			hero.belongings.weapon = null;
+			hero.updateLook();
 			return true;
 			
 		} else {
@@ -105,5 +108,8 @@ public class KindOfWeapon extends EquipableItem {
 	
 	public void proc( Char attacker, Char defender, int damage ) {
 	}
-	
+
+	public String getVisualName() {
+		return getClassName();
+	}
 }

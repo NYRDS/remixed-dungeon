@@ -4,13 +4,14 @@ import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.CompositeTextureImage;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -19,6 +20,7 @@ import com.watabou.utils.Callback;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +31,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
 	private static final String HERO_EMPTY_PNG = "hero/empty.png";
-	private CompositeTextureImage avatar;
+	private Image avatar;
 
 	// body goes as main texture
 	private static final String LAYER_ARMOR       = "armor";
@@ -45,8 +47,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_LEFT_HAND   = "left_hand";
 	private static final String LAYER_RIGHT_HAND  = "right_hand";
 
-	private static final String LAYER_LEFT_ARMOR   = "left_hand_armor";
-	private static final String LAYER_RIGHT_ARMOR  = "right_hand_armor";
+	private static final String LAYER_LEFT_ARMOR  = "left_hand_armor";
+	private static final String LAYER_RIGHT_ARMOR = "right_hand_armor";
 
 	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
@@ -125,7 +127,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 
 		if (accessory  == null){
-			if(hero.belongings.armor  != null && hero.belongings.armor.isHasHelmet()){
+			if(hero.belongings.armor  != null && hero.belongings.armor.hasHelmet()){
 				helmetDescriptor = helmetDescriptor(hero.belongings.armor, hero);
 				if(hero.belongings.armor.isCoveringHair()){
 					drawHair = false;
@@ -141,7 +143,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
 
-		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
+		String bodyType = bodyDescriptor(hero);
+
+		layersDesc.put(LAYER_BODY, "hero/body/"+bodyType+".png" );
 		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.belongings.armor, hero));
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
@@ -149,16 +153,16 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-		layersDesc.put(LAYER_LEFT_ARMOR,  "hero/weapons/left_hand_armor.png");
-		layersDesc.put(LAYER_RIGHT_ARMOR, "hero/weapons/right_hand_armor.png");
-
-		layersDesc.put(LAYER_LEFT_HAND,  "hero/weapons/left_hand.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero/weapons/right_hand.png");
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_right.png");
 
 
-		layersDesc.put(LAYER_LEFT_ITEM,  "hero/weapons/left_hand_item.png");
-		layersDesc.put(LAYER_RIGHT_ITEM, "hero/weapons/right_hand_item.png");
+		layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor, "left"));
+		layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor, "right"));
 
+
+		layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.weapon,"left"));
+		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon,"right"));
 
 
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
@@ -167,14 +171,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private void createStatueSprite(Armor armor) {
 		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
-		layersDesc.put(LAYER_COLLAR,      HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
-		layersDesc.put(LAYER_HAIR,        HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
-		layersDesc.put(LAYER_FACIAL_HAIR, HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_HELMET,      HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_DEATH,       "hero/death/statue.png");
-		layersDesc.put(LAYER_ACCESSORY,   HERO_EMPTY_PNG);
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -185,12 +184,14 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public String[] getLayersDesc() {
-		String [] ret = new String[layersOrder.length];
-		for(int i = 0;i<layersOrder.length;++i){
-			ret[i] = layersDesc.get(layersOrder[i]);
+		ArrayList<String> ret= new ArrayList<>();
+		for (String aLayersOrder : layersOrder) {
+			if (layersDesc.containsKey(aLayersOrder)) {
+				ret.add(layersDesc.get(aLayersOrder));
+			}
 		}
 
-		return ret;
+		return ret.toArray(new String[ret.size()]);
 	}
 
 	private void applyLayersDesc(String[] lookDesc) {
@@ -204,12 +205,26 @@ public class HeroSpriteDef extends MobSpriteDef {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/armor/"+armor.getClass().getSimpleName()+".png";
+		return "hero/armor/"+armor.getVisualName()+".png";
+	}
+
+	private String armorHandDescriptor(Armor armor, String hand) {
+		if(armor==null) {
+			return HERO_EMPTY_PNG;
+		}
+		return "hero/armor/hands/"+armor.getVisualName()+"_"+hand+".png";
+	}
+
+	private String itemHandDescriptor(KindOfWeapon item, String hand) {
+		if(item==null) {
+			return HERO_EMPTY_PNG;
+		}
+		return "hero/items/"+item.getVisualName()+"_"+hand+".png";
 	}
 
 	private String helmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.isHasHelmet()){
+			if(hero.belongings.armor.hasHelmet()){
 				return "hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
 			}
 		}
@@ -218,7 +233,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private String collarDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.isHasCollar()){
+			if(hero.belongings.armor.hasCollar()){
 				return "hero/armor/collar/"+armor.getClass().getSimpleName()+".png";
 			}
 		}
@@ -244,7 +259,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 			descriptor = "gnoll";
 		}
 
-		return "hero/body/"+descriptor+".png";
+		return descriptor;
 	}
 
 	@Override
@@ -306,23 +321,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	@Override
-	public CompositeTextureImage avatar() {
+	public Image avatar() {
+
 		if(avatar==null) {
-			avatar = new CompositeTextureImage(texture);
+			avatar = snapshot(0);
 			avatar.frame(idle.frames[0]);
 		}
-
-		avatar.clearLayers();
-
-
-		avatar.addLayer(getLayerTexture(LAYER_BODY));
-		avatar.addLayer(getLayerTexture(LAYER_HEAD));
-		avatar.addLayer(getLayerTexture(LAYER_HAIR));
-		avatar.addLayer(getLayerTexture(LAYER_ARMOR));
-		avatar.addLayer(getLayerTexture(LAYER_FACIAL_HAIR));
-		avatar.addLayer(getLayerTexture(LAYER_HELMET));
-		avatar.addLayer(getLayerTexture(LAYER_DEATH));
-		avatar.addLayer(getLayerTexture(LAYER_ACCESSORY));
 
 		return avatar;
 	}

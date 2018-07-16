@@ -13,7 +13,6 @@ public class CompositeMovieClip extends MovieClip {
 
 	private class LayerDesc {
 		String id;
-		boolean enabled = true;
 		Texture texture;
 
 		LayerDesc(String _id, Texture _tex) {
@@ -43,15 +42,6 @@ public class CompositeMovieClip extends MovieClip {
 		mLayers.add(layerDesc);
 	}
 
-	public void setLayerTexture(String id, Texture img) {
-		if (mLayers != null) {
-			for (LayerDesc layer : mLayers) {
-				if (layer.id.equals(id)) {
-					layer.texture = img;
-				}
-			}
-		}
-	}
 
 	protected Texture getLayerTexture(String id) {
 		if(mLayers!=null) {
@@ -64,14 +54,15 @@ public class CompositeMovieClip extends MovieClip {
 		return null;
 	}
 
-	public void setLayerState(String id, boolean state) {
-		if (mLayers != null) {
-			for (LayerDesc layer : mLayers) {
-				if (layer.id.equals(id)) {
-					layer.enabled = state;
-				}
-			}
+	public Image snapshot(int frame) {
+		CompositeTextureImage img = new CompositeTextureImage(texture);
+		img.clearLayers();
+
+		for (LayerDesc layer : mLayers) {
+			img.addLayer(layer.texture);
 		}
+
+		return img;
 	}
 
 	@Override
@@ -82,10 +73,8 @@ public class CompositeMovieClip extends MovieClip {
 			NoosaScript script = NoosaScript.get();
 
 			for (LayerDesc layer : mLayers) {
-				if (layer.enabled) {
 					layer.texture.bind();
 					script.drawQuad(verticesBuffer);
-				}
 			}
 		}
 	}
