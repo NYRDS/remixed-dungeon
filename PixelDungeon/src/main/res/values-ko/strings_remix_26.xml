@@ -3,7 +3,7 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
     <string name="SantaHat_Name">산타모자</string>
-    <string name="SantaHat_Info">심연의 왕 산타클로스의 붉은 실크 모자만큼 강렬한 인상의 모자도 더 없을 겁니다.</string>
+    <string name="SantaHat_Info">아무도 감히 던전마스가 심연의 군주 산타의 붉은 모자같다고 하지 않을 것입니다.</string>
 
     <!-- STRINGS OF Rudolph CLASS -->
     <string name="Rudolph_Name">루돌프 사슴코와 사슴뿔</string>
@@ -20,6 +20,7 @@
     <string name="KoboldIcemancer_Name">코볼트 빙술사</string>
     <string name="KoboldIcemancer_Gender">남성</string>
     <string name="KoboldIcemancer_Name_Objective">코볼트 빙술사</string>
+    <string name="KoboldIcemancer_Desc">코볼트 빙술사들은 그들의 사회의 엘리트층입니다. 전사와, 마법사, 그리고 가장 중요한 과학자들이지요.고대 빙술사들은 얼음의 형태를 만드는 정교한 기계장치로 얼음을 만들고 그것들을 마법으로 강화시키는 데에 통달하였습니다.</string>
     <string name="KoboldIcemancer_Killed">1%s가 아이스 볼트로 당신을 죽였습니다.</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
@@ -51,7 +52,17 @@
     <string name="CagedKobold_Gender">남성</string>
     <string name="CagedKobold_Name_Objective">감금된 코볼트</string>
     <string name="CagedKobold_Desc">철장 안의 코볼트</string>
+    <string name="CagedKobold_Intro">거기..거기! 너 모험가지?  나를 이곳에서 나갈 수 있게 도와줘, 잔혹한 군국주의자들이 나를 여기 가뒀어. 그들은 고대의 병기를 다시 작동시켜서 저 위의 사람들을 정복하려고 해! 나는 그 계획이 위험하다고 생각해서 대립했고, 그들은 의회에서 나를 쫓아냈고 이 감옥에 가뒀어. 이 감옥의 열쇠를 찾아준다면, 나는 최대한 너를 도와줄게.</string>
+    <string name="CagedKobold_Quest_End">아, 고마워, 정말 고마워! 어떻게 열쇠를 찾았어? 무..무기를 부셨다고? 굉장해! 너도 알다시피 나는 너를 도와준다고 했기 때문에 나는 너를 도울 최고의 방법을 알아. 너와 잠시 동행할게.*감금된 코볼트가 양초로 변했다.</string>
     <string name="CagedKobold_Message1">제발...</string>
+    <string name="CagedKobold_Message2">친구야, 날 도와서 여기서 나오게 해줘.</string>
+    <string name="CagedKobold_Message3">난 이 감옥의 모든 것이 싫어.</string>
+
+    <string name="Journal_Caged_Kobold">감금된 코볼트</string>
+
+    <!-- Levels descriptions -->
+    <!-- STRINGS OF IceCavesLevel CLASS -->
+    <string name="IceCaves_TileDescDeco">이 놀은 살아있는 채로 얼려졌고, 아마도 저기 오랫동안 있었을 것이다.</string>
     <string name="IceCaves_TileHighGrass">얼고 높게 자란 풀</string>
     <string name="IceCaves_TileGrass">얼은 풀</string>
     <string name="IceCaves_TileDescHighGrass">얼은 초목이 시야를 가린다.</string>

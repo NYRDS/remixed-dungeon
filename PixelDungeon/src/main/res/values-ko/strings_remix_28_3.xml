@@ -1,3 +1,41 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <string name="DarkSacrifice_Name">어둠의 희생</string>
+    <string name="DarkSacrifice_Info">충성스러운 하수인을 희생해 폭발을 일으킵니다. 폭발의 범위는 하수인의 남은 체력과 당신의 기술 레벨에 달려 있습니다.</string>
+    <string name="DarkSacrifice_Ok">내 삶은 당신의 것입니다!</string>
+    <string name="DarkSacrifice_Self">재앙을 위해!</string>
+    <string name="DarkSacrifice_Resist">넌 나를 지배할 힘이 없어!</string>
+    <string name="DarkSacrifice_Hint">희생시킬 당신의 충성스러운 하수인을 선택하세요.</string>
+
+    <string name="Exhumation_Name">발굴</string>
+    <string name="Exhumation_Info">무덤을 도굴하는 행동은 그 자체로 사악하지만, 죽음을 다루는 사람에게 있어서는 충분하지 않을 것입니다. 이 어둠의 의식을 치루는 사람은 높은 확률로(또한 시전자의 숙련도와 함께 증가할 것입니다) 안식하던 자의 불쌍한 영혼을 지배할 것입니다.</string>
+    <string name="Exhumation_NoGrave">도굴할 무덤이 없습니다.</string>
+    <string name="Exhumation_Ok">당신을 따르겠습니다.</string>
+
+    <string name="RaiseDead_Name">강령술</string>
+    <string name="RaiseDead_Info">가장 마지막에 죽은(의식은 비교적 신선한 시체를 요구합니다) 생명체를 일으킵니다.
+이 어두운 의식을 치룰 때 기억하실 것이 있습니다: 거의 모든 생물체들을 일으킬 수 있으나, 모두의 의지를 꺾을 수는 없습니다.</string>
+    <string name="RaiseDead_NoSpace">빈 공간이 없었기 때문에 강령술에 실패했습니다.</string>
+    <string name="RaiseDead_NoKill">당신은 일으키기 전에 누군가를 죽여야 합니다.</string>
+
+    <string name="RawFish_Name">날 생선</string>
+    <string name="RawFish_Info">날 생선, 위험을 부담하고 먹으세요!</string>
+    <string name="RawFish_Taste">비릿합니다!</string>
+
+    <string name="FrozenFish_Name">냉동 생선</string>
+    <string name="FrozenFish_Info">냉동 생선,살아있는 것 같지만, 얼었습니다.</string>
+
+    <string name="FriedFish_Name">구운 생선</string>
+    <string name="FriedFish_Info">구운 생선입니다. 맛있어 보입니다.</string>
+    <string name="FriedFish_Taste">맛있군요!</string>
+
+    <string name="RottenFish_Name">썩은 생선</string>
+    <string name="RottenFish_Info">썩은 생선입니다. 끔찍한 냄새가 납니다.</string>
+    <string name="RottenFish_Taste">역겹군요!</string>
+
+    <string name="gdpr_title">광고 맞춤 설정</string>
+    <string name="gdpr_text">Remixed Dungeon은 당신의 광고 경험을 Admob와 Appodeal(광고 제공자)를 사용해서 개인 맞춤을 할 수 있습니다. 광고 제공자와 그들의 파트너는 당신에게 관련된 기기 정보나 통계, 그리고 흥미 데이터를 수집하고 사용할 것입니다. 개선된 광고 경험에 동의하신다면, 당신은 광고 제공자와 파트너가 믿는 당신에게 더 관련된 광고들을 보게 해 줄 수 있을 것입니다. 동의함으로서, 당신은 16세 이상이며 개인 맞춤된 광고를 원한다는 것을 확인하는 것입니다.\n\n</string>
+    <string name="gdpr_agree">네, 동의합니다.</string>
+    <string name="gdpr_disagree">아니요, 괜찮습니다.</string>
+    <string name="gdpr_choose">선택해 주세요.</string>
+</resources>

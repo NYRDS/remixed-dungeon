@@ -20,6 +20,7 @@
   <string name="Nightmare_Name">악몽</string>
   <string name="Nightmare_Gender">남성</string>
   <string name="Nightmare_Name_Objective">악몽</string>
+  <string name="Nightmare_Desc">경련하는 살점 촉수로 이루어진 기괴한 생명체입니다. 이 악몽들은 고대신의 불길한 계획의 확실한 징후입니다.</string>
   <!--STRINGS OF TENGU CLASS-->
   <string name="Tengu_Info3">잡았다, %s!</string>
   <!--STRINGS OF ZombieGnoll CLASS-->
@@ -46,6 +47,7 @@
   <string name="YogsHeart_Name">요그의 심장</string>
   <string name="YogsHeart_Gender">남성</string>
   <string name="YogsHeart_Name_Objective">요그의 심장</string>
+  <string name="YogsHeart_Desc">수세기동안 사람들은 정말 심장이 없다고 해도 될 정도로 무정한 생물체들만이 순수한 악행을  저지를수 있다고 믿었습니다. 그리고 아직까지 여기에는 크게 박동하는 고대신의 심장이 있습니다.</string>
   <!--STRINGS OF YogsTeeth CLASS-->
   <string name="YogsTeeth_Name">요그의 이빨</string>
   <string name="YogsTeeth_Gender">남성</string>

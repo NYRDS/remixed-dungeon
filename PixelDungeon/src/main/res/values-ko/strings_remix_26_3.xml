@@ -7,9 +7,76 @@
 
     <!-- STRINGS OF RatHide CLASS -->
     <string name="RatHide_Name">쥐 가죽</string>
+    <string name="RatHide_Info">작고 불길한 살점과 털의 작은 조각이다. 누군가에게 쓸 방법이 있을까?</string>
+
     <!-- STRINGS OF RatArmor CLASS -->
     <string name="RatArmor_Name">쥐 가죽 갑옷</string>
     <string name="RatArmor_Info">쥐의 가죽으로 만들어진 갑옷이다. 아마 병에 걸릴 염려는 안해도 될 것이다.</string>
 
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">역병 의사</string>
+    <string name="PlagueDoctorNPC_Gender">남성</string>
+    <string name="PlagueDoctorNPC_Name_Objective">역병 의사</string>
+    <string name="PlagueDoctorNPC_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">하! 믿을수 있겠어?! 저 멍청이들은 아직도 이 빌어먹을 하수구가 얼마나 위험한지 깨닫지 못하고 있어! 모험가들과 경비원들이 마을을 어떤 것이든 막아낼 수 있다고 믿나 봐. 하! 역병이 퍼지는 것을 막을 무기는 없어. 하지만 나는 증거가 필요해. 나를 도와줄수 있겠어? 내가 추가적인 실험을 할 수 있게 %d개의 쥐 가죽을 가져와 줘.
+</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">하! 믿을수 있겠어?! 저 멍청이들은 아직도 이 빌어먹을 하수구가 얼마나 위험한지 깨닫지 못하고 있어! 모험가들과 경비원들이 마을을 어떤 것이든 막아낼 수 있다고 믿나 봐. 하! 역병이 퍼지는 것을 막을 무기는 없어. 하지만 나는 증거가 필요해. 나를 도와줄수 있겠어? 내가 추가적인 실험을 할 수 있게 %d 개의 쥐 가죽을 가져와 줘.
+</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">나한테 쥐가죽 %d개만 가져다 줘.</string>
-    </resources>
+    <string name="PlagueDoctorNPC_Quest_End">아, 고마워. 나는 저것들이 역병의 증거를 가졌다면 좋겠어. 예전 표본들은 완벽히 무해하다고 밝혀졌기 때문에 나는 새 표본들을 기다릴 동안 너를 위해 이걸 만들었어.</string>
+    <string name="PlagueDoctorNPC_After_Quest">그들에게 보여주겠어, 그들에게 모두 보여주겠어!</string>
+    <string name="Journal_PlagueDoctorNPC">역병 의사</string>
+
+    <!-- STRINGS OF TownsfolkMovieNPC CLASS -->
+    <string name="TownsfolkMovieNPC_Name">주민</string>
+    <string name="TownsfolkMovieNPC_Gender">남성</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">주민</string>
+    <string name="TownsfolkMovieNPC_Desc">현지인들 중 한명입니다. 확실히 일반인이라고는 해도, 옷들은 비싸 보입니다.</string>
+    <string name="TownsfolkMovieNPC_Message">당신은 영화관이 제공하는 특별한 서비스를 아세요? 그들이 인터넷이라는 대단한 물건을 요구해서 나는 들어보지도 못했어요.</string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Name">사서</string>
+    <string name="LibrarianNPC_Gender">남성</string>
+    <string name="LibrarianNPC_Name_Objective">사서</string>
+    <string name="LibrarianNPC_Desc">매우 수줍은 사람으로, 어색한 스웨터와 매우 두꺼운 안경을 쓰고 있다.</string>
+    <string name="LibrarianNPC_Message_Not_Ready">미...미안해요.. 도서관은 아직 개방되지 않았어요..</string>
+
+
+    <!-- STRINGS OF TownsfolkSilentNPC CLASS -->
+    <string name="TownsfolkSilentNPC_Name">시민</string>
+    <string name="TownsfolkSilentNPC_Gender">남성</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">시민</string>
+    <string name="TownsfolkSilentNPC_Desc">현지인들 중 한명입니다. 확실히 일반인이라고는 해도, 옷들은 비싸 보입니다.</string>
+    <string name="TownsfolkSilentNPC_Message1">음!</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">음...</string>
+
+    <!-- STRINGS OF ServiceManNotReadyNPC CLASS -->
+    <string name="ServiceManNotReadyNPC_Message">미안해요!이 건물은 아직 준비되지 않았어요!</string>
+
+    <!-- STRINGS OF BellaNPC CLASS -->
+    <string name="BellaNPC_Name">벨라</string>
+    <string name="BellaNPC_Gender">여성</string>
+    <string name="BellaNPC_Name_Objective">벨라</string>
+    <string name="BellaNPC_Desc">우아하게 생긴 소녀로, 그녀의 생김새는 모두에게 좋다고 말해 줍니다.</string>
+    <string name="BellaNPC_Message">난 너같은 하찮은 사람들에게는 관심이 없어!</string>
+    <string name="BellaNPC_Amulet_M">안녕 거기 잘생긴 분! 거기서 뭐해? 정말 멋진 목걸이네! 그리고 넌... 넌 저 서민들을 능가하는것 같아. 잠깐 산책하면서 우리의 미래에 대해 함께 이야기해보는게 어떨까?</string>
+    <string name="BellaNPC_Amulet_F">안녕 거기 귀염둥이! 거기서 뭐해? 정말 멋진 목걸이네! 그리고 너는.. 너는 다른 사람들보다 더 빛나는것 같아. 잠깐 산책하면서 우리의 미래에 대해 함께 이야기해보는게 어떨까?</string>
+    <string name="BellaNPC_Angry">감히 너가... 이 서민 같으니!</string>
+    <string name="BellaNPC_Yes_End_Game">물론이죠(게임 끝내기)</string>
+    <string name="BellaNPC_No">아니, 너랑 함께하지는 않을 거야.</string>
+
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndMovieTheatre CLASS -->
+    <string name="ServiceManNPC_NoConnection">죄송합니다만 당신은 우리의 서비스를 지금 이용하실수 없습니다.(인터넷 연결이 필요합니다.) </string>
+
+    <!-- Custom tiles descriptions -->
+    <!-- STRINGS OF Town -->
+    <string name="town_deco_common_door_name">문</string>
+    <string name="town_deco_common_door_desc">매너있는 모험가들은 절대 개인 사생활을 허락 없이 침해해서는 안됩니다.</string>
+
+    <string name="town_deco_dungeon_door_name">입구</string>
+    <string name="town_deco_dungeon_door_desc">던전의 입구</string>
+
+</resources>

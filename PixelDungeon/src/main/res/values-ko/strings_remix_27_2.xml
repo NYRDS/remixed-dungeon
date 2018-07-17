@@ -3,12 +3,18 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF ChaosHelmet CLASS -->
     <string name="ChaosHelmet_Name">혼돈 투구</string>
-    <string name="ChaosHelmet_Info">붉은 피의 투구. 혼돈의 전사의 상징입니다.</string>
+    <string name="ChaosHelmet_Info"> 혼돈의 전사의 상징인 혈적색 투구입니다.</string>
 
 
+    <!-- Spells descriptions -->
+    <string name="Spells_SummonLimitReached">%1$s: 소환 최대량에 다다랐습니다(현재 최대량: %2$d)!</string>
     <string name="Mana_Title">마나</string>
     <string name="Mana_Cost">마나 소모:</string>
     <string name="Spells_NotEnoughSP">\"%1$s\" 주문을 사용할 마나가 없습니다.</string>
+
+    <!-- STRINGS OF SummonDeathling CLASS -->
+    <string name="SummonDeathling_Name">데슬링 소환</string>
+    <string name="SummonDeathling_Info">언데드 동료를 소환합니다. 데슬링의 체력과 피해량은 영웅 레벨에 따라 성장합니다. \n\n 소환 최대량: %1$d ( 매 마법 레벨마다 +1)</string>
 
     <!-- STRINGS OF Ignite CLASS -->
     <string name="Ignite_Name">점화</string>
@@ -48,4 +54,24 @@
 
     <!-- STRINGS OF SpellBook CLASS -->
     <string name="SpellBook_Name">마법서</string>
-    </resources>
+    <string name="SpellBook_Info">이건 책보다는 편집본으로 보입니다. 당신이 이것에게 충분히 집중한다면 무언가 해낼 수 있을 것 같습니다. </string>
+    <string name="SpellBook_Info_Identified">저 페이지들을 통해 당신은 \"%1$s\"마법의 주문을 발견하였습니다. \n \"%2$s\"</string>
+
+
+    <!-- STRINGS OF ManaPotion CLASS -->
+    <string name="ManaPotion_Name">마나 회복의 물약</string>
+    <string name="ManaPotion_Info">이 물약은 당신의 정신력을 회복시켜 줄 것입니다.</string>
+
+    <!-- STRINGS OF Mushroom CLASS -->
+    <string name="Mushroom_Eat_Message">저 버섯의 맛은 이상했습니다!</string>
+
+    <!-- STRINGS OF Torch CLASS -->
+    <string name="Torch_Info2">던전의 조명이 열악하다면  반드시 필요할 물건입니다.</string>
+
+    
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndHeroSpells CLASS -->
+    <string name="WndSpells_Title">주문들</string>
+    <string name="WndSpells_Level">마법 레벨:</string>
+
+</resources>

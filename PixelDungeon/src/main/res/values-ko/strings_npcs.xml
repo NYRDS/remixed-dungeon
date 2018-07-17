@@ -3,7 +3,7 @@
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
   <string name="Blacksmith_Name">트롤 대장장이</string>
-  <string name="Blacksmith_Desc">트롤 대장장이는 전형적인 트롤같이 생겼다. 큰 키에 여윈 몸을 가지고 있고, 피부는 색이든 질감이든 돌을 연상시킨다. 덩치에 어울리지 않는 작은 도구들을 가지고 땜질을 하고 있다.</string>
+  <string name="Blacksmith_Desc">트롤 대장장이는  키에 여윈 몸을 가지고 있고, 피부는 색이든 질감이든 돌을 연상시키는 일반적인 트롤같이 생겼다. 트롤 대장장이는 덩치에 어울리지 않는 작은 도구들을 가지고 땜질을 하고 있다.</string>
   <string name="Blacksmith_Gold1">이봐 인간! 쓸만해지고 싶나, 어? 이 곡괭이를 가져다가 이걸로 _어두운 금 원석_을 캐다 줘, _15개_ 면 충분하겠네. 보상은 뭐냐고? 이 탐욕스러운... \n알았어, 알았다고, 내가 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
   <string name="Blacksmith_Blood1">이봐 인간! 쓸만해지고 싶나, 어? 이 곡괭이를 가져다가 이걸로 _박쥐를 잡아서_ 박쥐 피를 묻혀와. 보상은 뭐냐고? 이 탐욕스러운... \n 알았어, 알았다고, 내가 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
   <string name="Blacksmith_Txt2">지금 장난해? 내 곡괭이 어디 갔어?!</string>

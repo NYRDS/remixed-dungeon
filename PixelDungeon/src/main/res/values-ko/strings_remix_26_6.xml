@@ -2,6 +2,6 @@
 <resources>
     <!-- Item descriptions -->
     <!-- STRINGS OF WandOfShadowbolt CLASS -->
-    <string name="WandOfShadowbolt_Name">그림자화살의 완드</string>
-    <string name="WandOfShadowbolt_Info">이 완드는 새카맣고 사악한 에너지를 내뿜고 있다.</string>
+    <string name="WandOfShadowbolt_Name">쉐도우 볼트의 마법봉</string>
+    <string name="WandOfShadowbolt_Info">이 마법봉은 검고 사악한 에너지를 내뿜고 있습니다.</string>
 </resources>

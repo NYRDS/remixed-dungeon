@@ -1,4 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <string name="HeroClass_Gnoll">놀</string>
+    <string name="GnollArmor_ACSpecial">지배</string>
+    <string name="GnollArmor_NotGnoll">놀들만이 놀 방어구를 착용할 수 있습니다!</string>
+
+    <string name="GnollArmor_Name">놀 대위의 정장</string>
+    <string name="GnollArmor_Info">놀 대위의 정장을 입는 자들은 극도로 화가 난 몬스터들을 왕관의 충성스러운 하수인으로 만드는 그들의 능력으로 유명하다.</string>
+
+    <string name="GnollTamahawk_Name">놀 토마호크</string>
+    <string name="GnollTamahawk_Info">놀 예술가들로부터 만들어진 전통 토마호크입니다. 각 부족마다 그들의 특별한 생김새를 가지고 있습니다. 이 토마호크는 인간들에 의해 만들어진 모조품들보다 살짝 가볍습니다.</string>
+    <string name="GnollTamahawk_Gender">남성</string>
+
+
+    <string name="WndPlayGames_BackupProgress">게임 진행 상태 백업하기</string>
+    <string name="WndPlayGames_RestoreProgress">게임 진행 상태 복구하기</string>
+    <string name="WndPlayGames_WorkInCloud">클라우드에서 진행 중입니다... 기다려 주세요.</string>
+    <string name="StartScene_UnlockGnoll">이 클래스를 해금하기 위해서는 당신은 마을 사제를 설득해 놀 정예병을 치료해야 합니다.</string>
+    <string name="WndPriest_Heal_Minions">당신의 하수인들을 모두 회복시키세요 - 단 %d 골드!</string>
+    <string name="Badges_GnollUnlocked">놀 잠금 해제됨</string>
+
+    <string-array name="HeroClass_GnollPerks">
+        <item>놀은 15의 힘으로 시작합니다.</item>
+        <item>놀은 5의 최대 체력을 가지고 시작합니다.</item>
+        <item>놀은 어떤 방어구도 가지지 않고 시작하지만 특별한 토마호크를 가지고 시작합니다.</item>
+        <item>놀은 읽거나 쓸 수 없습니다</item>
+        <item>놀들은 다른 놀들을 자극받기 전까지 공격하지 않습니다.</item>
+     </string-array>
+</resources>

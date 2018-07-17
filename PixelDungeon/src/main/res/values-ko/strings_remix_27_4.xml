@@ -1,4 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <string name="Item_Info2">무언가</string>
+
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">이 갑옷을 입는다면 강령술사는 \"네크로티즘\" 기술을 사용해 마법의 독을 뿌려서 근처의 모든 생물체에게 죽던 살던 강력한  영향을 끼칠 것입니다.</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">이 로브는 흑마법으로 가득 차 있어서 강령술사에게 쓰러진 몬스터들의 영혼을 흡수할 수 있게 해 줄 것입니다.</string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">네크로티즘</string>
+    <string name="Necrotism_ACSpecial">네크로티즘</string>
+    <string name="ResultDescriptions_Necrotism">%d층에서 네크로티즘에 의해 죽었습니다.</string>
+    <string name="Necrotism_Death">당신은 네크로티즘에 의해 사망하였습니다...</string>
+    <string name="Badges_DeathNecrotism">네크로티즘으로 인해 사망 </string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">대상 위치를 선택하세요.</string>
+    
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">레벨</string>
+    <string name="WndJournal_Logbook">로그책</string>
+
+</resources>

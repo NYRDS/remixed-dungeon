@@ -2,18 +2,18 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
-    <string name="TownGuardNPC_Name">마을 보초</string>
+    <string name="TownGuardNPC_Name">마을 경비병</string>
     <string name="TownGuardNPC_Gender">남성</string>
-    <string name="TownGuardNPC_Name_Objective">마을 보초</string>
-    <string name="TownGuardNPC_Desc">평범한 마을 보초다.</string>
-    <string name="TownGuardNPC_Message1">비켜.</string>
+    <string name="TownGuardNPC_Name_Objective">마을 경비병</string>
+    <string name="TownGuardNPC_Desc">평범한 마을 경비병입니다.</string>
+    <string name="TownGuardNPC_Message1">비켜주세요.</string>
     <string name="TownGuardNPC_Message2">당신같은 모험가들에게 감사합니다. 여기는 정말 평화로워 졌어요.</string>
-    <string name="TownGuardNPC_Message3">당신은 여기 너무 많은 경비병들이 있다고 생각하시나요? 여긴 몬스터들이 장악한 거대한 던전과 함께하는 마을이니까요. 안그래요?</string>
+    <string name="TownGuardNPC_Message3">당신은 마을에 너무 많은 경비병들이 있다고 생각하시나요? 여긴 몬스터들이 장악한 거대한 던전과 함께하는 유일한 마을이니까요. 그쵸?</string>
 
     <!-- STRINGS OF TownsfolkNPC CLASS -->
-    <string name="TownsfolkNPC_Name">마을 사람들</string>
+    <string name="TownsfolkNPC_Name">주민</string>
     <string name="TownsfolkNPC_Gender">남성</string>
-    <string name="TownsfolkNPC_Name_Objective">마을 사람들</string>
+    <string name="TownsfolkNPC_Name_Objective">주민</string>
     <string name="TownsfolkNPC_Desc">현지인들 중 한명입니다. 확실히 일반인이라고는 해도, 옷들은 비싸 보입니다.</string>
     <string name="TownsfolkNPC_Message1">아! 또다른 모험가네요, 사랑스러워라! 최대한 많은 가치있는 물건들을 가지세요!</string>
     <string name="TownsfolkNPC_Message2">마을이 던전 덕분에 부유해졌고, 마을의 모든 사람들이 만족할만한 곳이면 어디든지 갈 수 있게 되었기 때문에 이곳의 사람들은 지금 조금밖에 없어요.</string>

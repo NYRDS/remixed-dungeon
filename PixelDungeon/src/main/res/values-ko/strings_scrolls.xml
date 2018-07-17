@@ -2,10 +2,10 @@
 <resources>
   <!--PACKAGE /items/scrolls-->
   <!--STRINGS OF Scroll CLASS-->
-  <string name="Scroll_Name">\"%s\" 스크롤</string>
+  <string name="Scroll_Name">\"%s\" 두루마리</string>
   <string name="Scroll_Info">이 양피지는 판독할 수 없는 룬 문자 %s로 덮여있습니다. 누가 이것을 소리내어 읽을때 어떤 일이 일어날까요?</string>
   <string name="Scroll_ACRead">읽는다</string>
-  <string name="Scroll_Blinded">눈이 먼 상태에서 스크롤을 읽을 수 없다</string>
+  <string name="Scroll_Blinded">눈이 먼 상태에서는 두루마리를 읽을 수 없습니다.</string>
   <string-array name="Scroll_Runes">
     <item>카우난</item>
     <item>소윌로</item>
@@ -26,75 +26,74 @@
   </string-array>
   <!--STRINGS OF InventoryScroll CLASS-->
   <string name="InventoryScroll_Title">아이템을 선택하세요.</string>
-  <string name="InventoryScroll_Warning">정말 이 스크롤 사용을 취소 하시겠습니까? 그래도 스크롤은 소모됩니다.</string>
+  <string name="InventoryScroll_Warning">정말 이 두루마리의 사용을 취소 하시겠습니까? 그래도 두루마리는 소모될 것입니다.</string>
   <string name="InventoryScroll_Yes">응, 괜찮아.</string>
   <string name="InventoryScroll_No">아니, 생각을 바꿨어</string>
   <!--STRINGS OF BlankScroll CLASS-->
-  <string name="BlankScroll_Name">비어있는 스크롤</string>
-  <string name="BlankScroll_Info">그냥 비어있는 스크롤입니다. 아마 뭔가를 여기에 쓸 수 있지 않을까요?</string>
-  <string name="BlankScroll_ReallyBlank">이 스크롤은 비어있습니다.</string>
+  <string name="BlankScroll_Name">빈 두루마리</string>
+  <string name="BlankScroll_Info">그냥 비어있는 두루마리입니다. 아마 무언가를 여기에 적을 수 있지 않을까요?</string>
+  <string name="BlankScroll_ReallyBlank">이 두루마리는 비어있습니다.</string>
   <!--STRINGS OF ScrollOfChallenge CLASS-->
-  <string name="ScrollOfChallenge_Name">도전의 스크롤</string>
-  <string name="ScrollOfChallenge_Info">도전의 스크롤을 소리내어 읽을때, 모든 몬스터가 사용자의 위치로 모여들게 됩니다.</string>
-  <string name="ScrollOfChallenge_Info1">스크롤에서 던전 전체에 적들을 부르는 포효 발생!!</string>
+  <string name="ScrollOfChallenge_Name">도전의 두루마리</string>
+  <string name="ScrollOfChallenge_Info">도전의 두루마리를 소리내어 읽을때,이 두루마리는 모든 몬스터를 깨우고 모든 몬스터가 읽은 사람의 위치로 모여들게 만드는 함성을 지를 것입니다.</string>
+  <string name="ScrollOfChallenge_Info1">두루마리가 던전을  꿰뚫는 도전적인 표효를 방출했습니다!</string>
   <!--STRINGS OF ScrollOfIdentify CLASS-->
-  <string name="ScrollOfIdentify_Name">식별의 스크롤</string>
+  <string name="ScrollOfIdentify_Name">식별의 두루마리</string>
   <string name="ScrollOfIdentify_Info">영구적으로 아이템의 비밀을 보여줍니다.</string>
   <string name="ScrollOfIdentify_InvTitle">식별할 아이템을 선택하세요.</string>
   <string name="ScrollOfIdentify_Info1">이것은 %s 입니다.</string>
   <!--STRINGS OF ScrollOfLullaby CLASS-->
-  <string name="ScrollOfLullaby_Name">자장가의 스크롤</string>
+  <string name="ScrollOfLullaby_Name">자장가의 두루마리</string>
   <string name="ScrollOfLullaby_Info">이 부드러운 멜로디는 시야안에 있는 모든 생물에게 깊은 잠에 빠지게 합니다. 당신은 도망가거나 이들에게 기습공격를 가할 수 있습니다.</string>
-  <string name="ScrollOfLullaby_Info1">스크롤에서 부드러운 멜로디가 흘러나옵니다.</string>
-  <string name="ScrollOfLullaby_Info2">스크롤에서 부드러운 멜로디가 흘러나와 %s 이/가 깊은 잠에 빠졌습니다!!</string>
-  <string name="ScrollOfLullaby_Info3">스크롤에서 부드러운 멜로디가 흘러나와 몬스터들이 깊은 잠에 빠졌습니다!!</string>
+  <string name="ScrollOfLullaby_Info1">두루마리에서 부드러운 멜로디가 흘러나옵니다.</string>
+  <string name="ScrollOfLullaby_Info2">두루마리가  %s 에게  잠이 오게 하는 부드러운 멜로디를 들려주었습니다!</string>
+  <string name="ScrollOfLullaby_Info3">두루마리에서 부드러운 멜로디가 흘러나와 몬스터들이 깊은 잠에 빠졌습니다!!</string>
   <!--STRINGS OF ScrollOfMagicMapping CLASS-->
-  <string name="ScrollOfMagicMapping_Name">마법 지도 스크롤</string>
-  <string name="ScrollOfMagicMapping_Info">이 스크롤을 읽는 순간 현재층의 모든 구역이 기억됩니다. 그래도 아이템과 몬스터의 위치는 알수 없습니다.</string>
+  <string name="ScrollOfMagicMapping_Name">마법 지도의 두루마리</string>
+  <string name="ScrollOfMagicMapping_Info">이 두루마리를 읽는 순간 이 층의 배치도의 수정만큼 깔끔한 모습이 기억 속에 각인되어 모든 숨겨진 비밀들을 알려줄 것입니다. 물건과 생명체들의 위치는 여전히 불명으로 남을 것입니다.</string>
   <string name="ScrollOfMagicMapping_Layout">이제 현재층의 모든 지형을 파악했습니다.</string>
   <!--STRINGS OF ScrollOfMirrorImage CLASS-->
-  <string name="ScrollOfMirrorImage_Name">환영의 스크롤</string>
-  <string name="ScrollOfMirrorImage_Info">이 스크롤의 주문은 주문자의 쌍둥이 환영을 만들어 적들을 쫓아갑니다.</string>
+  <string name="ScrollOfMirrorImage_Name">거울상의 두루마리</string>
+  <string name="ScrollOfMirrorImage_Info">이 두루마리에 걸려진 마법은 두루마리를 읽은 자의 적들을 추적할 쌍둥이들을 만들어낼 것입니다.</string>
   <!--STRINGS OF ScrollOfPsionicBlast CLASS-->
-  <string name="ScrollOfPsionicBlast_Name">사이오닉 폭발의 스크롤</string>
-  <string name="ScrollOfPsionicBlast_Info">이 스크롤은 시야내의 모든 생물에 엄청난 피해를 입힐 수 있는 파괴 에너지를 포함하고 있습니다. 빛을 동반한 섬광이 일시적으로 시전자를 포함하여 범위안의 모든 생물의 눈을 멀게 합니다.</string>
+  <string name="ScrollOfPsionicBlast_Name">정신 폭발의 두루마리</string>
+  <string name="ScrollOfPsionicBlast_Info">이 두루마리는 시야에 보이는 모든 생물체에게 강력한 정신적인 피해를 가하는 파괴적인 힘을 포함하고 있습니다.  이 과정에서 동반되는 빛은 일시적으로 두루마리를 읽은 사람을 포함한 모두의 시야를 멀게 만들 것입니다.</string>
   <!--STRINGS OF ScrollOfRecharging CLASS-->
-  <string name="ScrollOfRecharging_Name">충전의 스크롤</string>
-  <string name="ScrollOfRecharging_Info">이 스크롤에 바인딩된 원시마법의 힘은 발동할때 시전자의 모든 완드의 충전량을 가득 채웁니다.</string>
+  <string name="ScrollOfRecharging_Name">재충전의 두루마리</string>
+  <string name="ScrollOfRecharging_Info">이 가공되지 않은 마법의 힘이 봉인된 양피지는 해방되었을 때 두루마리를 읽은 사람의 마법봉을 모두 최대로 충전시켜 줄 것입니다.</string>
   <string name="ScrollOfRecharging_Info1a">가방에서 에너지가 급증하며 당신의 완드가 충전되었습니다.</string>
   <string name="ScrollOfRecharging_Info1b">가방에서 에너지가 급증하며 당신의 완드들이 충전되었습니다.</string>
   <string name="ScrollOfRecharging_Info2">가방에서 에너지가 급증하였지만 아무일도 일어나지 않았습니다.</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
-  <string name="ScrollOfRemoveCurse_Name">저주제거 스크롤</string>
-  <string name="ScrollOfRemoveCurse_Info">이 스크롤을 발동하는 즉시 시전자의 무기,갑옷,반지에서 해가되는 저주들을 제거합니다.</string>
+  <string name="ScrollOfRemoveCurse_Name">저주제거의 두루마리</string>
+  <string name="ScrollOfRemoveCurse_Info"> 이 두루마리에 걸린 마법은 즉시 읽은 자의 무기와 방어구, 그리고 반지와 가지고 있는 모든 물건들을 해제하는 것을 막는 사악한 마법을 해제해 줄 것입니다.</string>
   <string name="ScrollOfRemoveCurse_Proced">가방에서 정화의 빛이 빛나며 악의 에너지가 분산되고 있습니다.</string>
   <string name="ScrollOfRemoveCurse_NoProced">가방에서 정화의 빛이 빛났지만 아무일도 일어나지 않았습니다.</string>
   <!--STRINGS OF ScrollOfTeleportation CLASS-->
-  <string name="ScrollOfTeleportation_Name">순간이동의 스크롤</string>
-  <string name="ScrollOfTeleportation_Info">이 스크롤을 발동하면 즉시 시전자를 같은층의 임의의 장소로 이동시킵니다. 이것은 위험한 상황을 탈출하는데 사용할 수도 있지만 시전자를 더 위험한 장소로 이동시킬 수도 있습니다.</string>
+  <string name="ScrollOfTeleportation_Name">순간이동의 두루마리</string>
+  <string name="ScrollOfTeleportation_Info">이 두루마리에 적힌 마법은 시전자를 즉시 같은층의 무작위 장소로 이동시켜 줄 것입니다. 이것은 위험한 상황에서 탈출하는데 사용할 수도 있지만 불운한 경우에는 시전자를 더 위험한 장소로 이동시킬 수도 있습니다.</string>
   <string name="ScrollOfTeleportation_Teleport">순식간에 다른장소로 순간이동 했습니다.</string>
   <string name="ScrollOfTeleportation_NoTeleport">이곳의 강력한 마법장이 순간이동을 못하게 막고 있습니다!</string>
   <!--STRINGS OF ScrollOfTerror CLASS-->
-  <string name="ScrollOfTerror_Name">공포의 스크롤</string>
+  <string name="ScrollOfTerror_Name">공포의 두루마리</string>
   <string name="ScrollOfTerror_Info">붉은 빛의 플래시의 공포가 시야의 모든 생물을 압도하며 모두 도망칩니다. 달아나는 적을 공격하면 공포효과가 풀립니다.</string>
-  <string name="ScrollOfTerror_Info1">스크롤에서 붉은 빛의 화려한 플래쉬가 터져나옵니다.</string>
-  <string name="ScrollOfTerror_Info2">스크롤에서 붉은 빛의 화려한 플래시가 터져나오고, %s 이/가 달아납니다!</string>
-  <string name="ScrollOfTerror_Info3">스크롤에서 붉은 빛의 화려한 플래시가 터져나오고, 몬스터가 달아납니다!</string>
+  <string name="ScrollOfTerror_Info1">두루마리가 붉은 빛을 밝게 방출하였습니다.</string>
+  <string name="ScrollOfTerror_Info2">스크롤에서 붉은 빛을 밝게 방출하였고 %s이/가 달아납니다!</string>
+  <string name="ScrollOfTerror_Info3">스크롤에서 붉은 빛을 밝게 방출하였고, 몬스터들이 달아납니다!</string>
   <!--STRINGS OF ScrollOfUpgrade CLASS-->
-  <string name="ScrollOfUpgrade_Name">업그레이드 스크롤</string>
-  <string name="ScrollOfUpgrade_Info">이 스크롤은 한가지 아이템을 업그레이드 합니다. 완드는 사용횟수가 증가하며, 무기는 데미지가 증가하고, 갑옷은 막을수 있는 데미지의 량이 증가 합니다. 그리고 링은 효과가 강화되고, 무기와 갑옷을 사용하는데 드는 힘의 요구량이 적어지며 아이템의 저주는 해제 됩니다.</string>
+  <string name="ScrollOfUpgrade_Name">강화의 두루마리</string>
+  <string name="ScrollOfUpgrade_Info">이 두루마리는 한가지 물건을 강화하여 물건의 질을 상승시켜 줄 것입니다. 마법봉은 충전량이 증가할 것이며, 무기는 피해량이 증가할 것이고, 갑옷은 막을수 있는 피해량이 증가 합니다. 그리고 반지는 착용자가 얻을 반지의 효과가 강화될 것이며, 무기와 갑옷을 사용하는데 드는 힘의 요구량이 적어지며 물건의 어떠한 저주도 해제 할 것입니다.</string>
   <string name="ScrollOfUpgrade_InvTitle">업그레이드 할 아이템을 선택하세요.</string>
   <string name="ScrollOfUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진 것 같습니다.</string>
   <!--STRINGS OF ScrollOfWeaponUpgrade CLASS-->
-  <string name="ScrollOfWeaponUpgrade_Name">무기업그레이드 스크롤</string>
-  <string name="ScrollOfWeaponUpgrade_Info">이 스크롤은 근접무기를 업그레이드합니다. 이 스크롤은 강화 업그레이드 버전으로 인첸트를 파괴하지 않습니다.  랜덤으로 인첸트되지 않은 무기를 인첸트 시켜줍니다.</string>
+  <string name="ScrollOfWeaponUpgrade_Name">무기 강화의 두루마리</string>
+  <string name="ScrollOfWeaponUpgrade_Info">이 두루마리는 근접무기를 강화하여 그것의 질을 증진시킬 것입니다. 이 두루마리는 강화의 두루마리와 비교해 보면, 이 특별한 두루마리는 무기에 부여된 마법을 파괴하지 않을 것입니다. 대조적으로, 마법 부여가 되지 않은 무기에게는 무작위의 마법 부여를 해 줄 것입니다.   </string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">업그레이드할 무기를 고르세요</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">당신의 %s는/은 확실히 좋아진것같다.</string>
   <!--STRINGS OF ScrollOfDomination CLASS-->
-  <string name="ScrollOfDomination_Name">지배의 스크롤</string>
-  <string name="ScrollOfDomination_Info">이 스크롤은 당신의 시야에 있는 한 생물의 의지를 굴복시킬 것입니다. 그 생물은 당신을 위해 싸울 것입니다.</string>
+  <string name="ScrollOfDomination_Name">지배의 두루마리</string>
+  <string name="ScrollOfDomination_Info">이 두루마리는 당신의 시야에 있는 단 한가지 생물의 의지를 꺾어 죽을 때 까지 당신을 위해 싸우게 만들 것입니다.</string>
   <!--STRINGS OF ScrollOfCurse CLASS-->
-  <string name="ScrollOfCurse_Name">저주의 스크롤</string>
-  <string name="ScrollOfCurse_Info">이 스크롤은 특히 어리석은 도둑들을 혼내주기 위해 만들어졌습니다. 
-그래서 일반 모험가에겐 정말이지 쓸모없고 해로운 스크롤 이지만, 상인한테 팔면은 꽤 값을 잘 쳐줍니다. </string>
+  <string name="ScrollOfCurse_Name">저주의 두루마리</string>
+  <string name="ScrollOfCurse_Info">이 두루마리는 마법을 이해하지 못할 정도로 충분히 멍청한 도둑들을 벌하기 위해 특별히 만들어졌습니다. 두루마리의 마법은 모험가들에게는 전체적으로 쓸모없고 오히려 해로울 것입니다. 하지만 상인들에게는 꽤 환영받을 것입니다.</string>
 </resources>

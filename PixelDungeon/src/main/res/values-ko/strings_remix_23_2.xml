@@ -2,8 +2,8 @@
 <resources>
     <!-- Items -->
     <!-- STRINGS OF BroadSword CLASS -->
-    <string name="Claymore_Name">대검</string>
-    <string name="Claymore_Info">이 거대한 무기는 모든걸 베어버릴 수 있을 것이다.</string>
+    <string name="Claymore_Name">클레이모어</string>
+    <string name="Claymore_Info">이 거대한 칼은 어떤 것이든 베어버릴 수 있을 것만 같습니다.</string>
     <string name="Claymore_Gender">여성</string>
 
     <!-- STRINGS OF Halberd CLASS -->
