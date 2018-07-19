@@ -22,6 +22,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -31,6 +32,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
 	private static final String HERO_EMPTY_PNG = "hero/empty.png";
+	private static final String WEAPON_ANIM = "weapon_anim";
 	private Image avatar;
 
 	// body goes as main texture
@@ -55,6 +57,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 
 	private Animation fly;
+	private Map<String, Animation> weapon_anims;
 
 	private static final String[] layersOrder = {
 		LAYER_BODY,
@@ -180,6 +183,16 @@ public class HeroSpriteDef extends MobSpriteDef {
 		reset();
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
+
+		if(weapon_anims!=null) { //old mods compatibility
+			KindOfWeapon weapon = hero.belongings.weapon;
+
+			if (weapon != null) {
+				attack = weapon_anims.get(weapon.getAnimationClass());
+			} else {
+				attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
+			}
+		}
 		avatar();
 	}
 
@@ -266,6 +279,18 @@ public class HeroSpriteDef extends MobSpriteDef {
 	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 		fly     = readAnimation(json, "fly", film);
 		operate = readAnimation(json, "operate", film);
+
+		if(json.has(WEAPON_ANIM)){
+			weapon_anims = new HashMap<>();
+
+			JSONObject anims = json.getJSONObject(WEAPON_ANIM);
+			Iterator<String> keys = anims.keys();
+
+			while( keys.hasNext() ) {
+				String key = keys.next();
+				weapon_anims.put(key,readAnimation(anims,key,film));
+			}
+		}
 	}
 
 	@Override

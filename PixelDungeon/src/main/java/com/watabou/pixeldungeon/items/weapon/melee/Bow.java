@@ -10,6 +10,7 @@ public abstract class Bow extends MeleeWeapon {
 	
 	public Bow( int tier, float acu, float dly ) {
 		super(tier, acu, dly);
+		animation_class = BOW_ATTACK;
 	}
 	
 	public void useArrowType(Arrow arrow){

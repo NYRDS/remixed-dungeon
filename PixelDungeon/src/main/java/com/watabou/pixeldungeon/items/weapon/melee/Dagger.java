@@ -17,13 +17,14 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Dagger extends MeleeWeapon {
 	{
 		image = ItemSpriteSheet.DAGGER;
+		animation_class = SWORD_ATTACK;
 	}
 	
 	public Dagger() {
