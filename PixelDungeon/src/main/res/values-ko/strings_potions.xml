@@ -4,7 +4,7 @@
   <!--STRINGS OF Potion CLASS-->
   <string name="Potion_Name">%s 물약</string>
   <string name="Potion_Info">이 플라스크는 속에 출렁이는 %s 액체를 담고 있습니다. 마시거나 던지면 과연 무슨 일이 일어날까요?</string>
-  <string name="Potion_ACDrink">마신다</string>
+  <string name="Potion_ACDrink">마시기</string>
   <string name="Potion_Harmfull">해로운 물약!</string>
   <string name="Potion_Beneficial">이로운 물약</string>
   <string name="Potion_Yes">네, 내가 뭘 하려는지 잘 알고 있습니다.</string>

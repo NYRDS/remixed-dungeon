@@ -3,8 +3,8 @@
   <!--PACKAGE /mobs/npcs-->
   <!--STRINGS OF Blacksmith CLASS-->
   <string name="Blacksmith_Name">트롤 대장장이</string>
-  <string name="Blacksmith_Desc">트롤 대장장이는  키에 여윈 몸을 가지고 있고, 피부는 색이든 질감이든 돌을 연상시키는 일반적인 트롤같이 생겼다. 트롤 대장장이는 덩치에 어울리지 않는 작은 도구들을 가지고 땜질을 하고 있다.</string>
-  <string name="Blacksmith_Gold1">이봐 인간! 쓸만해지고 싶나, 어? 이 곡괭이를 가져다가 이걸로 _어두운 금 원석_을 캐다 줘, _15개_ 면 충분하겠네. 보상은 뭐냐고? 이 탐욕스러운... \n알았어, 알았다고, 내가 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
+  <string name="Blacksmith_Desc">트롤 대장장이는  큰 키에 여윈 몸을 가지고 있고, 피부는 색이든 질감이든 돌을 연상시키는 일반적인 트롤같이 생겼다. 트롤 대장장이는 덩치에 어울리지 않는 작은 도구들을 가지고 땜질을 하고 있다.</string>
+  <string name="Blacksmith_Gold1">이봐 인간! 쓸만해지고 싶나, 응? 이 곡괭이를 가져다가 이걸로 _어두운 금 원석_을 좀 캐다 줘, _15개_ 면 충분하겠네. 보상은 뭐냐고? 이 탐욕스러운... \n알았어, 알았다고, 내가 보상해줄 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
   <string name="Blacksmith_Blood1">이봐 인간! 쓸만해지고 싶나, 어? 이 곡괭이를 가져다가 이걸로 _박쥐를 잡아서_ 박쥐 피를 묻혀와. 보상은 뭐냐고? 이 탐욕스러운... \n 알았어, 알았다고, 내가 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
   <string name="Blacksmith_Txt2">지금 장난해? 내 곡괭이 어디 갔어?!</string>
   <string name="Blacksmith_Txt3">어두운 금 원석. 15개. 솔직히 그게 그렇게 어렵냐?</string>
@@ -69,12 +69,12 @@
   <string name="Shopkeeper_Desc">이 통통한 남자는 던전보다는 어딘가 큰 도시의 상가나 있을 법하지만, 그가 제시하는 가격을 들어보면 왜 여기서 장사하는 걸 더 좋아하는지 이해가 된다.</string>
   <string name="Shopkeeper_Sell">판매할 아이템을 선택 하세요</string>
   <!--STRINGS OF WandMaker CLASS-->
-  <string name="WandMaker_Name">늙은 지팡이 제작자</string>
+  <string name="WandMaker_Name">마법봉 만드는 노인</string>
   <string name="WandMaker_Desc">이 노인은 살짝 혼란스런 표정을 하고 있다. 그는 마법 보호막에 의해 보호받고 있다.</string>
   <string name="WandMaker_Defense">흡수</string>
-  <string name="WandMaker_Berry1">오, 이런 장소에서 이렇게 괜찮은 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔어 - _썩은딸기의 씨_라네. 마법을 사용하는 사람으로서, 마법 사용자로서 여기 몬스터로부터 자기보호는 할 수 있지만 당황스럽군. 아마도 자네가 날 도와줄 수 있을것 같군. 도와 준다면 내 최고의 완드로 기꺼이 보상하겠네.</string>
+  <string name="WandMaker_Berry1">오, 이런 장소에서 이렇게 괜찮은 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔어 - _썩은딸기의 씨_라네. 마법을 사용하는 사람으로서, 마법 사용자로서 여기의 몬스터로부터 자기보호는 할 수 있지만 부끄럽게도 길을 잃어버렸다네. 날 도와주지 않겠나? 날 도와 준다면 내 최고의 마법봉으로 기꺼이 보상하겠네.</string>
   <string name="WandMaker_Berry2">썩은딸기의 씨를 찾는건 잘되어가는가, %s? 잘 안되어가나? 괜찮다네, 급한건 아니니까.</string>
-  <string name="WandMaker_Dust1">오, 이런 장소에서 이렇게 괜찮은 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔어 - _시체 먼지_라네. 던전에 널려 있는 시체 더미에서 얻을 수 있다네. 마법 사용자로서 여기 몬스터로부터 자기보호는 할 수 있지만 당황스럽군. 아마도 자네가 날 도와줄 수 있을것 같군. 도와준다면 기꺼이 내 최고의 완드로 보상하지.</string>
+  <string name="WandMaker_Dust1">오, 이런 장소에서 이렇게 괜찮은 사람을 만나서 기쁘네! 난 여기 희귀한 재료를 찾으러 왔어 - _시체 먼지_라네. 던전에 널려 있는 시체 더미에서 얻을 수 있다네. 마법 사용자로서 여기의 몬스터로부터 자기보호는 할 수 있지만 부끄럽게도 길을 잃어버렸다네. 날 도와주지 않겠나? 날 도와 준다면 내 최고의 마법봉으로 기꺼이 보상하겠네.</string>
   <string name="WandMaker_Dust2">시체 먼지를 찾는 건 잘되어가는가, %s? 가장 먼저 찾아봐야 할 장소는 뼈 무더기라네.</string>
   <string name="WandMaker_RotberryName">썩은딸기의 씨</string>
   <string name="WandMaker_RotberryDesc">이 나무 열매의 맛은 달콤하다- 달콤한 죽음.</string>

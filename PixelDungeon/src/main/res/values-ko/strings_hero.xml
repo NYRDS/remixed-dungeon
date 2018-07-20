@@ -76,7 +76,7 @@
   <string name="HeroSubClass_NameWarL">워락</string>
   <string name="HeroSubClass_DescWarL">적을 죽이면, _워락_은 적의 영혼을 흡수하여, 상처를 치료하고 배를 채운다.</string>
   <string name="HeroSubClass_NameBatM">배틀메이지</string>
-  <string name="HeroSubClass_DescBatM">지팡이를 장착하고 전투를 하면, _배틀메이지_는 현재 마나량에 비례한 추가 데미지를 입힌다. 공격이 성공할 때 마다 장착하고 있는 지팡이의 마나량이 1씩 회복된다.</string>
+  <string name="HeroSubClass_DescBatM"> _전투 마법사_는 마법봉을 들고 싸울 때 들고 있는 마법봉의 충전량에 비례한 추가 데미지를 입힐 것입니다. 공격이 성공할 때 마다 장착하고 있는 마법봉의 충전량이 1씩 회복될 것입니다.</string>
   <string name="HeroSubClass_NameAssa">암살자</string>
   <string name="HeroSubClass_DescAssa">기습공격을 할 경우, _암살자_는 대상에게 추가 데미지를 가한다.</string>
   <string name="HeroSubClass_NameFreR">프리러너</string>
@@ -88,5 +88,5 @@
   <string name="HeroSubClass_NameScout">정찰병</string>
   <string name="HeroSubClass_DescScout">엘프 _정찰병_은 은신의 달인이다. 높게 자란 풀 위에 올라서면 잠시동안 은신 상태가 된다. 또한 일반 엘프들 보다 빠르다.</string>
   <string name="HeroSubClass_NameShaman">주술사</string>
-  <string name="HeroSubClass_DescShaman">엘프 _주술사_는 지팡이를 근접 무기로 사용할 수 있습니다. 타격에 성공시 완드의 마나를 소모하지 않고 지팡이의 힘을 적에게 가할 수 있습니다.</string>
+  <string name="HeroSubClass_DescShaman">엘프 _주술사_는 마법봉을 근접 무기로 사용할 수 있습니다.공격에 성공한다면 마법봉의 힘을 충전량을 사용하지 않고서 대상에게 가할 수도 있습니다.</string>
 </resources>

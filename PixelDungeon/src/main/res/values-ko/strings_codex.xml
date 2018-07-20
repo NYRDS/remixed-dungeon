@@ -2,8 +2,8 @@
 <resources>
   <!--STRINGS OF Codex CLASS-->
   <string name="Codex_Name">고문서</string>
-  <string name="Codex_ACRead">읽는다</string>
-  <string name="Codex_Info">도서관에서 볼 수 있는 많은 책들 중 하나이다.</string>
+  <string name="Codex_ACRead">읽기</string>
+  <string name="Codex_Info">어떤 도서관에서도 볼 수 있는 수많은 책들 중 하나이다.</string>
   <string name="Codex_Blinded">눈이 먼 상태에서는 읽을 수 없다</string>
   <string-array name="Codex_Story">
     <item> 그리고 Watabou Pixel dungeon을 창조하셨고, 그의 창조물들을 보며 흡족해 하셨다.  </item>

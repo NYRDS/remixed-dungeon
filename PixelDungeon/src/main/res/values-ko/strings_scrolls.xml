@@ -4,7 +4,7 @@
   <!--STRINGS OF Scroll CLASS-->
   <string name="Scroll_Name">\"%s\" 두루마리</string>
   <string name="Scroll_Info">이 양피지는 판독할 수 없는 룬 문자 %s로 덮여있습니다. 누가 이것을 소리내어 읽을때 어떤 일이 일어날까요?</string>
-  <string name="Scroll_ACRead">읽는다</string>
+  <string name="Scroll_ACRead">읽기</string>
   <string name="Scroll_Blinded">눈이 먼 상태에서는 두루마리를 읽을 수 없습니다.</string>
   <string-array name="Scroll_Runes">
     <item>카우난</item>
@@ -61,8 +61,8 @@
   <!--STRINGS OF ScrollOfRecharging CLASS-->
   <string name="ScrollOfRecharging_Name">재충전의 두루마리</string>
   <string name="ScrollOfRecharging_Info">이 가공되지 않은 마법의 힘이 봉인된 양피지는 해방되었을 때 두루마리를 읽은 사람의 마법봉을 모두 최대로 충전시켜 줄 것입니다.</string>
-  <string name="ScrollOfRecharging_Info1a">가방에서 에너지가 급증하며 당신의 완드가 충전되었습니다.</string>
-  <string name="ScrollOfRecharging_Info1b">가방에서 에너지가 급증하며 당신의 완드들이 충전되었습니다.</string>
+  <string name="ScrollOfRecharging_Info1a">폭발하는 힘이 당신의 가방을 지나가며 당신의 마법봉을 충전시킵니다.</string>
+  <string name="ScrollOfRecharging_Info1b">폭발하는 힘이 당신의 가방을 지나가며 당신의 마법봉들을 충전시킵니다.</string>
   <string name="ScrollOfRecharging_Info2">가방에서 에너지가 급증하였지만 아무일도 일어나지 않았습니다.</string>
   <!--STRINGS OF ScrollOfRemoveCurse CLASS-->
   <string name="ScrollOfRemoveCurse_Name">저주제거의 두루마리</string>

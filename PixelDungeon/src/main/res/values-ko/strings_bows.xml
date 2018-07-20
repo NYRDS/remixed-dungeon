@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF Bow CLASS-->
-  <string name="Bow_Info1">이 활은 원거리 무기로써, 오직 엘프만이 근거리에서 제대로 된 사용을 할 수 있다. 활을 들어야만 화살을 발사할 수 있다.\n\n</string>
+  <string name="Bow_Info1">이 활은 원거리 무기로써, 엘프가 아니라면 가까운 거리에서는 쓸모가 없다. 활을 장착한다면 화살을 쏠 수 있다.\n\n</string>
   <!--STRINGS OF WoodenBow CLASS-->
   <string name="WoodenBow_Name">나무 활</string>
-  <string name="WoodenBow_Info">이 단순한 나무활은 화살을 가지고 있다면 어느정도 쓸만할 것입니다.</string>
+  <string name="WoodenBow_Info">이 간단한 나무활은 화살을 가지고 있다면 어느정도 쓸만할 것입니다.</string>
   <string name="WoodenBow_Gender">남성적인</string>
   <!--STRINGS OF CompoundBow CLASS-->
   <string name="CompoundBow_Name">합성궁</string>

@@ -2,8 +2,8 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분히 익숙해져서 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
-  <string name="Weapon_Incompatible">서로 다른 종류의 마법들의 작용 때문에 무기에 부여된 마법이 지워져 버렸다!</string>
+  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분히 익숙해졌기 때문에 그 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
+  <string name="Weapon_Incompatible">서로 다른 종류의 마법들이 작용해 버려서 무기에 부여된 마법이 지워져 버렸다!</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
@@ -161,7 +161,7 @@
   <string name="Boomerang_Gender">남성</string>
   <!--STRINGS OF CurareDart CLASS-->
   <string name="CurareDart_Name">큐라레 다트</string>
-  <string name="CurareDart_Info">이 작은 이블다트는 많은 데미지를 주지 않는다. 그러나 적중된 대상은 얼마간 무기력해지거나 움직임이 느려집니다.</string>
+  <string name="CurareDart_Info">이 작고 사악한 다트는 많은 피해를 주지 않지만 대상을 마비켜서 잠시동안 무력화되게 할 수 있습니다.</string>
   <string name="CurareDart_Gender">남성</string>
   <!--STRINGS OF Dart CLASS-->
   <string name="Dart_Name">다트</string>

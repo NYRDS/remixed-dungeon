@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /levels-->
   <!--STRINGS OF Level CLASS-->
-  <string name="Level_HiddenPlate">숨겨진 발판이 발동했다!</string>
+  <string name="Level_HiddenPlate">숨겨진 발판이 눌러졌다!</string>
   <string name="Level_TileChasm">낭떠러지</string>
   <string name="Level_TileFloor">바닥</string>
   <string name="Level_TileGrass">잔디</string>
@@ -35,7 +35,7 @@
   <string name="Level_TileBookshelf">책장</string>
   <string name="Level_TileAlchemy">연금솥</string>
   <string name="Level_TileDefault">\?\?\?</string>
-  <string name="Level_TileDescChasm">바닥이 보이지 않는다.</string>
+  <string name="Level_TileDescChasm">바닥이 보이지 않습니다.</string>
   <string name="Level_TileDescWater">불이 붙었다면, 물 속에 들어가 불을 끄세요.</string>
   <string name="Level_TileDescEntrance">계단은 위를 향하고 있다.</string>
   <string name="Level_TileDescExit">계단은 아래를 향하고 있다.</string>
@@ -44,7 +44,7 @@
   <string name="Level_TileDescLockedDoor">이 문은 잠겨 있습니다. 열기 위해서는 맞는 열쇠가 필요합니다.</string>
   <string name="Level_TileDescLockedExit">무거운 빗장이 아래로 내려가는 계단을 가로막고 있다.</string>
   <string name="Level_TileDescBarricade">나무 바리케이드가 단단히 가로막고 있지만 수년동안 바짝 말라 있다. 불에 탈까?</string>
-  <string name="Level_TileDescSign">여기서는 글씨가 보이지 않는다.</string>
+  <string name="Level_TileDescSign">여기서는 글씨가 보이지 않습니다.</string>
   <string name="Level_TileDescTrap">숨겨진 발판을 디디면 함정이 발동한다.</string>
   <string name="Level_TileDescInactiveTrap">함정이 이미 발동해서 더 이상 위험하지 않다.</string>
   <string name="Level_TileDescStatue">누군가 이곳을 꾸미고 싶어했지만, 당연히 던전의 분위기를 바꾸진 못했다.</string>

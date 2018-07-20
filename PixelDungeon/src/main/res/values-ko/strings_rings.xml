@@ -51,7 +51,7 @@
   <string name="RingOfMending_Info">이 반지는 신체의 재생속도를 증가시켜 빠르게 체력을 회복합니다. 역강화된 반지는 자연재생을 감소시키거나 중지시킵니다.</string>
   <!--STRINGS OF RingOfPower CLASS-->
   <string name="RingOfPower_Name">힘의 반지</string>
-  <string name="RingOfPower_Info">당신의 완드는 이 반지에서 나오는 에너지에 의해 더 강해집니다. 역강화된 반지는 당신의 완드의 힘을 약화시킵니다.</string>
+  <string name="RingOfPower_Info">당신의 마법봉이 이 반지에서 나오는 힘의 장막에 의해 더 강해질 것입니다. 역강화된 반지는 당신의 마법봉의 힘을 약화시킵니다.</string>
   <!--STRINGS OF RingOfSatiety CLASS-->
   <string name="RingOfSatiety_Name">포만의 반지</string>
   <string name="RingOfSatiety_Info">이 반지는 당신이 음식없이 오랫동안 행동할 수 있게 해줍니다. 역강화된 반지는 반대의 효과를 유발합니다.</string>

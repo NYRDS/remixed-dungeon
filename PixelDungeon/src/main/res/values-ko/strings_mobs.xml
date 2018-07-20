@@ -55,7 +55,7 @@
   <string name="Elemental_Name">불의 정령</string>
   <string name="Elemental_Gender">남성</string>
   <string name="Elemental_Name_Objective">불의 정령</string>
-  <string name="Elemental_Desc">이리 저리 돌아다니는 불의 정령들은 고위 몬스터 소환의 부산물이다. 이들은 너무나 혼돈스런 성질을 가지고 있어서 가장 강력한 데몬술사마저 조종하기 어렵다.</string>
+  <string name="Elemental_Desc">이리 저리 돌아다니는 불의 정령들은 고위 몬스터 소환의 부산물입니다. 이들은 너무나 혼돈스러운 본능을 가지고 있어서 최고의 악마학자마저 조종할 수 없습니다.</string>
   <!--STRINGS OF Eye CLASS-->
   <string name="Eye_Name">이블아이</string>
   <string name="Eye_Gender">중성적인</string>
@@ -137,12 +137,12 @@
   <string name="Shadow_Name">그림자</string>
   <string name="Shadow_Gender">여성</string>
   <string name="Shadow_Name_Objective">그림자</string>
-  <string name="Shadow_Desc">조용히 고대 감옥의 폐허를 떠돌아 다니는 그림자. 모험자들에게 아주 드물게 자신들의 모습을 드러낸다. 대개 그 모험자의 모험은 그날로 끝이다.</string>
+  <string name="Shadow_Desc">조용히 고대 감옥의 폐허를 떠돌아 다니는 그림자로 모험가들에게 아주 드물게 자신들의 모습을 드러내고, 그 모험은 보통 그 모험가들에게 있어 최후의 모험이 될 것이다. </string>
   <!--STRINGS OF Shaman CLASS-->
   <string name="Shaman_Name">놀 주술사</string>
   <string name="Shaman_Gender">남성</string>
   <string name="Shaman_Name_Objective">놀 주술사</string>
-  <string name="Shaman_Desc">가장 지능이 뛰어는 놀들만이 주술사의 주술을 익힐 수 있다. 놀 주술사의 힘은 약하지만 그 대신 전투 마법을 사용하길 좋아하며, 부족에서 자신의 지위를 의심하는 자들에게는 이를 사용하길 꺼리지 않는다.</string>
+  <string name="Shaman_Desc">가장 지능이 뛰어는 놀들만이 주술사의 주술을 익힐 수 있다. 놀 주술사는 힘이 약하기 때문에 전투 마법을 사용하길 좋아하며, 부족에서 자신의 지위를 의심하는 자들에게는 이를 사용하길 꺼리지 않습니다.</string>
   <string name="Shaman_Killed">%s의 번개 화살이 당신을 죽였다...</string>
   <!--STRINGS OF Shielded CLASS-->
   <string name="Shielded_Name">방패를 든 놀 정예병</string>
@@ -189,7 +189,7 @@
   <string name="Thief_Name">미친 도둑</string>
   <string name="Thief_Gender">남성</string>
   <string name="Thief_Name_Objective">미친 도둑</string>
-  <string name="Thief_Desc">던전 깊이 들어가면 갈수록 언제나 오만 가지의 범죄자들이 숨는 소굴이 있다. 햇볕으로 부터 멀리 떨어진 기간이 길어짐에 따라 제대로 된 정신을 차리고 있는 자들은 몇 되지 않는다. 오래 전, 이 미친 도둑들은 자신이 누구고 왜 훔치는지 잊어버렸다.</string>
+  <string name="Thief_Desc">던전 깊이 들어가면 갈수록 언제나 오만 가지의 범죄자들이 숨는 소굴이 있습니다. 햇볕을 제대로 보지 못했기 때문에 제대로 된 정신을 차리고 있는 자들은 몇 되지 않습니다. 오래 전부터 이 정신나간 도둑들은 자신이 누구고 왜 훔치는지조차 잊어버렸습니다 .</string>
   <string name="Thief_Stole">%1$s 이 당신한테서 %2$s 을/를 훔쳤다!</string>
   <string name="Thief_Carries">\n\n%1$s 이 _%2$s_를 들고 있다. 분명히 훔친거다.</string>
   <!--STRINGS OF Warlock CLASS-->
@@ -267,7 +267,7 @@
   <string name="EarthElemental_Name">대지의 정령</string>
   <string name="EarthElemental_Gender">남성</string>
   <string name="EarthElemental_Name_Objective">대지의 정령</string>
-  <string name="EarthElemental_Desc">대지의 정령은 자연의 힘이 집약되어 만들어진 흙 덩어리다.</string>
+  <string name="EarthElemental_Desc">대지의 정령은 자연의 힘이 집약되어 만들어진 흙 덩어리입니다.</string>
   <!--STRINGS OF Crystal CLASS-->
   <string name="Crystal_Name">공중에 떠있는 크리스탈</string>
   <string name="Crystal_Gender">남성</string>

@@ -80,9 +80,9 @@
 
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
-    <string name="WandOfIcebolt_Name">아이스볼트 지팡이</string>
-    <string name="WandOfIcebolt_Info">이 완드는 얼음 투사체를 발사해서 대상 생명체에게 낮은 데미지를 줍니다. 이것은 대상을 느리게 하거나 얼릴 수도 있습니다.</string>
-    <string name="WandOfIcebolt_Info1">당신은 당신을 아이스볼트 미사일로 죽였습니다..</string>
+    <string name="WandOfIcebolt_Name">얼음 화살의 마법봉</string>
+    <string name="WandOfIcebolt_Info">이 마법봉은 얼음 화살을 발사해 대상 생물체에게 약한 피해를 입힙니다.  또한 대상을 감속시키거나 빙결시킬 수도 있습니다. </string>
+    <string name="WandOfIcebolt_Info1">당신은 자기 자신을 얼음 화살의 마법봉으로 죽여버렸습니다..</string>
 
     <!-- Badges -->
     <string name="Badges_Ice_Guardian_Slain">얼음 수호자 처치</string>

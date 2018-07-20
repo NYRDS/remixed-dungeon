@@ -17,7 +17,7 @@
     <string name="WndPlayGames_RestoreProgress">게임 진행 상태 복구하기</string>
     <string name="WndPlayGames_WorkInCloud">클라우드에서 진행 중입니다... 기다려 주세요.</string>
     <string name="StartScene_UnlockGnoll">이 클래스를 해금하기 위해서는 당신은 마을 사제를 설득해 놀 정예병을 치료해야 합니다.</string>
-    <string name="WndPriest_Heal_Minions">당신의 하수인들을 모두 회복시키세요 - 단 %d 골드!</string>
+    <string name="WndPriest_Heal_Minions">당신의 하수인들을 모두 치유하기 - 단 %d 금화</string>
     <string name="Badges_GnollUnlocked">놀 잠금 해제됨</string>
 
     <string-array name="HeroClass_GnollPerks">

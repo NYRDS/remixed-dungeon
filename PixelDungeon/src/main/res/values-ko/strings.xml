@@ -38,9 +38,9 @@
   <string name="Char_SmbMissed">%1$s %2$s %3$s의 공격</string>
   <string name="Char_OutParalysis">고통이 %s를 마비로부터 벗어나게 했습니다</string>
   <string-array name="Char_StaDodged">
-    <item>회피! </item>
-    <item>회피! </item>
-    <item>회피! </item>
+    <item>이(가) </item>
+    <item>이(가) </item>
+    <item>이(가) </item>
   </string-array>
   <string name="Char_StaPoisoned">중독</string>
   <string name="Char_StaAmok">착란</string>
@@ -100,7 +100,7 @@
   <string name="Journal_Garden">정원</string>
   <string name="Journal_Statue">살아난 석상</string>
   <string name="Journal_Ghost">슬픈 유령</string>
-  <string name="Journal_Wandmaker">늙은 완드 장인</string>
+  <string name="Journal_Wandmaker">마법봉 만드는 노인</string>
   <string name="Journal_Troll">트롤 대장장이</string>
   <string name="Journal_Imp">야망가 임프</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
@@ -202,16 +202,16 @@
   <string name="WndTradeItem_Sold">%1$s 을/를 %2$dg 에 판매했습니다.</string>
   <string name="WndTradeItem_Bought">%1$s 을/를 %2$dg 에 구매했습니다.</string>
   <!--STRINGS OF WndWandmaker CLASS-->
-  <string name="WndWandmaker_Message">오, 성공했군! 자, 너무 고민하지 말게나. 약속대로 내 고급 지팡이중 하나를 주겠네.</string>
-  <string name="WndWandmaker_Battle">전투용 지팡이</string>
-  <string name="WndWandmaker_NonBattle">비전투용 지팡이</string>
+  <string name="WndWandmaker_Message">오, 성공했군! 자네를 너무 귀찮게 하지 않았기를 바라네. 약속한 대로, 자네는 나의 질좋은 마법봉들 중 하나를 선택할 수 있네.</string>
+  <string name="WndWandmaker_Battle">전투용 마법봉</string>
+  <string name="WndWandmaker_NonBattle">범용적인 마법봉</string>
   <string name="WndWandmaker_Farawell">자네의 퀘스트에 행운을 빌겠네, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">퀵슬롯에 등록 할 아이템을 선택하세요.</string>
   <!--STRINGS OF Item CLASS-->
   <string name="Item_Name">어떤것</string>
   <string name="Item_Info">어떤것</string>
-  <string name="Item_ACDrop">버리다</string>
+  <string name="Item_ACDrop">버리기</string>
   <string name="Item_ACThrow">던지다</string>
   <string name="Item_PackFull">가방이 가득차서 %s 넣을 수 없습니다.</string>
   <string name="Item_DirThrow">던질 방향을 선택하세요.</string>
@@ -270,7 +270,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="Stylus_Inscribed">%2$s 에 %1$s 룬이 새겨졌습니다.</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Tome of Mastery</string>
-  <string name="TomeOfMastery_ACRead">읽는다</string>
+  <string name="TomeOfMastery_ACRead">읽기</string>
   <string name="TomeOfMastery_Info">두껍지 않지만 가죽으로 마감된 이 책은 읽는데 시간이 좀 걸리겠지만 당신에게 많은 영감을 줄 수 있다는걸 기억하세요.</string>
   <string name="TomeOfMastery_Blinded">눈이 먼 상태에서는 읽을 수 없습니다.</string>
   <string name="TomeOfMastery_Choose">%s 길을 선택했습니다.</string>
@@ -302,8 +302,8 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="SeedPouch_Name">씨앗주머니</string>
   <string name="SeedPouch_Info">이 작은 벨벳주머니는 씨앗들을 저장할 수 있습니다. 매우 편리합니다.</string>
   <!--STRINGS OF WandHolster CLASS-->
-  <string name="WandHolster_Name">완드집</string>
-  <string name="WandHolster_Info">이 슬림한 완드집은 이국적인 동물의 가죽으로 만들었습니다. 여기에 %d 개 까지의 완드를 보관할 수 있습니다.</string>
+  <string name="WandHolster_Name">마법봉 보관함</string>
+  <string name="WandHolster_Info">이 얇은 마법봉 걸이는 이국적인 동물의 가죽으로 만들었습니다.이것은 당신에게%d 개의 마법봉을 보관할 수 있게 해줍니다.</string>
   <!--STRINGS OF PotionBelt CLASS-->
   <string name="PotionBelt_Info">이 튼튼한 가죽벨트는 깨지기 쉬운 여러 물약들을 얼어서 깨지는 것을 방지하면서 보관할 수 있습니다.</string>
   <string name="PotionBelt_Name">물약 벨트</string>

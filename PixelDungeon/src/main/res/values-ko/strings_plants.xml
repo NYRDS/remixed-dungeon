@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE pixeldungeon/plants-->
   <!--STRINGS OF Plant CLASS-->
-  <string name="Plant_ACPlant">심는다</string>
+  <string name="Plant_ACPlant">심기</string>
   <string name="Plant_Info"> %1$s를 심고 싶은 곳에 이 씨앗을 던지십시오.\n\n%2$s</string>
   <string name="Plant_Seed">%s 의 씨앗</string>
   <!--STRINGS OF Dreamweed CLASS-->
