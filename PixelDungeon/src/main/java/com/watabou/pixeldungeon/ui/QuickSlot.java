@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -177,7 +179,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         return true;
     }
 
-    private void item(Item item) {
+    private void item(@Nullable Item item) {
         slot.item(item);
         enableSlot();
     }
@@ -224,11 +226,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private void refreshSelf() {
         if(quickslotItem != null) {
-            Item item = Dungeon.hero.belongings.getItem(quickslotItem.getClassName());
+            Item item = Dungeon.hero.belongings.checkItem(quickslotItem);
             if(item != null) {
                 quickslotItem = item.quickSlotContent();
             } else {
-                quickslotItem = quickslotItem.quickSlotContent();                        }
+                quickslotItem = quickslotItem.quickSlotContent();
+            }
         }
 
         item(quickslotItem);
@@ -282,6 +285,14 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         }
 
         if (quickslotItem != null) {
+
+            int oldQsIndex = quickslotItem.getQuickSlotIndex();
+            if (oldQsIndex >= 0 && oldQsIndex < slots.size()) {
+                slots.get(oldQsIndex).quickslotItem(null);
+                slots.get(oldQsIndex).refreshSelf();
+            }
+
+
             quickslotItem.setQuickSlotIndex(index);
         }
 
@@ -293,8 +304,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         ArrayList<String> classes = new ArrayList<>();
 
         for (int i = 0; i < slots.size(); i++) {
-            if(qsStorage.containsKey(i)) {
-                classes.add(qsStorage.get(i).getClassName());
+            Item item = qsStorage.get(i);
+            if(item != null) {
+                classes.add(item.getClassName());
             } else {
                 classes.add("");
             }

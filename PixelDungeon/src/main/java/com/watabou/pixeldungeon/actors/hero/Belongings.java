@@ -103,6 +103,15 @@ public class Belongings implements Iterable<Item> {
 	}
 
 
+	public Item checkItem( Item src ) {
+		for (Item item : this) {
+			if (item == src ) {
+				return item;
+			}
+		}
+		return null;
+	}
+
 	public Item getItem( String itemClass ) {
 		for (Item item : this) {
 			if (itemClass.equals( item.getClassName() )) {

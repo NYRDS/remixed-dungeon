@@ -617,6 +617,10 @@ public class Item implements Bundlable, Presser {
 		this.quickSlotIndex = quickSlotIndex;
 	}
 
+	public int getQuickSlotIndex() {
+		return quickSlotIndex;
+	}
+
 	public String getClassName() {
 		return ItemFactory.itemNameByClass(getClass());
 	}
