@@ -47,17 +47,18 @@ public class WndInGameUiSettings extends WndMenuCommon {
 
 			@Override
 			public void onPlus(Selector s) {
-				PixelDungeon.quickSlots(Math.min(PixelDungeon.quickSlots()+1, Toolbar.MAX_SLOTS));
+				PixelDungeon.quickSlots(Math.min(Math.abs(PixelDungeon.quickSlots())+1, Toolbar.MAX_SLOTS));
 			}
 
 			@Override
 			public void onMinus(Selector s) {
-				PixelDungeon.quickSlots(Math.max(PixelDungeon.quickSlots()-1,0));
+
+				PixelDungeon.quickSlots(Math.max(Math.abs(PixelDungeon.quickSlots())-1,0));
 			}
 
 			@Override
 			public void onDefault(Selector s) {
-				PixelDungeon.quickSlots(3);
+				PixelDungeon.quickSlots(-1);
 			}
 		});
 	}

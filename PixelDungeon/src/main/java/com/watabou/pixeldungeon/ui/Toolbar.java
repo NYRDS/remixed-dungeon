@@ -130,15 +130,23 @@ public class Toolbar extends Component {
         toolbar.removeAll();
         toolbar.destroy();
 
-        final int active_slots = PixelDungeon.quickSlots();
+        int active_slots = PixelDungeon.quickSlots();
 
         HBox slotBox = new HBox(width());
         slotBox.setAlign(HBox.Align.Center);
-        if (active_slots > 0) {
-            for (int i = 0; i < active_slots; i++) {
-                slots.get(i).show(true);
-                slotBox.add(slots.get(i));
+
+        if(active_slots<0) {
+            int slotsCanFit = (int) (width()/slots.get(0).width());
+            if(Math.abs(active_slots)!=slotsCanFit) {
+                PixelDungeon.quickSlots(-slotsCanFit);
+                return;
             }
+            active_slots = slotsCanFit;
+        }
+
+        for (int i = 0; i < active_slots; i++) {
+            slots.get(i).show(true);
+            slotBox.add(slots.get(i));
         }
 
         if (slotBox.width() > width()) {

@@ -488,7 +488,7 @@ public class PixelDungeon extends Game {
 	}
 
     public static int quickSlots() {
-	    return Preferences.INSTANCE.getInt(Preferences.KEY_QUICKSLOTS, 3);
+	    return Preferences.INSTANCE.getInt(Preferences.KEY_QUICKSLOTS, -1);
     }
 
 	public static void quickSlots(int slots) {
