@@ -32,4 +32,9 @@
     <string name="RottenFish_Info">Peixe podre, que cheiro terrível</string>
     <string name="RottenFish_Taste">Nojento!</string>
 
-    </resources>
+    <string name="gdpr_title">Personalize sua experiência com anúncios</string>
+    <string name="gdpr_text">Remixed Dungeon personaliza sua experiência de publicidade usando Admob e Appodeal (outros provedores de anúncios). Os provedores de anúncios e seus parceiros podem coletar e processar dados pessoais, como identificadores de dispositivos, dados demográficos e de interesses, para fornecer uma experiência de publicidade personalizada para você. Ao concordar com essa experiência aprimorada de anúncios, você verá os anúncios que os provedores e seus parceiros consideram mais relevantes para você.\n\nAo concordar, você confirma ter mais de 16 anos e que gostaria de ter uma experiência personalizada de anúncios.\n\n</string>
+    <string name="gdpr_agree">Sim, eu concordo</string>
+    <string name="gdpr_disagree">Não, obrigado</string>
+    <string name="gdpr_choose">Por favor, escolha</string>
+</resources>

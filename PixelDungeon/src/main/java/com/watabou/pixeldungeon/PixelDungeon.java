@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AppodealRewardVideo;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
@@ -131,6 +132,8 @@ public class PixelDungeon extends Game {
 		Sample.INSTANCE.enable(soundFx());
 
 		SpellFactory.touch();
+
+		AppodealRewardVideo.initCinemaRewardVideo();
     }
 
 	public static boolean differentVersions(String v1, String v2) {

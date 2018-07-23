@@ -1,14 +1,13 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 
+import com.appodeal.ads.Appodeal;
 import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.util.Flavours;
@@ -79,6 +78,7 @@ public class Ads {
 				@Override
 				public void run() {
 					if (bannerIndex()<0) {
+						/*
 						AdView adView = new AdView(Game.instance());
 						adView.setAdSize(AdSize.SMART_BANNER);
 						adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
@@ -86,6 +86,8 @@ public class Ads {
 
 						Game.instance().getLayout().addView(adView, 0);
 						adView.loadAd(makeAdRequest());
+						*/
+						Appodeal.show(Game.instance(),Appodeal.BANNER_TOP);
 						Game.setNeedSceneRestart(true);
 					}
 				}
