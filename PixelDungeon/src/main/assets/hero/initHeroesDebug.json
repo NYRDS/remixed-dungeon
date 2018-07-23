@@ -18,8 +18,7 @@
         "quantity": 100
       },
       {
-        "kind": "RawFish",
-        "quantity": 100
+        "kind": "Spear"
       },
       {
         "kind": "WandOfRegrowth",

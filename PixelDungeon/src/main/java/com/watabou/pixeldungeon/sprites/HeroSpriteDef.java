@@ -158,12 +158,21 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_left.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_right.png");
+
+		String weaponAnimationClassLeft  = "none";
+		String weaponAnimationClassRight = "none";
+
+		if(hero.belongings.weapon!=null) {
+			weaponAnimationClassLeft = hero.belongings.weapon.getAnimationClass();
+			weaponAnimationClassRight = hero.belongings.weapon.getAnimationClass();
+		}
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_"+weaponAnimationClassLeft+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_"+weaponAnimationClassRight+"_right.png");
 
 
-		layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor, "left"));
-		layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor, "right"));
+		layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "left"));
+		layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "right"));
 
 
 		layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.weapon,"left"));
@@ -223,11 +232,15 @@ public class HeroSpriteDef extends MobSpriteDef {
 		return "hero/armor/"+armor.getVisualName()+".png";
 	}
 
-	private String armorHandDescriptor(Armor armor, String hand) {
+	private String armorHandDescriptor(Armor armor,KindOfWeapon item, String hand) {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/armor/hands/"+armor.getVisualName()+"_"+hand+".png";
+		if(item!=null) {
+			return "hero/armor/hands/" + armor.getVisualName() + "_" + item.getAnimationClass() + "_" + hand + ".png";
+		} else {
+			return "hero/armor/hands/" + armor.getVisualName() + "_none_" + hand + ".png";
+		}
 	}
 
 	private String itemHandDescriptor(KindOfWeapon item, String hand) {
