@@ -105,36 +105,41 @@
         <activity android:name="com.inmobi.rendering.InMobiAdActivity" android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:hardwareAccelerated="true" android:resizeableActivity="false" android:theme="@android:style/Theme.NoTitleBar" tools:ignore="UnusedAttribute"/>
 
-        <meta-data android:name="presage_key" android:value="000000"/>
-        <service android:name="io.presage.PresageService" android:enabled="true" android:exported="true" android:process=":remote">
-            <intent-filter>
-                <action android:name="io.presage.PresageService.PIVOT" />
-            </intent-filter>
-        </service>
-        <activity android:name="io.presage.activities.PresageActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
-            <intent-filter>
-                <action android:name="io.presage.intent.action.LAUNCH_WEBVIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <receiver android:name="io.presage.receiver.NetworkChangeReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
-                <action android:name="io.presage.receiver.NetworkChangeReceiver.ONDESTROY" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="io.presage.receiver.AlarmReceiver" />
-        <provider
-            android:name="io.presage.provider.PresageProvider"
-            android:authorities="${applicationId}.PresageProvider"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity
             android:name="com.my.target.common.MyTargetActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <!-- Yandex-metrica -->
+        <service android:name="com.yandex.metrica.MetricaService" android:enabled="true"
+            android:exported="true" android:process=":Metrica">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.yandex.metrica.IMetricaService" />
+                <data android:scheme="metrica" />
+            </intent-filter>
+            <meta-data android:name="metrica:api:level" android:value="64" />
+        </service>
+        <service android:name="com.yandex.metrica.ConfigurationService" android:enabled="true"
+            android:exported="true" android:process=":Metrica" tools:ignore="ExportedService">
+            <meta-data android:name="metrica:configuration:api:level" android:value="1"/>
+            <intent-filter>
+                <action android:name="com.yandex.metrica.configuration.ACTION_START"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.yandex.metrica.MetricaEventHandler"
+            android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <!-- End Yandex-metrica -->
+
+        <!-- Yandex-mobileads -->
+        <!--suppress AndroidDomInspection -->
+        <activity android:name="com.yandex.mobile.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <!-- End Yandex-mobileads -->
+
 
     </application>
 
