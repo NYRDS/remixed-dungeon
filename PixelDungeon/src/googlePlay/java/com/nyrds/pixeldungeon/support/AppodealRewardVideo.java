@@ -39,7 +39,7 @@ public class AppodealRewardVideo {
 
 				//vungle disable due to strange build issue
 				//mopub, mobvista & tapjoy due audiences mismatch
-				String disableNetworks[] = {"facebook","flurry","startapp","vungle","mopub","mobvista","tapjoy"};
+				String disableNetworks[] = {"facebook","flurry","startapp","vungle","mopub","mobvista","tapjoy","ogury"};
 
 				for(String net:disableNetworks) {
 					Appodeal.disableNetwork(PixelDungeon.instance(), net);
@@ -51,7 +51,7 @@ public class AppodealRewardVideo {
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
 				}
 
-				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);
+				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO|Appodeal.BANNER, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);
 				EventCollector.startTiming("appodeal reward video");
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 
