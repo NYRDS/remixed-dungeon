@@ -8,6 +8,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -16,6 +17,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
+import com.watabou.utils.PointF;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -156,12 +158,21 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_left.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_right.png");
+
+		String weaponAnimationClassLeft  = "none";
+		String weaponAnimationClassRight = "none";
+
+		if(hero.belongings.weapon!=null) {
+			weaponAnimationClassLeft = hero.belongings.weapon.getAnimationClass();
+			weaponAnimationClassRight = hero.belongings.weapon.getAnimationClass();
+		}
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_"+weaponAnimationClassLeft+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_"+weaponAnimationClassRight+"_right.png");
 
 
-		layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor, "left"));
-		layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor, "right"));
+		layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "left"));
+		layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "right"));
 
 
 		layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.weapon,"left"));
@@ -221,11 +232,15 @@ public class HeroSpriteDef extends MobSpriteDef {
 		return "hero/armor/"+armor.getVisualName()+".png";
 	}
 
-	private String armorHandDescriptor(Armor armor, String hand) {
+	private String armorHandDescriptor(Armor armor,KindOfWeapon item, String hand) {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/armor/hands/"+armor.getVisualName()+"_"+hand+".png";
+		if(item!=null) {
+			return "hero/armor/hands/" + armor.getVisualName() + "_" + item.getAnimationClass() + "_" + hand + ".png";
+		} else {
+			return "hero/armor/hands/" + armor.getVisualName() + "_none_" + hand + ".png";
+		}
 	}
 
 	private String itemHandDescriptor(KindOfWeapon item, String hand) {
@@ -354,5 +369,33 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 
 		return avatar;
+	}
+
+
+	@Override
+	public PointF worldCoords() {
+		if(ch instanceof Hero) {
+			final int csize = DungeonTilemap.SIZE;
+			PointF point = point();
+			point.x = (point.x + width * 0.5f) / csize - 0.5f;
+			point.y = (point.y + height - 8) / csize - 1.0f;
+			return point;
+
+		}
+		return super.worldCoords();
+	}
+
+	@Override
+	public PointF worldToCamera(int cell) {
+
+		if(ch instanceof Hero) {
+			final int csize = DungeonTilemap.SIZE;
+
+			return new PointF(
+					(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+					(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
+			);
+		}
+		return  super.worldToCamera(cell);
 	}
 }
