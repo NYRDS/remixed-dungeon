@@ -8,6 +8,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -16,6 +17,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
+import com.watabou.utils.PointF;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -354,5 +356,33 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 
 		return avatar;
+	}
+
+
+	@Override
+	public PointF worldCoords() {
+		if(ch instanceof Hero) {
+			final int csize = DungeonTilemap.SIZE;
+			PointF point = point();
+			point.x = (point.x + width * 0.5f) / csize - 0.5f;
+			point.y = (point.y + height - 8) / csize - 1.0f;
+			return point;
+
+		}
+		return super.worldCoords();
+	}
+
+	@Override
+	public PointF worldToCamera(int cell) {
+
+		if(ch instanceof Hero) {
+			final int csize = DungeonTilemap.SIZE;
+
+			return new PointF(
+					(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+					(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
+			);
+		}
+		return  super.worldToCamera(cell);
 	}
 }
