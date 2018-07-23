@@ -127,7 +127,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         final int csize = DungeonTilemap.SIZE;
         PointF point = point();
         point.x = (point.x + width * 0.5f) / csize - 0.5f;
-        point.y = (point.y + height) / csize - -8.0f;
+        point.y = (point.y + height) / csize - 1.0f;
         return point;
     }
 
