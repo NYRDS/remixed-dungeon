@@ -1,13 +1,16 @@
 package com.nyrds.pixeldungeon.support;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 
 import com.appodeal.ads.Appodeal;
+import com.appodeal.ads.BannerView;
 import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.util.Flavours;
@@ -63,7 +66,7 @@ public class Ads {
 		for (int i = 0; i< childs;++i)
 		{
 			View view = Game.instance().getLayout().getChildAt(i);
-			if(view instanceof AdView || view instanceof WebView) {
+			if(view instanceof AdView || view instanceof WebView || view instanceof BannerView) {
 				return i;
 			}
 		}
@@ -78,16 +81,42 @@ public class Ads {
 				@Override
 				public void run() {
 					if (bannerIndex()<0) {
-						/*
+
 						AdView adView = new AdView(Game.instance());
 						adView.setAdSize(AdSize.SMART_BANNER);
 						adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
 						adView.setBackgroundColor(Color.TRANSPARENT);
+						adView.setAdListener(new AdListener(){
+/*
+							@Override
+							public void onAdLoaded() {
+								onAdFailedToLoad(0);
+							}
+*/
+							public void onAdFailedToLoad(int var1) {
+
+								Game.instance().runOnUiThread(new Runnable() {
+									@Override
+									public void run() {
+
+										removeEasyModeBanner();
+
+										AppodealRewardVideo.init();
+										Appodeal.cache(Game.instance(), Appodeal.BANNER);
+										BannerView adView = Appodeal.getBannerView(Game.instance());
+										Game.instance().getLayout().addView(adView, 0);
+
+										Appodeal.show(Game.instance(), Appodeal.BANNER_VIEW);
+									}});
+							}
+						});
 
 						Game.instance().getLayout().addView(adView, 0);
 						adView.loadAd(makeAdRequest());
-						*/
-						Appodeal.show(Game.instance(),Appodeal.BANNER_TOP);
+
+
+
+
 						Game.setNeedSceneRestart(true);
 					}
 				}
@@ -110,6 +139,12 @@ public class Ads {
 				public void run() {
 					int index = bannerIndex();
 					if(index>=0) {
+
+						View adview = Game.instance().getLayout().getChildAt(index);
+						if (adview instanceof BannerView) {
+							Appodeal.hide(Game.instance(),Appodeal.BANNER);
+						}
+
 						Game.instance().getLayout().removeViewAt(index);
 					}
 				}

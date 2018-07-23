@@ -12,6 +12,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.PixelDungeon;
 
+
 /**
  * Created by mike on 18.02.2017.
  * This file is part of Remixed Pixel Dungeon.
@@ -25,7 +26,15 @@ public class AppodealRewardVideo {
 		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
 	}
 
-	public static void initCinemaRewardVideo() {
+	public static void loadRewardVideo(){
+		Game.instance().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+			}});
+	}
+
+	public static void init() {
 
 		if (!isAllowed()) {
 			return;
@@ -49,7 +58,11 @@ public class AppodealRewardVideo {
 
 				if(BuildConfig.DEBUG) {
 					Appodeal.setLogLevel(Log.LogLevel.verbose);
+					//Appodeal.setTesting(true);
 				}
+
+				Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, false);
+				Appodeal.setAutoCache(Appodeal.BANNER, false);
 
 				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO|Appodeal.BANNER, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);
 				EventCollector.startTiming("appodeal reward video");
