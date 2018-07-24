@@ -15,4 +15,5 @@
   <string name="ResultDescriptions_Fall">%d 층에서 낙사 하였습니다.</string>
   <string name="ResultDescriptions_Win">옌더의 아뮬렛을 획득하였습니다.</string>
   <string name="ResultDescriptions_Immured">%d 층에서 돌에 갖혀 죽었습니다.</string>
+  <string name="ResultDescriptions_Unknown">%d층에서 알 수 없는 이유로 사망</string>
 </resources>

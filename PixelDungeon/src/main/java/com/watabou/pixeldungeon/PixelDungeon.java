@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
@@ -96,6 +97,7 @@ public class PixelDungeon extends Game {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		EuConsent.check(this);
 		playGames = new PlayGames(this);
 		
 		ModdingMode.selectMod(PixelDungeon.activeMod());
@@ -486,7 +488,7 @@ public class PixelDungeon extends Game {
 	}
 
     public static int quickSlots() {
-	    return Preferences.INSTANCE.getInt(Preferences.KEY_QUICKSLOTS, 3);
+	    return Preferences.INSTANCE.getInt(Preferences.KEY_QUICKSLOTS, -1);
     }
 
 	public static void quickSlots(int slots) {

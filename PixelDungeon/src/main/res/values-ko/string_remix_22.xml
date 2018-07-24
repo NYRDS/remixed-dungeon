@@ -2,18 +2,18 @@
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
   <string name="ShadowLord_Name">그림자 군주</string>
-  <string name="ShadowLord_Gender">근육질의</string>
+  <string name="ShadowLord_Gender">남성</string>
   <string name="ShadowLord_Name_Objective">그림자 군주</string>
   <string name="ShadowLord_Desc">순수한 악과 어둠의 결정체로 만들어진 생물체입니다. 그것의 강력함으로 미루어 고대신 그 자체라는 의견과, 단지 고대신의 문지기들 중 하나라는 의견과의 논쟁이 끊이지 않고 있습니다.</string>
-  <string name="ShadowLord_Intro">전투를 준비하십시오!</string>
+  <string name="ShadowLord_Intro">전투를 준비해라!</string>
   <string name="ShadowLord_Death">안돼애애애애...</string>
   <string name="AllowStatisticsCollectionScene_Title">사용 통계 수집</string>
   <string name="AllowStatisticsCollectionScene_Request">동의 하는경우, Remixed Pixel Dungeon 은 사용 통계를 수집합니다. 수집된 데이터들은 아래와같이 사용됩니다:.\n
-- 사소한 오류들을 감지하고 수정(치명적인 오류에 대해서는 명시적으로 리포팅 할것을 요청받을것 입니다)\n
+- 사소한 오류들을 감지하고 수정할 것입니다.(치명적인 오류에 대해서는 명시적으로 리포팅 할것을 요청합니다)\n
 - 게임 밸런스 개선\n
-- 디바이스에 따른 퍼포먼스 이슈 개선\n
+- 디바이스에 따른 실행 이슈 개선\n
 - 가끔식 통계로부터 발견된 재미난 사실들 발표\n
-당신은 언제든지 동의 여부  변경할 수 있습니다.(타이틀 스크린에서 차트 아이콘을 클릭)</string>
+당신은 언제든지 타이틀 스크린에서 차트 아이콘을 클릭해서 동의 여부를  변경할 수 있습니다. </string>
   <string name="AllowStatisticsCollectionScene_Allow">허용</string>
   <string name="AllowStatisticsCollectionScene_Deny">거부</string>
   <string name="Darkness_Info">영원한 어둠의 조각이 공중에 피어오른다.</string>

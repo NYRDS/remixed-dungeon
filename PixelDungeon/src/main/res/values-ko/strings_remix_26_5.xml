@@ -2,11 +2,43 @@
 <resources>
     <!-- Buffs -->
     <!-- STRINGS OF FrostAura CLASS -->
-    <string name="FrostAura_Buff">냉기 오라</string>
+    <string name="FrostAura_Buff">냉기의 기운</string>
 
 
     <!-- Item descriptions -->
     <!-- STRINGS OF ElvenDagger CLASS -->
     <string name="ElvenDagger_Name">엘프제 단검</string>
-    <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어져, 통상의 단검보다 훨씬 가볍다.</string>
-    </resources>
+    <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어졌기 때문에 통상의 단검보다 훨씬 가볍다.</string>
+    <string name="ElvenDagger_Gender">남성</string>
+
+
+    <!-- STRINGS OF IceGuardianCoreModule CLASS -->
+    <string name="IceGuardianCoreModule_Name">얼음 수호자의 핵</string>
+    <string name="IceGuardianCoreModule_Info">마법의 얼음으로 만들어진 복잡한  구조물입니다. 빛나는 보석이 이 특이한 장치의 가장자리에 놓여져 있습니다.</string>
+
+    <!-- STRINGS OF RingOfFrost CLASS -->
+    <string name="RingOfFrost_Name">빙결의 반지</string>
+    <string name="RingOfFrost_Info">이 반지는 마법의 얼음으로 조각되었습니다. 이것을 착용한 자는 빙결의 기운으로부터 보호를 받게 되며 감속시키고 피해를 주는 공격을 하는 적들에게서도 보호받게 해줍니다.</string>
+
+    <!-- STRINGS OF SpiderQueenCarapace CLASS -->
+    <string name="SpiderQueenCarapace_Name">거미 여왕의 등껍질</string>
+    <string name="SpiderQueenCarapace_Info">거미 여왕의 등껍질의 파편입니다. 당신은 이것에 거미줄 분비선의 조각이 들어있는 것을 볼 수 있고, 이것은 마치 살아있는 것 같습니다. </string>
+
+    <!-- STRINGS OF LibrarianNPC CLASS -->
+    <string name="LibrarianNPC_Message_Instruction">아.. 안녕하세요. 도서관에 오신 것을 환영해요. 여기서 당신은 던전에서 볼 수 있는 모든 분류의 정보들을 찾을 수 있을 거예요. 사실 우리는 모험가들로부터 밝혀진 정보만을 제공해요. 부..부끄럽네요. 그래서 당신이 도서관을 방문할때마다 아마도, 새로운 읽을거리가 생겨날 거예요</string>
+
+
+    <!-- Object descriptions -->
+    <!-- STRINGS OF LibraryBook CLASS -->
+    <string name="LibraryBook_Name">도서관 책</string>
+    <string name="LibraryBook_Description">이 책은 정말로 거대하다. 이 책은 모험가들이 던전에서 발견한 모든 정보를 담고 있다.</string>
+
+
+    <!-- Wnd descriptions -->
+    <!-- STRINGS OF WndSettings CLASS -->
+    <string name="WndSettings_moveTimeout">행동 시간 제한: %s</string>
+
+    <!-- STRINGS OF TrapHelper CLASS -->
+    <string name="TrapWnd_Title">함정</string>
+    <string name="TrapWnd_Step">당신은 정말로 이 함정을 밟고 싶습니까? 당신을 죽을 수도 있습니다.</string>
+</resources>

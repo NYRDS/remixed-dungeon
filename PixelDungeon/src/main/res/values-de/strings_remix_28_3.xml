@@ -31,4 +31,8 @@
     <string name="RottenFish_Name">Vergammelter Fisch</string>
     <string name="RottenFish_Info">Vergammelter Fisch, riecht fürchterlich</string>
     <string name="RottenFish_Taste">Widerlich!</string>
+
+    <string name="gdpr_agree">Ja, ich Stimme zu</string>
+    <string name="gdpr_disagree">Nein danke</string>
+    <string name="gdpr_choose">Bitte wähle</string>
 </resources>

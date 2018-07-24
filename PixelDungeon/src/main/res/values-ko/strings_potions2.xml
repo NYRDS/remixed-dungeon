@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--PACKAGE /items/potions additional strings-->
-  <string name="Potion_ACMoisten">바르다</string>
+  <string name="Potion_ACMoisten">바르기</string>
   <string name="Potion_SelectForMoisten">적실 아이템을 선택 하세요.</string>
   <string name="Potion_MoistenUseless">그 물약을 낭비한 것 같습니다.</string>
   <string name="Potion_RuneDissaperaed">룬이 %s에서 사라졌습니다.</string>

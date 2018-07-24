@@ -1,4 +1,75 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <string name="BlackCat_Name">검은 고양이</string>
+    <string name="BlackCat_Gender">여성</string>
+    <string name="BlackCat_Name_Objective">고양이</string>
+    <string name="BlackCat_Desc">이건 검은 고양이입니다.</string>
+    
+    <string-array name="BlackCat_Phrases">
+        <item>그르르르르릉</item>
+        <item>야옹...</item>
+        <item>야옹!</item>
+    </string-array>
+
+    <string name="Str_lose">-1 힘</string>
+
+    <string name="SociologistNPC_Name">사회학자</string>
+    <string name="SociologistNPC_Gender">남성</string>
+    <string name="SociologistNPC_Name_Objective">사회학자</string>
+    <string name="SociologistNPC_Desc">여론을 수집하는 신성한 임무를 받은 사회학자입니다.</string>
+
+    <string name="SociologistNPC_AlreadyTaken">당신은 이미 설문조사를 완료했습니다. 나중에 다시 와주세요.</string>
+    <string name="SociologistNPC_Hi">안녕하세요! \n 당신은 우리의 설문조사에 참여하고 싶으신가요?(인터넷 접속이 필요합니다) \n 당신의 의견이 중요합니다!</string>
+    <string name="SociologistNPC_InternetRequired">죄송합니다, 인터넷에 연결이 되어있지 않다면 우리의 설문조사를 진행할 수 없어요.</string>
+    <string name="SociologistNPC_DownloadError">죄송합니다. 무언가 잘못됬어요. 나중에 다시 시도해주세요.</string>
+
+    <string name="town_deco_library_sign_name">도서관 표지판</string>
+    <string name="town_deco_library_sign_desc">이 건물 안에는 도서관이 있는 것 같다.</string>
+    <string name="town_deco_identifier_sign_name">마법의 종 표지판</string>
+    <string name="town_deco_identifier_sign_desc">이 건물 안에는 예언가가 있는 것 같다.</string>
+    <string name="town_deco_cinema_sign_name">영화관 표지판</string>
+    <string name="town_deco_cinema_sign_desc">이 건물 안에는 영화관이 있는 것 같다.</string>
+    <string name="town_deco_INN_sign_name">여관 표지판</string>
+    <string name="town_deco_INN_sign_desc">이 건물 안에는 여관이 있는 것 같다.</string>
+
+
+    <string name="HealthDart_Name">회복의 다트</string>
+    <string name="HealthDart_Gender">남성</string>
+    <string name="HealthDart_Info">이 다트의 끝은 회복의 물약으로 칠해져 있습니다.</string>
+
+    <string name="HealthArrow_Name">회복의 화살</string>
+    <string name="HealthArrow_Gender">여성</string>
+    <string name="HealthArrow_Info">이 화살의 화살촉에는 회복의 물약이 칠해져 있습니다.</string>
+
+    <string name="AmokDart_Name">착란의 다트</string>
+    <string name="AmokDart_Gender">남성</string>
+    <string name="AmokDart_Info">이 다트의 촉은 누구든지 무자비한 착란의 상태로 만들 것입니다.</string>
+
+    <string name="AmokArrow_Name"> 착란의 화살</string>
+    <string name="AmokArrow_Gender">여성</string>
+    <string name="AmokArrow_Info">이 화살의 화살촉은 누구든지 무자비한 착란의 상태로 만들 것입니다.</string>
+
+    <string name="WndHero_SkillLevel">기술 레벨</string>
+
+    <string name="town_deco_sofa_name">멋진 소파</string>
+    <string name="town_deco_sofa_desc">이 영화관은 고객들에게 최고의 자리를 제공하려고 시도한것 같습니다</string>
+
+    <string name="town_deco_book_name">책</string>
+    <string name="town_deco_book_desc">이 책은 부주의한 누군가가 남기고 간 것 같다.</string>
+
+    <string name="town_deco_screen_name">스크린</string>
+    <string name="town_deco_screen_desc">이 불가사의한 캔버스는 스크린이라고 불리며, 움직이는 사진들을 보여줄 수 있다.</string>
+
+    <string name="town_deco_stove_name">돌 화로</string>
+    <string name="town_deco_stove_desc">이 화로는 만족스러운 따뜻함을 제공해준다.</string>
+
+    <string name="town_deco_wooden_chair_name">나무 의자</string>
+    <string name="town_deco_wooden_chair_desc">이 의자는 나무로 만들어져 있다</string>
+
+    <string name="town_deco_snowy_plate_name">눈 플레이트</string>
+    <string name="town_deco_snowy_plate_desc">이 고대의 판은 눈으로 뒤덮여 있다.</string>
+
+    <string name="DogeMask_Name">DOGE 가면</string>
+    <string name="DogeMask_Info">유명한 DOGE로 변장하고 싶습니까? 당신의  기회가 바로 지금 여기 있습니다!\n 정말 마스크! 많은 변장! 와!</string>
+</resources>

@@ -2,35 +2,35 @@
 <resources>
   <!--STRINGS OF Codex CLASS-->
   <string name="Codex_Name">고문서</string>
-  <string name="Codex_ACRead">읽는다</string>
-  <string name="Codex_Info">도서관에서 볼 수 있는 많은 책들 중 하나이다.</string>
+  <string name="Codex_ACRead">읽기</string>
+  <string name="Codex_Info">어떤 도서관에서도 볼 수 있는 수많은 책들 중 하나이다.</string>
   <string name="Codex_Blinded">눈이 먼 상태에서는 읽을 수 없다</string>
   <string-array name="Codex_Story">
-    <item>And created Watabou Pixel Dungeon. And he looked at his handiwork. And he saw that it was good!</item>
-    <item>반발의 문양 - 공격자를 뒤로 튕겨냅니다.</item>
-    <item>매혹의 문양 - 공격자와 자신을 잠시동안 매혹시킵니다. 공격자가 항상 더 오래 매혹됩니다.</item>
-    <item>반-엔트로피의 문양 - 공격자를 얼리고, 자신을 불태우며 발광시킵니다.</item>
-    <item>다중성의 문양 - 거울상을 하나 생성하지만 피해를 받습니다. 이 효과로 사망할 수 있습니다.</item>
-    <item>전위의 문양 - 공격자에게 전류를 방출해 피해를 줍니다. 가한 피해량의 절반의 피해를 입습니다.</item>
-    <item>신진대사의 문양 - 만복도를 소모하고 피해를 받기전에 회복합니다. 굶주리지 않을때만 발동합니다.</item>
-    <item>악취의 문양 - 독가스를 방출합니다.</item>
-    <item>점성의 문양 - 피해를 한번에 받는 대신 1씩 나누어 받게 됩니다.</item>
-    <item>변위의 문양 - 자신을 시야 내의 무작위 위치로 순간이동 시킵니다. 보스 레벨에서는 발동하지 않습니다.</item>
-    <item>속박의 문양 - 속박 당하고, The hero may receive herbal armor, but also be rooted at the same time.</item>
-    <item>Grim weapon - On successful hit, may instantly kill the target (or deal up to 2x damage to a boss).</item>
-    <item>Blazing weapon - On successful hit, deals extra damage to target and may burn it.</item>
-    <item>Eldritch weapon - On successful hit, enemy may flee in Terror.</item>
-    <item>Unstable weapon - On successful hit, may apply the effect of any random enchantment.</item>
-    <item>Vampiric weapon - On successful hit, may heal the Hero for part of the damage dealt to the enemy.</item>
-    <item>Lucky weapon - almost completely ignores enemy armor, and does much more damage.</item>
-    <item>Stunning weapon - On successful hit, may paralyze target.</item>
-    <item>Piercing weapon -  On successful hit, may damage all enemies in a straight line behind the target.</item>
-    <item>Venomous weapon - On successful hit, may poison target.</item>
-    <item>Chilling weapon - On successful hit, may slow target and will prevent it from burning.</item>
-    <item>Wild weapon - On successful hit, may damage all enemies adjacent to the target.</item>
-    <item>This book is written in demon language</item>
-    <item>This book is written in dwarf language</item>
-    <item>This book is written in elven language</item>
+    <item> 그리고 Watabou Pixel dungeon을 창조하셨고, 그의 창조물들을 보며 흡족해 하셨다.  </item>
+    <item>반발의 문양은 가해자를 뒤로 튕겨냅니다.</item>
+    <item>매혹의 문양은 가해자와 자신을 잠시동안 매혹시킵니다. 피해자는 공격자보다 더 오랫동안 매혹에 걸리지 않습니다..</item>
+    <item>반-엔트로피의 문양은 가해자를 얼리고, 자신을 불태우며 발광시킵니다.</item>
+    <item>다중성의 문양은 거울상을 하나 생성하지만 피해를 받습니다. 이 효과로 인해서 당신은 죽을 수도 있습니다.</item>
+    <item>전위의 문양은  공격자에게 전류를 방출해 피해를 줍니다. 영웅도 피해를 입지만 적에게 준 피해에서 평균적으로 절반의 피해를 입습니다.</item>
+    <item>신진대사의 문양은 만복도를 소모하고 적에게서 피해를 받기 직전에 회복합니다. 굶주리지 않을 때에만 발동합니다.</item>
+    <item>악취의 문양은 독가스를 방출합니다.</item>
+    <item>점성의 문양은 피해를 한번에 받는 대신 1씩 나누어 받게 됩니다.</item>
+    <item>변위의 문양은 자신을 시야 내의 무작위 위치로 순간이동 시킵니다. 보스  층에서는 발동하지 않습니다.</item>
+    <item>속박의 문양은 영웅이 자연의 갑옷을 얻을 수 있지만, 동시에 속박 당하게 됩니다.</item>
+    <item>음침한 무기로  공격에 성공한다면 몬스터를 즉사시킬수 있습니다.(보스에게는 2배의 피해를 입힙니다.).</item>
+    <item>불타는 무기로 공격에 성공한다면 추가적인 피해를 주고 불태울 수도 있습니다.</item>
+    <item>섬뜩한 무기로 공격에 성공한다면 적을 공포에 질러 도망치게 할 수 있습니다.</item>
+    <item>불안정한 무기로 공격에 성공한다면 무작위의 마법 부여된 효과를 발동합니다. .</item>
+    <item>흡혈의 무기로 공격에 성공한다면 적에게 준 피해의 일부를 회복할 수도 있습니다. </item>
+    <item>행운의 무기는 적의 방어력을 무시한 채 추가적인 피해를 입힙니다.</item>
+    <item> 기절시키는 무기는 성공적으로 공격한다면 적을 마비시킬 수도 있습니다.</item>
+    <item>꿰뚫는 무기는 성공적으로 공격한다면 대상의 뒤의 적들에게도 피해를 입힐수도 있습니다 .</item>
+    <item>독성 무기는 성공적으로 공격한다면 대상을 중독시킬수도 있습니다. </item>
+    <item>냉기의 무기는 성공적으로 공격한다면 대상을 감속시키고 불타지 못하게 막습니다.</item>
+    <item>  사나운 무기는 성공적으로 공격한다면 대상 주변의 모든 적들에게도 피해를 입힐 수도 있습니다.  </item>
+    <item>이 책은 악마의 언어로 적혀 있습니다. </item>
+    <item>이 책은 드워프의 언어로 적혀 있습니다 .</item>
+    <item>이 책은 엘프의 언어로 적혀 있습니다. </item>
     <item>She stopped, frozen, at the heavy oaken door, and eyed the light emerging from the door\'s borders. From some neglected corner of her mind, recognition.\n
 \"Sunlight..\" she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
 She remembered their voices, their commands, and their warnings, but not their faces, nor their touch.\n

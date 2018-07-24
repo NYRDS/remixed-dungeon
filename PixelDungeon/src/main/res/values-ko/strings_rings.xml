@@ -51,7 +51,7 @@
   <string name="RingOfMending_Info">이 반지는 신체의 재생속도를 증가시켜 빠르게 체력을 회복합니다. 역강화된 반지는 자연재생을 감소시키거나 중지시킵니다.</string>
   <!--STRINGS OF RingOfPower CLASS-->
   <string name="RingOfPower_Name">힘의 반지</string>
-  <string name="RingOfPower_Info">당신의 완드는 이 반지에서 나오는 에너지에 의해 더 강해집니다. 역강화된 반지는 당신의 완드의 힘을 약화시킵니다.</string>
+  <string name="RingOfPower_Info">당신의 마법봉이 이 반지에서 나오는 힘의 장막에 의해 더 강해질 것입니다. 역강화된 반지는 당신의 마법봉의 힘을 약화시킵니다.</string>
   <!--STRINGS OF RingOfSatiety CLASS-->
   <string name="RingOfSatiety_Name">포만의 반지</string>
   <string name="RingOfSatiety_Info">이 반지는 당신이 음식없이 오랫동안 행동할 수 있게 해줍니다. 역강화된 반지는 반대의 효과를 유발합니다.</string>
@@ -71,9 +71,25 @@
   <string name="SpiderCharm_Use">사용</string>
   <!--STRINGS OF ChaosCrystal CLASS-->
   <string name="ChaosCrystal_Name">이상한 수정</string>
+  <string name="ChaosCrystal_Name_1">혼돈의 수정</string>
+  <string name="ChaosCrystal_Name_2">혼돈의 수정</string>
   <string name="ChaosCrystal_Info">쥐고 있는 동안 손으로 흘러 들어오는 에너지의 흐름이 느껴진다.</string>
+  <string name="ChaosCrystal_Info_1">혼돈의 힘이 이 수정을 통해 흐릅니다. 아마도 유용할 것 같습니다.</string>
+  <string name="ChaosCrystal_Info_2">좋아요! 이제 당신은 이걸 당신의 아이템과 융합할 수 있을 것을 깨달았습니다. 다음은 무엇일까요?</string>
   <string name="ChaosCrystal_Use">사용</string>
+  <string name="ChaosCrystal_Fuse">융합</string>
+  <string name="ChaosCrystal_Prompt">혼돈의 표식을 설치할 위치를 고르세요.</string>
+  <string name="ChaosCrystal_SelectForFuse">혼돈의 수정을 합체시킬 아이템을 고르세요.</string>
+  <string name="ChaosCrystal_ScrollFused">수정이 마법으로 인해 주문서에 씌여졌고, 이제 이건 %s입니다.</string>
+  <string name="ChaosCrystal_SwordFused">수정이 당신의 무기를 흡수했고, 검의 형태가 되었습니다.</string>
+  <string name="ChaosCrystal_BowFused">수정이 당신의 활을 흡수했고, 활의 형태가 되었습니다.</string>
+  <string name="ChaosCrystal_StaffFused">수정이 당신의 마법봉을 흡수했고, 지팡이의 형태가 되었습니다.</string>
+  <string name="CorpseDust_Buff">피에 굶주린</string>
+  <string name="DriedRose_Buff">애정</string>
+  <string name="DriedRose_CursedBuff">모호함</string>
+  <string name="RatSkull_Buff">쥐스러움</string>
   <string name="RatKingCrown_Buff">쥐결함</string>
   <!--STRINGS OF RatKingCrown CLASS-->
   <string name="RatKingCrown_Name">쥐 대왕의 왕관</string>
+  <string name="RatKingCrown_Info">그의 쥐스러움의 황금 왕관으로, 영원한 힘을 상징합니다.</string>
 </resources>

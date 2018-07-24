@@ -1,3 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    </resources>
+    <!-- Window descriptions -->
+    <!-- STRINGS OF WndPlayGames CLASS -->
+    <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPlayGames_Use">Google Play Games 사용하기</string>
+    <string name="WndPlayGames_Connecting">Google Play Games에 연결 중입니다. 그러니 잠시만 기다려 주세요.</string>
+    <string name="WndPlayGames_Show_Badges">뱃지 보기</string>
+    <string name="WndPlayGames_Show_Leaderboards">점수판 보기</string>
+
+    <string name="WndPlayGames_Show_Ok">성공!</string>
+    <string name="WndPlayGames_Show_Error">작업에 실패하였습니다. 무언가 잘못됬습니다. </string>
+
+</resources>

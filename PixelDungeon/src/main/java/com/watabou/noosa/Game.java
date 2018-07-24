@@ -275,11 +275,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
                     synchronized (wait) {
                         wait.notify();
                     }
-                    Music.INSTANCE.pause();
-                    Sample.INSTANCE.pause();
                 }
             }
         });
+
+        Music.INSTANCE.pause();
+        Sample.INSTANCE.pause();
 
         try {
             synchronized (wait) {
@@ -298,12 +299,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void onDestroy() {
         super.onDestroy();
 
+        Music.INSTANCE.mute();
+        Sample.INSTANCE.reset();
+
         executeInGlThread(new Runnable() {
             @Override
             public void run() {
-                Music.INSTANCE.mute();
-                Sample.INSTANCE.reset();
-
+;
                 if (scene != null) {
                     scene.destroy();
                     scene = null;

@@ -3,14 +3,14 @@
   <!--GENERAL STRINGS VARIABLES-->
   <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">수많은 영웅들이 당신 이전에 던전으로 모험을 떠났습니다. 몇몇은 보물이나 마법 장비와 함께 돌아오기도 했지만, 대부분은 그 이후로 소식이 끊겼습니다. 하지만 그 누구도 던전 가장 아래에 숨겨진 옌도르의 아뮬렛을 손에 넣는데 성공한 사람은 없죠.\n\n당신은 이제 도전을 받아들일 준비가 되었습니다. 무엇보다도 행운의 여신이 당신에게 미소짓고 있다고 생각하기 때문이죠. 자, 이제 당신만의 모험을 떠날 시간입니다!</string>
+  <string name="IntroScene_Txt">수많은 영웅들이 당신 이전에 던전으로 모험을 떠났습니다. 몇몇은 보물이나 마법 장비와 함께 돌아오기도 했지만, 대부분은 그 이후로 소식이 끊겼습니다. 하지만 그 누구도 던전 가장 아래에 숨겨져 있다고 하는 옌도르의 아뮬렛을 손에 넣는데 성공한 사람은 없죠.\n\n당신은 이제 도전을 받아들일 준비가 되었습니다. 무엇보다도 행운의 여신이 당신에게 미소짓고 있다고 생각하기 때문이죠. 자, 이제 당신만의 모험을 떠날 시간입니다!</string>
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">여기서 끝내기로 하지</string>
   <string name="AmuletScene_Stay">아직 끝내긴 일러</string>
   <string name="AmuletScene_Txt">당신은 마침내 손에 옌도르의 아뮬렛을 거머쥐었습니다. 이 힘을 이용해서 당신은 세상을 손에 넣을 수도 있고 아니면 평화와 번영을 가져다 줄수도 있는 등 여러 가지 일을 할 수 있다. 어쨌든, 당신의 인생은 완전히 바뀔 것이고, 게임은 여기서 끝날 겁니다. 아니면, 그저 필멸자 상태로 좀 더 머무를 수도 있고요.</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">Pixel Dungeon의 %d층에 오신걸 환영합니다!</string>
-  <string name="GameScene_WelcomeBack">Pixel Dungeon의 %d층에 돌아왔습니다!</string>
+  <string name="GameScene_WelcomeBack">Pixel Dungeon의 %d층에 돌아오신 것을 환영합니다!</string>
   <string name="GameScene_NightMode">조심하세요, 던전은 밤중엔 보다 더 위험하답니다.</string>
   <string name="GameScene_Chasm">당신의 발자국 소리가 던전에 울려 퍼집니다.</string>
   <string name="GameScene_Water">물 소리가 당신 주위에서 들려 옵니다.</string>
@@ -30,17 +30,17 @@
     <item>%s 이/가 당신을 죽였습니다...</item>
   </string-array>
   <string-array name="Char_Defeat">
-    <item>%1$s이(가) %2$s</item>
-    <item>%1$s이(가) %2$s</item>
-    <item>%1$s이(가) %2$s</item>
+    <item>%1$s이(가) %2$s를 죽였다.</item>
+    <item>%1$s이(가) %2$s를 죽였다.</item>
+    <item>%1$s이(가) %2$s를 죽였다.</item>
   </string-array>
   <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
   <string name="Char_SmbMissed">%1$s %2$s %3$s의 공격</string>
   <string name="Char_OutParalysis">고통이 %s를 마비로부터 벗어나게 했습니다</string>
   <string-array name="Char_StaDodged">
-    <item>회피! </item>
-    <item>회피! </item>
-    <item>회피! </item>
+    <item>이(가) </item>
+    <item>이(가) </item>
+    <item>이(가) </item>
   </string-array>
   <string name="Char_StaPoisoned">중독</string>
   <string name="Char_StaAmok">착란</string>
@@ -57,6 +57,32 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">글자가 뭔말인지 해독할 수 없습니다..</string>
   <string name="Dungeon_DeadEnd">당신 여기서 뭐하시는 겁니까?!</string>
+  <string-array name="Dungeon_Tips">
+    <item>당신의 힘을 과신하지 마십시오. 당신이 다룰 수 있을 만한 무기나 갑옷을 착용하세요.</item>
+    <item>던전에 있는 모든 문들이 처음부터 볼 수 있는 것은 아닙니다. 막혔다면, 숨겨진 문들을 찾아 보세요.</item>
+    <item>힘을 올리는 것만이 좋은 장비를 착용하는 유일한 방법이 아닙니다. 당신은 업그레이드 주문서를 사용해서 장비의 요구 힘 수치를 낮출 수 있습니다.</item>
+    <item> 당신은 당신의 골드를 마을이나 던전 상점에서 사용할 수 있습니다</item>
+    <item>블랙 푸딩을 조심하세요!</item>
+    <item>Pixel-마트 -당신의 성공적인 모험을 위한 모든 것!</item>
+    <item>당신이 가진 물약과 두루마리의 정체를 가능한한 빨리 파악 하세요. 실제로 필요한 순간이 올 때 까지 미루지 마세요.</item>
+    <item>배고픈건 고통을 주진 않지만, 굶주리게 되면 고통이 따릅니다.</item>
+    <item>기습 공격은 명중률이 높습니다. 예를 들자면, 적이 다가오고 있다는 걸 알고 있으면 닫힌 문뒤에 숨어서 기다리는 방법이 있습니다.</item>
+    <item>텐구를 밖으로 나가지 못하게 하시오!</item>
+    <item>Pixel-마트. 돈을 쓰세요. 오래 살아요.</item>
+    <item>동시의 여러마리의 몬스터에게 공격을 받는다면, 문 뒤 쪽으로 후퇴하세요.</item>
+    <item>만약 불 붙은 채로 비행중이라면, 물 속에 들어가서 불을 끄는 것은 불가능 합니다.</item>
+    <item>앙크를 한번에 두 개 이상 가지고 다니는 건 비상식적 입니다. 왜냐하면 죽고나서 부활한다면, 장비하지 않은 것들은 모두 잃어 버리기 때문이죠.</item>
+    <item>경고! 육중한 기계는  부상이나, 수족 절단 또는 사망을 야기할수 있습니다!</item>
+    <item>Pixel-마트. 던전에서 보다 안전한 삶을.</item>
+    <item>인챈트된 무기를 업그레이드할 때 에는, 인챈트가 사라질 확률이 있습니다.</item>
+    <item>변이의 우물을 통해 다른 방법으로는 구할 수 없는 아이템을 얻을 수 있습니다.</item>
+    <item>인챈트된 무기를 만드는 방법은, 오로지 무기 업그레이드의 두루마리를 이용하는 방법밖에 없습니다.</item>
+    <item>폐하가 계신 곳 에서는 어떠한 무기도 허락되지 않는다.</item>
+    <item>Pixel-마트. 악마 사냥꾼들에게 특별가로 모십니다!</item>
+    <item>글자들이 악마의 언어로 적혀 있습니다.</item>
+    <item>글자들이 악마의 언어로 적혀 있습니다.</item>
+    <item>글자들이 악마의 언어로 적혀 있습니다.</item>
+  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>식습관</item>
@@ -74,7 +100,7 @@
   <string name="Journal_Garden">정원</string>
   <string name="Journal_Statue">살아난 석상</string>
   <string name="Journal_Ghost">슬픈 유령</string>
-  <string name="Journal_Wandmaker">늙은 완드 장인</string>
+  <string name="Journal_Wandmaker">마법봉 만드는 노인</string>
   <string name="Journal_Troll">트롤 대장장이</string>
   <string name="Journal_Imp">야망가 임프</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
@@ -82,8 +108,8 @@
   <string name="WndBlacksmith_Select">재 주조할 아이템을 고르세요</string>
   <string name="WndBlacksmith_Reforge">재주조 합니다</string>
   <!--STRINGS OF WndCatalogus CLASS-->
-  <string name="WndCatalogus_Potions">포션</string>
-  <string name="WndCatalogus_Scrolls">스크롤</string>
+  <string name="WndCatalogus_Potions">물약</string>
+  <string name="WndCatalogus_Scrolls">두루마리</string>
   <string name="WndCatalogus_Title">카탈로그</string>
   <!--STRINGS OF WndChallenges CLASS-->
   <string name="WndChallenges_Title">도전들</string>
@@ -147,7 +173,7 @@
   <string name="WndRanking_StaEnemies">죽인 몬스터</string>
   <string name="WndRanking_StaGold">획득한 금화</string>
   <string name="WndRanking_StaFood">먹은 음식</string>
-  <string name="WndRanking_StaAlchemy">제조한 포션</string>
+  <string name="WndRanking_StaAlchemy">제조된 물약</string>
   <string name="WndRanking_StaAnkhs">사용한 앵커</string>
   <!--STRINGS OF WndResurrect CLASS-->
   <string name="WndResurrect_Message">당신은 죽었다, 하지만 이 던전의 정복을 위한 한 번의 기회가 더 주어졌다. 받아 들이겠는가?</string>
@@ -165,6 +191,7 @@
   <string name="WndStory_Caves">그 동굴은, 버려진 지하감옥 밑에 있었습니다. 그들이 이용하기에 너무 깊은 곳에 있었고 미네랄에 관심이 있는 드워프들은 가난했습니다. 과거에 두 도시사이에 무역전초 기지가 있었지만 드워프의 도시가 쇠퇴한뒤에 사라졌습니다. 그곳엔 아직 놀과 지하동물들이 있습니다.</string>
   <string name="WndStory_Metropolis">드워프 메트로폴리스는 한때 드워프의 도시국가중 제일 거대했다. 전성기에 드워프의 기계화 군대가 고대신과 악마군대의 침공을 성공적으로 물리쳤다. 그러나 돌아온 전사들은 타락했고 그 승리가 지하왕국의 종말의 시작이라고 말하고 있다.</string>
   <string name="WndStory_Halls">과거에 이러한 수준은 대도시의 외곽정도였다. 이전에 드워프와 고대신과의 전쟁에서 승리한 후 비용이 너무 많이 드는 나머지, 남은 약화된 악마들을 소탕하지 않았다. 그러자 점차 악마들은 점차 지역을 지배하고 악마들을 소환하기 시작했다. 극소수의 모험가의 후손들에게만 전해져...</string>
+  <string name="WndStory_Spiders">오래 전, 마법의 돌로 가득 찬 풍족한 광산이 있었씁니다. 그러나 광맥이 말라버리자 광부들은 넓은 터널 망을 남긴 채 사라졌습니다. 결국 이 장소는 거미들이 차지하게 되었습니다, 그러나저러한 위험한 생물체들이, 광산의 보물들을 찾으려는 용감하고 미친 사람들을 내쫓기에는 충분하지 않았습니다. 위험의 정도는 항상 마법 유물들에 관한 소문에 비례하였다. 옛날 옛적에 사악한 마녀가 검찰관으로부터 도망치기 위해 이 터널로 들어왔는데, 미신을 믿는 사람들이 어둠 속으로 들어가질 못했고 그들은 기다리기로 했다. 그러나 마녀는 절대 나타나지 않았다. 어쩌면 마녀는 다른 출구를 찾았을 수도 있고, 경비 몰래 지나갔을 수도 있겠지만, 어둠의 생명체들의 바스락거리는 소리에 둘러쌓인 채 죽었을 수도 있다.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">할인 : %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">구매 %dg</string>
@@ -175,16 +202,16 @@
   <string name="WndTradeItem_Sold">%1$s 을/를 %2$dg 에 판매했습니다.</string>
   <string name="WndTradeItem_Bought">%1$s 을/를 %2$dg 에 구매했습니다.</string>
   <!--STRINGS OF WndWandmaker CLASS-->
-  <string name="WndWandmaker_Message">오, 성공했군! 자, 너무 고민하지 말게나. 약속대로 내 고급 지팡이중 하나를 주겠네.</string>
-  <string name="WndWandmaker_Battle">전투용 지팡이</string>
-  <string name="WndWandmaker_NonBattle">비전투용 지팡이</string>
+  <string name="WndWandmaker_Message">오, 성공했군! 자네를 너무 귀찮게 하지 않았기를 바라네. 약속한 대로, 자네는 나의 질좋은 마법봉들 중 하나를 선택할 수 있네.</string>
+  <string name="WndWandmaker_Battle">전투용 마법봉</string>
+  <string name="WndWandmaker_NonBattle">범용적인 마법봉</string>
   <string name="WndWandmaker_Farawell">자네의 퀘스트에 행운을 빌겠네, %s!</string>
   <!--STRINGS OF QuickSlot CLASS-->
   <string name="QuickSlot_SelectedItem">퀵슬롯에 등록 할 아이템을 선택하세요.</string>
   <!--STRINGS OF Item CLASS-->
   <string name="Item_Name">어떤것</string>
   <string name="Item_Info">어떤것</string>
-  <string name="Item_ACDrop">버리다</string>
+  <string name="Item_ACDrop">버리기</string>
   <string name="Item_ACThrow">던지다</string>
   <string name="Item_PackFull">가방이 가득차서 %s 넣을 수 없습니다.</string>
   <string name="Item_DirThrow">던질 방향을 선택하세요.</string>
@@ -236,14 +263,14 @@
   <string name="LloidsBeacon_Set">
 lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</string>
   <!--STRINGS OF Stylus CLASS-->
-  <string name="Stylus_Name">arcane stylus - 갑옷인첸트</string>
+  <string name="Stylus_Name">신비한 바늘</string>
   <string name="Stylus_ACInscribe">룬을 새기다</string>
-  <string name="Stylus_Info">arcane stylus 는 일부분이 검고 무거운 돌재질로 구성되어있습니다. 룬을 그리거나 새겨 넣을 수 있지만, 어떤 효과가 부여될지는 arcane stylus 가 결정합니다.</string>
+  <string name="Stylus_Info">신비한 바늘은 약간 어둡고, 매우 단단한 돌로 만들어져 있습니다. 이것을 사용함으로서 문양을 적거나 마법 문자를 적을 수 있을 것입니다. 하지만 어떤 것을 고를 수는 없을 것이며, 바늘만이 당신을 위해 고를 것입니다.</string>
   <string name="Stylus_SelectArmor">룬을 새겨넣을 아이템을 선택하세요</string>
   <string name="Stylus_Inscribed">%2$s 에 %1$s 룬이 새겨졌습니다.</string>
   <!--STRINGS OF TomeOfMastery CLASS-->
   <string name="TomeOfMastery_Name">Tome of Mastery</string>
-  <string name="TomeOfMastery_ACRead">읽는다</string>
+  <string name="TomeOfMastery_ACRead">읽기</string>
   <string name="TomeOfMastery_Info">두껍지 않지만 가죽으로 마감된 이 책은 읽는데 시간이 좀 걸리겠지만 당신에게 많은 영감을 줄 수 있다는걸 기억하세요.</string>
   <string name="TomeOfMastery_Blinded">눈이 먼 상태에서는 읽을 수 없습니다.</string>
   <string name="TomeOfMastery_Choose">%s 길을 선택했습니다.</string>
@@ -269,17 +296,17 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="Keyring_Name">열쇠고리</string>
   <string name="Keyring_Info">이것은 열쇠들이 가방에서 자리를 차지하지 않도록, 따로 보관할 수 있는 구리 열쇠고리 입니다.</string>
   <!--STRINGS OF ScrollHolder CLASS-->
-  <string name="ScrollHolder_Name">스크롤 홀더</string>
+  <string name="ScrollHolder_Name">두루마리 집</string>
   <string name="ScrollHolder_Info">이 관 모양의 용기에 스크롤을 넣어놓을 수 있습니다. 이건 공간을 절약하고 화재로부터 스크롤을 보호합니다.</string>
   <!--STRINGS OF SeedPouch CLASS-->
   <string name="SeedPouch_Name">씨앗주머니</string>
   <string name="SeedPouch_Info">이 작은 벨벳주머니는 씨앗들을 저장할 수 있습니다. 매우 편리합니다.</string>
   <!--STRINGS OF WandHolster CLASS-->
-  <string name="WandHolster_Name">완드집</string>
-  <string name="WandHolster_Info">이 슬림한 완드집은 이국적인 동물의 가죽으로 만들었습니다. 여기에 %d 개 까지의 완드를 보관할 수 있습니다.</string>
+  <string name="WandHolster_Name">마법봉 보관함</string>
+  <string name="WandHolster_Info">이 얇은 마법봉 걸이는 이국적인 동물의 가죽으로 만들었습니다.이것은 당신에게%d 개의 마법봉을 보관할 수 있게 해줍니다.</string>
   <!--STRINGS OF PotionBelt CLASS-->
-  <string name="PotionBelt_Info">이 튼튼한 가죽벨트로 깨지기 쉬운 여러 포션들을 보관할 수 있습니다.</string>
-  <string name="PotionBelt_Name">포션 벨트</string>
+  <string name="PotionBelt_Info">이 튼튼한 가죽벨트는 깨지기 쉬운 여러 물약들을 얼어서 깨지는 것을 방지하면서 보관할 수 있습니다.</string>
+  <string name="PotionBelt_Name">물약 벨트</string>
   <!--PACKAGE /items/keys-->
   <!--STRINGS OF GoldenKey CLASS-->
   <string name="GoldenKey_Name">황금열쇠</string>
@@ -295,6 +322,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <!--STRINGS OF CorpseDust CLASS-->
   <string name="CorpseDust_Name">시체 먼지</string>
   <string name="CorpseDust_Info">시체에서 나온 먼지나 일반적인 먼지나 외관상 별차이가 없어보입니다. 어쨋든 가능한 빨리 없애고 찾아오세요.</string>
+  <string name="CorpseDust_Info2">아마도 이걸 드는 것으로도 당신은 불안하고 화가 나게 되는 것 같습니다.</string>
   <!--STRINGS OF DarkGold CLASS-->
   <string name="DarkGold_Name">흑금광석</string>
   <string name="DarkGold_Info">이 금속은 어두운 색이라곤 하지만 일반적인 금과 다르지 않습니다. 왜나하면 햇빛 아래에서 검은 표면이 녹아내리면 쓸모있게 변하기 때문입니다.</string>
@@ -314,6 +342,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <!--STRINGS OF RatSkull CLASS-->
   <string name="RatSkull_Name">거대한 쥐의 두개골</string>
   <string name="RatSkull_Info">아주 좋은 사냥 기념품이 될 수 있겠지만...벽에 걸어놓기엔 악취가 너무 심합니다.</string>
+  <string name="RatSkull_Info2">어떻게 보면, 주인은 쥐를 잡을수 있던 것으로 보입니다. 심지어 크고 냄새나는 것들도요.</string>
   <!--PACKAGE /actors/blobs-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <string name="ConfusionGas_Info">혼란을 주는 가스 구름이 소용돌이 칩니다.</string>
@@ -324,7 +353,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <!--STRINGS OF ParalyticGas CLASS-->
   <string name="ParalyticGas_Info">마비가스의 구름이 소용돌이 칩니다.</string>
   <!--STRINGS OF ToxicGas CLASS-->
-  <string name="ToxicGas_Info">녹색 독성 가스구름이 소용돌이 칩니다.</string>
+  <string name="ToxicGas_Info">녹색 독성 가스구름이 소용돌이 치고 있습니다.</string>
   <string name="ToxicGas_Info1">당신은 유독가스 흡입으로 사망하였습니다...</string>
   <!--STRINGS OF WaterOfAwareness CLASS-->
   <string name="WaterOfAwareness_Info">지식의 힘이 우물에서 흘러나옵니다. 한모금 마시면 당신이 장착한 아이템의 모든 정보를 알게 됩니다.</string>

@@ -2,8 +2,8 @@
 <resources>
 	<!-- Accessories descriptions -->
 	<!-- STRINGS OF BowTie CLASS -->
-    <string name="Bowknot_Name">나비리본</string>
-    <string name="Bowknot_Info">머리핀에 달린 귀여운 분홍색 반짝이 리본이다.</string>
+    <string name="Bowknot_Name">리본 머리핀</string>
+    <string name="Bowknot_Info">귀여운 분홍색 반짝이 리본이 머리핀에 달려 있다.</string>
 	
 	<!-- STRINGS OF Shades CLASS -->
     <string name="Shades_Name">그림자</string>
@@ -27,7 +27,7 @@
 	
 	<!-- STRINGS OF Pumpkin CLASS -->
     <string name="Pumpkin_Name">호박</string>
-    <string name="Pumpkin_Info">옛날에는 호박인간들이 자랑스럽고 번영된 국가를 가지고 있었습니다. 그러나 인간들이 오자 모든것이 파멸을 맞이하게 되었습니다. 그리고 잘게 갈라진 오래 전에 사라져버린 호박 부족들의 머리는 그러한 끔찍한 사건들을 나누는 역할을  했습니다.  </string>
+    <string name="Pumpkin_Info">옛날에는 호박인간들이 자랑스럽고 번영된 국가를 가지고 있었습니다. 그러나 인간들이 오자 모든것이 파멸을 맞이하게 되었습니다. 그리고 잘게 갈라진 오래 전에 사라져버린 호박 부족들의 머리는 그러한 끔찍한 사건들을 기념하는 역할을 합니다.</string>
 	
 	<!-- STRINGS OF SleepyHat CLASS -->
     <string name="Nightcap_Name">잠옷 모자</string>

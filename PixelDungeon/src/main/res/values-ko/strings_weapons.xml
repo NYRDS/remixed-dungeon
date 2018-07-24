@@ -2,14 +2,14 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분히 익숙해져 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
-  <string name="Weapon_Incompatible">서로 다른 종류의 마법들의 작용으로 무기의 각인이 지워져 버렸다</string>
+  <string name="Weapon_Identify">당신은 이제 %1$s 에 충분히 익숙해졌기 때문에 그 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
+  <string name="Weapon_Incompatible">서로 다른 종류의 마법들이 작용해 버려서 무기에 부여된 마법이 지워져 버렸다!</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
-    <item>죽음의 %s</item>
-    <item>죽음의 %s</item>
-    <item>죽음의 %s</item>
+    <item>음침한 %s</item>
+    <item>음침한 %s</item>
+    <item>음침한 %s</item>
   </string-array>
   <!--STRINGS OF Fire CLASS-->
   <string-array name="Fire_Name">
@@ -55,9 +55,9 @@
   </string-array>
   <!--STRINGS OF Poison CLASS-->
   <string-array name="Poison_Name">
-    <item>악의에 찬 %s</item>
-    <item>악의에 찬 %s</item>
-    <item>악의에 찬 %s</item>
+    <item>독성 %s</item>
+    <item>독성 %s</item>
+    <item>독성 %s</item>
   </string-array>
   <!--STRINGS OF Slow CLASS-->
   <string-array name="Slow_Name">
@@ -67,9 +67,9 @@
   </string-array>
   <!--STRINGS OF Swing CLASS-->
   <string-array name="Swing_Name">
-    <item>야생의 %s</item>
-    <item>야생의 %s</item>
-    <item>야생의 %s</item>
+    <item>사나운 %s</item>
+    <item>사나운 %s</item>
+    <item>사나운 %s</item>
   </string-array>
   <!--PACKAGE /weapon/melee-->
   <!--STRINGS OF MeleeWeapon CLASS-->
@@ -161,7 +161,7 @@
   <string name="Boomerang_Gender">남성</string>
   <!--STRINGS OF CurareDart CLASS-->
   <string name="CurareDart_Name">큐라레 다트</string>
-  <string name="CurareDart_Info">이 작은 이블다트는 많은 데미지를 주지 않는다. 그러나 적중된 대상은 얼마간 무기력해지거나 움직임이 느려집니다.</string>
+  <string name="CurareDart_Info">이 작고 사악한 다트는 많은 피해를 주지 않지만 대상을 마비켜서 잠시동안 무력화되게 할 수 있습니다.</string>
   <string name="CurareDart_Gender">남성</string>
   <!--STRINGS OF Dart CLASS-->
   <string name="Dart_Name">다트</string>

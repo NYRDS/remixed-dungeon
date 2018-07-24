@@ -2,11 +2,11 @@
 <resources>
   <!--STRINGS OF WndDonate CLASS-->
   <string name="WndDonate_silver">은</string>
-  <string name="WndDonate_gold">골드</string>
+  <string name="WndDonate_gold">금화</string>
   <string name="WndDonate_ruby">루비</string>
   <string name="WndDonate_donate">기부하세요:</string>
   <string name="WndDonate_notConnected">연결 안됨 :(</string>
-  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - 모두에게 무료이고 앞으로도 계속 그럴것 입니다.\n\n하지만, 여러분은 저희가 보다 나은 게임을 만드는데 도와 주실수 있습니다.\n\n또한 저희 감사의 표시로 도움을 주신 분들께 몇몇 장식품을 증정해 드립니다. 모든 번역의 저작권은 Henry Yi, hhaakpk@naver.com에게 있습니다.</string>
+  <string name="WndDonate_commonDonateText">Remixed pixel dungeon은 모두에게 무료이며 앞으로도 그럴 것입니다. 그러나, 여러분은 우리를 도와 더 나은 게임을 만드는 데 도음을 주실 수 있습니다. 우리는 감사의 표시 이외에도 특별한 장식품을 줄 것입니다.</string>
   <string name="WndDonate_silverDonate">은 기부</string>
   <string name="WndDonate_goldDonate">금 기부</string>
   <string name="WndDonate_rubyDonate">루비 기부</string>
