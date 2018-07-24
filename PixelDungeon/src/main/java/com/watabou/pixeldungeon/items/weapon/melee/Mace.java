@@ -17,21 +17,16 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Mace extends MeleeWeapon {
 	{
 		image = ItemSpriteSheet.MACE;
+		animation_class = HEAVY_ATTACK;
 	}
 	
 	public Mace() {
 		super( 3, 1f, 0.8f );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Mace_Info);
-	}
+
 }

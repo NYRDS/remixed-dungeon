@@ -17,13 +17,14 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class BattleAxe extends MeleeWeapon {
 	{
 		image = ItemSpriteSheet.BATTLE_AXE;
+		animation_class = HEAVY_ATTACK;
 	}
 	
 	public BattleAxe() {

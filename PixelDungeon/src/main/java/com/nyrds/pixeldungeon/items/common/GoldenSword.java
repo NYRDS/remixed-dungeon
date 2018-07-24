@@ -12,6 +12,7 @@ public class GoldenSword extends SpecialWeapon {
 		imageFile = "items/swords.png";
 		image = 5;
 		enchatable = false;
+		animation_class = SWORD_ATTACK;
 	}
 
 	public GoldenSword() {

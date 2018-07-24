@@ -6,6 +6,7 @@ public class ElvenDagger extends MeleeWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 8;
+		animation_class = SWORD_ATTACK;
 	}
 
 	public ElvenDagger() {

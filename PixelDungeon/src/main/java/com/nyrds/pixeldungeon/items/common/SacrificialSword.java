@@ -16,6 +16,7 @@ public class SacrificialSword extends SpecialWeapon {
 		imageFile = "items/swords.png";
 		image = 4;
 		enchatable = false;
+		animation_class = SWORD_ATTACK;
 	}
 	
 	public SacrificialSword() {

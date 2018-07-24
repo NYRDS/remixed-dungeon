@@ -30,10 +30,14 @@ import java.util.ArrayList;
 public class KindOfWeapon extends EquipableItem {
 
 	protected static final float TIME_TO_EQUIP = 1f;
+
 	public static final String BASIC_ATTACK = "basic";
 	public static final String SWORD_ATTACK = "sword";
 	public static final String SPEAR_ATTACK = "spear";
 	public static final String BOW_ATTACK   = "bow";
+	public static final String STAFF_ATTACK = "staff";
+	public static final String HEAVY_ATTACK = "heavy";
+	public static final String WAND_ATTACK  = "wand";
 
 	protected String animation_class = BASIC_ATTACK;
 
