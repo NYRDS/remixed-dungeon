@@ -364,8 +364,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	public Image avatar() {
 
 		if(avatar==null) {
-			avatar = snapshot(0);
-			avatar.frame(idle.frames[0]);
+			avatar = snapshot(idle.frames[0]);
 		}
 
 		return avatar;

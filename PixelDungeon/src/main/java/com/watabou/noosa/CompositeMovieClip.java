@@ -1,5 +1,7 @@
 package com.watabou.noosa;
 
+import android.graphics.RectF;
+
 import com.watabou.glwrap.Texture;
 
 import java.util.ArrayList;
@@ -54,13 +56,15 @@ public class CompositeMovieClip extends MovieClip {
 		return null;
 	}
 
-	public Image snapshot(int frame) {
+	public Image snapshot(RectF frame) {
 		CompositeTextureImage img = new CompositeTextureImage(texture);
 		img.clearLayers();
 
 		for (LayerDesc layer : mLayers) {
 			img.addLayer(layer.texture);
 		}
+
+		img.frame(frame);
 
 		return img;
 	}
