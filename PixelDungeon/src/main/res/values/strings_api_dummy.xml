@@ -5,7 +5,7 @@
     <string name="easyModeAdUnitId">ca-app-pub-3940256099942544/6300978111</string>
     <string name="easyModeSmallScreenAdUnitId">ca-app-pub-3940256099942544/1033173712</string>
     <string name="cinemaRewardAdUnitId">ca-app-pub-3940256099942544/5224354917</string>
-    <string name="appodealRewardAdUnitId">843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3</string>
+    <string name="appodealRewardAdUnitId"></string>
     <string name="iapKey"></string>
     <string name="ownSignature"></string>
     <string name="app_id"></string>
