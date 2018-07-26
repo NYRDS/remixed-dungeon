@@ -21,7 +21,6 @@ import com.watabou.pixeldungeon.PixelDungeon;
 public class AppodealRewardVideo {
 	private static InterstitialPoint returnTo;
 
-
 	private static boolean isAllowed() {
 		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
 	}
@@ -31,6 +30,7 @@ public class AppodealRewardVideo {
 			@Override
 			public void run() {
 				Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+				Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
 			}});
 	}
 
@@ -40,14 +40,21 @@ public class AppodealRewardVideo {
 			return;
 		}
 
+
+
 		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
+
+				if(Appodeal.isInitialized(Appodeal.REWARDED_VIDEO) && Appodeal.isInitialized(Appodeal.BANNER) ) {
+					return;
+				}
 
 				String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
 
 				//vungle disable due to strange build issue
 				//mopub, mobvista & tapjoy due audiences mismatch
+				//ogury - intersiteal
 				String disableNetworks[] = {"facebook","flurry","startapp","vungle","mopub","mobvista","tapjoy","ogury"};
 
 				for(String net:disableNetworks) {
@@ -62,7 +69,6 @@ public class AppodealRewardVideo {
 				}
 
 				Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, false);
-				Appodeal.setAutoCache(Appodeal.BANNER, false);
 
 				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO|Appodeal.BANNER, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);
 				EventCollector.startTiming("appodeal reward video");
@@ -101,7 +107,7 @@ public class AppodealRewardVideo {
 		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				if(isReady()) {
+				if(isVideoReady()) {
 					Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
 				} else {
 					returnTo.returnToWork(false);
@@ -110,7 +116,7 @@ public class AppodealRewardVideo {
 		});
 	}
 
-	public static boolean isReady() {
+	public static boolean isVideoReady() {
 		return isAllowed() && Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
 	}
 }
