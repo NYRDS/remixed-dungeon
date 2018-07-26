@@ -67,7 +67,7 @@
     <string name="IceCaves_TileGrass">얼은 풀</string>
     <string name="IceCaves_TileDescHighGrass">얼은 초목이 시야를 가린다.</string>
     <string name="IceCaves_TileStatue">얼은 놀</string>
-    <string name="IceCaves_TileDescStatue">또 끔찍한 석상이군... 오 잠깐만 저건 얼어버린 놀이군.</string>
+    <string name="IceCaves_TileDescStatue">또 끔찍한 조각상이군요... 잠시만요, 저건 얼어버린 놀이네요.</string>
 
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->

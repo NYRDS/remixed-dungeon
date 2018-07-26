@@ -87,6 +87,6 @@
   <!--STRINGS OF WandOfTeleportation CLASS-->
   <string name="WandOfTeleportation_Name">순간이동의 마법봉</string>
   <string name="WandOfTeleportation_Info">이 마법봉에서 나온 광선은 생물의 의지와 상관없이 현재 층의 무작위 장소로 순간이동 시킬 것입니다</string>
-  <string name="WandOfTeleportation_Info1"> %2$s 어딘가로 %1$s 이/가 순간이동하였습니다.</string>
+  <string name="WandOfTeleportation_Info1"> %1$s이/가  %2$s를 어딘가로 순간이동 시켰습니다.</string>
   <string name="WandOfTeleportation_Info2">아무일도 일어나지 않았습니다.</string>
 </resources>

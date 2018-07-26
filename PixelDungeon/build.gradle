@@ -17,8 +17,8 @@ android {
 
     defaultConfig {
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 555
-        versionName "remix.28.3.fix.5"
+        versionCode 556
+        versionName "remix.28.3.fix.6"
     }
     buildTypes {
         release {

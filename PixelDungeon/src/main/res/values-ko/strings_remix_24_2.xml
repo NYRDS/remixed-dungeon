@@ -11,7 +11,7 @@
     <string name="GoldenStatue_Name">황금 상</string>
     <string name="GoldenStatue_Gender">여성</string>
     <string name="GoldenStatue_Name_Objective">황금 상</string>
-    <string name="GoldenStatue_Desc">믿기 어렵겠지만, 이 웅장한 상은 전시품이 아니라 순진한 모험가들을 기다리는 사악한 생명체입니다. 언뜻 봐도 _%s_이  석상이 들고 있던 무기의 일부였던 것처럼 보입니다.</string>
+    <string name="GoldenStatue_Desc">믿기 어렵겠지만, 이 웅장한 조각상은 전시품이 아니지만 순진한 모험가들을 기다리는 사악한 생명체입니다. 언뜻 봐도 이 조각상의 팔에는  _%s_이 끼워져 있는 것을 볼 수 있습니다.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
     <string name="NecromancerNPC_Name">강령술사</string>
