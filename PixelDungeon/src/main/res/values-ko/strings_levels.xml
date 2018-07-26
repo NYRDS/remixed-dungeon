@@ -22,7 +22,7 @@
   <string name="Level_TileSign">표지판</string>
   <string name="Level_TileWell">우물</string>
   <string name="Level_TileEmptyWell">빈 우물</string>
-  <string name="Level_TileStatue">석상</string>
+  <string name="Level_TileStatue">조각상</string>
   <string name="Level_TileToxicTrap">독가스 함정</string>
   <string name="Level_TileFireTrap">화염 함정</string>
   <string name="Level_TileParalyticTrap">마비가스 함정</string>
@@ -66,7 +66,7 @@
   <string name="City_TileDescExit">경사로는 아래를 향하고 있다.</string>
   <string name="City_TileDescDeco">몇몇 타일이 사라지고 없다.</string>
   <string name="City_TileDescEmptySP">두터운 카펫이 복도를 덮고 있다.</string>
-  <string name="City_TileDescStatue">이 석상은 영웅적인 풍채로 서 있는 어떤 드워프를 묘사하고 있다.</string>
+  <string name="City_TileDescStatue">이 조각상은 영웅적인 풍채로 서 있는 어떤 드워프를 묘사하고 있다.</string>
   <string name="City_TileDescBookshelf">다양한 학문과 관련된 책들이 책장을 채우고 있다.</string>
   <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
   <string name="Halls_TileWater">차가운 용암</string>

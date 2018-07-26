@@ -15,4 +15,5 @@
   <string name="ResultDescriptions_Fall">Muerto al caer en el nivel %d</string>
   <string name="ResultDescriptions_Win">Amuleto de Yendor obtenido</string>
   <string name="ResultDescriptions_Immured">Encerrado en piedra en el nivel %d</string>
+  <string name="ResultDescriptions_Unknown">Murió en misteriosas circunstancias en el nivel %d </string>
 </resources>

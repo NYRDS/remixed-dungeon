@@ -44,12 +44,12 @@
     <string name="WndMovieTheatre_Watch">영화 보기</string>
     <string name="WndMovieTheatre_No">떠나기</string>
     <string name="WndMovieTheatre_Bye">언제든지 돌아오세요!</string>
-    <string name="WndMovieTheatre_Instruction">영화관에 어서오세요! 우리는 공짜로 영화를 볼 수 있고, 영화를 다 보면 1%d 금화를 받을 수 있는 특별한 서비스를 제공합니다!</string>
+    <string name="WndMovieTheatre_Instruction">영화관에 어서오세요! 우리는 공짜로 영화를 볼 수 있고, 영화를 다 보면 %d 금화를 받을 수 있는 특별한 서비스를 제공합니다!</string>
     <string name="WndMovieTheatre_Title">영화관</string>
     <string name="WndMovieTheatre_Thank_You">참여해 주셔셔 갑사합니다!</string>
 
     <!-- STRINGS OF WndPriest CLASS -->
-    <string name="WndPriest_Heal">회복 - 1%d 금화</string>
+    <string name="WndPriest_Heal">회복 - %d 금화</string>
     <string name="WndPriest_Instruction_m">젊은이여, 위대한 심연의 군주 산타의 교회에 어서오게! 불행하게도 이 건물이 개축 중이기 때문에 이 안으로 들여보내줄수 없지만, 도움이 필요하다면 자네에게 음식과 치유 서비스를  %d 금화에 제공해 주겠네! </string>
     <string name="WndPriest_Instruction_f">젊은이여, 위대한 심연의 군주 산타의 교회에 어서오게! 불행하게도 이 건물이 개축중이기 때문에 이 안으로 들여보내줄수 없지만, 도움이 필요하다면 자네에게 음식과 치유 서비스를  %d  금화에 제공해 주겠네! </string>
     <string name="WndPriest_Title">마을 사제</string>

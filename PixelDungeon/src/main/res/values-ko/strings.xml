@@ -20,9 +20,9 @@
   <string name="Char_Name">무리</string>
   <string name="Char_Name_Objective">무리</string>
   <string-array name="Char_Hit">
-    <item>%1$s 이/가 때렸습니다. %2$s</item>
-    <item>%1$s 이/가 때렸습니다. %2$s</item>
-    <item>%1$s 이/가 때렸습니다. %2$s</item>
+    <item>%1$s 이/가 %2$s을/를 때렸습니다.</item>
+    <item>%1$s 이/가 %2$s을/를 때렸습니다.</item>
+    <item>%1$s 이/가 %2$s을/를 때렸습니다.</item>
   </string-array>
   <string-array name="Char_Kill">
     <item>%s 이/가 당신을 죽였습니다...</item>
@@ -38,9 +38,9 @@
   <string name="Char_SmbMissed">%1$s %2$s %3$s의 공격</string>
   <string name="Char_OutParalysis">고통이 %s를 마비로부터 벗어나게 했습니다</string>
   <string-array name="Char_StaDodged">
-    <item>이(가) </item>
-    <item>이(가) </item>
-    <item>이(가) </item>
+    <item>피함!</item>
+    <item>피함! </item>
+    <item>피함! </item>
   </string-array>
   <string name="Char_StaPoisoned">중독</string>
   <string name="Char_StaAmok">착란</string>
@@ -98,7 +98,7 @@
   <string name="Journal_WellTransmut">변이의 우물</string>
   <string name="Journal_Alchemy">연금술 솥</string>
   <string name="Journal_Garden">정원</string>
-  <string name="Journal_Statue">살아난 석상</string>
+  <string name="Journal_Statue">살아 움직이는 조각상</string>
   <string name="Journal_Ghost">슬픈 유령</string>
   <string name="Journal_Wandmaker">마법봉 만드는 노인</string>
   <string name="Journal_Troll">트롤 대장장이</string>
@@ -248,7 +248,7 @@
   <!--STRINGS OF Gold CLASS-->
   <string name="Gold_Name">금화</string>
   <string name="Gold_Collect">나중에 상점에서 사용할 수 있는 금화를 수집합니다.</string>
-  <string name="Gold_Info">%d 금화더미</string>
+  <string name="Gold_Info">%d개의 금화더미</string>
   <string name="Gold_Info1">금화 한개.</string>
   <!--STRINGS OF KindOfWeapon CLASS-->
   <string name="KindOfWeapon_EquipCursed">%s 주위로 몰려드는 강한 느낌에 당신은 잠시 주춤 했습니다.</string>
@@ -377,7 +377,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="Blindness_Info">실명</string>
   <!--STRINGS OF Burning CLASS-->
   <string name="Burning_Info">불타는</string>
-  <string name="Burning_Burns">%s 이/가 화상을 입었습니다!</string>
+  <string name="Burning_Burns">%s 이/가 불탔습니다!</string>
   <string name="Burning_Death">불에 타죽었습니다...</string>
   <!--STRINGS OF Charm CLASS-->
   <string name="Charm_Info">매혹</string>
@@ -388,7 +388,7 @@ lloyd의 신호기는 %d 층 어딘가에 귀환지점을 설정했습니다.</s
   <string name="Cripple_Info">불구</string>
   <!--STRINGS OF Frost CLASS-->
   <string name="Frost_Info">얼어붙은</string>
-  <string name="Frost_Shatter">%s 이/가 얼어붙어 산산조각 났습니다!</string>
+  <string name="Frost_Shatter">냉기가 %s 을/를 깨트렸습니다! </string>
   <!--STRINGS OF Fury CLASS-->
   <string name="Fury_Info">격노</string>
   <!--STRINGS OF GasesImmunity CLASS-->

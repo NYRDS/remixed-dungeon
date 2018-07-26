@@ -163,10 +163,10 @@
   <string name="Spinner_Name_Objective">동굴 거미</string>
   <string name="Spinner_Desc">이 초록색 털복숭이 동굴 거미들은 직접 전투를 꺼려 하는 대신, 그들의 희생자들이 독에 물린채 그들이 뿜어 놓은 거미줄에 걸려 서서히 죽어가는 것을 멀리서 지켜보는 걸 좋아한다.</string>
   <!--STRINGS OF Statue CLASS-->
-  <string name="Statue_Name">살아있는 석상</string>
+  <string name="Statue_Name">살아 움직이는 조각상</string>
   <string name="Statue_Gender">여성</string>
-  <string name="Statue_Name_Objective">살아있는 석상</string>
-  <string name="Statue_Desc">던전에 있는 못생긴 여느 석상과 다를바 없다고 생각 할수도 있지만, 붉게 빛나는 눈은 그렇지 않다고 말하고 있다. 석상 자체는 돌로 만들어져 있지만, _%s_, 무기를 휘두르는걸 보면, 진짜다.</string>
+  <string name="Statue_Name_Objective">살아 움직이는 조각상</string>
+  <string name="Statue_Desc">당신은 이 조각상을 던전에 있는 못생긴 여느 조각상과 다를바 없다고 생각 할수도 있겠지만, 붉게 빛나는 눈이 그러한 생각을 사라지게 합니다. 조각상 자체는 돌로 만들어져 있지만,착용한  _%s_는 진짜 같습니다.</string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">서큐버스</string>
   <string name="Succubus_Gender">남성</string>
