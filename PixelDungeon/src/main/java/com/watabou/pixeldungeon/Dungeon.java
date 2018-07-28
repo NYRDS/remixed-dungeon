@@ -444,8 +444,8 @@ public class Dungeon {
 
     public synchronized static void save() {
 
-        if (SystemTime.now() - lastSaveTimestamp < 250) {
-            GLog.i("Saving too fast...");
+        if (SystemTime.now() - lastSaveTimestamp < 1000) {
+            EventCollector.logException(new Exception("spurious saves"),"bug");
             return;
         }
 
@@ -456,6 +456,7 @@ public class Dungeon {
             saveAllImpl();
             EventCollector.stopTiming("saveGame", "saveGame", Dungeon.level.levelId, Game.version);
         } catch (Exception e) {
+            EventCollector.logException(e);
             throw new TrackedRuntimeException(e);
         }
     }

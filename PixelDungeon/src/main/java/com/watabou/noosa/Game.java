@@ -284,11 +284,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         try {
             synchronized (wait) {
-                wait.wait();
+                wait.wait(1000,0);
             }
 
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            EventCollector.logException(e, "save timeout");
         }
 
         view.onPause();
