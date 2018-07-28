@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.items.artifacts;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -23,7 +22,7 @@ public class BraceletOfDevour extends Artifact {
 	}
 
 	@Override
-	protected Buff buff() {
+	protected ArtifactBuff buff() {
 		return new BraceletOfDevourBuff();
 	}
 

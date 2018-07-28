@@ -17,10 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class RingOfDetection extends Ring {
@@ -36,7 +35,7 @@ public class RingOfDetection extends Ring {
 	}
 	
 	@Override
-	protected Buff buff( ) {
+	protected ArtifactBuff buff( ) {
 		return new Detection();
 	}
 	

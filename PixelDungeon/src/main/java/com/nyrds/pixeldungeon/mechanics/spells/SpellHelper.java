@@ -12,12 +12,12 @@ public class SpellHelper {
 
     public static final String AFFINITY_NECROMANCY = "Necromancy";
     public static final String AFFINITY_ELEMENTAL  = "Elemental";
-    private static final String AFFINITY_RAGE      = "Rage";
+    public static final String AFFINITY_RAGE       = "Rage";
 
     public static final String AFFINITY_DEMONOLOGY  = "Demolonogy";
-    public static final String AFFINITY_NATURE  = "Nature";
-    public static final String AFFINITY_SHADOW  = "Shadow";
-    public static final String AFFINITY_COMMON = "Common";
+    public static final String AFFINITY_NATURE      = "Nature";
+    public static final String AFFINITY_SHADOW      = "Shadow";
+    public static final String AFFINITY_COMMON      = "Common";
 
     public static final String TARGET_SELF = "self";
     public static final String TARGET_CELL = "cell";

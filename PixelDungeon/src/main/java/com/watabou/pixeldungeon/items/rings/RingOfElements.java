@@ -17,12 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-import java.util.HashSet;
-
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
@@ -31,10 +28,12 @@ import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.utils.Random;
 
+import java.util.HashSet;
+
 public class RingOfElements extends Ring {
 
 	@Override
-	protected Buff buff( ) {
+	protected ArtifactBuff buff( ) {
 		return new Resistance();
 	}
 	

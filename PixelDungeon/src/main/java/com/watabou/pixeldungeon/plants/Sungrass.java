@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -33,7 +34,6 @@ import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Sungrass extends Plant {
@@ -105,6 +105,7 @@ public class Sungrass extends Plant {
 
 		private static final float STEP = 5f;
 
+		@Packable
 		private int pos;
 
 		@Override
@@ -133,20 +134,6 @@ public class Sungrass extends Plant {
 		@Override
 		public String toString() {
 			return Game.getVar(R.string.Sungrass_Buff);
-		}
-
-		private static final String POS = "pos";
-
-		@Override
-		public void storeInBundle(Bundle bundle) {
-			super.storeInBundle(bundle);
-			bundle.put(POS, pos);
-		}
-
-		@Override
-		public void restoreFromBundle(Bundle bundle) {
-			super.restoreFromBundle(bundle);
-			pos = bundle.getInt(POS);
 		}
 	}
 }

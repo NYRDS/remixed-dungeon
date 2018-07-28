@@ -14,9 +14,19 @@
         "quantity": 100
       },
       {
-        "kind": "PotionOfParalyticGas",
-        "quantity": 100,
-        "level":100
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
       },
       {
         "kind": "RawFish",
