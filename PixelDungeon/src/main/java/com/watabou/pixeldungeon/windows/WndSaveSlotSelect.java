@@ -4,6 +4,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.windows.WndHelper;
@@ -264,6 +265,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 				SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
 
 			} catch (Exception e) {
+				EventCollector.logException(e, "bug in save");
 				throw new TrackedRuntimeException(e);
 			}
 		}
