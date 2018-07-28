@@ -17,14 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.noosa.Game;
 
 public class RingOfHaste extends Ring {
 	
 	@Override
-	protected Buff buff( ) {
+	protected ArtifactBuff buff( ) {
 		return new Haste();
 	}
 	

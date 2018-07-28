@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items.quest;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -32,7 +31,7 @@ public class DriedRose extends Artifact {
 	}
 
 	@Override
-	protected Buff buff() {
+	protected ArtifactBuff buff() {
 		if (!cursed) {
 			return new OneWayLoveBuff();
 		} else {

@@ -17,17 +17,16 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 
 public class RingOfThorns extends Ring {
 	
 	@Override
-	protected Buff buff( ) {
+	protected ArtifactBuff buff( ) {
 		return new Thorns();
 	}
 	

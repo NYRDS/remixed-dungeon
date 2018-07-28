@@ -22,7 +22,6 @@ public class SpellBook extends Artifact {
 	public SpellBook() {
 		imageFile = "items/books.png";
 		image = 3;
-		defaultAction = CommonActions.AC_READ;
 	}
 
 	public void spell(String spellName){
@@ -31,6 +30,7 @@ public class SpellBook extends Artifact {
 
 	public Spell spell(){
 		if(spell == null || spell.equals("")){
+
 			ArrayList<String> spells = SpellFactory.getSpellsByAffinity(SpellHelper.AFFINITY_COMMON);
 			spell(Random.element(spells));
 		}
@@ -42,6 +42,9 @@ public class SpellBook extends Artifact {
 		ArrayList<String> actions = super.actions( hero );
 		if (isEquipped(hero)){
 			actions.add(CommonActions.AC_READ );
+			defaultAction = CommonActions.AC_READ;
+		} else {
+			defaultAction = AC_THROW;
 		}
 		return actions;
 	}

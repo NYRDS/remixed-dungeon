@@ -1,10 +1,11 @@
 package com.watabou.pixeldungeon.items.rings;
 
+import android.support.annotation.Nullable;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class Artifact extends EquipableItem {
 
 	private static final float TIME_TO_EQUIP = 1f;
-	protected Buff buff;
+	protected ArtifactBuff buff;
 
 	@Override
 	public boolean doEquip(Hero hero) {
@@ -86,6 +87,7 @@ public class Artifact extends EquipableItem {
 	public void activate(Char ch) {
 		buff = buff();
 		if (buff != null) {
+			buff.setSource(this);
 			buff.attachTo(ch);
 		}
 	}
@@ -95,7 +97,8 @@ public class Artifact extends EquipableItem {
 		return false;
 	}
 
-	protected Buff buff() {
+	@Nullable
+	protected ArtifactBuff buff() {
 		return null;
 	}
 

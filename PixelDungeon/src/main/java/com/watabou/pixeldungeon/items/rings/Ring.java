@@ -104,6 +104,7 @@ public class Ring extends Artifact implements UnknownItem{
 			Char owner = buff.target;
 			buff.detach();
 			if ((buff = buff()) != null) {
+				buff.setSource(this);
 				buff.attachTo( owner );
 			}
 		}
