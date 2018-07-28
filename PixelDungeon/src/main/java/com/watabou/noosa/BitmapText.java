@@ -157,6 +157,11 @@ public class BitmapText extends Text {
 		return font.baseLine * scale.y;
 	}
 
+	@Override
+	public int lines() {
+		return 1;
+	}
+
 	protected float glyphShiftY(char c) {
 		PointF shift = font.glyphShift.get(c);
 		

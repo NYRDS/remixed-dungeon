@@ -81,7 +81,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 
 		Logbook.addPlayerLogMessage( text, color );	// Store the message to show in log book tab
 
-		if (lastEntry != null && color == lastColor) {
+		if (lastEntry != null && color == lastColor && lastEntry.lines()<3) {
 			
 			String lastMessage = lastEntry.text();
 			lastEntry.text( lastMessage.length() == 0 ? text : lastMessage + " " + text );

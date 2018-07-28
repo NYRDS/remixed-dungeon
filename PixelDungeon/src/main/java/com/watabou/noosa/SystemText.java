@@ -386,6 +386,11 @@ public class SystemText extends Text {
 		return height();
 	}
 
+	@Override
+	public int lines() {
+		return this.lineImage.size();
+	}
+
 	static void invalidate() {
 		for (SystemText txt : texts) {
 			txt.dirty = true;
