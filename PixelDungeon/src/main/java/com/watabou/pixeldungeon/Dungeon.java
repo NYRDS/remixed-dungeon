@@ -445,7 +445,6 @@ public class Dungeon {
     public synchronized static void save() {
 
         if (SystemTime.now() - lastSaveTimestamp < 1000) {
-            EventCollector.logException(new Exception("spurious saves"),"bug");
             return;
         }
 
