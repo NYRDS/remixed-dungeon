@@ -122,4 +122,5 @@ public abstract class Text extends Visual {
 		text = str;
 	}
 
+	public abstract int lines();
 }

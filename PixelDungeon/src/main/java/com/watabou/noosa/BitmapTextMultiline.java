@@ -154,6 +154,11 @@ public class BitmapTextMultiline extends BitmapText {
 		metrics.set( w, h );
 	}
 
+
+	public int lines(){
+		return (int) (height/font.lineHeight);
+	}
+
 	private class SymbolWriter {
 		
 		public float width = 0;

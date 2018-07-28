@@ -14,8 +14,9 @@
         "quantity": 100
       },
       {
-        "kind": "Firebloom.Seed",
-        "quantity": 100
+        "kind": "PotionOfParalyticGas",
+        "quantity": 100,
+        "level":100
       },
       {
         "kind": "RawFish",
