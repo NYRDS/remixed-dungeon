@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -82,5 +82,10 @@ public class Dewdrop extends Item {
 	@Override
 	public Item burn(int cell){
 		return null;
+	}
+
+	@Override
+	public boolean announcePickUp() {
+		return false;
 	}
 }

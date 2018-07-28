@@ -641,4 +641,8 @@ public class Item implements Bundlable, Presser {
 	public boolean usableByHero() {
 		return quantity() >= 1 && (Dungeon.hero.belongings.getItem(getClassName()) != null || isEquipped(Dungeon.hero));
 	}
+
+	public boolean announcePickUp() {
+		return true;
+	}
 }
