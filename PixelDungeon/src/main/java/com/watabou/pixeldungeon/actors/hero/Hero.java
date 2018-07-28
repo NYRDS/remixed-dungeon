@@ -764,11 +764,13 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public void itemPickedUp(Item item) {
-		if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
-				|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
-			GLog.p(Game.getVar(R.string.Hero_YouNowHave), item.name());
-		} else {
-			GLog.i(getHeroYouNowHave(), item.name());
+		if(item.announcePickUp()) {
+			if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
+					|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
+				GLog.p(Game.getVar(R.string.Hero_YouNowHave), item.name());
+			} else {
+				GLog.i(getHeroYouNowHave(), item.name());
+			}
 		}
 	}
 
