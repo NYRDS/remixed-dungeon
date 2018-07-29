@@ -14,11 +14,23 @@
         "quantity": 100
       },
       {
-        "kind": "TomeOfKnowledge",
-        "quantity": 100
+        "kind": "SpellBook"
       },
       {
-        "kind": "Spear"
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "RawFish",
+        "quantity": 100
       },
       {
         "kind": "WandOfRegrowth",
