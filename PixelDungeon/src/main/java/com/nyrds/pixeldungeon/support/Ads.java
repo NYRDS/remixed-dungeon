@@ -254,23 +254,21 @@ public class Ads {
 
         public void onAdFailedToLoad(int result) {
 
-            if (result == AdRequest.ERROR_CODE_NO_FILL) {
-                EventCollector.logEvent("banner","admob_no_fill");
-                Game.instance().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
+            EventCollector.logEvent("banner", "admob_no_banner", Integer.toString(result));
+            Game.instance().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
 
-                        removeEasyModeBanner();
+                    removeEasyModeBanner();
 
-                        AppodealRewardVideo.init();
-                        Appodeal.cache(Game.instance(), Appodeal.BANNER);
-                        BannerView adView = Appodeal.getBannerView(Game.instance());
-                        Game.instance().getLayout().addView(adView, 0);
+                    AppodealRewardVideo.init();
+                    Appodeal.cache(Game.instance(), Appodeal.BANNER);
+                    BannerView adView = Appodeal.getBannerView(Game.instance());
+                    Game.instance().getLayout().addView(adView, 0);
 
-                        Appodeal.show(Game.instance(), Appodeal.BANNER_VIEW);
-                    }
-                });
-            }
+                    Appodeal.show(Game.instance(), Appodeal.BANNER_VIEW);
+                }
+            });
         }
     }
 }
