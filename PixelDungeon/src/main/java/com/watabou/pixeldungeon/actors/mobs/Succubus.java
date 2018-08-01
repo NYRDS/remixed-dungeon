@@ -74,16 +74,13 @@ public class Succubus extends Mob {
 	public int attackProc(@NonNull Char enemy, int damage) {
 
 		if (Random.Int(3) == 0) {
-			float duration = Charm.durationFactor(enemy) * Random.IntRange(2, 5);
-
-			if (enemy.hasBuff(DriedRose.OneWayCursedLoveBuff.class)) {
-				duration *= 2;
-			}
 			Char target = enemy;
 
 			if (enemy.hasBuff(DriedRose.OneWayLoveBuff.class)) {
 				target = this;
 			}
+
+			float duration = Charm.durationFactor(target) * Random.IntRange(2, 5);
 
 			Buff.affect(target, Charm.class, duration);
 			enemy.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
