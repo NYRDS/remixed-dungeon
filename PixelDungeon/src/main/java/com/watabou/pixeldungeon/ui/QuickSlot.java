@@ -225,12 +225,17 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     private void refreshSelf() {
-        if(quickslotItem != null) {
-            Item item = Dungeon.hero.belongings.checkItem(quickslotItem);
+        if(quickslotItem != null && !(quickslotItem instanceof Spell.SpellItem)) {
+            Item item;
+            if(quickslotItem.quantity()>0) {
+                item = Dungeon.hero.belongings.checkItem(quickslotItem);
+            } else {
+                item = Dungeon.hero.belongings.getItem(quickslotItem.getClass());
+            }
             if(item != null) {
                 quickslotItem = item.quickSlotContent();
             } else {
-                quickslotItem = quickslotItem.quickSlotContent();
+                quickslotItem = ItemFactory.virtual(quickslotItem.getClassName());
             }
         }
 
