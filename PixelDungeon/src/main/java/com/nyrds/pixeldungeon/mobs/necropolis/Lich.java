@@ -53,6 +53,9 @@ public class Lich extends Boss {
     @Packable
     private boolean skullsSpawned = false;
 
+    @Packable
+    private boolean timeToJump = false;
+
 	private HashSet<RunicSkull> skulls = new HashSet<>();
 
     public Lich() {
@@ -67,9 +70,19 @@ public class Lich extends Boss {
         IMMUNITIES.add( Amok.class );
         IMMUNITIES.add( Blindness.class );
         IMMUNITIES.add( Sleep.class );
+
+        lootChance = 1.f;
+
+        if ( Dungeon.hero.heroClass == HeroClass.NECROMANCER){
+            loot = new BlackSkullOfMastery();
+        }
+        else {
+            loot =  new BlackSkull();
+        }
     }
 
     private int timeToSkull = SKULL_DELAY;
+
 
     @Override
     protected boolean getCloser( int target ) {
@@ -88,6 +101,12 @@ public class Lich extends Boss {
 
     @Override
     protected boolean doAttack( Char enemy ) {
+
+        if(timeToJump) {
+            jump();
+            return false;
+        }
+
         if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
             return super.doAttack(enemy);
         } else {
@@ -120,6 +139,7 @@ public class Lich extends Boss {
                 break;
             }
         }
+        timeToJump = false;
     }
 
     //Runic skulls handling
@@ -220,7 +240,7 @@ public class Lich extends Boss {
         }
 
         if (Random.Int(2) == 1 && this.isAlive()){
-            jump();
+            timeToJump = true;
         }
 
         return damage;
@@ -239,14 +259,10 @@ public class Lich extends Boss {
     @Override
     public void die( Object cause ) {
         GameScene.bossSlain();
-        if ( Dungeon.hero.heroClass == HeroClass.NECROMANCER){
-            Dungeon.level.drop( new BlackSkullOfMastery(), getPos() ).sprite.drop();
-        }
-        else {
-            Dungeon.level.drop( new BlackSkull(), getPos() ).sprite.drop();
-        }
+
         super.die( cause );
         Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+
         //Kill everything
         skulls.clear();
         Mob mob = Dungeon.level.getRandomMob();
