@@ -880,6 +880,10 @@ public abstract class Mob extends Char {
 
 		@Override
 		public String status() {
+			if (getEnemy()!=DUMMY) {
+				return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
+						getName()) + Utils.format(" and prey is %s", getEnemy().getName());
+			}
 			return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
 					getName());
 		}
