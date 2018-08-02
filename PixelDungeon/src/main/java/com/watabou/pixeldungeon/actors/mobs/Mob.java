@@ -949,6 +949,9 @@ public abstract class Mob extends Char {
 
 	@Override
 	public boolean friendly(Char chr) {
+
+		if(hasBuff(Amok.class)) {return false;}
+
 		if(getEnemy() == chr) {return false;}
 
 		if(chr instanceof Hero) {
