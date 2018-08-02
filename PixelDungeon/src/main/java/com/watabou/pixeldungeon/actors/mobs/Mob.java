@@ -292,20 +292,20 @@ public abstract class Mob extends Char {
 		Level level = Dungeon.level;
 
 		Char bestEnemy = DUMMY;
-		float dist = level.getWidth() + level.getHeight();
+		int dist = level.getWidth() + level.getHeight();
 
 		if (enemyFraction.belongsTo(Fraction.HEROES)) {
 			Hero hero = Dungeon.hero;
 			if (!friendly(hero)) {
 				bestEnemy = hero;
-				dist = level.distanceL2(getPos(), bestEnemy.getPos());
+				dist = level.distance(getPos(), bestEnemy.getPos());
 			}
 		}
 
 		for (Mob mob : level.mobs) {
 			if(Dungeon.level.fieldOfView[mob.getPos()]) {
 				if (!mob.friendly(this)) {
-					float candidateDist = level.distanceL2(getPos(), mob.getPos());
+					int candidateDist = level.distance(getPos(), mob.getPos());
 					if (candidateDist < dist) {
 						bestEnemy = mob;
 						dist = candidateDist;
@@ -950,7 +950,11 @@ public abstract class Mob extends Char {
 	@Override
 	public boolean friendly(Char chr) {
 
-		if(hasBuff(Amok.class)) {return false;}
+		if(chr == this) {
+			return true;
+		}
+
+		if(hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {return false;}
 
 		if(getEnemy() == chr) {return false;}
 
@@ -1009,6 +1013,10 @@ public abstract class Mob extends Char {
 	}
 
 	public void setEnemy(@NonNull Char enemy) {
+		if(enemy != this.enemy && enemy != DUMMY) {
+			enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
+			GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
+		}
 		this.enemy = enemy;
 	}
 
