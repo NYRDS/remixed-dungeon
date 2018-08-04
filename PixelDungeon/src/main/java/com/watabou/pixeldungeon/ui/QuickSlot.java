@@ -239,6 +239,10 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             }
         }
 
+        if(quickslotItem instanceof Spell.SpellItem) {
+            quickslotItem = quickslotItem.quickSlotContent();
+        }
+
         item(quickslotItem);
     }
 
