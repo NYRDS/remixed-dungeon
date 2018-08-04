@@ -39,13 +39,6 @@
     <item>戰士每次進食都會回復少許生命值。</item>
     <item>力量藥水在遊戲開始時就已經鑒定好了。</item>
   </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>法師起始擁有一把獨特的魔法飛彈法杖。這把法杖在之後能夠“祛魔”以作其他法杖升級用。</item>
-    <item>法師能更快地為他們的法杖充能。</item>
-    <item>法師每次進食都會為他們包裹裏的所有法杖補充1點充能。</item>
-    <item>法師能以法杖作近戰武器使用。</item>
-    <item>鑒定卷軸在遊戲開始時就已經鑒定好了。</item>
-  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>盗賊起始擁有一枚+1的暗影指環。</item>
     <item>盗賊在装備指環時能自動鑒定其類型。</item>
@@ -60,13 +53,6 @@
     <item>女擅獵手精通遠程武器。使用它們时，她可以獲得基於額外力量值的傷害加成。</item>
     <item>女獵手能從露珠獲得更多生命值。</item>
     <item>女獵手可以隔着障礙物感應到附近隱匿的敵人。</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>精靈起始擁有15點生命值和9點力量。</item>
-    <item>纏繞狀態對精靈起不了作用。</item>
-    <item>精靈起始擁有一把已升级的木弓和一些箭。</item>
-    <item>精靈精通弓箭，並且十分敏捷。</item>
-    <item>精靈不擅長於近戰武器。</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">角鬥士</string>

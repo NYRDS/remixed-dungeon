@@ -3,7 +3,7 @@
   <!--PACKAGE /actors/mobs-->
   <!--STRINGS OF Mob CLASS-->
   <string name="Mob_Desc">A descrição real está chegando em breve!</string>
-  <string name="Mob_Died">Você ouve algo morrendo.</string>
+  <string name="Mob_Died">Você ouve algo morrer a distância.</string>
   <string name="Mob_StaSleepingStatus">%s está dormindo</string>
   <string name="Mob_StaWanderingStatus">%s está caminhando</string>
   <string name="Mob_StaHuntingStatus">%s está caçando</string>
@@ -47,7 +47,7 @@
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">masculino</string>
   <string name="DM300_Name_Objective">DM-300</string>
-  <string name="DM300_Desc">Esta máquina foi criada pelos anões há vários séculos. Mais tarde, os anões começaram a substituir as máquinas por golems, elementais e até mesmo demônios. Claro que, os demônios levaram sua civilização ao declínio. O DM-300 e máquinas semelhantes foram normalmente utilizados para a construção e exploração mineira e, em alguns casos, para a defesa da cidade.</string>
+  <string name="DM300_Desc">Esta máquina foi criada pelos anões há vários séculos. Mais tarde, os anões começaram a substituir as máquinas por golems, elementais e até mesmo demônios. Eventualmente, isso levou sua civilização ao declínio. O DM-300 e máquinas semelhantes foram normalmente utilizados para a construção e mineração e, em alguns casos, para a defesa da cidade.</string>
   <string name="DM300_Info1">DM-300 está se consertando!</string>
   <string name="DM300_Info2">Missão falhou. Desligando.</string>
   <string name="DM300_Info3">Pessoas não autorizadas detectadas.</string>

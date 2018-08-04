@@ -36,8 +36,6 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>死灵法师开局只有15点HP。</item>
-        <item>死灵法师拥有“灵魂”来让他可以施放魔法。每一个怪物的死亡将使你获得1灵魂。 </item>
-        <item>死灵法师开局有一件独特的死灵法师长袍。</item>
         <item>死灵法师开局有一把7层的骷髅钥匙。</item>
         <item>治疗药水开局鉴定。</item>
     </string-array>

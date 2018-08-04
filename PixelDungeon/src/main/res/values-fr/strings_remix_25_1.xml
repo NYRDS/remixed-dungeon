@@ -36,8 +36,6 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Les Nécromanciens commencent avec 15 points de vie.</item>
-        <item>Les nécromanciens ont une ressource unique, les âmes, pour invoquer des sorts. Chaque créature tuée fait gagner 1 âme.</item>
-        <item>Les Nécromanciens commencent avec une Robe du Nécromancien.</item>
         <item>Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7.</item>
         <item>Les Potions de soins sont identifiées dès le début.</item>
     </string-array>

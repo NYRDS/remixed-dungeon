@@ -39,13 +39,6 @@
     <item>Herhangi Bir Yemek Yemek Az Miktarda Can Doldurur.</item>
     <item>Güç İksirlerini Tanıyabilirsin.</item>
   </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>Büyücüler antik füze asasıyla başlar.Bu asa başka bir asayı güçlendirmek için kırılabilir..</item>
-    <item>Büyücüler asaları daha hızlı şarj edebilir.</item>
-    <item>Her yemek yediğinde envanterindeki bütün asaların şarjı bir dolar.</item>
-    <item>Büyücüler asayı yakın mesafe silahı olarak kullanabilir.</item>
-    <item>Tanımlama parşömenleri başta tanımlı olur.</item>
-  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Başıbozuk oyuna Gölge Yüzüğü+1 ile başlar.</item>
     <item>Bu yüzük tanılanmış ve parmağına takılı olarak gelir.</item>
@@ -60,13 +53,6 @@
     <item>Uzun mesafeli silah kullanımında uzmandır ve bu silahlarla büyük hasar verebilir.</item>
     <item>Bir çiy tanesinden daha fazla sağlık kazanır.</item>
     <item>Etraftaki yaratıkları sezme yeteneği fazladır.</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>Elfler oyuna 15 Sağlık and 9 Güç puanı ile başlar.</item>
-    <item>Kök salmaya karşı bağışıklıkları vardır.</item>
-    <item>Güncellennmiş tahta yay ve oklar ile oyuna başlar.</item>
-    <item>Elfler yay kullanımı konusund yetenekli ve çeviktir.</item>
-    <item>Diğer saldırı silahları ile daha az başarılıdırlar.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">Gladyatör</string>

@@ -36,8 +36,6 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Nekromanten starten mit 15 Lebenspunkten.</item>
-        <item>Nekromanten haben eine exklusive Ressource \"Seelen\", die benutzt wird, um Zaubersprüche zu benutzen. Der Tod jedes Gegners gewährt 1 Seele.</item>
-        <item>Nekromanten starten mit einer einzigartigen Nekromantenrobe.</item>
         <item>Nekromanten starten mit einem Skelettschlüssel für Level 7.</item>
         <item>Heiltränke sind von Anfang an identifiziert.</item>
     </string-array>

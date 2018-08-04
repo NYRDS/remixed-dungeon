@@ -39,13 +39,6 @@
     <item>Apa jua jenis makanan dapat memulihkan tenaga hayat bila dimakan.</item>
     <item>Posyen Kekuatan sudah dapat dikenal pasti pada awal pengembaraan.</item>
   </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>Ahli sihir bermula dengan Tongkat Sakti Misil Ajaib. Tongkat sakti ini boleh \"dinyahsihirkan\" supaya dapat ditatar menjadi tongkat sakti lain.</item>
-    <item>Ahli sihir dapat mengecas semula tongkat sakti mereka lebih pantas.</item>
-    <item>Bila makan, apa jua makanan dapat memulihkan 1 cas untuk semua jenis tongkat sakti di dalam simpanan.</item>
-    <item>Ahli sihir oleh gunakan tongkat sakti sebagai senjata tempur.</item>
-    <item>Skrol pengecaman dapat dikenal pasti pada awal pengembaraan.</item>
-  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Gasar bermula dengan Cincin Bayang+1.</item>
     <item>Gasar boleh mengenal pasti jenis cincin setelah disarung ke jari.</item>
@@ -60,13 +53,6 @@
     <item>Pemburu cekap mengendalikan senjata misil dan mendapat bonus kecederaan atas kekuatan luar biasa ketika menggunakannya.</item>
     <item>Pemburu memperoleh lebih tenaga hayat daripada titisan embun.</item>
     <item>Pemburu dapat merasakan kehadiran raksaksa berhampiran walaupun ia tersembunyi disebalik halangan.</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>Bunian bermula dengan 15 mata Hayat dan 9 mata Kekuatan.</item>
-    <item>Bunian kebal dengan pengakaran.</item>
-    <item>Bunian bermula dengan busur kayu boleh ditatar berserta sejumlah anak panah.</item>
-    <item>Bunian sangat cekap dengan busur dan lincah.</item>
-    <item>Bunian kurang cekap menggunakan senjata tempur.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiator</string>

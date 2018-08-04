@@ -15,4 +15,5 @@
   <string name="ResultDescriptions_Fall">Разбился насмерть об уровень %d</string>
   <string name="ResultDescriptions_Win">Заполучил Амулет Эндора</string>
   <string name="ResultDescriptions_Immured">Замурован в камне на уровне %d</string>
+  <string name="ResultDescriptions_Unknown">Погиб при неизвестных обстоятельствах на уровне %d</string>
 </resources>

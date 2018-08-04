@@ -39,13 +39,6 @@
     <item>Jede Form von Nahrung gibt beim Verzehr etwas Gesundheit zurück.</item>
     <item>Stärketränke sind von Beginn an bekannt.</item>
   </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>Magier beginnen mit einem einzigartigen Zauberstab der magischen Geschosse. Dieser Zauberstab kann später \"entzaubert\" werden um einen anderen Zauberstab aufzuwerten.</item>
-    <item>Magier laden ihre Zauberstäbe schneller auf.</item>
-    <item>Jedes Nahrungsmittel stellt beim Essen 1 Ladung bei allen Zauberstäben im Rucksack wieder her.</item>
-    <item>Magiere können ihre Zauberstäbe als Nahkampfwaffe nutzen.</item>
-    <item>Identifizierungsrollen sind bereits zu Beginn bekannt.</item>
-  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Schurken beginnen mit einem Schattenring+1.</item>
     <item>Schurken identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </item>
@@ -60,13 +53,6 @@
     <item>Jägerinnen sind effektiv im Umgang mit Fernkampfwaffen und erhalten einen Schadensbonus beim Benutzen, wenn ihre Stärke die erforderliche Stärke für die Waffe übersteigt.</item>
     <item>Jägerinnen erhalten mehr Gesundheit von Tautropfen.</item>
     <item>Jägerinnen spüren benachbarte Monster sogar dann, wenn sie hinter Hindernissen versteckt sind.</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>Elfen beginnen mit 15 Lebenspunkten und 9 Stärkepunkten.</item>
-    <item>Elfen sind immun gegen Anwurzelung.</item>
-    <item>Elfen beginnen mit einem verbesserten Holzbogen und einem Haufen Pfeilen.</item>
-    <item>Elfen sind extrem erfahren mit Bögen und beweglich.</item>
-    <item>Elfen sind weniger erfahren mit Nahkampfwaffen.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">Gladiator</string>

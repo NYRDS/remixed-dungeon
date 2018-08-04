@@ -37,4 +37,5 @@
     <string name="gdpr_agree">Si, acepto</string>
     <string name="gdpr_disagree">No, gracias</string>
     <string name="gdpr_choose">Por favor haga su elección</string>
-</resources>
+    
+    </resources>
