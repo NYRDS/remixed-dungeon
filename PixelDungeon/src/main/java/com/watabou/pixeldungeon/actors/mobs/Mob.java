@@ -567,7 +567,7 @@ public abstract class Mob extends Char {
 		Hero hero = Dungeon.hero;
 
 		{
-			//TODO we should move this block out of Mob class
+			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.heroClass == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
 					if(hero.belongings.armor instanceof NecromancerRobe){
@@ -881,8 +881,8 @@ public abstract class Mob extends Char {
 		@Override
 		public String status() {
 			if (getEnemy()!=DUMMY) {
-				return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
-						getName()) + Utils.format(" and prey is %s", getEnemy().getName());
+				return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus2),
+						getName(), getEnemy().getName_objective());
 			}
 			return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
 					getName());
@@ -1017,10 +1017,12 @@ public abstract class Mob extends Char {
 	}
 
 	public void setEnemy(@NonNull Char enemy) {
+		/*
 		if(enemy != this.enemy && enemy != DUMMY) {
 			enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 			GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
 		}
+		*/
 		this.enemy = enemy;
 	}
 
