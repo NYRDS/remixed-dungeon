@@ -296,7 +296,7 @@ public abstract class Mob extends Char {
 
 		if (enemyFraction.belongsTo(Fraction.HEROES)) {
 			Hero hero = Dungeon.hero;
-			if (!friendly(hero)) {
+			if (Dungeon.level.fieldOfView[hero.getPos()] && !friendly(hero)) {
 				bestEnemy = hero;
 				dist = level.distance(getPos(), bestEnemy.getPos());
 			}
