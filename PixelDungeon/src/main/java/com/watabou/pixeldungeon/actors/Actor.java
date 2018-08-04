@@ -33,9 +33,14 @@ import java.util.Map;
 public abstract class Actor implements Bundlable {
 	
 	public static final float TICK	= 1f;
+	private static float realTimeMultiplier = 1f;
 
 	private float time;
-	
+
+	public static void setRealTimeMultiplier(float realTimeMultiplier) {
+		Actor.realTimeMultiplier = realTimeMultiplier;
+	}
+
 	protected abstract boolean act();
 	
 	protected void spend( float time ) {
@@ -149,7 +154,7 @@ public abstract class Actor implements Bundlable {
 
 	private static void processReaTime(float elapsed) {
 
-		now += elapsed;
+		now += elapsed * realTimeMultiplier;
 
 		do {
 			

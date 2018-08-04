@@ -21,6 +21,7 @@ import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
@@ -76,6 +77,12 @@ public class DangerIndicator extends Tag {
 		if (Dungeon.hero.isAlive()) {
 			int v =  Dungeon.hero.visibleEnemies();
 
+			if(v>0) {
+				Actor.setRealTimeMultiplier(1);
+			} else {
+				Actor.setRealTimeMultiplier(10);
+			}
+
 			if (v != lastNumber) {
 				lastNumber = v;
 				if (setVisible(lastNumber > 0)) {
@@ -88,7 +95,7 @@ public class DangerIndicator extends Tag {
 		} else {
 			setVisible(false);
 		}
-		
+
 		super.update();
 	}
 	
