@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.windows.Selector;
 import com.watabou.pixeldungeon.windows.WndMenuCommon;
 import com.watabou.pixeldungeon.windows.elements.Tool;
@@ -47,7 +46,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 
 			@Override
 			public void onPlus(Selector s) {
-				PixelDungeon.quickSlots(Math.min(Math.abs(PixelDungeon.quickSlots())+1, Toolbar.MAX_SLOTS));
+				PixelDungeon.quickSlots(Math.abs(PixelDungeon.quickSlots())+1);
 			}
 
 			@Override
