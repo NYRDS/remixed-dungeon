@@ -46,6 +46,7 @@
         <item>Mages recharge their wands faster.</item>
         <item>When eaten, any piece of food restores 1 charge for all wands in the inventory.</item>
         <item>Mages can use wands as a melee weapon.</item>
+        <item>Mages use mana to cast Elemental spells.</item>
         <item>Scrolls of Identify are identified from the beginning.</item>
     </string-array>
     <string-array name="HeroClass_RogPerks">
@@ -68,6 +69,7 @@
         <item>Elves are immune to rooting.</item>
         <item>Elves start with an upgraded wooden bow and a bunch of arrows.</item>
         <item>Elves are extremely proficient with bows and are agile.</item>
+        <item>Elves gain a lot more health from dewdrops.</item>
         <item>Elves are less proficient with melee weapons.</item>>
     </string-array>
 

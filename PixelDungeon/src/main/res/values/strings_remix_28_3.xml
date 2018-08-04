@@ -37,4 +37,7 @@
     <string name="gdpr_agree">Yes, I agree</string>
     <string name="gdpr_disagree">No, thank you</string>
     <string name="gdpr_choose">"Please make your choose"</string>
+
+
+    <string name="Mob_StaHuntingStatus2">This %1$s is hunting for %2$s.</string>
 </resources>
