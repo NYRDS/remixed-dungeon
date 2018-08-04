@@ -6,7 +6,7 @@
     },
     "items": [
       {
-        "kind": "ManaPotion",
+        "kind": "Ankh",
         "quantity": 100
       },
       {
@@ -14,7 +14,8 @@
         "level":10
       },
       {
-        "kind": "SpellBook"
+        "kind": "ManaPotion",
+        "quantity": 100
       },
       {
         "kind": "SpellBook"
