@@ -25,16 +25,15 @@
         "quantity": 100
       },
       {
-        "kind": "WandOfRegrowth",
-        "level": 10
+        "kind": "PotionOfLiquidFlame"
       },
       {
-        "kind": "ScrollOfMagicMapping",
+        "kind": "TomeOfKnowledge",
         "quantity": 100
       }
     ],
     "str": 10,
-    "hp": 200,
+    "hp": 2,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -141,7 +140,7 @@
         "depth": "7"
       }
     ],
-    "hp": 1500,
+    "hp": 1,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
