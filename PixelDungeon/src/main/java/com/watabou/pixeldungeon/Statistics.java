@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon;
 import com.watabou.utils.Bundle;
 
 public class Statistics {
-	
+
 	public static int goldCollected;
 	public static int deepestFloor;
 	public static int enemiesSlain;
@@ -31,7 +31,7 @@ public class Statistics {
 	public static int ankhsUsed;
 	
 	public static float duration;
-	
+
 	public static boolean qualifiedForNoKilling = false;
 	public static boolean completedWithNoKilling = false;
 	
@@ -66,7 +66,10 @@ public class Statistics {
 	private static final String ANKHS		= "ankhsUsed";
 	private static final String DURATION	= "duration";
 	private static final String AMULET		= "amuletObtained";
-	
+
+	private static final String COMPLETED_WITH_NO_KILLING = "completedWithNoKilling";
+	private static final String QUALIFIED_FOR_NO_KILLING = "qualifiedForNoKilling";
+
 	public static void storeInBundle( Bundle bundle ) {
 		bundle.put( GOLD,		goldCollected );
 		bundle.put( DEEPEST,	deepestFloor );
@@ -78,6 +81,9 @@ public class Statistics {
 		bundle.put( ANKHS,		ankhsUsed );
 		bundle.put( DURATION,	duration );
 		bundle.put( AMULET,		amuletObtained );
+
+		bundle.put(QUALIFIED_FOR_NO_KILLING, qualifiedForNoKilling);
+		bundle.put(COMPLETED_WITH_NO_KILLING,completedWithNoKilling);
 	}
 	
 	public static void restoreFromBundle( Bundle bundle ) {
@@ -91,6 +97,9 @@ public class Statistics {
 		ankhsUsed		= bundle.getInt( ANKHS );
 		duration		= bundle.getFloat( DURATION );
 		amuletObtained	= bundle.getBoolean( AMULET );
+
+		qualifiedForNoKilling  = bundle.getBoolean(QUALIFIED_FOR_NO_KILLING);
+		completedWithNoKilling = bundle.getBoolean(COMPLETED_WITH_NO_KILLING);
 	}
 
 }

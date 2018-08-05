@@ -64,8 +64,6 @@ public class Toolbar extends Component {
 
     private Component toolbar = new Component();
 
-    public static final int MAX_SLOTS = 25;
-
     private ArrayList<QuickslotTool> slots = new ArrayList<>();
     final private Hero hero;
 
@@ -73,6 +71,8 @@ public class Toolbar extends Component {
         super();
 
         this.hero = hero;
+
+        slots.add(new QuickslotTool());
 
         btnWait = new Tool(7, Chrome.Type.ACTION_BUTTON) {
             @Override
@@ -118,10 +118,6 @@ public class Toolbar extends Component {
         };
 
         btnInventory = new InventoryTool();
-
-        for (int i = 0; i < MAX_SLOTS; i++) {
-            slots.add(new QuickslotTool());
-        }
     }
 
     @Override
@@ -145,6 +141,11 @@ public class Toolbar extends Component {
         }
 
         for (int i = 0; i < active_slots; i++) {
+
+            if(i>slots.size()-1) {
+                slots.add(new QuickslotTool());
+            }
+
             slots.get(i).show(true);
             slotBox.add(slots.get(i));
         }

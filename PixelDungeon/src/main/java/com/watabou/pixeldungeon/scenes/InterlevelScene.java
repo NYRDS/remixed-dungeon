@@ -314,6 +314,8 @@ public class InterlevelScene extends PixelScene {
 
 		Actor.fixTime();
 
+		Dungeon.level.removePets();
+
 		if (Dungeon.bossLevel()) {
 			Dungeon.hero.resurrect(Dungeon.depth);
 			Level level = Dungeon.newLevel(Dungeon.currentPosition());
@@ -322,6 +324,8 @@ public class InterlevelScene extends PixelScene {
 			Dungeon.hero.resurrect(-1);
 			Dungeon.resetLevel();
 		}
+
+		Dungeon.hero.spawnPets(Dungeon.level, true);
 	}
 
 	@Override

@@ -6,43 +6,34 @@
     },
     "items": [
       {
+        "kind": "Ankh",
+        "quantity": 100
+      },
+      {
+        "kind": "WandOfAmok",
+        "level":10
+      },
+      {
         "kind": "ManaPotion",
         "quantity": 100
       },
       {
-        "kind": "Sungrass.Seed",
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "PotionOfParalyticGas",
         "quantity": 100
       },
       {
-        "kind": "SpellBook"
+        "kind": "PotionOfLiquidFlame"
       },
       {
-        "kind": "SpellBook"
-      },
-      {
-        "kind": "SpellBook"
-      },
-      {
-        "kind": "SpellBook"
-      },
-      {
-        "kind": "SpellBook"
-      },
-      {
-        "kind": "RawFish",
-        "quantity": 100
-      },
-      {
-        "kind": "WandOfRegrowth",
-        "level": 10
-      },
-      {
-        "kind": "ScrollOfMagicMapping",
+        "kind": "TomeOfKnowledge",
         "quantity": 100
       }
     ],
-    "str": 1000,
-    "hp": 200,
+    "str": 10,
+    "hp": 2,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -149,7 +140,7 @@
         "depth": "7"
       }
     ],
-    "hp": 15,
+    "hp": 1,
     "knownItems": [
       {
         "kind": "PotionOfHealing"

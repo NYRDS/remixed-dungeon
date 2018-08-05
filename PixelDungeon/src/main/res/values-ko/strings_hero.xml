@@ -39,13 +39,6 @@
     <item>전사는 어떤 음식이든 먹으면 약간의 체력을 회복합니다.</item>
     <item>전사는 힘의 물약을 식별한 채로 시작한다. </item>
   </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>마법사는 특별한 마탄의 마법봉을 가지고 시작합니다. 이 마법봉은 다른 마법봉을 강화하기 위해 마법 부여를 \"해제\"할 수 있습니다.</item>
-    <item>마법사는 마법봉을 빨리 충전시킵니다.</item>
-    <item>마법사는 어떤 음식이든 먹으면 가지고 있는 모든 마법봉의 충전량을 1회만큼 회복시킵니다.</item>
-    <item>마법사는 마법봉을 근접무기로 사용할 수 있습니다.</item>
-    <item>마법사은 식별의 두루마리를 식별한 채로 시작합니다.</item>
-  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>도적은 그림자의 반지+1을 가지고 시작한다.</item>
     <item>도적은 반지를 착용하자마자 그 반지의 종류를 알아낼 수 있다.</item>
@@ -60,13 +53,6 @@
     <item>사냥꾼은 투척무기에 숙련되어, 자신의 현재 힘이 투척무기의 요구치보다 높을 경우 데미지에 보너스를 받습니다.</item>
     <item>사냥꾼은 이슬로부터 더 많은 양의 체력을 회복합니다.</item>
     <item>사냥꾼은 근처에 있는 적이 장애물 뒤에 숨어 있어도 인식할 수 있습니다.</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>엘프는 체력 15와 힘 9로 시작한다.</item>
-    <item>엘프는 속박에 면역이다.</item>
-    <item>엘프는 업그레이드된 나무 활과 화살 더미를 가지고 시작한다.</item>
-    <item>엘프는 활에 대한 숙련도가 매우 높고 민첩하다</item>
-    <item>엘프는 근접 무기에 대한 숙련도가 떨어진다.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">검투사</string>

@@ -36,8 +36,6 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>I Negromanti iniziano con 15 hp.</item>
-        <item>I Negromanti hanno la risorsa unica \"anime\", usata per lanciare gli incantesimi. Ogni morte nemica fornisce 1 anima. </item>
-        <item>I Negromanti partono con una tunica unica da Negromante.</item>
         <item>I Negromanti partono con una chiave scheletrica da livello 7.</item>
         <item>Le Pozioni di Cura vengono identificate subito.</item>
     </string-array>

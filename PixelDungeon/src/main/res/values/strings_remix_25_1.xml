@@ -36,8 +36,8 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Necromancers start with 15 hp.</item>
-        <item>Necromancers have an unique resource \"souls\", used to cast spells. Each mob\'s death grants 1 soul.</item>
-        <item>Necromancers start with a unique Necromancer\'s robe.</item>
+        <item>Necromancers use mana to cast Death spells.</item>
+        <item>Necromancers start with a unique Necromancer\'s robe, which grant 1 mana point for each slain creature.</item>
         <item>Necromancers start with a level 7 skeleton key.</item>
         <item>Potion of Healing are identified from the beginning.</item>
     </string-array>

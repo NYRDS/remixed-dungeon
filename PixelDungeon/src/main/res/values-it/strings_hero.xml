@@ -39,13 +39,6 @@
     <item>Ogni pezzo di cibo ripristina alcuni punti salute se consumato.</item>
     <item>Le pozioni di forza si identificano fin dall\'inizio.</item>
   </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>I maghi iniziano con un\'unica bacchetta di Missile magico. Questa bacchetta può essere dopo \"disincantata\" per aggiornare un\'altra bacchetta.</item>
-    <item>I maghi ricaricano le loro bacchette più velocemente.</item>
-    <item>Quando mangiato, ogni pezzo di cibo ripristina addebito di 1 per tutte le bacchette nell\'inventario.</item>
-    <item>I maghi possono usare le bacchette come arma da mischia.</item>
-    <item>Pergamene di Identificazione si identificano fin dall\'inizio.</item>
-  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>I furfanti iniziano con un anello di Ombre +1.</item>
     <item>I furfanti identificano il tipo di un anello equipaggiandolo.</item>
@@ -60,13 +53,6 @@
     <item>Le cacciatrici sono abili con armi da tiro ed ottengono un bonus di danno per la forza eccessiva quando li utilizzano.</item>
     <item>Le cacciatrici guadagnano più salute da gocce di rugiada.</item>
     <item>Le cacciatrici avvertono mostri vicini, anche se sono nascosti dietro ostacoli.</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>Gli elfi iniziano con 15 HP e 9 STR.</item>
-    <item>Gli elfi sono immuni dal radicamento.</item>
-    <item>Gli elfi iniziano con un arco in legno aggiornato e un sacco di frecce.</item>
-    <item>Gli elfi sono estremamente abile con archi e sono agili.</item>
-    <item>Gli elfi sono meno abili con le armi da mischia.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiatore</string>

@@ -380,7 +380,7 @@ public class WndBag extends WndTabbed {
 									mode == Mode.UPGRADEABLE && item.isUpgradable() ||
 									mode == Mode.UNIDENTIFED && !item.isIdentified() ||
 									mode == Mode.QUICKSLOT ||
-									mode == Mode.WEAPON && (item instanceof MeleeWeapon || item instanceof Boomerang) ||
+									mode == Mode.WEAPON && (!(item instanceof Bow) && (item instanceof MeleeWeapon || item instanceof Boomerang)) ||
 									mode == Mode.ARMOR && (item instanceof Armor) ||
 									mode == Mode.WAND && (item instanceof Wand) ||
 									mode == Mode.SEED && (item instanceof Seed) ||

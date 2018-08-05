@@ -39,13 +39,6 @@
     <item>Chaque ration redonne un peu de santé lors de sa consommation.</item>
     <item>Les potions de force sont identifiées dès le début.</item>
   </string-array>
-  <string-array name="HeroClass_MagPerks">
-    <item>Les mages commencent avec un unique sceptre de missiles magiques. Celui-ci pourra être \"désenchanté\" pour améliorer un autre sceptre.</item>
-    <item>Les mages rechargent leurs sceptres plus vite.</item>
-    <item>Lors de sa consommation, une ration redonnera 1 charge à tous les sceptres de l\'inventaire.</item>
-    <item>Les mages peuvent utiliser leurs sceptres comme armes de mêlée.</item>
-    <item>Les parchemins d\'identification sont identifiés dès le début.</item>
-  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Les voleurs commencent avec un anneau des ténèbres +1.</item>
     <item>Les voleurs identifient le type d\'un anneau en l\'équipant.</item>
@@ -60,13 +53,6 @@
     <item>Les chasseresses sont douées lors de l\'utilisation des armes à distance et font des dommages supplémentaires en fonction de leur force quand elles les utilisent.</item>
     <item>Les chasseresses gagnent plus de points de vie en buvant la rosée.</item>
     <item>Les chasseresses détectent les monstres à proximité même s\'ils sont cachés par des obstacles.</item>
-  </string-array>
-  <string-array name="HeroClass_ElfPerks">
-    <item>Les Elfes commencent avec 15 poins de vie et 9 points de force.</item>
-    <item>Les Elfes sont immunisés à l\'enracinement.</item>
-    <item>Les Elfes commencent avec un arc en bois amélioré et un tas de flèches.</item>
-    <item>Les Elfes sont très efficaces avec des arcs et sont agiles.</item>
-    <item>Les Elfes sont moins efficaces avec les armes de mêlée.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiateur</string>

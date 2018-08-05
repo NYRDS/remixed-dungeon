@@ -16,8 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
-import com.watabou.noosa.Game;
+
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -130,5 +131,10 @@ public class Boomerang extends MissileWeapon {
 	@Override
 	public boolean isFliesFastRotating() {
 		return true;
+	}
+
+	@Override
+	public int price() {
+		return 100;
 	}
 }

@@ -38,4 +38,5 @@
     <string name="gdpr_agree">네, 동의합니다.</string>
     <string name="gdpr_disagree">아니요, 괜찮습니다.</string>
     <string name="gdpr_choose">선택해 주세요.</string>
-</resources>
+    
+    </resources>

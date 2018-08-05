@@ -42,8 +42,8 @@ public class ArmoredStatue extends Mob {
 		hp(ht(15 + Dungeon.depth * 5));
 		defenseSkill = 4 + Dungeon.depth + armor.DR;
 		
-		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( Poison.class );
+		IMMUNITIES.add( ToxicGas.class );
+		IMMUNITIES.add( Poison.class );
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
 		IMMUNITIES.add( Leech.class );

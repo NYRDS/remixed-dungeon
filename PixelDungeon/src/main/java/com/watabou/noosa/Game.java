@@ -265,33 +265,15 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void onPause() {
         super.onPause();
         paused = true;
+        view.onPause();
 
-        final Object wait = new Object();
-        executeInGlThread(new Runnable() {
-            @Override
-            public void run() {
-                if (scene != null) {
-                    scene.pause();
-                    synchronized (wait) {
-                        wait.notify();
-                    }
-                }
-            }
-        });
+        if (scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
+            scene.pause();
+        }
 
         Music.INSTANCE.pause();
         Sample.INSTANCE.pause();
 
-        try {
-            synchronized (wait) {
-                wait.wait(1000,0);
-            }
-
-        } catch (InterruptedException e) {
-            EventCollector.logException(e, "save timeout");
-        }
-
-        view.onPause();
         Script.reset();
     }
 
@@ -299,20 +281,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void onDestroy() {
         super.onDestroy();
 
+        if (scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
+            scene.destroy();
+            scene = null;
+        }
+
         Music.INSTANCE.mute();
         Sample.INSTANCE.reset();
-
-        executeInGlThread(new Runnable() {
-            @Override
-            public void run() {
-;
-                if (scene != null) {
-                    scene.destroy();
-                    scene = null;
-                }
-            }
-        });
-
     }
 
     @SuppressLint({"Recycle", "ClickableViewAccessibility"})

@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
-import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -46,23 +45,10 @@ public class Affection extends Glyph {
 
 			int duration = Random.IntRange(2, 5);
 
-			float attackerFactor = 1;
-			float defenderFactor = 1;
-
-			if(defender.hasBuff(DriedRose.OneWayLoveBuff.class)) {
-				attackerFactor *= 2;
-				defenderFactor *= 0;
-			}
-
-			if(defender.hasBuff(DriedRose.OneWayCursedLoveBuff.class)) {
-				attackerFactor *= 0;
-				defenderFactor *= 2;
-			}
-
-			Buff.affect(attacker, Charm.class, Charm.durationFactor(attacker) * duration * attackerFactor);
+			Buff.affect(attacker, Charm.class, Charm.durationFactor(attacker) * duration);
 			attacker.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 
-			Buff.affect(defender, Charm.class, Random.Float(Charm.durationFactor(defender) * duration / 2, duration) * defenderFactor);
+			Buff.affect(defender, Charm.class, Random.Float(Charm.durationFactor(defender) * duration / 2, duration));
 			defender.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 		}
 

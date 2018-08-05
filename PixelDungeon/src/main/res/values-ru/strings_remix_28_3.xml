@@ -33,4 +33,5 @@
     <string name="RottenFish_Info">Тухлая рыба, воняет ужасно.</string>
     <string name="RottenFish_Taste">Отвратительно!</string>
 
-    </resources>
+    <string name="Mob_StaHuntingStatus2">%1$s охотится на %2$s</string>
+</resources>

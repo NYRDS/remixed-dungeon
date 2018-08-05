@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -80,17 +79,8 @@ public class Sungrass extends Plant {
 			super.execute(hero, action);
 
 			if (action.equals(Food.AC_EAT)) {
-				float duration = 1;
 
-				if (hero.hasBuff(DriedRose.OneWayLoveBuff.class)) {
-					duration *= 0;
-				}
-
-				if (hero.hasBuff(DriedRose.OneWayCursedLoveBuff.class)) {
-					duration *= 2;
-				}
-
-				Buff.affect(hero, Charm.class, Charm.durationFactor(hero) * Random.IntRange(10, 15) * duration);
+				Buff.affect(hero, Charm.class, Charm.durationFactor(hero) * Random.IntRange(10, 15));
 
 				hero.hp(hero.hp() + Random.Int(0, Math.max((hero.ht() - hero.hp()) / 4, 15)));
 				if (hero.hp() > hero.ht()) {

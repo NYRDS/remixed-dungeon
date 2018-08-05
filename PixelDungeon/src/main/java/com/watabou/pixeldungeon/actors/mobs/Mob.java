@@ -292,20 +292,20 @@ public abstract class Mob extends Char {
 		Level level = Dungeon.level;
 
 		Char bestEnemy = DUMMY;
-		float dist = level.getWidth() + level.getHeight();
+		int dist = level.getWidth() + level.getHeight();
 
 		if (enemyFraction.belongsTo(Fraction.HEROES)) {
 			Hero hero = Dungeon.hero;
-			if (!friendly(hero)) {
+			if (Dungeon.level.fieldOfView[hero.getPos()] && !friendly(hero)) {
 				bestEnemy = hero;
-				dist = level.distanceL2(getPos(), bestEnemy.getPos());
+				dist = level.distance(getPos(), bestEnemy.getPos());
 			}
 		}
 
 		for (Mob mob : level.mobs) {
 			if(Dungeon.level.fieldOfView[mob.getPos()]) {
 				if (!mob.friendly(this)) {
-					float candidateDist = level.distanceL2(getPos(), mob.getPos());
+					int candidateDist = level.distance(getPos(), mob.getPos());
 					if (candidateDist < dist) {
 						bestEnemy = mob;
 						dist = candidateDist;
@@ -567,7 +567,7 @@ public abstract class Mob extends Char {
 		Hero hero = Dungeon.hero;
 
 		{
-			//TODO we should move this block out of Mob class
+			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.heroClass == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
 					if(hero.belongings.armor instanceof NecromancerRobe){
@@ -880,6 +880,10 @@ public abstract class Mob extends Char {
 
 		@Override
 		public String status() {
+			if (getEnemy()!=DUMMY) {
+				return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus2),
+						getName(), getEnemy().getName_objective());
+			}
 			return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
 					getName());
 		}
@@ -949,6 +953,13 @@ public abstract class Mob extends Char {
 
 	@Override
 	public boolean friendly(Char chr) {
+
+		if(chr == this) {
+			return true;
+		}
+
+		if(hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {return false;}
+
 		if(getEnemy() == chr) {return false;}
 
 		if(chr instanceof Hero) {
@@ -1006,6 +1017,12 @@ public abstract class Mob extends Char {
 	}
 
 	public void setEnemy(@NonNull Char enemy) {
+		/*
+		if(enemy != this.enemy && enemy != DUMMY) {
+			enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
+			GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
+		}
+		*/
 		this.enemy = enemy;
 	}
 

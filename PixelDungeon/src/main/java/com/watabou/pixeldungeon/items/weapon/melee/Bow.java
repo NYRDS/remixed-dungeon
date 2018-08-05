@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 
 public abstract class Bow extends MeleeWeapon {
 
-	protected Class <? extends Arrow> arrowType = Arrow.class;
+	private Class <? extends Arrow> arrowType = Arrow.class;
 	
 	public Bow( int tier, float acu, float dly ) {
 		super(tier, acu, dly);

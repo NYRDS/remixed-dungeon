@@ -36,8 +36,6 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Necromantes começam com 15 pontos de vida.</item>
-        <item>Necromantes possuem um recurso único \"almas\", usadas para conjurar feitiços. Cada monstro morto concede 1 alma.</item>
-        <item>Necromantes começam com o manto do Necromante.</item>
         <item>Necromantes começam com a chave esqueleto do nível 7.</item>
         <item>Poção de cura é identificada do começo.</item>
     </string-array>
