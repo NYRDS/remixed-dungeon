@@ -37,4 +37,5 @@
     <string name="gdpr_disagree">Nein danke</string>
     <string name="gdpr_choose">Bitte wähle</string>
     
-    </resources>
+    <string name="Mob_StaHuntingStatus2">Dieser %1$s jagt nach %2$s</string>
+</resources>

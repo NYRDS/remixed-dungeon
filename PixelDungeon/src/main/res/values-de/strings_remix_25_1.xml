@@ -36,6 +36,7 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Nekromanten starten mit 15 Lebenspunkten.</item>
+        <item>Nekromanten benutzen Mana um Todessprüche zu zaubern.</item>
         <item>Nekromanten starten mit einem Skelettschlüssel für Level 7.</item>
         <item>Heiltränke sind von Anfang an identifiziert.</item>
     </string-array>

@@ -36,6 +36,8 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Nekromanci zaczynają z 15 punktami życia.</item>
+        <item>Nekromanci używają many aby rzucać zaklęcia Śmierci.</item>
+        <item>Nekromanci zaczynają grę z unikalną Szatą Nekromanty, która daje 1 punkt many za każdą pokonaną istotę.</item>
         <item>Nekromanci zaczynają z Kościanym Kluczem poziomu 7-ego.</item>
         <item>Mikstura Leczenia jest znana od początku.</item>
     </string-array>
