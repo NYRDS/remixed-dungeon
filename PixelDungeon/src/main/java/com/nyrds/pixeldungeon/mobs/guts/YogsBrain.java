@@ -71,12 +71,12 @@ public class YogsBrain extends Boss {
     }
 
     @Override
-    protected boolean canAttack(Char enemy) {
+    public boolean canAttack(Char enemy) {
         return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
     }
 
     @Override
-    protected boolean doAttack( Char enemy ) {
+    public boolean doAttack(Char enemy) {
 
         if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
 
@@ -114,7 +114,7 @@ public class YogsBrain extends Boss {
     }
 
 	@Override
-	protected boolean getCloser( int target ) {
+    public boolean getCloser(int target) {
 		if (getState() == HUNTING) {
 			return enemySeen && getFurther( target );
 		} else {

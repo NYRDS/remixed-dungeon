@@ -78,7 +78,7 @@ public class Eye extends Mob {
 	private int hitCell;
 	
 	@Override
-	protected boolean canAttack( Char enemy ) {
+    public boolean canAttack(Char enemy) {
 		
 		hitCell = Ballistica.cast( getPos(), enemy.getPos(), true, false );
 		
@@ -101,7 +101,7 @@ public class Eye extends Mob {
 	}
 	
 	@Override
-	protected boolean doAttack( Char enemy ) {
+	public boolean doAttack(Char enemy) {
 
 		spend( attackDelay() );
 		

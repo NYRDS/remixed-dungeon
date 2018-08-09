@@ -67,7 +67,7 @@ public class Shaman extends Mob implements IZapper {
 	}
 
 	@Override
-	protected boolean canAttack(Char enemy) {
+	public boolean canAttack(Char enemy) {
 		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 
@@ -90,7 +90,7 @@ public class Shaman extends Mob implements IZapper {
 	}
 
 	@Override
-	protected boolean getFurther(int target) {
+    public boolean getFurther(int target) {
 
 		if (Dungeon.level.distance(getPos(), target) > 2) {
 			setState(HUNTING);

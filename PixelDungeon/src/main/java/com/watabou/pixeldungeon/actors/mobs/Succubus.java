@@ -92,7 +92,7 @@ public class Succubus extends Mob {
 	}
 
 	@Override
-	protected boolean getCloser(int target) {
+    public boolean getCloser(int target) {
 		if (Dungeon.level.fieldOfView[target] && Dungeon.level.distance(getPos(), target) > 2 && delay <= 0) {
 
 			blink(target);

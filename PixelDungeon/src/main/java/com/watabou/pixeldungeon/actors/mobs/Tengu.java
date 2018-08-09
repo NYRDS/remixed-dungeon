@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.Badges.Badge;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -92,7 +92,7 @@ public class Tengu extends Boss implements IZapper {
 	}
 	
 	@Override
-	protected boolean getCloser( int target ) {
+	public boolean getCloser(int target) {
 		if (Dungeon.level.fieldOfView[target]) {
 			jump();
 			return true;
@@ -102,12 +102,12 @@ public class Tengu extends Boss implements IZapper {
 	}
 	
 	@Override
-	protected boolean canAttack( Char enemy ) {
+    public boolean canAttack(Char enemy) {
 		return Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
 	@Override
-	protected boolean doAttack( Char enemy ) {
+	public boolean doAttack(Char enemy) {
 		timeToJump--;
 		if (timeToJump <= 0 && Dungeon.level.adjacent( getPos(), enemy.getPos() )) {
 			jump();

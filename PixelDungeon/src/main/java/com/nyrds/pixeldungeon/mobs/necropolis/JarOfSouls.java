@@ -66,12 +66,12 @@ public class JarOfSouls extends UndeadMob {
 	}
 
 	@Override
-	protected boolean getCloser( int target ) {
+	public boolean getCloser(int target) {
 		return false;
 	}
 
 	@Override
-	protected boolean getFurther( int target ) {
+    public boolean getFurther(int target) {
 		return false;
 	}
 

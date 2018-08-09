@@ -57,7 +57,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	protected boolean getCloser(int target) {
+	public boolean getCloser(int target) {
 		if (getState() == HUNTING && Dungeon.level.distance(getPos(), target) < magicLvl() - 1) {
 			return getFurther(target);
 		}
@@ -66,7 +66,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	protected boolean canAttack(Char enemy) {
+    public boolean canAttack(Char enemy) {
 
 		if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 			return false;

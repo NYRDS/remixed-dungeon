@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Web;
@@ -42,7 +43,7 @@ public class Spinner extends Mob {
 		loot = new MysteryMeat();
 		lootChance = 0.125f;
 		
-		FLEEING = new Fleeing();
+		FLEEING = new ThiefFleeing(this);
 		
 		RESISTANCES.add( Poison.class );
 		IMMUNITIES.add( Roots.class );
@@ -90,15 +91,5 @@ public class Spinner extends Mob {
 		}
 		super.move( step );
 	}
-	
-	private class Fleeing extends Mob.Fleeing {
-		@Override
-		protected void nowhereToRun() {
-			if (hasBuff( Terror.class )) {
-				super.nowhereToRun();
-			} else {
-				setState(HUNTING);
-			}
-		}
-	}
+
 }

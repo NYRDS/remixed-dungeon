@@ -52,7 +52,7 @@ public class Rat extends Mob {
 	}
 
 	@Override
-	protected boolean canAttack(Char enemy) {
+    public boolean canAttack(Char enemy) {
 		if(enemy.hasBuff(RatSkull.RatterAura.class)) {
 			setState(FLEEING);
 			if(!hasBuff(Terror.class)) {

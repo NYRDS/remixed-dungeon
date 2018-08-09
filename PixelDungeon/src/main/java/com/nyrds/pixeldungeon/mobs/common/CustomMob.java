@@ -104,7 +104,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	protected boolean canAttack( Char enemy ) {
+    public boolean canAttack(Char enemy) {
 
 		if(friendly(enemy)) {
 			return false;

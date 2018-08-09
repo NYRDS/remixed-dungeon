@@ -39,7 +39,7 @@ public class SpiderMindAmber extends MultiKindMob {
 	}
 	
 	@Override
-	protected boolean canAttack( Char enemy ) {
+    public boolean canAttack(Char enemy) {
 		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
@@ -56,7 +56,7 @@ public class SpiderMindAmber extends MultiKindMob {
 	}
 	
 	@Override
-	protected boolean getCloser( int target ) {
+	public boolean getCloser(int target) {
 		if (getState() == HUNTING) {
 			return enemySeen && getFurther( target );
 		} else {
