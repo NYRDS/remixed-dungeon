@@ -198,7 +198,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		bottomRow.setAlign(HBox.Align.Width);
 		bottomRow.setGap(2*GAP);
 
-		RedButton autoLoadButton = new RedButton("Load latest auto-save"){
+		RedButton autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave){
             @Override
             protected void onClick() {
                 showAd(AUTO_SAVE);
