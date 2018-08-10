@@ -49,9 +49,9 @@ public class WndPortal extends Window {
 				portal.useUp();
 
 				hero.setPortalLevelCoordinates(portal.getPosition());
-				InterlevelScene.mode = InterlevelScene.Mode.RETURN;
+
 				InterlevelScene.returnTo = new Position(returnTo);
-				Game.switchScene( InterlevelScene.class );
+				InterlevelScene.Do(InterlevelScene.Mode.RETURN);
 			}
 		};
 

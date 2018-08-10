@@ -69,9 +69,8 @@ public class WndResurrect extends Window {
 				hide();
 				
 				Statistics.ankhsUsed++;
-				
-				InterlevelScene.mode = InterlevelScene.Mode.RESURRECT;
-				Game.switchScene( InterlevelScene.class );
+
+				InterlevelScene.Do(InterlevelScene.Mode.RESURRECT);
 			}
 		};
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );

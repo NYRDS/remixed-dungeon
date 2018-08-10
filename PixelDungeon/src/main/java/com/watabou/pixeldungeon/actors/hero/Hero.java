@@ -873,8 +873,7 @@ public class Hero extends Char implements PetOwner {
 				hunger.satisfy(-Hunger.STARVING / 10);
 			}
 
-			InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
-			Game.switchScene(InterlevelScene.class);
+            InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
 
 			return false;
 
@@ -918,8 +917,7 @@ public class Hero extends Char implements PetOwner {
 					hunger.satisfy(-Hunger.STARVING / 10);
 				}
 
-				InterlevelScene.mode = InterlevelScene.Mode.ASCEND;
-				Game.switchScene(InterlevelScene.class);
+				InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
 			}
 
 			return false;

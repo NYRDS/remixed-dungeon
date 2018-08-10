@@ -148,8 +148,7 @@ public class StartScene extends PixelScene {
                 .getVar(R.string.StartScene_Load)) {
             @Override
             protected void onClick() {
-                InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
-                Game.switchScene(InterlevelScene.class);
+                InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
                 Dungeon.heroClass = curShield.cl;
             }
         };
@@ -360,14 +359,13 @@ public class StartScene extends PixelScene {
         EventCollector.logEvent("game", "mod", PixelDungeon.activeMod());
         EventCollector.logEvent("game", "difficulty", String.valueOf(difficulty));
 
-        InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
-
         Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
 
         if (PixelDungeon.intro()) {
             PixelDungeon.intro(false);
             Game.switchScene(IntroScene.class);
         } else {
+            InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
             Game.switchScene(InterlevelScene.class);
         }
     }

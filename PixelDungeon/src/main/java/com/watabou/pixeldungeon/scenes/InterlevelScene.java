@@ -118,7 +118,12 @@ public class InterlevelScene extends PixelScene {
 			}
 		}
 	}
-	
+
+	static public void Do(InterlevelScene.Mode mode) {
+		InterlevelScene.mode = mode;
+		Game.switchScene( InterlevelScene.class );
+	}
+
 	@Override
 	public void create() {
 		super.create();
@@ -327,6 +332,7 @@ public class InterlevelScene extends PixelScene {
 
 		Dungeon.hero.spawnPets(Dungeon.level, true);
 	}
+
 
 	@Override
 	protected void onBackPressed() {
