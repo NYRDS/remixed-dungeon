@@ -77,7 +77,6 @@ import com.watabou.pixeldungeon.actors.mobs.PetOwner;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -1077,9 +1076,8 @@ public class Hero extends Char implements PetOwner {
 			if (Dungeon.level.cellValid(spiritPos)) {
 				SpiritOfPain spirit = new SpiritOfPain();
 				spirit.setPos(spiritPos);
-				Dungeon.level.spawnMob(spirit, 0);
-				Actor.addDelayed(new Pushing(spirit, getPos(), spirit.getPos()), -1);
 				Mob.makePet(spirit, this);
+				Dungeon.level.spawnMob(spirit, 0, getPos());
 			}
 		}
 
@@ -1727,6 +1725,7 @@ public class Hero extends Char implements PetOwner {
 
 		belongings.resurrect(resetLevel);
 
+		updateLook();
 		live();
 	}
 
