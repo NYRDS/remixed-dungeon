@@ -193,6 +193,7 @@ public class Lich extends Boss {
                     if (Dungeon.level.cellValid(pos)) {
                         Skeleton skeleton = new Skeleton();
                         skeleton.setPos(pos);
+                        skeleton.setState(skeleton.HUNTING);
                         Dungeon.level.spawnMob(skeleton, 0, getPos());
                         i++;
                     } else {

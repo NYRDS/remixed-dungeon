@@ -1725,7 +1725,6 @@ public class Hero extends Char implements PetOwner {
 
 		belongings.resurrect(resetLevel);
 
-		updateLook();
 		live();
 	}
 
