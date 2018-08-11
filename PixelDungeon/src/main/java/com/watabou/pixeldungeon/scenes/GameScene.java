@@ -383,6 +383,7 @@ public class GameScene extends PixelScene {
 
         fadeIn();
 
+        Dungeon.save();
         Dungeon.observe();
     }
 

@@ -257,16 +257,6 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		return ModdingMode.activeMod() + "_" + slotNameFromIndex(i);
 	}
 
-	public static boolean haveSomethingToLoad() {
-		String slots[] = slotInfos();
-		for (String slot : slots) {
-			if (!slot.equals("")) {
-				return true;
-			}
-		}
-
-		return false;
-	}
 
 	private static String[] slotInfos() {
 		String[] ret = new String[10];

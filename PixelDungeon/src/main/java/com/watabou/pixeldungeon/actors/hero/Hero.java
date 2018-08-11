@@ -1483,13 +1483,11 @@ public class Hero extends Char implements PetOwner {
 		if (ankh == null) {
 			if (this.subClass == HeroSubClass.LICH && this.getSoulPoints() == this.getSoulPointsMax()) {
 				this.setSoulPoints(0);
-				Dungeon.deleteGame(false);
 				GameScene.show(new WndResurrect(null, cause));
 			} else {
 				reallyDie(cause);
 			}
 		} else {
-			Dungeon.deleteGame(false);
 			while (belongings.removeItem(ankh)) {
 			}
 			GameScene.show(new WndResurrect(ankh, cause));
@@ -1521,12 +1519,11 @@ public class Hero extends Char implements PetOwner {
 
 	public static void reallyDie(final Object cause) {
 
-		if (Dungeon.hero.getDifficulty() < 2 && WndSaveSlotSelect.haveSomethingToLoad()) {
+		if (Dungeon.hero.getDifficulty() < 2) {
 			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)) {
 				@Override
 				public void hide() {
 					super.hide();
-					reallyReallyDie(cause);
 				}
 			});
 			return;

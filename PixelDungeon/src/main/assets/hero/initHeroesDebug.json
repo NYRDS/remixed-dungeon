@@ -6,10 +6,6 @@
     },
     "items": [
       {
-        "kind": "Ankh",
-        "quantity": 100
-      },
-      {
         "kind": "WandOfAmok",
         "level":10
       },
