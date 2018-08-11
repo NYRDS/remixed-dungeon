@@ -198,16 +198,18 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		bottomRow.setAlign(HBox.Align.Width);
 		bottomRow.setGap(2*GAP);
 
-		RedButton autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave){
-            @Override
-            protected void onClick() {
-                showAd(AUTO_SAVE);
-            }
-        };
+		if(!saving) {
+            RedButton autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave) {
+                @Override
+                protected void onClick() {
+                    showAd(AUTO_SAVE);
+                }
+            };
 
-		autoLoadButton.setSize(BUTTON_WIDTH - GAP,BUTTON_HEIGHT);
+            autoLoadButton.setSize(BUTTON_WIDTH - GAP, BUTTON_HEIGHT);
 
-		bottomRow.add(autoLoadButton);
+            bottomRow.add(autoLoadButton);
+        }
 
 		if (PixelDungeon.donated() == 0 && PixelDungeon.canDonate()) {
 			DonateButton btn = new DonateButton(this);
