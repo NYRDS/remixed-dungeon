@@ -9,13 +9,13 @@ import com.watabou.noosa.InterstitialPoint;
 
 public class RewardVideo {
 	static public void init() {
+		if(!GoogleRewardVideoAds.isReady()){
+			GoogleRewardVideoAds.initCinemaRewardVideo();
+		}
+
 		if(!AppodealRewardVideo.isVideoReady()) {
 			AppodealRewardVideo.init();
 			AppodealRewardVideo.loadRewardVideo();
-		}
-
-		if(!GoogleRewardVideoAds.isReady()){
-			GoogleRewardVideoAds.initCinemaRewardVideo();
 		}
 	}
 
@@ -24,13 +24,13 @@ public class RewardVideo {
 	}
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
-		if (AppodealRewardVideo.isVideoReady()) {
-			AppodealRewardVideo.showCinemaRewardVideo(ret);
+		if(GoogleRewardVideoAds.isReady()) {
+			GoogleRewardVideoAds.showCinemaRewardVideo(ret);
 			return;
 		}
 
-		if(GoogleRewardVideoAds.isReady()) {
-			GoogleRewardVideoAds.showCinemaRewardVideo(ret);
+		if (AppodealRewardVideo.isVideoReady()) {
+			AppodealRewardVideo.showCinemaRewardVideo(ret);
 			return;
 		}
 

@@ -33,7 +33,7 @@
       }
     ],
     "str": 15,
-    "hp": 2000,
+    "hp": 20,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -140,7 +140,7 @@
         "depth": "7"
       }
     ],
-    "hp": 10000,
+    "hp": 10,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
