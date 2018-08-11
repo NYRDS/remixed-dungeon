@@ -1041,7 +1041,7 @@ public class Hero extends Char implements PetOwner {
 						Wand wand = (Wand) wep;
 						if (wand.affectTarget()) {
 							if (Random.Int(4) == 0) {
-								wand.zap(this,enemy.getPos());
+								wand.zapCell(this,enemy.getPos());
 							}
 						}
 					}

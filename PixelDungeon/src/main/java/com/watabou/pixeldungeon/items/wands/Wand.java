@@ -164,9 +164,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		super.execute(hero, action);
 	}
 
-	public void zap(Hero chr,int cell) {
+	public void zapCell(Hero chr, int cell) {
 		setCurUser(chr);
-		onZap(getDestinationCell(cell));
+		getDestinationCell(cell);
+		onZap(cell);
 	}
 	
 	protected abstract void onZap(int cell);
