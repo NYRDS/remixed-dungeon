@@ -32,8 +32,12 @@
     <string name="RottenFish_Info">Зіпсована риба, тхне неймовірно</string>
     <string name="RottenFish_Taste">Гидота!</string>
 
+    <string name="gdpr_title">Персоналізація Ваших рекламних вподобань</string>
     <string name="gdpr_agree">Так, я погоджуюсь</string>
     <string name="gdpr_disagree">Ні, дякую</string>
     <string name="gdpr_choose">Будь ласка, зробіть вибір</string>
 
-    </resources>
+    <string name="Mob_StaHuntingStatus2">Цей %1$s полює на %2$s</string>
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">Автозбереження</string>
+</resources>
