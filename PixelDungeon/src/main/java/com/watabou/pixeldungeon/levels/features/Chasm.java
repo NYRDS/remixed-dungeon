@@ -92,7 +92,6 @@ public class Chasm {
 				GLog.n(Game.getVar(R.string.Chasm_Info));
 			}
 		} );
-		InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 	}
 
 	private static void mobFall( Mob mob ) {
@@ -112,14 +111,14 @@ public class Chasm {
 
 		if (hero.isAlive()) {
 			hero.clearActions();
-			InterlevelScene.mode = InterlevelScene.Mode.FALL;
+
 			if (Dungeon.level instanceof RegularLevel) {
 				Room room = ((RegularLevel)Dungeon.level).room( pos );
 				InterlevelScene.fallIntoPit = room != null && room.type == Room.Type.WEAK_FLOOR;
 			} else {
 				InterlevelScene.fallIntoPit = false;
 			}
-			Game.switchScene( InterlevelScene.class );
+			InterlevelScene.Do(InterlevelScene.Mode.FALL);
 		} else {
 			hero.getSprite().setVisible(false);
 		}

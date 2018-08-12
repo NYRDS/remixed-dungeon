@@ -92,6 +92,9 @@ public class Spell {
                 });
                 return false;
             }
+            hero.spend(castTime);
+            hero.busy();
+            hero.getSprite().zap(hero.getPos());
         }
         return true;
     }

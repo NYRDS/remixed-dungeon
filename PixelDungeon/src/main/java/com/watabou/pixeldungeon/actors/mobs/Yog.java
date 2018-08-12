@@ -25,7 +25,6 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
@@ -38,7 +37,6 @@ import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
@@ -126,8 +124,7 @@ public class Yog extends Boss {
 		if (Dungeon.level.cellValid(larvaPos)) {
 			Larva larva = new Larva();
 			larva.setPos(larvaPos);
-			Dungeon.level.spawnMob(larva, 0);
-			Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
+			Dungeon.level.spawnMob(larva, 0, getPos());
 		}
 
 		return super.defenseProc(enemy, damage);

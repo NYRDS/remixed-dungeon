@@ -32,4 +32,12 @@
     <string name="RottenFish_Info">Zgniła ryba, pachnie okropnie</string>
     <string name="RottenFish_Taste">Ohyda!</string>
 
+    <string name="gdpr_title">Dostosuj swoje Reklamy</string>
+    <string name="gdpr_text">Remixed Dungeon dobiera reklamy używając Admob i Appodeal (dostawcy reklam). Dostawcy reklam i ich partnerzy mogą badać personalne dane, takie jak identyfikator urządzenia, demografia oraz zainteresowania aby dostarczyć reklamy specjalnie wybrane dla ciebie. Zgadzają cię na te warunki, zobaczysz reklamy które dostawca reklamowy uważa za najbardziej odpowiednie,\n\nZgadając się potwierdzasz także że masz więcej niż 16 lat i chciałbyś mieć wyszczególnione dla ciebie reklamy.\n\n</string>
+    <string name="gdpr_agree">Tak, zgadam się</string>
+    <string name="gdpr_disagree">Nie, dziękuję </string>
+    <string name="gdpr_choose">Proszę podjąć decyzję </string>
+
+    <string name="Mob_StaHuntingStatus2">Ten %1$s poluje na%2$s</string>
+
     </resources>

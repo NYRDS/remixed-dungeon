@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 public class IntroScene extends PixelScene {
@@ -31,6 +31,7 @@ public class IntroScene extends PixelScene {
 			@Override
 			public void hide() {
 				super.hide();
+				InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
 				Game.switchScene( InterlevelScene.class );
 			}
 		} );

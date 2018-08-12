@@ -77,7 +77,6 @@ import com.watabou.pixeldungeon.actors.mobs.PetOwner;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -873,8 +872,7 @@ public class Hero extends Char implements PetOwner {
 				hunger.satisfy(-Hunger.STARVING / 10);
 			}
 
-			InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
-			Game.switchScene(InterlevelScene.class);
+            InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
 
 			return false;
 
@@ -918,8 +916,7 @@ public class Hero extends Char implements PetOwner {
 					hunger.satisfy(-Hunger.STARVING / 10);
 				}
 
-				InterlevelScene.mode = InterlevelScene.Mode.ASCEND;
-				Game.switchScene(InterlevelScene.class);
+				InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
 			}
 
 			return false;
@@ -1043,7 +1040,7 @@ public class Hero extends Char implements PetOwner {
 						Wand wand = (Wand) wep;
 						if (wand.affectTarget()) {
 							if (Random.Int(4) == 0) {
-								wand.zap(this,enemy.getPos());
+								wand.zapCell(this,enemy.getPos());
 							}
 						}
 					}
@@ -1079,9 +1076,8 @@ public class Hero extends Char implements PetOwner {
 			if (Dungeon.level.cellValid(spiritPos)) {
 				SpiritOfPain spirit = new SpiritOfPain();
 				spirit.setPos(spiritPos);
-				Dungeon.level.spawnMob(spirit, 0);
-				Actor.addDelayed(new Pushing(spirit, getPos(), spirit.getPos()), -1);
 				Mob.makePet(spirit, this);
+				Dungeon.level.spawnMob(spirit, 0, getPos());
 			}
 		}
 
@@ -1487,13 +1483,11 @@ public class Hero extends Char implements PetOwner {
 		if (ankh == null) {
 			if (this.subClass == HeroSubClass.LICH && this.getSoulPoints() == this.getSoulPointsMax()) {
 				this.setSoulPoints(0);
-				Dungeon.deleteGame(false);
 				GameScene.show(new WndResurrect(null, cause));
 			} else {
 				reallyDie(cause);
 			}
 		} else {
-			Dungeon.deleteGame(false);
 			while (belongings.removeItem(ankh)) {
 			}
 			GameScene.show(new WndResurrect(ankh, cause));
@@ -1525,12 +1519,11 @@ public class Hero extends Char implements PetOwner {
 
 	public static void reallyDie(final Object cause) {
 
-		if (Dungeon.hero.getDifficulty() < 2 && WndSaveSlotSelect.haveSomethingToLoad()) {
+		if (Dungeon.hero.getDifficulty() < 2) {
 			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)) {
 				@Override
 				public void hide() {
 					super.hide();
-					reallyReallyDie(cause);
 				}
 			});
 			return;

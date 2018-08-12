@@ -84,7 +84,7 @@ public class SuspiciousRat extends Mob {
 				if (Dungeon.level.cellValid(wereratPos)) {
 					PseudoRat mob = new PseudoRat();
 					mob.setPos(wereratPos);
-					Dungeon.level.spawnMob(mob, 0);
+					Dungeon.level.spawnMob(mob);
 					Sample.INSTANCE.play(Assets.SND_CURSED);
 				}
 				die(this);

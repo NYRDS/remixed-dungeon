@@ -27,6 +27,8 @@ import com.watabou.utils.Random;
 
 public class Swarm extends Mob {
 
+	private static final float BASIC_LOOT_CHANCE = 0.25f;
+
 	{
 		spriteClass = SwarmSprite.class;
 		
@@ -37,7 +39,7 @@ public class Swarm extends Mob {
 		
 		flying = true;
 
-		lootChance = 0.25f;
+		lootChance = BASIC_LOOT_CHANCE;
 		loot = new PotionOfHealing();
 	}
 
@@ -52,6 +54,7 @@ public class Swarm extends Mob {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
+		lootChance = BASIC_LOOT_CHANCE / (generation + 1f);
 	}
 	
 	@Override
