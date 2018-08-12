@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -69,9 +70,8 @@ public class WndResurrect extends Window {
 				hide();
 				
 				Statistics.ankhsUsed++;
-				
-				InterlevelScene.mode = InterlevelScene.Mode.RESURRECT;
-				Game.switchScene( InterlevelScene.class );
+
+				InterlevelScene.Do(InterlevelScene.Mode.RESURRECT);
 			}
 		};
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
@@ -81,6 +81,7 @@ public class WndResurrect extends Window {
 			@Override
 			protected void onClick() {
 				hide();
+				Dungeon.deleteGame(false);
 				Hero.reallyDie( WndResurrect.causeOfDeath );
 			}
 		};

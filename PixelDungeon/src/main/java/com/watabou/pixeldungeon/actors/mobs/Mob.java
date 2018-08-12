@@ -645,8 +645,7 @@ public abstract class Mob extends Char {
 			Door.enter(clone.getPos());
 		}
 
-		Dungeon.level.spawnMob(clone, SPLIT_DELAY);
-		Actor.addDelayed(new Pushing(clone, getPos(), clone.getPos()), -1);
+		Dungeon.level.spawnMob(clone, SPLIT_DELAY, getPos());
 
 		if (hasBuff(Burning.class)) {
 			Buff.affect(clone, Burning.class).reignite(clone);

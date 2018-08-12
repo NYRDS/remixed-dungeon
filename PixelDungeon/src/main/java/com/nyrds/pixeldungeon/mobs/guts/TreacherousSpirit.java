@@ -4,10 +4,8 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.utils.Random;
 
 /**
@@ -35,8 +33,7 @@ public class TreacherousSpirit extends Mob {
             if (Dungeon.level.cellValid(spiritPos)) {
                 SpiritOfPain spirit = new SpiritOfPain();
                 spirit.setPos(spiritPos);
-                Dungeon.level.spawnMob(spirit, 0);
-                Actor.addDelayed(new Pushing(spirit, getPos(), spirit.getPos()), -1);
+                Dungeon.level.spawnMob(spirit, 0,getPos());;
             }
         }
         return damage;

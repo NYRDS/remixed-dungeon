@@ -6,7 +6,6 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -15,7 +14,6 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -136,8 +134,7 @@ public class YogsBrain extends Boss {
         if (Dungeon.level.cellValid(nightmarePos)) {
             Nightmare nightmare = new Nightmare();
             nightmare.setPos(nightmarePos);
-            Dungeon.level.spawnMob(nightmare, 0);
-            Actor.addDelayed(new Pushing(nightmare, getPos(), nightmare.getPos()), -1);
+            Dungeon.level.spawnMob(nightmare, 0,getPos());
 
             Sample.INSTANCE.play(Assets.SND_CURSED);
         }

@@ -34,4 +34,6 @@
     <string name="RottenFish_Taste">Отвратительно!</string>
 
     <string name="Mob_StaHuntingStatus2">%1$s охотится на %2$s</string>
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">Автосохранение</string>
 </resources>

@@ -21,9 +21,9 @@ public class SaveUtils {
 		GLog.toFile("Loading: class :%s slot: %s", heroClass.toString(), slot);
 		Dungeon.deleteGame(true);
 		copyFromSaveSlot(slot, heroClass);
-		
-		InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
-		Game.switchScene(InterlevelScene.class);
+
+		InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+
 		Dungeon.heroClass = heroClass;
 	}
 

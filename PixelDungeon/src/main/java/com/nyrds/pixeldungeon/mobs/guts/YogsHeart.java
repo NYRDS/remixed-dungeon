@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -11,7 +10,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.utils.Random;
 
@@ -55,8 +53,7 @@ public class YogsHeart extends Boss {
         if (Dungeon.level.cellValid(larvaPos)) {
             Yog.Larva larva = new Yog.Larva();
             larva.setPos(larvaPos);
-            Dungeon.level.spawnMob(larva, 0);
-            Actor.addDelayed(new Pushing(larva, getPos(), larva.getPos()), -1);
+            Dungeon.level.spawnMob(larva, 0, getPos());
         }
 
         return super.defenseProc(enemy, damage);

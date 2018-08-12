@@ -55,9 +55,8 @@ public class PotionOfPurity extends UpgradablePotion{
 				Dungeon.level.blobs.get(ConfusionGas.class)
 		};
 
-		for (int j = 0; j < blobs.length; j++) {
+		for (Blob blob : blobs) {
 
-			Blob blob = blobs[j];
 			if (blob == null) {
 				continue;
 			}

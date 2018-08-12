@@ -22,7 +22,6 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -104,7 +103,7 @@ public class Lich extends Boss {
 
         if(timeToJump) {
             jump();
-            return false;
+            return true;
         }
 
         if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
@@ -194,8 +193,8 @@ public class Lich extends Boss {
                     if (Dungeon.level.cellValid(pos)) {
                         Skeleton skeleton = new Skeleton();
                         skeleton.setPos(pos);
-                        Dungeon.level.spawnMob(skeleton, 0);
-                        Actor.addDelayed(new Pushing(skeleton, getPos(), skeleton.getPos()), -1);
+                        skeleton.setState(skeleton.HUNTING);
+                        Dungeon.level.spawnMob(skeleton, 0, getPos());
                         i++;
                     } else {
                         break;

@@ -6,10 +6,6 @@
     },
     "items": [
       {
-        "kind": "Ankh",
-        "quantity": 100
-      },
-      {
         "kind": "WandOfAmok",
         "level":10
       },
@@ -18,7 +14,7 @@
         "quantity": 100
       },
       {
-        "kind": "SpellBook"
+        "kind": "Sword"
       },
       {
         "kind": "PotionOfParalyticGas",
@@ -32,8 +28,8 @@
         "quantity": 100
       }
     ],
-    "str": 10,
-    "hp": 2,
+    "str": 15,
+    "hp": 20,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -140,13 +136,13 @@
         "depth": "7"
       }
     ],
-    "hp": 1,
+    "hp": 10,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
       }
     ],
-    "startingSp": 0,
+    "startingSp": 10000,
     "maxSp": 10,
     "isSpellUser": true,
     "magicAffinity": "Necromancy"
