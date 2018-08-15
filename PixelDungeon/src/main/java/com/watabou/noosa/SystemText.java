@@ -179,13 +179,18 @@ public class SystemText extends Text {
 			int codepointCharCount = Character.charCount(codepoint);
 			offset += codepointCharCount;
 
-			if (Character.isWhitespace(codepoint)) {
+			boolean isWhiteSpace = Character.isWhitespace(codepoint);
+
+			if (isWhiteSpace) {
                 lastWordOffset = offset;
                 lastWordStart = xCharPos.size();
             }
 
-            xCharPos.add(xPos);
-            codePoints.add(codepoint);
+            if(!isWhiteSpace || symbolWidth == 0)
+            {
+				xCharPos.add(xPos);
+				codePoints.add(codepoint);
+			}
 
 			if (codepoint == 0x000A) {
 				lineWidth += symbolWidth;
@@ -222,8 +227,6 @@ public class SystemText extends Text {
 			destroyLines();
 			lineImage.clear();
 			width = 0;
-
-			//height = fontHeight / 4;
 
 			height = 0;
 			int charIndex = 0;
