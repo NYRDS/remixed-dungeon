@@ -641,9 +641,7 @@ public abstract class Mob extends Char {
 		clone.setPos(cell);
 		clone.setState(clone.HUNTING);
 
-		if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
-			Door.enter(clone.getPos());
-		}
+		clone.ensureOpenDoor();
 
 		Dungeon.level.spawnMob(clone, SPLIT_DELAY, getPos());
 
@@ -800,10 +798,18 @@ public abstract class Mob extends Char {
 		chr.getSprite().move(chr.getPos(), curPos);
 		chr.move(curPos);
 
+		ensureOpenDoor();
+
 		float timeToSwap = 1 / chr.speed();
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
 		setState(WANDERING);
+	}
+
+	private void ensureOpenDoor() {
+		if (Dungeon.level.map[getPos()] == Terrain.DOOR) {
+			Door.enter(getPos());
+		}
 	}
 
 	public boolean interact(Hero hero) {
