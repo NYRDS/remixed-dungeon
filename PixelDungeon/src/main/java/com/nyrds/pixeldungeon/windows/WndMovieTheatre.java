@@ -93,7 +93,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 								super.hide();
 								if(result) {
 									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
-									serviceMan.reward();
+									ServiceManNPC.reward();
 								} else {
 									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
 								}
