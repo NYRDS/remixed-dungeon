@@ -387,10 +387,11 @@ public class GameScene extends PixelScene {
     }
 
     public void destroy() {
+/*
         if(!Game.isPaused()) {
             Dungeon.save();
         }
-
+*/
         scene = null;
         Badges.saveGlobal();
 
@@ -399,7 +400,9 @@ public class GameScene extends PixelScene {
 
     @Override
     public synchronized void pause() {
-        Dungeon.save();
+        if(!Game.softPaused) {
+            Dungeon.save();
+        }
     }
 
     @Override

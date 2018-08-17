@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
@@ -74,6 +75,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		hide();
 
 		Game.softPaused = true;
+		Dungeon.save();
 		Ads.removeEasyModeBanner();
 		RewardVideo.showCinemaRewardVideo(this);
 	}
