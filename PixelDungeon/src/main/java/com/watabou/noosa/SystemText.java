@@ -180,12 +180,12 @@ public class SystemText extends Text {
 			offset += codepointCharCount;
 
 			if (Character.isWhitespace(codepoint)) {
-				lastWordOffset = offset;
-				lastWordStart = xCharPos.size();
-			} else {
-				xCharPos.add(xPos);
-				codePoints.add(codepoint);
-			}
+                lastWordOffset = offset;
+                lastWordStart = xCharPos.size();
+            }
+
+            xCharPos.add(xPos);
+            codePoints.add(codepoint);
 
 			if (codepoint == 0x000A) {
 				lineWidth += symbolWidth;

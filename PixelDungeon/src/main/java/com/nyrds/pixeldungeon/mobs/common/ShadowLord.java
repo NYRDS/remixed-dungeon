@@ -57,7 +57,7 @@ public class ShadowLord extends Boss implements IZapper {
 			Mob mob = new Shadow();
 
 			mob.setState(mob.WANDERING);
-			Dungeon.level.spawnMob(mob, 1);
+			Dungeon.level.spawnMob(mob, 1, getPos());
 
 			WandOfBlink.appear(mob, cell);
 		}

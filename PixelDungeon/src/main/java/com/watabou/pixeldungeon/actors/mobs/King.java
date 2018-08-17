@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -172,12 +171,10 @@ public class King extends Boss {
 			if (level.cellValid(pos)) {
 				Mob servant = new Undead();
 				servant.setPos(pos);
-				level.spawnMob(servant, 0);
+				level.spawnMob(servant, 0, lastPedestal);
 
 				WandOfBlink.appear(servant, pos);
 				new Flare(3, 32).color(0x000000, false).show(servant.getSprite(), 2f);
-
-				Actor.addDelayed(new Pushing(servant, lastPedestal, servant.getPos()), -1);
 			}
 		}
 		yell(Game.getVar(R.string.King_Info2));

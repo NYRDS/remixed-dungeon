@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -47,7 +47,7 @@ public class WandOfFirebolt extends SimpleWand  {
 		
 		for (int i=1; i < Ballistica.distance - 1; i++) {
 			int c = Ballistica.trace[i];
-			if (Dungeon.level.flammable[c]) {
+			if (Dungeon.level.cellValid(c) && Dungeon.level.flammable[c]) {
 				GameScene.add( Blob.seed( c, 1, Fire.class ) );
 			}
 		}

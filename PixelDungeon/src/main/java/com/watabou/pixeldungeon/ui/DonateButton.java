@@ -2,14 +2,17 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.windows.WndDonate;
 
 public class DonateButton extends ImageButton {
 
-	public DonateButton() {
-		super(Icons.SUPPORT.get());
+	private Group parentWnd;
 
+	public DonateButton(Group wnd) {
+		super(Icons.SUPPORT.get());
+		parentWnd = wnd;
 		updateImage();
 	}
 
@@ -52,6 +55,6 @@ public class DonateButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		getParent().add(new WndDonate());
+		parentWnd.add(new WndDonate());
 	}
 }

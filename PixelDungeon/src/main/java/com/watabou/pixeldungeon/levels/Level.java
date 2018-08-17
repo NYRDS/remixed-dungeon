@@ -52,6 +52,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Generator;
@@ -757,25 +758,40 @@ public abstract class Level implements Bundlable {
 		spawnMob(mob, 0);
 	}
 
-	public void spawnMob(Mob mob, float delay) {
+	public void spawnMob(Mob mob, float delay){
+		spawnMob(mob,delay,mob.getPos());
+	}
+
+	public void spawnMob(Mob mob, float delay, int fromCell) {
 
 		if (!cellValid(mob.getPos())) {
 			EventCollector.logException(new Exception(EventCollector.BUG),
 					String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getMobClassName(), mob.getPos()));
 			return;
 		}
+
 		mobs.add(mob);
+
+		int targetPos = mob.getPos();
+
+		if(targetPos != fromCell) {
+			Actor.addDelayed(new Pushing(mob, fromCell, targetPos), -1);
+		}
+
 		if (GameScene.isSceneReady()) {
+			mob.setPos(fromCell);
 			mob.updateSprite();
 		}
+
+		mob.setPos(targetPos);
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 
 		mob.onSpawn(this);
 
 		if (GameScene.isSceneReady()) {
-			if (mob.isPet() || fieldOfView[mob.getPos()]) {
-				press(mob.getPos(),mob);
+			if (mob.isPet() || fieldOfView[targetPos]) {
+				press(targetPos,mob);
 			}
 		}
 	}

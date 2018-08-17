@@ -118,7 +118,7 @@ public class TitleScene extends PixelScene {
 		btnHighscores.setPos(w / 2, btnPlay.top());
 		add(btnHighscores);
 
-		btnDonate = new DonateButton();
+		btnDonate = new DonateButton(this);
 
 		pleaseSupport = PixelScene.createText(GuiProperties.titleFontSize());
 		pleaseSupport.text(btnDonate.getText());

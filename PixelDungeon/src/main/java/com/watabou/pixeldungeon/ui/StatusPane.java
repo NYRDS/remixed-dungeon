@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
+import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -107,7 +108,8 @@ public class StatusPane extends Component {
 
         if (currentLevel.hasCompassTarget()) {
             compassTarget = currentLevel.getCompassTarget();    // Set to compass target if exists
-        } else if (currentLevel.hasExit(0)) {
+        } else if ( currentLevel.hasExit(0)
+                    && hero.belongings.getItem(Amulet.class) == null) {
             compassTarget = currentLevel.getExit(0);    // Set to first exit if exists
         }
 

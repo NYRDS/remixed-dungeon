@@ -69,8 +69,9 @@ public class SummoningSpell extends Spell {
 	        } else {
 		        pet.setFraction(Fraction.DUNGEON);
 	        }
+
             pet.setPos(spawnPos);
-            level.spawnMob(pet);
+            level.spawnMob(pet,0,chr.getPos());
         }
         
 	    castCallback(chr);
