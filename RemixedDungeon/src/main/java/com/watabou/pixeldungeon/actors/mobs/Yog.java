@@ -17,6 +17,15 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Yog.java
+=======
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.ai.Wandering;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Yog.java
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -59,7 +68,7 @@ public class Yog extends Boss {
 
 		exp = 50;
 
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 
 		IMMUNITIES.add(Death.class);
 		IMMUNITIES.add(Terror.class);
@@ -175,7 +184,7 @@ public class Yog extends Boss {
 
 			exp = 0;
 
-			setState(WANDERING);
+			setState(MobAi.getStateByClass(Wandering.class));
 
 			RESISTANCES.add(ToxicGas.class);
 
@@ -244,7 +253,7 @@ public class Yog extends Boss {
 
 			exp = 0;
 
-			setState(WANDERING);
+			setState(MobAi.getStateByClass(Wandering.class));
 
 			RESISTANCES.add(ToxicGas.class);
 
@@ -333,7 +342,7 @@ public class Yog extends Boss {
 
 			exp = 0;
 
-			setState(HUNTING);
+			setState(MobAi.getStateByClass(Hunting.class));
 		}
 
 		@Override

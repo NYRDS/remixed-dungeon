@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -39,9 +41,18 @@ public class SpiderNest extends Mob {
 	protected boolean act(){
 		super.act();
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderNest.java
 		MobSpawner.spawnRandomMob(Dungeon.level, this);
 
 		setState(SLEEPING);
+=======
+		Mob newSpider = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
+		
+		if(isPet()) {
+			Mob.makePet(newSpider, Dungeon.hero);
+		}
+		setState(MobAi.getStateByClass(Sleeping.class));
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderNest.java
 		
 		postpone(20);
 		

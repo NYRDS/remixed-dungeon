@@ -17,6 +17,14 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Shaman.java
+=======
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ai.Fleeing;
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Shaman.java
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Camera;
@@ -75,13 +83,13 @@ public class Shaman extends Mob implements IZapper {
 	public int defenseProc(Char enemy, int damage) {
 
 		if (hp() > 2 * ht() / 3 && fleeState < 1) {
-			setState(FLEEING);
+			setState(MobAi.getStateByClass(Fleeing.class));
 			fleeState++;
 			return damage / 2;
 		}
 
 		if (hp() > ht() / 3 && fleeState < 2) {
-			setState(FLEEING);
+			setState(MobAi.getStateByClass(Fleeing.class));
 			fleeState++;
 			return damage / 2;
 		}
@@ -93,7 +101,7 @@ public class Shaman extends Mob implements IZapper {
     public boolean getFurther(int target) {
 
 		if (Dungeon.level.distance(getPos(), target) > 2) {
-			setState(HUNTING);
+			setState(MobAi.getStateByClass(Hunting.class));
 		}
 
 		return super.getFurther(target);

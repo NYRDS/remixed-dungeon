@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.items.guts;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.watabou.noosa.Game;
@@ -35,7 +37,7 @@ public class PseudoAmulet extends Item {
 
 		MimicAmulet mimic = new MimicAmulet();
 		mimic.setPos(spawnPos);
-		mimic.setState(mimic.WANDERING);
+		mimic.setState(MobAi.getStateByClass(Wandering.class));
 		mimic.adjustStats(Dungeon.depth);
 		
 		Dungeon.level.spawnMob( mimic );

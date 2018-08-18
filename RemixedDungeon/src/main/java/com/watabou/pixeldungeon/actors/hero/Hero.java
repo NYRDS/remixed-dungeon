@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
@@ -1918,7 +1919,7 @@ public class Hero extends Char implements PetOwner {
 				pet.setPos(cell);
 
 				pet.setEnemy(Char.DUMMY);
-				pet.setState(pet.WANDERING);
+				pet.setState(new Wandering());
 			}
 
 			level.spawnMob(pet);

@@ -39,7 +39,7 @@ public class WndInfoMob extends WndTitledMessage {
 
 	private static String desc( Mob mob, boolean withStatus ) {
 		if(withStatus) {
-			return mob.description() + "\n\n" + Utils.capitalize(mob.getState().status()) + ".";
+			return mob.description() + "\n\n" + Utils.capitalize(mob.getState().status(mob)) + ".";
 		} else {
 			return mob.description();
 		}

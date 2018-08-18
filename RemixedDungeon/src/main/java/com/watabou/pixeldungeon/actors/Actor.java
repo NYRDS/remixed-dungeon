@@ -94,7 +94,7 @@ public abstract class Actor implements Bundlable {
 	
 	private static float now = 0;
 	
-	private static Map<Integer, Char> chars = new HashMap<>();
+	public static Map<Integer, Char> chars = new HashMap<>();
 	
 	public static void clear() {
 		now = 0;

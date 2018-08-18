@@ -1,5 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/guts/Nightmare.java
+=======
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ai.Hunting;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/guts/Nightmare.java
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -49,7 +55,7 @@ public class Nightmare extends Mob {
     protected boolean act(){
         super.act();
 
-        setState(HUNTING);
+        setState(new Hunting());
 
         return true;
     }

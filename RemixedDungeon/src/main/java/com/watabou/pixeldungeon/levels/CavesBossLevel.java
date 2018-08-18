@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
@@ -218,7 +220,7 @@ public class CavesBossLevel extends Level {
 			enteredArena = true;
 			
 			Mob boss = Bestiary.mob(this);
-			boss.setState(boss.HUNTING);
+			boss.setState(MobAi.getStateByClass(Hunting.class));
 			do {
 				boss.setPos(Random.Int( getLength() ));
 			} while (

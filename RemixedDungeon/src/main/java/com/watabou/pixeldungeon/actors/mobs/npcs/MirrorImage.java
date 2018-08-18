@@ -17,8 +17,15 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+=======
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -38,7 +45,7 @@ public class MirrorImage extends Mob {
 
 	// for restoreFromBundle
 	public MirrorImage() {
-		setState(HUNTING);
+		setState(MobAi.getStateByClass(Hunting.class));
 		setEnemy(DUMMY);
 	}
 

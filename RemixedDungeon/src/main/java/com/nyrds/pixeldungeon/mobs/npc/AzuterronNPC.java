@@ -44,12 +44,7 @@ public class AzuterronNPC extends NPC {
 	public float speed() {
 		return 0.5f;
 	}
-	
-	@Override
-	protected Char chooseEnemy() {
-		return DUMMY;
-	}
-	
+
 	@Override
 	public void damage( int dmg, Object src ) {
 	}

@@ -25,7 +25,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.Hunting;
-import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -75,7 +75,6 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 import androidx.annotation.NonNull;
@@ -88,19 +87,13 @@ public abstract class Mob extends Char {
 	private static final float SPLIT_DELAY = 1f;
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 
-	public AiState SLEEPING  = new Sleeping(this);
-	public AiState HUNTING   = new Hunting(this);
-	public AiState WANDERING = new Wandering(this);
-	public AiState FLEEING   = new Fleeing(this);
-	public AiState PASSIVE   = new Passive(this);
-
 	@Packable (defaultValue = DEFAULT_MOB_SCRIPT)
 	protected String scriptFile = DEFAULT_MOB_SCRIPT;
 
 	private LuaTable mobScript;
 	private LuaValue scriptResult = LuaValue.NIL;
 
-	private AiState state = SLEEPING;
+	private AiState state = new Sleeping();
 
 	protected Object spriteClass;
 
@@ -153,27 +146,12 @@ public abstract class Mob extends Char {
 		setEnemy(DUMMY);
 	}
 
-	private String state2tag(AiState state) {
-		if (state == SLEEPING) {
-			return Sleeping.TAG;
-		} else if (state == WANDERING) {
-			return Wandering.TAG;
-		} else if (state == HUNTING) {
-			return Hunting.TAG;
-		} else if (state == FLEEING) {
-			return Fleeing.TAG;
-		} else if (state == PASSIVE) {
-			return Passive.TAG;
-		}
-		return Passive.TAG;
-	}
-
 	@Override
 	public void storeInBundle(Bundle bundle) {
 
 		super.storeInBundle(bundle);
 
-		bundle.put(STATE,  state2tag(getState()));
+		bundle.put(STATE,  getState().getTag());
 		bundle.put(TARGET, target);
 
 		bundle.put(ENEMY_SEEN, enemySeen);
@@ -207,23 +185,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected void setState(String state) {
-		switch (state) {
-			case Sleeping.TAG:
-				this.setState(SLEEPING);
-				break;
-			case Wandering.TAG:
-				this.setState(WANDERING);
-				break;
-			case Hunting.TAG:
-				this.setState(HUNTING);
-				break;
-			case Fleeing.TAG:
-				this.setState(FLEEING);
-				break;
-			case Passive.TAG:
-				this.setState(PASSIVE);
-				break;
-		}
+		setState(MobAi.getStateByTag(state));
 	}
 
 	protected int getKind() {
@@ -250,7 +212,7 @@ public abstract class Mob extends Char {
 				return new MobSpriteDef((String) spriteClass, getKind());
 			}
 
-			throw new TrackedRuntimeException(String.format("sprite creation failed - mob class %s", getMobClassName()));
+			throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getMobClassName()));
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
@@ -262,9 +224,6 @@ public abstract class Mob extends Char {
 
 		super.act(); //Calculate FoV
 
-		boolean justAlerted = alerted;
-		alerted = false;
-
 		getSprite().hideAlert();
 
 		if (paralysed) {
@@ -273,80 +232,14 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		setEnemy(chooseEnemy());
-
-		boolean enemyInFOV = getEnemy().isAlive() && level().cellValid(getEnemy().getPos()) && level().fieldOfView[getEnemy().getPos()]
-				&& getEnemy().invisible <= 0;
-
-		return getState().act(enemyInFOV, justAlerted);
+		return getState().act(this);
 	}
 
-	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
-		Char bestEnemy = DUMMY;
-		int dist = level().getWidth() + level().getHeight();
 
-		if (enemyFraction.belongsTo(Fraction.HEROES)) {
-			Hero hero = Dungeon.hero;
-			if (level().fieldOfView[hero.getPos()] && !friendly(hero)) {
-				bestEnemy = hero;
-				dist = level().distance(getPos(), bestEnemy.getPos());
-			}
-		}
-
-		for (Mob mob : level().mobs) {
-			if(level().fieldOfView[mob.getPos()]) {
-				if (!mob.friendly(this)) {
-					int candidateDist = level().distance(getPos(), mob.getPos());
-					if (candidateDist < dist) {
-						bestEnemy = mob;
-						dist = candidateDist;
-					}
-				}
-			}
-		}
-
-		return bestEnemy;
-	}
-
-	private Char chooseEnemyHeroes() {
-		Char newEnemy = chooseNearestEnemyFromFraction(Fraction.DUNGEON);
-
-		if (newEnemy != DUMMY && Dungeon.visible[newEnemy.getPos()]) {
-			return newEnemy;
-		}
-
-		setState(WANDERING);
-		target = Dungeon.hero.getPos();
-
-		return DUMMY;
-	}
-
-	protected Char chooseEnemy() {
-		if (!getEnemy().isAlive()) {
-			setEnemy(DUMMY);
-		}
-
-		Terror terror = buff(Terror.class);
-		if (terror != null) {
-			return terror.source;
-		}
-
-		if (hasBuff(Amok.class)) {
-			return chooseNearestEnemyFromFraction(Fraction.ANY);
-		}
-
-		if(getEnemy() != DUMMY) {
-			return getEnemy();
-		}
-
-		switch (fraction) {
-			default:
-			case DUNGEON:
-				return chooseNearestEnemyFromFraction(Fraction.HEROES);
-			case HEROES:
-				return chooseEnemyHeroes();
-		}
-	}
+	public boolean isEnemyInFov(){
+	    return getEnemy().isAlive() && level().cellValid(getEnemy().getPos()) && level().fieldOfView[getEnemy().getPos()]
+                && getEnemy().invisible <= 0;
+    }
 
 	public boolean moveSprite(int from, int to) {
 
@@ -369,12 +262,12 @@ public abstract class Mob extends Char {
 
 		if (buff instanceof Amok) {
 			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			setState(HUNTING);
+			setState(new Hunting());
 		} else if (buff instanceof Terror) {
-			setState(FLEEING);
+			setState(new Fleeing());
 		} else if (buff instanceof Sleep) {
 			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-			setState(SLEEPING);
+			setState(new Sleeping());
 			postpone(Sleep.SWS);
 		}
 	}
@@ -384,7 +277,7 @@ public abstract class Mob extends Char {
 		super.remove(buff);
 		if (buff instanceof Terror) {
 			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			setState(HUNTING);
+			setState(new Hunting());
 		}
 	}
 
@@ -499,12 +392,7 @@ public abstract class Mob extends Char {
 
 		Terror.recover(this);
 
-		AiState state = getState();
-
-		if (state == SLEEPING || state == PASSIVE) {
-			setState(HUNTING);
-		}
-		alerted = true;
+        getState().gotDamage(this,src, dmg);
 
 		super.damage(dmg, src);
 	}
@@ -626,7 +514,7 @@ public abstract class Mob extends Char {
 
 		clone.hp(Math.max((hp() - damage) / 2, 1));
 		clone.setPos(cell);
-		clone.setState(clone.HUNTING);
+		clone.setState(new Hunting());
 
 		clone.ensureOpenDoor();
 
@@ -689,8 +577,8 @@ public abstract class Mob extends Char {
 
 		notice();
 
-		if (getState() != HUNTING) {
-			setState(WANDERING);
+		if (getState() instanceof Hunting) {
+			setState(MobAi.getStateByClass(Wandering.class));
 		}
 		target = cell;
 	}
@@ -714,7 +602,7 @@ public abstract class Mob extends Char {
 			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
 		}
 
-		setState(mobDesc.optString("aiState",state2tag(getState())).toUpperCase(Locale.ROOT));
+		setState(mobDesc.optString("aiState",getState().getTag()));
 	}
 
 	public AiState getState() {
@@ -790,8 +678,12 @@ public abstract class Mob extends Char {
 		float timeToSwap = 1 / chr.speed();
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Mob.java
 		setState(WANDERING);
 		return true;
+=======
+		setState(MobAi.getStateByClass(Wandering.class));
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Mob.java
 	}
 
 	private void ensureOpenDoor() {
@@ -821,12 +713,12 @@ public abstract class Mob extends Char {
 	}
 
 	public void setEnemy(@NonNull Char enemy) {
-		/*
+
 		if(enemy != this.enemy && enemy != DUMMY) {
 			enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 			GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
 		}
-		*/
+
 		this.enemy = enemy;
 	}
 

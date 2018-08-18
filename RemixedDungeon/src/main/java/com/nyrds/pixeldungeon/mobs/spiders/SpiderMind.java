@@ -1,5 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderMind.java
+=======
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ai.Hunting;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderMind.java
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -54,7 +60,7 @@ public class SpiderMind extends Mob {
 	
 	@Override
 	public boolean getCloser(int target) {
-		if (getState() == HUNTING) {
+		if (getState() instanceof Hunting) {
 			return enemySeen && getFurther( target );
 		} else {
 			return super.getCloser( target );

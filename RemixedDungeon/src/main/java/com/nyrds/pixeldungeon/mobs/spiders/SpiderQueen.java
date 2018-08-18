@@ -1,5 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderQueen.java
+=======
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ai.Hunting;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderQueen.java
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.watabou.pixeldungeon.Badges;
@@ -59,7 +65,7 @@ public class SpiderQueen extends Boss {
 	@Override
 	public boolean getCloser(int target) {
 		if (hp() < ht() / 2) {
-			if (getState() == HUNTING && Dungeon.level.distance(getPos(), target) < 5) {
+			if (getState() instanceof Hunting && level().distance(getPos(), target) < 5) {
 				return getFurther(target);
 			}
 			return super.getCloser(target);

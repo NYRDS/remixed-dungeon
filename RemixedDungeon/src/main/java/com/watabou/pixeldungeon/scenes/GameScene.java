@@ -240,7 +240,11 @@ public class GameScene extends PixelScene {
         }
 
         if (buggedSave) {
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/scenes/GameScene.java
             EventCollector.logException("bugged save mob.pos==-1");
+=======
+            EventCollector.logEvent(EventCollector.BUG, "bugged save", "me.pos==-1");
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/scenes/GameScene.java
         }
 
         level.mobs = filteredMobs;

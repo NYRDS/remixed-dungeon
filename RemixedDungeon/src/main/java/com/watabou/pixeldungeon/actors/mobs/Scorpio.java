@@ -17,6 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Scorpio.java
+=======
+import android.support.annotation.NonNull;
+
+import com.nyrds.pixeldungeon.ai.Hunting;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Scorpio.java
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -95,7 +101,7 @@ public class Scorpio extends Mob implements IZapper {
 
 	@Override
 	public boolean getCloser(int target) {
-		if (getState() == HUNTING) {
+		if (getState() instanceof Hunting) {
 			return enemySeen && getFurther( target );
 		} else {
 			return super.getCloser( target );

@@ -17,8 +17,13 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/Ghost.java
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+=======
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
+>>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/Ghost.java
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
 import com.watabou.noosa.Game;
@@ -66,7 +71,7 @@ public class Ghost extends NPC {
 		
 		flying = true;
 		
-		setState(WANDERING);
+		setState(MobAi.getStateByClass(Wandering.class));
 	}
 
 	@Packable
@@ -94,11 +99,7 @@ public class Ghost extends NPC {
 		return 0.5f;
 	}
 	
-	@Override
-	protected Char chooseEnemy() {
-		return DUMMY;
-	}
-	
+
 	@Override
 	public void damage( int dmg, Object src ) {
 	}
@@ -372,7 +373,7 @@ public class Ghost extends NPC {
 			
 			exp = 0;
 			
-			setState(WANDERING);
+			setState(MobAi.getStateByClass(Wandering.class));
 			lootChance = 1;
 			loot = new RatSkull();
 		}

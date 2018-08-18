@@ -27,11 +27,7 @@ public class ImmortalNPC extends NPC {
 		return 0.5f;
 	}
 	
-	@Override
-	protected Char chooseEnemy() {
-		return DUMMY;
-	}
-	
+
 	@Override
 	public void damage( int dmg, Object src ) {
 	}

@@ -5,17 +5,17 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class ThiefFleeing extends Fleeing {
-    public ThiefFleeing(Mob mob) {
-        super(mob);
+
+    public ThiefFleeing() {
     }
 
     @Override
-    protected void nowhereToRun() {
-        if (mob.hasBuff( Terror.class )) {
-            super.nowhereToRun();
+    protected void nowhereToRun(Mob me) {
+        if (me.hasBuff( Terror.class )) {
+            super.nowhereToRun(me);
         } else {
-            mob.getSprite().showStatus( CharSprite.NEGATIVE, Mob.TXT_RAGE );
-            mob.setState(mob.HUNTING);
+            me.getSprite().showStatus( CharSprite.NEGATIVE, Mob.TXT_RAGE );
+            me.setState(MobAi.getStateByClass(Hunting.class));
         }
     }
 }
