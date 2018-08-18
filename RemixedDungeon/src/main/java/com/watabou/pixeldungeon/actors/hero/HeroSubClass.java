@@ -40,36 +40,36 @@ import com.watabou.utils.Bundle;
 public enum HeroSubClass {
 
 	NONE( null, null,ClassArmor.class, Ordinary.instance),
-	GLADIATOR( Game.getVar(R.string.HeroSubClass_NameGlad),   Game.getVar(R.string.HeroSubClass_DescGlad), GladiatorArmor.class, Ordinary.instance),
-	BERSERKER( Game.getVar(R.string.HeroSubClass_NameBers),   Game.getVar(R.string.HeroSubClass_DescBers), BerserkArmor.class, Ordinary.instance),
-	WARLOCK(   Game.getVar(R.string.HeroSubClass_NameWarL),   Game.getVar(R.string.HeroSubClass_DescWarL), WarlockArmor.class, Ordinary.instance),
-	BATTLEMAGE(Game.getVar(R.string.HeroSubClass_NameBatM),   Game.getVar(R.string.HeroSubClass_DescBatM), BattleMageArmor.class, Ordinary.instance),
-	ASSASSIN(  Game.getVar(R.string.HeroSubClass_NameAssa),   Game.getVar(R.string.HeroSubClass_DescAssa), AssasinArmor.class, Ordinary.instance),
-	FREERUNNER(Game.getVar(R.string.HeroSubClass_NameFreR),   Game.getVar(R.string.HeroSubClass_DescFreR), FreeRunnerArmor.class, Ordinary.instance),
-	SNIPER(    Game.getVar(R.string.HeroSubClass_NameSnip),   Game.getVar(R.string.HeroSubClass_DescSnip), SniperArmor.class, Ordinary.instance),
-	WARDEN(    Game.getVar(R.string.HeroSubClass_NameWard),   Game.getVar(R.string.HeroSubClass_DescWard), WardenArmor.class, Ordinary.instance),
-	SCOUT(     Game.getVar(R.string.HeroSubClass_NameScout),  Game.getVar(R.string.HeroSubClass_DescScout), ScoutArmor.class, Ordinary.instance),
-	SHAMAN(    Game.getVar(R.string.HeroSubClass_NameShaman), Game.getVar(R.string.HeroSubClass_DescShaman), ShamanArmor.class, Ordinary.instance),
-	LICH(      Game.getVar(R.string.HeroSubClass_NameLich), Game.getVar(R.string.BlackSkullOfMastery_BecomeLichDesc), NecromancerArmor.class, Undead.instance);
+	GLADIATOR( R.string.HeroSubClass_NameGlad,   R.string.HeroSubClass_DescGlad, GladiatorArmor.class, Ordinary.instance),
+	BERSERKER( R.string.HeroSubClass_NameBers,   R.string.HeroSubClass_DescBers, BerserkArmor.class, Ordinary.instance),
+	WARLOCK(   R.string.HeroSubClass_NameWarL,   R.string.HeroSubClass_DescWarL, WarlockArmor.class, Ordinary.instance),
+	BATTLEMAGE(R.string.HeroSubClass_NameBatM,   R.string.HeroSubClass_DescBatM, BattleMageArmor.class, Ordinary.instance),
+	ASSASSIN(  R.string.HeroSubClass_NameAssa,   R.string.HeroSubClass_DescAssa, AssasinArmor.class, Ordinary.instance),
+	FREERUNNER(R.string.HeroSubClass_NameFreR,   R.string.HeroSubClass_DescFreR, FreeRunnerArmor.class, Ordinary.instance),
+	SNIPER(    R.string.HeroSubClass_NameSnip,   R.string.HeroSubClass_DescSnip, SniperArmor.class, Ordinary.instance),
+	WARDEN(    R.string.HeroSubClass_NameWard,   R.string.HeroSubClass_DescWard, WardenArmor.class, Ordinary.instance),
+	SCOUT(     R.string.HeroSubClass_NameScout,  R.string.HeroSubClass_DescScout, ScoutArmor.class, Ordinary.instance),
+	SHAMAN(    R.string.HeroSubClass_NameShaman, R.string.HeroSubClass_DescShaman, ShamanArmor.class, Ordinary.instance),
+	LICH(      R.string.HeroSubClass_NameLich,   R.string.BlackSkullOfMastery_BecomeLichDesc, NecromancerArmor.class, Undead.instance);
 
-	private String                      title;
-	private String                      desc;
+	private Integer                     titleId;
+	private Integer                     descId;
 	private Class<? extends ClassArmor> armorClass;
 	private Abilities                   abilities;
 
-	HeroSubClass(String title, String desc, Class<? extends ClassArmor> armorClass, Abilities abilities) {
-		this.title = title;
-		this.desc  = desc;
+	HeroSubClass(Integer titleId, Integer descId, Class<? extends ClassArmor> armorClass, Abilities abilities) {
+		this.titleId = titleId;
+		this.descId  = descId;
 		this.armorClass = armorClass;
 		this.abilities = abilities;
 	}
 
 	public String title() {
-		return title;
+		return Game.getVar(titleId);
 	}
 
 	public String desc() {
-		return desc;
+		return Game.getVar(descId);
 	}
 
 	private static final String SUBCLASS = "subClass";

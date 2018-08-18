@@ -59,13 +59,13 @@ import androidx.annotation.NonNull;
 
 public enum HeroClass {
 
-    WARRIOR(Game.getVar(R.string.HeroClass_War), WarriorArmor.class, Ordinary.instance),
-    MAGE(Game.getVar(R.string.HeroClass_Mag), MageArmor.class, Ordinary.instance),
-    ROGUE(Game.getVar(R.string.HeroClass_Rog), RogueArmor.class, Ordinary.instance),
-    HUNTRESS(Game.getVar(R.string.HeroClass_Hun), HuntressArmor.class, Ordinary.instance),
-    ELF(Game.getVar(R.string.HeroClass_Elf), ElfArmor.class, Ordinary.instance),
-    NECROMANCER(Game.getVar(R.string.HeroClass_Necromancer), NecromancerArmor.class, Ordinary.instance),
-    GNOLL(Game.getVar(R.string.HeroClass_Gnoll), GnollArmor.class, Ordinary.instance);
+    WARRIOR(R.string.HeroClass_War, WarriorArmor.class, Ordinary.instance),
+    MAGE(R.string.HeroClass_Mag, MageArmor.class, Ordinary.instance),
+    ROGUE(R.string.HeroClass_Rog, RogueArmor.class, Ordinary.instance),
+    HUNTRESS(R.string.HeroClass_Hun, HuntressArmor.class, Ordinary.instance),
+    ELF(R.string.HeroClass_Elf, ElfArmor.class, Ordinary.instance),
+    NECROMANCER(R.string.HeroClass_Necromancer, NecromancerArmor.class, Ordinary.instance),
+    GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class, Ordinary.instance);
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
     private static final String FRIENDLY_MOBS     = "friendlyMobs";
@@ -77,14 +77,14 @@ public enum HeroClass {
     private Set<String> forbiddenActions = new HashSet<>();
     private Set<String> friendlyMobs     = new HashSet<>();
 
-    private String    title;
+    private Integer    titleId;
     private Abilities abilities;
     static private JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
     private String  magicAffinity;
 
-    HeroClass(String title, Class<? extends ClassArmor> armorClass, Abilities abilities) {
-        this.title = title;
+    HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass, Abilities abilities) {
+        this.titleId = titleId;
         this.armorClass = armorClass;
         this.abilities = abilities;
     }
@@ -144,11 +144,14 @@ public enum HeroClass {
                     JSONArray quickslots = classDesc.getJSONArray("quickslot");
                     for (int i = 0; i < quickslots.length(); ++i) {
                         Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
-
-                        if (hero.belongings.getItem(item.getClass()) != null) {
-                            QuickSlot.selectItem(hero.belongings.getItem(item.getClass()), slot);
-                            slot++;
+                        if(item!=null) {
+                            item = hero.belongings.getItem(item.getClass());
+                            if (item != null) {
+                                QuickSlot.selectItem(item, slot);
+                                slot++;
+                            }
                         }
+
                     }
                 }
 
@@ -215,7 +218,7 @@ public enum HeroClass {
 
 
     public String title() {
-        return title;
+        return Game.getVar(titleId);
     }
 
     @NonNull
