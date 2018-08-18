@@ -1917,7 +1917,7 @@ public class Hero extends Char implements PetOwner {
 				}
 				pet.setPos(cell);
 
-				pet.setEnemy(Mob.DUMMY);
+				pet.setEnemy(Char.DUMMY);
 				pet.setState(pet.WANDERING);
 			}
 
