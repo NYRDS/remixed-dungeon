@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -44,7 +45,7 @@ public class Hunting implements AiState {
 
     @Override
     public String status() {
-        if (mob.getEnemy()!= Mob.DUMMY) {
+        if (mob.getEnemy()!= Char.DUMMY) {
             return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus2),
                     mob.getName(), mob.getEnemy().getName_objective());
         }

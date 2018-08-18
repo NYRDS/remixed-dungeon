@@ -125,13 +125,6 @@ public abstract class Mob extends Char {
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
-	// Unreachable target
-	public static final Mob DUMMY = new Mob() {
-		{
-			setPos(Level.INVALID_CELL);
-		}
-	};
-
 	private static final String STATE      = "state";
 	private static final String TARGET     = "target";
 	private static final String ENEMY_SEEN = "enemy_seen";

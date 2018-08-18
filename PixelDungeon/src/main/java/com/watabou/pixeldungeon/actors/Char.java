@@ -78,6 +78,17 @@ import java.util.Set;
 
 public abstract class Char extends Actor implements Presser{
 
+	// Unreachable target
+	public static final Char DUMMY = new Char() {
+		@Override
+		protected CharSprite sprite() {
+			return null;
+		}
+
+		{
+			setPos(Level.INVALID_CELL);
+		}
+	};
 	@Packable
     private int      pos      = 0;
 
