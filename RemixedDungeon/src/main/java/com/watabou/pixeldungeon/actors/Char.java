@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -85,7 +87,6 @@ public abstract class Char extends Actor implements Presser{
 
 	protected CharSprite sprite;
 
-
 	protected String name           = Game.getVar(R.string.Char_Name);
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
 
@@ -121,7 +122,7 @@ public abstract class Char extends Actor implements Presser{
 
 	@Override
 	protected boolean act() {
-		Dungeon.level.updateFieldOfView(this);
+		level().updateFieldOfView(this);
 		return false;
 	}
 
@@ -178,11 +179,8 @@ public abstract class Char extends Actor implements Presser{
 
 		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);
-
 		description = getClassParam("Desc", description, true);
-
 		gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
-
 		defenceVerb = getClassParam("Defense", null, false);
 	}
 
@@ -571,12 +569,12 @@ public abstract class Char extends Actor implements Presser{
 			return;
 		}
 
-		if (hasBuff(Vertigo.class) && Dungeon.level.adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
+		if (hasBuff(Vertigo.class) && level().adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 			List<Integer> candidates = new ArrayList<>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = getPos() + dir;
-				if (Dungeon.level.cellValid(p)) {
-					if ((Dungeon.level.passable[p] || Dungeon.level.avoid[p]) && Actor.findChar(p) == null) {
+				if (level().cellValid(p)) {
+					if ((level().passable[p] || level().avoid[p]) && Actor.findChar(p) == null) {
 						candidates.add(p);
 					}
 				}
@@ -589,17 +587,17 @@ public abstract class Char extends Actor implements Presser{
 			step = Random.element(candidates);
 		}
 
-		if (Dungeon.level.map[getPos()] == Terrain.OPEN_DOOR) {
+		if (level().map[getPos()] == Terrain.OPEN_DOOR) {
 			Door.leave(getPos());
 		}
 
 		setPos(step);
 
 		if (!isFlying()) {
-			Dungeon.level.press(getPos(),this);
+			level().press(getPos(),this);
 		}
 
-		if (isFlying() && Dungeon.level.map[getPos()] == Terrain.DOOR) {
+		if (isFlying() && level().map[getPos()] == Terrain.DOOR) {
 			Door.enter(getPos());
 		}
 
@@ -609,7 +607,7 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public int distance(Char other) {
-		return Dungeon.level.distance(getPos(), other.getPos());
+		return level().distance(getPos(), other.getPos());
 	}
 
 	public void onMotionComplete() {
@@ -732,11 +730,15 @@ public abstract class Char extends Actor implements Presser{
 	public void paralyse(boolean paralysed) {
 		this.paralysed = paralysed;
 		if(paralysed && GameScene.isSceneReady()) {
-			Dungeon.level.press(getPos(),this);
+			level().press(getPos(),this);
 		}
 	}
 
 	public boolean friendly(Char chr){
 		return !fraction.isEnemy(chr.fraction);
+	}
+
+	protected Level level(){
+		return Dungeon.level;
 	}
 }

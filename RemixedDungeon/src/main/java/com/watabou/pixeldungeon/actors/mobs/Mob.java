@@ -267,7 +267,7 @@ public abstract class Mob extends Char {
 	@Override
 	protected boolean act() {
 
-		super.act();
+		super.act(); //Calculate FoV
 
 		boolean justAlerted = alerted;
 		alerted = false;
@@ -282,34 +282,28 @@ public abstract class Mob extends Char {
 
 		setEnemy(chooseEnemy());
 
-		boolean enemyInFOV = getEnemy().isAlive() && Dungeon.level.cellValid(getEnemy().getPos()) && Dungeon.level.fieldOfView[getEnemy().getPos()]
+		boolean enemyInFOV = getEnemy().isAlive() && level().cellValid(getEnemy().getPos()) && level().fieldOfView[getEnemy().getPos()]
 				&& getEnemy().invisible <= 0;
-/*
-		if(enemyInFOV) {
-			GLog.i("%s, enemy %s in fov %b", toString(), enemy.toString(), enemyInFOV);
-		}
-*/
+
 		return getState().act(enemyInFOV, justAlerted);
 	}
 
 	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
-		Level level = Dungeon.level;
-
 		Char bestEnemy = DUMMY;
-		int dist = level.getWidth() + level.getHeight();
+		int dist = level().getWidth() + level().getHeight();
 
 		if (enemyFraction.belongsTo(Fraction.HEROES)) {
 			Hero hero = Dungeon.hero;
-			if (Dungeon.level.fieldOfView[hero.getPos()] && !friendly(hero)) {
+			if (level().fieldOfView[hero.getPos()] && !friendly(hero)) {
 				bestEnemy = hero;
-				dist = level.distance(getPos(), bestEnemy.getPos());
+				dist = level().distance(getPos(), bestEnemy.getPos());
 			}
 		}
 
-		for (Mob mob : level.mobs) {
-			if(Dungeon.level.fieldOfView[mob.getPos()]) {
+		for (Mob mob : level().mobs) {
+			if(level().fieldOfView[mob.getPos()]) {
 				if (!mob.friendly(this)) {
-					int candidateDist = level.distance(getPos(), mob.getPos());
+					int candidateDist = level().distance(getPos(), mob.getPos());
 					if (candidateDist < dist) {
 						bestEnemy = mob;
 						dist = candidateDist;
@@ -402,7 +396,7 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean canAttack(Char enemy) {
-		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && !pacified;
+		return level().adjacent(getPos(), enemy.getPos()) && !pacified;
 	}
 
 	public boolean getCloser(int target) {
@@ -410,7 +404,7 @@ public abstract class Mob extends Char {
 		if (hasBuff(Roots.class)) {
 			return false;
 		}
-		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(Dungeon.level));
+		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(level()));
 
 		if (step != -1) {
 			move(step);
@@ -421,7 +415,7 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean getFurther(int target) {
-		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(Dungeon.level));
+		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(level()));
 
 		if (step != -1) {
 			move(step);
@@ -444,7 +438,7 @@ public abstract class Mob extends Char {
 
 	public boolean doAttack(Char enemy) {
 
-		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
+		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
 			getSprite().attack(enemy.getPos());
 		} else {
 			getSprite().zap( enemy.getPos() );
@@ -527,7 +521,7 @@ public abstract class Mob extends Char {
 
 		super.destroy();
 
-		Dungeon.level.mobs.remove(this);
+		level().mobs.remove(this);
 	}
 
 	public void remove() {
@@ -643,7 +637,7 @@ public abstract class Mob extends Char {
 
 		clone.ensureOpenDoor();
 
-		Dungeon.level.spawnMob(clone, SPLIT_DELAY, getPos());
+		level().spawnMob(clone, SPLIT_DELAY, getPos());
 
 		if (hasBuff(Burning.class)) {
 			Buff.affect(clone, Burning.class).reignite(clone);
@@ -661,7 +655,7 @@ public abstract class Mob extends Char {
 
 	public void resurrect(Char parent) {
 
-		int spawnPos = Dungeon.level.getEmptyCellNextTo(parent.getPos());
+		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
 		Mob new_mob;
 		try {
 			new_mob = this.getClass().newInstance();
@@ -669,7 +663,7 @@ public abstract class Mob extends Char {
 			throw new TrackedRuntimeException("resurrect issue");
 		}
 
-		if (Dungeon.level.cellValid(spawnPos)) {
+		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
 			if (parent instanceof Hero) {
 				Mob.makePet(new_mob, (Hero) parent);
@@ -690,7 +684,7 @@ public abstract class Mob extends Char {
 			} else {
 				item = (Item) loot;
 			}
-			Dungeon.level.drop(item, getPos()).sprite.drop();
+			level().drop(item, getPos()).sprite.drop();
 		}
 	}
 
@@ -808,7 +802,7 @@ public abstract class Mob extends Char {
 	}
 
 	private void ensureOpenDoor() {
-		if (Dungeon.level.map[getPos()] == Terrain.DOOR) {
+		if (level().map[getPos()] == Terrain.DOOR) {
 			Door.enter(getPos());
 		}
 	}
