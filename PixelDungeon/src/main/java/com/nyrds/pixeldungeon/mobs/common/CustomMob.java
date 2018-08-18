@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
@@ -111,7 +110,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		}
 
 		int enemyPos = enemy.getPos();
-		int distance = Dungeon.level.distance(getPos(), enemyPos);
+		int distance = level().distance(getPos(), enemyPos);
 
 		if(distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos) {
 			return true;
