@@ -1,10 +1,11 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.Pasty;
@@ -16,19 +17,14 @@ public class Hedgehog extends NPC {
 
 	{
 		spriteClass = HedgehogSprite.class;
-		setState(WANDERING);
+		setState(MobAi.getStateByClass(Wandering.class));
 	}
 	
 	@Override
 	public float speed() {
 		return speed;
 	}
-	
-	@Override
-	protected Char chooseEnemy() {
-		return DUMMY;
-	}
-	
+
 	@Override
 	public void damage( int dmg, Object src ) {
 	}

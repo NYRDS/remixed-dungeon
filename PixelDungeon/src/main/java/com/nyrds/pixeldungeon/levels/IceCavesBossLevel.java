@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.watabou.noosa.Game;
@@ -147,7 +149,7 @@ public class IceCavesBossLevel extends Level {
 			Mob mob = boss;
 
 			for (int i = 0; i < 2; i++){
-				mob.setState(mob.HUNTING);
+				mob.setState(MobAi.getStateByClass(Hunting.class));
 				do {
 					mob.setPos(Random.Int( getLength() ));
 				} while (

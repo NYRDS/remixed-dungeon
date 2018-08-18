@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ai.Fleeing;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.pixeldungeon.actors.Char;
@@ -54,7 +56,7 @@ public class Rat extends Mob {
 	@Override
     public boolean canAttack(Char enemy) {
 		if(enemy.hasBuff(RatSkull.RatterAura.class)) {
-			setState(FLEEING);
+			setState(MobAi.getStateByClass(Fleeing.class));
 			if(!hasBuff(Terror.class)) {
 				new Flare(5, 32).color(0xFF0000, true).show(getSprite(), 2f);
 				Terror terror = Buff.affect(this, Terror.class, Terror.DURATION);

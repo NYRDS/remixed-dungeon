@@ -156,7 +156,7 @@ public class PredesignedLevel extends CustomLevel {
 				}
 			}
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException("bad mob description", e);
+			throw new TrackedRuntimeException("bad me description", e);
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}

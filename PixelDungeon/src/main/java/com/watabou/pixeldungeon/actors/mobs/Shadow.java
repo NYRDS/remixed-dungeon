@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.ShadowSprite;
 import com.watabou.utils.Random;
@@ -16,7 +18,7 @@ public class Shadow extends Mob {
 
 		walkingType = WalkingType.WALL;
 
-		setState(WANDERING);
+		setState(MobAi.getStateByClass(Wandering.class));
 	}
 
 	@Override

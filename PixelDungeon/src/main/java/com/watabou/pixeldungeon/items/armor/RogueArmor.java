@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -84,7 +86,7 @@ public class RogueArmor extends ClassArmor {
 				for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 					if (Dungeon.level.fieldOfView[mob.getPos()] && !(mob instanceof NPC)) {
 						Buff.prolong( mob, Blindness.class, 2 );
-						mob.setState(mob.WANDERING);
+						mob.setState(MobAi.getStateByClass(Wandering.class));
 						mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );
 					}
 				}

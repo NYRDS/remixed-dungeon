@@ -744,7 +744,11 @@ public abstract class Char extends Actor implements Presser{
 		return !fraction.isEnemy(chr.fraction);
 	}
 
-	protected Level level(){
+	public Level level(){
 		return Dungeon.level;
 	}
+
+	public boolean valid(){
+	    return this!=DUMMY;
+    }
 }

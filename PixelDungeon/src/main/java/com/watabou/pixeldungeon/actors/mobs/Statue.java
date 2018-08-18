@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -44,7 +46,7 @@ public class Statue extends Mob {
 	
 	public Statue() {
 		exp = 0;
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 		
 		do {
 			weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
@@ -130,7 +132,7 @@ public class Statue extends Mob {
 	
 	@Override
 	public boolean reset() {
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 		return true;
 	}
 

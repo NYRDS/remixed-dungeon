@@ -17,9 +17,13 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -37,7 +41,7 @@ public class RatKing extends NPC {
 	
 	public RatKing() {
 		spriteClass = RatKingSprite.class;
-		setState(SLEEPING);
+		setState(MobAi.getStateByClass(Sleeping.class));
 		defenseSkill = 20;
 		
 		hp(ht(30));
@@ -71,7 +75,7 @@ public class RatKing extends NPC {
 	public float speed() {
 		return 2f;
 	}
-	
+	/*
 	@Override
 	protected Char chooseEnemy() {
 		if(friendly(Dungeon.hero)) {
@@ -80,7 +84,7 @@ public class RatKing extends NPC {
 			return super.chooseEnemy();
 		}
 	}
-	
+	*/
 	@Override
 	public void damage( int dmg, Object src ) {
 		if(friendly(Dungeon.hero)){
@@ -110,10 +114,10 @@ public class RatKing extends NPC {
 			return false;
 		}
 		
-		if (getState() == SLEEPING) {
+		if (getState() instanceof Sleeping) {
 			notice();
 			say(Game.getVar(R.string.RatKing_Info1));
-			setState(WANDERING);
+			setState(MobAi.getStateByClass(Wandering.class));
 		} else {
 			anger++;
 			if(friendly(hero)) {
@@ -121,7 +125,7 @@ public class RatKing extends NPC {
 			} else {
 				setFraction(Fraction.DUNGEON);
 
-				setState(HUNTING);
+				setState(MobAi.getStateByClass(Hunting.class));
 				yell(Game.getVar(R.string.RatKing_Info3));
 			}
 		}

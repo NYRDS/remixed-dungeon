@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.pixeldungeon.ai.ThiefFleeing;
+import com.nyrds.pixeldungeon.ai.Fleeing;
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Web;
@@ -42,9 +44,7 @@ public class Spinner extends Mob {
 		
 		loot = new MysteryMeat();
 		lootChance = 0.125f;
-		
-		FLEEING = new ThiefFleeing(this);
-		
+
 		RESISTANCES.add( Poison.class );
 		IMMUNITIES.add( Roots.class );
 	}
@@ -68,8 +68,8 @@ public class Spinner extends Mob {
 	protected boolean act() {
 		boolean result = super.act();
 		
-		if ((getState() == FLEEING) && !hasBuff(Terror.class) && enemySeen && !getEnemy().hasBuff(Poison.class)) {
-			setState(HUNTING);
+		if ((getState() instanceof Fleeing) && !hasBuff(Terror.class) && enemySeen && !getEnemy().hasBuff(Poison.class)) {
+			setState(MobAi.getStateByClass(Hunting.class));
 		}
 		return result;
 	}
@@ -78,7 +78,7 @@ public class Spinner extends Mob {
 	public int attackProc(@NonNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
-			setState(FLEEING);
+			setState(MobAi.getStateByClass(Fleeing.class));
 		}
 		
 		return damage;
@@ -86,7 +86,7 @@ public class Spinner extends Mob {
 	
 	@Override
 	public void move( int step ) {
-		if (getState() == FLEEING) {
+		if (getState() instanceof Fleeing) {
 			GameScene.add( Blob.seed( getPos(), Random.Int( 5, 7 ), Web.class ) );
 		}
 		super.move( step );

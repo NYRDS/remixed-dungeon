@@ -20,6 +20,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 import android.support.annotation.NonNull;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
@@ -198,7 +200,7 @@ public class King extends Boss {
 			
 			exp = 0;
 			
-			setState(WANDERING);
+			setState(MobAi.getStateByClass(Wandering.class));
 		}
 		
 		@Override

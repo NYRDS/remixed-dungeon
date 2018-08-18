@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -13,7 +15,7 @@ public class MobSpawner {
 	static public Mob spawnRandomMob(Level level, int position) {
 		Mob mob = Bestiary.mob(level);
 		mob.setPos(position);
-		mob.setState(mob.WANDERING);
+		mob.setState(MobAi.getStateByClass(Wandering.class));
 		level.spawnMob(mob);
 		return mob;
 	}
@@ -21,7 +23,7 @@ public class MobSpawner {
 	static public void spawnJarOfSouls(Level level, int position) {
 		Mob mob = new JarOfSouls();
 		mob.setPos(position);
-		mob.setState(mob.WANDERING);
+		mob.setState(MobAi.getStateByClass(Wandering.class));
 		level.spawnMob(mob);
 	}
 

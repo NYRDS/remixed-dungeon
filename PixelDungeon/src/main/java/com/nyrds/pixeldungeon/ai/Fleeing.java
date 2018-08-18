@@ -8,49 +8,49 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class Fleeing implements AiState {
+public class Fleeing extends MobAi implements AiState {
 
-    public static final String TAG = "FLEEING";
 
-    protected Mob mob;
-
-    public Fleeing(Mob mob){
-        this.mob = mob;
-    }
+    public Fleeing(){ }
 
     @Override
-    public boolean act(boolean enemyInFOV, boolean justAlerted) {
-        mob.enemySeen = enemyInFOV;
-        if (enemyInFOV) {
-            mob.target = mob.getEnemy().getPos();
+    public boolean act(Mob me) {
+        me.enemySeen = me.isEnemyInFov();
+        if (me.enemySeen) {
+            me.target = me.getEnemy().getPos();
         }
 
-        int oldPos = mob.getPos();
-        if (Dungeon.level.cellValid(mob.target) && mob.getFurther(mob.target)) {
+        int oldPos = me.getPos();
+        if (Dungeon.level.cellValid(me.target) && me.getFurther(me.target)) {
 
-            mob.spend(1 / mob.speed());
-            return mob.moveSprite(oldPos, mob.getPos());
+            me.spend(1 / me.speed());
+            return me.moveSprite(oldPos, me.getPos());
 
         } else {
 
-            mob.spend(Actor.TICK);
-            nowhereToRun();
+            me.spend(Actor.TICK);
+            nowhereToRun(me);
 
             return true;
         }
     }
 
-    protected void nowhereToRun() {
+    protected void nowhereToRun(Mob me) {
     }
 
     @Override
-    public String status() {
-        Char enemy = mob.getEnemy();
+    public String status(Mob me) {
+        Char enemy = me.getEnemy();
         if(enemy != Char.DUMMY) {
             return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus2),
-                    mob.getName(), enemy.getName_objective());
+                    me.getName(), enemy.getName_objective());
         }
         return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus),
-                mob.getName());
+                me.getName());
+    }
+
+    @Override
+    public void gotDamage(Mob me,Object src, int dmg) {
+        seekRevenge(me,src);
     }
 }

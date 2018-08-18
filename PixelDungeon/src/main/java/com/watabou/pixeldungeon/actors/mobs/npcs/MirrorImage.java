@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -37,7 +39,7 @@ public class MirrorImage extends NPC {
 
 	// for restoreFromBundle
 	public MirrorImage() {
-		setState(HUNTING);
+		setState(MobAi.getStateByClass(Hunting.class));
 		setEnemy(DUMMY);
 	}
 

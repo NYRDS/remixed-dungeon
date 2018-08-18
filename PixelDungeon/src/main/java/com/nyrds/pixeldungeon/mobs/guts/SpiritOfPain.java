@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
@@ -15,7 +17,7 @@ public class SpiritOfPain extends Mob {
 
         exp = 0;
 
-        setState(HUNTING);
+        setState(MobAi.getStateByClass(Hunting.class));
         flying = true;
     }
 

@@ -240,7 +240,7 @@ public class GameScene extends PixelScene {
         }
 
         if (buggedSave) {
-            EventCollector.logEvent(EventCollector.BUG, "bugged save", "mob.pos==-1");
+            EventCollector.logEvent(EventCollector.BUG, "bugged save", "me.pos==-1");
         }
 
         level.mobs = filteredMobs;

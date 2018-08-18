@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -30,7 +32,7 @@ public class ArmoredStatue extends Mob {
 
 	public ArmoredStatue() {
 		exp = 0;
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 
 		do {
 			armor = (Armor) Generator.random( Generator.Category.ARMOR );
@@ -113,7 +115,7 @@ public class ArmoredStatue extends Mob {
 	
 	@Override
 	public boolean reset() {
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 		return true;
 	}
 

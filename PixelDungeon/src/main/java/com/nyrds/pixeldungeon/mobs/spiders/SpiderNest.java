@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -44,7 +46,7 @@ public class SpiderNest extends Mob {
 		if(isPet()) {
 			Mob.makePet(newSpider, Dungeon.hero);
 		}
-		setState(SLEEPING);
+		setState(MobAi.getStateByClass(Sleeping.class));
 		
 		postpone(20);
 		

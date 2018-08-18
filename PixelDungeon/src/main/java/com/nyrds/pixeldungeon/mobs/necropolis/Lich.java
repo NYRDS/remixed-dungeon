@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.watabou.noosa.Game;
@@ -193,7 +195,7 @@ public class Lich extends Boss {
                     if (Dungeon.level.cellValid(pos)) {
                         Skeleton skeleton = new Skeleton();
                         skeleton.setPos(pos);
-                        skeleton.setState(skeleton.HUNTING);
+                        skeleton.setState(MobAi.getStateByClass(Hunting.class));
                         Dungeon.level.spawnMob(skeleton, 0, getPos());
                         i++;
                     } else {

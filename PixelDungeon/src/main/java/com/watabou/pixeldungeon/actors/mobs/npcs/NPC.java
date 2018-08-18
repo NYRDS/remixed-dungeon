@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Passive;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -38,7 +40,7 @@ public abstract class NPC extends Mob {
 		hp(ht(1));
 		exp = 0;
 
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 		
 		fraction = Fraction.NEUTRAL;
 		

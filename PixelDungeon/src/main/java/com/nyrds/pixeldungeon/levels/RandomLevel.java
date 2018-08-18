@@ -113,7 +113,7 @@ public class RandomLevel extends RegularLevel {
 				}
 			}
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException("invalid mob desc",e);
+			throw new TrackedRuntimeException("invalid me desc",e);
 		} catch (Exception e) {
 			EventCollector.logException(e);
 		}

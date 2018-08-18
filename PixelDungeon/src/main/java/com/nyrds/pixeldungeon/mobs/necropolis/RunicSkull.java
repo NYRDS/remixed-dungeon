@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -31,7 +33,7 @@ public class RunicSkull extends MultiKindMob {
 
 		pacified = true;
 		kind = Random.Int(4);
-		setState(WANDERING);
+		setState(MobAi.getStateByClass(Wandering.class));
 
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );

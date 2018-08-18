@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.levels.traps;
 
 import android.support.annotation.Nullable;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -57,7 +59,7 @@ public class SummoningTrap implements ITrigger {
 				Mob mob = placeMob(level, cell);
 
 				if(mob!= null) {
-					mob.setState(mob.WANDERING);
+					mob.setState(MobAi.getStateByClass(Wandering.class));
 					Actor.addDelayed(new DelayedMobSpawner(mob, cell), 0.1f);
 				}
 			}

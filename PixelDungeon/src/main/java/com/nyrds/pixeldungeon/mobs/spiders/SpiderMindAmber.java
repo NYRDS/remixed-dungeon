@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -57,7 +58,7 @@ public class SpiderMindAmber extends MultiKindMob {
 	
 	@Override
 	public boolean getCloser(int target) {
-		if (getState() == HUNTING) {
+		if (getState() instanceof Hunting) {
 			return enemySeen && getFurther( target );
 		} else {
 			return super.getCloser( target );
