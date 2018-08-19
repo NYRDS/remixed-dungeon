@@ -26,9 +26,10 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.AiState;
-import com.nyrds.pixeldungeon.ai.Fleeing;
+import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -241,7 +242,7 @@ public abstract class Mob extends Char {
                 && getEnemy().invisible <= 0;
     }
 
-	public boolean moveSprite(int from, int to) {
+	public void moveSprite(int from, int to) {
 
 		if (getSprite().isVisible()
 				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
@@ -249,7 +250,6 @@ public abstract class Mob extends Char {
 		} else {
 			getSprite().place(to);
 		}
-		return true;
 	}
 
 	@Override
@@ -262,12 +262,12 @@ public abstract class Mob extends Char {
 
 		if (buff instanceof Amok) {
 			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			setState(new Hunting());
+			setState(MobAi.getStateByClass(RunningAmok.class));
 		} else if (buff instanceof Terror) {
-			setState(new Fleeing());
+			setState(MobAi.getStateByClass(Horrified.class));
 		} else if (buff instanceof Sleep) {
 			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-			setState(new Sleeping());
+			setState(MobAi.getStateByClass(Sleeping.class));
 			postpone(Sleep.SWS);
 		}
 	}

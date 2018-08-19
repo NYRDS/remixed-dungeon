@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -11,7 +10,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class Fleeing extends MobAi implements AiState {
 
 
-    public Fleeing(){ }
+    public Fleeing(){}
 
     @Override
     public boolean act(Mob me) {
@@ -20,22 +19,11 @@ public class Fleeing extends MobAi implements AiState {
             me.target = me.getEnemy().getPos();
         }
 
-        int oldPos = me.getPos();
-        if (Dungeon.level.cellValid(me.target) && me.getFurther(me.target)) {
-
-            me.spend(1 / me.speed());
-            return me.moveSprite(oldPos, me.getPos());
-
-        } else {
-
+        if(!me.doStepFrom(me.target)) {
             me.spend(Actor.TICK);
-            nowhereToRun(me);
-
-            return true;
         }
-    }
 
-    protected void nowhereToRun(Mob me) {
+        return true;
     }
 
     @Override

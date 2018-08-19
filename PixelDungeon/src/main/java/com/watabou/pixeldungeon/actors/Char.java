@@ -79,16 +79,7 @@ import java.util.Set;
 public abstract class Char extends Actor implements Presser{
 
 	// Unreachable target
-	public static final Char DUMMY = new Char() {
-		@Override
-		protected CharSprite sprite() {
-			return null;
-		}
-
-		{
-			setPos(Level.INVALID_CELL);
-		}
-	};
+	public static final Char DUMMY = new DummyChar();
 	@Packable
     private int      pos      = 0;
 
@@ -749,6 +740,33 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public boolean valid(){
-	    return this!=DUMMY;
+	    return !(this instanceof DummyChar);
     }
+
+	public boolean doStepTo(final int target) {
+		int oldPos = getPos();
+		if (level().cellValid(target) && getCloser(target)) {
+
+			spend(1 / speed());
+			moveSprite(oldPos, getPos());
+			return true;
+		}
+		return false;
+	}
+
+	public boolean doStepFrom(final int target) {
+		int oldPos = getPos();
+		if (level().cellValid(target) && getFurther(target)) {
+
+			spend(1 / speed());
+			moveSprite(oldPos, getPos());
+			return true;
+		}
+		return false;
+	}
+
+	protected abstract void moveSprite(int oldPos, int pos);
+
+	protected abstract boolean getCloser(final int cell);
+	protected abstract boolean getFurther(final int cell);
 }

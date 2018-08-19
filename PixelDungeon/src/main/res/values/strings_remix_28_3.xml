@@ -41,5 +41,11 @@
     <string name="Mob_StaHuntingStatus2">This %1$s is hunting for %2$s</string>
     <string name="Mob_StaFleeingStatus2">This %1$s is fleeing from %2$s</string>
 
+    <string name="Mob_StaTerrorStatus">This %1$s is horrified</string>
+    <string name="Mob_StaTerrorStatus2">This %1$s is horrified by %2$s</string>
+
+    <string name="Mob_StaAmokStatus">This %1$s is running amok</string>
+
+
     <string name="WndSaveSlotSelect_LoadAutoSave">Load auto-save</string>
 </resources>

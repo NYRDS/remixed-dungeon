@@ -1166,7 +1166,7 @@ public class Hero extends Char implements PetOwner {
 		return visibleEnemies.get(index % visibleEnemies.size());
 	}
 
-	private boolean getCloser(final int target) {
+	protected boolean getCloser(final int target) {
 
 		if (hasBuff(Roots.class)) {
 			return false;
@@ -1255,7 +1255,7 @@ public class Hero extends Char implements PetOwner {
 			}
 
 			move(step);
-			getSprite().move(oldPos, getPos());
+			moveSprite(oldPos,getPos());
 
 			if (wallWalkerBuff != null) {
 				int dmg = hp() / 2 > 2 ? hp() / 2 : 2;
@@ -1271,7 +1271,12 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	public boolean handle(int cell) {
+    @Override
+    protected boolean getFurther(int cell) {
+        return false;
+    }
+
+    public boolean handle(int cell) {
 
 		if (doOnNextAction != null) {
 			doOnNextAction.run();
@@ -1950,6 +1955,12 @@ public class Hero extends Char implements PetOwner {
 
 	public int magicLvl() {
 		return Scrambler.descramble(magicLvl);
+	}
+
+	@Override
+	protected void moveSprite(int oldPos, int pos) {
+		getSprite().move(oldPos, getPos());
+
 	}
 
 	public void setMagicLvl(int level) {

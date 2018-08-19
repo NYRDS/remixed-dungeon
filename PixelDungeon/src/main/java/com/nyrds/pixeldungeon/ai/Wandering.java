@@ -26,16 +26,10 @@ public class Wandering extends MobAi implements AiState {
 
             me.enemySeen = false;
 
-            int oldPos = me.getPos();
-
-            if (me.level().cellValid(me.target) && me.getCloser(me.target)) {
-                me.spend(1 / me.speed());
-                return me.moveSprite(oldPos, me.getPos());
-            } else {
+            if(!me.doStepTo(me.target)) {
                 me.target = me.level().randomDestination();
                 me.spend(Actor.TICK);
             }
-
         }
         return true;
     }

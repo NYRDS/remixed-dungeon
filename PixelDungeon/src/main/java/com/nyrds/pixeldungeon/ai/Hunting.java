@@ -14,27 +14,22 @@ public class Hunting extends MobAi implements AiState {
     @Override
     public boolean act(Mob me) {
         me.enemySeen = me.isEnemyInFov();
+
         if (me.enemySeen && me.canAttack(me.getEnemy())) {
             return me.doAttack(me.getEnemy());
         } else {
             if (me.enemySeen) {
                 me.target = me.getEnemy().getPos();
             }
-            int oldPos = me.getPos();
-            if (me.target != -1 && me.getCloser(me.target)) {
 
-                me.spend(1 / me.speed());
-                return me.moveSprite(oldPos, me.getPos());
-
-            } else {
-
+            if(!me.doStepTo(me.target)) {
                 me.spend(Actor.TICK);
                 me.target = Dungeon.level.randomDestination();
 
-                me.setState(new Wandering());
-                return true;
+                me.setState(getStateByClass(Wandering.class));
             }
         }
+        return true;
     }
 
     @Override
@@ -49,6 +44,9 @@ public class Hunting extends MobAi implements AiState {
 
     @Override
     public void gotDamage(Mob me, Object src, int dmg) {
+        if(!me.isEnemyInFov()) {
+            seekRevenge(me,src);
+        }
     }
 
 }
