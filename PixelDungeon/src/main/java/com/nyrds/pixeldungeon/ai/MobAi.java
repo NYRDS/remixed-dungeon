@@ -21,8 +21,8 @@ public abstract class MobAi implements AiState {
         registerAiState(Hunting.class);
         registerAiState(Fleeing.class);
         registerAiState(ThiefFleeing.class);
-        registerAiState(Terror.class);
-        registerAiState(Amok.class);
+        registerAiState(Horrified.class);
+        registerAiState(RunningAmok.class);
     }
 
     @Override
@@ -30,13 +30,13 @@ public abstract class MobAi implements AiState {
         return getClass().getSimpleName().toUpperCase(Locale.ROOT);
     }
 
-    protected void seekRevenge(Mob me,Object src) {
-        if(src instanceof Char) {
-            me.setEnemy((Char)src);
+    protected void seekRevenge(Mob me, Object src) {
+        if (src instanceof Char) {
+            me.setEnemy((Char) src);
         } else {
             me.setEnemy(chooseEnemy(me));
         }
-        if(me.isEnemyInFov()) {
+        if (me.isEnemyInFov()) {
             me.setState(new Hunting());
         } else {
             me.target = me.respawnCell(me.level());
@@ -49,13 +49,32 @@ public abstract class MobAi implements AiState {
         return Utils.format("This %s is %s", me.getName(), getTag());
     }
 
+    protected Char chooseNearestChar(Mob me) {
+
+        Char bestEnemy = Char.DUMMY;
+        int dist = me.level().getLength();
+
+        for (Char chr : Actor.chars.values()) {
+            if (me.level().fieldOfView[chr.getPos()]) {
+                int candidateDist = me.level().distance(me.getPos(), chr.getPos());
+                if (candidateDist < dist) {
+                    bestEnemy = chr;
+                    dist = candidateDist;
+                }
+            }
+        }
+
+        return bestEnemy;
+    }
+
+
     protected Char chooseEnemy(Mob me) {
 
         Char bestEnemy = Char.DUMMY;
         int dist = me.level().getLength();
 
         for (Char chr : Actor.chars.values()) {
-            if(me.level().fieldOfView[chr.getPos()]) {
+            if (me.level().fieldOfView[chr.getPos()]) {
                 if (!chr.friendly(me)) {
                     int candidateDist = me.level().distance(me.getPos(), chr.getPos());
                     if (candidateDist < dist) {
@@ -71,7 +90,7 @@ public abstract class MobAi implements AiState {
 
     protected void huntEnemy(Mob me) {
 
-        if(me.getEnemy().valid()) {
+        if (me.getEnemy().valid()) {
             me.enemySeen = true;
             me.target = me.getEnemy().getPos();
 
@@ -80,7 +99,7 @@ public abstract class MobAi implements AiState {
         }
     }
 
-    private static void registerAiState(Class<? extends AiState> stateClass){
+    private static void registerAiState(Class<? extends AiState> stateClass) {
         try {
             aiStateInstances.put(stateClass.getSimpleName().toUpperCase(Locale.ROOT), stateClass.newInstance());
         } catch (InstantiationException e) {
