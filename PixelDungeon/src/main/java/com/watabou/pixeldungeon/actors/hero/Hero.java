@@ -146,7 +146,7 @@ public class Hero extends Char implements PetOwner {
 	private static final float TIME_TO_SEARCH = 2f;
 
 	@Nullable
-	public Runnable doOnNextAction;
+	static public Runnable doOnNextAction;
 
 	public HeroClass    heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass  = HeroSubClass.NONE;

@@ -104,7 +104,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	protected boolean canAttack( Char enemy ) {
+    public boolean canAttack(Char enemy) {
 		return pumpedUp ? distance( enemy ) <= 2 : super.canAttack(enemy);
 	}
 	
@@ -123,7 +123,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	protected boolean doAttack( Char enemy ) {		
+	public boolean doAttack(Char enemy) {
 		if (pumpedUp || Random.Int( 3 ) > 0) {
 		
 			return super.doAttack( enemy );
@@ -152,7 +152,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	protected boolean getCloser( int target ) {
+	public boolean getCloser(int target) {
 		pumpedUp = false;
 		return super.getCloser( target );
 	}

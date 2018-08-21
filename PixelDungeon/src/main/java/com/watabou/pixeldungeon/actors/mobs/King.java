@@ -92,7 +92,7 @@ public class King extends Boss {
 	
 	
 	@Override
-	protected boolean getCloser( int target ) {
+	public boolean getCloser(int target) {
 
 		Level level = Dungeon.level;
 		int x = level.cellX(getPos());
@@ -108,7 +108,7 @@ public class King extends Boss {
 	}
 	
 	@Override
-	protected boolean canAttack( Char enemy ) {
+    public boolean canAttack(Char enemy) {
 		return canTryToSummon() ? 
 			getPos() == targetPedestal :
 			Dungeon.level.adjacent( getPos(), enemy.getPos() );

@@ -49,7 +49,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 	}
 
 	@Override
-	protected boolean canAttack(Char enemy) {
+    public boolean canAttack(Char enemy) {
 		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 

@@ -84,7 +84,7 @@ public class Lich extends Boss {
 
 
     @Override
-    protected boolean getCloser( int target ) {
+    public boolean getCloser(int target) {
         if (Dungeon.level.fieldOfView[target]) {
             jump();
             return true;
@@ -94,12 +94,12 @@ public class Lich extends Boss {
     }
 
     @Override
-    protected boolean canAttack( Char enemy ) {
+    public boolean canAttack(Char enemy) {
         return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
     }
 
     @Override
-    protected boolean doAttack( Char enemy ) {
+    public boolean doAttack(Char enemy) {
 
         if(timeToJump) {
             jump();

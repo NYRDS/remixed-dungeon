@@ -89,7 +89,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	}
 
 	@Override
-	protected boolean canAttack(Char enemy) {
+	public boolean canAttack(Char enemy) {
 		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 
@@ -116,12 +116,12 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	}
 
 	@Override
-	protected boolean getCloser(int target) {
+	public boolean getCloser(int target) {
 		return false;
 	}
 
 	@Override
-	protected boolean getFurther(int target) {
+    public boolean getFurther(int target) {
 		return false;
 	}
 

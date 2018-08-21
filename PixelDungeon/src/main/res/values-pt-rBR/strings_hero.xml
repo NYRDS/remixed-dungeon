@@ -39,6 +39,13 @@
     <item>Qualquer pedaço de comida recupera um pouco de vida quando comidos.</item>
     <item>Poções de Força são identificadas desde o início.</item>
   </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se tranformar em outra varinha.</item>
+    <item>Magos recarregam suas varinhas mais rápido.</item>
+    <item>Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</item>
+    <item>Magos podem usar varinhas como uma arma de combate.</item>
+    <item>Pergaminhos de Identificação são identificados desde o início.</item>
+  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Ladrões começam com um Anel de Sombras +1.</item>
     <item>Ladrões podem identificar um anel ao equipa-lo.</item>
@@ -53,6 +60,13 @@
     <item>Caçadoras são peritas em armas de aremesso, e tem bonus de ataque quando usadas.</item>
     <item>Caçadoras ganham mais vida a partir de gotas de orvalho.</item>
     <item>Caçadoras podem sentir monstros por perto, mesmo que eles estejam escondidos atrás de obstáculos.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Elfos começam com 15 de vida e 9 de força</item>
+    <item>Elfos são imunes ao enraizamento</item>
+    <item>Elfos começam com um arco de madeira melhorado e um monte de flechas</item>
+    <item>Elfos são peritos com arcos e ágeis</item>
+    <item>Elfos são menos experientes com armas corpo a corpo</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiador</string>

@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 public class ServiceManNPC extends ImmortalNPC {
 
 	@Packable
-	private int filmsSeen = 0;
+	private static int filmsSeen = 0;
 
 	private static final int BASIC_GOLD_REWARD = 150;
 
@@ -28,11 +28,11 @@ public class ServiceManNPC extends ImmortalNPC {
 		}
 	}
 
-	private int getReward(){
+	private static int getReward(){
 		return BASIC_GOLD_REWARD + (filmsSeen / 5) * 50;
 	}
 
-	public void reward() {
+	public static void reward() {
 		filmsSeen++;
 		Dungeon.hero.collect(new Gold(getReward()));
 	}

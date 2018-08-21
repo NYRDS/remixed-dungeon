@@ -19,16 +19,15 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ThiefSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -51,7 +50,7 @@ public class Thief extends Mob {
 		loot = RingOfHaggler.class;
 		lootChance = 0.01f;
 		
-		FLEEING = new Fleeing();
+		FLEEING = new ThiefFleeing(this);
 	}
 	
 	private static final String ITEM = "item";
@@ -141,17 +140,5 @@ public class Thief extends Mob {
 		}
 		
 		return desc;
-	}
-	
-	private class Fleeing extends Mob.Fleeing {
-		@Override
-		protected void nowhereToRun() {
-			if (hasBuff( Terror.class )) {
-				super.nowhereToRun();
-			} else {
-				getSprite().showStatus( CharSprite.NEGATIVE, TXT_RAGE );
-				setState(HUNTING);
-			}
-		}
 	}
 }

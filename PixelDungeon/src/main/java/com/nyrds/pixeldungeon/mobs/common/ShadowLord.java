@@ -113,7 +113,7 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	@Override
-	protected boolean canAttack(Char enemy) {
+    public boolean canAttack(Char enemy) {
 		return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 

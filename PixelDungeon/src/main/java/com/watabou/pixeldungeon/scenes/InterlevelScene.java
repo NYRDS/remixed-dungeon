@@ -121,6 +121,19 @@ public class InterlevelScene extends PixelScene {
 
 	static public void Do(InterlevelScene.Mode mode) {
 		InterlevelScene.mode = mode;
+
+		switch (mode) {
+			case DESCEND:
+			case ASCEND:
+			case RETURN:
+			case FALL:
+				if(Dungeon.hero != null) {
+					Dungeon.save();
+				}
+				break;
+			default:
+		}
+
 		Game.switchScene( InterlevelScene.class );
 	}
 

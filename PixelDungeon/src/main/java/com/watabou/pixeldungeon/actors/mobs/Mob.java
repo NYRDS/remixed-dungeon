@@ -25,6 +25,12 @@ import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ai.AiState;
+import com.nyrds.pixeldungeon.ai.Fleeing;
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
@@ -35,7 +41,6 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -63,7 +68,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -79,16 +83,16 @@ import java.util.Map;
 
 public abstract class Mob extends Char {
 
-	protected static final String TXT_RAGE = "#$%^";
+	public static final String TXT_RAGE = "#$%^";
 
 	private static final float SPLIT_DELAY = 1f;
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 
-	public AiState SLEEPING  = new Sleeping();
-	public AiState HUNTING   = new Hunting();
-	public AiState WANDERING = new Wandering();
-	public AiState FLEEING   = new Fleeing();
-	public AiState PASSIVE   = new Passive();
+	public AiState SLEEPING  = new Sleeping(this);
+	public AiState HUNTING   = new Hunting(this);
+	public AiState WANDERING = new Wandering(this);
+	public AiState FLEEING   = new Fleeing(this);
+	public AiState PASSIVE   = new Passive(this);
 
 	@Packable (defaultValue = DEFAULT_MOB_SCRIPT)
 	protected String scriptFile = DEFAULT_MOB_SCRIPT;
@@ -100,7 +104,7 @@ public abstract class Mob extends Char {
 
 	protected Object spriteClass;
 
-	protected int target = -1;
+	public int target = -1;
 
 	protected int defenseSkill = 0;
 
@@ -113,11 +117,11 @@ public abstract class Mob extends Char {
 	@NonNull
 	private Char enemy = DUMMY;
 
-	protected boolean enemySeen;
+	public boolean enemySeen;
 
 	private boolean alerted = false;
 
-	private static final float TIME_TO_WAKE_UP = 1f;
+	public static final float TIME_TO_WAKE_UP = 1f;
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
@@ -357,7 +361,7 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	protected boolean moveSprite(int from, int to) {
+	public boolean moveSprite(int from, int to) {
 
 		if (getSprite().isVisible()
 				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
@@ -397,11 +401,11 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	protected boolean canAttack(Char enemy) {
+	public boolean canAttack(Char enemy) {
 		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && !pacified;
 	}
 
-	protected boolean getCloser(int target) {
+	public boolean getCloser(int target) {
 
 		if (hasBuff(Roots.class)) {
 			return false;
@@ -416,7 +420,7 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	protected boolean getFurther(int target) {
+	public boolean getFurther(int target) {
 		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(Dungeon.level));
 
 		if (step != -1) {
@@ -438,7 +442,7 @@ public abstract class Mob extends Char {
 		return 1f;
 	}
 
-	protected boolean doAttack(Char enemy) {
+	public boolean doAttack(Char enemy) {
 
 		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
 			getSprite().attack(enemy.getPos());
@@ -637,9 +641,7 @@ public abstract class Mob extends Char {
 		clone.setPos(cell);
 		clone.setState(clone.HUNTING);
 
-		if (Dungeon.level.map[clone.getPos()] == Terrain.DOOR) {
-			Door.enter(clone.getPos());
-		}
+		clone.ensureOpenDoor();
 
 		Dungeon.level.spawnMob(clone, SPLIT_DELAY, getPos());
 
@@ -753,199 +755,6 @@ public abstract class Mob extends Char {
 		this.loot = loot;
 	}
 
-	public interface AiState {
-		boolean act(boolean enemyInFOV, boolean justAlerted);
-
-		String status();
-	}
-
-	public class Sleeping implements AiState {
-
-		public static final String TAG = "SLEEPING";
-
-		public Sleeping(){}
-
-		@Override
-		public boolean act(boolean enemyInFOV, boolean justAlerted) {
-			if (enemyInFOV
-					&& Random.Int(distance(getEnemy()) + getEnemy().stealth()
-					+ (getEnemy().isFlying() ? 2 : 0)) == 0) {
-
-				enemySeen = true;
-
-				notice();
-				setState(HUNTING);
-				target = getEnemy().getPos();
-
-				if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
-					for (Mob mob : Dungeon.level.mobs) {
-						if (mob != Mob.this) {
-							mob.beckon(target);
-						}
-					}
-				}
-
-				spend(TIME_TO_WAKE_UP);
-
-			} else {
-
-				enemySeen = false;
-
-				spend(TICK);
-
-			}
-			return true;
-		}
-
-		@Override
-		public String status() {
-			return Utils.format(Game.getVar(R.string.Mob_StaSleepingStatus),
-					getName());
-		}
-	}
-
-	private class Wandering implements AiState {
-
-		public static final String TAG = "WANDERING";
-
-		public Wandering(){}
-
-		@Override
-		public boolean act(boolean enemyInFOV, boolean justAlerted) {
-			if (enemyInFOV
-					&& (justAlerted || Random.Int(distance(getEnemy()) / 2
-					+ getEnemy().stealth()) == 0)) {
-
-				enemySeen = true;
-
-				notice();
-				setState(HUNTING);
-				target = getEnemy().getPos();
-
-			} else {
-
-				enemySeen = false;
-
-				int oldPos = getPos();
-				if (Dungeon.level.cellValid(target) && getCloser(target)) {
-					spend(1 / speed());
-					return moveSprite(oldPos, getPos());
-				} else {
-					target = Dungeon.level.randomDestination();
-					spend(TICK);
-				}
-
-			}
-			return true;
-		}
-
-		@Override
-		public String status() {
-			return Utils.format(Game.getVar(R.string.Mob_StaWanderingStatus),
-					getName());
-		}
-	}
-
-	class Hunting implements AiState {
-
-		public static final String TAG = "HUNTING";
-
-		public Hunting() {}
-
-		@Override
-		public boolean act(boolean enemyInFOV, boolean justAlerted) {
-			enemySeen = enemyInFOV;
-			if (enemyInFOV && canAttack(getEnemy())) {
-				return doAttack(getEnemy());
-			} else {
-				if (enemyInFOV) {
-					target = getEnemy().getPos();
-				}
-				int oldPos = getPos();
-				if (target != -1 && getCloser(target)) {
-
-					spend(1 / speed());
-					return moveSprite(oldPos, getPos());
-
-				} else {
-
-					spend(TICK);
-					setState(WANDERING);
-					target = Dungeon.level.randomDestination();
-					return true;
-				}
-			}
-		}
-
-		@Override
-		public String status() {
-			if (getEnemy()!=DUMMY) {
-				return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus2),
-						getName(), getEnemy().getName_objective());
-			}
-			return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
-					getName());
-		}
-	}
-
-	protected class Fleeing implements AiState {
-
-		public static final String TAG = "FLEEING";
-
-		public Fleeing(){}
-
-		@Override
-		public boolean act(boolean enemyInFOV, boolean justAlerted) {
-			enemySeen = enemyInFOV;
-			if (enemyInFOV) {
-				target = getEnemy().getPos();
-			}
-
-			int oldPos = getPos();
-			if (target != -1 && getFurther(target)) {
-
-				spend(1 / speed());
-				return moveSprite(oldPos, getPos());
-
-			} else {
-
-				spend(TICK);
-				nowhereToRun();
-
-				return true;
-			}
-		}
-
-		protected void nowhereToRun() {
-		}
-
-		@Override
-		public String status() {
-			return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus),
-					getName());
-		}
-	}
-
-	private class Passive implements AiState {
-
-		public static final String TAG = "PASSIVE";
-
-		public Passive(){}
-
-		@Override
-		public boolean act(boolean enemyInFOV, boolean justAlerted) {
-			enemySeen = false;
-			spend(TICK);
-			return true;
-		}
-
-		@Override
-		public String status() {
-			return Utils.format(Game.getVar(R.string.Mob_StaPassiveStatus),
-					getName());
-		}
-	}
-
 	public boolean isPet() {
 		return fraction == Fraction.HEROES;
 	}
@@ -989,10 +798,18 @@ public abstract class Mob extends Char {
 		chr.getSprite().move(chr.getPos(), curPos);
 		chr.move(curPos);
 
+		ensureOpenDoor();
+
 		float timeToSwap = 1 / chr.speed();
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
 		setState(WANDERING);
+	}
+
+	private void ensureOpenDoor() {
+		if (Dungeon.level.map[getPos()] == Terrain.DOOR) {
+			Door.enter(getPos());
+		}
 	}
 
 	public boolean interact(Hero hero) {
@@ -1011,7 +828,7 @@ public abstract class Mob extends Char {
 
 
 	@NonNull
-	protected Char getEnemy() {
+	public Char getEnemy() {
 		return enemy;
 	}
 

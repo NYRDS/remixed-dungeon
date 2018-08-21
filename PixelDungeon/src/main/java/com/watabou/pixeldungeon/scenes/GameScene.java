@@ -383,12 +383,15 @@ public class GameScene extends PixelScene {
 
         fadeIn();
 
-        Dungeon.save();
         Dungeon.observe();
     }
 
     public void destroy() {
-
+/*
+        if(!Game.isPaused()) {
+            Dungeon.save();
+        }
+*/
         scene = null;
         Badges.saveGlobal();
 
@@ -397,7 +400,9 @@ public class GameScene extends PixelScene {
 
     @Override
     public synchronized void pause() {
-        Dungeon.save();
+        if(!Game.softPaused) {
+            Dungeon.save();
+        }
     }
 
     @Override
@@ -785,7 +790,9 @@ public class GameScene extends PixelScene {
     @Override
     public void resume() {
         super.resume();
-        afterObserve();
+
+        InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+
     }
 
     public static void addMobSpriteDirect(CharSprite sprite) {

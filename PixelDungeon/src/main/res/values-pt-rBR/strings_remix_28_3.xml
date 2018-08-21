@@ -38,4 +38,7 @@
     <string name="gdpr_disagree">Não, obrigado</string>
     <string name="gdpr_choose">Por favor, escolha</string>
 
-    </resources>
+    <string name="Mob_StaHuntingStatus2">Isso %1$s é caçar %2$s</string>
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">Carregar Jogo</string>
+</resources>

@@ -1,6 +1,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ai.AiState;
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;

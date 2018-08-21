@@ -102,7 +102,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     private GLSurfaceView view;
     private LinearLayout layout;
 
-    public static volatile boolean paused = true;
+    private static volatile boolean paused = true;
 
     public static volatile boolean softPaused = false;
 
@@ -178,6 +178,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         paused = true;
         if (instance().scene != null) {
             instance().scene.pause();
+            instance().scene.destroy();
         }
         instance().finish();
         System.exit(0);

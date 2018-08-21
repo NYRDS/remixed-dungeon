@@ -11,6 +11,7 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -74,6 +75,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 		hide();
 
 		Game.softPaused = true;
+		Dungeon.save();
 		Ads.removeEasyModeBanner();
 		RewardVideo.showCinemaRewardVideo(this);
 	}
@@ -84,7 +86,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 			@Override
 			public void run() {
 				Game.softPaused = false;
-				Dungeon.hero.doOnNextAction = new Runnable() {
+				Hero.doOnNextAction = new Runnable() {
 					@Override
 					public void run() {
 						GameScene.show(new WndMessage(Game.getVar(R.string.WndMovieTheatre_Thank_You) ) {
@@ -93,7 +95,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 								super.hide();
 								if(result) {
 									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
-									serviceMan.reward();
+									ServiceManNPC.reward();
 								} else {
 									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
 								}
