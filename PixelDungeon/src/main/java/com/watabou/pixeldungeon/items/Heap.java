@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -38,6 +39,7 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -76,7 +78,8 @@ public class Heap implements Bundlable {
 		regularHeaps.put(Type.HEAP,14f);
 	}
 
-	public int pos = 0;
+	@Packable
+	public int pos = Level.INVALID_CELL;
 	
 	public ItemSprite sprite;
 
@@ -392,21 +395,18 @@ public class Heap implements Bundlable {
 		items.clear();
 	}
 
-	private static final String POS		= "pos";
 	private static final String TYPE	= "type";
 	private static final String ITEMS	= "items";
 	
 	@SuppressWarnings("unchecked")
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		pos   = bundle.getInt( POS );
 		type  = Type.valueOf( bundle.getString( TYPE ) );
 		items = new LinkedList<>(bundle.getCollection(ITEMS, Item.class));
 	}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( POS, pos );
 		bundle.put( TYPE, type.toString() );
 		bundle.put( ITEMS, items );
 	}

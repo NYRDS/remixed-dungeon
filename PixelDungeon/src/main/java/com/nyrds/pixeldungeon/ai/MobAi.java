@@ -110,7 +110,17 @@ public abstract class MobAi implements AiState {
     }
 
     public static AiState getStateByTag(String stateTag) {
-        return aiStateInstances.get(stateTag);
+        AiState aiState = aiStateInstances.get(stateTag);
+
+        if (aiState != null) {
+            return aiState;
+        }
+
+        aiState = new CustomMobAi(stateTag);
+
+        aiStateInstances.put(stateTag, aiState);
+
+        return aiState;
     }
 
 
