@@ -319,6 +319,7 @@ public abstract class Level implements Bundlable {
 	@Packable
 	protected int viewDistance;
 
+	//Active Char fov
 	public boolean[] fieldOfView;
 
 	public boolean[] passable;

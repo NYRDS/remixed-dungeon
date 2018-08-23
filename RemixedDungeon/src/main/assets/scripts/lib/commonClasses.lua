@@ -49,6 +49,8 @@ local actions = {
 local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
 local Dungeon   = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
 
+local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
+
 local RPD = {
     GameScene = GameScene,
     Dungeon = Dungeon,
@@ -61,6 +63,9 @@ local RPD = {
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
+
+
+    MobAi = MobAi,
 
     Buffs = Buffs,
 
@@ -125,12 +130,21 @@ local RPD = {
         GLog:i(text,{...})
     end,
 
+<<<<<<< HEAD:RemixedDungeon/src/main/assets/scripts/lib/commonClasses.lua
     getXy = function (chr)
         local pos = chr:getPos()
         return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}
     end
 }
 
+=======
+    setAi = function(mob, state)
+        mob:setState(MobAi:getStateByTag(state))
+    end
+}
+
+
+>>>>>>> CustomMobAi - wip:PixelDungeon/src/main/assets/scripts/lib/commonClasses.lua
 return RPD
 
 
