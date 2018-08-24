@@ -30,10 +30,10 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -126,7 +126,7 @@ public class Heap implements Bundlable {
 		return (type == Type.HEAP || type == Type.FOR_SALE) && items.size() > 0 ? items.peek().glowing() : null;
 	}
 	
-	public void open( Hero hero ) {
+	public void open( Char chr ) {
 		switch (type) {
 		case MIMIC:
 			if (Mimic.spawnAt( pos, items ) != null) {
@@ -137,15 +137,15 @@ public class Heap implements Bundlable {
 			}
 			break;
 		case TOMB:
-			Wraith.spawnAround( hero.getPos() );
+			Wraith.spawnAround( chr.getPos() );
 			break;
 		case SKELETON:
 			CellEmitter.center( pos ).start( Speck.factory( Speck.RATTLE ), 0.1f, 3 );
 			for (Item item : items) {
 				if (item.cursed) {
 					if (Wraith.spawnAt( pos ) == null) {
-						hero.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
-						hero.damage( hero.hp() / 2, this );
+						chr.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
+						chr.damage( chr.hp() / 2, this );
 					}
 					Sample.INSTANCE.play( Assets.SND_CURSED );
 					break;

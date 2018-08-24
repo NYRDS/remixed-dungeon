@@ -18,11 +18,15 @@ local Buffs  = {
     Invisibility = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Invisibility"),
     Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation"),
     Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger"),
+<<<<<<< HEAD:RemixedDungeon/src/main/assets/scripts/lib/commonClasses.lua
     Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison"),
     Frost        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Frost"),
     Light        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Light"),
     Cripple      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Cripple"),
     Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm")
+=======
+    Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison")
+>>>>>>> BlackCatAi - wip:PixelDungeon/src/main/assets/scripts/lib/commonClasses.lua
 }
 
 local Blobs = {
@@ -50,6 +54,16 @@ local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
 local Dungeon   = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
 
 local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
+
+
+local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfBlink")
+local wandOfTelekinesis = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis")
+
+local Wands = {
+    WandOfBlink = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink"),
+    wandOfBlink = wandOfBlink,
+    wandOfTelekinesis = wandOfTelekinesis
+}
 
 local RPD = {
     GameScene = GameScene,
@@ -80,7 +94,8 @@ local RPD = {
         FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
         SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
         Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck"),
-        ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle")
+        ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle"),
+        SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
     },
 
     Objects = {
@@ -93,6 +108,8 @@ local RPD = {
             ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
         },
     },
+
+    Wands = Wands,
 
     new = function(class, ...)
         return luajava.newInstance(class, ...)
@@ -140,6 +157,10 @@ local RPD = {
 =======
     setAi = function(mob, state)
         mob:setState(MobAi:getStateByTag(state))
+    end,
+
+    blinkTo = function(mob, target)
+        wandOfBlink:mobWandUse(mob, target)
     end
 }
 

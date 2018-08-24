@@ -33,8 +33,8 @@ import com.watabou.utils.Callback;
 public class WandOfBlink extends Wand {
 
 	@Override
-	protected int getDestinationCell(int target) {
-		int cell = super.getDestinationCell(target);
+	protected int getDestinationCell(int src, int target) {
+		int cell = super.getDestinationCell(src, target);
 
 		int level = effectiveLevel();
 
