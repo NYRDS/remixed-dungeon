@@ -166,7 +166,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	public void zapCell(Hero chr, int cell) {
 		setCurUser(chr);
-		getDestinationCell(cell);
+		getDestinationCell(chr.getPos(),cell);
 		onZap(cell);
 	}
 	
@@ -313,11 +313,13 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	public void mobWandUse(Char user, final int tgt) {
 		wandUser = user;
-		
-		fx(tgt, new Callback() {
+
+		final int cell = getDestinationCell(user.getPos(),tgt);
+
+		fx(cell, new Callback() {
 			@Override
 			public void call() {
-				onZap(tgt);
+				onZap(cell);
 			}
 		});
 		
@@ -435,7 +437,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 				}
 
 				final Wand curWand = (Wand) Wand.curItem;
-				final int cell = curWand.getDestinationCell(target);
+				final int cell = curWand.getDestinationCell(getCurUser().getPos(),target);
 				getCurUser().getSprite().zap(cell);
 				curWand.wandEffect(cell);
 			}
@@ -447,8 +449,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		}
 	};
 
-	protected int getDestinationCell(int target) {
-		return Ballistica.cast(getCurUser().getPos(), target, directional, hitChars, hitObjects);
+	protected int getDestinationCell(int src, int target) {
+		return Ballistica.cast(src, target, directional, hitChars, hitObjects);
 	}
 
 	public int curCharges() {

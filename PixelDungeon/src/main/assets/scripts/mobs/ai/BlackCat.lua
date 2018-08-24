@@ -16,9 +16,24 @@ return ai.init{
 
     act       = function(self, ai, me)
         local level = RPD.Dungeon.level
-        local heaps = level:allHeaps()
 
-        me:spend(1.)
+        -- already have something tasty?
+        local heap = level:getHeap(me:getPos())
+        if heap then
+            local item = heap:peek()
+
+            if edible[item:getClassName()] then
+                heap:pickUp()
+                RPD.Sfx.SpellSprite:show(me, RPD.Sfx.SpellSprite.FOOD)
+                RPD.playSound("snd_eat.mp3")
+                me:spend(1)
+                return
+            end
+        end
+
+
+        -- look for something tasty
+        local heaps = level:allHeaps()
 
         local iterator = heaps:iterator()
 
@@ -26,17 +41,21 @@ return ai.init{
             local heap = iterator:next()
             local itemPos = heap.pos
 
-            RPD.glog("%s at %d", heap:peek():getClassName(), itemPos)
             if level.fieldOfView[itemPos] then --visible heap
-                RPD.glog("visible", heap:peek():getClassName(), itemPos)
                 local item = heap:peek()
                 if edible[item:getClassName()] then
-                    RPD.glog("Fish")
-                    me:doStepTo(itemPos)
-                    return
+
+                    if RPD.Actor:findChar(itemPos) then
+                        RPD.Wands.wandOfTelekinesis:mobWandUse(me,itemPos)
+                    else
+                        RPD.blinkTo(me, itemPos)
+                    end
+                    break
                 end
             end
         end
+
+        me:spend(1)
     end,
 
     gotDamage = function(self, ai, me, src, dmg)

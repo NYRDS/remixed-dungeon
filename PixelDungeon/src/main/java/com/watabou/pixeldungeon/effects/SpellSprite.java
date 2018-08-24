@@ -17,13 +17,14 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import java.util.HashMap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
+
+import java.util.HashMap;
 
 public class SpellSprite extends Image {
 
@@ -32,7 +33,7 @@ public class SpellSprite extends Image {
 	public static final int CHARGE		= 2;
 	public static final int MASTERY		= 3;
 	public static final int DOMINATION	= 4;
-	public static final int SUMMON	= 5;
+	public static final int SUMMON   	= 5;
 	
 	private static final int SIZE	= 16;
 	
