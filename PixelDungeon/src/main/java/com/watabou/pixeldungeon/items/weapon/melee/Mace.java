@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Mace extends MeleeWeapon {
 	{
 		image = ItemSpriteSheet.MACE;
-		animation_class = HEAVY_ATTACK;
+		animation_class = SWORD_ATTACK;
 	}
 	
 	public Mace() {
