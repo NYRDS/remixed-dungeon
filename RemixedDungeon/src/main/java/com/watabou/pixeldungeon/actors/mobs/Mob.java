@@ -692,14 +692,14 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	public boolean interact(Hero hero) {
+	public boolean interact(Hero chr) {
 
-		if(runMobScript("onInteract", hero)) {
+		if(runMobScript("onInteract", chr)) {
 			return true;
 		}
 
-		if (friendly(hero)) {
-			swapPosition(hero);
+		if (friendly(chr)) {
+			swapPosition(chr);
 			return true;
 		}
 
