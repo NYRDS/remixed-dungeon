@@ -10,8 +10,8 @@
         "quantity": 100000
       }
     ],
-    "str": 10,
-    "hp": 20,
+    "str": 10000,
+    "hp": 10000,
     "magicAffinity": "Common"
   },
   "non_expert": {
