@@ -651,7 +651,7 @@ public class Dungeon {
             return;
         }
 
-        level.updateFieldOfView(hero);
+        level.updateFieldOfView(hero.getControlTarget());
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
 
         BArray.or(level.visited, visible, level.visited);
