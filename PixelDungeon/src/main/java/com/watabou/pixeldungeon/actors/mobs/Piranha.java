@@ -55,7 +55,7 @@ public class Piranha extends Mob {
 	}
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		if (!Dungeon.level.water[getPos()]) {
 			die( null );
 			return true;

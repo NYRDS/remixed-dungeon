@@ -113,8 +113,6 @@ public abstract class Mob extends Char {
 
 	public boolean enemySeen;
 
-	private boolean alerted = false;
-
 	public static final float TIME_TO_WAKE_UP = 1f;
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
@@ -221,7 +219,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	protected boolean act() {
+	public boolean act() {
 
 		super.act(); //Calculate FoV
 
@@ -233,7 +231,8 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		return getState().act(this);
+		getState().act(this);
+		return true;
 	}
 
 
@@ -269,15 +268,6 @@ public abstract class Mob extends Char {
 			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
 			setState(MobAi.getStateByClass(Sleeping.class));
 			postpone(Sleep.SWS);
-		}
-	}
-
-	@Override
-	public void remove(Buff buff) {
-		super.remove(buff);
-		if (buff instanceof Terror) {
-			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			setState(new Hunting());
 		}
 	}
 
@@ -389,8 +379,6 @@ public abstract class Mob extends Char {
 	public void damage(int dmg, Object src) {
 
 		runMobScript("onDamage", dmg, src);
-
-		Terror.recover(this);
 
         getState().gotDamage(this,src, dmg);
 
@@ -514,7 +502,7 @@ public abstract class Mob extends Char {
 
 		clone.hp(Math.max((hp() - damage) / 2, 1));
 		clone.setPos(cell);
-		clone.setState(new Hunting());
+		clone.setState(MobAi.getStateByClass(Hunting.class));
 
 		clone.ensureOpenDoor();
 

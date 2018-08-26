@@ -158,10 +158,10 @@ public class Hero extends Char implements PetOwner {
 	private int defenseSkill = 5;
 
 	private boolean    ready      = false;
-	public  HeroAction curAction  = null;
 	public  HeroAction lastAction = null;
 
 	private Char enemy;
+	private Char controlTarget = this;
 
 	public Armor.Glyph killerGlyph = null;
 
@@ -538,6 +538,10 @@ public class Hero extends Char implements PetOwner {
 		checkVisibleMobs();
 		AttackIndicator.updateState();
 
+		if(controlTarget!=this) {
+			curAction = null;
+		}
+
 		if (curAction == null) {
 			if (restoreHealth) {
 				if (isStarving() || hp() >= ht() || Dungeon.level.isSafe()) {
@@ -636,7 +640,9 @@ public class Hero extends Char implements PetOwner {
 	public void resume() {
 		curAction = lastAction;
 		lastAction = null;
-		act();
+
+		controlTarget.curAction = curAction;
+		controlTarget.act();
 	}
 
 	private boolean actMove(HeroAction.Move action) {
@@ -1340,7 +1346,8 @@ public class Hero extends Char implements PetOwner {
 
 		}
 
-		return act();
+		controlTarget.curAction = curAction;
+		return controlTarget.act();
 	}
 
 	public void earnExp(int exp) {
@@ -1846,6 +1853,9 @@ public class Hero extends Char implements PetOwner {
 		Badges.validateFoodEaten();
 	}
 
+	public void setControlTarget(Char controlTarget) {
+		this.controlTarget = controlTarget;
+	}
 
 	public interface Doom {
 		void onDeath();

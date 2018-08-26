@@ -23,7 +23,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 	}
 
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		throwItem();
 
 		getSprite().turnTo(getPos(), Dungeon.hero.getPos());

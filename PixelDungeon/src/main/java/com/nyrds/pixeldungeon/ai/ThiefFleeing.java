@@ -14,7 +14,7 @@ public class ThiefFleeing extends MobAi implements AiState {
     }
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
             me.target = me.getEnemy().getPos();
@@ -25,7 +25,6 @@ public class ThiefFleeing extends MobAi implements AiState {
             me.getSprite().showStatus( CharSprite.NEGATIVE, Mob.TXT_RAGE );
             me.setState(MobAi.getStateByClass(Hunting.class));
         }
-        return true;
     }
 
     @Override

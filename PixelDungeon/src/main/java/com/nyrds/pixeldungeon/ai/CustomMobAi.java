@@ -15,9 +15,8 @@ public class CustomMobAi extends MobAi implements AiState {
     }
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
         script.run("act",me);
-        return true;
     }
 
     @Override

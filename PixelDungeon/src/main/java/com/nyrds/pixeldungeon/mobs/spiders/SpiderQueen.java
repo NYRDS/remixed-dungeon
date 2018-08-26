@@ -35,7 +35,7 @@ public class SpiderQueen extends Boss {
 	}
 	
 	@Override
-	protected boolean act(){
+    public boolean act(){
 		if(Random.Int(0, 20) == 0 && !SpiderEgg.laid(getPos())) {
 			SpiderEgg.lay(getPos());
 		}

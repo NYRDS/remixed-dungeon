@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import android.support.annotation.NonNull;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.Dungeon;
@@ -26,10 +27,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-import com.watabou.utils.Random;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -60,27 +59,7 @@ public class MirrorImage extends NPC {
 	@Packable
 	private String[] look = new String[0];
 
-	private static final String ATTACK	= "attack";
-	private static final String DAMAGE	= "damage";
-	private static final String LOOK    = "look";
 
-
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( ATTACK, attack );
-		bundle.put( DAMAGE, damage );
-		bundle.put(LOOK, lookDesc);
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		attack = bundle.getInt( ATTACK );
-		damage = bundle.getInt( DAMAGE );
-		lookDesc = bundle.getStringArray(LOOK);
-	}
-	
 	@Override
 	public int attackSkill( Char target ) {
 		return attack;
@@ -100,23 +79,7 @@ public class MirrorImage extends NPC {
 		
 		return dmg;
 	}
-	
-	protected Char chooseEnemy() {
-		
-		if (getEnemy() == DUMMY || !getEnemy().isAlive()) {
-			HashSet<Mob> enemies = new HashSet<>();
-			for (Mob mob:Dungeon.level.mobs) {
-				if (!mob.friendly(Dungeon.hero) && Dungeon.level.fieldOfView[mob.getPos()]) {
-					enemies.add( mob );
-				}
-			}
-			
-			setEnemy(enemies.size() > 0 ? Random.element( enemies ) : DUMMY);
-		}
-		
-		return getEnemy();
-	}
-		
+
 	@Override
 	public CharSprite sprite() {
 		if(look.length > 0) {

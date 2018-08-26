@@ -37,7 +37,7 @@ public class SpiderEgg extends Mob {
 	}
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		super.act();
 
 		Mob newSpider = MobSpawner.spawnRandomMob(Dungeon.level, getPos());

@@ -44,7 +44,7 @@ public class CagedKobold extends ImmortalNPC {
 	}
 
 	@Override
-	protected boolean act() {
+    public boolean act() {
 
 		throwItem();
 

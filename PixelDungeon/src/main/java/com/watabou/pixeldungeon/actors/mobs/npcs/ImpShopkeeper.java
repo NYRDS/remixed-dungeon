@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
@@ -36,7 +36,7 @@ public class ImpShopkeeper extends Shopkeeper {
 	private boolean seenBefore = false;
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 
 		if (!seenBefore && Dungeon.visible[getPos()]) {
 			say( Utils.format( Game.getVar(R.string.ImpShopkeeper_Greetings) ) );

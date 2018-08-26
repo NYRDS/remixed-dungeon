@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -50,7 +50,7 @@ public class Imp extends NPC {
 	private boolean seenBefore = false;
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		
 		if (!Quest.given && Dungeon.visible[getPos()]) {
 			if (!seenBefore) {

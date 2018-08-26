@@ -170,7 +170,7 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		if (getState() instanceof Fleeing) {
 			cooldown--;
 			if (cooldown < 0) {

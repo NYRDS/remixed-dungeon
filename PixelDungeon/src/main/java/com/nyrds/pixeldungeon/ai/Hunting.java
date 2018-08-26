@@ -12,11 +12,12 @@ public class Hunting extends MobAi implements AiState {
     public Hunting() { }
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
         me.enemySeen = me.isEnemyInFov();
 
         if (me.enemySeen && me.canAttack(me.getEnemy())) {
-            return me.doAttack(me.getEnemy());
+            me.doAttack(me.getEnemy());
+            return;
         } else {
             if (me.enemySeen) {
                 me.target = me.getEnemy().getPos();
@@ -29,7 +30,6 @@ public class Hunting extends MobAi implements AiState {
                 me.setState(getStateByClass(Wandering.class));
             }
         }
-        return true;
     }
 
     @Override

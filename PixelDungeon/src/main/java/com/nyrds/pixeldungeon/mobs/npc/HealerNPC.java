@@ -22,7 +22,7 @@ public class HealerNPC extends ImmortalNPC {
 	}
 
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		Hero hero = Dungeon.hero;
 		if (Dungeon.level.distanceL2(hero.getPos(), getPos()) < 4) {
 			if(Random.Int(20) == 0) {

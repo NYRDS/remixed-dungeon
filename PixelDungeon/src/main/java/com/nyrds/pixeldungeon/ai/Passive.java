@@ -11,10 +11,9 @@ public class Passive extends MobAi implements AiState {
     public Passive(){}
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
         me.enemySeen = false;
         me.spend(Actor.TICK);
-        return true;
     }
 
     @Override

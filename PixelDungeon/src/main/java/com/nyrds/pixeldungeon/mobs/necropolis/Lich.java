@@ -213,7 +213,7 @@ public class Lich extends Boss {
     //***
 
     @Override
-    protected boolean act() {
+    public boolean act() {
         timeToSkull--;
         if (timeToSkull < 0){
             timeToSkull = SKULL_DELAY;
