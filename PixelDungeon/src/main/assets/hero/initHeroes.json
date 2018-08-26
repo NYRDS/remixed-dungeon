@@ -48,6 +48,14 @@
       {
         "kind": "Spear",
         "identified": true
+      },
+      {
+        "kind": "WoodenBow",
+        "identified": true
+      },
+      {
+        "kind": "Quarterstaff",
+        "identified": true
       }
     ],
     "str": 10000,
