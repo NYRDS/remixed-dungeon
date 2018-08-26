@@ -8,6 +8,10 @@
       {
         "kind": "Gold",
         "quantity": 100000
+      },
+      {
+        "kind": "Glaive",
+        "identified": true
       }
     ],
     "str": 10000,
