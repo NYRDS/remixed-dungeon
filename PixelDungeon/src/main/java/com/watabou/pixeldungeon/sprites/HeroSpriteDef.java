@@ -200,7 +200,13 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 			if (weapon != null) {
 				attack = weapon_anims.get(weapon.getAnimationClass());
-				zap    = weapon_anims.get(weapon.getAnimationClass()+"_zap");
+
+				String zapAnim = weapon.getAnimationClass()+"_zap";
+
+				if(weapon_anims.containsKey(zapAnim)) {
+                    zap = weapon_anims.get(zapAnim);
+                }
+
 			} else {
 				attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
 				zap    = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
