@@ -12,6 +12,22 @@
       {
         "kind": "Glaive",
         "identified": true
+      },
+      {
+        "kind": "Longsword",
+        "identified": true
+      },
+      {
+        "kind": "Halberd",
+        "identified": true
+      },
+      {
+        "kind": "Mace",
+        "identified": true
+      },
+      {
+        "kind": "Sword",
+        "identified": true
       }
     ],
     "str": 10000,
