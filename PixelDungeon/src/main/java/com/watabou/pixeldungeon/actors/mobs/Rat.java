@@ -30,7 +30,7 @@ import com.watabou.utils.Random;
 public class Rat extends Mob {
 
 	public Rat() {
-		hp(ht(8));
+		hp(ht(80000));
 		defenseSkill = 3;
 
 		maxLvl = 7;
