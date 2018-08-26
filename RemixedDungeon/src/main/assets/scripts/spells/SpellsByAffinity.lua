@@ -8,7 +8,7 @@
 local RPD = require "scripts/lib/commonClasses"
 
 local spells = {}
-spells["Necromancy"] = {"DarkSacrifice","RaiseDead","Exhumation"}
+spells["Necromancy"] = {"DarkSacrifice","RaiseDead","Exhumation","Possess"}
 --spells["Common"] = {"Bless"}
 
 local module = {}

@@ -73,7 +73,7 @@ public class ArmoredStatue extends Mob {
 	}
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		if (!isPet() && Dungeon.visible[getPos()]) {
 			Journal.add( Journal.Feature.STATUE.desc() );
 		}

@@ -160,11 +160,17 @@ public class Hero extends Char implements PetOwner {
 	private int attackSkill = 10;
 	private int defenseSkill = 5;
 
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
 	private boolean ready = false;
 	public HeroAction curAction = null;
 	public HeroAction lastAction = null;
+=======
+	private boolean    ready      = false;
+	public  HeroAction lastAction = null;
+>>>>>>> Posses spell wip:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
 
 	private Char enemy;
+	private Char controlTarget = this;
 
 	public Armor.Glyph killerGlyph = null;
 
@@ -541,6 +547,10 @@ public class Hero extends Char implements PetOwner {
 		checkVisibleMobs();
 		AttackIndicator.updateState();
 
+		if(controlTarget!=this) {
+			curAction = null;
+		}
+
 		if (curAction == null) {
 			if (restoreHealth) {
 				if (isStarving() || hp() >= ht() || Dungeon.level.isSafe()) {
@@ -642,7 +652,9 @@ public class Hero extends Char implements PetOwner {
 	public void resume() {
 		curAction = lastAction;
 		lastAction = null;
-		act();
+
+		controlTarget.curAction = curAction;
+		controlTarget.act();
 	}
 
 	private boolean actMove(HeroAction.Move action) {
@@ -1350,7 +1362,8 @@ public class Hero extends Char implements PetOwner {
 
 		}
 
-		return act();
+		controlTarget.curAction = curAction;
+		return controlTarget.act();
 	}
 
 	public void earnExp(int exp) {
@@ -1877,6 +1890,9 @@ public class Hero extends Char implements PetOwner {
 		Badges.validateFoodEaten();
 	}
 
+	public void setControlTarget(Char controlTarget) {
+		this.controlTarget = controlTarget;
+	}
 
 	public interface Doom {
 		void onDeath();

@@ -52,7 +52,7 @@ public class Nightmare extends Mob {
     public int dr() { return 10; }
 
     @Override
-    protected boolean act(){
+    public boolean act(){
         super.act();
 
         setState(new Hunting());

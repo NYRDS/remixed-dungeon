@@ -5,15 +5,18 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class Horrified extends MobAi implements AiState{
 
     @Override
-    public boolean act(Mob me) {
-        if(me.hasBuff(Terror.class)) {
-            me.setState(MobAi.getStateByClass(Wandering.class));
-            return true;
+    public void act(Mob me) {
+
+        if(! me.hasBuff(Terror.class)) {
+            me.getSprite().showStatus(CharSprite.NEGATIVE, Mob.TXT_RAGE);
+            me.setState(MobAi.getStateByClass(Hunting.class));
+            return;
         }
 
         me.enemySeen = me.isEnemyInFov();
@@ -23,14 +26,12 @@ public class Horrified extends MobAi implements AiState{
 
         if(!me.doStepFrom(me.target)) {
             me.spend(Actor.TICK);
-
         }
-        return true;
     }
 
     @Override
     public void gotDamage(Mob me, Object src, int dmg) {
-        seekRevenge(me, src);
+        Terror.recover(me);
     }
 
     @Override

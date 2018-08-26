@@ -13,7 +13,7 @@ public class Fleeing extends MobAi implements AiState {
     public Fleeing(){}
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
             me.target = me.getEnemy().getPos();
@@ -22,8 +22,6 @@ public class Fleeing extends MobAi implements AiState {
         if(!me.doStepFrom(me.target)) {
             me.spend(Actor.TICK);
         }
-
-        return true;
     }
 
     @Override

@@ -15,7 +15,7 @@ public class Sleeping extends MobAi implements AiState {
     public Sleeping(){}
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
 
         Char enemy = chooseEnemy(me);
         me.setEnemy(enemy);
@@ -42,7 +42,6 @@ public class Sleeping extends MobAi implements AiState {
             me.spend(Actor.TICK);
 
         }
-        return true;
     }
 
     @Override

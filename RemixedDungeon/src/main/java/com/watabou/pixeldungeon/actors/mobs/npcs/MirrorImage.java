@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 =======
 import android.support.annotation.NonNull;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 >>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
@@ -31,10 +32,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-import com.watabou.utils.Random;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -64,8 +63,12 @@ public class MirrorImage extends Mob {
 	private int                damage;
 	@Packable
 	private String[] look = new String[0];
+<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
 	@Packable
 	private String deathEffect;
+=======
+
+>>>>>>> Posses spell wip:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
 
 	@Override
 	public int attackSkill( Char target ) {
@@ -86,23 +89,7 @@ public class MirrorImage extends Mob {
 		
 		return dmg;
 	}
-	
-	protected Char chooseEnemy() {
-		
-		if (getEnemy() == DUMMY || !getEnemy().isAlive()) {
-			HashSet<Mob> enemies = new HashSet<>();
-			for (Mob mob:Dungeon.level.mobs) {
-				if (!mob.friendly(Dungeon.hero) && Dungeon.level.fieldOfView[mob.getPos()]) {
-					enemies.add( mob );
-				}
-			}
-			
-			setEnemy(enemies.size() > 0 ? Random.element( enemies ) : DUMMY);
-		}
-		
-		return getEnemy();
-	}
-		
+
 	@Override
 	public CharSprite sprite() {
 		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {

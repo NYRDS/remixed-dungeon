@@ -71,7 +71,7 @@ public class Spinner extends Mob {
 	}
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		boolean result = super.act();
 		
 		if ((getState() instanceof Fleeing) && !hasBuff(Terror.class) && enemySeen && !getEnemy().hasBuff(Poison.class)) {

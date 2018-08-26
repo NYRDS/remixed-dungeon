@@ -36,7 +36,7 @@ public class ImpShopkeeper extends Shopkeeper {
 	private boolean seenBefore = false;
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 
 		if (!seenBefore && Dungeon.visible[getPos()]) {
 			say( Utils.format( Game.getVar(R.string.ImpShopkeeper_Greetings) ) );

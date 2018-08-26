@@ -1,38 +1,38 @@
 package com.nyrds.pixeldungeon.ai;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroAction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 public class ControlledAi extends MobAi implements AiState {
 
-    private HeroAction curAction;
-
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
 
+        if(!me.isAlive()) {
+            Dungeon.hero.setControlTarget(Dungeon.hero);
+        }
 
-        if (curAction instanceof HeroAction.Move) {
-            me.doStepTo(curAction.dst);
-        } else if (curAction instanceof HeroAction.Interact) {
+        if (me.curAction instanceof HeroAction.Move) {
+            if(me.getPos() != me.curAction.dst) {
+                me.doStepTo(me.curAction.dst);
+                return;
+            }
+
+        } else if (me.curAction instanceof HeroAction.Interact) {
 
            // return actInteract((HeroAction.Interact) curAction);
 
-        } else if (curAction instanceof HeroAction.Attack) {
+        } else if (me.curAction instanceof HeroAction.Attack) {
 
            // return actAttack((HeroAction.Attack) curAction);
         }
 
-
-        return true;
-
+        me.spend(1);
+        me.curAction = null;
     }
 
     @Override
     public void gotDamage(Mob me, Object src, int dmg) {
     }
-
-    public void setAction(HeroAction action) {
-        this.curAction = action;
-    }
-
 }

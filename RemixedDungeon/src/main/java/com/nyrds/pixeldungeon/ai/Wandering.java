@@ -13,7 +13,7 @@ public class Wandering extends MobAi implements AiState {
     public Wandering(){ }
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
 
         Char enemy = chooseEnemy(me);
         me.setEnemy(enemy);
@@ -31,7 +31,6 @@ public class Wandering extends MobAi implements AiState {
                 me.spend(Actor.TICK);
             }
         }
-        return true;
     }
 
     @Override

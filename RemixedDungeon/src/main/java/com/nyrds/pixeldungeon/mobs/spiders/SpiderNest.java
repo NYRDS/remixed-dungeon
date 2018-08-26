@@ -38,7 +38,7 @@ public class SpiderNest extends Mob {
 	}
 	
 	@Override
-	protected boolean act(){
+    public boolean act(){
 		super.act();
 
 <<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderNest.java

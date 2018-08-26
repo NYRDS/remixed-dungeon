@@ -37,7 +37,7 @@ public class SpiritOfPain extends Mob {
     }
 
     @Override
-    protected boolean act(){
+    public boolean act(){
         super.act();
         this.damage(6, this);
         return true;

@@ -23,6 +23,7 @@ public abstract class MobAi implements AiState {
         registerAiState(ThiefFleeing.class);
         registerAiState(Horrified.class);
         registerAiState(RunningAmok.class);
+        registerAiState(ControlledAi.class);
     }
 
     @Override
@@ -110,15 +111,16 @@ public abstract class MobAi implements AiState {
     }
 
     public static AiState getStateByTag(String stateTag) {
-        AiState aiState = aiStateInstances.get(stateTag);
+        String tag = stateTag.toUpperCase(Locale.ROOT);
+        AiState aiState = aiStateInstances.get(tag);
 
         if (aiState != null) {
             return aiState;
         }
 
-        aiState = new CustomMobAi(stateTag);
+        aiState = new CustomMobAi(tag);
 
-        aiStateInstances.put(stateTag, aiState);
+        aiStateInstances.put(tag, aiState);
 
         return aiState;
     }

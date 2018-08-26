@@ -59,7 +59,7 @@ public class AzuterronNPC extends NPC {
 	}
 
 	@Override
-	protected boolean act() {
+    public boolean act() {
 
 		throwItem();
 

@@ -9,11 +9,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class RunningAmok extends MobAi implements AiState {
 
     @Override
-    public boolean act(Mob me) {
+    public void act(Mob me) {
 
         if(!me.hasBuff(Amok.class)) {
             me.setState(MobAi.getStateByClass(Wandering.class));
-            return true;
         }
 
         me.setEnemy(chooseNearestChar(me));
@@ -31,7 +30,6 @@ public class RunningAmok extends MobAi implements AiState {
         } else {
             me.doStepTo(me.target);
         }
-        return true;
     }
 
     @Override

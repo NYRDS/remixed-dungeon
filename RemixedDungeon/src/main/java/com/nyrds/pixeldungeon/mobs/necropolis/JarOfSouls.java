@@ -34,7 +34,7 @@ public class JarOfSouls extends UndeadMob {
 	}
 	
 	@Override
-	protected boolean act(){
+    public boolean act(){
 		super.act();
 		if (enemySeen){
 			spawnUndead();
