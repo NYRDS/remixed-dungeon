@@ -32,6 +32,14 @@
       {
         "kind": "ShortSword",
         "identified": true
+      },
+      {
+        "kind": "ShortSword",
+        "identified": true
+      },
+      {
+        "kind": "ShortSword",
+        "identified": true
       }
     ],
     "str": 10000,
