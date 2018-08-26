@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import java.util.HashSet;
@@ -45,15 +44,21 @@ public class MirrorImage extends NPC {
 
 	public MirrorImage(Hero hero) {
 		this();
+
+		makePet(this, hero);
+
 		attack = hero.attackSkill( hero );
 		damage = hero.damageRoll();
 
-		lookDesc = hero.getHeroSprite().getLayersDesc();
+		look = hero.getHeroSprite().getLayersDesc();
 	}
 
+	@Packable
 	private int                attack;
+	@Packable
 	private int                damage;
-	private String[]           lookDesc = new String[0];
+	@Packable
+	private String[] look = new String[0];
 
 	private static final String ATTACK	= "attack";
 	private static final String DAMAGE	= "damage";
@@ -114,14 +119,14 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		if(lookDesc.length > 0) {
-			return new HeroSpriteDef(lookDesc);
+		if(look.length > 0) {
+			return new HeroSpriteDef(look);
 		} else { // handle old saves
 			if(Dungeon.hero != null) {
-				lookDesc = Dungeon.hero.getHeroSprite().getLayersDesc();
+				look = Dungeon.hero.getHeroSprite().getLayersDesc();
 			} else { // dirty hack here
 				Hero hero = new Hero();
-				lookDesc = new HeroSpriteDef(hero).getLayersDesc();
+				look = new HeroSpriteDef(hero).getLayersDesc();
 			}
 
 			return sprite();

@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.scenes.RankingsScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
 
@@ -88,7 +89,7 @@ public class WndGame extends WndMenuCommon {
                     .getVar(R.string.WndGame_Ranking)) {
 				@Override
 				protected void onClick() {
-					InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
+					Game.switchScene( RankingsScene.class );
 				}
 			} );
 		}
