@@ -40,6 +40,14 @@
       {
         "kind": "BattleAxe",
         "identified": true
+      },
+      {
+        "kind": "Quarterstaff",
+        "identified": true
+      },
+      {
+        "kind": "Spear",
+        "identified": true
       }
     ],
     "str": 10000,
