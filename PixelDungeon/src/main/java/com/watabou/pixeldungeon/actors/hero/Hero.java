@@ -543,6 +543,7 @@ public class Hero extends Char implements PetOwner {
 		}
 
 		if (curAction == null) {
+
 			if (restoreHealth) {
 				if (isStarving() || hp() >= ht() || Dungeon.level.isSafe()) {
 					restoreHealth = false;
@@ -553,7 +554,7 @@ public class Hero extends Char implements PetOwner {
 				}
 			}
 
-			if (PixelDungeon.realtime()) {
+			if (PixelDungeon.realtime() || (controlTarget!= this && controlTarget.curAction!=null) ) {
 				if (!ready) {
 					ready();
 				}
@@ -1855,6 +1856,10 @@ public class Hero extends Char implements PetOwner {
 
 	public void setControlTarget(Char controlTarget) {
 		this.controlTarget = controlTarget;
+	}
+
+	public Char getControlTarget() {
+		return controlTarget;
 	}
 
 	public interface Doom {

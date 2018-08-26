@@ -748,10 +748,10 @@ public abstract class Char extends Actor implements Presser{
 		int oldPos = getPos();
 		if (level().cellValid(target) && getCloser(target)) {
 
-			spend(1 / speed());
 			moveSprite(oldPos, getPos());
 			return true;
 		}
+		spend(1 / speed());
 		return false;
 	}
 
@@ -759,10 +759,10 @@ public abstract class Char extends Actor implements Presser{
 		int oldPos = getPos();
 		if (level().cellValid(target) && getFurther(target)) {
 
-			spend(1 / speed());
 			moveSprite(oldPos, getPos());
 			return true;
 		}
+		spend(1 / speed());
 		return false;
 	}
 
