@@ -207,6 +207,12 @@ public class StatusPane extends Component {
         float health = (float) hero.hp() / hero.ht();
         float sPoints = (float) hero.getSoulPoints() / hero.getSoulPointsMax();
 
+        if(avatar!=hero.getHeroSprite().avatar()) {
+            remove(avatar);
+            avatar = hero.getHeroSprite().avatar();
+            add(avatar);
+        }
+
         if (health == 0) {
             avatar.tint(0x000000, 0.6f);
             blood.on = false;

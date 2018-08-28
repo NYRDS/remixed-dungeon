@@ -212,7 +212,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 				zap    = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
 			}
 		}
-		avatar();
+		avatar = null;
 	}
 
 	public String[] getLayersDesc() {
