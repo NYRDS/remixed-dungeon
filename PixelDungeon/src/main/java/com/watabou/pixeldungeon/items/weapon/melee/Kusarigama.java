@@ -18,6 +18,10 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 
 public class Kusarigama extends SpecialWeapon {
+        {
+		animation_class = SWORD_ATTACK;
+	}
+
 
 	private static final String AC_PULL = "Kusarigama_Pull";
 	private static final float TIME_TO_IMPALE = 1.5f;

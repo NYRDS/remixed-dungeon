@@ -19,7 +19,7 @@
     "bow"       : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
     "bow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
     "staff"     : { "fps" : 8, "looped" : false,    "frames" :  [19, 20, 0]},
-    "heavy"     : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
+    "heavy"     : { "fps" : 8, "looped" : false,    "frames" : [19, 20, 0]},
     "wand"      : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
     "wand_zap"  : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]}
   }

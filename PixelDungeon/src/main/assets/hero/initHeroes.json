@@ -56,6 +56,15 @@
       {
         "kind": "Quarterstaff",
         "identified": true
+      },
+      {
+        "kind": "Kusarigama",
+        "identified": true
+      },
+      {
+        "kind": "CommonArrow",
+        "quantity": 999,
+        "identified": true
       }
     ],
     "str": 10000,
