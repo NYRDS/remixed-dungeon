@@ -67,6 +67,7 @@ public class Kusarigama extends SpecialWeapon {
 	};
 
 	private static void drawChain(int tgt) {
+		getCurUser().getSprite().zap(tgt);
 		getCurUser().getSprite()
 				.getParent()
 				.add(new KusarigamaChain(getCurUser().getSprite().center(),
