@@ -171,16 +171,16 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_"+weaponAnimationClassRight+"_right.png");
 
 
-		layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "left"));
-		layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "right"));
+		//layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "left"));
+		//layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "right"));
 
+		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.weapon,"left"));
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon,"right"));
 
 
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
-		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 	}
 
 	private void createStatueSprite(Armor armor) {
@@ -244,6 +244,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
+
 		if(item!=null) {
 			return "hero/armor/hands/" + armor.getVisualName() + "_" + item.getAnimationClass() + "_" + hand + ".png";
 		} else {
