@@ -637,6 +637,7 @@ public class Hero extends Char implements PetOwner {
 		if (curAction != null && curAction.dst != getPos()) {
 			lastAction = curAction;
 		}
+
 		curAction = null;
 	}
 
@@ -1103,6 +1104,8 @@ public class Hero extends Char implements PetOwner {
 		restoreHealth = false;
 		super.damage(dmg, src);
 
+		controlTarget=this;
+
 		checkIfFurious();
 		interrupt();
 
@@ -1302,6 +1305,8 @@ public class Hero extends Char implements PetOwner {
 		Char ch;
 		Heap heap;
 
+		level.updateFieldOfView(controlTarget);
+
 		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
 			curAction = new CharAction.Cook(cell);
@@ -1350,7 +1355,7 @@ public class Hero extends Char implements PetOwner {
 		}
 
 		controlTarget.curAction = curAction;
-		return controlTarget.act();
+		return act();
 	}
 
 	public void earnExp(int exp) {

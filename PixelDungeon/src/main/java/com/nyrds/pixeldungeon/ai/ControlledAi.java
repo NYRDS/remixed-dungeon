@@ -34,6 +34,7 @@ public class ControlledAi extends MobAi implements AiState {
 
             if (me.canAttack(attack.target)) {
                 me.doAttack(attack.target);
+                me.curAction = null;
                 return;
             } else {
                 me.target = me.getEnemy().getPos();

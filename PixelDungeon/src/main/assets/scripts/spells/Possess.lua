@@ -24,11 +24,12 @@ return spell.init{
         }
     end,
     castOnCell = function(self, spell, chr, cell)
-        local sacrifice = RPD.Actor:findChar(cell)
+        local target = RPD.Actor:findChar(cell)
 
-        if sacrifice ~= nil then
-            sacrifice:setState(RPD.MobAi:getStateByTag("ControlledAi"))
-            RPD.Dungeon.hero:setControlTarget(sacrifice)
+        if target ~= nil then
+            RPD.Mob:makePet(target, chr)
+            target:setState(RPD.MobAi:getStateByTag("ControlledAi"))
+            RPD.Dungeon.hero:setControlTarget(target)
             RPD.glog("target ok")
             return true
         end
