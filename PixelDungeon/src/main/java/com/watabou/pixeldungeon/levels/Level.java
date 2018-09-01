@@ -1267,6 +1267,8 @@ public abstract class Level implements Bundlable {
 
 	public void updateFieldOfView(Char c) {
 
+		GLog.i("fov: %s",c.toString());
+
 		if (noFogOfWar()) {
 			Arrays.fill(fieldOfView, true);
 			return;

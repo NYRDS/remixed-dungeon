@@ -527,7 +527,9 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public boolean act() {
-		super.act();
+		if(controlTarget==this) {
+			super.act();
+		}
 
 		if (paralysed) {
 			curAction = null;
@@ -1308,7 +1310,7 @@ public class Hero extends Char implements PetOwner {
 
 			Mob mob = (Mob) ch;
 
-			if (mob.friendly(this)) {
+			if (mob.friendly(controlTarget)) {
 				curAction = new HeroAction.Interact(mob);
 			} else {
 				curAction = new HeroAction.Attack(ch);
