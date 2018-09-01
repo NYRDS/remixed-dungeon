@@ -314,6 +314,8 @@ public abstract class Mob extends Char {
 
 	public boolean doAttack(Char enemy) {
 
+		setEnemy(enemy);
+
 		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
 			getSprite().attack(enemy.getPos());
 		} else {
