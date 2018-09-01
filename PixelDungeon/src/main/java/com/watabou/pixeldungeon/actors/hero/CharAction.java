@@ -20,66 +20,66 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
-public class HeroAction {
+public class CharAction {
 	
 	public int dst;
 	
-	public static class Move extends HeroAction {
+	public static class Move extends CharAction {
 		public Move( int dst ) {
 			this.dst = dst;
 		}
 	}
 	
-	public static class PickUp extends HeroAction {
+	public static class PickUp extends CharAction {
 		public PickUp( int dst ) {
 			this.dst = dst;
 		}
 	}
 	
-	public static class OpenChest extends HeroAction {
+	public static class OpenChest extends CharAction {
 		public OpenChest( int dst ) {
 			this.dst = dst;
 		}
 	}
 	
-	public static class Buy extends HeroAction {
+	public static class Buy extends CharAction {
 		public Buy( int dst ) {
 			this.dst = dst;
 		}
 	}
 	
-	public static class Interact extends HeroAction {
+	public static class Interact extends CharAction {
 		public Mob npc;
 		public Interact( Mob npc ) {
 			this.npc = npc;
 		}
 	}
 	
-	public static class Unlock extends HeroAction {
+	public static class Unlock extends CharAction {
 		public Unlock( int door ) {
 			this.dst = door;
 		}
 	}
 	
-	public static class Descend extends HeroAction {
+	public static class Descend extends CharAction {
 		public Descend( int stairs ) {
 			this.dst = stairs;
 		}
 	}
 	
-	public static class Ascend extends HeroAction {
+	public static class Ascend extends CharAction {
 		public Ascend( int stairs ) {
 			this.dst = stairs;
 		}
 	}
 	
-	public static class Cook extends HeroAction {
+	public static class Cook extends CharAction {
 		public Cook( int pot ) {
 			this.dst = pot;
 		}
 	}
 	
-	public static class Attack extends HeroAction {
+	public static class Attack extends CharAction {
 		public Char target;
 		public Attack( Char target ) {
 			this.target = target;

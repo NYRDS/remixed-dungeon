@@ -158,7 +158,7 @@ public class Hero extends Char implements PetOwner {
 	private int defenseSkill = 5;
 
 	private boolean    ready      = false;
-	public  HeroAction lastAction = null;
+	public CharAction lastAction = null;
 
 	private Char enemy;
 	private Char controlTarget = this;
@@ -575,45 +575,45 @@ public class Hero extends Char implements PetOwner {
 
 			ready = false;
 
-			if (curAction instanceof HeroAction.Move) {
+			if (curAction instanceof CharAction.Move) {
 
-				return actMove((HeroAction.Move) curAction);
+				return actMove((CharAction.Move) curAction);
 
-			} else if (curAction instanceof HeroAction.Interact) {
+			} else if (curAction instanceof CharAction.Interact) {
 
-				return actInteract((HeroAction.Interact) curAction);
+				return actInteract((CharAction.Interact) curAction);
 
-			} else if (curAction instanceof HeroAction.Buy) {
+			} else if (curAction instanceof CharAction.Buy) {
 
-				return actBuy((HeroAction.Buy) curAction);
+				return actBuy((CharAction.Buy) curAction);
 
-			} else if (curAction instanceof HeroAction.PickUp) {
+			} else if (curAction instanceof CharAction.PickUp) {
 
-				return actPickUp((HeroAction.PickUp) curAction);
+				return actPickUp((CharAction.PickUp) curAction);
 
-			} else if (curAction instanceof HeroAction.OpenChest) {
+			} else if (curAction instanceof CharAction.OpenChest) {
 
-				return actOpenChest((HeroAction.OpenChest) curAction);
+				return actOpenChest((CharAction.OpenChest) curAction);
 
-			} else if (curAction instanceof HeroAction.Unlock) {
+			} else if (curAction instanceof CharAction.Unlock) {
 
-				return actUnlock((HeroAction.Unlock) curAction);
+				return actUnlock((CharAction.Unlock) curAction);
 
-			} else if (curAction instanceof HeroAction.Descend) {
+			} else if (curAction instanceof CharAction.Descend) {
 
-				return actDescend((HeroAction.Descend) curAction);
+				return actDescend((CharAction.Descend) curAction);
 
-			} else if (curAction instanceof HeroAction.Ascend) {
+			} else if (curAction instanceof CharAction.Ascend) {
 
-				return actAscend((HeroAction.Ascend) curAction);
+				return actAscend((CharAction.Ascend) curAction);
 
-			} else if (curAction instanceof HeroAction.Attack) {
+			} else if (curAction instanceof CharAction.Attack) {
 
-				return actAttack((HeroAction.Attack) curAction);
+				return actAttack((CharAction.Attack) curAction);
 
-			} else if (curAction instanceof HeroAction.Cook) {
+			} else if (curAction instanceof CharAction.Cook) {
 
-				return actCook((HeroAction.Cook) curAction);
+				return actCook((CharAction.Cook) curAction);
 
 			}
 		}
@@ -648,7 +648,7 @@ public class Hero extends Char implements PetOwner {
 		controlTarget.act();
 	}
 
-	private boolean actMove(HeroAction.Move action) {
+	private boolean actMove(CharAction.Move action) {
 		if (getCloser(action.dst)) {
 
 			return true;
@@ -663,7 +663,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actInteract(HeroAction.Interact action) {
+	private boolean actInteract(CharAction.Interact action) {
 
 		Mob npc = action.npc;
 
@@ -672,7 +672,7 @@ public class Hero extends Char implements PetOwner {
 			ready();
 			getSprite().turnTo(getPos(), npc.getPos());
 			if (!npc.interact(this)) {
-				actAttack(new HeroAction.Attack(npc));
+				actAttack(new CharAction.Attack(npc));
 			}
 			return false;
 
@@ -687,7 +687,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actBuy(HeroAction.Buy action) {
+	private boolean actBuy(CharAction.Buy action) {
 		int dst = action.dst;
 		if (getPos() == dst || Dungeon.level.adjacent(getPos(), dst)) {
 
@@ -710,7 +710,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actCook(HeroAction.Cook action) {
+	private boolean actCook(CharAction.Cook action) {
 		int dst = action.dst;
 		if (Dungeon.visible[dst]) {
 
@@ -728,7 +728,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actPickUp(HeroAction.PickUp action) {
+	private boolean actPickUp(CharAction.PickUp action) {
 		int dst = action.dst;
 		if (getPos() == dst) {
 
@@ -783,7 +783,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actOpenChest(HeroAction.OpenChest action) {
+	private boolean actOpenChest(CharAction.OpenChest action) {
 		int dst = action.dst;
 		if (Dungeon.level.adjacent(getPos(), dst) || getPos() == dst) {
 
@@ -834,7 +834,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actUnlock(HeroAction.Unlock action) {
+	private boolean actUnlock(CharAction.Unlock action) {
 		int doorCell = action.dst;
 
 		if (Dungeon.level.adjacent(getPos(), doorCell)) {
@@ -866,7 +866,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actDescend(HeroAction.Descend action) {
+	private boolean actDescend(CharAction.Descend action) {
 
 		refreshPets();
 
@@ -896,7 +896,7 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	private boolean actAscend(HeroAction.Ascend action) {
+	private boolean actAscend(CharAction.Ascend action) {
 		refreshPets();
 
 		int stairs = action.dst;
@@ -988,7 +988,7 @@ public class Hero extends Char implements PetOwner {
 
 	}
 
-	private boolean actAttack(HeroAction.Attack action) {
+	private boolean actAttack(CharAction.Attack action) {
 
 		enemy = action.target;
 
@@ -1304,47 +1304,47 @@ public class Hero extends Char implements PetOwner {
 
 		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
-			curAction = new HeroAction.Cook(cell);
+			curAction = new CharAction.Cook(cell);
 
 		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
 
 			Mob mob = (Mob) ch;
 
 			if (mob.friendly(controlTarget)) {
-				curAction = new HeroAction.Interact(mob);
+				curAction = new CharAction.Interact(mob);
 			} else {
-				curAction = new HeroAction.Attack(ch);
+				curAction = new CharAction.Attack(ch);
 			}
 
 		} else if ((heap = level.getHeap(cell)) != null) {
 
 			switch (heap.type) {
 				case HEAP:
-					curAction = new HeroAction.PickUp(cell);
+					curAction = new CharAction.PickUp(cell);
 					break;
 				case FOR_SALE:
-					curAction = heap.size() == 1 && heap.peek().price() > 0 ? new HeroAction.Buy(cell)
-							: new HeroAction.PickUp(cell);
+					curAction = heap.size() == 1 && heap.peek().price() > 0 ? new CharAction.Buy(cell)
+							: new CharAction.PickUp(cell);
 					break;
 				default:
-					curAction = new HeroAction.OpenChest(cell);
+					curAction = new CharAction.OpenChest(cell);
 			}
 
 		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
 
-			curAction = new HeroAction.Unlock(cell);
+			curAction = new CharAction.Unlock(cell);
 
 		} else if (level.isExit(cell)) {
 
-			curAction = new HeroAction.Descend(cell);
+			curAction = new CharAction.Descend(cell);
 
 		} else if (cell == level.entrance) {
 
-			curAction = new HeroAction.Ascend(cell);
+			curAction = new CharAction.Ascend(cell);
 
 		} else {
 
-			curAction = new HeroAction.Move(cell);
+			curAction = new CharAction.Move(cell);
 			lastAction = null;
 
 		}
@@ -1595,14 +1595,14 @@ public class Hero extends Char implements PetOwner {
 	@Override
 	public void onOperateComplete() {
 
-		if (curAction instanceof HeroAction.Unlock) {
+		if (curAction instanceof CharAction.Unlock) {
 
 			if (theKey != null) {
 				theKey.detach(belongings.backpack);
 				theKey = null;
 			}
 
-			int doorCell = ((HeroAction.Unlock) curAction).dst;
+			int doorCell = ((CharAction.Unlock) curAction).dst;
 			int door = Dungeon.level.map[doorCell];
 
 			switch (door) {
@@ -1617,14 +1617,14 @@ public class Hero extends Char implements PetOwner {
 			}
 			GameScene.updateMap(doorCell);
 
-		} else if (curAction instanceof HeroAction.OpenChest) {
+		} else if (curAction instanceof CharAction.OpenChest) {
 
 			if (theKey != null) {
 				theKey.detach(belongings.backpack);
 				theKey = null;
 			}
 
-			Heap heap = Dungeon.level.getHeap(((HeroAction.OpenChest) curAction).dst);
+			Heap heap = Dungeon.level.getHeap(((CharAction.OpenChest) curAction).dst);
 			if (heap != null) {
 				if (heap.type == Type.SKELETON) {
 					Sample.INSTANCE.play(Assets.SND_BONES);
