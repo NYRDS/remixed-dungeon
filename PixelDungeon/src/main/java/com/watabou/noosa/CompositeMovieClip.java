@@ -45,17 +45,6 @@ public class CompositeMovieClip extends MovieClip {
 	}
 
 
-	protected Texture getLayerTexture(String id) {
-		if(mLayers!=null) {
-			for (LayerDesc layer : mLayers) {
-				if (layer.id.equals(id)) {
-					return layer.texture;
-				}
-			}
-		}
-		return null;
-	}
-
 	public Image snapshot(RectF frame) {
 		CompositeTextureImage img = new CompositeTextureImage(texture);
 		img.clearLayers();

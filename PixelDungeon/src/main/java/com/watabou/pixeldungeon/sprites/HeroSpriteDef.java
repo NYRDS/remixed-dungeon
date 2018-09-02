@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
@@ -57,6 +58,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
 
+	private CustomClipEffect deathEffect;
 
 	private Animation fly;
 	private Map<String, Animation> weapon_anims;
@@ -73,10 +75,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 		LAYER_RIGHT_ARMOR,
 		LAYER_LEFT_HAND,
 		LAYER_RIGHT_HAND,
+		LAYER_ACCESSORY,
 		LAYER_LEFT_ITEM,
 		LAYER_RIGHT_ITEM,
-		LAYER_DEATH,
-		LAYER_ACCESSORY
 	};
 
 	private Map<String,String> layersDesc = new HashMap<>();
@@ -181,14 +182,15 @@ public class HeroSpriteDef extends MobSpriteDef {
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
 		}
 
-		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
+		deathEffect = new CustomClipEffect("hero/death/"+deathDescriptor+".png", (int)width, (int)height);
 	}
 
 	private void createStatueSprite(Armor armor) {
 		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
 		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
 		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
-		layersDesc.put(LAYER_DEATH,       "hero/death/statue.png");
+
+		deathEffect = new CustomClipEffect("hero/death/statue.png", (int)width, (int)height);
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -321,6 +323,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	@Override
 	public void place(int p) {
 		super.place(p);
+
 		if(ch instanceof Hero) {
 			Camera.main.target = this;
 		}
@@ -380,6 +383,21 @@ public class HeroSpriteDef extends MobSpriteDef {
 		return avatar;
 	}
 
+
+	@Override
+	public void die() {
+
+		deathEffect.place(ch.getPos());
+		getParent().add(deathEffect);
+		deathEffect.setVisible(true);
+		deathEffect.playAnim(die, new Callback() {
+			@Override
+			public void call() {
+				deathEffect.killAndErase();
+			}
+		});
+		killAndErase();
+	}
 
 	@Override
 	public PointF worldCoords() {
