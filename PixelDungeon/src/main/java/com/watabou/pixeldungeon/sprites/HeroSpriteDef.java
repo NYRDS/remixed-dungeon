@@ -176,9 +176,10 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
-		layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.weapon,"left"));
-		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon,"right"));
-
+		if(accessory!=null && !accessory.isCoveringItems()) {
+			layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(hero.belongings.weapon, "left"));
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
+		}
 
 		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
 	}

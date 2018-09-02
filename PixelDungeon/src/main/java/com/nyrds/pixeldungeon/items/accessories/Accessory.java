@@ -7,6 +7,7 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
@@ -20,6 +21,8 @@ import java.util.Map;
 public class Accessory {
 
     protected boolean coverHair;
+    protected boolean coverItems;
+
     protected int image = 0;
 
     protected static final String imageFile = "items/accessories.png";
@@ -60,11 +63,21 @@ public class Accessory {
     }
 
     Accessory() {
-        coverHair = false;
+        coverHair  = false;
+        coverItems = false;
     }
 
     public boolean isCoveringHair() {
         return coverHair;
+    }
+
+    public boolean isCoveringItems() {
+        return coverItems;
+    }
+
+
+    public boolean usableBy(Hero hero) {
+        return true;
     }
 
     public static Accessory getByName(String name) {
