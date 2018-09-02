@@ -39,7 +39,7 @@ public class ControlledAi extends MobAi implements AiState {
             } else {
                 me.target = me.getEnemy().getPos();
                 if(me.doStepTo(me.target)) {
-                    Dungeon.observe();
+
                 } else {
                     me.curAction = null;
                 }
