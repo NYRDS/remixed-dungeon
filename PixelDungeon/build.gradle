@@ -74,7 +74,6 @@ dependencies {
     implementation 'org.luaj:luaj-jse:3.0.1'
 
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
-    implementation 'com.google.android.ads.consent:consent-library:1.0.6'
 
 
     //noinspection GradleDependency
@@ -88,10 +87,12 @@ dependencies {
     //noinspection GradleDependency
     googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
 
+
+    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
     googlePlayImplementation 'com.android.support:support-v4:27.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-ads:15.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-base:15.0.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.3'
     googlePlayImplementation "com.google.android.gms:play-services-games:15.0.1"
 
 
