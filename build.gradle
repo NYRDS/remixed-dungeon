@@ -21,6 +21,10 @@ allprojects {
             name 'Google'
         }
 
+        maven {
+            url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
+        }
+
 
         flatDir {
             dirs 'lib/aar'

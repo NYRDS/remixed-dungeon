@@ -75,7 +75,6 @@ dependencies {
 
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
-
     //noinspection GradleDependency
     googlePlayRetroImplementation 'com.android.support:support-v4:23'
     //noinspection GradleDependency
@@ -87,6 +86,8 @@ dependencies {
     //noinspection GradleDependency
     googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
 
+
+    googlePlayImplementation 'com.appbrain:appbrain-sdk:+@aar'
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
     googlePlayImplementation 'com.android.support:support-v4:27.0.1'
