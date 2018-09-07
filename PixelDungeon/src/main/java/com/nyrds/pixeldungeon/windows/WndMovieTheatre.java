@@ -5,6 +5,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -76,7 +77,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 		Game.softPaused = true;
 		Dungeon.save();
-		Ads.removeEasyModeBanner();
+		AdsUtils.removeTopBanner();
 		RewardVideo.showCinemaRewardVideo(this);
 	}
 

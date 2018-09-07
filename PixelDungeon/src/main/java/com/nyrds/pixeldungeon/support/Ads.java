@@ -1,21 +1,13 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.webkit.WebView;
 
-import com.appodeal.ads.Appodeal;
-import com.appodeal.ads.BannerView;
 import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -62,40 +54,11 @@ public class Ads {
         }
     }
 
-    private static int bannerIndex() {
-        int childs = Game.instance().getLayout().getChildCount();
-        for (int i = 0; i < childs; ++i) {
-            View view = Game.instance().getLayout().getChildAt(i);
-            if (view instanceof AdView || view instanceof WebView || view instanceof BannerView) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
     private static void displayGoogleEasyModeBanner() {
         if (isSmallScreen()) {
             initEasyModeIntersitial();
         } else {
-            Game.instance().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    if (bannerIndex() < 0) {
-
-                        AdView adView = new AdView(Game.instance());
-                        adView.setAdSize(AdSize.SMART_BANNER);
-                        adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
-                        adView.setBackgroundColor(Color.TRANSPARENT);
-                        adView.setAdListener(new AdmobBannerListener());
-
-                        Game.instance().getLayout().addView(adView, 0);
-                        adView.loadAd(makeAdRequest());
-
-
-                        Game.setNeedSceneRestart(true);
-                    }
-                }
-            });
+            AdsUtils.displayTopBanner();
         }
     }
 
@@ -104,27 +67,6 @@ public class Ads {
             displayGoogleEasyModeBanner();
         } else {
             displayOwnEasyModeBanner();
-        }
-    }
-
-    public static void removeEasyModeBanner() {
-        if (googleAdsUsable()) {
-            Game.instance().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    int index = bannerIndex();
-                    if (index >= 0) {
-
-                        View adview = Game.instance().getLayout().getChildAt(index);
-                        if (adview instanceof BannerView) {
-                            Appodeal.hide(Game.instance(), Appodeal.BANNER);
-                        }
-
-                        Game.instance().getLayout().removeViewAt(index);
-                    }
-                }
-
-            });
         }
     }
 
@@ -250,25 +192,4 @@ public class Ads {
     }
 
 
-    private static class AdmobBannerListener extends AdListener {
-
-        public void onAdFailedToLoad(int result) {
-
-            EventCollector.logEvent("banner", "admob_no_banner", Integer.toString(result));
-            Game.instance().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-
-                    removeEasyModeBanner();
-
-                    AppodealRewardVideo.init();
-                    Appodeal.cache(Game.instance(), Appodeal.BANNER);
-                    BannerView adView = Appodeal.getBannerView(Game.instance());
-                    Game.instance().getLayout().addView(adView, 0);
-
-                    Appodeal.show(Game.instance(), Appodeal.BANNER_VIEW);
-                }
-            });
-        }
-    }
 }

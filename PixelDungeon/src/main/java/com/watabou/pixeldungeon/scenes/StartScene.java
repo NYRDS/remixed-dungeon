@@ -21,6 +21,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -35,7 +36,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BannerSprites.Type;
@@ -332,7 +332,7 @@ public class StartScene extends PixelScene {
             @Override
             protected void onSelect(final int index) {
 
-                if(index<2 && Preferences.INSTANCE.getInt(Preferences.KEY_EU_CONSENT_LEVEL,-1)<0) {
+                if(index<2 && EuConsent.getConsentLevel()<EuConsent.NON_PERSONALIZED) {
                     Game.scene().add(new WndEuConsent() {
                         @Override
                         public void done() {
