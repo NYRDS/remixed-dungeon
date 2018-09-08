@@ -9,7 +9,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 
-class AdMobBannerProvider implements AdsUtils.IBannerProvider {
+class AdMobBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
     @Override
     public void displayBanner() {
@@ -21,7 +21,7 @@ class AdMobBannerProvider implements AdsUtils.IBannerProvider {
         adView.setAdListener(new AdmobBannerListener());
 
         Game.instance().getLayout().addView(adView, 0);
-        adView.loadAd(Ads.makeAdRequest());
+        adView.loadAd(AdMob.makeAdRequest());
 
 
         Game.setNeedSceneRestart(true);
@@ -31,7 +31,7 @@ class AdMobBannerProvider implements AdsUtils.IBannerProvider {
 
         public void onAdFailedToLoad(int result) {
             EventCollector.logEvent("banner", "admob_no_banner", Integer.toString(result));
-            AdsUtils.bannerFailed(AdMobBannerProvider.this);
+            AdsUtilsCommon.bannerFailed(AdMobBannerProvider.this);
         }
     }
 

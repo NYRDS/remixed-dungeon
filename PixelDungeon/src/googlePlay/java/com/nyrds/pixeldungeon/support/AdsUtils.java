@@ -13,10 +13,10 @@ import java.util.Map;
 
 public class AdsUtils {
 
-
-    private static Map<IBannerProvider, Integer> fails = new HashMap<>();
+    public static Map<AdsUtilsCommon.IBannerProvider, Integer> fails = new HashMap<>();
 
     static {
+        fails.put(new AAdsBannerProvider(),0);
         fails.put(new AppodealBannerProvider(),0);
         fails.put(new AdMobBannerProvider(),0);
     }
@@ -32,44 +32,6 @@ public class AdsUtils {
         return -1;
     }
 
-
-    static public void bannerFailed(IBannerProvider provider) {
-        if(fails.containsKey(provider)) {
-            fails.put(provider,fails.get(provider)+1);
-        }   else {
-            fails.put(provider,1);
-        }
-        tryNextBanner();
-    }
-
-    private static void tryNextBanner() {
-
-        removeTopBanner();
-        int minima = 3;
-
-        IBannerProvider chosenProvider = null;
-
-        for (IBannerProvider provider:fails.keySet()) {
-            if(fails.get(provider)<minima) {
-                minima = fails.get(provider);
-                chosenProvider = provider;
-            }
-        }
-
-        if(minima < 3 && chosenProvider!=null) {
-            final IBannerProvider finalChosenProvider = chosenProvider;
-            Game.instance().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    finalChosenProvider.displayBanner();
-                }
-            });
-        }
-    }
-
-    static void displayTopBanner() {
-        tryNextBanner();
-    }
 
     public static void removeTopBanner() {
         Game.instance().runOnUiThread(new Runnable() {
@@ -88,10 +50,5 @@ public class AdsUtils {
             }
 
         });
-    }
-
-
-    interface IBannerProvider {
-        void displayBanner();
     }
 }

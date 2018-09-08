@@ -23,7 +23,7 @@ public class GoogleRewardVideoAds {
 
 
 	public static void initCinemaRewardVideo() {
-		if (Ads.googleAdsUsable())
+		if (AdMob.googleAdsUsable())
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
@@ -32,7 +32,7 @@ public class GoogleRewardVideoAds {
 					mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
 
 					EventCollector.startTiming("google reward video");
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), Ads.makeAdRequest());
+					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
 				}
 			});
 	}
@@ -76,7 +76,7 @@ public class GoogleRewardVideoAds {
 				@Override
 				public void run() {
 					loaded = false;
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), Ads.makeAdRequest());
+					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
 				}
 			});
 		}

@@ -6,7 +6,7 @@ import com.appodeal.ads.BannerView;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
-class AppodealBannerProvider implements AdsUtils.IBannerProvider {
+class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
     @Override
     public void displayBanner() {
@@ -31,7 +31,7 @@ class AppodealBannerProvider implements AdsUtils.IBannerProvider {
         @Override
         public void onBannerFailedToLoad() {
             EventCollector.logEvent("banner", "appodeal_no_banner");
-            AdsUtils.bannerFailed(AppodealBannerProvider.this);
+            AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
         }
 
         @Override

@@ -32,7 +32,7 @@ android {
             signingConfig signingConfigs.release
         }
     }
-    buildToolsVersion '27.0.3'
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
@@ -47,6 +47,7 @@ android {
     flavorDimensions "minApi"
     productFlavors {
         googlePlayRetro {
+            buildToolsVersion '23.0.3'
             minSdkVersion 9
             compileSdkVersion 23
             targetSdkVersion 23
@@ -54,6 +55,7 @@ android {
 
         }
         googlePlay {
+            buildToolsVersion '27.0.3'
             targetSdkVersion 27
             minSdkVersion 14
             compileSdkVersion 27
@@ -65,7 +67,6 @@ android {
         }
 
     }
-    compileSdkVersion 26
 }
 
 dependencies {
@@ -74,6 +75,7 @@ dependencies {
     implementation 'org.luaj:luaj-jse:3.0.1'
 
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
+
 
     //noinspection GradleDependency
     googlePlayRetroImplementation 'com.android.support:support-v4:23'
@@ -90,7 +92,7 @@ dependencies {
     googlePlayImplementation 'com.appbrain:appbrain-sdk:+@aar'
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
-    googlePlayImplementation 'com.android.support:support-v4:27.0.1'
+    googlePlayImplementation 'com.android.support:support-v4:27.1.1'
     googlePlayImplementation 'com.google.android.gms:play-services-ads:15.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-base:15.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.3'
