@@ -2,10 +2,6 @@
 buildscript {
     repositories {
         jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
         google()
     }
     dependencies {
@@ -16,9 +12,10 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        google()
+
         maven {
-            url 'https://maven.google.com/'
-            name 'Google'
+            url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
         }
 
 

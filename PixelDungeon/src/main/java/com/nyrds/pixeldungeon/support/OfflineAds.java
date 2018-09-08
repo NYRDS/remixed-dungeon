@@ -15,7 +15,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 /**
  * Created by mike on 18.09.2016.
  */
-class OwnAds {
+class OfflineAds {
 
 	private static final String adTemplate = "<head><meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" /></head>" +
 			"<div width=100%%>%s</div>" +
@@ -27,7 +27,7 @@ class OwnAds {
 			"<div align=\"right\"height=100%%>.</div>";
 
 	static void displayBanner() {
-		EventCollector.logEvent("OwnAds", "banner");
+		EventCollector.logEvent("OfflineAds", "banner");
 		if (BuildConfig.DEBUG) {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
@@ -52,7 +52,7 @@ class OwnAds {
 	}
 
 	static void displayIsAd(final InterstitialPoint work) {
-		EventCollector.logEvent("OwnAds", "is");
+		EventCollector.logEvent("OfflineAds", "is");
 		if (BuildConfig.DEBUG) {
 			Game.instance().runOnUiThread(new Runnable() {
 

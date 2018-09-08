@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
@@ -427,7 +428,7 @@ public class PixelDungeon extends Game {
 	static public void setDonationLevel(int level) {
 		
 		if(level > 0) {
-			Ads.removeEasyModeBanner();
+			AdsUtils.removeTopBanner();
 		}
 		
 		if (level < donated()) {
@@ -451,7 +452,7 @@ public class PixelDungeon extends Game {
 		difficulty = _difficulty;
 
 		if(donated() > 0) {
-			Ads.removeEasyModeBanner();
+			AdsUtils.removeTopBanner();
 			return;
 		}
 
@@ -465,7 +466,7 @@ public class PixelDungeon extends Game {
 			}
 
 			if (getDifficulty() >= 2) {
-				Ads.removeEasyModeBanner();
+				AdsUtils.removeTopBanner();
 			}
 		}
 	}
