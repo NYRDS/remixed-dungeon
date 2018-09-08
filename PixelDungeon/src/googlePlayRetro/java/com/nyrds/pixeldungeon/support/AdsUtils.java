@@ -14,7 +14,7 @@ public class AdsUtils {
 
     static {
         fails.put(new AAdsBannerProvider(),0);
-        fails.put(new AdMobBannerProvider(),0);
+        fails.put(new AdMobBannerProvider(),-1);
     }
 
     private static int bannerIndex() {

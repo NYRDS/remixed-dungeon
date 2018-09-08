@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -13,6 +15,11 @@ class AAdsBannerProvider implements AdsUtilsCommon.IBannerProvider {
     @Override
     public void displayBanner() {
 
+        if(Game.instance().checkOwnSignature()) {
+            AdsUtilsCommon.bannerFailed(AAdsBannerProvider.this);
+            return;
+        }
+
         WebView adView = new WebView(Game.instance());
 
         LinearLayout layout = Game.instance().getLayout();
@@ -21,10 +28,10 @@ class AAdsBannerProvider implements AdsUtilsCommon.IBannerProvider {
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, adViewHeight);
         adView.setLayoutParams(params);
 
+
         adView.setWebViewClient(new WebViewClient() {
 
             public void onPageFinished(WebView view, String url) {
-                // do your stuff here
             }
 
             @Override
@@ -32,7 +39,13 @@ class AAdsBannerProvider implements AdsUtilsCommon.IBannerProvider {
                                         String description, String failingUrl) {
                 AdsUtilsCommon.bannerFailed(AAdsBannerProvider.this);
                 EventCollector.logEvent("banner", "aads_no_banner", description);
+            }
 
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                Game.instance().startActivity(browserIntent);
+                return true;
             }
         });
 
