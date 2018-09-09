@@ -2,23 +2,24 @@
 buildscript {
     repositories {
         jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
         google()
+        maven { url 'https://maven.fabric.io/public' }
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'io.fabric.tools:gradle:1.+'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        google()
+
         maven {
-            url 'https://maven.google.com/'
-            name 'Google'
+            url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
         }
 
 

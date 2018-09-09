@@ -214,7 +214,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         EventCollector.init();
 
         if (!BuildConfig.DEBUG) {
-            EventCollector.collectSessionData("apk signature", Util.getSignature(this));
+            String signature = Util.getSignature(this);
+            EventCollector.logEvent("apk_signature", signature);
+            EventCollector.collectSessionData("apk signature", signature);
         }
 
         try {

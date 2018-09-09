@@ -19,7 +19,6 @@ public class RewardVideo {
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		if(GoogleRewardVideoAds.isReady()) {
 			GoogleRewardVideoAds.showCinemaRewardVideo(ret);
-			return;
 		}
 	}
 }

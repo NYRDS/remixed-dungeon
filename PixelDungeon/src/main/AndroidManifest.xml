@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
+
+
     <uses-feature android:glEsVersion="0x00020000"/>
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <!--uses-feature android:name="android.hardware.location" android:required="false"/>
@@ -51,6 +53,9 @@
             </intent-filter>
         </receiver>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="${fabric_api_key}" />
 
     </application>
 

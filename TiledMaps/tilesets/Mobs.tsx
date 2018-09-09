@@ -21,6 +21,11 @@
    <property name="kind" value="Crab"/>
   </properties>
  </tile>
+ <tile id="20">
+  <properties>
+   <property name="kind" value="Shaman"/>
+  </properties>
+ </tile>
  <tile id="192">
   <properties>
    <property name="kind" value="HealerNPC"/>

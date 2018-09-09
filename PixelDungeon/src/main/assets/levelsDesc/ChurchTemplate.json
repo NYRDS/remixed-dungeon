@@ -1,0 +1,61 @@
+{ "baseTileVar":[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 32, 33, 34, -1, -1, -1, -1, -1, -1, 48, 49, 50, -1, -1, -1, -1, -1, -1, 48, 49, 50, -1, -1, -1, -1, -1, -1, 64, 65, 66, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 17, 17, 18, 17, 18, -1, -1, -1, -1, 17, 17, 18, 17, 18, -1, -1, -1, -1, 17, 18, -1, 17, 18, -1, -1, -1, -1, 17, 18, 55, 17, 18, -1, -1, -1, -1, 17, 18, 51, 17, 18, -1, -1, -1, -1, -1, -1, 51, -1, -1, -1, -1, -1, -1, -1, -1, 51, -1, -1, -1, -1, -1, -1, -1, -1, 51, -1, -1, -1, -1, -1, -1, -1, -1, 51, -1, -1, -1, -1, -1, -1, -1, -1, 67, -1, 124, 125, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+ "customTiles":true,
+ "deco2TileVar":[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 130, -1, -1, -1, 129, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 128, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+ "decoDesc":["town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_snow_desc", "town_deco_snow_desc", "town_deco_snow_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "1", "1", "1", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_carpet_desc", "town_deco_window_desc", "town_deco_wooden_stairs_desc", "town_deco_common_door_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_carpet_desc", "City_TileDescBookshelf", "town_deco_chimney_desc", "City_TileDescBookshelf", "City_TileDescBookshelf", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "town_deco_common_door_desc", "town_deco_common_door_desc", "town_deco_common_door_desc", "1", "City_TileDescBookshelf", "town_deco_stove_desc", "City_TileDescBookshelf", "City_TileDescBookshelf", "town_deco_screen_desc", "town_deco_screen_desc", "town_deco_carpet_desc", "town_deco_screen_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "town_deco_common_bed_desc", "town_deco_wooden_chair_desc", "town_deco_wooden_chair_desc", "town_deco_covered_table_desc", "town_deco_wooden_table_desc", "town_deco_wooden_table_desc", "1", "1", "town_deco_screen_desc", "town_deco_screen_desc", "town_deco_screen_desc", "town_deco_screen_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "town_deco_common_bed_desc", "town_deco_wooden_chair_desc", "town_deco_wooden_chair_desc", "town_deco_purple_covered_table_desc", "town_deco_wooden_chair_desc", "town_deco_magic_ball_desc", "1", "1", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_sofa_desc", "town_deco_sofa_desc", "", "", "town_deco_book_desc", "town_deco_book_desc", "town_deco_book_desc", "town_deco_book_desc", "1", "1", "1", "1", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "town_deco_carpet_desc", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "town_table_fortune_desc", "", "", "", "town_deco_wall_desc", "town_deco_floor_desc", "town_deco_wall_desc", "", "", "", "town_deco_wall_desc", "town_deco_wall_desc", "", "", "", "", "", "", "", "", "town_deco_wall_desc", "town_deco_wall_desc", "town_deco_wall_desc", "", "", "", "town_deco_wall_desc", "town_deco_wall_desc", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+ "decoName":["town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_snow_name", "town_deco_snow_name", "town_deco_snow_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "1", "1", "1", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_carpet_name", "town_deco_window_name", "town_deco_wooden_stairs_name", "town_deco_common_door_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_blue_carpet_name", "town_deco_carpet_name", "Level_TileBookshelf", "town_deco_chimney_name", "Level_TileBookshelf", "Level_TileBookshelf", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "town_deco_common_door_name", "town_deco_common_door_name", "town_deco_common_door_name", "1", "Level_TileBookshelf", "town_deco_stove_name", "Level_TileBookshelf", "Level_TileBookshelf", "town_deco_screen_name", "town_deco_screen_name", "town_deco_carpet_name", "town_deco_screen_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "town_deco_common_bed_name", "town_deco_wooden_chair_name", "town_deco_wooden_chair_name", "town_deco_covered_table_name", "town_deco_wooden_table_name", "town_deco_wooden_table_name", "1", "1", "town_deco_screen_name", "town_deco_screen_name", "town_deco_screen_name", "town_deco_screen_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "town_deco_common_bed_name", "town_deco_wooden_chair_name", "town_deco_wooden_chair_name", "town_deco_purple_covered_table_name", "town_deco_wooden_chair_name", "town_deco_magic_ball_name", "1", "1", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_sofa_name", "town_deco_sofa_name", "", "", "town_deco_book_name", "town_deco_book_name", "town_deco_book_name", "town_deco_book_name", "1", "1", "1", "1", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "town_deco_carpet_name", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "town_table_fortune_name", "", "", "", "town_deco_wall_name", "town_deco_floor_name", "town_deco_wall_name", "", "", "", "town_deco_wall_name", "town_deco_wall_name", "", "", "", "", "", "", "", "", "town_deco_wall_name", "town_deco_wall_name", "town_deco_wall_name", "", "", "", "town_deco_wall_name", "town_deco_wall_name", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+ "decoTileVar":[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 96, -1, -1, -1, -1, -1, -1, 97, -1, 112, -1, -1, -1, -1, -1, -1, 99, -1, -1, -1, -1, -1, -1, -1, -1, 116, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, 101, -1, 100, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, 101, -1, 100, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+ "entrance":[4, 17],
+ "height":19,
+ "map":[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 4, 41, 2, 15, 42, 4, 4, 4, 1, 4, 41, 2, 15, 15, 4, 4, 4, 1, 1, 41, 2, 2, 2, 4, 4, 4, 1, 1, 41, 24, 24, 1, 4, 4, 4, 10, 4, 4, 4, 4, 4, 4, 4, 35, 1, 35, 1, 35, 1, 35, 16, 4, 1, 1, 1, 1, 1, 1, 1, 16, 4, 35, 4, 4, 1, 4, 4, 35, 16, 4, 1, 1, 1, 1, 1, 1, 1, 16, 4, 35, 1, 1, 11, 1, 1, 35, 16, 4, 1, 1, 1, 1, 1, 1, 1, 16, 4, 35, 4, 4, 1, 4, 4, 35, 16, 4, 1, 1, 1, 1, 1, 1, 1, 16, 4, 1, 35, 1, 1, 1, 35, 1, 16, 4, 1, 1, 1, 1, 1, 1, 1, 16, 4, 1, 1, 35, 1, 35, 1, 1, 16, 4, 1, 1, 4, 7, 4, 1, 1, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+ "maxBrightness":1.05,
+ "mobs":[
+        {
+         "kind":"Shaman",
+         "x":7,
+         "y":4
+        }, 
+        {
+         "kind":"TownGuardNPC",
+         "x":1,
+         "y":7
+        }, 
+        {
+         "kind":"TownGuardNPC",
+         "x":7,
+         "y":7
+        }, 
+        {
+         "kind":"TownsfolkNPC",
+         "x":6,
+         "y":9
+        }, 
+        {
+         "kind":"TownGuardNPC",
+         "x":1,
+         "y":11
+        }, 
+        {
+         "kind":"TownGuardNPC",
+         "x":7,
+         "y":11
+        }, 
+        {
+         "kind":"TownsfolkNPC",
+         "x":2,
+         "y":13
+        }, 
+        {
+         "kind":"TownsfolkNPC",
+         "x":1,
+         "y":17
+        }],
+ "multiexit":[],
+ "tiles":"tiles_town_inside.png",
+ "tiles_base":"tiles_town_inside.png",
+ "tiles_deco":"tiles_town_inside.png",
+ "tiles_deco2":"tiles_town_inside.png",
+ "tiles_logic":"tiles0.png",
+ "tiles_mobs":"Mobs.png",
+ "water":"water0.png",
+ "width":9
+}

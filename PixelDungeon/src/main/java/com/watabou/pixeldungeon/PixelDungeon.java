@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import com.crashlytics.android.Crashlytics;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
@@ -31,6 +32,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
@@ -53,6 +55,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.microedition.khronos.opengles.GL10;
+
+import io.fabric.sdk.android.Fabric;
 
 public class PixelDungeon extends Game {
 
@@ -96,6 +100,7 @@ public class PixelDungeon extends Game {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Fabric.with(this, new Crashlytics());
 
 		EuConsent.check(this);
 		playGames = new PlayGames(this);
@@ -427,7 +432,7 @@ public class PixelDungeon extends Game {
 	static public void setDonationLevel(int level) {
 		
 		if(level > 0) {
-			Ads.removeEasyModeBanner();
+			AdsUtils.removeTopBanner();
 		}
 		
 		if (level < donated()) {
@@ -451,7 +456,7 @@ public class PixelDungeon extends Game {
 		difficulty = _difficulty;
 
 		if(donated() > 0) {
-			Ads.removeEasyModeBanner();
+			AdsUtils.removeTopBanner();
 			return;
 		}
 
@@ -465,7 +470,7 @@ public class PixelDungeon extends Game {
 			}
 
 			if (getDifficulty() >= 2) {
-				Ads.removeEasyModeBanner();
+				AdsUtils.removeTopBanner();
 			}
 		}
 	}
