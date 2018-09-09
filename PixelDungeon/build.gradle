@@ -1,11 +1,26 @@
 apply plugin: 'com.android.application'
 
 
+def getApiField(String name) {
+    def stringsFile = android.sourceSets.main.res.sourceFiles.find { it.name.equals 'strings_api_signature.xml' }
+    return new XmlParser().parse(stringsFile).string.find { it.@name.equals name }.text()
+}
+
+
+
+
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 def jks_keyAlias    = hasProperty('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
 def jks_keyPassword = hasProperty('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
 def jks_storePassword = hasProperty('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
 
+
 android {
+
     signingConfigs {
         release {
             keyAlias jks_keyAlias
@@ -16,10 +31,16 @@ android {
     }
 
     defaultConfig {
+
+        manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key")]
+
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 567
         versionName "remix.28.3.fix.17"
     }
+
+
+
     buildTypes {
         release {
             signingConfig signingConfigs.release
@@ -69,8 +90,9 @@ android {
     }
 }
 
+apply plugin: 'io.fabric'
+
 dependencies {
-    implementation 'ch.acra:acra:4.9.0@aar'
     implementation 'com.google.code.gson:gson:2.8.4'
     implementation 'org.luaj:luaj-jse:3.0.1'
 
@@ -106,6 +128,10 @@ dependencies {
     googlePlayImplementation 'com.android.support:multidex:1.0.3'
     implementation project(':annotation')
     annotationProcessor project(':processor')
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
+        transitive = true
+    }
 }
 
 

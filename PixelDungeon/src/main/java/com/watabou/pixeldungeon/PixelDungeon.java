@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import com.crashlytics.android.Crashlytics;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
@@ -54,6 +55,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.microedition.khronos.opengles.GL10;
+
+import io.fabric.sdk.android.Fabric;
 
 public class PixelDungeon extends Game {
 
@@ -97,6 +100,7 @@ public class PixelDungeon extends Game {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Fabric.with(this, new Crashlytics());
 
 		EuConsent.check(this);
 		playGames = new PlayGames(this);

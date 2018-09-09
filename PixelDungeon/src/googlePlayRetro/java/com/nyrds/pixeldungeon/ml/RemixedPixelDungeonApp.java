@@ -4,11 +4,10 @@ import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 
-import org.acra.ACRA;
-import org.acra.ReportingInteractionMode;
-import org.acra.annotation.ReportsCrashes;
+import com.crashlytics.android.Crashlytics;
 
-@ReportsCrashes(mailTo = "nyrdsofficial@gmail.com", mode = ReportingInteractionMode.TOAST, resToastText = R.string.RemixedPixelDungeonApp_sendCrash)
+import io.fabric.sdk.android.Fabric;
+
 public class RemixedPixelDungeonApp extends Application {
 
 	@SuppressLint("StaticFieldLeak")
@@ -20,9 +19,7 @@ public class RemixedPixelDungeonApp extends Application {
 
 		instanceContext = getApplicationContext();
 
-		if(!BuildConfig.DEBUG) {
-			ACRA.init(this);
-		}
+		Fabric.with(this, new Crashlytics());
 
 		try {
 			Class.forName("android.os.AsyncTask");
