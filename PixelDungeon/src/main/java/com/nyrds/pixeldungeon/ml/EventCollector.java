@@ -2,12 +2,11 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.os.SystemClock;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.nyrds.android.util.Util;
 import com.watabou.pixeldungeon.Preferences;
-
-import org.acra.ACRA;
 
 import java.util.HashMap;
 
@@ -112,8 +111,6 @@ public class EventCollector {
 	}
 
 	public static void collectSessionData(String key, String value) {
-		if(ACRA.isInitialised()) {
-			ACRA.getErrorReporter().putCustomData(key, value);
-		}
+		Crashlytics.setString(key,value);
 	}
 }
