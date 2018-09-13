@@ -76,6 +76,8 @@ public abstract class WndEuConsent extends Window {
     public void hide() {
         if(!consentChoosen) {
             Game.toast(Game.getVar(R.string.gdpr_choose));
+        } else {
+            super.hide();
         }
     }
 }

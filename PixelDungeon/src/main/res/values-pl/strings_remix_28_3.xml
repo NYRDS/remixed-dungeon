@@ -39,5 +39,13 @@
     <string name="gdpr_choose">Proszę podjąć decyzję </string>
 
     <string name="Mob_StaHuntingStatus2">Ten %1$s poluje na%2$s</string>
+    <string name="Mob_StaFleeingStatus2">%1$s ucieka przed %2$s</string>
 
-    </resources>
+    <string name="Mob_StaTerrorStatus">%1$s jest przerażony</string>
+    <string name="Mob_StaTerrorStatus2">%2$s przeraził %1$s</string>
+
+    <string name="Mob_StaAmokStatus">%1$s jest w amoku</string>
+
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">Wczytaj auto-zapis</string>
+</resources>

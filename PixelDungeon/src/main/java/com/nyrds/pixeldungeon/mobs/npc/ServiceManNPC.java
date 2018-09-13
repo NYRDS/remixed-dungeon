@@ -40,7 +40,7 @@ public class ServiceManNPC extends ImmortalNPC {
 	@Override
 	public boolean interact(final Hero hero) {
 
-		if(EuConsent.getConsentLevel()==EuConsent.UNKNOWN) {
+		if(EuConsent.getConsentLevel()<EuConsent.NON_PERSONALIZED) {
 			Game.scene().add(new WndEuConsent() {
 				@Override
 				public void done() {
