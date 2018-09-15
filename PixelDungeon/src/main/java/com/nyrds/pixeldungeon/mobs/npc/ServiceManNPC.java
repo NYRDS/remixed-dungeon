@@ -71,8 +71,12 @@ public class ServiceManNPC extends ImmortalNPC {
 		return true;
 	}
 
-	private int getLimit(){
+	private static int getLimit(){
 		return 4 + Dungeon.hero.lvl();
+	}
+
+	public static void resetLimit() {
+		filmsSeen = 0;
 	}
 
 }
