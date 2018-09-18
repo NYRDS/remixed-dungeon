@@ -44,7 +44,6 @@ public class BlackSkullOfMastery extends MasteryItem {
 				return;
 			case NECROMANCER:
 				way = HeroSubClass.LICH;
-				hero.setMaxSoulPoints(hero.getSoulPointsMax() * 2);
 				break;
 			}
 			GameScene.show( new WndChooseWay( this, way ) );
