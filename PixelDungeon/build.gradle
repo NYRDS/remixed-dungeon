@@ -35,8 +35,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 567
-        versionName "remix.28.3.fix.17"
+        versionCode 568
+        versionName "remix.28.3.fix.18"
     }
 
 

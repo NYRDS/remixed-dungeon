@@ -2,19 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Herzlich willkommen!</string>
-  <string name="Welcome_Text_27_3">
-remix.27.3\n
-- Neuer Gegenstand: Schriftrolle der Beschwörung\n
-- Tautropfen hat nun keine höhere Priorität in Beute-Stapeln. Also, wenn ein Gegenstand auf dem Tautropfen liegt, wird besagter Gegenstand zuerst aufgesammelt.\n
-- Jeder einzelne Behälter kann nun biem Händler in der Stadt erworben werden\n
-- Der Goo lässt nun nicht mehr den Ring des Steinblutes fallen (Der Gegenstand ist nur durch Mods erhältlich), stattdessen erhält der Spieler einen zufälligen Trank\n
-- Der Zauberspruch \"Windstoß\" kann nur Charaktere bewegen, die sich bewegen können (IsMoveable)\n
-- Gegner können nicht mehr auf dem selben Feld generiert werden, auf dem sich schon ein Level-Objekt befindet\n
-- Nekromantenrobe ist standardmaßig nicht mehr als Schnellzugriff gesetzt\n
-- Fehler bei der Zufallsgenerierten Sichtweite behoben\n
-Fehler behoben, bei dem auf einem Boss-Level ein Element anstatt des Boss-Gegners generiert wurde\n
-- Die Belohnung, die die Spiler erhalten, wenn sie Werbung schauen, wird jetzt durch tippen innerhalb des Spiels verarbeitet\n
-</string>
   <string name="Welcome_Text_27_4">
 remix.27.4\n
 - Änderung des Namens zu Remixed Dungeon\n

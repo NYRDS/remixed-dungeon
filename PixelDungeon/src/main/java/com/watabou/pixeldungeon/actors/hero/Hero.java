@@ -1519,7 +1519,7 @@ public class Hero extends Char implements PetOwner {
 
 	public static void reallyDie(final Object cause) {
 
-		if (Dungeon.hero.getDifficulty() < 2) {
+		if (Dungeon.hero.getDifficulty() < 2 && !Game.isPaused()) {
 			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)) {
 				@Override
 				public void hide() {

@@ -111,7 +111,14 @@ public class Bestiary {
 			float chance = (float) depthDesc.getDouble(mobClassName);
 			chances.add(chance);
 		}
-		String selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[chances.size()]))];
+
+		String selectedMobClass = "Rat";
+
+		if(!chances.isEmpty()) {
+			selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[chances.size()]))];
+		}	else {
+			Game.toast("Bad bestiary desc: %s", depthDesc.toString());
+		}
 		return MobFactory.mobByName(selectedMobClass);
 	}
 }

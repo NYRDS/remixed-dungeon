@@ -56,6 +56,7 @@ import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.SystemTime;
@@ -193,6 +194,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
                 if (args.length > 0) {
                     toastText = Utils.format(text, args);
                 }
+
+                GLog.toFile("[%t] %s ",System.currentTimeMillis(), toastText);
 
                 android.widget.Toast toast = android.widget.Toast.makeText(RemixedPixelDungeonApp.getContext(), toastText,
                         Toast.LENGTH_SHORT);

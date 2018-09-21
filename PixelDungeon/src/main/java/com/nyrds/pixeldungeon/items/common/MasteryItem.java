@@ -38,27 +38,30 @@ public class MasteryItem extends Item {
 	}
 
 	public void choose( HeroSubClass way ) {
-		detach( getCurUser().belongings.backpack );
 
-		getCurUser().subClass = way;
+		Hero hero = getCurUser();
+		detach( hero.belongings.backpack );
 
-		getCurUser().getSprite().operate( getCurUser().getPos() );
+		hero.subClass = way;
+
+		hero.getSprite().operate( hero.getPos() );
 		Sample.INSTANCE.play( Assets.SND_MASTERY );
 
-		SpellSprite.show( getCurUser(), SpellSprite.MASTERY );
-		getCurUser().getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
+		SpellSprite.show(hero, SpellSprite.MASTERY );
+		hero.getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
 		if (way == HeroSubClass.LICH){
 			int penalty = 2;
 			specialChooseMessage(penalty);
-			getCurUser().STR(getCurUser().STR() - penalty);
+			hero.STR(hero.STR() - penalty);
+			hero.setMaxSoulPoints(hero.getSoulPointsMax() * 2);
 		}
 
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 
-		getCurUser().checkIfFurious();
-		getCurUser().updateLook();
+		hero.checkIfFurious();
+		hero.updateLook();
 
-		getCurUser().spendAndNext( TIME_TO_READ );
-		getCurUser().busy();
+		hero.spendAndNext( TIME_TO_READ );
+		hero.busy();
 	}
 }

@@ -20,7 +20,7 @@
     <string name="SociologistNPC_Desc">Этот социолог охвачен священным рвением сбора общественного мнения</string>
 
     <string name="SociologistNPC_AlreadyTaken">Ты уже участвовал в этом опросе, возвращайся позже</string>
-    <string name="SociologistNPC_Hi">\"Здравствуй!\nТы бы хотел прирять участие в нашем опросе?(Потребуется соединение с интернетом)\nТвоё мнение имеет значение!\"</string>
+    <string name="SociologistNPC_Hi">\"Здравствуй!\nТы бы хотел принять участие в нашем опросе?(Потребуется соединение с интернетом)\nТвоё мнение имеет значение!\"</string>
     <string name="SociologistNPC_InternetRequired">Сожалею, но без доступа к Интернет ты не сможешь принять участие в нашем опросе.</string>
     <string name="SociologistNPC_DownloadError">Извините, что-то пошло не так, попробуйте снова позже</string>
 
@@ -53,7 +53,7 @@
     <string name="WndHero_SkillLevel">Уровень мастерства</string>
 
     <string name="town_deco_sofa_name">Уютный диван</string>
-    <string name="town_deco_sofa_desc">Видимо в этом кинотеатр очень стараются чтобы предоставить лучшие сиденья своим посетителям.</string>
+    <string name="town_deco_sofa_desc">Видимо в этом кинотеатре очень стараются чтобы предоставить лучшие сиденья своим посетителям.</string>
 
     <string name="town_deco_book_name">Книга</string>
     <string name="town_deco_book_desc">Эта книга выглядит так, как будто кто-то беспечно оставил её тут</string>
