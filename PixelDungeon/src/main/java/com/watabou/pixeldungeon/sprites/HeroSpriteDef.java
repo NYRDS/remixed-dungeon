@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -108,6 +109,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 		applyLayersDesc(getLayersDesc());
 	}
 
+	public HeroSpriteDef(Weapon weapon) {
+		super("spritesDesc/Hero.json",0);
+		createStatueSprite(weapon);
+		applyLayersDesc(getLayersDesc());
+	}
+
 	private void createLayersDesc(Hero hero) {
 		Accessory accessory = Accessory.equipped();
 		createLayersDesc(hero, accessory);
@@ -183,6 +190,29 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 
 		deathEffect = new CustomClipEffect("hero/death/"+deathDescriptor+".png", (int)width, (int)height);
+	}
+
+	private void createStatueSprite(Weapon weapon) {
+		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
+		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
+
+
+		String weaponAnimationClassLeft  = "none";
+		String weaponAnimationClassRight = "none";
+
+		if(weapon!=null) {
+			weaponAnimationClassLeft = weapon.getAnimationClass();
+			weaponAnimationClassRight = weapon.getAnimationClass();
+		}
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/statue_"+weaponAnimationClassLeft+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/statue_"+weaponAnimationClassRight+"_right.png");
+
+		layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(weapon, "left"));
+		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
+
+
+		deathEffect = new CustomClipEffect("hero/death/statue.png", (int)width, (int)height);
 	}
 
 	private void createStatueSprite(Armor armor) {

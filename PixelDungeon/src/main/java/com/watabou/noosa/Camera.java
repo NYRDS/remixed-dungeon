@@ -17,6 +17,8 @@
 
 package com.watabou.noosa;
 
+import android.support.annotation.NonNull;
+
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
@@ -42,7 +44,8 @@ public class Camera extends Gizmo {
 	
 	int screenWidth;
 	int screenHeight;
-	
+
+	@NonNull
 	public float[] matrix;
 	
 	public PointF scroll;
@@ -139,7 +142,6 @@ public class Camera extends Gizmo {
 	@Override
 	public void destroy() {
 		target = null;
-		matrix = null;
 	}
 	
 	public void zoom( float value ) {

@@ -36,6 +36,8 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Los nigromantes comienzan con 15 puntos de vida.</item>
+        <item>Los nigromantes usan maná para lanzar hechizos de muerte.</item>
+        <item>Los nigromantes comienzan con una túnica de nigromante, que otorga 1 punto de maná por cada criatura muerta.</item>
         <item>Los nigromantes comienzan con una llave esqueleto para el nivel 7.</item>
         <item>Las pociones de curación son identificadas desde el comienzo.</item>
     </string-array>

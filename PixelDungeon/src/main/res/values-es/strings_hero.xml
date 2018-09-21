@@ -39,6 +39,14 @@
     <item>Recuperan vida cuando comen algo de comida.</item>
     <item>Pueden identificar Pociones de Fuerza desde el principio.</item>
   </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Los magos comienzan con una varita única de Misiles mágicos. La varita puede ser \"desencantada\" para mejorar otra varita.</item>
+    <item>Los magos recargan sus varitas rápidamente.</item>
+    <item>Cuando comen cualquier cosa se restaura 1 carga de todas las varitas  del inventario.</item>
+    <item>Los magos pueden usar las varitas como armas cuerpo a cuerpo.</item>
+    <item>Los magos usan mana para conjurar hechizos elementales.</item>
+    <item>Los pergaminos de identificación son reconocidos desde el principio.</item>
+  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Los granujas empiezan con un Anillo de las Sombras +1.</item>
     <item>Los granujas identifican un tipo de anillo al equiparlo.</item>
@@ -53,6 +61,14 @@
     <item>Las cazadoras son mejores con armas arrojadizas, y ganan un bonus de daño al usarlas.</item>
     <item>Las cazadoras ganan más vida con las gotas de rocío.</item>
     <item>Las cazadoras sienten a enemigos cercanos incluso si están escondidos tras obstáculos. </item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Los elfos comienzan con 15 de vida y 9 de fuerza.</item>
+    <item>Los elfos son inmunes al enraizado.</item>
+    <item>Los elfos comienzan un arco de madera mejorado y flechas.</item>
+    <item>Los elfos son buenos con los arcos y son ágiles.</item>
+    <item>Los elfos obtienen más salud de las gotas de rocío.</item>
+    <item>Los elfos no son buenos con las armas cuerpo a cuerpo.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiador</string>

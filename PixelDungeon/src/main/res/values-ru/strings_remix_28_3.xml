@@ -33,7 +33,18 @@
     <string name="RottenFish_Info">Тухлая рыба, воняет ужасно.</string>
     <string name="RottenFish_Taste">Отвратительно!</string>
 
+    <string name="gdpr_title">Персонализируйте свой рекламный опыт</string>
+    <string name="gdpr_text">Remixed Dungeon персонализирует вашу рекламу с помощью Admob и Appodeal (далее - поставщики рекламы). Поставщики рекламы и их партнеры могут собирать и обрабатывать персональные данные, такие как идентификаторы устройств, демографические и процентные данные, чтобы обеспечить рекламный опыт, адаптированный для вас. Согласившись на этот улучшенный рекламный опыт, вы увидите объявления, которые, по мнению Ad-провайдеров и их партнеров, более релевантны вам. \ N \ nПо соглашению вы подтверждаете, что вам исполнилось 16 лет, и вы хотели бы получить персонализированную рекламу. \ п \ п
+</string>
+    <string name="gdpr_agree">Да, я согласен</string>
+    <string name="gdpr_disagree">нет, спасибо</string>
+    <string name="gdpr_choose">пожалуйста, сделайте свой выбор</string>
+
     <string name="Mob_StaHuntingStatus2">%1$s охотится на %2$s</string>
+    <string name="Mob_StaFleeingStatus2">Это 1%1$s  бегство от 2%2$s</string>
+
+    <string name="Mob_StaTerrorStatus">Этот 1%1$s в ужасе</string>
+    <string name="Mob_StaTerrorStatus2">Этот 1%1$s ужасается 2%2$s</string>
 
     <string name="WndSaveSlotSelect_LoadAutoSave">Автосохранение</string>
 </resources>
