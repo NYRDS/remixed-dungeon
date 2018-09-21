@@ -125,7 +125,6 @@ public class ModdingMode {
 		return resource.toString();
 	}
 
-
 	public static InputStream getInputStream(String resName) {
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {

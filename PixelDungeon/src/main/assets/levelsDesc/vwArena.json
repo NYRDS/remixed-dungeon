@@ -4,57 +4,57 @@
  "maxBrightness":1.05,
  "mobs":[
         {
-         "kind":"Rat",
+         "kind":"Statue",
          "x":3,
          "y":9
         }, 
         {
-         "kind":"Rat",
+         "kind":"Statue",
          "x":5,
          "y":9
         }, 
         {
-         "kind":"Rat",
+         "kind":"Statue",
          "x":7,
          "y":9
         }, 
         {
-         "kind":"Rat",
+         "kind":"Statue",
          "x":2,
          "y":11
         }, 
         {
-         "kind":"Rat",
+         "kind":"Statue",
          "x":5,
          "y":11
         }, 
         {
-         "kind":"Rat",
+         "kind":"Statue",
          "x":8,
          "y":11
         }, 
         {
-         "kind":"Rat",
+         "kind":"ArmoredStatue",
          "x":1,
          "y":13
         }, 
         {
-         "kind":"Rat",
+         "kind":"ArmoredStatue",
          "x":3,
          "y":13
         }, 
         {
-         "kind":"Rat",
+         "kind":"ArmoredStatue",
          "x":5,
          "y":13
         }, 
         {
-         "kind":"Rat",
+         "kind":"ArmoredStatue",
          "x":7,
          "y":13
         }, 
         {
-         "kind":"Rat",
+         "kind":"ArmoredStatue",
          "x":9,
          "y":13
         }],
