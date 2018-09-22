@@ -45,7 +45,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_HAIR        = "hair";
 	private static final String LAYER_FACIAL_HAIR = "facial_hair";
 	private static final String LAYER_HELMET      = "helmet";
-	private static final String LAYER_DEATH       = "death";
 	private static final String LAYER_BODY        = "body";
 	private static final String LAYER_COLLAR      = "collar";
 	private static final String LAYER_ACCESSORY   = "accessory";
@@ -92,7 +91,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public HeroSpriteDef(Armor armor){
-		super("spritesDesc/ArmoredStatue.json",0);
+		super("spritesDesc/Hero.json",0);
 		createStatueSprite(armor);
 		applyLayersDesc(getLayersDesc());
 	}
@@ -178,10 +177,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_"+weaponAnimationClassLeft+"_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_"+weaponAnimationClassRight+"_right.png");
 
-
-		//layersDesc.put(LAYER_LEFT_ARMOR,  armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "left"));
-		//layersDesc.put(LAYER_RIGHT_ARMOR, armorHandDescriptor(hero.belongings.armor,hero.belongings.weapon, "right"));
-
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
@@ -219,6 +214,10 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
 		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
 		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
+
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/statue_none_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/statue_none_right.png");
 
 		deathEffect = new CustomClipEffect("hero/death/statue.png", (int)width, (int)height);
 	}
@@ -271,18 +270,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 			return HERO_EMPTY_PNG;
 		}
 		return "hero/armor/"+armor.getVisualName()+".png";
-	}
-
-	private String armorHandDescriptor(Armor armor,KindOfWeapon item, String hand) {
-		if(armor==null) {
-			return HERO_EMPTY_PNG;
-		}
-
-		if(item!=null) {
-			return "hero/armor/hands/" + armor.getVisualName() + "_" + item.getAnimationClass() + "_" + hand + ".png";
-		} else {
-			return "hero/armor/hands/" + armor.getVisualName() + "_none_" + hand + ".png";
-		}
 	}
 
 	private String itemHandDescriptor(KindOfWeapon item, String hand) {
