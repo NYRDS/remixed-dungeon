@@ -167,8 +167,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
 
-		String weaponAnimationClassLeft  = "none";
-		String weaponAnimationClassRight = "none";
+		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
+		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
 
 		if(hero.belongings.weapon!=null) {
 			weaponAnimationClassLeft = hero.belongings.weapon.getAnimationClass();
@@ -197,8 +197,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
 
 
-		String weaponAnimationClassLeft  = "none";
-		String weaponAnimationClassRight = "none";
+		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
+		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
 
 		if(weapon!=null) {
 			weaponAnimationClassLeft = weapon.getAnimationClass();

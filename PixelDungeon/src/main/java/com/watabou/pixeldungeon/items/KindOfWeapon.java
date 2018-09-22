@@ -31,7 +31,7 @@ public class KindOfWeapon extends EquipableItem {
 
 	protected static final float TIME_TO_EQUIP = 1f;
 
-	public static final String BASIC_ATTACK = "basic";
+	public static final String BASIC_ATTACK = "none";
 	public static final String SWORD_ATTACK = "sword";
 	public static final String SPEAR_ATTACK = "spear";
 	public static final String BOW_ATTACK   = "bow";
