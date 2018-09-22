@@ -1,0 +1,20 @@
+{
+   "defenseSkill"  :15,
+   "attackSkill"   :10,
+   "exp"           :5,
+   "maxLvl"        :10,
+   "dmgMin"        :5,
+   "dmgMax"        :10,
+   "baseSpeed"     :2,
+   "attackDelay"   :0.5,
+   "ht"            :20,
+   "name"          :"Shadow_Name",
+   "name_objective":"Shadow_Name_Objective",
+   "description"   :"Shadow_Desc",
+   "gender"        :"Shadow_Gender",
+   "spriteDesc"    :"spritesDesc/Shadow.json",
+   "canBePet"      :true,
+   "walkingType"   :"WALL",
+   "scriptFile"    :"scripts/mobs/MazeShadow",
+   "aiState"       :"Wandering"
+}

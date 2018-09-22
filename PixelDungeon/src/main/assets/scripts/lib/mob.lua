@@ -91,6 +91,13 @@ mob.onAttackProc = function(self,mob, enemy, damage)
     return self.attackProc(mob, enemy, damage)
 end
 
+mob.onZapProc = function(self,mob, enemy, damage)
+    if self.zapProc == nil then
+        return damage
+    end
+    return self.zapProc(mob, enemy, damage)
+end
+
 mob.fillStats = function(self,mob)
     return not not (self.stats and self.stats(mob))
 end
