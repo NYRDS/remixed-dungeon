@@ -418,28 +418,20 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	@Override
 	public PointF worldCoords() {
-		if(ch instanceof Hero) {
-			final int csize = DungeonTilemap.SIZE;
-			PointF point = point();
-			point.x = (point.x + width * 0.5f) / csize - 0.5f;
-			point.y = (point.y + height - 8) / csize - 1.0f;
-			return point;
-
-		}
-		return super.worldCoords();
+		final int csize = DungeonTilemap.SIZE;
+		PointF point = point();
+		point.x = (point.x + width * 0.5f) / csize - 0.5f;
+		point.y = (point.y + height - 8) / csize - 1.0f;
+		return point;
 	}
 
 	@Override
 	public PointF worldToCamera(int cell) {
+		final int csize = DungeonTilemap.SIZE;
 
-		if(ch instanceof Hero) {
-			final int csize = DungeonTilemap.SIZE;
-
-			return new PointF(
-					(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
-					(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
-			);
-		}
-		return  super.worldToCamera(cell);
+		return new PointF(
+				(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+				(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
+		);
 	}
 }
