@@ -6,10 +6,6 @@ def getApiField(String name) {
     return new XmlParser().parse(stringsFile).string.find { it.@name.equals name }.text()
 }
 
-
-
-
-
 repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
@@ -38,8 +34,6 @@ android {
         versionCode 568
         versionName "remix.28.3.fix.18"
     }
-
-
 
     buildTypes {
         release {
