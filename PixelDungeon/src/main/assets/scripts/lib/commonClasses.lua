@@ -18,7 +18,11 @@ local Buffs  = {
     Invisibility = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Invisibility"),
     Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation"),
     Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger"),
-    Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison")
+    Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison"),
+    Frost        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Frost"),
+    Light        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Light"),
+    Cripple      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Cripple"),
+    Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm")
 }
 
 local Blobs = {

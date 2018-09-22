@@ -859,11 +859,22 @@ public abstract class Mob extends Char {
 	public boolean zap(@NonNull Char enemy) {
 
 		if(zapHit(enemy)) {
-			enemy.damage(damageRoll(), this);
+			int damage = zapProc(enemy,damageRoll());
+			enemy.damage(damage, this);
 			return true;
 		}
 
 		return false;
+	}
+
+	public int zapProc(@NonNull Char enemy, int damage) {
+		runMobScript("onZapProc", enemy, damage);
+
+		if(scriptResult.isnumber()) {
+			return scriptResult.checknumber().toint();
+		}
+
+		return damage;
 	}
 
 	protected boolean zapHit(@NonNull Char enemy) {
