@@ -195,7 +195,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
                     toastText = Utils.format(text, args);
                 }
 
-                GLog.toFile("[%t] %s ",System.currentTimeMillis(), toastText);
+                GLog.toFile("%s ",toastText);
 
                 android.widget.Toast toast = android.widget.Toast.makeText(RemixedPixelDungeonApp.getContext(), toastText,
                         Toast.LENGTH_SHORT);

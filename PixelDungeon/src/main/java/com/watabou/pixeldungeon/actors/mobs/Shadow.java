@@ -1,13 +1,10 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.sprites.ShadowSprite;
 import com.watabou.utils.Random;
 
 public class Shadow extends Mob {
 	{
-		spriteClass = ShadowSprite.class;
-		
 		hp(ht(20));
 		defenseSkill = 15;
 		
