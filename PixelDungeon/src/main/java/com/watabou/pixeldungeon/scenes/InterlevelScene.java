@@ -126,7 +126,6 @@ public class InterlevelScene extends PixelScene {
 			case DESCEND:
 			case ASCEND:
 			case RETURN:
-			case FALL:
 				if(Dungeon.hero != null) {
 					Dungeon.save();
 				}
