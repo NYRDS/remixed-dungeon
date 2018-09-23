@@ -12,6 +12,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.apache.commons.io.input.BOMInputStream;
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LoadState;
 import org.luaj.vm2.LuaError;
@@ -133,7 +134,7 @@ public class LuaEngine implements ResourceFinder {
 
 	@Override
 	public InputStream findResource(String filename) {
-		return ModdingMode.getInputStream(filename);
+		return new BOMInputStream(ModdingMode.getInputStream(filename));
 	}
 
 }
