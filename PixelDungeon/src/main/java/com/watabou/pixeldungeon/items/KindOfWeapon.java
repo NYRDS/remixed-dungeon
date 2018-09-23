@@ -38,6 +38,7 @@ public class KindOfWeapon extends EquipableItem {
 	public static final String STAFF_ATTACK = "staff";
 	public static final String HEAVY_ATTACK = "heavy";
 	public static final String WAND_ATTACK  = "wand";
+	public static final String KUSARIGAMA_ATTACK  = "kusarigama";
 
 	protected String animation_class = BASIC_ATTACK;
 
