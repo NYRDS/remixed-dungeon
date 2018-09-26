@@ -7,68 +7,11 @@
     "items": [
       {
         "kind": "Gold",
-        "quantity": 100000
-      },
-      {
-        "kind": "Glaive",
-        "identified": true
-      },
-      {
-        "kind": "Longsword",
-        "identified": true
-      },
-      {
-        "kind": "Halberd",
-        "identified": true
-      },
-      {
-        "kind": "Mace",
-        "identified": true
-      },
-      {
-        "kind": "Sword",
-        "identified": true
-      },
-      {
-        "kind": "ShortSword",
-        "identified": true
-      },
-      {
-        "kind": "WarHammer",
-        "identified": true
-      },
-      {
-        "kind": "BattleAxe",
-        "identified": true
-      },
-      {
-        "kind": "Quarterstaff",
-        "identified": true
-      },
-      {
-        "kind": "Spear",
-        "identified": true
-      },
-      {
-        "kind": "WoodenBow",
-        "identified": true
-      },
-      {
-        "kind": "Quarterstaff",
-        "identified": true
-      },
-      {
-        "kind": "Kusarigama",
-        "identified": true
-      },
-      {
-        "kind": "CommonArrow",
-        "quantity": 999,
-        "identified": true
+        "quantity": 100
       }
     ],
-    "str": 10000,
-    "hp": 10000,
+    "str": 10,
+    "hp": 20,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -168,7 +111,7 @@
     },
     "items": [
       {
-            "kind": "SkeletonKey",
+        "kind": "SkeletonKey",
         "levelId": "7",
         "depth": "7"
       }
