@@ -1,4 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
 
-    </resources>
+    <!-- Items descriptions -->
+    <string name="Item_Info2">birşey</string>
+
+    <!-- STRINGS OF Necrotism CLASS -->
+    <string name="Necrotism_Info">Nekrotizm</string>
+    <string name="Necrotism_ACSpecial">NEKROTİZM</string>
+    <string name="ResultDescriptions_Necrotism">%d. seviyede Nekrotizm yüzünden öldün</string>
+    <string name="Badges_DeathNecrotism">Nekrotizm yüzünden ölüm</string>
+
+    <!-- STRINGS OF Spell CLASS -->
+    <string name="Spell_SelectACell">Hedef hücresi seç.</string>
+    
+    <!-- STRINGS OF WndJournal CLASS -->
+    <string name="WndJournal_Levels">Seviyeler</string>
+    <string name="WndJournal_Logbook">Kayıt defteri</string>
+
+</resources>
