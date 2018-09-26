@@ -123,6 +123,8 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
+
+    implementation group: 'commons-io', name: 'commons-io', version: '2.5'
     implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
         transitive = true
     }
