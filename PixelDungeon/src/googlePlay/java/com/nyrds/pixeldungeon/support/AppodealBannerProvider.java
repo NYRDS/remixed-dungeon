@@ -43,5 +43,10 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
         public void onBannerClicked() {
 
         }
+
+        @Override
+        public void onBannerExpired() {
+
+        }
     }
 }

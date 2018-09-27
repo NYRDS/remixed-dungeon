@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 
-def getApiField(String name) {
-    def stringsFile = android.sourceSets.main.res.sourceFiles.find { it.name.equals 'strings_api_signature.xml' }
+ext.getApiField = { name ->
+    def stringsFile = "PixelDungeon/src/main/res/values/strings_api_signature.xml"
     return new XmlParser().parse(stringsFile).string.find { it.@name.equals name }.text()
 }
 
@@ -31,8 +31,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 568
-        versionName "remix.28.3.fix.18"
+        versionCode 569
+        versionName "remix.28.4.alpha.1"
     }
 
     buildTypes {
@@ -70,10 +70,10 @@ android {
 
         }
         googlePlay {
-            buildToolsVersion '27.0.3'
-            targetSdkVersion 27
+            buildToolsVersion '28.0.1'
+            targetSdkVersion 28
             minSdkVersion 14
-            compileSdkVersion 27
+            compileSdkVersion 28
 
             versionCode defaultConfig.versionCode + 10000
             // Enabling multidex support.
@@ -82,6 +82,7 @@ android {
         }
 
     }
+    buildToolsVersion = '28.0.2'
 }
 
 apply plugin: 'io.fabric'
@@ -108,16 +109,18 @@ dependencies {
     googlePlayImplementation 'com.appbrain:appbrain-sdk:+@aar'
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
-    googlePlayImplementation 'com.android.support:support-v4:27.1.1'
+    googlePlayImplementation 'com.android.support:support-v4:28.0.0'
     googlePlayImplementation 'com.google.android.gms:play-services-ads:15.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-base:15.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.3'
     googlePlayImplementation "com.google.android.gms:play-services-games:15.0.1"
 
 
-    googlePlayImplementation fileTree(dir: 'lib', include: '*.jar')
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
     googlePlayImplementation name: 'adcolony-sdk-3.3.4', ext: 'aar'
+
+
+    googlePlayImplementation fileTree(dir: 'lib', include: ['*.jar'])
 
     googlePlayImplementation 'com.android.support:multidex:1.0.3'
     implementation project(':annotation')
