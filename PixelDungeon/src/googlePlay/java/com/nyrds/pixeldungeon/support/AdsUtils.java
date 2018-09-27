@@ -16,7 +16,7 @@ public class AdsUtils {
     public static Map<AdsUtilsCommon.IBannerProvider, Integer> fails = new HashMap<>();
 
     static {
-        fails.put(new AAdsBannerProvider(),0);
+        fails.put(new AAdsBannerProvider(),-3);
         fails.put(new AppodealBannerProvider(),-2);
         fails.put(new AdMobBannerProvider(),-1);
     }
