@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest   package="com.nyrds.pixeldungeon.ml"
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    package="com.nyrds.pixeldungeon.ml"
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:installLocation="auto">
 
@@ -28,7 +29,8 @@
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <meta-data android:name="com.google.android.gms.games.APP_ID"
                    android:value="@string/app_id"/>
@@ -45,8 +47,11 @@
             </intent-filter>
         </activity>
 
-        <!-- Used for Google Play Store Campaign Measurement-->
-        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+        <receiver
+            android:name="com.appbrain.ReferrerReceiver"
+            tools:node="remove"/>
+
+        <receiver android:name="com.nyrds.pixeldungeon.support.GooglePlayReferrer"
             android:enabled="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
