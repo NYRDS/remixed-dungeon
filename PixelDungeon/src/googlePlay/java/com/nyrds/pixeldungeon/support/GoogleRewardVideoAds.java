@@ -65,6 +65,7 @@ public class GoogleRewardVideoAds {
 		public void onRewardedVideoAdLoaded() {
 			EventCollector.stopTiming("google reward video","google reward video","ok","");
 			loaded = true;
+			videoCompleted = false;
 		}
 
 		@Override
