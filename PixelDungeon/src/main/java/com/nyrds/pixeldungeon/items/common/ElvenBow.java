@@ -25,4 +25,9 @@ public class ElvenBow extends Bow {
 	public double dmgFactor() {
 		return 1 + level() * 0.3;
 	}
+
+	@Override
+	public String getVisualName() {
+		return "WoodenBow";
+	}
 }

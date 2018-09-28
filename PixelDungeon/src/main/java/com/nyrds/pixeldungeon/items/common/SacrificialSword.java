@@ -85,4 +85,9 @@ public class SacrificialSword extends SpecialWeapon {
 			Mob.makePet(mob, hero);
 		}
 	}
+
+	@Override
+	public String getVisualName() {
+		return "Sword";
+	}
 }

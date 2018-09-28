@@ -18,4 +18,9 @@ public class ElvenDagger extends MeleeWeapon {
 		return 9;
 	}
 
+	@Override
+	public String getVisualName() {
+		return "Dagger";
+	}
+
 }

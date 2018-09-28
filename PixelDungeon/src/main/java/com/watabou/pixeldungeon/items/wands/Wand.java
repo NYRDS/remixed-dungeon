@@ -528,4 +528,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		curCharges(itemDesc.optInt("charges",curCharges()));
 		maxCharges(itemDesc.optInt("maxCharges",maxCharges()));
 	}
+
+	@Override
+	public String getVisualName() {
+		return "Wand";
+	}
 }

@@ -36,4 +36,9 @@ public class GoldenSword extends SpecialWeapon {
 		usedForHit();
 	}
 
+	@Override
+	public String getVisualName() {
+		return "Sword";
+	}
+
 }
