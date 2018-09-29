@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import android.support.annotation.NonNull;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -58,6 +59,8 @@ public class MirrorImage extends NPC {
 	private int                damage;
 	@Packable
 	private String[] look = new String[0];
+	@Packable
+	private String deathEffect;
 
 	@Override
 	public int attackSkill( Char target ) {
@@ -97,14 +100,19 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		if(look.length > 0) {
-			return new HeroSpriteDef(look);
+		if(look.length > 0 || deathEffect==null || deathEffect.isEmpty()) {
+			return new HeroSpriteDef(look, deathEffect);
 		} else { // handle old saves
 			if(Dungeon.hero != null) {
+				EventCollector.logException(new Exception("MirrorImage: old save"));
 				look = Dungeon.hero.getHeroSprite().getLayersDesc();
+				deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
 			} else { // dirty hack here
+				EventCollector.logException(new Exception("MirrorImage sprite created before hero"));
 				Hero hero = new Hero();
-				look = new HeroSpriteDef(hero).getLayersDesc();
+				HeroSpriteDef spriteDef = new HeroSpriteDef(hero);
+				look = spriteDef.getLayersDesc();
+				deathEffect = spriteDef.getDeathEffect();
 			}
 
 			return sprite();

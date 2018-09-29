@@ -62,15 +62,16 @@ public class EventCollector {
 
 	static public void logException(Exception e) {
 		if(!mDisabled) {
+			Crashlytics.logException(e);
 			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(Util.toString(e)).build());
-			e.printStackTrace();
 		}
 	}
 
 	static public void logException(Exception e,String desc) {
 		if(!mDisabled) {
+			Crashlytics.log(desc);
+			Crashlytics.logException(e);
 			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(desc + " "+Util.toString(e)).build());
-			e.printStackTrace();
 		}
 	}
 

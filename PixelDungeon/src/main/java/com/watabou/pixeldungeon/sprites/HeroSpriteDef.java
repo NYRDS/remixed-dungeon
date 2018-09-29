@@ -58,6 +58,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
 
+	private static final String DEATH_EFFECT      = "death effect";
+
 	private CustomClipEffect deathEffect;
 
 	private Animation fly;
@@ -84,9 +86,11 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
+	private String deathEffectDesc;
 
-	public HeroSpriteDef(String[] lookDesc){
+	public HeroSpriteDef(String[] lookDesc, String deathEffectDesc){
 		super("spritesDesc/Hero.json",0);
+		this.deathEffectDesc = deathEffectDesc;
 		applyLayersDesc(lookDesc);
 	}
 
@@ -184,7 +188,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
 		}
 
-		deathEffect = new CustomClipEffect("hero/death/"+deathDescriptor+".png", (int)width, (int)height);
+		deathEffectDesc = "hero/death/"+deathDescriptor+".png";
 	}
 
 	private void createStatueSprite(Weapon weapon) {
@@ -207,7 +211,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
 
-		deathEffect = new CustomClipEffect("hero/death/statue.png", (int)width, (int)height);
+		deathEffectDesc = "hero/death/statue.png";
 	}
 
 	private void createStatueSprite(Armor armor) {
@@ -219,7 +223,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/statue_none_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/statue_none_right.png");
 
-		deathEffect = new CustomClipEffect("hero/death/statue.png", (int)width, (int)height);
+		deathEffectDesc = "hero/death/statue.png";
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -263,6 +267,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
 			addLayer(layersOrder[i],TextureCache.get(lookDesc[i]));
 		}
+		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
 
 	private String armorDescriptor(Armor armor) {
@@ -433,5 +438,9 @@ public class HeroSpriteDef extends MobSpriteDef {
 				(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
 				(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
 		);
+	}
+
+	public String getDeathEffect() {
+		return deathEffectDesc;
 	}
 }
