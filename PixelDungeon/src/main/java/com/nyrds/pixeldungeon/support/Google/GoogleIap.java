@@ -126,7 +126,7 @@ public class GoogleIap implements PurchasesUpdatedListener {
         executeServiceRequest(queryToExecute);
     }
 
-    public void startServiceConnection(final Runnable executeOnSuccess) {
+    private void startServiceConnection(final Runnable executeOnSuccess) {
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
             public void onBillingSetupFinished(@BillingClient.BillingResponse int billingResponseCode) {
