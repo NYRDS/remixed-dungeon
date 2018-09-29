@@ -43,12 +43,14 @@ public class EventCollector {
 
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
+			Crashlytics.log(category+":"+event);
 			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).build());
 		}
 	}
 
 	static public void logEvent(String category, String event, String label) {
 		if (!mDisabled) {
+			Crashlytics.log(category+":"+event+":"+label);
 			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).setLabel(label).build());
 		}
 	}

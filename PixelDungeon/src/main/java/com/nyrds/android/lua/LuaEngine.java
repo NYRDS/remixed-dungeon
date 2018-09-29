@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Notifications;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -82,6 +83,8 @@ public class LuaEngine implements ResourceFinder {
 			return luaModule.checktable();
 		}
 
+		Notifications.displayNotification("LuaError", "RD LuaError", "failed to load lua module:"+module );
+
 		EventCollector.logEvent("LuaError","failed to load fallback lua module:",fallback);
 		return null;
 	}
@@ -116,6 +119,8 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	private void reportLuaError(LuaError err) {
+		Notifications.displayNotification("LuaError", "RD LuaError", "err.getMessage()");
+
 		GLog.w(err.getMessage());
 	}
 

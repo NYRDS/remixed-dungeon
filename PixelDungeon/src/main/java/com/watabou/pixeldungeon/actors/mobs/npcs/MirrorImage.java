@@ -34,7 +34,7 @@ import com.watabou.utils.Random;
 import java.util.HashSet;
 import java.util.Set;
 
-public class MirrorImage extends NPC {
+public class MirrorImage extends Mob {
 
 	// for restoreFromBundle
 	public MirrorImage() {
@@ -44,8 +44,6 @@ public class MirrorImage extends NPC {
 
 	public MirrorImage(Hero hero) {
 		this();
-
-		makePet(this, hero);
 
 		attack = hero.attackSkill( hero );
 		damage = hero.damageRoll();
@@ -100,11 +98,10 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		if(look.length > 0 || deathEffect==null || deathEffect.isEmpty()) {
+		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {
 			return new HeroSpriteDef(look, deathEffect);
-		} else { // handle old saves
+		} else { // first sprite generation
 			if(Dungeon.hero != null) {
-				EventCollector.logException(new Exception("MirrorImage: old save"));
 				look = Dungeon.hero.getHeroSprite().getLayersDesc();
 				deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
 			} else { // dirty hack here
@@ -119,23 +116,6 @@ public class MirrorImage extends NPC {
 		}
 	}
 
-	@Override
-	public boolean interact(final Hero hero) {
-		
-		int curPos = getPos();
-		
-		moveSprite( getPos(), hero.getPos() );
-		move( hero.getPos() );
-		
-		hero.getSprite().move( hero.getPos(), curPos );
-		hero.move( curPos );
-		
-		hero.spend( 1 / hero.speed() );
-		hero.busy();
-		
-		return true;
-	}
-	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( ToxicGas.class );
