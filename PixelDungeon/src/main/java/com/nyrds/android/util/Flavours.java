@@ -1,7 +1,7 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.support.GooglePlayServices;
+import com.nyrds.pixeldungeon.support.Google.GooglePlayServices;
 import com.watabou.pixeldungeon.PixelDungeon;
 
 /**

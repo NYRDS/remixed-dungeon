@@ -34,8 +34,8 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
+import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.nyrds.pixeldungeon.support.Iap;
-import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -108,9 +108,8 @@ public class PixelDungeon extends Game {
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
 
-		iap = new Iap();
-		iap.initIap(this);
-		
+		iap = new Iap(this);
+
 		if(!Utils.canUseClassicFont(uiLanguage())) {
 			PixelDungeon.classicFont(false);
 		}
@@ -193,10 +192,6 @@ public class PixelDungeon extends Game {
 
 		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
 
-		if(iap.onActivityResult(requestCode, resultCode, data)) {
-			return;
-		}
-
 		if(playGames.onActivityResult(requestCode, resultCode, data)) {
 			return;
 		}
@@ -210,7 +205,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return Flavours.haveDonations() && PixelDungeon.instance().iap.isReady() || BuildConfig.DEBUG;
+		return Flavours.haveDonations() && Game.instance().iap.isReady() || BuildConfig.DEBUG;
 	}
 	
 	/*

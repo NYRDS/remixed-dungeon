@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.support;
+package com.nyrds.pixeldungeon.support.Google;
 
 import android.content.Context;
 
