@@ -408,7 +408,6 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	@Override
 	public void die() {
-
 		deathEffect.place(ch.getPos());
 		getParent().add(deathEffect);
 		deathEffect.setVisible(true);

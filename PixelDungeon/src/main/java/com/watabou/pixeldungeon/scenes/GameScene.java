@@ -356,6 +356,7 @@ public class GameScene extends PixelScene {
 
         switch (InterlevelScene.mode) {
             case RESURRECT:
+                Dungeon.hero.regenSprite();
                 WandOfBlink.appear(Dungeon.hero, level.entrance);
                 new Flare(8, 32).color(0xFFFF66, true).show(Dungeon.hero.getHeroSprite(), 2f);
                 break;
