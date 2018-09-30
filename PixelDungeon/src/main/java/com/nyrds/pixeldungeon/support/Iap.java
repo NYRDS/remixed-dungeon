@@ -90,7 +90,7 @@ public class Iap implements IPurchasesUpdated {
 
     public void doPurchase(String sku, IIapCallback callback) {
         mIapCallback = callback;
-	    mIap.doPurchase(sku);
+	    mIap.doPurchase(sku.toLowerCase(Locale.ROOT));
     }
 
 

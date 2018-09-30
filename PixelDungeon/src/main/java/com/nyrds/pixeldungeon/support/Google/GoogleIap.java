@@ -6,6 +6,7 @@ import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
@@ -20,18 +21,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.Executor;
 
-public class GoogleIap implements PurchasesUpdatedListener {
-
-    private BillingClient mBillingClient;
-
-    private boolean mIsServiceConnected;
-
-    private IPurchasesUpdated mPurchasesUpdatedListener;
+public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryResponseListener {
 
     private final Map<String, Purchase> mPurchases = new HashMap<>();
+    private BillingClient mBillingClient;
+    private boolean mIsServiceConnected;
+    private IPurchasesUpdated mPurchasesUpdatedListener;
+    private Map<String, SkuDetails> mSkuDetails = new HashMap<>();
+    private boolean mIsServiceConnecting;
 
-    private Map<String,SkuDetails> mSkuDetails = new HashMap<>();
+    private ConcurrentLinkedQueue<Runnable> mRequests = new ConcurrentLinkedQueue<>();
 
     public GoogleIap(Context context, IPurchasesUpdated purchasesUpdatedListener) {
         mBillingClient = BillingClient.newBuilder(context).setListener(this).build();
@@ -85,6 +87,7 @@ public class GoogleIap implements PurchasesUpdatedListener {
             for (Purchase purchase : purchases) {
                 handlePurchase(purchase);
             }
+            mPurchasesUpdatedListener.onPurchasesUpdated();
         } else if (responseCode == BillingClient.BillingResponse.USER_CANCELED) {
             // Handle an error caused by a user cancelling the purchase flow.
         } else {
@@ -101,58 +104,59 @@ public class GoogleIap implements PurchasesUpdatedListener {
         mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
     }
 
-
-    private void onQueryPurchasesFinished(Purchase.PurchasesResult result) {
-        // Have we been disposed of in the meantime? If so, or bad result code, then quit
-        if (mBillingClient == null || result.getResponseCode() != BillingClient.BillingResponse.OK) {
-            EventCollector.logEvent("google play billing", "queryPurchases", Integer.toString(result.getResponseCode()));
-            return;
-        }
-
-        onPurchasesUpdated(BillingClient.BillingResponse.OK, result.getPurchasesList());
-        mPurchasesUpdatedListener.onPurchasesUpdated();
-    }
-
     public void queryPurchases() {
         Runnable queryToExecute = new Runnable() {
             @Override
             public void run() {
-                Purchase.PurchasesResult purchasesResult = mBillingClient.queryPurchases(BillingClient.SkuType.INAPP);
-
-                onQueryPurchasesFinished(purchasesResult);
+                mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, GoogleIap.this);
             }
         };
 
         executeServiceRequest(queryToExecute);
     }
 
-    private void startServiceConnection(final Runnable executeOnSuccess) {
+    private void startServiceConnection() {
+        if(mIsServiceConnecting) {
+            return;
+        }
+        
+        mIsServiceConnecting = true;
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
             public void onBillingSetupFinished(@BillingClient.BillingResponse int billingResponseCode) {
+
                 EventCollector.logEvent("google play billing", Integer.toString(billingResponseCode));
 
                 if (billingResponseCode == BillingClient.BillingResponse.OK) {
                     mIsServiceConnected = true;
-                    if (executeOnSuccess != null) {
-                        executeOnSuccess.run();
+                    for (Runnable runnable:mRequests) {
+                        getExecutor().execute(runnable);
                     }
                 }
+                mIsServiceConnecting = false;
             }
 
             @Override
             public void onBillingServiceDisconnected() {
                 mIsServiceConnected = false;
+                mIsServiceConnecting = false;
             }
         });
     }
 
-    private void executeServiceRequest(Runnable runnable) {
-        if (isServiceConnected()) {
-            runnable.run();
-        } else {
-            startServiceConnection(runnable);
-        }
+    private void executeServiceRequest(final Runnable runnable) {
+        Game.instance().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (isServiceConnected()) {
+                    getExecutor().execute(runnable);
+                } else {
+                    mRequests.add(runnable);
+                    startServiceConnection();
+                }
+            }
+        });
+
     }
 
     private boolean verifySignature(String signedData, String signature) {
@@ -170,16 +174,28 @@ public class GoogleIap implements PurchasesUpdatedListener {
 
     public String getSkuPrice(String sku) {
         String skuLowerCase = sku.toLowerCase(Locale.ROOT);
-        if(mSkuDetails.containsKey(skuLowerCase)) {
+        if (mSkuDetails.containsKey(skuLowerCase)) {
             return mSkuDetails.get(skuLowerCase).getPrice();
         } else {
-            EventCollector.logEvent("GoogleIap","no sku", sku);
+            EventCollector.logEvent("GoogleIap", "no sku", sku);
             return "N/A";
         }
     }
 
+    private Executor getExecutor() {
+        return Game.instance().executor;
+    }
+
     public boolean isServiceConnected() {
-        return mIsServiceConnected;
+        return mIsServiceConnected && !mIsServiceConnecting;
+    }
+
+    @Override
+    public void onPurchaseHistoryResponse(int responseCode, List<Purchase> purchasesList) {
+        if (responseCode != BillingClient.BillingResponse.OK) {
+            EventCollector.logEvent("google play billing","queryPurchasesHistory",Integer.toString(responseCode));
+        } else {
+            onPurchasesUpdated(responseCode, purchasesList);
+        }
     }
 }
-
