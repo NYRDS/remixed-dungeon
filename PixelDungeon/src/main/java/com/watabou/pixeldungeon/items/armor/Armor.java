@@ -228,6 +228,7 @@ public class Armor extends EquipableItem {
 		} else {
 			info.append(Utils.format(Game.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
+				info.append(" ");
 				info.append(Game.getVar(R.string.Armor_Info5));
 			}
 		}
