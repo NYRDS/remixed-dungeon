@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -12,7 +10,6 @@ import com.watabou.pixeldungeon.levels.Level;
 
 public class MobSpawner {
 
-	@NonNull
 	static public void spawnRandomMob(Level level, Mob parent) {
 		int position = parent.getPos();
 
