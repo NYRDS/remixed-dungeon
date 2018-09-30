@@ -13,7 +13,7 @@ repositories {
 def jks_keyAlias    = hasProperty('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
 def jks_keyPassword = hasProperty('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
 def jks_storePassword = hasProperty('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
-
+def jks_storePath = hasProperty('jks_storePath') ? System.getenv('jks_storePath') : 'testKey/test.jks'
 
 android {
 
@@ -21,7 +21,7 @@ android {
         release {
             keyAlias jks_keyAlias
             keyPassword jks_keyPassword
-            storeFile file('testKey/test.jks')
+            storeFile file(jks_storePath)
             storePassword jks_storePassword
         }
     }
@@ -31,8 +31,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 572
-        versionName "remix.28.4.alpha.1.3"
+        versionCode 573
+        versionName "remix.28.4.alpha.1.4"
     }
 
     buildTypes {
