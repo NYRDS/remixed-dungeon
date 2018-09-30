@@ -36,10 +36,10 @@
   <string name="HuntressArmor_NotHuntress">이 갑옷은 사냥꾼만 착용 가능하다.</string>
   <!--STRINGS OF LeatherArmor CLASS-->
   <string name="LeatherArmor_Name">가죽 갑옷</string>
-  <string name="LeatherArmor_Desc">무두질한 몬스터의 가죽으로 만든 갑옷. 천 갑옷만큼 가볍지는 않지만 더 나은 방어력을 제공한다.</string>
+  <string name="LeatherArmor_Desc">몬스터의 가죽을 무두질해 만든 갑옷. 천 갑옷만큼 가볍지는 않지만 더 나은 방어력을 제공한다.</string>
   <!--STRINGS OF MageArmor CLASS-->
   <string name="MageArmor_Name">마법사의 로브</string>
-  <string name="MageArmor_Desc">이 멋진 로브를 입고있는 마법사는 용암 분출 주문을 사용할 수 있다; 시야의 모든 적에 불을 붙이고 움직일 수 없게 한다.</string>
+  <string name="MageArmor_Desc">이 화려한 로브를 입고있는 마법사는 용암 분출 주문을 사용할 수 있다; 시야 내 모든 적에게 불을 붙이고 움직일 수 없게 한다.</string>
   <string name="MageArmor_ACSpecial">용암 분출</string>
   <string name="MageArmor_NotMage">이 갑옷은 마법사만 착용 가능하다</string>
   <!--STRINGS OF MailArmor CLASS-->
@@ -47,20 +47,20 @@
   <string name="MailArmor_Desc">갑옷을 단단하면서도 유연하게 하기 위하여 쇠사슬을 엮어 만들었다.</string>
   <!--STRINGS OF PlateArmor CLASS-->
   <string name="PlateArmor_Name">판금 갑옷</string>
-  <string name="PlateArmor_Desc">많은 철판들을 서로 연결해 한 벌로 만들어, 이 엄청난 무게를 견딜 수 있는 모험자들에게는 비교할 수 없는 방어력을 제공한다.</string>
+  <string name="PlateArmor_Desc">많은 철판들을 서로 연결해 한 벌로 만들어, 이 엄청난 무게를 견딜 수 있는 모험자들에게 어마어마한 방어력을 제공한다.</string>
   <!--STRINGS OF RogueArmor CLASS-->
-  <string name="RogueArmor_Name">로그의 의복</string>
-  <string name="RogueArmor_Desc">이 어둠의 의복을 입는다면, 로그는 \"연막탄\" 이라는 술수를 부릴 수 있게 된다 (폭발물을 사용하진 않지만 말이다): 적들의 눈을 멀게 하고 옆으로 회피한다.</string>
+  <string name="RogueArmor_Name">도적의 의복</string>
+  <string name="RogueArmor_Desc">이 어둠의 의복을 입는다면, 로그는 \"연막탄\" 이라는 기술를 부릴 수 있게 된다 (폭발물을 사용하진 않지만): 적들의 눈을 멀게 하고 옆으로 회피한다.</string>
   <string name="RogueArmor_ACSpecial">연막탄</string>
-  <string name="RogueArmor_NotRogue">이 갑옷은 로그만 착용 가능하다</string>
-  <string name="RogueArmor_Fov">시야에 들어오는 비어있는 위치로만 점프할 수 있다.</string>
-  <string name="RogueArmor_Prompt">점프할 위치 선택</string>
+  <string name="RogueArmor_NotRogue">이 갑옷은 도적만 착용 가능하다</string>
+  <string name="RogueArmor_Fov">시야 내의 빈 위치에만 이동할 수 있다.</string>
+  <string name="RogueArmor_Prompt">이동할 위치 선택</string>
   <!--STRINGS OF ScaleArmor CLASS-->
   <string name="ScaleArmor_Name">미늘 갑옷</string>
   <string name="ScaleArmor_Desc">가죽 조끼 표면에 철판을 꿰메어 유연하면서도 방어력이 강한 갑옷을 만들었다.</string>
   <!--STRINGS OF WarriorArmor CLASS-->
   <string name="WarriorArmor_Name">전사의 갑주</string>
-  <string name="WarriorArmor_Desc">이 갑옷이 보기엔 무거워 보일지 모르나 착용한 전사에게 영웅적 도약을 가능케 한다. 영웅적 도약으로 목표 지점을 강하게 내리치며 주변의 모든 적을 스턴시킬 수 있다.</string>
+  <string name="WarriorArmor_Desc">이 갑옷이 보기엔 무거워 보일지 모르나 착용한 전사에게 영웅의 도약을 가능케 한다. 영웅의 도약으로 목표 지점을 강하게 내리치며 주변의 모든 적을 기절시킬 수 있다.</string>
   <string name="WarriorArmor_ACSpecial">영웅의 도약</string>
   <string name="WarriorArmor_NotWarrior">이 갑옷은 전사만 착용 가능하다.</string>
   <string name="WarriorArmor_Prompt">도약할 방향을 선택하라.</string>

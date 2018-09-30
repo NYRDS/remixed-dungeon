@@ -28,7 +28,7 @@
   <string name="Bat_Name">흡혈 박쥐</string>
   <string name="Bat_Gender">남성</string>
   <string name="Bat_Name_Objective">흡혈 박쥐</string>
-  <string name="Bat_Desc">이 민첩하고 끈질긴 동굴 천장의 주민은 공격 성공시마다 흡혈을 통해 자기 보다 훨씬 큰 상대도 제압할 수 있다.</string>
+  <string name="Bat_Desc">이 민첩하고 끈질긴 동굴 천장의 주민은 공격에 성공할 때마다 흡혈을 해서 자기보다 훨씬 큰 상대도 제압할 수 있다.</string>
   <string name="Bat_Defense">회피</string>
   <!--STRINGS OF Brute CLASS-->
   <string name="Brute_Name">놀 정예병</string>
@@ -41,16 +41,16 @@
   <string name="Crab_Name">하수구 게</string>
   <string name="Crab_Gender">남성</string>
   <string name="Crab_Name_Objective">하수구 게</string>
-  <string name="Crab_Desc">이 거대한 게들은 하수구 먹이사슬의 최상의 포식자다. 그들은 매우 빠르고 그들의 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
+  <string name="Crab_Desc">이 거대한 게들은 하수구 먹이사슬의 최상위 포식자다. 그들은 매우 빠르고 그들의 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
   <string name="Crab_Defense">막음</string>
   <!--STRINGS OF DM300 CLASS-->
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">남성</string>
   <string name="DM300_Name_Objective">DM-300</string>
-  <string name="DM300_Desc">이 기계는 드워프에 의해 수세기 전에 만들어 졌다. 시간이 지남에 따라 이들은 골렘, 정령, 심지어는 악마들로 교체되어 갔고, 이 때문에 드워프들의 문명은 쇠퇴하게 되었다. DM-300 및 이와 유사한 기계들은 건설, 채광, 또는 도시 방어를 위해 사용되었다.</string>
-  <string name="DM300_Info1">DM-300이 스스로를 수리했다!</string>
-  <string name="DM300_Info2">임무 실패. 종료됩니다.</string>
-  <string name="DM300_Info3">무단 출입 감지됨.</string>
+  <string name="DM300_Desc">이 기계는 드워프에 의해 수세기 전에 만들어 졌다. 시대가 흐르며 이들은 골렘, 정령, 심지어는 악마들로 교체되어 갔고, 이 때문에 드워프들의 문명은 쇠퇴하게 되었다. DM-300 및 이와 유사한 기계들은 건설, 채광, 또는 도시 방어를 위해 사용되었다.</string>
+  <string name="DM300_Info1">DM-300이 스스로 자신을 수리했다!</string>
+  <string name="DM300_Info2">임무 실패. 작동을 정지합니다.</string>
+  <string name="DM300_Info3">무단 침입 감지.</string>
   <!--STRINGS OF Elemental CLASS-->
   <string name="Elemental_Name">불의 정령</string>
   <string name="Elemental_Gender">남성</string>
@@ -71,13 +71,13 @@
   <string name="Golem_Name">골렘</string>
   <string name="Golem_Gender">남성</string>
   <string name="Golem_Name_Objective">골렘</string>
-  <string name="Golem_Desc">드워프들은 그들의 기계에 대한 지식과 새로 발견한 정령의 힘을 서로 융합하려고 하였다. 그들은 토양의 정기를 \"영혼\"으로 이용하여 골렘의 기계로된 몸체에 넣었고, 이를 조종할 수 있을거라고 믿어 의심치 않았다. 그럼에도 불구하고, 의식 도중의 아주 사소한 실수에도 재앙을 초래할 수 있다.</string>
+  <string name="Golem_Desc">드워프들은 그들의 기계에 대한 지식과 새로 발견한 정령의 힘을 서로 융합하려고 하였다. 그들은 토양의 정기를 \"영혼\"으로 이용하여 골렘의 기계로 된 몸체에 넣었고, 이를 조종할 수 있을거라고 믿어 의심치 않았다. 그럼에도 불구하고, 의식 도중에 아주 사소한 실수라도 재앙을 초래할 수 있다.</string>
   <string name="Golem_Defense">막음</string>
   <!--STRINGS OF Goo CLASS-->
   <string name="Goo_Name">블랙 푸딩</string>
   <string name="Goo_Gender">여성</string>
   <string name="Goo_Name_Objective">블랙 푸딩</string>
-  <string name="Goo_Desc">블랙 푸딩에 대해서는 알려진게 없다. 생물이 아니라, 오히려 하수구로부터의 물질들이 접적된 것에 자유 의지의 씨앗이 깃든 무언가일 가능성도 있다. 어느 쪽이든 간에, 어둠의 마법이 이 곳에 영향을 미치고 있는게 틀림없다.</string>
+  <string name="Goo_Desc">블랙 푸딩에 대해서는 알려진 것이 없다. 생물이 아니라, 오히려 하수구의 물질들이 모인 것에 자유 의지의 씨앗이 깃든 무언가일 가능성도 있다. 무엇이든 간에, 흑마법이 이 곳에 영향을 미치고 있는게 틀림없다.</string>
   <string name="Goo_Info1">블랙 푸딩이 부풀어 오르기 시작했다!</string>
   <string name="Goo_Info2">꾸룩...꾸룩....</string>
   <string name="Goo_Info3">꾸룩-꾸룩!</string>
@@ -86,7 +86,7 @@
   <string name="King_Name">드워프 왕</string>
   <string name="King_Gender">남성</string>
   <string name="King_Name_Objective">드워프 왕</string>
-  <string name="King_Desc">드워프의 마지막 왕은 생명과 죽음의 원리에 대해 깊은 지식을 가진 것으로 잘 알려져 있다. 그는 의회의 의원들을 영원한 젊음을 얻을 수 있다고 설득하여 의식에 참여하게 하였다. 마지막에 그걸 얻은건 왕 혼자 뿐이었다. 그리고 그는 보너스로 언데드 군대도 얻었다.</string>
+  <string name="King_Desc">드워프의 마지막 왕은 생명과 죽음의 원리에 대해 깊은 지식을 가진 것으로 잘 알려져 있다. 그는 의회의 의원들을 영원한 젊음을 얻을 수 있다고 설득하여 의식에 참여하게 하였다. 마지막에 그걸 얻은건 왕 혼자 뿐이었다. 그리고 그는 덤으로 언데드 군대도 얻었다.</string>
   <string name="King_Defense">막음</string>
   <string name="King_Info1">넌 나를 죽일 수 없다, %s... 나는... 불사신이다...</string>
   <string name="King_Info2">일어나라, 노예들아!</string>
@@ -94,13 +94,13 @@
   <string name="Undead_Name">언데드 드워프</string>
   <string name="Undead_Gender">남성</string>
   <string name="Undead_Name_Objective">언데드 드워프</string>
-  <string name="Undead_Desc">드워프 왕의 의지에 의해 살아난 언데드 드워프들은 왕의 의회의 구성원들이었다. 그들은 해골의 형상에 얼굴에는 엄청나게 수염이 많이 붙어있는 꼴을 하고 있다.</string>
-  <string name="Undead_Defense">막았다</string>
+  <string name="Undead_Desc">드워프 왕의 의지에 의해 살아난 언데드 드워프들은 왕의 의회의 구성원이었다. 그들은 해골의 형상에 얼굴에는 수염이 엄청 많이 붙어있는 꼴을 하고 있다.</string>
+  <string name="Undead_Defense">막음</string>
   <!--STRINGS OF Mimic CLASS-->
   <string name="Mimic_Name">미믹</string>
   <string name="Mimic_Gender">남성</string>
   <string name="Mimic_Name_Objective">미믹</string>
-  <string name="Mimic_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법의 생물이다. 던전에서 그들은 거의 항상 보물상자 형상을 하고 있는데, 어떻게 하면 모험가들을 유인할 수 있는지 잘 알기 때문이다.</string>
+  <string name="Mimic_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법의 생물이다. 던전에서 그들은 거의 항상 보물상자 형상을 하고 있는데, 어떻게 해야 모험가들을 유인할 수 있는지 잘 알기 때문이다.</string>
   <!--STRINGS OF MimicPie CLASS-->
   <string name="MimicPie_Name">미믹</string>
   <string name="MimicPie_Gender">남성</string>
@@ -117,12 +117,12 @@
   <string name="Piranha_Name">거대 피라냐</string>
   <string name="Piranha_Gender">여성</string>
   <string name="Piranha_Name_Objective">거대 피라냐</string>
-  <string name="Piranha_Desc">이 식인 물고기는 지하 웅덩이의 자연적인 생물이 아니다. 그들은 침수된 보물창고를 지키기 위해 특별히 사육된 녀석들이다.</string>
+  <string name="Piranha_Desc">이 식인 물고기는 지하 웅덩이의 자연적인 생물이 아니다. 그들은 물에 잠긴 보물창고를 지키기 위해 특별히 사육된 녀석들이다.</string>
   <!--STRINGS OF Rat CLASS-->
   <string name="Rat_Name">주머니 쥐</string>
   <string name="Rat_Gender">여성</string>
   <string name="Rat_Name_Objective">주머니 쥐</string>
-  <string name="Rat_Desc">거대 주머니 쥐는 포악하지만 비교적 약한 하수구 거주자다.  많은 수가 모이지 않으면 그닥 위험하지 않다.</string>
+  <string name="Rat_Desc">거대 주머니 쥐는 포악하지만 비교적 약한 하수구 거주자다.  많은 수가 모이지 않으면 그다지 위험하지 않다.</string>
   <!--STRINGS OF Scorpio CLASS-->
   <string name="Scorpio_Name">거대 전갈</string>
   <string name="Scorpio_Gender">남성</string>
@@ -132,7 +132,7 @@
   <string name="Senior_Name">고위 드워프 수도승</string>
   <string name="Senior_Gender">남성</string>
   <string name="Senior_Name_Objective">고위 드워프 수도승</string>
-  <string name="Senior_Desc">외부 침략자들로부터 자신들의 도시의 비밀을 지키는데 헌신하는 이 수도승들은 광기에 빠져 있다. 그들은 아무런 갑옷도 무기도 사용하지 않고, 오직 맨주먹에 의지하여 싸운다. 이 특별한 몽크는 상대를 불구로 만들어 버리는 기술의 달인이다.</string>
+  <string name="Senior_Desc">외부 침략자들로부터 자신들의 도시에 있는 비밀을 지키는데 헌신하는 이 수도승들은 광기에 빠져 있다. 그들은 아무런 갑옷도 무기도 사용하지 않고, 오직 맨주먹에 의지하여 싸운다. 이 특별한 몽크는 상대를 불구로 만들어 버리는 기술의 달인이다.</string>
   <!--STRINGS OF Shadow CLASS-->
   <string name="Shadow_Name">그림자</string>
   <string name="Shadow_Gender">여성</string>
@@ -154,19 +154,19 @@
   <string name="Skeleton_Name">해골</string>
   <string name="Skeleton_Gender">남성</string>
   <string name="Skeleton_Name_Objective">해골</string>
-  <string name="Skeleton_Desc">해골은 운 없는 모험가들이나 던전에 사는 생물들의 시체에서 나온 뼈들로 이루어져 있고, 저 깊은 곳으로부터 뿜어나오는 악마의 주문에 의해 살아 움직인다. 어느 이상 데미지를 받게되면 뼈의 폭발로 산산조각 난다.</string>
+  <string name="Skeleton_Desc">해골은 운 없는 모험가들이나 던전에 사는 생물들의 시체에서 나온 뼈들로 이루어져 있고, 저 깊은 곳으로부터 뿜어나오는 악마의 주문에 의해 살아 움직인다. 어느 이상 데미지를 받게되면 뼈가 폭발하며 산산조각 난다.</string>
   <string name="Skeleton_Defense">막음</string>
-  <string name="Skeleton_Killed">당신은 뼈의 폭발에 맞아 죽었다...</string>
+  <string name="Skeleton_Killed">당신은 폭발한 뼈에 맞아 죽었다...</string>
   <!--STRINGS OF Spinner CLASS-->
   <string name="Spinner_Name">동굴 거미</string>
   <string name="Spinner_Gender">남성</string>
   <string name="Spinner_Name_Objective">동굴 거미</string>
   <string name="Spinner_Desc">이 초록색 털복숭이 동굴 거미들은 직접 전투를 꺼려 하는 대신, 그들의 희생자들이 독에 물린채 그들이 뿜어 놓은 거미줄에 걸려 서서히 죽어가는 것을 멀리서 지켜보는 걸 좋아한다.</string>
   <!--STRINGS OF Statue CLASS-->
-  <string name="Statue_Name">살아 움직이는 조각상</string>
+  <string name="Statue_Name">살아있는 조각상</string>
   <string name="Statue_Gender">여성</string>
-  <string name="Statue_Name_Objective">살아 움직이는 조각상</string>
-  <string name="Statue_Desc">당신은 이 조각상을 던전에 있는 못생긴 여느 조각상과 다를바 없다고 생각 할수도 있겠지만, 붉게 빛나는 눈이 그러한 생각을 사라지게 합니다. 조각상 자체는 돌로 만들어져 있지만,착용한  _%s_는 진짜 같습니다.</string>
+  <string name="Statue_Name_Objective">살아있는 조각상</string>
+  <string name="Statue_Desc">당신은 이 조각상을 던전에 있는 못생긴 여느 조각상과 다를바 없다고 생각 할 수도 있겠지만, 붉게 빛나는 눈이 그러한 생각을 사라지게 합니다. 조각상 자체는 돌로 만들어져 있지만, 착용한  _%s_는 진짜 같습니다.</string>
   <!--STRINGS OF Succubus CLASS-->
   <string name="Succubus_Name">서큐버스</string>
   <string name="Succubus_Gender">남성</string>
@@ -182,21 +182,21 @@
   <string name="Tengu_Name">텐구</string>
   <string name="Tengu_Gender">남성</string>
   <string name="Tengu_Name_Objective">텐구</string>
-  <string name="Tengu_Desc">덴구는 고대 암살 집단의 일원이다. 이들 암살자들은 수리검과 함정을 다루는 데 능하다.</string>
-  <string name="Tengu_Info1">드디어 해방이구나...</string>
+  <string name="Tengu_Desc">덴구는 고대 암살단의 일원이다. 이들 암살자들은 수리검과 함정을 다루는 데 능하다.</string>
+  <string name="Tengu_Info1">드디어 해방이로구나...</string>
   <string name="Tengu_Info2">잡았다, %s!</string>
   <!--STRINGS OF Thief CLASS-->
   <string name="Thief_Name">미친 도둑</string>
   <string name="Thief_Gender">남성</string>
   <string name="Thief_Name_Objective">미친 도둑</string>
-  <string name="Thief_Desc">던전 깊이 들어가면 갈수록 언제나 오만 가지의 범죄자들이 숨는 소굴이 있습니다. 햇볕을 제대로 보지 못했기 때문에 제대로 된 정신을 차리고 있는 자들은 몇 되지 않습니다. 오래 전부터 이 정신나간 도둑들은 자신이 누구고 왜 훔치는지조차 잊어버렸습니다 .</string>
+  <string name="Thief_Desc">던전 깊이 들어가면 갈수록 언제나 오만 가지의 범죄자들이 숨는 소굴이 있습니다. 햇빛을 제대로 보지 못했기 때문에 정신을 차리고 있는 자들은 몇 되지 않습니다. 오래 전부터 이 정신나간 도둑들은 자신이 누구이며 도둑질을 하는 이유조차 잊어버렸습니다 .</string>
   <string name="Thief_Stole">%1$s 이 당신한테서 %2$s 을/를 훔쳤다!</string>
-  <string name="Thief_Carries">\n\n%1$s 이 _%2$s_를 들고 있다. 분명히 훔친거다.</string>
+  <string name="Thief_Carries">\n\n%1$s 이 _%2$s_를 들고 있다. 훔친 것이 분명하다.</string>
   <!--STRINGS OF Warlock CLASS-->
   <string name="Warlock_Name">드워프 흑마법사</string>
   <string name="Warlock_Gender">남성</string>
   <string name="Warlock_Name_Objective">드워프 흑마법사</string>
-  <string name="Warlock_Desc">드워프들의 관심이 기술에서 비밀스런 마법으로 옮겨갔을 때, 흑마법사들이 도시에서 힘을 얻기 시작했다. 그들은 원소 마법으로 시작했지만, 얼마 지나지 않아 악마술과 사령술에 손을 뻗었다.</string>
+  <string name="Warlock_Desc">드워프들의 관심이 기술에서 비밀스런 마법으로 옮겨갔을 때, 흑마법사들이 도시에서 힘을 얻기 시작했습니다. 그들은 원소 마법으로 시작했지만, 얼마 지나지 않아 악마술과 사령술에 손을 뻗었습니다.</string>
   <string name="Warlock_Killed">%s의 암흑 화살이 당신을 죽였다...</string>
   <!--STRINGS OF Wraith CLASS-->
   <string name="Wraith_Name">유령</string>
@@ -208,9 +208,9 @@
   <string name="Yog_Name">요그-제바</string>
   <string name="Yog_Gender">남성</string>
   <string name="Yog_Name_Objective">요그-제바</string>
-  <string name="Yog_Desc">요그-제바는 혼돈의 왕국의 강력한 고대의 신이다. 한 세기 전, 고대 드워프들은 악마의 군대와 싸워 간신히 이겼지만, 신은 죽이지 못했다. 그 대신, 그들은 자신들의 도시 아래에 있는 홀에 이 신을 가두고는, 그가 다시는 일어서지 못할 정도로 약해지기를 바랬다.</string>
+  <string name="Yog_Desc">요그-제바는 혼돈의 왕국의 강력한 고대의 신이다. 한 세기 전, 고대 드워프들은 악마의 군대와 싸워 간신히 이겼지만, 신을 죽이지 못했다. 그 대신, 그들은 자신들의 도시 아래에 있는 홀에 이 신을 가두고는, 그가 다시는 일어서지 못할 정도로 약해지기를 바랬다.</string>
   <string name="Yog_Info1">...</string>
-  <string name="Yog_Info2">저게 환상이길 빈다.....</string>
+  <string name="Yog_Info2">희망은 환상에 불과하리...</string>
   <string name="RottingFist_Name">썩어가는 주먹</string>
   <string name="RottingFist_Gender">남성</string>
   <string name="RottingFist_Name_Objective">썩어가는 주먹</string>
@@ -242,7 +242,7 @@
   <string name="SpiderExploding_Name">거미 일꾼</string>
   <string name="SpiderExploding_Gender">남성</string>
   <string name="SpiderExploding_Name_Objective">거미 일꾼</string>
-  <string name="SpiderExploding_Desc">평화 시에는 성실한 일꾼이지만, 이 짐승들은 적에게 돌진하고 마주치는 식물을 움켜 잡는것을 마다하지 않음으로써 그들을 살아있는 폭탄으로 변모시킨다.</string>
+  <string name="SpiderExploding_Desc">평화로울 때는 성실한 일꾼이지만, 이 짐승들은 적에게 돌진하고 마주치는 식물을 움켜 잡는것을 마다하지 않음으로써 자신을 살아있는 폭탄으로 변모시킨다.</string>
   <!--STRINGS OF SpiderMind CLASS-->
   <string name="SpiderMind_Name">정신 거미</string>
   <string name="SpiderMind_Gender">남성</string>
