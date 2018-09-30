@@ -51,4 +51,9 @@
     -- Feitiços modificáveis\n
     -- Itens modificáveis\n
     </string>
+  <string name="Welcome_Text_28_4">
+    remix.28.4\n
+    - Melhorias Gráficas:\n
+    -- As armas do herói agora são visíveis no jogo\n
+    </string>
 </resources>
