@@ -5,6 +5,7 @@ import android.content.Context;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
@@ -15,6 +16,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.IPurchasesUpdated;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -24,7 +26,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 
-public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryResponseListener {
+public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
 
     private final Map<String, Purchase> mPurchases = new HashMap<>();
     private BillingClient mBillingClient;
@@ -100,7 +102,8 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
             EventCollector.logEvent("GoogleIap", "bad signature");
             return;
         }
-
+        //GLog.w("purchase: %s",purchase.toString());
+        //mBillingClient.consumeAsync(purchase.getPurchaseToken(),this);
         mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
     }
 
@@ -108,7 +111,10 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         Runnable queryToExecute = new Runnable() {
             @Override
             public void run() {
-                mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, GoogleIap.this);
+                Purchase.PurchasesResult result = mBillingClient.queryPurchases(BillingClient.SkuType.INAPP);
+                onPurchasesUpdated(result.getResponseCode(), result.getPurchasesList());
+
+                //mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, GoogleIap.this);
             }
         };
 
@@ -119,7 +125,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         if(mIsServiceConnecting) {
             return;
         }
-        
+
         mIsServiceConnecting = true;
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
@@ -194,8 +200,11 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     public void onPurchaseHistoryResponse(int responseCode, List<Purchase> purchasesList) {
         if (responseCode != BillingClient.BillingResponse.OK) {
             EventCollector.logEvent("google play billing","queryPurchasesHistory",Integer.toString(responseCode));
-        } else {
-            onPurchasesUpdated(responseCode, purchasesList);
         }
+    }
+
+    @Override
+    public void onConsumeResponse(int responseCode, String purchaseToken) {
+        GLog.w("consumed: %d %s", responseCode, purchaseToken);
     }
 }
