@@ -16,14 +16,15 @@ public class MobSpawner {
 	static public void spawnRandomMob(Level level, Mob parent) {
 		int position = parent.getPos();
 
-		Mob mob = Bestiary.mob(level);
-		mob.setPos(position);
-		mob.setState(mob.WANDERING);
-		level.spawnMob(mob);
-
 		int mobPos = Dungeon.level.getEmptyCellNextTo(position);
 
 		if (Dungeon.level.cellValid(mobPos)) {
+
+			Mob mob = Bestiary.mob(level);
+			mob.setPos(position);
+			mob.setState(mob.WANDERING);
+			level.spawnMob(mob);
+
 
 			if(parent.isPet()) {
 				Mob.makePet(mob, Dungeon.hero);
