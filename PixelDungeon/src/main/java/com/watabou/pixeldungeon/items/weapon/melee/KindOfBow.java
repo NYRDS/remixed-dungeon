@@ -4,13 +4,12 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 
-public abstract class Bow extends MeleeWeapon {
+public abstract class KindOfBow extends MeleeWeapon {
 
 	private Class <? extends Arrow> arrowType = Arrow.class;
 	
-	public Bow( int tier, float acu, float dly ) {
+	public KindOfBow(int tier, float acu, float dly ) {
 		super(tier, acu, dly);
-		animation_class = BOW_ATTACK;
 	}
 	
 	public void useArrowType(Arrow arrow){

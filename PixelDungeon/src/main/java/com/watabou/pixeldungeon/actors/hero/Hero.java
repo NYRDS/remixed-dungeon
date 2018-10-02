@@ -105,7 +105,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -361,7 +361,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public boolean bowEquiped() {
-		return belongings.weapon instanceof Bow;
+		return belongings.weapon instanceof KindOfBow;
 	}
 
 	public boolean shoot(Char enemy, MissileWeapon wep) {
@@ -953,9 +953,9 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actBowAttack() {
 
-		Bow bow = (Bow) belongings.weapon;
+		KindOfBow kindOfBow = (KindOfBow) belongings.weapon;
 
-		Class<? extends Arrow> arrowType = bow.arrowType();
+		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
 
 		Arrow arrow;
 

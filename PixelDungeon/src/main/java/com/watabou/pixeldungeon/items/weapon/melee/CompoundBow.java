@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.Bow;
 import com.watabou.pixeldungeon.items.Item;
 
 public class CompoundBow extends Bow {

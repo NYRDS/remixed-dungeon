@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.Bow;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 
 public class ElvenBow extends Bow {
 
