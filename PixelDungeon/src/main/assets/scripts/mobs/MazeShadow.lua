@@ -12,7 +12,11 @@ local mob = require"scripts/lib/mob"
 return mob.init({
     interact = function(self, chr)
         local ownPos  = self:getPos()
-        local newPos = chr:getPos()
+        local newPos  = chr:getPos()
+
+        if ownPos==newPos then --hell I know how this can happen but it is
+            return
+        end
 
         self:move(newPos)
         self:getSprite():move(ownPos, newPos)
