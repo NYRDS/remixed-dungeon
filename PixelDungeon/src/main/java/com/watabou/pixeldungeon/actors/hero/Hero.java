@@ -1248,13 +1248,17 @@ public class Hero extends Char implements PetOwner {
 
 			Char actor = Actor.findChar(step);
 			if (actor instanceof Mob) {
+				Mob mob = ((Mob) actor);
 				if (actor.friendly(this)) {
-					((Mob) actor).swapPosition(this);
+					if(!mob.swapPosition(this)) {
+						return false;
+					}
 				}
 			}
 
 			move(step);
 			getSprite().move(oldPos, getPos());
+
 
 			if (wallWalkerBuff != null) {
 				int dmg = hp() / 2 > 2 ? hp() / 2 : 2;

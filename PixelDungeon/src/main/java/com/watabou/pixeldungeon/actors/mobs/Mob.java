@@ -780,14 +780,14 @@ public abstract class Mob extends Char {
 		return true;
 	}
 
-	public void swapPosition(final Char chr) {
+	public boolean swapPosition(final Char chr) {
 
 		if(!walkingType.canSpawnAt(Dungeon.level,chr.getPos())) {
-			return;
+			return false;
 		}
 
 		if(hasBuff(Roots.class)) {
-			return;
+			return false;
 		}
 
 		int curPos = getPos();
@@ -804,6 +804,7 @@ public abstract class Mob extends Char {
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
 		setState(WANDERING);
+		return true;
 	}
 
 	private void ensureOpenDoor() {
