@@ -41,6 +41,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -69,6 +70,8 @@ import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import io.fabric.sdk.android.Fabric;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -214,7 +217,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Fabric.with(this, new Crashlytics());
         EventCollector.init();
+
+        iap = new Iap(this);
 
         if (!BuildConfig.DEBUG) {
             String signature = Util.getSignature(this);
