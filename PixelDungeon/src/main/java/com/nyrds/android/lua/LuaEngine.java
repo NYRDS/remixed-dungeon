@@ -119,7 +119,7 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	private void reportLuaError(LuaError err) {
-		Notifications.displayNotification("LuaError", "RD LuaError", "err.getMessage()");
+		Notifications.displayNotification("LuaError", "RD LuaError", err.getMessage());
 
 		GLog.w(err.getMessage());
 	}
