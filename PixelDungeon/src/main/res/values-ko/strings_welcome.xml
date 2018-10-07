@@ -50,4 +50,9 @@
  -- 모드가 가능한 마법 \n
  -- 모드가 가능한 아이템 \n
  </string>
+  <string name="Welcome_Text_28_4">
+   remix.28.4\n
+   -그래픽 향상:\n
+   --이제 게임 안에서 표시되는 영웅 무기\n
+</string>
 </resources>
