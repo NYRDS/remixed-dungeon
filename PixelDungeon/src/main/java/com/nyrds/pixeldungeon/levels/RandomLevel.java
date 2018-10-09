@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -77,7 +77,7 @@ public class RandomLevel extends RegularLevel {
 			}
 
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException(e);
 		}
 
 		do {
@@ -113,7 +113,7 @@ public class RandomLevel extends RegularLevel {
 				}
 			}
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException("invalid mob desc",e);
+			throw ModdingMode.modException("invalid mob desc",e);
 		} catch (Exception e) {
 			EventCollector.logException(e);
 		}
@@ -132,7 +132,7 @@ public class RandomLevel extends RegularLevel {
 				try {
 					neededRooms.add(Room.Type.valueOf(roomsDesc.getString(i)));
 				} catch (JSONException e) {
-					e.printStackTrace();
+					EventCollector.logException(e,"bad room desc");
 				}
 			}
 		}

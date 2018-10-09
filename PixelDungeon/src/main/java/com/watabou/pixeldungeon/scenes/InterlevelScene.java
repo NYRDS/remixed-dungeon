@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.android.util.ModErrorException;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -103,12 +104,12 @@ public class InterlevelScene extends PixelScene {
 					}
 
 			} catch (FileNotFoundException e) {
-
 				error = Game.getVar(R.string.InterLevelScene_FileNotFound);
-
 			} catch (IOException e) {
 				EventCollector.logException(e);
 				error = Game.getVar(R.string.InterLevelScene_ErrorGeneric) + "\n" + e.getMessage();
+			} catch (ModErrorException e) {
+				error = e.getMessage();
 			}
 
 			if(mode != Mode.CONTINUE) {

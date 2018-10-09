@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 import com.watabou.pixeldungeon.PixelDungeon;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -32,7 +33,6 @@ public class ModdingMode {
 		//trustedMods.add("D.U.N.G.E.O.N");
 		//trustedMods.add("D.U.N.G.E.O.N");
 		//trustedMods.add("The Fallen");
-		trustedMods.add("Fallen.Zero");
 	}
 
 	@NonNull
@@ -180,5 +180,21 @@ public class ModdingMode {
 
 	private static Context getContext() {
 		return RemixedPixelDungeonApp.getContext();
+	}
+
+	public static TrackedRuntimeException modException(Exception e) {
+		if(inMod()) {
+			return new ModErrorException(mActiveMod,e);
+		} else {
+			return new TrackedRuntimeException(e);
+		}
+	}
+
+	public static TrackedRuntimeException modException(String s, JSONException e) {
+		if(inMod()) {
+			return new ModErrorException(mActiveMod+":"+s,e);
+		} else {
+			return new TrackedRuntimeException(s,e);
+		}
 	}
 }

@@ -21,6 +21,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
@@ -172,7 +173,7 @@ public enum HeroClass {
                 hero.setSoulPoints(classDesc.optInt("startingSp", 0));
 
             } catch (JSONException e) {
-                throw new TrackedRuntimeException(e);
+                throw ModdingMode.modException("bad InitHero.json",e);
             }
         }
     }

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
@@ -64,9 +65,8 @@ public class Bestiary {
 			return getMobFromCachedData();
 
 		} catch (JSONException e) {
-			Game.toast(e.getMessage());
+			throw ModdingMode.modException("bad Bestiary.json",e);
 		}
-		return MobFactory.mobRandom();
 	}
 
 	private static void cacheLevelData(Level level) throws JSONException {

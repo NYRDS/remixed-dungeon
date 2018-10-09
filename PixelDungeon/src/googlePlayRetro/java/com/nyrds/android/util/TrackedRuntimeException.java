@@ -10,8 +10,6 @@ public class TrackedRuntimeException extends RuntimeException {
 
 	public TrackedRuntimeException( Exception e) {
 		super(e);
-
-		GLog.toFile(e.getMessage());
 		EventCollector.logException(e,"");
 	}
 

@@ -279,7 +279,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 					resultCallback.status(res);
 				}catch (Exception e) {
 					EventCollector.logException(e);
-					Game.toast("Error while uploading save to cloud: ", e.getMessage());
+					Game.toast("Error while uploading save to cloud: %s", e.getMessage());
 				}
 			}
 		});
