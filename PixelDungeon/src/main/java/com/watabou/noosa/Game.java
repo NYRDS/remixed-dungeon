@@ -42,7 +42,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
-import com.nyrds.android.util.ModErrorException;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -57,11 +56,9 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.SystemTime;
 
@@ -361,17 +358,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (!softPaused) {
-            try {
-                step();
-            }
-            catch (ModErrorException e) {
-                scene.add(new WndError(e.getMessage()) {
-                    public void onBackPressed() {
-                        super.onBackPressed();
-                        Game.switchScene(StartScene.class);
-                    }
-                });
-            }
+            step();
         }
 
         NoosaScript.get().resetCamera();

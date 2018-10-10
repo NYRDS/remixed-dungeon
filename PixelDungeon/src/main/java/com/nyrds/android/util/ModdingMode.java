@@ -182,19 +182,17 @@ public class ModdingMode {
 		return RemixedPixelDungeonApp.getContext();
 	}
 
-	public static TrackedRuntimeException modException(Exception e) {
+	public static RuntimeException modException(Exception e) {
 		if(inMod()) {
-			return new ModErrorException(mActiveMod,e);
-		} else {
-			return new TrackedRuntimeException(e);
+			return new ModError(mActiveMod,e);
 		}
+		return new TrackedRuntimeException(e);
 	}
 
-	public static TrackedRuntimeException modException(String s, JSONException e) {
+	public static RuntimeException modException(String s, JSONException e) {
 		if(inMod()) {
-			return new ModErrorException(mActiveMod+":"+s,e);
-		} else {
-			return new TrackedRuntimeException(s,e);
+			return new ModError(mActiveMod + ":" + s, e);
 		}
+		return new TrackedRuntimeException(s,e);
 	}
 }
