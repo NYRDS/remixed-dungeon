@@ -42,6 +42,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -61,6 +62,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.SystemTime;
+
+import org.luaj.vm2.LuaError;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -358,7 +361,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (!softPaused) {
-            step();
+            try {
+                step();
+            } catch (LuaError e) {
+                throw ModdingMode.modException(e);
+            }
         }
 
         NoosaScript.get().resetCamera();
