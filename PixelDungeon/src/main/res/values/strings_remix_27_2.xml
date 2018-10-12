@@ -22,7 +22,7 @@
 
     <!-- STRINGS OF RootSpell CLASS -->
     <string name="RootSpell_Name">Root</string>
-    <string name="RootSpell_Info">Roots selected character making it unable to move for short period of time.</string>
+    <string name="RootSpell_Info">Roots selected character making it unable to move for short period.</string>
 
     <!-- STRINGS OF WindGust CLASS -->
     <string name="WindGust_Name">Wind gust</string>
@@ -30,7 +30,7 @@
 
     <!-- STRINGS OF FreezeGlobe CLASS -->
     <string name="FreezeGlobe_Name">Freeze</string>
-    <string name="FreezeGlobe_Info">Freezes selected character making it unable to perform any action for short period of time.</string>
+    <string name="FreezeGlobe_Info">Freezes selected character making it unable to perform any action for short period.</string>
 
     <!-- STRINGS OF MagicTorch CLASS -->
     <string name="MagicTorch_Name">Magic torch</string>
