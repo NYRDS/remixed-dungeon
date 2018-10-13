@@ -1,18 +1,14 @@
 package com.nyrds.android.util;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class Notifications {
 
@@ -20,23 +16,18 @@ public class Notifications {
 
         Notifications.createNotificationChannel(channelId);
 
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.fromFile(FileSystem.getExternalStorageFile(GLog.RE_PD_LOG_FILE_LOG)), "text/plain");
-
-        PendingIntent viewLogIntent =
-                PendingIntent.getBroadcast(RemixedPixelDungeonApp.getContext(), 0, intent, 0);
-
-
         NotificationCompat.Builder builder = new NotificationCompat.Builder(Game.instance(), channelId)
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(title)
                 .setContentText(text)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(text))
-                .setContentIntent(viewLogIntent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
+        Notification notification = builder.build();
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(Game.instance());
-        notificationManager.notify(1, builder.build());
+        notificationManager.notify(1, notification);
     }
 
     static private void createNotificationChannel(String channelId) {
