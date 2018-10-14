@@ -106,7 +106,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -139,25 +139,26 @@ import java.util.Collection;
 import java.util.Set;
 
 public class Hero extends Char implements PetOwner {
-	private static final String TXT_EXP   = "%+dEXP";
+	private static final String TXT_EXP = "%+dEXP";
 
 	public static final int STARTING_STR = 10;
 
-	private static final float TIME_TO_REST   = 1f;
+	private static final float TIME_TO_REST = 1f;
 	private static final float TIME_TO_SEARCH = 2f;
 
 	@Nullable
 	static public Runnable doOnNextAction;
 
-	public HeroClass    heroClass = HeroClass.ROGUE;
-	public HeroSubClass subClass  = HeroSubClass.NONE;
+	public HeroClass heroClass = HeroClass.ROGUE;
+	public HeroSubClass subClass = HeroSubClass.NONE;
 
 	public boolean spellUser;
 
-	private int attackSkill  = 10;
+	private int attackSkill = 10;
 	private int defenseSkill = 5;
 
-	private boolean    ready      = false;
+	private boolean ready = false;
+	public CharAction curAction = null;
 	public CharAction lastAction = null;
 
 	private Char enemy;
@@ -176,11 +177,11 @@ public class Hero extends Char implements PetOwner {
 
 	private float awareness;
 
-	private int lvl      = Scrambler.scramble(1);
+	private int lvl = Scrambler.scramble(1);
 	private int magicLvl = Scrambler.scramble(1);
-	private int exp      = Scrambler.scramble(0);
-	private int sp       = Scrambler.scramble(0);
-	private int maxSp    = Scrambler.scramble(0);
+	private int exp = Scrambler.scramble(0);
+	private int sp = Scrambler.scramble(0);
+	private int maxSp = Scrambler.scramble(0);
 
 	public String levelId;
 
@@ -245,19 +246,19 @@ public class Hero extends Char implements PetOwner {
 		return Scrambler.descramble(STR);
 	}
 
-	private static final String ATTACK           = "attackSkill";
-	private static final String DEFENSE          = "defenseSkill";
-	private static final String STRENGTH         = "STR";
-	private static final String LEVEL            = "lvl";
-	private static final String EXPERIENCE       = "exp";
-	private static final String LEVEL_ID         = "levelId";
-	private static final String DIFFICULTY       = "difficulty";
-	private static final String PETS             = "pets";
-	private static final String SP               = "sp";
-	private static final String MAX_SP           = "maxsp";
+	private static final String ATTACK = "attackSkill";
+	private static final String DEFENSE = "defenseSkill";
+	private static final String STRENGTH = "STR";
+	private static final String LEVEL = "lvl";
+	private static final String EXPERIENCE = "exp";
+	private static final String LEVEL_ID = "levelId";
+	private static final String DIFFICULTY = "difficulty";
+	private static final String PETS = "pets";
+	private static final String SP = "sp";
+	private static final String MAX_SP = "maxsp";
 	private static final String PORTAL_LEVEL_POS = "portalLevelPos";
-	private static final String IS_SPELL_USER    = "isspelluser";
-	private static final String MAGIC_LEVEL      = "magicLvl";
+	private static final String IS_SPELL_USER = "isspelluser";
+	private static final String MAGIC_LEVEL = "magicLvl";
 
 	private void refreshPets() {
 		ArrayList<Mob> alivePets = new ArrayList<>();
@@ -326,7 +327,7 @@ public class Hero extends Char implements PetOwner {
 
 		ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection(PETS, Mob.class));
 
-		for(Mob pet : loadedPets) {
+		for (Mob pet : loadedPets) {
 			Mob.makePet(pet, this);
 		}
 
@@ -362,7 +363,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public boolean bowEquiped() {
-		return belongings.weapon instanceof Bow;
+		return belongings.weapon instanceof KindOfBow;
 	}
 
 	public boolean shoot(Char enemy, MissileWeapon wep) {
@@ -774,7 +775,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public void itemPickedUp(Item item) {
-		if(item.announcePickUp()) {
+		if (item.announcePickUp()) {
 			if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
 					|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
 				GLog.p(Game.getVar(R.string.Hero_YouNowHave), item.name());
@@ -883,7 +884,7 @@ public class Hero extends Char implements PetOwner {
 				hunger.satisfy(-Hunger.STARVING / 10);
 			}
 
-            InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
+			InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
 
 			return false;
 
@@ -964,9 +965,9 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actBowAttack() {
 
-		Bow bow = (Bow) belongings.weapon;
+		KindOfBow kindOfBow = (KindOfBow) belongings.weapon;
 
-		Class<? extends Arrow> arrowType = bow.arrowType();
+		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
 
 		Arrow arrow;
 
@@ -1051,7 +1052,7 @@ public class Hero extends Char implements PetOwner {
 						Wand wand = (Wand) wep;
 						if (wand.affectTarget()) {
 							if (Random.Int(4) == 0) {
-								wand.zapCell(this,enemy.getPos());
+								wand.zapCell(this, enemy.getPos());
 							}
 						}
 					}
@@ -1260,14 +1261,18 @@ public class Hero extends Char implements PetOwner {
 			}
 
 			Char actor = Actor.findChar(step);
-			if(actor instanceof Mob) {
+			if (actor instanceof Mob) {
+				Mob mob = ((Mob) actor);
 				if (actor.friendly(this)) {
-					((Mob) actor).swapPosition(this);
+					if(!mob.swapPosition(this)) {
+						return false;
+					}
 				}
 			}
 
 			move(step);
 			moveSprite(oldPos,getPos());
+
 
 			if (wallWalkerBuff != null) {
 				int dmg = hp() / 2 > 2 ? hp() / 2 : 2;
@@ -1540,7 +1545,7 @@ public class Hero extends Char implements PetOwner {
 
 	public static void reallyDie(final Object cause) {
 
-		if (Dungeon.hero.getDifficulty() < 2) {
+		if (Dungeon.hero.getDifficulty() < 2 && !Game.isPaused()) {
 			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)) {
 				@Override
 				public void hide() {
@@ -1578,19 +1583,24 @@ public class Hero extends Char implements PetOwner {
 	@Override
 	public void onAttackComplete() {
 
-		if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
-			Rat rat = (Rat) enemy;
-			Mob.makePet(rat, this);
+		if (enemy != null) { // really strange crash here
+			if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
+				Rat rat = (Rat) enemy;
+				Mob.makePet(rat, this);
+			} else {
+				AttackIndicator.target(enemy);
+				attack(enemy);
+
+				if (belongings.weapon instanceof SpecialWeapon) {
+					((SpecialWeapon) belongings.weapon).postAttack(this, enemy);
+				}
+
+			}
 		} else {
-			AttackIndicator.target(enemy);
-			attack(enemy);
+			EventCollector.logEvent("bug", "hero attacks null enemy");
 		}
+
 		curAction = null;
-
-		if(belongings.weapon instanceof SpecialWeapon) {
-			((SpecialWeapon) belongings.weapon).postAttack(this, enemy);
-		}
-
 
 		Invisibility.dispel(this);
 
@@ -1767,7 +1777,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	protected CharSprite sprite() {
+    public CharSprite sprite() {
 		return new HeroSpriteDef(this);
 	}
 

@@ -669,7 +669,7 @@ public abstract class Char extends Actor implements Presser{
 		return sprite;
 	}
 
-	protected abstract CharSprite sprite();
+	public abstract CharSprite sprite();
 
 	public int ht() {
 		return Scrambler.descramble(HT);

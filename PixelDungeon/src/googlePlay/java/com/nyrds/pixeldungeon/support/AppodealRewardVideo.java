@@ -97,6 +97,11 @@ public class AppodealRewardVideo {
 					public void onRewardedVideoClosed(final boolean finished) {
 						returnTo.returnToWork(finished);
 					}
+
+					@Override
+					public void onRewardedVideoExpired() {
+
+					}
 				});
 			}
 		});

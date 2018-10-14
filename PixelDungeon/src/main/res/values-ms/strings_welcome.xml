@@ -2,19 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Baiklah!</string>
   <string name="Welcome_Title">Selamat Datang!</string>
-  <string name="Welcome_Text_27_3">
-         remix.27.3\n
-  - Item Baharu: Skrol Penyeruan\n
-  - Titisan embun tidak lagi diutamakan dalam timbunan rampasan. Supaya jika ada item, berada di atas titisan embun, item tersebut akan dikutip terlebih dahulu\n
-  - Setiap jenis bekas kini tersedia dalam kedai di pekan\n
-  - Goo tidak lagi jatuhkan Cincin Darah Batu  ( item ini hanya tersedia melalui mod ), sebagai pengganti, pemain akan mendapat posyen secara rawak\n
-  - Mantera \"Tiupan Kepak\" hanya boleh gerakkan karakter, yang boleh bergerak (IsMovable)\n
-  - Kelompok-rusuh tidak lagi dijelmakan pada kedudukan yang sama dengan objek aras\n
-  - Jubah Necromancer tidak lagi ditetapkan dalam slot pantas secara lalai\n
-  - Membaiki perawak jarak pandangan\n
-  - Membaiki pepijat yang menyebabkan bos aras jelmakan keunsuran berbanding bos\n
-  - Ganjaran, yang pemain dapat kerana menonton iklan kini diproses dalam permainan\n
-    </string>
   <string name="Welcome_Text_27_4">
     remix.27.4\n
     - Penjenamaan semula ke Remixed Dungeon\n

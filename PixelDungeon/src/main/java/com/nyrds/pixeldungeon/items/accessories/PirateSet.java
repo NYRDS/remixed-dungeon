@@ -7,6 +7,7 @@ public class PirateSet extends Accessory{
 
     {
         coverHair = true;
+        coverItems = true;
         image = 10;
     }
 

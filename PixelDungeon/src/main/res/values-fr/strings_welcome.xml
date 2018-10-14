@@ -2,18 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Okey!</string>
   <string name="Welcome_Title">Bienvenue!</string>
-  <string name="Welcome_Text_27_3">
-remix.27.3\n
-- Nouvel objet : Parchemin d\'incantation\n
-- Les gouttes de rosée ne sont plus prioritaires sur une pile de butin. L\'objet autre que la rosée sera donc ramassé en premier\n
-- Tous les types de conteneur sont maintenant disponibles au magasin du village\n
-- Goo ne donne plus l\'Anneau du sang de la pierre (objet uniquement disponible pour les mods). A la place, le héros recevra une potion au hasard\n
-- Le sort \"Rafale de vent\" ne mouvoir que les personnages, qui ont cette caractéristique (IsMovable)\n
-- Les ennemis ne peuvent plus apparaître sur la même case qu\'un objet du niveau\n
-- La Robe du Nécromancier n\'est plus ajoutée par défaut au bouton d\'accès rapide\n
-- Correction du générateur aléatoire de la distance de vision\n
-- Correction d\'un bug faisant qu\'un élémentaire était généré au lieu du boss de niveau\n
-- La récompense reçue par le joueur pour avoir regardé une publicité est désormais traitée lorsqu\'il tapote dans le jeu\n</string>
   <string name="Welcome_Text_27_4"> remix.27.4\n
 - Relookage en Remixed Dungeon\n
 - Nécrotisme : nouvelle capacité d\'armure pour nécromancier\n

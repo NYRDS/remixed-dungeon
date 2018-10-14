@@ -18,17 +18,17 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class WndQuest extends WndTitledMessage {
 	
-	public WndQuest( NPC questgiver, String text ) {
+	public WndQuest(Char questgiver, String text ) {
 		super( questgiver.sprite(), Utils.capitalize( questgiver.getName() ), text );
 	}
 
-	public WndQuest( NPC questgiver, int ... phrases ) {
+	public WndQuest( Char questgiver, int ... phrases ) {
 		this(questgiver, Game.getVar(phrases[Random.Int(0, phrases.length)]));
 	}
 }

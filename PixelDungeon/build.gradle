@@ -1,14 +1,10 @@
 apply plugin: 'com.android.application'
 
 
-def getApiField(String name) {
-    def stringsFile = android.sourceSets.main.res.sourceFiles.find { it.name.equals 'strings_api_signature.xml' }
+ext.getApiField = { name ->
+    def stringsFile = "PixelDungeon/src/main/res/values/strings_api_signature.xml"
     return new XmlParser().parse(stringsFile).string.find { it.@name.equals name }.text()
 }
-
-
-
-
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
@@ -17,7 +13,7 @@ repositories {
 def jks_keyAlias    = hasProperty('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
 def jks_keyPassword = hasProperty('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
 def jks_storePassword = hasProperty('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
-
+def jks_storePath = hasProperty('jks_storePath') ? System.getenv('jks_storePath') : 'testKey/test.jks'
 
 android {
 
@@ -25,7 +21,7 @@ android {
         release {
             keyAlias jks_keyAlias
             keyPassword jks_keyPassword
-            storeFile file('testKey/test.jks')
+            storeFile file(jks_storePath)
             storePassword jks_storePassword
         }
     }
@@ -35,11 +31,9 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 567
-        versionName "remix.28.3.fix.17"
+        versionCode 578
+        versionName "remix.28.4.alpha.1.9"
     }
-
-
 
     buildTypes {
         release {
@@ -76,10 +70,10 @@ android {
 
         }
         googlePlay {
-            buildToolsVersion '27.0.3'
-            targetSdkVersion 27
+            buildToolsVersion '28.0.2'
+            targetSdkVersion 28
             minSdkVersion 14
-            compileSdkVersion 27
+            compileSdkVersion 28
 
             versionCode defaultConfig.versionCode + 10000
             // Enabling multidex support.
@@ -93,7 +87,7 @@ android {
 apply plugin: 'io.fabric'
 
 dependencies {
-    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.luaj:luaj-jse:3.0.1'
 
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
@@ -114,21 +108,25 @@ dependencies {
     googlePlayImplementation 'com.appbrain:appbrain-sdk:+@aar'
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
-    googlePlayImplementation 'com.android.support:support-v4:27.1.1'
+    googlePlayImplementation 'com.android.support:support-v4:28.0.0'
     googlePlayImplementation 'com.google.android.gms:play-services-ads:15.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-base:15.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.3'
     googlePlayImplementation "com.google.android.gms:play-services-games:15.0.1"
 
 
-    googlePlayImplementation fileTree(dir: 'lib', include: '*.jar')
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
     googlePlayImplementation name: 'adcolony-sdk-3.3.4', ext: 'aar'
+
+
+    googlePlayImplementation fileTree(dir: 'lib', include: ['*.jar'])
 
     googlePlayImplementation 'com.android.support:multidex:1.0.3'
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
+    implementation 'com.android.billingclient:billing:1.1'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.5'
     implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
         transitive = true
     }

@@ -354,8 +354,13 @@ public class GameScene extends PixelScene {
 
         sceneCreated = true;
 
-        switch (InterlevelScene.mode) {
+        InterlevelScene.Mode appearMode = InterlevelScene.mode;
+        InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
+
+        //it is a chance for another level change right here if level entrance is at CHASM for example
+        switch (appearMode) {
             case RESURRECT:
+                Dungeon.hero.regenSprite();
                 WandOfBlink.appear(Dungeon.hero, level.entrance);
                 new Flare(8, 32).color(0xFFFF66, true).show(Dungeon.hero.getHeroSprite(), 2f);
                 break;
@@ -375,7 +380,6 @@ public class GameScene extends PixelScene {
                 break;
             default:
         }
-        InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 
         Camera.main.target = Dungeon.hero.getHeroSprite();
 

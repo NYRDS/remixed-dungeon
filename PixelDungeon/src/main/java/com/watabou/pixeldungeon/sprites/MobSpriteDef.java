@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -116,7 +115,6 @@ public class MobSpriteDef extends MobSprite {
 			loadAdditionalData(json,film, kind);
 
 		} catch (Exception e) {
-			Game.toast(Utils.format("Something bad happens when loading %s", name), e);
 			throw new TrackedRuntimeException(Utils.format("Something bad happens when loading %s", name), e);
 		}
 

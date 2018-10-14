@@ -108,6 +108,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	public Wand() {
 		defaultAction = AC_ZAP;
+		animation_class = WAND_ATTACK;
 		
 		try {
 			image = handler.index(this);
@@ -528,5 +529,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		curCharges(itemDesc.optInt("charges",curCharges()));
 		maxCharges(itemDesc.optInt("maxCharges",maxCharges()));
+	}
+
+	@Override
+	public String getVisualName() {
+		return "Wand";
 	}
 }

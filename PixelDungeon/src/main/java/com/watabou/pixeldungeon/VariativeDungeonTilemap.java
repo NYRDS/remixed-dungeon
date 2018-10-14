@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
@@ -38,7 +37,7 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
             }
             xTilemapConfiguration = XTilemapConfiguration.readConfig(tilemapConfig);
         } catch (JSONException e) {
-            throw new TrackedRuntimeException(e);
+            throw ModdingMode.modException(e);
         }
 
         data = new int[level.getWidth()*level.getHeight()];

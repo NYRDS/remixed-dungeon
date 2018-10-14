@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.watabou.noosa.audio.Music;
@@ -53,7 +53,7 @@ abstract public class Boss extends Mob {
 				battleMusic = desc.getString(BATTLE_MUSIC);
 			}
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException("bad "+getMobClassName()+".json",e);
 		}
 
 	}

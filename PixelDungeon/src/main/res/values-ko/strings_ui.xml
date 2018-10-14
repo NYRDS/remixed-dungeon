@@ -3,7 +3,7 @@
   <!--STRINGS OF TitleScene CLASS-->
   <string name="TitleScene_Play">시작</string>
   <string name="TitleScene_Highscores">최고 점수</string>
-  <string name="TitleScene_Badges">뱃지</string>
+  <string name="TitleScene_Badges">배지</string>
   <string name="TitleScene_About">정보</string>
   <string name="TitleScene_InternalStorageLow">내부 저장 장치에\n 공간이 부족하여\n 진행 사항을 잃을 수 있습니다!</string>
   <!--STRINGS OF AboutScene CLASS-->

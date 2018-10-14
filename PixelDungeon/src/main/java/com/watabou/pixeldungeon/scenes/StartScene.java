@@ -21,6 +21,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.watabou.noosa.Camera;
@@ -360,6 +361,7 @@ public class StartScene extends PixelScene {
         EventCollector.logEvent("game", "difficulty", String.valueOf(difficulty));
 
         Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
+        ServiceManNPC.resetLimit();
 
         if (PixelDungeon.intro()) {
             PixelDungeon.intro(false);

@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.items.rings.UsableArtifact;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -97,7 +97,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 					return;
 				}
 
-				if (item instanceof Bow) {
+				if (item instanceof KindOfBow) {
 					getCurUser().collect(new ChaosBow());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
 					return;

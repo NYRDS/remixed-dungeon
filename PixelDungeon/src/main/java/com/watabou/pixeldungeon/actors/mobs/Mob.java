@@ -645,14 +645,14 @@ public abstract class Mob extends Char {
 		return true;
 	}
 
-	public void swapPosition(final Char chr) {
+	public boolean swapPosition(final Char chr) {
 
 		if(!walkingType.canSpawnAt(level(),chr.getPos())) {
-			return;
+			return false;
 		}
 
 		if(hasBuff(Roots.class)) {
-			return;
+			return false;
 		}
 
 		int curPos = getPos();
@@ -669,6 +669,7 @@ public abstract class Mob extends Char {
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
 		setState(MobAi.getStateByClass(Wandering.class));
+		return true;
 	}
 
 	private void ensureOpenDoor() {
@@ -724,11 +725,22 @@ public abstract class Mob extends Char {
 	public boolean zap(@NonNull Char enemy) {
 
 		if(zapHit(enemy)) {
-			enemy.damage(damageRoll(), this);
+			int damage = zapProc(enemy,damageRoll());
+			enemy.damage(damage, this);
 			return true;
 		}
 
 		return false;
+	}
+
+	public int zapProc(@NonNull Char enemy, int damage) {
+		runMobScript("onZapProc", enemy, damage);
+
+		if(scriptResult.isnumber()) {
+			return scriptResult.checknumber().toint();
+		}
+
+		return damage;
 	}
 
 	protected boolean zapHit(@NonNull Char enemy) {

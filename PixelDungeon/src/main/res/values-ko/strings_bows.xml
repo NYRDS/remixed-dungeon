@@ -12,7 +12,7 @@
   <string name="CompoundBow_Gender">남성적인</string>
   <!--STRINGS OF RubyBow CLASS-->
   <string name="RubyBow_Name">루비 활</string>
-  <string name="RubyBow_Info">오직 최고의 궁수만이 루비 활을 이용할 수 있다. 활시위를 당기기 위해선 엄청난 힘이 필요하지만, 그렇게 발사된 화살 대부분은 적의 몸통에 바람구멍을 내어 버린다고 한다.</string>
+  <string name="RubyBow_Info">오직 최고의 궁수만이 루비 활을 이용할 수 있습니다. 활시위를 당기기 위해선 엄청난 힘이 필요하지만, 그렇게 발사된 화살 대부분은 적의 몸통에 바람구멍을 내어 버린다고 합니다.</string>
   <string name="RubyBow_Gender">남성적인</string>
   <!--STRINGS OF Quiver CLASS-->
   <string name="Quiver_Name">화살통</string>
@@ -32,7 +32,7 @@
   <string name="ParalysisQuiver_Gender">남성적인</string>
   <!--STRINGS OF CommonArrow CLASS-->
   <string name="CommonArrow_Name">화살</string>
-  <string name="CommonArrow_Info">쇠촉을 가진 평범한 나무 화살이다.</string>
+  <string name="CommonArrow_Info">쇠촉을 가진 평범한 목재 화살이다.</string>
   <string name="CommonArrow_Gender">여성스런</string>
   <!--STRINGS OF FireArrow CLASS-->
   <string name="FireArrow_Name">불 화살</string>
@@ -40,7 +40,7 @@
   <string name="FireArrow_Gender">여성스런</string>
   <!--STRINGS OF PoisonArrow CLASS-->
   <string name="PoisonArrow_Name">독 화살</string>
-  <string name="PoisonArrow_Info">치명적인 독이 화살 촉 표면에 번들거린다.</string>
+  <string name="PoisonArrow_Info">치명적인 독이 화살촉 표면에 번들거린다.</string>
   <string name="PoisonArrow_Gender">여성스런</string>
   <!--STRINGS OF ParalysisArrow CLASS-->
   <string name="ParalysisArrow_Name">마비 화살</string>
@@ -48,6 +48,6 @@
   <string name="ParalysisArrow_Gender">여성스런</string>
   <!--STRINGS OF FrostArrow CLASS-->
   <string name="FrostArrow_Name">얼음 화살</string>
-  <string name="FrostArrow_Info">화살 촉에서 차가운의 기운이 발산하는걸 느낄 수 있다.</string>
+  <string name="FrostArrow_Info">화살 촉에서 차가운 기운이 나오는 것을 느낄 수 있다.</string>
   <string name="FrostArrow_Gender">여성스런</string>
 </resources>

@@ -38,4 +38,14 @@
     <string name="gdpr_disagree">No, gracias</string>
     <string name="gdpr_choose">Por favor haga su elección</string>
 
-    </resources>
+    <string name="Mob_StaHuntingStatus2">%1$sestá buscando %2$s</string>
+    <string name="Mob_StaFleeingStatus2">%1$sestá escapando de%2$s</string>
+
+    <string name="Mob_StaTerrorStatus">%1$sestá horrizado</string>
+    <string name="Mob_StaTerrorStatus2">%1$sestá horrorizado por %2$s</string>
+
+    <string name="Mob_StaAmokStatus">%1$sestá corriendo sin control</string>
+
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">Cargar autoguardado</string>
+</resources>

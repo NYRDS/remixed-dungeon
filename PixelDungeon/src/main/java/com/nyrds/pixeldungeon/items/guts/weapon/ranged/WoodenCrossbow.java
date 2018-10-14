@@ -2,9 +2,8 @@
 package com.nyrds.pixeldungeon.items.guts.weapon.ranged;
 
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 
-public class WoodenCrossbow extends Bow {
+public class WoodenCrossbow extends Crossbow {
 
 	public WoodenCrossbow() {
 

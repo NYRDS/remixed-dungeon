@@ -4,10 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.Pushing;
 
 public class JarOfSouls extends UndeadMob {
 
@@ -48,15 +45,8 @@ public class JarOfSouls extends UndeadMob {
 	private void spawnUndead(){
 		getSprite().zap(getEnemy().getPos(), null);
 
-		Mob newMob = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
+		MobSpawner.spawnRandomMob(Dungeon.level,this);
 
-		int mobPos = Dungeon.level.getEmptyCellNextTo(getPos());
-
-		if (Dungeon.level.cellValid(mobPos)) {
-			newMob.setPos(mobPos);
-			Actor.addDelayed(new Pushing(newMob, getPos(), newMob.getPos()), -1);
-			Dungeon.level.press(mobPos, newMob);
-		}
 		postpone(15);
 	}
 

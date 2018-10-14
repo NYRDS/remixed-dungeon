@@ -43,12 +43,14 @@ public class EventCollector {
 
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
+			Crashlytics.log(category+":"+event);
 			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).build());
 		}
 	}
 
 	static public void logEvent(String category, String event, String label) {
 		if (!mDisabled) {
+			Crashlytics.log(category+":"+event+":"+label);
 			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).setLabel(label).build());
 		}
 	}
@@ -62,15 +64,16 @@ public class EventCollector {
 
 	static public void logException(Exception e) {
 		if(!mDisabled) {
+			Crashlytics.logException(e);
 			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(Util.toString(e)).build());
-			e.printStackTrace();
 		}
 	}
 
 	static public void logException(Exception e,String desc) {
 		if(!mDisabled) {
+			Crashlytics.log(desc);
+			Crashlytics.logException(e);
 			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(desc + " "+Util.toString(e)).build());
-			e.printStackTrace();
 		}
 	}
 

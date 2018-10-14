@@ -23,22 +23,7 @@
     <string name="Quiver_Name">quiver</string>
     <string name="Quiver_Info">Leather quiver suitable to hold any amount of arrows</string>
     <string name="Quiver_Gender">masculine</string>
-	
-	<!-- STRINGS OF FireQuiver CLASS -->
-    <string name="FireQuiver_Name">fire quiver</string>
-    <string name="FireQuiver_Info"></string>
-    <string name="FireQuiver_Gender">masculine</string>
-	
-	<!-- STRINGS OF PoisonQuiver CLASS -->
-    <string name="PoisonQuiver_Name">poison quiver</string>
-    <string name="PoisonQuiver_Info"></string>
-    <string name="Poisonuiver_Gender">masculine</string>
-	
-	<!-- STRINGS OF ParalysisQuiver CLASS -->
-    <string name="ParalysisQuiver_Name">paralyzing quiver</string>
-    <string name="ParalysisQuiver_Info"></string>
-    <string name="ParalysisQuiver_Gender">masculine</string>
-	
+
 	<!-- STRINGS OF CommonArrow CLASS -->
     <string name="CommonArrow_Name">arrow</string>
     <string name="CommonArrow_Info">Common wooden arrow with an iron head.</string>

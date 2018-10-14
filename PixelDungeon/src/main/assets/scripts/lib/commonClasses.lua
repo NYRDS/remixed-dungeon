@@ -18,7 +18,11 @@ local Buffs  = {
     Invisibility = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Invisibility"),
     Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation"),
     Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger"),
-    Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison")
+    Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison"),
+    Frost        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Frost"),
+    Light        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Light"),
+    Cripple      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Cripple"),
+    Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm")
 }
 
 local Blobs = {
@@ -39,6 +43,7 @@ local actions = {
 }
 
 local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
+local Dungeon   = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
 
 local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
 
@@ -54,7 +59,8 @@ local Wands = {
 
 local RPD = {
     GameScene = GameScene,
-    Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon"),
+    Dungeon = Dungeon,
+    SystemTime = luajava.bindClass("com.watabou.utils.SystemTime"),
     Terrain = luajava.bindClass("com.watabou.pixeldungeon.levels.Terrain"),
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
     MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
@@ -86,7 +92,8 @@ local RPD = {
     Objects = {
         Ui = {
             WndMessage = "com.watabou.pixeldungeon.windows.WndMessage",
-            WndStory = "com.watabou.pixeldungeon.windows.WndStory"
+            WndStory   = "com.watabou.pixeldungeon.windows.WndStory",
+            WndQuest   = "com.watabou.pixeldungeon.windows.WndQuest"
         },
         Actors = {
             ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
@@ -133,9 +140,13 @@ local RPD = {
 
     blinkTo = function(mob, target)
         wandOfBlink:mobWandUse(mob, target)
+    end,
+
+    getXy = function (chr)
+        local pos = chr:getPos()
+        return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}
     end
 }
-
 
 return RPD
 

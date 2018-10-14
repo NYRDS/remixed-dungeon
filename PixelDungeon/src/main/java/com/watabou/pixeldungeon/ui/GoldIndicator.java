@@ -30,7 +30,7 @@ public class GoldIndicator extends Component {
 	private static final float TIME	= 2f;
 	
 	private int lastValue = 0;
-	
+
 	private BitmapText tf;
 	
 	private float time;

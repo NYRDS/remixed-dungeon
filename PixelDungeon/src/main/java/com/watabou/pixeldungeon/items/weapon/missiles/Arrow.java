@@ -4,7 +4,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.utils.Random;
 
 public abstract class Arrow extends MissileWeapon {
@@ -23,7 +23,7 @@ public abstract class Arrow extends MissileWeapon {
 	protected double baseMax = 1;
 	protected double baseMin = 1;
 
-	protected Bow firedFrom;
+	protected KindOfBow firedFrom;
 
 	public Arrow() {
 		this(1);
@@ -67,7 +67,7 @@ public abstract class Arrow extends MissileWeapon {
 				return;
 			}
 
-			firedFrom = (Bow) getCurUser().belongings.weapon;
+			firedFrom = (KindOfBow) getCurUser().belongings.weapon;
 
 			MAX = (int) (baseMax * firedFrom.dmgFactor());
 			MIN = (int) (baseMin * firedFrom.dmgFactor());

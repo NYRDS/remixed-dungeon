@@ -2,18 +2,6 @@
 <resources>
   <string name="Welcome_Ok">¡Muy bien!</string>
   <string name="Welcome_Title">¡Bienvenido!</string>
-  <string name="Welcome_Text_27_3">remix.27.3\n
-- Nuevo elemento : desplazamiento de convocatoria\n
-- La gota de rocio ya no tiene mayor prioridad en el mon ton de botin. Entonces, si hay un articulo, yaciendo sobre la gota de rocio, dicho articulo sera reloctado primero\n
-- Cada tipo de contenedor ya esta disponible en la tienda la ciudad\n
-- Goo ya no puede soltar el Anillo de Sangre de Pierda ( este objeto solo esta disponible a traves del modificador ), en su lugar, se recibra una pocion al azar\n
-- El hechizo \"Wing Gust\" solo puede mover personajes. que se pueden mover (IsMovable)\n
-- Las multitudesnya no pueden generar en el mismo lugar con objetos de nivel\n
-- Nigromante\'s Robe ta no esta configurado para ranura rapida por defecto\n
-- Corregir el aleatorizador de distancia de vista\n
-- Corregir error que causaba que el nivel de jefe generara un elemental en lugar de un jefe\n
-- La recompensa que recube el jugador al ver un anuncio que se esta pocesando en el juego\n
-</string>
   <string name="Welcome_Text_27_4">
  remix.27.4\n
  - Cambio de Remixed Dungeon\n
@@ -62,5 +50,10 @@
     - Mods:\n
     -- Hechizos modificables\n
     -- Objetos modificables\n
+    </string>
+  <string name="Welcome_Text_28_4">
+    remix.28.4\n
+    - Mejoras gráficas :\n
+    -- Las armas del héroe ahora son visibles en el juego\n
     </string>
 </resources>

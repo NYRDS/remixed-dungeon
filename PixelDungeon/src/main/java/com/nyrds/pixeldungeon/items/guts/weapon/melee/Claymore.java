@@ -6,6 +6,7 @@ public class Claymore extends MeleeWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 6;
+		animation_class = HEAVY_ATTACK;
 	}
 
 	public Claymore() {

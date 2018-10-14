@@ -167,4 +167,9 @@ public class MissileWeapon extends Weapon {
 	public boolean isFliesStraight() {
 		return true;
 	}
+
+	@Override
+	public String getVisualName() {
+		return "none";
+	}
 }

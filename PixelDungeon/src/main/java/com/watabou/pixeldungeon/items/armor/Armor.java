@@ -228,6 +228,7 @@ public class Armor extends EquipableItem {
 		} else {
 			info.append(Utils.format(Game.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
+				info.append(" ");
 				info.append(Game.getVar(R.string.Armor_Info5));
 			}
 		}
@@ -321,11 +322,11 @@ public class Armor extends EquipableItem {
 		return glyph != null ? glyph.glowing() : null;
 	}
 
-	public boolean isHasHelmet() {
+	public boolean hasHelmet() {
 		return hasHelmet;
 	}
 
-	public boolean isHasCollar() {
+	public boolean hasCollar() {
 		return hasCollar;
 	}
 
@@ -341,6 +342,11 @@ public class Armor extends EquipableItem {
 			glyph = Util.byNameFromList(Glyph.glyphs, itemDesc.getString(GLYPH));
 		}
 	}
+
+	public String getVisualName() {
+		return getClassName();
+	}
+
 
 	public static abstract class Glyph implements Bundlable {
 		

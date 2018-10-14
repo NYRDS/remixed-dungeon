@@ -7,6 +7,7 @@ public class GnollCostume extends Accessory{
 
     {
         coverHair = true;
+        coverItems = true;
         image = 16;
     }
 

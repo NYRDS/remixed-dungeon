@@ -3,7 +3,7 @@
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
     <string name="TownGuardNPC_Name">köy gardiyanı</string>
-    <string name="TownsfolkNPC_Message2">Zindan bu kasabaya o kadar refah sağladı ki, kasabadaki herkes istediği zaman ara verip tatile çıkabiliyor! Şu anda neden bu kadar az kişinin olmasının sebebi de buna çıkıyor.</string>
+    <string name="TownsfolkNPC_Message2">Zindan bu kasabaya o kadar refah sağladı ki, kasabadaki herkes istediği zaman ara verip tatile çıkabiliyor! Şu anda bu kadar az kişinin bulunması da aslında bu yüzden.</string>
     <string name="TownShopkeeper_Desc">Bu adam normal bir esnaf. Kaç para edeceğini bildiğinden eminsin.</string>
 
     <string name="town_deco_snowman_name">Kardan adam</string>

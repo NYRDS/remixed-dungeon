@@ -30,7 +30,19 @@ import java.util.ArrayList;
 public class KindOfWeapon extends EquipableItem {
 
 	protected static final float TIME_TO_EQUIP = 1f;
-	
+
+	public static final String BASIC_ATTACK = "none";
+	public static final String SWORD_ATTACK = "sword";
+	public static final String SPEAR_ATTACK = "spear";
+	public static final String BOW_ATTACK   = "bow";
+	public static final String STAFF_ATTACK = "staff";
+	public static final String HEAVY_ATTACK = "heavy";
+	public static final String WAND_ATTACK  = STAFF_ATTACK;
+	public static final String KUSARIGAMA_ATTACK  = "kusarigama";
+    public static final String CROSSBOW_ATTACK = "crossbow";
+
+    protected String animation_class = BASIC_ATTACK;
+
 	public int		MIN	= 0;
 	public int		MAX = 1;
 	
@@ -57,7 +69,9 @@ public class KindOfWeapon extends EquipableItem {
 			activate( hero );
 			
 			QuickSlot.refresh();
-			
+
+			hero.updateLook();
+
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
@@ -79,6 +93,7 @@ public class KindOfWeapon extends EquipableItem {
 		if (super.doUnequip( hero, collect, single )) {
 			
 			hero.belongings.weapon = null;
+			hero.updateLook();
 			return true;
 			
 		} else {
@@ -105,5 +120,12 @@ public class KindOfWeapon extends EquipableItem {
 	
 	public void proc( Char attacker, Char defender, int damage ) {
 	}
-	
+
+	public String getVisualName() {
+		return getClassName();
+	}
+
+	public String getAnimationClass() {
+		return animation_class;
+	}
 }

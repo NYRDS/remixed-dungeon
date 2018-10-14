@@ -41,14 +41,16 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.nyrds.pixeldungeon.support.Iap;
-import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
@@ -56,9 +58,12 @@ import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.SystemTime;
+
+import org.luaj.vm2.LuaError;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -68,6 +73,8 @@ import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import io.fabric.sdk.android.Fabric;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -194,6 +201,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
                     toastText = Utils.format(text, args);
                 }
 
+                GLog.toFile("%s ",toastText);
+
                 android.widget.Toast toast = android.widget.Toast.makeText(RemixedPixelDungeonApp.getContext(), toastText,
                         Toast.LENGTH_SHORT);
                 toast.show();
@@ -211,7 +220,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Fabric.with(this, new Crashlytics());
         EventCollector.init();
+
+        iap = new Iap(this);
 
         if (!BuildConfig.DEBUG) {
             String signature = Util.getSignature(this);
@@ -349,7 +361,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (!softPaused) {
-            step();
+            try {
+                step();
+            } catch (LuaError e) {
+                throw ModdingMode.modException(e);
+            }
         }
 
         NoosaScript.get().resetCamera();

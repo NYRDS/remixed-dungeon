@@ -2,19 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Ok!</string>
   <string name="Welcome_Title">Bem vindo!</string>
-  <string name="Welcome_Text_27_3">
-        remix.27.3\n
-  - Novo Item: Pergaminho da Invocação\n
-  - Gotas de orvalho não tem menos prioridade em uma pilha de itens. Então, se houver um item sobre a gota de orvalho, o item será coletado primeiro\n
-  - Agora todos os recipientes estão disponíveis na loja da cidade\n
-  - Goo não deixa o mais Anel da Pedra Sangrenta quando morto (este item só está disponível através de modificações), em vez disso, o jogador receberá uma poção aleatória\n
-  - O feitiço \"Rajada de Vento\" só pode mover personagens, que possam ser movidos (IsMovable)\n
-  - Monstros não podem mais aparecem em locais do nível que já possuam objetos\n
-  - A Túnica do Necromante não está mais definida em atalho rápido por padão\n
-  - Corrigindo a aleatoriedade da distância de visão\n
-  - Corregido o erro que fazia com que o nível do chefe gerasse um elemental em vez do chefe\n
-  - A recompensa, o jogador recebe por assistir a um anúncio que está sendo exibido no do jogo\n
-  </string>
   <string name="Welcome_Text_27_4">
     remix.27.4\n
     - Nome alterado para Remixed Dungeon\n
@@ -63,5 +50,10 @@
     - Modificações:\n
     -- Feitiços modificáveis\n
     -- Itens modificáveis\n
+    </string>
+  <string name="Welcome_Text_28_4">
+    remix.28.4\n
+    - Melhorias Gráficas:\n
+    -- As armas do herói agora são visíveis no jogo\n
     </string>
 </resources>

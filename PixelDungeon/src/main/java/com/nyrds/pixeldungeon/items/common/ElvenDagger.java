@@ -6,6 +6,7 @@ public class ElvenDagger extends MeleeWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 8;
+		animation_class = SWORD_ATTACK;
 	}
 
 	public ElvenDagger() {
@@ -15,6 +16,11 @@ public class ElvenDagger extends MeleeWeapon {
 	@Override
 	public int typicalSTR() {
 		return 9;
+	}
+
+	@Override
+	public String getVisualName() {
+		return "Dagger";
 	}
 
 }

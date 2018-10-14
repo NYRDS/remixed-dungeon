@@ -26,6 +26,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class MeleeWeapon extends Weapon {
+
+        {
+		defaultAction = AC_EQUIP;
+	}
 	
 	private int tier;
 	

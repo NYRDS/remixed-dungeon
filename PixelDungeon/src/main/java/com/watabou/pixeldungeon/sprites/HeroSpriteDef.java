@@ -1,25 +1,32 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.CompositeTextureImage;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
+import com.watabou.utils.PointF;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -29,7 +36,8 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
 	private static final String HERO_EMPTY_PNG = "hero/empty.png";
-	private CompositeTextureImage avatar;
+	private static final String WEAPON_ANIM = "weapon_anim";
+	private Image avatar;
 
 	// body goes as main texture
 	private static final String LAYER_ARMOR       = "armor";
@@ -37,12 +45,25 @@ public class HeroSpriteDef extends MobSpriteDef {
 	private static final String LAYER_HAIR        = "hair";
 	private static final String LAYER_FACIAL_HAIR = "facial_hair";
 	private static final String LAYER_HELMET      = "helmet";
-	private static final String LAYER_DEATH       = "death";
 	private static final String LAYER_BODY        = "body";
 	private static final String LAYER_COLLAR      = "collar";
 	private static final String LAYER_ACCESSORY   = "accessory";
 
+	private static final String LAYER_LEFT_HAND   = "left_hand";
+	private static final String LAYER_RIGHT_HAND  = "right_hand";
+
+	private static final String LAYER_LEFT_ARMOR  = "left_hand_armor";
+	private static final String LAYER_RIGHT_ARMOR = "right_hand_armor";
+
+	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
+	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
+
+	private static final String DEATH_EFFECT      = "death effect";
+
+	private CustomClipEffect deathEffect;
+
 	private Animation fly;
+	private Map<String, Animation> weapon_anims;
 
 	private static final String[] layersOrder = {
 		LAYER_BODY,
@@ -52,22 +73,29 @@ public class HeroSpriteDef extends MobSpriteDef {
 		LAYER_ARMOR,
 		LAYER_FACIAL_HAIR,
 		LAYER_HELMET,
-		LAYER_DEATH,
-		LAYER_ACCESSORY
+		LAYER_LEFT_ARMOR,
+		LAYER_RIGHT_ARMOR,
+		LAYER_LEFT_HAND,
+		LAYER_RIGHT_HAND,
+		LAYER_ACCESSORY,
+		LAYER_LEFT_ITEM,
+		LAYER_RIGHT_ITEM,
 	};
 
 	private Map<String,String> layersDesc = new HashMap<>();
 
 	private Tweener  jumpTweener;
 	private Callback jumpCallback;
+	private String deathEffectDesc;
 
-	public HeroSpriteDef(String[] lookDesc){
+	public HeroSpriteDef(String[] lookDesc, String deathEffectDesc){
 		super("spritesDesc/Hero.json",0);
+		this.deathEffectDesc = deathEffectDesc;
 		applyLayersDesc(lookDesc);
 	}
 
 	public HeroSpriteDef(Armor armor){
-		super("spritesDesc/ArmoredStatue.json",0);
+		super("spritesDesc/Hero.json",0);
 		createStatueSprite(armor);
 		applyLayersDesc(getLayersDesc());
 	}
@@ -81,6 +109,12 @@ public class HeroSpriteDef extends MobSpriteDef {
 	public HeroSpriteDef(Hero hero, Accessory accessory) {
 		super("spritesDesc/Hero.json",0);
 		createLayersDesc(hero, accessory);
+		applyLayersDesc(getLayersDesc());
+	}
+
+	public HeroSpriteDef(Weapon weapon) {
+		super("spritesDesc/Hero.json",0);
+		createStatueSprite(weapon);
 		applyLayersDesc(getLayersDesc());
 	}
 
@@ -109,7 +143,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 		}
 
 		if (accessory  == null){
-			if(hero.belongings.armor  != null && hero.belongings.armor.isHasHelmet()){
+			if(hero.belongings.armor  != null && hero.belongings.armor.hasHelmet()){
 				helmetDescriptor = helmetDescriptor(hero.belongings.armor, hero);
 				if(hero.belongings.armor.isCoveringHair()){
 					drawHair = false;
@@ -125,43 +159,107 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
 
-		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
+		String bodyType = bodyDescriptor(hero);
+
+		layersDesc.put(LAYER_BODY, "hero/body/"+bodyType+".png" );
 		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.belongings.armor, hero));
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
-		layersDesc.put(LAYER_DEATH,"hero/death/"+deathDescriptor+".png");
+
+
+		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
+		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
+
+		if(hero.belongings.weapon!=null) {
+			weaponAnimationClassLeft = hero.belongings.weapon.getAnimationClass();
+			weaponAnimationClassRight = hero.belongings.weapon.getAnimationClass();
+		}
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_"+weaponAnimationClassLeft+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_"+weaponAnimationClassRight+"_right.png");
+
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
+
+		if(accessory==null || !accessory.isCoveringItems()) {
+			layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(hero.belongings.weapon, "left"));
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
+		}
+
+		deathEffectDesc = "hero/death/"+deathDescriptor+".png";
+	}
+
+	private void createStatueSprite(Weapon weapon) {
+		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
+		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
+
+
+		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
+		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
+
+		if(weapon!=null) {
+			weaponAnimationClassLeft = weapon.getAnimationClass();
+			weaponAnimationClassRight = weapon.getAnimationClass();
+		}
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/statue_"+weaponAnimationClassLeft+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/statue_"+weaponAnimationClassRight+"_right.png");
+
+		layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(weapon, "left"));
+		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
+
+
+		deathEffectDesc = "hero/death/statue.png";
 	}
 
 	private void createStatueSprite(Armor armor) {
 		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
-		layersDesc.put(LAYER_COLLAR,      HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
-		layersDesc.put(LAYER_HAIR,        HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
-		layersDesc.put(LAYER_FACIAL_HAIR, HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_HELMET,      HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_DEATH,       "hero/death/statue.png");
-		layersDesc.put(LAYER_ACCESSORY,   HERO_EMPTY_PNG);
+
+
+		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/statue_none_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/statue_none_right.png");
+
+		deathEffectDesc = "hero/death/statue.png";
 	}
 
 	public void heroUpdated(Hero hero) {
 		reset();
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
-		avatar();
+
+		if(weapon_anims!=null) { //old mods compatibility
+			KindOfWeapon weapon = hero.belongings.weapon;
+
+			if (weapon != null) {
+				attack = weapon_anims.get(weapon.getAnimationClass());
+
+				String zapAnim = weapon.getAnimationClass()+"_zap";
+
+				if(weapon_anims.containsKey(zapAnim)) {
+                    zap = weapon_anims.get(zapAnim);
+                }
+
+			} else {
+				attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
+				zap    = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
+			}
+		}
+		avatar = null;
 	}
 
 	public String[] getLayersDesc() {
-		String [] ret = new String[layersOrder.length];
-		for(int i = 0;i<layersOrder.length;++i){
-			ret[i] = layersDesc.get(layersOrder[i]);
+		ArrayList<String> ret= new ArrayList<>();
+		for (String aLayersOrder : layersOrder) {
+			if (layersDesc.containsKey(aLayersOrder)) {
+				ret.add(layersDesc.get(aLayersOrder));
+			}
 		}
 
-		return ret;
+		return ret.toArray(new String[ret.size()]);
 	}
 
 	private void applyLayersDesc(String[] lookDesc) {
@@ -169,18 +267,26 @@ public class HeroSpriteDef extends MobSpriteDef {
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
 			addLayer(layersOrder[i],TextureCache.get(lookDesc[i]));
 		}
+		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
 
 	private String armorDescriptor(Armor armor) {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/armor/"+armor.getClass().getSimpleName()+".png";
+		return "hero/armor/"+armor.getVisualName()+".png";
+	}
+
+	private String itemHandDescriptor(KindOfWeapon item, String hand) {
+		if(item==null) {
+			return HERO_EMPTY_PNG;
+		}
+		return "hero/items/"+item.getVisualName()+"_"+hand+".png";
 	}
 
 	private String helmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.isHasHelmet()){
+			if(hero.belongings.armor.hasHelmet()){
 				return "hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
 			}
 		}
@@ -189,7 +295,7 @@ public class HeroSpriteDef extends MobSpriteDef {
 
 	private String collarDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.isHasCollar()){
+			if(hero.belongings.armor.hasCollar()){
 				return "hero/armor/collar/"+armor.getClass().getSimpleName()+".png";
 			}
 		}
@@ -215,18 +321,31 @@ public class HeroSpriteDef extends MobSpriteDef {
 			descriptor = "gnoll";
 		}
 
-		return "hero/body/"+descriptor+".png";
+		return descriptor;
 	}
 
 	@Override
 	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 		fly     = readAnimation(json, "fly", film);
 		operate = readAnimation(json, "operate", film);
+
+		if(json.has(WEAPON_ANIM)){
+			weapon_anims = new HashMap<>();
+
+			JSONObject anims = json.getJSONObject(WEAPON_ANIM);
+			Iterator<String> keys = anims.keys();
+
+			while( keys.hasNext() ) {
+				String key = keys.next();
+				weapon_anims.put(key,readAnimation(anims,key,film));
+			}
+		}
 	}
 
 	@Override
 	public void place(int p) {
 		super.place(p);
+
 		if(ch instanceof Hero) {
 			Camera.main.target = this;
 		}
@@ -277,24 +396,50 @@ public class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	@Override
-	public CompositeTextureImage avatar() {
+	public Image avatar() {
+
 		if(avatar==null) {
-			avatar = new CompositeTextureImage(texture);
-			avatar.frame(idle.frames[0]);
+			avatar = snapshot(idle.frames[0]);
 		}
 
-		avatar.clearLayers();
-
-
-		avatar.addLayer(getLayerTexture(LAYER_BODY));
-		avatar.addLayer(getLayerTexture(LAYER_HEAD));
-		avatar.addLayer(getLayerTexture(LAYER_HAIR));
-		avatar.addLayer(getLayerTexture(LAYER_ARMOR));
-		avatar.addLayer(getLayerTexture(LAYER_FACIAL_HAIR));
-		avatar.addLayer(getLayerTexture(LAYER_HELMET));
-		avatar.addLayer(getLayerTexture(LAYER_DEATH));
-		avatar.addLayer(getLayerTexture(LAYER_ACCESSORY));
-
 		return avatar;
+	}
+
+
+	@Override
+	public void die() {
+		deathEffect.place(ch.getPos());
+		getParent().add(deathEffect);
+		deathEffect.setVisible(true);
+		deathEffect.playAnim(die, new Callback() {
+			@Override
+			public void call() {
+				deathEffect.killAndErase();
+			}
+		});
+		killAndErase();
+	}
+
+	@Override
+	public PointF worldCoords() {
+		final int csize = DungeonTilemap.SIZE;
+		PointF point = point();
+		point.x = (point.x + width * 0.5f) / csize - 0.5f;
+		point.y = (point.y + height - 8) / csize - 1.0f;
+		return point;
+	}
+
+	@Override
+	public PointF worldToCamera(int cell) {
+		final int csize = DungeonTilemap.SIZE;
+
+		return new PointF(
+				(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+				(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
+		);
+	}
+
+	public String getDeathEffect() {
+		return deathEffectDesc;
 	}
 }

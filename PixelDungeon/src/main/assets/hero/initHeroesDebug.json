@@ -10,21 +10,21 @@
         "level":10
       },
       {
-        "kind": "RawFish",
+        "kind": "Ankh",
         "quantity": 100
       },
       {
-        "kind": "TomeOfMastery"
+        "kind": "BlackSkullOfMastery"
       },
       {
-        "kind": "PotionOfParalyticGas",
+        "kind": "ScrollOfMirrorImage",
         "quantity": 100
       },
       {
         "kind": "PotionOfLiquidFlame"
       },
       {
-        "kind": "TomeOfKnowledge",
+        "kind": "ScrollOfDomination",
         "quantity": 100
       }
     ],

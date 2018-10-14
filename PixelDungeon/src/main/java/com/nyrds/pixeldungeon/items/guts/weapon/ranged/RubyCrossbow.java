@@ -1,8 +1,6 @@
 package com.nyrds.pixeldungeon.items.guts.weapon.ranged;
 
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
-
-public class RubyCrossbow extends Bow {
+public class RubyCrossbow extends Crossbow {
 
 	public RubyCrossbow() {
 		super( 6, 1.1f, 1.6f );

@@ -2,19 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Dobra!</string>
   <string name="Welcome_Title">Witaj!</string>
-  <string name="Welcome_Text_27_3">
-         remix.27.3\n
-  - Nowy przedmiot: Zwój Przyzwania\n
-  - Krople Rosy nie mają już priorytetu podczas podnoszenia . Jeśli na rosie leży przedmiot to ów przedmiot zostanie podniesiony jako pierwszy\n
-  - Każdy typ pojemnika jest teraz dostępny w miejskim sklepie \n
-  - Maź nie może już upuścić Pierścienia Kamiennej Krwi Goo ( Przedmiot ten jest dostępny tylko przez modyfikację), zamiast tego gracz otrzyma losową miksturę\n
-  - \"Podmuch Wiatru\" może przesuwać tylko przesuwalne przedmioty(IsMovable) \n
-  - Moby nie mogą się już odradzać się w tym samym miejscu z przedmiotami danego poziomu\n
-  - Szata Nekromanty nie jest już domyślnie ustawiona na szybkie wybieranie \n
-  - Naprawiono system losujący zasięg widzeniar\n
-  - Naprawiono błąd który na poziomie bossa tworzył żywiołaka zamiast bossa\n
-  -  Nagroda jaką gracz otrzyma za obejrzenie reklamy jest teraz przetwarzana poprzez kliknięcie w grze\n
-    </string>
   <string name="Welcome_Text_27_4">
     remix.27.4\n
     - Zmiana nazwy na Remixed Dungeon\n

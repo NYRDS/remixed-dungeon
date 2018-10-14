@@ -58,10 +58,14 @@ public class GoogleRewardVideoAds {
 
 	private static class RewardVideoAdListener implements RewardedVideoAdListener {
 
+		private boolean videoCompleted = false;
+		private RewardItem rewardItem;
+
 		@Override
 		public void onRewardedVideoAdLoaded() {
 			EventCollector.stopTiming("google reward video","google reward video","ok","");
 			loaded = true;
+			videoCompleted = false;
 		}
 
 		@Override
@@ -79,11 +83,13 @@ public class GoogleRewardVideoAds {
 					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
 				}
 			});
+			returnTo.returnToWork(videoCompleted);
 		}
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
-			returnTo.returnToWork(true);
+			this.rewardItem = rewardItem;
+			videoCompleted = true;
 		}
 
 		@Override
@@ -97,7 +103,7 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoCompleted() {
-
+			videoCompleted = true;
 		}
 	}
 

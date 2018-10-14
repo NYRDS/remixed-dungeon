@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.Bow;
+
 public class RubyBow extends Bow {
 
 	public RubyBow() {
