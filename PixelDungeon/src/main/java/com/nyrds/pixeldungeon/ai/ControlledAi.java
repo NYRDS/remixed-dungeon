@@ -9,11 +9,6 @@ public class ControlledAi extends MobAi implements AiState {
     @Override
     public void act(Mob me) {
 
-        if (!me.isAlive()) {
-            Dungeon.hero.setControlTarget(Dungeon.hero);
-            Dungeon.observe();
-        }
-
         if (me.curAction instanceof CharAction.Move) {
             if (me.getPos() != me.curAction.dst) {
                 if(me.doStepTo(me.curAction.dst)) {
@@ -58,5 +53,11 @@ public class ControlledAi extends MobAi implements AiState {
 
     @Override
     public void gotDamage(Mob me, Object src, int dmg) {
+    }
+
+    @Override
+    public void onDie() {
+        Dungeon.hero.setControlTarget(Dungeon.hero);
+        Dungeon.observe();
     }
 }

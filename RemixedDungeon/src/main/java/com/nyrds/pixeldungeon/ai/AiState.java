@@ -10,4 +10,5 @@ public interface AiState {
     String getTag();
 
     void gotDamage(Mob me, Object src, int dmg);
+    void onDie();
 }

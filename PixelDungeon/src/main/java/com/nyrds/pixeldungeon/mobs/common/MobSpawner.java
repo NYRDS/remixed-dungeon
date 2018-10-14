@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;

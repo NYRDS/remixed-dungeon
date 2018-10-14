@@ -431,6 +431,9 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void die(Object cause) {
+
+		getState().onDie();
+
 		runMobScript("onDie",cause);
 
 		Hero hero = Dungeon.hero;
