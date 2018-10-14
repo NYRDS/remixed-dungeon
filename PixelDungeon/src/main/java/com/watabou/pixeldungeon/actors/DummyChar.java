@@ -10,7 +10,7 @@ class DummyChar extends Char {
     }
 
     @Override
-    protected CharSprite sprite() {
+    public CharSprite sprite() {
         return null;
     }
 

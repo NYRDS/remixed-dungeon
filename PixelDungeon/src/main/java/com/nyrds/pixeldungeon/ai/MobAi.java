@@ -130,4 +130,7 @@ public abstract class MobAi implements AiState {
         return aiStateInstances.get(stateClass.getSimpleName().toUpperCase(Locale.ROOT));
     }
 
+    @Override
+    public void onDie() // do nothing, we are dead already...
+    {}
 }
