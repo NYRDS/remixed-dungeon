@@ -31,8 +31,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 578
-        versionName "remix.28.4.alpha.1.9"
+        versionCode 579
+        versionName "remix.28.4.alpha.2"
     }
 
     buildTypes {
@@ -70,7 +70,7 @@ android {
 
         }
         googlePlay {
-            buildToolsVersion '28.0.2'
+            buildToolsVersion '28.0.3'
             targetSdkVersion 28
             minSdkVersion 14
             compileSdkVersion 28
