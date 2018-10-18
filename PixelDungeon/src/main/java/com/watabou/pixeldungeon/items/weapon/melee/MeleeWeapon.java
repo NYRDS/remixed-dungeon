@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -27,7 +27,7 @@ import com.watabou.utils.Random;
 
 public class MeleeWeapon extends Weapon {
 
-        {
+	{
 		defaultAction = AC_EQUIP;
 	}
 	
