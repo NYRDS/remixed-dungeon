@@ -15,4 +15,5 @@
   <string name="ResultDescriptions_Fall">Est tombé au niveau %d</string>
   <string name="ResultDescriptions_Win">A obtenu l\'amulette de Yendor</string>
   <string name="ResultDescriptions_Immured">Emmuré au niveau %d</string>
+  <string name="ResultDescriptions_Unknown">Mort dans de mystérieuses circonstances au niveau %d</string>
 </resources>
