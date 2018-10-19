@@ -150,7 +150,10 @@ public class Item implements Bundlable, Presser {
 		if(hero.heroClass.forbidden(defaultAction)){
 			defaultAction = AC_THROW;
 		}
-		execute(hero, defaultAction);
+
+		if(actions(hero).contains(defaultAction)) {
+			execute(hero, defaultAction);
+		}
 	}
 
 	protected void onThrow(int cell) {
