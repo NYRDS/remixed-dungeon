@@ -382,7 +382,7 @@ public class Dungeon {
         output.close();
     }
 
-    private static void saveLevel(String saveTo) throws IOException {
+    public static void saveLevel(String saveTo) throws IOException {
         level.removePets();
 
         Bundle bundle = new Bundle();
@@ -410,10 +410,7 @@ public class Dungeon {
             Actor.fixTime();
             try {
                 Position current = currentPosition();
-                String saveToLevel = SaveUtils.depthFileForSave(hero.heroClass,
-                        DungeonGenerator.getLevelDepth(current.levelId),
-                        DungeonGenerator.getLevelKind(current.levelId),
-                        current.levelId);
+                String saveToLevel = getLevelSaveFile(current);
 
                 String saveToGame = SaveUtils.gameFile(hero.heroClass);
 
@@ -440,6 +437,14 @@ public class Dungeon {
 
         Badges.saveGlobal();
         Library.saveLibrary();
+    }
+
+    @NonNull
+    private static String getLevelSaveFile(Position current) {
+        return SaveUtils.depthFileForSave(hero.heroClass,
+                DungeonGenerator.getLevelDepth(current.levelId),
+                DungeonGenerator.getLevelKind(current.levelId),
+                current.levelId);
     }
 
     public synchronized static void save() {
@@ -823,5 +828,13 @@ public class Dungeon {
 
     public static double moveTimeout() {
         return MOVE_TIMEOUTS[moveTimeoutIndex];
+    }
+
+    public static void saveCurrentLevel() {
+        try {
+            saveLevel(getLevelSaveFile(currentPosition()));
+        } catch (IOException e) {
+            throw new TrackedRuntimeException(e);
+        }
     }
 }
