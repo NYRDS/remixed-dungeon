@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -182,7 +184,8 @@ public class Weapon extends KindOfWeapon {
 		return super.upgrade();
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public String toString() {
 		return levelKnown ? Utils.format("%s: %d", super.toString(), STR ) : super.toString();
 	}

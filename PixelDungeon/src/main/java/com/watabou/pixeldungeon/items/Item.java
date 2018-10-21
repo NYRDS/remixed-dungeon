@@ -66,6 +66,7 @@ public class Item implements Bundlable, Presser {
 	private static final String TXT_TO_STRING_LVL   = "%s%+d";
 	private static final String TXT_TO_STRING_LVL_X = "%s%+d x%d";
 
+
 	private static final   float TIME_TO_THROW   = 1.0f;
 	protected static final float TIME_TO_PICK_UP = 1.0f;
 	private static final   float TIME_TO_DROP    = 0.5f;
@@ -333,6 +334,7 @@ public class Item implements Bundlable, Presser {
 		hero.getSprite().emitter().burst(Speck.factory(Speck.EVOKE), 5);
 	}
 
+	@NonNull
 	@Override
 	public String toString() {
 

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
@@ -196,7 +198,8 @@ public class Armor extends EquipableItem {
 		return damage;
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public String toString() {
 		return levelKnown ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), STR ) : super.toString();
 	}

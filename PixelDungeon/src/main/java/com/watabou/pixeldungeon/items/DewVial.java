@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -167,7 +169,8 @@ public class DewVial extends Item {
 		return Utils.format( TXT_STATUS, getVolume(), MAX_VOLUME );
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public String toString() {
 		return super.toString() + " (" + status() +  ")" ;
 	}

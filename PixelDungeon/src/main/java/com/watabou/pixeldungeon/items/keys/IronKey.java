@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -48,7 +50,8 @@ public class IronKey extends Key {
 		}
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public String toString() {
 		return Utils.format( Game.getVar(R.string.IronKey_FromDepth), depth );
 	}

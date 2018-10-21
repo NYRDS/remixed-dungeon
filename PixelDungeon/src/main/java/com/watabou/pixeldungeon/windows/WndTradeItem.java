@@ -17,12 +17,15 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import android.support.annotation.NonNull;
+
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.EquipableItem;
@@ -45,7 +48,9 @@ public class WndTradeItem extends Window {
 	private static final int BTN_HEIGHT	= 18;
 	
 	private WndBag owner;
-	
+
+	private VBox vbox = new VBox();
+
 	public WndTradeItem( final Item item, WndBag owner ) {
 		
 		super();
@@ -53,7 +58,9 @@ public class WndTradeItem extends Window {
 		this.owner = owner; 
 		
 		float pos = createDescription( item, false );
-		
+
+		add(vbox);
+
 		if (item.quantity() == 1) {
 			
 			RedButton btnSell = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Sell), item.price() ) ) {
@@ -63,11 +70,9 @@ public class WndTradeItem extends Window {
 					hide();
 				}
 			};
-			btnSell.setRect( 0, pos + GAP, WIDTH, BTN_HEIGHT );
-			add( btnSell );
-			
-			pos = btnSell.bottom();
-			
+			btnSell.setSize( WIDTH, BTN_HEIGHT );
+			vbox.add( btnSell );
+
 		} else {
 			
 			int priceAll= item.price();
@@ -78,8 +83,8 @@ public class WndTradeItem extends Window {
 					hide();
 				}
 			};
-			btnSell1.setRect( 0, pos + GAP, WIDTH, BTN_HEIGHT );
-			add( btnSell1 );
+			btnSell1.setSize(WIDTH, BTN_HEIGHT );
+			vbox.add( btnSell1 );
 			RedButton btnSellAll = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_SellAll), priceAll ) ) {
 				@Override
 				protected void onClick() {
@@ -87,11 +92,8 @@ public class WndTradeItem extends Window {
 					hide();
 				}
 			};
-			btnSellAll.setRect( 0, btnSell1.bottom() + GAP, WIDTH, BTN_HEIGHT );
-			add( btnSellAll );
-			
-			pos = btnSellAll.bottom();
-			
+			btnSellAll.setSize(WIDTH, BTN_HEIGHT );
+			vbox.add( btnSellAll );
 		}
 		
 		RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
@@ -100,10 +102,12 @@ public class WndTradeItem extends Window {
 				hide();
 			}
 		};
-		btnCancel.setRect( 0, pos + GAP, WIDTH, BTN_HEIGHT );
-		add( btnCancel );
-		
-		resize( WIDTH, (int)btnCancel.bottom() );
+		btnCancel.setSize( WIDTH, BTN_HEIGHT );
+		vbox.add( btnCancel );
+
+		vbox.setPos(0, pos+GAP);
+
+		resize( WIDTH, (int) vbox.bottom());
 	}
 	
 	public WndTradeItem( final Heap heap, boolean canBuy ) {
@@ -113,7 +117,9 @@ public class WndTradeItem extends Window {
 		Item item = heap.peek();
 		
 		float pos = createDescription( item, true );
-		
+
+		add(vbox);
+
 		int price = price( item );
 		
 		if (canBuy) {
@@ -125,9 +131,9 @@ public class WndTradeItem extends Window {
 					buy( heap );
 				}
 			};
-			btnBuy.setRect( 0, pos + GAP, WIDTH, BTN_HEIGHT );
+			btnBuy.setSize(WIDTH, BTN_HEIGHT );
 			btnBuy.enable( price <= Dungeon.gold());
-			add( btnBuy );
+			vbox.add( btnBuy );
 			
 			RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
 				@Override
@@ -135,16 +141,13 @@ public class WndTradeItem extends Window {
 					hide();
 				}
 			};
-			btnCancel.setRect( 0, btnBuy.bottom() + GAP, WIDTH, BTN_HEIGHT );
-			add( btnCancel );
-			
-			resize( WIDTH, (int)btnCancel.bottom() );
-			
-		} else {
-			
-			resize( WIDTH, (int)pos );
-			
+			btnCancel.setSize( WIDTH, BTN_HEIGHT );
+			vbox.add( btnCancel );
 		}
+
+		vbox.setPos(0, pos+GAP);
+		resize( WIDTH, (int)vbox.bottom());
+
 	}
 	
 	@Override
@@ -205,12 +208,14 @@ public class WndTradeItem extends Window {
 
 	private void placeItemInShop(Item item) {
 		if (Dungeon.level instanceof TownShopLevel) {
-			TownShopLevel shopLevel = (TownShopLevel) Dungeon.level;
-			shopLevel.itemForSell(item);
+			if(!item.cursed && item.price() > 10 ) {
+				TownShopLevel shopLevel = (TownShopLevel) Dungeon.level;
+				shopLevel.itemForSell(item);
+			}
 		}
 	}
 
-	private void sellOne( Item item ) {
+	private void sellOne( @NonNull Item  item ) {
 		
 		if (item.quantity() <= 1) {
 			sell( item );
@@ -228,7 +233,7 @@ public class WndTradeItem extends Window {
 		}
 	}
 	
-	private int price( Item item ) {
+	private int price( @NonNull  Item item ) {
 		// This formula is not completely correct...
 		int price = item.price() * 5 * (Dungeon.depth / 5 + 1);
 		if (Dungeon.hero.hasBuff( RingOfHaggler.Haggling.class ) && price >= 2) {
