@@ -128,8 +128,11 @@ public class InterlevelScene extends PixelScene {
 					Dungeon.save();
 				}
 				break;
-			default:
+			case FALL:
 				Dungeon.saveCurrentLevel();
+				break;
+			default:
+
 		}
 
 		Game.switchScene( InterlevelScene.class );
