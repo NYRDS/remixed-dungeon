@@ -82,7 +82,7 @@ public class Heap implements Bundlable {
 
 	@NonNull
 	public LinkedList<Item> items = new LinkedList<>();
-	
+
 	public String imageFile() {
 		switch (type) {
 		case HEAP:
@@ -201,8 +201,7 @@ public class Heap implements Bundlable {
 	public void replace( Item a, Item b ) {
 		int index = items.indexOf( a );
 		if (index != -1) {
-			items.remove( index );
-			items.add( index, b );
+			items.set(index,b);
 		}
 	}
 	
@@ -241,7 +240,7 @@ public class Heap implements Bundlable {
 		boolean burnt = false;
 		boolean evaporated = false;
 		
-		for (Item item : items.toArray(new Item[items.size()])) {
+		for (Item item : items.toArray(new Item[0])) {
 			Item burntItem = item.burn(pos);
 			
 			if(!item.equals(burntItem) && !(item instanceof Dewdrop)){
@@ -281,7 +280,7 @@ public class Heap implements Bundlable {
 			return;
 		}
 		
-		for (Item item : items.toArray(new Item[items.size()])) {
+		for (Item item : items.toArray(new Item[0])) {
 			Item frozenItem = item.freeze(pos);
 			
 			replaceOrRemoveItem(item, frozenItem);
@@ -301,7 +300,7 @@ public class Heap implements Bundlable {
 			return;
 		}
 		
-		for (Item item : items.toArray(new Item[items.size()])) {
+		for (Item item : items.toArray(new Item[0])) {
 			Item toxicatedItem = item.poison(pos);
 
 			replaceOrRemoveItem(item, toxicatedItem);
@@ -381,7 +380,7 @@ public class Heap implements Bundlable {
 	}
 	
 	public boolean isEmpty() {
-		return items.size() == 0;
+		return items.isEmpty();
 	}
 	
 	public void destroy() {
