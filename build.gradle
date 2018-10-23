@@ -1,9 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        jcenter()
         google()
         maven { url 'https://maven.fabric.io/public' }
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
@@ -13,7 +13,6 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
 
         maven {
@@ -27,6 +26,7 @@ allprojects {
         flatDir {
             dirs 'lib'
         }
+        jcenter()
     }
 }
 
