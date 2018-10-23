@@ -58,4 +58,10 @@ public class Tamahawk extends MissileWeapon {
 	public int price() {
 		return 20 * quantity();
 	}
+
+	@Override
+	public String getVisualName() {
+		return "Tamahawk";
+	}
+
 }
