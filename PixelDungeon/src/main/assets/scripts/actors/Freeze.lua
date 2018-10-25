@@ -22,7 +22,7 @@ return actor.init({
         return 1
     end,
     activate = function()
-        local wnd = RPD.new(RPD.Objects.Ui.WndStory,"It gonna be hot here...")
+        local wnd = RPD.new(RPD.Objects.Ui.WndStory,"It gonna be cold here...")
         RPD.GameScene:show(wnd)
     end
 })
