@@ -28,11 +28,11 @@ android {
 
     defaultConfig {
 
-        manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key")]
+        manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 583
-        versionName "remix.28.4.alpha.4"
+        versionCode 584
+        versionName "remix.28.4.alpha.4.1"
     }
 
     buildTypes {
@@ -109,10 +109,10 @@ dependencies {
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
     googlePlayImplementation 'com.android.support:support-v4:28.0.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:15.0.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-base:15.0.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.3'
-    googlePlayImplementation "com.google.android.gms:play-services-games:15.0.1"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:17.0.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.4'
+    googlePlayImplementation "com.google.android.gms:play-services-games:16.0.0"
 
 
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
