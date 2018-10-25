@@ -27,8 +27,10 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by mike on 08.03.2016.
@@ -45,10 +47,23 @@ public class StringsManager {
 	private static Map<String, String>   sStringMap  = new HashMap<>();
 	private static Map<String, String[]> sStringsMap = new HashMap<>();
 
-	private static Map<String, Integer> keyToInt;
+	private static Map<String, Integer> keyToInt = new HashMap<>();;
+
+	private static Set<String> nonModdable = new HashSet<>();
 
 	static {
-		initTextMapping();
+		addMappingForClass(R.string.class);
+		addMappingForClass(R.array.class);
+
+		nonModdable.add("easyModeAdUnitId");
+		nonModdable.add("saveLoadAdUnitId");
+		nonModdable.add("easyModeSmallScreenAdUnitId");
+		nonModdable.add("iapKey");
+		nonModdable.add("ownSignature");
+		nonModdable.add("appodealRewardAdUnitId");
+		nonModdable.add("admob_publisher_id");
+		nonModdable.add("admob_app_id");
+		nonModdable.add("fabric_api_key");
 	}
 
 	private static void addMappingForClass(Class<?> clazz) {
@@ -66,15 +81,6 @@ public class StringsManager {
 
 			keyToInt.put(name, key);
 		}
-	}
-
-	private static void initTextMapping() {
-
-		keyToInt = new HashMap<>();
-
-		addMappingForClass(R.string.class);
-		addMappingForClass(R.array.class);
-
 	}
 
 	private static void clearModStrings() {
@@ -182,12 +188,8 @@ public class StringsManager {
 	}
 
 	public static String getVar(int id) {
-		if (id != R.string.easyModeAdUnitId && id != R.string.saveLoadAdUnitId
-				&& id != R.string.easyModeSmallScreenAdUnitId && id != R.string.iapKey
-				&& id != R.string.testDevice && id != R.string.ownSignature && id != R.string.appodealRewardAdUnitId) {
-			if (stringMap.containsKey(id)) {
-				return stringMap.get(id);
-			}
+		if (stringMap.containsKey(id)) {
+			return stringMap.get(id);
 		}
 
 		try {
@@ -209,9 +211,7 @@ public class StringsManager {
 	}
 
 	public static String getVar(String id) {
-		if (id.equals("easyModeAdUnitId") || id.equals("saveLoadAdUnitId")
-				|| id.equals("easyModeSmallScreenAdUnitId") || id.equals("iapKey")
-				|| id.equals("testDevice") || id.equals("ownSignature") || id.equals("appodealRewardAdUnitId")) {
+		if(nonModdable.contains(id)) {
 			return "";
 		}
 
