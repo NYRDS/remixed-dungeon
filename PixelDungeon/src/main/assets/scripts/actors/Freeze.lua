@@ -1,9 +1,10 @@
---
--- User: mike
--- Date: 06.11.2017
--- Time: 23:57
--- This file is part of Remixed Pixel Dungeon.
---
+--[[
+    Created by mike.
+    DateTime: 25.10.18 22:21
+    This file is part of pixel-dungeon-remix
+]]
+
+
 
 local RPD = require "scripts/lib/commonClasses"
 local actor = require "scripts/lib/actor"
@@ -13,7 +14,7 @@ return actor.init({
         local levelSize = RPD.Dungeon.level:getLength()
         local cell = math.random(levelSize)-1
         if not RPD.Dungeon.level.solid[cell] then
-            RPD.placeBlob( RPD.Blobs.Fire, cell, 10)
+            RPD.placePseudoBlob( RPD.PseudoBlobs.Freezing, cell)
         end
         return true
     end,
@@ -21,7 +22,7 @@ return actor.init({
         return 1
     end,
     activate = function()
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,"It gonna be hot here...")
-       RPD.GameScene:show(wnd)
+        local wnd = RPD.new(RPD.Objects.Ui.WndStory,"It gonna be hot here...")
+        RPD.GameScene:show(wnd)
     end
 })

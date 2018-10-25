@@ -38,6 +38,10 @@ local Blobs = {
     Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
 }
 
+local PseudoBlobs = {
+    Freezing = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Freezing")
+}
+
 local actions = {
     eat = "Food_ACEat"
 }
@@ -63,6 +67,7 @@ local RPD = {
     Actions = actions,
 
     Blobs = Blobs,
+    PseudoBlobs = PseudoBlobs,
 
     Sfx = {
         CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
@@ -98,6 +103,10 @@ local RPD = {
 
     removeBuff = function (chr, buffClass)
         Buffs.Buff:detach(chr, buffClass)
+    end,
+
+    placePseudoBlob = function (blobClass, cell)
+        blobClass:affect(cell)
     end,
 
     placeBlob = function (blobClass, cell, amount)

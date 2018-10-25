@@ -49,4 +49,5 @@
 
 
     <string name="WndSaveSlotSelect_LoadAutoSave">자동 세이브-로드</string>
-</resources>
+
+    </resources>

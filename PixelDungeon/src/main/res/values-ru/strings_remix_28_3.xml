@@ -47,4 +47,6 @@
     <string name="Mob_StaTerrorStatus2">Этот 1%1$s ужасается 2%2$s</string>
 
     <string name="WndSaveSlotSelect_LoadAutoSave">Автосохранение</string>
+
+    <string name="TownScript_NeedWeapon">Я не пойду в подземелье безоружным!\nМожет стоит сперва заглянуть в городской магазин?</string>
 </resources>
