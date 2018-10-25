@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class Kusarigama extends SpecialWeapon {
     {
-        animation_class = KUSARIGAMA_ATTACK;
+        animation_class = SWORD_ATTACK;
     }
 
     private static final String AC_PULL = "Kusarigama_Pull";
