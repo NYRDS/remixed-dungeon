@@ -2,9 +2,7 @@ package com.nyrds.pixeldungeon.mobs.icecaves;
 
 import android.support.annotation.NonNull;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
@@ -34,7 +32,7 @@ public class ColdSpirit extends Mob {
     public int attackProc(@NonNull Char enemy, int damage ) {
         //Buff proc
         if (Random.Int( 4 ) == 1) {
-            Freezing.affect( enemy.getPos(), (Fire) Dungeon.level.blobs.get( Fire.class ) );
+            Freezing.affect( enemy.getPos());
         }
         return damage;
     }
