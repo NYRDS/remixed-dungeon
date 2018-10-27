@@ -11,23 +11,26 @@ import com.watabou.noosa.Game;
 
 class AdMobBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
+    private AdView adView;
+
     @Override
     public void displayBanner() {
 
-        AdView adView = new AdView(Game.instance());
+        adView = new AdView(Game.instance());
         adView.setAdSize(AdSize.SMART_BANNER);
         adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
         adView.setBackgroundColor(Color.TRANSPARENT);
         adView.setAdListener(new AdmobBannerListener());
 
-        Game.instance().getLayout().addView(adView, 0);
         adView.loadAd(AdMob.makeAdRequest());
-
-
-        Game.setNeedSceneRestart(true);
     }
 
     private class AdmobBannerListener extends AdListener {
+
+        @Override
+        public void onAdLoaded() {
+            AdsUtils.updateBanner(adView);
+        }
 
         public void onAdFailedToLoad(int result) {
             EventCollector.logEvent("banner", "admob_no_banner", Integer.toString(result));

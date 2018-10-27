@@ -14,8 +14,6 @@ class AdsUtilsCommon {
     }
 
     static private void tryNextBanner() {
-
-        AdsUtils.removeTopBanner();
         int minima = 3;
 
         IBannerProvider chosenProvider = null;

@@ -32,6 +32,30 @@ public class AdsUtils {
         return -1;
     }
 
+    public static void updateBanner(final View view) {
+        Game.instance().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                int index = bannerIndex();
+                if (index >= 0) {
+
+                    View adview = Game.instance().getLayout().getChildAt(index);
+                    if(adview == view) {
+                        return;
+                    }
+
+                    if (adview instanceof BannerView) {
+                        Appodeal.hide(Game.instance(), Appodeal.BANNER);
+                    }
+                    Game.instance().getLayout().removeViewAt(index);
+                }
+                Game.instance().getLayout().addView(view,0);
+            }
+
+        });
+
+    }
 
     public static void removeTopBanner() {
         Game.instance().runOnUiThread(new Runnable() {

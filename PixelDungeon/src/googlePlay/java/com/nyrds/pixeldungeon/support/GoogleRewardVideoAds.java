@@ -99,6 +99,11 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			EventCollector.stopTiming("google reward video","google reward video","fail","");
+
+			if(!AppodealRewardVideo.isVideoReady()) {
+				AppodealRewardVideo.init();
+				AppodealRewardVideo.loadRewardVideo();
+			}
 		}
 
 		@Override

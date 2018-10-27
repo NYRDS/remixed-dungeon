@@ -28,7 +28,6 @@ class AAdsBannerProvider implements AdsUtilsCommon.IBannerProvider {
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, adViewHeight);
         adView.setLayoutParams(params);
 
-
         adView.setWebViewClient(new WebViewClient() {
 
             public void onPageFinished(WebView view, String url) {
@@ -52,7 +51,6 @@ class AAdsBannerProvider implements AdsUtilsCommon.IBannerProvider {
         adView.loadUrl("https://acceptable.a-ads.com/995145");
 
         Game.instance().getLayout().addView(adView, 0);
-        Game.setNeedSceneRestart(true);
     }
 
 }

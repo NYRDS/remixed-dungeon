@@ -34,50 +34,58 @@ public class AppodealRewardVideo {
 			}});
 	}
 
+
+	public static void init(int adType) {
+
+		if(Appodeal.isInitialized(adType) ) {
+			return;
+		}
+
+		String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
+
+		//vungle disable due to strange build issue
+		//mopub, mobvista & tapjoy due audiences mismatch
+		//ogury - intersiteal
+		String disableNetworks[] = {"facebook","flurry","startapp","vungle","mopub","mobvista","tapjoy","ogury"};
+
+		for(String net:disableNetworks) {
+			Appodeal.disableNetwork(PixelDungeon.instance(), net);
+		}
+		Appodeal.disableLocationPermissionCheck();
+
+
+		if(BuildConfig.DEBUG) {
+			Appodeal.setLogLevel(Log.LogLevel.verbose);
+			Appodeal.setTesting(true);
+		}
+
+
+		Appodeal.initialize(PixelDungeon.instance(), appKey, adType, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);
+	}
+
 	public static void init() {
 
 		if (!isAllowed()) {
 			return;
 		}
 
-
-
 		Game.instance().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
 
-				if(Appodeal.isInitialized(Appodeal.REWARDED_VIDEO) && Appodeal.isInitialized(Appodeal.BANNER) ) {
+				if(Appodeal.isInitialized(Appodeal.REWARDED_VIDEO) ) {
 					return;
 				}
 
-				String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
-
-				//vungle disable due to strange build issue
-				//mopub, mobvista & tapjoy due audiences mismatch
-				//ogury - intersiteal
-				String disableNetworks[] = {"facebook","flurry","startapp","vungle","mopub","mobvista","tapjoy","ogury"};
-
-				for(String net:disableNetworks) {
-					Appodeal.disableNetwork(PixelDungeon.instance(), net);
-				}
-				Appodeal.disableLocationPermissionCheck();
-
-
-				if(BuildConfig.DEBUG) {
-					Appodeal.setLogLevel(Log.LogLevel.verbose);
-					//Appodeal.setTesting(true);
-				}
-
+				init(Appodeal.REWARDED_VIDEO);
 				Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, false);
 
-				Appodeal.initialize(PixelDungeon.instance(), appKey, Appodeal.REWARDED_VIDEO|Appodeal.BANNER, EuConsent.getConsentLevel()==EuConsent.PERSONALIZED);
 				EventCollector.startTiming("appodeal reward video");
 				Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 
 					@Override
 					public void onRewardedVideoLoaded(boolean b) {
 						EventCollector.stopTiming("appodeal reward video","appodeal reward video","ok","");
-
 					}
 
 					@Override

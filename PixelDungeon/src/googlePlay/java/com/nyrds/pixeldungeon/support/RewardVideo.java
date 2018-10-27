@@ -12,11 +12,6 @@ public class RewardVideo {
 		if(!GoogleRewardVideoAds.isReady()){
 			GoogleRewardVideoAds.initCinemaRewardVideo();
 		}
-
-		if(!AppodealRewardVideo.isVideoReady()) {
-			AppodealRewardVideo.init();
-			AppodealRewardVideo.loadRewardVideo();
-		}
 	}
 
 	static public boolean isReady() {
