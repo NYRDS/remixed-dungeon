@@ -329,7 +329,12 @@ public class WandMaker extends NPC {
 					GameScene.add( Blob.seed( hero.getPos(), 100, ParalyticGas.class ) );					
 				}
 			}
-			
+
+			@Override
+			public Item burn(int cell) {
+				return this;
+			}
+
 			@Override
 			public boolean collect( Bag container ) {
 				if (super.collect( container )) {
