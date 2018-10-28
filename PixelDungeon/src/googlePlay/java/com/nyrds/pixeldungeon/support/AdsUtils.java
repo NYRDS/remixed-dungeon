@@ -13,15 +13,21 @@ import java.util.Map;
 
 public class AdsUtils {
 
-    public static Map<AdsUtilsCommon.IBannerProvider, Integer> fails = new HashMap<>();
+    public static Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
+    public static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
+
 
     static {
-        fails.put(new AAdsBannerProvider(),-3);
-        fails.put(new AppodealBannerProvider(),-2);
-        fails.put(new AdMobBannerProvider(),-1);
+        bannerFails.put(new AAdsComboProvider(),-3);
+        bannerFails.put(new AdMobBannerProvider(),-2);
+        bannerFails.put(new AppodealBannerProvider(),-1);
+
+        interstitialFails.put(new AAdsComboProvider(), -3);
+        interstitialFails.put(new AdMobInterstitialProvider(), -2);
+        interstitialFails.put(new AppodealInterstitialProvider(), -1);
     }
 
-    private static int bannerIndex() {
+    public static int bannerIndex() {
         int childs = Game.instance().getLayout().getChildCount();
         for (int i = 0; i < childs; ++i) {
             View view = Game.instance().getLayout().getChildAt(i);

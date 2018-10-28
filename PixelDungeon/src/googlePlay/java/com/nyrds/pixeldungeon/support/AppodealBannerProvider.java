@@ -10,11 +10,12 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
     private BannerView adView;
 
+    static {
+        AppodealAdapter.init();
+    }
+
     @Override
     public void displayBanner() {
-        AppodealAdapter.init(Appodeal.BANNER);
-
-        Appodeal.cache(Game.instance(), Appodeal.BANNER);
 
         Appodeal.setBannerCallbacks(new AppodealBannerCallbacks());
 
@@ -23,7 +24,9 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
         if(!Appodeal.show(Game.instance(), Appodeal.BANNER_VIEW)){
             EventCollector.logEvent("banner", "appodeal_show_failed");
             AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
+            return;
         }
+        AdsUtils.updateBanner(adView);
     }
 
     private class AppodealBannerCallbacks implements BannerCallbacks {

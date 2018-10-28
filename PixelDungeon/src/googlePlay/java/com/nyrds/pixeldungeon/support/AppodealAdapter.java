@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.os.Build;
-
 import com.appodeal.ads.Appodeal;
-import com.appodeal.ads.InterstitialCallbacks;
 import com.appodeal.ads.RewardedVideoCallbacks;
 import com.appodeal.ads.utils.Log;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -22,24 +19,13 @@ import com.watabou.pixeldungeon.PixelDungeon;
 public class AppodealAdapter {
     private static InterstitialPoint returnTo;
 
-    private static boolean isAllowed() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
-    }
+    public static void init() {
 
-    public static void loadRewardVideo() {
-        Game.instance().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
-                Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
-            }
-        });
-    }
+        final int toInitialize = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
+        final int toCache = Appodeal.INTERSTITIAL | Appodeal.BANNER;
+        final int notToCache = Appodeal.REWARDED_VIDEO;
 
-
-    public static void init(int adType) {
-
-        if (Appodeal.isInitialized(adType)) {
+        if (Appodeal.isInitialized(Appodeal.BANNER)) {
             return;
         }
 
@@ -58,87 +44,28 @@ public class AppodealAdapter {
 
         if (BuildConfig.DEBUG) {
             Appodeal.setLogLevel(Log.LogLevel.verbose);
-            Appodeal.setTesting(true);
+            //Appodeal.setTesting(true);
         }
 
-
-        Appodeal.initialize(PixelDungeon.instance(), appKey, adType, EuConsent.getConsentLevel() == EuConsent.PERSONALIZED);
+        Appodeal.initialize(PixelDungeon.instance(), appKey, toInitialize, EuConsent.getConsentLevel() == EuConsent.PERSONALIZED);
+        Appodeal.setAutoCache(notToCache, false);
+        Appodeal.cache(PixelDungeon.instance(), toCache);
+        Appodeal.setAutoCache(toCache, true);
     }
 
-
-    public static void initIntersiteal() {
-        if (!isAllowed()) {
-            return;
-        }
-
-        Game.instance().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-
-                if (Appodeal.isInitialized(Appodeal.INTERSTITIAL)) {
-                    return;
-                }
-
-                init(Appodeal.INTERSTITIAL);
-                Appodeal.setAutoCache(Appodeal.INTERSTITIAL, true);
-
-
-                Appodeal.setInterstitialCallbacks(
-                        new InterstitialCallbacks() {
-                            @Override
-                            public void onInterstitialLoaded(boolean b) {
-
-                            }
-
-                            @Override
-                            public void onInterstitialFailedToLoad() {
-
-                            }
-
-                            @Override
-                            public void onInterstitialShown() {
-
-                            }
-
-                            @Override
-                            public void onInterstitialClicked() {
-
-                            }
-
-                            @Override
-                            public void onInterstitialClosed() {
-                                returnTo.returnToWork(true);
-                            }
-
-                            @Override
-                            public void onInterstitialExpired() {
-
-                            }
-                        });
-            }
-        });
-
-
-    }
 
     public static void initRewardedVideo() {
 
-        if (!isAllowed()) {
-            return;
-        }
-
         Game.instance().runOnUiThread(new Runnable() {
             @Override
             public void run() {
-
-                if (Appodeal.isInitialized(Appodeal.REWARDED_VIDEO)) {
-                    return;
-                }
-
-                init(Appodeal.REWARDED_VIDEO);
-                Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, false);
+                init();
 
                 EventCollector.startTiming("appodeal reward video");
+
+                Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+                Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
+
                 Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 
                     @Override
@@ -188,22 +115,7 @@ public class AppodealAdapter {
         });
     }
 
-    public static void showIntersitial(InterstitialPoint ret) {
-        returnTo = ret;
-        Game.instance().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (Appodeal.isLoaded(Appodeal.INTERSTITIAL)) {
-                    Appodeal.show(PixelDungeon.instance(), Appodeal.INTERSTITIAL);
-                } else {
-                    returnTo.returnToWork(false);
-                }
-            }
-        });
-    }
-
-
     public static boolean isVideoReady() {
-        return isAllowed() && Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
+        return Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
     }
 }

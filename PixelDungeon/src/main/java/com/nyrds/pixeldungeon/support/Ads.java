@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.support;
 
-import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -19,26 +18,18 @@ public class Ads {
     }
 
     public static void displayEasyModeBanner() {
-        if (AdMob.googleAdsUsable() && Util.isConnectedToInternet()) {
-            if (isSmallScreen()) {
-                AdMob.initInterstitial();
-            } else {
-                AdsUtilsCommon.displayTopBanner();
-            }
+        if (!isSmallScreen()) {
+            AdsUtilsCommon.displayTopBanner();
         }
     }
 
-    public static void initSaveAndLoadIntersitial() {
-        AdMob.initInterstitial();
-    }
-
     public static void displaySaveAndLoadAd(final InterstitialPoint work) {
-        AdMob.displayIsAd(work);
+        AdsUtilsCommon.showInterstitial(work);
     }
 
     public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
         if (needDisplaySmallScreenEasyModeIs()) {
-            AdMob.displayIsAd(work);
+            AdsUtilsCommon.showInterstitial(work);
         } else {
             work.returnToWork(true);
         }

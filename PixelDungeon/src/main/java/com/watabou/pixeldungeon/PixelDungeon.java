@@ -32,7 +32,6 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.Google.PlayGames;
@@ -445,25 +444,7 @@ public class PixelDungeon extends Game {
 
 	public static void setDifficulty(int _difficulty) {
 		difficulty = _difficulty;
-
-		if(donated() > 0) {
-			AdsUtils.removeTopBanner();
-			return;
-		}
-
-		if (PixelDungeon.donated() == 0) {
-			if (getDifficulty() == 0) {
-				Ads.displayEasyModeBanner();
-			}
-
-			if (getDifficulty() < 2) {
-				Ads.initSaveAndLoadIntersitial();
-			}
-
-			if (getDifficulty() >= 2) {
-				AdsUtils.removeTopBanner();
-			}
-		}
+		syncAdsState();
 	}
 
 	//--- Move timeouts

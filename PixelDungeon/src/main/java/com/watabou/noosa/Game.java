@@ -49,6 +49,8 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.glscripts.Script;
@@ -57,6 +59,7 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -113,7 +116,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static volatile boolean softPaused = false;
 
-    protected static int difficulty;
+    protected static int difficulty = Integer.MAX_VALUE;
 
     // Accumulated touch events
     private final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
@@ -254,6 +257,25 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         getLayout().addView(view);
 
         setContentView(getLayout());
+    }
+
+    public static void syncAdsState() {
+
+        //GLog.w("diff %d", getDifficulty());
+
+        if(PixelDungeon.donated() > 0) {
+            AdsUtils.removeTopBanner();
+            return;
+        }
+
+        if (getDifficulty() == 0) {
+            Ads.displayEasyModeBanner();
+        }
+
+        if (getDifficulty() >= 2) {
+            AdsUtils.removeTopBanner();
+        }
+
     }
 
     @Override
@@ -460,6 +482,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         Game.elapsed = 0f;
         Game.timeScale = 1f;
+
+        syncAdsState();
     }
 
     private void update() {
@@ -516,13 +540,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     private static void height(int height) {
         Game.height = height;
-    }
-
-    public static synchronized void executeInGlThread(Runnable task) {
-        instance().view.queueEvent(task);
-    }
-
-    public void initEventCollector() {
     }
 
     private InterstitialPoint permissionsPoint;

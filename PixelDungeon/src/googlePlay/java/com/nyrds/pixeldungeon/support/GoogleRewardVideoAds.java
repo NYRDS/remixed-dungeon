@@ -23,18 +23,18 @@ public class GoogleRewardVideoAds {
 
 
 	public static void initCinemaRewardVideo() {
-		if (AdMob.googleAdsUsable())
-			Game.instance().runOnUiThread(new Runnable() {
-				@Override
-				public void run() {
 
-					mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
-					mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
+		Game.instance().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
 
-					EventCollector.startTiming("google reward video");
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
-				}
-			});
+				mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
+				mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
+
+				EventCollector.startTiming("google reward video");
+				mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
+			}
+		});
 	}
 
 	public static boolean isReady() {
@@ -44,16 +44,24 @@ public class GoogleRewardVideoAds {
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
+
 		Game.instance().runOnUiThread (new Runnable() {
 			@Override
 			public void run() {
 				if (mCinemaRewardAd.isLoaded()) {
 					mCinemaRewardAd.show();
 				}else {
+					tryNextVideo();
 					returnTo.returnToWork(false);
 				}
 			}
 		});
+	}
+
+	public static void tryNextVideo() {
+		if(!AppodealAdapter.isVideoReady()) {
+			AppodealAdapter.initRewardedVideo();
+		}
 	}
 
 	private static class RewardVideoAdListener implements RewardedVideoAdListener {
@@ -99,11 +107,7 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			EventCollector.stopTiming("google reward video","google reward video","fail","");
-
-			if(!AppodealAdapter.isVideoReady()) {
-				AppodealAdapter.initRewardedVideo();
-				AppodealAdapter.loadRewardVideo();
-			}
+			tryNextVideo();
 		}
 
 		@Override
