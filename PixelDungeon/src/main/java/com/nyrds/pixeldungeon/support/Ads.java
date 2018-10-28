@@ -21,7 +21,7 @@ public class Ads {
     public static void displayEasyModeBanner() {
         if (AdMob.googleAdsUsable() && Util.isConnectedToInternet()) {
             if (isSmallScreen()) {
-                AdMob.initEasyModeIntersitial();
+                AdMob.initInterstitial();
             } else {
                 AdsUtilsCommon.displayTopBanner();
             }
@@ -29,20 +29,18 @@ public class Ads {
     }
 
     public static void initSaveAndLoadIntersitial() {
-        AdMob.initSaveAndLoadIntersitial();
+        AdMob.initInterstitial();
     }
 
     public static void displaySaveAndLoadAd(final InterstitialPoint work) {
-        AdMob.displayIsAd(work, AdMob.mSaveAndLoadAd);
+        AdMob.displayIsAd(work);
     }
 
     public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
         if (needDisplaySmallScreenEasyModeIs()) {
-            AdMob.displayIsAd(work, AdMob.mEasyModeSmallScreenAd);
+            AdMob.displayIsAd(work);
         } else {
             work.returnToWork(true);
         }
     }
-
-
 }

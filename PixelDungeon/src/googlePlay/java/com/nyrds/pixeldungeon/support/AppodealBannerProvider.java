@@ -12,7 +12,7 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
     @Override
     public void displayBanner() {
-        AppodealRewardVideo.init(Appodeal.BANNER);
+        AppodealAdapter.init(Appodeal.BANNER);
 
         Appodeal.cache(Game.instance(), Appodeal.BANNER);
 

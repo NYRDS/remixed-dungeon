@@ -15,7 +15,7 @@ public class RewardVideo {
 	}
 
 	static public boolean isReady() {
-		return AppodealRewardVideo.isVideoReady() || GoogleRewardVideoAds.isReady();
+		return AppodealAdapter.isVideoReady() || GoogleRewardVideoAds.isReady();
 	}
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
@@ -24,8 +24,8 @@ public class RewardVideo {
 			return;
 		}
 
-		if (AppodealRewardVideo.isVideoReady()) {
-			AppodealRewardVideo.showCinemaRewardVideo(ret);
+		if (AppodealAdapter.isVideoReady()) {
+			AppodealAdapter.showCinemaRewardVideo(ret);
 			return;
 		}
 

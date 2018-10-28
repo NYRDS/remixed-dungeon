@@ -8,18 +8,14 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
-import java.util.HashMap;
-import java.util.Map;
-
 class AdMob {
-    private static Map<InterstitialAd, Boolean> mAdLoadInProgress = new HashMap<>();
-
-    static InterstitialAd mSaveAndLoadAd;
-    static InterstitialAd mEasyModeSmallScreenAd;
+    private static boolean mAdLoadInProgress;
+    private static InterstitialAd mInterstitialAd;
 
     public static AdRequest makeAdRequest() {
         if (EuConsent.getConsentLevel() < EuConsent.PERSONALIZED) {
@@ -32,15 +28,14 @@ class AdMob {
         return new AdRequest.Builder().build();
     }
 
-    private static void requestNewInterstitial(final InterstitialAd isAd) {
+    private static void requestNewInterstitial() {
 
-        Boolean loadAlreadyInProgress = mAdLoadInProgress.get(isAd);
 
-        if (loadAlreadyInProgress != null && loadAlreadyInProgress) {
+        if (mAdLoadInProgress) {
             return;
         }
 
-        isAd.setAdListener(new AdListener() {
+        mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 super.onAdClosed();
@@ -49,13 +44,14 @@ class AdMob {
             @Override
             public void onAdFailedToLoad(int errorCode) {
                 super.onAdFailedToLoad(errorCode);
-                mAdLoadInProgress.put(isAd, false);
+                mAdLoadInProgress = false;
+                EventCollector.logEvent("interstitial", "admob_error", Integer.toString(errorCode));
             }
 
             @Override
             public void onAdLoaded() {
                 super.onAdLoaded();
-                mAdLoadInProgress.put(isAd, false);
+                mAdLoadInProgress = false;
             }
 
             @Override
@@ -69,37 +65,20 @@ class AdMob {
             }
         });
 
-        mAdLoadInProgress.put(isAd, true);
-        isAd.loadAd(makeAdRequest());
+        mAdLoadInProgress = true;
+        mInterstitialAd.loadAd(makeAdRequest());
     }
 
-    static void initEasyModeIntersitial() {
+    public static void initInterstitial() {
         if (googleAdsUsable() && Util.isConnectedToInternet()) {
             {
                 Game.instance().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (mEasyModeSmallScreenAd == null) {
-                            mEasyModeSmallScreenAd = new InterstitialAd(Game.instance());
-                            mEasyModeSmallScreenAd.setAdUnitId(Game.getVar(R.string.easyModeSmallScreenAdUnitId));
-                            requestNewInterstitial(mEasyModeSmallScreenAd);
-                        }
-                    }
-                });
-            }
-        }
-    }
-
-    public static void initSaveAndLoadIntersitial() {
-        if (googleAdsUsable() && Util.isConnectedToInternet()) {
-            {
-                Game.instance().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (mSaveAndLoadAd == null) {
-                            mSaveAndLoadAd = new InterstitialAd(Game.instance());
-                            mSaveAndLoadAd.setAdUnitId(Game.getVar(R.string.saveLoadAdUnitId));
-                            requestNewInterstitial(mSaveAndLoadAd);
+                        if (mInterstitialAd == null) {
+                            mInterstitialAd = new InterstitialAd(Game.instance());
+                            mInterstitialAd.setAdUnitId(Game.getVar(R.string.saveLoadAdUnitId));
+                            requestNewInterstitial();
                         }
                     }
                 });
@@ -111,30 +90,30 @@ class AdMob {
         return Flavours.haveAds();
     }
 
-    static void displayIsAd(final InterstitialPoint work, final InterstitialAd isAd) {
+    static void displayIsAd(final InterstitialPoint work) {
         if (googleAdsUsable() && Util.isConnectedToInternet()) {
             Game.instance().runOnUiThread(new Runnable() {
 
                 @Override
                 public void run() {
-                    if (isAd == null) {
+                    if (mInterstitialAd == null) {
                         work.returnToWork(false);
                         return;
                     }
 
-                    if (!isAd.isLoaded()) {
+                    if (!mInterstitialAd.isLoaded()) {
                         work.returnToWork(false);
                         return;
                     }
 
-                    isAd.setAdListener(new AdListener() {
+                    mInterstitialAd.setAdListener(new AdListener() {
                         @Override
                         public void onAdClosed() {
-                            requestNewInterstitial(isAd);
+                            requestNewInterstitial();
                             work.returnToWork(true);
                         }
                     });
-                    isAd.show();
+                    mInterstitialAd.show();
                 }
             });
         } else {
