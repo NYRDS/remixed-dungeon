@@ -49,8 +49,7 @@ class AAdsBannerProvider implements AdsUtilsCommon.IBannerProvider {
         });
 
         adView.loadUrl("https://acceptable.a-ads.com/995145");
-
-        Game.instance().getLayout().addView(adView, 0);
+        AdsUtils.updateBanner(adView);
     }
 
 }
