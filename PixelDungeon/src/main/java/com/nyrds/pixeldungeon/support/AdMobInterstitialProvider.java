@@ -8,7 +8,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
 public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
-    private static boolean mAdLoadInProgress;
     private static InterstitialAd mInterstitialAd;
 
     static {
@@ -27,41 +26,12 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
 
     private static void requestNewInterstitial() {
 
-        if (mAdLoadInProgress) {
+        if (mInterstitialAd.isLoaded() || mInterstitialAd.isLoading()) {
             return;
         }
 
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-            }
+        mInterstitialAd.setAdListener(new AdMobAdListener());
 
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                super.onAdFailedToLoad(errorCode);
-                mAdLoadInProgress = false;
-                EventCollector.logEvent("interstitial", "admob_error", Integer.toString(errorCode));
-            }
-
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                mAdLoadInProgress = false;
-            }
-
-            @Override
-            public void onAdOpened() {
-                super.onAdOpened();
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                super.onAdLeftApplication();
-            }
-        });
-
-        mAdLoadInProgress = true;
         mInterstitialAd.loadAd(AdMob.makeAdRequest());
     }
 
@@ -73,11 +43,13 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
             @Override
             public void run() {
                 if (mInterstitialAd == null) {
+                    EventCollector.logEvent("interstitial", "admob","mInterstitialAd == null");
                     AdsUtilsCommon.interstitialFailed(AdMobInterstitialProvider.this, ret);
                     return;
                 }
 
                 if (!mInterstitialAd.isLoaded()) {
+                    EventCollector.logEvent("interstitial", "admob","not loaded");
                     AdsUtilsCommon.interstitialFailed(AdMobInterstitialProvider.this, ret);
                     return;
                 }
@@ -93,5 +65,33 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
             }
         });
 
+    }
+
+    private static class AdMobAdListener extends AdListener {
+        @Override
+        public void onAdClosed() {
+            super.onAdClosed();
+        }
+
+        @Override
+        public void onAdFailedToLoad(int errorCode) {
+            super.onAdFailedToLoad(errorCode);
+            EventCollector.logEvent("interstitial", "admob_error", Integer.toString(errorCode));
+        }
+
+        @Override
+        public void onAdLoaded() {
+            super.onAdLoaded();
+        }
+
+        @Override
+        public void onAdOpened() {
+            super.onAdOpened();
+        }
+
+        @Override
+        public void onAdLeftApplication() {
+            super.onAdLeftApplication();
+        }
     }
 }

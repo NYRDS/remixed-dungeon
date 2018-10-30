@@ -17,7 +17,6 @@ import com.watabou.noosa.InterstitialPoint;
 public class GoogleRewardVideoAds {
 
 	private static RewardedVideoAd mCinemaRewardAd;
-	private static RewardVideoAdListener rewardVideoAdListener = new RewardVideoAdListener();
 	private static InterstitialPoint returnTo;
 	private static volatile boolean loaded = false;
 
@@ -29,7 +28,7 @@ public class GoogleRewardVideoAds {
 			public void run() {
 
 				mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
-				mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
+				mCinemaRewardAd.setRewardedVideoAdListener(new RewardVideoAdListener());
 
 				EventCollector.startTiming("google reward video");
 				mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
@@ -51,17 +50,10 @@ public class GoogleRewardVideoAds {
 				if (mCinemaRewardAd.isLoaded()) {
 					mCinemaRewardAd.show();
 				}else {
-					tryNextVideo();
 					returnTo.returnToWork(false);
 				}
 			}
 		});
-	}
-
-	public static void tryNextVideo() {
-		if(!AppodealAdapter.isVideoReady()) {
-			AppodealAdapter.initRewardedVideo();
-		}
 	}
 
 	private static class RewardVideoAdListener implements RewardedVideoAdListener {
@@ -107,7 +99,6 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			EventCollector.stopTiming("google reward video","google reward video","fail","");
-			tryNextVideo();
 		}
 
 		@Override
