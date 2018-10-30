@@ -200,7 +200,7 @@
   <string name="WndTradeItem_SellAll">Продать все за %dg</string>
   <string name="WndTradeItem_Cancel">Забудь об этом</string>
   <string name="WndTradeItem_Sold">Ты продал %1$s за %2$dg</string>
-  <string name="WndTradeItem_Bought">Ты купил %1$s за %2$dg</string>
+  <string name="WndTradeItem_Bought">Тебе посчастливилось приобрести предмет %1$s за %2$dg</string>
   <!--STRINGS OF WndWandmaker CLASS-->
   <string name="WndWandmaker_Message">О, я вижу, ты преуспел! Надеюсь, это не доставило тебе особых хлопот. Как обещано, ты волен выбрать одну из моих лучших палочек.</string>
   <string name="WndWandmaker_Battle">Боевая палочка</string>
