@@ -29,7 +29,7 @@ public class ScriptedActor extends Actor {
 
 	@Override
 	protected boolean act() {
-		LuaTable actor = LuaEngine.getEngine().call("require",  sourceFile).checktable();
+		LuaTable actor = LuaEngine.getEngine().require(sourceFile);
 
 		boolean ret = actor.get("act").call().checkboolean();
 		spend((float) actor.get("actionTime").call().checkdouble());
@@ -38,7 +38,7 @@ public class ScriptedActor extends Actor {
 	}
 
 	public void activate() {
-		LuaTable actor = LuaEngine.getEngine().call("require",  sourceFile).checktable();
+		LuaTable actor = LuaEngine.getEngine().require(sourceFile);
 		actor.get("activate").call();
 	}
 }

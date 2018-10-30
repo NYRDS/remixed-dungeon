@@ -1,5 +1,9 @@
 package com.nyrds.android.lua;
 
+import android.util.Log;
+
+import com.nyrds.android.util.TrackedRuntimeException;
+
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
 /**
@@ -14,7 +18,12 @@ public class MultiDexLuajavaLib extends LuajavaLib {
 
 	@Override
 	protected Class classForName(String name) throws ClassNotFoundException {
-		Class clazz = Class.forName(name, true, Thread.currentThread().getContextClassLoader());
-		return clazz;
+		try {
+			Log.i("MultiDexLuajavaLib",name);
+			Class clazz = Class.forName(name, true, Thread.currentThread().getContextClassLoader());
+			return clazz;
+		} catch (ClassNotFoundException e) {
+			throw new TrackedRuntimeException(e);
+		}
 	}
 }

@@ -10,8 +10,8 @@ import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Notifications;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.luaj.vm2.Globals;
@@ -119,13 +119,17 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	private void reportLuaError(LuaError err) {
+
+		throw new TrackedRuntimeException(err);
+		/*
 		Notifications.displayNotification("LuaError", "RD LuaError", err.getMessage());
 
 		GLog.w(err.getMessage());
+		*/
 	}
 
 	public LuaTable require(String module) {
-		return LuaEngine.getEngine().call("require", module).checktable();
+		return module(module,module);
 	}
 
 	public void runScriptFile(@NonNull String fileName) {
