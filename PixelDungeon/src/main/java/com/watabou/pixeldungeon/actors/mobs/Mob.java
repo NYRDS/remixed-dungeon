@@ -655,11 +655,11 @@ public abstract class Mob extends Char {
 		return clone;
 	}
 
-	protected void ressurrect() {
-		ressurrect(this);
+	protected void resurrect() {
+		resurrect(this);
 	}
 
-	public void ressurrect(Char parent) {
+	public void resurrect(Char parent) {
 
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(parent.getPos());
 		Mob new_mob;
@@ -671,11 +671,11 @@ public abstract class Mob extends Char {
 
 		if (Dungeon.level.cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
-			Dungeon.level.spawnMob(new_mob);
 			if (parent instanceof Hero) {
 				Mob.makePet(new_mob, (Hero) parent);
 				Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			}
+			Dungeon.level.spawnMob(new_mob);
 		}
 	}
 

@@ -15,7 +15,7 @@ public class BlackSkull extends Artifact {
 	private static final int    ACTIVATED_IMAGE = 20;
 	private static final int    BASIC_IMAGE     = 19;
 
-	private static final int    RESSURRECTION_COST  = 10;
+	private static final int    RESURRECTION_COST = 10;
 	private static final int    MAXIMUM_CHARGE  = 10;
 
 	private static final String CHARGE_KEY      = "charge";
@@ -40,9 +40,9 @@ public class BlackSkull extends Artifact {
 
 		if (mob.canBePet()) {
 			if (activated) {
-				mob.ressurrect(hero);
+				mob.resurrect(hero);
 				GLog.w( Game.getVar(R.string.BlackSkull_Ressurrect) );
-				charge = charge - RESSURRECTION_COST;
+				charge = charge - RESURRECTION_COST;
 				if (charge <= 0) {
 					GLog.w( Game.getVar(R.string.BlackSkull_Deactivated) );
 					activated = false;
