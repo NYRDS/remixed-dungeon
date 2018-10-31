@@ -10,14 +10,18 @@ import java.util.HashMap;
 import java.util.Map;
 public class AdsUtils {
 
-    public static Map<AdsUtilsCommon.IBannerProvider, Integer> fails = new HashMap<>();
+    public static Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
+    public static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
 
     static {
-        fails.put(new AAdsBannerProvider(),-2);
-        fails.put(new AdMobBannerProvider(),-1);
+        bannerFails.put(new AAdsComboProvider(),-3);
+        bannerFails.put(new AdMobBannerProvider(),-2);
+
+        interstitialFails.put(new AAdsComboProvider(), -3);
+        interstitialFails.put(new AdMobInterstitialProvider(), -2);
     }
 
-    private static int bannerIndex() {
+    public static int bannerIndex() {
         int childs = Game.instance().getLayout().getChildCount();
         for (int i = 0; i < childs; ++i) {
             View view = Game.instance().getLayout().getChildAt(i);
@@ -28,6 +32,26 @@ public class AdsUtils {
         return -1;
     }
 
+    public static void updateBanner(final View view) {
+        Game.instance().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                int index = bannerIndex();
+                if (index >= 0) {
+
+                    View adview = Game.instance().getLayout().getChildAt(index);
+                    if(adview == view) {
+                        return;
+                    }
+
+                    Game.instance().getLayout().removeViewAt(index);
+                }
+                Game.instance().getLayout().addView(view,0);
+            }
+
+        });
+    }
 
     public static void removeTopBanner() {
         Game.instance().runOnUiThread(new Runnable() {

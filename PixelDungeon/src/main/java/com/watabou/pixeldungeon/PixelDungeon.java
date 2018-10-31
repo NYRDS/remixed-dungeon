@@ -28,7 +28,6 @@ import com.google.android.gms.ads.MobileAds;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -128,8 +127,6 @@ public class PixelDungeon extends Game {
 
 		Music.INSTANCE.enable(music());
 		Sample.INSTANCE.enable(soundFx());
-
-		SpellFactory.touch();
     }
 
 	public static boolean differentVersions(String v1, String v2) {

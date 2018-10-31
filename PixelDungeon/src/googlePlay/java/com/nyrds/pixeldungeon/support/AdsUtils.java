@@ -60,7 +60,6 @@ public class AdsUtils {
             }
 
         });
-
     }
 
     public static void removeTopBanner() {

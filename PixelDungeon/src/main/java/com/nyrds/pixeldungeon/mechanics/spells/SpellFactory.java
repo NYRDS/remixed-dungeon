@@ -21,6 +21,7 @@ public class SpellFactory {
 	static private Map<String,ArrayList<String>> mSpellsByAffinity = new HashMap<>();
 	static {
 		initSpellsMap();
+		script.run("loadSpells",null);
 	}
 
 	private static void registerSpellClass(Class<? extends Spell> spellClass) {
@@ -98,9 +99,4 @@ public class SpellFactory {
 
 		return spellList;
 	}
-
-	static public void touch() {
-		script.run("loadSpells",null);
-	}
-
 }
