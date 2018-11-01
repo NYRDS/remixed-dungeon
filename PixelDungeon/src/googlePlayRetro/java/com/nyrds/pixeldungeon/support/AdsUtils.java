@@ -15,10 +15,10 @@ public class AdsUtils {
 
     static {
         bannerFails.put(new AAdsComboProvider(),-3);
-        bannerFails.put(new AdMobBannerProvider(),-2);
+        bannerFails.put(new AdMobComboProvider(),-2);
 
         interstitialFails.put(new AAdsComboProvider(), -3);
-        interstitialFails.put(new AdMobInterstitialProvider(), -2);
+        interstitialFails.put(new AdMobComboProvider(), -2);
     }
 
     public static int bannerIndex() {

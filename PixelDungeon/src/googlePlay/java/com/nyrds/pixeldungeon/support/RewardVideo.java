@@ -9,21 +9,21 @@ import com.watabou.noosa.InterstitialPoint;
 
 public class RewardVideo {
 	static public void init() {
-		if(!GoogleRewardVideoAds.isReady()){
+		if(!GoogleRewardVideoAds.isVideoInitialized()){
 			GoogleRewardVideoAds.initCinemaRewardVideo();
 		}
 
-		if(!AppodealAdapter.isVideoReady()) {
+		if(!AppodealAdapter.isVideoInitialized()) {
 			AppodealAdapter.initRewardedVideo();
 		}
 	}
 
 	static public boolean isReady() {
-		return AppodealAdapter.isVideoReady() || GoogleRewardVideoAds.isReady();
+		return AppodealAdapter.isVideoReady() || GoogleRewardVideoAds.isVideoReady();
 	}
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
-		if(GoogleRewardVideoAds.isReady()) {
+		if(GoogleRewardVideoAds.isVideoReady()) {
 			GoogleRewardVideoAds.showCinemaRewardVideo(ret);
 			return;
 		}

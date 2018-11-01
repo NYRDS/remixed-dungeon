@@ -118,4 +118,8 @@ public class AppodealAdapter {
     public static boolean isVideoReady() {
         return Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
     }
+
+    public static boolean isVideoInitialized() {
+        return Appodeal.isInitialized(Appodeal.REWARDED_VIDEO);
+    }
 }
