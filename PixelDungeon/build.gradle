@@ -55,7 +55,7 @@ android {
     }
     dexOptions {
         javaMaxHeapSize "4g"
-        additionalParameters = ["--set-max-idx-number=45000"]
+        additionalParameters = ["--set-max-idx-number=65000"]
     }
     lintOptions {
         abortOnError false
@@ -117,8 +117,6 @@ dependencies {
 
 
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
-    googlePlayImplementation name: 'adcolony-sdk-3.3.4', ext: 'aar'
-
 
     googlePlayImplementation fileTree(dir: 'lib', include: ['*.jar'])
 

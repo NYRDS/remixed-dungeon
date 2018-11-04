@@ -34,7 +34,7 @@ public class AppodealAdapter {
         //vungle disable due to strange build issue
         //mopub, mobvista & tapjoy due audiences mismatch
         //ogury - intersiteal
-        String disableNetworks[] = {"facebook", "flurry", "startapp", "vungle", "mopub", "mobvista", "tapjoy", "ogury"};
+        String disableNetworks[] = {"adcolony","facebook", "flurry", "startapp", "vungle", "mopub", "mobvista", "tapjoy", "ogury"};
 
         for (String net : disableNetworks) {
             Appodeal.disableNetwork(PixelDungeon.instance(), net);
