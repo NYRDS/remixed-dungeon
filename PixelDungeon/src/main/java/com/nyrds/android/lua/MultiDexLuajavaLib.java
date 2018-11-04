@@ -1,6 +1,7 @@
 package com.nyrds.android.lua;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
@@ -16,11 +17,14 @@ public class MultiDexLuajavaLib extends LuajavaLib {
 
 	@Override
 	protected Class classForName(String name) {
+		ClassLoader classLoader = RemixedPixelDungeonApp.getContext().getClassLoader();
+
 		try {
-			Class clazz = Class.forName(name, true, Thread.currentThread().getContextClassLoader());
+
+			Class clazz = Class.forName(name, true, classLoader);
 			return clazz;
 		} catch (ClassNotFoundException e) {
-			throw new TrackedRuntimeException(e);
+			throw new TrackedRuntimeException(classLoader.toString(), e);
 		}
 	}
 }

@@ -19,6 +19,7 @@ public class SpellFactory {
 	static private LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
 
 	static private Map<String,ArrayList<String>> mSpellsByAffinity = new HashMap<>();
+
 	static {
 		initSpellsMap();
 		script.run("loadSpells",null);

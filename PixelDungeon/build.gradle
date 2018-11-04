@@ -55,7 +55,7 @@ android {
     }
     dexOptions {
         javaMaxHeapSize "4g"
-        additionalParameters = ["--set-max-idx-number=65000"]
+        additionalParameters = ["--set-max-idx-number=45000"]
     }
     lintOptions {
         abortOnError false
