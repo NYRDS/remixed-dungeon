@@ -146,10 +146,10 @@ public class Statue extends Mob {
 	public CharSprite sprite() {
 		if(weapon!=null)
 		{
-			return new HeroSpriteDef(weapon);
+			return HeroSpriteDef.createHeroSpriteDef(weapon);
 		}
 		else{
-			return new HeroSpriteDef(new Dagger());
+			return HeroSpriteDef.createHeroSpriteDef(new Dagger());
 		}
 	}
 }

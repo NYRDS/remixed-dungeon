@@ -1756,7 +1756,7 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
     public CharSprite sprite() {
-		return new HeroSpriteDef(this);
+		return HeroSpriteDef.createHeroSpriteDef(this);
 	}
 
 	public HeroSpriteDef getHeroSprite() {

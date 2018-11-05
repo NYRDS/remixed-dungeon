@@ -47,7 +47,7 @@ public class WndHatInfo extends Window {
 		add(priceTag);
 
 		//Preview Image
-		Image preview = (new HeroSpriteDef(Dungeon.hero, item)).avatar();
+		Image preview = (HeroSpriteDef.createHeroSpriteDef(Dungeon.hero, item)).avatar();
 		preview.setPos(WIDTH / 2 - preview.width(), priceTag.bottom() + GAP);
 		preview.setScale(2, 2);
 		add(preview);

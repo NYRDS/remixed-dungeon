@@ -99,7 +99,7 @@ public class MirrorImage extends Mob {
 	@Override
 	public CharSprite sprite() {
 		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {
-			return new HeroSpriteDef(look, deathEffect);
+			return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
 		} else { // first sprite generation
 			if(Dungeon.hero != null) {
 				look = Dungeon.hero.getHeroSprite().getLayersDesc();
@@ -107,7 +107,7 @@ public class MirrorImage extends Mob {
 			} else { // dirty hack here
 				EventCollector.logException(new Exception("MirrorImage sprite created before hero"));
 				Hero hero = new Hero();
-				HeroSpriteDef spriteDef = new HeroSpriteDef(hero);
+				HeroSpriteDef spriteDef = HeroSpriteDef.createHeroSpriteDef(hero);
 				look = spriteDef.getLayersDesc();
 				deathEffect = spriteDef.getDeathEffect();
 			}

@@ -126,10 +126,10 @@ public class ArmoredStatue extends Mob {
 	public CharSprite sprite() {
 		if(armor !=null)
 		{
-			return new HeroSpriteDef(armor);
+			return HeroSpriteDef.createHeroSpriteDef(armor);
 		}
 		else{
-			return new HeroSpriteDef(new ClothArmor());
+			return HeroSpriteDef.createHeroSpriteDef(new ClothArmor());
 		}
 	}
 }
