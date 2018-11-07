@@ -8,6 +8,7 @@ import com.crashlytics.android.Crashlytics;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 import io.fabric.sdk.android.Fabric;
+import ru.livli.swsdk.SWSdk;
 
 public class RemixedPixelDungeonApp extends MultiDexApplication {
 
@@ -21,6 +22,8 @@ public class RemixedPixelDungeonApp extends MultiDexApplication {
 		instanceContext = getApplicationContext();
 
 		Fabric.with(this, new Crashlytics());
+
+		SWSdk.Companion.getInstance(this, "dummy_api_key", SWSdk.NONE);
 
 		try {
 			Class.forName("android.os.AsyncTask");
