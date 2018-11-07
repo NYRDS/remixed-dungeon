@@ -1,12 +1,12 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 
 import org.luaj.vm2.LuaTable;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 02.06.2018.

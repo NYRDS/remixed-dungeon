@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mechanics.spells.WindGust;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
@@ -11,6 +9,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class AirElemental extends Mob implements IDepthAdjustable {
 

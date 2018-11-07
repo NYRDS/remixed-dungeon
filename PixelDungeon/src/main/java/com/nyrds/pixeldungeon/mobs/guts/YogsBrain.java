@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -19,6 +17,8 @@ import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by DeadDie on 12.02.2016

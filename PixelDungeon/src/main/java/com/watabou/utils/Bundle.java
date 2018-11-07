@@ -17,9 +17,6 @@
 
 package com.watabou.utils;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -44,6 +41,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
+
+import androidx.annotation.Nullable;
+
+import androidx.annotation.NonNull;
 
 public class Bundle {
 

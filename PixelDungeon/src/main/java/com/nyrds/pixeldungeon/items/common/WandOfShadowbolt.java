@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.items.common;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -14,6 +12,8 @@ import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+
+import androidx.annotation.Nullable;
 
 public class WandOfShadowbolt extends Wand {
 

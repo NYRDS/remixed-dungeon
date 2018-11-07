@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -53,6 +51,8 @@ import com.watabou.utils.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import androidx.annotation.NonNull;
 
 public class Weapon extends KindOfWeapon {
 

@@ -10,8 +10,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Base64;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -22,6 +20,10 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
+import androidx.annotation.Nullable;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 01.03.2016.

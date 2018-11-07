@@ -2,11 +2,11 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.multidex.MultiDex;
-import android.support.multidex.MultiDexApplication;
 
 import com.crashlytics.android.Crashlytics;
 
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 import io.fabric.sdk.android.Fabric;
 
 public class RemixedPixelDungeonApp extends MultiDexApplication {

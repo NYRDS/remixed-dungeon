@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -58,6 +55,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
+import androidx.annotation.Nullable;
+
+import androidx.annotation.NonNull;
 
 public class Item implements Bundlable, Presser {
 

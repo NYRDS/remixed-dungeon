@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.levels;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -16,6 +14,8 @@ import com.watabou.utils.Bundle;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import androidx.annotation.Nullable;
 
 public class PredesignedLevel extends CustomLevel {
 

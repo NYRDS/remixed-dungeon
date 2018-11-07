@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
@@ -74,6 +72,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import androidx.annotation.NonNull;
 
 public abstract class Char extends Actor implements Presser{
 

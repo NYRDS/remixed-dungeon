@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Dungeon;
@@ -16,6 +14,8 @@ import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 

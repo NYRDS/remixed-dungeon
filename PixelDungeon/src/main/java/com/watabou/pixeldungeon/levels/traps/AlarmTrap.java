@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -30,6 +28,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import androidx.annotation.Nullable;
 
 public class AlarmTrap implements ITrigger {
 

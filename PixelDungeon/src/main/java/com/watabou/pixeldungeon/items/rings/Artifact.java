@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.items.rings;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -12,6 +10,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
+
+import androidx.annotation.Nullable;
 
 public class Artifact extends EquipableItem {
 

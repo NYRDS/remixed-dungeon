@@ -1,7 +1,5 @@
 package com.nyrds.android.util;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.json.JSONException;
@@ -15,6 +13,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import androidx.annotation.NonNull;
 
 public class JsonHelper {
 

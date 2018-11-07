@@ -17,8 +17,6 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Scrambler;
@@ -81,6 +79,8 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
+
+import androidx.annotation.NonNull;
 
 import static com.watabou.pixeldungeon.PixelDungeon.MOVE_TIMEOUTS;
 

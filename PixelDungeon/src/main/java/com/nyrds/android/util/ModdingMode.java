@@ -1,7 +1,6 @@
 package com.nyrds.android.util;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
@@ -20,6 +19,8 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Set;
+
+import androidx.annotation.NonNull;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";

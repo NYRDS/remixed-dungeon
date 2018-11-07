@@ -18,8 +18,6 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -56,6 +54,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+
+import androidx.annotation.NonNull;
 
 public enum HeroClass {
 

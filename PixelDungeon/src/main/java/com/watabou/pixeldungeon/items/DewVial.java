@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -34,6 +32,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
 
 public class DewVial extends Item {
 

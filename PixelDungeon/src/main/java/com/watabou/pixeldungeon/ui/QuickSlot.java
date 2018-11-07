@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -41,6 +39,8 @@ import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import androidx.annotation.Nullable;
 
 import static com.watabou.pixeldungeon.scenes.PixelScene.uiCamera;
 

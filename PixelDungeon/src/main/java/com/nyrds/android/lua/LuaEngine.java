@@ -5,9 +5,6 @@ package com.nyrds.android.lua;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Notifications;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -34,6 +31,9 @@ import org.luaj.vm2.lib.jse.JseMathLib;
 import org.luaj.vm2.lib.jse.JseOsLib;
 
 import java.io.InputStream;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class LuaEngine implements ResourceFinder {
 

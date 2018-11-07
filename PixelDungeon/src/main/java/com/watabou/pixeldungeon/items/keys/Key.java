@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -26,6 +24,8 @@ import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import androidx.annotation.NonNull;
 
 public class Key extends Item {
 

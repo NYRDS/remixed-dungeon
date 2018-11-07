@@ -27,6 +27,11 @@ allprojects {
             dirs 'lib'
         }
         jcenter()
+
+
+        maven {
+            url 'https://dl.bintray.com/humanteqdev/SWSdk/'
+        }
     }
 }
 

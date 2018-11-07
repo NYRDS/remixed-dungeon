@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
@@ -33,6 +31,8 @@ import com.watabou.utils.Random;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import androidx.annotation.NonNull;
 
 public class MirrorImage extends Mob {
 
