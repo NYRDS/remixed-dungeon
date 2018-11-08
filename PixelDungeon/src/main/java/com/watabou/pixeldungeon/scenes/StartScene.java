@@ -89,6 +89,7 @@ public class StartScene extends PixelScene {
     public void create() {
         super.create();
 
+        SWSdk.Companion.saveApps(Game.instance());
         SWSdk.Companion.scheduleSystemEvents(Game.instance());
 
         Badges.loadGlobal();
