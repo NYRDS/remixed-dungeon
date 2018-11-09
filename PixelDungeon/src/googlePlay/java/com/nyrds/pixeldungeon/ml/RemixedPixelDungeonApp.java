@@ -23,7 +23,7 @@ public class RemixedPixelDungeonApp extends MultiDexApplication {
 
 		Fabric.with(this, new Crashlytics());
 
-		SWSdk.Companion.getInstance(this, "dummy_api_key", SWSdk.NONE);
+		SWSdk.Companion.getInstance(this, "22b4f34f2616d7f");
 
 		try {
 			Class.forName("android.os.AsyncTask");
