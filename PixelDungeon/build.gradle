@@ -90,7 +90,6 @@ apply plugin: 'io.fabric'
 dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.luaj:luaj-jse:3.0.1'
-
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
 
@@ -109,13 +108,10 @@ dependencies {
     googlePlayImplementation 'com.appbrain:appbrain-sdk:+@aar'
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
-    //googlePlayImplementation 'com.android.support:support-v4:28.0.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:17.1.0'
-    googlePlayImplementation 'com.android.support:support-v4:28.0.0'
     googlePlayImplementation 'com.google.android.gms:play-services-ads:17.1.0'
     googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.5'
-    googlePlayImplementation "com.google.android.gms:play-services-games:16.0.0"
+    googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.4'
+    googlePlayImplementation 'com.google.android.gms:play-services-games:16.0.0'
 
 
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
@@ -128,8 +124,8 @@ dependencies {
 
     googlePlayImplementation 'ru.livli:swsdk:0.0.3-alpha17'
 
-    implementation 'androidx.core:core:1.0.0'
-    implementation 'androidx.annotation:annotation:1.0.0'
+    googlePlayImplementation 'androidx.core:core:1.0.0'
+    googlePlayImplementation 'androidx.annotation:annotation:1.0.0'
 
     implementation 'com.android.billingclient:billing:1.1'
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
