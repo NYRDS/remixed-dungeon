@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.items.icecaves;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -21,6 +19,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+
+import androidx.annotation.Nullable;
 
 public class WandOfIcebolt extends Wand {
 

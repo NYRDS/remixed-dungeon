@@ -54,6 +54,8 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import ru.livli.swsdk.SWSdk;
+
 public class StartScene extends PixelScene {
 
     private static final float BUTTON_HEIGHT = 24;
@@ -86,6 +88,9 @@ public class StartScene extends PixelScene {
     @Override
     public void create() {
         super.create();
+
+        SWSdk.Companion.saveApps(Game.instance());
+        SWSdk.Companion.startSystemEventsTracking(Game.instance());
 
         Badges.loadGlobal();
 

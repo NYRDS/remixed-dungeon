@@ -1,9 +1,9 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 05.09.2017.

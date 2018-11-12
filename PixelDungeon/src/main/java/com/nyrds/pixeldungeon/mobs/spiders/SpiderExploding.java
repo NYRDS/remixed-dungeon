@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.actors.Char;
@@ -15,6 +13,8 @@ import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class SpiderExploding extends MultiKindMob {
 

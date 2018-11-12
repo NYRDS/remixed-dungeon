@@ -18,11 +18,12 @@
 package com.watabou.noosa;
 
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
 import android.util.SparseArray;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
+
+import androidx.annotation.Nullable;
 
 public class TextureFilm {
 

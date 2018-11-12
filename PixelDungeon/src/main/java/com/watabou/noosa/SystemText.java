@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.text.TextPaint;
 
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -20,6 +19,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+import androidx.annotation.NonNull;
 
 public class SystemText extends Text {
 

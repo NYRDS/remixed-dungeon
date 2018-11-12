@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -37,6 +35,8 @@ import com.watabou.pixeldungeon.sprites.GooSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Goo extends Boss {
 

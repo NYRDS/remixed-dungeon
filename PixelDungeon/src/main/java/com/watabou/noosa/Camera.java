@@ -17,14 +17,14 @@
 
 package com.watabou.noosa;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
 
 public class Camera extends Gizmo {
 

@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -28,6 +26,8 @@ import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
+
+import androidx.annotation.Nullable;
 
 public class SummoningTrap implements ITrigger {
 

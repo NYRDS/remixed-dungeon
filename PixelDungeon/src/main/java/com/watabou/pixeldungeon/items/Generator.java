@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
@@ -151,6 +149,8 @@ import com.watabou.utils.Random;
 
 import java.util.HashMap;
 import java.util.Locale;
+
+import androidx.annotation.NonNull;
 
 public class Generator {
 

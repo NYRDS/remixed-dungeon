@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -39,6 +37,8 @@ import com.watabou.pixeldungeon.sprites.EyeSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Eye extends Mob {
 

@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -49,6 +47,8 @@ import com.watabou.pixeldungeon.sprites.LarvaSprite;
 import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Yog extends Boss {
 

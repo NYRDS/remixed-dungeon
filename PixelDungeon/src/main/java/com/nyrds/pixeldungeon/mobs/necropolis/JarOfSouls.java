@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+
+import androidx.annotation.NonNull;
 
 public class JarOfSouls extends UndeadMob {
 

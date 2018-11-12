@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.ml.R;
@@ -41,6 +39,8 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import androidx.annotation.NonNull;
 
 public class WndTradeItem extends Window {
 

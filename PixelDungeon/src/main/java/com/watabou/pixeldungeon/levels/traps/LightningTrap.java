@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
@@ -34,6 +32,8 @@ import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
+
+import androidx.annotation.Nullable;
 
 public class LightningTrap implements ITrigger{
 

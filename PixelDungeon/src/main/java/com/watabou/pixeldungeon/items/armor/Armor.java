@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
@@ -50,6 +48,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
 
 public class Armor extends EquipableItem {
 

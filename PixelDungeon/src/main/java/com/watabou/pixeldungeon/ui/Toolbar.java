@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.HBox;
@@ -49,6 +47,8 @@ import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
 import java.util.ArrayList;
+
+import androidx.annotation.Nullable;
 
 public class Toolbar extends Component {
 

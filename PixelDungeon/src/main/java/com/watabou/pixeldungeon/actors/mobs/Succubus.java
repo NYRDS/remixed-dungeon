@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -36,6 +34,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.SuccubusSprite;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Succubus extends Mob {
 

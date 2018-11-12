@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
@@ -136,6 +133,9 @@ import com.watabou.utils.SystemTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class Hero extends Char implements PetOwner {
 	private static final String TXT_EXP = "%+dEXP";

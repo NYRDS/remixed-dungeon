@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -14,6 +12,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class SpiderMind extends Mob {
 

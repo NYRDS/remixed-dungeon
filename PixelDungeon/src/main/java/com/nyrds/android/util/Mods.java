@@ -1,7 +1,5 @@
 package com.nyrds.android.util;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.PixelDungeon;
 
@@ -12,6 +10,8 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.10.2016.

@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
-import android.support.annotation.Nullable;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.support.Google.GoogleIap;
@@ -11,6 +10,8 @@ import com.watabou.pixeldungeon.PixelDungeon;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 24.05.2016.

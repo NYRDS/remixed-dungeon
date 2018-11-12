@@ -17,7 +17,7 @@
         "kind": "BlackSkullOfMastery"
       },
       {
-        "kind": "ScrollOfMirrorImage",
+        "kind": "TomeOfKnowledge",
         "quantity": 100
       },
       {
@@ -28,8 +28,8 @@
         "quantity": 100
       }
     ],
-    "str": 15,
-    "hp": 20,
+    "str": 1500,
+    "hp": 20000,
     "magicAffinity": "Common"
   },
   "non_expert": {

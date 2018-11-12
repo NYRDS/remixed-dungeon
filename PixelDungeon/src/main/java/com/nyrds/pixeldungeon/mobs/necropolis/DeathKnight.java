@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.effects.DeathStroke;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by DeadDie on 12.02.2016

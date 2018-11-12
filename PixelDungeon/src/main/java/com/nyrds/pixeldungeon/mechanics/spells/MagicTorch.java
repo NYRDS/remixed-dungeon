@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 05.09.2017.

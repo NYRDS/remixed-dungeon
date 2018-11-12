@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -27,6 +25,8 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
+
+import androidx.annotation.Nullable;
 
 public class PoisonTrap implements ITrigger {
 

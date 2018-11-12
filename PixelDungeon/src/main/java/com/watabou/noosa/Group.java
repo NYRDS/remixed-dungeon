@@ -17,11 +17,11 @@
 
 package com.watabou.noosa;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
 
 public class Group extends Gizmo {
 

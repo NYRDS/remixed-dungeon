@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.windows;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.DownloadStateListener;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 14.04.2018.

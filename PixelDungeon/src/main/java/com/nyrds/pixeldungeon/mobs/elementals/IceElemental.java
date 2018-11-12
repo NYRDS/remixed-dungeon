@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -14,6 +12,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class IceElemental extends Mob implements IDepthAdjustable {
 

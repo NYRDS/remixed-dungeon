@@ -1,12 +1,12 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by DeadDie on 12.02.2016

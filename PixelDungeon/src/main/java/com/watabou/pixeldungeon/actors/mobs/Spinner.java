@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -30,6 +28,8 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Spinner extends Mob {
 	

@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -31,6 +29,8 @@ import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
 import com.watabou.pixeldungeon.sprites.ElementalSprite;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Elemental extends Mob {
 

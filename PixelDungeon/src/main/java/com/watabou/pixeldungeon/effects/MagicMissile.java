@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import android.support.annotation.Nullable;
-
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
@@ -34,6 +32,8 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import androidx.annotation.Nullable;
 
 public class MagicMissile extends Emitter {
 
