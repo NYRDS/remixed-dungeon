@@ -161,8 +161,7 @@ public class MobSpriteDef extends MobSprite {
 	@Override
 	public void zap(int cell) {
 
-		turnTo(ch.getPos(), cell);
-		play(zap);
+		super.zap(cell);
 
 		if (zapEffect != null) {
 			if (!Dungeon.visible[ch.getPos()] && Dungeon.visible[cell]){

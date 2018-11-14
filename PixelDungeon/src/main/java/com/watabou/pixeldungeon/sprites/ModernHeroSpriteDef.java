@@ -56,8 +56,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
 
-	private static final String DEATH_EFFECT      = "death effect";
-
 	private CustomClipEffect deathEffect;
 
 	private Animation fly;

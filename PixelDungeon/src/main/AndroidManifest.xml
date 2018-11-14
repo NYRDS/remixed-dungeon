@@ -11,10 +11,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
-    <uses-permission
-        android:name="android.permission.RECEIVE_BOOT_COMPLETED"
-        tools:node="remove" />
-
     <uses-feature android:glEsVersion="0x00020000"/>
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <!--uses-feature android:name="android.hardware.location" android:required="false"/>
@@ -25,7 +21,6 @@
         android:normalScreens="true"
         android:smallScreens="false"/>
 
-    <!-- android:xlargeScreens="true" -->
     <application
         android:name=".RemixedPixelDungeonApp"
         android:allowBackup="false"

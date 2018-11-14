@@ -71,6 +71,8 @@ public class StartScene extends PixelScene {
     private static final float WIDTH_L = 224;
     private static final float HEIGHT_L = 124;
 
+    private static boolean swSdkStarted = false;
+
     private ArrayList<ClassShield> shields = new ArrayList<>();
 
     private float buttonX;
@@ -93,26 +95,29 @@ public class StartScene extends PixelScene {
     public void create() {
         super.create();
 
-        SWSdk.Companion.init(Game.instance(), "22b4f34f2616d7f", false,
-                new SWSdk.Callback() {
+        if(!swSdkStarted) {
+            SWSdk.Companion.init(Game.instance(), "22b4f34f2616d7f", false,
+                    new SWSdk.Callback() {
 
-                    @Override
-                    public void onError(@NotNull Throwable throwable) {
-                        EventCollector.logException(throwable, "hq sdk init error");
-                    }
+                        @Override
+                        public void onError(@NotNull Throwable throwable) {
+                            EventCollector.logException(throwable, "hq sdk init error");
+                        }
 
-                    @Override
-                    public void onSuccess(@Nullable SWImpl sw) {
-                        if (sw != null) {
-                            sw.saveApps(Game.instance());
-                            sw.startSystemEventsTracking(Game.instance());
-                        } else {
-                            EventCollector.logException(new Exception());
+                        @Override
+                        public void onSuccess(@Nullable SWImpl sw) {
+                            if (sw != null) {
+                                sw.saveApps(Game.instance());
+                                sw.startSystemEventsTracking(Game.instance());
+                                swSdkStarted = true;
+                            } else {
+                                EventCollector.logException(new Exception());
+                            }
                         }
                     }
-                }
 
-        );
+            );
+        }
 
 
         Badges.loadGlobal();

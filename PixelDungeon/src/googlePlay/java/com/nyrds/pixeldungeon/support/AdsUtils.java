@@ -54,6 +54,10 @@ public class AdsUtils {
                     if (adview instanceof BannerView) {
                         Appodeal.hide(Game.instance(), Appodeal.BANNER);
                     }
+
+                    if(adview instanceof AdView) {
+                        ((AdView)adview).destroy();
+                    }
                     Game.instance().getLayout().removeViewAt(index);
                 }
                 Game.instance().getLayout().addView(view,0);
@@ -70,8 +74,12 @@ public class AdsUtils {
                 if (index >= 0) {
 
                     View adview = Game.instance().getLayout().getChildAt(index);
+
                     if (adview instanceof BannerView) {
                         Appodeal.hide(Game.instance(), Appodeal.BANNER);
+                    }
+                    if(adview instanceof AdView) {
+                        ((AdView)adview).destroy();
                     }
 
                     Game.instance().getLayout().removeViewAt(index);

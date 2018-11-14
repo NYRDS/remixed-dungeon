@@ -354,6 +354,7 @@ public class Hero extends Char implements PetOwner {
 	private void live() {
 		Buff.affect(this, Regeneration.class);
 		Buff.affect(this, Hunger.class);
+		getSprite().idle();
 	}
 
 	public int tier() {
@@ -617,8 +618,6 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	private void ready() {
-		getSprite().idle();
-
 		curAction = null;
 		ready = true;
 
