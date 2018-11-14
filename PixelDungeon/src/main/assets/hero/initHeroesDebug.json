@@ -10,11 +10,13 @@
         "level":10
       },
       {
-        "kind": "Ankh",
-        "quantity": 100
+        "kind": "Sword"
       },
       {
-        "kind": "BlackSkullOfMastery"
+        "kind": "SacrificialSword"
+      },
+      {
+        "kind": "GoldenSword"
       },
       {
         "kind": "TomeOfKnowledge",

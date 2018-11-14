@@ -51,20 +51,24 @@ import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
 import ru.livli.swsdk.SWSdk;
+import ru.livli.swsdk.api.impl.SWImpl;
 
 public class StartScene extends PixelScene {
 
     private static final float BUTTON_HEIGHT = 24;
-    private static final float GAP           = 2;
+    private static final float GAP = 2;
 
-    private static final float WIDTH_P  = 116;
+    private static final float WIDTH_P = 116;
     private static final float HEIGHT_P = 220;
 
-    private static final float WIDTH_L  = 224;
+    private static final float WIDTH_L = 224;
     private static final float HEIGHT_L = 124;
 
     private ArrayList<ClassShield> shields = new ArrayList<>();
@@ -89,8 +93,27 @@ public class StartScene extends PixelScene {
     public void create() {
         super.create();
 
-        SWSdk.Companion.saveApps(Game.instance());
-        SWSdk.Companion.startSystemEventsTracking(Game.instance());
+        SWSdk.Companion.init(Game.instance(), "22b4f34f2616d7f", false,
+                new SWSdk.Callback() {
+
+                    @Override
+                    public void onError(@NotNull Throwable throwable) {
+                        EventCollector.logException(throwable, "hq sdk init error");
+                    }
+
+                    @Override
+                    public void onSuccess(@Nullable SWImpl sw) {
+                        if (sw != null) {
+                            sw.saveApps(Game.instance());
+                            sw.startSystemEventsTracking();
+                        } else {
+                            EventCollector.logException(new Exception());
+                        }
+                    }
+                }
+
+        );
+
 
         Badges.loadGlobal();
 
@@ -197,11 +220,11 @@ public class StartScene extends PixelScene {
             int j = 0;
             for (ClassShield shield : shields) {
 
-                if(j==0&&i==1) {
-                    i+=2;
+                if (j == 0 && i == 1) {
+                    i += 2;
                 }
 
-                shield.setRect(left + i * shieldW, top + (shieldH * 1.5f)  * j,
+                shield.setRect(left + i * shieldW, top + (shieldH * 1.5f) * j,
                         shieldW, shieldH);
                 i++;
                 if (i == classesPerRow) {
@@ -211,7 +234,7 @@ public class StartScene extends PixelScene {
             }
 
             ChallengeButton challenge = new ChallengeButton();
-            challenge.setPos(w / 2 - challenge.width() / 2, top + shieldH *0.5f
+            challenge.setPos(w / 2 - challenge.width() / 2, top + shieldH * 0.5f
                     - challenge.height() / 2);
             add(challenge);
         }
@@ -220,8 +243,8 @@ public class StartScene extends PixelScene {
         add(unlock);
 
         huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
-        elfUnlocked      = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
-        gnollUnlocked    = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (PixelDungeon.donated() >= 3);
+        elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
+        gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (PixelDungeon.donated() >= 3);
 
         ExitButton btnExit = new ExitButton();
         btnExit.setPos(Camera.main.width - btnExit.width(), 0);
@@ -338,7 +361,7 @@ public class StartScene extends PixelScene {
             @Override
             protected void onSelect(final int index) {
 
-                if(index<2 && EuConsent.getConsentLevel()<EuConsent.NON_PERSONALIZED) {
+                if (index < 2 && EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
                     Game.scene().add(new WndEuConsent() {
                         @Override
                         public void done() {
@@ -426,20 +449,20 @@ public class StartScene extends PixelScene {
 
         private static final float MIN_BRIGHTNESS = 0.6f;
 
-        private static final int BASIC_NORMAL      = 0x444444;
+        private static final int BASIC_NORMAL = 0x444444;
         private static final int BASIC_HIGHLIGHTED = 0xCACFC2;
 
-        private static final int MASTERY_NORMAL      = 0x7711AA;
+        private static final int MASTERY_NORMAL = 0x7711AA;
         private static final int MASTERY_HIGHLIGHTED = 0xCC33FF;
 
-        private static final int   WIDTH  = 24;
-        private static final int   HEIGHT = 28;
-        private static final float SCALE  = 1.5f;
+        private static final int WIDTH = 24;
+        private static final int HEIGHT = 28;
+        private static final float SCALE = 1.5f;
 
         private HeroClass cl;
 
-        private Image   avatar;
-        private Text    name;
+        private Image avatar;
+        private Text name;
         private Emitter emitter;
 
         private float brightness;

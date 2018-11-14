@@ -32,8 +32,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 590
-        versionName "remix.28.4.alpha.5.2"
+        versionCode 591
+        versionName "remix.28.4.alpha.5.3"
     }
 
     buildTypes {
@@ -108,7 +108,7 @@ dependencies {
     googlePlayImplementation 'com.appbrain:appbrain-sdk:+@aar'
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:17.1.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:17.1.1'
     googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-analytics:16.0.4'
     googlePlayImplementation 'com.google.android.gms:play-services-games:16.0.0'
@@ -122,15 +122,18 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    googlePlayImplementation 'ru.livli:swsdk:0.0.3-alpha17'
+    googlePlayImplementation 'ru.livli:swsdk:0.0.3-alpha19'
 
-    googlePlayImplementation 'androidx.core:core:1.0.0'
+    googlePlayImplementation 'androidx.core:core:1.0.1'
     googlePlayImplementation 'androidx.annotation:annotation:1.0.0'
 
     implementation 'com.android.billingclient:billing:1.1'
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
     implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
         transitive = true
+    }
+    implementation(group: 'com.google.guava', name: 'guava', version: '27.0-android') {
+        exclude group: 'com.google.guava' , module: 'failureaccess'
     }
 }
 

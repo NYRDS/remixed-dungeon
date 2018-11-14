@@ -21,9 +21,8 @@ import java.io.StringWriter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import androidx.annotation.Nullable;
-
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 01.03.2016.
@@ -35,7 +34,7 @@ public class Util {
 		return sw.toString();
 	}
 
-	static public String toString(Exception e) {
+	static public String toString(Throwable e) {
 		return e.getMessage() + "\n" + Util.stackTraceToString(e) + "\n";
 	}
 

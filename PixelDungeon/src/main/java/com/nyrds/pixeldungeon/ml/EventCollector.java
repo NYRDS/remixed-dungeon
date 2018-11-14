@@ -69,7 +69,7 @@ public class EventCollector {
 		}
 	}
 
-	static public void logException(Exception e,String desc) {
+	static public void logException(Throwable e, String desc) {
 		if(!mDisabled) {
 			Crashlytics.log(desc);
 			Crashlytics.logException(e);
