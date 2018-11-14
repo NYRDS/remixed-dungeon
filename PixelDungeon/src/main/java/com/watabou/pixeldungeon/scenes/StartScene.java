@@ -105,7 +105,7 @@ public class StartScene extends PixelScene {
                     public void onSuccess(@Nullable SWImpl sw) {
                         if (sw != null) {
                             sw.saveApps(Game.instance());
-                            sw.startSystemEventsTracking();
+                            sw.startSystemEventsTracking(Game.instance());
                         } else {
                             EventCollector.logException(new Exception());
                         }
