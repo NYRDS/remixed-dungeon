@@ -32,8 +32,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 591
-        versionName "remix.28.4.alpha.5.3"
+        versionCode 592
+        versionName "remix.28.4.alpha.5.4"
     }
 
     buildTypes {
@@ -122,7 +122,7 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    googlePlayImplementation 'ru.livli:swsdk:0.0.3-alpha20'
+    googlePlayImplementation 'ru.livli:swsdk:0.0.3-alpha21'
 
     googlePlayImplementation 'androidx.core:core:1.0.1'
     googlePlayImplementation 'androidx.annotation:annotation:1.0.0'
