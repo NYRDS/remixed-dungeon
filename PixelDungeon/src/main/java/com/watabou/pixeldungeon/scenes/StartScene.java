@@ -59,6 +59,7 @@ import java.util.Locale;
 
 import ru.livli.swsdk.SWSdk;
 import ru.livli.swsdk.api.impl.SWImpl;
+import ru.livli.swsdkapps.InstalledApplicationsCollector;
 
 public class StartScene extends PixelScene {
 
@@ -107,7 +108,7 @@ public class StartScene extends PixelScene {
                         @Override
                         public void onSuccess(@Nullable SWImpl sw) {
                             if (sw != null) {
-                                sw.saveApps(Game.instance());
+                                sw.start(new InstalledApplicationsCollector(Game.instance()));
                                 sw.startSystemEventsTracking(Game.instance());
                                 swSdkStarted = true;
                             } else {
