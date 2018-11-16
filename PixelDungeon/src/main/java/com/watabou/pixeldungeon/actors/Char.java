@@ -613,7 +613,6 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	public void onMotionComplete() {
-		getSprite().idle();
 		next();
 	}
 

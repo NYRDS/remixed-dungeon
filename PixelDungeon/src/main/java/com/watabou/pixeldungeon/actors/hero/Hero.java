@@ -354,7 +354,6 @@ public class Hero extends Char implements PetOwner {
 	private void live() {
 		Buff.affect(this, Regeneration.class);
 		Buff.affect(this, Hunger.class);
-		getSprite().idle();
 	}
 
 	public int tier() {
@@ -551,12 +550,12 @@ public class Hero extends Char implements PetOwner {
 
 			if (PixelDungeon.realtime()) {
 				if (!ready) {
-					ready();
+					readyAndIdle();
 				}
 				spend(TICK);
 				next();
 			} else {
-				ready();
+				readyAndIdle();
 			}
 			return false;
 
@@ -624,6 +623,11 @@ public class Hero extends Char implements PetOwner {
 		GameScene.ready();
 	}
 
+	private void readyAndIdle() {
+		ready();
+		getSprite().idle();
+	}
+
 	public void interrupt() {
 		if (curAction != null && curAction.dst != getPos()) {
 			lastAction = curAction;
@@ -644,10 +648,10 @@ public class Hero extends Char implements PetOwner {
 
 		} else {
 			//TODO remove this in future
-			if (Dungeon.level.map[getPos()] == Terrain.SIGN) {
-				GameScene.show(new WndMessage(Dungeon.tip()));
-			}
-			ready();
+			//if (Dungeon.level.map[getPos()] == Terrain.SIGN) {
+			//	GameScene.show(new WndMessage(Dungeon.tip()));
+			//}
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -658,7 +662,7 @@ public class Hero extends Char implements PetOwner {
 
 		if (Dungeon.level.adjacent(getPos(), npc.getPos())) {
 
-			ready();
+			readyAndIdle();
 			getSprite().turnTo(getPos(), npc.getPos());
 			if (!npc.interact(this)) {
 				actAttack(new HeroAction.Attack(npc));
@@ -670,7 +674,7 @@ public class Hero extends Char implements PetOwner {
 			if (Dungeon.level.fieldOfView[npc.getPos()] && getCloser(npc.getPos())) {
 				return true;
 			} else {
-				ready();
+				readyAndIdle();
 				return false;
 			}
 		}
@@ -680,7 +684,7 @@ public class Hero extends Char implements PetOwner {
 		int dst = action.dst;
 		if (getPos() == dst || Dungeon.level.adjacent(getPos(), dst)) {
 
-			ready();
+			readyAndIdle();
 
 			Heap heap = Dungeon.level.getHeap(dst);
 			if (heap != null && heap.type == Type.FOR_SALE && heap.size() == 1) {
@@ -694,7 +698,7 @@ public class Hero extends Char implements PetOwner {
 			return true;
 
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -703,7 +707,7 @@ public class Hero extends Char implements PetOwner {
 		int dst = action.dst;
 		if (Dungeon.visible[dst]) {
 
-			ready();
+			readyAndIdle();
 			AlchemyPot.operate(this, dst);
 			return false;
 
@@ -712,7 +716,7 @@ public class Hero extends Char implements PetOwner {
 			return true;
 
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -740,13 +744,13 @@ public class Hero extends Char implements PetOwner {
 						newHeap.sprite.drop();
 						newHeap.pickUpFailed();
 
-						ready();
+						readyAndIdle();
 					}
 				} else {
-					ready();
+					readyAndIdle();
 				}
 			} else {
-				ready();
+				readyAndIdle();
 			}
 
 			return false;
@@ -756,7 +760,7 @@ public class Hero extends Char implements PetOwner {
 			return true;
 
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -788,7 +792,7 @@ public class Hero extends Char implements PetOwner {
 
 					if (theKey == null) {
 						GLog.w(Game.getVar(R.string.Hero_LockedChest));
-						ready();
+						readyAndIdle();
 						return false;
 					}
 				}
@@ -808,7 +812,7 @@ public class Hero extends Char implements PetOwner {
 				getSprite().operate(dst);
 
 			} else {
-				ready();
+				readyAndIdle();
 			}
 
 			return false;
@@ -818,7 +822,7 @@ public class Hero extends Char implements PetOwner {
 			return true;
 
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -842,7 +846,7 @@ public class Hero extends Char implements PetOwner {
 				Sample.INSTANCE.play(Assets.SND_UNLOCK);
 			} else {
 				GLog.w(Game.getVar(R.string.Hero_LockedDoor));
-				ready();
+				readyAndIdle();
 			}
 
 			return false;
@@ -850,7 +854,7 @@ public class Hero extends Char implements PetOwner {
 		} else if (getCloser(doorCell)) {
 			return true;
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -880,7 +884,7 @@ public class Hero extends Char implements PetOwner {
 			return true;
 
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -897,7 +901,7 @@ public class Hero extends Char implements PetOwner {
 
 				if (belongings.getItem(Amulet.class) == null) {
 					GameScene.show(new WndMessage(Game.getVar(R.string.Hero_Leave)));
-					ready();
+					readyAndIdle();
 				} else {
 					Dungeon.win(ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_HAPPY);
 
@@ -925,7 +929,7 @@ public class Hero extends Char implements PetOwner {
 			return true;
 
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -934,7 +938,7 @@ public class Hero extends Char implements PetOwner {
 		if (Dungeon.level.fieldOfView[enemy.getPos()] && getCloser(enemy.getPos())) {
 			return true;
 		} else {
-			ready();
+			readyAndIdle();
 			return false;
 		}
 	}
@@ -1115,7 +1119,7 @@ public class Hero extends Char implements PetOwner {
 		if (subClass == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
 			if (!hasBuff(Fury.class)) {
 				Buff.affect(this, Fury.class);
-				ready();
+				readyAndIdle();
 			}
 		}
 	}
@@ -1855,7 +1859,7 @@ public class Hero extends Char implements PetOwner {
 
 	public void updateLook() {
 		getHeroSprite().heroUpdated(this);
-		ready();
+		readyAndIdle();
 	}
 
 	public void collect(Item item) {
