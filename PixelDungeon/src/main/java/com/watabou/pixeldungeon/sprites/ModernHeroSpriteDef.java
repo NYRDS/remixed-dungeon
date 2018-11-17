@@ -393,20 +393,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 
 	@Override
-	public void die() {
-		deathEffect.place(ch.getPos());
-		getParent().add(deathEffect);
-		deathEffect.setVisible(true);
-		deathEffect.playAnim(die, new Callback() {
-			@Override
-			public void call() {
-				deathEffect.killAndErase();
-			}
-		});
-		killAndErase();
-	}
-
-	@Override
 	public PointF worldCoords() {
 		final int csize = DungeonTilemap.SIZE;
 		PointF point = point();
@@ -423,6 +409,20 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 				(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
 				(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
 		);
+	}
+
+	@Override
+	public void die() {
+		deathEffect.place(ch.getPos());
+		getParent().add(deathEffect);
+		deathEffect.setVisible(true);
+		deathEffect.playAnim(die, new Callback() {
+			@Override
+			public void call() {
+				deathEffect.killAndErase();
+			}
+		});
+		killAndErase();
 	}
 
 	public String getDeathEffect() {
