@@ -34,7 +34,7 @@ import java.util.Map;
 public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
-	private static final String HERO_EMPTY_PNG = "hero/empty.png";
+	private static final String HERO_EMPTY_PNG = "hero_modern/empty.png";
 	private static final String WEAPON_ANIM = "weapon_anim";
 
 	// body goes as main texture
@@ -135,7 +135,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 				|| classDescriptor.equals("MAGE_BATTLEMAGE")
 				|| classDescriptor.equals("WARRIOR_BERSERKER")
 				|| classDescriptor.equals("NECROMANCER_NONE")){
-			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+			facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
 		if (accessory  == null){
@@ -153,13 +153,13 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			}
 		}
 
-		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
+		if (drawHair){ hairDescriptor = "hero_modern/head/hair/" + classDescriptor + "_HAIR.png"; }
 
 		String bodyType = bodyDescriptor(hero);
 
-		layersDesc.put(LAYER_BODY, "hero/body/"+bodyType+".png" );
+		layersDesc.put(LAYER_BODY, "hero_modern/body/" +bodyType+".png" );
 		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.belongings.armor, hero));
-		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
+		layersDesc.put(LAYER_HEAD, "hero_modern/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
@@ -174,8 +174,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			weaponAnimationClassRight = hero.belongings.weapon.getAnimationClass();
 		}
 
-		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/"+bodyType+"_"+weaponAnimationClassLeft+"_left.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/"+bodyType+"_"+weaponAnimationClassRight+"_right.png");
+		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/" +bodyType+"_"+weaponAnimationClassLeft+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/" +bodyType+"_"+weaponAnimationClassRight+"_right.png");
 
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
@@ -184,12 +184,12 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
 		}
 
-		deathEffectDesc = "hero/death/"+deathDescriptor+".png";
+		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
 	}
 
 	private void createStatueSprite(Weapon weapon) {
-		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
-		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
+		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
+		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
 
 
 		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
@@ -200,26 +200,26 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			weaponAnimationClassRight = weapon.getAnimationClass();
 		}
 
-		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/statue_"+weaponAnimationClassLeft+"_left.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/statue_"+weaponAnimationClassRight+"_right.png");
+		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
 
 		layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(weapon, "left"));
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
 
-		deathEffectDesc = "hero/death/statue.png";
+		deathEffectDesc = "hero_modern/death/statue.png";
 	}
 
 	private void createStatueSprite(Armor armor) {
-		layersDesc.put(LAYER_BODY,        "hero/body/statue.png");
-		layersDesc.put(LAYER_HEAD,        "hero/head/statue.png");
+		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
+		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
 		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
 
 
-		layersDesc.put(LAYER_LEFT_HAND,  "hero/body/hands/statue_none_left.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero/body/hands/statue_none_right.png");
+		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/statue_none_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_none_right.png");
 
-		deathEffectDesc = "hero/death/statue.png";
+		deathEffectDesc = "hero_modern/death/statue.png";
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -270,20 +270,20 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/armor/"+armor.getVisualName()+".png";
+		return "hero_modern/armor/" +armor.getVisualName()+".png";
 	}
 
 	private String itemHandDescriptor(KindOfWeapon item, String hand) {
 		if(item==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/items/"+item.getVisualName()+"_"+hand+".png";
+		return "hero_modern/items/" +item.getVisualName()+"_"+hand+".png";
 	}
 
 	private String helmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.belongings.armor.hasHelmet()){
-				return "hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
+				return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 			}
 		}
 			return HERO_EMPTY_PNG;
@@ -292,7 +292,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private String collarDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.belongings.armor.hasCollar()){
-				return "hero/armor/collar/"+armor.getClass().getSimpleName()+".png";
+				return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";
 			}
 		}
 		return HERO_EMPTY_PNG;

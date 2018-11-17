@@ -27,7 +27,7 @@ import java.util.Map;
 public class RetroHeroSpriteDef extends HeroSpriteDef {
 
 	private static final int RUN_FRAMERATE = 20;
-	private static final String HERO_EMPTY_PNG = "retro_hero/empty.png";
+	private static final String HERO_EMPTY_PNG = "hero/empty.png";
 
 	// body goes as main texture
 	private static final String LAYER_ARMOR       = "armor";
@@ -58,24 +58,24 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	private Callback jumpCallback;
 
 	public RetroHeroSpriteDef(String[] lookDesc){
-		super("retro_hero/spritesDesc/Hero.json",0);
+		super("hero/spritesDesc/Hero.json",0);
 		applyLayersDesc(lookDesc);
 	}
 
 	public RetroHeroSpriteDef(Armor armor){
-		super("retro_hero/spritesDesc/ArmoredStatue.json",0);
+		super("hero/spritesDesc/ArmoredStatue.json",0);
 		createStatueSprite(armor);
 		applyLayersDesc(getLayersDesc());
 	}
 
 	public RetroHeroSpriteDef(Hero hero) {
-		super("retro_hero/spritesDesc/Hero.json",0);
+		super("hero/spritesDesc/Hero.json",0);
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
 	}
 
 	public RetroHeroSpriteDef(Hero hero, Accessory accessory) {
-		super("retro_hero/spritesDesc/Hero.json",0);
+		super("hero/spritesDesc/Hero.json",0);
 		createLayersDesc(hero, accessory);
 		applyLayersDesc(getLayersDesc());
 	}
@@ -100,7 +100,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 				|| classDescriptor.equals("MAGE_BATTLEMAGE")
 				|| classDescriptor.equals("WARRIOR_BERSERKER")
 				|| classDescriptor.equals("NECROMANCER_NONE")){
-			facialHairDescriptor = "retro_hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
 		if(hero.belongings.armor  != null && hero.belongings.armor.hasHelmet()){
@@ -110,27 +110,27 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			}
 		}
 
-		if (drawHair){ hairDescriptor = "retro_hero/head/hair/" + classDescriptor + "_HAIR.png"; }
+		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
 
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
 		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.belongings.armor, hero));
-		layersDesc.put(LAYER_HEAD, "retro_hero/head/" + classDescriptor + ".png");
+		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
-		layersDesc.put(LAYER_DEATH,"retro_hero/death/"+deathDescriptor+".png");
+		layersDesc.put(LAYER_DEATH, "hero/death/" +deathDescriptor+".png");
 	}
 
 	private void createStatueSprite(Armor armor) {
-		layersDesc.put(LAYER_BODY,        "retro_hero/body/statue.png");
+		layersDesc.put(LAYER_BODY, "hero/body/statue.png");
 		layersDesc.put(LAYER_COLLAR,      HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_HEAD,        "retro_hero/head/statue.png");
+		layersDesc.put(LAYER_HEAD, "hero/head/statue.png");
 		layersDesc.put(LAYER_HAIR,        HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, HERO_EMPTY_PNG);
 		layersDesc.put(LAYER_HELMET,      HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_DEATH,       "retro_hero/death/statue.png");
+		layersDesc.put(LAYER_DEATH, "hero/death/statue.png");
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -160,13 +160,13 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "retro_hero/armor/"+armor.getClass().getSimpleName()+".png";
+		return "hero/armor/" +armor.getClass().getSimpleName()+".png";
 	}
 
 	private String helmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.belongings.armor.hasHelmet()){
-				return "retro_hero/armor/helmet/"+armor.getClass().getSimpleName()+".png";
+				return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 			}
 		}
 		return HERO_EMPTY_PNG;
@@ -175,7 +175,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	private String collarDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.belongings.armor.hasCollar()){
-				return "retro_hero/armor/collar/"+armor.getClass().getSimpleName()+".png";
+				return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";
 			}
 		}
 		return HERO_EMPTY_PNG;
@@ -200,7 +200,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			descriptor = "gnoll";
 		}
 
-		return "retro_hero/body/"+descriptor+".png";
+		return "hero/body/" +descriptor+".png";
 	}
 
 	@Override

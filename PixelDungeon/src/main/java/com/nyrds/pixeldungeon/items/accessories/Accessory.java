@@ -59,7 +59,7 @@ public class Accessory {
     }
 
     public String getLayerFile() {
-        return "hero/accessories/" + getClass().getSimpleName() + ".png";
+        return "hero_modern/accessories/" + getClass().getSimpleName() + ".png";
     }
 
     Accessory() {

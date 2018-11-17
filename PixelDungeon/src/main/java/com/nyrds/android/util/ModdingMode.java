@@ -27,13 +27,11 @@ public class ModdingMode {
 
 	private static final Set<String> trustedMods = new HashSet<>();
 
+	public static boolean useRetroHeroSprites = false;
+
 	static {
-		//trustedMods.add("PD Mini");
 		trustedMods.add("Maze");
 		trustedMods.add("Conundrum");
-		//trustedMods.add("D.U.N.G.E.O.N");
-		//trustedMods.add("D.U.N.G.E.O.N");
-		//trustedMods.add("The Fallen");
 	}
 
 	@NonNull
@@ -46,6 +44,7 @@ public class ModdingMode {
 			File modPath = FileSystem.getExternalStorageFile(mod);
 			if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
 				mActiveMod = mod;
+				useRetroHeroSprites = !isResourceExistInMod("hero_modern");
 			}
 		} catch (Exception e) {
 			EventCollector.logException(e);
@@ -60,7 +59,15 @@ public class ModdingMode {
 
 		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
 		return version.optInt("version");
+	}
 
+	public static boolean useRetroHero() {
+		if (mActiveMod.equals(ModdingMode.REMIXED)) {
+			return false;
+		}
+
+		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
+		return !version.optBoolean("modernHeroSprites", true);
 	}
 
 	public static String activeMod() {

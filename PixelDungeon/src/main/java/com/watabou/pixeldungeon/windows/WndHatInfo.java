@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -104,6 +105,8 @@ public class WndHatInfo extends Window {
 				);
 			}
 		};
+
+		rb.enable(!ModdingMode.useRetroHeroSprites);
 
 		if(!item.haveIt() && price == null) {
 			rb.enable(false);

@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -24,11 +25,18 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 	}
 
 	public static HeroSpriteDef createHeroSpriteDef(String[] lookDesc, String deathEffectDesc) {
-		return new ModernHeroSpriteDef(lookDesc, deathEffectDesc);
+		if(ModdingMode.useRetroHeroSprites) {
+			return new RetroHeroSpriteDef(lookDesc);
+		} else {
+			return new ModernHeroSpriteDef(lookDesc, deathEffectDesc);
+		}
 	}
-
 	public static HeroSpriteDef createHeroSpriteDef(Hero hero) {
-		return new ModernHeroSpriteDef(hero);
+		if(ModdingMode.useRetroHeroSprites) {
+			return new RetroHeroSpriteDef(hero);
+		} else {
+			return new ModernHeroSpriteDef(hero);
+		}
 	}
 
 	public static HeroSpriteDef createHeroSpriteDef(Weapon weapon) {
