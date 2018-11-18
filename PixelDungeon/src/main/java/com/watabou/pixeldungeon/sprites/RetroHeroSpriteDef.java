@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.sprites;
 
-import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
@@ -38,7 +37,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	private static final String LAYER_DEATH       = "death";
 	private static final String LAYER_BODY        = "body";
 	private static final String LAYER_COLLAR      = "collar";
-	public static final String HERO_SPRITES_DESC_HERO_JSON = "hero/spritesDesc/Hero.json";
+	private static final String HERO_SPRITES_DESC_HERO_JSON = "hero/spritesDesc/Hero.json";
 
 	private Animation fly; 
 
@@ -69,18 +68,8 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		applyLayersDesc(getLayersDesc());
 	}
 
-	public RetroHeroSpriteDef(Hero hero, Accessory accessory) {
-		super(HERO_SPRITES_DESC_HERO_JSON,0);
-		createLayersDesc(hero, accessory);
-		applyLayersDesc(getLayersDesc());
-	}
 
 	private void createLayersDesc(Hero hero) {
-		Accessory accessory = Accessory.equipped();
-		createLayersDesc(hero, accessory);
-	}
-
-	private void createLayersDesc(Hero hero, Accessory accessory) {
 		layersDesc.clear();
 		boolean drawHair = true;
 
@@ -115,17 +104,6 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 		layersDesc.put(LAYER_DEATH, "hero/death/" +deathDescriptor+".png");
-	}
-
-	private void createStatueSprite(Armor armor) {
-		layersDesc.put(LAYER_BODY, "hero/body/statue.png");
-		layersDesc.put(LAYER_COLLAR,      HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_HEAD, "hero/head/statue.png");
-		layersDesc.put(LAYER_HAIR,        HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
-		layersDesc.put(LAYER_FACIAL_HAIR, HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_HELMET,      HERO_EMPTY_PNG);
-		layersDesc.put(LAYER_DEATH, "hero/death/statue.png");
 	}
 
 	public void heroUpdated(Hero hero) {

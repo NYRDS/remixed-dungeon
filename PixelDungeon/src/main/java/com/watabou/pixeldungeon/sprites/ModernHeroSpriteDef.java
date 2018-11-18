@@ -55,7 +55,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
-	public static final String HERO_MODERN_SPRITES_DESC_HERO_JSON = "hero_modern/spritesDesc/Hero.json";
+	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON = "hero_modern/spritesDesc/Hero.json";
 
 	private CustomClipEffect deathEffect;
 
