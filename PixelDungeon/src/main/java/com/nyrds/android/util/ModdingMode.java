@@ -44,6 +44,9 @@ public class ModdingMode {
 			File modPath = FileSystem.getExternalStorageFile(mod);
 			if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
 				mActiveMod = mod;
+			}
+
+			if(!mod.equals(ModdingMode.REMIXED)) {
 				useRetroHeroSprites = !isResourceExistInMod("hero_modern");
 			}
 		} catch (Exception e) {

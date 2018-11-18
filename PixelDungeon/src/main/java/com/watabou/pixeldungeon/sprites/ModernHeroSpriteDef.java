@@ -55,6 +55,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
+	public static final String HERO_MODERN_SPRITES_DESC_HERO_JSON = "hero_modern/spritesDesc/Hero.json";
 
 	private CustomClipEffect deathEffect;
 
@@ -85,31 +86,31 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private String deathEffectDesc;
 
 	public ModernHeroSpriteDef(String[] lookDesc, String deathEffectDesc){
-		super("spritesDesc/Hero.json",0);
+		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
 		this.deathEffectDesc = deathEffectDesc;
 		applyLayersDesc(lookDesc);
 	}
 
 	public ModernHeroSpriteDef(Armor armor){
-		super("spritesDesc/Hero.json",0);
+		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
 		createStatueSprite(armor);
 		applyLayersDesc(getLayersDesc());
 	}
 
 	public ModernHeroSpriteDef(Hero hero) {
-		super("spritesDesc/Hero.json",0);
+		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
 	}
 
 	public ModernHeroSpriteDef(Hero hero, Accessory accessory) {
-		super("spritesDesc/Hero.json",0);
+		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
 		createLayersDesc(hero, accessory);
 		applyLayersDesc(getLayersDesc());
 	}
 
 	public ModernHeroSpriteDef(Weapon weapon) {
-		super("spritesDesc/Hero.json",0);
+		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
 		createStatueSprite(weapon);
 		applyLayersDesc(getLayersDesc());
 	}

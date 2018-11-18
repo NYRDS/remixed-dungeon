@@ -38,6 +38,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	private static final String LAYER_DEATH       = "death";
 	private static final String LAYER_BODY        = "body";
 	private static final String LAYER_COLLAR      = "collar";
+	public static final String HERO_SPRITES_DESC_HERO_JSON = "hero/spritesDesc/Hero.json";
 
 	private Animation fly; 
 
@@ -58,24 +59,18 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	private Callback jumpCallback;
 
 	public RetroHeroSpriteDef(String[] lookDesc){
-		super("hero/spritesDesc/Hero.json",0);
+		super(HERO_SPRITES_DESC_HERO_JSON,0);
 		applyLayersDesc(lookDesc);
 	}
 
-	public RetroHeroSpriteDef(Armor armor){
-		super("hero/spritesDesc/ArmoredStatue.json",0);
-		createStatueSprite(armor);
-		applyLayersDesc(getLayersDesc());
-	}
-
 	public RetroHeroSpriteDef(Hero hero) {
-		super("hero/spritesDesc/Hero.json",0);
+		super(HERO_SPRITES_DESC_HERO_JSON,0);
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
 	}
 
 	public RetroHeroSpriteDef(Hero hero, Accessory accessory) {
-		super("hero/spritesDesc/Hero.json",0);
+		super(HERO_SPRITES_DESC_HERO_JSON,0);
 		createLayersDesc(hero, accessory);
 		applyLayersDesc(getLayersDesc());
 	}
