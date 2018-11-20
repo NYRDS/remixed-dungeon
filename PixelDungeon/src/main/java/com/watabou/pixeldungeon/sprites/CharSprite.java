@@ -50,17 +50,19 @@ import com.watabou.utils.Random;
 
 import java.util.Locale;
 
+import androidx.annotation.Nullable;
+
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 
     // Color constants for floating text
-    public static final int DEFAULT  = 0xFFFFFF;
+    public static final int DEFAULT = 0xFFFFFF;
     public static final int POSITIVE = 0x00FF00;
     public static final int NEGATIVE = 0xFF0000;
-    public static final int WARNING  = 0xFF8800;
-    public static final int NEUTRAL  = 0xFFFF00;
-    public static final int BLUE     = 0x0000FF;
+    public static final int WARNING = 0xFF8800;
+    public static final int NEUTRAL = 0xFFFF00;
+    public static final int BLUE = 0x0000FF;
 
-    private static final float MOVE_INTERVAL  = 0.1f;
+    private static final float MOVE_INTERVAL = 0.1f;
     private static final float FLASH_INTERVAL = 0.05f;
 
     public enum State {
@@ -81,17 +83,18 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Emitter burning;
     protected Emitter levitation;
 
-    private IceBlock  iceBlock;
+    private IceBlock iceBlock;
     private TorchHalo halo;
 
     private EmoIcon emo;
 
     private float flashTime = 0;
 
-    boolean sleeping   = false;
+    boolean sleeping = false;
     boolean controlled = false;
 
     // Char owner
+    @Nullable
     public Char ch;
 
     // The sprite is currently in motion
@@ -138,17 +141,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void showStatus(int color, String text) {
         if (getVisible()) {
 
-            if (ModdingMode.getClassicTextRenderingMode()) {
-                if (ch != null) {
+            if (ch != null) {
+                if (ModdingMode.getClassicTextRenderingMode()) {
                     FloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
                 } else {
-                    FloatingText.show(x + width * 0.5f, y, text, color);
-                }
-            } else {
-                if (ch != null) {
                     SystemFloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
-                } else {
-                    SystemFloatingText.show(x + width * 0.5f, y, text, color);
                 }
             }
         }
@@ -482,7 +479,13 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 return;
             }
         }
-        if(curAnim == die) {
+
+        if (ch != null && !Dungeon.visible[ch.getPos()]) {
+            onComplete(anim);
+            return;
+        }
+
+        if (curAnim == die) {
             return;
         }
         super.play(anim);
