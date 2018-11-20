@@ -53,7 +53,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private static final String LAYER_LEFT_ARMOR  = "left_hand_armor";
 	private static final String LAYER_RIGHT_ARMOR = "right_hand_armor";
 
-	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
+	//private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
 	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON = "hero_modern/spritesDesc/Hero.json";
 
@@ -75,7 +75,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		LAYER_LEFT_HAND,
 		LAYER_RIGHT_HAND,
 		LAYER_ACCESSORY,
-		LAYER_LEFT_ITEM,
+	//	LAYER_LEFT_ITEM,
 		LAYER_RIGHT_ITEM,
 	};
 
@@ -181,7 +181,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
-			layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(hero.belongings.weapon, "left"));
+		//	layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(hero.belongings.weapon, "left"));
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
 		}
 
@@ -204,7 +204,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
 
-		layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(weapon, "left"));
+		//layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(weapon, "left"));
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
 
