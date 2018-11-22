@@ -8,7 +8,6 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -18,7 +17,6 @@ import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
-import com.watabou.utils.PointF;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -390,26 +388,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	public boolean sprint(boolean on) {
 		run.delay = on ? 0.625f / RUN_FRAMERATE : 1f / RUN_FRAMERATE;
 		return on;
-	}
-
-
-	@Override
-	public PointF worldCoords() {
-		final int csize = DungeonTilemap.SIZE;
-		PointF point = point();
-		point.x = (point.x + width * 0.5f) / csize - 0.5f;
-		point.y = (point.y + height - 8) / csize - 1.0f;
-		return point;
-	}
-
-	@Override
-	public PointF worldToCamera(int cell) {
-		final int csize = DungeonTilemap.SIZE;
-
-		return new PointF(
-				(Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
-				(Dungeon.level.cellY(cell) + 1.0f) * csize - height + 8
-		);
 	}
 
 	@Override

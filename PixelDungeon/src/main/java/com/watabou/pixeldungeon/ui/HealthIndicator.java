@@ -57,10 +57,10 @@ public class HealthIndicator extends Component {
 		
 		if (target != null && target.isAlive() && target.getSprite().getVisible()) {
 			CharSprite sprite = target.getSprite();
-			bg.Scale().x = sprite.width;
-			level.Scale().x = sprite.width * target.hp() / target.ht();
-			bg.x = level.x = sprite.x;
-			bg.y = level.y = sprite.y - HEIGHT - 1;
+			bg.Scale().x = sprite.visualWidth();
+			level.Scale().x = sprite.visualWidth() * target.hp() / target.ht();
+			bg.x = level.x = sprite.x + sprite.visualOffsetX();
+			bg.y = level.y = sprite.y + sprite.visualOffsetY()- HEIGHT - 1;
 			
 			setVisible(true);
 		} else {

@@ -34,7 +34,18 @@ public class MobSpriteDef extends MobSprite {
 	private int      framesInRow;
 	private int      kind;
 	private String   zapEffect;
-	private Callback zapCallback;
+	static private Callback zapCallback = new Callback() {
+		@Override
+		public void call() {
+		}
+	};;
+
+	private float visualWidth;
+	private float visualHeight;
+
+	private float visualOffsetX;
+	private float visualOffsetY;
+
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
@@ -73,8 +84,15 @@ public class MobSpriteDef extends MobSprite {
 			}
 
 			int width = json.getInt("width");
+			visualWidth = (float) json.optDouble("visualWidth",width);
 
-			TextureFilm film = new TextureFilm(texture, width, json.getInt("height"));
+			int height = json.getInt("height");
+			visualHeight = (float) json.optDouble("visualHeight",height);
+
+			visualOffsetX = (float) json.optDouble("visualOffsetX",0);
+			visualOffsetY = (float) json.optDouble("visualOffsetY",0);
+
+			TextureFilm film = new TextureFilm(texture, width, height);
 
 			bloodColor = 0xFFBB0000;
 			Object _bloodColor = json.opt("bloodColor");
@@ -102,14 +120,6 @@ public class MobSpriteDef extends MobSprite {
 
 			if (json.has("zapEffect")) {
 				zapEffect = json.getString("zapEffect");
-
-				zapCallback = new Callback() {
-					@Override
-					public void call() {
-//						ch.onZapComplete();
-					}
-				};
-
 			}
 
 			loadAdditionalData(json,film, kind);
@@ -211,4 +221,24 @@ public class MobSpriteDef extends MobSprite {
 		return bloodColor;
 	}
 
+
+	@Override
+	public float visualHeight() {
+		return visualHeight;
+	}
+
+	@Override
+	public float visualWidth() {
+		return visualWidth;
+	}
+
+	@Override
+	public float visualOffsetX() {
+		return visualOffsetX;
+	}
+
+	@Override
+	public float visualOffsetY() {
+		return visualOffsetY;
+	}
 }

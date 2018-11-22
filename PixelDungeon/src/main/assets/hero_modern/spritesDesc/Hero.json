@@ -1,7 +1,15 @@
 {
   "texture" : "hero_modern/empty.png",
+
   "width"   : 32,
   "height"  : 32,
+
+  "visualWidth"   : 14,
+  "visualHeight"  : 17,
+
+  "visualOffsetX"   : 8,
+  "visualOffsetY"   : 8,
+
 
   "idle"    : { "fps" : 2,  "looped" : true,     "frames" : [0, 0, 0, 1, 0, 0, 1, 1] },
   "run"     : { "fps" : 20, "looped" : true,     "frames" : [2, 3, 4, 5, 6, 7] },
