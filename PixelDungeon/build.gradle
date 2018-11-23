@@ -32,8 +32,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 598
-        versionName "remix.28.4.alpha.6.2"
+        versionCode 599
+        versionName "remix.28.4.beta.1"
     }
 
     buildTypes {
