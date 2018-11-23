@@ -138,6 +138,12 @@
         </receiver>
         <!-- End Yandex-metrica -->
 
+        <!-- Yandex-mobileads -->
+        <!--suppress AndroidDomInspection -->
+        <activity android:name="com.yandex.mobile.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <!-- End Yandex-mobileads -->
+
         <meta-data
             android:name="appbrain.job_id"
             android:value="1205629301" />
