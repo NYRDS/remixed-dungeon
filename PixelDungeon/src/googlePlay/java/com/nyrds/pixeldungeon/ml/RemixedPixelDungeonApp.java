@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.ml;
 import android.annotation.SuppressLint;
 import android.content.Context;
 
+import com.appbrain.AppBrain;
 import com.crashlytics.android.Crashlytics;
 
 import androidx.multidex.MultiDex;
@@ -21,6 +22,8 @@ public class RemixedPixelDungeonApp extends MultiDexApplication {
 		instanceContext = getApplicationContext();
 
 		Fabric.with(this, new Crashlytics());
+
+		AppBrain.init(this);
 
 		try {
 			Class.forName("android.os.AsyncTask");

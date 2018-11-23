@@ -134,6 +134,9 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
         <!-- End Yandex-mobileads -->
 
+        <meta-data
+            android:name="appbrain.job_id"
+            android:value="1205629301" />
 
     </application>
 

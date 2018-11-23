@@ -1,11 +1,12 @@
 package com.nyrds.pixeldungeon.ml;
 
-import android.os.SystemClock;
+import android.os.Bundle;
 
 import com.crashlytics.android.Crashlytics;
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
-import com.nyrds.android.util.Util;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.Trace;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 
 import java.util.HashMap;
@@ -16,56 +17,52 @@ import java.util.HashMap;
 public class EventCollector {
 	public static final String BUG = "bug";
 
-	static private Tracker mTracker;
+	static private FirebaseAnalytics mFirebaseAnalytics;
 	static private boolean mDisabled = true;
 
-	static private HashMap<String, Long> timings = new HashMap<>();
+	static private HashMap<String,Trace> timings = new HashMap<>();
 
-	private static boolean googleAnalyticsUsable() {
+	private static boolean analyticsUsable() {
 		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
 	}
 
 	static public void init() {
-		if (mTracker == null) {
-
-			if(!googleAnalyticsUsable()) {
-				mDisabled = true;
-				return;
-			}
-
-			AnalyticsTrackers.initialize();
-
-			mTracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
-			mTracker.enableAdvertisingIdCollection(true);
-			mDisabled = false;
-		}
+	    if(analyticsUsable()) {
+            mFirebaseAnalytics = FirebaseAnalytics.getInstance(Game.instance());
+            mDisabled = false;
+        }
 	}
 
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
 			Crashlytics.log(category+":"+event);
-			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).build());
+
+			Bundle params = new Bundle();
+			params.putString("event", event);
+			mFirebaseAnalytics.logEvent(category, params);
 		}
 	}
 
 	static public void logEvent(String category, String event, String label) {
 		if (!mDisabled) {
 			Crashlytics.log(category+":"+event+":"+label);
-			mTracker.send(new HitBuilders.EventBuilder().setCategory(category).setAction(event).setLabel(label).build());
+
+			Bundle params = new Bundle();
+			params.putString("event", event);
+			params.putString("label", label);
+			mFirebaseAnalytics.logEvent(category, params);
 		}
 	}
 
 	static public void logScene(String scene) {
 		if (!mDisabled) {
-			mTracker.setScreenName(scene);
-			mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+			mFirebaseAnalytics.setCurrentScreen(Game.instance(), scene, null);
 		}
 	}
 
 	static public void logException(Exception e) {
 		if(!mDisabled) {
 			Crashlytics.logException(e);
-			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(Util.toString(e)).build());
 		}
 	}
 
@@ -73,44 +70,35 @@ public class EventCollector {
 		if(!mDisabled) {
 			Crashlytics.log(desc);
 			Crashlytics.logException(e);
-			mTracker.send(new HitBuilders.ExceptionBuilder().setDescription(desc + " "+Util.toString(e)).build());
 		}
 	}
 
 	static public void startTiming(String id) {
 		if(!mDisabled) {
-			timings.put(id, SystemClock.elapsedRealtime());
+			Trace trace = FirebasePerformance.getInstance().newTrace(id);
+			trace.start();
+			timings.put(id,trace);
 		}
 	}
 
-	static public void rawTiming(long value,  String category, String variable, String label) {
-		if(!mDisabled) {
-			mTracker.send(new HitBuilders.TimingBuilder()
-					.setCategory(category)
-					.setValue(value)
-					.setVariable(variable)
-					.setLabel(label)
-					.build());
-		}
-	}
+
 
 	static public void stopTiming(String id, String category, String variable, String label) {
 
 		if(!mDisabled) {
-			long time = SystemClock.elapsedRealtime();
-			long delta = time - timings.get(id);
 
-			mTracker.send(new HitBuilders.TimingBuilder()
-					.setCategory(category)
-					.setValue(delta)
-					.setVariable(variable)
-					.setLabel(label)
-					.build());
+		    Trace trace = timings.get(id);
+			if (trace==null) {
+				logException(new Exception("attempt to stop null timer:"+id));
+			}
+
+		    trace.putAttribute("category", category);
+            trace.putAttribute("variable", variable);
+            trace.putAttribute("label",    label);
+
+		    trace.stop();
+		    timings.remove(id);
 		}
-	}
-
-	static public void stopTiming(String id) {
-		stopTiming(id,"timings",id,"none");
 	}
 
 	public static void collectSessionData(String key, String value) {

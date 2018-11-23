@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 
 import com.appbrain.ReferrerReceiver;
-import com.google.android.gms.analytics.AnalyticsReceiver;
 import com.yandex.metrica.MetricaEventHandler;
 
 
@@ -33,8 +32,5 @@ public class GooglePlayReferrer extends BroadcastReceiver {
 
         com.yandex.metrica.MetricaEventHandler yandexReferrer = new MetricaEventHandler();
         yandexReferrer.onReceive(context, intent);
-
-        AnalyticsReceiver receiver = new AnalyticsReceiver();
-        receiver.onReceive(context, intent);
     }
 }
