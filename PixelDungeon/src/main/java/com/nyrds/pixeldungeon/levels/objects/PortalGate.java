@@ -44,9 +44,6 @@ public abstract class PortalGate extends LevelObject {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		if(activated) {
-			playActiveLoop();
-		}
 	}
 
 
@@ -130,6 +127,13 @@ public abstract class PortalGate extends LevelObject {
 			public void call() {
 			}
 		}, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
+	}
+
+	@Override
+	public void resetVisualState() {
+		if(activated) {
+			playActiveLoop();
+		}
 	}
 
 	public abstract boolean portalInteract(Hero hero);

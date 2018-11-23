@@ -391,11 +391,6 @@ public class GameScene extends PixelScene {
     }
 
     public void destroy() {
-/*
-        if(!Game.isPaused()) {
-            Dungeon.save();
-        }
-*/
         scene = null;
         Badges.saveGlobal();
 

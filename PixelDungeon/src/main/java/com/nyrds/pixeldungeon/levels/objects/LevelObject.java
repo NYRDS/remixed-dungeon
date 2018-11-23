@@ -176,4 +176,6 @@ public abstract class LevelObject implements Bundlable, Presser {
     public Position getPosition() {
         return new Position(Dungeon.level.levelId, pos);
     }
+
+    public void resetVisualState(){}
 }
