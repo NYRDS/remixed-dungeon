@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "85758734957349",
+    "firebase_url": "https://fakeurl.com",
+    "project_id": "admob-app-id-34957349",
+    "storage_bucket": "fakeurl.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34957349:android:34957349",
+        "android_client_info": {
+          "package_name": "com.nyrds.pixeldungeon.ml"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34957349-dsnf8439t39hekfjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "NOKEY_HERE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
