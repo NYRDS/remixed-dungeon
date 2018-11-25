@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.appbrain.AppBrain;
 import com.crashlytics.android.Crashlytics;
+import com.google.firebase.FirebaseApp;
 
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -20,6 +21,7 @@ public class RemixedPixelDungeonApp extends MultiDexApplication {
 		super.onCreate();
 
 		instanceContext = getApplicationContext();
+		FirebaseApp.initializeApp(this);
 
 		Fabric.with(this, new Crashlytics());
 

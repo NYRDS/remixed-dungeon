@@ -33,8 +33,12 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 599
-        versionName "remix.28.4.beta.1"
+        versionCode 600
+        versionName "remix.28.4.beta.1.1"
+    }
+
+    aaptOptions {
+        noCompress "mp3"
     }
 
     buildTypes {
@@ -54,13 +58,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+
     dexOptions {
         javaMaxHeapSize "4g"
         additionalParameters = ["--set-max-idx-number=45000"]
     }
+
     lintOptions {
         abortOnError false
     }
+
     flavorDimensions "minApi"
     productFlavors {
         googlePlayRetro {

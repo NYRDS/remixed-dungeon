@@ -644,7 +644,11 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	private void updateSprite(CharSprite sprite){
-		sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+		if(Dungeon.level.cellValid(getPos())) {
+			sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+		} else {
+			EventCollector.logException(new Exception("invalid pos for:"+toString()),getClass().getCanonicalName());
+		}
 		GameScene.addMobSpriteDirect(sprite);
 		sprite.link(this);
 	}
