@@ -2,7 +2,6 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -98,29 +97,23 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 	}
 
 	private class RewardTask implements Runnable {
-		private final boolean result;
+		private boolean needReward;
 
 		public RewardTask(boolean result) {
-			this.result = result;
+			needReward = result;
 		}
 
 		@Override
 		public void run() {
 			GameScene.show(new WndMessage(Game.getVar(R.string.WndMovieTheatre_Thank_You) ) {
 
-				boolean rewarded = false;
-
-				private void reward() {
-					serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
-					ServiceManNPC.reward();
-					rewarded = true;
-				}
-
 				@Override
-				public void hide() {
-					super.hide();
-					if(result) {
-						reward();
+				public void destroy() {
+					super.destroy();
+					if(needReward) {
+						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
+						ServiceManNPC.reward();
+						needReward = false;
 					} else {
 						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
 					}
@@ -130,15 +123,7 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 							Ads.displayEasyModeBanner();
 						}
 					}
-				}
 
-				@Override
-				public void destroy() {
-					super.destroy();
-					if(result && !rewarded) {
-						reward();
-						EventCollector.logEvent("bug","reward_on_destroy");
-					}
 				}
 			});
 		}
