@@ -2,15 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Ok!</string>
   <string name="Welcome_Title">Bem vindo!</string>
-  <string name="Welcome_Text_27_4">
-    remix.27.4\n
-    - Nome alterado para Remixed Dungeon\n
-    - Necrose - nova habilidade Armadura de Classe do Necromante\n
-    - Nova medalha à ser descoberta\n
-    - A habilidade de Armadura de Classe agora consome Mana ao invés de HP\n
-    - Itens caóticos agora perdem seu encantamento ao serem rebaixados\n
-    - Psico-aranhas agora só podem conjurar feitiços de cegueira, lentidão e fraqueza\n
-    </string>
   <string name="Welcome_Text_28">
     remix.28\n
     - Novo herói - Gnoll\n

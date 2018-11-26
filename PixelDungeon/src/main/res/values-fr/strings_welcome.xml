@@ -2,15 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Okey!</string>
   <string name="Welcome_Title">Bienvenue!</string>
-  <string name="Welcome_Text_27_4"> remix.27.4\n
-- Relookage en Remixed Dungeon\n
-- Nécrotisme : nouvelle capacité d\'armure pour nécromancier\n
-- Nouvelle médaille à découvrire\n
-- Les capacités d\'armure consomment désormais du Mana au lieu de HP\n
-- Les objets chaotiques perdent désormais leur enchantement quand maudits\n
-- Les Psi-Araignées ne peuvent invoquer plus que les sorts \"aveugle\", \"lent\" et \"faible\"\n
-
-</string>
   <string name="Welcome_Text_28">remix.28\n
 - Nouveau héros : Gnoll\n
 - Les dégâts des sceptres magiques en combat direct dépendent maintenant du niveau de magie du héros\n
