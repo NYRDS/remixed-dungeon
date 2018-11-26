@@ -112,9 +112,6 @@ dependencies {
     //noinspection GradleDependency
     googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
 
-
-    googlePlayImplementation 'com.appbrain:appbrain-sdk:+@aar'
-
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'

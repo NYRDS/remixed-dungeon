@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.ml;
 import android.annotation.SuppressLint;
 import android.content.Context;
 
-import com.appbrain.AppBrain;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
 
@@ -24,8 +23,6 @@ public class RemixedPixelDungeonApp extends MultiDexApplication {
 		FirebaseApp.initializeApp(this);
 
 		Fabric.with(this, new Crashlytics());
-
-		AppBrain.init(this);
 
 		try {
 			Class.forName("android.os.AsyncTask");

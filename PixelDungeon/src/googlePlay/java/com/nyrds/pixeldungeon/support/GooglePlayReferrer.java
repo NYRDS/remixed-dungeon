@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.appbrain.ReferrerReceiver;
 import com.yandex.metrica.MetricaEventHandler;
 
 
@@ -26,9 +25,6 @@ public class GooglePlayReferrer extends BroadcastReceiver {
                 edit.apply();
             }
         }
-
-        ReferrerReceiver appBrainReceiver = new ReferrerReceiver();
-        appBrainReceiver.onReceive(context, intent);
 
         com.yandex.metrica.MetricaEventHandler yandexReferrer = new MetricaEventHandler();
         yandexReferrer.onReceive(context, intent);
