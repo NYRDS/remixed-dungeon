@@ -144,8 +144,7 @@ public class Statue extends Mob {
 
 	@Override
 	public CharSprite sprite() {
-		if(weapon!=null)
-		{
+		if(weapon!=null) {
 			return HeroSpriteDef.createHeroSpriteDef(weapon);
 		}
 		else{
