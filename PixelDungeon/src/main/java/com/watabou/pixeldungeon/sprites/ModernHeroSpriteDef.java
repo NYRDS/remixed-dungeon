@@ -54,6 +54,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	//private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
 	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON = "hero_modern/spritesDesc/Hero.json";
+	private static final String HERO_MODERN_SPRITES_DESC_STATUE_JSON = "hero_modern/spritesDesc/Statue.json";
 
 	private CustomClipEffect deathEffect;
 
@@ -90,7 +91,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	}
 
 	public ModernHeroSpriteDef(Armor armor){
-		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
+		super(HERO_MODERN_SPRITES_DESC_STATUE_JSON,0);
 		createStatueSprite(armor);
 		applyLayersDesc(getLayersDesc());
 	}
@@ -108,7 +109,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	}
 
 	public ModernHeroSpriteDef(Weapon weapon) {
-		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
+		super(HERO_MODERN_SPRITES_DESC_STATUE_JSON,0);
 		createStatueSprite(weapon);
 		applyLayersDesc(getLayersDesc());
 	}

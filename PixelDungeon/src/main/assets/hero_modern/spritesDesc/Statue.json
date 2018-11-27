@@ -36,6 +36,7 @@
     "wand_zap"  : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
     "kusarigama"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
     "kusarigama_zap" : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]}
-  }
+  },
 
+  "bloodColor" : "0xFF777777"
 }
