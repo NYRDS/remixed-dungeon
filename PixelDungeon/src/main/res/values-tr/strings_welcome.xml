@@ -2,4 +2,29 @@
 <resources>
   <string name="Welcome_Ok">Tamamdır!</string>
   <string name="Welcome_Title">Hoşgeldiniz!</string>
+  <string name="Welcome_Text_28_2">
+    remix.28.2\n
+    - Arayüz yenileştirmesi:\n
+    -- Artık hızlı yuva sayısı ekran genişliğine bağlı\n
+    -- Büyüler ve yetenekler hızlı yuvalara yerleştirilebilir\n
+    -- Kullanılan el seçeneği/\n
+    - Hareket zaman sınırı artık oyun boyunca sürmekte\n
+    - Gerçek zamanlı!(halen deneysel) kip artık kullanılabilir ve oyun oturumu boyunca geçerlidir\n
+    </string>
+  <string name="Welcome_Text_28_3">
+    remix.28.3\n
+    - Yeni Ölüçağıran yetenekleri:\n
+    -- Kara Kurban\n
+    -- Mezardan çıkarma\n
+    -- Ölü diriltme\n
+    - Kızartılmış, Dondurulmuş, Çürümüş ve Çiğ Balık\n
+    - Modlama:\n
+    -- Modlanabilir Büyüler\n
+    -- Modlanabilir Öğeler\n
+    </string>
+  <string name="Welcome_Text_28_4">
+    remix.28.4\n
+    - Grafik iyileştirmeleri:\n
+    -- Kahraman silahları artık oyun içinde gözükmekte\n
+    </string>
 </resources>

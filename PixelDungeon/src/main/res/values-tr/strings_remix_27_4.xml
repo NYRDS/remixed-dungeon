@@ -4,10 +4,17 @@
     <!-- Items descriptions -->
     <string name="Item_Info2">birşey</string>
 
+    <!-- STRINGS OF NecromancerArmor CLASS -->
+    <string name="NecromancerArmor_Info2">Bu zırhı giymek ölüçağıran\'a etraftaki tüm canlı cansız yaratıklara sihirli hastalık yayan \"Nekrotizm\" yeteneğini kullanmasını sağlar.</string>
+
+    <!-- STRINGS OF NecromancerRobe CLASS -->
+    <string name="NecromancerRobe_Info2">Bu cüppe Ölüçağıran\'ın yenik yaratıkların ruhlarını emmesini sağlayan kara büyü ile dolu.</string>
+
     <!-- STRINGS OF Necrotism CLASS -->
     <string name="Necrotism_Info">Nekrotizm</string>
     <string name="Necrotism_ACSpecial">NEKROTİZM</string>
     <string name="ResultDescriptions_Necrotism">%d. seviyede Nekrotizm yüzünden öldün</string>
+    <string name="Necrotism_Death">Nekrotizm\'den öldün...</string>
     <string name="Badges_DeathNecrotism">Nekrotizm yüzünden ölüm</string>
 
     <!-- STRINGS OF Spell CLASS -->
