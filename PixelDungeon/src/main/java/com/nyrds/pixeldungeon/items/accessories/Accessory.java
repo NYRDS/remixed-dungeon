@@ -1,7 +1,9 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
@@ -113,13 +115,22 @@ public class Accessory {
     }
 
     static public void check() {
+        Iap iap = PixelDungeon.instance().iap;
+
+        if(iap == null) {
+            EventCollector.logException(new Exception("iap is null!!!"));
+            return;
+        }
+
         for (String item : allAccessoriesList.keySet()) {
-            if ( PixelDungeon.instance().iap.checkPurchase(item)) {
+            if ( iap.checkPurchase(item)) {
                 getByName(item).ownIt(true);
             } else {
                 getByName(item).ownIt(false);
             }
         }
+
+
     }
 
     public boolean haveIt() {

@@ -6,6 +6,7 @@ import android.webkit.WebView;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
 import java.util.HashMap;
@@ -18,11 +19,11 @@ public class AdsUtils {
 
 
     static {
-        //bannerFails.put(new AAdsComboProvider(),-3);
+        bannerFails.put(new AAdsComboProvider(),-3);
         bannerFails.put(new AdMobComboProvider(),-2);
         bannerFails.put(new AppodealBannerProvider(),-1);
 
-        //interstitialFails.put(new AAdsComboProvider(), -3);
+        interstitialFails.put(new AAdsComboProvider(), -3);
         interstitialFails.put(new AdMobComboProvider(), -2);
         interstitialFails.put(new AppodealInterstitialProvider(), -1);
     }
@@ -60,7 +61,12 @@ public class AdsUtils {
                     }
                     Game.instance().getLayout().removeViewAt(index);
                 }
-                Game.instance().getLayout().addView(view,0);
+
+                try {
+                    Game.instance().getLayout().addView(view, 0);
+                } catch (IllegalStateException e) {
+                    EventCollector.logException(e);
+                }
             }
 
         });
