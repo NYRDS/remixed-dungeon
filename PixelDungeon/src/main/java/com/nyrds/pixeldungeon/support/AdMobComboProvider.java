@@ -28,7 +28,6 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
         });
     }
 
-
     private static void requestNewInterstitial() {
 
         if (mInterstitialAd.isLoaded() || mInterstitialAd.isLoading()) {

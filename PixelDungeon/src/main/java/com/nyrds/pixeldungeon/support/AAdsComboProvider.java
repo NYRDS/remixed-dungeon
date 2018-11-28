@@ -18,11 +18,6 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
     @Override
     public void displayBanner() {
 
-        if(Game.instance().checkOwnSignature()) {
-            AdsUtilsCommon.bannerFailed(AAdsComboProvider.this);
-            return;
-        }
-
         final WebView adView = new WebView(Game.instance());
 
         LinearLayout layout = Game.instance().getLayout();
@@ -57,10 +52,6 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
 
     @Override
     public void showInterstitial(final InterstitialPoint ret) {
-        if(Game.instance().checkOwnSignature()) {
-            AdsUtilsCommon.interstitialFailed(AAdsComboProvider.this, ret);
-            return;
-        }
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
 

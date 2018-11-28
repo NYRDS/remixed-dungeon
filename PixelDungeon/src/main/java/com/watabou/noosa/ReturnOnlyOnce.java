@@ -5,8 +5,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class ReturnOnlyOnce implements InterstitialPoint {
 
-    InterstitialPoint mTarget;
-    int mReturnCounter = 0;
+    private InterstitialPoint mTarget;
+    private int mReturnCounter = 0;
 
     public ReturnOnlyOnce(InterstitialPoint target) {
         mTarget = target;
@@ -14,11 +14,16 @@ public class ReturnOnlyOnce implements InterstitialPoint {
 
     @Override
     public void returnToWork(boolean result) {
-        if(mReturnCounter == 0) {
-            mTarget.returnToWork(result);
-        } else {
-            EventCollector.logException(new Exception(Utils.format("%d return to %s", mReturnCounter, mTarget.getClass().getCanonicalName())));
+        switch (mReturnCounter) {
+            case 0:
+                mTarget.returnToWork(result);
+            break;
+
+            case 1:
+                EventCollector.logException(new Exception(Utils.format("%d return to %s", mReturnCounter, mTarget.getClass().getCanonicalName())));
+            break;
         }
+
         mReturnCounter++;
     }
 }
