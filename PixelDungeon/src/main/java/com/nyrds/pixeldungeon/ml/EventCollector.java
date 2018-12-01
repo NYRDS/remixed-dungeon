@@ -90,6 +90,7 @@ public class EventCollector {
 		    Trace trace = timings.get(id);
 			if (trace==null) {
 				logException(new Exception("attempt to stop null timer:"+id));
+				return;
 			}
 
 		    trace.putAttribute("category", category);

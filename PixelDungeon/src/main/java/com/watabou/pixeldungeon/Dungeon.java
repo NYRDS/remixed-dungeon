@@ -405,7 +405,7 @@ public class Dungeon {
             Game.toast("Low memory condition");
         }
 
-        if (hero.isAlive()) {
+        if (hero!= null && hero.isAlive()) {
 
             Actor.fixTime();
             try {

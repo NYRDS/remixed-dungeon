@@ -16,6 +16,7 @@ import com.watabou.noosa.InterstitialPoint;
 
 public class GoogleRewardVideoAds {
 
+	public static final String GOOGLE_REWARD_VIDEO = "google reward video";
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
 	private static boolean mVideoLoaded;
@@ -36,7 +37,7 @@ public class GoogleRewardVideoAds {
 	}
 
 	private static void loadNextVideo() {
-		EventCollector.startTiming("google reward video");
+		EventCollector.startTiming(GOOGLE_REWARD_VIDEO);
 		mVideoLoaded = false;
 
 		mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
@@ -75,7 +76,7 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
-			EventCollector.stopTiming("google reward video","google reward video","ok","");
+			EventCollector.stopTiming(GOOGLE_REWARD_VIDEO,"google reward video","ok","");
 			mVideoLoaded   = true;
 			videoCompleted = false;
 		}
@@ -109,7 +110,7 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
-			EventCollector.stopTiming("google reward video","google reward video","fail","");
+			EventCollector.stopTiming(GOOGLE_REWARD_VIDEO,"google reward video","fail","");
 			mVideoLoaded = false;
 		}
 
