@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -29,7 +30,6 @@ import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Hunger extends Buff implements Hero.Doom {
@@ -39,22 +39,9 @@ public class Hunger extends Buff implements Hero.Doom {
 	public static final float HUNGRY	= 260f;
 	public static final float STARVING	= 360f;
 
+	@Packable
 	private float level;
 
-	private static final String LEVEL	= "level";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( LEVEL, level );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		level = bundle.getFloat( LEVEL );
-	}
-	
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
