@@ -37,7 +37,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
             URL url = new URL(m_url);
             File file = new File(args[1]);
 
-            EventCollector.startTiming("download");
+            EventCollector.startTrace("download");
 
             HttpsURLConnection ucon = NetCipher.getHttpsURLConnection(url);
 
@@ -66,7 +66,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
                 }
 
                 fos.close();
-                EventCollector.stopTiming("download", "download", m_url, "");
+                EventCollector.stopTrace("download", "download", m_url, "");
                 publishProgress(100);
 
                 result = true;

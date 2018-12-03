@@ -115,7 +115,7 @@ public abstract class Text extends Visual {
 
 		if(str == null) {
 		    text = "";
-            EventCollector.logException(new Exception("Trying to create null string!!!"),"bug");
+            EventCollector.logException("Trying to create null string!!!");
 		    return;
         }
 

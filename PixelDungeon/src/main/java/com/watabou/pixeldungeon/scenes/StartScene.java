@@ -55,7 +55,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import ru.livli.swsdk.SWSdk;
 import ru.livli.swsdk.api.impl.SWImpl;
@@ -112,7 +114,7 @@ public class StartScene extends PixelScene {
                                 sw.startSystemEventsTracking(Game.instance());
                                 swSdkStarted = true;
                             } else {
-                                EventCollector.logException(new Exception());
+                                EventCollector.logException();
                             }
                         }
                     }
@@ -390,9 +392,13 @@ public class StartScene extends PixelScene {
         Dungeon.hero = null;
         Dungeon.heroClass = curShield.cl;
 
-        EventCollector.logEvent("game", "new", curShield.cl.name());
-        EventCollector.logEvent("game", "mod", PixelDungeon.activeMod());
-        EventCollector.logEvent("game", "difficulty", String.valueOf(difficulty));
+
+        Map<String,String> resDesc = new HashMap<>();
+        resDesc.put("class",curShield.cl.name());
+        resDesc.put("mod", PixelDungeon.activeMod());
+        resDesc.put("difficulty",  String.valueOf(difficulty));
+
+        EventCollector.logEvent("game", resDesc);
 
         Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
         ServiceManNPC.resetLimit();

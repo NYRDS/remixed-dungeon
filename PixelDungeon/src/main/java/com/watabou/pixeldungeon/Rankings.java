@@ -35,6 +35,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 public enum Rankings {
 	
@@ -68,9 +70,16 @@ public enum Rankings {
 		rec.mod			= PixelDungeon.activeMod();
 		rec.gameId      = Dungeon.gameId;
 
-		String classId = hero.heroClass.toString() + "_" +Dungeon.hero.subClass.toString();
 
-		EventCollector.logEvent("gameover", classId, resultDescription);
+		Map<String,String> resDesc = new HashMap<>();
+		resDesc.put("class",     hero.heroClass.toString());
+		resDesc.put("subclass",  Dungeon.hero.subClass.toString());
+
+		resDesc.put("resDesc",  resultDescription);
+		resDesc.put("mod",      rec.mod);
+		resDesc.put("duration", Float.toString(Statistics.duration));
+
+		EventCollector.logEvent("gameover", resDesc);
 
 		if (!ModdingMode.inMod()){
 			Game.instance().playGames.submitScores(Game.getDifficulty(), rec.score);

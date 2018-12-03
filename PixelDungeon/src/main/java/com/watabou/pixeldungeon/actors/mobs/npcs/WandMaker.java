@@ -223,7 +223,7 @@ public class WandMaker extends NPC {
 		
 		public static void spawn( PrisonLevel level, Room room ) {
 			if(room == null) {
-				EventCollector.logException(new Exception(),EventCollector.BUG);
+				EventCollector.logException("spawn in null room");
 				return;
 			}
 			

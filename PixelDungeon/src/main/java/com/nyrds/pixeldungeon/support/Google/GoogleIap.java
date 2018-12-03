@@ -99,7 +99,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
 
     private void handlePurchase(Purchase purchase) {
         if (!verifySignature(purchase.getOriginalJson(), purchase.getSignature())) {
-            EventCollector.logEvent("GoogleIap", "bad signature");
+            EventCollector.logException("bad signature");
             return;
         }
         //GLog.w("purchase: %s",purchase.toString());
@@ -131,13 +131,13 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
             @Override
             public void onBillingSetupFinished(@BillingClient.BillingResponse int billingResponseCode) {
 
-                EventCollector.logEvent("google play billing", Integer.toString(billingResponseCode));
-
                 if (billingResponseCode == BillingClient.BillingResponse.OK) {
                     mIsServiceConnected = true;
                     for (Runnable runnable:mRequests) {
                         getExecutor().execute(runnable);
                     }
+                }   else {
+                    EventCollector.logException("google play billing" + Integer.toString(billingResponseCode));
                 }
                 mIsServiceConnecting = false;
             }
@@ -183,7 +183,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         if (mSkuDetails.containsKey(skuLowerCase)) {
             return mSkuDetails.get(skuLowerCase).getPrice();
         } else {
-            EventCollector.logEvent("GoogleIap", "no sku", sku);
+            EventCollector.logException(sku);
             return "N/A";
         }
     }
@@ -199,7 +199,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     @Override
     public void onPurchaseHistoryResponse(int responseCode, List<Purchase> purchasesList) {
         if (responseCode != BillingClient.BillingResponse.OK) {
-            EventCollector.logEvent("google play billing","queryPurchasesHistory",Integer.toString(responseCode));
+            EventCollector.logException("queryPurchasesHistory" + Integer.toString(responseCode));
         }
     }
 

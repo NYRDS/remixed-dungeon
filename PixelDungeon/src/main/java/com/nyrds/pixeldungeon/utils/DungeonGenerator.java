@@ -173,7 +173,7 @@ public class DungeonGenerator {
 
 			if (index >= nextLevelSet.length()) {
 				index = 0;
-				EventCollector.logEvent("DungeonGenerator", "wrong next level index");
+				EventCollector.logException("wrong next level index");
 			}
 
 			mCurrentLevelId = nextLevelSet.optString(index,"0");

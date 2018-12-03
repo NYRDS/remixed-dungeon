@@ -471,10 +471,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void play(Animation anim) {
         if (anim == null) {
             if (ch == null) {
-                EventCollector.logEvent("bug", "null anim on null char, WTF?");
+                EventCollector.logException("null anim on null char, WTF?");
                 return;
             } else {
-                EventCollector.logEvent("bug", String.format(Locale.ROOT, "null anim for %s", ch.getClass()));
+                EventCollector.logException(String.format(Locale.ROOT, "null anim for %s", ch.getClass()));
                 ch.next();
                 return;
             }

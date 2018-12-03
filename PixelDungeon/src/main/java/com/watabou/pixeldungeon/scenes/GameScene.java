@@ -240,7 +240,7 @@ public class GameScene extends PixelScene {
         }
 
         if (buggedSave) {
-            EventCollector.logEvent(EventCollector.BUG, "bugged save", "mob.pos==-1");
+            EventCollector.logException("bugged save mob.pos==-1");
         }
 
         level.mobs = filteredMobs;
@@ -540,7 +540,7 @@ public class GameScene extends PixelScene {
         if (scene != null && Dungeon.level != null) {
             scene.addPlantSprite(plant);
         } else {
-            EventCollector.logException(new Exception("add(Plant)"));
+            EventCollector.logException();
         }
     }
 
@@ -549,7 +549,7 @@ public class GameScene extends PixelScene {
             Actor.add(gas);
             addBlobSprite(gas);
         } else {
-            EventCollector.logException(new Exception("add(Blob)"));
+            EventCollector.logException();
         }
     }
 
@@ -557,7 +557,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             scene.addLevelObjectSprite(obj);
         } else {
-            throw new TrackedRuntimeException("add(LevelObject)");
+            throw new TrackedRuntimeException(obj.toString());
         }
     }
 
@@ -565,7 +565,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             scene.addHeapSprite(heap);
         } else {
-            EventCollector.logException(new Exception("add(Heap)"));
+            EventCollector.logException();
         }
     }
 
@@ -573,7 +573,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             scene.addDiscardedSprite(heap);
         } else {
-            EventCollector.logException(new Exception("discard(Heap)"));
+            EventCollector.logException();
         }
     }
 
@@ -625,7 +625,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             scene.baseTiles.updateAll();
         } else {
-            EventCollector.logException(new Exception("updateMap"));
+            EventCollector.logException();
         }
     }
 
@@ -633,7 +633,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             scene.baseTiles.updateCell(cell, Dungeon.level);
         } else {
-            EventCollector.logException(new Exception("updateMap(int)"));
+            EventCollector.logException();
         }
     }
 
@@ -641,7 +641,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             scene.baseTiles.discover(pos);
         } else {
-            EventCollector.logException(new Exception("discoverTile"));
+            EventCollector.logException();
         }
     }
 
@@ -659,7 +659,7 @@ public class GameScene extends PixelScene {
                 mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
             }
         } else {
-            EventCollector.logException(new Exception("afterObserve()"));
+            EventCollector.logException();
         }
     }
 
@@ -782,7 +782,7 @@ public class GameScene extends PixelScene {
                 resume.update();
             }
         } else {
-            EventCollector.logException(new Exception("updateToolbar(int)"));
+            EventCollector.logException();
         }
     }
 

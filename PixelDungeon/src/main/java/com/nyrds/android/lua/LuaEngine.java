@@ -75,17 +75,19 @@ public class LuaEngine implements ResourceFinder {
 			return luaModule.checktable();
 		}
 
-		EventCollector.logEvent("LuaError","failed to load lua module:",module);
+		EventCollector.logException("failed to load lua module: "+module);
 
-		luaModule = getEngine().call("require", fallback);
+		if(!module.equals(fallback)) {
+			luaModule = getEngine().call("require", fallback);
 
-		if(luaModule.istable()) {
-			return luaModule.checktable();
+			if (luaModule.istable()) {
+				return luaModule.checktable();
+			}
+
+			Notifications.displayNotification("LuaError", "RD LuaError", "failed to load lua module:" + module);
+
+			EventCollector.logException("failed to load fallback lua module:" + fallback);
 		}
-
-		Notifications.displayNotification("LuaError", "RD LuaError", "failed to load lua module:"+module );
-
-		EventCollector.logEvent("LuaError","failed to load fallback lua module:",fallback);
 		return null;
 	}
 

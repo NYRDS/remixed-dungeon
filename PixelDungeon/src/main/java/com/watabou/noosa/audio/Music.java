@@ -65,7 +65,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			try {
 				afd = Game.instance().getAssets().openFd(assetFilename);
 			} catch (IOException e) {
-				EventCollector.logEvent("sound not found",assetName);
+				EventCollector.logException(e,assetName);
 			}
 		}
 

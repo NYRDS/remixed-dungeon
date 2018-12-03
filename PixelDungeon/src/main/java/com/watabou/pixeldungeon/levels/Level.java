@@ -109,7 +109,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (hasExit(0)) {
-			EventCollector.logEvent(EventCollector.BUG, "wrong exit index");
+			EventCollector.logException("wrong exit index");
 			return exitMap.get(0);
 		}
 
@@ -386,7 +386,7 @@ public abstract class Level implements Bundlable {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
 			if (heap.isEmpty()) {
-				EventCollector.logEvent(EventCollector.BUG, "level", Utils.format("Empty heap at pos %d", pos));
+				EventCollector.logException("level " + Utils.format("Empty heap at pos %d", pos));
 				return null;
 			}
 			return heap;
@@ -765,8 +765,7 @@ public abstract class Level implements Bundlable {
 	public void spawnMob(Mob mob, float delay, int fromCell) {
 
 		if (!cellValid(mob.getPos())) {
-			EventCollector.logException(new Exception(EventCollector.BUG),
-					String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getMobClassName(), mob.getPos()));
+			EventCollector.logException(String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getMobClassName(), mob.getPos()));
 			return;
 		}
 

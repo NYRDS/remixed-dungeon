@@ -157,7 +157,7 @@ public abstract class Char extends Actor implements Presser{
 						hungerAttached = true;
 					} else {
 						if (!hungerBugSend) {
-							EventCollector.logEvent(EventCollector.BUG, "hunger count");
+							EventCollector.logException("hunger count");
 							hungerBugSend = true;
 							continue;
 						}
@@ -647,7 +647,7 @@ public abstract class Char extends Actor implements Presser{
 		if(Dungeon.level.cellValid(getPos())) {
 			sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
 		} else {
-			EventCollector.logException(new Exception("invalid pos for:"+toString()),getClass().getCanonicalName());
+			EventCollector.logException("invalid pos for:"+toString()+":"+getClass().getCanonicalName());
 		}
 		GameScene.addMobSpriteDirect(sprite);
 		sprite.link(this);

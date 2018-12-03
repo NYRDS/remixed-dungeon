@@ -36,7 +36,7 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
             public void onReceivedError(WebView view, int errorCode,
                                         String description, String failingUrl) {
                 AdsUtilsCommon.bannerFailed(AAdsComboProvider.this);
-                EventCollector.logEvent("banner", "aads_no_banner", description);
+                EventCollector.logException(description);
             }
 
             @Override
@@ -83,7 +83,7 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
             public void onReceivedError(WebView view, int errorCode,
                                         String description, String failingUrl) {
                 AdsUtilsCommon.bannerFailed(AAdsComboProvider.this);
-                EventCollector.logEvent("interstitial", "aads_no_interstitial", description);
+                EventCollector.logException("aads_no_interstitial" + description);
             }
 
             @Override

@@ -61,7 +61,7 @@ public class AppodealAdapter {
             public void run() {
                 init();
 
-                EventCollector.startTiming("appodeal reward video");
+                EventCollector.startTrace("appodeal reward video");
 
                 Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
                 Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
@@ -70,12 +70,12 @@ public class AppodealAdapter {
 
                     @Override
                     public void onRewardedVideoLoaded(boolean b) {
-                        EventCollector.stopTiming("appodeal reward video", "appodeal reward video", "ok", "");
+                        EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "ok", "");
                     }
 
                     @Override
                     public void onRewardedVideoFailedToLoad() {
-                        EventCollector.stopTiming("appodeal reward video", "appodeal reward video", "fail", "");
+                        EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "fail", "");
                     }
 
                     @Override

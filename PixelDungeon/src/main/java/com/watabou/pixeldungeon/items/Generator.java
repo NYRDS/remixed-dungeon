@@ -197,7 +197,7 @@ public class Generator {
 			do {
 				index = Random.chances(probs);
 				if (!(index < classes.length)) {
-					EventCollector.logEvent("bug", "bad index in category", name());
+					EventCollector.logException("bad index in category" + name());
 				}
 			} while (!(index < classes.length));
 

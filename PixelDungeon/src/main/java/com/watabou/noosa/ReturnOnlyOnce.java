@@ -20,7 +20,7 @@ public class ReturnOnlyOnce implements InterstitialPoint {
             break;
 
             case 1:
-                EventCollector.logException(new Exception(Utils.format("%d return to %s", mReturnCounter, mTarget.getClass().getCanonicalName())));
+                EventCollector.logException(Utils.format("%d return to %s", mReturnCounter, mTarget.getClass().getCanonicalName()));
             break;
         }
 

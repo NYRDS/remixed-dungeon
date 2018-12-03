@@ -130,7 +130,7 @@ public class Bundle {
                 object.restoreFromBundle(this);
                 return object;
             } else {
-                EventCollector.logEvent("Bundable.get unknown class ", clName);
+                EventCollector.logException("unknown class "+ clName);
                 return null;
             }
         } catch (Exception e) {

@@ -851,7 +851,7 @@ public abstract class Mob extends Char {
 	public boolean attack(@NonNull Char enemy) {
 
 		if (enemy == DUMMY) {
-			EventCollector.logEvent(EventCollector.BUG, "attacking dummy enemy");
+			EventCollector.logException("attacking dummy enemy");
 			return false;
 		}
 		return super.attack(enemy);
@@ -880,7 +880,7 @@ public abstract class Mob extends Char {
 
 	protected boolean zapHit(@NonNull Char enemy) {
 		if (enemy == DUMMY) {
-			EventCollector.logEvent(EventCollector.BUG, "zapping dummy enemy");
+			EventCollector.logException("zapping dummy enemy");
 			return false;
 		}
 

@@ -118,7 +118,7 @@ public class Accessory {
         Iap iap = PixelDungeon.instance().iap;
 
         if(iap == null) {
-            EventCollector.logException(new Exception("iap is null!!!"));
+            EventCollector.logException("iap is null!!!");
             return;
         }
 

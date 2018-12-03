@@ -7,7 +7,6 @@ import android.webkit.WebView;
 import android.widget.LinearLayout;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -27,7 +26,6 @@ class OfflineAds {
 			"<div align=\"right\"height=100%%>.</div>";
 
 	static void displayBanner() {
-		EventCollector.logEvent("OfflineAds", "banner");
 		if (BuildConfig.DEBUG) {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
@@ -52,7 +50,6 @@ class OfflineAds {
 	}
 
 	static void displayIsAd(final InterstitialPoint work) {
-		EventCollector.logEvent("OfflineAds", "is");
 		if (BuildConfig.DEBUG) {
 			Game.instance().runOnUiThread(new Runnable() {
 

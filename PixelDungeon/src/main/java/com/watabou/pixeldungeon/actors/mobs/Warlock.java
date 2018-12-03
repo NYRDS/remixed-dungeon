@@ -73,7 +73,7 @@ public class Warlock extends Mob implements IZapper {
 
 	protected void fx( int cell, Callback callback ) {
 		if(getSprite().getParent()==null) {
-			EventCollector.logException(new Exception("null parent"));
+			EventCollector.logException("null parent");
 			return;
 		}
 		MagicMissile.whiteLight( getSprite().getParent(), getPos(), cell, callback );

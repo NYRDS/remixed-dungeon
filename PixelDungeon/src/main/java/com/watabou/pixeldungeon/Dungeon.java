@@ -456,9 +456,9 @@ public class Dungeon {
         lastSaveTimestamp = SystemTime.now();
 
         try {
-            EventCollector.startTiming("saveGame");
+            EventCollector.startTrace("saveGame");
             saveAllImpl();
-            EventCollector.stopTiming("saveGame", "saveGame", Dungeon.level.levelId, Game.version);
+            EventCollector.stopTrace("saveGame", "saveGame", Dungeon.level.levelId, Game.version);
         } catch (Exception e) {
             EventCollector.logException(e);
             throw new TrackedRuntimeException(e);

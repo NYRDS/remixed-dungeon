@@ -47,13 +47,13 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
             @Override
             public void run() {
                 if (mInterstitialAd == null) {
-                    EventCollector.logEvent("interstitial", "admob","mInterstitialAd == null");
+                    EventCollector.logException("mInterstitialAd == null");
                     AdsUtilsCommon.interstitialFailed(AdMobComboProvider.this, ret);
                     return;
                 }
 
                 if (!mInterstitialAd.isLoaded()) {
-                    EventCollector.logEvent("interstitial", "admob","not loaded");
+                    EventCollector.logException("not loaded");
                     AdsUtilsCommon.interstitialFailed(AdMobComboProvider.this, ret);
                     return;
                 }
@@ -91,7 +91,7 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
         }
 
         public void onAdFailedToLoad(int result) {
-            EventCollector.logEvent("banner", "admob_no_banner", Integer.toString(result));
+            EventCollector.logException( "admob banner" + Integer.toString(result));
             AdsUtilsCommon.bannerFailed(AdMobComboProvider.this);
         }
     }
@@ -105,7 +105,7 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
         @Override
         public void onAdFailedToLoad(int errorCode) {
             super.onAdFailedToLoad(errorCode);
-            EventCollector.logEvent("interstitial", "admob_error", Integer.toString(errorCode));
+            EventCollector.logException("admob_error " + Integer.toString(errorCode));
         }
 
         @Override

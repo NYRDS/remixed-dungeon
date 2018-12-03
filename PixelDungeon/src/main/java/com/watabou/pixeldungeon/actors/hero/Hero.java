@@ -1578,7 +1578,7 @@ public class Hero extends Char implements PetOwner {
 
 			}
 		} else {
-			EventCollector.logEvent("bug", "hero attacks null enemy");
+			EventCollector.logException("hero attacks null enemy");
 		}
 
 		curAction = null;
@@ -1609,7 +1609,7 @@ public class Hero extends Char implements PetOwner {
 					Dungeon.level.set(doorCell, Terrain.UNLOCKED_EXIT);
 					break;
 				default:
-					EventCollector.logException(new Exception("trying to unlock tile:" + door));
+					EventCollector.logException("trying to unlock tile:" + door);
 			}
 			GameScene.updateMap(doorCell);
 
@@ -1821,7 +1821,7 @@ public class Hero extends Char implements PetOwner {
 		if(hunger != null) {
             hunger.satisfy(energy);
         } else {
-            EventCollector.logEvent(EventCollector.BUG,"no hunger", className());
+			EventCollector.logException("no hunger " + className());
         }
 
 		GLog.i( message );

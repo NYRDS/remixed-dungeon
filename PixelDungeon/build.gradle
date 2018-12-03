@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 604
-        versionName "remix.28.4.beta.1.5"
+        versionCode 605
+        versionName "remix.28.4"
     }
 
     aaptOptions {
@@ -130,14 +130,14 @@ dependencies {
     googlePlayImplementation 'ru.livli:swsdk-apps:0.0.1-alpha08'
 
     googlePlayImplementation 'androidx.core:core:1.0.1'
-    googlePlayImplementation 'androidx.annotation:annotation:1.0.0'
+    googlePlayImplementation 'androidx.annotation:annotation:1.0.1'
 
 
     implementation 'com.android.billingclient:billing:1.1'
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
     googlePlayImplementation 'com.google.firebase:firebase-core:16.0.5'
-    googlePlayImplementation 'com.google.firebase:firebase-perf:16.2.0'
+    googlePlayImplementation 'com.google.firebase:firebase-perf:16.2.1'
     googlePlayImplementation 'com.google.firebase:firebase-ads:17.1.1'
 
     googlePlayImplementation 'com.crashlytics.sdk.android:crashlytics:2.9.6'

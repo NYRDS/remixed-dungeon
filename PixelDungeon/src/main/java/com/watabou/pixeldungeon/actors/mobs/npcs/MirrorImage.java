@@ -105,7 +105,7 @@ public class MirrorImage extends Mob {
 				look = Dungeon.hero.getHeroSprite().getLayersDesc();
 				deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
 			} else { // dirty hack here
-				EventCollector.logException(new Exception("MirrorImage sprite created before hero"));
+				EventCollector.logException("MirrorImage sprite created before hero");
 				Hero hero = new Hero();
 				HeroSpriteDef spriteDef = HeroSpriteDef.createHeroSpriteDef(hero);
 				look = spriteDef.getLayersDesc();

@@ -46,10 +46,6 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 			return (Wand) loot;
 		}
 
-		if(loot != null) {
-			EventCollector.logEvent("bug", "crystal loot", loot.getClass().getSimpleName());
-		}
-
 		if(kind == 2) {
 			lootChance = 0.12f;
 			loot = new WandOfShadowbolt();
@@ -151,7 +147,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	@Override
 	public boolean zap(@NonNull Char enemy) {
 		if (enemy == DUMMY) {
-			EventCollector.logEvent(EventCollector.BUG, "zapping dummy enemy");
+			EventCollector.logException("zapping dummy enemy");
 			return false;
 		}
 

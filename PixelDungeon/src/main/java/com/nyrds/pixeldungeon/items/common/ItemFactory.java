@@ -448,7 +448,7 @@ public class ItemFactory {
 
         String ret = mNamesList.get(clazz);
         if (ret == null) {
-            EventCollector.logEvent("Unregistered entry", clazz.getCanonicalName());
+            EventCollector.logException("Unregistered entry " + clazz.getCanonicalName());
             ret = "ClothArmor";
         }
         return ret;

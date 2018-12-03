@@ -37,7 +37,7 @@ public class GoogleRewardVideoAds {
 	}
 
 	private static void loadNextVideo() {
-		EventCollector.startTiming(GOOGLE_REWARD_VIDEO);
+		EventCollector.startTrace(GOOGLE_REWARD_VIDEO);
 		mVideoLoaded = false;
 
 		mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
@@ -76,7 +76,7 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
-			EventCollector.stopTiming(GOOGLE_REWARD_VIDEO,"google reward video","ok","");
+			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO,"google reward video","ok","");
 			mVideoLoaded   = true;
 			videoCompleted = false;
 		}
@@ -110,7 +110,7 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
-			EventCollector.stopTiming(GOOGLE_REWARD_VIDEO,"google reward video","fail","");
+			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO,"google reward video","fail","");
 			mVideoLoaded = false;
 		}
 
