@@ -7,7 +7,7 @@
   <!--STRINGS OF AmuletScene CLASS-->
   <string name="AmuletScene_Exit">여기서 끝내기로 하지</string>
   <string name="AmuletScene_Stay">아직 끝내긴 일러</string>
-  <string name="AmuletScene_Txt">당신은 마침내 손에 옌도르의 아뮬렛을 거머쥐었습니다. 이 힘을 이용해서 당신은 세상을 손에 넣을 수도 있고 아니면 평화와 번영을 가져다 줄수도 있는 등 여러 가지 일을 할 수 있다. 어쨌든, 당신의 인생은 완전히 바뀔 것이고, 게임은 여기서 끝날 겁니다. 아니면, 그저 필멸자 상태로 좀 더 머무를 수도 있고요.</string>
+  <string name="AmuletScene_Txt">당신은 마침내 옌더의 아뮬렛을 거머쥐었습니다. 이 힘을 이용해서 당신은 세상을 손에 넣을 수도 있고 아니면 평화와 번영을 가져다 줄 수도 있는 등 여러 가지 일을 할 수 있다. 어쨌든, 당신의 인생은 완전히 바뀔 것이고, 게임은 여기서 끝날 겁니다. 아니면, 그저 필멸자 상태로 좀 더 머무를 수도 있고요.</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">Pixel Dungeon의 %d층에 오신걸 환영합니다!</string>
   <string name="GameScene_WelcomeBack">Pixel Dungeon의 %d층에 돌아오신 것을 환영합니다!</string>
@@ -48,34 +48,34 @@
   <string name="Char_StaMind">마음</string>
   <string name="Char_StaVision">비전</string>
   <string name="Char_StaParalysed">마비</string>
-  <string name="Char_StaFrightened">겁먹은</string>
+  <string name="Char_StaFrightened">공포</string>
   <string name="Char_StaRooted">묶임</string>
   <string name="Char_StaCrippled">불구</string>
   <string name="Char_StaBleeding">출혈</string>
-  <string name="Char_StaDizzy">어지럼</string>
-  <string name="Char_StaInvisible">투명</string>
+  <string name="Char_StaDizzy">현기증</string>
+  <string name="Char_StaInvisible">투명화</string>
   <!--STRINGS OF Dungeon CLASS-->
-  <string name="Dungeon_NoTips">글자가 뭔말인지 해독할 수 없습니다..</string>
+  <string name="Dungeon_NoTips">글을 해독할 수 없습니다..</string>
   <string name="Dungeon_DeadEnd">당신 여기서 뭐하시는 겁니까?!</string>
   <string-array name="Dungeon_Tips">
     <item>당신의 힘을 과신하지 마십시오. 당신이 다룰 수 있을 만한 무기나 갑옷을 착용하세요.</item>
     <item>던전에 있는 모든 문들이 처음부터 볼 수 있는 것은 아닙니다. 막혔다면, 숨겨진 문들을 찾아 보세요.</item>
     <item>힘을 올리는 것만이 좋은 장비를 착용하는 유일한 방법이 아닙니다. 당신은 업그레이드 주문서를 사용해서 장비의 요구 힘 수치를 낮출 수 있습니다.</item>
-    <item> 당신은 당신의 골드를 마을이나 던전 상점에서 사용할 수 있습니다</item>
+    <item> 골드는 마을이나 던전에 있는 상점에서 사용할 수 있습니다</item>
     <item>블랙 푸딩을 조심하세요!</item>
     <item>Pixel-마트 -당신의 성공적인 모험을 위한 모든 것!</item>
-    <item>당신이 가진 물약과 두루마리의 정체를 가능한한 빨리 파악 하세요. 실제로 필요한 순간이 올 때 까지 미루지 마세요.</item>
-    <item>배고픈건 고통을 주진 않지만, 굶주리게 되면 고통이 따릅니다.</item>
+    <item>당신이 가진 물약과 주문서의 정체를 가능한 빨리 파악 하세요. 실제로 필요한 순간이 올 때 까지 미루지 마세요.</item>
+    <item>배고픔 상태에는 고통을 주진 않지만, 굶주림 상태가 되면 고통이 따릅니다.</item>
     <item>기습 공격은 명중률이 높습니다. 예를 들자면, 적이 다가오고 있다는 걸 알고 있으면 닫힌 문뒤에 숨어서 기다리는 방법이 있습니다.</item>
     <item>텐구를 밖으로 나가지 못하게 하시오!</item>
-    <item>Pixel-마트. 돈을 쓰세요. 오래 살아요.</item>
-    <item>동시의 여러마리의 몬스터에게 공격을 받는다면, 문 뒤 쪽으로 후퇴하세요.</item>
-    <item>만약 불 붙은 채로 비행중이라면, 물 속에 들어가서 불을 끄는 것은 불가능 합니다.</item>
-    <item>앙크를 한번에 두 개 이상 가지고 다니는 건 비상식적 입니다. 왜냐하면 죽고나서 부활한다면, 장비하지 않은 것들은 모두 잃어 버리기 때문이죠.</item>
+    <item>pixel-마트. 돈을 쓰세요. 오래 살아요.</item>
+    <item>동시에 여러 몬스터에게 공격을 받는다면, 문 뒤로 후퇴하세요.</item>
+    <item>만약 불 붙은 채로 비행 중이라면, 물 속에 들어가서 불을 끌 수 없습니다.</item>
+    <item>앙크를 한번에 두 개 이상 가지고 다니는 건 비효율적입니다. 왜냐하면 죽고나서 부활할 때 장비하지 않은 것들은 모두 잃어 버리기 때문이죠.</item>
     <item>경고! 육중한 기계는  부상이나, 수족 절단 또는 사망을 야기할수 있습니다!</item>
     <item>Pixel-마트. 던전에서 보다 안전한 삶을.</item>
-    <item>인챈트된 무기를 업그레이드할 때 에는, 인챈트가 사라질 확률이 있습니다.</item>
-    <item>변이의 우물을 통해 다른 방법으로는 구할 수 없는 아이템을 얻을 수 있습니다.</item>
+    <item>인챈트된 무기를 강화할 때 인챈트가 사라질 확률이 있습니다.</item>
+    <item>변환의 우물을 통해 다른 방법으로는 구할 수 없는 아이템을 얻을 수 있습니다.</item>
     <item>인챈트된 무기를 만드는 방법은, 오로지 무기 업그레이드의 두루마리를 이용하는 방법밖에 없습니다.</item>
     <item>폐하가 계신 곳 에서는 어떠한 무기도 허락되지 않는다.</item>
     <item>Pixel-마트. 악마 사냥꾼들에게 특별가로 모십니다!</item>

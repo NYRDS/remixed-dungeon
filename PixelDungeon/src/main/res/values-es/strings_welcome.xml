@@ -2,15 +2,6 @@
 <resources>
   <string name="Welcome_Ok">¡Muy bien!</string>
   <string name="Welcome_Title">¡Bienvenido!</string>
-  <string name="Welcome_Text_27_4">
- remix.27.4\n
- - Cambio de Remixed Dungeon\n
- - Necrotismo - nueva capacidad de Nigromante Clase Armadura\n
- - Nueva insignia para descubrir\n
- - La hablidad Armadura de clase ahora consume Mana en lugar de HP\n
- - Los objetos del caos ahora pierden encanto al degradase\n
- - Las Psi-aranas ahora solo pueden lanzar hechizos de ceguera, lentitud y debledad\n
- </string>
   <string name="Welcome_Text_28">
  remix.28\n
  - Nuevo heroe - Gnoll\n

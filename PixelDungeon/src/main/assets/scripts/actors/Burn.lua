@@ -13,7 +13,7 @@ return actor.init({
         local levelSize = RPD.Dungeon.level:getLength()
         local cell = math.random(levelSize)-1
         if not RPD.Dungeon.level.solid[cell] then
-            RPD.GameScene:add( RPD.Blobs.Blob:seed(cell,10, RPD.Blobs.Fire ))
+            RPD.placeBlob( RPD.Blobs.Fire, cell, 10)
         end
         return true
     end,

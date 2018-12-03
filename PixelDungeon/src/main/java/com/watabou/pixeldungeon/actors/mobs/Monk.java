@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -31,8 +29,11 @@ import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.sprites.MonkSprite;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Monk extends Mob {
 
@@ -89,6 +90,8 @@ public class Monk extends Mob {
 			
 			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
 				hero.belongings.weapon = null;
+				hero.updateLook();
+				QuickSlot.refresh();
 				Dungeon.level.drop( weapon, hero.getPos() ).sprite.drop();
 				GLog.w( Game.getVar(R.string.Monk_Disarm), getName(), weapon.name() );
 			}

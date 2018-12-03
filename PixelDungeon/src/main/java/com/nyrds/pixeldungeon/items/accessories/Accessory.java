@@ -1,12 +1,15 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
@@ -20,6 +23,8 @@ import java.util.Map;
 public class Accessory {
 
     protected boolean coverHair;
+    protected boolean coverItems;
+
     protected int image = 0;
 
     protected static final String imageFile = "items/accessories.png";
@@ -56,15 +61,25 @@ public class Accessory {
     }
 
     public String getLayerFile() {
-        return "hero/accessories/" + getClass().getSimpleName() + ".png";
+        return "hero_modern/accessories/" + getClass().getSimpleName() + ".png";
     }
 
     Accessory() {
-        coverHair = false;
+        coverHair  = false;
+        coverItems = false;
     }
 
     public boolean isCoveringHair() {
         return coverHair;
+    }
+
+    public boolean isCoveringItems() {
+        return coverItems;
+    }
+
+
+    public boolean usableBy(Hero hero) {
+        return true;
     }
 
     public static Accessory getByName(String name) {
@@ -100,13 +115,22 @@ public class Accessory {
     }
 
     static public void check() {
+        Iap iap = PixelDungeon.instance().iap;
+
+        if(iap == null) {
+            EventCollector.logException(new Exception("iap is null!!!"));
+            return;
+        }
+
         for (String item : allAccessoriesList.keySet()) {
-            if ( PixelDungeon.instance().iap.checkPurchase(item)) {
+            if ( iap.checkPurchase(item)) {
                 getByName(item).ownIt(true);
             } else {
                 getByName(item).ownIt(false);
             }
         }
+
+
     }
 
     public boolean haveIt() {

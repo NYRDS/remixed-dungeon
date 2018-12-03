@@ -1,11 +1,11 @@
 package com.watabou.noosa;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import java.util.regex.Pattern;
+
+import androidx.annotation.NonNull;
 
 public abstract class Text extends Visual {
 

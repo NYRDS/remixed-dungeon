@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
-import android.support.annotation.NonNull;
-
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -14,6 +12,8 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by DeadDie on 12.02.2016

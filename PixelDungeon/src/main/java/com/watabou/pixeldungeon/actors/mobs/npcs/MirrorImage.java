@@ -17,9 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -33,7 +32,9 @@ import com.watabou.utils.Random;
 import java.util.HashSet;
 import java.util.Set;
 
-public class MirrorImage extends NPC {
+import androidx.annotation.NonNull;
+
+public class MirrorImage extends Mob {
 
 	// for restoreFromBundle
 	public MirrorImage() {
@@ -43,8 +44,6 @@ public class MirrorImage extends NPC {
 
 	public MirrorImage(Hero hero) {
 		this();
-
-		makePet(this, hero);
 
 		attack = hero.attackSkill( hero );
 		damage = hero.damageRoll();
@@ -58,6 +57,8 @@ public class MirrorImage extends NPC {
 	private int                damage;
 	@Packable
 	private String[] look = new String[0];
+	@Packable
+	private String deathEffect;
 
 	@Override
 	public int attackSkill( Char target ) {
@@ -97,37 +98,24 @@ public class MirrorImage extends NPC {
 		
 	@Override
 	public CharSprite sprite() {
-		if(look.length > 0) {
-			return new HeroSpriteDef(look);
-		} else { // handle old saves
+		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {
+			return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
+		} else { // first sprite generation
 			if(Dungeon.hero != null) {
 				look = Dungeon.hero.getHeroSprite().getLayersDesc();
+				deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
 			} else { // dirty hack here
+				EventCollector.logException(new Exception("MirrorImage sprite created before hero"));
 				Hero hero = new Hero();
-				look = new HeroSpriteDef(hero).getLayersDesc();
+				HeroSpriteDef spriteDef = HeroSpriteDef.createHeroSpriteDef(hero);
+				look = spriteDef.getLayersDesc();
+				deathEffect = spriteDef.getDeathEffect();
 			}
 
 			return sprite();
 		}
 	}
 
-	@Override
-	public boolean interact(final Hero hero) {
-		
-		int curPos = getPos();
-		
-		moveSprite( getPos(), hero.getPos() );
-		move( hero.getPos() );
-		
-		hero.getSprite().move( hero.getPos(), curPos );
-		hero.move( curPos );
-		
-		hero.spend( 1 / hero.speed() );
-		hero.busy();
-		
-		return true;
-	}
-	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( ToxicGas.class );

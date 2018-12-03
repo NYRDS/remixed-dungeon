@@ -17,33 +17,41 @@ import com.watabou.noosa.InterstitialPoint;
 public class GoogleRewardVideoAds {
 
 	private static RewardedVideoAd mCinemaRewardAd;
-	private static RewardVideoAdListener rewardVideoAdListener = new RewardVideoAdListener();
 	private static InterstitialPoint returnTo;
-	private static volatile boolean loaded = false;
+	private static boolean mVideoLoaded;
 
 
 	public static void initCinemaRewardVideo() {
-		if (AdMob.googleAdsUsable())
-			Game.instance().runOnUiThread(new Runnable() {
-				@Override
-				public void run() {
 
-					mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
-					mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
+		if(isVideoInitialized()) {
+			return;
+		}
 
-					EventCollector.startTiming("google reward video");
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
-				}
-			});
+		Game.instance().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				loadNextVideo();
+			}
+		});
 	}
 
-	public static boolean isReady() {
-		return loaded;
+	private static void loadNextVideo() {
+		EventCollector.startTiming("google reward video");
+		mVideoLoaded = false;
+
+		mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
+		mCinemaRewardAd.setRewardedVideoAdListener(new RewardVideoAdListener());
+		mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
+	}
+
+	public static boolean isVideoReady() {
+		return mCinemaRewardAd != null && mVideoLoaded;
 	}
 
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
+
 		Game.instance().runOnUiThread (new Runnable() {
 			@Override
 			public void run() {
@@ -56,12 +64,20 @@ public class GoogleRewardVideoAds {
 		});
 	}
 
+	public static boolean isVideoInitialized() {
+		return mCinemaRewardAd != null;
+	}
+
 	private static class RewardVideoAdListener implements RewardedVideoAdListener {
+
+		private boolean videoCompleted = false;
+		private RewardItem rewardItem;
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
 			EventCollector.stopTiming("google reward video","google reward video","ok","");
-			loaded = true;
+			mVideoLoaded   = true;
+			videoCompleted = false;
 		}
 
 		@Override
@@ -75,15 +91,16 @@ public class GoogleRewardVideoAds {
 			Game.instance().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
-					loaded = false;
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
+					loadNextVideo();
 				}
 			});
+			returnTo.returnToWork(videoCompleted);
 		}
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
-			returnTo.returnToWork(true);
+			this.rewardItem = rewardItem;
+			videoCompleted = true;
 		}
 
 		@Override
@@ -93,11 +110,12 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			EventCollector.stopTiming("google reward video","google reward video","fail","");
+			mVideoLoaded = false;
 		}
 
 		@Override
 		public void onRewardedVideoCompleted() {
-
+			videoCompleted = true;
 		}
 	}
 

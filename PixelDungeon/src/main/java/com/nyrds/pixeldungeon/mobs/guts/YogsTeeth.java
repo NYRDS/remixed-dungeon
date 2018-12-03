@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.effects.Devour;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -17,6 +15,8 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by DeadDie on 12.02.2016

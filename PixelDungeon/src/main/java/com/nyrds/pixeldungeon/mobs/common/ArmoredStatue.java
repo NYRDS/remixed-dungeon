@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -22,6 +20,8 @@ import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class ArmoredStatue extends Mob {
 
@@ -126,10 +126,10 @@ public class ArmoredStatue extends Mob {
 	public CharSprite sprite() {
 		if(armor !=null)
 		{
-			return new HeroSpriteDef(armor);
+			return HeroSpriteDef.createHeroSpriteDef(armor);
 		}
 		else{
-			return new HeroSpriteDef(new ClothArmor());
+			return HeroSpriteDef.createHeroSpriteDef(new ClothArmor());
 		}
 	}
 }

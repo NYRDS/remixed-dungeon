@@ -66,7 +66,6 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, 100);
-				Game.instance().initEventCollector();
 				Game.switchScene(TitleScene.class);
 			}
 		};
@@ -75,7 +74,6 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, -100);
-				Game.instance().initEventCollector();
 				Game.switchScene(TitleScene.class);
 			}
 		};

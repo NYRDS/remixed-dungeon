@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
-import android.support.annotation.Nullable;
-
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
@@ -15,6 +14,8 @@ import com.watabou.utils.Bundle;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import androidx.annotation.Nullable;
 
 public class PredesignedLevel extends CustomLevel {
 
@@ -51,7 +52,7 @@ public class PredesignedLevel extends CustomLevel {
 			setupLinks();
 
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException(e);
 		}
 		buildFlagMaps();
 		cleanWalls();
@@ -156,7 +157,7 @@ public class PredesignedLevel extends CustomLevel {
 				}
 			}
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException("bad mob description", e);
+			throw ModdingMode.modException("bad mob description",e);
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
@@ -181,7 +182,7 @@ public class PredesignedLevel extends CustomLevel {
 				}
 			}
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException("bad items description", e);
+			throw ModdingMode.modException("bad items description", e);
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}

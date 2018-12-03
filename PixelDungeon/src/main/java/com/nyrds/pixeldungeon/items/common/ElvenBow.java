@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.Bow;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 
 public class ElvenBow extends Bow {
 
@@ -24,5 +24,10 @@ public class ElvenBow extends Bow {
 	@Override
 	public double dmgFactor() {
 		return 1 + level() * 0.3;
+	}
+
+	@Override
+	public String getVisualName() {
+		return "WoodenBow";
 	}
 }

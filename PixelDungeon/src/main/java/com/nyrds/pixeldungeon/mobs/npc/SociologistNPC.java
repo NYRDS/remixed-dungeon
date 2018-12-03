@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import android.Manifest;
-import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
@@ -20,6 +19,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 09.03.2018.

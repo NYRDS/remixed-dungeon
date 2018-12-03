@@ -1,7 +1,5 @@
 package com.nyrds.android.util;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.PixelDungeon;
 
@@ -12,6 +10,8 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.10.2016.
@@ -52,10 +52,8 @@ public class Mods {
 				ModDesc netDesc = entry.getValue();
 				netDesc.needUpdate = true;
 
-				int rpdVersion = PixelDungeon.versionCode;
-				if(rpdVersion>10000) {
-					rpdVersion -= 10000;
-				}
+				int rpdVersion = PixelDungeon.versionCode % 2000;
+
 				if(netDesc.rpdVersion <= rpdVersion) {
 					modsList.put(name, netDesc);
 				}

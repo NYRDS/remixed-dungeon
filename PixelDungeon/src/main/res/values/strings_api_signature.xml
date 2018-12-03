@@ -21,6 +21,7 @@
     <string name="google_storage_bucket" translatable="false"></string>
 
     <string name="fabric_api_key">0</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
 
 <!--
 Google Play game services IDs.

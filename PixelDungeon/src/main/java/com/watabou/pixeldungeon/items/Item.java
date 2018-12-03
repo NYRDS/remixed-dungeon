@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -59,12 +56,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import androidx.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+
 public class Item implements Bundlable, Presser {
 
 	private static final String TXT_TO_STRING       = "%s";
 	private static final String TXT_TO_STRING_X     = "%s x%d";
 	private static final String TXT_TO_STRING_LVL   = "%s%+d";
 	private static final String TXT_TO_STRING_LVL_X = "%s%+d x%d";
+
 
 	private static final   float TIME_TO_THROW   = 1.0f;
 	protected static final float TIME_TO_PICK_UP = 1.0f;
@@ -150,7 +152,10 @@ public class Item implements Bundlable, Presser {
 		if(hero.heroClass.forbidden(defaultAction)){
 			defaultAction = AC_THROW;
 		}
-		execute(hero, defaultAction);
+
+		if(actions(hero).contains(defaultAction)) {
+			execute(hero, defaultAction);
+		}
 	}
 
 	protected void onThrow(int cell) {
@@ -330,6 +335,7 @@ public class Item implements Bundlable, Presser {
 		hero.getSprite().emitter().burst(Speck.factory(Speck.EVOKE), 5);
 	}
 
+	@NonNull
 	@Override
 	public String toString() {
 

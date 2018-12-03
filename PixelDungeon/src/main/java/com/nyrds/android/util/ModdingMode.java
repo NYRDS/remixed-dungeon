@@ -1,12 +1,12 @@
 package com.nyrds.android.util;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 import com.watabou.pixeldungeon.PixelDungeon;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -20,19 +20,18 @@ import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Set;
 
+import androidx.annotation.NonNull;
+
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
 
 	private static final Set<String> trustedMods = new HashSet<>();
 
+	public static boolean useRetroHeroSprites = false;
+
 	static {
-		//trustedMods.add("PD Mini");
 		trustedMods.add("Maze");
 		trustedMods.add("Conundrum");
-		//trustedMods.add("D.U.N.G.E.O.N");
-		//trustedMods.add("D.U.N.G.E.O.N");
-		//trustedMods.add("The Fallen");
-		trustedMods.add("Fallen.Zero");
 	}
 
 	@NonNull
@@ -45,6 +44,10 @@ public class ModdingMode {
 			File modPath = FileSystem.getExternalStorageFile(mod);
 			if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
 				mActiveMod = mod;
+			}
+
+			if(!mod.equals(ModdingMode.REMIXED)) {
+				useRetroHeroSprites = !isResourceExistInMod("hero_modern");
 			}
 		} catch (Exception e) {
 			EventCollector.logException(e);
@@ -59,7 +62,15 @@ public class ModdingMode {
 
 		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
 		return version.optInt("version");
+	}
 
+	public static boolean useRetroHero() {
+		if (mActiveMod.equals(ModdingMode.REMIXED)) {
+			return false;
+		}
+
+		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
+		return !version.optBoolean("modernHeroSprites", true);
 	}
 
 	public static String activeMod() {
@@ -125,7 +136,6 @@ public class ModdingMode {
 		return resource.toString();
 	}
 
-
 	public static InputStream getInputStream(String resName) {
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
@@ -181,5 +191,19 @@ public class ModdingMode {
 
 	private static Context getContext() {
 		return RemixedPixelDungeonApp.getContext();
+	}
+
+	public static RuntimeException modException(Exception e) {
+		if(inMod()) {
+			return new ModError(mActiveMod,e);
+		}
+		return new TrackedRuntimeException(e);
+	}
+
+	public static RuntimeException modException(String s, JSONException e) {
+		if(inMod()) {
+			return new ModError(mActiveMod + ":" + s, e);
+		}
+		return new TrackedRuntimeException(s,e);
 	}
 }

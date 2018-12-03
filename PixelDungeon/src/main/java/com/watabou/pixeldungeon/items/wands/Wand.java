@@ -54,6 +54,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import androidx.annotation.NonNull;
+
 public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	private static final String AC_ZAP = "Wand_ACZap";
@@ -108,6 +110,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	public Wand() {
 		defaultAction = AC_ZAP;
+		animation_class = WAND_ATTACK;
 		
 		try {
 			image = handler.index(this);
@@ -233,7 +236,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         return this;
 	}
 
-	@Override
+	@NonNull
+    @Override
 	public String toString() {
 
 		StringBuilder sb = new StringBuilder(super.toString());
@@ -526,5 +530,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		curCharges(itemDesc.optInt("charges",curCharges()));
 		maxCharges(itemDesc.optInt("maxCharges",maxCharges()));
+	}
+
+	@Override
+	public String getVisualName() {
+		return "Wand";
 	}
 }

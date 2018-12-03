@@ -24,18 +24,16 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.android.gms.ads.MobileAds;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
-import com.nyrds.pixeldungeon.support.Iap;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -55,8 +53,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.microedition.khronos.opengles.GL10;
-
-import io.fabric.sdk.android.Fabric;
 
 public class PixelDungeon extends Game {
 
@@ -100,17 +96,14 @@ public class PixelDungeon extends Game {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Fabric.with(this, new Crashlytics());
 
 		EuConsent.check(this);
 		playGames = new PlayGames(this);
-		
+		MobileAds.initialize(this, Game.getVar(R.string.admob_app_id));
+
 		ModdingMode.selectMod(PixelDungeon.activeMod());
 		PixelDungeon.activeMod(ModdingMode.activeMod());
 
-		iap = new Iap();
-		iap.initIap(this);
-		
 		if(!Utils.canUseClassicFont(uiLanguage())) {
 			PixelDungeon.classicFont(false);
 		}
@@ -134,8 +127,6 @@ public class PixelDungeon extends Game {
 
 		Music.INSTANCE.enable(music());
 		Sample.INSTANCE.enable(soundFx());
-
-		SpellFactory.touch();
     }
 
 	public static boolean differentVersions(String v1, String v2) {
@@ -193,10 +184,6 @@ public class PixelDungeon extends Game {
 
 		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
 
-		if(iap.onActivityResult(requestCode, resultCode, data)) {
-			return;
-		}
-
 		if(playGames.onActivityResult(requestCode, resultCode, data)) {
 			return;
 		}
@@ -210,7 +197,7 @@ public class PixelDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return Flavours.haveDonations() && PixelDungeon.instance().iap.isReady() || BuildConfig.DEBUG;
+		return Flavours.haveDonations() && Game.instance().iap.isReady() || BuildConfig.DEBUG;
 	}
 	
 	/*
@@ -454,25 +441,7 @@ public class PixelDungeon extends Game {
 
 	public static void setDifficulty(int _difficulty) {
 		difficulty = _difficulty;
-
-		if(donated() > 0) {
-			AdsUtils.removeTopBanner();
-			return;
-		}
-
-		if (PixelDungeon.donated() == 0) {
-			if (getDifficulty() == 0) {
-				Ads.displayEasyModeBanner();
-			}
-
-			if (getDifficulty() < 2) {
-				Ads.initSaveAndLoadIntersitial();
-			}
-
-			if (getDifficulty() >= 2) {
-				AdsUtils.removeTopBanner();
-			}
-		}
+		syncAdsState();
 	}
 
 	//--- Move timeouts

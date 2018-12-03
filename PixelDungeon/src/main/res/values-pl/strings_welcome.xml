@@ -2,15 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Dobra!</string>
   <string name="Welcome_Title">Witaj!</string>
-  <string name="Welcome_Text_27_4">
-    remix.27.4\n
-    - Zmiana nazwy na Remixed Dungeon\n
-    - Nekroza - nowa umiejętność zbroi dla Nekromanty\n
-    - Nowe odznaki do odkrycia\n
-    - Umiejętność zbroi klasowej zużywa teraz Manę a nie punkty życia \n
-    - Przedmioty chaosu tracą teraz zaklętą umiejętność po ich ziszczeniu\n
-    - Mentalny Pająk teraz może używać tylko zaklęć Oślepienia, Spowolnienia oraz Osłabienia\n
-    </string>
   <string name="Welcome_Text_28">
     remix.28\n
     - Nowy Bohater - Gnoll\n

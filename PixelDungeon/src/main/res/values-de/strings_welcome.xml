@@ -2,15 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Herzlich willkommen!</string>
-  <string name="Welcome_Text_27_4">
-remix.27.4\n
-- Änderung des Namens zu Remixed Dungeon\n
-- Nekrose - Neue Nekromanten-Rüstung-Fähigkeit \n
-- Neues Abzeichen zu erkunden\n
-- Fähigkeit der klassenspezifischen Rüstung verbraucht nun Mana statt LP\n
-- Chaosgegenstände verlieren nun ihre Verzauberung, wenn sie degradiert werden\n
-- Psi-Spinnen können nun nur noch Blindheits-, Verlangsamungs- und Schwäche-Zauber wirken\n
-</string>
   <string name="Welcome_Text_28">
 remix.28\n
 - Neuer Held - Gnoll\n

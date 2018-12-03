@@ -2,7 +2,7 @@
 <resources>
   <!--PACKAGE /levels-->
   <!--STRINGS OF Level CLASS-->
-  <string name="Level_HiddenPlate">숨겨진 발판이 눌러졌다!</string>
+  <string name="Level_HiddenPlate">숨겨진 발판이 눌렸다!</string>
   <string name="Level_TileChasm">낭떠러지</string>
   <string name="Level_TileFloor">바닥</string>
   <string name="Level_TileGrass">잔디</string>
@@ -48,7 +48,7 @@
   <string name="Level_TileDescTrap">숨겨진 발판을 디디면 함정이 발동한다.</string>
   <string name="Level_TileDescInactiveTrap">함정이 이미 발동해서 더 이상 위험하지 않다.</string>
   <string name="Level_TileDescStatue">누군가 이곳을 꾸미고 싶어했지만, 당연히 던전의 분위기를 바꾸진 못했다.</string>
-  <string name="Level_TileDescAlchemy">여기다가 씨앗을 떨어뜨려 물약을 제조할 수 있다.</string>
+  <string name="Level_TileDescAlchemy">여기에 씨앗을 떨어뜨려 물약을 제조할 수 있습니다.</string>
   <string name="Level_TileDescEmptyWell">우물은 말라있다.</string>
   <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
   <string name="Caves_TileGrass">형광 이끼</string>
@@ -74,7 +74,7 @@
   <string name="Halls_TileHighGrass">화롯불버섯</string>
   <string name="Halls_TileStatue">기둥</string>
   <string name="Halls_TileDescWater">용암처럼 보인다, 하지만 차가운데다가 만져도 괜찮은것 같다.</string>
-  <string name="Halls_TileDescStatue">진짜 인간 해골로 만들어진 기둥이다. 놀라워!</string>
+  <string name="Halls_TileDescStatue">진짜 인간 해골로 만들어진 기둥이다. 쩌네!</string>
   <string name="Halls_TileDescBookshelf">고대의 언어로 쓰여진 책들이 책장에 가득하다.</string>
   <!--STRINGS OF LastLevel CLASS-->
   <string name="LastLevel_TileWater">차가운 용암</string>
@@ -105,7 +105,7 @@
   <string name="Chasm_Chasm">틈</string>
   <string name="Chasm_Yes">네, 내가 뭘 하려는지 잘 알고 있습니다.</string>
   <string name="Chasm_No">아니요, 생각을 바꿨습니다.</string>
-  <string name="Chasm_Jump">정말로 이 틈 아래로 뛰어 들겠습니까? 죽을수도 있습니다.</string>
+  <string name="Chasm_Jump">정말로 이 틈 아래로 뛰어 들겠습니까? 죽을 수도 있습니다.</string>
   <string name="Chasm_Info">추락하여 사망했습니다...</string>
   <!--PACKAGE /levels/traps-->
   <!--STRINGS OF AlarmTrap CLASS-->

@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
@@ -107,10 +105,10 @@ import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
 import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.pixeldungeon.items.weapon.melee.CompoundBow;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.Kusarigama;
 import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
@@ -152,6 +150,8 @@ import com.watabou.utils.Random;
 import java.util.HashMap;
 import java.util.Locale;
 
+import androidx.annotation.NonNull;
+
 public class Generator {
 
 	public enum Category {
@@ -164,7 +164,7 @@ public class Generator {
 		SEED(5, Plant.Seed.class),
 		FOOD(0, Food.class),
 		GOLD(50, Gold.class),
-		RANGED(2, Bow.class),
+		RANGED(2, KindOfBow.class),
 		BULLETS(5, Arrow.class),
 		THROWABLE(0, MissileWeapon.class),
 		DRINK(25, Drink.class),

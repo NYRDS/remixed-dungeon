@@ -2,15 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Baiklah!</string>
   <string name="Welcome_Title">Selamat Datang!</string>
-  <string name="Welcome_Text_27_4">
-    remix.27.4\n
-    - Penjenamaan semula ke Remixed Dungeon\n
-    - Necrotisma - keupayaan Perisai Kelas Necromancer baharu\n
-    - Lambang baharu untuk ditemui\n
-    - Keupayaan Perisai Kelas kini menggunakan Mana berbanding Tenaga Hayat\n
-    - Item Chaos kini kehilangan sihirnya jika dinyahtatar\n
-    - Psi-Lelabah kini hanya boleh sihirkan mantera Kebutaan, Lembab dan Lemah\n
-    </string>
   <string name="Welcome_Text_28">
     remix.28\n
     - Adiwira Baharu - Gnoll\n
@@ -50,5 +41,10 @@
     - Pengemodan:\n
     -- Jampi Boleh Mod\n
     -- Item Boleh Mod\n
+    </string>
+  <string name="Welcome_Text_28_4">
+    remix.28.4\n
+    - Penambahbaikan grafik:\n
+    -- Senjata adiwira kini kelihatan di dalam permainan\n
     </string>
 </resources>

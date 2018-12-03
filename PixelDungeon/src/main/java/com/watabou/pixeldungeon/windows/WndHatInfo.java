@@ -1,10 +1,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.pixeldungeon.support.IIapCallback;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
@@ -47,7 +48,7 @@ public class WndHatInfo extends Window {
 		add(priceTag);
 
 		//Preview Image
-		Image preview = (new HeroSpriteDef(Dungeon.hero, item)).avatar();
+		Image preview = (HeroSpriteDef.createHeroSpriteDef(Dungeon.hero, item)).avatar();
 		preview.setPos(WIDTH / 2 - preview.width(), priceTag.bottom() + GAP);
 		preview.setScale(2, 2);
 		add(preview);
@@ -86,7 +87,7 @@ public class WndHatInfo extends Window {
 							@Override
 							public void run() {
 								EventCollector.logEvent("PurchaseClick",item.name());
-								PixelDungeon.instance().iap.doPurchase(accessory, new Iap.IapCallback() {
+								PixelDungeon.instance().iap.doPurchase(accessory, new IIapCallback() {
 									@Override
 									public void onPurchaseOk() {
 										item.ownIt(true);
@@ -104,6 +105,8 @@ public class WndHatInfo extends Window {
 				);
 			}
 		};
+
+		rb.enable(!ModdingMode.useRetroHeroSprites);
 
 		if(!item.haveIt() && price == null) {
 			rb.enable(false);

@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Dungeon;
@@ -18,6 +16,8 @@ import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 

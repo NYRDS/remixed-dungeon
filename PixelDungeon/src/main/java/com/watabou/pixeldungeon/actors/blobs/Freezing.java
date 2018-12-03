@@ -34,8 +34,11 @@ public class Freezing {
 	}
 	// It's not really a blob...
 	
-	public static void affect( int cell, Fire fire ) {
-		
+	public static void affect( int cell ) {
+
+
+		Blob fire = Dungeon.level.blobs.get( Fire.class );
+
 		Char ch = Actor.findChar( cell ); 
 		if (ch != null) {
 			Buff.prolong( ch, Frost.class, Frost.duration( ch ) * Random.Float( 1.0f, 1.5f ) );

@@ -1,13 +1,13 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class SpiderServant extends MultiKindMob {
 	

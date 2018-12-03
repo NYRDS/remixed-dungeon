@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.Bow;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
 import com.watabou.utils.Bundle;
 
 public class ChaosBow extends Bow implements IChaosItem {

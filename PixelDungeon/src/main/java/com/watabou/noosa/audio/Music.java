@@ -20,7 +20,6 @@ package com.watabou.noosa.audio;
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -29,6 +28,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
+
+import androidx.annotation.NonNull;
 
 public enum Music implements MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener {
@@ -137,8 +138,10 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 	}
 
 	public void stop() {
-		if (player != null) {
+		if (isPlaying()) {
 			player.stop();
+		}
+		if(player!=null) {
 			player.release();
 			player = null;
 		}

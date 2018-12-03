@@ -33,6 +33,8 @@ import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 
+import androidx.annotation.NonNull;
+
 public class DewVial extends Item {
 
 	private static final int MAX_VOLUME	= 10;
@@ -167,7 +169,8 @@ public class DewVial extends Item {
 		return Utils.format( TXT_STATUS, getVolume(), MAX_VOLUME );
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public String toString() {
 		return super.toString() + " (" + status() +  ")" ;
 	}

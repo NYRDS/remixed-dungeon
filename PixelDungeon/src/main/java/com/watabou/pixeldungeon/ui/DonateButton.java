@@ -36,6 +36,9 @@ public class DonateButton extends ImageButton {
 		case 3:
 			image = Icons.CHEST_RUBY.get();
 			break;
+		case 4:
+			image = Icons.CHEST_ROYAL.get();
+
 		}
 		
 		add(image);
@@ -47,6 +50,7 @@ public class DonateButton extends ImageButton {
 		case 1:
 		case 2:
 		case 3:
+		case 4:
 			return Game.getVar(R.string.DonateButton_thanks);
 		default:
 			return Game.getVar(R.string.DonateButton_pleaseDonate);

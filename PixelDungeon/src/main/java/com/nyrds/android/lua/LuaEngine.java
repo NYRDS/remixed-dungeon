@@ -5,12 +5,10 @@ package com.nyrds.android.lua;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Notifications;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.luaj.vm2.Globals;
@@ -33,6 +31,9 @@ import org.luaj.vm2.lib.jse.JseMathLib;
 import org.luaj.vm2.lib.jse.JseOsLib;
 
 import java.io.InputStream;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class LuaEngine implements ResourceFinder {
 
@@ -82,6 +83,8 @@ public class LuaEngine implements ResourceFinder {
 			return luaModule.checktable();
 		}
 
+		Notifications.displayNotification("LuaError", "RD LuaError", "failed to load lua module:"+module );
+
 		EventCollector.logEvent("LuaError","failed to load fallback lua module:",fallback);
 		return null;
 	}
@@ -116,11 +119,17 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	private void reportLuaError(LuaError err) {
+
+		throw new TrackedRuntimeException(err);
+		/*
+		Notifications.displayNotification("LuaError", "RD LuaError", err.getMessage());
+
 		GLog.w(err.getMessage());
+		*/
 	}
 
 	public LuaTable require(String module) {
-		return LuaEngine.getEngine().call("require", module).checktable();
+		return module(module,module);
 	}
 
 	public void runScriptFile(@NonNull String fileName) {

@@ -48,4 +48,6 @@
 
 
     <string name="WndSaveSlotSelect_LoadAutoSave">Carregar Jogo</string>
+
+    <string name="TownScript_NeedWeapon">Eu não pretendo ir para o calabouço com as minhas mãos vazias!\nPor que não visito a loja da cidade primeiro?</string>
 </resources>

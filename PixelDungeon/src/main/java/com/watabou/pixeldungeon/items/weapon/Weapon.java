@@ -39,7 +39,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Poison;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Slow;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
-import com.watabou.pixeldungeon.items.weapon.melee.Bow;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -51,6 +51,8 @@ import com.watabou.utils.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import androidx.annotation.NonNull;
 
 public class Weapon extends KindOfWeapon {
 
@@ -124,7 +126,7 @@ public class Weapon extends KindOfWeapon {
 			}
 		}
 		
-		if (this instanceof MeleeWeapon && !(this instanceof Bow)) {
+		if (this instanceof MeleeWeapon && !(this instanceof KindOfBow)) {
 			if( hero.heroClass == HeroClass.ELF) {
 				encumbrance += 3;
 			}
@@ -182,7 +184,8 @@ public class Weapon extends KindOfWeapon {
 		return super.upgrade();
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public String toString() {
 		return levelKnown ? Utils.format("%s: %d", super.toString(), STR ) : super.toString();
 	}

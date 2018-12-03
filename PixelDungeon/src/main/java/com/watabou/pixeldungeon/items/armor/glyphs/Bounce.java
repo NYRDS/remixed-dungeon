@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -30,6 +28,8 @@ import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class Bounce extends Glyph {
 

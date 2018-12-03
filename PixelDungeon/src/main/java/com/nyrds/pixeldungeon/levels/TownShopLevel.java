@@ -87,7 +87,7 @@ public class TownShopLevel extends Level {
 		items.add( new Quiver());
 		items.add( new WandHolster());
 
-		Item[] range = items.toArray(new Item[items.size()]);
+		Item[] range = items.toArray(new Item[0]);
 
 		for (Item item : range) {
 			itemForSell(item);

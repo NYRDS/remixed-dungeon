@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -28,6 +26,8 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
 
 public class Journal {
 

@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
@@ -17,6 +15,8 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class KoboldIcemancer extends Mob implements IZapper {
 

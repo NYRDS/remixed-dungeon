@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.windows;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
@@ -14,6 +12,8 @@ import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.IconTitle;
+
+import androidx.annotation.NonNull;
 
 public class WndSpellInfo extends Window {
 

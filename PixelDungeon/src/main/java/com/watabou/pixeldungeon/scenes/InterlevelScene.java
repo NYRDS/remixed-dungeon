@@ -103,9 +103,7 @@ public class InterlevelScene extends PixelScene {
 					}
 
 			} catch (FileNotFoundException e) {
-
 				error = Game.getVar(R.string.InterLevelScene_FileNotFound);
-
 			} catch (IOException e) {
 				EventCollector.logException(e);
 				error = Game.getVar(R.string.InterLevelScene_ErrorGeneric) + "\n" + e.getMessage();
@@ -130,7 +128,11 @@ public class InterlevelScene extends PixelScene {
 					Dungeon.save();
 				}
 				break;
+			case FALL:
+				Dungeon.saveCurrentLevel();
+				break;
 			default:
+
 		}
 
 		Game.switchScene( InterlevelScene.class );

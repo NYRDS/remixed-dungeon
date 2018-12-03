@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
+import com.watabou.noosa.ReturnOnlyOnce;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
@@ -290,9 +291,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 		Game.softPaused = true;
 
-		InterstitialPoint returnTo = this;
 		if (PixelDungeon.donated() < 1) {
-			Ads.displaySaveAndLoadAd(returnTo);
+			Ads.displaySaveAndLoadAd(new ReturnOnlyOnce(this));
 		} else {
 			returnToWork(true);
 		}

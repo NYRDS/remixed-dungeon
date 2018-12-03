@@ -17,6 +17,7 @@ public abstract class PortalGate extends LevelObject {
 
 	protected boolean animationRunning = false;
 
+	@Packable
 	protected boolean activated = false;
 
 	@Packable
@@ -28,19 +29,21 @@ public abstract class PortalGate extends LevelObject {
 	@Packable
 	protected int uses;
 
+	{
+		textureFile = "levelObjects/portals.png";
+	}
+
 	public PortalGate(){
 		this(-1);
 	}
 
 	public PortalGate(int pos) {
 		super(pos);
-		textureFile = "levelObjects/portals.png";
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		textureFile = "levelObjects/portals.png";
 	}
 
 
@@ -69,10 +72,6 @@ public abstract class PortalGate extends LevelObject {
 			}
 		}
 
-	}
-
-	@Override
-	public void burn() {
 	}
 
 	@Override
@@ -128,6 +127,13 @@ public abstract class PortalGate extends LevelObject {
 			public void call() {
 			}
 		}, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
+	}
+
+	@Override
+	public void resetVisualState() {
+		if(activated) {
+			playActiveLoop();
+		}
 	}
 
 	public abstract boolean portalInteract(Hero hero);

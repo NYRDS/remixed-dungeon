@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.watabou.pixeldungeon.Badges;
@@ -13,6 +11,8 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Random;
+
+import androidx.annotation.NonNull;
 
 public class SpiderQueen extends Boss {
 	

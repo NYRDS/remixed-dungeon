@@ -36,6 +36,8 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Necromancer bermula dengan 15 mata hayat.</item>
+        <item>Necromancer guna mana untuk menyihir mantera Kematian.</item>
+        <item>Necromancer bermula dengan jubah Necromancer yang unik, ia dapat menjana 1 mata mana bagi setiap makhluk yang dibunuh oleh pemakainya.</item>
         <item>Necromancer bermula dengan kunci rangka aras 7.</item>
         <item>Posyen Penyembuhan dapat dikenal pasti pada awal pengembaraan.</item>
     </string-array>

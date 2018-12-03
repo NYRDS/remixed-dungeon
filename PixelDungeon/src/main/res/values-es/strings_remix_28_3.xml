@@ -48,4 +48,6 @@
 
 
     <string name="WndSaveSlotSelect_LoadAutoSave">Cargar autoguardado</string>
+
+    <string name="TownScript_NeedWeapon">No pienso ir a la mazmorra con las manos desnudas!\n¿Debería visitar la tienda del pueblo primero?</string>
 </resources>

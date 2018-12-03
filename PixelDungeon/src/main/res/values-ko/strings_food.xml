@@ -23,7 +23,7 @@
   <string name="MysteryMeat_Info1">으, 뜨거워!</string>
   <string name="MysteryMeat_Info2">다리에 감각이 느껴지지 않는다!</string>
   <string name="MysteryMeat_Info3">당신은 기분이 좋지 않다.</string>
-  <string name="MysteryMeat_Info4">당신은 배가 부릅다.</string>
+  <string name="MysteryMeat_Info4">당신은 배가 부르다.</string>
   <string name="MysteryMeat_Message">이 음식.... 맛이 이상하군.</string>
   <!--STRINGS OF RottenFood CLASS-->
   <string name="RottenFood_Message">역겹군!</string>

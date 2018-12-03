@@ -94,13 +94,6 @@
         <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" />
 
-        <!--suppress AndroidDomInspection -->
-        <activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize"
-            android:hardwareAccelerated="true"/>
-        <!--suppress AndroidDomInspection -->
-        <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity" android:configChanges="keyboardHidden|orientation|screenSize"
-            android:hardwareAccelerated="true"/>
-
         <activity android:name="com.inmobi.rendering.InMobiAdActivity" android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:hardwareAccelerated="true" android:resizeableActivity="false" android:theme="@android:style/Theme.NoTitleBar" tools:ignore="UnusedAttribute"/>
 
@@ -109,24 +102,36 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 
         <!-- Yandex-metrica -->
-        <service android:name="com.yandex.metrica.MetricaService" android:enabled="true"
-            android:exported="true" android:process=":Metrica">
+        <service
+            android:name="com.yandex.metrica.MetricaService" android:enabled="true"
+            android:exported="true" android:process=":Metrica" tools:ignore="ExportedService" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.yandex.metrica.IMetricaService" />
                 <data android:scheme="metrica" />
             </intent-filter>
-            <meta-data android:name="metrica:api:level" android:value="64" />
+            <meta-data
+                android:name="metrica:api:level"
+                android:value="70" />
         </service>
-        <service android:name="com.yandex.metrica.ConfigurationService" android:enabled="true"
-            android:exported="true" android:process=":Metrica" tools:ignore="ExportedService">
-            <meta-data android:name="metrica:configuration:api:level" android:value="1"/>
+        <service
+            android:name="com.yandex.metrica.ConfigurationService" android:enabled="true"
+            android:exported="true" android:process=":Metrica" tools:ignore="ExportedService" >
+            <meta-data
+                android:name="metrica:configuration:api:level" android:value="2" />
             <intent-filter>
-                <action android:name="com.yandex.metrica.configuration.ACTION_START"/>
+                <action android:name="com.yandex.metrica.configuration.ACTION_START" />
             </intent-filter>
         </service>
-        <receiver android:name="com.yandex.metrica.MetricaEventHandler"
-            android:enabled="true" android:exported="true">
+        <service
+            android:name="com.yandex.metrica.ConfigurationJobService" android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":Metrica" >
+        </service>
+        <receiver
+            android:name="com.yandex.metrica.MetricaEventHandler" android:enabled="true"
+            android:exported="true" tools:ignore="ExportedReceiver" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
@@ -139,6 +144,9 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
         <!-- End Yandex-mobileads -->
 
+        <meta-data
+            android:name="appbrain.job_id"
+            android:value="1205629301" />
 
     </application>
 

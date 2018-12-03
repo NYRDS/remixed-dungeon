@@ -17,6 +17,7 @@ public class NecromancerArmor extends ClassArmor {
 
 	public NecromancerArmor() {
 		image = 22;
+		hasHelmet = true;
 	}
 
 	public String desc() {

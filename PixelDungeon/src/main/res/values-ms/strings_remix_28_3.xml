@@ -32,4 +32,22 @@
     <string name="RottenFish_Info">Ikan busuk, baunya...</string>
     <string name="RottenFish_Taste">Jijiknya!</string>
 
-    </resources>
+    <string name="gdpr_title">Peribadikan Pengalaman Iklan Anda</string>
+    <string name="gdpr_text">Remixed Dungeon memperibadikan pengalaman iklan jika menggunakan Admob dan Appodeal (penyedia Iklan). Penyedia iklan dan rakan niaga mereka dapat mengutip dan memproses data peribadi seperti pengecam peranti, demografi dan data-data berguna yang lain supaya iklan yang diterima sesuai dengan anda. Dengan menerima pengalaman iklan yang ditambahbaik ini, anda dapat melihat Iklan yang mana penyedia Iklan dan rakan niaganya anggap terbaik untuk anda.\n\nJika anda setuju, anda mengesahkan diri anda berusia lebih daripada 16 tahun dan mahu pengalaman iklan ini.\n\n</string>
+    <string name="gdpr_agree">Ya, saya setuju</string>
+    <string name="gdpr_disagree">Tidak, terima kasih</string>
+    <string name="gdpr_choose">Sila pilih</string>
+
+    <string name="Mob_StaHuntingStatus2">%1$s ini sedang memburu %2$s</string>
+    <string name="Mob_StaFleeingStatus2">%1$s ini lari ketakutan daripada %2$s</string>
+
+    <string name="Mob_StaTerrorStatus">%1$s ini menjadi takut</string>
+    <string name="Mob_StaTerrorStatus2">%1$s ini takut dengan %2$s</string>
+
+    <string name="Mob_StaAmokStatus">%1$s ini sedang mengamok</string>
+
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">Muat auto-simpan</string>
+
+    <string name="TownScript_NeedWeapon">Saya tak mau masuk ke dalam kurungan bawah tanah dengan tangan kosong!\nLebih baik pergi ke kedai dahulu sebelum masuk?</string>
+</resources>

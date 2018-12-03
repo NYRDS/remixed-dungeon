@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
@@ -80,6 +77,9 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public abstract class Mob extends Char {
 
@@ -655,11 +655,11 @@ public abstract class Mob extends Char {
 		return clone;
 	}
 
-	protected void ressurrect() {
-		ressurrect(this);
+	protected void resurrect() {
+		resurrect(this);
 	}
 
-	public void ressurrect(Char parent) {
+	public void resurrect(Char parent) {
 
 		int spawnPos = Dungeon.level.getEmptyCellNextTo(parent.getPos());
 		Mob new_mob;
@@ -671,11 +671,11 @@ public abstract class Mob extends Char {
 
 		if (Dungeon.level.cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
-			Dungeon.level.spawnMob(new_mob);
 			if (parent instanceof Hero) {
 				Mob.makePet(new_mob, (Hero) parent);
 				Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			}
+			Dungeon.level.spawnMob(new_mob);
 		}
 	}
 
@@ -780,14 +780,14 @@ public abstract class Mob extends Char {
 		return true;
 	}
 
-	public void swapPosition(final Char chr) {
+	public boolean swapPosition(final Char chr) {
 
 		if(!walkingType.canSpawnAt(Dungeon.level,chr.getPos())) {
-			return;
+			return false;
 		}
 
 		if(hasBuff(Roots.class)) {
-			return;
+			return false;
 		}
 
 		int curPos = getPos();
@@ -804,6 +804,7 @@ public abstract class Mob extends Char {
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
 		setState(WANDERING);
+		return true;
 	}
 
 	private void ensureOpenDoor() {

@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
@@ -40,6 +37,10 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import java.util.Iterator;
+
+import androidx.annotation.Nullable;
+
+import androidx.annotation.NonNull;
 
 public class Belongings implements Iterable<Item> {
 

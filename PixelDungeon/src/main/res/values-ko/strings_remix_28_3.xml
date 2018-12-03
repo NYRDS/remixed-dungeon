@@ -2,7 +2,7 @@
 <resources>
     <string name="DarkSacrifice_Name">어둠의 희생</string>
     <string name="DarkSacrifice_Info">충성스러운 하수인을 희생해 폭발을 일으킵니다. 폭발의 범위는 하수인의 남은 체력과 당신의 기술 레벨에 달려 있습니다.</string>
-    <string name="DarkSacrifice_Ok">내 삶은 당신의 것입니다!</string>
+    <string name="DarkSacrifice_Ok">내 목숨은 당신의 것입니다!</string>
     <string name="DarkSacrifice_Self">재앙을 위해!</string>
     <string name="DarkSacrifice_Resist">넌 나를 지배할 힘이 없어!</string>
     <string name="DarkSacrifice_Hint">희생시킬 당신의 충성스러운 하수인을 선택하세요.</string>
@@ -38,5 +38,16 @@
     <string name="gdpr_agree">네, 동의합니다.</string>
     <string name="gdpr_disagree">아니요, 괜찮습니다.</string>
     <string name="gdpr_choose">선택해 주세요.</string>
+
+    <string name="Mob_StaHuntingStatus2">이 %1$s은/는 %2$s을/를 쫒고 있습니다</string>
+    <string name="Mob_StaFleeingStatus2">이 %1$s은/는 %2$s으로부터 달아나고 있습니다</string>
+
+    <string name="Mob_StaTerrorStatus">이 %1$s은/는 공포에 빠졌습니다</string>
+    <string name="Mob_StaTerrorStatus2">이 %1$s은/는 %2$s을/를 두려워합니다</string>
+
+    <string name="Mob_StaAmokStatus">이 %1$s은/는 광란에 빠졌습니다</string>
+
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">자동 세이브-로드</string>
 
     </resources>

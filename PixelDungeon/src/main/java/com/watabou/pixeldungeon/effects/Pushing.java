@@ -17,14 +17,14 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.utils.PointF;
+
+import androidx.annotation.NonNull;
 
 public class Pushing extends Actor {
 

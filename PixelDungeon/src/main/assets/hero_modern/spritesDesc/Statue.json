@@ -1,0 +1,42 @@
+{
+  "texture" : "hero_modern/empty.png",
+
+  "width"   : 32,
+  "height"  : 32,
+
+  "visualWidth"   : 14,
+  "visualHeight"  : 17,
+
+  "visualOffsetX"   : 8,
+  "visualOffsetY"   : 8,
+
+
+  "idle"    : { "fps" : 2,  "looped" : true,     "frames" : [0, 0, 0, 1, 0, 0, 1, 1] },
+  "run"     : { "fps" : 20, "looped" : true,     "frames" : [2, 3, 4, 5, 6, 7] },
+  "die"     : { "fps" : 20, "looped" : false,    "frames" : [14, 15, 16, 17, 18] },
+  "attack"  : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0]  },
+  "zap"     : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0] },
+
+  "operate" : { "fps" : 8,  "looped" : false,    "frames" : [11, 12, 11, 12] },
+  "fly"     : { "fps" : 1,  "looped" : true,     "frames" : [13] },
+
+  "weapon_anim" : {
+    "none"      : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0]},
+    "sword"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
+    "sword_zap" : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
+    "spear"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
+    "bow"       : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
+    "bow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
+    "crossbow"       : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
+    "crossbow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
+    "staff"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
+    "staff_zap"  : { "fps" : 10, "looped" : false,    "frames": [19, 20, 0]},
+    "heavy"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
+    "wand"      : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
+    "wand_zap"  : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
+    "kusarigama"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
+    "kusarigama_zap" : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]}
+  },
+
+  "bloodColor" : "0xFF777777"
+}

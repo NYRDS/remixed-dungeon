@@ -19,92 +19,95 @@ package com.watabou.noosa;
 
 public class MovieClip extends Image {
 
-	protected Animation curAnim;
-	protected int       curFrame;
+    protected Animation curAnim;
+    protected int curFrame;
 
-	private   float     frameTimer;
-	private   boolean   finished;
-	
-	public boolean paused = false;
+    private float frameTimer;
+    private boolean finished;
 
-	public Listener listener;
-	
-	public MovieClip() {
-		super();
-	}
-	
-	public MovieClip( Object tx ) {
-		super( tx );
-	}
-	
-	@Override
-	public void update() {
-		super.update();
-		if (!paused) {
-			updateAnimation();
-		}
-	}
-	
-	private void updateAnimation() {
-		if (curAnim != null && curAnim.delay > 0 && (curAnim.looped || !finished)) {
-			
-			int lastFrame = curFrame;
-			
-			frameTimer += Game.elapsed;
-			while (frameTimer > curAnim.delay) {
-				frameTimer -= curAnim.delay;
-				if (curFrame == curAnim.frames.length - 1) {
-					if (curAnim.looped) {
-						curFrame = 0;
-					}
-					finishAnimation();
-					
-				} else {
-					curFrame++;
-				}
-			}
-			
-			if (curFrame != lastFrame) {
-				frame( curAnim.frames[curFrame] );
-			}
-			
-		}
-	}
+    public boolean paused = false;
 
-	private void finishAnimation() {
-		finished = true;
-		if (listener != null) {
-            listener.onComplete( curAnim );
+    public Listener listener;
+
+    public MovieClip() {
+        super();
+    }
+
+    public MovieClip(Object tx) {
+        super(tx);
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (!paused) {
+            updateAnimation();
         }
-	}
+    }
 
-	public void play(Animation anim ) {
-		play( anim, false );
-	}
+    private void updateAnimation() {
+        if (curAnim != null && curAnim.delay > 0 && (curAnim.looped || !finished)) {
 
-	private void play( Animation anim, boolean force ) {
-		
-		if (!force && (curAnim != null) && (curAnim == anim) && (curAnim.looped || !finished)) {
-			return;
-		}
+            int lastFrame = curFrame;
 
-		curAnim = anim;
-		curFrame = 0;
-		finished = false;
-		
-		frameTimer = 0;
+            frameTimer += Game.elapsed;
+            while (frameTimer > curAnim.delay) {
+                frameTimer -= curAnim.delay;
+                if (curFrame == curAnim.frames.length - 1) {
+                    if (curAnim.looped) {
+                        curFrame = 0;
+                    }
+                    finishAnimation();
+
+                } else {
+                    curFrame++;
+                }
+            }
+
+            if (curFrame != lastFrame) {
+                frame(curAnim.frames[curFrame]);
+            }
+
+        }
+    }
+
+    private void finishAnimation() {
+        finished = true;
+        if (listener != null) {
+            listener.onComplete(curAnim);
+        }
+    }
+
+    public void play(Animation anim) {
+        play(anim, false);
+    }
+
+    protected void play(final Animation anim, final boolean force) {
+        if (!force
+                && (curAnim != null)
+                && (curAnim == anim)
+                && (curAnim.looped || !finished)) {
+            return;
+        }
+
+        curAnim = anim;
+        curFrame = 0;
+        finished = false;
+
+        frameTimer = 0;
 
 
-		if(!getVisible()) {
-			finishAnimation();
-		}
+        if (!getVisible()) {
+            finishAnimation();
+        }
 
-		if (anim != null) {
-			frame( anim.frames[curFrame] );
-		}
-	}
+        if (anim != null) {
+            frame(anim.frames[curFrame]);
+        }
+    }
 
-	public interface Listener {
-		void onComplete( Animation anim );
-	}
+
+    public interface Listener {
+        void onComplete(Animation anim);
+    }
 }

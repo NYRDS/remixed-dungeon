@@ -60,6 +60,7 @@ public class Pickaxe extends Weapon {
 		STR = 14;
 		MIN = 3;
 		MAX = 12;
+		animation_class = HEAVY_ATTACK;
 	}
 	
 	public boolean bloodStained = false;

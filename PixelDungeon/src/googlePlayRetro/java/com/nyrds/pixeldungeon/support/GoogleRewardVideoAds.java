@@ -23,18 +23,17 @@ public class GoogleRewardVideoAds {
 
 
 	public static void initCinemaRewardVideo() {
-		if (AdMob.googleAdsUsable())
-			Game.instance().runOnUiThread(new Runnable() {
-				@Override
-				public void run() {
+		Game.instance().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
 
-					mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
-					mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
+				mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
+				mCinemaRewardAd.setRewardedVideoAdListener(rewardVideoAdListener);
 
-					EventCollector.startTiming("google reward video");
-					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
-				}
-			});
+				EventCollector.startTiming("google reward video");
+				mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
+			}
+		});
 	}
 
 	public static boolean isReady() {
@@ -58,10 +57,13 @@ public class GoogleRewardVideoAds {
 
 	private static class RewardVideoAdListener implements RewardedVideoAdListener {
 
+		private boolean videoCompleted = false;
+
 		@Override
 		public void onRewardedVideoAdLoaded() {
 			EventCollector.stopTiming("google reward video","google reward video","ok","");
 			loaded = true;
+			videoCompleted = false;
 		}
 
 		@Override
@@ -79,11 +81,13 @@ public class GoogleRewardVideoAds {
 					mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
 				}
 			});
+			returnTo.returnToWork(videoCompleted);
 		}
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
-			returnTo.returnToWork(true);
+			videoCompleted = true;
+
 		}
 
 		@Override

@@ -87,34 +87,45 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 			@Override
 			public void run() {
 				Game.softPaused = false;
-				Hero.doOnNextAction = new Runnable() {
-					@Override
-					public void run() {
-						GameScene.show(new WndMessage(Game.getVar(R.string.WndMovieTheatre_Thank_You) ) {
-							@Override
-							public void hide() {
-								super.hide();
-								if(result) {
-									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
-									ServiceManNPC.reward();
-								} else {
-									serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
-								}
-
-								if (PixelDungeon.donated() == 0) {
-									if (PixelDungeon.getDifficulty() == 0) {
-										Ads.displayEasyModeBanner();
-									}
-								}
-							}
-						});
-					}
-				};
+				Hero.doOnNextAction = new RewardTask(result);
 
 				PixelDungeon.landscape(PixelDungeon.storedLandscape());
 				PixelDungeon.setNeedSceneRestart(true);
 			}
 		});
 
+	}
+
+	private class RewardTask implements Runnable {
+		private boolean needReward;
+
+		public RewardTask(boolean result) {
+			needReward = result;
+		}
+
+		@Override
+		public void run() {
+			GameScene.show(new WndMessage(Game.getVar(R.string.WndMovieTheatre_Thank_You) ) {
+
+				@Override
+				public void destroy() {
+					super.destroy();
+					if(needReward) {
+						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
+						ServiceManNPC.reward();
+						needReward = false;
+					} else {
+						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
+					}
+
+					if (PixelDungeon.donated() == 0) {
+						if (PixelDungeon.getDifficulty() == 0) {
+							Ads.displayEasyModeBanner();
+						}
+					}
+
+				}
+			});
+		}
 	}
 }

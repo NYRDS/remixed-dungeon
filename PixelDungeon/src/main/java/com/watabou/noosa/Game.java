@@ -31,9 +31,6 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.PermissionChecker;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -41,25 +38,32 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
+import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.nyrds.pixeldungeon.support.Iap;
-import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.SystemTime;
+
+import org.luaj.vm2.LuaError;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -69,6 +73,11 @@ import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.PermissionChecker;
+import io.fabric.sdk.android.Fabric;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -107,7 +116,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static volatile boolean softPaused = false;
 
-    protected static int difficulty;
+    protected static int difficulty = Integer.MAX_VALUE;
 
     // Accumulated touch events
     private final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
@@ -214,7 +223,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Fabric.with(this, new Crashlytics());
         EventCollector.init();
+
+        iap = new Iap(this);
 
         if (!BuildConfig.DEBUG) {
             String signature = Util.getSignature(this);
@@ -245,6 +257,25 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         getLayout().addView(view);
 
         setContentView(getLayout());
+    }
+
+    public static void syncAdsState() {
+
+        //GLog.w("diff %d", getDifficulty());
+
+        if(PixelDungeon.donated() > 0) {
+            AdsUtils.removeTopBanner();
+            return;
+        }
+
+        if (getDifficulty() == 0) {
+            Ads.displayEasyModeBanner();
+        }
+
+        if (getDifficulty() >= 2) {
+            AdsUtils.removeTopBanner();
+        }
+
     }
 
     @Override
@@ -352,7 +383,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (!softPaused) {
-            step();
+            try {
+                step();
+            } catch (LuaError e) {
+                throw ModdingMode.modException(e);
+            }
         }
 
         NoosaScript.get().resetCamera();
@@ -447,6 +482,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         Game.elapsed = 0f;
         Game.timeScale = 1f;
+
+        syncAdsState();
     }
 
     private void update() {
@@ -503,13 +540,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     private static void height(int height) {
         Game.height = height;
-    }
-
-    public static synchronized void executeInGlThread(Runnable task) {
-        instance().view.queueEvent(task);
-    }
-
-    public void initEventCollector() {
     }
 
     private InterstitialPoint permissionsPoint;

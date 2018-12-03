@@ -1,9 +1,6 @@
 package com.nyrds.android.util;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,6 +13,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import androidx.annotation.NonNull;
 
 public class JsonHelper {
 
@@ -32,7 +31,7 @@ public class JsonHelper {
 		try {
 			return readJsonFromStream(ModdingMode.getInputStream(fileName));
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException(e);
 		}
 	}
 
@@ -69,7 +68,6 @@ public class JsonHelper {
 				return new JSONObject();
 			}
 		} catch (IOException e) {
-			Game.toast(e.getLocalizedMessage());
 			throw new TrackedRuntimeException(e);
 		}
 	}

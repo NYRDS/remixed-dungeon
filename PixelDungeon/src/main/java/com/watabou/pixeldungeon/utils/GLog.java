@@ -33,7 +33,7 @@ import java.util.Date;
 
 public class GLog {
 
-	private static final String RE_PD_LOG_FILE_LOG = "RePdLogFile.log";
+	public static final String RE_PD_LOG_FILE_LOG = "RePdLogFile.log";
 
 	private static final String TAG = "GAME";
 	

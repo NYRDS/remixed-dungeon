@@ -1,5 +1,7 @@
 package com.watabou.noosa;
 
+import android.graphics.RectF;
+
 import com.watabou.glwrap.Texture;
 
 import java.util.ArrayList;
@@ -13,7 +15,6 @@ public class CompositeMovieClip extends MovieClip {
 
 	private class LayerDesc {
 		String id;
-		boolean enabled = true;
 		Texture texture;
 
 		LayerDesc(String _id, Texture _tex) {
@@ -43,35 +44,18 @@ public class CompositeMovieClip extends MovieClip {
 		mLayers.add(layerDesc);
 	}
 
-	public void setLayerTexture(String id, Texture img) {
-		if (mLayers != null) {
-			for (LayerDesc layer : mLayers) {
-				if (layer.id.equals(id)) {
-					layer.texture = img;
-				}
-			}
-		}
-	}
 
-	protected Texture getLayerTexture(String id) {
-		if(mLayers!=null) {
-			for (LayerDesc layer : mLayers) {
-				if (layer.id.equals(id)) {
-					return layer.texture;
-				}
-			}
-		}
-		return null;
-	}
+	public Image snapshot(RectF frame) {
+		CompositeTextureImage img = new CompositeTextureImage(texture);
+		img.clearLayers();
 
-	public void setLayerState(String id, boolean state) {
-		if (mLayers != null) {
-			for (LayerDesc layer : mLayers) {
-				if (layer.id.equals(id)) {
-					layer.enabled = state;
-				}
-			}
+		for (LayerDesc layer : mLayers) {
+			img.addLayer(layer.texture);
 		}
+
+		img.frame(frame);
+
+		return img;
 	}
 
 	@Override
@@ -82,10 +66,8 @@ public class CompositeMovieClip extends MovieClip {
 			NoosaScript script = NoosaScript.get();
 
 			for (LayerDesc layer : mLayers) {
-				if (layer.enabled) {
 					layer.texture.bind();
 					script.drawQuad(verticesBuffer);
-				}
 			}
 		}
 	}

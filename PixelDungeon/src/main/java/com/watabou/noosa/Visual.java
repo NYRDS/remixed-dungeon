@@ -259,4 +259,20 @@ public class Visual extends Gizmo implements IPlaceable{
 	public float bottom() {
 		return y + height();
 	}
+
+    public float visualWidth() {
+		return width;
+    }
+
+	public float visualHeight() {
+		return height;
+	}
+
+	public float visualOffsetX() {
+		return 0;
+	}
+
+	public float visualOffsetY() {
+		return 0;
+	}
 }

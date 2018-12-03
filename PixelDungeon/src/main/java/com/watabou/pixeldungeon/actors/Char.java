@@ -17,8 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import android.support.annotation.NonNull;
-
+import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
@@ -75,9 +74,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import androidx.annotation.NonNull;
+
 public abstract class Char extends Actor implements Presser{
 
+	@Packable
     private int      pos      = 0;
+
 	public  Fraction fraction = Fraction.DUNGEON;
 
 	protected CharSprite sprite;
@@ -122,7 +125,6 @@ public abstract class Char extends Actor implements Presser{
 		return false;
 	}
 
-	private static final String POS    = "pos";
 	private static final String TAG_HP = "HP";
 	private static final String TAG_HT = "HT";
 	private static final String BUFFS  = "buffs";
@@ -132,7 +134,6 @@ public abstract class Char extends Actor implements Presser{
 
 		super.storeInBundle(bundle);
 
-		bundle.put(POS, getPos());
 		bundle.put(TAG_HP, hp());
 		bundle.put(TAG_HT, ht());
 		bundle.put(BUFFS, buffs);
@@ -143,7 +144,6 @@ public abstract class Char extends Actor implements Presser{
 
 		super.restoreFromBundle(bundle);
 
-		setPos(bundle.getInt(POS));
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
 
@@ -644,7 +644,11 @@ public abstract class Char extends Actor implements Presser{
 	}
 
 	private void updateSprite(CharSprite sprite){
-		sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+		if(Dungeon.level.cellValid(getPos())) {
+			sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+		} else {
+			EventCollector.logException(new Exception("invalid pos for:"+toString()),getClass().getCanonicalName());
+		}
 		GameScene.addMobSpriteDirect(sprite);
 		sprite.link(this);
 	}
@@ -669,7 +673,7 @@ public abstract class Char extends Actor implements Presser{
 		return sprite;
 	}
 
-	protected abstract CharSprite sprite();
+	public abstract CharSprite sprite();
 
 	public int ht() {
 		return Scrambler.descramble(HT);

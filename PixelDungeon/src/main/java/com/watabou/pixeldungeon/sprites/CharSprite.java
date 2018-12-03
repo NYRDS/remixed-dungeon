@@ -23,6 +23,7 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
 import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
@@ -49,17 +50,19 @@ import com.watabou.utils.Random;
 
 import java.util.Locale;
 
+import androidx.annotation.Nullable;
+
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 
     // Color constants for floating text
-    public static final int DEFAULT  = 0xFFFFFF;
+    public static final int DEFAULT = 0xFFFFFF;
     public static final int POSITIVE = 0x00FF00;
     public static final int NEGATIVE = 0xFF0000;
-    public static final int WARNING  = 0xFF8800;
-    public static final int NEUTRAL  = 0xFFFF00;
-    public static final int BLUE     = 0x0000FF;
+    public static final int WARNING = 0xFF8800;
+    public static final int NEUTRAL = 0xFFFF00;
+    public static final int BLUE = 0x0000FF;
 
-    private static final float MOVE_INTERVAL  = 0.1f;
+    private static final float MOVE_INTERVAL = 0.1f;
     private static final float FLASH_INTERVAL = 0.05f;
 
     public enum State {
@@ -80,17 +83,18 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Emitter burning;
     protected Emitter levitation;
 
-    private IceBlock  iceBlock;
+    private IceBlock iceBlock;
     private TorchHalo halo;
 
     private EmoIcon emo;
 
     private float flashTime = 0;
 
-    boolean sleeping   = false;
+    boolean sleeping = false;
     boolean controlled = false;
 
     // Char owner
+    @Nullable
     public Char ch;
 
     // The sprite is currently in motion
@@ -112,22 +116,22 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         isMoving = false;
     }
 
-    public PointF worldToCamera(int cell) {
-
-        final int csize = DungeonTilemap.SIZE;
-
-        return new PointF(
-                (Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
-                (Dungeon.level.cellY(cell) + 1.0f) * csize - height
-        );
-    }
 
     public PointF worldCoords() {
         final int csize = DungeonTilemap.SIZE;
         PointF point = point();
         point.x = (point.x + width * 0.5f) / csize - 0.5f;
-        point.y = (point.y + height) / csize - 1.0f;
+        point.y = (point.y + height - visualOffsetY()) / csize - 1.0f;
         return point;
+    }
+
+    public PointF worldToCamera(int cell) {
+        final int csize = DungeonTilemap.SIZE;
+
+        return new PointF(
+                (Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+                (Dungeon.level.cellY(cell) + 1.0f) * csize - height + visualOffsetY()
+        );
     }
 
     public void place(int cell) {
@@ -137,17 +141,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void showStatus(int color, String text) {
         if (getVisible()) {
 
-            if (ModdingMode.getClassicTextRenderingMode()) {
-                if (ch != null) {
+            if (ch != null) {
+                if (ModdingMode.getClassicTextRenderingMode()) {
                     FloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
                 } else {
-                    FloatingText.show(x + width * 0.5f, y, text, color);
-                }
-            } else {
-                if (ch != null) {
                     SystemFloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
-                } else {
-                    SystemFloatingText.show(x + width * 0.5f, y, text, color);
                 }
             }
         }
@@ -481,7 +479,13 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 return;
             }
         }
-        if(curAnim == die) {
+
+        if (ch != null && !Dungeon.visible[ch.getPos()]) {
+            onComplete(anim);
+            return;
+        }
+
+        if (curAnim == die) {
             return;
         }
         super.play(anim);
@@ -490,7 +494,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void selectKind(int i) {
     }
 
-    public CompositeTextureImage avatar() {
+    public Image avatar() {
         CompositeTextureImage avatar = new CompositeTextureImage(texture);
         avatar.frame(idle.frames[0]);
         avatar.addLayer(texture);

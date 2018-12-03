@@ -1,8 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
@@ -41,6 +40,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+
+import androidx.annotation.NonNull;
 
 public class DungeonGenerator {
 	private static final String DEAD_END_LEVEL = "DeadEndLevel";
@@ -84,7 +85,7 @@ public class DungeonGenerator {
 			mLevels = mDungeonMap.getJSONObject("Levels");
 			mGraph = mDungeonMap.getJSONObject("Graph");
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 
 		mLevelKindList = new HashMap<>();
@@ -123,7 +124,7 @@ public class DungeonGenerator {
 		try {
 			return mDungeonMap.getString("Entrance");
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 	}
 
@@ -131,7 +132,7 @@ public class DungeonGenerator {
 		try {
 			return mGraph.getJSONArray(levelId).getJSONArray(0).length();
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 	}
 
@@ -185,7 +186,7 @@ public class DungeonGenerator {
 
 			return next;
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 	}
 
@@ -195,7 +196,7 @@ public class DungeonGenerator {
 			return levelDesc.optString(property,defaultValue);
 
 		} catch (JSONException e) {
-			//EventCollector.logException(e);
+			//default value is ok
 		}
 		return defaultValue;
 	}
@@ -206,7 +207,7 @@ public class DungeonGenerator {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return (float) levelDesc.optDouble(property, defaultValue);
 		} catch (JSONException e) {
-			//EventCollector.logException(e);
+			//default value is ok
 		}
 		return defaultValue;
 	}
@@ -217,7 +218,7 @@ public class DungeonGenerator {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return levelDesc.optBoolean(property, defaultValue);
 		} catch (JSONException e) {
-			//EventCollector.logException(e);
+			//default value is ok
 		}
 		return defaultValue;
 	}
@@ -228,7 +229,7 @@ public class DungeonGenerator {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return levelDesc.optInt(property, defaultValue);
 		} catch (JSONException e) {
-			//EventCollector.logException(e);
+			//default value is ok
 		}
 		return defaultValue;
 	}
@@ -284,8 +285,13 @@ public class DungeonGenerator {
 			ret.create(xs, ys);
 
 			return ret;
-		} catch (InstantiationException | IllegalAccessException | JSONException e) {
+		} catch (InstantiationException e) {
 			throw new TrackedRuntimeException(e);
+		} catch (IllegalAccessException e) {
+			throw new TrackedRuntimeException(e);
+		} catch (JSONException e) {
+			throw ModdingMode.modException(e);
+
 		}
 	}
 
@@ -323,7 +329,7 @@ public class DungeonGenerator {
 				}
 			}
 		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
+			throw ModdingMode.modException(e);
 		}
 		return "1";
 	}

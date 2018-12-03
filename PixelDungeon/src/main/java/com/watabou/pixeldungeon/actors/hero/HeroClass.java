@@ -18,9 +18,8 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
@@ -55,6 +54,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+
+import androidx.annotation.NonNull;
 
 public enum HeroClass {
 
@@ -172,7 +173,7 @@ public enum HeroClass {
                 hero.setSoulPoints(classDesc.optInt("startingSp", 0));
 
             } catch (JSONException e) {
-                throw new TrackedRuntimeException(e);
+                throw ModdingMode.modException("bad InitHero.json",e);
             }
         }
     }

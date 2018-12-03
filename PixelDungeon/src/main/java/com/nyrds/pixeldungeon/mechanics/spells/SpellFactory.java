@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.utils.Random;
@@ -12,6 +10,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
+
 public class SpellFactory {
 
 	static private Map<String, Class<? extends Spell>> mSpellsList = new HashMap<>();
@@ -19,8 +19,10 @@ public class SpellFactory {
 	static private LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
 
 	static private Map<String,ArrayList<String>> mSpellsByAffinity = new HashMap<>();
+
 	static {
 		initSpellsMap();
+		script.run("loadSpells",null);
 	}
 
 	private static void registerSpellClass(Class<? extends Spell> spellClass) {
@@ -98,9 +100,4 @@ public class SpellFactory {
 
 		return spellList;
 	}
-
-	static public void touch() {
-		script.run("loadSpells",null);
-	}
-
 }

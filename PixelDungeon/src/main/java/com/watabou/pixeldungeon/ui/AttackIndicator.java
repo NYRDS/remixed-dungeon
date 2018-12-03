@@ -111,7 +111,6 @@ public class AttackIndicator extends Tag {
 		
 		if (sprite != null) {
 			sprite.killAndErase();
-			sprite = null;
 		}
 
 		sprite = lastTarget.sprite();

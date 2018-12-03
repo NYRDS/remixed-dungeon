@@ -10,26 +10,28 @@
         "level":10
       },
       {
-        "kind": "ManaPotion",
+        "kind": "Sword"
+      },
+      {
+        "kind": "SacrificialSword"
+      },
+      {
+        "kind": "ChaosSword"
+      },
+      {
+        "kind": "ScrollOfMagicMapping",
         "quantity": 100
       },
       {
-        "kind": "TomeOfMastery"
+        "kind": "PotionOfLevitation"
       },
       {
-        "kind": "PotionOfParalyticGas",
-        "quantity": 100
-      },
-      {
-        "kind": "PotionOfLiquidFlame"
-      },
-      {
-        "kind": "TomeOfKnowledge",
+        "kind": "ScrollOfDomination",
         "quantity": 100
       }
     ],
-    "str": 15,
-    "hp": 20,
+    "str": 1500,
+    "hp": 20000,
     "magicAffinity": "Common"
   },
   "non_expert": {

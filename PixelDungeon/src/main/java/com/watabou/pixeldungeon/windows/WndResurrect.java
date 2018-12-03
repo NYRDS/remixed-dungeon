@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -35,7 +36,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndResurrect extends Window {
 
-	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
 	public static WndResurrect instance;
@@ -43,7 +43,9 @@ public class WndResurrect extends Window {
 
 	public WndResurrect( final Ankh ankh, Object causeOfDeath ) {
 		super();
-		
+
+		width = WndHelper.getFullscreenWidth();
+
 		instance = this;
 		WndResurrect.causeOfDeath = causeOfDeath;
 		
@@ -56,11 +58,11 @@ public class WndResurrect extends Window {
 			titlebar.label( Utils.capitalize( Game.getVar(R.string.Necromancy_Title) ) );
 		}
 
-		titlebar.setRect( 0, 0, WIDTH, 0 );
+		titlebar.setRect( 0, 0, width, 0 );
 		add( titlebar );
 		
 		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndResurrect_Message), GuiProperties.regularFontSize() );
-		message.maxWidth(WIDTH);
+		message.maxWidth(width);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
 		
@@ -74,7 +76,7 @@ public class WndResurrect extends Window {
 				InterlevelScene.Do(InterlevelScene.Mode.RESURRECT);
 			}
 		};
-		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
+		btnYes.setRect( 0, message.y + message.height() + GAP, width, BTN_HEIGHT );
 		add( btnYes );
 		
 		RedButton btnNo = new RedButton( Game.getVar(R.string.WndResurrect_No) ) {
@@ -85,10 +87,10 @@ public class WndResurrect extends Window {
 				Hero.reallyDie( WndResurrect.causeOfDeath );
 			}
 		};
-		btnNo.setRect( 0, btnYes.bottom() + GAP, WIDTH, BTN_HEIGHT );
+		btnNo.setRect( 0, btnYes.bottom() + GAP, width, BTN_HEIGHT );
 		add( btnNo );
 		
-		resize( WIDTH, (int)btnNo.bottom() );
+		resize( width, (int)btnNo.bottom() );
 	}
 	
 	@Override

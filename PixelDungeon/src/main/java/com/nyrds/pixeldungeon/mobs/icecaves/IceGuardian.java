@@ -61,8 +61,8 @@ public class IceGuardian extends MultiKindMob {
 			if (mob instanceof IceGuardianCore) {
 				mob.damage(150,cause);
 				if (mob.isAlive()){
-					ressurrect();
-					ressurrect();
+					resurrect();
+					resurrect();
 				}
 			}
 		}

@@ -1,11 +1,8 @@
 package com.nyrds.pixeldungeon.levels;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.utils.Bundle;
 
@@ -13,6 +10,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
+
+import androidx.annotation.Nullable;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 13.11.2016.
@@ -40,7 +41,7 @@ public abstract class CustomLevel extends CommonLevel {
 			try {
 				mLevelDesc = JsonHelper.readJsonFromStream(new ByteArrayInputStream(desc.getBytes()));
 			} catch (JSONException e) {
-				throw new TrackedRuntimeException(e);
+				throw ModdingMode.modException(e);
 			}
 		}
 	}

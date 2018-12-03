@@ -2,15 +2,6 @@
 <resources>
   <string name="Welcome_Ok">알겠습니다!</string>
   <string name="Welcome_Title">환영합니다!</string>
-  <string name="Welcome_Text_27_4">
- remix.27.4\n
- - 리믹스드 던전 리브랜딩 \n
- - 네크로티즘 - 강령술사의 새 클래스 갑옷 능력 \n
- - 찾아볼 새 뱃지New Badge to discover\n
- - 클래스 아머의 능력은 체력 대신 마나를 소모함 \n
- - 혼돈 아이템들이 등급에 따른 인챈트를 잃어버림  \n
- -정신 거미들이 이제 실명, 감속, 약화만을 걸게 됨 \n
- </string>
   <string name="Welcome_Text_28">
  remix.28\n
  - 새 영웅 - 놀 \n
@@ -50,4 +41,9 @@
  -- 모드가 가능한 마법 \n
  -- 모드가 가능한 아이템 \n
  </string>
+  <string name="Welcome_Text_28_4">
+   remix.28.4\n
+   -그래픽 향상:\n
+   --이제 게임 안에서 표시되는 영웅 무기\n
+</string>
 </resources>

@@ -21,7 +21,6 @@ import com.nyrds.android.util.Flavours;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
@@ -45,8 +44,8 @@ import com.watabou.pixeldungeon.windows.WndHero;
 public class StatusPane extends Component {
 
     private NinePatch shield;
-    private CompositeTextureImage avatar;
-    private Emitter               blood;
+    private Image     avatar;
+    private Emitter   blood;
 
     private Image hp;
     private Image sp;
@@ -207,6 +206,12 @@ public class StatusPane extends Component {
 
         float health = (float) hero.hp() / hero.ht();
         float sPoints = (float) hero.getSoulPoints() / hero.getSoulPointsMax();
+
+        if(avatar!=hero.getHeroSprite().avatar()) {
+            remove(avatar);
+            avatar = hero.getHeroSprite().avatar();
+            add(avatar);
+        }
 
         if (health == 0) {
             avatar.tint(0x000000, 0.6f);

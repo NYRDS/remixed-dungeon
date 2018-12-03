@@ -38,15 +38,21 @@ local Blobs = {
     Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
 }
 
+local PseudoBlobs = {
+    Freezing = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Freezing")
+}
+
 local actions = {
     eat = "Food_ACEat"
 }
 
 local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
+local Dungeon   = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
 
 local RPD = {
     GameScene = GameScene,
-    Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon"),
+    Dungeon = Dungeon,
+    SystemTime = luajava.bindClass("com.watabou.utils.SystemTime"),
     Terrain = luajava.bindClass("com.watabou.pixeldungeon.levels.Terrain"),
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
     MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
@@ -61,6 +67,7 @@ local RPD = {
     Actions = actions,
 
     Blobs = Blobs,
+    PseudoBlobs = PseudoBlobs,
 
     Sfx = {
         CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
@@ -74,7 +81,8 @@ local RPD = {
     Objects = {
         Ui = {
             WndMessage = "com.watabou.pixeldungeon.windows.WndMessage",
-            WndStory = "com.watabou.pixeldungeon.windows.WndStory"
+            WndStory   = "com.watabou.pixeldungeon.windows.WndStory",
+            WndQuest   = "com.watabou.pixeldungeon.windows.WndQuest"
         },
         Actors = {
             ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
@@ -97,6 +105,10 @@ local RPD = {
         Buffs.Buff:detach(chr, buffClass)
     end,
 
+    placePseudoBlob = function (blobClass, cell)
+        blobClass:affect(cell)
+    end,
+
     placeBlob = function (blobClass, cell, amount)
         GameScene:add( Blobs.Blob:seed(cell, amount, blobClass ) )
     end,
@@ -111,10 +123,13 @@ local RPD = {
 
     glog = function (text,...)
         GLog:i(text,{...})
+    end,
+
+    getXy = function (chr)
+        local pos = chr:getPos()
+        return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}
     end
 }
-
-
 
 return RPD
 

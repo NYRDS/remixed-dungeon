@@ -19,9 +19,10 @@ package com.watabou.gltextures;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;
-import android.support.annotation.NonNull;
 
 import com.watabou.glwrap.Texture;
+
+import androidx.annotation.NonNull;
 
 public class SmartTexture extends Texture {
 
