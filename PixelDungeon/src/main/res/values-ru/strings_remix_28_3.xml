@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="DarkSacrifice_Name">Темная Жертва</string>
-    <string name="DarkSacrifice_Info">Пожертвуй своим верным прислужником чтобы устроить взрыв. Сила взрыва зависит от оставшейся жизненной силы слуги и твоего мастерства.</string>
+    <string name="DarkSacrifice_Info">Пожертвуй своим верным прислужником, чтобы устроить взрыв. Сила взрыва зависит от оставшейся жизненной силы слуги и твоего мастерства.</string>
     <string name="DarkSacrifice_Ok">Жизнь за тебя!</string>
     <string name="DarkSacrifice_Self">За Плеть!</string>
     <string name="DarkSacrifice_Resist">У тебя нет власти надо мной!</string>

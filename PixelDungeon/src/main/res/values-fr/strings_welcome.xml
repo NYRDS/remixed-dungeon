@@ -36,4 +36,8 @@ remix.28.3\n
 - Modding:\n
 * Sorts peuvent être modifiés\n
 * Objets peuvent être modifiés</string>
+  <string name="Welcome_Text_28_4">
+remix.28.4\n
+- Améliorations graphiques:\n
+-- Armes de Héros maintenant visibles en jeu\n</string>
 </resources>

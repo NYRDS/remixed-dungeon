@@ -26,7 +26,7 @@
     <string name="HealerNPC_Name_Objective">священика</string>
     <string name="HealerNPC_Desc">Этот старик весьма походит на того, кто мог бы заниматься производством волшебных палочек.</string>
     <string name="HealerNPC_Message1">Бесплатное лечение для каждого путешественника!</string>
-    <string name="HealerNPC_Message2">Если проголодаетесь или вас, не дай бог, ранят непременно возвращайтесь!</string>
+    <string name="HealerNPC_Message2">Если проголодаетесь или вас, не дай бог, ранят - непременно возвращайтесь!</string>
     <string name="HealerNPC_Message3">Ох, почему же церковь не позволяет носить шапки... здесь так холодно.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->

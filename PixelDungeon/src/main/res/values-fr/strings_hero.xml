@@ -39,6 +39,14 @@
     <item>Chaque ration redonne un peu de santé lors de sa consommation.</item>
     <item>Les potions de force sont identifiées dès le début.</item>
   </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Les Mages commencent avec une baguette de projectile magique unique. Cette baguette peut ensuite être \"désenchantée\" pour améliorer une autre baguette.</item>
+    <item>Les Mages rechargent leurs baguettes plus vite</item>
+    <item>Lorsque consommés, les aliments restaurent 1 charge de chaque baguette dans l\'inventaire.</item>
+    <item>Les Mages peuvent utiliser les baguettes comme arme de corps-à-corps.</item>
+    <item>Les Mages utilisent le mana pour lancer des sorts élémentaires.</item>
+    <item>Les Parchemins d\'Identification sont identifiés dès le début.</item>
+  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Les voleurs commencent avec un anneau des ténèbres +1.</item>
     <item>Les voleurs identifient le type d\'un anneau en l\'équipant.</item>
@@ -53,6 +61,14 @@
     <item>Les chasseresses sont douées lors de l\'utilisation des armes à distance et font des dommages supplémentaires en fonction de leur force quand elles les utilisent.</item>
     <item>Les chasseresses gagnent plus de points de vie en buvant la rosée.</item>
     <item>Les chasseresses détectent les monstres à proximité même s\'ils sont cachés par des obstacles.</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>Les Elfes commencent avec 15 PV et 9 Force</item>
+    <item>Les Elfes ne peuvent pas être immobilisés.</item>
+    <item>Les Elfes commencent avec un arc à flèches en bois amélioré et des flèches</item>
+    <item>Les Elfes sont extrêmement efficaces avec les arcs et sont agiles</item>
+    <item>Les Elfes se soignent beaucoup plus avec les gouttes de rosée.</item>
+    <item>Les Elfes sont moins efficaces avec des armes de mêlée.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiateur</string>

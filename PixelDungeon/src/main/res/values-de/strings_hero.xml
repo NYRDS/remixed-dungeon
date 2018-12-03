@@ -39,6 +39,9 @@
     <item>Jede Form von Nahrung gibt beim Verzehr etwas Gesundheit zurück.</item>
     <item>Stärketränke sind von Beginn an bekannt.</item>
   </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>Magier beginnen mit einem einzigartigen Wand of Magic Missile. Dieser Stab kann später \"entzaubert\" werden, um einen andereb Stab zu verbessern.</item>
+  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>Schurken beginnen mit einem Schattenring+1.</item>
     <item>Schurken identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </item>

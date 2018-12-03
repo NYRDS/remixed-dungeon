@@ -36,6 +36,8 @@
 
     <string-array name="HeroClass_NecromancerPerks">
         <item>Les Nécromanciens commencent avec 15 points de vie.</item>
+        <item>Les Nécromanciens utilisent le mana pour lancer les sorts de la Mort.</item>
+        <item>Les Nécromanciens commencent avec une robe de Nécromancien unique, qui fournit 1 point de mana pour chaque créature tuée.</item>
         <item>Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7.</item>
         <item>Les Potions de soins sont identifiées dès le début.</item>
     </string-array>
