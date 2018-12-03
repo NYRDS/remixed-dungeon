@@ -20,6 +20,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
+
 /**
  * Created by mike on 16.04.2016.
  */
@@ -234,8 +236,9 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		return on;
 	}
 
+	@NonNull
 	@Override
 	public String getDeathEffect() {
-		return null;
+		return HERO_EMPTY_PNG;
 	}
 }

@@ -26,6 +26,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
+
 /**
  * Created by mike on 16.04.2016.
  */
@@ -405,6 +407,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		killAndErase();
 	}
 
+	@NonNull
 	public String getDeathEffect() {
 		return deathEffectDesc;
 	}

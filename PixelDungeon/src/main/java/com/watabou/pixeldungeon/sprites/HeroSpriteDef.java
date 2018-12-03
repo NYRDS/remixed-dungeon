@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.utils.Callback;
 
+import androidx.annotation.NonNull;
+
 /**
  * Created by mike on 16.04.2016.
  */
@@ -61,6 +63,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 		return avatar;
 	}
 
+	@NonNull
 	public abstract String getDeathEffect();
 
 	public abstract void heroUpdated(Hero hero);
