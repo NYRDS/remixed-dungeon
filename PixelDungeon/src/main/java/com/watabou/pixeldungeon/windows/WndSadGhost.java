@@ -18,10 +18,10 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Item;
@@ -32,6 +32,8 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import androidx.annotation.NonNull;
 
 public class WndSadGhost extends Window {
 	
@@ -59,7 +61,7 @@ public class WndSadGhost extends Window {
 		RedButton btnWeapon = new RedButton( Game.getVar(R.string.WndSadGhost_Wepon) ) {
 			@Override
 			protected void onClick() {
-				selectReward( ghost, item, Ghost.Quest.weapon );
+				selectReward( ghost, item, Ghost.Quest.getWeapon());
 			}
 		};
 		btnWeapon.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
@@ -68,7 +70,7 @@ public class WndSadGhost extends Window {
 		RedButton btnArmor = new RedButton( Game.getVar(R.string.WndSadGhost_Armor) ) {
 			@Override
 			protected void onClick() {
-				selectReward( ghost, item, Ghost.Quest.armor );
+				selectReward( ghost, item, Ghost.Quest.getArmor());
 			}
 		};
 		btnArmor.setRect( 0, btnWeapon.bottom() + GAP, WIDTH, BTN_HEIGHT );
@@ -77,7 +79,7 @@ public class WndSadGhost extends Window {
 		resize( WIDTH, (int)btnArmor.bottom() );
 	}
 
-	private void selectReward( Ghost ghost, Item item, Item reward ) {
+	private void selectReward(Ghost ghost, @NonNull Item item, @NonNull Item reward ) {
 		hide();
 
 		item.removeItemFrom(Dungeon.hero);

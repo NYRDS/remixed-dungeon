@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
 import com.watabou.noosa.Game;
@@ -67,11 +69,10 @@ public class Ghost extends NPC {
 		setState(WANDERING);
 	}
 
-	private static final String INTRODUCED = "introduced";
-	private static final String PERSUADE = "persuade";
-
-
+	@Packable
 	private boolean persuade = false;
+
+	@Packable
 	private boolean introduced = false;
 	private WndSadGhostNecro window;
 
@@ -183,22 +184,8 @@ public class Ghost extends NPC {
 		return IMMUNITIES;
 	}
 
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		bundle.put(INTRODUCED, introduced);
-		bundle.put(PERSUADE, persuade);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		introduced = bundle.optBoolean(INTRODUCED, false);
-		persuade = bundle.optBoolean(PERSUADE, false);
-	}
-
 	public static class Quest {
-		
+
 		private static boolean spawned;
 		private static boolean alternative;
 		private static boolean given;
@@ -207,8 +194,8 @@ public class Ghost extends NPC {
 		private static int depth;
 		private static int left2kill;
 		
-		public static Weapon weapon;
-		public static Armor armor;
+		private static Weapon weapon;
+		private static Armor armor;
 		
 		public static void reset() {
 			spawned = false;
@@ -292,33 +279,37 @@ public class Ghost extends NPC {
 				given = false;
 				processed = false;
 				depth = Dungeon.depth;
-				
-				do {
-					weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
-				} while (weapon instanceof MissileWeapon);
-				
-				if (Dungeon.isChallenged( Challenges.NO_ARMOR )) {
-					armor = (Armor)new ClothArmor().degrade();
-				} else {
-					armor = (Armor)Generator.random( Generator.Category.ARMOR );
-				}
-					
-				for (int i=0; i < 3; i++) {
-					Item another;
-					do {
-						another = Generator.random( Generator.Category.WEAPON );
-					} while (another instanceof MissileWeapon);
-					if (another.level() > weapon.level()) {
-						weapon = (Weapon)another;
-					}
-					another = Generator.random( Generator.Category.ARMOR );
-					if (another.level() > armor.level()) {
-						armor = (Armor)another;
-					}
-				}
-				weapon.identify();
-				armor.identify();
+
+				makeReward();
 			}
+		}
+
+		private static void makeReward() {
+			do {
+				weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
+			} while (weapon instanceof MissileWeapon);
+
+			if (Dungeon.isChallenged( Challenges.NO_ARMOR )) {
+				armor = (Armor)new ClothArmor().degrade();
+			} else {
+				armor = (Armor)Generator.random( Generator.Category.ARMOR );
+			}
+
+			for (int i=0; i < 3; i++) {
+				Item another;
+				do {
+					another = Generator.random( Generator.Category.WEAPON );
+				} while (another instanceof MissileWeapon);
+				if (another.level() > weapon.level()) {
+					weapon = (Weapon)another;
+				}
+				another = Generator.random( Generator.Category.ARMOR );
+				if (another.level() > armor.level()) {
+					armor = (Armor)another;
+				}
+			}
+			weapon.identify();
+			armor.identify();
 		}
 
 		public static void process( int pos ) {
@@ -351,6 +342,24 @@ public class Ghost extends NPC {
 			
 			Journal.remove( Journal.Feature.GHOST.desc() );
 		}
+
+		public static Weapon getWeapon() {
+			if(weapon==null) {
+				EventCollector.logException("null weapon");
+				makeReward();
+			}
+			return weapon;
+		}
+
+
+		public static Armor getArmor() {
+			if(armor==null) {
+				EventCollector.logException("null armor");
+				makeReward();
+			}
+			return armor;
+		}
+
 	}
 	
 	public static class FetidRat extends Mob {
