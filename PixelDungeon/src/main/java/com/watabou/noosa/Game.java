@@ -31,7 +31,6 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -229,8 +228,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         iap = new Iap(this);
 
         if (!BuildConfig.DEBUG) {
-            String signature = Util.getSignature(this);
-            EventCollector.collectSessionData("apk signature", signature);
+            if(!checkOwnSignature()) {
+                String signature = Util.getSignature(this);
+
+                EventCollector.collectSessionData("tampered signature", signature);
+            }
         }
 
         try {
@@ -590,7 +592,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public boolean checkOwnSignature() {
-        Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
+        //Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
         return Util.getSignature(this).equals(getVar(R.string.ownSignature));
     }
 
