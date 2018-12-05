@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -124,12 +125,12 @@ public class ArmoredStatue extends Mob {
 
 	@Override
 	public CharSprite sprite() {
-		if(armor !=null)
+		if(armor == null )
 		{
-			return HeroSpriteDef.createHeroSpriteDef(armor);
+			armor = new ClothArmor();
+			EventCollector.logException("no armor");
 		}
-		else{
-			return HeroSpriteDef.createHeroSpriteDef(new ClothArmor());
-		}
+
+		return HeroSpriteDef.createHeroSpriteDef(armor);
 	}
 }

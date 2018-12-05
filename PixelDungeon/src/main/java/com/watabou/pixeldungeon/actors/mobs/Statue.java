@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -144,11 +145,11 @@ public class Statue extends Mob {
 
 	@Override
 	public CharSprite sprite() {
-		if(weapon!=null) {
-			return HeroSpriteDef.createHeroSpriteDef(weapon);
+		if(weapon==null) {
+			weapon = new Dagger();
+			EventCollector.logException("no weapon");
 		}
-		else{
-			return HeroSpriteDef.createHeroSpriteDef(new Dagger());
-		}
+
+		return HeroSpriteDef.createHeroSpriteDef(new Dagger());
 	}
 }
