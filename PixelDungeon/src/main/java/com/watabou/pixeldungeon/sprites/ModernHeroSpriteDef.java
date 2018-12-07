@@ -175,10 +175,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			weaponAnimationClassRight = hero.belongings.weapon.getAnimationClass();
 		}
 
-		if(accessory==null || !accessory.isCoveringItems()) {
-			layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
-			layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassRight + "_right.png");
-		}
+		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
+		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassRight + "_right.png");
 
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
