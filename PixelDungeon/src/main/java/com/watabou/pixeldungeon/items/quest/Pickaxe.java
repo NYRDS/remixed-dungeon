@@ -55,12 +55,12 @@ public class Pickaxe extends Weapon {
 	{
 		image = ItemSpriteSheet.PICKAXE;
 
-		defaultAction = AC_MINE;
+		setDefaultAction(AC_MINE);
 		
 		STR = 14;
 		MIN = 3;
 		MAX = 12;
-		animation_class = HEAVY_ATTACK;
+		animation_class = SWORD_ATTACK;
 	}
 	
 	public boolean bloodStained = false;

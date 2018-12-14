@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -29,7 +30,6 @@ import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -76,7 +76,7 @@ public class Firebloom extends Plant {
 
 			super.execute(hero, action);
 
-			if (action.equals(Food.AC_EAT)) {
+			if (action.equals(CommonActions.AC_EAT)) {
 				Buff.affect(hero, Burning.class).reignite(hero);
 				Buff.affect(hero, Speed.class, Speed.DURATION);
 			}

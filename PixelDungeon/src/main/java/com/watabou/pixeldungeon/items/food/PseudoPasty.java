@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.items.food;
 
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -49,7 +50,7 @@ public class PseudoPasty extends Food {
 
 	@Override
 	public void execute(Hero hero, String action) {
-		if (action.equals(AC_EAT)) {
+		if (action.equals(CommonActions.AC_EAT)) {
 			pick(hero, Dungeon.level.getEmptyCellNextTo(hero.getPos()));
 			this.removeItemFrom(hero);
 			return;

@@ -109,7 +109,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public Wand() {
-		defaultAction = AC_ZAP;
+		setDefaultAction(AC_ZAP);
 		animation_class = WAND_ATTACK;
 		
 		try {

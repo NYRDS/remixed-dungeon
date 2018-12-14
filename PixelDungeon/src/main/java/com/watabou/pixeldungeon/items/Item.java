@@ -23,6 +23,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -47,7 +48,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Callback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -56,9 +56,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import androidx.annotation.Nullable;
-
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class Item implements Bundlable, Presser {
 
@@ -76,7 +75,7 @@ public class Item implements Bundlable, Presser {
 	protected static final String AC_THROW = "Item_ACThrow";
 
 	@NonNull
-	public String defaultAction = AC_THROW;
+	private String defaultAction = AC_THROW;
 
 	@NonNull
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
@@ -101,15 +100,11 @@ public class Item implements Bundlable, Presser {
 	@Packable(defaultValue = "-1")
 	private int quickSlotIndex = -1;
 
-	private static Comparator<Item> itemComparator = new Comparator<Item>() {
-		@Override
-		public int compare(Item lhs, Item rhs) {
-			return Generator.Category.order(lhs) - Generator.Category.order(rhs);
-		}
-	};
+	private static Comparator<Item> itemComparator = (lhs, rhs) -> Generator.Category.order(lhs) - Generator.Category.order(rhs);
 
 	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = new ArrayList<>();
+		setCurUser(hero);
 		actions.add(AC_DROP);
 		actions.add(AC_THROW);
 		return actions;
@@ -149,12 +144,12 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void execute(Hero hero) {
-		if(hero.heroClass.forbidden(defaultAction)){
-			defaultAction = AC_THROW;
+		if(hero.heroClass.forbidden(getDefaultAction())){
+			setDefaultAction(AC_THROW);
 		}
 
-		if(actions(hero).contains(defaultAction)) {
-			execute(hero, defaultAction);
+		if(actions(hero).contains(getDefaultAction())) {
+			execute(hero, getDefaultAction());
 		}
 	}
 
@@ -482,12 +477,9 @@ public class Item implements Bundlable, Presser {
 		final Item item = detach(user.belongings.backpack);
 
 		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
-				reset(user.getPos(), cell, this, new Callback() {
-					@Override
-					public void call() {
-						item.onThrow(cell);
-						user.spendAndNext(finalDelay);
-					}
+				reset(user.getPos(), cell, this, () -> {
+					item.onThrow(cell);
+					user.spendAndNext(finalDelay);
 				});
 	}
 
@@ -650,5 +642,25 @@ public class Item implements Bundlable, Presser {
 
 	public boolean announcePickUp() {
 		return true;
+	}
+
+	@NonNull
+	public String getDefaultAction() {
+		return defaultAction;
+	}
+
+	public void setDefaultAction(@NonNull String newDefaultAction) {
+		Hero hero = getCurUser();
+		if(hero==null) {
+			EventCollector.logException("hero==null");
+			this.defaultAction = newDefaultAction;
+			return;
+		}
+
+		if(hero.heroClass.forbidden(newDefaultAction)) {
+			newDefaultAction = AC_THROW;
+		}
+
+		this.defaultAction = newDefaultAction;
 	}
 }

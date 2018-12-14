@@ -42,9 +42,9 @@ public class SpellBook extends Artifact {
 		ArrayList<String> actions = super.actions( hero );
 		if (isEquipped(hero)){
 			actions.add(CommonActions.AC_READ );
-			defaultAction = CommonActions.AC_READ;
+			setDefaultAction(CommonActions.AC_READ);
 		} else {
-			defaultAction = AC_THROW;
+			setDefaultAction(AC_THROW);
 		}
 		return actions;
 	}

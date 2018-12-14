@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -27,7 +28,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -88,7 +88,7 @@ public class Fadeleaf extends Plant {
 			
 			super.execute( hero, action );
 			
-			if (action.equals( Food.AC_EAT )) {
+			if (action.equals( CommonActions.AC_EAT )) {
 				ScrollOfTeleportation.teleportHero( hero );
 				hero.spendAndNext(1);
 				hero.curAction = null;

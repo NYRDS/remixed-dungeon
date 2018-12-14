@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -34,7 +35,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -324,7 +324,7 @@ public class WandMaker extends NPC {
 				
 				super.execute( hero, action );
 				
-				if (action.equals( Food.AC_EAT )) {
+				if (action.equals( CommonActions.AC_EAT )) {
 					GameScene.add( Blob.seed( hero.getPos(), 100, ToxicGas.class ) );
 					GameScene.add( Blob.seed( hero.getPos(), 100, ParalyticGas.class ) );					
 				}

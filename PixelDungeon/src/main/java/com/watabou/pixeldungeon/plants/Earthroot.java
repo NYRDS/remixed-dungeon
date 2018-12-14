@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.plants;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
@@ -28,7 +29,6 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -79,7 +79,7 @@ public class Earthroot extends Plant {
 			
 			super.execute( hero, action );
 			
-			if (action.equals( Food.AC_EAT )) {
+			if (action.equals( CommonActions.AC_EAT )) {
 				Buff.affect(hero, Roots.class, 25);
 				Buff.affect(hero, Barkskin.class).level(hero.effectiveSTR() / 4);
 			}

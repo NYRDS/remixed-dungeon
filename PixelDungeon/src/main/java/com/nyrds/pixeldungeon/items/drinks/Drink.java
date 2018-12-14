@@ -13,7 +13,7 @@ abstract public class Drink extends Item {
 
 	{
 		stackable = true;
-		defaultAction = AC_DRINK;
+		setDefaultAction(AC_DRINK);
 	}
 	
 	@Override

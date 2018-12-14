@@ -151,7 +151,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		if (charge == 0 || identetifyLevel == 0) {
 			actions.remove(AC_USE);
 		} else {
-			defaultAction = AC_USE;
+			setDefaultAction(AC_USE);
 		}
 
 		if (charge >= 50 && identetifyLevel > 1) {

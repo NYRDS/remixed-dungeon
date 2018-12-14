@@ -262,8 +262,8 @@ public enum HeroClass {
     public void storeInBundle(Bundle bundle) {
         bundle.put(CLASS, toString());
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
-        bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[forbiddenActions.size()]));
-        bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[friendlyMobs.size()]));
+        bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[0]));
+        bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[0]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {

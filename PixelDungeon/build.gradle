@@ -126,8 +126,8 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    googlePlayImplementation 'ru.livli:swsdk-core:0.0.1-alpha14'
-    googlePlayImplementation 'ru.livli:swsdk-apps:0.0.1-alpha14'
+    googlePlayImplementation 'ru.livli:swsdk-core:0.0.1-alpha17'
+    googlePlayImplementation 'ru.livli:swsdk-apps:0.0.1-alpha17'
 
     googlePlayImplementation 'androidx.core:core:1.0.1'
     googlePlayImplementation 'androidx.annotation:annotation:1.0.1'

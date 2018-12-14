@@ -50,7 +50,7 @@ public class DewVial extends Item {
 		imageFile = "items/vials.png";
 		image = 0;
 		
-		defaultAction = AC_DRINK;
+		setDefaultAction(AC_DRINK);
 	}
 	
 	private int volume = 0;

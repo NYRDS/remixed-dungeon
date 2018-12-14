@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.plants;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -28,7 +29,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -78,7 +78,7 @@ public class Sungrass extends Plant {
 
 			super.execute(hero, action);
 
-			if (action.equals(Food.AC_EAT)) {
+			if (action.equals(CommonActions.AC_EAT)) {
 
 				Buff.affect(hero, Charm.class, Charm.durationFactor(hero) * Random.IntRange(10, 15));
 

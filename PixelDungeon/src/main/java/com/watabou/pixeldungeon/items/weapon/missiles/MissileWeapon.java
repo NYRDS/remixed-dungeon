@@ -37,7 +37,7 @@ public class MissileWeapon extends Weapon {
 	{
 		stackable = true;
 		levelKnown = true;
-		defaultAction = AC_THROW;
+		setDefaultAction(AC_THROW);
 	}
 	
 	@Override

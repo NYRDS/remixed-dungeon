@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.food.Food;
@@ -18,7 +19,7 @@ public class Candy extends Food {
 
 	@Override
 	public void execute(Hero hero, String action ) {
-		if (action.equals( AC_EAT )) {
+		if (action.equals( CommonActions.AC_EAT )) {
 
 			detach( hero.belongings.backpack );
 

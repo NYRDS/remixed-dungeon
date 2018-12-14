@@ -87,7 +87,7 @@ public class Potion extends Item implements UnknownItem {
 	
 	{	
 		stackable = true;
-		defaultAction = AC_DRINK;
+		setDefaultAction(AC_DRINK);
 	}
 	
 	

@@ -49,7 +49,7 @@ public class CustomItem extends Item {
         stackable    = desc.rawget("stackable").checkboolean();
         upgradable    = desc.rawget("upgradable").checkboolean();
         identified    = desc.rawget("identified").checkboolean();
-        defaultAction = desc.rawget("defaultAction").checkjstring();
+        setDefaultAction(desc.rawget("defaultAction").checkjstring());
         price         = desc.rawget("price").checkint();
     }
 

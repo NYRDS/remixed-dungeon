@@ -47,7 +47,7 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
             }
         });
 
-        adView.loadUrl("https://acceptable.a-ads.com/995145");
+        adView.loadUrl("https://acceptable.a-ads.com/1077944");
     }
 
     @Override
@@ -96,6 +96,6 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
         });
 
         alert.setView(adView);
-        adView.loadUrl("https://acceptable.a-ads.com/995145");
+        adView.loadUrl("https://acceptable.a-ads.com/1077944");
     }
 }

@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
@@ -26,7 +27,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
@@ -79,7 +79,7 @@ public class Icecap extends Plant {
 			
 			super.execute( hero, action );
 			
-			if (action.equals( Food.AC_EAT )) {
+			if (action.equals( CommonActions.AC_EAT )) {
 				
 				Buff.prolong( hero, Frost.class, Frost.duration( hero ) * 2);
 				

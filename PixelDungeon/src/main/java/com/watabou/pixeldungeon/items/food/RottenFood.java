@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
@@ -57,7 +58,7 @@ abstract public class RottenFood extends Food{
 		
 		super.execute( hero, action );
 		
-		if (action.equals( AC_EAT )) {
+		if (action.equals( CommonActions.AC_EAT )) {
 			GLog.w(message);
 			molder(hero.getPos());
 		}

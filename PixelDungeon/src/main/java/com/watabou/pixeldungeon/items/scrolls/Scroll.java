@@ -113,7 +113,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 	
 	public Scroll() {
 		stackable     = true;
-		defaultAction = CommonActions.AC_READ;
+		setDefaultAction(CommonActions.AC_READ);
 		
 		if (this instanceof BlankScroll){
 			return;

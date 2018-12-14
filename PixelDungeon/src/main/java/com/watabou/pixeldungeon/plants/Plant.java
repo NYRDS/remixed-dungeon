@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
@@ -114,7 +115,7 @@ public class Plant implements Bundlable {
 
 		{
 			stackable = true;
-			defaultAction = AC_THROW;
+			setDefaultAction(AC_THROW);
 		}
 
 		protected Class<? extends Plant> plantClass;
@@ -126,7 +127,7 @@ public class Plant implements Bundlable {
 		public ArrayList<String> actions(Hero hero) {
 			ArrayList<String> actions = super.actions(hero);
 			actions.add(AC_PLANT);
-			actions.add(Food.AC_EAT);
+			actions.add(CommonActions.AC_EAT);
 			return actions;
 		}
 
@@ -149,7 +150,7 @@ public class Plant implements Bundlable {
 
 				hero.getSprite().operate(hero.getPos());
 
-			} else if (action.equals(Food.AC_EAT)) {
+			} else if (action.equals(CommonActions.AC_EAT)) {
 				detach(hero.belongings.backpack);
 
 				hero.getSprite().operate(hero.getPos());

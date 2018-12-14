@@ -17,8 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.food;
 
-import com.watabou.noosa.Game;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -45,7 +46,7 @@ public class MysteryMeat extends Food {
 		
 		super.execute( hero, action );
 		
-		if (action.equals( AC_EAT )) {
+		if (action.equals( CommonActions.AC_EAT )) {
 			
 			switch (Random.Int( 5 )) {
 			case 0:

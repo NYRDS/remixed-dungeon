@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 
@@ -27,28 +28,26 @@ import java.util.ArrayList;
 abstract public class Food extends Item {
 
 	public static final float TIME_TO_EAT	= 3f;
-	
-	public static final String AC_EAT = "Food_ACEat";
-	
+
 	public float energy   = 0;
 	public String message = Game.getVar(R.string.Food_Message);
 	
 	{
 		stackable = true;
-		defaultAction = AC_EAT;
+		setDefaultAction(CommonActions.AC_EAT);
 	}
 	
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_EAT );
+		actions.add( CommonActions.AC_EAT );
 		return actions;
 	}
 
 
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action.equals( AC_EAT )) {
+		if (action.equals( CommonActions.AC_EAT )) {
 			hero.eat(this, energy, message);
 		} else {
 			super.execute( hero, action );

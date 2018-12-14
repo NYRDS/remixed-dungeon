@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -27,7 +28,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -70,7 +70,7 @@ public class Dreamweed extends Plant {
 			
 			super.execute( hero, action );
 			
-			if (action.equals( Food.AC_EAT )) {
+			if (action.equals( CommonActions.AC_EAT )) {
 				Buff.affect(hero, Vertigo.class, Vertigo.DURATION * 2);
 				Buff.affect(hero, MindVision.class, 1);
 			}

@@ -42,7 +42,7 @@ public class Torch extends Item {
 
 		info = Game.getVar(R.string.Torch_Info2);
 
-		defaultAction = AC_LIGHT;
+		setDefaultAction(AC_LIGHT);
 	}
 	
 	@Override
