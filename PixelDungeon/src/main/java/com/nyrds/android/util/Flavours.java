@@ -13,13 +13,11 @@ public class Flavours {
 	private static final String GOOGLE_PLAY_RETRO = "googlePlayRetro";
 
 	public static boolean haveHats() {
-		return ( BuildConfig.FLAVOR.equals(GOOGLE_PLAY) || BuildConfig.FLAVOR.equals(GOOGLE_PLAY_RETRO) )
-				&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
+		return GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
 	}
 
 	public static boolean haveDonations() {
-		return (BuildConfig.FLAVOR.equals(GOOGLE_PLAY) || BuildConfig.FLAVOR.equals(GOOGLE_PLAY_RETRO))
-				&& GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
+		return GooglePlayServices.googlePlayServicesUsable(PixelDungeon.instance());
 
 
 	}
