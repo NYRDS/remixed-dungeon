@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
@@ -132,6 +133,8 @@ import com.watabou.utils.SystemTime;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 import androidx.annotation.NonNull;
@@ -1474,6 +1477,22 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public void die(Object cause) {
+
+		Map<String, String> deathDesc = new HashMap<>();
+
+		deathDesc.put("class", heroClass.name());
+		deathDesc.put("subClass", subClass.name());
+		deathDesc.put("level", Dungeon.level.levelId);
+		deathDesc.put("cause", cause.getClass().getSimpleName());
+		deathDesc.put("surviveFor", Float.toString(Statistics.duration));
+		deathDesc.put("difficulty", Integer.toString(Game.getDifficulty()));
+		deathDesc.put("version", Game.version);
+		deathDesc.put("mod", ModdingMode.activeMod());
+		deathDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
+		deathDesc.put("donation",Integer.toString(PixelDungeon.donated()));
+
+		EventCollector.logEvent("HeroDeath", deathDesc);
+
 		clearActions();
 
 		DewVial.autoDrink(this);
