@@ -117,6 +117,7 @@ dependencies {
     googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-games:16.0.0'
 
+    googlePlayImplementation 'com.pollfish:pollfish:+:googleplayRelease@aar'
 
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
 
@@ -126,8 +127,8 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    googlePlayImplementation 'ru.livli:swsdk-core:0.0.1-alpha17'
-    googlePlayImplementation 'ru.livli:swsdk-apps:0.0.1-alpha17'
+    googlePlayImplementation 'ru.livli:swsdk-core:0.0.1-alpha19'
+    googlePlayImplementation 'ru.livli:swsdk-apps:0.0.1-alpha19'
 
     googlePlayImplementation 'androidx.core:core:1.0.1'
     googlePlayImplementation 'androidx.annotation:annotation:1.0.1'
@@ -136,11 +137,11 @@ dependencies {
     implementation 'com.android.billingclient:billing:1.1'
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
-    googlePlayImplementation 'com.google.firebase:firebase-core:16.0.5'
-    googlePlayImplementation 'com.google.firebase:firebase-perf:16.2.1'
-    googlePlayImplementation 'com.google.firebase:firebase-ads:17.1.1'
+    googlePlayImplementation 'com.google.firebase:firebase-core:16.0.6'
+    googlePlayImplementation 'com.google.firebase:firebase-perf:16.2.2'
+    googlePlayImplementation 'com.google.firebase:firebase-ads:17.1.2'
 
-    googlePlayImplementation 'com.crashlytics.sdk.android:crashlytics:2.9.6'
+    googlePlayImplementation 'com.crashlytics.sdk.android:crashlytics:2.9.7'
 }
 
 apply plugin: 'com.google.gms.google-services'
