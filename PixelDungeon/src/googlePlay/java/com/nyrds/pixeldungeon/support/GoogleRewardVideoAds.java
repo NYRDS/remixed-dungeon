@@ -19,7 +19,6 @@ public class GoogleRewardVideoAds {
 	public static final String GOOGLE_REWARD_VIDEO = "google reward video";
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
-	private static boolean mVideoLoaded;
 
 
 	public static void initCinemaRewardVideo() {
@@ -28,17 +27,11 @@ public class GoogleRewardVideoAds {
 			return;
 		}
 
-		Game.instance().runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				loadNextVideo();
-			}
-		});
+		Game.instance().runOnUiThread(() -> loadNextVideo());
 	}
 
 	private static void loadNextVideo() {
 		EventCollector.startTrace(GOOGLE_REWARD_VIDEO);
-		mVideoLoaded = false;
 
 		mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
 		mCinemaRewardAd.setRewardedVideoAdListener(new RewardVideoAdListener());
@@ -46,21 +39,18 @@ public class GoogleRewardVideoAds {
 	}
 
 	public static boolean isVideoReady() {
-		return mCinemaRewardAd != null && mVideoLoaded;
+		return mCinemaRewardAd != null && mCinemaRewardAd.isLoaded();
 	}
 
 
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
 
-		Game.instance().runOnUiThread (new Runnable() {
-			@Override
-			public void run() {
-				if (mCinemaRewardAd.isLoaded()) {
-					mCinemaRewardAd.show();
-				}else {
-					returnTo.returnToWork(false);
-				}
+		Game.instance().runOnUiThread (() -> {
+			if (mCinemaRewardAd.isLoaded()) {
+				mCinemaRewardAd.show();
+			}else {
+				returnTo.returnToWork(false);
 			}
 		});
 	}
@@ -72,12 +62,10 @@ public class GoogleRewardVideoAds {
 	private static class RewardVideoAdListener implements RewardedVideoAdListener {
 
 		private boolean videoCompleted = false;
-		private RewardItem rewardItem;
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
 			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO,"google reward video","ok","");
-			mVideoLoaded   = true;
 			videoCompleted = false;
 		}
 
@@ -89,18 +77,12 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdClosed() {
-			Game.instance().runOnUiThread(new Runnable() {
-				@Override
-				public void run() {
-					loadNextVideo();
-				}
-			});
+			Game.instance().runOnUiThread(() -> loadNextVideo());
 			returnTo.returnToWork(videoCompleted);
 		}
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
-			this.rewardItem = rewardItem;
 			videoCompleted = true;
 		}
 
@@ -111,7 +93,6 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
 			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO,"google reward video","fail","");
-			mVideoLoaded = false;
 		}
 
 		@Override

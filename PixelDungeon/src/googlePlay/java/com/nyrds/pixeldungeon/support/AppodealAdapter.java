@@ -23,7 +23,6 @@ public class AppodealAdapter {
 
         final int toInitialize = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
         final int toCache = Appodeal.INTERSTITIAL | Appodeal.BANNER;
-        final int notToCache = Appodeal.REWARDED_VIDEO;
 
         if (Appodeal.isInitialized(Appodeal.BANNER)) {
             return;
@@ -44,11 +43,10 @@ public class AppodealAdapter {
 
         if (BuildConfig.DEBUG) {
             Appodeal.setLogLevel(Log.LogLevel.verbose);
-            //Appodeal.setTesting(true);
+            Appodeal.setTesting(true);
         }
 
         Appodeal.initialize(PixelDungeon.instance(), appKey, toInitialize, EuConsent.getConsentLevel() == EuConsent.PERSONALIZED);
-        Appodeal.setAutoCache(notToCache, false);
         Appodeal.cache(PixelDungeon.instance(), toCache);
         Appodeal.setAutoCache(toCache, true);
     }
@@ -56,61 +54,55 @@ public class AppodealAdapter {
 
     public static void initRewardedVideo() {
 
-        Game.instance().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                init();
+        Game.instance().runOnUiThread(() -> {
+            init();
 
-                EventCollector.startTrace("appodeal reward video");
+            EventCollector.startTrace("appodeal reward video");
 
-                Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
-                Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
+            Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+            Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
 
-                Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
+            Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 
-                    @Override
-                    public void onRewardedVideoLoaded(boolean b) {
-                        EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "ok", "");
-                    }
+                @Override
+                public void onRewardedVideoLoaded(boolean b) {
+                    EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "ok", "");
+                }
 
-                    @Override
-                    public void onRewardedVideoFailedToLoad() {
-                        EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "fail", "");
-                    }
+                @Override
+                public void onRewardedVideoFailedToLoad() {
+                    EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "fail", "");
+                }
 
-                    @Override
-                    public void onRewardedVideoShown() {
-                    }
+                @Override
+                public void onRewardedVideoShown() {
+                }
 
-                    @Override
-                    public void onRewardedVideoFinished(double v, String s) {
+                @Override
+                public void onRewardedVideoFinished(double v, String s) {
 
-                    }
+                }
 
-                    @Override
-                    public void onRewardedVideoClosed(final boolean finished) {
-                        returnTo.returnToWork(finished);
-                    }
+                @Override
+                public void onRewardedVideoClosed(final boolean finished) {
+                    returnTo.returnToWork(finished);
+                }
 
-                    @Override
-                    public void onRewardedVideoExpired() {
+                @Override
+                public void onRewardedVideoExpired() {
 
-                    }
-                });
-            }
+                }
+            });
         });
     }
 
     public static void showCinemaRewardVideo(InterstitialPoint ret) {
         returnTo = ret;
-        Game.instance().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (isVideoReady()) {
-                    Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
-                } else {
-                    returnTo.returnToWork(false);
-                }
+        Game.instance().runOnUiThread(() -> {
+            if (isVideoReady()) {
+                Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+            } else {
+                returnTo.returnToWork(false);
             }
         });
     }
