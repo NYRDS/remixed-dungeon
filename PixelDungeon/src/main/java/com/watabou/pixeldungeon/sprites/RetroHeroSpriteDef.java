@@ -112,7 +112,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		reset();
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
-		avatar();
+		avatar = null;
 	}
 
 	public String[] getLayersDesc() {
