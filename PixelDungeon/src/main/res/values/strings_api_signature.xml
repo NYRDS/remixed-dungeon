@@ -12,6 +12,7 @@
     <string name="admob_publisher_id"></string>
 
     <string name="fabric_api_key">0</string>
+    <string name="pollfish_key">0</string>
     <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
 
 <!--
