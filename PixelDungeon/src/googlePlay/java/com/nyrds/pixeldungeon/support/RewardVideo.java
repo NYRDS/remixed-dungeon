@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.support;
 
 import com.watabou.noosa.InterstitialPoint;
 
+import androidx.annotation.UiThread;
+
 /**
  * Created by mike on 03.04.2017.
  * This file is part of Remixed Pixel Dungeon.
@@ -18,10 +20,12 @@ public class RewardVideo {
 		}
 	}
 
+	@UiThread
 	static public boolean isReady() {
 		return AppodealAdapter.isVideoReady() || GoogleRewardVideoAds.isVideoReady();
 	}
 
+	@UiThread
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		if(GoogleRewardVideoAds.isVideoReady()) {
 			GoogleRewardVideoAds.showCinemaRewardVideo(ret);

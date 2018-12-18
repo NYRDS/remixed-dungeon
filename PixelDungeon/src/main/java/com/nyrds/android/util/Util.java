@@ -14,6 +14,7 @@ import android.util.Base64;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
+import com.watabou.utils.Callback;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -28,7 +29,9 @@ import androidx.annotation.Nullable;
  * Created by mike on 01.03.2016.
  */
 public class Util {
-	private static String stackTraceToString(Throwable e) {
+    public static Callback nullCallback = () -> {};
+
+    private static String stackTraceToString(Throwable e) {
 		StringWriter sw = new StringWriter();
 		e.printStackTrace(new PrintWriter(sw));
 		return sw.toString();

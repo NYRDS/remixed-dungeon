@@ -77,8 +77,10 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 		Game.softPaused = true;
 		Dungeon.save();
-		AdsUtils.removeTopBanner();
-		RewardVideo.showCinemaRewardVideo(this);
+		Game.instance().runOnUiThread(() -> {
+			AdsUtils.removeTopBanner();
+			RewardVideo.showCinemaRewardVideo(this);
+		});
 	}
 
 	@Override

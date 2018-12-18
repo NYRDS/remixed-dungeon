@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.gltextures.TextureCache;
@@ -16,7 +17,6 @@ import com.watabou.pixeldungeon.effects.DeathRay;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Callback;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,11 +34,6 @@ public class MobSpriteDef extends MobSprite {
 	private int      framesInRow;
 	private int      kind;
 	private String   zapEffect;
-	static private Callback zapCallback = new Callback() {
-		@Override
-		public void call() {
-		}
-	};;
 
 	private float visualWidth;
 	private float visualHeight;
@@ -184,12 +179,12 @@ public class MobSpriteDef extends MobSprite {
 
 			if(ItemFactory.isValidItemClass(zapEffect)) {
 				((MissileSprite)getParent().recycle( MissileSprite.class )).
-						reset(ch.getPos(), cell, ItemFactory.itemByName(zapEffect), zapCallback );
+						reset(ch.getPos(), cell, ItemFactory.itemByName(zapEffect), Util.nullCallback);
 				return;
 			}
 
 			if(zapEffect.equals("Lightning")) {
-				getParent().add(new Lightning(points, 2, zapCallback));
+				getParent().add(new Lightning(points, 2, Util.nullCallback));
 				return;
 			}
 
@@ -199,18 +194,18 @@ public class MobSpriteDef extends MobSprite {
 			}
 
 			if(zapEffect.equals("Shadow")) {
-				MagicMissile.shadow(getParent(), ch.getPos(), cell, zapCallback);
+				MagicMissile.shadow(getParent(), ch.getPos(), cell, Util.nullCallback);
 				Sample.INSTANCE.play(Assets.SND_ZAP);
 				return;
 			}
 
 			if(zapEffect.equals("Fire")) {
-				MagicMissile.fire(getParent(), ch.getPos(), cell, zapCallback);
+				MagicMissile.fire(getParent(), ch.getPos(), cell, Util.nullCallback);
 				return;
 			}
 
 			if(zapEffect.equals("Ice")) {
-				MagicMissile.ice(getParent(), ch.getPos(), cell, zapCallback);
+				MagicMissile.ice(getParent(), ch.getPos(), cell, Util.nullCallback);
 				return;
 			}
 		}

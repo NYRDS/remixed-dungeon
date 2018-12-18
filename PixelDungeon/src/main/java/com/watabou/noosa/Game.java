@@ -613,23 +613,17 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static void showWindow(final String msg) {
         hideWindow();
-        pushUiTask(new Runnable() {
-            @Override
-            public void run() {
-                currentWindow = new WndMessage(msg);
-                Game.scene().add(currentWindow);
-            }
+        pushUiTask(() -> {
+            currentWindow = new WndMessage(msg);
+            Game.scene().add(currentWindow);
         });
     }
 
     public static void hideWindow() {
-        pushUiTask(new Runnable() {
-            @Override
-            public void run() {
-                if (currentWindow != null) {
-                    currentWindow.hide();
-                    currentWindow = null;
-                }
+        pushUiTask(() -> {
+            if (currentWindow != null) {
+                currentWindow.hide();
+                currentWindow = null;
             }
         });
     }

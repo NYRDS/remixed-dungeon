@@ -9,6 +9,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
+import androidx.annotation.MainThread;
+
 /**
  * Created by mike on 30.01.2017.
  * This file is part of Remixed Pixel Dungeon.
@@ -30,6 +32,7 @@ public class GoogleRewardVideoAds {
 		Game.instance().runOnUiThread(() -> loadNextVideo());
 	}
 
+	@MainThread
 	private static void loadNextVideo() {
 		EventCollector.startTrace(GOOGLE_REWARD_VIDEO);
 
@@ -38,11 +41,12 @@ public class GoogleRewardVideoAds {
 		mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
 	}
 
+	@MainThread
 	public static boolean isVideoReady() {
 		return mCinemaRewardAd != null && mCinemaRewardAd.isLoaded();
 	}
 
-
+	@MainThread
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
 
