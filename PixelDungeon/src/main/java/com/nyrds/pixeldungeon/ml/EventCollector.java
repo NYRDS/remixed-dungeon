@@ -9,6 +9,7 @@ import com.google.firebase.perf.metrics.Trace;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,7 +43,6 @@ public class EventCollector {
 		}
 	}
 
-
 	static public void logEvent(String category, Map<String,String> eventData) {
 		if (!mDisabled) {
 
@@ -69,18 +69,19 @@ public class EventCollector {
 
 	static public void logScene(final String scene) {
 		if (!mDisabled) {
-			Game.instance().runOnUiThread(new Runnable() {
-											  @Override
-											  public void run() {
-												  mFirebaseAnalytics.setCurrentScreen(Game.instance(), scene, null);
-											  }
-										  });
+			Game.instance().runOnUiThread(() -> mFirebaseAnalytics.setCurrentScreen(Game.instance(), scene, null));
 		}
 	}
 
 	static public void logException() {
 		if(!mDisabled) {
-			Crashlytics.logException(new Exception());
+			Exception e = new Exception();
+
+			StackTraceElement [] stackTraceElements = e.getStackTrace();
+
+			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,1,stackTraceElements.length));
+
+			Crashlytics.logException(e);
 		}
 	}
 
