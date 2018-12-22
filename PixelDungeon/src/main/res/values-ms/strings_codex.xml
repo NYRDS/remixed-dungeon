@@ -4,7 +4,7 @@
   <string name="Codex_Name">Kodeks</string>
   <string name="Codex_ACRead">BACA</string>
   <string name="Codex_Info">Salah satu dari kebanyakan buku yang boleh ditemui dalam mana-mana perpustakaan</string>
-  <string name="Codex_Blinded">Anda tidak boleh membacanya kerana tidak nampak</string>
+  <string name="Codex_Blinded">Anda tidak boleh membacanya ketika dibutakan</string>
   <string-array name="Codex_Story">
     <item>Dan Pixel Dungeon Watabou telah dihasilkan. Beliau melihat pada hasil kerjanya. Dia merasakan ianya sudah mencukupi!</item>
     <item>Glif Lantun - Menyebabkan musuh ditolak balik setelah memukul Adiwira.</item>

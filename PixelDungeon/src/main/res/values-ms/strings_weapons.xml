@@ -146,7 +146,7 @@
   <!--PACKAGE /weapon/missiles-->
   <!--STRINGS OF MissileWeapon CLASS-->
   <string name="MissileWeapon_Missiles">Senjata misil</string>
-  <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang perlu dibuat</string>
+  <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang saya buat</string>
   <string name="MissileWeapon_No">Tidak, Saya ubah pendirian saya</string>
   <string name="MissileWeapon_Sure">Anda pasti mahu memakainya sebagai senjata tempur?</string>
   <string name="MissileWeapon_Info1">\n\nPurata kecederaan dihasilkan oleh senjata ini menyamai %d mata per pukulan.</string>

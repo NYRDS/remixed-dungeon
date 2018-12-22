@@ -3,7 +3,7 @@
   <!--STRINGS OF GutsLevel & GutsBossLevel CLASS-->
   <string name="Guts_TileGrass">Pokok renek kering</string>
   <string name="Guts_TileHighGrass">Pokok renek kering</string>
-  <string name="Guts_TileWater">Cecair melekit pelik</string>
+  <string name="Guts_TileWater">Cecair melekit yang pelik</string>
   <string name="Guts_TileDescEntrance">Lubang besar di bahagian siling membolehkan anda pergi ke aras lebih atas</string>
   <string name="Guts_TileDescExit">Lubang besar di bahagian lantai membolehkan anda pergi ke aras lebih bawah</string>
   <string name="Guts_TileDescDeco">Kelihatan tempat ini seakan-akan... cedera</string>
