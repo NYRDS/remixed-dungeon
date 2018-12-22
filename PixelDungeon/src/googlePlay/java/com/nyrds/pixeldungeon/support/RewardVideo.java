@@ -14,26 +14,17 @@ public class RewardVideo {
 		if(!GoogleRewardVideoAds.isVideoInitialized()){
 			GoogleRewardVideoAds.initCinemaRewardVideo();
 		}
-
-		if(!AppodealAdapter.isVideoInitialized()) {
-			AppodealAdapter.initRewardedVideo();
-		}
 	}
 
 	@UiThread
 	static public boolean isReady() {
-		return AppodealAdapter.isVideoReady() || GoogleRewardVideoAds.isVideoReady();
+		return GoogleRewardVideoAds.isVideoReady();
 	}
 
 	@UiThread
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		if(GoogleRewardVideoAds.isVideoReady()) {
 			GoogleRewardVideoAds.showCinemaRewardVideo(ret);
-			return;
-		}
-
-		if (AppodealAdapter.isVideoReady()) {
-			AppodealAdapter.showCinemaRewardVideo(ret);
 			return;
 		}
 

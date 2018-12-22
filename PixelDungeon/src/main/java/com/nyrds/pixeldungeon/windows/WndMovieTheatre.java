@@ -85,15 +85,12 @@ public class WndMovieTheatre extends Window implements InterstitialPoint{
 
 	@Override
 	public void returnToWork(final boolean result) {
-		PixelDungeon.pushUiTask(new Runnable() {
-			@Override
-			public void run() {
-				Game.softPaused = false;
-				Hero.doOnNextAction = new RewardTask(result);
+		PixelDungeon.pushUiTask(() -> {
+			Game.softPaused = false;
+			Hero.doOnNextAction = new RewardTask(result);
 
-				PixelDungeon.landscape(PixelDungeon.storedLandscape());
-				PixelDungeon.setNeedSceneRestart(true);
-			}
+			PixelDungeon.landscape(PixelDungeon.storedLandscape());
+			PixelDungeon.setNeedSceneRestart(true);
 		});
 
 	}
