@@ -53,12 +53,7 @@ class AdsUtilsCommon {
         final IInterstitialProvider chosenProvider = choseLessFailedFrom(AdsUtils.interstitialFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            Game.instance().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    chosenProvider.showInterstitial(retTo);
-                }
-            });
+            Game.instance().runOnUiThread(() -> chosenProvider.showInterstitial(retTo));
         } else {
             retTo.returnToWork(false);
         }
@@ -68,12 +63,7 @@ class AdsUtilsCommon {
         final IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            Game.instance().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    chosenProvider.displayBanner();
-                }
-            });
+            Game.instance().runOnUiThread(() -> chosenProvider.displayBanner());
         }
     }
 
