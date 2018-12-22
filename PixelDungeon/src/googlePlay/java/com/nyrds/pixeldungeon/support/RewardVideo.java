@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
 import androidx.annotation.UiThread;
@@ -23,11 +24,14 @@ public class RewardVideo {
 
 	@UiThread
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
-		if(GoogleRewardVideoAds.isVideoReady()) {
-			GoogleRewardVideoAds.showCinemaRewardVideo(ret);
-			return;
-		}
-
-		ret.returnToWork(false);
+        Game.instance().runOnUiThread ( () -> {
+            if (GoogleRewardVideoAds.isVideoReady()) {
+                GoogleRewardVideoAds.showCinemaRewardVideo(ret);
+                return;
+            }
+            Game.pushUiTask( () -> {
+                ret.returnToWork(false);
+            });
+		});
 	}
 }

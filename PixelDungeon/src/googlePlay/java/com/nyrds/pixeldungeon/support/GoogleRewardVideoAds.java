@@ -50,13 +50,11 @@ public class GoogleRewardVideoAds {
 	public static void showCinemaRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
 
-		Game.instance().runOnUiThread (() -> {
-			if (mCinemaRewardAd.isLoaded()) {
-				mCinemaRewardAd.show();
-			}else {
-				returnTo.returnToWork(false);
-			}
-		});
+		if (mCinemaRewardAd.isLoaded()) {
+			mCinemaRewardAd.show();
+		}else {
+			returnTo.returnToWork(false);
+		}
 	}
 
 	public static boolean isVideoInitialized() {
@@ -82,7 +80,7 @@ public class GoogleRewardVideoAds {
 		@Override
 		public void onRewardedVideoAdClosed() {
 			Game.instance().runOnUiThread(() -> loadNextVideo());
-			returnTo.returnToWork(videoCompleted);
+			Game.pushUiTask(() -> {returnTo.returnToWork(videoCompleted);});
 		}
 
 		@Override
