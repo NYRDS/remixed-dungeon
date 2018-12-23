@@ -48,7 +48,8 @@ import static android.app.Activity.RESULT_OK;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+@Deprecated
+public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 	private static final int RC_SIGN_IN          = 42353;
 	private static final int RC_SHOW_BADGES      = 67584;
 	private static final int RC_SHOW_LEADERBOARD = 96543;
@@ -59,8 +60,9 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 	private Activity          activity;
 	private ArrayList<String> mSavedGamesNames;
 
-	public PlayGames(Activity ctx) {
+	public _PlayGames(Activity ctx) {
 		activity = ctx;
+
 
 		googleApiClient = new GoogleApiClient.Builder(activity)
 				.addConnectionCallbacks(this)
@@ -255,7 +257,7 @@ public class PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApi
 			@Override
 			public void run() {
 				try {
-					boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+					boolean res = packFilesToSnapshot(_PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
 						@Override
 						public boolean accept(File pathname) {
 							String filename = pathname.getName();

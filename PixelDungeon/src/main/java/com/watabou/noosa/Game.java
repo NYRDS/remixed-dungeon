@@ -47,7 +47,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
-import com.nyrds.pixeldungeon.support.Google.PlayGames;
+import com.nyrds.pixeldungeon.support.Google._PlayGames;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
@@ -88,7 +88,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static String version;
     public static int versionCode;
-    public PlayGames playGames;
+    public _PlayGames playGames;
     public Iap iap;
 
     // Current scene

@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Google.PlayGames;
+import com.nyrds.pixeldungeon.support.Google._PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Preferences;
@@ -97,7 +97,7 @@ class WndPlayGames extends Window {
         y += btn.height() + GAP;
     }
 
-    private static class ResultHandler implements PlayGames.IResult {
+    private static class ResultHandler implements _PlayGames.IResult {
 
         private WndMessage working;
         ResultHandler() {
