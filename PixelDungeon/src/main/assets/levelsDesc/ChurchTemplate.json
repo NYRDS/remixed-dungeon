@@ -50,12 +50,29 @@
          "y":17
         }],
  "multiexit":[],
+ "objects":[
+        {
+         "kind":"Barrel",
+         "x":2,
+         "y":7
+        }, 
+        {
+         "kind":"Barrel",
+         "x":4,
+         "y":7
+        }, 
+        {
+         "kind":"Barrel",
+         "x":6,
+         "y":7
+        }],
  "tiles":"tiles_town_inside.png",
  "tiles_base":"tiles_town_inside.png",
  "tiles_deco":"tiles_town_inside.png",
  "tiles_deco2":"tiles_town_inside.png",
  "tiles_logic":"tiles0.png",
  "tiles_mobs":"Mobs.png",
+ "tiles_objects":"Objects.png",
  "water":"water0.png",
  "width":9
 }
