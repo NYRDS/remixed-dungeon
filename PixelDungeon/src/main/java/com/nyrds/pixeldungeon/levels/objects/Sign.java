@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
@@ -13,7 +14,6 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
-import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,7 +24,9 @@ import org.json.JSONObject;
 public class Sign extends LevelObject {
 
 	private static final String TEXT = "text";
-	private String signText;
+
+	@Packable
+	private String text;
 
 	public Sign(){
 		super(Level.INVALID_CELL);
@@ -32,12 +34,12 @@ public class Sign extends LevelObject {
 
 	public Sign(int pos, String text) {
 		super(pos);
-		signText = text;
+		this.text = text;
 	}
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
-		signText = StringsManager.maybeId(obj.getString(TEXT));
+		text = StringsManager.maybeId(obj.getString(TEXT));
 	}
 
 	@Override
@@ -46,23 +48,10 @@ public class Sign extends LevelObject {
 			if (hero.hasBuff(Blindness.class )) {
 				GLog.w(Game.getVar(R.string.Codex_Blinded));
 			} else {
-				GameScene.show(new WndMessage(signText));
+				GameScene.show(new WndMessage(text));
 			}
 		}
 		return super.interact(hero);
-	}
-
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		signText = (bundle.getString( TEXT ));
-
-	}
-
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
-		bundle.put( TEXT, signText);
 	}
 
 	@Override
