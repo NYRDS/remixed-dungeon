@@ -8,7 +8,7 @@
     <string name="TownGuardNPC_Desc">A regular town guard.</string>
     <string name="TownGuardNPC_Message1">Move along.</string>
     <string name="TownGuardNPC_Message2">Thanks to adventurers like you, it became really peaceful up here.</string>
-    <string name="TownGuardNPC_Message3">You think there is to much guards in this town? Well that\'s only town with a gigantic dungeon that was taken over by monsters, isn\'t it?</string>
+    <string name="TownGuardNPC_Message3">You think there are too many guards in this town? Well, that\'s because this is the only town with a gigantic monster-infested dungeon, isn\'t it?</string>
 
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">townsfolk</string>

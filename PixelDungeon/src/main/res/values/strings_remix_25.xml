@@ -48,7 +48,7 @@
     <string name="JarOfSouls_Name">jar of souls</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name_Objective">jar of souls</string>
-    <string name="JarOfSouls_Desc">Glowing eyes of a skull depicted on this old jar, as well as the strange energy it emits, makes you fell uneasy.</string>
+    <string name="JarOfSouls_Desc">The glowing eyes of a skull depicted on this old jar, as well as the strange energy it emits, makes you feel uneasy.</string>
 
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">lich</string>
