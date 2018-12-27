@@ -11,6 +11,11 @@
    <property name="kind" value="Sign"/>
   </properties>
  </tile>
+ <tile id="34">
+  <properties>
+   <property name="kind" value="Candle"/>
+  </properties>
+ </tile>
  <tile id="36">
   <properties>
    <property name="kind" value="Barrel"/>
