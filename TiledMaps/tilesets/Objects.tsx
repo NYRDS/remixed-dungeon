@@ -13,9 +13,9 @@
  </tile>
  <tile id="34">
   <properties>
-   <property name="desc" value="Deco_Candle_Desc"/>
+   <property name="desc" value="deco_candle_desc"/>
    <property name="kind" value="Deco"/>
-   <property name="name" value="Deco_Candle_Name"/>
+   <property name="name" value="deco_candle_name"/>
    <property name="textureFile" value="levelObjects/candle.png"/>
   </properties>
  </tile>
