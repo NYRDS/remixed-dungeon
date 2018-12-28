@@ -671,12 +671,8 @@ public abstract class Mob extends Char {
 		float timeToSwap = 1 / chr.speed();
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Mob.java
-		setState(WANDERING);
-		return true;
-=======
 		setState(MobAi.getStateByClass(Wandering.class));
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Mob.java
+		return true;
 	}
 
 	private void ensureOpenDoor() {

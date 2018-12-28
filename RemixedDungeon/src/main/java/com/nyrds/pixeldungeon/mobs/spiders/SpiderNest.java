@@ -41,19 +41,13 @@ public class SpiderNest extends Mob {
     public boolean act(){
 		super.act();
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderNest.java
-		MobSpawner.spawnRandomMob(Dungeon.level, this);
-
-		setState(SLEEPING);
-=======
 		Mob newSpider = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
 		
 		if(isPet()) {
 			Mob.makePet(newSpider, Dungeon.hero);
 		}
 		setState(MobAi.getStateByClass(Sleeping.class));
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/spiders/SpiderNest.java
-		
+
 		postpone(20);
 		
 		return true;

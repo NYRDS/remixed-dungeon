@@ -113,11 +113,7 @@ public class RandomLevel extends RegularLevel {
 				}
 			}
 		} catch (JSONException e) {
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/levels/RandomLevel.java
 			throw ModdingMode.modException("invalid mob desc",e);
-=======
-			throw new TrackedRuntimeException("invalid me desc",e);
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/nyrds/pixeldungeon/levels/RandomLevel.java
 		} catch (Exception e) {
 			EventCollector.logException(e);
 		}

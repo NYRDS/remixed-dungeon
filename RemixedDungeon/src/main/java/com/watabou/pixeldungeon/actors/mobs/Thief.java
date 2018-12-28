@@ -17,12 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Thief.java
-=======
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ai.MobAi;
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Thief.java
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;

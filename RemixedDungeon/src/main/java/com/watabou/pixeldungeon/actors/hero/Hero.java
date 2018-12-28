@@ -160,18 +160,8 @@ public class Hero extends Char implements PetOwner {
 	private int attackSkill = 10;
 	private int defenseSkill = 5;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
-	private boolean ready = false;
-	public HeroAction curAction = null;
-	public HeroAction lastAction = null;
-=======
 	private boolean    ready      = false;
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
-	public  HeroAction lastAction = null;
->>>>>>> Posses spell wip:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
-=======
 	public CharAction lastAction = null;
->>>>>>> HeroAction -> CharAction:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
 
 	private Char enemy;
 	private Char controlTarget = this;
@@ -569,11 +559,7 @@ public class Hero extends Char implements PetOwner {
 				}
 			}
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
-			if (RemixedDungeon.realtime()) {
-=======
-			if (PixelDungeon.realtime() || (controlTarget!= this && controlTarget.curAction!=null) ) {
->>>>>>> Possess - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java
+			if (RemixedDungeon.realtime() || (controlTarget!= this && controlTarget.curAction!=null) ) {
 				if (!ready) {
 					readyAndIdle();
 				}

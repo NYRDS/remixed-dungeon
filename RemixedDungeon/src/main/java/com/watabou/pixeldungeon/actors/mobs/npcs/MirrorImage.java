@@ -17,20 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
-import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-=======
-import android.support.annotation.NonNull;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
-=======
 import com.nyrds.pixeldungeon.ml.EventCollector;
->>>>>>> complete merge, also Ai.onDie():PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -68,12 +58,8 @@ public class MirrorImage extends Mob {
 	private int                damage;
 	@Packable
 	private String[] look = new String[0];
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
 	@Packable
 	private String deathEffect;
-=======
-
->>>>>>> Posses spell wip:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/npcs/MirrorImage.java
 
 	@Override
 	public int attackSkill( Char target ) {

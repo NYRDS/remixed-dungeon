@@ -17,13 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.traps;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/levels/traps/SummoningTrap.java
-=======
-import android.support.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/levels/traps/SummoningTrap.java
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;

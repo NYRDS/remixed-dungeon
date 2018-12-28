@@ -17,12 +17,8 @@
  */
 package com.watabou.pixeldungeon.items;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/items/Heap.java
-=======
-import android.support.annotation.NonNull;
 
 import com.nyrds.Packable;
->>>>>>> CustomMobAi - wip:PixelDungeon/src/main/java/com/watabou/pixeldungeon/items/Heap.java
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;

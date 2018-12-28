@@ -10,21 +10,6 @@
         "level":10
       },
       {
-<<<<<<< HEAD:RemixedDungeon/src/main/assets/hero/initHeroesDebug.json
-<<<<<<< HEAD:RemixedDungeon/src/main/assets/hero/initHeroesDebug.json
-        "kind": "Pickaxe"
-      },
-      {
-        "kind": "SpellBook"
-=======
-        "kind": "ScrollOfTerror",
-=======
-        "kind": "RawFish",
->>>>>>> CustomMobAi - wip:PixelDungeon/src/main/assets/hero/initHeroesDebug.json
-        "quantity": 100
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/assets/hero/initHeroesDebug.json
-      },
-      {
         "kind": "ChaosSword"
       },
       {

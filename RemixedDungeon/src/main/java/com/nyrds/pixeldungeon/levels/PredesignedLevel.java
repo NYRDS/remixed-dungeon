@@ -157,11 +157,7 @@ public class PredesignedLevel extends CustomLevel {
 				}
 			}
 		} catch (JSONException e) {
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/levels/PredesignedLevel.java
 			throw ModdingMode.modException("bad mob description",e);
-=======
-			throw new TrackedRuntimeException("bad me description", e);
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/nyrds/pixeldungeon/levels/PredesignedLevel.java
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}

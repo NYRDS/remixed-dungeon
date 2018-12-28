@@ -40,7 +40,7 @@ public class SpiderEgg extends Mob {
     public boolean act() {
 		super.act();
 
-		MobSpawner.spawnRandomMob(Dungeon.level,this);
+		MobSpawner.spawnRandomMob(Dungeon.level,getPos());
 
 		remove();
 		eggsLaid.delete(getPos());

@@ -17,12 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Scorpio.java
-=======
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ai.Hunting;
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Scorpio.java
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;

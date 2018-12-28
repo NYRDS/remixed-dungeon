@@ -17,15 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Spinner.java
-import com.nyrds.pixeldungeon.ai.ThiefFleeing;
-=======
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Spinner.java
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Web;

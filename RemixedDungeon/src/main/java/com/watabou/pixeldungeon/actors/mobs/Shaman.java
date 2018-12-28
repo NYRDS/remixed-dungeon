@@ -17,14 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-<<<<<<< HEAD:RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Shaman.java
-=======
-import android.support.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
->>>>>>> Separate AiState from Mob - WiP:PixelDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Shaman.java
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Camera;

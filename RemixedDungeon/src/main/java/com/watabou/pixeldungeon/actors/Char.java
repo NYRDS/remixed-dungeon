@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import android.support.annotation.NonNull;
-
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;

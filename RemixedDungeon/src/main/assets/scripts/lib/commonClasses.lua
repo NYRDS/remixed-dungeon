@@ -18,15 +18,11 @@ local Buffs  = {
     Invisibility = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Invisibility"),
     Levitation   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Levitation"),
     Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger"),
-<<<<<<< HEAD:RemixedDungeon/src/main/assets/scripts/lib/commonClasses.lua
     Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison"),
     Frost        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Frost"),
     Light        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Light"),
     Cripple      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Cripple"),
     Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm")
-=======
-    Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison")
->>>>>>> BlackCatAi - wip:PixelDungeon/src/main/assets/scripts/lib/commonClasses.lua
 }
 
 local Blobs = {
@@ -147,14 +143,11 @@ local RPD = {
         GLog:i(text,{...})
     end,
 
-<<<<<<< HEAD:RemixedDungeon/src/main/assets/scripts/lib/commonClasses.lua
     getXy = function (chr)
         local pos = chr:getPos()
         return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}
-    end
-}
+    end,
 
-=======
     setAi = function(mob, state)
         mob:setState(MobAi:getStateByTag(state))
     end,
@@ -164,8 +157,6 @@ local RPD = {
     end
 }
 
-
->>>>>>> CustomMobAi - wip:PixelDungeon/src/main/assets/scripts/lib/commonClasses.lua
 return RPD
 
 
