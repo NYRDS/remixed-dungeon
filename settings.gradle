@@ -1,1 +1,1 @@
-include ':PixelDungeon', ':processor', ':annotation'
+include ':RemixedDungeon', ':processor', ':annotation'

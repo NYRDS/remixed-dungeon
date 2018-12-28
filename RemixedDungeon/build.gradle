@@ -1,0 +1,151 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.firebase-perf'
+
+
+ext.getApiField = { name ->
+    def stringsFile = "RemixedDungeon/src/main/res/values/strings_api_signature.xml"
+    return new XmlParser().parse(stringsFile).string.find { it.@name.equals name }.text()
+}
+
+repositories {
+    google()
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+def jks_keyAlias    = hasProperty('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
+def jks_keyPassword = hasProperty('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
+def jks_storePassword = hasProperty('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
+def jks_storePath = hasProperty('jks_storePath') ? System.getenv('jks_storePath') : 'testKey/test.jks'
+
+android {
+
+    signingConfigs {
+        release {
+            keyAlias jks_keyAlias
+            keyPassword jks_keyPassword
+            storeFile file(jks_storePath)
+            storePassword jks_storePassword
+        }
+    }
+
+    defaultConfig {
+
+        manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
+
+        applicationId "com.nyrds.pixeldungeon.ml"
+        versionCode 614
+        versionName "remix.28.4.fix.3.3"
+    }
+
+    aaptOptions {
+        noCompress "mp3"
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            minifyEnabled false
+        }
+        debug {
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        additionalParameters = ["--set-max-idx-number=45000"]
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    flavorDimensions "minApi"
+    productFlavors {
+        googlePlayRetro {
+            buildToolsVersion '23.0.3'
+            minSdkVersion 9
+            compileSdkVersion 23
+            targetSdkVersion 23
+            dimension "minApi"
+
+        }
+        googlePlay {
+            buildToolsVersion '28.0.3'
+            targetSdkVersion 28
+            minSdkVersion 15
+            compileSdkVersion 28
+
+            versionCode defaultConfig.versionCode + 10000
+            // Enabling multidex support.
+            multiDexEnabled true
+            dimension "minApi"
+        }
+
+    }
+}
+
+apply plugin: 'io.fabric'
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.luaj:luaj-jse:3.0.1'
+    implementation 'info.guardianproject.netcipher:netcipher:1.2'
+
+
+    //noinspection GradleDependency
+    googlePlayRetroImplementation 'com.android.support:support-v4:23'
+    //noinspection GradleDependency
+    googlePlayRetroImplementation 'com.google.android.gms:play-services-ads:9.0.2'
+    //noinspection GradleDependency
+    googlePlayRetroImplementation 'com.google.android.gms:play-services-base:9.0.2'
+    //noinspection GradleDependency
+    googlePlayRetroImplementation 'com.google.android.gms:play-services-analytics:9.0.2'
+    //noinspection GradleDependency
+    googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
+
+    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
+
+    googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:16.0.1'
+    googlePlayImplementation "com.google.android.gms:play-services-games:16.0.0"
+
+    googlePlayImplementation 'com.pollfish:pollfish:+:googleplayRelease@aar'
+
+    googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
+
+    googlePlayImplementation fileTree(dir: 'lib', include: ['*.jar'])
+
+    googlePlayImplementation 'com.android.support:multidex:1.0.3'
+    implementation project(':annotation')
+    annotationProcessor project(':processor')
+
+    googlePlayImplementation 'ru.livli:swsdk-core:0.0.1-beta05'
+    googlePlayImplementation 'ru.livli:swsdk-apps:0.0.1-beta05'
+
+    googlePlayImplementation 'androidx.core:core:1.0.1'
+    googlePlayImplementation 'androidx.annotation:annotation:1.0.1'
+
+
+    implementation 'com.android.billingclient:billing:1.1'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.5'
+
+    googlePlayImplementation 'com.google.firebase:firebase-core:16.0.6'
+    googlePlayImplementation 'com.google.firebase:firebase-perf:16.2.3'
+    googlePlayImplementation 'com.google.firebase:firebase-ads:17.1.2'
+
+    googlePlayImplementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+
+
