@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF TitleScene CLASS-->
+  <string name="TitleScene_Play">Spielen</string>
+  <string name="TitleScene_Highscores">Rekorde</string>
+  <string name="TitleScene_Badges">Abzeichen</string>
+  <string name="TitleScene_About">Über</string>
+  <string name="TitleScene_InternalStorageLow">Nicht genügend Platz\n im internen Speicher\n Dein Fortschritt kann verloren gehen!</string>
+  <!--STRINGS OF AboutScene CLASS-->
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon by NYRDS basierend auf dem ursprünglichem Pixel Dungeon von Watabou.</string>
+  <string name="AboutScene_Code">Programmierung:</string>
+  <string name="AboutScene_Graphics">Grafik:</string>
+  <string name="AboutScene_Music">Musik:</string>
+  <string name="AboutScene_Sound">Sound:</string>
+  <string name="AboutScene_Thanks">besonderen Dank an:</string>
+  <string name="AboutScene_Email_Us">Kontaktiert uns:</string>
+  <string name="AboutScene_OurSite">Unsere Internetseite:</string>
+  <string name="AboutScene_Snd">E-Mail senden</string>
+  <string name="AboutScene_Translation">Lokalisierung von:</string>
+  <string name="AboutScene_Translation_Names">NYRDS &amp;amp: Omen267901</string>
+  <!--STRINGS OF RankingsScene CLASS-->
+  <string name="RankingsScene_Title">Spitzenplatzierungen</string>
+  <string name="RankingsScene_Total">insgesamt Gespielte Spiele: </string>
+  <string name="RankingsScene_NoGames">Es wurden bisher keine Spiele gespielt.</string>
+  <string name="RankingsScene_NoInfo">Keine zusätzlichen Informationen</string>
+  <!--STRINGS OF StartScene CLASS-->
+  <string name="StartScene_Load">Spiel laden</string>
+  <string name="StartScene_New">Neues Spiel</string>
+  <string name="StartScene_Erase">Aktuelles Spiel löschen</string>
+  <string name="StartScene_Depth">Ebene: %1$d\nLevel: %2$d</string>
+  <string name="StartScene_Really">Willst du wirklich ein neues Spiel starten?</string>
+  <string name="StartScene_Warning">Dein aktueller Spielfortschritt wird gelöscht.</string>
+  <string name="StartScene_Yes">Ja, starte ein neues Spiel</string>
+  <string name="StartScene_No">Nein, kehr zum Hauptmenü zurück</string>
+  <string name="StartScene_Unlock">Um diese Klasse freizuschalten, besiege den 3. Bossgegner mit einer beliebigen anderen Klasse</string>
+  <string name="StartScene_UnlockElf">Um diese Klasse freizuschalten, besieg den 4. Bossgegner mit einer beliebigen anderen Klasse</string>
+  <string name="StartScene_WinGame">Um »Herausforderungen« freizuschalten, gewinne das Spiel mit einer beliebigen Klasse.</string>
+  <string name="StartScene_DifficultySelect">Wähle deine Bestimmung</string>
+  <string name="StartScene_DifficultyEasy">Einfach (mit Werbung)</string>
+  <string name="StartScene_DifficultyNormalWithSaves">Normal mit Speichern (und Werbung)</string>
+  <string name="StartScene_DifficultyNormal">Normal</string>
+  <string name="StartScene_DifficultyExpert">Experte</string>
+  <!--STRINGS OF InterLevelScene CLASS-->
+  <string name="InterLevelScene_Descending">Absteigen ...</string>
+  <string name="InterLevelScene_Ascending">Aufsteigen ...</string>
+  <string name="InterLevelScene_Loading">Laden ...</string>
+  <string name="InterLevelScene_Resurrecting">Wiederbeleben ...</string>
+  <string name="InterLevelScene_Returning">Zurückkehren ...</string>
+  <string name="InterLevelScene_Falling">Fallen ...</string>
+  <string name="InterLevelScene_FileNotFound">Datei nicht gefunden, aus irgendeinem Grund ...</string>
+  <string name="InterLevelScene_ErrorGeneric">Irgendwas ist schief gelaufen ...</string>
+  <!--STRINGS OF SurfaceScene CLASS-->
+  <string name="SurfaceScene_GameOver">Spiel vorbei</string>
+  <!--STRINGS OF WndSettings CLASS-->
+  <string name="WndSettings_ZoomIn">+</string>
+  <string name="WndSettings_ZoomOut">-</string>
+  <string name="WndSettings_ZoomDef">Standardzoom</string>
+  <string name="WndSettings_TextScaleDefault">Standardschrift</string>
+  <string name="WndSettings_ScaleUp">Benutzeroberfläche vergrößern</string>
+  <string name="WndSettings_Immersive">Immersionsmodus</string>
+  <string name="WndSettings_Music">Musik</string>
+  <string name="WndSettings_Sound">Toneffekte</string>
+  <string name="WndSettings_Brightness">Helligkeit</string>
+  <string name="WndSettings_SwitchPort">Zum Hochformat wechseln</string>
+  <string name="WndSettings_SwitchLand">Zum Querformat wechseln</string>
+  <string name="WndSettings_SelectLanguage">Sprache wählen</string>
+  <string name="WndSettings_SecondQuickslot">Zweite Schnellauswahl</string>
+  <string name="WndSettings_ThirdQuickslot">Dritte Schnellauswahl</string>
+  <string name="WndSettings_ExperementalFont">Neue Schrift</string>
+  <string name="WndSettings_ClassicFont">Klassische Schrift</string>
+  <!--STRINGS OF WndSaveSlotSelect CLASS-->
+  <string name="WndSaveSlotSelect_SelectSlot">Speicherplatz wählen</string>
+  <!--STRINGS OF ModsButton CLASS-->
+  <string name="ModsButton_SelectMod">Mod wählen</string>
+  <string name="RemixedPixelDungeonApp_sendCrash">Unser Spiel ist abgestürtzt... \n Entschuldigung. \nBitte sende uns den Fehler-Bericht, um uns zu helfen den Fehler zu beheben.</string>
+</resources>

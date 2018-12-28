@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF Hero CLASS-->
+  <string name="Hero_Name">sen</string>
+  <string name="Hero_Name_Objective">sen</string>
+  <string name="Hero_Leave">Remixed Dungeon\'dan çıkmak o kadar kolay değil.</string>
+  <string name="Hero_LevelUp">seviye atladın!</string>
+  <string name="Hero_NewLevel">%d. bölüme hoşgeldiniz! Artık daha canlı ve odaklısınız. Düşmanlara vurmak ve saldırılardan kaçmak senin için artık daha kolay.</string>
+  <string name="Hero_YouNowHave">%s buldun!</string>
+  <string name="Hero_SomethingElse">Burada başka bir şey var</string>
+  <string name="Hero_LockedChest">Bu sandık kilitli ve uygun anahtara sahip değilsin</string>
+  <string name="Hero_LockedDoor">Uygun anahtara sahip değilsin</string>
+  <string name="Hero_NoticedSmth">Bir şey farkettin</string>
+  <string name="Hero_Wait">...</string>
+  <string name="Hero_Search">ara</string>
+  <string name="Hero_StaBurning">Tutuştun!</string>
+  <string name="Hero_StaParalysis">Felç oldun!</string>
+  <string name="Hero_StaPoison">Zehirlendin!</string>
+  <string name="Hero_StaOoze">Yakıcı balçık etini yiyor. Hemen yıkan!</string>
+  <string name="Hero_StaRoots">Hareket edemiyorsun!</string>
+  <string name="Hero_StaWeakness">Zayıfladığını hissediyorsun!</string>
+  <string name="Hero_StaBlindness">Kör oldun!</string>
+  <string name="Hero_StaFury">Öfkelendin!</string>
+  <string name="Hero_StaFurious">öfkeli</string>
+  <string name="Hero_StaCharm">Büyülendin!</string>
+  <string name="Hero_StaCripple">Sakatlandın!</string>
+  <string name="Hero_StaBleeding">Kanıyorsun!</string>
+  <string name="Hero_StaVertigo">Herşey etrafında dönmeye başladı!</string>
+  <!--STRINGS OF HeroClass CLASS-->
+  <string name="HeroClass_War">savaşçı</string>
+  <string name="HeroClass_Mag">büyücü</string>
+  <string name="HeroClass_Rog">casus</string>
+  <string name="HeroClass_Hun">avcı</string>
+  <string name="HeroClass_Elf">elf</string>
+  <string-array name="HeroClass_WarPerks">
+    <item>Savaşçılar 11 Güç Puanı İle Başlar.</item>
+    <item>Savaşçılar Antik Kısa Kılıç İle Başlar.Bu Kılıcın Özellikleri Başka Bir Kılıca Aktarılabilir..</item>
+    <item>Savaşçılar Uzun Menzilli Silahlarda Daha Etkisizdir.</item>
+    <item>Herhangi Bir Yemek Yemek Az Miktarda Can Doldurur.</item>
+    <item>Güç İksirlerini Tanıyabilirsin.</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>Başıbozuk oyuna Gölge Yüzüğü+1 ile başlar.</item>
+    <item>Bu yüzük tanılanmış ve parmağına takılı olarak gelir.</item>
+    <item>Daha hafif zırhlar giyerek düşman saldırısını savuşturma tekniğini kullanır.</item>
+    <item>Gizli kapı ve tuzakları önceden farketme yeteneği yüksektir.</item>
+    <item>Yemek yemeden daha uzun süre yol alabilir.</item>
+    <item>Sihirli Harita Parşömeni tanımlı olarak gelir.</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>Avcı 15 sağlık puanı ile oyuna başlar.</item>
+    <item>Başlangıçta yükseltilebilir bir bumerangı silah olarak kullanır.</item>
+    <item>Uzun mesafeli silah kullanımında uzmandır ve bu silahlarla büyük hasar verebilir.</item>
+    <item>Bir çiy tanesinden daha fazla sağlık kazanır.</item>
+    <item>Etraftaki yaratıkları sezme yeteneği fazladır.</item>
+  </string-array>
+  <!--STRINGS OF HeroSubClass CLASS-->
+  <string name="HeroSubClass_NameGlad">gladyatör</string>
+  <string name="HeroSubClass_DescGlad">Yakın silah ile yapılan her başarılı vuruş _Gladyatör\'ün_ kombo yapmasına olanak sağlar, her başarılı vuruş ek hasar verir.</string>
+  <string name="HeroSubClass_NameBers">barbar</string>
+  <string name="HeroSubClass_DescBers">Vahşi Savaşçı, ağır yara aldığında bir vahşi öfkeye kapılır ve bu onun hasarını arttırır.</string>
+  <string name="HeroSubClass_NameWarL">falcı</string>
+  <string name="HeroSubClass_DescWarL">Bir düşmanı öldürdükten sonra _Warlock_ ruhunu tüketir. Yaralarını iyileştirir ve açlığını tatmin eder.</string>
+  <string name="HeroSubClass_NameBatM">savaş büyücüsü</string>
+  <string name="HeroSubClass_DescBatM">Elinde bir asa ile savaşırken, _Savaş Büyücüsü_ o anki şarj sayısına bağlı olarak ek hasar verir. Her başarılı isabet, bu asaya 1 şarj yükler.</string>
+  <string name="HeroSubClass_NameAssa">suikastçı</string>
+  <string name="HeroSubClass_DescAssa">_Suikastçı_ habersiz saldırı yaparken hedefe ek hasar verir.</string>
+  <string name="HeroSubClass_NameFreR">koşucu</string>
+  <string name="HeroSubClass_DescFreR">_Koşucu_ bir çok yaratıktan iki kat daha hızlı hareket edebilir. Koşucu koşarken vurulması daha zordur. Tabi hızlı koşması için üzerinde ağırlık veya aç olmamalı.</string>
+  <string name="HeroSubClass_NameSnip">keskin nişancı</string>
+  <string name="HeroSubClass_DescSnip">_Keskin Nişancı_ düşmanın zırhındaki zayıf noktayı tespit ederek menzilli silah kullanırken zırhı yok sayar.</string>
+  <string name="HeroSubClass_NameWard">bekçi</string>
+  <string name="HeroSubClass_DescWard">Doğayla güçlü bağlantısı _Müdür\'e_ çalılardan tohum ve çiy damlası toplama yeteneği verir. Ayrıca uzun çalıları çiğnemek onlara geçici armor verir.</string>
+  <string name="HeroSubClass_NameScout">izci</string>
+  <string name="HeroSubClass_DescScout">Elf _İzciler_ gizliliğin ustasıdırlar. Uzun çimleri ezmek onlara gizlik bonusu verir. Aynı zamanda normal elflerden daha hızlıdırlar.</string>
+  <string name="HeroSubClass_NameShaman">şaman</string>
+  <string name="HeroSubClass_DescShaman">Elf _Şamanlar_ asaları yakın dövüş silahı olarak kullanabilirler. Başarılı vuruşlar şarj kullanmadan hedefte asa nın gücünü kullanmasına olanak verir.</string>
+</resources>

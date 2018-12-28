@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- GENERAL STRINGS VARIABLES -->
+    <string name="app_name">Remixed Dungeon</string>
+
+    <!-- STRINGS OF Assets CLASS -->
+    <string name="Assets_Prefix">""</string>
+
+    <!-- PACKAGE /utils -->
+    <!-- STRINGS OF Utils CLASS -->
+    <!-- 1: Execute Indefinite Function to Language -->
+    <!-- 0: NO Execute Indefinite Function to Language -->
+    <string name="Utils_IsIndefinte">0</string>
+
+    <string name="Pet_Name"></string>
+    <string name="Pet_Name_Objective"></string>
+    <string name="Pet_Gender"></string>
+    <string name="Pet_Desc"></string>
+    
+    <string name = "Mod_Name"></string>
+    <string name = "Mod_Description"></string>
+    <string name = "Mod_Author"></string>
+    <string name = "Mod_Email"></string>
+    <string name = "Mod_Link"></string>
+
+    <string name="AboutScene_Code_Names">Watabou  &amp; NYRDS</string>
+    <string name="AboutScene_Graphics_Names">Watabou  &amp; NYRDS &amp; ThEnigma314 &amp; Pavel Provotorov</string>
+    <string name="AboutScene_Music_Names">Cube_Code &amp; Misaerit</string>
+    <string name="AboutScene_Sound_Names">Watabou &amp; Freesound.org (sonidotv, kantouth)</string>
+    <string name="AboutScene_Thanks_Names">rodriformiga for PD i18n code</string>
+
+    <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
+    <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+
+    <!-- I needed that for testing-->
+    <!-- STRINGS OF CandyOfDeath CLASS -->
+    <string name="CandyOfDeath_Name">Карамелька смерти</string>
+    <string name="CandyOfDeath_Info">Когда, не мудурствуя лукаво, нужно умертвить героя здесь и сейчас.</string>
+    
+</resources>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <!--STRINGS OF Codex CLASS-->
+  <string name="Codex_Name">Kodeks</string>
+  <string name="Codex_ACRead">BACA</string>
+  <string name="Codex_Info">Salah satu dari kebanyakan buku yang boleh ditemui dalam mana-mana perpustakaan</string>
+  <string name="Codex_Blinded">Anda tidak boleh membacanya ketika dibutakan</string>
+  <string-array name="Codex_Story">
+    <item>Dan Pixel Dungeon Watabou telah dihasilkan. Beliau melihat pada hasil kerjanya. Dia merasakan ianya sudah mencukupi!</item>
+    <item>Glif Lantun - Menyebabkan musuh ditolak balik setelah memukul Adiwira.</item>
+    <item>Glif kasih Sayang - Musuh akan dipesona dalam tempoh beberapa pusingan, manakala Adiwira akan dipesona dalam beberapa pusingan jua, tetapi tidak lebih daripada musuh.</item>
+    <item>Glif Anti-entropi - Adiwira akan menyala dan terbakar, dan musuh akan menjadi beku.</item>
+    <item>Glif Gandaan - Kesan ini menyebabkan Adiwira mempunyai banyak imej dirinya tetapi dia masih menerima kesan kecederaan. Boleh menyebabkan Adiwira mati.</item>
+    <item>Glif Potensi - Satu ledakan berbentuk-kilat yang dapat mencederakan musuh yang menyerang pemain dan juga memberi separuh kecederaan pada Adiwira.</item>
+    <item>Glif Metabolisma - Adiwira mendapat penyembuhan sebahagian sahaja sebelum musuh mengenakan kecederaan kepadanya, sebaliknya rasa lapar akan meningkat naik. Hanya berfungsi jika berlaku kebuluran,.</item>
+    <item>Glif Busuk - Adiwira akan melepaskan awan gas toksid jika dipukul.</item>
+    <item>Glif Kelikatan - Adiwira akan mendapat diskaun kecederaan, yang menyebabkan Adiwira menerima 1 kecederaan per pusingan, selain dari menerima keseluruhan amaun kecederaan sekaligus.</item>
+    <item>Glif Sesaran - Bilamana Adiwira dipukul, terdapat peluang Adiwira dialih ke jubin berhampiran secara rawak. Glif ini tidak berfungsi dalam aras bos.</item>
+    <item>Glif Keterlibatan - Adiwira menerima perisai herbal, tetapi dia juga diakarkan dan tidak dapat bergerak pada masa yang sama.</item>
+    <item>Senjata ngeri - Pada pukulan berjaya, mungkin dapat membunuh terus sasaran (atau 2x kecederaan kepada bos).</item>
+    <item>Senjata terbakar - Pada pukulan berjaya, beri kecederaan tambahan pada sasaran dan menyebabkan dia terbakar.</item>
+    <item>Senjata eldritch - Pada pukulan berjaya, musuh mungkin lari Ketakutan.</item>
+    <item>Senjata tak stabil - Pada pukulan berjaya, mungkin hasilkan apa-apa kesan sihir secara rawak.</item>
+    <item>Senjata menghisap - Pada pukulan berjaya, mungkin dapat menyembuhkan Adiwira berdasarkan sebahagian kecederaan yang dikenakan pada musuh.</item>
+    <item>Senjata bertuah - hampir-hampir dapat mengabaikan perisai musuh, dan dapat berikan lebih banyak kecederaan.</item>
+    <item>Senjata memegunkan - Pada pukulan berjaya, mungkin dapat lumpuhkan sasaran.</item>
+    <item>Senjata menembusi -  Pada pukulan berjaya, mungkin dapat memberi kecederaan musuh-musuh dalam satu barisan yang sama.</item>
+    <item>Senjata berbisa - Pada pukulan berjaya, mungkin dapat meracun sasaran.</item>
+    <item>Senjata menyejukkan - Pada pukulan berjaya, mungkin dapat memperlahankan pergerakan sasaran dan menghalang ia dari terbakar.</item>
+    <item>Senjata liar - Pada pukulan berjaya, mungkin dapat memberi kecederaan semua musuh yang berhampiran sasaran.</item>
+    <item>Buku ini ditulis dalam bahasa setan</item>
+    <item>Buku ini ditulis dalam bahasa orang kerdil</item>
+    <item>Buku ini ditulis dalam bahasa bunian</item>
+    <item>Dia berhenti seketika, kaku, di pintu besar oak, matanya meliar pada cahaya yang menembusi bingkai pintu. Dipenjuru minda beliau, mengatakan.\n
+\"Cahaya Matahari..\" dia berbisik sendirian. Berapa lamakah beliau di sini? Dalam kegelapan Kurungan Bawah Tanah, sudah lama tidak mengetahui hari-hari yang telah berlalu. Cahaya yang berpancaran itu mengimbau ingatan lampaunya. Dia teringat latihan sukar yang dilaluinya, hari-hari berlatih dengan \'senjata\', membaca, dan melukis peta. Teringat juga mantera dan disiplin yang membolehkan beliau kekal waras di dalam kegelapan. Apa yang tidak diingatinya ialah, orang yang disekitar sebelum ini.\n
+Dia masih mengingati suara mereka, perintah mereka, dan amaran mereka, tetapi bukannya wajah mereka, mahupun sentuhan mereka.\n
+Kesakitan telah melatih dia, Mengingati bahaya, senantiasa bahaya. Haiwan gila, orang hidup semula, penyamun gila, dan ninja licik semuanya tersungkur kalah. Dia telah menghadapi luka-luka, terbakar, ditikam, dan terkena racun sepanjang pengembaraan merempuhi makhluk dibenci, setan, dan necromancer gila. Dewa pun telah beliau kalahkan.\n
+Dia telah berjaya menjejak Yog dalam neraka dunia, sebelum menidurkannya buat selama-lamanya. Yog sebenarnya adalah hamba bagi salah satu kuasa ghaib yang lebih hebat darinya.\n
+Oleh itu dia telah cuba mendalami. Jurnal ahli sihir tua, yang masih mempunyai sisa-sisa kuasa, didalamnya telah menunjukkan kepadanya suatu laluan. Dengan kuasa ajaib di dalam buku ini, dia telah mengembara ke dunia liar yang serba baharu, iaitu sebuah kampung kecil yang diselubungi dengan hutan belantara yang tebal. Di sana, dia telah berjaya menjejak kejahatan dan sumber asalnya, sekali lagi beliau telah berjaya membenteras kejahatan tersebut.\n
+Kini, dalam panahan cahaya siang yang samar-samar, dia melihat bayangan dirinya di permukaan kolam gua. Badannya yang dilitupi kuasa ajaib hampir sukar dikenali. Kulitnya menjadi putih, hampir-hampir lutsinar itu telah dikotori dengan debu, asap dan jelaga. Barisan koleksi cincinnya sangat-sangat bernilai, dan koleksi tongkat sakti boleh menghancurkan sekumpulan besar tentera sekaligus, Dia memegang erat senjata-senjata itu, yang pernah menewaskan makhluk sekuat dewa. Memang benar, beliau sememangnya telah menguasai dunia kegelapan ini, tanah terbiar yang tandus ini.\n
+Walaupun telah mengejar kejahatan sehingga ke sudut jauh alam ini, kini beliau masih takut. Bagaimana jika tidak diterima oleh masyarakat di atas sana? Macamana hendak berinteraksi dengan mereka lagi?\n
+Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik dari cahaya, dan turun semula ke dunia kegelapan mungkin inilah kali yang terakhir.\n
+\n\n\toleh drazool dari reddit
+</item>
+  </string-array>
+</resources>
