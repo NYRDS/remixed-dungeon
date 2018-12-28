@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
+
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Her türden kahraman senden önce bu zindana girmeye cesaret etti. Bazıları hazineler ve senin adını ile bilmediğin sihirli eserlerle geri döndüler. Ama kimse zindanın derinliklerinde olduğu söylenen Yendor\'un Tılsımını almayı başaramadı. \n\n Kendinizi meydan okumaya hazır olarak görüyorsunuz, ama en önemlisi, bu talihin size gülümsediğini hissediyorsunuz. Şimdi kendi maceranıza başlama zamanı!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +8,8 @@
   <string name="AmuletScene_Stay">Daha işim bitmedi</string>
   <string name="AmuletScene_Txt">Sonunda ellerinde tutuyorsun, Yendor\'un Tılsımı. Bu tılsımın gücüyle dünyayı ele geçirebilir veya insanlara falan barış ve refah getirebilirsin. Her neyse, hayatın sonsuza kadar değişecek ve oyun burada bitecek. Veya önemsiz bir ölümlü olarak biraz daha buralarda kalabilirsin.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Pixel Dungeon\'ın %d seviyesine hoşgeldiniz!</string>
-  <string name="GameScene_WelcomeBack">Pixel Dungeon\'ın %d seviyesine tekrar hoşgeldiniz!</string>
+  <string name="GameScene_Welcome">Remixed Dungeon\'ın %d seviyesine hoşgeldiniz!</string>
+  <string name="GameScene_WelcomeBack">Remixed Dungeon\'ın %d seviyesine tekrar hoşgeldiniz!</string>
   <string name="GameScene_NightMode">Dikkatli ol, zindan geceleri daha tehlikelidir!</string>
   <string name="GameScene_Chasm">Adımların zindan boyunca yankılanıyor.</string>
   <string name="GameScene_Water">Etrafındaki su şarıltılarını duyuyorsun.</string>

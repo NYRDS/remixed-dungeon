@@ -3,7 +3,7 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">du</string>
   <string name="Hero_Name_Objective">du</string>
-  <string name="Hero_Leave">Man verlässt Pixel Dungeon nicht einfach so.</string>
+  <string name="Hero_Leave">Man verlässt Remixed Dungeon nicht einfach so.</string>
   <string name="Hero_LevelUp">Level up!</string>
   <string name="Hero_NewLevel">Du hast Level %d erreicht! Du hast nun mehr Lebenskraft und kannst dich besser konzentrieren. Es ist einfacher für dich geworden einen Gegner zu treffen und seinen Angriffen auszuweichen.</string>
   <string name="Hero_YouNowHave">Du hast %s gefunden</string>

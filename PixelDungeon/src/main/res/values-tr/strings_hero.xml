@@ -3,7 +3,7 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">sen</string>
   <string name="Hero_Name_Objective">sen</string>
-  <string name="Hero_Leave">Pixel Dungeon\'dan çıkmak o kadar kolay değil.</string>
+  <string name="Hero_Leave">Remixed Dungeon\'dan çıkmak o kadar kolay değil.</string>
   <string name="Hero_LevelUp">seviye atladın!</string>
   <string name="Hero_NewLevel">%d. bölüme hoşgeldiniz! Artık daha canlı ve odaklısınız. Düşmanlara vurmak ve saldırılardan kaçmak senin için artık daha kolay.</string>
   <string name="Hero_YouNowHave">%s buldun!</string>

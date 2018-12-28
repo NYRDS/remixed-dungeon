@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
+
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Многие искатели приключений и путешественники спускались в Подземелье до тебя. Некоторые возвращались, наделённые несметными богатствами и волшебными артефактами, но большинство попусту сгинуло. Но никому не удалось заполучить Амулет Эндора, согласно легендам, сокрытый в глубинах Подземелья.\n\nТы чувствуешь, что готов к этому испытанию и, что немаловажно, веришь, что удача на твоей стороне. Пришло время начать своё приключение!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +8,8 @@
   <string name="AmuletScene_Stay">Я, пожалуй, ещё осмотрюсь</string>
   <string name="AmuletScene_Txt">Наконец-то, он в твоих руках, Амулет Эндора. Ты обретёшь могущество, позволяющее покорить всех и вся или подаришь человечеству мир и процветание, или что-то типа того. В любом случае, твоя жизнь изменится навсегда, а игра на этом завершится. С другой стороны, ты можешь побыть жалким смертным ещё немного.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Добро пожаловать на %d уровень Pixel Dungeon!</string>
-  <string name="GameScene_WelcomeBack">С возвращением на %d уровень Pixel Dungeon!</string>
+  <string name="GameScene_Welcome">Добро пожаловать на %d уровень Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">С возвращением на %d уровень Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Будь начеку, ведь ночью подземелье куда опаснее!</string>
   <string name="GameScene_Chasm">Каждый твой шаг отдаётся эхом по всему подземелью.</string>
   <string name="GameScene_Water">Ты слышишь плеск воды поблизости.</string>
@@ -126,7 +125,7 @@
   <string name="WndGame_Ranking">Рекорды</string>
   <string name="WndGame_Start">Начать Новую Игру</string>
   <string name="WndGame_menu">Главное Меню</string>
-  <string name="WndGame_Exit">Покинуть Pixel Dungeon</string>
+  <string name="WndGame_Exit">Покинуть Remixed Dungeon</string>
   <string name="WndGame_Return">Вернуться в Игру</string>
   <string name="WndGame_Save">Сохранить</string>
   <string name="WndGame_Load">Загрузить</string>
@@ -260,7 +259,7 @@
   <string name="LloidsBeacon_Preventing">Могучая магическая аура этого места не позволяет использовать маяк Ллойда!</string>
   <string name="LloidsBeacon_Creatures">Психическая аура ближайших существ не позволяет тебе использовать маяк Ллойда сейчас.</string>
   <string name="LloidsBeacon_Return">Маяк Ллойда успешно установлен на твоё текущее положение, теперь ты можешь вернуться сюда в любое время.</string>
-  <string name="LloidsBeacon_Set">\n\nЭтот маяк был установлен где-то на %d уровне Pixel Dungeon.</string>
+  <string name="LloidsBeacon_Set">\n\nЭтот маяк был установлен где-то на %d уровне Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">мистический стилус</string>
   <string name="Stylus_ACInscribe">НАЧЕРТАТЬ</string>

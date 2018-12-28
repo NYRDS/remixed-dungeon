@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Molti eroi di ogni genere si sono avventurati nel Dungeon prima di te. Qualcuno di questi è tornato con tesori e artefatti magici, della maggior parte non si è più sentito parlare. Ma nessuno è riuscito nell\'impresa di rinvenire l\'Amuleto di Yendor, che si dice essere nascosto nelle profondità del Dungeon.\n\nTi credi pronto per ls sfida, ma ancora più importante, credi che la fortuna ti sorrida. È tempo di iniziare la tua personale avventura.</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +7,8 @@
   <string name="AmuletScene_Stay">Non ho ancora finito</string>
   <string name="AmuletScene_Txt">Finalmente lo brandisci, l\'Amuleto di Yendor. Con il suo potere puoi dominare il mondo e portare pace e prosperità ai popoli e roba del genere. In ogni caso, la tua vita cambierà per sempre e questo gioco finirà qui. Oppure puoi rimanere un mero mortale per poco più.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Benvenuto al livello %d di Pixel Dungeon!</string>
-  <string name="GameScene_WelcomeBack">Bentornato al livello %d di Pixel Dungeon!</string>
+  <string name="GameScene_Welcome">Benvenuto al livello %d di Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Bentornato al livello %d di Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Fai attenzione, il Dungeon è ancora più pericoloso di notte!</string>
   <string name="GameScene_Chasm">I tuoi passi riecheggiano nel dungeon.</string>
   <string name="GameScene_Water">Puoi udire l\'acqua intorno a te.</string>
@@ -126,7 +124,7 @@
   <string name="WndGame_Ranking">Classifiche</string>
   <string name="WndGame_Start">Inizia nuova partita</string>
   <string name="WndGame_menu">Menu principale </string>
-  <string name="WndGame_Exit">Esci da Pixel Dungeon</string>
+  <string name="WndGame_Exit">Esci da Remixed Dungeon</string>
   <string name="WndGame_Return">Ritorna nel gioco</string>
   <string name="WndGame_Save">Salva</string>
   <string name="WndGame_Load">Carica</string>
@@ -261,7 +259,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="LloidsBeacon_Preventing">Qualche tipo di potente aura magica presente qui ti impedisce di usare il faro di lloyd!</string>
   <string name="LloidsBeacon_Creatures">L\'aura psichica delle creature vicine non ti permette di usare il faro di lloyd in questo momento</string>
   <string name="LloidsBeacon_Return">Il faro di lloyd è stato impostato con successo nella tua posizione attuale, ora puoi tornare qui in qualunque momento.</string>
-  <string name="LloidsBeacon_Set">/n/nQuesto faro è stato impostato da un\'altra parte nel livello %d di Pixel Dungeon.</string>
+  <string name="LloidsBeacon_Set">/n/nQuesto faro è stato impostato da un\'altra parte nel livello %d di Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">stilo arcano</string>
   <string name="Stylus_ACInscribe">INCIDI</string>

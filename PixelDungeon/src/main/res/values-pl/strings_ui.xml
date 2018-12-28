@@ -7,7 +7,7 @@
   <string name="TitleScene_About">o Grze</string>
   <string name="TitleScene_InternalStorageLow">Masz za mało miejsca\n w Twojej pamięci\n Twoje postępy mogą zostać utracone!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon stworzony przez NYRDS, bazujący na kodzie źródłowym Pixel Dungeon, napisanym przez Watabou.</string>
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon stworzony przez NYRDS, bazujący na kodzie źródłowym Pixel Dungeon, napisanym przez Watabou.</string>
   <string name="AboutScene_Code">Kod:</string>
   <string name="AboutScene_Graphics">Grafika:</string>
   <string name="AboutScene_Music">Muzyka:</string>

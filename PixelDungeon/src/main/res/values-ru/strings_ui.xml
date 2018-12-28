@@ -7,7 +7,7 @@
   <string name="TitleScene_About">Об игре</string>
   <string name="TitleScene_InternalStorageLow">Недостаточно места во\n внутреннем хранилище\n Игра может не сохранится!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon от NYRDS основана на исходном коде Pixel Dungeon от Watabou</string>
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon от NYRDS основана на исходном коде Pixel Dungeon от Watabou</string>
   <string name="AboutScene_Code">Программирование:</string>
   <string name="AboutScene_Graphics">Графика:</string>
   <string name="AboutScene_Music">Музыка:</string>

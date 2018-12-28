@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- GENERAL STRINGS VARIABLES -->
-    <string name="app_name">Remixed Pixel Dungeon</string>
-
     <!-- STRINGS OF IntroScene CLASS -->
     <string name="IntroScene_Txt">Many heroes of all kinds ventured into the Dungeon before you. Some of them have returned with treasures and magical artifacts, most have never been heard of since. But none have succeeded in retrieving the Amulet of Yendor, which is told to be hidden in the depths of the Dungeon.\n\nYou consider yourself ready for the challenge, but most importantly, you feel that fortune smiles on you. It\'s time to start your own adventure!</string>
 
@@ -13,8 +10,8 @@
     <string name="AmuletScene_Txt">You finally hold it in your hands, the Amulet of Yendor. Using its power you can take over the world or bring peace and prosperity to people or whatever. Anyway, your life will change forever and this game will end here. Or you can stay a mere mortal a little longer.</string>
 
     <!-- STRINGS OF GameScene CLASS -->
-    <string name="GameScene_Welcome">Welcome to the level %d of Pixel Dungeon!</string>
-    <string name="GameScene_WelcomeBack">Welcome back to the level %d of Pixel Dungeon!</string>
+    <string name="GameScene_Welcome">Welcome to the level %d of Remixed Dungeon!</string>
+    <string name="GameScene_WelcomeBack">Welcome back to the level %d of Remixed Dungeon!</string>
     <string name="GameScene_NightMode">Be cautious, since the dungeon is even more dangerous at night!</string>
     <string name="GameScene_Chasm">Your steps echo across the dungeon.</string>
     <string name="GameScene_Water">You hear the water splashing around you.</string>
@@ -146,7 +143,7 @@
     <string name="WndGame_Ranking">Rankings</string>
     <string name="WndGame_Start">Start New Game</string>
     <string name="WndGame_menu">Main Menu</string>
-    <string name="WndGame_Exit">Exit Pixel Dungeon</string>
+    <string name="WndGame_Exit">Exit Remixed Dungeon</string>
     <string name="WndGame_Return">Return to Game</string>
     <string name="WndGame_Save">Save</string>
     <string name="WndGame_Load">Load</string>
@@ -303,7 +300,7 @@
     <string name="LloidsBeacon_Preventing">Some kind of strong magic aura present here prevents you from using the lloyd\'s beacon!</string>
     <string name="LloidsBeacon_Creatures">The psychic aura of neighbouring creatures doesn\'t allow you to use the lloyd\'s beacon at this moment.</string>
     <string name="LloidsBeacon_Return">The lloyd\'s beacon is successfully set at your current location, now you can return here anytime.</string>
-    <string name="LloidsBeacon_Set">\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.</string>
+    <string name="LloidsBeacon_Set">\n\nThis beacon was set somewhere on the level %d of Remixed Dungeon.</string>
 
     <!-- STRINGS OF Stylus CLASS -->
     <string name="Stylus_Name">arcane stylus</string>

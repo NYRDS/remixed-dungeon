@@ -8,7 +8,7 @@
   <string name="ShadowLord_Intro">Приготовься!</string>
   <string name="ShadowLord_Death">Нееееет...</string>
   <string name="AllowStatisticsCollectionScene_Title">Сбор пользовательской статистики</string>
-  <string name="AllowStatisticsCollectionScene_Request">С вашего разрешения Remixed Pixel Dungeon начнёт собирать пользовательскую статистику. Эти данные будут использоваться для:\n
+  <string name="AllowStatisticsCollectionScene_Request">С вашего разрешения Remixed Dungeon начнёт собирать пользовательскую статистику. Эти данные будут использоваться для:\n
 - отслеживания и исправления незначительных багов (если дело доходит до критической ошибки, игра явно попросит вас отправить отчёт)\n
 - улучшения игрового баланса\n
 - исправления проблем, уникальных для определённых устройств\n
@@ -17,7 +17,7 @@
   <string name="AllowStatisticsCollectionScene_Allow">Разрешаю</string>
   <string name="AllowStatisticsCollectionScene_Deny">Запрещаю</string>
   <string name="Darkness_Info">Выглядит как всполохи непроглядной тьмы, витающие в воздухе</string>
-  <string name="WndSelectLanguage_ImproveTranslation">Помогите улучшить перевод Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Помогите улучшить перевод Remixed Dungeon</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
-  <string name="WndSelectLanguage_LinkToTranslationSite">Нажмите, чтобы присоединиться к команде перевода Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Нажмите, чтобы присоединиться к команде перевода Remixed Dungeon</string>
 </resources>

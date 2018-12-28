@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">수많은 영웅들이 당신 이전에 던전으로 모험을 떠났습니다. 몇몇은 보물이나 마법 장비와 함께 돌아오기도 했지만, 대부분은 그 이후로 소식이 끊겼습니다. 하지만 그 누구도 던전 가장 아래에 숨겨져 있다고 하는 옌도르의 아뮬렛을 손에 넣는데 성공한 사람은 없죠.\n\n당신은 이제 도전을 받아들일 준비가 되었습니다. 무엇보다도 행운의 여신이 당신에게 미소짓고 있다고 생각하기 때문이죠. 자, 이제 당신만의 모험을 떠날 시간입니다!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +7,8 @@
   <string name="AmuletScene_Stay">아직 끝내긴 일러</string>
   <string name="AmuletScene_Txt">당신은 마침내 옌더의 아뮬렛을 거머쥐었습니다. 이 힘을 이용해서 당신은 세상을 손에 넣을 수도 있고 아니면 평화와 번영을 가져다 줄 수도 있는 등 여러 가지 일을 할 수 있다. 어쨌든, 당신의 인생은 완전히 바뀔 것이고, 게임은 여기서 끝날 겁니다. 아니면, 그저 필멸자 상태로 좀 더 머무를 수도 있고요.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Pixel Dungeon의 %d층에 오신걸 환영합니다!</string>
-  <string name="GameScene_WelcomeBack">Pixel Dungeon의 %d층에 돌아오신 것을 환영합니다!</string>
+  <string name="GameScene_Welcome">Remixed Dungeon의 %d층에 오신걸 환영합니다!</string>
+  <string name="GameScene_WelcomeBack">Remixed Dungeon의 %d층에 돌아오신 것을 환영합니다!</string>
   <string name="GameScene_NightMode">조심하세요, 던전은 밤중엔 보다 더 위험하답니다.</string>
   <string name="GameScene_Chasm">당신의 발자국 소리가 던전에 울려 퍼집니다.</string>
   <string name="GameScene_Water">물 소리가 당신 주위에서 들려 옵니다.</string>

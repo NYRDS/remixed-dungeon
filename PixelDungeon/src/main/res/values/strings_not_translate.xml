@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- GENERAL STRINGS VARIABLES -->
+    <string name="app_name">Remixed Dungeon</string>
+
     <!-- STRINGS OF Assets CLASS -->
     <string name="Assets_Prefix">""</string>
 

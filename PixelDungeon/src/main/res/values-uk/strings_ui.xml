@@ -7,7 +7,7 @@
   <string name="TitleScene_About">Про гру</string>
   <string name="TitleScene_InternalStorageLow">Недостатньо місця\n у внутрішній пам\'яті пристрою\n Твоя гра може не зберегтись!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon від NYRDS основана на Pixel Dungeon Source від Watabou.</string>
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon від NYRDS основана на Pixel Dungeon Source від Watabou.</string>
   <string name="AboutScene_Code">Код:</string>
   <string name="AboutScene_Graphics">Графіка:</string>
   <string name="AboutScene_Music">Музика:</string>

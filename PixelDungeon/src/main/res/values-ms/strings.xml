@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Ramai adiwira pelbagai bangsa dan keturunan telah memasuki Kurungan Bawah Tanah sebelum ini. Sebahagian daripada mereka berjaya memperoleh harta karun dan artifak ajaib, tetapi ramai yang tidak pernah kembali. Walaubagaimanapun, tiada siapa yang berjaya memperoleh Azimat Yendor, yang diketahui tersembunyi jauh di dalam Kurungan Bawah Tanah ini.\n\nDengan semangat waja dan mahu mengatasi cabaran ini, anda yakin tuah sentiasa bersama anda. Sekarang mari mulakan pengembaraan ini!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +7,8 @@
   <string name="AmuletScene_Stay">Saya belum selesai lagi</string>
   <string name="AmuletScene_Txt">Akhirnya, Azimat Yendor berada ditangan anda. Dengan kuasa azimat ini anda boleh menguasai dunia atau memberi keamanan dan kesenangan kepada sesiapa sahaja. Dengan azimat ini, kehidupan anda akan berubah selamanya dan juga permainan ini juga berakhir di sini. Ataupun anda masih boleh lagi berkelana di dalam Kurungan Bawah Tanah...</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Selamat datang ke aras %d Pixel Dungeon!</string>
-  <string name="GameScene_WelcomeBack">Selamat kembali ke aras %d Pixel Dungeon!</string>
+  <string name="GameScene_Welcome">Selamat datang ke aras %d Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Selamat kembali ke aras %d Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Berhati-hatilah, kurungan bawah tanah semakin merbahaya diwaktu malam!</string>
   <string name="GameScene_Chasm">Langkah anda kedengaran bergema dalam kurungan bawah tanah.</string>
   <string name="GameScene_Water">Anda mendengar deburan air disekitar anda.</string>
@@ -126,7 +124,7 @@
   <string name="WndGame_Ranking">Kedudukan</string>
   <string name="WndGame_Start">Mula Permainan Baharu</string>
   <string name="WndGame_menu">Menu Utama</string>
-  <string name="WndGame_Exit">Keluar dari Pixel Dungeon</string>
+  <string name="WndGame_Exit">Keluar dari Remixed Dungeon</string>
   <string name="WndGame_Return">Kembali ke Permainan</string>
   <string name="WndGame_Save">Simpan</string>
   <string name="WndGame_Load">Muat</string>
@@ -260,7 +258,7 @@
   <string name="LloidsBeacon_Preventing">Aura tenaga ajaib yang kuat dalam tempat ini menghalang anda menggunakan suar lloyd!</string>
   <string name="LloidsBeacon_Creatures">Aura psikik makhluk berhampiran tidak membenarkan anda guna suar lloyd buat masa ini.</string>
   <string name="LloidsBeacon_Return">Suar lloyd berjaya menetapkan lokasi semasa anda, kini anda boleh kembali ke sini bila-bila masa.</string>
-  <string name="LloidsBeacon_Set">\n\nSuar ini telah ditetapkan di lokasi tertentu pada aras ke %d Pixel Dungeon.</string>
+  <string name="LloidsBeacon_Set">\n\nSuar ini telah ditetapkan di lokasi tertentu pada aras ke %d Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">kalam misteri</string>
   <string name="Stylus_ACInscribe">TULIS</string>

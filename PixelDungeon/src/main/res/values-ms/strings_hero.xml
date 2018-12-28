@@ -3,7 +3,7 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">anda</string>
   <string name="Hero_Name_Objective">anda</string>
-  <string name="Hero_Leave">Anda tidak sepatutnya tinggalkan Pixel Dungeon begitu sahaja.</string>
+  <string name="Hero_Leave">Anda tidak sepatutnya tinggalkan Remixed Dungeon begitu sahaja.</string>
   <string name="Hero_LevelUp">tahap meningkat!</string>
   <string name="Hero_NewLevel">Selamat datang ke aras %d! Sekarang anda lebih sihat dan lebih fokus. Lebih mudah anda menyerang pihak musuh dan mengelak serangan mereka.</string>
   <string name="Hero_YouNowHave">Anda kini mempunyai %s</string>

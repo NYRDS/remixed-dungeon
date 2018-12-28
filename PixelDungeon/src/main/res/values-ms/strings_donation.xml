@@ -6,13 +6,13 @@
   <string name="WndDonate_ruby">delima</string>
   <string name="WndDonate_donate">derma:</string>
   <string name="WndDonate_notConnected">tiada sambungan :(</string>
-  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - percuma untuk semua orang dan berkekalan.\n\nWalaubagaimanapun, Anda boleh membantu kami menjadikan permainan ini lebih baik.\n\nSelain itu, atas kemurahan hati anda, anda akan dihadiahkan dengan beberapa penambahbaikan kosmetik.</string>
+  <string name="WndDonate_commonDonateText">Remixed Dungeon - percuma untuk semua orang dan berkekalan.\n\nWalaubagaimanapun, Anda boleh membantu kami menjadikan permainan ini lebih baik.\n\nSelain itu, atas kemurahan hati anda, anda akan dihadiahkan dengan beberapa penambahbaikan kosmetik.</string>
   <string name="WndDonate_silverDonate">sumbangan perak</string>
   <string name="WndDonate_goldDonate">sumbangan emas</string>
   <string name="WndDonate_rubyDonate">sumbangan delima</string>
   <string name="WndDonate_silverDonateText">Semua pendermaan akan membantu pembangunan projek ini</string>
   <string name="WndDonate_goldDonateText">Terima Kasih atas Sumbangan Anda</string>
-  <string name="WndDonate_rubyDonateText">Kemurahan hati anda dapat membantu kami terus menambahbaik Remixed Pixel Dungeon!</string>
+  <string name="WndDonate_rubyDonateText">Kemurahan hati anda dapat membantu kami terus menambahbaik Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Selain itu dapat lumpuhkan iklan dalam semua mod permainan dan membuka watak pemburu dari awal.</string>
   <string name="WndDonate_goldDonateText2">Tambahan lagi membuka watak bunian dari awal.</string>
   <string name="WndDonate_rubyDonateText2" />

@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remix de Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Bien des héros de tous les horizons se sont aventurés dans le donjon avant vous. Quelques uns en sont ressortis avec des trésors et des artefacts magiques, la plupart n\'en sont jamais revenus. Mais aucun d\'entre eux n\'a réussi à retrouver l\'amulette de Yendor, qui serait cachée dans les profondeurs du donjon.
 Vous vous considérez prêt à relever le défi, mais plus important encore, vous sentez que la chance vous sourit. Il est temps de commencer votre propre aventure !</string>
@@ -10,8 +8,8 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="AmuletScene_Stay">Je ne suis pas encore prêt</string>
   <string name="AmuletScene_Txt">Vous la tenez enfin dans vos mains, l\'amulette de Yendor. En utilisant ses pouvoirs, vous pourriez gouverner le monde ou y apporter la paix et la prospérité. De toutes façons, votre vie sera changée à jamais et ce jeu prendra fin ici. A moins que vous ne préfériez rester un simple mortel pour quelque temps encore.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Bienvenue au %de étage de Pixel Dungeon !</string>
-  <string name="GameScene_WelcomeBack">Re-bienvenue au %de étage de Pixel Dungeon !</string>
+  <string name="GameScene_Welcome">Bienvenue au %de étage de Remixed Dungeon !</string>
+  <string name="GameScene_WelcomeBack">Re-bienvenue au %de étage de Remixed Dungeon !</string>
   <string name="GameScene_NightMode">Soyez prudent, le donjon est encore plus dangereux pendant la nuit !</string>
   <string name="GameScene_Chasm">Vos pas résonnent à travers le donjon.</string>
   <string name="GameScene_Water">Vous entendez de l\'eau éclabousser autour de vous.</string>
@@ -127,7 +125,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="WndGame_Ranking">Classement</string>
   <string name="WndGame_Start">Nouvelle partie</string>
   <string name="WndGame_menu">Menu principal</string>
-  <string name="WndGame_Exit">Quitter Pixel Dungeon</string>
+  <string name="WndGame_Exit">Quitter Remixed Dungeon</string>
   <string name="WndGame_Return">Revenir à la partie</string>
   <string name="WndGame_Save">Sauvegarder</string>
   <string name="WndGame_Load">Charger</string>
@@ -263,7 +261,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="LloidsBeacon_Creatures">L\'aura psychique des créatures aux alentours vous empêchent d\'utiliser la balise de lloyd pour le moment.</string>
   <string name="LloidsBeacon_Return">La balise est bien installée à votre position, vous pourrez revenir ici n\'importe quand maintenant. </string>
   <string name="LloidsBeacon_Set">
-Cette balise a été installée quelque part au %de étage du Pixel Dungeon.</string>
+Cette balise a été installée quelque part au %de étage du Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">stylet arcanique</string>
   <string name="Stylus_ACInscribe">INSCRIRE</string>

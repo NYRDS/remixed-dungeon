@@ -7,7 +7,7 @@
   <string name="TitleScene_About">Perihal</string>
   <string name="TitleScene_InternalStorageLow">Ruang tidak mencukupi\n dalam storan dalaman\n Kemajuan anda boleh hilang!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon oleh NYRDS berdasarkan Sumber Pixel Dungeon oleh Watabou.</string>
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon oleh NYRDS berdasarkan Sumber Pixel Dungeon oleh Watabou.</string>
   <string name="AboutScene_Code">Kod:</string>
   <string name="AboutScene_Graphics">Grafik:</string>
   <string name="AboutScene_Music">Muzik:</string>

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
+
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Wielu bohaterów każdego rodzaju udało się w podróż do Lochu przed tobą. Niektórzy z nich powrócili przynosząc ze sobą skarby i magiczne artefakty, lecz o większości już nigdy więcej nie słyszano. Ale nikomu jeszcze się nie udało zdobyć Amuletu Yendoru, który o ile wiadomo spoczywa w głębiach Lochu.\n\nUważasz, że jesteś gotowy podjąć to wyzwanie, ale co najważniejsze, czujesz że fortuna uśmiecha się do ciebie. Czas rozpocząć własną przygodę!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +8,8 @@
   <string name="AmuletScene_Stay">Jeszcze nie skończyłem</string>
   <string name="AmuletScene_Txt">W końcu trzymasz go w swych dłoniach. Amulet Yendora należy do ciebie! Używając jego mocy możesz objąć panowanie nad światem, przynieść pokój i dobrobyt mieszkańcom Powierzchni lub cokolwiek innego. W każdym razie, twoje życie odmieniło się na zawsze i ta gra kończy się tutaj. Albo możesz zostać tutaj jako śmiertelnik nieco dłużej.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Witaj na poziomie %d gry Pixel Dungeon!</string>
-  <string name="GameScene_WelcomeBack">Witaj z powrotem na poziomie %d of Pixel Dungeon!</string>
+  <string name="GameScene_Welcome">Witaj na poziomie %d gry Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Witaj z powrotem na poziomie %d of Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Zachowaj ostrożność! Loch jest jeszcze bardziej niebezpieczny w nocy!</string>
   <string name="GameScene_Chasm">Dźwięk twych kroków roznosi się echem po lochu.</string>
   <string name="GameScene_Water">Słyszysz plusk wody wokół ciebie.</string>
@@ -100,7 +99,7 @@
   <string name="WndGame_Ranking">Rankingi</string>
   <string name="WndGame_Start">Zacznij nową grę</string>
   <string name="WndGame_menu">Menu Główne</string>
-  <string name="WndGame_Exit">Wyjdź z Pixel Dungeon</string>
+  <string name="WndGame_Exit">Wyjdź z Remixed Dungeon</string>
   <string name="WndGame_Return">Wróc do Gry</string>
   <string name="WndGame_Save">Zapisz</string>
   <string name="WndGame_Load">Wczytaj</string>
@@ -234,7 +233,7 @@
   <string name="LloidsBeacon_Preventing">Silna aura magiczna tego miejsca uniemożliwia ci używanie Rdzenia!</string>
   <string name="LloidsBeacon_Creatures">Psychiczna aura niedalekich potworów nie pozwala ci teraz użyć Rdzenia.</string>
   <string name="LloidsBeacon_Return">Rdzeń Lloyda został pomyślnie ustawiony na twojej obecnej pozycji. Teraz możesz powrócić w to miejsce kiedy chcesz.</string>
-  <string name="LloidsBeacon_Set">\n\nRdzeń został ustawiony na %d poziomie Pixel Dungeon.
+  <string name="LloidsBeacon_Set">\n\nRdzeń został ustawiony na %d poziomie Remixed Dungeon.
 </string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">magiczny pisak</string>

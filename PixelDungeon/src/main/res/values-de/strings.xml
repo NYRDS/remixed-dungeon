@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Viele Helden aller Art wagten sich vor dir in den Dungeon. Manche von ihnen kehrten glorreich mit Schätzen und magischen Artefakten wieder, viele wurden seitdem nie wieder gesehen. Aber keiner hat es je geschafft, das Amulett von Yendor zu beschaffen, von dem man sich erzählt, dass es tief in den Ebenen des Dungeons verborgen sein soll. Du erklärst dich bereit für die Herausforderung, aber am wichtigsten ist, dass dich das Glück anlächelt. Es ist Zeit, dein Abenteuer zu starten!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +7,8 @@
   <string name="AmuletScene_Stay">Ich bin noch nicht fertig</string>
   <string name="AmuletScene_Txt">Endlich hältst du es in deinen Händen, das Amulett von Yendor. Mit seiner Macht kannst du die Welt erobern oder allen Frieden und Reichtum bringen oder was auch immer. Jedenfalls wird sich dein Leben für immer verändern und dieses Spiel endet hier. Oder du kannst noch ein bisschen länger ein gewöhnlicher Sterblicher bleiben.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Willkommen auf Ebene %d von Pixel Dungeon!</string>
-  <string name="GameScene_WelcomeBack">Willkommen zurück auf Ebene %d von Pixel Dungeon!</string>
+  <string name="GameScene_Welcome">Willkommen auf Ebene %d von Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Willkommen zurück auf Ebene %d von Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Sei vorsichtig, der Dungeon ist nachts noch gefährlicher!</string>
   <string name="GameScene_Chasm">Deine Schritte hallen durch den Dungeon.</string>
   <string name="GameScene_Water">Du hörst Wasser um dich plätschern.</string>
@@ -126,7 +124,7 @@
   <string name="WndGame_Ranking">Ranglisten</string>
   <string name="WndGame_Start">Starte ein neues Spiel</string>
   <string name="WndGame_menu">Hauptmenü</string>
-  <string name="WndGame_Exit">Pixel Dungeon verlassen</string>
+  <string name="WndGame_Exit">Remixed Dungeon verlassen</string>
   <string name="WndGame_Return">Zurück zum Spiel</string>
   <string name="WndGame_Save">Speichern</string>
   <string name="WndGame_Load">Laden</string>
@@ -263,7 +261,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="LloidsBeacon_Return">Lloyd\'s Leutfeuer wurde mit Erfolg an deine momentane Stelle gesetzt, jetzt kannst du jederzeit hierher zurückkehren.</string>
   <string name="LloidsBeacon_Set">
 
-Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Pixel Dungeon gesetzt.</string>
+Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gesetzt.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">Arkaner Stift</string>
   <string name="Stylus_ACInscribe">GRAVIEREN</string>

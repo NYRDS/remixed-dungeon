@@ -6,13 +6,13 @@
   <string name="WndDonate_ruby">yakut</string>
   <string name="WndDonate_donate">bağış:</string>
   <string name="WndDonate_notConnected">bağlantı yok :(</string>
-  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - herkes için bedava ve bedava kalacak. \n\nOyunun daha iyi olmasına yardım edebilirsiniz\n\nEn içten teşekkürlerimizin yanında oyunda bazı kozmetik geliştirmeler alırsınız.</string>
+  <string name="WndDonate_commonDonateText">Remixed Dungeon - herkes için bedava ve bedava kalacak. \n\nOyunun daha iyi olmasına yardım edebilirsiniz\n\nEn içten teşekkürlerimizin yanında oyunda bazı kozmetik geliştirmeler alırsınız.</string>
   <string name="WndDonate_silverDonate">gümüş bağış</string>
   <string name="WndDonate_goldDonate">altın bağış</string>
   <string name="WndDonate_rubyDonate">yakut bağış</string>
   <string name="WndDonate_silverDonateText">Her bağış projemizin geliştirilmesinde yardımcı olacaktır</string>
   <string name="WndDonate_goldDonateText">Yardımınız için teşekkürler</string>
-  <string name="WndDonate_rubyDonateText">Cömertliğiniz Remixed Pixel Dungeon\'ın daha iyi hale gelmesinde bize yardımcı olacaktır!</string>
+  <string name="WndDonate_rubyDonateText">Cömertliğiniz Remixed Dungeon\'ın daha iyi hale gelmesinde bize yardımcı olacaktır!</string>
   <string name="WndDonate_silverDonateText2">Aynı zamanda tüm oyun modlarındaki reklamları kaldırır ve avcı karakterinin kilidini açar</string>
   <string name="WndDonate_goldDonateText2">Aynı zamanda elf karakterinin kilidini açar.</string>
   <string name="WndDonate_rubyDonateText2" />

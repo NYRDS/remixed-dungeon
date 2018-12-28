@@ -7,7 +7,7 @@
   <string name="TitleScene_About">Hakkında</string>
   <string name="TitleScene_InternalStorageLow">Dahili depolamada\n yeterli yer yok\n İlerlemen kaybolabilir!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Watabou\'nun Pixel Dungeon\'ı tabanlı NYRDS tarafından yapılan Remixed Pixel Dungeon</string>
+  <string name="AboutScene_Txt_Intro">Watabou\'nun Pixel Dungeon\'ı tabanlı NYRDS tarafından yapılan Remixed Dungeon</string>
   <string name="AboutScene_Code">Kodlama:</string>
   <string name="AboutScene_Graphics">Grafikler:</string>
   <string name="AboutScene_Music">Müzik:</string>

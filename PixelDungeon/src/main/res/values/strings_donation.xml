@@ -7,7 +7,7 @@
     
     <string name="WndDonate_donate">donate: </string>
     <string name="WndDonate_notConnected">no connection :(</string>
-    <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - free to everyone and always will be.\n\nHowever, You can help us make the game even better.\n\nIn addition to our heartfelt thanks you\'ll get some cosmetic improvements.</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon - free to everyone and always will be.\n\nHowever, You can help us make the game even better.\n\nIn addition to our heartfelt thanks you\'ll get some cosmetic improvements.</string>
     
     <string name="WndDonate_silverDonate">silver donation</string>
     <string name="WndDonate_goldDonate">gold donation</string>
@@ -15,7 +15,7 @@
     
     <string name="WndDonate_silverDonateText">Any donation will help the development of the project</string>
     <string name="WndDonate_goldDonateText">Thank You for Your help</string>
-    <string name="WndDonate_rubyDonateText">Your generosity will help us continue to improve Remixed Pixel Dungeon!</string>
+    <string name="WndDonate_rubyDonateText">Your generosity will help us continue to improve Remixed Dungeon!</string>
     
     <string name="WndDonate_silverDonateText2">Also disable ads in all game modes and unlock huntress from start.</string>
     <string name="WndDonate_goldDonateText2">Also unlocks elf from start.</string>

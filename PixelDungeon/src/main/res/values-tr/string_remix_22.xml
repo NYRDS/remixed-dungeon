@@ -8,7 +8,7 @@
   <string name="ShadowLord_Intro">Kendini hazırla!</string>
   <string name="ShadowLord_Death">Hayıııır...</string>
   <string name="AllowStatisticsCollectionScene_Title">Kullanım istatistiği toplanması </string>
-  <string name="AllowStatisticsCollectionScene_Request">Eğer izin verirseniz, Remixed Pixel Dungeon kullanım istatistiğinizi toplayacaktır. Toplanan veri,\n
+  <string name="AllowStatisticsCollectionScene_Request">Eğer izin verirseniz, Remixed Dungeon kullanım istatistiğinizi toplayacaktır. Toplanan veri,\n
     - çeşitli küçük kusurların tespitinde ve onarılmasında ( vahim hatalar için açıkça hata raporu göndermeniz istenecektir ),\n
     - oyun dengesi iyileştirmelerinde,\n
     - cihaza özgü performans sorunlarının onarılmasında,\n
@@ -17,7 +17,7 @@ Kararınızı her zaman değiştirebilirsiniz (ana ekrandaki grafik ikonuna tık
   <string name="AllowStatisticsCollectionScene_Allow">İzin ver</string>
   <string name="AllowStatisticsCollectionScene_Deny">Reddet</string>
   <string name="Darkness_Info">Görünüşe göre havada ebedi karanlık parçacıkları uçuşuyor</string>
-  <string name="WndSelectLanguage_ImproveTranslation">Lütfen Remixed Pixel Dungeon çevirilerini geliştirmemize yardımcı olun</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Lütfen Remixed Dungeon çevirilerini geliştirmemize yardımcı olun</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
-  <string name="WndSelectLanguage_LinkToTranslationSite"> Remixed Pixel Dungeon çeviri ekibine katılmak için buraya tıklayın</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite"> Remixed Dungeon çeviri ekibine katılmak için buraya tıklayın</string>
 </resources>

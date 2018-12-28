@@ -6,13 +6,13 @@
   <string name="WndDonate_ruby">rubino</string>
   <string name="WndDonate_donate">dona:</string>
   <string name="WndDonate_notConnected">nessuna connessione :(</string>
-  <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon-Gratuito a tutti e lo sarà sempre.\n\nTuttavia,si può contribuire a rendere il gioco ancora migliore.\n\nNostri più sentiti ringraziamenti si otterranno alcuni miglioramenti cosmetici . .</string>
+  <string name="WndDonate_commonDonateText">Remixed Dungeon-Gratuito a tutti e lo sarà sempre.\n\nTuttavia,si può contribuire a rendere il gioco ancora migliore.\n\nNostri più sentiti ringraziamenti si otterranno alcuni miglioramenti cosmetici . .</string>
   <string name="WndDonate_silverDonate">Donazione d\'Argento</string>
   <string name="WndDonate_goldDonate">Donazione d\'Oro</string>
   <string name="WndDonate_rubyDonate">Donazione rubino</string>
   <string name="WndDonate_silverDonateText">Ogni donazione contribuirà allo sviluppo del progetto</string>
   <string name="WndDonate_goldDonateText">Grazie a te per il tuo aiuto </string>
-  <string name="WndDonate_rubyDonateText">La vostra generosità ci aiuterà a continuare a migliorare Remixed Pixel Dungeon!</string>
+  <string name="WndDonate_rubyDonateText">La vostra generosità ci aiuterà a continuare a migliorare Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">disabilità le ads in tutte le modalità di gioco e sblocca il cacciatore ad inizio gioco</string>
   <string name="WndDonate_goldDonateText2">Sbloccherai l\'elfo ad inizio gioco</string>
   <string name="WndDonate_rubyDonateText2" />

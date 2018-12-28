@@ -8,7 +8,7 @@
   <string name="ShadowLord_Intro">Preparati!</string>
   <string name="ShadowLord_Death">Nooooo...</string>
   <string name="AllowStatisticsCollectionScene_Title">Raccolta delle statistiche d\'utilizzo</string>
-  <string name="AllowStatisticsCollectionScene_Request">Se lo consentirai, Remixed Pixel Dungeon raccoglierà le statistiche d\'uso.
+  <string name="AllowStatisticsCollectionScene_Request">Se lo consentirai, Remixed Dungeon raccoglierà le statistiche d\'uso.
 Questi dati saranno usati per:\n
 - Individuare e risolvere vari difetti minori (per gli errori gravi ti sarà chiesto esplicitamente di inviare un rapporto)\n
 - Migliorare il bilanciamento del gioco\n
@@ -18,7 +18,7 @@ Puoi cambiare la tua decisione quando vuoi (clicca l\'icona dei grafici nella sc
   <string name="AllowStatisticsCollectionScene_Allow">Consenti </string>
   <string name="AllowStatisticsCollectionScene_Deny">Nega</string>
   <string name="Darkness_Info">Sembrerebbero dei frammenti di oscurità eterna fluttuanti nell\'aria</string>
-  <string name="WndSelectLanguage_ImproveTranslation">Per favore dai una mano a migliorare le traduzioni di Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Per favore dai una mano a migliorare le traduzioni di Remixed Dungeon</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
-  <string name="WndSelectLanguage_LinkToTranslationSite">Clicca per entrare nel team di traduzione di Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Clicca per entrare nel team di traduzione di Remixed Dungeon</string>
 </resources>

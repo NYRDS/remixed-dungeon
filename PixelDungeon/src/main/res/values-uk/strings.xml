@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">Remixed Pixel Dungeon</string>
+
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Багато шукачів пригод та мандрівників спускалися у підземелля до тебе. Деякі поверталися, наділені незліченими багатствами й чарівними артефактами, але більшість даремно загинула. Але нікому не вдалося здобути Амулет Ендора, за легендами, прихований у глибинах підземелля.\n\nТи відчуваєш, що готовий до цього іспиту та й, що досить важливо, ти віриш, що удача на твоєму боці. Настав час почати свою пригоду!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -9,8 +8,8 @@
   <string name="AmuletScene_Stay">Я, мабуть, ще оглянуся навколо.</string>
   <string name="AmuletScene_Txt">Нарешті він у твоїх руках, Амулет Ендора. Ти отримаєш могутність, яка дозволить підкорити всіх і вся, чи подаруєш людству мир та процвітання, чи щось схоже на це. У будь-якому разі, твоє життя зміниться назавжди, а гра на цьому закінчиться. З іншого боку, ти маєш можливість ще трохи побути жалюгідним смертним.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Ласкаво просимо на %d рівень Pixel Dungeon!</string>
-  <string name="GameScene_WelcomeBack">З поверненням на %d рівень Pixel Dungeon!</string>
+  <string name="GameScene_Welcome">Ласкаво просимо на %d рівень Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">З поверненням на %d рівень Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Будь напоготові, адже вночі підземелля набагато небезпечніше!</string>
   <string name="GameScene_Chasm">Кожний твій крок лунає по всьому підземеллю.</string>
   <string name="GameScene_Water">Ти чуєш плескіт води поблизу.</string>
@@ -126,7 +125,7 @@
   <string name="WndGame_Ranking">Рекорди</string>
   <string name="WndGame_Start">Почати нову гру</string>
   <string name="WndGame_menu">Головне меню</string>
-  <string name="WndGame_Exit">Вийти з Pixel Dungeon</string>
+  <string name="WndGame_Exit">Вийти з Remixed Dungeon</string>
   <string name="WndGame_Return">Повернутися до гри</string>
   <string name="WndGame_Save">Зберегти</string>
   <string name="WndGame_Load">Завантажити</string>
@@ -266,7 +265,7 @@
   <string name="LloidsBeacon_Return">Маяк Лойда успішно встановлено. Тепер ти можеш повернутися сюди в будь-яку мить.</string>
   <string name="LloidsBeacon_Set">
 
-Цей маяк було встановлено десь на рівні %d Pixel Dungeon.</string>
+Цей маяк було встановлено десь на рівні %d Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">містичне перо</string>
   <string name="Stylus_ACInscribe">ВПИСАТИ</string>

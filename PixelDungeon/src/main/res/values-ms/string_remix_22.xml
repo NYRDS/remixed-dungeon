@@ -8,7 +8,7 @@
   <string name="ShadowLord_Intro">Bersedia!</string>
   <string name="ShadowLord_Death">Tidaaaaak...</string>
   <string name="AllowStatisticsCollectionScene_Title">Koleksi statistik penggunaan</string>
-  <string name="AllowStatisticsCollectionScene_Request">Jika anda benarkan, Remixed Pixel Dungeon akan mengutip statistik penggunaan. Data tersebut akan digunakan untuk:\n
+  <string name="AllowStatisticsCollectionScene_Request">Jika anda benarkan, Remixed Dungeon akan mengutip statistik penggunaan. Data tersebut akan digunakan untuk:\n
     - mencari dan membaiki glic kecil ( bagi ralat mati anda perlu serahkan laporan )\n
     - penambahbaikan keseimbangan permainan\n
     - baiki masalah prestasi tertentu peranti\n
@@ -18,7 +18,7 @@
   <string name="AllowStatisticsCollectionScene_Allow">Benarkan</string>
   <string name="AllowStatisticsCollectionScene_Deny">Nafikan</string>
   <string name="Darkness_Info">Nampaknya ada jasad kegelapan abadi terapung-apung di udara</string>
-  <string name="WndSelectLanguage_ImproveTranslation">Sila bantu menambahbaik terjemahan Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Sila bantu menambahbaik terjemahan Remixed Dungeon</string>
   <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
-  <string name="WndSelectLanguage_LinkToTranslationSite">Klik di sini untuk menyertai pasukan terjemahan Remixed Pixel Dungeon</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Klik di sini untuk menyertai pasukan terjemahan Remixed Dungeon</string>
 </resources>

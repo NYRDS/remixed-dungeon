@@ -9,6 +9,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.concurrent.Executor;
 
@@ -24,7 +25,7 @@ public class SignIn implements OnCompleteListener, Executor {
     @Nullable
     private GoogleSignInAccount signedInAccount;
 
-    private void signInSilently() {
+    public void signInSilently() {
         GoogleSignInClient signInClient = GoogleSignIn.getClient(Game.instance(),
                 GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
 
@@ -33,9 +34,10 @@ public class SignIn implements OnCompleteListener, Executor {
                     if (task.isSuccessful()) {
                         // The signed in account is stored in the task's result.
                         signedInAccount = task.getResult();
-
+                        GLog.p("silentSignIn ok");
                     } else {
                         startSignInIntent();
+                        GLog.p("silentSignIn failed");
                     }
                 });
     }
@@ -50,8 +52,9 @@ public class SignIn implements OnCompleteListener, Executor {
 
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_SIGN_IN) {
+            GLog.p(String.format("resultCode :%d", resultCode));
             if (resultCode == RESULT_OK) {
-
+                GLog.p("ok");
             }
             return true;
         }
@@ -64,7 +67,7 @@ public class SignIn implements OnCompleteListener, Executor {
     }
 
     @Override
-    public void execute(Runnable command) {
+    public void execute(@NonNull Runnable command) {
         command.run();
     }
 }
