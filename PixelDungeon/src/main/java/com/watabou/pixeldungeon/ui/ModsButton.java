@@ -14,7 +14,7 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
@@ -30,7 +30,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 		super(Icons.MODDING_MODE.get());
 
 		text = new SystemText(GuiProperties.regularFontSize());
-		text.text(PixelDungeon.activeMod());
+		text.text(RemixedDungeon.activeMod());
 		add(text);
 	}
 
@@ -42,7 +42,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 	public void update() {
 		if(needUpdate) {
 			needUpdate = false;
-			text.text(PixelDungeon.activeMod());
+			text.text(RemixedDungeon.activeMod());
 		}
 		super.update();
 	}

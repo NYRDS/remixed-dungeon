@@ -21,7 +21,7 @@ import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
@@ -65,7 +65,7 @@ public class GoldIndicator extends Component {
 			
 		}
 		
-		if (Dungeon.gold() != lastValue && !PixelDungeon.toolStyle().equals(Tool.Size.Tiny.name())) {
+		if (Dungeon.gold() != lastValue && !RemixedDungeon.toolStyle().equals(Tool.Size.Tiny.name())) {
 			
 			lastValue = Dungeon.gold();
 			

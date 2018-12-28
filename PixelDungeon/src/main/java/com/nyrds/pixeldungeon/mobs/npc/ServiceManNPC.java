@@ -9,7 +9,7 @@ import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -65,7 +65,7 @@ public class ServiceManNPC extends ImmortalNPC {
         Game.instance().runOnUiThread(() ->
         {
             boolean result = RewardVideo.isReady();
-            PixelDungeon.pushUiTask(() -> {
+            RemixedDungeon.pushUiTask(() -> {
                         if (result) {
                             GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit(), getReward()));
                         } else {

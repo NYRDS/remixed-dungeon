@@ -32,8 +32,8 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.utils.BitmapCache;
 
@@ -63,7 +63,7 @@ public class PixelScene extends Scene {
 	private static void viewportSizeChanged() {
 		float minWidth, minHeight;
 
-		if (PixelDungeon.landscape()) {
+		if (RemixedDungeon.landscape()) {
 			minWidth = MIN_WIDTH_L;
 			minHeight = MIN_HEIGHT_L;
 		} else {

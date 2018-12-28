@@ -82,7 +82,7 @@ import java.util.HashSet;
 
 import androidx.annotation.NonNull;
 
-import static com.watabou.pixeldungeon.PixelDungeon.MOVE_TIMEOUTS;
+import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
 
@@ -131,7 +131,7 @@ public class Dungeon {
     public static void init() {
         gameId = String.valueOf(SystemTime.now());
 
-        challenges = PixelDungeon.challenges();
+        challenges = RemixedDungeon.challenges();
 
         Scroll.initLabels();
         Potion.initColors();
@@ -171,8 +171,8 @@ public class Dungeon {
 
         hero.levelId = DungeonGenerator.getEntryLevel();
 
-        realtime = PixelDungeon.realtime();
-        moveTimeoutIndex = PixelDungeon.limitTimeoutIndex(PixelDungeon.moveTimeout());
+        realtime = RemixedDungeon.realtime();
+        moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(RemixedDungeon.moveTimeout());
 
         SaveUtils.deleteLevels(heroClass);
     }
@@ -546,7 +546,7 @@ public class Dungeon {
         LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 
         realtime = bundle.optBoolean(REALTIME, false);
-        moveTimeoutIndex = PixelDungeon.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
+        moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
     }
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
@@ -807,7 +807,7 @@ public class Dungeon {
 
     public static void setDifficulty(int _difficulty) {
         difficulty = _difficulty;
-        PixelDungeon.setDifficulty(difficulty);
+        RemixedDungeon.setDifficulty(difficulty);
     }
 
     public static int gold() {

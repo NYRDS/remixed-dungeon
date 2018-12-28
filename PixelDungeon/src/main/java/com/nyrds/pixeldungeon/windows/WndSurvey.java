@@ -6,8 +6,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -36,7 +36,7 @@ public class WndSurvey extends Window {
     public WndSurvey(final JSONObject survey) {
         super();
 
-        String lang = PixelDungeon.uiLanguage();
+        String lang = RemixedDungeon.uiLanguage();
 
         if (!survey.has(lang)) {
             lang = "en";

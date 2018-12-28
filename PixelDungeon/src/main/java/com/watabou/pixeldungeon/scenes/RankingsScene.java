@@ -27,8 +27,8 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Rankings;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -80,7 +80,7 @@ public class RankingsScene extends PixelScene {
 
         if (Rankings.INSTANCE.records.size() > 0) {
 
-            float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
+            float rowHeight = RemixedDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
 
             float top = align(rowHeight / 2);
 
@@ -106,7 +106,7 @@ public class RankingsScene extends PixelScene {
                         startFrom -= recordsPerPage;
                     }
 
-                    switch (PixelDungeon.donated()) {
+                    switch (RemixedDungeon.donated()) {
                         case 0:
                             if (startFrom > 10) {
                                 startFrom = 10;
@@ -194,7 +194,7 @@ public class RankingsScene extends PixelScene {
     private void createRecords() {
         int w = Camera.main.width;
 
-        float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
+        float rowHeight = RemixedDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
 
         float left = (w - Math.min(MAX_ROW_WIDTH, w)) / 2 + GAP;
         float top = align(rowHeight / 2);
@@ -224,7 +224,7 @@ public class RankingsScene extends PixelScene {
 
     @Override
     protected void onBackPressed() {
-        PixelDungeon.switchNoFade(TitleScene.class);
+        RemixedDungeon.switchNoFade(TitleScene.class);
     }
 
     public static class Record extends Button {

@@ -42,7 +42,7 @@ import com.watabou.pixeldungeon.CustomLayerTilemap;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -150,11 +150,11 @@ public class GameScene extends PixelScene {
 
         Level level = Dungeon.level;
 
-        PixelDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
+        RemixedDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
 
         super.create();
 
-        Camera.main.zoom((float) (defaultZoom + PixelDungeon.zoom()));
+        Camera.main.zoom((float) (defaultZoom + RemixedDungeon.zoom()));
 
         scene = this;
 
@@ -278,7 +278,7 @@ public class GameScene extends PixelScene {
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
         add(fog);
 
-        brightness(PixelDungeon.brightness());
+        brightness(RemixedDungeon.brightness());
 
         spells = new Group();
         add(spells);

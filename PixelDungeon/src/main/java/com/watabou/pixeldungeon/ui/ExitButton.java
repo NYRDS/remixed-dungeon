@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
 public class ExitButton extends ImageButton {
@@ -32,7 +32,7 @@ public class ExitButton extends ImageButton {
 		if (Game.scene() instanceof TitleScene) {
 			Game.shutdown();
 		} else {
-			PixelDungeon.switchNoFade( TitleScene.class );
+			RemixedDungeon.switchNoFade( TitleScene.class );
 		}
 	}
 }

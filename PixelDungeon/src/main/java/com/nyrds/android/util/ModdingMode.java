@@ -3,8 +3,8 @@ package com.nyrds.android.util;
 import android.content.Context;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -57,7 +57,7 @@ public class ModdingMode {
 
 	public static int activeModVersion() {
 		if (mActiveMod.equals(ModdingMode.REMIXED)) {
-			return PixelDungeon.versionCode;
+			return RemixedDungeon.versionCode;
 		}
 
 		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
@@ -190,7 +190,7 @@ public class ModdingMode {
 	}
 
 	private static Context getContext() {
-		return RemixedPixelDungeonApp.getContext();
+		return RemixedDungeonApp.getContext();
 	}
 
 	public static RuntimeException modException(Exception e) {

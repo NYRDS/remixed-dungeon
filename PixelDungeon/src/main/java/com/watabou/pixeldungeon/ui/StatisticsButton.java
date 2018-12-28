@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.AllowStatisticsCollectionScene;
 
 public class StatisticsButton extends ImageButton {
@@ -11,6 +11,6 @@ public class StatisticsButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		PixelDungeon.switchScene(AllowStatisticsCollectionScene.class);
+		RemixedDungeon.switchScene(AllowStatisticsCollectionScene.class);
 	}
 }

@@ -44,7 +44,7 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Google._PlayGames;
@@ -55,7 +55,7 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -205,7 +205,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
                 GLog.toFile("%s ",toastText);
 
-                android.widget.Toast toast = android.widget.Toast.makeText(RemixedPixelDungeonApp.getContext(), toastText,
+                android.widget.Toast toast = android.widget.Toast.makeText(RemixedDungeonApp.getContext(), toastText,
                         Toast.LENGTH_SHORT);
                 toast.show();
             }
@@ -264,7 +264,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         //GLog.w("diff %d", getDifficulty());
 
-        if(PixelDungeon.donated() > 0) {
+        if(RemixedDungeon.donated() > 0) {
             AdsUtils.removeTopBanner();
             return;
         }

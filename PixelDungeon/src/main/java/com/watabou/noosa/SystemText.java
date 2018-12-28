@@ -11,7 +11,7 @@ import android.text.TextPaint;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
 import java.util.ArrayList;
@@ -104,7 +104,7 @@ public class SystemText extends Text {
 	}
 
 	public static void updateFontScale() {
-		float scale = 0.5f + 0.01f * PixelDungeon.fontScale();
+		float scale = 0.5f + 0.01f * RemixedDungeon.fontScale();
 
 		scale *= 1.2f;
 

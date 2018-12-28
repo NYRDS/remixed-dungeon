@@ -10,7 +10,7 @@ import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -86,7 +86,7 @@ public class WndHats extends Window {
 
 		//List
 		for (final String item : hats) {
-			String price = PixelDungeon.instance().iap.getSkuPrice(item);
+			String price = RemixedDungeon.instance().iap.getSkuPrice(item);
 			Accessory accessory = Accessory.getByName(item);
 
 			if (accessory.haveIt()) {
@@ -159,7 +159,7 @@ public class WndHats extends Window {
 			yPos = (int) (rb.bottom() + GAP * 2);
 		}
 
-		int HEIGHT = PixelDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
+		int HEIGHT = RemixedDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
 		int h = Math.min(HEIGHT - GAP, yPos);
 
 		float topGap = listTitle.y + listTitle.height() + GAP;

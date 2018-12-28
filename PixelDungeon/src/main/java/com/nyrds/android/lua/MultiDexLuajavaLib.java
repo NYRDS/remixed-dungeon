@@ -1,7 +1,7 @@
 package com.nyrds.android.lua;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
@@ -17,7 +17,7 @@ public class MultiDexLuajavaLib extends LuajavaLib {
 
 	@Override
 	protected Class classForName(String name) {
-		ClassLoader classLoader = RemixedPixelDungeonApp.getContext().getClassLoader();
+		ClassLoader classLoader = RemixedDungeonApp.getContext().getClassLoader();
 
 		try {
 

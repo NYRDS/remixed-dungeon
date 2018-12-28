@@ -54,11 +54,11 @@ import java.util.regex.Pattern;
 
 import javax.microedition.khronos.opengles.GL10;
 
-public class PixelDungeon extends Game {
+public class RemixedDungeon extends Game {
 
 	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
 
-	public PixelDungeon() {
+	public RemixedDungeon() {
 		super(TitleScene.class);
 		
 		// remix 0.5
@@ -101,16 +101,16 @@ public class PixelDungeon extends Game {
 		playGames = new _PlayGames(this);
 		MobileAds.initialize(this, Game.getVar(R.string.admob_app_id));
 
-		ModdingMode.selectMod(PixelDungeon.activeMod());
-		PixelDungeon.activeMod(ModdingMode.activeMod());
+		ModdingMode.selectMod(RemixedDungeon.activeMod());
+		RemixedDungeon.activeMod(ModdingMode.activeMod());
 
 		if(!Utils.canUseClassicFont(uiLanguage())) {
-			PixelDungeon.classicFont(false);
+			RemixedDungeon.classicFont(false);
 		}
 		
-		ModdingMode.setClassicTextRenderingMode(PixelDungeon.classicFont());
+		ModdingMode.setClassicTextRenderingMode(RemixedDungeon.classicFont());
 
-		EventCollector.collectSessionData("font", String.valueOf(PixelDungeon.classicFont()));
+		EventCollector.collectSessionData("font", String.valueOf(RemixedDungeon.classicFont()));
 
 		setSelectedLanguage();
 		ItemSpritesDescription.readItemsDesc();
@@ -372,9 +372,9 @@ public class PixelDungeon extends Game {
 
 	public static void activeMod(String mod) {
 		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
-		ModdingMode.selectMod(PixelDungeon.activeMod());
+		ModdingMode.selectMod(RemixedDungeon.activeMod());
 
-		PixelDungeon.instance().setSelectedLanguage();
+		RemixedDungeon.instance().setSelectedLanguage();
 
 		EventCollector.collectSessionData("RPD_active_mod", ModdingMode.activeMod());
 		EventCollector.collectSessionData("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));

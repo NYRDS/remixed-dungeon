@@ -67,7 +67,7 @@ public enum Rankings {
 		rec.win		    = winLevel  != gameOver.LOSE;
 		rec.heroClass	= hero.heroClass;
 		rec.score	    = score(winLevel);
-		rec.mod			= PixelDungeon.activeMod();
+		rec.mod			= RemixedDungeon.activeMod();
 		rec.gameId      = Dungeon.gameId;
 
 

@@ -39,8 +39,8 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Rankings;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -551,7 +551,7 @@ public class Hero extends Char implements PetOwner {
 				}
 			}
 
-			if (PixelDungeon.realtime()) {
+			if (RemixedDungeon.realtime()) {
 				if (!ready) {
 					readyAndIdle();
 				}
@@ -1489,7 +1489,7 @@ public class Hero extends Char implements PetOwner {
 		deathDesc.put("version", Game.version);
 		deathDesc.put("mod", ModdingMode.activeMod());
 		deathDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
-		deathDesc.put("donation",Integer.toString(PixelDungeon.donated()));
+		deathDesc.put("donation",Integer.toString(RemixedDungeon.donated()));
 
 		EventCollector.logEvent("HeroDeath", deathDesc);
 

@@ -10,7 +10,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -258,6 +258,6 @@ public class StringsManager {
 	}
 
 	public static Context getContext() {
-		return RemixedPixelDungeonApp.getContext();
+		return RemixedDungeonApp.getContext();
 	}
 }

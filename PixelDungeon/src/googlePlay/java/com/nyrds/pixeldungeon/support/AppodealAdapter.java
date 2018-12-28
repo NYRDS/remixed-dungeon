@@ -8,7 +8,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 
 /**
@@ -36,7 +36,7 @@ public class AppodealAdapter {
         String disableNetworks[] = {"adcolony","facebook", "flurry", "startapp", "vungle", "mopub", "mobvista", "tapjoy", "ogury"};
 
         for (String net : disableNetworks) {
-            Appodeal.disableNetwork(PixelDungeon.instance(), net);
+            Appodeal.disableNetwork(RemixedDungeon.instance(), net);
         }
         Appodeal.disableLocationPermissionCheck();
 
@@ -46,8 +46,8 @@ public class AppodealAdapter {
             Appodeal.setTesting(true);
         }
 
-        Appodeal.initialize(PixelDungeon.instance(), appKey, toInitialize, EuConsent.getConsentLevel() == EuConsent.PERSONALIZED);
-        Appodeal.cache(PixelDungeon.instance(), toCache);
+        Appodeal.initialize(RemixedDungeon.instance(), appKey, toInitialize, EuConsent.getConsentLevel() == EuConsent.PERSONALIZED);
+        Appodeal.cache(RemixedDungeon.instance(), toCache);
         Appodeal.setAutoCache(toCache, true);
     }
 
@@ -59,7 +59,7 @@ public class AppodealAdapter {
 
             EventCollector.startTrace("appodeal reward video");
 
-            Appodeal.cache(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+            Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
 
             Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
@@ -100,7 +100,7 @@ public class AppodealAdapter {
         returnTo = ret;
         Game.instance().runOnUiThread(() -> {
             if (isVideoReady()) {
-                Appodeal.show(PixelDungeon.instance(), Appodeal.REWARDED_VIDEO);
+                Appodeal.show(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             } else {
                 returnTo.returnToWork(false);
             }

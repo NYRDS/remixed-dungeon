@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -59,16 +59,16 @@ public class WndPremiumSettings extends Window {
 		RedButton btn = new RedButton(assetName) {
 			@Override
 			protected void onClick() {
-				PixelDungeon.scene().add(
+				RemixedDungeon.scene().add(
 						new WndOptions(assetName, "", options) {
 							@Override
 							protected void onSelect(int index) {
-								if (PixelDungeon.donated() >= material2level.get(options[index])) {
+								if (RemixedDungeon.donated() >= material2level.get(options[index])) {
 									Assets.use(assetKind, index);
-									PixelDungeon.scene().add(
+									RemixedDungeon.scene().add(
 											new WndMessage("ok!"));
 								} else {
-									PixelDungeon.scene().add(
+									RemixedDungeon.scene().add(
 											new WndMessage(Game.getVar(R.string.WndPremiumSettings_notAvailbale)));
 								}
 							}
@@ -84,6 +84,6 @@ public class WndPremiumSettings extends Window {
 	@Override
 	public void onBackPressed() {
 		hide();
-		PixelDungeon.resetScene();
+		RemixedDungeon.resetScene();
 	}
 }

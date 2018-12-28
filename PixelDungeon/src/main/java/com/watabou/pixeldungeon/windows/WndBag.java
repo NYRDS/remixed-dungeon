@@ -28,7 +28,7 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
@@ -107,7 +107,7 @@ public class WndBag extends WndTabbed {
 		
 		super();
 	
-		nCols = PixelDungeon.landscape() ? COLS_L : COLS_P;
+		nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
 		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
 		
 		this.listener = listener;
@@ -148,7 +148,7 @@ public class WndBag extends WndTabbed {
 		for (Bag b : bags) {
 			if (b != null) {
 				BagTab tab = new BagTab(this, b );
-				if(PixelDungeon.landscape()){
+				if(RemixedDungeon.landscape()){
 					tab.setSize( TAB_WIDTH_L, tabHeight() );
 				} else {
 					tab.setSize( TAB_WIDTH_P, tabHeight() );

@@ -6,7 +6,7 @@ import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 public class Tool extends Button {
 
@@ -20,7 +20,7 @@ public class Tool extends Button {
     private   NinePatch bg;
 
     public Tool(int index, Chrome.Type chrome) {
-        this(Size.valueOf(PixelDungeon.toolStyle()),index, chrome);
+        this(Size.valueOf(RemixedDungeon.toolStyle()),index, chrome);
     }
 
     public Tool(Size size, int index, Chrome.Type chrome) {

@@ -7,8 +7,8 @@ import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -115,7 +115,7 @@ public class Accessory {
     }
 
     static public void check() {
-        Iap iap = PixelDungeon.instance().iap;
+        Iap iap = RemixedDungeon.instance().iap;
 
         if(iap == null) {
             EventCollector.logException("iap is null!!!");
@@ -134,7 +134,7 @@ public class Accessory {
     }
 
     public boolean haveIt() {
-        return PixelDungeon.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), "").equals(getClass().getSimpleName());
+        return RemixedDungeon.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), "").equals(getClass().getSimpleName());
     }
 
     public void ownIt(boolean reallyOwn) {

@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndGameplaySettings;
 import com.nyrds.pixeldungeon.windows.WndUiSettings;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends WndMenuCommon {
@@ -52,7 +52,7 @@ public class WndSettings extends WndMenuCommon {
 		menuItems.add(new MenuButton(selectLanguage) {
 			@Override
 			protected void onClick() {
-				PixelDungeon.scene().add(
+				RemixedDungeon.scene().add(
 						new WndSelectLanguage(selectLanguage, "English",
 								"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文", /*"日本語",*/ "Türkçe", "Украї́нська","Bahasa Melayu") {
 
@@ -60,9 +60,9 @@ public class WndSettings extends WndMenuCommon {
 							protected void onSelect(int index) {
 								String lang[] = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh", /*"ja",*/ "tr", "uk","ms"};
 								if (!Utils.canUseClassicFont(lang[index])) {
-									PixelDungeon.classicFont(false);
+									RemixedDungeon.classicFont(false);
 								}
-								PixelDungeon.uiLanguage(lang[index]);
+								RemixedDungeon.uiLanguage(lang[index]);
 							}
 						});
 			}

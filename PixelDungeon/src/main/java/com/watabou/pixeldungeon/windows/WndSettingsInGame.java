@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndInGameUiSettings;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
 public class WndSettingsInGame extends WndMenuCommon {
@@ -32,11 +32,11 @@ public class WndSettingsInGame extends WndMenuCommon {
 		addSoundControls(menuItems);
 
 		menuItems.add( new MenuCheckBox(Game
-				.getVar(R.string.WndSettings_Brightness),PixelDungeon.brightness()) {
+				.getVar(R.string.WndSettings_Brightness),RemixedDungeon.brightness()) {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				PixelDungeon.brightness(checked());
+				RemixedDungeon.brightness(checked());
 			}
 		});
 
@@ -73,7 +73,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 
 			private void zoom(float value,Selector s) {
 				Camera.main.zoom(value);
-				PixelDungeon.zoom(value - PixelScene.defaultZoom);
+				RemixedDungeon.zoom(value - PixelScene.defaultZoom);
 
 				float zoom = Camera.main.zoom;
 				s.enable(zoom < PixelScene.maxZoom, zoom > PixelScene.minZoom, true);
@@ -85,6 +85,6 @@ public class WndSettingsInGame extends WndMenuCommon {
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
-		PixelDungeon.resetScene();
+		RemixedDungeon.resetScene();
 	}
 }

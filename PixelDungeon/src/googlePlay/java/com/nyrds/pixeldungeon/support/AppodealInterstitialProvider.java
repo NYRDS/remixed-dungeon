@@ -4,7 +4,7 @@ import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.InterstitialCallbacks;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
 
@@ -25,7 +25,7 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
             return;
         }
 
-        if(!Appodeal.show(PixelDungeon.instance(), Appodeal.INTERSTITIAL)) {
+        if(!Appodeal.show(RemixedDungeon.instance(), Appodeal.INTERSTITIAL)) {
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
     }

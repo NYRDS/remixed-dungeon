@@ -21,7 +21,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -42,7 +42,7 @@ public class WndItem extends Window {
 		
 		super();
 
-		int WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
+		int WIDTH = RemixedDungeon.landscape() ? WIDTH_L : WIDTH_P;
 
 		IconTitle titlebar = new IconTitle(new ItemSprite( item ), Utils.capitalize( item.toString() ));
 		titlebar.setRect( 0, 0, WIDTH, 0 );

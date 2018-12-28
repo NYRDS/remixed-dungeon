@@ -5,7 +5,7 @@ import android.app.Activity;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.support.Google.GoogleIap;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,22 +53,22 @@ public class Iap implements IPurchasesUpdated {
     }
 
     private void checkPurchases() {
-        PixelDungeon.setDonationLevel(0);
+        RemixedDungeon.setDonationLevel(0);
 
         if (checkPurchase(SKU_LEVEL_1)) {
-            PixelDungeon.setDonationLevel(1);
+            RemixedDungeon.setDonationLevel(1);
         }
 
         if (checkPurchase(SKU_LEVEL_2)) {
-            PixelDungeon.setDonationLevel(2);
+            RemixedDungeon.setDonationLevel(2);
         }
 
         if (checkPurchase(SKU_LEVEL_3)) {
-            PixelDungeon.setDonationLevel(3);
+            RemixedDungeon.setDonationLevel(3);
         }
 
         if (checkPurchase(SKU_LEVEL_4)) {
-            PixelDungeon.setDonationLevel(4);
+            RemixedDungeon.setDonationLevel(4);
         }
     }
 

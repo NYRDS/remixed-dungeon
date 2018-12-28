@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 /**
  * Created by mike on 24.05.2016.
@@ -14,7 +14,7 @@ public class Ads {
     }
 
     private static boolean needDisplaySmallScreenEasyModeIs() {
-        return Game.getDifficulty() == 0 && isSmallScreen() && PixelDungeon.donated() == 0;
+        return Game.getDifficulty() == 0 && isSmallScreen() && RemixedDungeon.donated() == 0;
     }
 
     public static void displayEasyModeBanner() {

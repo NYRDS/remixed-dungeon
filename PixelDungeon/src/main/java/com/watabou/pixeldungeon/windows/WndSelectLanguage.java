@@ -27,7 +27,7 @@ import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -72,7 +72,7 @@ public class WndSelectLanguage extends Window {
 
 		float pos = translateLink.y + translateLink.height() + GAP;
 
-		final int columns = PixelDungeon.landscape() ? 3 : 2;
+		final int columns = RemixedDungeon.landscape() ? 3 : 2;
 
 		int BUTTON_WIDTH = WIDTH / columns - GAP;
 

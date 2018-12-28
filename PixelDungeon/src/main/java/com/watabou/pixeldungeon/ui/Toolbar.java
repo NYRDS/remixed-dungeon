@@ -27,7 +27,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -126,7 +126,7 @@ public class Toolbar extends Component {
         toolbar.removeAll();
         toolbar.destroy();
 
-        int active_slots = PixelDungeon.quickSlots();
+        int active_slots = RemixedDungeon.quickSlots();
 
         HBox slotBox = new HBox(width());
         slotBox.setAlign(HBox.Align.Center);
@@ -134,7 +134,7 @@ public class Toolbar extends Component {
         if(active_slots<0) {
             int slotsCanFit = (int) (width()/slots.get(0).width());
             if(Math.abs(active_slots)!=slotsCanFit) {
-                PixelDungeon.quickSlots(-slotsCanFit);
+                RemixedDungeon.quickSlots(-slotsCanFit);
                 return;
             }
             active_slots = slotsCanFit;
@@ -151,7 +151,7 @@ public class Toolbar extends Component {
         }
 
         if (slotBox.width() > width()) {
-            PixelDungeon.quickSlots(active_slots - 1);
+            RemixedDungeon.quickSlots(active_slots - 1);
             return;
         }
 
@@ -169,7 +169,7 @@ public class Toolbar extends Component {
         inventoryBox.add(btnInventory);
         inventoryBox.setAlign(VBox.Align.Bottom);
 
-        boolean handness = PixelDungeon.handedness();
+        boolean handness = RemixedDungeon.handedness();
 
         actionBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left);
         inventoryBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left);

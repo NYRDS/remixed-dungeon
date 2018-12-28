@@ -30,7 +30,7 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChangelogButton;
 import com.watabou.pixeldungeon.ui.DonateButton;
@@ -72,7 +72,7 @@ public class TitleScene extends PixelScene {
 		title.x = (w - title.width()) / 2;
 		title.y = (title.height() * 0.10f) / 2;
 
-		if (PixelDungeon.landscape()){
+		if (RemixedDungeon.landscape()){
 			title.y = -(title.height() * 0.05f);
 		}
 
@@ -83,7 +83,7 @@ public class TitleScene extends PixelScene {
 		DashboardItem btnBadges = new DashboardItem(Game.getVar(R.string.TitleScene_Badges), 3) {
 			@Override
 			protected void onClick() {
-				PixelDungeon.switchNoFade(BadgesScene.class);
+				RemixedDungeon.switchNoFade(BadgesScene.class);
 			}
 		};
 		btnBadges.setPos(w / 2 - btnBadges.width(), (h + height) / 2
@@ -93,7 +93,7 @@ public class TitleScene extends PixelScene {
 		DashboardItem btnAbout = new DashboardItem(Game.getVar(R.string.TitleScene_About), 1) {
 			@Override
 			protected void onClick() {
-				PixelDungeon.switchNoFade(AboutScene.class);
+				RemixedDungeon.switchNoFade(AboutScene.class);
 			}
 		};
 		btnAbout.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
@@ -102,7 +102,7 @@ public class TitleScene extends PixelScene {
 		DashboardItem btnPlay = new DashboardItem(Game.getVar(R.string.TitleScene_Play), 0) {
 			@Override
 			protected void onClick() {
-				PixelDungeon.switchNoFade(StartScene.class);
+				RemixedDungeon.switchNoFade(StartScene.class);
 			}
 		};
 		btnPlay.setPos(w / 2 - btnPlay.width(), btnAbout.top()
@@ -112,7 +112,7 @@ public class TitleScene extends PixelScene {
 		DashboardItem btnHighscores = new DashboardItem(Game.getVar(R.string.TitleScene_Highscores), 2) {
 			@Override
 			protected void onClick() {
-				PixelDungeon.switchNoFade(RankingsScene.class);
+				RemixedDungeon.switchNoFade(RankingsScene.class);
 			}
 		};
 		btnHighscores.setPos(w / 2, btnPlay.top());
@@ -130,7 +130,7 @@ public class TitleScene extends PixelScene {
 
 		float dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 
-		if (PixelDungeon.landscape()) {
+		if (RemixedDungeon.landscape()) {
 			btnPlay.setPos(w / 2 - btnPlay.width() * 2, dashBaseline);
 			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
 			btnBadges.setPos(w / 2, dashBaseline + btnBadges.height()/3);
@@ -168,12 +168,12 @@ public class TitleScene extends PixelScene {
 		VBox leftGroup = new VBox();
 
 		leftGroup.add(new PrefsButton());
-        if (PixelDungeon.donated() > 0) {
+        if (RemixedDungeon.donated() > 0) {
             leftGroup.add(new PremiumPrefsButton());
         }
 		leftGroup.add(new PlayGamesButton());
 
-        String lang = PixelDungeon.uiLanguage();
+        String lang = RemixedDungeon.uiLanguage();
         final boolean useVk = lang.equals("ru") || lang.equals("fb");
 
         Icons social =  useVk ? Icons.VK : Icons.FB;
@@ -193,8 +193,8 @@ public class TitleScene extends PixelScene {
 		btnExit.setPos(w - btnExit.width(), 0);
 		add(btnExit);
 
-		if (PixelDungeon.version() != Game.versionCode) {
-			if(PixelDungeon.differentVersions(PixelDungeon.versionString(),Game.version)) {
+		if (RemixedDungeon.version() != Game.versionCode) {
+			if(RemixedDungeon.differentVersions(RemixedDungeon.versionString(),Game.version)) {
 				changelogUpdated = true;
 			}
 		}
@@ -221,7 +221,7 @@ public class TitleScene extends PixelScene {
 		time += Game.elapsed;
 		float cl = (float) Math.sin(time) * 0.5f + 0.5f;
 		if(!donationAdded) {
-			if (PixelDungeon.canDonate()) {
+			if (RemixedDungeon.canDonate()) {
 				add(pleaseSupport);
 				add(btnDonate);
 			}

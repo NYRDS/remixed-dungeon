@@ -2,7 +2,7 @@ package com.nyrds.android.util;
 
 import android.content.Context;
 
-import com.nyrds.pixeldungeon.ml.RemixedPixelDungeonApp;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -169,6 +169,6 @@ public class FileSystem {
 	}
 
 	private static Context getContext() {
-		return RemixedPixelDungeonApp.getContext();
+		return RemixedDungeonApp.getContext();
 	}
 }

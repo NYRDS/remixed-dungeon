@@ -10,7 +10,7 @@ import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 import io.fabric.sdk.android.Fabric;
 
-public class RemixedPixelDungeonApp extends MultiDexApplication {
+public class RemixedDungeonApp extends MultiDexApplication {
 
 	@SuppressLint("StaticFieldLeak")
 	static Context instanceContext;

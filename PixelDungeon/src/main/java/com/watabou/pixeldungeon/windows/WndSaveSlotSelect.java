@@ -14,7 +14,7 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.ReturnOnlyOnce;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -95,7 +95,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 		ArrayList<TextButton> buttons = new ArrayList<>();
 
 
-		final int columns = PixelDungeon.landscape() ? 3 : 2;
+		final int columns = RemixedDungeon.landscape() ? 3 : 2;
 		final int BUTTON_WIDTH = WIDTH / columns - GAP;
 
 		for (int i = 0; i < options.length / columns + 1; i++) {
@@ -212,7 +212,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
             bottomRow.add(autoLoadButton);
         }
 
-		if (PixelDungeon.donated() == 0 && PixelDungeon.canDonate()) {
+		if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
 			DonateButton btn = new DonateButton(this);
 			bottomRow.add(btn);
 		}
@@ -244,7 +244,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 	}
 
 	private static String windowText() {
-		if (PixelDungeon.donated() == 0 && PixelDungeon.canDonate()) {
+		if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
 			return Game.getVar(R.string.WndSaveSlotSelect_dontLike);
 		}
 		return EMPTY_STRING;
@@ -291,7 +291,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
 		Game.softPaused = true;
 
-		if (PixelDungeon.donated() < 1) {
+		if (RemixedDungeon.donated() < 1) {
 			Ads.displaySaveAndLoadAd(new ReturnOnlyOnce(this));
 		} else {
 			returnToWork(true);

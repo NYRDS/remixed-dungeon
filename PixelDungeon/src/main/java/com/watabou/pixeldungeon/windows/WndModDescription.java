@@ -10,7 +10,7 @@ import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -28,7 +28,7 @@ public class WndModDescription extends Window {
 
 		this.prevMod = prevMod;
 
-		PixelDungeon.activeMod(option);
+		RemixedDungeon.activeMod(option);
 
 		yPos = 0;
 		
@@ -96,7 +96,7 @@ public class WndModDescription extends Window {
 			@Override
 			protected void onClick() {
 				switchSaves(option, prevMod);
-				PixelDungeon.instance().doRestart();
+				RemixedDungeon.instance().doRestart();
 			}
 		};
 		
@@ -129,7 +129,7 @@ public class WndModDescription extends Window {
 	@Override
 	public void hide() {
 		super.hide();
-		PixelDungeon.activeMod(prevMod);
+		RemixedDungeon.activeMod(prevMod);
 	}
 
 	public void onBackPressed() {

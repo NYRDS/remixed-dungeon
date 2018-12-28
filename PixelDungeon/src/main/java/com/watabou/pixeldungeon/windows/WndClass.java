@@ -18,12 +18,12 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -46,7 +46,7 @@ public class WndClass extends WndTabbed {
 
 		super();
 
-		WIDTH = PixelDungeon.landscape() ? WIDTH_L : WIDTH_P;
+		WIDTH = RemixedDungeon.landscape() ? WIDTH_L : WIDTH_P;
 
 		this.cl = cl;
 

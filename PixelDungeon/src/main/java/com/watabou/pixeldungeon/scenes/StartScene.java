@@ -36,7 +36,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.Logbook;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BannerSprites.Type;
@@ -130,7 +130,7 @@ public class StartScene extends PixelScene {
         int w = Camera.main.width;
         int h = Camera.main.height;
 
-        if (PixelDungeon.landscape()) {
+        if (RemixedDungeon.landscape()) {
             width = WIDTH_L;
             height = HEIGHT_L;
         } else {
@@ -205,7 +205,7 @@ public class StartScene extends PixelScene {
             }
         }
 
-        if (PixelDungeon.landscape()) {
+        if (RemixedDungeon.landscape()) {
             float shieldW = width / usableClasses;
             float shieldH = Math.min(centralHeight, shieldW);
             top = title.y + title.height + (centralHeight - shieldH) / 2;
@@ -250,16 +250,16 @@ public class StartScene extends PixelScene {
         unlock = PixelScene.createMultiline(GuiProperties.titleFontSize());
         add(unlock);
 
-        huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (PixelDungeon.donated() >= 1);
-        elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (PixelDungeon.donated() >= 2);
-        gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (PixelDungeon.donated() >= 3);
+        huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (RemixedDungeon.donated() >= 1);
+        elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (RemixedDungeon.donated() >= 2);
+        gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (RemixedDungeon.donated() >= 3);
 
         ExitButton btnExit = new ExitButton();
         btnExit.setPos(Camera.main.width - btnExit.width(), 0);
         add(btnExit);
 
         for (ClassShield shield : shields) {
-            if (shield.cl == HeroClass.values()[PixelDungeon.lastClass()]) {
+            if (shield.cl == HeroClass.values()[RemixedDungeon.lastClass()]) {
                 updateShield(shield);
                 return;
             }
@@ -395,7 +395,7 @@ public class StartScene extends PixelScene {
 
         Map<String,String> resDesc = new HashMap<>();
         resDesc.put("class",curShield.cl.name());
-        resDesc.put("mod", PixelDungeon.activeMod());
+        resDesc.put("mod", RemixedDungeon.activeMod());
         resDesc.put("difficulty",  String.valueOf(difficulty));
 
         EventCollector.logEvent("game", resDesc);
@@ -403,8 +403,8 @@ public class StartScene extends PixelScene {
         Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
         ServiceManNPC.resetLimit();
 
-        if (PixelDungeon.intro()) {
-            PixelDungeon.intro(false);
+        if (RemixedDungeon.intro()) {
+            RemixedDungeon.intro(false);
             Game.switchScene(IntroScene.class);
         } else {
             InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
@@ -414,7 +414,7 @@ public class StartScene extends PixelScene {
 
     @Override
     protected void onBackPressed() {
-        PixelDungeon.switchNoFade(TitleScene.class);
+        RemixedDungeon.switchNoFade(TitleScene.class);
     }
 
     private static class GameButton extends RedButton {
@@ -593,7 +593,7 @@ public class StartScene extends PixelScene {
             super.createChildren();
 
             image = Icons
-                    .get(PixelDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
+                    .get(RemixedDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
                             : Icons.CHALLENGE_OFF);
             add(image);
         }
@@ -611,10 +611,10 @@ public class StartScene extends PixelScene {
         protected void onClick() {
             if (Badges.isUnlocked(Badges.Badge.VICTORY)) {
                 StartScene.this.add(new WndChallenges(
-                        PixelDungeon.challenges(), true) {
+                        RemixedDungeon.challenges(), true) {
                     public void onBackPressed() {
                         super.onBackPressed();
-                        image.copy(Icons.get(PixelDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
+                        image.copy(Icons.get(RemixedDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
                                 : Icons.CHALLENGE_OFF));
                     }
                 });

@@ -17,7 +17,7 @@ import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -108,11 +108,11 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			FileSystem.deleteRecursive(modDir);
 		}
 
-		if (PixelDungeon.activeMod().equals(name)) {
+		if (RemixedDungeon.activeMod().equals(name)) {
 			SaveUtils.deleteGameAllClasses();
 			SaveUtils.copyAllClassesFromSlot(ModdingMode.REMIXED);
-			PixelDungeon.activeMod(ModdingMode.REMIXED);
-			PixelDungeon.instance().doRestart();
+			RemixedDungeon.activeMod(ModdingMode.REMIXED);
+			RemixedDungeon.instance().doRestart();
 		}
 
 		if (getParent() != null) {
@@ -138,7 +138,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			}
 		}
 
-		String prevMod = PixelDungeon.activeMod();
+		String prevMod = RemixedDungeon.activeMod();
 
 		if (option.equals(prevMod)) {
 			return;

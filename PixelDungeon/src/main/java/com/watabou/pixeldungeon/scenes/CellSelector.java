@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PointF;
 
@@ -99,7 +99,7 @@ public class CellSelector extends TouchArea {
 			
 			int zoom = Math.round( camera.zoom );
 			camera.zoom( zoom );
-			PixelDungeon.zoom(zoom - PixelScene.defaultZoom);
+			RemixedDungeon.zoom(zoom - PixelScene.defaultZoom);
 
 			dragging = true;
 			if (t == touch) {

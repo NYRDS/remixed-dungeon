@@ -1,7 +1,7 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,7 +52,7 @@ public class Mods {
 				ModDesc netDesc = entry.getValue();
 				netDesc.needUpdate = true;
 
-				int rpdVersion = PixelDungeon.versionCode % 2000;
+				int rpdVersion = RemixedDungeon.versionCode % 2000;
 
 				if(netDesc.rpdVersion <= rpdVersion) {
 					modsList.put(name, netDesc);
@@ -128,7 +128,7 @@ public class Mods {
 		Map<String, ModDesc> availableMods = new HashMap<>();
 
 		updateAvailableModsList("common", availableMods);
-		updateAvailableModsList(PixelDungeon.uiLanguage(), availableMods);
+		updateAvailableModsList(RemixedDungeon.uiLanguage(), availableMods);
 		return availableMods;
 	}
 

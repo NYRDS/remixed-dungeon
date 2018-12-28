@@ -23,7 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -53,21 +53,21 @@ public abstract class WndMenuCommon extends Window {
 
     protected void addSoundControls(VBox menuItems) {
         menuItems.add(new MenuCheckBox(Game
-                .getVar(R.string.WndSettings_Music), PixelDungeon.music()) {
+                .getVar(R.string.WndSettings_Music), RemixedDungeon.music()) {
             @Override
             protected void onClick() {
                 super.onClick();
-                PixelDungeon.music(checked());
+                RemixedDungeon.music(checked());
             }
         });
 
 
         menuItems.add(new MenuCheckBox(Game
-                .getVar(R.string.WndSettings_Sound),PixelDungeon.soundFx()) {
+                .getVar(R.string.WndSettings_Sound),RemixedDungeon.soundFx()) {
             @Override
             protected void onClick() {
                 super.onClick();
-                PixelDungeon.soundFx(checked());
+                RemixedDungeon.soundFx(checked());
                 Sample.INSTANCE.play(Assets.SND_CLICK);
             }
         });

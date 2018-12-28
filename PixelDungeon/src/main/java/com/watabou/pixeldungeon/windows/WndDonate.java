@@ -7,7 +7,7 @@ import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
@@ -70,8 +70,8 @@ public class WndDonate extends WndTabbed {
 
 			pos += GAP;
 
-			if (PixelDungeon.donated() < level) {
-				String price = PixelDungeon.instance().iap.getDonationPriceString(level);
+			if (RemixedDungeon.donated() < level) {
+				String price = RemixedDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
 				if( price != null ) {
 					btnText = Game.getVar(R.string.WndDonate_donate) + " " + price;
@@ -82,7 +82,7 @@ public class WndDonate extends WndTabbed {
 					@Override
 					protected void onClick() {
 						EventCollector.logEvent("DonationClick",Integer.toString(level));
-						PixelDungeon.instance().iap.donate(level);
+						RemixedDungeon.instance().iap.donate(level);
 					}
 				};
 				

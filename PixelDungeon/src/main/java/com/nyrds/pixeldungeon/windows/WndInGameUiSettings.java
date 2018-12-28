@@ -3,8 +3,8 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.Selector;
@@ -23,11 +23,11 @@ public class WndInGameUiSettings extends WndMenuCommon {
 			protected void onClick() {
 				super.onClick();
 
-				int ordinal = Tool.Size.valueOf(PixelDungeon.toolStyle()).ordinal();
+				int ordinal = Tool.Size.valueOf(RemixedDungeon.toolStyle()).ordinal();
 				ordinal++;
 				ordinal %= Tool.Size.values().length;
 				Tool.Size size = Tool.Size.values()[ordinal];
-				PixelDungeon.toolStyle(size.name());
+				RemixedDungeon.toolStyle(size.name());
 			}
 		});
 
@@ -35,7 +35,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				PixelDungeon.handedness(!PixelDungeon.handedness());
+				RemixedDungeon.handedness(!RemixedDungeon.handedness());
 			}
 		});
 	}
@@ -46,18 +46,18 @@ public class WndInGameUiSettings extends WndMenuCommon {
 
 			@Override
 			public void onPlus(Selector s) {
-				PixelDungeon.quickSlots(Math.abs(PixelDungeon.quickSlots())+1);
+				RemixedDungeon.quickSlots(Math.abs(RemixedDungeon.quickSlots())+1);
 			}
 
 			@Override
 			public void onMinus(Selector s) {
 
-				PixelDungeon.quickSlots(Math.max(Math.abs(PixelDungeon.quickSlots())-1,0));
+				RemixedDungeon.quickSlots(Math.max(Math.abs(RemixedDungeon.quickSlots())-1,0));
 			}
 
 			@Override
 			public void onDefault(Selector s) {
-				PixelDungeon.quickSlots(-1);
+				RemixedDungeon.quickSlots(-1);
 			}
 		});
 	}
