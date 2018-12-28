@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="tiles_town_inside" tilewidth="16" tileheight="16" tilecount="256" columns="16">
- <image source="../../PixelDungeon/src/main/assets/tiles_town_inside.png" trans="000000" width="256" height="256"/>
+ <image source="../../RemixedDungeon/src/main/assets/tiles_town_inside.png" trans="000000" width="256" height="256"/>
  <tile id="0">
   <properties>
    <property name="deco_desc" value="town_deco_wall_desc"/>

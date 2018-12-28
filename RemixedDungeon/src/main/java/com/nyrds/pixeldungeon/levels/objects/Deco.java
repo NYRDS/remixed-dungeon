@@ -32,7 +32,7 @@ public class Deco extends LevelObject {
 		super.setupFromJson(level,obj);
 
 		name = obj.optString("name","smth");
-		name = obj.optString("desc","smth");
+		desc = obj.optString("desc","smth");
 	}
 
 

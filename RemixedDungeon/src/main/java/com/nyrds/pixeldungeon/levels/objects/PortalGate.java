@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.Packable;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -8,7 +9,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Callback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -109,24 +109,17 @@ public abstract class PortalGate extends LevelObject {
 
 	protected void playStartUpAnim(){
 		animationRunning = true;
-		sprite.playAnim(8, false, new Callback() {
-			@Override
-			public void call() {
-				playActiveLoop();
-				activated = true;
-				animationRunning = false;
-				GLog.w( Game.getVar(R.string.PortalGate_Activated) );
-			}
+		sprite.playAnim(8, false, () -> {
+			playActiveLoop();
+			activated = true;
+			animationRunning = false;
+			GLog.w( Game.getVar(R.string.PortalGate_Activated) );
 		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4, image() + 5, image() + 6, image() + 7, image() + 8, image() + 9, image() + 10, image() + 11, image() + 12, image() + 13, image() + 14, image() + 15, image() + 16);
 
 	}
 
 	protected void playActiveLoop(){
-		sprite.playAnim(8, true, new Callback() {
-			@Override
-			public void call() {
-			}
-		}, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
+		sprite.playAnim(8, true, Util.nullCallback, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
 	}
 
 	@Override
