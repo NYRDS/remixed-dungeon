@@ -1,0 +1,21 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "deco_candle_desc",
+      "name": "deco_candle_name"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/candle.png",
+      "imageIndex" : 0,
+      "animations": {
+        "basic": {
+          "fps": 10,
+          "frames": [0, 1, 2, 3],
+          "looped": true
+        }
+      }
+    }
+  }
+}

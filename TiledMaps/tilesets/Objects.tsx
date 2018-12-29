@@ -13,10 +13,8 @@
  </tile>
  <tile id="34">
   <properties>
-   <property name="desc" value="deco_candle_desc"/>
    <property name="kind" value="Deco"/>
-   <property name="name" value="deco_candle_name"/>
-   <property name="textureFile" value="levelObjects/candle.png"/>
+   <property name="object_desc" value="candle"/>
   </properties>
  </tile>
  <tile id="36">

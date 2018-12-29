@@ -52,66 +52,50 @@
  "multiexit":[],
  "objects":[
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":4,
          "y":7
         }, 
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":6,
          "y":7
         }, 
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":3,
          "y":8
         }, 
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":7,
          "y":8
         }, 
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":3,
          "y":16
         }, 
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":7,
          "y":16
         }, 
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":4,
          "y":17
         }, 
         {
-         "desc":"Deco_Candle_Desc",
          "kind":"Deco",
-         "name":"Deco_Candle_Name",
-         "textureFile":"levelObjects\/candle.png",
+         "object_desc":"candle",
          "x":6,
          "y":17
         }],

@@ -49,4 +49,11 @@ public class Animation {
 			this.frames[i] = film.get(frames.get(i) + shift);
 		}
 	}
+
+
+	public static class AnimationSeq {
+		public int     fps;
+		public int[]   frames;
+		public boolean looped;
+	}
 }

@@ -41,7 +41,6 @@ public class LevelObjectsFactory {
 		return mObjectsList.containsKey(objectClass);
 	}
 
-
 	public static LevelObject createObject(Level level, JSONObject desc) throws JSONException {
 
 		String objectKind = desc.getString("kind");

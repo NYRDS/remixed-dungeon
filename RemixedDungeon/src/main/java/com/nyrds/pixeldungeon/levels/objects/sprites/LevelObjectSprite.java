@@ -67,7 +67,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		int xs = object.getSpriteXS();
 		int ys = object.getSpriteYS();
 
-		frames = new TextureFilm(texture,xs , ys);
+		frames = new TextureFilm(texture, xs, ys);
 		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2, -(ys-DungeonTilemap.SIZE) / 2);
 		origin.set(xs / 2, ys / 2);
 
@@ -87,8 +87,6 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	@Override
 	public void update() {
 		super.update();
-		//setVisible(true);
-		//setVisible(pos == -1 || Dungeon.visible[pos]);
 	}
 
 	@Override
@@ -96,11 +94,24 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	}
 
+	public void playAnim(Animation.AnimationSeq animationSeq, Callback animComplete) {
+		Animation anim = new Animation(animationSeq.fps, animationSeq.looped);
+		anim.frames(frames, animationSeq.frames);
+		onAnimComplete = animComplete;
+		listener = this;
+		play(anim);
+	}
+
+	private void playAnim(Animation anim, Callback animComplete) {
+		onAnimComplete = animComplete;
+		listener = this;
+		play(anim);
+	}
+
 	public void playAnim(int fps, boolean looped, Callback animComplete, int... framesSeq) {
 		Animation anim = new Animation(fps, looped);
 		anim.frames(frames, framesSeq);
-		onAnimComplete = animComplete;
-		listener = this;
+		playAnim(anim, animComplete);
 		play(anim);
 	}
 

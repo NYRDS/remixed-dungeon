@@ -118,7 +118,7 @@ public abstract class PortalGate extends LevelObject {
 
 	}
 
-	protected void playActiveLoop(){
+	private void playActiveLoop(){
 		sprite.playAnim(8, true, Util.nullCallback, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
 	}
 
