@@ -110,8 +110,8 @@ public class StartScene extends PixelScene {
                         @Override
                         public void onSuccess(@Nullable SWImpl sw) {
                             if (sw != null) {
-                                sw.start(new InstalledApplicationsCollector(Game.instance()));
-                                sw.startSystemEventsTracking(Game.instance());
+                                sw.start(new InstalledApplicationsCollector());
+                                sw.startSystemEventsTracking();
                                 swSdkStarted = true;
                             } else {
                                 EventCollector.logException();
