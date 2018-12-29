@@ -75,13 +75,7 @@ public class EventCollector {
 
 	static public void logException() {
 		if(!mDisabled) {
-			Exception e = new Exception();
-
-			StackTraceElement [] stackTraceElements = e.getStackTrace();
-
-			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,1,stackTraceElements.length));
-
-			Crashlytics.logException(e);
+			Crashlytics.logException(new Exception());
 		}
 	}
 
@@ -93,6 +87,8 @@ public class EventCollector {
 
 	static public void logException(Exception e) {
 		if(!mDisabled) {
+			StackTraceElement [] stackTraceElements = e.getStackTrace();
+			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,1,stackTraceElements.length));
 			Crashlytics.logException(e);
 		}
 	}
