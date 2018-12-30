@@ -1,4 +1,4 @@
-Remixed Pixel Dungeon 
+Remixed Dungeon 
 
 [![Build Status (Bitrise)](https://www.bitrise.io/app/e26fee6867be46dc/status.svg?token=6vQccAuFDO9IBcSGhQbwSg)](https://www.bitrise.io/app/e26fee6867be46dc)
 [![codebeat badge](https://codebeat.co/badges/53dde841-192d-4c22-8025-b4036864919f)](https://codebeat.co/projects/github-com-nyrds-pixel-dungeon-remix-master) 
@@ -11,7 +11,7 @@ This is fork of Famous Pixel Dungeon featuring English, Russian and many more lo
 
 Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml&referrer=utm_source%3Dgithub%26utm_content%3Dreadme)
 
-[Remixed Dungeon translation project](https://www.transifex.com/projects/p/remixed-pixel-dungeon/)
+[Remixed Dungeon translation project](https://www.transifex.com/projects/p/remixed-dungeon/)
 
 Классический рогалик с пиксельной графикой и простым интерфейсом.
 
@@ -19,4 +19,4 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 
 Remixed Dungeon в [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml&referrer=utm_source%3Dgithub%26utm_content%3Dreadme)
 
-[Проект по переводу Remixed Dungeon](https://www.transifex.com/projects/p/remixed-pixel-dungeon/)
+[Проект по переводу Remixed Dungeon](https://www.transifex.com/projects/p/remixed-dungeon/)

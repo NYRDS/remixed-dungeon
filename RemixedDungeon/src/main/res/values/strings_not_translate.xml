@@ -33,6 +33,10 @@
     <string name="AboutScene_Lnk">http://wiki.nyrds.net/</string>
     <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
 
+
+    <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-dungeon/</string>
+
+
     <!-- I needed that for testing-->
     <!-- STRINGS OF CandyOfDeath CLASS -->
     <string name="CandyOfDeath_Name">Карамелька смерти</string>
