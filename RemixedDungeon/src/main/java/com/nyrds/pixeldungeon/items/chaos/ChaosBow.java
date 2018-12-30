@@ -9,7 +9,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 
 	@Packable
 	private int charge = 0;
-	
+
 	public ChaosBow() {
 		super( 3, 1f, 1f );
 		
@@ -23,7 +23,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 	}
 	
 	private int chargeForLevel() {
-		return (int) (5 * Math.pow(level(), 1.4));
+		return (int) (5 * Math.pow(level(), 1.5));
 	}
 	
 	@Override

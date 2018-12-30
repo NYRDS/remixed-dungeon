@@ -24,7 +24,7 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 	}
 	
 	private int chargeForLevel() {
-		return (int) (5 * Math.pow(level(), 1.4));
+		return (int) (5 * Math.pow(level(), 1.5));
 	}
 	
 	@Override
