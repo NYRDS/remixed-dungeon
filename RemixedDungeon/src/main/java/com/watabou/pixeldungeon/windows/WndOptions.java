@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -29,21 +30,23 @@ public class WndOptions extends Window {
 
 	public WndOptions( String title, String message, String... options ) {
 		super();
-		
+
+        VBox vbox = new VBox();
+        vbox.setGap(GAP);
+
 		Text tfTitle = PixelScene.createMultiline( title, GuiProperties.titleFontSize() );
 		tfTitle.hardlight( TITLE_COLOR );
-		tfTitle.x = tfTitle.y = GAP;
+		tfTitle.x = GAP;
 		tfTitle.maxWidth(WIDTH - GAP * 2);
-		add( tfTitle );
+		vbox.add( tfTitle );
 		
-		Text tfMesage = PixelScene.createMultiline( message, GuiProperties.regularFontSize() );
-		tfMesage.maxWidth(WIDTH - GAP * 2);
-		tfMesage.x = GAP;
-		tfMesage.y = tfTitle.y + tfTitle.height() + GAP;
-		add( tfMesage );
-		
-		float pos = tfMesage.y + tfMesage.height() + GAP;
-		
+		Text tfMessage = PixelScene.createMultiline( message, GuiProperties.regularFontSize() );
+		tfMessage.maxWidth(WIDTH - GAP * 2);
+		tfMessage.x = GAP;
+		vbox.add( tfMessage );
+
+
+		VBox buttonsVbox = new VBox();
 		for (int i=0; i < options.length; i++) {
 			final int index = i;
 			RedButton btn = new RedButton( options[i] ) {
@@ -54,13 +57,16 @@ public class WndOptions extends Window {
 				}
 			};
 
-			btn.setRect(GAP, pos, WIDTH - GAP * 2, BUTTON_HEIGHT );
-			add( btn );
-			
-			pos += BUTTON_HEIGHT;
+			btn.setSize(WIDTH - GAP * 2, BUTTON_HEIGHT);
+			buttonsVbox.add( btn );
 		}
-		
-		resize( WIDTH, (int)pos );
+
+		buttonsVbox.setRect(0,0,WIDTH,buttonsVbox.childsHeight());
+		vbox.add(buttonsVbox);
+
+		vbox.setRect(0,0,WIDTH,vbox.childsHeight());
+		add(vbox);
+		resize( WIDTH, (int) vbox.height());
 	}
 
 	protected void onSelect( int index ) {}
