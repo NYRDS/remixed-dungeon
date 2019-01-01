@@ -8,12 +8,29 @@ local RPD = require "scripts/lib/commonClasses"
 
 local trap = require"scripts/lib/trap"
 
+
+local dialog1 = function(index)
+    if index == 0 then
+        local hero = RPD.Dungeon.hero
+
+        local pos = RPD.getXy(hero)
+
+        RPD.Dungeon.hero:handle(RPD.Dungeon.level:cell(pos[1],pos[2]-3))
+        return
+    end
+    if index == 1 then
+        RPD.glog("okay...")
+
+    end
+end
+
 return trap.init(
         function (cell, char, data)
-            local hero = RPD.Dungeon.hero
 
-            local pos = RPD.getXy(hero)
-
-            RPD.Dungeon.hero:handle(RPD.Dungeon.level:cell(pos[1],pos[2]-3))
-        end
+            RPD.chooseOption( dialog1,
+                    "Test title",
+                    "Go back",
+                    "Yes",
+                    "No")
+                end
 )

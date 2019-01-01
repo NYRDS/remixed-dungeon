@@ -1,0 +1,6 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/TownsfolkNPC.json",
+   "scriptFile"    :"scripts/npc/Innkeeper",
+   "friendly"      :true
+}

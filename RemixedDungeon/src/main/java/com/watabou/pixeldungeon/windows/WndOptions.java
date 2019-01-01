@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -27,6 +28,15 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndOptions extends Window {
 
 	private static final int WIDTH         = 120;
+/*
+	public WndOptions( int title, int message, int... options ) {
+		String []soptions = new String[options.length];
+		for (int i = 0;i<options.length;++i) {
+			soptions[i]= Game.getVar(options[i]);
+		}
+		this(Game.getVar(title),Game.getVar(message),soptions);
+	}
+*/
 
 	public WndOptions( String title, String message, String... options ) {
 		super();
@@ -34,13 +44,13 @@ public class WndOptions extends Window {
         VBox vbox = new VBox();
         vbox.setGap(GAP);
 
-		Text tfTitle = PixelScene.createMultiline( title, GuiProperties.titleFontSize() );
+		Text tfTitle = PixelScene.createMultiline(StringsManager.maybeId(title), GuiProperties.titleFontSize() );
 		tfTitle.hardlight( TITLE_COLOR );
 		tfTitle.x = GAP;
 		tfTitle.maxWidth(WIDTH - GAP * 2);
 		vbox.add( tfTitle );
 		
-		Text tfMessage = PixelScene.createMultiline( message, GuiProperties.regularFontSize() );
+		Text tfMessage = PixelScene.createMultiline(StringsManager.maybeId(message), GuiProperties.regularFontSize() );
 		tfMessage.maxWidth(WIDTH - GAP * 2);
 		tfMessage.x = GAP;
 		vbox.add( tfMessage );
@@ -49,7 +59,7 @@ public class WndOptions extends Window {
 		VBox buttonsVbox = new VBox();
 		for (int i=0; i < options.length; i++) {
 			final int index = i;
-			RedButton btn = new RedButton( options[i] ) {
+			RedButton btn = new RedButton( StringsManager.maybeId(options[i]) ) {
 				@Override
 				protected void onClick() {
 					hide();

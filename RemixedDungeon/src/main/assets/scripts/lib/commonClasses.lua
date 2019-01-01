@@ -46,6 +46,19 @@ local actions = {
     eat = "Food_ACEat"
 }
 
+local Objects = {
+    Ui = {
+        WndMessage    = "com.watabou.pixeldungeon.windows.WndMessage",
+        WndStory      = "com.watabou.pixeldungeon.windows.WndStory",
+        WndQuest      = "com.watabou.pixeldungeon.windows.WndQuest",
+        WndOptionsLua = "com.nyrds.pixeldungeon.windows.WndOptionsLua"
+    },
+
+    Actors = {
+        ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
+    },
+}
+
 local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
 local Dungeon   = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
 
@@ -78,16 +91,7 @@ local RPD = {
         ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle")
     },
 
-    Objects = {
-        Ui = {
-            WndMessage = "com.watabou.pixeldungeon.windows.WndMessage",
-            WndStory   = "com.watabou.pixeldungeon.windows.WndStory",
-            WndQuest   = "com.watabou.pixeldungeon.windows.WndQuest"
-        },
-        Actors = {
-            ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
-        },
-    },
+    Objects = Objects,
 
     new = function(class, ...)
         return luajava.newInstance(class, ...)
@@ -128,6 +132,11 @@ local RPD = {
     getXy = function (chr)
         local pos = chr:getPos()
         return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}
+    end,
+
+    chooseOption = function(handler, title, text, ...)
+        local wnd = luajava.newInstance(Objects.Ui.WndOptionsLua, handler, title, text, {...})
+        GameScene:show(wnd)
     end
 }
 

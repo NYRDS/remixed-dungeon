@@ -4,6 +4,11 @@
  "maxBrightness":1.05,
  "mobs":[
         {
+         "kind":"InnkeeperNPC",
+         "x":5,
+         "y":8
+        }, 
+        {
          "kind":"Rat",
          "x":22,
          "y":22
@@ -33,14 +38,6 @@
          "object_desc":"candle",
          "x":6,
          "y":5
-        }, 
-        {
-         "kind":"Trap",
-         "script":"scripts\/traps\/CutScene",
-         "trapKind":"scriptFile",
-         "uses":"-1",
-         "x":5,
-         "y":6
         }],
  "tiles":"tiles0_x.png",
  "tiles_logic":"tiles0.png",
