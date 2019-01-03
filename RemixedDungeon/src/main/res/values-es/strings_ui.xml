@@ -7,7 +7,6 @@
   <string name="TitleScene_About">Acerca de</string>
   <string name="TitleScene_InternalStorageLow">No hay espacio suficiente\n en la memoria interna\n ¡Podrías perder tu progreso!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS basado en Pixel Dungeon Soruce de Watabou.</string>
   <string name="AboutScene_Code">Código:</string>
   <string name="AboutScene_Graphics">Gráficos:</string>
   <string name="AboutScene_Music">Música:</string>

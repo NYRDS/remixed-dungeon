@@ -42,8 +42,6 @@
     <string name="JarOfSouls_Name">ruhlar kavanozu</string>
     <string name="JarOfSouls_Gender">erkeksi</string>
     <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
-    <string name="JarOfSouls_Desc">Bu kavanozun üzerine bir kurukafanın parlayan gözleri resmedilmiş. Yaydığı garip enerji seni tedirgin ediyor.</string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">erkeksi</string>

@@ -1,22 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF BadgesScene CLASS-->
-  <string name="BadgesScene_Title">Twoje Odznaczenia</string>
+  <string name="BadgesScene_Title">Twoje odznaki</string>
   <!--STRINGS OF Badges CLASS-->
   <string name="Badges_Info1">Odznaka zatwierdzona: %s</string>
-  <string name="Badges_Info2">Nowa Super Odznaka: %s</string>
-  <string name="Badges_Info3">Nowa Odznaka: %s</string>
-  <string name="Badges_MonsterSlain1">10 wrogów zabitych</string>
-  <string name="Badges_MonsterSlain2">50 wrogów zabitych</string>
-  <string name="Badges_MonsterSlain3">150 wrogów zabitych</string>
-  <string name="Badges_MonsterSlain4">250 wrogów zabitych</string>
-  <string name="Badges_GoldColleted1">100 zebranego złota</string>
-  <string name="Badges_GoldColleted2">500 zebranego złota</string>
-  <string name="Badges_GoldColleted3">2500 zebranego złota</string>
-  <string name="Badges_GoldColleted4">7500 zebranego złota</string>
-  <string name="Badges_LevelReached1">Poziom 6 osiągnięty</string>
+  <string name="Badges_Info2">Nowa super odznaka: %s</string>
+  <string name="Badges_Info3">Nowa plakietka: %s</string>
+  <string name="Badges_MonsterSlain1">10 zabitych wrogów</string>
+  <string name="Badges_MonsterSlain2">50 zabitych wrogów</string>
+  <string name="Badges_MonsterSlain3">150 zabitych wrogów</string>
+  <string name="Badges_MonsterSlain4">250 zabitych wrogów</string>
+  <string name="Badges_GoldColleted1">100 zebranych złota</string>
+  <string name="Badges_GoldColleted2">500 zebranych złota</string>
+  <string name="Badges_GoldColleted3">2500 zebranych złota</string>
+  <string name="Badges_GoldColleted4">7500 zebranych złota</string>
+  <string name="Badges_LevelReached1">Osiągnięty poziom 6</string>
   <string name="Badges_LevelReached2">Poziom 12 osiągnięty</string>
-  <string name="Badges_LevelReached3">Poziom 18 osiągnięty</string>
+  <string name="Badges_LevelReached3">Osiągnął 18 poziom</string>
   <string name="Badges_LevelReached4">Pziom 24 osiągnięty</string>
   <string name="Badges_AllPotions">Wszystkie mikstury zidentyfikowane</string>
   <string name="Badges_AllScrolls">Wszystkie zwoje zidentyfikowane</string>

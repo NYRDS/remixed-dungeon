@@ -6,13 +6,11 @@
   <string name="WndDonate_ruby">rubí</string>
   <string name="WndDonate_donate">donar:</string>
   <string name="WndDonate_notConnected">sin conexión :(</string>
-  <string name="WndDonate_commonDonateText">Remixed Dungeon - Gratis para todos ahora y siempre .\n\nSin embargo puedes ayudarnos a hacer el juego aún mejor.\n\nAdemás de nuestras sinceras gracias obtendrás algunas mejoras decorativas.</string>
   <string name="WndDonate_silverDonate">donación de plata</string>
   <string name="WndDonate_goldDonate">donación de oro</string>
   <string name="WndDonate_rubyDonate">donación de rubí</string>
   <string name="WndDonate_silverDonateText">Cualquier donación ayudará al desarrollo del proyecto</string>
   <string name="WndDonate_goldDonateText">Gracias por tu ayuda</string>
-  <string name="WndDonate_rubyDonateText">¡Tu generosidad nos ayudará a continuar mejorando Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Además, elimina los anuncios y desbloquea a la cazadora desde el principio.</string>
   <string name="WndDonate_goldDonateText2">Además, desbloquea al elfo desde el principio.</string>
   <string name="WndDonate_rubyDonateText2" />

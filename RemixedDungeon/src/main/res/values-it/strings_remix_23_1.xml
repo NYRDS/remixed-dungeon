@@ -6,7 +6,6 @@
   <string name="AzuterronNPC_Gender">maschile</string>
   <string name="AzuterronNPC_Name_Objective">Sconosciuto</string>
   <string name="AzuterronNPC_Desc">Una misteriosa figura avvolta da una nebbia nera.</string>
-  <string name="AzuterronNPC_Quest_Start">Huh, perché... Oh, puoi vedermi, no? Ciò significa che non sei uno di \"loro\". Vedo che non sei nemmeno affezionato a tutti questi mostri. Detto questo, se mi aiuterai con un piccolo problema, ti ricompenserò con la mia assistenza. Da qualche parte su questo livello troverai una bestia d \'oscurità, uno _Spirito oscuro_. Sconfiggilo, prendi il suo _cuore_  e portamelo. E una cosa ancora, se sei interessato  a comprare le mie scorte non esitare a chiedere  </string>
   <string name="AzuterronNPC_Quest_Reminder">Aiutami e io ti aiuterò.</string>
   <string name="AzuterronNPC_Quest_End">Eccelente. Prendi questa pozione, sicuramente, la troverete utile.</string>
   <string name="Journal_Azuterron">Sconosciuto</string>

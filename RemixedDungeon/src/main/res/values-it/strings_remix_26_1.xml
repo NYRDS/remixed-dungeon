@@ -15,7 +15,7 @@
     <string name="TownsfolkNPC_Message3">Che bella giornata.</string>
     <string name="TownsfolkNPC_Message4">Spero che le fogne non si riempiranno quando arriverà la primavera. Non abbiamo bisogno di un altra infestazione di ratti. </string>
 
-	<string name="ServiceManNPC_Name_Objective">lavoratore</string>
+    <string name="ServiceManNPC_Name_Objective">lavoratore</string>
     <!-- STRINGS OF TownShopkeeper CLASS -->
     <string name="TownShopkeeper_Name">Negoziante</string>
     <string name="town_deco_wall_name">Muro</string>

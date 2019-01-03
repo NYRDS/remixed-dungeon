@@ -49,8 +49,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="JarOfSouls_Name">Gefäß der Seelen</string>
     <string name="JarOfSouls_Gender">männlich</string>
     <string name="JarOfSouls_Name_Objective">Gefäß der Seelen</string>
-    <string name="JarOfSouls_Desc">Die glühenden Augen eines Schädels, die auf diesem alten Glas abgebildet sind, sowie die unheimliche Energie, die es absondert, lässt dich unruhig werden.</string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">Lich</string>
     <string name="Lich_Gender">männlich</string>

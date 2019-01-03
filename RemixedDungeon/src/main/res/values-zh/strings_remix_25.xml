@@ -48,8 +48,6 @@
     <string name="JarOfSouls_Name">魂之灵龛</string>
     <string name="JarOfSouls_Gender">陽剛的</string>
     <string name="JarOfSouls_Name_Objective">魂之灵龛</string>
-    <string name="JarOfSouls_Desc">这个老龛盒上的在闪光的骷髅眼睛，和它周围散发的诡异能量，让你感到不安。</string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">巫妖</string>
     <string name="Lich_Gender">陽剛的</string>

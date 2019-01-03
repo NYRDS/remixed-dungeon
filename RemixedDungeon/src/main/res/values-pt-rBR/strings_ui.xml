@@ -7,7 +7,6 @@
   <string name="TitleScene_About">Sobre</string>
   <string name="TitleScene_InternalStorageLow">Sem espaço suficiente\n no armazenamento interno\n Seu progresso pode ser perdido!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS baseado em Pixel Dungeon Source por Watabou.</string>
   <string name="AboutScene_Code">Código:</string>
   <string name="AboutScene_Graphics">Gráficos:</string>
   <string name="AboutScene_Music">Música:</string>

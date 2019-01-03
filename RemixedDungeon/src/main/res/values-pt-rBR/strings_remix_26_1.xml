@@ -8,8 +8,6 @@
     <string name="TownGuardNPC_Desc">Um Guarda da cidade regular.</string>
     <string name="TownGuardNPC_Message1">Avançar.</string>
     <string name="TownGuardNPC_Message2">Graças a aventureiros como você, aqui se tornou um lugar bastante pacífico.</string>
-    <string name="TownGuardNPC_Message3">Você acha que existem muitos guardas nesta cidade? bem, esta é a única cidade com uma masmorra gigantesca que está tomada por monstros, não é mesmo?</string>
-
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">Pessoal da cidade</string>
     <string name="TownsfolkNPC_Gender">masculino</string>
@@ -20,7 +18,7 @@
     <string name="TownsfolkNPC_Message3">Que dia adorável.</string>
     <string name="TownsfolkNPC_Message4">Eu espero que os esgotos não se inundem quando a primavera chegar. Nós não queremos outra infestação de ratos.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">Padre da cidade</string>
     <string name="HealerNPC_Gender">masculino</string>
     <string name="HealerNPC_Name_Objective">Padre da cidade</string>

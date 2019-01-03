@@ -48,8 +48,6 @@
     <string name="JarOfSouls_Name">jarre des âmes</string>
     <string name="JarOfSouls_Gender">masculin</string>
     <string name="JarOfSouls_Name_Objective">jarre des âmes</string>
-    <string name="JarOfSouls_Desc">Les yeux luisant du crâne peint sur cette vieille jarre, de même que l\'étrange énergie qui en émane, ne vous mettent pas à l\'aise. </string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">liche</string>
     <string name="Lich_Gender">in</string>

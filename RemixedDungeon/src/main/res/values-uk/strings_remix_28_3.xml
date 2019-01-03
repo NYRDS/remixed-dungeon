@@ -37,15 +37,6 @@
     <string name="gdpr_disagree">Ні, дякую</string>
     <string name="gdpr_choose">Будь ласка, зробіть вибір</string>
 
-    <string name="Mob_StaHuntingStatus2">Цей %1$s полює на %2$s</string>
-    <string name="Mob_StaFleeingStatus2">Цей %1$s рятується від %2$s</string>
-
-    <string name="Mob_StaTerrorStatus">%1$s наляканий</string>
-    <string name="Mob_StaTerrorStatus2">%2$s налякав %1$s</string>
-
-    <string name="Mob_StaAmokStatus">%1$s поводиться несамовито</string>
-
-
     <string name="WndSaveSlotSelect_LoadAutoSave">Автозбереження</string>
 
     <string name="TownScript_NeedWeapon">Я не піду до підземелля з голими рукам!\nМоже варто відвідати міський магазин, спершу?</string>

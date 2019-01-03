@@ -4,7 +4,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">Zwój przyzwania</string>
-    <string name="ScrollOfSummoning_Info">Gdy przeczytany na głos, ten zwój przywoła jednego z potworów z obecnego piętra.Oczywiście jeżeli wola potwora jest dość słaba aby został on twoim sługą.</string>
     <string name="ScrollOfSummoning_Info_2">Potwór odpowiedział na twoje przyzwanie !</string>
 
     <!-- Generic warnings -->

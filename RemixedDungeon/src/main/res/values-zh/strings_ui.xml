@@ -7,7 +7,6 @@
   <string name="TitleScene_About">關於我們</string>
   <string name="TitleScene_InternalStorageLow">手機內部存儲空間不足，您的進度可能會丟失！</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">重鑄版像素地牢是由NYRDS以Watabou的Pixel Dungeon源碼為基礎製作的。</string>
   <string name="AboutScene_Code">源碼：</string>
   <string name="AboutScene_Graphics">圖畫：</string>
   <string name="AboutScene_Music">音樂：</string>

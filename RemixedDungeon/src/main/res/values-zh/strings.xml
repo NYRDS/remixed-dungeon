@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!--GENERAL STRINGS VARIABLES-->
-  <string name="app_name">混合的像素地牢</string>
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">在您之前，已經有許多英雄向地牢進發。有些人攜着財寶和魔法物品滿足載而歸，可是他們大部分人卻杳無音訊。
 
@@ -14,8 +12,6 @@
   <string name="AmuletScene_Txt">您終於把Yendor護符握在手中。通過它的力量，您可以征服世界，也可以為人們帶來和平與繁榮，或是其他任何事。無論如何，您的命運將永遠改變，遊戲也將要終結。或者，您也可以作為一個凡人再在這裏
 逗留一會。</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">歡迎來到像素地牢的%d層！</string>
-  <string name="GameScene_WelcomeBack">歡迎回到像素地牢的%d層！</string>
   <string name="GameScene_NightMode">請提高警覺，地牢在晚上會變得更加危險！</string>
   <string name="GameScene_Chasm">您的腳步聲在地牢中迴響。</string>
   <string name="GameScene_Water">您聽到身邊流水潺潺。</string>
@@ -62,32 +58,6 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">這些文字無法辦認...</string>
   <string name="Dungeon_DeadEnd">你在這幹三小？！</string>
-  <string-array name="Dungeon_Tips">
-    <item>对于使用武器、防具要量力而为。</item>
-    <item>地牢里的门不会明摆在你面前。如果你被困住了，尝试去寻找隐藏门。</item>
-    <item>记住，提升你的力量值不是唯一让你能正常用一件装备的方法。你也可以尝试升级它们来让它们更轻更好用。 </item>
-    <item>钱可以在商店花。第一个商店在6层。</item>
-    <item>小心黏咕!</item>
-    <item>像素市场。对你的冒险帮助很大!</item>
-    <item>尽早鉴定药水和卷轴。有备无患。</item>
-    <item>人在饥饿的时候不会痛，但人在饥饿难耐的时候会很痛。</item>
-    <item>袭击必中。比如说，你可以躲在门后来给下一个开门的敌人一个惊喜。</item>
-    <item>别让天狗跑了!</item>
-    <item>像素市场。花更多的钱，走更长的路。</item>
-    <item>当你被怪物攻击时，尝试躲到门后。</item>
-    <item>你在飞行的时候没法通过走进水里来灭火。</item>
-    <item>多个复活十字架没法一起使用，因为你会在复活时丢失所有的道具。.</item>
-    <item>危险! 重型机械会使你受伤，残废，甚至死亡!</item>
-    <item>像素市场。 地牢里的安全房。</item>
-    <item>升级附魔过的装备会有损坏附魔的可能。</item>
-    <item>你可以从转化之井里获得平时无法获得的物品。</item>
-    <item>唯一附魔武器的方法-使用武器升级卷轴。</item>
-    <item>上朝觐见严禁刀具!</item>
-    <item>像素市场。给与恶魔猎手最好的优惠!</item>
-    <item>这是用恶魔语写的。</item>
-    <item>这是用恶魔语写的。</item>
-    <item>这是用恶魔语写的。</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>縮餐節食</item>
@@ -131,7 +101,6 @@
   <string name="WndGame_Ranking">排名</string>
   <string name="WndGame_Start">開始新遊戲</string>
   <string name="WndGame_menu">主菜單</string>
-  <string name="WndGame_Exit">關閉遊戲</string>
   <string name="WndGame_Return">返回遊戲</string>
   <string name="WndGame_Save">保存</string>
   <string name="WndGame_Load">讀取</string>
@@ -269,8 +238,6 @@
   <string name="LloidsBeacon_Preventing">某種強大的魔法力量阻止了您使用萊德傳送信標！</string>
   <string name="LloidsBeacon_Creatures">附近的生物的精神干擾阻止了您使用萊德傳送信標！</string>
   <string name="LloidsBeacon_Return">萊德傳送信標設置成功，現在您已經隨時可以回來了。</string>
-  <string name="LloidsBeacon_Set">
-\n\n這個傳送信標被設置在像素地牢第%d層的某個地方。</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">奥術刻筆</string>
   <string name="Stylus_ACInscribe">鐫刻</string>

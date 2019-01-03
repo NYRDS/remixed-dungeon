@@ -8,8 +8,6 @@
     <string name="TownGuardNPC_Desc">Un garde ordinaire de la ville.</string>
     <string name="TownGuardNPC_Message1">Bougez d\'ici</string>
     <string name="TownGuardNPC_Message2">Grâce aux aventuriers comme vous, c\'est vraiment redevenu paisible ici.</string>
-    <string name="TownGuardNPC_Message3">Vous pensez qu\'il y a trop de gardes dans cette ville ? Et bien, ne serait-ce pas parce que c\'est l\'unique ville avec un donjon envahi par des monstres ? </string>
-
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">habitant</string>
     <string name="TownsfolkNPC_Gender">masculin</string>
@@ -20,7 +18,7 @@
     <string name="TownsfolkNPC_Message3">Quelle belle journée.</string>
     <string name="TownsfolkNPC_Message4">J\'espère que les égouts ne vont pas à nouveau être inondés au moment du printemps. Nous n\'avons pas besoin d\'une autre invasion de rats.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">prêtre de la ville</string>
     <string name="HealerNPC_Gender">masculin</string>
     <string name="HealerNPC_Name_Objective">prêtre de la ville</string>

@@ -7,7 +7,6 @@
   <string name="TitleScene_About">Über</string>
   <string name="TitleScene_InternalStorageLow">Nicht genügend Platz\n im internen Speicher\n Dein Fortschritt kann verloren gehen!</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Txt_Intro">Remixed Dungeon by NYRDS basierend auf dem ursprünglichem Pixel Dungeon von Watabou.</string>
   <string name="AboutScene_Code">Programmierung:</string>
   <string name="AboutScene_Graphics">Grafik:</string>
   <string name="AboutScene_Music">Musik:</string>

@@ -4,7 +4,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">소환의 주문서</string>
-    <string name="ScrollOfSummoning_Info">소리 내어 읽을 때, 이 두루마리는 현재 던전 레벨의 한 몬스터를 소환할 것입니다. 그리고 그 몬스터의 의지가 충분히 약하다면 당신의 하수인이 될 것입니다.</string>
     <string name="ScrollOfSummoning_Info_2">몬스터가 당신의 소환에 응답했습니다!</string>
 
     <!-- Generic warnings -->

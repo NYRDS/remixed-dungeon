@@ -4,7 +4,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">Skrol Penyeruan</string>
-    <string name="ScrollOfSummoning_Info">Bila membaca dengan kuat, skrol ini dapat memanggil salah satu raksaksa dari aras kurungan bawah tanah semasa. Dan jika semangat raksaksa ini lemah ia akan menjadi hamba anda.</string>
     <string name="ScrollOfSummoning_Info_2">Raksaksa membalas seruan anda!</string>
 
     <!-- Generic warnings -->

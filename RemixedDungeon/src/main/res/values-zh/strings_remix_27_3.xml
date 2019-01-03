@@ -4,7 +4,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">召唤卷轴</string>
-    <string name="ScrollOfSummoning_Info">召唤一只怪物，几率将其控制</string>
     <string name="ScrollOfSummoning_Info_2">这只怪物归你了</string>
 
     <!-- Generic warnings -->

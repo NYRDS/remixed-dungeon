@@ -8,8 +8,6 @@
     <string name="TownGuardNPC_Desc">Типовий вартовий міста.</string>
     <string name="TownGuardNPC_Message1">Проходимо, не затримуємося.</string>
     <string name="TownGuardNPC_Message2">Завдяки таким шукачам пригод, як ви, тут стало безпечніше.</string>
-    <string name="TownGuardNPC_Message3">Гадаєш тут забагато вартових? Це ж єдине місто, в якому знаходиться спуск в гігантське підземелля, яке захоплене монстрами, чи не так?</string>
-
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">городянин</string>
     <string name="TownsfolkNPC_Gender">чоловічий</string>
@@ -20,7 +18,7 @@
     <string name="TownsfolkNPC_Message3">Який чудовий день.</string>
     <string name="TownsfolkNPC_Message4">Сподіваюся цієї весни не затопить каналізацію. Чергового нашестя щурів нам ще не вистачало.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">міський священик</string>
     <string name="HealerNPC_Gender">чоловічий</string>
     <string name="HealerNPC_Name_Objective">міського священика</string>

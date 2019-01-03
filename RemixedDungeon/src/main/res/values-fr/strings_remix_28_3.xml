@@ -38,15 +38,6 @@
     <string name="gdpr_disagree">Non, merci</string>
     <string name="gdpr_choose">S\'il vous plait, faites votre choix</string>
 
-    <string name="Mob_StaHuntingStatus2">Ce %1$s chasse %2$s</string>
-    <string name="Mob_StaFleeingStatus2">Ce %1$s fuit %2$s</string>
-
-    <string name="Mob_StaTerrorStatus">Ce %1$s est terrifié</string>
-    <string name="Mob_StaTerrorStatus2">Ce %1$s est terrifié par %2$s</string>
-
-    <string name="Mob_StaAmokStatus">Ce %1$s pète un plomb</string>
-
-
     <string name="WndSaveSlotSelect_LoadAutoSave">Charger une sauvegarde automatique</string>
 
     <string name="TownScript_NeedWeapon">Je n\'irai pas au donjon à main nues !\n Cela vaudrait peut-être la peine de visiter l\'échoppe d\'abord ?</string>

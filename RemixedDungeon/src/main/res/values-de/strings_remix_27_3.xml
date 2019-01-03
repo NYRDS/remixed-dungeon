@@ -4,7 +4,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">Schriftrolle der Beschwörung</string>
-    <string name="ScrollOfSummoning_Info">Wenn diese Schriftrolle laut vorgelesen wird, Beschwört sie ein Monster der jetzigen Ebene. Wenn der Wille des Monsters schwach genug ist, wird es dein Diener werden.</string>
     <string name="ScrollOfSummoning_Info_2">Das Monster antwortet auf deine Beschwörungen!</string>
 
     <!-- Generic warnings -->

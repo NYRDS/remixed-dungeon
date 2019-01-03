@@ -6,7 +6,6 @@
   <string name="AzuterronNPC_Gender">mâle</string>
   <string name="AzuterronNPC_Name_Objective">Etranger</string>
   <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
-  <string name="AzuterronNPC_Quest_Start">Hein, quoi ... oh, tu peux me voir, n\'est-ce pas ? Cela veut dire que tu n\'es pas l\'un d\'\"eux\". Je vois que tu n\'es pas friand de tous ces monstres. Tu sais quoi, si tu résous mon petit problème, je t\'offrirais mon aide. Quelque part dans cet étage, tu trouveras une créature des Ténèbres, un _Esprit Perfide_. Tues-le, prends son _cœur_ et reviens vers moi. Une dernière chose, si tu est intéressé par mon équipement, n\'hésite pas à demander</string>
   <string name="AzuterronNPC_Quest_Reminder">Aide-moi et je t\'aiderai.</string>
   <string name="AzuterronNPC_Quest_End">Excellent. Prends cette potion, tu la trouveras bénéfique</string>
   <string name="Journal_Azuterron">Etranger</string>

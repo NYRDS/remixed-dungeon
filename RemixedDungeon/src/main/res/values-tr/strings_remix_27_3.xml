@@ -4,7 +4,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">Çağrı Parşömeni</string>
-    <string name="ScrollOfSummoning_Info">Sesli okunduğunda, bu parşömen bulunduğun zindan seviyesindeki bir canavarı çağırır. Ve canavarın iradesi düşük ise hizmetkarın olur.</string>
     <string name="ScrollOfSummoning_Info_2">Canavar çağrılarına yanıt verdi!</string>
 
     <!-- Generic warnings -->

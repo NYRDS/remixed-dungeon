@@ -6,7 +6,6 @@
   <string name="AzuterronNPC_Gender">masculine</string>
   <string name="AzuterronNPC_Name_Objective">陌生人</string>
   <string name="AzuterronNPC_Desc">被黑雾包围着的神秘人</string>
-  <string name="AzuterronNPC_Quest_Start">嗯……为什么……噢，你能看到我，对吗？这说明你并不是“它们”的一份子。看你也不喜欢这里的怪物，告诉你，只要你能帮我解决一个小问题，我就会给你提供帮助。在这一楼层的某处有一只暗黑野兽，一只_奸诈幽灵_，干掉它，把它的_心脏_拿给我。如果你有兴趣买我的商品，不要犹豫哦。</string>
   <string name="AzuterronNPC_Quest_Reminder">如果你帮助我，那我将帮助你。</string>
   <string name="AzuterronNPC_Quest_End">棒极了。把这瓶药水拿去吧，当然，它是有益的。</string>
   <string name="Journal_Azuterron">陌生人</string>

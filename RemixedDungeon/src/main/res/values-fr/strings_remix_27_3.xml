@@ -4,7 +4,6 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">Parchemin d\'invocation</string>
-    <string name="ScrollOfSummoning_Info">Lorsqu\'il est lu à voix haute, ce parchemin va invoquer un des monstres du niveau du donjon auquel vous vous trouvez. Et si la volonté de ce monstre est suffisamment faible, il deviendra votre serviteur.</string>
     <string name="ScrollOfSummoning_Info_2">Le monstre a répondu à votre invocation !</string>
 
     <!-- Generic warnings -->

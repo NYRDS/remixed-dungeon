@@ -18,6 +18,5 @@
   <string name="AllowStatisticsCollectionScene_Deny">Запрещаю</string>
   <string name="Darkness_Info">Выглядит как всполохи непроглядной тьмы, витающие в воздухе</string>
   <string name="WndSelectLanguage_ImproveTranslation">Помогите улучшить перевод Remixed Dungeon</string>
-  <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-pixel-dungeon/</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">Нажмите, чтобы присоединиться к команде перевода Remixed Dungeon</string>
 </resources>

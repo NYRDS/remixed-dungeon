@@ -48,8 +48,6 @@
     <string name="JarOfSouls_Name">vaso delle anime</string>
     <string name="JarOfSouls_Gender">mascolino</string>
     <string name="JarOfSouls_Name_Objective">vaso delle anime</string>
-    <string name="JarOfSouls_Desc">Occhi fiammeggianti di un teschio decapitato in questo antico vaso, così come l\'energia che emette, ti fa sentire inquieto.</string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">mascolino</string>

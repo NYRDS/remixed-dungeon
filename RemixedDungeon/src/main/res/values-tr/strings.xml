@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Her türden kahraman senden önce bu zindana girmeye cesaret etti. Bazıları hazineler ve senin adını ile bilmediğin sihirli eserlerle geri döndüler. Ama kimse zindanın derinliklerinde olduğu söylenen Yendor\'un Tılsımını almayı başaramadı. \n\n Kendinizi meydan okumaya hazır olarak görüyorsunuz, ama en önemlisi, bu talihin size gülümsediğini hissediyorsunuz. Şimdi kendi maceranıza başlama zamanı!</string>
   <!--STRINGS OF AmuletScene CLASS-->
@@ -8,8 +7,6 @@
   <string name="AmuletScene_Stay">Daha işim bitmedi</string>
   <string name="AmuletScene_Txt">Sonunda ellerinde tutuyorsun, Yendor\'un Tılsımı. Bu tılsımın gücüyle dünyayı ele geçirebilir veya insanlara falan barış ve refah getirebilirsin. Her neyse, hayatın sonsuza kadar değişecek ve oyun burada bitecek. Veya önemsiz bir ölümlü olarak biraz daha buralarda kalabilirsin.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Remixed Dungeon\'ın %d seviyesine hoşgeldiniz!</string>
-  <string name="GameScene_WelcomeBack">Remixed Dungeon\'ın %d seviyesine tekrar hoşgeldiniz!</string>
   <string name="GameScene_NightMode">Dikkatli ol, zindan geceleri daha tehlikelidir!</string>
   <string name="GameScene_Chasm">Adımların zindan boyunca yankılanıyor.</string>
   <string name="GameScene_Water">Etrafındaki su şarıltılarını duyuyorsun.</string>
@@ -56,33 +53,6 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Yazı okunmaz halde... </string>
   <string name="Dungeon_DeadEnd">Burada ne yapıyorsun?! </string>
-  <string-array name="Dungeon_Tips">
-    <item>Gücünü abartma, seviyene uygun silahlar kullan.</item>
-    <item>Zindandaki tüm kapılar ilk bakıştan görünmeyebilir. Sıkışırsan gizli kapıları araştır.</item>
-    <item>Gücünü arttırmak iyi ekipmanlara erişim için tek yol değildir. Yükseltme parşomeni ile ekipmanların güç gereksinimini azaltabilirsin</item>
-    <item>İlki 6. seviyede olan dükkanlarda topladığın altınları harcayabilirsin.</item>
-    <item>Goo \' ya dikkat!</item>
-    <item>Pixel-Mart - başarılı bir macera için tüm ihtiyacın olanlar burada!</item>
-    <item> Gerçekten ihtiyacın olduğundan kullanabilmek için, İksir ve parşömenlerini bir an önce tanımla..</item>
-    <item>Acıkmaya başladığında canın azalmaz ama açlıktan kıvranmaya başladığında
-canın düşecektir.</item>
-    <item>Süpriz saldırılar isabet şansını arttırır. Örneğin düşmanında kapalı bir kapıdan ani saldırıda bulun.</item>
-    <item>Tengu \'yu dışarı salma!</item>
-    <item>Pixel-Mart. Para harca, uzun yaşa.</item>
-    <item>Birden fazla yaratık saldırdığında , bir kapı arkasına geri çekilmeyi dene.</item>
-    <item>Eğer uçuyorsan , yanma durumunda kendini suda söndüremezsin.</item>
-    <item>Birden fazla \"Ankh\" ı aynı anda taşımanın bir anlamı yok.Dirildiğinde çantandaki tüm ekipman yok olacak.</item>
-    <item>DİKKAT! ağır iş makinası, uzuv kaybı veya ölüme sebebiyet verebilir</item>
-    <item>Pixel-Mart. Zindanda güvenli bir hayat.</item>
-    <item>Efsunlu bir silahı güncellediğinde , silahın efsunu yok olabilir.</item>
-    <item>Dönüşüm kuyusu başka yerde bulamayacağın nesneleri elde etmeni sağlayabilir.</item>
-    <item>Bir silahı efsunlamanın tek yolu onu yükseltme parşomeni ile güncellemektir.</item>
-    <item>Majesteleri huzurunda silah bulundurmak yasaktır!</item>
-    <item>Pixel-Mart. Şeytan avcıları için özel fiyatlar!</item>
-    <item>Metin şeytani bir dille yazılmış.</item>
-    <item>Metin şeytani bir dille yazılmış.</item>
-    <item>Metin şeytani bir dille yazılmış.</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Diyette</item>
@@ -126,7 +96,6 @@ canın düşecektir.</item>
   <string name="WndGame_Ranking">Sıralama</string>
   <string name="WndGame_Start">Yeni Oyun</string>
   <string name="WndGame_menu">Ana Menü</string>
-  <string name="WndGame_Exit">Oyundan Çık</string>
   <string name="WndGame_Return">Oyuna Geri Dön</string>
   <string name="WndGame_Save">Kaydet</string>
   <string name="WndGame_Load">Yükle</string>
@@ -260,7 +229,6 @@ canın düşecektir.</item>
   <string name="LloidsBeacon_Preventing">Bir çeşit güçlü ve sihirli aura Llody\'un Fenerini kullanmanı engelliyor!</string>
   <string name="LloidsBeacon_Creatures">Etraftaki yaratıkların psişik auorası Lloyd\'un fenerini kullanmanı engelliyor</string>
   <string name="LloidsBeacon_Return">Lloyd\'un feneri başarıyla şu anki konuma ayarlandı.İstediğinde buraya geri dönebilirsin.</string>
-  <string name="LloidsBeacon_Set">\n\nBu neden %d . seviyede bir yerlere ayarlı.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">Esrarlı Kalem</string>
   <string name="Stylus_ACInscribe">KAZI</string>

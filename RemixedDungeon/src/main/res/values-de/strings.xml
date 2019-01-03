@@ -7,8 +7,6 @@
   <string name="AmuletScene_Stay">Ich bin noch nicht fertig</string>
   <string name="AmuletScene_Txt">Endlich hältst du es in deinen Händen, das Amulett von Yendor. Mit seiner Macht kannst du die Welt erobern oder allen Frieden und Reichtum bringen oder was auch immer. Jedenfalls wird sich dein Leben für immer verändern und dieses Spiel endet hier. Oder du kannst noch ein bisschen länger ein gewöhnlicher Sterblicher bleiben.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Willkommen auf Ebene %d von Remixed Dungeon!</string>
-  <string name="GameScene_WelcomeBack">Willkommen zurück auf Ebene %d von Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Sei vorsichtig, der Dungeon ist nachts noch gefährlicher!</string>
   <string name="GameScene_Chasm">Deine Schritte hallen durch den Dungeon.</string>
   <string name="GameScene_Water">Du hörst Wasser um dich plätschern.</string>
@@ -55,32 +53,6 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Der Text ist nicht zu entschlüsseln...</string>
   <string name="Dungeon_DeadEnd">Was machst du hier?!</string>
-  <string-array name="Dungeon_Tips">
-    <item>Überschätze deine Stärke nicht - verwende nur Waffen und Rüstungen mit denen du umgehen kannst.</item>
-    <item>Nicht alle Türen im Dungeon sind sofort erkennbar. Wenn du nicht weiterkommst, suche nach versteckten Türen.</item>
-    <item>Bedenke, dass das Erhöhen deiner Stärke nicht der einzige Weg ist, bessere Ausrüstung zu verwenden. Du kannst es auch anders herum versuchen, indem du die Stärkenanforderung der Ausrüstung mit Schriftrollen der Verbesserung senkst.</item>
-    <item>Du kannst dein Gold in Läden in tieferen Ebenen des Dungeons ausgeben. Der erste befindet sich auf Ebene 6.</item>
-    <item>Nimm dich vor dem \'Goo\' in Acht!</item>
-    <item>Pixel-Mart - alles, was du für ein erfolgreiches Abenteuer benötigst!</item>
-    <item>Identifiziere deine Tränke und Schriftrollen so schnell wie möglich. Warte nicht auf den Moment, in dem du sie wirklich brauchst.</item>
-    <item>Hungrig zu sein tut dir nicht weh, zu verhungern jedoch schon.</item>
-    <item>Überraschungsangriffe haben eine bessere Chance auf einen Treffer. Du könntest z.B. deinem Gegner hinter einer geschlossenen Tür auflauern, wenn du weißt, dass er sich nähert.</item>
-    <item>Lass den Tengu nicht raus!</item>
-    <item>Pixel-Mart. Gib Geld aus. Lebe länger.</item>
-    <item>Wenn du von mehreren Monstern angegriffen wirst, versuche, dich hinter eine Tür zurückzuziehen.</item>
-    <item>Wenn du Feuer gefangen hast, während du schwebst, kannst du es nicht durch Wasser löschen.</item>
-    <item>Es macht keinen Sinn, mehr als ein Ankh gleichzeitig zu besitzen, da du sie ohnehin bei einer Auferstehung verlieren wirst.</item>
-    <item>ACHTUNG! Schwere Maschinen verursachen Verletzungen bis hin zu Verlust von Gliedmaßen oder dem Tod!</item>
-    <item>Pixel-Mart. Ein sichereres Leben im Dungeon.</item>
-    <item>Wenn du eine verzauberte Waffe aufrüstest, besteht eine Chance, dass die Verzauberung dabei zerstört wird.</item>
-    <item>Durch einen Brunnen der Verwandlung kannst du einen Gegenstand erhalten, den du auf keine andere Art erlangen kannst.</item>
-    <item>Der einzige Weg, eine Waffe zu verzaubern, ist, sie durch eine Schriftrolle der Waffenverbesserung aufzurüsten.</item>
-    <item>Im Beisein Ihrer Majestät sind keine Waffen erlaubt!</item>
-    <item>Pixel-Mart. Spezialpreise für Dämonenjäger!</item>
-    <item>Der Text ist in dämonischer Sprache verfasst.</item>
-    <item>Der Text ist in dämonischer Sprache verfasst.</item>
-    <item>Der Text ist in dämonischer Sprache verfasst.</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Auf Diät</item>
@@ -124,7 +96,6 @@
   <string name="WndGame_Ranking">Ranglisten</string>
   <string name="WndGame_Start">Starte ein neues Spiel</string>
   <string name="WndGame_menu">Hauptmenü</string>
-  <string name="WndGame_Exit">Remixed Dungeon verlassen</string>
   <string name="WndGame_Return">Zurück zum Spiel</string>
   <string name="WndGame_Save">Speichern</string>
   <string name="WndGame_Load">Laden</string>
@@ -259,9 +230,6 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="LloidsBeacon_Preventing">Die starke magische Aura dieses Ortes hindert dich daran, Lloyds Leuchtfeuer zu benutzen.</string>
   <string name="LloidsBeacon_Creatures">Die übersinnliche Aura naher Kreaturen hindert dich daran, Lloyds Leuchtfeuer jetzt zu benutzen.</string>
   <string name="LloidsBeacon_Return">Lloyd\'s Leutfeuer wurde mit Erfolg an deine momentane Stelle gesetzt, jetzt kannst du jederzeit hierher zurückkehren.</string>
-  <string name="LloidsBeacon_Set">
-
-Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gesetzt.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">Arkaner Stift</string>
   <string name="Stylus_ACInscribe">GRAVIEREN</string>

@@ -48,8 +48,6 @@
     <string name="JarOfSouls_Name">영혼의 단지</string>
     <string name="JarOfSouls_Gender">남성</string>
     <string name="JarOfSouls_Name_Objective">영혼의 단지</string>
-    <string name="JarOfSouls_Desc">빛나는 해골의 눈이 장식된 이 오래된 단지는 당신을 불안하게 만드는 이상한 힘을 방출합니다.</string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">리치</string>
     <string name="Lich_Gender">남성</string>

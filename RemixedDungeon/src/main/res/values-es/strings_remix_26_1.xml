@@ -8,8 +8,6 @@
     <string name="TownGuardNPC_Desc">Un guardia normal.</string>
     <string name="TownGuardNPC_Message1">Camina.</string>
     <string name="TownGuardNPC_Message2">Gracias a los aventureros como usted, hay paz aquí arriba.</string>
-    <string name="TownGuardNPC_Message3">¿Crees que hay muchos guardias para este pueblo? Bueno, es la única ciudad con una gigantesca mazmorra tomada por monstruos.</string>
-
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">ciudadano</string>
     <string name="TownsfolkNPC_Gender">masculino</string>
@@ -20,7 +18,7 @@
     <string name="TownsfolkNPC_Message3">Que hermoso día.</string>
     <string name="TownsfolkNPC_Message4">Espero que las alcantarillas no se inunden cuando llegue la primavera. No necesitamos otra infestación de ratas.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">sacerdote</string>
     <string name="HealerNPC_Gender">masculino</string>
     <string name="HealerNPC_Name_Objective">sacerdote</string>

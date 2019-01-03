@@ -48,8 +48,6 @@
     <string name="JarOfSouls_Name">tarro de almas</string>
     <string name="JarOfSouls_Gender">masculino</string>
     <string name="JarOfSouls_Name_Objective">tarro de almas</string>
-    <string name="JarOfSouls_Desc">Los ojos brillantes de un cráneo dibujado en este viejo frasco y la extraña energía que emite, le hace sentir incómodo.</string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">Lich</string>
     <string name="Lich_Gender">masculino</string>

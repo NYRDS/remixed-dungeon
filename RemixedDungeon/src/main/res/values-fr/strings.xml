@@ -8,8 +8,6 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="AmuletScene_Stay">Je ne suis pas encore prêt</string>
   <string name="AmuletScene_Txt">Vous la tenez enfin dans vos mains, l\'amulette de Yendor. En utilisant ses pouvoirs, vous pourriez gouverner le monde ou y apporter la paix et la prospérité. De toutes façons, votre vie sera changée à jamais et ce jeu prendra fin ici. A moins que vous ne préfériez rester un simple mortel pour quelque temps encore.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Bienvenue au %de étage de Remixed Dungeon !</string>
-  <string name="GameScene_WelcomeBack">Re-bienvenue au %de étage de Remixed Dungeon !</string>
   <string name="GameScene_NightMode">Soyez prudent, le donjon est encore plus dangereux pendant la nuit !</string>
   <string name="GameScene_Chasm">Vos pas résonnent à travers le donjon.</string>
   <string name="GameScene_Water">Vous entendez de l\'eau éclabousser autour de vous.</string>
@@ -56,32 +54,6 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">Le texte est indéchiffrable...</string>
   <string name="Dungeon_DeadEnd">Que faites vous ici ?!</string>
-  <string-array name="Dungeon_Tips">
-    <item>Ne surestimez pas votre force. N\'utilisez que des armes et des armures que vous pouvez porter.</item>
-    <item>Toutes les portes du donjon ne sont pas visibles du premier coup. Si vous êtes bloqué, cherchez des portes cachées.</item>
-    <item>Souvenez-vous qu\'augmenter votre force n\'est pas le seul moyen d\'accéder à de meilleurs équipements, vous pouvez faire l\'inverse et diminuer la force requise d\'un objet en l\'améliorant.</item>
-    <item>Vous pouvez dépenser vos pièces d\'or aux marchés parsemant le donjon et au village.</item>
-    <item>renez garde au Flan !</item>
-    <item>Marché Pixel - Tout ce dont vous avez besoin pour une aventure réussie !</item>
-    <item>Identifiez vos potions et parchemins le plus tôt possible, ne le faites pas au moment où vous en auriez le plus besoin.</item>
-    <item>Avoir faim n\'est pas dangereux, mais être affamé est mortel !</item>
-    <item>Une attaque surprise a plus de chances de réussir. Par exemple, vous pouvez embusquer vos ennemis derrière une porte quand vous savez qu\'ils arrivent.</item>
-    <item>Ne laissez pas le Tengu s\'échapper !</item>
-    <item>Marché Pixel - Dépensez plus et vivez plus longtemps.</item>
-    <item>Vous êtes attaqué par plusieurs monstres à la fois ? Essayez de battre en retraite derrière une porte.</item>
-    <item>Si les flammes vous dévorent, vous ne pourrez pas les éteindre en marchant dans l\'eau tout en lévitant !</item>
-    <item>Il ne sert à rien de trimballer deux Ankhs à la fois car vous les perdrez tous les deux en ressuscitant.</item>
-    <item>DANGER ! La machinerie peut causer des blessures, un démembrement ou même la mort !</item>
-    <item>Marché Pixe - Pour un donjon plus sûr.</item>
-    <item>Quand vous améliorez une arme enchantée, il est possible que l\'enchantement soit détruit.</item>
-    <item>Les puits de transmutation vous permettent d\'obtenir des objets uniques, qui ne pourraient pas être obtenus autrement.</item>
-    <item>La seule manière d\'enchanter une arme est de l\'améliorer avec un parchemin d\'amélioration d\'arme.</item>
-    <item>Aucune arme tolérée en présence de sa majesté !</item>
-    <item>Marché Pixel - Réductions spéciales pour les chasseurs de démons !</item>
-    <item>Le texte est écrit dans une langue démoniaque.</item>
-    <item>Le texte est encore écrit dans une langue démoniaque.</item>
-    <item>Le texte est toujours écrit dans une langue démoniaque.</item>
-  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Au régime</item>
@@ -125,7 +97,6 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="WndGame_Ranking">Classement</string>
   <string name="WndGame_Start">Nouvelle partie</string>
   <string name="WndGame_menu">Menu principal</string>
-  <string name="WndGame_Exit">Quitter Remixed Dungeon</string>
   <string name="WndGame_Return">Revenir à la partie</string>
   <string name="WndGame_Save">Sauvegarder</string>
   <string name="WndGame_Load">Charger</string>
@@ -260,8 +231,6 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="LloidsBeacon_Preventing">Une forte aura magique vous empêche d\'utiliser la balise de lloyd !</string>
   <string name="LloidsBeacon_Creatures">L\'aura psychique des créatures aux alentours vous empêchent d\'utiliser la balise de lloyd pour le moment.</string>
   <string name="LloidsBeacon_Return">La balise est bien installée à votre position, vous pourrez revenir ici n\'importe quand maintenant. </string>
-  <string name="LloidsBeacon_Set">
-Cette balise a été installée quelque part au %de étage du Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">stylet arcanique</string>
   <string name="Stylus_ACInscribe">INSCRIRE</string>

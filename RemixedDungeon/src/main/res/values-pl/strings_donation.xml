@@ -6,13 +6,11 @@
   <string name="WndDonate_ruby">Rubin</string>
   <string name="WndDonate_donate">podaruj:</string>
   <string name="WndDonate_notConnected">brak połączenia sieciowego :(</string>
-  <string name="WndDonate_commonDonateText">Remixed Dungeon - darmowa dla wszystkich teraz i na zawsze.\n\nJednakże, możesz pomóc nam usprawnić grę nawet bardziej.\n\nW wyniku naszej wdzięczności otrzymacie trochę kosmetycznych ulepszeń.</string>
   <string name="WndDonate_silverDonate">srebna darowizna</string>
   <string name="WndDonate_goldDonate">złota darowizna</string>
   <string name="WndDonate_rubyDonate">rubinowa darowizna</string>
   <string name="WndDonate_silverDonateText">Każda darowizna pomaga nam w ulepszaniu projektu</string>
   <string name="WndDonate_goldDonateText">Dziękujemy za Twoje wsparcie</string>
-  <string name="WndDonate_rubyDonateText">Twoja hojność pomoże nam w kontynuowaniu ulepszania Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Wyłącza również reklamy we wszystkicgh trybach gry i obklokowuje łowczynię.</string>
   <string name="WndDonate_goldDonateText2">Także odblokowuje elfa na początku gry.</string>
   <string name="WndDonate_rubyDonateText2" />

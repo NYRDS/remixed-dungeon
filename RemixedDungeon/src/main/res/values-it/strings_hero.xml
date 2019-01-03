@@ -3,7 +3,6 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">tu</string>
   <string name="Hero_Name_Objective">tu</string>
-  <string name="Hero_Leave">Non si può lasciare così semplicemente Remixed Dungeon</string>
   <string name="Hero_LevelUp">salito di livello!</string>
   <string name="Hero_NewLevel">Benvenuti al livello %d! Ora sei più sano e più concentrato. Adesso è più facile per voi colpire i nemici e schivare i loro attacchi.</string>
   <string name="Hero_YouNowHave">Tu ora hai %s</string>

@@ -8,8 +8,6 @@
     <string name="TownGuardNPC_Desc">一個正常的城鎮守衛。</string>
     <string name="TownGuardNPC_Message1">我没什么好说的了，继续前进吧。</string>
     <string name="TownGuardNPC_Message2">感谢像您一樣的冒險家，這裏十分和平。</string>
-    <string name="TownGuardNPC_Message3">您覺得這城鎮有太多守衛？這城鎮只有一個被怪物佔據的大地牢，不是嗎？</string>
-
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">城鎮居民</string>
     <string name="TownsfolkNPC_Gender">男性的</string>
@@ -20,7 +18,7 @@
     <string name="TownsfolkNPC_Message3">多棒的一天啊。</string>
     <string name="TownsfolkNPC_Message4">希望春天蒞臨之時水不再淹沒整個下水道。我們不想老鼠再次為患。</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">城鎮牧師</string>
     <string name="HealerNPC_Gender">男性的</string>
     <string name="HealerNPC_Name_Objective">城鎮牧師</string>

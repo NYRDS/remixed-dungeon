@@ -41,10 +41,6 @@
     <string name="gdpr_choose">пожалуйста, сделайте свой выбор</string>
 
     <string name="Mob_StaHuntingStatus2">%1$s охотится на %2$s</string>
-    <string name="Mob_StaFleeingStatus2">Это 1%1$s  бегство от 2%2$s</string>
-
-    <string name="Mob_StaTerrorStatus">Этот 1%1$s в ужасе</string>
-    <string name="Mob_StaTerrorStatus2">Этот 1%1$s ужасается 2%2$s</string>
 
     <string name="WndSaveSlotSelect_LoadAutoSave">Автосохранение</string>
 

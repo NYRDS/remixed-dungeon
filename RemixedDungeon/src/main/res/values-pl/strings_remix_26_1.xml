@@ -8,8 +8,6 @@
     <string name="TownGuardNPC_Desc">Zwyczajny strażnik miejski.</string>
     <string name="TownGuardNPC_Message1">Nie zatrzymuj się.</string>
     <string name="TownGuardNPC_Message2">Dzięki takim poszukiwaczom przygód jak ty, tu na górze jest naprawdę spokojnie.</string>
-    <string name="TownGuardNPC_Message3">Myślisz, że mamy za dużo strażników w tym mieście? Cóż, to jedyna mieścina z ogromnym lochem, przejętym przez potwory, czyż nie?</string>
-
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">Mieszczanin</string>
     <string name="TownsfolkNPC_Gender">męski</string>
@@ -20,7 +18,7 @@
     <string name="TownsfolkNPC_Message3">Cóż za uroczy dzień.</string>
     <string name="TownsfolkNPC_Message4">Mam nadzieję, że kanały nie zostaną zalane gdy nadejdzie wiosna. Nie potrzebujemy kolejnej plagi szczurów.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">Kapłan</string>
     <string name="HealerNPC_Gender">męski</string>
     <string name="HealerNPC_Name_Objective">Kapłan</string>

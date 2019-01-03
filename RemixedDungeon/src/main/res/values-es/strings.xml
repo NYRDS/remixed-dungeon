@@ -7,8 +7,6 @@
   <string name="AmuletScene_Stay">Aún no he acabado</string>
   <string name="AmuletScene_Txt">Finalmente tienes el Amuleto de Yendor en tus manos. Usando su poder puedes dominar el mundo, traer prosperidad y paz a le gente o lo que sea. En cualquier caso, tu vida cambiará para siempre y este juego acabará aquí. O puedes seguir siendo un simple mortal un poco más.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">¡Bienvenido al nivel %d de Remixed Dungeon!</string>
-  <string name="GameScene_WelcomeBack">¡Bienvenido de nuevo al nivel %d de Remixed Dungeon!</string>
   <string name="GameScene_NightMode">¡Ten cuidado, ya que la mazmorra es aún más peligrosa de noche!</string>
   <string name="GameScene_Chasm">Tus pasos resuenan por la mazmorra</string>
   <string name="GameScene_Water">Oyes el agua salpicando a tu alrededor.</string>
@@ -98,7 +96,6 @@
   <string name="WndGame_Ranking">Rankings</string>
   <string name="WndGame_Start">Empezar nueva partida</string>
   <string name="WndGame_menu">Menú Principal</string>
-  <string name="WndGame_Exit">Salir de Remixed Dungeon</string>
   <string name="WndGame_Return">Volver al juego</string>
   <string name="WndGame_Save">Guardar</string>
   <string name="WndGame_Load">Cargar</string>
@@ -232,8 +229,6 @@
   <string name="LloidsBeacon_Preventing">¡El fuerte aura mágica de este lugar te impide usar la baliza de Lloyd!</string>
   <string name="LloidsBeacon_Creatures">El aura psíquica de los enemigos cercanos te impide usar la baliza de Lloyd en este momento.</string>
   <string name="LloidsBeacon_Return">La baliza de Lloyd se fija correctamente a tu posición actual. Ahora puedes regresar aquí cuando quieras.</string>
-  <string name="LloidsBeacon_Set">
-\n\nEsta baliza ha sido fijada en algún lugar del nivel %d de Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">pluma arcana</string>
   <string name="Stylus_ACInscribe">INSCRIBIR</string>

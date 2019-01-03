@@ -8,8 +8,6 @@
     <string name="TownGuardNPC_Desc">Seorang pengawal pekan biasa.</string>
     <string name="TownGuardNPC_Message1">Berambus.</string>
     <string name="TownGuardNPC_Message2">Terima kasih kepada para pengembara seperti awak, sekarang tempat ini sentiasa aman.</string>
-    <string name="TownGuardNPC_Message3">Anda fikir ada ramai pengawal dalam pekan ini? Sebenarnya hanyalah pekan kecil dengan kurungan bawah tanah gergasi yang dikuasai oleh raksaksa, kan begitu?</string>
-
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">orang pekan</string>
     <string name="TownsfolkNPC_Gender">maskulin</string>
@@ -20,7 +18,7 @@
     <string name="TownsfolkNPC_Message3">Indahnya hari ini.</string>
     <string name="TownsfolkNPC_Message4">Saya harap pembentung tidak dibanjiri air bila musim panas tiba. Kami tidak mahu serangan tikus sekali lagi.</string>
 
-	<!-- STRINGS OF HealerNPC CLASS -->
+    <!-- STRINGS OF HealerNPC CLASS -->
     <string name="HealerNPC_Name">paderi pekan</string>
     <string name="HealerNPC_Gender">maskulin</string>
     <string name="HealerNPC_Name_Objective">paderi pekan</string>

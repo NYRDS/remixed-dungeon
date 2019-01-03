@@ -2,8 +2,8 @@
 <resources>
   <!--PACKAGE items/armor-->
   <!--STRINGS OF Armor CLASS-->
-  <string name="Armor_EquipCursed">%s boleśnie zaciska się na tobie</string>
-  <string name="Armor_Identify">Udało Ci się zidentyfikować %1$s. Okazuje się, że to  %2$s.</string>
+  <string name="Armor_EquipCursed">twój %s ciasno zaciska się wokół ciebie</string>
+  <string name="Armor_Identify">znasz już wystarczająco %1$s, aby go zidentyfikować. Jest to %2$s.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">Interakcja różnych typów magii usunęła glif z tej zbroi!</string>
   <string name="Armor_Info1">Ta %1$s wchłania \"%2$d\"  obrażeń.</string>

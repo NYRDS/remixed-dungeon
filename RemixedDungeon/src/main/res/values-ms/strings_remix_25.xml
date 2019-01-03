@@ -48,8 +48,6 @@
     <string name="JarOfSouls_Name">pasu roh</string>
     <string name="JarOfSouls_Gender">maskulin</string>
     <string name="JarOfSouls_Name_Objective">pasu roh</string>
-    <string name="JarOfSouls_Desc">Ada mata tengkorak bercahaya digambarkan atas pasu lama ini, begitu juga tenaga misteri yang dikeluarkannya, menjadikan anda rasa tidak senang.</string>
-
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">maskulin</string>

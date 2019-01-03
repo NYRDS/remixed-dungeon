@@ -1,27 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">Wielu bohaterów każdego rodzaju udało się w podróż do Lochu przed tobą. Niektórzy z nich powrócili przynosząc ze sobą skarby i magiczne artefakty, lecz o większości już nigdy więcej nie słyszano. Ale nikomu jeszcze się nie udało zdobyć Amuletu Yendoru, który o ile wiadomo spoczywa w głębiach Lochu.\n\nUważasz, że jesteś gotowy podjąć to wyzwanie, ale co najważniejsze, czujesz że fortuna uśmiecha się do ciebie. Czas rozpocząć własną przygodę!</string>
+  <string name="IntroScene_Txt">Wielu bohaterów przed tobą zapuściło się do Lochu. Niektóre z nich powróciły ze skarbami i magicznymi artefaktami, z których większość nigdy nie słyszano. Ale nikomu nie udało się odzyskać Amuletu Yendoru, o którym mówi się, że jest ukryty w głębi Podziemi. \ N \ nZgadasz, że jesteś gotowy na wyzwanie, ale co najważniejsze, czujesz, że fortuna uśmiecha się do ciebie. Czas zacząć własną przygodę!</string>
   <!--STRINGS OF AmuletScene CLASS-->
-  <string name="AmuletScene_Exit">Powiedzmy, że zostanę tu jeszcze dzień...</string>
-  <string name="AmuletScene_Stay">Jeszcze nie skończyłem</string>
-  <string name="AmuletScene_Txt">W końcu trzymasz go w swych dłoniach. Amulet Yendora należy do ciebie! Używając jego mocy możesz objąć panowanie nad światem, przynieść pokój i dobrobyt mieszkańcom Powierzchni lub cokolwiek innego. W każdym razie, twoje życie odmieniło się na zawsze i ta gra kończy się tutaj. Albo możesz zostać tutaj jako śmiertelnik nieco dłużej.</string>
+  <string name="AmuletScene_Exit">Nazwijmy to dniem</string>
+  <string name="AmuletScene_Stay">jeszcze nie skończyłem</string>
+  <string name="AmuletScene_Txt">W końcu trzymaj to w swoich rękach, Amulet Yendoru. Wykorzystując jego moc, możesz przejąć świat lub przynieść pokój i dobrobyt ludziom lub czymkolwiek innym. W każdym razie twoje życie zmieni się na zawsze, a ta gra się skończy. Możesz też pozostać zwykłym śmiertelnikiem trochę dłużej.</string>
   <!--STRINGS OF GameScene CLASS-->
-  <string name="GameScene_Welcome">Witaj na poziomie %d gry Remixed Dungeon!</string>
-  <string name="GameScene_WelcomeBack">Witaj z powrotem na poziomie %d of Remixed Dungeon!</string>
-  <string name="GameScene_NightMode">Zachowaj ostrożność! Loch jest jeszcze bardziej niebezpieczny w nocy!</string>
-  <string name="GameScene_Chasm">Dźwięk twych kroków roznosi się echem po lochu.</string>
-  <string name="GameScene_Water">Słyszysz plusk wody wokół ciebie.</string>
-  <string name="GameScene_Grass">Zapach roślinności jest silny w powietrzu.</string>
-  <string name="GameScene_Secrets">Atmosfera podpowiada, że ten poziom skrywa wiele sekretów.</string>
+  <string name="GameScene_NightMode">Bądź ostrożny, ponieważ loch jest jeszcze bardziej niebezpieczny w nocy!</string>
+  <string name="GameScene_Chasm">Twoje kroki odbijają się echem w lochu.</string>
+  <string name="GameScene_Water">Usłyszysz plusk wody wokół ciebie.</string>
+  <string name="GameScene_Grass">Zapach roślinności jest gęsty w powietrzu.</string>
+  <string name="GameScene_Secrets">Atmosfera sugeruje, że na tym piętrze kryje się wiele tajemnic.</string>
   <!--STRINGS OF Char CLASS-->
-  <string name="Char_Name">MOB</string>
-  <string name="Char_Name_Objective">MOB</string>
+  <string name="Char_Name">tłum</string>
+  <string name="Char_Name_Objective">tłum</string>
   <string-array name="Char_Hit">
-    <item>%1$s hit %2$s</item>
-    <item>%1$s hit %2$s</item>
-    <item>%1$s hit %2$s</item>
+    <item> %1$shit %2$s</item>
+    <item> %1$shit %2$s</item>
+    <item> %1$shit %2$s</item>
   </string-array>
   <string-array name="Char_Kill">
     <item>%s zabił ciebie...</item>
@@ -99,7 +96,6 @@
   <string name="WndGame_Ranking">Rankingi</string>
   <string name="WndGame_Start">Zacznij nową grę</string>
   <string name="WndGame_menu">Menu Główne</string>
-  <string name="WndGame_Exit">Wyjdź z Remixed Dungeon</string>
   <string name="WndGame_Return">Wróc do Gry</string>
   <string name="WndGame_Save">Zapisz</string>
   <string name="WndGame_Load">Wczytaj</string>
@@ -233,8 +229,6 @@
   <string name="LloidsBeacon_Preventing">Silna aura magiczna tego miejsca uniemożliwia ci używanie Rdzenia!</string>
   <string name="LloidsBeacon_Creatures">Psychiczna aura niedalekich potworów nie pozwala ci teraz użyć Rdzenia.</string>
   <string name="LloidsBeacon_Return">Rdzeń Lloyda został pomyślnie ustawiony na twojej obecnej pozycji. Teraz możesz powrócić w to miejsce kiedy chcesz.</string>
-  <string name="LloidsBeacon_Set">\n\nRdzeń został ustawiony na %d poziomie Remixed Dungeon.
-</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">magiczny pisak</string>
   <string name="Stylus_ACInscribe">WPISZ</string>

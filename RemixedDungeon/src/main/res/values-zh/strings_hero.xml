@@ -3,7 +3,6 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">您</string>
   <string name="Hero_Name_Objective">您</string>
-  <string name="Hero_Leave">您喊破喉嚨也不能如此輕易離開地牢！</string>
   <string name="Hero_LevelUp">升級！</string>
   <string name="Hero_NewLevel">恭喜你升到了%d級！現在的您更加健康和專注。這讓您更容易命中敵人和躲避敵人攻擊。</string>
   <string name="Hero_YouNowHave">你获得了%s</string>
