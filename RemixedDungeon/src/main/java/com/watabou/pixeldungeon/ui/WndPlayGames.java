@@ -106,14 +106,11 @@ class WndPlayGames extends Window {
         }
         @Override
         public void status(final boolean status) {
-            Game.pushUiTask(new Runnable() {
-                                       @Override
-                                       public void run() {
-                                           working.hide();
-                                           String msg = Game.getVar(status ? R.string.WndPlayGames_Show_Ok : R.string.WndPlayGames_Show_Error );
-                                           Game.scene().add(new WndMessage(msg));
-                                       }
-                                   }
+            Game.pushUiTask(() -> {
+                working.hide();
+                String msg = Game.getVar(status ? R.string.WndPlayGames_Show_Ok : R.string.WndPlayGames_Show_Error );
+                Game.scene().add(new WndMessage(msg));
+            }
             );
         }
     }
