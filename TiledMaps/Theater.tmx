@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.3" orientation="orthogonal" renderorder="left-up" width="13" height="19" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+<map version="1.0" tiledversion="2018.12.28" orientation="orthogonal" renderorder="left-up" width="13" height="19" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
  <tileset firstgid="1" source="tilesets/logic.tsx"/>
  <tileset firstgid="65" source="tilesets/tiles_town_outside_winter.tsx"/>
  <tileset firstgid="321" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="577" source="tilesets/Mobs.tsx"/>
- <layer name="logic" width="13" height="19" opacity="0.39">
+ <layer id="1" name="logic" width="13" height="19" opacity="0.39">
   <data encoding="csv">
 5,5,5,5,5,5,5,5,5,5,5,5,5,
 5,5,5,5,5,5,5,5,5,5,5,5,5,
@@ -27,7 +27,7 @@
 5,5,5,5,5,5,5,5,5,5,5,5,5
 </data>
  </layer>
- <layer name="base" width="13" height="19">
+ <layer id="2" name="base" width="13" height="19">
   <data encoding="csv">
 329,329,329,329,329,329,329,329,329,329,329,329,329,
 329,329,322,322,322,322,322,322,322,322,322,329,329,
@@ -50,7 +50,7 @@
 329,329,329,329,329,329,329,329,329,329,329,329,329
 </data>
  </layer>
- <layer name="deco" width="13" height="19">
+ <layer id="3" name="deco" width="13" height="19">
   <data encoding="csv">
 0,325,0,0,0,0,0,0,0,0,0,326,0,
 0,341,0,0,0,0,0,0,0,0,0,342,0,
@@ -73,7 +73,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="deco2" width="13" height="19">
+ <layer id="5" name="roof_base" width="13" height="19">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -92,34 +92,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,442,443,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer name="roof_base" width="13" height="19">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,322,322,322,322,322,322,322,322,322,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="roof_deco" width="13" height="19">
+ <layer id="6" name="roof_deco" width="13" height="19">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -142,7 +119,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="mobs" width="13" height="19">
+ <layer id="7" name="mobs" width="13" height="19">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
