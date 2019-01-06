@@ -404,12 +404,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 			getCurUser().busy();
 
-			fx(cell, new Callback() {
-				@Override
-				public void call() {
-					onZap(cell);
-					wandUsed();
-				}
+			fx(cell, () -> {
+				onZap(cell);
+				wandUsed();
 			});
 
 			Invisibility.dispel(getCurUser());
