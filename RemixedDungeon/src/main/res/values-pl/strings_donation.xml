@@ -11,6 +11,7 @@
   <string name="WndDonate_rubyDonate">rubinowa darowizna</string>
   <string name="WndDonate_silverDonateText">Każda darowizna pomaga nam w ulepszaniu projektu</string>
   <string name="WndDonate_goldDonateText">Dziękujemy za Twoje wsparcie</string>
+  <string name="WndDonate_rubyDonateText">Twoja szczodrość pomoże nam dalej rozwijać Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Wyłącza również reklamy we wszystkicgh trybach gry i obklokowuje łowczynię.</string>
   <string name="WndDonate_goldDonateText2">Także odblokowuje elfa na początku gry.</string>
   <string name="WndDonate_rubyDonateText2" />

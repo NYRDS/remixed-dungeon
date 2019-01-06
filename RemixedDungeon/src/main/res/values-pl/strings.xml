@@ -3,13 +3,13 @@
   <!--STRINGS OF IntroScene CLASS-->
   <string name="IntroScene_Txt">Wielu bohaterów przed tobą zapuściło się do Lochu. Niektóre z nich powróciły ze skarbami i magicznymi artefaktami, z których większość nigdy nie słyszano. Ale nikomu nie udało się odzyskać Amuletu Yendoru, o którym mówi się, że jest ukryty w głębi Podziemi. \ N \ nZgadasz, że jesteś gotowy na wyzwanie, ale co najważniejsze, czujesz, że fortuna uśmiecha się do ciebie. Czas zacząć własną przygodę!</string>
   <!--STRINGS OF AmuletScene CLASS-->
-  <string name="AmuletScene_Exit">Nazwijmy to dniem</string>
-  <string name="AmuletScene_Stay">jeszcze nie skończyłem</string>
+  <string name="AmuletScene_Exit">Tyle na dzisiaj</string>
+  <string name="AmuletScene_Stay">Jeszcze nie skończyłem</string>
   <string name="AmuletScene_Txt">W końcu trzymaj to w swoich rękach, Amulet Yendoru. Wykorzystując jego moc, możesz przejąć świat lub przynieść pokój i dobrobyt ludziom lub czymkolwiek innym. W każdym razie twoje życie zmieni się na zawsze, a ta gra się skończy. Możesz też pozostać zwykłym śmiertelnikiem trochę dłużej.</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_NightMode">Bądź ostrożny, ponieważ loch jest jeszcze bardziej niebezpieczny w nocy!</string>
   <string name="GameScene_Chasm">Twoje kroki odbijają się echem w lochu.</string>
-  <string name="GameScene_Water">Usłyszysz plusk wody wokół ciebie.</string>
+  <string name="GameScene_Water">Słyszysz plusk wody wokół ciebie.</string>
   <string name="GameScene_Grass">Zapach roślinności jest gęsty w powietrzu.</string>
   <string name="GameScene_Secrets">Atmosfera sugeruje, że na tym piętrze kryje się wiele tajemnic.</string>
   <!--STRINGS OF Char CLASS-->

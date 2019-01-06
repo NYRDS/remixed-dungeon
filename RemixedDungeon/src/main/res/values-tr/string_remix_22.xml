@@ -8,7 +8,16 @@
   <string name="ShadowLord_Intro">Kendini hazırla!</string>
   <string name="ShadowLord_Death">Hayıııır...</string>
   <string name="AllowStatisticsCollectionScene_Title">Kullanım istatistiği toplanması </string>
+  <string name="AllowStatisticsCollectionScene_Request">Eğer izin verirsen, Remixed Pixel Dungeon kullanım istatisliklerini toplayacak. Bu veriler şunlar için kullanılacak
+- küçük farklı hataları bulmak ve düzeltmek
+- oyun dengeleme geliştirmeleri
+- cihaza özel performans hatalarını düzeltmek
+- ara sıra komik istatistikleri paylaşmak
+Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge simgesine tıkla)
+</string>
   <string name="AllowStatisticsCollectionScene_Allow">İzin ver</string>
   <string name="AllowStatisticsCollectionScene_Deny">Reddet</string>
   <string name="Darkness_Info">Görünüşe göre havada ebedi karanlık parçacıkları uçuşuyor</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Lütfen Remixed Dungeon çevirilerini geliştirmemize yardımcı olun</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Remixed Dungeon çevirine katılmak için buraya tıklayın</string>
 </resources>
