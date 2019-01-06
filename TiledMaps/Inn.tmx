@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.12.28" orientation="orthogonal" renderorder="left-up" width="19" height="25" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="left-up" width="19" height="25" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="1">
  <tileset firstgid="1" source="tilesets/logic.tsx"/>
  <tileset firstgid="65" source="tilesets/tiles_town_outside_winter.tsx"/>
  <tileset firstgid="321" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="577" source="tilesets/Mobs.tsx"/>
- <layer id="14" name="base" width="19" height="25">
+ <layer id="14" name="base" width="19" height="25" visible="0">
   <data encoding="csv">
 329,330,330,330,331,331,330,329,330,331,331,330,331,330,330,330,331,331,329,
 330,331,330,330,331,330,330,329,329,331,330,330,330,329,330,330,331,330,329,
@@ -33,7 +33,7 @@
 329,329,329,329,329,329,329,329,329,329,329,329,329,329,329,329,329,329,329
 </data>
  </layer>
- <layer id="15" name="deco" width="19" height="25">
+ <layer id="15" name="deco" width="19" height="25" visible="0">
   <data encoding="csv">
 0,325,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,326,0,
 0,341,322,322,322,322,322,322,322,322,322,322,322,322,322,322,322,342,0,
@@ -62,7 +62,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="16" name="roof_base" width="19" height="25">
+ <layer id="16" name="roof_base" width="19" height="25" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -116,11 +116,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,373,0,0,0,148,0,0,0,373,0,0,0,0,0,
+0,0,0,0,0,373,0,0,0,402,0,0,0,373,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="18" name="mobs" width="19" height="25">
+ <layer id="18" name="mobs" width="19" height="25" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
