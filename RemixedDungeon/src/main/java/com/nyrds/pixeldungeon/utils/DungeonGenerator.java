@@ -149,7 +149,6 @@ public class DungeonGenerator {
 
 			JSONArray currentLevel = mGraph.getJSONArray(current.levelId);
 
-			JSONArray nextLevelSet = currentLevel.getJSONArray(descend ? 0 : 1);
 			Position next = new Position();
 			int index = 0;
 
@@ -164,12 +163,7 @@ public class DungeonGenerator {
 				}
 			}
 
-			if (!descend) {
-				if (currentLevel.length() > 2) {
-					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
-					next.cellId = -exitIndex;
-				}
-			}
+			JSONArray nextLevelSet = currentLevel.getJSONArray(descend ? 0 : 1);
 
 			if (index >= nextLevelSet.length()) {
 				index = 0;
@@ -179,8 +173,25 @@ public class DungeonGenerator {
 			mCurrentLevelId = nextLevelSet.optString(index,"0");
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);
-
 			next.levelId = mCurrentLevelId;
+
+			if (!descend) {
+				if (currentLevel.length() > 2) { // old way
+					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
+					next.cellId = -exitIndex;
+				} else { // new way
+					JSONArray nextLevelExits = mGraph.getJSONArray(next.levelId).getJSONArray(0);
+					for (int i = 0;i<nextLevelExits.length();++i) {
+						if(nextLevelExits.getString(i).equals(current.levelId)) {
+							next.cellId = -(i+1);
+							break;
+						}
+					}
+				}
+			}
+
+
+
 			mCurrentLevelDepth = nextLevelDesc.optInt("depth",0);
 			mCurrentLevelKind  = getLevelKind(next.levelId);
 
