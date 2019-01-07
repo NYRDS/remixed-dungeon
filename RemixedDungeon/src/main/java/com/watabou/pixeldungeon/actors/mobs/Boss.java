@@ -1,15 +1,12 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.watabou.noosa.audio.Music;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 abstract public class Boss extends Mob {
 
@@ -46,15 +43,6 @@ abstract public class Boss extends Mob {
 	@Override
 	protected void readCharData() {
 		super.readCharData();
-		try {
-			JSONObject desc = getClassDef();
-
-			if (desc.has(BATTLE_MUSIC)) {
-				battleMusic = desc.getString(BATTLE_MUSIC);
-			}
-		} catch (JSONException e) {
-			throw ModdingMode.modException("bad "+getMobClassName()+".json",e);
-		}
-
+		battleMusic = getClassDef().optString(BATTLE_MUSIC, Dungeon.level.music());
 	}
 }
