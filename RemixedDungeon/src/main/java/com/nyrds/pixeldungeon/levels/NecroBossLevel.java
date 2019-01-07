@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.R;
@@ -143,7 +145,7 @@ public class NecroBossLevel extends Level {
 			enteredArena = true;
 			
 			Lich boss = new Lich();
-			boss.setState(boss.HUNTING);
+			boss.setState(MobAi.getStateByClass(Hunting.class));
 			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
 			spawnMob(boss);

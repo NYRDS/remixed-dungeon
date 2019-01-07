@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -27,7 +29,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-import com.watabou.utils.Random;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -38,7 +39,7 @@ public class MirrorImage extends Mob {
 
 	// for restoreFromBundle
 	public MirrorImage() {
-		setState(HUNTING);
+		setState(MobAi.getStateByClass(Hunting.class));
 		setEnemy(DUMMY);
 	}
 
@@ -79,23 +80,7 @@ public class MirrorImage extends Mob {
 		
 		return dmg;
 	}
-	
-	protected Char chooseEnemy() {
-		
-		if (getEnemy() == DUMMY || !getEnemy().isAlive()) {
-			HashSet<Mob> enemies = new HashSet<>();
-			for (Mob mob:Dungeon.level.mobs) {
-				if (!mob.friendly(Dungeon.hero) && Dungeon.level.fieldOfView[mob.getPos()]) {
-					enemies.add( mob );
-				}
-			}
-			
-			setEnemy(enemies.size() > 0 ? Random.element( enemies ) : DUMMY);
-		}
-		
-		return getEnemy();
-	}
-		
+
 	@Override
 	public CharSprite sprite() {
 		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {

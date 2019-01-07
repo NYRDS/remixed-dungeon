@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items;
 
+
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -24,10 +26,10 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -36,6 +38,7 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -76,7 +79,8 @@ public class Heap implements Bundlable {
 		regularHeaps.put(Type.HEAP,14f);
 	}
 
-	public int pos = 0;
+	@Packable
+	public int pos = Level.INVALID_CELL;
 	
 	public ItemSprite sprite;
 
@@ -118,7 +122,7 @@ public class Heap implements Bundlable {
 		return (type == Type.HEAP || type == Type.FOR_SALE) && items.size() > 0 ? items.peek().glowing() : null;
 	}
 	
-	public void open( Hero hero ) {
+	public void open( Char chr ) {
 		switch (type) {
 		case MIMIC:
 			if (Mimic.spawnAt( pos, items ) != null) {
@@ -129,15 +133,15 @@ public class Heap implements Bundlable {
 			}
 			break;
 		case TOMB:
-			Wraith.spawnAround( hero.getPos() );
+			Wraith.spawnAround( chr.getPos() );
 			break;
 		case SKELETON:
 			CellEmitter.center( pos ).start( Speck.factory( Speck.RATTLE ), 0.1f, 3 );
 			for (Item item : items) {
 				if (item.cursed) {
 					if (Wraith.spawnAt( pos ) == null) {
-						hero.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
-						hero.damage( hero.hp() / 2, this );
+						chr.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
+						chr.damage( chr.hp() / 2, this );
 					}
 					Sample.INSTANCE.play( Assets.SND_CURSED );
 					break;
@@ -391,21 +395,18 @@ public class Heap implements Bundlable {
 		items.clear();
 	}
 
-	private static final String POS		= "pos";
 	private static final String TYPE	= "type";
 	private static final String ITEMS	= "items";
 	
 	@SuppressWarnings("unchecked")
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		pos   = bundle.getInt( POS );
 		type  = Type.valueOf( bundle.getString( TYPE ) );
 		items = new LinkedList<>(bundle.getCollection(ITEMS, Item.class));
 	}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( POS, pos );
 		bundle.put( TYPE, type.toString() );
 		bundle.put( ITEMS, items );
 	}

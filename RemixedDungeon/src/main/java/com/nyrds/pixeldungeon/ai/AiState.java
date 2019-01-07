@@ -1,7 +1,14 @@
 package com.nyrds.pixeldungeon.ai;
 
-public interface AiState {
-    boolean act(boolean enemyInFOV, boolean justAlerted);
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 
-    String status();
+public interface AiState {
+    void act(Mob me);
+
+    String status(Mob me);
+
+    String getTag();
+
+    void gotDamage(Mob me, Object src, int dmg);
+    void onDie();
 }

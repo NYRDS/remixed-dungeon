@@ -17,6 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -111,7 +115,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 
 	@Override
 	public boolean reset() {
-		setState(WANDERING);
+		setState(MobAi.getStateByClass(Wandering.class));
 		return true;
 	}
 
@@ -137,7 +141,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		m.items.addAll(items);
 		m.hp(m.ht());
 		m.setPos(pos);
-		m.setState(m.HUNTING);
+		m.setState(MobAi.getStateByClass(Hunting.class));
 		level.spawnMob(m, 1);
 
 		m.getSprite().turnTo(pos, Dungeon.hero.getPos());

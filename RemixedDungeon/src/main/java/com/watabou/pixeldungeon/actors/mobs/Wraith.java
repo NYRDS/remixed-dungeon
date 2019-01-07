@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
@@ -68,7 +71,7 @@ public class Wraith extends Mob implements IDepthAdjustable {
 	
 	@Override
 	public boolean reset() {
-		setState(WANDERING);
+		setState(MobAi.getStateByClass(Wandering.class));
 		return true;
 	}
 	
@@ -86,7 +89,7 @@ public class Wraith extends Mob implements IDepthAdjustable {
 			
 			Wraith w = new Wraith();
 			w.setPos(pos);
-			w.setState(w.HUNTING);
+			w.setState(MobAi.getStateByClass(Hunting.class));
 			Dungeon.level.spawnMob(w, SPAWN_DELAY );
 			
 			w.getSprite().alpha( 0 );

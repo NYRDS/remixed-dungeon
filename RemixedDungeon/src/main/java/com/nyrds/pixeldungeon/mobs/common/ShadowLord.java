@@ -1,5 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.pixeldungeon.ai.Fleeing;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -56,7 +59,7 @@ public class ShadowLord extends Boss implements IZapper {
 		if (cell != -1) {
 			Mob mob = new Shadow();
 
-			mob.setState(mob.WANDERING);
+			mob.setState(MobAi.getStateByClass(Wandering.class));
 			Dungeon.level.spawnMob(mob, 1, getPos());
 
 			WandOfBlink.appear(mob, cell);
@@ -156,7 +159,7 @@ public class ShadowLord extends Boss implements IZapper {
 		super.damage(dmg, src);
 		if (src != this) {
 			if (dmg > 0 && cooldown < 0) {
-				setState(FLEEING);
+				setState(MobAi.getStateByClass(Fleeing.class));
 				if (src instanceof Char) {
 					blink(((Char) src).getPos());
 				}
@@ -167,11 +170,11 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	@Override
-	protected boolean act() {
-		if (getState() == FLEEING) {
+    public boolean act() {
+		if (getState() instanceof Fleeing) {
 			cooldown--;
 			if (cooldown < 0) {
-				setState(WANDERING);
+				setState(MobAi.getStateByClass(Wandering.class));
 				if (Math.random() < 0.7) {
 					spawnWraith();
 				} else {

@@ -34,7 +34,7 @@ public class JarOfSouls extends UndeadMob {
 	}
 	
 	@Override
-	protected boolean act(){
+    public boolean act(){
 		super.act();
 		if (enemySeen){
 			spawnUndead();
@@ -45,7 +45,7 @@ public class JarOfSouls extends UndeadMob {
 	private void spawnUndead(){
 		getSprite().zap(getEnemy().getPos(), null);
 
-		MobSpawner.spawnRandomMob(Dungeon.level,this);
+		MobSpawner.spawnRandomMob(Dungeon.level,getPos());
 
 		postpone(15);
 	}

@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -46,10 +48,10 @@ public class Nightmare extends Mob {
     public int dr() { return 10; }
 
     @Override
-    protected boolean act(){
+    public boolean act(){
         super.act();
 
-        setState(HUNTING);
+        setState(new Hunting());
 
         return true;
     }

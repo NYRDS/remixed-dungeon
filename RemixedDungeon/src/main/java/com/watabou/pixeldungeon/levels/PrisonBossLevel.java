@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -308,7 +310,7 @@ public class PrisonBossLevel extends RegularLevel {
 			} while (pos == cell || Actor.findChar( pos ) != null);
 			
 			Mob boss = Bestiary.mob(this);
-			boss.setState(boss.HUNTING);
+			boss.setState(MobAi.getStateByClass(Hunting.class));
 			boss.setPos(pos);
 			Dungeon.level.spawnMob(boss);
 			boss.notice();

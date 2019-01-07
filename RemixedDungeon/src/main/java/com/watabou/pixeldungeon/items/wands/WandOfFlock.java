@@ -111,7 +111,7 @@ public class WandOfFlock extends SimpleWand  {
 		private boolean initialized = false;
 		
 		@Override
-		protected boolean act() {
+        public boolean act() {
 			if (initialized) {
 				hp(0);
 

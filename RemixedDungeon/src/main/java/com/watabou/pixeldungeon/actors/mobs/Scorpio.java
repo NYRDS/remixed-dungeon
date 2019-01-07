@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -95,7 +96,7 @@ public class Scorpio extends Mob implements IZapper {
 
 	@Override
 	public boolean getCloser(int target) {
-		if (getState() == HUNTING) {
+		if (getState() instanceof Hunting) {
 			return enemySeen && getFurther( target );
 		} else {
 			return super.getCloser( target );

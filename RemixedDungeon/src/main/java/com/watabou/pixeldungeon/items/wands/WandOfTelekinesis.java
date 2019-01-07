@@ -26,8 +26,8 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.MagicMissile;
-import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
@@ -72,11 +72,9 @@ public class WandOfTelekinesis extends Wand {
 					int next = Ballistica.trace[i + 1];
 					if (ch.isMovable() && (level.passable[next] || level.avoid[next]) && Actor.findChar(next) == null) {
 
-						Actor.addDelayed(new Pushing(ch, ch.getPos(), next), -1);
-
-						ch.setPos(next);
-						Actor.freeCell(next);
-						level.press(ch.getPos(), ch);
+                        ch.move(next);
+                        ch.getSprite().move(ch.getPos(), next);
+                        Dungeon.observe();
 					} else {
 						ch.damage(maxDistance - 1 - i, this);
 					}
@@ -86,11 +84,13 @@ public class WandOfTelekinesis extends Wand {
 			if (heap == null && (heap = level.getHeap(c)) != null) {
 				switch (heap.type) {
 					case HEAP:
-						transport(heap);
+						if (wandUser instanceof Hero) {
+							transport(heap);
+						}
 						break;
 					case CHEST:
 					case MIMIC:
-						heap.open(getCurUser());
+						heap.open(wandUser);
 						break;
 					default:
 				}
@@ -111,8 +111,8 @@ public class WandOfTelekinesis extends Wand {
 
 			LevelObject levelObject;
 			if((levelObject = level.getTopLevelObject(c) )!=null) {
-				if(levelObject.pushable(getCurUser())) {
-					levelObject.push(getCurUser());
+				if(levelObject.pushable(wandUser)) {
+					levelObject.push(wandUser);
 				}
 			}
 		}

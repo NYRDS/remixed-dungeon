@@ -21,6 +21,8 @@ import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
@@ -317,6 +319,7 @@ public abstract class Level implements Bundlable {
 	@Packable
 	protected int viewDistance;
 
+	//Active Char fov
 	public boolean[] fieldOfView;
 
 	public boolean[] passable;
@@ -811,7 +814,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (!passable[pos]) {
-			mob.setState(mob.WANDERING);
+			mob.setState(MobAi.getStateByClass(Wandering.class));
 		}
 
 	}
@@ -835,7 +838,7 @@ public abstract class Level implements Bundlable {
 				if (hostileMobsCount < nMobs()) {
 
 					Mob mob = createMob();
-					mob.setState(mob.WANDERING);
+					mob.setState(MobAi.getStateByClass(Wandering.class));
 					if (Dungeon.hero.isAlive() && cellValid(mob.getPos())) {
 						spawnMob(mob);
 						if (Statistics.amuletObtained) {
@@ -1262,6 +1265,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void updateFieldOfView(Char c) {
+
+		//GLog.i("fov: %s",c.toString());
 
 		if (noFogOfWar()) {
 			Arrays.fill(fieldOfView, true);

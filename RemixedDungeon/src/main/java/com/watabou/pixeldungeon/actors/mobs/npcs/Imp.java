@@ -50,7 +50,7 @@ public class Imp extends NPC {
 	private boolean seenBefore = false;
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		
 		if (!Quest.given && Dungeon.visible[getPos()]) {
 			if (!seenBefore) {

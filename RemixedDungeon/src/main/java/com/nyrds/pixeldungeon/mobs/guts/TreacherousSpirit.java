@@ -1,5 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -19,7 +22,7 @@ public class TreacherousSpirit extends Mob {
         exp = 45;
         maxLvl = 30;
 
-        setState(WANDERING);
+        setState(MobAi.getStateByClass(Wandering.class));
         lootChance = 1f;
         loot = HeartOfDarkness.class;
     }

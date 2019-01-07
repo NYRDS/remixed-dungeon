@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.watabou.pixeldungeon.Badges;
@@ -34,7 +35,7 @@ public class SpiderQueen extends Boss {
 	}
 	
 	@Override
-	protected boolean act(){
+    public boolean act(){
 		if(Random.Int(0, 20) == 0 && !SpiderEgg.laid(getPos())) {
 			SpiderEgg.lay(getPos());
 		}
@@ -59,7 +60,7 @@ public class SpiderQueen extends Boss {
 	@Override
 	public boolean getCloser(int target) {
 		if (hp() < ht() / 2) {
-			if (getState() == HUNTING && Dungeon.level.distance(getPos(), target) < 5) {
+			if (getState() instanceof Hunting && level().distance(getPos(), target) < 5) {
 				return getFurther(target);
 			}
 			return super.getCloser(target);

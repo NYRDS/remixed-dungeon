@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
+
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mechanics.spells.WindGust;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
@@ -58,7 +60,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public boolean getCloser(int target) {
-		if (getState() == HUNTING && Dungeon.level.distance(getPos(), target) < magicLvl() - 1) {
+		if (getState() instanceof Hunting && Dungeon.level.distance(getPos(), target) < magicLvl() - 1) {
 			return getFurther(target);
 		}
 

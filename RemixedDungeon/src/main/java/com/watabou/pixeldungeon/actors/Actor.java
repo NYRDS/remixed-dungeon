@@ -43,7 +43,7 @@ public abstract class Actor implements Bundlable {
 
 	protected abstract boolean act();
 	
-	protected void spend( float time ) {
+	public void spend( float time ) {
 		this.time += time;
 	}
 	
@@ -94,7 +94,7 @@ public abstract class Actor implements Bundlable {
 	
 	private static float now = 0;
 	
-	private static Map<Integer, Char> chars = new HashMap<>();
+	public static Map<Integer, Char> chars = new HashMap<>();
 	
 	public static void clear() {
 		now = 0;

@@ -7,48 +7,46 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class Hunting implements AiState {
+public class Hunting extends MobAi implements AiState {
 
-    public static final String TAG = "HUNTING";
-
-    private Mob mob;
-
-    public Hunting(Mob mob) {
-        this.mob = mob;
-    }
+    public Hunting() { }
 
     @Override
-    public boolean act(boolean enemyInFOV, boolean justAlerted) {
-        mob.enemySeen = enemyInFOV;
-        if (enemyInFOV && mob.canAttack(mob.getEnemy())) {
-            return mob.doAttack(mob.getEnemy());
+    public void act(Mob me) {
+        me.enemySeen = me.isEnemyInFov();
+
+        if (me.enemySeen && me.canAttack(me.getEnemy())) {
+            me.doAttack(me.getEnemy());
+            return;
         } else {
-            if (enemyInFOV) {
-                mob.target = mob.getEnemy().getPos();
+            if (me.enemySeen) {
+                me.target = me.getEnemy().getPos();
             }
-            int oldPos = mob.getPos();
-            if (mob.target != -1 && mob.getCloser(mob.target)) {
 
-                mob.spend(1 / mob.speed());
-                return mob.moveSprite(oldPos, mob.getPos());
+            if(!me.doStepTo(me.target)) {
+                me.spend(Actor.TICK);
+                me.target = Dungeon.level.randomDestination();
 
-            } else {
-
-                mob.spend(Actor.TICK);
-                mob.setState(mob.WANDERING);
-                mob.target = Dungeon.level.randomDestination();
-                return true;
+                me.setState(getStateByClass(Wandering.class));
             }
         }
     }
 
     @Override
-    public String status() {
-        if (mob.getEnemy()!= Mob.DUMMY) {
+    public String status(Mob me) {
+        if (me.getEnemy().valid()) {
             return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus2),
-                    mob.getName(), mob.getEnemy().getName_objective());
+                    me.getName(), me.getEnemy().getName_objective());
         }
         return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus),
-                mob.getName());
+                me.getName());
     }
+
+    @Override
+    public void gotDamage(Mob me, Object src, int dmg) {
+        if(!me.isEnemyInFov()) {
+            seekRevenge(me,src);
+        }
+    }
+
 }

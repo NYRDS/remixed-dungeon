@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -48,7 +50,7 @@ public class Statue extends Mob {
 	
 	public Statue() {
 		exp = 0;
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 		
 		do {
 			weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
@@ -83,7 +85,7 @@ public class Statue extends Mob {
 	}
 	
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		if (!isPet() && Dungeon.visible[getPos()]) {
 			Journal.add( Journal.Feature.STATUE.desc() );
 		}
@@ -134,7 +136,7 @@ public class Statue extends Mob {
 	
 	@Override
 	public boolean reset() {
-		setState(PASSIVE);
+		setState(MobAi.getStateByClass(Passive.class));
 		return true;
 	}
 

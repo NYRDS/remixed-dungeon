@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.noosa.tweeners.ScaleTweener;
@@ -34,7 +35,7 @@ public class MobSprite extends CharSprite {
 	public void update() {
 		if(ch instanceof  Mob) {
 			Mob mob = (Mob) ch;
-			sleeping = mob.getState() == mob.SLEEPING;
+			sleeping = mob.getState() instanceof Sleeping;
 			controlled = mob.isPet();
 		}
 		super.update();

@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.items.food;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.CommonActions;
@@ -35,7 +37,7 @@ public class PseudoPasty extends Food {
 
 		MimicPie mob = new MimicPie();
 		mob.setPos(spawnPos);
-		mob.setState(mob.WANDERING);
+		mob.setState(MobAi.getStateByClass(Wandering.class));
 
 		level.spawnMob(mob);
 

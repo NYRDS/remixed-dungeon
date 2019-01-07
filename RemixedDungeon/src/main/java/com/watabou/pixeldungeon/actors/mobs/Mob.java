@@ -23,9 +23,10 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.AiState;
-import com.nyrds.pixeldungeon.ai.Fleeing;
+import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
-import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -75,7 +76,6 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 import androidx.annotation.NonNull;
@@ -88,19 +88,13 @@ public abstract class Mob extends Char {
 	private static final float SPLIT_DELAY = 1f;
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 
-	public AiState SLEEPING  = new Sleeping(this);
-	public AiState HUNTING   = new Hunting(this);
-	public AiState WANDERING = new Wandering(this);
-	public AiState FLEEING   = new Fleeing(this);
-	public AiState PASSIVE   = new Passive(this);
-
 	@Packable (defaultValue = DEFAULT_MOB_SCRIPT)
 	protected String scriptFile = DEFAULT_MOB_SCRIPT;
 
 	private LuaTable mobScript;
 	private LuaValue scriptResult = LuaValue.NIL;
 
-	private AiState state = SLEEPING;
+	private AiState state = new Sleeping();
 
 	protected Object spriteClass;
 
@@ -119,18 +113,9 @@ public abstract class Mob extends Char {
 
 	public boolean enemySeen;
 
-	private boolean alerted = false;
-
 	public static final float TIME_TO_WAKE_UP = 1f;
 
 	static private Map<String, JSONObject> defMap = new HashMap<>();
-
-	// Unreachable target
-	public static final Mob DUMMY = new Mob() {
-		{
-			setPos(Level.INVALID_CELL);
-		}
-	};
 
 	private static final String STATE      = "state";
 	private static final String TARGET     = "target";
@@ -160,27 +145,12 @@ public abstract class Mob extends Char {
 		setEnemy(DUMMY);
 	}
 
-	private String state2tag(AiState state) {
-		if (state == SLEEPING) {
-			return Sleeping.TAG;
-		} else if (state == WANDERING) {
-			return Wandering.TAG;
-		} else if (state == HUNTING) {
-			return Hunting.TAG;
-		} else if (state == FLEEING) {
-			return Fleeing.TAG;
-		} else if (state == PASSIVE) {
-			return Passive.TAG;
-		}
-		return Passive.TAG;
-	}
-
 	@Override
 	public void storeInBundle(Bundle bundle) {
 
 		super.storeInBundle(bundle);
 
-		bundle.put(STATE,  state2tag(getState()));
+		bundle.put(STATE,  getState().getTag());
 		bundle.put(TARGET, target);
 
 		bundle.put(ENEMY_SEEN, enemySeen);
@@ -214,23 +184,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected void setState(String state) {
-		switch (state) {
-			case Sleeping.TAG:
-				this.setState(SLEEPING);
-				break;
-			case Wandering.TAG:
-				this.setState(WANDERING);
-				break;
-			case Hunting.TAG:
-				this.setState(HUNTING);
-				break;
-			case Fleeing.TAG:
-				this.setState(FLEEING);
-				break;
-			case Passive.TAG:
-				this.setState(PASSIVE);
-				break;
-		}
+		setState(MobAi.getStateByTag(state));
 	}
 
 	protected int getKind() {
@@ -257,7 +211,7 @@ public abstract class Mob extends Char {
 				return new MobSpriteDef((String) spriteClass, getKind());
 			}
 
-			throw new TrackedRuntimeException(String.format("sprite creation failed - mob class %s", getMobClassName()));
+			throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getMobClassName()));
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
@@ -265,12 +219,9 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	protected boolean act() {
+	public boolean act() {
 
-		super.act();
-
-		boolean justAlerted = alerted;
-		alerted = false;
+		super.act(); //Calculate FoV
 
 		getSprite().hideAlert();
 
@@ -280,88 +231,17 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		setEnemy(chooseEnemy());
-
-		boolean enemyInFOV = getEnemy().isAlive() && Dungeon.level.cellValid(getEnemy().getPos()) && Dungeon.level.fieldOfView[getEnemy().getPos()]
-				&& getEnemy().invisible <= 0;
-/*
-		if(enemyInFOV) {
-			GLog.i("%s, enemy %s in fov %b", toString(), enemy.toString(), enemyInFOV);
-		}
-*/
-		return getState().act(enemyInFOV, justAlerted);
+		getState().act(this);
+		return true;
 	}
 
-	private Char chooseNearestEnemyFromFraction(Fraction enemyFraction) {
-		Level level = Dungeon.level;
 
-		Char bestEnemy = DUMMY;
-		int dist = level.getWidth() + level.getHeight();
+	public boolean isEnemyInFov(){
+	    return getEnemy().isAlive() && level().cellValid(getEnemy().getPos()) && level().fieldOfView[getEnemy().getPos()]
+                && getEnemy().invisible <= 0;
+    }
 
-		if (enemyFraction.belongsTo(Fraction.HEROES)) {
-			Hero hero = Dungeon.hero;
-			if (Dungeon.level.fieldOfView[hero.getPos()] && !friendly(hero)) {
-				bestEnemy = hero;
-				dist = level.distance(getPos(), bestEnemy.getPos());
-			}
-		}
-
-		for (Mob mob : level.mobs) {
-			if(Dungeon.level.fieldOfView[mob.getPos()]) {
-				if (!mob.friendly(this)) {
-					int candidateDist = level.distance(getPos(), mob.getPos());
-					if (candidateDist < dist) {
-						bestEnemy = mob;
-						dist = candidateDist;
-					}
-				}
-			}
-		}
-
-		return bestEnemy;
-	}
-
-	private Char chooseEnemyHeroes() {
-		Char newEnemy = chooseNearestEnemyFromFraction(Fraction.DUNGEON);
-
-		if (newEnemy != DUMMY && Dungeon.visible[newEnemy.getPos()]) {
-			return newEnemy;
-		}
-
-		setState(WANDERING);
-		target = Dungeon.hero.getPos();
-
-		return DUMMY;
-	}
-
-	protected Char chooseEnemy() {
-		if (!getEnemy().isAlive()) {
-			setEnemy(DUMMY);
-		}
-
-		Terror terror = buff(Terror.class);
-		if (terror != null) {
-			return terror.source;
-		}
-
-		if (hasBuff(Amok.class)) {
-			return chooseNearestEnemyFromFraction(Fraction.ANY);
-		}
-
-		if(getEnemy() != DUMMY) {
-			return getEnemy();
-		}
-
-		switch (fraction) {
-			default:
-			case DUNGEON:
-				return chooseNearestEnemyFromFraction(Fraction.HEROES);
-			case HEROES:
-				return chooseEnemyHeroes();
-		}
-	}
-
-	public boolean moveSprite(int from, int to) {
+	public void moveSprite(int from, int to) {
 
 		if (getSprite().isVisible()
 				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
@@ -369,7 +249,6 @@ public abstract class Mob extends Char {
 		} else {
 			getSprite().place(to);
 		}
-		return true;
 	}
 
 	@Override
@@ -382,27 +261,18 @@ public abstract class Mob extends Char {
 
 		if (buff instanceof Amok) {
 			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			setState(HUNTING);
+			setState(MobAi.getStateByClass(RunningAmok.class));
 		} else if (buff instanceof Terror) {
-			setState(FLEEING);
+			setState(MobAi.getStateByClass(Horrified.class));
 		} else if (buff instanceof Sleep) {
 			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-			setState(SLEEPING);
+			setState(MobAi.getStateByClass(Sleeping.class));
 			postpone(Sleep.SWS);
 		}
 	}
 
-	@Override
-	public void remove(Buff buff) {
-		super.remove(buff);
-		if (buff instanceof Terror) {
-			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			setState(HUNTING);
-		}
-	}
-
 	public boolean canAttack(Char enemy) {
-		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && !pacified;
+		return level().adjacent(getPos(), enemy.getPos()) && !pacified;
 	}
 
 	public boolean getCloser(int target) {
@@ -410,7 +280,7 @@ public abstract class Mob extends Char {
 		if (hasBuff(Roots.class)) {
 			return false;
 		}
-		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(Dungeon.level));
+		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(level()));
 
 		if (step != -1) {
 			move(step);
@@ -421,7 +291,7 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean getFurther(int target) {
-		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(Dungeon.level));
+		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(level()));
 
 		if (step != -1) {
 			move(step);
@@ -444,7 +314,9 @@ public abstract class Mob extends Char {
 
 	public boolean doAttack(Char enemy) {
 
-		if (Dungeon.level.distance( getPos(), enemy.getPos() ) <= 1) {
+		setEnemy(enemy);
+
+		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
 			getSprite().attack(enemy.getPos());
 		} else {
 			getSprite().zap( enemy.getPos() );
@@ -510,14 +382,7 @@ public abstract class Mob extends Char {
 
 		runMobScript("onDamage", dmg, src);
 
-		Terror.recover(this);
-
-		AiState state = getState();
-
-		if (state == SLEEPING || state == PASSIVE) {
-			setState(HUNTING);
-		}
-		alerted = true;
+        getState().gotDamage(this,src, dmg);
 
 		super.damage(dmg, src);
 	}
@@ -527,7 +392,7 @@ public abstract class Mob extends Char {
 
 		super.destroy();
 
-		Dungeon.level.mobs.remove(this);
+		level().mobs.remove(this);
 	}
 
 	public void remove() {
@@ -566,6 +431,9 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void die(Object cause) {
+
+		getState().onDie();
+
 		runMobScript("onDie",cause);
 
 		Hero hero = Dungeon.hero;
@@ -639,11 +507,11 @@ public abstract class Mob extends Char {
 
 		clone.hp(Math.max((hp() - damage) / 2, 1));
 		clone.setPos(cell);
-		clone.setState(clone.HUNTING);
+		clone.setState(MobAi.getStateByClass(Hunting.class));
 
 		clone.ensureOpenDoor();
 
-		Dungeon.level.spawnMob(clone, SPLIT_DELAY, getPos());
+		level().spawnMob(clone, SPLIT_DELAY, getPos());
 
 		if (hasBuff(Burning.class)) {
 			Buff.affect(clone, Burning.class).reignite(clone);
@@ -661,7 +529,7 @@ public abstract class Mob extends Char {
 
 	public void resurrect(Char parent) {
 
-		int spawnPos = Dungeon.level.getEmptyCellNextTo(parent.getPos());
+		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
 		Mob new_mob;
 		try {
 			new_mob = this.getClass().newInstance();
@@ -669,7 +537,7 @@ public abstract class Mob extends Char {
 			throw new TrackedRuntimeException("resurrect issue");
 		}
 
-		if (Dungeon.level.cellValid(spawnPos)) {
+		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
 			if (parent instanceof Hero) {
 				Mob.makePet(new_mob, (Hero) parent);
@@ -690,7 +558,7 @@ public abstract class Mob extends Char {
 			} else {
 				item = (Item) loot;
 			}
-			Dungeon.level.drop(item, getPos()).sprite.drop();
+			level().drop(item, getPos()).sprite.drop();
 		}
 	}
 
@@ -702,8 +570,8 @@ public abstract class Mob extends Char {
 
 		notice();
 
-		if (getState() != HUNTING) {
-			setState(WANDERING);
+		if (getState() instanceof Hunting) {
+			setState(MobAi.getStateByClass(Wandering.class));
 		}
 		target = cell;
 	}
@@ -727,7 +595,7 @@ public abstract class Mob extends Char {
 			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
 		}
 
-		setState(mobDesc.optString("aiState",state2tag(getState())).toUpperCase(Locale.ROOT));
+		setState(mobDesc.optString("aiState",getState().getTag()));
 	}
 
 	public AiState getState() {
@@ -803,24 +671,24 @@ public abstract class Mob extends Char {
 		float timeToSwap = 1 / chr.speed();
 		chr.spend(timeToSwap);
 		spend(timeToSwap);
-		setState(WANDERING);
+		setState(MobAi.getStateByClass(Wandering.class));
 		return true;
 	}
 
 	private void ensureOpenDoor() {
-		if (Dungeon.level.map[getPos()] == Terrain.DOOR) {
+		if (level().map[getPos()] == Terrain.DOOR) {
 			Door.enter(getPos());
 		}
 	}
 
-	public boolean interact(Hero hero) {
+	public boolean interact(Hero chr) {
 
-		if(runMobScript("onInteract", hero)) {
+		if(runMobScript("onInteract", chr)) {
 			return true;
 		}
 
-		if (friendly(hero)) {
-			swapPosition(hero);
+		if (friendly(chr)) {
+			swapPosition(chr);
 			return true;
 		}
 
@@ -834,12 +702,12 @@ public abstract class Mob extends Char {
 	}
 
 	public void setEnemy(@NonNull Char enemy) {
-		/*
+
 		if(enemy != this.enemy && enemy != DUMMY) {
 			enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 			GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
 		}
-		*/
+
 		this.enemy = enemy;
 	}
 

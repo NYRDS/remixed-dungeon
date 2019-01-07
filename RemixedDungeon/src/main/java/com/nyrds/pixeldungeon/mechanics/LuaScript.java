@@ -77,6 +77,14 @@ public class LuaScript {
         }
     }
 
+    public void run(String method, Object arg1, Object arg2, Object arg3) {
+        run(method,new LuaValue[]{
+                CoerceJavaToLua.coerce(parent),
+                CoerceJavaToLua.coerce(arg1),
+                CoerceJavaToLua.coerce(arg2),
+                CoerceJavaToLua.coerce(arg3)});
+    }
+
     public LuaValue getResult() {
         return scriptResult;
     }

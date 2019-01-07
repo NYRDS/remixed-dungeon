@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -49,8 +50,6 @@ public class Thief extends Mob {
 		
 		loot = RingOfHaggler.class;
 		lootChance = 0.01f;
-		
-		FLEEING = new ThiefFleeing(this);
 	}
 	
 	private static final String ITEM = "item";
@@ -100,7 +99,7 @@ public class Thief extends Mob {
 	@Override
 	public int attackProc(@NonNull Char enemy, int damage ) {
 		if (item == null && enemy instanceof Hero && steal( (Hero)enemy )) {
-			setState(FLEEING);
+			setState(MobAi.getStateByClass(ThiefFleeing.class));
 		}
 		
 		return damage;
@@ -108,7 +107,7 @@ public class Thief extends Mob {
 	
 	@Override
 	public int defenseProc(Char enemy, int damage) {
-		if (getState() == FLEEING) {
+		if (getState() instanceof ThiefFleeing) {
 			Dungeon.level.drop( new Gold(), getPos() ).sprite.drop();
 		}
 		

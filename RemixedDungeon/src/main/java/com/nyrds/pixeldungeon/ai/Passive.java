@@ -6,26 +6,25 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class Passive implements AiState {
+public class Passive extends MobAi implements AiState {
 
-    public static final String TAG = "PASSIVE";
+    public Passive(){}
 
-    private Mob mob;
-
-    public Passive(Mob mob){
-        this.mob = mob;
+    @Override
+    public void act(Mob me) {
+        me.enemySeen = false;
+        me.spend(Actor.TICK);
     }
 
     @Override
-    public boolean act(boolean enemyInFOV, boolean justAlerted) {
-        mob.enemySeen = false;
-        mob.spend(Actor.TICK);
-        return true;
-    }
-
-    @Override
-    public String status() {
+    public String status(Mob me) {
         return Utils.format(Game.getVar(R.string.Mob_StaPassiveStatus),
-                mob.getName());
+                me.getName());
     }
+
+    @Override
+    public void gotDamage(Mob me,Object src, int dmg) {
+        seekRevenge(me,src);
+    }
+
 }

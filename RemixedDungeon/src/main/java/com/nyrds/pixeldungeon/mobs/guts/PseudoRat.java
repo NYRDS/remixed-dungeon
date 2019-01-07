@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -20,7 +22,7 @@ public class PseudoRat extends Mob {
         loot = Gold.class;
         lootChance = 0.8f;
 
-        setState(HUNTING);
+        setState(MobAi.getStateByClass(Hunting.class));
 
         IMMUNITIES.add(Paralysis.class);
     }

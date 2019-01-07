@@ -62,6 +62,18 @@ local Objects = {
 local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
 local Dungeon   = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
 
+local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
+
+
+local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfBlink")
+local wandOfTelekinesis = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis")
+
+local Wands = {
+    WandOfBlink = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink"),
+    wandOfBlink = wandOfBlink,
+    wandOfTelekinesis = wandOfTelekinesis
+}
+
 local RPD = {
     GameScene = GameScene,
     Dungeon = Dungeon,
@@ -74,6 +86,9 @@ local RPD = {
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
+
+
+    MobAi = MobAi,
 
     Buffs = Buffs,
 
@@ -88,10 +103,22 @@ local RPD = {
         FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
         SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
         Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck"),
-        ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle")
+        ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle"),
+        SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
     },
 
-    Objects = Objects,
+    Objects = {
+        Ui = {
+            WndMessage = "com.watabou.pixeldungeon.windows.WndMessage",
+            WndStory   = "com.watabou.pixeldungeon.windows.WndStory",
+            WndQuest   = "com.watabou.pixeldungeon.windows.WndQuest"
+        },
+        Actors = {
+            ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
+        },
+    },
+
+    Wands = Wands,
 
     new = function(class, ...)
         return luajava.newInstance(class, ...)
@@ -132,6 +159,14 @@ local RPD = {
     getXy = function (chr)
         local pos = chr:getPos()
         return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}
+    end,
+
+    setAi = function(mob, state)
+        mob:setState(MobAi:getStateByTag(state))
+    end,
+
+    blinkTo = function(mob, target)
+        wandOfBlink:mobWandUse(mob, target)
     end,
 
     chooseOption = function(handler, title, text, ...)

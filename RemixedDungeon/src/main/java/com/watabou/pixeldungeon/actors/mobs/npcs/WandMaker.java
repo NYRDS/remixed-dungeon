@@ -71,7 +71,7 @@ public class WandMaker extends NPC {
 	}
 
 	@Override
-	protected boolean act() {
+    public boolean act() {
 		throwItem();
 		return super.act();
 	}

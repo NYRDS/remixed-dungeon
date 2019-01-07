@@ -2,49 +2,41 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class Fleeing implements AiState {
+public class Fleeing extends MobAi implements AiState {
 
-    public static final String TAG = "FLEEING";
 
-    protected Mob mob;
-
-    public Fleeing(Mob mob){
-        this.mob = mob;
-    }
+    public Fleeing(){}
 
     @Override
-    public boolean act(boolean enemyInFOV, boolean justAlerted) {
-        mob.enemySeen = enemyInFOV;
-        if (enemyInFOV) {
-            mob.target = mob.getEnemy().getPos();
+    public void act(Mob me) {
+        me.enemySeen = me.isEnemyInFov();
+        if (me.enemySeen) {
+            me.target = me.getEnemy().getPos();
         }
 
-        int oldPos = mob.getPos();
-        if (Dungeon.level.cellValid(mob.target) && mob.getFurther(mob.target)) {
-
-            mob.spend(1 / mob.speed());
-            return mob.moveSprite(oldPos, mob.getPos());
-
-        } else {
-
-            mob.spend(Actor.TICK);
-            nowhereToRun();
-
-            return true;
+        if(!me.doStepFrom(me.target)) {
+            me.spend(Actor.TICK);
         }
     }
 
-    protected void nowhereToRun() {
-    }
-
     @Override
-    public String status() {
+    public String status(Mob me) {
+        Char enemy = me.getEnemy();
+        if(enemy != Char.DUMMY) {
+            return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus2),
+                    me.getName(), enemy.getName_objective());
+        }
         return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus),
-                mob.getName());
+                me.getName());
+    }
+
+    @Override
+    public void gotDamage(Mob me,Object src, int dmg) {
+        seekRevenge(me,src);
     }
 }

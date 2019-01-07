@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -113,7 +114,7 @@ public class YogsBrain extends Boss {
 
 	@Override
     public boolean getCloser(int target) {
-		if (getState() == HUNTING) {
+		if (getState() instanceof Hunting) {
 			return enemySeen && getFurther( target );
 		} else {
 			return super.getCloser( target );
