@@ -30,6 +30,7 @@ import java.io.File;
 import java.io.IOException;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public enum Music implements MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener {
@@ -38,13 +39,13 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 
 	private MediaPlayer player;
 
+	@Nullable
 	private String lastPlayed;
 	private boolean lastLooping;
 
 	private boolean enabled = true;
 
 	public void play(@NonNull String assetName, boolean looping) {
-
 		if (isPlaying() && assetName.equals(lastPlayed)) {
 			return;
 		}
@@ -167,7 +168,9 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 		if (isPlaying() && !value) {
 			stop();
 		} else if (!isPlaying() && value) {
-			play(lastPlayed, lastLooping);
+			if(lastPlayed!=null) {
+				play(lastPlayed, lastLooping);
+			}
 		}
 	}
 }
