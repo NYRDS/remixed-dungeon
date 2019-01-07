@@ -30,8 +30,8 @@ public class WndPriest extends Window {
 	private static final int BTN_HEIGHT	= 18;
 	private static final int WIDTH		= 120;
 
-	private int GOLD_COST;
-	private int GOLD_COST_PER_MINION;
+	private int GOLD_COST             = 75;
+	private int GOLD_COST_PER_MINION  = 50;
 
 	public WndPriest(final HealerNPC priest, final Hero hero) {
 		

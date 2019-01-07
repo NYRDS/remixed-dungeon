@@ -118,7 +118,7 @@ public abstract class MobAi implements AiState {
             return aiState;
         }
 
-        aiState = new CustomMobAi(tag);
+        aiState = new CustomMobAi(stateTag);
 
         aiStateInstances.put(tag, aiState);
 
