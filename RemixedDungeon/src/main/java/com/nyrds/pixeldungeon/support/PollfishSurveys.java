@@ -55,4 +55,8 @@ public class PollfishSurveys {
         return false;
     }
 
+    public static void showSurvey() {
+        PollFish.show();
+    }
+
 }
