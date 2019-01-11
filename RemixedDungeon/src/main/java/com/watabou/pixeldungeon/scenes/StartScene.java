@@ -52,16 +52,15 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import ru.livli.swsdk.SWSdk;
-import ru.livli.swsdk.api.impl.SWImpl;
-import ru.livli.swsdkapps.InstalledApplicationsCollector;
+import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
+import io.humanteq.hqsdkcore.HQSdk;
+import io.humanteq.hqsdkcore.api.impl.SWImpl;
 
 public class StartScene extends PixelScene {
 
@@ -99,23 +98,20 @@ public class StartScene extends PixelScene {
         super.create();
 
         if(!swSdkStarted) {
-            SWSdk.Companion.init(Game.instance(), "22b4f34f2616d7f", false,
-                    new SWSdk.Callback() {
+            HQSdk.Companion.init(Game.instance(), "22b4f34f2616d7f", false,
+                    new HQSdk.Callback() {
+
+                        @Override
+                        public void onSuccess(@NotNull SWImpl sw) {
+                            sw.start(new InstalledApplicationsCollector());
+                            sw.startSystemEventsTracking();
+                            swSdkStarted = true;
+
+                        }
 
                         @Override
                         public void onError(@NotNull Throwable throwable) {
                             EventCollector.logException(throwable, "hq sdk init error");
-                        }
-
-                        @Override
-                        public void onSuccess(@Nullable SWImpl sw) {
-                            if (sw != null) {
-                                sw.start(new InstalledApplicationsCollector());
-                                sw.startSystemEventsTracking();
-                                swSdkStarted = true;
-                            } else {
-                                EventCollector.logException();
-                            }
                         }
                     }
 

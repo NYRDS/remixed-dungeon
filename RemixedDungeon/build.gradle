@@ -112,7 +112,7 @@ dependencies {
     //noinspection GradleDependency
     googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
 
-    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.6'
+    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:16.0.1'
@@ -128,8 +128,8 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    googlePlayImplementation 'ru.livli:swsdk-core:0.0.2-beta02'
-    googlePlayImplementation 'ru.livli:swsdk-apps:0.0.2-beta02'
+    googlePlayImplementation 'io.humanteq.hqsdk:hqsdk-core:1.0.0-beta01'
+    googlePlayImplementation 'io.humanteq.hqsdk:hqsdk-apps:1.0.0-beta01'
 
     googlePlayImplementation 'androidx.core:core:1.0.1'
     googlePlayImplementation 'androidx.annotation:annotation:1.0.1'

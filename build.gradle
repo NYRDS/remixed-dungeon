@@ -28,7 +28,7 @@ allprojects {
 
 
         maven {
-            url 'https://dl.bintray.com/humanteqdev/SWSdk/'
+            url 'https://dl.bintray.com/humanteq/HQM/'
         }
     }
 }
