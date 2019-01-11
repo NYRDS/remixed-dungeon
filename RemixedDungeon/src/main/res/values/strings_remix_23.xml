@@ -8,7 +8,7 @@
     <string name="Guts_TileDescEntrance">Gaping hole in the ceiling leads up to the upper levels</string>
     <string name="Guts_TileDescExit">Gaping hole in the floor leads down to the lower levels</string>
     <string name="Guts_TileDescDeco">Looks like this place was... wounded</string>
-    <string name="Guts_TileDescBookshelf">That bookshelf completely covered in thick fleshy web, there is no way to reach any of the books</string>
+    <string name="Guts_TileDescBookshelf">This bookshelf is completely covered in thick fleshy web, and there is no way to reach any of the books on it.</string>
 	
 	<!-- STRINGS OF WndStory CLASS -->
 	<string name="WndStory_Guts">Defeated, shattered in pieces, but not completely destroyed, the Old God was sealed away in the deepest levels of the dungeon. But recently the seal was broken, leaving passage, to the demon\'s nest, wide open. The nightmarish monsters, created by the Old God in his slumber was so numerous, that provided no way to escape they were forced to fuse together to form these grotesque halls. And as you walk upon their living flesh you can feel the beat of an Old God\'s heart echoing through them.</string>
@@ -24,7 +24,7 @@
     <string name="Nightmare_Name">nightmare</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">nightmare</string>
-    <string name="Nightmare_Desc">Grotesque creature made of twitching flesh tentacles. The Nightmares is a very manifestation of the Old God\'s sinister thoughts.</string>
+    <string name="Nightmare_Desc">A grotesque creature that looks like a bunch of flesh-made tentacles. Nightmares are the incarnation of the Old God\'s sinister thoughts.</string>
 
     <!-- STRINGS OF TENGU CLASS -->
     <string name="Tengu_Info3">Gotcha, %s!</string>
@@ -33,7 +33,7 @@
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnoll-zombie</string>
-    <string name="ZombieGnoll_Desc">Twisted, broken body of a zombie gnoll no longer resembles humanoid or hyena. Just a heap of rotten flesh and bones filled with malicious urge to kill and consume. </string>
+    <string name="ZombieGnoll_Desc">Twisted, broken body of a zombie gnoll no longer resembles a humanoid or a hyena. All that\'s left is just a pile of rotten flesh and bones filled with malicious urge to kill and consume.</string>
 
     <!-- STRINGS OF Worm CLASS -->
     <string name="Worm_Name">worm</string>
@@ -57,12 +57,12 @@
     <string name="YogsHeart_Name">yog\'s heart</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name_Objective">Yog\'s heart</string>
-    <string name="YogsHeart_Desc">For centuries people believed that only truly heartless creatures are capable of acts of pure evil. And yet here it is, huge beating heart of an Old God himself.</string>
+    <string name="YogsHeart_Desc">For centuries people believed that only truly heartless creatures are capable of acts of pure evil. And yet here it is, a huge beating heart in front of you, that belongs to the Old God himself.</string>
 	
 	<!-- STRINGS OF YogsTeeth CLASS -->
     <string name="YogsTeeth_Name">yog\'s teeth</string>
     <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name_Objective">Yog\'s teeth</string>
-    <string name="YogsTeeth_Desc">Enormous mouth of an Old God filled with razor-sharp teeth. A very fitting manifestation of his urge to destroy and devour all beings.</string>
+    <string name="YogsTeeth_Desc">Enormous mouth of the Old God filled with razor-sharp teeth. A very fitting manifestation of his urge to destroy and devour all beings.</string>
 
 </resources>

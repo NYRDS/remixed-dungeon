@@ -34,8 +34,8 @@
     <!-- STRINGS OF Hedgehog CLASS -->
     <string name="Hedgehog_Name">hedgehog</string>
     <string name="Hedgehog_Desc">That hedgehog seems nervous.</string>
-    <string name="Hedgehog_Info1">Do You looking for Bear too?</string>
-    <string name="Hedgehog_Info2">How\'s Horse in the mist?</string>
+    <string name="Hedgehog_Info1">Are you looking for Bear too?</string>
+    <string name="Hedgehog_Info2">How's Horse, there, in the mist?</string>
     <string name="Hedgehog_Info3">Do You like tea with raspberry jam?</string>
     <string name="Hedgehog_Info4">Take this pie</string>
     <string name="Hedgehog_ImLate">I\'m late, I\'m terribly late...</string>
@@ -66,7 +66,7 @@
     <string name="RatKing_Info1">I\'m not sleeping!</string>
     <string name="RatKing_Info2">What is it? I have no time for this nonsense. My kingdom won\'t rule itself!</string>
     <string name="RatKing_Info3">How dare you, puny creature, disturb Our Ratness?!</string>
-    <string name="RatKing_Died">King is dead. Long live to the King!</string>
+    <string name="RatKing_Died">King is dead. Long live the King!</string>
     
     <!-- STRINGS OF Shopkeeper CLASS -->
     <string name="Shopkeeper_Name">shopkeeper</string>
@@ -79,7 +79,7 @@
     <string name="WandMaker_Berry1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _Rotberry seed_. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
     <string name="WandMaker_Berry2">Any luck with a Rotberry seed, %s? No? Don\'t worry, I\'m not in a hurry.</string>
     <string name="WandMaker_Dust1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - _corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
-    <string name="WandMaker_Dust2">Any luck with corpse dust, %s? Bone piles are the most obvious places to look.</string>
+    <string name="WandMaker_Dust2">Any luck with corpse dust, %s? Bone piles are the most obvious places to look through.</string>
     <string name="WandMaker_RotberryName">Rotberry</string>
     <string name="WandMaker_RotberryDesc">Berries of this shrub taste like sweet, sweet death.</string>
     <string name="WandMaker_RotberryInfo">The seed emits a roar that echoes throughout the dungeon!</string>

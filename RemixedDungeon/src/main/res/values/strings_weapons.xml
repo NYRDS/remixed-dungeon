@@ -149,7 +149,7 @@
     
     <!-- STRINGS OF Sword CLASS -->
     <string name="Sword_Name">sword</string>
-    <string name="Sword_Info">The razor-sharp length of steel blade shines reassuringly.</string>
+    <string name="Sword_Info">The razor-sharp steel blade shines reassuringly.</string>
     <string name="Sword_Gender">masculine</string> 
     
     <!-- STRINGS OF WarHammer CLASS -->
@@ -180,7 +180,7 @@
     
     <!-- STRINGS OF Dart CLASS -->
     <string name="Dart_Name">dart</string>
-    <string name="Dart_Info">These simple metal spikes are weighted to fly true and sting their prey with a flick of the wrist.</string>
+    <string name="Dart_Info">These simple metal spikes are ideally weighted to accurately pierce their prey.</string>
     <string name="Dart_Gender">masculine</string>
     
     <!-- STRINGS OF IncendiaryDart CLASS -->
@@ -190,28 +190,28 @@
     
     <!-- STRINGS OF Javelin CLASS -->
     <string name="Javelin_Name">javelin</string>
-    <string name="Javelin_Info">This length of metal is weighted to keep the spike at its tip foremost as it sails through the air.</string>
+    <string name="Javelin_Info">This length of metal is weighted to keep the spike at its tip foremost as it sails through the air towards its victim</string>
     <string name="Javelin_Gender">neuter</string>
     
     <!-- STRINGS OF Shuriken CLASS -->
     <string name="Shuriken_Name">shuriken</string>
-    <string name="Shuriken_Info">Star-shaped pieces of metal with razor-sharp blades do significant damage when they hit a target. They can be thrown at very high rate.</string>
+    <string name="Shuriken_Info">Star-shaped pieces of metal with razor-sharp blades do significant damage to their targets. They can be thrown at a very high rate.</string>
     <string name="Shuriken_Gender">masculine</string>
     
     <!-- STRINGS OF Tamahawk CLASS -->
     <string name="Tamahawk_Name">tomahawk</string>
-    <string name="Tamahawk_Info">This throwing axe is not that heavy, but it still requires significant strength to be used effectively.</string>
+    <string name="Tamahawk_Info">While this throwing axe is not that heavy, yet still it requires significant strength to be used effectively.</string>
     <string name="Tamahawk_Gender">masculine</string>
 
     <!-- STRINGS OF Kusarigama CLASS -->
     <string name="Kusarigama_Name">kusarigama</string>
-    <string name="Kusarigama_Info">This weapon that consists of a sickle on a metal chain with a heavy iron weight at the end.</string>
+    <string name="Kusarigama_Info">This weapon consists of a sickle on a metal chain with a heavy iron weight at the other end.</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Pull">PULL</string>
     
     <!-- STRINGS OF ChaosSword CLASS -->
     <string name="ChaosSword_Name">chaos sword</string>
-    <string name="ChaosSword_Info">The blade of this sword is made of pure chaos and it mildly vibrates sometimes. Great power is stored inside the weapon, that can cut in half almost anything. Although, great skills are needed, to cope the mighty force of the weapon.</string>
+    <string name="ChaosSword_Info">The blade of this sword is made of pure chaos and it mildly vibrates sometimes. Great powers, stored inside this weapon can cut in half almost anything. Although, great skills are needed, to cope the mighty force of the weapon.</string>
     <string name="ChaosSword_Gender">masculine</string>
     
     <!-- STRINGS OF ChaosBow CLASS -->
@@ -221,7 +221,7 @@
     
     <!-- STRINGS OF ChaosStaff CLASS -->
     <string name="ChaosStaff_Name">chaos staff</string>
-    <string name="ChaosStaff_Info">Staff imbued with Power Of Chaos! What else mage can dream or fear of?</string>
+    <string name="ChaosStaff_Info">Staff imbued with Power Of Chaos! What else a mage can dream or fear of?</string>
     <string name="ChaosStaff_Gender">masculine</string>
     
     <!-- STRINGS OF SacrificialSword CLASS -->

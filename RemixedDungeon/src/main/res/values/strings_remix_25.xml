@@ -3,20 +3,20 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">spider armor</string>
-    <string name="SpiderArmor_Info">This armor is made of old spider carcases and some strange cloth. Surprisingly enough, it seems that it still contains functional spinnerets. If you apply enough pressure on one of the plates it shoots cobweb. Spiky surface of boot soles allows you to walk on that web freely.</string>
+    <string name="SpiderArmor_Info">This armor is made of old spider chitin and some kind of clothing. Most surprisingly, it seems that it still contains functioning spider glands. If you press the plates hard enough, then they shoot out web. And jagged soles allow you to move freely on such type of web.</string>
     <string name="SpiderArmor_Gender">feminine</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">black skull</string>
-    <string name="BlackSkull_Info">A small obsidian skull. It was a source of Necropolis powers, but after Lich\'s defeat it seems to have lost all it\'s powers. But as you hold it in your hands a strange thought crosses your mind: \"It hungers\".</string>
+    <string name="BlackSkull_Info">A small obsidian skull. It was the source of the Necropolis powers, but after the Lich's defet it seems to have lost all it's powers. However, when you hold it in your hands a strange thought crosses your mind: \ "It hungers \".</string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">awakened black skull</string>
-    <string name="BlackSkull_Info_Awakened">The skull is pulsating with power, you can see it pouring from skull\'s empty eyes. And as you hold it in your hand you can hear dreadful voice saying: \"The death marches\"</string>
+    <string name="BlackSkull_Info_Awakened">The skull pulsates with power, and you can see how it pours from it\'s empty eye sockets. And while holding it in your hands you hear a terrifying voice: \"Behold the march of death \".</string>
 
     <!-- STRINGS OF SoulShard CLASS -->
     <string name="SoulShard_Name">soul shard</string>
-    <string name="SoulShard_Info">It\'s a shard you\'ve taken from remnants of Jar of Souls. It\'s glowing with mystical energy, maybe there is someone, who could be interested in such thing.</string>
+    <string name="SoulShard_Info">It\'s a shard taken from the remains of the Jar of Souls. It shimmers with mysterious power, maybe there is someone who might be interested in something like this.</string>
     <string name="SoulShard_Gender">masculine</string>
 
     <!-- Mobs descriptions -->
@@ -24,25 +24,25 @@
     <string name="DeathKnight_Name">death knight</string>
     <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name_Objective">death knight</string>
-    <string name="DeathKnight_Desc">At first glance a mighty warrior in massive armor, but skeletal grin gives him away, a Death Knight is a manifestation of a spirit of a knight that failed to pursue his vows. And in his curse he will forever wonder the land, seeking to cleanse his name in battle, killing the innocent, unable to remember what he swore to protect.</string>
+    <string name="DeathKnight_Desc">At first glance, this is a mighty warrior in heavy armor, and only a dead grin gives him away. The death knight is a manifestation of the soul of a knight who failed to pursue his vows. And in his cursed state, he will always wander seeking to purge in battle, killing the innocent, unable to remember who he swore to protect.</string>
 
     <!-- STRINGS OF DreadKnight CLASS -->
     <string name="DreadKnight_Name">dread knight</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name_Objective">dread knight</string>
-    <string name="DreadKnight_Desc">A dread knight is an ancient warrior, who was never righteous nor good in his entire live. And for his sins he was curses to dwell in broken undead body for eternity. And for every moment of his damned existence he shall be tormented by the pain and suffering that he inflicted on his victims.</string>
+    <string name="DreadKnight_Desc">The dread knight is an ancient warrior who, in life, neither knew good or righteousness. For his sins, he is doomed to everlasting wanderings in this broken body of death. And every moment of his tormented existence is full of pain and suffering, similar to what he inflicted on his victims.</string>
 
     <!-- STRINGS OF EnslavedSoul CLASS -->
     <string name="EnslavedSoul_Name">enslaved soul</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">enslaved soul</string>
-    <string name="EnslavedSoul_Desc">You can almost see through this ghostly apparition. Even though it looks like a skull, sometimes, for a split second, a face appears instead, face full of suffering and torment.</string>
+    <string name="EnslavedSoul_Desc">You can almost see through this ghostly apparition. And although it looks like a skull, sometimes for a split second a face appears, filled with pain and suffering.</string>
 
     <!-- STRINGS OF ExplodingSkull CLASS -->
     <string name="ExplodingSkull_Name">exploding skull</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name_Objective">exploding skull</string>
-    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, looks like it\'s going to burst at any second.</string>
+    <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, and looks like it\'s going to burst into pieces at any second.</string>
 
     <!-- STRINGS OF JarOfSouls CLASS -->
     <string name="JarOfSouls_Name">jar of souls</string>
@@ -54,22 +54,22 @@
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">lich</string>
-    <string name="Lich_Desc">The necromancer has met his death in the depths of Necropolis, and as evil energy of this place poured into his body, he, eventually, turned into the Lich. The undead wizard, a will-less marionette, controlled by malicious powers.</string>
+    <string name="Lich_Desc">The necromancer has met his death in the depths of the necropolis, and gradually, the evil forces that were flowing into his body turned him into a Lich. A death wizard, a will-less puppet, controlled by malicious forces ...</string>
 
     <!-- STRINGS OF RunicSkull CLASS -->
     <string name="RunicSkull_Name">runic skull</string>
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name_Objective">runic skull</string>
-    <string name="RunicSkull_Desc">For something made artificially, this skull resembles real one a bit to much. You can see faint glow surrounding it.</string>
+    <string name="RunicSkull_Desc">For something artificially created, this skull resembles too much of a real one. You can also see a faint glow surrounding it.</string>
 
     <!-- STRINGS OF Zombie CLASS -->
     <string name="Zombie_Name">zombie</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name_Objective">zombie</string>
-    <string name="Zombie_Desc">Dungeon is a dangerous place and many adventurers has met their doom in this place. But most unlucky of them all has met their end in Necropolis, and now they are doomed to wander these halls in form of rotting corpses.</string>
+    <string name="Zombie_Desc">The dungeon was always a dangerous place to start with and many adventurers have met their doom here. But lives of the most unlucky ones ended up in the Necropolis, and now they are doomed to wander in these halls in form of a rotting corpses.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
-    <string name="NecromancerNPC_Intro2">Ah! An adventurer which is not dead. Outstanding! Oh... I beg my pardon. You see, I am myself a necromancer. And even though studying the dead and death itself is what I do for a living, seeing same thing over and over again, eventually gets extremely boring. On the other hand that\'s exactly why I am here. Something spectacular has happened recently. A _Necropolis_, an ancient city of the dead has finally revealed it\'s doors. In fact, we standing right next to the entrance. And... tell you what, take this key and go first, I mean you like adventures and stuff? And I\'ll come in right behind you, I just need to get ready.</string>
+    <string name="NecromancerNPC_Intro2">Ah! A fellow adventurer who is not just another lifeless corpse. Hardly believable ! Oh... I beg my pardon, sometimes I get too excited. You see, I myself, am a necromancer.  And even though, studying the dead bodies and death itself is highly valued for us, all this monotony, sooner or later can get anyone bored. On the other hand that\'s exactly why I am here. The other day something big happened ! The _Necropolis_, an ancient city of the dead opened it\'s doors for us to gaze at. To be honest, we are standing right next to these doors. And ... you know what, take the key and go first, you love all kinds of adventures, don\'t you? And I'll go next ... just need to get ready first.</string>
 
     <!-- Badges -->
     <string name="Badges_Lich_Slain">Lich slain</string>

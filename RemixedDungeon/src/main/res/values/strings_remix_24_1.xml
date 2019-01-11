@@ -5,24 +5,24 @@
     <string name="ArmoredStatue_Name">animated statue</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name_Objective">animated statue</string>
-    <string name="ArmoredStatue_Desc">You couldn\'t even start thinking that it\'s just another ugly statue. It\'s not just red glowing eyes, but the fact that nobody would put an actual _%s_ on such thing.</string>
+    <string name="ArmoredStatue_Desc">No one could even start thinking that it\'s just another regular statue. It\'s not just the red glowing eyes, but the fact that nobody would put an actual _%s_ on such thing.</string>
 
     <!-- STRINGS OF SpiderSoldier -->
     <string name="SpiderGuard_Name">spider guard</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name_Objective">spider guard</string>
-    <string name="SpiderGuard_Desc">Much like soldier the spider guards are sworn to protect their kingdom. The guard\'s venom is used to immobilize their targets causing paralysis.</string>
+    <string name="SpiderGuard_Desc">Much like soldiers, spider guards are sworn to protect their kingdom. The guard\'s venom is used to immobilize their target, causing paralysis and making them an easy prey.</string>
 
     <!-- STRINGS OF SpiderMindAmber -->
     <string name="SpiderMindAmber_Name">amber spider</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name_Objective">amber spider</string>
-    <string name="SpiderMindAmber_Desc">Amber spiders are the mysterious and rare creatures that poses psychic powers similar to a psi-spiders, but are much tougher than their regular brethren. Name "amber" refers to the color of their giant brain-sacks, that being revealed before their victims, as Amber Spiders strikes with their powers.</string>
+    <string name="SpiderMindAmber_Desc">Amber spiders are mysterious and rare creatures that poses psychic powers similar to regular psi-spiders, but are much tougher physically. The name "amber" refers to the color of their giant brain-sacks, that are revealed before their victims as Amber Spiders strike using their powers.</string>
 
     <!-- Accessories descriptions -->
     <!-- STRINGS OF PirateSet CLASS -->
     <string name="PirateSet_Name">Pirate Set</string>
-    <string name="PirateSet_Info">Arr! Do ya feel like a matey... or ya just damn landlubber!? I hope you\'re not, that stuff is for pirates after all, I mean... Arr!</string>
+    <string name="PirateSet_Info">Arr! Do you have the guts to join our lads !? Or are you just another land rat? I hope not, because this thing is only for pirates after all, uh, i mean.. Arr!</string>
 
     <!-- System Text-->
     <!-- STRINGS OF WndHats CLASS -->

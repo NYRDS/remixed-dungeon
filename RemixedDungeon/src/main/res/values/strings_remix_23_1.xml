@@ -16,7 +16,7 @@
     <string name="TreacherousSpirit_Name">Treacherous spirit</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name_Objective">Treacherous spirit</string>
-    <string name="TreacherousSpirit_Desc">This monstrous creature looks like a cloud of a living darkness. It\'s lidless eye staring at you, pulsating with each your move.</string>
+    <string name="TreacherousSpirit_Desc">This monstrous creature looks like a cloud of living darkness. It\'s gigantic eye is stares at you, while pulsating with each movement you make.</string>
 
     <!-- STRINGS OF SpiritOfPain CLASS -->
     <string name="SpiritOfPain_Name">spirit of pain</string>
@@ -28,7 +28,7 @@
     <string name="SuspiciousRat_Name">Suspicious rat</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Name_Objective">Suspicious rat</string>
-    <string name="SuspiciousRat_Desc">Rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how rat\'s whole body spasms when it moves.</string>
+    <string name="SuspiciousRat_Desc">A rat is not an uncommon sight in the dungeons, but for it to dwell so deep... You can see how the rat\'s whole body spasms when it moves.</string>
     <string name="SuspiciousRat_Info1">Suspicious rat is twitching violently.</string>
 
     <!-- STRINGS OF PseudoRat CLASS -->
