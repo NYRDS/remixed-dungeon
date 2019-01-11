@@ -4,6 +4,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
+import com.nyrds.pixeldungeon.support.PollfishSurveys;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
@@ -105,12 +106,24 @@ public class WndPriest extends Window {
 		RedButton btnLeave = new RedButton(R.string.WndMovieTheatre_No) {
 			@Override
 			protected void onClick() {
-				doHeal(priest,new Vector<Char>(),0);
+				hide();
 			}
 		};
 		btnLeave.setRect( 0, y, WIDTH, BTN_HEIGHT );
 		add( btnLeave );
 		y = btnLeave.bottom() + GAP;
+
+		RedButton btnSurvey= new RedButton("survey_test") {
+			@Override
+			protected void onClick() {
+				PollfishSurveys.init();
+				PollfishSurveys.showSurvey();
+			}
+		};
+		btnSurvey.setRect( 0, y, WIDTH, BTN_HEIGHT );
+		add( btnSurvey );
+		y = btnSurvey.bottom() + GAP;
+
 		resize( WIDTH, (int) (y));
 	}
 

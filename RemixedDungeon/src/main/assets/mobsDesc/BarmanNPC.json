@@ -1,0 +1,6 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/BarmanNPC.json",
+   "scriptFile"    :"scripts/npc/Barman",
+   "friendly"      :true
+}
