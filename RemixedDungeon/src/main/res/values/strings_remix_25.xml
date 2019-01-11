@@ -8,7 +8,7 @@
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">black skull</string>
-    <string name="BlackSkull_Info">A small obsidian skull. It was the source of the Necropolis powers, but after the Lich's defet it seems to have lost all it's powers. However, when you hold it in your hands a strange thought crosses your mind: \ "It hungers \".</string>
+    <string name="BlackSkull_Info">A small obsidian skull. It was the source of the Necropolis powers, but after the Lich\'s defet it seems to have lost all it\'s powers. However, when you hold it in your hands a strange thought crosses your mind: \ "It hungers \".</string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">awakened black skull</string>
@@ -69,7 +69,7 @@
     <string name="Zombie_Desc">The dungeon was always a dangerous place to start with and many adventurers have met their doom here. But lives of the most unlucky ones ended up in the Necropolis, and now they are doomed to wander in these halls in form of a rotting corpses.</string>
 
     <!-- STRINGS OF NecromancerNPC CLASS -->
-    <string name="NecromancerNPC_Intro2">Ah! A fellow adventurer who is not just another lifeless corpse. Hardly believable ! Oh... I beg my pardon, sometimes I get too excited. You see, I myself, am a necromancer.  And even though, studying the dead bodies and death itself is highly valued for us, all this monotony, sooner or later can get anyone bored. On the other hand that\'s exactly why I am here. The other day something big happened ! The _Necropolis_, an ancient city of the dead opened it\'s doors for us to gaze at. To be honest, we are standing right next to these doors. And ... you know what, take the key and go first, you love all kinds of adventures, don\'t you? And I'll go next ... just need to get ready first.</string>
+    <string name="NecromancerNPC_Intro2">Ah! A fellow adventurer who is not just another lifeless corpse. Hardly believable ! Oh... I beg my pardon, sometimes I get too excited. You see, I myself, am a necromancer.  And even though, studying the dead bodies and death itself is highly valued for us, all this monotony, sooner or later can get anyone bored. On the other hand that\'s exactly why I am here. The other day something big happened ! The _Necropolis_, an ancient city of the dead opened it\'s doors for us to gaze at. To be honest, we are standing right next to these doors. And ... you know what, take the key and go first, you love all kinds of adventures, don\'t you? And I\'ll go next ... just need to get ready first.</string>
 
     <!-- Badges -->
     <string name="Badges_Lich_Slain">Lich slain</string>
