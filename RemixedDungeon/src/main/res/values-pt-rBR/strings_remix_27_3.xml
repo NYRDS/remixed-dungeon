@@ -4,6 +4,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">Pergaminho da Invocação</string>
+    <string name="ScrollOfSummoning_Info">Quando lido em voz alta, este pergaminho irá invocar um dos monstros do nível atual da masmorra. Se o monstro for fraco o bastante, ele se tornará seu servo.</string>
     <string name="ScrollOfSummoning_Info_2">O Monstro responde aos seus Invocados!</string>
 
     <!-- Generic warnings -->

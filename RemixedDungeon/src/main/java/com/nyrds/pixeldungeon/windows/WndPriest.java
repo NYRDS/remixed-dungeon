@@ -69,6 +69,8 @@ public class WndPriest extends Window {
 
 		y = message.bottom();
 
+		VBox vbox = new VBox();
+
 		RedButton btnHealHero = new RedButton(  Utils.format(R.string.WndPriest_Heal, GOLD_COST) ) {
 			@Override
 			protected void onClick() {
@@ -78,12 +80,10 @@ public class WndPriest extends Window {
 			}
 		};
 
-		btnHealHero.setRect( 0, y, WIDTH, BTN_HEIGHT );
+		btnHealHero.setSize(WIDTH, BTN_HEIGHT );
 		btnHealHero.enable(!(Dungeon.gold()< GOLD_COST));
 
-		add( btnHealHero );
-
-		y = btnHealHero.bottom() + GAP;
+		vbox.add( btnHealHero );
 
 		int minions = hero.getPets().size();
 
@@ -96,11 +96,10 @@ public class WndPriest extends Window {
 				}
 			};
 
-			btnHealMinions.setRect(0, y, WIDTH, BTN_HEIGHT);
+			btnHealMinions.setSize( WIDTH, BTN_HEIGHT);
 			btnHealMinions.enable(!(Dungeon.gold() < healAllMinionsCost));
 
 			add(btnHealMinions);
-			y = btnHealMinions.bottom() + GAP;
 		}
 
 		RedButton btnLeave = new RedButton(R.string.WndMovieTheatre_No) {
@@ -110,8 +109,7 @@ public class WndPriest extends Window {
 			}
 		};
 		btnLeave.setRect( 0, y, WIDTH, BTN_HEIGHT );
-		add( btnLeave );
-		y = btnLeave.bottom() + GAP;
+		vbox.add( btnLeave );
 
 		RedButton btnSurvey= new RedButton("survey_test") {
 			@Override
@@ -120,11 +118,13 @@ public class WndPriest extends Window {
 				PollfishSurveys.showSurvey();
 			}
 		};
-		btnSurvey.setRect( 0, y, WIDTH, BTN_HEIGHT );
-		add( btnSurvey );
-		y = btnSurvey.bottom() + GAP;
+		btnSurvey.setSize(WIDTH, BTN_HEIGHT );
+		vbox.add( btnSurvey );
 
-		resize( WIDTH, (int) (y));
+		add(vbox);
+		vbox.setRect(0,y,WIDTH,vbox.childsHeight());
+
+		resize( WIDTH, (int) (vbox.bottom()));
 	}
 
 	private void doHeal(HealerNPC priest, Collection<? extends Char> patients, int healingCost) {

@@ -7,6 +7,8 @@
   <string name="AmuletScene_Stay">Eu não acabei ainda</string>
   <string name="AmuletScene_Txt">Você finalmente segurou em suas mãos o Amuleto de Yendor. Usando o seu poder, você pode dominar o mundo ou trazer paz e prosperidade para as pessoas ou o que quiser. De qualquer forma, sua vida vai mudar para sempre e este jogo vai terminar aqui. Ou você pode continuar um mero mortal um pouco mais.</string>
   <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Bem-vindo ao nível %d de Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Bem-vindo de volta ao nível %d de Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Seja cauteloso, pois o calabouço é ainda mais perigoso à noite!</string>
   <string name="GameScene_Chasm">Seus passos ecoam através do calabouço.</string>
   <string name="GameScene_Water">Você ouve o respingos de água ao seu redor.</string>
@@ -53,6 +55,32 @@
   <!--STRINGS OF Dungeon CLASS-->
   <string name="Dungeon_NoTips">O texto é indecifrável...</string>
   <string name="Dungeon_DeadEnd">O que está fazendo aqui?</string>
+  <string-array name="Dungeon_Tips">
+    <item>Não superestime sua força, use armas e armaduras que você pode manipular.</item>
+    <item>Nem todas as portas da masmorra são visíveis à primeira vista. Se você estiver preso, procure por algo oculto, como portas escondidas.</item>
+    <item>Lembre-se que aumentar a sua força não é a única maneira de usar equipamentos melhores, você pode conseguir de outra forma, reduzindo o requerimento de força com Pergaminhos de Atualização.</item>
+    <item>Você pode gastar seu ouro na cidade ou lojas de calabouço.</item>
+    <item>Cuidado com o Goo!</item>
+    <item>Pixel-Mart - tudo que você precisa para ter sucesso em sua aventura!</item>
+    <item>Identifique suas poções e pergaminhos o mais rápido possível. Não adie para o momento em que você realmente precisar deles.</item>
+    <item>Não tem problema ficar com fome, mas morrer de fome pode ser doloroso.</item>
+    <item>Ataques de surpresa têm mais chance de acertar. Por exemplo, você pode emboscar seu inimigo atrás de uma porta fechada quando perceber que ele está se aproximando.</item>
+    <item>Não deixe o Tengu fugir!</item>
+    <item>Pixel-Mart. Gaste dinheiro. Viva mais.</item>
+    <item>Quando você for atacado por vários monstros ao mesmo tempo, tente recuar para atrás de uma porta.</item>
+    <item>Se você está pegando fogo e levitando, você não pode apagar o fogo na água.</item>
+    <item>Não faz sentido em ter mais de um Ankh ao mesmo tempo, já que você irá perde-los ao ressuscitar.</item>
+    <item>PERIGO! Máquinas pesadas podem causar ferimentos, perda de membros ou a morte!</item>
+    <item>Pixel-Mart. Uma vida mais segura na masmorra.</item>
+    <item>Quando você melhora uma arma encantada, há uma chance do encantamento ser destruido.</item>
+    <item>Um poço de transmutação pode fornecer um item que não pode ser obtido de outra forma.</item>
+    <item>A única maneira de encantar uma arma é atualizando-a com um Pergaminho de Melhoria de Arma.</item>
+    <item>Nenhuma arma é permitida na presença de Vossa Majestade!</item>
+    <item>Pixel-Mart. Preços especiais para caçadores de demônios!</item>
+    <item>O texto está escrito em linguagem demoníaca.</item>
+    <item>O texto está escrito em linguagem demoníaca.</item>
+    <item>O texto está escrito em linguagem demoníaca.</item>
+  </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
     <item>Em dieta</item>
@@ -96,6 +124,7 @@
   <string name="WndGame_Ranking">Rankings</string>
   <string name="WndGame_Start">Iniciar Novo Jogo</string>
   <string name="WndGame_menu">Menu Principal</string>
+  <string name="WndGame_Exit">Sair de Remixed Dungeon</string>
   <string name="WndGame_Return">Voltar ao Jogo</string>
   <string name="WndGame_Save">Salvar</string>
   <string name="WndGame_Load">Carregar</string>
@@ -229,6 +258,7 @@
   <string name="LloidsBeacon_Preventing">Uma forte aura de magia impede voce de usar o Farol Lloyd.</string>
   <string name="LloidsBeacon_Creatures">A aura psíquica de criaturas vizinhas imprede você de usar o Farol Lloyd.</string>
   <string name="LloidsBeacon_Return">O Farol Lloyd definiu com sucesso sua posição atual, agora você poderá retornar aqui a qualquer momento.</string>
+  <string name="LloidsBeacon_Set">\n\nEste Farol foi definido em algum lugar do nível %d de Remixed Dungeon.</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">objeto arcano</string>
   <string name="Stylus_ACInscribe">INSCREVER</string>

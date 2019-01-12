@@ -8,6 +8,8 @@
     <string name="TownGuardNPC_Desc">Um Guarda da cidade regular.</string>
     <string name="TownGuardNPC_Message1">Avançar.</string>
     <string name="TownGuardNPC_Message2">Graças a aventureiros como você, aqui se tornou um lugar bastante pacífico.</string>
+    <string name="TownGuardNPC_Message3">Você acha que existem muitos guardas nesta cidade? Bem, esta é a única cidade com uma masmorra gigantesca que está infestada de monstros, não é mesmo?</string>
+
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">Pessoal da cidade</string>
     <string name="TownsfolkNPC_Gender">masculino</string>

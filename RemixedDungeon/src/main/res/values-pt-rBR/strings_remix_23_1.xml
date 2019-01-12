@@ -6,6 +6,7 @@
   <string name="AzuterronNPC_Gender">masculino</string>
   <string name="AzuterronNPC_Name_Objective">Estranho</string>
   <string name="AzuterronNPC_Desc">Uma figura misteriosa envolvida por uma névoa negra.</string>
+  <string name="AzuterronNPC_Quest_Start">Hun, porquê... oh, você consegue me ver, não consegue? Isso significa que você não é um \"deles\". Eu vejo que você também não se afeiçoou por todos esses monstros. Te digo uma coisa, se você me ajudar com esse pequeno problema, então eu irei te oferecer a minha assistência. Em algum lugar neste nível, você irá encontrar a besta da escuridão, um espírito traiçoeiro. Mate-o, pegue o seu coração e volte para mim. E mais uma coisa, se você está interessado em comprar meus suprimentos, não hesite em perguntar.</string>
   <string name="AzuterronNPC_Quest_Reminder">Ajude-me e eu lhe ajudarei.</string>
   <string name="AzuterronNPC_Quest_End">Excelente. Pegue esta poção, certamente você a achará útil.</string>
   <string name="Journal_Azuterron">Estranho</string>
@@ -36,6 +37,7 @@
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">Coração da escuridão</string>
   <string name="HeartOfDarkness_Info">Coração negro pulsante do Espírito Traçoeiro</string>
+  <string name="HeartOfDarkness_Gender">neutro</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
   <string name="DarkVeil_Buff">Véu negro</string>
