@@ -4,7 +4,6 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
-import com.nyrds.pixeldungeon.support.PollfishSurveys;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
@@ -110,16 +109,6 @@ public class WndPriest extends Window {
 		};
 		btnLeave.setRect( 0, y, WIDTH, BTN_HEIGHT );
 		vbox.add( btnLeave );
-
-		RedButton btnSurvey= new RedButton("survey_test") {
-			@Override
-			protected void onClick() {
-				PollfishSurveys.init();
-				PollfishSurveys.showSurvey();
-			}
-		};
-		btnSurvey.setSize(WIDTH, BTN_HEIGHT );
-		vbox.add( btnSurvey );
 
 		add(vbox);
 		vbox.setRect(0,y,WIDTH,vbox.childsHeight());

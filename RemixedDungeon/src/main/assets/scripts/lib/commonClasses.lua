@@ -107,16 +107,7 @@ local RPD = {
         SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
     },
 
-    Objects = {
-        Ui = {
-            WndMessage = "com.watabou.pixeldungeon.windows.WndMessage",
-            WndStory   = "com.watabou.pixeldungeon.windows.WndStory",
-            WndQuest   = "com.watabou.pixeldungeon.windows.WndQuest"
-        },
-        Actors = {
-            ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
-        },
-    },
+    Objects = Objects,
 
     Wands = Wands,
 
@@ -171,6 +162,11 @@ local RPD = {
 
     chooseOption = function(handler, title, text, ...)
         local wnd = luajava.newInstance(Objects.Ui.WndOptionsLua, handler, title, text, {...})
+        GameScene:show(wnd)
+    end,
+
+    showStoryWindow = function(story_id)
+        local wnd = luajava.newInstance(Objects.Ui.WndStory,story_id)
         GameScene:show(wnd)
     end
 }

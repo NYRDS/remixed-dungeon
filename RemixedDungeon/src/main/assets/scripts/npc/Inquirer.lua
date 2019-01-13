@@ -9,27 +9,39 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
+
+
+local npc
+
 local dialog = function(index)
     if index == 0 then
-        local hero = RPD.Dungeon.hero
-        local pos = RPD.getXy(hero)
-        RPD.Dungeon.hero:handle(RPD.Dungeon.level:cell(pos[1],pos[2]-3))
+        local surveys = luajava.bindClass("com.nyrds.pixeldungeon.support.PollfishSurveys")
+        surveys:init()
+        surveys:showSurvey()
         return
     end
 
     if index == 1 then
-        RPD.glog("okay...")
+        RPD.showStoryWindow("Inquirer_privacyPolicy")
+        return
+    end
 
+    if index == 2 then
+        npc:say("Inquirer_bye")
+        return
     end
 end
 
 
 return mob.init({
     interact = function(self, chr)
+        npc =self
         RPD.chooseOption( dialog,
-                "Test title",
-                "Go back",
-                "Yes",
-                "No")
+                "Inquirer_title",
+                "Inquirer_text",
+                "Inquirer_yes",
+                "Inquirer_show_privacy",
+                "Inquirer_no"
+        )
     end
 })
