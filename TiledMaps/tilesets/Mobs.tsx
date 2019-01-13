@@ -88,7 +88,7 @@
  </tile>
  <tile id="210">
   <properties>
-   <property name="kind" value="LibrarianNPC"/>
+   <property name="kind" value="InquirerNPC"/>
   </properties>
  </tile>
  <tile id="211">

@@ -33,6 +33,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
@@ -703,9 +704,11 @@ public abstract class Mob extends Char {
 
 	public void setEnemy(@NonNull Char enemy) {
 
-		if(enemy != this.enemy && enemy != DUMMY) {
-			enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
-			GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
+		if(BuildConfig.DEBUG) {
+			if (enemy != this.enemy && enemy != DUMMY) {
+				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
+				GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
+			}
 		}
 
 		this.enemy = enemy;
