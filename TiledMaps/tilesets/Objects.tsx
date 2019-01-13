@@ -25,6 +25,11 @@
    <property name="kind" value="Barrel"/>
   </properties>
  </tile>
+ <tile id="75">
+  <properties>
+   <property name="kind" value="LibraryBook"/>
+  </properties>
+ </tile>
  <tile id="176">
   <properties>
    <property name="kind" value="Trap"/>
