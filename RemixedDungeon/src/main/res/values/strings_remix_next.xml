@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="InquirerNPC_Name">Inquirer</string>
+    <string name="InquirerNPC_Desc">Inquirer</string>
+    <string name="InquirerNPC_Gender">masculine</string>
+    <string name="InquirerNPC_Name_Objective">Inquirer</string>
+
+    <string name="Inquirer_title">Inquirer</string>
+    <string name="Inquirer_text">Hi!\nDid you want to take part in inquiry about so called Real World?\nNot for free of  course.\n</string>
+    <string name="Inquirer_yes">Let\'s do it!</string>
+    <string name="Inquirer_no">Not interested</string>
+    <string name="Inquirer_bye">Okay. Bye then...</string>
+
+
+    <string name="Inquirer_show_privacy">Inquirer Privacy Policy</string>
 
 </resources>
