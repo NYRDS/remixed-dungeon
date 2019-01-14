@@ -81,6 +81,7 @@ public abstract class Char extends Actor implements Presser{
 
 	// Unreachable target
 	public static final Char DUMMY = new DummyChar();
+
 	@Packable
     private int      pos      = 0;
 
@@ -750,23 +751,23 @@ public abstract class Char extends Actor implements Presser{
 
 	public boolean doStepTo(final int target) {
 		int oldPos = getPos();
+		spend(1 / speed());
 		if (level().cellValid(target) && getCloser(target)) {
 
 			moveSprite(oldPos, getPos());
 			return true;
 		}
-		spend(1 / speed());
 		return false;
 	}
 
 	public boolean doStepFrom(final int target) {
 		int oldPos = getPos();
+		spend(1 / speed());
 		if (level().cellValid(target) && getFurther(target)) {
 
 			moveSprite(oldPos, getPos());
 			return true;
 		}
-		spend(1 / speed());
 		return false;
 	}
 
