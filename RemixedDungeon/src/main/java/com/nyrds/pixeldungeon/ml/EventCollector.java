@@ -74,29 +74,29 @@ public class EventCollector {
 	}
 
 	static public void logException() {
-		if(!mDisabled) {
-			Crashlytics.logException(new Exception());
-		}
+		logException(new Exception(),2);
 	}
 
 	static public void logException(String desc) {
+		logException(new Exception(desc),2);
+	}
+
+	static private void logException(Exception e, int level) {
 		if(!mDisabled) {
-			Crashlytics.logException(new Exception(desc));
+			StackTraceElement [] stackTraceElements = e.getStackTrace();
+			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,level,stackTraceElements.length));
+			Crashlytics.logException(e);
 		}
 	}
 
 	static public void logException(Exception e) {
-		if(!mDisabled) {
-			StackTraceElement [] stackTraceElements = e.getStackTrace();
-			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,1,stackTraceElements.length));
-			Crashlytics.logException(e);
-		}
+		logException(e,2);
 	}
 
 	static public void logException(Throwable e, String desc) {
 		if(!mDisabled) {
 			Crashlytics.log(desc);
-			Crashlytics.logException(e);
+			logException(new Exception(e),2);
 		}
 	}
 
