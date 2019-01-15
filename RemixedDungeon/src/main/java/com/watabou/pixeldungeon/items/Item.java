@@ -23,7 +23,6 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -650,9 +649,10 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void setDefaultAction(@NonNull String newDefaultAction) {
+		@Nullable
 		Hero hero = getCurUser();
+
 		if(hero==null) {
-			EventCollector.logException("hero==null");
 			this.defaultAction = newDefaultAction;
 			return;
 		}
