@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.12.25" orientation="orthogonal" renderorder="left-up" width="11" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="left-up" width="11" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="1">
  <properties>
   <property name="maxBrightness" type="float" value="1.05"/>
  </properties>
@@ -8,7 +8,6 @@
  <tileset firstgid="321" source="tilesets/Mobs.tsx"/>
  <tileset firstgid="577" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="833" source="tilesets/Objects.tsx"/>
- <tileset firstgid="1089" source="C:/Users/denisov.d/Documents/GitHub/pixel-dungeon-remix/TiledMaps/tilesets/logic.tsx"/>
  <layer id="16" name="base" width="11" height="21">
   <data encoding="csv">
 585,585,587,585,587,586,585,585,587,585,587,
