@@ -17,81 +17,97 @@
  "objects":[
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":4,
          "y":7
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":6,
          "y":7
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":3,
          "y":8
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":7,
          "y":8
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":2,
          "y":11
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":8,
          "y":11
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":2,
          "y":13
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":8,
          "y":13
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":3,
          "y":16
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":7,
          "y":16
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":4,
          "y":17
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":6,
          "y":17
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":4,
          "y":18
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":6,
          "y":18
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":4,
          "y":19
         }, 
         {
          "kind":"Deco",
+         "object_desc":"candle",
          "x":6,
          "y":19
         }],
