@@ -98,7 +98,7 @@ public class WndPriest extends Window {
 			btnHealMinions.setSize( WIDTH, BTN_HEIGHT);
 			btnHealMinions.enable(!(Dungeon.gold() < healAllMinionsCost));
 
-			add(btnHealMinions);
+			vbox.add(btnHealMinions);
 		}
 
 		RedButton btnLeave = new RedButton(R.string.WndMovieTheatre_No) {
