@@ -963,6 +963,11 @@ public class Badges {
 
 		if (playGamesList.contains(badge) && !ModdingMode.inMod()) {
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
+
+			if(achievementCode.isEmpty()) {
+				EventCollector.logException("empty achievement " + badge.name());
+			}
+
 			Game.instance().playGames.unlockAchievement(achievementCode);
 		}
 

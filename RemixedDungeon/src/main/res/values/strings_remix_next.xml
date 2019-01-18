@@ -10,7 +10,9 @@
     <string name="Inquirer_yes">Let\'s do it!</string>
     <string name="Inquirer_no">Not interested</string>
     <string name="Inquirer_bye">Okay. Bye then...</string>
-	
+    <string name="Inquirer_show_privacy">Inquirer Privacy Policy</string>
+
+
 	<string name="town_deco_clock_name">Antique clock</string>
 	<string name="town_deco_clock_desc">It seems that this clock shows the wrong time</string>
 	<string name="town_deco_pedestal_name">Pedestal</string>
@@ -23,8 +25,5 @@
 	<string name="town_deco_journal_desc">You can see some records in it</string>
 	<string name="town_deco_bar_name">Bar</string>
 	<string name="town_deco_bar_desc">This bar contain some alcohol</string>
-	
-
-    <string name="Inquirer_show_privacy">Inquirer Privacy Policy</string>
 
 </resources>

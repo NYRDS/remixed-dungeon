@@ -74,14 +74,14 @@ public class EventCollector {
 	}
 
 	static public void logException() {
-		logException(new Exception(),2);
+		logException(new Exception(),1);
 	}
 
 	static public void logException(String desc) {
-		logException(new Exception(desc),2);
+		logException(new Exception(desc),1);
 	}
 
-	static private void logException(Exception e, int level) {
+	static private void logException(Throwable e, int level) {
 		if(!mDisabled) {
 			StackTraceElement [] stackTraceElements = e.getStackTrace();
 			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,level,stackTraceElements.length));
@@ -89,14 +89,14 @@ public class EventCollector {
 		}
 	}
 
-	static public void logException(Exception e) {
+	static public void logException(Throwable e) {
 		logException(e,2);
 	}
 
 	static public void logException(Throwable e, String desc) {
 		if(!mDisabled) {
 			Crashlytics.log(desc);
-			logException(new Exception(e),2);
+			logException(e, 2);
 		}
 	}
 
