@@ -114,7 +114,7 @@ dependencies {
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:16.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:16.1.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:16.0.1'
     googlePlayImplementation "com.google.android.gms:play-services-games:16.0.0"
 
