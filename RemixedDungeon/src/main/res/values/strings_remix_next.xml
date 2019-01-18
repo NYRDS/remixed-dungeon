@@ -26,4 +26,7 @@
 	<string name="town_deco_bar_name">Bar</string>
 	<string name="town_deco_bar_desc">This bar contain some alcohol</string>
 
+	<string name="deco_candle_name">Candle</string>
+	<string name="deco_candle_desc">Big candle</string>
+
 </resources>
