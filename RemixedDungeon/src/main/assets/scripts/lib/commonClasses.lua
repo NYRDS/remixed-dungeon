@@ -22,7 +22,8 @@ local Buffs  = {
     Frost        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Frost"),
     Light        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Light"),
     Cripple      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Cripple"),
-    Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm")
+    Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm"),
+    Blessed      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blessed")
 }
 
 local Blobs = {

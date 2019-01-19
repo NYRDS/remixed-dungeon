@@ -253,8 +253,6 @@ public class Hero extends Char implements PetOwner {
 		return Scrambler.descramble(STR);
 	}
 
-	private static final String ATTACK = "attackSkill";
-	private static final String DEFENSE = "defenseSkill";
 	private static final String STRENGTH = "STR";
 	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
@@ -1755,10 +1753,22 @@ public class Hero extends Char implements PetOwner {
 		return smthFound;
 	}
 
+	public void gold(int gold) {
+	    Dungeon.gold(gold);
+    }
+
+	public void spendGold(int spend) {
+	    gold(gold()-spend);
+    }
+
+	public int gold() { // Gold should belong to Hero, not to Dungeon.
+	    return Dungeon.gold();
+    }
+
 	public void resurrect(int resetLevel) {
 
 		hp(ht());
-		Dungeon.gold(0);
+		gold(0);
 		setExp(0);
 
 		belongings.resurrect(resetLevel);

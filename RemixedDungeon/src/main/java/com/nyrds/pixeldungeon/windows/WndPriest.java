@@ -75,7 +75,7 @@ public class WndPriest extends Window {
 			protected void onClick() {
 				Vector<Char> patients = new Vector<>();
 				patients.add(hero);
-				doHeal(priest, patients, GOLD_COST);
+				doHeal(priest, hero, patients, GOLD_COST);
 			}
 		};
 
@@ -91,7 +91,7 @@ public class WndPriest extends Window {
 			RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
 				@Override
 				protected void onClick() {
-					doHeal(priest,hero.getPets(),healAllMinionsCost);
+					doHeal(priest,hero,hero.getPets(),healAllMinionsCost);
 				}
 			};
 
@@ -116,9 +116,9 @@ public class WndPriest extends Window {
 		resize( WIDTH, (int) (vbox.bottom()));
 	}
 
-	private void doHeal(HealerNPC priest, Collection<? extends Char> patients, int healingCost) {
+	private void doHeal(HealerNPC priest, Hero payer, Collection<? extends Char> patients, int healingCost) {
 		hide();
-		Dungeon.gold(Dungeon.gold() - healingCost);
+		payer.spendGold(healingCost);
 		for(Char patient: patients) {
 			PotionOfHealing.heal(patient, 1.0f);
 			if(patient instanceof Hero) {

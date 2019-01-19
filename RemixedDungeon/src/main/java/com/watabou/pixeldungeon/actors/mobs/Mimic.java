@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -84,10 +85,11 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	@Override
 	public int attackProc(@NonNull Char enemy, int damage) {
 		if (enemy == Dungeon.hero && Random.Int(3) == 0) {
-			Gold gold = new Gold(Random.Int(Dungeon.gold() / 10, Dungeon.gold() / 2));
+			Hero hero = (Hero) enemy;
+			Gold gold = new Gold(Random.Int(hero.gold() / 10, hero.gold() / 2));
 			if (gold.quantity() > 0) {
-				Dungeon.gold(Dungeon.gold() - gold.quantity());
-				Dungeon.level.drop(gold, Dungeon.hero.getPos()).sprite.drop();
+				hero.gold(hero.gold() - gold.quantity());
+				Dungeon.level.drop(gold, hero.getPos()).sprite.drop();
 			}
 		}
 		return super.attackProc(enemy, damage);

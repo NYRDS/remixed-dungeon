@@ -248,8 +248,8 @@ public class WndTradeItem extends Window {
 		Item item = heap.pickUp();
 		
 		int price = price( item );
-		Dungeon.gold(Dungeon.gold() - price);
-		
+		hero.spendGold(price);
+
 		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), item.name(), price );
 		
 		if (!item.doPickUp( hero )) {

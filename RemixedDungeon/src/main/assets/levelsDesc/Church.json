@@ -9,7 +9,7 @@
  "maxBrightness":1.05,
  "mobs":[
         {
-         "kind":"HealerNPC",
+         "kind":"BishopNPC",
          "x":5,
          "y":8
         }],
