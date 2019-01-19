@@ -138,12 +138,7 @@ public class ShadowLord extends Boss implements IZapper {
 			final int tgt = Dungeon.level.cell(x, y);
 			if (Dungeon.level.cellValid(tgt)) {
 				final Char ch = this;
-				fx(getPos(), new Callback() {
-					@Override
-					public void call() {
-						WandOfBlink.appear(ch, tgt);
-					}
-				});
+				fx(getPos(), () -> WandOfBlink.appear(ch, tgt));
 			}
 		}
 	}
