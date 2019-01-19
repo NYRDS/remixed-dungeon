@@ -38,17 +38,18 @@ public class GnollArmor extends ClassArmor {
         SpellSprite.show( getCurUser(), SpellSprite.DOMINATION );
         Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 
-        int mobsDominated = 0;
+        int mobsDominated = getCurUser().getPets().size();
         for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
+
             if (Dungeon.level.fieldOfView[mob.getPos()]) {
+                if(mobsDominated > getCurUser().lvl() / 3) {
+                    break;
+                }
+
                 if(mob.canBePet()) {
                     Mob.makePet(mob, getCurUser());
                     new Flare(3, 32).show(mob.getSprite(), 2f);
                     mobsDominated++;
-                }
-
-                if(mobsDominated > getCurUser().lvl() / 7) {
-                    break;
                 }
             }
         }

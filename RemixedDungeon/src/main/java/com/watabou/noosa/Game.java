@@ -139,7 +139,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.needSceneRestart = needSceneRestart;
     }
 
-    public float getDifficultyFactor() {
+    public static float getDifficultyFactor() {
         switch (getDifficulty()) {
             case 0:
                 return 1f;

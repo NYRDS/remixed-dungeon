@@ -28,15 +28,7 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndOptions extends Window {
 
 	private static final int WIDTH         = 120;
-/*
-	public WndOptions( int title, int message, int... options ) {
-		String []soptions = new String[options.length];
-		for (int i = 0;i<options.length;++i) {
-			soptions[i]= Game.getVar(options[i]);
-		}
-		this(Game.getVar(title),Game.getVar(message),soptions);
-	}
-*/
+
 
 	public WndOptions( String title, String message, String... options ) {
 		super();
@@ -54,7 +46,6 @@ public class WndOptions extends Window {
 		tfMessage.maxWidth(WIDTH - GAP * 2);
 		tfMessage.x = GAP;
 		vbox.add( tfMessage );
-
 
 		VBox buttonsVbox = new VBox();
 		for (int i=0; i < options.length; i++) {

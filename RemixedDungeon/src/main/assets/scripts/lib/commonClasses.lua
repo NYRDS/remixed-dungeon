@@ -7,6 +7,9 @@
 
 local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
+
+local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
+
 local Sample = luajava.bindClass("com.watabou.noosa.audio.Sample")
 local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
 
@@ -76,6 +79,7 @@ local Wands = {
 }
 
 local RPD = {
+    RemixedDungeon = RemixedDungeon,
     GameScene = GameScene,
     Dungeon = Dungeon,
     SystemTime = luajava.bindClass("com.watabou.utils.SystemTime"),
@@ -87,7 +91,6 @@ local RPD = {
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
-
 
     MobAi = MobAi,
 
