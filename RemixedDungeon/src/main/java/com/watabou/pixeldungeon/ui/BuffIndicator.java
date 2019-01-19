@@ -73,11 +73,12 @@ public class BuffIndicator extends Component {
 	public static final int STONEBLOOD  = 37;
 	public static final int DEVOUR   	= 38;
 	public static final int NECROTISM	= 39;
+	public static final int BLEESSED    = 40;
 
 	
 	public static final int SIZE	= 7;
-	
-	private static BuffIndicator heroInstance;
+
+    private static BuffIndicator heroInstance;
 	
 	private SmartTexture texture;
 	private TextureFilm film;

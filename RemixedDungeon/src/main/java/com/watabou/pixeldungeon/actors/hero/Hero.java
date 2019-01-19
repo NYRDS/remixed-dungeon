@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ai.Wandering;
@@ -50,6 +51,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Web;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
+import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -157,7 +159,10 @@ public class Hero extends Char implements PetOwner {
 
 	public boolean spellUser;
 
+	@Packable
 	private int attackSkill = 10;
+
+	@Packable
 	private int defenseSkill = 5;
 
 	private boolean    ready      = false;
@@ -289,9 +294,6 @@ public class Hero extends Char implements PetOwner {
 		heroClass.storeInBundle(bundle);
 		subClass.storeInBundle(bundle);
 
-		bundle.put(ATTACK, attackSkill);
-		bundle.put(DEFENSE, defenseSkill);
-
 		bundle.put(STRENGTH, STR());
 
 		bundle.put(LEVEL, lvl());
@@ -315,9 +317,6 @@ public class Hero extends Char implements PetOwner {
 
 		heroClass = HeroClass.restoreFromBundle(bundle);
 		subClass = HeroSubClass.restoreFromBundle(bundle);
-
-		attackSkill = bundle.getInt(ATTACK);
-		defenseSkill = bundle.getInt(DEFENSE);
 
 		STR(bundle.getInt(STRENGTH));
 		updateAwareness();
@@ -380,11 +379,11 @@ public class Hero extends Char implements PetOwner {
 	@Override
 	public int attackSkill(Char target) {
 
-		int bonus = 0;
-		for (Buff buff : buffs(RingOfAccuracy.Accuracy.class)) {
-			bonus += ((RingOfAccuracy.Accuracy) buff).level;
-		}
+		int bonus = buffLevel(RingOfAccuracy.Accuracy.class)
+				  + buffLevel(Blessed.class);
+
 		float accuracy = (bonus == 0) ? 1 : (float) Math.pow(1.4, bonus);
+
 		if (rangedWeapon != null && Dungeon.level.distance(getPos(), target.getPos()) == 1) {
 			accuracy *= 0.5f;
 		}
@@ -404,10 +403,7 @@ public class Hero extends Char implements PetOwner {
 	@Override
 	public int defenseSkill(Char enemy) {
 
-		int bonus = 0;
-		for (Buff buff : buffs(RingOfEvasion.Evasion.class)) {
-			bonus += ((RingOfEvasion.Evasion) buff).level;
-		}
+		int bonus = buffLevel(RingOfEvasion.Evasion.class) + buffLevel(Blessed.class);
 
 		//WTF ?? Why it is here?
 		if (hasBuff(RingOfFrost.FrostAura.class) && enemy.distance(this) < 2) {
@@ -452,10 +448,8 @@ public class Hero extends Char implements PetOwner {
 	@Override
 	public int dr() {
 		int dr = belongings.armor != null ? Math.max(belongings.armor.DR, 0) : 0;
-		Barkskin barkskin = buff(Barkskin.class);
-		if (barkskin != null) {
-			dr += barkskin.level();
-		}
+		dr += buffLevel(Barkskin.class);
+
 		return dr;
 	}
 
@@ -509,9 +503,7 @@ public class Hero extends Char implements PetOwner {
 			}
 		}
 
-		for (Buff buff : buffs(RingOfHaste.Haste.class)) {
-			hasteLevel += ((RingOfHaste.Haste) buff).level;
-		}
+		hasteLevel+= buffLevel(RingOfHaste.Haste.class);
 
 		for (Item item : belongings) {
 			if (item instanceof IActingItem && item.isEquipped(this)) {
@@ -1489,11 +1481,7 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public int stealth() {
-		int stealth = super.stealth();
-		for (Buff buff : buffs(RingOfShadows.Shadows.class)) {
-			stealth += ((RingOfShadows.Shadows) buff).level;
-		}
-		return stealth;
+		return super.stealth() + buffLevel(RingOfShadows.Shadows.class);
 	}
 
 	@Override
@@ -1679,8 +1667,9 @@ public class Hero extends Char implements PetOwner {
 
 		int positive = 0;
 		int negative = 0;
+
 		for (Buff buff : buffs(RingOfDetection.Detection.class)) {
-			int bonus = ((RingOfDetection.Detection) buff).level;
+			int bonus = buff.level();
 			if (bonus > positive) {
 				positive = bonus;
 			} else if (bonus < 0) {

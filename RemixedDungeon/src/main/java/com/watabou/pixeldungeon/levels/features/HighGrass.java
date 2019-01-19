@@ -47,10 +47,7 @@ public class HighGrass {
 		if (!Dungeon.isChallenged( Challenges.NO_HERBALISM )) {
 			int herbalismLevel = 0;
 			if (ch != null) {
-				Herbalism herbalism = ch.buff( Herbalism.class );
-				if (herbalism != null) {
-					herbalismLevel = herbalism.level;
-				}
+				herbalismLevel = ch.buffLevel(Herbalism.class);
 			}
 			
 			// Seed

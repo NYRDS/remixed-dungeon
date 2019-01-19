@@ -12,6 +12,9 @@
     <string name="Inquirer_bye">Okay. Bye then...</string>
     <string name="Inquirer_show_privacy">Inquirer Privacy Policy</string>
 
+	<string name="Blessed_Info">Blessed by rightful priest</string>
+
+
 
 	<string name="town_deco_clock_name">Antique clock</string>
 	<string name="town_deco_clock_desc">It seems that this clock shows the wrong time</string>

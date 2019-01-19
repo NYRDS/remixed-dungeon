@@ -105,7 +105,11 @@ public class Buff extends Actor {
 	public static void detach( Char target, Class<? extends Buff> cl ) {
 		detach( target.buff( cl ) );
 	}
-	
+
+	public int level() {
+		return 1;
+	}
+
 	private void collectOrDropItem(Item item){
 		if(!item.collect( ((Hero)target).belongings.backpack )){
 			Dungeon.level.drop(item, target.getPos()).sprite.drop();
