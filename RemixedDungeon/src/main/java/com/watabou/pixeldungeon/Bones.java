@@ -59,8 +59,8 @@ public class Bones {
 			break;
 		}
 		if (item == null || (item instanceof Artifact && !(item instanceof Ring))) {
-			if (Dungeon.gold() > 0) {
-				item = new Gold( Random.IntRange( 1, Dungeon.gold()) );
+			if (Dungeon.hero.gold() > 0) {
+				item = new Gold( Random.IntRange( 1, Dungeon.hero.gold()) );
 			} else {
 				item = new Gold( 1 );
 			}

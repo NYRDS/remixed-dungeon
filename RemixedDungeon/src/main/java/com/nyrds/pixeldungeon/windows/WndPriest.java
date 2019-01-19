@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -80,7 +79,7 @@ public class WndPriest extends Window {
 		};
 
 		btnHealHero.setSize(WIDTH, BTN_HEIGHT );
-		btnHealHero.enable(!(Dungeon.gold()< GOLD_COST));
+		btnHealHero.enable(!(hero.gold()< GOLD_COST));
 
 		vbox.add( btnHealHero );
 
@@ -96,7 +95,7 @@ public class WndPriest extends Window {
 			};
 
 			btnHealMinions.setSize( WIDTH, BTN_HEIGHT);
-			btnHealMinions.enable(!(Dungeon.gold() < healAllMinionsCost));
+			btnHealMinions.enable(!(hero.gold() < healAllMinionsCost));
 
 			vbox.add(btnHealMinions);
 		}

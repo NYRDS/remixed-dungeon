@@ -132,7 +132,7 @@ public class WndTradeItem extends Window {
 				}
 			};
 			btnBuy.setSize(WIDTH, BTN_HEIGHT );
-			btnBuy.enable( price <= Dungeon.gold());
+			btnBuy.enable( price <= Dungeon.hero.gold());
 			vbox.add( btnBuy );
 			
 			RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {

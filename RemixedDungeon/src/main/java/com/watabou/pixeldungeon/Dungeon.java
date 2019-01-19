@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -98,7 +97,6 @@ public class Dungeon {
     public static Level level;
 
     public static  int depth;
-    private static int scrambledGold;
     private static boolean loading = false;
     private static long lastSaveTimestamp;
 
@@ -142,7 +140,6 @@ public class Dungeon {
         Journal.reset();
 
         depth = 0;
-        gold(0);
 
         potionOfStrength = 0;
         scrollsOfUpgrade = 0;
@@ -301,7 +298,6 @@ public class Dungeon {
     private static final String VERSION      = "version";
     private static final String CHALLENGES   = "challenges";
     private static final String HERO         = "hero";
-    private static final String GOLD         = "gold";
     private static final String DEPTH        = "depth";
     private static final String LEVEL        = "level";
     private static final String POS          = "potionsOfStrength";
@@ -328,7 +324,6 @@ public class Dungeon {
         bundle.put(VERSION, Game.version);
         bundle.put(CHALLENGES, challenges);
         bundle.put(HERO, hero);
-        bundle.put(GOLD, gold());
         bundle.put(DEPTH, depth);
 
         bundle.put(POS, potionOfStrength);
@@ -537,7 +532,12 @@ public class Dungeon {
 
         hero = (Hero) bundle.get(HERO);
 
-        gold(bundle.getInt(GOLD));
+        //pre 28.5 saves compatibility
+        int gold = bundle.optInt("gold",0);
+        if(gold > 0) {
+            hero.gold(gold);
+        }
+
         depth = bundle.getInt(DEPTH);
 
         Statistics.restoreFromBundle(bundle);
@@ -808,14 +808,6 @@ public class Dungeon {
     public static void setDifficulty(int _difficulty) {
         difficulty = _difficulty;
         RemixedDungeon.setDifficulty(difficulty);
-    }
-
-    public static int gold() {
-        return Scrambler.descramble(scrambledGold);
-    }
-
-    public static void gold(int value) {
-        scrambledGold = Scrambler.scramble(value);
     }
 
     public static boolean isLoading() {

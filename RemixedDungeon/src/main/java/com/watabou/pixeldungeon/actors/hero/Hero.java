@@ -1754,7 +1754,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public void gold(int gold) {
-	    Dungeon.gold(gold);
+	    belongings.gold.quantity(gold);
     }
 
 	public void spendGold(int spend) {
@@ -1762,7 +1762,7 @@ public class Hero extends Char implements PetOwner {
     }
 
 	public int gold() { // Gold should belong to Hero, not to Dungeon.
-	    return Dungeon.gold();
+	    return belongings.gold.quantity();
     }
 
 	public void resurrect(int resetLevel) {
