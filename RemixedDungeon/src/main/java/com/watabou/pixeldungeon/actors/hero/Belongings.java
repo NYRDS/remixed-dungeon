@@ -54,6 +54,8 @@ public class Belongings implements Iterable<Item> {
 	public Armor        armor  = null;
 	public Artifact     ring1  = null;
 	public Artifact     ring2  = null;
+
+	@NonNull
 	public Gold         gold   = new Gold(0);
 
 	public Belongings( Hero owner ) {
@@ -105,7 +107,9 @@ public class Belongings implements Iterable<Item> {
 			ring2.activate( owner );
 		}
 
-		gold = (Gold) bundle.get(GOLD);
+		Gold storedGold = (Gold) bundle.get(GOLD);
+		//pre 28.5 saves compatibility
+		gold = storedGold != null ? storedGold : gold;
 	}
 
 
@@ -266,26 +270,20 @@ public class Belongings implements Iterable<Item> {
 		return count;
 	}
 	
-	public int discharge() {
-		
-		int count = 0;
-		
+	public void discharge() {
 		for (Item item : this) {
 			if (item instanceof Wand) {
 				Wand wand = (Wand)item;
 				if (wand.curCharges() > 0) {
 					wand.curCharges(wand.curCharges() - 1);
-					count++;
-
 					QuickSlot.refresh();
 				}
 			}
 		}
-		
-		return count;
 	}
 
 	@Override
+	@NonNull
 	public Iterator<Item> iterator() {
 		return new ItemIterator(); 
 	}
