@@ -32,6 +32,9 @@ public abstract class MobAi implements AiState {
     }
 
     protected void seekRevenge(Mob me, Object src) {
+        if(src == me) { //no selfharm
+            return;
+        }
         if (src instanceof Char) {
             me.setEnemy((Char) src);
         } else {
@@ -56,6 +59,11 @@ public abstract class MobAi implements AiState {
         int dist = me.level().getLength();
 
         for (Char chr : Actor.chars.values()) {
+
+            if(chr==me) {
+                continue;
+            }
+
             if (me.level().fieldOfView[chr.getPos()]) {
                 int candidateDist = me.level().distance(me.getPos(), chr.getPos());
                 if (candidateDist < dist) {

@@ -705,6 +705,13 @@ public abstract class Mob extends Char {
 	public void setEnemy(@NonNull Char enemy) {
 
 		if(BuildConfig.DEBUG) {
+
+
+			if(enemy == this) {
+				GLog.i("WTF???");
+				throw new TrackedRuntimeException(enemy.getName());
+			}
+
 			if (enemy != this.enemy && enemy != DUMMY) {
 				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 				GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
