@@ -704,6 +704,10 @@ public abstract class Mob extends Char {
 
 	public void setEnemy(@NonNull Char enemy) {
 
+		if(enemy == this) {
+			EventCollector.logException(enemy.getName()+" gonna suicidal");
+		}
+
 		if(BuildConfig.DEBUG) {
 
 
