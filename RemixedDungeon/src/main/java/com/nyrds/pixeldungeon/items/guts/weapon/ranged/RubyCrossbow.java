@@ -4,7 +4,6 @@ public class RubyCrossbow extends Crossbow {
 
 	public RubyCrossbow() {
 		super( 6, 1.1f, 1.6f );
-		imageFile = "items/ranged.png";
 		image = 5;
 	}
 

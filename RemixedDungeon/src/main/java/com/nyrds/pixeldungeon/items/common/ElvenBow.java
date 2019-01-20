@@ -7,7 +7,6 @@ public class ElvenBow extends Bow {
 
 	public ElvenBow() {
 		super( 1, 1.2f, 1.3f );
-		imageFile = "items/ranged.png";
 		image = 6;
 	}
 	

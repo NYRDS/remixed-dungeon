@@ -7,7 +7,6 @@ public class CompositeCrossbow extends Crossbow {
 
 	public CompositeCrossbow() {
 		super(4, 1.1f, 1.6f);
-		imageFile = "items/ranged.png";
 		image = 3;
 	}
 

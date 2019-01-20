@@ -6,9 +6,7 @@ import com.watabou.pixeldungeon.items.Item;
 public class WoodenCrossbow extends Crossbow {
 
 	public WoodenCrossbow() {
-
 		super( 2, 1.2f, 1.6f );
-		imageFile = "items/ranged.png";
 		image = 1;
 	}
 
