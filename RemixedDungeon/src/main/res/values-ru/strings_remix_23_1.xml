@@ -24,7 +24,7 @@
   <string name="SuspiciousRat_Name">подозрительная крыса</string>
   <string name="SuspiciousRat_Gender">feminine</string>
   <string name="SuspiciousRat_Name_Objective">подозрительную крысу</string>
-  <string name="SuspiciousRat_Desc">Увидеть крысу в подземельях не такая уж и редкость, но вот как она забралась на столько глубоко... Ты замечаешь как при движении тело крысы сотрясают спазмы.</string>
+  <string name="SuspiciousRat_Desc">Увидеть крысу в подземельях не такая уж и редкость, но вот как она забралась так глубоко... Ты замечаешь как при движении тело крысы сотрясают спазмы.</string>
   <string name="SuspiciousRat_Info1">Подозрительная крыса судорожно трясётся.</string>
   <!--STRINGS OF PseudoRat CLASS-->
   <string name="PseudoRat_Name">Псевдо-крыса</string>
