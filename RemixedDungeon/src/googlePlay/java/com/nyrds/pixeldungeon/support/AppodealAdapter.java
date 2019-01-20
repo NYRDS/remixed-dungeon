@@ -17,6 +17,8 @@ import com.watabou.pixeldungeon.RemixedDungeon;
  */
 
 public class AppodealAdapter {
+
+    private static final String APPODEAL_REWARD_VIDEO = "appodeal reward video";
     private static InterstitialPoint returnTo;
 
     public static void init() {
@@ -57,7 +59,7 @@ public class AppodealAdapter {
         Game.instance().runOnUiThread(() -> {
             init();
 
-            EventCollector.startTrace("appodeal reward video");
+            EventCollector.startTrace(APPODEAL_REWARD_VIDEO);
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
@@ -66,12 +68,12 @@ public class AppodealAdapter {
 
                 @Override
                 public void onRewardedVideoLoaded(boolean b) {
-                    EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "ok", "");
+                    EventCollector.stopTrace(APPODEAL_REWARD_VIDEO, APPODEAL_REWARD_VIDEO, "ok", "");
                 }
 
                 @Override
                 public void onRewardedVideoFailedToLoad() {
-                    EventCollector.stopTrace("appodeal reward video", "appodeal reward video", "fail", "");
+                    EventCollector.stopTrace(APPODEAL_REWARD_VIDEO, APPODEAL_REWARD_VIDEO, "fail", "");
                 }
 
                 @Override

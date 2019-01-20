@@ -18,7 +18,7 @@ import androidx.annotation.MainThread;
 
 public class GoogleRewardVideoAds {
 
-	public static final String GOOGLE_REWARD_VIDEO = "google reward video";
+	private static final String GOOGLE_REWARD_VIDEO = "google reward video";
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
 
@@ -29,7 +29,7 @@ public class GoogleRewardVideoAds {
 			return;
 		}
 
-		Game.instance().runOnUiThread(() -> loadNextVideo());
+		Game.instance().runOnUiThread(GoogleRewardVideoAds::loadNextVideo);
 	}
 
 	@MainThread
@@ -79,7 +79,7 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdClosed() {
-			Game.instance().runOnUiThread(() -> loadNextVideo());
+			Game.instance().runOnUiThread(GoogleRewardVideoAds::loadNextVideo);
 			Game.pushUiTask(() -> {returnTo.returnToWork(videoCompleted);});
 		}
 
