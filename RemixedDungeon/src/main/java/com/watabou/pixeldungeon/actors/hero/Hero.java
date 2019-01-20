@@ -1850,6 +1850,10 @@ public class Hero extends Char implements PetOwner {
 			}
 		}
 
+		if(belongings.weapon instanceof KindOfBow) {
+			return enemy.getPos() == Ballistica.cast(getPos(), enemy.getPos(), false, true);
+		}
+
 		return false;
 	}
 
