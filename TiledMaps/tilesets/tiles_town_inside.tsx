@@ -393,8 +393,8 @@
  </tile>
  <tile id="73">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_pedestal_desc"/>
+   <property name="deco_name" value="town_deco_pedestal_name"/>
   </properties>
  </tile>
  <tile id="74">

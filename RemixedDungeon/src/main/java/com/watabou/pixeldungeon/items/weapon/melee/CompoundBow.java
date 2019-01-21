@@ -7,7 +7,6 @@ public class CompoundBow extends Bow {
 
 	public CompoundBow() {
 		super( 3, 0.8f, 1.5f );
-		imageFile = "items/ranged.png";
 		image = 2;
 	}
 	

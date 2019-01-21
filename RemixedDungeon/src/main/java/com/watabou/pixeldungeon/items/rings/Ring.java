@@ -196,7 +196,7 @@ public class Ring extends Artifact implements UnknownItem{
 	
 	public class RingBuff extends ArtifactBuff {
 		
-		public int level;
+		private int level;
 		public RingBuff() {
 			level = Ring.this.level();
 		}
@@ -226,6 +226,10 @@ public class Ring extends Artifact implements UnknownItem{
 			spend( TICK );
 			
 			return true;
+		}
+
+		public int level() {
+			return level;
 		}
 	}
 }

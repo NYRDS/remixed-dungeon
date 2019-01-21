@@ -67,7 +67,7 @@ public class WndFortuneTeller extends Window {
 				if (hasTarget) {
 					identify();
 					hide();
-					Dungeon.gold(Dungeon.gold() - GOLD_COST);
+					hero.spendGold(GOLD_COST);
 				} else{
 					hide();
 					GameScene.show(new WndQuest(npc, Game.getVar(R.string.WndFortuneTeller_No_Item)));
@@ -77,7 +77,7 @@ public class WndFortuneTeller extends Window {
 
 		btnYes.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnYes );
-		btnYes.enable(!(Dungeon.gold()< GOLD_COST));
+		btnYes.enable(!(hero.gold()< GOLD_COST));
 
 		RedButton btnNo = new RedButton( Game.getVar(R.string.Wnd_Button_No) ) {
 			@Override
@@ -95,12 +95,9 @@ public class WndFortuneTeller extends Window {
 		return GameScene.selectItem( itemSelector, WndBag.Mode.UNIDENTIFED, Game.getVar(R.string.ScrollOfIdentify_InvTitle));
 	}
 
-	private static WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				ScrollOfIdentify.identify(Dungeon.hero,item);
-			}
+	private static WndBag.Listener itemSelector = item -> {
+		if (item != null) {
+			ScrollOfIdentify.identify(Dungeon.hero,item);
 		}
 	};
 }

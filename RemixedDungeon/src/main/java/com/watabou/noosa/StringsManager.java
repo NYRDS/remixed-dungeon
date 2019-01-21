@@ -58,13 +58,13 @@ public class StringsManager {
 
 		nonModdable.add("easyModeAdUnitId");
 		nonModdable.add("saveLoadAdUnitId");
-		nonModdable.add("easyModeSmallScreenAdUnitId");
 		nonModdable.add("iapKey");
 		nonModdable.add("ownSignature");
 		nonModdable.add("appodealRewardAdUnitId");
 		nonModdable.add("admob_publisher_id");
 		nonModdable.add("admob_app_id");
 		nonModdable.add("fabric_api_key");
+		nonModdable.add("pollfish_key");
 	}
 
 	private static void addMappingForClass(Class<?> clazz) {

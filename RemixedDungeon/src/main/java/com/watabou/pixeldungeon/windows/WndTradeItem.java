@@ -132,7 +132,7 @@ public class WndTradeItem extends Window {
 				}
 			};
 			btnBuy.setSize(WIDTH, BTN_HEIGHT );
-			btnBuy.enable( price <= Dungeon.gold());
+			btnBuy.enable( price <= Dungeon.hero.gold());
 			vbox.add( btnBuy );
 			
 			RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
@@ -248,8 +248,8 @@ public class WndTradeItem extends Window {
 		Item item = heap.pickUp();
 		
 		int price = price( item );
-		Dungeon.gold(Dungeon.gold() - price);
-		
+		hero.spendGold(price);
+
 		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), item.name(), price );
 		
 		if (!item.doPickUp( hero )) {

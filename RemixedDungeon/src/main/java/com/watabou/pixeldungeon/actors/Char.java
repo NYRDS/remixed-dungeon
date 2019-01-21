@@ -426,6 +426,16 @@ public abstract class Char extends Actor implements Presser{
 		return null;
 	}
 
+	public int buffLevel(Class<? extends Buff> c) {
+		int level = 0;
+		for (Buff b : buffs) {
+			if (c.isInstance(b)) {
+				level += b.level();
+			}
+		}
+		return level;
+	}
+
 	public boolean hasBuff(Class<? extends Buff> c) {
 		for (Buff b : buffs) {
 			if (c.isInstance(b)) {

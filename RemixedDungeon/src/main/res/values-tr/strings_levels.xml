@@ -36,10 +36,15 @@
   <string name="Level_TileAlchemy">Simya şisesi</string>
   <string name="Level_TileDefault">\?\?\?</string>
   <string name="Level_TileDescChasm">Aşağıyı göremezsin.</string>
+  <string name="Level_TileDescWater">Yanma durumunda, ateşi söndürmek için suya girin.</string>
+  <string name="Level_TileDescEntrance">Merdivenler bir üst derinliğe inmenizi sağlar.</string>
+  <string name="Level_TileDescExit">Merdivenler bir alt derinliğe geçmenizi sağlar.</string>
   <string name="Level_TileDescEmbers">Kapıyı közler kaplamış.</string>
   <string name="Level_TileDescHighGrass">Yoğun bitkiler görüşü engelliyor.</string>
   <string name="Level_TileDescLockedDoor">Bu kapı kilitli, açmak için eşleşen bi anahtara ihtiyacın var.</string>
+  <string name="Level_TileDescBarricade">Ahşap barikat sıkı bir şekilde yerleştirilmiş ancak yıllar boyunca kurumuş. Yanabilir mi?</string>
   <string name="Level_TileDescSign">Yazıyı buradan okuyamazsın.</string>
+  <string name="Level_TileDescTrap">Gizli bir baskı plakasına basmak tuzağı harekete geçirir.</string>
   <string name="Level_TileDescInactiveTrap">Tuzak daha önceden tetiklenmiş ve artık tehlikeli değil.</string>
   <string name="Level_TileDescStatue">Birileri burayı süsleme istemiş ama belli ki başarısız olmuş.</string>
   <string name="Level_TileDescAlchemy">İksir yapmak için buraya birkaç tohum bırak.</string>
@@ -48,20 +53,31 @@
   <string name="Caves_TileGrass">Florasan yosun</string>
   <string name="Caves_TileHighGrass">Florasan mantar</string>
   <string name="Caves_TileWater">Dondurucu soğuk su.</string>
+  <string name="Caves_TileDescEntrance">Merdiven, bir üst derinliğe inmenizi sağlar.</string>
   <string name="Caves_TileDescExit">Aşağı seviyelere inen bir merdiven.</string>
+  <string name="Caves_TileDescHighGrass">Büyük mantarlar, görüntüyü engeller.</string>
   <string name="Caves_TileDescDeco">Duvarda bir maden damarı gözüküyor, Altın olmasın?</string>
   <string name="Caves_TileDescBookshelf">Kim bir mağarada kitaplığa ihtiyaç duyar ki?</string>
   <!--STRINGS OF CityLevel & CityBossLevel CLASS-->
+  <string name="City_TileWater">Şüpheli renkli su</string>
   <string name="City_TileHighGrass">Çok açan çicekler</string>
   <string name="City_TileDescEntrance">Yukarıya çıkan bir rampa.</string>
   <string name="City_TileDescExit">Aşağıya inen bir rampa.</string>
+  <string name="City_TileDescDeco">Burada birkaç fayans eksik.</string>
+  <string name="City_TileDescEmptySP">İpek Bir Halı Zemini Kaplıyor</string>
   <string name="City_TileDescStatue">Kahramanca poz vermiş cüceyi betimleyen bir heykel.</string>
   <string name="City_TileDescBookshelf">Çeşitli ilimler hakkında kitaplarla dolu bir kitaplık</string>
   <!--STRINGS OF HallsLevel & HallsBossLevel CLASS-->
   <string name="Halls_TileWater">Soğuk lav</string>
+  <string name="Halls_TileGrass">Koryosunu</string>
   <string name="Halls_TileHighGrass">Mantar közü</string>
+  <string name="Halls_TileStatue">Sütun</string>
+  <string name="Halls_TileDescWater">Görünüş olarak lava benziyor, ama bu soğuk, ve dokunmak için muhtemelen güvenli.</string>
+  <string name="Halls_TileDescStatue">Bu sütun gerçek insan kafatalarından yapılmış. Muhteşem.</string>
+  <string name="Halls_TileDescBookshelf">Antik dillerdeki kitaplar kitaplıkta yanar.</string>
   <!--STRINGS OF LastLevel CLASS-->
   <string name="LastLevel_TileWater">Soğuk lav</string>
+  <string name="LastLevel_TileStatue">Sütun</string>
   <!--STRINGS OF LastShopLevel CLASS-->
   <string name="LastShopLevel_TileHighGrass">Çok açan çiçekler</string>
   <string name="LastShopLevel_TileDescEntrance">Yukarıya çıkan bir rampa.</string>

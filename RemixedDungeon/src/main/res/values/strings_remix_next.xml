@@ -12,6 +12,23 @@
     <string name="Inquirer_bye">Okay. Bye then...</string>
     <string name="Inquirer_show_privacy">Inquirer Privacy Policy</string>
 
+	<string name="BishopNPC_Name">Bishop</string>
+	<string name="BishopNPC_Desc">Bishop of Holy Church of Santa the Depth Lord</string>
+	<string name="BishopNPC_Gender">masculine</string>
+	<string name="BishopNPC_Name_Objective">Bishop</string>
+
+
+	<string name="Bishop_title">Bishop</string>
+	<string name="Bishop_text">Days and nights I pray for you my child.</string>
+	<string name="Bishop_lesser_bless">Lesser bless - %d gold</string>
+	<string name="Bishop_great_bless">Great bless - %d gold</string>
+	<string name="Bishop_not_interested">Leave</string>
+	<string name="Bishop_no_money">You can\'t pay for it.</string>
+	<string name="Bishop_bye">I will pray for you my child.</string>
+
+	<string name="Blessed_Info">Blessed by rightful priest</string>
+
+
 
 	<string name="town_deco_clock_name">Antique clock</string>
 	<string name="town_deco_clock_desc">It seems that this clock shows the wrong time</string>
@@ -25,5 +42,8 @@
 	<string name="town_deco_journal_desc">You can see some records in it</string>
 	<string name="town_deco_bar_name">Bar</string>
 	<string name="town_deco_bar_desc">This bar contain some alcohol</string>
+
+	<string name="deco_candle_name">Candle</string>
+	<string name="deco_candle_desc">Big candle</string>
 
 </resources>

@@ -9,8 +9,6 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
-
-
 local npc
 
 local dialog = function(index)

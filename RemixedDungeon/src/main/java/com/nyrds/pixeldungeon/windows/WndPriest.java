@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -75,12 +74,12 @@ public class WndPriest extends Window {
 			protected void onClick() {
 				Vector<Char> patients = new Vector<>();
 				patients.add(hero);
-				doHeal(priest, patients, GOLD_COST);
+				doHeal(priest, hero, patients, GOLD_COST);
 			}
 		};
 
 		btnHealHero.setSize(WIDTH, BTN_HEIGHT );
-		btnHealHero.enable(!(Dungeon.gold()< GOLD_COST));
+		btnHealHero.enable(!(hero.gold()< GOLD_COST));
 
 		vbox.add( btnHealHero );
 
@@ -91,14 +90,14 @@ public class WndPriest extends Window {
 			RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
 				@Override
 				protected void onClick() {
-					doHeal(priest,hero.getPets(),healAllMinionsCost);
+					doHeal(priest,hero,hero.getPets(),healAllMinionsCost);
 				}
 			};
 
 			btnHealMinions.setSize( WIDTH, BTN_HEIGHT);
-			btnHealMinions.enable(!(Dungeon.gold() < healAllMinionsCost));
+			btnHealMinions.enable(!(hero.gold() < healAllMinionsCost));
 
-			add(btnHealMinions);
+			vbox.add(btnHealMinions);
 		}
 
 		RedButton btnLeave = new RedButton(R.string.WndMovieTheatre_No) {
@@ -116,9 +115,9 @@ public class WndPriest extends Window {
 		resize( WIDTH, (int) (vbox.bottom()));
 	}
 
-	private void doHeal(HealerNPC priest, Collection<? extends Char> patients, int healingCost) {
+	private void doHeal(HealerNPC priest, Hero payer, Collection<? extends Char> patients, int healingCost) {
 		hide();
-		Dungeon.gold(Dungeon.gold() - healingCost);
+		payer.spendGold(healingCost);
 		for(Char patient: patients) {
 			PotionOfHealing.heal(patient, 1.0f);
 			if(patient instanceof Hero) {

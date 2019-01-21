@@ -15,6 +15,10 @@ public class RewardVideo {
 		if(!GoogleRewardVideoAds.isVideoInitialized()){
 			GoogleRewardVideoAds.initCinemaRewardVideo();
 		}
+
+		if(!AppodealAdapter.isVideoInitialized()) {
+			AppodealAdapter.initRewardedVideo();
+		}
 	}
 
 	@UiThread
@@ -29,9 +33,13 @@ public class RewardVideo {
                 GoogleRewardVideoAds.showCinemaRewardVideo(ret);
                 return;
             }
-            Game.pushUiTask( () -> {
-                ret.returnToWork(false);
-            });
+
+            if(AppodealAdapter.isVideoReady()) {
+            	AppodealAdapter.showCinemaRewardVideo(ret);
+            	return;
+			}
+
+            Game.pushUiTask(() -> ret.returnToWork(false));
 		});
 	}
 }

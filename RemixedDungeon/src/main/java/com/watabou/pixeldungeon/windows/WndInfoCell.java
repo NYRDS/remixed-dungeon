@@ -57,7 +57,7 @@ public class WndInfoCell extends Window {
 
 		String title = level.tileNameByCell( cell );
 		if(obj != null) {
-			title += " & " + obj.name();
+			title = obj.name();
 		}
 
 		titlebar.label( title );
@@ -82,8 +82,7 @@ public class WndInfoCell extends Window {
 			sprite.setScale(DungeonTilemap.SIZE/xs,DungeonTilemap.SIZE/ys);
 			add(sprite);
 
-			desc.append(newLine);
-			desc.append(obj.desc());
+			desc = new StringBuilder(obj.desc());
 		}
 
 		for (Blob blob:level.blobs.values()) {

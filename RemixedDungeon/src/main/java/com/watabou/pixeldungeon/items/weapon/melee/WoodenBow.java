@@ -7,7 +7,6 @@ public class WoodenBow extends Bow {
 
 	public WoodenBow() {
 		super( 1, 0.8f, 1.5f );
-		imageFile = "items/ranged.png";
 		image = 0;
 	}
 	

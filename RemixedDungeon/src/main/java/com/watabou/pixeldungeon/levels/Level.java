@@ -905,7 +905,7 @@ public abstract class Level implements Bundlable {
 			int flags = TerrainFlags.flags[map[i]];
 			passable[i] = (flags & TerrainFlags.PASSABLE) != 0;
 			losBlocking[i] = (flags & TerrainFlags.LOS_BLOCKING) != 0;
-			flammable[i] = (flags & TerrainFlags.FLAMABLE) != 0;
+			flammable[i] = (flags & TerrainFlags.FLAMMABLE) != 0;
 			secret[i] = (flags & TerrainFlags.SECRET) != 0;
 			solid[i] = (flags & TerrainFlags.SOLID) != 0;
 			avoid[i] = (flags & TerrainFlags.AVOID) != 0;
@@ -1007,7 +1007,7 @@ public abstract class Level implements Bundlable {
 		int flags = TerrainFlags.flags[terrain];
 		passable[cell] = (flags & TerrainFlags.PASSABLE) != 0;
 		losBlocking[cell] = (flags & TerrainFlags.LOS_BLOCKING) != 0;
-		flammable[cell] = (flags & TerrainFlags.FLAMABLE) != 0;
+		flammable[cell] = (flags & TerrainFlags.FLAMMABLE) != 0;
 		secret[cell] = (flags & TerrainFlags.SECRET) != 0;
 		solid[cell] = (flags & TerrainFlags.SOLID) != 0;
 		avoid[cell] = (flags & TerrainFlags.AVOID) != 0;

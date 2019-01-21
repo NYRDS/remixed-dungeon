@@ -65,9 +65,9 @@ public class GoldIndicator extends Component {
 			
 		}
 		
-		if (Dungeon.gold() != lastValue && !RemixedDungeon.toolStyle().equals(Tool.Size.Tiny.name())) {
+		if (Dungeon.hero.gold() != lastValue && !RemixedDungeon.toolStyle().equals(Tool.Size.Tiny.name())) {
 			
-			lastValue = Dungeon.gold();
+			lastValue = Dungeon.hero.gold();
 			
 			tf.text( Integer.toString( lastValue ) );
 

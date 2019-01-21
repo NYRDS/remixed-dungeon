@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
@@ -27,7 +28,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
@@ -36,10 +36,11 @@ import com.watabou.utils.Random;
  */
 public class ShadowLord extends Boss implements IZapper {
 
+	@Packable
 	private boolean levelCreated         = false;
-	private int cooldown                 = -1;
 
-	private static final String LEVELCREATED   = "levelCreated";
+	@Packable
+	private int cooldown                 = -1;
 
 	public ShadowLord() {
 		hp(ht(260));
@@ -138,12 +139,7 @@ public class ShadowLord extends Boss implements IZapper {
 			final int tgt = Dungeon.level.cell(x, y);
 			if (Dungeon.level.cellValid(tgt)) {
 				final Char ch = this;
-				fx(getPos(), new Callback() {
-					@Override
-					public void call() {
-						WandOfBlink.appear(ch, tgt);
-					}
-				});
+				fx(getPos(), () -> WandOfBlink.appear(ch, tgt));
 			}
 		}
 	}
@@ -219,18 +215,6 @@ public class ShadowLord extends Boss implements IZapper {
 		yell(Game.getVar(R.string.ShadowLord_Death));
 		Tools.makeEmptyLevel(Dungeon.level);
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		bundle.put(LEVELCREATED, levelCreated);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		levelCreated   = bundle.optBoolean(LEVELCREATED, false);
 	}
 
 }

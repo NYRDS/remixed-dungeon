@@ -36,7 +36,7 @@ public class Fire extends Blob {
 	@Override
 	protected void evolve() {
 
-		boolean[] flamable = Dungeon.level.flammable;
+		boolean[] flammable = Dungeon.level.flammable;
 		
 		int from = getWidth() + 1;
 		int to   = getLength() - getWidth() - 1;
@@ -52,7 +52,7 @@ public class Fire extends Blob {
 				burn( pos );
 				
 				fire = cur[pos] - 1;
-				if (fire <= 0 && flamable[pos]) {
+				if (fire <= 0 && flammable[pos]) {
 					
 					Dungeon.level.set( pos, Terrain.EMBERS );
 					
@@ -65,7 +65,7 @@ public class Fire extends Blob {
 				
 			} else {
 				
-				if (flamable[pos] && (cur[pos-1] > 0 || cur[pos+1] > 0 || cur[pos-getWidth()] > 0 || cur[pos+getWidth()] > 0)) {
+				if (flammable[pos] && (cur[pos-1] > 0 || cur[pos+1] > 0 || cur[pos-getWidth()] > 0 || cur[pos+getWidth()] > 0)) {
 					fire = 4;
 					burn( pos );
 				} else {

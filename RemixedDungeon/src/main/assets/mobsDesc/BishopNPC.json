@@ -1,0 +1,8 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/HealerNPC.json",
+   "scriptFile"    :"scripts/npc/Bishop",
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL"
+}

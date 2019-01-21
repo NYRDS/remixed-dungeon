@@ -70,7 +70,7 @@ public class Gold extends Item {
 
 	@Override
 	public boolean collect(Hero hero) {
-		Dungeon.gold(Dungeon.gold() + quantity());
+		hero.gold(hero.gold() + quantity());
 
 		return true;
 	}

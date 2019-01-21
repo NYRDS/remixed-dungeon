@@ -6,7 +6,6 @@ public class RubyBow extends Bow {
 
 	public RubyBow() {
 		super( 5, 0.8f, 1.5f );
-		imageFile = "items/ranged.png";
 		image = 4;
 	}
 	

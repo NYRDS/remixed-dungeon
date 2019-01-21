@@ -6,6 +6,10 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 
 public abstract class KindOfBow extends MeleeWeapon {
 
+	{
+		imageFile = "items/ranged.png";
+	}
+
 	private Class <? extends Arrow> arrowType = Arrow.class;
 	
 	public KindOfBow(int tier, float acu, float dly ) {

@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -50,9 +51,12 @@ public class Belongings implements Iterable<Item> {
 	public Bag backpack;	
 
 	public KindOfWeapon weapon = null;
-	public Armor armor = null;
-	public Artifact ring1 = null;
-	public Artifact ring2 = null;
+	public Armor        armor  = null;
+	public Artifact     ring1  = null;
+	public Artifact     ring2  = null;
+
+	@NonNull
+	public Gold         gold   = new Gold(0);
 
 	public Belongings( Hero owner ) {
 		this.owner = owner;
@@ -68,6 +72,7 @@ public class Belongings implements Iterable<Item> {
 	private static final String ARMOR		= "armor";
 	private static final String RING1		= "ring1";
 	private static final String RING2		= "ring2";
+	private static final String GOLD		= "gold";
 	
 	public void storeInBundle( Bundle bundle ) {
 		
@@ -77,6 +82,7 @@ public class Belongings implements Iterable<Item> {
 		bundle.put( ARMOR, armor );
 		bundle.put( RING1, ring1 );
 		bundle.put( RING2, ring2 );
+		bundle.put( GOLD,  gold );
 	}
 	
 	public void restoreFromBundle( Bundle bundle ) {
@@ -100,6 +106,10 @@ public class Belongings implements Iterable<Item> {
 		if (ring2 != null) {
 			ring2.activate( owner );
 		}
+
+		Gold storedGold = (Gold) bundle.get(GOLD);
+		//pre 28.5 saves compatibility
+		gold = storedGold != null ? storedGold : gold;
 	}
 
 
@@ -210,7 +220,7 @@ public class Belongings implements Iterable<Item> {
 
 	public void resurrect( int depth ) {
 
-		for (Item item : backpack.items.toArray(new Item[backpack.items.size()])) {
+		for (Item item : backpack.items.toArray(new Item[0])) {
 			if (item instanceof Key) {
 				if (((Key) item).depth == depth) {
 					item.detachAll(backpack);
@@ -260,26 +270,20 @@ public class Belongings implements Iterable<Item> {
 		return count;
 	}
 	
-	public int discharge() {
-		
-		int count = 0;
-		
+	public void discharge() {
 		for (Item item : this) {
 			if (item instanceof Wand) {
 				Wand wand = (Wand)item;
 				if (wand.curCharges() > 0) {
 					wand.curCharges(wand.curCharges() - 1);
-					count++;
-
 					QuickSlot.refresh();
 				}
 			}
 		}
-		
-		return count;
 	}
 
 	@Override
+	@NonNull
 	public Iterator<Item> iterator() {
 		return new ItemIterator(); 
 	}

@@ -36,10 +36,7 @@ public class Regeneration extends Buff {
                 }
             }
 
-            int bonus = 0;
-            for (Buff buff : target.buffs(RingOfMending.Rejuvenation.class)) {
-                bonus += ((RingOfMending.Rejuvenation) buff).level;
-            }
+            int bonus = target.buffLevel(RingOfMending.Rejuvenation.class);
 
             spend((float) (REGENERATION_DELAY / Math.pow(1.2, bonus)));
         } else {

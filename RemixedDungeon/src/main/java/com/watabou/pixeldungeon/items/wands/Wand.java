@@ -206,7 +206,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	public int effectiveLevel() {
 		if (charger != null) {
 			Power power = charger.target.buff(Power.class);
-			return power == null ? super.level() : Math.max(super.level() + power.level, 0);
+			return power == null ? super.level() : Math.max(super.level() + power.level(), 0);
 		} else {
 			return super.level();
 		}
