@@ -39,7 +39,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
             EventCollector.startTrace("download");
 
-            HttpsURLConnection ucon = NetCipher.getHttpsURLConnection(url);
+            HttpsURLConnection ucon = NetCipher.getCompatibleHttpsURLConnection(url);
 
             ucon.setReadTimeout(2500);
             ucon.setInstanceFollowRedirects(true);
