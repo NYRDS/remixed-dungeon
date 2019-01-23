@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
@@ -30,13 +31,11 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.sprites.RatKingSprite;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class RatKing extends NPC {
 
-	private static final String ANGER = "anger";
-	
+	@Packable
 	private int anger = 0;
 	
 	public RatKing() {
@@ -137,19 +136,5 @@ public class RatKing extends NPC {
 		say(Game.getVar(R.string.RatKing_Died));
 		super.die(cause);
 	}
-	
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		
-		bundle.put(ANGER, anger);
-	}
 
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-
-		super.restoreFromBundle(bundle);
-		
-		anger = bundle.getInt(ANGER);
-	}	
 }

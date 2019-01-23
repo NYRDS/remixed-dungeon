@@ -40,6 +40,7 @@ public abstract class MobAi implements AiState {
         } else {
             me.setEnemy(chooseEnemy(me));
         }
+
         if (me.isEnemyInFov()) {
             me.setState(new Hunting());
         } else {

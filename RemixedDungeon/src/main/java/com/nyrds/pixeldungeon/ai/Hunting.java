@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -13,6 +14,11 @@ public class Hunting extends MobAi implements AiState {
 
     @Override
     public void act(Mob me) {
+
+        if(me.getEnemy()== Char.DUMMY) {
+            me.setEnemy(chooseEnemy(me));
+        }
+
         me.enemySeen = me.isEnemyInFov();
 
         if (me.enemySeen && me.canAttack(me.getEnemy())) {
