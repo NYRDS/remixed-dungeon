@@ -22,7 +22,7 @@
 
     <!-- STRINGS OF RootSpell CLASS -->
     <string name="RootSpell_Name">Корни</string>
-    <string name="RootSpell_Info">Опутывает выбранного персонажа, не позволяя тому двигаться в течении короткого промежутка времени.</string>
+    <string name="RootSpell_Info">Опутывает выбранного персонажа, не позволяя тому двигаться в течение короткого промежутка времени.</string>
 
     <!-- STRINGS OF WindGust CLASS -->
     <string name="WindGust_Name">Порыв ветра</string>

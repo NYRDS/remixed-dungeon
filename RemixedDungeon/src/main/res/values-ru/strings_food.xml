@@ -11,7 +11,7 @@
   <string name="ChargrilledMeat_Name">приготовленное на углях мясо</string>
   <string name="ChargrilledMeat_Info">Выглядит достойно.</string>
   <!--STRINGS OF FrozenCarpaccio CLASS-->
-  <string name="FrozenCarpaccio_Name">замороженный карпаччо</string>
+  <string name="FrozenCarpaccio_Name">замороженное карпаччо</string>
   <string name="FrozenCarpaccio_Info">Кусок сырого промороженного мяса. Съесть его можно лишь отрезая тоненькие ломтики. Которые получаются на удивление вкусными.</string>
   <string name="FrozenCarpaccio_Info1">Твои руки становятся невидимыми!</string>
   <string name="FrozenCarpaccio_Info2">Ты чувствуешь, как твоя кожа крепчает!</string>
