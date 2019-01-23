@@ -8,6 +8,8 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
   <string name="AmuletScene_Stay">Je ne suis pas encore prêt</string>
   <string name="AmuletScene_Txt">Vous la tenez enfin dans vos mains, l\'amulette de Yendor. En utilisant ses pouvoirs, vous pourriez gouverner le monde ou y apporter la paix et la prospérité. De toutes façons, votre vie sera changée à jamais et ce jeu prendra fin ici. A moins que vous ne préfériez rester un simple mortel pour quelque temps encore.</string>
   <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Bienvenue à l\'étage %d de Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Vous êtes de retour à l\'étage %d de Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Soyez prudent, le donjon est encore plus dangereux pendant la nuit !</string>
   <string name="GameScene_Chasm">Vos pas résonnent à travers le donjon.</string>
   <string name="GameScene_Water">Vous entendez de l\'eau éclabousser autour de vous.</string>
