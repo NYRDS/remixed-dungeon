@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.TacticalCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
@@ -418,6 +419,7 @@ public class ItemFactory {
         registerItemClass(HealthArrow.class);
         registerItemClass(AmokArrow.class);
         registerItemClass(CandyOfDeath.class);
+        registerItemClass(TacticalCrossbow.class);
     }
 
     public static boolean isValidItemClass(String itemClass) {

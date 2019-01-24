@@ -361,7 +361,7 @@ public class Hero extends Char implements PetOwner {
 		return belongings.armor == null ? 0 : belongings.armor.tier;
 	}
 
-	public boolean bowEquiped() {
+	public boolean bowEquipped() {
 		return belongings.weapon instanceof KindOfBow;
 	}
 
@@ -382,7 +382,7 @@ public class Hero extends Char implements PetOwner {
 
 		float accuracy = (bonus == 0) ? 1 : (float) Math.pow(1.4, bonus);
 
-		if (rangedWeapon != null && Dungeon.level.distance(getPos(), target.getPos()) == 1) {
+		if (rangedWeapon != null && level().distance(getPos(), target.getPos()) == 1) {
 			accuracy *= 0.5f;
 		}
 
@@ -964,15 +964,9 @@ public class Hero extends Char implements PetOwner {
 
 		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
 
-		Arrow arrow;
-
-		if (arrowType.equals(Arrow.class)) { // no arrow type selected
+		Arrow arrow = belongings.getItem(arrowType);
+		if(arrow==null) {
 			arrow = belongings.getItem(Arrow.class);
-		} else {
-			arrow = belongings.getItem(arrowType);
-			if (arrow == null) {
-				arrow = belongings.getItem(Arrow.class);
-			}
 		}
 
 		if (arrow != null) { // We have arrows!
@@ -991,8 +985,8 @@ public class Hero extends Char implements PetOwner {
 
 		if (enemy.isAlive() && !pacified) {
 
-			if (bowEquiped()
-					&& (!Dungeon.level.adjacent(getPos(), enemy.getPos()) || this.heroClass == HeroClass.ELF)) {
+			if (bowEquipped()
+					&& (!level().adjacent(getPos(), enemy.getPos()) || this.heroClass == HeroClass.ELF)) {
 				return actBowAttack();
 			} else {
 				return actMeleeAttack();
@@ -1591,6 +1585,7 @@ public class Hero extends Char implements PetOwner {
 	public void onAttackComplete() {
 
 		if (enemy != null) { // really strange crash here
+
 			if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
 				Rat rat = (Rat) enemy;
 				Mob.makePet(rat, this);

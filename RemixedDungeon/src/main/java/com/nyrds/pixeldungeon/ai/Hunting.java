@@ -15,7 +15,7 @@ public class Hunting extends MobAi implements AiState {
     @Override
     public void act(Mob me) {
 
-        if(me.getEnemy()== Char.DUMMY) {
+        if(me.getEnemy() == Char.DUMMY) {
             me.setEnemy(chooseEnemy(me));
         }
 

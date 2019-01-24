@@ -9,5 +9,4 @@ abstract class Crossbow extends KindOfBow {
         animation_class = CROSSBOW_ATTACK;
     }
 
-
-};
+}
