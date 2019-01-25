@@ -1,9 +1,10 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
+import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
@@ -20,12 +21,14 @@ public class Ignite extends Spell{
 
 	@Override
 	public boolean cast(Char chr, int cell){
-		if(Dungeon.level.cellValid(cell)) {
-			if(Ballistica.cast(chr.getPos(), cell, false, true) == cell) {
-				GameScene.add( Blob.seed( cell, 5, Fire.class ) );
-				castCallback(chr);
-				return true;
-			}
+		if(chr.level().cellValid(cell)) {
+			int target = Ballistica.cast(chr.getPos(), cell, true, false);
+
+			CellEmitter.center(target).burst( FlameParticle.FACTORY, chr.magicLvl() );
+
+			GameScene.add( Blob.seed( target, 5, Fire.class ) );
+			castCallback(chr);
+			return true;
 		}
 		return false;
 	}
