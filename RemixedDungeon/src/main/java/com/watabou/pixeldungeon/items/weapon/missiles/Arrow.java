@@ -76,13 +76,8 @@ public abstract class Arrow extends MissileWeapon {
 
 			float sDelta = getCurUser().effectiveSTR() - firedFrom.STR;
 
-			if (sDelta < 0) {
-				DLY += sDelta * 0.5;
-				ACU -= sDelta * 0.1;
-			}
-
 			if (sDelta > 2) {
-				MAX += MIN;
+				MAX += MIN + sDelta;
 			}
 
 			if (getCurUser().heroClass == HeroClass.ELF) {

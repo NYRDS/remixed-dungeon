@@ -128,4 +128,8 @@ public class KindOfWeapon extends EquipableItem {
 	public String getAnimationClass() {
 		return animation_class;
 	}
+
+	public boolean goodForMelee() {
+		return true;
+	}
 }

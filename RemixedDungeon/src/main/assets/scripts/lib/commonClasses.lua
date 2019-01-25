@@ -92,6 +92,7 @@ local RPD = {
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
 
+    GLog = GLog,
     MobAi = MobAi,
 
     Buffs = Buffs,
@@ -106,6 +107,7 @@ local RPD = {
         Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
         FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
         SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
+        ShaftParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShaftParticle"),
         Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck"),
         ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle"),
         SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
@@ -149,6 +151,10 @@ local RPD = {
 
     glog = function (text,...)
         GLog:i(text,{...})
+    end,
+
+    glogp = function (text,...)
+        GLog:p(text,{...})
     end,
 
     getXy = function (chr)

@@ -117,19 +117,19 @@ public class GLog {
 	}
 	
 	public static void p( String text, Object... args ) {
-		i( POSITIVE + text, args );
+		i( POSITIVE + StringsManager.maybeId(text), args );
 	}
 	
 	public static void n( String text, Object... args ) {
-		i( NEGATIVE + text, args );
+		i( NEGATIVE + StringsManager.maybeId(text), args );
 	}
 	
 	public static void w( String text, Object... args ) {
-		i( WARNING + text, args );
+		i( WARNING + StringsManager.maybeId(text), args );
 	}
 	
 	public static void h( String text, Object... args ) {
-		i( HIGHLIGHT + text, args );
+		i( HIGHLIGHT + StringsManager.maybeId(text), args );
 	}
 
 	public static void debug( String text, Object... args ) {

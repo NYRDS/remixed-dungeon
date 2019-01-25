@@ -5,6 +5,11 @@
       "identified": true
     },
     "items": [
+        {
+          "kind": "Gold",
+          "quantity": 1000
+        },
+
       {
         "kind": "WandOfAmok",
         "level":10

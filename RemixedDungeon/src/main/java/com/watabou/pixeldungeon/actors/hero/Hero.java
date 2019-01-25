@@ -973,29 +973,29 @@ public class Hero extends Char implements PetOwner {
 			arrow.cast(this, enemy.getPos());
 			ready();
 			return false;
-		} // no arrows? just get closer...
+		} // no arrows? Go Melee
 
 		return actMeleeAttack();
-
 	}
 
-	private boolean actAttack(CharAction.Attack action) {
+    private boolean actAttack(CharAction.Attack action) {
 
-		enemy = action.target;
+        enemy = action.target;
 
-		if (enemy.isAlive() && !pacified) {
+        if (enemy.isAlive() && !pacified) {
 
-			if (bowEquipped()
-					&& (!level().adjacent(getPos(), enemy.getPos()) || this.heroClass == HeroClass.ELF)) {
-				return actBowAttack();
-			} else {
-				return actMeleeAttack();
-			}
+            if (bowEquipped()) {
+                if (level().adjacent(getPos(), enemy.getPos()) && belongings.weapon.goodForMelee()) {
+                    return actMeleeAttack();
+                }
+                return actBowAttack();
+            }
+            return actMeleeAttack();
+        }
+        return getCloserToEnemy();
+    }
 
-		}
 
-		return getCloserToEnemy();
-	}
 
 	public void rest(boolean tillHealthy) {
 		spendAndNext(TIME_TO_REST);

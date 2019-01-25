@@ -21,4 +21,9 @@ public class TacticalCrossbow extends Crossbow {
 	public double dlyFactor() {
 		return 1.1;
 	}
+
+	@Override
+	public boolean goodForMelee() {
+		return true;
+	}
 }
