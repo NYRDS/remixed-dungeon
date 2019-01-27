@@ -20,11 +20,6 @@
          "y":5
         }, 
         {
-         "kind":"InquirerNPC",
-         "x":12,
-         "y":7
-        }, 
-        {
          "kind":"TownsfolkNPC",
          "x":7,
          "y":8
