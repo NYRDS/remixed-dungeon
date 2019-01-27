@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
+import com.nyrds.pixeldungeon.items.guts.weapon.ranged.TacticalCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
@@ -359,9 +360,10 @@ public class Generator {
 				CompoundBow.class,
 				CompositeCrossbow.class,
 				RubyBow.class,
-				RubyCrossbow.class
+				RubyCrossbow.class,
+				TacticalCrossbow.class
 		};
-		Category.RANGED.probs = new float[]{3, 4, 3, 3, 1, 1};
+		Category.RANGED.probs = new float[]{3, 4, 3, 3, 1, 1, 0.5f};
 
 		Category.BULLETS.classes = new Class<?>[]{
 				CommonArrow.class,

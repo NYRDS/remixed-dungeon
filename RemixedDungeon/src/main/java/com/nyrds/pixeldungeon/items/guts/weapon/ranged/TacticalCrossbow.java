@@ -10,12 +10,12 @@ public class TacticalCrossbow extends Crossbow {
 
 	@Override
 	public double acuFactor() {
-		return 1 + level() * 0.5;
+		return 1 + level() * 0.25;
 	}
 
 	@Override
 	public double dmgFactor() {
-		return 1 + level() * 0.75;
+		return 1 + level() * 0.5;
 	}
 
 	public double dlyFactor() {
