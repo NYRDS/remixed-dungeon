@@ -27,7 +27,7 @@ import com.watabou.utils.Random;
 
 public class Swarm extends Mob {
 
-	private static final float BASIC_LOOT_CHANCE = 0.25f;
+	private static final float BASIC_LOOT_CHANCE = 0.2f;
 
 	{
 		spriteClass = SwarmSprite.class;
