@@ -733,7 +733,7 @@ public abstract class Mob extends Char {
 	public boolean attack(@NonNull Char enemy) {
 
 		if (enemy == DUMMY) {
-			EventCollector.logException("attacking dummy enemy");
+			EventCollector.logException(getName() + " attacking dummy enemy");
 			return false;
 		}
 		return super.attack(enemy);
