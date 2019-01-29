@@ -32,6 +32,9 @@ function item.onThrow(self, item, cell)
     item:dropTo(cell)
 end
 
+function item.cellSelected(self, item, action, cell)
+end
+
 function item.defaultDesc()
     return {
         image         = 14,

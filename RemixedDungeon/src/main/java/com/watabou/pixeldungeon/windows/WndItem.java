@@ -70,7 +70,7 @@ public class WndItem extends Window {
 					continue;
 				}
 
-				RedButton btn = new RedButton(StringsManager.getVar(action) ) {
+				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
 					@Override
 					protected void onClick() {
 						item.execute( Dungeon.hero, action );
