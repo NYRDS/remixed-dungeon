@@ -6,6 +6,8 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaError;
@@ -88,6 +90,23 @@ public class CustomItem extends Item {
         return actions;
     }
 
+    public void selectCell(String action,String prompt) {
+        CellSelector.Listener cellSelectorListener= new CellSelector.Listener(){
+
+            @Override
+            public void onSelect(Integer cell) {
+                script.run("cellSelected", action, cell);
+            }
+
+            @Override
+            public String prompt() {
+                return StringsManager.maybeId(prompt);
+            }
+        };
+
+        GameScene.selectCell(cellSelectorListener);
+    }
+
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
@@ -108,6 +127,7 @@ public class CustomItem extends Item {
             throw new TrackedRuntimeException(e);
         }
     }
+
 
     @Override
     public Item burn(int cell) {
