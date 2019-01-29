@@ -30,6 +30,16 @@
          "y":14
         }, 
         {
+         "kind":"TownGuardNPC",
+         "x":5,
+         "y":18
+        }, 
+        {
+         "kind":"TownGuardNPC",
+         "x":6,
+         "y":18
+        }, 
+        {
          "kind":"TownsfolkNPC",
          "x":7,
          "y":18
