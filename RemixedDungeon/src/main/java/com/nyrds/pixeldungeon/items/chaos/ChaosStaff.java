@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items.chaos;
 import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -90,7 +91,7 @@ public class ChaosStaff extends Wand implements IChaosItem {
 
                         if (Dungeon.level.cellValid(nextCell)) {
                             try {
-                                Mob newMob = mob.getClass().newInstance();
+                                Mob newMob = MobFactory.mobByName(mob.getMobClassName());
                                 Dungeon.level.spawnMob(newMob);
                             } catch (Exception e) {
                                 throw new TrackedRuntimeException(e);
