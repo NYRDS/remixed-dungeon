@@ -116,7 +116,7 @@ public abstract class Char extends Actor implements Presser{
 	public CharAction curAction = null;
 
 	public boolean canSpawnAt(Level level,int cell) {
-		return walkingType.canSpawnAt(level, cell);
+		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null;
 	}
 
 	public int respawnCell(Level level) {
