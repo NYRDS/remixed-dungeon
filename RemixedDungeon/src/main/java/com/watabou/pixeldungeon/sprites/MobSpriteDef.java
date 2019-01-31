@@ -169,7 +169,7 @@ public class MobSpriteDef extends MobSprite {
 		super.zap(cell);
 
 		if (zapEffect != null) {
-			if (!Dungeon.visible[ch.getPos()] && Dungeon.visible[cell]){
+			if (!Dungeon.visible[ch.getPos()] && !Dungeon.visible[cell]){
 				return;
 			}
 
