@@ -73,7 +73,7 @@ public class ShortSword extends MeleeWeapon {
 				detach( hero.belongings.backpack );
 			}
 			
-			setCurUser(hero);
+			setUser(hero);
 			
 			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select) );
 			
@@ -95,13 +95,13 @@ public class ShortSword extends MeleeWeapon {
 			if (item != null && !(item instanceof Boomerang)) {
 				
 				Sample.INSTANCE.play( Assets.SND_EVOKE );
-				ScrollOfUpgrade.upgrade( getCurUser() );
-				evoke( getCurUser() );
+				ScrollOfUpgrade.upgrade( getUser() );
+				evoke( getUser() );
 				
 				GLog.w( Game.getVar(R.string.ShortSword_Reforged), item.name() );
 				
 				((MeleeWeapon)item).safeUpgrade();
-				getCurUser().spendAndNext( TIME_TO_REFORGE );
+				getUser().spendAndNext( TIME_TO_REFORGE );
 				
 				Badges.validateItemLevelAcquired( item );
 				
@@ -112,9 +112,9 @@ public class ShortSword extends MeleeWeapon {
 				}
 				
 				if (equipped) {
-					getCurUser().belongings.weapon = ShortSword.this;
+					getUser().belongings.weapon = ShortSword.this;
 				} else {
-					collect( getCurUser().belongings.backpack );
+					collect( getUser().belongings.backpack );
 				}
 			}
 		}

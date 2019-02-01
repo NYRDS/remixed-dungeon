@@ -25,13 +25,13 @@ public class ScrollOfSummoning extends Scroll {
 			return;
 		}
 
-		int cell = level.getEmptyCellNextTo(getCurUser().getPos());
+		int cell = level.getEmptyCellNextTo(getUser().getPos());
 
 		if(level.cellValid(cell)){
 			Mob mob = Bestiary.mob( level );
 			GLog.i(Game.getVar(R.string.ScrollOfSummoning_Info_2));
 			if(mob.canBePet()){
-				Mob.makePet(mob, getCurUser());
+				Mob.makePet(mob, getUser());
 			} else {
 				GLog.w( Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}
@@ -43,10 +43,10 @@ public class ScrollOfSummoning extends Scroll {
 
 		setKnown();
 
-		SpellSprite.show( getCurUser(), SpellSprite.SUMMON );
+		SpellSprite.show( getUser(), SpellSprite.SUMMON );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getCurUser());
+		Invisibility.dispel(getUser());
 
-		getCurUser().spendAndNext( TIME_TO_READ );
+		getUser().spendAndNext( TIME_TO_READ );
 	}
 }

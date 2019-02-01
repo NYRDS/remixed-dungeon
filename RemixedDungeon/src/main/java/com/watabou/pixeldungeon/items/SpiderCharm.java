@@ -28,7 +28,7 @@ public class SpiderCharm extends UsableArtifact {
 	
 	@Override
 	public void execute( final Hero ch, String action ) {
-		setCurUser(ch);
+		setUser(ch);
 		
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);
@@ -38,7 +38,7 @@ public class SpiderCharm extends UsableArtifact {
 			int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
 			
 			if (Dungeon.level.cellValid(spawnPos)) {
-				Mob pet = Mob.makePet(new SpiderServant(), getCurUser());
+				Mob pet = Mob.makePet(new SpiderServant(), getUser());
 				pet.setPos(spawnPos);
 				
 				Dungeon.level.spawnMob(pet );

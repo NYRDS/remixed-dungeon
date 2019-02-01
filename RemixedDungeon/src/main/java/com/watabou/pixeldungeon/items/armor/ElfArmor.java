@@ -35,13 +35,13 @@ public class ElfArmor extends ClassArmor {
 			}
 		}
 		
-		getCurUser().spend( Actor.TICK );
-		getCurUser().getSprite().operate( getCurUser().getPos() );
-		getCurUser().busy();
+		getUser().spend( Actor.TICK );
+		getUser().getSprite().operate( getUser().getPos() );
+		getUser().busy();
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
 		
-		GameScene.add( Blob.seed( getCurUser().getPos(), 100, Regrowth.class ) );
+		GameScene.add( Blob.seed( getUser().getPos(), 100, Regrowth.class ) );
 	}
 	
 	@Override

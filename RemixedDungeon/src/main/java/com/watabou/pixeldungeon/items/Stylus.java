@@ -56,7 +56,7 @@ public class Stylus extends Item {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(AC_INSCRIBE)) {
 
-			setCurUser(hero);
+			setUser(hero);
 			GameScene.selectItem( itemSelector, WndBag.Mode.INSCRIBABLE, Game.getVar(R.string.Stylus_SelectArmor) );
 			
 		} else {
@@ -77,17 +77,17 @@ public class Stylus extends Item {
 	}
 	
 	private void inscribeEffect(){
-		getCurUser().getSprite().operate( getCurUser().getPos() );
-		getCurUser().getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
+		getUser().getSprite().operate( getUser().getPos() );
+		getUser().getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
 		Sample.INSTANCE.play( Assets.SND_BURNING );
 		
-		getCurUser().spend( TIME_TO_INSCRIBE );
-		getCurUser().busy();
+		getUser().spend( TIME_TO_INSCRIBE );
+		getUser().busy();
 	}
 	
 	private void inscribeArmor ( Armor armor ) {
 		
-		detach( getCurUser().belongings.backpack );
+		detach( getUser().belongings.backpack );
 		
 		Class<? extends Armor.Glyph> oldGlyphClass = armor.glyph != null ? armor.glyph.getClass() : null;
 		Armor.Glyph glyph = Armor.Glyph.random();
@@ -104,12 +104,12 @@ public class Stylus extends Item {
 	
 	private void inscribeScroll (BlankScroll scroll){
 		
-		scroll.detach( getCurUser().belongings.backpack );
+		scroll.detach( getUser().belongings.backpack );
 		
 		inscribeEffect();
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
-		getCurUser().collect(inscribedScroll);
+		getUser().collect(inscribedScroll);
 		GLog.i(Hero.getHeroYouNowHave(), inscribedScroll.name());	// Let know which scroll was inscribed
 	}
 	

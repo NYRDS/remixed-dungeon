@@ -91,20 +91,20 @@ public class Boomerang extends MissileWeapon {
 	
 	@Override
 	protected void miss( int cell ) {
-		circleBack( cell, getCurUser() );
+		circleBack( cell, getUser() );
 	}
 	
 	private void circleBack(int from, final Hero owner) {
 
-		((MissileSprite) getCurUser().getSprite().getParent()
-				.recycle(MissileSprite.class)).reset(from, getCurUser().getPos(),
+		((MissileSprite) getUser().getSprite().getParent()
+				.recycle(MissileSprite.class)).reset(from, getUser().getPos(),
 				curItem, new Callback() {
 					@Override
 					public void call() {
 						if (throwEquiped) {
 							owner.belongings.weapon = Boomerang.this;
 						} else {
-							getCurUser().collect(Boomerang.this);
+							getUser().collect(Boomerang.this);
 						}
                         QuickSlot.refresh();
                     }

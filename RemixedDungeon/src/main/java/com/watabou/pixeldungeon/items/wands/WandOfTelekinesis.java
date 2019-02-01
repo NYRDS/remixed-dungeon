@@ -124,12 +124,12 @@ public class WandOfTelekinesis extends Wand {
 
 	private void transport(Heap heap) {
 		Item item = heap.pickUp();
-		item = item.pick(getCurUser(), heap.pos);
+		item = item.pick(getUser(), heap.pos);
 		if (item != null) {
-			if (item.doPickUp(getCurUser())) {
-				getCurUser().itemPickedUp(item);
+			if (item.doPickUp(getUser())) {
+				getUser().itemPickedUp(item);
 			} else {
-				Dungeon.level.drop(item, getCurUser().getPos()).sprite.drop();
+				Dungeon.level.drop(item, getUser().getPos()).sprite.drop();
 			}
 		}
 	}

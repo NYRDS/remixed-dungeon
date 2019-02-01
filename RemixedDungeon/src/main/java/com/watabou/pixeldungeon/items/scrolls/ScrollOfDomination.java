@@ -18,9 +18,9 @@ public class ScrollOfDomination extends Scroll {
 	@Override
 	protected void doRead() {
 
-		SpellSprite.show( getCurUser(), SpellSprite.DOMINATION );
+		SpellSprite.show( getUser(), SpellSprite.DOMINATION );
 		Sample.INSTANCE.play( Assets.SND_DOMINANCE );
-		Invisibility.dispel(getCurUser());
+		Invisibility.dispel(getUser());
 		
 		ArrayList<Mob> mobsInSight = new ArrayList<>();
 		
@@ -34,7 +34,7 @@ public class ScrollOfDomination extends Scroll {
 			Mob pet = Random.element(mobsInSight);
 
 			if(pet.canBePet()) {
-				Mob.makePet(pet, getCurUser());
+				Mob.makePet(pet, getUser());
 				new Flare(3, 32).show(pet.getSprite(), 2f);
 				break;
 			}
@@ -45,7 +45,7 @@ public class ScrollOfDomination extends Scroll {
 		
 		setKnown();
 		
-		getCurUser().spendAndNext( TIME_TO_READ );
+		getUser().spendAndNext( TIME_TO_READ );
 	}
 
 	@Override

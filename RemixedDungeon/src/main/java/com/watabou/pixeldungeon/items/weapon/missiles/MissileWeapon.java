@@ -53,10 +53,10 @@ public class MissileWeapon extends Weapon {
 	@Override
 	protected void onThrow( int cell ) {
 		Char enemy = Actor.findChar( cell );
-		if (enemy == null || enemy == getCurUser()) {
+		if (enemy == null || enemy == getUser()) {
 			super.onThrow( cell );
 		} else {
-			if (!getCurUser().shoot( enemy, this )) {
+			if (!getUser().shoot( enemy, this )) {
 				miss( cell );
 			}
 		}

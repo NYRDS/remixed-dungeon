@@ -35,16 +35,16 @@ public class ScrollOfTerror extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		new Flare( 5, 32 ).color( 0xFF0000, true ).show( getCurUser().getSprite(), 2f );
+		new Flare( 5, 32 ).color( 0xFF0000, true ).show( getUser().getSprite(), 2f );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getCurUser());
+		Invisibility.dispel(getUser());
 		
 		int count = 0;
 		Mob affected = null;
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Terror terror = Buff.affect( mob, Terror.class, Terror.DURATION );
-				terror.source = getCurUser();
+				terror.source = getUser();
 				
 				count++;
 				affected = mob;
@@ -63,7 +63,7 @@ public class ScrollOfTerror extends Scroll {
 		}
 		setKnown();
 		
-		getCurUser().spendAndNext( TIME_TO_READ );
+		getUser().spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

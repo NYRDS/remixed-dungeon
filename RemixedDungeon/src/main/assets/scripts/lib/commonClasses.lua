@@ -178,6 +178,10 @@ local RPD = {
     showStoryWindow = function(story_id)
         local wnd = luajava.newInstance(Objects.Ui.WndStory,story_id)
         GameScene:show(wnd)
+    end,
+
+    zapEffect = function (from, to, zapEffect)
+        GameScene:zapEffect(from, to, zapEffect)
     end
 }
 

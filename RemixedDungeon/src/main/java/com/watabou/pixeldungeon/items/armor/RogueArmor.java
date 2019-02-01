@@ -91,13 +91,13 @@ public class RogueArmor extends ClassArmor {
 					}
 				}
 				
-				WandOfBlink.appear( getCurUser(), target );
+				WandOfBlink.appear( getUser(), target );
 				CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
 				Sample.INSTANCE.play( Assets.SND_PUFF );
-				Dungeon.level.press( target, getCurUser() );
+				Dungeon.level.press( target, getUser() );
 				Dungeon.observe();
 				
-				getCurUser().spendAndNext( Actor.TICK );
+				getUser().spendAndNext( Actor.TICK );
 			}
 		}
 		

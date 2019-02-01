@@ -53,7 +53,7 @@ public class ArmorKit extends Item {
 	@Override
 	public void execute( Hero hero, String action ) {
 		if (action.equals(AC_APPLY)) {
-			setCurUser(hero);
+			setUser(hero);
 			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR, Game.getVar(R.string.ArmorKit_SelectArmor) );
 		} else {
 			super.execute( hero, action );
@@ -72,24 +72,24 @@ public class ArmorKit extends Item {
 	
 	private void upgrade( Armor armor ) {
 		
-		detach( getCurUser().belongings.backpack );
+		detach( getUser().belongings.backpack );
 		
-		getCurUser().getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
-		getCurUser().spend( TIME_TO_UPGRADE );
-		getCurUser().busy();
+		getUser().getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
+		getUser().spend( TIME_TO_UPGRADE );
+		getUser().busy();
 		
 		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
-		Armor classArmor = ClassArmor.upgrade( getCurUser(), armor );
-		if (getCurUser().belongings.armor == armor) {
-			getCurUser().belongings.armor = classArmor;
-			getCurUser().updateLook();
+		Armor classArmor = ClassArmor.upgrade( getUser(), armor );
+		if (getUser().belongings.armor == armor) {
+			getUser().belongings.armor = classArmor;
+			getUser().updateLook();
 		} else {
-			armor.detach( getCurUser().belongings.backpack );
-			getCurUser().collect(classArmor);			
+			armor.detach( getUser().belongings.backpack );
+			getUser().collect(classArmor);
 		}
 		
-		getCurUser().getSprite().operate( getCurUser().getPos() );
+		getUser().getSprite().operate( getUser().getPos() );
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	

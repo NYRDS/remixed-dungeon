@@ -54,6 +54,6 @@ public class PotionOfStrength extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 
 		AmokArrow moistenArrows = new AmokArrow(quantity);
-		getCurUser().collect(moistenArrows);
+		getUser().collect(moistenArrows);
 	}
 }

@@ -103,7 +103,7 @@ public class Item implements Bundlable, Presser {
 
 	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		setCurUser(hero);
+		setUser(hero);
 		actions.add(AC_DROP);
 		actions.add(AC_THROW);
 		return actions;
@@ -132,7 +132,7 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void execute(Hero hero, String action) {
-		setCurUser(hero);
+		setUser(hero);
 		curItem = this;
 
 		if (action.equals(AC_DROP)) {
@@ -453,7 +453,7 @@ public class Item implements Bundlable, Presser {
 	        return;
         }
 
-		setCurUser(user);
+		setUser(user);
 
 		final int cell = Ballistica.cast(user.getPos(), dst, false, true);
 		user.getSprite().zap(cell);
@@ -482,13 +482,14 @@ public class Item implements Bundlable, Presser {
 				});
 	}
 
-	private static   Hero                  curUser = null;
-	protected static Item                  curItem = null;
+	private static   Hero user = null;
+	protected static Item curItem = null;
+
 	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer target) {
 			if (target != null) {
-				curItem.cast(getCurUser(), target);
+				curItem.cast(getUser(), target);
 			}
 		}
 
@@ -567,12 +568,12 @@ public class Item implements Bundlable, Presser {
 		return ItemSpritesDescription.isFliesFastRotating(this);
 	}
 
-	protected static Hero getCurUser() {
-		return curUser;
+	public static Hero getUser() {
+		return user;
 	}
 
-	protected static void setCurUser(Hero curUser) {
-		Item.curUser = curUser;
+	protected static void setUser(Hero user) {
+		Item.user = user;
 	}
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
@@ -650,7 +651,7 @@ public class Item implements Bundlable, Presser {
 
 	public void setDefaultAction(@NonNull String newDefaultAction) {
 		@Nullable
-		Hero hero = getCurUser();
+		Hero hero = getUser();
 
 		if(hero==null) {
 			this.defaultAction = newDefaultAction;

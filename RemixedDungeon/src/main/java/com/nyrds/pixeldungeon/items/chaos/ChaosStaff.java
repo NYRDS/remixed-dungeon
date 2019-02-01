@@ -80,10 +80,10 @@ public class ChaosStaff extends Wand implements IChaosItem {
 
                 switch (Random.Int(0, 4)) {
                     case 0:
-                        mob.die(getCurUser());
+                        mob.die(getUser());
                         break;
                     case 1:
-                        Mob.makePet(mob, getCurUser());
+                        Mob.makePet(mob, getUser());
                         break;
 
                     case 2:

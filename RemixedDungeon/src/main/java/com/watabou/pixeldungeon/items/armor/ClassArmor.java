@@ -94,7 +94,7 @@ abstract public class ClassArmor extends Armor {
 			} else if (!isEquipped( hero )) {
 				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
 			} else {
-				setCurUser(hero);
+				setUser(hero);
 				doSpecial();
 				hero.spendSoulPoints(cost);
 			}

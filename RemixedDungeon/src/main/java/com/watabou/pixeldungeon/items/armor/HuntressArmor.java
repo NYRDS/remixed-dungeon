@@ -57,16 +57,16 @@ public class HuntressArmor extends ClassArmor {
 				Callback callback = new Callback() {	
 					@Override
 					public void call() {
-						getCurUser().attack( targets.get( this ) );
+						getUser().attack( targets.get( this ) );
 						targets.remove( this );
 						if (targets.isEmpty()) {
-							getCurUser().spendAndNext( getCurUser().attackDelay() );
+							getUser().spendAndNext( getUser().attackDelay() );
 						}
 					}
 				};
 				
-				((MissileSprite)getCurUser().getSprite().getParent().recycle( MissileSprite.class )).
-					reset( getCurUser().getPos(), mob.getPos(), proto, callback );
+				((MissileSprite) getUser().getSprite().getParent().recycle( MissileSprite.class )).
+					reset( getUser().getPos(), mob.getPos(), proto, callback );
 				
 				targets.put( callback, mob );
 			}
@@ -77,8 +77,8 @@ public class HuntressArmor extends ClassArmor {
 			return;
 		}
 
-		getCurUser().getSprite().zap( getCurUser().getPos() );
-		getCurUser().busy();
+		getUser().getSprite().zap( getUser().getPos() );
+		getUser().busy();
 	}
 	
 	@Override

@@ -73,7 +73,7 @@ public class TomeOfMastery extends MasteryItem {
 				return;
 			}
 
-			setCurUser(hero);
+			setUser(hero);
 			
 			HeroSubClass way1 = null;
 			HeroSubClass way2 = null;

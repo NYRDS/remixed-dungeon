@@ -34,7 +34,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_NECROMANCY )) {
 
-			setCurUser(hero);
+			setUser(hero);
 			
 			HeroSubClass way;
 

@@ -28,11 +28,11 @@ public class ScrollOfChallenge extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		Dungeon.challengeAllMobs(getCurUser(),Assets.SND_CHALLENGE);
+		Dungeon.challengeAllMobs(getUser(),Assets.SND_CHALLENGE);
 		
 		GLog.w(Game.getVar(R.string.ScrollOfChallenge_Info1));
 		setKnown();
 				
-		getCurUser().spendAndNext( TIME_TO_READ );
+		getUser().spendAndNext( TIME_TO_READ );
 	}
 }

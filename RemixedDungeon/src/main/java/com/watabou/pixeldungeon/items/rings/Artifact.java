@@ -20,7 +20,7 @@ public class Artifact extends EquipableItem {
 
 	@Override
 	public boolean doEquip(Hero hero) {
-		setCurUser(hero);
+		setUser(hero);
 
 		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null) {
 

@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.PointF;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -34,10 +35,13 @@ public class DeathRay extends Image {
 	private static final float DURATION	= 0.5f;
 	
 	private float timeLeft;
-	
-	public DeathRay( PointF s, PointF e ) {
+
+	public DeathRay(int from, int to) {
 		super( Effects.get( Effects.Type.RAY ) );
-		
+
+		PointF s = DungeonTilemap.tileCenterToWorld(from);
+		PointF e = DungeonTilemap.tileCenterToWorld(to);
+
 		origin.set( 0, height / 2 );
 		
 		x = s.x - origin.x;

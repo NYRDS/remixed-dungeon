@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.items.wands;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -99,7 +98,7 @@ public class WandOfDisintegration extends SimpleWand  {
 	@Override
 	protected void fx( int cell, Callback callback ) {
 		cell = Ballistica.trace[Math.min( Ballistica.distance, distance() ) - 1];
-		wandUser.getSprite().getParent().add( new DeathRay( wandUser.getSprite().center(), DungeonTilemap.tileCenterToWorld( cell ) ) );		
+		wandUser.getSprite().getParent().add( new DeathRay( wandUser.getPos(),  cell  ) );
 		callback.call();
 	}
 	

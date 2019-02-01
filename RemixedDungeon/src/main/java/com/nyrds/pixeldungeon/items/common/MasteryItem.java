@@ -39,7 +39,7 @@ public class MasteryItem extends Item {
 
 	public void choose( HeroSubClass way ) {
 
-		Hero hero = getCurUser();
+		Hero hero = getUser();
 		detach( hero.belongings.backpack );
 
 		hero.subClass = way;

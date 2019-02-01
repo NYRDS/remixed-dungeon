@@ -45,8 +45,19 @@ public class Lightning extends Group {
 	private Image[] arcsE;
 	
 	private Callback callback;
-	
+
+	public Lightning (int from, int to, Callback callback) {
+		int cells[] = new int[2];
+		cells[0] = from;
+		cells[1] = to;
+		init(cells,2,callback);
+	}
+
 	public Lightning( int[] cells, int length, Callback callback ) {
+		init(cells, length, callback);
+	}
+
+	private void init ( int[] cells, int length, Callback callback ) {
 		this.callback = callback;
 		
 		Image proto = Effects.get( Effects.Type.LIGHTNING );

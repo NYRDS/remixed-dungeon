@@ -58,13 +58,13 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 			if (cell != null) {
 
 				if (cursed) {
-					cell = getCurUser().getPos();
+					cell = getUser().getPos();
 				}
 
 				ChaosCommon.doChaosMark(cell, charge);
 				charge = 0;
 			}
-			getCurUser().spendAndNext(TIME_TO_USE);
+			getUser().spendAndNext(TIME_TO_USE);
 		}
 
 		@Override
@@ -79,44 +79,44 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 			if (item != null) {
 
 				if (item.quantity() > 1) {
-					item.detach(getCurUser().belongings.backpack);
+					item.detach(getUser().belongings.backpack);
 				} else {
-					item.removeItemFrom(getCurUser());
+					item.removeItemFrom(getUser());
 				}
 
-				removeItemFrom(getCurUser());
+				removeItemFrom(getUser());
 
-				getCurUser().getSprite().operate(getCurUser().getPos());
-				getCurUser().spend(TIME_TO_FUSE);
-				getCurUser().busy();
+				getUser().getSprite().operate(getUser().getPos());
+				getUser().spend(TIME_TO_FUSE);
+				getUser().busy();
 
 				if (item instanceof Scroll) {
 					Item newItem = new ScrollOfWeaponUpgrade();
-					getCurUser().collect(newItem);
+					getUser().collect(newItem);
 					GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
 					return;
 				}
 
 				if (item instanceof KindOfBow) {
-					getCurUser().collect(new ChaosBow());
+					getUser().collect(new ChaosBow());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
 					return;
 				}
 
 				if (item instanceof MeleeWeapon) {
-					getCurUser().collect(new ChaosSword());
+					getUser().collect(new ChaosSword());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
 					return;
 				}
 
 				if (item instanceof Armor) {
-					getCurUser().collect(new ChaosArmor());
+					getUser().collect(new ChaosArmor());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
 					return;
 				}
 
 				if (item instanceof Wand) {
-					getCurUser().collect(new ChaosStaff());
+					getUser().collect(new ChaosStaff());
 					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
 				}
 			}
@@ -130,7 +130,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	@Override
 	public void execute(final Hero ch, String action) {
-		setCurUser(ch);
+		setUser(ch);
 
 		switch (action) {
 			case AC_USE:

@@ -72,7 +72,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			
 			ch.getSprite().burst( 0xFF99CCFF, level / 2 + 2 );
 			
-			if (ch == getCurUser() && !ch.isAlive()) {
+			if (ch == getUser() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfMagicMissile_Info1));
 			}
@@ -92,7 +92,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 				detach( hero.belongings.backpack );
 			}
 			
-			setCurUser(hero);
+			setUser(hero);
 			GameScene.selectItem( itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand) );
 			
 		} else {
@@ -126,22 +126,22 @@ public class WandOfMagicMissile extends SimpleWand  {
 			if (item != null) {
 				
 				Sample.INSTANCE.play( Assets.SND_EVOKE );
-				ScrollOfUpgrade.upgrade( getCurUser() );
-				evoke( getCurUser() );
+				ScrollOfUpgrade.upgrade( getUser() );
+				evoke( getUser() );
 				
 				GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
 				
 				item.upgrade();
-				getCurUser().spendAndNext( TIME_TO_DISENCHANT );
+				getUser().spendAndNext( TIME_TO_DISENCHANT );
 				
 				Badges.validateItemLevelAcquired( item );
 				
 			} else {
 				if (disenchantEquipped) {
-					getCurUser().belongings.weapon = WandOfMagicMissile.this;
+					getUser().belongings.weapon = WandOfMagicMissile.this;
                     QuickSlot.refresh();
                 } else {
-					collect( getCurUser().belongings.backpack );
+					collect( getUser().belongings.backpack );
 				}
 			}
 		}

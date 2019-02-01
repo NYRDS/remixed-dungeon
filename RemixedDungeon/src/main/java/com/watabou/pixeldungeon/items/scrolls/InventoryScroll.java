@@ -54,7 +54,7 @@ public abstract class InventoryScroll extends Scroll {
 			protected void onSelect( int index ) {
 				switch (index) {
 				case 0:
-					getCurUser().spendAndNext( TIME_TO_READ );
+					getUser().spendAndNext( TIME_TO_READ );
 					identifiedByUse = false;
 					break;
 				case 1:
@@ -75,10 +75,10 @@ public abstract class InventoryScroll extends Scroll {
 			if (item != null) {
 				
 				((InventoryScroll)curItem).onItemSelected( item );
-				getCurUser().spendAndNext( TIME_TO_READ );
+				getUser().spendAndNext( TIME_TO_READ );
 				
 				Sample.INSTANCE.play( Assets.SND_READ );
-				Invisibility.dispel(getCurUser());
+				Invisibility.dispel(getUser());
 				
 			} else if (identifiedByUse) {
 				
@@ -86,7 +86,7 @@ public abstract class InventoryScroll extends Scroll {
 				
 			} else {
 				
-				curItem.collect( getCurUser().belongings.backpack );
+				curItem.collect( getUser().belongings.backpack );
 				
 			}
 		}

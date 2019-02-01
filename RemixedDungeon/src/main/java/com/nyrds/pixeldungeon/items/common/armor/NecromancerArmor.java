@@ -31,13 +31,13 @@ public class NecromancerArmor extends ClassArmor {
 
 	@Override
 	public void doSpecial() {
-		getCurUser().spend( Actor.TICK );
-		getCurUser().getSprite().operate( getCurUser().getPos() );
-		getCurUser().busy();
+		getUser().spend( Actor.TICK );
+		getUser().getSprite().operate( getUser().getPos() );
+		getUser().busy();
 
-		Buff.affect( getCurUser(), Necrotism.class ).set(Necrotism.duration, 1);
+		Buff.affect( getUser(), Necrotism.class ).set(Necrotism.duration, 1);
 
-		getCurUser().getSprite().burst( 0x6935a5, 3 );
+		getUser().getSprite().burst( 0x6935a5, 3 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	

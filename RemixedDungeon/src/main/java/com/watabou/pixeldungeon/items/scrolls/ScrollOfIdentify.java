@@ -45,7 +45,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 
 	@Override
 	protected void onItemSelected( Item item ) {
-		identify(getCurUser(),item);
+		identify(getUser(),item);
 	}
 
 	@Override

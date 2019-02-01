@@ -21,7 +21,6 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.effects.DeathRay;
 
 public class EyeSprite extends MobSprite {
@@ -62,7 +61,7 @@ public class EyeSprite extends MobSprite {
 		
 		if (anim == attack) {
 			if (Dungeon.visible[ch.getPos()] || Dungeon.visible[attackPos]) {
-				getParent().add( new DeathRay( center(), DungeonTilemap.tileCenterToWorld( attackPos ) ) );
+				getParent().add( new DeathRay( ch.getPos(), attackPos ) );
 			}
 		}
 	}

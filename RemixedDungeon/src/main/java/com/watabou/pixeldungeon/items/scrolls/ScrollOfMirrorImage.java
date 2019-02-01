@@ -35,16 +35,16 @@ public class ScrollOfMirrorImage extends Scroll {
 
 		int nImages = NIMAGES;
 		while (nImages > 0 ) {
-			int cell = Dungeon.level.getEmptyCellNextTo(getCurUser().getPos());
+			int cell = Dungeon.level.getEmptyCellNextTo(getUser().getPos());
 
 			if(!Dungeon.level.cellValid(cell))
 				break;
 
-			MirrorImage mob = new MirrorImage(getCurUser());
+			MirrorImage mob = new MirrorImage(getUser());
 			Dungeon.level.spawnMob(mob);
 			WandOfBlink.appear( mob, cell );
-			if(getCurUser() instanceof Hero) {
-				Mob.makePet(mob,getCurUser());
+			if(getUser() instanceof Hero) {
+				Mob.makePet(mob, getUser());
 			}
 			nImages--;
 		}
@@ -54,8 +54,8 @@ public class ScrollOfMirrorImage extends Scroll {
 		}
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getCurUser());
+		Invisibility.dispel(getUser());
 		
-		getCurUser().spendAndNext( TIME_TO_READ );
+		getUser().spendAndNext( TIME_TO_READ );
 	}
 }

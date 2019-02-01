@@ -157,7 +157,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public void execute(Hero hero, String action) {
 		if (action.equals(AC_ZAP)) {
-			setCurUser(hero);
+			setUser(hero);
 			wandUser = hero;
 			curItem = this;
 			GameScene.selectCell(zapper);
@@ -168,7 +168,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public void zapCell(Hero chr, int cell) {
-		setCurUser(chr);
+		setUser(chr);
 		getDestinationCell(chr.getPos(),cell);
 		onZap(cell);
 	}
@@ -339,7 +339,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		curCharges(curCharges() - 1);
         QuickSlot.refresh();
 
-        getCurUser().spendAndNext(TIME_TO_ZAP);
+        getUser().spendAndNext(TIME_TO_ZAP);
 	}
 
 	@Override
@@ -404,17 +404,17 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		if (curCharges() > 0) {
 
-			getCurUser().busy();
+			getUser().busy();
 
 			fx(cell, () -> {
 				onZap(cell);
 				wandUsed();
 			});
 
-			Invisibility.dispel(getCurUser());
+			Invisibility.dispel(getUser());
 		} else {
 
-			getCurUser().spendAndNext(TIME_TO_ZAP);
+			getUser().spendAndNext(TIME_TO_ZAP);
 			GLog.w(Game.getVar(R.string.Wand_Fizzles));
 			levelKnown = true;
 
@@ -432,14 +432,14 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		public void onSelect(Integer target) {
 
 			if (target != null) {
-				if (target == getCurUser().getPos()) {
+				if (target == getUser().getPos()) {
 					GLog.i(Game.getVar(R.string.Wand_SelfTarget));
 					return;
 				}
 
 				final Wand curWand = (Wand) Wand.curItem;
-				final int cell = curWand.getDestinationCell(getCurUser().getPos(),target);
-				getCurUser().getSprite().zap(cell);
+				final int cell = curWand.getDestinationCell(getUser().getPos(),target);
+				getUser().getSprite().zap(cell);
 				curWand.wandEffect(cell);
 			}
 		}

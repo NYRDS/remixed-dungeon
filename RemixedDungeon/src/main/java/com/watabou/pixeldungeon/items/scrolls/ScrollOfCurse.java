@@ -46,10 +46,10 @@ public class ScrollOfCurse extends Scroll {
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void doRead() {
-		Invisibility.dispel(getCurUser());
+		Invisibility.dispel(getUser());
 		
-		if(getCurUser() instanceof Hero) {
-			Hero hero =  getCurUser();
+		if(getUser() instanceof Hero) {
+			Hero hero =  getUser();
 			
 			hero.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
 			Sample.INSTANCE.play( Assets.SND_CURSED );
@@ -57,23 +57,23 @@ public class ScrollOfCurse extends Scroll {
 			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(badBuffs);
 			Buff.prolong( hero, buffClass, 10);
 			
-			if(getCurUser().belongings.armor != null) { 
-				getCurUser().belongings.armor.cursed = true;
+			if(getUser().belongings.armor != null) {
+				getUser().belongings.armor.cursed = true;
 			}
-			if(getCurUser().belongings.weapon != null) {
-				getCurUser().belongings.weapon.cursed = true;
+			if(getUser().belongings.weapon != null) {
+				getUser().belongings.weapon.cursed = true;
 			}
-			if(getCurUser().belongings.ring1 != null) {
-				getCurUser().belongings.ring1.cursed = true;
+			if(getUser().belongings.ring1 != null) {
+				getUser().belongings.ring1.cursed = true;
 			}
 			
-			if(getCurUser().belongings.ring2 != null) {
-				getCurUser().belongings.ring2.cursed = true;
+			if(getUser().belongings.ring2 != null) {
+				getUser().belongings.ring2.cursed = true;
 			}
 		}
 		
 		setKnown();
-		getCurUser().spendAndNext( TIME_TO_READ );
+		getUser().spendAndNext( TIME_TO_READ );
 	}
 
 	@Override

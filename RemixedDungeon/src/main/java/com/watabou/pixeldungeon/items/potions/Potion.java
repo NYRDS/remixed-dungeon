@@ -122,7 +122,7 @@ public class Potion extends Item implements UnknownItem {
 	
 	@Override
 	public void execute( final Hero hero, String action ) {
-		setCurUser(hero);
+		setUser(hero);
 
 		switch (action) {
 			case AC_DRINK:
@@ -345,10 +345,10 @@ public class Potion extends Item implements UnknownItem {
 		
 		if(quantity <= maxQuantity){
 			
-			if(item.equals(getCurUser().belongings.weapon)) {
-				getCurUser().belongings.weapon = null;
+			if(item.equals(getUser().belongings.weapon)) {
+				getUser().belongings.weapon = null;
 			} else {
-				item.detachAll( getCurUser().belongings.backpack );
+				item.detachAll( getUser().belongings.backpack );
 			}
 		} else {
 			item.quantity(item.quantity() - maxQuantity);
@@ -381,18 +381,18 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	private void moistenUseless() {
-		detach(getCurUser().belongings.backpack );
+		detach(getUser().belongings.backpack );
 		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
-		getCurUser().getSprite().operate( getCurUser().getPos() );		
-		getCurUser().spend( TIME_TO_MOISTEN );
-		getCurUser().busy();	
+		getUser().getSprite().operate( getUser().getPos() );
+		getUser().spend( TIME_TO_MOISTEN );
+		getUser().busy();
 	}
 	
 	protected void moistenEffective() {
-		detach(getCurUser().belongings.backpack );
+		detach(getUser().belongings.backpack );
 		identify();
-		getCurUser().getSprite().operate( getCurUser().getPos() );		
-		getCurUser().spend( TIME_TO_MOISTEN );
-		getCurUser().busy();	
+		getUser().getSprite().operate( getUser().getPos() );
+		getUser().spend( TIME_TO_MOISTEN );
+		getUser().busy();
 	}
 }

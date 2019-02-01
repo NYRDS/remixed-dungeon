@@ -23,9 +23,10 @@ return item.init{
     end,
     actions = function() return {"action1"} end,
 
-    cellSelected = function(self, item, action, cell)
+    cellSelected = function(self, thisItem, action, cell)
         if action == "action1" then
-            RPD.glogp("performing "..action.."on cell"..tostring(cell))
+            RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
+            RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
         end
     end,
 

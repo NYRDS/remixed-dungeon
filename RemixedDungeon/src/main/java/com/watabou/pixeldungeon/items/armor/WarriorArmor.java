@@ -76,29 +76,29 @@ public class WarriorArmor extends ClassArmor {
 		
 		@Override
 		public void onSelect( Integer target ) {
-			if (target != null && target != getCurUser().getPos()) {
+			if (target != null && target != getUser().getPos()) {
 				
-				int cell = Ballistica.cast( getCurUser().getPos(), target, false, true );
-				if (Actor.findChar( cell ) != null && cell != getCurUser().getPos()) {
+				int cell = Ballistica.cast( getUser().getPos(), target, false, true );
+				if (Actor.findChar( cell ) != null && cell != getUser().getPos()) {
 					cell = Ballistica.trace[Ballistica.distance - 2];
 				}
 				
-				getCurUser().checkIfFurious();
+				getUser().checkIfFurious();
 				
-				Invisibility.dispel(getCurUser());
+				Invisibility.dispel(getUser());
 				
 				final int dest = cell;
-				getCurUser().busy();
-				((HeroSpriteDef)getCurUser().getSprite()).jump( getCurUser().getPos(), cell, new Callback() {
+				getUser().busy();
+				((HeroSpriteDef) getUser().getSprite()).jump( getUser().getPos(), cell, new Callback() {
 					@Override
 					public void call() {
-						getCurUser().move( dest );
-						Dungeon.level.press( dest, getCurUser() );
+						getUser().move( dest );
+						Dungeon.level.press( dest, getUser() );
 						Dungeon.observe();
 						
 						for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-							Char mob = Actor.findChar( getCurUser().getPos() + Level.NEIGHBOURS8[i] );
-							if (mob != null && mob != getCurUser()) {
+							Char mob = Actor.findChar( getUser().getPos() + Level.NEIGHBOURS8[i] );
+							if (mob != null && mob != getUser()) {
 								Buff.prolong( mob, Paralysis.class, SHOCK_TIME );
 							}
 						}
@@ -106,7 +106,7 @@ public class WarriorArmor extends ClassArmor {
 						CellEmitter.center( dest ).burst( Speck.factory( Speck.DUST ), 10 );
 						Camera.main.shake( 2, 0.5f );
 						
-						getCurUser().spendAndNext( LEAP_TIME );
+						getUser().spendAndNext( LEAP_TIME );
 					}
 				} );
 			}

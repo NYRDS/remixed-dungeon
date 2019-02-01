@@ -33,7 +33,7 @@ abstract public class Book extends Item {
 			if (hero.hasBuff( Blindness.class )) {
 				GLog.w(Game.getVar(R.string.Codex_Blinded));
 			} else {
-				setCurUser(hero);
+				setUser(hero);
 
 				doRead(hero);
 			}
