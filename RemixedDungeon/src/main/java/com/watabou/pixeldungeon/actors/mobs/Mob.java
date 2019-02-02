@@ -642,6 +642,14 @@ public abstract class Mob extends Char {
 		if(chr instanceof Hero) {
 			return isPet() || ((Hero)chr).heroClass.friendlyTo(getMobClassName());
 		}
+
+		if(chr instanceof Mob) {
+			Mob mob = (Mob)chr;
+			if(owner != null && owner == mob.owner) {
+				return true;
+			}
+		}
+
 		return !this.fraction.isEnemy(chr.fraction);
 	}
 

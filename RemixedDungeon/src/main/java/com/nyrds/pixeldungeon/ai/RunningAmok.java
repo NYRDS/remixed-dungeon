@@ -13,6 +13,7 @@ public class RunningAmok extends MobAi implements AiState {
 
         if(!me.hasBuff(Amok.class)) {
             me.setState(MobAi.getStateByClass(Wandering.class));
+            return;
         }
 
         me.setEnemy(chooseNearestChar(me));

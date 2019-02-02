@@ -35,11 +35,12 @@ public abstract class MobAi implements AiState {
         if(src == me) { //no selfharm
             return;
         }
-        if (src instanceof Char) {
+
+        if (src instanceof Char && !me.friendly((Char)src)) {
             me.setEnemy((Char) src);
-        } else {
-            me.setEnemy(chooseEnemy(me));
         }
+
+        me.setEnemy(chooseEnemy(me));
 
         if (me.isEnemyInFov()) {
             me.setState(new Hunting());
@@ -140,6 +141,6 @@ public abstract class MobAi implements AiState {
     }
 
     @Override
-    public void onDie() // do nothing, we are dead already...
-    {}
+    public void onDie() { // do nothing, we are dead already...
+    }
 }
