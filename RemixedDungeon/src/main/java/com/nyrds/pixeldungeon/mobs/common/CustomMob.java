@@ -177,9 +177,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			scriptFile = classDesc.optString("scriptFile", scriptFile);
 
+			friendly = classDesc.optBoolean("friendly",friendly);
+
 			if(!restoring) {
 				setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
-				friendly = classDesc.optBoolean("friendly",friendly);
 				hp(ht(classDesc.optInt("ht", 1)));
 				fromJson(classDesc);
 			}
