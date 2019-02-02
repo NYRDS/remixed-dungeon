@@ -47,8 +47,8 @@ public class EmoIcon extends Image {
 		alpha(owner.alpha());
 
 		if (getVisible()) {
-			x = owner.x + owner.width - width / 2;
-			y = owner.y - height;
+			x = owner.x + owner.width - owner.visualOffsetX() - width / 2;
+			y = owner.y + owner.visualOffsetY() - height;
 
 			if (growing) {
 				scale.set( scale.x + Game.elapsed * timeScale );

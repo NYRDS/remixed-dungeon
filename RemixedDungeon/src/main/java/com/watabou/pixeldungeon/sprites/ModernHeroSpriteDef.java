@@ -264,7 +264,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			}
 		}
 
-		return ret.toArray(new String[ret.size()]);
+		return ret.toArray(new String[0]);
 	}
 
 	private void applyLayersDesc(String[] lookDesc) {
@@ -405,12 +405,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		deathEffect.place(ch.getPos());
 		getParent().add(deathEffect);
 		deathEffect.setVisible(true);
-		deathEffect.playAnim(die, new Callback() {
-			@Override
-			public void call() {
-				deathEffect.killAndErase();
-			}
-		});
+		deathEffect.playAnim(die, () -> deathEffect.killAndErase());
 		killAndErase();
 	}
 
