@@ -24,8 +24,6 @@ import org.json.JSONObject;
 
 public class CustomMob extends MultiKindMob implements IZapper {
 
-	private final String MOB_CLASS = "mobClass";
-
 	@Packable
 	private String luaData;
 
@@ -35,6 +33,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	private float attackDelay = 1;
 
+	@Packable
 	private String mobClass = "Unknown";
 
 	private boolean canBePet = false;
@@ -73,15 +72,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-
-		bundle.put(MOB_CLASS, mobClass);
-	}
-
-	@Override
 	public void restoreFromBundle(Bundle bundle) {
-		mobClass = bundle.getString(MOB_CLASS);
 		fillMobStats(true);
 
 		super.restoreFromBundle(bundle);

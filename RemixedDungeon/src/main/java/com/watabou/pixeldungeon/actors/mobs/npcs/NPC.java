@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
@@ -48,13 +47,13 @@ public abstract class NPC extends Mob {
 	}
 	
 	protected void throwItem() {
-		Heap heap = Dungeon.level.getHeap( getPos() );
+		Heap heap = level().getHeap( getPos() );
 		if (heap != null) {
 			int n;
 			do {
 				n = getPos() + Level.NEIGHBOURS8[Random.Int( 8 )];
-			} while (!Dungeon.level.passable[n] && !Dungeon.level.avoid[n]);
-			Dungeon.level.drop( heap.pickUp(), n ).sprite.drop( getPos() );
+			} while (!level().passable[n] && !level().avoid[n]);
+			level().drop( heap.pickUp(), n ).sprite.drop( getPos() );
 		}
 	}
 

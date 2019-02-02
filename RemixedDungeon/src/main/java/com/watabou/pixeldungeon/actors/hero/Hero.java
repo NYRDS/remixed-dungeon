@@ -1129,8 +1129,8 @@ public class Hero extends Char implements PetOwner {
 
 		boolean newMob = false;
 
-		for (Mob m : Dungeon.level.mobs) {
-			if (Dungeon.level.fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
+		for (Mob m : level().mobs) {
+			if (level().fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
 				visible.add(m);
 				if (!visibleEnemies.contains(m)) {
 					newMob = true;
@@ -1151,7 +1151,7 @@ public class Hero extends Char implements PetOwner {
 		Mob nearest = null;
 		int dist = Integer.MAX_VALUE;
 		for (Mob mob : visibleEnemies) {
-			int mobDist = Dungeon.level.distance(getPos(), mob.getPos());
+			int mobDist = level().distance(getPos(), mob.getPos());
 			if (mobDist < dist) {
 				dist = mobDist;
 				nearest = mob;
@@ -1828,7 +1828,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public boolean canAttack(Char enemy) {
-		if (Dungeon.level.adjacent(getPos(), enemy.getPos())) {
+		if (level().adjacent(getPos(), enemy.getPos())) {
 			return true;
 		}
 
