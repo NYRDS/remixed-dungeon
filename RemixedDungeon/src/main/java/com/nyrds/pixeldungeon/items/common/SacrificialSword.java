@@ -56,7 +56,7 @@ public class SacrificialSword extends SpecialWeapon {
 		return (0.25 + (hero.lvl() * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
 	}
 	
-	public void postAttack(Hero hero, Char tgt ) {
+	public void postAttack(Char user, Char tgt ) {
 		
 		if(tgt instanceof Boss) {
 			return;
@@ -69,7 +69,12 @@ public class SacrificialSword extends SpecialWeapon {
 		if(! (tgt instanceof Mob) ) {
 			return;
 		}
-		
+
+		if(!(user instanceof Hero)) {
+			return;
+		}
+
+		Hero hero = (Hero) user;
 		Mob mob = (Mob) tgt;
 
 		double conversionChance =     baseChance(hero) + 
@@ -79,8 +84,7 @@ public class SacrificialSword extends SpecialWeapon {
 		double roll = Math.random();
 		
 		//GLog.i("chance %.3f roll %.3f\n", conversionChance, roll);
-		
-		
+
 		if(roll < conversionChance ) {
 			Mob.makePet(mob, hero);
 		}

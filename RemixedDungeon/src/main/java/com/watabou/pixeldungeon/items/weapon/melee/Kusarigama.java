@@ -96,13 +96,15 @@ public class Kusarigama extends SpecialWeapon {
         return actions;
     }
 
-    public void postAttack(Hero hero, Char tgt) {
-        setUser(hero);
-
-        if (Dungeon.level.distance(getUser().getPos(), tgt.getPos()) > 1) {
+    @Override
+    public void preAttack(Char user, Char tgt) {
+        if (user.level().distance(user.getPos(), tgt.getPos()) > 1) {
             drawChain(tgt.getPos());
         }
+    }
 
+    @Override
+    public void postAttack(Char user, Char tgt) {
         if (Random.Float(1) < 0.1f) {
             Buff.prolong(tgt, Vertigo.class, 3);
         }

@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.items.guts.weapon.melee;
 
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 
@@ -13,11 +11,6 @@ public class TitanSword extends SpecialWeapon {
 
 	public TitanSword() {
 		super( 20, 1.5f, 4f );
-	}
-
-	@Override
-	public void postAttack(Hero hero, Char tgt ) {
-
 	}
 
 	@Override

@@ -1591,10 +1591,15 @@ public class Hero extends Char implements PetOwner {
 				Mob.makePet(rat, this);
 			} else {
 				AttackIndicator.target(enemy);
-				attack(enemy);
 
 				if (belongings.weapon instanceof SpecialWeapon) {
-					((SpecialWeapon) belongings.weapon).postAttack(this, enemy);
+					((SpecialWeapon) belongings.weapon).preAttack(this, enemy);
+				}
+
+				if (attack(enemy)) {
+					if (belongings.weapon instanceof SpecialWeapon) {
+						((SpecialWeapon) belongings.weapon).postAttack(this, enemy);
+					}
 				}
 
 			}
