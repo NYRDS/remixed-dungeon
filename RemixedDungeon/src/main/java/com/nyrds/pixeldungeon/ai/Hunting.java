@@ -15,6 +15,10 @@ public class Hunting extends MobAi implements AiState {
     @Override
     public void act(Mob me) {
 
+        if(returnToOwnerIfTooFar(me, 4)) {
+            return;
+        }
+
         if(me.getEnemy() == Char.DUMMY) {
             me.setEnemy(chooseEnemy(me));
         }

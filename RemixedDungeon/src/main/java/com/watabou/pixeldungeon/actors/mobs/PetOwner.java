@@ -7,4 +7,5 @@ package com.watabou.pixeldungeon.actors.mobs;
 public interface PetOwner {
     void removePet(Mob mob);
     void addPet(Mob pet);
+    int getPos();
 }

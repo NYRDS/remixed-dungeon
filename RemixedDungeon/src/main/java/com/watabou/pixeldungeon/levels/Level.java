@@ -1309,6 +1309,13 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
+
+		if(c instanceof Hero) {
+			for (Mob mob: ((Hero) c).getPets()) {
+				updateFovForObjectAt(mob.getPos());
+			}
+		}
+
 		if (c.isAlive()) {
 			if (c.hasBuff(MindVision.class)) {
 				for (Mob mob : mobs) {

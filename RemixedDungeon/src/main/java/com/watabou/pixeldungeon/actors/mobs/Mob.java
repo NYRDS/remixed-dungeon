@@ -141,6 +141,14 @@ public abstract class Mob extends Char {
 		return pet;
 	}
 
+	public int getOwnerPos() {
+		if(owner==null) {
+			return getPos();
+		}
+
+		return owner.getPos();
+	}
+
 	public void setFraction(Fraction fr) {
 		fraction = fr;
 		setEnemy(DUMMY);

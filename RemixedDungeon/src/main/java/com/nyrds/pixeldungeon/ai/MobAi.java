@@ -110,6 +110,17 @@ public abstract class MobAi implements AiState {
         }
     }
 
+    public boolean returnToOwnerIfTooFar(Mob me, int maxDist) {
+        if(     me.level().distance(me.getPos(),me.getOwnerPos())>maxDist
+            &&  me.level().distance(me.target,  me.getOwnerPos())>maxDist
+        ) {
+            me.target = me.getOwnerPos();
+            me.setState(getStateByClass(Wandering.class));
+            return true;
+        }
+        return false;
+    }
+
     private static void registerAiState(Class<? extends AiState> stateClass) {
         try {
             aiStateInstances.put(stateClass.getSimpleName().toUpperCase(Locale.ROOT), stateClass.newInstance());

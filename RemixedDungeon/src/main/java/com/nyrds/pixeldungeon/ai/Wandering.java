@@ -15,6 +15,10 @@ public class Wandering extends MobAi implements AiState {
     @Override
     public void act(Mob me) {
 
+        if(returnToOwnerIfTooFar(me, 2)) {
+            return;
+        }
+
         Char enemy = chooseEnemy(me);
         me.setEnemy(enemy);
 

@@ -17,6 +17,10 @@ public class Sleeping extends MobAi implements AiState {
     @Override
     public void act(Mob me) {
 
+        if(returnToOwnerIfTooFar(me, 3)) {
+            return;
+        }
+
         Char enemy = chooseEnemy(me);
         me.setEnemy(enemy);
 
