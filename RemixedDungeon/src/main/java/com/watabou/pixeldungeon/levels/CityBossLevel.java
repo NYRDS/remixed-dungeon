@@ -182,7 +182,7 @@ public class CityBossLevel extends Level {
 				!passable[boss.getPos()] ||
 				!outsideEntraceRoom( boss.getPos() ) ||
 				Dungeon.visible[boss.getPos()]);
-			Dungeon.level.spawnMob(boss);
+			spawnMob(boss);
 			
 			set( arenaDoor, Terrain.LOCKED_DOOR );
 			GameScene.updateMap( arenaDoor );

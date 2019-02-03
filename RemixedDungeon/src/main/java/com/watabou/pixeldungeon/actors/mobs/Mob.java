@@ -95,7 +95,7 @@ public abstract class Mob extends Char {
 	private LuaTable mobScript;
 	private LuaValue scriptResult = LuaValue.NIL;
 
-	private AiState state = new Sleeping();
+	private AiState state = MobAi.getStateByClass(Sleeping.class);
 
 	protected Object spriteClass;
 
@@ -612,7 +612,10 @@ public abstract class Mob extends Char {
 	}
 
 	public void setState(AiState state) {
-		this.state = state;
+		if(!state.equals(this.state)) {
+			spend(Actor.TICK);
+			this.state = state;
+		}
 	}
 
 	protected JSONObject getClassDef(){

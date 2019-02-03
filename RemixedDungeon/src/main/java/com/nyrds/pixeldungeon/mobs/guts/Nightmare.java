@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 
 import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -51,7 +52,7 @@ public class Nightmare extends Mob {
     public boolean act(){
         super.act();
 
-        setState(new Hunting());
+        setState(MobAi.getStateByClass(Hunting.class));
 
         return true;
     }

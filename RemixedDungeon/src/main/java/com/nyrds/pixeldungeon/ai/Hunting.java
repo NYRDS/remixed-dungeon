@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -38,9 +37,7 @@ public class Hunting extends MobAi implements AiState {
             }
 
             if(!me.doStepTo(me.target)) {
-                me.spend(Actor.TICK);
                 me.target = Dungeon.level.randomDestination();
-
                 me.setState(getStateByClass(Wandering.class));
             }
         }
