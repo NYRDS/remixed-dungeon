@@ -236,7 +236,7 @@ public abstract class Mob extends Char {
 
 		if (paralysed) {
 			enemySeen = false;
-			spend(TICK);
+			spend(TICK/10.f);
 			return true;
 		}
 
