@@ -6,7 +6,9 @@ import com.nyrds.pixeldungeon.support.PollfishSurveys;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndQuest;
+import com.watabou.pixeldungeon.windows.WndStory;
 
 public class InquirerNPC extends ImmortalNPC {
 
@@ -33,7 +35,26 @@ public class InquirerNPC extends ImmortalNPC {
             return true;
         }
 
-        PollfishSurveys.showSurvey();
+        GameScene.show(new WndOptions("Inquirer_title",
+                "Inquirer_text",
+                "Inquirer_yes",
+                "Inquirer_show_privacy",
+                "Inquirer_no"){
+            @Override
+            protected void onSelect(int index) {
+                switch (index) {
+                    case 0:
+                        PollfishSurveys.showSurvey();
+                        break;
+                    case 1:
+                        GameScene.show(new WndStory("Inquirer_privacyPolicy"));
+                        break;
+                    case 2:
+                        say("Inquirer_bye");
+                        break;
+                }
+            }
+        });
 
         return true;
     }
