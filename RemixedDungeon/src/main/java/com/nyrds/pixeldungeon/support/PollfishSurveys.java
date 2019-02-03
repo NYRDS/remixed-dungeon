@@ -2,9 +2,9 @@ package com.nyrds.pixeldungeon.support;
 
 import android.os.Build;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.pollfish.classes.SurveyInfo;
-import com.pollfish.constants.SurveyFormat;
 import com.pollfish.interfaces.PollfishClosedListener;
 import com.pollfish.interfaces.PollfishCompletedSurveyListener;
 import com.pollfish.interfaces.PollfishOpenedListener;
@@ -36,45 +36,51 @@ public class PollfishSurveys {
             Preferences.INSTANCE.put("PollfishSurveys", true);
 
             PollFish.ParamsBuilder params = new PollFish.ParamsBuilder(Game.getVar(R.string.pollfish_key))
-                    //.customMode(true)
-                    .releaseMode(false)
-                    .surveyFormat(SurveyFormat.BASIC)
+                    .customMode(true)
+                    .releaseMode(true)
                     .pollfishReceivedSurveyListener(new PollfishReceivedSurveyListener() {
                         @Override
                         public void onPollfishSurveyReceived(SurveyInfo surveyInfo) {
+                            EventCollector.logException();
                             GLog.w(surveyInfo.toString());
                         }
                     })
                     .pollfishUserNotEligibleListener(new PollfishUserNotEligibleListener() {
                         @Override
                         public void onUserNotEligible() {
+                            EventCollector.logException();
                             GLog.w("bad user");
                         }
                     })
                     .pollfishCompletedSurveyListener(new PollfishCompletedSurveyListener() {
                         @Override
                         public void onPollfishSurveyCompleted(SurveyInfo surveyInfo) {
+                            EventCollector.logException();
                             GLog.w(surveyInfo.toString());
                         }
                     })
                     .pollfishSurveyNotAvailableListener(new PollfishSurveyNotAvailableListener() {
                         @Override
                         public void onPollfishSurveyNotAvailable() {
+                            EventCollector.logException();
                             GLog.w("no survey");
                         }
                     }).pollfishUserRejectedSurveyListener(new PollfishUserRejectedSurveyListener() {
                         @Override
                         public void onUserRejectedSurvey() {
+                            EventCollector.logException();
                             GLog.w("rejected");
                         }
                     }).pollfishOpenedListener(new PollfishOpenedListener() {
                         @Override
                         public void onPollfishOpened() {
+                            EventCollector.logException();
                             GLog.w("opened");
                         }
                     }).pollfishClosedListener(new PollfishClosedListener() {
                         @Override
                         public void onPollfishClosed() {
+                            EventCollector.logException();
                             GLog.w("closed");
                         }
                     })
@@ -82,7 +88,7 @@ public class PollfishSurveys {
 
 
             PollFish.initWith(Game.instance(), params);
-            //PollFish.hide();
+            PollFish.hide();
         }
         return false;
     }
