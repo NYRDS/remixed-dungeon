@@ -145,7 +145,7 @@ public enum Preferences {
 		return true;
 	}
 
-	boolean checkBoolean(String key) {
+	public boolean checkBoolean(String key) {
 		try {
 			get().getBoolean(key, false);
 		} catch (ClassCastException e) {
