@@ -579,9 +579,8 @@ public abstract class Mob extends Char {
 
 		notice();
 
-		if (getState() instanceof Hunting) {
-			setState(MobAi.getStateByClass(Wandering.class));
-		}
+		setState(MobAi.getStateByClass(Wandering.class));
+
 		target = cell;
 	}
 
