@@ -18,7 +18,17 @@
         "kind": "TacticalCrossbow"
       },
       {
+        "kind": "SacrificialSword"
+      },
+      {
+        "kind": "Sword"
+      },
+      {
         "kind": "ScrollOfMagicMapping",
+        "quantity": 100
+      },
+      {
+        "kind": "ScrollOfMirrorImage",
         "quantity": 100
       },
       {
