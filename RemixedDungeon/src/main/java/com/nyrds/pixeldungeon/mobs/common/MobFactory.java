@@ -32,6 +32,7 @@ import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
+import com.nyrds.pixeldungeon.mobs.npc.InquirerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
@@ -215,6 +216,7 @@ public class MobFactory {
 
 		registerMobClass(Ghost.class);
 		registerMobClass(SociologistNPC.class);
+		registerMobClass(InquirerNPC.class);
 	}
 	
 	public static Mob mobRandom() {
