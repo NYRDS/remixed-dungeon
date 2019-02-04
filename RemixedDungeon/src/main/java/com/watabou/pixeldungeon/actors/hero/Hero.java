@@ -1257,6 +1257,7 @@ public class Hero extends Char implements PetOwner {
 					if(!mob.swapPosition(this)) {
 						return false;
 					}
+					Dungeon.observe();
 				}
 			}
 
