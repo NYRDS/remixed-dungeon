@@ -70,14 +70,6 @@ android {
 
     flavorDimensions "minApi"
     productFlavors {
-        googlePlayRetro {
-            buildToolsVersion '23.0.3'
-            minSdkVersion 9
-            compileSdkVersion 23
-            targetSdkVersion 23
-            dimension "minApi"
-
-        }
         googlePlay {
             buildToolsVersion '28.0.3'
             targetSdkVersion 28
@@ -99,50 +91,39 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    
+    implementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
+    implementation 'com.google.android.gms:play-services-base:16.1.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation "com.google.android.gms:play-services-games:16.0.0"
 
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.android.support:support-v4:23'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.google.android.gms:play-services-ads:9.0.2'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.google.android.gms:play-services-base:9.0.2'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.google.android.gms:play-services-analytics:9.0.2'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
+    implementation 'com.pollfish:pollfish:+:googleplayRelease@aar'
 
-    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.7'
+    implementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:16.1.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:16.0.1'
-    googlePlayImplementation "com.google.android.gms:play-services-games:16.0.0"
+    implementation fileTree(dir: 'lib', include: ['*.jar'])
 
-    googlePlayImplementation 'com.pollfish:pollfish:+:googleplayRelease@aar'
-
-    googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
-
-    googlePlayImplementation fileTree(dir: 'lib', include: ['*.jar'])
-
-    googlePlayImplementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:multidex:1.0.3'
+    
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    googlePlayImplementation 'io.humanteq.hqsdk:hqsdk-core:1.0.0-beta01'
-    googlePlayImplementation 'io.humanteq.hqsdk:hqsdk-apps:1.0.0-beta01'
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.0.4'
+    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.0.4'
 
-    googlePlayImplementation 'androidx.core:core:1.0.1'
-    googlePlayImplementation 'androidx.annotation:annotation:1.0.1'
+    implementation 'androidx.core:core:1.0.1'
+    implementation 'androidx.annotation:annotation:1.0.1'
 
 
     implementation 'com.android.billingclient:billing:1.1'
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
-    googlePlayImplementation 'com.google.firebase:firebase-core:16.0.7'
-    googlePlayImplementation 'com.google.firebase:firebase-perf:16.2.3'
-    googlePlayImplementation 'com.google.firebase:firebase-ads:17.1.3'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.google.firebase:firebase-perf:16.2.3'
+    implementation 'com.google.firebase:firebase-ads:17.1.3'
 
-    googlePlayImplementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
 }
 
 apply plugin: 'com.google.gms.google-services'

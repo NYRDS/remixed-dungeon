@@ -60,7 +60,8 @@ import java.util.Map;
 
 import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
 import io.humanteq.hqsdkcore.HQSdk;
-import io.humanteq.hqsdkcore.api.impl.SWImpl;
+import io.humanteq.hqsdkcore.api.impl.HqmApi;
+import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
 
 public class StartScene extends PixelScene {
 
@@ -98,15 +99,14 @@ public class StartScene extends PixelScene {
         super.create();
 
         if(!swSdkStarted) {
-            HQSdk.Companion.init(Game.instance(), "22b4f34f2616d7f", false,
-                    new HQSdk.Callback() {
+            HQSdk.init(Game.instance(), "22b4f34f2616d7f", false,
+                    new HqmCallback<HqmApi>() {
 
                         @Override
-                        public void onSuccess(@NotNull SWImpl sw) {
-                            sw.start(new InstalledApplicationsCollector());
-                            sw.startSystemEventsTracking();
+                        public void onSuccess(HqmApi hqmApi) {
+                            hqmApi.start(new InstalledApplicationsCollector());
+                            hqmApi.startSystemEventsTracking();
                             swSdkStarted = true;
-
                         }
 
                         @Override
