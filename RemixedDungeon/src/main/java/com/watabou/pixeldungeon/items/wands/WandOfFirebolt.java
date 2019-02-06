@@ -31,6 +31,8 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -43,12 +45,20 @@ public class WandOfFirebolt extends SimpleWand  {
 	@Override
 	protected void onZap( int cell ) {
 
-		int level = effectiveLevel();
-		
+		int wandLevel = effectiveLevel();
+		Level level = wandUser.level();
+
+
 		for (int i=1; i < Ballistica.distance - 1; i++) {
 			int c = Ballistica.trace[i];
-			if (Dungeon.level.cellValid(c) && Dungeon.level.flammable[c]) {
-				GameScene.add( Blob.seed( c, 1, Fire.class ) );
+			if (level.cellValid(c)) {
+				if (level.flammable[c]) {
+					GameScene.add(Blob.seed(c, 1, Fire.class));
+				}
+				Heap heap = level.getHeap(c);
+				if(heap!=null) {
+					heap.burn();
+				}
 			}
 		}
 		
@@ -57,7 +67,7 @@ public class WandOfFirebolt extends SimpleWand  {
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
 			
-			ch.damage( Random.Int( 1, 8 + level * level ), this );
+			ch.damage( Random.Int( 1, 8 + wandLevel * wandLevel ), this );
 			Buff.affect( ch, Burning.class ).reignite( ch );
 			
 			ch.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
