@@ -966,11 +966,11 @@ public class Hero extends Char implements PetOwner {
 		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
 
 		Arrow arrow = belongings.getItem(arrowType);
-		if(arrow==null) {
+		if(arrow==null || arrow.quantity() == 0) {
 			arrow = belongings.getItem(Arrow.class);
 		}
 
-		if (arrow != null) { // We have arrows!
+		if (arrow != null && arrow.quantity() > 0) { // We have arrows!
 			arrow.cast(this, enemy.getPos());
 			ready();
 			return false;
@@ -1853,7 +1853,9 @@ public class Hero extends Char implements PetOwner {
 		}
 
 		if(belongings.weapon instanceof KindOfBow) {
-			return enemy.getPos() == Ballistica.cast(getPos(), enemy.getPos(), false, true);
+			if(belongings.getItem(Arrow.class)!=null) {
+				return enemy.getPos() == Ballistica.cast(getPos(), enemy.getPos(), false, true);
+			}
 		}
 
 		return false;
