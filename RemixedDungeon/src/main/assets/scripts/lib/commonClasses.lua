@@ -71,11 +71,13 @@ local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
 
 local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfBlink")
 local wandOfTelekinesis = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis")
+local wandOfFirebolt = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfFirebolt")
+
 
 local Wands = {
-    WandOfBlink = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink"),
     wandOfBlink = wandOfBlink,
-    wandOfTelekinesis = wandOfTelekinesis
+    wandOfTelekinesis = wandOfTelekinesis,
+    wandOfFirebolt = wandOfFirebolt
 }
 
 local RPD = {
