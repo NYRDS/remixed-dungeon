@@ -320,12 +320,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		final int cell = getDestinationCell(user.getPos(),tgt);
 
-		fx(cell, new Callback() {
-			@Override
-			public void call() {
-				onZap(cell);
-			}
-		});
+		fx(cell, () -> onZap(cell));
 		
 	}
 	

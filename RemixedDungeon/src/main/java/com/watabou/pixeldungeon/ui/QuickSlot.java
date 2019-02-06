@@ -247,12 +247,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     public static void refresh() {
-        Game.pushUiTask(new Runnable() {
-            @Override
-            public void run() {
-                for (QuickSlot slot : slots) {
-                    slot.refreshSelf();
-                }
+        Game.pushUiTask(() -> {
+            for (QuickSlot slot : slots) {
+                slot.refreshSelf();
             }
         });
     }
@@ -321,7 +318,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             }
         }
 
-        bundle.put(QUICKSLOT, classes.toArray(new String[classes.size()]));
+        bundle.put(QUICKSLOT, classes.toArray(new String[0]));
     }
 
     public static void restore(Bundle bundle) {
