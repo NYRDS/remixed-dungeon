@@ -236,7 +236,7 @@ public abstract class Mob extends Char {
 
 		if (paralysed) {
 			enemySeen = false;
-			spend(TICK/10.f);
+			spend(TICK);
 			return true;
 		}
 
@@ -612,7 +612,7 @@ public abstract class Mob extends Char {
 
 	public void setState(AiState state) {
 		if(!state.equals(this.state)) {
-			spend(Actor.TICK);
+			spend(Actor.TICK/10.f);
 			this.state = state;
 		}
 	}

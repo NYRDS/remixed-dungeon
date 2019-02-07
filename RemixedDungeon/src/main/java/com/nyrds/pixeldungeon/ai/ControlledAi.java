@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ai;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
@@ -47,7 +48,7 @@ public class ControlledAi extends MobAi implements AiState {
             // return actAttack((CharAction.Attack) curAction);
         }
 
-        me.spend(1);
+        me.spend(Actor.TICK);
         me.curAction = null;
     }
 
