@@ -129,7 +129,6 @@ public class DM300 extends Boss {
 		
 		super.die( cause );
 		
-		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);

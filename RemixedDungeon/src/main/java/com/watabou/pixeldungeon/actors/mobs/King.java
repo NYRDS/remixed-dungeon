@@ -40,7 +40,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.KingSprite;
 import com.watabou.pixeldungeon.sprites.UndeadSprite;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -136,7 +135,7 @@ public class King extends Boss {
 	
 	@Override
 	public void die( Object cause ) {
-		GameScene.bossSlain();
+
 		Dungeon.level.drop( new ArmorKit(), getPos() ).sprite.drop();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		

@@ -82,7 +82,6 @@ public class Tengu extends Boss implements IZapper {
 			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
 		}
 
-		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		super.die(cause);
 		

@@ -40,6 +40,7 @@ abstract public class Boss extends Mob {
 	@Override
 	public void die(Object cause) {
 		GameScene.playLevelMusic();
+		GameScene.bossSlain();
 		super.die(cause);
 	}
 

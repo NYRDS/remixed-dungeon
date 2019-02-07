@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class IceGuardianCore extends Boss {
@@ -68,7 +67,6 @@ public class IceGuardianCore extends Boss {
 
 		level.unseal();
 
-		GameScene.bossSlain();
 		level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		level.drop( new IceKey(), getPos() ).sprite.drop();
 
