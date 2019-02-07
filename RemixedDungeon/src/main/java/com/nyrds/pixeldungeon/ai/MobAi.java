@@ -43,10 +43,10 @@ public abstract class MobAi implements AiState {
         me.setEnemy(chooseEnemy(me));
 
         if (me.isEnemyInFov()) {
-            me.setState(new Hunting());
+            me.setState(MobAi.getStateByClass(Hunting.class));
         } else {
             me.target = me.respawnCell(me.level());
-            me.setState(new Wandering());
+            me.setState(MobAi.getStateByClass(Wandering.class));
         }
     }
 
@@ -106,7 +106,7 @@ public abstract class MobAi implements AiState {
             me.target = me.getEnemy().getPos();
 
             me.notice();
-            me.setState(new Hunting());
+            me.setState(getStateByClass(Hunting.class));
         }
     }
 
