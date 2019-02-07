@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -43,11 +45,13 @@ public class MirrorImage extends Mob {
 		setEnemy(DUMMY);
 	}
 
-	public MirrorImage(Hero hero) {
+	public MirrorImage(@NotNull Hero hero) {
 		this();
 
 		attack = hero.attackSkill( hero );
 		damage = hero.damageRoll();
+
+		makePet(this, hero);
 
 		look = hero.getHeroSprite().getLayersDesc();
 	}
