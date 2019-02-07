@@ -59,7 +59,7 @@ return mob.init({
         client = chr
         npc = self
 
-        local priceFactor = RPD.RemixedDungeon:getDifficultyFactor() * math.pow(client:lvl(), 1.1)
+        local priceFactor = RPD.RemixedDungeon:getDifficultyFactor() * math.pow( 1.1, client:lvl())
 
         lesserPrice      = 100 * priceFactor
         greatPrice       = 500 * priceFactor
