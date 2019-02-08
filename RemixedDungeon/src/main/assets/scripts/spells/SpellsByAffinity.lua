@@ -13,12 +13,12 @@ spells["Necromancy"] = {"DarkSacrifice","RaiseDead","Exhumation","Possess"}
 
 local module = {}
 
-function module.getSpellsList(self,parent,affinity)
+function module.getSpellsList(self,affinity)
     local ret = spells[affinity] or {}
     return ret
 end
 
-function module.haveSpell(self,parent,spell)
+function module.haveSpell(self,spell)
     for k,v in pairs(spells) do
         for kk, vv in pairs(v) do
             if spell == vv then
@@ -32,6 +32,7 @@ end
 function module.loadSpells()
     require "scripts/spells/RaiseDead"
     require "scripts/spells/DarkSacrifice"
+    require "scripts.spells.Exhumation"
 end
 
 return module

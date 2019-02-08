@@ -33,7 +33,7 @@ public class SpellFactory {
 			String affinity = spell.getMagicAffinity();
 
 			if(!mSpellsByAffinity.containsKey(affinity)) {
-				mSpellsByAffinity.put(affinity, new ArrayList<String>());
+				mSpellsByAffinity.put(affinity, new ArrayList<>());
 			}
 
 			mSpellsByAffinity.get(affinity).add(spellClass.getSimpleName());
