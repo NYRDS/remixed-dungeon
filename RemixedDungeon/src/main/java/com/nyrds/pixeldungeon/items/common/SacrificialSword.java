@@ -56,7 +56,7 @@ public class SacrificialSword extends SpecialWeapon {
 		return (0.25 + (hero.lvl() * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
 	}
 	
-	public void postAttack(Char user, Char tgt ) {
+	public void postAttack(Hero user, Char tgt ) {
 		
 		if(tgt instanceof Boss) {
 			return;
