@@ -22,7 +22,7 @@ public class Ignite extends Spell{
 	@Override
 	public boolean cast(Char chr, int cell){
 		if(chr.level().cellValid(cell)) {
-			int target = Ballistica.cast(chr.getPos(), cell, true, false);
+			int target = Ballistica.cast(chr.getPos(), cell, true, true);
 
 			CellEmitter.center(target).burst( FlameParticle.FACTORY, chr.magicLvl() );
 
