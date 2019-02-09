@@ -159,6 +159,10 @@ local RPD = {
         GLog:p(text,{...})
     end,
 
+    glogn = function (text,...)
+        GLog:n(text,{...})
+    end,
+
     getXy = function (chr)
         local pos = chr:getPos()
         return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}

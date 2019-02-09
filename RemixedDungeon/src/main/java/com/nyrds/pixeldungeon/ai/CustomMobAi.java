@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 public class CustomMobAi extends MobAi implements AiState {
@@ -27,5 +28,11 @@ public class CustomMobAi extends MobAi implements AiState {
     @Override
     public String getTag() {
         return scriptFile;
+    }
+
+    @Override
+    public String status(Mob me) {
+        script.run("status", me);
+        return StringsManager.maybeId(script.getResult().toString());
     }
 }

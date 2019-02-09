@@ -50,4 +50,14 @@
 	<string name="deco_candle_name">Candle</string>
 	<string name="deco_candle_desc">Big candle</string>
 
+	<string name="Possess_Name">Possession</string>
+	<string name="Possess_Info">Dark art of mind control allow caster to bend will of most creatures</string>
+	<string name="Possess_PossessionFailed">Will of %s is too strong</string>
+	<string name="Possess_Possessed">%s is awaiting for your commands</string>
+	<string name="Possess_MustTargetChar">Only creatures can be targeted with Possession</string>
+
+	<string name="Mob_StaControlledStatus">This %s is under unholy possession.</string>>
+
+	<string name="BlackCat_AiStatus">This cat is doing ordinary cat things.</string>>
+
 </resources>

@@ -30,7 +30,7 @@ return spell.init{
         local heap = level:getHeap(cell)
 
         if heap == nil then
-            RPD.glog("Exhumation_NoGrave")
+            RPD.glogn("Exhumation_NoGrave")
             return false
         end
 
@@ -52,7 +52,7 @@ return spell.init{
             return true
         end
 
-        RPD.glog("Exhumation_NoGrave")
+        RPD.glogn("Exhumation_NoGrave")
         return false
 
     end

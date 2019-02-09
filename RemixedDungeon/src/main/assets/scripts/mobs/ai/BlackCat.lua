@@ -80,5 +80,9 @@ return ai.init{
 
     gotDamage = function(self, ai, me, src, dmg)
 
+    end,
+
+    status = function(self, ai, me)
+        return "BlackCat_AiStatus"
     end
 }

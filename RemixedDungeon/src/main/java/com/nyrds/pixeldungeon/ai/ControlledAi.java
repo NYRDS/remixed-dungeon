@@ -1,9 +1,12 @@
 package com.nyrds.pixeldungeon.ai;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class ControlledAi extends MobAi implements AiState {
 
@@ -60,5 +63,10 @@ public class ControlledAi extends MobAi implements AiState {
     public void onDie() {
         Dungeon.hero.setControlTarget(Dungeon.hero);
         Dungeon.observe();
+    }
+
+    @Override
+    public String status(Mob me) {
+        return Utils.format(Game.getVar(R.string.Mob_StaControlledStatus),me.getMobClassName());
     }
 }

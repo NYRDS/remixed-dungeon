@@ -16,6 +16,7 @@ function ai.gotDamage(self, me, src, dmg)
 end
 
 function ai.status(self, me)
+    return "ai status is niy"
 end
 
 ai.init = function(desc)

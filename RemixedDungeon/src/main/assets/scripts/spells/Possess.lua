@@ -29,14 +29,14 @@ return spell.init{
         if target ~= nil then
 
             if not target:canBePet() then
-                RPD.glog("Possess_PossessionFailed")
+                RPD.glogn("Possess_PossessionFailed",target:getName())
                 return true
             end
 
             RPD.Mob:makePet(target, chr)
             target:setState(RPD.MobAi:getStateByTag("ControlledAi"))
             RPD.Dungeon.hero:setControlTarget(target)
-            RPD.glog("Possess_Possessed")
+            RPD.glogp("Possess_Possessed",target:getName())
             return true
         end
 

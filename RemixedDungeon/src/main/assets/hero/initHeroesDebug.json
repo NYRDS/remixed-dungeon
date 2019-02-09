@@ -11,11 +11,12 @@
         },
 
       {
-        "kind": "TestItem",
+        "kind": "Quiver",
         "level":10
       },
       {
-        "kind": "TacticalCrossbow"
+        "kind": "TomeOfKnowledge",
+        "quantity" :10
       },
       {
         "kind": "SacrificialSword"
