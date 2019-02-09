@@ -141,6 +141,12 @@ public abstract class Mob extends Char {
 		return pet;
 	}
 
+	public static void releasePet(@NonNull Mob pet) {
+		pet.setFraction(Fraction.DUNGEON);
+		pet.owner.removePet(pet);
+		pet.owner = null;
+	}
+
 	public int getOwnerPos() {
 		if(owner==null) {
 			return getPos();

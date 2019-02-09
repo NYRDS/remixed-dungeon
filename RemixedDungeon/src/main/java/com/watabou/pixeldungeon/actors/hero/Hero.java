@@ -21,6 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
@@ -1095,7 +1096,7 @@ public class Hero extends Char implements PetOwner {
 		restoreHealth = false;
 		super.damage(dmg, src);
 
-		controlTarget=this;
+		setControlTarget(this);
 
 		checkIfFurious();
 		interrupt();
@@ -1900,7 +1901,14 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public void setControlTarget(Char controlTarget) {
+		if(this.controlTarget instanceof Mob) {
+			Mob controlledMob = (Mob) this.controlTarget;
+			Mob.releasePet(controlledMob);
+			controlledMob.setState(MobAi.getStateByClass(Sleeping.class));
+		}
+		Camera.main.focusOn(controlTarget.getSprite());
 		this.controlTarget = controlTarget;
+
 	}
 
 	public Char getControlTarget() {
