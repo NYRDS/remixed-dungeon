@@ -17,23 +17,13 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import android.graphics.RectF;
-
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
-import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
@@ -41,26 +31,22 @@ import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
-import com.watabou.pixeldungeon.items.food.RottenFood;
-import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
-import com.watabou.pixeldungeon.items.scrolls.Scroll;
-import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
-import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
-import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-import com.watabou.pixeldungeon.ui.Icons;
-import com.watabou.pixeldungeon.ui.ItemSlot;
-import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndBag extends WndTabbed {
-	
+
+	public Listener getListener() {
+		return listener;
+	}
+
+	public Mode getMode() {
+		return mode;
+	}
+
 	public enum Mode {
 		ALL,
 		UNIDENTIFED,
@@ -78,8 +64,8 @@ public class WndBag extends WndTabbed {
 	}
 
 
-	protected static final int COLS_P	= 4;
-	protected static final int COLS_L	= 6;
+	private static final int COLS_P	= 4;
+	private static final int COLS_L	= 6;
 
 	protected static final int SLOT_SIZE	= 28;
 	protected static final int SLOT_MARGIN	= 1;
@@ -103,7 +89,7 @@ public class WndBag extends WndTabbed {
 	
 	private Text txtTitle;
 	
-	public WndBag( Bag bag, Listener listener, Mode mode, String title ) {
+	public WndBag(Belongings stuff, Bag bag, Listener listener, Mode mode, String title) {
 		
 		super();
 	
@@ -135,7 +121,6 @@ public class WndBag extends WndTabbed {
 			panelWidth, 
 			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + txtTitle.y + txtTitle.height() + SLOT_MARGIN) );
 		
-		Belongings stuff = Dungeon.hero.belongings;
 		Bag[] bags = {
 			stuff.backpack, 
 			stuff.getItem( PotionBelt.class ), 
@@ -166,28 +151,28 @@ public class WndBag extends WndTabbed {
 		if (mode == lastMode && lastBag != null && 
 			Dungeon.hero.belongings.backpack.contains( lastBag )) {
 			
-			return new WndBag( lastBag, listener, mode, title );
+			return new WndBag(Dungeon.hero.belongings, lastBag, listener, mode, title );
 			
 		} else {
-			return new WndBag( Dungeon.hero.belongings.backpack, listener, mode, title );
+			return new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
 		}
 	}
 	
 	public static WndBag seedPouch( Listener listener, Mode mode, String title ) {
 		SeedPouch pouch = Dungeon.hero.belongings.getItem( SeedPouch.class );
 		return pouch != null ?
-			new WndBag( pouch, listener, mode, title ) :
-			new WndBag( Dungeon.hero.belongings.backpack, listener, mode, title );
+			new WndBag(Dungeon.hero.belongings, pouch, listener, mode, title ) :
+			new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
 	}
 	
 	protected void placeItems( Bag container ) {
 		
 		// Equipped items
 		Belongings stuff = Dungeon.hero.belongings;
-		placeItem( stuff.weapon != null ? stuff.weapon : new Placeholder( ItemSpriteSheet.WEAPON ) );
-		placeItem( stuff.armor != null ? stuff.armor : new Placeholder( ItemSpriteSheet.ARMOR ) );
-		placeItem( stuff.ring1 != null ? stuff.ring1 : new Placeholder( ItemSpriteSheet.RING ) );
-		placeItem( stuff.ring2 != null ? stuff.ring2 : new Placeholder( ItemSpriteSheet.RING ) );
+		placeItem( stuff.weapon != null ? stuff.weapon : new ItemPlaceholder( ItemSpriteSheet.WEAPON ) );
+		placeItem( stuff.armor != null ? stuff.armor : new ItemPlaceholder( ItemSpriteSheet.ARMOR ) );
+		placeItem( stuff.ring1 != null ? stuff.ring1 : new ItemPlaceholder( ItemSpriteSheet.RING ) );
+		placeItem( stuff.ring2 != null ? stuff.ring2 : new ItemPlaceholder( ItemSpriteSheet.RING ) );
 		
 		// Unequipped items
 		for (Item item : container.items) {
@@ -212,7 +197,7 @@ public class WndBag extends WndTabbed {
 		int x = col * (SLOT_SIZE + SLOT_MARGIN);
 		int y = (int) (txtTitle.height() + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
 
-		ItemButton btnItem = new ItemButton( item );
+		ItemButton btnItem = new ItemButton(this, item );
 		btnItem.setPos(x,y);
 		add( btnItem );
 		
@@ -242,196 +227,14 @@ public class WndBag extends WndTabbed {
 	@Override
 	public void onClick( Tab tab ) {
 		hide();
-		GameScene.show( new WndBag( ((BagTab)tab).bag, listener, mode, title ) );
+		GameScene.show( new WndBag(Dungeon.hero.belongings, ((BagTab)tab).bag, listener, mode, title ) );
 	}
 	
 	@Override
 	protected int tabHeight() {
 		return 20;
 	}
-	
-	private class BagTab extends Tab {
-		
-		private Image icon;
 
-		private Bag bag;
-		
-		public BagTab(WndBag parent, Bag bag ) {
-			super(parent);
-			
-			this.bag = bag;
-			
-			icon = icon();
-			add( icon );
-		}
-		
-		@Override
-		public void select( boolean value ) {
-			super.select( value );
-			icon.am = selected ? 1.0f : 0.6f;
-		}
-		
-		@Override
-		protected void layout() {
-			super.layout();
-			
-			icon.copy( icon() );
-			icon.x = x + (width - icon.width) / 2;
-			icon.y = y + (height - icon.height) / 2 - 2 - (selected ? 0 : 1);
-			if (!selected && icon.y < y + CUT) {
-				RectF frame = icon.frame();
-				frame.top += (y + CUT - icon.y) / icon.texture.height;
-				icon.frame( frame );
-				icon.y = y + CUT;
-			}
-		}
-		
-		private Image icon() {
-			if (bag instanceof SeedPouch) {
-				return Icons.get( Icons.SEED_POUCH );
-			} else if (bag instanceof ScrollHolder) {
-				return Icons.get( Icons.SCROLL_HOLDER );
-			} else if (bag instanceof WandHolster) {
-				return Icons.get( Icons.WAND_HOLSTER );
-			} else if (bag instanceof PotionBelt) {
-				return Icons.get( Icons.POTIONS_BELT );
-			} else if (bag instanceof Keyring) {
-				return Icons.get( Icons.KEYRING );
-			} else if (bag instanceof Quiver) {
-				return Icons.get( Icons.QUIVER);
-			} else {
-				return Icons.get( Icons.BACKPACK );
-			}
-		}
-	}
-	
-	private static class Placeholder extends Item {
-
-		public Placeholder( int image ) {
-			this.image = image;
-		}
-		
-		@Override
-		public boolean isIdentified() {
-			return true;
-		}
-		
-		@Override
-		public boolean isEquipped( Hero hero ) {
-			return true;
-		}
-	}
-	
-	private class ItemButton extends ItemSlot {
-		
-		private static final int NORMAL		= 0xFF4A4D44;
-		private static final int EQUIPPED	= 0xFF63665B;
-		
-		private Item item;
-		private ColorBlock bg;
-		
-		public ItemButton( Item item ) {
-			
-			super( item );
-
-			this.item = item;
-			if (item instanceof Gold) {
-				bg.setVisible(false);
-			}
-			
-			width = height = SLOT_SIZE;
-		}
-		
-		@Override
-		protected void createChildren() {	
-			bg = new ColorBlock( SLOT_SIZE, SLOT_SIZE, NORMAL );
-			add( bg );
-			
-			super.createChildren();
-		}
-		
-		@Override
-		protected void layout() {
-			bg.x = x;
-			bg.y = y;
-			
-			super.layout();
-		}
-		
-		@Override
-		public void item( Item item ) {
-			
-			super.item( item );
-			if (item != null) {
-
-				bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
-				if (item.cursed && item.cursedKnown) {
-					bg.ra = +0.2f;
-					bg.ga = -0.1f;
-				} else if (!item.isIdentified()) {
-					bg.ra = 0.1f;
-					bg.ba = 0.1f;
-				}
-				if (item instanceof Placeholder) {
-					enable(false);
-				} else {
-					enable(
-							mode == Mode.FOR_SALE && (item.price() > 0) && (!item.isEquipped(Dungeon.hero) || !item.cursed) ||
-									mode == Mode.UPGRADEABLE && item.isUpgradable() ||
-									mode == Mode.UNIDENTIFED && !item.isIdentified() ||
-									mode == Mode.QUICKSLOT ||
-									mode == Mode.WEAPON && (!(item instanceof KindOfBow) && (item instanceof MeleeWeapon || item instanceof Boomerang)) ||
-									mode == Mode.ARMOR && (item instanceof Armor) ||
-									mode == Mode.WAND && (item instanceof Wand) ||
-									mode == Mode.SEED && (item instanceof Seed) ||
-									mode == Mode.INSCRIBABLE && (item instanceof Armor || item instanceof BlankScroll) ||
-									mode == Mode.MOISTABLE && (item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood) ||
-									mode == Mode.FUSEABLE && ((item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof KindOfBow || item instanceof Wand) && !(item instanceof IChaosItem)) ||
-									mode == Mode.UPGRADABLE_WEAPON && ((item instanceof MeleeWeapon || item instanceof Boomerang) && (item.isUpgradable())) ||
-									mode == Mode.ALL
-					);
-				}
-			} else {
-				bg.color( NORMAL );
-			}
-		}
-		
-		@Override
-		protected void onTouchDown() {
-			bg.brightness( 1.5f );
-			Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
-		}
-
-		protected void onTouchUp() {
-			bg.brightness( 1.0f );
-		}
-
-		@Override
-		protected void onClick() {
-			if (listener != null) {
-				
-				hide();
-				listener.onSelect( item );
-				
-			} else {
-				
-				WndBag.this.add( new WndItem( WndBag.this, item ) );
-				
-			}
-		}
-		
-		@Override
-		protected boolean onLongClick() {
-			if (listener == null) {
-				hide();
-				QuickSlot.selectSlotFor(item.quickSlotContent());
-				return true;
-			} else {
-				return false;
-			}
-		}
-	}
-	
 	public interface Listener {
 		void onSelect( Item item );
 	}

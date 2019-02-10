@@ -28,7 +28,7 @@ class InventoryTool extends Tool {
 
     @Override
     protected void onClick() {
-        GameScene.show(new WndBag(Dungeon.hero.belongings.backpack,
+        GameScene.show(new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack,
                 null, WndBag.Mode.ALL, null));
     }
 

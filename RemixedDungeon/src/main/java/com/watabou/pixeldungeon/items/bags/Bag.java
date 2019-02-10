@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.bags;
 
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -54,7 +55,7 @@ public class Bag extends Item implements Iterable<Item> {
 	@Override
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_OPEN )) {
-			GameScene.show( new WndBag( this, null, WndBag.Mode.ALL, null ) );
+			GameScene.show( new WndBag(Dungeon.hero.belongings, this, null, WndBag.Mode.ALL, null ) );
 		} else {
 			super.execute( hero, action );
 		}
