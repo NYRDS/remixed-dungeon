@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
-public class WndOptions extends Window {
+public abstract class WndOptions extends Window {
 
 	private static final int WIDTH         = 120;
 
@@ -70,5 +70,5 @@ public class WndOptions extends Window {
 		resize( WIDTH, (int) vbox.height());
 	}
 
-	protected void onSelect( int index ) {}
+	abstract protected void onSelect( int index );
 }

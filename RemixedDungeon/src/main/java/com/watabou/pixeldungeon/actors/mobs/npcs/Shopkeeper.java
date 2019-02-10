@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
@@ -30,6 +31,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 
 public class Shopkeeper extends NPC {
@@ -38,7 +40,9 @@ public class Shopkeeper extends NPC {
 		spriteClass = ShopkeeperSprite.class;
 		movable = false;
 	}
-	
+
+	private Belongings belongings;
+
 	@Override
     public boolean act() {
 		
@@ -79,16 +83,16 @@ public class Shopkeeper extends NPC {
 	}
 	
 	public static WndBag sell() {
-		return GameScene.selectItem( itemSelector, WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
+		return GameScene.selectItem(sellItemSelector, WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 	}
 	
-	private static WndBag.Listener itemSelector = new WndBag.Listener() {
+	private static WndBag.Listener sellItemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
 
 				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
-					GameScene.selectItemFromBag( itemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
+					GameScene.selectItemFromBag(sellItemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 					return;
 				}
 
@@ -98,10 +102,41 @@ public class Shopkeeper extends NPC {
 		}
 	};
 
-	@Override
-	public boolean interact(final Hero hero) {
-		sell();
-		return true;
+	private static WndBag buy() {
+		return GameScene.selectItem(buyItemSelector, WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Sell));
 	}
 
+	private static WndBag.Listener buyItemSelector = new WndBag.Listener() {
+		@Override
+		public void onSelect( Item item ) {
+			if (item != null) {
+
+				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
+					GameScene.selectItemFromBag(buyItemSelector, (Bag)item , WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
+					return;
+				}
+
+				WndBag parentWnd = buy();
+				GameScene.show( new WndTradeItem( item, parentWnd ) );
+			}
+		}
+	};
+
+	@Override
+	public boolean interact(final Hero hero) {
+		GameScene.show(new WndOptions("Shop","What did you want?","Wanna sell", "Wanna buy"){
+			@Override
+			protected void onSelect(int index) {
+				switch (index) {
+					case 0:
+						sell();
+						break;
+					case 1:
+						buy();
+						break;
+				}
+			}
+		});
+		return true;
+	}
 }

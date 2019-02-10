@@ -59,6 +59,7 @@
 
 	<string name="Mob_StaControlledStatus">This %s is under unholy possession</string>>
 
-	<string name="BlackCat_AiStatus">This cat is doing ordinary cat things</string>>
+	<string name="BlackCat_AiStatus">This cat is doing ordinary cat things</string>
+	<string name="Shopkeeper_Buy">Select item to buy</string>>
 
 </resources>
