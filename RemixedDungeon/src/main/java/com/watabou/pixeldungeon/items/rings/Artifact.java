@@ -80,8 +80,14 @@ public class Artifact extends EquipableItem {
 	}
 
 	@Override
-	public boolean isEquipped(Hero hero) {
-		return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
+	public boolean isEquipped(Char chr) {
+		if(chr instanceof Hero) {
+			Hero hero = (Hero)chr;
+			return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
+		}
+		return false;
+
+
 	}
 
 	public void activate(Char ch) {

@@ -60,7 +60,8 @@ public class WndBag extends WndTabbed {
 		INSCRIBABLE,
 		MOISTABLE, 
 		FUSEABLE, 
-		UPGRADABLE_WEAPON
+		UPGRADABLE_WEAPON,
+		FOR_BUY
 	}
 
 
@@ -88,6 +89,8 @@ public class WndBag extends WndTabbed {
 	private static Bag lastBag;
 	
 	private Text txtTitle;
+
+	private Belongings stuff;
 	
 	public WndBag(Belongings stuff, Bag bag, Listener listener, Mode mode, String title) {
 		
@@ -99,6 +102,7 @@ public class WndBag extends WndTabbed {
 		this.listener = listener;
 		this.mode = mode;
 		this.title = title;
+		this.stuff = stuff;
 		
 		lastMode = mode;
 		lastBag = bag;
@@ -168,12 +172,12 @@ public class WndBag extends WndTabbed {
 	protected void placeItems( Bag container ) {
 		
 		// Equipped items
-		Belongings stuff = Dungeon.hero.belongings;
-		placeItem( stuff.weapon != null ? stuff.weapon : new ItemPlaceholder( ItemSpriteSheet.WEAPON ) );
-		placeItem( stuff.armor != null ? stuff.armor : new ItemPlaceholder( ItemSpriteSheet.ARMOR ) );
-		placeItem( stuff.ring1 != null ? stuff.ring1 : new ItemPlaceholder( ItemSpriteSheet.RING ) );
-		placeItem( stuff.ring2 != null ? stuff.ring2 : new ItemPlaceholder( ItemSpriteSheet.RING ) );
-		
+		if(stuff == Dungeon.hero.belongings) {
+			placeItem(stuff.weapon != null ? stuff.weapon : new ItemPlaceholder(ItemSpriteSheet.WEAPON));
+			placeItem(stuff.armor != null ? stuff.armor : new ItemPlaceholder(ItemSpriteSheet.ARMOR));
+			placeItem(stuff.ring1 != null ? stuff.ring1 : new ItemPlaceholder(ItemSpriteSheet.RING));
+			placeItem(stuff.ring2 != null ? stuff.ring2 : new ItemPlaceholder(ItemSpriteSheet.RING));
+		}
 		// Unequipped items
 		for (Item item : container.items) {
 			placeItem( item );

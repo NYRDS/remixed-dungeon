@@ -145,8 +145,12 @@ public class Armor extends EquipableItem {
 	}
 	
 	@Override
-	public boolean isEquipped( Hero hero ) {
-		return hero.belongings.armor == this;
+	public boolean isEquipped( Char chr ) {
+		if(chr instanceof Hero) {
+			Hero hero = (Hero)chr;
+			return hero.belongings.armor == this;
+		}
+		return false;
 	}
 	
 	@Override

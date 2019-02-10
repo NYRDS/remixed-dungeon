@@ -54,8 +54,12 @@ public class KindOfWeapon extends EquipableItem {
 	}
 	
 	@Override
-	public boolean isEquipped( Hero hero ) {
-		return hero.belongings.weapon == this;
+	public boolean isEquipped( Char chr ) {
+		if(chr instanceof Hero) {
+			Hero hero = (Hero)chr;
+			return hero.belongings.weapon == this;
+		}
+		return false;
 	}
 	
 	@Override
@@ -103,7 +107,7 @@ public class KindOfWeapon extends EquipableItem {
 		}
 	}
 	
-	public void activate( Hero hero ) {
+	public void activate( Char hero ) {
 	}
 	
 	public int damageRoll( Hero owner ) {

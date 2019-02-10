@@ -298,11 +298,16 @@ public class Item implements Bundlable, Presser {
 		return levelKnown && cursedKnown;
 	}
 
-	public boolean isEquipped(Hero hero) {
-		return this.equals(hero.belongings.weapon) ||
-				this.equals(hero.belongings.armor) ||
-				this.equals(hero.belongings.ring1) ||
-				this.equals(hero.belongings.ring2);
+	public boolean isEquipped(Char chr) {
+
+		if(chr instanceof Hero) {
+			Hero hero = (Hero)chr;
+			return this.equals(hero.belongings.weapon) ||
+					this.equals(hero.belongings.armor) ||
+					this.equals(hero.belongings.ring1) ||
+					this.equals(hero.belongings.ring2);
+		}
+		return false;
 	}
 
 	public void removeItemFrom(Hero hero) {

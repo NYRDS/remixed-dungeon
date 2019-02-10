@@ -31,9 +31,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
-import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.GnollArmor;
@@ -41,7 +39,6 @@ import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
-import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -114,29 +111,15 @@ public enum HeroClass {
         if (initHeroes.has(className)) {
             try {
                 JSONObject classDesc = initHeroes.getJSONObject(className);
-                if (classDesc.has("armor")) {
-                    hero.belongings.armor = (Armor) ItemFactory.createItemFromDesc(classDesc.getJSONObject("armor"));
-                }
 
-                if (classDesc.has("weapon")) {
-                    hero.belongings.weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(classDesc.getJSONObject("weapon"));
-                }
+                hero.belongings.setupFromJson(classDesc);
 
-                if (classDesc.has("ring1")) {
-                    hero.belongings.ring1 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring1"));
+                if(hero.belongings.ring1!=null) {
                     hero.belongings.ring1.activate(hero);
                 }
 
-                if (classDesc.has("ring2")) {
-                    hero.belongings.ring2 = (Artifact) ItemFactory.createItemFromDesc(classDesc.getJSONObject("ring2"));
+                if(hero.belongings.ring2!=null) {
                     hero.belongings.ring2.activate(hero);
-                }
-
-                if (classDesc.has("items")) {
-                    JSONArray items = classDesc.getJSONArray("items");
-                    for (int i = 0; i < items.length(); ++i) {
-                        hero.collect(ItemFactory.createItemFromDesc(items.getJSONObject(i)));
-                    }
                 }
 
                 if (classDesc.has("quickslot")) {
@@ -151,7 +134,6 @@ public enum HeroClass {
                                 slot++;
                             }
                         }
-
                     }
                 }
 

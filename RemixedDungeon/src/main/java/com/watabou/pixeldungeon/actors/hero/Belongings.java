@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -37,6 +39,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Iterator;
 
 import androidx.annotation.NonNull;
@@ -46,7 +52,7 @@ public class Belongings implements Iterable<Item> {
 
 	public static final int BACKPACK_SIZE	= 19;
 	
-	private Hero owner;
+	private Char owner;
 	
 	public Bag backpack;	
 
@@ -58,7 +64,7 @@ public class Belongings implements Iterable<Item> {
 	@NonNull
 	public Gold         gold   = new Gold(0);
 
-	public Belongings( Hero owner ) {
+	public Belongings( Char owner ) {
 		this.owner = owner;
 		
 		backpack = new Bag() {{
@@ -278,6 +284,32 @@ public class Belongings implements Iterable<Item> {
 					wand.curCharges(wand.curCharges() - 1);
 					QuickSlot.refresh();
 				}
+			}
+		}
+	}
+
+
+	void setupFromJson(JSONObject desc) throws JSONException {
+		if (desc.has("armor")) {
+			armor = (Armor) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
+		}
+
+		if (desc.has("weapon")) {
+			weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
+		}
+
+		if (desc.has("ring1")) {
+			ring1 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
+		}
+
+		if (desc.has("ring2")) {
+			ring2 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2"));
+		}
+
+		if (desc.has("items")) {
+			JSONArray items = desc.getJSONArray("items");
+			for (int i = 0; i < items.length(); ++i) {
+				ItemFactory.createItemFromDesc(items.getJSONObject(i)).collect(backpack);
 			}
 		}
 	}

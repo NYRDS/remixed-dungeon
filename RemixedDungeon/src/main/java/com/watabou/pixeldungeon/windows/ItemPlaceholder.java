@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 
 class ItemPlaceholder extends Item {
@@ -15,7 +15,7 @@ class ItemPlaceholder extends Item {
     }
 
     @Override
-    public boolean isEquipped( Hero hero ) {
+    public boolean isEquipped( Char chr ) {
         return true;
     }
 }
