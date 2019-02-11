@@ -69,13 +69,6 @@ public class Gold extends Item {
 	}
 
 	@Override
-	public boolean collect(Hero hero) {
-		hero.gold(hero.gold() + quantity());
-
-		return true;
-	}
-
-	@Override
 	public boolean isUpgradable() {
 		return false;
 	}

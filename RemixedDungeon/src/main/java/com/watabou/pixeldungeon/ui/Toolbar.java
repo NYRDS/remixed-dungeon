@@ -269,7 +269,7 @@ public class Toolbar extends Component {
             if (heap != null) {
                 if (heap.type == Heap.Type.FOR_SALE && heap.size() == 1
                         && heap.peek().price() > 0) {
-                    GameScene.show(new WndTradeItem(heap, false));
+                    GameScene.show(new WndTradeItem(heap, false, null));
                 } else {
                     GameScene.show(new WndInfoItem(heap));
                 }

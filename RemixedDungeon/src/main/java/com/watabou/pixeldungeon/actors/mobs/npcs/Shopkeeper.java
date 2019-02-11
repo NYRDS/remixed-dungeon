@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
+import com.watabou.utils.Bundle;
 
 public class Shopkeeper extends NPC {
 
@@ -83,11 +84,11 @@ public class Shopkeeper extends NPC {
 		return true;
 	}
 	
-	public static WndBag sell() {
+	public WndBag sell() {
 		return GameScene.selectItem(sellItemSelector, WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 	}
 	
-	private static WndBag.Listener sellItemSelector = new WndBag.Listener() {
+	private WndBag.Listener sellItemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
@@ -98,7 +99,7 @@ public class Shopkeeper extends NPC {
 				}
 
 				WndBag parentWnd = sell();
-				GameScene.show( new WndTradeItem( item, parentWnd ) );
+				GameScene.show( new WndTradeItem( item, parentWnd, Shopkeeper.this ) );
 			}
 		}
 	};
@@ -107,27 +108,18 @@ public class Shopkeeper extends NPC {
 		return new WndBag(belongings,belongings.backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
 	}
 
-	private static WndBag.Listener buyItemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-
-				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
-					GameScene.selectItemFromBag(buyItemSelector, (Bag)item , WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
-					return;
-				}
-				
-				GameScene.show( new WndTradeItem( item, true) );
-			}
+	private WndBag.Listener buyItemSelector = item -> {
+		if (item != null) {
+			GameScene.show( new WndTradeItem( item, true, Shopkeeper.this) );
 		}
 	};
 
 	@Override
 	public boolean interact(final Hero hero) {
-		GameScene.show(new WndOptions(Game.getVar(R.string.Shopkeeper_title),
+		GameScene.show(new WndOptions(getName(),
 								Game.getVar(R.string.Shopkeeper_text),
-						Game.getVar(R.string.Shopkeeper_sell),
-								Game.getVar(R.string.Shopkeeper_buy)){
+								Game.getVar(R.string.Shopkeeper_SellPrompt),
+								Game.getVar(R.string.Shopkeeper_BuyPrompt)){
 			@Override
 			protected void onSelect(int index) {
 				switch (index) {
@@ -141,5 +133,21 @@ public class Shopkeeper extends NPC {
 			}
 		});
 		return true;
+	}
+
+	public void addItem(Item item) {
+		item.collect(belongings.backpack);
+	}
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		belongings.storeInBundle(bundle);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		belongings.restoreFromBundle(bundle);
 	}
 }

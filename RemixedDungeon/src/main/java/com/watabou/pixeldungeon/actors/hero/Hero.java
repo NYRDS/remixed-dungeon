@@ -85,6 +85,7 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
@@ -688,13 +689,13 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actBuy(CharAction.Buy action) {
 		int dst = action.dst;
-		if (getPos() == dst || Dungeon.level.adjacent(getPos(), dst)) {
+		if (getPos() == dst || level().adjacent(getPos(), dst)) {
 
 			readyAndIdle();
 
-			Heap heap = Dungeon.level.getHeap(dst);
+			Heap heap = level().getHeap(dst);
 			if (heap != null && heap.type == Type.FOR_SALE && heap.size() == 1) {
-				GameScene.show(new WndTradeItem(heap, true));
+				GameScene.show(new WndTradeItem(heap, true, null));
 			}
 
 			return false;
@@ -1074,13 +1075,13 @@ public class Hero extends Char implements PetOwner {
 		}
 
 		if (buff(HeartOfDarkness.HeartOfDarknessBuff.class) != null) {
-			int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());
+			int spiritPos = level().getEmptyCellNextTo(getPos());
 
-			if (Dungeon.level.cellValid(spiritPos)) {
+			if (level().cellValid(spiritPos)) {
 				SpiritOfPain spirit = new SpiritOfPain();
 				spirit.setPos(spiritPos);
 				Mob.makePet(spirit, this);
-				Dungeon.level.spawnMob(spirit, 0, getPos());
+				level().spawnMob(spirit, 0, getPos());
 			}
 		}
 
@@ -1765,6 +1766,11 @@ public class Hero extends Char implements PetOwner {
     }
 
 	public int gold() { // Gold should belong to Hero, not to Dungeon.
+		Gold gold = belongings.getItem(Gold.class);
+		if(gold != null) {
+			belongings.gold.quantity(belongings.gold.quantity() + gold.quantity());
+			belongings.removeItem(gold);
+		}
 	    return belongings.gold.quantity();
     }
 
@@ -1926,8 +1932,8 @@ public class Hero extends Char implements PetOwner {
 
 	public void collect(Item item) {
 		if (!item.collect(this)) {
-			if (Dungeon.level != null && getPos() != 0) {
-				Dungeon.level.drop(item, getPos()).sprite.drop();
+			if (level() != null && getPos() != 0) {
+				level().drop(item, getPos()).sprite.drop();
 			}
 		}
 	}

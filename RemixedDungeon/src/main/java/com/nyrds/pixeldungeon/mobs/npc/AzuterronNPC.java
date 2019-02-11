@@ -11,20 +11,18 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndQuest;
-import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class AzuterronNPC extends NPC {
+public class AzuterronNPC extends Shopkeeper {
 
 	public AzuterronNPC() {
 		movable = false;
@@ -68,26 +66,11 @@ public class AzuterronNPC extends NPC {
 		return true;
 	}
 
-	public static WndBag sell() {
-		return GameScene.selectItem( itemSelector, WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
-	}
-
-	private static WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				WndBag parentWnd = sell();
-				GameScene.show( new WndTradeItem( item, parentWnd ) );
-			}
-		}
-	};
-
 	@Override
 	public boolean interact(final Hero hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		if(Quest.completed) {
-			sell();
-			return true;
+			return super.interact(hero);
 		}
 		if (Quest.given) {
 			

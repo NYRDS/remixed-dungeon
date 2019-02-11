@@ -169,7 +169,7 @@ public class WndBag extends WndTabbed {
 			new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
 	}
 	
-	protected void placeItems( Bag container ) {
+	private void placeItems(Bag container) {
 		
 		// Equipped items
 		if(stuff == Dungeon.hero.belongings) {
@@ -187,7 +187,7 @@ public class WndBag extends WndTabbed {
 		while (count-4 < container.size) {
 			placeItem( null );
 		}
-		
+
 		// Gold
 		if (container == Dungeon.hero.belongings.backpack) {
 			row = nRows - 1;
@@ -196,8 +196,8 @@ public class WndBag extends WndTabbed {
 		}
 	}
 	
-	protected void placeItem( final Item item ) {
-		
+	private void placeItem(final Item item) {
+
 		int x = col * (SLOT_SIZE + SLOT_MARGIN);
 		int y = (int) (txtTitle.height() + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
 

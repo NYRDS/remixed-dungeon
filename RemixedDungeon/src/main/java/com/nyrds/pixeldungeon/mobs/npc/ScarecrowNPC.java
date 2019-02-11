@@ -12,9 +12,7 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndQuest;
-import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 
 public class ScarecrowNPC extends ImmortalNPC {
@@ -30,20 +28,6 @@ public class ScarecrowNPC extends ImmortalNPC {
 		spend(TICK);
 		return true;
 	}
-
-	private static WndBag sell() {
-		return GameScene.selectItem(itemSelector, WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
-	}
-
-	private static WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect(Item item) {
-			if (item != null) {
-				WndBag parentWnd = sell();
-				GameScene.show(new WndTradeItem(item, parentWnd));
-			}
-		}
-	};
 
 	public static void spawn(RegularLevel level) {
 		ScarecrowNPC npc = new ScarecrowNPC();

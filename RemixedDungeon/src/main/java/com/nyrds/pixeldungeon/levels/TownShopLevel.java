@@ -3,9 +3,7 @@ package com.nyrds.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
@@ -25,7 +23,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TownShopLevel extends Level {
@@ -59,56 +56,9 @@ public class TownShopLevel extends Level {
 
 		setFeeling(Feeling.NONE);
 
-		makeShop();
 		return true;
 	}
 
-	private void makeShop(){
-		ArrayList<Item> items = new ArrayList<>();
-
-		items.add( new LeatherArmor().identify() );
-		items.add( new Dagger().identify() );
-		items.add( new Knuckles().identify() );
-		items.add( new Sword().identify() );
-		items.add( new Quarterstaff().identify() );
-		items.add( new TomeOfKnowledge().identify() );
-
-		for (int i = 0; i <3; i++){
-			items.add( new OverpricedRation() );
-			items.add( new Dart(5).identify() );
-			items.add( new CommonArrow(25) );
-			items.add( new Torch().identify() );
-		}
-
-		items.add( new Keyring());
-		items.add( new ScrollHolder());
-		items.add( new PotionBelt());
-		items.add( new SeedPouch());
-		items.add( new Quiver());
-		items.add( new WandHolster());
-
-		Item[] range = items.toArray(new Item[0]);
-
-		for (Item item : range) {
-			itemForSell(item);
-		}
-	}
-
-	public void itemForSell(Item item) {
-		int cell;
-		int ctr = 0;
-		do {
-			ctr++;
-			if(ctr>25) {
-				return;
-			}
-
-			cell = getRandomTerrainCell(Terrain.EMPTY_SP);
-
-		} while (getHeap(cell) != null);
-
-		drop(item, cell).type = Heap.Type.FOR_SALE;
-	}
 
 	@Override
 	protected void decorate() {
@@ -116,7 +66,29 @@ public class TownShopLevel extends Level {
 
 	@Override
 	protected void createMobs() {
-		Mob shopkeeper =  new TownShopkeeper();
+		Shopkeeper shopkeeper =  new TownShopkeeper();
+
+		shopkeeper.addItem( new LeatherArmor().identify() );
+		shopkeeper.addItem( new Dagger().identify() );
+		shopkeeper.addItem( new Knuckles().identify() );
+		shopkeeper.addItem( new Sword().identify() );
+		shopkeeper.addItem( new Quarterstaff().identify() );
+		shopkeeper.addItem( new TomeOfKnowledge().identify() );
+
+		for (int i = 0; i <3; i++){
+			shopkeeper.addItem( new OverpricedRation() );
+			shopkeeper.addItem( new Dart(5).identify() );
+			shopkeeper.addItem( new CommonArrow(25) );
+			shopkeeper.addItem( new Torch().identify() );
+		}
+
+		shopkeeper.addItem( new Keyring());
+		shopkeeper.addItem( new ScrollHolder());
+		shopkeeper.addItem( new PotionBelt());
+		shopkeeper.addItem( new SeedPouch());
+		shopkeeper.addItem( new Quiver());
+		shopkeeper.addItem( new WandHolster());
+		
 		shopkeeper.setPos(this.getRandomTerrainCell(Terrain.EMPTY));
 		this.mobs.add( shopkeeper );
 	}

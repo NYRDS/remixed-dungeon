@@ -62,8 +62,8 @@
 	<string name="BlackCat_AiStatus">This cat is doing ordinary cat things</string>
 	<string name="Shopkeeper_Buy">Select item to buy</string>
 	<string name="Shopkeeper_title">Shop</string>
-	<string name="Shopkeeper_text">What did you want?</string>
-	<string name="Shopkeeper_sell">Sell</string>
-	<string name="Shopkeeper_buy">Buy</string>
+	<string name="Shopkeeper_text">Welcome to local Pixel-Mart branch.\nHow can I help you?</string>
+	<string name="Shopkeeper_SellPrompt">I have stuff to sell</string>
+	<string name="Shopkeeper_BuyPrompt">Let see your inventory</string>
 
 </resources>

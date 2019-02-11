@@ -80,6 +80,7 @@ class ItemButton extends ItemSlot {
 
                     case ALL:
                     case QUICKSLOT:
+                    case FOR_BUY:
                         enableItem = true;
                         break;
                     case UNIDENTIFED:

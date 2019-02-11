@@ -18,9 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -67,10 +65,7 @@ public class Belongings implements Iterable<Item> {
 	public Belongings( Char owner ) {
 		this.owner = owner;
 		
-		backpack = new Bag() {{
-			name = Game.getVar(R.string.Belongings_Name);
-			size = BACKPACK_SIZE;
-		}};
+		backpack = new Backpack();
 		backpack.owner = owner;
 	}
 	
@@ -380,4 +375,5 @@ public class Belongings implements Iterable<Item> {
 	public static int getBackpackSize(){
 		return BACKPACK_SIZE;
 	}
+
 }

@@ -67,7 +67,7 @@ public class Bag extends Item implements Iterable<Item> {
 			
 			owner = container.owner;
 			
-			for (Item item : container.items.toArray(new Item[container.items.size()])) {
+			for (Item item : container.items.toArray(new Item[0])) {
 				if (grab( item )) {
 					item.detachAll( container );
 					item.collect( this );
