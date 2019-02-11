@@ -147,9 +147,43 @@ public class WndTradeItem extends Window {
 
 		vbox.setPos(0, pos+GAP);
 		resize( WIDTH, (int)vbox.bottom());
+	}
+
+	public WndTradeItem(final Item item, boolean canBuy) {
+		float pos = createDescription( item, true );
+
+		add(vbox);
+
+		int price = price( item );
+
+		if (canBuy) {
+
+			RedButton btnBuy = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Buy), price ) ) {
+				@Override
+				protected void onClick() {
+					hide();
+					buy( item );
+				}
+			};
+			btnBuy.setSize(WIDTH, BTN_HEIGHT );
+			btnBuy.enable( price <= Dungeon.hero.gold());
+			vbox.add( btnBuy );
+
+			RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
+				@Override
+				protected void onClick() {
+					hide();
+				}
+			};
+			btnCancel.setSize( WIDTH, BTN_HEIGHT );
+			vbox.add( btnCancel );
+		}
+
+		vbox.setPos(0, pos+GAP);
+		resize( WIDTH, (int)vbox.bottom());
 
 	}
-	
+
 	@Override
 	public void hide() {
 		
@@ -241,7 +275,28 @@ public class WndTradeItem extends Window {
 		}
 		return price;
 	}
-	
+
+	private void buy( Item item ) {
+
+		Hero hero = Dungeon.hero;
+
+		int price = price( item );
+		hero.spendGold(price);
+
+		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), item.name(), price );
+
+		if (!item.doPickUp( hero )) {
+			Dungeon.level.drop( item, hero.getPos() ).sprite.drop();
+		}
+
+		Item newItem;
+		do {
+			newItem = Generator.random();
+		} while (newItem instanceof Gold);
+
+		placeItemInShop(newItem);
+	}
+
 	private void buy( Heap heap ) {
 		
 		Hero hero = Dungeon.hero;

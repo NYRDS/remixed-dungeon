@@ -39,6 +39,7 @@ public class Shopkeeper extends NPC {
 	{
 		spriteClass = ShopkeeperSprite.class;
 		movable = false;
+		belongings = new Belongings(this);
 	}
 
 	private Belongings belongings;
@@ -102,8 +103,8 @@ public class Shopkeeper extends NPC {
 		}
 	};
 
-	private static WndBag buy() {
-		return GameScene.selectItem(buyItemSelector, WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Sell));
+	private WndBag buy() {
+		return new WndBag(belongings,belongings.backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
 	}
 
 	private static WndBag.Listener buyItemSelector = new WndBag.Listener() {
@@ -115,16 +116,18 @@ public class Shopkeeper extends NPC {
 					GameScene.selectItemFromBag(buyItemSelector, (Bag)item , WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
 					return;
 				}
-
-				WndBag parentWnd = buy();
-				GameScene.show( new WndTradeItem( item, parentWnd ) );
+				
+				GameScene.show( new WndTradeItem( item, true) );
 			}
 		}
 	};
 
 	@Override
 	public boolean interact(final Hero hero) {
-		GameScene.show(new WndOptions("Shop","What did you want?","Wanna sell", "Wanna buy"){
+		GameScene.show(new WndOptions(Game.getVar(R.string.Shopkeeper_title),
+								Game.getVar(R.string.Shopkeeper_text),
+						Game.getVar(R.string.Shopkeeper_sell),
+								Game.getVar(R.string.Shopkeeper_buy)){
 			@Override
 			protected void onSelect(int index) {
 				switch (index) {
@@ -132,7 +135,7 @@ public class Shopkeeper extends NPC {
 						sell();
 						break;
 					case 1:
-						buy();
+						GameScene.show(buy());
 						break;
 				}
 			}
