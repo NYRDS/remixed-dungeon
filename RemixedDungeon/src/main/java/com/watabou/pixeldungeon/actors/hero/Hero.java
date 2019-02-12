@@ -1930,14 +1930,6 @@ public class Hero extends Char implements PetOwner {
 		readyAndIdle();
 	}
 
-	public void collect(Item item) {
-		if (!item.collect(this)) {
-			if (level() != null && getPos() != 0) {
-				level().drop(item, getPos()).sprite.drop();
-			}
-		}
-	}
-
 	public boolean isReady() {
 		return isAlive() && ready;
 	}
@@ -2044,4 +2036,9 @@ public class Hero extends Char implements PetOwner {
 	public void magicLvlUp() {
 		setMagicLvl(magicLvl() + 1);
 	}
+
+    @Override
+    public Belongings getBelongings() {
+        return belongings;
+    }
 }

@@ -290,6 +290,8 @@ public class WndTradeItem extends Window {
 
 		Hero hero = Dungeon.hero;
 
+		item = item.detachAll(shopkeeper.getBelongings().backpack);
+
 		int price = price( item );
 		hero.spendGold(price);
 

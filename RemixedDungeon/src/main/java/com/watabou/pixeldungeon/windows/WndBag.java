@@ -231,7 +231,7 @@ public class WndBag extends WndTabbed {
 	@Override
 	public void onClick( Tab tab ) {
 		hide();
-		GameScene.show( new WndBag(Dungeon.hero.belongings, ((BagTab)tab).bag, listener, mode, title ) );
+		GameScene.show( new WndBag(stuff, ((BagTab)tab).bag, listener, mode, title ) );
 	}
 	
 	@Override

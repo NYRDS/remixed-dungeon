@@ -23,13 +23,10 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
@@ -55,11 +52,7 @@ import com.watabou.pixeldungeon.levels.LastShopLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.Point;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class ShopPainter extends Painter {
 
@@ -70,116 +63,14 @@ public class ShopPainter extends Painter {
 		
 		pasWidth = room.width() - 2;
 		pasHeight = room.height() - 2;
-		int per = pasWidth * 2 + pasHeight * 2;
-		
-		Item[] range = range();
-		
-		int pos = xy2p( room, room.entrance() ) + (per - range.length) / 2;
-		for (int i=0; i < range.length; i++) {
-			
-			Point xy = p2xy( room, (pos + per) % per );
-			int cell = xy.x + xy.y * level.getWidth();
-			
-			if (level.getHeap( cell ) != null) {
-				do {
-					cell = room.random(level);
-				} while (level.getHeap( cell ) != null);
-			}
-			
-			level.drop( range[i], cell ).type = Heap.Type.FOR_SALE;
-			
-			pos++;
-		}
-		
+
 		placeShopkeeper( level, room );
 		
 		for (Room.Door door : room.connected.values()) {
 			door.set( Room.Door.Type.REGULAR );
 		}
 	}
-	
-	private static Item[] range() {
-		
-		ArrayList<Item> items = new ArrayList<>();
-		
-		switch (Dungeon.depth) {
 
-		case 6:
-			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
-			items.add( new LeatherArmor().identify() );
-			items.add( new Weightstone() );
-			items.add( new TomeOfKnowledge().identify() );
-			break;
-			
-		case 11:
-			items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
-			items.add( new MailArmor().identify() );
-			items.add( new Weightstone() );
-			items.add( new TomeOfKnowledge().identify() );
-			break;
-			
-		case 16:
-			items.add( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
-			items.add( new ScaleArmor().identify() );
-			items.add( new Weightstone() );
-			items.add( new TomeOfKnowledge().identify() );
-			break;
-			
-		case 21:
-			switch (Random.Int( 3 )) {
-			case 0:
-				items.add( new Glaive().identify() );
-				break;
-			case 1:
-				items.add( new WarHammer().identify() );
-				break;
-			case 2:
-				items.add( new PlateArmor().identify() );
-				break;
-			}
-			items.add( new Weightstone() );
-			items.add( new Torch() );
-			items.add( new Torch() );
-			break;
-
-		case 27:
-			switch (Random.Int( 3 )) {
-				case 0:
-					items.add( new Claymore().identify() );
-					break;
-				case 1:
-					items.add( new Halberd().identify() );
-					break;
-				case 2:
-					items.add( new GothicArmor().identify() );
-					break;
-			}
-			items.add( new PotionOfHealing() );
-			items.add( new PotionOfExperience());
-			items.add( new PotionOfMight());
-			break;
-		}
-		
-		items.add( new PotionOfHealing() );
-		for (int i=0; i < 2; i++) {
-			items.add( Generator.random( Generator.Category.POTION ) );
-		}
-		
-		items.add( new ScrollOfIdentify() );
-		items.add( new ScrollOfRemoveCurse() );
-		items.add( new ScrollOfMagicMapping() );
-		items.add( Generator.random( Generator.Category.SCROLL ) );
-		
-		items.add( new OverpricedRation() );
-		items.add( new OverpricedRation() );
-		
-		items.add( new Ankh() );
-
-		Collections.shuffle(items);
-
-		return items.toArray(new Item[items.size()]);
-	}
-	
 	private static void placeShopkeeper( Level level, Room room ) {
 		
 		int pos;
@@ -188,11 +79,86 @@ public class ShopPainter extends Painter {
 		} while (level.getHeap( pos ) != null);
 
 
-		Mob shopkeeper = level instanceof LastShopLevel ? new ImpShopkeeper() : new Shopkeeper();
+		Shopkeeper shopkeeper = level instanceof LastShopLevel ? new ImpShopkeeper() : new Shopkeeper();
 		if (Dungeon.depth == 27) {
 			shopkeeper = new AzuterronNPC();
 		}
 		shopkeeper.setPos(pos);
+
+		switch (Dungeon.depth) {
+
+			case 6:
+				shopkeeper.addItem( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
+				shopkeeper.addItem( new LeatherArmor().identify() );
+				shopkeeper.addItem( new Weightstone() );
+				shopkeeper.addItem( new TomeOfKnowledge().identify() );
+				break;
+
+			case 11:
+				shopkeeper.addItem( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
+				shopkeeper.addItem( new MailArmor().identify() );
+				shopkeeper.addItem( new Weightstone() );
+				shopkeeper.addItem( new TomeOfKnowledge().identify() );
+				break;
+
+			case 16:
+				shopkeeper.addItem( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
+				shopkeeper.addItem( new ScaleArmor().identify() );
+				shopkeeper.addItem( new Weightstone() );
+				shopkeeper.addItem( new TomeOfKnowledge().identify() );
+				break;
+
+			case 21:
+				switch (Random.Int( 3 )) {
+					case 0:
+						shopkeeper.addItem( new Glaive().identify() );
+						break;
+					case 1:
+						shopkeeper.addItem( new WarHammer().identify() );
+						break;
+					case 2:
+						shopkeeper.addItem( new PlateArmor().identify() );
+						break;
+				}
+				shopkeeper.addItem( new Weightstone() );
+				shopkeeper.addItem( new Torch() );
+				shopkeeper.addItem( new Torch() );
+				break;
+
+			case 27:
+				switch (Random.Int( 3 )) {
+					case 0:
+						shopkeeper.addItem( new Claymore().identify() );
+						break;
+					case 1:
+						shopkeeper.addItem( new Halberd().identify() );
+						break;
+					case 2:
+						shopkeeper.addItem( new GothicArmor().identify() );
+						break;
+				}
+				shopkeeper.addItem( new PotionOfHealing() );
+				shopkeeper.addItem( new PotionOfExperience());
+				shopkeeper.addItem( new PotionOfMight());
+				break;
+		}
+
+		shopkeeper.addItem( new PotionOfHealing() );
+		for (int i=0; i < 2; i++) {
+			shopkeeper.addItem( Generator.random( Generator.Category.POTION ) );
+		}
+
+		shopkeeper.addItem( new ScrollOfIdentify() );
+		shopkeeper.addItem( new ScrollOfRemoveCurse() );
+		shopkeeper.addItem( new ScrollOfMagicMapping() );
+		shopkeeper.addItem( Generator.random( Generator.Category.SCROLL ) );
+
+		shopkeeper.addItem( new OverpricedRation() );
+		shopkeeper.addItem( new OverpricedRation() );
+
+		shopkeeper.addItem( new Ankh() );
+
+
 		level.mobs.add( shopkeeper );
 		
 		if (level instanceof LastShopLevel) {

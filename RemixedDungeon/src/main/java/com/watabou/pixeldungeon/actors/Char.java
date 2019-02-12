@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -51,6 +52,7 @@ import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -59,6 +61,7 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
@@ -77,7 +80,7 @@ import java.util.Set;
 
 import androidx.annotation.NonNull;
 
-public abstract class Char extends Actor implements Presser{
+public abstract class Char extends Actor implements Presser, ItemOwner {
 
 	// Unreachable target
 	public static final Char DUMMY = new DummyChar();
@@ -727,6 +730,14 @@ public abstract class Char extends Actor implements Presser{
 		return movable;
 	}
 
+	public void collect(Item item) {
+		if (!item.collect(this)) {
+			if (level() != null && getPos() != 0) {
+				level().drop(item, getPos()).sprite.drop();
+			}
+		}
+	}
+
 	public int magicLvl() {
 		return 10;
 	}
@@ -785,4 +796,9 @@ public abstract class Char extends Actor implements Presser{
 
 	protected abstract boolean getCloser(final int cell);
 	protected abstract boolean getFurther(final int cell);
+
+	@Override
+	public Belongings getBelongings() {
+		return null;
+	}
 }

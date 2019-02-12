@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
@@ -33,6 +34,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -207,8 +209,13 @@ public class Item implements Bundlable, Presser {
 		}
 	}
 
-	public boolean collect(Hero hero) {
-		return collect(hero.belongings.backpack);
+	public boolean collect(ItemOwner hero) {
+		Belongings belongings = hero.getBelongings();
+		if(belongings==null) {
+			return false;
+		}
+
+		return collect(belongings.backpack);
 	}
 
 	public final Item detach(Bag container) {
@@ -219,7 +226,9 @@ public class Item implements Bundlable, Presser {
 				return detachAll(container);
 			} else {
 				quantity(quantity() - 1);
-				QuickSlot.refresh();
+				if(container.owner instanceof Hero) {
+					QuickSlot.refresh();
+				}
 				try {
 					Item detached = ItemFactory.itemByName(getClassName());
 					detached.level(level());
@@ -238,7 +247,9 @@ public class Item implements Bundlable, Presser {
 			if (item == this) {
 				container.items.remove(this);
 				item.onDetach();
-				QuickSlot.refresh();
+				if(container.owner instanceof Hero) {
+					QuickSlot.refresh();
+				}
 				return this;
 			} else if (item instanceof Bag) {
 				Bag bag = (Bag) item;

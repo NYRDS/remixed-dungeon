@@ -140,6 +140,11 @@ public class Shopkeeper extends NPC {
 	}
 
 	@Override
+	public Belongings getBelongings() {
+		return belongings;
+	}
+
+	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		belongings.storeInBundle(bundle);
