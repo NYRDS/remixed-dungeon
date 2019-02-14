@@ -66,4 +66,9 @@
 	<string name="Shopkeeper_SellPrompt">I have stuff to sell</string>
 	<string name="Shopkeeper_BuyPrompt">Let see your inventory</string>
 
+	<string name="WndTradeItem_BuyN">Buy %1$d for %2$dg</string>
+	<string name="WndTradeItem_BuyAll">Buy all for %dg</string>
+	<string name="WndTradeItem_SellN">Sell %1$d for %2$dg</string>
+
+
 </resources>

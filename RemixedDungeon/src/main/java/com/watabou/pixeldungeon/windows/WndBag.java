@@ -22,6 +22,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -133,19 +134,23 @@ public class WndBag extends WndTabbed {
 			stuff.getItem( WandHolster.class ),
 			stuff.getItem( Keyring.class ),
 			stuff.getItem( Quiver.class ) };
-		
-		for (Bag b : bags) {
-			if (b != null) {
-				BagTab tab = new BagTab(this, b );
-				if(RemixedDungeon.landscape()){
-					tab.setSize( TAB_WIDTH_L, tabHeight() );
-				} else {
-					tab.setSize( TAB_WIDTH_P, tabHeight() );
+
+
+		if(stuff.getOwner() instanceof Hero) {
+
+			for (Bag b : bags) {
+				if (b != null) {
+					BagTab tab = new BagTab(this, b);
+					if (RemixedDungeon.landscape()) {
+						tab.setSize(TAB_WIDTH_L, tabHeight());
+					} else {
+						tab.setSize(TAB_WIDTH_P, tabHeight());
+					}
+
+					add(tab);
+
+					tab.select(b == bag);
 				}
-				
-				add( tab );
-				
-				tab.select( b == bag );
 			}
 		}
 	}
@@ -172,7 +177,7 @@ public class WndBag extends WndTabbed {
 	private void placeItems(Bag container) {
 		
 		// Equipped items
-		if(stuff == Dungeon.hero.belongings) {
+		if(stuff.getOwner() instanceof Hero) {
 			placeItem(stuff.weapon != null ? stuff.weapon : new ItemPlaceholder(ItemSpriteSheet.WEAPON));
 			placeItem(stuff.armor != null ? stuff.armor : new ItemPlaceholder(ItemSpriteSheet.ARMOR));
 			placeItem(stuff.ring1 != null ? stuff.ring1 : new ItemPlaceholder(ItemSpriteSheet.RING));
@@ -189,10 +194,10 @@ public class WndBag extends WndTabbed {
 		}
 
 		// Gold
-		if (container == Dungeon.hero.belongings.backpack) {
+		if (stuff.getOwner() instanceof Hero) {
 			row = nRows - 1;
 			col = nCols - 1;
-			placeItem( new Gold(Dungeon.hero.gold()) );
+			placeItem( new Gold(((Hero)stuff.getOwner()).gold()) );
 		}
 	}
 	

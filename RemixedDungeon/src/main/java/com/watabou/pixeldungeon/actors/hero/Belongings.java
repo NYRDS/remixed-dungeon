@@ -315,6 +315,10 @@ public class Belongings implements Iterable<Item> {
 		return new ItemIterator(); 
 	}
 
+	public Object getOwner() {
+		return owner;
+	}
+
 	private class ItemIterator implements Iterator<Item> {
 
 		private int index = 0;
@@ -372,6 +376,30 @@ public class Belongings implements Iterable<Item> {
 		}
 	}
 
+	public boolean collect(Item newItem){
+		if(owner instanceof Hero) {
+			return newItem.collect(backpack);
+		}
+
+		if (backpack.items.contains(newItem)) {
+			return true;
+		}
+
+		if (newItem.stackable) {
+			String c = newItem.getClassName();
+			for (Item item : backpack.items) {
+				if (item.getClassName().equals(c) && item.level() == newItem.level()) {
+					item.quantity(item.quantity() + newItem.quantity());
+					return true;
+				}
+			}
+		}
+
+		backpack.items.add(newItem);
+
+		return true;
+	}
+	
 	public static int getBackpackSize(){
 		return BACKPACK_SIZE;
 	}

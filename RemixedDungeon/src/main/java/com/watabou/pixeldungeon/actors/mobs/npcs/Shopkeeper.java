@@ -110,7 +110,7 @@ public class Shopkeeper extends NPC {
 
 	private WndBag.Listener buyItemSelector = item -> {
 		if (item != null) {
-			GameScene.show( new WndTradeItem( item, true, Shopkeeper.this) );
+			GameScene.show( new WndTradeItem( item, Shopkeeper.this) );
 		}
 	};
 
@@ -136,7 +136,7 @@ public class Shopkeeper extends NPC {
 	}
 
 	public void addItem(Item item) {
-		item.collect(belongings.backpack);
+		item.collect(this);
 	}
 
 	@Override

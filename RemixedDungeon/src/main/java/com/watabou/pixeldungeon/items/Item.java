@@ -191,7 +191,6 @@ public class Item implements Bundlable, Presser {
 		}
 
 		if (items.size() < container.size) {
-
 			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
 				Badges.validateItemLevelAcquired(this);
 			}
@@ -200,37 +199,39 @@ public class Item implements Bundlable, Presser {
 			QuickSlot.refresh();
 			Collections.sort(items, itemComparator);
 			return true;
-
 		} else {
-
 			GLog.n(Game.getVar(R.string.Item_PackFull), name());
 			return false;
-
 		}
 	}
 
-	public boolean collect(ItemOwner hero) {
-		Belongings belongings = hero.getBelongings();
+	public boolean collect(ItemOwner owner) {
+		Belongings belongings = owner.getBelongings();
 		if(belongings==null) {
 			return false;
 		}
 
-		return collect(belongings.backpack);
+		return belongings.collect(this);
 	}
 
 	public final Item detach(Bag container) {
+		return detach(container, 1);
+	}
+
+	public final Item detach(Bag container, int n) {
 		if (quantity() <= 0) {
 			return null;
 		} else {
-			if (quantity() == 1) {
+			if (quantity() <= n) {
 				return detachAll(container);
 			} else {
-				quantity(quantity() - 1);
+				quantity(quantity() - n);
 				if(container.owner instanceof Hero) {
 					QuickSlot.refresh();
 				}
 				try {
 					Item detached = ItemFactory.itemByName(getClassName());
+					detached.quantity(n);
 					detached.level(level());
 					detached.onDetach();
 					return detached;
