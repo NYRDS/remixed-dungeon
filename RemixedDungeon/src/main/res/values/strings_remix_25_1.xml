@@ -6,13 +6,13 @@
 
     <!-- STRINGS OF BlackSkullOfMastery CLASS -->
     <string name="BlackSkullOfMastery_Name">The Soulbringer</string>
-    <string name="BlackSkullOfMastery_Info">It\'s an ancient artifact, crafted by first necromancers to collect souls of the fallen. Sensing your necromantic abilities it warded itself with a powerful spell. But since the spell is that of an old times, it\'s primitive structure is fairly easy to break.</string>
-    <string name="BlackSkullOfMastery_Title">You may break the spell. Or you may manipulate the magical formula in a way, which will allow you to consume powers of both spell and artifact itself, turning yourself into a Lich.</string>
+    <string name="BlackSkullOfMastery_Info">It\'s an ancient artifact, crafted by first necromancers to collect souls of the fallen one\'s. Sensing your necromantic abilities it warded itself with a powerful spell. But since the spell is that of the old times, it\'s primitive structure is fairly easy to break.</string>
+    <string name="BlackSkullOfMastery_Title">You may break the spell. Or you may manipulate it\'s magical formula in a way, which will allow you to consume powers of both the spell and artifact itself, turning yourself into a Lich.</string>
 
-    <string name="BlackSkullOfMastery_Lich">Become Lich</string>
+    <string name="BlackSkullOfMastery_Lich">Become a Lich</string>
     <string name="BlackSkullOfMastery_Necromancer">Break the spell</string>
-    <string name="BlackSkullOfMastery_BecomeLichDesc">The _Lich_ is a necromancer who reached pinnacle of his abilities. Existing between life and death _Lich_ excels in necromancy, but his combat skills are greatly reduced.</string>
-    <string name="BlackSkullOfMastery_RemainHumanDesc">Or if you _break the spell_ you\'ll be able to use this artifact as normal.</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">The _Lich_ is a necromancer who reached pinnacle of his abilities. Existing between life and death _Lich_ excels in necromancy, but his combat skills are greatly lower than those of an ordinary person.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Or if you _break the spell_ you\'ll be able to use this artifact as intended.</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Activated">The Black Skull has been awakened!</string>
@@ -21,12 +21,12 @@
 
     <!-- STRINGS OF NecromancerArmor CLASS -->
     <string name="NecromancerArmor_Name">Bone armor</string>
-    <string name="NecromancerArmor_Info">This armor will allow Necromancer to summon up to 2 Deathlings at a cost of 5 souls each. These undead servants will follow their master and attack his foes. The Deathlings becomes stronger with each hero level.</string>
+    <string name="NecromancerArmor_Info">This armor will allow the Necromancer to summon up to two Deathlings at a cost of 5 souls each. These undead servants will follow their master and attack his foes. The Deathlings become stronger with each hero level.</string>
     <string name="NecromancerArmor_NotNecromancer">Only necromancers can use this armor!</string>
 
     <!-- STRINGS OF NecromancerRobe CLASS -->
     <string name="NecromancerRobe_Name">necromancer robe</string>
-    <string name="NecromancerRobe_Info">This robe will allow Necromancer to summon a Deathling at a cost of 5 souls. The Deathlings is an undead minions that grows stronger alongside their master.</string>
+    <string name="NecromancerRobe_Info">This robe will allow the Necromancer to summon a Deathling at a cost of 5 souls. The Deathling is an undead minion that grows stronger alongside their master.</string>
 
     <!-- Hero descriptions -->
     <!-- STRINGS OF Necromancer CLASS -->
@@ -37,7 +37,7 @@
     <string-array name="HeroClass_NecromancerPerks">
         <item>Necromancers start with 15 hp.</item>
         <item>Necromancers use mana to cast Death spells.</item>
-        <item>Necromancers start with a unique Necromancer\'s robe, which grant 1 mana point for each slain creature.</item>
+        <item>Necromancers start with a unique Necromancer\'s robe, which grants 1 mana point for each slain creature.</item>
         <item>Necromancers start with a level 7 skeleton key.</item>
         <item>Potion of Healing are identified from the beginning.</item>
     </string-array>
@@ -46,7 +46,7 @@
     <string name="Deathling_Name">deathling</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name_Objective">deathling</string>
-    <string name="Deathling_Desc">Deathling is a soul of a fallen hero, that was unfortunate enough to be summoned by Necromantic powers of fellow adventurer.</string>
+    <string name="Deathling_Desc">The Deathling is a soul of a fallen hero who was unlucky enough to be summoned by a fellow adventurer, who practices necromancy.</string>
 
     <!-- Mechanics descriptions -->
     <!-- STRINGS OF Necromancy CLASS -->
@@ -57,10 +57,10 @@
 
     <string name="Necromancer_ACSpecial">NECROMANCY</string>
     <string name="Necromancy_ReincarnationName">Reincarnation</string>
-    <string name="Necromancy_ReincarnationTriggered">Your powers defies death! But you lost all collected souls and possessions.</string>
+    <string name="Necromancy_ReincarnationTriggered">Your powers reject death itself! But you lost all your collected souls and possessions.</string>
     <string name="Necromancy_SummonDeathlingName">Summon Deathling</string>
 
-    <string name="Necromancy_BecameALich">You became a Lich! Your power grows and your soul capacity has doubled! But you lost %1$d points of strength. </string>
+    <string name="Necromancy_BecameALich">You became a Lich! Your powers grow and your soul capacity has been doubled! But you lost %1$d points of strength.</string>
 
     <!-- Scene descriptions -->
     <!-- STRINGS OF StartScene CLASS -->
@@ -70,7 +70,7 @@
     <string name="Necromancy_Title">Necromancy</string>
 
     <!-- STRINGS OF WndSadGhostNecro CLASS -->
-    <string name="WndSadGhostNecro_Text">\"This spirit seems to be struggling in his curse. It appears that he wants something of me. If I use my necromantic powers, I\'ll be able to persuade him that I already done as he asked. That way I won\'t need to waste my time here. Should I do such a thing?\"</string>
+    <string name="WndSadGhostNecro_Text">This spirit seems to be struggling in his curse. It looks that it wants to ask me something. With the help of necromancy, I could convince him that the request was fulfilled. It will save me time. But is it worth doing so?</string>
     <string name="WndSadGhostNecro_Yes">Yes, bend it to your will.</string>
     <string name="WndSadGhostNecro_No">No, let it talk.</string>
     <string name="WndSadGhostNecro_Persuaded">The sad ghost has been dominated!</string>

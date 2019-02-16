@@ -14,7 +14,7 @@
     <string name="TownsfolkNPC_Name">townsfolk</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Name_Objective">townsfolk</string>
-    <string name="TownsfolkNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes does look expensive</string>
+    <string name="TownsfolkNPC_Desc">One of the locals. Even though this is clearly a commoner, those clothes do look expensive.</string>
     <string name="TownsfolkNPC_Message1">Ah! Another adventurer, lovely! Make sure to loot as many valuables as you can!</string>
     <string name="TownsfolkNPC_Message2">Town became so wealthy thanks to that dungeon, that everyone in town can afford to go on a vacation whenever we please! In fact that\'s why there is so few people in here right now.</string>
     <string name="TownsfolkNPC_Message3">What a lovely day.</string>
@@ -27,13 +27,13 @@
     <string name="HealerNPC_Desc">An old man, somehow he looks like someone who would be making wands.</string>
     <string name="HealerNPC_Message1">Free treatment for every adventurer!</string>
     <string name="HealerNPC_Message2">Come back anytime you feel sick or hungry!</string>
-    <string name="HealerNPC_Message3">I wonder why church doesn\'t allow us to wear hats... it\'s really cold out here.</string>
+    <string name="HealerNPC_Message3">I wonder why the church doesn\'t allow us to wear hats... it\'s really cold out here.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Name">employee</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Name_Objective">employee</string>
-    <string name="ServiceManNPC_Desc">A regular worker of local establishments.</string>
+    <string name="ServiceManNPC_Desc">A regular worker of the local establishments.</string>
 
     <!-- STRINGS OF TownShopkeeper CLASS -->
     <string name="TownShopkeeper_Name">shopkeeper</string>
@@ -43,15 +43,15 @@
     <!-- STRINGS OF WndMovieTheatre CLASS -->
     <string name="WndMovieTheatre_Watch">watch a movie</string>
     <string name="WndMovieTheatre_No">leave</string>
-    <string name="WndMovieTheatre_Bye">Come back any time, we always happy to see you!</string>
-    <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theatre! We provide a special service, you can watch a movie for free, and if you\'ll see it all the through you will be rewarded with %d gold coins!</string>
+    <string name="WndMovieTheatre_Bye">Come back any time, we are always happy to see you!</string>
+    <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theater! We provide a special service, where you can watch a movie for free. And if you watch trough all of it, you will be rewarded with %d gold coins!</string>
     <string name="WndMovieTheatre_Title">Movie Theatre</string>
     <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
 
     <!-- STRINGS OF WndPriest CLASS -->
     <string name="WndPriest_Heal">heal - %d gold</string>
-    <string name="WndPriest_Instruction_m">Welcome my son, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through, right now building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
-    <string name="WndPriest_Instruction_f">Welcome my daughter, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through, right now building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
+    <string name="WndPriest_Instruction_m">Welcome my son, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through right now, because the building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
+    <string name="WndPriest_Instruction_f">Welcome my daughter, welcome to the holy church of great Santa the Depth Lord! Unfortunately I cannot let you pass through right now, because the building is under reconstruction, but if you seek help, I can provide healing service and food only for %d gold coins!</string>
     <string name="WndPriest_Title">Town priest</string>
 
     <!-- Custom tiles descriptions -->
@@ -63,19 +63,19 @@
     <string name="town_deco_wall_desc">A simple wall made of wood logs.</string>
 
     <string name="town_deco_snow_name">Snow</string>
-    <string name="town_deco_snow_desc">Despite rumors of how popular this place is, for adventurers, there is quite a lot of snow around here, like if nobody ever set their foot outside.</string>
+    <string name="town_deco_snow_desc">Despite the fame of this place among adventurers, there is surprisingly a lot of snow here. It seems that very few walk along these streets</string>
 
     <string name="town_deco_cross_name">Cross</string>
-    <string name="town_deco_cross_desc">A solid silver cross, a symbol of local religion - \"The Witnesses of Santa the Depth Lord\".</string>
+    <string name="town_deco_cross_desc">A solid silver cross, a symbol of the local religion - \"The Witnesses of Santa the Depth Lord\".</string>
 
     <string name="town_deco_bell_name">Bell</string>
-    <string name="town_deco_bell_desc">Typical church bell it appears that nobody ringed it for a while, the rope is nowhere to be seen.</string>
+    <string name="town_deco_bell_desc">A typical church bell. It looks like no one ringed it for quite a long time and even the rope is missing.</string>
 
     <string name="town_deco_bell_tower_name">Bell tower</string>
-    <string name="town_deco_bell_tower_desc">Traditionally church bells are installed in tall towers so that the ring could be heard from a great distances.</string>
+    <string name="town_deco_bell_tower_desc">Traditionally church bells are installed in tall towers so that the ringing could be heard from a greater distance.</string>
 
     <string name="town_deco_chimney_name">Chimney</string>
-    <string name="town_deco_chimney_desc">Stone chimney is a regular companion of houses build in regions often affected by cold weather.</string>
+    <string name="town_deco_chimney_desc">Stone chimney - a rightful companion for every housing, that is raised there, where freezing weathers are a common guest.</string>
 
     <string name="town_deco_window_name">Window</string>
     <string name="town_deco_window_desc">Generic glass window, nothing special.</string>
@@ -87,10 +87,10 @@
     <string name="town_deco_locked_door_desc">What in world could be behind that door?</string>
 
     <string name="town_deco_snowman_name">Snowman</string>
-    <string name="town_deco_snowman_desc">Snowman is a traditional town decoration for a holiday season, when people celebrate \"Dungeonmas\" a day, when monsters invaded the dungeon.</string>
+    <string name="town_deco_snowman_desc">Snowman is a traditional town decoration for the holiday season, placed in this place especially to celebrate \"Dungeonmas\" a day, when monsters invaded the dungeon.</string>
 
     <string name="town_deco_tree_name">Tree</string>
-    <string name="town_deco_tree_desc">It feels kind of weird to look upon a living tree, right next to an entrance to the dungeon, filled with horrors and death.</string>
+    <string name="town_deco_tree_desc">A strange feeling arises while looking at this living and such peaceful tree. After all,  not so far away lies a dungeon filled with horrors and death.</string>
 
     <string name="town_deco_pathway_name">Pathway</string>
     <string name="town_deco_pathway_desc">A pathway trampled in snow.</string>
@@ -105,7 +105,7 @@
     <string name="town_deco_floor_desc">This floor made of simple wooden planks. What exactly are you looking for?</string>
 
     <string name="town_deco_carpet_name">Carpet</string>
-    <string name="town_deco_carpet_desc">Luxurious red carpet reserved for a special guests.</string>
+    <string name="town_deco_carpet_desc">Luxurious red carpet reserved for special guests.</string>
 
     <string name="town_deco_movies_door_name">Door</string>
     <string name="town_deco_movies_door_desc">This door seems exceptionally well made. It probably leads to something incredible.</string>
@@ -116,9 +116,9 @@
 
     <string name="WndDonate_royalDonate">royal donation</string>
 
-    <string name="WndDonate_royalDonateText">I don\'t want to be weird, but by doing so, you literally feeding developers.</string>
+    <string name="WndDonate_royalDonateText">I don\'t want to sound weird, but by doing so, you are literally feeding the developers.</string>
 
-    <string name="WndDonate_royalDonateText2">Additionally you will receive every single hat from real money store! As well as every single hat that is going to be ever released.</string>
+    <string name="WndDonate_royalDonateText2">Additionally you will receive every single hat from the in-app store! As well as every single hat that is going to be ever released.</string>
 
     <!-- STRINGS OF WndPremiumSettings CLASS -->
     <string name="WndPremiumSettings_royal">royal</string>

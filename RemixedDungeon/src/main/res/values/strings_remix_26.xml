@@ -3,43 +3,43 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF SantaHat CLASS -->
     <string name="SantaHat_Name">Santa hat</string>
-    <string name="SantaHat_Info">Nothing says Dungeonmas like red silky hat of Santa the Depth Lord.</string>
+    <string name="SantaHat_Info">Nothing puts you into the "Dungeoning" mood as much as the red silk hat of Santa, Lord of the Depths.</string>
 
     <!-- STRINGS OF Rudolph CLASS -->
     <string name="Rudolph_Name">Red nose and antlers</string>
-    <string name="Rudolph_Info">What could be more festive than a glowing red nose? And pair of antlers, naturally.</string>
+    <string name="Rudolph_Info">What could be more festive than a glowing red nose? Together with a pair of antlers, of course.</string>
 
     <!-- Mobs descriptions -->
     <!-- STRINGS OF Kobold CLASS -->
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name_Objective">kobold</string>
-    <string name="Kobold_Desc">Kobolds were considered but a legend. An ancestors of common gnolls, kobolds dwell in a deep and cold caves. It is believed that their people mastered engineering and machinery long before dwarfs. Yet it is unknown why they disappeared so many years ago...</string>
+    <string name="Kobold_Desc">It was believed that Kobolds are nothing more but a legend. The ancestors of common gnolls, kobolds dwelled in the deepest and coldest caves. It is also told that their race mastered engineering and machinery long before dwarfs did.</string>
 
     <!-- STRINGS OF KoboldIcemancer CLASS -->
     <string name="KoboldIcemancer_Name">kobold icemancer</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Name_Objective">kobold icemancer</string>
-    <string name="KoboldIcemancer_Desc">Kobold icemancers were an elite of their society. A warriors, magicians and most importantly scientist. Ancient icemancers mastered craft of iceshaping creating sophisticated mechanism out of ice and reinforcing them with magic..</string>
+    <string name="KoboldIcemancer_Desc">Kobold Icemancers were the elite of society. Notable warriors, wizards and most importantly, scientists. Ancient ice-masters seized the art of commanding ice, creating complex mechanisms strengthened with special spells.</string>
     <string name="KoboldIcemancer_Killed">%s\'s ice bolt killed you...</string>
 
     <!-- STRINGS OF ColdSpirit CLASS -->
     <string name="ColdSpirit_Name">cold spirit</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">cold spirit</string>
-    <string name="ColdSpirit_Desc">A cold spirit is a manifestation of cold, in it\'s purest form. They are a mindless husks, created with magic, acting upon will of their creators or via basic instincts and reflexes.</string>
+    <string name="ColdSpirit_Desc">The cold spirit is the embodiment of frost, in it\'s purest form. Being a mindless clot of magical energy, he obeys the will of the mage who called him or instead acts accordingly to basic instincts.</string>
 
     <!-- STRINGS OF IceElemental CLASS -->
     <string name="IceElemental_Name">ice elemental</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name_Objective">ice elemental</string>
-    <string name="IceElemental_Desc">Amongst all elementals that exist in the dungeons the ice elemental might not be the toughest one, but he can easily be considered one of the most dangerous. It\'s body irradiates cold, slowing down it\'s enemies.</string>
+    <string name="IceElemental_Desc">Among all the elementals that exist in the dungeon, ice elementals can hardly be considered powerful, but they can truly be called one of the most dangerous ones. The frost aura that emits from their bodies can slow down any enemy.</string>
 
     <!-- STRINGS OF IceGuardian CLASS -->
     <string name="IceGuardian_Name">ice guardian</string>
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">ice guardian</string>
-    <string name="IceGuardian_Desc">Ice guardians were manufactured by ancient kobolds to protect their caves. Power stored within it\'s core allows Ice guardian to reconstruct itself as long it has enough energy.</string>
+    <string name="IceGuardian_Desc">Ice Guardians were created by the ancient kobolds to protect their caves. As long as the Guardian\’s core contains enough energy, he is able to reconstruct himself right in the heat of the battle.</string>
 
     <!-- STRINGS OF IceGuardianCore CLASS -->
     <string name="IceGuardianCore_Name">ice guardian</string>
@@ -52,7 +52,7 @@
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Name_Objective">caged kobold</string>
     <string name="CagedKobold_Desc">A kobold, in a cage.</string>
-    <string name="CagedKobold_Intro">Hey... HEY! You are that adventurer thing? Help me out pall, those bloody militarists locked me up. They intended to reactivate an ancient weapon to conquer human things above! I stood against it because it was to dangerous, and they just threw out of a council and chained me to this cage. Please find the key to this cage, in return I\'ll help you out the best I can.</string>
+    <string name="CagedKobold_Intro">Hey...Hey! You\'re that one adventurer thing, right? Help me out, pall, these damn militarists locked me up in here! They intend to reactivate an ancient weapon to conquer these human things on the surface! But considering how dangerous it is, I opposed it, but they just threw me out and locked me in a cage! I beg you to find the key to the cell, and in return, I will help you to the best of my ability.</string>
     <string name="CagedKobold_Quest_End">Oh, thank you, thank you so much! How you managed to find the key? You... you destroyed the weapon?! That\'s incredible! You know what, I said I\'ll help you, and I think I know the best way to do it. I\'ll stick with you for a while. * Caged Kobold has turned into a candle</string>
     <string name="CagedKobold_Message1">Please...</string>
     <string name="CagedKobold_Message2">You gotta help me out, buddy</string>
@@ -62,17 +62,17 @@
 
     <!-- Levels descriptions -->
     <!-- STRINGS OF IceCavesLevel CLASS -->
-    <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. It probably been in there for a while.</string>
+    <string name="IceCaves_TileDescDeco">This gnoll has been frozen alive. Apparently, he had been in there for quite a while.</string>
     <string name="IceCaves_TileHighGrass">Frozen high grass</string>
     <string name="IceCaves_TileGrass">Frozen grass.</string>
     <string name="IceCaves_TileDescHighGrass">Dense frozen vegetation block the view.</string>
     <string name="IceCaves_TileStatue">Frozen Gnoll</string>
-    <string name="IceCaves_TileDescStatue">Yet another awful statue... Oh wait that\'s frozen gnoll.</string>
+    <string name="IceCaves_TileDescStatue">Yet another awful statue... Oh wait that\'s a frozen gnoll.</string>
 
     <!-- Items descriptions -->
     <!-- STRINGS OF ChristmasTurkey CLASS -->
     <string name="ChristmasTurkey_Name">festive turkey</string>
-    <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to have a good bite of a roasted turkey. So you can to, honor the day monsters has invaded the dungeon, attracting adventurers and heroes from all over the world, thus boosting tourism and benefiting all sorts of local trades.</string>
+    <string name="ChristmasTurkey_Info">The best way to celebrate the Dungeonmas, is to eat a piece of baked turkey. In order to celebrate the day when monsters invaded the dungeon. Which in the end, attracted an incredible amount of tourists and travelers from all around the world, improving the economic situation in the region.</string>
 
     <!-- STRINGS OF IceKey CLASS -->
     <string name="IceKey_Name">ice key</string>
@@ -81,7 +81,7 @@
 
     <!-- STRINGS OF WandOfIcebolt CLASS -->
     <string name="WandOfIcebolt_Name">Wand of Icebolt</string>
-    <string name="WandOfIcebolt_Info">This wand launches an ice missile, dealing light damage to a target creature. It has chance to slow down or even freeze it\'s target.</string>
+    <string name="WandOfIcebolt_Info">This wand launches an ice bolt, dealing light damage to the target. There is also a chance to slow down or even freeze the enemy.</string>
     <string name="WandOfIcebolt_Info1">You killed yourself with your own Wand of Icebolt...</string>
 
     <!-- Badges -->
