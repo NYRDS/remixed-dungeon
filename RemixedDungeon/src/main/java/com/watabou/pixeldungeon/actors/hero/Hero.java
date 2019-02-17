@@ -1757,27 +1757,16 @@ public class Hero extends Char implements PetOwner {
 		return smthFound;
 	}
 
-	public void gold(int gold) {
-	    belongings.gold.quantity(gold);
-    }
-
 	public void spendGold(int spend) {
-	    gold(gold()-spend);
+
+		Gold gold = belongings.getItem(Gold.class);
+
+		gold.quantity(gold.quantity()-spend);
     }
 
-	public int gold() { // Gold should belong to Hero, not to Dungeon.
-		Gold gold = belongings.getItem(Gold.class);
-		if(gold != null) {
-			belongings.gold.quantity(belongings.gold.quantity() + gold.quantity());
-			belongings.removeItem(gold);
-		}
-	    return belongings.gold.quantity();
-    }
 
 	public void resurrect(int resetLevel) {
-
 		hp(ht());
-		gold(0);
 		setExp(0);
 
 		belongings.resurrect(resetLevel);

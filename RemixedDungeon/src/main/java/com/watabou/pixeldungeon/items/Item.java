@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -390,6 +391,11 @@ public class Item implements Bundlable, Presser {
 	}
 
 	public void quantity(int value) {
+
+		if(value < 0) {
+			EventCollector.logException();
+		}
+
 		quantity = Scrambler.scramble(value);
 	}
 

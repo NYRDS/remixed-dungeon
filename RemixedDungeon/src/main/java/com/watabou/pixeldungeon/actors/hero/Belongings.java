@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -59,9 +58,6 @@ public class Belongings implements Iterable<Item> {
 	public Artifact     ring1  = null;
 	public Artifact     ring2  = null;
 
-	@NonNull
-	public Gold         gold   = new Gold(0);
-
 	public Belongings( Char owner ) {
 		this.owner = owner;
 		
@@ -83,7 +79,6 @@ public class Belongings implements Iterable<Item> {
 		bundle.put( ARMOR, armor );
 		bundle.put( RING1, ring1 );
 		bundle.put( RING2, ring2 );
-		bundle.put( GOLD,  gold );
 	}
 	
 	public void restoreFromBundle( Bundle bundle ) {
@@ -107,10 +102,6 @@ public class Belongings implements Iterable<Item> {
 		if (ring2 != null) {
 			ring2.activate( owner );
 		}
-
-		Gold storedGold = (Gold) bundle.get(GOLD);
-		//pre 28.5 saves compatibility
-		gold = storedGold != null ? storedGold : gold;
 	}
 
 

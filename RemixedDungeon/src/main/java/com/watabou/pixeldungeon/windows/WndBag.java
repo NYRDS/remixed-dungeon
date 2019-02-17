@@ -185,7 +185,9 @@ public class WndBag extends WndTabbed {
 		}
 		// Unequipped items
 		for (Item item : container.items) {
-			placeItem( item );
+			if(! (item instanceof Gold)) {
+				placeItem(item);
+			}
 		}
 		
 		// Empty slots
@@ -197,7 +199,11 @@ public class WndBag extends WndTabbed {
 		if (stuff.getOwner() instanceof Hero) {
 			row = nRows - 1;
 			col = nCols - 1;
-			placeItem( new Gold(((Hero)stuff.getOwner()).gold()) );
+
+			Gold gold = stuff.getItem(Gold.class);
+			if(gold!=null) {
+				placeItem(gold);
+			}
 		}
 	}
 	

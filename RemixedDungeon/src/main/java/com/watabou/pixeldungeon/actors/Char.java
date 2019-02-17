@@ -61,6 +61,7 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -801,4 +802,13 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 	public Belongings getBelongings() {
 		return null;
 	}
+
+    public int gold() {
+		Belongings belongings = getBelongings();
+		if(belongings!=null) {
+			Gold gold = belongings.getItem(Gold.class);
+			return gold.quantity();
+		}
+		return 0;
+    }
 }
