@@ -218,6 +218,10 @@ public class WndBag extends WndTabbed {
 	
 	private void placeItem(final Item item) {
 
+		if(row >=nRows) {
+			return;
+		}
+
 		int x = col * (SLOT_SIZE + SLOT_MARGIN);
 		int y = (int) (txtTitle.height() + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
 

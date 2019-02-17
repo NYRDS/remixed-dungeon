@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -129,7 +130,7 @@ public class Buff extends Actor {
 			for (int i = 0; i < n; i++) {
 				Item item = hero.belongings.randomUnequipped();
 
-				if (item == null) {
+				if (item == null || item instanceof Bag) {
 					continue;
 				}
 

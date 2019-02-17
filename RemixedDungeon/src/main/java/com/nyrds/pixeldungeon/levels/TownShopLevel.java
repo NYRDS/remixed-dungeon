@@ -64,10 +64,9 @@ public class TownShopLevel extends Level {
 	protected void decorate() {
 	}
 
-	@Override
-	protected void createMobs() {
-		Shopkeeper shopkeeper =  new TownShopkeeper();
 
+	static public void fillInventory(Shopkeeper shopkeeper)
+	{
 		shopkeeper.addItem( new LeatherArmor().identify() );
 		shopkeeper.addItem( new Dagger().identify() );
 		shopkeeper.addItem( new Knuckles().identify() );
@@ -88,7 +87,14 @@ public class TownShopLevel extends Level {
 		shopkeeper.addItem( new SeedPouch());
 		shopkeeper.addItem( new Quiver());
 		shopkeeper.addItem( new WandHolster());
-		
+	}
+
+	@Override
+	protected void createMobs() {
+		Shopkeeper shopkeeper =  new TownShopkeeper();
+
+		fillInventory(shopkeeper);
+
 		shopkeeper.setPos(this.getRandomTerrainCell(Terrain.EMPTY));
 		this.mobs.add( shopkeeper );
 	}

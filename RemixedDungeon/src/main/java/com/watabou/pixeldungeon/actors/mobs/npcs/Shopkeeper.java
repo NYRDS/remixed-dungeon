@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.levels.PredesignedLevel;
+import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -29,6 +31,7 @@ import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -49,7 +52,7 @@ public class Shopkeeper extends NPC {
 	private Belongings belongings;
 
 	@Nullable
-	private WndBag     wndBag;
+	private WndBag wndBag;
 
 	@Override
     public boolean act() {
@@ -94,17 +97,31 @@ public class Shopkeeper extends NPC {
 		return true;
 	}
 
+
+	@Override
+	public void onSpawn(Level level) {
+		super.onSpawn(level);
+
+		if(level instanceof PredesignedLevel) {
+			TownShopLevel.fillInventory(this);
+		}
+	}
+
 	private WndBag.Listener sellItemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
 
+				if(wndBag!=null) {
+					wndBag.hide();
+					wndBag = null;
+				}
+
 				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
-					GameScene.selectItemFromBag(sellItemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
+					wndBag = GameScene.selectItemFromBag(sellItemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 					return;
 				}
-				wndBag.hide();
-				wndBag = null;
+
 				//GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, wndBag) );
 				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, null) );
 			}
@@ -113,8 +130,10 @@ public class Shopkeeper extends NPC {
 
 	private WndBag.Listener buyItemSelector = item -> {
 		if (item != null) {
-			wndBag.hide();
-			wndBag = null;
+			if(wndBag!=null) {
+				wndBag.hide();
+				wndBag = null;
+			}
 			//GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, wndBag) );
 			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, null) );
 		}

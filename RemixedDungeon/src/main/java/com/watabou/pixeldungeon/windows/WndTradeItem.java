@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -61,6 +62,12 @@ public class WndTradeItem extends Window {
 	public WndTradeItem(final Item item, ItemOwner shopkeeper, boolean buy, @Nullable WndBag wndBag) {
 
 		super();
+
+		for(Gizmo g: GameScene.scene.members){
+			if(g instanceof WndBag) {
+				((WndBag) g).hide();
+			}
+		}
 
 		if(wndBag!=null && !wndBag.hasParent())
 		{
