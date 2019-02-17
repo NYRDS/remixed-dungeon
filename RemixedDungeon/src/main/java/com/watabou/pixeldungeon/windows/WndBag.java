@@ -173,9 +173,11 @@ public class WndBag extends WndTabbed {
 			new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
 	}
 
-	public void updateItems() {
+	public WndBag updateItems() {
 		hide();
-		GameScene.show( new WndBag(stuff, stuff.backpack, listener, mode, title ) );
+		WndBag wndBag =  new WndBag(stuff, stuff.backpack, listener, mode, title );
+		GameScene.show( wndBag );
+		return wndBag;
 	}
 
 	private void placeItems(Bag container) {

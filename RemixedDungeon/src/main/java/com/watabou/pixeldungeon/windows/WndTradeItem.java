@@ -279,7 +279,7 @@ public class WndTradeItem extends Window {
 		item = item.detach( customer.getBelongings().backpack, quantity );
 
 		if(wndBag!=null) {
-			wndBag.updateItems();
+			wndBag=wndBag.updateItems();
 		}
 
 		int price = price(item, false);
@@ -337,7 +337,7 @@ public class WndTradeItem extends Window {
 		item = item.detach(shopkeeper.getBelongings().backpack, quantity);
 
 		if(wndBag!=null) {
-			wndBag.updateItems();
+			wndBag=wndBag.updateItems();
 		}
 
 		int price = price( item, true );

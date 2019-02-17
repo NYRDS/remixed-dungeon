@@ -118,6 +118,9 @@ public class Shopkeeper extends NPC {
 								Game.getVar(R.string.Shopkeeper_BuyPrompt)){
 			@Override
 			protected void onSelect(int index) {
+				if (wndBag != null) {
+					wndBag.hide();
+				}
 				wndBag = null;
 
 				switch (index) {
