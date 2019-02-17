@@ -82,12 +82,14 @@ local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.Wa
 local wandOfTelekinesis = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis")
 local wandOfFirebolt = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfFirebolt")
 
-
 local Wands = {
     wandOfBlink = wandOfBlink,
     wandOfTelekinesis = wandOfTelekinesis,
     wandOfFirebolt = wandOfFirebolt
 }
+
+local ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory")
+local MobFactory  = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -96,8 +98,8 @@ local RPD = {
     SystemTime = luajava.bindClass("com.watabou.utils.SystemTime"),
     Terrain = luajava.bindClass("com.watabou.pixeldungeon.levels.Terrain"),
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
-    MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
-    ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
+    MobFactory = MobFactory,
+    ItemFactory = ItemFactory,
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
@@ -197,6 +199,13 @@ local RPD = {
 
     zapEffect = function (from, to, zapEffect)
         GameScene:zapEffect(from, to, zapEffect)
+    end,
+
+    item = function(itemClass, quantity)
+        quantity = quantity or 1
+        local item = ItemFactory:itemByName(itemClass)
+        item:quantity(quantity)
+        return item
     end
 }
 

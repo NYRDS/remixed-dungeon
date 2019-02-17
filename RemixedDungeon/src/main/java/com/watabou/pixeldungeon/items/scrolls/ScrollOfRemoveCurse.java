@@ -41,7 +41,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 		Sample.INSTANCE.play(Assets.SND_READ);
 		Invisibility.dispel(getUser());
 
-		boolean procced = uncurse(getUser().belongings);
+		boolean procced = uncurse(getUser().getBelongings());
 
 		Weakness.detach(getUser(), Weakness.class);
 
@@ -77,7 +77,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 		return procced;
 	}
 
-	private static boolean uncurse(Belongings belongings) {
+	public static boolean uncurse(Belongings belongings) {
 
 		Iterator<Item> itemIterator = belongings.iterator();
 

@@ -40,6 +40,7 @@ local dialog = function(index)
     if index == 2 then
         if client:gold() >= removeCursePrice then
             client:spendGold(removeCursePrice)
+            RPD.item("ScrollOfRemoveCurse"):uncurse(client:getBelongings())
             RPD.glogp("ScrollOfRemoveCurse_Proced")
             client:getSprite():emitter():start(RPD.Sfx.ShadowParticle.UP, 0.05, 10);
             return
@@ -59,7 +60,7 @@ return mob.init({
         client = chr
         npc = self
 
-        local priceFactor = RPD.RemixedDungeon:getDifficultyFactor() * math.pow( 1.1, client:lvl())
+        local priceFactor = RPD.RemixedDungeon:getDifficultyFactor() * math.pow( 1.05, (client:lvl()-1))
 
         lesserPrice      = 100 * priceFactor
         greatPrice       = 500 * priceFactor

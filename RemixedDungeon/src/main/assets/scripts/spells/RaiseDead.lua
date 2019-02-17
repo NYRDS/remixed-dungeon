@@ -18,7 +18,7 @@ local latest_kill_index = "__latest_dead_mob"
 local function updateLatestDeadMob(mob)
     local mobClass = mob:getMobClassName()
 
-    if mobClass ~= "MirrorImage" then
+    if mob:canBePet() and mobClass ~= "MirrorImage" then
         storage.put(latest_kill_index, {class = mob:getMobClassName(), pos = mob:getPos()})
     end
 end
