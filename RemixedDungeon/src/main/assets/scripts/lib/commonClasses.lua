@@ -47,7 +47,16 @@ local PseudoBlobs = {
 }
 
 local actions = {
-    eat = "Food_ACEat"
+    eat = "Food_ACEat",
+    light = "Torch_ACLight",
+    apply = "Weightstone_ACApply",
+    mine = "Pickaxe_ACMine",
+    plant = "Plant_ACPlant",
+    reforge = "ShortSword_ACReforge",
+    zap = "Wand_ACZap",
+    read = "Scroll_ACRead",
+    drink = "Drink_ACDrink",
+    equip ="EquipableItem_ACEquip"
 }
 
 local Objects = {
