@@ -708,9 +708,11 @@ public class GameScene extends PixelScene {
         }
     }
 
-    public static void selectItemFromBag(WndBag.Listener listener, Bag bag, Mode mode, String title) {
+    public static WndBag selectItemFromBag(WndBag.Listener listener, Bag bag, Mode mode, String title) {
         cancelCellSelector();
-        scene.add(new WndBag(Dungeon.hero.belongings, bag, listener, mode, title));
+        WndBag wnd = new WndBag(Dungeon.hero.belongings, bag, listener, mode, title);
+        scene.add(wnd);
+        return wnd;
     }
 
     public static WndBag selectItem(WndBag.Listener listener, WndBag.Mode mode, String title) {

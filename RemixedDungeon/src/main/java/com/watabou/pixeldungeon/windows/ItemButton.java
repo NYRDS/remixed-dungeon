@@ -137,8 +137,9 @@ class ItemButton extends ItemSlot {
     @Override
     protected void onClick() {
         if (wndBag.getListener() != null) {
-            
-            wndBag.hide();
+            if(wndBag.hideOnSelect()) {
+                wndBag.hide();
+            }
             wndBag.getListener().onSelect( item );
             
         } else {
@@ -151,7 +152,9 @@ class ItemButton extends ItemSlot {
     @Override
     protected boolean onLongClick() {
         if (wndBag.getListener() == null) {
-            wndBag.hide();
+            if(wndBag.hideOnSelect()) {
+                wndBag.hide();
+            }
             QuickSlot.selectSlotFor(item.quickSlotContent());
             return true;
         } else {

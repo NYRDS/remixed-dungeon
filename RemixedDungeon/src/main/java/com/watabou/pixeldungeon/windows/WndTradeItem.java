@@ -42,6 +42,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class WndTradeItem extends Window {
 
@@ -52,12 +53,16 @@ public class WndTradeItem extends Window {
 	private ItemOwner  shopkeeper;
 	private Hero       customer;
 
+	@Nullable
+	private WndBag     wndBag;
+
 	private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
 
-	public WndTradeItem(final Item item, ItemOwner shopkeeper, boolean buy ) {
+	public WndTradeItem(final Item item, ItemOwner shopkeeper, boolean buy, @Nullable WndBag wndBag) {
 		
 		super();
 
+		this.wndBag     = wndBag;
 		this.shopkeeper = shopkeeper;
 		this.customer   = Dungeon.hero;
 
@@ -272,7 +277,11 @@ public class WndTradeItem extends Window {
 		}
 
 		item = item.detach( customer.getBelongings().backpack, quantity );
-		
+
+		if(wndBag!=null) {
+			wndBag.updateItems();
+		}
+
 		int price = price(item, false);
 		
 		new Gold( price ).doPickUp( customer );
@@ -280,10 +289,11 @@ public class WndTradeItem extends Window {
 
 		Item leftover = customer.getBelongings().getItem(item.getClassName());
 		if(leftover != null && leftover.quantity() > 0) {
-			GameScene.show(new WndTradeItem(leftover,shopkeeper,false));
-		} else {
-			placeItemInShop(item);
+			GameScene.show(new WndTradeItem(leftover,shopkeeper,false, wndBag));
 		}
+
+		placeItemInShop(item);
+
 		hide();
 
 	}
@@ -326,6 +336,10 @@ public class WndTradeItem extends Window {
 
 		item = item.detach(shopkeeper.getBelongings().backpack, quantity);
 
+		if(wndBag!=null) {
+			wndBag.updateItems();
+		}
+
 		int price = price( item, true );
 		customer.spendGold(price);
 
@@ -337,13 +351,12 @@ public class WndTradeItem extends Window {
 
 		Item leftover = shopkeeper.getBelongings().getItem(item.getClassName());
 		if(leftover != null) {
-			hide();
-			GameScene.show(new WndTradeItem(leftover,shopkeeper,true));
+			GameScene.show(new WndTradeItem(leftover,shopkeeper,true, wndBag));
 		}else {
 			generateNewItem();
 		}
-		hide();
 
+		hide();
 	}
 
 	private void buy( Heap heap ) {

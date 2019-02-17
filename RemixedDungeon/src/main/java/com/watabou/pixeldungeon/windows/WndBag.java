@@ -85,7 +85,7 @@ public class WndBag extends WndTabbed {
 	
 	private int nCols;
 	private int nRows;
-	
+
 	private static Mode lastMode;
 	private static Bag lastBag;
 	
@@ -125,18 +125,17 @@ public class WndBag extends WndTabbed {
 		resize( 
 			panelWidth, 
 			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + txtTitle.y + txtTitle.height() + SLOT_MARGIN) );
-		
-		Bag[] bags = {
-			stuff.backpack, 
-			stuff.getItem( PotionBelt.class ), 
-			stuff.getItem( SeedPouch.class ), 
-			stuff.getItem( ScrollHolder.class ),
-			stuff.getItem( WandHolster.class ),
-			stuff.getItem( Keyring.class ),
-			stuff.getItem( Quiver.class ) };
-
 
 		if(stuff.getOwner() instanceof Hero) {
+
+			Bag[] bags = {
+					stuff.backpack,
+					stuff.getItem( PotionBelt.class ),
+					stuff.getItem( SeedPouch.class ),
+					stuff.getItem( ScrollHolder.class ),
+					stuff.getItem( WandHolster.class ),
+					stuff.getItem( Keyring.class ),
+					stuff.getItem( Quiver.class ) };
 
 			for (Bag b : bags) {
 				if (b != null) {
@@ -173,15 +172,20 @@ public class WndBag extends WndTabbed {
 			new WndBag(Dungeon.hero.belongings, pouch, listener, mode, title ) :
 			new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
 	}
-	
+
+	public void updateItems() {
+		hide();
+		GameScene.show( new WndBag(stuff, stuff.backpack, listener, mode, title ) );
+	}
+
 	private void placeItems(Bag container) {
 		
 		// Equipped items
 		if(stuff.getOwner() instanceof Hero) {
 			placeItem(stuff.weapon != null ? stuff.weapon : new ItemPlaceholder(ItemSpriteSheet.WEAPON));
-			placeItem(stuff.armor != null ? stuff.armor : new ItemPlaceholder(ItemSpriteSheet.ARMOR));
-			placeItem(stuff.ring1 != null ? stuff.ring1 : new ItemPlaceholder(ItemSpriteSheet.RING));
-			placeItem(stuff.ring2 != null ? stuff.ring2 : new ItemPlaceholder(ItemSpriteSheet.RING));
+			placeItem(stuff.armor  != null ? stuff.armor  : new ItemPlaceholder(ItemSpriteSheet.ARMOR));
+			placeItem(stuff.ring1  != null ? stuff.ring1  : new ItemPlaceholder(ItemSpriteSheet.RING));
+			placeItem(stuff.ring2  != null ? stuff.ring2  : new ItemPlaceholder(ItemSpriteSheet.RING));
 		}
 		// Unequipped items
 		for (Item item : container.items) {
@@ -248,6 +252,10 @@ public class WndBag extends WndTabbed {
 	@Override
 	protected int tabHeight() {
 		return 20;
+	}
+
+	public boolean hideOnSelect() {
+		return  mode != Mode.FOR_SALE && mode != Mode.FOR_BUY;
 	}
 
 	public interface Listener {

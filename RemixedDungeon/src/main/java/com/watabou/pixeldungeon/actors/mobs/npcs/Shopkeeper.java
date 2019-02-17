@@ -35,6 +35,8 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 
+import androidx.annotation.Nullable;
+
 public class Shopkeeper extends NPC {
 
 	{
@@ -44,6 +46,9 @@ public class Shopkeeper extends NPC {
 	}
 
 	private Belongings belongings;
+
+	@Nullable
+	private WndBag     wndBag;
 
 	@Override
     public boolean act() {
@@ -83,11 +88,7 @@ public class Shopkeeper extends NPC {
 	public boolean reset() {
 		return true;
 	}
-	
-	public WndBag sell() {
-		return GameScene.selectItem(sellItemSelector, WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
-	}
-	
+
 	private WndBag.Listener sellItemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {
@@ -98,18 +99,14 @@ public class Shopkeeper extends NPC {
 					return;
 				}
 
-				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false ) );
+				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, wndBag) );
 			}
 		}
 	};
 
-	private WndBag buy() {
-		return new WndBag(belongings,belongings.backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
-	}
-
 	private WndBag.Listener buyItemSelector = item -> {
 		if (item != null) {
-			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true) );
+			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, wndBag) );
 		}
 	};
 
@@ -121,13 +118,19 @@ public class Shopkeeper extends NPC {
 								Game.getVar(R.string.Shopkeeper_BuyPrompt)){
 			@Override
 			protected void onSelect(int index) {
+				wndBag = null;
+
 				switch (index) {
 					case 0:
-						sell();
+						wndBag = new WndBag(hero.belongings,hero.belongings.backpack,sellItemSelector,WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 						break;
 					case 1:
-						GameScene.show(buy());
+						wndBag = new WndBag(belongings,belongings.backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
 						break;
+				}
+
+				if(wndBag!=null) {
+					GameScene.show(wndBag);
 				}
 			}
 		});

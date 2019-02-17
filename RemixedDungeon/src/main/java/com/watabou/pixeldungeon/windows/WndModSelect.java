@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.windows;
 
-import android.os.Build;
-
 import com.nyrds.android.util.DownloadStateListener;
 import com.nyrds.android.util.DownloadTask;
 import com.nyrds.android.util.FileSystem;
@@ -153,33 +151,22 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 	@Override
 	public void DownloadComplete(String url, final Boolean result) {
-		Game.pushUiTask(new Runnable() {
-			@Override
-			public void run() {
-				if (result) {
-					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-						new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);
-					} else {
-						new UnzipTask(WndModSelect.this).execute(downloadTo);
-					}
-				} else {
-					Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
-				}
+		Game.pushUiTask(() -> {
+			if (result) {
+				new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);
+			} else {
+				Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 			}
 		});
 	}
 
 	@Override
 	public void UnzipComplete(final Boolean result) {
-		Game.pushUiTask(new Runnable() {
-
-			@Override
-			public void run() {
-				if (result) {
-					Game.scene().add(new WndModSelect());
-				} else {
-					Game.scene().add(new WndError(Utils.format("unzipping %s failed", downloadTo)));
-				}
+		Game.pushUiTask(() -> {
+			if (result) {
+				Game.scene().add(new WndModSelect());
+			} else {
+				Game.scene().add(new WndError(Utils.format("unzipping %s failed", downloadTo)));
 			}
 		});
 

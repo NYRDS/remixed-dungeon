@@ -1,7 +1,6 @@
 package com.nyrds.android.util;
 
 import android.os.AsyncTask;
-import android.os.Build;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
@@ -28,7 +27,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
     @Override
     protected Boolean doInBackground(String... args) {
-        Boolean result = false;
+        boolean result = false;
         m_url = args[0];
 
         publishProgress(0);
@@ -70,9 +69,8 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
                 publishProgress(100);
 
                 result = true;
-            } else {
-                result = false;
             }
+
         } catch (Exception e) {
             EventCollector.logException(e);
         }
@@ -91,11 +89,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
 
     public void download(String url, String downloadTo) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            this.executeOnExecutor(Game.instance().executor, url, downloadTo);
-        } else {
-            this.execute(url, downloadTo);
-        }
+        this.executeOnExecutor(Game.instance().executor, url, downloadTo);
     }
 
 }
