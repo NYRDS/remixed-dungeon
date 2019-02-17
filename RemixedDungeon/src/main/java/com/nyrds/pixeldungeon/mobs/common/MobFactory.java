@@ -89,6 +89,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.utils.Random;
 
 import java.util.HashMap;
@@ -217,6 +218,7 @@ public class MobFactory {
 		registerMobClass(Ghost.class);
 		registerMobClass(SociologistNPC.class);
 		registerMobClass(InquirerNPC.class);
+		registerMobClass(Shopkeeper.class);
 	}
 	
 	public static Mob mobRandom() {
