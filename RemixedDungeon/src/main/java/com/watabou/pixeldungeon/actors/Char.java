@@ -120,7 +120,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 	public CharAction curAction = null;
 
 	public boolean canSpawnAt(Level level,int cell) {
-		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null;
+		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
 	}
 
 	public int respawnCell(Level level) {
