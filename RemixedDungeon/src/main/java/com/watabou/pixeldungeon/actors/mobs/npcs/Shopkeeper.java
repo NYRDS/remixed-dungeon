@@ -98,8 +98,7 @@ public class Shopkeeper extends NPC {
 					return;
 				}
 
-				WndBag parentWnd = sell();
-				GameScene.show( new WndTradeItem( item, parentWnd, Shopkeeper.this ) );
+				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false ) );
 			}
 		}
 	};
@@ -110,7 +109,7 @@ public class Shopkeeper extends NPC {
 
 	private WndBag.Listener buyItemSelector = item -> {
 		if (item != null) {
-			GameScene.show( new WndTradeItem( item, Shopkeeper.this) );
+			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true) );
 		}
 	};
 

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Game;
@@ -31,6 +32,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
@@ -45,38 +47,88 @@ public class WndTradeItem extends Window {
 
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
-	
-	private WndBag owner;
 
 	private VBox vbox = new VBox();
-	private Shopkeeper shopkeeper;
+	private ItemOwner  shopkeeper;
+	private Hero       customer;
 
 	private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
 
-	public WndTradeItem( final Item item, WndBag owner, Shopkeeper shopkeeper ) {
+	public WndTradeItem(final Item item, ItemOwner shopkeeper, boolean buy ) {
 		
 		super();
-		
-		this.owner = owner;
+
 		this.shopkeeper = shopkeeper;
-		
-		float pos = createDescription( item, false );
+		this.customer   = Dungeon.hero;
 
 		add(vbox);
 
-		int priceAll= item.price();
+		if(buy) {
+			makeBuyWnd(item);
+		} else {
+			makeSellWnd(item);
+		}
+	}
 
-		if (item.quantity() == 1) {
+	@Deprecated
+	public WndTradeItem( final Heap heap, boolean canBuy, Shopkeeper shopkeeper ) {
+		
+		super();
+
+		this.shopkeeper = shopkeeper;
+		this.customer   = Dungeon.hero;
+
+		Item item = heap.peek();
+		
+		float pos = createDescription( item, true );
+
+		add(vbox);
+
+		int price = price( item, true );
+		
+		if (canBuy) {
 			
-			RedButton btnSell = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Sell), priceAll ) ) {
+			RedButton btnBuy = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Buy), price ) ) {
 				@Override
 				protected void onClick() {
-					sell( item,1 );
+					hide();
+					buy( heap );
+				}
+			};
+			btnBuy.setSize(WIDTH, BTN_HEIGHT );
+			btnBuy.enable( price <= customer.gold());
+			vbox.add( btnBuy );
+			
+			RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
+				@Override
+				protected void onClick() {
 					hide();
 				}
 			};
-			btnSell.setSize( WIDTH, BTN_HEIGHT );
-			vbox.add( btnSell );
+			btnCancel.setSize( WIDTH, BTN_HEIGHT );
+			vbox.add( btnCancel );
+		}
+		vbox.setPos(0, pos+GAP);
+
+		resize( WIDTH, (int)vbox.bottom());
+	}
+
+	private void makeSellWnd(final Item item) {
+		float pos = createDescription( item, true);
+
+		vbox.clear();
+		int priceAll = price( item, false);
+
+		if (item.quantity() == 1) {
+
+			RedButton btn = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Sell), priceAll ) ) {
+				@Override
+				protected void onClick() {
+					sell( item,1 );
+				}
+			};
+			btn.setSize( WIDTH, BTN_HEIGHT );
+			vbox.add( btn );
 
 		} else {
 
@@ -90,7 +142,6 @@ public class WndTradeItem extends Window {
 					{
 						@Override
 						protected void onClick() {
-							hide();
 							sell(item, tradeQuantity[finalI]);
 						}
 					};
@@ -103,13 +154,12 @@ public class WndTradeItem extends Window {
 				@Override
 				protected void onClick() {
 					sell( item, item.quantity() );
-					hide();
 				}
 			};
 			btnSellAll.setSize(WIDTH, BTN_HEIGHT );
 			vbox.add( btnSellAll );
 		}
-		
+
 		RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
 			@Override
 			protected void onClick() {
@@ -123,54 +173,13 @@ public class WndTradeItem extends Window {
 
 		resize( WIDTH, (int) vbox.bottom());
 	}
-	
-	public WndTradeItem( final Heap heap, boolean canBuy, Shopkeeper shopkeeper ) {
-		
-		super();
 
-		this.shopkeeper = shopkeeper;
-		Item item = heap.peek();
-		
-		float pos = createDescription( item, true );
+	private void makeBuyWnd(final Item item) {
+		float pos = createDescription( item, false);
 
-		add(vbox);
+		vbox.clear();
 
-		int price = price( item );
-		
-		if (canBuy) {
-			
-			RedButton btnBuy = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Buy), price ) ) {
-				@Override
-				protected void onClick() {
-					hide();
-					buy( heap );
-				}
-			};
-			btnBuy.setSize(WIDTH, BTN_HEIGHT );
-			btnBuy.enable( price <= Dungeon.hero.gold());
-			vbox.add( btnBuy );
-			
-			RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
-				@Override
-				protected void onClick() {
-					hide();
-				}
-			};
-			btnCancel.setSize( WIDTH, BTN_HEIGHT );
-			vbox.add( btnCancel );
-		}
-
-		vbox.setPos(0, pos+GAP);
-		resize( WIDTH, (int)vbox.bottom());
-	}
-
-	public WndTradeItem(final Item item, Shopkeeper shopkeeper) {
-		float pos = createDescription( item, true );
-
-		this.shopkeeper = shopkeeper;
-		add(vbox);
-
-		int priceAll = price( item );
+		int priceAll = price( item, true );
 
 		if (item.quantity() == 1) {
 
@@ -178,10 +187,10 @@ public class WndTradeItem extends Window {
 				@Override
 				protected void onClick() {
 					buy( item,1 );
-					hide();
 				}
 			};
 			btnBuy.setSize( WIDTH, BTN_HEIGHT );
+			btnBuy.enable(priceAll<=customer.gold());
 			vbox.add( btnBuy );
 
 		} else {
@@ -194,11 +203,10 @@ public class WndTradeItem extends Window {
 							priceFor)) {
 						@Override
 						protected void onClick() {
-							hide();
 							buy(item, tradeQuantity[finalI]);
 						}
 					};
-					btnBuyN.enable(priceFor <= Dungeon.hero.gold());
+					btnBuyN.enable(priceFor <= customer.gold());
 					btnBuyN.setSize(WIDTH, BTN_HEIGHT);
 					vbox.add(btnBuyN);
 				}
@@ -207,13 +215,12 @@ public class WndTradeItem extends Window {
 			RedButton btnBuyAll = new RedButton(Utils.format(Game.getVar(R.string.WndTradeItem_BuyAll), priceAll)) {
 				@Override
 				protected void onClick() {
-					hide();
 					buy(item, item.quantity());
 				}
 			};
 
 			btnBuyAll.setSize(WIDTH, BTN_HEIGHT);
-			btnBuyAll.enable(priceAll <= Dungeon.hero.gold());
+			btnBuyAll.enable(priceAll <= customer.gold());
 			vbox.add(btnBuyAll);
 		}
 		RedButton btnCancel = new RedButton(Game.getVar(R.string.WndTradeItem_Cancel)) {
@@ -224,27 +231,18 @@ public class WndTradeItem extends Window {
 		};
 		btnCancel.setSize(WIDTH, BTN_HEIGHT);
 		vbox.add(btnCancel);
-
 		vbox.setPos(0, pos+GAP);
+
 		resize( WIDTH, (int)vbox.bottom());
 	}
 
-	@Override
-	public void hide() {
-		
-		super.hide();
-		if (owner != null) {
-			owner.hide();
-		}
-	}
-	
 	private float createDescription( Item item, boolean forSale ) {
 		
 		// Title
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( forSale ? 
-			Utils.format( Game.getVar(R.string.WndTradeItem_Sale), item.toString(), price( item ) ) :
+			Utils.format( Game.getVar(R.string.WndTradeItem_Sale), item.toString(), price( item, !forSale ) ) :
 			Utils.capitalize( item.toString() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
@@ -268,35 +266,48 @@ public class WndTradeItem extends Window {
 	
 	private void sell( Item item, final int quantity) {
 		
-		Hero hero = Dungeon.hero;
-		
-		if (item.isEquipped( hero ) && !((EquipableItem)item).doUnequip( hero, false )) {
+		if (item.isEquipped( customer ) && !((EquipableItem)item).doUnequip( customer, false )) {
+			hide();
 			return;
 		}
 
-		item = item.detach( hero.belongings.backpack, quantity );
+		item = item.detach( customer.getBelongings().backpack, quantity );
 		
-		int price = item.price();
+		int price = price(item, false);
 		
-		new Gold( price ).doPickUp( hero );
+		new Gold( price ).doPickUp( customer );
 		GLog.i( Game.getVar(R.string.WndTradeItem_Sold), item.name(), price );
 
-		placeItemInShop(item);
+		Item leftover = customer.getBelongings().getItem(item.getClassName());
+		if(leftover != null && leftover.quantity() > 0) {
+			GameScene.show(new WndTradeItem(leftover,shopkeeper,false));
+		} else {
+			placeItemInShop(item);
+		}
+		hide();
+
 	}
 
 	private void placeItemInShop(Item item) {
 		if(!item.cursed && item.price() > 10 ) {
 			if(shopkeeper!=null) {
-				shopkeeper.addItem(item);
+				item.collect(shopkeeper);
 			}
 		}
 	}
 
-	private int price( @NonNull  Item item ) {
-		// This formula is not completely correct...
-		int price = item.price() * 5 * (Dungeon.depth / 5 + 1);
-		if (Dungeon.hero.hasBuff( RingOfHaggler.Haggling.class ) && price >= 2) {
-			price /= 2;
+	private int price( @NonNull  Item item, boolean buying) {
+		int price = item.price();
+		if(buying) {
+			price *=  5 * (Dungeon.depth / 5 + 1);
+			if (Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class) && price >= 2) {
+				price /= 2;
+			}
+		}
+		else {
+			if(Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class)) {
+				price *= 1.5f;
+			}
 		}
 		return price;
 	}
@@ -313,20 +324,26 @@ public class WndTradeItem extends Window {
 
 	private void buy( @NonNull Item item, final int quantity ) {
 
-		Hero hero = Dungeon.hero;
-
 		item = item.detach(shopkeeper.getBelongings().backpack, quantity);
 
-		int price = price( item );
-		hero.spendGold(price);
+		int price = price( item, true );
+		customer.spendGold(price);
 
 		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), item.name(), price );
 
-		if (!item.doPickUp( hero )) {
-			Dungeon.level.drop( item, hero.getPos() ).sprite.drop();
+		if (!item.doPickUp( customer )) {
+			Dungeon.level.drop( item, customer.getPos() ).sprite.drop();
 		}
 
-		generateNewItem();
+		Item leftover = shopkeeper.getBelongings().getItem(item.getClassName());
+		if(leftover != null) {
+			hide();
+			GameScene.show(new WndTradeItem(leftover,shopkeeper,true));
+		}else {
+			generateNewItem();
+		}
+		hide();
+
 	}
 
 	private void buy( Heap heap ) {
@@ -334,7 +351,7 @@ public class WndTradeItem extends Window {
 		Hero hero = Dungeon.hero;
 		Item item = heap.pickUp();
 		
-		int price = price( item );
+		int price = price( item, true);
 		hero.spendGold(price);
 
 		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), item.name(), price );
