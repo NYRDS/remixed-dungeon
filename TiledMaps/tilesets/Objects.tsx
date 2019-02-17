@@ -37,12 +37,14 @@
  </tile>
  <tile id="39">
   <properties>
-   <property name="kind" value="chest"/>
+   <property name="kind" value="Deco"/>
+   <property name="object_desc" value="chest_2"/>
   </properties>
  </tile>
  <tile id="40">
   <properties>
-   <property name="kind" value="chest"/>
+   <property name="kind" value="Deco"/>
+   <property name="object_desc" value="chest_1"/>
   </properties>
  </tile>
  <tile id="75">

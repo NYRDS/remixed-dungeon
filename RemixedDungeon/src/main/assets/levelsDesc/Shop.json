@@ -9,29 +9,33 @@
  "map":[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 41, 4, 41, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 4, 1, 4, 4, 1, 1, 1, 1, 1, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 7, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
  "mobs":[
         {
-         "kind":"ServiceManNPC",
+         "kind":"Shopkeeper",
          "x":3,
          "y":2
         }],
  "multiexit":[],
  "objects":[
         {
-         "kind":"chest",
+         "kind":"Deco",
+         "object_desc":"chest_1",
          "x":1,
          "y":2
         }, 
         {
-         "kind":"chest",
+         "kind":"Deco",
+         "object_desc":"chest_2",
          "x":1,
          "y":3
         }, 
         {
-         "kind":"chest",
+         "kind":"Deco",
+         "object_desc":"chest_2",
          "x":1,
          "y":4
         }, 
         {
-         "kind":"chest",
+         "kind":"Deco",
+         "object_desc":"chest_2",
          "x":8,
          "y":4
         }],
