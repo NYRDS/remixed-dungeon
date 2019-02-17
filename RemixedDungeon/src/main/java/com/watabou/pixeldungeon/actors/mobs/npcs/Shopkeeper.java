@@ -103,15 +103,20 @@ public class Shopkeeper extends NPC {
 					GameScene.selectItemFromBag(sellItemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 					return;
 				}
-
-				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, wndBag) );
+				wndBag.hide();
+				wndBag = null;
+				//GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, wndBag) );
+				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, null) );
 			}
 		}
 	};
 
 	private WndBag.Listener buyItemSelector = item -> {
 		if (item != null) {
-			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, wndBag) );
+			wndBag.hide();
+			wndBag = null;
+			//GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, wndBag) );
+			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, null) );
 		}
 	};
 
@@ -123,9 +128,6 @@ public class Shopkeeper extends NPC {
 								Game.getVar(R.string.Shopkeeper_BuyPrompt)){
 			@Override
 			protected void onSelect(int index) {
-				if (wndBag != null) {
-					wndBag.hide();
-				}
 				wndBag = null;
 
 				switch (index) {

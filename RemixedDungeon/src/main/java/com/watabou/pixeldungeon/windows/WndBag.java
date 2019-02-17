@@ -174,10 +174,13 @@ public class WndBag extends WndTabbed {
 	}
 
 	public WndBag updateItems() {
-		hide();
-		WndBag wndBag =  new WndBag(stuff, stuff.backpack, listener, mode, title );
-		GameScene.show( wndBag );
-		return wndBag;
+		if(hasParent()) {
+			hide();
+			WndBag wndBag = new WndBag(stuff, stuff.backpack, listener, mode, title);
+			GameScene.show(wndBag);
+			return wndBag;
+		}
+		return null;
 	}
 
 	private void placeItems(Bag container) {
@@ -257,7 +260,7 @@ public class WndBag extends WndTabbed {
 	}
 
 	public boolean hideOnSelect() {
-		return  mode != Mode.FOR_SALE && mode != Mode.FOR_BUY;
+		return  !(mode == Mode.FOR_SALE || mode == Mode.FOR_BUY);
 	}
 
 	public interface Listener {

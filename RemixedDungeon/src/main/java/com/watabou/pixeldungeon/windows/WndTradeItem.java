@@ -59,8 +59,13 @@ public class WndTradeItem extends Window {
 	private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
 
 	public WndTradeItem(final Item item, ItemOwner shopkeeper, boolean buy, @Nullable WndBag wndBag) {
-		
+
 		super();
+
+		if(wndBag!=null && !wndBag.hasParent())
+		{
+			GLog.n("errr");
+		}
 
 		this.wndBag     = wndBag;
 		this.shopkeeper = shopkeeper;
@@ -270,17 +275,16 @@ public class WndTradeItem extends Window {
 	}
 	
 	private void sell( Item item, final int quantity) {
-		
+
 		if (item.isEquipped( customer ) && !((EquipableItem)item).doUnequip( customer, false )) {
 			hide();
 			return;
 		}
 
 		item = item.detach( customer.getBelongings().backpack, quantity );
+		placeItemInShop(item);
 
-		if(wndBag!=null) {
-			wndBag=wndBag.updateItems();
-		}
+		hide();
 
 		int price = price(item, false);
 		
@@ -291,11 +295,6 @@ public class WndTradeItem extends Window {
 		if(leftover != null && leftover.quantity() > 0) {
 			GameScene.show(new WndTradeItem(leftover,shopkeeper,false, wndBag));
 		}
-
-		placeItemInShop(item);
-
-		hide();
-
 	}
 
 	private void placeItemInShop(Item item) {
@@ -333,12 +332,7 @@ public class WndTradeItem extends Window {
 	}
 
 	private void buy( @NonNull Item item, final int quantity ) {
-
 		item = item.detach(shopkeeper.getBelongings().backpack, quantity);
-
-		if(wndBag!=null) {
-			wndBag=wndBag.updateItems();
-		}
 
 		int price = price( item, true );
 		customer.spendGold(price);
@@ -351,12 +345,12 @@ public class WndTradeItem extends Window {
 
 		Item leftover = shopkeeper.getBelongings().getItem(item.getClassName());
 		if(leftover != null) {
+			hide();
 			GameScene.show(new WndTradeItem(leftover,shopkeeper,true, wndBag));
-		}else {
+		} else {
 			generateNewItem();
+			hide();
 		}
-
-		hide();
 	}
 
 	private void buy( Heap heap ) {
@@ -374,5 +368,19 @@ public class WndTradeItem extends Window {
 		}
 
 		generateNewItem();
+	}
+
+	@Override
+	public void hide() {
+		super.hide();
+		if(wndBag!=null) {
+
+			if(!wndBag.hasParent()) {
+				GLog.n("errr");
+			}
+
+			wndBag=wndBag.updateItems();
+		}
+
 	}
 }

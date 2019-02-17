@@ -116,7 +116,16 @@ public class Window extends Group implements Signal.Listener<Key> {
 		}
 		destroy();
 	}
-	
+
+	public void hideAll() {
+		Group parent = getParent();
+		if(parent!=null) {
+
+		}
+		destroy();
+	}
+
+
 	@Override
 	public void destroy() {
 		super.destroy();
