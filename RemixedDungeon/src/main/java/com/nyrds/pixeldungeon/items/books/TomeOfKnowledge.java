@@ -30,7 +30,7 @@ public class TomeOfKnowledge extends Book {
 
 	@Override
 	public int price() {
-		return 100;
+		return 100 * quantity();
 	}
 
 	@Override

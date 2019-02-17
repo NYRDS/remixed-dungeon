@@ -64,9 +64,11 @@ public class WndTradeItem extends Window {
 
 		add(vbox);
 
+		int priceAll= item.price();
+
 		if (item.quantity() == 1) {
 			
-			RedButton btnSell = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Sell), item.price() ) ) {
+			RedButton btnSell = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Sell), priceAll ) ) {
 				@Override
 				protected void onClick() {
 					sell( item,1 );
@@ -77,8 +79,6 @@ public class WndTradeItem extends Window {
 			vbox.add( btnSell );
 
 		} else {
-			
-			int priceAll= item.price();
 
 			for (int i = 0;i< tradeQuantity.length;++i) {
 				if (item.quantity() > tradeQuantity[i]) {
@@ -170,11 +170,11 @@ public class WndTradeItem extends Window {
 		this.shopkeeper = shopkeeper;
 		add(vbox);
 
-		int price = price( item );
+		int priceAll = price( item );
 
 		if (item.quantity() == 1) {
 
-			RedButton btnBuy = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Buy), item.price() ) ) {
+			RedButton btnBuy = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Buy), priceAll ) ) {
 				@Override
 				protected void onClick() {
 					buy( item,1 );
@@ -187,7 +187,7 @@ public class WndTradeItem extends Window {
 		} else {
 			for (int i = 0; i < tradeQuantity.length; ++i) {
 				if (item.quantity() > tradeQuantity[i]) {
-					final int priceFor = price / item.quantity() * tradeQuantity[i];
+					final int priceFor = priceAll / item.quantity() * tradeQuantity[i];
 					final int finalI = i;
 					RedButton btnBuyN = new RedButton(Utils.format(Game.getVar(R.string.WndTradeItem_BuyN),
 							tradeQuantity[finalI],
@@ -204,7 +204,7 @@ public class WndTradeItem extends Window {
 				}
 			}
 
-			RedButton btnBuyAll = new RedButton(Utils.format(Game.getVar(R.string.WndTradeItem_BuyAll), price)) {
+			RedButton btnBuyAll = new RedButton(Utils.format(Game.getVar(R.string.WndTradeItem_BuyAll), priceAll)) {
 				@Override
 				protected void onClick() {
 					hide();
@@ -213,7 +213,7 @@ public class WndTradeItem extends Window {
 			};
 
 			btnBuyAll.setSize(WIDTH, BTN_HEIGHT);
-			btnBuyAll.enable(price <= Dungeon.hero.gold());
+			btnBuyAll.enable(priceAll <= Dungeon.hero.gold());
 			vbox.add(btnBuyAll);
 		}
 		RedButton btnCancel = new RedButton(Game.getVar(R.string.WndTradeItem_Cancel)) {

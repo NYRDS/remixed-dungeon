@@ -90,6 +90,6 @@ public class Codex extends Book {
 	
 	@Override
 	public int price(){
-		return 5;
+		return 5 * quantity();
 	}
 }
