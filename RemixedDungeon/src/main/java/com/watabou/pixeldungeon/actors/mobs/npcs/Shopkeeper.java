@@ -39,8 +39,6 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 
-import androidx.annotation.Nullable;
-
 public class Shopkeeper extends NPC {
 
 	{
@@ -50,9 +48,6 @@ public class Shopkeeper extends NPC {
 	}
 
 	private Belongings belongings;
-
-	@Nullable
-	private WndBag wndBag;
 
 	@Override
     public boolean act() {
@@ -112,30 +107,20 @@ public class Shopkeeper extends NPC {
 		public void onSelect( Item item ) {
 			if (item != null) {
 
-				if(wndBag!=null) {
-					wndBag.hide();
-					wndBag = null;
-				}
-
 				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
-					wndBag = GameScene.selectItemFromBag(sellItemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
+					GameScene.selectItemFromBag(sellItemSelector, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 					return;
 				}
 
-				//GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, wndBag) );
-				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false, null) );
+				GameScene.show( new WndTradeItem( item, Shopkeeper.this, false) );
 			}
 		}
 	};
 
 	private WndBag.Listener buyItemSelector = item -> {
 		if (item != null) {
-			if(wndBag!=null) {
-				wndBag.hide();
-				wndBag = null;
-			}
-			//GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, wndBag) );
-			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true, null) );
+
+			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true) );
 		}
 	};
 
@@ -147,7 +132,7 @@ public class Shopkeeper extends NPC {
 								Game.getVar(R.string.Shopkeeper_BuyPrompt)){
 			@Override
 			protected void onSelect(int index) {
-				wndBag = null;
+				WndBag wndBag = null;
 
 				switch (index) {
 					case 0:

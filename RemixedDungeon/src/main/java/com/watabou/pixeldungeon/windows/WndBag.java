@@ -40,6 +40,10 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndBag extends WndTabbed {
 
+	public static WndBag getInstance() {
+		return instance;
+	}
+
 	public Listener getListener() {
 		return listener;
 	}
@@ -88,6 +92,8 @@ public class WndBag extends WndTabbed {
 
 	private static Mode lastMode;
 	private static Bag lastBag;
+
+	private static WndBag instance;
 	
 	private Text txtTitle;
 
@@ -152,6 +158,7 @@ public class WndBag extends WndTabbed {
 				}
 			}
 		}
+		instance = this;
 	}
 	
 	public static WndBag lastBag( Listener listener, Mode mode, String title ) {
@@ -173,14 +180,10 @@ public class WndBag extends WndTabbed {
 			new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
 	}
 
-	public WndBag updateItems() {
-		if(hasParent()) {
+	public void updateItems() {
 			hide();
 			WndBag wndBag = new WndBag(stuff, stuff.backpack, listener, mode, title);
 			GameScene.show(wndBag);
-			return wndBag;
-		}
-		return null;
 	}
 
 	private void placeItems(Bag container) {
