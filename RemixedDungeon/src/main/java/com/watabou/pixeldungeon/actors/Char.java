@@ -807,7 +807,9 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		Belongings belongings = getBelongings();
 		if(belongings!=null) {
 			Gold gold = belongings.getItem(Gold.class);
-			return gold.quantity();
+			if(gold!=null) {
+				return gold.quantity();
+			}
 		}
 		return 0;
     }
