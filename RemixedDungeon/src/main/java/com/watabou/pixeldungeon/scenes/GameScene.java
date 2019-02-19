@@ -623,7 +623,11 @@ public class GameScene extends PixelScene {
     }
 
     public static void pickUp(Item item) {
-        scene.toolbar.pickup(item);
+        if(isSceneReady()) {
+            scene.toolbar.pickup(item);
+        } else {
+            EventCollector.logException();
+        }
     }
 
     public static void updateMap() {

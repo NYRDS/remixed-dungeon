@@ -536,7 +536,7 @@ public class Dungeon {
         //pre 28.5 saves compatibility
         int gold = bundle.optInt("gold",0);
         if(gold > 0) {
-            new Gold(gold).doPickUp(hero);
+            hero.getBelongings().collect(new Gold(gold));
         }
 
         depth = bundle.getInt(DEPTH);
