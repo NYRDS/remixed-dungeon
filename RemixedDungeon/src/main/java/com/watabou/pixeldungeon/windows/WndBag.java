@@ -203,7 +203,8 @@ public class WndBag extends WndTabbed {
 		}
 		
 		// Empty slots
-		while (count-4 < container.size) {
+		int margin = stuff.getOwner() instanceof Hero ?  4 :  5;
+		while (count - margin < container.size) {
 			placeItem( null );
 		}
 

@@ -99,7 +99,7 @@ public class StartScene extends PixelScene {
         super.create();
 
         if(!swSdkStarted) {
-            HQSdk.init(Game.instance(), "22b4f34f2616d7f", false,
+            HQSdk.init(Game.instance(), "22b4f34f2616d7f", true,
                     new HqmCallback<HqmApi>() {
 
                         @Override

@@ -120,7 +120,11 @@ public class Bag extends Item implements Iterable<Item> {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		for (Item item : bundle.getCollection( ITEMS,Item.class )) {
-			item.collect( this );
+			if(owner!=null) {
+				owner.getBelongings().collect(item);
+			} else {
+				item.collect(this);
+			}
 		}
 	}
 	

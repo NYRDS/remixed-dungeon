@@ -69,7 +69,6 @@ public class Belongings implements Iterable<Item> {
 	private static final String ARMOR		= "armor";
 	private static final String RING1		= "ring1";
 	private static final String RING2		= "ring2";
-	private static final String GOLD		= "gold";
 	
 	public void storeInBundle( Bundle bundle ) {
 		
@@ -295,7 +294,7 @@ public class Belongings implements Iterable<Item> {
 		if (desc.has("items")) {
 			JSONArray items = desc.getJSONArray("items");
 			for (int i = 0; i < items.length(); ++i) {
-				ItemFactory.createItemFromDesc(items.getJSONObject(i)).collect(backpack);
+				collect(ItemFactory.createItemFromDesc(items.getJSONObject(i)));
 			}
 		}
 	}
