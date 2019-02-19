@@ -3,8 +3,8 @@
 
   "appearance": {
     "desc": {
-      "desc": "deco_candle_desc",
-      "name": "deco_candle_name"
+      "desc": "WndInfoItem_WontKnow",
+      "name": "WndInfoItem_Chest"
     },
     "sprite":{
       "textureFile": "items.png",

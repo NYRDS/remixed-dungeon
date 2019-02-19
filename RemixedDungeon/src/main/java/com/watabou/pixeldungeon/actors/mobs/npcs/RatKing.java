@@ -67,23 +67,18 @@ public class RatKing extends NPC {
 	
 	@Override
 	public boolean friendly(Char chr){
-		return anger < 2;
+		if(chr instanceof Hero) {
+			return anger < 2;
+		} else {
+			return super.friendly(chr);
+		}
 	}
 	
 	@Override
 	public float speed() {
 		return 2f;
 	}
-	/*
-	@Override
-	protected Char chooseEnemy() {
-		if(friendly(Dungeon.hero)) {
-			return DUMMY;
-		} else {
-			return super.chooseEnemy();
-		}
-	}
-	*/
+
 	@Override
 	public void damage( int dmg, Object src ) {
 		if(friendly(Dungeon.hero)){

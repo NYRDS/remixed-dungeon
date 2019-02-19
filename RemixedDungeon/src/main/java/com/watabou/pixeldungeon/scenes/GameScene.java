@@ -92,7 +92,7 @@ public class GameScene extends PixelScene {
 
     private static final float MAX_BRIGHTNESS = 1.22f;
 
-    public static volatile GameScene scene;
+    private static volatile GameScene scene;
 
     private SkinnedBlock water;
 

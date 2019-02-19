@@ -26,7 +26,7 @@ import androidx.annotation.NonNull;
 public class Group extends Gizmo {
 
 	@NonNull
-    public ArrayList<Gizmo> members = new ArrayList<>();
+	protected ArrayList<Gizmo> members = new ArrayList<>();
 
 	public Group() {
 	}

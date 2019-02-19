@@ -59,7 +59,11 @@ public abstract class NPC extends Mob {
 
 	@Override
 	public boolean friendly(Char chr) {
-		return true;
+		if(fraction.belongsTo(Fraction.NEUTRAL)) {
+			return true;
+		} else {
+			return super.friendly(chr);
+		}
 	}
 
 	@Override
