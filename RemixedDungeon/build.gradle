@@ -110,8 +110,8 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    implementation 'io.humanteq.hqsdk:hqsdk-core:1.0.4'
-    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.0.4'
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.0.7'
+    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.0.7'
 
     implementation 'androidx.core:core:1.0.1'
     implementation 'androidx.annotation:annotation:1.0.1'
