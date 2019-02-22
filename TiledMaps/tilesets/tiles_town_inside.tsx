@@ -327,14 +327,26 @@
  </tile>
  <tile id="60">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_armoronhanger_desc"/>
+   <property name="deco_name" value="town_deco_armoronhanger_name"/>
   </properties>
  </tile>
  <tile id="61">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_armoronhanger_desc"/>
+   <property name="deco_name" value="town_deco_armoronhanger_name"/>
+  </properties>
+ </tile>
+ <tile id="62">
+  <properties>
+   <property name="deco_desc" value="town_deco_potions_desc"/>
+   <property name="deco_name" value="town_deco_potions_name"/>
+  </properties>
+ </tile>
+ <tile id="63">
+  <properties>
+   <property name="deco_desc" value="town_deco_shelf_desc"/>
+   <property name="deco_name" value="town_deco_shelf_name"/>
   </properties>
  </tile>
  <tile id="64">
@@ -399,26 +411,38 @@
  </tile>
  <tile id="74">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_weaponboard_desc"/>
+   <property name="deco_name" value="town_deco_weaponboard_name"/>
   </properties>
  </tile>
  <tile id="75">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_weaponboard_desc"/>
+   <property name="deco_name" value="town_deco_weaponboard_name"/>
   </properties>
  </tile>
  <tile id="76">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_shieldboard_desc"/>
+   <property name="deco_name" value="town_deco_shieldboard_name"/>
   </properties>
  </tile>
  <tile id="77">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_shieldboard_desc"/>
+   <property name="deco_name" value="town_deco_shieldboard_name"/>
+  </properties>
+ </tile>
+ <tile id="78">
+  <properties>
+   <property name="deco_desc" value="town_deco_potions_desc"/>
+   <property name="deco_name" value="town_deco_potions_name"/>
+  </properties>
+ </tile>
+ <tile id="79">
+  <properties>
+   <property name="deco_desc" value="town_deco_shelf_desc"/>
+   <property name="deco_name" value="town_deco_shelf_name"/>
   </properties>
  </tile>
  <tile id="80">
