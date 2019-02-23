@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -63,6 +64,8 @@ public class Belongings implements Iterable<Item> {
 		
 		backpack = new Backpack();
 		backpack.owner = owner;
+
+		collect(new Gold(0));
 	}
 	
 	private static final String WEAPON		= "weapon";

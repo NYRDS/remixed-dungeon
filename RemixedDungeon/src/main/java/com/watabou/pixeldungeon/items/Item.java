@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
+import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -191,7 +192,7 @@ public class Item implements Bundlable, Presser {
 			}
 		}
 
-		if (items.size() < container.size) {
+		if (items.size() < (container instanceof Backpack ? container.size + 1 : container.size)) {
 			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
 				Badges.validateItemLevelAcquired(this);
 			}

@@ -114,7 +114,7 @@ public class WndTradeItem extends Window {
 	}
 
 	private void makeSellWnd(final Item item) {
-		float pos = createDescription( item, true);
+		float pos = createDescription( item, false);
 
 		vbox.clear();
 		int priceAll = price( item, false);
@@ -175,7 +175,7 @@ public class WndTradeItem extends Window {
 	}
 
 	private void makeBuyWnd(final Item item) {
-		float pos = createDescription( item, false);
+		float pos = createDescription( item, true);
 
 		vbox.clear();
 
@@ -236,13 +236,13 @@ public class WndTradeItem extends Window {
 		resize( WIDTH, (int)vbox.bottom());
 	}
 
-	private float createDescription( Item item, boolean forSale ) {
+	private float createDescription( Item item, boolean buying ) {
 		
 		// Title
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
-		titlebar.label( forSale ? 
-			Utils.format( Game.getVar(R.string.WndTradeItem_Sale), item.toString(), price( item, !forSale ) ) :
+		titlebar.label( buying ?
+			Utils.format( Game.getVar(R.string.WndTradeItem_Sale), item.toString(), price( item, true ) ) :
 			Utils.capitalize( item.toString() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
