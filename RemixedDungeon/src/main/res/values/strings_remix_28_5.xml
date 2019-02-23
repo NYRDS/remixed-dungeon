@@ -73,7 +73,7 @@
 	<string name="town_deco_weaponboard_name">Weapon</string>
 	<string name="town_deco_weaponboard_desc">Some kind of weapon hanging on the board.</string>
 	<string name="town_deco_shieldboard_name">Shields</string>
-	<string name="town_deco_shieldboard_desc">Some kind of weapon hanging on the board. It seems that you can probably buy it later.</string>
+	<string name="town_deco_shieldboard_desc">Various shields hanging on the board. It not for sale yet.</string>
 	<string name="town_deco_armoronhanger_name">Armor</string>
 	<string name="town_deco_armoronhanger_desc">Some kind of armor on a hanger.</string>
 	<string name="town_deco_potions_name">Potions</string>

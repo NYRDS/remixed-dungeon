@@ -3,16 +3,6 @@
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Welcome!</string>
 
-    <string name="Welcome_Text_28">
-    remix.28\n
-    - New Hero - Gnoll\n
-    - The damage of magic wands in melee now depends on level of Hero magic skill\n
-    - For each Hero, no more than one result will be displayed on the highscores board\n
-    - Auto-sync with Google PlayGames is disabled (You can synchronize manually)\n
-    - A large update of the Brazilian-Portuguese translation\n
-    - New hero class options for modding: forbiddenActions, friendlyMobs\n
-    - New language added: Malay language\n
-    </string>
     <string name="Welcome_Text_28_1">
     remix.28.1\n
     - Big renovation of Town\n
@@ -51,5 +41,18 @@
     - Graphics improvements:\n
     -- Hero weapons now visible in game\n
     </string>
+
+    <string name="Welcome_Text_28_5">
+    remix.28.5\n
+    - Modding:\n
+    -- Moddable AI for Mobs and NPCs\n
+    - Town:\n
+    -- Church now open to believers\n
+    -- Town shop was renovated\n
+    - Game Mechanics:\n
+    -- Trade ui improved\n
+    -- Portal can be used multiple times\n
+    </string>
+
 
 </resources>
