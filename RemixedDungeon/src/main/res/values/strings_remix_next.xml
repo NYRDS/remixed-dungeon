@@ -6,14 +6,14 @@
     <string name="InquirerNPC_Name_Objective">Inquirer</string>
 
     <string name="Inquirer_title">Inquirer</string>
-    <string name="Inquirer_text">Hi!\nDid you want to take part in inquiry about so called Real World?\nNot for free of  course.\n</string>
+    <string name="Inquirer_text">Hi!\nDid you want to take part in an inquiry about so called Real World?\nNot for free of  course.\n</string>
     <string name="Inquirer_yes">Let\'s do it!</string>
     <string name="Inquirer_no">Not interested</string>
     <string name="Inquirer_bye">Okay. Bye then...</string>
     <string name="Inquirer_show_privacy">Inquirer Privacy Policy</string>
 
 	<string name="BishopNPC_Name">Bishop</string>
-	<string name="BishopNPC_Desc">Bishop of Holy Church of Santa the Depth Lord</string>
+	<string name="BishopNPC_Desc">Bishop of the Holy Church of Santa the Depth Lord</string>
 	<string name="BishopNPC_Gender">masculine</string>
 	<string name="BishopNPC_Name_Objective">Bishop</string>
 
@@ -29,7 +29,7 @@
 	<string name="Bishop_no_money">You can\'t pay for it.</string>
 	<string name="Bishop_bye">I will pray for you my child.</string>
 
-	<string name="Blessed_Info">Blessed by rightful priest</string>
+	<string name="Blessed_Info">Blessed by the rightful priest</string>
 
 	<string name="TacticalCrossbow_Name">Tactical Crossbow</string>
 	<string name="TacticalCrossbow_Info">It just a crossbow, but tactical. Usable in melee. Fireproof. Tactical.</string>
@@ -37,11 +37,11 @@
 	<string name="town_deco_clock_name">Antique clock</string>
 	<string name="town_deco_clock_desc">It seems that this clock shows the wrong time</string>
 	<string name="town_deco_pedestal_name">Pedestal</string>
-	<string name="town_deco_pedestal_desc">Pedestal with holy book on it</string>
+	<string name="town_deco_pedestal_desc">Pedestal with a holy book on it</string>
 	<string name="town_deco_keyholder_name">Keyholder</string>
 	<string name="town_deco_keyholder_desc">You can see some keys on this keyholder</string>
-	<string name="town_deco_flowerinthepot_name">Flower in the pot</string>
-	<string name="town_deco_flowerinthepot_desc">Decorate flower with sweet flavor</string>
+	<string name="town_deco_flowerinthepot_name">Flower in a pot</string>
+	<string name="town_deco_flowerinthepot_desc">Decorative flower with sweet flavor</string>
 	<string name="town_deco_journal_name">INN journal</string>
 	<string name="town_deco_journal_desc">You can see some records in it</string>
 	<string name="town_deco_bar_name">Bar</string>
@@ -51,7 +51,7 @@
 	<string name="deco_candle_desc">Big candle</string>
 
 	<string name="Possess_Name">Possession</string>
-	<string name="Possess_Info">Dark art of mind control allow caster to bend will of most creatures</string>
+	<string name="Possess_Info">The dark art of mind control allows the caster to bend the will of most creatures</string>
 	<string name="Possess_PossessionFailed">Will of %s is too strong</string>
 	<string name="Possess_Possessed">%s is awaiting for your commands</string>
 	<string name="Possess_MustTargetChar">Only creatures can be targeted with Possession</string>
@@ -62,7 +62,7 @@
 	<string name="BlackCat_AiStatus">This cat is doing ordinary cat things</string>
 	<string name="Shopkeeper_Buy">Select item to buy</string>
 	<string name="Shopkeeper_title">Shop</string>
-	<string name="Shopkeeper_text">Welcome to local Pixel-Mart branch.\nHow can I help you?</string>
+	<string name="Shopkeeper_text">Welcome to the local Pixel-Mart branch.\nHow can I help you?</string>
 	<string name="Shopkeeper_SellPrompt">I have stuff to sell</string>
 	<string name="Shopkeeper_BuyPrompt">Let see your inventory</string>
 
@@ -71,12 +71,12 @@
 	<string name="WndTradeItem_SellN">Sell %1$d for %2$dg</string>
 
 	<string name="town_deco_weaponboard_name">Weapon</string>
-	<string name="town_deco_weaponboard_desc">Some kinde of weapon hanging on board.</string>
+	<string name="town_deco_weaponboard_desc">Some kind of weapon hanging on the board.</string>
 	<string name="town_deco_shieldboard_name">Shields</string>
-	<string name="town_deco_shieldboard_desc">Some kinde of weapon hanging on board. Probably you can buy it later May</string>
+	<string name="town_deco_shieldboard_desc">Some kind of weapon hanging on the board. It seems that you can probably buy it later in May</string>
 	<string name="town_deco_armoronhanger_name">Armor</string>
-	<string name="town_deco_armoronhanger_desc">Some kinde of armor on hanger.</string>
+	<string name="town_deco_armoronhanger_desc">Some kind of armor on a hanger.</string>
 	<string name="town_deco_potions_name">Potions</string>
-	<string name="town_deco_potions_desc">Some kinde of potions in shelf.</string>
+	<string name="town_deco_potions_desc">Some kind of potions one the shelf.</string>
 
 </resources>
