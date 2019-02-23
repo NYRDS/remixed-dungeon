@@ -89,6 +89,9 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 	@Packable
     private int      pos      = 0;
 
+	@Packable
+	private int id;
+
 	public  Fraction fraction = Fraction.DUNGEON;
 
 	protected CharSprite sprite;
