@@ -14,12 +14,12 @@
    },
    "attack" : {
       "fps" : 8,
-      "looped" : true,
+      "looped" : false,
       "frames" : [0, 1, 2, 3]
    },
    "die" : {
       "fps" : 8,
-      "looped" : true,
+      "looped" : false,
       "frames" : [0, 1, 2, 3]
    }
 
