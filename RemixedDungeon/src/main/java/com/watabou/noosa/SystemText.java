@@ -6,7 +6,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.text.TextPaint;
 
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -76,9 +75,7 @@ public class SystemText extends Text {
 
 			tx.setTextSize(textSize);
 			tx.setStyle(Paint.Style.FILL_AND_STROKE);
-			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-				tx.setHinting(Paint.HINTING_ON);
-			}
+			tx.setHinting(Paint.HINTING_ON);
 			tx.setAntiAlias(true);
 
 			tx.setColor(Color.WHITE);
