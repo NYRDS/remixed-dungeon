@@ -769,7 +769,9 @@ public abstract class Mob extends Char {
 
 		if(zapHit(enemy)) {
 			int damage = zapProc(enemy,damageRoll());
-			enemy.damage(damage, this);
+			int effectiveDamage = enemy.defenseProc(this,damage);
+
+			enemy.damage(effectiveDamage, this);
 			return true;
 		}
 
