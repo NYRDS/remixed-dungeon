@@ -2030,4 +2030,14 @@ public class Hero extends Char implements PetOwner {
     public Belongings getBelongings() {
         return belongings;
     }
+
+	@Override
+	public boolean friendly(Char chr) {
+		if(chr instanceof Mob) {
+			Mob mob = (Mob)chr;
+			return heroClass.friendlyTo(mob.getMobClassName());
+		}
+		return super.friendly(chr);
+	}
+
 }

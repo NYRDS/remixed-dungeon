@@ -115,7 +115,7 @@ public class Bestiary {
 		String selectedMobClass = "Rat";
 
 		if(!chances.isEmpty()) {
-			selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[chances.size()]))];
+			selectedMobClass = (String) names.toArray()[Random.chances(chances.toArray(new Float[0]))];
 		}	else {
 			Game.toast("Bad bestiary desc: %s", depthDesc.toString());
 		}

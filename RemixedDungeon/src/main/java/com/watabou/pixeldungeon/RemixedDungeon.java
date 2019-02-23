@@ -92,8 +92,12 @@ public class RemixedDungeon extends Game {
 		);
 	}
 
+    public static boolean isAlpha() {
+        return version.contains("alpha");
+    }
 
-	@Override
+
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 

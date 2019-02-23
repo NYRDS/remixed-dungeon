@@ -8,7 +8,12 @@
 local RPD = require "scripts/lib/commonClasses"
 
 local spells = {}
-spells["Necromancy"] = {"DarkSacrifice","RaiseDead","Exhumation","Possess"}
+spells["Necromancy"] = {"DarkSacrifice","RaiseDead","Exhumation"}
+
+if RPD.RemixedDungeon:isAlpha() then
+    table.insert(spells["Necromancy"],"Possess")
+end
+
 --spells["Common"] = {"Bless"}
 
 local module = {}
@@ -32,7 +37,7 @@ end
 function module.loadSpells()
     require "scripts/spells/RaiseDead"
     require "scripts/spells/DarkSacrifice"
-    require "scripts.spells.Exhumation"
+    require "scripts.spells/Exhumation"
 end
 
 return module

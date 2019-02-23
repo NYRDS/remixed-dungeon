@@ -38,9 +38,9 @@ public abstract class MobAi implements AiState {
 
         if (src instanceof Char && !me.friendly((Char)src)) {
             me.setEnemy((Char) src);
+        }else {
+            me.setEnemy(chooseEnemy(me));
         }
-
-        me.setEnemy(chooseEnemy(me));
 
         if (me.isEnemyInFov()) {
             me.setState(MobAi.getStateByClass(Hunting.class));

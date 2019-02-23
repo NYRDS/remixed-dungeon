@@ -578,12 +578,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         final boolean result = res;
-        doOnResume = new Runnable() {
-            @Override
-            public void run() {
-                permissionsPoint.returnToWork(result);
-            }
-        };
+        doOnResume = () -> permissionsPoint.returnToWork(result);
 
     }
 
