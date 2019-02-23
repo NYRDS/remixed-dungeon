@@ -3,7 +3,7 @@
     <!-- Accessories descriptions -->
     <!-- STRINGS OF ChaosHelmet CLASS -->
     <string name="ChaosHelmet_Name">Chaos Helmet</string>
-    <string name="ChaosHelmet_Info">Blood red helmet. A very symbol of a chaos warrior.</string>
+    <string name="ChaosHelmet_Info">A blood red helmet is an essential symbol of a chaos warrior.</string>
 
 
     <!-- Spells descriptions -->
@@ -18,27 +18,27 @@
 
     <!-- STRINGS OF Ignite CLASS -->
     <string name="Ignite_Name">Ignite</string>
-    <string name="Ignite_Info">Ignites selected cell. Can be used to burn grass, characters and objects.</string>
+    <string name="Ignite_Info">Ignites the selected cell. Can be used to burn grass, characters and objects.</string>
 
     <!-- STRINGS OF RootSpell CLASS -->
     <string name="RootSpell_Name">Root</string>
-    <string name="RootSpell_Info">Roots selected character making it unable to move for short period.</string>
+    <string name="RootSpell_Info">Roots the selected character, making it unable for him to move for a short period of time.</string>
 
     <!-- STRINGS OF WindGust CLASS -->
     <string name="WindGust_Name">Wind gust</string>
-    <string name="WindGust_Info">Blows a gust of wind pushing selected character away.</string>
+    <string name="WindGust_Info">Summons a gust of wind, that pushes the selected character away.</string>
 
     <!-- STRINGS OF FreezeGlobe CLASS -->
     <string name="FreezeGlobe_Name">Freeze</string>
-    <string name="FreezeGlobe_Info">Freezes selected character making it unable to perform any action for short period.</string>
+    <string name="FreezeGlobe_Info">Freezes the selected character, making it unable to perform any actions for a short period of time.</string>
 
     <!-- STRINGS OF MagicTorch CLASS -->
     <string name="MagicTorch_Name">Magic torch</string>
-    <string name="MagicTorch_Info">Spell that produces light to illuminate dark dungeon levels.</string>
+    <string name="MagicTorch_Info">A spell that produces light, to illuminate the dark levels of the dungeon.</string>
 
     <!-- STRINGS OF Healing CLASS -->
     <string name="Healing_Name">Healing</string>
-    <string name="Healing_Info">This spell is crucial for every adventurer. It will restore 1/3 of a maximum amount of caster\'s hp.</string>
+    <string name="Healing_Info">This spell is crucial for any adventurer. It will restore 1/3 of the maximum amount of the caster\'s hp.</string>
 
     <!-- Items descriptions -->
     <!-- STRINGS OF ClassArmor CLASS -->
@@ -50,7 +50,7 @@
 
     <!-- STRINGS OF Drink CLASS -->
     <string name="TomeOfKnowledge_Name">Tome of Knowledge</string>
-    <string name="TomeOfKnowledge_Info">This ancient tome is filled with arcane riddles and mysteries! It may be a hard read, but if you\'ll get through it, you\'ll definitely increase your magical powers.</string>
+    <string name="TomeOfKnowledge_Info">This ancient tome is filled with arcane riddles and mysteries! It may be hard to read, but if you\'ll get through it, you\'ll definitely increase your magical powers.</string>
 
     <!-- STRINGS OF SpellBook CLASS -->
     <string name="SpellBook_Name">Spell Book</string>

@@ -3,28 +3,28 @@
 
     <string name="HeroClass_Gnoll">Gnoll</string>
     <string name="GnollArmor_ACSpecial">DOMINATE</string>
-    <string name="GnollArmor_NotGnoll">Only gnolls can equip Gnoll Armor!</string>
+    <string name="GnollArmor_NotGnoll">Only gnolls can equip the Gnoll Armor!</string>
 
     <string name="GnollArmor_Name">gnoll-lieutenant suit</string>
-    <string name="GnollArmor_Info">Wearers of Gnoll-Lieutenant suit well known for their ability to persuade even extremely angry mobs to be loyal servants of the Crown.</string>
+    <string name="GnollArmor_Info">Owners of the Gnoll-Lieutenant suit are well known for their ability to persuade even extremely angry mobs, to be loyal servants of the Crown.</string>
 
     <string name="GnollTamahawk_Name">gnoll tomahawk</string>
-    <string name="GnollTamahawk_Info">Traditional Tomahawk created by Gnoll artisans, each clan has its own unique design. This Tomahawk is slightly lighter than the counterparts made by humans.</string>
+    <string name="GnollTamahawk_Info">A traditional Tomahawk created by Gnoll masters, where each clan has its own unique design. This Tomahawk is slightly lighter than its counterparts.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
 
 
     <string name="WndPlayGames_BackupProgress">Backup Game Progress</string>
     <string name="WndPlayGames_RestoreProgress">Restore Game Progress</string>
     <string name="WndPlayGames_WorkInCloud">Working in Cloud... Please wait.</string>
-    <string name="StartScene_UnlockGnoll">To unlock this class you must persuade town priest to heal Gnoll Brute</string>
+    <string name="StartScene_UnlockGnoll">To unlock this class you must persuade the town priest to heal the Gnoll Brute</string>
     <string name="WndPriest_Heal_Minions">Heal all your minions - %d gold only!</string>
     <string name="Badges_GnollUnlocked">Gnoll unlocked</string>
 
     <string-array name="HeroClass_GnollPerks">
         <item>Gnolls starts with 15 strength points</item>
         <item>Gnolls starts with 5 health points</item>
-        <item>Gnolls starts without any armor but with unique tomahawk</item>
+        <item>Gnoll starts without any armor but with an unique tomahawk</item>
         <item>Gnolls can\'t read or write</item>
-        <item>Gnolls do not attack another Gnolls until provoked</item>
+        <item>Gnolls do not attack another Gnoll until provoked</item>
      </string-array>
 </resources>

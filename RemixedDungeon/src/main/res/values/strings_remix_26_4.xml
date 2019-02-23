@@ -9,7 +9,7 @@
     <string name="FortuneTellerNPC_Name">fortune-teller</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name_Objective">fortune-teller</string>
-    <string name="FortuneTellerNPC_Desc">This woman is dressed in a long, brightly colored robe. She looks surprisingly young for someone, who mastered arcane arts of fortune-telling. Coming closer, you can hear her mumbling, as she stares in crystal ball.</string>
+    <string name="FortuneTellerNPC_Desc">This woman is dressed in a long, brightly colored robe. She looks surprisingly young for someone, who mastered arcane arts of fortune-telling. Coming closer, you can hear her mumbling, as she gazes into the crystal ball.</string>
 
     <!-- STRINGS OF ServiceManNPC CLASS -->
     <string name="ServiceManNPC_Limit_Reached">I do apologise, but you\'ve reached your current limit. But you\'ll be able to use our service again for every hero level you receive!</string>
@@ -36,15 +36,15 @@
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
 
     <!-- STRINGS OF WndMovieTheatre CLASS -->
-    <string name="WndMovieTheatre_Instruction_2">You watched %1$d out of %2$d times. You will get additional opportunity to watch a movie for every new hero level.</string>
+    <string name="WndMovieTheatre_Instruction_2">You watched %1$d out of %2$d times. You will get an additional opportunity to watch a movie for every new hero level reached.</string>
 
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_blue_carpet_name">Carpet</string>
-    <string name="town_deco_blue_carpet_desc">An exquisite blue carpet, decorated with purple silk.</string>
+    <string name="town_deco_blue_carpet_desc">A luxurous blue carpet, decorated with purple ornaments.</string>
 
     <string name="town_table_fortune_name">Table</string>
-    <string name="town_table_fortune_desc">This table is covered with silk blanket. You can see various tarot cards laid out in a peculiar order.</string>
+    <string name="town_table_fortune_desc">This table is covered with a silk cloth. You can see various tarot cards laid out in a peculiar order.</string>
 
     <string name="ConcreteBlock_Name">Heavy concrete block</string>
     <string name="ConcreteBlock_Description">Looks like this block require %d points of strength to push</string>
