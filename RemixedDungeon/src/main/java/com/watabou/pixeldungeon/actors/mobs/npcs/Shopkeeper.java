@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
@@ -119,14 +120,13 @@ public class Shopkeeper extends NPC {
 
 	private WndBag.Listener buyItemSelector = item -> {
 		if (item != null) {
-
 			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true) );
 		}
 	};
 
 	@Override
 	public boolean interact(final Hero hero) {
-		GameScene.show(new WndOptions(getName(),
+		GameScene.show(new WndOptions(Utils.capitalize(getName()),
 								Game.getVar(R.string.Shopkeeper_text),
 								Game.getVar(R.string.Shopkeeper_SellPrompt),
 								Game.getVar(R.string.Shopkeeper_BuyPrompt)){

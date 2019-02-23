@@ -1,21 +1,13 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.PollfishSurveys;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.WndOptions;
-import com.watabou.pixeldungeon.windows.WndQuest;
-import com.watabou.pixeldungeon.windows.WndStory;
 
 public class InquirerNPC extends ImmortalNPC {
 
     public InquirerNPC() {
-        if (PollfishSurveys.consented()) {
-            PollfishSurveys.init();
-        }
+//        if (PollfishSurveys.consented()) {
+//            PollfishSurveys.init();
+//        }
     }
 
 
@@ -24,7 +16,7 @@ public class InquirerNPC extends ImmortalNPC {
 
     @Override
     public boolean interact(final Hero hero) {
-
+/*
         if (!PollfishSurveys.consented()) {
         }
 
@@ -55,7 +47,8 @@ public class InquirerNPC extends ImmortalNPC {
                 }
             }
         });
-
+*/
         return true;
+
     }
 }
