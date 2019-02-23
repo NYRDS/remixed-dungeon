@@ -46,6 +46,8 @@ local PseudoBlobs = {
     Freezing = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Freezing")
 }
 
+local Challenges = luajava.bindClass("com.watabou.pixeldungeon.Challenges")
+
 local actions = {
     eat = "Food_ACEat",
     light = "Torch_ACLight",
@@ -104,6 +106,8 @@ local RPD = {
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
+
+    Challenges = Challenges,
 
     GLog = GLog,
     MobAi = MobAi,

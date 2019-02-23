@@ -78,6 +78,7 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.PetOwner;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -1053,9 +1054,11 @@ public class Hero extends Char implements PetOwner {
 			}
 		}
 
-		for (Item item : belongings) {
-			if (item instanceof IChaosItem && item.isEquipped(this)) {
-				((IChaosItem) item).ownerDoesDamage(this, damage);
+		if (!(enemy instanceof NPC)) {
+			for (Item item : belongings) {
+				if (item instanceof IChaosItem && item.isEquipped(this)) {
+					((IChaosItem) item).ownerDoesDamage(this, damage);
+				}
 			}
 		}
 

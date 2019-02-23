@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class ChaosCommon {
-	public static final String CHARGE_KEY = "charge";
 	
 	@SuppressWarnings("rawtypes")
 	private static Class[] blobs = {
