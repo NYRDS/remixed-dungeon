@@ -102,7 +102,11 @@ public class WndBag extends WndTabbed {
 	public WndBag(Belongings stuff, Bag bag, Listener listener, Mode mode, String title) {
 		
 		super();
-	
+
+		if(instance!=null) {
+			instance.hide();
+		}
+
 		nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
 		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
 		
@@ -181,9 +185,7 @@ public class WndBag extends WndTabbed {
 	}
 
 	public void updateItems() {
-			hide();
-			WndBag wndBag = new WndBag(stuff, stuff.backpack, listener, mode, title);
-			GameScene.show(wndBag);
+		GameScene.show(new WndBag(stuff, stuff.backpack, listener, mode, title));
 	}
 
 	private void placeItems(Bag container) {
@@ -258,7 +260,6 @@ public class WndBag extends WndTabbed {
 	
 	@Override
 	public void onClick( Tab tab ) {
-		hide();
 		GameScene.show( new WndBag(stuff, ((BagTab)tab).bag, listener, mode, title ) );
 	}
 	
