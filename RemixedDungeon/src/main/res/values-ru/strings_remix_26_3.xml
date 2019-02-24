@@ -72,7 +72,7 @@
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_common_door_name">Дверь</string>
-    <string name="town_deco_common_door_desc">Воспитанный искатель приключений никогда не станет, вторгаться на территорию частной собственности, без приглашения.</string>
+    <string name="town_deco_common_door_desc">Воспитанный искатель приключений никогда не станет вторгаться на территорию частной собственности без приглашения.</string>
 
     <string name="town_deco_dungeon_door_name">Вход</string>
     <string name="town_deco_dungeon_door_desc">Вход в подземелье.</string>

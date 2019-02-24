@@ -2,16 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Herzlich willkommen!</string>
-  <string name="Welcome_Text_28">
-remix.28\n
-- Neuer Held - Gnoll\n
-- Der Schaden von Zauberstäben im Nahkampf hängt nun vom Magielevel des Helden ab\n
-- Für jeden Helden wird nicht mehr als ein Ergebnis bei den Highscores angezeigt\n
-- Auto-Synchronisation mit Google Play Spiele ist deaktiviert(Du kannst manuell Synchronisieren)\n
-- Ein großes Update für die Brasilianisch-Portugiesische Übersetzung\n
-- Neue Heldenklassen Option für Mods: forbiddenActions, friendlyMobs\n
-- Neue Sprache hinzugefügt: Malaiisch\n
-</string>
   <string name="Welcome_Text_28_1">
 remix.28.1\n
 - Große Renovierung in der Stadt\n

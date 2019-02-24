@@ -2,14 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Okey!</string>
   <string name="Welcome_Title">Bienvenue!</string>
-  <string name="Welcome_Text_28">remix.28\n
-- Nouveau héros : Gnoll\n
-- Les dégâts des sceptres magiques en combat direct dépendent maintenant du niveau de magie du héros\n
-- Seulement un résultat sera affiché pour chaque héros dans le tableau des meilleurs scores\n
-- La synchonisation automatique avec Google PlayGames est désactivée (vous pouvez synchroniser manuellement)\n
-- Gross màs de la traduction Brésilien-Portugais\n
-- Options pour les mods de la nouvelle classe : forbiddenActions, friendlyMobs\n
-- Nouvelle langue ajoutée : Malais\n</string>
   <string name="Welcome_Text_28_1"> remix.28.1\n
 - Rénovation d\'envergure du village\n
 - Nombre d\'améliorations graphiques et correction de bug\n

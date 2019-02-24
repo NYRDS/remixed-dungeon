@@ -37,6 +37,7 @@
   <!--STRINGS OF HeartOfDarkness CLASS-->
   <string name="HeartOfDarkness_Name">Сердце тьмы</string>
   <string name="HeartOfDarkness_Info">Чёрное пульсирующее сердце Предательского духа.</string>
+  <string name="HeartOfDarkness_Gender">бесполый</string>
   <!--Buffs-->
   <!--STRINGS OF DarkVeil CLASS-->
   <string name="DarkVeil_Buff">Тёмная вуаль</string>

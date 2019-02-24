@@ -48,6 +48,8 @@
     <string name="JarOfSouls_Name">глечик душ</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name_Objective">глечик душ</string>
+    <string name="JarOfSouls_Desc">Сяйво очей зображеного на глечику черепа, та дивна магічна енергія, яку він випромінює, викликає у тебе занепокоєння.</string>
+
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">ліч</string>
     <string name="Lich_Gender">masculine</string>

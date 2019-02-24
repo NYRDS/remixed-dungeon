@@ -8,6 +8,8 @@
     <string name="TownGuardNPC_Desc">Типовий вартовий міста.</string>
     <string name="TownGuardNPC_Message1">Проходимо, не затримуємося.</string>
     <string name="TownGuardNPC_Message2">Завдяки таким шукачам пригод, як ви, тут стало безпечніше.</string>
+    <string name="TownGuardNPC_Message3">Гадаєш тут забагато вартових? Це ж єдине місто, в якому знаходиться спуск в гігантське підземелля, яке наповнено монстрами, чи не так?</string>
+
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">городянин</string>
     <string name="TownsfolkNPC_Gender">чоловічий</string>

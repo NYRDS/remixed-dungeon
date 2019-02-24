@@ -3,8 +3,28 @@
     <!-- Item descriptions -->
     <!-- STRINGS OF ElvenBow CLASS -->
     <string name="ElvenBow_Name">elf yayı</string>
+    <string name="ElvenBow_Info">Elf zanaatkarlığının muazzam bir örneği... Bariz bir şekilde, sıradan bir yaydan daha etkili ve isabetli. </string>
+
     <!-- STRINGS OF RatHide CLASS -->
     <string name="RatHide_Name">fare derisi</string>
+    <string name="RatHide_Info">Küçük bir parça deri ve et pisliği... Biri gerçekten bununla bir şeyler yapabilir mi? </string>
+
+    <!-- STRINGS OF RatArmor CLASS -->
+    <string name="RatArmor_Name">Sıçan Zırhı</string>
+    <string name="RatArmor_Info">Fare derisinden bir zırh, muhtemelen zehirli değildir. </string>
+
+    <!-- Mobs descriptions -->
+    <!-- STRINGS OF PlagueDoctorNPC CLASS -->
+    <string name="PlagueDoctorNPC_Name">Veba Hekimi</string>
+    <string name="PlagueDoctorNPC_Gender">Erkeksi</string>
+    <string name="PlagueDoctorNPC_Name_Objective">Veba Hekimi</string>
+    <string name="PlagueDoctorNPC_Desc">Kürekle kaplı bu kambur adam sanki şey gibi kokuyor, ilaç ve... sarımsak mı?! </string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Olacak iş değil! Şu ahmaklar hala lağımların ne kadar tehlikeli olduğunu idrak edemiyor. Sanki gardiyan ve maceracı bozmaları, Kasaba\'yı her bir şeyden koruyabilirmiş gibi... Bu hastalığın yayılmasını hiçbir silah durduramaz. Biraz yardımın lazım. Bana %d sıçan derisi getir ki araştırmalarıma devam edebileyim. 
+</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Olacak iş değil! Şu ahmaklar hala lağımların ne kadar tehlikeli olduğunu idrak edemiyor. Sanki gardiyan ve maceracı bozmaları, Kasaba\'yı her bir şeyden koruyabilirmiş gibi... Bu hastalığın yayılmasını hiçbir silah durduramaz. Biraz yardımın lazım. Bana %d sıçan derisi getir ki araştırmalarıma devam edebileyim. 
+</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Bana %d sıçan derisi getir. </string>
+    <string name="PlagueDoctorNPC_Quest_End">Çok teşekkür ederim, umalım ki bunlarla bir çare bulabilirim. Sen keşfe çıkmışken bunu da senin için yaptım. </string>
     <string name="BellaNPC_Name_Objective">Bella</string>
     <!-- Window descriptions -->
     <!-- STRINGS OF WndMovieTheatre CLASS -->

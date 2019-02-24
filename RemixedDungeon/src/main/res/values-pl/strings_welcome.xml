@@ -2,16 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Dobra!</string>
   <string name="Welcome_Title">Witaj!</string>
-  <string name="Welcome_Text_28">
-    remix.28\n
-    - Nowy Bohater - Gnoll\n
-    - Obrażenia zadawane przez wietrzne różdżki podczas walki wręcz zależą teraz od poziomu magicznych umiejętności Bohatera   \n
-    - Dla każdego Bohatera, nie więcej niż jeden wynik będzie wyświetlany w tabeli najlepszych wyników \n
-    - Auto synchronizacja z Google Play Games jest wyłączona (Możesz zsynchronizować dane ręcznie)\n
-    - Wielki zmiany w tłumaczeniu Brazylijsko-Portugalskim\n
-    - Nowe klasy bohatera dla modów: forbiddenActions, friendlyMobs\n
-    - Dodano nowy język: Malajski \n
-    </string>
   <string name="Welcome_Text_28_1">
     remix.28.1\n
     - Wielka renowacja Miasta\n

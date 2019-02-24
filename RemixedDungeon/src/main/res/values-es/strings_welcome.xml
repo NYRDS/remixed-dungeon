@@ -2,16 +2,6 @@
 <resources>
   <string name="Welcome_Ok">¡Muy bien!</string>
   <string name="Welcome_Title">¡Bienvenido!</string>
-  <string name="Welcome_Text_28">
- remix.28\n
- - Nuevo heroe - Gnoll\n
- - El dano de las varitas magicas en combate cuepro a cuepro ahora depende del nivel de habilidad magica del heroe\n
- - Para cada Heroe, no se mostrara mas de un resultado en el tablero de maximas puntuaciones\n
- - La sincronizacion automatica con Google PlayGames esta desactivada (Puede sincronizar manualmente)\n
- - Una gran actualizacion de la traduccion Brasil-Portugues\n
- - Nuevas opciones de clase de heroe para modding: forbiddenActions, friendlyMobs\n
- - Nuevo idioma agregado: idioma Malayo\n
- </string>
   <string name="Welcome_Text_28_1">
     remix.28.1\n
     - Gran renovación del Pueblo\n
