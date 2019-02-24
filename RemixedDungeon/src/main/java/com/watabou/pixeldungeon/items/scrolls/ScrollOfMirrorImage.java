@@ -21,8 +21,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 
@@ -43,9 +41,6 @@ public class ScrollOfMirrorImage extends Scroll {
 			MirrorImage mob = new MirrorImage(getUser());
 			Dungeon.level.spawnMob(mob);
 			WandOfBlink.appear( mob, cell );
-			if(getUser() instanceof Hero) {
-				Mob.makePet(mob, getUser());
-			}
 			nImages--;
 		}
 		
