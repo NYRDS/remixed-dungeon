@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -135,6 +136,11 @@ public class Buff extends Actor {
 				}
 
 				Item srcItem = item.detach(hero.belongings.backpack);
+
+				if(srcItem == null) {
+					EventCollector.logException(item.getClassName());
+					continue;
+				}
 
 				item = action.act(srcItem);
 
