@@ -124,7 +124,7 @@ public abstract class Mob extends Char {
 	private static final String FRACTION   = "fraction";
 
 	public Mob() {
-		readCharData();
+		setupCharData();
 	}
 
 	public Fraction fraction() {

@@ -216,7 +216,7 @@ public class Hero extends Char implements PetOwner {
 	private int difficulty;
 
 	public Hero() {
-		readCharData();
+		setupCharData();
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
 
@@ -240,7 +240,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	protected void readCharData() {
+	protected void setupCharData() {
 	}
 
 	public int effectiveSTR() {

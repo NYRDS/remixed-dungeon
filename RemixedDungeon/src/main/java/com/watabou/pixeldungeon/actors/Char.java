@@ -25,6 +25,8 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.audio.Sample;
@@ -87,10 +89,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 	public static final Char DUMMY = new DummyChar();
 
 	@Packable
-    private int      pos      = 0;
+    private int pos = 0;
 
 	@Packable
-	private int id;
+	private int id = 0;
 
 	public  Fraction fraction = Fraction.DUNGEON;
 
@@ -155,37 +157,48 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 
 		super.restoreFromBundle(bundle);
 
+		if(id!=0) {
+            CharsList.add(this, id);
+        }
+
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
 
-		boolean hungerAttached = false;
-		boolean hungerBugSend = false;
+		//TODO remove me in 28.6
+        {
+            boolean hungerAttached = false;
+            boolean hungerBugSend = false;
 
-		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
-			if (b != null) {
-				if (b instanceof Hunger) {
-					if (!hungerAttached) {
-						hungerAttached = true;
-					} else {
-						if (!hungerBugSend) {
-							EventCollector.logException("hunger count");
-							hungerBugSend = true;
-							continue;
-						}
-					}
-				}
-				b.attachTo(this);
-			}
-		}
-
-		readCharData();
+            for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
+                if (b != null) {
+                    if (b instanceof Hunger) {
+                        if (!hungerAttached) {
+                            hungerAttached = true;
+                        } else {
+                            if (!hungerBugSend) {
+                                EventCollector.logException("hunger count");
+                                hungerBugSend = true;
+                                continue;
+                            }
+                        }
+                    }
+                    b.attachTo(this);
+                }
+            }
+        }
+		setupCharData();
 	}
 
 	private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
 
-	protected void readCharData() {
+	protected void setupCharData() {
+        ///freshly created char or pre 28.6 save
+        if(id==0) {
+            id = EntityIdSource.getNextId();
+            CharsList.add(this,id);
+        }
 
 		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);

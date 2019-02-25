@@ -79,8 +79,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	protected void readCharData() {
-		super.readCharData();
+	protected void setupCharData() {
+		super.setupCharData();
 	}
 
 	@Override
