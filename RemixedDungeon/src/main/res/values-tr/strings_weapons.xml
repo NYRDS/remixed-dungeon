@@ -80,7 +80,7 @@
   <string name="MeleeWeapon_Info2a">Her vuruşta ortalama %d puan hasar verir.</string>
   <string name="MeleeWeapon_Info2b">Her vuruşta ortalama %1$d puan hasar verir ve genellikle kullanmak için %2$d güç puanı gerekir.</string>
   <string name="MeleeWeapon_Info2c">Bu silah büyük ihtimalle senin için çok ağır.</string>
-  <string name="MeleeWeapon_Info3a">Silahın kalitesi :%s.</string>
+  <string name="MeleeWeapon_Info3a">Bu bir %s silahdır.</string>
   <string name="MeleeWeapon_Info3b">hızlı</string>
   <string name="MeleeWeapon_Info3c">yavaş</string>
   <string name="MeleeWeapon_Info3d">ve</string>

@@ -36,4 +36,15 @@
 remiks.28.4 \ n
      - Udoskonalenia grafiki: \ n
      - Broń bohaterów widoczna teraz w grze \ n</string>
+  <string name="Welcome_Text_28_5">
+    remix.28.5\n
+    - Modowanie:\n
+    -- Modowalne AI dla Mobów i NPC s\n
+    - Miasto:\n
+    -- Kościół jest otwarty dla wiernych\n
+    -- Odnowiono miejski sklep\n
+    - Mechaniki gry:\n
+    -- Poprawiono interfejs handlu\n
+    -- Portalu można używać wiele razy\n
+    </string>
 </resources>

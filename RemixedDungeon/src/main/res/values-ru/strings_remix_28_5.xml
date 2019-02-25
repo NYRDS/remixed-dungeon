@@ -33,7 +33,7 @@
 	<string name="BlackCat_AiStatus">Эта кошка делает обычные кошачьи дела</string>
 	<string name="Shopkeeper_Buy">Выбери предмет, чтобы купить</string>
 	<string name="Shopkeeper_title">Магазин</string>
-	<string name="Shopkeeper_text">Добро Пожаловать в местной Pixel-Mart.\nКак я могу помочь вам?</string>
+	<string name="Shopkeeper_text">Добро Пожаловать в местный Pixel-Mart.\nКак я могу помочь вам?</string>
 	<string name="Shopkeeper_SellPrompt">У меня есть что продать</string>
 	<string name="Shopkeeper_BuyPrompt">Дай взглянуть на твои товары</string>
 
