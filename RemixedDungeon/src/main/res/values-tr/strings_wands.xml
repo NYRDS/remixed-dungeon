@@ -25,7 +25,7 @@
     <item>huş</item>
   </string-array>
   <!--STRINGS OF WandOfAmok CLASS-->
-  <string name="WandOfAmok_Name">Öldürme arzusu asası</string>
+  <string name="WandOfAmok_Name">Çılgının Asası</string>
   <string name="WandOfAmok_Info">Bu asadan çıkan pembe ışık hedefini öldürme arzusu ile doldurur.Civardaki yaratıklara saldırmasını sağlar.</string>
   <string name="WandOfAmok_Info1">hiçbişi olmadı</string>
   <!--STRINGS OF WandOfAvalanche CLASS-->
@@ -36,14 +36,14 @@
   <string name="WandOfBlink_Name">Işınlanma Asası</string>
   <string name="WandOfBlink_Info">Bu asa seçtiğin yöne ışınlanmanı sağlar. Yolundaki yaratık ve cansız nesneler ışınlanmanı engeller.</string>
   <!--STRINGS OF WandOfDisintegration CLASS-->
-  <string name="WandOfDisintegration_Name">Dağılma Asası</string>
+  <string name="WandOfDisintegration_Name">Ayrışma Asası</string>
   <string name="WandOfDisintegration_Info">Bu asa yokedici bir enerji ışını yayar. Bu enerji yolu üzerindeki tüm yaratıklara işler, ne kadar çok yaratık varsa verdiği hasar da o kadar artar.</string>
   <!--STRINGS OF WandOfFirebolt CLASS-->
   <string name="WandOfFirebolt_Name">Ateştopu Asası</string>
   <string name="WandOfFirebolt_Info">Bu asa yakıcı sihirli bir ateş patlatır. Yanabilir arazide  yangın çıkartır ve dokunduğu yaratığı yakar ve hasar verir.</string>
   <string name="WandOfFirebolt_Info1">Ateş asası ile kendini öldürdün...</string>
   <!--STRINGS OF WandOfFlock CLASS-->
-  <string name="WandOfFlock_Name">Sürü asası</string>
+  <string name="WandOfFlock_Name">Sürü Asası</string>
   <string name="WandOfFlock_Info">Bu asanın şıklatılması sihirli bir koyun sürüsü yaratır ve bu sürü geçilmez bir engel oluşturur.</string>
   <string name="Sheep_Name">koyun</string>
   <string name="Sheep_Name_Objective">koyunlar</string>
@@ -62,7 +62,7 @@
   <string name="WandOfLightning_Info">Bu asa ölümcül bir elektrik akımı üretir.Birbirine yakın olan tüm yaratıklara etki eder.</string>
   <string name="WandOfLightning_Info1">Şimşek Asası ile kendini öldürdün...</string>
   <!--STRINGS OF WandOfMagicMissile CLASS-->
-  <string name="WandOfMagicMissile_Name">Sihirli Ok Asası</string>
+  <string name="WandOfMagicMissile_Name">Sihirli Füze Asası</string>
   <string name="WandOfMagicMissile_Info">Bu asa saf büyü enerjisinden oklar fırlatır. Bu oklar orta seviye hasar verir.</string>
   <string name="WandOfMagicMissile_ACDisenchant">BÜYÜYÜ BOZ</string>
   <string name="WandOfMagicMissile_Info1">Kendi kendini Büyülü Füze Âsân ile öldürdün...</string>

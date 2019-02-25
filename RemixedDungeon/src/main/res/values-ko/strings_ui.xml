@@ -16,7 +16,7 @@
   <string name="AboutScene_OurSite">제작사 홈페이지:</string>
   <string name="AboutScene_Snd">Send E-Mail</string>
   <string name="AboutScene_Translation">현지화한 사람:</string>
-  <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901  &amp;  korfurry</string>
+  <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901  &amp;  </string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">최고 랭킹</string>
   <string name="RankingsScene_Total">총 플레이 회수.</string>

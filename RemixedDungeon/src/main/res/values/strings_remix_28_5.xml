@@ -53,6 +53,6 @@
 	<string name="town_deco_armoronhanger_name">Armor</string>
 	<string name="town_deco_armoronhanger_desc">Some kind of armor on a hanger.</string>
 	<string name="town_deco_potions_name">Potions</string>
-	<string name="town_deco_potions_desc">Some kind of potions one the shelf.</string>
+	<string name="town_deco_potions_desc">Some kind of potions on the shelf.</string>
 
 </resources>

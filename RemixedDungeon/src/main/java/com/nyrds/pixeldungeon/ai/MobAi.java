@@ -86,7 +86,7 @@ public abstract class MobAi implements AiState {
 
         for (Char chr : Actor.chars.values()) {
             if (me.level().fieldOfView[chr.getPos()]) {
-                if (!chr.friendly(me)) {
+                if (!me.friendly(chr)) {
                     int candidateDist = me.level().distance(me.getPos(), chr.getPos());
                     if (candidateDist < dist) {
                         bestEnemy = chr;

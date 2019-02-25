@@ -2,16 +2,6 @@
 <resources>
   <string name="Welcome_Ok">알겠습니다!</string>
   <string name="Welcome_Title">환영합니다!</string>
-  <string name="Welcome_Text_28">
- remix.28\n
- - 새 영웅 - 놀 \n
- - 마법봉의 근접 데미지가 영웅의 마법 레벨에 의존됨\n
- -각각의 영웅들의 한가지 하이스코어가 하이스코어 보드에 둘 이상 표시되지 않음
- -  Google Play Games와 자동 동기화 기능이 해제됨(당신은 수동 동기화가 가능합니다 )\n
- -브라질, 포루투갈어 번역 업데이트  \n
- - 새 영웅 옵션을 모딩에 추가함: forbiddenActions, friendlyMobs\n
- - 새 언어 추가됨: 말레이시아어 \n
-    </string>
   <string name="Welcome_Text_28_1">
  remix.28.1\n
  - 마을의 대수정\n

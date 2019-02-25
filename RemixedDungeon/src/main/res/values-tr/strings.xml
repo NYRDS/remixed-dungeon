@@ -133,7 +133,7 @@
   <!--STRINGS OF WndRanking CLASS-->
   <string name="WndRanking_Error">Ek bilgi yüklenemedi</string>
   <string name="WndRanking_Stats">Durum</string>
-  <string name="WndRanking_Items">Nesneler</string>
+  <string name="WndRanking_Items">Eşyalar</string>
   <string name="WndRanking_Badges">Rozetler</string>
   <string name="WndRanking_StaTitle">%1$d seviye %2$s</string>
   <string name="WndRanking_StaChallenges">Meydan okumalar</string>
@@ -165,13 +165,13 @@
   <string name="WndStory_Spiders">Yıllar burada önce sihirli taşlarla dolu bir maden vardı.Maden tükendikten sonra burada geride sadece tüneller ağı kaldı ve bu tüneller örümcekler tarafından dolduruldu. Tehlikelerine rahmen buralarda sihirli nesnelerin söylentisi cesur olanları buraya çekmeye yetiyor. Bir zamanlar şeytani bir cadı peşindekilerden kaçarak bu tünellere girdi, peşindeki batıl inançlı insanlar girmeye cesaret edemedi ve beklemeye karar verdi, ama cadı asla geri dönmedi. Belki de cadı başka bir çıkış yolu bulmuştur veya buradaki yaratıklar tarafından yok edilmiştir.</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">SATILIK: %1$s - %2$dg</string>
-  <string name="WndTradeItem_Buy">%dg altına al</string>
-  <string name="WndTradeItem_Sell">%dg altına sat</string>
-  <string name="WndTradeItem_Sell1">Tekini %dg altına sat</string>
-  <string name="WndTradeItem_SellAll">Tümünü %dg altına sat</string>
+  <string name="WndTradeItem_Buy">%da ile al</string>
+  <string name="WndTradeItem_Sell">%da karşılığında sat</string>
+  <string name="WndTradeItem_Sell1">Tekini %da karşılığında sat</string>
+  <string name="WndTradeItem_SellAll">Tümünü %dg karşılığında sat</string>
   <string name="WndTradeItem_Cancel">Boşver</string>
-  <string name="WndTradeItem_Sold">%2$dg altına %1$s sattın </string>
-  <string name="WndTradeItem_Bought">%2$dg altına %1$s aldın</string>
+  <string name="WndTradeItem_Sold">%2$da karşılığında %1$s eşyanızı sattınız</string>
+  <string name="WndTradeItem_Bought">%2$da ile %1$s aldınız</string>
   <!--STRINGS OF WndWandmaker CLASS-->
   <string name="WndWandmaker_Message">Oo, görüyorum ki başarılı olmuşsun! Umarım çok sıkıntılı geçmemiştir. Söz verdiğim gibi, yüksek kaliteli asalarımdan birini seçebilirsin.</string>
   <string name="WndWandmaker_Battle">Savaş asası</string>
@@ -272,7 +272,7 @@
   <string name="SeedPouch_Info">Bu küçük kadife kesede tohumlarını saklayabilirsin.</string>
   <!--STRINGS OF WandHolster CLASS-->
   <string name="WandHolster_Name">Asa çantası</string>
-  <string name="WandHolster_Info">Bu egzotic hayvan derisinden yapılmış ince çanta ile %d asa taşıyabilirsin.</string>
+  <string name="WandHolster_Info">Bu tuhaf hayvan derisinden yapılmış ince çanta ile %d asa taşıyabilirsiniz.</string>
   <!--STRINGS OF PotionBelt CLASS-->
   <string name="PotionBelt_Info">Bu dayanıklı deri kemer ile iksirlerini saklayabilir ve onları donmaktan koruyabilirsin.</string>
   <string name="PotionBelt_Name">iksir kemeri</string>

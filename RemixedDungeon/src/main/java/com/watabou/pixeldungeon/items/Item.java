@@ -216,10 +216,12 @@ public class Item implements Bundlable, Presser {
 		return belongings.collect(this);
 	}
 
+	@Nullable
 	public final Item detach(Bag container) {
 		return detach(container, 1);
 	}
 
+	@Nullable
 	public final Item detach(Bag container, int n) {
 		if (quantity() <= 0) {
 			return null;

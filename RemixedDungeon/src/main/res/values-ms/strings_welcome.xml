@@ -2,16 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Baiklah!</string>
   <string name="Welcome_Title">Selamat Datang!</string>
-  <string name="Welcome_Text_28">
-    remix.28\n
-    - Adiwira Baharu - Gnoll\n
-    - Kecederaan tongkat sakti kenakan ketika pertempuran fizikal kini bergantung pada tahap kemahiran kuasa ajaib Adiwira\n
-    - Bagi setiap Adiwira, tidak lebih dari satu keputusan dipaparkan dalam papan skor tertinggi\n
-    - Auto-segerak dengan PlayGame Google telah dilumpuhkan (Anda boleh segerakkan secara manual)\n
-    - Satu kemaskini besar-besaran untuk terjemahan Portugis-Brazil\n
-    - Pilihan kelas adiwira baharu untuk  modding: forbiddenActions, friendlyMobs\n
-    - Bahasa baharu ditambah: Bahasa Melayu yaaay\n
-    </string>
   <string name="Welcome_Text_28_1">
     remix.28.1\n
     - Renovasi besar-besaran di dalam Pekan\n

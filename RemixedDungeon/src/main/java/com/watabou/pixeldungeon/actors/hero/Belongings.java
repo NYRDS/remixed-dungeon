@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Badges;
@@ -278,22 +279,25 @@ public class Belongings implements Iterable<Item> {
 
 
 	void setupFromJson(JSONObject desc) throws JSONException {
-		if (desc.has("armor")) {
-			armor = (Armor) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
-		}
+		try {
+			if (desc.has("armor")) {
+				armor = (Armor) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
+			}
 
-		if (desc.has("weapon")) {
-			weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
-		}
+			if (desc.has("weapon")) {
+				weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
+			}
 
-		if (desc.has("ring1")) {
-			ring1 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
-		}
+			if (desc.has("ring1")) {
+				ring1 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
+			}
 
-		if (desc.has("ring2")) {
-			ring2 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2"));
+			if (desc.has("ring2")) {
+				ring2 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2"));
+			}
+		} catch (ClassCastException e) {
+			throw ModdingMode.modException(e);
 		}
-
 		if (desc.has("items")) {
 			JSONArray items = desc.getJSONArray("items");
 			for (int i = 0; i < items.length(); ++i) {

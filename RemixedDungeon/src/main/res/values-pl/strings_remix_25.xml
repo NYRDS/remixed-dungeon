@@ -48,6 +48,8 @@
     <string name="JarOfSouls_Name">Słój Dusz</string>
     <string name="JarOfSouls_Gender">męski</string>
     <string name="JarOfSouls_Name_Objective">Słój Dusz</string>
+    <string name="JarOfSouls_Desc">Świecące oczy czaszki w tym starym słoju, tak samo jak dziwna energia którą emituja, sprawiają że czujesz się nieswojo.</string>
+
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">Licz</string>
     <string name="Lich_Gender">męski</string>

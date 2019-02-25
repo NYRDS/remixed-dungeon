@@ -25,13 +25,13 @@
     <string name="SociologistNPC_DownloadError">Извините, что-то пошло не так, попробуйте снова позже</string>
 
     <string name="town_deco_library_sign_name">Вывеска библиотеки</string>
-    <string name="town_deco_library_sign_desc">Вероятно в этом здании находится библиотека.</string>
+    <string name="town_deco_library_sign_desc">Вероятно, в этом здании находится библиотека.</string>
     <string name="town_deco_identifier_sign_name">Вывеска магического шара</string>
-    <string name="town_deco_identifier_sign_desc">Вероятно гадалка живёт в этом здании.</string>
+    <string name="town_deco_identifier_sign_desc">Вероятно, гадалка живёт в этом здании.</string>
     <string name="town_deco_cinema_sign_name">Вывеска кинотеатра</string>
-    <string name="town_deco_cinema_sign_desc">Вероятно в этом здании находится кинотеатр.</string>
+    <string name="town_deco_cinema_sign_desc">Вероятно, в этом здании находится кинотеатр.</string>
     <string name="town_deco_INN_sign_name">Вывеска гостиницы</string>
-    <string name="town_deco_INN_sign_desc">Вероятно в этом здании находится гостиница.</string>
+    <string name="town_deco_INN_sign_desc">Вероятно, в этом здании находится гостиница.</string>
 
 
     <string name="HealthDart_Name">Исцеляющий Дротик</string>

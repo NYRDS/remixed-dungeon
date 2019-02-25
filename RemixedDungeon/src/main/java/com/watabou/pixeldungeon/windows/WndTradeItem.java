@@ -364,6 +364,8 @@ public class WndTradeItem extends Window {
 	@Override
 	public void hide() {
 		super.hide();
-		WndBag.getInstance().updateItems();
+		if(WndBag.getInstance()!=null) {
+			WndBag.getInstance().updateItems();
+		}
 	}
 }

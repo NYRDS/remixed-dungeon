@@ -2,16 +2,6 @@
 <resources>
   <string name="Welcome_Ok">Ok!</string>
   <string name="Welcome_Title">Bem vindo!</string>
-  <string name="Welcome_Text_28">
-    remix.28\n
-    - Novo herói - Gnoll\n
-    - O dano de varinhas mágicas, como arma branca agora, depende do nível de habilidade mágica do Herói\n
-    - Para cada Herói, apenas um resultado será exibido no quadro de recordes\n
-    - A sincronização automática com o Google PlayGames está desativada (você pode sincronizar manualmente)\n
-    - Uma grande atualização do idioma Português Brasileiro\n
-    - Novas opções de classe de herói para modificações: forbiddenActions, friendlyMobs\n
-    - Novo idioma adicionado: Idioma Malaio\n
-    </string>
   <string name="Welcome_Text_28_1">
     remix.28.1\n
     - Grande renovação na cidade\n
