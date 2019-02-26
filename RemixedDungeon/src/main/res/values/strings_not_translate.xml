@@ -64,8 +64,6 @@ APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN THIS C
 
     <string name="town_deco_clock_name">Antique clock</string>
     <string name="town_deco_clock_desc">It seems that this clock shows the wrong time</string>
-    <string name="town_deco_pedestal_name">Pedestal</string>
-    <string name="town_deco_pedestal_desc">Pedestal with a holy book on it</string>
     <string name="town_deco_keyholder_name">Keyholder</string>
     <string name="town_deco_keyholder_desc">You can see some keys on this keyholder</string>
     <string name="town_deco_flowerinthepot_name">Flower in a pot</string>
