@@ -55,4 +55,16 @@
 	<string name="town_deco_potions_name">Potions</string>
 	<string name="town_deco_potions_desc">Some kind of potions on the shelf.</string>
 
+	<string name="town_deco_common_bed_name">Bed</string>
+	<string name="town_deco_common_bed_desc">Ordinary bed.</string>
+
+	<string name="town_deco_wooden_table_name">Wooden table</string>
+	<string name="town_deco_wooden_table_desc">This is well made wooden table.</string>
+
+	<string name="town_deco_wooden_bench_name">Wooden bench</string>
+	<string name="town_deco_wooden_bench_desc">Bench, made of wood, looks uncomfortable to sit.</string>
+
+	<string name="town_deco_covered_table_name">Table</string>
+	<string name="town_deco_covered_table_desc">Wooden table with plain white tablecloth.</string>
+
 </resources>
