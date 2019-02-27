@@ -74,7 +74,7 @@ public class Shopkeeper extends NPC {
 		flee();
 	}
 	
-	protected void flee() {
+	private void flee() {
 		for (Heap heap: Dungeon.level.allHeaps()) {
 			if (heap.type == Heap.Type.FOR_SALE) {
 				CellEmitter.get( heap.pos ).burst( ElmoParticle.FACTORY, 4 );
@@ -152,6 +152,11 @@ public class Shopkeeper extends NPC {
 	}
 
 	public void addItem(Item item) {
+		if(item instanceof Bag && Dungeon.hero != null) {
+			if(Dungeon.hero.getBelongings().getItem(item.getClassName())!=null) {
+				return;
+			}
+		}
 		item.collect(this);
 	}
 

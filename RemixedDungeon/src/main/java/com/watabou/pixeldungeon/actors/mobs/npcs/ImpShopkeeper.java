@@ -20,10 +20,6 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.sprites.ImpSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -44,21 +40,6 @@ public class ImpShopkeeper extends Shopkeeper {
 		}
 		
 		return super.act();
-	}
-	
-	@Override
-	protected void flee() {
-		for (Heap heap: Dungeon.level.allHeaps()) {
-			if (heap.type == Heap.Type.FOR_SALE) {
-				CellEmitter.get( heap.pos ).burst( ElmoParticle.FACTORY, 4 );
-				heap.destroy();
-			}
-		}
-		
-		destroy();
-		
-		getSprite().emitter().burst( Speck.factory( Speck.WOOL ), 15 );
-		getSprite().killAndErase();
 	}
 	
 }

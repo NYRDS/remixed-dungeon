@@ -25,21 +25,18 @@ public class Scene extends Group {
 	private Signal.Listener<Keys.Key> keyListener;
 	
 	public void create() {
-		Keys.event.add( keyListener = new Signal.Listener<Keys.Key>() {
-			@Override
-			public void onSignal( Keys.Key key ) {
-				if (Game.instance() != null && key.pressed) {
-					switch (key.code) {
-					case Keys.BACK:
-						onBackPressed();
-						break;
-					case Keys.MENU:
-						onMenuPressed();
-						break;
-					}
+		Keys.event.add( keyListener = key -> {
+			if (Game.instance() != null && key.pressed) {
+				switch (key.code) {
+				case Keys.BACK:
+					onBackPressed();
+					break;
+				case Keys.MENU:
+					onMenuPressed();
+					break;
 				}
 			}
-		} );
+		});
 	}
 	
 	@Override
