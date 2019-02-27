@@ -6,10 +6,10 @@
 
 	<string name="Bishop_title">Єпископ</string>
 	<string name="Bishop_text">Щоденно та щонічно молюся за тебе, моя дитино.</string>
-	<string name="Bishop_lesser_bless">Невелике благословіння - %d золота</string>
-	<string name="Bishop_great_bless">Велике благословіння - %d золота</string>
+	<string name="Bishop_lesser_bless">Невелике благословіння - %d g</string>
+	<string name="Bishop_great_bless">Велике благословіння - %d g</string>
 
-	<string name="Bishop_remove_curse">Зняти прокляття - %d золота</string>
+	<string name="Bishop_remove_curse">Зняти прокляття - %d g</string>
 
 	<string name="Bishop_not_interested">Покинути</string>
 	<string name="Bishop_no_money">Ви не можете заплатити за це.</string>
