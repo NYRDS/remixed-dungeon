@@ -1769,10 +1769,10 @@ public class Hero extends Char implements PetOwner {
 
 
 	public void resurrect(int resetLevel) {
+		belongings.resurrect(resetLevel);
+
 		hp(ht());
 		setExp(0);
-
-		belongings.resurrect(resetLevel);
 
 		live();
 	}

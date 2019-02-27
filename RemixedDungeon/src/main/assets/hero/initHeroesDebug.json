@@ -11,7 +11,7 @@
         },
 
       {
-        "kind": "Quiver",
+        "kind": "Ankh",
         "level":10
       },
       {
@@ -36,7 +36,7 @@
         "kind": "PotionOfLevitation"
       },
       {
-        "kind": "ScrollOfDomination",
+        "kind": "CandyOfDeath",
         "quantity": 100
       }
     ],

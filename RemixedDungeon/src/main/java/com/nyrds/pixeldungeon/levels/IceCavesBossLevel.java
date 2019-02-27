@@ -23,6 +23,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import androidx.annotation.NonNull;
+
 public class IceCavesBossLevel extends Level {
 	
 	{
@@ -173,7 +175,8 @@ public class IceCavesBossLevel extends Level {
 		Dungeon.observe();
 	}
 
-	@Override
+	@NonNull
+    @Override
 	public Heap drop( Item item, int cell ) {
 		
 		if (!keyDropped && item instanceof SkeletonKey) {

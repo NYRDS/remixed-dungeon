@@ -87,7 +87,9 @@ public class Bag extends Item implements Iterable<Item> {
 		for (Item item : items.toArray(new Item[0])) {
 			if (grab( item )) {
 				item.detachAll( this );
-				owner.collect(item);
+				if(owner.isAlive()) {
+					owner.collect(item);
+				}
 			}
 		}
 

@@ -41,6 +41,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import androidx.annotation.NonNull;
+
 public class CavesBossLevel extends Level {
 	
 	{
@@ -239,7 +241,8 @@ public class CavesBossLevel extends Level {
 		}
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public Heap drop( Item item, int cell ) {
 		
 		if (!keyDropped && item instanceof SkeletonKey) {
