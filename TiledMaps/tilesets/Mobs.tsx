@@ -108,7 +108,7 @@
  </tile>
  <tile id="214">
   <properties>
-   <property name="kind" value="LibrarianNPC"/>
+   <property name="kind" value="TownShopkeeper"/>
   </properties>
  </tile>
  <tile id="215">
