@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="InquirerNPC_Name">Inquirer</string>
-    <string name="InquirerNPC_Desc">Inquirer</string>
-    <string name="InquirerNPC_Gender">masculine</string>
-    <string name="InquirerNPC_Name_Objective">Inquirer</string>
-
 	<string name="BishopNPC_Name">Bishop</string>
 	<string name="BishopNPC_Desc">Bishop of the Holy Church of Santa the Depth Lord</string>
 	<string name="BishopNPC_Gender">masculine</string>
