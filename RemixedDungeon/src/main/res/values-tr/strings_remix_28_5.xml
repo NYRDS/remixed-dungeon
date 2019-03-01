@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="InquirerNPC_Name">Araştırmacı</string>
-    <string name="InquirerNPC_Desc">Araştırmacı</string>
-    <string name="InquirerNPC_Gender">erkeksi</string>
-    <string name="InquirerNPC_Name_Objective">Araştırmacı</string>
-
 	<string name="BishopNPC_Name">Piskopos</string>
 	<string name="BishopNPC_Desc">Derinlik Efendisi Noel Baba\'nın Kutsal Kilisesi\'nin Piskoposu</string>
 	<string name="BishopNPC_Gender">erkeksi</string>
@@ -54,5 +49,19 @@
 	<string name="town_deco_armoronhanger_desc">Askılıktaki bir tür zırh.</string>
 	<string name="town_deco_potions_name">İksirler</string>
 	<string name="town_deco_potions_desc">Rafdaki çeşitli iksirler.</string>
+	<string name="town_deco_common_bed_name">Yatak</string>
+	<string name="town_deco_common_bed_desc">Sıradan yatak.</string>
+
+	<string name="town_deco_wooden_table_name">Tahta masa</string>
+	<string name="town_deco_wooden_table_desc">Bu tahta masa sağlam gözüküyor.</string>
+
+	<string name="town_deco_wooden_bench_name">Tahta sıra</string>
+	<string name="town_deco_wooden_bench_desc">Sıra, tahtadan yapılmış, oturmak için rahat gözükmüyor.</string>
+
+	<string name="town_deco_covered_table_name">Masa</string>
+	<string name="town_deco_covered_table_desc">Sıradan beyaz örtülü tahta masa.</string>
+
+	<string name="town_deco_pedestal_name">Kürsü</string>
+	<string name="town_deco_pedestal_desc">Üzerinde kutsal kitap olan kürsü.</string>
 
 	</resources>

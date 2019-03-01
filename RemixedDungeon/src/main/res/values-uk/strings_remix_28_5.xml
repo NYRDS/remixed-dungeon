@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="BishopNPC_Desc">Єпископ святої церкви Санти - Лорда Глибин</string>
+	<string name="BishopNPC_Desc">Єпископ святої церкви Санти - Лорда Глибин</string>
 	<string name="BishopNPC_Gender">masculine</string>
 	<string name="BishopNPC_Name_Objective">Єпископ</string>
 

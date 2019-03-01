@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="BishopNPC_Name">Епископ</string>
+	<string name="BishopNPC_Name">Епископ</string>
 	<string name="BishopNPC_Desc">Епископ Святейшей церкви Санты Повелителя Глубин.</string>
 	<string name="BishopNPC_Gender">masculine</string>
 	<string name="BishopNPC_Name_Objective">Епископа</string>
@@ -49,6 +49,8 @@
 	<string name="town_deco_armoronhanger_desc">Какая-то броня развешена на манекенах.</string>
 	<string name="town_deco_potions_name">Зелья</string>
 	<string name="town_deco_potions_desc">Какие-то зелья на полках.</string>
+	<string name="town_deco_wardrobe_name">Деревянный шкаф</string>
+	<string name="town_deco_wardrobe_desc">Большой деревянный шкаф.</string>
 
 	<string name="town_deco_common_bed_name">Кровать</string>
 	<string name="town_deco_common_bed_desc">Обычная кровать.</string>
@@ -65,4 +67,11 @@
 	<string name="town_deco_pedestal_name">Пюпитр.</string>
 	<string name="town_deco_pedestal_desc">Пюпитр, на котором лежит священная книга.</string>
 
+	<string name="town_deco_shelf_name">Полки</string>
+	<string name="town_deco_shelf_desc">Пустые полки.</string>
+
+
+	<string name="WndPriest_Instruction2_m">Добро пожаловать, сын мой, в святую церковь великого Санты Повелителя Глубин.</string>
+	<string name="WndPriest_Instruction2_f">Добро пожаловать, дщерь моя, в святую церковь великого Санты Повелителя Глубин.</string>
+	<string name="WndPriest_Instruction2">Если тебе нужна помощь, то, за скромную сумму в %d золотых, я исцелю твои раны.\nА ежели ты в поисках святого Благословения, или же, Санта сохрани, тебя прокляли, повидайся с Епископом в нашей скромной церкви.</string>
 </resources>

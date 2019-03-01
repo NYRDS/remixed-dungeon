@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="InquirerNPC_Gender">męski</string>
-    <string name="BishopNPC_Name">Biskup</string>
+	<string name="BishopNPC_Name">Biskup</string>
 	<string name="BishopNPC_Desc">Biakup Świętego Kościoła pod wezwaniem Mikołaja Władcy Podziemi</string>
 	<string name="BishopNPC_Gender">męski</string>
 	<string name="BishopNPC_Name_Objective">Biskup</string>
@@ -50,5 +49,4 @@
 	<string name="town_deco_armoronhanger_desc">Jakaś zbroja wisząca na wieszaku.</string>
 	<string name="town_deco_potions_name">Mikstury.</string>
 	<string name="town_deco_potions_desc">Jakieś milstury na półce.</string>
-
 	</resources>
