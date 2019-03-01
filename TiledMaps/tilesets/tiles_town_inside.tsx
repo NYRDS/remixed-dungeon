@@ -345,8 +345,8 @@
  </tile>
  <tile id="63">
   <properties>
-   <property name="deco_desc" value="town_deco_shelf_desc"/>
-   <property name="deco_name" value="town_deco_shelf_name"/>
+   <property name="deco_desc" value="town_deco_wardrobe_desc"/>
+   <property name="deco_name" value="town_deco_wardrobe_name"/>
   </properties>
  </tile>
  <tile id="64">
@@ -441,8 +441,8 @@
  </tile>
  <tile id="79">
   <properties>
-   <property name="deco_desc" value="town_deco_shelf_desc"/>
-   <property name="deco_name" value="town_deco_shelf_name"/>
+   <property name="deco_desc" value="town_deco_wardrobe_desc"/>
+   <property name="deco_name" value="town_deco_wardrobe_name"/>
   </properties>
  </tile>
  <tile id="80">
