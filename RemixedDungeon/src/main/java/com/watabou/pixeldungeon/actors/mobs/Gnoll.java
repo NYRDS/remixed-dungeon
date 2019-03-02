@@ -21,14 +21,11 @@ import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.sprites.GnollSprite;
 import com.watabou.utils.Random;
 
 public class Gnoll extends Mob {
 	
 	{
-		spriteClass = GnollSprite.class;
-		
 		hp(ht(12));
 		defenseSkill = 4;
 		

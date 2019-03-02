@@ -93,8 +93,13 @@ public class MobSpriteDef extends MobSprite {
 
 			idle = readAnimation(json, "idle", film);
 			run = readAnimation(json, "run", film);
-			attack = readAnimation(json, "attack", film);
 			die = readAnimation(json, "die", film);
+
+			if(json.has("attack")) { //attack was not defined for some peaceful NPC's
+				attack = readAnimation(json, "attack", film);
+			} else {
+				attack = run.clone();
+			}
 
 			if (json.has("zap")) {
 				zap = readAnimation(json, "zap", film);

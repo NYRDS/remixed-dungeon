@@ -21,7 +21,6 @@ import com.nyrds.Packable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.sprites.SwarmSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -30,8 +29,6 @@ public class Swarm extends Mob {
 	private static final float BASIC_LOOT_CHANCE = 0.2f;
 
 	{
-		spriteClass = SwarmSprite.class;
-		
 		hp(ht(80));
 		defenseSkill = 5;
 		
