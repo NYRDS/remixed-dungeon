@@ -40,7 +40,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.sprites.KingSprite;
 import com.watabou.pixeldungeon.sprites.UndeadSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -58,8 +57,6 @@ public class King extends Boss {
 	private int targetPedestal;
 
 	public King() {
-		spriteClass = KingSprite.class;
-		
 		hp(ht(300));
 		exp = 40;
 		defenseSkill = 25;

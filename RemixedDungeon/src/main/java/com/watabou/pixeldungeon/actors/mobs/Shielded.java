@@ -18,13 +18,10 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.sprites.ShieldedSprite;
 
 public class Shielded extends Brute {
 
 	{
-		spriteClass = ShieldedSprite.class;
-		
 		defenseSkill = 20;
 	}
 	

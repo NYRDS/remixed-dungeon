@@ -1,0 +1,31 @@
+{
+  "die": {
+    "looped": false,
+    "frames": [
+      0
+    ],
+    "fps": 20
+  },
+  "idle": {
+    "looped": true,
+    "frames": [
+      0,
+      0
+    ],
+    "fps": 5
+  },
+  "height": 16,
+  "run": {
+    "looped": true,
+    "frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fps": 5
+  },
+  "bloodColor": "0xffbb0000",
+  "texture": "hedgehog.png",
+  "width": 16
+}

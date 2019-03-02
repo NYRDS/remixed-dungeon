@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.sprites.ThiefSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -40,8 +39,6 @@ public class Thief extends Mob {
 	public Item item;
 	
 	{
-		spriteClass = ThiefSprite.class;
-		
 		hp(ht(20));
 		defenseSkill = 12;
 		

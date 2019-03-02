@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.sprites.WraithSprite;
 import com.watabou.utils.Random;
 
 public class Wraith extends Mob implements IDepthAdjustable {
@@ -39,8 +38,6 @@ public class Wraith extends Mob implements IDepthAdjustable {
 	private int level;
 	
 	public Wraith() {
-		spriteClass = WraithSprite.class;
-		
 		hp(ht(1));
 		exp = 0;
 		
