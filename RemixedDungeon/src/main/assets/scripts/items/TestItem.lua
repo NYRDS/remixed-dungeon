@@ -21,7 +21,7 @@ return item.init{
             price         = 7
         }
     end,
-    actions = function() return {"action1"} end,
+    actions = function() return {"action1","action2","action3"} end,
 
     cellSelected = function(self, thisItem, action, cell)
         if action == "action1" then
@@ -33,6 +33,14 @@ return item.init{
     execute = function(self, item, hero, action)
         if action == "action1" then
             item:selectCell("action1","Please select cell for action 1")
+        end
+
+        if action == "action2" then
+            RPD.glogp(action)
+        end
+
+        if action == "action3" then
+            RPD.glogn(action)
         end
     end,
 }
