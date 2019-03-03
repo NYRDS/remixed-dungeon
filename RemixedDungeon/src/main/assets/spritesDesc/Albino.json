@@ -1,0 +1,47 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [
+      16,
+      16,
+      16,
+      17
+    ],
+    "fps": 2
+  },
+  "height": 15,
+  "texture": "rat.png",
+  "width": 16,
+  "die": {
+    "looped": false,
+    "frames": [
+      27,
+      28,
+      29,
+      30
+    ],
+    "fps": 10
+  },
+  "attack": {
+    "looped": false,
+    "frames": [
+      18,
+      19,
+      20,
+      21
+    ],
+    "fps": 15
+  },
+  "run": {
+    "looped": true,
+    "frames": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "fps": 10
+  },
+  "bloodColor": "0xffbb0000"
+}
