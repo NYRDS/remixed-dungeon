@@ -74,5 +74,14 @@ return mob.init({
                 RPD.textById("Bishop_remove_curse"):format(removeCursePrice),
                 "Bishop_not_interested"
         )
-    end
+    end,
+    die = function(self, cause)
+        local hero = RPD.Dungeon.hero
+        hero:ht(math.max(hero:ht()/2,1))
+        hero:damage(hero:ht(), self)
+
+        hero:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
+
+        RPD.playSound( "snd_cursed.mp3" )
+    end,
 })
