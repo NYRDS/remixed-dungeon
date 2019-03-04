@@ -696,7 +696,7 @@ public class Hero extends Char implements PetOwner {
 
 			Heap heap = level().getHeap(dst);
 			if (heap != null && heap.type == Type.FOR_SALE && heap.size() == 1) {
-				GameScene.show(new WndTradeItem(heap, true, null));
+				GameScene.show(new WndTradeItem(heap, true));
 			}
 
 			return false;
