@@ -54,20 +54,15 @@ public class Assets {
     public static final String RAT       = "rat.png";
     public static final String GNOLL     = "gnoll.png";
     public static final String GOO       = "goo.png";
-    public static final String SWARM     = "swarm.png";
     public static final String SKELETON  = "skeleton.png";
-    public static final String THIEF     = "thief.png";
     public static final String TENGU     = "tengu.png";
     public static final String SHEEP     = "sheep.png";
     public static final String KEEPER    = "shopkeeper.png";
-    public static final String BRUTE     = "brute.png";
     public static final String DM300     = "dm300.png";
-    public static final String WRAITH    = "wraith.png";
     public static final String ELEMENTAL = "elemental.png";
     public static final String MONK      = "monk.png";
     public static final String GOLEM     = "golem.png";
     public static final String UNDEAD    = "undead.png";
-    public static final String KING      = "king.png";
     public static final String STATUE    = "statue.png";
     public static final String PIRANHA   = "piranha.png";
     public static final String EYE       = "eye.png";
@@ -79,9 +74,6 @@ public class Assets {
     public static final String MAKER     = "wandmaker.png";
     public static final String TROLL     = "blacksmith.png";
     public static final String IMP       = "demon.png";
-    public static final String RATKING   = "ratking.png";
-    public static final String HEDGEHOG  = "hedgehog.png";
-    public static final String MIMIC     = "mimic.png";
 
     public static final String ITEMS  = "items.png";
     public static final String PLANTS = "plants.png";

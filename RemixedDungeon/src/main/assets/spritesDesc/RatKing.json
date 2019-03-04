@@ -1,0 +1,48 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "fps": 2
+  },
+  "height": 17,
+  "texture": "ratking.png",
+  "width": 16,
+  "die": {
+    "looped": false,
+    "frames": [
+      0,
+      11,
+      12,
+      13,
+      14
+    ],
+    "fps": 10
+  },
+  "attack": {
+    "looped": false,
+    "frames": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "fps": 15
+  },
+  "run": {
+    "looped": true,
+    "frames": [
+      2,
+      7,
+      8,
+      9,
+      10
+    ],
+    "fps": 10
+  },
+  "bloodColor": "0xffbb0000"
+}

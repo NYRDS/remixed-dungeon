@@ -43,6 +43,8 @@ import com.watabou.utils.Random;
 
 import java.util.List;
 
+import androidx.annotation.NonNull;
+
 public class PrisonBossLevel extends RegularLevel {
 
 	{
@@ -323,7 +325,8 @@ public class PrisonBossLevel extends RegularLevel {
 		}
 	}
 	
-	@Override
+	@NonNull
+    @Override
 	public Heap drop( Item item, int cell ) {
 		
 		if (!keyDropped && item instanceof SkeletonKey) {

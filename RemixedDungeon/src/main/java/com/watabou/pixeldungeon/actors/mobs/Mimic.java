@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.sprites.MimicSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -48,7 +47,6 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	private int level;
 
 	public Mimic() {
-		spriteClass = MimicSprite.class;
 		IMMUNITIES.add(ScrollOfPsionicBlast.class);
 		adjustStats(Dungeon.depth);
 	}

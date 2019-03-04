@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
-import com.watabou.pixeldungeon.sprites.RatKingSprite;
 import com.watabou.utils.Random;
 
 public class RatKing extends NPC {
@@ -39,7 +38,6 @@ public class RatKing extends NPC {
 	private int anger = 0;
 	
 	public RatKing() {
-		spriteClass = RatKingSprite.class;
 		setState(MobAi.getStateByClass(Sleeping.class));
 		defenseSkill = 20;
 		

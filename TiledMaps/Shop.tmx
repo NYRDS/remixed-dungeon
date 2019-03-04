@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.12.28" orientation="orthogonal" renderorder="left-up" width="10" height="7" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="left-up" width="10" height="7" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="1">
  <tileset firstgid="1" source="tilesets/logic.tsx"/>
  <tileset firstgid="65" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="321" source="tilesets/tiles_town_outside_winter.tsx"/>
@@ -64,8 +64,8 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
-0,0,0,790,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,791,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0

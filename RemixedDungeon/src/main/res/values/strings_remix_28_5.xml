@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="InquirerNPC_Name">Inquirer</string>
-    <string name="InquirerNPC_Desc">Inquirer</string>
-    <string name="InquirerNPC_Gender">masculine</string>
-    <string name="InquirerNPC_Name_Objective">Inquirer</string>
-
 	<string name="BishopNPC_Name">Bishop</string>
 	<string name="BishopNPC_Desc">Bishop of the Holy Church of Santa the Depth Lord</string>
 	<string name="BishopNPC_Gender">masculine</string>
@@ -12,10 +7,10 @@
 
 	<string name="Bishop_title">Bishop</string>
 	<string name="Bishop_text">Days and nights I pray for you my child.</string>
-	<string name="Bishop_lesser_bless">Lesser bless - %d gold</string>
-	<string name="Bishop_great_bless">Great bless - %d gold</string>
+	<string name="Bishop_lesser_bless">Lesser bless - %d g</string>
+	<string name="Bishop_great_bless">Great bless - %d g</string>
 
-	<string name="Bishop_remove_curse">Remove curse - %d gold</string>
+	<string name="Bishop_remove_curse">Remove curse - %d g</string>
 
 	<string name="Bishop_not_interested">Leave</string>
 	<string name="Bishop_no_money">You can\'t pay for it.</string>
@@ -45,6 +40,7 @@
 	<string name="WndTradeItem_BuyN">Buy %1$d for %2$dg</string>
 	<string name="WndTradeItem_BuyAll">Buy all for %dg</string>
 	<string name="WndTradeItem_SellN">Sell %1$d for %2$dg</string>
+	<string name="WndBag_BuySubtitle">(You have %dg)</string>
 
 	<string name="town_deco_weaponboard_name">Weapon</string>
 	<string name="town_deco_weaponboard_desc">Some kind of weapon hanging on the board.</string>
@@ -54,6 +50,8 @@
 	<string name="town_deco_armoronhanger_desc">Some kind of armor on a hanger.</string>
 	<string name="town_deco_potions_name">Potions</string>
 	<string name="town_deco_potions_desc">Some kind of potions on the shelf.</string>
+	<string name="town_deco_wardrobe_name">Wooden wardrobe</string>
+	<string name="town_deco_wardrobe_desc">Large wooden wardrobe.</string>
 
 	<string name="town_deco_common_bed_name">Bed</string>
 	<string name="town_deco_common_bed_desc">Ordinary bed.</string>
@@ -67,4 +65,13 @@
 	<string name="town_deco_covered_table_name">Table</string>
 	<string name="town_deco_covered_table_desc">Wooden table with plain white tablecloth.</string>
 
+	<string name="town_deco_pedestal_name">Pedestal</string>
+	<string name="town_deco_pedestal_desc">Pedestal with a holy book on it.</string>
+
+	<string name="town_deco_shelf_name">Shelves</string>
+	<string name="town_deco_shelf_desc">Empty shelves.</string>
+
+	<string name="WndPriest_Instruction2_m">Welcome my son, welcome to the holy church of great Santa the Depth Lord! </string>
+	<string name="WndPriest_Instruction2_f">Welcome my daughter, welcome to the holy church of great Santa the Depth Lord!</string>
+	<string name="WndPriest_Instruction2">If you seek help, I can provide healing service only for %d gold coins!\nIf you are in search for holy Blessing, or, Lord forbid, was cursed, please meet with the Bishop in our humble church.</string>
 </resources>

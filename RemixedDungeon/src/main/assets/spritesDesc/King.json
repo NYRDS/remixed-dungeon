@@ -1,0 +1,66 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+    ],
+    "fps": 12
+  },
+  "height": 16,
+  "texture": "king.png",
+  "width": 16,
+  "die": {
+    "looped": false,
+    "frames": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "fps": 8
+  },
+  "zap": {
+    "looped": false,
+    "frames": [
+      9,
+      10,
+      11
+    ],
+    "fps": 15
+  },
+  "attack": {
+    "looped": false,
+    "frames": [
+      9,
+      10,
+      11
+    ],
+    "fps": 15
+  },
+  "run": {
+    "looped": true,
+    "frames": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "fps": 15
+  },
+  "bloodColor": "0xffbb0000"
+}

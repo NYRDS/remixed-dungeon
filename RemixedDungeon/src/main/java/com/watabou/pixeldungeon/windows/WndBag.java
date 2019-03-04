@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -90,12 +91,12 @@ public class WndBag extends WndTabbed {
 	private int nCols;
 	private int nRows;
 
+	private float titleBottom;
+
 	private static Mode lastMode;
 	private static Bag lastBag;
 
 	private static WndBag instance;
-	
-	private Text txtTitle;
 
 	private Belongings stuff;
 	
@@ -120,21 +121,36 @@ public class WndBag extends WndTabbed {
 		
 		int panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
 		
-		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
+		Text txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
 		txtTitle.maxWidth(panelWidth);
 		txtTitle.hardlight( TITLE_COLOR );
-		txtTitle.x = (int)(panelWidth - txtTitle.width()) / 2;
+		txtTitle.x = PixelScene.align((panelWidth - txtTitle.width()) / 2);
 		if(txtTitle.x<0) {
 			txtTitle.x = 0;
 		}
 		txtTitle.y = 0;
 		add( txtTitle );
-		
+
+		titleBottom = txtTitle.bottom();
+
+		if(mode==Mode.FOR_BUY) {
+			Text txtSubTitle = PixelScene.createMultiline( Utils.format(R.string.WndBag_BuySubtitle, Dungeon.hero.gold()) , GuiProperties.titleFontSize());
+			txtSubTitle.maxWidth(panelWidth);
+			txtSubTitle.hardlight( TITLE_COLOR );
+			txtSubTitle.x = PixelScene.align((panelWidth - txtSubTitle.width()) / 2);
+			if(txtSubTitle.x<0) {
+				txtSubTitle.x = 0;
+			}
+			txtSubTitle.y = titleBottom;
+			add( txtSubTitle );
+			titleBottom = txtSubTitle.bottom();
+		}
+
 		placeItems( bag );
 		
 		resize( 
 			panelWidth, 
-			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + txtTitle.y + txtTitle.height() + SLOT_MARGIN) );
+			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
 
 		if(stuff.getOwner() instanceof Hero) {
 
@@ -229,7 +245,7 @@ public class WndBag extends WndTabbed {
 		}
 
 		int x = col * (SLOT_SIZE + SLOT_MARGIN);
-		int y = (int) (txtTitle.height() + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
+		int y = (int) (titleBottom + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
 
 		ItemButton btnItem = new ItemButton(this, item );
 		btnItem.setPos(x,y);

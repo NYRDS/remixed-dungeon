@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.util.ArrayList;
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
@@ -65,18 +64,10 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 					};
 
 					Game.scene().add(refreshing);
-					Game.instance().playGames.loadSnapshots(new Runnable() {
-						@Override
-						public void run() {
-							Game.pushUiTask(new Runnable() {
-								@Override
-								public void run() {
-									refreshing.hide();
-									refreshWindow();
-								}
-							});
-						}
-					});
+					Game.instance().playGames.loadSnapshots(() -> Game.pushUiTask(() -> {
+						refreshing.hide();
+						refreshWindow();
+					}));
 				}
 			};
 			refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
@@ -131,12 +122,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 								File slotDir = FileSystem.getInternalStorageFile(slotNameFromIndexAndMod(index));
 								boolean res;
 								if (_saving) {
-									res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, new FileFilter() {
-										@Override
-										public boolean accept(File pathname) {
-											return SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.heroClass);
-										}
-									});
+									res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, pathname -> SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.heroClass));
 								} else {
 									res = Game.instance().playGames.unpackSnapshotTo(snapshotId, slotDir);
 								}
@@ -310,15 +296,12 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 	public void returnToWork(boolean res) {
 		Game.softPaused = false;
 
-		Game.pushUiTask(new Runnable() {
-			@Override
-			public void run() {
-				if (!saving) {
-					if(slot.equals(AUTO_SAVE)) {
-						InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
-					} else {
-						SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
-					}
+		Game.pushUiTask(() -> {
+			if (!saving) {
+				if(slot.equals(AUTO_SAVE)) {
+					InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+				} else {
+					SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
 				}
 			}
 		});

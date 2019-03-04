@@ -23,6 +23,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import androidx.annotation.NonNull;
+
 public class NecroBossLevel extends Level {
 	
 	{
@@ -156,7 +158,8 @@ public class NecroBossLevel extends Level {
 		}
 	}
 
-	@Override
+	@NonNull
+    @Override
 	public Heap drop( Item item, int cell ) {
 		
 		if (!keyDropped && (item instanceof BlackSkull || item instanceof BlackSkullOfMastery)) {

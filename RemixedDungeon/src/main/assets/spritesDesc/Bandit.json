@@ -1,0 +1,53 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [
+      21,
+      21,
+      21,
+      22,
+      21,
+      21,
+      21,
+      21,
+      22
+    ],
+    "fps": 1
+  },
+  "height": 13,
+  "texture": "thief.png",
+  "width": 12,
+  "die": {
+    "looped": false,
+    "frames": [
+      25,
+      27,
+      28,
+      29,
+      30
+    ],
+    "fps": 10
+  },
+  "attack": {
+    "looped": false,
+    "frames": [
+      31,
+      32,
+      33
+    ],
+    "fps": 12
+  },
+  "run": {
+    "looped": true,
+    "frames": [
+      21,
+      21,
+      23,
+      24,
+      24,
+      25
+    ],
+    "fps": 15
+  },
+  "bloodColor": "0xffbb0000"
+}

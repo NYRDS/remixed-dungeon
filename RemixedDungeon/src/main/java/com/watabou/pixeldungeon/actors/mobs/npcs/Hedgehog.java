@@ -10,13 +10,11 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.levels.RegularLevel;
-import com.watabou.pixeldungeon.sprites.HedgehogSprite;
 import com.watabou.utils.Bundle;
 
 public class Hedgehog extends NPC {
 
 	{
-		spriteClass = HedgehogSprite.class;
 		setState(MobAi.getStateByClass(Wandering.class));
 	}
 	

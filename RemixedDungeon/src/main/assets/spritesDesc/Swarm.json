@@ -1,0 +1,51 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "fps": 15
+  },
+  "height": 16,
+  "texture": "swarm.png",
+  "width": 16,
+  "die": {
+    "looped": false,
+    "frames": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "fps": 15
+  },
+  "attack": {
+    "looped": false,
+    "frames": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "fps": 20
+  },
+  "run": {
+    "looped": true,
+    "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "fps": 15
+  },
+  "bloodColor": "0xff8ba077"
+}

@@ -696,7 +696,7 @@ public class Hero extends Char implements PetOwner {
 
 			Heap heap = level().getHeap(dst);
 			if (heap != null && heap.type == Type.FOR_SALE && heap.size() == 1) {
-				GameScene.show(new WndTradeItem(heap, true, null));
+				GameScene.show(new WndTradeItem(heap, true));
 			}
 
 			return false;
@@ -1769,10 +1769,10 @@ public class Hero extends Char implements PetOwner {
 
 
 	public void resurrect(int resetLevel) {
+		belongings.resurrect(resetLevel);
+
 		hp(ht());
 		setExp(0);
-
-		belongings.resurrect(resetLevel);
 
 		live();
 	}

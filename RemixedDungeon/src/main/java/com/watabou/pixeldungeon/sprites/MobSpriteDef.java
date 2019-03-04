@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.sprites;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
@@ -53,8 +52,6 @@ public class MobSpriteDef extends MobSprite {
 	@Override
 	public void selectKind(int kind) {
 
-		EventCollector.collectSessionData("selectKind", name);
-
 		this.kind = kind;
 		JSONObject json = defMap.get(name);
 
@@ -96,8 +93,13 @@ public class MobSpriteDef extends MobSprite {
 
 			idle = readAnimation(json, "idle", film);
 			run = readAnimation(json, "run", film);
-			attack = readAnimation(json, "attack", film);
 			die = readAnimation(json, "die", film);
+
+			if(json.has("attack")) { //attack was not defined for some peaceful NPC's
+				attack = readAnimation(json, "attack", film);
+			} else {
+				attack = run.clone();
+			}
 
 			if (json.has("zap")) {
 				zap = readAnimation(json, "zap", film);

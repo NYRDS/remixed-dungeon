@@ -55,12 +55,12 @@ public class WndPriest extends Window {
 
 		y = titlebar.bottom();
 
-		int instruction = R.string.WndPriest_Instruction_m;
+		int instruction = R.string.WndPriest_Instruction2_m;
 		if(hero.getGender() == Utils.FEMININE){
-			instruction = R.string.WndPriest_Instruction_f;
+			instruction = R.string.WndPriest_Instruction2_f;
 		}
 
-		Text message = PixelScene.createMultiline( Utils.format(instruction, GOLD_COST), GuiProperties.regularFontSize() );
+		Text message = PixelScene.createMultiline( Utils.format(instruction) +"\n"+ Utils.format(R.string.WndPriest_Instruction2, GOLD_COST), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = y;
 		add( message );

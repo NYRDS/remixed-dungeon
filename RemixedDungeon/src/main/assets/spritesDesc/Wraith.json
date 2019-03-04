@@ -1,0 +1,42 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [
+      0,
+      1
+    ],
+    "fps": 5
+  },
+  "height": 15,
+  "texture": "wraith.png",
+  "width": 14,
+  "die": {
+    "looped": false,
+    "frames": [
+      0,
+      4,
+      5,
+      6,
+      7
+    ],
+    "fps": 8
+  },
+  "attack": {
+    "looped": false,
+    "frames": [
+      0,
+      2,
+      3
+    ],
+    "fps": 10
+  },
+  "run": {
+    "looped": true,
+    "frames": [
+      0,
+      1
+    ],
+    "fps": 10
+  },
+  "bloodColor": "0x88000000"
+}

@@ -21,7 +21,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.sprites.AlbinoSprite;
 import com.watabou.utils.Random;
 
 import androidx.annotation.NonNull;
@@ -29,8 +28,6 @@ import androidx.annotation.NonNull;
 public class Albino extends Rat {
 
 	{
-		spriteClass = AlbinoSprite.class;
-		
 		hp(ht(15));
 	}
 	
