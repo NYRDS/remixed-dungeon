@@ -40,6 +40,7 @@
 	<string name="WndTradeItem_BuyN">Купить %1$d за %2$dg</string>
 	<string name="WndTradeItem_BuyAll">Купить всё за %dg</string>
 	<string name="WndTradeItem_SellN">Продать %1$d за %2$dg</string>
+	<string name="WndBag_BuySubtitle">(У тебя есть %dg)</string>
 
 	<string name="town_deco_weaponboard_name">Оружие</string>
 	<string name="town_deco_weaponboard_desc">Какое-то оружие висит на стенде.</string>
@@ -69,7 +70,6 @@
 
 	<string name="town_deco_shelf_name">Полки</string>
 	<string name="town_deco_shelf_desc">Пустые полки.</string>
-
 
 	<string name="WndPriest_Instruction2_m">Добро пожаловать, сын мой, в святую церковь великого Санты Повелителя Глубин.</string>
 	<string name="WndPriest_Instruction2_f">Добро пожаловать, дщерь моя, в святую церковь великого Санты Повелителя Глубин.</string>

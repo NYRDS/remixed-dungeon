@@ -36,7 +36,6 @@
 	<string name="WndTradeItem_BuyN">Придбати %1$d за %2$dз</string>
 	<string name="WndTradeItem_BuyAll">Купити все за %dз</string>
 	<string name="WndTradeItem_SellN">Продати %1$d за %2$dз</string>
-
 	<string name="town_deco_weaponboard_name">Зброя</string>
 	<string name="town_deco_shieldboard_name">Щити</string>
 	<string name="town_deco_armoronhanger_name">Броня</string>
