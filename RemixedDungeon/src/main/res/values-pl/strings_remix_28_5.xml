@@ -40,7 +40,6 @@
 	<string name="WndTradeItem_BuyN">Kup %1$d za %2$dg</string>
 	<string name="WndTradeItem_BuyAll">Kup wszystko za %dg</string>
 	<string name="WndTradeItem_SellN">Sprzedaj %1$d za %2$dg</string>
-
 	<string name="town_deco_weaponboard_name">Broń</string>
 	<string name="town_deco_weaponboard_desc">Jakaś broń wisząca na desce.</string>
 	<string name="town_deco_shieldboard_name">Tarcze</string>

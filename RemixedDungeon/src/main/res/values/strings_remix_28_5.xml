@@ -40,6 +40,7 @@
 	<string name="WndTradeItem_BuyN">Buy %1$d for %2$dg</string>
 	<string name="WndTradeItem_BuyAll">Buy all for %dg</string>
 	<string name="WndTradeItem_SellN">Sell %1$d for %2$dg</string>
+	<string name="WndBag_BuySubtitle">(You have %dg)</string>
 
 	<string name="town_deco_weaponboard_name">Weapon</string>
 	<string name="town_deco_weaponboard_desc">Some kind of weapon hanging on the board.</string>
@@ -69,7 +70,6 @@
 
 	<string name="town_deco_shelf_name">Shelves</string>
 	<string name="town_deco_shelf_desc">Empty shelves.</string>
-
 
 	<string name="WndPriest_Instruction2_m">Welcome my son, welcome to the holy church of great Santa the Depth Lord! </string>
 	<string name="WndPriest_Instruction2_f">Welcome my daughter, welcome to the holy church of great Santa the Depth Lord!</string>

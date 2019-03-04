@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Game;
@@ -27,7 +26,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -49,12 +47,14 @@ public class WndTradeItem extends Window {
 	private static final int BTN_HEIGHT	= 18;
 
 	private VBox vbox = new VBox();
-	private ItemOwner  shopkeeper;
+
+	@NonNull
+	private Shopkeeper shopkeeper;
 	private Hero       customer;
 
 	private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
 
-	public WndTradeItem(final Item item, ItemOwner shopkeeper, boolean buy) {
+	public WndTradeItem(final Item item, @NonNull Shopkeeper shopkeeper, boolean buy) {
 
 		super();
 
@@ -71,11 +71,10 @@ public class WndTradeItem extends Window {
 	}
 
 	@Deprecated
-	public WndTradeItem( final Heap heap, boolean canBuy, Shopkeeper shopkeeper ) {
+	public WndTradeItem(final Heap heap, boolean canBuy) {
 		
 		super();
 
-		this.shopkeeper = shopkeeper;
 		this.customer   = Dungeon.hero;
 
 		Item item = heap.peek();
@@ -264,14 +263,6 @@ public class WndTradeItem extends Window {
 		return info.y + info.height();
 	}
 
-	private void placeItemInShop(Item item) {
-		if(!item.cursed && item.price() > 10 ) {
-			if(shopkeeper!=null) {
-				item.collect(shopkeeper);
-			}
-		}
-	}
-
 	private int price( @NonNull  Item item, boolean buying) {
 		int price = item.price();
 		if(buying) {
@@ -286,16 +277,6 @@ public class WndTradeItem extends Window {
 			}
 		}
 		return price;
-	}
-
-	private void generateNewItem()
-	{
-		Item newItem;
-		do {
-			newItem = Generator.random();
-		} while (newItem instanceof Gold);
-
-		placeItemInShop(newItem);
 	}
 
 	private void buy( @NonNull Item item, final int quantity ) {
@@ -315,7 +296,7 @@ public class WndTradeItem extends Window {
 			hide();
 			GameScene.show(new WndTradeItem(leftover,shopkeeper,true));
 		} else {
-			generateNewItem();
+			shopkeeper.generateNewItem();
 			hide();
 		}
 	}
@@ -328,7 +309,7 @@ public class WndTradeItem extends Window {
 		}
 
 		item = item.detach( customer.getBelongings().backpack, quantity );
-		placeItemInShop(item);
+		shopkeeper.placeItemInShop(item);
 		hide();
 
 		int price = price(item, false);
@@ -357,8 +338,6 @@ public class WndTradeItem extends Window {
 		if (!item.doPickUp( hero )) {
 			Dungeon.level.drop( item, heap.pos ).sprite.drop();
 		}
-
-		generateNewItem();
 	}
 
 	@Override

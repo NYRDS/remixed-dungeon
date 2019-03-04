@@ -158,7 +158,8 @@ public class RemixedDungeon extends Game {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES,false)) {
+
+		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
 			playGames.connect();
 		}
 	}

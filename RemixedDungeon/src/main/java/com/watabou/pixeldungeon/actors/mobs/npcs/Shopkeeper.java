@@ -28,6 +28,8 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
+import com.watabou.pixeldungeon.items.Generator;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -39,6 +41,8 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
+
+import java.util.Collections;
 
 public class Shopkeeper extends NPC {
 
@@ -126,6 +130,15 @@ public class Shopkeeper extends NPC {
 
 	@Override
 	public boolean interact(final Hero hero) {
+
+
+
+		while(getBelongings().backpack.items.size() < getBelongings().backpack.size + 2) {
+			generateNewItem();
+		}
+
+		Collections.shuffle(getBelongings().backpack.items);
+
 		GameScene.show(new WndOptions(Utils.capitalize(getName()),
 								Game.getVar(R.string.Shopkeeper_text),
 								Game.getVar(R.string.Shopkeeper_SellPrompt),
@@ -150,6 +163,23 @@ public class Shopkeeper extends NPC {
 		});
 		return true;
 	}
+
+	public void placeItemInShop(Item item) {
+		if(!item.cursed && item.price() > 10 ) {
+			addItem(item);
+		}
+	}
+
+	public void generateNewItem()
+	{
+		Item newItem;
+		do {
+			newItem = Generator.random();
+		} while (newItem instanceof Gold);
+
+		placeItemInShop(newItem);
+	}
+
 
 	public void addItem(Item item) {
 		if(item instanceof Bag && Dungeon.hero != null) {

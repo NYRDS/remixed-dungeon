@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -79,10 +80,19 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 		}
 	}
 
+	public static boolean usable() {
+		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
+	}
+
 	public void connect() {
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
-		if (!isConnected()) {
-			googleApiClient.connect();
+
+		if(usable()) {
+			Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
+			if (!isConnected()) {
+				googleApiClient.connect();
+			}
+		} else {
+			disconnect();
 		}
 	}
 

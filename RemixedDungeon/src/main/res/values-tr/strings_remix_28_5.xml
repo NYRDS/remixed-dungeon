@@ -40,7 +40,6 @@
 	<string name="WndTradeItem_BuyN">%2$da ile %1$d satın al</string>
 	<string name="WndTradeItem_BuyAll">Hepsini %da ile satın al</string>
 	<string name="WndTradeItem_SellN">%2$da için %1$d sat</string>
-
 	<string name="town_deco_weaponboard_name">Silah</string>
 	<string name="town_deco_weaponboard_desc">Tahtada asılı bir çeşit silah.</string>
 	<string name="town_deco_shieldboard_name">Kalkanlar</string>
