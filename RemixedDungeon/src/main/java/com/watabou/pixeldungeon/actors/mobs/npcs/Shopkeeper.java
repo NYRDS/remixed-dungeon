@@ -42,6 +42,8 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 
+import java.util.Collections;
+
 public class Shopkeeper extends NPC {
 
 	{
@@ -129,9 +131,13 @@ public class Shopkeeper extends NPC {
 	@Override
 	public boolean interact(final Hero hero) {
 
+
+
 		while(getBelongings().backpack.items.size() < getBelongings().backpack.size + 2) {
 			generateNewItem();
 		}
+
+		Collections.shuffle(getBelongings().backpack.items);
 
 		GameScene.show(new WndOptions(Utils.capitalize(getName()),
 								Game.getVar(R.string.Shopkeeper_text),
