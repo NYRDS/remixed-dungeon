@@ -280,21 +280,20 @@ public class WndTradeItem extends Window {
 	}
 
 	private void buy( @NonNull Item item, final int quantity ) {
-		item = item.detach(shopkeeper.getBelongings().backpack, quantity);
+		Item boughtItem = item.detach(shopkeeper.getBelongings().backpack, quantity);
 
-		int price = price( item, true );
+		int price = price( boughtItem, true );
 		customer.spendGold(price);
 
-		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), item.name(), price );
+		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price );
 
-		if (!item.doPickUp( customer )) {
-			Dungeon.level.drop( item, customer.getPos() ).sprite.drop();
+		if (!boughtItem.doPickUp( customer )) {
+			Dungeon.level.drop( boughtItem, customer.getPos() ).sprite.drop();
 		}
 
-		Item leftover = shopkeeper.getBelongings().getItem(item.getClassName());
-		if(leftover != null) {
+		if(boughtItem != item) {
 			hide();
-			GameScene.show(new WndTradeItem(leftover,shopkeeper,true));
+			GameScene.show(new WndTradeItem(item,shopkeeper,true));
 		} else {
 			shopkeeper.generateNewItem();
 			hide();
@@ -310,14 +309,14 @@ public class WndTradeItem extends Window {
 
 		Item soldItem = item.detach( customer.getBelongings().backpack, quantity );
 		shopkeeper.placeItemInShop(soldItem);
-		hide();
 
 		int price = price(soldItem, false);
 
 		new Gold( price ).doPickUp( customer );
+		hide();
 		GLog.i( Game.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price );
 
-		if(item.stackable && item.quantity() > 0) {
+		if(soldItem!=item) {
 			GameScene.show(new WndTradeItem(item,shopkeeper,false));
 		}
 
