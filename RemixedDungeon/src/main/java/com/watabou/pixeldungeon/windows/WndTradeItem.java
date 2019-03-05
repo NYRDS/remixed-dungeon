@@ -308,18 +308,17 @@ public class WndTradeItem extends Window {
 			return;
 		}
 
-		item = item.detach( customer.getBelongings().backpack, quantity );
-		shopkeeper.placeItemInShop(item);
+		Item soldItem = item.detach( customer.getBelongings().backpack, quantity );
+		shopkeeper.placeItemInShop(soldItem);
 		hide();
 
-		int price = price(item, false);
+		int price = price(soldItem, false);
 
 		new Gold( price ).doPickUp( customer );
-		GLog.i( Game.getVar(R.string.WndTradeItem_Sold), item.name(), price );
+		GLog.i( Game.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price );
 
-		Item leftover = customer.getBelongings().getItem(item.getClassName());
-		if(leftover != null && leftover.quantity() > 0) {
-			GameScene.show(new WndTradeItem(leftover,shopkeeper,false));
+		if(item.stackable && item.quantity() > 0) {
+			GameScene.show(new WndTradeItem(item,shopkeeper,false));
 		}
 
 	}
