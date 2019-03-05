@@ -62,10 +62,10 @@ public abstract class WndOptions extends Window {
 			buttonsVbox.add( btn );
 		}
 
-		buttonsVbox.setRect(0,0,WIDTH,buttonsVbox.childsHeight());
+		buttonsVbox.setRect(GAP,0,WIDTH,buttonsVbox.childsHeight());
 		vbox.add(buttonsVbox);
 
-		vbox.setRect(0,0,WIDTH,vbox.childsHeight());
+		vbox.setRect(GAP,0,WIDTH,vbox.childsHeight());
 		add(vbox);
 		resize( WIDTH, (int) vbox.height());
 	}
