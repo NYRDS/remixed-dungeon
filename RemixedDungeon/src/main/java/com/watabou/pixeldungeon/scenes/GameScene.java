@@ -22,6 +22,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -389,6 +390,17 @@ public class GameScene extends PixelScene {
         fadeIn();
 
         Dungeon.observe();
+
+        doSelfTest();
+    }
+
+    private void doSelfTest() {
+        if(BuildConfig.DEBUG) {
+            for (int i = 0; i< Dungeon.level.map.length; ++i) {
+                Dungeon.level.tileDescByCell(i);
+                Dungeon.level.tileNameByCell(i);
+            }
+        }
     }
 
     public void destroy() {

@@ -107,12 +107,7 @@ public class GLog {
 		}
 
 		final String finalText = text;
-		Game.pushUiTask(new Runnable() {
-			                       @Override
-			                       public void run() {
-				                       update.dispatch(finalText);
-			                       }
-		                       }
+		Game.pushUiTask(() -> update.dispatch(finalText)
 		);
 	}
 	
