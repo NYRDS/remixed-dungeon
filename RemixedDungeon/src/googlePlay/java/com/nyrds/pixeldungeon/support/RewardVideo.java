@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
+import android.os.Build;
+
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
@@ -15,9 +17,15 @@ public class RewardVideo {
 		if(!GoogleRewardVideoAds.isVideoInitialized()){
 			GoogleRewardVideoAds.initCinemaRewardVideo();
 		}
-
-		if(!AppodealAdapter.isVideoInitialized()) {
-			AppodealAdapter.initRewardedVideo();
+		//TODO Recheck with new appodeal release
+		switch (Build.VERSION.SDK_INT) {
+			case Build.VERSION_CODES.LOLLIPOP:
+			case Build.VERSION_CODES.LOLLIPOP_MR1:
+				break;
+			default:
+				if(!AppodealAdapter.isVideoInitialized()) {
+					AppodealAdapter.initRewardedVideo();
+				}
 		}
 	}
 
@@ -34,9 +42,16 @@ public class RewardVideo {
                 return;
             }
 
-            if(AppodealAdapter.isVideoReady()) {
-            	AppodealAdapter.showCinemaRewardVideo(ret);
-            	return;
+			//TODO Recheck with new appodeal release
+			switch (Build.VERSION.SDK_INT) {
+				case Build.VERSION_CODES.LOLLIPOP:
+				case Build.VERSION_CODES.LOLLIPOP_MR1:
+					break;
+				default:
+					if(AppodealAdapter.isVideoReady()) {
+						AppodealAdapter.showCinemaRewardVideo(ret);
+						return;
+					}
 			}
 
             Game.pushUiTask(() -> ret.returnToWork(false));
