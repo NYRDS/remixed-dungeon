@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import android.os.Build;
-
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -100,7 +98,7 @@ public class StartScene extends PixelScene {
     public void create() {
         super.create();
 
-        if(!swSdkStarted && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+        if(!swSdkStarted) {
             HQSdk.init(Game.instance(), "22b4f34f2616d7f", true, false,
                     new HqmCallback<HqmApi>() {
 

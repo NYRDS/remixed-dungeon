@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
@@ -21,9 +20,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 		super.onCreate();
 
 		instanceContext = getApplicationContext();
-		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-			FirebaseApp.initializeApp(this);
-		}
+		FirebaseApp.initializeApp(this);
 
 		Fabric.with(this, new Crashlytics());
 
