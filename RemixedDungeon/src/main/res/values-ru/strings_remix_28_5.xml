@@ -53,6 +53,9 @@
 	<string name="town_deco_wardrobe_name">Деревянный шкаф</string>
 	<string name="town_deco_wardrobe_desc">Большой деревянный шкаф.</string>
 
+	<string name="town_deco_porch_name">Крыльцо</string>
+	<string name="town_deco_porch_desc">Деревянное крыльцо.</string>
+
 	<string name="town_deco_common_bed_name">Кровать</string>
 	<string name="town_deco_common_bed_desc">Обычная кровать.</string>
 

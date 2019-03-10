@@ -201,7 +201,7 @@ public class WndBag extends WndTabbed {
 	}
 
 	public void updateItems() {
-		GameScene.show(new WndBag(stuff, stuff.backpack, listener, mode, title));
+		GameScene.show(new WndBag(stuff, lastBag, listener, mode, title));
 	}
 
 	private void placeItems(Bag container) {

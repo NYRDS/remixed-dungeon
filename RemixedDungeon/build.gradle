@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 654
-        versionName "remix.28.5.fix.1"
+        versionCode 658
+        versionName "remix.28.5.fix.1.5"
     }
 
     aaptOptions {
@@ -94,7 +94,7 @@ dependencies {
     
     implementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
-    implementation 'com.google.android.gms:play-services-base:16.1.0'
+    implementation 'com.google.android.gms:play-services-base:16.0.1'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation "com.google.android.gms:play-services-games:16.0.0"
 

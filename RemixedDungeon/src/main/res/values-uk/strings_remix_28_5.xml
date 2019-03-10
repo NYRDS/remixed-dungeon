@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+	<string name="BishopNPC_Name">Єпископ</string>
 	<string name="BishopNPC_Desc">Єпископ святої церкви Санти - Лорда Глибин</string>
 	<string name="BishopNPC_Gender">masculine</string>
 	<string name="BishopNPC_Name_Objective">Єпископ</string>
@@ -30,12 +31,15 @@
 	<string name="BlackCat_AiStatus">Цей кіт робить свою звичні котячі справи</string>
 	<string name="Shopkeeper_Buy">Оберіть товар для придбання</string>
 	<string name="Shopkeeper_title">Магазин</string>
+	<string name="Shopkeeper_text">Ласкаво просимо до місцевого філіалу ПіксельМарт.\nЧим можу допомогти?</string>
 	<string name="Shopkeeper_SellPrompt">Я маю дещо на продаж</string>
 	<string name="Shopkeeper_BuyPrompt">Подивимося ваш інвентар</string>
 
 	<string name="WndTradeItem_BuyN">Придбати %1$d за %2$dз</string>
 	<string name="WndTradeItem_BuyAll">Купити все за %dз</string>
 	<string name="WndTradeItem_SellN">Продати %1$d за %2$dз</string>
+	<string name="WndBag_BuySubtitle">(Ви маєте %dзол.)</string>
+
 	<string name="town_deco_weaponboard_name">Зброя</string>
 	<string name="town_deco_shieldboard_name">Щити</string>
 	<string name="town_deco_armoronhanger_name">Броня</string>

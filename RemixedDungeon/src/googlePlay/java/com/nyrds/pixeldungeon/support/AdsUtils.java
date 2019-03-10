@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
+import android.os.Build;
 import android.view.View;
 import android.webkit.WebView;
 
@@ -19,20 +20,23 @@ public class AdsUtils {
 
 
     static {
+        bannerFails.put(new AdMobComboProvider(),-2);
+        interstitialFails.put(new AdMobComboProvider(), -2);
 
         if(!Game.instance().checkOwnSignature()) {
             bannerFails.put(new AAdsComboProvider(), -3);
-        }
-
-        bannerFails.put(new AdMobComboProvider(),-2);
-        bannerFails.put(new AppodealBannerProvider(),-1);
-
-        if(!Game.instance().checkOwnSignature()) {
             interstitialFails.put(new AAdsComboProvider(), -3);
         }
 
-        interstitialFails.put(new AdMobComboProvider(), -2);
-        interstitialFails.put(new AppodealInterstitialProvider(), -1);
+        //TODO Recheck with new appodeal release
+        switch (Build.VERSION.SDK_INT) {
+            case Build.VERSION_CODES.LOLLIPOP:
+            case Build.VERSION_CODES.LOLLIPOP_MR1:
+                break;
+            default:
+                bannerFails.put(new AppodealBannerProvider(),-1);
+                interstitialFails.put(new AppodealInterstitialProvider(), -1);
+        }
     }
 
     public static int bannerIndex() {
