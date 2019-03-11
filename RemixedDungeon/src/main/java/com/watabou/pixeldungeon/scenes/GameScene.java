@@ -142,6 +142,10 @@ public class GameScene extends PixelScene {
 
 
     static public void playLevelMusic() {
+        if(Dungeon.level == null) {
+            EventCollector.logException("attempt to play music on null level");
+            return;
+        }
         Music.INSTANCE.play(Dungeon.level.music(), true);
         Music.INSTANCE.volume(1f);
     }
