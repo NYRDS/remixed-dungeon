@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import android.graphics.Bitmap;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.MovieClip;
@@ -162,8 +163,12 @@ public class ItemSprite extends MovieClip {
 
 	public ItemSprite view(String file, int image, Glowing glowing) {
 		updateTexture(file);
-
-		frame(film.get(image));
+		try {
+			frame(film.get(image));
+		}catch (Exception e)
+		{
+			throw new TrackedRuntimeException("Something wrong with "+file+" frame: "+Integer.toString(image));
+		}
 		if ((this.glowing = glowing) == null) {
 			resetColor();
 		}
