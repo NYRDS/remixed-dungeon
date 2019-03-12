@@ -153,8 +153,12 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 	}
 
 	public void volume(float value) {
-		if (player != null) {
-			player.setVolume(value, value);
+		try {
+			if (player != null) {
+				player.setVolume(value, value);
+			}
+		} catch (Exception e) {
+			EventCollector.logException(e);
 		}
 	}
 
