@@ -5,9 +5,9 @@ import android.content.Context;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
-import com.watabou.noosa.Game;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -22,7 +22,10 @@ public class RemixedDungeonApp extends MultiDexApplication {
 	@SuppressLint("StaticFieldLeak")
 	static Context instanceContext;
 
-	private static boolean hqmStarted = false;
+	private static int hqSdkStarted = 0;
+
+	@Nullable
+	private static HqmApi hqApi;
 
 	@Override
 	public void onCreate() {
@@ -32,6 +35,24 @@ public class RemixedDungeonApp extends MultiDexApplication {
 		FirebaseApp.initializeApp(this);
 
 		Fabric.with(this, new Crashlytics());
+
+		HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false,
+				new HqmCallback<HqmApi>() {
+
+					@Override
+					public void onSuccess(HqmApi hqmApi) {
+						hqApi = hqmApi;
+						hqSdkStarted = 1;
+					}
+
+					@Override
+					public void onError(@NotNull Throwable throwable) {
+						EventCollector.logException(throwable, "hq sdk init error");
+					}
+				}
+
+		);
+
 
 		try {
 			Class.forName("android.os.AsyncTask");
@@ -46,27 +67,11 @@ public class RemixedDungeonApp extends MultiDexApplication {
 	}
 
 	static public void startScene() {
-		if(hqmStarted) {
-			return;
+		if(hqSdkStarted == 1 && hqApi != null) {
+			hqApi.start(new InstalledApplicationsCollector());
+			hqApi.startSystemEventsTracking();
+			hqSdkStarted++;
 		}
-
-		HQSdk.init(Game.instance(), "22b4f34f2616d7f", true, false,
-				new HqmCallback<HqmApi>() {
-
-					@Override
-					public void onSuccess(HqmApi hqmApi) {
-						hqmStarted = true;
-						hqmApi.start(new InstalledApplicationsCollector());
-						hqmApi.startSystemEventsTracking();
-					}
-
-					@Override
-					public void onError(@NotNull Throwable throwable) {
-						EventCollector.logException(throwable, "hq sdk init error");
-					}
-				}
-
-		);
 	}
 
 	static public Context getContext() {
