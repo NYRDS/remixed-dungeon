@@ -42,7 +42,7 @@ public class GnollArmor extends ClassArmor {
         for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 
             if (Dungeon.level.fieldOfView[mob.getPos()]) {
-                if(mobsDominated > getUser().lvl() / 3) {
+                if(mobsDominated > getUser().lvl() / 5) {
                     break;
                 }
 
