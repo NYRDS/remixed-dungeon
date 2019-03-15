@@ -1763,6 +1763,6 @@ public abstract class Level implements Bundlable {
 	}
 
 	public Mob[] getCopyOfMobsArray() {
-		return mobs.toArray(new Mob[mobs.size()]);
+		return mobs.toArray(new Mob[0]);
 	}
 }
