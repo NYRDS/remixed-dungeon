@@ -689,7 +689,7 @@ public class Dungeon {
                 int pos = ((Char) actor).getPos();
                 if (visible[pos]) {
                     if (actor instanceof Mob) {
-                        passable[pos] = passable[pos] && ((Mob) actor).isPet();
+                        passable[pos] = passable[pos] && !level.avoid[pos] && ((Mob) actor).isPet();
                     }
                 }
             }

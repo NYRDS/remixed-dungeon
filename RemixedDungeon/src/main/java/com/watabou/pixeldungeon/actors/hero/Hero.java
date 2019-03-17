@@ -1182,7 +1182,7 @@ public class Hero extends Char implements PetOwner {
 
 		int step = -1;
 
-		Level level = Dungeon.level;
+		Level level = level();
 		Buff wallWalkerBuff = null;
 
 		if (!level.isBossLevel()) {

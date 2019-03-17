@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import android.app.Activity;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Google.GoogleIap;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -118,12 +119,14 @@ public class Iap implements IPurchasesUpdated {
         Accessory.check();
 
         if(mIapCallback!=null) {
-            Game.pushUiTask(new Runnable() {
-                @Override
-                public void run() {
+            Game.pushUiTask(() -> {
+                if(mIapCallback!=null) {
                     mIapCallback.onPurchaseOk();
                     mIapCallback = null;
+                } else {
+                    EventCollector.logException("mIapCallback disappeared");
                 }
+
             });
         }
     }

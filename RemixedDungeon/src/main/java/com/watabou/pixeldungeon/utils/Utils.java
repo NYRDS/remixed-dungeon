@@ -25,20 +25,23 @@ import com.watabou.noosa.Game;
 
 import java.util.Locale;
 
+import androidx.annotation.NonNull;
+
 public class Utils {
 
     public static final String UNKNOWN = "unknown";
 
+    @NonNull
     private static final Class<?> strings = getR_Field("string");
+    @NonNull
     private static final Class<?> stringArrays = getR_Field("array");
 
     static private Class<?> getR_Field(String field) {
         try {
             return Class.forName("com.nyrds.pixeldungeon.ml.R$" + field);
-        } catch (ClassNotFoundException e) {// well this is newer happens :)
-            EventCollector.logException(e);
+        } catch (Exception e) {// well this is newer happens :)
+            throw new TrackedRuntimeException(e);
         }
-        return null;
     }
 
     public static String capitalize(String str) {

@@ -98,6 +98,7 @@
   <string name="WndGame_Ranking">Sıralama</string>
   <string name="WndGame_Start">Yeni Oyun</string>
   <string name="WndGame_menu">Ana Menü</string>
+  <string name="WndGame_Exit">Remixed Dungeon\'dan Çık</string>
   <string name="WndGame_Return">Oyuna Geri Dön</string>
   <string name="WndGame_Save">Kaydet</string>
   <string name="WndGame_Load">Yükle</string>

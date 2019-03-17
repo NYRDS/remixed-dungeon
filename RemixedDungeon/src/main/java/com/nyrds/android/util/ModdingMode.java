@@ -146,7 +146,11 @@ public class ModdingMode {
 			}
 			return getContext().getAssets().open(resName);
 		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
+			if(inMod()) {
+				throw new ModError("Missing file: "+resName,e);
+			} else {
+				throw new TrackedRuntimeException(e);
+			}
 		}
 	}
 

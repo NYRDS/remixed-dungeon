@@ -3,7 +3,7 @@
 	<string name="BishopNPC_Name">Єпископ</string>
 	<string name="BishopNPC_Desc">Єпископ святої церкви Санти - Лорда Глибин</string>
 	<string name="BishopNPC_Gender">masculine</string>
-	<string name="BishopNPC_Name_Objective">Єпископ</string>
+	<string name="BishopNPC_Name_Objective">Єпископа</string>
 
 	<string name="Bishop_title">Єпископ</string>
 	<string name="Bishop_text">Щоденно та щонічно молюся за тебе, моя дитино.</string>
@@ -15,6 +15,8 @@
 	<string name="Bishop_not_interested">Покинути</string>
 	<string name="Bishop_no_money">Ви не можете заплатити за це.</string>
 	<string name="Bishop_bye">Я буду молитися за тебе, моя дитино.</string>
+
+	<string name="Blessed_Info">Благословенний праведним священиком</string>
 
 	<string name="deco_candle_name">Свічка</string>
 	<string name="deco_candle_desc">Велика свічка</string>
@@ -41,7 +43,38 @@
 	<string name="WndBag_BuySubtitle">(Ви маєте %dзол.)</string>
 
 	<string name="town_deco_weaponboard_name">Зброя</string>
+	<string name="town_deco_weaponboard_desc">Деяка зброя висить на стенді.</string>
 	<string name="town_deco_shieldboard_name">Щити</string>
+	<string name="town_deco_shieldboard_desc">Різноманітні щити висять на стенді. Поки що не для продажу.</string>
 	<string name="town_deco_armoronhanger_name">Броня</string>
+	<string name="town_deco_armoronhanger_desc">Деяка броня розвішана на манекенах.</string>
 	<string name="town_deco_potions_name">Зілля</string>
-	</resources>
+	<string name="town_deco_potions_desc">Якісь зілля розставлені на полицях.</string>
+	<string name="town_deco_wardrobe_name">Дерев\'яна шафа</string>
+	<string name="town_deco_wardrobe_desc">Велика дерев\'яна шафа</string>
+
+	<string name="town_deco_porch_name">Паперть</string>
+	<string name="town_deco_porch_desc">Дерев\'яна паперть.</string>
+
+	<string name="town_deco_common_bed_name">Ліжко</string>
+	<string name="town_deco_common_bed_desc">Звичайне ліжко</string>
+
+	<string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
+	<string name="town_deco_wooden_table_desc">Це надійний, дерев\'яний стіл.</string>
+
+	<string name="town_deco_wooden_bench_name">Дерев\'яна лавка</string>
+	<string name="town_deco_wooden_bench_desc">Лавка, зроблена з дерева та на вигляд не зручна.</string>
+
+	<string name="town_deco_covered_table_name">Стіл</string>
+	<string name="town_deco_covered_table_desc">Дерев\'яний стіл накритий білою скатертиною.</string>
+
+	<string name="town_deco_pedestal_name">П\'єдестал</string>
+	<string name="town_deco_pedestal_desc">П\'єдестал із священною книгою.</string>
+
+	<string name="town_deco_shelf_name">Полиці</string>
+	<string name="town_deco_shelf_desc">Порожні полиці.</string>
+
+	<string name="WndPriest_Instruction2_m">Ласкаво просимо, сину мій, до святої церкви Санти - Лорда Глибин!</string>
+	<string name="WndPriest_Instruction2_f">Ласкаво просимо, донька моя, до святої церкви Санти - Лорда Глибин!</string>
+	<string name="WndPriest_Instruction2">Якщо тобі потрібна допомога, то за скромну платню, в %d золотих, я вилікую твої рани.\nА якщо ти в пошуку святого благословіння, або ж, нехай Санта тебе береже, прокляли, то навідайся до Епископа в нашій скромній церквушці.</string>
+</resources>
