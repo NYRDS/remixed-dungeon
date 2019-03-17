@@ -2,12 +2,18 @@ package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CharsList {
 
     static ConcurrentHashMap<Integer, Char> charsMap = new ConcurrentHashMap<>();
+
+    static public List<Mob> emptyMobList = Collections.unmodifiableList(new ArrayList<>());
 
     static public Char getById(int id) {
         Char ret = charsMap.get(id);

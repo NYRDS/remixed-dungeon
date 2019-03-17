@@ -21,6 +21,8 @@ import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
@@ -31,6 +33,7 @@ import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
@@ -77,6 +80,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 
@@ -189,8 +193,6 @@ public class Dungeon {
 
     @NonNull
     public static Level newLevel(Position pos) {
-
-        Dungeon.level = null;
         updateStatistics();
         Level level = DungeonGenerator.createLevel(pos);
 
@@ -204,11 +206,7 @@ public class Dungeon {
         initSizeDependentStuff(level.getWidth(), level.getHeight());
 
         level.reset();
-        switchLevel(level, level.entrance, hero.levelId);
-    }
-
-    public static String tip() {
-        return tip(level);
+        switchLevel(level, level.entrance, CharsList.emptyMobList);
     }
 
     public static String tip(Level _level) {
@@ -245,8 +243,7 @@ public class Dungeon {
         return Dungeon.level != null && Dungeon.level.isBossLevel();
     }
 
-    @SuppressWarnings("deprecation")
-    public static void switchLevel(final Level level, int pos, String levelId) {
+    public static void switchLevel(final Level level, int pos, Collection<Mob> followers) {
 
         nightMode = new Date().getHours() < 7;
 
@@ -254,17 +251,29 @@ public class Dungeon {
 
         Actor respawner = level.respawner();
         if (respawner != null) {
-            Actor.add(level.respawner());
+            Actor.add(respawner);
         }
 
         hero.setPos(pos);
-        hero.levelId = levelId;
+        hero.levelId = level.levelId;
 
         if (!level.cellValid(hero.getPos())) {
             hero.setPos(level.entrance);
         }
 
         hero.viewDistance = hero.hasBuff(Light.class) ? Math.max(Level.MIN_VIEW_DISTANCE + 1, level.getViewDistance()) : level.getViewDistance();
+
+        for(Mob mob : followers) {
+                int cell = level.getEmptyCellNextTo(hero.getPos());
+                if (!level.cellValid(cell)) {
+                    cell = hero.getPos();
+                }
+                mob.setPos(cell);
+
+                mob.setEnemy(Char.DUMMY);
+                mob.setState(MobAi.getStateByClass(Wandering.class));
+                level.spawnMob(mob);
+            }
 
         Dungeon.level = level;
     }
@@ -473,7 +482,6 @@ public class Dungeon {
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         Dungeon.challenges = bundle.getInt(CHALLENGES);
 
-        Dungeon.level = null;
         Dungeon.depth = -1;
 
         Scroll.restore(bundle);
@@ -570,7 +578,6 @@ public class Dungeon {
 
         if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists()) {
             input = new FileInputStream(FileSystem.getFile(loadFrom));
-            Dungeon.level = null;
         } else {
             GLog.toFile("File %s not found!", loadFrom);
             return newLevel(next);

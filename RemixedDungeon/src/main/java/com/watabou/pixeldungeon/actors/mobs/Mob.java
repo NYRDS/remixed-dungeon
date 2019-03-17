@@ -65,6 +65,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -143,6 +144,11 @@ public abstract class Mob extends Char {
 			pet.getOwner().addPet(pet);
 		}
 		return pet;
+	}
+
+	@Override
+	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
+		return owner >= 0 && CharsList.getById(owner) instanceof Hero;
 	}
 
 	public static void releasePet(@NonNull Mob pet) {

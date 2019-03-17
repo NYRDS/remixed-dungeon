@@ -82,6 +82,7 @@ import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -91,8 +92,10 @@ import com.watabou.utils.SparseArray;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -286,6 +289,25 @@ public abstract class Level implements Bundlable {
 
 	public int[] getTileLayer(LayerId id) {
 		return customLayers.get(id);
+	}
+
+	public static Collection<Mob> mobsFollowLevelChange(InterlevelScene.Mode changeMode) {
+
+		if(Dungeon.level==null) { //first level
+			return CharsList.emptyMobList;
+		}
+
+		ArrayList<Mob> mobsToNextLevel = new ArrayList<>();
+
+		Iterator<Mob> it = Dungeon.level.mobs.iterator();
+		while(it.hasNext()) {
+			Mob mob = it.next();
+			if(mob.followOnLevelChanged(changeMode)) {
+				mobsToNextLevel.add(mob);
+				it.remove();
+			}
+		}
+		return mobsToNextLevel;
 	}
 
 	public enum Feeling {

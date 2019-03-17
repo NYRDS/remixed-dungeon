@@ -22,6 +22,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
@@ -32,6 +33,7 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.windows.WndError;
@@ -39,6 +41,7 @@ import com.watabou.pixeldungeon.windows.WndStory;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Collection;
 
 public class InterlevelScene extends PixelScene {
 
@@ -119,22 +122,6 @@ public class InterlevelScene extends PixelScene {
 
 	static public void Do(InterlevelScene.Mode mode) {
 		InterlevelScene.mode = mode;
-
-		switch (mode) {
-			case DESCEND:
-			case ASCEND:
-			case RETURN:
-				if(Dungeon.hero != null) {
-					Dungeon.save();
-				}
-				break;
-			case FALL:
-				Dungeon.saveCurrentLevel();
-				break;
-			default:
-
-		}
-
 		Game.switchScene( InterlevelScene.class );
 	}
 
@@ -228,39 +215,50 @@ public class InterlevelScene extends PixelScene {
 
 	private void descend() throws IOException {
 		Actor.fixTime();
-		
+
+		Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.DESCEND);
+
 		if (Dungeon.hero == null) {
 			Dungeon.init();
 			if (noStory) {
 				Dungeon.chapters.add(WndStory.ID_SEWERS);
 				noStory = false;
 			}
+		} else {
+			Dungeon.save();
 		}
 
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
 		Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
 		Level level = Dungeon.loadLevel(next);
 
-		Dungeon.switchLevel(level, level.entrance, next.levelId);
-		
-		Dungeon.hero.spawnPets(level, true);
+		Dungeon.switchLevel(level,
+							level.entrance,
+							followers);
 	}
 
 	private void fall() throws IOException {
 
 		Actor.fixTime();
 
+		Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.FALL);
+		Dungeon.saveCurrentLevel();
+
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
 		Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
 		Level level = Dungeon.loadLevel(next);
 		
 		Dungeon.switchLevel(level,
-				fallIntoPit ? level.pitCell() : level.randomRespawnCell(), next.levelId);
+							fallIntoPit ? level.pitCell() : level.randomRespawnCell(),
+							followers);
 	}
 
 	private void ascend() throws IOException {
 		Actor.fixTime();
-		
+
+		Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.ASCEND);
+		Dungeon.save();
+
 		Position next = DungeonGenerator.ascend(Dungeon.currentPosition());
 
 		Dungeon.depth=DungeonGenerator.getLevelDepth(next.levelId);
@@ -269,14 +267,17 @@ public class InterlevelScene extends PixelScene {
 
 		int exitIndex = -(next.cellId + 1);
 
-		Dungeon.switchLevel(level, level.getExit(exitIndex), next.levelId);
-
-		Dungeon.hero.spawnPets(level, true);
+		Dungeon.switchLevel(level,
+							level.getExit(exitIndex),
+							followers);
 	}
 
 	private void returnTo() throws IOException {
 
 		Actor.fixTime();
+
+		Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.RETURN);
+		Dungeon.save();
 
 		Dungeon.depth = DungeonGenerator.getLevelDepth(returnTo.levelId);
 		
@@ -284,8 +285,9 @@ public class InterlevelScene extends PixelScene {
 
 		returnTo.computeCell(level);
 
-		Dungeon.switchLevel(level, returnTo.cellId, returnTo.levelId);
-		Dungeon.hero.spawnPets(level, true);
+		Dungeon.switchLevel(level,
+							returnTo.cellId,
+							followers);
 	}
 
 	private void problemWithSave() {
@@ -305,17 +307,14 @@ public class InterlevelScene extends PixelScene {
 
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
-			Dungeon.switchLevel(Dungeon.loadLevel(Dungeon.currentPosition()), -1, Dungeon.hero.levelId);
-
+			Dungeon.switchLevel(Dungeon.loadLevel(Dungeon.currentPosition()), -1, CharsList.emptyMobList);
 		} else {
 			Level level = Dungeon.loadLevel(Dungeon.currentPosition());
 			if (level == null) { // save file fucked up :(
 				problemWithSave();
 				return;
 			}
-			Dungeon.switchLevel(level, Dungeon.hero.getPos(), Dungeon.hero.levelId);
-
-			Dungeon.hero.spawnPets(Dungeon.level, false);
+			Dungeon.switchLevel(level, Dungeon.hero.getPos(), CharsList.emptyMobList);
 		}
 	}
 
@@ -326,13 +325,11 @@ public class InterlevelScene extends PixelScene {
 		if (Dungeon.bossLevel()) {
 			Dungeon.hero.resurrect(Dungeon.depth);
 			Level level = Dungeon.newLevel(Dungeon.currentPosition());
-			Dungeon.switchLevel(level, level.entrance, Dungeon.hero.levelId);
+			Dungeon.switchLevel(level, level.entrance, CharsList.emptyMobList);
 		} else {
 			Dungeon.hero.resurrect(-1);
 			Dungeon.resetLevel();
 		}
-
-		Dungeon.hero.spawnPets(Dungeon.level, true);
 	}
 
 

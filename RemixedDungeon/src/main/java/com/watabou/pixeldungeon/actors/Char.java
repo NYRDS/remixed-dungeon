@@ -70,6 +70,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -708,6 +709,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		}
 
 		return sprite;
+	}
+
+	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
+		return false;
 	}
 
 	public abstract CharSprite sprite();

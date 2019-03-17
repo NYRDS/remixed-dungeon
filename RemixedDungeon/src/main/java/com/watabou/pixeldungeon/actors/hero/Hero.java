@@ -22,7 +22,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
-import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
@@ -1953,33 +1952,6 @@ public class Hero extends Char implements PetOwner {
 
 	public void setGender(int gender) {
 		this.gender = gender;
-	}
-
-	public void spawnPets(Level level, boolean regroup) {
-		refreshPets();
-
-		for (Integer petId : pets) {
-
-			Mob pet = (Mob)CharsList.getById(petId);
-
-			if(level.mobs.contains(pet)) {
-				continue;
-			}
-
-			if(regroup) {
-				int cell = level.getEmptyCellNextTo(getPos());
-				if (!level.cellValid(cell)) {
-					cell = getPos();
-				}
-				pet.setPos(cell);
-
-				pet.setEnemy(Char.DUMMY);
-				pet.setState(MobAi.getStateByClass(Wandering.class));
-			}
-
-			level.spawnMob(pet);
-			pet.regenSprite();
-		}
 	}
 
 	private void setDifficulty(int difficulty) {
