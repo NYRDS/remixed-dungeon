@@ -242,6 +242,11 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	protected void setupCharData() {
+		super.setupCharData();
+	}
+
+	@Override
+	protected void fillClassParams() {
 	}
 
 	public int effectiveSTR() {

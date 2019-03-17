@@ -200,6 +200,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
             CharsList.add(this,id);
         }
 
+		fillClassParams();
+	}
+
+	protected void fillClassParams() {
 		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);
 		description = getClassParam("Desc", description, true);
@@ -207,7 +211,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		defenceVerb = getClassParam("Defense", null, false);
 	}
 
-    public void yell(String str) {
+	public void yell(String str) {
         GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
     }
 
