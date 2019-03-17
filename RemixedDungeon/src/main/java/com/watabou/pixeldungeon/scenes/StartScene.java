@@ -21,6 +21,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
@@ -42,26 +43,17 @@ import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BannerSprites.Type;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.ui.Archs;
+import com.watabou.pixeldungeon.ui.ChallengeButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
-import com.watabou.pixeldungeon.ui.Icons;
-import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.GameButton;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndClass;
-import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
-import io.humanteq.hqsdkcore.HQSdk;
-import io.humanteq.hqsdkcore.api.impl.HqmApi;
-import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
 
 public class StartScene extends PixelScene {
 
@@ -73,8 +65,6 @@ public class StartScene extends PixelScene {
 
     private static final float WIDTH_L = 224;
     private static final float HEIGHT_L = 124;
-
-    private static boolean swSdkStarted = false;
 
     private ArrayList<ClassShield> shields = new ArrayList<>();
 
@@ -98,26 +88,7 @@ public class StartScene extends PixelScene {
     public void create() {
         super.create();
 
-        if(!swSdkStarted) {
-            HQSdk.init(Game.instance(), "22b4f34f2616d7f", true, false,
-                    new HqmCallback<HqmApi>() {
-
-                        @Override
-                        public void onSuccess(HqmApi hqmApi) {
-                            hqmApi.start(new InstalledApplicationsCollector());
-                            hqmApi.startSystemEventsTracking();
-                            swSdkStarted = true;
-                        }
-
-                        @Override
-                        public void onError(@NotNull Throwable throwable) {
-                            EventCollector.logException(throwable, "hq sdk init error");
-                        }
-                    }
-
-            );
-        }
-
+        RemixedDungeonApp.startScene();
 
         Badges.loadGlobal();
 
@@ -211,7 +182,7 @@ public class StartScene extends PixelScene {
                 i++;
             }
 
-            ChallengeButton challenge = new ChallengeButton();
+            ChallengeButton challenge = new ChallengeButton(this);
             challenge.setPos(w / 2 - challenge.width() / 2, 0);
             add(challenge);
 
@@ -237,7 +208,7 @@ public class StartScene extends PixelScene {
                 }
             }
 
-            ChallengeButton challenge = new ChallengeButton();
+            ChallengeButton challenge = new ChallengeButton(this);
             challenge.setPos(w / 2 - challenge.width() / 2, top + shieldH * 0.5f
                     - challenge.height() / 2);
             add(challenge);
@@ -413,46 +384,6 @@ public class StartScene extends PixelScene {
         RemixedDungeon.switchNoFade(TitleScene.class);
     }
 
-    private static class GameButton extends RedButton {
-
-        private Text secondary;
-
-        public GameButton(String primary) {
-            super(primary);
-
-            this.secondary.text("");
-        }
-
-        @Override
-        protected void createChildren() {
-            super.createChildren();
-
-            secondary = createText(GuiProperties.smallFontSize());
-
-            add(secondary);
-        }
-
-        @Override
-        protected void layout() {
-            super.layout();
-
-            if (secondary.text().length() > 0) {
-                text.y = align(y
-                        + (height - text.height() - secondary.height())
-                        / 2);
-
-                secondary.x = align(x + (width - secondary.width()) / 2);
-                secondary.y = align(text.y + text.height());
-            } else {
-                text.y = align(y + (height - text.height()) / 2);
-            }
-        }
-
-        public void secondary(String text) {
-            secondary.text(text);
-        }
-    }
-
     private class ClassShield extends Button {
 
         private static final float MIN_BRIGHTNESS = 0.6f;
@@ -570,59 +501,4 @@ public class StartScene extends PixelScene {
         }
     }
 
-    private class ChallengeButton extends Button {
-
-        private Image image;
-
-        public ChallengeButton() {
-            super();
-
-            width = image.width;
-            height = image.height;
-
-            image.am = Badges.isUnlocked(Badges.Badge.VICTORY) ? 1.0f : 0.5f;
-        }
-
-        @Override
-        protected void createChildren() {
-
-            super.createChildren();
-
-            image = Icons
-                    .get(RemixedDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
-                            : Icons.CHALLENGE_OFF);
-            add(image);
-        }
-
-        @Override
-        protected void layout() {
-
-            super.layout();
-
-            image.x = align(x);
-            image.y = align(y);
-        }
-
-        @Override
-        protected void onClick() {
-            if (Badges.isUnlocked(Badges.Badge.VICTORY)) {
-                StartScene.this.add(new WndChallenges(
-                        RemixedDungeon.challenges(), true) {
-                    public void onBackPressed() {
-                        super.onBackPressed();
-                        image.copy(Icons.get(RemixedDungeon.challenges() > 0 ? Icons.CHALLENGE_ON
-                                : Icons.CHALLENGE_OFF));
-                    }
-                });
-            } else {
-                StartScene.this.add(new WndMessage(Game
-                        .getVar(R.string.StartScene_WinGame)));
-            }
-        }
-
-        @Override
-        protected void onTouchDown() {
-            Sample.INSTANCE.play(Assets.SND_CLICK);
-        }
-    }
 }

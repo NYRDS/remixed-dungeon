@@ -8,7 +8,15 @@
   <string name="ShadowLord_Intro">做好準備！</string>
   <string name="ShadowLord_Death">不！！！！！！</string>
   <string name="AllowStatisticsCollectionScene_Title">用户使用統計報告</string>
+  <string name="AllowStatisticsCollectionScene_Request">如果您允许，混合地牢将会收集使用情况统计信息。该数据将用于：\n
+     - 发现并修复各种小bug（对于游戏发生致命错误，希望您可以主动发送报告）\n
+     - 游戏平衡改进\n
+     - 修复设备特定的性能问题\n
+     - 不时发布有趣的统计数据\n
+    您可以随时更改决定（单击标题屏幕上的图表图标）</string>
   <string name="AllowStatisticsCollectionScene_Allow">允許</string>
   <string name="AllowStatisticsCollectionScene_Deny">拒絕</string>
   <string name="Darkness_Info">好像是永恆黑暗的碎片在空中漂浮</string>
+  <string name="WndSelectLanguage_ImproveTranslation">请帮助混合地牢的多种语言翻译。</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">点击此处帮助我们翻译混合地牢</string>
 </resources>

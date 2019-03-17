@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -29,11 +30,15 @@ public class WindGust extends Spell{
 			boolean triggered = false;
 
 			Ballistica.cast(chr.getPos(), cell, true, false);
-			for (int i = 1; i < Math.min(chr.magicLvl() + 2, Ballistica.distance); i++) {
+			for (int i = 1; i < Math.min(chr.magicLvl() + 2, Ballistica.distance-1); i++) {
 				int c = Ballistica.trace[i];
 
 				if ((ch = Actor.findChar(c)) != null) {
 					int next = Ballistica.trace[i + 1];
+
+					if(!level.cellValid(next)) {
+						EventCollector.logException("invalid cell");
+					}
 
 					triggered = true;
 

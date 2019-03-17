@@ -46,13 +46,14 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 	private boolean enabled = true;
 
 	public void play(@NonNull String assetName, boolean looping) {
+		if (!enabled) {
+			return;
+		}
+
 		if (isPlaying() && assetName.equals(lastPlayed)) {
 			return;
 		}
 
-		if (!enabled) {
-			return;
-		}
 
 		String assetFilename = "sound/"+assetName;
 
@@ -86,8 +87,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			if (filename != null) {
 				player.setDataSource(filename);
 			} else {
-				player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),
-						afd.getLength());
+				player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
 				afd.close();
 			}
 			
@@ -113,7 +113,11 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 
 	@Override
 	public void onPrepared(MediaPlayer player) {
-		player.start();
+		try {
+			player.start();
+		} catch (Exception e) {
+			EventCollector.logException(e);
+		}
 	}
 
 	@Override
@@ -149,8 +153,12 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 	}
 
 	public void volume(float value) {
-		if (player != null) {
-			player.setVolume(value, value);
+		try {
+			if (player != null) {
+				player.setVolume(value, value);
+			}
+		} catch (Exception e) {
+			EventCollector.logException(e);
 		}
 	}
 

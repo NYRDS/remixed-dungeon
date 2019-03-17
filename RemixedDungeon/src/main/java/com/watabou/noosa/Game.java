@@ -579,7 +579,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         final boolean result = res;
-        doOnResume = () -> permissionsPoint.returnToWork(result);
+        doOnResume = () -> {
+            if(permissionsPoint == null) {
+                EventCollector.logException("permissionsPoint was not set");
+                return;
+            }
+            permissionsPoint.returnToWork(result);
+        };
 
     }
 

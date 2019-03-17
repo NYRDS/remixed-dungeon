@@ -6,6 +6,7 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
@@ -62,11 +63,11 @@ public class Library {
 		try {
 			mKnowledgeLevel = gson.fromJson(
 					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE)).toString(),
-					new TypeToken<Map<String, Map<String, Integer>>>() {
-					}.getType()
+					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
 		} catch (Exception e) {
 			mKnowledgeLevel = new HashMap<>();
+			EventCollector.logException(e,"library restore failed");
 		}
 	}
 
@@ -89,7 +90,7 @@ public class Library {
 
 	private static Map<String, Integer> getCategory(String category) {
 		if(!mKnowledgeLevel.containsKey(category)) {
-			mKnowledgeLevel.put(category, new HashMap<String, Integer>());
+			mKnowledgeLevel.put(category, new HashMap<>());
 		}
 		return mKnowledgeLevel.get(category);
 	}
@@ -111,7 +112,7 @@ public class Library {
 			Mob mob = MobFactory.mobByName(clazz);
 			ret.header = Utils.capitalize(mob.getName());
 			ret.icon = new CompositeTextureImage();
-			((CompositeTextureImage)ret.icon).copy(mob.sprite().avatar());
+			ret.icon.copy(mob.sprite().avatar());
 			return ret;
 		}
 

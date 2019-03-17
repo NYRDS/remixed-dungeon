@@ -696,7 +696,9 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 			}
 			sprite = sprite();
 		}
-
+		if(sprite == null) {
+			throw new TrackedRuntimeException("Sprite creation for: "+getClass().getSimpleName()+" failed");
+		}
 		if(sprite.getParent()==null) {
 			updateSprite(sprite);
 		}
