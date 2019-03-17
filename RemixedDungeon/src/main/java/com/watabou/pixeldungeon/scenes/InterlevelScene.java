@@ -235,8 +235,6 @@ public class InterlevelScene extends PixelScene {
 				Dungeon.chapters.add(WndStory.ID_SEWERS);
 				noStory = false;
 			}
-		} else {
-			Dungeon.level.removePets();
 		}
 
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
@@ -252,8 +250,6 @@ public class InterlevelScene extends PixelScene {
 
 		Actor.fixTime();
 
-		Dungeon.level.removePets();
-
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
 		Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
 		Level level = Dungeon.loadLevel(next);
@@ -266,8 +262,6 @@ public class InterlevelScene extends PixelScene {
 		Actor.fixTime();
 		
 		Position next = DungeonGenerator.ascend(Dungeon.currentPosition());
-		
-		Dungeon.level.removePets();
 
 		Dungeon.depth=DungeonGenerator.getLevelDepth(next.levelId);
 		
@@ -283,8 +277,6 @@ public class InterlevelScene extends PixelScene {
 	private void returnTo() throws IOException {
 
 		Actor.fixTime();
-
-		Dungeon.level.removePets();
 
 		Dungeon.depth = DungeonGenerator.getLevelDepth(returnTo.levelId);
 		
@@ -330,8 +322,6 @@ public class InterlevelScene extends PixelScene {
 	private void resurrect() {
 
 		Actor.fixTime();
-
-		Dungeon.level.removePets();
 
 		if (Dungeon.bossLevel()) {
 			Dungeon.hero.resurrect(Dungeon.depth);

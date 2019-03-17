@@ -90,7 +90,7 @@ public class WndPriest extends Window {
 			RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
 				@Override
 				protected void onClick() {
-					doHeal(priest,hero,hero.getPets(),healAllMinionsCost);
+					doHeal(priest,hero,hero.getPetsAsMobs(),healAllMinionsCost);
 				}
 			};
 

@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -84,11 +85,12 @@ public class SummoningSpell extends Spell {
     }
 
     private int getNumberOfSummons(Hero hero){
-        Collection<Mob> pets = hero.getPets();
+        Collection<Integer> pets = hero.getPets();
 
         int n = 0;
-        for (Mob mob : pets) {
-            if (mob.isAlive() && mob.getMobClassName().equals(mobKind) ) {
+        for (Integer mobId : pets) {
+            Mob mob = (Mob)CharsList.getById(mobId);
+            if (mob != null && mob.isAlive() && mob.getMobClassName().equals(mobKind) ) {
                 n++;
             }
         }

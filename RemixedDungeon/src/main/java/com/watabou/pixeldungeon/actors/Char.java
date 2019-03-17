@@ -831,4 +831,8 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		}
 		return 0;
     }
+
+	public int getId() {
+		return id;
+	}
 }

@@ -379,8 +379,6 @@ public class Dungeon {
     }
 
     public static void saveLevel(String saveTo) throws IOException {
-        level.removePets();
-
         Bundle bundle = new Bundle();
         bundle.put(LEVEL, level);
 

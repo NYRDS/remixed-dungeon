@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -628,18 +629,6 @@ public abstract class Level implements Bundlable {
 
 		buildFlagMaps();
 		cleanWalls();
-	}
-
-	public void removePets() {
-		HashSet<Mob> nonPets = new HashSet<>();
-
-		for (Mob mob : mobs) {
-			if (!mob.isPet()) {
-				nonPets.add(mob);
-			}
-		}
-
-		mobs = nonPets;
 	}
 
 	@Override
@@ -1313,8 +1302,8 @@ public abstract class Level implements Bundlable {
 
 
 		if(c instanceof Hero) {
-			for (Mob mob: ((Hero) c).getPets()) {
-				updateFovForObjectAt(mob.getPos());
+			for (Integer mobId: ((Hero) c).getPets()) {
+				updateFovForObjectAt(CharsList.getById(mobId).getPos());
 			}
 		}
 

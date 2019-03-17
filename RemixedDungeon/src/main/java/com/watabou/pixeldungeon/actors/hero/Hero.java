@@ -33,6 +33,7 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
@@ -202,15 +203,15 @@ public class Hero extends Char implements PetOwner {
 	private ArrayList<Mob> visibleEnemies = new ArrayList<>();
 
 	@NonNull
-	private Collection<Mob> pets = new ArrayList<>();
+	private Collection<Integer> pets = new ArrayList<>();
 
 	@Override
 	public void removePet(Mob mob) {
-		pets.remove(mob);
+		pets.remove(mob.getId());
 	}
 
 	public void addPet(@NonNull Mob pet) {
-		pets.add(pet);
+		pets.add(pet.getId());
 	}
 
 	private int difficulty;
@@ -269,18 +270,21 @@ public class Hero extends Char implements PetOwner {
 	private static final String IS_SPELL_USER = "isspelluser";
 	private static final String MAGIC_LEVEL = "magicLvl";
 
+	@Deprecated
 	private void refreshPets() {
-		ArrayList<Mob> alivePets = new ArrayList<>();
-		for (Mob pet : pets) {
-			if (pet.isAlive() && pet.fraction() == Fraction.HEROES) {
-				alivePets.add(pet);
+		ArrayList<Integer> alivePets = new ArrayList<>();
+		for (Integer petId : pets) {
+			Mob pet = (Mob)CharsList.getById(petId);
+
+			if (pet!=null && pet.isAlive() && pet.fraction() == Fraction.HEROES) {
+				alivePets.add(pet.getId());
 			}
 		}
 		pets = alivePets;
 	}
 
 	@NonNull
-	public Collection<Mob> getPets() {
+	public Collection<Integer> getPets() {
 		refreshPets();
 		return pets;
 	}
@@ -303,11 +307,13 @@ public class Hero extends Char implements PetOwner {
 		bundle.put(LEVEL_ID, levelId);
 		bundle.put(DIFFICULTY, getDifficulty());
 
-		bundle.put(PETS, getPets());
+
+		bundle.put(PETS, getPets().toArray(new Integer [0]));
 		bundle.put(SP, getSoulPoints());
 		bundle.put(MAX_SP, getSoulPointsMax());
 
 		belongings.storeInBundle(bundle);
+
 		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
 		bundle.put(IS_SPELL_USER, spellUser);
 		bundle.put(MAGIC_LEVEL, magicLvl());
@@ -328,10 +334,20 @@ public class Hero extends Char implements PetOwner {
 		levelId = bundle.optString(LEVEL_ID, "unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
-		ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection(PETS, Mob.class));
+		pets.clear();
 
-		for (Mob pet : loadedPets) {
-			Mob.makePet(pet, this);
+		int []petsFromSave = bundle.getIntArray(PETS);
+
+		if(petsFromSave.length > 0) {
+			for(int petId :petsFromSave) {
+				pets.add(petId);
+			}
+		} else { // handle pre 28.6 saves
+			ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection(PETS, Mob.class));
+
+			for (Mob pet : loadedPets) {
+				Mob.makePet(pet, this);
+			}
 		}
 
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
@@ -1937,7 +1953,9 @@ public class Hero extends Char implements PetOwner {
 	public void spawnPets(Level level, boolean regroup) {
 		refreshPets();
 
-		for (Mob pet : pets) {
+		for (Integer petId : pets) {
+
+			Mob pet = (Mob)CharsList.getById(petId);
 
 			if(level.mobs.contains(pet)) {
 				continue;
@@ -2041,6 +2059,16 @@ public class Hero extends Char implements PetOwner {
 			return heroClass.friendlyTo(mob.getMobClassName());
 		}
 		return super.friendly(chr);
+	}
+
+	@Deprecated
+	public Collection<Mob> getPetsAsMobs()
+	{
+		ArrayList<Mob> mobs = new ArrayList<>();
+		for(Integer petId:pets) {
+			mobs.add((Mob)CharsList.getById(petId));
+		}
+		return mobs;
 	}
 
 }
