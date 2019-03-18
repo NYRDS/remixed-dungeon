@@ -46,7 +46,6 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.LarvaSprite;
 import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
@@ -287,27 +286,13 @@ public class Yog extends Boss {
 
 		@Override
 		public boolean attack(@NonNull Char enemy) {
-
-			if (!Dungeon.level.adjacent(getPos(), enemy.getPos())) {
-				spend(attackDelay());
-
-				if (hit(this, enemy, true)) {
-
-					int dmg = damageRoll();
-					enemy.damage(dmg, this);
-
-					enemy.getSprite().bloodBurstA(getSprite().center(), dmg);
+			if(super.attack(enemy)) {
+				if (!Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 					enemy.getSprite().flash();
-
-					return true;
-				} else {
-
-					enemy.getSprite().showStatus(CharSprite.NEUTRAL, enemy.defenseVerb());
-					return false;
 				}
-			} else {
-				return super.attack(enemy);
+				return true;
 			}
+			return false;
 		}
 
 		@Override
