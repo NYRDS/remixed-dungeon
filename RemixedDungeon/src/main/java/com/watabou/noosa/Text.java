@@ -110,6 +110,10 @@ public abstract class Text extends Visual {
 	}
 
 
+	public void text(int id) {
+		text(Game.getVar(id));
+	}
+
 	public void text(@NonNull String str) {
 		dirty = true;
 

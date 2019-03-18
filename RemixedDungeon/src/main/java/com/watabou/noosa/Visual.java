@@ -248,6 +248,16 @@ public class Visual extends Gizmo implements IPlaceable{
 		this.y = y;
 	}
 
+	@Override
+	public float getX() {
+		return x;
+	}
+
+	@Override
+	public float getY() {
+		return y;
+	}
+
 	public PointF Scale() {
 		return scale;
 	}

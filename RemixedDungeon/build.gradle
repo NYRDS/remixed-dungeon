@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 661
-        versionName "remix.28.5.fix.1.8"
+        versionCode 662
+        versionName "remix.28.5.fix.1.9"
     }
 
     aaptOptions {
@@ -108,8 +108,8 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    implementation 'io.humanteq.hqsdk:hqsdk-core:1.0.10'
-    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.0.10'
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.1.0'
+    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.1.0'
 
     implementation 'androidx.core:core:1.0.1'
     implementation 'androidx.annotation:annotation:1.0.2'

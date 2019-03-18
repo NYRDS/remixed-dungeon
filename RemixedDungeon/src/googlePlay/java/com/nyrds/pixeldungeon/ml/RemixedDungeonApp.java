@@ -74,6 +74,14 @@ public class RemixedDungeonApp extends MultiDexApplication {
 		}
 	}
 
+	static public int getExperimentSegment(String key, int vars) {
+		if(hqApi==null) {
+			return -1;
+		}
+
+		return HQSdk.getTestGroup(key,vars).intValue();
+	}
+
 	static public Context getContext() {
 		return instanceContext;
 	}

@@ -8,4 +8,6 @@ public interface IPlaceable {
     float width();
     float height();
     void setPos(float x, float y);
+    float getX();
+    float getY();
 }
