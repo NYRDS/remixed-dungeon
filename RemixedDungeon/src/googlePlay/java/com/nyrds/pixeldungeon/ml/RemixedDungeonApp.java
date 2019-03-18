@@ -79,7 +79,11 @@ public class RemixedDungeonApp extends MultiDexApplication {
 			return -1;
 		}
 
-		return HQSdk.getTestGroup(key,vars).intValue();
+		Long hqsdkRet = HQSdk.getTestGroup(key,vars);
+		if(hqsdkRet != null) {
+			return hqsdkRet.intValue();
+		}
+		return -1;
 	}
 
 	static public Context getContext() {

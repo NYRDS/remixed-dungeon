@@ -4,12 +4,10 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
@@ -318,16 +316,18 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                         return;
                     }
 
-                    if(RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
+/*                    if(RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
                         Game.pushUiTask(() -> {
                         	Iap iap = Game.instance().iap;
                         	if(iap!=null && iap.isReady() || BuildConfig.DEBUG ) {
 								Game.scene().add(new WndDontLikeAds());
 							}
                         });
-                    }
+                    }*/
+
                 }
             }
+
 		});
 	}
 
