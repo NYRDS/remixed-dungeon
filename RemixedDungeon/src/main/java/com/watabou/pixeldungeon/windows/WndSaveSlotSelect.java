@@ -4,10 +4,12 @@ import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
@@ -17,7 +19,6 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -310,58 +311,28 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 					SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
 				}
 			} else {
-                if(Math.random()<1) {
-                    int group = RemixedDungeonApp.getExperimentSegment("hqTestExperiment", 2);
-                    if(group == 0) {
-                        return;
-                    }
+                if(Math.random()<0.2)
+                {
+					if(RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
+						int group = RemixedDungeonApp.getExperimentSegment("hqSaveAdsExperiment", 2);
+						if(group == 0) {
+							return;
+						}
 
-/*                    if(RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
                         Game.pushUiTask(() -> {
                         	Iap iap = Game.instance().iap;
                         	if(iap!=null && iap.isReady() || BuildConfig.DEBUG ) {
+								EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT,"DialogShown");
 								Game.scene().add(new WndDontLikeAds());
+							} else {
+								EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT,"DialogNotShownIapNotReady");
 							}
                         });
-                    }*/
-
+                    }
                 }
             }
 
 		});
-	}
-
-    private static class WndDontLikeAds extends WndQuest {
-		private float time = 0;
-		private final Text pleaseSupport;
-
-		public WndDontLikeAds() {
-            super(new Shopkeeper(), Game.getVar(R.string.WndSaveSlotSelect_dontLike));
-
-            float y = height;
-
-            DonateButton btnDonate = new DonateButton(this);
-			btnDonate.setPos((width - btnDonate.width()) / 2, y + GAP*2);
-			add(btnDonate);
-
-			y=btnDonate.bottom();
-
-			pleaseSupport = PixelScene.createText(GuiProperties.titleFontSize());
-            pleaseSupport.text(R.string.DonateButton_pleaseDonate);
-            pleaseSupport.setPos((width - pleaseSupport.width()) / 2, y+GAP*2);
-			add(pleaseSupport);
-
-            resize(width, (int) pleaseSupport.bottom());
-        }
-
-		@Override
-		public void update() {
-			super.update();
-			time += Game.elapsed;
-			float cl = (float) Math.sin(time) * 0.5f + 0.5f;
-
-			pleaseSupport.hardlight(cl, cl, cl);
-		}
 	}
 
 }

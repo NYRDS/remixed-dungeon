@@ -36,6 +36,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
 		Fabric.with(this, new Crashlytics());
 
+		HQSdk.enableDebug(true);
 		HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false,
 				new HqmCallback<HqmApi>() {
 
