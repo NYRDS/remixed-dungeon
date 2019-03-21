@@ -204,10 +204,6 @@ public class Spell {
                     return true;
                 }
 
-                //                @Override
-//                public ItemSprite.Glowing glowing() {
-//                    return new ItemSprite.Glowing(0xffffffff);
-//                }
             };
         }
         return spellItem;

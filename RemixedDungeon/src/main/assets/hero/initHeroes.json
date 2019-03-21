@@ -33,7 +33,9 @@
       }
     ],
     "isSpellUser": true,
-    "magicAffinity": "Combat"
+    "magicAffinity": "Combat",
+    "sp": 10,
+    "maxSp": 10
   },
   "MAGE": {
     "items": [

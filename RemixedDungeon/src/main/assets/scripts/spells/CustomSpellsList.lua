@@ -8,6 +8,6 @@ local spells = {}
 spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice"}
 --spells["Common"] = {"Bless"}
 
-spells["Combat"] = {"RaiseDead"}
+spells["Combat"] = {"Smash"}
 
 return spells
