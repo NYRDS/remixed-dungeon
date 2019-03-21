@@ -313,7 +313,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
             } else {
                 if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
                     int group = RemixedDungeonApp.getExperimentSegment("hqSaveAdsExperiment", 2);
-                    if (group == 0) {
+                    if (group <= 0) {
                         return;
                     }
 
