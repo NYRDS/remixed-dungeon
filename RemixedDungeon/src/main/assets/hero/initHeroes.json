@@ -122,7 +122,7 @@
         "kind": "PotionOfHealing"
       }
     ],
-    "startingSp": 0,
+    "sp": 0,
     "maxSp": 10,
     "isSpellUser": true,
     "magicAffinity": "Necromancy"

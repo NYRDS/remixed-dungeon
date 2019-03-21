@@ -77,7 +77,7 @@ abstract public class ClassArmor extends Armor {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if (hero.getSoulPoints() >= hero.getSoulPointsMax()/specialCostModifier && isEquipped( hero )) {
+		if (hero.getSkillPoints() >= hero.getSkillPointsMax()/specialCostModifier && isEquipped( hero )) {
 			actions.add( special() );
 		}
 		return actions;
@@ -87,16 +87,16 @@ abstract public class ClassArmor extends Armor {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(special())) {
 
-			int cost = hero.getSoulPointsMax()/specialCostModifier;
+			int cost = hero.getSkillPointsMax()/specialCostModifier;
 
-			if (hero.getSoulPoints() < cost) {
+			if (hero.getSkillPoints() < cost) {
 				GLog.w( Game.getVar(R.string.ClassArmor_LowMana) );
 			} else if (!isEquipped( hero )) {
 				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
 			} else {
 				setUser(hero);
 				doSpecial();
-				hero.spendSoulPoints(cost);
+				hero.spendSkillPoints(cost);
 			}
 			
 		} else {	

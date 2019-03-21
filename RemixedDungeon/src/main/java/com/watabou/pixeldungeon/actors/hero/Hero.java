@@ -304,13 +304,13 @@ public class Hero extends Char implements PetOwner {
 		bundle.put(DIFFICULTY, getDifficulty());
 
 		bundle.put(PETS, getPets());
-		bundle.put(SP, getSoulPoints());
-		bundle.put(MAX_SP, getSoulPointsMax());
+		bundle.put(SP, getSkillPoints());
+		bundle.put(MAX_SP, getSkillPointsMax());
 
 		belongings.storeInBundle(bundle);
 		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
 		bundle.put(IS_SPELL_USER, spellUser);
-		bundle.put(MAGIC_LEVEL, magicLvl());
+		bundle.put(MAGIC_LEVEL, skillLevel());
 	}
 
 	@Override
@@ -345,7 +345,7 @@ public class Hero extends Char implements PetOwner {
 
 		spellUser = bundle.optBoolean(IS_SPELL_USER, false);
 
-		setMagicLvl(bundle.getInt(MAGIC_LEVEL));
+		setSkillLevel(bundle.getInt(MAGIC_LEVEL));
 	}
 
 	public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -1388,9 +1388,9 @@ public class Hero extends Char implements PetOwner {
 			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_LevelUp));
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
-			if (this.getSoulPointsMax() > 0) {
-				this.setMaxSoulPoints(getSoulPointsMax() + 1);
-				this.accumulateSoulPoints(getSoulPointsMax() / 3);
+			if (this.getSkillPointsMax() > 0) {
+				this.setMaxSkillPoints(getSkillPointsMax() + 1);
+				this.accumulateSkillPoints(getSkillPointsMax() / 3);
 			}
 
 			Badges.validateLevelReached();
@@ -1515,7 +1515,7 @@ public class Hero extends Char implements PetOwner {
 		Ankh ankh = belongings.getItem(Ankh.class);
 
 		if (ankh == null) {
-			if (this.subClass == HeroSubClass.LICH && this.getSoulPoints() == this.getSoulPointsMax()) {
+			if (this.subClass == HeroSubClass.LICH && this.getSkillPoints() == this.getSkillPointsMax()) {
 				this.setSoulPoints(0);
 				GameScene.show(new WndResurrect(null, cause));
 			} else {
@@ -1964,36 +1964,36 @@ public class Hero extends Char implements PetOwner {
 		Dungeon.setDifficulty(difficulty);
 	}
 
-	public void accumulateSoulPoints() {
-		accumulateSoulPoints(1);
+	public void accumulateSkillPoints() {
+		accumulateSkillPoints(1);
 	}
 
-	public void accumulateSoulPoints(int n) {
-		setSoulPoints(Math.min(Scrambler.descramble(sp)+n,getSoulPointsMax()));
+	public void accumulateSkillPoints(int n) {
+		setSoulPoints(Math.min(Scrambler.descramble(sp)+n, getSkillPointsMax()));
 	}
 
-	public int getSoulPoints() {
+	public int getSkillPoints() {
 		return Scrambler.descramble(sp);
 	}
 
-	public int getSoulPointsMax() {
+	public int getSkillPointsMax() {
 		return Scrambler.descramble(maxSp);
 	}
 
-	public void spendSoulPoints(int cost) {
+	public void spendSkillPoints(int cost) {
 		setSoulPoints(Scrambler.descramble(sp) - cost);
 	}
 
 	public boolean enoughSP(int cost) {
-		return getSoulPoints() >= cost;
+		return getSkillPoints() >= cost;
 	}
 
 	public void setSoulPoints(int points) {
-		sp = Scrambler.scramble(Math.max(0,Math.min(points,getSoulPointsMax())));
+		sp = Scrambler.scramble(Math.max(0,Math.min(points, getSkillPointsMax())));
 		QuickSlot.refresh();
 	}
 
-	public void setMaxSoulPoints(int points) {
+	public void setMaxSkillPoints(int points) {
 		maxSp = Scrambler.scramble(points);
 	}
 
@@ -2011,7 +2011,7 @@ public class Hero extends Char implements PetOwner {
 		portalLevelPos = position;
 	}
 
-	public int magicLvl() {
+	public int skillLevel() {
 		return Scrambler.descramble(magicLvl);
 	}
 
@@ -2021,12 +2021,12 @@ public class Hero extends Char implements PetOwner {
 
 	}
 
-	public void setMagicLvl(int level) {
+	public void setSkillLevel(int level) {
 		magicLvl = Scrambler.scramble(level);
 	}
 
-	public void magicLvlUp() {
-		setMagicLvl(magicLvl() + 1);
+	public void skillLevelUp() {
+		setSkillLevel(skillLevel() + 1);
 	}
 
     @Override

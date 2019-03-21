@@ -42,6 +42,8 @@
     ],
     "str": 1500,
     "hp": 20000,
+    "sp" : 100,
+    "sl" : 100,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -82,7 +84,7 @@
     ],
     "isSpellUser": true,
     "magicAffinity": "Elemental",
-    "startingSp": 10,
+    "sp": 10,
     "maxSp": 10
   },
   "ROGUE": {
@@ -154,7 +156,7 @@
         "kind": "PotionOfHealing"
       }
     ],
-    "startingSp": 10000,
+    "sp": 10000,
     "maxSp": 10,
     "isSpellUser": true,
     "magicAffinity": "Necromancy"

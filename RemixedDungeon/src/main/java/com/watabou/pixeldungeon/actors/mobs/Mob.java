@@ -460,7 +460,7 @@ public abstract class Mob extends Char {
 			if (hero.heroClass == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
 					if(hero.belongings.armor instanceof NecromancerRobe){
-						hero.accumulateSoulPoints();
+						hero.accumulateSkillPoints();
 					}
 				}
 			}

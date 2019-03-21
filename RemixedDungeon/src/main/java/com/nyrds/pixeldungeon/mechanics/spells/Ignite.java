@@ -24,7 +24,7 @@ public class Ignite extends Spell{
 		if(chr.level().cellValid(cell)) {
 			int target = Ballistica.cast(chr.getPos(), cell, true, true);
 
-			CellEmitter.center(target).burst( FlameParticle.FACTORY, chr.magicLvl() );
+			CellEmitter.center(target).burst( FlameParticle.FACTORY, chr.skillLevel() );
 
 			GameScene.add( Blob.seed( target, 5, Fire.class ) );
 			castCallback(chr);
