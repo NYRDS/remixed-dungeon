@@ -63,7 +63,9 @@
       {
         "kind": "PotionOfStrength"
       }
-    ]
+    ],
+    "isSpellUser": true,
+    "magicAffinity": "Combat"
   },
   "MAGE": {
     "items": [
