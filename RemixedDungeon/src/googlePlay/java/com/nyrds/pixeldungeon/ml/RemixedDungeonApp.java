@@ -36,6 +36,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
 		Fabric.with(this, new Crashlytics());
 
+		//HQSdk.enableDebug(true);
 		HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false,
 				new HqmCallback<HqmApi>() {
 
@@ -72,6 +73,18 @@ public class RemixedDungeonApp extends MultiDexApplication {
 			hqApi.startSystemEventsTracking();
 			hqSdkStarted++;
 		}
+	}
+
+	static public int getExperimentSegment(String key, int vars) {
+		if(hqApi==null) {
+			return -1;
+		}
+
+		Long hqsdkRet = HQSdk.getTestGroup(key,vars);
+		if(hqsdkRet != null) {
+			return hqsdkRet.intValue();
+		}
+		return -1;
 	}
 
 	static public Context getContext() {

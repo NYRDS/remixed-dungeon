@@ -36,7 +36,7 @@ public class WndHeroSpells extends Window {
 
         String affinity = hero.heroClass.getMagicAffinity();
 
-        Text title = PixelScene.createText(Game.getVar(R.string.WndHero_SkillLevel) + ": " + hero.magicLvl(), GuiProperties.titleFontSize());
+        Text title = PixelScene.createText(Game.getVar(R.string.WndHero_SkillLevel) + ": " + hero.skillLevel(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);
         title.setPos(width - title.width(), 0);
         add(title);
@@ -57,7 +57,7 @@ public class WndHeroSpells extends Window {
         ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
         for (String spellName : spells) {
             Spell spell = SpellFactory.getSpellByName(spellName);
-            if (spell.level() > hero.magicLvl()) {
+            if (spell.level() > hero.skillLevel()) {
                 continue;
             }
             spellsSet.add(new SpellButton(spell));

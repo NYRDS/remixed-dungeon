@@ -154,8 +154,9 @@ public enum HeroClass {
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.spellUser = classDesc.optBoolean("isSpellUser", false);
                 hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
-                hero.setMaxSoulPoints(classDesc.optInt("maxSp", 10));
-                hero.setSoulPoints(classDesc.optInt("startingSp", 0));
+                hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
+                hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
+                hero.setSoulPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", 0)));
 
             } catch (JSONException e) {
                 throw ModdingMode.modException("bad InitHero.json",e);

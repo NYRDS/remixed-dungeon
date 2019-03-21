@@ -18,7 +18,8 @@ import java.util.Map;
  * Created by mike on 09.03.2016.
  */
 public class EventCollector {
-	static private FirebaseAnalytics mFirebaseAnalytics;
+    public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment";
+    static private FirebaseAnalytics mFirebaseAnalytics;
 	static private boolean mDisabled = true;
 
 	static private HashMap<String,Trace> timings = new HashMap<>();

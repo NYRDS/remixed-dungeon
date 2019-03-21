@@ -5,16 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
-
-local spells = {}
-spells["Necromancy"] = {"DarkSacrifice","RaiseDead","Exhumation"}
-
-if RPD.RemixedDungeon:isAlpha() then
-    table.insert(spells["Necromancy"],"Possess")
-end
-
---spells["Common"] = {"Bless"}
+local spells = require "scripts/spells/CustomSpellsList"
 
 local module = {}
 
@@ -24,8 +15,8 @@ function module.getSpellsList(self,affinity)
 end
 
 function module.haveSpell(self,spell)
-    for k,v in pairs(spells) do
-        for kk, vv in pairs(v) do
+    for _,v in pairs(spells) do
+        for __, vv in pairs(v) do
             if spell == vv then
                 return true
             end
@@ -35,9 +26,11 @@ function module.haveSpell(self,spell)
 end
 
 function module.loadSpells()
-    require "scripts/spells/RaiseDead"
-    require "scripts/spells/DarkSacrifice"
-    require "scripts.spells/Exhumation"
+    for _,affinity in pairs(spells) do
+        for __, spell in pairs(affinity) do
+            require("scripts/spells/"..spell)
+        end
+    end
 end
 
 return module

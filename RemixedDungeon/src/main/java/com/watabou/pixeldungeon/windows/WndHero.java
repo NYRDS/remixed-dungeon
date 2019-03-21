@@ -124,7 +124,7 @@ public class WndHero extends WndTabbed {
 
 			statSlot(Game.getVar(R.string.WndHero_Str), hero.effectiveSTR() );
 			statSlot(Game.getVar(R.string.WndHero_Health), hero.hp() + "/" + hero.ht() );
-			statSlot(Game.getVar(R.string.Mana_Title), hero.getSoulPoints() + "/" + hero.getSoulPointsMax() );
+			statSlot(Game.getVar(R.string.Mana_Title), hero.getSkillPoints() + "/" + hero.getSkillPointsMax() );
 
 			statSlot(Game.getVar(R.string.WndHero_Exp), hero.getExp() + "/" + hero.maxExp() );
 
@@ -133,7 +133,7 @@ public class WndHero extends WndTabbed {
 			statSlot(Game.getVar(R.string.WndHero_Gold), Statistics.goldCollected );
 			statSlot(Game.getVar(R.string.WndHero_Depth), Statistics.deepestFloor );
 
-			statSlot(Game.getVar(R.string.WndHero_SkillLevel), hero.magicLvl());
+			statSlot(Game.getVar(R.string.WndHero_SkillLevel), hero.skillLevel());
 			
 			pos += GAP;
 		}

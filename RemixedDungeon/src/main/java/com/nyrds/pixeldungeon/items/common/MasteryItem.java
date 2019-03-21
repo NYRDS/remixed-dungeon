@@ -53,7 +53,7 @@ public class MasteryItem extends Item {
 			int penalty = 2;
 			specialChooseMessage(penalty);
 			hero.STR(hero.STR() - penalty);
-			hero.setMaxSoulPoints(hero.getSoulPointsMax() * 2);
+			hero.setMaxSkillPoints(hero.getSkillPointsMax() * 2);
 		}
 
 		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );

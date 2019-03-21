@@ -124,12 +124,7 @@ public class King extends Boss {
 			return false;
 		}
 	}
-	
-	@Override
-	public boolean attack(@NonNull Char enemy ) {
-		return super.attack(enemy);
-	}
-	
+
 	@Override
 	public void die( Object cause ) {
 
