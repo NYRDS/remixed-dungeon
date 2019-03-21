@@ -745,6 +745,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		return 10;
 	}
 
+	public int magicLvl() {
+		return skillLevel();
+	}
+
 	@Override
 	public boolean affectLevelObjects() {
 		return true;
