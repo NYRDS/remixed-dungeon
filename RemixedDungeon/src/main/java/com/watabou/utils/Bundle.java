@@ -19,6 +19,7 @@ package com.watabou.utils;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.generated.BundleHelper;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.json.JSONArray;
@@ -28,7 +29,6 @@ import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -285,6 +285,18 @@ public class Bundle {
         }
     }
 
+    public void put(String key, Integer[] array) {
+        try {
+            JSONArray jsonArray = new JSONArray();
+            for (int i = 0; i < array.length; i++) {
+                jsonArray.put(i, array[i]);
+            }
+            data.put(key, jsonArray);
+        } catch (JSONException e) {
+            throw new TrackedRuntimeException("key:" + key, e);
+        }
+    }
+
     public void put(String key, int[] array) {
         try {
             JSONArray jsonArray = new JSONArray();
@@ -352,13 +364,23 @@ public class Bundle {
             byte[] header = new byte[2];
             pb.unread(header, 0, pb.read(header));
 
-            if (header[0] == (byte) 0x1f && header[1] == (byte) 0x8b)
+            if (header[0] == (byte) 0x1f && header[1] == (byte) 0x8b) {
                 reader = new BufferedReader(new InputStreamReader(new GZIPInputStream(pb, GZIP_BUFFER_SIZE)));
-            else
+            } else {
                 reader = new BufferedReader(new InputStreamReader(pb));
+            }
 
-            JSONObject json = (JSONObject) new JSONTokener(reader.readLine()).nextValue();
+            StringBuilder jsonDef = new StringBuilder();
+
+            String line = reader.readLine();
+
+            while (line != null) {
+                jsonDef.append(line);
+                line = reader.readLine();
+            }
             reader.close();
+
+            JSONObject json = (JSONObject) new JSONTokener(jsonDef.toString()).nextValue();
 
             return new Bundle(json);
         } catch (Exception e) {
@@ -369,12 +391,19 @@ public class Bundle {
 
     public static void write(Bundle bundle, OutputStream stream) {
         try {
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new GZIPOutputStream(stream, GZIP_BUFFER_SIZE)));
 
+            if(BuildConfig.DEBUG) { //cleartext for debugging
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(stream));
+                writer.write(bundle.data.toString(2));
+                writer.close();
+                return;
+            }
+
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new GZIPOutputStream(stream, GZIP_BUFFER_SIZE)));
             writer.write(bundle.data.toString());
             writer.close();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new TrackedRuntimeException("bundle write failed: %s\n", e);
         }
     }

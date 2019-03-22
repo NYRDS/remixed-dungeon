@@ -38,6 +38,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -64,6 +65,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -80,7 +82,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public abstract class Mob extends Char {
 
@@ -106,8 +107,7 @@ public abstract class Mob extends Char {
 	protected int exp    = 1;
 	protected int maxLvl = 50;
 
-	@Nullable
-	private PetOwner owner;
+	private int owner = -1;
 
 	@NonNull
 	private Char enemy = DUMMY;
@@ -124,37 +124,47 @@ public abstract class Mob extends Char {
 	private static final String FRACTION   = "fraction";
 
 	public Mob() {
-		readCharData();
+		setupCharData();
 	}
 
 	public Fraction fraction() {
 		return fraction;
 	}
 
+
+	PetOwner getOwner() {
+		return ((PetOwner)CharsList.getById(owner));
+	}
+
 	@NonNull
 	public static Mob makePet(@NonNull Mob pet, @NonNull Hero hero) {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
-			pet.owner = hero;
-			pet.owner.addPet(pet);
+			pet.owner = hero.getId();
+			pet.getOwner().addPet(pet);
 		}
 		return pet;
 	}
 
+	@Override
+	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
+		return owner >= 0 && CharsList.getById(owner) instanceof Hero;
+	}
+
 	public static void releasePet(@NonNull Mob pet) {
 		pet.setFraction(Fraction.DUNGEON);
-		if(pet.owner!=null) {
-			pet.owner.removePet(pet);
-			pet.owner = null;
+		if(pet.owner>=0) {
+			pet.getOwner().removePet(pet);
+			pet.owner = -1;
 		}
 	}
 
 	public int getOwnerPos() {
-		if(owner==null) {
+		if(owner<0) {
 			return getPos();
 		}
 
-		return owner.getPos();
+		return getOwner().getPos();
 	}
 
 	public void setFraction(Fraction fr) {
@@ -381,7 +391,7 @@ public abstract class Mob extends Char {
 			Wound.hit(this);
 		}
 
-		if(owner!=enemy) {
+		if(owner!=enemy.getId()) {
 			setEnemy(enemy);
 		}
 
@@ -492,8 +502,8 @@ public abstract class Mob extends Char {
 			}
 		}
 
-		if(owner!=null) {
-			owner.removePet(this);
+		if(owner>=0) {
+			getOwner().removePet(this);
 		}
 
 		super.die(cause);
@@ -663,7 +673,7 @@ public abstract class Mob extends Char {
 
 		if(chr instanceof Mob) {
 			Mob mob = (Mob)chr;
-			if(owner != null && owner == mob.owner) {
+			if(owner >= 0 && owner == mob.owner) {
 				return true;
 			}
 		}

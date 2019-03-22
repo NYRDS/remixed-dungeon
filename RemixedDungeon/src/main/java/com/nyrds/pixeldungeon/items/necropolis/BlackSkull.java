@@ -32,9 +32,9 @@ public class BlackSkull extends Artifact {
 	}
 
 	public void mobDied(Mob mob, Hero hero) {
-		Collection<Mob> pets = hero.getPets();
+		Collection<Integer> pets = hero.getPets();
 
-		if (pets.contains(mob)){
+		if (pets.contains(mob.getId())){
 			return;
 		}
 

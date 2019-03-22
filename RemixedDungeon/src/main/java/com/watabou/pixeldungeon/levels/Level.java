@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -81,6 +82,7 @@ import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -90,8 +92,10 @@ import com.watabou.utils.SparseArray;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -285,6 +289,25 @@ public abstract class Level implements Bundlable {
 
 	public int[] getTileLayer(LayerId id) {
 		return customLayers.get(id);
+	}
+
+	public static Collection<Mob> mobsFollowLevelChange(InterlevelScene.Mode changeMode) {
+
+		if(Dungeon.level==null) { //first level
+			return CharsList.emptyMobList;
+		}
+
+		ArrayList<Mob> mobsToNextLevel = new ArrayList<>();
+
+		Iterator<Mob> it = Dungeon.level.mobs.iterator();
+		while(it.hasNext()) {
+			Mob mob = it.next();
+			if(mob.followOnLevelChanged(changeMode)) {
+				mobsToNextLevel.add(mob);
+				it.remove();
+			}
+		}
+		return mobsToNextLevel;
 	}
 
 	public enum Feeling {
@@ -628,18 +651,6 @@ public abstract class Level implements Bundlable {
 
 		buildFlagMaps();
 		cleanWalls();
-	}
-
-	public void removePets() {
-		HashSet<Mob> nonPets = new HashSet<>();
-
-		for (Mob mob : mobs) {
-			if (!mob.isPet()) {
-				nonPets.add(mob);
-			}
-		}
-
-		mobs = nonPets;
 	}
 
 	@Override
@@ -1313,8 +1324,8 @@ public abstract class Level implements Bundlable {
 
 
 		if(c instanceof Hero) {
-			for (Mob mob: ((Hero) c).getPets()) {
-				updateFovForObjectAt(mob.getPos());
+			for (Integer mobId: ((Hero) c).getPets()) {
+				updateFovForObjectAt(CharsList.getById(mobId).getPos());
 			}
 		}
 

@@ -45,8 +45,8 @@ abstract public class Boss extends Mob {
 	}
 
 	@Override
-	protected void readCharData() {
-		super.readCharData();
+	protected void setupCharData() {
+		super.setupCharData();
 		battleMusic = getClassDef().optString(BATTLE_MUSIC, null);
 	}
 }
