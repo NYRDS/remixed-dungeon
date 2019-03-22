@@ -7,6 +7,8 @@
   <string name="AmuletScene_Stay">Jeszcze nie skończyłem</string>
   <string name="AmuletScene_Txt">W końcu trzymaj to w swoich rękach, Amulet Yendoru. Wykorzystując jego moc, możesz przejąć świat lub przynieść pokój i dobrobyt ludziom lub czymkolwiek innym. W każdym razie twoje życie zmieni się na zawsze, a ta gra się skończy. Możesz też pozostać zwykłym śmiertelnikiem trochę dłużej.</string>
   <!--STRINGS OF GameScene CLASS-->
+  <string name="GameScene_Welcome">Witamy na poziomie %d Lochów Remixed Pixel Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Witamy ponownie na poziomie %d Lochów Remixed Pixel Dungeon!</string>
   <string name="GameScene_NightMode">Bądź ostrożny, ponieważ loch jest jeszcze bardziej niebezpieczny w nocy!</string>
   <string name="GameScene_Chasm">Twoje kroki odbijają się echem w lochu.</string>
   <string name="GameScene_Water">Słyszysz plusk wody wokół ciebie.</string>
@@ -16,9 +18,9 @@
   <string name="Char_Name">tłum</string>
   <string name="Char_Name_Objective">tłum</string>
   <string-array name="Char_Hit">
-    <item> %1$shit %2$s</item>
-    <item> %1$shit %2$s</item>
-    <item> %1$shit %2$s</item>
+    <item> %1$s uderzył %2$s</item>
+    <item> %1$s uderzył %2$s</item>
+    <item> %1$s uderzył %2$s</item>
   </string-array>
   <string-array name="Char_Kill">
     <item>%s zabił ciebie...</item>
@@ -96,6 +98,7 @@
   <string name="WndGame_Ranking">Rankingi</string>
   <string name="WndGame_Start">Zacznij nową grę</string>
   <string name="WndGame_menu">Menu Główne</string>
+  <string name="WndGame_Exit">Opuść Remixed Pixel Dungeon</string>
   <string name="WndGame_Return">Wróc do Gry</string>
   <string name="WndGame_Save">Zapisz</string>
   <string name="WndGame_Load">Wczytaj</string>
@@ -229,6 +232,8 @@
   <string name="LloidsBeacon_Preventing">Silna aura magiczna tego miejsca uniemożliwia ci używanie Rdzenia!</string>
   <string name="LloidsBeacon_Creatures">Psychiczna aura niedalekich potworów nie pozwala ci teraz użyć Rdzenia.</string>
   <string name="LloidsBeacon_Return">Rdzeń Lloyda został pomyślnie ustawiony na twojej obecnej pozycji. Teraz możesz powrócić w to miejsce kiedy chcesz.</string>
+  <string name="LloidsBeacon_Set">\n\nRdzeń został ustawiony gdzieś na %d poziomie Remixed Pixel Dungeon.
+</string>
   <!--STRINGS OF Stylus CLASS-->
   <string name="Stylus_Name">magiczny pisak</string>
   <string name="Stylus_ACInscribe">WPISZ</string>

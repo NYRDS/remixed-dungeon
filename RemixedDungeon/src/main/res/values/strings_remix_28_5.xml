@@ -77,4 +77,7 @@
 	<string name="WndPriest_Instruction2_m">Welcome my son, welcome to the holy church of great Santa the Depth Lord! </string>
 	<string name="WndPriest_Instruction2_f">Welcome my daughter, welcome to the holy church of great Santa the Depth Lord!</string>
 	<string name="WndPriest_Instruction2">If you seek help, I can provide healing service only for %d gold coins!\nIf you are in search for holy Blessing, or, Lord forbid, was cursed, please meet with the Bishop in our humble church.</string>
+
+	<string name="WndDontLikeAds_NotThisTime">Not this time</string>
+
 </resources>

@@ -41,7 +41,7 @@
     <!-- Custom tiles descriptions -->
     <!-- STRINGS OF Town -->
     <string name="town_deco_blue_carpet_name">Carpet</string>
-    <string name="town_deco_blue_carpet_desc">A luxurous blue carpet, decorated with purple ornaments.</string>
+    <string name="town_deco_blue_carpet_desc">A luxurious blue carpet, decorated with purple ornaments.</string>
 
     <string name="town_table_fortune_name">Table</string>
     <string name="town_table_fortune_desc">This table is covered with a silk cloth. You can see various tarot cards laid out in a peculiar order.</string>

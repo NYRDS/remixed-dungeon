@@ -30,7 +30,7 @@ public class WindGust extends Spell{
 			boolean triggered = false;
 
 			Ballistica.cast(chr.getPos(), cell, true, false);
-			for (int i = 1; i < Math.min(chr.magicLvl() + 2, Ballistica.distance-1); i++) {
+			for (int i = 1; i < Math.min(chr.skillLevel() + 2, Ballistica.distance-1); i++) {
 				int c = Ballistica.trace[i];
 
 				if ((ch = Actor.findChar(c)) != null) {
@@ -42,8 +42,8 @@ public class WindGust extends Spell{
 
 					triggered = true;
 
-					ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 + chr.magicLvl() * 2);
-					ch.getSprite().burst( 0xFF99FFFF, 3 + chr.magicLvl());
+					ch.getSprite().emitter().burst( WindParticle.FACTORY, 5 + chr.skillLevel() * 2);
+					ch.getSprite().burst( 0xFF99FFFF, 3 + chr.skillLevel());
 					Sample.INSTANCE.play( Assets.SND_MELD );
 
 					if (ch.isMovable() && (level.passable[next] || level.avoid[next])
@@ -52,7 +52,7 @@ public class WindGust extends Spell{
 						ch.getSprite().move(ch.getPos(), next);
 						Dungeon.observe();
 					} else {
-						ch.damage(chr.magicLvl() * 2 , this);
+						ch.damage(chr.skillLevel() * 2 , this);
 					}
 				}
 

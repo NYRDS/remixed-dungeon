@@ -44,7 +44,17 @@ public class Component extends Group implements IPlaceable {
 		this.y = y;
 		layout();
 	}
-	
+
+	@Override
+	public float getX() {
+		return x;
+	}
+
+	@Override
+	public float getY() {
+		return y;
+	}
+
 	public Component setSize( float width, float height ) {
 		this.width = width;
 		this.height = height;

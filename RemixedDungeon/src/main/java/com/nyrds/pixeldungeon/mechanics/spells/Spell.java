@@ -101,7 +101,7 @@ public class Spell {
 
     protected void castCallback(Char chr) {
         if (chr instanceof Hero) {
-            ((Hero) chr).spendSoulPoints(spellCost());
+            ((Hero) chr).spendSkillPoints(spellCost());
         }
     }
 
@@ -147,7 +147,7 @@ public class Spell {
     }
 
     public int getLevelModifier(Char chr) {
-        return chr.magicLvl() - level;
+        return chr.skillLevel() - level;
     }
 
     @NonNull
@@ -190,7 +190,7 @@ public class Spell {
 
                 @Override
                 public Item quickSlotContent() {
-                    quantity(Dungeon.hero.getSoulPoints()/spellCost());
+                    quantity(Dungeon.hero.getSkillPoints()/spellCost());
                     return this;
                 }
 

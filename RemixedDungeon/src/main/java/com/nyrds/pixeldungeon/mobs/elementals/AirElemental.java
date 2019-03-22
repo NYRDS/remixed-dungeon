@@ -32,7 +32,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public int magicLvl() {
+	public int skillLevel() {
 		return Math.max(Math.min(7, exp / 2),3);
 	}
 
@@ -60,7 +60,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public boolean getCloser(int target) {
-		if (getState() instanceof Hunting && Dungeon.level.distance(getPos(), target) < magicLvl() - 1) {
+		if (getState() instanceof Hunting && Dungeon.level.distance(getPos(), target) < skillLevel() - 1) {
 			return getFurther(target);
 		}
 
@@ -76,7 +76,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 		Ballistica.cast(getPos(), enemy.getPos(), true, false);
 
-		for (int i = 1; i < magicLvl(); i++) {
+		for (int i = 1; i < skillLevel(); i++) {
 			if (Ballistica.trace[i] == enemy.getPos()) {
 				return true;
 			}

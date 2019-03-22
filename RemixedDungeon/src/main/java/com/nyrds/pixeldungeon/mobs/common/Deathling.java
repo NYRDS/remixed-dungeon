@@ -27,7 +27,7 @@ public class Deathling extends UndeadMob {
     private int getModifier(){
         Hero hero = Dungeon.hero;
         if (hero != null){
-            return hero.lvl() + hero.magicLvl()*hero.magicLvl();
+            return hero.lvl() + hero.skillLevel()*hero.skillLevel();
         }
         return 1;
     }

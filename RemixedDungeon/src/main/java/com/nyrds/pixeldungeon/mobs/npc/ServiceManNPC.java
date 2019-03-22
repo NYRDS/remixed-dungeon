@@ -33,8 +33,8 @@ public class ServiceManNPC extends ImmortalNPC {
     }
 
     public static void reward() {
-        filmsSeen++;
         Dungeon.hero.collect(new Gold(getReward()));
+        filmsSeen++;
     }
 
     @Override

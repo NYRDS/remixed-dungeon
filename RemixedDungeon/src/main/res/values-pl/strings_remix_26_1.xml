@@ -8,6 +8,8 @@
     <string name="TownGuardNPC_Desc">Zwyczajny strażnik miejski.</string>
     <string name="TownGuardNPC_Message1">Nie zatrzymuj się.</string>
     <string name="TownGuardNPC_Message2">Dzięki takim poszukiwaczom przygód jak ty, tu na górze jest naprawdę spokojnie.</string>
+    <string name="TownGuardNPC_Message3">Wydaje ci się że w tym mieście jest za dużo strażników? Cóż, to dlatego, że to jedyne takie miasto z olbrzymim, zainfekowanym przez potwory lochem, czyż nie?</string>
+
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">Mieszczanin</string>
     <string name="TownsfolkNPC_Gender">męski</string>

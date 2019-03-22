@@ -25,7 +25,7 @@ public class TomeOfKnowledge extends Book {
 
 		getUser().spendAndNext( TIME_TO_READ );
 		getUser().busy();
-		hero.magicLvlUp();
+		hero.skillLevelUp();
 	}
 
 	@Override

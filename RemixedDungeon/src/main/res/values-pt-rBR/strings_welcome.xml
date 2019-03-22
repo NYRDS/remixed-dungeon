@@ -37,4 +37,15 @@
     - Melhorias Gráficas:\n
     -- As armas do herói agora são visíveis no jogo\n
     </string>
+  <string name="Welcome_Text_28_5">
+    remix.28.5\n
+    - Modificações:\n
+    -- Inteligência Artificial dos Mobs e NPCs podem ser modificadas\n
+    - Cidade:\n
+    -- Igreja agora está aberta para crentes\n
+    -- A Loja da cidade foi remodelada\n
+    - Mecânicas do jogo:\n
+    -- Interface de compras melhorada\n
+    -- O Portal pode ser usado várias vezes\n
+    </string>
 </resources>
