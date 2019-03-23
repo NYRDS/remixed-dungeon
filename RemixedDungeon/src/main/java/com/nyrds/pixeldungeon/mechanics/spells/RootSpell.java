@@ -18,7 +18,6 @@ public class RootSpell extends Spell{
 
 		level = 2;
 		image = 2;
-		duration = 10f;
 		spellCost = 2;
 	}
 
@@ -32,7 +31,7 @@ public class RootSpell extends Spell{
 					ch.getSprite().emitter().burst( EarthParticle.FACTORY, 5 );
 					ch.getSprite().burst( 0xFF99FFFF, 3 );
 
-					Buff.prolong( ch, Roots.class, duration );
+					Buff.prolong( ch, Roots.class, 10 );
 					Sample.INSTANCE.play( Assets.SND_PUFF );
 				}
 

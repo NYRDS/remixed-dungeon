@@ -32,7 +32,7 @@ public class CustomSpell extends Spell {
         info = StringsManager.maybeId(desc.rawget("info").checkjstring());
         magicAffinity = StringsManager.maybeId(desc.rawget("magicAffinity").checkjstring());
         targetingType = desc.rawget("targetingType").checkjstring();
-        duration      = (float) desc.rawget("duration").checkdouble();
+        cooldown      = (float) desc.rawget("cooldown").checkdouble();
 
         level = (int) desc.rawget("level").checkdouble();
         spellCost = (int) desc.rawget("spellCost").checkdouble();

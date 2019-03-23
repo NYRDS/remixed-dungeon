@@ -19,7 +19,6 @@ public class MagicTorch extends Spell{
 		magicAffinity = SpellHelper.AFFINITY_COMMON;
 
 		image = 0;
-		duration = 80f;
 		spellCost = 1;
 	}
 
@@ -27,7 +26,7 @@ public class MagicTorch extends Spell{
 	public boolean cast(@NonNull Char chr){
 		if (super.cast(chr)){
 			castCallback(chr);
-			Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, duration);
+			Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, 80);
 
 			Emitter emitter = chr.getSprite().centerEmitter();
 			emitter.start(FlameParticle.FACTORY, 0.2f, 3);

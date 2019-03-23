@@ -23,7 +23,7 @@ public class Spell {
     protected      int spellCost         = 5;
 
     protected float castTime = 1f;
-    protected float duration = 10f;
+    protected float cooldown = 1f;
 
     protected String targetingType;
     protected String magicAffinity;
