@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import android.annotation.SuppressLint;
+
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -94,6 +96,7 @@ public abstract class Actor implements Bundlable {
 	
 	private static float now = 0;
 	
+	@SuppressLint("UseSparseArrays")
 	public static Map<Integer, Char> chars = new HashMap<>();
 	
 	public static void clear() {

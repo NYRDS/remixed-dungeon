@@ -37,6 +37,7 @@ import java.io.PushbackInputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
@@ -351,6 +352,40 @@ public class Bundle {
         }
     }
 
+    public <T> void put(String key, Map<String, T> map) {
+        try {
+            JSONObject object = new JSONObject();
+            for (Map.Entry<String,T> entry: map.entrySet()) {
+                object.put(entry.getKey(),entry.getValue());
+            }
+            data.put(key,object);
+        } catch (JSONException e) {
+            throw new TrackedRuntimeException("key:" + key, e);
+        }
+    }
+
+    public <T> Map<String,T> getMap(String key) {
+        Map<String,T> ret = new HashMap<>();
+
+        if(data.isNull(key)) {
+            return ret;
+        }
+
+        try {
+
+            JSONObject object = data.getJSONObject(key);
+
+            Iterator<String> oi = object.keys();
+            while(oi.hasNext()) {
+                String name = oi.next();
+                ret.put(oi.next(), (T)object.get(name));
+            }
+
+            return ret;
+        } catch (JSONException e) {
+            throw new TrackedRuntimeException("key:" + key, e);
+        }
+    }
 
     private static final int GZIP_BUFFER_SIZE = 4096;
 

@@ -44,12 +44,23 @@ public class Spell {
     }
 
     public boolean canCast(@NonNull final Char chr, boolean reallyCast) {
+
+        float timeToCast = chr.spellCooldown(getSpellClass())-cooldown;
+        if(timeToCast < 0) {
+
+            if(reallyCast) {
+                GLog.w(Utils.format(R.string.Spells_NotTooFast, name));
+            }
+
+            return false;
+        }
+
         if (chr instanceof Hero) {
             final Hero hero = (Hero) chr;
 
             if (!hero.enoughSP(spellCost())) {
                 if(reallyCast) {
-                    GLog.w(Utils.format(Game.getVar(R.string.Spells_NotEnoughSP), name));
+                    GLog.w(Utils.format(R.string.Spells_NotEnoughSP, name));
                 }
                 return false;
             }

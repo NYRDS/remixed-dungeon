@@ -40,7 +40,6 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
-import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
@@ -78,8 +77,10 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import androidx.annotation.NonNull;
@@ -122,7 +123,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 
 	public int viewDistance = 8;
 
-	protected HashSet<Buff> buffs = new HashSet<>();
+	protected Set<Buff> buffs = new HashSet<>();
+
+	protected Map<String, Float> spellsUsage = new HashMap<>();
+
 	public CharAction curAction = null;
 
 	public boolean canSpawnAt(Level level,int cell) {
@@ -139,9 +143,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		return false;
 	}
 
-	private static final String TAG_HP = "HP";
-	private static final String TAG_HT = "HT";
-	private static final String BUFFS  = "buffs";
+	private static final String TAG_HP        = "HP";
+	private static final String TAG_HT        = "HT";
+	private static final String BUFFS         = "buffs";
+	private static final String SPELLS_USAGE  = "spells_usage";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -151,6 +156,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		bundle.put(TAG_HP, hp());
 		bundle.put(TAG_HT, ht());
 		bundle.put(BUFFS, buffs);
+		bundle.put(SPELLS_USAGE, spellsUsage);
 	}
 
 	@Override
@@ -165,28 +171,8 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
 
-		//TODO remove me in 28.6
-        {
-            boolean hungerAttached = false;
-            boolean hungerBugSend = false;
+		spellsUsage = bundle.<Float>getMap(SPELLS_USAGE);
 
-            for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
-                if (b != null) {
-                    if (b instanceof Hunger) {
-                        if (!hungerAttached) {
-                            hungerAttached = true;
-                        } else {
-                            if (!hungerBugSend) {
-                                EventCollector.logException("hunger count");
-                                hungerBugSend = true;
-                                continue;
-                            }
-                        }
-                    }
-                    b.attachTo(this);
-                }
-            }
-        }
 		setupCharData();
 	}
 
@@ -423,10 +409,16 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 			timeScale *= 2.0f;
 		}
 
-		super.spend(time / timeScale);
+		float scaledTime = time / timeScale;
+
+		for(Map.Entry<String,Float> spell:spellsUsage.entrySet()) {
+			spell.setValue(spell.getValue()+scaledTime);
+		}
+
+		super.spend(scaledTime);
 	}
 
-	public HashSet<Buff> buffs() {
+	public Set<Buff> buffs() {
 		return buffs;
 	}
 
@@ -849,4 +841,11 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 	public int getId() {
 		return id;
 	}
+
+    public float spellCooldown(String spellName) {
+		if(spellsUsage.containsKey(spellName)) {
+			return spellsUsage.get(spellName);
+		}
+		return Float.MAX_VALUE;
+    }
 }
