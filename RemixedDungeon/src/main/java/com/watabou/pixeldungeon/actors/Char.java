@@ -125,7 +125,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 
 	protected Set<Buff> buffs = new HashSet<>();
 
-	protected Map<String, Float> spellsUsage = new HashMap<>();
+	protected Map<String, Number> spellsUsage = new HashMap<>();
 
 	public CharAction curAction = null;
 
@@ -171,7 +171,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
 
-		spellsUsage = bundle.<Float>getMap(SPELLS_USAGE);
+		spellsUsage = bundle.<Number>getMap(SPELLS_USAGE);
 
 		setupCharData();
 	}
@@ -411,8 +411,8 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 
 		float scaledTime = time / timeScale;
 
-		for(Map.Entry<String,Float> spell:spellsUsage.entrySet()) {
-			spell.setValue(spell.getValue()+scaledTime);
+		for(Map.Entry<String,Number> spell:spellsUsage.entrySet()) {
+			spell.setValue(spell.getValue().floatValue()+scaledTime);
 		}
 
 		super.spend(scaledTime);
@@ -842,9 +842,13 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		return id;
 	}
 
+	public void spellCasted(String spellName) {
+		spellsUsage.put(spellName, 0.f);
+	}
+
     public float spellCooldown(String spellName) {
 		if(spellsUsage.containsKey(spellName)) {
-			return spellsUsage.get(spellName);
+			return spellsUsage.get(spellName).floatValue();
 		}
 		return Float.MAX_VALUE;
     }

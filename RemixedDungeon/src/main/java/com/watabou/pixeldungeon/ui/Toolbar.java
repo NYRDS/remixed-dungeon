@@ -295,35 +295,6 @@ public class Toolbar extends Component {
         btnInventory.pickUp(item);
     }
 
-    private static class QuickslotTool extends Tool {
-
-        private QuickSlot slot;
-
-        QuickslotTool() {
-            super(-1, Chrome.Type.QUICKSLOT);
-
-            slot = new QuickSlot();
-            add(slot);
-        }
-
-        @Override
-        protected void layout() {
-            super.layout();
-            slot.setRect(base.x, base.y, base.width(), base.height());
-        }
-
-        public void show(boolean value) {
-            setVisible(value);
-            enable(value);
-        }
-
-        @Override
-        public void enable(boolean value) {
-            slot.enable(value);
-            active = value;
-        }
-    }
-
     @Override
     public float top() {
         return toolbar.top();

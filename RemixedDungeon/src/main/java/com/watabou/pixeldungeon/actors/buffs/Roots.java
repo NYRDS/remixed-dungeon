@@ -36,12 +36,8 @@ public class Roots extends FlavourBuff {
 		if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ELF){
 			return false;
 		}
-		
-		if ( super.attachTo( target )) {
-			return true;
-		} else {
-			return false;
-		}
+
+        return super.attachTo(target);
 	}
 	
 	@Override

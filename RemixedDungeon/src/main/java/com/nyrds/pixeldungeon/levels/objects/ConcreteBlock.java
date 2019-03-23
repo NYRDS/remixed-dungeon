@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -27,7 +26,7 @@ public class ConcreteBlock extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+	void setupFromJson(Level level, JSONObject obj) {
 		requiredStr = obj.optInt("str", 10);
 	}
 

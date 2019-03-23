@@ -533,6 +533,8 @@ public class Hero extends Char implements PetOwner {
 			}
 		}
 
+		QuickSlot.refresh();
+
 		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1, -hasteLevel)));
 	}
 

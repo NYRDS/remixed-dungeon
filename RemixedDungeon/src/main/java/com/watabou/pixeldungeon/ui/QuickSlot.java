@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import android.annotation.SuppressLint;
+
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -39,6 +41,7 @@ import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import androidx.annotation.Nullable;
 
@@ -48,8 +51,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private static final String QUICKSLOT       = "quickslot";
 
+    private static float lastRefreshTime;
+
     private static ArrayList<QuickSlot>     slots   = new ArrayList<>();
-    private static HashMap<Integer, Item> qsStorage = new HashMap<>();
+    @SuppressLint("UseSparseArrays")
+    private static Map<Integer, Item> qsStorage = new HashMap<>();
 
     private Item quickslotItem;
 
@@ -248,8 +254,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     public static void refresh() {
         Game.pushUiTask(() -> {
-            for (QuickSlot slot : slots) {
-                slot.refreshSelf();
+            if(lastRefreshTime != Game.elapsed) {
+                lastRefreshTime = Game.elapsed;
+                for (QuickSlot slot : slots) {
+                    slot.refreshSelf();
+                }
             }
         });
     }
@@ -380,5 +389,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
 
         Game.scene().add(prompt);
+    }
+
+    public Item getQuickslotItem() {
+        return quickslotItem;
     }
 }

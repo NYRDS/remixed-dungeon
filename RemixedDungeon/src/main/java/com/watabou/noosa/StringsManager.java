@@ -48,9 +48,9 @@ public class StringsManager {
 	private static Map<String, String>   sStringMap  = new HashMap<>();
 	private static Map<String, String[]> sStringsMap = new HashMap<>();
 
-	private static Map<String, Integer> keyToInt = new HashMap<>();;
+	private static Map<String, Integer> keyToInt = new HashMap<>();
 
-	private static Set<String> nonModdable = new HashSet<>();
+    private static Set<String> nonModdable = new HashSet<>();
 
 	static {
 		addMappingForClass(R.string.class);

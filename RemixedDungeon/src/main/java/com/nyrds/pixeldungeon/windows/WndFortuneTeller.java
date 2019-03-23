@@ -32,7 +32,7 @@ public class WndFortuneTeller extends Window {
 		
 		super();
 
-		GOLD_COST *= Game.instance().getDifficultyFactor();
+		GOLD_COST *= Game.getDifficultyFactor();
 
 		if (hero.hasBuff(RingOfHaggler.Haggling.class ))
 		{

@@ -282,11 +282,8 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 								return true;
 							}
 
-							if (filename.startsWith("game_") && filename.endsWith(".dat")) {
-								return true;
-							}
-							return false;
-						}
+                            return filename.startsWith("game_") && filename.endsWith(".dat");
+                        }
 					});
 					resultCallback.status(res);
 				}catch (Exception e) {

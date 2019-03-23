@@ -378,7 +378,7 @@ public class Bundle {
             Iterator<String> oi = object.keys();
             while(oi.hasNext()) {
                 String name = oi.next();
-                ret.put(oi.next(), (T)object.get(name));
+                ret.put(name, (T)object.get(name));
             }
 
             return ret;

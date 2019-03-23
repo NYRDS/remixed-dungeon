@@ -74,7 +74,7 @@ public class SacrificialSword extends SpecialWeapon {
 			return;
 		}
 
-		Hero hero = (Hero) user;
+		Hero hero = user;
 		Mob mob = (Mob) tgt;
 
 		double conversionChance =     baseChance(hero) + 

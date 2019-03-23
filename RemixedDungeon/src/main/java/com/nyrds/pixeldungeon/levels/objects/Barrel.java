@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -32,7 +31,7 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+	void setupFromJson(Level level, JSONObject obj) {
 	}
 
 	@Override

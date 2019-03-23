@@ -36,7 +36,7 @@
     <string name="gdpr_text">Remixed Dungeon personalizes your advertising experience using Admob and Appodeal (further Ad providers). Ad providers and their partners may collect and process personal data such as device identifiers, demographic and interest data to provide advertising experience tailored to you. By consenting to this improved ad experience, you`ll see ads that Ad providers and their partners believe are more relevant to you.\n\nBy agreeing, you confirm that you are over the age of 16 and would like a personalized ad experience.\n\n</string>
     <string name="gdpr_agree">Yes, I agree</string>
     <string name="gdpr_disagree">No, thank you</string>
-    <string name="gdpr_choose">"Please make your choise"</string>
+    <string name="gdpr_choose">"Please make your choice"</string>
 
     <string name="Mob_StaHuntingStatus2">This %1$s is hunting %2$s</string>
     <string name="Mob_StaFleeingStatus2">This %1$s is fleeing from %2$s</string>

@@ -111,6 +111,8 @@ public class Spell {
     }
 
     protected void castCallback(Char chr) {
+        chr.spellCasted(getSpellClass());
+
         if (chr instanceof Hero) {
             ((Hero) chr).spendSkillPoints(spellCost());
         }
@@ -218,6 +220,14 @@ public class Spell {
             };
         }
         return spellItem;
+    }
+
+    public float getCooldownFactor(Char chr) {
+        float chrCooldown = chr.spellCooldown(getSpellClass());
+        if(chrCooldown > cooldown) {
+            return 1;
+        }
+        return chrCooldown/cooldown;
     }
 
     public abstract class SpellItem extends Item {

@@ -103,12 +103,9 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		int enemyPos = enemy.getPos();
 		int distance = level().distance(getPos(), enemyPos);
 
-		if(distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos) {
-			return true;
-		}
+        return distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos;
 
-		return false;
-	}
+    }
 
 	@Override
 	public boolean friendly(Char chr) {

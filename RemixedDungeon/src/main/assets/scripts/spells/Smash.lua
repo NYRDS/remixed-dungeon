@@ -19,6 +19,7 @@ return spell.init{
             targetingType = "self",
             level         = 3,
             spellCost     = 3,
+            cooldown      = 10,
             castTime      = 0.5
         }
     end,

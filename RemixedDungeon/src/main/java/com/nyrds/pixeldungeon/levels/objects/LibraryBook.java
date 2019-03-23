@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -24,7 +23,7 @@ public class LibraryBook extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+	void setupFromJson(Level level, JSONObject obj) {
 	}
 
 	@Override

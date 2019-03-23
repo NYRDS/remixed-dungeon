@@ -139,7 +139,7 @@ public class King extends Boss {
 	}
 	
 	private int maxArmySize() {
-		return (int) (1 + MAX_ARMY_SIZE * (ht() - hp()) / ht() * Game.instance().getDifficultyFactor());
+		return (int) (1 + MAX_ARMY_SIZE * (ht() - hp()) / ht() * Game.getDifficultyFactor());
 	}
 
 	@Override
