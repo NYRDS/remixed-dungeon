@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 
 import com.nyrds.android.util.UserKey;
@@ -221,12 +222,16 @@ public enum Preferences {
 		put(key, val);
 	}
 
+	@SuppressLint("ApplySharedPref")
 	public void put(String key, String value) {
 
 		stringCache.put(key, value);
 
 		String scrambledVal = UserKey.encrypt(value);
 		String scrambledKey = UserKey.encrypt(key);
-		get().edit().putString(scrambledKey, scrambledVal).apply();
+
+		if(!get().edit().putString(scrambledKey, scrambledVal).commit()) {
+			EventCollector.logException("Preferences commit failed");
+		}
 	}
 }
