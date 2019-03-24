@@ -40,7 +40,7 @@ public class Bat extends Mob {
 		loot = new PotionOfHealing();
 		lootChance = 0.125f;
 		
-		RESISTANCES.add( Leech.class );
+		addResistance( Leech.class );
 	}
 	
 	@Override

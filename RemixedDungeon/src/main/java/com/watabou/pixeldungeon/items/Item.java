@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -62,7 +63,7 @@ import java.util.Comparator;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class Item implements Bundlable, Presser {
+public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	private static final String TXT_TO_STRING       = "%s";
 	private static final String TXT_TO_STRING_X     = "%s x%d";
@@ -689,5 +690,10 @@ public class Item implements Bundlable, Presser {
 		}
 
 		this.defaultAction = newDefaultAction;
+	}
+
+	@Override
+	public String getEntityKind() {
+		return getClassName();
 	}
 }

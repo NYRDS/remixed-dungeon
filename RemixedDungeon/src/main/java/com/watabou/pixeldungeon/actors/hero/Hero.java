@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
@@ -62,7 +63,6 @@ import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
-import com.watabou.pixeldungeon.actors.buffs.GasesImmunity;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
@@ -141,6 +141,7 @@ import com.watabou.utils.SystemTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -435,7 +436,7 @@ public class Hero extends Char implements PetOwner {
 				if (Random.Int(100) < 10 + powerLevel) {
 					Buff.affect(enemy, Frost.class, Frost.duration(enemy) / 5 + powerLevel);
 				}
-				enemy.damage(powerLevel / 2, Frost.class);
+				enemy.damage(powerLevel / 2, buff(Frost.class));
 			}
 		}
 
@@ -1118,7 +1119,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public void damage(int dmg, Object src) {
+	public void damage(int dmg, NamedEntityKind src) {
 		restoreHealth = false;
 		super.damage(dmg, src);
 
@@ -1506,7 +1507,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 
 		Map<String, String> deathDesc = new HashMap<>();
 
@@ -1800,23 +1801,17 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public Set<Class<?>> resistances() {
+	public Set<String> resistances() {
 		RingOfElements.Resistance r = buff(RingOfElements.Resistance.class);
 		return r == null ? super.resistances() : r.resistances();
 	}
 
 	@Override
-	public Set<Class<?>> immunities() {
-		if (hasBuff(GasesImmunity.class)) {
-			IMMUNITIES.addAll(GasesImmunity.IMMUNITIES);
-		} else {
-			IMMUNITIES.removeAll(GasesImmunity.IMMUNITIES);
-		}
-
-		IMMUNITIES.addAll(heroClass.getAbilities().immunities());
-		IMMUNITIES.addAll(subClass.getAbilities().immunities());
-
-		return IMMUNITIES;
+	public Set<String> immunities() {
+		HashSet <String> immunities = new HashSet<>();
+		immunities.addAll(heroClass.getImmunities());
+		immunities.addAll(subClass.getImmunities());
+		return immunities;
 	}
 
 	@Override
@@ -1935,7 +1930,7 @@ public class Hero extends Char implements PetOwner {
 		return controlTarget;
 	}
 
-	public interface Doom {
+	public interface Doom extends NamedEntityKind{
 		void onDeath();
 	}
 
@@ -2035,7 +2030,7 @@ public class Hero extends Char implements PetOwner {
 	public boolean friendly(Char chr) {
 		if(chr instanceof Mob) {
 			Mob mob = (Mob)chr;
-			return heroClass.friendlyTo(mob.getMobClassName());
+			return heroClass.friendlyTo(mob.getEntityKind());
 		}
 		return super.friendly(chr);
 	}

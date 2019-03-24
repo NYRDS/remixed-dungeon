@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.weapon;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -246,9 +247,9 @@ public class Weapon extends KindOfWeapon {
 		}
 	}
 
-	public static abstract class Enchantment implements Bundlable {
+	public static abstract class Enchantment implements Bundlable, NamedEntityKind {
 		
-		final String[] TXT_NAME = Utils.getClassParams(getClass().getSimpleName(), "Name", new String[]{"","",""}, true);
+		final String[] TXT_NAME = Utils.getClassParams(getEntityKind(), "Name", new String[]{"","",""}, true);
 		
 		private static final Class<?>[] enchants = new Class<?>[]{
 			Fire.class, Poison.class, Death.class, Paralysis.class, Leech.class,
@@ -265,6 +266,11 @@ public class Weapon extends KindOfWeapon {
 				EventCollector.logException(e);
 			}
 			return weaponName;
+		}
+
+		@Override
+		public String getEntityKind() {
+			return getClass().getSimpleName();
 		}
 
 		@Override

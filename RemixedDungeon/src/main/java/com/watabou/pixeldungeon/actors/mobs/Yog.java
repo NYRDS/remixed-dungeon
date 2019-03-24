@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -64,14 +65,14 @@ public class Yog extends Boss {
 
 		setState(MobAi.getStateByClass(Passive.class));
 
-		IMMUNITIES.add(Death.class);
-		IMMUNITIES.add(Terror.class);
-		IMMUNITIES.add(Amok.class);
-		IMMUNITIES.add(Charm.class);
-		IMMUNITIES.add(Sleep.class);
-		IMMUNITIES.add(Burning.class);
-		IMMUNITIES.add(ToxicGas.class);
-		IMMUNITIES.add(ScrollOfPsionicBlast.class);
+		addImmunity(Death.class);
+		addImmunity(Terror.class);
+		addImmunity(Amok.class);
+		addImmunity(Charm.class);
+		addImmunity(Sleep.class);
+		addImmunity(Burning.class);
+		addImmunity(ToxicGas.class);
+		addImmunity(ScrollOfPsionicBlast.class);
 	}
 
 	public void spawnFists() {
@@ -104,7 +105,7 @@ public class Yog extends Boss {
 	}
 
 	@Override
-	public void damage(int dmg, Object src) {
+	public void damage(int dmg, NamedEntityKind src) {
 
 		int damageShift = 0;
 		for (Mob mob : Dungeon.level.mobs) {
@@ -139,7 +140,7 @@ public class Yog extends Boss {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 
 		Mob mob = Dungeon.level.getRandomMob();
 		while(mob != null){
@@ -179,19 +180,19 @@ public class Yog extends Boss {
 
 			setState(MobAi.getStateByClass(Wandering.class));
 
-			RESISTANCES.add(ToxicGas.class);
+			addResistance(ToxicGas.class);
 
-			IMMUNITIES.add(Amok.class);
-			IMMUNITIES.add(Sleep.class);
-			IMMUNITIES.add(Terror.class);
-			IMMUNITIES.add(Poison.class);
+			addImmunity(Amok.class);
+			addImmunity(Sleep.class);
+			addImmunity(Terror.class);
+			addImmunity(Poison.class);
 		}
 
 		public RottingFist() {
 		}
 
 		@Override
-		public void die(Object cause) {
+		public void die(NamedEntityKind cause) {
 			super.die(cause);
 		}
 
@@ -248,19 +249,19 @@ public class Yog extends Boss {
 
 			setState(MobAi.getStateByClass(Wandering.class));
 
-			RESISTANCES.add(ToxicGas.class);
+			addResistance(ToxicGas.class);
 
-			IMMUNITIES.add(Amok.class);
-			IMMUNITIES.add(Sleep.class);
-			IMMUNITIES.add(Terror.class);
-			IMMUNITIES.add(Burning.class);
+			addImmunity(Amok.class);
+			addImmunity(Sleep.class);
+			addImmunity(Terror.class);
+			addImmunity(Burning.class);
 		}
 
 		public BurningFist() {
 		}
 
 		@Override
-		public void die(Object cause) {
+		public void die(NamedEntityKind cause) {
 			super.die(cause);
 		}
 

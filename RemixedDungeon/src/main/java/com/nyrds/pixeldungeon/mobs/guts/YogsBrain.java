@@ -36,13 +36,13 @@ public class YogsBrain extends Boss {
 
         exp = 25;
 
-        RESISTANCES.add( LightningTrap.Electricity.class );
-        RESISTANCES.add(ToxicGas.class);
+        addResistance( LightningTrap.Electricity.class );
+        addResistance(ToxicGas.class);
 
-        IMMUNITIES.add(Paralysis.class);
-        IMMUNITIES.add(Amok.class);
-        IMMUNITIES.add(Sleep.class);
-        IMMUNITIES.add(Terror.class);
+        addImmunity(Paralysis.class);
+        addImmunity(Amok.class);
+        addImmunity(Sleep.class);
+        addImmunity(Terror.class);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
 import com.watabou.noosa.Game;
@@ -19,13 +20,12 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class AzuterronNPC extends Shopkeeper {
 
 	public AzuterronNPC() {
 		movable = false;
+		addImmunity( Paralysis.class );
+		addImmunity( Roots.class );
 	}
 	
 	@Override
@@ -44,7 +44,7 @@ public class AzuterronNPC extends Shopkeeper {
 	}
 
 	@Override
-	public void damage( int dmg, Object src ) {
+	public void damage(int dmg, NamedEntityKind src ) {
 	}
 	
 	@Override
@@ -100,18 +100,7 @@ public class AzuterronNPC extends Shopkeeper {
 		}
 		return true;
 	}
-		
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
-	static {
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( Roots.class );
-	}
-	
-	@Override
-	public Set<Class<?>> immunities() {
-		return IMMUNITIES;
-	}
-	
+
 	public static class Quest {
 
 		private static boolean completed;

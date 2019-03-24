@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -38,12 +39,12 @@ public class Golem extends Mob {
 		exp = 12;
 		maxLvl = 22;
 		
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
+		addResistance( ScrollOfPsionicBlast.class );
 		
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Terror.class );
-		IMMUNITIES.add( Sleep.class );
-		IMMUNITIES.add( Bleeding.class );
+		addImmunity( Amok.class );
+		addImmunity( Terror.class );
+		addImmunity( Sleep.class );
+		addImmunity( Bleeding.class );
 	}
 	
 	@Override
@@ -67,7 +68,7 @@ public class Golem extends Mob {
 	}
 	
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		Imp.Quest.process( this );
 		
 		super.die( cause );

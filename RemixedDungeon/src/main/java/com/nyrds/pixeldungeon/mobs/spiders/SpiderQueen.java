@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -85,7 +86,7 @@ public class SpiderQueen extends Boss {
 	}
 
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 		super.die(cause);
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);

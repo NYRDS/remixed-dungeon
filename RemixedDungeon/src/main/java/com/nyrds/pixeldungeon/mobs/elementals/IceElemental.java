@@ -30,9 +30,9 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		
-		IMMUNITIES.add(Roots.class);
-		IMMUNITIES.add(Paralysis.class);
-		IMMUNITIES.add(ToxicGas.class);
+		addImmunity(Roots.class);
+		addImmunity(Paralysis.class);
+		addImmunity(ToxicGas.class);
 	}
 
 	@Override

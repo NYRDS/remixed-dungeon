@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -33,8 +34,8 @@ public class ZombieGnoll extends Mob {
         loot = Gold.class;
         lootChance = 0.02f;
 
-        IMMUNITIES.add(Paralysis.class);
-        IMMUNITIES.add(ToxicGas.class);
+        addImmunity(Paralysis.class);
+        addImmunity(ToxicGas.class);
     }
 
     @Override
@@ -53,10 +54,10 @@ public class ZombieGnoll extends Mob {
     }
 
     @Override
-    public void die(Object cause) {
+    public void die(NamedEntityKind cause) {
         super.die(cause);
 
-        if (Random.Int(100) > 65 && cause != Burning.class){
+        if (Random.Int(100) > 65 && !cause.getEntityKind().equals(Burning.class.getSimpleName())){
             resurrect();
 
             CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);

@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -45,12 +46,12 @@ public class ArmoredStatue extends Mob {
 		hp(ht(15 + Dungeon.depth * 5));
 		defenseSkill = 4 + Dungeon.depth + armor.DR;
 		
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Poison.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-		IMMUNITIES.add( Leech.class );
-		IMMUNITIES.add( Bleeding.class );
+		addImmunity( ToxicGas.class );
+		addImmunity( Poison.class );
+		addResistance( Death.class );
+		addResistance( ScrollOfPsionicBlast.class );
+		addImmunity( Leech.class );
+		addImmunity( Bleeding.class );
 	}
 
 	private static final String ARMOR	= "armor";
@@ -101,7 +102,7 @@ public class ArmoredStatue extends Mob {
 	}
 	
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		if (armor != null) {
 			Dungeon.level.drop( armor, getPos() ).sprite.drop();
 		}

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -51,11 +52,11 @@ public class Piranha extends Mob {
 			loot = ItemFactory.itemByName("RawFish");
 		}
 
-		IMMUNITIES.add( Burning.class );
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Roots.class );
-		IMMUNITIES.add( Frost.class );
+		addImmunity( Burning.class );
+		addImmunity( Paralysis.class );
+		addImmunity( ToxicGas.class );
+		addImmunity( Roots.class );
+		addImmunity( Frost.class );
 	}
 	
 	@Override
@@ -84,7 +85,7 @@ public class Piranha extends Mob {
 	}
 	
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		super.die( cause );
 		
 		Statistics.piranhasKilled++;

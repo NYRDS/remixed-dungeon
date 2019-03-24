@@ -779,7 +779,7 @@ public abstract class Level implements Bundlable {
 	public void spawnMob(Mob mob, float delay, int fromCell) {
 
 		if (!cellValid(mob.getPos())) {
-			EventCollector.logException(String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getMobClassName(), mob.getPos()));
+			EventCollector.logException(String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getEntityKind(), mob.getPos()));
 			return;
 		}
 

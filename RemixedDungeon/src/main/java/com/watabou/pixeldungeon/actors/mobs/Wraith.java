@@ -45,8 +45,8 @@ public class Wraith extends Mob implements IDepthAdjustable {
 
 		level = Dungeon.depth;
 
-		IMMUNITIES.add( Death.class );
-		IMMUNITIES.add( Terror.class );
+		addImmunity( Death.class );
+		addImmunity( Terror.class );
 		adjustStats( level );
 	}
 

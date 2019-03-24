@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -49,8 +50,8 @@ public class Monk extends Mob {
 		loot = new Ration();
 		lootChance = 0.153f;
 		
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Terror.class );
+		addImmunity( Amok.class );
+		addImmunity( Terror.class );
 	}
 	
 	@Override
@@ -74,7 +75,7 @@ public class Monk extends Mob {
 	}
 	
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		Imp.Quest.process( this );
 		
 		super.die( cause );

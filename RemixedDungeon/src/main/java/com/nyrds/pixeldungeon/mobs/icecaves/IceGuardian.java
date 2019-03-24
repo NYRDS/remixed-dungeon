@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -29,13 +30,13 @@ public class IceGuardian extends MultiKindMob {
 		loot = new FrozenCarpaccio();
 		lootChance = 0.2f;
 
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Terror.class );
-		IMMUNITIES.add( Death.class );
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Blindness.class );
-		IMMUNITIES.add( Sleep.class );
+		addImmunity( Paralysis.class );
+		addImmunity( ToxicGas.class );
+		addImmunity( Terror.class );
+		addImmunity( Death.class );
+		addImmunity( Amok.class );
+		addImmunity( Blindness.class );
+		addImmunity( Sleep.class );
 	}
 	
 	@Override
@@ -55,7 +56,7 @@ public class IceGuardian extends MultiKindMob {
 
 
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 		super.die(cause);
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (mob instanceof IceGuardianCore) {

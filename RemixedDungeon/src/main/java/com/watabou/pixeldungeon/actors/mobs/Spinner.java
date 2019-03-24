@@ -45,8 +45,8 @@ public class Spinner extends Mob {
 		loot = new MysteryMeat();
 		lootChance = 0.125f;
 
-		RESISTANCES.add( Poison.class );
-		IMMUNITIES.add( Roots.class );
+		addResistance( Poison.class );
+		addImmunity( Roots.class );
 	}
 	
 	@Override

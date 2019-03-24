@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -78,7 +79,7 @@ public class RatKing extends NPC {
 	}
 
 	@Override
-	public void damage( int dmg, Object src ) {
+	public void damage(int dmg, NamedEntityKind src ) {
 		if(friendly(Dungeon.hero)){
 			anger=2;
 		} else {
@@ -125,7 +126,7 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 		say(Game.getVar(R.string.RatKing_Died));
 		super.die(cause);
 	}

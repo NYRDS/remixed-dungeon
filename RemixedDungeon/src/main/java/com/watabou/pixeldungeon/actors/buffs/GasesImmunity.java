@@ -19,10 +19,9 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-
-import java.util.HashSet;
 
 public class GasesImmunity extends FlavourBuff {
 	
@@ -37,11 +36,25 @@ public class GasesImmunity extends FlavourBuff {
 	public String toString() {
 		return Game.getVar(R.string.GasesImmunity_Info);
 	}
-	
-	public static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
-	static {
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Vertigo.class );
+
+
+	@Override
+	public boolean attachTo(Char target) {
+		if(super.attachTo(target)) {
+			target.addImmunity(Paralysis.class);
+			target.addImmunity(ToxicGas.class);
+			target.addImmunity(Vertigo.class);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void detach() {
+		super.detach();
+
+		target.removeImmunity(Paralysis.class);
+		target.removeImmunity(ToxicGas.class);
+		target.removeImmunity(Vertigo.class);
 	}
 }

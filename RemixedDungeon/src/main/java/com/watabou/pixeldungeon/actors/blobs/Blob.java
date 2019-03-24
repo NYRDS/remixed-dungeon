@@ -18,13 +18,14 @@
 package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.Bundle;
 
-public class Blob extends Actor {
+public class Blob extends Actor implements NamedEntityKind {
 
 	public int volume = 0;
 
@@ -215,5 +216,10 @@ public class Blob extends Actor {
 
 	public static int getLength() {
 		return width * height;
+	}
+
+	@Override
+	public String getEntityKind() {
+		return getClass().getSimpleName();
 	}
 }

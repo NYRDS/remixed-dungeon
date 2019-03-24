@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -62,12 +63,12 @@ public class Statue extends Mob {
 		hp(ht(15 + Dungeon.depth * 5));
 		defenseSkill = 4 + Dungeon.depth;
 
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Poison.class );
-		RESISTANCES.add( Death.class );
-		RESISTANCES.add( ScrollOfPsionicBlast.class );
-		IMMUNITIES.add( Leech.class );
-		IMMUNITIES.add(Bleeding.class);
+		addImmunity( ToxicGas.class );
+		addImmunity( Poison.class );
+		addResistance( Death.class );
+		addResistance( ScrollOfPsionicBlast.class );
+		addImmunity( Leech.class );
+		addImmunity(Bleeding.class);
 	}
 	
 	private static final String WEAPON	= "weapon";
@@ -123,7 +124,7 @@ public class Statue extends Mob {
 	}
 	
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		Dungeon.level.drop( weapon, getPos() ).sprite.drop();
 		super.die( cause );
 	}

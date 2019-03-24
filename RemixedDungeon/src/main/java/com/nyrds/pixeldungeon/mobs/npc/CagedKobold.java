@@ -25,8 +25,8 @@ public class CagedKobold extends ImmortalNPC {
 	private static boolean spawned;
 
 	public CagedKobold() {
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( Roots.class );
+		addImmunity( Paralysis.class );
+		addImmunity( Roots.class );
 	}
 	
 

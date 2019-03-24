@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -355,7 +356,7 @@ public class Armor extends EquipableItem {
 	}
 
 
-	public static abstract class Glyph implements Bundlable {
+	public static abstract class Glyph implements Bundlable, NamedEntityKind {
 		
 		private static final Class<?>[] glyphs = new Class<?>[]{ 
 			Bounce.class, Affection.class, AntiEntropy.class, Multiplicity.class, 
@@ -372,6 +373,11 @@ public class Armor extends EquipableItem {
 		
 		public String name( String armorName ) {
 			return armorName;
+		}
+
+		@Override
+		public String getEntityKind() {
+			return getClass().getSimpleName();
 		}
 
 		@Override

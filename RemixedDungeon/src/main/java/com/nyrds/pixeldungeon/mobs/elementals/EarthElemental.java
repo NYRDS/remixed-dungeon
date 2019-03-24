@@ -36,11 +36,11 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		
-		IMMUNITIES.add(Roots.class);
-		IMMUNITIES.add(Paralysis.class);
-		IMMUNITIES.add(ToxicGas.class);
-		IMMUNITIES.add(Fire.class);
-		IMMUNITIES.add(Bleeding.class);
+		addImmunity(Roots.class);
+		addImmunity(Paralysis.class);
+		addImmunity(ToxicGas.class);
+		addImmunity(Fire.class);
+		addImmunity(Bleeding.class);
 	}
 
 	@Override

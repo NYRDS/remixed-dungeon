@@ -35,9 +35,9 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		
-		IMMUNITIES.add( Frost.class );
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
-		IMMUNITIES.add( Bleeding.class );
+		addImmunity( Frost.class );
+		addImmunity( ScrollOfPsionicBlast.class );
+		addImmunity( Bleeding.class );
 	}
 
 	@Override

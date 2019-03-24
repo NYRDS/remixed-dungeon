@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -29,7 +30,7 @@ public class ImmortalNPC extends NPC {
 	
 
 	@Override
-	public void damage( int dmg, Object src ) {
+	public void damage(int dmg, NamedEntityKind src ) {
 	}
 	
 	@Override

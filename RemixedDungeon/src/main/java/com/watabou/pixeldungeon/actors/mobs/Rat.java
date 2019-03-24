@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.pixeldungeon.actors.Char;
@@ -68,7 +69,7 @@ public class Rat extends Mob {
 }
 
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		ScarecrowNPC.Quest.process( getPos() );
 		Ghost.Quest.process( getPos() );
 		PlagueDoctorNPC.Quest.process( getPos() );

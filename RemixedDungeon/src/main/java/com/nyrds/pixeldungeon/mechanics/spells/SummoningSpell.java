@@ -90,7 +90,7 @@ public class SummoningSpell extends Spell {
         int n = 0;
         for (Integer mobId : pets) {
             Mob mob = (Mob)CharsList.getById(mobId);
-            if (mob != null && mob.isAlive() && mob.getMobClassName().equals(mobKind) ) {
+            if (mob != null && mob.isAlive() && mob.getEntityKind().equals(mobKind) ) {
                 n++;
             }
         }

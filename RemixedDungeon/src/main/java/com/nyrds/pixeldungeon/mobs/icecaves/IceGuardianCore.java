@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.icecaves;
 
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -29,13 +30,13 @@ public class IceGuardianCore extends Boss {
 		loot = new WandOfIcebolt().upgrade(1);
 		lootChance = 1.0f;
 
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Terror.class );
-		IMMUNITIES.add( Death.class );
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Blindness.class );
-		IMMUNITIES.add( Sleep.class );
+		addImmunity( Paralysis.class );
+		addImmunity( ToxicGas.class );
+		addImmunity( Terror.class );
+		addImmunity( Death.class );
+		addImmunity( Amok.class );
+		addImmunity( Blindness.class );
+		addImmunity( Sleep.class );
 	}
 	
 	@Override
@@ -54,7 +55,7 @@ public class IceGuardianCore extends Boss {
 	}
 
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 		super.die(cause);
 
 		Level level = Dungeon.level;

@@ -52,9 +52,9 @@ public class Scorpio extends Mob implements IZapper {
 			loot = new MysteryMeat();
 			lootChance = 1;
 		}
-		
-		RESISTANCES.add( Leech.class );
-		RESISTANCES.add( Poison.class );
+
+		addResistance( Leech.class );
+		addResistance( Poison.class );
 	}
 
 	@Override

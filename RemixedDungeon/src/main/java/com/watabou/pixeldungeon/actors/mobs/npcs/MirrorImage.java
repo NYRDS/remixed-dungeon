@@ -32,9 +32,6 @@ import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import androidx.annotation.NonNull;
 
 public class MirrorImage extends Mob {
@@ -43,6 +40,9 @@ public class MirrorImage extends Mob {
 	public MirrorImage() {
 		setState(MobAi.getStateByClass(Hunting.class));
 		setEnemy(DUMMY);
+
+        addImmunity( ToxicGas.class );
+        addImmunity( Burning.class );
 	}
 
 	public MirrorImage(@NotNull Hero hero) {
@@ -103,16 +103,5 @@ public class MirrorImage extends Mob {
 
 			return sprite();
 		}
-	}
-
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
-	static {
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Burning.class );
-	}
-	
-	@Override
-	public Set<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 }

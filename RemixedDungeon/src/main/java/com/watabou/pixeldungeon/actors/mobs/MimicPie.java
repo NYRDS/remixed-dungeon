@@ -22,8 +22,8 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 		loot = new RottenPasty();
 		lootChance = 1;
 
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Paralysis.class );
+		addImmunity( ToxicGas.class );
+		addImmunity( Paralysis.class );
 		adjustStats(level);
 	}
 

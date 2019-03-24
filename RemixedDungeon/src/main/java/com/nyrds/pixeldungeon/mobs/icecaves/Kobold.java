@@ -19,7 +19,7 @@ public class Kobold extends Mob {
 		loot = new PotionOfFrost();
 		lootChance = 0.1f;
 		
-		IMMUNITIES.add( Terror.class );
+		addImmunity( Terror.class );
 	}
 	
 	@Override

@@ -48,11 +48,11 @@ public class Elemental extends Mob {
 		loot = new PotionOfLiquidFlame();
 		lootChance = 0.1f;
 		
-		IMMUNITIES.add( Burning.class );
-		IMMUNITIES.add( Fire.class );
-		IMMUNITIES.add( WandOfFirebolt.class );
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
-		IMMUNITIES.add( Bleeding.class );
+		addImmunity( Burning.class );
+		addImmunity( Fire.class );
+		addImmunity( WandOfFirebolt.class );
+		addImmunity( ScrollOfPsionicBlast.class );
+		addImmunity( Bleeding.class );
 	}
 	
 	@Override

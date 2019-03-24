@@ -24,7 +24,7 @@ public class PseudoRat extends Mob {
 
         setState(MobAi.getStateByClass(Hunting.class));
 
-        IMMUNITIES.add(Paralysis.class);
+        addImmunity(Paralysis.class);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -23,8 +24,8 @@ public class MimicAmulet extends Mob {
 
 		level = Dungeon.depth;
 		
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Paralysis.class );
+		addImmunity( ToxicGas.class );
+		addImmunity( Paralysis.class );
 	}
 	
 	private static final String LEVEL	= "level";
@@ -52,7 +53,7 @@ public class MimicAmulet extends Mob {
 	}
 	
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 		super.die(cause);
 		Dungeon.level.drop(new SkeletonKey(), getPos());
 	}

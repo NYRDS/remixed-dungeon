@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -68,10 +69,10 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		exp = depth + 1;
 		maxLvl = depth + 2;
 
-		IMMUNITIES.add(ScrollOfPsionicBlast.class);
-		IMMUNITIES.add(ToxicGas.class);
-		IMMUNITIES.add(Paralysis.class);
-		IMMUNITIES.add(ConfusionGas.class);
+		addImmunity(ScrollOfPsionicBlast.class);
+		addImmunity(ToxicGas.class);
+		addImmunity(Paralysis.class);
+		addImmunity(ConfusionGas.class);
 	}
 
 	@Override
@@ -122,7 +123,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	}
 
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 		int pos = getPos();
 
 		if (Dungeon.level.map[pos] == Terrain.PEDESTAL) {

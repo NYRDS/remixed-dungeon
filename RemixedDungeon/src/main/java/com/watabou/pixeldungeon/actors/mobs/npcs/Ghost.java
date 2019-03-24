@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
@@ -58,9 +59,6 @@ import com.watabou.pixeldungeon.windows.WndSadGhost;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Ghost extends NPC {
 
 	{
@@ -79,6 +77,8 @@ public class Ghost extends NPC {
 	private WndSadGhostNecro window;
 
 	public Ghost() {
+		addImmunity( Paralysis.class );
+		addImmunity( Roots.class );
 	}
 	
 	@Override
@@ -98,7 +98,7 @@ public class Ghost extends NPC {
 	
 
 	@Override
-	public void damage( int dmg, Object src ) {
+	public void damage(int dmg, NamedEntityKind src ) {
 	}
 	
 	@Override
@@ -169,17 +169,6 @@ public class Ghost extends NPC {
 			Journal.add( Journal.Feature.GHOST.desc() );
 		}
 		return true;
-	}
-		
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
-	static {
-		IMMUNITIES.add( Paralysis.class );
-		IMMUNITIES.add( Roots.class );
-	}
-	
-	@Override
-	public Set<Class<?>> immunities() {
-		return IMMUNITIES;
 	}
 
 	public static class Quest {
@@ -373,6 +362,7 @@ public class Ghost extends NPC {
 			setState(MobAi.getStateByClass(Wandering.class));
 			lootChance = 1;
 			loot = new RatSkull();
+			addImmunity( Paralysis.class );
 		}
 		
 		@Override
@@ -394,16 +384,6 @@ public class Ghost extends NPC {
 		public int defenseProc( Char enemy, int damage ) {
 			GameScene.add( Blob.seed( getPos(), 20, ParalyticGas.class ) );
 			return super.defenseProc(enemy, damage);
-		}
-
-		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
-		static {
-			IMMUNITIES.add( Paralysis.class );
-		}
-		
-		@Override
-		public Set<Class<?>> immunities() {
-			return IMMUNITIES;
 		}
 	}
 }

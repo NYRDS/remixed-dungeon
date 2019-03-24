@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -62,8 +63,8 @@ public class DM300 extends Boss {
 		
 		lootChance = 0.333f;
 		
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( Bleeding.class );
+		addImmunity( ToxicGas.class );
+		addImmunity( Bleeding.class );
 	}
 	
 	@Override
@@ -125,7 +126,7 @@ public class DM300 extends Boss {
 	}
 	
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		
 		super.die( cause );
 		

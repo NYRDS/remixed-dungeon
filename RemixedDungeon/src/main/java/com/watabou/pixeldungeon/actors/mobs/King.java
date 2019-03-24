@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.noosa.Game;
@@ -66,10 +67,10 @@ public class King extends Boss {
 		lastPedestal   = -1;
 		targetPedestal = -1;
 
-		RESISTANCES.add( ToxicGas.class );
-		RESISTANCES.add( WandOfDisintegration.class );
+		addResistance( ToxicGas.class );
+		addResistance( WandOfDisintegration.class );
 		
-		IMMUNITIES.add( Paralysis.class );
+		addImmunity( Paralysis.class );
 	}
 
 
@@ -126,7 +127,7 @@ public class King extends Boss {
 	}
 
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 
 		Dungeon.level.drop( new ArmorKit(), getPos() ).sprite.drop();
 		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
@@ -226,7 +227,7 @@ public class King extends Boss {
 		}
 		
 		@Override
-		public void damage( int dmg, Object src ) {
+		public void damage(int dmg, NamedEntityKind src ) {
 			super.damage( dmg, src );
 			if (src instanceof ToxicGas) {		
 				((ToxicGas)src).clearBlob( getPos() );
@@ -234,7 +235,7 @@ public class King extends Boss {
 		}
 		
 		@Override
-		public void die( Object cause ) {
+		public void die(NamedEntityKind cause ) {
 			super.die( cause );
 			
 			if (Dungeon.visible[getPos()]) {

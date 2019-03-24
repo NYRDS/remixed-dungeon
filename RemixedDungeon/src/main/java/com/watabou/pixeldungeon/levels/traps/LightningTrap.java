@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.traps;
 
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -73,7 +74,11 @@ public class LightningTrap implements ITrigger{
 	}
 	
 	public static final Electricity LIGHTNING = new Electricity();
-	public static class Electricity {	
+	public static class Electricity implements NamedEntityKind {
+		@Override
+		public String getEntityKind() {
+			return getClass().getSimpleName();
+		}
 	}
 
 	@Override

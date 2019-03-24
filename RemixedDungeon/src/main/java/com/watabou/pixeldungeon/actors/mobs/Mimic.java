@@ -21,6 +21,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -47,7 +48,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	private int level;
 
 	public Mimic() {
-		IMMUNITIES.add(ScrollOfPsionicBlast.class);
+		addImmunity(ScrollOfPsionicBlast.class);
 		adjustStats(Dungeon.depth);
 	}
 
@@ -102,7 +103,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 
 		super.die(cause);
 

@@ -112,7 +112,7 @@ public class WndPriest extends WndQuest {
 			}
 
 			if(patient instanceof Mob) {
-				if(((Mob) patient).getMobClassName().equals("Brute")) {
+				if(((Mob) patient).getEntityKind().equals("Brute")) {
 					Badges.validateGnollUnlocked();
 				}
 			}

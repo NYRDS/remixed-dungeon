@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -81,7 +82,7 @@ public class SpiderMindAmber extends MultiKindMob {
 	}
 
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		super.die( cause );
 		Badges.validateRare( this );
 	}

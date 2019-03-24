@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -17,7 +18,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import androidx.annotation.NonNull;
 
-public class Spell {
+public class Spell implements NamedEntityKind {
 
     protected      int level             = 1;
     protected      int spellCost         = 5;
@@ -45,7 +46,7 @@ public class Spell {
 
     public boolean canCast(@NonNull final Char chr, boolean reallyCast) {
 
-        float timeToCast = chr.spellCooldown(getSpellClass())-cooldown;
+        float timeToCast = chr.spellCooldown(getClassName())-cooldown;
         if(timeToCast < 0) {
 
             if(reallyCast) {
@@ -111,14 +112,14 @@ public class Spell {
     }
 
     protected void castCallback(Char chr) {
-        chr.spellCasted(getSpellClass());
+        chr.spellCasted(getClassName());
 
         if (chr instanceof Hero) {
             ((Hero) chr).spendSkillPoints(spellCost());
         }
     }
 
-    public String getSpellClass() {
+    public String getClassName() {
         return getClass().getSimpleName();
     }
 
@@ -198,7 +199,7 @@ public class Spell {
 
                 @Override
                 public String getClassName() {
-                    return Spell.this.getSpellClass();
+                    return Spell.this.getClassName();
                 }
 
                 @Override
@@ -223,11 +224,16 @@ public class Spell {
     }
 
     public float getCooldownFactor(Char chr) {
-        float chrCooldown = chr.spellCooldown(getSpellClass());
+        float chrCooldown = chr.spellCooldown(getClassName());
         if(chrCooldown > cooldown) {
             return 1;
         }
         return chrCooldown/cooldown;
+    }
+
+    @Override
+    public String getEntityKind() {
+        return getClassName();
     }
 
     public abstract class SpellItem extends Item {

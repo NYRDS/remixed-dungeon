@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -51,7 +52,7 @@ public class Goo extends Boss {
 
 		lootChance = 0.8f;
 		
-		RESISTANCES.add( ToxicGas.class );
+		addResistance( ToxicGas.class );
 	}
 	
 	private static final String GOO_PUMPED_STATE = "goo_pumped_state";
@@ -163,7 +164,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	public void die( Object cause ) {
+	public void die(NamedEntityKind cause ) {
 		
 		super.die( cause );
 		

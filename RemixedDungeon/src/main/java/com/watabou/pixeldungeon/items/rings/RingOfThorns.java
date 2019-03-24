@@ -55,6 +55,6 @@ public class RingOfThorns extends Ring {
 		return isKnown() ? Game.getVar(R.string.RingOfThorns_Info) : super.desc();
 	}
 	
-	public class Thorns extends RingBuff {	
+	public class Thorns extends RingBuff {
 	}
 }

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -41,7 +42,7 @@ public class Brute extends Mob {
 		loot = Gold.class;
 		lootChance = 0.5f;
 		
-		IMMUNITIES.add( Terror.class );
+		addImmunity( Terror.class );
 	}
 	
 	private boolean enraged = false;
@@ -70,7 +71,7 @@ public class Brute extends Mob {
 	}
 	
 	@Override
-	public void damage( int dmg, Object src ) {
+	public void damage(int dmg, NamedEntityKind src ) {
 		super.damage( dmg, src );
 		
 		if (isAlive() && !enraged && hp() < ht() / 4) {

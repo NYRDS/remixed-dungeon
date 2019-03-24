@@ -84,7 +84,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	public String getMobClassName() {
+	public String getEntityKind() {
 		return mobClass;
 	}
 

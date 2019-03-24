@@ -24,8 +24,6 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
-import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -56,16 +54,19 @@ import androidx.annotation.NonNull;
 
 public enum HeroClass {
 
-    WARRIOR(R.string.HeroClass_War, WarriorArmor.class, Ordinary.instance),
-    MAGE(R.string.HeroClass_Mag, MageArmor.class, Ordinary.instance),
-    ROGUE(R.string.HeroClass_Rog, RogueArmor.class, Ordinary.instance),
-    HUNTRESS(R.string.HeroClass_Hun, HuntressArmor.class, Ordinary.instance),
-    ELF(R.string.HeroClass_Elf, ElfArmor.class, Ordinary.instance),
-    NECROMANCER(R.string.HeroClass_Necromancer, NecromancerArmor.class, Ordinary.instance),
-    GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class, Ordinary.instance);
+    WARRIOR(R.string.HeroClass_War, WarriorArmor.class),
+    MAGE(R.string.HeroClass_Mag, MageArmor.class),
+    ROGUE(R.string.HeroClass_Rog, RogueArmor.class),
+    HUNTRESS(R.string.HeroClass_Hun, HuntressArmor.class),
+    ELF(R.string.HeroClass_Elf, ElfArmor.class),
+    NECROMANCER(R.string.HeroClass_Necromancer, NecromancerArmor.class),
+    GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class);
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
     private static final String FRIENDLY_MOBS     = "friendlyMobs";
+    public static final String IMMUNITIES        = "immunities";
+    public static final String RESISTANCES       = "resistances";
+
     private static final String COMMON            = "common";
     private static final String NON_EXPERT        = "non_expert";
 
@@ -73,17 +74,18 @@ public enum HeroClass {
 
     private Set<String> forbiddenActions = new HashSet<>();
     private Set<String> friendlyMobs     = new HashSet<>();
+    private Set<String> immunities       = new HashSet<>();
+    private Set<String> resistances      = new HashSet<>();
+
 
     private Integer    titleId;
-    private Abilities abilities;
     static private JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
     private String  magicAffinity;
 
-    HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass, Abilities abilities) {
+    HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass) {
         this.titleId = titleId;
         this.armorClass = armorClass;
-        this.abilities = abilities;
     }
 
     public boolean allowed() {
@@ -149,6 +151,8 @@ public enum HeroClass {
 
                 readStringSet(classDesc, FORBIDDEN_ACTIONS, forbiddenActions);
                 readStringSet(classDesc, FRIENDLY_MOBS, friendlyMobs);
+                readStringSet(classDesc, IMMUNITIES, immunities);
+                readStringSet(classDesc, RESISTANCES, resistances);
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
@@ -250,6 +254,8 @@ public enum HeroClass {
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
         bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[0]));
         bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[0]));
+        bundle.put(IMMUNITIES,immunities.toArray(new String[0]));
+        bundle.put(RESISTANCES,resistances.toArray(new String[0]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {
@@ -260,6 +266,8 @@ public enum HeroClass {
 
         Collections.addAll(ret.forbiddenActions,bundle.getStringArray(FORBIDDEN_ACTIONS));
         Collections.addAll(ret.friendlyMobs,bundle.getStringArray(FRIENDLY_MOBS));
+        Collections.addAll(ret.immunities,bundle.getStringArray(IMMUNITIES));
+        Collections.addAll(ret.resistances,bundle.getStringArray(RESISTANCES));
 
         return ret;
     }
@@ -270,10 +278,6 @@ public enum HeroClass {
         } catch (Exception e) {
             throw new TrackedRuntimeException(e);
         }
-    }
-
-    Abilities getAbilities() {
-        return abilities;
     }
 
     public String getMagicAffinity() {
@@ -298,5 +302,13 @@ public enum HeroClass {
 
     public boolean friendlyTo(String mobClass) {
         return friendlyMobs.contains(mobClass);
+    }
+
+    public Set<String> getImmunities() {
+        return immunities;
+    }
+
+    public Set<String> getResistances() {
+        return resistances;
     }
 }

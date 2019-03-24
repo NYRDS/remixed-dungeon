@@ -31,7 +31,7 @@ public class SuspiciousRat extends Mob {
 
 		pacified = true;
 
-		IMMUNITIES.add(ToxicGas.class);
+		addImmunity(ToxicGas.class);
 	}
 
 	private static final String RAT_TRANSFORMING_STATE = "rat_transforming_state";

@@ -28,12 +28,12 @@ public class YogsTeeth extends Boss {
 
         exp = 26;
 
-        RESISTANCES.add(ToxicGas.class);
+        addResistance(ToxicGas.class);
 
-        IMMUNITIES.add(Paralysis.class);
-        IMMUNITIES.add(Amok.class);
-        IMMUNITIES.add(Sleep.class);
-        IMMUNITIES.add(Terror.class);
+        addImmunity(Paralysis.class);
+        addImmunity(Amok.class);
+        addImmunity(Sleep.class);
+        addImmunity(Terror.class);
     }
 
 

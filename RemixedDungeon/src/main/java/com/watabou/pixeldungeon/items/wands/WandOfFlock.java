@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -126,7 +127,7 @@ public class WandOfFlock extends SimpleWand  {
 		}
 		
 		@Override
-		public void damage( int dmg, Object src ) {
+		public void damage(int dmg, NamedEntityKind src ) {
 		}
 
 		@Override

@@ -33,6 +33,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -222,7 +223,7 @@ public abstract class Mob extends Char {
 
 		try {
 			{
-				String descName = "spritesDesc/" + getMobClassName() + ".json";
+				String descName = "spritesDesc/" + getEntityKind() + ".json";
 				if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
 					return new MobSpriteDef(descName, getKind());
 				}
@@ -238,7 +239,7 @@ public abstract class Mob extends Char {
 				return new MobSpriteDef((String) spriteClass, getKind());
 			}
 
-			throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getMobClassName()));
+			throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
 
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
@@ -405,7 +406,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void damage(int dmg, Object src) {
+	public void damage(int dmg, NamedEntityKind src) {
 
 		runMobScript("onDamage", dmg, src);
 
@@ -457,7 +458,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void die(Object cause) {
+	public void die(NamedEntityKind cause) {
 
 		getState().onDie();
 
@@ -508,7 +509,7 @@ public abstract class Mob extends Char {
 
 		super.die(cause);
 
-		Library.identify(Library.MOB,getMobClassName());
+		Library.identify(Library.MOB, getEntityKind());
 
 		if (hero.lvl() <= maxLvl + 2) {
 			dropLoot();
@@ -527,7 +528,7 @@ public abstract class Mob extends Char {
 	public Mob split(int cell, int damage) {
 		Mob clone;
 		try {
-			clone = MobFactory.mobByName(getMobClassName());
+			clone = MobFactory.mobByName(getEntityKind());
 		} catch (Exception e) {
 			throw new TrackedRuntimeException("split issue");
 		}
@@ -636,11 +637,11 @@ public abstract class Mob extends Char {
 	}
 
 	protected JSONObject getClassDef(){
-		if (!defMap.containsKey(getMobClassName())) {
-			defMap.put(getMobClassName(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getMobClassName() + ".json"));
+		if (!defMap.containsKey(getEntityKind())) {
+			defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
 		}
 
-		return defMap.get(getMobClassName());
+		return defMap.get(getEntityKind());
 	}
 
 	public void onSpawn(Level level) {
@@ -668,7 +669,7 @@ public abstract class Mob extends Char {
 		if(getEnemy() == chr) {return false;}
 
 		if(chr instanceof Hero) {
-			return isPet() || ((Hero)chr).heroClass.friendlyTo(getMobClassName());
+			return isPet() || ((Hero)chr).heroClass.friendlyTo(getEntityKind());
 		}
 
 		if(chr instanceof Mob) {
@@ -761,7 +762,7 @@ public abstract class Mob extends Char {
 		this.enemy = enemy;
 	}
 
-	public String getMobClassName() {
+	public String getEntityKind() {
 		return getClass().getSimpleName();
 	}
 

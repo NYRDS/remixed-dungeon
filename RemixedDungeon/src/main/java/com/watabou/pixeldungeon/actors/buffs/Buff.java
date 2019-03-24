@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -30,10 +31,15 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class Buff extends Actor {
+public class Buff extends Actor implements NamedEntityKind {
 	
 	public Char target;
-	
+
+	@Override
+	public String getEntityKind() {
+		return getClass().getSimpleName();
+	}
+
 	interface itemAction{
 		Item   act(Item srcItem);
 		String actionText(Item srcItem);
@@ -42,7 +48,7 @@ public class Buff extends Actor {
 	
 	public boolean attachTo( Char target ) {
 
-		if (target.immunities().contains( getClass() )) {
+		if (target.immunities().contains( getEntityKind() )) {
 			return false;
 		}
 		
@@ -55,7 +61,7 @@ public class Buff extends Actor {
 	public void detach() {
 		target.remove(this);
 	}
-	
+
 	@Override
 	public boolean act() {
 		deactivate();

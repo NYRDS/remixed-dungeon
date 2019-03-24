@@ -25,8 +25,8 @@ public class Worm extends Mob {
         loot = Gold.class;
         lootChance = 0.4f;
 
-        IMMUNITIES.add(Paralysis.class);
-        IMMUNITIES.add(ToxicGas.class);
+        addImmunity(Paralysis.class);
+        addImmunity(ToxicGas.class);
     }
 
     @Override

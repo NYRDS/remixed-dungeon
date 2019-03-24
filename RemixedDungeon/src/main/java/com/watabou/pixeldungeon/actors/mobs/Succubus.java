@@ -55,8 +55,8 @@ public class Succubus extends Mob {
 		loot = new ScrollOfLullaby();
 		lootChance = 0.05f;
 
-		RESISTANCES.add(Leech.class);
-		IMMUNITIES.add(Sleep.class);
+		addResistance(Leech.class);
+		addImmunity(Sleep.class);
 	}
 
 	@Override

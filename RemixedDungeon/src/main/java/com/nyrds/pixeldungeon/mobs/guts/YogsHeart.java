@@ -23,11 +23,11 @@ public class YogsHeart extends Boss {
 
         exp = 12;
 
-        IMMUNITIES.add(ToxicGas.class);
-        IMMUNITIES.add(Paralysis.class);
-        IMMUNITIES.add(Amok.class);
-        IMMUNITIES.add(Sleep.class);
-        IMMUNITIES.add(Terror.class);
+        addImmunity(ToxicGas.class);
+        addImmunity(Paralysis.class);
+        addImmunity(Amok.class);
+        addImmunity(Sleep.class);
+        addImmunity(Terror.class);
     }
 
     @Override

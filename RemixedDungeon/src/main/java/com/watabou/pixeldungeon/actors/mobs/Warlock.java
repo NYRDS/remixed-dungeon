@@ -53,7 +53,7 @@ public class Warlock extends Mob implements IZapper {
 		loot = Generator.Category.POTION;
 		lootChance = 0.83f;
 
-		RESISTANCES.add(Death.class);
+		addResistance(Death.class);
 	}
 
 	@Override

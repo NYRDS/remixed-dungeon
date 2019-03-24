@@ -22,6 +22,7 @@ import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -85,7 +86,7 @@ import java.util.Set;
 
 import androidx.annotation.NonNull;
 
-public abstract class Char extends Actor implements Presser, ItemOwner {
+public abstract class Char extends Actor implements Presser, ItemOwner, NamedEntityKind {
 
 	// Unreachable target
 	public static final Char DUMMY = new DummyChar();
@@ -122,6 +123,9 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 	public    int     invisible = 0;
 
 	public int viewDistance = 8;
+
+	protected Set<String> immunities = new HashSet<>();
+	protected Set<String> resistances = new HashSet<>();
 
 	protected Set<Buff> buffs = new HashSet<>();
 
@@ -171,7 +175,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
 
-		spellsUsage = bundle.<Number>getMap(SPELLS_USAGE);
+		spellsUsage = bundle.getMap(SPELLS_USAGE);
 
 		setupCharData();
 	}
@@ -347,7 +351,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		return hasBuff(Cripple.class) ? baseSpeed * 0.5f : baseSpeed;
 	}
 
-	public void damage(int dmg, Object src) {
+	public void damage(int dmg, NamedEntityKind src) {
 
 		if (!isAlive()) {
 			return;
@@ -355,10 +359,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 
 		Buff.detach(this, Frost.class);
 
-		Class<?> srcClass = src.getClass();
-		if (immunities().contains(srcClass)) {
+		String srcName = src.getEntityKind();
+		if (immunities().contains(srcName)) {
 			dmg = 0;
-		} else if (resistances().contains(srcClass)) {
+		} else if (resistances().contains(srcName)) {
 			dmg = Random.IntRange(0, dmg);
 		}
 
@@ -389,7 +393,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		Actor.freeCell(getPos());
 	}
 
-	public void die(Object src) {
+	public void die(NamedEntityKind src) {
 		destroy();
 		getSprite().die();
 	}
@@ -656,15 +660,12 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		next();
 	}
 
-	protected Set<Class<?>> IMMUNITIES  = new HashSet<>();
-	protected Set<Class<?>> RESISTANCES = new HashSet<>();
-
-	public Set<Class<?>> resistances() {
-		return RESISTANCES;
+	public Set<String> resistances() {
+		return resistances;
 	}
 
-	public Set<Class<?>> immunities() {
-		return IMMUNITIES;
+	public Set<String> immunities() {
+		return immunities;
 	}
 
 	public void updateSprite(){
@@ -852,4 +853,25 @@ public abstract class Char extends Actor implements Presser, ItemOwner {
 		}
 		return Float.MAX_VALUE;
     }
+
+    public void addImmunity(Class<?> buffClass){
+		immunities.add(buffClass.getSimpleName());
+	}
+
+	public void addResistance(Class<?> buffClass){
+		resistances.add(buffClass.getSimpleName());
+	}
+
+	public void removeImmunity(Class<?> buffClass){
+		immunities.remove(buffClass.getSimpleName());
+	}
+
+	public void removeResistance(Class<?> buffClass){
+		resistances.remove(buffClass.getSimpleName());
+	}
+
+	@Override
+	public String getEntityKind() {
+		return null;
+	}
 }

@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -53,10 +54,15 @@ import java.util.Map;
 
 import androidx.annotation.NonNull;
 
-public class Heap implements Bundlable {
+public class Heap implements Bundlable, NamedEntityKind {
 
 	private static final int SEEDS_TO_POTION = 3;
-	
+
+	@Override
+	public String getEntityKind() {
+		return getClass().getSimpleName();
+	}
+
 	public enum Type {
 		HEAP, 
 		FOR_SALE, 

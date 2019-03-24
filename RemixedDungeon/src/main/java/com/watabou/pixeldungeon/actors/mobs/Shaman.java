@@ -51,7 +51,7 @@ public class Shaman extends Mob implements IZapper {
 		loot = Generator.Category.SCROLL;
 		lootChance = 0.33f;
 
-		RESISTANCES.add(LightningTrap.Electricity.class);
+		addResistance(LightningTrap.Electricity.class);
 	}
 
 	@Override
