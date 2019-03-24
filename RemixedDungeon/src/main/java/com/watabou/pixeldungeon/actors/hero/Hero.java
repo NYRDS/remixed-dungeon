@@ -25,7 +25,6 @@ import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
-import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -48,8 +47,6 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.Web;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blessed;
@@ -1094,13 +1091,6 @@ public class Hero extends Char implements PetOwner {
 
 		checkIfFurious();
 		interrupt();
-
-		if (belongings.armor instanceof SpiderArmor) {
-			//Armor proc
-			if (Random.Int(100) < 50) {
-				GameScene.add(Blob.seed(getPos(), Random.Int(5, 7), Web.class));
-			}
-		}
 
 		for (Item item : belongings) {
 			if (item instanceof IChaosItem && item.isEquipped(this)) {
