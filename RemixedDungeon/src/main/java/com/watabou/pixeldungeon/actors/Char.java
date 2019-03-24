@@ -229,8 +229,13 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 			}
 
 			// FIXME
-			int dr = this instanceof Hero && ((Hero) this).rangedWeapon != null && ((Hero) this).subClass == HeroSubClass.SNIPER ? 0 :
-					Random.IntRange(0, enemy.dr());
+			int dr;
+			if ((this instanceof Hero) && (((Hero) this).rangedWeapon != null) && (((Hero) this).subClass == HeroSubClass.SNIPER)) {
+				dr = 0;
+			}
+			else {
+				dr = Random.IntRange(0, enemy.dr());
+			}
 
 			int dmg = damageRoll();
 
