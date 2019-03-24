@@ -128,4 +128,9 @@ public class Chasm implements Hero.Doom {
 	public String getEntityKind() {
 		return getClass().getSimpleName();
 	}
+
+	@Override
+	public String name() {
+		return getEntityKind();
+	}
 }

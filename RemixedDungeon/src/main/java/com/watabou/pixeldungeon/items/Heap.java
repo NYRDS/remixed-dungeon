@@ -63,6 +63,11 @@ public class Heap implements Bundlable, NamedEntityKind {
 		return getClass().getSimpleName();
 	}
 
+	@Override
+	public String name() {
+		return getEntityKind();
+	}
+
 	public enum Type {
 		HEAP, 
 		FOR_SALE, 

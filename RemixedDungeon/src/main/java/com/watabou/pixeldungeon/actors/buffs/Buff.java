@@ -40,6 +40,11 @@ public class Buff extends Actor implements NamedEntityKind {
 		return getClass().getSimpleName();
 	}
 
+	@Override
+	public String name() {
+		return toString();
+	}
+
 	interface itemAction{
 		Item   act(Item srcItem);
 		String actionText(Item srcItem);

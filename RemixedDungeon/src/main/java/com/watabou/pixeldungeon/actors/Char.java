@@ -872,6 +872,11 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 
 	@Override
 	public String getEntityKind() {
-		return null;
+		return getClass().getSimpleName();
+	}
+
+	@Override
+	public String name() {
+		return getName_objective();
 	}
 }

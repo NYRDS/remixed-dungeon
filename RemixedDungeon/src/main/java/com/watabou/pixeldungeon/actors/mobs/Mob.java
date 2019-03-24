@@ -604,6 +604,15 @@ public abstract class Mob extends Char {
 	}
 
 	public String description() {
+		/*
+		String isuffix = name+"  immune to:";
+		if(!immunities.isEmpty()) {
+			for(String item: immunities) {
+				isuffix
+			}
+		}
+		*/
+
 		return description;
 	}
 
@@ -760,10 +769,6 @@ public abstract class Mob extends Char {
 		}
 
 		this.enemy = enemy;
-	}
-
-	public String getEntityKind() {
-		return getClass().getSimpleName();
 	}
 
 	@Override

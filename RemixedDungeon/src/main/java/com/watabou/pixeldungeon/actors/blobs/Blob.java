@@ -222,4 +222,9 @@ public class Blob extends Actor implements NamedEntityKind {
 	public String getEntityKind() {
 		return getClass().getSimpleName();
 	}
+
+	@Override
+	public String name() {
+		return getEntityKind();
+	}
 }

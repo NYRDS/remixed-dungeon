@@ -79,6 +79,11 @@ public class LightningTrap implements ITrigger{
 		public String getEntityKind() {
 			return getClass().getSimpleName();
 		}
+
+		@Override
+		public String name() {
+			return getEntityKind();
+		}
 	}
 
 	@Override

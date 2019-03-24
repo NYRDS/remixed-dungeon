@@ -269,6 +269,11 @@ public class Weapon extends KindOfWeapon {
 		}
 
 		@Override
+		public String name() {
+			return getEntityKind();
+		}
+
+		@Override
 		public String getEntityKind() {
 			return getClass().getSimpleName();
 		}
