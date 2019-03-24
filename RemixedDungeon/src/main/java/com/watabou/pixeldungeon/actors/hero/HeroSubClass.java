@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.ml.R;
@@ -33,6 +35,9 @@ import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.utils.Bundle;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -64,6 +69,16 @@ public enum HeroSubClass {
 		this.titleId = titleId;
 		this.descId  = descId;
 		this.armorClass = armorClass;
+
+		try {
+			if (HeroClass.initHeroes.has(name())) {
+				JSONObject classDesc = HeroClass.initHeroes.getJSONObject(name());
+				JsonHelper.readStringSet(classDesc,HeroClass.IMMUNITIES,immunities);
+				JsonHelper.readStringSet(classDesc,HeroClass.RESISTANCES,resistances);
+			}
+		} catch (JSONException e) {
+			throw ModdingMode.modException("bad InitHero.json",e);
+		}
 	}
 
 	public String title() {

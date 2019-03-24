@@ -2,6 +2,7 @@ package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -13,6 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Set;
 
 import androidx.annotation.NonNull;
 
@@ -71,4 +73,14 @@ public class JsonHelper {
 			throw new TrackedRuntimeException(e);
 		}
 	}
+
+	public static void readStringSet(JSONObject desc, String field, Set<String> placeTo) throws JSONException {
+		if (desc.has(field)) {
+			JSONArray array = desc.getJSONArray(field);
+			for (int i = 0; i < array.length(); ++i) {
+				placeTo.add(array.getString(i));
+			}
+		}
+	}
+
 }

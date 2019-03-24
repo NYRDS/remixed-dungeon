@@ -79,7 +79,7 @@ public enum HeroClass {
 
 
     private Integer    titleId;
-    static private JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
+    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
     private String  magicAffinity;
 
@@ -149,10 +149,10 @@ public enum HeroClass {
                     }
                 }
 
-                readStringSet(classDesc, FORBIDDEN_ACTIONS, forbiddenActions);
-                readStringSet(classDesc, FRIENDLY_MOBS, friendlyMobs);
-                readStringSet(classDesc, IMMUNITIES, immunities);
-                readStringSet(classDesc, RESISTANCES, resistances);
+                JsonHelper.readStringSet(classDesc, FORBIDDEN_ACTIONS, forbiddenActions);
+                JsonHelper.readStringSet(classDesc, FRIENDLY_MOBS, friendlyMobs);
+                JsonHelper.readStringSet(classDesc, IMMUNITIES, immunities);
+                JsonHelper.readStringSet(classDesc, RESISTANCES, resistances);
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
@@ -164,15 +164,6 @@ public enum HeroClass {
 
             } catch (JSONException e) {
                 throw ModdingMode.modException("bad InitHero.json",e);
-            }
-        }
-    }
-
-    private void readStringSet(JSONObject classDesc, String field, Set<String> placeTo) throws JSONException {
-        if (classDesc.has(field)) {
-            JSONArray array = classDesc.getJSONArray(field);
-            for (int i = 0; i < array.length(); ++i) {
-                placeTo.add(array.getString(i));
             }
         }
     }

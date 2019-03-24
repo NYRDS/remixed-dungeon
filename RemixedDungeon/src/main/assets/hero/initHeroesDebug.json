@@ -195,5 +195,19 @@
     "friendlyMobs":["Gnoll","Shaman","Brute","Shielded"],
     "str": 15,
     "hp": 5
+  },
+  "LICH": {
+    "immunities": [
+      "Paralysis",
+      "ToxicGas",
+      "Terror",
+      "Death",
+      "Amok",
+      "Blindness",
+      "Sleep",
+      "Poison",
+      "Vertigo",
+      "Bleeding"
+    ]
   }
 }
