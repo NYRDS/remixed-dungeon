@@ -117,8 +117,13 @@ public class Earthroot extends Plant {
 				return 0;
 			}
 		}
-		
-		public void level( int value ) {
+
+		@Override
+		public int defenceProc(Char defender, Char enemy, int damage) {
+			return absorb(damage);
+		}
+
+		public void level(int value ) {
 			if (level < value) {
 				level = value;
 			}

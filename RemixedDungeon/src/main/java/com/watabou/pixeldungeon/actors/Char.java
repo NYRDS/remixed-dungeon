@@ -21,13 +21,11 @@ import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.ItemOwner;
-import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
@@ -60,17 +58,14 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.RingOfThorns;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
-import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -234,15 +229,13 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 				GLog.i(Game.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
 			}
 
-			int dr = ignoreDr() ? 0 : Random.IntRange(0, enemy.dr());
-
 			int dmg = damageRoll();
 
 			if(inFury()) {
 				dmg *= 1.5f;
 			}
 
-			int effectiveDamage = Math.max(dmg - dr, 0);
+			int effectiveDamage = Math.max(dmg, 0);
 
 			effectiveDamage = attackProc(enemy, effectiveDamage);
 			effectiveDamage = enemy.defenseProc(this, effectiveDamage);
@@ -343,34 +336,17 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 
 	public int defenseProc(Char enemy, int damage) {
 
-		Earthroot.Armor armor = buff(Earthroot.Armor.class);
-		if (armor != null) {
-			damage = armor.absorb(damage);
-		}
+		int dr = enemy.ignoreDr() ? 0 : Random.IntRange(0, dr());
 
-		RingOfThorns.Thorns thorns = buff(RingOfThorns.Thorns.class);
-		if (thorns != null) {
-			int dmg = Random.IntRange(0, damage);
-			if (dmg > 0) {
-				enemy.damage(dmg, thorns);
-			}
-		}
+		damage = damage - dr;
 
-		if (hasBuff(HeartOfDarkness.HeartOfDarknessBuff.class)) {
-			int spiritPos = level().getEmptyCellNextTo(getPos());
-
-			if (level().cellValid(spiritPos)) {
-				SpiritOfPain spirit = new SpiritOfPain();
-				spirit.setPos(spiritPos);
-				Mob.makePet(spirit, getId());
-				level().spawnMob(spirit, 0, getPos());
-			}
+		for(Buff buff : buffs) {
+			damage = buff.defenceProc(this, enemy, damage);
 		}
 
 		if (getBelongings()!=null && getBelongings().armor != null) {
 			damage = getBelongings().armor.proc(enemy, this, damage);
 		}
-
 
 		return damage;
 	}
@@ -701,7 +677,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 	}
 
 	private void updateSprite(CharSprite sprite){
-		if(Dungeon.level.cellValid(getPos())) {
+		if(level().cellValid(getPos())) {
 			sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
 		} else {
 			EventCollector.logException("invalid pos for:"+toString()+":"+getClass().getCanonicalName());

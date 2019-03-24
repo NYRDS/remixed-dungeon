@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.items.rings;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.utils.Random;
 
 public class RingOfThorns extends Ring {
 	
@@ -56,5 +58,13 @@ public class RingOfThorns extends Ring {
 	}
 	
 	public class Thorns extends RingBuff {
+		@Override
+		public int defenceProc(Char defender, Char enemy, int damage) {
+			int dmg = Random.IntRange(0, damage);
+			if (dmg > 0) {
+				enemy.damage(dmg, this);
+			}
+			return damage;
+		}
 	}
 }

@@ -124,12 +124,17 @@ public class Buff extends Actor implements NamedEntityKind {
 		return 1;
 	}
 
+	public int defenceProc(Char defender, Char enemy, int damage)
+	{
+		return damage;
+	}
+
 	private void collectOrDropItem(Item item){
 		if(!item.collect( ((Hero)target).belongings.backpack )){
 			Dungeon.level.drop(item, target.getPos()).sprite.drop();
 		}	
 	}
-	
+
 	protected void applyToCarriedItems(itemAction action ){
 		if (target instanceof Hero) {
 			Hero hero = (Hero) target;
