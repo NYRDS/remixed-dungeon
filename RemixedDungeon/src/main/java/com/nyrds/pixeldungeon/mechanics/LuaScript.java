@@ -20,6 +20,8 @@ public class LuaScript {
     private boolean scriptLoaded = false;
     private LuaTable script;
 
+    final LuaValue emptyArgs[] = new LuaValue[0];
+
     @Nullable
     private Object   parent;
 
@@ -87,5 +89,9 @@ public class LuaScript {
 
     public LuaValue getResult() {
         return scriptResult;
+    }
+
+    public void run(String method) {
+        run(method, emptyArgs);
     }
 }
