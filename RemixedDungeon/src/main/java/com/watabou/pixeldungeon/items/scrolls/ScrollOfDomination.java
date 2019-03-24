@@ -34,7 +34,7 @@ public class ScrollOfDomination extends Scroll {
 			Mob pet = Random.element(mobsInSight);
 
 			if(pet.canBePet()) {
-				Mob.makePet(pet, getUser());
+				Mob.makePet(pet, getUser().getId());
 				new Flare(3, 32).show(pet.getSprite(), 2f);
 				break;
 			}

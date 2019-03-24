@@ -21,11 +21,13 @@ import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.ItemOwner;
+import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
@@ -56,15 +58,15 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.rings.RingOfThorns;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
@@ -218,6 +220,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
         GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
     }
 
+    public boolean ignoreDr() {
+		return false;
+	}
+
     public boolean attack(@NonNull Char enemy) {
 
 		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
@@ -228,14 +234,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 				GLog.i(Game.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
 			}
 
-			// FIXME
-			int dr;
-			if ((this instanceof Hero) && (((Hero) this).rangedWeapon != null) && (((Hero) this).subClass == HeroSubClass.SNIPER)) {
-				dr = 0;
-			}
-			else {
-				dr = Random.IntRange(0, enemy.dr());
-			}
+			int dr = ignoreDr() ? 0 : Random.IntRange(0, enemy.dr());
 
 			int dmg = damageRoll();
 
@@ -348,6 +347,30 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 		if (armor != null) {
 			damage = armor.absorb(damage);
 		}
+
+		RingOfThorns.Thorns thorns = buff(RingOfThorns.Thorns.class);
+		if (thorns != null) {
+			int dmg = Random.IntRange(0, damage);
+			if (dmg > 0) {
+				enemy.damage(dmg, thorns);
+			}
+		}
+
+		if (hasBuff(HeartOfDarkness.HeartOfDarknessBuff.class)) {
+			int spiritPos = level().getEmptyCellNextTo(getPos());
+
+			if (level().cellValid(spiritPos)) {
+				SpiritOfPain spirit = new SpiritOfPain();
+				spirit.setPos(spiritPos);
+				Mob.makePet(spirit, getId());
+				level().spawnMob(spirit, 0, getPos());
+			}
+		}
+
+		if (getBelongings()!=null && getBelongings().armor != null) {
+			damage = getBelongings().armor.proc(enemy, this, damage);
+		}
+
 
 		return damage;
 	}

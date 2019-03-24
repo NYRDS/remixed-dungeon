@@ -86,7 +86,7 @@ public class SacrificialSword extends SpecialWeapon {
 		//GLog.i("chance %.3f roll %.3f\n", conversionChance, roll);
 
 		if(roll < conversionChance ) {
-			Mob.makePet(mob, hero);
+			Mob.makePet(mob, hero.getId());
 		}
 	}
 }

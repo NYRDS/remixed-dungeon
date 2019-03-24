@@ -83,7 +83,7 @@ public class ChaosStaff extends Wand implements IChaosItem {
                         mob.die(getUser());
                         break;
                     case 1:
-                        Mob.makePet(mob, getUser());
+                        Mob.makePet(mob, getUser().getId());
                         break;
 
                     case 2:

@@ -51,7 +51,7 @@ public class MirrorImage extends Mob {
 		attack = hero.attackSkill( hero );
 		damage = hero.damageRoll();
 
-		makePet(this, hero);
+		makePet(this, hero.getId());
 
 		look = hero.getHeroSprite().getLayersDesc();
 	}

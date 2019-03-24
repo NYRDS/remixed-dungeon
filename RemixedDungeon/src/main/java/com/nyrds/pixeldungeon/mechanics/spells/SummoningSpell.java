@@ -61,9 +61,9 @@ public class SummoningSpell extends Spell {
 
         if (level.cellValid(spawnPos)) {
             Mob pet = MobFactory.mobByName(mobKind);
-	        if(chr instanceof Hero) {
-		        Hero hero = (Hero)chr;
-		        pet = Mob.makePet(pet, hero);
+
+            if(chr instanceof Hero) {
+		        pet = Mob.makePet(pet, chr.getId());
 	        } else if(chr instanceof Mob) {
 		        Mob mob = (Mob) chr;
 		        pet.setFraction(mob.fraction());
@@ -71,7 +71,7 @@ public class SummoningSpell extends Spell {
 		        pet.setFraction(Fraction.DUNGEON);
 	        }
 
-            pet.setPos(spawnPos);
+	        pet.setPos(spawnPos);
             level.spawnMob(pet,0,chr.getPos());
         }
         

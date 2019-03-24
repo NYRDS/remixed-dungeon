@@ -27,12 +27,10 @@ import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
-import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -105,7 +103,6 @@ import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
-import com.watabou.pixeldungeon.items.rings.RingOfThorns;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -351,7 +348,7 @@ public class Hero extends Char implements PetOwner {
 			ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection(PETS, Mob.class));
 
 			for (Mob pet : loadedPets) {
-				Mob.makePet(pet, this);
+				Mob.makePet(pet, getId());
 			}
 		}
 
@@ -1089,36 +1086,6 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public int defenseProc(Char enemy, int damage) {
-		damage = super.defenseProc(enemy, damage);
-
-		RingOfThorns.Thorns thorns = buff(RingOfThorns.Thorns.class);
-		if (thorns != null) {
-			int dmg = Random.IntRange(0, damage);
-			if (dmg > 0) {
-				enemy.damage(dmg, thorns);
-			}
-		}
-
-		if (buff(HeartOfDarkness.HeartOfDarknessBuff.class) != null) {
-			int spiritPos = level().getEmptyCellNextTo(getPos());
-
-			if (level().cellValid(spiritPos)) {
-				SpiritOfPain spirit = new SpiritOfPain();
-				spirit.setPos(spiritPos);
-				Mob.makePet(spirit, this);
-				level().spawnMob(spirit, 0, getPos());
-			}
-		}
-
-		if (belongings.armor != null) {
-			damage = belongings.armor.proc(enemy, this, damage);
-		}
-
-		return damage;
-	}
-
-	@Override
 	public void damage(int dmg, NamedEntityKind src) {
 		restoreHealth = false;
 		super.damage(dmg, src);
@@ -1618,7 +1585,7 @@ public class Hero extends Char implements PetOwner {
 
 			if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
 				Rat rat = (Rat) enemy;
-				Mob.makePet(rat, this);
+				Mob.makePet(rat, getId());
 			} else {
 				AttackIndicator.target(enemy);
 
@@ -2045,4 +2012,8 @@ public class Hero extends Char implements PetOwner {
 		return mobs;
 	}
 
+	@Override
+	public boolean ignoreDr() {
+		return rangedWeapon != null && subClass == HeroSubClass.SNIPER;
+	}
 }

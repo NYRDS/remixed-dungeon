@@ -31,7 +31,7 @@ public class ScrollOfSummoning extends Scroll {
 			Mob mob = Bestiary.mob( level );
 			GLog.i(Game.getVar(R.string.ScrollOfSummoning_Info_2));
 			if(mob.canBePet()){
-				Mob.makePet(mob, getUser());
+				Mob.makePet(mob, getUser().getId());
 			} else {
 				GLog.w( Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}

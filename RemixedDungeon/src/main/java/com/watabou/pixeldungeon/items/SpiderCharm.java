@@ -38,7 +38,7 @@ public class SpiderCharm extends UsableArtifact {
 			int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
 			
 			if (Dungeon.level.cellValid(spawnPos)) {
-				Mob pet = Mob.makePet(new SpiderServant(), getUser());
+				Mob pet = Mob.makePet(new SpiderServant(), ch.getId());
 				pet.setPos(spawnPos);
 				
 				Dungeon.level.spawnMob(pet );

@@ -108,7 +108,7 @@ public abstract class Mob extends Char {
 	protected int exp    = 1;
 	protected int maxLvl = 50;
 
-	private int owner = -1;
+	protected int owner = -1;
 
 	@NonNull
 	private Char enemy = DUMMY;
@@ -138,10 +138,10 @@ public abstract class Mob extends Char {
 	}
 
 	@NonNull
-	public static Mob makePet(@NonNull Mob pet, @NonNull Hero hero) {
+	public static Mob makePet(@NonNull Mob pet, int ownerId) {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
-			pet.owner = hero.getId();
+			pet.owner = ownerId;
 			pet.getOwner().addPet(pet);
 		}
 		return pet;
@@ -568,7 +568,7 @@ public abstract class Mob extends Char {
 		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
 			if (parent instanceof Hero) {
-				Mob.makePet(new_mob, (Hero) parent);
+				Mob.makePet(new_mob, parent.getId());
 				Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			}
 			Dungeon.level.spawnMob(new_mob);
