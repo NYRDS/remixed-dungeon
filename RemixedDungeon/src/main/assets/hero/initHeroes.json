@@ -34,7 +34,7 @@
     ]
   },
   "MAGE": {
-    "i/tems": [
+    "items": [
       {
         "kind": "WandOfMagicMissile",
         "identified": true
