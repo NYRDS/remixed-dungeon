@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
@@ -31,7 +32,6 @@ import com.watabou.pixeldungeon.levels.PrisonBossLevel;
 import com.watabou.pixeldungeon.levels.PrisonLevel;
 import com.watabou.pixeldungeon.levels.SewerBossLevel;
 import com.watabou.pixeldungeon.levels.SewerLevel;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndStory;
 
@@ -261,15 +261,16 @@ public class DungeonGenerator {
 	}
 
 	public static Level createLevel(Position pos) {
-		Class<? extends Level> levelClass = mLevelKindList.get(getLevelKind(pos.levelId));
-
-		if (levelClass == null) {
-			GLog.w("Unknown level type: %s", getLevelKind(pos.levelId));
-
-			return createLevel(pos);
-		}
+		String newLevelKind = getLevelKind(pos.levelId);
+		Class<? extends Level> levelClass = mLevelKindList.get(newLevelKind);
 
 		try {
+			if (levelClass == null) {
+				EventCollector.collectSessionData("unknown level kind", newLevelKind);
+				ModError.doReport(newLevelKind, new Exception("unknown level kind"));
+				levelClass = DeadEndLevel.class;
+			}
+
 			Level ret;
 			String levelId = pos.levelId;
 			if (levelClass == PredesignedLevel.class) {
@@ -302,7 +303,6 @@ public class DungeonGenerator {
 			throw new TrackedRuntimeException(e);
 		} catch (JSONException e) {
 			throw ModdingMode.modException(e);
-
 		}
 	}
 
