@@ -50,6 +50,8 @@
         "kind": "ScrollOfIdentify"
       }
     ],
+    "maxSp":10,
+    "sp":10,
     "isSpellUser": true,
     "magicAffinity": "Elemental"
   },
