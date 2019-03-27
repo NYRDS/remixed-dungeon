@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.ui;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
@@ -248,8 +249,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     public static void refresh() {
         Game.pushUiTask(() -> {
-            for (QuickSlot slot : slots) {
-                slot.refreshSelf();
+            if(Dungeon.hero!=null) {
+                for (QuickSlot slot : slots) {
+                    slot.refreshSelf();
+                }
+            } else {
+                EventCollector.logException("Dungeon.hero is null");
             }
         });
     }

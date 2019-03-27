@@ -27,9 +27,6 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public abstract class WndOptions extends Window {
 
-	private static final int WIDTH         = 120;
-
-
 	public WndOptions( String title, String message, String... options ) {
 		super();
 
@@ -39,11 +36,11 @@ public abstract class WndOptions extends Window {
 		Text tfTitle = PixelScene.createMultiline(StringsManager.maybeId(title), GuiProperties.titleFontSize() );
 		tfTitle.hardlight( TITLE_COLOR );
 		tfTitle.x = GAP;
-		tfTitle.maxWidth(WIDTH - GAP * 2);
+		tfTitle.maxWidth(STD_WIDTH - GAP * 2);
 		vbox.add( tfTitle );
 		
 		Text tfMessage = PixelScene.createMultiline(StringsManager.maybeId(message), GuiProperties.regularFontSize() );
-		tfMessage.maxWidth(WIDTH - GAP * 2);
+		tfMessage.maxWidth(STD_WIDTH - GAP * 2);
 		tfMessage.x = GAP;
 		vbox.add( tfMessage );
 
@@ -58,16 +55,16 @@ public abstract class WndOptions extends Window {
 				}
 			};
 
-			btn.setSize(WIDTH - GAP * 2, BUTTON_HEIGHT);
+			btn.setSize(STD_WIDTH - GAP * 2, BUTTON_HEIGHT);
 			buttonsVbox.add( btn );
 		}
 
-		buttonsVbox.setRect(GAP,0,WIDTH,buttonsVbox.childsHeight());
+		buttonsVbox.setRect(GAP,0, STD_WIDTH,buttonsVbox.childsHeight());
 		vbox.add(buttonsVbox);
 
-		vbox.setRect(GAP,0,WIDTH,vbox.childsHeight());
+		vbox.setRect(GAP,0, STD_WIDTH,vbox.childsHeight());
 		add(vbox);
-		resize( WIDTH, (int) vbox.height());
+		resize(STD_WIDTH, (int) vbox.height());
 	}
 
 	abstract protected void onSelect( int index );
