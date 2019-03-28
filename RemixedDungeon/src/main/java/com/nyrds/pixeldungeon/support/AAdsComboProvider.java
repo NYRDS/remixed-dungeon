@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.ViewGroup;
@@ -69,12 +68,9 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
                 final AlertDialog dialog = alert.create();
 
                 dialog.setCanceledOnTouchOutside(true);
-                dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                    @Override
-                    public void onCancel(DialogInterface dialog) {
-                        dialog.dismiss();
-                        ret.returnToWork(true);
-                    }
+                dialog.setOnCancelListener(dialog1 -> {
+                    dialog1.dismiss();
+                    ret.returnToWork(true);
                 });
                 dialog.show();
             }
@@ -97,5 +93,10 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
 
         alert.setView(adView);
         adView.loadUrl("https://acceptable.a-ads.com/1077944");
+    }
+
+    @Override
+    public boolean isReady() {
+        return true;
     }
 }

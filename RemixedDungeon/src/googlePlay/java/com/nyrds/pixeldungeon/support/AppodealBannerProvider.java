@@ -29,6 +29,11 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
         AdsUtils.updateBanner(adView);
     }
 
+    @Override
+    public boolean isReady() {
+        return Appodeal.isLoaded(Appodeal.BANNER);
+    }
+
     private class AppodealBannerCallbacks implements BannerCallbacks {
         @Override
         public void onBannerLoaded(int i, boolean b) {

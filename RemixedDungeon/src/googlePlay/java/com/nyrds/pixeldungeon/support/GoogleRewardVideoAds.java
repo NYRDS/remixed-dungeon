@@ -16,24 +16,20 @@ import androidx.annotation.MainThread;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-public class GoogleRewardVideoAds {
+public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
 	private static final String GOOGLE_REWARD_VIDEO = "google reward video";
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
 
 
-	public static void initCinemaRewardVideo() {
-
-		if(isVideoInitialized()) {
-			return;
-		}
-
-		Game.instance().runOnUiThread(GoogleRewardVideoAds::loadNextVideo);
+	public GoogleRewardVideoAds() {
+		Game.instance().runOnUiThread(this::loadNextVideo);
 	}
 
+
 	@MainThread
-	private static void loadNextVideo() {
+	private void loadNextVideo() {
 		EventCollector.startTrace(GOOGLE_REWARD_VIDEO);
 
 		mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
@@ -42,32 +38,23 @@ public class GoogleRewardVideoAds {
 	}
 
 	@MainThread
-	public static boolean isVideoReady() {
+	public  boolean isReady() {
 		return mCinemaRewardAd != null && mCinemaRewardAd.isLoaded();
 	}
 
-	@MainThread
-	public static void showCinemaRewardVideo(InterstitialPoint ret) {
+	@Override
+	public void showRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
-
-		if (mCinemaRewardAd.isLoaded()) {
-			mCinemaRewardAd.show();
-		}else {
-			returnTo.returnToWork(false);
-		}
+		mCinemaRewardAd.show();
 	}
 
-	public static boolean isVideoInitialized() {
-		return mCinemaRewardAd != null;
-	}
-
-	private static class RewardVideoAdListener implements RewardedVideoAdListener {
+	private class RewardVideoAdListener implements RewardedVideoAdListener {
 
 		private boolean videoCompleted = false;
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
-			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO,"google reward video","ok","");
+			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"ok","");
 			videoCompleted = false;
 		}
 
@@ -79,8 +66,8 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdClosed() {
-			Game.instance().runOnUiThread(GoogleRewardVideoAds::loadNextVideo);
-			Game.pushUiTask(() -> {returnTo.returnToWork(videoCompleted);});
+			Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
+			Game.pushUiTask(() -> returnTo.returnToWork(videoCompleted));
 		}
 
 		@Override
@@ -94,7 +81,7 @@ public class GoogleRewardVideoAds {
 
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
-			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO,"google reward video","fail","");
+			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"fail","");
 		}
 
 		@Override

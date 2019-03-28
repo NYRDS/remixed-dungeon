@@ -5,16 +5,17 @@ import com.watabou.noosa.InterstitialPoint;
 
 import java.util.Map;
 
+import androidx.annotation.MainThread;
 import androidx.annotation.Nullable;
 
 class AdsUtilsCommon {
 
-    static public void bannerFailed(IBannerProvider provider) {
+    static void bannerFailed(IBannerProvider provider) {
         incFailCount(AdsUtils.bannerFails,provider);
         //tryNextBanner();
     }
 
-    static public void interstitialFailed(IInterstitialProvider provider, InterstitialPoint retTo) {
+    static void interstitialFailed(IInterstitialProvider provider, InterstitialPoint retTo) {
         incFailCount(AdsUtils.interstitialFails,provider);
         retTo.returnToWork(false);
         //tryNextInterstitial(retTo);
@@ -30,16 +31,18 @@ class AdsUtilsCommon {
     }
 
     @Nullable
-    private static <T> T choseLessFailedFrom(Map<T,Integer> map, int maxFails) {
+    private static <T extends IProvider> T choseLessFailedFrom(Map<T,Integer> map, int maxFails) {
         int minima = Integer.MAX_VALUE;
 
         T chosenProvider = null;
 
         for (T provider: map.keySet()) {
-            Integer failRate = map.get(provider);
-            if(failRate!=null && failRate<minima) {
-                minima = failRate;
-                chosenProvider = provider;
+            if(provider.isReady()) {
+                Integer failRate = map.get(provider);
+                if (failRate != null && failRate < minima) {
+                    minima = failRate;
+                    chosenProvider = provider;
+                }
             }
         }
 
@@ -47,6 +50,16 @@ class AdsUtilsCommon {
             return chosenProvider;
         }
         return null;
+    }
+
+    private static void tryNextRewardVideo(final InterstitialPoint retTo) {
+        final IRewardVideoProvider chosenProvider = choseLessFailedFrom(AdsUtils.rewardVideoFails, Integer.MAX_VALUE);
+
+        if(chosenProvider!=null) {
+            Game.instance().runOnUiThread(() -> chosenProvider.showRewardVideo(retTo));
+        } else {
+            retTo.returnToWork(false);
+        }
     }
 
     private static void tryNextInterstitial(final InterstitialPoint retTo) {
@@ -63,7 +76,7 @@ class AdsUtilsCommon {
         final IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            Game.instance().runOnUiThread(() -> chosenProvider.displayBanner());
+            Game.instance().runOnUiThread(chosenProvider::displayBanner);
         }
     }
 
@@ -77,11 +90,34 @@ class AdsUtilsCommon {
         tryNextInterstitial(retTo);
     }
 
-    interface IBannerProvider {
+
+    static void showRewardVideo(InterstitialPoint retTo) {
+        tryNextRewardVideo(retTo);
+    }
+
+    @MainThread
+    static boolean isRewardVideoReady() {
+        for(IRewardVideoProvider provider: AdsUtils.rewardVideoFails.keySet()) {
+            if(provider.isReady()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    interface IProvider {
+        boolean isReady();
+    }
+
+    interface IBannerProvider extends IProvider {
         void displayBanner();
     }
 
-    interface IInterstitialProvider {
+    interface IInterstitialProvider extends IProvider  {
         void showInterstitial(final InterstitialPoint ret);
+    }
+
+    interface IRewardVideoProvider extends IProvider {
+        void showRewardVideo(final InterstitialPoint ret);
     }
 }

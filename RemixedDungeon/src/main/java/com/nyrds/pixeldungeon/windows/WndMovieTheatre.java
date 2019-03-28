@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
-import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.Dungeon;
@@ -56,9 +55,10 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 
 		Game.softPaused = true;
 		Dungeon.save();
+
 		Game.instance().runOnUiThread(() -> {
 			AdsUtils.removeTopBanner();
-			RewardVideo.showCinemaRewardVideo(this);
+			Ads.showRewardVideo(this);
 		});
 	}
 
@@ -77,7 +77,7 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 	private class RewardTask implements Runnable {
 		private boolean needReward;
 
-		public RewardTask(boolean result) {
+		RewardTask(boolean result) {
 			needReward = result;
 		}
 

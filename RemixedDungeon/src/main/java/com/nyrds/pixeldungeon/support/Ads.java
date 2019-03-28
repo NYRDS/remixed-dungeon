@@ -23,6 +23,14 @@ public class Ads {
         }
     }
 
+    public static boolean isRewardVideoReady(){
+        return AdsUtilsCommon.isRewardVideoReady();
+    }
+
+    public static void showRewardVideo(final InterstitialPoint work) {
+        AdsUtilsCommon.showRewardVideo(work);
+    }
+
     public static void displaySaveAndLoadAd(final InterstitialPoint work) {
         AdsUtilsCommon.showInterstitial(work);
     }

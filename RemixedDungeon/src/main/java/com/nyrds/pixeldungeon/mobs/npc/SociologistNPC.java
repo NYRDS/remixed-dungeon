@@ -55,20 +55,17 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
 
     @Override
     public void DownloadComplete(String file, final Boolean result) {
-        Game.pushUiTask(new Runnable() {
-            @Override
-            public void run() {
-                if (!result) {
+        Game.pushUiTask(() -> {
+            if (!result) {
+                reportError();
+            } else {
+                try {
+                    survey = JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(SURVEY_JSON));
+
+                    Game.scene().add(new WndSurvey(survey));
+
+                } catch (JSONException e) {
                     reportError();
-                } else {
-                    try {
-                        survey = JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(SURVEY_JSON));
-
-                        Game.scene().add(new WndSurvey(survey));
-
-                    } catch (JSONException e) {
-                        reportError();
-                    }
                 }
             }
         });

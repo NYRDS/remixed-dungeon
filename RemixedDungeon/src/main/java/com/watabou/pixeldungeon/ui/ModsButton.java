@@ -22,85 +22,79 @@ import java.io.File;
 
 public class ModsButton extends ImageButton implements InterstitialPoint, DownloadStateListener.IDownloadComplete {
 
-	private Text  text;
+    private Text text;
 
-	static private boolean needUpdate;
+    static private boolean needUpdate;
 
-	public ModsButton() {
-		super(Icons.MODDING_MODE.get());
+    public ModsButton() {
+        super(Icons.MODDING_MODE.get());
 
-		text = new SystemText(GuiProperties.regularFontSize());
-		text.text(RemixedDungeon.activeMod());
-		add(text);
-	}
+        text = new SystemText(GuiProperties.regularFontSize());
+        text.text(RemixedDungeon.activeMod());
+        add(text);
+    }
 
-	static public void modUpdated() {
-		needUpdate = true;
-	}
+    static public void modUpdated() {
+        needUpdate = true;
+    }
 
-	@Override
-	public void update() {
-		if(needUpdate) {
-			needUpdate = false;
-			text.text(RemixedDungeon.activeMod());
-		}
-		super.update();
-	}
+    @Override
+    public void update() {
+        if (needUpdate) {
+            needUpdate = false;
+            text.text(RemixedDungeon.activeMod());
+        }
+        super.update();
+    }
 
 
-	@Override
-	protected void layout() {
-		super.layout();
+    @Override
+    protected void layout() {
+        super.layout();
 
-		text.x = x;
-		text.y = image.y + image.height + 2;
+        text.x = x;
+        text.y = image.y + image.height + 2;
 
-		height = image.height() + text.height() + 2;
-	}
+        height = image.height() + text.height() + 2;
+    }
 
-	@Override
-	protected void onClick() {
-		String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET};
-		Game.instance().doPermissionsRequest(this, requiredPermissions);
-	}
+    @Override
+    protected void onClick() {
+        String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET};
+        Game.instance().doPermissionsRequest(this, requiredPermissions);
+    }
 
-	@Override
-	public void returnToWork(final boolean result) {
-		final Group parent = getParent();
-		Game.pushUiTask(new Runnable() {
-			@Override
-			public void run() {
-				if (result) {
-					if(Util.isConnectedToInternet()) {
-						File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
-						modsCommon.delete();
-						String downloadTo = modsCommon.getAbsolutePath();
+    @Override
+    public void returnToWork(final boolean result) {
+        final Group parent = getParent();
+        Game.pushUiTask(() -> {
+            if (result) {
+                if (Util.isConnectedToInternet()) {
+                    File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
+                    modsCommon.delete();
+                    String downloadTo = modsCommon.getAbsolutePath();
 
-                        new DownloadTask(new DownloadProgressWindow("Downloading",ModsButton.this)).download("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
+                    new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this)).download("https://raw.githubusercontent.com/NYRDS/pixel-dungeon-remix-mods/master/mods.json", downloadTo);
 
-					} else {
-						DownloadComplete("no internet", true);
-					}
+                } else {
+                    DownloadComplete("no internet", true);
+                }
 
-				} else {
-					parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
-				}
-			}
-		});
+            } else {
+                parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
+            }
+        });
 
-	}
+    }
 
-	@Override
-	public void DownloadComplete(String file, final Boolean result) {
-		Game.pushUiTask(new Runnable() {
-			@Override
-			public void run() {
-				Game.scene().add(new WndModSelect());
+    @Override
+    public void DownloadComplete(String file, final Boolean result) {
+        Game.pushUiTask(() -> {
+            Game.scene().add(new WndModSelect());
 
-				if (!result) {
-					Game.toast("Mod list download failed :(");
-				}
-			}
-		});
-	}
+            if (!result) {
+                Game.toast("Mod list download failed :(");
+            }
+        });
+    }
 }
