@@ -38,6 +38,7 @@
     <string name="gdpr_disagree">Tidak, terima kasih</string>
     <string name="gdpr_choose">Sila pilih</string>
 
+    <string name="Mob_StaHuntingStatus2">%1$s ini sedang memburu %2$s</string>
     <string name="WndSaveSlotSelect_LoadAutoSave">Muat auto-simpan</string>
 
     <string name="TownScript_NeedWeapon">Saya tak mau masuk ke dalam kurungan bawah tanah dengan tangan kosong!\nLebih baik pergi ke kedai dahulu sebelum masuk?</string>

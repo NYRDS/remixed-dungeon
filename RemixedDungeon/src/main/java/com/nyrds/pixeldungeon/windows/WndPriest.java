@@ -20,14 +20,11 @@ import java.util.Vector;
 
 public class WndPriest extends WndQuest {
 
-	private static final int BTN_HEIGHT	= 18;
-	private static final int WIDTH		= 120;
-
 	static final private int GOLD_COST             = 75;
 	static final private int GOLD_COST_PER_MINION  = 50;
 
-	static private int goldCost            = 75;
-	static private int goldCostPerMinion   = 50;
+	private static int goldCost;
+	private static int goldCostPerMinion;
 
 
 	public WndPriest(final HealerNPC priest, final Hero hero) {
@@ -47,7 +44,7 @@ public class WndPriest extends WndQuest {
 			}
 		};
 
-		btnHealHero.setSize(WIDTH, BTN_HEIGHT );
+		btnHealHero.setSize(STD_WIDTH, BUTTON_HEIGHT);
 		btnHealHero.enable(!(hero.gold()< goldCost));
 
 		vbox.add( btnHealHero );
@@ -63,7 +60,7 @@ public class WndPriest extends WndQuest {
 				}
 			};
 
-			btnHealMinions.setSize( WIDTH, BTN_HEIGHT);
+			btnHealMinions.setSize(STD_WIDTH, BUTTON_HEIGHT);
 			btnHealMinions.enable(!(hero.gold() < healAllMinionsCost));
 
 			vbox.add(btnHealMinions);
@@ -75,13 +72,13 @@ public class WndPriest extends WndQuest {
 				hide();
 			}
 		};
-		btnLeave.setRect( 0, y, WIDTH, BTN_HEIGHT );
+		btnLeave.setRect( 0, y, STD_WIDTH, BUTTON_HEIGHT);
 		vbox.add( btnLeave );
 
 		add(vbox);
-		vbox.setRect(0,y,WIDTH,vbox.childsHeight());
+		vbox.setRect(0,y,STD_WIDTH,vbox.childsHeight());
 
-		resize( WIDTH, (int) (vbox.bottom()));
+		resize( STD_WIDTH, (int) (vbox.bottom()));
 	}
 
 	private static String instructions(Hero hero) {

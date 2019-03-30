@@ -35,7 +35,7 @@ public class WndTitledMessage extends Window {
 		
 		super();
 
-		resizeLimited(120);
+		resizeLimited(STD_WIDTH);
 
 		titlebar.setRect( 0, 0, width, 0 );
 		add( titlebar );

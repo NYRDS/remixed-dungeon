@@ -73,11 +73,19 @@ public enum Rankings {
 
 		Map<String,String> resDesc = new HashMap<>();
 		resDesc.put("class",     hero.heroClass.toString());
-		resDesc.put("subclass",  Dungeon.hero.subClass.toString());
+		resDesc.put("subclass",  hero.subClass.toString());
+		resDesc.put("heroLevel", Integer.toString(hero.lvl()));
+		resDesc.put("gameId",    Dungeon.gameId);
 
+		resDesc.put("win",       winLevel.name());
 		resDesc.put("resDesc",  resultDescription);
-		resDesc.put("mod",      rec.mod);
 		resDesc.put("duration", Float.toString(Statistics.duration));
+
+		resDesc.put("difficulty", Integer.toString(Game.getDifficulty()));
+		resDesc.put("version",   Game.version);
+		resDesc.put("mod",       ModdingMode.activeMod());
+		resDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
+		resDesc.put("donation",  Integer.toString(RemixedDungeon.donated()));
 
 		EventCollector.logEvent("gameover", resDesc);
 

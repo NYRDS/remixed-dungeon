@@ -40,17 +40,13 @@ public class DownloadProgressWindow implements DownloadStateListener {
 
     @Override
     public void DownloadComplete(final String file, final Boolean result) {
-        Game.pushUiTask(new Runnable() {
-
-            @Override
-            public void run() {
-                if (progress != null) {
-                    progress.hide();
-                    progress = null;
-                }
-
-                onComplete.DownloadComplete(file, result);
+        Game.pushUiTask(() -> {
+            if (progress != null) {
+                progress.hide();
+                progress = null;
             }
+
+            onComplete.DownloadComplete(file, result);
         });
     }
 }

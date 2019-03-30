@@ -1472,12 +1472,17 @@ public class Hero extends Char implements PetOwner {
 		deathDesc.put("subClass", subClass.name());
 		deathDesc.put("level", Dungeon.level.levelId);
 		deathDesc.put("cause", cause.getClass().getSimpleName());
-		deathDesc.put("surviveFor", Float.toString(Statistics.duration));
+		deathDesc.put("duration", Float.toString(Statistics.duration));
+
 		deathDesc.put("difficulty", Integer.toString(Game.getDifficulty()));
 		deathDesc.put("version", Game.version);
 		deathDesc.put("mod", ModdingMode.activeMod());
 		deathDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
+
 		deathDesc.put("donation",Integer.toString(RemixedDungeon.donated()));
+		deathDesc.put("heroLevel", Integer.toString(lvl()));
+		deathDesc.put("gameId",    Dungeon.gameId);
+
 
 		EventCollector.logEvent("HeroDeath", deathDesc);
 

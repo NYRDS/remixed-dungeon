@@ -14,9 +14,9 @@
     <string name="Exhumation_Ok">Я подчиняюсь.</string>
 
     <string name="RaiseDead_Name">Поднять мертвеца</string>
-    <string name="RaiseDead_Info">Попытка поднять недавно (Ритуал требует только свежайщий материал) убитое существо. При использовании этого темного искуства не забывайте: почти любое существо можно поднять из мертвых, но далеко не всех можно подчинить своей воле.</string>
+    <string name="RaiseDead_Info">Попытка поднять недавно (Ритуал требует только свежайший материал) убитое существо. При использовании этого темного искусства не забывайте: почти любое существо можно поднять из мертвых, но далеко не всех можно подчинить своей воле.</string>
     <string name="RaiseDead_NoSpace">Поднятие мертвеца не удалось потому что здесь нет свобдного места.</string>
-    <string name="RaiseDead_NoKill">Вам нужно сначала убить кого-то, прежде чем пытаться его поднять</string>
+    <string name="RaiseDead_NoKill">Вам нужно сначала убить кого-то, прежде чем пытаться оживить его труп.</string>
 
     <string name="RawFish_Name">сырая рыба</string>
     <string name="RawFish_Info">Сырая рыба, ешьте на свой страх и риск</string>
@@ -41,6 +41,12 @@
     <string name="gdpr_choose">пожалуйста, сделайте свой выбор</string>
 
     <string name="Mob_StaHuntingStatus2">%1$s охотится на %2$s</string>
+    <string name="Mob_StaFleeingStatus2">%1$s убегает от %2$s</string>
+
+    <string name="Mob_StaTerrorStatus">%1$s в ужасе</string>
+    <string name="Mob_StaTerrorStatus2">%1$s в ужасе от %2$s</string>
+
+    <string name="Mob_StaAmokStatus">%1$s в безумной ярости</string>
 
     <string name="WndSaveSlotSelect_LoadAutoSave">Автосохранение</string>
 

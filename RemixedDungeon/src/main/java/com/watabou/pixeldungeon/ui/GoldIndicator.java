@@ -25,25 +25,28 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
+import androidx.annotation.NonNull;
+
 public class GoldIndicator extends Component {
 
 	private static final float TIME	= 2f;
 	
 	private int lastValue = 0;
 
+	@NonNull
 	private BitmapText tf;
 	
 	private float time;
 
-	@Override
-	protected void createChildren() {
+	GoldIndicator() {
+		super();
 		tf = new BitmapText( PixelScene.font1x );
 		tf.hardlight( 0xFFFF00 );
 		add( tf );
-		
+
 		setVisible(false);
 	}
-	
+
 	@Override
 	protected void layout() {
 		tf.x = x + (width - tf.width()) / 2;
@@ -64,10 +67,12 @@ public class GoldIndicator extends Component {
 			}
 			
 		}
-		
-		if (Dungeon.hero.gold() != lastValue && !RemixedDungeon.toolStyle().equals(Tool.Size.Tiny.name())) {
+
+		int gold = Dungeon.hero.gold();
+
+		if (gold != lastValue && !RemixedDungeon.toolStyle().equals(Tool.Size.Tiny.name())) {
 			
-			lastValue = Dungeon.hero.gold();
+			lastValue = gold;
 			
 			tf.text( Integer.toString( lastValue ) );
 

@@ -30,6 +30,11 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
         }
     }
 
+    @Override
+    public boolean isReady() {
+        return Appodeal.isLoaded(Appodeal.INTERSTITIAL);
+    }
+
     private class AppodealInterstitialCallbacks implements InterstitialCallbacks {
         @Override
         public void onInterstitialLoaded(boolean b) {

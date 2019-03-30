@@ -143,9 +143,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 	}
 
 	public void stop() {
-		if (isPlaying()) {
-			player.stop();
-		}
+
 		if(player!=null) {
 			player.release();
 			player = null;

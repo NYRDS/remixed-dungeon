@@ -39,6 +39,7 @@
     <string name="gdpr_disagree">아니요, 괜찮습니다.</string>
     <string name="gdpr_choose">선택해 주세요.</string>
 
+    <string name="Mob_StaHuntingStatus2">이 %1$s은/는 %2$s을/를 쫒고 있습니다</string>
     <string name="WndSaveSlotSelect_LoadAutoSave">자동 세이브-로드</string>
 
     </resources>

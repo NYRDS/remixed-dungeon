@@ -9,6 +9,8 @@ import com.google.firebase.FirebaseApp;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 import io.fabric.sdk.android.Fabric;
@@ -27,6 +29,18 @@ public class RemixedDungeonApp extends MultiDexApplication {
 	@Nullable
 	private static HqmApi hqApi;
 
+	static class HqSdkCrash extends Exception {
+		HqSdkCrash(Throwable cause) {
+			super(cause);
+		}
+	}
+
+	static class HqSdkError extends Exception {
+		HqSdkError(Throwable cause) {
+			super(cause);
+		}
+	}
+
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -37,22 +51,27 @@ public class RemixedDungeonApp extends MultiDexApplication {
 		Fabric.with(this, new Crashlytics());
 
 		//HQSdk.enableDebug(true);
-		HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false,
-				new HqmCallback<HqmApi>() {
 
-					@Override
-					public void onSuccess(HqmApi hqmApi) {
-						hqApi = hqmApi;
-						hqSdkStarted = 1;
+		try {
+			HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false,
+					new HqmCallback<HqmApi>() {
+
+						@Override
+						public void onSuccess(HqmApi hqmApi) {
+							hqApi = hqmApi;
+							hqSdkStarted = 1;
+						}
+
+						@Override
+						public void onError(@NotNull Throwable throwable) {
+							EventCollector.logException(new HqSdkError(throwable));
+						}
 					}
 
-					@Override
-					public void onError(@NotNull Throwable throwable) {
-						EventCollector.logException(throwable, "hq sdk init error");
-					}
-				}
-
-		);
+			);
+		} catch (Throwable hqSdkCrash) {
+			EventCollector.logException(new HqSdkCrash(hqSdkCrash));
+		}
 
 
 		try {
@@ -72,6 +91,19 @@ public class RemixedDungeonApp extends MultiDexApplication {
 			hqApi.start(new InstalledApplicationsCollector());
 			hqApi.startSystemEventsTracking();
 			hqSdkStarted++;
+
+			HQSdk.getUserGroups(new HqmCallback<List<String>>() {
+
+				@Override
+				public void onError(@NotNull Throwable throwable) {
+					EventCollector.logException(new HqSdkError(throwable));
+				}
+
+				@Override
+				public void onSuccess(List<String> list) {
+					//TODO do something here
+				}
+			});
 		}
 	}
 

@@ -3,8 +3,9 @@ package com.nyrds.pixeldungeon.mobs.npc;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
-import com.nyrds.pixeldungeon.support.RewardVideo;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
@@ -24,7 +25,7 @@ public class ServiceManNPC extends ImmortalNPC {
 
     public ServiceManNPC() {
         if (EuConsent.getConsentLevel() > EuConsent.UNKNOWN) {
-            RewardVideo.init();
+            AdsUtils.initRewardVideo();
         }
     }
 
@@ -44,7 +45,7 @@ public class ServiceManNPC extends ImmortalNPC {
             Game.scene().add(new WndEuConsent() {
                 @Override
                 public void done() {
-                    RewardVideo.init();
+                    AdsUtils.initRewardVideo();
                 }
             });
             return true;
@@ -64,7 +65,7 @@ public class ServiceManNPC extends ImmortalNPC {
 
         Game.instance().runOnUiThread(() ->
         {
-            boolean result = RewardVideo.isReady();
+            boolean result = Ads.isRewardVideoReady();
             RemixedDungeon.pushUiTask(() -> {
                         if (result) {
                             GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit(), getReward()));

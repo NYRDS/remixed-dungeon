@@ -262,25 +262,23 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 			return;
 		}
 
-		Game.instance().executor.execute(new Runnable() {
-			@Override
-			public void run() {
-				try {
-					boolean res = packFilesToSnapshot(_PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
-						@Override
-						public boolean accept(File pathname) {
-							String filename = pathname.getName();
-							if (filename.equals(Badges.BADGES_FILE)) {
-								return true;
-							}
+		Game.instance().executor.execute(() -> {
+			try {
+				boolean res = packFilesToSnapshot(_PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+					@Override
+					public boolean accept(File pathname) {
+						String filename = pathname.getName();
+						if (filename.equals(Badges.BADGES_FILE)) {
+							return true;
+						}
 
-							if (filename.equals(Library.getLibraryFile())) {
-								return true;
-							}
+						if (filename.equals(Library.getLibraryFile())) {
+							return true;
+						}
 
-							if (filename.equals(Rankings.RANKINGS_FILE)) {
-								return true;
-							}
+						if (filename.equals(Rankings.RANKINGS_FILE)) {
+							return true;
+						}
 
                             return filename.startsWith("game_") && filename.endsWith(".dat");
                         }
@@ -289,7 +287,7 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 				}catch (Exception e) {
 					EventCollector.logException(e);
 					Game.toast("Error while uploading save to cloud: %s", e.getMessage());
-				}
+
 			}
 		});
 	}
@@ -300,12 +298,9 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 			return;
 		}
 
-		Game.instance().executor.execute(new Runnable() {
-			@Override
-			public void run() {
-				boolean res = unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(""));
-				resultCallback.status(res);
-			}
+		Game.instance().executor.execute(() -> {
+			boolean res = unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(""));
+			resultCallback.status(res);
 		});
 	}
 

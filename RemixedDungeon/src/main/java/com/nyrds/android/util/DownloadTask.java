@@ -72,7 +72,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
             }
 
         } catch (Exception e) {
-            EventCollector.logException(e);
+            EventCollector.logException(new ModError("Downloading",e));
         }
 
         return result;
