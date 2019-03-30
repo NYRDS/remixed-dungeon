@@ -38,6 +38,7 @@
     <string name="gdpr_disagree">Nie, dziękuję </string>
     <string name="gdpr_choose">Proszę podjąć decyzję </string>
 
+    <string name="Mob_StaHuntingStatus2">Ten %1$s poluje na%2$s</string>
     <string name="WndSaveSlotSelect_LoadAutoSave">Wczytaj auto-zapis</string>
 
     <string name="TownScript_NeedWeapon">Nie pójdę do lochu gołymi rękami! \ Może warto najpierw odwiedzić sklep miejski?</string>
