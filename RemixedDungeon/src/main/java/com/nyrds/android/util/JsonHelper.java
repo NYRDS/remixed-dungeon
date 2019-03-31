@@ -1,6 +1,8 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.noosa.Animation;
+import com.watabou.noosa.TextureFilm;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,6 +16,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import androidx.annotation.NonNull;
@@ -83,4 +87,23 @@ public class JsonHelper {
 		}
 	}
 
+	public static Animation readAnimation(JSONObject root, String animKind, TextureFilm film, int offset) throws JSONException {
+		JSONObject jsonAnim = root.getJSONObject(animKind);
+
+		Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));
+
+		JSONArray jsonFrames = jsonAnim.getJSONArray("frames");
+
+		List<Integer> framesSeq = new ArrayList<>(jsonFrames.length());
+
+		int nextFrame;
+
+		for (int i = 0; (nextFrame = jsonFrames.optInt(i, -1)) != -1; ++i) {
+			framesSeq.add(nextFrame);
+		}
+
+		anim.frames(film, framesSeq, offset);
+
+		return anim;
+	}
 }

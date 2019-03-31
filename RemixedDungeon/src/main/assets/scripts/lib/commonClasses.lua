@@ -90,8 +90,10 @@ local Wands = {
     wandOfFirebolt = wandOfFirebolt
 }
 
-local ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory")
-local MobFactory  = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory")
+local ItemFactory     = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory")
+local MobFactory      = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory")
+local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.EffectsFactory")
+
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -102,6 +104,7 @@ local RPD = {
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
     MobFactory = MobFactory,
     ItemFactory = ItemFactory,
+    EffectsFactory = EffectsFactory,
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
@@ -203,6 +206,10 @@ local RPD = {
 
     zapEffect = function (from, to, zapEffect)
         GameScene:zapEffect(from, to, zapEffect)
+    end,
+
+    clipEffect = function(cell,effectName)
+        GameScene:clipEffect(cell,effectName)
     end,
 
     item = function(itemClass, quantity)

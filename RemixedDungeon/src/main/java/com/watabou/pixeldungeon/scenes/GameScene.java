@@ -17,8 +17,11 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.effects.CustomClipEffect;
+import com.nyrds.pixeldungeon.effects.EffectsFactory;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
@@ -608,6 +611,14 @@ public class GameScene extends PixelScene {
 
     public static void zapEffect(int from, int to, String zapEffect) {
         ZapEffect.zap(scene.effects, from, to, zapEffect);
+    }
+
+    @LuaInterface
+    public static void clipEffect(int cell, String effectName) {
+        CustomClipEffect effect = EffectsFactory.getEffectByName(effectName);
+        effect.place(cell);
+        scene.effects.add(effect);
+        effect.playAnimOnce();
     }
 
     public static Ripple ripple(int pos) {

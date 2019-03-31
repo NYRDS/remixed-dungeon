@@ -5,7 +5,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ModError extends RuntimeException {
-    ModError(String s, Exception e) {
+    public ModError(String s, Exception e) {
         super(s,e);
         doReport(s, e);
     }

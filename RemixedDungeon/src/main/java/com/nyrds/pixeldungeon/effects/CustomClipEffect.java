@@ -1,25 +1,36 @@
 package com.nyrds.pixeldungeon.effects;
 
+import com.nyrds.android.util.JsonHelper;
 import com.watabou.noosa.Animation;
-import com.watabou.noosa.CompositeMovieClip;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 
-public class CustomClipEffect extends CompositeMovieClip implements MovieClip.Listener {
+import org.json.JSONException;
+import org.json.JSONObject;
 
-	private TextureFilm frames;
+public class CustomClipEffect extends MovieClip implements MovieClip.Listener, ICustomEffect {
+
 	private Callback    onAnimComplete;
 	private PointF      centerShift;
+	private TextureFilm film;
+
+	public CustomClipEffect(){
+	}
 
 	public CustomClipEffect(Object texture, int xs, int ys) {
+		init(texture, xs, ys);
+	}
+
+	private void init(Object texture, int xs, int ys) {
 		texture(texture);
 
-		frames = new TextureFilm(texture,xs , ys);
-		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2, -(ys-DungeonTilemap.SIZE) / 2);
-		origin.set(xs / 2, ys / 2);
+		film = new TextureFilm(texture,xs,ys);
+		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2.f,
+				-(ys-DungeonTilemap.SIZE) / 2.f);
+		origin.set(xs / 2.f, ys / 2.f);
 	}
 
 	public void place(int cell) {
@@ -28,16 +39,19 @@ public class CustomClipEffect extends CompositeMovieClip implements MovieClip.Li
 		y = p.y + centerShift.y;
 	}
 
-	@Override
-	public void update() {
-		super.update();
+	public void playAnimOnce() {
+		onAnimComplete = this::killAndErase;
+		listener = this;
+		play(curAnim, true);
 	}
 
-	public void setAnim(int fps, boolean looped, Callback animComplete, int... framesSeq) {
-		curAnim = new Animation(fps, looped);
-		curAnim.frames(frames, framesSeq);
-		onAnimComplete = animComplete;
-		listener = this;
+	@Override
+	public void setupFromJson(JSONObject json) throws JSONException {
+		init(json.getString("texture"),
+				json.getInt("width"),
+				json.getInt("height"));
+
+		curAnim = JsonHelper.readAnimation(json,"anim",film,0);
 	}
 
 	public void playAnim(Animation anim,Callback animComplete) {

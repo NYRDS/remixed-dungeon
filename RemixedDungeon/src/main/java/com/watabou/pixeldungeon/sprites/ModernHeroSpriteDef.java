@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
@@ -405,7 +406,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		deathEffect.place(ch.getPos());
 		getParent().add(deathEffect);
 		deathEffect.setVisible(true);
-		deathEffect.playAnim(die, () -> deathEffect.killAndErase());
+		deathEffect.playAnim(die, Util.nullCallback);
+
+		//deathEffect.playAnim(die, () -> deathEffect.killAndErase());
 		killAndErase();
 	}
 

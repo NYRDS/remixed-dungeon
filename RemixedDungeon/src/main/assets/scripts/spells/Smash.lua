@@ -45,6 +45,9 @@ return spell.init{
         end
 
         local function smash(cell)
+
+            RPD.clipEffect(cell,"lava_fountain")
+
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
                 RPD.affectBuff(victim, RPD.Buffs.Vertigo, chr:skillLevel())

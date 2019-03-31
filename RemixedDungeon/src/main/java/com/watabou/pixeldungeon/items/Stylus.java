@@ -118,16 +118,13 @@ public class Stylus extends Item {
 		return 50 * quantity();
 	}
 	
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				if(item instanceof Armor){
-					inscribeArmor ( (Armor)item );
-				}
-				if(item instanceof BlankScroll){
-					inscribeScroll( (BlankScroll)item );
-				}
+	private final WndBag.Listener itemSelector = item -> {
+		if (item != null) {
+			if(item instanceof Armor){
+				inscribeArmor ( (Armor)item );
+			}
+			if(item instanceof BlankScroll){
+				inscribeScroll( (BlankScroll)item );
 			}
 		}
 	};

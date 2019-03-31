@@ -13,9 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class MobSpriteDef extends MobSprite {
@@ -124,23 +122,7 @@ public class MobSpriteDef extends MobSprite {
 	}
 
 	protected Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
-		JSONObject jsonAnim = root.getJSONObject(animKind);
-
-		Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));
-
-		List<Integer> framesSeq = new ArrayList<>(16);
-
-		JSONArray jsonFrames = jsonAnim.getJSONArray("frames");
-
-		int nextFrame;
-
-		for (int i = 0; (nextFrame = jsonFrames.optInt(i, -1)) != -1; ++i) {
-			framesSeq.add(nextFrame);
-		}
-
-		anim.frames(film, framesSeq, kind * framesInRow);
-
-		return anim;
+		return JsonHelper.readAnimation(root, animKind, film, kind * framesInRow);
 	}
 
 	@Override
