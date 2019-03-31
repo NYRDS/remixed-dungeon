@@ -3,6 +3,8 @@
     <!-- Item descriptions -->
     <!-- STRINGS OF ElvenBow CLASS -->
     <string name="ElvenBow_Name">elven bow</string>
+    <string name="ElvenBow_Gender">masculine</string>
+
     <string name="ElvenBow_Info">An exceptional example of elven craftsmanship. It\'s clearly more effective and accurate than a regular wooden bow.</string>
 
     <!-- STRINGS OF RatHide CLASS -->
