@@ -23,8 +23,8 @@ public class AdsUtils {
         interstitialFails.put(new AdMobComboProvider(), -2);
 
         if(!Game.instance().checkOwnSignature()) {
-            bannerFails.put(new AAdsComboProvider(), -3);
-            interstitialFails.put(new AAdsComboProvider(), -3);
+            bannerFails.put(new AAdsComboProvider(), 0);
+            interstitialFails.put(new AAdsComboProvider(), 0);
         }
 
         if(AppodealAdapter.usable()) {
