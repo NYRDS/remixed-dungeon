@@ -435,6 +435,10 @@ public class GameScene extends PixelScene {
             return;
         }
 
+        if(!Dungeon.level.cellValid(Dungeon.hero.getPos())){
+            return;
+        }
+
         super.update();
 
         water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed);

@@ -124,13 +124,10 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 			contents.writeBytes(content);
 
 			PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
-			pendingResult.setResultCallback(new ResultCallback<Snapshots.CommitSnapshotResult>() {
-				@Override
-				public void onResult(@NonNull Snapshots.CommitSnapshotResult commitSnapshotResult) {
-					if (commitSnapshotResult.getStatus().isSuccess()) {
-					} else {
-						EventCollector.logEvent("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
-					}
+			pendingResult.setResultCallback(commitSnapshotResult -> {
+				if (commitSnapshotResult.getStatus().isSuccess()) {
+				} else {
+					EventCollector.logEvent("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
 				}
 			});
 		}
@@ -196,7 +193,7 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 		OutputStream out = streamToSnapshot(id);
 		try {
 			FileSystem.zipFolderTo(out, dir, 0, filter);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			EventCollector.logException(e);
 			return false;
 		}
