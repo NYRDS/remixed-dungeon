@@ -88,34 +88,47 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
 	static public void startScene() {
 		if(hqSdkStarted == 1 && hqApi != null) {
-			hqApi.start(new InstalledApplicationsCollector());
-			hqApi.startSystemEventsTracking();
-			hqSdkStarted++;
+			try {
+				hqApi.start(new InstalledApplicationsCollector());
+				hqApi.startSystemEventsTracking();
+				hqSdkStarted++;
 
-			HQSdk.getUserGroups(new HqmCallback<List<String>>() {
+				HQSdk.getUserGroups(new HqmCallback<List<String>>() {
 
-				@Override
-				public void onError(@NotNull Throwable throwable) {
-					EventCollector.logException(new HqSdkError(throwable));
-				}
+					@Override
+					public void onError(@NotNull Throwable throwable) {
+						EventCollector.logException(new HqSdkError(throwable));
+					}
 
-				@Override
-				public void onSuccess(List<String> list) {
-					//TODO do something here
-				}
-			});
+					@Override
+					public void onSuccess(List<String> list) {
+						//TODO do something here
+					}
+				});
+			} catch (Throwable hqSdkCrash) {
+				EventCollector.logException(new HqSdkCrash(hqSdkCrash));
+			}
 		}
 	}
 
 	static public int getExperimentSegment(String key, int vars) {
 		if(hqApi==null) {
+			EventCollector.logEvent("experiments",key,"hqApi not ready");
 			return -1;
 		}
 
-		Long hqsdkRet = HQSdk.getTestGroup(key,vars);
-		if(hqsdkRet != null) {
-			return hqsdkRet.intValue();
+		try {
+			Long hqsdkRet = HQSdk.getTestGroup(key, vars);
+			if (hqsdkRet != null) {
+				int groupId = hqsdkRet.intValue();
+				EventCollector.logEvent("experiments", key, Integer.toString(groupId));
+				return groupId;
+			}
+		} catch (Throwable hqSdkCrash) {
+			EventCollector.logEvent("experiments",key,"hqApi crash");
+			EventCollector.logException(new HqSdkCrash(hqSdkCrash));
 		}
+		EventCollector.logEvent("experiments", key, Integer.toString(-1));
 		return -1;
 	}
 
