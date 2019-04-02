@@ -17,8 +17,8 @@ return spell.init{
             info          = "Smash_Info",
             magicAffinity = "Combat",
             targetingType = "self",
-            level         = 3,
-            spellCost     = 3,
+            level         = 1,
+            spellCost     = 1,
             cooldown      = 10,
             castTime      = 0.5
         }
