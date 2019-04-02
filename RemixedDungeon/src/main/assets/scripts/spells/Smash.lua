@@ -11,8 +11,8 @@ local spell = require "scripts/lib/spell"
 return spell.init{
     desc  = function ()
         return {
-            image         = 1,
-            imageFile     = "spellsIcons/necromancy.png",
+            image         = 4,
+            imageFile     = "spellsIcons/warrior.png",
             name          = "Smash_Name",
             info          = "Smash_Info",
             magicAffinity = "Combat",
@@ -46,7 +46,7 @@ return spell.init{
 
         local function smash(cell)
 
-            RPD.clipEffect(cell,"lava_fountain")
+            RPD.clipEffect(chr:getPos(),"smash")
 
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
