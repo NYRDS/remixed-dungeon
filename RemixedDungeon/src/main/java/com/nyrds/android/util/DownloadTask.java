@@ -15,6 +15,7 @@ import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
 import info.guardianproject.netcipher.NetCipher;
+import info.guardianproject.netcipher.client.TlsOnlySocketFactory;
 
 public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
 
@@ -39,6 +40,8 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
             EventCollector.startTrace("download");
 
             HttpsURLConnection ucon = NetCipher.getCompatibleHttpsURLConnection(url);
+
+            ucon.setSSLSocketFactory(new TlsOnlySocketFactory());
 
             ucon.setReadTimeout(2500);
             ucon.setInstanceFollowRedirects(true);
