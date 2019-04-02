@@ -40,6 +40,8 @@
 	<string name="WndTradeItem_BuyN">Kup %1$d za %2$dg</string>
 	<string name="WndTradeItem_BuyAll">Kup wszystko za %dg</string>
 	<string name="WndTradeItem_SellN">Sprzedaj %1$d za %2$dg</string>
+	<string name="WndBag_BuySubtitle">Zebrałeś %d złota</string>
+
 	<string name="town_deco_weaponboard_name">Broń</string>
 	<string name="town_deco_weaponboard_desc">Jakaś broń wisząca na desce.</string>
 	<string name="town_deco_shieldboard_name">Tarcze</string>
@@ -48,4 +50,31 @@
 	<string name="town_deco_armoronhanger_desc">Jakaś zbroja wisząca na wieszaku.</string>
 	<string name="town_deco_potions_name">Mikstury.</string>
 	<string name="town_deco_potions_desc">Jakieś milstury na półce.</string>
-	</resources>
+	<string name="town_deco_wardrobe_name">Drewniana szafa</string>
+	<string name="town_deco_wardrobe_desc">Duża drewniana szafa.</string>
+
+	<string name="town_deco_porch_name">Ganek</string>
+	<string name="town_deco_porch_desc">Ganek zrobiony z drewna</string>
+
+	<string name="town_deco_common_bed_name">Łóżko</string>
+	<string name="town_deco_common_bed_desc">Zwyczajne łożko</string>
+
+	<string name="town_deco_wooden_table_name">Drewniany stół</string>
+	<string name="town_deco_wooden_table_desc">To bardzo dobrze zrobiony stół</string>
+
+	<string name="town_deco_wooden_bench_name">Drewniana ławka.</string>
+	<string name="town_deco_wooden_bench_desc">Ławka zrobiona z drewna, wygląda na niezbyt wygodną do siedzenia.</string>
+
+	<string name="town_deco_covered_table_name">Stół</string>
+	<string name="town_deco_covered_table_desc">Drewniany stół z prostym białym obrusem.</string>
+
+	<string name="town_deco_pedestal_name">Piedestał</string>
+	<string name="town_deco_pedestal_desc">Piedestał z świętą księgą.</string>
+
+	<string name="town_deco_shelf_name">Półki</string>
+	<string name="town_deco_shelf_desc">Puste półki</string>
+
+	<string name="WndPriest_Instruction2_m">Witaj synu, Witaj w świętym kościele Wielkiego pana podziemi!</string>
+	<string name="WndPriest_Instruction2_f">Witaj Córko Witaj w świętym kościele Wielkiego pana podziemi!</string>
+	<string name="WndPriest_Instruction2">Jeśli szukasz pomocy, Ja mogę zapewnić ci leczenie tylko za %dzłotych monet! jeśli szukasz błogosławieństwa albo nie daj boże masz klątwę, proszę spotkaj się z biskupem w naszym pokornym kościele.</string>
+</resources>

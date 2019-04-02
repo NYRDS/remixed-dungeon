@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="Welcome_Ok">棒極了！</string>
-  <string name="Welcome_Title">歡迎！</string>
+  <string name="Welcome_Ok">棒极了！</string>
+  <string name="Welcome_Title">欢迎！</string>
+  <string name="Welcome_Text_28_1">
+remix.28.1 \ n
+-城镇大改造\n
+-大量gfx改进和修复\n
+-新飞镖和箭\n
+现在所有的怪物(亡灵除外)都会重新生成\n
+-现在力量将为所有职业提供额外的伤害加成
+-算命师现在有一只黑猫
+- 豺狼人的战斧在投掷目标时不会打断
+-</string>
 </resources>

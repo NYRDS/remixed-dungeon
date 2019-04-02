@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF ShadowLord CLASS-->
-  <string name="ShadowLord_Name">władca cieni</string>
+  <string name="ShadowLord_Name">Władca cieni</string>
   <string name="ShadowLord_Gender">rodzaj męski</string>
-  <string name="ShadowLord_Name_Objective">Lord Cienia</string>
-  <string name="ShadowLord_Desc">Stworzenie stworzone z czystego zła i ciemności. Wielu wierzy, że sam jest Starym Bogiem, biorąc pod uwagę jego siłę, podczas gdy inni zakładają, że jest on jedynie strażnikiem komnat Starego Boga.</string>
+  <string name="ShadowLord_Name_Objective">Władca Cienia</string>
+  <string name="ShadowLord_Desc">Stworzenie stworzone z czystego zła i ciemności. Wielu wierzy, że sam jest Starym Bogiem, biorąc pod uwagę jak potężny jest podczas gdy inni zakładają, że jest on jedynie strażnikiem komnat Starego Boga.</string>
   <string name="ShadowLord_Intro">Przygotuj się!</string>
-  <string name="ShadowLord_Death">Nie...</string>
+  <string name="ShadowLord_Death">Nieeee...</string>
   <string name="AllowStatisticsCollectionScene_Title">Kolekcja statystyk użytkowania</string>
   <string name="AllowStatisticsCollectionScene_Request">Jeśli pozwolisz, Remixed Dungeon będzie zbierać dane odnośnie Twojej rozgrywki. Informacje to posłużą do: 
 - namierzania i naprawy pomniejszych błędów
@@ -14,9 +14,9 @@
 - naprawy problemów z wydajnością na poszczególnych urządzeniach
 - publikowania zabawnych ciekawostek od czasu do czasu :) 
 W każdym momencie możesz zmienić swoją decyzję. </string>
-  <string name="AllowStatisticsCollectionScene_Allow">Dopuść</string>
+  <string name="AllowStatisticsCollectionScene_Allow">Pozwól</string>
   <string name="AllowStatisticsCollectionScene_Deny">Zaprzecz</string>
-  <string name="Darkness_Info">Wygląda jak kawałki wiecznej ciemności unoszące się w powietrzu</string>
+  <string name="Darkness_Info">Wygląda jak kawałki eterycznej ciemności unoszące się w powietrzu</string>
   <string name="WndSelectLanguage_ImproveTranslation">Proszę, pomóż udoskonalić tłumaczenie Remixed Dungeon. </string>
   <string name="WndSelectLanguage_LinkToTranslationSite">Kliknij tutaj by dołączyć do zespołu tłumaczącego Remixed Dungeon. </string>
 </resources>

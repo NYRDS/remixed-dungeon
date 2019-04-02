@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF TitleScene CLASS-->
-  <string name="TitleScene_Play">開始遊戲</string>
+  <string name="TitleScene_Play">开始游戏</string>
   <string name="TitleScene_Highscores">排行榜</string>
   <string name="TitleScene_Badges">成就</string>
-  <string name="TitleScene_About">關於我們</string>
-  <string name="TitleScene_InternalStorageLow">手機內部存儲空間不足，您的進度可能會丟失！</string>
+  <string name="TitleScene_About">关于我们</string>
+  <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，您的进度可能会丢失！</string>
   <!--STRINGS OF AboutScene CLASS-->
-  <string name="AboutScene_Code">源碼：</string>
+  <string name="AboutScene_Txt_Intro">混合的像素地牢是由NYRDS以Watabou的Pixel Dungeon源码为基础制作的。</string>
+  <string name="AboutScene_Code">源码:</string>
   <string name="AboutScene_Graphics">圖畫：</string>
   <string name="AboutScene_Music">音樂：</string>
   <string name="AboutScene_Sound">音效：</string>
@@ -16,7 +17,7 @@
   <string name="AboutScene_OurSite">我們的網址：</string>
   <string name="AboutScene_Snd">發送郵件</string>
   <string name="AboutScene_Translation">本地化的功臣：</string>
-  <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
+  <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901;丘比</string>
   <!--STRINGS OF RankingsScene CLASS-->
   <string name="RankingsScene_Title">最高紀錄</string>
   <string name="RankingsScene_Total">總遊戲次數</string>
@@ -26,14 +27,13 @@
   <string name="StartScene_Load">讀取進度</string>
   <string name="StartScene_New">新遊戲</string>
   <string name="StartScene_Erase">清除進度</string>
-  <string name="StartScene_Depth">層數：%1$d，等級：%2$d
-</string>
+  <string name="StartScene_Depth">层数：%1$d，等级: %2$d</string>
   <string name="StartScene_Really">確定要重新開始？</string>
   <string name="StartScene_Warning">您當前的所有進度會被清除。</string>
   <string name="StartScene_Yes">是的，重新開始</string>
   <string name="StartScene_No">不，返回主目錄</string>
-  <string name="StartScene_Unlock">使用其他角色擊敗第3個boss來解鎖這個角色</string>
-  <string name="StartScene_UnlockElf">使用其他角色擊敗第3個boss來解鎖這個角色</string>
+  <string name="StartScene_Unlock">使用其他角色击败第3个boss来解锁这个角色</string>
+  <string name="StartScene_UnlockElf">使用其他角色击败第4个boss来解锁这个角色</string>
   <string name="StartScene_WinGame">使用任意角色完成遊戲來解鎖「挑戰」。</string>
   <string name="StartScene_DifficultySelect">選擇難度</string>
   <string name="StartScene_DifficultyEasy">簡單模式(有廣告)</string>

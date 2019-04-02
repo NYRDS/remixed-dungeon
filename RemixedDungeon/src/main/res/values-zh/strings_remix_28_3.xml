@@ -1,9 +1,51 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="DarkSacrifice_Name">黑暗献祭</string>
+    <string name="DarkSacrifice_Info">牺牲你控制的单位造成爆炸。爆炸所覆盖的区域将取决于单位的剩余血量和您的技能水平。</string>
     <string name="DarkSacrifice_Ok">我的此生归你了！</string>
+    <string name="DarkSacrifice_Self">为了天灾！</string>
+    <string name="DarkSacrifice_Resist">你没有能力控制我！</string>
+    <string name="DarkSacrifice_Hint">选择你忠诚的仆人来献祭！</string>
+
+    <string name="Exhumation_Name">控灵</string>
+    <string name="Exhumation_Info">打开坟墓本身就是一种险恶的行为，但对于一个掌控死亡的人来说这还不够。这个黑暗法术的使用者有很大的机会（它将随着使用使的法术强度而成长）能控制埋葬在这里的可怜灵魂。</string>
+    <string name="Exhumation_NoGrave">这里没有坟墓可以进行施法。</string>
+    <string name="Exhumation_Ok">我会服从于你。</string>
+
+    <string name="RaiseDead_Name">回魂</string>
+    <string name="RaiseDead_Info">试图复活并控制一个（法术需要相当新鲜的材料）己死生物。当使用这个法术时，请记住：几乎任何生物都可以被复活，但并非每个人的意志都容易扭曲。</string>
+    <string name="RaiseDead_NoSpace">“回魂”使用失败，因为附近没有足够空间。</string>
+    <string name="RaiseDead_NoKill">你得先杀了一个生物，然后再来使用。</string>
+
     <string name="RawFish_Name">生鱼</string>
+    <string name="RawFish_Info">生鱼肉，最好别生吃。</string>
+    <string name="RawFish_Taste">鱼腥！</string>
+
     <string name="FrozenFish_Name">冻鱼</string>
+    <string name="FrozenFish_Info">冰冻的鱼，你感觉它好像动了一下，就像是活的一样。</string>
+
     <string name="FriedFish_Name">熟鱼</string>
+    <string name="FriedFish_Info">烤鱼，看起来很好吃。丘比认证:绝对美味</string>
+    <string name="FriedFish_Taste">美味的！</string>
+
     <string name="RottenFish_Name">烂鱼</string>
-    </resources>
+    <string name="RottenFish_Info">腐烂的鱼，闻起来很难闻。</string>
+    <string name="RottenFish_Taste">恶心！</string>
+
+    <string name="gdpr_title">个性化广告体验</string>
+    <string name="gdpr_agree">是的，我同意。</string>
+    <string name="gdpr_disagree">不，谢谢</string>
+    <string name="gdpr_choose">请做您的选择</string>
+
+    <string name="Mob_StaHuntingStatus2">这个 %1$s 正在搜索 %2$s</string>
+    <string name="Mob_StaFleeingStatus2">这个 %1$s 正在逃离 %2$s</string>
+
+    <string name="Mob_StaTerrorStatus">这个 %1$s 吓坏了</string>
+    <string name="Mob_StaTerrorStatus2">这个 %1$s 被 %2$s 吓坏了</string>
+
+    <string name="Mob_StaAmokStatus">这个 %1$s 正在发狂</string>
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">加载自动保存</string>
+
+    <string name="TownScript_NeedWeapon">我不会赤手空拳去地牢！\n也许值得先去镇上的商店看看？</string>
+</resources>

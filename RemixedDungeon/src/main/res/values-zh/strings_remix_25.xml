@@ -3,8 +3,8 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF SpiderArmor CLASS -->
     <string name="SpiderArmor_Name">蜘蛛护甲</string>
-    <string name="SpiderArmor_Info">这种铠甲是由一些老蜘蛛尸体和一些奇怪的布料组成的。令人惊讶的是，它里面依然包含着蜘蛛的吐丝功能。只要你给它施加足够的力量它就能喷出网来。此外这蜘蛛脚一样的鞋子能让你在网上自由移动。</string>
-    <string name="SpiderArmor_Gender">feminine</string>
+    <string name="SpiderArmor_Info">这种铠甲是由一些老蜘蛛尸体和一些奇怪的布料组成的。令人惊讶的是，它里面依然包含着蜘蛛的吐丝功能。只要它受到足够的力量就能喷出网来。此外这蜘蛛脚一样的鞋子能让你在网上自由移动。</string>
+    <string name="SpiderArmor_Gender">女孩</string>
 
     <!-- STRINGS OF BlackSkull CLASS -->
     <string name="BlackSkull_Name">漆黑头骨</string>
@@ -48,6 +48,8 @@
     <string name="JarOfSouls_Name">魂之灵龛</string>
     <string name="JarOfSouls_Gender">陽剛的</string>
     <string name="JarOfSouls_Name_Objective">魂之灵龛</string>
+    <string name="JarOfSouls_Desc">这个旧罐子上描绘的头骨里的眼睛正在闪闪发亮，以及它散发出的奇怪能量，让你感到不安。</string>
+
     <!-- STRINGS OF Lich CLASS -->
     <string name="Lich_Name">巫妖</string>
     <string name="Lich_Gender">陽剛的</string>
@@ -70,6 +72,6 @@
     <string name="NecromancerNPC_Intro2">啊哈！一个还没死的冒险者，棒极了！呃，请原谅，你看，本人是位死灵法师。研究死亡和死亡本身是我生活的一部分，但看到同样的事情一遍又一遍的发生实在是十分乏味，这是我在这里出现的原因之一。之前出现了一件惊人的事情，一座_亡灵之城_，死者们的古代城市，终于敞开了它的大门。事实上，我们正站在它的入口旁,还有……我告诉你这些干嘛，拿上这把钥匙先走。我是说，你喜欢冒险和金钱对吧？我会在你之后进去的，我还需要一点准备。</string>
 
     <!-- Badges -->
-    <string name="Badges_Lich_Slain">巫妖已被擊殺</string>
+    <string name="Badges_Lich_Slain">击杀巫妖</string>
 
 </resources>

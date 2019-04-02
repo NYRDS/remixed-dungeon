@@ -2,7 +2,7 @@
 <resources>
 
     <string name="HeroClass_Gnoll">豺狼人</string>
-    <string name="GnollArmor_ACSpecial">號召</string>
+    <string name="GnollArmor_ACSpecial">号召</string>
     <string name="GnollArmor_NotGnoll">只有豺狼人才能穿豺狼甲!</string>
 
     <string name="GnollArmor_Name">豺狼甲</string>

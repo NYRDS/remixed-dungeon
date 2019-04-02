@@ -155,7 +155,7 @@
   <string name="Skeleton_Gender">meski</string>
   <string name="Skeleton_Name_Objective">szkielet</string>
   <string name="Skeleton_Desc">Szkielety to odpowiednio spreparowane kości podróżników i mieszkańców Lochu, którzy zostali ożywieni przez emanację mrocznej magii z głębszych poziomów. Kiedy giną, są tak samo niebezpieczne jak za \"Życia\", ponieważ gdy giną rozpadają się w eksplozji kości raniąc swego zabójcę. </string>
-  <string name="Skeleton_Defense">blok</string>
+  <string name="Skeleton_Defense">Zablokowano</string>
   <string name="Skeleton_Killed">Zginąłeś w wyniku wybuchu kości...</string>
   <!--STRINGS OF Spinner CLASS-->
   <string name="Spinner_Name">jaskiniowy tkacz</string>
@@ -168,10 +168,10 @@
   <string name="Statue_Name_Objective">żywy posąg</string>
   <string name="Statue_Desc">Myślisz że to kolejny brzydki posąg w Lochu, ale jego świecące, czerwone oczy natychmiast podpowiadają, że z nim jest coś nie tak. I ten  _%s_, który dzierży w swych dłoniach jest podejrzanie prawdziwy.</string>
   <!--STRINGS OF Succubus CLASS-->
-  <string name="Succubus_Name">sukkubus</string>
+  <string name="Succubus_Name">sukkub</string>
   <string name="Succubus_Gender">meski</string>
-  <string name="Succubus_Name_Objective">sukkubus</string>
-  <string name="Succubus_Desc">Sukkubusy to demony, które wyglądają jak pociągające (w nieco gotyckim stylu) dziewczyny. Używając piekielnej magii, mogą oczarować bohatera, który nie może zaatakować niczego dopóki urok się nie ulotni. </string>
+  <string name="Succubus_Name_Objective">sukkub</string>
+  <string name="Succubus_Desc">Sukkuby to demony, które wyglądają jak pociągające (w nieco gotyckim stylu) dziewczyny. Używając piekielnej magii, mogą oczarować bohatera, który nie może zaatakować niczego dopóki urok się nie ulotni. </string>
   <!--STRINGS OF Swarm CLASS-->
   <string name="Swarm_Name">Rój Much</string>
   <string name="Swarm_Gender">meski</string>
@@ -210,7 +210,7 @@
   <string name="Yog_Name_Objective">Yog-Dzewa</string>
   <string name="Yog_Desc">Yog-Dzewa to Prastary Bóg, potężna istota z wymiaru Chaosu. Wiek temu starożytne krasnoludy ledwo wygrały wojnę przeciwko jego armii demonów, ale były bezsilne by zabić boga we własnej osobie. Zamiast tego uwięzili go w salach pod ich miastem, wierząc iż jest zbyt słaby by kiedykolwiek powrócić do swej dawnej potęgi.</string>
   <string name="Yog_Info1">...</string>
-  <string name="Yog_Info2">Mam nadzieję, iż to jest iluzja...</string>
+  <string name="Yog_Info2">Mam nadzieję, że to iluzja.</string>
   <string name="RottingFist_Name">gnijąca pięść</string>
   <string name="RottingFist_Gender">meski</string>
   <string name="RottingFist_Name_Objective">gnijąca pięść</string>
