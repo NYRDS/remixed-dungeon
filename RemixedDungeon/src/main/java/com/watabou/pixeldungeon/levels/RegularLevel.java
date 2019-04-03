@@ -679,7 +679,7 @@ public abstract class RegularLevel extends CustomLevel {
 			Room room = randomRoom(Room.Type.STANDARD, 1);
 			if (room != null) {
 				int pos = room.random(this);
-				if (passable[pos]) {
+				if (passable[pos] && getTopLevelObject(pos) == null) {
 					return pos;
 				}
 			}

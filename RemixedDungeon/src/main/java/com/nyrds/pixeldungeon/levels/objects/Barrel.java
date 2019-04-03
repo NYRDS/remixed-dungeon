@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Callback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -49,13 +48,7 @@ public class Barrel extends LevelObject {
 
 		burned = true;
 
-		sprite.playAnim(10, false, new Callback() {
-			@Override
-			public void call() {
-				remove();
-
-			}
-		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4);
+		sprite.playAnim(10, false, () -> remove(), image() + 0, image() + 1, image() + 2, image() + 3, image() + 4);
 
 
 		Sample.INSTANCE.play(Assets.SND_EXPLOSION);
