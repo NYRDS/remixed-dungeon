@@ -1,20 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <!--STRINGS OF IntroScene CLASS-->
-  <string name="IntroScene_Txt">在您之前，已經有許多英雄向地牢進發。有些人攜着財寶和魔法物品滿足載而歸，可是他們大部分人卻杳無音訊。
-
-然而，從未有人成功取回Yendor護符——那個據說被藏在地牢深處的東西。
-
-您認為您已經準備好面對這個挑戰了，更重要的是，你感覺到命運正向您投以一絲微笑。現在，是時候展開屬於您的冒險了！</string>
+  <string name="IntroScene_Txt">在您之前，已经有许多英雄向地牢进发。有些人携着财宝和魔法物品满足载而归，可是他们大部分人却杳无音讯。然而，从未有人成功取回Yendor护符——那个据说被藏在地牢深处的东西。\n\n您认为您已经准备好面对这个挑战了，更重要的是，你感觉到命运女神正向您投以一丝微笑。现在，是时候展开属于您的冒险了！</string>
   <!--STRINGS OF AmuletScene CLASS-->
-  <string name="AmuletScene_Exit">讓這一切結束吧</string>
-  <string name="AmuletScene_Stay">我還有心願未了</string>
-  <string name="AmuletScene_Txt">您終於把Yendor護符握在手中。通過它的力量，您可以征服世界，也可以為人們帶來和平與繁榮，或是其他任何事。無論如何，您的命運將永遠改變，遊戲也將要終結。或者，您也可以作為一個凡人再在這裏
-逗留一會。</string>
+  <string name="AmuletScene_Exit">让这一切结束吧</string>
+  <string name="AmuletScene_Stay">我还有未做之事</string>
+  <string name="AmuletScene_Txt">您终于把Yendor护符握在手中。通过它的“力量”，您可以征服世界，也可以为人们带来“和平”，或是其他任何事。无论如何，您的命运将永远改变，游戏也将要终结。或者，您也可以作为一个凡人再在这里逗留一会，揭开真正的阴谋。</string>
   <!--STRINGS OF GameScene CLASS-->
   <string name="GameScene_Welcome">欢迎来到混合地牢第%d层！</string>
   <string name="GameScene_WelcomeBack">欢迎回到混合地牢第%d层！</string>
-  <string name="GameScene_NightMode">請提高警覺，地牢在晚上會變得更加危險！</string>
+  <string name="GameScene_NightMode">请提高警觉，地牢在晚上会变得更加危险！</string>
   <string name="GameScene_Chasm">您的腳步聲在地牢中迴響。</string>
   <string name="GameScene_Water">您聽到身邊流水潺潺。</string>
   <string name="GameScene_Grass">空氣中彌漫着濃濃的青草香味。</string>
@@ -23,19 +18,19 @@
   <string name="Char_Name">怪物</string>
   <string name="Char_Name_Objective">怪物</string>
   <string-array name="Char_Hit">
-    <item>%1$s攻擊了%2$s</item>
-    <item>%1$s攻擊了%2$s</item>
-    <item>%1$s攻擊了%2$s</item>
+    <item>%1$s攻击了%2$s</item>
+    <item>%1$s攻击了%2$s</item>
+    <item>%1$s攻击了%2$s</item>
   </string-array>
   <string-array name="Char_Kill">
-    <item>%s殺了您...</item>
-    <item>%s殺了您...</item>
-    <item>%s殺了您...</item>
+    <item>%s杀了你......</item>
+    <item>%s杀了你......</item>
+    <item>%s杀了你......</item>
   </string-array>
   <string-array name="Char_Defeat">
-    <item>%1$s擊敗了%2$s</item>
-    <item>%1$s擊敗了%2$s</item>
-    <item>%1$s擊敗了%2$s</item>
+    <item>%1$s击杀了%2$s</item>
+    <item>%1$s击杀了%2$s</item>
+    <item>%1$s击杀了%2$s</item>
   </string-array>
   <string name="Char_YouMissed">%1$s %2$s了您的攻擊</string>
   <string name="Char_SmbMissed">%1$s%2$s了%3$s 的攻擊</string>
@@ -88,26 +83,26 @@
   </string-array>
   <!--STRINGS OF Challenges CLASS-->
   <string-array name="Challenges_Names">
-    <item>縮餐節食</item>
-    <item>信念護體</item>
-    <item>恐藥病癖</item>
-    <item>荒蕪之地</item>
-    <item>群體智能</item>
-    <item>沒入黑暗</item>
+    <item>缩餐节食</item>
+    <item>信念护体</item>
+    <item>恐药病癖</item>
+    <item>荒芜之地</item>
+    <item>群体智能</item>
+    <item>没入黑暗</item>
   </string-array>
   <!--STRINGS OF Journal CLASS-->
   <string name="Journal_WellHealt">生命之泉</string>
   <string name="Journal_WellAwareness">全知之水</string>
   <string name="Journal_WellTransmut">嬗化之井</string>
-  <string name="Journal_Alchemy">煉藥鍋</string>
-  <string name="Journal_Garden">花園</string>
+  <string name="Journal_Alchemy">炼药锅</string>
+  <string name="Journal_Garden">暗影花房</string>
   <string name="Journal_Statue">活石像</string>
-  <string name="Journal_Ghost">悲靈</string>
+  <string name="Journal_Ghost">悲伤幽灵</string>
   <string name="Journal_Wandmaker">老杖匠</string>
-  <string name="Journal_Troll">巨魔鐵匠</string>
-  <string name="Journal_Imp">野心勃勃的小鬼</string>
+  <string name="Journal_Troll">巨魔铁匠</string>
+  <string name="Journal_Imp">野心勃勃的小恶魔</string>
   <!--STRINGS OF WndBlacksmith CLASS-->
-  <string name="WndBlacksmith_Prompt">好吧，說好交易要一諾千金，我可以把2件相同的物品合成為一件更好質素的。</string>
+  <string name="WndBlacksmith_Prompt">好吧，交易要一诺千金，我能帮你把2件相同的物品合成为一件更好品质的。</string>
   <string name="WndBlacksmith_Select">選擇一件物品重鑄</string>
   <string name="WndBlacksmith_Reforge">重鑄它們</string>
   <!--STRINGS OF WndCatalogus CLASS-->
@@ -127,7 +122,7 @@
   <string name="WndGame_Settings">設置</string>
   <string name="WndGame_Challenges">挑戰</string>
   <string name="WndGame_Ranking">排名</string>
-  <string name="WndGame_Start">開始新遊戲</string>
+  <string name="WndGame_Start">开始新游戏</string>
   <string name="WndGame_menu">主菜單</string>
   <string name="WndGame_Exit">关闭游戏</string>
   <string name="WndGame_Return">返回遊戲</string>
@@ -135,15 +130,15 @@
   <string name="WndGame_Load">讀取</string>
   <!--STRINGS OF WndHero CLASS-->
   <string name="WndHero_Stats">屬性</string>
-  <string name="WndHero_Buffs">狀態</string>
-  <string name="WndHero_Exp">經驗</string>
+  <string name="WndHero_Buffs">状态</string>
+  <string name="WndHero_Exp">经验值</string>
   <string name="WndHero_Str">力量值</string>
   <string name="WndHero_Health">生命值</string>
-  <string name="WndHero_Gold">已收集金幣量</string>
-  <string name="WndHero_Depth">最高層數</string>
-  <string name="WndHero_StaTitle">Level %1$d %2$s</string>
-  <string name="WndHero_StaCatalogus">圖鑒</string>
-  <string name="WndHero_StaJournal">遊記</string>
+  <string name="WndHero_Gold">已收集金币数</string>
+  <string name="WndHero_Depth">最高层数</string>
+  <string name="WndHero_StaTitle">等级 %1$d %2$s</string>
+  <string name="WndHero_StaCatalogus">图鉴</string>
+  <string name="WndHero_StaJournal">日志</string>
   <!--STRINGS OF WndImp CLASS-->
   <string name="WndImp_Message">太好了，我的英雄！\n回報方面，我沒有金幣在手，但我有比金幣更好的東西。這個祖傳的戒指據說是我爺爺從一個陣亡的聖騎士指上摘下來，現在送給您吧。</string>
   <string name="WndImp_Reward">收下戒指</string>
@@ -177,7 +172,7 @@
   <string name="WndRanking_StaGold">金幣量</string>
   <string name="WndRanking_StaFood">食物消耗件數</string>
   <string name="WndRanking_StaAlchemy">製藥量</string>
-  <string name="WndRanking_StaAnkhs">安卡耗用數</string>
+  <string name="WndRanking_StaAnkhs">十字架使用量</string>
   <!--STRINGS OF WndResurrect CLASS-->
   <string name="WndResurrect_Message">您死了，但有一次復活的機會，您願意接受嗎？</string>
   <string name="WndResurrect_Yes">是的，我要繼續戰鬥！</string>
@@ -196,16 +191,14 @@
   <string name="WndStory_Halls">很久以前，這片區域曾是矮人都市的郊區。在與古神的戰爭中取得慘勝的矮人已經無力掌控並清理惡魔餘黨。於是存活的爪牙漸漸鞏固了對這裏的控制。現在，這裏被稱為惡魔大廳。
 
 很少有冒險者能夠深入到這種地方...</string>
-  <string name="WndStory_Spiders">許多年前，這是一個充滿魔法石的礦山。但隨著礦脈的枯竭，礦工們紛紛離去，留下了大量的坑道網絡。最後這個地方更被蜘蛛佔領了。雖然這些危險的生物在黑暗中潛伏，但是這嚇不倒一些瘋狂而勇敢的尋寶者和冒險者們，對他們來說，有關神秘魔法神器的傳言愈多，冒險其間的刺激自然愈多内。但說得上是神器，有誰能抗拒？據說之前有一個為了逃避追捕的女巫進入了這個礦洞，追捕她的士兵由於畏懼黑暗而不敢靠近，只能派人在礦洞門口看守。結果到他們放棄後女巫也沒出現。也許她已找到另一個出口？抑或趁看守不注意時跑了？或者...她在礦洞深處的蜘蛛環抱下，創立自己不見天日的新天地。
-
-</string>
+  <string name="WndStory_Spiders">许多年前，这是一个充满了魔法石的富裕矿山。但随着矿脉的枯竭，矿工们纷纷离去，留下了大量的坑道网络。最后这个地方被蜘蛛占领了。虽然这些危险的生物在黑暗中潜伏，但是这吓不倒一些疯狂而勇敢的寻宝者和冒险者们，因为传言里面的魔法神器的价值值得他们为之冒险。据说有一个为了逃避追捕的女巫进入了这个矿洞，追捕她的士兵由于畏惧黑暗而不敢靠近，只能派人在矿洞门口看守。结果到他们放弃后女巫也没出现。没准她找到另一个出口？亦或是趁看守不注意时跑了？或者...死在了矿洞深处，与蜘蛛们融为一体。</string>
   <!--STRINGS OF WndTradeItem CLASS-->
   <string name="WndTradeItem_Sale">出售：%1$s-%2$dg</string>
   <string name="WndTradeItem_Buy">以%dg買入</string>
   <string name="WndTradeItem_Sell">以%dg賣出</string>
   <string name="WndTradeItem_Sell1">以%dg賣出1个</string>
   <string name="WndTradeItem_SellAll">以%dg賣出全部</string>
-  <string name="WndTradeItem_Cancel">罷了</string>
+  <string name="WndTradeItem_Cancel">算了</string>
   <string name="WndTradeItem_Sold">您賣出了你的%1$s，並獲得 %2$d金幣</string>
   <string name="WndTradeItem_Bought">您購買了%1$s花費%2$d金幣</string>
   <!--STRINGS OF WndWandmaker CLASS-->
@@ -233,10 +226,10 @@
   <string name="Amulet_ACEnd">結束遊戲</string>
   <string name="Amulet_Info">Yendor護身符是來自未知領域中最強大的且最著名的神器。據說它能夠實現持有者的一切願望，只要持有者具備足夠的力量來「說服」它去做。</string>
   <!--STRINGS OF Ankh CLASS-->
-  <string name="Ankh_Name">安卡</string>
+  <string name="Ankh_Name">十字架</string>
   <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
   <!--STRINGS OF ArmorKit CLASS-->
-  <string name="ArmorKit_Name">護甲升級包</string>
+  <string name="ArmorKit_Name">护甲改造包</string>
   <string name="ArmorKit_ACAplly">添上</string>
   <string name="ArmorKit_Info">使用這配件包裡的工具和材料，任何人都能將任意防具打造成 \"史詩護甲\"，它會繼承原護甲的所有屬性，並依據職業為穿戴者提供一個特殊能力。完全無需裁縫、製皮或打鐵。</string>
   <string name="ArmorKit_SelectArmor">選擇升級一件護甲</string>
@@ -286,16 +279,16 @@
   <string name="Torch_ACLight">點燃</string>
   <string name="Torch_Info">這在沒什麼光線照明的惡魔大廳裏是一件不可缺少的物品。</string>
   <!--STRINGS OF Weightstone CLASS-->
-  <string name="Weightstone_Name">磨刀石</string>
+  <string name="Weightstone_Name">强化石</string>
   <string name="Weightstone_ACApply">使用</string>
-  <string name="Weightstone_Info">使用磨刀石能令您的近戰武器攻速更快或者更精確。</string>
-  <string name="Weightstone_Select">選擇一件武器來磨製</string>
-  <string name="Weightstone_Fast">經磨製後，您的%s拿上手變得更輕盈</string>
-  <string name="Weightstone_Accurate">經磨製後，您的%s感覺上能更精準了。</string>
-  <string name="Weightstone_WndChoice">您希望怎樣磨製這件%s?</string>
-  <string name="Weightstone_WndSpeed">增加速度</string>
-  <string name="Weightstone_WndAccuracy">增加精準度</string>
-  <string name="Weightstone_WndCancel">罷了</string>
+  <string name="Weightstone_Info">使用强化石能令您的近战武器攻速更快或者更精准。</string>
+  <string name="Weightstone_Select">选择一件武器来强化</string>
+  <string name="Weightstone_Fast">经过强化后，您的%s变得更加轻盈</string>
+  <string name="Weightstone_Accurate">经过强化后，您的%s变得更加顺手</string>
+  <string name="Weightstone_WndChoice">您希望怎样强化这件%s?</string>
+  <string name="Weightstone_WndSpeed">速度</string>
+  <string name="Weightstone_WndAccuracy">命中</string>
+  <string name="Weightstone_WndCancel">算了</string>
   <!--PACKAGE /items/bags-->
   <!--STRINGS OF Bag CLASS-->
   <string name="Bag_ACOpen">打開</string>
@@ -424,7 +417,7 @@
   <string name="MindVision_Info">靈視</string>
   <!--STRINGS OF Ooze CLASS-->
   <string name="Ooze_Info">腐蝕污泥</string>
-  <string name="Ooze_Death">%s殺了您……</string>
+  <string name="Ooze_Death">%s杀了您……</string>
   <!--STRINGS OF Paralysis CLASS-->
   <string name="Paralysis_Info">麻痹</string>
   <!--STRINGS OF Poison CLASS-->
@@ -450,6 +443,6 @@
   <string name="ItemSprite_Info1">掉落至%1$.1f %2$.1f</string>
   <!--PACKAGE /ui-->
   <!--STRINGS OF Toolbar CLASS-->
-  <string name="Toolbar_Info1">您不知道那裏有甚麼。</string>
-  <string name="Toolbar_Info2">選擇檢查一個區域</string>
+  <string name="Toolbar_Info1">你不知道那里有什么。</string>
+  <string name="Toolbar_Info2">选择检查一个区域</string>
 </resources>

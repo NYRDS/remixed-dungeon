@@ -2,12 +2,14 @@
 <resources>
     <!-- Mobs descriptions -->
     <!-- STRINGS OF TownGuardNPC CLASS -->
-    <string name="TownGuardNPC_Name">城鎮守衛</string>
+    <string name="TownGuardNPC_Name">城镇守卫</string>
     <string name="TownGuardNPC_Gender">男性的</string>
-    <string name="TownGuardNPC_Name_Objective">城鎮守衛</string>
-    <string name="TownGuardNPC_Desc">一個正常的城鎮守衛。</string>
+    <string name="TownGuardNPC_Name_Objective">城镇守卫</string>
+    <string name="TownGuardNPC_Desc">一个正常的城镇守卫。</string>
     <string name="TownGuardNPC_Message1">我没什么好说的了，继续前进吧。</string>
-    <string name="TownGuardNPC_Message2">感谢像您一樣的冒險家，這裏十分和平。</string>
+    <string name="TownGuardNPC_Message2">感谢像您一样的冒险家，这里十分和平。</string>
+    <string name="TownGuardNPC_Message3">你觉得这个镇上守卫太多了吗？嗯，那是因为这是唯一一个有着邪神出没的地牢的城镇，不是吗？</string>
+
     <!-- STRINGS OF TownsfolkNPC CLASS -->
     <string name="TownsfolkNPC_Name">城鎮居民</string>
     <string name="TownsfolkNPC_Gender">男性的</string>
@@ -47,7 +49,7 @@
     <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
 
     <!-- STRINGS OF WndPriest CLASS -->
-    <string name="WndPriest_Heal">治療 - 花費 %d 金幣</string>
+    <string name="WndPriest_Heal">治疗-花费%d金币</string>
     <string name="WndPriest_Instruction_m">我的孩子，歡迎來到深淵領主聖誕老人大教堂！不幸的是教堂內部現正維修，所以我沒法帶您參觀。若有需要，只需 %d 金幣，我可以為您治療，給您温飽!</string>
     <string name="WndPriest_Instruction_f">我的小姑娘，歡迎來到深淵領主聖誕老人大教堂！不幸的是教堂內部現正維修，所以我沒法帶您參觀。若有需要，只需 %d 金幣，我可以為您治療，給您温飽!</string>
     <string name="WndPriest_Title">小鎮牧師</string>
@@ -97,7 +99,7 @@
     <string name="town_deco_stone_wall_desc">不知為何石牆正在發熱，看上去有點濕。</string>
 
     <string name="town_deco_shop_sign_name">商店標示牌</string>
-    <string name="town_deco_shop_sign_desc">看上去這是一家商店。</string>
+    <string name="town_deco_shop_sign_desc">看上去这是一家商店。</string>
 
     <string name="town_deco_floor_name">樓梯</string>
     <string name="town_deco_floor_desc">這樓梯由普通的木板所造。您偏要找碴對不？</string>

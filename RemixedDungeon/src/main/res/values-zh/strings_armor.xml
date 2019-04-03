@@ -15,7 +15,8 @@
   <string name="Armor_Info6">這件裝備已經被刻上符文。</string>
   <string name="Armor_Info7a">您正在裝備着 %1$s %2$s 。</string>
   <string name="Armor_Info7b">，然而因為它被詛咒了，你沒辦法把它脫下來。</string>
-  <string name="Armor_Info8">您能感受到 %s 中潛伏著一股邪惡的魔力。</string>
+  <string name="Armor_Info8">
+您能感受到 %s 中潜伏着一股恶意的魔力。</string>
   <string name="Armor_Glyph">附魔刻印</string>
   <!--STRINGS OF ClassArmor CLASS-->
   <string name="ClassArmor_Desc">這東西看起來太棒了！</string>

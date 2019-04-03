@@ -33,6 +33,7 @@
     <string name="RottenFish_Taste">恶心！</string>
 
     <string name="gdpr_title">个性化广告体验</string>
+    <string name="gdpr_text">混合地牢使用AdMob和Appodeal（其他广告提供商）个性化您的广告体验。广告提供商及其合作伙伴可以收集和处理个人数据，如设备标识符、人口统计和兴趣数据，以提供为您量身定制的广告体验。通过同意这种改进的广告体验，您将看到广告提供商及其合作伙伴认为与您更相关的广告。\n\n同意后，您确认您已年满16岁，希望获得个性化的广告体验。\n\n</string>
     <string name="gdpr_agree">是的，我同意。</string>
     <string name="gdpr_disagree">不，谢谢</string>
     <string name="gdpr_choose">请做您的选择</string>

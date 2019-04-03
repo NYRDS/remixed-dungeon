@@ -32,12 +32,12 @@
   <string name="RottenMeat_Info">一份腐烂的肉</string>
   <!--STRINGS OF RottenPasty CLASS-->
   <string name="RottenPasty_Name">腐烂馅饼</string>
-  <string name="RottenPasty_Info">这馅饼看起来十分恶心</string>
+  <string name="RottenPasty_Info">这馅饼看起来十分恶心，但可以通过一些方法让它再次能够食用。</string>
   <!--STRINGS OF RottenRation CLASS-->
   <string name="RottenRation_Name">腐烂口粮</string>
   <string name="RottenRation_Info">从前，这也是一份能吃的口粮</string>
   <!--STRINGS OF OverpricedRation CLASS-->
-  <string name="OverpricedRation_Name">高价口粮</string>
+  <string name="OverpricedRation_Name">小包口粮</string>
   <string name="OverpricedRation_Info">这看起来就是一份普通的口粮，虽然小了一些</string>
   <string name="OverpricedRation_Message">这份食物吃起来还不错。</string>
   <!--STRINGS OF Pasty CLASS-->
