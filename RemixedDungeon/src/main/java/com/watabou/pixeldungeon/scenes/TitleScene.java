@@ -178,13 +178,13 @@ public class TitleScene extends PixelScene {
 		}
 
         String lang = RemixedDungeon.uiLanguage();
-        final boolean useVk = lang.equals("ru") || lang.equals("fb");
+        final boolean useVk = lang.equals("ru");
 
         Icons social =  useVk ? Icons.VK : Icons.FB;
         leftGroup.add(new ImageButton(social.get()){
             @Override
             protected void onClick() {
-                Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://www.facebook.com/RemixedPixelDungeon");
+                Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
             }
         });
 

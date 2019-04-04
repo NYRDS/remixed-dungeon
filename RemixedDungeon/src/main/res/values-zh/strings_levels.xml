@@ -43,12 +43,12 @@
   <string name="Level_TileDescHighGrass">茂密的植被阻挡了视线。</string>
   <string name="Level_TileDescLockedDoor">这扇门锁上了，你需要一把配对的钥匙来打开它。</string>
   <string name="Level_TileDescLockedExit">沉重的铁栏杆封锁住了向下的楼梯。</string>
-  <string name="Level_TileDescBarricade">木栅栏依然坚固，但早已风干多年。也许它可以被烧掉？</string>
+  <string name="Level_TileDescBarricade">这些木板依然坚固，但早已风干多年。也许它可以被烧掉？</string>
   <string name="Level_TileDescSign">你从这里看不到上面写着什么。</string>
   <string name="Level_TileDescTrap">踩到隐藏的压力板会启动这个陷阱。</string>
   <string name="Level_TileDescInactiveTrap">这个陷阱已经被触发过了，现在不再危险。</string>
   <string name="Level_TileDescStatue">有人想装饰一下这里，但显然他没能成功。</string>
-  <string name="Level_TileDescAlchemy">将一些种子投入这里来酿造药水。</string>
+  <string name="Level_TileDescAlchemy">将一些种子投入这里来炼制药水。</string>
   <string name="Level_TileDescEmptyWell">这口井已经枯竭了。</string>
   <!--STRINGS OF CavesLevel & CavesBossLevel CLASS-->
   <string name="Caves_TileGrass">荧光苔藓</string>

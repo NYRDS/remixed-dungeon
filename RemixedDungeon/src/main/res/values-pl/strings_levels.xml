@@ -26,7 +26,7 @@
   <string name="Level_TileToxicTrap">Pułapka z toksycznym gazem</string>
   <string name="Level_TileFireTrap">Pułapka ognista</string>
   <string name="Level_TileParalyticTrap">Pułapka z gazem paraliżującym</string>
-  <string name="Level_TilePoisonTrap">Pułapka Trująca</string>
+  <string name="Level_TilePoisonTrap">Trująca pułapka</string>
   <string name="Level_TileAlarmTrap">Pułapka alarmująca</string>
   <string name="Level_TileLightningTrap">Pułapka porażająca</string>
   <string name="Level_TileGrippingTrap">Pułapka chwytająca</string>

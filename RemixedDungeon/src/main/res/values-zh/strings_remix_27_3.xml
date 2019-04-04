@@ -4,6 +4,7 @@
     <!-- Items descriptions -->
     <!-- STRINGS OF ScrollOfSummoning CLASS -->
     <string name="ScrollOfSummoning_Name">召唤卷轴</string>
+    <string name="ScrollOfSummoning_Info">当大声朗读时，这个卷轴将召唤当前地牢同一级别的一个怪物。如果怪物的意志足够软弱，它就会成为你的仆人。</string>
     <string name="ScrollOfSummoning_Info_2">这只怪物归你了</string>
 
     <!-- Generic warnings -->

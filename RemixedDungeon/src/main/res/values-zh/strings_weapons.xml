@@ -2,38 +2,38 @@
 <resources>
   <!--PACKAGE /items/weapon-->
   <!--STRINGS OF Weapon CLASS-->
-  <string name="Weapon_Identify">您現在對於您的%1$s足夠熟悉以鑒定它。它是%2$s。</string>
-  <string name="Weapon_Incompatible">不同屬性魔法的衝突使得這把武器的附魔失去了效力！</string>
+  <string name="Weapon_Identify">你现在对于你的%1$s足够熟悉以鉴定它。它是%2$s。</string>
+  <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
   <!--PACKAGE /weapon/Enchantment-->
   <!--STRINGS OF Death CLASS-->
   <string-array name="Death_Name">
-    <item>殘酷%s</item>
-    <item>殘酷%s</item>
-    <item>殘酷%s</item>
+    <item>冷酷%s</item>
+    <item>冷酷%s</item>
+    <item>冷酷%s</item>
   </string-array>
   <!--STRINGS OF Fire CLASS-->
   <string-array name="Fire_Name">
-    <item>熾烈%s</item>
-    <item>熾烈%s</item>
-    <item>熾烈%s</item>
+    <item>炽烈%s</item>
+    <item>炽烈%s</item>
+    <item>炽烈%s</item>
   </string-array>
   <!--STRINGS OF Horror CLASS-->
   <string-array name="Horror_Name">
-    <item>可怖%s</item>
-    <item>可怖%s</item>
-    <item>可怖%s</item>
+    <item>恐惧%s</item>
+    <item>恐惧%s</item>
+    <item>恐惧%s</item>
   </string-array>
   <!--STRINGS OF Instability CLASS-->
   <string-array name="Instability_Name">
-    <item>紊亂%s</item>
-    <item>紊亂%s</item>
-    <item>紊亂%s</item>
+    <item>紊乱%s</item>
+    <item>紊乱%s</item>
+    <item>紊乱%s</item>
   </string-array>
   <!--STRINGS OF Leech CLASS-->
   <string-array name="Leech_Name">
-    <item>嗜血%s</item>
-    <item>嗜血%s</item>
-    <item>嗜血%s</item>
+    <item>饮血%s</item>
+    <item>饮血%s</item>
+    <item>饮血%s</item>
   </string-array>
   <!--STRINGS OF Luck CLASS-->
   <string-array name="Luck_Name">

@@ -3,6 +3,7 @@
   <!--STRINGS OF Hero CLASS-->
   <string name="Hero_Name">您</string>
   <string name="Hero_Name_Objective">您</string>
+  <string name="Hero_Leave">没有人会轻易地离开混合地牢。</string>
   <string name="Hero_LevelUp">升級！</string>
   <string name="Hero_NewLevel">恭喜你升到了%d級！現在的您更加健康和專注。這讓您更容易命中敵人和躲避敵人攻擊。</string>
   <string name="Hero_YouNowHave">你获得了%s</string>
@@ -38,6 +39,14 @@
     <item>戰士每次進食都會回復少許生命值。</item>
     <item>力量藥水在遊戲開始時就已經鑒定好了。</item>
   </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>法师初始时拥有一把独特的魔法飞弹法杖。这把法杖在之后能够“祛魔”以升级其他法杖</item>
+    <item>法师能更快的为他的法杖充能。</item>
+    <item>法师每次进食都会为他们包裹里的所有的法杖恢复1点充能。</item>
+    <item>法师能将法杖作为近战武器使用。</item>
+    <item>法师能使用魔法值释放元素魔法。</item>
+    <item>鉴定卷轴在游戏开始时就已经鉴定了</item>
+  </string-array>
   <string-array name="HeroClass_RogPerks">
     <item>盗賊起始擁有一枚+1的暗影指環。</item>
     <item>盗賊在装備指環時能自動鑒定其類型。</item>
@@ -52,6 +61,14 @@
     <item>女擅獵手精通遠程武器。使用它們时，她可以獲得基於額外力量值的傷害加成。</item>
     <item>女獵手能從露珠獲得更多生命值。</item>
     <item>女獵手可以隔着障礙物感應到附近隱匿的敵人。</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>精灵初始时只拥有15点生命值和9点力量。</item>
+    <item>精灵免疫缠绕状态。</item>
+    <item>精灵开局时拥有一把升级过的弓和一些箭加上一把匕首。 </item>
+    <item>精灵十分敏捷，并且十分精通弓箭。</item>
+    <item>精灵能从露珠中获得更多的生命。</item>
+    <item>精灵不擅长近战武器。</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">角鬥士</string>

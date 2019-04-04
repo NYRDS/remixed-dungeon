@@ -89,7 +89,7 @@
   <string name="MeleeWeapon_Info3g">niecelna</string>
   <string name="MeleeWeapon_Info4a">Broń ta została specjalnie zbalansowana by uczynić ją szybszą.</string>
   <string name="MeleeWeapon_Info4b">Broń ta została specjalnie zbalansowana by uczynić ją celniejszą.</string>
-  <string name="MeleeWeapon_Info5">Jest to zaczarowane.</string>
+  <string name="MeleeWeapon_Info5">to jest zaklęte.</string>
   <string name="MeleeWeapon_Info6a">Ponieważ nie jesteś wystarczająco silny, %s będzie znacznie wolniejszy, a także mniej celny.</string>
   <string name="MeleeWeapon_Info6b">Ponieważ jesteś niezwykle silny, %s zadaje większe obrażenia.</string>
   <string name="MeleeWeapon_Info7a">Trzymasz %1$s w pogotowiu %2$s.</string>

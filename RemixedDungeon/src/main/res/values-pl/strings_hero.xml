@@ -32,15 +32,8 @@
   <string name="HeroClass_Rog">Złodziej</string>
   <string name="HeroClass_Hun">Łowczyni</string>
   <string name="HeroClass_Elf">Elf</string>
-  <string-array name="HeroClass_WarPerks">
-    <item>Wojownicy zaczyna z 11-stoma punktami Siły</item>
-    <item>Wojownicy zaczyna z unikalnym krótkim mieczem. Potem ten miecz może zostać \"przekuty\" by wzmocnić inną broń białą.</item>
-    <item>Wojownicy nie radzą sobie z bronią dystansową.</item>
-    <item>Każde zjedzone pożywienie przywraca trochę zdrowia.</item>
-    <item>Mikstura Siły jest zidentyfikowana na samym początku.</item>
-  </string-array>
   <string-array name="HeroClass_MagPerks">
-    <item>Magowie zaczynają z unikalną Różdżką Magicznego Pocisku. Może on zostać użyty do wzmocnienia innej Różdżki.</item>
+    <item>Magowie zaczynają z unikalną Różdżką Magicznego Pocisku.</item>
     <item>Magowie ładują swoje różdżki dużo szybciej.</item>
     <item>Każde zjedzone pożywienie przywraca 1 ładunek wszystkim rożkom w ekwipunku.</item>
     <item>Magowie mogą używać kostury do walki wręcz.</item>
@@ -66,9 +59,9 @@
     <item>Elfy zaczynają z 15 HP oraz 9 punktami siły</item>
     <item>Elfy są odporne na rozkład.</item>
     <item>Elfy zaczynają z ulepszonym drewnianym łukiem oraz pęczkiem strzał.</item>
-    <item>Elfy zwinne i niezwykle wydajnie używają łuku .</item>
+    <item>Elfy są zwinne i niezwykle wydajnie używają łuku .</item>
     <item>Elfy otrzymują więcej życia z kropli rosy.</item>
-    <item>Elfy gorzej używają broni ręcznej.</item>
+    <item>Elfy gorzej używają broni białej.</item>
   </string-array>
   <!--STRINGS OF HeroSubClass CLASS-->
   <string name="HeroSubClass_NameGlad">gladiator</string>
@@ -90,5 +83,5 @@
   <string name="HeroSubClass_NameScout">zwiadowca</string>
   <string name="HeroSubClass_DescScout">Elficcy _Zwiadowcy_ są mistrzami skradania się. Chodzenie po wysokiej trawie daje im tymczasową premię Niewidzialności. Poruszają się też szybciej od zwykłych Elfów</string>
   <string name="HeroSubClass_NameShaman">Szaman</string>
-  <string name="HeroSubClass_DescShaman">Elf _Szaman_ mozne uzywac rozdzki jako bron walki w recz ! Maa duze szanse na uderzenie wroga nie ponaszac straty ladunkow!</string>
+  <string name="HeroSubClass_DescShaman">Elf _Szaman_ może używać różdżki jako broń do walki wręcz ! Ma duże szanse na uderzenie wroga nie ponosząc straty ładunków!</string>
 </resources>

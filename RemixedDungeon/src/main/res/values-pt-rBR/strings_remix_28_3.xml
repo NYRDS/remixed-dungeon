@@ -39,6 +39,13 @@
     <string name="gdpr_choose">Por favor, escolha</string>
 
     <string name="Mob_StaHuntingStatus2">%1$s está caçando %2$s</string>
+    <string name="Mob_StaFleeingStatus2">%1$s está fugindo de %2$s</string>
+
+    <string name="Mob_StaTerrorStatus">%1$s está horrorizado</string>
+    <string name="Mob_StaTerrorStatus2">%1$s foi horrorizado por%2$s</string>
+
+    <string name="Mob_StaAmokStatus">%1$s está enlouquecendo</string>
+
     <string name="WndSaveSlotSelect_LoadAutoSave">Carregar Jogo</string>
 
     <string name="TownScript_NeedWeapon">Eu não pretendo ir para o calabouço com as minhas mãos vazias!\nPor que não visito a loja da cidade primeiro?</string>
