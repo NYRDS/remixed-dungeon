@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
@@ -435,11 +436,12 @@ public abstract class Mob extends Char {
 		}
 
 		if(mobScript != null) {
-			scriptResult = mobScript.invokemethod(method, new LuaValue[]{
+			LuaValue[] args = new LuaValue[]{
 					CoerceJavaToLua.coerce(this),
 					CoerceJavaToLua.coerce(arg1),
-					CoerceJavaToLua.coerce(arg2)})
-					.arg1();
+					CoerceJavaToLua.coerce(arg2)};
+
+			scriptResult = mobScript.invokemethod(method, args).arg1();
 
 			if(scriptResult.isboolean()) {
 				return scriptResult.checkboolean();
@@ -816,5 +818,10 @@ public abstract class Mob extends Char {
 			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 			return false;
 		}
+	}
+
+	@LuaInterface
+	public String getMobClassName() {
+		return getEntityKind();
 	}
 }
