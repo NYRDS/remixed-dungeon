@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/dash.png",
+  "width"  : 16,
+  "height" : 16,
+  "anim"   : { "fps" : 25,  "looped" : true,    "frames" : [0,3,2,3] }
+}
