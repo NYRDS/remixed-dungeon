@@ -30,7 +30,7 @@ public class ZapEffect {
             }
 
             if(EffectsFactory.isValidEffectName(zapEffect)) {
-                attachMissleTweener(GameScene.clipEffect(from, zapEffect),from,to);
+                attachMissleTweener(GameScene.clipEffect(from, 1,zapEffect),from,to);
                 return;
             }
 

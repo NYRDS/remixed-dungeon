@@ -109,6 +109,8 @@ public class GameScene extends PixelScene {
     private static CellSelector cellSelector;
 
     private Group ripples;
+    private Group bottomEffects;
+    private Group objects;
     private Group plants;
     private Group heaps;
     private Group mobs;
@@ -119,7 +121,6 @@ public class GameScene extends PixelScene {
     private Group statuses;
     private Group emoicons;
 
-    private Group objects;
 
     //ui elements
     private Toolbar         toolbar;
@@ -132,6 +133,7 @@ public class GameScene extends PixelScene {
 
     private volatile boolean sceneCreated = false;
     private          float   waterSx      = 0, waterSy = -5;
+
 
     public void updateUiCamera() {
         statusPane.setSize(uiCamera.width, 0);
@@ -203,6 +205,8 @@ public class GameScene extends PixelScene {
         }
         terrain.add(baseTiles);
 
+        bottomEffects = new Group();
+        add(bottomEffects);
 
         objects = new Group();
         add(objects);
@@ -620,7 +624,7 @@ public class GameScene extends PixelScene {
 
         switch (layer) {
             case 0:
-                scene.ripples.add(effect);
+                scene.bottomEffects.add(effect);
             break;
             case 1:
                 scene.effects.add(effect);

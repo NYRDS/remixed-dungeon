@@ -31,6 +31,7 @@ public class SpellHelper {
         affinityToIcon.put(AFFINITY_RAGE, 12);
         affinityToIcon.put(AFFINITY_ELEMENTAL, 6);
         affinityToIcon.put(AFFINITY_COMMON, 6);
+        affinityToIcon.put("Combat", 15);
     }
 
     public static int iconIdByAffinity(String affinity) {

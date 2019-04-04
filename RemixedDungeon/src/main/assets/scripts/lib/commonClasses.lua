@@ -208,8 +208,12 @@ local RPD = {
         GameScene:zapEffect(from, to, zapEffect)
     end,
 
-    clipEffect = function(cell,effectName)
-        GameScene:clipEffect(cell,effectName)
+    topEffect = function(cell,effectName)
+        return GameScene:clipEffect(cell,1,effectName)
+    end,
+
+    bottomEffect = function(cell,effectName)
+        return GameScene:clipEffect(cell,0,effectName)
     end,
 
     item = function(itemClass, quantity)
