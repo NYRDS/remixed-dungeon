@@ -2,5 +2,5 @@
   "texture" : "effects/lava_fountain.png",
   "width"  : 15,
   "height" : 16,
-  "anim"   : { "fps" : 12,  "looped" : false,    "frames" : [0,1,2,3,4,5,6,7,8] }
+  "anim"   : { "fps" : 15,  "looped" : false,    "frames" : [0,1,2,3,4,5,6,7,8] }
 }
