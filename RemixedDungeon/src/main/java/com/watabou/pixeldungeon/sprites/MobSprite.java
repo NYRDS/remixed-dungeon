@@ -20,17 +20,15 @@ package com.watabou.pixeldungeon.sprites;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.tweeners.AlphaTweener;
-import com.watabou.noosa.tweeners.ScaleTweener;
+import com.watabou.noosa.tweeners.FallTweener;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class MobSprite extends CharSprite {
 
 	private static final float FADE_TIME	= 3f;
-	private static final float FALL_TIME	= 1f;
-	
+
 	@Override
 	public void update() {
 		if(ch instanceof  Mob) {
@@ -61,17 +59,6 @@ public class MobSprite extends CharSprite {
 		origin.set( width / 2, height - DungeonTilemap.SIZE / 2 );
 		angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
 		
-		getParent().add( new ScaleTweener( this, new PointF( 0, 0 ), FALL_TIME ) {
-			@Override
-			protected void onComplete() {
-				MobSprite.this.killAndErase();
-			}
-
-			@Override
-			protected void updateValues( float progress ) {
-				super.updateValues( progress );
-				am = 1 - progress;
-			}
-		} );
+		getParent().add( new FallTweener(this));
 	}
 }

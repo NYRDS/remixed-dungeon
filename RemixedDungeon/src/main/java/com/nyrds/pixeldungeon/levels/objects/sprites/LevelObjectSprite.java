@@ -4,8 +4,8 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.tweeners.FallTweener;
 import com.watabou.noosa.tweeners.PosTweener;
-import com.watabou.noosa.tweeners.ScaleTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -39,18 +39,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		origin.set( width / 2, height - DungeonTilemap.SIZE / 2 );
 		angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
 
-		getParent().add( new ScaleTweener( this, new PointF( 0, 0 ), 1f ) {
-			@Override
-			protected void onComplete() {
-				LevelObjectSprite.this.killAndErase();
-			}
-
-			@Override
-			protected void updateValues( float progress ) {
-				super.updateValues( progress );
-				am = 1 - progress;
-			}
-		} );
+		getParent().add(new FallTweener(this));
 	}
 
 	private void setLevelPos(int cell) {
