@@ -614,11 +614,23 @@ public class GameScene extends PixelScene {
     }
 
     @LuaInterface
-    public static void clipEffect(int cell, String effectName) {
+    public static CustomClipEffect clipEffect(int cell, int layer, String effectName) {
         CustomClipEffect effect = EffectsFactory.getEffectByName(effectName);
         effect.place(cell);
-        scene.effects.add(effect);
+
+        switch (layer) {
+            case 0:
+                scene.ripples.add(effect);
+            break;
+            case 1:
+                scene.effects.add(effect);
+            break;
+            default:
+                GLog.n("Bad layer %d for %s", layer, effectName);
+        }
+
         effect.playAnimOnce();
+        return effect;
     }
 
     public static Ripple ripple(int pos) {

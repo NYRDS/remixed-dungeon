@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -26,15 +27,13 @@ import com.watabou.utils.PointF;
 
 public class MissileSprite extends ItemSprite implements Tweener.Listener {
 
-	private static final float SPEED	= 240f;
-	
 	private Callback callback;
 	
 	public MissileSprite() {
 		super();
 		originToCenter();
 	}
-	
+
 	public void reset(int from, int to, Item item, Callback listener) {
 		revive();
 		
@@ -46,7 +45,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		PointF dest = DungeonTilemap.tileToWorld( to );
 		
 		PointF d = PointF.diff( dest, point() ); 
-		speed.set( d ).normalize().scale( SPEED );
+		speed.set( d ).normalize().scale( ZapEffect.SPEED );
 		
 		if (item.isFliesStraight()) {
 			angularSpeed = 0;
@@ -55,7 +54,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 			angularSpeed = item.isFliesFastRotating() ? 1440 : 720;
 		}
 		
-		PosTweener tweener = new PosTweener( this, dest, d.length() / SPEED );
+		PosTweener tweener = new PosTweener( this, dest, d.length() / ZapEffect.SPEED );
 		tweener.listener = this;
 		getParent().add( tweener );
 	}

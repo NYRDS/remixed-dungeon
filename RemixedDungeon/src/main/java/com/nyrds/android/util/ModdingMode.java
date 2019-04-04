@@ -1,7 +1,5 @@
 package com.nyrds.android.util;
 
-import android.content.Context;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -12,12 +10,16 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import androidx.annotation.NonNull;
@@ -64,15 +66,6 @@ public class ModdingMode {
 		return version.optInt("version");
 	}
 
-	public static boolean useRetroHero() {
-		if (mActiveMod.equals(ModdingMode.REMIXED)) {
-			return false;
-		}
-
-		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
-		return !version.optBoolean("modernHeroSprites", true);
-	}
-
 	public static String activeMod() {
 		return mActiveMod;
 	}
@@ -80,7 +73,7 @@ public class ModdingMode {
 	public static boolean isAssetExist(String resName) {
 		InputStream str;
 		try {
-			str = getContext().getAssets().open(resName);
+			str = RemixedDungeonApp.getContext().getAssets().open(resName);
 			str.close();
 			return true;
 		} catch (IOException e) {
@@ -97,6 +90,25 @@ public class ModdingMode {
 			return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName).exists();
 		}
 		return false;
+	}
+
+	public static List<String> listResources(String path, FilenameFilter filter) {
+		try{
+			if(inMod()) {
+				return Arrays.asList(FileSystem.getExternalStorageFile(mActiveMod + "/" + path).list(filter));
+			} else {
+				String fullList[] = RemixedDungeonApp.getContext().getAssets().list(path);
+				ArrayList<String> ret = new ArrayList<>();
+				for(String resource : fullList) {
+					if(filter.accept(null, resource)) {
+						ret.add(resource);
+					}
+				}
+				return ret;
+			}
+		} catch (IOException e) {
+			throw new TrackedRuntimeException(e);
+		}
 	}
 
 	public static boolean isResourceExist(String resName) {
@@ -144,7 +156,7 @@ public class ModdingMode {
 					return new FileInputStream(file);
 				}
 			}
-			return getContext().getAssets().open(resName);
+			return RemixedDungeonApp.getContext().getAssets().open(resName);
 		} catch (IOException e) {
 			if(inMod()) {
 				throw new ModError("Missing file: "+resName,e);
@@ -191,10 +203,6 @@ public class ModdingMode {
 		}
 
 		return daysDiff < 14;
-	}
-
-	private static Context getContext() {
-		return RemixedDungeonApp.getContext();
 	}
 
 	public static RuntimeException modException(Exception e) {

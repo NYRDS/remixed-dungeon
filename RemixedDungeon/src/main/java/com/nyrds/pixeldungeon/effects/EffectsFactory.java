@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.effects;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
+import com.nyrds.android.util.ModdingMode;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,26 +12,27 @@ import java.util.Map;
 
 public class EffectsFactory {
 
-    static Map<String, JSONObject> effects = new HashMap<>();
+    private static Map<String, JSONObject> effects = new HashMap<>();
+
+    static {
+        for(String effectFile: ModdingMode.listResources("effects", (dir, name) -> name.endsWith(".json"))) {
+            effects.put(effectFile.replace(".json",""),JsonHelper.readJsonFromAsset("effects/"+effectFile));
+        }
+    }
 
     public static CustomClipEffect getEffectByName(String name) {
-        String descFileName = "effects/"+name+".json";
-
-        JSONObject effectDesc;
-        if(effects.containsKey(descFileName)) {
-            effectDesc = effects.get(descFileName);
-        } else {
-            effectDesc = JsonHelper.readJsonFromAsset(descFileName);
-            effects.put(descFileName,effectDesc);
-        }
 
         CustomClipEffect effect = new CustomClipEffect();
         try {
-            effect.setupFromJson(effectDesc);
+            effect.setupFromJson(effects.get(name));
         } catch (JSONException e) {
-            throw new ModError(descFileName, e);
+            throw new ModError(name, e);
         }
 
         return effect;
+    }
+
+    public static boolean isValidEffectName(String zapEffect) {
+        return effects.containsKey(zapEffect);
     }
 }

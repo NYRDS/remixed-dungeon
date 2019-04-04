@@ -3,22 +3,34 @@ package com.nyrds.pixeldungeon.effects;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Visual;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.effects.DeathRay;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
+import com.watabou.utils.PointF;
 
 public class ZapEffect {
+    public static final float SPEED	= 240f;
+
     static public void zap(Group parent, int from, int to, String zapEffect)
     {
         Level level = Dungeon.level;
         if (zapEffect != null && level.cellValid(from) && level.cellValid(to)) {
             
             if (!Dungeon.visible[from] && !Dungeon.visible[to]){
+                return;
+            }
+
+            if(EffectsFactory.isValidEffectName(zapEffect)) {
+                attachMissleTweener(GameScene.clipEffect(from, zapEffect),from,to);
                 return;
             }
 
@@ -54,5 +66,21 @@ public class ZapEffect {
                 return;
             }
         }
+    }
+
+    static void attachMissleTweener(Visual target, int from, int to) {
+
+        target.point( DungeonTilemap.tileToWorld( from ) );
+        PointF dest = DungeonTilemap.tileToWorld( to );
+
+        PointF d = PointF.diff( dest, target.point() );
+        target.speed.set( d ).normalize().scale(SPEED );
+
+        target.angularSpeed = 0;
+        target.angle = (float) (135 - Math.toDegrees(Math.atan2( d.x, d.y )));
+
+        PosTweener tweener = new PosTweener( target, dest, d.length() / SPEED );
+        tweener.listener = tweener1 -> target.kill();
+        target.getParent().add( tweener );
     }
 }
