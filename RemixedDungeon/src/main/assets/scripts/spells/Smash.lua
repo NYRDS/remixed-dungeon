@@ -46,7 +46,8 @@ return spell.init{
 
         local function smash(cell)
 
-            RPD.bottomEffect(chr:getPos(),"smash")
+            local clip = RPD.bottomEffect(chr:getPos(),"smash")
+            clip:setScale(1,0.3)
 
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
