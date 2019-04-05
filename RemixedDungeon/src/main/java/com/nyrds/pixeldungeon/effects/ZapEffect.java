@@ -68,7 +68,7 @@ public class ZapEffect {
         }
     }
 
-    static void attachMissleTweener(Visual target, int from, int to) {
+    private static void attachMissleTweener(Visual target, int from, int to) {
 
         target.point( DungeonTilemap.tileToWorld( from ) );
         PointF dest = DungeonTilemap.tileToWorld( to );
