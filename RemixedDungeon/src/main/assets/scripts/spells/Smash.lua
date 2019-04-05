@@ -49,6 +49,9 @@ return spell.init{
             local clip = RPD.bottomEffect(chr:getPos(),"smash")
             clip:setScale(1,0.3)
 
+            RPD.Effect(chr:getPos(),"smash_fist")
+            RPD.bottomEffect(chr:getPos(),"smash_blast")
+
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
                 RPD.affectBuff(victim, RPD.Buffs.Vertigo, chr:skillLevel())
