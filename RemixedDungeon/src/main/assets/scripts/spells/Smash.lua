@@ -49,7 +49,7 @@ return spell.init{
             RPD.topEffect(chr:getPos(),"smash_fist")
 
             local clip = RPD.bottomEffect(chr:getPos(),"smash_blast")
-            clip:setScale(1.3,1)
+            clip:setScale(1.5,1.3)
 
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
