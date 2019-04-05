@@ -57,7 +57,9 @@ return spell.init{
             end
         end
 
+	RPD.playSound("smash.mp3")
         forCellsAround(chr:getPos(), smash)
+	
         return true
     end
 }
