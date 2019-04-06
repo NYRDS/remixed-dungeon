@@ -81,6 +81,7 @@ import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.plants.Plant;
+import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -1051,7 +1052,7 @@ public abstract class Level implements Bundlable {
 			item = new Gold(item.price());
 		}
 
-		if (((map[cell] == Terrain.ALCHEMY) && !(item instanceof Plant.Seed))
+		if (((map[cell] == Terrain.ALCHEMY) && !(item instanceof Seed))
 				|| (Actor.findChar(cell) instanceof NPC)) {
 			int newCell = getEmptyCellNextTo(cell);
 			if (cellValid(newCell)) {
@@ -1108,7 +1109,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public void plant(Plant.Seed seed, int pos) {
+	public void plant(Seed seed, int pos) {
 
 	    LevelObject lo = getTopLevelObject(pos);
 

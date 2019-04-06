@@ -51,7 +51,7 @@ public class Sungrass extends Plant {
 		}
 	}
 
-	public static class Seed extends Plant.Seed {
+	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
 			plantName = Game.getVar(R.string.Sungrass_Name);
 

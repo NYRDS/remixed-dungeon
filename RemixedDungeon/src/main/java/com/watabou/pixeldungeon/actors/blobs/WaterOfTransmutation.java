@@ -48,7 +48,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
 import com.watabou.pixeldungeon.items.weapon.melee.Spear;
 import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
-import com.watabou.pixeldungeon.plants.Plant;
+import com.watabou.pixeldungeon.plants.Seed;
 
 public class WaterOfTransmutation extends WellWater {
 	
@@ -79,10 +79,10 @@ public class WaterOfTransmutation extends WellWater {
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
 			return changeWand( (Wand)item );
 			
-		} else if (item instanceof Plant.Seed) {
+		} else if (item instanceof Seed) {
 			
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
-			return changeSeed( (Plant.Seed)item );
+			return changeSeed( (Seed)item );
 			
 		} else {
 			return null;
@@ -199,12 +199,12 @@ public class WaterOfTransmutation extends WellWater {
 		return n;
 	}
 	
-	private Plant.Seed changeSeed( Plant.Seed s ) {
+	private Seed changeSeed(Seed s ) {
 		
-		Plant.Seed n;
+		Seed n;
 		
 		do {
-			n = (Plant.Seed)Generator.random( Category.SEED );
+			n = (Seed)Generator.random( Category.SEED );
 		} while (n.getClass() == s.getClass());
 		
 		return n;

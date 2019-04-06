@@ -313,7 +313,7 @@ public class WandMaker extends NPC {
 			return Game.getVar(R.string.WandMaker_RotberryDesc);
 		}
 		
-		public static class Seed extends Plant.Seed {
+		public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 			{
 				plantName = Game.getVar(R.string.WandMaker_RotberryName);
 				

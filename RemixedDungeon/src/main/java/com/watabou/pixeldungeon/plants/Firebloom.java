@@ -54,7 +54,7 @@ public class Firebloom extends Plant {
 		return Game.getVar(R.string.Firebloom_Desc);
 	}
 
-	public static class Seed extends Plant.Seed {
+	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
 			plantName = Game.getVar(R.string.Firebloom_Name);
 

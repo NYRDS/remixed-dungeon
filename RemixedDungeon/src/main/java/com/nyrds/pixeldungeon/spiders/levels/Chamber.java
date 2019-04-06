@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.spiders.levels;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.plants.Plant.Seed;
+import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.utils.Random;
 
 public class Chamber {
