@@ -38,8 +38,7 @@ import com.watabou.utils.Random;
 public class Sungrass extends Plant {
 
 	public Sungrass() {
-		image = 4;
-		plantName = Game.getVar(R.string.Sungrass_Name);
+		imageIndex = 4;
 	}
 
 	public void effect(int pos, Char ch) {
@@ -50,11 +49,6 @@ public class Sungrass extends Plant {
 		if (Dungeon.visible[pos]) {
 			CellEmitter.get(pos).start(ShaftParticle.FACTORY, 0.2f, 3);
 		}
-	}
-
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Sungrass_Desc);
 	}
 
 	public static class Seed extends Plant.Seed {

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.ForRestoreFromBundle;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.Util;
@@ -65,6 +66,7 @@ public class Trap extends LevelObject {
 	@Packable(defaultValue = "-1")
 	private int usedImageIndex;
 
+	@ForRestoreFromBundle
 	public Trap() {
 		this(-1);
 	}
@@ -202,7 +204,7 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
-	public boolean nonPassable() {
+	public boolean nonPassable(Char ch) {
 		return !secret && uses > 0;
 	}
 

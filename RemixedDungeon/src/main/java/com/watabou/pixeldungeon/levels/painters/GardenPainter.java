@@ -38,7 +38,7 @@ public class GardenPainter extends Painter {
 		for (int i=0; i < bushes; i++) {
 			int cellToPlant = room.random(level);
 			
-			if(level.plants.get(cellToPlant)==null) {
+			if(level.getTopLevelObject(cellToPlant)==null) {
 				level.plant( new Sungrass.Seed(), cellToPlant );
 			}
 		}

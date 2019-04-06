@@ -37,8 +37,7 @@ import com.watabou.utils.Random;
 public class Icecap extends Plant {
 
 	public Icecap() {
-		image = 1;
-		plantName = Game.getVar(R.string.Icecap_Name);
+		imageIndex = 1;
 	}
 	
 	@Override
@@ -52,12 +51,7 @@ public class Icecap extends Plant {
 			}
 		}
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Icecap_Desc);
-	}
-	
+
 	public static class Seed extends Plant.Seed {
 		{
 			plantName = Game.getVar(R.string.Icecap_Name);

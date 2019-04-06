@@ -36,19 +36,13 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class Dreamweed extends Plant {
 
 	public Dreamweed() {
-		image = 3;
-		plantName = Game.getVar(R.string.Dreamweed_Name);
+		imageIndex = 3;
 	}
 	
 	public void effect(int pos, Char ch) {
 		GameScene.add( Blob.seed( pos, 300 + 20 * Dungeon.depth, ConfusionGas.class ) );
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Dreamweed_Desc);
-	}
-	
+
 	public static class Seed extends Plant.Seed {
 		{
 			plantName = Game.getVar(R.string.Dreamweed_Name);

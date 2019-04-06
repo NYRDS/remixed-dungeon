@@ -38,8 +38,7 @@ import com.watabou.utils.Bundle;
 public class Earthroot extends Plant {
 
 	public Earthroot() {
-		image = 5;
-		plantName = Game.getVar(R.string.Earthroot_Name);
+		imageIndex = 5;
 	}
 
 	public void effect(int pos, Char ch) {
@@ -52,12 +51,7 @@ public class Earthroot extends Plant {
 			Camera.main.shake(1, 0.4f);
 		}
 	}
-	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Earthroot_Desc);
-	}
-	
+
 	public static class Seed extends Plant.Seed {
 		{
 			plantName = Game.getVar(R.string.Earthroot_Name);

@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -36,36 +38,55 @@ import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundlable;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class Plant implements Bundlable {
+public class Plant extends LevelObject {
 
-	public String plantName;
+	public Plant(int pos) {
+		super(pos);
+		textureFile = Assets.PLANTS;
+	}
 
-	public int image;
-	public int pos;
+	public Plant(){
+		this(Level.INVALID_CELL);
+	}
 
-	public PlantSprite sprite;
 
-	public void activate(Char ch) {
+	@Override
+	public boolean stepOn(Char chr) {
+		interact(chr);
 
+		if (chr instanceof Hero) {
+			Hero hero = (Hero) chr;
+			hero.interrupt();
+		}
+		return false;
+	}
+
+	@Override
+	public boolean interact(Char ch) {
 		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.WARDEN) {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 		}
 		wither();
 
 		effect(pos, ch);
+		return false;
 	}
 
-	public void wither() {
-		Dungeon.level.uproot(pos);
+
+	@Override
+	public void bump(Presser presser) {
+		super.bump(presser);
+	}
+
+	private void wither() {
+		Dungeon.level.remove(this);
 
 		sprite.kill();
 		if (Dungeon.visible[pos]) {
@@ -83,28 +104,22 @@ public class Plant implements Bundlable {
 		}
 	}
 
-	private static final String POS = "pos";
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		pos = bundle.getInt(POS);
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		bundle.put(POS, pos);
-	}
-
-	public boolean dontPack() {
-		return false;
-	}
-	
 	public String desc() {
-		return null;
+		return Utils.getClassParam(this.getClass().getSimpleName(), "Desc", "", true);
 	}
-	
+
+	@Override
+	public String name() {
+		return Utils.getClassParam(this.getClass().getSimpleName(), "Name", "", true);
+	}
+
 	public void effect(int pos, Char ch) {
 		
+	}
+
+	@Override
+	public boolean nonPassable(Char ch) {
+		return ch instanceof Hero;
 	}
 
 	public static class Seed extends Item {
@@ -164,7 +179,8 @@ public class Plant implements Bundlable {
 
 			super.execute(hero, action);
 		}
-		
+
+
 		@Override
 		public Item burn(int cell){
 			return null;

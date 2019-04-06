@@ -67,11 +67,9 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.features.Chasm;
-import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DiscardedItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.PlantSprite;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
 import com.watabou.pixeldungeon.ui.Banner;
 import com.watabou.pixeldungeon.ui.BusyIndicator;
@@ -111,7 +109,6 @@ public class GameScene extends PixelScene {
     private Group ripples;
     private Group bottomEffects;
     private Group objects;
-    private Group plants;
     private Group heaps;
     private Group mobs;
     private Group emitters;
@@ -219,14 +216,7 @@ public class GameScene extends PixelScene {
         }
 
         level.addVisuals(this);
-
-        plants = new Group();
-        add(plants);
-
-        for (int i = 0; i < level.plants.size(); i++) {
-            addPlantSprite(level.plants.valueAt(i));
-        }
-
+        
         heaps = new Group();
         add(heaps);
 
@@ -524,10 +514,6 @@ public class GameScene extends PixelScene {
         heaps.add(heap.sprite);
     }
 
-    private void addPlantSprite(Plant plant) {
-        (plant.sprite = (PlantSprite) plants.recycle(PlantSprite.class)).reset(plant);
-    }
-
     private static void addBlobSprite(final Blob gas) {
         if (isSceneReady())
             if (gas.emitter == null) {
@@ -563,14 +549,6 @@ public class GameScene extends PixelScene {
     }
 
     // -------------------------------------------------------
-
-    public static void add(Plant plant) {
-        if (scene != null && Dungeon.level != null) {
-            scene.addPlantSprite(plant);
-        } else {
-            EventCollector.logException();
-        }
-    }
 
     public static void add(Blob gas) {
         if (scene != null && Dungeon.level != null) {

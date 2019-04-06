@@ -287,23 +287,27 @@ public class WandMaker extends NPC {
 	public static class Rotberry extends Plant {
 		
 		{
-			image = 7;
-			plantName = Game.getVar(R.string.WandMaker_RotberryName);
+			imageIndex = 7;
 		}
-		
+
 		@Override
-		public void activate( Char ch ) {
-			super.activate( ch );
-			
-			GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
-			
-			Dungeon.level.drop( new Seed(), pos ).sprite.drop();
-			
-			if (ch != null) {
-				Buff.prolong( ch, Roots.class, TICK * 3 );
-			}
+		public String name() {
+			return Game.getVar(R.string.WandMaker_RotberryName);
 		}
-		
+
+        @Override
+        public boolean interact(Char ch) {
+
+            GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
+
+            Dungeon.level.drop( new Seed(), pos ).sprite.drop();
+
+            if (ch != null) {
+                Buff.prolong( ch, Roots.class, TICK * 3 );
+            }
+            return super.interact(ch);
+        }
+
 		@Override
 		public String desc() {
 			return Game.getVar(R.string.WandMaker_RotberryDesc);

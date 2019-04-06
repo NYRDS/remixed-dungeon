@@ -372,7 +372,6 @@ public abstract class Level implements Bundlable {
 	private Set<ScriptedActor>                    scripts = new HashSet<>();
 	public  Set<Mob>                              mobs    = new HashSet<>();
 	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
-	public  SparseArray<Plant>                    plants  = new SparseArray<>();
 	private SparseArray<Heap>                     heaps   = new SparseArray<>();
 	public  SparseArray<SparseArray<LevelObject>> objects = new SparseArray<>();
 
@@ -585,8 +584,6 @@ public abstract class Level implements Bundlable {
 		mobs = new HashSet<>();
 		heaps = new SparseArray<>();
 		blobs = new HashMap<>();
-		plants = new SparseArray<>();
-
 
 		width = bundle.optInt(WIDTH, 32); // old levels compat
 		height = bundle.optInt(HEIGHT, 32);
@@ -627,8 +624,10 @@ public abstract class Level implements Bundlable {
 			heaps.put(heap.pos, heap);
 		}
 
+
+		///Pre 28.6 saves compatibility
 		for (Plant plant : bundle.getCollection(PLANTS, Plant.class)) {
-			plants.put(plant.pos, plant);
+			putLevelObject(plant);
 		}
 
 		for (LevelObject object : bundle.getCollection(OBJECTS, LevelObject.class)) {
@@ -675,7 +674,6 @@ public abstract class Level implements Bundlable {
 		bundle.put(EXIT, exits);
 
 		bundle.put(HEAPS, heaps.values());
-		bundle.put(PLANTS, plants.values());
 
 		ArrayList<LevelObject> objectsArray = new ArrayList<>();
 
@@ -1112,13 +1110,15 @@ public abstract class Level implements Bundlable {
 
 	public void plant(Plant.Seed seed, int pos) {
 
-		Plant plant = plants.get(pos);
-		if (plant != null) {
-			plant.wither();
+	    LevelObject lo = getTopLevelObject(pos);
+
+		if (lo != null) {
+			lo.bump(seed);
 		}
 
-		plant = seed.couch(pos);
-		plants.put(pos, plant);
+		Plant plant = seed.couch(pos);
+		putLevelObject(plant);
+
 		if (GameScene.isSceneReady()) {
 			GameScene.add(plant);
 		}
@@ -1139,10 +1139,6 @@ public abstract class Level implements Bundlable {
 			return true;
 		}
 		return false;
-	}
-
-	public void uproot(int pos) {
-		plants.delete(pos);
 	}
 
 	public int pitCell() {
@@ -1257,11 +1253,6 @@ public abstract class Level implements Bundlable {
 
 			set(cell, Terrain.INACTIVE_TRAP);
 			GameScene.updateMap(cell);
-		}
-
-		Plant plant = plants.get(cell);
-		if (plant != null) {
-			plant.activate(chr);
 		}
 	}
 
