@@ -17,6 +17,8 @@
 
 package com.watabou.noosa.tweeners;
 
+import com.nyrds.LuaInterface;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
 
@@ -26,7 +28,23 @@ public class PosTweener extends Tweener {
 
 	public PointF start;
 	public PointF end;
-	
+
+	public static void attachTo(Visual visual, float dx, float dy, float time) {
+		PosTweener tweener = new PosTweener(visual,dx,dy,time);
+		visual.getParent().add(tweener);
+		tweener.listener = Gizmo::killAndErase;
+	}
+
+	@LuaInterface
+	public PosTweener( Visual visual, float dx, float dy, float time ) {
+		super( visual, time );
+
+		this.visual = visual;
+		start = visual.point();
+		end = start.clone();
+		end.offset(dx,dy);
+	}
+
 	public PosTweener( Visual visual, PointF pos, float time ) {
 		super( visual, time );
 		
