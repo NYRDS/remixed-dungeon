@@ -358,8 +358,17 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	}
 
 	@Override
-	public void move(int from, int to) {
-		super.move(from, to);
+	public void idle() {
+		if(ch.isFlying()) {
+			play(fly);
+		} else {
+			super.idle();
+		}
+	}
+
+	@Override
+	public void move(int from, int to, boolean playRunAnimation) {
+		super.move(from, to, !ch.isFlying());
 		if (ch.isFlying()) {
 			play(fly);
 		}

@@ -668,14 +668,8 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actMove(CharAction.Move action) {
 		if (getCloser(action.dst)) {
-
 			return true;
-
 		} else {
-			//TODO remove this in future
-			//if (Dungeon.level.map[getPos()] == Terrain.SIGN) {
-			//	GameScene.show(new WndMessage(Dungeon.tip()));
-			//}
 			readyAndIdle();
 			return false;
 		}

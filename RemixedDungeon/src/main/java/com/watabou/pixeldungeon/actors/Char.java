@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -768,6 +769,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 	}
 
 	//backward compatibility with mods
+	@LuaInterface
 	public int magicLvl() {
 		return skillLevel();
 	}
