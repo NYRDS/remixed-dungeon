@@ -83,15 +83,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	}
 
-	public void playAnim(Animation.AnimationSeq animationSeq, Callback animComplete) {
-		Animation anim = new Animation(animationSeq.fps, animationSeq.looped);
-		anim.frames(frames, animationSeq.frames);
-		onAnimComplete = animComplete;
-		listener = this;
-		play(anim);
-	}
-
-	private void playAnim(Animation anim, Callback animComplete) {
+	public void playAnim(Animation anim, Callback animComplete) {
 		onAnimComplete = animComplete;
 		listener = this;
 		play(anim);

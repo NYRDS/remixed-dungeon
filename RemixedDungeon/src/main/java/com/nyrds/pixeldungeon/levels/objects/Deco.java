@@ -2,14 +2,15 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.Packable;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.StringsManager;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -25,13 +26,18 @@ public class Deco extends LevelObject {
 	public static final String ANIMATIONS = "animations";
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
+	private JSONObject animations;
+
 	private String name;
 	private String desc;
 
-	private Animation.AnimationSeq basic;
+	private Animation basic;
 
 	@Packable
 	private String object_desc;
+
+	private int width = 16;
+	private int height = 16;
 
 	public Deco(){
 		super(Level.INVALID_CELL);
@@ -78,21 +84,12 @@ public class Deco extends LevelObject {
 		textureFile = sprite.optString("textureFile",textureFile);
 		imageIndex  = sprite.optInt("imageIndex",imageIndex);
 
+		width = sprite.optInt("width", width);
+		height = sprite.optInt("height", height);
+
+
 		if(sprite.has(ANIMATIONS)) {
-			JSONObject basicAnim = sprite.getJSONObject(ANIMATIONS).getJSONObject("basic");
-
-			basic = new Animation.AnimationSeq();
-			basic.fps = basicAnim.getInt("fps");
-			basic.looped = basicAnim.getBoolean("looped");
-
-			JSONArray basicFrames = basicAnim.getJSONArray("frames");
-
-			int []frames = new int[basicFrames.length()];
-
-			for(int i = 0; i<frames.length; ++i) {
-				frames[i] = basicFrames.getInt(i);
-			}
-			basic.frames = frames;
+			animations = sprite.getJSONObject(ANIMATIONS);
 		}
 	}
 
@@ -108,8 +105,28 @@ public class Deco extends LevelObject {
 
 	@Override
 	public void resetVisualState() {
-		if(basic!=null) {
-			sprite.playAnim(basic, Util.nullCallback);
+		if(animations!=null) {
+			if(basic==null) {
+				try {
+					basic = JsonHelper.readAnimation(animations,
+							"basic",
+							new TextureFilm(textureFile,width,height),
+							0);
+				} catch (JSONException e) {
+					throw new ModError("Deco:"+name,e);
+				}
+				sprite.playAnim(basic, Util.nullCallback);
+			}
 		}
+	}
+
+	@Override
+	public int getSpriteXS() {
+		return width;
+	}
+
+	@Override
+	public int getSpriteYS() {
+		return height;
 	}
 }
