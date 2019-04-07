@@ -1,7 +1,15 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.plants.Dreamweed;
+import com.watabou.pixeldungeon.plants.Earthroot;
+import com.watabou.pixeldungeon.plants.Fadeleaf;
+import com.watabou.pixeldungeon.plants.Firebloom;
+import com.watabou.pixeldungeon.plants.Icecap;
+import com.watabou.pixeldungeon.plants.Sorrowmoss;
+import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONException;
@@ -34,7 +42,14 @@ public class LevelObjectsFactory {
 		registerObjectClass(PortalGateReceiver.class);
 		registerObjectClass(Trap.class);
 		registerObjectClass(Deco.class);
-
+		registerObjectClass(Dreamweed.class);
+		registerObjectClass(Earthroot.class);
+		registerObjectClass(Fadeleaf.class);
+		registerObjectClass(Firebloom.class);
+		registerObjectClass(Icecap.class);
+		registerObjectClass(WandMaker.Rotberry.class);
+		registerObjectClass(Sorrowmoss.class);
+		registerObjectClass(Sungrass.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {

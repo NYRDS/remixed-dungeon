@@ -96,7 +96,7 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
-	public boolean nonPassable() {
+	public boolean nonPassable(Char ch) {
 		return true;
 	}
 }

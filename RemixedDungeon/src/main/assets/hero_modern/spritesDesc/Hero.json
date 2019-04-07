@@ -18,7 +18,7 @@
   "zap"     : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0] },
 
   "operate" : { "fps" : 8,  "looped" : false,    "frames" : [11, 12, 11, 12] },
-  "fly"     : { "fps" : 1,  "looped" : true,     "frames" : [13] },
+  "fly"     : { "fps" : 4,  "looped" : true,     "frames" : [13, 14, 14, 13, 13, 13, 14] },
 
   "weapon_anim" : {
     "none"      : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0]},

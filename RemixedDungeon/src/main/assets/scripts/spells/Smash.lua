@@ -46,7 +46,8 @@ return spell.init{
 
         local function smash(cell)
 
-            RPD.topEffect(chr:getPos(),"smash_fist")
+            local fist = RPD.topEffect(chr:getPos(),"smash_fist")
+            RPD.attachMoveTweener(fist, 100,0,1)
 
             local clip = RPD.bottomEffect(chr:getPos(),"smash_blast")
             clip:setScale(1.5,1.3)

@@ -193,7 +193,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	}
 
 	@Override
-	public void move(int from, int to) {
+	public void move(int from, int to, boolean playRunAnimation) {
 		super.move(from, to);
 		if (ch.isFlying()) {
 			play(fly);

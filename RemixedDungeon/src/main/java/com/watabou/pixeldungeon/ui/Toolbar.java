@@ -34,14 +34,12 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndHero;
 import com.watabou.pixeldungeon.windows.WndInfoCell;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
-import com.watabou.pixeldungeon.windows.WndInfoPlant;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.pixeldungeon.windows.elements.Tool;
@@ -273,12 +271,6 @@ public class Toolbar extends Component {
                 } else {
                     GameScene.show(new WndInfoItem(heap));
                 }
-                return;
-            }
-
-            Plant plant = Dungeon.level.plants.get(cell);
-            if (plant != null) {
-                GameScene.show(new WndInfoPlant(plant));
                 return;
             }
 

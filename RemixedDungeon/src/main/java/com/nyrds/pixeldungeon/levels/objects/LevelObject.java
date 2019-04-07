@@ -16,7 +16,7 @@ import org.json.JSONObject;
 public abstract class LevelObject implements Bundlable, Presser {
 
     @Packable
-    private int pos = -1;
+    protected int pos = -1;
 
     @Packable
     protected int layer = 0;
@@ -50,7 +50,7 @@ public abstract class LevelObject implements Bundlable, Presser {
         return true;
     }
 
-    public boolean nonPassable() {
+    public boolean nonPassable(Char ch) {
         return false;
     }
 

@@ -36,8 +36,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class Fadeleaf extends Plant {
 
 	public Fadeleaf () {
-		image = 6;
-		plantName = Game.getVar(R.string.Fadeleaf_Name);
+		imageIndex = 6;
 	}
 	
 	public void effect(int pos, Char ch) {
@@ -67,7 +66,7 @@ public class Fadeleaf extends Plant {
 		return Game.getVar(R.string.Fadeleaf_Desc);
 	}
 	
-	public static class Seed extends Plant.Seed {
+	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
 			plantName = Game.getVar(R.string.Fadeleaf_Name);
 			

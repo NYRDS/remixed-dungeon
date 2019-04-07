@@ -95,6 +95,10 @@ local MobFactory      = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.Mo
 local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.EffectsFactory")
 
 
+local Tweeners = {
+    PosTweener = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener")
+}
+
 local RPD = {
     RemixedDungeon = RemixedDungeon,
     GameScene = GameScene,
@@ -121,6 +125,8 @@ local RPD = {
 
     Blobs = Blobs,
     PseudoBlobs = PseudoBlobs,
+
+    Tweeners = Tweeners,
 
     Sfx = {
         CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
@@ -214,6 +220,10 @@ local RPD = {
 
     bottomEffect = function(cell,effectName)
         return GameScene:clipEffect(cell,0,effectName)
+    end,
+
+    attachMoveTweener = function(img,dx,dy,time)
+        Tweeners.PosTweener:attachTo(img,dx,dy,time)
     end,
 
     item = function(itemClass, quantity)

@@ -17,6 +17,7 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
@@ -246,6 +247,16 @@ public class Visual extends Gizmo implements IPlaceable{
 	public void setPos(float x, float y){
 		this.x = x;
 		this.y = y;
+	}
+
+	@LuaInterface
+	public void incX(float x) {
+		this.x +=x;
+	}
+
+	@LuaInterface
+	public void incY(float y) {
+		this.y +=y;
 	}
 
 	@Override

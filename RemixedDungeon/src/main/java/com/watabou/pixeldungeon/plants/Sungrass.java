@@ -38,8 +38,7 @@ import com.watabou.utils.Random;
 public class Sungrass extends Plant {
 
 	public Sungrass() {
-		image = 4;
-		plantName = Game.getVar(R.string.Sungrass_Name);
+		imageIndex = 4;
 	}
 
 	public void effect(int pos, Char ch) {
@@ -52,12 +51,7 @@ public class Sungrass extends Plant {
 		}
 	}
 
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Sungrass_Desc);
-	}
-
-	public static class Seed extends Plant.Seed {
+	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
 			plantName = Game.getVar(R.string.Sungrass_Name);
 

@@ -40,9 +40,11 @@ public class CustomClipEffect extends MovieClip implements MovieClip.Listener, I
 	}
 
 	public void playAnimOnce() {
-		onAnimComplete = this::killAndErase;
+		if(!curAnim.looped) {
+			onAnimComplete = this::killAndErase;
+		}
 		listener = this;
-		play(curAnim, true);
+		play(curAnim,true);
 	}
 
 	@Override

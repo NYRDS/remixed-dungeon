@@ -17,16 +17,14 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.TextureFilm;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.utils.PointF;
 
-public class PlantSprite extends Image {
+public class PlantSprite extends LevelObjectSprite {
 
 	private static final float DELAY = 0.2f;
 	
@@ -35,19 +33,10 @@ public class PlantSprite extends Image {
 	}
 	private State state = State.NORMAL;
 	private float time;
-	
-	private static TextureFilm frames;
-	
+
 	private int pos = -1;
 	
 	public PlantSprite() {
-		super( Assets.PLANTS );
-		
-		if (frames == null) {
-			// Hardcoded size
-			frames = new TextureFilm( texture, 16, 16 );
-		}
-		
 		// Hardcoded origin
 		origin.set( 8, 12 );
 	}
@@ -61,22 +50,18 @@ public class PlantSprite extends Image {
 		
 		revive();
 		
-		reset( plant.image );
+		reset( plant.image() );
 		alpha( 1f );
 		
-		pos = plant.pos;
-		PointF p = DungeonTilemap.tileToWorld( plant.pos );
+		pos = plant.getPos();
+		PointF p = DungeonTilemap.tileToWorld( plant.getPos() );
 		x = p.x;
 		y = p.y;
 		
 		state = State.GROWING;
 		time = DELAY;
 	}
-	
-	public void reset( int image ) {
-		frame( frames.get( image ) );
-	}
-	
+
 	@Override
 	public void update() {
 		super.update();

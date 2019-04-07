@@ -35,8 +35,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class Sorrowmoss extends Plant {
 
 	public Sorrowmoss() {
-		image = 2;
-		plantName = Game.getVar(R.string.Sorrowmoss_Name);
+		imageIndex = 2;
 	}
 	
 	public void effect(int pos, Char ch ) {
@@ -49,12 +48,7 @@ public class Sorrowmoss extends Plant {
 		}
 	}
 	
-	@Override
-	public String desc() {
-		return Game.getVar(R.string.Sorrowmoss_Desc);
-	}
-	
-	public static class Seed extends Plant.Seed {
+	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
 			plantName = Game.getVar(R.string.Sorrowmoss_Name);
 			

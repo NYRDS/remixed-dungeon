@@ -676,12 +676,12 @@ public class Dungeon {
         }
     }
 
-    private static void markObjects() {
+    private static void markObjects(Char ch) {
         for (int i = 0; i < level.objects.size(); i++) {
             SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
             for (int j = 0; j < objectLayer.size(); j++) {
                 LevelObject object = objectLayer.valueAt(j);
-                if (object.nonPassable()) {
+                if (object.nonPassable(ch)) {
                     passable[object.getPos()] = false;
                 }
             }
@@ -728,7 +728,7 @@ public class Dungeon {
 
         markActorsAsUnpassable(ch, visible);
 
-        markObjects();
+        markObjects(ch);
 
         return PathFinder.getStep(from, to, passable);
     }
@@ -755,7 +755,7 @@ public class Dungeon {
 
         markActorsAsUnpassableIgnoreFov();
 
-        markObjects();
+        markObjects(ch);
 
         return PathFinder.getStep(from, to, passable);
 
@@ -770,7 +770,7 @@ public class Dungeon {
         }
 
         markActorsAsUnpassableIgnoreFov();
-        markObjects();
+        markObjects(ch);
 
         passable[cur] = true;
 

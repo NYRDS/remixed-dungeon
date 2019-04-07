@@ -68,7 +68,7 @@ public class ZapEffect {
         }
     }
 
-    static void attachMissleTweener(Visual target, int from, int to) {
+    private static void attachMissleTweener(Visual target, int from, int to) {
 
         target.point( DungeonTilemap.tileToWorld( from ) );
         PointF dest = DungeonTilemap.tileToWorld( to );
@@ -80,7 +80,7 @@ public class ZapEffect {
         target.angle = (float) (135 - Math.toDegrees(Math.atan2( d.x, d.y )));
 
         PosTweener tweener = new PosTweener( target, dest, d.length() / SPEED );
-        tweener.listener = tweener1 -> target.kill();
+        tweener.listener = tweener1 -> target.killAndErase();
         target.getParent().add( tweener );
     }
 }

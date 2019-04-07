@@ -161,7 +161,13 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void move(int from, int to) {
-        play(run);
+        move(from, to, true);
+    }
+
+    public void move(int from, int to, boolean playRunAnimation) {
+        if(playRunAnimation) {
+            play(run);
+        }
 
         if (getParent() != null) {
             motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);

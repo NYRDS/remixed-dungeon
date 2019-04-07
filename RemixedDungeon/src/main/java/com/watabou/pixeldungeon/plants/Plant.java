@@ -17,12 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
@@ -30,42 +27,55 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
 import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.sprites.PlantSprite;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundlable;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import java.util.ArrayList;
+public class Plant extends LevelObject {
 
-public class Plant implements Bundlable {
+	public Plant(int pos) {
+		super(pos);
+		textureFile = Assets.PLANTS;
+	}
 
-	public String plantName;
+	public Plant(){
+		this(Level.INVALID_CELL);
+	}
 
-	public int image;
-	public int pos;
 
-	public PlantSprite sprite;
+	@Override
+	public boolean stepOn(Char chr) {
+		interact(chr);
 
-	public void activate(Char ch) {
+		if (chr instanceof Hero) {
+			Hero hero = (Hero) chr;
+			hero.interrupt();
+		}
+		return false;
+	}
 
+	@Override
+	public boolean interact(Char ch) {
 		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.WARDEN) {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 		}
 		wither();
 
 		effect(pos, ch);
+		return false;
 	}
 
-	public void wither() {
-		Dungeon.level.uproot(pos);
+
+	@Override
+	public void bump(Presser presser) {
+		super.bump(presser);
+	}
+
+	private void wither() {
+		Dungeon.level.remove(this);
 
 		sprite.kill();
 		if (Dungeon.visible[pos]) {
@@ -83,122 +93,22 @@ public class Plant implements Bundlable {
 		}
 	}
 
-	private static final String POS = "pos";
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		pos = bundle.getInt(POS);
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		bundle.put(POS, pos);
-	}
-
-	public boolean dontPack() {
-		return false;
-	}
-	
 	public String desc() {
-		return null;
+		return Utils.getClassParam(this.getClass().getSimpleName(), "Desc", "", true);
 	}
-	
+
+	@Override
+	public String name() {
+		return Utils.getClassParam(this.getClass().getSimpleName(), "Name", "", true);
+	}
+
 	public void effect(int pos, Char ch) {
 		
 	}
 
-	public static class Seed extends Item {
-
-		public static final String AC_PLANT = "Plant_ACPlant";
-
-		private static final float TIME_TO_PLANT = 1f;
-
-		{
-			stackable = true;
-			setDefaultAction(AC_THROW);
-		}
-
-		protected Class<? extends Plant> plantClass;
-		protected String plantName;
-
-		public Class<? extends Item> alchemyClass;
-
-		@Override
-		public ArrayList<String> actions(Hero hero) {
-			ArrayList<String> actions = super.actions(hero);
-			actions.add(AC_PLANT);
-			actions.add(CommonActions.AC_EAT);
-			return actions;
-		}
-
-		@Override
-		protected void onThrow(int cell) {
-			if (Dungeon.level.map[cell] == Terrain.ALCHEMY || Dungeon.level.pit[cell]) {
-				super.onThrow(cell);
-			} else {
-				Dungeon.level.plant(this, cell);
-			}
-		}
-
-		@Override
-		public void execute(Hero hero, String action) {
-			if (action.equals(AC_PLANT)) {
-
-				hero.spend(TIME_TO_PLANT);
-				hero.busy();
-				((Seed) detach(hero.belongings.backpack)).onThrow(hero.getPos());
-
-				hero.getSprite().operate(hero.getPos());
-
-			} else if (action.equals(CommonActions.AC_EAT)) {
-				detach(hero.belongings.backpack);
-
-				hero.getSprite().operate(hero.getPos());
-				hero.busy();
-
-				SpellSprite.show(hero, SpellSprite.FOOD);
-				Sample.INSTANCE.play(Assets.SND_EAT);
-
-				hero.spend(Food.TIME_TO_EAT);
-			}
-
-			super.execute(hero, action);
-		}
-		
-		@Override
-		public Item burn(int cell){
-			return null;
-		}
-
-		public Plant couch(int pos) {
-			try {
-				Sample.INSTANCE.play(Assets.SND_PLANT);
-				Plant plant = plantClass.newInstance();
-				plant.pos = pos;
-				return plant;
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
-		}
-
-		@Override
-		public boolean isUpgradable() {
-			return false;
-		}
-
-		@Override
-		public boolean isIdentified() {
-			return true;
-		}
-
-		@Override
-		public int price() {
-			return 10 * quantity();
-		}
-
-		@Override
-		public String info() {
-			return Utils.format(Game.getVar(R.string.Plant_Info), Utils.indefinite(plantName), desc());
-		}
+	@Override
+	public boolean nonPassable(Char ch) {
+		return ch instanceof Hero;
 	}
+
 }
