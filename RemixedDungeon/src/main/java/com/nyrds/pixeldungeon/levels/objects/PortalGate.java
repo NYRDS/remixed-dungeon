@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -13,7 +14,7 @@ import com.watabou.utils.Bundle;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public abstract class PortalGate extends LevelObject {
+public abstract class PortalGate extends Deco {
 
 	protected boolean animationRunning = false;
 
@@ -29,9 +30,9 @@ public abstract class PortalGate extends LevelObject {
 	@Packable
 	protected int uses;
 
-	{
-		textureFile = "levelObjects/portals.png";
-	}
+	protected Animation activation;
+	protected Animation activatedLoop;
+
 
 	public PortalGate(){
 		this(-1);
@@ -49,6 +50,10 @@ public abstract class PortalGate extends LevelObject {
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+
+		object_desc = "portalGate";
+
+		super.setupFromJson(level, obj);
 		if(obj.has("uses")){
 			uses = obj.getInt("uses");
 		} else {
@@ -84,46 +89,34 @@ public abstract class PortalGate extends LevelObject {
 		if(activated){
 			return Game.getVar(R.string.PortalGate_Desc_Activated);
 		}
-		return Game.getVar(R.string.PortalGate_Desc);
+		return super.desc();
 	}
 
-	@Override
-	public String name() {
-		return Game.getVar(R.string.PortalGate_Name);
-	}
-
-	@Override
-	public int image() {
-		return 0;
-	}
-
-	@Override
-	public int getSpriteXS() {
-		return 32;
-	}
-
-	@Override
-	public int getSpriteYS() {
-		return 32;
-	}
 
 	protected void playStartUpAnim(){
 		animationRunning = true;
-		sprite.playAnim(8, false, () -> {
+
+		sprite.playAnim(activation, () -> {
 			playActiveLoop();
 			activated = true;
 			animationRunning = false;
-			GLog.w( Game.getVar(R.string.PortalGate_Activated) );
-		}, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4, image() + 5, image() + 6, image() + 7, image() + 8, image() + 9, image() + 10, image() + 11, image() + 12, image() + 13, image() + 14, image() + 15, image() + 16);
-
+			GLog.w(Game.getVar(R.string.PortalGate_Activated));
+		});
 	}
 
 	private void playActiveLoop(){
-		sprite.playAnim(8, true, Util.nullCallback, image() + 17, image() + 18, image() + 19, image() + 20, image() + 21);
+		sprite.playAnim(activatedLoop, Util.nullCallback);
 	}
 
 	@Override
 	public void resetVisualState() {
+		super.resetVisualState();
+
+		if(activation==null) {
+			activation = loadAnimation("activation");
+			activatedLoop = loadAnimation("activatedLoop");
+		}
+
 		if(activated) {
 			playActiveLoop();
 		}

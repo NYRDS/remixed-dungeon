@@ -17,6 +17,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.annotation.Nullable;
+
 /**
  * Created by mike on 01.07.2016.
  */
@@ -34,7 +36,7 @@ public class Deco extends LevelObject {
 	private Animation basic;
 
 	@Packable
-	private String object_desc;
+	protected String object_desc;
 
 	private int width = 16;
 	private int height = 16;
@@ -51,7 +53,7 @@ public class Deco extends LevelObject {
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
 		super.setupFromJson(level,obj);
 
-		object_desc = obj.getString("object_desc");
+		object_desc = obj.optString("object_desc",object_desc);
 
 		readObjectDesc();
 	}
@@ -103,20 +105,27 @@ public class Deco extends LevelObject {
 		return StringsManager.maybeId(name);
 	}
 
+
+	@Nullable
+	protected Animation loadAnimation(String kind) {
+		if(animations!=null) {
+			try {
+				return JsonHelper.readAnimation(animations,
+						kind,
+						new TextureFilm(textureFile, width, height),
+						0);
+			} catch (JSONException e) {
+				throw new ModError("Deco:" + name + "|" + kind + ":", e);
+			}
+		}
+		return null;
+	}
+
 	@Override
 	public void resetVisualState() {
-		if(animations!=null) {
-			if(basic==null) {
-				try {
-					basic = JsonHelper.readAnimation(animations,
-							"basic",
-							new TextureFilm(textureFile,width,height),
-							0);
-				} catch (JSONException e) {
-					throw new ModError("Deco:"+name,e);
-				}
-				sprite.playAnim(basic, Util.nullCallback);
-			}
+		if(basic==null) {
+			basic = loadAnimation("basic");
+			sprite.playAnim(basic, Util.nullCallback);
 		}
 	}
 
