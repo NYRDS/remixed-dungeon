@@ -7,7 +7,6 @@ import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -23,11 +22,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
 	@SuppressLint("StaticFieldLeak")
 	static Context instanceContext;
-
-	private static int hqSdkStarted = 0;
-
-	@Nullable
-	private static HqmApi hqApi;
 
 	static class HqSdkCrash extends Exception {
 		HqSdkCrash(Throwable cause) {
@@ -58,8 +52,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
 						@Override
 						public void onSuccess(HqmApi hqmApi) {
-							hqApi = hqmApi;
-							hqSdkStarted = 1;
 						}
 
 						@Override
@@ -87,32 +79,32 @@ public class RemixedDungeonApp extends MultiDexApplication {
 	}
 
 	static public void startScene() {
-		if(hqSdkStarted == 1 && hqApi != null) {
-			try {
-				hqApi.start(new InstalledApplicationsCollector());
-				hqApi.startSystemEventsTracking();
-				hqSdkStarted++;
+		try {
+		if(HQSdk.getInstance() != null) {
 
-				HQSdk.getUserGroups(new HqmCallback<List<String>>() {
+			HQSdk.getInstance().start(new InstalledApplicationsCollector());
+			HQSdk.getInstance().startSystemEventsTracking();
 
-					@Override
-					public void onError(@NotNull Throwable throwable) {
-						EventCollector.logException(new HqSdkError(throwable));
-					}
+			HQSdk.getUserGroups(new HqmCallback<List<String>>() {
 
-					@Override
-					public void onSuccess(List<String> list) {
-						//TODO do something here
-					}
-				});
+				@Override
+				public void onError(@NotNull Throwable throwable) {
+					EventCollector.logException(new HqSdkError(throwable));
+				}
+
+				@Override
+				public void onSuccess(List<String> list) {
+					//TODO do something here
+				}
+			});
+		}
 			} catch (Throwable hqSdkCrash) {
 				EventCollector.logException(new HqSdkCrash(hqSdkCrash));
 			}
-		}
 	}
 
 	static public int getExperimentSegment(String key, int vars) {
-		if(hqApi==null) {
+		if(HQSdk.getInstance()==null || !HQSdk.isInitialized()) {
 			EventCollector.logEvent("experiments",key,"hqApi not ready");
 			return -1;
 		}
