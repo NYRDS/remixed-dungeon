@@ -4,7 +4,7 @@
     <!-- STRINGS OF GutsLevel & GutsBossLevel CLASS -->
     <string name="Guts_TileGrass">Dried shrub</string>
     <string name="Guts_TileHighGrass">Dried shrub</string>
-    <string name="Guts_TileWater">Weird slimy liquid</string>>
+    <string name="Guts_TileWater">Weird slimy liquid</string>
     <string name="Guts_TileDescEntrance">Gaping hole in the ceiling leads up to the upper levels</string>
     <string name="Guts_TileDescExit">Gaping hole in the floor leads down to the lower levels</string>
     <string name="Guts_TileDescDeco">Looks like this place was... wounded</string>

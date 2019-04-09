@@ -51,7 +51,9 @@ public class AppodealAdapter {
                                     AppodealNetworks.MINTEGRAL,
                                     AppodealNetworks.OGURY_PRESAGE,
                                     AppodealNetworks.VUNGLE,
-                                    AppodealNetworks.TAPJOY};
+                                    AppodealNetworks.TAPJOY,
+                                    AppodealNetworks.UNITY_ADS
+        };
 
         for (String net : disableNetworks) {
             Appodeal.disableNetwork(RemixedDungeon.instance(), net);
