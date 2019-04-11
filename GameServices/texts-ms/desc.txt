@@ -1,0 +1,28 @@
+Ini merupakan permainan seakan-gasar dengan grafik gaya piksel
+
+Pada suatu hari terdapat sebuah pekan kecil. Penduduknya tinggal dengan aman-damai tetapi kehidupan mereka sangat miskin, mereka tidak mampu bersuka-ria atau pergi melancong. Tetapi pada satu hari, ketika semua orang dalam keadaan kemurungan, satu keajaiban telah berlaku. Tanah di bawah pekan mereka duduki telah bergegar kuat dan keluarlah segala jenis raksaksa yang durjana. Semenjak dari kejadian tersebut, saki-baki penduduk yang masih hidup telah menjadi semakin gembira dan hidup senang dan ceria. Kenapa ya? Kerana kurungan bawah tanah tersebut telah menarik minat ramai adiwira dan pengembara. Mereka datang untuk melindungi penduduk yang tidak bersalah dan juga banyak membelanjakan hasil rampasan mereka, oleh itu sekaligus menjana ekonomi pekan kecil ini.
+Dan kini pekan kecil ini menjadi semakin makmur dan berkembang maju, kerana ia berada betul-betul di atas kurungan bawah tanah yang merbahaya ini, dipenuhi dengan pengembara-pengembara yang telah mati dengan roh-roh mereka yang terseksa.
+
+Fitur permainan:
+- Permainan ini menyokong mod dicipta-pengguna! Semakin lama kami bangunkan fitur ini, kelak anda berupaya mencipta permainan serba baharu di dalam Remixed Dungeon!
+- Pengalaman seakan-gasar yang tegar!
+- 7 kelas adiwira yang boleh dipilih
+- Hab pekan memperkenalkan anda dengan perjalanan dan dunia permainan anda
+- Lebih 30 aras kurungan bawah tanah dari kurungan bawah tanah utama yang dibahagikan pada 6 jenis kurungan bawah tanah yang berbeza
+- 3 kurungan bawah tanah pilihan: Sarang Lelabah, Nekropolis, Gua Ais
+- Berdozen-dozen item dan raksaksa
+- Macam-macam jenis bos
+- Topi! Untuk sesiapa sahaja yang menyukai topi
+
+Ikuti kami di twitter:
+https://twitter.com/nyrds
+
+Permainan ini merupakan perisian sumber-terbuka dibawah Lesen GPLv3. Kod sumber Remixed Dungeon boleh rujuk di sini:
+https://github.com/NYRDS/remixed-dungeon
+
+Jika anda mahu menyertai penyetempatan ke bahasa lain sila lawati:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Anda juga boleh lawati
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+untuk ketahui log perubahan lengkap di wiki kami
