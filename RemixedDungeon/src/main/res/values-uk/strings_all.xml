@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Шолом Хаосу</string>
     <string name="ChaosHelmet_Info">Криваво червоний шолом. Дуже символічно для воїна хаосу.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: ліміт прикликання досягнуто (поточний максимум: %2$d)!</string>
     <string name="Mana_Title">Мана</string>
@@ -66,8 +65,6 @@
 
 
     <string name="Torch_Info2">Це дуже корисна річ в підземеллях, які відомі своїм недостатнім освітленням.</string>
-
-
 
     <string name="WndSpells_Title">Закляття</string>
     <string name="WndSpells_Level">Магічний рівень:</string>
