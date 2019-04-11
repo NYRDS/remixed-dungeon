@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <!-- Item descriptions -->
-    <!-- STRINGS OF WandOfShadowbolt CLASS -->
-    <string name="WandOfShadowbolt_Name">Stab des Schattenblitzes</string>
-    <string name="WandOfShadowbolt_Info">Dieser Stab strahlt dunkle, böse Energie aus.</string>
-</resources>

@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <!-- Item descriptions -->
-    <!-- STRINGS OF WandOfShadowbolt CLASS -->
-    <string name="WandOfShadowbolt_Name">그림자 화살의 지팡이</string>
-    <string name="WandOfShadowbolt_Info">이 지팡이는 검고 사악한 에너지를 내뿜고 있습니다.</string>
-</resources>

@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <!-- Item descriptions -->
-    <!-- STRINGS OF WandOfShadowbolt CLASS -->
-    <string name="WandOfShadowbolt_Name">varinha do dardo da sombra</string>
-    <string name="WandOfShadowbolt_Info">Esta varinha emite uma negra, maliciosa energia.</string>
-</resources>
