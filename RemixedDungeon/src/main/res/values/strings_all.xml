@@ -1975,7 +1975,6 @@
 
     <string name="Mob_Desc">Real description is coming soon!</string>
     <string name="Mob_Died">You hear something died in the distance</string>
-    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
     <string name="Mob_StaSleepingStatus">This %s is sleeping</string>
     <string name="Mob_StaWanderingStatus">This %s is wandering</string>
     <string name="Mob_StaHuntingStatus">This %s is hunting</string>
@@ -2529,7 +2528,7 @@
     <string name="Mods_AuthorEmail">Author email:</string>
     <string name="Mods_RestartRequired">Restart required</string>
 
-    <string name="Spells_NotTooFast">"You not ready to cast %s yet"</string>
+    <string name="Spells_NotTooFast">%s is not ready for use yet</string>
     <string name="ElvenBow_Name">elven bow</string>
     <string name="ElvenBow_Gender">masculine</string>
 

@@ -24,7 +24,10 @@
     <string name = "Mod_Email"></string>
     <string name = "Mod_Link"></string>
 
-    <string name="AboutScene_Code_Names">Watabou  &amp; NYRDS</string>
+
+    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+
+    <string name="AboutScene_Code_Names">Watabou &amp; NYRDS</string>
     <string name="AboutScene_Graphics_Names">Watabou  &amp; NYRDS &amp; ThEnigma314 &amp; Pavel Provotorov</string>
     <string name="AboutScene_Music_Names">Cube_Code &amp; Misaerit</string>
     <string name="AboutScene_Sound_Names">Watabou &amp; Freesound.org (sonidotv, kantouth)</string>
