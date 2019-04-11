@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Hełm Chaosu</string>
     <string name="ChaosHelmet_Info">Krwiście czerwony hełm. Symbol każdego wojownika chaosu.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s : osiągnięty limit przyzwanych jednostek  (Maksymalna ilość %2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -66,8 +65,6 @@
 
 
     <string name="Torch_Info2">Jest to nieodzowny przedmiot w Lochacg, które są znane ze swego słabego oświetlenia.</string>
-
-
 
     <string name="WndSpells_Title">Zaklęcia</string>
     <string name="WndSpells_Level">Poziom Magi:</string>
@@ -2400,8 +2397,8 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Badges_LevelReached4">Pziom 24 osiągnięty</string>
     <string name="Badges_AllPotions">Wszystkie mikstury zidentyfikowane</string>
     <string name="Badges_AllScrolls">Wszystkie zwoje zidentyfikowane</string>
-    <string name="Badges_AllRings">Wszystkie pierścienie zidentyfikowane\"</string>
-    <string name="Badges_AllWands">Wszystkie różdżki zidentyfikowane\"</string>
+    <string name="Badges_AllRings">Wszystkie pierścienie zidentyfikowane</string>
+    <string name="Badges_AllWands">Wszystkie różdżki zidentyfikowane</string>
     <string name="Badges_AllItems">Wszystkie mikstury, pierścienie &amp; różdżki zidentyfikowane</string>
 
 
@@ -2677,7 +2674,8 @@ Nawet wtedy była praca do wykonania. Yog był sługą jeszcze bardziej okultyst
 Pogłębiała się więc głębiej. Dziennik starego czarodzieja, wciąż promieniujący mocą, pokazał jej drogę. Z magią na swoich stronach podróżowała do dzikiej nowej krainy, małej wioski otoczonej potężnym lasem. Tam w końcu wytropiła zło w jego labiryntowym źródle i pokonała wszystkich, którzy stali przed nią
 Teraz, w słabym świetle dnia, obejrzała się w kałuży jaskiniowej wody. Jej ciało było wypaczone niemal nie do poznania przez magię. Jej skóra, blada do przezroczystości, była pokryta brudem i sadzą.  Jej naszyjnik z pierścieni mógł zapłacić okup królowi, a jej kabura z różdżkami zawierała wystarczająco dużo magicznej energii, by zniszczyć armie. Chwyciła swoją broń, dosłownie na tyle, by wyciąć samych bogów. Naprawdę stała się mistrzynią tego mrocznego królestwa, tego pustkowia rozpaczy
 Ścigała zło w najdalsze zakątki wieloświata, ale teraz była sparaliżowana strachem. Co, jeśli ją odrzucą? Co jeśli nie? Jak mogła już wchodzić w interakcje z tymi ludźmi? Do diabła, straciła rachubę czasu, w którym zginęła jej śmierć, tylko po to, by wyciągnąć ją z lodowatego uścisku
-Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromnego światła i weszła w ciemność, może po raz ostatni .</item>
+Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromnego światła i weszła w ciemność, może po raz ostatni.
+</item>
     </string-array>
 
     <string name="WandOfShadowbolt_Name">Kostur Cieniostrzału</string>
