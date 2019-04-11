@@ -1,0 +1,28 @@
+Jest to gra roguelike z otwartym kodem źródłowym i z pixelową grafiką
+
+Pewnego razu było sobie miasteczko. Jego mieszkańcy żyli szczęśliwie ale byli tak biedni, że nie stać ich było na wyjazd na jako takie wakacje. Lecz w dniu, kiedy wszyscy porzucili nadzieję, stał się cud. Ziemia pod miasteczkiem zatrzesla się gwałtownie i uwolniła miriadę podłych potworów. Od tego czasu, mieszkańcy którzy przeżyli, zyli długo i szczęśliwie. Dlaczego? Bo lochy przyciągnęły wszelkiego rodzaju bohaterów i poszukiwaczy przygód. Ochronili niewinnych i okazali się niezłymi kupującymi, wspomagając ekonomię miasta.
+A teraz małe miasteczko rozkwitło, stojąc na szczycie niebezpiecznego lochu, wypełnionego martwymi poszukiwaczami przygód i ich nędznymi duszami.
+
+Cechy gry:
+- Ta gra wspiera modyfikacje stworzone przez graczy! Wraz z dalszym rozwojem tej funkcji, wkrótce będziesz w stanie stworzyć zupełnie nową grę wewnątrz Remixed Dungeon!
+- Hardkorowa gra z gatunku roguelike! 
+- 7 klas postaci fo wyboru
+- Centrum miasta, które przygotuje Cię do podróży i wprowadzi Cię w świat gry
+- Ponad 30 poziomów lochów głównego lochu podzielonych na 6 rodzajów lochów
+- 3 opcjonalne lochy: Leże pająków, Neckropolia i Lodowe jaskinie
+- Dziesiątki przedmiotów i potworów
+- Przeróżne bossy
+- Czapki! Wszyscy lubią czapki
+
+Śledź nas na Twitterze:
+https://twitter.com/nyrds
+
+Ta gra jest oprogramowaniem typu open source na licencji GPLv3. Kod źródłowy   można znaleźć tutaj:
+https://github.com/NYRDS/remixed-dungeon
+
+Jeśli chcesz wziąć udział w lokalizacji w innych językach, odwiedź:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Możesz sprawdzić
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+dla pełnej listy zmian na naszej wiki
