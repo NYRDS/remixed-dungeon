@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Topi Keledar Chaos</string>
     <string name="ChaosHelmet_Info">Topi keledar warna merah darah. Merupakan simbol seorang satria chaos.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: had panggilan dicapai (Maks semasa: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -66,8 +65,6 @@
 
 
     <string name="Torch_Info2">Ia merupakan item yang sangat diperlukan di dalam kurungan bawah tanah, yang sememangnya kurang cahaya.</string>
-
-
 
     <string name="WndSpells_Title">Mantera</string>
     <string name="WndSpells_Level">Tahap Kuasa Ajaib:</string>
@@ -538,7 +535,7 @@
     <string name="town_deco_snowy_plate_desc">Plat purba ini dilitupi dengan salji</string>
 
     <string name="DogeMask_Name">Topeng Doge</string>
-    <string name="DogeMask_Info">Anda mahu menyamar sebagai Doge yang terkenal? Sekarang adalah peluang anda!\nTopeng Hebat!Boleh Menyamar! Menakjubkan!</string>
+    <string name="DogeMask_Info">Anda mahu menyamar sebagai Doge yang terkenal? Sekarang adalah peluang anda!\nTopeng Hebat! Boleh Menyamar! Menakjubkan!</string>
     <string name="IntroScene_Txt">Ramai adiwira pelbagai bangsa dan keturunan telah memasuki Kurungan Bawah Tanah sebelum ini. Sebahagian daripada mereka berjaya memperoleh harta karun dan artifak ajaib, tetapi ramai yang tidak pernah kembali. Walaubagaimanapun, tiada siapa yang berjaya memperoleh Azimat Yendor, yang diketahui tersembunyi jauh di dalam Kurungan Bawah Tanah ini.\n\nDengan semangat waja dan mahu mengatasi cabaran ini, anda yakin tuah sentiasa bersama anda. Sekarang mari mulakan pengembaraan ini!</string>
 
 
@@ -2394,8 +2391,8 @@
     <string name="Badges_LevelReached4">Aras 24 dicapai</string>
     <string name="Badges_AllPotions">Semua posyen dikenalpasti</string>
     <string name="Badges_AllScrolls">Semua skrol dikenalpasti</string>
-    <string name="Badges_AllRings">Semua cincin dikenalpasti\"</string>
-    <string name="Badges_AllWands">Semua tongkat sakti dikenalpasti\"</string>
+    <string name="Badges_AllRings">Semua cincin dikenalpasti</string>
+    <string name="Badges_AllWands">Semua tongkat sakti dikenalpasti</string>
     <string name="Badges_AllItems">Semua posyen, skrol, cincin &amp; tongkat sakti dikenalpasti</string>
 
 
@@ -2478,7 +2475,7 @@
     <string name="Ushanka_Info">Topi serkup ushanka yang hangat dihiasi dengan bintang merah klasik. Pendamping yang sesuai untuk rakan-rakan yang berjuang melawan kurungan bawah tanah yang sejuk dan jahat. </string>
 
 
-    <string name="VampireSkull_Name">Tengkorang pontiana</string>
+    <string name="VampireSkull_Name">Tengkorak pontianak</string>
     <string name="VampireSkull_Info">Topeng ini diperbuat daripada tengkorak pontianak asli. Sebenarnya ia adalah tengkorak pontianak... Menakutkan.</string>
 
 
