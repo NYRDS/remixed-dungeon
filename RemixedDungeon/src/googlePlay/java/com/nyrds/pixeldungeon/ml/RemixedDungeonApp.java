@@ -49,6 +49,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 		FirebaseApp.initializeApp(this);
 
 		Fabric.with(this, new Crashlytics());
+		EventCollector.init();
 
 		//HQSdk.enableDebug(true);
 
