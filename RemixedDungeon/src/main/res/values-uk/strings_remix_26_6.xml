@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <!-- Item descriptions -->
-    <!-- STRINGS OF WandOfShadowbolt CLASS -->
-    <string name="WandOfShadowbolt_Name">Паличка стріл тіней</string>
-    <string name="WandOfShadowbolt_Info">Ця паличка випромінює темну, зловісну енергію.</string>
-</resources>

@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <!-- Item descriptions -->
-    <!-- STRINGS OF WandOfShadowbolt CLASS -->
-    <string name="WandOfShadowbolt_Name">Varita de sombra</string>
-    <string name="WandOfShadowbolt_Info">Esta varita emite oscuridad, una energía malvada.</string>
-</resources>

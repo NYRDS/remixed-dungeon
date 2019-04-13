@@ -37,7 +37,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
@@ -76,7 +75,6 @@ import javax.microedition.khronos.opengles.GL10;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
-import io.fabric.sdk.android.Fabric;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -194,21 +192,18 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public static void toast(final String text, final Object... args) {
-        instance().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                String toastText = text;
+        instance().runOnUiThread(() -> {
+            String toastText = text;
 
-                if (args.length > 0) {
-                    toastText = Utils.format(text, args);
-                }
-
-                GLog.toFile("%s ",toastText);
-
-                android.widget.Toast toast = android.widget.Toast.makeText(RemixedDungeonApp.getContext(), toastText,
-                        Toast.LENGTH_SHORT);
-                toast.show();
+            if (args.length > 0) {
+                toastText = Utils.format(text, args);
             }
+
+            GLog.toFile("%s ",toastText);
+
+            Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), toastText,
+                    Toast.LENGTH_SHORT);
+            toast.show();
         });
 
     }
@@ -221,9 +216,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Fabric.with(this, new Crashlytics());
-        EventCollector.init();
 
         iap = new Iap(this);
 

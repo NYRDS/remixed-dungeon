@@ -79,7 +79,7 @@ public enum HeroClass {
 
 
     private Integer    titleId;
-    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
+    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG && !ModdingMode.inMod()? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
     private String  magicAffinity;
 

@@ -30,7 +30,7 @@ public class EventCollector {
 
 	static public void init() {
 	    if(analyticsUsable()) {
-            mFirebaseAnalytics = FirebaseAnalytics.getInstance(Game.instance());
+            mFirebaseAnalytics = FirebaseAnalytics.getInstance(RemixedDungeonApp.getContext());
             mDisabled = false;
         }
 	}
