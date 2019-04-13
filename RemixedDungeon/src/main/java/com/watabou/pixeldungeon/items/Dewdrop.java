@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
@@ -57,8 +56,7 @@ public class Dewdrop extends Item {
 
 			int effect = Math.min( hero.ht() - hero.hp(), value * quantity() );
 			if (effect > 0) {
-				hero.hp(hero.hp() + effect);
-				hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				hero.heal(effect, this);
 				hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				collected = true;
 			}

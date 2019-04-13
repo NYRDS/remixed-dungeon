@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
@@ -74,14 +73,9 @@ public class Icecap extends Plant {
 			super.execute( hero, action );
 			
 			if (action.equals( CommonActions.AC_EAT )) {
-				
+
 				Buff.prolong( hero, Frost.class, Frost.duration( hero ) * 2);
-				
-				hero.hp(hero.hp() + Random.Int(0, Math.max((hero.ht() - hero.hp()) / 4, 10) ));
-				if (hero.hp() > hero.ht()) {
-					hero.hp(hero.ht());
-				}
-				hero.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+				hero.heal( Random.Int(0, Math.max((hero.ht() - hero.hp()) / 4, 10) ), this);
 			}
 		}
 	}

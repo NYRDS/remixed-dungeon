@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -95,9 +94,8 @@ public class Goo extends Boss {
 	@Override
 	public boolean act() {
 		
-		if (Dungeon.level.water[getPos()] && hp() < ht()) {
-			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-			hp(hp() + 1);
+		if (level().water[getPos()] && hp() < ht()) {
+			heal(1,this);
 		}
 		
 		return super.act();

@@ -43,7 +43,7 @@ public class CustomBuff extends Buff {
     public boolean attachTo(Char target) {
         if(super.attachTo(target)) {
             script.run("attachTo");
-            return true;
+            return script.getResult().checkboolean();
         }
         return false;
     }

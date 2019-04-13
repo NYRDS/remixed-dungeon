@@ -183,8 +183,7 @@ public class ShadowLord extends Boss implements IZapper {
 		}
 
 		if (Dungeon.level.blobAmountAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
-			getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
-			hp(Math.min(hp() + (ht() - hp()) / 4, ht()));
+			heal((ht() - hp()) / 4, Dungeon.level.blobs.get(Darkness.class));
 		}
 
 		if (Dungeon.level.blobAmountAt(Foliage.class, getPos()) > 0) {

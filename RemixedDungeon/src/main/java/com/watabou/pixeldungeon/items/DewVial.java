@@ -22,7 +22,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
@@ -90,8 +89,7 @@ public class DewVial extends Item {
 				int value = (int)Math.ceil( Math.pow( getVolume(), POW ) / NUM * hero.ht() );
 				int effect = Math.min( hero.ht() - hero.hp(), value );
 				if (effect > 0) {
-					hero.hp(hero.hp() + effect);
-					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), getVolume() > 5 ? 2 : 1 );
+					hero.heal(effect,this);
 					hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				}
 				

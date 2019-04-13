@@ -1345,7 +1345,8 @@ public class Hero extends Char implements PetOwner {
 			lvl(lvl() + 1);
 
 			ht(ht() + 5);
-			hp(hp() + 5);
+			heal(5, this);
+
 			attackSkill++;
 			defenseSkill++;
 
@@ -1392,15 +1393,6 @@ public class Hero extends Char implements PetOwner {
 
 	void updateAwareness() {
 		awareness = (float) (1 - Math.pow((heroClass == HeroClass.ROGUE ? 0.85 : 0.90), (1 + Math.min(lvl(), 9)) * 0.5));
-	}
-
-	public boolean isStarving() {
-		return buff(Hunger.class).isStarving();
-	}
-
-	@Override
-	public void updateSpriteState() {
-		super.updateSpriteState();
 	}
 
 	@Override
@@ -1848,8 +1840,7 @@ public class Hero extends Char implements PetOwner {
 		switch (heroClass) {
         case WARRIOR:
             if (hp() < ht()) {
-                hp(Math.min( hp() + 5, ht() ));
-                getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+            	heal(5, food);
             }
             break;
         case MAGE:

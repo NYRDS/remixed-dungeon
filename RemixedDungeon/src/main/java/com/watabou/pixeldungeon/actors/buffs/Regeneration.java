@@ -17,9 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.rings.RingOfMending;
 
 public class Regeneration extends Buff {
@@ -29,11 +27,10 @@ public class Regeneration extends Buff {
     @Override
     public boolean act() {
         if (target.isAlive()) {
-            if (target.hp() < target.ht()) {
-                if ((target instanceof Hero && ((Hero) target).isStarving()) || Dungeon.level.isSafe()) {
-                } else {
-                    target.hp(target.hp() + 1);
-                }
+            if (target.isStarving() || target.level().isSafe()) {
+            } else {
+                target.heal(1,this);
+                target.hp(target.hp() + 1);
             }
 
             int bonus = target.buffLevel(RingOfMending.Rejuvenation.class);

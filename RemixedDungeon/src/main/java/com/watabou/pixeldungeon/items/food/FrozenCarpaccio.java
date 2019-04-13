@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -67,10 +66,7 @@ public class FrozenCarpaccio extends Food {
 				break;
 			case 3:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info4));
-				if (hero.hp() < hero.ht()) {
-					hero.hp(Math.min( hero.hp() + hero.ht() / 4, hero.ht() ));
-					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-				}
+				hero.heal(hero.hp() + hero.ht() / 4, this);
 				break;
 			}
 		}

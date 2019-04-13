@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.effects.Speck;
 
 import androidx.annotation.NonNull;
 
@@ -26,8 +25,7 @@ public class Healing extends Spell{
 		if (super.cast(chr)){
 			if (chr.isAlive()) {
 				castCallback(chr);
-				chr.hp((int) Math.min(chr.ht(),chr.hp()+chr.ht()*0.3));
-				chr.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
+				chr.heal((int) (chr.ht()*0.3), this);
 				return true;
 			}
 		}

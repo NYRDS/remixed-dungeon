@@ -42,6 +42,7 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
+import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
@@ -61,6 +62,7 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -208,6 +210,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
         GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
     }
 
+    @LuaInterface
     public void yell(String str, int index) {
         GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
     }
@@ -356,6 +359,27 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 		return hasBuff(Cripple.class) ? baseSpeed * 0.5f : baseSpeed;
 	}
 
+
+	public void heal(int heal, NamedEntityKind src) {
+		heal(heal, src, false);
+	}
+
+	public void heal(int heal, NamedEntityKind src, boolean noAnim) {
+        if (!isAlive()) {
+            return;
+        }
+
+        heal = resist(heal, src);
+
+        heal = Math.min(ht()-hp(),heal);
+
+        hp(hp() + heal);
+
+        if(!noAnim) {
+			getSprite().emitter().start(Speck.factory(Speck.HEALING), 0.4f, Math.min(1, heal * 10 / ht()));
+		}
+    }
+
 	public void damage(int dmg, NamedEntityKind src) {
 
 		if (!isAlive()) {
@@ -364,14 +388,9 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 
 		Buff.detach(this, Frost.class);
 
-		String srcName = src.getEntityKind();
-		if (immunities().contains(srcName)) {
-			dmg = 0;
-		} else if (resistances().contains(srcName)) {
-			dmg = Random.IntRange(0, dmg);
-		}
+        dmg = resist(dmg, src);
 
-		if (hasBuff(Paralysis.class)) {
+        if (hasBuff(Paralysis.class)) {
 			if (Random.Int(dmg) >= Random.Int(hp())) {
 				Buff.detach(this, Paralysis.class);
 				if (Dungeon.visible[getPos()]) {
@@ -392,7 +411,17 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 		}
 	}
 
-	public void destroy() {
+    private int resist(int dmg, NamedEntityKind src) {
+        String srcName = src.getEntityKind();
+        if (immunities().contains(srcName)) {
+            dmg = 0;
+        } else if (resistances().contains(srcName)) {
+            dmg = Random.IntRange(0, dmg);
+        }
+        return dmg;
+    }
+
+    public void destroy() {
 		hp(0);
 		Actor.remove(this);
 		Actor.freeCell(getPos());
@@ -450,6 +479,16 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 			}
 		}
 		return null;
+	}
+
+	public int buffLevel(String buffName) {
+		int level = 0;
+		for (Buff b : buffs) {
+			if (buffName.equals(b.getEntityKind())) {
+				level += b.level();
+			}
+		}
+		return level;
 	}
 
 	public int buffLevel(Class<? extends Buff> c) {
@@ -579,7 +618,17 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 		}
 	}
 
-	public void updateSpriteState() {
+    public boolean isStarving() {
+	    Hunger hunger = buff(Hunger.class);
+
+	    if(hunger == null) {
+	        return false;
+        }
+
+        return hunger.isStarving();
+    }
+
+    public void updateSpriteState() {
 		getSprite().removeAllStates();
 		for (Buff buff : buffs) {
 			if (buff instanceof Burning) {

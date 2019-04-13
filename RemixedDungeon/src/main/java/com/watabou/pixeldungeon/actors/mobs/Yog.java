@@ -226,7 +226,7 @@ public class Yog extends Boss {
 
 			if (Dungeon.level.water[getPos()] && hp() < ht()) {
 				getSprite().emitter().burst(ShadowParticle.UP, 2);
-				hp(hp() + REGENERATION);
+				heal(REGENERATION, this, true);
 			}
 
 			return super.act();

@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.utils.Random;
@@ -61,13 +60,8 @@ public class Bat extends Mob {
 	@Override
 	public int attackProc(@NonNull Char enemy, int damage ) {
 		
-		int reg = Math.min( damage, ht() - hp() );
-		
-		if (reg > 0) {
-			hp(hp() + reg);
-			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-		}
-		
+		heal(damage, enemy);
+
 		return damage;
 	}
 }

@@ -22,7 +22,6 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
@@ -83,8 +82,7 @@ public class Elemental extends Mob {
 	public void add( Buff buff ) {
 		if (buff instanceof Burning) {
 			if (hp() < ht()) {
-				hp(hp() + 1);
-				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				heal(1, buff);
 			}
 		} else {
 			if (buff instanceof Frost) {
