@@ -75,7 +75,7 @@ public class DungeonGenerator {
 	}
 
 	private static void initLevelsMap() {
-		if (BuildConfig.DEBUG) {
+		if (BuildConfig.DEBUG && !ModdingMode.inMod()) {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_debug.json");
 		} else {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon.json");

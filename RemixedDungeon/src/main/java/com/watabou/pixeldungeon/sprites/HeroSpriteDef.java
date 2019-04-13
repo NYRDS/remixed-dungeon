@@ -2,11 +2,20 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.watabou.noosa.Animation;
+import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.tweeners.Tweener;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import androidx.annotation.NonNull;
 
@@ -16,9 +25,14 @@ import androidx.annotation.NonNull;
 public abstract class HeroSpriteDef extends MobSpriteDef {
 
 
-	protected Image avatar;
+    private static final int RUN_FRAMERATE = 20;
+    protected Image avatar;
+	protected Animation fly;
+    private Tweener  jumpTweener;
+    private Callback jumpCallback;
 
-	protected HeroSpriteDef(String defName, int kind) {
+
+    protected HeroSpriteDef(String defName, int kind) {
 		super(defName, kind);
 	}
 
@@ -51,7 +65,25 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
 	public abstract String[] getLayersDesc();
 
-	public abstract boolean sprint(boolean b);
+    @Override
+    public void onComplete(Tweener tweener) {
+        if (tweener == jumpTweener) {
+
+            if (getVisible() && Dungeon.level.water[ch.getPos()] && !ch.isFlying()) {
+                GameScene.ripple(ch.getPos());
+            }
+            if (jumpCallback != null) {
+                jumpCallback.call();
+            }
+        } else {
+            super.onComplete(tweener);
+        }
+    }
+
+    public boolean sprint(boolean on) {
+        run.delay = on ? 0.625f / RUN_FRAMERATE : 1f / RUN_FRAMERATE;
+        return on;
+    }
 
 	@Override
 	public Image avatar() {
@@ -63,10 +95,56 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 		return avatar;
 	}
 
+	@Override
+	public void idle() {
+		if(ch.isFlying()) {
+			play(fly);
+		} else {
+			super.idle();
+		}
+	}
+
+	@Override
+	public void move(int from, int to, boolean playRunAnimation) {
+		super.move(from, to, !ch.isFlying());
+		if (ch.isFlying()) {
+			play(fly);
+		}
+		if(ch instanceof Hero) {
+			Camera.main.target = this;
+		}
+	}
+
 	@NonNull
 	public abstract String getDeathEffect();
 
 	public abstract void heroUpdated(Hero hero);
 
-	public abstract void jump(int pos, int cell, Callback callback);
+    @Override
+    public void place(int p) {
+        super.place(p);
+        if(ch instanceof Hero) {
+            Camera.main.target = this;
+        }
+    }
+
+    @Override
+    protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
+        super.loadAdditionalData(json, film, kind);
+        fly     = readAnimation(json, "fly", film);
+        operate = readAnimation(json, "operate", film);
+    }
+
+    public void jump(int from, int to, Callback callback) {
+        jumpCallback = callback;
+
+        int distance = Dungeon.level.distance(from, to);
+        jumpTweener = new JumpTweener(this, worldToCamera(to), distance * 4,
+                distance * 0.1f);
+        jumpTweener.listener = this;
+        getParent().add(jumpTweener);
+
+        turnTo(from, to);
+        play(fly);
+    }
 }
