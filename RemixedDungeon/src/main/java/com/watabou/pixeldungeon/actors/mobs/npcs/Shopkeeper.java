@@ -20,11 +20,11 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -51,6 +51,7 @@ public class Shopkeeper extends NPC {
 		spriteClass = ShopkeeperSprite.class;
 		movable = false;
 		belongings = new Belongings(this);
+		addImmunity(CustomBuff.REGENERATION);
 	}
 
 	private Belongings belongings;
@@ -72,10 +73,6 @@ public class Shopkeeper extends NPC {
 	
 	@Override
 	public void add( Buff buff ) {
-		if(buff instanceof Regeneration) {
-			super.add(buff);
-			return;
-		}
 		flee();
 	}
 	

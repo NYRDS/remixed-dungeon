@@ -22,7 +22,7 @@ end
 
 function buff.defaultDesc()
     return {
-        image         = 0,
+        icon          = 0,
         name          = "custom buff",
         info          = "unconfigured custom buff",
     }

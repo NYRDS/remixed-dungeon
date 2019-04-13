@@ -15,7 +15,7 @@ public class BuffFactory {
 
     static {
         initBuffsMap();
-        script.run("loadSpells",null);
+        script.run("loadBuffs",null);
     }
 
     private static void registerBuffClass(Class<? extends Buff> buffClass) {

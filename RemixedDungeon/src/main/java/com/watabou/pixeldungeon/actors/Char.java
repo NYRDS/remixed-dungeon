@@ -481,6 +481,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 		return null;
 	}
 
+	@LuaInterface
 	public int buffLevel(String buffName) {
 		int level = 0;
 		for (Buff b : buffs) {
@@ -908,6 +909,10 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 		}
 		return Float.MAX_VALUE;
     }
+
+	public void addImmunity(String namedEntity){
+		immunities.add(namedEntity);
+	}
 
     public void addImmunity(Class<?> buffClass){
 		immunities.add(buffClass.getSimpleName());

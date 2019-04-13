@@ -6,12 +6,12 @@
 
 local buff = require "scripts/lib/buff"
 
-local RegenerationDelay
+local RegenerationDelay = 10
 
 return buff.init{
     desc  = function ()
         return {
-            icon         = 3,
+            icon          = 3,
             name          = "Regeneration_Name",
             info          = "Regeneration_Info",
         }
@@ -24,9 +24,13 @@ return buff.init{
             return
         end
 
-        if not ch:isStarving() and ch:hp() < ch:ht() then
-            ch:hp(ch:hp()+1)
+        if not ch:isStarving() then
+            ch:heal(1, buff)
         end
+
+        local bonus = ch:buffLevel("Rejuvenation")
+
+        buff:spend(RegenerationDelay/(1.2^bonus))
 
     end,
 

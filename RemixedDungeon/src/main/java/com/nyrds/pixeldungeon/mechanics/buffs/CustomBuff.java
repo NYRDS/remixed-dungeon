@@ -8,8 +8,12 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import org.luaj.vm2.LuaTable;
 
 public class CustomBuff extends Buff {
+
+    static public final String REGENERATION = "Regeneration";
+
     private final String name;
     private final String info;
+
     private final int icon;
 
     private String scriptFile;
@@ -58,5 +62,10 @@ public class CustomBuff extends Buff {
     public boolean act() {
         script.run("act");
         return true;
+    }
+
+    @Override
+    public String name() {
+        return name;
     }
 }
