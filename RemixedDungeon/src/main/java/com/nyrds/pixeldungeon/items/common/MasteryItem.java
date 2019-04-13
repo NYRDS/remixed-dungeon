@@ -19,8 +19,14 @@ public class MasteryItem extends Item {
 
 	@Override
 	public boolean doPickUp( Hero hero ) {
-		Badges.validateMastery();
+		if(givesMasteryTo(hero)) {
+			Badges.validateMastery();
+		}
 		return super.doPickUp( hero );
+	}
+
+	protected boolean givesMasteryTo(Hero hero) {
+		return false;
 	}
 
 	@Override

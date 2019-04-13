@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -21,7 +22,12 @@ public class BlackSkullOfMastery extends MasteryItem {
 		identify();
 		image = 19;
 	}
-	
+
+	@Override
+	protected boolean givesMasteryTo(Hero hero) {
+		return hero.heroClass == HeroClass.NECROMANCER;
+	}
+
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );		

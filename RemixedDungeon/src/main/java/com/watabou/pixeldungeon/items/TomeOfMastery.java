@@ -51,6 +51,17 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
+	protected boolean givesMasteryTo(Hero hero) {
+		switch (hero.heroClass) {
+			case NECROMANCER:
+			case GNOLL:
+				return false;
+			default:
+				return true;
+		}
+	}
+
+	@Override
 	public boolean doPickUp( Hero hero ) {
 		if (Dungeon.hero.heroClass != HeroClass.NECROMANCER)
 		{
