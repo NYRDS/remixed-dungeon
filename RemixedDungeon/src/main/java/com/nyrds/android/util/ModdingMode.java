@@ -95,7 +95,12 @@ public class ModdingMode {
 	public static List<String> listResources(String path, FilenameFilter filter) {
 		try{
 			if(inMod()) {
-				return Arrays.asList(FileSystem.getExternalStorageFile(mActiveMod + "/" + path).list(filter));
+				String resourcesPath = mActiveMod + "/" + path;
+				if(isResourceExistInMod(resourcesPath)) {
+					return Arrays.asList(FileSystem.getExternalStorageFile(resourcesPath).list(filter));
+				} else {
+					return new ArrayList<>();
+				}
 			} else {
 				String fullList[] = RemixedDungeonApp.getContext().getAssets().list(path);
 				ArrayList<String> ret = new ArrayList<>();
