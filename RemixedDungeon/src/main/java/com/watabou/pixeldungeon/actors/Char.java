@@ -375,8 +375,8 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 
         hp(hp() + heal);
 
-        if(!noAnim) {
-			getSprite().emitter().start(Speck.factory(Speck.HEALING), 0.4f, Math.min(1, heal * 10 / ht()));
+        if(!noAnim && heal > 0) {
+			getSprite().emitter().burst(Speck.factory(Speck.HEALING), Math.max(1, heal * 10 / ht()));
 		}
     }
 

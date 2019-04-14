@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
+import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -21,16 +22,20 @@ public class CustomBuff extends Buff {
     private LuaScript script;
 
     public CustomBuff(String scriptFile) {
-        this.scriptFile = scriptFile;
+        try {
+            this.scriptFile = scriptFile;
 
-        script = new LuaScript("scripts/buffs/" + scriptFile, this);
+            script = new LuaScript("scripts/buffs/" + scriptFile, this);
 
-        script.run("buffDesc", null, null);
-        LuaTable desc = script.getResult().checktable();
+            script.run("buffDesc");
+            LuaTable desc = script.getResult().checktable();
 
-        icon = desc.rawget("icon").checkint();
-        name = StringsManager.maybeId(desc.rawget("name").checkjstring());
-        info = StringsManager.maybeId(desc.rawget("info").checkjstring());
+            icon = desc.rawget("icon").checkint();
+            name = StringsManager.maybeId(desc.rawget("name").checkjstring());
+            info = StringsManager.maybeId(desc.rawget("info").checkjstring());
+        } catch (Exception e){
+            throw new ModError("Buff",e);
+        }
     }
 
     @Override
@@ -46,7 +51,7 @@ public class CustomBuff extends Buff {
     @Override
     public boolean attachTo(Char target) {
         if(super.attachTo(target)) {
-            script.run("attachTo");
+            script.run("attachTo",target);
             return script.getResult().checkboolean();
         }
         return false;

@@ -20,24 +20,19 @@ public class LuaScript {
     private boolean scriptLoaded = false;
     private LuaTable script;
 
-    final LuaValue emptyArgs[] = new LuaValue[0];
+    static final LuaValue emptyArgs[] = new LuaValue[0];
+    final LuaValue onlyParentArgs[] = new LuaValue[1];
 
     @Nullable
     private Object   parent;
 
     private LuaValue scriptResult;
 
-
-    public LuaScript(LuaTable script, @Nullable Object parent) {
-        this.script=script;
-        this.parent=parent;
-        scriptLoaded = true;
-    }
-
     public LuaScript(String scriptFile, @Nullable Object parent)
     {
         this.parent = parent;
         this.scriptFile = scriptFile;
+        onlyParentArgs[0] = CoerceJavaToLua.coerce(parent);
     }
 
     private void run(String method, LuaValue[] args) {
@@ -92,6 +87,10 @@ public class LuaScript {
     }
 
     public void run(String method) {
-        run(method, emptyArgs);
+        if(parent==null) {
+            run(method, emptyArgs);
+        } else {
+            run(method, onlyParentArgs);
+        }
     }
 }

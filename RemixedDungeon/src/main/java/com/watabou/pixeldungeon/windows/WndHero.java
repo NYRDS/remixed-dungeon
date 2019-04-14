@@ -184,7 +184,7 @@ public class WndHero extends WndTabbed {
 				icon.y = pos;
 				add( icon );
 				
-				Text txt = PixelScene.createText( buff.toString(), GuiProperties.regularFontSize() );
+				Text txt = PixelScene.createText( buff.name(), GuiProperties.regularFontSize() );
 				txt.x = icon.width + GAP;
 				txt.y = pos + (int)(icon.height - txt.baseLine()) / 2;
 				add( txt );

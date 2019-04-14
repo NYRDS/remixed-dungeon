@@ -8,7 +8,7 @@ local buff = {}
 
 buff.__index = buff
 
-function buff.attachTo(self, buff, target)
+function buff.attachTo(self, buff)
     return true
 end
 
@@ -28,7 +28,7 @@ function buff.defaultDesc()
     }
 end
 
-function buff.desc(self, buff)
+function buff.desc()
     return buff.defaultDesc()
 end
 
