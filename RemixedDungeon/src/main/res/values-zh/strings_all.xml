@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">混沌头盔</string>
     <string name="ChaosHelmet_Info">血红色的头盔，ck你懂吗</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: 召唤上限提升 (最大值: %2$d)!</string>
     <string name="Mana_Title">魔法</string>
@@ -66,8 +65,6 @@
 
 
     <string name="Torch_Info2">地牢的组成要素之一，极差的基础照明。</string>
-
-
 
     <string name="WndSpells_Title">技能</string>
     <string name="WndSpells_Level">法强：</string>
@@ -262,6 +259,8 @@
     <string name="WndPriest_Instruction2_f">欢迎你，我的女孩。欢迎来到圣教堂，赞美上帝！</string>
     <string name="WndPriest_Instruction2">很可惜没有免费提供治疗，但只需 %d 金币还是能为您提供治疗服务！
 如果您需要神圣的祝福，或者去除诅咒，请前往我身后的圣教堂与主教会面。</string>
+
+    <string name="WndDontLikeAds_NotThisTime">这次不会了</string>
 
     <string name="Item_Info2">啥玩意</string>
 
@@ -2536,7 +2535,7 @@ remix.28.5\n
     <string name="ScarecrowNPC_Desc">毫无疑问…这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
     <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
 </string>
-    <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
+    <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\\n 我有一个令你惊喜的消息！\\n\\n 如果你为我收集一些糖果的话，\\n 我会十分感激你的！\\n\\n
 </string>
     <string name="ScarecrowNPC_Quest_Reminder">我所需要的五个糖果。\n 你将的到很甜蜜的奖励！</string>
     <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n 为此，你可以得到一份实在的食物！</string>
@@ -2547,6 +2546,7 @@ remix.28.5\n
     <string name="Mods_AuthorEmail">創建者電郵地址：</string>
     <string name="Mods_RestartRequired">需重新開啟遊戲</string>
 
+    <string name="Spells_NotTooFast">%s 没有准备好使用</string>
     <string name="ElvenBow_Name">精灵长弓</string>
     <string name="ElvenBow_Gender">阳刚的</string>
 
