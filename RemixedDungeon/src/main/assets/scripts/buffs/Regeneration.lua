@@ -33,6 +33,8 @@ return buff.init{
 
         local bonus = ch:buffLevel("Rejuvenation")
 
+        bonus = bonus + ch:buffLevel("DieHard")
+
         local delay = RegenerationDelay/(1.2^bonus)
         buff:spend(delay)
     end,

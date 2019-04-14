@@ -23,7 +23,10 @@ return spell.init{
             castTime      = 0.5
         }
     end,
-    cast = function(self, spell, chr, cell)
+    cast = function(self, spell, caster, cell)
+        --RPD.affectBuff(caster,"DieHard", caster:skillLevel() * 20)
+        RPD.affectBuff(caster,"DieHard", 20)
+
         return true
     end
 }

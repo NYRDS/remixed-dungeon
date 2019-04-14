@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -92,18 +94,46 @@ public class Buff extends Actor implements NamedEntityKind {
 		}
 	}
 
+	@LuaInterface
+	public static Buff permanent( Char target, String buffClass ) {
+		Buff buff = BuffFactory.getBuffByName(buffClass);
+		buff.attachTo(target);
+		buff.deactivate();
+		return buff;
+	}
+
+	@LuaInterface
 	public static<T extends Buff> T permanent( Char target, Class<T> buffClass ) {
 		T buff = affect( target, buffClass );
 		buff.deactivate();
 		return buff;
 	}
 
+	@LuaInterface
+	public static Buff affect( Char target, String buffClass, float duration ) {
+		Buff buff = BuffFactory.getBuffByName(buffClass);
+		buff.attachTo(target);
+		buff.spend( duration );
+		return buff;
+	}
+
+	@LuaInterface
 	public static<T extends Buff> T affect( Char target, Class<T> buffClass, float duration ) {
 		T buff = affect( target, buffClass );
 		buff.spend( duration );
 		return buff;
 	}
-	
+
+	@LuaInterface
+	public static Buff prolong( Char target, String  buffClass, float duration ) {
+		Buff buff = BuffFactory.getBuffByName(buffClass);
+		buff.attachTo(target);
+		buff.postpone( duration );
+		return buff;
+	}
+
+
+	@LuaInterface
 	public static<T extends Buff> T prolong( Char target, Class<T> buffClass, float duration ) {
 		T buff = affect( target, buffClass );
 		buff.postpone( duration );

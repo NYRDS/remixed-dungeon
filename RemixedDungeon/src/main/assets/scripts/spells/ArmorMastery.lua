@@ -23,8 +23,12 @@ return spell.init{
             castTime      = 0.5
         }
     end,
-    cast = function(self, spell, chr, cell)
-        RPD.topEffect(chr:getPos(),"body_armor")
+    cast = function(self, spell, caster, cell)
+        RPD.topEffect(caster:getPos(),"body_armor")
+
+        --RPD.affectBuff(caster,"DieHard", caster:skillLevel() * 20)
+        RPD.affectBuff(caster,"DefenceMastery", 20)
+
         return true
     end
 }

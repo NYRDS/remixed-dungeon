@@ -11,8 +11,11 @@ return buff.init{
     desc  = function ()
         return {
             icon         = 3,
-            name          = "DefenceMastery_Name",
-            info          = "DefenceMastery_Info",
+            name          = "DieHard_Name",
+            info          = "DieHard_Info",
         }
+    end,
+    act = function(self,buff)
+        buff:detach()
     end
 }

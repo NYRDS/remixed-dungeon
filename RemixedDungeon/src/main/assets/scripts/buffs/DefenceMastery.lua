@@ -10,9 +10,12 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon         = 3,
+            icon          = 3,
             name          = "DefenceMastery_Name",
             info          = "DefenceMastery_Info",
         }
+    end,
+    act = function(self,buff)
+        buff:detach()
     end
 }
