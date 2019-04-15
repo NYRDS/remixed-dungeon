@@ -20,6 +20,10 @@ function buff.act(self, buff)
     return true
 end
 
+function buff.drBonus(self, buff)
+    return 0
+end
+
 function buff.defaultDesc()
     return {
         icon          = 0,

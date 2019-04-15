@@ -44,7 +44,7 @@ public class Piercing extends Enchantment {
 					break;
 				}
 				
-				int dr = Random.IntRange( 0, ch.dr() );
+				int dr = ch.defenceRoll(attacker);
 				int dmg = Random.Int( 1, maxDamage );
 				int effectiveDamage = Math.max( dmg - dr, 0 );
 				

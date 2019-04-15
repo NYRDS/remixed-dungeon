@@ -154,6 +154,10 @@ public class Buff extends Actor implements NamedEntityKind {
 		return 1;
 	}
 
+	public int drBonus() {
+		return 0;
+	}
+
 	public int defenceProc(Char defender, Char enemy, int damage)
 	{
 		return damage;

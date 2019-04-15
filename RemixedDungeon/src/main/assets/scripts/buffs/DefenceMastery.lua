@@ -17,5 +17,8 @@ return buff.init{
     end,
     act = function(self,buff)
         buff:detach()
+    end,
+    drBonus = function(self,buff)
+        return 10
     end
 }

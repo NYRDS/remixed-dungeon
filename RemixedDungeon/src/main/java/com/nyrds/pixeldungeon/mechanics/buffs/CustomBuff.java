@@ -90,6 +90,12 @@ public class CustomBuff extends Buff {
     }
 
     @Override
+    public int drBonus() {
+        script.run("drBonus");
+        return script.getResult().checkint();
+    }
+
+    @Override
     public String name() {
         return name;
     }

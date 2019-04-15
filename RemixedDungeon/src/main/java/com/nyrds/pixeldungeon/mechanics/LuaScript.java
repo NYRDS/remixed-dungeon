@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.android.lua.LuaEngine;
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.ModError;
 
 import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
@@ -20,8 +20,8 @@ public class LuaScript {
     private boolean scriptLoaded = false;
     private LuaTable script;
 
-    static final LuaValue emptyArgs[] = new LuaValue[0];
-    final LuaValue onlyParentArgs[] = new LuaValue[1];
+    private static final LuaValue emptyArgs[] = new LuaValue[0];
+    private final LuaValue onlyParentArgs[] = new LuaValue[1];
 
     @Nullable
     private Object   parent;
@@ -35,7 +35,7 @@ public class LuaScript {
         onlyParentArgs[0] = CoerceJavaToLua.coerce(parent);
     }
 
-    private void run(String method, LuaValue[] args) {
+    private LuaValue run(String method, LuaValue[] args) {
         try {
             if (!scriptLoaded) {
                 script = LuaEngine.module(scriptFile, scriptFile);
@@ -43,39 +43,40 @@ public class LuaScript {
             }
 
             if (script != null) {
-                scriptResult = script.invokemethod(method, args).arg1();
+                return scriptResult = script.invokemethod(method, args).arg1();
             }
+            throw new ModError("Can't load "+scriptFile, new Exception());
         } catch (LuaError e) {
-            throw new TrackedRuntimeException(e.getMessage());
+            throw new ModError("Error in "+scriptFile+"."+method,e);
         }
     }
 
-    public void run(String method, Object arg1) {
+    public LuaValue run(String method, Object arg1) {
         if(parent!=null) {
-            run(method, new LuaValue[]{
+            return run(method, new LuaValue[]{
                     CoerceJavaToLua.coerce(parent),
                     CoerceJavaToLua.coerce(arg1)});
         } else {
-            run(method, new LuaValue[]{
+            return run(method, new LuaValue[]{
                     CoerceJavaToLua.coerce(arg1)});
         }
     }
 
-    public void run(String method, Object arg1, Object arg2) {
+    public LuaValue run(String method, Object arg1, Object arg2) {
         if(parent!=null) {
-            run(method, new LuaValue[]{
+            return run(method, new LuaValue[]{
                     CoerceJavaToLua.coerce(parent),
                     CoerceJavaToLua.coerce(arg1),
                     CoerceJavaToLua.coerce(arg2)});
         } else {
-            run(method, new LuaValue[]{
+            return run(method, new LuaValue[]{
                     CoerceJavaToLua.coerce(arg1),
                     CoerceJavaToLua.coerce(arg2)});
         }
     }
 
-    public void run(String method, Object arg1, Object arg2, Object arg3) {
-        run(method,new LuaValue[]{
+    public LuaValue run(String method, Object arg1, Object arg2, Object arg3) {
+        return run(method,new LuaValue[]{
                 CoerceJavaToLua.coerce(parent),
                 CoerceJavaToLua.coerce(arg1),
                 CoerceJavaToLua.coerce(arg2),
@@ -86,11 +87,11 @@ public class LuaScript {
         return scriptResult;
     }
 
-    public void run(String method) {
+    public LuaValue run(String method) {
         if(parent==null) {
-            run(method, emptyArgs);
+            return run(method, emptyArgs);
         } else {
-            run(method, onlyParentArgs);
+            return run(method, onlyParentArgs);
         }
     }
 }

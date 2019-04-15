@@ -326,6 +326,23 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 		return Game.getVars(R.array.Char_StaDodged)[gender];
 	}
 
+
+	public int defenceRoll(Char enemy) {
+
+		if(enemy.ignoreDr()) {
+			return 0;
+		}
+
+		int dr = dr();
+
+		for(Buff b:buffs) {
+			dr+=b.drBonus();
+		}
+
+		return  Random.IntRange(0,dr);
+
+	}
+
 	public int dr() {
 		return 0;
 	}
@@ -344,7 +361,7 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 
 	public int defenseProc(Char enemy, int damage) {
 
-		int dr = enemy.ignoreDr() ? 0 : Random.IntRange(0, dr());
+		int dr = defenceRoll(enemy);
 
 		damage = damage - dr;
 

@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.effects.Wound;
-import com.watabou.utils.Random;
 
 import androidx.annotation.Nullable;
 
@@ -33,7 +32,7 @@ public class GrippingTrap implements ITrigger {
 	public static void trigger( int pos, @Nullable Char c ) {
 		
 		if (c != null) {
-			int damage = Math.max( 0,  (Dungeon.depth + 3) - Random.IntRange( 0, c.dr() / 2 ) );
+			int damage = Math.max( 0,  (Dungeon.depth + 3) - c.defenceRoll(c)/2);
 			Buff.affect( c, Bleeding.class ).set( damage );
 			Buff.prolong( c, Cripple.class, Cripple.DURATION );
 			Wound.hit( c );
