@@ -1,27 +1,41 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaTable;
+
+import androidx.annotation.Keep;
 
 public class CustomBuff extends Buff {
 
     static public final String REGENERATION = "Regeneration";
 
-    private final String name;
-    private final String info;
+    private String name;
+    private String info;
 
-    private final int icon;
+    private int icon;
 
+    @Packable
     private String scriptFile;
 
     private LuaScript script;
 
+
+    @Keep
+    public CustomBuff() {
+    }
+
     public CustomBuff(String scriptFile) {
+        initFromFile(scriptFile);
+    }
+
+    private void initFromFile(String scriptFile) {
         try {
             this.scriptFile = scriptFile;
 
@@ -36,6 +50,12 @@ public class CustomBuff extends Buff {
         } catch (Exception e){
             throw new ModError("Buff",e);
         }
+    }
+
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        initFromFile(scriptFile);
     }
 
     @Override
