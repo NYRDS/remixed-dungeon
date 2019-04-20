@@ -1985,7 +1985,6 @@
 
     <string name="Mob_Desc">Справжній опис буде пізніше!</string>
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
-    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
     <string name="Mob_StaSleepingStatus">%s спить</string>
     <string name="Mob_StaWanderingStatus">%s блукає</string>
     <string name="Mob_StaHuntingStatus">%s полює</string>
@@ -2553,7 +2552,7 @@
     <string name="Mods_AuthorEmail">Пошта автора:</string>
     <string name="Mods_RestartRequired">Потрібне перезавантаження</string>
 
-    <string name="Spells_NotTooFast">Ви ще на готові начарувати %s</string>
+    <string name="Spells_NotTooFast">%s ще не готове до використання</string>
     <string name="ElvenBow_Name">ельфійський лук</string>
     <string name="ElvenBow_Gender">masculine</string>
 
