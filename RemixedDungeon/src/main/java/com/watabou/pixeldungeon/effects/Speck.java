@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.effects;
 
 import android.annotation.SuppressLint;
-import android.util.SparseArray;
+import android.util.Pair;
 
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -27,6 +27,9 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Speck extends Image {
 
@@ -63,14 +66,16 @@ public class Speck extends Image {
 
 	
 	private static final int SIZE = 7;
-	
-	private int type;
+
+	private int evolutionType;
+
 	private float lifespan;
 	private float left;
-	
+
+
 	private static TextureFilm film;
 	
-	private static SparseArray<Emitter.Factory> factories = new SparseArray<>();
+	private static Map<Pair<Integer,Integer>,Emitter.Factory> factories = new HashMap<>();
 	
 	public Speck() {
 		texture( Assets.SPECKS );
@@ -80,11 +85,226 @@ public class Speck extends Image {
 		
 		origin.set( SIZE / 2f );
 	}
-	
-	public void reset( int index, float x, float y, int type ) {
+
+	public void reset( int index, float x, float y, int oldCombinedType) {
+		reset(index, x, y, oldCombinedType, oldCombinedType);
+	}
+
+	public void reset( int index, float x, float y, int particleType, int evolutionType ) {
 		revive();
+
+		this.evolutionType = evolutionType;
+
+		selectFrameByType(particleType);
+
+		this.x = x - origin.x;
+		this.y = y - origin.y;
 		
-		this.type = type;
+		resetColor();
+		scale.set( 1 );
+		speed.set( 0 );
+		acc.set( 0 );
+		angle = 0;
+		angularSpeed = 0;
+
+		setEvolutionByType(index, evolutionType);
+
+		left = lifespan;
+	}
+
+	private void setEvolutionByType(int index, int type) {
+		switch (type) {
+
+		case HEALING:
+			speed.set( 0, -20 );
+			lifespan = 1f;
+			break;
+
+		case STAR:
+			speed.polar( Random.Float( 2 * 3.1415926f ), Random.Float( 128 ) );
+			acc.set( 0, 128 );
+			angle = Random.Float( 360 );
+			angularSpeed = Random.Float( -360, +360 );
+			lifespan = 1f;
+			break;
+
+		case MIST:
+			speed.polar( Random.Float( 2 * 3.1415926f ), Random.Float( 3 ) );
+			angle = Random.Float( 360 );
+			angularSpeed = Random.Float( -3.6f, +3.6f );
+			lifespan = 2f;
+			break;
+
+		case FORGE:
+			speed.polar( Random.Float( -3.1415926f, 0 ), Random.Float( 64 ) );
+			acc.set( 0, 128 );
+			angle = Random.Float( 360 );
+			angularSpeed = Random.Float( -360, +360 );
+			lifespan = 0.51f;
+			break;
+
+		case EVOKE:
+			speed.polar( Random.Float( -3.1415926f, 0 ), 50 );
+			acc.set( 0, 50 );
+			angle = Random.Float( 360 );
+			angularSpeed = Random.Float( -180, +180 );
+			lifespan = 1f;
+			break;
+
+		case KIT:
+			speed.polar( index * 3.1415926f / 5, 50 );
+			acc.set( -speed.x, -speed.y );
+			angle = index * 36;
+			angularSpeed = 360;
+			lifespan = 1f;
+			break;
+
+		case MASTERY:
+			speed.set( Random.Int( 2 ) == 0 ? Random.Float( -128, -64 ) : Random.Float( +64, +128 ), 0 );
+			angularSpeed = speed.x < 0 ? -180 : +180;
+			acc.set( -speed.x, 0 );
+			lifespan = 0.5f;
+			break;
+
+		case LIGHT:
+			angle = Random.Float( 360 );
+			angularSpeed = 90;
+			lifespan = 1f;
+			break;
+
+		case DISCOVER:
+			angle = Random.Float( 360 );
+			angularSpeed = 90;
+			lifespan = 0.5f;
+			am = 0;
+			break;
+
+		case QUESTION:
+			lifespan = 0.8f;
+			break;
+
+		case UP:
+			speed.set( 0, -20 );
+			lifespan = 1f;
+			break;
+
+		case SCREAM:
+			lifespan = 0.9f;
+			break;
+
+		case BONE:
+			lifespan = 0.2f;
+			speed.polar( Random.Float( 2 * 3.1415926f ), 24 / lifespan );
+			acc.set( 0, 128 );
+			angle = Random.Float( 360 );
+			angularSpeed = 360;
+			break;
+
+		case RATTLE:
+			lifespan = 0.5f;
+			speed.set( 0, -200 );
+			acc.set( 0, -2 * speed.y / lifespan );
+			angle = Random.Float( 360 );
+			angularSpeed = 360;
+			break;
+
+		case WOOL:
+			lifespan = 0.5f;
+			speed.set( 0, -50 );
+			angle = Random.Float( 360 );
+			angularSpeed = Random.Float( -360, +360 );
+			break;
+
+		case ROCK:
+			angle = Random.Float( 360 );
+			angularSpeed = Random.Float( -360, +360 );
+			scale.set( Random.Float( 1, 2 ) );
+			speed.set( 0, 64 );
+			lifespan = 0.2f;
+			break;
+
+		case NOTE:
+			angularSpeed = Random.Float( -30, +30 );
+			speed.polar( (angularSpeed - 90) * PointF.G2R, 30 );
+			lifespan = 1f;
+			break;
+
+		case CHANGE:
+			angle = Random.Float( 360 );
+			speed.polar( (angle - 90) * PointF.G2R, Random.Float( 4, 12 ) );
+			lifespan = 1.5f;
+			break;
+
+		case HEART:
+			speed.set( Random.Int( -10, +10 ), -40 );
+			angularSpeed = Random.Float( -45, +45 );
+			lifespan = 1f;
+			break;
+
+		case BUBBLE:
+			speed.set( 0, -15 );
+			scale.set( Random.Float( 0.8f, 1 ) );
+			lifespan = Random.Float( 0.8f, 1.5f );
+			break;
+
+		case STEAM:
+			speed.y = -Random.Float( 20, 30 );
+			angularSpeed = Random.Float( +180 );
+			angle = Random.Float( 360 );
+			lifespan = 1f;
+			break;
+
+		case JET:
+			speed.y = +32;
+			acc.y = -64;
+			angularSpeed = Random.Float( 180, 360 );
+			angle = Random.Float( 360 );
+			lifespan = 0.5f;
+			break;
+
+		case TOXIC:
+			hardlight( 0x50FF60 );
+			angularSpeed = 30;
+			angle = Random.Float( 360 );
+			lifespan = Random.Float( 1f, 3f );
+			break;
+
+		case PARALYSIS:
+			hardlight( 0xFFFF66 );
+			angularSpeed = -30;
+			angle = Random.Float( 360 );
+			lifespan = Random.Float( 1f, 3f );
+			break;
+
+		case CONFUSION:
+			hardlight( Random.Int( 0x1000000 ) | 0x000080 );
+			angularSpeed = Random.Float( -20, +20 );
+			angle = Random.Float( 360 );
+			lifespan = Random.Float( 1f, 3f );
+			break;
+
+		case DUST:
+			hardlight( 0xFFFF66 );
+			angle = Random.Float( 360 );
+			speed.polar( Random.Float( 2 * 3.1415926f ), Random.Float( 16, 48 ) );
+			lifespan = 0.5f;
+			break;
+
+		case COIN:
+			speed.polar( -PointF.PI * Random.Float( 0.3f, 0.7f ), Random.Float( 48, 96 ) );
+			acc.y = 256;
+			lifespan = -speed.y / acc.y * 2;
+			break;
+
+		case MAGIC:
+			speed.polar( -PointF.PI * Random.Float( 0.3f, 0.7f ), Random.Float( 48, 96 ) );
+			acc.y = 256;
+			lifespan = -speed.y / acc.y * 2;
+			break;
+	}
+	}
+
+	private void selectFrameByType(int type) {
 		switch (type) {
 		case DISCOVER:
 			frame( film.get( LIGHT ) );
@@ -112,210 +332,8 @@ public class Speck extends Image {
 		default:
 			frame( film.get( type ) );
 		}
-		
-		this.x = x - origin.x;
-		this.y = y - origin.y;
-		
-		resetColor();
-		scale.set( 1 );
-		speed.set( 0 );
-		acc.set( 0 );
-		angle = 0;
-		angularSpeed = 0;
-		
-		switch (type) {
-			
-		case HEALING:
-			speed.set( 0, -20 );
-			lifespan = 1f;
-			break;
-			
-		case STAR:
-			speed.polar( Random.Float( 2 * 3.1415926f ), Random.Float( 128 ) );
-			acc.set( 0, 128 );
-			angle = Random.Float( 360 );
-			angularSpeed = Random.Float( -360, +360 );
-			lifespan = 1f;
-			break;
-		
-		case MIST:
-			speed.polar( Random.Float( 2 * 3.1415926f ), Random.Float( 3 ) );
-			angle = Random.Float( 360 );
-			angularSpeed = Random.Float( -3.6f, +3.6f );
-			lifespan = 2f;
-			break;
-			
-		case FORGE:
-			speed.polar( Random.Float( -3.1415926f, 0 ), Random.Float( 64 ) );
-			acc.set( 0, 128 );
-			angle = Random.Float( 360 );
-			angularSpeed = Random.Float( -360, +360 );
-			lifespan = 0.51f;
-			break;
-			
-		case EVOKE:
-			speed.polar( Random.Float( -3.1415926f, 0 ), 50 );
-			acc.set( 0, 50 );
-			angle = Random.Float( 360 );
-			angularSpeed = Random.Float( -180, +180 );
-			lifespan = 1f;
-			break;
-			
-		case KIT:
-			speed.polar( index * 3.1415926f / 5, 50 );
-			acc.set( -speed.x, -speed.y );
-			angle = index * 36;
-			angularSpeed = 360;
-			lifespan = 1f;
-			break;
-			
-		case MASTERY:
-			speed.set( Random.Int( 2 ) == 0 ? Random.Float( -128, -64 ) : Random.Float( +64, +128 ), 0 );
-			angularSpeed = speed.x < 0 ? -180 : +180;
-			acc.set( -speed.x, 0 );
-			lifespan = 0.5f;
-			break;
-			
-		case LIGHT:
-			angle = Random.Float( 360 );
-			angularSpeed = 90;
-			lifespan = 1f;
-			break;
-			
-		case DISCOVER:
-			angle = Random.Float( 360 );
-			angularSpeed = 90;
-			lifespan = 0.5f;
-			am = 0;
-			break;
-			
-		case QUESTION:
-			lifespan = 0.8f;
-			break;
-			
-		case UP:
-			speed.set( 0, -20 );
-			lifespan = 1f;
-			break;
-			
-		case SCREAM:
-			lifespan = 0.9f;
-			break;
-			
-		case BONE:
-			lifespan = 0.2f;
-			speed.polar( Random.Float( 2 * 3.1415926f ), 24 / lifespan );
-			acc.set( 0, 128 );
-			angle = Random.Float( 360 );
-			angularSpeed = 360;
-			break;
-			
-		case RATTLE:
-			lifespan = 0.5f;
-			speed.set( 0, -200 );
-			acc.set( 0, -2 * speed.y / lifespan );
-			angle = Random.Float( 360 );
-			angularSpeed = 360;
-			break;
-			
-		case WOOL:
-			lifespan = 0.5f;
-			speed.set( 0, -50 );
-			angle = Random.Float( 360 );
-			angularSpeed = Random.Float( -360, +360 );
-			break;
-			
-		case ROCK: 
-			angle = Random.Float( 360 );
-			angularSpeed = Random.Float( -360, +360 );
-			scale.set( Random.Float( 1, 2 ) );
-			speed.set( 0, 64 );
-			lifespan = 0.2f;
-			break;
-			
-		case NOTE:
-			angularSpeed = Random.Float( -30, +30 );
-			speed.polar( (angularSpeed - 90) * PointF.G2R, 30 );
-			lifespan = 1f;
-			break;
-			
-		case CHANGE:
-			angle = Random.Float( 360 );
-			speed.polar( (angle - 90) * PointF.G2R, Random.Float( 4, 12 ) );
-			lifespan = 1.5f;
-			break;
-			
-		case HEART:
-			speed.set( Random.Int( -10, +10 ), -40 );
-			angularSpeed = Random.Float( -45, +45 );
-			lifespan = 1f;
-			break;
-			
-		case BUBBLE:
-			speed.set( 0, -15 );
-			scale.set( Random.Float( 0.8f, 1 ) );
-			lifespan = Random.Float( 0.8f, 1.5f );
-			break;
-			
-		case STEAM:
-			speed.y = -Random.Float( 20, 30 );
-			angularSpeed = Random.Float( +180 );
-			angle = Random.Float( 360 );
-			lifespan = 1f;
-			break;
-			
-		case JET:
-			speed.y = +32;
-			acc.y = -64;
-			angularSpeed = Random.Float( 180, 360 );
-			angle = Random.Float( 360 );
-			lifespan = 0.5f;
-			break;
-			
-		case TOXIC:
-			hardlight( 0x50FF60 );
-			angularSpeed = 30;
-			angle = Random.Float( 360 );
-			lifespan = Random.Float( 1f, 3f );
-			break;
-			
-		case PARALYSIS:
-			hardlight( 0xFFFF66 );
-			angularSpeed = -30;
-			angle = Random.Float( 360 );
-			lifespan = Random.Float( 1f, 3f );
-			break;
-		
-		case CONFUSION:
-			hardlight( Random.Int( 0x1000000 ) | 0x000080 );
-			angularSpeed = Random.Float( -20, +20 );
-			angle = Random.Float( 360 );
-			lifespan = Random.Float( 1f, 3f );
-			break;
-			
-		case DUST:
-			hardlight( 0xFFFF66 );
-			angle = Random.Float( 360 );
-			speed.polar( Random.Float( 2 * 3.1415926f ), Random.Float( 16, 48 ) );
-			lifespan = 0.5f;
-			break;
-			
-		case COIN:
-			speed.polar( -PointF.PI * Random.Float( 0.3f, 0.7f ), Random.Float( 48, 96 ) );
-			acc.y = 256;
-			lifespan = -speed.y / acc.y * 2;
-			break;
-
-		case MAGIC:
-			speed.polar( -PointF.PI * Random.Float( 0.3f, 0.7f ), Random.Float( 48, 96 ) );
-			acc.y = 256;
-			lifespan = -speed.y / acc.y * 2;
-			break;
 	}
 
-		left = lifespan;
-	}
-	
 	@SuppressLint("FloatMath")
 	@Override
 	public void update() {
@@ -329,128 +347,138 @@ public class Speck extends Image {
 		} else {
 			
 			float p = 1 - left / lifespan;	// 0 -> 1
-			
-			switch (type) {
-				
-			case STAR:
-			case FORGE:
-				scale.set( 1 - p );
-				am = p < 0.2f ? p * 5f : (1 - p) * 1.25f;
-				break;
-				
-			case KIT:		
-			case MASTERY:
-				am = 1 - p * p;
-				break;
-				
-			case EVOKE:	
-				
-			case HEALING:
-				am = p < 0.5f ? 1 : 2 - p * 2;
-				break;
-				
-			case LIGHT:
-				am = scale.set( p < 0.2f ? p * 5f : (1 - p) * 1.25f ).x;
-				break;
-				
-			case DISCOVER:
-				am = 1 - p;
-				scale.set( (p < 0.5f ? p : 1 - p) * 2 );
-				break;
-				
-			case QUESTION:
-				scale.set( (float)(Math.sqrt( p < 0.5f ? p : 1 - p ) * 3) );
-				break;
-				
-			case UP:
-				scale.set( (float)(Math.sqrt( p < 0.5f ? p : 1 - p ) * 2) );
-				break;
-				
-			case SCREAM:
-				am = (float)Math.sqrt( (p < 0.5f ? p : 1 - p) * 2f );
-				scale.set( p * 7 );
-				break;
-				
-			case BONE:
-			case RATTLE:
-				am = p < 0.9f ? 1 : (1 - p) * 10;
-				break;
-				
-			case ROCK:
-				am = p < 0.2f ? p * 5 : 1 ;
-				break;
-				
-			case NOTE:
-				am = 1 - p * p;
-				break;
-				
-			case WOOL:
-				scale.set( 1 - p );
-				break;
-				
-			case CHANGE:
-				am = (float)Math.sqrt( (p < 0.5f ? p : 1 - p) * 2);
-				scale.y = (1 + p) * 0.5f;
-				scale.x = (float) (scale.y * Math.cos( left * 15 ));
-				break;
-				
-			case HEART:
-				scale.set( 1 - p );
-				am = 1 - p * p;
-				break;
-				
-			case BUBBLE:
-				am = p < 0.2f ? p * 5 : 1;
-				break;
-				
-			case MIST:
-			case STEAM:
-			case TOXIC:
-			case PARALYSIS:
-			case CONFUSION:
-			case DUST:
-				am = p < 0.5f ? p : 1 - p;
-				scale.set( 1 + p * 2 );
-				break;
-				
-			case JET:
-				am = (p < 0.5f ? p : 1 - p) * 2;
-				scale.set( p * 1.5f );
-				break;
-				
-			case COIN:
-				scale.x = (float) Math.cos( left * 5 );
-				rm = gm = bm = (Math.abs( scale.x ) + 1) * 0.5f;
-				am = p < 0.9f ? 1 : (1 - p) * 10;
-				break;
-			case MAGIC:
-				am = 2 - p * p/2;
-				break;
-			}
+
+			updateByEvolutionType(p);
 		}
 	}
-	
-	public static Emitter.Factory factory( final int type ) {
-		return factory( type, false );
+
+	private void updateByEvolutionType(float p) {
+		switch (evolutionType) {
+
+		case STAR:
+		case FORGE:
+			scale.set( 1 - p );
+			am = p < 0.2f ? p * 5f : (1 - p) * 1.25f;
+			break;
+
+		case KIT:
+		case MASTERY:
+			am = 1 - p * p;
+			break;
+
+		case EVOKE:
+
+		case HEALING:
+			am = p < 0.5f ? 1 : 2 - p * 2;
+			break;
+
+		case LIGHT:
+			am = scale.set( p < 0.2f ? p * 5f : (1 - p) * 1.25f ).x;
+			break;
+
+		case DISCOVER:
+			am = 1 - p;
+			scale.set( (p < 0.5f ? p : 1 - p) * 2 );
+			break;
+
+		case QUESTION:
+			scale.set( (float)(Math.sqrt( p < 0.5f ? p : 1 - p ) * 3) );
+			break;
+
+		case UP:
+			scale.set( (float)(Math.sqrt( p < 0.5f ? p : 1 - p ) * 2) );
+			break;
+
+		case SCREAM:
+			am = (float)Math.sqrt( (p < 0.5f ? p : 1 - p) * 2f );
+			scale.set( p * 7 );
+			break;
+
+		case BONE:
+		case RATTLE:
+			am = p < 0.9f ? 1 : (1 - p) * 10;
+			break;
+
+		case ROCK:
+			am = p < 0.2f ? p * 5 : 1 ;
+			break;
+
+		case NOTE:
+			am = 1 - p * p;
+			break;
+
+		case WOOL:
+			scale.set( 1 - p );
+			break;
+
+		case CHANGE:
+			am = (float)Math.sqrt( (p < 0.5f ? p : 1 - p) * 2);
+			scale.y = (1 + p) * 0.5f;
+			scale.x = (float) (scale.y * Math.cos( left * 15 ));
+			break;
+
+		case HEART:
+			scale.set( 1 - p );
+			am = 1 - p * p;
+			break;
+
+		case BUBBLE:
+			am = p < 0.2f ? p * 5 : 1;
+			break;
+
+		case MIST:
+		case STEAM:
+		case TOXIC:
+		case PARALYSIS:
+		case CONFUSION:
+		case DUST:
+			am = p < 0.5f ? p : 1 - p;
+			scale.set( 1 + p * 2 );
+			break;
+
+		case JET:
+			am = (p < 0.5f ? p : 1 - p) * 2;
+			scale.set( p * 1.5f );
+			break;
+
+		case COIN:
+			scale.x = (float) Math.cos( left * 5 );
+			rm = gm = bm = (Math.abs( scale.x ) + 1) * 0.5f;
+			am = p < 0.9f ? 1 : (1 - p) * 10;
+			break;
+		case MAGIC:
+			am = 2 - p * p/2;
+			break;
+		}
 	}
-	
-	public static Emitter.Factory factory( final int type, final boolean lightMode ) {
-		
-		Emitter.Factory factory = factories.get( type );
+
+	public static Emitter.Factory factory( final int type ) {
+		return factory( type, type, false );
+	}
+
+	public static Emitter.Factory factory( final int type, boolean lightMode ) {
+		return factory( type, type, lightMode );
+	}
+
+	public static Emitter.Factory factory( final int animationType, final int evolutionType, final boolean lightMode ) {
+
+		Pair<Integer, Integer> key = new Pair<>(animationType, evolutionType);
+
+		Emitter.Factory factory = factories.get( key );
 		
 		if (factory == null) {
 			factory = new Emitter.Factory() {
 				@Override
 				public void emit ( Emitter emitter, int index, float x, float y ) {
 					Speck p = (Speck)emitter.recycle( Speck.class );
-					p.reset( index, x, y, type );
+					p.reset( index, x, y, animationType, evolutionType );
 				}
 				@Override
 				public boolean lightMode() {
 					return lightMode;
 				}
 			};
-			factories.put( type, factory );
+			factories.put( key, factory );
 		}
 		
 		return factory;
