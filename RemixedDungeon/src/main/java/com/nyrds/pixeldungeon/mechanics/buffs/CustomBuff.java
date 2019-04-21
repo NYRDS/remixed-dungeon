@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
+import androidx.annotation.Keep;
+
 import com.nyrds.Packable;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
@@ -9,8 +11,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaTable;
-
-import androidx.annotation.Keep;
 
 public class CustomBuff extends Buff {
 
@@ -41,8 +41,7 @@ public class CustomBuff extends Buff {
 
             script = new LuaScript("scripts/buffs/" + scriptFile, this);
 
-            script.run("buffDesc");
-            LuaTable desc = script.getResult().checktable();
+            LuaTable desc = script.run("buffDesc").checktable();
 
             icon = desc.rawget("icon").checkint();
             name = StringsManager.maybeId(desc.rawget("name").checkjstring());
@@ -71,8 +70,7 @@ public class CustomBuff extends Buff {
     @Override
     public boolean attachTo(Char target) {
         if(super.attachTo(target)) {
-            script.run("attachTo",target);
-            return script.getResult().checkboolean();
+            return script.run("attachTo",target).checkboolean();
         }
         return false;
     }
@@ -91,8 +89,7 @@ public class CustomBuff extends Buff {
 
     @Override
     public int drBonus() {
-        script.run("drBonus");
-        return script.getResult().checkint();
+        return script.run("drBonus").checkint();
     }
 
     @Override

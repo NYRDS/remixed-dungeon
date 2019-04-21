@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.effects;
 import android.annotation.SuppressLint;
 import android.util.Pair;
 
+import com.nyrds.LuaInterface;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -458,6 +459,11 @@ public class Speck extends Image {
 
 	public static Emitter.Factory factory( final int type, boolean lightMode ) {
 		return factory( type, type, lightMode );
+	}
+
+	@LuaInterface
+	public static Emitter.Factory factory( final int particleType, final int evolutionType ) {
+		return factory( particleType,evolutionType, false);
 	}
 
 	public static Emitter.Factory factory( final int animationType, final int evolutionType, final boolean lightMode ) {

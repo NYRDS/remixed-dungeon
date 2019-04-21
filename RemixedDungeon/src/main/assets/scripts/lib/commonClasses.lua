@@ -99,6 +99,17 @@ local Tweeners = {
     PosTweener = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener")
 }
 
+local Sfx = {
+    CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
+    Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
+    FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
+    SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
+    ShaftParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShaftParticle"),
+    Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck"),
+    ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle"),
+    SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
+}
+
 local RPD = {
     RemixedDungeon = RemixedDungeon,
     GameScene = GameScene,
@@ -128,16 +139,7 @@ local RPD = {
 
     Tweeners = Tweeners,
 
-    Sfx = {
-        CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
-        Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
-        FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
-        SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
-        ShaftParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShaftParticle"),
-        Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck"),
-        ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle"),
-        SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
-    },
+    Sfx = Sfx,
 
     Objects = Objects,
 
@@ -220,6 +222,15 @@ local RPD = {
 
     bottomEffect = function(cell,effectName)
         return GameScene:clipEffect(cell,0,effectName)
+    end,
+
+    speckEffectFactory = function (particleType, evolutionType)
+        return Sfx.Speck:factory(particleType, evolutionType)
+    end,
+
+    pourSpeck = function (emitter, factory, interval)
+        emitter:pour(factory, interval)
+        emitter.autoKill = false
     end,
 
     attachMoveTweener = function(img,dx,dy,time)

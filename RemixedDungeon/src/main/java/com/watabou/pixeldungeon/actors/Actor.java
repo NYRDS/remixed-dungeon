@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
 
+import com.nyrds.Packable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -37,6 +38,7 @@ public abstract class Actor implements Bundlable {
 	public static final float TICK	= 1f;
 	private static float realTimeMultiplier = 1f;
 
+	@Packable
 	private float time;
 
 	public static void setRealTimeMultiplier(float realTimeMultiplier) {
@@ -54,7 +56,7 @@ public abstract class Actor implements Bundlable {
 			this.time = now + time;
 		}
 	}
-	
+
 	protected float cooldown() {
 		return time - now;
 	}
@@ -66,23 +68,15 @@ public abstract class Actor implements Bundlable {
 	protected void onAdd() {}
 	
 	protected void onRemove() {}
-	
-	private static final String TIME = "time";
-	
+
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		if(Float.isInfinite(time) || Float.isNaN(time)) {
-			return;
-		}
-
-		bundle.put( TIME, time );
 	}
-	
+
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		time = bundle.getFloat( TIME );
 	}
-	
+
 	@Override
 	public boolean dontPack() {
 		return false;

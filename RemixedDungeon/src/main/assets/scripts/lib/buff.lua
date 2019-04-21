@@ -8,7 +8,7 @@ local buff = {}
 
 buff.__index = buff
 
-function buff.attachTo(self, buff)
+function buff.attachTo(self, buff, target)
     return true
 end
 

@@ -3,6 +3,7 @@
 --- Created by mike.
 --- DateTime: 25.03.19 0:06
 ---
+local RPD  = require "scripts/lib/commonClasses"
 
 local buff = require "scripts/lib/buff"
 
@@ -15,6 +16,21 @@ return buff.init{
             info          = "DieHard_Info",
         }
     end,
+
+    attachTo = function(self, buff, target)
+
+        self.emitter = target:getSprite():emitter()
+        local speckFactory = RPD.speckEffectFactory(RPD.Sfx.Speck.HEALING,RPD.Sfx.Speck.UP)
+
+        RPD.pourSpeck(self.emitter, speckFactory, 0.5 )
+
+        return true
+    end,
+
+    detach = function(self, buff)
+        self.emitter:kill() -- fix it, no direct memory management should be in scripts
+    end,
+
     act = function(self,buff)
         buff:detach()
     end

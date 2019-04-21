@@ -24,8 +24,13 @@ return spell.init{
         }
     end,
     cast = function(self, spell, caster, cell)
-        --RPD.affectBuff(caster,"DieHard", caster:skillLevel() * 20)
-        RPD.affectBuff(caster,"DieHard", 20)
+        local duration = 20 --caster:skillLevel() * 20
+
+        RPD.affectBuff(caster,"DieHard", duration)
+
+        --attach visual stuff
+        local emitter = caster:getSprite():emitter()
+        emitter:pour(RPD.speckEffectFactory(RPD.Sfx.Speck.HEALING,RPD.Sfx.Speck.UP), duration)
 
         return true
     end
