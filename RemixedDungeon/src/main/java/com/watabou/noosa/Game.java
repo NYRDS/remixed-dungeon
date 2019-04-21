@@ -37,6 +37,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.PermissionChecker;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
@@ -58,7 +62,6 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
@@ -71,10 +74,6 @@ import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.PermissionChecker;
 
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -603,14 +602,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     static public void pushUiTask(Runnable task) {
         instance().uiTasks.add(task);
-    }
-
-    public static void showWindow(final String msg) {
-        hideWindow();
-        pushUiTask(() -> {
-            currentWindow = new WndMessage(msg);
-            Game.scene().add(currentWindow);
-        });
     }
 
     public static void hideWindow() {
