@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Capacete do Caos</string>
     <string name="ChaosHelmet_Info">O Capacete de Sangue, e um Símbolo do Caos Para o Guerreiro.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s:O Limite de Invocação foi Excedido(O Máximo:%2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -66,8 +65,6 @@
 
 
     <string name="Torch_Info2">É um item indispensável na masmorra,que é infame pela sua iluminação ambiente fraca.</string>
-
-
 
     <string name="WndSpells_Title">Magias</string>
     <string name="WndSpells_Level">Nível Mágico:</string>
@@ -259,6 +256,8 @@
     <string name="WndPriest_Instruction2_m">Bem-vindo meu filho, bem-vindo à santa igreja do grande Papai Noel o Senhor das Profundezas!</string>
     <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas! </string>
     <string name="WndPriest_Instruction2">Se você estiver procurando ajuda, eu posso lhe fornecer serviço de cura e comida por apenas %d moedas de ouro!\nSe você está em busca da Bênção Sagrada, ou, pelo Senhor proibido, foi amaldiçoado, por favor, fale com o Bispo em nossa humilde igreja.</string>
+
+    <string name="WndDontLikeAds_NotThisTime">Não desta vez</string>
 
     <string name="Item_Info2">Algumas Coisas.</string>
 
@@ -1579,6 +1578,7 @@
         <item>Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</item>
         <item>Magos podem usar varinhas como uma arma de combate.</item>
         <item>Pergaminhos de Identificação são identificados desde o início.</item>
+        <item>Pergaminhos de Identificação são identificados desde o início.</item>
     </string-array>
     <string-array name="HeroClass_RogPerks">
         <item>Ladrões começam com um Anel de Sombras +1.</item>
@@ -1600,6 +1600,7 @@
         <item>Elfos são imunes ao enraizamento</item>
         <item>Elfos começam com um arco de madeira melhorado e um monte de flechas</item>
         <item>Elfos são peritos com arcos e ágeis</item>
+        <item>Elfos são menos experientes com armas corpo a corpo</item>
         <item>Elfos são menos experientes com armas corpo a corpo</item>
     </string-array>
 
@@ -2527,6 +2528,7 @@
     <string name="Mods_AuthorEmail">E-mail do Autor:</string>
     <string name="Mods_RestartRequired">É necessário reiniciar</string>
 
+    <string name="Spells_NotTooFast">%s ainda não está proto para uso</string>
     <string name="ElvenBow_Name"> arco élfico</string>
     <string name="ElvenBow_Gender">masculino</string>
 
