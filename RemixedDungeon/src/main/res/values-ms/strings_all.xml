@@ -1975,7 +1975,6 @@
 
     <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
     <string name="Mob_Died">Anda dengar ada benda yang mati dari jauh</string>
-    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
     <string name="Mob_StaSleepingStatus">%s ini sedang tidur</string>
     <string name="Mob_StaWanderingStatus">%s ini sedang merayau</string>
     <string name="Mob_StaHuntingStatus">%s ini sedang memburu</string>
@@ -2529,7 +2528,7 @@
     <string name="Mods_AuthorEmail">Emel pengarang:</string>
     <string name="Mods_RestartRequired">Mula semula diperlukan</string>
 
-    <string name="Spells_NotTooFast">Anda tidak bersedia untuk menjampi %s lagi</string>
+    <string name="Spells_NotTooFast">%s belum boleh digunakan lagi</string>
     <string name="ElvenBow_Name">busur bunian</string>
     <string name="ElvenBow_Gender">maskulin</string>
 
