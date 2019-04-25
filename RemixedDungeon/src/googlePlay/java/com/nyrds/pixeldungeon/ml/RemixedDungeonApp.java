@@ -3,6 +3,9 @@ package com.nyrds.pixeldungeon.ml;
 import android.annotation.SuppressLint;
 import android.content.Context;
 
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
+
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
 
@@ -10,122 +13,112 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import androidx.multidex.MultiDex;
-import androidx.multidex.MultiDexApplication;
 import io.fabric.sdk.android.Fabric;
 import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
 import io.humanteq.hqsdkcore.HQSdk;
-import io.humanteq.hqsdkcore.api.impl.HqmApi;
 import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
 
 public class RemixedDungeonApp extends MultiDexApplication {
 
-	@SuppressLint("StaticFieldLeak")
-	static Context instanceContext;
+    @SuppressLint("StaticFieldLeak")
+    static Context instanceContext;
 
-	static class HqSdkCrash extends Exception {
-		HqSdkCrash(Throwable cause) {
-			super(cause);
-		}
-	}
+    static class HqSdkCrash extends Exception {
+        HqSdkCrash(Throwable cause) {
+            super(cause);
+        }
+    }
 
-	static class HqSdkError extends Exception {
-		HqSdkError(Throwable cause) {
-			super(cause);
-		}
-	}
+    static class HqSdkError extends Exception {
+        HqSdkError(Throwable cause) {
+            super(cause);
+        }
+    }
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-		instanceContext = getApplicationContext();
-		FirebaseApp.initializeApp(this);
+        instanceContext = getApplicationContext();
+        FirebaseApp.initializeApp(this);
 
-		Fabric.with(this, new Crashlytics());
-		EventCollector.init();
+        Fabric.with(this, new Crashlytics());
+        EventCollector.init();
 
-		//HQSdk.enableDebug(true);
+        //HQSdk.enableDebug(true);
 
-		try {
-			HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false,
-					new HqmCallback<HqmApi>() {
+        try {
+            HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false);
+        } catch (Throwable hqSdkCrash) {
+            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
+        }
 
-						@Override
-						public void onSuccess(HqmApi hqmApi) {
-						}
+        try {
+            Class.forName("android.os.AsyncTask");
+        } catch (Throwable ignore) {
+        }
+    }
 
-						@Override
-						public void onError(@NotNull Throwable throwable) {
-							EventCollector.logException(new HqSdkError(throwable));
-						}
-					}
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
-			);
-		} catch (Throwable hqSdkCrash) {
-			EventCollector.logException(new HqSdkCrash(hqSdkCrash));
-		}
+    static public void startScene() {
+        try {
+            if (HQSdk.getInstance() != null) {
 
+                HQSdk.start(new InstalledApplicationsCollector());
+                HQSdk.startSystemEventsTracking();
 
-		try {
-			Class.forName("android.os.AsyncTask");
-		} catch (Throwable ignore) {
-		}
-	}
+                HQSdk.getUserGroups(new HqmCallback<List<String>>() {
 
-	@Override
-	protected void attachBaseContext(Context base) {
-		super.attachBaseContext(base);
-		MultiDex.install(this);
-	}
+                    @Override
+                    public void onSuccess(List<String> strings) {
 
-	static public void startScene() {
-		try {
-		if(HQSdk.getInstance() != null) {
+                    }
 
-			HQSdk.getInstance().start(new InstalledApplicationsCollector());
-			HQSdk.getInstance().startSystemEventsTracking();
+                    @Override
+                    public void onSuccess() {
 
-			HQSdk.getUserGroups(new HqmCallback<List<String>>() {
+                    }
 
-				@Override
-				public void onError(@NotNull Throwable throwable) {
-					EventCollector.logException(new HqSdkError(throwable));
-				}
+                    @Override
+                    public void onError(@NotNull Throwable throwable) {
+                        EventCollector.logException(new HqSdkError(throwable));
+                    }
+                });
+            } else {
+                EventCollector.logException(new HqSdkError(new Exception("HQM not initialized")));
+            }
+        } catch (Throwable hqSdkCrash) {
+            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
+        }
+    }
 
-				@Override
-				public void onSuccess(List<String> list) {
-					//TODO do something here
-				}
-			});
-		}
-			} catch (Throwable hqSdkCrash) {
-				EventCollector.logException(new HqSdkCrash(hqSdkCrash));
-			}
-	}
+    static public int getExperimentSegment(String key, int vars) {
+        if (!HQSdk.isInitialized()) {
+            EventCollector.logEvent("experiments", key, "hqApi not ready");
+            return -1;
+        }
 
-	static public int getExperimentSegment(String key, int vars) {
-		if(HQSdk.getInstance()==null || !HQSdk.isInitialized()) {
-			EventCollector.logEvent("experiments",key,"hqApi not ready");
-			return -1;
-		}
+        try {
+            Long hqsdkRet = HQSdk.getTestGroup(key, vars);
+            if (hqsdkRet != null) {
+                int groupId = hqsdkRet.intValue();
+                EventCollector.logEvent("experiments", key, Integer.toString(groupId));
+                return groupId;
+            }
+        } catch (Throwable hqSdkCrash) {
+            EventCollector.logEvent("experiments", key, "hqApi crash");
+            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
+        }
+        EventCollector.logEvent("experiments", key, Integer.toString(-1));
+        return -1;
+    }
 
-		try {
-			Long hqsdkRet = HQSdk.getTestGroup(key, vars);
-			if (hqsdkRet != null) {
-				int groupId = hqsdkRet.intValue();
-				EventCollector.logEvent("experiments", key, Integer.toString(groupId));
-				return groupId;
-			}
-		} catch (Throwable hqSdkCrash) {
-			EventCollector.logEvent("experiments",key,"hqApi crash");
-			EventCollector.logException(new HqSdkCrash(hqSdkCrash));
-		}
-		EventCollector.logEvent("experiments", key, Integer.toString(-1));
-		return -1;
-	}
-
-	static public Context getContext() {
-		return instanceContext;
-	}
+    static public Context getContext() {
+        return instanceContext;
+    }
 }

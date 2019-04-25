@@ -44,7 +44,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 			}
 
 			if(fieldsByClass.get(parent)==null) {
-				fieldsByClass.put(parent,new HashSet<Element>());
+				fieldsByClass.put(parent, new HashSet<>());
 			}
 
 			fieldsByClass.get(parent).add(element);

@@ -55,8 +55,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility '1.8'
+        targetCompatibility '1.8'
     }
 
     dexOptions {
@@ -88,6 +88,12 @@ android {
 apply plugin: 'io.fabric'
 
 dependencies {
+    implementation project(':annotation')
+
+    annotationProcessor project(':processor')
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
+
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
@@ -105,11 +111,10 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation project(':annotation')
-    annotationProcessor project(':processor')
 
-    implementation 'io.humanteq.hqsdk:hqsdk-core:1.1.6'
-    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.1.6'
+
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.0-rc07'
+    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.0-rc07'
 
     implementation 'androidx.core:core:1.0.1'
     implementation 'androidx.annotation:annotation:1.0.2'
@@ -123,6 +128,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-ads:17.1.3'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    implementation 'org.jetbrains:annotations:15.0'
 }
 
 

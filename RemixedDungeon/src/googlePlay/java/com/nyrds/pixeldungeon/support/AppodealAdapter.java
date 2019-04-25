@@ -39,20 +39,14 @@ public class AppodealAdapter {
 
         String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
 
-        //vungle disable due to strange build issue
-        //mopub, mobvista & tapjoy due audiences mismatch
-        //ogury - intersiteal
         String disableNetworks[] = {AppodealNetworks.AMAZON_ADS,
-                                    AppodealNetworks.ADCOLONY,
                                     AppodealNetworks.FACEBOOK,
                                     AppodealNetworks.FLURRY,
                                     AppodealNetworks.STARTAPP,
                                     AppodealNetworks.MOPUB,
                                     AppodealNetworks.MINTEGRAL,
                                     AppodealNetworks.OGURY_PRESAGE,
-                                    AppodealNetworks.VUNGLE,
-                                    AppodealNetworks.TAPJOY,
-                                    AppodealNetworks.UNITY_ADS
+                                    AppodealNetworks.VUNGLE
         };
 
         for (String net : disableNetworks) {

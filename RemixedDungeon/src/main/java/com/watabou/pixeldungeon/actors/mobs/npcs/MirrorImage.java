@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -30,13 +32,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 
-import org.jetbrains.annotations.NotNull;
-
-import androidx.annotation.NonNull;
-
 public class MirrorImage extends Mob {
 
-	// for restoreFromBundle
 	public MirrorImage() {
 		setState(MobAi.getStateByClass(Hunting.class));
 		setEnemy(DUMMY);
@@ -45,7 +42,7 @@ public class MirrorImage extends Mob {
         addImmunity( Burning.class );
 	}
 
-	public MirrorImage(@NotNull Hero hero) {
+	public MirrorImage(@NonNull Hero hero) {
 		this();
 
 		attack = hero.attackSkill( hero );
