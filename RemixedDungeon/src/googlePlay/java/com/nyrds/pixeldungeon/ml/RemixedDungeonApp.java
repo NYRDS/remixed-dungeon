@@ -76,12 +76,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
                     @Override
                     public void onSuccess(List<String> strings) {
-
-                    }
-
-                    @Override
-                    public void onSuccess() {
-
                     }
 
                     @Override

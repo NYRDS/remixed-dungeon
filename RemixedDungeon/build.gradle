@@ -92,8 +92,6 @@ dependencies {
 
     annotationProcessor project(':processor')
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
-
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
@@ -112,9 +110,8 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
 
-
-    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.0-rc07'
-    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.0-rc07'
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.0-rc11'
+    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.0-rc11'
 
     implementation 'androidx.core:core:1.0.1'
     implementation 'androidx.annotation:annotation:1.0.2'

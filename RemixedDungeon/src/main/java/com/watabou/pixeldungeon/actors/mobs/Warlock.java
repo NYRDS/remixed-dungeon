@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
@@ -38,8 +40,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
-import androidx.annotation.NonNull;
 
 public class Warlock extends Mob implements IZapper {
 
@@ -89,7 +89,7 @@ public class Warlock extends Mob implements IZapper {
 
 		for (int i = 1; i < 4; i++) {
 			int next = Ballistica.trace[i + 1];
-			if (Dungeon.level.cellValid(next) && (Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
+			if (level().cellValid(next) && (level().passable[next] || level().avoid[next]) && Actor.findChar(next) == null) {
 				cell = next;
 				Dungeon.observe();
 			}

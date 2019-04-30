@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModdingMode;
@@ -101,9 +104,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public abstract class Level implements Bundlable {
 
@@ -1088,7 +1088,7 @@ public abstract class Level implements Bundlable {
 		}
 		heap.drop(item);
 
-		if (Dungeon.level != null) {
+		if (!Dungeon.isLoading()) {
 			press(cell, item);
 		}
 
@@ -1735,7 +1735,7 @@ public abstract class Level implements Bundlable {
 
 	public void addScriptedActor(ScriptedActor actor) {
 		scripts.add(actor);
-		if(Dungeon.level!=null) {
+		if(!Dungeon.isLoading()) {
 			Actor.add(actor);
 		}
 	}

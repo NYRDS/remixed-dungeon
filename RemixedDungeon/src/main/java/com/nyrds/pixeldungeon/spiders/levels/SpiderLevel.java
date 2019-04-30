@@ -16,6 +16,8 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -72,7 +74,7 @@ public class SpiderLevel extends CommonLevel {
 		return cellValid(x, y) && map[cell(x, y)] == type;
 	}
 	
-	private void connectChambers(Chamber a, Chamber b) {
+	private void connectChambers(@NotNull Chamber a, @NotNull Chamber b) {
 		int x = a.x;
 		int y = a.y;
 

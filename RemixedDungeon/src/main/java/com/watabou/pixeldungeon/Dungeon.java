@@ -17,6 +17,8 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -75,6 +77,8 @@ import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
 import com.watabou.utils.SystemTime;
 
+import org.jetbrains.annotations.Contract;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -83,8 +87,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
-
-import androidx.annotation.NonNull;
 
 import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
 
@@ -123,6 +125,7 @@ public class Dungeon {
     public static void initSizeDependentStuff(int w, int h) {
         int size = w * h;
         Actor.clear();
+
         visible = new boolean[size];
         passable = new boolean[size];
 
@@ -179,6 +182,7 @@ public class Dungeon {
         SaveUtils.deleteLevels(heroClass);
     }
 
+    @Contract(pure = true)
     public static boolean isChallenged(int mask) {
         return (challenges & mask) != 0;
     }
@@ -194,9 +198,12 @@ public class Dungeon {
     @NonNull
     public static Level newLevel(Position pos) {
         updateStatistics();
+        loading = true;
         Level level = DungeonGenerator.createLevel(pos);
 
         Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
+
+        loading = false;
 
         return level;
     }
@@ -653,7 +660,7 @@ public class Dungeon {
 
     public static void observe() {
 
-        if (level == null) {
+        if (isLoading()) {
             return;
         }
 
@@ -817,7 +824,7 @@ public class Dungeon {
     }
 
     public static boolean isLoading() {
-        return loading;
+        return level == null || loading;
     }
 
     public static boolean realtime() {

@@ -428,7 +428,7 @@ public class GameScene extends PixelScene {
             return;
         }
 
-        if (Dungeon.level == null) {
+        if (Dungeon.isLoading()) {
             return;
         }
 
@@ -551,7 +551,7 @@ public class GameScene extends PixelScene {
     // -------------------------------------------------------
 
     public static void add(Blob gas) {
-        if (scene != null && Dungeon.level != null) {
+        if (isSceneReady()) {
             Actor.add(gas);
             addBlobSprite(gas);
         } else {
@@ -584,7 +584,7 @@ public class GameScene extends PixelScene {
     }
 
     public static boolean isSceneReady() {
-        return scene != null && Dungeon.level != null;
+        return scene != null && !Dungeon.isLoading();
     }
 
     public static void add(EmoIcon icon) {
