@@ -1,5 +1,7 @@
 package com.nyrds.android.util;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -14,15 +16,12 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import androidx.annotation.NonNull;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
@@ -94,23 +93,28 @@ public class ModdingMode {
 
 	public static List<String> listResources(String path, FilenameFilter filter) {
 		try{
+
+			Set<String> resList = new HashSet<>();
+
+			String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
+
+			if (fullList != null) {
+				for(String resource : fullList) {
+					if(filter.accept(null, resource)) {
+						resList.add(resource);
+					}
+				}
+			}
+
 			if(inMod()) {
 				String resourcesPath = mActiveMod + "/" + path;
 				if(isResourceExistInMod(resourcesPath)) {
-					return Arrays.asList(FileSystem.getExternalStorageFile(resourcesPath).list(filter));
-				} else {
-					return new ArrayList<>();
+					resList.addAll(Arrays.asList(FileSystem.getExternalStorageFile(resourcesPath).list(filter)));
 				}
-			} else {
-				String fullList[] = RemixedDungeonApp.getContext().getAssets().list(path);
-				ArrayList<String> ret = new ArrayList<>();
-				for(String resource : fullList) {
-					if(filter.accept(null, resource)) {
-						ret.add(resource);
-					}
-				}
-				return ret;
 			}
+
+			return Arrays.asList(resList.toArray(new String[0]));
+
 		} catch (IOException e) {
 			throw new TrackedRuntimeException(e);
 		}
