@@ -1,6 +1,6 @@
 package com.nyrds.android.lua;
 
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
@@ -24,7 +24,7 @@ public class MultiDexLuajavaLib extends LuajavaLib {
 			Class clazz = Class.forName(name, true, classLoader);
 			return clazz;
 		} catch (ClassNotFoundException e) {
-			throw new TrackedRuntimeException(classLoader.toString(), e);
+			throw new ModError("Failed to load class "+classLoader.toString(), e);
 		}
 	}
 }
