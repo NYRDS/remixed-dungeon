@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WandOfBlink extends Wand {
 
 	@Override
@@ -68,22 +70,22 @@ public class WandOfBlink extends Wand {
 		MagicMissile.whiteLight( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
-	
-	public static void appear( Char ch, int pos ) {
+
+	public static void appear(@NotNull Char ch, int pos ) {
 		ch.getSprite().interruptMotion();
-		
+
 		ch.move( pos );
 		ch.getSprite().place( pos );
-		
+
 		if (ch.invisible == 0) {
 			ch.getSprite().alpha( 0 );
 			ch.getSprite().getParent().add( new AlphaTweener( ch.getSprite(), 1, 0.4f ) );
 		}
-		
+
 		ch.getSprite().emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 		Sample.INSTANCE.play( Assets.SND_TELEPORT );
 	}
-	
+
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.WandOfBlink_Info);

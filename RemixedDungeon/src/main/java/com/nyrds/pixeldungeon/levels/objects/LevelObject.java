@@ -1,8 +1,9 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
+import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
+import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -13,7 +14,7 @@ import com.watabou.utils.Bundle;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public abstract class LevelObject implements Bundlable, Presser {
+public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLevel {
 
     @Packable
     protected int pos = -1;
@@ -116,28 +117,20 @@ public abstract class LevelObject implements Bundlable, Presser {
     }
 
     public boolean push(Char hero) {
-        Level level = Dungeon.level;
 
-        int hx = level.cellX(hero.getPos());
-        int hy = level.cellY(hero.getPos());
-
-        int x = level.cellX(getPos());
-        int y = level.cellY(getPos());
-
-        int dx = x - hx;
-        int dy = y - hy;
-
-        if (dx * dy != 0) {
+        if(!pushable(hero)) {
             return false;
         }
 
-        int nextCell = level.cell(x + Util.signum(dx), y + Util.signum(dy));
+        int nextCell = LevelHelpers.pushDst(hero, this, true);
+
+        Level level = hero.level();
 
         if (!level.cellValid(nextCell)) {
             return false;
         }
 
-        if (level.solid[nextCell] || level.getLevelObject(nextCell, layer) != null) {
+        if (level.getLevelObject(nextCell, layer) != null) {
             return false;
         } else {
             level.press(nextCell, this);

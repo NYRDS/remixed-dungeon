@@ -11,6 +11,7 @@ public class ImmortalNPC extends NPC {
 
 
 	public ImmortalNPC() {
+		movable = false;
 	}
 	
 	@Override

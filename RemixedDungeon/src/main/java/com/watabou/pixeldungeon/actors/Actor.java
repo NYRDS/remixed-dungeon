@@ -282,7 +282,7 @@ public abstract class Actor implements Bundlable {
 		}
 		
 		all.add( actor );
-		actor.time += time;	// (+=) => (=) ?
+		actor.time += time;
 		actor.onAdd();
 		
 		if (actor instanceof Char) {

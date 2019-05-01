@@ -46,6 +46,7 @@ local PseudoBlobs = {
     Freezing = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Freezing")
 }
 
+local Ballistica = luajava.bindClass("com.watabou.pixeldungeon.mechanics.Ballistica")
 local Challenges = luajava.bindClass("com.watabou.pixeldungeon.Challenges")
 
 local actions = {
@@ -125,6 +126,7 @@ local RPD = {
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
 
+    Ballistica = Ballistica,
     Challenges = Challenges,
 
     GLog = GLog,

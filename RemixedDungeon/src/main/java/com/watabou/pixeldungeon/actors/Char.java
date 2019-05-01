@@ -17,12 +17,17 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.ItemOwner;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
+import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -84,9 +89,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import androidx.annotation.NonNull;
-
-public abstract class Char extends Actor implements Presser, ItemOwner, NamedEntityKind {
+public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKind {
 
 	// Unreachable target
 	public static final Char DUMMY = new DummyChar();
@@ -820,7 +823,9 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 	}
 
 	public void setPos(int pos) {
+		freeCell(this.pos);
 		this.pos = pos;
+		occupyCell(this);
 	}
 
 	public boolean isMovable() {
@@ -960,4 +965,45 @@ public abstract class Char extends Actor implements Presser, ItemOwner, NamedEnt
 	public String name() {
 		return getName_objective();
 	}
+
+	@LuaInterface
+	public boolean push(Char chr) {
+
+		if(!isMovable()) {
+			return false;
+		}
+
+		int nextCell = LevelHelpers.pushDst(chr, this, false);
+
+		Level level = chr.level();
+
+		if (!level.cellValid(nextCell)) {
+			return false;
+		}
+
+		LevelObject lo = level.getLevelObject(nextCell);
+
+		if (lo != null) {
+			if (!lo.push(this)) {
+				return false;
+			}
+		}
+
+		Char ch = Actor.findChar(nextCell);
+
+		if(ch != null) {
+			if(ch.isMovable()) {
+				if(!ch.push(chr)) {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		}
+
+		moveSprite(getPos(),nextCell);
+		move(nextCell);
+		return true;
+	}
+
 }

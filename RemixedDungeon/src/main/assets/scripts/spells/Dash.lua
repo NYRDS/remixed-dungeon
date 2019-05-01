@@ -24,8 +24,51 @@ return spell.init{
         }
     end,
     castOnCell = function(self, spell, chr, cell)
-        RPD.zapEffect(chr:getPos(),cell,"dash")
-        --RPD.blinkTo(chr,cell)
+
+        local level = chr:level()
+
+        local ownPos = chr:getPos()
+
+        local dist = level:distance(ownPos, cell)
+
+        if ownPos == cell then
+            RPD.glogn("Dash_onSelf")
+            return false
+        end
+
+        if dist  > 2 then
+            RPD.glogn("Dash_tooFar")
+            return false
+        end
+
+        local dst = RPD.Ballistica:cast(ownPos, cell, false, true, true)
+        RPD.glogp("dash to: %d", dst)
+
+        local char = RPD.Actor:findChar(dst)
+
+        if char then
+            local newPos = char:getPos()
+            if char:push(chr) then
+                dst = newPos
+                RPD.glogp("dash to: %d", dst)
+
+            end
+        end
+
+        local object = level:getLevelObject(dst)
+
+        if object then
+            local newPos = object:getPos()
+            if object:push(chr) then
+                dst = newPos
+                RPD.glogp("dash to: %d", dst)
+
+            end
+        end
+
+        RPD.zapEffect(ownPos,dst,"dash")
+        RPD.blinkTo(chr,dst)
+
         return true
     end
 }
