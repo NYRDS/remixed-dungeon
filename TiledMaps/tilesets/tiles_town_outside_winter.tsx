@@ -657,19 +657,19 @@
  </tile>
  <tile id="109">
   <properties>
-   <property name="deco_desc" value="town_deco_fence__desc"/>
+   <property name="deco_desc" value="town_deco_fence_desc"/>
    <property name="deco_name" value="town_deco_fence_name"/>
   </properties>
  </tile>
  <tile id="110">
   <properties>
-   <property name="deco_desc" value="town_deco_fence__desc"/>
+   <property name="deco_desc" value="town_deco_fence_desc"/>
    <property name="deco_name" value="town_deco_fence_name"/>
   </properties>
  </tile>
  <tile id="111">
   <properties>
-   <property name="deco_desc" value="town_deco_fence__desc"/>
+   <property name="deco_desc" value="town_deco_fence_desc"/>
    <property name="deco_name" value="town_deco_fence_name"/>
   </properties>
  </tile>
@@ -747,19 +747,19 @@
  </tile>
  <tile id="125">
   <properties>
-   <property name="deco_desc" value="town_deco_fence__desc"/>
+   <property name="deco_desc" value="town_deco_fence_desc"/>
    <property name="deco_name" value="town_deco_fence_name"/>
   </properties>
  </tile>
  <tile id="126">
   <properties>
-   <property name="deco_desc" value="town_deco_fence__desc"/>
+   <property name="deco_desc" value="town_deco_fence_desc"/>
    <property name="deco_name" value="town_deco_fence_name"/>
   </properties>
  </tile>
  <tile id="127">
   <properties>
-   <property name="deco_desc" value="town_deco_fence__desc"/>
+   <property name="deco_desc" value="town_deco_fence_desc"/>
    <property name="deco_name" value="town_deco_fence_name"/>
   </properties>
  </tile>
