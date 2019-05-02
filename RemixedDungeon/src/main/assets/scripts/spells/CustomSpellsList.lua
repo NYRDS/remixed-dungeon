@@ -9,5 +9,6 @@ spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice"}
 --spells["Common"] = {"Bless"}
 
 spells["Combat"] = {"DieHard","Dash","ArmorMastery","Smash"}
+spells["Rogue"] = {"Cloak"}
 
 return spells

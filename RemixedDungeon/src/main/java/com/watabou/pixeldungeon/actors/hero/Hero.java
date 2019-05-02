@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
@@ -140,9 +143,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 public class Hero extends Char implements PetOwner {
 	private static final String TXT_EXP = "%+dEXP";
 
@@ -193,9 +193,6 @@ public class Hero extends Char implements PetOwner {
 	public String levelId;
 
 	public Position portalLevelPos;
-
-	@NonNull
-	private ArrayList<Mob> visibleEnemies = new ArrayList<>();
 
 	@NonNull
 	private Collection<Integer> pets = new ArrayList<>();
@@ -554,7 +551,7 @@ public class Hero extends Char implements PetOwner {
 			return false;
 		}
 
-		checkVisibleMobs();
+		checkVisibleEnemies();
 		AttackIndicator.updateState();
 
 		if(controlTarget!=this) {
@@ -1107,8 +1104,8 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	public void checkVisibleMobs() {
-		ArrayList<Mob> visible = new ArrayList<>();
+	public void checkVisibleEnemies() {
+		ArrayList<Char> visible = new ArrayList<>();
 
 		boolean newMob = false;
 
@@ -1129,11 +1126,11 @@ public class Hero extends Char implements PetOwner {
 		visibleEnemies = visible;
 	}
 
-	public Mob getNearestEnemy() {
+	public Char getNearestEnemy() {
 
-		Mob nearest = null;
+		Char nearest = null;
 		int dist = Integer.MAX_VALUE;
-		for (Mob mob : visibleEnemies) {
+		for (Char mob : visibleEnemies) {
 			int mobDist = level().distance(getPos(), mob.getPos());
 			if (mobDist < dist) {
 				dist = mobDist;
@@ -1141,14 +1138,6 @@ public class Hero extends Char implements PetOwner {
 			}
 		}
 		return nearest;
-	}
-
-	public int visibleEnemies() {
-		return visibleEnemies.size();
-	}
-
-	public Mob visibleEnemy(int index) {
-		return visibleEnemies.get(index % visibleEnemies.size());
 	}
 
 	protected boolean getCloser(final int target) {

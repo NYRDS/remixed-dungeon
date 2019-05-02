@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.ui;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
@@ -36,8 +35,8 @@ public class AttackIndicator extends Tag {
 	
 	private CharSprite sprite = null;
 	
-	private static Mob lastTarget = null;
-	private ArrayList<Mob> candidates = new ArrayList<>();
+	private static Char lastTarget = null;
+	private ArrayList<Char> candidates = new ArrayList<>();
 	
 	public AttackIndicator() {
 		super( DangerIndicator.COLOR );
@@ -82,7 +81,7 @@ public class AttackIndicator extends Tag {
 		candidates.clear();
 		int v = hero.visibleEnemies();
 		for (int i=0; i < v; i++) {
-			Mob mob = hero.visibleEnemy( i );
+			Char mob = hero.visibleEnemy( i );
 
 			if (hero.canAttack(mob) && !mob.friendly(hero)) {
 				candidates.add( mob );
@@ -147,7 +146,7 @@ public class AttackIndicator extends Tag {
 	}
 	
 	public static void target( Char target ) {
-		lastTarget = (Mob)target;
+		lastTarget = target;
 		instance.updateImage();
 		
 		HealthIndicator.instance.target( target );

@@ -93,6 +93,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	// Unreachable target
 	public static final Char DUMMY = new DummyChar();
+	@NonNull
+	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
 	@Packable
     private int pos = 0;
@@ -901,6 +903,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	protected abstract void moveSprite(int oldPos, int pos);
+
+	public int visibleEnemies() {
+		return visibleEnemies.size();
+	}
+
+	public Char visibleEnemy(int index) {
+		return visibleEnemies.get(index % visibleEnemies.size());
+	}
 
 	protected abstract boolean getCloser(final int cell);
 	protected abstract boolean getFurther(final int cell);

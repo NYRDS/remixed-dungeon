@@ -41,7 +41,7 @@ public class PseudoPasty extends Food {
 
 		level.spawnMob(mob);
 
-		Dungeon.hero.checkVisibleMobs();
+		Dungeon.hero.checkVisibleEnemies();
 		AttackIndicator.updateState();
 
 		CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
