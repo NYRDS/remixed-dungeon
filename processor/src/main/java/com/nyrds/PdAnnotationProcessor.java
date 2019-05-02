@@ -12,7 +12,6 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.io.Writer;
 import java.lang.reflect.Field;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -25,12 +24,17 @@ import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
+import javax.lang.model.type.TypeMirror;
 import javax.tools.JavaFileObject;
 
 @AutoService(Processor.class)
 public class PdAnnotationProcessor extends AbstractProcessor{
+
+
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
+
+		final TypeMirror bundlable = processingEnv.getElementUtils().getTypeElement("com.watabou.utils.Bundlable").asType();
 
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
 		Map<Element, String>       defaultValues = new HashMap<>();
@@ -94,6 +98,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 						.build();
 
 				String fieldType = TypeName.get(field.asType()).toString();
+
 				String defaultValue = defaultValues.get(field);
 				if(fieldType.equals("int")) {
 					if(defaultValue==null || defaultValue.isEmpty()) {
@@ -134,13 +139,6 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 				}
 
 
-				Set<Class <?>> fieldInterfaces = new HashSet<>();
-				Collections.addAll(fieldInterfaces, field.getClass().getInterfaces());
-
-				Set<String> fieldInterfaceNames = new HashSet<>();
-				for (Class<?> clazzz:fieldInterfaces) {
-					fieldInterfaceNames.add(clazzz.getSimpleName());
-				}
 /*
 				if(fieldType.equals("Collection")) {
 					unpackerBlock = unpackerBlock.toBuilder()
@@ -149,9 +147,10 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 					continue;
 				}
 */
-				if(fieldType.equals("Bundlable")) {
+
+				if(processingEnv.getTypeUtils().isAssignable(field.asType(),bundlable)) {
 					unpackerBlock = unpackerBlock.toBuilder()
-							.addStatement("($S)$L.set(arg,bundle.get($S))",fieldType+".class",fieldName,fieldName)
+							.addStatement("$L.set(arg,bundle.get($S))",fieldName,fieldName)
 							.build();
 					continue;
 				}
