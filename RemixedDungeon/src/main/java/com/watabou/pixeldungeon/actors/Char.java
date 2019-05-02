@@ -675,7 +675,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int stealth() {
-		return 0;
+		int bonus = 0;
+
+		for (Buff buff:buffs) {
+			bonus+=buff.stealthBonus();
+		}
+
+		return bonus;
 	}
 
 	public void move(int step) {

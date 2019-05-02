@@ -13,8 +13,8 @@ return spell.init{
         return {
             image         = 0,
             imageFile     = "spellsIcons/rogue.png",
-            name          = "Cloak_Name",
-            info          = "Cloak_Info",
+            name          = "CloakSpell_Name",
+            info          = "CloakSpell_Info",
             magicAffinity = "Rogue",
             targetingType = "self",
             level         = 1,
@@ -26,11 +26,12 @@ return spell.init{
     cast = function(self, spell, caster, cell)
         local duration = 20 --caster:skillLevel() * 20
 
-        --RPD.affectBuff(caster,"Cloak", duration)
+        if caster:visibleEnemies() > 0 then
+            RPD.glogn("CloakSpell_EnemiesNearby")
+            return false
+        end
 
-        --attach visual stuff
-        local emitter = caster:getSprite():emitter()
-        emitter:pour(RPD.speckEffectFactory(RPD.Sfx.Speck.HEALING,RPD.Sfx.Speck.UP), duration)
+        RPD.affectBuff(caster,"Cloak", duration)
 
         return true
     end}

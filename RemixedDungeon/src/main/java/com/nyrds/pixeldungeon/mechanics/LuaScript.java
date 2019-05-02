@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics;
 
+import androidx.annotation.Nullable;
+
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 
@@ -7,8 +9,6 @@ import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
-
-import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 26.05.2018.
@@ -85,6 +85,13 @@ public class LuaScript {
 
     public LuaValue getResult() {
         return scriptResult;
+    }
+
+    public <T> LuaValue runOptional(String method, T defaultValue) {
+        if(!script.get(method).isfunction()) {
+            return CoerceJavaToLua.coerce(defaultValue);
+        }
+        return run(method);
     }
 
     public LuaValue run(String method) {

@@ -26,7 +26,6 @@ return spell.init{
     cast = function(self, spell, caster, cell)
         RPD.topEffect(caster:getPos(),"body_armor")
 
-        --RPD.affectBuff(caster,"DieHard", caster:skillLevel() * 20)
         RPD.affectBuff(caster,"DefenceMastery", 20)
 
         return true

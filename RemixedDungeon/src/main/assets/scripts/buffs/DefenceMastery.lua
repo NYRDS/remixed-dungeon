@@ -10,7 +10,7 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 3,
+            icon          = 45,
             name          = "DefenceMastery_Name",
             info          = "DefenceMastery_Info",
         }

@@ -5,6 +5,9 @@
 ---
 
 
-local buffs = {"Regeneration","DefenceMastery","DieHard"}
+local buffs = {"Regeneration",
+               "DefenceMastery",
+               "DieHard",
+               "Cloak"}
 
 return buffs

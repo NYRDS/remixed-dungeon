@@ -89,7 +89,12 @@ public class CustomBuff extends Buff {
 
     @Override
     public int drBonus() {
-        return script.run("drBonus").checkint();
+        return script.runOptional("drBonus",0).checkint();
+    }
+
+    @Override
+    public int stealthBonus() {
+        return script.runOptional("stealthBonus",0).checkint();
     }
 
     @Override

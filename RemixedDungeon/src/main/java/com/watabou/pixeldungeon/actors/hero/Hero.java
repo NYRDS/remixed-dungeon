@@ -102,7 +102,6 @@ import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
-import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
@@ -1434,11 +1433,6 @@ public class Hero extends Char implements PetOwner {
 		super.remove(buff);
 
 		BuffIndicator.refreshHero();
-	}
-
-	@Override
-	public int stealth() {
-		return super.stealth() + buffLevel(RingOfShadows.Shadows.class);
 	}
 
 	@Override
