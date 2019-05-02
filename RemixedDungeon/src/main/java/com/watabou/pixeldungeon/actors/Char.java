@@ -399,6 +399,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         heal = Math.min(ht()-hp(),heal);
 
+        if(heal<0) {
+        	return;
+		}
+
         hp(hp() + heal);
 
         if(!noAnim && heal > 0) {
@@ -423,6 +427,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 					GLog.i(Game.getVar(R.string.Char_OutParalysis), getName_objective());
 				}
 			}
+		}
+
+        if(dmg<0) {
+        	return;
 		}
 
 		hp(hp() - dmg);
