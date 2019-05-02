@@ -37,6 +37,7 @@ import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -329,6 +330,7 @@ public class Dungeon {
     private static final String GAME_ID      = "game_id";
     private static final String REALTIME     = "realtime";
     private static final String MOVE_TIMEOUT = "move_timeout";
+    private static final String LAST_USED_ID = "lastUsedId";
 
     public static void gameOver() {
         Dungeon.deleteGame(true);
@@ -388,6 +390,8 @@ public class Dungeon {
 
         bundle.put(SCRIPTS_DATA,
                 LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
+
+        bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
         Bundle.write(bundle, output);
@@ -487,6 +491,8 @@ public class Dungeon {
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
+        EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
+
         Dungeon.challenges = bundle.getInt(CHALLENGES);
 
         Dungeon.depth = -1;

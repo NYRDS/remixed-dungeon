@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
@@ -84,8 +86,6 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import java.util.HashMap;
 import java.util.Map;
 
-import androidx.annotation.NonNull;
-
 public abstract class Mob extends Char {
 
 	public static final String TXT_RAGE = "#$%^";
@@ -137,6 +137,12 @@ public abstract class Mob extends Char {
 
 	PetOwner getOwner() {
 		return ((PetOwner)CharsList.getById(owner));
+	}
+
+	@LuaInterface
+	@NonNull
+	public static Mob makePet(@NonNull Mob pet, Char owner) {
+		return makePet(pet,owner.getId());
 	}
 
 	@NonNull

@@ -101,7 +101,11 @@
       {
         "kind": "ScrollOfMagicMapping"
       }
-    ]
+    ],
+    "isSpellUser": true,
+    "magicAffinity": "Rogue",
+    "sp": 10,
+    "maxSp": 10
   },
   "HUNTRESS": {
     "items": [

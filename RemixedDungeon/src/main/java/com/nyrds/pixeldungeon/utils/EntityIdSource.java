@@ -1,14 +1,16 @@
 package com.nyrds.pixeldungeon.utils;
 
-public class EntityIdSource {
-    static int lastUsedId;
+import java.util.concurrent.atomic.AtomicInteger;
 
-    public static synchronized int getNextId() {
-        lastUsedId++;
-        return lastUsedId;
+public class EntityIdSource {
+    private static AtomicInteger lastUsedId = new AtomicInteger(1);
+    public static final int INVALID_ID = -1;
+
+    public static int getNextId() {
+        return lastUsedId.getAndIncrement();
     }
 
     public static synchronized void setLastUsedId(int id) {
-        lastUsedId = id;
+        lastUsedId.set(id);
     }
 }
