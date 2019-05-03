@@ -45,6 +45,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -103,7 +104,8 @@ public abstract class Mob extends Char {
 
 	protected Object spriteClass;
 
-	public int target = -1;
+	@Packable(defaultValue = "-1")//Level.INVALID_CELL
+	public int target = Level.INVALID_CELL;
 
 	protected int defenseSkill = 0;
 
@@ -112,9 +114,10 @@ public abstract class Mob extends Char {
 
 	protected int owner = -1;
 
-	@NonNull
-	private Char enemy = DUMMY;
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	private int enemyId = EntityIdSource.INVALID_ID;
 
+	@Packable(defaultValue = "false")
 	public boolean enemySeen;
 
 	public static final float TIME_TO_WAKE_UP = 1f;
@@ -122,8 +125,6 @@ public abstract class Mob extends Char {
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
 	private static final String STATE      = "state";
-	private static final String TARGET     = "target";
-	private static final String ENEMY_SEEN = "enemy_seen";
 	private static final String FRACTION   = "fraction";
 
 	public Mob() {
@@ -187,9 +188,7 @@ public abstract class Mob extends Char {
 		super.storeInBundle(bundle);
 
 		bundle.put(STATE,  getState().getTag());
-		bundle.put(TARGET, target);
 
-		bundle.put(ENEMY_SEEN, enemySeen);
 		bundle.put(FRACTION, fraction.ordinal());
 
 		if (loot instanceof Item) {
@@ -204,12 +203,6 @@ public abstract class Mob extends Char {
 
 		String state = bundle.getString(STATE);
 		setState(state);
-
-		target = bundle.getInt(TARGET);
-
-		if (bundle.contains(ENEMY_SEEN)) {
-			enemySeen = bundle.getBoolean(ENEMY_SEEN);
-		}
 
 		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
 
@@ -754,7 +747,7 @@ public abstract class Mob extends Char {
 
 	@NonNull
 	public Char getEnemy() {
-		return enemy;
+		return CharsList.getById(enemyId);
 	}
 
 	public void setEnemy(@NonNull Char enemy) {
@@ -765,19 +758,18 @@ public abstract class Mob extends Char {
 
 		if(BuildConfig.DEBUG) {
 
-
 			if(enemy == this) {
 				GLog.i("WTF???");
 				throw new TrackedRuntimeException(enemy.getName());
 			}
 
-			if (enemy != this.enemy && enemy != DUMMY) {
+			if (enemyId != enemy.getId() && enemy != DUMMY) {
 				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 				GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
 			}
 		}
 
-		this.enemy = enemy;
+		enemyId = enemy.getId();
 	}
 
 	@Override
