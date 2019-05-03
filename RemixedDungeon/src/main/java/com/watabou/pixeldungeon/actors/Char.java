@@ -380,7 +380,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public float speed() {
-		return hasBuff(Cripple.class) ? baseSpeed * 0.5f : baseSpeed;
+		float speed = baseSpeed;
+		for(Buff buff: buffs) {
+			baseSpeed*=buff.speedMultiplier();
+		}
+		return speed;
 	}
 
 

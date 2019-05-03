@@ -98,6 +98,11 @@ public class CustomBuff extends Buff {
     }
 
     @Override
+    public float speedMultiplier() {
+        return (float) script.runOptional("speedMultiplier",1.f).checkdouble();
+    }
+
+    @Override
     public String name() {
         return name;
     }

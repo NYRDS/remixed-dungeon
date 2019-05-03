@@ -160,6 +160,8 @@ public class Buff extends Actor implements NamedEntityKind {
 
 	public int stealthBonus() { return 0; }
 
+	public float speedMultiplier() { return 1;}
+
 	public int defenceProc(Char defender, Char enemy, int damage)
 	{
 		return damage;

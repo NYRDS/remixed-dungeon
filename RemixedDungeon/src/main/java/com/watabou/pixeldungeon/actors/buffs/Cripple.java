@@ -29,7 +29,12 @@ public class Cripple extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.CRIPPLE;
 	}
-	
+
+	@Override
+	public float speedMultiplier() {
+		return 0.5f;
+	}
+
 	@Override
 	public String toString() {
 		return Game.getVar(R.string.Cripple_Info);
