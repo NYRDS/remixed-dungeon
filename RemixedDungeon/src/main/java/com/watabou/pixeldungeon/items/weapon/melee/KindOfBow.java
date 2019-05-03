@@ -66,10 +66,8 @@ public abstract class KindOfBow extends MeleeWeapon {
 		if(hero.getBelongings().getItem(Arrow.class)!=null) {
 			actions.add(AC_CHOOSE_ARROWS);
 		}
-		return super.actions(hero);
+		return actions;
 	}
-
-
 
 	@Override
 	public void execute(Hero hero, String action) {

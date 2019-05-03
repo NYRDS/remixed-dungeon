@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -43,26 +44,28 @@ public class RingOfElements extends Ring {
 		return isKnown() ? Game.getVar(R.string.RingOfElements_Info) : super.desc();
 	}
 
-	private static final Set<String> EMPTY = new HashSet<>();
-	private static final Set<String> FULL;
-	static {
-		FULL = new HashSet<>();
-		FULL.add( Burning.class.getSimpleName() );
-		FULL.add( ToxicGas.class.getSimpleName() );
-		FULL.add( Poison.class.getSimpleName() );
-		FULL.add( LightningTrap.Electricity.class.getSimpleName() );
-		FULL.add( Warlock.class.getSimpleName() );
-		FULL.add( Eye.class.getSimpleName() );
-		FULL.add( Yog.BurningFist.class.getSimpleName() );
-	}
-	
+
 	public class Resistance extends RingBuff {
-		
+
+		private final Set<String> FULL;
+		{
+			FULL = new HashSet<>();
+			FULL.add( Burning.class.getSimpleName() );
+			FULL.add( ToxicGas.class.getSimpleName() );
+			FULL.add( Poison.class.getSimpleName() );
+			FULL.add( LightningTrap.Electricity.class.getSimpleName() );
+			FULL.add( Warlock.class.getSimpleName() );
+			FULL.add( Eye.class.getSimpleName() );
+			FULL.add( Yog.BurningFist.class.getSimpleName() );
+			FULL.add(LiquidFlame.class.getSimpleName() );
+		}
+
+
 		public Set<String> resistances() {
 			if (Random.Int( level() + 3 ) >= 3) {
 				return FULL;
 			} else {
-				return EMPTY;
+				return EMPTY_STRING_SET;
 			}
 		}
 		

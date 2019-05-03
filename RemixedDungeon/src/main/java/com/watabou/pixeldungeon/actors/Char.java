@@ -758,11 +758,23 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public Set<String> resistances() {
-		return resistances;
+		HashSet<String> ret = new HashSet<>(resistances);
+
+		for(Buff buff:buffs) {
+			ret.addAll(buff.resistances());
+		}
+
+		return ret;
 	}
 
 	public Set<String> immunities() {
-		return immunities;
+		HashSet<String> ret = new HashSet<>(immunities);
+
+		for(Buff buff:buffs) {
+			ret.addAll(buff.immunities());
+		}
+
+		return ret;
 	}
 
 	public void updateSprite(){

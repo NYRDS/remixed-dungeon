@@ -18,6 +18,8 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -28,6 +30,8 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -50,9 +54,7 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import androidx.annotation.NonNull;
-
-public enum HeroClass {
+public enum HeroClass implements CharModifier {
 
     WARRIOR(R.string.HeroClass_War, WarriorArmor.class),
     MAGE(R.string.HeroClass_Mag, MageArmor.class),
@@ -295,11 +297,33 @@ public enum HeroClass {
         return friendlyMobs.contains(mobClass);
     }
 
-    public Set<String> getImmunities() {
-        return immunities;
+    @Override
+    public int drBonus() {
+        return 0;
     }
 
-    public Set<String> getResistances() {
+    @Override
+    public int stealthBonus() {
+        return 0;
+    }
+
+    @Override
+    public float speedMultiplier() {
+        return 1;
+    }
+
+    @Override
+    public int defenceProc(Char defender, Char enemy, int damage) {
+        return damage;
+    }
+
+    @Override
+    public Set<String> resistances() {
         return resistances;
+    }
+
+    @Override
+    public Set<String> immunities() {
+        return immunities;
     }
 }

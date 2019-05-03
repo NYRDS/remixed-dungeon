@@ -100,7 +100,6 @@ import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
-import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
@@ -139,7 +138,6 @@ import com.watabou.utils.SystemTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -1741,15 +1739,17 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public Set<String> resistances() {
-		RingOfElements.Resistance r = buff(RingOfElements.Resistance.class);
-		return r == null ? super.resistances() : r.resistances();
+		Set <String> resistances = super.resistances();
+		resistances.addAll(heroClass.resistances());
+		resistances.addAll(subClass.resistances());
+		return resistances;
 	}
 
 	@Override
 	public Set<String> immunities() {
-		HashSet <String> immunities = new HashSet<>();
-		immunities.addAll(heroClass.getImmunities());
-		immunities.addAll(subClass.getImmunities());
+		Set <String> immunities = super.immunities();
+		immunities.addAll(heroClass.immunities());
+		immunities.addAll(subClass.immunities());
 		return immunities;
 	}
 

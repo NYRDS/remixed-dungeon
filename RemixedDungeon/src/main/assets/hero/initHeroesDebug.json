@@ -134,6 +134,11 @@
         "identified": true
       },
       {
+        "kind": "FrostArrow",
+        "quantity": 20,
+        "identified": true
+      },
+      {
         "kind": "ElvenDagger",
         "identified": true
       }

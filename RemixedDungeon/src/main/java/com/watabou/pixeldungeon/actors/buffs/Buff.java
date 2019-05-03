@@ -33,8 +33,12 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
-public class Buff extends Actor implements NamedEntityKind {
-	
+import java.util.HashSet;
+import java.util.Set;
+
+public class Buff extends Actor implements NamedEntityKind, CharModifier {
+
+	protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
 	public Char target;
 
 	@Override
@@ -165,6 +169,16 @@ public class Buff extends Actor implements NamedEntityKind {
 	public int defenceProc(Char defender, Char enemy, int damage)
 	{
 		return damage;
+	}
+
+	@Override
+	public Set<String> resistances() {
+		return EMPTY_STRING_SET;
+	}
+
+	@Override
+	public Set<String> immunities() {
+		return EMPTY_STRING_SET;
 	}
 
 	private void collectOrDropItem(Item item){

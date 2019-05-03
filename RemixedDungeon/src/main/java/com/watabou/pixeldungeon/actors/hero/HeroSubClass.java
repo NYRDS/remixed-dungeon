@@ -23,6 +23,8 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.armor.AssasinArmor;
 import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
 import com.watabou.pixeldungeon.items.armor.BerserkArmor;
@@ -43,7 +45,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public enum HeroSubClass {
+public enum HeroSubClass implements CharModifier {
 
 	NONE( null, null,ClassArmor.class),
 	GLADIATOR( R.string.HeroSubClass_NameGlad,   R.string.HeroSubClass_DescGlad, GladiatorArmor.class),
@@ -120,11 +122,33 @@ public enum HeroSubClass {
 		}
 	}
 
-	public Set<String> getImmunities() {
-		return immunities;
+	@Override
+	public int drBonus() {
+		return 0;
 	}
 
-	public Set<String> getResistances() {
+	@Override
+	public int stealthBonus() {
+		return 0;
+	}
+
+	@Override
+	public float speedMultiplier() {
+		return 1;
+	}
+
+	@Override
+	public int defenceProc(Char defender, Char enemy, int damage) {
+		return damage;
+	}
+
+	@Override
+	public Set<String> resistances() {
 		return resistances;
+	}
+
+	@Override
+	public Set<String> immunities() {
+		return immunities;
 	}
 }
