@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
@@ -127,6 +128,12 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
         Level level = hero.level();
 
         if (!level.cellValid(nextCell)) {
+            return false;
+        }
+
+        Char ch = Actor.findChar(nextCell);
+
+        if(ch != null) {
             return false;
         }
 
