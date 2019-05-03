@@ -67,7 +67,8 @@ public class WndBag extends WndTabbed {
 		MOISTABLE, 
 		FUSEABLE, 
 		UPGRADABLE_WEAPON,
-		FOR_BUY
+		FOR_BUY,
+		ARROWS
 	}
 
 

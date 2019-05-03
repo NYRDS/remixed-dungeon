@@ -3541,4 +3541,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Potion_ItemFliesAway">%s just flies away from your hands.</string>
     <string name="Potion_FoodRefreshed">%s now looks edible</string>
 
+    <string name="KindOfBow_SelectArrowKind">Which arrows should I use?</string>
+    <string name="KindOfBow_ChooseArrows">Choose arrows</string>
+
+
 </resources>
