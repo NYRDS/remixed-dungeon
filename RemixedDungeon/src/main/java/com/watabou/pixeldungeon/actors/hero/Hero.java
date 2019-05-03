@@ -37,6 +37,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -168,7 +169,9 @@ public class Hero extends Char implements PetOwner {
 	public CharAction lastAction = null;
 
 	private Char enemy;
-	private Char controlTarget = this;
+
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	private int controlTargetId;
 
 	public Armor.Glyph killerGlyph = null;
 
@@ -189,8 +192,10 @@ public class Hero extends Char implements PetOwner {
 	private int sp = Scrambler.scramble(0);
 	private int maxSp = Scrambler.scramble(0);
 
+	@Packable(defaultValue = "unknown")
 	public String levelId;
 
+	@Packable
 	public Position portalLevelPos;
 
 	@NonNull
@@ -216,6 +221,9 @@ public class Hero extends Char implements PetOwner {
 
 		STR(STARTING_STR);
 		awareness = 0.1f;
+
+		controlTargetId = getId();
+
 		belongings = new Belongings(this);
 	}
 
@@ -257,12 +265,10 @@ public class Hero extends Char implements PetOwner {
 	private static final String STRENGTH = "STR";
 	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
-	private static final String LEVEL_ID = "levelId";
 	private static final String DIFFICULTY = "difficulty";
 	private static final String PETS = "pets";
 	private static final String SP = "sp";
 	private static final String MAX_SP = "maxsp";
-	private static final String PORTAL_LEVEL_POS = "portalLevelPos";
 	private static final String IS_SPELL_USER = "isspelluser";
 	private static final String MAGIC_LEVEL = "magicLvl";
 
@@ -300,7 +306,6 @@ public class Hero extends Char implements PetOwner {
 
 		bundle.put(LEVEL, lvl());
 		bundle.put(EXPERIENCE, getExp());
-		bundle.put(LEVEL_ID, levelId);
 		bundle.put(DIFFICULTY, getDifficulty());
 
 
@@ -310,7 +315,6 @@ public class Hero extends Char implements PetOwner {
 
 		belongings.storeInBundle(bundle);
 
-		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
 		bundle.put(IS_SPELL_USER, spellUser);
 		bundle.put(MAGIC_LEVEL, skillLevel());
 	}
@@ -318,6 +322,10 @@ public class Hero extends Char implements PetOwner {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
+
+		if(controlTargetId==EntityIdSource.INVALID_ID) {
+			controlTargetId = getId();
+		}
 
 		heroClass = HeroClass.restoreFromBundle(bundle);
 		subClass = HeroSubClass.restoreFromBundle(bundle);
@@ -327,7 +335,6 @@ public class Hero extends Char implements PetOwner {
 
 		lvl(bundle.getInt(LEVEL));
 		setExp(bundle.getInt(EXPERIENCE));
-		levelId = bundle.optString(LEVEL_ID, "unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
 		pets.clear();
@@ -352,8 +359,6 @@ public class Hero extends Char implements PetOwner {
 		belongings.restoreFromBundle(bundle);
 
 		gender = heroClass.getGender();
-
-		portalLevelPos = (Position) bundle.get(PORTAL_LEVEL_POS);
 
 		spellUser = bundle.optBoolean(IS_SPELL_USER, false);
 
@@ -540,7 +545,7 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public boolean act() {
-		if(controlTarget==this) {
+		if(controlTargetId == getId()) {
 			super.act();
 		}
 
@@ -553,7 +558,7 @@ public class Hero extends Char implements PetOwner {
 		checkVisibleEnemies();
 		AttackIndicator.updateState();
 
-		if(controlTarget!=this) {
+		if(controlTargetId != getId()) {
 			curAction = null;
 		}
 
@@ -569,7 +574,7 @@ public class Hero extends Char implements PetOwner {
 				}
 			}
 
-			if (RemixedDungeon.realtime() || (controlTarget!= this && controlTarget.curAction!=null) ) {
+			if (RemixedDungeon.realtime() || (controlTargetId != getId() && getControlTarget().curAction!=null) ) {
 				if (!ready) {
 					readyAndIdle();
 				}
@@ -661,8 +666,8 @@ public class Hero extends Char implements PetOwner {
 		curAction = lastAction;
 		lastAction = null;
 
-		controlTarget.curAction = curAction;
-		controlTarget.act();
+		getControlTarget().curAction = curAction;
+		getControlTarget().act();
 	}
 
 	private boolean actMove(CharAction.Move action) {
@@ -1271,7 +1276,7 @@ public class Hero extends Char implements PetOwner {
 		Char ch;
 		Heap heap;
 
-		level.updateFieldOfView(controlTarget);
+		level.updateFieldOfView(getControlTarget());
 
 		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
@@ -1281,7 +1286,7 @@ public class Hero extends Char implements PetOwner {
 
 			Mob mob = (Mob) ch;
 
-			if (mob.friendly(controlTarget)) {
+			if (mob.friendly(getControlTarget())) {
 				curAction = new CharAction.Interact(mob);
 			} else {
 				curAction = new CharAction.Attack(ch);
@@ -1320,7 +1325,7 @@ public class Hero extends Char implements PetOwner {
 
 		}
 
-		controlTarget.curAction = curAction;
+		getControlTarget().curAction = curAction;
 		return act();
 	}
 
@@ -1849,18 +1854,18 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public void setControlTarget(Char controlTarget) {
-		if(this.controlTarget instanceof Mob) {
-			Mob controlledMob = (Mob) this.controlTarget;
+		if(getControlTarget() instanceof Mob) {
+			Mob controlledMob = (Mob) getControlTarget();
 			Mob.releasePet(controlledMob);
 			controlledMob.setState(MobAi.getStateByClass(Sleeping.class));
 		}
 		Camera.main.focusOn(controlTarget.getSprite());
-		this.controlTarget = controlTarget;
+		this.controlTargetId = controlTarget.getId();
 
 	}
 
 	public Char getControlTarget() {
-		return controlTarget;
+		return CharsList.getById(controlTargetId);
 	}
 
 	public interface Doom extends NamedEntityKind{
