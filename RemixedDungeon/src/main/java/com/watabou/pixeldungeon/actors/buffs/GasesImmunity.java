@@ -19,14 +19,25 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class GasesImmunity extends FlavourBuff {
 	
 	public static final float DURATION	= 5f;
-	
+
+	private static final Set<String> FULL;
+	static {
+		FULL = new HashSet<>();
+
+		FULL.add( ToxicGas.class.getSimpleName() );
+		FULL.add( Paralysis.class.getSimpleName() );
+		FULL.add( Vertigo.class.getSimpleName() );
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.IMMUNITY;
@@ -37,24 +48,8 @@ public class GasesImmunity extends FlavourBuff {
 		return Game.getVar(R.string.GasesImmunity_Info);
 	}
 
-
 	@Override
-	public boolean attachTo(Char target) {
-		if(super.attachTo(target)) {
-			target.addImmunity(Paralysis.class);
-			target.addImmunity(ToxicGas.class);
-			target.addImmunity(Vertigo.class);
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	public void detach() {
-		super.detach();
-
-		target.removeImmunity(Paralysis.class);
-		target.removeImmunity(ToxicGas.class);
-		target.removeImmunity(Vertigo.class);
+	public Set<String> immunities() {
+		return super.immunities();
 	}
 }
