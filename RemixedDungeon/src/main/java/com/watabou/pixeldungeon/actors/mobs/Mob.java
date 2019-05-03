@@ -179,7 +179,7 @@ public abstract class Mob extends Char {
 
 	public void setFraction(Fraction fr) {
 		fraction = fr;
-		setEnemy(DUMMY);
+		setEnemy(CharsList.DUMMY);
 	}
 
 	@Override
@@ -763,7 +763,7 @@ public abstract class Mob extends Char {
 				throw new TrackedRuntimeException(enemy.getName());
 			}
 
-			if (enemyId != enemy.getId() && enemy != DUMMY) {
+			if (enemyId != enemy.getId() && enemy != CharsList.DUMMY) {
 				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 				GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
 			}
@@ -775,7 +775,7 @@ public abstract class Mob extends Char {
 	@Override
 	public boolean attack(@NonNull Char enemy) {
 
-		if (enemy == DUMMY) {
+		if (enemy == CharsList.DUMMY) {
 			EventCollector.logException(getName() + " attacking dummy enemy");
 			return false;
 		}
@@ -806,7 +806,7 @@ public abstract class Mob extends Char {
 	}
 
 	protected boolean zapHit(@NonNull Char enemy) {
-		if (enemy == DUMMY) {
+		if (enemy == CharsList.DUMMY) {
 			EventCollector.logException("zapping dummy enemy");
 			return false;
 		}

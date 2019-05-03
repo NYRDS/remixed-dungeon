@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.actors;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
-class DummyChar extends Char {
+public class DummyChar extends Char {
 
     {
         setPos(Level.INVALID_CELL);

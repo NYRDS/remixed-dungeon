@@ -23,6 +23,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -36,7 +37,7 @@ public class MirrorImage extends Mob {
 
 	public MirrorImage() {
 		setState(MobAi.getStateByClass(Hunting.class));
-		setEnemy(DUMMY);
+		setEnemy(CharsList.DUMMY);
 
         addImmunity( ToxicGas.class );
         addImmunity( Burning.class );

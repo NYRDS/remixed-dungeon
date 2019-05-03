@@ -1,8 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
@@ -18,8 +21,6 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
-
-import androidx.annotation.NonNull;
 
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
@@ -147,7 +148,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	@Override
 	public boolean zap(@NonNull Char enemy) {
-		if (enemy == DUMMY) {
+		if (enemy == CharsList.DUMMY) {
 			EventCollector.logException("zapping dummy enemy");
 			return false;
 		}

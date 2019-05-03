@@ -91,8 +91,6 @@ import java.util.Set;
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKind {
 
-	// Unreachable target
-	public static final Char DUMMY = new DummyChar();
 	@NonNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 

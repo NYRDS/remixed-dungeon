@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -27,7 +28,7 @@ public class Fleeing extends MobAi implements AiState {
     @Override
     public String status(Mob me) {
         Char enemy = me.getEnemy();
-        if(enemy != Char.DUMMY) {
+        if(enemy != CharsList.DUMMY) {
             return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus2),
                     me.getName(), enemy.getName_objective());
         }

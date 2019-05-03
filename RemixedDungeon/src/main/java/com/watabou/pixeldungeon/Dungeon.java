@@ -278,7 +278,7 @@ public class Dungeon {
                 }
                 mob.setPos(cell);
 
-                mob.setEnemy(Char.DUMMY);
+                mob.setEnemy(CharsList.DUMMY);
                 mob.setState(MobAi.getStateByClass(Wandering.class));
                 level.spawnMob(mob);
             }
