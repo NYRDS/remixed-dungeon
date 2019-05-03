@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -30,14 +31,15 @@ import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
 
 public class Hunger extends Buff implements Hero.Doom {
 
 	private static final float STEP	= 10f;
 	
-	public static final float HUNGRY	= 260f;
-	public static final float STARVING	= 360f;
+	public static final float HUNGRY	= 320f;
+	public static final float STARVING	= 460f;
 
 	@Packable
 	private float level;
@@ -77,23 +79,16 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 				int bonus = target.buffLevel(RingOfSatiety.Satiety.class);
 
-				float delta = STEP - bonus;
+				float delta = Math.min(STEP - bonus, 1);
 
-				//TODO: I wonder if I want it anymore
-				//Buff devourBuff = hero.buff( BraceletOfDevour.BraceletOfDevourBuff.class );
-				//if (devourBuff != null) {
-				//	BraceletOfDevour.Devour(hero);
-				//}
-
-				if(hero.getDifficulty() == 0) {
-					delta *= 0.8;
-				}
+				delta *= RemixedDungeon.getDifficultyFactor() / 1.5f;
 
 				if(Dungeon.level.isSafe()){
 					delta = 0;
 				}
 				
 				float newLevel = level + delta;
+
 				boolean statusUpdated = false;
 				if (newLevel >= STARVING) {
 					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
@@ -106,7 +101,8 @@ public class Hunger extends Buff implements Hero.Doom {
 					statusUpdated = true;
 					
 				}
-				level = newLevel;
+
+				level = GameMath.gate(0, newLevel, STARVING);
 				
 				if (statusUpdated) {
 					BuffIndicator.refreshHero();
@@ -128,12 +124,9 @@ public class Hunger extends Buff implements Hero.Doom {
 	
 	public void satisfy( float energy ) {
 		level -= energy;
-		if (level < 0) {
-			level = 0;
-		} else if (level > STARVING) {
-			level = STARVING;
-		}
-		
+
+		level = GameMath.gate(0, level, STARVING);
+
 		BuffIndicator.refreshHero();
 	}
 	
