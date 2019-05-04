@@ -13,8 +13,8 @@ return spell.init{
         return {
             image         = 3,
             imageFile     = "spellsIcons/warrior.png",
-            name          = "Smash_Name",
-            info          = "Smash_Info",
+            name          = "SmashSpell_Name",
+            info          = "SmashSpell_Info",
             magicAffinity = "Combat",
             targetingType = "self",
             level         = 1,
@@ -27,7 +27,7 @@ return spell.init{
         local items = chr:getBelongings()
 
         if items.weapon == nil then
-            RPD.glogn("Need weapon to smash")
+            RPD.glogn("SmashSpell_NeedWeapon")
             return false
         end
 
@@ -61,7 +61,7 @@ return spell.init{
             end
         end
 
-	RPD.playSound("smash.mp3")
+	    RPD.playSound("smash.mp3")
         forCellsAround(chr:getPos(), smash)
 	
         return true

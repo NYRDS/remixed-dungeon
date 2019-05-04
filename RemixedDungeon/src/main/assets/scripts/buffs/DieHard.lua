@@ -12,8 +12,8 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 44,
-            name          = "DieHard_Name",
-            info          = "DieHard_Info",
+            name          = "DieHardBuff_Name",
+            info          = "DieHardBuff_Info",
         }
     end,
 

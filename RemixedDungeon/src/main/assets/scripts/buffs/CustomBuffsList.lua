@@ -6,7 +6,7 @@
 
 
 local buffs = {"Regeneration",
-               "DefenceMastery",
+               "BodyArmor",
                "DieHard",
                "Cloak"}
 

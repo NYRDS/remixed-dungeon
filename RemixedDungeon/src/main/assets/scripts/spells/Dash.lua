@@ -13,8 +13,8 @@ return spell.init{
         return {
             image         = 1,
             imageFile     = "spellsIcons/warrior.png",
-            name          = "Dash_Name",
-            info          = "Dash_Info",
+            name          = "DashSpell_Name",
+            info          = "DashSpell_Info",
             magicAffinity = "Combat",
             targetingType = "cell",
             level         = 1,
@@ -32,12 +32,12 @@ return spell.init{
         local dist = level:distance(ownPos, cell)
 
         if ownPos == cell then
-            RPD.glogn("Dash_onSelf")
+            RPD.glogn("DashSpell_OnSelf")
             return false
         end
 
         if dist  > 2 then
-            RPD.glogn("Dash_tooFar")
+            RPD.glogn("DashSpell_TooFar")
             return false
         end
 
