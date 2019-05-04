@@ -6,13 +6,12 @@
 
 local buff = require "scripts/lib/buff"
 
-
 return buff.init{
     desc  = function ()
         return {
             icon          = 45,
-            name          = "DefenceMastery_Name",
-            info          = "DefenceMastery_Info",
+            name          = "BodyArmorBuff_Name",
+            info          = "BodyArmorBuff_Info",
         }
     end,
     act = function(self,buff)
@@ -20,5 +19,8 @@ return buff.init{
     end,
     drBonus = function(self,buff)
         return 10
+    end,
+    speedMultiplier = function(self, buff)
+        return 0.5
     end
 }

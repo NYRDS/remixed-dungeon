@@ -3545,4 +3545,32 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="KindOfBow_ChooseArrows">CHOOSE ARROWS</string>
 
 
+    <string name="BodyArmorSpell_Name"></string>
+    <string name="BodyArmorSpell_Info"></string>
+
+    <string name="BodyArmorBuff_Name"></string>
+    <string name="BodyArmorBuff_Info"></string>
+
+    <string name="DieHardSpell_Name"></string>
+    <string name="DieHardSpell_Info"></string>
+
+    <string name="DieHardBuff_Name"></string>
+    <string name="DieHardBuff_Info"></string>
+
+    <string name="SmashSpell_Name"></string>
+    <string name="SmashSpell_Info"></string>
+    <string name="SmashSpell_NeedWeapon"></string>
+
+    <string name="DashSpell_Name"></string>
+    <string name="DashSpell_Info"></string>
+    <string name="DashSpell_OnSelf"></string>
+    <string name="DashSpell_TooFar"></string>
+
+    <string name="CloakSpell_Name"></string>
+    <string name="CloakSpell_Info"></string>
+    <string name="CloakSpell_EnemiesNearby"></string>
+
+    <string name="CloakBuff_Name"></string>
+    <string name="CloakBuff_Info"></string>
+
 </resources>

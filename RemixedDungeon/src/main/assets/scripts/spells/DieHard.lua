@@ -13,8 +13,8 @@ return spell.init{
         return {
             image         = 0,
             imageFile     = "spellsIcons/warrior.png",
-            name          = "DieHard_Name",
-            info          = "DieHard_Info",
+            name          = "DieHardSpell_Name",
+            info          = "DieHardSpell_Info",
             magicAffinity = "Combat",
             targetingType = "self",
             level         = 1,

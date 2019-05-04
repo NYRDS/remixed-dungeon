@@ -13,8 +13,8 @@ return spell.init{
         return {
             image         = 2,
             imageFile     = "spellsIcons/warrior.png",
-            name          = "ArmorMastery_Name",
-            info          = "ArmorMastery_Info",
+            name          = "BodyArmorSpell_Name",
+            info          = "BodyArmorSpell_Info",
             magicAffinity = "Combat",
             targetingType = "self",
             level         = 1,
@@ -26,7 +26,7 @@ return spell.init{
     cast = function(self, spell, caster, cell)
         RPD.topEffect(caster:getPos(),"body_armor")
 
-        RPD.affectBuff(caster,"DefenceMastery", 20)
+        RPD.affectBuff(caster,"BodyArmor", 20)
 
         return true
     end
