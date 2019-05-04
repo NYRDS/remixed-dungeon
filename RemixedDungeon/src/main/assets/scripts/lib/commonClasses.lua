@@ -26,7 +26,17 @@ local Buffs  = {
     Light        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Light"),
     Cripple      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Cripple"),
     Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm"),
-    Blessed      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blessed")
+    Blessed      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blessed"),
+    MindVision   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.MindVision"),
+    Necrotism    = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.Necrotism"),
+    Pain         = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.Pain"),
+    RageBuff     = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.RageBuff"),
+    Amok         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Amok"),
+    Awareness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Awareness"),
+    Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),
+    GasesImmunity= luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.GasesImmunity"),
+    Sleep        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Sleep"),
+    Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow")
 }
 
 local Blobs = {
@@ -102,6 +112,7 @@ local Tweeners = {
 
 local Sfx = {
     CellEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.CellEmitter"),
+    BlobEmitter = luajava.bindClass("com.watabou.pixeldungeon.effects.BlobEmitter"),
     Emitter = luajava.bindClass("com.watabou.noosa.particles.Emitter"),
     FlameParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlameParticle"),
     SnowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SnowParticle"),
@@ -109,6 +120,22 @@ local Sfx = {
     Speck = luajava.bindClass("com.watabou.pixeldungeon.effects.Speck"),
     ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle"),
     SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
+    DarknessParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.DarknessParticle"),
+    EarthParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.EarthParticle"),
+    EnergyParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.EnergyParticle"),
+    FlowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.FlowParticle"),
+    LeafParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.LeafParticle"),
+    PoisonParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.PoisonParticle"),
+    PurpleParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.PurpleParticle"),
+    SparkParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.SparkParticle"),
+    WebParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.WebParticle"),
+    WindParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.WindParticle"),
+    WoolParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.WoolParticle"),
+    ElmoParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ElmoParticle"),
+    MagicMissile = luajava.bindClass("com.watabou.pixeldungeon.effects.MagicMissile"),
+    SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
+    DeathStroke= luajava.bindClass("com.nyrds.pixeldungeon.effects.DeathStroke"),
+    Wound = luajava.bindClass("com.watabou.pixeldungeon.effects.Wound"),
 }
 
 local RPD = {
