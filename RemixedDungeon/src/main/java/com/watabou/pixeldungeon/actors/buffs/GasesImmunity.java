@@ -50,6 +50,6 @@ public class GasesImmunity extends FlavourBuff {
 
 	@Override
 	public Set<String> immunities() {
-		return super.immunities();
+		return FULL;
 	}
 }
