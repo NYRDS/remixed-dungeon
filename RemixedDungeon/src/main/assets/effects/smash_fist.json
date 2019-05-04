@@ -1,6 +1,6 @@
 {
   "texture" : "effects/smash_fist.png",
-  "width"  : 32,
-  "height" : 32,
+  "width"  : 24,
+  "height" : 24,
   "anim"   : { "fps" : 30,  "looped" : false,    "frames" : [0,1,2,3] }
 }
