@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import androidx.annotation.NonNull;
 
+import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -99,6 +100,7 @@ public class Dungeon {
     public static boolean dewVial; // true if the dew vial can be spawned
     public static int     transmutation; // depth number for a well of transmutation
 
+    @Packable
     public static int challenges;
 
     public static Hero  hero;
@@ -109,7 +111,10 @@ public class Dungeon {
     private static long lastSaveTimestamp;
 
     public static  String  gameId;
+
+    @Packable(defaultValue = "false")
     private static boolean realtime;
+
     private static int     moveTimeoutIndex;
 
     public static HashSet<Integer> chapters;
@@ -328,7 +333,6 @@ public class Dungeon {
     private static final String BADGES       = "badges";
     private static final String SCRIPTS_DATA = "scripts_data";
     private static final String GAME_ID      = "game_id";
-    private static final String REALTIME     = "realtime";
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
 
@@ -341,7 +345,6 @@ public class Dungeon {
 
         bundle.put(GAME_ID, gameId);
         bundle.put(VERSION, Game.version);
-        bundle.put(CHALLENGES, challenges);
         bundle.put(HERO, hero);
         bundle.put(DEPTH, depth);
 
@@ -385,7 +388,6 @@ public class Dungeon {
         Badges.saveLocal(badges);
         bundle.put(BADGES, badges);
 
-        bundle.put(REALTIME, realtime);
         bundle.put(MOVE_TIMEOUT, moveTimeoutIndex);
 
         bundle.put(SCRIPTS_DATA,
@@ -493,8 +495,6 @@ public class Dungeon {
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
 
-        Dungeon.challenges = bundle.getInt(CHALLENGES);
-
         Dungeon.depth = -1;
 
         Scroll.restore(bundle);
@@ -565,7 +565,6 @@ public class Dungeon {
         Logbook.restoreFromBundle(bundle);
         LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 
-        realtime = bundle.optBoolean(REALTIME, false);
         moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
     }
 

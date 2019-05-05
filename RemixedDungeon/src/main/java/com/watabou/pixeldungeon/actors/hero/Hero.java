@@ -572,7 +572,7 @@ public class Hero extends Char implements PetOwner {
 				}
 			}
 
-			if (RemixedDungeon.realtime() || (controlTargetId != getId() && getControlTarget().curAction!=null) ) {
+			if (Dungeon.realtime() || (controlTargetId != getId() && getControlTarget().curAction!=null) ) {
 				if (!ready) {
 					readyAndIdle();
 				}
