@@ -14,8 +14,6 @@ import org.luaj.vm2.LuaTable;
 
 public class CustomBuff extends Buff {
 
-    static public final String REGENERATION = "Regeneration";
-
     private String name;
     private String info;
 
@@ -100,6 +98,11 @@ public class CustomBuff extends Buff {
     @Override
     public float speedMultiplier() {
         return (float) script.runOptional("speedMultiplier",1.f).checkdouble();
+    }
+
+    @Override
+    public int regenerationBonus() {
+        return script.runOptional("regenerationBonus",0).checkint();
     }
 
     @Override

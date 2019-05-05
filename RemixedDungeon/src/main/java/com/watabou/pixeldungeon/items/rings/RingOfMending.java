@@ -33,5 +33,10 @@ public class RingOfMending extends Ring {
 	}
 	
 	public class Rejuvenation extends RingBuff {
+
+		@Override
+		public int regenerationBonus() {
+			return RingOfMending.this.level();
+		}
 	}
 }

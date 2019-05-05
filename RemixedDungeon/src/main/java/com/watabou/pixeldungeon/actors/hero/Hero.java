@@ -31,8 +31,6 @@ import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
-import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -69,6 +67,7 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
@@ -372,9 +371,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	private void live() {
-
-		BuffFactory.getBuffByName(CustomBuff.REGENERATION).attachTo(this);
-
+		Buff.affect(this, Regeneration.class);
 		Buff.affect(this, Hunger.class);
 	}
 

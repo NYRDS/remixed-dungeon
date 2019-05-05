@@ -172,6 +172,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	}
 
 	@Override
+	public int regenerationBonus() {
+		return 0;
+	}
+
+	@Override
 	public Set<String> resistances() {
 		return EMPTY_STRING_SET;
 	}
