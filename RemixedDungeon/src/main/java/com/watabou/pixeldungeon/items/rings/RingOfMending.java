@@ -36,7 +36,7 @@ public class RingOfMending extends Ring {
 
 		@Override
 		public int regenerationBonus() {
-			return RingOfMending.this.level();
+			return level();
 		}
 	}
 }

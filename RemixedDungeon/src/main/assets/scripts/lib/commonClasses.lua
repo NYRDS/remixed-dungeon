@@ -179,11 +179,11 @@ local RPD = {
     end,
 
     affectBuff = function (chr, buffClass, duration)
-        Buffs.Buff:affect(chr, buffClass, duration)
+        return Buffs.Buff:affect(chr, buffClass, duration)
     end,
 
     permanentBuff = function (chr, buffClass)
-        Buffs.Buff:permanent(chr, buffClass)
+        return Buffs.Buff:permanent(chr, buffClass)
     end,
 
     removeBuff = function (chr, buffClass)
