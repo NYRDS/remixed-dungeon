@@ -45,14 +45,7 @@ public class WandHolster extends Bag {
 			return false;
 		}
 	}
-	
-	@Override
-	public void onDetach( ) {
-		for (Item item : items) {
-			((Wand)item).stopCharging();
-		}
-	}
-	
+
 	@Override
 	public int price() {
 		return 50;

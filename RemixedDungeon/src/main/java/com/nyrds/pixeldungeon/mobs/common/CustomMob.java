@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import androidx.annotation.Keep;
+
 import com.nyrds.Packable;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -45,6 +47,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	private boolean friendly;
 
 	//For restoreFromBundle
+	@Keep
 	public CustomMob() {
 	}
 
