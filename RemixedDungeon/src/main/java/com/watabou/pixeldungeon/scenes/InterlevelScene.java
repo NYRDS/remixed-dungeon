@@ -216,17 +216,21 @@ public class InterlevelScene extends PixelScene {
 	private void descend() throws IOException {
 		Actor.fixTime();
 
-		Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.DESCEND);
+		Collection<Mob> followers = CharsList.emptyMobList;
 
 		if (Dungeon.hero == null) {
+			Dungeon.level = null;
 			Dungeon.init();
 			if (noStory) {
 				Dungeon.chapters.add(WndStory.ID_SEWERS);
 				noStory = false;
 			}
 		} else {
+			followers = Level.mobsFollowLevelChange(Mode.DESCEND);
 			Dungeon.save();
 		}
+
+
 
 		Position next = DungeonGenerator.descend(Dungeon.currentPosition());
 		Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);

@@ -141,6 +141,8 @@ public class Dungeon {
     }
 
     public static void init() {
+        SaveUtils.deleteLevels(heroClass);
+
         gameId = String.valueOf(SystemTime.now());
 
         challenges = RemixedDungeon.challenges();
@@ -184,8 +186,6 @@ public class Dungeon {
 
         realtime = RemixedDungeon.realtime();
         moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(RemixedDungeon.moveTimeout());
-
-        SaveUtils.deleteLevels(heroClass);
     }
 
     @Contract(pure = true)
