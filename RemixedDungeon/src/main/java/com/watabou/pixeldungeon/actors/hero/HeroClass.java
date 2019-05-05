@@ -66,8 +66,6 @@ public enum HeroClass implements CharModifier {
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
     private static final String FRIENDLY_MOBS     = "friendlyMobs";
-    public static final String IMMUNITIES        = "immunities";
-    public static final String RESISTANCES       = "resistances";
 
     private static final String COMMON            = "common";
     private static final String NON_EXPERT        = "non_expert";
@@ -153,8 +151,8 @@ public enum HeroClass implements CharModifier {
 
                 JsonHelper.readStringSet(classDesc, FORBIDDEN_ACTIONS, forbiddenActions);
                 JsonHelper.readStringSet(classDesc, FRIENDLY_MOBS, friendlyMobs);
-                JsonHelper.readStringSet(classDesc, IMMUNITIES, immunities);
-                JsonHelper.readStringSet(classDesc, RESISTANCES, resistances);
+                JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
+                JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
@@ -247,8 +245,8 @@ public enum HeroClass implements CharModifier {
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
         bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[0]));
         bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[0]));
-        bundle.put(IMMUNITIES,immunities.toArray(new String[0]));
-        bundle.put(RESISTANCES,resistances.toArray(new String[0]));
+        bundle.put(Char.IMMUNITIES,immunities.toArray(new String[0]));
+        bundle.put(Char.RESISTANCES,resistances.toArray(new String[0]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {
@@ -259,8 +257,8 @@ public enum HeroClass implements CharModifier {
 
         Collections.addAll(ret.forbiddenActions,bundle.getStringArray(FORBIDDEN_ACTIONS));
         Collections.addAll(ret.friendlyMobs,bundle.getStringArray(FRIENDLY_MOBS));
-        Collections.addAll(ret.immunities,bundle.getStringArray(IMMUNITIES));
-        Collections.addAll(ret.resistances,bundle.getStringArray(RESISTANCES));
+        Collections.addAll(ret.immunities,bundle.getStringArray(Char.IMMUNITIES));
+        Collections.addAll(ret.resistances,bundle.getStringArray(Char.RESISTANCES));
 
         return ret;
     }

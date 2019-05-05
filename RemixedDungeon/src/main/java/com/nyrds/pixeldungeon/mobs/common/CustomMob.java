@@ -10,7 +10,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -172,8 +171,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			friendly = classDesc.optBoolean("friendly",friendly);
 
-			JsonHelper.readStringSet(classDesc, HeroClass.IMMUNITIES, immunities);
-			JsonHelper.readStringSet(classDesc, HeroClass.RESISTANCES, resistances);
+			JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
+			JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
 
 			if(!restoring) {
 				setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));

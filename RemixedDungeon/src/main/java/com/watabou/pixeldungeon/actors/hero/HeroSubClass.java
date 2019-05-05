@@ -75,8 +75,8 @@ public enum HeroSubClass implements CharModifier {
 		try {
 			if (HeroClass.initHeroes.has(name())) {
 				JSONObject classDesc = HeroClass.initHeroes.getJSONObject(name());
-				JsonHelper.readStringSet(classDesc,HeroClass.IMMUNITIES,immunities);
-				JsonHelper.readStringSet(classDesc,HeroClass.RESISTANCES,resistances);
+				JsonHelper.readStringSet(classDesc, Char.IMMUNITIES,immunities);
+				JsonHelper.readStringSet(classDesc, Char.RESISTANCES,resistances);
 			}
 		} catch (JSONException e) {
 			throw ModdingMode.modException("bad InitHero.json",e);
@@ -95,8 +95,8 @@ public enum HeroSubClass implements CharModifier {
 
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( SUBCLASS, toString() );
-		bundle.put(HeroClass.IMMUNITIES,immunities.toArray(new String[0]));
-		bundle.put(HeroClass.RESISTANCES,resistances.toArray(new String[0]));
+		bundle.put(Char.IMMUNITIES,immunities.toArray(new String[0]));
+		bundle.put(Char.RESISTANCES,resistances.toArray(new String[0]));
 	}
 
 	public static HeroSubClass restoreFromBundle(Bundle bundle) {
@@ -109,8 +109,8 @@ public enum HeroSubClass implements CharModifier {
 			ret = NONE;
 		}
 
-		Collections.addAll(ret.immunities,bundle.getStringArray(HeroClass.IMMUNITIES));
-		Collections.addAll(ret.resistances,bundle.getStringArray(HeroClass.RESISTANCES));
+		Collections.addAll(ret.immunities,bundle.getStringArray(Char.IMMUNITIES));
+		Collections.addAll(ret.resistances,bundle.getStringArray(Char.RESISTANCES));
 		return ret;
 	}
 

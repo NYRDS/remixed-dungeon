@@ -91,6 +91,8 @@ import java.util.Set;
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKind {
 
+    public static final String IMMUNITIES        = "immunities";
+	public static final String RESISTANCES       = "resistances";
 	@NonNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
