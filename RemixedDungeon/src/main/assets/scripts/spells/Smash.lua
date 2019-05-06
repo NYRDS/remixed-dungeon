@@ -31,28 +31,14 @@ return spell.init{
             return false
         end
 
-        local function forCellsAround(cell, action)
-            local x = RPD.Dungeon.level:cellX(cell)
-            local y = RPD.Dungeon.level:cellY(cell)
+        local fist = RPD.topEffect(chr:getPos(),"smash_fist")
+        fist:incY(10);
+        RPD.attachMoveTweener(fist, 0,0,1)
 
-            for i = x - 1, x + 1 do
-                for j = y - 1, y + 1 do
-                    if i~=x or j~=y then
-                        action(RPD.Dungeon.level:cell(i,j))
-                    end
-                end
-            end
-        end
+        local clip = RPD.bottomEffect(chr:getPos(),"smash_blast")
+        clip:setScale(1.5,1.3)
 
         local function smash(cell)
-
-            local fist = RPD.topEffect(chr:getPos(),"smash_fist")
-            fist:incY(10);
-            RPD.attachMoveTweener(fist, 0,0,1)
-
-            local clip = RPD.bottomEffect(chr:getPos(),"smash_blast")
-            clip:setScale(1.5,1.3)
-
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
                 RPD.affectBuff(victim, RPD.Buffs.Vertigo, chr:skillLevel())
@@ -63,7 +49,7 @@ return spell.init{
         end
 
 	    RPD.playSound("smash.mp3")
-        forCellsAround(chr:getPos(), smash)
+        RPD.forCellsAround(chr:getPos(), smash)
 	
         return true
     end

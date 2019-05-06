@@ -62,6 +62,19 @@ return spell.init{
             end
         end
 
+
+        local function hitCell(cell)
+            local victim = RPD.Actor:findChar(cell)
+            if victim ~= nil then
+                local dmg = items.weapon:damageRoll(chr)
+                dmg = victim:defenseProc(chr, dmg)
+                victim:damage(dmg, chr)
+                RPD.Sfx.Wound:hit(victim)
+            end
+        end
+
+        RPD.forCellsAround(dst, hitCell)
+
         RPD.zapEffect(ownPos,dst,"dash")
         RPD.blinkTo(chr,dst)
 

@@ -271,6 +271,19 @@ local RPD = {
         local item = ItemFactory:itemByName(itemClass)
         item:quantity(quantity)
         return item
+    end,
+
+    forCellsAround = function(cell, action)
+        local x = Dungeon.level:cellX(cell)
+        local y = Dungeon.level:cellY(cell)
+
+        for i = x - 1, x + 1 do
+            for j = y - 1, y + 1 do
+                if i~=x or j~=y then
+                    action(Dungeon.level:cell(i,j))
+                end
+            end
+        end
     end
 }
 
