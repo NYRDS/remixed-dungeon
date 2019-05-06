@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
-import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -10,6 +9,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
@@ -32,7 +32,7 @@ public class UndeadMob extends Mob {
 		addImmunity(Poison.class);
 		addImmunity(Vertigo.class);
 		addImmunity(Bleeding.class);
-		addImmunity(CustomBuff.REGENERATION);
+		addImmunity(Regeneration.class);
 	}
 
 	@Override

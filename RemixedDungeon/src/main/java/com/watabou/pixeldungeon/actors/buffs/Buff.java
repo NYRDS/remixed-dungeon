@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -40,6 +41,9 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
 	protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
 	public Char target;
+
+	@Packable(defaultValue = "1")
+	protected int level=1;
 
 	@Override
 	public String getEntityKind() {
@@ -78,7 +82,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 		deactivate();
 		return true;
 	}
-	
+
 	public int icon() {
 		return BuffIndicator.NONE;
 	}
@@ -154,8 +158,12 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 		detach( target.buff( cl ) );
 	}
 
+	public void level(int level ) {
+		this.level = level;
+	}
+
 	public int level() {
-		return 1;
+		return level;
 	}
 
 	public int drBonus() {
@@ -169,6 +177,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	public int defenceProc(Char defender, Char enemy, int damage)
 	{
 		return damage;
+	}
+
+	@Override
+	public int regenerationBonus() {
+		return 0;
 	}
 
 	@Override

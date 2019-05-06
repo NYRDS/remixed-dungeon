@@ -37,8 +37,6 @@ import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
-import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -56,6 +54,7 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -656,7 +655,7 @@ public abstract class Mob extends Char {
 	}
 
 	public void onSpawn(Level level) {
-		BuffFactory.getBuffByName(CustomBuff.REGENERATION).attachTo(this);
+		Buff.affect(this, Regeneration.class);
 		runMobScript("onSpawn",level);
 	}
 

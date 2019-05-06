@@ -5,8 +5,7 @@
 ---
 
 
-local buffs = {"Regeneration",
-               "BodyArmor",
+local buffs = {"BodyArmor",
                "DieHard",
                "Cloak"}
 
