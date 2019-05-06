@@ -5,7 +5,6 @@ import androidx.annotation.Nullable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 
-import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
@@ -46,7 +45,7 @@ public class LuaScript {
                 return scriptResult = script.invokemethod(method, args).arg1();
             }
             throw new ModError("Can't load "+scriptFile, new Exception());
-        } catch (LuaError e) {
+        } catch (Exception e) {
             throw new ModError("Error in "+scriptFile+"."+method,e);
         }
     }
@@ -92,6 +91,13 @@ public class LuaScript {
             return CoerceJavaToLua.coerce(defaultValue);
         }
         return run(method);
+    }
+
+    public void runOptional(String method) {
+        if(!script.get(method).isfunction()) {
+            return;
+        }
+        run(method);
     }
 
     public LuaValue run(String method) {

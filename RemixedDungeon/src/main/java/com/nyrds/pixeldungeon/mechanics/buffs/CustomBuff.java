@@ -67,10 +67,14 @@ public class CustomBuff extends Buff {
 
     @Override
     public boolean attachTo(Char target) {
-        if(super.attachTo(target)) {
-            return script.run("attachTo",target).checkboolean();
+        try {
+            if (super.attachTo(target)) {
+                return script.run("attachTo", target).checkboolean();
+            }
+            return false;
+        } catch (Exception e) {
+            throw new ModError("Error in "+scriptFile+" attachTo", e);
         }
-        return false;
     }
 
     @Override
@@ -103,6 +107,11 @@ public class CustomBuff extends Buff {
     @Override
     public int regenerationBonus() {
         return script.runOptional("regenerationBonus",0).checkint();
+    }
+
+    @Override
+    public void charAct() {
+        script.runOptional("charAct");
     }
 
     @Override
