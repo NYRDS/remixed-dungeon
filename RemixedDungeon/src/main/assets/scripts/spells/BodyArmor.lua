@@ -18,15 +18,15 @@ return spell.init{
             magicAffinity = "Combat",
             targetingType = "self",
             level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            spellCost     = 5,
+            cooldown      = 20,
             castTime      = 0.5
         }
     end,
     cast = function(self, spell, caster, cell)
         RPD.topEffect(caster:getPos(),"body_armor")
 
-        RPD.affectBuff(caster,"BodyArmor", 20)
+        RPD.affectBuff(caster,"BodyArmor", 4+caster:skillLevel())
 
         return true
     end

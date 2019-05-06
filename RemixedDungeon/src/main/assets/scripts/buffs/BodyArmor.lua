@@ -18,7 +18,7 @@ return buff.init{
         buff:detach()
     end,
     drBonus = function(self,buff)
-        return 10
+        return (buff.target:STR()-10) * (1 + 0.5 * buff:level()) -- use STR, applicable only to hero!
     end,
     speedMultiplier = function(self, buff)
         return 0.5
