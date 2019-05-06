@@ -17,6 +17,7 @@ function buff.detach(self, buff)
 end
 
 function buff.act(self, buff)
+    buff:detach()
     return true
 end
 

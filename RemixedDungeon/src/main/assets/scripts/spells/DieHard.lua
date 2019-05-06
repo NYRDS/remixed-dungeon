@@ -18,15 +18,19 @@ return spell.init{
             magicAffinity = "Combat",
             targetingType = "self",
             level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            spellCost     = 5,
+            cooldown      = 50,
             castTime      = 0.5
         }
     end,
     cast = function(self, spell, caster, cell)
-        local duration = 20 --caster:skillLevel() * 20
 
-        RPD.affectBuff(caster,"DieHard", duration)
+        local buffLevel = math.min(3, caster:skillLevel()-self.level)
+
+        local duration = buffLevel * 10 + 10
+
+        local buff = RPD.affectBuff(caster,"DieHard", duration)
+        buff:level(buffLevel)
 
         --attach visual stuff
         local emitter = caster:getSprite():emitter()

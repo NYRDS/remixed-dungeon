@@ -24,11 +24,7 @@ return buff.init{
     detach = function(self, buff)
     end,
 
-    act = function(self,buff)
-        buff:detach()
-    end,
-
     regenerationBonus = function(self, buff)
-        return 1
+        return buff:level()
     end
 }
