@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -60,9 +63,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	private static final String TXT_TO_STRING       = "%s";
@@ -96,9 +96,14 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	private int     quantity  = Scrambler.scramble(1);
 
 	private int     level      = Scrambler.scramble(0);
+
+	@Packable
 	public  boolean levelKnown = false;
 
+	@Packable
 	public boolean cursed;
+
+	@Packable
 	public boolean cursedKnown;
 
 	@Packable(defaultValue = "-1")
@@ -417,52 +422,22 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	private static final String QUANTITY     = "quantity";
 	private static final String LEVEL        = "level";
-	private static final String LEVEL_KNOWN  = "levelKnown";
-	private static final String CURSED       = "cursed";
-	private static final String CURSED_KNOWN = "cursedKnown";
-
-	//TODO remove this in remix.29
-	@Deprecated
-	private static final String QUICKSLOT    = "quickslot";
-	@Deprecated
-	private static final String QUICKSLOT_2  = "quickslot_2";
-	@Deprecated
-	private static final String QUICKSLOT_3  = "quickslot_3";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		bundle.put(QUANTITY, quantity());
 		bundle.put(LEVEL, level());
-		bundle.put(LEVEL_KNOWN, levelKnown);
-		bundle.put(CURSED, cursed);
-		bundle.put(CURSED_KNOWN, cursedKnown);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		quantity(bundle.getInt(QUANTITY));
-		levelKnown = bundle.getBoolean(LEVEL_KNOWN);
-		cursedKnown = bundle.getBoolean(CURSED_KNOWN);
 
 		int level = bundle.getInt(LEVEL);
 		if (level > 0) {
 			upgrade(level);
 		} else if (level < 0) {
 			degrade(-level);
-		}
-
-		cursed = bundle.getBoolean(CURSED);
-
-		if (bundle.getBoolean(QUICKSLOT)) {
-			quickSlotIndex = 0;
-		}
-
-		if (bundle.getBoolean(QUICKSLOT_2)) {
-			quickSlotIndex = 1;
-		}
-
-		if (bundle.getBoolean(QUICKSLOT_3)) {
-			quickSlotIndex = 2;
 		}
 
 		if(quickSlotIndex >= 0 ) {
