@@ -149,6 +149,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Override
 	public boolean act() {
 		level().updateFieldOfView(this);
+
+		for(Buff buff: buffs) {
+			buff.charAct();
+		}
+
 		return false;
 	}
 
@@ -384,7 +389,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public float speed() {
 		float speed = baseSpeed;
 		for(Buff buff: buffs) {
-			baseSpeed*=buff.speedMultiplier();
+			speed*=buff.speedMultiplier();
 		}
 		return speed;
 	}
@@ -1023,20 +1028,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		LevelObject lo = level.getLevelObject(nextCell);
 
-		if (lo != null) {
-			if (!lo.push(this)) {
-				return false;
-			}
+		if (lo != null && !lo.push(this)) {
+			return false;
 		}
 
 		Char ch = Actor.findChar(nextCell);
 
 		if(ch != null) {
-			if(ch.isMovable()) {
-				if(!ch.push(chr)) {
-					return false;
-				}
-			} else {
+			if(!ch.isMovable()) {
+				return false;
+			}
+
+			if(!ch.push(this)) {
 				return false;
 			}
 		}

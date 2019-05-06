@@ -185,6 +185,10 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	}
 
 	@Override
+	public void charAct() {
+	}
+
+	@Override
 	public Set<String> resistances() {
 		return EMPTY_STRING_SET;
 	}

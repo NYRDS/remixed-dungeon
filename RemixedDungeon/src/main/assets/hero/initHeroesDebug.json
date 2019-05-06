@@ -66,8 +66,8 @@
     ],
     "isSpellUser": true,
     "magicAffinity": "Combat",
-    "sp": 10,
-    "maxSp": 10
+    "sp": 1000,
+    "maxSp": 1000
   },
   "MAGE": {
     "items": [

@@ -23,33 +23,33 @@ return spell.init{
             castTime      = 0.5
         }
     end,
-    cast = function(self, spell, chr)
-        local items = chr:getBelongings()
+    cast = function(self, spell, caster)
+        local items = caster:getBelongings()
 
         if items.weapon == nil then
             RPD.glogn("SmashSpell_NeedWeapon")
             return false
         end
 
-        local fist = RPD.topEffect(chr:getPos(),"smash_fist")
+        local fist = RPD.topEffect(caster:getPos(),"smash_fist")
         fist:incY(10);
         RPD.attachMoveTweener(fist, 0,0,1)
 
-        local clip = RPD.bottomEffect(chr:getPos(),"smash_blast")
+        local clip = RPD.bottomEffect(caster:getPos(),"smash_blast")
         clip:setScale(1.5,1.3)
 
         local function smash(cell)
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
-                RPD.affectBuff(victim, RPD.Buffs.Vertigo, chr:skillLevel())
-                local dmg = items.weapon:damageRoll(chr)
-                dmg = victim:defenseProc(chr, dmg)
-                victim:damage(dmg, chr)
+                RPD.affectBuff(victim, RPD.Buffs.Vertigo, caster:skillLevel())
+                local dmg = items.weapon:damageRoll(caster)
+                dmg = victim:defenseProc(caster, dmg)
+                victim:damage(dmg, caster)
             end
         end
 
 	    RPD.playSound("smash.mp3")
-        RPD.forCellsAround(chr:getPos(), smash)
+        RPD.forCellsAround(caster:getPos(), smash)
 	
         return true
     end

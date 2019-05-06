@@ -10,6 +10,7 @@ public interface CharModifier {
     float speedMultiplier();
     int defenceProc(Char defender, Char enemy, int damage);
     int regenerationBonus();
+    void charAct();
     Set<String> resistances();
     Set<String> immunities();
 }

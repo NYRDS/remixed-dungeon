@@ -8,6 +8,8 @@ local RPD = require "scripts/lib/commonClasses"
 
 local spell = require "scripts/lib/spell"
 
+local spellLevel = 1
+
 return spell.init{
     desc  = function ()
         return {
@@ -17,7 +19,7 @@ return spell.init{
             info          = "DieHardSpell_Info",
             magicAffinity = "Combat",
             targetingType = "self",
-            level         = 1,
+            level         = spellLevel,
             spellCost     = 5,
             cooldown      = 50,
             castTime      = 0.5
@@ -25,7 +27,7 @@ return spell.init{
     end,
     cast = function(self, spell, caster, cell)
 
-        local buffLevel = math.min(3, caster:skillLevel()-self.level)
+        local buffLevel = math.min(3, caster:skillLevel()-spellLevel)
 
         local duration = buffLevel * 10 + 10
 

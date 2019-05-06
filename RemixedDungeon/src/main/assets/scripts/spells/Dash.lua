@@ -23,11 +23,11 @@ return spell.init{
             castTime      = 0.5
         }
     end,
-    castOnCell = function(self, spell, chr, cell)
+    castOnCell = function(self, spell, caster, cell)
 
-        local level = chr:level()
+        local level = caster:level()
 
-        local ownPos = chr:getPos()
+        local ownPos = caster:getPos()
 
         local dist = level:distance(ownPos, cell)
 
@@ -46,9 +46,9 @@ return spell.init{
         local char = RPD.Actor:findChar(dst)
 
         if char then
-            RPD.affectBuff(victim, RPD.Buffs.Vertigo, chr:skillLevel())
+            RPD.affectBuff(char, RPD.Buffs.Vertigo, caster:skillLevel())
             local newPos = char:getPos()
-            if char:push(chr) then
+            if char:push(caster) then
                 dst = newPos
             end
         end
@@ -57,18 +57,20 @@ return spell.init{
 
         if object then
             local newPos = object:getPos()
-            if object:push(chr) then
+            if object:push(caster) then
                 dst = newPos
             end
         end
 
 
+        local items = caster:getBelongings()
+
         local function hitCell(cell)
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
-                local dmg = items.weapon:damageRoll(chr)
-                dmg = victim:defenseProc(chr, dmg)
-                victim:damage(dmg, chr)
+                local dmg = items.weapon:damageRoll(caster)
+                dmg = victim:defenseProc(caster, dmg)
+                victim:damage(dmg, caster)
                 RPD.Sfx.Wound:hit(victim)
             end
         end
@@ -76,7 +78,7 @@ return spell.init{
         RPD.forCellsAround(dst, hitCell)
 
         RPD.zapEffect(ownPos,dst,"dash")
-        RPD.blinkTo(chr,dst)
+        RPD.blinkTo(caster,dst)
 
         return true
     end

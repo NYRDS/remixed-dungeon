@@ -148,6 +148,11 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
+	public void charAct() {
+
+	}
+
+	@Override
 	public Set<String> resistances() {
 		return resistances;
 	}
