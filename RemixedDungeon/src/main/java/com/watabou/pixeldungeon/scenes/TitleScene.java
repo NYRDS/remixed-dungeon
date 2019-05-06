@@ -95,16 +95,6 @@ public class TitleScene extends PixelScene {
 		btnMods.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
 		add(btnMods);
 
-		/*
-		DashboardItem btnAbout = new DashboardItem(Game.getVar(R.string.TitleScene_About), 1) {
-			@Override
-			protected void onClick() {
-				RemixedDungeon.switchNoFade(AboutScene.class);
-			}
-		};
-		btnAbout.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
-		add(btnAbout);
-*/
 		DashboardItem btnPlay = new DashboardItem(Game.getVar(R.string.TitleScene_Play), 0) {
 			@Override
 			protected void onClick() {
@@ -193,7 +183,18 @@ public class TitleScene extends PixelScene {
             }
         });
 
-		//leftGroup.add(new ModsButton());
+        Image img = new Image(Assets.DASHBOARD,DashboardItem.IMAGE_SIZE,1);
+
+        img.setScale(0.45f,0.45f);
+        ImageButton btnAbout = new ImageButton(img){
+			@Override
+			protected void onClick() {
+				RemixedDungeon.switchNoFade(AboutScene.class);
+			}
+		};
+
+
+        leftGroup.add(btnAbout);
 
 		leftGroup.setPos(0,0);
 		add(leftGroup);
