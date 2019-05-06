@@ -1,6 +1,6 @@
 {
-  "texture" : "effects/smash_blast.png",
-  "width"  : 32,
-  "height" : 32,
-  "anim"   : { "fps" : 30,  "looped" : false,    "frames" : [7,7,7,7,7,0,1,2,3,4,5,6,7] }
+  "texture" : "effects/smash_blast2.png",
+  "width"  : 48,
+  "height" : 48,
+  "anim"   : { "fps" : 30,  "looped" : false,    "frames" : [9,9,9,9,9,0,1,2,3,4,5,6,7,8] }
 }
