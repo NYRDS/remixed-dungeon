@@ -18,8 +18,8 @@ return spell.init{
             magicAffinity = "Combat",
             targetingType = "cell",
             level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            spellCost     = 10,
+            cooldown      = 30,
             castTime      = 0.5
         }
     end,
@@ -42,16 +42,14 @@ return spell.init{
         end
 
         local dst = RPD.Ballistica:cast(ownPos, cell, false, true, true)
-        RPD.glogp("dash to: %d", dst)
 
         local char = RPD.Actor:findChar(dst)
 
         if char then
+            RPD.affectBuff(victim, RPD.Buffs.Vertigo, chr:skillLevel())
             local newPos = char:getPos()
             if char:push(chr) then
                 dst = newPos
-                RPD.glogp("dash to: %d", dst)
-
             end
         end
 
@@ -61,8 +59,6 @@ return spell.init{
             local newPos = object:getPos()
             if object:push(chr) then
                 dst = newPos
-                RPD.glogp("dash to: %d", dst)
-
             end
         end
 
