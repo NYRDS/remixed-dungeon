@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.sprites;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.noosa.Animation;
@@ -16,8 +18,6 @@ import com.watabou.utils.Callback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.04.2016.
@@ -97,7 +97,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
 	@Override
 	public void idle() {
-		if(ch.isFlying()) {
+		if(ch!=null && ch.isFlying()) { //ch can be null when used in indicators
 			play(fly);
 		} else {
 			super.idle();
