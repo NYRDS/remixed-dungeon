@@ -98,7 +98,7 @@ public enum Rankings {
 			Dungeon.saveGame(gameFile);
 			rec.gameFile = gameFile;
 		} catch (IOException e) {
-			rec.gameFile = "";
+			rec.gameFile = Utils.EMPTY_STRING;
 			EventCollector.logException(e);
 		}
 

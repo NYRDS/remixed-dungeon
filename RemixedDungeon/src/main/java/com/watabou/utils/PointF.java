@@ -19,6 +19,8 @@ package com.watabou.utils;
 
 import android.annotation.SuppressLint;
 
+import com.watabou.pixeldungeon.utils.Utils;
+
 @SuppressLint("FloatMath")
 public class PointF {
 	
@@ -143,6 +145,6 @@ public class PointF {
 	
 	@Override
 	public String toString() {
-		return "" + x + ", " + y;
+		return Utils.EMPTY_STRING + x + ", " + y;
 	}
 }

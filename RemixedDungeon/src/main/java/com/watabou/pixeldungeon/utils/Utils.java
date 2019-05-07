@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.utils;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -25,11 +27,10 @@ import com.watabou.noosa.Game;
 
 import java.util.Locale;
 
-import androidx.annotation.NonNull;
-
 public class Utils {
 
     public static final String UNKNOWN = "unknown";
+    public static final String EMPTY_STRING = "";
 
     @NonNull
     private static final Class<?> strings = getR_Field("string");

@@ -130,10 +130,6 @@ public abstract class Mob extends Char {
 		setupCharData();
 	}
 
-	public Fraction fraction() {
-		return fraction;
-	}
-
 
 	PetOwner getOwner() {
 		return ((PetOwner)CharsList.getById(owner));

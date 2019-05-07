@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.ui;
 import com.nyrds.android.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class GameButton extends RedButton {
 
@@ -11,7 +12,7 @@ public class GameButton extends RedButton {
     public GameButton(String primary) {
         super(primary);
 
-        secondary.text("");
+        secondary.text(Utils.EMPTY_STRING);
     }
 
     @Override

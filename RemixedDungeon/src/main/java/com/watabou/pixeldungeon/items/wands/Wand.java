@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
@@ -53,8 +55,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import androidx.annotation.NonNull;
 
 public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
@@ -244,7 +244,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		StringBuilder sb = new StringBuilder(super.toString());
 
 		String status = status();
-		if (!status.equals("")) {
+		if (!status.equals(Utils.EMPTY_STRING)) {
 			sb.append(" (" + status + ")");
 		}
 
@@ -283,7 +283,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		if (levelKnown) {
 			return (curChargeKnown ? curCharges() : "?") + "/" + maxCharges();
 		} else {
-			return "";
+			return Utils.EMPTY_STRING;
 		}
 	}
 

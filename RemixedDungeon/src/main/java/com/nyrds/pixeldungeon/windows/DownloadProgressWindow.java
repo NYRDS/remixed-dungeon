@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.windows;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.DownloadStateListener;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 14.04.2018.
@@ -28,7 +28,7 @@ public class DownloadProgressWindow implements DownloadStateListener {
             @Override
             public void run() {
                 if (progress == null) {
-                    progress = new WndMessage("");
+                    progress = new WndMessage(Utils.EMPTY_STRING);
                     Game.scene().add(progress);
                 }
                 if (progress.getParent() == Game.scene()) {

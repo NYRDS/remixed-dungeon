@@ -1501,7 +1501,7 @@ public abstract class Level implements Bundlable {
 				if ((TerrainFlags.flags[tile] & TerrainFlags.PIT) != 0) {
 					return tileDesc(Terrain.CHASM);
 				}
-				return "";
+				return Utils.EMPTY_STRING;
 		}
 	}
 

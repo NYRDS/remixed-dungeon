@@ -820,6 +820,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return sprite;
 	}
 
+	public Fraction fraction() {
+		return fraction;
+	}
+
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
 		return false;
 	}

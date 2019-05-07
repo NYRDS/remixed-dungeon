@@ -417,7 +417,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public String status() {
-		return quantity() != 1 ? Integer.toString(quantity()) : "";
+		return quantity() != 1 ? Integer.toString(quantity()) : Utils.EMPTY_STRING;
 	}
 
 	private static final String QUANTITY     = "quantity";

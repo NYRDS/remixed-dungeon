@@ -49,6 +49,7 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import java.io.FileNotFoundException;
@@ -191,7 +192,7 @@ public class Badges {
 		}
 
 		Badge() {
-			this("", -1);
+			this(Utils.EMPTY_STRING, -1);
 		}
 	}
 

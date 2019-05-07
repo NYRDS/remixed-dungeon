@@ -273,10 +273,10 @@ public class Hero extends Char implements PetOwner {
 	private void refreshPets() {
 		ArrayList<Integer> alivePets = new ArrayList<>();
 		for (Integer petId : pets) {
-			Mob pet = (Mob)CharsList.getById(petId);
+			Char maybePet = CharsList.getById(petId);
 
-			if (pet!=null && pet.isAlive() && pet.fraction() == Fraction.HEROES) {
-				alivePets.add(pet.getId());
+			if (maybePet instanceof Mob && maybePet.isAlive() && maybePet.fraction() == Fraction.HEROES) {
+				alivePets.add(maybePet.getId());
 			}
 		}
 		pets = alivePets;

@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -27,6 +30,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.Rankings;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -37,9 +41,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -261,7 +262,7 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 
 		Game.instance().executor.execute(() -> {
 			try {
-				boolean res = packFilesToSnapshot(_PlayGames.PROGRESS, FileSystem.getInternalStorageFile(""), new FileFilter() {
+				boolean res = packFilesToSnapshot(_PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), new FileFilter() {
 					@Override
 					public boolean accept(File pathname) {
 						String filename = pathname.getName();
@@ -296,7 +297,7 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 		}
 
 		Game.instance().executor.execute(() -> {
-			boolean res = unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(""));
+			boolean res = unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING));
 			resultCallback.status(res);
 		});
 	}

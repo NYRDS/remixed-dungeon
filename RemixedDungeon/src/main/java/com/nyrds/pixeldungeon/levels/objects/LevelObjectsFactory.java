@@ -73,9 +73,9 @@ public class LevelObjectsFactory {
 		try {
 			return objectClassByName(objectClassName).newInstance();
 		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException("", e);
+			throw new TrackedRuntimeException(Utils.EMPTY_STRING, e);
 		} catch (IllegalAccessException e) {
-			throw new TrackedRuntimeException("", e);
+			throw new TrackedRuntimeException(Utils.EMPTY_STRING, e);
 		}
 	}
 

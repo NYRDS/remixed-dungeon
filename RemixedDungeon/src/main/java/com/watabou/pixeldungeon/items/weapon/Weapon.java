@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -52,8 +54,6 @@ import com.watabou.utils.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import androidx.annotation.NonNull;
 
 public class Weapon extends KindOfWeapon {
 
@@ -249,7 +249,7 @@ public class Weapon extends KindOfWeapon {
 
 	public static abstract class Enchantment implements Bundlable, NamedEntityKind {
 		
-		final String[] TXT_NAME = Utils.getClassParams(getEntityKind(), "Name", new String[]{"","",""}, true);
+		final String[] TXT_NAME = Utils.getClassParams(getEntityKind(), "Name", new String[]{Utils.EMPTY_STRING, Utils.EMPTY_STRING, Utils.EMPTY_STRING}, true);
 		
 		private static final Class<?>[] enchants = new Class<?>[]{
 			Fire.class, Poison.class, Death.class, Paralysis.class, Leech.class,

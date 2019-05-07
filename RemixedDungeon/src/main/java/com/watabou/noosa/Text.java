@@ -1,16 +1,17 @@
 package com.watabou.noosa;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.regex.Pattern;
-
-import androidx.annotation.NonNull;
 
 public abstract class Text extends Visual {
 
 	@NonNull
-	protected String text="";
+	protected String text= Utils.EMPTY_STRING;
 
 
 	protected static final Pattern PARAGRAPH	= Pattern.compile( "\n" );
@@ -118,7 +119,7 @@ public abstract class Text extends Visual {
 		dirty = true;
 
 		if(str == null) {
-		    text = "";
+		    text = Utils.EMPTY_STRING;
             EventCollector.logException("Trying to create null string!!!");
 		    return;
         }

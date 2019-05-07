@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.utils.Utils;
 
 /**
  * Created by mike on 15.05.2018.
@@ -10,7 +11,7 @@ import com.watabou.pixeldungeon.ui.RedButton;
 public class RedImageButton extends RedButton {
 
     public RedImageButton(Image image) {
-        super("");
+        super(Utils.EMPTY_STRING);
         icon(image);
     }
 

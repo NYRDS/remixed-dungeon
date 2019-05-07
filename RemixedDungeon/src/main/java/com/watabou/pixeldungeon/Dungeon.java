@@ -425,20 +425,17 @@ public class Dungeon {
 
             Actor.fixTime();
             try {
-                Position current = currentPosition();
-                String saveToLevel = getLevelSaveFile(current);
+                SaveUtils.copySaveToSlot(SaveUtils.PREV_SAVE, heroClass);
 
+                Position current = currentPosition();
+
+                String saveToLevel = getLevelSaveFile(current);
                 String saveToGame = SaveUtils.gameFile(hero.heroClass);
 
-                saveGame("tmp.game");
-                saveLevel("tmp.level");
+                saveGame(saveToGame);
+                saveLevel(saveToLevel);
 
-                FileSystem.getInternalStorageFile(saveToGame).delete();
-                FileSystem.getInternalStorageFile(saveToLevel).delete();
-
-                FileSystem.getInternalStorageFile("tmp.game").renameTo(FileSystem.getInternalStorageFile(saveToGame));
-                FileSystem.getInternalStorageFile("tmp.level").renameTo(FileSystem.getInternalStorageFile(saveToLevel));
-
+                SaveUtils.copySaveToSlot(SaveUtils.AUTO_SAVE, heroClass);
             } catch (IOException e) {
                 throw new TrackedRuntimeException("cannot write save", e);
             }
@@ -494,8 +491,6 @@ public class Dungeon {
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
-
-        Dungeon.depth = -1;
 
         Scroll.restore(bundle);
         Potion.restore(bundle);

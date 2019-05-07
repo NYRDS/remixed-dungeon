@@ -182,7 +182,7 @@ public class RemixedDungeon extends Game {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-		String extras = "";
+		String extras = Utils.EMPTY_STRING;
 		if(data!=null) {
 			extras = Util.bundle2string(data.getExtras());
 		}

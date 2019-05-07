@@ -6,6 +6,7 @@ import com.watabou.noosa.SystemText;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SparseArray;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class SystemFloatingText extends SystemText {
 	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<>();
 
 	public SystemFloatingText() {
-		super("", GuiProperties.mediumTitleFontSize(), false);
+		super(Utils.EMPTY_STRING, GuiProperties.mediumTitleFontSize(), false);
 
 		speed.y = -DISTANCE / LIFESPAN;
 	}

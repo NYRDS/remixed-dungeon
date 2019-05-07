@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
+import androidx.annotation.MainThread;
+
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
@@ -8,8 +10,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
-
-import androidx.annotation.MainThread;
+import com.watabou.pixeldungeon.utils.Utils;
 
 /**
  * Created by mike on 30.01.2017.
@@ -54,7 +55,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
-			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"ok","");
+			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"ok", Utils.EMPTY_STRING);
 			videoCompleted = false;
 		}
 
@@ -81,7 +82,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
-			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"fail","");
+			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"fail", Utils.EMPTY_STRING);
 		}
 
 		@Override

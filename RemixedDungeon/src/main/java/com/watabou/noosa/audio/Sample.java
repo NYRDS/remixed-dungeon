@@ -127,10 +127,6 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 		enabled = value;
 	}
 
-	public boolean isEnabled() {
-		return enabled;
-	}
-
 	@Override
 	public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
 		if (status == 0 && playOnComplete != null) {

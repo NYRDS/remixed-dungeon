@@ -94,12 +94,12 @@ public class Plant extends LevelObject {
 	}
 
 	public String desc() {
-		return Utils.getClassParam(this.getClass().getSimpleName(), "Desc", "", true);
+		return Utils.getClassParam(this.getClass().getSimpleName(), "Desc", Utils.EMPTY_STRING, true);
 	}
 
 	@Override
 	public String name() {
-		return Utils.getClassParam(this.getClass().getSimpleName(), "Name", "", true);
+		return Utils.getClassParam(this.getClass().getSimpleName(), "Name", Utils.EMPTY_STRING, true);
 	}
 
 	public void effect(int pos, Char ch) {

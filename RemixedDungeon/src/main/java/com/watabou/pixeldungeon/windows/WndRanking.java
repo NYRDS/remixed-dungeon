@@ -163,7 +163,7 @@ public class WndRanking extends WndTabbed {
 			
 			pos += GAP + GAP;
 			
-			pos = statSlot( this, difficultyToText(hero.getDifficulty()), "", pos );
+			pos = statSlot( this, difficultyToText(hero.getDifficulty()), Utils.EMPTY_STRING, pos );
 			
 			pos += GAP;
 			
@@ -200,7 +200,7 @@ public class WndRanking extends WndTabbed {
 				return Game.getVar(R.string.StartScene_DifficultyExpert);
 			}
 			
-			return "";
+			return Utils.EMPTY_STRING;
 		}
 		
 		private float statSlot( Group parent, String label, String value, float pos ) {

@@ -6,6 +6,7 @@ import android.opengl.GLES20;
 
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
 import java.util.HashMap;
@@ -182,7 +183,7 @@ public class Font extends TextureFilm {
 		// Fix for fonts without accentuation
 		if ((rec == null) && (ch > 126)) {
 			char tmp;
-			String str = (ch + "")
+			String str = (ch + Utils.EMPTY_STRING)
 					.replaceAll("[àáâäãą]", "a")
 					.replaceAll("[èéêëę]", "e")
 					.replaceAll("[ìíîï]", "i")

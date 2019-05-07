@@ -8,18 +8,19 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-import androidx.annotation.NonNull;
 
 public class SystemText extends Text {
 
@@ -41,7 +42,7 @@ public class SystemText extends Text {
 	private static float fontScale = Float.NaN;
 
 	public SystemText(float baseLine) {
-		this("", baseLine, false);
+		this(Utils.EMPTY_STRING, baseLine, false);
 	}
 
 	public SystemText(final String text, float size, boolean multiline) {
@@ -134,7 +135,7 @@ public class SystemText extends Text {
 	public void destroy() {
 		destroyLines();
 
-		text = "";
+		text = Utils.EMPTY_STRING;
 		super.destroy();
 		texts.remove(this);
 	}
@@ -143,7 +144,7 @@ public class SystemText extends Text {
 	public void kill() {
 		destroyLines();
 
-		text = "";
+		text = Utils.EMPTY_STRING;
 		super.kill();
 		texts.remove(this);
 	}

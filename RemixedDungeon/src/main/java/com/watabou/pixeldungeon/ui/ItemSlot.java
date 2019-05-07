@@ -188,7 +188,7 @@ public class ItemSlot extends Button {
 
             }
         } else {
-            topRight.text("");
+            topRight.text(Utils.EMPTY_STRING);
         }
 
         int level = item.visiblyUpgraded();
@@ -197,7 +197,7 @@ public class ItemSlot extends Button {
             bottomRight.text(Utils.format(TXT_LEVEL, level));
             bottomRight.hardlight(level > 0 ? UPGRADED : DEGRADED);
         } else {
-            bottomRight.text("");
+            bottomRight.text(Utils.EMPTY_STRING);
         }
 
         if (item instanceof Artifact) {

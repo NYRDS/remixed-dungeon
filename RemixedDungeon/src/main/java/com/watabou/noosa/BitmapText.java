@@ -21,6 +21,7 @@ import android.graphics.RectF;
 
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
 import java.nio.FloatBuffer;
@@ -37,7 +38,7 @@ public class BitmapText extends Text {
 	protected static char INVALID_CHAR = ' ';
 	
 	public BitmapText( Font font ) {
-		this( "", font );
+		this(Utils.EMPTY_STRING, font );
 	}
 	
 	public BitmapText( String text, Font font ) {
@@ -48,7 +49,7 @@ public class BitmapText extends Text {
 	
 	@Override
 	public void destroy() {
-		text = "";
+		text = Utils.EMPTY_STRING;
 		font = null;
 		vertices = null;
 		quads = null;

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -49,8 +51,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import androidx.annotation.NonNull;
 
 public class Armor extends EquipableItem {
 
@@ -247,7 +247,7 @@ public class Armor extends EquipableItem {
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(Utils.format(Game.getVar(R.string.Armor_Info7a), name,
-				(cursed ? Game.getVar(R.string.Armor_Info7b) : "") )); 
+				(cursed ? Game.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {
 			if (cursedKnown && cursed) {
 				info.append(Utils.format(Game.getVar(R.string.Armor_Info8), name));

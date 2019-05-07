@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
@@ -181,7 +182,7 @@ public class Assets {
     static {
         Bundle premiumSettings;
         try {
-            premiumSettings = new Bundle(Preferences.INSTANCE.getString(Preferences.KEY_PREMIUM_SETTINGS, ""));
+            premiumSettings = new Bundle(Preferences.INSTANCE.getString(Preferences.KEY_PREMIUM_SETTINGS, Utils.EMPTY_STRING));
             chromeType = premiumSettings.getInt(KEY_CHROME);
             statusType = premiumSettings.getInt(KEY_STATUS);
             toolbarType = premiumSettings.getInt(KEY_TOOLBAR);

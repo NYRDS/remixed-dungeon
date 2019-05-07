@@ -24,16 +24,17 @@ import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Texture;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
 
 public class TextureCache {
 
@@ -69,7 +70,7 @@ public class TextureCache {
 	public static SmartTexture createGradient(int width, int height,
 			int... colors) {
 
-		String key = "" + width + "x" + height + ":" + Arrays.toString(colors);
+		String key = Utils.EMPTY_STRING + width + "x" + height + ":" + Arrays.toString(colors);
 
 		if (all.containsKey(key)) {
 

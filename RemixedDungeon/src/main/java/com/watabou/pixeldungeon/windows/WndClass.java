@@ -138,7 +138,7 @@ public class WndClass extends WndTabbed {
 		public MasteryTab() {
 			super();
 
-			String text = "";
+			String text = Utils.EMPTY_STRING;
 			switch (cl) {
 				case WARRIOR:
 					text = HeroSubClass.GLADIATOR.desc() + "\n\n" + HeroSubClass.BERSERKER.desc();
