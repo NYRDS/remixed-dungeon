@@ -3541,6 +3541,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Potion_ItemFliesAway">%s just flies away from your hands.</string>
     <string name="Potion_FoodRefreshed">%s now looks edible</string>
 
+
     <string name="KindOfBow_SelectArrowKind">Which arrows should I use?</string>
     <string name="KindOfBow_ChooseArrows">CHOOSE ARROWS</string>
 
@@ -3555,7 +3556,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DieHardSpell_Info">Temporarily increase regeneration making you really Die Hard</string>
 
     <string name="DieHardBuff_Name">Die Hard</string>
-    <string name="DieHardBuff_Info">Regeneration incrased</string>
+    <string name="DieHardBuff_Info">Regeneration rate increased</string>
 
     <string name="SmashSpell_Name">Smash</string>
     <string name="SmashSpell_Info">Jumps upward and smashes powerfully and temporarily stuns enemy surrounding, at the same time dealing physical damage</string>
@@ -3566,9 +3567,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DashSpell_OnSelf"></string>
     <string name="DashSpell_TooFar"></string>
 
-    <string name="CloakSpell_Name">Cloack</string>
-    <string name="CloakSpell_Info">Starts to move quietly, reducing your visibility. Can't be using when there is some enemy near you</string>
-    <string name="CloakSpell_EnemiesNearby">You can't hide when there is some enemy near you</string>
+    <string name="CloakSpell_Name">Cloak</string>
+    <string name="CloakSpell_Info">Starts to move quietly, reducing your visibility. Can\'t be using when there is some enemy near you</string>
+    <string name="CloakSpell_EnemiesNearby">You can\'t hide when there is some enemy near you</string>
 
     <string name="CloakBuff_Name"></string>
     <string name="CloakBuff_Info"></string>
