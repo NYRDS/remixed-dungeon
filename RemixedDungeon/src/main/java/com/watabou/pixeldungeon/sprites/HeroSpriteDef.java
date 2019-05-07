@@ -2,12 +2,14 @@ package com.watabou.pixeldungeon.sprites;
 
 import androidx.annotation.NonNull;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.tweeners.JumpTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -135,7 +137,22 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         operate = readAnimation(json, "operate", film);
     }
 
-    public void jump(int from, int to, Callback callback) {
+    @LuaInterface
+	public void dash(int from, int to) {
+		jumpCallback = null;
+
+		int distance = Dungeon.level.distance(from, to);
+		jumpTweener = new JumpTweener(this, worldToCamera(to), 0,
+				distance * 0.1f);
+		jumpTweener.listener = this;
+		getParent().add(jumpTweener);
+
+		turnTo(from, to);
+		play(fly);
+	}
+
+
+	public void jump(int from, int to, Callback callback) {
         jumpCallback = callback;
 
         int distance = Dungeon.level.distance(from, to);

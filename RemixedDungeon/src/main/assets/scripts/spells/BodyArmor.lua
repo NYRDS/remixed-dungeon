@@ -26,7 +26,7 @@ return spell.init{
     cast = function(self, spell, caster, cell)
         RPD.topEffect(caster:getPos(),"body_armor")
 	
-	RPD.playSound("body_armor.mp3")
+	    RPD.playSound("body_armor.mp3")
         RPD.affectBuff(caster,"BodyArmor", 4+caster:skillLevel())
 
         return true

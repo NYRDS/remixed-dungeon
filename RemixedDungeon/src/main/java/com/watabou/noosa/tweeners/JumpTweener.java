@@ -1,13 +1,12 @@
-package com.watabou.pixeldungeon.sprites;
+package com.watabou.noosa.tweeners;
 
 import com.watabou.noosa.Visual;
-import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.utils.PointF;
 
 /**
  * Created by mike on 16.04.2016.
  */
-class JumpTweener extends Tweener {
+public class JumpTweener extends Tweener {
 
 	public Visual visual;
 

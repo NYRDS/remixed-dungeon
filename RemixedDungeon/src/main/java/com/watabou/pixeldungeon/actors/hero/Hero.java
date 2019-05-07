@@ -560,7 +560,7 @@ public class Hero extends Char implements PetOwner {
 		if (curAction == null) {
 
 			if (restoreHealth) {
-				if (isStarving() || hp() >= ht() || Dungeon.level.isSafe()) {
+				if (isStarving() || hp() >= ht() || level().isSafe()) {
 					restoreHealth = false;
 				} else {
 					spend(TIME_TO_REST);
