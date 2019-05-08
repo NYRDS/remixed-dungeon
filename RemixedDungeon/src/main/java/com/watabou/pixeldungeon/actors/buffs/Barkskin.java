@@ -43,7 +43,12 @@ public class Barkskin extends Buff {
 			level = value;
 		}
 	}
-	
+
+	@Override
+	public int drBonus() {
+		return level();
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.BARKSKIN;

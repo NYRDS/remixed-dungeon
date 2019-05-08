@@ -25,7 +25,6 @@ import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
-import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -48,7 +47,6 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -57,7 +55,6 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -66,7 +63,6 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
@@ -163,7 +159,7 @@ public class Hero extends Char implements PetOwner {
 	private int defenseSkill = 5;
 
 	private boolean    ready      = false;
-	public CharAction lastAction = null;
+	public CharAction  lastAction = null;
 
 	private Char enemy;
 
@@ -398,7 +394,7 @@ public class Hero extends Char implements PetOwner {
 		int bonus = buffLevel(RingOfAccuracy.Accuracy.class)
 				  + buffLevel(Blessed.class);
 
-		float accuracy = (bonus == 0) ? 1 : (float) Math.pow(1.4, bonus);
+		float accuracy = (float) Math.pow(1.4, bonus);
 
 		if (rangedWeapon != null && level().distance(getPos(), target.getPos()) == 1) {
 			accuracy *= 0.5f;
@@ -420,18 +416,6 @@ public class Hero extends Char implements PetOwner {
 	public int defenseSkill(Char enemy) {
 
 		int bonus = buffLevel(RingOfEvasion.Evasion.class) + buffLevel(Blessed.class);
-
-		//WTF ?? Why it is here?
-		if (hasBuff(RingOfFrost.FrostAura.class) && enemy.distance(this) < 2) {
-			int powerLevel = belongings.getItem(RingOfFrost.class).level();
-			if (enemy.isAlive()) {
-				Buff.affect(enemy, Slow.class, Slow.duration(enemy) / 5 + powerLevel);
-				if (Random.Int(100) < 10 + powerLevel) {
-					Buff.affect(enemy, Frost.class, Frost.duration(enemy) / 5 + powerLevel);
-				}
-				enemy.damage(powerLevel / 2, buff(Frost.class));
-			}
-		}
 
 		float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
 		if (paralysed) {
@@ -463,10 +447,7 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public int dr() {
-		int dr = belongings.armor != null ? Math.max(belongings.armor.DR, 0) : 0;
-		dr += buffLevel(Barkskin.class);
-
-		return dr;
+		return belongings.armor != null ? Math.max(belongings.armor.DR, 0) : 0;
 	}
 
 	@Override
