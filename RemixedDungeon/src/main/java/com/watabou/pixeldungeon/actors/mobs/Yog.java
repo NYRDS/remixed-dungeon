@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
@@ -52,7 +54,7 @@ import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Yog extends Boss {
 
@@ -105,7 +107,7 @@ public class Yog extends Boss {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src) {
+	public void damage(int dmg, @NotNull NamedEntityKind src) {
 
 		int damageShift = 0;
 		for (Mob mob : Dungeon.level.mobs) {

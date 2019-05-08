@@ -37,6 +37,8 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WandOfFlock extends SimpleWand  {
 
 	@Override
@@ -127,7 +129,7 @@ public class WandOfFlock extends SimpleWand  {
 		}
 		
 		@Override
-		public void damage(int dmg, NamedEntityKind src ) {
+		public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		}
 
 		@Override

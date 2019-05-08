@@ -32,6 +32,8 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by DeadDie on 13.02.2016
  */
@@ -152,7 +154,7 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src) {
+	public void damage(int dmg, @NotNull NamedEntityKind src) {
 		super.damage(dmg, src);
 		if (src != this) {
 			if (dmg > 0 && cooldown < 0) {

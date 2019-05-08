@@ -82,6 +82,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -454,7 +456,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
-    private int resist(int dmg, NamedEntityKind src) {
+    private int resist(int dmg, @NotNull NamedEntityKind src) {
         String srcName = src.getEntityKind();
         if (immunities().contains(srcName)) {
             dmg = 0;

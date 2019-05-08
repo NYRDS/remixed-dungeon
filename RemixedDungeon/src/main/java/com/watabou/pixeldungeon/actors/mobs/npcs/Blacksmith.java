@@ -43,6 +43,8 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Collection;
 
 public class Blacksmith extends NPC {
@@ -212,7 +214,7 @@ public class Blacksmith extends NPC {
 	}
 	
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override

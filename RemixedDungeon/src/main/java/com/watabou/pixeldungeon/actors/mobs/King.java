@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
@@ -45,7 +47,7 @@ import com.watabou.pixeldungeon.sprites.UndeadSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class King extends Boss {
 	
@@ -227,7 +229,7 @@ public class King extends Boss {
 		}
 		
 		@Override
-		public void damage(int dmg, NamedEntityKind src ) {
+		public void damage(int dmg, @NotNull NamedEntityKind src ) {
 			super.damage( dmg, src );
 			if (src instanceof ToxicGas) {		
 				((ToxicGas)src).clearBlob( getPos() );

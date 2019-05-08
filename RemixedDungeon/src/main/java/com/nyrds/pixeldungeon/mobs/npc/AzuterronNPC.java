@@ -20,6 +20,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+
 public class AzuterronNPC extends Shopkeeper {
 
 	public AzuterronNPC() {
@@ -44,7 +46,7 @@ public class AzuterronNPC extends Shopkeeper {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override

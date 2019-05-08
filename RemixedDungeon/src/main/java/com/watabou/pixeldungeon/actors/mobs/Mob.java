@@ -402,7 +402,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src) {
+	public void damage(int dmg,@NonNull NamedEntityKind src) {
 
 		runMobScript("onDamage", dmg, src);
 

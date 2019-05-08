@@ -17,6 +17,9 @@
 
 package com.watabou.utils;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -42,9 +45,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class Bundle {
 
@@ -240,6 +240,10 @@ public class Bundle {
 
     public void put(String key, float value) {
         try {
+            if(Float.isInfinite(value)) {
+                value = Float.MAX_VALUE;
+                EventCollector.logException(key+" is infinity");
+            }
             data.put(key, value);
         } catch (JSONException e) {
             throw new TrackedRuntimeException("key:" + key, e);

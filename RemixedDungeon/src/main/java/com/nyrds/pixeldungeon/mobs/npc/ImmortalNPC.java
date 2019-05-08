@@ -7,6 +7,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ImmortalNPC extends NPC {
 
 
@@ -31,7 +33,7 @@ public class ImmortalNPC extends NPC {
 	
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override

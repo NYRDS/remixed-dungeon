@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Hedgehog extends NPC {
 
 	{
@@ -25,7 +27,7 @@ public class Hedgehog extends NPC {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override

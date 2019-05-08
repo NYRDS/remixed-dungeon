@@ -43,6 +43,8 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Collections;
 
 public class Shopkeeper extends NPC {
@@ -67,7 +69,7 @@ public class Shopkeeper extends NPC {
 	}
 	
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		flee();
 	}
 	
