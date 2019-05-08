@@ -314,6 +314,7 @@ public class InterlevelScene extends PixelScene {
 
             if (Dungeon.hero == null) {
                 rescue(new Exception("Dungeon.hero == null"));
+                return;
             }
 
             Level level;
