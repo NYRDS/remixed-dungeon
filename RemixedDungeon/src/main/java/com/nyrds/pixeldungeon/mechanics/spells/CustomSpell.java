@@ -4,9 +4,8 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 
+import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 02.06.2018.
@@ -50,7 +49,7 @@ public class CustomSpell extends Spell {
     }
 
     @Override
-    public boolean cast(@NonNull Char chr) {
+    public boolean cast(@NotNull Char chr) {
         if(!super.cast(chr)) {
             return false;
         }

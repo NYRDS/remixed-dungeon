@@ -44,9 +44,9 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
-import java.util.ArrayList;
+import org.jetbrains.annotations.Nullable;
 
-import androidx.annotation.Nullable;
+import java.util.ArrayList;
 
 public class Toolbar extends Component {
 

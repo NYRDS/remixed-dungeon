@@ -37,7 +37,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 
@@ -64,6 +63,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
+import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaError;
 
 import java.util.ArrayList;
@@ -537,7 +537,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     private InterstitialPoint permissionsPoint;
 
-    public void doPermissionsRequest(@NonNull InterstitialPoint returnTo, String[] permissions) {
+    public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         boolean havePermissions = true;
         for (String permission : permissions) {
             int checkResult = ActivityCompat.checkSelfPermission(this, permission);
@@ -555,7 +555,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
     }
 
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NotNull String[] permissions, @NotNull int[] grantResults) {
         boolean res = true;
 
         if (permissions.length == 0) {

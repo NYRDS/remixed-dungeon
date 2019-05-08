@@ -38,14 +38,13 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Iterator;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class Belongings implements Iterable<Item> {
 
@@ -141,7 +140,7 @@ public class Belongings implements Iterable<Item> {
 
 	@SuppressWarnings("unchecked")
 	@Nullable
-	public <T extends Key> T getKey(Class<T> kind, int depth, @NonNull String levelId) {
+	public <T extends Key> T getKey(Class<T> kind, int depth, @NotNull String levelId) {
 		for (Item item : backpack) {
 			if (item instanceof Key && item.getClass() == kind) {
 				Key key = (Key) item;
@@ -307,7 +306,7 @@ public class Belongings implements Iterable<Item> {
 	}
 
 	@Override
-	@NonNull
+	@NotNull
 	public Iterator<Item> iterator() {
 		return new ItemIterator(); 
 	}

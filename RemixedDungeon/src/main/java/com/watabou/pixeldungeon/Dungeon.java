@@ -17,8 +17,6 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
@@ -80,6 +78,7 @@ import com.watabou.utils.SparseArray;
 import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -201,7 +200,7 @@ public class Dungeon {
         }
     }
 
-    @NonNull
+    @NotNull
     public static Level newLevel(Position pos) {
         updateStatistics();
         loading = true;
@@ -452,7 +451,7 @@ public class Dungeon {
         Library.saveLibrary();
     }
 
-    @NonNull
+    @NotNull
     private static String getLevelSaveFile(Position current) {
         return SaveUtils.depthFileForSave(hero.heroClass,
                 DungeonGenerator.getLevelDepth(current.levelId),

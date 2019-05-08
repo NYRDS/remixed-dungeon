@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
@@ -77,6 +75,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
@@ -136,13 +135,13 @@ public abstract class Mob extends Char {
 	}
 
 	@LuaInterface
-	@NonNull
-	public static Mob makePet(@NonNull Mob pet, Char owner) {
+	@NotNull
+	public static Mob makePet(@NotNull Mob pet, @NotNull Char owner) {
 		return makePet(pet,owner.getId());
 	}
 
-	@NonNull
-	public static Mob makePet(@NonNull Mob pet, int ownerId) {
+	@NotNull
+	public static Mob makePet(@NotNull Mob pet, int ownerId) {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
 			pet.owner = ownerId;
@@ -156,7 +155,7 @@ public abstract class Mob extends Char {
 		return owner >= 0 && CharsList.getById(owner) instanceof Hero;
 	}
 
-	public static void releasePet(@NonNull Mob pet) {
+	public static void releasePet(@NotNull Mob pet) {
 		pet.setFraction(Fraction.DUNGEON);
 		if(pet.owner>=0) {
 			pet.getOwner().removePet(pet);
@@ -370,7 +369,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage) {
+	public int attackProc(@NotNull Char enemy, int damage) {
 		runMobScript("onAttackProc", enemy, damage);
 
 		if(scriptResult.isnumber()) {
@@ -402,7 +401,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void damage(int dmg,@NonNull NamedEntityKind src) {
+	public void damage(int dmg,@NotNull NamedEntityKind src) {
 
 		runMobScript("onDamage", dmg, src);
 
@@ -740,12 +739,12 @@ public abstract class Mob extends Char {
 	}
 
 
-	@NonNull
+	@NotNull
 	public Char getEnemy() {
 		return CharsList.getById(enemyId);
 	}
 
-	public void setEnemy(@NonNull Char enemy) {
+	public void setEnemy(@NotNull Char enemy) {
 
 		if(enemy == this) {
 			EventCollector.logException(enemy.getName()+" gonna suicidal");
@@ -768,7 +767,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public boolean attack(@NonNull Char enemy) {
+	public boolean attack(@NotNull Char enemy) {
 
 		if (enemy == CharsList.DUMMY) {
 			EventCollector.logException(getName() + " attacking dummy enemy");
@@ -777,7 +776,7 @@ public abstract class Mob extends Char {
 		return super.attack(enemy);
 	}
 
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 
 		if(zapHit(enemy)) {
 			int damage = zapProc(enemy,damageRoll());
@@ -790,7 +789,7 @@ public abstract class Mob extends Char {
 		return false;
 	}
 
-	public int zapProc(@NonNull Char enemy, int damage) {
+	public int zapProc(@NotNull Char enemy, int damage) {
 		runMobScript("onZapProc", enemy, damage);
 
 		if(scriptResult.isnumber()) {
@@ -800,7 +799,7 @@ public abstract class Mob extends Char {
 		return damage;
 	}
 
-	protected boolean zapHit(@NonNull Char enemy) {
+	protected boolean zapHit(@NotNull Char enemy) {
 		if (enemy == CharsList.DUMMY) {
 			EventCollector.logException("zapping dummy enemy");
 			return false;

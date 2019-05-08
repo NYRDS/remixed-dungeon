@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class SpiderQueen extends Boss {
 	
@@ -45,7 +45,7 @@ public class SpiderQueen extends Boss {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
 		}

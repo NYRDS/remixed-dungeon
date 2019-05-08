@@ -6,8 +6,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -16,6 +14,7 @@ import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -39,10 +38,10 @@ import java.util.Set;
 public class StringsManager {
 
 	@SuppressLint("UseSparseArrays")
-	@NonNull
+	@NotNull
 	private static Map<Integer, String>   stringMap  = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
-	@NonNull
+	@NotNull
 	private static Map<Integer, String[]> stringsMap = new HashMap<>();
 
 	private static Map<String, String>   sStringMap  = new HashMap<>();

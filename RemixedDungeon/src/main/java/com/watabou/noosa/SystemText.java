@@ -8,13 +8,13 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -321,7 +321,7 @@ public class SystemText extends Text {
 	}
 
 	@Override
-	public void setParent(@NonNull Group parent) {
+	public void setParent(@NotNull Group parent) {
 		super.setParent(parent);
 
 		updateParent();

@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class IronKey extends Key {
 
@@ -50,7 +50,7 @@ public class IronKey extends Key {
 		}
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public String toString() {
 		return Utils.format( Game.getVar(R.string.IronKey_FromDepth), depth );

@@ -9,9 +9,9 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import java.util.ArrayList;
+import org.jetbrains.annotations.Nullable;
 
-import androidx.annotation.Nullable;
+import java.util.ArrayList;
 
 public class Artifact extends EquipableItem {
 

@@ -25,9 +25,9 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
-import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.ArrayList;
 
 public class Journal {
 
@@ -86,7 +86,7 @@ public class Journal {
 		}
 
 		@Override
-		public int compareTo(@NonNull Record another ) {
+		public int compareTo(@NotNull Record another ) {
 			return another.depth - depth;
 		}
 

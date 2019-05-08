@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,8 +22,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.04.2016.
@@ -349,7 +348,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		killAndErase();
 	}
 
-	@NonNull
+	@NotNull
 	public String getDeathEffect() {
 		return deathEffectDesc;
 	}

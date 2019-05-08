@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.elementals;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Dungeon;
@@ -15,6 +13,8 @@ import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 
@@ -55,7 +55,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Freezing.affect( enemy.getPos() );
 		}

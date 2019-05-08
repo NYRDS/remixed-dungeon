@@ -19,7 +19,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -46,7 +46,7 @@ public class YogsBrain extends Boss {
     }
 
     @Override
-    public int attackProc(@NonNull Char enemy, int damage ) {
+    public int attackProc(@NotNull Char enemy, int damage ) {
         //Paralysis proc
         if (Random.Int(3) == 1){
             Buff.affect(enemy, Paralysis.class);

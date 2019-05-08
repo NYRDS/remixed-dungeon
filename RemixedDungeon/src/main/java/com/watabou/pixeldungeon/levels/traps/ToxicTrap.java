@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class ToxicTrap implements ITrigger{
 

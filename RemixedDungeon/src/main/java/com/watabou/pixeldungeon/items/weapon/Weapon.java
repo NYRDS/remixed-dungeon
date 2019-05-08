@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -52,6 +50,7 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -185,7 +184,7 @@ public class Weapon extends KindOfWeapon {
 		return super.upgrade();
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public String toString() {
 		return levelKnown ? Utils.format("%s: %d", super.toString(), STR ) : super.toString();

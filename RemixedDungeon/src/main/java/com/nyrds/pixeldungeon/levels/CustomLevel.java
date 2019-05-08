@@ -6,13 +6,12 @@ import com.nyrds.android.util.ModdingMode;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 13.11.2016.
@@ -20,7 +19,7 @@ import androidx.annotation.Nullable;
 
 public abstract class CustomLevel extends CommonLevel {
 
-	@NonNull
+	@NotNull
 	protected JSONObject mLevelDesc = new JSONObject();
 
 	@Nullable

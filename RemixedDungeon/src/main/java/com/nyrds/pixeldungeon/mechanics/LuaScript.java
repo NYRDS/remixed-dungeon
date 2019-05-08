@@ -1,10 +1,9 @@
 package com.nyrds.pixeldungeon.mechanics;
 
-import androidx.annotation.Nullable;
-
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 
+import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;

@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.utils.PointF;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Pushing extends Actor {
 
@@ -34,7 +34,7 @@ public class Pushing extends Actor {
 	
 	private Effect effect;
 	
-	public Pushing(@NonNull Char ch, int from, int to ) {
+	public Pushing(@NotNull Char ch, int from, int to ) {
 		this.ch = ch;
 		this.from = from;
 		this.to = to;

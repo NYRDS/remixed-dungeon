@@ -15,12 +15,11 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
-
-import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 09.03.2018.

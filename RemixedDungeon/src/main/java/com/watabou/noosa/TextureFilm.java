@@ -23,7 +23,7 @@ import android.util.SparseArray;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class TextureFilm {
 

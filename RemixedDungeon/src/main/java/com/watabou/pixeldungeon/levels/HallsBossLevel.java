@@ -35,7 +35,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class HallsBossLevel extends Level {
 	
@@ -194,7 +194,7 @@ public class HallsBossLevel extends Level {
 		CellEmitter.get( cell ).start( FlameParticle.FACTORY, 0.1f, 3 );
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public Heap drop( Item item, int cell ) {
 		

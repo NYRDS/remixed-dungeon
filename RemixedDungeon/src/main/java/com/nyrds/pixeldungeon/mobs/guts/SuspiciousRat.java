@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -95,7 +95,7 @@ public class SuspiciousRat extends Mob {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy){
+	public boolean zap(@NotNull Char enemy){
 		return false;
 	}
 }

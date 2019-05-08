@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Spell implements NamedEntityKind {
 
@@ -44,7 +44,7 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
-    public boolean canCast(@NonNull final Char chr, boolean reallyCast) {
+    public boolean canCast(@NotNull final Char chr, boolean reallyCast) {
 
         float timeToCast = chr.spellCooldown(getClassName())-cooldown;
         if(timeToCast < 0) {
@@ -71,7 +71,7 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
-    public boolean cast(@NonNull final Char chr) {
+    public boolean cast(@NotNull final Char chr) {
 
         if (!chr.isAlive()) {
             return false;
@@ -164,7 +164,7 @@ public class Spell implements NamedEntityKind {
         return chr.skillLevel() - level;
     }
 
-    @NonNull
+    @NotNull
     public SpellItem itemForSlot() {
         if (spellItem == null) {
             spellItem = new SpellItem() {

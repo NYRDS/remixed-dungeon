@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.sprites;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
@@ -18,6 +16,7 @@ import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -117,7 +116,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 		}
 	}
 
-	@NonNull
+	@NotNull
 	public abstract String getDeathEffect();
 
 	public abstract void heroUpdated(Hero hero);

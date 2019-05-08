@@ -16,14 +16,14 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Callback;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 01.03.2016.
@@ -77,7 +77,7 @@ public class Util {
 	}
 
 	@Nullable
-	public static <T> T byNameFromList(Class<?>[] classList, @NonNull String name) {
+	public static <T> T byNameFromList(Class<?>[] classList, @NotNull String name) {
 		for (Class<?> clazz : classList) {
 			if (clazz.getSimpleName().equals(name)) {
 				try {
@@ -90,7 +90,7 @@ public class Util {
 		return null;
 	}
 
-	static public  int indexOf(Class<?>[] classList, @NonNull String name) {
+	static public  int indexOf(Class<?>[] classList, @NotNull String name) {
 		int index = 0;
 		for (Class<?> clazz : classList) {
 			if (clazz.getSimpleName().equals(name)) {

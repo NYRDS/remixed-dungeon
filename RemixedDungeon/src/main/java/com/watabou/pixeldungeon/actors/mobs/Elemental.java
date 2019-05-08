@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
 import com.watabou.pixeldungeon.sprites.ElementalSprite;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Elemental extends Mob {
 
@@ -70,7 +70,7 @@ public class Elemental extends Mob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Buff.affect( enemy, Burning.class ).reignite( enemy );
 		}

@@ -48,9 +48,9 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-import java.util.Locale;
+import org.jetbrains.annotations.Nullable;
 
-import androidx.annotation.Nullable;
+import java.util.Locale;
 
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 

@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
@@ -51,6 +49,7 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -237,7 +236,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         return this;
 	}
 
-	@NonNull
+	@NotNull
     @Override
 	public String toString() {
 

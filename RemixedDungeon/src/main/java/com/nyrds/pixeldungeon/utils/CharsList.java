@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.utils;
 
-import androidx.annotation.NonNull;
-
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.DummyChar;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,7 +20,7 @@ public class CharsList {
 
     static public List<Mob> emptyMobList = Collections.unmodifiableList(new ArrayList<>());
 
-    @NonNull
+    @NotNull
     static public Char getById(int id) {
         Char ret = charsMap.get(id);
         if(ret == null) {

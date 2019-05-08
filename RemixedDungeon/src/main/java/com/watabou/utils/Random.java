@@ -17,10 +17,10 @@
 
 package com.watabou.utils;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Collection;
 import java.util.Map;
-
-import androidx.annotation.Nullable;
 
 public class Random {
 

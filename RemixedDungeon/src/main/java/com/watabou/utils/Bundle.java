@@ -17,14 +17,13 @@
 
 package com.watabou.utils;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -157,7 +156,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public int[] getIntArray(String key) {
         try {
             JSONArray array = data.getJSONArray(key);
@@ -173,7 +172,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public boolean[] getBooleanArray(String key) {
         try {
             JSONArray array = data.getJSONArray(key);
@@ -188,7 +187,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public String[] getStringArray(String key) {
         try {
             JSONArray array = data.getJSONArray(key);
@@ -203,7 +202,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public <T extends Bundlable> Collection<T> getCollection(String key, Class<T> type) {
         List<T> list = new ArrayList<>();
 

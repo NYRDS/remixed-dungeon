@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 05.09.2017.
@@ -23,7 +23,7 @@ public class MagicTorch extends Spell{
 	}
 
 	@Override
-	public boolean cast(@NonNull Char chr){
+	public boolean cast(@NotNull Char chr){
 		if (super.cast(chr)){
 			castCallback(chr);
 			Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, 80);

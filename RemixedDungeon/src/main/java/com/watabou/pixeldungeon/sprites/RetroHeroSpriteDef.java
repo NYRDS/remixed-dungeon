@@ -7,10 +7,10 @@ import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.04.2016.
@@ -163,7 +163,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		return "hero/body/" +descriptor+".png";
 	}
 
-	@NonNull
+	@NotNull
 	@Override
 	public String getDeathEffect() {
 		return HERO_EMPTY_PNG;

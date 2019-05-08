@@ -19,13 +19,13 @@ package com.watabou.noosa;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 
-import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.ArrayList;
 
 public class Group extends Gizmo {
 
-	@NonNull
+	@NotNull
 	protected ArrayList<Gizmo> members = new ArrayList<>();
 
 	public Group() {
@@ -91,7 +91,7 @@ public class Group extends Gizmo {
 		g.setParent(this);
 	}
 
-	public Gizmo recycle(@NonNull Class<? extends Gizmo> c) {
+	public Gizmo recycle(@NotNull Class<? extends Gizmo> c) {
 
 		Gizmo g = getFirstAvailable(c);
 		if (g != null) {
@@ -120,7 +120,7 @@ public class Group extends Gizmo {
 	}
 
 
-	private Gizmo getFirstAvailable(@NonNull Class<? extends Gizmo> c) {
+	private Gizmo getFirstAvailable(@NotNull Class<? extends Gizmo> c) {
 
 		for (int i = 0; i < getLength(); i++) {
 			Gizmo g = members.get(i);

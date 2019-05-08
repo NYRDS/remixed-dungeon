@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
@@ -134,6 +131,9 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -195,7 +195,7 @@ public class Hero extends Char implements PetOwner {
 	@Packable
 	public Position portalLevelPos;
 
-	@NonNull
+	@NotNull
 	private Collection<Integer> pets = new ArrayList<>();
 
 	@Override
@@ -203,7 +203,7 @@ public class Hero extends Char implements PetOwner {
 		pets.remove(mob.getId());
 	}
 
-	public void addPet(@NonNull Mob pet) {
+	public void addPet(@NotNull Mob pet) {
 		pets.add(pet.getId());
 	}
 
@@ -282,7 +282,7 @@ public class Hero extends Char implements PetOwner {
 		pets = alivePets;
 	}
 
-	@NonNull
+	@NotNull
 	public Collection<Integer> getPets() {
 		refreshPets();
 		return pets;
@@ -1020,7 +1020,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage) {
+	public int attackProc(@NotNull Char enemy, int damage) {
 		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
 		if (wep != null) {
 

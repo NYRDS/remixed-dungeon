@@ -29,12 +29,12 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Bounce extends Glyph {
 
 	@Override
-	public int proc(Armor armor, @NonNull Char attacker, Char defender, int damage) {
+	public int proc(Armor armor, @NotNull Char attacker, Char defender, int damage) {
 
 		int armorLevel = Math.max( 0, armor.level() );
 

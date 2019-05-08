@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
@@ -214,7 +212,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public int attackProc(@NonNull Char enemy, int damage) {
+		public int attackProc(@NotNull Char enemy, int damage) {
 			if (Random.Int(3) == 0) {
 				Buff.affect(enemy, Ooze.class);
 				enemy.getSprite().burst(0xFF000000, 5);
@@ -288,7 +286,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public boolean attack(@NonNull Char enemy) {
+		public boolean attack(@NotNull Char enemy) {
 			if(super.attack(enemy)) {
 				if (!Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 					enemy.getSprite().flash();

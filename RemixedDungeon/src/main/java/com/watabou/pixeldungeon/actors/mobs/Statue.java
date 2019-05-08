@@ -43,7 +43,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Statue extends Mob {
 	
@@ -114,7 +114,7 @@ public class Statue extends Mob {
 	}
 
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		weapon.proc( this, enemy, damage );
 		return damage;
 	}

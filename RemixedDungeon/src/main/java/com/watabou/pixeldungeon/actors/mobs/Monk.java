@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Monk extends Mob {
 
@@ -82,7 +82,7 @@ public class Monk extends Mob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		if (Random.Int( 6 ) == 0 && enemy == Dungeon.hero) {
 			

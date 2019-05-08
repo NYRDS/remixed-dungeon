@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class SpiderServant extends MultiKindMob {
 	
@@ -24,7 +24,7 @@ public class SpiderServant extends MultiKindMob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 4 ) == 0) {
 			Buff.affect(enemy, Poison.class).set(Random.Int(2, 3) * Poison.durationFactor(enemy));
 		}

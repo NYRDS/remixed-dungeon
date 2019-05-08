@@ -1,12 +1,13 @@
 package com.nyrds.pixeldungeon.support;
 
+import androidx.annotation.MainThread;
+
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
-import java.util.Map;
+import org.jetbrains.annotations.Nullable;
 
-import androidx.annotation.MainThread;
-import androidx.annotation.Nullable;
+import java.util.Map;
 
 class AdsUtilsCommon {
 

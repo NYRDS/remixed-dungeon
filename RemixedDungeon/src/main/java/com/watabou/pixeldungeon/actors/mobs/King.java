@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
@@ -146,7 +144,7 @@ public class King extends Boss {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		summon();
 		return true;
 	}
@@ -220,7 +218,7 @@ public class King extends Boss {
 		}
 		
 		@Override
-		public int attackProc(@NonNull Char enemy, int damage ) {
+		public int attackProc(@NotNull Char enemy, int damage ) {
 			if (Random.Int( MAX_ARMY_SIZE ) == 0) {
 				Buff.prolong( enemy, Paralysis.class, 1 );
 			}

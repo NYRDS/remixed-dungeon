@@ -18,8 +18,6 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -45,6 +43,7 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -199,7 +198,7 @@ public enum HeroClass implements CharModifier {
         return Game.getVar(titleId);
     }
 
-    @NonNull
+    @NotNull
     public String[] perks() {
 
         switch (this) {

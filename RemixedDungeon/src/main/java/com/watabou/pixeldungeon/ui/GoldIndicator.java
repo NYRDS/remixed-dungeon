@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class GoldIndicator extends Component {
 
@@ -33,7 +33,7 @@ public class GoldIndicator extends Component {
 	
 	private int lastValue = 0;
 
-	@NonNull
+	@NotNull
 	private BitmapText tf;
 	
 	private float time;

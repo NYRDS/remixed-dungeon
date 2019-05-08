@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -36,7 +36,7 @@ public class YogsTeeth extends Boss {
 
 
     @Override
-    public int attackProc(@NonNull Char enemy, int damage ) {
+    public int attackProc(@NotNull Char enemy, int damage ) {
         //Life drain proc
         if (Random.Int(3) == 1){
             heal(damage, this);

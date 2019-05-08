@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.watabou.pixeldungeon.actors.Char;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 05.09.2017.
@@ -21,7 +21,7 @@ public class Healing extends Spell{
 	}
 
 	@Override
-	public boolean cast(@NonNull Char chr){
+	public boolean cast(@NotNull Char chr){
 		if (super.cast(chr)){
 			if (chr.isAlive()) {
 				castCallback(chr);

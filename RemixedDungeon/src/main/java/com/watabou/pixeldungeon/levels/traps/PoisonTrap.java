@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class PoisonTrap implements ITrigger {
 

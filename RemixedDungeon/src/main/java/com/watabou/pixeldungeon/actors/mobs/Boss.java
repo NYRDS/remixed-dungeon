@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 abstract public class Boss extends Mob {
 

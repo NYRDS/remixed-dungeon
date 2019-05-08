@@ -17,13 +17,13 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
 
@@ -32,9 +32,9 @@ public class Utils {
     public static final String UNKNOWN = "unknown";
     public static final String EMPTY_STRING = "";
 
-    @NonNull
+    @NotNull
     private static final Class<?> strings = getR_Field("string");
-    @NonNull
+    @NotNull
     private static final Class<?> stringArrays = getR_Field("array");
 
     static private Class<?> getR_Field(String field) {

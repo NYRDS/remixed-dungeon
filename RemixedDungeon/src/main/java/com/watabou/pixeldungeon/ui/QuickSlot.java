@@ -19,8 +19,6 @@ package com.watabou.pixeldungeon.ui;
 
 import android.annotation.SuppressLint;
 
-import androidx.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -41,6 +39,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;

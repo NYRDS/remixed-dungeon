@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Bat extends Mob {
 
@@ -58,7 +58,7 @@ public class Bat extends Mob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		heal(damage, enemy);
 

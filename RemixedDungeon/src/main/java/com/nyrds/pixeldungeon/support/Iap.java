@@ -8,11 +8,11 @@ import com.nyrds.pixeldungeon.support.Google.GoogleIap;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 24.05.2016.

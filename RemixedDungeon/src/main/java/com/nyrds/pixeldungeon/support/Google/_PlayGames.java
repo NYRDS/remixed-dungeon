@@ -6,9 +6,6 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -31,6 +28,9 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -172,7 +172,7 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 		if (isConnected()) {
 			Games.Snapshots.load(googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
 				@Override
-				public void onResult(@NonNull Snapshots.LoadSnapshotsResult result) {
+				public void onResult(@NotNull Snapshots.LoadSnapshotsResult result) {
 					if (result.getStatus().isSuccess()) {
 
 						mSavedGamesNames = new ArrayList<>();
@@ -217,7 +217,7 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 	}
 
 	@Override
-	public void onConnectionFailed(@NonNull ConnectionResult result) {
+	public void onConnectionFailed(@NotNull ConnectionResult result) {
 		int requestCode = RC_SIGN_IN;
 
 		if (result.hasResolution()) {

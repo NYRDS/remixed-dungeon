@@ -1,16 +1,16 @@
 package com.watabou.noosa;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.regex.Pattern;
 
 public abstract class Text extends Visual {
 
-	@NonNull
+	@NotNull
 	protected String text= Utils.EMPTY_STRING;
 
 
@@ -105,7 +105,7 @@ public abstract class Text extends Visual {
 	protected abstract void measure();
 	public abstract float baseLine();
 
-	@NonNull
+	@NotNull
 	public String text() {
 		return text;
 	}
@@ -115,7 +115,7 @@ public abstract class Text extends Visual {
 		text(Game.getVar(id));
 	}
 
-	public void text(@NonNull String str) {
+	public void text(@NotNull String str) {
 		dirty = true;
 
 		if(str == null) {

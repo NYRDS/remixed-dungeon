@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.effects.Wound;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class GrippingTrap implements ITrigger {
 	

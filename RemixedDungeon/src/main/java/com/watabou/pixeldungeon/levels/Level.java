@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModdingMode;
@@ -93,6 +90,9 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -214,7 +214,7 @@ public abstract class Level implements Bundlable {
 	public void onHeroDescend(int cell) {
 	}
 
-	@NonNull
+	@NotNull
 	public String music() {
 		return DungeonGenerator.getLevelProperty(levelId, "music", Assets.TUNE);
 	}
@@ -730,7 +730,7 @@ public abstract class Level implements Bundlable {
 		return null;
 	}
 
-	@NonNull
+	@NotNull
 	public String getWaterTex() {
 		String water = DungeonGenerator.getLevelProperty(levelId, "water", null);
 		if (water != null) {
@@ -1027,7 +1027,7 @@ public abstract class Level implements Bundlable {
 				|| terrain >= Terrain.WATER_TILES;
 	}
 
-	@NonNull
+	@NotNull
 	public Heap drop(Item item, int cell) {
 
 		if (solid[cell] && map[cell] != Terrain.DOOR){

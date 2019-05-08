@@ -24,12 +24,12 @@ import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Texture;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.InputStream;
 import java.util.Arrays;
@@ -97,7 +97,7 @@ public class TextureCache {
 		all.put(key, tx);
 	}
 
-	public static SmartTexture get(@NonNull Object src) {
+	public static SmartTexture get(@NotNull Object src) {
 
 		if (all.containsKey(src)) {
 

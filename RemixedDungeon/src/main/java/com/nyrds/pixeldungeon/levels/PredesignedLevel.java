@@ -13,11 +13,10 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import androidx.annotation.Nullable;
 
 public class PredesignedLevel extends CustomLevel {
 

@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -47,6 +45,7 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -203,7 +202,7 @@ public class Armor extends EquipableItem {
 		return damage;
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public String toString() {
 		return levelKnown ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), STR ) : super.toString();

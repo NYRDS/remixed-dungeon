@@ -22,9 +22,9 @@ import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.ArrayList;
 
 public class Camera extends Gizmo {
 
@@ -45,7 +45,7 @@ public class Camera extends Gizmo {
 	int screenWidth;
 	int screenHeight;
 
-	@NonNull
+	@NotNull
 	public float[] matrix;
 	
 	public PointF scroll;

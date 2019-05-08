@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class NecroBossLevel extends Level {
 	
@@ -158,7 +158,7 @@ public class NecroBossLevel extends Level {
 		}
 	}
 
-	@NonNull
+	@NotNull
     @Override
 	public Heap drop( Item item, int cell ) {
 		

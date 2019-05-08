@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -56,6 +53,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -78,14 +77,14 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	private static final   String AC_DROP  = "Item_ACDrop";
 	protected static final String AC_THROW = "Item_ACThrow";
 
-	@NonNull
+	@NotNull
 	private String defaultAction = AC_THROW;
 
-	@NonNull
+	@NotNull
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
-	@NonNull
+	@NotNull
 	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
-	@NonNull
+	@NotNull
 	protected String info2 = getClassParam("Info2", Game.getVar(R.string.Item_Info2), false);
 
 	protected int image = 0;
@@ -356,7 +355,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		hero.getSprite().emitter().burst(Speck.factory(Speck.EVOKE), 5);
 	}
 
-	@NonNull
+	@NotNull
 	@Override
 	public String toString() {
 
@@ -646,12 +645,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return true;
 	}
 
-	@NonNull
+	@NotNull
 	public String getDefaultAction() {
 		return defaultAction;
 	}
 
-	public void setDefaultAction(@NonNull String newDefaultAction) {
+	public void setDefaultAction(@NotNull String newDefaultAction) {
 		@Nullable
 		Hero hero = getUser();
 

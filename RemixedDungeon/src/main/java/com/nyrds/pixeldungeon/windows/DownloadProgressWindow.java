@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.windows;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.android.util.DownloadStateListener;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 14.04.2018.
@@ -16,7 +16,7 @@ public class DownloadProgressWindow implements DownloadStateListener {
     private String            prefix;
     private IDownloadComplete onComplete;
 
-    public DownloadProgressWindow(@NonNull String prefix, @NonNull IDownloadComplete onComplete) {
+    public DownloadProgressWindow(@NotNull String prefix, @NotNull IDownloadComplete onComplete) {
         this.prefix = prefix;
         this.onComplete = onComplete;
     }

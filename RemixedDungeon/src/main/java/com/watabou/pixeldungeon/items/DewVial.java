@@ -30,9 +30,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
-import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.ArrayList;
 
 public class DewVial extends Item {
 
@@ -167,7 +167,7 @@ public class DewVial extends Item {
 		return Utils.format( TXT_STATUS, getVolume(), MAX_VOLUME );
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public String toString() {
 		return super.toString() + " (" + status() +  ")" ;

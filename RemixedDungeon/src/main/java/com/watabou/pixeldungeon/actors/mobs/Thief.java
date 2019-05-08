@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Thief extends Mob {
 
@@ -95,7 +95,7 @@ public class Thief extends Mob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (item == null && enemy instanceof Hero && steal( (Hero)enemy )) {
 			setState(MobAi.getStateByClass(ThiefFleeing.class));
 		}

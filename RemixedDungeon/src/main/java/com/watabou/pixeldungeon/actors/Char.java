@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
@@ -95,7 +93,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public static final String IMMUNITIES        = "immunities";
 	public static final String RESISTANCES       = "resistances";
-	@NonNull
+	@NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
 	@Packable
@@ -239,7 +237,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return false;
 	}
 
-    public boolean attack(@NonNull Char enemy) {
+    public boolean attack(@NotNull Char enemy) {
 
 		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
 
@@ -367,7 +365,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return 1;
 	}
 
-	public int attackProc(@NonNull Char enemy, int damage) {
+	public int attackProc(@NotNull Char enemy, int damage) {
 		return damage;
 	}
 

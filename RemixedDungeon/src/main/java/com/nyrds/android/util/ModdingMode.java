@@ -1,11 +1,10 @@
 package com.nyrds.android.util;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -35,7 +34,7 @@ public class ModdingMode {
 		trustedMods.add("Conundrum");
 	}
 
-	@NonNull
+	@NotNull
 	static private String mActiveMod = REMIXED;
 
 	static private boolean mTextRenderingMode = false;

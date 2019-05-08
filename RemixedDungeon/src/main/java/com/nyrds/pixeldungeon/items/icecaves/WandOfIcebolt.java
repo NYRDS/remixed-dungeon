@@ -20,7 +20,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class WandOfIcebolt extends Wand {
 

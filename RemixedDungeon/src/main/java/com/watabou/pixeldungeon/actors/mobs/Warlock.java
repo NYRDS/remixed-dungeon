@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
@@ -40,6 +38,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Warlock extends Mob implements IZapper {
 
@@ -131,7 +131,7 @@ public class Warlock extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		if (super.zap(enemy)) {
 			if (getEnemy() == Dungeon.hero && Random.Int(2) == 0) {
 				Buff.prolong(getEnemy(), Weakness.class, Weakness.duration(getEnemy()));

@@ -35,7 +35,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Shaman extends Mob implements IZapper {
 
@@ -103,7 +103,7 @@ public class Shaman extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		if (zapHit(enemy)) {
 			int dmg = damageRoll() * 2;
 			if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {

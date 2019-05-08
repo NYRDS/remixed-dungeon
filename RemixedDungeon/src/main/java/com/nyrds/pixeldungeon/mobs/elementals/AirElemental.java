@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class AirElemental extends Mob implements IDepthAdjustable {
 
@@ -85,7 +85,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		windGust.cast(this, enemy.getPos());
 		super.zap(enemy);
 		return true;

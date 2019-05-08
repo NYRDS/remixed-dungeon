@@ -41,7 +41,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class CavesBossLevel extends Level {
 	
@@ -241,7 +241,7 @@ public class CavesBossLevel extends Level {
 		}
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public Heap drop( Item item, int cell ) {
 		

@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class ParalyticTrap implements ITrigger{
 

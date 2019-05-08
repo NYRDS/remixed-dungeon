@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class SummoningTrap implements ITrigger {
 

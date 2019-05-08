@@ -38,10 +38,10 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.NonNull;
 
 public class Mimic extends Mob implements IDepthAdjustable {
 
@@ -52,7 +52,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		adjustStats(Dungeon.depth);
 	}
 
-	@NonNull
+	@NotNull
 	public ArrayList<Item> items = new ArrayList<>();
 
 	private static final String ITEMS = "items";
@@ -81,7 +81,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage) {
+	public int attackProc(@NotNull Char enemy, int damage) {
 		if (enemy == Dungeon.hero && Random.Int(3) == 0) {
 			int gp = Random.Int(1, hp());
 			if (gp > 0) {

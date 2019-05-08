@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class JarOfSouls extends UndeadMob {
 
@@ -71,7 +71,7 @@ public class JarOfSouls extends UndeadMob {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		return false;
 	}
 }

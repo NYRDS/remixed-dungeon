@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import androidx.annotation.NonNull;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -33,6 +31,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 
+import org.jetbrains.annotations.NotNull;
+
 public class MirrorImage extends Mob {
 
 	public MirrorImage() {
@@ -43,7 +43,7 @@ public class MirrorImage extends Mob {
         addImmunity( Burning.class );
 	}
 
-	public MirrorImage(@NonNull Hero hero) {
+	public MirrorImage(@NotNull Hero hero) {
 		this();
 
 		attack = hero.attackSkill( hero );
@@ -74,7 +74,7 @@ public class MirrorImage extends Mob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		int dmg = super.attackProc( enemy, damage );
 
 		destroy();

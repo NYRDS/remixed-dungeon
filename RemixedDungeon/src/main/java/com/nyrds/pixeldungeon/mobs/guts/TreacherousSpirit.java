@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -28,7 +28,7 @@ public class TreacherousSpirit extends Mob {
     }
 
     @Override
-    public int attackProc(@NonNull Char enemy, int damage ) {
+    public int attackProc(@NotNull Char enemy, int damage ) {
         //Summon proc
         if (Random.Int(4) == 1){
             int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());

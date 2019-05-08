@@ -39,7 +39,7 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class WndTradeItem extends Window {
 
@@ -48,13 +48,13 @@ public class WndTradeItem extends Window {
 
 	private VBox vbox = new VBox();
 
-	@NonNull
+	@NotNull
 	private Shopkeeper shopkeeper;
 	private Hero       customer;
 
 	private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
 
-	public WndTradeItem(final Item item, @NonNull Shopkeeper shopkeeper, boolean buy) {
+	public WndTradeItem(final Item item, @NotNull Shopkeeper shopkeeper, boolean buy) {
 
 		super();
 
@@ -263,7 +263,7 @@ public class WndTradeItem extends Window {
 		return info.y + info.height();
 	}
 
-	private int price( @NonNull  Item item, boolean buying) {
+	private int price( @NotNull  Item item, boolean buying) {
 		int price = item.price();
 		if(buying) {
 			price *=  5 * (Dungeon.depth / 5 + 1);
@@ -279,7 +279,7 @@ public class WndTradeItem extends Window {
 		return price;
 	}
 
-	private void buy( @NonNull Item item, final int quantity ) {
+	private void buy( @NotNull Item item, final int quantity ) {
 		Item boughtItem = item.detach(shopkeeper.getBelongings().backpack, quantity);
 
 		int price = price( boughtItem, true );
