@@ -33,7 +33,7 @@ public class GrippingTrap implements ITrigger {
 		
 		if (c != null) {
 			int damage = Math.max( 0,  (Dungeon.depth + 3) - c.defenceRoll(c)/2);
-			Buff.affect( c, Bleeding.class ).set( damage );
+			Buff.affect( c, Bleeding.class ).level( damage );
 			Buff.prolong( c, Cripple.class, Cripple.DURATION );
 			Wound.hit( c );
 		} else {

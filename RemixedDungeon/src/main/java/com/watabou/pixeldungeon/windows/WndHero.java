@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
@@ -127,6 +128,10 @@ public class WndHero extends WndTabbed {
 
 			statSlot(Game.getVar(R.string.WndHero_Stealth), hero.stealth());
 
+			statSlot(Game.getVar(R.string.WndHero_Awarness), (int)(hero.getAwareness() * 100));
+
+			statSlot(Game.getVar(R.string.WndHero_AttackSkill),  hero.attackSkill(CharsList.DUMMY));
+			statSlot(Game.getVar(R.string.WndHero_DefenceSkill), hero.defenseSkill(CharsList.DUMMY));
 
 
 			statSlot(Game.getVar(R.string.WndHero_Exp), hero.getExp() + "/" + hero.maxExp() );
@@ -159,7 +164,7 @@ public class WndHero extends WndTabbed {
 		private void statSlot( String label, int value ) {
 			statSlot( label, Integer.toString( value ) );
 		}
-		
+
 		public float height() {
 			return pos;
 		}
@@ -172,9 +177,7 @@ public class WndHero extends WndTabbed {
 		private float pos;
 		
 		public BuffsTab() {
-			for (Buff buff : Dungeon.hero.buffs()) {
-				buffSlot( buff );
-			}
+			Dungeon.hero.forEachBuff(this::buffSlot);
 		}
 		
 		private void buffSlot( Buff buff ) {

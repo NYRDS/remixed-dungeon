@@ -13,4 +13,5 @@ public interface CharModifier {
     void charAct();
     Set<String> resistances();
     Set<String> immunities();
+
 }

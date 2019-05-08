@@ -38,35 +38,23 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
-import com.watabou.pixeldungeon.actors.buffs.Amok;
-import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Cripple;
+import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
-import com.watabou.pixeldungeon.actors.buffs.Light;
-import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Shadows;
-import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
-import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
-import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
@@ -134,7 +122,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	protected Set<Buff> buffs = new HashSet<>();
 
-	protected Map<String, Number> spellsUsage = new HashMap<>();
+	private Map<String, Number> spellsUsage = new HashMap<>();
 
 	public CharAction curAction = null;
 
@@ -150,9 +138,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public boolean act() {
 		level().updateFieldOfView(this);
 
-		for(Buff buff: buffs) {
-			buff.charAct();
-		}
+		forEachBuff(CharModifier::charAct);
 
 		return false;
 	}
@@ -343,13 +329,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return 0;
 		}
 
-		int dr = dr();
+		final int[] dr = {dr()};
 
-		for(Buff b:buffs) {
-			dr+=b.drBonus();
-		}
+		forEachBuff(b-> dr[0] +=b.drBonus());
 
-		return  Random.IntRange(0,dr);
+		return  Random.IntRange(0, dr[0]);
 
 	}
 
@@ -369,29 +353,26 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return damage;
 	}
 
-	public int defenseProc(Char enemy, int damage) {
+	public int defenseProc(Char enemy, int baseDamage) {
 
 		int dr = defenceRoll(enemy);
 
-		damage = damage - dr;
+		final int[] damage = {baseDamage - dr};
 
-		for(Buff buff : buffs) {
-			damage = buff.defenceProc(this, enemy, damage);
-		}
+		forEachBuff(b->damage[0] = b.defenceProc(this, enemy, damage[0]));
 
 		if (getBelongings()!=null && getBelongings().armor != null) {
-			damage = getBelongings().armor.proc(enemy, this, damage);
+			damage[0] = getBelongings().armor.proc(enemy, this, damage[0]);
 		}
 
-		return damage;
+		return damage[0];
 	}
 
 	public float speed() {
-		float speed = baseSpeed;
-		for(Buff buff: buffs) {
-			speed*=buff.speedMultiplier();
-		}
-		return speed;
+		final float[] speed = {baseSpeed};
+		forEachBuff(b-> speed[0] *=b.speedMultiplier());
+
+		return speed[0];
 	}
 
 
@@ -419,7 +400,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
     }
 
-	public void damage(int dmg, NamedEntityKind src) {
+	public void damage(int dmg, @NotNull NamedEntityKind src) {
 
 		if (!isAlive()) {
 			return;
@@ -467,6 +448,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void destroy() {
 		hp(0);
 		Actor.remove(this);
+
+        for (Buff buff : buffs.toArray(new Buff[0])) {
+            buff.detach();
+        }
+
 		Actor.freeCell(getPos());
 	}
 
@@ -567,66 +553,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return;
 		}
 
-		if (buff instanceof Poison) {
-
-			CellEmitter.center(getPos()).burst(PoisonParticle.SPLASH, 5);
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
-
-		} else if (buff instanceof Amok) {
-
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
-
-		} else if (buff instanceof Slow) {
-
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaSlowed));
-
-		} else if (buff instanceof MindVision) {
-
-			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
-			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
-
-		} else if (buff instanceof Paralysis) {
-
-			getSprite().add(CharSprite.State.PARALYSED);
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
-
-		} else if (buff instanceof Terror) {
-
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaFrightened));
-
-		} else if (buff instanceof Roots) {
-
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
-
-		} else if (buff instanceof Cripple) {
-
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaCrippled));
-
-		} else if (buff instanceof Bleeding) {
-
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
-
-		} else if (buff instanceof Vertigo) {
-
-			getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaDizzy));
-
-		} else if (buff instanceof Sleep) {
-			getSprite().idle();
-		} else if (buff instanceof Light) {
-			getSprite().add(CharSprite.State.ILLUMINATED);
-		} else if (buff instanceof Burning) {
-			getSprite().add(CharSprite.State.BURNING);
-		} else if (buff instanceof Levitation) {
-			getSprite().add(CharSprite.State.LEVITATING);
-		} else if (buff instanceof Frost) {
-			getSprite().add(CharSprite.State.FROZEN);
-		} else if (buff instanceof Invisibility) {
-			if (!(buff instanceof Shadows)) {
-				getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
-			}
-			getSprite().add(CharSprite.State.INVISIBLE);
-		}
-
+		buff.attachVisual();
 	}
 
 	public void remove(Buff buff) {
@@ -634,32 +561,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		buffs.remove(buff);
 		Actor.remove(buff);
 
-		if (buff instanceof Burning) {
-			getSprite().remove(CharSprite.State.BURNING);
-		} else if (buff instanceof Levitation) {
-			getSprite().remove(CharSprite.State.LEVITATING);
-		} else if (buff instanceof Invisibility && invisible <= 0) {
-			getSprite().remove(CharSprite.State.INVISIBLE);
-		} else if (buff instanceof Paralysis) {
-			getSprite().remove(CharSprite.State.PARALYSED);
-		} else if (buff instanceof Frost) {
-			getSprite().remove(CharSprite.State.FROZEN);
-		} else if (buff instanceof Light) {
-			getSprite().remove(CharSprite.State.ILLUMINATED);
-		}
-	}
-
-	public void remove(Class<? extends Buff> buffClass) {
-		for (Buff buff : buffs(buffClass)) {
-			remove(buff);
-		}
-	}
-
-	@Override
-	protected void onRemove() {
-		for (Buff buff : buffs.toArray(new Buff[buffs.size()])) {
-			buff.detach();
-		}
+		getSprite().remove(buff.charSpriteStatus());
 	}
 
     public boolean isStarving() {
@@ -674,31 +576,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void updateSpriteState() {
 		getSprite().removeAllStates();
-		for (Buff buff : buffs) {
-			if (buff instanceof Burning) {
-				getSprite().add(CharSprite.State.BURNING);
-			} else if (buff instanceof Levitation) {
-				getSprite().add(CharSprite.State.LEVITATING);
-			} else if (buff instanceof Invisibility) {
-				getSprite().add(CharSprite.State.INVISIBLE);
-			} else if (buff instanceof Paralysis) {
-				getSprite().add(CharSprite.State.PARALYSED);
-			} else if (buff instanceof Frost) {
-				getSprite().add(CharSprite.State.FROZEN);
-			} else if (buff instanceof Light) {
-				getSprite().add(CharSprite.State.ILLUMINATED);
-			}
-		}
+
+		forEachBuff(b->getSprite().add(b.charSpriteStatus()));
 	}
 
 	public int stealth() {
-		int bonus = 0;
+		final int[] bonus = {0};
 
-		for (Buff buff:buffs) {
-			bonus+=buff.stealthBonus();
-		}
+		forEachBuff(b-> bonus[0] += b.stealthBonus());
 
-		return bonus;
+		return bonus[0];
 	}
 
 	public void move(int step) {
@@ -767,9 +654,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public Set<String> resistances() {
 		HashSet<String> ret = new HashSet<>(resistances);
 
-		for(Buff buff:buffs) {
-			ret.addAll(buff.resistances());
-		}
+		forEachBuff(b->ret.addAll(b.resistances()));
 
 		return ret;
 	}
@@ -777,9 +662,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public Set<String> immunities() {
 		HashSet<String> ret = new HashSet<>(immunities);
 
-		for(Buff buff:buffs) {
-			ret.addAll(buff.immunities());
-		}
+		forEachBuff(b->ret.addAll(b.immunities()));
 
 		return ret;
 	}
@@ -1053,4 +936,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return true;
 	}
 
+	public void forEachBuff(BuffCallback cb) {
+		for(Buff b: buffs){
+			cb.onBuff(b);
+		}
+	}
 }

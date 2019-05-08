@@ -41,7 +41,7 @@ public class Albino extends Rat {
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
-			Buff.affect( enemy, Bleeding.class ).set( damage );
+			Buff.affect( enemy, Bleeding.class ).level( damage );
 		}
 		
 		return damage;

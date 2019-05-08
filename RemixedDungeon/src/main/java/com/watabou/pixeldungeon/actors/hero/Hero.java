@@ -1846,6 +1846,10 @@ public class Hero extends Char implements PetOwner {
 		return CharsList.getById(controlTargetId);
 	}
 
+	public float getAwareness() {
+		return awareness;
+	}
+
 	public interface Doom extends NamedEntityKind{
 		void onDeath();
 	}

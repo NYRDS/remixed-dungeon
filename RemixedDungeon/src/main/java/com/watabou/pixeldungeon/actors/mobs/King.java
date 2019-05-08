@@ -61,8 +61,6 @@ public class King extends Boss {
 		hp(ht(300));
 		exp = 40;
 		defenseSkill = 25;
-		
-		Undead.count = 0;
 
 		lastPedestal   = -1;
 		targetPedestal = -1;
@@ -112,13 +110,24 @@ public class King extends Boss {
 			getPos() == targetPedestal :
 			Dungeon.level.adjacent( getPos(), enemy.getPos() );
 	}
-	
+
+	private int countServants() {
+		int count = 0;
+
+		for(Mob mob:level().getCopyOfMobsArray()){
+			if (mob instanceof Undead) {
+				count++;
+			}
+		}
+		return count;
+	}
+
 	private boolean canTryToSummon() {
-		if (!Dungeon.level.cellValid(targetPedestal)) {
+		if (!level().cellValid(targetPedestal)) {
 			return false;
 		}
 
-		if (Undead.count < maxArmySize()) {
+		if (countServants() < maxArmySize()) {
 			Char ch = Actor.findChar(targetPedestal);
 			return ch == this || ch == null;
 		} else {
@@ -129,8 +138,8 @@ public class King extends Boss {
 	@Override
 	public void die(NamedEntityKind cause ) {
 
-		Dungeon.level.drop( new ArmorKit(), getPos() ).sprite.drop();
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+		level().drop( new ArmorKit(), getPos() ).sprite.drop();
+		level().drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		super.die( cause );
 		
@@ -155,17 +164,15 @@ public class King extends Boss {
 		getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );		
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 		
-		int undeadsToSummon = maxArmySize() - Undead.count;
-
-		Level level = Dungeon.level;
+		int undeadsToSummon = maxArmySize() - countServants();
 
 		for (int i=0; i < undeadsToSummon; i++) {
-			int pos = level.getEmptyCellNextTo(lastPedestal);
+			int pos = level().getEmptyCellNextTo(lastPedestal);
 
-			if (level.cellValid(pos)) {
+			if (level().cellValid(pos)) {
 				Mob servant = new Undead();
 				servant.setPos(pos);
-				level.spawnMob(servant, 0, lastPedestal);
+				level().spawnMob(servant, 0, lastPedestal);
 
 				WandOfBlink.appear(servant, pos);
 				new Flare(3, 32).color(0x000000, false).show(servant.getSprite(), 2f);
@@ -181,9 +188,7 @@ public class King extends Boss {
 	}
 	
 	public static class Undead extends UndeadMob {
-		
-		public static int count = 0;
-		
+
 		public Undead() {
 			spriteClass = UndeadSprite.class;
 			
@@ -194,19 +199,7 @@ public class King extends Boss {
 			
 			setState(MobAi.getStateByClass(Wandering.class));
 		}
-		
-		@Override
-		protected void onAdd() {
-			count++;
-			super.onAdd();
-		}
-		
-		@Override
-		protected void onRemove() {
-			count--;
-			super.onRemove();
-		}
-		
+
 		@Override
 		public int damageRoll() {
 			return Random.NormalIntRange( 12, 16 );

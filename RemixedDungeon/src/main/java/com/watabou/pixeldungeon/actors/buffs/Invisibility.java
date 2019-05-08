@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Invisibility extends FlavourBuff {
@@ -58,5 +59,16 @@ public class Invisibility extends FlavourBuff {
 		if (buff != null && tgt.visibleEnemies() > 0) {
 			buff.detach();
 		}
+	}
+
+	@Override
+	public void attachVisual() {
+		super.attachVisual();
+		target.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
+	}
+
+	@Override
+	public CharSprite.State charSpriteStatus() {
+		return CharSprite.State.INVISIBLE;
 	}
 }

@@ -31,13 +31,11 @@ public class Regeneration extends Buff {
                 target.heal(1,this);
             }
 
-            int bonus = 0;
+            final int[] bonus = {0};
 
-            for(Buff buff:target.buffs()) {
-                bonus += buff.regenerationBonus();
-            }
+            target.forEachBuff(b-> bonus[0] +=b.regenerationBonus());
 
-            spend((float) (REGENERATION_DELAY / Math.pow(1.2, bonus)));
+            spend((float) (REGENERATION_DELAY / Math.pow(1.2, bonus[0])));
         } else {
             deactivate();
         }

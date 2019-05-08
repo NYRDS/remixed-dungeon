@@ -57,7 +57,7 @@ public class RingOfElements extends Ring {
 			FULL.add( Warlock.class.getSimpleName() );
 			FULL.add( Eye.class.getSimpleName() );
 			FULL.add( Yog.BurningFist.class.getSimpleName() );
-			FULL.add(LiquidFlame.class.getSimpleName() );
+			FULL.add( LiquidFlame.class.getSimpleName() );
 		}
 
 

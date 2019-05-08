@@ -64,10 +64,6 @@ public abstract class Actor implements Bundlable {
 	protected void deactivate() {
 		time = Float.MAX_VALUE;
 	}
-	
-	protected void onAdd() {}
-	
-	protected void onRemove() {}
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -283,14 +279,12 @@ public abstract class Actor implements Bundlable {
 		
 		all.add( actor );
 		actor.time += time;
-		actor.onAdd();
-		
+
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;
 			chars.put(ch.getPos(), ch);
 			for (Buff buff : ch.buffs()) {
 				all.add( buff );
-				buff.onAdd();
 			}
 		}
 
@@ -304,7 +298,6 @@ public abstract class Actor implements Bundlable {
 			}
 			
 			all.remove( actor );
-			actor.onRemove();
 		}
 	}
 	

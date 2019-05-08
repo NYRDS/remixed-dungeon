@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -53,6 +54,10 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	@Override
 	public String name() {
 		return toString();
+	}
+
+	public void attachVisual() {
+		target.getSprite().add(charSpriteStatus());
 	}
 
 	interface itemAction{
@@ -196,6 +201,10 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	@Override
 	public Set<String> immunities() {
 		return EMPTY_STRING_SET;
+	}
+
+	public CharSprite.State charSpriteStatus() {
+		return CharSprite.State.NONE;
 	}
 
 	private void collectOrDropItem(Item item){

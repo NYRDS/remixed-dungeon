@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Roots extends FlavourBuff {
@@ -53,5 +54,10 @@ public class Roots extends FlavourBuff {
 	@Override
 	public String toString() {
 		return Game.getVar(R.string.Roots_Info);
+	}
+
+	@Override
+	public void attachVisual() {
+		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
 	}
 }

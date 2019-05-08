@@ -66,7 +66,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     private static final float FLASH_INTERVAL = 0.05f;
 
     public enum State {
-        BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
+        NONE,BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
     }
 
     protected Animation idle;

@@ -23,6 +23,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
 
@@ -90,5 +91,9 @@ public class Shadows extends Invisibility {
 	public String toString() {
 		return Game.getVar(R.string.Shadows_Info);
 	}
-	
+
+	@Override
+	public CharSprite.State charSpriteStatus() {
+		return CharSprite.State.INVISIBLE;
+	}
 }

@@ -333,4 +333,5 @@ public enum HeroClass implements CharModifier {
     public Set<String> immunities() {
         return immunities;
     }
+
 }

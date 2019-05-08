@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -52,5 +53,11 @@ public class MindVision extends FlavourBuff {
 	public void detach() {
 		super.detach();
 		Dungeon.observe();
+	}
+
+	@Override
+	public void attachVisual() {
+		target.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
+		target.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
 	}
 }

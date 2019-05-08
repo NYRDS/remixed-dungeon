@@ -44,7 +44,7 @@ public class YogsTeeth extends Boss {
 
         //Bleeding proc
         if (Random.Int(3) == 1){
-            Buff.affect(enemy, Bleeding.class).set(damage);
+            Buff.affect(enemy, Bleeding.class).level(damage);
         }
 
         //Double damage proc
