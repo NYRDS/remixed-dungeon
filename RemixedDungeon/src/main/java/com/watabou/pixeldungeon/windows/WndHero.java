@@ -128,7 +128,7 @@ public class WndHero extends WndTabbed {
 
 			statSlot(Game.getVar(R.string.WndHero_Stealth), hero.stealth());
 
-			statSlot(Game.getVar(R.string.WndHero_Awarness), (int)(hero.getAwareness() * 100));
+			statSlot(Game.getVar(R.string.WndHero_Awareness), (int)(hero.getAwareness() * 100));
 
 			statSlot(Game.getVar(R.string.WndHero_AttackSkill),  hero.attackSkill(CharsList.DUMMY));
 			statSlot(Game.getVar(R.string.WndHero_DefenceSkill), hero.defenseSkill(CharsList.DUMMY));
