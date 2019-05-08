@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.watabou.noosa.ColorBlock;
@@ -44,7 +45,6 @@ import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
@@ -67,7 +67,7 @@ public class WndRanking extends WndTabbed {
 		
 		super();
 		resize( WIDTH, HEIGHT );
-		
+
 		thread = new Thread() {
 			@Override
 			public void run() {
@@ -75,8 +75,8 @@ public class WndRanking extends WndTabbed {
 					Badges.loadGlobal();
 					Dungeon.loadGameForRankings( gameFile );
 				} catch (Exception e ) {
-					error = Game.getVar(R.string.WndRanking_Error) + "->" +e.getMessage();
-					GLog.i(error);
+					EventCollector.logException(e);
+					error = e.getMessage();
 				}
 			}
 		};
@@ -97,15 +97,25 @@ public class WndRanking extends WndTabbed {
 		if (thread != null && !thread.isAlive()) {
 			thread = null;
 			if (error == null) {
-				remove( busy );
-				createControls();
+				try {
+					remove(busy);
+					createControls();
+				} catch (Exception e) {
+					EventCollector.logException(e);
+					error = e.getMessage();
+					reportError();
+				}
 			} else {
-				hide();
-				Game.scene().add( new WndError( Game.getVar(R.string.WndRanking_Error) ) );
+				reportError();
 			}
 		}
 	}
-	
+
+	private void reportError() {
+		hide();
+		Game.scene().add( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
+	}
+
 	private void createControls() {
 		
 		String[] labels = 
