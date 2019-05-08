@@ -136,6 +136,17 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         operate = readAnimation(json, "operate", film);
     }
 
+
+    @LuaInterface
+	public void jump(float height) {
+		jumpCallback = null;
+
+		jumpTweener = new JumpTweener(this, worldToCamera(ch.getPos()), height,
+				height/40);
+
+		getParent().add(jumpTweener);
+	}
+
     @LuaInterface
 	public void dash(int from, int to) {
 		jumpCallback = null;

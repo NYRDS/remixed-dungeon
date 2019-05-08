@@ -50,7 +50,9 @@ return spell.init{
 
 	    RPD.playSound("smash.mp3")
         RPD.forCellsAround(caster:getPos(), smash)
-	
+
+        caster:getSprite():jump(10)
+
         return true
     end
 }
