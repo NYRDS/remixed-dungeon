@@ -18,8 +18,8 @@ return spell.init{
             magicAffinity = "Combat",
             targetingType = "self",
             level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            spellCost     = 10,
+            cooldown      = 10,
             castTime      = 0.5
         }
     end,
