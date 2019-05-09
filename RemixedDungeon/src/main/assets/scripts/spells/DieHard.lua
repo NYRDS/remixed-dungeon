@@ -34,10 +34,6 @@ return spell.init{
         local buff = RPD.affectBuff(caster,"DieHard", duration)
         buff:level(buffLevel)
 
-        --attach visual stuff
-        local emitter = caster:getSprite():emitter()
-        emitter:pour(RPD.speckEffectFactory(RPD.Sfx.Speck.HEALING,RPD.Sfx.Speck.UP), duration)
-
         return true
     end
 }

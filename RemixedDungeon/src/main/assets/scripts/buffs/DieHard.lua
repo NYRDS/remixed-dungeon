@@ -26,5 +26,10 @@ return buff.init{
 
     regenerationBonus = function(self, buff)
         return buff:level()
+    end,
+
+    charAct = function(self,buff)
+        local emitter = buff.target:getSprite():emitter()
+        emitter:burst(RPD.speckEffectFactory(RPD.Sfx.Speck.HEALING,RPD.Sfx.Speck.UP),1)
     end
 }
