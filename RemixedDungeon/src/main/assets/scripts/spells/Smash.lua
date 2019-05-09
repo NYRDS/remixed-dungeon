@@ -32,8 +32,8 @@ return spell.init{
         end
 
         local fist = RPD.topEffect(caster:getPos(),"smash_fist")
-        fist:incY(30);
-        RPD.attachMoveTweener(fist, 0,-30,3)
+        fist:incY(-30);
+        RPD.attachMoveTweener(fist, 0,30,0.5)
 
         local clip = RPD.bottomEffect(caster:getPos(),"smash_blast")
         clip:setScale(1.5,1.3)
