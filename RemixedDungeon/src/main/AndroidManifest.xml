@@ -66,6 +66,13 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="${admob_app_id}"/>
 
+        <provider
+            android:name="io.humanteq.hqsdkcore.utils.HqmWorkManagerInitializer"
+            android:authorities="com.nyrds.pixeldungeon.ml.workmanager-init"
+            android:enabled="false"
+            android:exported="false"
+            tools:replace="android:authorities" />
+
     </application>
 
 </manifest>
