@@ -32,8 +32,8 @@ return spell.init{
         end
 
         local fist = RPD.topEffect(caster:getPos(),"smash_fist")
-        fist:incY(10);
-        RPD.attachMoveTweener(fist, 0,0,1)
+        fist:incY(-30);
+        RPD.attachMoveTweener(fist, 0,30,0.5)
 
         local clip = RPD.bottomEffect(caster:getPos(),"smash_blast")
         clip:setScale(1.5,1.3)
@@ -51,7 +51,7 @@ return spell.init{
 	    RPD.playSound("smash.mp3")
         RPD.forCellsAround(caster:getPos(), smash)
 
-        caster:getSprite():jump(10)
+        caster:getSprite():jump(30)
 
         return true
     end
