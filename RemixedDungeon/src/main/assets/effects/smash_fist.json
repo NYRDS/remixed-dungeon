@@ -2,5 +2,5 @@
   "texture" : "effects/smash_fist.png",
   "width"  : 24,
   "height" : 24,
-  "anim"   : { "fps" : 30,  "looped" : false,    "frames" : [5,5,5,5,0,1,0,1,2,3,2,3,4] }
+  "anim"   : { "fps" : 15,  "looped" : false,    "frames" : [5,5,5,5,0,1,0,1,2,3,2,3,4] }
 }
