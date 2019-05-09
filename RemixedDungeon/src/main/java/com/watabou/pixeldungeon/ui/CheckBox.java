@@ -21,7 +21,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 
 public class CheckBox extends RedButton {
 
-	private boolean checked = false;
+	private boolean checked;
 	
 	public CheckBox( String label ) {
 		this(label,false);

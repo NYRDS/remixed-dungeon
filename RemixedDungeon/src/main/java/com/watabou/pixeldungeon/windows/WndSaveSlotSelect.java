@@ -19,6 +19,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.DonateButton;
@@ -306,7 +307,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                 SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
             } else {
                 if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
-                    int group = RemixedDungeonApp.getExperimentSegment("hqSaveAdsExperiment", 2);
+                    int group = RemixedDungeonApp.getExperimentSegment(EventCollector.SAVE_ADS_EXPERIMENT, 2);
                     if (group <= 0) {
                         return;
                     }
@@ -316,7 +317,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                             Iap iap = Game.instance().iap;
                             if (iap != null && iap.isReady() || BuildConfig.DEBUG) {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogShown");
-                                Game.scene().add(new WndDontLikeAds());
+                                Hero.doOnNextAction = () -> Game.scene().add(new WndDontLikeAds());
                             } else {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogNotShownIapNotReady");
                             }
