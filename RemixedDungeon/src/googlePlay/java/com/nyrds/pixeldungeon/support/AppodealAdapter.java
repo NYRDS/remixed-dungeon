@@ -20,13 +20,7 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 public class AppodealAdapter {
 
     public static boolean usable() {
-        switch (Build.VERSION.SDK_INT) {
-            case Build.VERSION_CODES.LOLLIPOP:
-            case Build.VERSION_CODES.LOLLIPOP_MR1:
-                return false;
-            default:
-                return true;
-        }
+        return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
     }
 
     public static void init() {

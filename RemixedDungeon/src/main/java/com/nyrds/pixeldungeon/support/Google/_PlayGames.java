@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -64,7 +65,6 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 	public _PlayGames(Activity ctx) {
 		activity = ctx;
 
-
 		googleApiClient = new GoogleApiClient.Builder(activity)
 				.addConnectionCallbacks(this)
 				.addOnConnectionFailedListener(this)
@@ -81,7 +81,7 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 	}
 
 	public static boolean usable() {
-		return true;
+		return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
 	}
 
 	public void connect() {

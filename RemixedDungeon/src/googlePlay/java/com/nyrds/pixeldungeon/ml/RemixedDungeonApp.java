@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
 
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -45,14 +46,15 @@ public class RemixedDungeonApp extends MultiDexApplication {
         Fabric.with(this, new Crashlytics());
         EventCollector.init();
 
-        //HQSdk.enableDebug(true);
+        if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
+            //HQSdk.enableDebug(true);
 
-        try {
-            HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false);
-        } catch (Throwable hqSdkCrash) {
-            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
+            try {
+                HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false);
+            } catch (Throwable hqSdkCrash) {
+                EventCollector.logException(new HqSdkCrash(hqSdkCrash));
+            }
         }
-
         try {
             Class.forName("android.os.AsyncTask");
         } catch (Throwable ignore) {
