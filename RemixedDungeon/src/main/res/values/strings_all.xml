@@ -413,17 +413,6 @@
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Welcome!</string>
 
-    <string name="Welcome_Text_28_1">
-    remix.28.1\n
-    - Big renovation of Town\n
-    - Lots of gfx improvements and fixes\n
-    - New darts and arrows\n
-    - Now all mob (except undeads) will regenerate\n
-    - Now strength will provide additional damage bonus for all classes\n
-    - Fortune Teller now owns a Cat\n
-    - Gnoll tomahawk will not break when thrown at a target\n
-    </string>
-
     <string name="Welcome_Text_28_2">
     remix.28.2\n
     - Gui refactoring:\n
@@ -3578,5 +3567,28 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndHero_Awareness">Awareness</string>
     <string name="WndHero_AttackSkill">Attack Skill</string>
     <string name="WndHero_DefenceSkill">Defence Skill</string>
+
+
+    <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Game Mechanics:\n
+    -- Warrior special abilities!\n
+    -- Heroes hunger reduced\n
+    -- Necromancer Possess spell\n
+    -- Rogue Cloak ability\n
+    -- New Badges\n
+    - Modding:\n
+    -- Custom scriptable Buffs\n
+    -- Custom gfx\n
+    </string>
+    <string name="Badges_GamesPlayed5">5000 games played</string>
+    <string name="Badges_PotionsCooked5">25 potions cooked</string>
+    <string name="Badges_ItemLvl5">Item of level 15 acquired</string>
+    <string name="Badges_FoodEaten5">60 pieces of food eaten</string>
+    <string name="Badges_StrengthAttained5">21 points of Strength attained</string>
+    <string name="Badges_LevelReached5">Level 30 reached</string>
+    <string name="Badges_GoldColleted5">35000 gold collected</string>
+    <string name="Badges_MonsterSlain5">1000 enemies slain</string>
+
 
 </resources>
