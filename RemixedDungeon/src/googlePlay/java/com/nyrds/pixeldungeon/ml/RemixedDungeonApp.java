@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -10,14 +9,10 @@ import androidx.multidex.MultiDexApplication;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
-
 import io.fabric.sdk.android.Fabric;
-import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
-import io.humanteq.hqsdkcore.HQSdk;
-import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
+//import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
+//import io.humanteq.hqsdkcore.HQSdk;
+//import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
 
 public class RemixedDungeonApp extends MultiDexApplication {
 
@@ -45,7 +40,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
         Fabric.with(this, new Crashlytics());
         EventCollector.init();
-
+/*
         if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
             //HQSdk.enableDebug(true);
 
@@ -55,6 +50,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
                 EventCollector.logException(new HqSdkCrash(hqSdkCrash));
             }
         }
+*/
         try {
             Class.forName("android.os.AsyncTask");
         } catch (Throwable ignore) {
@@ -68,6 +64,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
     }
 
     static public void startScene() {
+ /*
         try {
             if (HQSdk.getInstance() != null) {
 
@@ -91,9 +88,11 @@ public class RemixedDungeonApp extends MultiDexApplication {
         } catch (Throwable hqSdkCrash) {
             EventCollector.logException(new HqSdkCrash(hqSdkCrash));
         }
+*/
     }
 
     static public int getExperimentSegment(String key, int vars) {
+/*
         if (!HQSdk.isInitialized()) {
             EventCollector.logEvent("experiments", key, "hqApi not ready");
             return -1;
@@ -111,6 +110,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
             EventCollector.logException(new HqSdkCrash(hqSdkCrash));
         }
         EventCollector.logEvent("experiments", key, Integer.toString(-1));
+*/
         return -1;
     }
 
