@@ -1,0 +1,28 @@
+Ez egy nyílt forráskódú "rogue" szerű játék, pixel stílusú grafikával.
+
+Egyszer volt, hol nem volt, létezett egy kisváros. A helyiek boldogan éltek, de olyan szegények voltak, hogy még nyaralásra sem telt nekik. Aznap azonban, amikor mindenki felhagyott a reménnyel, csoda történt. A város alatt megremegett a föld, és számtalan undorító szörnyet köpött ki magából. Attól a naptól kezdve pedig boldogan éltek a helyiek. Miért? Mert a kripták mindenféle hősöket és kalandorokat vonzottak oda. Megvédték az ártatlanokat, és igen jó ügyfeleknek bizonyultak, felvirágoztatva a helyi gazdaságot.
+A kisváros most már virágkorát éli, ahogy egy veszélyes kripta tetején áll, melyet halott kalandorok és nyomorúságos lelkeik töltenek meg.
+
+Játék jellemzők:
+- Ez a játék támogatja a felhasználó-készítette mod-okat! És ahogy továbbfejlesztjük ezt a jellemzőt, hamarosan képes leszel egy teljesen új játékot csinálni a Remixed Pixel Dungeon -ban!
+- Nehéz, rogue-like játékélmény!
+- 7 választható karakterosztály
+- Központi város, mely felkészít az előtted álló útra, és bevezet a játék világába
+- Több mint 30 kripta szint, 6 kriptatípusra szétosztva
+ - 3 opcionális kripta: pókfészek, Nekropolisz, jégbarlang
+- Több tucat tárgy és szörny
+- Változatos főellenségek
+- Sapkák! Mindenki szereti őket, nemde?
+
+Kövess minket a Twitteren:
+https://twitter.com/nyrds
+
+Ez a játék egy nyitott forráskódú szoftver, melyet a GPLv3 licensz engedélyez. A Remixed Pixel Dungeon forráskódja itt található:
+https://github.com/NYRDS/remixed-dungeon
+
+Ha szeretnél részt venni a más nyelvekre való fordításban, kérlek látogasd meg:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Megnézheted a
+( http://wiki.nyrds.net/doku.php?id=rpd:changelog )-ot
+a teljes javítási naplóért a wiki oldalunkon.
