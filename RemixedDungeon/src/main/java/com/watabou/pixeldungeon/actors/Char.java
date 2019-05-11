@@ -937,7 +937,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void forEachBuff(BuffCallback cb) {
-		for(Buff b: buffs){
+	    Buff [] copyOfBuffsSet = buffs.toArray(new Buff[0]);
+		for(Buff b: copyOfBuffsSet){
 			cb.onBuff(b);
 		}
 	}
