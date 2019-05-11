@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import android.annotation.SuppressLint;
+
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModdingMode;
@@ -366,6 +368,7 @@ public abstract class Level implements Bundlable {
 
 	private int compassTarget = INVALID_CELL;	// Where compass should point
 
+	@SuppressLint("UseSparseArrays")
 	private HashMap<Integer, Integer> exitMap = new HashMap<>();
 
 	public String levelId;

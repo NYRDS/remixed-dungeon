@@ -20,7 +20,7 @@ public class SpiderServant extends MultiKindMob {
 		maxLvl = 9;
 
 		loot = new MysteryMeat();
-		lootChance = 0.067f;
+		lootChance = 0.03f;
 	}
 	
 	@Override
