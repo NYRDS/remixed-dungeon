@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -9,6 +10,7 @@ import com.watabou.pixeldungeon.actors.buffs.Speed;
 
 public class AmokArrow extends Arrow {
 
+	@LuaInterface
 	public AmokArrow() {
 		this( 1 );
 	}
