@@ -33,14 +33,14 @@ public class AppodealAdapter {
 
         String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
 
-        String disableNetworks[] = {AppodealNetworks.AMAZON_ADS,
-                                    AppodealNetworks.FACEBOOK,
-                                    AppodealNetworks.FLURRY,
-                                    AppodealNetworks.STARTAPP,
-                                    AppodealNetworks.MOPUB,
-                                    AppodealNetworks.MINTEGRAL,
-                                    AppodealNetworks.OGURY_PRESAGE,
-                                    AppodealNetworks.VUNGLE
+        String[] disableNetworks = {AppodealNetworks.AMAZON_ADS,
+                AppodealNetworks.FACEBOOK,
+                AppodealNetworks.FLURRY,
+                AppodealNetworks.STARTAPP,
+                AppodealNetworks.MOPUB,
+                AppodealNetworks.MINTEGRAL,
+                AppodealNetworks.OGURY_PRESAGE,
+                AppodealNetworks.VUNGLE
         };
 
         for (String net : disableNetworks) {
