@@ -8,7 +8,7 @@ local RPD = require "scripts/lib/commonClasses"
 
 local spell = require "scripts/lib/spell"
 
-local spellLevel = 1
+local spellLevel = 2
 
 return spell.init{
     desc  = function ()

@@ -17,7 +17,7 @@ return spell.init{
             info          = "DashSpell_Info",
             magicAffinity = "Combat",
             targetingType = "cell",
-            level         = 1,
+            level         = 3,
             spellCost     = 10,
             cooldown      = 30,
             castTime      = 0.5
