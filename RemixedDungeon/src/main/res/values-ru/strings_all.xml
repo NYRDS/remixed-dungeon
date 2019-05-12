@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Шлем Хаоса</string>
     <string name="ChaosHelmet_Info">Кроваво-красный шлем - неизменный атрибут воина хаоса.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: лимит призыва достигнут (Текущий максимум: %2$d)!</string>
     <string name="Mana_Title">Мана</string>
@@ -66,8 +65,6 @@
 
 
     <string name="Torch_Info2">Это незаменимая вещь в подземелье, что славится своим скудным освещением.</string>
-
-
 
     <string name="WndSpells_Title">Заклинания</string>
     <string name="WndSpells_Level">Уровень Магии: </string>
@@ -260,6 +257,8 @@
     <string name="WndPriest_Instruction2_f">Добро пожаловать, дщерь моя, в святую церковь великого Санты Повелителя Глубин.</string>
     <string name="WndPriest_Instruction2">Если тебе нужна помощь, то, за скромную сумму в %d золотых, я исцелю твои раны.\nА ежели ты в поисках святого Благословения, или же, Санта сохрани, тебя прокляли, повидайся с Епископом в нашей скромной церкви.</string>
 
+    <string name="WndDontLikeAds_NotThisTime">Не в этот раз</string>
+
     <string name="Item_Info2">нечто</string>
 
 
@@ -413,16 +412,6 @@
     <string name="StoneBlood_Buff">Каменная Кровь</string>
     <string name="Welcome_Ok">Ладушки!</string>
     <string name="Welcome_Title">Добро пожаловать!</string>
-
-    <string name="Welcome_Text_28_1">
-remix.28.1\n
-- Большое обновление города\n
-- Много графических улучшений и исправлений\n
-- Новые дротики и стрелы\n
-- Теперь все монстры(кроме нежити) регенерируют\n
-- Теперь сила увеличивает урон для всех классов\n
-- У гадалки появился кот\n
-- Гноллский томагавк больше не ломается при броске в цель\n</string>
 
     <string name="Welcome_Text_28_2">remix.28.2\n
 - Изменения интерфейса:\n
@@ -1673,7 +1662,7 @@ remix.28.1\n
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Name_Objective">заточённого кобольда</string>
     <string name="CagedKobold_Desc">Кобольд в клетке.</string>
-    <string name="CagedKobold_Intro">Эй... ЭЙ! Ты же этот самый... путешественник? Выручи меня, дружище, эти чёртовы милитаристы заперли меня! Они собираются реактивировать древнее орудие, чтобы завоевать этих... человеков на поверхности! Но это слишком опасно, и я выступил против, но и они просто вышвырнули меня и заперли в клетке! Прошу тебя отыщи ключ от клетки, в замен я помогу тебе в меру своих сил.</string>
+    <string name="CagedKobold_Intro">Эй... ЭЙ! Ты же этот самый... путешественник? Выручи меня, дружище, эти чёртовы милитаристы заперли меня! Они собираются реактивировать древнее орудие, чтобы завоевать этих... человеков на поверхности! Но это слишком опасно, и я выступил против, но и они просто вышвырнули меня и заперли в клетке! Прошу тебя отыщи ключ от клетки, взамен я помогу тебе в меру своих сил.</string>
     <string name="CagedKobold_Quest_End">О, спасибо тебе большое! Как ты смог отыскать ключ? Ты... ты уничтожил орудие?! Невероятно! Знаешь что, я обещал помочь, и я кое-что придумал. Пока всё не уляжется, я побуду у тебя. *Заточённый Кобольд превратился в свечу</string>
     <string name="CagedKobold_Message1">Прошу...</string>
     <string name="CagedKobold_Message2">Приятель, ты должен помочь мне</string>
@@ -2387,8 +2376,8 @@ remix.28.1\n
     <string name="Badges_LevelReached4">Уровень 24 достигнут</string>
     <string name="Badges_AllPotions">Все зелья распознаны</string>
     <string name="Badges_AllScrolls">Все свитки распознаны</string>
-    <string name="Badges_AllRings">Все кольца распознаны\"</string>
-    <string name="Badges_AllWands">Все палочки распознаны\"</string>
+    <string name="Badges_AllRings">Все кольца распознаны</string>
+    <string name="Badges_AllWands">Все палочки распознаны</string>
     <string name="Badges_AllItems">Все зелья, свитки, кольца и палочки распознаны</string>
 
 
@@ -2540,6 +2529,7 @@ remix.28.1\n
     <string name="Mods_AuthorEmail">Email автора:</string>
     <string name="Mods_RestartRequired">Нужен перезапуск</string>
 
+    <string name="Spells_NotTooFast">Ты пока не можешь применить %s</string>
     <string name="ElvenBow_Name">эльфийский лук</string>
     <string name="ElvenBow_Gender">masculine</string>
 
@@ -2659,6 +2649,18 @@ remix.28.1\n
         <item>Эта книга написана на языке демонов</item>
         <item>Эта книга написана на языке дворфов</item>
         <item>Эта книга написана на языке эльфов</item>
+
+        <item>She stopped, frozen, at the heavy oaken door, and eyed the light emerging from the door\'s borders. From some neglected corner of her mind, recognition.\n
+"Sunlight.." she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
+She remembered their voices, their commands, and their warnings, but not their faces, nor their touch.\n
+Pain had trained her. Remember the dangers, always the dangers. Rabid animals, undead, insane brigands, and cunning ninjas had fallen before her. She had cut, burned, stabbed, and poisoned her way through abominations, demons, clockwork abominations, and insane necromancers. Even Gods had fallen before her.\n
+She had tracked Yog through Heaven and Hell, before silencing his corrupting whispers forever. Even then, there was work to be done. Yog was a servant of one even more occult and powerful than himself.\n
+So she delved further, deeper. The old wizard\'s journal, still radiating power, had shown her the path. With the magic in it\'s pages, she traveled to a wild new land, a tiny village ensconced in a mighty forest. There, she finally tracked the evil to its labyrinthine source, and vanquished all who stood before her.\n
+Now, in the faint daylight, she examined herself in a pool of cavewater. Her body was warped almost beyond recognition by magic. Her skin, pale to he point of translucency, was caked with dirt, grime, and soot. Her necklace of rings could pay a kings ransom, and her holster of wands contained enough magical energy to lay waste to armies. She gripped her weapons, literally fine enough to cut down the very gods. Truly, she had become master of this dark realm, this wasteland of despair.\n
+She had chased evil to the far corners of the multiverse, but now she was paralyzed with fear. What if they reject her? What if they don\'t? How could she interact with these people anymore? Hell, she had lost count of the times death had claimed her, only to be pulled from its icy grasp.\n
+No, there was no place for her in the light, not anymore. She turned from the meager light, and descended into the dark, perhaps for the last time.\n
+\n\n\tby drazool from reddit
+</item>
     </string-array>
 
     <string name="WandOfShadowbolt_Name">Палочка теневой стрелы</string>
@@ -3539,5 +3541,66 @@ remix.28.1\n
     <string name="Potion_ArrowMoisten">Стрелы успешно смазаны.</string>
     <string name="Potion_ItemFliesAway">Предмет %s вырвался из рук и улетел.</string>
     <string name="Potion_FoodRefreshed">%s теперь выглядит свежим</string>
+
+
+    <string name="KindOfBow_SelectArrowKind">Какие стрелы мне использовать?</string>
+    <string name="KindOfBow_ChooseArrows">ВЫБРАТЬ СТРЕЛЫ</string>
+
+    <string name="BodyArmorSpell_Name">Тело-щит</string>
+    <string name="BodyArmorSpell_Info">Активирует скрытую энергию мышц, делая их крепче на некоторое время, повышая защиту ценой скорости передвижения.</string>
+
+    <string name="BodyArmorBuff_Name">Тело-щит</string>
+    <string name="BodyArmorBuff_Info">Броня улучшена за счет скорости ходьбы</string>
+
+    <string name="DieHardSpell_Name">Крепкий Орешек</string>
+    <string name="DieHardSpell_Info">Временно повышает регенерацию делая тебя настоящим Крепким Орешком.</string>
+
+    <string name="DieHardBuff_Name">Крепкий Орешек</string>
+    <string name="DieHardBuff_Info">Скорость регенерации увеличена </string>
+
+    <string name="SmashSpell_Name">Сокрушительный Удар</string>
+    <string name="SmashSpell_Info">Прыгает вверх и с силой врезается в землю, временно оглушая противников вокруг, одновременно нанося физический урон.</string>
+    <string name="SmashSpell_NeedWeapon">Необходимо оружие для данного действия.</string>
+
+    <string name="DashSpell_Name">Рывок</string>
+    <string name="DashSpell_Info">Совершает рывок в указанном направлении, нанося урон и травму попавшемуся на пути противнику.</string>
+    <string name="DashSpell_OnSelf">Я не могу сделать рывок на месте.</string>
+    <string name="DashSpell_TooFar">Нельзя выполнить рывок так далеко.</string>
+
+    <string name="CloakSpell_Name">Укрытие</string>
+    <string name="CloakSpell_Info">Шагните в тень, чтобы остаться незамеченным. Значительно уменьшит ваши шансы быть обнаруженным. Не может быть использовано, когда рядом враги.</string>
+    <string name="CloakSpell_EnemiesNearby">Я не могу шагнуть в тень пока враги близко. </string>
+
+    <string name="CloakBuff_Name">Укрыт</string>
+    <string name="CloakBuff_Info">Укрыт в тени</string>
+
+    <string name="TitleScene_Mods">Моды</string>
+    <string name="WndHero_Stealth">Скрытность</string>
+    <string name="WndHero_Awareness">Внимательность</string>
+    <string name="WndHero_AttackSkill">Навыки Атаки</string>
+    <string name="WndHero_DefenceSkill">Навыки Защиты</string>
+
+
+    <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Игровые механики:\n
+    -- Способности Воина!\n
+    -- Герои теперь становятся голодными не так быстро\n
+    -- Заклятье Некроманта - Одержимость\n
+    -- Способность Вора - Плащ Тени\n
+    -- Новые значки\n
+    - Моддинг:\n
+    -- Кастомные баффы с поддержкой скриптов\n
+    -- Кастомные спецэффекты\n
+    </string>
+    <string name="Badges_GamesPlayed5">5000 игр сыграно</string>
+    <string name="Badges_PotionsCooked5">25 зелий изготовлено</string>
+    <string name="Badges_ItemLvl5">Получен предмет 15 уровня</string>
+    <string name="Badges_FoodEaten5">60 порций пищи съедено</string>
+    <string name="Badges_StrengthAttained5">21 очко Силы достигнуто</string>
+    <string name="Badges_LevelReached5">Уровень 30 достигнут</string>
+    <string name="Badges_GoldColleted5">35000 золота собрано</string>
+    <string name="Badges_MonsterSlain5">1000 врагов побеждено</string>
+
 
 </resources>
