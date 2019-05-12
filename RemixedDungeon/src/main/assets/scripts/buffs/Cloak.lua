@@ -29,6 +29,6 @@ return buff.init{
     end,
 
     stealthBonus = function(self,buff)
-        return 10
+        return buff.target:skillLevel()
     end
 }

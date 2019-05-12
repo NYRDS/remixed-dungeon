@@ -18,13 +18,13 @@ return spell.init{
             magicAffinity = "Rogue",
             targetingType = "self",
             level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            spellCost     = 5,
+            cooldown      = 20,
             castTime      = 0.5
         }
     end,
     cast = function(self, spell, caster, cell)
-        local duration = 20 --caster:skillLevel() * 20
+        local duration = caster:skillLevel() * 5
 
         if caster:visibleEnemies() > 0 then
             RPD.glogn("CloakSpell_EnemiesNearby")
