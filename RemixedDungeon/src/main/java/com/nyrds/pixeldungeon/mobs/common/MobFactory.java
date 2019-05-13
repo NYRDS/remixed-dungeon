@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.IceElemental;
@@ -227,9 +228,9 @@ public class MobFactory {
 		try {
 			return Random.element(mMobsList.values()).newInstance();
 		} catch (InstantiationException e) {
-			e.printStackTrace();
+			EventCollector.logException(e);
 		} catch (IllegalAccessException e) {
-			e.printStackTrace();
+			EventCollector.logException(e);
 		}
 		return null;
 	}

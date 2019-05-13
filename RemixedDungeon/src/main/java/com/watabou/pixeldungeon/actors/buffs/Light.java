@@ -32,7 +32,7 @@ public class Light extends FlavourBuff {
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
 			// When a level is loading, do nothing
-			if (Dungeon.isLoading()) {
+			if (!Dungeon.isLoading()) {
 				target.viewDistance = Dungeon.level.getMaxViewDistance();
 				Dungeon.observe();
 			}

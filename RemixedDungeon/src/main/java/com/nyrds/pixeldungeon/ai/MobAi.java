@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ai;
 
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -126,9 +127,9 @@ public abstract class MobAi implements AiState {
         try {
             aiStateInstances.put(stateClass.getSimpleName().toUpperCase(Locale.ROOT), stateClass.newInstance());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 

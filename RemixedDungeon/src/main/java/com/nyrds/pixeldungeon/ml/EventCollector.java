@@ -9,7 +9,10 @@ import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.utils.Utils;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -89,6 +92,13 @@ public class EventCollector {
 			StackTraceElement [] stackTraceElements = e.getStackTrace();
 			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,level,stackTraceElements.length));
 			Crashlytics.logException(e);
+
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			PrintStream ps = new PrintStream(baos);
+			e.printStackTrace(ps);
+			ps.close();
+
+			Crashlytics.log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
 		}
 	}
 
