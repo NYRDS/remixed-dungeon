@@ -315,7 +315,7 @@ public class Badges {
 	public static void validateMonstersSlain() {
 		Badge []badges = {Badge.MONSTERS_SLAIN_1,Badge.MONSTERS_SLAIN_2,Badge.MONSTERS_SLAIN_3,Badge.MONSTERS_SLAIN_4,Badge.MONSTERS_SLAIN_5};
 		int []limits = {10, 50, 150, 250, 1000};
-		Badge badge = awardBadge(badges, limits, Statistics.goldCollected);
+		Badge badge = awardBadge(badges, limits, Statistics.enemiesSlain);
 
 		displayBadge(badge);
 	}
