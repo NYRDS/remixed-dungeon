@@ -1410,7 +1410,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public void remove(Buff buff) {
+	public void remove(@Nullable Buff buff) {
 		super.remove(buff);
 
 		BuffIndicator.refreshHero();

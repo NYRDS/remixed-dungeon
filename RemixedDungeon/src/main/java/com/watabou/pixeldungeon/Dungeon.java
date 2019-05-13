@@ -563,9 +563,11 @@ public class Dungeon {
     }
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
+        loading = true;
         Bundle bundle = gameBundle(fileName);
 
         loadGameFromBundle(bundle, fullLoad);
+        loading = false;
     }
 
     public static Level loadLevel(Position next) throws IOException {
@@ -823,7 +825,7 @@ public class Dungeon {
     }
 
     public static boolean isLoading() {
-        return level == null || loading;
+        return hero==null || level == null || loading;
     }
 
     public static boolean realtime() {

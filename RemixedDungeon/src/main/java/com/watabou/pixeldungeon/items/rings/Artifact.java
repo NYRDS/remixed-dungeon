@@ -16,6 +16,8 @@ import java.util.ArrayList;
 public class Artifact extends EquipableItem {
 
 	private static final float TIME_TO_EQUIP = 1f;
+
+	@Nullable
 	protected ArtifactBuff buff;
 
 	@Override
@@ -63,8 +65,10 @@ public class Artifact extends EquipableItem {
 				}
 			}
 
-			hero.remove(buff);
-			buff = null;
+			if(buff!=null) {
+				hero.remove(buff);
+				buff = null;
+			}
 
 			return true;
 		} else {

@@ -69,6 +69,7 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -556,12 +557,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		buff.attachVisual();
 	}
 
-	public void remove(Buff buff) {
+	public void remove(@Nullable Buff buff) {
 
 		buffs.remove(buff);
 		Actor.remove(buff);
 
-		getSprite().remove(buff.charSpriteStatus());
+		if(buff!=null) {
+			getSprite().remove(buff.charSpriteStatus());
+		}
 	}
 
     public boolean isStarving() {
