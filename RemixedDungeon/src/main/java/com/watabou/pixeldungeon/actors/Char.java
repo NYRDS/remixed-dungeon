@@ -562,8 +562,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		buffs.remove(buff);
 		Actor.remove(buff);
 
-		if(buff!=null) {
-			getSprite().remove(buff.charSpriteStatus());
+		if(buff!=null && sprite != null) {
+			sprite.remove(buff.charSpriteStatus());
 		}
 	}
 
