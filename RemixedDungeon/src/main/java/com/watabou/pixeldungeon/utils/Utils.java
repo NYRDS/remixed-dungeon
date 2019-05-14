@@ -53,6 +53,7 @@ public class Utils {
         return String.format(Locale.ENGLISH, Game.getVar(StringFormatId), args);
     }
 
+    @Deprecated
     public static String format(String format, Object... args) {
         return String.format(Locale.ENGLISH, format, args);
     }

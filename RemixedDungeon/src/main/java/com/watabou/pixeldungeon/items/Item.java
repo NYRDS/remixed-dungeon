@@ -582,7 +582,6 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		int level = itemDesc.optInt("level",0);
 
-
 		if(level>0) {
 			upgrade(level);
 		}
