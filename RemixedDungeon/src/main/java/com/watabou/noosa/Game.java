@@ -61,6 +61,7 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
@@ -78,6 +79,7 @@ import javax.microedition.khronos.opengles.GL10;
 @SuppressLint("Registered")
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
+    @SuppressLint("StaticFieldLeak")
     private static Game instance;
 
     // Actual size of the screen
@@ -174,7 +176,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
                 .getLaunchIntentForPackage(getBaseContext().getPackageName())
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        int piId = 123456;
+        int piId = Random.Int(Integer.MAX_VALUE);
+
         PendingIntent pi = PendingIntent.getActivity(getBaseContext(), piId, i, PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager mgr = (AlarmManager) getBaseContext().getSystemService(ContextWrapper.ALARM_SERVICE);
         mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pi);
