@@ -340,16 +340,7 @@
     <string name="Welcome_Ok">¡Muy bien!</string>
     <string name="Welcome_Title">¡Bienvenido!</string>
 
-    <string name="Welcome_Text_28_1">
-    remix.28.1\n
-    - Gran renovación del Pueblo\n
-    - Numerosas mejoras y correcciones en los gfx\n
-    - Nuevos dardos y flechas\n
-    - Ahora todos las criaturas (excepto los no muertos) se regeneraran\n
-    - Ahora la fuerza proporciona una daño adicional para todas\n
-    - La adivina ahora tiene una gata\n
-    - El tomahawk gnoll ya no se romperá al ser lanzado\n
-    </string>
+
 
     <string name="Welcome_Text_28_2">
     remix.28.2\n

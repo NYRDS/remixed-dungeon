@@ -340,16 +340,7 @@
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Herzlich willkommen!</string>
 
-    <string name="Welcome_Text_28_1">
-remix.28.1\n
-- Große Renovierung in der Stadt\n
-- Viele verbesserte Grafiken und Fehlerbehebungen\n
-Neue Darts und Pfeile\n
-- Jetzt werden alle Gegner (außer Untote) regenerieren\n
-- Stärke bietet jetzt zusätzlichen Schaden für alle Klassen\n
-- Die Wahrsagerin besitzt jetzt eine Katze\n
-- Das Gnoll-Tomahawk zerbricht nicht, wenn es auf ein Ziel geworfen wird\n
-</string>
+
 
     <string name="Welcome_Text_28_2">
 remix.28.2\n

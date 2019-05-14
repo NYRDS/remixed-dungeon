@@ -340,15 +340,7 @@
     <string name="Welcome_Ok">알겠습니다!</string>
     <string name="Welcome_Title">환영합니다!</string>
 
-    <string name="Welcome_Text_28_1">
- remix.28.1\n
- - 마을의 대수정\n
- - 많은 gfx 증진과 수정 \n
- - 새 다트와 화살 \n
- - 모든 몬스터들(언데드 제외)이 재생될 것임 \n
- - 이제 힘은 모든 클래스에게 추가적인 데미지를 제공해 줌\n
- -예언가가 이제 고양이를 기름  \n
- - 놀 토마호크가 타겟에게 던져져도 망가지지 않게 됨 \n</string>
+
 
     <string name="Welcome_Text_28_2">
  remix.28.2\n
