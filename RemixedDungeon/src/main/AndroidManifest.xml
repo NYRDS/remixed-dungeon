@@ -30,7 +30,7 @@
         android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
         tools:ignore="GoogleAppIndexingWarning"
         android:networkSecurityConfig="@xml/network_security_config"
-        >
+        android:fullBackupContent="@xml/backup_descriptor">
 
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
@@ -52,7 +52,8 @@
 
 
         <receiver android:name="com.nyrds.pixeldungeon.support.GooglePlayReferrer"
-            android:enabled="true">
+            android:enabled="true"
+            android:permission="">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>

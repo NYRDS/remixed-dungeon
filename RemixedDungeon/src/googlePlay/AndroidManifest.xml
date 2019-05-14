@@ -3,7 +3,8 @@
           xmlns:tools="http://schemas.android.com/tools"
 >
 
-    <application android:allowBackup="true">
+    <application android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor">
         <activity android:name="com.appodeal.ads.InterstitialActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
