@@ -214,11 +214,11 @@ public class Ring extends Artifact implements UnknownItem{
 		
 		@Override
 		public boolean act() {
-			
+
 			if (!isIdentified() && --ticksToKnow <= 0) {
-				String gemName = name();
+				String gemName = Ring.this.name();
 				identify();
-				GLog.w( Game.getVar(R.string.Ring_Identify), gemName, Ring.this.toString() );
+				GLog.w( Game.getVar(R.string.Ring_Identify), gemName, Ring.this.trueName() );
 				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			

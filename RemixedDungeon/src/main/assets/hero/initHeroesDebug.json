@@ -33,7 +33,8 @@
         "quantity": 100
       },
       {
-        "kind": "PotionOfLevitation"
+        "kind": "RingOfHaste",
+        "level": 5
       },
       {
         "kind": "CandyOfDeath",
