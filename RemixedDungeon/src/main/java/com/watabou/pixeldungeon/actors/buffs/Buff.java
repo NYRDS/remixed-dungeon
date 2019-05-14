@@ -53,7 +53,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
 	@Override
 	public String name() {
-		return toString();
+		return getEntityKind();
 	}
 
 	public void attachVisual() {
