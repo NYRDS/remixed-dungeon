@@ -33,7 +33,7 @@ import java.util.Date;
 
 public class GLog {
 
-	public static final String RE_PD_LOG_FILE_LOG = "RePdLogFile.log";
+	private static final String RE_PD_LOG_FILE_LOG = "RePdLogFile.log";
 
 	private static final String TAG = "GAME";
 	
@@ -58,6 +58,7 @@ public class GLog {
 			
 			if(logFile.length() > 1024*1024) {
 				try {
+					logFile.delete();
 					logFile.createNewFile();
 				} catch (IOException e) {
 					readonlySd = true;
@@ -89,13 +90,10 @@ public class GLog {
 			readonlySd = true;
 		}
 	}
-	
-	public static void i( String text, Object... args ) {
-		
+
+	private static void glog( String text, Object... args ) {
 		if (args.length > 0) {
 			text = Utils.format( text, args );
-		} else {
-			text = StringsManager.maybeId(text);
 		}
 
 		if(text.isEmpty()) {
@@ -110,26 +108,30 @@ public class GLog {
 		Game.pushUiTask(() -> update.dispatch(finalText)
 		);
 	}
+
+	public static void i( String text, Object... args ) {
+		glog(StringsManager.maybeId(text), args);
+	}
 	
 	public static void p( String text, Object... args ) {
-		i( POSITIVE + StringsManager.maybeId(text), args );
+		glog( POSITIVE + StringsManager.maybeId(text), args );
 	}
 	
 	public static void n( String text, Object... args ) {
-		i( NEGATIVE + StringsManager.maybeId(text), args );
+		glog( NEGATIVE + StringsManager.maybeId(text), args );
 	}
 	
 	public static void w( String text, Object... args ) {
-		i( WARNING + StringsManager.maybeId(text), args );
+		glog( WARNING + StringsManager.maybeId(text), args );
 	}
 	
 	public static void h( String text, Object... args ) {
-		i( HIGHLIGHT + StringsManager.maybeId(text), args );
+		glog( HIGHLIGHT + StringsManager.maybeId(text), args );
 	}
 
 	public static void debug( String text, Object... args ) {
 		if(BuildConfig.DEBUG) {
-			i(text, args);
+			glog(text, args);
 		}
 	}
 
