@@ -9,6 +9,7 @@ import androidx.multidex.MultiDexApplication;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -80,6 +81,9 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
                     @Override
                     public void onSuccess(List<String> strings) {
+                        for(String group:strings) {
+                            GLog.debug("HQ:"+group);
+                        }
                     }
 
                     @Override
