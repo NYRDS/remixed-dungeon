@@ -14,10 +14,6 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
     private static InterstitialPoint returnTo;
     private static boolean firstLoad = true;
 
-    static {
-        init();
-    }
-
     public static void init() {
 
         Game.instance().runOnUiThread(() -> {

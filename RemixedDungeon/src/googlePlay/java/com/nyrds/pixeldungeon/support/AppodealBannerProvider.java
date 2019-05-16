@@ -10,12 +10,9 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
     private BannerView adView;
 
-    static {
-        AppodealAdapter.init();
-    }
-
     @Override
     public void displayBanner() {
+        AppodealAdapter.init();
 
         Appodeal.setBannerCallbacks(new AppodealBannerCallbacks());
 

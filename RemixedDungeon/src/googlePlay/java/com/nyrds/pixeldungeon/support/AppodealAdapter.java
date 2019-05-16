@@ -24,14 +24,19 @@ public class AppodealAdapter {
     }
 
     public static void init() {
-        final int toInitialize = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
-        final int toCache = Appodeal.INTERSTITIAL | Appodeal.BANNER;
 
         if (Appodeal.isInitialized(Appodeal.BANNER)) {
             return;
         }
 
+        final int toInitialize = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
+        final int toCache = Appodeal.INTERSTITIAL | Appodeal.BANNER;
+
         String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
+
+        if(appKey.isEmpty()) {
+            return;
+        }
 
         String[] disableNetworks = {AppodealNetworks.AMAZON_ADS,
                 AppodealNetworks.FACEBOOK,
