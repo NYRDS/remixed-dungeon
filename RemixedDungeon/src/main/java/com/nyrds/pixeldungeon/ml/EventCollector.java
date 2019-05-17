@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.ml;
 
-import android.os.Build;
 import android.os.Bundle;
 
 import com.crashlytics.android.Crashlytics;
@@ -29,12 +28,13 @@ public class EventCollector {
 	static private HashMap<String,Trace> timings = new HashMap<>();
 
 	private static boolean analyticsUsable() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0 && (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN);
+		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
 	}
 
 	static public void init() {
 	    if(analyticsUsable()) {
             mFirebaseAnalytics = FirebaseAnalytics.getInstance(RemixedDungeonApp.getContext());
+            mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
             mDisabled = false;
         }
 	}

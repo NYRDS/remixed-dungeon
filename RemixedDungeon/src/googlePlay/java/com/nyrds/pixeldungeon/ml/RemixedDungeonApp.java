@@ -41,14 +41,18 @@ public class RemixedDungeonApp extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
 
-        instanceContext = getApplicationContext();
-        FirebaseApp.initializeApp(this);
 
-        Fabric.with(this, new Crashlytics());
-        EventCollector.init();
+        instanceContext = getApplicationContext();
+
+        if(!instanceContext.getResources().getString(R.string.fabric_api_key).isEmpty()) {
+            FirebaseApp.initializeApp(this);
+
+            Fabric.with(this, new Crashlytics());
+            EventCollector.init();
+        }
 
         if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
-            //HQSdk.enableDebug(true);
+            HQSdk.enableDebug(true);
 
             try {
                 HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false);
