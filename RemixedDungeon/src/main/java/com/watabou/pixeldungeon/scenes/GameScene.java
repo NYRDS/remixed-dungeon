@@ -158,7 +158,7 @@ public class GameScene extends PixelScene {
 
         Level level = Dungeon.level;
 
-        RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().ordinal());
+        RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().classIndex());
 
         super.create();
 

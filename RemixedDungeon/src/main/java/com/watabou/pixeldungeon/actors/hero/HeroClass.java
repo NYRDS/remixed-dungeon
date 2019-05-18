@@ -346,4 +346,8 @@ public enum HeroClass implements CharModifier {
         return immunities;
     }
 
+
+    public int classIndex() {
+        return ordinal() - 1;
+    }
 }

@@ -414,7 +414,7 @@ public class StartScene extends PixelScene {
 
             this.cl = cl;
 
-            avatar.frame(cl.ordinal() * WIDTH, 0, WIDTH, HEIGHT);
+            avatar.frame(cl.classIndex() * WIDTH, 0, WIDTH, HEIGHT);
             avatar.Scale().set(SCALE);
 
             if (Badges.isUnlocked(cl.masteryBadge())) {
