@@ -54,24 +54,40 @@ public class Plant extends LevelObject {
 			Hero hero = (Hero) chr;
 			hero.interrupt();
 		}
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean interact(Char ch) {
 		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.WARDEN) {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
+
+			if (Dungeon.hero.subClass == HeroSubClass.WARDEN) {
+				if (Random.Int(5) == 0) {
+					ch.level().drop(Generator.random(Generator.Category.SEED),
+							pos).sprite.drop();
+				}
+				if (Random.Int(5) == 0) {
+					ch.level().drop(new Dewdrop(), pos).sprite.drop();
+				}
+			}
 		}
+
 		wither();
 
 		effect(pos, ch);
-		return false;
+		return true;
 	}
 
 
 	@Override
 	public void bump(Presser presser) {
-		super.bump(presser);
+		if(presser instanceof Char) {
+			interact((Char)presser);
+		} else {
+		    effect(getPos(),presser);
+            wither();
+        }
 	}
 
 	private void wither() {
@@ -80,16 +96,6 @@ public class Plant extends LevelObject {
 		sprite.kill();
 		if (Dungeon.visible[pos]) {
 			CellEmitter.get(pos).burst(LeafParticle.GENERAL, 6);
-		}
-
-		if (Dungeon.hero.subClass == HeroSubClass.WARDEN) {
-			if (Random.Int(5) == 0) {
-				Dungeon.level.drop(Generator.random(Generator.Category.SEED),
-						pos).sprite.drop();
-			}
-			if (Random.Int(5) == 0) {
-				Dungeon.level.drop(new Dewdrop(), pos).sprite.drop();
-			}
 		}
 	}
 
@@ -102,7 +108,7 @@ public class Plant extends LevelObject {
 		return Utils.getClassParam(this.getClass().getSimpleName(), "Name", Utils.EMPTY_STRING, true);
 	}
 
-	public void effect(int pos, Char ch) {
+	public void effect(int pos, Presser ch) {
 		
 	}
 

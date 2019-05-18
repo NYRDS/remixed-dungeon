@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
@@ -40,9 +41,9 @@ public class Sungrass extends Plant {
 		imageIndex = 4;
 	}
 
-	public void effect(int pos, Char ch) {
-		if (ch != null) {
-			Buff.affect(ch, Health.class);
+	public void effect(int pos, Presser ch) {
+		if (ch instanceof Char) {
+			Buff.affect((Char)(ch), Health.class);
 		}
 
 		if (Dungeon.visible[pos]) {

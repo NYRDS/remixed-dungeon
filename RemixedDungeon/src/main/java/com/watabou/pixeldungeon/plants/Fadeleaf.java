@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -39,20 +39,21 @@ public class Fadeleaf extends Plant {
 		imageIndex = 6;
 	}
 	
-	public void effect(int pos, Char ch) {
+	public void effect(int pos, Presser ch) {
+
 		if (ch instanceof Hero) {
 			Hero hero = (Hero)ch;
 			ScrollOfTeleportation.teleportHero( hero );
 			hero.spendAndNext(1);
 			hero.curAction = null;
 			
-		} else if (ch instanceof Mob && ch.isMovable()) {
-			
-			int newPos = Dungeon.level.randomRespawnCell();
-			if (Dungeon.level.cellValid(newPos)) {
-				ch.setPos(newPos);
-				ch.getSprite().place(ch.getPos());
-				ch.getSprite().setVisible(Dungeon.visible[pos]);
+		} else if (ch instanceof Mob && ((Mob)ch).isMovable()) {
+			Mob mob = (Mob)ch;
+			int newPos = mob.respawnCell(mob.level());
+			if (mob.level().cellValid(newPos)) {
+				mob.setPos(newPos);
+				mob.getSprite().place(mob.getPos());
+				mob.getSprite().setVisible(Dungeon.visible[pos]);
 			}
 		}
 		

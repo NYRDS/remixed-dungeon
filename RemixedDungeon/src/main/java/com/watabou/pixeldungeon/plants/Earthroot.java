@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -41,9 +42,10 @@ public class Earthroot extends Plant {
 		imageIndex = 5;
 	}
 
-	public void effect(int pos, Char ch) {
-		if (ch != null) {
-			Buff.affect(ch, Armor.class).level = ch.ht();
+	public void effect(int pos, Presser ch) {
+		if (ch instanceof Char) {
+			Char chr = (Char)ch;
+			Buff.affect(chr, Armor.class).level = chr.ht();
 		}
 
 		if (Dungeon.visible[pos]) {

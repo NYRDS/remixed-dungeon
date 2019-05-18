@@ -18,7 +18,7 @@ import org.json.JSONObject;
 public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLevel {
 
     @Packable
-    protected int pos = -1;
+    protected int pos = Level.INVALID_CELL;
 
     @Packable
     protected int layer = 0;

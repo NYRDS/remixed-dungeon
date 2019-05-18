@@ -29,20 +29,19 @@
         "quantity": 100
       },
       {
-        "kind": "ScrollOfMirrorImage",
-        "quantity": 100
+        "kind": "DewVial"
       },
       {
-        "kind": "RingOfHaste",
+        "kind": "Ankh",
         "level": 5
       },
       {
-        "kind": "CandyOfDeath",
+        "kind": "Firebloom.Seed",
         "quantity": 100
       }
     ],
     "str": 1500,
-    "hp": 20000,
+    "hp": 20,
     "sp" : 100,
     "sl" : 100,
     "magicAffinity": "Common"
