@@ -130,8 +130,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		actions.remove(AC_EQUIP);
 		actions.remove(AC_UNEQUIP);
 		
-		if (hero.heroClass == HeroClass.MAGE
-			|| hero.subClass == HeroSubClass.SHAMAN) {
+		if (hero.getHeroClass() == HeroClass.MAGE
+			|| hero.getSubClass() == HeroSubClass.SHAMAN) {
 			
 			if(hero.belongings.weapon == this) {
 				actions.add(AC_UNEQUIP); 
@@ -143,7 +143,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public boolean doUnequip(Hero hero, boolean collect) {
+	public boolean doUnequip(Char hero, boolean collect) {
 		onDetach();
 		return super.doUnequip(hero, collect);
 	}
@@ -259,8 +259,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	public String info() {
 		StringBuilder info = new StringBuilder(isKnown() ? desc()
 				: Utils.format(R.string.Wand_Wood, wood));
-		if (Dungeon.hero.heroClass == HeroClass.MAGE
-				|| Dungeon.hero.subClass == HeroSubClass.SHAMAN) {
+		if (Dungeon.hero.getHeroClass() == HeroClass.MAGE
+				|| Dungeon.hero.getSubClass() == HeroSubClass.SHAMAN) {
 			damageRoll(Dungeon.hero);
 			info.append("\n\n");
 			if (levelKnown) {
@@ -495,7 +495,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		}
 
 		protected void delay() {
-			float time2charge = ((Hero) target).heroClass == HeroClass.MAGE ? TIME_TO_CHARGE
+			float time2charge = ((Hero) target).getHeroClass() == HeroClass.MAGE ? TIME_TO_CHARGE
 					/ (float) Math.sqrt(1 + effectiveLevel())
 					: TIME_TO_CHARGE;
 			spend(time2charge);

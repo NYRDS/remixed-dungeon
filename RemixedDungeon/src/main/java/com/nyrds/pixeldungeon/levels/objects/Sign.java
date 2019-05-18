@@ -44,7 +44,7 @@ public class Sign extends LevelObject {
 
 	@Override
 	public boolean interact(Char hero) {
-		if(hero instanceof Hero && !((Hero) hero).heroClass.forbidden(CommonActions.AC_READ)) {
+		if(hero instanceof Hero && !((Hero) hero).getHeroClass().forbidden(CommonActions.AC_READ)) {
 			if (hero.hasBuff(Blindness.class )) {
 				GLog.w(Game.getVar(R.string.Codex_Blinded));
 			} else {

@@ -11,6 +11,9 @@ public interface CharModifier {
     int defenceProc(Char defender, Char enemy, int damage);
     int regenerationBonus();
     void charAct();
+
+    int dewBonus();
+
     Set<String> resistances();
     Set<String> immunities();
 

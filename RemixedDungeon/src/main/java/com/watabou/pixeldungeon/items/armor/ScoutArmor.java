@@ -17,7 +17,7 @@ public class ScoutArmor extends ElfArmor {
 
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.SCOUT) {
+		if (hero.getSubClass() == HeroSubClass.SCOUT) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.ElfArmor_NotElf) );

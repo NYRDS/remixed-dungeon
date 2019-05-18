@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.npc;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -59,7 +60,7 @@ public class NecromancerNPC extends ImmortalNPC {
 	}
 
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo(getPos(), hero.getPos());
 
 		if (!introduced) {

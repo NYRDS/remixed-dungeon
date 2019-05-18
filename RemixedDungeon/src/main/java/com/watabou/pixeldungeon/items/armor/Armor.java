@@ -114,7 +114,7 @@ public class Armor extends EquipableItem {
 				GLog.n( Game.getVar(R.string.Armor_EquipCursed), toString() );
 			}
 			
-			hero.updateLook();
+			hero.updateSprite();
 			
 			hero.spendAndNext( 2 * time2equip( hero ) );
 			return true;
@@ -128,16 +128,16 @@ public class Armor extends EquipableItem {
 	}
 	
 	@Override
-	protected float time2equip( Hero hero ) {
+	protected float time2equip(Char hero ) {
 		return hero.speed();
 	}
 	
 	@Override
-	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
+	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
 		if (super.doUnequip( hero, collect, single )) {
 			
-			hero.belongings.armor = null;
-			hero.updateLook();
+			hero.getBelongings().armor = null;
+			hero.updateSprite();
 			return true;
 		} else {
 			return false;

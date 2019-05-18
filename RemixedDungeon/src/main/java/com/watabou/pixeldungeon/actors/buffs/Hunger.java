@@ -110,7 +110,7 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 			}
 			
-			float step = hero.heroClass == HeroClass.ROGUE ? STEP * 1.2f : STEP;
+			float step = hero.getHeroClass() == HeroClass.ROGUE ? STEP * 1.2f : STEP;
 			spend( target.hasBuff( Shadows.class ) ? step * 1.5f : step );
 			
 		} else {

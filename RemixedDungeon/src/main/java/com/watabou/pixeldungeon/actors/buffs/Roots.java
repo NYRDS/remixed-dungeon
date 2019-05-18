@@ -34,7 +34,7 @@ public class Roots extends FlavourBuff {
 		}
 		
 		//FIX ME we must implement customizable Hero immunities
-		if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ELF){
+		if (target instanceof Hero && ((Hero) target).getHeroClass() == HeroClass.ELF){
 			return false;
 		}
 

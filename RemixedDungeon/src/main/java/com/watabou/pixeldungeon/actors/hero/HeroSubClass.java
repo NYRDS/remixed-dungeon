@@ -153,6 +153,17 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
+	public int dewBonus() {
+		switch (this) {
+			case WARDEN:
+			case SHAMAN:
+				return 1;
+			default:
+				return 0;
+		}
+	}
+
+	@Override
 	public Set<String> resistances() {
 		return resistances;
 	}

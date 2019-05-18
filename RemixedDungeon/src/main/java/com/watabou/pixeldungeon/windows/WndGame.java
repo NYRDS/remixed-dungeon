@@ -74,7 +74,7 @@ public class WndGame extends WndMenuCommon {
 
 		if (!Dungeon.hero.isAlive()) {
 
-			menuItems.add(new MenuButton(Game.getVar(R.string.WndGame_Start),Icons.get( Dungeon.hero.heroClass ) ) {
+			menuItems.add(new MenuButton(Game.getVar(R.string.WndGame_Start),Icons.get(Dungeon.hero.getHeroClass()) ) {
 				@Override
 				protected void onClick() {
 					Dungeon.hero = null;

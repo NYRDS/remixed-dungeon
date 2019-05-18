@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -36,7 +37,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 	}
 
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo(getPos(), hero.getPos());
 		if (Quest.completed) {
 			this.die(null);
@@ -45,7 +46,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 
 		if (Quest.given) {
 
-			Item item = hero.belongings.getItem(Candy.class);
+			Item item = hero.getBelongings().getItem(Candy.class);
 			if (item != null && item.quantity() == 5) {
 
 				item.removeItemFrom(Dungeon.hero);

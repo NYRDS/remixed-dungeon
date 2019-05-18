@@ -56,7 +56,7 @@ public class RogueArmor extends ClassArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.ROGUE) {
+		if (hero.getHeroClass() == HeroClass.ROGUE) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.RogueArmor_NotRogue) );

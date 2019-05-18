@@ -75,7 +75,7 @@ public class Lich extends Boss {
 
         lootChance = 1.f;
 
-        if ( Dungeon.hero.heroClass == HeroClass.NECROMANCER){
+        if ( Dungeon.hero.getHeroClass() == HeroClass.NECROMANCER){
             loot = new BlackSkullOfMastery();
         }
         else {

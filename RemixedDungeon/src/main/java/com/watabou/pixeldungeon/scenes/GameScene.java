@@ -158,7 +158,7 @@ public class GameScene extends PixelScene {
 
         Level level = Dungeon.level;
 
-        RemixedDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
+        RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().ordinal());
 
         super.create();
 
@@ -295,7 +295,7 @@ public class GameScene extends PixelScene {
 
         add(cellSelector = new CellSelector(baseTiles));
 
-        Dungeon.hero.updateLook();
+        Dungeon.hero.updateSprite();
 
         statusPane = new StatusPane(Dungeon.hero, level);
         statusPane.camera = uiCamera;

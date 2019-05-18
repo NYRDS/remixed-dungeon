@@ -60,7 +60,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.clear();
 		boolean drawHair = true;
 
-		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
+		String classDescriptor = hero.getHeroClass().toString()+"_"+ hero.getSubClass().toString();
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		String facialHairDescriptor = HERO_EMPTY_PNG;
 		String hairDescriptor = HERO_EMPTY_PNG;
@@ -148,15 +148,15 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			descriptor = "woman";
 		}
 
-		if(hero.subClass.equals(HeroSubClass.WARLOCK)) {
+		if(hero.getSubClass().equals(HeroSubClass.WARLOCK)) {
 			descriptor = "warlock";
 		}
 
-		if(hero.subClass.equals(HeroSubClass.LICH)) {
+		if(hero.getSubClass().equals(HeroSubClass.LICH)) {
 			descriptor = "lich";
 		}
 
-		if(hero.heroClass == HeroClass.GNOLL) {
+		if(hero.getHeroClass() == HeroClass.GNOLL) {
 			descriptor = "gnoll";
 		}
 

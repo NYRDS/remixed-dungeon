@@ -70,12 +70,12 @@ public class HighGrass {
 		int leaves = 4;
 		
 		// Barkskin
-		if (ch instanceof Hero && ((Hero)ch).subClass == HeroSubClass.WARDEN) {
+		if (ch instanceof Hero && ((Hero) ch).getSubClass() == HeroSubClass.WARDEN) {
 			Buff.affect( ch, Barkskin.class ).level( ch.ht() / 3 );
 			leaves = 8;
 		}
 		
-		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.SCOUT) {
+		if (ch instanceof Hero && ((Hero) ch).getSubClass() == HeroSubClass.SCOUT) {
 			Buff.prolong( ch, Invisibility.class, 5);
 			leaves = 2;
 		}

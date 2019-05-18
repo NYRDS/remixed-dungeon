@@ -59,6 +59,13 @@ public class Spell implements NamedEntityKind {
         if (chr instanceof Hero) {
             final Hero hero = (Hero) chr;
 
+            if(hero.getControlTarget().getId()!=hero.getId()) {
+                if(reallyCast) {
+                    GLog.w(Utils.format(R.string.Spells_NotInOwnBody, name));
+                }
+                return false;
+            }
+
             if (!hero.enoughSP(spellCost())) {
                 if(reallyCast) {
                     GLog.w(Utils.format(R.string.Spells_NotEnoughSP, name));

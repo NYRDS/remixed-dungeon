@@ -203,7 +203,7 @@ public class Ring extends Artifact implements UnknownItem{
 		@Override
 		public boolean attachTo( Char target ) {
 	
-			if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ROGUE && !isKnown()) {
+			if (target instanceof Hero && ((Hero) target).getHeroClass() == HeroClass.ROGUE && !isKnown()) {
 				setKnown();
 				GLog.i( Game.getVar(R.string.Ring_BuffKnown), name() );
 				Badges.validateItemLevelAcquired( Ring.this );

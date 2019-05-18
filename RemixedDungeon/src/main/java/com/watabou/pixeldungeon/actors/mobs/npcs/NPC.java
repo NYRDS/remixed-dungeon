@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
@@ -71,7 +70,7 @@ public abstract class NPC extends Mob {
 	}
 	
 	@Override
-	public boolean interact(final Hero hero){
+	public boolean interact(final Char hero){
 		swapPosition(hero);
 		return true;
 	}

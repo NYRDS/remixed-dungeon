@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -54,14 +55,14 @@ public class CagedKobold extends ImmortalNPC {
 	}
 
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		if(Quest.completed) {
 			return true;
 		}
 		if (Quest.given) {
 			
-			Item item = hero.belongings.getItem( IceKey.class );
+			Item item = hero.getBelongings().getItem( IceKey.class );
 			if (item != null) {
 
 				item.removeItemFrom(Dungeon.hero);

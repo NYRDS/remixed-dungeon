@@ -55,6 +55,7 @@ import java.util.Set;
 
 public enum HeroClass implements CharModifier {
 
+    NONE( null, ClassArmor.class),
     WARRIOR(R.string.HeroClass_War, WarriorArmor.class),
     MAGE(R.string.HeroClass_Mag, MageArmor.class),
     ROGUE(R.string.HeroClass_Rog, RogueArmor.class),
@@ -92,15 +93,15 @@ public enum HeroClass implements CharModifier {
     }
 
     public void initHero(Hero hero) {
-        hero.heroClass = this;
+        hero.setHeroClass(this);
         initCommon(hero);
-        initForClass(hero, hero.heroClass.name());
+        initForClass(hero, hero.getHeroClass().name());
 
         hero.setGender(getGender());
 
         if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
             {
-                if (hero.heroClass != HeroClass.NECROMANCER) {
+                if (hero.getHeroClass() != HeroClass.NECROMANCER) {
                     new TomeOfMastery().collect(hero);
                 }
             }
@@ -156,7 +157,7 @@ public enum HeroClass implements CharModifier {
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.spellUser = classDesc.optBoolean("isSpellUser", false);
-                hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
+                hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
                 hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
                 hero.setSoulPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", 0)));
@@ -322,6 +323,17 @@ public enum HeroClass implements CharModifier {
     @Override
     public void charAct() {
 
+    }
+
+    @Override
+    public int dewBonus() {
+        switch (this) {
+            case HUNTRESS:
+            case ELF:
+                return 1;
+            default:
+                return 0;
+        }
     }
 
     @Override

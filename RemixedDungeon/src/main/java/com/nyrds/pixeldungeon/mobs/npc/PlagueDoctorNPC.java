@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -21,7 +22,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 	}
 
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo(getPos(), hero.getPos());
 		if (Quest.completed) {
 			GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_After_Quest)));
@@ -30,7 +31,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 
 		if (Quest.given) {
 
-			Item item = hero.belongings.getItem(RatHide.class);
+			Item item = hero.getBelongings().getItem(RatHide.class);
 			if (item != null && item.quantity() >= 5) {
 				item.removeItemFrom(Dungeon.hero);
 

@@ -43,7 +43,7 @@ public class SpellHelper {
     }
 
     public static int iconIdByHero(Hero hero) {
-        return iconIdByAffinity(hero.heroClass.getMagicAffinity());
+        return iconIdByAffinity(hero.getHeroClass().getMagicAffinity());
     }
 
     public static String getMasteryTitleByAffinity(String affinity) {

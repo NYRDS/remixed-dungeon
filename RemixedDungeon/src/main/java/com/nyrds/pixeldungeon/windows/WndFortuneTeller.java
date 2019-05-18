@@ -4,7 +4,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
@@ -19,9 +19,9 @@ public class WndFortuneTeller extends WndQuest {
 	private static final int GOLD_COST  = 50;
 	private static int goldCost;
 
-	private Hero hero;
+	private Char hero;
 
-	static private String instructions(final Hero hero) {
+	static private String instructions(final Char hero) {
 		goldCost = (int) (GOLD_COST * Game.getDifficultyFactor());
 
 		if (hero.hasBuff(RingOfHaggler.Haggling.class ))
@@ -31,7 +31,7 @@ public class WndFortuneTeller extends WndQuest {
 		return Utils.format(Game.getVar(R.string.WndFortuneTeller_Instruction), goldCost);
 	}
 
-	public WndFortuneTeller(FortuneTellerNPC fortuneTellerNPC, final Hero hero) {
+	public WndFortuneTeller(FortuneTellerNPC fortuneTellerNPC, final Char hero) {
 
 		super(fortuneTellerNPC, instructions(hero));
 
@@ -44,7 +44,7 @@ public class WndFortuneTeller extends WndQuest {
 			protected void onClick() {
 				boolean hasTarget = false;
 
-				for (Item item : hero.belongings){
+				for (Item item : hero.getBelongings()){
 					if (!item.isIdentified()){
 						hasTarget = true;
 						break;

@@ -155,7 +155,7 @@ public class Accessory {
 
     public static void unequip() {
         Preferences.INSTANCE.put(Accessory.class.getSimpleName(), "");
-        Dungeon.hero.updateLook();
+        Dungeon.hero.updateSprite();
     }
 
     static public Accessory equipped() {

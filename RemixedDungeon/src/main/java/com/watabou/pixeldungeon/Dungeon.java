@@ -429,7 +429,7 @@ public class Dungeon {
                 Position current = currentPosition();
 
                 String saveToLevel = getLevelSaveFile(current);
-                String saveToGame = SaveUtils.gameFile(hero.heroClass);
+                String saveToGame = SaveUtils.gameFile(hero.getHeroClass());
 
                 saveGame(saveToGame);
                 saveLevel(saveToLevel);
@@ -439,7 +439,7 @@ public class Dungeon {
                 throw new TrackedRuntimeException("cannot write save", e);
             }
 
-            GamesInProgress.set(hero.heroClass, depth, hero.lvl());
+            GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
 
         } else if (WndResurrect.instance != null) {
 
@@ -453,7 +453,7 @@ public class Dungeon {
 
     @NotNull
     private static String getLevelSaveFile(Position current) {
-        return SaveUtils.depthFileForSave(hero.heroClass,
+        return SaveUtils.depthFileForSave(hero.getHeroClass(),
                 DungeonGenerator.getLevelDepth(current.levelId),
                 DungeonGenerator.getLevelKind(current.levelId),
                 current.levelId);

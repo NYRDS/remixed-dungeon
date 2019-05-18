@@ -11,7 +11,7 @@ import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.WndSurvey;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
@@ -33,7 +33,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
     @Nullable
     private JSONObject survey;
 
-    public boolean interact(Hero hero) {
+    public boolean interact(Char hero) {
 
         Game.scene().add(new WndOptions(this.name,
                 Game.getVar(R.string.SociologistNPC_Hi),

@@ -78,7 +78,6 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
@@ -147,8 +146,8 @@ public class Hero extends Char implements PetOwner {
 	@Nullable
 	static public Runnable doOnNextAction;
 
-	public HeroClass heroClass = HeroClass.ROGUE;
-	public HeroSubClass subClass = HeroSubClass.NONE;
+	private HeroClass heroClass = HeroClass.ROGUE;
+	private HeroSubClass subClass = HeroSubClass.NONE;
 
 	public boolean spellUser;
 
@@ -513,10 +512,10 @@ public class Hero extends Char implements PetOwner {
 		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1, -hasteLevel)));
 	}
 
+	@Override
 	public void spendAndNext(float time) {
 		busy();
-		spend(time);
-		next();
+		super.spendAndNext(time);
 	}
 
 	@Override
@@ -657,7 +656,7 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actInteract(CharAction.Interact action) {
 
-		Mob npc = action.npc;
+		Char npc = action.npc;
 
 		if (Dungeon.level.adjacent(getPos(), npc.getPos())) {
 
@@ -1258,12 +1257,10 @@ public class Hero extends Char implements PetOwner {
 
 			curAction = new CharAction.Cook(cell);
 
-		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
+		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null) {
 
-			Mob mob = (Mob) ch;
-
-			if (mob.friendly(getControlTarget())) {
-				curAction = new CharAction.Interact(mob);
+			if (ch.friendly(getControlTarget())) {
+				curAction = new CharAction.Interact(ch);
 			} else {
 				curAction = new CharAction.Attack(ch);
 			}
@@ -1698,14 +1695,6 @@ public class Hero extends Char implements PetOwner {
 		return smthFound;
 	}
 
-	public void spendGold(int spend) {
-
-		Gold gold = belongings.getItem(Gold.class);
-
-		gold.quantity(gold.quantity()-spend);
-    }
-
-
 	public void resurrect(int resetLevel) {
 		belongings.resurrect(resetLevel);
 
@@ -1850,11 +1839,31 @@ public class Hero extends Char implements PetOwner {
 		return awareness;
 	}
 
-	public interface Doom extends NamedEntityKind{
+	@Override
+    public HeroClass getHeroClass() {
+        return heroClass;
+    }
+
+    public void setHeroClass(HeroClass heroClass) {
+        this.heroClass = heroClass;
+    }
+
+    @Override
+    public HeroSubClass getSubClass() {
+        return subClass;
+    }
+
+    public void setSubClass(HeroSubClass subClass) {
+        this.subClass = subClass;
+    }
+
+    public interface Doom extends NamedEntityKind{
 		void onDeath();
 	}
 
-	public void updateLook() {
+	@Override
+	public void updateSprite() {
+		super.updateSprite();
 		getHeroSprite().heroUpdated(this);
 		readyAndIdle();
 	}

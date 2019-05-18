@@ -145,7 +145,7 @@ public class WndHats extends Window {
 
 					if (finalAccessory.haveIt()) {
 						finalAccessory.equip();
-						Dungeon.hero.updateLook();
+						Dungeon.hero.updateSprite();
 						onBackPressed();
 						return;
 					}

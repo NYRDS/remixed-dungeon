@@ -59,7 +59,7 @@ public class GnollArmor extends ClassArmor {
 
     @Override
     public boolean doEquip( Hero hero ) {
-        if (hero.heroClass == HeroClass.GNOLL) {
+        if (hero.getHeroClass() == HeroClass.GNOLL) {
             return super.doEquip( hero );
         } else {
             GLog.w( Game.getVar(R.string.GnollArmor_NotGnoll) );

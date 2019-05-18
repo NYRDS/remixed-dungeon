@@ -69,14 +69,14 @@ public class AzuterronNPC extends Shopkeeper {
 	}
 
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		if(Quest.completed) {
 			return super.interact(hero);
 		}
 		if (Quest.given) {
 			
-			Item item = hero.belongings.getItem( HeartOfDarkness.class );
+			Item item = hero.getBelongings().getItem( HeartOfDarkness.class );
 			if (item != null) {
 
 				item.removeItemFrom(Dungeon.hero);

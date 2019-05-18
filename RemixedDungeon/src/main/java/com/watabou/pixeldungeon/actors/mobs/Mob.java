@@ -65,8 +65,6 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -382,7 +380,7 @@ public abstract class Mob extends Char {
 	@Override
 	public int defenseProc(Char enemy, int damage) {
 		if (!enemySeen && enemy == Dungeon.hero
-				&& ((Hero) enemy).subClass == HeroSubClass.ASSASSIN) {
+				&& ((Hero) enemy).getSubClass() == HeroSubClass.ASSASSIN) {
 			damage += Random.Int(1, damage);
 			Wound.hit(this);
 		}
@@ -464,7 +462,7 @@ public abstract class Mob extends Char {
 
 		{
 			//TODO we should move this block out of Mob class ( in script for example )
-			if (hero.heroClass == HeroClass.NECROMANCER){
+			if (hero.getHeroClass() == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
 					if(hero.belongings.armor instanceof NecromancerRobe){
 						hero.accumulateSkillPoints();
@@ -491,7 +489,7 @@ public abstract class Mob extends Char {
 					Statistics.nightHunt = 0;
 				}
 
-				if (!(cause instanceof Mob) || hero.heroClass == HeroClass.NECROMANCER) {
+				if (!(cause instanceof Mob) || hero.getHeroClass() == HeroClass.NECROMANCER) {
 					if (hero.lvl() <= maxLvl && exp > 0) {
 						hero.earnExp(exp);
 					}
@@ -674,7 +672,7 @@ public abstract class Mob extends Char {
 		if(getEnemy() == chr) {return false;}
 
 		if(chr instanceof Hero) {
-			return isPet() || ((Hero)chr).heroClass.friendlyTo(getEntityKind());
+			return isPet() || ((Hero) chr).getHeroClass().friendlyTo(getEntityKind());
 		}
 
 		if(chr instanceof Mob) {
@@ -691,53 +689,24 @@ public abstract class Mob extends Char {
 		return true;
 	}
 
-	public boolean swapPosition(final Char chr) {
-
-		if(!walkingType.canSpawnAt(Dungeon.level,chr.getPos())) {
-			return false;
-		}
-
-		if(hasBuff(Roots.class)) {
-			return false;
-		}
-
-		int curPos = getPos();
-
-		moveSprite(getPos(), chr.getPos());
-		move(chr.getPos());
-
-		chr.getSprite().move(chr.getPos(), curPos);
-		chr.move(curPos);
-
-		ensureOpenDoor();
-
-		float timeToSwap = 1 / chr.speed();
-		chr.spend(timeToSwap);
-		spend(timeToSwap);
-		setState(MobAi.getStateByClass(Wandering.class));
-		return true;
-	}
-
-	private void ensureOpenDoor() {
-		if (level().map[getPos()] == Terrain.DOOR) {
-			Door.enter(getPos());
-		}
-	}
-
-	public boolean interact(Hero chr) {
+	public boolean interact(Char chr) {
 
 		if(runMobScript("onInteract", chr)) {
 			return true;
 		}
 
-		if (friendly(chr)) {
-			swapPosition(chr);
-			return true;
-		}
-
-		return false;
+		return super.interact(chr);
 	}
 
+
+	@Override
+	public boolean swapPosition(Char chr) {
+		if(super.swapPosition(chr)) {
+			setState(MobAi.getStateByClass(Wandering.class));
+			return true;
+		}
+		return false;
+	}
 
 	@NotNull
 	public Char getEnemy() {

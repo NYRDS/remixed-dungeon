@@ -102,7 +102,7 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		
 		if (!friendly(hero)) {

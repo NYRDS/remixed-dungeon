@@ -66,7 +66,7 @@ public class WndItem extends Window {
 		if (Dungeon.hero.isAlive() && owner != null) {
 			for (final String action:item.actions( Dungeon.hero )) {
 
-				if(Dungeon.hero.heroClass.forbidden(action)){
+				if(Dungeon.hero.getHeroClass().forbidden(action)){
 					continue;
 				}
 

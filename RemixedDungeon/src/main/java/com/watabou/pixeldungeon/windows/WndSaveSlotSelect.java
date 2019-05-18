@@ -111,7 +111,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                 buttons.add(btn);
 
                 if (Game.instance().playGames.isConnected()) {
-                    final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.heroClass.toString();
+                    final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.getHeroClass().toString();
 
                     if ((_saving && !options[index].isEmpty())
                             || (!_saving
@@ -124,7 +124,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                                 File slotDir = FileSystem.getInternalStorageFile(slotNameFromIndexAndMod(index));
                                 boolean res;
                                 if (_saving) {
-                                    res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, pathname -> SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.heroClass));
+                                    res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, pathname -> SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.getHeroClass()));
                                 } else {
                                     res = Game.instance().playGames.unpackSnapshotTo(snapshotId, slotDir);
                                 }
@@ -304,7 +304,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
         Game.pushUiTask(() -> {
             if (!saving) {
-                SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
+                SaveUtils.loadGame(slot, Dungeon.hero.getHeroClass());
             } else {
                 if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
                     int group = RemixedDungeonApp.getExperimentSegment(EventCollector.SAVE_ADS_EXPERIMENT, 2);

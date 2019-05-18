@@ -52,14 +52,14 @@ public class Artifact extends EquipableItem {
 	}
 
 	@Override
-	public boolean doUnequip(Hero hero, boolean collect, boolean single) {
+	public boolean doUnequip(Char hero, boolean collect, boolean single) {
 		if (super.doUnequip(hero, collect, single)) {
 
-			if (hero.belongings.ring1 == this) {
-				hero.belongings.ring1 = null;
+			if (hero.getBelongings().ring1 == this) {
+				hero.getBelongings().ring1 = null;
 			} else {
-				if (hero.belongings.ring2 == this) {
-					hero.belongings.ring2 = null;
+				if (hero.getBelongings().ring2 == this) {
+					hero.getBelongings().ring2 = null;
 				} else { //WTF??
 					throw new TrackedRuntimeException("trying unequip unequipped artifact");
 				}

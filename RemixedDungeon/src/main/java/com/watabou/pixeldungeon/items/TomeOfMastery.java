@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -51,8 +52,8 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	protected boolean givesMasteryTo(Hero hero) {
-		switch (hero.heroClass) {
+	protected boolean givesMasteryTo(Char hero) {
+		switch (hero.getHeroClass()) {
 			case NECROMANCER:
 			case GNOLL:
 				return false;
@@ -62,8 +63,8 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public boolean doPickUp( Hero hero ) {
-		if (Dungeon.hero.heroClass != HeroClass.NECROMANCER)
+	public boolean doPickUp(Char hero ) {
+		if (Dungeon.hero.getHeroClass() != HeroClass.NECROMANCER)
 		{
 			Badges.validateMastery();
 		}
@@ -79,7 +80,7 @@ public class TomeOfMastery extends MasteryItem {
 				return;
 			}
 
-			if(hero.subClass != HeroSubClass.NONE) {
+			if(hero.getSubClass() != HeroSubClass.NONE) {
 				GLog.w( Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen) );
 				return;
 			}
@@ -88,7 +89,7 @@ public class TomeOfMastery extends MasteryItem {
 			
 			HeroSubClass way1 = null;
 			HeroSubClass way2 = null;
-			switch (hero.heroClass) {
+			switch (hero.getHeroClass()) {
 			case WARRIOR:
 				way1 = HeroSubClass.GLADIATOR;
 				way2 = HeroSubClass.BERSERKER;

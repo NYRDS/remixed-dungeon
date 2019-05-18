@@ -351,7 +351,7 @@ public class Badges {
 	}
 
 	public static void validateStrengthAttained(Hero hero) {
-		if(hero.heroClass == HeroClass.GNOLL) {
+		if(hero.getHeroClass() == HeroClass.GNOLL) {
 			return;
 		}
 
@@ -573,7 +573,7 @@ public class Badges {
 		displayBadge(badge);
 
 		if (badge == Badge.BOSS_SLAIN_1) {
-			switch (Dungeon.hero.heroClass) {
+			switch (Dungeon.hero.getHeroClass()) {
 				case WARRIOR:
 					badge = Badge.BOSS_SLAIN_1_WARRIOR;
 					break;
@@ -618,7 +618,7 @@ public class Badges {
 				}
 			}
 		} else if (badge == Badge.BOSS_SLAIN_3) {
-			switch (Dungeon.hero.subClass) {
+			switch (Dungeon.hero.getSubClass()) {
 				case GLADIATOR:
 					badge = Badge.BOSS_SLAIN_3_GLADIATOR;
 					break;
@@ -686,7 +686,7 @@ public class Badges {
 	public static void validateMastery() {
 
 		Badge badge = null;
-		switch (Dungeon.hero.heroClass) {
+		switch (Dungeon.hero.getHeroClass()) {
 			case WARRIOR:
 				badge = Badge.MASTERY_WARRIOR;
 				break;
@@ -781,7 +781,7 @@ public class Badges {
 		Badge badge = Badge.VICTORY;
 		displayBadge(badge);
 
-		switch (Dungeon.hero.heroClass) {
+		switch (Dungeon.hero.getHeroClass()) {
 			case WARRIOR:
 				badge = Badge.VICTORY_WARRIOR;
 				break;

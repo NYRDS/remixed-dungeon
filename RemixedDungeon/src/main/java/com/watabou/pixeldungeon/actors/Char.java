@@ -46,11 +46,14 @@ import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
@@ -133,6 +136,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public int respawnCell(Level level) {
 		return walkingType.respawnCell(level);
+	}
+
+	public void spendAndNext(float time) {
+		spend(time);
+		next();
 	}
 
 	@Override
@@ -654,6 +662,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		next();
 	}
 
+	public void spendGold(int spend) {
+        Belongings belongings = getBelongings();
+        if(belongings!=null) {
+            Gold gold = belongings.getItem(Gold.class);
+            if(gold!=null) {
+                gold.quantity(gold.quantity()-spend);
+            }
+        }
+    }
+
 	public Set<String> resistances() {
 		HashSet<String> ret = new HashSet<>(resistances);
 
@@ -944,5 +962,57 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		for(Buff b: copyOfBuffsSet){
 			cb.onBuff(b);
 		}
+	}
+
+	public boolean swapPosition(final Char chr) {
+
+		if(!walkingType.canSpawnAt(level(),chr.getPos())) {
+			return false;
+		}
+
+		if(hasBuff(Roots.class)) {
+			return false;
+		}
+
+        moveSprite(getPos(), chr.getPos());
+		move(chr.getPos());
+
+		chr.getSprite().move(chr.getPos(), getPos());
+		chr.move(getPos());
+
+		ensureOpenDoor();
+
+		float timeToSwap = 1 / chr.speed();
+		chr.spend(timeToSwap);
+		spend(timeToSwap);
+
+		return true;
+	}
+
+	protected void ensureOpenDoor() {
+		if (level().map[getPos()] == Terrain.DOOR) {
+			Door.enter(getPos());
+		}
+	}
+
+	public boolean interact(Char chr) {
+		if (friendly(chr)) {
+			swapPosition(chr);
+			return true;
+		}
+
+		return false;
+	}
+
+	public String className() {
+		return name();
+	}
+
+	public HeroClass getHeroClass() {
+		return HeroClass.NONE;
+	}
+
+	public HeroSubClass getSubClass() {
+		return HeroSubClass.NONE;
 	}
 }

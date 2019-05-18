@@ -83,7 +83,7 @@ public class HuntressArmor extends ClassArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.HUNTRESS) {
+		if (hero.getHeroClass() == HeroClass.HUNTRESS) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.HuntressArmor_NotHuntress) );

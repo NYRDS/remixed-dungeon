@@ -118,8 +118,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return actions;
 	}
 
-	public boolean doPickUp(Hero hero) {
-		if (collect(hero.belongings.backpack)) {
+	public boolean doPickUp(Char hero) {
+		if (collect(hero.getBelongings().backpack)) {
 
 			GameScene.pickUp(this);
 			Sample.INSTANCE.play(Assets.SND_ITEM);
@@ -152,7 +152,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public void execute(Hero hero) {
-		if(hero.heroClass.forbidden(getDefaultAction())){
+		if(hero.getHeroClass().forbidden(getDefaultAction())){
 			setDefaultAction(AC_THROW);
 		}
 
@@ -658,7 +658,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			return;
 		}
 
-		if(hero.heroClass.forbidden(newDefaultAction)) {
+		if(hero.getHeroClass().forbidden(newDefaultAction)) {
 			newDefaultAction = AC_THROW;
 		}
 

@@ -115,7 +115,7 @@ public class SurfaceScene extends PixelScene {
 			window.add( patch );
 		}
 		
-		Avatar a = new Avatar( Dungeon.hero.heroClass );
+		Avatar a = new Avatar(Dungeon.hero.getHeroClass());
 		a.x = PixelScene.align( (WIDTH - a.width) / 2 );
 		a.y = HEIGHT - a.height + 1;
 		window.add( a );

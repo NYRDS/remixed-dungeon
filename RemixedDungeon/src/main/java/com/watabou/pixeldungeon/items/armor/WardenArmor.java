@@ -16,7 +16,7 @@ public class WardenArmor extends HuntressArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.WARDEN) {
+		if (hero.getSubClass() == HeroSubClass.WARDEN) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.HuntressArmor_NotHuntress) );

@@ -1330,7 +1330,7 @@ public abstract class Level implements Bundlable {
 					updateFovForObjectAt(mob.getPos());
 				}
 			} else if (c == Dungeon.hero
-					&& ((Hero) c).heroClass == HeroClass.HUNTRESS) {
+					&& ((Hero) c).getHeroClass() == HeroClass.HUNTRESS) {
 				for (Mob mob : mobs) {
 					int p = mob.getPos();
 					if (distance(c.getPos(), p) == 2) {
