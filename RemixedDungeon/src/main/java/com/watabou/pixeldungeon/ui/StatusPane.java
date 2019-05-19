@@ -215,6 +215,7 @@ public class StatusPane extends Component {
             remove(avatar);
             avatar = hero.getControlTarget().getSprite().avatar();
             add(avatar);
+            layout();
         }
 
         if (health == 0) {

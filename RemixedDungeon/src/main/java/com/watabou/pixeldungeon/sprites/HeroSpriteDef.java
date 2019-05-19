@@ -27,7 +27,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
 
     private static final int RUN_FRAMERATE = 20;
-    protected Image avatar;
+
 	protected Animation fly;
     private Tweener  jumpTweener;
     private Callback jumpCallback;

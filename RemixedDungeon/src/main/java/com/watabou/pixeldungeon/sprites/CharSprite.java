@@ -65,6 +65,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     private static final float MOVE_INTERVAL = 0.1f;
     private static final float FLASH_INTERVAL = 0.05f;
 
+    @Nullable
+    protected Image avatar;
+
     public enum State {
         NONE,BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
     }
@@ -501,9 +504,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public Image avatar() {
-        CompositeTextureImage avatar = new CompositeTextureImage(texture);
-        avatar.frame(idle.frames[0]);
-        avatar.addLayer(texture);
+        if(avatar == null) {
+            CompositeTextureImage newAvatar = new CompositeTextureImage(texture);
+            newAvatar.frame(idle.frames[0]);
+            newAvatar.addLayer(texture);
+            avatar = newAvatar;
+        }
         return avatar;
     }
 
