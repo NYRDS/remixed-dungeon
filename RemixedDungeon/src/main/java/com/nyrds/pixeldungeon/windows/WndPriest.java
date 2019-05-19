@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -38,8 +39,8 @@ public class WndPriest extends WndQuest {
 		RedButton btnHealHero = new RedButton(  Utils.format(R.string.WndPriest_Heal, goldCost) ) {
 			@Override
 			protected void onClick() {
-				Vector<Char> patients = new Vector<>();
-				patients.add(chr);
+				Vector<Integer> patients = new Vector<>();
+				patients.add(chr.getId());
 				doHeal(priest, chr, patients, goldCost);
 			}
 		};
@@ -53,14 +54,14 @@ public class WndPriest extends WndQuest {
 
 			Hero hero = (Hero) chr;
 
-			int minions = hero.getPets().size();
+			int minions = hero.countPets();
 
 			if (minions > 0) {
 				final int healAllMinionsCost = goldCostPerMinion * minions;
 				RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
 					@Override
 					protected void onClick() {
-						doHeal(priest, hero, hero.getPetsAsMobs(), healAllMinionsCost);
+						doHeal(priest, hero, hero.getPets(), healAllMinionsCost);
 					}
 				};
 
@@ -103,17 +104,20 @@ public class WndPriest extends WndQuest {
 		return Utils.format(instruction) +"\n"+ Utils.format(R.string.WndPriest_Instruction2, goldCost);
 	}
 
-	private void doHeal(HealerNPC priest, Char payer, Collection<? extends Char> patients, int healingCost) {
+	private void doHeal(HealerNPC priest, Char payer, Collection<Integer> patients, int healingCost) {
 		hide();
 		payer.spendGold(healingCost);
-		for(Char patient: patients) {
+		for(Integer patientId: patients) {
+
+			Char patient = CharsList.getById(patientId);
+
 			PotionOfHealing.heal(patient, 1.0f);
 			if(patient instanceof Hero) {
 				patient.buff(Hunger.class).satisfy(Hunger.STARVING);
 			}
 
 			if(patient instanceof Mob) {
-				if(((Mob) patient).getEntityKind().equals("Brute")) {
+				if(patient.getEntityKind().equals("Brute")) {
 					Badges.validateGnollUnlocked();
 				}
 			}

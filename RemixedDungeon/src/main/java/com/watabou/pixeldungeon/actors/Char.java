@@ -56,6 +56,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
@@ -75,6 +76,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -88,11 +90,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
-	@Packable
-    private int pos = 0;
+	@Packable(defaultValue = "-1")//Level.INVALID_CELL
+	public int pos = Level.INVALID_CELL;
 
-	@Packable
-	private int id = 0;
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	private int id = EntityIdSource.INVALID_ID;
 
 	public  Fraction fraction = Fraction.DUNGEON;
 
@@ -195,15 +197,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	protected void setupCharData() {
         ///freshly created char or pre 28.6 save
-        if(id==0) {
+        if(id==EntityIdSource.INVALID_ID) {
             id = EntityIdSource.getNextId();
             CharsList.add(this,id);
         }
 
-		fillClassParams();
-	}
-
-	protected void fillClassParams() {
 		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);
 		description = getClassParam("Desc", description, true);
@@ -1014,5 +1012,34 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public HeroSubClass getSubClass() {
 		return HeroSubClass.NONE;
+	}
+
+	public int countPets() {
+		int ret = 0;
+		for(Mob mob:level ().mobs) {
+			if(mob.getOwnerId()==getId()) {
+				ret++;
+			}
+		}
+		return ret;
+	}
+
+	@NotNull
+	public Collection<Integer> getPets() {
+		ArrayList<Integer> pets = new ArrayList<>();
+		for(Mob mob:level ().mobs) {
+			if(mob.getOwnerId()==getId()) {
+				pets.add(mob.getId());
+			}
+		}
+		return pets;
+	}
+
+	public void releasePets() {
+		for(Mob mob:level ().mobs) {
+			if(mob.getId()==getId()) {
+				mob.releasePet();
+			}
+		}
 	}
 }

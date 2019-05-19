@@ -204,12 +204,16 @@ public class StatusPane extends Component {
     public void update() {
         super.update();
 
-        float health = (float) hero.hp() / hero.ht();
-        float sPoints = (float) hero.getSkillPoints() / hero.getSkillPointsMax();
+        float health = (float) hero.getControlTarget().hp() / hero.getControlTarget().ht();
 
-        if(avatar!=hero.getHeroSprite().avatar()) {
+        float sPoints = 0;
+        if(hero.getControlTarget().getId() == hero.getId()) {
+            sPoints=(float) hero.getSkillPoints() / hero.getSkillPointsMax();
+        }
+
+        if(avatar!=hero.getControlTarget().getSprite().avatar()) {
             remove(avatar);
-            avatar = hero.getHeroSprite().avatar();
+            avatar = hero.getControlTarget().getSprite().avatar();
             add(avatar);
         }
 

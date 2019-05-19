@@ -254,8 +254,6 @@ public class GameScene extends PixelScene {
             }
         }
 
-        Dungeon.hero.updateSprite();
-
         add(emitters);
         add(effects);
 
@@ -294,8 +292,6 @@ public class GameScene extends PixelScene {
         add(new HealthIndicator());
 
         add(cellSelector = new CellSelector(baseTiles));
-
-        Dungeon.hero.updateSprite();
 
         statusPane = new StatusPane(Dungeon.hero, level);
         statusPane.camera = uiCamera;

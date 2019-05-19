@@ -226,7 +226,7 @@ public class StartScene extends PixelScene {
         add(btnExit);
 
         for (ClassShield shield : shields) {
-            if (shield.cl == HeroClass.values()[RemixedDungeon.lastClass()]) {
+            if (shield.cl.classIndex() == RemixedDungeon.lastClass()) {
                 updateShield(shield);
                 return;
             }

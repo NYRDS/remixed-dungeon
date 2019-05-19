@@ -108,6 +108,7 @@ public abstract class Mob extends Char {
 	protected int exp    = 1;
 	protected int maxLvl = 50;
 
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	protected int owner = -1;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -127,9 +128,18 @@ public abstract class Mob extends Char {
 		setupCharData();
 	}
 
+	public void releasePet() {
+		setFraction(Fraction.DUNGEON);
+		owner = EntityIdSource.INVALID_ID;
+	}
 
-	PetOwner getOwner() {
-		return ((PetOwner)CharsList.getById(owner));
+
+	public int getOwnerId() {
+		return owner;
+	}
+
+	Char getOwner() {
+		return CharsList.getById(owner);
 	}
 
 	@LuaInterface
@@ -143,7 +153,6 @@ public abstract class Mob extends Char {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
 			pet.owner = ownerId;
-			pet.getOwner().addPet(pet);
 		}
 		return pet;
 	}
@@ -151,14 +160,6 @@ public abstract class Mob extends Char {
 	@Override
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
 		return owner >= 0 && CharsList.getById(owner) instanceof Hero;
-	}
-
-	public static void releasePet(@NotNull Mob pet) {
-		pet.setFraction(Fraction.DUNGEON);
-		if(pet.owner>=0) {
-			pet.getOwner().removePet(pet);
-			pet.owner = -1;
-		}
 	}
 
 	public int getOwnerPos() {
@@ -497,10 +498,6 @@ public abstract class Mob extends Char {
 			}
 		}
 
-		if(owner>=0) {
-			getOwner().removePet(this);
-		}
-
 		super.die(cause);
 
 		Library.identify(Library.MOB, getEntityKind());
@@ -671,8 +668,12 @@ public abstract class Mob extends Char {
 
 		if(getEnemy() == chr) {return false;}
 
+		if(owner == chr.getId()) {
+			return true;
+		}
+
 		if(chr instanceof Hero) {
-			return isPet() || ((Hero) chr).getHeroClass().friendlyTo(getEntityKind());
+			return chr.getHeroClass().friendlyTo(getEntityKind());
 		}
 
 		if(chr instanceof Mob) {

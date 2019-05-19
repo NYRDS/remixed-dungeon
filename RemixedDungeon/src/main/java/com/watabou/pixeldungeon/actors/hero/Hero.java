@@ -68,7 +68,6 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.PetOwner;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
@@ -130,12 +129,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class Hero extends Char implements PetOwner {
+public class Hero extends Char {
 	private static final String TXT_EXP = "%+dEXP";
 
 	public static final int STARTING_STR = 10;
@@ -190,18 +188,6 @@ public class Hero extends Char implements PetOwner {
 	@Packable
 	public Position portalLevelPos;
 
-	@NotNull
-	private Collection<Integer> pets = new ArrayList<>();
-
-	@Override
-	public void removePet(Mob mob) {
-		pets.remove(mob.getId());
-	}
-
-	public void addPet(@NotNull Mob pet) {
-		pets.add(pet.getId());
-	}
-
 	private int difficulty;
 
 	public Hero() {
@@ -231,15 +217,6 @@ public class Hero extends Char implements PetOwner {
 		live();
 	}
 
-	@Override
-	protected void setupCharData() {
-		super.setupCharData();
-	}
-
-	@Override
-	protected void fillClassParams() {
-	}
-
 	public int effectiveSTR() {
 		int str = Scrambler.descramble(STR);
 
@@ -258,34 +235,10 @@ public class Hero extends Char implements PetOwner {
 	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
 	private static final String DIFFICULTY = "difficulty";
-	private static final String PETS = "pets";
 	private static final String SP = "sp";
 	private static final String MAX_SP = "maxsp";
 	private static final String IS_SPELL_USER = "isspelluser";
 	private static final String MAGIC_LEVEL = "magicLvl";
-
-	@Deprecated
-	private void refreshPets() {
-		ArrayList<Integer> alivePets = new ArrayList<>();
-		for (Integer petId : pets) {
-			Char maybePet = CharsList.getById(petId);
-
-			if (maybePet instanceof Mob && maybePet.isAlive() && maybePet.fraction() == Fraction.HEROES) {
-				alivePets.add(maybePet.getId());
-			}
-		}
-		pets = alivePets;
-	}
-
-	@NotNull
-	public Collection<Integer> getPets() {
-		refreshPets();
-		return pets;
-	}
-
-	public void releasePets() {
-		pets = new ArrayList<>();
-	}
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -301,7 +254,6 @@ public class Hero extends Char implements PetOwner {
 		bundle.put(DIFFICULTY, getDifficulty());
 
 
-		bundle.put(PETS, getPets().toArray(new Integer [0]));
 		bundle.put(SP, getSkillPoints());
 		bundle.put(MAX_SP, getSkillPointsMax());
 
@@ -329,16 +281,8 @@ public class Hero extends Char implements PetOwner {
 		setExp(bundle.getInt(EXPERIENCE));
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
-		pets.clear();
-
-		int []petsFromSave = bundle.getIntArray(PETS);
-
-		if(petsFromSave.length > 0) {
-			for(int petId :petsFromSave) {
-				pets.add(petId);
-			}
-		} else { // handle pre 28.6 saves
-			ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection(PETS, Mob.class));
+		{ // handle pre 28.6 saves
+			ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection("pets", Mob.class));
 
 			for (Mob pet : loadedPets) {
 				Mob.makePet(pet, getId());
@@ -859,8 +803,6 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actDescend(CharAction.Descend action) {
 
-		refreshPets();
-
 		int stairs = action.dst;
 		if (getPos() == stairs && Dungeon.level.isExit(getPos())) {
 
@@ -888,7 +830,6 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	private boolean actAscend(CharAction.Ascend action) {
-		refreshPets();
 
 		int stairs = action.dst;
 		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
@@ -1823,7 +1764,7 @@ public class Hero extends Char implements PetOwner {
 	public void setControlTarget(Char controlTarget) {
 		if(getControlTarget() instanceof Mob) {
 			Mob controlledMob = (Mob) getControlTarget();
-			Mob.releasePet(controlledMob);
+			controlledMob.releasePet();
 			controlledMob.setState(MobAi.getStateByClass(Sleeping.class));
 		}
 		Camera.main.focusOn(controlTarget.getSprite());
@@ -1962,16 +1903,6 @@ public class Hero extends Char implements PetOwner {
 			return heroClass.friendlyTo(mob.getEntityKind());
 		}
 		return super.friendly(chr);
-	}
-
-	@Deprecated
-	public Collection<Mob> getPetsAsMobs()
-	{
-		ArrayList<Mob> mobs = new ArrayList<>();
-		for(Integer petId:pets) {
-			mobs.add((Mob)CharsList.getById(petId));
-		}
-		return mobs;
 	}
 
 	@Override
