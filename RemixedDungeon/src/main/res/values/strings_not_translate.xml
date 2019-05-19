@@ -2,62 +2,62 @@
 <resources>
 
     <!-- GENERAL STRINGS VARIABLES -->
-    <string name="app_name">Remixed Dungeon</string>
+    <string name="app_name" translatable="false">Remixed Dungeon</string>
 
     <!-- STRINGS OF Assets CLASS -->
-    <string name="Assets_Prefix">""</string>
+    <string name="Assets_Prefix" translatable="false">""</string>
 
     <!-- PACKAGE /utils -->
     <!-- STRINGS OF Utils CLASS -->
     <!-- 1: Execute Indefinite Function to Language -->
     <!-- 0: NO Execute Indefinite Function to Language -->
-    <string name="Utils_IsIndefinte">0</string>
+    <string name="Utils_IsIndefinte" translatable="false">0</string>
 
-    <string name="Pet_Name"></string>
-    <string name="Pet_Name_Objective"></string>
-    <string name="Pet_Gender"></string>
-    <string name="Pet_Desc"></string>
+    <string name="Pet_Name" translatable="false"></string>
+    <string name="Pet_Name_Objective" translatable="false"></string>
+    <string name="Pet_Gender" translatable="false"></string>
+    <string name="Pet_Desc" translatable="false"></string>
     
-    <string name = "Mod_Name"></string>
-    <string name = "Mod_Description"></string>
-    <string name = "Mod_Author"></string>
-    <string name = "Mod_Email"></string>
-    <string name = "Mod_Link"></string>
+    <string name = "Mod_Name" translatable="false"></string>
+    <string name = "Mod_Description" translatable="false"></string>
+    <string name = "Mod_Author" translatable="false"></string>
+    <string name = "Mod_Email" translatable="false"></string>
+    <string name = "Mod_Link" translatable="false"></string>
 
 
-    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+    <string name="Mob_Yell" translatable="false">%1$s: \"%2$s\"</string>
 
-    <string name="AboutScene_Code_Names">Watabou &amp; NYRDS</string>
-    <string name="AboutScene_Graphics_Names">Watabou  &amp; NYRDS &amp; ThEnigma314 &amp; Pavel Provotorov</string>
-    <string name="AboutScene_Music_Names">Cube_Code &amp; Misaerit</string>
-    <string name="AboutScene_Sound_Names">Watabou &amp; Freesound.org (sonidotv, kantouth)</string>
-    <string name="AboutScene_Thanks_Names">rodriformiga for PD i18n code</string>
+    <string name="AboutScene_Code_Names" translatable="false">Watabou &amp; NYRDS</string>
+    <string name="AboutScene_Graphics_Names" translatable="false">Watabou  &amp; NYRDS &amp; ThEnigma314 &amp; Pavel Provotorov</string>
+    <string name="AboutScene_Music_Names" translatable="false">Cube_Code &amp; Misaerit</string>
+    <string name="AboutScene_Sound_Names" translatable="false">Watabou &amp; Freesound.org (sonidotv, kantouth)</string>
+    <string name="AboutScene_Thanks_Names" translatable="false">rodriformiga for PD i18n code</string>
 
-    <string name="AboutScene_Lnk">https://wiki.nyrds.net/</string>
-    <string name="AboutScene_Mail">nyrdsofficial@gmail.com</string>
+    <string name="AboutScene_Lnk" translatable="false">https://wiki.nyrds.net/</string>
+    <string name="AboutScene_Mail" translatable="false">nyrdsofficial@gmail.com</string>
 
 
-    <string name="WndSelectLanguage_TranslationLink">https://www.transifex.com/nyrds/remixed-dungeon/</string>
+    <string name="WndSelectLanguage_TranslationLink" translatable="false">https://www.transifex.com/nyrds/remixed-dungeon/</string>
 
 
     <!-- I needed that for testing-->
     <!-- STRINGS OF CandyOfDeath CLASS -->
-    <string name="CandyOfDeath_Name">Карамелька смерти</string>
-    <string name="CandyOfDeath_Info">Когда, не мудурствуя лукаво, нужно умертвить героя здесь и сейчас.</string>
+    <string name="CandyOfDeath_Name" translatable="false">Карамелька смерти</string>
+    <string name="CandyOfDeath_Info" translatable="false">Когда, не мудурствуя лукаво, нужно умертвить героя здесь и сейчас.</string>
 
-    <string name="TacticalCrossbow_Name">Tactical Crossbow</string>
-    <string name="TacticalCrossbow_Info">It just a crossbow, but tactical. Usable in melee. Fireproof. Tactical.</string>
+    <string name="TacticalCrossbow_Name" translatable="false">Tactical Crossbow</string>
+    <string name="TacticalCrossbow_Info" translatable="false">It just a crossbow, but tactical. Usable in melee. Fireproof. Tactical.</string>
 
-    <string name="town_deco_clock_name">Antique clock</string>
-    <string name="town_deco_clock_desc">It seems that this clock shows the wrong time</string>
-    <string name="town_deco_keyholder_name">Keyholder</string>
-    <string name="town_deco_keyholder_desc">You can see some keys on this keyholder</string>
-    <string name="town_deco_flowerinthepot_name">Flower in a pot</string>
-    <string name="town_deco_flowerinthepot_desc">Decorative flower with sweet flavor</string>
-    <string name="town_deco_journal_name">INN journal</string>
-    <string name="town_deco_journal_desc">You can see some records in it</string>
-    <string name="town_deco_bar_name">Bar</string>
-    <string name="town_deco_bar_desc">This bar contain some alcohol</string>
+    <string name="town_deco_clock_name" translatable="false">Antique clock</string>
+    <string name="town_deco_clock_desc" translatable="false">It seems that this clock shows the wrong time</string>
+    <string name="town_deco_keyholder_name" translatable="false">Keyholder</string>
+    <string name="town_deco_keyholder_desc" translatable="false">You can see some keys on this keyholder</string>
+    <string name="town_deco_flowerinthepot_name" translatable="false">Flower in a pot</string>
+    <string name="town_deco_flowerinthepot_desc" translatable="false">Decorative flower with sweet flavor</string>
+    <string name="town_deco_journal_name" translatable="false">INN journal</string>
+    <string name="town_deco_journal_desc" translatable="false">You can see some records in it</string>
+    <string name="town_deco_bar_name" translatable="false">Bar</string>
+    <string name="town_deco_bar_desc" translatable="false">This bar contain some alcohol</string>
 
 
 </resources>

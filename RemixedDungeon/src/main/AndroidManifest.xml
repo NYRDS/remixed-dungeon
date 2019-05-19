@@ -52,8 +52,7 @@
 
 
         <receiver android:name="com.nyrds.pixeldungeon.support.GooglePlayReferrer"
-            android:enabled="true"
-            android:permission="">
+            android:enabled="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>

@@ -55,7 +55,7 @@ public class LuaEngine implements ResourceFinder {
 		}
 		return LuaValue.NIL;
 	}
-
+/*
 	public LuaValue call(String method, Object arg1, Object arg2) {
 		try {
 			LuaValue methodForData = globals.get(method);
@@ -65,7 +65,7 @@ public class LuaEngine implements ResourceFinder {
 		}
 		return LuaValue.NIL;
 	}
-
+*/
 	@Nullable
 	public static LuaTable module(String module, String fallback) {
 		LuaValue luaModule = getEngine().call("require", module);

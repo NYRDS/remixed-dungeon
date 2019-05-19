@@ -107,7 +107,7 @@ public class ModdingMode {
 
 			if(inMod()) {
 				String resourcesPath = mActiveMod + "/" + path;
-				if(isResourceExistInMod(resourcesPath)) {
+				if(isResourceExistInMod(path)) {
 					resList.addAll(Arrays.asList(FileSystem.getExternalStorageFile(resourcesPath).list(filter)));
 				}
 			}

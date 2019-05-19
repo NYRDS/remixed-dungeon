@@ -47,7 +47,7 @@ public class WndDonate extends WndTabbed {
 	@Override
 	public void select(int index) {
 		super.select(index);
-		EventCollector.logScene(getClass().getCanonicalName()+":"+Integer.toString(index));
+		EventCollector.logScene(getClass().getCanonicalName()+":"+ index);
 	}
 
 	private class DonateTab extends Group {

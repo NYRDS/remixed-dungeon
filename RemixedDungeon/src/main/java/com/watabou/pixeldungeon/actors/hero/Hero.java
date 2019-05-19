@@ -1685,7 +1685,7 @@ public class Hero extends Char {
 		this.lvl = Scrambler.scramble(lvl);
 	}
 
-	public static final String getHeroYouNowHave() {
+	public static String getHeroYouNowHave() {
 		return Game.getVar(R.string.Hero_YouNowHave);
 	}
 

@@ -137,7 +137,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
                         getExecutor().execute(runnable);
                     }
                 }   else {
-                    EventCollector.logException("google play billing" + Integer.toString(billingResponseCode));
+                    EventCollector.logException("google play billing" + billingResponseCode);
                 }
                 mIsServiceConnecting = false;
             }
@@ -199,7 +199,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     @Override
     public void onPurchaseHistoryResponse(int responseCode, List<Purchase> purchasesList) {
         if (responseCode != BillingClient.BillingResponse.OK) {
-            EventCollector.logException("queryPurchasesHistory" + Integer.toString(responseCode));
+            EventCollector.logException("queryPurchasesHistory" + responseCode);
         }
     }
 
