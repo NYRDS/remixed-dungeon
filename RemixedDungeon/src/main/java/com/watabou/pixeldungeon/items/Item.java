@@ -331,11 +331,11 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return false;
 	}
 
-	public void removeItemFrom(Hero hero) {
+	public void removeItemFrom(Char hero) {
 		onDetach();
 		cursed = false;
 		if (!(this instanceof EquipableItem) || !isEquipped(hero) || !((EquipableItem) this).doUnequip(hero, false)) {
-			hero.belongings.removeItem(this);
+			hero.getBelongings().removeItem(this);
 		}
 
 		QuickSlot.refresh();

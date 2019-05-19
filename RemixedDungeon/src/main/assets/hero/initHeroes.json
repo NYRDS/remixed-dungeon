@@ -111,6 +111,11 @@
         "kind": "CommonArrow"
       }
     ],
+
+    "immunities": [
+      "Roots"
+    ],
+
     "str": 9,
     "hp": 15
   },

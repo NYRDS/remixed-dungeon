@@ -495,7 +495,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		}
 
 		protected void delay() {
-			float time2charge = ((Hero) target).getHeroClass() == HeroClass.MAGE ? TIME_TO_CHARGE
+			float time2charge = target.getHeroClass() == HeroClass.MAGE ? TIME_TO_CHARGE
 					/ (float) Math.sqrt(1 + effectiveLevel())
 					: TIME_TO_CHARGE;
 			spend(time2charge);

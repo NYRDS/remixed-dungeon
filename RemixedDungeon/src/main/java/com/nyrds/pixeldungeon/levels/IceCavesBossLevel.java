@@ -141,7 +141,7 @@ public class IceCavesBossLevel extends Level {
 		
 		super.pressHero( cell, hero );
 		
-		if (!enteredArena && outsideEntraceRoom( cell ) && hero == Dungeon.hero) {
+		if (!enteredArena && outsideEntraceRoom( cell ) ) {
 			
 			enteredArena = true;
 			

@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -69,10 +68,10 @@ public class NecromancerNPC extends ImmortalNPC {
 
 			SkeletonKey key = new SkeletonKey();
 
-			if (key.doPickUp( Dungeon.hero )) {
+			if (key.doPickUp( hero )) {
 				GLog.i( Hero.getHeroYouNowHave(), key.name() );
 			} else {
-				Dungeon.level.drop( key, Dungeon.hero.getPos() ).sprite.drop();
+				level().drop( key, hero.getPos() ).sprite.drop();
 			}
 
 		} else {

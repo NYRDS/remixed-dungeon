@@ -33,15 +33,15 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 
 			Item item = hero.getBelongings().getItem(RatHide.class);
 			if (item != null && item.quantity() >= 5) {
-				item.removeItemFrom(Dungeon.hero);
+				item.removeItemFrom(hero);
 
 				Item reward = new RatArmor();
 				reward.identify();
 
-				if (reward.doPickUp(Dungeon.hero)) {
+				if (reward.doPickUp(hero)) {
 					GLog.i(Hero.getHeroYouNowHave(), reward.name());
 				} else {
-					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
+					level().drop(reward, hero.getPos()).sprite.drop();
 				}
 				Quest.complete();
 				GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_Quest_End)));
@@ -51,7 +51,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 
 		} else {
 			String txtQuestStart = Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Male), 5);
-			if (Dungeon.hero.getGender() == Utils.FEMININE) {
+			if (hero.getGender() == Utils.FEMININE) {
 				txtQuestStart = Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Female), 5);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));

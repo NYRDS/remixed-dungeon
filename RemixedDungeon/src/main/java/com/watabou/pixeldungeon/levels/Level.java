@@ -1319,7 +1319,7 @@ public abstract class Level implements Bundlable {
 
 
 		if(c instanceof Hero) {
-			for (Integer mobId: ((Hero) c).getPets()) {
+			for (Integer mobId: c.getPets()) {
 				updateFovForObjectAt(CharsList.getById(mobId).getPos());
 			}
 		}
@@ -1329,8 +1329,7 @@ public abstract class Level implements Bundlable {
 				for (Mob mob : mobs) {
 					updateFovForObjectAt(mob.getPos());
 				}
-			} else if (c == Dungeon.hero
-					&& ((Hero) c).getHeroClass() == HeroClass.HUNTRESS) {
+			} else if (c.getHeroClass() == HeroClass.HUNTRESS) {
 				for (Mob mob : mobs) {
 					int p = mob.getPos();
 					if (distance(c.getPos(), p) == 2) {

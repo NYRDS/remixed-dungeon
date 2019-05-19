@@ -1037,7 +1037,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void releasePets() {
 		for(Mob mob:level ().mobs) {
-			if(mob.getId()==getId()) {
+			if(mob.getOwnerId()==getId()) {
 				mob.releasePet();
 			}
 		}

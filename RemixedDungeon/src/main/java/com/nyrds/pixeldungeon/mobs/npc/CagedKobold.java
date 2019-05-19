@@ -65,14 +65,14 @@ public class CagedKobold extends ImmortalNPC {
 			Item item = hero.getBelongings().getItem( IceKey.class );
 			if (item != null) {
 
-				item.removeItemFrom(Dungeon.hero);
+				item.removeItemFrom(hero);
 
 				Item reward = new CandleOfMindVision();
 
-				if (reward.doPickUp( Dungeon.hero )) {
+				if (reward.doPickUp( hero )) {
 					GLog.i( Hero.getHeroYouNowHave(), reward.name() );
 				} else {
-					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
+					level().drop(reward, hero.getPos()).sprite.drop();
 				}
 				Quest.complete();
 				GameScene.show( new WndQuest( this, Game.getVar(R.string.CagedKobold_Quest_End) ) );
