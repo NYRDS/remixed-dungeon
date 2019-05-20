@@ -395,6 +395,8 @@ public abstract class Level implements Bundlable {
 	private static final String COMPASS_TARGET = "compassTarget";
 	private static final String EXIT           = "exit";
 	private static final String HEAPS          = "heaps";
+
+	@Deprecated
 	private static final String PLANTS         = "plants";
 	private static final String MOBS           = "mobs";
 	private static final String BLOBS          = "blobs";
