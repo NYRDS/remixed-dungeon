@@ -69,11 +69,13 @@
      }
    ],
   "items": [
-    {"kind":"Fish","x":13,"y":10}
+    {"kind":"RawFish","x":13,"y":10}
   ],
   "objects" : [
     {"kind" : "Sign",   "x" : 12, "y" : 10, "text" : "Yay! it is a custom sign!"},
     {"kind" : "Barrel", "x" : 13, "y" : 10},
+
+    {"kind" : "Firebloom",   "x" : 12, "y" : 8},
 
     {"kind":"Trap","x":13,"y":9, "uses":10,
       "trapKind":"scriptFile",
