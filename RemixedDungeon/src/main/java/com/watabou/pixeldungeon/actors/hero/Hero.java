@@ -1198,7 +1198,7 @@ public class Hero extends Char {
 
 			curAction = new CharAction.Cook(cell);
 
-		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null) {
+		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null && ch != getControlTarget()) {
 
 			if (ch.friendly(getControlTarget())) {
 				curAction = new CharAction.Interact(ch);

@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -182,7 +181,10 @@ public class Bag extends Item implements Iterable<Item> {
 				
 				Item item = items.get( index++ );
 				if (item instanceof Bag) {
-					nested = ((Bag)item).iterator();
+					Bag bag = (Bag)item;
+					if(!bag.items.isEmpty()) {
+						nested = ((Bag) item).iterator();
+					}
 				}
 				
 				return item;
@@ -194,11 +196,7 @@ public class Bag extends Item implements Iterable<Item> {
 			if (nested != null) {
 				nested.remove();
 			} else {
-				if(index>0) {
-					items.remove(index - 1);
-				} else {
-					EventCollector.logException("WTF???");
-				}
+				items.remove( index - 1);
 			}
 		}	
 	}
