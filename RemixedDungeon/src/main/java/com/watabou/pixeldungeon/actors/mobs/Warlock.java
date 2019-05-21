@@ -100,12 +100,7 @@ public class Warlock extends Mob implements IZapper {
 			final Char ch = this;
 
 			move(cell);
-			fx(cell, new Callback() {
-				@Override
-				public void call() {
-					WandOfBlink.appear(ch, tgt);
-				}
-			});
+			fx(cell, () -> WandOfBlink.appear(ch, tgt));
 		}
 	}
 

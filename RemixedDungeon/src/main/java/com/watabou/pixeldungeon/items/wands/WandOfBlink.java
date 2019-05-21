@@ -25,8 +25,10 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 
@@ -72,9 +74,19 @@ public class WandOfBlink extends Wand {
 	}
 
 	public static void appear(@NotNull Char ch, int pos ) {
-		ch.getSprite().interruptMotion();
 
-		ch.move( pos );
+		Level level = Dungeon.level;
+
+		if(level.cellValid(ch.getPos())) { //ch already on level
+			ch.getSprite().interruptMotion();
+			ch.move(pos);
+		} else { // brand new ch
+			ch.setPos(pos);
+			if(ch instanceof Mob) {
+				level.spawnMob((Mob)ch);
+			}
+		}
+
 		ch.getSprite().place( pos );
 
 		if (ch.invisible == 0) {

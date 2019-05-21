@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.actors;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 
@@ -21,7 +20,6 @@ public class DelayedMobSpawner extends Actor {
 	@Override
 	protected boolean act() {
 		if(Actor.findChar(cell) == null) {
-			Dungeon.level.spawnMob(mob, 2);
 			WandOfBlink.appear(mob, cell);
 		}
 		remove(this);

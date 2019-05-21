@@ -79,7 +79,9 @@
 
     {"kind":"Trap","x":13,"y":9, "uses":10,
       "trapKind":"scriptFile",
-      "script":"scripts/traps/Message"},
+      "script":"scripts/traps/Message",
+      "data": "Test Message"
+    },
 
     {"kind":"Trap","x":9,"y":9, "uses":2000,
       "trapKind":"scriptFile",
