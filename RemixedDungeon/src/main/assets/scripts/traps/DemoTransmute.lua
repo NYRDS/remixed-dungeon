@@ -30,7 +30,7 @@ return trap.init(
 
         for i = 0, totalItems - 1 do
             local item = items:get(i)
-            local itemName = RPD.ItemFactory:itemNameByClass(item:getClass())
+            local itemName = item:getClassName()
 
             if recipe[itemName] == false then
                 table.insert(elements, item)
