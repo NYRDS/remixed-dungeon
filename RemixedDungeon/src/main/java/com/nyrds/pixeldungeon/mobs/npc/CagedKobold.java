@@ -7,8 +7,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -26,8 +24,6 @@ public class CagedKobold extends ImmortalNPC {
 	private static boolean spawned;
 
 	public CagedKobold() {
-		addImmunity( Paralysis.class );
-		addImmunity( Roots.class );
 	}
 	
 

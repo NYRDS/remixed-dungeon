@@ -44,7 +44,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
         instanceContext = getApplicationContext();
 
-        if(!instanceContext.getResources().getString(R.string.fabric_api_key).isEmpty()) {
+        if(instanceContext.getResources().getString(R.string.fabric_api_key).length()>5) {
             FirebaseApp.initializeApp(this);
 
             Fabric.with(this, new Crashlytics());
