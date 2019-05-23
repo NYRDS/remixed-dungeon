@@ -6,6 +6,7 @@ import com.crashlytics.android.Crashlytics;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -39,6 +40,15 @@ public class EventCollector {
         }
 	}
 
+	static public void logEvent(String event) {
+		if (!mDisabled) {
+			Crashlytics.log(event);
+
+			Bundle params = new Bundle();
+			mFirebaseAnalytics.logEvent(event, params);
+		}
+	}
+
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
 			Crashlytics.log(category+":"+event);
@@ -46,6 +56,23 @@ public class EventCollector {
 			Bundle params = new Bundle();
 			params.putString("event", event);
 			mFirebaseAnalytics.logEvent(category, params);
+		}
+	}
+
+	static public void levelUp(String character, long level) {
+		if(!mDisabled && !ModdingMode.inMod()) {
+			Bundle bundle = new Bundle();
+			bundle.putString(FirebaseAnalytics.Param.CHARACTER, character);
+			bundle.putLong(FirebaseAnalytics.Param.LEVEL, level);
+			mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.LEVEL_UP, bundle);
+		}
+	}
+
+	static public void badgeUnlocked(String badgeId) {
+		if(!mDisabled && !ModdingMode.inMod()) {
+			Bundle bundle = new Bundle();
+			bundle.putString(FirebaseAnalytics.Param.ACHIEVEMENT_ID, badgeId);
+			mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.UNLOCK_ACHIEVEMENT, bundle);
 		}
 	}
 

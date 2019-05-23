@@ -54,11 +54,7 @@ public class GamesInProgress {
 			return info;
 		}
 	}
-	
-	public static void removeAll() {
-		state = new HashMap<>();
-	}
-	
+
 	public static void set( HeroClass cl, int depth, int level ) {
 		Info info = new Info();
 		info.depth = depth;

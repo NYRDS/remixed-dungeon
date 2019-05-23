@@ -1254,6 +1254,8 @@ public class Hero extends Char {
 			this.setExp(this.getExp() - maxExp());
 			lvl(lvl() + 1);
 
+			EventCollector.levelUp(heroClass.name()+"_"+subClass.name(),lvl());
+
 			ht(ht() + 5);
 			heal(5, this);
 

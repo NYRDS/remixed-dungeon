@@ -253,7 +253,7 @@ public class Badges {
 
 		badges.remove(null);
 
-		String names[] = new String[badges.size()];
+		String[] names = new String[badges.size()];
 
 		for (Badge badge : badges) {
 			names[count++] = badge.toString();
@@ -909,6 +909,7 @@ public class Badges {
 
 			global.add(badge);
 			saveNeeded = true;
+			EventCollector.badgeUnlocked(badge.name());
 
 			if (badge.meta) {
 				GLog.h(Game.getVar(R.string.Badges_Info2), badge.description);
