@@ -3587,9 +3587,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Badges_FoodEaten5">60 pieces of food eaten</string>
     <string name="Badges_StrengthAttained5">21 points of Strength attained</string>
     <string name="Badges_LevelReached5">Level 30 reached</string>
-    <string name="Badges_GoldColleted5">35000 gold collected</string>
+    <string name="Badges_GoldCollected5">35000 gold collected</string>
     <string name="Badges_MonsterSlain5">1000 enemies slain</string>
     <string name="Spells_NotInOwnBody">You can\'t perform %s while your soul separated from body.</string>
+    <string name="WndHero_Satiety">Satiety</string>
 
 
 </resources>

@@ -52,7 +52,9 @@ public class RemixedDungeonApp extends MultiDexApplication {
         }
 
         if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1 && Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
-            HQSdk.enableDebug(true);
+            if(BuildConfig.DEBUG) {
+                HQSdk.enableDebug(true);
+            }
 
             try {
                 HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false);

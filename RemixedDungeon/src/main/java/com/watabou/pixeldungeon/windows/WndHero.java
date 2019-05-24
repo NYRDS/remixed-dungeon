@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -123,12 +124,17 @@ public class WndHero extends WndTabbed {
 			
 			pos = btnCatalogus.bottom() + GAP;
 
-			statSlot(Game.getVar(R.string.WndHero_Str), hero.effectiveSTR() );
 			statSlot(Game.getVar(R.string.WndHero_Health), hero.hp() + "/" + hero.ht() );
+			statSlot(Game.getVar(R.string.Mana_Title), hero.getSkillPoints() + "/" + hero.getSkillPointsMax() );
+
+			Hunger hunger = hero.buff(Hunger.class);
+
+			statSlot(Game.getVar(R.string.WndHero_Satiety),
+					Utils.EMPTY_STRING+((int)((Hunger.STARVING - hunger.getLevel())/ Hunger.STARVING * 100))+"%");
 
 			statSlot(Game.getVar(R.string.WndHero_Stealth), hero.stealth());
 
-			statSlot(Game.getVar(R.string.WndHero_Awareness), (int)(hero.getAwareness() * 100));
+			statSlot(Game.getVar(R.string.WndHero_Awareness), Utils.EMPTY_STRING+(int)(hero.getAwareness() * 100)+"%");
 
 			statSlot(Game.getVar(R.string.WndHero_AttackSkill),  hero.attackSkill(CharsList.DUMMY));
 			statSlot(Game.getVar(R.string.WndHero_DefenceSkill), hero.defenseSkill(CharsList.DUMMY));
@@ -137,12 +143,12 @@ public class WndHero extends WndTabbed {
 			statSlot(Game.getVar(R.string.WndHero_Exp), hero.getExp() + "/" + hero.maxExp() );
 
 			pos += GAP;
-			
+			statSlot(Game.getVar(R.string.WndHero_Str), hero.effectiveSTR() );
+			statSlot(Game.getVar(R.string.WndHero_SkillLevel), hero.skillLevel());
+
 			statSlot(Game.getVar(R.string.WndHero_Gold), Statistics.goldCollected );
 			statSlot(Game.getVar(R.string.WndHero_Depth), Statistics.deepestFloor );
 
-			statSlot(Game.getVar(R.string.WndHero_SkillLevel), hero.skillLevel());
-			statSlot(Game.getVar(R.string.Mana_Title), hero.getSkillPoints() + "/" + hero.getSkillPointsMax() );
 
 			pos += GAP;
 		}

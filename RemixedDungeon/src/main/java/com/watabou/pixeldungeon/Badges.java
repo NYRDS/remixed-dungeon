@@ -77,7 +77,7 @@ public class Badges {
 		GOLD_COLLECTED_2(Game.getVar(R.string.Badges_GoldColleted2), 5),
 		GOLD_COLLECTED_3(Game.getVar(R.string.Badges_GoldColleted3), 6),
 		GOLD_COLLECTED_4(Game.getVar(R.string.Badges_GoldColleted4), 7),
-		GOLD_COLLECTED_5(Game.getVar(R.string.Badges_GoldColleted5), 74),
+		GOLD_COLLECTED_5(Game.getVar(R.string.Badges_GoldCollected5), 74),
 
 		LEVEL_REACHED_1(Game.getVar(R.string.Badges_LevelReached1), 8),
 		LEVEL_REACHED_2(Game.getVar(R.string.Badges_LevelReached2), 9),

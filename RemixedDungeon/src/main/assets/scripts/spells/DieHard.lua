@@ -27,7 +27,7 @@ return spell.init{
     end,
     cast = function(self, spell, caster, cell)
 
-        local buffLevel = math.min(3, caster:skillLevel()-spellLevel)
+        local buffLevel = math.min(3, caster:skillLevel()-spellLevel) + 2
 
         local duration = buffLevel * 10 + 10
 

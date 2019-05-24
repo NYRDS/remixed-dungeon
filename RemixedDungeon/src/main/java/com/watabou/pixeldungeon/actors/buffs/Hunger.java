@@ -38,8 +38,8 @@ public class Hunger extends Buff implements Hero.Doom {
 
 	private static final float STEP	= 10f;
 	
-	public static final float HUNGRY	= 320f;
-	public static final float STARVING	= 460f;
+	public static final float HUNGRY	= 250f;
+	public static final float STARVING	= 400f;
 
 	@Packable
 	private float level;
@@ -166,5 +166,9 @@ public class Hunger extends Buff implements Hero.Doom {
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.HUNGER), Dungeon.depth ) );
 		GLog.n( Game.getVar(R.string.Hunger_Death) );
+	}
+
+	public float getLevel() {
+		return level;
 	}
 }
