@@ -3535,29 +3535,29 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="KindOfBow_ChooseArrows">CHOOSE ARROWS</string>
 
     <string name="BodyArmorSpell_Name">Body Armor</string>
-    <string name="BodyArmorSpell_Info">Activates reserved muscle power, make them stronger temporarily, thus increase your armor but at cost of movement speed.</string>
+    <string name="BodyArmorSpell_Info">Activates the reserved muscle power, making them temporarily stronger, thus greatly increasing your armor but at cost of movement speed.</string>
 
     <string name="BodyArmorBuff_Name">Body Armor</string>
-    <string name="BodyArmorBuff_Info">Armor increased at cost of movement speed</string>
+    <string name="BodyArmorBuff_Info">Armor is increased at the cost of movement speed.</string>
 
     <string name="DieHardSpell_Name">Die Hard</string>
-    <string name="DieHardSpell_Info">Will temporarily increase regeneration making you really Die Hard</string>
+    <string name="DieHardSpell_Info">Will temporarily increase your regeneration making you a real Die Hard.</string>
 
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DieHardBuff_Info">Regeneration rate increased</string>
 
     <string name="SmashSpell_Name">Smash</string>
-    <string name="SmashSpell_Info">Jumps upward and smashes powerfully and temporarily stuns enemy surrounding, at the same time dealing physical damage.</string>
+    <string name="SmashSpell_Info">Jump upwards and create a powerful smash upon hitting the ground,that temporarily stuns enemies around and at the same time deals physical damage.</string>
     <string name="SmashSpell_NeedWeapon">I need a weapon for this move.</string>
 
     <string name="DashSpell_Name">Dash</string>
-    <string name="DashSpell_Info">Dash in a specified direction and collides with enemies, dealing damage and causing maim.</string>
+    <string name="DashSpell_Info">Dash towards a specified direction while colliding with enemies, dealing damage and causing maim.</string>
     <string name="DashSpell_OnSelf">I can\'t dash on the spot.</string>
-    <string name="DashSpell_TooFar">I can\'t dash so far.</string>
+    <string name="DashSpell_TooFar">I can\'t dash that far.</string>
 
     <string name="CloakSpell_Name">Cloak</string>
-    <string name="CloakSpell_Info">Step in shadows greatly to go unseen. Greatly reduce your chances to be detected. Can\'t be used when enemies nearby.</string>
-    <string name="CloakSpell_EnemiesNearby">You can\'t step in shadows when enemies are nearby.</string>
+    <string name="CloakSpell_Info">Step into the shadows to become unseen. Greatly reduce your chances of being detected. Can\'t be used while enemies are nearby.</string>
+    <string name="CloakSpell_EnemiesNearby">You can\'t step into the shadows while enemies are nearby.</string>
 
     <string name="CloakBuff_Name">Cloaked</string>
     <string name="CloakBuff_Info">Cloaked in shadows.</string>
@@ -3582,7 +3582,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Custom gfx\n
     </string>
     <string name="Badges_GamesPlayed5">5000 games played</string>
-    <string name="Badges_PotionsCooked5">25 potions cooked</string>
+    <string name="Badges_PotionsCooked5">25 potions brewed</string>
     <string name="Badges_ItemLvl5">Item of level 15 acquired</string>
     <string name="Badges_FoodEaten5">60 pieces of food eaten</string>
     <string name="Badges_StrengthAttained5">21 points of Strength attained</string>
