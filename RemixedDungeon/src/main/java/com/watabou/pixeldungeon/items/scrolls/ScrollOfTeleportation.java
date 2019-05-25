@@ -22,8 +22,8 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -41,7 +41,7 @@ public class ScrollOfTeleportation extends Scroll {
 		getUser().spendAndNext( TIME_TO_READ );
 	}
 	
-	public static void teleportHero( Hero  hero ) {
+	public static void teleportHero( Char hero ) {
 
 		if(Dungeon.level.isBossLevel()) {
 			GLog.w( Game.getVar(R.string.ScrollOfTeleportation_NoTeleport) );

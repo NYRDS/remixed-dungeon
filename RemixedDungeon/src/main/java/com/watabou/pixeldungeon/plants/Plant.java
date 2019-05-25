@@ -59,17 +59,15 @@ public class Plant extends LevelObject {
 
 	@Override
 	public boolean interact(Char ch) {
-		if (ch instanceof Hero && ((Hero) ch).getSubClass() == HeroSubClass.WARDEN) {
+		if (ch.getSubClass() == HeroSubClass.WARDEN) {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 
-			if (Dungeon.hero.getSubClass() == HeroSubClass.WARDEN) {
-				if (Random.Int(5) == 0) {
-					ch.level().drop(Generator.random(Generator.Category.SEED),
-							pos).sprite.drop();
-				}
-				if (Random.Int(5) == 0) {
-					ch.level().drop(new Dewdrop(), pos).sprite.drop();
-				}
+			if (Random.Int(5) == 0) {
+				ch.level().drop(Generator.random(Generator.Category.SEED),
+						pos).sprite.drop();
+			}
+			if (Random.Int(5) == 0) {
+				ch.level().drop(new Dewdrop(), pos).sprite.drop();
 			}
 		}
 

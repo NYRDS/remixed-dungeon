@@ -600,20 +600,20 @@ public class Hero extends Char {
 
 	private boolean actInteract(CharAction.Interact action) {
 
-		Char npc = action.npc;
+		Char chr = action.chr;
 
-		if (Dungeon.level.adjacent(getPos(), npc.getPos())) {
+		if (Dungeon.level.adjacent(getPos(), chr.getPos())) {
 
 			readyAndIdle();
-			getSprite().turnTo(getPos(), npc.getPos());
-			if (!npc.interact(this)) {
-				actAttack(new CharAction.Attack(npc));
+			getSprite().turnTo(getPos(), chr.getPos());
+			if (!chr.interact(this)) {
+				actAttack(new CharAction.Attack(chr));
 			}
 			return false;
 
 		} else {
 
-			if (Dungeon.level.fieldOfView[npc.getPos()] && getCloser(npc.getPos())) {
+			if (Dungeon.level.fieldOfView[chr.getPos()] && getCloser(chr.getPos())) {
 				return true;
 			} else {
 				readyAndIdle();

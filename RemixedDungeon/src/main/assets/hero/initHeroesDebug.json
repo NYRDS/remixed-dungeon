@@ -25,18 +25,22 @@
         "kind": "Quiver"
       },
       {
-        "kind": "ScrollOfMagicMapping",
+        "kind": "ScrollOfTeleportation",
         "quantity": 100
       },
       {
-        "kind": "DewVial"
+        "kind": "WandOfBlink"
       },
       {
         "kind": "Ankh",
         "level": 5
       },
       {
-        "kind": "Dewdrop",
+        "kind": "Fadeleaf.Seed",
+        "quantity": 100
+      },
+      {
+        "kind": "Firebloom.Seed",
         "quantity": 100
       }
     ],

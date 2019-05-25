@@ -48,9 +48,9 @@ public class CharAction {
 	}
 	
 	public static class Interact extends CharAction {
-		public Char npc;
-		public Interact( Char npc ) {
-			this.npc = npc;
+		public Char chr;
+		public Interact( Char chr) {
+			this.chr = chr;
 		}
 	}
 	

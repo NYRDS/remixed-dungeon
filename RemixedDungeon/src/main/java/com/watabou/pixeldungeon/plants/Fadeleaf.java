@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -61,7 +62,13 @@ public class Fadeleaf extends Plant {
 			CellEmitter.get( pos ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 		}		
 	}
-	
+
+	@Override
+	public boolean interact(Char ch) {
+		super.interact(ch);
+		return false; // don't revert our teleportation
+	}
+
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.Fadeleaf_Desc);
