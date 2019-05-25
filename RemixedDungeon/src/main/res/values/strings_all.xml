@@ -413,17 +413,6 @@
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Welcome!</string>
 
-    <string name="Welcome_Text_28_1">
-    remix.28.1\n
-    - Big renovation of Town\n
-    - Lots of gfx improvements and fixes\n
-    - New darts and arrows\n
-    - Now all mob (except undeads) will regenerate\n
-    - Now strength will provide additional damage bonus for all classes\n
-    - Fortune Teller now owns a Cat\n
-    - Gnoll tomahawk will not break when thrown at a target\n
-    </string>
-
     <string name="Welcome_Text_28_2">
     remix.28.2\n
     - Gui refactoring:\n
@@ -3540,6 +3529,44 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Potion_ArrowMoisten">You successfully moist arrows.</string>
     <string name="Potion_ItemFliesAway">%s just flies away from your hands.</string>
     <string name="Potion_FoodRefreshed">%s now looks edible</string>
+
+
+    <string name="KindOfBow_SelectArrowKind">Which arrows should I use?</string>
+    <string name="KindOfBow_ChooseArrows">CHOOSE ARROWS</string>
+
+    <string name="BodyArmorSpell_Name">Body Armor</string>
+    <string name="BodyArmorSpell_Info">Activates reserved muscle power, make them stronger temporarily, thus increase your armor but at cost of movement speed.</string>
+
+    <string name="BodyArmorBuff_Name">Body Armor</string>
+    <string name="BodyArmorBuff_Info">Armor increased at cost of movement speed</string>
+
+    <string name="DieHardSpell_Name">Die Hard</string>
+    <string name="DieHardSpell_Info">Will temporarily increase regeneration making you really Die Hard</string>
+
+    <string name="DieHardBuff_Name">Die Hard</string>
+    <string name="DieHardBuff_Info">Regeneration rate increased</string>
+
+    <string name="SmashSpell_Name">Smash</string>
+    <string name="SmashSpell_Info">Jumps upward and smashes powerfully and temporarily stuns enemy surrounding, at the same time dealing physical damage.</string>
+    <string name="SmashSpell_NeedWeapon">I need a weapon for this move.</string>
+
+    <string name="DashSpell_Name">Dash</string>
+    <string name="DashSpell_Info">Dash in a specified direction and collides with enemies, dealing damage and causing maim.</string>
+    <string name="DashSpell_OnSelf">I can\'t dash on the spot.</string>
+    <string name="DashSpell_TooFar">I can\'t dash so far.</string>
+
+    <string name="CloakSpell_Name">Cloak</string>
+    <string name="CloakSpell_Info">Step in shadows greatly to go unseen. Greatly reduce your chances to be detected. Can\'t be used when enemies nearby.</string>
+    <string name="CloakSpell_EnemiesNearby">You can\'t step in shadows when enemies are nearby.</string>
+
+    <string name="CloakBuff_Name">Cloaked</string>
+    <string name="CloakBuff_Info">Cloaked in shadows.</string>
+
+    <string name="TitleScene_Mods">Mods</string>
+    <string name="WndHero_Stealth">Stealth</string>
+    <string name="WndHero_Awareness">Awareness</string>
+    <string name="WndHero_AttackSkill">Attack Skill</string>
+    <string name="WndHero_DefenceSkill">Defence Skill</string>
 	
    <string name="town_deco_grave_name">Grave</string>
    <string name="town_deco_grave_desc">A standard tombstone, with a weathered engravement</string>
@@ -3599,5 +3626,34 @@ No, there was no place for her in the light, not anymore. She turned from the me
    <string name="town_deco_medicine_desc">Flasks and other medical ingredients are carefully placed on these shelves</string>
    <string name="town_deco_wooden_stairs_name">Stairs</string>   
    <string name="town_deco_wooden_stairs_desc">They make you a bit taller</string>
+   <string name="town_deco_canvas_name">Canvas</string>
+   <string name="town_deco_canvas_desc">A thick piece of cloth hung on the wall</string>
+   <string name="town_deco_projector_name">Film Projector</string>
+   <string name="town_deco_projector_desc">An old device for playing film and entertaining people</string>   
+   <string name="town_deco_filmtape_name">Film</string>
+   <string name="town_deco_filmtape_desc">Interesting what does this piece contain</string>   
+
+    <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Game Mechanics:\n
+    -- Warrior special abilities!\n
+    -- Heroes hunger reduced\n
+    -- Necromancer Possess spell\n
+    -- Rogue Cloak ability\n
+    -- New Badges\n
+    - Modding:\n
+    -- Custom scriptable Buffs\n
+    -- Custom gfx\n
+    </string>
+    <string name="Badges_GamesPlayed5">5000 games played</string>
+    <string name="Badges_PotionsCooked5">25 potions cooked</string>
+    <string name="Badges_ItemLvl5">Item of level 15 acquired</string>
+    <string name="Badges_FoodEaten5">60 pieces of food eaten</string>
+    <string name="Badges_StrengthAttained5">21 points of Strength attained</string>
+    <string name="Badges_LevelReached5">Level 30 reached</string>
+    <string name="Badges_GoldColleted5">35000 gold collected</string>
+    <string name="Badges_MonsterSlain5">1000 enemies slain</string>
+    <string name="Spells_NotInOwnBody">You can\'t perform %s while your soul separated from body.</string>
+
 
 </resources>
