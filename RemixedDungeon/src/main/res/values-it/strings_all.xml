@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="SummonDeathling_Name">Evocare Gregario della Morte</string>
@@ -9,6 +9,7 @@
     <string name="Ring_Identify">hai abbastanza familiarità con %1$s da identificarlo. È %2$s.</string>
 
     <string-array name="Ring_Gems">
+        <item>rubino</item>
         <item>rubino</item>
     </string-array>
 
@@ -2620,6 +2621,7 @@ Potrebbe bruciare?</string>
 
     <string-array name="Potion_Colors">
         <item>argento</item>
+        <item>argento</item>
     </string-array>
 
 
@@ -2692,4 +2694,5 @@ Potrebbe bruciare?</string>
     <string name="Potion_ItemFliesAway">%s appena volato via dalle vostre mani.</string>
     <string name="Potion_FoodRefreshed">%s ora sembra commestibile</string>
 
-</resources>
+
+    </resources>
