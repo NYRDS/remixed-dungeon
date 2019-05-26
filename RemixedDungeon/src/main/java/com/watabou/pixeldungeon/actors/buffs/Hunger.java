@@ -50,9 +50,9 @@ public class Hunger extends Buff implements Hero.Doom {
 			
 			Hero hero = (Hero)target;
 			
-			if (isStarving()) {
+			if (!Dungeon.level.isSafe() && isStarving()) {
 
-				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
+				if (Random.Float() < 0.3f && (hero.hp() > 1 || !hero.paralysed)) {
 
 					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
 					
@@ -65,7 +65,7 @@ public class Hunger extends Buff implements Hero.Doom {
 					hero.interrupt();
 				}
 				
-				if(hero.getDifficulty() >= 3 && !Dungeon.level.isSafe()) {
+				if(hero.getDifficulty() >= 3) {
 					if(Random.Float() < 0.01) {
 						Buff.prolong(hero, Weakness.class, Weakness.duration(hero));
 					}
@@ -77,7 +77,7 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 			} else {	
 				
-				int bonus = target.buffLevel(RingOfSatiety.Satiety.class);
+				int bonus = hero.buffLevel(RingOfSatiety.Satiety.class);
 
 				float delta = Math.min(STEP - bonus, 1);
 
@@ -111,12 +111,13 @@ public class Hunger extends Buff implements Hero.Doom {
 			}
 			
 			float step = hero.getHeroClass() == HeroClass.ROGUE ? STEP * 1.2f : STEP;
-			spend( target.hasBuff( Shadows.class ) ? step * 1.5f : step );
+			step *= hero.hasBuff(Shadows.class) ? 1.5f : 1;
+			step *= Dungeon.realtime() ? 10f : 1;
+
+			spend( step );
 			
 		} else {
-			
 			deactivate();
-			
 		}
 		
 		return true;

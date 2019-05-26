@@ -18,12 +18,12 @@
 package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 
 import com.nyrds.Packable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
@@ -150,7 +150,6 @@ public abstract class Actor implements Bundlable {
 		now += elapsed * realTimeMultiplier;
 
 		do {
-			
 			current = null;
 
 			chars.clear();
@@ -169,6 +168,8 @@ public abstract class Actor implements Bundlable {
 			}
 
 			if(current!= null) {
+				Log.i("Main loop", String.format("%s %4.2f",current.getClass().getSimpleName(),current.time));
+
 				current.act();
 			}
 
@@ -283,9 +284,7 @@ public abstract class Actor implements Bundlable {
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;
 			chars.put(ch.getPos(), ch);
-			for (Buff buff : ch.buffs()) {
-				all.add( buff );
-			}
+			all.addAll(ch.buffs());
 		}
 
 	}
