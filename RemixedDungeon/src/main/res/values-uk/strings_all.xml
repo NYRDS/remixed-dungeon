@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Шолом Хаосу</string>
@@ -3578,4 +3577,12 @@
     <string name="Potion_ItemFliesAway">Предмет %s вилетів з твоїх рук.</string>
     <string name="Potion_FoodRefreshed">%s тепер виглядає їстівним</string>
 
-</resources>
+
+    <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
+    <string name="Badges_ItemLvl5">Придбано предмет 15 рівня</string>
+    <string name="Badges_FoodEaten5">60 порцій їжі вжито</string>
+    <string name="Badges_StrengthAttained5">21 одиниць сили набрано</string>
+    <string name="Badges_LevelReached5">30 рівня досягнуто</string>
+    <string name="Badges_GoldCollected5">Зібрано 35000 золотих монет</string>
+    <string name="Badges_MonsterSlain5">1000 супротивників подолано</string>
+    </resources>

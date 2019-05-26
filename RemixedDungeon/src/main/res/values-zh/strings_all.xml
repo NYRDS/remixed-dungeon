@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">混沌头盔</string>
-    <string name="ChaosHelmet_Info">血红色的头盔，ck你懂吗</string>
+    <string name="ChaosHelmet_Info">血红色的头盔是混沌之战士的基本标志。</string>
 
     <string name="Spells_SummonLimitReached">%1$s: 召唤上限提升 (最大值: %2$d)!</string>
     <string name="Mana_Title">魔法</string>
@@ -13,7 +12,7 @@
 
 
     <string name="SummonDeathling_Name">召唤死灵</string>
-    <string name="SummonDeathling_Info">召唤死灵。 死灵的生命和攻击随你的等级的提升而提升。\n\n召唤上限：%1$d (每点法强提供+1上限)</string>
+    <string name="SummonDeathling_Info">召唤死亡的灵魂。 死灵的生命和攻击随你的等级的提升而提升。\n\n召唤上限：%1$d (每点法强提供+1上限)</string>
 
 
     <string name="Ignite_Name">引燃</string>
@@ -2524,7 +2523,7 @@ remix.28.5\n
     <string name="ScarecrowNPC_Desc">毫无疑问…这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
     <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
 </string>
-    <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\\n 我有一个令你惊喜的消息！\\n\\n 如果你为我收集一些糖果的话，\\n 我会十分感激你的！\\n\\n
+    <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
 </string>
     <string name="ScarecrowNPC_Quest_Reminder">我所需要的五个糖果。\n 你将的到很甜蜜的奖励！</string>
     <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n 为此，你可以得到一份实在的食物！</string>
@@ -3568,29 +3567,29 @@ remix.28.5\n
     <string name="KindOfBow_ChooseArrows">选择箭</string>
 
     <string name="BodyArmorSpell_Name">重甲</string>
-    <string name="BodyArmorSpell_Info">激活身体的肌肉力量，使你暂时变强，从而增加你的护甲，但以移动速度为代价。</string>
+    <string name="BodyArmorSpell_Info">激活身体的肌肉力量，使你暂时变强，从而增加你的护甲，但会减少移动速度。</string>
 
     <string name="BodyArmorBuff_Name">重甲</string>
-    <string name="BodyArmorBuff_Info">牺牲移动速度增加护甲</string>
+    <string name="BodyArmorBuff_Info">牺牲移动速度增加护甲。</string>
 
     <string name="DieHardSpell_Name">顽固</string>
-    <string name="DieHardSpell_Info">会暂时增加回复速度，但会让你更脆弱。</string>
+    <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
 
     <string name="DieHardBuff_Name">顽固</string>
     <string name="DieHardBuff_Info">回复速度提高</string>
 
     <string name="SmashSpell_Name">猛劈</string>
-    <string name="SmashSpell_Info">向上跃起，猛击，暂时震晕周围敌人，同时造成物理伤害。</string>
+    <string name="SmashSpell_Info">向上跃起，进行落地猛击，暂时震晕周围敌人，同时造成物理伤害。</string>
     <string name="SmashSpell_NeedWeapon">我需要一个武器来完成这个行动。</string>
 
     <string name="DashSpell_Name">冲撞</string>
-    <string name="DashSpell_Info">冲向指定方向，与敌人相撞，造成伤害，造成残废。</string>
+    <string name="DashSpell_Info">冲向指定方向，与敌人相撞，造成伤害并残废敌人。</string>
     <string name="DashSpell_OnSelf">我现在不能使用冲撞</string>
     <string name="DashSpell_TooFar">我冲不了那么远。</string>
 
     <string name="CloakSpell_Name">斗篷</string>
-    <string name="CloakSpell_Info">行走在阴影中使敌人看不见，减少被发现的机会。附近有敌人不能使用。</string>
-    <string name="CloakSpell_EnemiesNearby">敌人在附近，你不能在阴影中行走。</string>
+    <string name="CloakSpell_Info">进入阴影中使敌人看不见，减少被发现的机会。附近有敌人不能使用。</string>
+    <string name="CloakSpell_EnemiesNearby">敌人在附近，你不能进入阴影中。</string>
 
     <string name="CloakBuff_Name">潜伏</string>
     <string name="CloakBuff_Info">躲在阴影里。</string>
@@ -3622,6 +3621,8 @@ remix.28.5\n
     <string name="Badges_LevelReached5">达到30级</string>
     <string name="Badges_GoldCollected5">获得35000枚金币</string>
     <string name="Badges_MonsterSlain5">击杀1000个敌人</string>
+    <string name="Spells_NotInOwnBody">当你的灵魂与身体分离时，你不能%s。</string>
+    <string name="WndHero_Satiety">饱食</string>
 
 
 </resources>

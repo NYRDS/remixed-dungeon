@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Topi Keledar Chaos</string>
@@ -412,8 +411,6 @@
     <string name="StoneBlood_Buff">Darah batu</string>
     <string name="Welcome_Ok">Baiklah!</string>
     <string name="Welcome_Title">Selamat Datang!</string>
-
-
 
     <string name="Welcome_Text_28_2">
     remix.28.2\n
@@ -1077,7 +1074,7 @@
 
 
 
-    <string name="InterLevelScene_Descending">Menurun...</string>
+    <string name="InterLevelScene_Descending">Masuk...</string>
     <string name="InterLevelScene_Ascending">Menaik...</string>
     <string name="InterLevelScene_Loading">Memuatkan...</string>
     <string name="InterLevelScene_Resurrecting">Menghidupkan semula...</string>
@@ -2547,9 +2544,9 @@
     <string name="Journal_PlagueDoctorNPC">Doktor wabak</string>
 
 
-    <string name="TownsfolkMovieNPC_Name">orang pekan</string>
+    <string name="TownsfolkMovieNPC_Name">penduduk pekan</string>
     <string name="TownsfolkMovieNPC_Gender">maskulin</string>
-    <string name="TownsfolkMovieNPC_Name_Objective">orang pekan</string>
+    <string name="TownsfolkMovieNPC_Name_Objective">penduduk pekan</string>
     <string name="TownsfolkMovieNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
     <string name="TownsfolkMovieNPC_Message">Tahukah anda ada perkhidmatan istimewa \"panggung wayang\" disediakan? Tetapi memerlukan \"Internet\", saya pun tak tahu apa kebendanya tu?</string>
 
@@ -2561,9 +2558,9 @@
     <string name="LibrarianNPC_Message_Not_Ready">Maafkan saya, ppperpustakaan belum dibuka... lagi.</string>
 
 
-    <string name="TownsfolkSilentNPC_Name">orang pekan</string>
+    <string name="TownsfolkSilentNPC_Name">penduduk pekan</string>
     <string name="TownsfolkSilentNPC_Gender">maskulin</string>
-    <string name="TownsfolkSilentNPC_Name_Objective">orang pekan</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">penduduk pekan</string>
     <string name="TownsfolkSilentNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
     <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
@@ -2664,9 +2661,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TownGuardNPC_Message3">Anda fikir terlalu ramai pengawal dalam pekan ini? Sebenarnya hanyalah pekan kecil dengan kurungan bawah tanah gergasi yang dikuasai oleh raksaksa, kan begitu?</string>
 
 
-    <string name="TownsfolkNPC_Name">orang pekan</string>
+    <string name="TownsfolkNPC_Name">penduduk pekan</string>
     <string name="TownsfolkNPC_Gender">maskulin</string>
-    <string name="TownsfolkNPC_Name_Objective">orang pekan</string>
+    <string name="TownsfolkNPC_Name_Objective">penduduk pekan</string>
     <string name="TownsfolkNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal</string>
     <string name="TownsfolkNPC_Message1">Ohh! Ada pengembara lain, baguslah! Carilah sebanyak mungkin harta rampasan yang bernilai!</string>
     <string name="TownsfolkNPC_Message2">Pekan kecil ini menjadi semakin makmur dan mewah kerana kehadiran kurungan bawah tanah, sesiapa sahaja dapat pergi melancong! Sebab itulah kenapa sedikit sahaja penduduk di sini sekarang.</string>
@@ -3532,4 +3529,50 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Potion_ItemFliesAway">%s telah terbang menjauhi tangan anda.</string>
     <string name="Potion_FoodRefreshed">%s sekarang nampak enak dimakan</string>
 
-</resources>
+
+    <string name="KindOfBow_SelectArrowKind">Anak panah manakah patut saya gunakan?</string>
+    <string name="KindOfBow_ChooseArrows">PILIH ANAK PANAH</string>
+
+    <string name="BodyArmorSpell_Name">Perisai Badan</string>
+    <string name="BodyArmorBuff_Name">Perisai Badan</string>
+    <string name="DieHardSpell_Name">Sukar Mati</string>
+    <string name="DieHardBuff_Name">Sukar Mati</string>
+    <string name="DieHardBuff_Info">Kadar penjanaan semula meningkat</string>
+
+    <string name="SmashSpell_Name">Hentaman</string>
+    <string name="SmashSpell_NeedWeapon">Saya perlukan satu senjata untuk gerakan ini.</string>
+
+    <string name="DashSpell_Name">Pecut</string>
+    <string name="DashSpell_OnSelf">Saya tidak boleh memecut serta-merta.</string>
+    <string name="CloakSpell_Name">Selubung</string>
+    <string name="CloakBuff_Name">Berselubung</string>
+    <string name="CloakBuff_Info">Diselubungi bayang.</string>
+
+    <string name="TitleScene_Mods">Mod</string>
+    <string name="WndHero_Stealth">Selinap</string>
+    <string name="WndHero_Awareness">Kesedaran</string>
+    <string name="WndHero_AttackSkill">Kemahiran Menyerang</string>
+    <string name="WndHero_DefenceSkill">Kemahiran Pertahanan</string>
+
+
+    <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Mekanisma Permainan:\n
+    -- Keupayaan istimewa Satria!\n
+    -- Rasa lapar adiwira dikurangkan\n
+    -- Jampi Merasuk Necromancer\n
+    -- Keupayaan Selubung Pemburu\n
+    -- Lencana Baharu\n
+    - Pengemodan:\n
+    -- Buff boleh skrip suai\n
+    -- gfx suai\n
+    </string>
+    <string name="Badges_GamesPlayed5">5000 permainan telah dimainkan</string>
+    <string name="Badges_ItemLvl5">Item aras 15 diperoleh</string>
+    <string name="Badges_FoodEaten5">60 unit makanan dimakan</string>
+    <string name="Badges_StrengthAttained5">21 mata Kekuatan dicapai</string>
+    <string name="Badges_LevelReached5">Aras 30 dicapai</string>
+    <string name="Badges_GoldCollected5">35000 keping emas dikumpul</string>
+    <string name="Badges_MonsterSlain5">1000 pihak musuh dibunuh</string>
+    <string name="Spells_NotInOwnBody">Anda tidak boleh buat %s ketika roh anda  tidak berada di dalam jasad anda.</string>
+    </resources>
