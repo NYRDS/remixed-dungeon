@@ -108,9 +108,7 @@ public class DewVial extends Item {
 			}
 			
 		} else {
-			
 			super.execute( hero, action );
-			
 		}
 	}
 	
@@ -148,6 +146,8 @@ public class DewVial extends Item {
 	public static void autoDrink( Hero hero ) {
 		DewVial vial = hero.belongings.getItem( DewVial.class );
 		if (vial != null && vial.isFull()) {
+
+			hero.hp(1);//resurrect Hero because simple heal can't
 			vial.execute( hero );
 			hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
 			
