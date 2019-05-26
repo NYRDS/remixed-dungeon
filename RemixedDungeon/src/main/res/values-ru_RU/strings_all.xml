@@ -3547,10 +3547,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="KindOfBow_ChooseArrows">ВЫБРАТЬ СТРЕЛЫ</string>
 
     <string name="BodyArmorSpell_Name">Тело-щит</string>
-    <string name="BodyArmorSpell_Info">Активирует скрытую энергию мышц, делая их крепче на некоторое время, повышая защиту ценой скорости передвижения.</string>
+    <string name="BodyArmorSpell_Info">Активирует скрытые резервы мышц, делая их крепче и повышая защиту ценой скорости передвижения.</string>
 
     <string name="BodyArmorBuff_Name">Тело-щит</string>
-    <string name="BodyArmorBuff_Info">Броня улучшена за счет скорости ходьбы</string>
+    <string name="BodyArmorBuff_Info">Броня улучшена за счет скорости ходьбы.</string>
 
     <string name="DieHardSpell_Name">Крепкий Орешек</string>
     <string name="DieHardSpell_Info">Временно повышает регенерацию делая тебя настоящим Крепким Орешком.</string>
@@ -3559,17 +3559,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DieHardBuff_Info">Скорость регенерации увеличена </string>
 
     <string name="SmashSpell_Name">Сокрушительный Удар</string>
-    <string name="SmashSpell_Info">Прыгает вверх и с силой врезается в землю, временно оглушая противников вокруг, одновременно нанося физический урон.</string>
+    <string name="SmashSpell_Info">Прыгает вверх, с силой врезается в землю, оглушая противников вокруг и нанося физический урон.</string>
     <string name="SmashSpell_NeedWeapon">Необходимо оружие для данного действия.</string>
 
     <string name="DashSpell_Name">Рывок</string>
-    <string name="DashSpell_Info">Совершает рывок в указанном направлении, нанося урон и травму попавшемуся на пути противнику.</string>
+    <string name="DashSpell_Info">Совершает рывок в указанном направлении, нанося увечья попавшемуся на пути противнику.</string>
     <string name="DashSpell_OnSelf">Я не могу сделать рывок на месте.</string>
     <string name="DashSpell_TooFar">Нельзя выполнить рывок так далеко.</string>
 
     <string name="CloakSpell_Name">Укрытие</string>
     <string name="CloakSpell_Info">Шагните в тень, чтобы остаться незамеченным. Значительно уменьшит ваши шансы быть обнаруженным. Не может быть использовано, когда рядом враги.</string>
-    <string name="CloakSpell_EnemiesNearby">Я не могу шагнуть в тень пока враги близко. </string>
+    <string name="CloakSpell_EnemiesNearby">Ты не можешь шагнуть в тень пока враги близко. </string>
 
     <string name="CloakBuff_Name">Укрыт</string>
     <string name="CloakBuff_Info">Укрыт в тени</string>
@@ -3594,13 +3594,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Кастомные спецэффекты\n
     </string>
     <string name="Badges_GamesPlayed5">5000 игр сыграно</string>
-    <string name="Badges_PotionsCooked5">25 зелий изготовлено</string>
+    <string name="Badges_PotionsCooked5">25 зелий сварено</string>
     <string name="Badges_ItemLvl5">Получен предмет 15 уровня</string>
     <string name="Badges_FoodEaten5">60 порций пищи съедено</string>
     <string name="Badges_StrengthAttained5">21 очко Силы достигнуто</string>
     <string name="Badges_LevelReached5">Уровень 30 достигнут</string>
-    <string name="Badges_GoldColleted5">35000 золота собрано</string>
+    <string name="Badges_GoldCollected5">35000 золота собрано</string>
     <string name="Badges_MonsterSlain5">1000 врагов побеждено</string>
+    <string name="Spells_NotInOwnBody">Ты не можешь использовать %s пока душа твоя вне тела.</string>
+    <string name="WndHero_Satiety">Сытость</string>
 
 
 </resources>
