@@ -509,8 +509,9 @@ public class Hero extends Char {
 			SystemTime.updateLastActionTime();
 
 			restoreHealth = false;
-
-			ready = false;
+			if(!Dungeon.realtime()) {
+				busy();
+			}
 
 			if (curAction instanceof CharAction.Move) {
 
@@ -568,7 +569,7 @@ public class Hero extends Char {
 		GameScene.ready();
 	}
 
-	private void readyAndIdle() {
+	public void readyAndIdle() {
 		ready();
 		getSprite().idle();
 	}

@@ -153,11 +153,13 @@ public abstract class Actor implements Bundlable {
 			current = null;
 
 			chars.clear();
+			float justNow = now;
 
 			//select actor to act
 			for (Actor actor : all) {
-				if (actor.time < now) {
+				if (actor.time < justNow) {
 					current = actor;
+					justNow = current.time;
 				}
 
 				//also fill chars positions
@@ -168,13 +170,16 @@ public abstract class Actor implements Bundlable {
 			}
 
 			if(current!= null) {
-				Log.i("Main loop", String.format("%s %4.2f",current.getClass().getSimpleName(),current.time));
+				Actor actor = current;
+//				Log.i("Main loop", String.format("%s %4.2f %4.2f",actor.getClass().getSimpleName(),now,actor.time));
 
-				current.act();
-			}
+				float timeBefore = actor.time;
 
-			if (!Dungeon.hero.isAlive()) {
-				break;
+				actor.act();
+
+				if(!(actor.time>timeBefore)) {
+					Log.i("Main loop", String.format("%s %4.2f, time not increased!",actor.getClass().getSimpleName(),actor.time));
+				}
 			}
 
 		} while (current != null);
