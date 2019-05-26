@@ -29,7 +29,6 @@ local Buffs  = {
     Blessed      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blessed"),
     MindVision   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.MindVision"),
     Necrotism    = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.Necrotism"),
-    Pain         = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.Pain"),
     RageBuff     = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.RageBuff"),
     Amok         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Amok"),
     Awareness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Awareness"),

@@ -44,7 +44,7 @@ public class GasesImmunity extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.GasesImmunity_Info);
 	}
 

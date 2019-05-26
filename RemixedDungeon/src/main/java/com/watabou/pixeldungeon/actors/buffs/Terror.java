@@ -30,6 +30,7 @@ import com.watabou.utils.Bundle;
 public class Terror extends FlavourBuff {
 
 	public static final float DURATION = 10f;
+
 	public Char source;
 	
 	@Override
@@ -45,7 +46,7 @@ public class Terror extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return "Terror";
 	}
 	

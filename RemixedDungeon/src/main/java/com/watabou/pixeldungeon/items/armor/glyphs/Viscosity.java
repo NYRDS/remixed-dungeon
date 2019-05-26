@@ -101,7 +101,7 @@ public class Viscosity extends Glyph {
 		}
 		
 		@Override
-		public String toString() {
+		public String name() {
 			return Utils.format( Game.getVar(R.string.DeferedDamage_Defered_Txt), damage );
 		}
 		

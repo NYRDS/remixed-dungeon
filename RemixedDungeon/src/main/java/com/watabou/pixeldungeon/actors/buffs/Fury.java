@@ -42,7 +42,7 @@ public class Fury extends Buff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Fury_Info);
 	}
 }

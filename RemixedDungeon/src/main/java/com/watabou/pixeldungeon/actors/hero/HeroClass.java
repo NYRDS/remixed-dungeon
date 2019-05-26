@@ -40,6 +40,7 @@ import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -350,6 +351,11 @@ public enum HeroClass implements CharModifier {
     @Override
     public CharSprite.State charSpriteStatus() {
         return CharSprite.State.NONE;
+    }
+
+    @Override
+    public int icon() {
+        return BuffIndicator.NONE;
     }
 
 

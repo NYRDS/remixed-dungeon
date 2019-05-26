@@ -30,7 +30,7 @@ public class Amok extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Amok_Info);
 	}
 

@@ -12,7 +12,7 @@ public class Blessed extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Blessed_Info);
 	}
 }

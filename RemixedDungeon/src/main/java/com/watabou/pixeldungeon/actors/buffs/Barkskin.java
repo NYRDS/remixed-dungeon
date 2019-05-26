@@ -55,7 +55,7 @@ public class Barkskin extends Buff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Barkskin_Info);
 	}
 }

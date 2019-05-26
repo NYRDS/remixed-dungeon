@@ -131,7 +131,7 @@ public class Earthroot extends Plant {
 		}
 		
 		@Override
-		public String toString() {
+		public String name() {
 			return Game.getVar(R.string.Earthroot_Buff);
 		}
 		

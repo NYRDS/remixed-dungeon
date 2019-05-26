@@ -45,7 +45,7 @@ public class MindVision extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.MindVision_Info);
 	}
 

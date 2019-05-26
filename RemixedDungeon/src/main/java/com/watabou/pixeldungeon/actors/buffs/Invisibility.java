@@ -50,7 +50,7 @@ public class Invisibility extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Invisibility_Info);
 	}
 	

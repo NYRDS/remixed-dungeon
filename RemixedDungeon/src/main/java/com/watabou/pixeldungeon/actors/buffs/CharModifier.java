@@ -21,4 +21,6 @@ public interface CharModifier {
     CharSprite.State charSpriteStatus();
 
     int icon();
+
+    String name();
 }

@@ -37,7 +37,7 @@ public class Cripple extends FlavourBuff {
 	}
 
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Cripple_Info);
 	}
 

@@ -1,11 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosHelmet_Info">Ein Blutroter Helm. Das Symbol ein Chaos Kriegers.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: Beschwörungslimit erreicht (momentanes maximum: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -66,8 +64,6 @@
 
 
     <string name="Torch_Info2">Dies ist ein unverzichtbarer Gegenstand in diesem Dungeon, der für seine schlechte Beleuchtung bekannt ist.</string>
-
-
 
     <string name="WndSpells_Title">Zaubersprüche</string>
     <string name="WndSpells_Level">Magie Level:</string>
@@ -339,8 +335,6 @@
     <string name="StoneBlood_Buff">Steinblut</string>
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Herzlich willkommen!</string>
-
-
 
     <string name="Welcome_Text_28_2">
 remix.28.2\n
@@ -2214,8 +2208,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Badges_LevelReached4">Level 24 erreicht</string>
     <string name="Badges_AllPotions">Alle Tränke identifiziert</string>
     <string name="Badges_AllScrolls">Alle Schriftrollen identifiziert</string>
-    <string name="Badges_AllRings">Alle Ringe identifiziert</string>
-    <string name="Badges_AllWands">Alle Zauberstäbe identifiziert</string>
     <string name="Badges_AllItems">Alle Tränke, Schriftrollen, Ringe und Zauberstäbe identifiziert</string>
 
 
@@ -3371,4 +3363,5 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="Potion_ItemFliesAway">%s fliegt dir gerade aus deinen Händen.</string>
     <string name="Potion_FoodRefreshed">%s sieht nun genießbar aus</string>
 
-</resources>
+
+    </resources>

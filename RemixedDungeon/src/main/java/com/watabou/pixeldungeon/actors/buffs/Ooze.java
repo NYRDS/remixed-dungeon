@@ -35,7 +35,7 @@ public class Ooze extends Buff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Ooze_Info);
 	}
 	

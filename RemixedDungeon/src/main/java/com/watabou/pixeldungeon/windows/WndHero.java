@@ -30,7 +30,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -186,7 +186,7 @@ public class WndHero extends WndTabbed {
 			Dungeon.hero.forEachBuff(buff -> buffSlot(buff));
 		}
 		
-		private void buffSlot( Buff buff ) {
+		private void buffSlot( CharModifier buff ) {
 			
 			int index = buff.icon();
 			
