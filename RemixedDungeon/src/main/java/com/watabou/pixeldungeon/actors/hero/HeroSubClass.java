@@ -36,6 +36,7 @@ import com.watabou.pixeldungeon.items.armor.ShamanArmor;
 import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
@@ -171,5 +172,10 @@ public enum HeroSubClass implements CharModifier {
 	@Override
 	public Set<String> immunities() {
 		return immunities;
+	}
+
+	@Override
+	public CharSprite.State charSpriteStatus() {
+		return CharSprite.State.NONE;
 	}
 }

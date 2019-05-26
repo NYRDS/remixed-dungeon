@@ -183,7 +183,7 @@ public class WndHero extends WndTabbed {
 		private float pos;
 		
 		public BuffsTab() {
-			Dungeon.hero.forEachBuff(this::buffSlot);
+			Dungeon.hero.forEachBuff(buff -> buffSlot(buff));
 		}
 		
 		private void buffSlot( Buff buff ) {

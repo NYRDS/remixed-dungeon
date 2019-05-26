@@ -40,7 +40,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
-import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -149,7 +148,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public boolean act() {
 		level().updateFieldOfView(this);
 
-		forEachBuff(CharModifier::charAct);
+		forEachBuff(buff -> buff.charAct());
 
 		return false;
 	}
@@ -960,6 +959,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		for(Buff b: copyOfBuffsSet){
 			cb.onBuff(b);
 		}
+
+		cb.onBuff(getHeroClass());
+		cb.onBuff(getSubClass());
 	}
 
 	public boolean swapPosition(final Char chr) {
