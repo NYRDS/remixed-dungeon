@@ -40,6 +40,17 @@ public class EventCollector {
         }
 	}
 
+	static public void logCountedEvent(String event, int threshold) {
+		final String key = "CountedEvent_"+event;
+		int count = Preferences.INSTANCE.getInt(key,0);
+		count++;
+
+		if(count==threshold) {
+			logEvent(event);
+		}
+		Preferences.INSTANCE.put(key, count);
+	}
+
 	static public void logEvent(String event) {
 		if (!mDisabled) {
 			Crashlytics.log(event);
