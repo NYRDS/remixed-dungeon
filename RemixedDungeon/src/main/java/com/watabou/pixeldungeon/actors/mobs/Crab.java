@@ -53,7 +53,7 @@ public class Crab extends Mob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		Ghost.Quest.process( getPos() );
 		super.die( cause );
 	}

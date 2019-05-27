@@ -1776,7 +1776,15 @@ public class Hero extends Char {
 	}
 
 	public Char getControlTarget() {
-		return CharsList.getById(controlTargetId);
+
+		Char controlTarget = CharsList.getById(controlTargetId);
+		if(controlTarget.getId() == EntityIdSource.INVALID_ID) {
+			EventCollector.logException("invalid control target");
+			setControlTarget(this);
+			return this;
+		}
+
+		return controlTarget;
 	}
 
 	public float getAwareness() {

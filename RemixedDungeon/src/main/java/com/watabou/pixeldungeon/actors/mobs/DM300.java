@@ -127,7 +127,7 @@ public class DM300 extends Boss {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		
 		super.die( cause );
 		

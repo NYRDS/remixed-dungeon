@@ -87,10 +87,8 @@ public class Chasm implements Hero.Doom {
 	}
 
 	private static void mobFall( Mob mob ) {
-		// Destroy instead of kill to prevent dropping loot
-		mob.destroy();
-		
-		mob.getSprite().removeAllStates();
+		mob.die(new Chasm());
+
 		((MobSprite)mob.getSprite()).fall();
 	}
 

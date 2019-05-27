@@ -65,6 +65,7 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -451,7 +452,7 @@ public abstract class Mob extends Char {
 		return runMobScript(method, null, null);
 	}
 
-	@Override
+
 	public void die(NamedEntityKind cause) {
 
 		getState().onDie();
@@ -501,7 +502,7 @@ public abstract class Mob extends Char {
 
 		Library.identify(Library.MOB, getEntityKind());
 
-		if (hero.lvl() <= maxLvl + 2) {
+		if (hero.lvl() <= maxLvl + 2 && !(cause instanceof Chasm)) {
 			dropLoot();
 		}
 

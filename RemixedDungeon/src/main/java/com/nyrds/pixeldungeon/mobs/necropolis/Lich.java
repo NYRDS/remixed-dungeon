@@ -259,7 +259,7 @@ public class Lich extends Boss {
     }
 
     @Override
-    public void die(NamedEntityKind cause ) {
+    public void die(NamedEntityKind cause) {
         super.die( cause );
         Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 

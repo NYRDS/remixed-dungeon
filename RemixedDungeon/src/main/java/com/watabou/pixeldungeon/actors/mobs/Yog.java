@@ -192,11 +192,6 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public void die(NamedEntityKind cause) {
-			super.die(cause);
-		}
-
-		@Override
 		public int attackSkill(Char target) {
 			return 36;
 		}
@@ -258,11 +253,6 @@ public class Yog extends Boss {
 		}
 
 		public BurningFist() {
-		}
-
-		@Override
-		public void die(NamedEntityKind cause) {
-			super.die(cause);
 		}
 
 		@Override

@@ -85,7 +85,7 @@ public class Piranha extends Mob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		super.die( cause );
 		
 		Statistics.piranhasKilled++;

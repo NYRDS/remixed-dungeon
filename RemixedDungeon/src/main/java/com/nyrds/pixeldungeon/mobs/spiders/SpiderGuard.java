@@ -51,7 +51,7 @@ public class SpiderGuard extends MultiKindMob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		super.die( cause );
 		Badges.validateRare( this );
 	}

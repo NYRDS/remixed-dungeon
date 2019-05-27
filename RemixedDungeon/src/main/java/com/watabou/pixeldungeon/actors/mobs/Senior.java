@@ -47,7 +47,7 @@ public class Senior extends Monk {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		super.die( cause );
 		Badges.validateRare( this );
 	}

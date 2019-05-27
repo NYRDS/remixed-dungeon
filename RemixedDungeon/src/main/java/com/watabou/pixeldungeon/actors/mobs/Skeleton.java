@@ -70,7 +70,7 @@ public class Skeleton extends UndeadMob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		
 		super.die( cause );
 		
