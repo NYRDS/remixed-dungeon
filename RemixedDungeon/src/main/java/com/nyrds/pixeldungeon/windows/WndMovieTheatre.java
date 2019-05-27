@@ -1,6 +1,7 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -91,6 +92,7 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 					if(needReward) {
 						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
 						ServiceManNPC.reward();
+						EventCollector.logCountedEvent("ad_reward5", 6);
 						needReward = false;
 					} else {
 						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
