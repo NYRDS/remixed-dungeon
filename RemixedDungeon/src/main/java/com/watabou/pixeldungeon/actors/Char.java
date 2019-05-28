@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
@@ -572,12 +573,32 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
-    public boolean isStarving() {
-	    Hunger hunger = buff(Hunger.class);
+	@NotNull
+	public Hunger hunger() {
 
-	    if(hunger == null) {
-	        return false;
-        }
+		if(!(this instanceof Hero)) { //fix it later
+			return new Hunger();
+		}
+
+		if(!isAlive()) {
+			return new Hunger();
+		}
+
+
+		Hunger hunger = buff(Hunger.class);
+
+		if(hunger == null) {
+			EventCollector.logEvent("null hunger on alive Char!");
+			hunger = new Hunger();
+			hunger.attachTo(this);
+		}
+
+		return hunger;
+
+	}
+
+    public boolean isStarving() {
+	    Hunger hunger = hunger();
 
         return hunger.isStarving();
     }
@@ -1046,5 +1067,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 				mob.releasePet();
 			}
 		}
+	}
+
+	public int effectiveSTR() {
+		return 10;
 	}
 }

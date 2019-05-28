@@ -811,9 +811,8 @@ public class Hero extends Char {
 
 			clearActions();
 
-			Hunger hunger = buff(Hunger.class);
-			if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
-				hunger.satisfy(-Hunger.STARVING / 10);
+			if (!Dungeon.level.isSafe()) {
+				hunger().satisfy(-Hunger.STARVING / 10);
 			}
 
 			InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
@@ -854,9 +853,8 @@ public class Hero extends Char {
 
 				clearActions();
 
-				Hunger hunger = buff(Hunger.class);
-				if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
-					hunger.satisfy(-Hunger.STARVING / 10);
+				if (!Dungeon.level.isSafe()) {
+					hunger().satisfy(-Hunger.STARVING / 10);
 				}
 
 				InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
@@ -1292,7 +1290,7 @@ public class Hero extends Char {
 				getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
 			}
 
-			buff(Hunger.class).satisfy(10);
+			hunger().satisfy(10);
 		}
 	}
 
@@ -1730,12 +1728,7 @@ public class Hero extends Char {
 	public void eat(Item food, float energy, String message) {
 		food.detach( belongings.backpack );
 
-		Hunger hunger = buff( Hunger.class );
-		if(hunger != null) {
-            hunger.satisfy(energy);
-        } else {
-			EventCollector.logException("no hunger " + className());
-        }
+		hunger().satisfy(energy);
 
 		GLog.i( message );
 

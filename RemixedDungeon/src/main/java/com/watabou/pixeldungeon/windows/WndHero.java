@@ -127,7 +127,7 @@ public class WndHero extends WndTabbed {
 			statSlot(Game.getVar(R.string.WndHero_Health), hero.hp() + "/" + hero.ht() );
 			statSlot(Game.getVar(R.string.Mana_Title), hero.getSkillPoints() + "/" + hero.getSkillPointsMax() );
 
-			Hunger hunger = hero.buff(Hunger.class);
+			Hunger hunger = hero.hunger();
 
 			statSlot(Game.getVar(R.string.WndHero_Satiety),
 					Utils.EMPTY_STRING+((int)((Hunger.STARVING - hunger.getLevel())/ Hunger.STARVING * 100))+"%");

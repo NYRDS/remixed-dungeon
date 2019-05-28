@@ -112,9 +112,8 @@ public class WndPriest extends WndQuest {
 			Char patient = CharsList.getById(patientId);
 
 			PotionOfHealing.heal(patient, 1.0f);
-			if(patient instanceof Hero) {
-				patient.buff(Hunger.class).satisfy(Hunger.STARVING);
-			}
+
+			patient.hunger().satisfy(Hunger.STARVING);
 
 			if(patient instanceof Mob) {
 				if(patient.getEntityKind().equals("Brute")) {

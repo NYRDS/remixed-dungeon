@@ -47,37 +47,37 @@ public class Hunger extends Buff implements Hero.Doom {
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
-			
-			Hero hero = (Hero)target;
-			
+
+			int difficulty = Dungeon.hero.getDifficulty();
+
 			if (!Dungeon.level.isSafe() && isStarving()) {
 
-				if (Random.Float() < 0.3f && (hero.hp() > 1 || !hero.paralysed)) {
+				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
 
-					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
-					
-					if(hero.getDifficulty() >= 3) {
-						hero.damage(Math.max(hero.effectiveSTR() - 10, 1), this);
-					} else {
-						hero.damage( 1, this );
+					if(target==Dungeon.hero) {
+						GLog.n(Game.getVars(R.array.Hunger_Starving)[target.getGender()]);
 					}
-					
-					hero.interrupt();
+
+					if(difficulty >= 3) {
+						target.damage(Math.max(target.effectiveSTR() - 10, 1), this);
+					} else {
+						target.damage( 1, this );
+					}
 				}
 				
-				if(hero.getDifficulty() >= 3) {
+				if(difficulty >= 3) {
 					if(Random.Float() < 0.01) {
-						Buff.prolong(hero, Weakness.class, Weakness.duration(hero));
+						Buff.prolong(target, Weakness.class, Weakness.duration(target));
 					}
 					
 					if(Random.Float() < 0.01) {
-						Buff.prolong(hero, Vertigo.class, Vertigo.duration(hero));
+						Buff.prolong(target, Vertigo.class, Vertigo.duration(target));
 					}
 				}
 				
 			} else {	
 				
-				int bonus = hero.buffLevel(RingOfSatiety.Satiety.class);
+				int bonus = target.buffLevel(RingOfSatiety.Satiety.class);
 
 				float delta = Math.min(STEP - bonus, 1);
 
@@ -89,29 +89,30 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 				float newLevel = level + delta;
 
-				boolean statusUpdated = false;
-				if (newLevel >= STARVING) {
-					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
-					statusUpdated = true;
-					
-					hero.interrupt();
-					
-				} else if (newLevel >= HUNGRY && level < HUNGRY) {
-					GLog.w( Game.getVars(R.array.Hunger_Hungry)[hero.getGender()] );
-					statusUpdated = true;
-					
-				}
+				if(target==Dungeon.hero) {
+					boolean statusUpdated = false;
+					if (newLevel >= STARVING) {
 
-				level = GameMath.gate(0, newLevel, STARVING);
-				
-				if (statusUpdated) {
-					BuffIndicator.refreshHero();
+						GLog.n(Game.getVars(R.array.Hunger_Starving)[target.getGender()]);
+						statusUpdated = true;
+
+					} else if (newLevel >= HUNGRY && level < HUNGRY) {
+						GLog.w(Game.getVars(R.array.Hunger_Hungry)[target.getGender()]);
+						statusUpdated = true;
+
+					}
+
+					level = GameMath.gate(0, newLevel, STARVING);
+
+					if (statusUpdated) {
+						BuffIndicator.refreshHero();
+					}
 				}
 				
 			}
 			
-			float step = hero.getHeroClass() == HeroClass.ROGUE ? STEP * 1.2f : STEP;
-			step *= hero.hasBuff(Shadows.class) ? 1.5f : 1;
+			float step = target.getHeroClass() == HeroClass.ROGUE ? STEP * 1.2f : STEP;
+			step *= target.hasBuff(Shadows.class) ? 1.5f : 1;
 			step *= Dungeon.realtime() ? 10f : 1;
 
 			spend( step );

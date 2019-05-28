@@ -358,7 +358,6 @@ public enum HeroClass implements CharModifier {
         return BuffIndicator.NONE;
     }
 
-
     public int classIndex() {
         return ordinal() - 1;
     }
