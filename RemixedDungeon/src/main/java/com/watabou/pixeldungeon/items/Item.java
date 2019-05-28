@@ -166,6 +166,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public void dropTo(int cell) {
+		if(quickSlotIndex!=-1) {
+			QuickSlot.refresh();
+		}
+
 		Heap heap = Dungeon.level.drop(this, cell);
 		if (!heap.isEmpty()) {
 			heap.sprite.drop(cell);
@@ -478,8 +482,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
 				reset(user.getPos(), cell, this, () -> {
-					item.onThrow(cell);
 					user.spendAndNext(finalDelay);
+					item.onThrow(cell);
 				});
 	}
 

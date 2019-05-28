@@ -51,7 +51,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
             EventCollector.init();
         }
 
-        if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1 && Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+        if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
             if(BuildConfig.DEBUG) {
                 HQSdk.enableDebug(true);
             }

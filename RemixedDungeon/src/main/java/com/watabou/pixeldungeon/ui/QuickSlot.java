@@ -255,8 +255,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     public static void refresh() {
         Game.pushUiTask(() -> {
-            if(lastRefreshTime != Game.elapsed && Dungeon.hero != null) {
-                lastRefreshTime = Game.elapsed;
+            if(Dungeon.hero != null) {
                 for (QuickSlot slot : slots) {
                     slot.refreshSelf();
                 }

@@ -774,12 +774,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return movable;
 	}
 
-	public void collect(Item item) {
+	public boolean collect(Item item) {
 		if (!item.collect(this)) {
-			if (level() != null && getPos() != 0) {
+			if (level() != null && level().cellValid(getPos())) {
 				level().drop(item, getPos()).sprite.drop();
 			}
+			return false;
 		}
+		return true;
 	}
 
 	public int skillLevel() {

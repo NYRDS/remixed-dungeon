@@ -1920,4 +1920,13 @@ public class Hero extends Char {
 	public boolean ignoreDr() {
 		return rangedWeapon != null && subClass == HeroSubClass.SNIPER;
 	}
+
+	@Override
+	public boolean collect(Item item) {
+		if(super.collect(item)) {
+			QuickSlot.refresh();
+			return true;
+		}
+		return false;
+	}
 }
