@@ -8,8 +8,18 @@
     <string name="Ring_Identify">hai abbastanza familiarità con %1$s da identificarlo. È %2$s.</string>
 
     <string-array name="Ring_Gems">
-        <item>rubino</item>
-        <item>rubino</item>
+        <item>diamante</item>
+        <item>opale</item>
+        <item>granato</item>
+        <item>ruby</item>
+        <item>ametista</item>
+        <item>topaz</item>
+        <item>onice</item>
+        <item>tormalina</item>
+        <item>smeraldo</item>
+        <item>zaffiro</item>
+        <item>quarzo</item>
+        <item>agata</item>
     </string-array>
 
     <string name="Ring_Info1">Puoi indossare solo 2 anelli alla volta.</string>
@@ -2623,7 +2633,7 @@ Potrebbe bruciare?</string>
         <item>crimson</item>
         <item>azzurro</item>
         <item>giada</item>
-        <item> oro</item>
+        <item>oro</item>
         <item>magenta</item>
         <item>carbone</item>
         <item>avorio</item>

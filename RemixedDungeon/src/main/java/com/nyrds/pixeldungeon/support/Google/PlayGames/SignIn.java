@@ -10,6 +10,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -52,7 +53,7 @@ public class SignIn implements OnCompleteListener, Executor {
 
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_SIGN_IN) {
-            GLog.p(String.format("resultCode :%d", resultCode));
+            GLog.p(Utils.format("resultCode :%d", resultCode));
             if (resultCode == RESULT_OK) {
                 GLog.p("ok");
             }
