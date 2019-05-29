@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Topi Keledar Chaos</string>
@@ -1306,7 +1305,7 @@
 
     <string name="WndDonate_silverDonateText2">Selain itu dapat lumpuhkan iklan dalam semua mod permainan dan membuka watak pemburu dari awal.</string>
     <string name="WndDonate_goldDonateText2">Tambahan lagi membuka watak bunian dari awal.</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">piawai</string>

@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="SummonDeathling_Name">Evocare Gregario della Morte</string>
@@ -911,7 +910,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndDonate_goldDonateText">Grazie a te per il tuo aiuto </string>
     <string name="WndDonate_silverDonateText2">disabilità le ads in tutte le modalità di gioco e sblocca il cacciatore ad inizio gioco</string>
     <string name="WndDonate_goldDonateText2">Sbloccherai l\'elfo ad inizio gioco</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">Base</string>
@@ -2620,7 +2619,17 @@ Potrebbe bruciare?</string>
     <string name="Potion_Shatter">La boccetta si frantuma e un liquido %s si sparge senza provocare danno</string>
 
     <string-array name="Potion_Colors">
-        <item>argento</item>
+        <item>turchese</item>
+        <item>crimson</item>
+        <item>azzurro</item>
+        <item>giada</item>
+        <item> oro</item>
+        <item>magenta</item>
+        <item>carbone</item>
+        <item>avorio</item>
+        <item>ambrato</item>
+        <item>bistre</item>
+        <item>indaco</item>
         <item>argento</item>
     </string-array>
 

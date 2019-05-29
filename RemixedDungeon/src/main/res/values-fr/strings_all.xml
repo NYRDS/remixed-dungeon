@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Casque du Choas</string>
@@ -1180,7 +1179,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndDonate_goldDonateText">Merci pour votre aide</string>
     <string name="WndDonate_silverDonateText2">Désactive aussi toutes les pubs dans tous les modes de jeu et débloque la Chasseresse dès le départ</string>
     <string name="WndDonate_goldDonateText2">Débloque également l\'Elfe dès le début du jeu</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">standard</string>

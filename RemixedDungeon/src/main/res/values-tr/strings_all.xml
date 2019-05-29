@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Kaos Kaskı</string>
@@ -1311,7 +1310,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
 
     <string name="WndDonate_silverDonateText2">Aynı zamanda tüm oyun modlarındaki reklamları kaldırır ve avcı karakterinin kilidini açar</string>
     <string name="WndDonate_goldDonateText2">Aynı zamanda elf karakterinin kilidini açar.</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">standart</string>
