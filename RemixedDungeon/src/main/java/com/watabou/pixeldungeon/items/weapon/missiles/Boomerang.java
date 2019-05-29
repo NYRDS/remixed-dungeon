@@ -104,8 +104,6 @@ public class Boomerang extends MissileWeapon {
 					}
 					QuickSlot.refresh();
 				});
-
-;
 	}
 	
 	private boolean throwEquiped;

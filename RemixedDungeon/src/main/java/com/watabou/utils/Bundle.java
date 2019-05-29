@@ -381,6 +381,7 @@ public class Bundle {
             Iterator<String> oi = object.keys();
             while(oi.hasNext()) {
                 String name = oi.next();
+                //noinspection unchecked
                 ret.put(name, (T)object.get(name));
             }
 

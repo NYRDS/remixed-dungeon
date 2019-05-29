@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.levels.objects;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 
@@ -42,10 +41,7 @@ public class ConcreteBlock extends LevelObject {
 
 	@Override
 	public boolean push(Char hero) {
-		if(hero instanceof Hero) {
-			return ((Hero)hero).effectiveSTR() >= requiredStr && super.push(hero);
-		}
-		return super.push(hero);
+		return hero.effectiveSTR() >= requiredStr && super.push(hero);
 	}
 
 	@Override
