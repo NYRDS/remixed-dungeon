@@ -28,18 +28,20 @@ return spell.init{
 
         local goodSacrifice = false
 
-        if sacrifice:getOwnerId()==caster:getId() then
-            sacrifice:yell("DarkSacrifice_Ok")
-            goodSacrifice = true
-        end
+        if sacrifice~=nil then
+            if sacrifice:getOwnerId()==caster:getId() then
+                sacrifice:yell("DarkSacrifice_Ok")
+                goodSacrifice = true
+            end
 
-        if caster == sacrifice then
-            sacrifice:yell("DarkSacrifice_Self")
-            goodSacrifice = true
-        end
+            if caster == sacrifice then
+                sacrifice:yell("DarkSacrifice_Self")
+                goodSacrifice = true
+            end
 
-        if sacrifice ~= nil and goodSacrifice == false then
-            sacrifice:yell("DarkSacrifice_Resist")
+            if goodSacrifice == false then
+                sacrifice:yell("DarkSacrifice_Resist")
+            end
         end
 
         if goodSacrifice then
@@ -49,6 +51,7 @@ return spell.init{
            sacrifice:damage(sacrifice:hp(), caster)
            return true
         end
+
         RPD.glog("DarkSacrifice_Hint")
         return false
     end
