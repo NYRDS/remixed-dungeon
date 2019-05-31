@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,11 +39,6 @@ public abstract class PortalGate extends Deco {
 
 	public PortalGate(int pos) {
 		super(pos);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
 	}
 
 

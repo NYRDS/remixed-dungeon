@@ -5,8 +5,6 @@
     "vwArena":{"kind":"PredesignedLevel", "depth":0, "isSafe":true, "file":"levelsDesc/vwArena.json"},
     "test":{"kind":"PredesignedLevel", "depth":0, "isSafe":true, "file":"levelsDesc/TestLevelSewers.json"},
 
-
-
     "library":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "noFogOfWar":true, "isSafe":true, "file":"levelsDesc/TownLibrary.json", "music":"ost_town_1.mp3"},
     "church":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true,"noFogOfWar":true, "file":"levelsDesc/Church.json", "music":"ost_town_1.mp3"},
     "inn":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true,"noFogOfWar":true, "file":"levelsDesc/Inn.json", "music":"ost_town_1.mp3"},
