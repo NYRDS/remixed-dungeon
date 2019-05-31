@@ -166,7 +166,7 @@ public class DungeonGenerator {
 
 			if (index >= nextLevelSet.length()) {
 				index = 0;
-				EventCollector.logException("wrong next level index");
+				EventCollector.logException("wrong next level index on: "+current.levelId);
 			}
 
 			mCurrentLevelId = nextLevelSet.optString(index,"0");
@@ -188,8 +188,6 @@ public class DungeonGenerator {
 					}
 				}
 			}
-
-
 
 			mCurrentLevelDepth = nextLevelDesc.optInt("depth",0);
 			mCurrentLevelKind  = getLevelKind(next.levelId);
