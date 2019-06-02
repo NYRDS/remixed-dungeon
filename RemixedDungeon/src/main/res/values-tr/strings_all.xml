@@ -1564,6 +1564,9 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
         <item>Herhangi Bir Yemek Yemek Az Miktarda Can Doldurur.</item>
         <item>Güç İksirlerini Tanıyabilirsin.</item>
     </string-array>
+    <string-array name="HeroClass_MagPerks">
+        <item>Büyücüler, asaları yakın dövüş silahı olarak kullanabilir. </item>
+    </string-array>
     <string-array name="HeroClass_RogPerks">
         <item>Başıbozuk oyuna Gölge Yüzüğü+1 ile başlar.</item>
         <item>Bu yüzük tanılanmış ve parmağına takılı olarak gelir.</item>
@@ -1579,6 +1582,14 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
         <item>Bir çiy tanesinden daha fazla sağlık kazanır.</item>
         <item>Etraftaki yaratıkları sezme yeteneği fazladır.</item>
     </string-array>
+    <string-array name="HeroClass_ElfPerks">
+        <item>Elfler geliştirilmiş ahşap bir yay ve bir sürü ok ile başlarlar. </item>
+        <item>Elfler yaylarda son derece uzmandır ve de çeviktirler. </item>
+        <item>Elfler çiy damlacıklarından daha fazla can kazanır. </item>
+        <item>Elfler yakın dövüş silahlarında daha az ustadır. </item>
+    </string-array>
+
+
     <string name="HeroSubClass_NameGlad">gladyatör</string>
     <string name="HeroSubClass_DescGlad">Yakın silah ile yapılan her başarılı vuruş _Gladyatör\'ün_ kombo yapmasına olanak sağlar, her başarılı vuruş ek hasar verir.</string>
     <string name="HeroSubClass_NameBers">barbar</string>
@@ -2276,6 +2287,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
 
 
+    <string name="ElvenDagger_Name">elf hançeri</string>
     <string name="ElvenDagger_Gender">erkeksi</string>
 
 
@@ -2285,11 +2297,14 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
 
 
+    <string name="LibraryBook_Name">Kütüphane kitabı</string>
     <string name="LibraryBook_Description">Bu cilt gerçekten devasa. Maceracıların zindanda keşfettikleri hakkında tüm bilgileri içeriyor.</string>
 
 
 
 
+    <string name="TrapWnd_Title">Tuzak</string>
+    <string name="TrapWnd_Step">Gerçekten de bu tuzağın üstüne basmak istiyor musun? Ölme ihtimalin var. </string>
     <string name="BadgesScene_Title">Rozetlerin</string>
 
 
@@ -2418,6 +2433,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="ScarecrowNPC_Name">korkuluk</string>
     <string name="ScarecrowNPC_Gender">nötr</string>
     <string name="ScarecrowNPC_Name_Objective">korkuluk</string>
+    <string name="ScarecrowNPC_Quest_Reminder">İhtiyacım olan tek şey 5 tane şeker. Ohh, ödüller çok tatlı olacak! </string>
     <string name="Journal_ScarecrowNPC">korkuluk</string>
 
     <string name="Mods_CreatedBy">Yaratan:</string>
@@ -2425,6 +2441,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="Mods_AuthorEmail">Sahibinin epostası:</string>
     <string name="Mods_RestartRequired">Yeniden başlatma gerekiyor</string>
 
+    <string name="Spells_NotTooFast">%s kullanım için henüz hazır değil</string>
     <string name="ElvenBow_Name">elf yayı</string>
     <string name="ElvenBow_Gender">erkeksi</string>
 
@@ -2469,6 +2486,9 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="TownsfolkSilentNPC_Message1">hımh.</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">hmmmm</string>
+
+
+    <string name="ServiceManNotReadyNPC_Message">Üzgünüm ama bu bina henüz hazır değil! </string>
 
 
     <string name="BellaNPC_Name">Bella</string>
@@ -2532,6 +2552,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     </string-array>
 
     <string name="WandOfShadowbolt_Name">şimşek gölgesi asası</string>
+    <string name="WandOfShadowbolt_Info">Bu asa karanlık, kötü bir enerji yayıyor. </string>
     <string name="TownGuardNPC_Name">köy gardiyanı</string>
     <string name="TownGuardNPC_Gender">erkeksi</string>
     <string name="TownGuardNPC_Name_Objective">köy gardiyanı</string>
@@ -2577,6 +2598,8 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
     <string name="town_deco_snow_name">kar</string>
     <string name="town_deco_bell_name">çan </string>
+    <string name="town_deco_bell_desc">Tipik bir kilise çanı. Uzun zamandır kimse çalmamış gibi görünüyor. Hatta halatı bile kayıp. </string>
+
     <string name="town_deco_bell_tower_name">çan kulesi</string>
     <string name="town_deco_chimney_name">baca</string>
     <string name="town_deco_window_name">pencere </string>
@@ -2603,10 +2626,14 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="town_deco_floor_desc">bu zemin basit ahşaptan yapılmış.tam olarak neye bakıyorsun ?</string>
 
     <string name="town_deco_carpet_name">Halı</string>
+    <string name="town_deco_carpet_desc">Özel konuklar için rezerve edilmiş lüks, kırmızı halı. </string>
+
     <string name="town_deco_movies_door_name">kapı</string>
     <string name="Scroll_Name">parşömen \"%s\"</string>
     <string name="Scroll_Info">bu parşömen çözülemez yazıtlarla dolu ve başlığı ayılar. %s acaba okuyunca ne olacak ?</string>
     <string name="Scroll_ACRead">OKU</string>
+    <string name="Scroll_Blinded">Kör edilmişken bir parşömen okuyamazsın. </string>
+
     <string-array name="Scroll_Runes">
         <item>KAUNAN</item>
         <item>SOWILO</item>
@@ -2963,6 +2990,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="ResultDescriptions_Fall">%d. seviyede ölümüne düştün</string>
     <string name="ResultDescriptions_Win">Yendor\'un Tılsımı edindin</string>
     <string name="ResultDescriptions_Immured">%d. seviyede taşa sıkıştın</string>
+    <string name="ResultDescriptions_Unknown">%d seviyede, gizemli koşullar altında öldü. </string>
     <string name="Armor_EquipCursed">%sın acı bir şekilde vücudunu sıkıştırıyor</string>
     <string name="Armor_Identify">%1$s ile aşina olduğundan dolayı %2$s olduğunu anlıyorsun.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
@@ -3356,4 +3384,13 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="Potion_FoodRefreshed">%s artık yenebilir gibi görünüyor</string>
 
 
+    <string name="KindOfBow_SelectArrowKind">Hangi okları kullanmalıyım? </string>
+    <string name="SmashSpell_Info">Yukarı zıpla ve yere çarptığında etraftaki düşmanları sersemletip, fiziksel hasar veren bir darbe yap. </string>
+    <string name="SmashSpell_NeedWeapon">Bu eylem için bir silaha ihtiyacım var. </string>
+
+    <string name="CloakSpell_Name">Pelerin</string>
+    <string name="CloakSpell_Info">Görünmez olmak için gölgelere karış. Fark edilme şansını büyük oranda düşürür. Yakında düşmanlar varken kullanılamaz. </string>
+    <string name="WndHero_Awareness">Farkındalık</string>
+    <string name="Badges_GoldCollected5">35000 altın toplandı</string>
+    <string name="Spells_NotInOwnBody">Ruhun bedeninden ayrıyken %s yapamazsın. </string>
     </resources>
