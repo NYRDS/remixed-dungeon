@@ -291,7 +291,6 @@ public class Lich extends Boss {
 
         for (int i = 0;i < nSkulls && i < pedestals.size();++i) {
             RunicSkull skull = RunicSkull.makeNewSkull(i);
-            level.spawnMob(skull);
 
             CellEmitter.center(pedestals.get(i)).burst( ShadowParticle.CURSE, 8 );
             WandOfBlink.appear(skull, pedestals.get(i));
