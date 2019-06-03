@@ -3549,16 +3549,16 @@ Parede
     <string name="DieHardBuff_Info">Taxa de regeneração aumentada</string>
 
     <string name="SmashSpell_Name">Pulo Esmagador</string>
-    <string name="SmashSpell_Info">Pula e cai com muita força no chão, atordoando os inimigos em volta, ao mesmo tempo que os causa dano físico.</string>
+    <string name="SmashSpell_Info">Pula e cai com muita força no chão, esmagando e atordoando os inimigos em volta, ao mesmo tempo que os causa dano físico.</string>
     <string name="SmashSpell_NeedWeapon">Eu preciso de uma arma para fazer isso.</string>
 
     <string name="DashSpell_Name">Investida</string>
-    <string name="DashSpell_Info">Corre em uma direção específica e colide com os inimigos, causando danos e ferimentos no caminho.</string>
+    <string name="DashSpell_Info">Corre em uma direção específica e colidindo com os inimigos no caminho, causando danos e ferimentos.</string>
     <string name="DashSpell_OnSelf">Eu não posso correr no mesmo lugar.</string>
     <string name="DashSpell_TooFar">Eu não posso correr tão longe.</string>
 
     <string name="CloakSpell_Name">Ocultar-se</string>
-    <string name="CloakSpell_Info">Entre nas sombras para não ser visto. Reduzindo bastante suas chances de ser detectado. Não pode ser usado se houver inimigos por perto.</string>
+    <string name="CloakSpell_Info">Entre nas sombras para não ser visto. Reduz bastante suas chances de ser detectado. Não pode ser usado se houver inimigos por perto.</string>
     <string name="CloakSpell_EnemiesNearby">Você não  pode se ocultar nas sombras se houver inimigos por perto.</string>
 
     <string name="CloakBuff_Name">Oculto</string>
@@ -3589,8 +3589,10 @@ Parede
     <string name="Badges_FoodEaten5">60 pedaços de comida comidos</string>
     <string name="Badges_StrengthAttained5">21 pontos de Força adquiridos</string>
     <string name="Badges_LevelReached5">Level 30 conquistado</string>
-    <string name="Badges_GoldColleted5">35000 ouro coletado</string>
+    <string name="Badges_GoldCollected5">35000 ouro coletado</string>
     <string name="Badges_MonsterSlain5">1000 inimigos mortos</string>
+    <string name="Spells_NotInOwnBody">Você não pode %s enquanto sua alma se separa do corpo.</string>
+    <string name="WndHero_Satiety">Saciedade</string>
 
 
 </resources>
