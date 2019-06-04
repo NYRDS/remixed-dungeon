@@ -1,6 +1,7 @@
 package com.nyrds.android.lua;
 
 import com.nyrds.android.util.ModError;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
@@ -20,11 +21,11 @@ public class MultiDexLuajavaLib extends LuajavaLib {
 		ClassLoader classLoader = RemixedDungeonApp.getContext().getClassLoader();
 
 		try {
-
 			Class clazz = Class.forName(name, true, classLoader);
 			return clazz;
 		} catch (ClassNotFoundException e) {
-			throw new ModError("Failed to load class "+classLoader.toString(), e);
+			ModError.doReport("Failed to load class ["+classLoader.toString() + "] in mod "+ ModdingMode.activeMod(), e);
+			return Object.class;
 		}
 	}
 }
