@@ -19,6 +19,7 @@ import io.fabric.sdk.android.Fabric;
 import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
 import io.humanteq.hqsdkcore.HQSdk;
 import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
+import io.humanteq.hqsdkcore.models.GroupResponse;
 
 public class RemixedDungeonApp extends MultiDexApplication {
 
@@ -83,12 +84,12 @@ public class RemixedDungeonApp extends MultiDexApplication {
                 HQSdk.start(new InstalledApplicationsCollector());
                 HQSdk.startSystemEventsTracking();
 
-                HQSdk.getUserGroups(new HqmCallback<List<String>>() {
+                HQSdk.getUserGroups(new HqmCallback<List<GroupResponse>>() {
 
                     @Override
-                    public void onSuccess(List<String> strings) {
+                    public void onSuccess(List<GroupResponse> groupResponses) {
                         if(!Preferences.INSTANCE.getBoolean("hq_groups",false)) {
-                            if (!strings.isEmpty()) {
+                            if (!groupResponses.isEmpty()) {
                                 EventCollector.logEvent("hq_non_empty_groups");
                                 Preferences.INSTANCE.put("hq_groups",true);
                             } else {

@@ -34,7 +34,7 @@ android {
 
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 715
-        versionName "remix.28.6"
+        versionName "remix.28.6.fix.1"
     }
 
     aaptOptions {
@@ -110,7 +110,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
 
-    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.0-rc21'
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.0-rc23'
     implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.0-rc21'
 
     implementation 'androidx.core:core:1.0.2'

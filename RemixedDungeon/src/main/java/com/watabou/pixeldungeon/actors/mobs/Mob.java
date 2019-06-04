@@ -551,7 +551,7 @@ public abstract class Mob extends Char {
 		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
 		Mob new_mob;
 		try {
-			new_mob = this.getClass().newInstance();
+			new_mob = MobFactory.mobByName(getMobClassName());
 		} catch (Exception e) {
 			throw new TrackedRuntimeException("resurrect issue");
 		}

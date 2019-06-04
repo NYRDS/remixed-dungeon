@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -94,7 +93,7 @@ public class InterlevelScene extends PixelScene {
                         ascend();
                         break;
                     case CONTINUE:
-                        restore();
+                        restore(Dungeon.currentPosition());
                         break;
                     case RESURRECT:
                         resurrect();
@@ -215,7 +214,7 @@ public class InterlevelScene extends PixelScene {
         }
     }
 
-    private void descend() throws IOException {
+    private void descend() {
         Actor.fixTime();
 
         Collection<Mob> followers = CharsList.emptyMobList;
@@ -233,14 +232,15 @@ public class InterlevelScene extends PixelScene {
         }
 
         Position next;
+        Position thisPosition = Dungeon.currentPosition();
         Level newLevel;
 
         try {
-            next = DungeonGenerator.descend(Dungeon.currentPosition());
+            next = DungeonGenerator.descend(thisPosition);
             Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
             newLevel = Dungeon.loadLevel(next);
         } catch (Exception e) {
-            restore();
+            restore(thisPosition);
             return;
         }
 
@@ -307,13 +307,20 @@ public class InterlevelScene extends PixelScene {
         if (!rescueMode) {
             rescueMode = true;
             EventCollector.logException(cause, "enter rescue mode");
-            SaveUtils.loadGame(SaveUtils.PREV_SAVE, Dungeon.heroClass);
+
+            if(SaveUtils.slotUsed(SaveUtils.PREV_SAVE,Dungeon.heroClass)) {
+                SaveUtils.loadGame(SaveUtils.PREV_SAVE, Dungeon.heroClass);
+            } else {
+                EventCollector.logException(cause,"no backup save");
+                error = Utils.format("Sorry, but there is no backup save for %s\n",Dungeon.heroClass.name());
+            }
             return;
         }
-        throw new TrackedRuntimeException("rescue failed", cause);
+        EventCollector.logException(cause,"rescue failed");
+        error = Utils.format("Sorry, but something terrible happens with backup save for %s\n",Dungeon.heroClass.name());
     }
 
-    private void restore() {
+    private void restore(Position restorePos) {
         Actor.fixTime();
 
         try {
@@ -324,9 +331,7 @@ public class InterlevelScene extends PixelScene {
                 return;
             }
 
-            Level level;
-
-            level = Dungeon.loadLevel(Dungeon.currentPosition());
+            Level level = Dungeon.loadLevel(restorePos);
 
             if (level == null) { // save file fucked up :(
                 rescue(new Exception("level==null"));

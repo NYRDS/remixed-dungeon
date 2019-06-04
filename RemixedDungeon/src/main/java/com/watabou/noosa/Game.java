@@ -58,7 +58,6 @@ import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.RemixedDungeon;
-import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -601,19 +600,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void setSelectedLanguage() {
     }
 
-    static Window currentWindow;
-
-
     static public void pushUiTask(Runnable task) {
         instance().uiTasks.add(task);
     }
 
-    public static void hideWindow() {
-        pushUiTask(() -> {
-            if (currentWindow != null) {
-                currentWindow.hide();
-                currentWindow = null;
-            }
-        });
-    }
 }
