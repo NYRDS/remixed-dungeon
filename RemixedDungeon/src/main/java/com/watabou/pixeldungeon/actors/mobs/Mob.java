@@ -775,6 +775,11 @@ public abstract class Mob extends Char {
 			return false;
 		}
 
+		if(!level().cellValid(enemy.getPos())) {
+			EventCollector.logException(getMobClassName() + " zapping "+enemy.getEntityKind()+" on invalid cell");
+			return false;
+		}
+
 		if (hit(this, enemy, true)) {
 			return true;
 		} else {
