@@ -91,7 +91,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
-	public int pos = Level.INVALID_CELL;
+	private int pos     = Level.INVALID_CELL;
+	private int prevPos = Level.INVALID_CELL;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int id = EntityIdSource.INVALID_ID;
@@ -785,7 +786,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return pos;
 	}
 
+	public void _stepBack() {
+		if(level().cellValid(prevPos)){
+			setPos(prevPos);
+		}
+	}
+
 	public void setPos(int pos) {
+		prevPos = this.pos;
 		freeCell(this.pos);
 		this.pos = pos;
 		occupyCell(this);

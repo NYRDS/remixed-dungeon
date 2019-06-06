@@ -15,7 +15,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 		imageFile = "items/ranged.png";
 	}
 
-	protected static final String AC_CHOOSE_ARROWS   = "KindOfBow_ChooseArrows";
+	private static final String AC_CHOOSE_ARROWS   = "KindOfBow_ChooseArrows";
 
 	private Class <? extends Arrow> arrowType = Arrow.class;
 	
@@ -63,7 +63,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 	@Override
 	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = super.actions( hero );
-		if(hero.getBelongings().getItem(Arrow.class)!=null) {
+		if(isEquipped(hero) && hero.getBelongings().getItem(Arrow.class)!=null) {
 			actions.add(AC_CHOOSE_ARROWS);
 			setDefaultAction(AC_CHOOSE_ARROWS);
 		} else {

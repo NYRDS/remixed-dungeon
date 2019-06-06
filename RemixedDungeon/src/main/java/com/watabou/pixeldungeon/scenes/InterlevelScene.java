@@ -252,6 +252,8 @@ public class InterlevelScene extends PixelScene {
     private void fall() throws IOException {
 
         Actor.fixTime();
+
+        Dungeon.hero._stepBack();
         Dungeon.save(); // for auto save
 
         Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.FALL);
