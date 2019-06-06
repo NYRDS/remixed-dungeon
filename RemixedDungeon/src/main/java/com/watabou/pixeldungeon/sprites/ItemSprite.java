@@ -22,6 +22,7 @@ import android.graphics.Bitmap;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
@@ -37,6 +38,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ItemSprite extends MovieClip {
@@ -52,24 +54,26 @@ public class ItemSprite extends MovieClip {
 	@Nullable
 	private Glowing glowing;
 
+	private Image overlay;
+
 	private float   phase;
 	private boolean glowUp;
 
 	private float dropInterval;
 
 	public ItemSprite() {
-		this(ItemSpriteSheet.SMTH, null);
+		this(Assets.ITEMS, ItemSpriteSheet.SMTH, null);
 	}
 
-	public ItemSprite(Item item) {
+	public ItemSprite(@NotNull Item item) {
 		this(item.imageFile(), item.image(), item.glowing());
+
+		if(item.overlayFile()!=null) {
+			overlay = new Image(item.overlayFile(),16,item.overlayIndex());
+		}
 	}
 
-	public ItemSprite(int image, Glowing glowing) {
-		this(Assets.ITEMS, image, glowing);
-	}
-
-	private ItemSprite(String file, int imageIndex, Glowing glowing) {
+	public ItemSprite(String file, int imageIndex, Glowing glowing) {
 		super();
 
 		view(file, imageIndex, glowing);

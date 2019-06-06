@@ -88,7 +88,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	protected String info2 = getClassParam("Info2", Game.getVar(R.string.Item_Info2), false);
 
 	protected int image = 0;
+	protected int overlayIndex;
 
+	protected String overlayFile;
 	protected String imageFile;
 
 	public  boolean stackable = false;
@@ -542,6 +544,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return this;
 	}
 
+	public String overlayFile() {
+		return overlayFile;
+	}
+
 	public String imageFile() {
 		String customImageFile = ItemSpritesDescription.getImageFile(this);
 
@@ -672,5 +678,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	@Override
 	public String getEntityKind() {
 		return getClassName();
+	}
+
+	public int overlayIndex() {
+		return overlayIndex;
 	}
 }

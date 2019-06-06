@@ -277,7 +277,7 @@ public class RankingsScene extends PixelScene {
 
             super.createChildren();
 
-            shield = new ItemSprite(ItemSpriteSheet.TOMB, null);
+            shield = new ItemSprite(Assets.ITEMS, ItemSpriteSheet.TOMB, null);
             add(shield);
 
             position = new BitmapText(PixelScene.font1x);
