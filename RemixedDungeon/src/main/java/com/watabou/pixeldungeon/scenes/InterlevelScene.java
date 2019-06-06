@@ -93,7 +93,7 @@ public class InterlevelScene extends PixelScene {
                         ascend();
                         break;
                     case CONTINUE:
-                        restore(Dungeon.currentPosition());
+                        restore();
                         break;
                     case RESURRECT:
                         resurrect();
@@ -240,7 +240,7 @@ public class InterlevelScene extends PixelScene {
             Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
             newLevel = Dungeon.loadLevel(next);
         } catch (Exception e) {
-            restore(thisPosition);
+            restoreAtPosition(thisPosition);
             return;
         }
 
@@ -320,7 +320,8 @@ public class InterlevelScene extends PixelScene {
         error = Utils.format("Sorry, but something terrible happens with backup save for %s\n",Dungeon.heroClass.name());
     }
 
-    private void restore(Position restorePos) {
+
+    private void restoreAtPosition(Position restorePos) {
         Actor.fixTime();
 
         try {
@@ -332,6 +333,34 @@ public class InterlevelScene extends PixelScene {
             }
 
             Level level = Dungeon.loadLevel(restorePos);
+
+            if (level == null) { // save file fucked up :(
+                rescue(new Exception("level==null"));
+                return;
+            }
+
+            Dungeon.switchLevel(level, Dungeon.hero.getPos(), CharsList.emptyMobList);
+
+        } catch (Exception e) {
+            rescue(e);
+            return;
+        }
+        rescueMode = false;
+    }
+
+
+    private void restore() {
+        Actor.fixTime();
+
+        try {
+            Dungeon.loadGame();
+
+            if (Dungeon.hero == null) {
+                rescue(new Exception("Dungeon.hero == null"));
+                return;
+            }
+
+            Level level = Dungeon.loadLevel(Dungeon.currentPosition());
 
             if (level == null) { // save file fucked up :(
                 rescue(new Exception("level==null"));

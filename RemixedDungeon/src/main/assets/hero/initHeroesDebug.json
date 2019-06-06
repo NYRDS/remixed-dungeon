@@ -15,14 +15,14 @@
         "level":10
       },
       {
-        "kind": "ScrollOfMirrorImage",
+        "kind": "Sungrass.Seed",
         "quantity" :10
       },
       {
         "kind": "SacrificialSword"
       },
       {
-        "kind": "ScrollOfMagicMapping",
+        "kind": "PotionOfInvisibility",
         "quantity": 100
       },
       {

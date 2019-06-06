@@ -38,7 +38,7 @@ public class Hunger extends Buff implements Hero.Doom {
 
 	private static final float STEP	= 10f;
 	
-	public static final float HUNGRY	= 250f;
+	public static final float HUNGRY	= 280f;
 	public static final float STARVING	= 400f;
 
 	@Packable
@@ -79,7 +79,7 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 				int bonus = target.buffLevel(RingOfSatiety.Satiety.class);
 
-				float delta = Math.min(STEP - bonus, 1);
+				float delta = Math.max(STEP - bonus, 1);
 
 				delta *= RemixedDungeon.getDifficultyFactor() / 1.5f;
 

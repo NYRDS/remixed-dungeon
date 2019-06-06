@@ -82,21 +82,18 @@ public class WndHatInfo extends Window {
 				}
 
 				Game.instance().runOnUiThread(
-						new Runnable() {
-							@Override
-							public void run() {
-								EventCollector.logEvent("PurchaseClick",item.name());
-								RemixedDungeon.instance().iap.doPurchase(accessory, () -> {
-									item.ownIt(true);
-									item.equip();
-									Dungeon.hero.updateSprite();
-									onBackPressed();
-									parent.hide();
-									if(!Game.isPaused()) {
-										GameScene.show(new WndHats());
-									}
-								});
-							}
+						() -> {
+							EventCollector.logEvent("PurchaseClick",item.name());
+							RemixedDungeon.instance().iap.doPurchase(accessory, () -> {
+								item.ownIt(true);
+								item.equip();
+								Dungeon.hero.updateSprite();
+								onBackPressed();
+								parent.hide();
+								if(!Game.isPaused()) {
+									GameScene.show(new WndHats());
+								}
+							});
 						}
 				);
 			}
