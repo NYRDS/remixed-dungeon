@@ -43,8 +43,7 @@ public class Sungrass extends Plant {
 
 	public void effect(int pos, Presser ch) {
 		if (ch instanceof Char) {
-			Health buff = Buff.affect((Char)(ch), Health.class);
-			buff.pos = pos; //because char get affected by buff before stepping on pos cell
+			Buff.affect((Char)(ch), Health.class);
 		}
 
 		if (Dungeon.visible[pos]) {

@@ -71,9 +71,6 @@ public class Plant extends LevelObject {
 			}
 		}
 
-		wither();
-
-		effect(pos, ch);
 		return true;
 	}
 
@@ -82,10 +79,10 @@ public class Plant extends LevelObject {
 	public void bump(Presser presser) {
 		if(presser instanceof Char) {
 			interact((Char)presser);
-		} else {
-		    effect(getPos(),presser);
-            wither();
-        }
+		}
+
+		effect(getPos(),presser);
+		wither();
 	}
 
 	private void wither() {

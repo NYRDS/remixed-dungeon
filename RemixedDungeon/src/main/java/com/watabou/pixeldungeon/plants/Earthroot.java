@@ -48,7 +48,6 @@ public class Earthroot extends Plant {
 
 			Armor buff = Buff.affect(chr, Armor.class);
 			buff.level = chr.ht();
-			buff.pos   = pos;
 		}
 
 		if (Dungeon.visible[pos]) {
