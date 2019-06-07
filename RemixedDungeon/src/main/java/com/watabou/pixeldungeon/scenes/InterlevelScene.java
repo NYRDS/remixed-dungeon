@@ -174,7 +174,7 @@ public class InterlevelScene extends PixelScene {
             add(new WndError(error) {
                 public void onBackPressed() {
                     super.onBackPressed();
-                    Game.switchScene(StartScene.class);
+                    Game.switchScene(TitleScene.class);
                 }
             });
             error = null;
@@ -240,6 +240,7 @@ public class InterlevelScene extends PixelScene {
             Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
             newLevel = Dungeon.loadLevel(next);
         } catch (Exception e) {
+            EventCollector.logException(e);
             restoreAtPosition(thisPosition);
             return;
         }
