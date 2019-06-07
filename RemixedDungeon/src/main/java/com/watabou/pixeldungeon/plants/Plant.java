@@ -81,8 +81,8 @@ public class Plant extends LevelObject {
 			interact((Char)presser);
 		}
 
-		effect(getPos(),presser);
 		wither();
+		effect(getPos(),presser);
 	}
 
 	private void wither() {
