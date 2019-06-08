@@ -8,8 +8,8 @@ local RPD = require "scripts/lib/commonClasses"
 
 local actor = require "scripts/lib/actor"
 
-local dungeonEntrance = {26, 24}
-local shopEntrance    = {15, 19}
+local dungeonEntrance = {13, 4}
+local shopEntrance    = {18, 16}
 
 local lastWarningTime = 0
 local time = 0
