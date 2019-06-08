@@ -3535,29 +3535,29 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="KindOfBow_ChooseArrows">CHOOSE ARROWS</string>
 
     <string name="BodyArmorSpell_Name">Body Armor</string>
-    <string name="BodyArmorSpell_Info">Activates reserved muscle power, make them stronger temporarily, thus increase your armor but at cost of movement speed.</string>
+    <string name="BodyArmorSpell_Info">Activates the reserved muscle power, making them temporarily stronger, thus greatly increasing your armor but at cost of movement speed.</string>
 
     <string name="BodyArmorBuff_Name">Body Armor</string>
-    <string name="BodyArmorBuff_Info">Armor increased at cost of movement speed</string>
+    <string name="BodyArmorBuff_Info">Armor is increased at the cost of movement speed.</string>
 
     <string name="DieHardSpell_Name">Die Hard</string>
-    <string name="DieHardSpell_Info">Will temporarily increase regeneration making you really Die Hard</string>
+    <string name="DieHardSpell_Info">Will temporarily increase your regeneration making you a real Die Hard.</string>
 
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DieHardBuff_Info">Regeneration rate increased</string>
 
     <string name="SmashSpell_Name">Smash</string>
-    <string name="SmashSpell_Info">Jumps upward and smashes powerfully and temporarily stuns enemy surrounding, at the same time dealing physical damage.</string>
+    <string name="SmashSpell_Info">Jump upwards and create a powerful smash upon hitting the ground,that temporarily stuns enemies around and at the same time deals physical damage.</string>
     <string name="SmashSpell_NeedWeapon">I need a weapon for this move.</string>
 
     <string name="DashSpell_Name">Dash</string>
-    <string name="DashSpell_Info">Dash in a specified direction and collides with enemies, dealing damage and causing maim.</string>
+    <string name="DashSpell_Info">Dash towards a specified direction while colliding with enemies, dealing damage and causing maim.</string>
     <string name="DashSpell_OnSelf">I can\'t dash on the spot.</string>
-    <string name="DashSpell_TooFar">I can\'t dash so far.</string>
+    <string name="DashSpell_TooFar">I can\'t dash that far.</string>
 
     <string name="CloakSpell_Name">Cloak</string>
-    <string name="CloakSpell_Info">Step in shadows greatly to go unseen. Greatly reduce your chances to be detected. Can\'t be used when enemies nearby.</string>
-    <string name="CloakSpell_EnemiesNearby">You can\'t step in shadows when enemies are nearby.</string>
+    <string name="CloakSpell_Info">Step into the shadows to become unseen. Greatly reduce your chances of being detected. Can\'t be used while enemies are nearby.</string>
+    <string name="CloakSpell_EnemiesNearby">You can\'t step into the shadows while enemies are nearby.</string>
 
     <string name="CloakBuff_Name">Cloaked</string>
     <string name="CloakBuff_Info">Cloaked in shadows.</string>
@@ -3631,7 +3631,26 @@ No, there was no place for her in the light, not anymore. She turned from the me
    <string name="town_deco_projector_name">Film Projector</string>
    <string name="town_deco_projector_desc">An old device for playing film and entertaining people</string>   
    <string name="town_deco_filmtape_name">Film</string>
-   <string name="town_deco_filmtape_desc">Interesting what does this piece contain</string>   
+   <string name="town_deco_filmtape_desc">Interesting what does this piece contain</string>
+   <string name="town_deco_painting_name">Painting</string>
+   <string name="town_deco_painting_desc">A beautiful looking piece of art</string>
+   <string name="town_deco_curtains_name">Curtains</string>
+   <string name="town_deco_curtains_desc">Stops all the unneeded light and also serves as a great decoration</string> 
+   <string name="town_deco_rug_name">Rug</string>
+   <string name="town_deco_rug_desc">Designed with a good taste</string> 
+   <string name="town_deco_trapdoor_name">Trapdoor</string>
+   <string name="town_deco_trapdoor_desc">Where could this possibly lead</string>
+   <string name="town_deco_glass_stained_name">Stained Glass</string>
+   <string name="town_deco_glass_stained_desc">The author of this glass probably put a lot of effort into it</string>
+   <string name="town_deco_glass_name">Wide Window</string>
+   <string name="town_deco_glass_desc">This one is wider than the others and certainly lets in more light</string>  
+   <string name="town_deco_counter_name">Counter</string>
+   <string name="town_deco_counter_desc">Keeps a good distance between you and the person standing behind it</string>
+   <string name="town_deco_library_books_name">Reading Matter</string>
+   <string name="town_deco_library_books_desc">Still better than the books from the dungeon</string>
+   <string name="town_deco_wallpaper_name">Wallpaper</string>
+   <string name="town_deco_wallpaper_desc">A great decorating solution for such a place</string>
+
 
     <string name="Welcome_Text_28_6">
     remix.28.6\n
@@ -3646,14 +3665,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Custom gfx\n
     </string>
     <string name="Badges_GamesPlayed5">5000 games played</string>
-    <string name="Badges_PotionsCooked5">25 potions cooked</string>
+    <string name="Badges_PotionsCooked5">25 potions brewed</string>
     <string name="Badges_ItemLvl5">Item of level 15 acquired</string>
     <string name="Badges_FoodEaten5">60 pieces of food eaten</string>
     <string name="Badges_StrengthAttained5">21 points of Strength attained</string>
     <string name="Badges_LevelReached5">Level 30 reached</string>
-    <string name="Badges_GoldColleted5">35000 gold collected</string>
+    <string name="Badges_GoldCollected5">35000 gold collected</string>
     <string name="Badges_MonsterSlain5">1000 enemies slain</string>
     <string name="Spells_NotInOwnBody">You can\'t perform %s while your soul separated from body.</string>
+    <string name="WndHero_Satiety">Satiety</string>
 
 
 </resources>
