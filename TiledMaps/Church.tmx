@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.3" orientation="orthogonal" renderorder="left-up" width="16" height="24" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+<map version="1.0" tiledversion="2018.12.28" orientation="orthogonal" renderorder="left-up" width="16" height="24" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
  <tileset firstgid="1" source="tilesets/logic.tsx"/>
  <tileset firstgid="65" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="321" source="tilesets/Mobs.tsx"/>
- <layer name="logic" width="16" height="24">
+ <layer id="1" name="logic" width="16" height="24">
   <data encoding="csv">
 37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,
 37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,
@@ -31,7 +31,7 @@
 37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37
 </data>
  </layer>
- <layer name="base" width="16" height="24">
+ <layer id="2" name="base" width="16" height="24">
   <data encoding="csv">
 162,161,163,162,163,161,161,161,163,162,163,162,163,163,161,161,
 162,163,161,162,161,163,161,161,163,161,163,161,162,161,161,162,
@@ -59,7 +59,7 @@
 162,162,162,162,161,161,163,163,162,163,163,162,161,162,162,162
 </data>
  </layer>
- <layer name="deco" width="16" height="24">
+ <layer id="3" name="deco" width="16" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -87,7 +87,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="deco2" width="16" height="24">
+ <layer id="4" name="deco2" width="16" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -115,7 +115,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="roof_base" width="16" height="24">
+ <layer id="5" name="roof_base" width="16" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -143,7 +143,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="mobs" width="16" height="24">
+ <layer id="6" name="mobs" width="16" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
