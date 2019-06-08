@@ -2,20 +2,20 @@
 
 
     <string name="ChaosHelmet_Name">Capacete do Caos</string>
-    <string name="ChaosHelmet_Info">O Capacete de Sangue, e um Símbolo do Caos Para o Guerreiro.</string>
+    <string name="ChaosHelmet_Info">Um capacete cor de sangue é um símbolo essencial para um guerreiro do caos.</string>
 
-    <string name="Spells_SummonLimitReached">%1$s:O Limite de Invocação foi Excedido(O Máximo:%2$d)!</string>
+    <string name="Spells_SummonLimitReached">%1$s: limite de invocação excedido (máximo atual: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
     <string name="Mana_Cost">Custo de Mana: </string>
     <string name="Spells_NotEnoughSP">Você não tem mana o suficiente para lançar uma \'\'%1$s\'\' magia.</string>
 
 
     <string name="SummonDeathling_Name">Invocar Morto-Vivo</string>
-    <string name="SummonDeathling_Info">Invocar um Morto Vivo Seguidor. A Vida e o Dano cresce com o Aumento do Level do Herói. Limite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
+    <string name="SummonDeathling_Info">Invocar um seguidor morto vivo. A vida e o dano cresce com o aumento do nível do herói. \n\nLimite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
 
 
     <string name="Ignite_Name">Incendiar</string>
-    <string name="Ignite_Info">Acende uma Chama na Célula Selecionada. Pode ser Usado Para Queimar Grama, Monstros e Objetos.</string>
+    <string name="Ignite_Info">Acende uma chama na célula selecionada. Pode ser usado para queimar grama, monstros e objetos.</string>
 
 
     <string name="RootSpell_Name">Enraizar</string>
@@ -35,15 +35,15 @@
 
 
     <string name="Healing_Name">Cura</string>
-    <string name="Healing_Info">O Pergaminho e Crucial Para Todos os Aventureiros. Ele Pode Restaurar 1/3 do Máximo do Hp dos Conjuradores.</string>
+    <string name="Healing_Info">O pergaminho é crucial para todos os aventureiros. Ele pode restaurar 1/3 do máximo do hp dos conjuradores.</string>
 
 
 
-    <string name="ClassArmor_LowMana">Mana Insuficiente</string>
+    <string name="ClassArmor_LowMana">Mana insuficiente!</string>
 
 
-    <string name="Drink_ACDrink">Tomar</string>
-    <string name="Drink_Message">Aquela Bebida Estava Refrescante!</string>
+    <string name="Drink_ACDrink">BEBER</string>
+    <string name="Drink_Message">Aquela bebida estava refrescante!</string>
 
 
     <string name="TomeOfKnowledge_Name">Livro do Conhecimento</string>
@@ -51,7 +51,7 @@
 
 
     <string name="SpellBook_Name">Livro de feitiços</string>
-    <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas,do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
+    <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas, do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
     <string name="SpellBook_Info_Identified">Entre as páginas você descobriu um texto completo com o feitiço \"%1$s\".\n\"%2$s\"</string>
 
 
@@ -62,7 +62,7 @@
     <string name="Mushroom_Eat_Message">Esse cogumelo tem um gosto estranho! </string>
 
 
-    <string name="Torch_Info2">É um item indispensável na masmorra,que é infame pela sua iluminação ambiente fraca.</string>
+    <string name="Torch_Info2">É um item indispensável na masmorra, que é infame pela sua iluminação ambiente fraca.</string>
 
     <string name="WndSpells_Title">Magias</string>
     <string name="WndSpells_Level">Nível Mágico:</string>
@@ -91,7 +91,7 @@
     <string name="Ring_Info3a">%1$s\n\nO %2$s está em seu dedo%3$s</string>
     <string name="Ring_Info3b">, e porque ele é amaldiçoado, você não tem como removê-lo.</string>
     <string name="Ring_Info4">%1$s\n\nVocê pode sentir a magia maléfica escondida dentro do %2$s.</string>
-    <string name="Ring_BuffKnown">Isto é um/a %s</string>
+    <string name="Ring_BuffKnown">Isto é um(a) %s</string>
 
 
     <string name="RingOfAccuracy_Name">Anel da Precisão</string>
@@ -99,7 +99,7 @@
 
 
     <string name="RingOfDetection_Name">Anel de Detecção</string>
-    <string name="RingOfDetection_Info">Usar este anel permitirá que o usuário note segredos escondidos -armadilhas e portas secretas- sem perder tempo para pesquisar. Anéis de Detecção degradados são maçantes para seus sentidos, tornando-o mais difícil de encontrar segredos mesmo quando busca ativamente por eles.</string>
+    <string name="RingOfDetection_Info">Usar este anel permitirá que o usuário note segredos escondidos -armadilhas e portas secretas- sem perder tempo para pesquisar. Anéis de detecção degradados são maçantes para seus sentidos, tornando-o mais difícil de encontrar segredos mesmo quando busca ativamente por eles.</string>
 
 
     <string name="RingOfElements_Name">Anel dos Elementos</string>
@@ -3493,9 +3493,9 @@ Parede
 
 
     <string name="PotionOfPurity_Name">Poção da Purificação</string>
-    <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Beber ele vai te dar uma imunidade temporária para esses gases.</string>
+    <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Bebê-lo vai te dar uma imunidade temporária para esses gases.</string>
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
-    <string name="PotionOfPurity_NoSmell">Você não sente odores!</string>
+    <string name="PotionOfPurity_NoSmell">Você parou de sentir qualquer odor!</string>
 
 
     <string name="PotionOfStrength_Name">Poção da Força</string>
@@ -3517,7 +3517,7 @@ Parede
     <string name="WndSettings_ActionButtonSize">Tamanho dos botões</string>
     <string name="WndSettings_Handedness">Lado dos botões </string>
     <string name="WndSettings_InGameUiSettings">Configurações da Interface</string>
-    <string name="WndSettings_GameplaySettings">Jogabigidade</string>
+    <string name="WndSettings_GameplaySettings">Jogabilidade</string>
     <string name="WndPremiumSettings_marble">mármore</string>
     <string name="QuickSlot_SelectSlot">Escolha um atalho rápido para isso</string>
 
