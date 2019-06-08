@@ -4,6 +4,17 @@
   <property name="kind" value="Trap"/>
  </properties>
  <image source="../Png/Objects.png" width="256" height="256"/>
+ <tile id="0">
+  <properties>
+   <property name="kind" value="PortalGateReceiver"/>
+  </properties>
+ </tile>
+ <tile id="1">
+  <properties>
+   <property name="kind" value="Deco"/>
+   <property name="object_desc" value="PortalGateSender"/>
+  </properties>
+ </tile>
  <tile id="32">
   <properties>
    <property name="kind" value="ConcreteBlock"/>
@@ -18,6 +29,11 @@
   <properties>
    <property name="kind" value="Deco"/>
    <property name="object_desc" value="candle"/>
+  </properties>
+ </tile>
+ <tile id="35">
+  <properties>
+   <property name="kind" value="LibraryBook"/>
   </properties>
  </tile>
  <tile id="36">
@@ -45,11 +61,6 @@
   <properties>
    <property name="kind" value="Deco"/>
    <property name="object_desc" value="chest_1"/>
-  </properties>
- </tile>
- <tile id="75">
-  <properties>
-   <property name="kind" value="LibraryBook"/>
   </properties>
  </tile>
  <tile id="176">

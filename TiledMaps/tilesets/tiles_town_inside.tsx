@@ -237,20 +237,20 @@
  </tile>
  <tile id="43">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_counter_desc"/>
+   <property name="deco_name" value="town_deco_counter_name"/>
   </properties>
  </tile>
  <tile id="44">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_counter_desc"/>
+   <property name="deco_name" value="town_deco_counter_name"/>
   </properties>
  </tile>
  <tile id="45">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_counter_desc"/>
+   <property name="deco_name" value="town_deco_counter_name"/>
   </properties>
  </tile>
  <tile id="48">
@@ -321,32 +321,32 @@
  </tile>
  <tile id="59">
   <properties>
-   <property name="deco_desc" value="town_deco_wooden_bench_desc"/>
-   <property name="deco_name" value="town_deco_wooden_bench_name"/>
+   <property name="deco_desc" value="town_deco_wooden_table_desc"/>
+   <property name="deco_name" value="town_deco_wooden_table_name"/>
   </properties>
  </tile>
  <tile id="60">
   <properties>
-   <property name="deco_desc" value="town_deco_wooden_bench_desc"/>
-   <property name="deco_name" value="town_deco_wooden_bench_name"/>
+   <property name="deco_desc" value="town_deco_wooden_table_desc"/>
+   <property name="deco_name" value="town_deco_wooden_table_name"/>
   </properties>
  </tile>
  <tile id="61">
   <properties>
-   <property name="deco_desc" value="town_deco_armoronhanger_desc"/>
-   <property name="deco_name" value="town_deco_armoronhanger_name"/>
+   <property name="deco_desc" value="town_table_fortune_desc"/>
+   <property name="deco_name" value="town_table_fortune_name"/>
   </properties>
  </tile>
  <tile id="62">
   <properties>
-   <property name="deco_desc" value="town_deco_potions_desc"/>
-   <property name="deco_name" value="town_deco_potions_name"/>
+   <property name="deco_desc" value="town_deco_misc_desc"/>
+   <property name="deco_name" value="town_deco_misc_name"/>
   </properties>
  </tile>
  <tile id="63">
   <properties>
-   <property name="deco_desc" value="town_deco_wardrobe_desc"/>
-   <property name="deco_name" value="town_deco_wardrobe_name"/>
+   <property name="deco_desc" value="town_deco_trapdoor_desc"/>
+   <property name="deco_name" value="town_deco_trapdoor_name"/>
   </properties>
  </tile>
  <tile id="64">
@@ -387,14 +387,14 @@
  </tile>
  <tile id="70">
   <properties>
-   <property name="deco_desc" value="City_TileDescBookshelf"/>
-   <property name="deco_name" value="Level_TileBookshelf"/>
+   <property name="deco_desc" value="town_deco_wooden_chair_desc"/>
+   <property name="deco_name" value="town_deco_wooden_chair_name"/>
   </properties>
  </tile>
  <tile id="71">
   <properties>
-   <property name="deco_desc" value="City_TileDescBookshelf"/>
-   <property name="deco_name" value="Level_TileBookshelf"/>
+   <property name="deco_desc" value="town_deco_wooden_chair_desc"/>
+   <property name="deco_name" value="town_deco_wooden_chair_name"/>
   </properties>
  </tile>
  <tile id="72">
@@ -423,26 +423,26 @@
  </tile>
  <tile id="76">
   <properties>
-   <property name="deco_desc" value="town_deco_shieldboard_desc"/>
-   <property name="deco_name" value="town_deco_shieldboard_name"/>
+   <property name="deco_desc" value="town_deco_painting_desc"/>
+   <property name="deco_name" value="town_deco_painting_name"/>
   </properties>
  </tile>
  <tile id="77">
   <properties>
-   <property name="deco_desc" value="town_deco_shieldboard_desc"/>
-   <property name="deco_name" value="town_deco_shieldboard_name"/>
+   <property name="deco_desc" value="town_deco_painting_desc"/>
+   <property name="deco_name" value="town_deco_painting_name"/>
   </properties>
  </tile>
  <tile id="78">
   <properties>
-   <property name="deco_desc" value="town_deco_potions_desc"/>
-   <property name="deco_name" value="town_deco_potions_name"/>
+   <property name="deco_desc" value="town_deco_curtains_desc"/>
+   <property name="deco_name" value="town_deco_curtains_name"/>
   </properties>
  </tile>
  <tile id="79">
   <properties>
-   <property name="deco_desc" value="town_deco_wardrobe_desc"/>
-   <property name="deco_name" value="town_deco_wardrobe_name"/>
+   <property name="deco_desc" value="town_deco_curtains_desc"/>
+   <property name="deco_name" value="town_deco_curtains_name"/>
   </properties>
  </tile>
  <tile id="80">
@@ -597,14 +597,14 @@
  </tile>
  <tile id="107">
   <properties>
-   <property name="deco_desc" value="town_deco_screen_desc"/>
-   <property name="deco_name" value="town_deco_screen_name"/>
+   <property name="deco_desc" value="town_deco_common_bed_desc"/>
+   <property name="deco_name" value="town_deco_common_bed_name"/>
   </properties>
  </tile>
  <tile id="108">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_common_bed_desc"/>
+   <property name="deco_name" value="town_deco_common_bed_name"/>
   </properties>
  </tile>
  <tile id="109">
@@ -681,14 +681,14 @@
  </tile>
  <tile id="123">
   <properties>
-   <property name="deco_desc" value="town_deco_carpet_desc"/>
-   <property name="deco_name" value="town_deco_carpet_name"/>
+   <property name="deco_desc" value="town_deco_common_bed_desc"/>
+   <property name="deco_name" value="town_deco_common_bed_name"/>
   </properties>
  </tile>
  <tile id="124">
   <properties>
-   <property name="deco_desc" value="town_deco_sofa_desc"/>
-   <property name="deco_name" value="town_deco_sofa_name"/>
+   <property name="deco_desc" value="town_deco_common_bed_desc"/>
+   <property name="deco_name" value="town_deco_common_bed_name"/>
   </properties>
  </tile>
  <tile id="125">
@@ -837,8 +837,8 @@
  </tile>
  <tile id="153">
   <properties>
-   <property name="deco_desc" value="town_deco_window_desc"/>
-   <property name="deco_name" value="town_deco_window_name"/>
+   <property name="deco_desc" value="town_deco_curtains_desc"/>
+   <property name="deco_name" value="town_deco_curtains_name"/>
   </properties>
  </tile>
  <tile id="154">
@@ -873,14 +873,14 @@
  </tile>
  <tile id="160">
   <properties>
-   <property name="deco_desc" value="town_deco_counter_desc"/>
-   <property name="deco_name" value="town_deco_counter_name"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="161">
   <properties>
-   <property name="deco_desc" value="town_deco_counter_desc"/>
-   <property name="deco_name" value="town_deco_counter_name"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="162">
@@ -963,26 +963,26 @@
  </tile>
  <tile id="176">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="177">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="178">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="179">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="180">
@@ -1053,20 +1053,20 @@
  </tile>
  <tile id="192">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="193">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="194">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_rug_desc"/>
+   <property name="deco_name" value="town_deco_rug_name"/>
   </properties>
  </tile>
  <tile id="195">
@@ -1143,26 +1143,26 @@
  </tile>
  <tile id="208">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_library_books_desc"/>
+   <property name="deco_name" value="town_deco_library_books_name"/>
   </properties>
  </tile>
  <tile id="209">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_wallpaper_desc"/>
+   <property name="deco_name" value="town_deco_wallpaper_name"/>
   </properties>
  </tile>
  <tile id="210">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_library_books_desc"/>
+   <property name="deco_name" value="town_deco_library_books_name"/>
   </properties>
  </tile>
  <tile id="211">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_wall_desc"/>
+   <property name="deco_name" value="town_deco_wall_name"/>
   </properties>
  </tile>
  <tile id="212">
@@ -1239,26 +1239,26 @@
  </tile>
  <tile id="224">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_library_books_desc"/>
+   <property name="deco_name" value="town_deco_library_books_name"/>
   </properties>
  </tile>
  <tile id="225">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_library_books_desc"/>
+   <property name="deco_name" value="town_deco_library_books_name"/>
   </properties>
  </tile>
  <tile id="226">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_library_books_desc"/>
+   <property name="deco_name" value="town_deco_library_books_name"/>
   </properties>
  </tile>
  <tile id="227">
   <properties>
-   <property name="deco_desc" value="1"/>
-   <property name="deco_name" value="1"/>
+   <property name="deco_desc" value="town_deco_wooden_stairs_desc"/>
+   <property name="deco_name" value="town_deco_wooden_stairs_name"/>
   </properties>
  </tile>
  <tile id="228">

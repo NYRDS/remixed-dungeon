@@ -969,20 +969,20 @@
  </tile>
  <tile id="163">
   <properties>
-   <property name="deco_desc" value="town_deco_roof_desc"/>
-   <property name="deco_name" value="town_deco_roof_name"/>
+   <property name="deco_desc" value="town_deco_glass_stained_desc"/>
+   <property name="deco_name" value="town_deco_glass_stained_name"/>
   </properties>
  </tile>
  <tile id="164">
   <properties>
-   <property name="deco_desc" value="town_deco_roof_desc"/>
-   <property name="deco_name" value="town_deco_roof_name"/>
+   <property name="deco_desc" value="town_deco_glass_desc"/>
+   <property name="deco_name" value="town_deco_glass_name"/>
   </properties>
  </tile>
  <tile id="165">
   <properties>
-   <property name="deco_desc" value="town_deco_roof_desc"/>
-   <property name="deco_name" value="town_deco_roof_name"/>
+   <property name="deco_desc" value="town_deco_door_desc"/>
+   <property name="deco_name" value="town_deco_door_name"/>
   </properties>
  </tile>
  <tile id="166">
