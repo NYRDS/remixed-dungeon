@@ -109,10 +109,14 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void link(Char ch) {
+        if(this.ch==ch) {
+            return;
+        }
+
         this.ch = ch;
 
         place(ch.getPos());
-        turnTo(ch.getPos(), Random.Int(Dungeon.level.getLength()));
+        turnTo(ch.getPos(), Random.Int(ch.level().getLength()));
 
         ch.updateSpriteState();
 
