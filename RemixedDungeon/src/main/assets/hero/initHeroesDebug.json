@@ -15,11 +15,12 @@
         "level":10
       },
       {
-        "kind": "Sungrass.Seed",
+        "kind": "Rotberry.Seed",
         "quantity" :10
       },
       {
-        "kind": "SacrificialSword"
+        "kind": "Fadeleaf.Seed",
+        "quantity" :10
       },
       {
         "kind": "PotionOfInvisibility",

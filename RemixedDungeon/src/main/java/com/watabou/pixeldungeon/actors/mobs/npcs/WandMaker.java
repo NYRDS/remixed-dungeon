@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -298,18 +299,16 @@ public class WandMaker extends NPC {
 			return Game.getVar(R.string.WandMaker_RotberryName);
 		}
 
-        @Override
-        public boolean interact(Char ch) {
+		@Override
+		public void effect(int pos, Presser ch) {
+			GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
 
-            GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
+			Dungeon.level.drop( new Seed(), pos ).sprite.drop();
 
-            Dungeon.level.drop( new Seed(), pos ).sprite.drop();
-
-            if (ch != null) {
-                Buff.prolong( ch, Roots.class, TICK * 3 );
-            }
-            return super.interact(ch);
-        }
+			if (ch instanceof Char) {
+				Buff.prolong( (Char)ch, Roots.class, TICK * 3 );
+			}
+		}
 
 		@Override
 		public String desc() {
