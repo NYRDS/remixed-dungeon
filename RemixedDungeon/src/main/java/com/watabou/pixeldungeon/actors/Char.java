@@ -604,12 +604,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return hunger.isStarving();
     }
 
-    public void updateSpriteState() {
-		getSprite().removeAllStates();
-
-		forEachBuff(b->getSprite().add(b.charSpriteStatus()));
-	}
-
 	public int stealth() {
 		final int[] bonus = {0};
 
