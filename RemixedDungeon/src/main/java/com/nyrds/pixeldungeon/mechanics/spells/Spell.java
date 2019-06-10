@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.SmartTexture;
@@ -156,6 +157,10 @@ public class Spell implements NamedEntityKind {
     }
 
     public int spellCost() {
+        if(spellCost==0) {
+            ModError.doReport("Spell cost for "+ getClassName() + "must be > 1", new Exception("spell cost is 0"));
+            spellCost = 1;
+        }
         return spellCost;
     }
 
