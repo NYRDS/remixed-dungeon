@@ -18,11 +18,12 @@
 package com.watabou.pixeldungeon;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.SharedPreferences;
 
 import com.nyrds.android.util.UserKey;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.HashMap;
@@ -69,9 +70,9 @@ public enum Preferences {
 	private Map<String, Boolean> boolCache   = new HashMap<>();
 	private Map<String, Double>  doubleCache = new HashMap<>();
 
-	private SharedPreferences get() {
+	public SharedPreferences get() {
 		if (prefs == null) {
-			prefs = Game.instance().getPreferences(Game.MODE_PRIVATE);
+			prefs = RemixedDungeonApp.getContext().getSharedPreferences("com.watabou.pixeldungeon.RemixedDungeon", Activity.MODE_PRIVATE);
 		}
 		return prefs;
 	}
