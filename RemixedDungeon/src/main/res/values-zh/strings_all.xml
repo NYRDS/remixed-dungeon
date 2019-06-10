@@ -669,7 +669,7 @@ remix.28.5\n
     <string name="WndGame_Ranking">排名</string>
     <string name="WndGame_Start">开始新游戏</string>
     <string name="WndGame_menu">主菜單</string>
-    <string name="WndGame_Exit">关闭游戏</string>
+    <string name="WndGame_Exit">关闭混合地牢</string>
     <string name="WndGame_Return">返回遊戲</string>
     <string name="WndGame_Save">保存</string>
     <string name="WndGame_Load">讀取</string>
@@ -829,7 +829,7 @@ remix.28.5\n
     <string name="LloidsBeacon_Creatures">附近的生物的精神干擾阻止了您使用萊德傳送信標！</string>
     <string name="LloidsBeacon_Return">萊德傳送信標設置成功，現在您已經隨時可以回來了。</string>
     <string name="LloidsBeacon_Set">
-这个传送信标被设置在像素地牢的%d层的某个地方。</string>
+这个传送信标被设置在混合地牢的%d层的某个地方。</string>
 
 
     <string name="Stylus_Name">奥術刻筆</string>
@@ -1041,7 +1041,7 @@ remix.28.5\n
     <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，您的进度可能会丢失！</string>
 
 
-    <string name="AboutScene_Txt_Intro">混合的像素地牢是由NYRDS以Watabou的Pixel Dungeon源码为基础制作的。</string>
+    <string name="AboutScene_Txt_Intro">混合地牢是由NYRDS以Watabou的Pixel Dungeon源码为基础制作的。</string>
     <string name="AboutScene_Code">源码:</string>
     <string name="AboutScene_Graphics">圖畫：</string>
     <string name="AboutScene_Music">音樂：</string>
@@ -1301,7 +1301,7 @@ remix.28.5\n
 
     <string name="WndDonate_donate">捐獻：</string>
     <string name="WndDonate_notConnected">無網絡連接 :(</string>
-    <string name="WndDonate_commonDonateText">混合的像素地牢——永远对所有人免费。
+    <string name="WndDonate_commonDonateText">混合地牢——永远对所有人免费。
 但是，你能帮我们让这个游戏变得更好。
 除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
 
