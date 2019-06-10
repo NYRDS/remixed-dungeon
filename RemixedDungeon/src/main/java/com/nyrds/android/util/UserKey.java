@@ -2,21 +2,22 @@ package com.nyrds.android.util;
 
 import android.content.SharedPreferences;
 
-import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.UUID;
 
 public class UserKey {
-	static UUID userId;
+	private static UUID userId;
 
-	static Crypter crypter;
+	private static Crypter crypter;
 
-	static final String noKey="noKey";
+	private static final String noKey="noKey";
 
 	private static void init() {
-		SharedPreferences prefs = Game.instance().getPreferences( Game.MODE_PRIVATE );
-		
+
+		SharedPreferences prefs = Preferences.INSTANCE.get();
+
 		String key = prefs.getString("userKey", noKey);
 		if(key.equals(noKey)) { 
 			userId = UUID.randomUUID();
