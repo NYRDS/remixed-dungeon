@@ -580,6 +580,10 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static boolean mayCreateSprites() {
+        return scene != null;
+    }
+
     public static boolean isSceneReady() {
         return scene != null && !Dungeon.isLoading();
     }

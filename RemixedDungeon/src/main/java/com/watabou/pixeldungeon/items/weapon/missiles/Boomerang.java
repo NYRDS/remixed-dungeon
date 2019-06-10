@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 public class Boomerang extends MissileWeapon {
 
 	{
-		//name = Game.getVar(R.string.Boomerang_Name);
 		image = ItemSpriteSheet.BOOMERANG;
 		
 		STR = 10;

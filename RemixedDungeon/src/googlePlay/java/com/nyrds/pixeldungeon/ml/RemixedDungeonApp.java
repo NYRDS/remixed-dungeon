@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 import io.fabric.sdk.android.Fabric;
-import io.humanteq.hqsdkapps.InstalledApplicationsCollector;
+import io.humanteq.hqsdkapps.HqmCollectInstalledApps;
 import io.humanteq.hqsdkcore.HQSdk;
 import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
 import io.humanteq.hqsdkcore.models.GroupResponse;
@@ -53,6 +53,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
         }
 
         if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
+            hqClear();
             if(BuildConfig.DEBUG) {
                 HQSdk.enableDebug(true);
             }
@@ -76,12 +77,19 @@ public class RemixedDungeonApp extends MultiDexApplication {
         MultiDex.install(this);
     }
 
+    private void hqClear() {
+        if(!Preferences.INSTANCE.getBoolean("job_reset",false)) {
+            HQSdk.clearJobs(getContext().getApplicationContext());
+            Preferences.INSTANCE.put("job_reset",true);
+        }
+    }
+
     static public void startScene() {
 
         try {
             if (HQSdk.getInstance() != null) {
 
-                HQSdk.start(new InstalledApplicationsCollector());
+                HqmCollectInstalledApps.INSTANCE.start();
                 HQSdk.startSystemEventsTracking();
 
                 HQSdk.getUserGroups(new HqmCallback<List<GroupResponse>>() {

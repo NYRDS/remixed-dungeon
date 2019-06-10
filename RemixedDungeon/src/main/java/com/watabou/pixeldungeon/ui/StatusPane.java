@@ -94,7 +94,7 @@ public class StatusPane extends Component {
             }
         });
 
-        avatar = hero.getHeroSprite().avatar();
+        avatar = hero.getSprite().avatar();
         add(avatar);
 
         blood = new Emitter();
