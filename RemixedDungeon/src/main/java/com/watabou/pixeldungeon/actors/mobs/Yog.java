@@ -52,7 +52,7 @@ import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Yog extends Boss {
 
@@ -105,7 +105,7 @@ public class Yog extends Boss {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src) {
+	public void damage(int dmg, @NotNull NamedEntityKind src) {
 
 		int damageShift = 0;
 		for (Mob mob : Dungeon.level.mobs) {
@@ -192,11 +192,6 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public void die(NamedEntityKind cause) {
-			super.die(cause);
-		}
-
-		@Override
 		public int attackSkill(Char target) {
 			return 36;
 		}
@@ -212,7 +207,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public int attackProc(@NonNull Char enemy, int damage) {
+		public int attackProc(@NotNull Char enemy, int damage) {
 			if (Random.Int(3) == 0) {
 				Buff.affect(enemy, Ooze.class);
 				enemy.getSprite().burst(0xFF000000, 5);
@@ -226,7 +221,7 @@ public class Yog extends Boss {
 
 			if (Dungeon.level.water[getPos()] && hp() < ht()) {
 				getSprite().emitter().burst(ShadowParticle.UP, 2);
-				hp(hp() + REGENERATION);
+				heal(REGENERATION, this, true);
 			}
 
 			return super.act();
@@ -261,11 +256,6 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public void die(NamedEntityKind cause) {
-			super.die(cause);
-		}
-
-		@Override
 		public int attackSkill(Char target) {
 			return 36;
 		}
@@ -286,7 +276,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public boolean attack(@NonNull Char enemy) {
+		public boolean attack(@NotNull Char enemy) {
 			if(super.attack(enemy)) {
 				if (!Dungeon.level.adjacent(getPos(), enemy.getPos())) {
 					enemy.getSprite().flash();

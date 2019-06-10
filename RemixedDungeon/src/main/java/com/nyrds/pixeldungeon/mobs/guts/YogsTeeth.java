@@ -12,11 +12,9 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -38,16 +36,17 @@ public class YogsTeeth extends Boss {
 
 
     @Override
-    public int attackProc(@NonNull Char enemy, int damage ) {
+    public int attackProc(@NotNull Char enemy, int damage ) {
         //Life drain proc
         if (Random.Int(3) == 1){
-            CellEmitter.center(this.getPos()).start(Speck.factory(Speck.HEALING), 0.3f, 3);
-            this.hp(this.hp() + damage );
+            heal(damage, this);
         }
+
         //Bleeding proc
         if (Random.Int(3) == 1){
-            Buff.affect(enemy, Bleeding.class).set(damage);
+            Buff.affect(enemy, Bleeding.class).level(damage);
         }
+
         //Double damage proc
         if (Random.Int(3) == 1){
             Devour.hit(enemy);

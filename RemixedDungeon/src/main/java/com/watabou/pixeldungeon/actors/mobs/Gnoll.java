@@ -53,7 +53,7 @@ public class Gnoll extends Mob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		ScarecrowNPC.Quest.process( getPos() );
 		Ghost.Quest.process( getPos() );
 		super.die( cause );

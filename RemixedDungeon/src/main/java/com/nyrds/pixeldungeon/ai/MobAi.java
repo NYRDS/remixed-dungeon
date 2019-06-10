@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.ai;
 
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -57,7 +59,7 @@ public abstract class MobAi implements AiState {
 
     protected Char chooseNearestChar(Mob me) {
 
-        Char bestEnemy = Char.DUMMY;
+        Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();
 
         for (Char chr : Actor.chars.values()) {
@@ -81,7 +83,7 @@ public abstract class MobAi implements AiState {
 
     protected Char chooseEnemy(Mob me) {
 
-        Char bestEnemy = Char.DUMMY;
+        Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();
 
         for (Char chr : Actor.chars.values()) {
@@ -125,9 +127,9 @@ public abstract class MobAi implements AiState {
         try {
             aiStateInstances.put(stateClass.getSimpleName().toUpperCase(Locale.ROOT), stateClass.newInstance());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 

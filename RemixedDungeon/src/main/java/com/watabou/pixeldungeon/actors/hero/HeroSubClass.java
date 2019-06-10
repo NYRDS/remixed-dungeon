@@ -23,6 +23,8 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.armor.AssasinArmor;
 import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
 import com.watabou.pixeldungeon.items.armor.BerserkArmor;
@@ -34,6 +36,8 @@ import com.watabou.pixeldungeon.items.armor.ShamanArmor;
 import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
+import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
@@ -43,7 +47,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public enum HeroSubClass {
+public enum HeroSubClass implements CharModifier {
 
 	NONE( null, null,ClassArmor.class),
 	GLADIATOR( R.string.HeroSubClass_NameGlad,   R.string.HeroSubClass_DescGlad, GladiatorArmor.class),
@@ -73,8 +77,8 @@ public enum HeroSubClass {
 		try {
 			if (HeroClass.initHeroes.has(name())) {
 				JSONObject classDesc = HeroClass.initHeroes.getJSONObject(name());
-				JsonHelper.readStringSet(classDesc,HeroClass.IMMUNITIES,immunities);
-				JsonHelper.readStringSet(classDesc,HeroClass.RESISTANCES,resistances);
+				JsonHelper.readStringSet(classDesc, Char.IMMUNITIES,immunities);
+				JsonHelper.readStringSet(classDesc, Char.RESISTANCES,resistances);
 			}
 		} catch (JSONException e) {
 			throw ModdingMode.modException("bad InitHero.json",e);
@@ -93,8 +97,8 @@ public enum HeroSubClass {
 
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( SUBCLASS, toString() );
-		bundle.put(HeroClass.IMMUNITIES,immunities.toArray(new String[0]));
-		bundle.put(HeroClass.RESISTANCES,resistances.toArray(new String[0]));
+		bundle.put(Char.IMMUNITIES,immunities.toArray(new String[0]));
+		bundle.put(Char.RESISTANCES,resistances.toArray(new String[0]));
 	}
 
 	public static HeroSubClass restoreFromBundle(Bundle bundle) {
@@ -107,8 +111,8 @@ public enum HeroSubClass {
 			ret = NONE;
 		}
 
-		Collections.addAll(ret.immunities,bundle.getStringArray(HeroClass.IMMUNITIES));
-		Collections.addAll(ret.resistances,bundle.getStringArray(HeroClass.RESISTANCES));
+		Collections.addAll(ret.immunities,bundle.getStringArray(Char.IMMUNITIES));
+		Collections.addAll(ret.resistances,bundle.getStringArray(Char.RESISTANCES));
 		return ret;
 	}
 
@@ -120,11 +124,64 @@ public enum HeroSubClass {
 		}
 	}
 
-	public Set<String> getImmunities() {
+	@Override
+	public int drBonus() {
+		return 0;
+	}
+
+	@Override
+	public int stealthBonus() {
+		return 0;
+	}
+
+	@Override
+	public float speedMultiplier() {
+		return 1;
+	}
+
+	@Override
+	public int defenceProc(Char defender, Char enemy, int damage) {
+		return damage;
+	}
+
+	@Override
+	public int regenerationBonus() {
+		return 0;
+	}
+
+	@Override
+	public void charAct() {
+
+	}
+
+	@Override
+	public int dewBonus() {
+		switch (this) {
+			case WARDEN:
+			case SHAMAN:
+				return 1;
+			default:
+				return 0;
+		}
+	}
+
+	@Override
+	public Set<String> resistances() {
+		return resistances;
+	}
+
+	@Override
+	public Set<String> immunities() {
 		return immunities;
 	}
 
-	public Set<String> getResistances() {
-		return resistances;
+	@Override
+	public CharSprite.State charSpriteStatus() {
+		return CharSprite.State.NONE;
+	}
+
+	@Override
+	public int icon() {
+		return BuffIndicator.NONE;
 	}
 }

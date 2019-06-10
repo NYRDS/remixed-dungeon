@@ -95,8 +95,9 @@ public class DM300 extends Boss {
 		super.move( step );
 
 		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && hp() < ht()) {
-			
-			hp(hp() + Random.Int( 1, ht() - hp() ));
+
+			heal(Random.Int( 1, ht() - hp() ), this, true);
+
 			getSprite().emitter().burst( ElmoParticle.FACTORY, 5 );
 			
 			if (Dungeon.visible[step] && Dungeon.hero.isAlive()) {
@@ -126,7 +127,7 @@ public class DM300 extends Boss {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		
 		super.die( cause );
 		

@@ -121,7 +121,7 @@ public class MobSpriteDef extends MobSprite {
 	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 	}
 
-	protected Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException {
+	protected Animation readAnimation(JSONObject root, String animKind, TextureFilm film) throws JSONException{
 		return JsonHelper.readAnimation(root, animKind, film, kind * framesInRow);
 	}
 

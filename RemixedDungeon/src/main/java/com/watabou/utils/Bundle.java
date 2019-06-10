@@ -22,6 +22,8 @@ import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,9 +44,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class Bundle {
 
@@ -157,7 +156,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public int[] getIntArray(String key) {
         try {
             JSONArray array = data.getJSONArray(key);
@@ -173,7 +172,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public boolean[] getBooleanArray(String key) {
         try {
             JSONArray array = data.getJSONArray(key);
@@ -188,7 +187,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public String[] getStringArray(String key) {
         try {
             JSONArray array = data.getJSONArray(key);
@@ -203,7 +202,7 @@ public class Bundle {
         }
     }
 
-    @NonNull
+    @NotNull
     public <T extends Bundlable> Collection<T> getCollection(String key, Class<T> type) {
         List<T> list = new ArrayList<>();
 
@@ -240,6 +239,10 @@ public class Bundle {
 
     public void put(String key, float value) {
         try {
+            if(Float.isInfinite(value)) {
+                value = Float.MAX_VALUE;
+                EventCollector.logException(key+" is infinity");
+            }
             data.put(key, value);
         } catch (JSONException e) {
             throw new TrackedRuntimeException("key:" + key, e);
@@ -378,6 +381,7 @@ public class Bundle {
             Iterator<String> oi = object.keys();
             while(oi.hasNext()) {
                 String name = oi.next();
+                //noinspection unchecked
                 ret.put(name, (T)object.get(name));
             }
 

@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -36,7 +35,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Goo extends Boss {
 
@@ -95,9 +94,8 @@ public class Goo extends Boss {
 	@Override
 	public boolean act() {
 		
-		if (Dungeon.level.water[getPos()] && hp() < ht()) {
-			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-			hp(hp() + 1);
+		if (level().water[getPos()] && hp() < ht()) {
+			heal(1,this);
 		}
 		
 		return super.act();
@@ -109,7 +107,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 3 ) == 0) {
 			Buff.affect( enemy, Ooze.class );
 			enemy.getSprite().burst( 0x000000, 5 );
@@ -145,7 +143,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	public boolean attack(@NonNull Char enemy ) {
+	public boolean attack(@NotNull Char enemy ) {
 		boolean result = super.attack( enemy );
 		pumpedUp = false;
 		return result;
@@ -164,7 +162,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		
 		super.die( cause );
 		
@@ -184,7 +182,7 @@ public class Goo extends Boss {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		pumpedUp = false;
 		return true;
 	}

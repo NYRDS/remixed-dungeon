@@ -2,6 +2,7 @@ package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 /**
  * Created by DeadDie on 18.03.2016
@@ -14,7 +15,7 @@ public class TrackedRuntimeException extends RuntimeException {
 		Notifications.displayNotification(this.getClass().getSimpleName(), e.getClass().getSimpleName(), e.getMessage());
 
 		GLog.toFile(e.getMessage());
-		EventCollector.logException(e,"");
+		EventCollector.logException(e, Utils.EMPTY_STRING);
 	}
 
 	public TrackedRuntimeException( String s) {

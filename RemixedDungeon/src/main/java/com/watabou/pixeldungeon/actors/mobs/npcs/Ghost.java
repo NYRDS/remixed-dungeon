@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -58,6 +57,8 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndSadGhost;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Ghost extends NPC {
 
@@ -98,7 +99,7 @@ public class Ghost extends NPC {
 	
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override
@@ -111,10 +112,10 @@ public class Ghost extends NPC {
 	}
 	
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 
-		if (hero.heroClass.equals(HeroClass.NECROMANCER) ){
+		if (hero.getHeroClass()==HeroClass.NECROMANCER){
 			if (!introduced){
 				window = new WndSadGhostNecro();
 				GameScene.show( window );
@@ -132,8 +133,8 @@ public class Ghost extends NPC {
 		
 		if (persuade || Quest.given ) {
 			Item item = Quest.alternative ?
-				hero.belongings.getItem( RatSkull.class ) :
-				hero.belongings.getItem( DriedRose.class );
+				hero.getBelongings().getItem( RatSkull.class ) :
+				hero.getBelongings().getItem( DriedRose.class );
 			if(persuade){
 				item = Quest.alternative ?
 					new RatSkull() :

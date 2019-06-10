@@ -43,6 +43,8 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Collection;
 
 public class Blacksmith extends NPC {
@@ -58,7 +60,7 @@ public class Blacksmith extends NPC {
 	}
 	
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		
 		getSprite().turnTo( getPos(), hero.getPos() );
 		
@@ -91,7 +93,7 @@ public class Blacksmith extends NPC {
 		} else if (!Quest.completed) {
 			if (Quest.alternative) {
 				
-				Pickaxe pick = hero.belongings.getItem( Pickaxe.class );
+				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
 				if (pick == null) {
 					tell( Game.getVar(R.string.Blacksmith_Txt2) );
 				} else if (!pick.bloodStained) {
@@ -100,7 +102,7 @@ public class Blacksmith extends NPC {
 					if (pick.isEquipped( hero )) {
 						pick.doUnequip( hero, false );
 					}
-					pick.detach( hero.belongings.backpack );
+					pick.detach( hero.getBelongings().backpack );
 					tell( Game.getVar(R.string.Blacksmith_Completed) );
 					
 					Quest.completed = true;
@@ -109,8 +111,8 @@ public class Blacksmith extends NPC {
 				
 			} else {
 				
-				Pickaxe pick = hero.belongings.getItem( Pickaxe.class );
-				DarkGold gold = hero.belongings.getItem( DarkGold.class );
+				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
+				DarkGold gold = hero.getBelongings().getItem( DarkGold.class );
 				if (pick == null) {
 					tell( Game.getVar(R.string.Blacksmith_Txt2) );
 				} else if (gold == null || gold.quantity() < 15) {
@@ -119,8 +121,8 @@ public class Blacksmith extends NPC {
 					if (pick.isEquipped( hero )) {
 						pick.doUnequip( hero, false );
 					}
-					pick.detach( hero.belongings.backpack );
-					gold.detachAll( hero.belongings.backpack );
+					pick.detach( hero.getBelongings().backpack );
+					gold.detachAll( hero.getBelongings().backpack );
 					tell( Game.getVar(R.string.Blacksmith_Completed) );
 					
 					Quest.completed = true;
@@ -130,7 +132,7 @@ public class Blacksmith extends NPC {
 			}
 		} else if (!Quest.reforged) {
 			
-			GameScene.show( new WndBlacksmith( this, hero ) );
+			GameScene.show( new WndBlacksmith( this) );
 			
 		} else {
 			
@@ -212,7 +214,7 @@ public class Blacksmith extends NPC {
 	}
 	
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override

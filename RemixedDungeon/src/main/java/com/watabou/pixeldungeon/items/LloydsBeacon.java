@@ -151,6 +151,6 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public String info() {
-		return Game.getVar(R.string.LloidsBeacon_Info) + (returnTo.cellId == -1 ? "" : Utils.format( Game.getVar(R.string.LloidsBeacon_Set), DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
+		return Game.getVar(R.string.LloidsBeacon_Info) + (returnTo.cellId == -1 ? Utils.EMPTY_STRING : Utils.format( Game.getVar(R.string.LloidsBeacon_Set), DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
 	}
 }

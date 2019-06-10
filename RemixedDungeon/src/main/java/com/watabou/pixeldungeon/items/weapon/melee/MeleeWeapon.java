@@ -108,7 +108,7 @@ public class MeleeWeapon extends Weapon {
 			}
 		}
 
-		quality = "";
+		quality = Utils.EMPTY_STRING;
 		info.append(" ");
 		if (DLY != 1f) {
 			quality += (DLY < 1f ? Game.getVar(R.string.MeleeWeapon_Info3b) : Game.getVar(R.string.MeleeWeapon_Info3c));
@@ -156,7 +156,7 @@ public class MeleeWeapon extends Weapon {
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(p);
-			info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info7b) : "")) );
+			info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
 		} else {
 			if (cursedKnown && cursed) {
 				info.append(p);

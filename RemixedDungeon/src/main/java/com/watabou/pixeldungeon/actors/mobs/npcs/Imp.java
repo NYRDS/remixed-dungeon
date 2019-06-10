@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
@@ -41,6 +40,8 @@ import com.watabou.pixeldungeon.windows.WndImp;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Imp extends NPC {
 
@@ -78,7 +79,7 @@ public class Imp extends NPC {
 	}
 	
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override
@@ -91,12 +92,12 @@ public class Imp extends NPC {
 	}
 	
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		
 		getSprite().turnTo( getPos(), hero.getPos() );
 		if (Quest.given) {
 			
-			DwarfToken tokens = hero.belongings.getItem( DwarfToken.class );
+			DwarfToken tokens = hero.getBelongings().getItem( DwarfToken.class );
 			if (tokens != null && (tokens.quantity() >= 8 || (!Quest.alternative && tokens.quantity() >= 6))) {
 				GameScene.show( new WndImp( this, tokens ) );
 			} else {

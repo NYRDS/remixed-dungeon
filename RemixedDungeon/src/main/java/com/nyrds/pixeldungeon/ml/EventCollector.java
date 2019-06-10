@@ -1,15 +1,18 @@
 package com.nyrds.pixeldungeon.ml;
 
-import android.os.Build;
 import android.os.Bundle;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.utils.Utils;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,21 +21,43 @@ import java.util.Map;
  * Created by mike on 09.03.2016.
  */
 public class EventCollector {
-    public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment";
+    public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment2";
+
     static private FirebaseAnalytics mFirebaseAnalytics;
 	static private boolean mDisabled = true;
 
 	static private HashMap<String,Trace> timings = new HashMap<>();
 
 	private static boolean analyticsUsable() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0 && (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN);
+		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
 	}
 
 	static public void init() {
 	    if(analyticsUsable()) {
             mFirebaseAnalytics = FirebaseAnalytics.getInstance(RemixedDungeonApp.getContext());
+            mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
             mDisabled = false;
         }
+	}
+
+	static public void logCountedEvent(String event, int threshold) {
+		final String key = "CountedEvent_"+event;
+		int count = Preferences.INSTANCE.getInt(key,0);
+		count++;
+
+		if(count==threshold) {
+			logEvent(event);
+		}
+		Preferences.INSTANCE.put(key, count);
+	}
+
+	static public void logEvent(String event) {
+		if (!mDisabled) {
+			Crashlytics.log(event);
+
+			Bundle params = new Bundle();
+			mFirebaseAnalytics.logEvent(event, params);
+		}
 	}
 
 	static public void logEvent(String category, String event) {
@@ -42,6 +67,23 @@ public class EventCollector {
 			Bundle params = new Bundle();
 			params.putString("event", event);
 			mFirebaseAnalytics.logEvent(category, params);
+		}
+	}
+
+	static public void levelUp(String character, long level) {
+		if(!mDisabled && !ModdingMode.inMod()) {
+			Bundle bundle = new Bundle();
+			bundle.putString(FirebaseAnalytics.Param.CHARACTER, character);
+			bundle.putLong(FirebaseAnalytics.Param.LEVEL, level);
+			mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.LEVEL_UP, bundle);
+		}
+	}
+
+	static public void badgeUnlocked(String badgeId) {
+		if(!mDisabled && !ModdingMode.inMod()) {
+			Bundle bundle = new Bundle();
+			bundle.putString(FirebaseAnalytics.Param.ACHIEVEMENT_ID, badgeId);
+			mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.UNLOCK_ACHIEVEMENT, bundle);
 		}
 	}
 
@@ -88,6 +130,13 @@ public class EventCollector {
 			StackTraceElement [] stackTraceElements = e.getStackTrace();
 			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,level,stackTraceElements.length));
 			Crashlytics.logException(e);
+
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			PrintStream ps = new PrintStream(baos);
+			e.printStackTrace(ps);
+			ps.close();
+
+			Crashlytics.log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
 		}
 	}
 

@@ -41,9 +41,9 @@ import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 
-import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.List;
 
 public class PrisonBossLevel extends RegularLevel {
 
@@ -325,7 +325,7 @@ public class PrisonBossLevel extends RegularLevel {
 		}
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public Heap drop( Item item, int cell ) {
 		

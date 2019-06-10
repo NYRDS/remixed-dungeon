@@ -5,9 +5,10 @@
 ---
 
 local spells = {}
-spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice"}
+spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice","Possess"}
 --spells["Common"] = {"Bless"}
 
-spells["Combat"] = {"DieHard","Dash","ArmorMastery","Smash"}
+spells["Combat"] = {"DieHard","Dash","BodyArmor","Smash"}
+spells["Rogue"] = {"Cloak"}
 
 return spells

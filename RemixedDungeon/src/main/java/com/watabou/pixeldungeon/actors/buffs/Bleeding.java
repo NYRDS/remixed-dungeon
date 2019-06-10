@@ -22,43 +22,22 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Splash;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class Bleeding extends Buff {
 
-	protected int level;
-	
-	private static final String LEVEL	= "level";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( LEVEL, level );
-		
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		level = bundle.getInt( LEVEL );
-	}
-	
-	public void set( int level ) {
-		this.level = level;
-	}
-	
 	@Override
 	public int icon() {
 		return BuffIndicator.BLEEDING;
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Bleeding_Info);
 	}
 	
@@ -83,13 +62,14 @@ public class Bleeding extends Buff {
 			} else {
 				detach();
 			}
-			
 		} else {
-			
 			detach();
-			
 		}
-		
 		return true;
+	}
+
+	@Override
+	public void attachVisual() {
+		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
 	}
 }

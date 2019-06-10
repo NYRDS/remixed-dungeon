@@ -27,12 +27,14 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.EmoIcon;
 import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.IceBlock;
@@ -41,16 +43,16 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.effects.TorchHalo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-import java.util.Locale;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import androidx.annotation.Nullable;
+import java.util.Locale;
 
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 
@@ -62,11 +64,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public static final int NEUTRAL = 0xFFFF00;
     public static final int BLUE = 0x0000FF;
 
-    private static final float MOVE_INTERVAL = 0.1f;
-    private static final float FLASH_INTERVAL = 0.05f;
+    private static final float MOVE_INTERVAL        = 0.1f;
+    private static final float FLASH_INTERVAL       = 0.05f;
+    private static final float INVISIBILITY_ALPHA	= 0.4f;
+
+    @Nullable
+    protected Image avatar;
 
     public enum State {
-        BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
+        NONE,BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
     }
 
     protected Animation idle;
@@ -105,13 +111,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         listener = this;
     }
 
-    public void link(Char ch) {
+    public void link(@NotNull Char ch) {
         this.ch = ch;
 
         place(ch.getPos());
-        turnTo(ch.getPos(), Random.Int(Dungeon.level.getLength()));
+        turnTo(ch.getPos(), Random.Int(ch.level().getLength()));
 
-        ch.updateSpriteState();
+        removeAllStates();
+
+        ch.forEachBuff(b->this.add(b.charSpriteStatus()));
 
         isMoving = false;
     }
@@ -291,7 +299,13 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 levitation.pour(Speck.factory(Speck.JET), 0.02f);
                 break;
             case INVISIBLE:
-                PotionOfInvisibility.melt(ch);
+                float alpha = ch instanceof Hero ? INVISIBILITY_ALPHA : 0.0f;
+
+                if (hasParent()) {
+                    getParent().add( new AlphaTweener( this, alpha, 0.4f ) );
+                } else {
+                    alpha( alpha );
+                }
                 break;
             case PARALYSED:
                 paused = true;
@@ -501,9 +515,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public Image avatar() {
-        CompositeTextureImage avatar = new CompositeTextureImage(texture);
-        avatar.frame(idle.frames[0]);
-        avatar.addLayer(texture);
+        if(avatar == null) {
+            CompositeTextureImage newAvatar = new CompositeTextureImage(texture);
+            newAvatar.frame(idle.frames[0]);
+            newAvatar.addLayer(texture);
+            avatar = newAvatar;
+        }
         return avatar;
     }
 

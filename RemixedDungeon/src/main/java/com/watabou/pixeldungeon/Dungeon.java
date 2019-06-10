@@ -17,6 +17,7 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -35,6 +36,7 @@ import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -75,6 +77,9 @@ import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
 import com.watabou.utils.SystemTime;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -83,8 +88,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
-
-import androidx.annotation.NonNull;
 
 import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
 
@@ -96,6 +99,7 @@ public class Dungeon {
     public static boolean dewVial; // true if the dew vial can be spawned
     public static int     transmutation; // depth number for a well of transmutation
 
+    @Packable
     public static int challenges;
 
     public static Hero  hero;
@@ -106,7 +110,10 @@ public class Dungeon {
     private static long lastSaveTimestamp;
 
     public static  String  gameId;
+
+    @Packable(defaultValue = "false")
     private static boolean realtime;
+
     private static int     moveTimeoutIndex;
 
     public static HashSet<Integer> chapters;
@@ -123,6 +130,7 @@ public class Dungeon {
     public static void initSizeDependentStuff(int w, int h) {
         int size = w * h;
         Actor.clear();
+
         visible = new boolean[size];
         passable = new boolean[size];
 
@@ -132,6 +140,8 @@ public class Dungeon {
     }
 
     public static void init() {
+        SaveUtils.deleteLevels(heroClass);
+
         gameId = String.valueOf(SystemTime.now());
 
         challenges = RemixedDungeon.challenges();
@@ -175,10 +185,9 @@ public class Dungeon {
 
         realtime = RemixedDungeon.realtime();
         moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(RemixedDungeon.moveTimeout());
-
-        SaveUtils.deleteLevels(heroClass);
     }
 
+    @Contract(pure = true)
     public static boolean isChallenged(int mask) {
         return (challenges & mask) != 0;
     }
@@ -191,12 +200,15 @@ public class Dungeon {
         }
     }
 
-    @NonNull
+    @NotNull
     public static Level newLevel(Position pos) {
         updateStatistics();
+        loading = true;
         Level level = DungeonGenerator.createLevel(pos);
 
         Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
+
+        loading = false;
 
         return level;
     }
@@ -270,7 +282,7 @@ public class Dungeon {
                 }
                 mob.setPos(cell);
 
-                mob.setEnemy(Char.DUMMY);
+                mob.setEnemy(CharsList.DUMMY);
                 mob.setState(MobAi.getStateByClass(Wandering.class));
                 level.spawnMob(mob);
             }
@@ -320,8 +332,8 @@ public class Dungeon {
     private static final String BADGES       = "badges";
     private static final String SCRIPTS_DATA = "scripts_data";
     private static final String GAME_ID      = "game_id";
-    private static final String REALTIME     = "realtime";
     private static final String MOVE_TIMEOUT = "move_timeout";
+    private static final String LAST_USED_ID = "lastUsedId";
 
     public static void gameOver() {
         Dungeon.deleteGame(true);
@@ -332,7 +344,6 @@ public class Dungeon {
 
         bundle.put(GAME_ID, gameId);
         bundle.put(VERSION, Game.version);
-        bundle.put(CHALLENGES, challenges);
         bundle.put(HERO, hero);
         bundle.put(DEPTH, depth);
 
@@ -376,11 +387,12 @@ public class Dungeon {
         Badges.saveLocal(badges);
         bundle.put(BADGES, badges);
 
-        bundle.put(REALTIME, realtime);
         bundle.put(MOVE_TIMEOUT, moveTimeoutIndex);
 
         bundle.put(SCRIPTS_DATA,
                 LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
+
+        bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
         Bundle.write(bundle, output);
@@ -412,25 +424,22 @@ public class Dungeon {
 
             Actor.fixTime();
             try {
+                SaveUtils.copySaveToSlot(SaveUtils.PREV_SAVE, heroClass);
+
                 Position current = currentPosition();
+
                 String saveToLevel = getLevelSaveFile(current);
+                String saveToGame = SaveUtils.gameFile(hero.getHeroClass());
 
-                String saveToGame = SaveUtils.gameFile(hero.heroClass);
+                saveGame(saveToGame);
+                saveLevel(saveToLevel);
 
-                saveGame("tmp.game");
-                saveLevel("tmp.level");
-
-                FileSystem.getInternalStorageFile(saveToGame).delete();
-                FileSystem.getInternalStorageFile(saveToLevel).delete();
-
-                FileSystem.getInternalStorageFile("tmp.game").renameTo(FileSystem.getInternalStorageFile(saveToGame));
-                FileSystem.getInternalStorageFile("tmp.level").renameTo(FileSystem.getInternalStorageFile(saveToLevel));
-
+                SaveUtils.copySaveToSlot(SaveUtils.AUTO_SAVE, heroClass);
             } catch (IOException e) {
                 throw new TrackedRuntimeException("cannot write save", e);
             }
 
-            GamesInProgress.set(hero.heroClass, depth, hero.lvl());
+            GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
 
         } else if (WndResurrect.instance != null) {
 
@@ -442,9 +451,9 @@ public class Dungeon {
         Library.saveLibrary();
     }
 
-    @NonNull
+    @NotNull
     private static String getLevelSaveFile(Position current) {
-        return SaveUtils.depthFileForSave(hero.heroClass,
+        return SaveUtils.depthFileForSave(hero.getHeroClass(),
                 DungeonGenerator.getLevelDepth(current.levelId),
                 DungeonGenerator.getLevelKind(current.levelId),
                 current.levelId);
@@ -480,9 +489,7 @@ public class Dungeon {
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
-        Dungeon.challenges = bundle.getInt(CHALLENGES);
-
-        Dungeon.depth = -1;
+        EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
 
         Scroll.restore(bundle);
         Potion.restore(bundle);
@@ -552,14 +559,15 @@ public class Dungeon {
         Logbook.restoreFromBundle(bundle);
         LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 
-        realtime = bundle.optBoolean(REALTIME, false);
         moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
     }
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
+        loading = true;
         Bundle bundle = gameBundle(fileName);
 
         loadGameFromBundle(bundle, fullLoad);
+        loading = false;
     }
 
     public static Level loadLevel(Position next) throws IOException {
@@ -653,7 +661,7 @@ public class Dungeon {
 
     public static void observe() {
 
-        if (level == null) {
+        if (isLoading()) {
             return;
         }
 
@@ -817,7 +825,7 @@ public class Dungeon {
     }
 
     public static boolean isLoading() {
-        return loading;
+        return hero==null || level == null || loading;
     }
 
     public static boolean realtime() {

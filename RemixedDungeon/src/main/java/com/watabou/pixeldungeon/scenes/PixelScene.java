@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.BitmapCache;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -140,7 +141,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createText(float size) {
-		return createText("", size);
+		return createText(Utils.EMPTY_STRING, size);
 	}
 
 	public static Text createText(String text, float size) {
@@ -156,7 +157,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createMultiline(float size) {
-		return createMultiline("", size);
+		return createMultiline(Utils.EMPTY_STRING, size);
 	}
 
 	public static Text createMultiline(final String text, float size) {

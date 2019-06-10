@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="SummonDeathling_Name">Evocare Gregario della Morte</string>
@@ -9,7 +8,18 @@
     <string name="Ring_Identify">hai abbastanza familiarità con %1$s da identificarlo. È %2$s.</string>
 
     <string-array name="Ring_Gems">
-        <item>rubino</item>
+        <item>diamante</item>
+        <item>opale</item>
+        <item>granato</item>
+        <item>ruby</item>
+        <item>ametista</item>
+        <item>topaz</item>
+        <item>onice</item>
+        <item>tormalina</item>
+        <item>smeraldo</item>
+        <item>zaffiro</item>
+        <item>quarzo</item>
+        <item>agata</item>
     </string-array>
 
     <string name="Ring_Info1">Puoi indossare solo 2 anelli alla volta.</string>
@@ -910,7 +920,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndDonate_goldDonateText">Grazie a te per il tuo aiuto </string>
     <string name="WndDonate_silverDonateText2">disabilità le ads in tutte le modalità di gioco e sblocca il cacciatore ad inizio gioco</string>
     <string name="WndDonate_goldDonateText2">Sbloccherai l\'elfo ad inizio gioco</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">Base</string>
@@ -2619,6 +2629,17 @@ Potrebbe bruciare?</string>
     <string name="Potion_Shatter">La boccetta si frantuma e un liquido %s si sparge senza provocare danno</string>
 
     <string-array name="Potion_Colors">
+        <item>turchese</item>
+        <item>crimson</item>
+        <item>azzurro</item>
+        <item>giada</item>
+        <item>oro</item>
+        <item>magenta</item>
+        <item>carbone</item>
+        <item>avorio</item>
+        <item>ambrato</item>
+        <item>bistre</item>
+        <item>indaco</item>
         <item>argento</item>
     </string-array>
 
@@ -2692,4 +2713,5 @@ Potrebbe bruciare?</string>
     <string name="Potion_ItemFliesAway">%s appena volato via dalle vostre mani.</string>
     <string name="Potion_FoodRefreshed">%s ora sembra commestibile</string>
 
-</resources>
+
+    </resources>

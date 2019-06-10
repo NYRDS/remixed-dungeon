@@ -17,7 +17,7 @@ public class BerserkArmor extends WarriorArmor {
 
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.BERSERKER) {
+		if (hero.getSubClass() == HeroSubClass.BERSERKER) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.WarriorArmor_NotWarrior) );

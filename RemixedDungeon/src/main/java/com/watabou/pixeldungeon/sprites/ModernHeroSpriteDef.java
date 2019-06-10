@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,8 +22,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.04.2016.
@@ -118,7 +117,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		boolean drawHair = true;
 
 		String accessoryDescriptor = HERO_EMPTY_PNG;
-		String classDescriptor = hero.heroClass.toString()+"_"+hero.subClass.toString();
+		String classDescriptor = hero.getHeroClass().toString()+"_"+ hero.getSubClass().toString();
 		String deathDescriptor = classDescriptor.equals("MAGE_WARLOCK") ? "warlock" : "common";
 		String facialHairDescriptor = HERO_EMPTY_PNG;
 		String hairDescriptor = HERO_EMPTY_PNG;
@@ -306,15 +305,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			descriptor = "woman";
 		}
 
-		if(hero.subClass.equals(HeroSubClass.WARLOCK)) {
+		if(hero.getSubClass().equals(HeroSubClass.WARLOCK)) {
 			descriptor = "warlock";
 		}
 
-		if(hero.subClass.equals(HeroSubClass.LICH)) {
+		if(hero.getSubClass().equals(HeroSubClass.LICH)) {
 			descriptor = "lich";
 		}
 
-		if(hero.heroClass == HeroClass.GNOLL) {
+		if(hero.getHeroClass() == HeroClass.GNOLL) {
 			descriptor = "gnoll";
 		}
 
@@ -349,7 +348,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		killAndErase();
 	}
 
-	@NonNull
+	@NotNull
 	public String getDeathEffect() {
 		return deathEffectDesc;
 	}

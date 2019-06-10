@@ -38,7 +38,7 @@ public class GnollArmor extends ClassArmor {
         SpellSprite.show( getUser(), SpellSprite.DOMINATION );
         Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 
-        int mobsDominated = getUser().getPets().size();
+        int mobsDominated = getUser().countPets();
         for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 
             if (Dungeon.level.fieldOfView[mob.getPos()]) {
@@ -59,7 +59,7 @@ public class GnollArmor extends ClassArmor {
 
     @Override
     public boolean doEquip( Hero hero ) {
-        if (hero.heroClass == HeroClass.GNOLL) {
+        if (hero.getHeroClass() == HeroClass.GNOLL) {
             return super.doEquip( hero );
         } else {
             GLog.w( Game.getVar(R.string.GnollArmor_NotGnoll) );

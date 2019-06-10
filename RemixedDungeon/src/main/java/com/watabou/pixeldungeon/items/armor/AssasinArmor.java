@@ -15,7 +15,7 @@ public class AssasinArmor extends RogueArmor {
 
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.ASSASSIN) {
+		if (hero.getSubClass() == HeroSubClass.ASSASSIN) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.RogueArmor_NotRogue) );

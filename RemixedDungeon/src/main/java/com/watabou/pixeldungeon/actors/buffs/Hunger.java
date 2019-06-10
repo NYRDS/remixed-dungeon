@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -30,14 +31,15 @@ import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
 
 public class Hunger extends Buff implements Hero.Doom {
 
 	private static final float STEP	= 10f;
 	
-	public static final float HUNGRY	= 260f;
-	public static final float STARVING	= 360f;
+	public static final float HUNGRY	= 280f;
+	public static final float STARVING	= 400f;
 
 	@Packable
 	private float level;
@@ -45,31 +47,31 @@ public class Hunger extends Buff implements Hero.Doom {
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
-			
-			Hero hero = (Hero)target;
-			
-			if (isStarving()) {
+
+			int difficulty = Dungeon.hero.getDifficulty();
+
+			if (!Dungeon.level.isSafe() && isStarving()) {
 
 				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
 
-					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
-					
-					if(hero.getDifficulty() >= 3) {
-						hero.damage(Math.max(hero.effectiveSTR() - 10, 1), this);
-					} else {
-						hero.damage( 1, this );
+					if(target==Dungeon.hero) {
+						GLog.n(Game.getVars(R.array.Hunger_Starving)[target.getGender()]);
 					}
-					
-					hero.interrupt();
+
+					if(difficulty >= 3) {
+						target.damage(Math.max(target.effectiveSTR() - 10, 1), this);
+					} else {
+						target.damage( 1, this );
+					}
 				}
 				
-				if(hero.getDifficulty() >= 3 && !Dungeon.level.isSafe()) {
+				if(difficulty >= 3) {
 					if(Random.Float() < 0.01) {
-						Buff.prolong(hero, Weakness.class, Weakness.duration(hero));
+						Buff.prolong(target, Weakness.class, Weakness.duration(target));
 					}
 					
 					if(Random.Float() < 0.01) {
-						Buff.prolong(hero, Vertigo.class, Vertigo.duration(hero));
+						Buff.prolong(target, Vertigo.class, Vertigo.duration(target));
 					}
 				}
 				
@@ -77,50 +79,46 @@ public class Hunger extends Buff implements Hero.Doom {
 				
 				int bonus = target.buffLevel(RingOfSatiety.Satiety.class);
 
-				float delta = STEP - bonus;
+				float delta = Math.max(STEP - bonus, 1);
 
-				//TODO: I wonder if I want it anymore
-				//Buff devourBuff = hero.buff( BraceletOfDevour.BraceletOfDevourBuff.class );
-				//if (devourBuff != null) {
-				//	BraceletOfDevour.Devour(hero);
-				//}
-
-				if(hero.getDifficulty() == 0) {
-					delta *= 0.8;
-				}
+				delta *= RemixedDungeon.getDifficultyFactor() / 1.5f;
 
 				if(Dungeon.level.isSafe()){
 					delta = 0;
 				}
 				
 				float newLevel = level + delta;
-				boolean statusUpdated = false;
-				if (newLevel >= STARVING) {
-					GLog.n( Game.getVars(R.array.Hunger_Starving)[hero.getGender()] );
-					statusUpdated = true;
-					
-					hero.interrupt();
-					
-				} else if (newLevel >= HUNGRY && level < HUNGRY) {
-					GLog.w( Game.getVars(R.array.Hunger_Hungry)[hero.getGender()] );
-					statusUpdated = true;
-					
-				}
-				level = newLevel;
-				
-				if (statusUpdated) {
-					BuffIndicator.refreshHero();
+
+				if(target==Dungeon.hero) {
+					boolean statusUpdated = false;
+					if (newLevel >= STARVING) {
+
+						GLog.n(Game.getVars(R.array.Hunger_Starving)[target.getGender()]);
+						statusUpdated = true;
+
+					} else if (newLevel >= HUNGRY && level < HUNGRY) {
+						GLog.w(Game.getVars(R.array.Hunger_Hungry)[target.getGender()]);
+						statusUpdated = true;
+
+					}
+
+					level = GameMath.gate(0, newLevel, STARVING);
+
+					if (statusUpdated) {
+						BuffIndicator.refreshHero();
+					}
 				}
 				
 			}
 			
-			float step = hero.heroClass == HeroClass.ROGUE ? STEP * 1.2f : STEP;
-			spend( target.hasBuff( Shadows.class ) ? step * 1.5f : step );
+			float step = target.getHeroClass() == HeroClass.ROGUE ? STEP * 1.2f : STEP;
+			step *= target.hasBuff(Shadows.class) ? 1.5f : 1;
+			step *= Dungeon.realtime() ? 10f : 1;
+
+			spend( step );
 			
 		} else {
-			
 			deactivate();
-			
 		}
 		
 		return true;
@@ -128,12 +126,9 @@ public class Hunger extends Buff implements Hero.Doom {
 	
 	public void satisfy( float energy ) {
 		level -= energy;
-		if (level < 0) {
-			level = 0;
-		} else if (level > STARVING) {
-			level = STARVING;
-		}
-		
+
+		level = GameMath.gate(0, level, STARVING);
+
 		BuffIndicator.refreshHero();
 	}
 	
@@ -153,7 +148,7 @@ public class Hunger extends Buff implements Hero.Doom {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		if (level < STARVING) {
 			return Game.getVar(R.string.Hunger_Info1);
 		} else {
@@ -173,5 +168,9 @@ public class Hunger extends Buff implements Hero.Doom {
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.HUNGER), Dungeon.depth ) );
 		GLog.n( Game.getVar(R.string.Hunger_Death) );
+	}
+
+	public float getLevel() {
+		return level;
 	}
 }

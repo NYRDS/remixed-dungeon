@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -29,7 +29,7 @@ public class ColdSpirit extends Mob {
 
     @SuppressWarnings("unchecked")
     @Override
-    public int attackProc(@NonNull Char enemy, int damage ) {
+    public int attackProc(@NotNull Char enemy, int damage ) {
         //Buff proc
         if (Random.Int( 4 ) == 1) {
             Freezing.affect( enemy.getPos());

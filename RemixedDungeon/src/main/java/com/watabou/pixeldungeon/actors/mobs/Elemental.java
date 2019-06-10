@@ -22,7 +22,6 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
@@ -30,7 +29,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
 import com.watabou.pixeldungeon.sprites.ElementalSprite;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Elemental extends Mob {
 
@@ -71,7 +70,7 @@ public class Elemental extends Mob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Buff.affect( enemy, Burning.class ).reignite( enemy );
 		}
@@ -83,8 +82,7 @@ public class Elemental extends Mob {
 	public void add( Buff buff ) {
 		if (buff instanceof Burning) {
 			if (hp() < ht()) {
-				hp(hp() + 1);
-				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				heal(1, buff);
 			}
 		} else {
 			if (buff instanceof Frost) {

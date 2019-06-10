@@ -9,13 +9,12 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 
@@ -56,7 +55,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
 			Freezing.affect( enemy.getPos() );
 		}
@@ -66,7 +65,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 
 	@Override
 	public float speed() {
-		if(TerrainFlags.is(Dungeon.level.map[getPos()], TerrainFlags.LIQUID)) {
+		if(TerrainFlags.is(level().map[getPos()], TerrainFlags.LIQUID)) {
 			return super.speed() * 2f;
 		} else {
 			return super.speed() * 0.5f;
@@ -75,9 +74,8 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 
 	@Override
 	public boolean act() {
-		if (Dungeon.level.water[getPos()] && hp() < ht()) {
-			getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-			hp(Math.min(hp() + exp,ht()));
+		if (level().water[getPos()]) {
+			heal(exp,this);
 		}
 		
 		return super.act();
@@ -87,8 +85,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	public void add( Buff buff ) {
 		if (buff instanceof Frost) {
 			if (hp() < ht()) {
-				hp(hp() + exp);
-				getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				heal(exp, buff);
 			}
 		} else {
 			if(!Dungeon.isLoading()) {

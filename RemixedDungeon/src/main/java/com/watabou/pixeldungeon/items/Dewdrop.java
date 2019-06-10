@@ -22,10 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
@@ -41,30 +38,23 @@ public class Dewdrop extends Item {
 	}
 	
 	@Override
-	public boolean doPickUp( Hero hero ) {
+	public boolean doPickUp(Char hero ) {
 		boolean collected = false;
 
 		if(hero.hp() < hero.ht()) {
-			int value = 1 + (Dungeon.depth - 1) / 5;
+			final int[] value = {1 + (Dungeon.depth - 1) / 5};
 
-			if (hero.heroClass == HeroClass.HUNTRESS || hero.heroClass == HeroClass.ELF) {
-				value++;
-			}
+			hero.forEachBuff(b-> value[0] +=b.dewBonus());
 
-			if(hero.subClass == HeroSubClass.WARDEN || hero.subClass == HeroSubClass.SHAMAN) {
-				value++;
-			}
-
-			int effect = Math.min( hero.ht() - hero.hp(), value * quantity() );
+			int effect = Math.min( hero.ht() - hero.hp(), value[0] * quantity() );
 			if (effect > 0) {
-				hero.hp(hero.hp() + effect);
-				hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+				hero.heal(effect, this);
 				hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				collected = true;
 			}
 		}
 
-		DewVial vial = hero.belongings.getItem( DewVial.class );
+		DewVial vial = hero.getBelongings().getItem( DewVial.class );
 
 		if (!collected && vial != null && !vial.isFull()) {
 			vial.collectDew( this );

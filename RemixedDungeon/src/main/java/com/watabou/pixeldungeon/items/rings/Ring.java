@@ -23,7 +23,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
@@ -196,15 +195,14 @@ public class Ring extends Artifact implements UnknownItem{
 	
 	public class RingBuff extends ArtifactBuff {
 		
-		private int level;
 		public RingBuff() {
-			level = Ring.this.level();
+			level(Ring.this.level());
 		}
 		
 		@Override
 		public boolean attachTo( Char target ) {
 	
-			if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ROGUE && !isKnown()) {
+			if (target.getHeroClass() == HeroClass.ROGUE && !isKnown()) {
 				setKnown();
 				GLog.i( Game.getVar(R.string.Ring_BuffKnown), name() );
 				Badges.validateItemLevelAcquired( Ring.this );
@@ -215,21 +213,17 @@ public class Ring extends Artifact implements UnknownItem{
 		
 		@Override
 		public boolean act() {
-			
+
 			if (!isIdentified() && --ticksToKnow <= 0) {
-				String gemName = name();
+				String gemName = Ring.this.name();
 				identify();
-				GLog.w( Game.getVar(R.string.Ring_Identify), gemName, Ring.this.toString() );
+				GLog.w( Game.getVar(R.string.Ring_Identify), gemName, Ring.this.trueName() );
 				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			
 			spend( TICK );
 			
 			return true;
-		}
-
-		public int level() {
-			return level;
 		}
 	}
 }

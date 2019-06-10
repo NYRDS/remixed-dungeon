@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.AmuletScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -58,7 +59,7 @@ public class Amulet extends Item {
 	}
 	
 	@Override
-	public boolean doPickUp( Hero hero ) {
+	public boolean doPickUp(Char hero ) {
 		if (super.doPickUp( hero )) {
 			
 			if (!Statistics.amuletObtained) {

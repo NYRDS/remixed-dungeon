@@ -48,11 +48,11 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
 
 public class Heap implements Bundlable, NamedEntityKind {
 
@@ -79,7 +79,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 		MIMIC
 	}
 
-	@NonNull
+	@NotNull
 	public Type type = Type.HEAP;
 
 	public static Map<Type, Float> regularHeaps = new HashMap<>();
@@ -95,7 +95,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 	
 	public ItemSprite sprite;
 
-	@NonNull
+	@NotNull
 	public LinkedList<Item> items = new LinkedList<>();
 
 	public String imageFile() {

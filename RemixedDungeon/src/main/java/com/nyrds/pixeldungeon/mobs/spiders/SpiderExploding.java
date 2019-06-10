@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class SpiderExploding extends MultiKindMob {
 
@@ -43,7 +43,7 @@ public class SpiderExploding extends MultiKindMob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		try {
 			Plant plant  = (Plant) PlantClasses[getKind()].newInstance();

@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Hełm Chaosu</string>
@@ -180,7 +178,7 @@
     <string name="RatKingCrown_Info">Złota korona jego szczurowości, symbol wiecznej Mocy</string>
 
     <string name="BishopNPC_Name">Biskup</string>
-    <string name="BishopNPC_Desc">Biakup Świętego Kościoła pod wezwaniem Mikołaja Władcy Podziemi</string>
+    <string name="BishopNPC_Desc">Biskup Świętego Kościoła pod wezwaniem Świętego Władcy Podziemi</string>
     <string name="BishopNPC_Gender">męski</string>
     <string name="BishopNPC_Name_Objective">Biskup</string>
 
@@ -253,8 +251,8 @@
     <string name="town_deco_shelf_name">Półki</string>
     <string name="town_deco_shelf_desc">Puste półki</string>
 
-    <string name="WndPriest_Instruction2_m">Witaj synu, Witaj w świętym kościele Wielkiego pana podziemi!</string>
-    <string name="WndPriest_Instruction2_f">Witaj Córko Witaj w świętym kościele Wielkiego pana podziemi!</string>
+    <string name="WndPriest_Instruction2_m">Witaj synu, Witaj w świętym kościele Świętego Władcy Podziemi!</string>
+    <string name="WndPriest_Instruction2_f">Witaj Córko Witaj w świętym kościele Świętego Władcy podziemi!</string>
     <string name="WndPriest_Instruction2">Jeśli szukasz pomocy, Ja mogę zapewnić ci leczenie tylko za %dzłotych monet! jeśli szukasz błogosławieństwa albo nie daj boże masz klątwę, proszę spotkaj się z biskupem w naszym pokornym kościele.</string>
 
     <string name="WndDontLikeAds_NotThisTime">Nie tym razem</string>
@@ -412,17 +410,6 @@
     <string name="StoneBlood_Buff">Kamienna Krew.</string>
     <string name="Welcome_Ok">Dobra!</string>
     <string name="Welcome_Title">Witaj!</string>
-
-    <string name="Welcome_Text_28_1">
-    remix.28.1\n
-    - Wielka renowacja Miasta\n
-    - Dużo poprawek graficznych oraz łateks\n
-    - Nowe Strzałki i Rzutki \n
-    - Teraz wszystkie poczwary (oprócz nieumarłych) będą się regenerować  \n
-    - Teraz siła będzie zapewniać zwiększone obrażenia dla każdej z klas\n
-    - Wróżbita posada teraz Kota\n
-    - Gnoli tomahawk teraz się nie złamie podczas rzutu w cel   Pozdrawiam Tłumacz\n
-    </string>
 
     <string name="Welcome_Text_28_2">
     remix.28.2\n
@@ -1324,7 +1311,7 @@ assassynkk32
 
     <string name="WndDonate_silverDonateText2">Wyłącza również reklamy we wszystkicgh trybach gry i obklokowuje łowczynię.</string>
     <string name="WndDonate_goldDonateText2">Także odblokowuje elfa na początku gry.</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">standardowy</string>
@@ -1981,7 +1968,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
 
     <string name="Mob_Desc">Prawdziwe opisy pojawią się wkrótce!</string>
     <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
-    <string name="Mob_Yell">%1$s:\"%2$s\"</string>
     <string name="Mob_StaSleepingStatus">%s śpi</string>
     <string name="Mob_StaWanderingStatus">%s wędruje</string>
     <string name="Mob_StaHuntingStatus">%s poluje</string>
@@ -2546,7 +2532,7 @@ W zamian za to, dostaniesz strawę porządną!</string>
     <string name="Mods_AuthorEmail">Email autora:</string>
     <string name="Mods_RestartRequired">Wymagany jest restart.</string>
 
-    <string name="Spells_NotTooFast">Jeszcze nie jesteś gotowy by rzucić %s.</string>
+    <string name="Spells_NotTooFast">%s nie jest jeszcze gotowy do użycia.</string>
     <string name="ElvenBow_Name">elficki łuk</string>
     <string name="ElvenBow_Gender">męski</string>
 
@@ -3561,5 +3547,70 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Potion_ArrowMoisten">Udało ci się nasączyć strzały.</string>
     <string name="Potion_ItemFliesAway">%s odleciał w nieznane...</string>
     <string name="Potion_FoodRefreshed">%s teraz wygląda całkiem dobrze</string>
+
+
+    <string name="KindOfBow_SelectArrowKind">Ile strzał  użyć?</string>
+    <string name="KindOfBow_ChooseArrows">WYBIERZ STRZAŁY</string>
+
+    <string name="BodyArmorSpell_Name">Napierśnik</string>
+    <string name="BodyArmorSpell_Info">Wzmacnia siłę mięśni, czyniąc je chwilowo silniejszymi, co znacznie zwiększa pancerz kosztem szybkości ruchu.</string>
+
+    <string name="BodyArmorBuff_Name">Napierśnik</string>
+    <string name="BodyArmorBuff_Info">Pancerz wzmocniony kosztem szybkości ruchu </string>
+
+    <string name="DieHardSpell_Name">Nie do zdarcia</string>
+    <string name="DieHardSpell_Info">Tymczasowo zwiększysz swoją regenerację, co sprawi, że będziesz naprawdę trudny do zabicia.</string>
+
+    <string name="DieHardBuff_Name">Nie do zdarcia</string>
+    <string name="DieHardBuff_Info">Regeneracja wzrosła!</string>
+
+    <string name="SmashSpell_Name">Rozbij</string>
+    <string name="SmashSpell_Info">Skocz w górę i stwórz potężne uderzenie które wbije przeciwników w podłogę tymczasowo ich ogłuszając i zadając obrażenia.</string>
+    <string name="SmashSpell_NeedWeapon">Potrzebuje broni do tego ruchu.</string>
+
+    <string name="DashSpell_Name">Szarża</string>
+    <string name="DashSpell_Info">Pędź w określonym kierunku, zderzając się z wrogami, zadając obrażenia i powodując okaleczenia.</string>
+    <string name="DashSpell_OnSelf">Nie mogę szarżować w to miejsce.</string>
+    <string name="DashSpell_TooFar">Nie mogę szarżować tak daleko</string>
+
+    <string name="CloakSpell_Name">Peleryna</string>
+    <string name="CloakSpell_Info">Ukryj się w cieniu żeby stać się niewidzialnym. Zmniejszy to szanse zostania wykrytym. Nie może zostać użyte gdy przeciwnicy są blisko.</string>
+    <string name="CloakSpell_EnemiesNearby">Nie możesz ukryć się w cieniu gdy przeciwnicy są blisko.</string>
+
+    <string name="CloakBuff_Name">Zamaskowany</string>
+    <string name="CloakBuff_Info">Ukryty  w cieniu</string>
+
+    <string name="TitleScene_Mods">Mody</string>
+    <string name="WndHero_Stealth">Podstęp</string>
+    <string name="WndHero_Awareness">Świadomość</string>
+    <string name="WndHero_AttackSkill">ATAK</string>
+    <string name="WndHero_DefenceSkill">OBRONA</string>
+
+
+    <string name="Welcome_Text_28_6">
+remix.28.6
+-Mechaniki gry
+--Specjalne zdolności wojownika!
+-- Głód bohaterów zredukowany!
+-- Czar opętania nekromanty!
+--Peleryna niewidka złodzieja!
+--Nowe odznaki!
+-Mody
+--Niestandardowo skryptowane efekty
+--Niestandardowa grafika
+ 
+
+ </string>
+    <string name="Badges_GamesPlayed5">Zagrano 5000 razy!</string>
+    <string name="Badges_PotionsCooked5">Uwarzono 25 mikstur. </string>
+    <string name="Badges_ItemLvl5">Przedmiot poziomu 15 zdobyty!</string>
+    <string name="Badges_FoodEaten5">Zjedzono 60 kawałków jedzenia.</string>
+    <string name="Badges_StrengthAttained5">Zdobyto 21 punktów siły.</string>
+    <string name="Badges_LevelReached5">Poziom 30 osiągnięty!</string>
+    <string name="Badges_GoldCollected5">Zdobyto 35000 sztuk złota.</string>
+    <string name="Badges_MonsterSlain5">Pokonano 1000 wrogów</string>
+    <string name="Spells_NotInOwnBody">Nie możesz wykonywać! %s, gdy twoja dusza oddzieliła się od ciała.</string>
+    <string name="WndHero_Satiety">Sytość</string>
+
 
 </resources>

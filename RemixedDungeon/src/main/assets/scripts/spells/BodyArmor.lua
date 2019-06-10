@@ -13,18 +13,23 @@ return spell.init{
         return {
             image         = 2,
             imageFile     = "spellsIcons/warrior.png",
-            name          = "ArmorMastery_Name",
-            info          = "ArmorMastery_Info",
+            name          = "BodyArmorSpell_Name",
+            info          = "BodyArmorSpell_Info",
             magicAffinity = "Combat",
             targetingType = "self",
             level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            spellCost     = 5,
+            cooldown      = 20,
             castTime      = 0.5
         }
     end,
-    cast = function(self, spell, chr, cell)
-        RPD.topEffect(chr:getPos(),"body_armor")
+    cast = function(self, spell, caster, cell)
+        RPD.topEffect(caster:getPos(),"body_armor")
+	
+	    RPD.playSound("body_armor.mp3")
+        local buff = RPD.affectBuff(caster,"BodyArmor", 5+2*caster:skillLevel())
+        buff:level(caster:skillLevel())
+
         return true
     end
 }

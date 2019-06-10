@@ -5,7 +5,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.IIapCallback;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
@@ -83,24 +82,18 @@ public class WndHatInfo extends Window {
 				}
 
 				Game.instance().runOnUiThread(
-						new Runnable() {
-							@Override
-							public void run() {
-								EventCollector.logEvent("PurchaseClick",item.name());
-								RemixedDungeon.instance().iap.doPurchase(accessory, new IIapCallback() {
-									@Override
-									public void onPurchaseOk() {
-										item.ownIt(true);
-										item.equip();
-										Dungeon.hero.updateLook();
-										onBackPressed();
-										parent.hide();
-										if(!Game.isPaused()) {
-											GameScene.show(new WndHats());
-										}
-									}
-								});
-							}
+						() -> {
+							EventCollector.logEvent("PurchaseClick",item.name());
+							RemixedDungeon.instance().iap.doPurchase(accessory, () -> {
+								item.ownIt(true);
+								item.equip();
+								Dungeon.hero.updateSprite();
+								onBackPressed();
+								parent.hide();
+								if(!Game.isPaused()) {
+									GameScene.show(new WndHats());
+								}
+							});
 						}
 				);
 			}

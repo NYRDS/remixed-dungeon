@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
@@ -38,9 +39,10 @@ public class Sorrowmoss extends Plant {
 		imageIndex = 2;
 	}
 	
-	public void effect(int pos, Char ch ) {
-		if (ch != null) {
-			Buff.affect( ch, Poison.class ).set( Poison.durationFactor( ch ) * (4 + Dungeon.depth / 2) );
+	public void effect(int pos, Presser ch ) {
+		if (ch instanceof Char) {
+			Char chr = (Char)ch;
+			Buff.affect( chr, Poison.class ).set( Poison.durationFactor( chr ) * (4 + Dungeon.depth / 2) );
 		}
 		
 		if (Dungeon.visible[pos]) {

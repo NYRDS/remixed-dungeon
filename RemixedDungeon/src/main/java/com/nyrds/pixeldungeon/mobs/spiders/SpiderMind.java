@@ -15,7 +15,7 @@ import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class SpiderMind extends Mob {
 
@@ -44,7 +44,7 @@ public class SpiderMind extends Mob {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		if(enemy instanceof Hero) {
 			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);		
@@ -79,12 +79,12 @@ public class SpiderMind extends Mob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		super.die( cause );
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		attackProc(enemy, damageRoll());
 		super.zap(enemy);
 		return true;

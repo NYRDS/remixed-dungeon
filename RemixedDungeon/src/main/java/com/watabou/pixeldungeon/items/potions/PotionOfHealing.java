@@ -30,12 +30,13 @@ import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.HealthArrow;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfHealing extends Potion {
+
+	private static PotionOfHealing pseudoPotion = new PotionOfHealing();
 
 	@Override
 	protected void apply( Hero hero ) {
@@ -45,14 +46,11 @@ public class PotionOfHealing extends Potion {
 	}
 	
 	public static void heal( Char ch, float portion ) {
-
-		ch.hp((int) Math.min(ch.ht(),ch.hp()+Math.max(ch.ht()*portion,1)));
+		ch.heal((int) (ch.ht()*portion), pseudoPotion);
 		Buff.detach( ch, Poison.class );
 		Buff.detach( ch, Cripple.class );
 		Buff.detach( ch, Weakness.class );
 		Buff.detach( ch, Bleeding.class );
-		
-		ch.getSprite().emitter().start( Speck.factory( Speck.HEALING ), 0.4f, 4 );
 	}
 	
 	@Override

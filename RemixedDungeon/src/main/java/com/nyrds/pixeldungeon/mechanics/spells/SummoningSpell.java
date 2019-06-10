@@ -16,9 +16,9 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import java.util.Collection;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.Collection;
 
 /**
  * Created by DeadDie on 02.09.2017
@@ -30,7 +30,7 @@ public class SummoningSpell extends Spell {
     protected String mobKind = "Rat";
 
     @Override
-    public boolean canCast(@NonNull Char chr, boolean reallyCast) {
+    public boolean canCast(@NotNull Char chr, boolean reallyCast) {
         if (!super.canCast(chr, reallyCast)) {
             return false;
         }
@@ -48,7 +48,7 @@ public class SummoningSpell extends Spell {
     }
 
     @Override
-    public boolean cast(@NonNull Char chr){
+    public boolean cast(@NotNull Char chr){
         if(!super.cast(chr)) {
 	        return false;
         }

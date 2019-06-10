@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.SmartTexture;
@@ -16,7 +17,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Spell implements NamedEntityKind {
 
@@ -44,7 +45,7 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
-    public boolean canCast(@NonNull final Char chr, boolean reallyCast) {
+    public boolean canCast(@NotNull final Char chr, boolean reallyCast) {
 
         float timeToCast = chr.spellCooldown(getClassName())-cooldown;
         if(timeToCast < 0) {
@@ -59,6 +60,13 @@ public class Spell implements NamedEntityKind {
         if (chr instanceof Hero) {
             final Hero hero = (Hero) chr;
 
+            if(hero.getControlTarget().getId()!=hero.getId()) {
+                if(reallyCast) {
+                    GLog.w(Utils.format(R.string.Spells_NotInOwnBody, name));
+                }
+                return false;
+            }
+
             if (!hero.enoughSP(spellCost())) {
                 if(reallyCast) {
                     GLog.w(Utils.format(R.string.Spells_NotEnoughSP, name));
@@ -71,7 +79,7 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
-    public boolean cast(@NonNull final Char chr) {
+    public boolean cast(@NotNull final Char chr) {
 
         if (!chr.isAlive()) {
             return false;
@@ -149,6 +157,10 @@ public class Spell implements NamedEntityKind {
     }
 
     public int spellCost() {
+        if(spellCost==0) {
+            ModError.doReport("Spell cost for "+ getClassName() + "must be > 1", new Exception("spell cost is 0"));
+            spellCost = 1;
+        }
         return spellCost;
     }
 
@@ -164,7 +176,7 @@ public class Spell implements NamedEntityKind {
         return chr.skillLevel() - level;
     }
 
-    @NonNull
+    @NotNull
     public SpellItem itemForSlot() {
         if (spellItem == null) {
             spellItem = new SpellItem() {

@@ -65,15 +65,15 @@ public enum Rankings {
 		
 		rec.info	    = resultDescription;
 		rec.win		    = winLevel  != gameOver.LOSE;
-		rec.heroClass	= hero.heroClass;
+		rec.heroClass	= hero.getHeroClass();
 		rec.score	    = score(winLevel);
 		rec.mod			= RemixedDungeon.activeMod();
 		rec.gameId      = Dungeon.gameId;
 
 
 		Map<String,String> resDesc = new HashMap<>();
-		resDesc.put("class",     hero.heroClass.toString());
-		resDesc.put("subclass",  hero.subClass.toString());
+		resDesc.put("class",     hero.getHeroClass().toString());
+		resDesc.put("subclass",  hero.getSubClass().toString());
 		resDesc.put("heroLevel", Integer.toString(hero.lvl()));
 		resDesc.put("gameId",    Dungeon.gameId);
 
@@ -98,7 +98,7 @@ public enum Rankings {
 			Dungeon.saveGame(gameFile);
 			rec.gameFile = gameFile;
 		} catch (IOException e) {
-			rec.gameFile = "";
+			rec.gameFile = Utils.EMPTY_STRING;
 			EventCollector.logException(e);
 		}
 

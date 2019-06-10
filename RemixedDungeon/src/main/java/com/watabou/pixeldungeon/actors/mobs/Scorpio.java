@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Scorpio extends Mob implements IZapper {
 	
@@ -84,7 +84,7 @@ public class Scorpio extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		if(super.zap(enemy)) {
 			if (Random.Int( 2 ) == 0) {
 				Buff.prolong( enemy, Cripple.class, Cripple.DURATION );

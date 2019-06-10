@@ -23,6 +23,7 @@ import android.content.SharedPreferences;
 import com.nyrds.android.util.UserKey;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -130,7 +131,7 @@ public enum Preferences {
 
 	public boolean checkString(String key) {
 		try {
-			get().getString(key, "");
+			get().getString(key, Utils.EMPTY_STRING);
 		} catch (ClassCastException e) {
 			return false;
 		}
@@ -174,7 +175,7 @@ public enum Preferences {
 			}
 
 			if (get().contains(key)) {
-				String val = "";
+				String val = Utils.EMPTY_STRING;
 
 				if (checkString(key)) {
 					val = get().getString(key, defValue);

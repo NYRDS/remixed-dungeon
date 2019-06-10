@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -27,9 +28,9 @@ public class WndPriest extends WndQuest {
 	private static int goldCostPerMinion;
 
 
-	public WndPriest(final HealerNPC priest, final Hero hero) {
+	public WndPriest(final HealerNPC priest, final Char chr) {
 		
-		super(priest,instructions(hero));
+		super(priest,instructions(chr));
 
 		float y = height + 2*GAP;
 
@@ -38,34 +39,38 @@ public class WndPriest extends WndQuest {
 		RedButton btnHealHero = new RedButton(  Utils.format(R.string.WndPriest_Heal, goldCost) ) {
 			@Override
 			protected void onClick() {
-				Vector<Char> patients = new Vector<>();
-				patients.add(hero);
-				doHeal(priest, hero, patients, goldCost);
+				Vector<Integer> patients = new Vector<>();
+				patients.add(chr.getId());
+				doHeal(priest, chr, patients, goldCost);
 			}
 		};
 
 		btnHealHero.setSize(STD_WIDTH, BUTTON_HEIGHT);
-		btnHealHero.enable(!(hero.gold()< goldCost));
+		btnHealHero.enable(!(chr.gold()< goldCost));
 
 		vbox.add( btnHealHero );
 
-		int minions = hero.getPets().size();
+		if(chr instanceof Hero) {
 
-		if (minions > 0) {
-			final int healAllMinionsCost = goldCostPerMinion * minions;
-			RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
-				@Override
-				protected void onClick() {
-					doHeal(priest,hero,hero.getPetsAsMobs(),healAllMinionsCost);
-				}
-			};
+			Hero hero = (Hero) chr;
 
-			btnHealMinions.setSize(STD_WIDTH, BUTTON_HEIGHT);
-			btnHealMinions.enable(!(hero.gold() < healAllMinionsCost));
+			int minions = hero.countPets();
 
-			vbox.add(btnHealMinions);
+			if (minions > 0) {
+				final int healAllMinionsCost = goldCostPerMinion * minions;
+				RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
+					@Override
+					protected void onClick() {
+						doHeal(priest, hero, hero.getPets(), healAllMinionsCost);
+					}
+				};
+
+				btnHealMinions.setSize(STD_WIDTH, BUTTON_HEIGHT);
+				btnHealMinions.enable(!(hero.gold() < healAllMinionsCost));
+
+				vbox.add(btnHealMinions);
+			}
 		}
-
 		RedButton btnLeave = new RedButton(R.string.WndMovieTheatre_No) {
 			@Override
 			protected void onClick() {
@@ -81,7 +86,7 @@ public class WndPriest extends WndQuest {
 		resize( STD_WIDTH, (int) (vbox.bottom()));
 	}
 
-	private static String instructions(Hero hero) {
+	private static String instructions(Char hero) {
 		goldCostPerMinion = (int) (GOLD_COST_PER_MINION * Game.getDifficultyFactor());
 		goldCost          = (int) (GOLD_COST * Game.getDifficultyFactor());
 
@@ -99,17 +104,19 @@ public class WndPriest extends WndQuest {
 		return Utils.format(instruction) +"\n"+ Utils.format(R.string.WndPriest_Instruction2, goldCost);
 	}
 
-	private void doHeal(HealerNPC priest, Hero payer, Collection<? extends Char> patients, int healingCost) {
+	private void doHeal(HealerNPC priest, Char payer, Collection<Integer> patients, int healingCost) {
 		hide();
 		payer.spendGold(healingCost);
-		for(Char patient: patients) {
+		for(Integer patientId: patients) {
+
+			Char patient = CharsList.getById(patientId);
+
 			PotionOfHealing.heal(patient, 1.0f);
-			if(patient instanceof Hero) {
-				patient.buff(Hunger.class).satisfy(Hunger.STARVING);
-			}
+
+			patient.hunger().satisfy(Hunger.STARVING);
 
 			if(patient instanceof Mob) {
-				if(((Mob) patient).getEntityKind().equals("Brute")) {
+				if(patient.getEntityKind().equals("Brute")) {
 					Badges.validateGnollUnlocked();
 				}
 			}

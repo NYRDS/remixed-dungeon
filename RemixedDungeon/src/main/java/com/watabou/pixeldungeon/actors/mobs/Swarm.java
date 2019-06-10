@@ -83,8 +83,8 @@ public class Swarm extends Mob {
 	@Override
 	public Mob split(int cell, int damage) {
 		Swarm clone = (Swarm) super.split(cell, damage);
-		clone.generation++;
-		clone.lootChance *= 1f / (generation + 1f);
+		clone.generation = generation + 1;
+		clone.lootChance *= 1f / (clone.generation + 1f);
 		return clone;
 	}
 }

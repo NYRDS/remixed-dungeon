@@ -28,6 +28,8 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -37,10 +39,13 @@ import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
 import com.watabou.pixeldungeon.items.armor.RogueArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
+import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,10 +55,9 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import androidx.annotation.NonNull;
+public enum HeroClass implements CharModifier {
 
-public enum HeroClass {
-
+    NONE( null, ClassArmor.class),
     WARRIOR(R.string.HeroClass_War, WarriorArmor.class),
     MAGE(R.string.HeroClass_Mag, MageArmor.class),
     ROGUE(R.string.HeroClass_Rog, RogueArmor.class),
@@ -64,8 +68,6 @@ public enum HeroClass {
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
     private static final String FRIENDLY_MOBS     = "friendlyMobs";
-    public static final String IMMUNITIES        = "immunities";
-    public static final String RESISTANCES       = "resistances";
 
     private static final String COMMON            = "common";
     private static final String NON_EXPERT        = "non_expert";
@@ -93,15 +95,15 @@ public enum HeroClass {
     }
 
     public void initHero(Hero hero) {
-        hero.heroClass = this;
+        hero.setHeroClass(this);
         initCommon(hero);
-        initForClass(hero, hero.heroClass.name());
+        initForClass(hero, hero.getHeroClass().name());
 
         hero.setGender(getGender());
 
         if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
             {
-                if (hero.heroClass != HeroClass.NECROMANCER) {
+                if (hero.getHeroClass() != HeroClass.NECROMANCER) {
                     new TomeOfMastery().collect(hero);
                 }
             }
@@ -151,13 +153,13 @@ public enum HeroClass {
 
                 JsonHelper.readStringSet(classDesc, FORBIDDEN_ACTIONS, forbiddenActions);
                 JsonHelper.readStringSet(classDesc, FRIENDLY_MOBS, friendlyMobs);
-                JsonHelper.readStringSet(classDesc, IMMUNITIES, immunities);
-                JsonHelper.readStringSet(classDesc, RESISTANCES, resistances);
+                JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
+                JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.spellUser = classDesc.optBoolean("isSpellUser", false);
-                hero.heroClass.setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
+                hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
                 hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
                 hero.setSoulPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", 0)));
@@ -199,7 +201,7 @@ public enum HeroClass {
         return Game.getVar(titleId);
     }
 
-    @NonNull
+    @NotNull
     public String[] perks() {
 
         switch (this) {
@@ -245,8 +247,8 @@ public enum HeroClass {
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
         bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[0]));
         bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[0]));
-        bundle.put(IMMUNITIES,immunities.toArray(new String[0]));
-        bundle.put(RESISTANCES,resistances.toArray(new String[0]));
+        bundle.put(Char.IMMUNITIES,immunities.toArray(new String[0]));
+        bundle.put(Char.RESISTANCES,resistances.toArray(new String[0]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {
@@ -257,8 +259,8 @@ public enum HeroClass {
 
         Collections.addAll(ret.forbiddenActions,bundle.getStringArray(FORBIDDEN_ACTIONS));
         Collections.addAll(ret.friendlyMobs,bundle.getStringArray(FRIENDLY_MOBS));
-        Collections.addAll(ret.immunities,bundle.getStringArray(IMMUNITIES));
-        Collections.addAll(ret.resistances,bundle.getStringArray(RESISTANCES));
+        Collections.addAll(ret.immunities,bundle.getStringArray(Char.IMMUNITIES));
+        Collections.addAll(ret.resistances,bundle.getStringArray(Char.RESISTANCES));
 
         return ret;
     }
@@ -295,11 +297,68 @@ public enum HeroClass {
         return friendlyMobs.contains(mobClass);
     }
 
-    public Set<String> getImmunities() {
+    @Override
+    public int drBonus() {
+        return 0;
+    }
+
+    @Override
+    public int stealthBonus() {
+        return 0;
+    }
+
+    @Override
+    public float speedMultiplier() {
+        return 1;
+    }
+
+    @Override
+    public int defenceProc(Char defender, Char enemy, int damage) {
+        return damage;
+    }
+
+    @Override
+    public int regenerationBonus() {
+        return 0;
+    }
+
+    @Override
+    public void charAct() {
+
+    }
+
+    @Override
+    public int dewBonus() {
+        switch (this) {
+            case HUNTRESS:
+            case ELF:
+                return 1;
+            default:
+                return 0;
+        }
+    }
+
+    @Override
+    public Set<String> resistances() {
+        return resistances;
+    }
+
+    @Override
+    public Set<String> immunities() {
         return immunities;
     }
 
-    public Set<String> getResistances() {
-        return resistances;
+    @Override
+    public CharSprite.State charSpriteStatus() {
+        return CharSprite.State.NONE;
+    }
+
+    @Override
+    public int icon() {
+        return BuffIndicator.NONE;
+    }
+
+    public int classIndex() {
+        return ordinal() - 1;
     }
 }

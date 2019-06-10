@@ -66,7 +66,7 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 	}
 
 	@Override
-	public boolean doUnequip(Hero hero, boolean collect) {
+	public boolean doUnequip(Char hero, boolean collect) {
 		if(charges > 0) {
 			Buff.detach(hero, CandleOfMindVisionBuff.class);
 		}

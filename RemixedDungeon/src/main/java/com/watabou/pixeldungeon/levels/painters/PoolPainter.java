@@ -73,9 +73,12 @@ public class PoolPainter extends Painter {
 		
 		for (int i=0; i < NPIRANHAS; i++) {
 			Piranha piranha = new Piranha();
+			int newPos;
 			do {
-				piranha.setPos(room.random(level));
-			} while (level.map[piranha.getPos()] != Terrain.WATER|| Actor.findChar( piranha.getPos() ) != null);
+				newPos = room.random(level);
+			} while (level.map[newPos] != Terrain.WATER|| Actor.findChar( newPos ) != null);
+
+			piranha.setPos(newPos);
 			level.mobs.add( piranha );
 			Actor.occupyCell( piranha );
 		}

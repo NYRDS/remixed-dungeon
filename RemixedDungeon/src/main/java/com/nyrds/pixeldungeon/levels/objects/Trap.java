@@ -18,6 +18,7 @@ import com.watabou.pixeldungeon.levels.traps.ParalyticTrap;
 import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
 import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
 import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -68,7 +69,7 @@ public class Trap extends LevelObject {
 
 	@ForRestoreFromBundle
 	public Trap() {
-		this(-1);
+		this(Level.INVALID_CELL);
 	}
 
 	public Trap(int pos) {
@@ -92,9 +93,8 @@ public class Trap extends LevelObject {
 
 	@Override
 	public void bump(Presser presser) {
-
 		if(presser instanceof Hero) {
-			interact((Hero)presser);
+			interact((Char)presser);
 			return;
 		}
 
@@ -157,7 +157,7 @@ public class Trap extends LevelObject {
 		activatedByMob = obj.optBoolean("activatedByMob", false);
 
 		script = obj.optString("script", "");
-		data = StringsManager.maybeId(obj.optString("data", ""));
+		data = StringsManager.maybeId(obj.optString("data", Utils.EMPTY_STRING));
 
 		usedImageIndex = obj.optInt("usedImageIndex", usedImageIndex);
 	}

@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 
 public class InquirerNPC extends ImmortalNPC {
 
@@ -15,7 +15,7 @@ public class InquirerNPC extends ImmortalNPC {
     }
 
     @Override
-    public boolean interact(final Hero hero) {
+    public boolean interact(final Char hero) {
 /*
         if (!PollfishSurveys.consented()) {
         }

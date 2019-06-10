@@ -19,8 +19,8 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -28,13 +28,12 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
 import java.util.ArrayList;
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
-    private static final String EMPTY_STRING = "";
-    private static final String AUTO_SAVE = "autoSave";
 
     private boolean saving;
 
@@ -112,7 +111,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                 buttons.add(btn);
 
                 if (Game.instance().playGames.isConnected()) {
-                    final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.heroClass.toString();
+                    final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.getHeroClass().toString();
 
                     if ((_saving && !options[index].isEmpty())
                             || (!_saving
@@ -125,7 +124,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                                 File slotDir = FileSystem.getInternalStorageFile(slotNameFromIndexAndMod(index));
                                 boolean res;
                                 if (_saving) {
-                                    res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, pathname -> SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.heroClass));
+                                    res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, pathname -> SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.getHeroClass()));
                                 } else {
                                     res = Game.instance().playGames.unpackSnapshotTo(snapshotId, slotDir);
                                 }
@@ -146,7 +145,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                     SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
                         protected void onClick() {
                             final int slotIndex = index;
-                            WndOptions reallyDelete = new WndOptions(Game.getVar(R.string.WndSaveSlotSelect_Delete_Title), "",
+                            WndOptions reallyDelete = new WndOptions(Game.getVar(R.string.WndSaveSlotSelect_Delete_Title), Utils.EMPTY_STRING,
                                     Game.getVar(R.string.WndSaveSlotSelect_Delete_Yes),
                                     Game.getVar(R.string.WndSaveSlotSelect_Delete_No)) {
                                 @Override
@@ -192,7 +191,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
             RedButton autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave) {
                 @Override
                 protected void onClick() {
-                    showAd(AUTO_SAVE);
+                    showAd(SaveUtils.AUTO_SAVE);
                 }
             };
 
@@ -240,7 +239,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
         if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
             return Game.getVar(R.string.WndSaveSlotSelect_dontLike);
         }
-        return EMPTY_STRING;
+        return Utils.EMPTY_STRING;
     }
 
     private static String slotNameFromIndex(int i) {
@@ -305,14 +304,10 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
         Game.pushUiTask(() -> {
             if (!saving) {
-                if (slot.equals(AUTO_SAVE)) {
-                    InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
-                } else {
-                    SaveUtils.loadGame(slot, Dungeon.hero.heroClass);
-                }
+                SaveUtils.loadGame(slot, Dungeon.hero.getHeroClass());
             } else {
                 if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
-                    int group = RemixedDungeonApp.getExperimentSegment("hqSaveAdsExperiment", 2);
+                    int group = RemixedDungeonApp.getExperimentSegment(EventCollector.SAVE_ADS_EXPERIMENT, 2);
                     if (group <= 0) {
                         return;
                     }
@@ -322,7 +317,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                             Iap iap = Game.instance().iap;
                             if (iap != null && iap.isReady() || BuildConfig.DEBUG) {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogShown");
-                                Game.scene().add(new WndDontLikeAds());
+                                Hero.doOnNextAction = () -> Game.scene().add(new WndDontLikeAds());
                             } else {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogNotShownIapNotReady");
                             }

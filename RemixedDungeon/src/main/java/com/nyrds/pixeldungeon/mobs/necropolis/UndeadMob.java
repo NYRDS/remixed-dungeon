@@ -32,6 +32,7 @@ public class UndeadMob extends Mob {
 		addImmunity(Poison.class);
 		addImmunity(Vertigo.class);
 		addImmunity(Bleeding.class);
+		addImmunity(Regeneration.class);
 	}
 
 	@Override
@@ -40,10 +41,6 @@ public class UndeadMob extends Mob {
 			if (buff instanceof Burning) {
 				damage(Random.NormalIntRange(1, ht() / 8), buff);
 			}
-		}
-
-		if(buff instanceof Regeneration) {
-			return;
 		}
 
 		super.add(buff);

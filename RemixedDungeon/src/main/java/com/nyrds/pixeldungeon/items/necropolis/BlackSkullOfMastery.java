@@ -1,7 +1,9 @@
 package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -21,7 +23,12 @@ public class BlackSkullOfMastery extends MasteryItem {
 		identify();
 		image = 19;
 	}
-	
+
+	@Override
+	protected boolean givesMasteryTo(Char hero) {
+		return hero.getHeroClass() == HeroClass.NECROMANCER;
+	}
+
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );		
@@ -38,7 +45,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 			
 			HeroSubClass way;
 
-			switch (hero.heroClass) {
+			switch (hero.getHeroClass()) {
 			default:
 				GLog.w("Error: How did you get this item?! You're not supposed to be able to obtain it!!");
 				return;

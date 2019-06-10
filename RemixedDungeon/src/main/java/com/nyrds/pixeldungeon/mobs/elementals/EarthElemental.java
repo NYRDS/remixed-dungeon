@@ -17,7 +17,7 @@ import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 
@@ -68,7 +68,7 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 	}
 
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage) {
+	public int attackProc(@NotNull Char enemy, int damage) {
 
 		int cell = enemy.getPos();
 

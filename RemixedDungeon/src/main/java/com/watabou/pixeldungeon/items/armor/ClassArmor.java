@@ -43,10 +43,10 @@ abstract public class ClassArmor extends Armor {
 	public static Armor upgrade ( Hero owner, Armor armor ) {
 
 		ClassArmor classArmor;
-		if(owner.subClass == HeroSubClass.NONE) {
-			classArmor = owner.heroClass.classArmor();
+		if(owner.getSubClass() == HeroSubClass.NONE) {
+			classArmor = owner.getHeroClass().classArmor();
 		} else {
-			classArmor = owner.subClass.classArmor();
+			classArmor = owner.getSubClass().classArmor();
 		}
 
 		classArmor.STR = armor.STR;

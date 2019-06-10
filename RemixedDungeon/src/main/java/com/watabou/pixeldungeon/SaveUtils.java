@@ -12,6 +12,9 @@ import java.io.File;
 
 public class SaveUtils {
 
+	public static final String AUTO_SAVE = "autoSave";
+	public static final String PREV_SAVE = "prevSave";
+
 	static private boolean hasClassTag(HeroClass cl, String fname) {
 		return fname.contains(cl.tag());
 	}
@@ -40,7 +43,7 @@ public class SaveUtils {
 			}
 		}
 		
-		return "";
+		return Utils.EMPTY_STRING;
 	}
 	
 	public static boolean slotUsed(String slot, HeroClass cl) {

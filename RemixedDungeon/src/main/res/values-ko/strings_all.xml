@@ -1,11 +1,8 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
-    <string name="ChaosHelmet_Name">혼돈 투구</string>
+    <string name="ChaosHelmet_Name">혼돈의 투구</string>
     <string name="ChaosHelmet_Info"> 혼돈의 전사의 상징인 혈적색 투구입니다.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: 소환 최대량에 다다랐습니다(현재 최대량: %2$d)!</string>
     <string name="Mana_Title">마나</string>
@@ -53,21 +50,19 @@
     <string name="TomeOfKnowledge_Info">이 고서는 비밀의 수수께끼와 미스터리로 가득 차있습니다! 읽는 건 어려울 수 있지만, 이해할 수 있게 되면 마력이 증가할 것입니다!</string>
 
 
-    <string name="SpellBook_Name">마법서</string>
-    <string name="SpellBook_Info">이건 책보다는 편집본으로 보입니다. 당신이 이것에게 충분히 집중한다면 무언가 해낼 수 있을 것 같습니다. </string>
-    <string name="SpellBook_Info_Identified">저 페이지들을 통해 당신은 \"%1$s\"마법의 주문을 발견하였습니다. \n \"%2$s\"</string>
+    <string name="SpellBook_Name">주문서</string>
+    <string name="SpellBook_Info">이건 책보다는 편집본으로 보입니다. 당신이 이것에 충분히 집중한다면 무언가 해낼 수 있을 것 같습니다. </string>
+    <string name="SpellBook_Info_Identified">주문서에서 당신은 \"%1$s\"마법의 주문을 발견하였습니다. \n \"%2$s\"</string>
 
 
     <string name="ManaPotion_Name">마나 회복의 물약</string>
     <string name="ManaPotion_Info">이 물약은 당신의 정신력을 회복시켜 줄 것입니다.</string>
 
 
-    <string name="Mushroom_Eat_Message">저 버섯의 맛은 이상했습니다!</string>
+    <string name="Mushroom_Eat_Message">버섯의 맛은 이상했습니다!</string>
 
 
     <string name="Torch_Info2">던전의 조명이 열악하다면  반드시 필요할 물건입니다.</string>
-
-
 
     <string name="WndSpells_Title">주문들</string>
     <string name="WndSpells_Level">마법 레벨:</string>
@@ -84,7 +79,7 @@
         <item>자수정</item>
         <item>토파즈</item>
         <item>줄마노</item>
-        <item>전기석</item>
+        <item>토르말린</item>
         <item>에메랄드</item>
         <item>사파이어</item>
         <item>석영</item>
@@ -100,7 +95,7 @@
 
 
     <string name="RingOfAccuracy_Name">명중의 반지</string>
-    <string name="RingOfAccuracy_Info">이 반지는 당신의 공격이 적중할 확률을 상승시켜 줍니다.</string>
+    <string name="RingOfAccuracy_Info">이 반지는 당신의 공격이 적중할 확률을 높여줍니다.</string>
 
 
     <string name="RingOfDetection_Name">감지의 반지</string>
@@ -116,11 +111,11 @@
 
 
     <string name="RingOfHaggler_Name">흥정꾼의 반지</string>
-    <string name="RingOfHaggler_Info">사실, 이 반지는 어떤 마법적 효과도 지니고 있지 않습니다. 그러나 이 반지의 소유주가 도둑길드 소속인지 상점주인에게 보여줍니다. 그들은 이 반지에 대한 보증으로 할인을 제공합니다. 이 반지를 업그레이드 해도 추가보너스를 제공하지 않습니다.</string>
+    <string name="RingOfHaggler_Info">사실, 이 반지는 어떤 마법적 효과도 지니고 있지 않습니다. 그러나 이 반지의 소유주가 도둑길드 소속이라는 것을 상점주인에게 알리는 역할을 합니다. 그들은 이 반지에 대한 보증으로 할인을 제공합니다. 이 반지는 강화해도 추가 보너스를 제공하지 않습니다.</string>
 
 
     <string name="RingOfHaste_Name">가속의 반지</string>
-    <string name="RingOfHaste_Info">이 반지는 착용자 시간의 흐름을 가속해 더 많은 행동을 할 수 있도록 합니다.</string>
+    <string name="RingOfHaste_Info">이 반지는 착용자의 시간의 흐름을 가속해 더 많은 행동을 할 수 있도록 합니다.</string>
 
 
     <string name="RingOfHerbalism_Name">약초의 반지</string>
@@ -136,7 +131,7 @@
 
 
     <string name="RingOfSatiety_Name">포만의 반지</string>
-    <string name="RingOfSatiety_Info">이 반지는 당신이 음식없이 오랫동안 행동할 수 있게 해줍니다. 역강화된 반지는 반대의 효과를 유발합니다.</string>
+    <string name="RingOfSatiety_Info">이 반지는 당신이 음식없이 오랫동안 행동할 수 있게 해줍니다. 역강화된 반지는 반대의 효과를 줍니다.</string>
 
 
     <string name="RingOfShadows_Name">은신의 반지</string>
@@ -144,11 +139,11 @@
 
 
     <string name="RingOfThorns_Name">가시의 반지</string>
-    <string name="RingOfThorns_Info">이 반지는 실제로 가시를 제공하지는 않습니다. 그러나 적이 공격하는 피해의 일부분을 다시 적에게 되돌려줍니다. 이 반지를 업그레이드 해도  추가보너스를 제공하지 않습니다.</string>
+    <string name="RingOfThorns_Info">이 반지는 실제로 가시를 돋아나게 하지는 않습니다. 그러나 적이 공격하는 피해의 일부분을 다시 적에게 되돌려줍니다. 이 반지는 강화해도 추가 보너스를 제공하지 않습니다.</string>
 
 
     <string name="RingOfStoneWalking_Name">혈석의 반지</string>
-    <string name="RingOfStoneWalking_Info">이 이상한 반지는 튼튼한 돌로 구성되어 있습니다... - ps - 착용시 가까운 벽안으로 스며들고 데미지를 입습니다. 다시 반지를 해제하면 벽 바깥으로 나올수 있습니다. 벽을 통과할 수 있게되는거죠.</string>
+    <string name="RingOfStoneWalking_Info">이 이상한 반지는 튼튼한 돌로 구성되어 있습니다. 처음 봤을 때 루비라고 생각했던 것은 반지에 액체 형태의 피가 고정되어 있는 것이었습니다! 반지의 안쪽에는 벽으로 보이는 것을 가리키는 화살표가 새겨져 있습니다. 이걸 사용하면 무슨 일이 일어날까요?</string>
     <string name="RingOfStoneWalking_ImmuredInStone">당신은 돌에 감금되었다. 영원히...</string>
 
 
@@ -162,12 +157,12 @@
     <string name="ChaosCrystal_Name_2">혼돈의 수정</string>
     <string name="ChaosCrystal_Info">쥐고 있는 동안 손으로 흘러 들어오는 에너지의 흐름이 느껴진다.</string>
     <string name="ChaosCrystal_Info_1">혼돈의 힘이 이 수정을 통해 흐릅니다. 아마도 유용할 것 같습니다.</string>
-    <string name="ChaosCrystal_Info_2">좋아요! 이제 당신은 이걸 당신의 아이템과 융합할 수 있을 것을 깨달았습니다. 다음은 무엇일까요?</string>
+    <string name="ChaosCrystal_Info_2">좋아요! 이제 당신은 이걸 아이템과 융합할 수 있다는 걸 깨달았습니다. 그런데 그 다음은 무엇일까요?</string>
     <string name="ChaosCrystal_Use">사용</string>
     <string name="ChaosCrystal_Fuse">융합</string>
     <string name="ChaosCrystal_Prompt">혼돈의 표식을 설치할 위치를 고르세요.</string>
-    <string name="ChaosCrystal_SelectForFuse">혼돈의 수정을 합체시킬 아이템을 고르세요.</string>
-    <string name="ChaosCrystal_ScrollFused">수정이 마법으로 인해 주문서에 씌여졌고, 이제 이건 %s입니다.</string>
+    <string name="ChaosCrystal_SelectForFuse">혼돈의 수정을 융합시킬 아이템을 고르세요.</string>
+    <string name="ChaosCrystal_ScrollFused">수정이 마법으로 인해 주문서에 쓰여졌고, 이제 이건 %s입니다.</string>
     <string name="ChaosCrystal_SwordFused">수정이 당신의 무기를 흡수했고, 검의 형태가 되었습니다.</string>
     <string name="ChaosCrystal_BowFused">수정이 당신의 활을 흡수했고, 활의 형태가 되었습니다.</string>
     <string name="ChaosCrystal_StaffFused">수정이 당신의 마법봉을 흡수했고, 지팡이의 형태가 되었습니다.</string>
@@ -182,8 +177,58 @@
     <string name="RatKingCrown_Name">쥐 대왕의 왕관</string>
     <string name="RatKingCrown_Info">그의 쥐스러움의 황금 왕관으로, 영원한 힘을 상징합니다.</string>
 
+    <string name="BishopNPC_Name">성직자</string>
+    <string name="BishopNPC_Desc">심연의 군주 산타를 모시는 성스러운 교회의 성직자</string>
     <string name="BishopNPC_Gender">남성</string>
+    <string name="BishopNPC_Name_Objective">성직자</string>
+
+    <string name="Bishop_title">성직자</string>
+    <string name="Bishop_text">당신을 위해 밤낮으로 기도하고 있습니다.</string>
+    <string name="Bishop_lesser_bless">작은 축복 - %d 골드</string>
+    <string name="Bishop_great_bless">굉장한 축복 - %d 골드</string>
+
+    <string name="Bishop_remove_curse">저주 해제 - %d 골드</string>
+
+    <string name="Bishop_not_interested">떠나기</string>
+    <string name="Bishop_no_money">골드가 부족합니다.</string>
+    <string name="Bishop_bye">산타께서 당신의 앞길을 비추시기를.</string>
+
+    <string name="Blessed_Info">자격있는 사제에 의해 축복받음</string>
+
+    <string name="deco_candle_name">양초</string>
+    <string name="deco_candle_desc">큰 양초</string>
+
+    <string name="Possess_Name">정신 지배</string>
+    <string name="Possess_PossessionFailed">%s의 의지는 조종당하기엔 너무 강했습니다!</string>
+    <string name="Possess_Possessed">%s는 당신의 명령을 기다리고 있습니다.</string>
+    <string name="Possess_MustTargetChar">정신 지배의 대상으로는 생명체만을 지정할 수 있습니다.</string>
+    <string name="Possess_CantPossessSelf">자신을 목표로 할 수 없습니다.</string>
+
+    <string name="Mob_StaControlledStatus">이 %s는 사악한 존재에게 정신을 지배당하고 있습니다.</string>
+
+    <string name="BlackCat_AiStatus">이 고양이는 고양이가 할 법한 행동을 하고 있습니다.</string>
+    <string name="Shopkeeper_Buy">구매할 아이템을 선택하세요.</string>
+    <string name="Shopkeeper_title">상점</string>
+    <string name="Shopkeeper_text">픽셀 마트 분점에 오신 걸 환영합니다.\n무엇을 도와드릴까요?</string>
+    <string name="Shopkeeper_SellPrompt">팔 물건이 있다.</string>
+    <string name="Shopkeeper_BuyPrompt">어디, 소지품을 한 번 볼까요?</string>
+
+    <string name="WndTradeItem_BuyN">%2$d g를 주고 %1$d를 구매</string>
+    <string name="WndTradeItem_BuyAll">%dg를 주고 전부 구매</string>
+    <string name="WndTradeItem_SellN">%2$d g를 받고 %1$d를 판매</string>
+    <string name="WndBag_BuySubtitle">(당신은 %dg를 소지하고 있습니다.)</string>
+
+    <string name="town_deco_weaponboard_name">무기</string>
+    <string name="town_deco_weaponboard_desc">여러 무기들이 벽에 걸려 있다.</string>
+    <string name="town_deco_shieldboard_name">방패</string>
+    <string name="town_deco_shieldboard_desc">여러 방패들이 벽에 걸려 있다. 아직 판매하지는 않는 듯하다.</string>
+    <string name="town_deco_armoronhanger_name">방어구</string>
+    <string name="town_deco_armoronhanger_desc">여러 방어구들이 벽에 걸려 있다.</string>
     <string name="town_deco_potions_name">물약</string>
+    <string name="town_deco_potions_desc">여러 물약들이 찬장에 진열되어 있다.</string>
+    <string name="town_deco_wardrobe_name">나무 옷장</string>
+    <string name="town_deco_wardrobe_desc">커다란 나무 옷장.</string>
+
     <string name="town_deco_covered_table_name">탁자</string>
     <string name="town_deco_pedestal_name">받침대</string>
     <string name="Item_Info2">무언가</string>
@@ -339,16 +384,6 @@
     <string name="StoneBlood_Buff">혈석</string>
     <string name="Welcome_Ok">알겠습니다!</string>
     <string name="Welcome_Title">환영합니다!</string>
-
-    <string name="Welcome_Text_28_1">
- remix.28.1\n
- - 마을의 대수정\n
- - 많은 gfx 증진과 수정 \n
- - 새 다트와 화살 \n
- - 모든 몬스터들(언데드 제외)이 재생될 것임 \n
- - 이제 힘은 모든 클래스에게 추가적인 데미지를 제공해 줌\n
- -예언가가 이제 고양이를 기름  \n
- - 놀 토마호크가 타겟에게 던져져도 망가지지 않게 됨 \n</string>
 
     <string name="Welcome_Text_28_2">
  remix.28.2\n
@@ -560,6 +595,7 @@
     <string name="WndGame_Ranking">랭킹</string>
     <string name="WndGame_Start">새 게임 시작</string>
     <string name="WndGame_menu">메인 메뉴</string>
+    <string name="WndGame_Exit">Remixed Dungeon 종료</string>
     <string name="WndGame_Return">게임으로 돌아가기</string>
     <string name="WndGame_Save">저장</string>
     <string name="WndGame_Load">불러오기</string>
@@ -1077,6 +1113,7 @@
         <item>강령술사는 마나를 사용해 죽음의 주문을 사용합니다.</item>
         <item>강령술사는 7레벨 스켈레톤 키를 지니고 시작합니다.</item>
         <item>회복의 물약이 처음부터 식별되어 있습니다.</item>
+        <item>회복의 물약이 처음부터 식별되어 있습니다.</item>
     </string-array>
 
 
@@ -1168,7 +1205,7 @@
     <string name="WndDonate_goldDonateText">당신의 도움에 감사드립니다.</string>
     <string name="WndDonate_silverDonateText2">또한 모든 게임 모드에서 광고를 없애주며, 처음부터 사냥꾼을 해금합니다.</string>
     <string name="WndDonate_goldDonateText2">처음부터 엘프도 해금합니다.</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">표준</string>
@@ -3375,4 +3412,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Potion_ItemFliesAway">%s 이/가 손에서 멀리 날아갔습니다.</string>
     <string name="Potion_FoodRefreshed">지금은 %s 을/를 먹을 수 있을꺼 같습니다.</string>
 
-</resources>
+
+    </resources>

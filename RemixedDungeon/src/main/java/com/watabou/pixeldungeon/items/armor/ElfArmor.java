@@ -46,7 +46,7 @@ public class ElfArmor extends ClassArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.ELF) {
+		if (hero.getHeroClass() == HeroClass.ELF) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.ElfArmor_NotElf) );

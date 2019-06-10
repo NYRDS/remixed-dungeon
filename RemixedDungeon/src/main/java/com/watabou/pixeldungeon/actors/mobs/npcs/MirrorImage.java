@@ -21,6 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -32,14 +33,11 @@ import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 
 import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
-
 public class MirrorImage extends Mob {
 
-	// for restoreFromBundle
 	public MirrorImage() {
 		setState(MobAi.getStateByClass(Hunting.class));
-		setEnemy(DUMMY);
+		setEnemy(CharsList.DUMMY);
 
         addImmunity( ToxicGas.class );
         addImmunity( Burning.class );
@@ -76,7 +74,7 @@ public class MirrorImage extends Mob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		int dmg = super.attackProc( enemy, damage );
 
 		destroy();

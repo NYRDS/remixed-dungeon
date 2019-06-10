@@ -226,7 +226,7 @@ public class StartScene extends PixelScene {
         add(btnExit);
 
         for (ClassShield shield : shields) {
-            if (shield.cl == HeroClass.values()[RemixedDungeon.lastClass()]) {
+            if (shield.cl.classIndex() == RemixedDungeon.lastClass()) {
                 updateShield(shield);
                 return;
             }
@@ -319,7 +319,7 @@ public class StartScene extends PixelScene {
             btnLoad.setVisible(false);
 
             btnNewGame.setVisible(true);
-            btnNewGame.secondary("");
+            btnNewGame.secondary(Utils.EMPTY_STRING);
             btnNewGame.setRect(buttonX, buttonY, Camera.main.width
                     - buttonX * 2, BUTTON_HEIGHT);
         }
@@ -328,7 +328,7 @@ public class StartScene extends PixelScene {
 
     private void selectDifficulty() {
 
-        WndOptions difficultyOptions = new WndOptions(Game.getVar(R.string.StartScene_DifficultySelect), "",
+        WndOptions difficultyOptions = new WndOptions(Game.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING,
                 Game.getVar(R.string.StartScene_DifficultyEasy),
                 Game.getVar(R.string.StartScene_DifficultyNormalWithSaves),
                 Game.getVar(R.string.StartScene_DifficultyNormal),
@@ -414,7 +414,7 @@ public class StartScene extends PixelScene {
 
             this.cl = cl;
 
-            avatar.frame(cl.ordinal() * WIDTH, 0, WIDTH, HEIGHT);
+            avatar.frame(cl.classIndex() * WIDTH, 0, WIDTH, HEIGHT);
             avatar.Scale().set(SCALE);
 
             if (Badges.isUnlocked(cl.masteryBadge())) {

@@ -23,17 +23,18 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 
-import java.util.Locale;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.Locale;
 
 public class Utils {
 
     public static final String UNKNOWN = "unknown";
+    public static final String EMPTY_STRING = "";
 
-    @NonNull
+    @NotNull
     private static final Class<?> strings = getR_Field("string");
-    @NonNull
+    @NotNull
     private static final Class<?> stringArrays = getR_Field("array");
 
     static private Class<?> getR_Field(String field) {

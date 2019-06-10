@@ -15,33 +15,35 @@
         "level":10
       },
       {
-        "kind": "ScrollOfMirrorImage",
+        "kind": "Rotberry.Seed",
         "quantity" :10
       },
       {
-        "kind": "SacrificialSword"
+        "kind": "Fadeleaf.Seed",
+        "quantity" :10
       },
       {
-        "kind": "Quiver"
-      },
-      {
-        "kind": "ScrollOfMagicMapping",
+        "kind": "PotionOfInvisibility",
         "quantity": 100
       },
       {
-        "kind": "ScrollOfMirrorImage",
+        "kind": "DewVial"
+      },
+      {
+        "kind": "Ankh",
+        "level": 5
+      },
+      {
+        "kind": "Dewdrop",
         "quantity": 100
       },
       {
-        "kind": "PotionOfLevitation"
-      },
-      {
-        "kind": "CandyOfDeath",
+        "kind": "Firebloom.Seed",
         "quantity": 100
       }
     ],
     "str": 1500,
-    "hp": 20000,
+    "hp": 20,
     "sp" : 100,
     "sl" : 100,
     "magicAffinity": "Common"
@@ -66,8 +68,8 @@
     ],
     "isSpellUser": true,
     "magicAffinity": "Combat",
-    "sp": 10,
-    "maxSp": 10
+    "sp": 1000,
+    "maxSp": 1000
   },
   "MAGE": {
     "items": [
@@ -101,7 +103,11 @@
       {
         "kind": "ScrollOfMagicMapping"
       }
-    ]
+    ],
+    "isSpellUser": true,
+    "magicAffinity": "Rogue",
+    "sp": 10,
+    "maxSp": 10
   },
   "HUNTRESS": {
     "items": [
@@ -130,6 +136,11 @@
         "identified": true
       },
       {
+        "kind": "FrostArrow",
+        "quantity": 20,
+        "identified": true
+      },
+      {
         "kind": "ElvenDagger",
         "identified": true
       }
@@ -139,6 +150,11 @@
         "kind": "CommonArrow"
       }
     ],
+
+    "immunities": [
+      "Roots"
+    ],
+
     "str": 9,
     "hp": 15
   },
@@ -160,8 +176,8 @@
         "kind": "PotionOfHealing"
       }
     ],
-    "sp": 10000,
-    "maxSp": 10,
+    "sp": 100,
+    "maxSp": 100,
     "isSpellUser": true,
     "magicAffinity": "Necromancy"
   },

@@ -3,14 +3,8 @@
           xmlns:tools="http://schemas.android.com/tools"
 >
 
-    <!-- android:xlargeScreens="true" -->
-    <application>
-
-        <!-- This meta-data tag is required to use Google Play Services. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
-
+    <application android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor">
         <activity android:name="com.appodeal.ads.InterstitialActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
@@ -31,23 +25,6 @@
         <activity android:name="com.appodeal.ads.TestActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-        <activity android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <!-- Chartboost -->
-        <activity android:name="com.chartboost.sdk.CBImpressionActivity" android:excludeFromRecents="true"
-            android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
-        <!-- End Chartboost -->
-
-        <!-- Applovin -->
-        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" android:configChanges="orientation|screenSize"/>
-        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" android:configChanges="orientation|screenSize"/>
-        <!-- End Applovin -->
-
-
         <activity android:name="com.appodeal.iab.vast.activity.VastActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
@@ -55,28 +32,26 @@
         <activity android:name="com.appodeal.ads.networks.vpaid.VPAIDActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
-        <!-- Ironsource -->
-        <!--suppress AndroidDomInspection -->
-        <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true" />
-        <!--suppress AndroidDomInspection -->
-        <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" />
-        <!--suppress AndroidDomInspection -->
-        <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" />
-        <!-- End Ironsource -->
-
-        <!-- Inmobi -->
-        <activity android:name="com.inmobi.rendering.InMobiAdActivity" android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
-            android:hardwareAccelerated="true" android:resizeableActivity="false" android:theme="@android:style/Theme.NoTitleBar" tools:ignore="UnusedAttribute"/>
-        <!-- End Inmobi -->
-
-        <!-- MyTarget -->
+        <!-- Chartboost -->
         <activity
-            android:name="com.my.target.common.MyTargetActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-        <!-- End MyTarget -->
+            android:name="com.chartboost.sdk.CBImpressionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <!-- End Chartboost -->
+
+        <!-- Applovin -->
+        <activity
+            android:name="com.applovin.adview.AppLovinInterstitialActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.applovin.adview.AppLovinConfirmationActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!-- End Applovin -->
 
         <!-- Yandex-metrica -->
         <service
@@ -89,15 +64,15 @@
             </intent-filter>
             <meta-data
                 android:name="metrica:api:level"
-                android:value="70" />
+                android:value="76" />
         </service>
         <service
             android:name="com.yandex.metrica.ConfigurationService" android:enabled="true"
-            android:exported="true" android:process=":Metrica" tools:ignore="ExportedService" >
+            android:exported="false" android:process=":Metrica" tools:ignore="ExportedService" >
             <meta-data
-                android:name="metrica:configuration:api:level" android:value="2" />
+                android:name="metrica:configuration:api:level" android:value="3" />
             <intent-filter>
-                <action android:name="com.yandex.metrica.configuration.ACTION_START" />
+                <action android:name="com.yandex.metrica.configuration.ACTION_INIT" />
             </intent-filter>
         </service>
         <service
@@ -116,11 +91,88 @@
         <!-- End Yandex-metrica -->
 
         <!-- Yandex-mobileads -->
-
         <!--suppress AndroidDomInspection -->
         <activity android:name="com.yandex.mobile.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
         <!-- End Yandex-mobileads -->
+
+        <!-- Unity_ads -->
+        <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:hardwareAccelerated="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:hardwareAccelerated="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <!-- End Unity_ads -->
+
+        <!-- Tapjoy -->
+        <activity
+            android:name="com.tapjoy.TJAdUnitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.tapjoy.mraid.view.ActionHandler"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.tapjoy.mraid.view.Browser"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.tapjoy.TJContentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- End Tapjoy -->
+
+        <!-- Ironsource -->
+        <!--suppress AndroidDomInspection -->
+        <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <!--suppress AndroidDomInspection -->
+        <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" />
+        <!--suppress AndroidDomInspection -->
+        <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" />
+        <!-- End Ironsource -->
+
+        <!-- Adcolony -->
+        <activity
+            android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <!-- End Adcolony -->
+
+        <!-- Inmobi -->
+        <activity
+            android:name="com.inmobi.rendering.InMobiAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:resizeableActivity="false"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:ignore="UnusedAttribute" />
+        <!-- End Inmobi -->
+
+        <!-- MyTarget -->
+        <activity
+            android:name="com.my.target.common.MyTargetActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <!-- End MyTarget -->
+
     </application>
 
 </manifest>

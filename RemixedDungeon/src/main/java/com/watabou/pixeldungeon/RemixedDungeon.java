@@ -182,7 +182,7 @@ public class RemixedDungeon extends Game {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-		String extras = "";
+		String extras = Utils.EMPTY_STRING;
 		if(data!=null) {
 			extras = Util.bundle2string(data.getExtras());
 		}
@@ -403,12 +403,9 @@ public class RemixedDungeon extends Game {
 	public static void immerse(boolean value) {
 		Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
 
-		instance().runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				updateImmersiveMode();
-				setNeedSceneRestart(true);
-			}
+		instance().runOnUiThread(() -> {
+			updateImmersiveMode();
+			setNeedSceneRestart(true);
 		});
 	}
 
@@ -435,13 +432,9 @@ public class RemixedDungeon extends Game {
 		}
 		
 		if (donated() == 0 && level != 0) {
-			pushUiTask(new Runnable() {
-				
-				@Override
-				public void run() {
-					Sample.INSTANCE.play(Assets.SND_GOLD);
-					Badges.validateSupporter();
-				}
+			pushUiTask(() -> {
+				Sample.INSTANCE.play(Assets.SND_GOLD);
+				Badges.validateSupporter();
 			});
 		}
 		donated(level);

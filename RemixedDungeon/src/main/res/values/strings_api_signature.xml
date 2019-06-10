@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="testDevice"></string>
-    <string name="saveLoadAdUnitId">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="easyModeAdUnitId">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="easyModeSmallScreenAdUnitId">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="cinemaRewardAdUnitId">ca-app-pub-3940256099942544/5224354917</string>
-    <string name="appodealRewardAdUnitId"></string>
-    <string name="iapKey"></string>
-    <string name="ownSignature"></string>
-    <string name="app_id"></string>
-    <string name="admob_publisher_id"></string>
+    <string name="testDevice" translatable="false"></string>
+    <string name="saveLoadAdUnitId" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="easyModeAdUnitId" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="easyModeSmallScreenAdUnitId" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="cinemaRewardAdUnitId" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="appodealRewardAdUnitId" translatable="false"></string>
+    <string name="iapKey" translatable="false"></string>
+    <string name="ownSignature" translatable="false"></string>
+    <string name="app_id" translatable="false"></string>
+    <string name="admob_publisher_id" translatable="false"></string>
 
-    <string name="fabric_api_key">0</string>
-    <string name="pollfish_key">0</string>
-    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="fabric_api_key" translatable="false">0</string>
+    <string name="pollfish_key" translatable="false">0</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
 
     <!--
     Google Play game services IDs.
     Save this file as res/values/games-ids.xml in your project.
     -->
-    <string name="achievement_boss_slain_1"></string>
-    <string name="achievement_boss_slain_2"></string>
-    <string name="achievement_boss_slain_3"></string>
-    <string name="achievement_boss_slain_4"></string>
-    <string name="achievement_lich_slain"></string>
-    <string name="achievement_ice_guardian_slain"></string>
-    <string name="achievement_spider_queen_slain"></string>
-    <string name="achievement_shadow_lord_slain"></string>
-    <string name="achievement_yog_slain"></string>
-    <string name="achievement_gnoll_unlocked"></string>
+    <string name="achievement_boss_slain_1" translatable="false"></string>
+    <string name="achievement_boss_slain_2" translatable="false"></string>
+    <string name="achievement_boss_slain_3" translatable="false"></string>
+    <string name="achievement_boss_slain_4" translatable="false"></string>
+    <string name="achievement_lich_slain" translatable="false"></string>
+    <string name="achievement_ice_guardian_slain" translatable="false"></string>
+    <string name="achievement_spider_queen_slain" translatable="false"></string>
+    <string name="achievement_shadow_lord_slain" translatable="false"></string>
+    <string name="achievement_yog_slain" translatable="false"></string>
+    <string name="achievement_gnoll_unlocked" translatable="false"></string>
 
 
-    <string name="leaderboard_easy_mode"></string>
-    <string name="leaderboard_normal_with_saves"></string>
-    <string name="leaderboard_normal"></string>
-    <string name="leaderboard_expert"></string>
+    <string name="leaderboard_easy_mode" translatable="false"></string>
+    <string name="leaderboard_normal_with_saves" translatable="false"></string>
+    <string name="leaderboard_normal" translatable="false"></string>
+    <string name="leaderboard_expert" translatable="false"></string>
 
 </resources>

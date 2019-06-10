@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 public class CharAction {
 	
@@ -49,9 +48,9 @@ public class CharAction {
 	}
 	
 	public static class Interact extends CharAction {
-		public Mob npc;
-		public Interact( Mob npc ) {
-			this.npc = npc;
+		public Char chr;
+		public Interact( Char chr) {
+			this.chr = chr;
 		}
 	}
 	

@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Monk extends Mob {
 
@@ -75,14 +75,14 @@ public class Monk extends Mob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		Imp.Quest.process( this );
 		
 		super.die( cause );
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		if (Random.Int( 6 ) == 0 && enemy == Dungeon.hero) {
 			
@@ -91,7 +91,7 @@ public class Monk extends Mob {
 			
 			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
 				hero.belongings.weapon = null;
-				hero.updateLook();
+				hero.updateSprite();
 				QuickSlot.refresh();
 				Dungeon.level.drop( weapon, hero.getPos() ).sprite.drop();
 				GLog.w( Game.getVar(R.string.Monk_Disarm), getName(), weapon.name() );

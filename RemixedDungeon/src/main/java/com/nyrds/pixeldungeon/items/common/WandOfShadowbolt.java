@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class WandOfShadowbolt extends Wand {
 

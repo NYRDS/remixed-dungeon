@@ -11,7 +11,7 @@ import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -39,7 +39,7 @@ public class ServiceManNPC extends ImmortalNPC {
     }
 
     @Override
-    public boolean interact(final Hero hero) {
+    public boolean interact(final Char hero) {
 
         if (EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
             Game.scene().add(new WndEuConsent() {

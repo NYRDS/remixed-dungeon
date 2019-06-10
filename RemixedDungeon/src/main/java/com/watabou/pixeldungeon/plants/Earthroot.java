@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -33,7 +35,6 @@ import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 
 public class Earthroot extends Plant {
 
@@ -41,9 +42,12 @@ public class Earthroot extends Plant {
 		imageIndex = 5;
 	}
 
-	public void effect(int pos, Char ch) {
-		if (ch != null) {
-			Buff.affect(ch, Armor.class).level = ch.ht();
+	public void effect(int pos, Presser ch) {
+		if (ch instanceof Char) {
+			Char chr = (Char)ch;
+
+			Armor buff = Buff.affect(chr, Armor.class);
+			buff.level = chr.ht();
 		}
 
 		if (Dungeon.visible[pos]) {
@@ -83,8 +87,10 @@ public class Earthroot extends Plant {
 	public static class Armor extends Buff {
 		
 		private static final float STEP = 1f;
-		
+
+		@Packable
 		private int pos;
+		@Packable
 		private int level;
 		
 		@Override
@@ -129,25 +135,8 @@ public class Earthroot extends Plant {
 		}
 		
 		@Override
-		public String toString() {
+		public String name() {
 			return Game.getVar(R.string.Earthroot_Buff);
-		}
-		
-		private static final String POS		= "pos";
-		private static final String LEVEL	= "level";
-		
-		@Override
-		public void storeInBundle( Bundle bundle ) {
-			super.storeInBundle( bundle );
-			bundle.put( POS, pos );
-			bundle.put( LEVEL, level );
-		}
-		
-		@Override
-		public void restoreFromBundle( Bundle bundle ) {
-			super.restoreFromBundle( bundle );
-			pos = bundle.getInt( POS );
-			level = bundle.getInt( LEVEL );
 		}
 	}
 }

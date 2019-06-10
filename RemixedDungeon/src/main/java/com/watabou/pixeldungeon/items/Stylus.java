@@ -57,7 +57,18 @@ public class Stylus extends Item {
 		if (action.equals(AC_INSCRIBE)) {
 
 			setUser(hero);
-			GameScene.selectItem( itemSelector, WndBag.Mode.INSCRIBABLE, Game.getVar(R.string.Stylus_SelectArmor) );
+			GameScene.selectItem(item -> {
+				if (item != null) {
+					if(item instanceof Armor){
+						inscribeArmor ( (Armor)item );
+					}
+					if(item instanceof BlankScroll){
+						inscribeScroll( (BlankScroll)item );
+					}
+				}
+			},
+			WndBag.Mode.INSCRIBABLE,
+			Game.getVar(R.string.Stylus_SelectArmor) );
 			
 		} else {
 			
@@ -117,15 +128,5 @@ public class Stylus extends Item {
 	public int price() {
 		return 50 * quantity();
 	}
-	
-	private final WndBag.Listener itemSelector = item -> {
-		if (item != null) {
-			if(item instanceof Armor){
-				inscribeArmor ( (Armor)item );
-			}
-			if(item instanceof BlankScroll){
-				inscribeScroll( (BlankScroll)item );
-			}
-		}
-	};
+
 }

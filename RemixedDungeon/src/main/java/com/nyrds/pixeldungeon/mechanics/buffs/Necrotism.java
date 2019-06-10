@@ -38,7 +38,7 @@ public class Necrotism extends Buff implements Hero.Doom {
 	}
 
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Necrotism_Info);
 	}
 

@@ -69,7 +69,7 @@ public class Rat extends Mob {
 }
 
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		ScarecrowNPC.Quest.process( getPos() );
 		Ghost.Quest.process( getPos() );
 		PlagueDoctorNPC.Quest.process( getPos() );

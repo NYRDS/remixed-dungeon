@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Light extends FlavourBuff {
@@ -31,7 +32,7 @@ public class Light extends FlavourBuff {
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
 			// When a level is loading, do nothing
-			if (Dungeon.level != null) {
+			if (!Dungeon.isLoading()) {
 				target.viewDistance = Dungeon.level.getMaxViewDistance();
 				Dungeon.observe();
 			}
@@ -54,7 +55,12 @@ public class Light extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Light_Info);
+	}
+
+	@Override
+	public CharSprite.State charSpriteStatus() {
+		return CharSprite.State.ILLUMINATED;
 	}
 }

@@ -11,13 +11,12 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.annotation.Nullable;
 
 /**
  * Created by mike on 01.07.2016.

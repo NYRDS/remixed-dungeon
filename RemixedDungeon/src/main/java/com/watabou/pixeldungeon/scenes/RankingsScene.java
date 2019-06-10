@@ -157,7 +157,7 @@ public class RankingsScene extends PixelScene {
             happy.hardlight(HAPPY_COLOR);
             add(happy);
 
-            Text won = PixelScene.createText("/" + Integer.toString(Rankings.INSTANCE.wonNumber), GuiProperties.titleFontSize());
+            Text won = PixelScene.createText("/" + Rankings.INSTANCE.wonNumber, GuiProperties.titleFontSize());
             won.hardlight(Window.TITLE_COLOR);
             add(won);
 
@@ -277,7 +277,7 @@ public class RankingsScene extends PixelScene {
 
             super.createChildren();
 
-            shield = new ItemSprite(ItemSpriteSheet.TOMB, null);
+            shield = new ItemSprite(Assets.ITEMS, ItemSpriteSheet.TOMB, null);
             add(shield);
 
             position = new BitmapText(PixelScene.font1x);

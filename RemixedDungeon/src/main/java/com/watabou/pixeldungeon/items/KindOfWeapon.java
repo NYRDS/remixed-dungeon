@@ -74,7 +74,7 @@ public class KindOfWeapon extends EquipableItem {
 			
 			QuickSlot.refresh();
 
-			hero.updateLook();
+			hero.updateSprite();
 
 			cursedKnown = true;
 			if (cursed) {
@@ -93,11 +93,11 @@ public class KindOfWeapon extends EquipableItem {
 	}
 	
 	@Override
-	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
+	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
 		if (super.doUnequip( hero, collect, single )) {
 			
-			hero.belongings.weapon = null;
-			hero.updateLook();
+			hero.getBelongings().weapon = null;
+			hero.updateSprite();
 			return true;
 			
 		} else {

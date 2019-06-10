@@ -35,13 +35,12 @@ import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndStory;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-
-import androidx.annotation.NonNull;
 
 public class DungeonGenerator {
 	private static final String DEAD_END_LEVEL = "DeadEndLevel";
@@ -57,7 +56,7 @@ public class DungeonGenerator {
 	static private JSONObject mLevels;
 	static private JSONObject mGraph;
 
-	@NonNull
+	@NotNull
 	private static String mCurrentLevelId   = Utils.UNKNOWN;
 	private static String mCurrentLevelKind = Utils.UNKNOWN;
 
@@ -167,7 +166,7 @@ public class DungeonGenerator {
 
 			if (index >= nextLevelSet.length()) {
 				index = 0;
-				EventCollector.logException("wrong next level index");
+				EventCollector.logException("wrong next level index on: "+current.levelId);
 			}
 
 			mCurrentLevelId = nextLevelSet.optString(index,"0");
@@ -189,8 +188,6 @@ public class DungeonGenerator {
 					}
 				}
 			}
-
-
 
 			mCurrentLevelDepth = nextLevelDesc.optInt("depth",0);
 			mCurrentLevelKind  = getLevelKind(next.levelId);
@@ -345,7 +342,7 @@ public class DungeonGenerator {
 		return "1";
 	}
 
-	@NonNull
+	@NotNull
 	public static String getLevelKind(String id) {
 		return getLevelProperty(id,"kind",DEAD_END_LEVEL);
 	}
@@ -354,12 +351,12 @@ public class DungeonGenerator {
 		return getLevelProperty(id,"depth",0);
 	}
 
-	@NonNull
+	@NotNull
 	public static String getCurrentLevelKind() {
 		return mCurrentLevelKind;
 	}
 
-	@NonNull
+	@NotNull
 	public static String getCurrentLevelId() {
 		return mCurrentLevelId;
 	}

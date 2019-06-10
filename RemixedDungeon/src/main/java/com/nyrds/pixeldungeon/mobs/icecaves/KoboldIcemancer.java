@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class KoboldIcemancer extends Mob implements IZapper {
 
@@ -54,7 +54,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		if(zapHit(enemy)) {
 
 			if (enemy == Dungeon.hero && Random.Int(2) == 0) {

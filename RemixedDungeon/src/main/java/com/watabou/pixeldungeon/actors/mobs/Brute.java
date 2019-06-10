@@ -29,6 +29,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Brute extends Mob {
 
 	public Brute() {
@@ -71,7 +73,7 @@ public class Brute extends Mob {
 	}
 	
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		super.damage( dmg, src );
 		
 		if (isAlive() && !enraged && hp() < ht() / 4) {

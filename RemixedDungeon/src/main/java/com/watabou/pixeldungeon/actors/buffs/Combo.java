@@ -34,7 +34,7 @@ public class Combo extends Buff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Combo_Info);
 	}
 	

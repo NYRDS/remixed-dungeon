@@ -8,7 +8,7 @@ local buff = {}
 
 buff.__index = buff
 
-function buff.attachTo(self, buff)
+function buff.attachTo(self, buff, target)
     return true
 end
 
@@ -17,18 +17,19 @@ function buff.detach(self, buff)
 end
 
 function buff.act(self, buff)
+    buff:detach()
     return true
 end
 
 function buff.defaultDesc()
     return {
-        image         = 0,
+        icon          = 0,
         name          = "custom buff",
         info          = "unconfigured custom buff",
     }
 end
 
-function buff.desc(self, buff)
+function buff.desc()
     return buff.defaultDesc()
 end
 

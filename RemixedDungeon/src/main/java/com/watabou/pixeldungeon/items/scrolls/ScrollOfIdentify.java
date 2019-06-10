@@ -27,6 +27,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfIdentify extends InventoryScroll {
 
 	{
@@ -34,7 +36,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		mode = WndBag.Mode.UNIDENTIFED;
 	}
 
-	static public void identify(Char ch, Item item) {
+	static public void identify(@NotNull Char ch, @NotNull Item item) {
 		ch.getSprite().getParent().add( new Identification( ch.getSprite().center().offset( 0, -16 ) ) );
 
 		item.identify();

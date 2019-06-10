@@ -25,13 +25,13 @@ import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
-import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -47,7 +47,6 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -56,7 +55,6 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -65,13 +63,11 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.PetOwner;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
@@ -81,7 +77,6 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
@@ -95,10 +90,8 @@ import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
-import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
-import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
@@ -132,17 +125,15 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-public class Hero extends Char implements PetOwner {
+public class Hero extends Char {
 	private static final String TXT_EXP = "%+dEXP";
 
 	public static final int STARTING_STR = 10;
@@ -153,8 +144,8 @@ public class Hero extends Char implements PetOwner {
 	@Nullable
 	static public Runnable doOnNextAction;
 
-	public HeroClass heroClass = HeroClass.ROGUE;
-	public HeroSubClass subClass = HeroSubClass.NONE;
+	private HeroClass heroClass = HeroClass.ROGUE;
+	private HeroSubClass subClass = HeroSubClass.NONE;
 
 	public boolean spellUser;
 
@@ -165,10 +156,12 @@ public class Hero extends Char implements PetOwner {
 	private int defenseSkill = 5;
 
 	private boolean    ready      = false;
-	public CharAction lastAction = null;
+	public CharAction  lastAction = null;
 
 	private Char enemy;
-	private Char controlTarget = this;
+
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	private int controlTargetId;
 
 	public Armor.Glyph killerGlyph = null;
 
@@ -189,24 +182,11 @@ public class Hero extends Char implements PetOwner {
 	private int sp = Scrambler.scramble(0);
 	private int maxSp = Scrambler.scramble(0);
 
+	@Packable(defaultValue = "unknown")
 	public String levelId;
 
+	@Packable
 	public Position portalLevelPos;
-
-	@NonNull
-	private ArrayList<Mob> visibleEnemies = new ArrayList<>();
-
-	@NonNull
-	private Collection<Integer> pets = new ArrayList<>();
-
-	@Override
-	public void removePet(Mob mob) {
-		pets.remove(mob.getId());
-	}
-
-	public void addPet(@NonNull Mob pet) {
-		pets.add(pet.getId());
-	}
 
 	private int difficulty;
 
@@ -219,6 +199,9 @@ public class Hero extends Char implements PetOwner {
 
 		STR(STARTING_STR);
 		awareness = 0.1f;
+
+		controlTargetId = getId();
+
 		belongings = new Belongings(this);
 	}
 
@@ -232,15 +215,6 @@ public class Hero extends Char implements PetOwner {
 			hp(ht(30));
 		}
 		live();
-	}
-
-	@Override
-	protected void setupCharData() {
-		super.setupCharData();
-	}
-
-	@Override
-	protected void fillClassParams() {
 	}
 
 	public int effectiveSTR() {
@@ -260,37 +234,11 @@ public class Hero extends Char implements PetOwner {
 	private static final String STRENGTH = "STR";
 	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
-	private static final String LEVEL_ID = "levelId";
 	private static final String DIFFICULTY = "difficulty";
-	private static final String PETS = "pets";
 	private static final String SP = "sp";
 	private static final String MAX_SP = "maxsp";
-	private static final String PORTAL_LEVEL_POS = "portalLevelPos";
 	private static final String IS_SPELL_USER = "isspelluser";
 	private static final String MAGIC_LEVEL = "magicLvl";
-
-	@Deprecated
-	private void refreshPets() {
-		ArrayList<Integer> alivePets = new ArrayList<>();
-		for (Integer petId : pets) {
-			Mob pet = (Mob)CharsList.getById(petId);
-
-			if (pet!=null && pet.isAlive() && pet.fraction() == Fraction.HEROES) {
-				alivePets.add(pet.getId());
-			}
-		}
-		pets = alivePets;
-	}
-
-	@NonNull
-	public Collection<Integer> getPets() {
-		refreshPets();
-		return pets;
-	}
-
-	public void releasePets() {
-		pets = new ArrayList<>();
-	}
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -303,17 +251,14 @@ public class Hero extends Char implements PetOwner {
 
 		bundle.put(LEVEL, lvl());
 		bundle.put(EXPERIENCE, getExp());
-		bundle.put(LEVEL_ID, levelId);
 		bundle.put(DIFFICULTY, getDifficulty());
 
 
-		bundle.put(PETS, getPets().toArray(new Integer [0]));
 		bundle.put(SP, getSkillPoints());
 		bundle.put(MAX_SP, getSkillPointsMax());
 
 		belongings.storeInBundle(bundle);
 
-		bundle.put(PORTAL_LEVEL_POS, portalLevelPos);
 		bundle.put(IS_SPELL_USER, spellUser);
 		bundle.put(MAGIC_LEVEL, skillLevel());
 	}
@@ -321,6 +266,10 @@ public class Hero extends Char implements PetOwner {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
+
+		if(controlTargetId==EntityIdSource.INVALID_ID) {
+			controlTargetId = getId();
+		}
 
 		heroClass = HeroClass.restoreFromBundle(bundle);
 		subClass = HeroSubClass.restoreFromBundle(bundle);
@@ -330,19 +279,10 @@ public class Hero extends Char implements PetOwner {
 
 		lvl(bundle.getInt(LEVEL));
 		setExp(bundle.getInt(EXPERIENCE));
-		levelId = bundle.optString(LEVEL_ID, "unknown");
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
-		pets.clear();
-
-		int []petsFromSave = bundle.getIntArray(PETS);
-
-		if(petsFromSave.length > 0) {
-			for(int petId :petsFromSave) {
-				pets.add(petId);
-			}
-		} else { // handle pre 28.6 saves
-			ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection(PETS, Mob.class));
+		{ // handle pre 28.6 saves
+			ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection("pets", Mob.class));
 
 			for (Mob pet : loadedPets) {
 				Mob.makePet(pet, getId());
@@ -355,8 +295,6 @@ public class Hero extends Char implements PetOwner {
 		belongings.restoreFromBundle(bundle);
 
 		gender = heroClass.getGender();
-
-		portalLevelPos = (Position) bundle.get(PORTAL_LEVEL_POS);
 
 		spellUser = bundle.optBoolean(IS_SPELL_USER, false);
 
@@ -399,7 +337,7 @@ public class Hero extends Char implements PetOwner {
 		int bonus = buffLevel(RingOfAccuracy.Accuracy.class)
 				  + buffLevel(Blessed.class);
 
-		float accuracy = (bonus == 0) ? 1 : (float) Math.pow(1.4, bonus);
+		float accuracy = (float) Math.pow(1.4, bonus);
 
 		if (rangedWeapon != null && level().distance(getPos(), target.getPos()) == 1) {
 			accuracy *= 0.5f;
@@ -421,18 +359,6 @@ public class Hero extends Char implements PetOwner {
 	public int defenseSkill(Char enemy) {
 
 		int bonus = buffLevel(RingOfEvasion.Evasion.class) + buffLevel(Blessed.class);
-
-		//WTF ?? Why it is here?
-		if (hasBuff(RingOfFrost.FrostAura.class) && enemy.distance(this) < 2) {
-			int powerLevel = belongings.getItem(RingOfFrost.class).level();
-			if (enemy.isAlive()) {
-				Buff.affect(enemy, Slow.class, Slow.duration(enemy) / 5 + powerLevel);
-				if (Random.Int(100) < 10 + powerLevel) {
-					Buff.affect(enemy, Frost.class, Frost.duration(enemy) / 5 + powerLevel);
-				}
-				enemy.damage(powerLevel / 2, buff(Frost.class));
-			}
-		}
 
 		float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
 		if (paralysed) {
@@ -464,10 +390,7 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public int dr() {
-		int dr = belongings.armor != null ? Math.max(belongings.armor.DR, 0) : 0;
-		dr += buffLevel(Barkskin.class);
-
-		return dr;
+		return belongings.armor != null ? Math.max(belongings.armor.DR, 0) : 0;
 	}
 
 	@Override
@@ -533,15 +456,15 @@ public class Hero extends Char implements PetOwner {
 		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1, -hasteLevel)));
 	}
 
+	@Override
 	public void spendAndNext(float time) {
 		busy();
-		spend(time);
-		next();
+		super.spendAndNext(time);
 	}
 
 	@Override
 	public boolean act() {
-		if(controlTarget==this) {
+		if(controlTargetId == getId()) {
 			super.act();
 		}
 
@@ -551,17 +474,17 @@ public class Hero extends Char implements PetOwner {
 			return false;
 		}
 
-		checkVisibleMobs();
+		checkVisibleEnemies();
 		AttackIndicator.updateState();
 
-		if(controlTarget!=this) {
+		if(controlTargetId != getId()) {
 			curAction = null;
 		}
 
 		if (curAction == null) {
 
 			if (restoreHealth) {
-				if (isStarving() || hp() >= ht() || Dungeon.level.isSafe()) {
+				if (isStarving() || hp() >= ht() || level().isSafe()) {
 					restoreHealth = false;
 				} else {
 					spend(TIME_TO_REST);
@@ -570,7 +493,7 @@ public class Hero extends Char implements PetOwner {
 				}
 			}
 
-			if (RemixedDungeon.realtime() || (controlTarget!= this && controlTarget.curAction!=null) ) {
+			if (Dungeon.realtime() || (controlTargetId != getId() && getControlTarget().curAction!=null) ) {
 				if (!ready) {
 					readyAndIdle();
 				}
@@ -586,8 +509,9 @@ public class Hero extends Char implements PetOwner {
 			SystemTime.updateLastActionTime();
 
 			restoreHealth = false;
-
-			ready = false;
+			if(!Dungeon.realtime()) {
+				busy();
+			}
 
 			if (curAction instanceof CharAction.Move) {
 
@@ -645,7 +569,7 @@ public class Hero extends Char implements PetOwner {
 		GameScene.ready();
 	}
 
-	private void readyAndIdle() {
+	public void readyAndIdle() {
 		ready();
 		getSprite().idle();
 	}
@@ -662,8 +586,8 @@ public class Hero extends Char implements PetOwner {
 		curAction = lastAction;
 		lastAction = null;
 
-		controlTarget.curAction = curAction;
-		controlTarget.act();
+		getControlTarget().curAction = curAction;
+		getControlTarget().act();
 	}
 
 	private boolean actMove(CharAction.Move action) {
@@ -677,20 +601,20 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actInteract(CharAction.Interact action) {
 
-		Mob npc = action.npc;
+		Char chr = action.chr;
 
-		if (Dungeon.level.adjacent(getPos(), npc.getPos())) {
+		if (Dungeon.level.adjacent(getPos(), chr.getPos())) {
 
 			readyAndIdle();
-			getSprite().turnTo(getPos(), npc.getPos());
-			if (!npc.interact(this)) {
-				actAttack(new CharAction.Attack(npc));
+			getSprite().turnTo(getPos(), chr.getPos());
+			if (!chr.interact(this)) {
+				actAttack(new CharAction.Attack(chr));
 			}
 			return false;
 
 		} else {
 
-			if (Dungeon.level.fieldOfView[npc.getPos()] && getCloser(npc.getPos())) {
+			if (Dungeon.level.fieldOfView[chr.getPos()] && getCloser(chr.getPos())) {
 				return true;
 			} else {
 				readyAndIdle();
@@ -880,8 +804,6 @@ public class Hero extends Char implements PetOwner {
 
 	private boolean actDescend(CharAction.Descend action) {
 
-		refreshPets();
-
 		int stairs = action.dst;
 		if (getPos() == stairs && Dungeon.level.isExit(getPos())) {
 
@@ -889,9 +811,8 @@ public class Hero extends Char implements PetOwner {
 
 			clearActions();
 
-			Hunger hunger = buff(Hunger.class);
-			if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
-				hunger.satisfy(-Hunger.STARVING / 10);
+			if (!Dungeon.level.isSafe()) {
+				hunger().satisfy(-Hunger.STARVING / 10);
 			}
 
 			InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
@@ -909,7 +830,6 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	private boolean actAscend(CharAction.Ascend action) {
-		refreshPets();
 
 		int stairs = action.dst;
 		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
@@ -933,9 +853,8 @@ public class Hero extends Char implements PetOwner {
 
 				clearActions();
 
-				Hunger hunger = buff(Hunger.class);
-				if (hunger != null && !hunger.isStarving() && !Dungeon.level.isSafe()) {
-					hunger.satisfy(-Hunger.STARVING / 10);
+				if (!Dungeon.level.isSafe()) {
+					hunger().satisfy(-Hunger.STARVING / 10);
 				}
 
 				InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
@@ -1021,7 +940,7 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage) {
+	public int attackProc(@NotNull Char enemy, int damage) {
 		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
 		if (wep != null) {
 
@@ -1104,8 +1023,8 @@ public class Hero extends Char implements PetOwner {
 		}
 	}
 
-	public void checkVisibleMobs() {
-		ArrayList<Mob> visible = new ArrayList<>();
+	public void checkVisibleEnemies() {
+		ArrayList<Char> visible = new ArrayList<>();
 
 		boolean newMob = false;
 
@@ -1126,11 +1045,11 @@ public class Hero extends Char implements PetOwner {
 		visibleEnemies = visible;
 	}
 
-	public Mob getNearestEnemy() {
+	public Char getNearestEnemy() {
 
-		Mob nearest = null;
+		Char nearest = null;
 		int dist = Integer.MAX_VALUE;
-		for (Mob mob : visibleEnemies) {
+		for (Char mob : visibleEnemies) {
 			int mobDist = level().distance(getPos(), mob.getPos());
 			if (mobDist < dist) {
 				dist = mobDist;
@@ -1138,14 +1057,6 @@ public class Hero extends Char implements PetOwner {
 			}
 		}
 		return nearest;
-	}
-
-	public int visibleEnemies() {
-		return visibleEnemies.size();
-	}
-
-	public Mob visibleEnemy(int index) {
-		return visibleEnemies.get(index % visibleEnemies.size());
 	}
 
 	protected boolean getCloser(final int target) {
@@ -1280,18 +1191,16 @@ public class Hero extends Char implements PetOwner {
 		Char ch;
 		Heap heap;
 
-		level.updateFieldOfView(controlTarget);
+		level.updateFieldOfView(getControlTarget());
 
 		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
 			curAction = new CharAction.Cook(cell);
 
-		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) instanceof Mob) {
+		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null && ch != getControlTarget()) {
 
-			Mob mob = (Mob) ch;
-
-			if (mob.friendly(controlTarget)) {
-				curAction = new CharAction.Interact(mob);
+			if (ch.friendly(getControlTarget())) {
+				curAction = new CharAction.Interact(ch);
 			} else {
 				curAction = new CharAction.Attack(ch);
 			}
@@ -1329,7 +1238,7 @@ public class Hero extends Char implements PetOwner {
 
 		}
 
-		controlTarget.curAction = curAction;
+		getControlTarget().curAction = curAction;
 		return act();
 	}
 
@@ -1344,8 +1253,11 @@ public class Hero extends Char implements PetOwner {
 			this.setExp(this.getExp() - maxExp());
 			lvl(lvl() + 1);
 
+			EventCollector.levelUp(heroClass.name()+"_"+subClass.name(),lvl());
+
 			ht(ht() + 5);
-			hp(hp() + 5);
+			heal(5, this);
+
 			attackSkill++;
 			defenseSkill++;
 
@@ -1378,7 +1290,7 @@ public class Hero extends Char implements PetOwner {
 				getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
 			}
 
-			buff(Hunger.class).satisfy(10);
+			hunger().satisfy(10);
 		}
 	}
 
@@ -1392,15 +1304,6 @@ public class Hero extends Char implements PetOwner {
 
 	void updateAwareness() {
 		awareness = (float) (1 - Math.pow((heroClass == HeroClass.ROGUE ? 0.85 : 0.90), (1 + Math.min(lvl(), 9)) * 0.5));
-	}
-
-	public boolean isStarving() {
-		return buff(Hunger.class).isStarving();
-	}
-
-	@Override
-	public void updateSpriteState() {
-		super.updateSpriteState();
 	}
 
 	@Override
@@ -1446,15 +1349,10 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	@Override
-	public void remove(Buff buff) {
+	public void remove(@Nullable Buff buff) {
 		super.remove(buff);
 
 		BuffIndicator.refreshHero();
-	}
-
-	@Override
-	public int stealth() {
-		return super.stealth() + buffLevel(RingOfShadows.Shadows.class);
 	}
 
 	@Override
@@ -1739,14 +1637,6 @@ public class Hero extends Char implements PetOwner {
 		return smthFound;
 	}
 
-	public void spendGold(int spend) {
-
-		Gold gold = belongings.getItem(Gold.class);
-
-		gold.quantity(gold.quantity()-spend);
-    }
-
-
 	public void resurrect(int resetLevel) {
 		belongings.resurrect(resetLevel);
 
@@ -1758,15 +1648,17 @@ public class Hero extends Char implements PetOwner {
 
 	@Override
 	public Set<String> resistances() {
-		RingOfElements.Resistance r = buff(RingOfElements.Resistance.class);
-		return r == null ? super.resistances() : r.resistances();
+		Set <String> resistances = super.resistances();
+		resistances.addAll(heroClass.resistances());
+		resistances.addAll(subClass.resistances());
+		return resistances;
 	}
 
 	@Override
 	public Set<String> immunities() {
-		HashSet <String> immunities = new HashSet<>();
-		immunities.addAll(heroClass.getImmunities());
-		immunities.addAll(subClass.getImmunities());
+		Set <String> immunities = super.immunities();
+		immunities.addAll(heroClass.immunities());
+		immunities.addAll(subClass.immunities());
 		return immunities;
 	}
 
@@ -1794,7 +1686,7 @@ public class Hero extends Char implements PetOwner {
 		this.lvl = Scrambler.scramble(lvl);
 	}
 
-	public static final String getHeroYouNowHave() {
+	public static String getHeroYouNowHave() {
 		return Game.getVar(R.string.Hero_YouNowHave);
 	}
 
@@ -1836,20 +1728,14 @@ public class Hero extends Char implements PetOwner {
 	public void eat(Item food, float energy, String message) {
 		food.detach( belongings.backpack );
 
-		Hunger hunger = buff( Hunger.class );
-		if(hunger != null) {
-            hunger.satisfy(energy);
-        } else {
-			EventCollector.logException("no hunger " + className());
-        }
+		hunger().satisfy(energy);
 
 		GLog.i( message );
 
 		switch (heroClass) {
         case WARRIOR:
             if (hp() < ht()) {
-                hp(Math.min( hp() + 5, ht() ));
-                getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+            	heal(5, food);
             }
             break;
         case MAGE:
@@ -1872,25 +1758,57 @@ public class Hero extends Char implements PetOwner {
 	}
 
 	public void setControlTarget(Char controlTarget) {
-		if(this.controlTarget instanceof Mob) {
-			Mob controlledMob = (Mob) this.controlTarget;
-			Mob.releasePet(controlledMob);
+		if(getControlTarget() instanceof Mob) {
+			Mob controlledMob = (Mob) getControlTarget();
+			controlledMob.releasePet();
 			controlledMob.setState(MobAi.getStateByClass(Sleeping.class));
 		}
 		Camera.main.focusOn(controlTarget.getSprite());
-		this.controlTarget = controlTarget;
+		this.controlTargetId = controlTarget.getId();
 
 	}
 
 	public Char getControlTarget() {
+
+		Char controlTarget = CharsList.getById(controlTargetId);
+		if(controlTarget.getId() == EntityIdSource.INVALID_ID) {
+			EventCollector.logException("invalid control target");
+			setControlTarget(this);
+			return this;
+		}
+
 		return controlTarget;
 	}
 
-	public interface Doom extends NamedEntityKind{
+	public float getAwareness() {
+		return awareness;
+	}
+
+	@Override
+    public HeroClass getHeroClass() {
+        return heroClass;
+    }
+
+    public void setHeroClass(HeroClass heroClass) {
+        this.heroClass = heroClass;
+    }
+
+    @Override
+    public HeroSubClass getSubClass() {
+        return subClass;
+    }
+
+    public void setSubClass(HeroSubClass subClass) {
+        this.subClass = subClass;
+    }
+
+    public interface Doom extends NamedEntityKind{
 		void onDeath();
 	}
 
-	public void updateLook() {
+	@Override
+	public void updateSprite() {
+		super.updateSprite();
 		getHeroSprite().heroUpdated(this);
 		readyAndIdle();
 	}
@@ -1991,18 +1909,17 @@ public class Hero extends Char implements PetOwner {
 		return super.friendly(chr);
 	}
 
-	@Deprecated
-	public Collection<Mob> getPetsAsMobs()
-	{
-		ArrayList<Mob> mobs = new ArrayList<>();
-		for(Integer petId:pets) {
-			mobs.add((Mob)CharsList.getById(petId));
-		}
-		return mobs;
-	}
-
 	@Override
 	public boolean ignoreDr() {
 		return rangedWeapon != null && subClass == HeroSubClass.SNIPER;
+	}
+
+	@Override
+	public boolean collect(Item item) {
+		if(super.collect(item)) {
+			QuickSlot.refresh();
+			return true;
+		}
+		return false;
 	}
 }

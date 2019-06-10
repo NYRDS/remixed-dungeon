@@ -20,39 +20,32 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 public class AppodealAdapter {
 
     public static boolean usable() {
-        switch (Build.VERSION.SDK_INT) {
-            case Build.VERSION_CODES.LOLLIPOP:
-            case Build.VERSION_CODES.LOLLIPOP_MR1:
-                return false;
-            default:
-                return true;
-        }
+        return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
     }
 
     public static void init() {
-        final int toInitialize = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
-        final int toCache = Appodeal.INTERSTITIAL | Appodeal.BANNER;
 
         if (Appodeal.isInitialized(Appodeal.BANNER)) {
             return;
         }
 
+        final int toInitialize = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
+        final int toCache = Appodeal.INTERSTITIAL | Appodeal.BANNER;
+
         String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
 
-        //vungle disable due to strange build issue
-        //mopub, mobvista & tapjoy due audiences mismatch
-        //ogury - intersiteal
-        String disableNetworks[] = {AppodealNetworks.AMAZON_ADS,
-                                    AppodealNetworks.ADCOLONY,
-                                    AppodealNetworks.FACEBOOK,
-                                    AppodealNetworks.FLURRY,
-                                    AppodealNetworks.STARTAPP,
-                                    AppodealNetworks.MOPUB,
-                                    AppodealNetworks.MINTEGRAL,
-                                    AppodealNetworks.OGURY_PRESAGE,
-                                    AppodealNetworks.VUNGLE,
-                                    AppodealNetworks.TAPJOY,
-                                    AppodealNetworks.UNITY_ADS
+        if(appKey.isEmpty()) {
+            return;
+        }
+
+        String[] disableNetworks = {AppodealNetworks.AMAZON_ADS,
+                AppodealNetworks.FACEBOOK,
+                AppodealNetworks.FLURRY,
+                AppodealNetworks.STARTAPP,
+                AppodealNetworks.MOPUB,
+                AppodealNetworks.MINTEGRAL,
+                AppodealNetworks.OGURY_PRESAGE,
+                AppodealNetworks.VUNGLE
         };
 
         for (String net : disableNetworks) {

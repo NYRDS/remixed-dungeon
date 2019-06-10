@@ -10,12 +10,10 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
 
     private InterstitialPoint returnTo;
 
-    static {
-        AppodealAdapter.init();
-    }
-
     @Override
     public void showInterstitial(InterstitialPoint ret) {
+        AppodealAdapter.init();
+
         returnTo = ret;
 
         Appodeal.setInterstitialCallbacks(new AppodealInterstitialCallbacks());

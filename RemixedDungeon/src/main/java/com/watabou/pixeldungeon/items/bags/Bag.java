@@ -181,7 +181,10 @@ public class Bag extends Item implements Iterable<Item> {
 				
 				Item item = items.get( index++ );
 				if (item instanceof Bag) {
-					nested = ((Bag)item).iterator();
+					Bag bag = (Bag)item;
+					if(!bag.items.isEmpty()) {
+						nested = ((Bag) item).iterator();
+					}
 				}
 				
 				return item;

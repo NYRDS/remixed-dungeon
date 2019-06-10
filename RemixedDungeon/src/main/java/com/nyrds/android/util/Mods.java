@@ -3,6 +3,7 @@ package com.nyrds.android.util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,8 +11,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.10.2016.
@@ -72,7 +71,7 @@ public class Mods {
 		return modsList;
 	}
 
-	@NonNull
+	@NotNull
 	static private Map<String, ModDesc> getInstalledModsList() throws JSONException {
 		Map<String, ModDesc> installedMods = new HashMap<>();
 

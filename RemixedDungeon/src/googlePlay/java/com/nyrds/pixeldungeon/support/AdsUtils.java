@@ -41,6 +41,7 @@ public class AdsUtils {
         }
 
         if(AppodealAdapter.usable()) {
+            AppodealRewardVideoProvider.init();
             rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
         }
         rewardVideoFails.put(new GoogleRewardVideoAds(), -2);

@@ -1,24 +1,21 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Capacete do Caos</string>
-    <string name="ChaosHelmet_Info">O Capacete de Sangue, e um Símbolo do Caos Para o Guerreiro.</string>
+    <string name="ChaosHelmet_Info">Um capacete cor de sangue é um símbolo essencial para um guerreiro do caos.</string>
 
-
-
-    <string name="Spells_SummonLimitReached">%1$s:O Limite de Invocação foi Excedido(O Máximo:%2$d)!</string>
+    <string name="Spells_SummonLimitReached">%1$s: limite de invocação excedido (máximo atual: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
     <string name="Mana_Cost">Custo de Mana: </string>
     <string name="Spells_NotEnoughSP">Você não tem mana o suficiente para lançar uma \'\'%1$s\'\' magia.</string>
 
 
     <string name="SummonDeathling_Name">Invocar Morto-Vivo</string>
-    <string name="SummonDeathling_Info">Invocar um Morto Vivo Seguidor. A Vida e o Dano cresce com o Aumento do Level do Herói. Limite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
+    <string name="SummonDeathling_Info">Invocar um seguidor morto vivo. A vida e o dano cresce com o aumento do nível do herói. \n\nLimite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
 
 
     <string name="Ignite_Name">Incendiar</string>
-    <string name="Ignite_Info">Acende uma Chama na Célula Selecionada. Pode ser Usado Para Queimar Grama, Monstros e Objetos.</string>
+    <string name="Ignite_Info">Acende uma chama na célula selecionada. Pode ser usado para queimar grama, monstros e objetos.</string>
 
 
     <string name="RootSpell_Name">Enraizar</string>
@@ -38,15 +35,15 @@
 
 
     <string name="Healing_Name">Cura</string>
-    <string name="Healing_Info">O Pergaminho e Crucial Para Todos os Aventureiros. Ele Pode Restaurar 1/3 do Máximo do Hp dos Conjuradores.</string>
+    <string name="Healing_Info">O pergaminho é crucial para todos os aventureiros. Ele pode restaurar 1/3 do máximo do hp dos conjuradores.</string>
 
 
 
-    <string name="ClassArmor_LowMana">Mana Insuficiente</string>
+    <string name="ClassArmor_LowMana">Mana insuficiente!</string>
 
 
-    <string name="Drink_ACDrink">Tomar</string>
-    <string name="Drink_Message">Aquela Bebida Estava Refrescante!</string>
+    <string name="Drink_ACDrink">BEBER</string>
+    <string name="Drink_Message">Aquela bebida estava refrescante!</string>
 
 
     <string name="TomeOfKnowledge_Name">Livro do Conhecimento</string>
@@ -54,7 +51,7 @@
 
 
     <string name="SpellBook_Name">Livro de feitiços</string>
-    <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas,do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
+    <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas, do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
     <string name="SpellBook_Info_Identified">Entre as páginas você descobriu um texto completo com o feitiço \"%1$s\".\n\"%2$s\"</string>
 
 
@@ -65,9 +62,7 @@
     <string name="Mushroom_Eat_Message">Esse cogumelo tem um gosto estranho! </string>
 
 
-    <string name="Torch_Info2">É um item indispensável na masmorra,que é infame pela sua iluminação ambiente fraca.</string>
-
-
+    <string name="Torch_Info2">É um item indispensável na masmorra, que é infame pela sua iluminação ambiente fraca.</string>
 
     <string name="WndSpells_Title">Magias</string>
     <string name="WndSpells_Level">Nível Mágico:</string>
@@ -96,7 +91,7 @@
     <string name="Ring_Info3a">%1$s\n\nO %2$s está em seu dedo%3$s</string>
     <string name="Ring_Info3b">, e porque ele é amaldiçoado, você não tem como removê-lo.</string>
     <string name="Ring_Info4">%1$s\n\nVocê pode sentir a magia maléfica escondida dentro do %2$s.</string>
-    <string name="Ring_BuffKnown">Isto é um/a %s</string>
+    <string name="Ring_BuffKnown">Isto é um(a) %s</string>
 
 
     <string name="RingOfAccuracy_Name">Anel da Precisão</string>
@@ -104,7 +99,7 @@
 
 
     <string name="RingOfDetection_Name">Anel de Detecção</string>
-    <string name="RingOfDetection_Info">Usar este anel permitirá que o usuário note segredos escondidos -armadilhas e portas secretas- sem perder tempo para pesquisar. Anéis de Detecção degradados são maçantes para seus sentidos, tornando-o mais difícil de encontrar segredos mesmo quando busca ativamente por eles.</string>
+    <string name="RingOfDetection_Info">Usar este anel permitirá que o usuário note segredos escondidos -armadilhas e portas secretas- sem perder tempo para pesquisar. Anéis de detecção degradados são maçantes para seus sentidos, tornando-o mais difícil de encontrar segredos mesmo quando busca ativamente por eles.</string>
 
 
     <string name="RingOfElements_Name">Anel dos Elementos</string>
@@ -260,6 +255,8 @@
     <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas! </string>
     <string name="WndPriest_Instruction2">Se você estiver procurando ajuda, eu posso lhe fornecer serviço de cura e comida por apenas %d moedas de ouro!\nSe você está em busca da Bênção Sagrada, ou, pelo Senhor proibido, foi amaldiçoado, por favor, fale com o Bispo em nossa humilde igreja.</string>
 
+    <string name="WndDontLikeAds_NotThisTime">Não desta vez</string>
+
     <string name="Item_Info2">Algumas Coisas.</string>
 
 
@@ -413,17 +410,6 @@
     <string name="StoneBlood_Buff">Sangue de pedra</string>
     <string name="Welcome_Ok">Ok!</string>
     <string name="Welcome_Title">Bem vindo!</string>
-
-    <string name="Welcome_Text_28_1">
-    remix.28.1\n
-    - Grande renovação na cidade\n
-    - Muitas melhorias e correções de GFX\n
-    - Novos dardos e flechas\n
-    - Agora todos os monstros (exceto mortos-vivos) irão regenerar a vida\n
-    - Agora o atributo de força acrescenta um bônus de dano adicional para todas as classes\n
-    - A Cartomante agora possui um Gato\n
-    - A machadinha de Gnoll não se quebrará quando arremessada em um alvo\n
-    </string>
 
     <string name="Welcome_Text_28_2">
     remix.28.2\n
@@ -1319,7 +1305,7 @@
 
     <string name="WndDonate_silverDonateText2">Também desativa as propagandas e ativa a caçadora desde o início.</string>
     <string name="WndDonate_goldDonateText2">Também ativa o Elfo desde o início</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">padrão</string>
@@ -1579,6 +1565,7 @@
         <item>Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</item>
         <item>Magos podem usar varinhas como uma arma de combate.</item>
         <item>Pergaminhos de Identificação são identificados desde o início.</item>
+        <item>Pergaminhos de Identificação são identificados desde o início.</item>
     </string-array>
     <string-array name="HeroClass_RogPerks">
         <item>Ladrões começam com um Anel de Sombras +1.</item>
@@ -1600,6 +1587,7 @@
         <item>Elfos são imunes ao enraizamento</item>
         <item>Elfos começam com um arco de madeira melhorado e um monte de flechas</item>
         <item>Elfos são peritos com arcos e ágeis</item>
+        <item>Elfos ganham mais vida a partir de gotas de orvalho.</item>
         <item>Elfos são menos experientes com armas corpo a corpo</item>
     </string-array>
 
@@ -2527,6 +2515,7 @@
     <string name="Mods_AuthorEmail">E-mail do Autor:</string>
     <string name="Mods_RestartRequired">É necessário reiniciar</string>
 
+    <string name="Spells_NotTooFast">%s ainda não está proto para uso</string>
     <string name="ElvenBow_Name"> arco élfico</string>
     <string name="ElvenBow_Gender">masculino</string>
 
@@ -3504,9 +3493,9 @@ Parede
 
 
     <string name="PotionOfPurity_Name">Poção da Purificação</string>
-    <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Beber ele vai te dar uma imunidade temporária para esses gases.</string>
+    <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Bebê-lo vai te dar uma imunidade temporária para esses gases.</string>
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
-    <string name="PotionOfPurity_NoSmell">Você não sente odores!</string>
+    <string name="PotionOfPurity_NoSmell">Você parou de sentir qualquer odor!</string>
 
 
     <string name="PotionOfStrength_Name">Poção da Força</string>
@@ -3528,7 +3517,7 @@ Parede
     <string name="WndSettings_ActionButtonSize">Tamanho dos botões</string>
     <string name="WndSettings_Handedness">Lado dos botões </string>
     <string name="WndSettings_InGameUiSettings">Configurações da Interface</string>
-    <string name="WndSettings_GameplaySettings">Jogabigidade</string>
+    <string name="WndSettings_GameplaySettings">Jogabilidade</string>
     <string name="WndPremiumSettings_marble">mármore</string>
     <string name="QuickSlot_SelectSlot">Escolha um atalho rápido para isso</string>
 
@@ -3540,5 +3529,68 @@ Parede
     <string name="Potion_ArrowMoisten">Você umedeceu a flecha.</string>
     <string name="Potion_ItemFliesAway">%s voa da suas mãos</string>
     <string name="Potion_FoodRefreshed">%s agora parece ingerível </string>
+
+
+    <string name="KindOfBow_SelectArrowKind">Quais flechas devo usar?</string>
+    <string name="KindOfBow_ChooseArrows">ESCOLHER FLECHAS</string>
+
+    <string name="BodyArmorSpell_Name">Armadura Corporal</string>
+    <string name="BodyArmorSpell_Info">Ativa o poder muscular reservado, os tornando mais fortes temporariamente, isso aumentará sua defesa, porem diminuirá sua velocidade de movimento.</string>
+
+    <string name="BodyArmorBuff_Name">Armadura Corporal</string>
+    <string name="BodyArmorBuff_Info">Armadura aumentada ao custo da velocidade de movimento</string>
+
+    <string name="DieHardSpell_Name">Duro de Matar</string>
+    <string name="DieHardSpell_Info">Aumentará temporariamente a regeneração fazendo você realmente seja Duro de Matar</string>
+
+    <string name="DieHardBuff_Name">Duro de Matar</string>
+    <string name="DieHardBuff_Info">Taxa de regeneração aumentada</string>
+
+    <string name="SmashSpell_Name">Pulo Esmagador</string>
+    <string name="SmashSpell_Info">Pula e cai com muita força no chão, esmagando e atordoando os inimigos em volta, ao mesmo tempo que os causa dano físico.</string>
+    <string name="SmashSpell_NeedWeapon">Eu preciso de uma arma para fazer isso.</string>
+
+    <string name="DashSpell_Name">Investida</string>
+    <string name="DashSpell_Info">Corre em uma direção específica e colidindo com os inimigos no caminho, causando danos e ferimentos.</string>
+    <string name="DashSpell_OnSelf">Eu não posso correr no mesmo lugar.</string>
+    <string name="DashSpell_TooFar">Eu não posso correr tão longe.</string>
+
+    <string name="CloakSpell_Name">Ocultar-se</string>
+    <string name="CloakSpell_Info">Entre nas sombras para não ser visto. Reduz bastante suas chances de ser detectado. Não pode ser usado se houver inimigos por perto.</string>
+    <string name="CloakSpell_EnemiesNearby">Você não  pode se ocultar nas sombras se houver inimigos por perto.</string>
+
+    <string name="CloakBuff_Name">Oculto</string>
+    <string name="CloakBuff_Info">Oculto nas Sombras</string>
+
+    <string name="TitleScene_Mods">Mods</string>
+    <string name="WndHero_Stealth">Furtividade</string>
+    <string name="WndHero_Awareness">Consciência</string>
+    <string name="WndHero_AttackSkill">Habilidade de Ataque</string>
+    <string name="WndHero_DefenceSkill">Habilidade de Defesa</string>
+
+
+    <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Mecânicas do Jogo:\n
+    -- Habilidades especiais do Guerreiro!\n
+    -- Fome dos Heróis reduzida\n
+    -- Magia de Possessão do Necromante\n
+    -- Habilidade de Ocultar-se\n
+    -- Novas Medalhas\n
+    - Modificações:\n
+    -- Scripts de Buffs personalizáveis\n
+    -- Gfx personalizáveis \n
+    </string>
+    <string name="Badges_GamesPlayed5">5000 jogos iniciados</string>
+    <string name="Badges_PotionsCooked5">25 poções realizadas</string>
+    <string name="Badges_ItemLvl5">Item de Level 15 adquirido</string>
+    <string name="Badges_FoodEaten5">60 pedaços de comida comidos</string>
+    <string name="Badges_StrengthAttained5">21 pontos de Força adquiridos</string>
+    <string name="Badges_LevelReached5">Level 30 conquistado</string>
+    <string name="Badges_GoldCollected5">35000 ouro coletado</string>
+    <string name="Badges_MonsterSlain5">1000 inimigos mortos</string>
+    <string name="Spells_NotInOwnBody">Você não pode %s enquanto sua alma se separa do corpo.</string>
+    <string name="WndHero_Satiety">Saciedade</string>
+
 
 </resources>

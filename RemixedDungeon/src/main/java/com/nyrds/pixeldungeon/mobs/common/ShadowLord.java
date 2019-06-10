@@ -32,6 +32,8 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by DeadDie on 13.02.2016
  */
@@ -62,7 +64,6 @@ public class ShadowLord extends Boss implements IZapper {
 			Mob mob = new Shadow();
 
 			mob.setState(MobAi.getStateByClass(Wandering.class));
-			Dungeon.level.spawnMob(mob, 1, getPos());
 
 			WandOfBlink.appear(mob, cell);
 		}
@@ -152,7 +153,7 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src) {
+	public void damage(int dmg, @NotNull NamedEntityKind src) {
 		super.damage(dmg, src);
 		if (src != this) {
 			if (dmg > 0 && cooldown < 0) {
@@ -183,8 +184,7 @@ public class ShadowLord extends Boss implements IZapper {
 		}
 
 		if (Dungeon.level.blobAmountAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
-			getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
-			hp(Math.min(hp() + (ht() - hp()) / 4, ht()));
+			heal((ht() - hp()) / 4, Dungeon.level.blobs.get(Darkness.class));
 		}
 
 		if (Dungeon.level.blobAmountAt(Foliage.class, getPos()) > 0) {

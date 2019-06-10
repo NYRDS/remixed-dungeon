@@ -77,7 +77,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		}
 
 		text = Utils.capitalize( text ) + 
-			(PUNCTUATION.matcher( text ).matches() ? "" : ".");
+			(PUNCTUATION.matcher( text ).matches() ? Utils.EMPTY_STRING : ".");
 
 		Logbook.addPlayerLogMessage( text, color );	// Store the message to show in log book tab
 

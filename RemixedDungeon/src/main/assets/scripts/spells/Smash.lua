@@ -13,57 +13,46 @@ return spell.init{
         return {
             image         = 3,
             imageFile     = "spellsIcons/warrior.png",
-            name          = "Smash_Name",
-            info          = "Smash_Info",
+            name          = "SmashSpell_Name",
+            info          = "SmashSpell_Info",
             magicAffinity = "Combat",
             targetingType = "self",
-            level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            level         = 4,
+            spellCost     = 10,
+            cooldown      = 10,
             castTime      = 0.5
         }
     end,
-    cast = function(self, spell, chr)
-        local items = chr:getBelongings()
+    cast = function(self, spell, caster)
+        local items = caster:getBelongings()
 
         if items.weapon == nil then
-            RPD.glogn("Need weapon to smash")
+            RPD.glogn("SmashSpell_NeedWeapon")
             return false
         end
 
-        local function forCellsAround(cell, action)
-            local x = RPD.Dungeon.level:cellX(cell)
-            local y = RPD.Dungeon.level:cellY(cell)
+        local fist = RPD.topEffect(caster:getPos(),"smash_fist")
+        fist:incY(-30);
+        RPD.attachMoveTweener(fist, 0,30,0.5)
 
-            for i = x - 1, x + 1 do
-                for j = y - 1, y + 1 do
-                    if i~=x or j~=y then
-                        action(RPD.Dungeon.level:cell(i,j))
-                    end
-                end
-            end
-        end
+        local clip = RPD.bottomEffect(caster:getPos(),"smash_blast")
+        clip:setScale(1.5,1.3)
 
         local function smash(cell)
-
-            local fist = RPD.topEffect(chr:getPos(),"smash_fist")
-            RPD.attachMoveTweener(fist, 100,0,1)
-
-            local clip = RPD.bottomEffect(chr:getPos(),"smash_blast")
-            clip:setScale(1.5,1.3)
-
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
-                RPD.affectBuff(victim, RPD.Buffs.Vertigo, chr:skillLevel())
-                local dmg = items.weapon:damageRoll(chr)
-                dmg = victim:defenseProc(chr, dmg)
-                victim:damage(dmg, chr)
+                RPD.affectBuff(victim, RPD.Buffs.Vertigo, caster:skillLevel())
+                local dmg = items.weapon:damageRoll(caster)
+                dmg = victim:defenseProc(caster, dmg)
+                victim:damage(dmg, caster)
             end
         end
 
-	RPD.playSound("smash.mp3")
-        forCellsAround(chr:getPos(), smash)
-	
+	    RPD.playSound("smash.mp3")
+        RPD.forCellsAround(caster:getPos(), smash)
+
+        caster:getSprite():jump(30)
+
         return true
     end
 }

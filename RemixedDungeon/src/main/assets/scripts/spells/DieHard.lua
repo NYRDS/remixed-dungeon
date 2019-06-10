@@ -8,22 +8,32 @@ local RPD = require "scripts/lib/commonClasses"
 
 local spell = require "scripts/lib/spell"
 
+local spellLevel = 2
+
 return spell.init{
     desc  = function ()
         return {
             image         = 0,
             imageFile     = "spellsIcons/warrior.png",
-            name          = "DieHard_Name",
-            info          = "DieHard_Info",
+            name          = "DieHardSpell_Name",
+            info          = "DieHardSpell_Info",
             magicAffinity = "Combat",
             targetingType = "self",
-            level         = 1,
-            spellCost     = 1,
-            cooldown      = 1,
+            level         = spellLevel,
+            spellCost     = 5,
+            cooldown      = 50,
             castTime      = 0.5
         }
     end,
-    cast = function(self, spell, chr, cell)
+    cast = function(self, spell, caster, cell)
+
+        local buffLevel = math.min(3, caster:skillLevel()-spellLevel) + 2
+
+        local duration = buffLevel * 10 + 10
+
+        local buff = RPD.affectBuff(caster,"DieHard", duration)
+        buff:level(buffLevel)
+
         return true
     end
 }

@@ -41,15 +41,15 @@ public class SacrificialSword extends SpecialWeapon {
 		}
 		
 		double classBonus = 1;
-		if(hero.subClass == HeroSubClass.WARDEN ) {
+		if(hero.getSubClass() == HeroSubClass.WARDEN ) {
 			classBonus = 1.5;
 		}
 		
-		if(hero.subClass == HeroSubClass.SHAMAN) {
+		if(hero.getSubClass() == HeroSubClass.SHAMAN) {
 			classBonus = 2.0;
 		}
 
-		if(hero.heroClass == HeroClass.NECROMANCER) {
+		if(hero.getHeroClass() == HeroClass.NECROMANCER) {
 			classBonus = 3.0;
 		}
 

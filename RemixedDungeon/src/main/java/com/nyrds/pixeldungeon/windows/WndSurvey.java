@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
 import org.json.JSONArray;
@@ -45,7 +46,7 @@ public class WndSurvey extends Window {
         try {
             String surveyId = survey.getString("survey_id");
 
-            if (Preferences.INSTANCE.getString(SURVEY_TAKEN, "").equals(surveyId)) {
+            if (Preferences.INSTANCE.getString(SURVEY_TAKEN, Utils.EMPTY_STRING).equals(surveyId)) {
                 Game.scene().add(new WndMessage(Game.getVar(R.string.SociologistNPC_AlreadyTaken)));
                 super.hide();
                 return;
@@ -59,7 +60,7 @@ public class WndSurvey extends Window {
         question = 0;
 
         //Title text
-        questionText = PixelScene.createMultiline("", GuiProperties.mediumTitleFontSize());
+        questionText = PixelScene.createMultiline(Utils.EMPTY_STRING, GuiProperties.mediumTitleFontSize());
         questionText.hardlight(TITLE_COLOR);
         questionText.maxWidth(WIDTH - GAP);
         questionText.x = GAP;

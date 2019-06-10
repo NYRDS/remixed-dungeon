@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class WndSadGhost extends Window {
 	
@@ -79,7 +79,7 @@ public class WndSadGhost extends Window {
 		resize( WIDTH, (int)btnArmor.bottom() );
 	}
 
-	private void selectReward(Ghost ghost, @NonNull Item item, @NonNull Item reward ) {
+	private void selectReward(Ghost ghost, @NotNull Item item, @NotNull Item reward ) {
 		hide();
 
 		item.removeItemFrom(Dungeon.hero);

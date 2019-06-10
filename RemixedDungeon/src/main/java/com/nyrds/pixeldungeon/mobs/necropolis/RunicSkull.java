@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class RunicSkull extends MultiKindMob {
 
@@ -89,7 +89,7 @@ public class RunicSkull extends MultiKindMob {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy){
+	public boolean zap(@NotNull Char enemy){
 		return false;
 	}
 

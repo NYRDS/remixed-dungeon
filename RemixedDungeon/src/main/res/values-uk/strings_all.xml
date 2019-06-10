@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Шолом Хаосу</string>
@@ -412,17 +410,6 @@
     <string name="StoneBlood_Buff">Кам\'яна кров</string>
     <string name="Welcome_Ok">Добре!</string>
     <string name="Welcome_Title">Ласкаво просимо!</string>
-
-    <string name="Welcome_Text_28_1">
-    remix.28.1\n
-    - Велике оновлення міста\n
-    - Багато графічних нововведень та виправлень\n
-    - Нові дротики та стріли\n
-    - Тепер всі істоти (окрім нежиті) можуть регенерувати\n
-    - Тепер сила може давати додатковий бонус до шкоди для всіх класів\n
-    - Ворожка завела собі кота\n
-    - Томагавк гнола тепер не зламається, при потраплянні в ціль\n
-    </string>
 
     <string name="Welcome_Text_28_2">
     remix.28.2\n
@@ -1325,7 +1312,7 @@
 
     <string name="WndDonate_silverDonateText2">Також вимикає рекламу та відкриває мисливицю з самого початку.</string>
     <string name="WndDonate_goldDonateText2">Також відкриває ельфа з самого початку.</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">стандартний</string>
@@ -1985,7 +1972,6 @@
 
     <string name="Mob_Desc">Справжній опис буде пізніше!</string>
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
-    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
     <string name="Mob_StaSleepingStatus">%s спить</string>
     <string name="Mob_StaWanderingStatus">%s блукає</string>
     <string name="Mob_StaHuntingStatus">%s полює</string>
@@ -2553,7 +2539,7 @@
     <string name="Mods_AuthorEmail">Пошта автора:</string>
     <string name="Mods_RestartRequired">Потрібне перезавантаження</string>
 
-    <string name="Spells_NotTooFast">Ви ще на готові начарувати %s</string>
+    <string name="Spells_NotTooFast">%s ще не готове до використання</string>
     <string name="ElvenBow_Name">ельфійський лук</string>
     <string name="ElvenBow_Gender">masculine</string>
 
@@ -3590,4 +3576,12 @@
     <string name="Potion_ItemFliesAway">Предмет %s вилетів з твоїх рук.</string>
     <string name="Potion_FoodRefreshed">%s тепер виглядає їстівним</string>
 
-</resources>
+
+    <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
+    <string name="Badges_ItemLvl5">Придбано предмет 15 рівня</string>
+    <string name="Badges_FoodEaten5">60 порцій їжі вжито</string>
+    <string name="Badges_StrengthAttained5">21 одиниць сили набрано</string>
+    <string name="Badges_LevelReached5">30 рівня досягнуто</string>
+    <string name="Badges_GoldCollected5">Зібрано 35000 золотих монет</string>
+    <string name="Badges_MonsterSlain5">1000 супротивників подолано</string>
+    </resources>

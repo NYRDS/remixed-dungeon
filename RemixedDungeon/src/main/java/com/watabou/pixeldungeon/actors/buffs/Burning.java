@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -99,7 +100,7 @@ public class Burning extends Buff implements Hero.Doom {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Burning_Info);
 	}
 
@@ -115,5 +116,10 @@ public class Burning extends Buff implements Hero.Doom {
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BURNING), Dungeon.depth ) );
 		GLog.n( Game.getVar(R.string.Burning_Death) );
+	}
+
+	@Override
+	public CharSprite.State charSpriteStatus() {
+		return CharSprite.State.BURNING;
 	}
 }

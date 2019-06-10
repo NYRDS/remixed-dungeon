@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class SpiderGuard extends MultiKindMob {
 
@@ -28,7 +28,7 @@ public class SpiderGuard extends MultiKindMob {
 	}
 	
 	@Override
-	public int attackProc(@NonNull Char enemy, int damage ) {
+	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 10 ) == 0) {
 			Buff.prolong( enemy, Paralysis.class, 3);
 		}
@@ -51,7 +51,7 @@ public class SpiderGuard extends MultiKindMob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		super.die( cause );
 		Badges.validateRare( this );
 	}

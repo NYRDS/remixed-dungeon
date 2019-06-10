@@ -6,8 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -25,8 +24,6 @@ public class CagedKobold extends ImmortalNPC {
 	private static boolean spawned;
 
 	public CagedKobold() {
-		addImmunity( Paralysis.class );
-		addImmunity( Roots.class );
 	}
 	
 
@@ -54,24 +51,24 @@ public class CagedKobold extends ImmortalNPC {
 	}
 
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		if(Quest.completed) {
 			return true;
 		}
 		if (Quest.given) {
 			
-			Item item = hero.belongings.getItem( IceKey.class );
+			Item item = hero.getBelongings().getItem( IceKey.class );
 			if (item != null) {
 
-				item.removeItemFrom(Dungeon.hero);
+				item.removeItemFrom(hero);
 
 				Item reward = new CandleOfMindVision();
 
-				if (reward.doPickUp( Dungeon.hero )) {
+				if (reward.doPickUp( hero )) {
 					GLog.i( Hero.getHeroYouNowHave(), reward.name() );
 				} else {
-					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
+					level().drop(reward, hero.getPos()).sprite.drop();
 				}
 				Quest.complete();
 				GameScene.show( new WndQuest( this, Game.getVar(R.string.CagedKobold_Quest_End) ) );

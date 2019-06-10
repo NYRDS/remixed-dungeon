@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.effects;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,7 +17,7 @@ public class EffectsFactory {
 
     static {
         for(String effectFile: ModdingMode.listResources("effects", (dir, name) -> name.endsWith(".json"))) {
-            effects.put(effectFile.replace(".json",""),JsonHelper.readJsonFromAsset("effects/"+effectFile));
+            effects.put(effectFile.replace(".json", Utils.EMPTY_STRING),JsonHelper.readJsonFromAsset("effects/"+effectFile));
         }
     }
 

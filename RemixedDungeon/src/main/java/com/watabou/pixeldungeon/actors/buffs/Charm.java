@@ -53,7 +53,7 @@ public class Charm extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Charm_Info);
 	}
 	

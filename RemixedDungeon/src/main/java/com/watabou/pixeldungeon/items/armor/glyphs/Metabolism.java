@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -44,16 +43,12 @@ public class Metabolism extends Glyph {
 			int healing = Math.min( defender.ht() - defender.hp(), Random.Int( 1, defender.ht() / 5 ) );
 
 			if (healing > 0) {
-				
-				Hunger hunger = defender.buff( Hunger.class );
+				if (!defender.isStarving()) {
 
-				if (hunger != null && !hunger.isStarving()) {
-
-					hunger.satisfy(-Hunger.STARVING / 10);
+					defender.hunger().satisfy(-Hunger.STARVING / 10);
 					BuffIndicator.refreshHero();
 
-					defender.hp(defender.hp() + healing);
-					defender.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+					defender.heal(healing,this);
 					defender.getSprite().showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
 				}
 			}

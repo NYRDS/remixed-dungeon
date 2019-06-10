@@ -26,11 +26,11 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.io.File;
 import java.io.IOException;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public enum Music implements MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener {
@@ -45,7 +45,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 
 	private boolean enabled = true;
 
-	public void play(@NonNull String assetName, boolean looping) {
+	public void play(@NotNull String assetName, boolean looping) {
 		if (!enabled) {
 			return;
 		}

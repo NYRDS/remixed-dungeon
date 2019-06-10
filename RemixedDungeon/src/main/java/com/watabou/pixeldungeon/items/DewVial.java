@@ -22,7 +22,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
@@ -31,9 +30,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
-import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
-import androidx.annotation.NonNull;
+import java.util.ArrayList;
 
 public class DewVial extends Item {
 
@@ -90,8 +89,7 @@ public class DewVial extends Item {
 				int value = (int)Math.ceil( Math.pow( getVolume(), POW ) / NUM * hero.ht() );
 				int effect = Math.min( hero.ht() - hero.hp(), value );
 				if (effect > 0) {
-					hero.hp(hero.hp() + effect);
-					hero.getSprite().emitter().burst( Speck.factory( Speck.HEALING ), getVolume() > 5 ? 2 : 1 );
+					hero.heal(effect,this);
 					hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				}
 				
@@ -110,9 +108,7 @@ public class DewVial extends Item {
 			}
 			
 		} else {
-			
 			super.execute( hero, action );
-			
 		}
 	}
 	
@@ -150,6 +146,8 @@ public class DewVial extends Item {
 	public static void autoDrink( Hero hero ) {
 		DewVial vial = hero.belongings.getItem( DewVial.class );
 		if (vial != null && vial.isFull()) {
+
+			hero.hp(1);//resurrect Hero because simple heal can't
 			vial.execute( hero );
 			hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
 			
@@ -169,7 +167,7 @@ public class DewVial extends Item {
 		return Utils.format( TXT_STATUS, getVolume(), MAX_VOLUME );
 	}
 	
-	@NonNull
+	@NotNull
     @Override
 	public String toString() {
 		return super.toString() + " (" + status() +  ")" ;

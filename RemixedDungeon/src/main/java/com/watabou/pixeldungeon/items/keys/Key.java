@@ -22,10 +22,9 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import androidx.annotation.NonNull;
 
 public class Key extends Item {
 
@@ -33,7 +32,7 @@ public class Key extends Item {
 
 	public int depth;
 
-	@NonNull
+	@NotNull
 	public String levelId;
 	
 	public Key() {

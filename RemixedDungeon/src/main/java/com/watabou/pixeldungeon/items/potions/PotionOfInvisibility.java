@@ -20,9 +20,7 @@ package com.watabou.pixeldungeon.items.potions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -32,8 +30,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfInvisibility extends UpgradablePotion {
 
-	private static final float ALPHA	= 0.4f;
-	
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();
@@ -52,17 +48,6 @@ public class PotionOfInvisibility extends UpgradablePotion {
 		return 40;
 	}
 
-	public static void melt(Char ch ) {
-
-		float alpha = ch instanceof Hero ? ALPHA : 0.0f;
-
-		if (ch.getSprite().hasParent()) {
-			ch.getSprite().getParent().add( new AlphaTweener( ch.getSprite(), alpha, 0.4f ) );
-		} else {
-			ch.getSprite().alpha( alpha );
-		}
-	}
-	
 	@Override
 	protected void moistenScroll(Scroll scroll) {
 		int quantity = detachMoistenItems(scroll, (int) (3*qualityFactor()));

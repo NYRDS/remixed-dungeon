@@ -4,13 +4,12 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
 
 public class SpellFactory {
 
@@ -67,7 +66,7 @@ public class SpellFactory {
 		return script.getResult().checkboolean();
 	}
 
-	@NonNull
+	@NotNull
 	public static Spell getSpellByName(String name) {
 		try {
 			if(hasSpellForName(name)) {
@@ -87,7 +86,7 @@ public class SpellFactory {
 		}
 	}
 
-	@NonNull
+	@NotNull
 	public static ArrayList<String> getSpellsByAffinity(String affinity) {
 		script.run("getSpellsList", affinity);
 		LuaTable luaList = script.getResult().checktable();

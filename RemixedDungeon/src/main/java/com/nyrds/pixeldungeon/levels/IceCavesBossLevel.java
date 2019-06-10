@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class IceCavesBossLevel extends Level {
 	
@@ -141,7 +141,7 @@ public class IceCavesBossLevel extends Level {
 		
 		super.pressHero( cell, hero );
 		
-		if (!enteredArena && outsideEntraceRoom( cell ) && hero == Dungeon.hero) {
+		if (!enteredArena && outsideEntraceRoom( cell ) ) {
 			
 			enteredArena = true;
 			
@@ -175,7 +175,7 @@ public class IceCavesBossLevel extends Level {
 		Dungeon.observe();
 	}
 
-	@NonNull
+	@NotNull
     @Override
 	public Heap drop( Item item, int cell ) {
 		

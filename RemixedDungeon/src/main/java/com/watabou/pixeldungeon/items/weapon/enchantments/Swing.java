@@ -40,7 +40,7 @@ public class Swing extends Enchantment {
 				Char ch = Actor.findChar( n + p );
 				if (ch != null && ch != defender && ch.isAlive()) {
 					
-					int dr = Random.IntRange( 0, ch.dr() );
+					int dr = ch.defenceRoll(attacker);
 					int dmg = Random.Int( 1, maxDamage );
 					int effectiveDamage = Math.max( dmg - dr, 0 );
 					

@@ -15,6 +15,8 @@ import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 
+import androidx.annotation.Keep;
+
 /**
  * Created by mike on 26.05.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -30,6 +32,7 @@ public class CustomItem extends Item {
     private LuaScript script;
     private int price;
 
+    @Keep
     public CustomItem() {
     }
 

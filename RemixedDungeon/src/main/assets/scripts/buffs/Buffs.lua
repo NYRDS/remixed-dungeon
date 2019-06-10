@@ -22,7 +22,7 @@ function module.haveBuff(self,buff)
     return false
 end
 
-function module.loadSpells()
+function module.loadBuffs()
     for _,buff in pairs(buffs) do
         require("scripts/buffs/"..buff)
     end

@@ -68,7 +68,7 @@ public class Golem extends Mob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		Imp.Quest.process( this );
 		
 		super.die( cause );

@@ -23,32 +23,35 @@ return spell.init{
             castTime      = 0.5
         }
     end,
-    castOnCell = function(self, spell, chr, cell)
+    castOnCell = function(self, spell, caster, cell)
         local sacrifice = RPD.Actor:findChar(cell)
 
         local goodSacrifice = false
 
-        if chr:getPets():contains(sacrifice) then
-            sacrifice:yell("DarkSacrifice_Ok")
-            goodSacrifice = true
-        end
+        if sacrifice~=nil then
+            if sacrifice:getOwnerId()==caster:getId() then
+                sacrifice:yell("DarkSacrifice_Ok")
+                goodSacrifice = true
+            end
 
-        if chr == sacrifice then
-            sacrifice:yell("DarkSacrifice_Self")
-            goodSacrifice = true
-        end
+            if caster == sacrifice then
+                sacrifice:yell("DarkSacrifice_Self")
+                goodSacrifice = true
+            end
 
-        if sacrifice ~= nil and goodSacrifice == false then
-            sacrifice:yell("DarkSacrifice_Resist")
+            if goodSacrifice == false then
+                sacrifice:yell("DarkSacrifice_Resist")
+            end
         end
 
         if goodSacrifice then
            sacrifice:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
            RPD.playSound( "snd_cursed.mp3" )
-           RPD.placeBlob(RPD.Blobs.LiquidFlame, sacrifice:getPos(), sacrifice:hp()*chr:magicLvl())
-           sacrifice:damage(sacrifice:hp(),chr)
+           RPD.placeBlob(RPD.Blobs.LiquidFlame, sacrifice:getPos(), sacrifice:hp()* caster:magicLvl())
+           sacrifice:damage(sacrifice:hp(), caster)
            return true
         end
+
         RPD.glog("DarkSacrifice_Hint")
         return false
     end

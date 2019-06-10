@@ -92,7 +92,7 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
         }
 
         public void onAdFailedToLoad(int result) {
-            EventCollector.logException( "admob banner" + Integer.toString(result));
+            EventCollector.logException( "admob banner" + result);
             AdsUtilsCommon.bannerFailed(AdMobComboProvider.this);
         }
     }
@@ -106,7 +106,7 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
         @Override
         public void onAdFailedToLoad(int errorCode) {
             super.onAdFailedToLoad(errorCode);
-            EventCollector.logException("admob_error " + Integer.toString(errorCode));
+            EventCollector.logException("admob_error " + errorCode);
         }
 
         @Override

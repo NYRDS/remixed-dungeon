@@ -1,11 +1,8 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Kaos Kaskı</string>
     <string name="ChaosHelmet_Info">Kan kırmızısı bir kask. Ve üzerinde kaos savaşçısının sembolü kazılı.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: çağırma limiti doldu (Şuanki sınır: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -66,8 +63,6 @@
 
 
     <string name="Torch_Info2">Bu zindanın olmazsa olmaz öğesidir, ortamı kötü aydınlattığı için adı çıkmış.</string>
-
-
 
     <string name="WndSpells_Title">Büyüler</string>
     <string name="WndSpells_Level">Büyü Seviyesi</string>
@@ -222,6 +217,8 @@
     <string name="WndTradeItem_BuyN">%2$da ile %1$d satın al</string>
     <string name="WndTradeItem_BuyAll">Hepsini %da ile satın al</string>
     <string name="WndTradeItem_SellN">%2$da için %1$d sat</string>
+    <string name="WndBag_BuySubtitle">(%d paran var)</string>
+
     <string name="town_deco_weaponboard_name">Silah</string>
     <string name="town_deco_weaponboard_desc">Tahtada asılı bir çeşit silah.</string>
     <string name="town_deco_shieldboard_name">Kalkanlar</string>
@@ -230,6 +227,12 @@
     <string name="town_deco_armoronhanger_desc">Askılıktaki bir tür zırh.</string>
     <string name="town_deco_potions_name">İksirler</string>
     <string name="town_deco_potions_desc">Rafdaki çeşitli iksirler.</string>
+    <string name="town_deco_wardrobe_name">Ahşap gardırop</string>
+    <string name="town_deco_wardrobe_desc">Geniş ahşap gardırop</string>
+
+    <string name="town_deco_porch_name">Veranda</string>
+    <string name="town_deco_porch_desc">Ahşap bir veranda.</string>
+
     <string name="town_deco_common_bed_name">Yatak</string>
     <string name="town_deco_common_bed_desc">Sıradan yatak.</string>
 
@@ -244,6 +247,16 @@
 
     <string name="town_deco_pedestal_name">Kürsü</string>
     <string name="town_deco_pedestal_desc">Üzerinde kutsal kitap olan kürsü.</string>
+
+    <string name="town_deco_shelf_name">Raflar</string>
+    <string name="town_deco_shelf_desc">Bomboş raflar işte...</string>
+
+    <string name="WndPriest_Instruction2_m">Hoş geldin küçüğüm, HOŞ GELDİN! Derinlerin Efendisi Noel Baba\'nın Kutsal Kilisesi\'ne hoş geldin!</string>
+    <string name="WndPriest_Instruction2_f">Hoş geldin sevgili kızım, HOŞ GELDİN! Derinlerin Efendisi Noel Baba\'nın Kutsal Kilisesi\'ne hoş geldin!</string>
+    <string name="WndPriest_Instruction2">Olur da yardımım gerekirse sadece %d altın sikke karşılığında seni iyileştirebilirim!\n
+Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilisemizde piskoposu ziyaret edebilirsin.</string>
+
+    <string name="WndDontLikeAds_NotThisTime">Bu sefer değil</string>
 
     <string name="Item_Info2">birşey</string>
 
@@ -428,12 +441,92 @@
     -- Kahraman silahları artık oyun içinde gözükmekte\n
     </string>
 
+    <string name="Welcome_Text_28_5">
+remix.28.5\n
+- Modlar:\n
+-- NPC\'ler ve kasaba halkı için uygulanabilir yapay zeka\n
+- Kasaba:\n
+-- Kilise ibadete açıldı\n
+-- Kasabadaki dükkan yenilendi\n
+- Oyun Mekanikleri:\n
+-- Alış veriş arayüzü geliştirildi\n
+-- Portal birden fazla sefer kullanılabilir\n</string>
+
+
+    <string name="BlackCat_Name">Kara kedi</string>
     <string name="BlackCat_Gender">kadınsı</string>
+    <string name="BlackCat_Name_Objective">kedi</string>
+    <string name="BlackCat_Desc">Bu kapkara bir kedi</string>
+
+    <string-array name="BlackCat_Phrases">
+        <item>Mrrrrrr</item>
+        <item>Miyav...</item>
+        <item>Miyav!</item>
+    </string-array>
+
+    <string name="Str_lose">-1 güç</string>
+
+    <string name="SociologistNPC_Name">Sosyolog</string>
     <string name="SociologistNPC_Gender">erkeksi</string>
+    <string name="SociologistNPC_Name_Objective">Sosyolog</string>
+    <string name="SociologistNPC_Desc">Bu sosyolog, toplumun görüşlerini derlemek gibi kutsal bir vazifeyi üstlenmiş.</string>
+
+    <string name="SociologistNPC_AlreadyTaken">Bu anketi çoktan doldurdunuz, lütfen daha sonra tekrar gelin.</string>
+    <string name="SociologistNPC_Hi">Merhabalar!\n
+Birkaç dakikanızı ayırıp anketimizi doldurmak ister misiniz?\n
+(İnternet bağlantısı gerekmektedir.)\n
+Görüşlerinizi önemsiyoruz!</string>
+    <string name="SociologistNPC_InternetRequired">Ama internetiniz yokken anketi alamayız ki!</string>
+    <string name="SociologistNPC_DownloadError">Bir yerde bir yanlışlık oldu galiba, daha sonra tekrar deneyebilir misiniz?</string>
+
+    <string name="town_deco_library_sign_name">Kütüphane tabelası</string>
+    <string name="town_deco_library_sign_desc">Bu bir kütüphane binası gibi duruyor.</string>
+    <string name="town_deco_identifier_sign_name">Falcı Küresi tabelası</string>
+    <string name="town_deco_identifier_sign_desc">Bu binada bir falcı var sanki.</string>
+    <string name="town_deco_cinema_sign_name">Sinema tabelası</string>
+    <string name="town_deco_cinema_sign_desc">Burası da sinema salonuna benziyor.</string>
+    <string name="town_deco_INN_sign_name">Han tabelası</string>
+    <string name="town_deco_INN_sign_desc">Han mı? Ne pis kokuyor!</string>
+
+
+    <string name="HealthDart_Name">İyileştirme Dartı</string>
     <string name="HealthDart_Gender">erkeksi</string>
+    <string name="HealthDart_Info">Bu dartın ucu iyileştirme iksirine bandırılmış.</string>
+
+    <string name="HealthArrow_Name">İyileştirme Oku</string>
     <string name="HealthArrow_Gender">kadınsı</string>
+    <string name="HealthArrow_Info">Bu okun ucu iyileştirme iksirine bandırılmış.</string>
+
+    <string name="AmokDart_Name">Delidana Dartı</string>
     <string name="AmokDart_Gender">erkeksi</string>
+    <string name="AmokDart_Info">Dartın ucundaki solüsyon, herhangi birini anında zıvanadan çıkarabilir.</string>
+
+    <string name="AmokArrow_Name">Delidana Oku</string>
     <string name="AmokArrow_Gender">kadınsı</string>
+    <string name="AmokArrow_Info">Bu okun ucundaki solüsyon, herhangi birini anında zıvanadan çıkarabilir.</string>
+
+    <string name="WndHero_SkillLevel">Yetenek seviyesi</string>
+
+    <string name="town_deco_sofa_name">Pofuduk kanepe</string>
+    <string name="town_deco_sofa_desc">Yönetim, müşterileri için en iyi koltukları temin etmiş.</string>
+
+    <string name="town_deco_book_name">Kitap</string>
+    <string name="town_deco_book_desc">Biri kazara unutmuş olsa gerek.</string>
+
+    <string name="town_deco_screen_name">Ekran</string>
+    <string name="town_deco_screen_desc">Bu gizemli perdenin adı \"ekran\" ve içinde hareket eden resimler var!</string>
+
+    <string name="town_deco_stove_name">Taş fırın</string>
+    <string name="town_deco_stove_desc">Sıcacık... İnsanın içini ısıtıyor.</string>
+
+    <string name="town_deco_wooden_chair_name">Ahşap sandalye</string>
+    <string name="town_deco_wooden_chair_desc">Bildiğin ahşap işte.</string>
+
+    <string name="town_deco_snowy_plate_name">Karlı levha</string>
+    <string name="town_deco_snowy_plate_desc">Bu kadim levha sebebi bilinmeyen bir şekilde karla kaplanmış</string>
+
+    <string name="DogeMask_Name">Köpek Maskesi</string>
+    <string name="DogeMask_Info">Bu maskeyi taktığın anda dünyadaki en meşhur köpeğe dönüşüyormuşsun.</string>
     <string name="IntroScene_Txt">Her türden kahraman senden önce bu zindana girmeye cesaret etti. Bazıları hazineler ve senin adını ile bilmediğin sihirli eserlerle geri döndüler. Ama kimse zindanın derinliklerinde olduğu söylenen Yendor\'un Tılsımını almayı başaramadı. \n\n Kendinizi meydan okumaya hazır olarak görüyorsunuz, ama en önemlisi, bu talihin size gülümsediğini hissediyorsunuz. Şimdi kendi maceranıza başlama zamanı!</string>
 
 
@@ -496,6 +589,35 @@
 
     <string name="Dungeon_NoTips">Yazı okunmaz halde... </string>
     <string name="Dungeon_DeadEnd">Burada ne yapıyorsun?! </string>
+
+    <string-array name="Dungeon_Tips">
+        <item>Sendeki güç abartılacak bir şey değil, sakın kullanabileceğin silahları ve zırhları ihmal etme!</item>
+        <item>Her kapı baktığın anda görülecek değil ya!?\nZindan burası, gizli saklı kapılar için etrafı kolaçan et!</item>
+        <item>Güç iksiri içerek daha iyi eşyalar kullanabileceğin doğru ama Geliştirme Parşömeni ile eşyanın güç gereksinimini azaltabilirsin.</item>
+        <item>Biriktirdiğin altınları kasaba civarında, zindandaki mağazalarda veya çeşitli hizmetler alarak harcayabilirsin.</item>
+        <item>Goo\'dan sakının!</item>
+        <item>Piksel-SA - zindan için ihtiyacınız olan her şey!</item>
+        <item>İksirlerini ve parşömenlerini olabildiğince çabuk tanımlamaya çalış. Gerçekten ihtiyacın olmadıkça da kullanma!</item>
+        <item>Tok olmamak adamı öldürmez, ama miden kazınıyorsa yiyecek bir şeyler bulmalısın.</item>
+        <item>Sürpriz saldırıların isabet etmesi daha muhtemeldir. Mesela, geldiğini bildiğin bir düşmanı kapalı bir kapının hemen arkasında bekleyerek pusuya düşürebilirsin.</item>
+        <item>Kargaadam Tengu\'nun ortaya çıkmasına müsaade etme!</item>
+        <item>Piksel-SA. Daha çok harca, daha uzun yaşa.</item>
+        <item>Aynı anda birden fazla canavar tarafından saldırıya uğruyorsan, bir kapının arkasına çekilmeye çalış.</item>
+        <item>Hem uçuyor hem de yanıyorsan, suya girip ateşi söndüremezsin.</item>
+        <item>Aynı anda birden fazla Yaşam Çarmıhı bulundurmanın hiçbir mantığı yok, zaten dirilirken hepsini kaybedeceksin!\n
+Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!</item>
+        <item>DİKKAT! MAKİNELERİN BULUNDUĞU BÖLÜME GİRMEK TEHLİKELİ VE YASAKTIR!</item>
+        <item>Piksel-SA. Daha güvenli bir yaşam için.</item>
+        <item>Büyülü bir silahı geliştirirken silahınızdaki büyüden olabilirsiniz.</item>
+        <item>Dönüşüm Kuyusu, başka hiçbir türlü elde edemeyeceğiniz eşyalar düşürebilir.</item>
+        <item>Bir silahı büyülemenin tek yolu Silah Geliştirme Parşömeni kullanarak silahı geliştirmektir.</item>
+        <item>Majestelerinin huzurunda hiçbir silaha müsaade edilmez!</item>
+        <item>Piksel-SA. Eskisini getir, yenisini götür. Tabii yeterli paran varsa :D</item>
+        <item>Bu metin iblisçe yazılmış.</item>
+        <item>Bu metin iblisçe yazılmış.</item>
+        <item>Bu metin iblisçe yazılmış.</item>
+    </string-array>
+
 
     <string-array name="Challenges_Names">
         <item>Diyette</item>
@@ -704,6 +826,9 @@
     <string name="LloidsBeacon_Preventing">Bir çeşit güçlü ve sihirli aura Llody\'un Fenerini kullanmanı engelliyor!</string>
     <string name="LloidsBeacon_Creatures">Etraftaki yaratıkların psişik auorası Lloyd\'un fenerini kullanmanı engelliyor</string>
     <string name="LloidsBeacon_Return">Lloyd\'un feneri başarıyla şu anki konuma ayarlandı.İstediğinde buraya geri dönebilirsin.</string>
+    <string name="LloidsBeacon_Set">\n\nBu pastırma Zindanın %dkatında bir yerlerde duruyordu.</string>
+
+
     <string name="Stylus_Name">Esrarlı Kalem</string>
     <string name="Stylus_ACInscribe">KAZI</string>
     <string name="Stylus_Info">Bu gizemli kalem karanlık bir taştan yapılmış.Bu kalem ile bir rün veya kabartma çizebilirsin ama ne olacağını seçmeye gücün yetmez.</string>
@@ -913,6 +1038,7 @@
     <string name="TitleScene_InternalStorageLow">Dahili depolamada\n yeterli yer yok\n İlerlemen kaybolabilir!</string>
 
 
+    <string name="AboutScene_Txt_Intro">NYRDS yapımı olan Remixed Dungeon, Watabou\'nun Pixel Dungeon adlı yapımını esas almıştır.</string>
     <string name="AboutScene_Code">Kodlama:</string>
     <string name="AboutScene_Graphics">Grafikler:</string>
     <string name="AboutScene_Music">Müzik:</string>
@@ -993,6 +1119,7 @@
     <string name="AzuterronNPC_Gender">erkeksi</string>
     <string name="AzuterronNPC_Name_Objective">Yabancı</string>
     <string name="AzuterronNPC_Desc">Siyah bir sis ile kaplı gizemli bir figür.</string>
+    <string name="AzuterronNPC_Quest_Start">Ah, ne oluyor? Oo, sen beni görebiliyorsun, değil mi? Demek \"onlar\"dan değilsin sen. Sen de bu yaratıklardan haz etmiyor gibisin. Bak ne diyeceğim, ufak bir işimi görürsen sana bir güzellik yapabilirim. Bu katın bir yerlerinde karanlık bir yaratık var, bir \"Hain Ruh\". Senden, onun kalbini söküp bana getirmeni istiyorum. Unutmadan, eğer bir şeyler satın almak istiyorsan sormaktan çekinme.</string>
     <string name="AzuterronNPC_Quest_Reminder">Bana yardım et ve ben de sana yardım edeyim.</string>
     <string name="AzuterronNPC_Quest_End">Harika. Bu iksiri al, faydasını göreceksin.</string>
     <string name="Journal_Azuterron">Yabancı</string>
@@ -1044,17 +1171,30 @@
 
 
     <string name="BlackSkullOfMastery_Name">Ruh Çağıran</string>
+    <string name="BlackSkullOfMastery_Info">Bu oldukça antika bir eser, tarihteki ilk Ölüçağıranlar tarafından, cennetten kovulan iblisin dünyaya saçılmış ruhlarını toplamak için yapılmış. Üzerine efsunlanmış son derece güçlü bir büyü sayesinde ölü çağırma potansiyelinizi sezinler. Ancak o kadar eski bir büyü ki dokunduğunuz an kırılacakmış gibi.</string>
+    <string name="BlackSkullOfMastery_Title">İstersen büyüyü kırabilirsin. Ya da büyülü içeriğini, bir şekilde, özümseyip bir Kara Büyücü\'ye dönüşebilirsin ki bu da sana, elindeki antikanın kendisinin ve büyülerinin gücünü bahşedecektir.</string>
+
+    <string name="BlackSkullOfMastery_Lich">Kara Büyücü\'ye dönüş</string>
     <string name="BlackSkullOfMastery_Necromancer">Büyüyü Kırdın</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">Kara Büyücülük, Ölüçağıran klasmanının en üst mertebesidir. Yaşam ile ölüm arasında sıkışmış olan Kara Büyücü\'nün ölüçağırma yetenekleri son derece gelişmiş olsa da kılıç kılıca mücadelede küçük bir çocuktan farkı yoktur.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Veyahut, eğer büyüyü bozmayı tercih edersen bu eseri arzu ettiğin gibi kullanabilirsin.</string>
+
+
     <string name="BlackSkull_Activated">Siyah Kurukafa Uyandı !</string>
     <string name="BlackSkull_Ressurrect">Siyah Kurukafa sana hizmet etmek için yükseldi </string>
     <string name="BlackSkull_Deactivated">Kara Kurukafa Bir Kez Daha Uykuya Daldı.</string>
 
 
     <string name="NecromancerArmor_Name">Kemik zırh</string>
+    <string name="NecromancerArmor_Info">Bu zırh, bir Ölüçağıran\'ın her biri için 5 ruh karşılığında 2 adet Ölüm Özlü çağırmasını sağlar. Ölümün dahi durduramadığı bu hizmetkarlar, efendilerini daima takip eder ve efendilerinin düşmanlarına saldırırlar. Ölüm Özlüler her karakter seviyesinde daha da güçlenir.</string>
     <string name="NecromancerArmor_NotNecromancer">Sadece Nekromensırlar bu zırhı kullanabilir !</string>
 
 
     <string name="NecromancerRobe_Name">Nekromancer kaftanı</string>
+    <string name="NecromancerRobe_Info">Bir Ölüçağıran olarak bu cübbeyi giymekle 5 ruha mal olan bir Ölüm Özlü çağırma hakkınız olur. Ortaya çıkan Ölüm Özlü, efendisinin dizinin dibinde büyüyen bir yardakçıdır.</string>
+
+
+
     <string name="HeroClass_Necromancer">ruhçağıran</string>
 
     <string name="HeroSubClass_NameLich">lich</string>
@@ -1063,18 +1203,31 @@
         <item>Nekromensırlar 15 hp ile başlar</item>
         <item>nekromensırlar seviye 7 iskelet anahtarı ile başlarlar </item>
         <item>iyileştirme potu başlangıçta tanımlıdır</item>
+        <item>nekromensırlar seviye 7 iskelet anahtarı ile başlarlar </item>
+        <item>iyileştirme potu başlangıçta tanımlıdır</item>
     </string-array>
 
 
     <string name="Deathling_Name">Ölü Hizmetkar</string>
     <string name="Deathling_Gender">erkeksi</string>
     <string name="Deathling_Name_Objective">Ölü Hizmetkar</string>
+    <string name="Deathling_Desc">Ölüm Özlü, zindanda ölmüş ve maceracının biri tarafından çağırılacak kadar şanssız olan bir kahramandır.</string>
+
+
+
     <string name="NecromancerRobe_PetLimitReached">Nekromansi : Çağırma Limiti Doldu (Şuanki Sınır : %d)!</string>
+    <string name="Necromancy_NotEnoughSouls">\"%1$s\" büyüsünü yapmak için yeterli manan yok.</string>
+
     <string name="Necromancy_SoulsCountLabel">ruhlar</string>
 
     <string name="Necromancer_ACSpecial">kara büyü</string>
     <string name="Necromancy_ReincarnationName">reenkarnasyon</string>
+    <string name="Necromancy_ReincarnationTriggered">Güçlerin, bizzat ölümü reddediyor. Ancak, ne yazık ki, topladığın tüm eşyaların ve ruhların yok oldu</string>
     <string name="Necromancy_SummonDeathlingName">Ölümsüzü Çağır</string>
+
+    <string name="Necromancy_BecameALich">Kara Büyücü oldun! Güçlerin gelişti ve maksimum ruh kapasiten ikiye katlandı! Ancak %1$d güç kaybettin</string>
+
+
 
     <string name="StartScene_UnlockNecromancer">bu karakteri açmak için diğer türlerden biri ile lich i öldür</string>
 
@@ -1082,12 +1235,14 @@
     <string name="Necromancy_Title">Ölüçağırma</string>
 
 
+    <string name="WndSadGhostNecro_Text">Üzerindeki lanetten ötürü kıvranan bir ruh. Bana bir şeyler soracak galiba. Ölüçağırma yeteneklerim sayesinde, isteğinin yerine getirildiğini söyleyerek onu kandırabilirim. Bu bana biraz zaman kazandıracaktır. Ama doğru mu bu yapacağım?</string>
     <string name="WndSadGhostNecro_Yes">Evet İradesini Kır.</string>
     <string name="WndSadGhostNecro_No">hayır, bırak konuşsun</string>
     <string name="WndSadGhostNecro_Persuaded">üzgün hayalet domine edildi</string>
 
 
 
+    <string name="WndSettings_UiScale">Kullanıcı arayüzü boyutu</string>
     <string name="DarkSacrifice_Name">Kara Kurban</string>
     <string name="DarkSacrifice_Info">Patlama oluşturmak için itaatkâr bir köleyi kurban et. Patlama alanı yetenek seviyene ve hizmetkârın kalan canına bağlı.</string>
     <string name="DarkSacrifice_Ok">Al canımı!</string>
@@ -1095,9 +1250,13 @@
     <string name="DarkSacrifice_Resist">Beni kontrol edemezsin!</string>
     <string name="DarkSacrifice_Hint">Kurban etmek istediğin sadık hizmetkârını seç!</string>
 
+    <string name="Exhumation_Name">Mezar Yağmacılığı</string>
+    <string name="Exhumation_Info">Lahdi açmak başlı başına meşum bir hareket olsa da birinin Ölüm\'e hizmet etmesi için yeterli değildir. Bu Yasak Ayin\'i gerçekleştiren kişi, çok yüksek bir ihtimalle (gerçekleştirenin ustalığına bağlı olarak artar), yerde yatan zavallı ruhu boyunduruk altına alacaktır.</string>
+    <string name="Exhumation_NoGrave">Mezar Yağmacılığı gerçekleştirebileceğin bir mezar yok.</string>
     <string name="Exhumation_Ok">Sana itaat edeceğim.</string>
 
     <string name="RaiseDead_Name">Ölüleri Uyandır</string>
+    <string name="RaiseDead_Info">Yakın zaman öldürülen bir yaratığı canlandırma (ayinin gerçekleşmesi için son derece taze olması gerekir). Bu karanlık sanat kullanılırken asla unutulmaması gereken bir husus var: Her yaratık diriltilebilir ancak tüm yaratıklara hükmetmek aynı zorlukta olmayacak.</string>
     <string name="RaiseDead_NoSpace">Yakında boşluk olmadığı için ölüleri uyandırma başarısız oldu.</string>
     <string name="RaiseDead_NoKill">Ölüleri uyandırmayı denemeden önce birini öldürmen gerekiyor.</string>
 
@@ -1116,21 +1275,42 @@
     <string name="RottenFish_Info">Çürümüş balık, leş gibi kokuyor</string>
     <string name="RottenFish_Taste">Iyy iğrenç!</string>
 
+    <string name="gdpr_title">Reklam Tecrübenizi Kişiselleştirin</string>
+    <string name="gdpr_text">Remixed Dungeon, Admob ve Appodeal gibi birtakım kuruluşlarla çalışarak reklam deneyiminizi kişiselleştirir. Reklamcılar ve iş ortakları cihaz kimliklerini, demografik ve ilgisel verileri, size uygun bir reklam akışı  sağlamak için toplayabilir ve işleyebilir. Buna rıza göstererek reklam geliştiricilerinin ve iş ortaklarının size uygun gördüğü reklamlara rastlayacaksınız. \n\nBunu kabul ederek 16 yaşınızdan büyük olduğunuzu ve kişiselleştirilmiş bir reklam deneyimi istediğinizi onaylamış olursunuz.\n\n</string>
+    <string name="gdpr_agree">Evet, kabul ediyorum</string>
+    <string name="gdpr_disagree">Hayır, teşekkür ederim</string>
+    <string name="gdpr_choose">Lütfen bir seçim yapın</string>
+
+    <string name="Mob_StaHuntingStatus2">Bu %1$s, %2$savlıyor.</string>
+    <string name="Mob_StaFleeingStatus2">Bu %1$s,%2$s\'den/dan kaçıyor.</string>
+
+    <string name="Mob_StaTerrorStatus">Bu %1$s korkmuş</string>
+    <string name="Mob_StaTerrorStatus2">Bu %1$s, %2$s tarafından korkutulmuş.</string>
+
+    <string name="Mob_StaAmokStatus">Bu %1$s, delidana gibi koşuyor.</string>
+
+    <string name="WndSaveSlotSelect_LoadAutoSave">Oto-kaydı yükle</string>
+
+    <string name="TownScript_NeedWeapon">Zindana yumuklarımla dalmak istemiyorum!\nKasabadaki dükkana bir uğrasak nasıl olur?</string>
     <string name="WndDonate_silver">gümüş</string>
     <string name="WndDonate_gold">altın</string>
     <string name="WndDonate_ruby">yakut</string>
 
     <string name="WndDonate_donate">bağış:</string>
     <string name="WndDonate_notConnected">bağlantı yok :(</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon - her zaman ve herkes için ücretsiz.\n\nEğer isterseniz oyunu daha iyi bir hale getirmek için bize yardımcı olabilirsiniz.\n\nİçten şükranlarımızın yanı sıra bir kozmetik seti alacaksınız.</string>
+
     <string name="WndDonate_silverDonate">gümüş bağış</string>
     <string name="WndDonate_goldDonate">altın bağış</string>
     <string name="WndDonate_rubyDonate">yakut bağış</string>
 
     <string name="WndDonate_silverDonateText">Her bağış projemizin geliştirilmesinde yardımcı olacaktır</string>
     <string name="WndDonate_goldDonateText">Yardımınız için teşekkürler</string>
+    <string name="WndDonate_rubyDonateText">Cömertiğiniz sayesinde Remixed Dungeon\'ı geliştirmeye devam edebileceğiz.</string>
+
     <string name="WndDonate_silverDonateText2">Aynı zamanda tüm oyun modlarındaki reklamları kaldırır ve avcı karakterinin kilidini açar</string>
     <string name="WndDonate_goldDonateText2">Aynı zamanda elf karakterinin kilidini açar.</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">standart</string>
@@ -1253,7 +1433,15 @@
     <string name="FortuneTellerNPC_Name">falcı</string>
     <string name="FortuneTellerNPC_Gender">kadınsı</string>
     <string name="FortuneTellerNPC_Name_Objective">falcı</string>
+    <string name="FortuneTellerNPC_Desc">Uzunca ve rengarenk giyinmiş bu hanımefendi, falcılık sanatında ustalaşmış olmak için çok genç görünüyor. Biraz yakınlaşınca mırıldanmalarını duyuyor ve kristal küresine fal taşı gibi açılmış gözlerle baktığını görüyorsun.</string>
+
+
+    <string name="ServiceManNPC_Limit_Reached">Af buyurun ancak bugünlük limitinize ulaşmış bulunmaktasınız. Eğer arzu ederseniz, her seviye atladığınızda hizmetimizden faydalanabilirsiniz.</string>
+
+
+
     <string name="WndFortuneTeller_Instruction">bu eşyanın içindeki gizemleri açığa çıkarabilirim bu sana %d altına mal olur</string>
+    <string name="WndFortuneTeller_No_Item">Hey, paranı bir hiç uğruna harcamayacaksın, değil mi? Envanterinde tanımlanmamış hiçbir eşya yok.</string>
     <string name="WndFortuneTeller_Title">Falcı.</string>
 
 
@@ -1265,14 +1453,23 @@
 
 
     <string name="WndLibrary_Catalogue_Title">Kütüphane</string>
+    <string name="WndLibrary_Catalogue_Instruction">Lütfen aşağıdaki kategorilerden birini seçin.</string>
     <string name="WndLibrary_Mobs_Btn">Canavarlar</string>
     <string name="WndLibrary_Items_Btn">Eşyalar</string>
     <string name="WndLibrary_Codex_Btn">Hikayeler</string>
     <string name="WndLibrary_Levels_Btn">Zindan</string>
 
 
+    <string name="WndMovieTheatre_Instruction_2">%2$d hakkınızdan %1$d tanesini izlediniz. Atladığınız her seviye için yeni bir film izleme hakkı kazanacaksınız.</string>
+
+
+
     <string name="town_deco_blue_carpet_name">Halı</string>
+    <string name="town_deco_blue_carpet_desc">Mor işlemelere bezenmiş lüks ve mavi bir halı.</string>
+
     <string name="town_table_fortune_name">Masa</string>
+    <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
+
     <string name="ConcreteBlock_Name">Ağır beton bloğu</string>
     <string name="ConcreteBlock_Description">Görünüşe Göre bu bloğu ittirmek için %d güç puanı gerekiyor.</string>
     <string name="Hero_AnotherTry">Öldün.\n Tekrar denemek ister misiniz?</string>
@@ -1367,6 +1564,9 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
         <item>Herhangi Bir Yemek Yemek Az Miktarda Can Doldurur.</item>
         <item>Güç İksirlerini Tanıyabilirsin.</item>
     </string-array>
+    <string-array name="HeroClass_MagPerks">
+        <item>Büyücüler, asaları yakın dövüş silahı olarak kullanabilir. </item>
+    </string-array>
     <string-array name="HeroClass_RogPerks">
         <item>Başıbozuk oyuna Gölge Yüzüğü+1 ile başlar.</item>
         <item>Bu yüzük tanılanmış ve parmağına takılı olarak gelir.</item>
@@ -1382,6 +1582,14 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
         <item>Bir çiy tanesinden daha fazla sağlık kazanır.</item>
         <item>Etraftaki yaratıkları sezme yeteneği fazladır.</item>
     </string-array>
+    <string-array name="HeroClass_ElfPerks">
+        <item>Elfler geliştirilmiş ahşap bir yay ve bir sürü ok ile başlarlar. </item>
+        <item>Elfler yaylarda son derece uzmandır ve de çeviktirler. </item>
+        <item>Elfler çiy damlacıklarından daha fazla can kazanır. </item>
+        <item>Elfler yakın dövüş silahlarında daha az ustadır. </item>
+    </string-array>
+
+
     <string name="HeroSubClass_NameGlad">gladyatör</string>
     <string name="HeroSubClass_DescGlad">Yakın silah ile yapılan her başarılı vuruş _Gladyatör\'ün_ kombo yapmasına olanak sağlar, her başarılı vuruş ek hasar verir.</string>
     <string name="HeroSubClass_NameBers">barbar</string>
@@ -2017,6 +2225,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
 
     <string name="BlackSkull_Name">siyah kurukafa</string>
+    <string name="BlackSkull_Info">Obsidiyenden, ufak bir kafatası. Ölümtopya\'dan kalmış bir parça gibi, ama Kara Büyücü yenildikten sonra tüm gücünü kaybetmişe benziyor. Her nasılsa, eline aldığında zihnin bulanıyor ve hissediyorsun ki \"yiyecek bir şeyler\" istiyor!</string>
     <string name="BlackSkull_Gender">erkeksi</string>
 
     <string name="BlackSkull_Name_Awakened">uyanmış siyah kurukafa</string>
@@ -2078,6 +2287,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
 
 
+    <string name="ElvenDagger_Name">elf hançeri</string>
     <string name="ElvenDagger_Gender">erkeksi</string>
 
 
@@ -2087,11 +2297,14 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
 
 
+    <string name="LibraryBook_Name">Kütüphane kitabı</string>
     <string name="LibraryBook_Description">Bu cilt gerçekten devasa. Maceracıların zindanda keşfettikleri hakkında tüm bilgileri içeriyor.</string>
 
 
 
 
+    <string name="TrapWnd_Title">Tuzak</string>
+    <string name="TrapWnd_Step">Gerçekten de bu tuzağın üstüne basmak istiyor musun? Ölme ihtimalin var. </string>
     <string name="BadgesScene_Title">Rozetlerin</string>
 
 
@@ -2220,6 +2433,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="ScarecrowNPC_Name">korkuluk</string>
     <string name="ScarecrowNPC_Gender">nötr</string>
     <string name="ScarecrowNPC_Name_Objective">korkuluk</string>
+    <string name="ScarecrowNPC_Quest_Reminder">İhtiyacım olan tek şey 5 tane şeker. Ohh, ödüller çok tatlı olacak! </string>
     <string name="Journal_ScarecrowNPC">korkuluk</string>
 
     <string name="Mods_CreatedBy">Yaratan:</string>
@@ -2227,6 +2441,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="Mods_AuthorEmail">Sahibinin epostası:</string>
     <string name="Mods_RestartRequired">Yeniden başlatma gerekiyor</string>
 
+    <string name="Spells_NotTooFast">%s kullanım için henüz hazır değil</string>
     <string name="ElvenBow_Name">elf yayı</string>
     <string name="ElvenBow_Gender">erkeksi</string>
 
@@ -2271,6 +2486,9 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="TownsfolkSilentNPC_Message1">hımh.</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">hmmmm</string>
+
+
+    <string name="ServiceManNotReadyNPC_Message">Üzgünüm ama bu bina henüz hazır değil! </string>
 
 
     <string name="BellaNPC_Name">Bella</string>
@@ -2334,6 +2552,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     </string-array>
 
     <string name="WandOfShadowbolt_Name">şimşek gölgesi asası</string>
+    <string name="WandOfShadowbolt_Info">Bu asa karanlık, kötü bir enerji yayıyor. </string>
     <string name="TownGuardNPC_Name">köy gardiyanı</string>
     <string name="TownGuardNPC_Gender">erkeksi</string>
     <string name="TownGuardNPC_Name_Objective">köy gardiyanı</string>
@@ -2379,6 +2598,8 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
     <string name="town_deco_snow_name">kar</string>
     <string name="town_deco_bell_name">çan </string>
+    <string name="town_deco_bell_desc">Tipik bir kilise çanı. Uzun zamandır kimse çalmamış gibi görünüyor. Hatta halatı bile kayıp. </string>
+
     <string name="town_deco_bell_tower_name">çan kulesi</string>
     <string name="town_deco_chimney_name">baca</string>
     <string name="town_deco_window_name">pencere </string>
@@ -2405,10 +2626,14 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="town_deco_floor_desc">bu zemin basit ahşaptan yapılmış.tam olarak neye bakıyorsun ?</string>
 
     <string name="town_deco_carpet_name">Halı</string>
+    <string name="town_deco_carpet_desc">Özel konuklar için rezerve edilmiş lüks, kırmızı halı. </string>
+
     <string name="town_deco_movies_door_name">kapı</string>
     <string name="Scroll_Name">parşömen \"%s\"</string>
     <string name="Scroll_Info">bu parşömen çözülemez yazıtlarla dolu ve başlığı ayılar. %s acaba okuyunca ne olacak ?</string>
     <string name="Scroll_ACRead">OKU</string>
+    <string name="Scroll_Blinded">Kör edilmişken bir parşömen okuyamazsın. </string>
+
     <string-array name="Scroll_Runes">
         <item>KAUNAN</item>
         <item>SOWILO</item>
@@ -2765,6 +2990,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="ResultDescriptions_Fall">%d. seviyede ölümüne düştün</string>
     <string name="ResultDescriptions_Win">Yendor\'un Tılsımı edindin</string>
     <string name="ResultDescriptions_Immured">%d. seviyede taşa sıkıştın</string>
+    <string name="ResultDescriptions_Unknown">%d seviyede, gizemli koşullar altında öldü. </string>
     <string name="Armor_EquipCursed">%sın acı bir şekilde vücudunu sıkıştırıyor</string>
     <string name="Armor_Identify">%1$s ile aşina olduğundan dolayı %2$s olduğunu anlıyorsun.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
@@ -3157,4 +3383,14 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="Potion_ItemFliesAway">%s elinden uçup gitti.</string>
     <string name="Potion_FoodRefreshed">%s artık yenebilir gibi görünüyor</string>
 
-</resources>
+
+    <string name="KindOfBow_SelectArrowKind">Hangi okları kullanmalıyım? </string>
+    <string name="SmashSpell_Info">Yukarı zıpla ve yere çarptığında etraftaki düşmanları sersemletip, fiziksel hasar veren bir darbe yap. </string>
+    <string name="SmashSpell_NeedWeapon">Bu eylem için bir silaha ihtiyacım var. </string>
+
+    <string name="CloakSpell_Name">Pelerin</string>
+    <string name="CloakSpell_Info">Görünmez olmak için gölgelere karış. Fark edilme şansını büyük oranda düşürür. Yakında düşmanlar varken kullanılamaz. </string>
+    <string name="WndHero_Awareness">Farkındalık</string>
+    <string name="Badges_GoldCollected5">35000 altın toplandı</string>
+    <string name="Spells_NotInOwnBody">Ruhun bedeninden ayrıyken %s yapamazsın. </string>
+    </resources>

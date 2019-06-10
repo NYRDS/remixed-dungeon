@@ -25,11 +25,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class ArmoredStatue extends Mob {
 
-	@NonNull
+	@NotNull
 	private Armor armor;
 
 	public ArmoredStatue() {
@@ -102,7 +102,7 @@ public class ArmoredStatue extends Mob {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 		if (armor != null) {
 			Dungeon.level.drop( armor, getPos() ).sprite.drop();
 		}

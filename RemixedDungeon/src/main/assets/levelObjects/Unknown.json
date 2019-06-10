@@ -1,0 +1,33 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "PortalGate_Desc",
+      "name": "PortalGate_Name"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/portals.png",
+      "imageIndex" : 0,
+      "width":32,
+      "height":32,
+      "animations": {
+        "basic": {
+          "fps": 1,
+          "frames": [0],
+          "looped": true
+        },
+        "activation":  {
+          "fps": 8,
+          "frames": [0, 1, 2, 3],
+          "looped": false
+        },
+        "activatedLoop":  {
+          "fps": 8,
+          "frames": [4, 5, 6, 7, 8],
+          "looped": true
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -44,7 +43,7 @@ public class Sign extends LevelObject {
 
 	@Override
 	public boolean interact(Char hero) {
-		if(hero instanceof Hero && !((Hero) hero).heroClass.forbidden(CommonActions.AC_READ)) {
+		if(!hero.getHeroClass().forbidden(CommonActions.AC_READ)) {
 			if (hero.hasBuff(Blindness.class )) {
 				GLog.w(Game.getVar(R.string.Codex_Blinded));
 			} else {

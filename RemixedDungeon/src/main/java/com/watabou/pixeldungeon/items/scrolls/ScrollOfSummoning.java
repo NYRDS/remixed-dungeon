@@ -35,7 +35,6 @@ public class ScrollOfSummoning extends Scroll {
 			} else {
 				GLog.w( Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}
-			level.spawnMob(mob);
 			WandOfBlink.appear( mob, cell );
 		} else {
 			GLog.w(Game.getVar(R.string.No_Valid_Cell));

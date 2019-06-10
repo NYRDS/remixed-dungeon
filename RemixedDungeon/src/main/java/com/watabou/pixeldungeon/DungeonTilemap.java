@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
-import androidx.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public abstract class DungeonTilemap extends Tilemap {
 

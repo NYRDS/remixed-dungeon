@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RatKing extends NPC {
 
 	@Packable
@@ -79,7 +81,7 @@ public class RatKing extends NPC {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		if(friendly(Dungeon.hero)){
 			anger=2;
 		} else {
@@ -100,7 +102,7 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		
 		if (!friendly(hero)) {

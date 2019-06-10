@@ -69,26 +69,23 @@ public abstract class InventoryScroll extends Scroll {
 	protected abstract void onItemSelected( Item item );
 
 	protected static boolean identifiedByUse = false;
-	protected static WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				
-				((InventoryScroll)curItem).onItemSelected( item );
-				getUser().spendAndNext( TIME_TO_READ );
-				
-				Sample.INSTANCE.play( Assets.SND_READ );
-				Invisibility.dispel(getUser());
-				
-			} else if (identifiedByUse) {
-				
-				((InventoryScroll)curItem).confirmCancelation();
-				
-			} else {
-				
-				curItem.collect( getUser().belongings.backpack );
-				
-			}
+	protected static WndBag.Listener itemSelector = item -> {
+		if (item != null) {
+
+			((InventoryScroll)curItem).onItemSelected( item );
+			getUser().spendAndNext( TIME_TO_READ );
+
+			Sample.INSTANCE.play( Assets.SND_READ );
+			Invisibility.dispel(getUser());
+
+		} else if (identifiedByUse) {
+
+			((InventoryScroll)curItem).confirmCancelation();
+
+		} else {
+
+			curItem.collect( getUser().belongings.backpack );
+
 		}
 	};
 }

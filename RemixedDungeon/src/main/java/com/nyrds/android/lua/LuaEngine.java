@@ -11,6 +11,8 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.apache.commons.io.input.BOMInputStream;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LoadState;
 import org.luaj.vm2.LuaError;
@@ -31,9 +33,6 @@ import org.luaj.vm2.lib.jse.JseMathLib;
 import org.luaj.vm2.lib.jse.JseOsLib;
 
 import java.io.InputStream;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class LuaEngine implements ResourceFinder {
 
@@ -56,7 +55,7 @@ public class LuaEngine implements ResourceFinder {
 		}
 		return LuaValue.NIL;
 	}
-
+/*
 	public LuaValue call(String method, Object arg1, Object arg2) {
 		try {
 			LuaValue methodForData = globals.get(method);
@@ -66,7 +65,7 @@ public class LuaEngine implements ResourceFinder {
 		}
 		return LuaValue.NIL;
 	}
-
+*/
 	@Nullable
 	public static LuaTable module(String module, String fallback) {
 		LuaValue luaModule = getEngine().call("require", module);
@@ -134,7 +133,7 @@ public class LuaEngine implements ResourceFinder {
 		return module(module,module);
 	}
 
-	public void runScriptFile(@NonNull String fileName) {
+	public void runScriptFile(@NotNull String fileName) {
 		try {
 			globals.loadfile(fileName).call();
 		} catch (LuaError err) {

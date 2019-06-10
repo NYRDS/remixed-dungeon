@@ -39,7 +39,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Warlock extends Mob implements IZapper {
 
@@ -89,7 +89,7 @@ public class Warlock extends Mob implements IZapper {
 
 		for (int i = 1; i < 4; i++) {
 			int next = Ballistica.trace[i + 1];
-			if (Dungeon.level.cellValid(next) && (Dungeon.level.passable[next] || Dungeon.level.avoid[next]) && Actor.findChar(next) == null) {
+			if (level().cellValid(next) && (level().passable[next] || level().avoid[next]) && Actor.findChar(next) == null) {
 				cell = next;
 				Dungeon.observe();
 			}
@@ -100,12 +100,7 @@ public class Warlock extends Mob implements IZapper {
 			final Char ch = this;
 
 			move(cell);
-			fx(cell, new Callback() {
-				@Override
-				public void call() {
-					WandOfBlink.appear(ch, tgt);
-				}
-			});
+			fx(cell, () -> WandOfBlink.appear(ch, tgt));
 		}
 	}
 
@@ -131,7 +126,7 @@ public class Warlock extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
+	public boolean zap(@NotNull Char enemy) {
 		if (super.zap(enemy)) {
 			if (getEnemy() == Dungeon.hero && Random.Int(2) == 0) {
 				Buff.prolong(getEnemy(), Weakness.class, Weakness.duration(getEnemy()));

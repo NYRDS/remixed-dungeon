@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Level;
 
 public class ScrollOfMirrorImage extends Scroll {
 
@@ -31,15 +32,16 @@ public class ScrollOfMirrorImage extends Scroll {
 	@Override
 	protected void doRead() {
 
+		Level level = Dungeon.level;
+
 		int nImages = NIMAGES;
 		while (nImages > 0 ) {
-			int cell = Dungeon.level.getEmptyCellNextTo(getUser().getPos());
+			int cell = level.getEmptyCellNextTo(getUser().getPos());
 
-			if(!Dungeon.level.cellValid(cell))
+			if(!level.cellValid(cell))
 				break;
 
 			MirrorImage mob = new MirrorImage(getUser());
-			Dungeon.level.spawnMob(mob);
 			WandOfBlink.appear( mob, cell );
 			nImages--;
 		}

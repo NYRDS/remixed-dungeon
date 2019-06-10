@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.mechanics;
 
+import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.levels.Level;
@@ -28,6 +29,12 @@ public class Ballistica {
 
 	public static int cast( int from, int to, boolean magic, boolean hitChars) {
 		return cast(from, to, magic, hitChars, false);
+	}
+
+	@LuaInterface
+	public static int getBacktraceCell(int distFromEnd) {
+		distFromEnd = distFromEnd > distance - 1 ? distance - 1 : distFromEnd;
+		return trace[distance - 1 - distFromEnd];
 	}
 
 	public static int cast( int from, int to, boolean magic, boolean hitChars, boolean hitObjects ) {

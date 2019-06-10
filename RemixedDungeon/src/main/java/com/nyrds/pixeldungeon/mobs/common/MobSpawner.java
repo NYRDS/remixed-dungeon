@@ -7,11 +7,11 @@ import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class MobSpawner {
 
-	@NonNull
+	@NotNull
 	static public Mob spawnRandomMob(Level level, int position) {
 		Mob mob = Bestiary.mob(level);
 		mob.setPos(position);

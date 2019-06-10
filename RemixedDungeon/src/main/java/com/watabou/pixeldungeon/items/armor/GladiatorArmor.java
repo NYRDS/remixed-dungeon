@@ -16,7 +16,7 @@ public class GladiatorArmor extends WarriorArmor {
 	}
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.GLADIATOR) {
+		if (hero.getSubClass() == HeroSubClass.GLADIATOR) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.WarriorArmor_NotWarrior) );

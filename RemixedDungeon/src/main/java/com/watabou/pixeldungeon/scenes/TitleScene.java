@@ -28,12 +28,11 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChangelogButton;
+import com.watabou.pixeldungeon.ui.DashboardItem;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -91,14 +90,10 @@ public class TitleScene extends PixelScene {
 				- DashboardItem.SIZE);
 		add(btnBadges);
 
-		DashboardItem btnAbout = new DashboardItem(Game.getVar(R.string.TitleScene_About), 1) {
-			@Override
-			protected void onClick() {
-				RemixedDungeon.switchNoFade(AboutScene.class);
-			}
-		};
-		btnAbout.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
-		add(btnAbout);
+
+		ModsButton btnMods = new ModsButton();
+		btnMods.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
+		add(btnMods);
 
 		DashboardItem btnPlay = new DashboardItem(Game.getVar(R.string.TitleScene_Play), 0) {
 			@Override
@@ -106,7 +101,7 @@ public class TitleScene extends PixelScene {
 				RemixedDungeon.switchNoFade(StartScene.class);
 			}
 		};
-		btnPlay.setPos(w / 2 - btnPlay.width(), btnAbout.top()
+		btnPlay.setPos(w / 2 - btnPlay.width(), btnMods.top()
 				- DashboardItem.SIZE);
 		add(btnPlay);
 
@@ -135,20 +130,20 @@ public class TitleScene extends PixelScene {
 			btnPlay.setPos(w / 2 - btnPlay.width() * 2, dashBaseline);
 			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
 			btnBadges.setPos(w / 2, dashBaseline + btnBadges.height()/3);
-			btnAbout.setPos(btnBadges.right(), dashBaseline);
+			btnMods.setPos(btnBadges.right(), dashBaseline);
 		} else {
-			btnPlay.setPos(w / 2 - btnPlay.width(), btnAbout.top()
+			btnPlay.setPos(w / 2 - btnPlay.width(), btnMods.top()
 					- DashboardItem.SIZE + 5);
 			btnHighscores.setPos(w / 2, btnPlay.top());
 			btnBadges.setPos(w / 2 - btnBadges.width(), dashBaseline + 5);
-			btnAbout.setPos(w / 2, dashBaseline + 5);
+			btnMods.setPos(w / 2, dashBaseline + 5);
 		}
 
 		Archs archs = new Archs();
 		archs.setSize(w, h);
 		addToBack(archs);
 
-		Text version = Text.createBasicText("v " + Game.version, font1x);
+		Text version = Text.createBasicText(Game.version, font1x);
 		version.hardlight(0x888888);
 		version.setPos(w - version.width(), h - version.height());
 		add(version);
@@ -188,7 +183,18 @@ public class TitleScene extends PixelScene {
             }
         });
 
-		leftGroup.add(new ModsButton());
+        Image img = new Image(Assets.DASHBOARD,DashboardItem.IMAGE_SIZE,1);
+
+        img.setScale(0.45f,0.45f);
+        ImageButton btnAbout = new ImageButton(img){
+			@Override
+			protected void onClick() {
+				RemixedDungeon.switchNoFade(AboutScene.class);
+			}
+		};
+
+
+        leftGroup.add(btnAbout);
 
 		leftGroup.setPos(0,0);
 		add(leftGroup);
@@ -246,56 +252,4 @@ public class TitleScene extends PixelScene {
 		add(fb);
 	}
 
-	private static class DashboardItem extends Button {
-
-		public static final float SIZE = 48;
-
-		private static final int IMAGE_SIZE = 32;
-
-		private Image image;
-		private Text label;
-
-		public DashboardItem(String text, int index) {
-			super();
-
-			image.frame(image.texture.uvRect(index * IMAGE_SIZE, 0, (index + 1)
-					* IMAGE_SIZE, IMAGE_SIZE));
-			this.label.text(text);
-
-			setSize(SIZE, SIZE);
-		}
-
-		@Override
-		protected void createChildren() {
-			super.createChildren();
-
-			image = new Image(Assets.DASHBOARD);
-			add(image);
-
-			label = createText(GuiProperties.titleFontSize());
-			add(label);
-		}
-
-		@Override
-		protected void layout() {
-			super.layout();
-
-			image.x = align(x + (width - image.width()) / 2);
-			image.y = align(y);
-
-			label.x = align(x + (width - label.width()) / 2);
-			label.y = align(image.y + image.height() + 2);
-		}
-
-		@Override
-		protected void onTouchDown() {
-			image.brightness(1.5f);
-			Sample.INSTANCE.play(Assets.SND_CLICK, 1, 1, 0.8f);
-		}
-
-		@Override
-		protected void onTouchUp() {
-			image.resetColor();
-		}
-	}
 }

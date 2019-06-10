@@ -17,7 +17,7 @@
 
 package com.watabou.noosa;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Gizmo {
 
@@ -106,7 +106,7 @@ public class Gizmo {
 	public void setNullParent() {
 		this.parent = null;
 	}
-	public void setParent(@NonNull Group parent) {
+	public void setParent(@NotNull Group parent) {
 		this.parent = parent;
 	}
 

@@ -147,10 +147,10 @@ import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 import java.util.Locale;
-
-import androidx.annotation.NonNull;
 
 public class Generator {
 
@@ -191,7 +191,7 @@ public class Generator {
 			return item instanceof Bag ? Integer.MAX_VALUE : Integer.MAX_VALUE - 1;
 		}
 
-		@NonNull
+		@NotNull
 		public Item random() {
 			int index;
 			do {

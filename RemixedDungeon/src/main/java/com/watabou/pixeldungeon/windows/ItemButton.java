@@ -116,6 +116,9 @@ class ItemButton extends ItemSlot {
                     case UPGRADABLE_WEAPON:
                         enableItem=((item instanceof MeleeWeapon || item instanceof Boomerang) && (item.isUpgradable()));
                         break;
+                    case ARROWS:
+                        enableItem=(item instanceof Arrow);
+                        break;
                 }
                 enable(enableItem);
             }

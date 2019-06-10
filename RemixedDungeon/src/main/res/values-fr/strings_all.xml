@@ -1,11 +1,8 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Casque du Choas</string>
     <string name="ChaosHelmet_Info">Casque couleur rouge sang. Le symbole incontestable d\'un guerrier du Chaos.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s : limite d\'invocation atteinte (Max actuel: %2$d) ! </string>
     <string name="Mana_Title">Mana</string>
@@ -66,8 +63,6 @@
 
 
     <string name="Torch_Info2">C\'est un accessoire indispensable dans le donjon, bien connu pour être mal éclairé. </string>
-
-
 
     <string name="WndSpells_Title">Sorts</string>
     <string name="WndSpells_Level">Niveau magique :</string>
@@ -341,15 +336,6 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="StoneBlood_Buff">Pierre de sang</string>
     <string name="Welcome_Ok">Okey!</string>
     <string name="Welcome_Title">Bienvenue!</string>
-
-    <string name="Welcome_Text_28_1"> remix.28.1\n
-- Rénovation d\'envergure du village\n
-- Nombre d\'améliorations graphiques et correction de bug\n
-- De nouvelles flèches et fléchettes\n
-- Toutes ls hordes (sauf les morts-vivants) se régénèreront\n
-- La force apportera désormais un bonus de dégât pour toutes les classes\n
-- La diseuse de bonne aventure possède enfin son chat\n
-- Le tomahawk gnoll ne se cassera pas en étant jeté sur un ennemi\n</string>
 
     <string name="Welcome_Text_28_2">
  remix.28.2\n
@@ -1193,7 +1179,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndDonate_goldDonateText">Merci pour votre aide</string>
     <string name="WndDonate_silverDonateText2">Désactive aussi toutes les pubs dans tous les modes de jeu et débloque la Chasseresse dès le départ</string>
     <string name="WndDonate_goldDonateText2">Débloque également l\'Elfe dès le début du jeu</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">standard</string>
@@ -2254,8 +2240,8 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Badges_LevelReached4">Niveau 24 atteint</string>
     <string name="Badges_AllPotions">Toutes les potions identifiées</string>
     <string name="Badges_AllScrolls">Tous les parchemins identifiés</string>
-    <string name="Badges_AllRings">Tous les anneaux identifiés\"</string>
-    <string name="Badges_AllWands">Tous les sceptres identifiés\"</string>
+    <string name="Badges_AllRings">Tous les anneaux identifiés</string>
+    <string name="Badges_AllWands">Tous les sceptres identifiés</string>
     <string name="Badges_AllItems">Tous les parchemins, potions, anneaux et sceptres identifiés</string>
 
 
@@ -3394,4 +3380,5 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="Potion_ItemFliesAway">%s s\'envole de vos mains.</string>
     <string name="Potion_FoodRefreshed">%s semble maintenant comestible</string>
 
-</resources>
+
+    </resources>

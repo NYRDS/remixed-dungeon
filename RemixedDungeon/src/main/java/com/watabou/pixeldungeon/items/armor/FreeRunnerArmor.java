@@ -15,7 +15,7 @@ public class FreeRunnerArmor extends RogueArmor {
 	}
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.FREERUNNER) {
+		if (hero.getSubClass() == HeroSubClass.FREERUNNER) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.RogueArmor_NotRogue) );

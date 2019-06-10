@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,11 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import androidx.annotation.NonNull;
-
 public class JsonHelper {
 
-	@NonNull
+	@NotNull
 	static public JSONObject tryReadJsonFromAssets(String fileName) {
 		if (ModdingMode.isResourceExist(fileName)) {
 			return readJsonFromAsset(fileName);
@@ -32,7 +31,7 @@ public class JsonHelper {
 		return new JSONObject();
 	}
 
-	@NonNull
+	@NotNull
 	static public JSONObject readJsonFromAsset(String fileName) {
 		try {
 			return readJsonFromStream(ModdingMode.getInputStream(fileName));
@@ -41,7 +40,7 @@ public class JsonHelper {
 		}
 	}
 
-	@NonNull
+	@NotNull
 	static public JSONObject readJsonFromFile(File file) throws JSONException {
 		try {
 			return readJsonFromStream(new FileInputStream(file));
@@ -50,7 +49,7 @@ public class JsonHelper {
 		}
 	}
 
-	@NonNull
+	@NotNull
 	public static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
 		try {
 			StringBuilder jsonDef = new StringBuilder();

@@ -49,12 +49,11 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import androidx.annotation.NonNull;
 
 public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
@@ -131,8 +130,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		actions.remove(AC_EQUIP);
 		actions.remove(AC_UNEQUIP);
 		
-		if (hero.heroClass == HeroClass.MAGE
-			|| hero.subClass == HeroSubClass.SHAMAN) {
+		if (hero.getHeroClass() == HeroClass.MAGE
+			|| hero.getSubClass() == HeroSubClass.SHAMAN) {
 			
 			if(hero.belongings.weapon == this) {
 				actions.add(AC_UNEQUIP); 
@@ -144,7 +143,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public boolean doUnequip(Hero hero, boolean collect) {
+	public boolean doUnequip(Char hero, boolean collect) {
 		onDetach();
 		return super.doUnequip(hero, collect);
 	}
@@ -237,14 +236,14 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         return this;
 	}
 
-	@NonNull
+	@NotNull
     @Override
 	public String toString() {
 
 		StringBuilder sb = new StringBuilder(super.toString());
 
 		String status = status();
-		if (!status.equals("")) {
+		if (!status.equals(Utils.EMPTY_STRING)) {
 			sb.append(" (" + status + ")");
 		}
 
@@ -260,8 +259,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	public String info() {
 		StringBuilder info = new StringBuilder(isKnown() ? desc()
 				: Utils.format(R.string.Wand_Wood, wood));
-		if (Dungeon.hero.heroClass == HeroClass.MAGE
-				|| Dungeon.hero.subClass == HeroSubClass.SHAMAN) {
+		if (Dungeon.hero.getHeroClass() == HeroClass.MAGE
+				|| Dungeon.hero.getSubClass() == HeroSubClass.SHAMAN) {
 			damageRoll(Dungeon.hero);
 			info.append("\n\n");
 			if (levelKnown) {
@@ -283,7 +282,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		if (levelKnown) {
 			return (curChargeKnown ? curCharges() : "?") + "/" + maxCharges();
 		} else {
-			return "";
+			return Utils.EMPTY_STRING;
 		}
 	}
 
@@ -496,7 +495,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		}
 
 		protected void delay() {
-			float time2charge = ((Hero) target).heroClass == HeroClass.MAGE ? TIME_TO_CHARGE
+			float time2charge = target.getHeroClass() == HeroClass.MAGE ? TIME_TO_CHARGE
 					/ (float) Math.sqrt(1 + effectiveLevel())
 					: TIME_TO_CHARGE;
 			spend(time2charge);

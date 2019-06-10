@@ -1,11 +1,13 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.tweeners.JumpTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -14,10 +16,9 @@ import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by mike on 16.04.2016.
@@ -26,7 +27,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
 
     private static final int RUN_FRAMERATE = 20;
-    protected Image avatar;
+
 	protected Animation fly;
     private Tweener  jumpTweener;
     private Callback jumpCallback;
@@ -97,7 +98,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
 	@Override
 	public void idle() {
-		if(ch.isFlying()) {
+		if(ch!=null && ch.isFlying()) { //ch can be null when used in indicators
 			play(fly);
 		} else {
 			super.idle();
@@ -115,7 +116,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 		}
 	}
 
-	@NonNull
+	@NotNull
 	public abstract String getDeathEffect();
 
 	public abstract void heroUpdated(Hero hero);
@@ -135,7 +136,33 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         operate = readAnimation(json, "operate", film);
     }
 
-    public void jump(int from, int to, Callback callback) {
+
+    @LuaInterface
+	public void jump(float height) {
+		jumpCallback = null;
+
+		jumpTweener = new JumpTweener(this, worldToCamera(ch.getPos()), height,
+				height/40);
+
+		getParent().add(jumpTweener);
+	}
+
+    @LuaInterface
+	public void dash(int from, int to) {
+		jumpCallback = null;
+
+		int distance = Dungeon.level.distance(from, to);
+		jumpTweener = new JumpTweener(this, worldToCamera(to), 0,
+				distance * 0.1f);
+		jumpTweener.listener = this;
+		getParent().add(jumpTweener);
+
+		turnTo(from, to);
+		play(fly);
+	}
+
+
+	public void jump(int from, int to, Callback callback) {
         jumpCallback = callback;
 
         int distance = Dungeon.level.distance(from, to);

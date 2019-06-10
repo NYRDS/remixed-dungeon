@@ -5,13 +5,17 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Notifications {
+
+    static private AtomicInteger notificationId = new AtomicInteger((int)(System.currentTimeMillis()/1000));
 
     static public void displayNotification(String channelId, String title, String text) {
 
@@ -28,7 +32,7 @@ public class Notifications {
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(Game.instance());
-        notificationManager.notify(1, notification);
+        notificationManager.notify(notificationId.getAndIncrement(), notification);
     }
 
     static private void createNotificationChannel(String channelId) {

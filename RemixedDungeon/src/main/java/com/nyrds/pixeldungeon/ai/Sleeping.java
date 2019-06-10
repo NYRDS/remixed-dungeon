@@ -31,7 +31,7 @@ public class Sleeping extends MobAi implements AiState {
             huntEnemy(me);
 
             if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
-                for (Mob mob : Dungeon.level.mobs) {
+                for (Mob mob : me.level().mobs) {
                     if (me != mob) {
                         mob.beckon(mob.target);
                     }

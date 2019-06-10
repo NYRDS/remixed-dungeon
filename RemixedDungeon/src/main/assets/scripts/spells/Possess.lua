@@ -18,8 +18,8 @@ return spell.init{
             info          = "Possess_Info",
             magicAffinity = "Necromancy",
             targetingType = "cell",
-            level         = 1,
-            spellCost     = 1,
+            level         = 4,
+            spellCost     = 15,
             castTime      = 0.5
         }
     end,

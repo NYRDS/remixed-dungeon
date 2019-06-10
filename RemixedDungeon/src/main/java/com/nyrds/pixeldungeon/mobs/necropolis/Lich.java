@@ -75,7 +75,7 @@ public class Lich extends Boss {
 
         lootChance = 1.f;
 
-        if ( Dungeon.hero.heroClass == HeroClass.NECROMANCER){
+        if ( Dungeon.hero.getHeroClass() == HeroClass.NECROMANCER){
             loot = new BlackSkullOfMastery();
         }
         else {
@@ -259,7 +259,7 @@ public class Lich extends Boss {
     }
 
     @Override
-    public void die(NamedEntityKind cause ) {
+    public void die(NamedEntityKind cause) {
         super.die( cause );
         Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 
@@ -291,7 +291,6 @@ public class Lich extends Boss {
 
         for (int i = 0;i < nSkulls && i < pedestals.size();++i) {
             RunicSkull skull = RunicSkull.makeNewSkull(i);
-            level.spawnMob(skull);
 
             CellEmitter.center(pedestals.get(i)).burst( ShadowParticle.CURSE, 8 );
             WandOfBlink.appear(skull, pedestals.get(i));

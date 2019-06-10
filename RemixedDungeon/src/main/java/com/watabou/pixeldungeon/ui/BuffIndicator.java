@@ -26,7 +26,6 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.utils.SparseArray;
 
 public class BuffIndicator extends Component {
@@ -117,20 +116,21 @@ public class BuffIndicator extends Component {
 		clear();
 		
 		SparseArray<Image> newIcons = new SparseArray<>();
-		
-		for (Buff buff : ch.buffs()) {
-			int icon = buff.icon();
+
+		ch.forEachBuff(b->
+		{
+			int icon = b.icon();
 			if (icon != NONE) {
 				Image img = new Image( texture );
 				img.frame( film.get( icon ) );
 				img.x = x + members.size() * (SIZE + 2);
 				img.y = y;
 				add( img );
-				
+
 				newIcons.put( icon, img );
 			}
-		}
-		
+		});
+
 		for (Integer key : icons.keyArray()) {
 			if (newIcons.get( key ) == null) {
 				Image icon = icons.get( key );

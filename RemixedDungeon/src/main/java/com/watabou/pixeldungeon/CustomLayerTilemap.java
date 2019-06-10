@@ -115,7 +115,7 @@ public class CustomLayerTilemap extends DungeonTilemap {
             return;
         }
 
-        PointF hpos = Dungeon.hero.getHeroSprite().worldCoords();
+        PointF hpos = Dungeon.hero.getSprite().worldCoords();
         float hx = hpos.x;
         float hy = hpos.y;
 

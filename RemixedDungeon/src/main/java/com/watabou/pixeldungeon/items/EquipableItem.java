@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -70,13 +71,13 @@ public abstract class EquipableItem extends Item {
 		Sample.INSTANCE.play( Assets.SND_CURSED );
 	}
 	
-	protected float time2equip( Hero hero ) {
+	protected float time2equip(Char hero ) {
 		return 1;
 	}
 	
 	public abstract boolean doEquip( Hero hero );
 	
-	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
+	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
 		
 		if (cursed) {
 			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );
@@ -89,14 +90,14 @@ public abstract class EquipableItem extends Item {
 			hero.spend( time2equip( hero ) );
 		}
 		
-		if (collect && !collect( hero.belongings.backpack )) {
+		if (collect && !collect( hero.getBelongings().backpack )) {
 			Dungeon.level.drop( this, hero.getPos() );
 		}
 				
 		return true;
 	}
-	
-	public boolean doUnequip( Hero hero, boolean collect ) {
+
+	public boolean doUnequip( Char hero, boolean collect ) {
 		return doUnequip( hero, collect, true );
 	}
 }

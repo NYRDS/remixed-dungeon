@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -63,6 +64,8 @@ import com.watabou.pixeldungeon.windows.WndWandmaker;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class WandMaker extends NPC {
@@ -83,7 +86,7 @@ public class WandMaker extends NPC {
 	}
 		
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override
@@ -96,14 +99,15 @@ public class WandMaker extends NPC {
 	}
 	
 	@Override
-	public boolean interact(final Hero hero) {
-		
+	public boolean interact(final Char hero) {
+
+
 		getSprite().turnTo( getPos(), hero.getPos() );
 		if (Quest.given) {
 			
 			Item item = Quest.alternative ?
-				hero.belongings.getItem( CorpseDust.class ) :
-				hero.belongings.getItem( Rotberry.Seed.class );
+				hero.getBelongings().getItem( CorpseDust.class ) :
+				hero.getBelongings().getItem( Rotberry.Seed.class );
 			if (item != null) {
 				GameScene.show( new WndWandmaker( this, item ) );
 			} else {
@@ -295,18 +299,16 @@ public class WandMaker extends NPC {
 			return Game.getVar(R.string.WandMaker_RotberryName);
 		}
 
-        @Override
-        public boolean interact(Char ch) {
+		@Override
+		public void effect(int pos, Presser ch) {
+			GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
 
-            GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
+			Dungeon.level.drop( new Seed(), pos ).sprite.drop();
 
-            Dungeon.level.drop( new Seed(), pos ).sprite.drop();
-
-            if (ch != null) {
-                Buff.prolong( ch, Roots.class, TICK * 3 );
-            }
-            return super.interact(ch);
-        }
+			if (ch instanceof Char) {
+				Buff.prolong( (Char)ch, Roots.class, TICK * 3 );
+			}
+		}
 
 		@Override
 		public String desc() {

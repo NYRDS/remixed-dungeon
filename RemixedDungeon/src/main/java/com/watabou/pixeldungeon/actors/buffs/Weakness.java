@@ -34,7 +34,7 @@ public class Weakness extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Weakness_Info);
 	}
 	

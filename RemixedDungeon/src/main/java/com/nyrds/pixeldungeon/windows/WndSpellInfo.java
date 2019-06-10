@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class WndSpellInfo extends Window {
 
@@ -21,7 +21,7 @@ public class WndSpellInfo extends Window {
 	protected static final int WIDTH		= 100;
 	protected static final int GAP		    = 2;
 
-	public WndSpellInfo(@NonNull final WndHeroSpells owner, final Hero hero, final Spell spell ) {
+	public WndSpellInfo(@NotNull final WndHeroSpells owner, final Hero hero, final Spell spell ) {
 		super();
 
 		IconTitle title = new IconTitle(new Image(spell.image()), spell.name());

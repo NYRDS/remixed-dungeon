@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -28,19 +26,17 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
-import com.watabou.utils.Callback;
 
 public class Boomerang extends MissileWeapon {
 
 	{
-		name = Game.getVar(R.string.Boomerang_Name);
 		image = ItemSpriteSheet.BOOMERANG;
 		
 		STR = 10;
 		
 		MIN = 1;
 		MAX = 4;
-		
+
 		stackable = false;
 	}
 	
@@ -98,21 +94,15 @@ public class Boomerang extends MissileWeapon {
 
 		((MissileSprite) getUser().getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, getUser().getPos(),
-				curItem, new Callback() {
-					@Override
-					public void call() {
-						if (throwEquiped) {
-							owner.belongings.weapon = Boomerang.this;
-						} else {
-							getUser().collect(Boomerang.this);
-						}
-                        QuickSlot.refresh();
-                    }
+				curItem, ()-> {
+					if (throwEquiped) {
+						owner.spend(-TIME_TO_EQUIP);
+						owner.belongings.weapon = this;
+					} else {
+						owner.collect(this);
+					}
+					QuickSlot.refresh();
 				});
-
-		if (throwEquiped) {
-			owner.spend(-TIME_TO_EQUIP);
-		}
 	}
 	
 	private boolean throwEquiped;

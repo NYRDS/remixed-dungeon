@@ -17,6 +17,7 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.Collections;
 import java.util.List;
@@ -35,7 +36,7 @@ public class WndHats extends Window {
 
 		int yPos = 0;
 
-		String equippedName = "";
+		String equippedName = Utils.EMPTY_STRING;
 
 		if (updateSlotImage()) {
 			equippedName = ": " + Accessory.equipped().name();
@@ -144,7 +145,7 @@ public class WndHats extends Window {
 
 					if (finalAccessory.haveIt()) {
 						finalAccessory.equip();
-						Dungeon.hero.updateLook();
+						Dungeon.hero.updateSprite();
 						onBackPressed();
 						return;
 					}

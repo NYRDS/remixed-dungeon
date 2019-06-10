@@ -20,7 +20,7 @@ public class NecromancerRobe extends Armor {
 
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.NECROMANCER) {
+		if (hero.getHeroClass() == HeroClass.NECROMANCER) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.NecromancerArmor_NotNecromancer) );

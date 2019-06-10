@@ -23,8 +23,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Barkskin extends Buff {
 
-	private int level = 0;
-	
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
@@ -33,33 +31,31 @@ public class Barkskin extends Buff {
 			if (--level <= 0) {
 				detach();
 			}
-			
 		} else {
-			
 			detach();
-			
 		}
 
 		return true;
 	}
-	
-	public int level() {
-		return level;
-	}
-	
+
 	public void level( int value ) {
 		if (level < value) {
 			level = value;
 		}
 	}
-	
+
+	@Override
+	public int drBonus() {
+		return level();
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.BARKSKIN;
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Barkskin_Info);
 	}
 }

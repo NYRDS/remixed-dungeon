@@ -31,7 +31,7 @@ public class WndHeroSpells extends Window {
         this.listener = listener;
         this.hero = Dungeon.hero;
 
-        String affinity = hero.heroClass.getMagicAffinity();
+        String affinity = hero.getHeroClass().getMagicAffinity();
 
         Text title = PixelScene.createText(Game.getVar(R.string.WndHero_SkillLevel) + ": " + hero.skillLevel(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);

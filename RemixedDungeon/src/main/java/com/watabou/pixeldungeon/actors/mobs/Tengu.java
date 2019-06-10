@@ -77,7 +77,7 @@ public class Tengu extends Boss implements IZapper {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause ) {
+	public void die(NamedEntityKind cause) {
 
 		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
 			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
@@ -166,9 +166,9 @@ public class Tengu extends Boss implements IZapper {
 	public void notice() {
 		super.notice();
 		String tenguYell = Game.getVar(R.string.Tengu_Info2);
-		if (Dungeon.hero.heroClass.getGender() == Utils.FEMININE) {
+		if (Dungeon.hero.getHeroClass().getGender() == Utils.FEMININE) {
 			tenguYell = Game.getVar(R.string.Tengu_Info3);
 		}
-		yell(Utils.format(tenguYell, Dungeon.hero.heroClass.title()));
+		yell(Utils.format(tenguYell, Dungeon.hero.getHeroClass().title()));
 	}	
 }

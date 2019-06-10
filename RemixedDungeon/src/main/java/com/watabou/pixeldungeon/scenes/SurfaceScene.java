@@ -115,7 +115,7 @@ public class SurfaceScene extends PixelScene {
 			window.add( patch );
 		}
 		
-		Avatar a = new Avatar( Dungeon.hero.heroClass );
+		Avatar a = new Avatar(Dungeon.hero.getHeroClass());
 		a.x = PixelScene.align( (WIDTH - a.width) / 2 );
 		a.y = HEIGHT - a.height + 1;
 		window.add( a );
@@ -301,7 +301,7 @@ public class SurfaceScene extends PixelScene {
 		
 		public Avatar( HeroClass cl ) {
 			super( Assets.AVATARS );
-			frame( new TextureFilm( texture, WIDTH, HEIGHT ).get( cl.ordinal() ) );
+			frame( new TextureFilm( texture, WIDTH, HEIGHT ).get( cl.classIndex()) );
 		}
 	}
 	

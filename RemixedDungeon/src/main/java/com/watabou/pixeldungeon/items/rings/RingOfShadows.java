@@ -33,5 +33,9 @@ public class RingOfShadows extends Ring {
 	}
 	
 	public class Shadows extends RingBuff {
+		@Override
+		public int stealthBonus() {
+			return level();
+		}
 	}
 }

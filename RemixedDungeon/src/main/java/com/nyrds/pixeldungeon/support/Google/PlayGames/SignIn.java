@@ -10,11 +10,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.Executor;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -52,7 +53,7 @@ public class SignIn implements OnCompleteListener, Executor {
 
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_SIGN_IN) {
-            GLog.p(String.format("resultCode :%d", resultCode));
+            GLog.p(Utils.format("resultCode :%d", resultCode));
             if (resultCode == RESULT_OK) {
                 GLog.p("ok");
             }
@@ -62,12 +63,12 @@ public class SignIn implements OnCompleteListener, Executor {
     }
 
     @Override
-    public void onComplete(@NonNull Task task) {
+    public void onComplete(@NotNull Task task) {
 
     }
 
     @Override
-    public void execute(@NonNull Runnable command) {
+    public void execute(@NotNull Runnable command) {
         command.run();
     }
 }

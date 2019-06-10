@@ -22,7 +22,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
 public class DangerIndicator extends Tag {
@@ -102,7 +102,7 @@ public class DangerIndicator extends Tag {
 	@Override
 	protected void onClick() {
 		if(Dungeon.hero.visibleEnemies() >0) {
-			Mob target = Dungeon.hero.visibleEnemy(enemyIndex++);
+			Char target = Dungeon.hero.visibleEnemy(enemyIndex++);
 
 			HealthIndicator.instance.target(target == HealthIndicator.instance.target() ? null : target);
 

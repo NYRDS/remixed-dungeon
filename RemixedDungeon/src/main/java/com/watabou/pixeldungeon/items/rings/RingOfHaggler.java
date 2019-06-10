@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.rings;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 
 public class RingOfHaggler extends Ring {
@@ -37,7 +37,7 @@ public class RingOfHaggler extends Ring {
 	}
 	
 	@Override
-	public boolean doPickUp( Hero hero ) {
+	public boolean doPickUp(Char hero ) {
 		identify();
 		Badges.validateRingOfHaggler();
 		Badges.validateItemLevelAcquired( this );

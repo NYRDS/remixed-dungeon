@@ -83,7 +83,7 @@ public class ArmorKit extends Item {
 		Armor classArmor = ClassArmor.upgrade( getUser(), armor );
 		if (getUser().belongings.armor == armor) {
 			getUser().belongings.armor = classArmor;
-			getUser().updateLook();
+			getUser().updateSprite();
 		} else {
 			armor.detach( getUser().belongings.backpack );
 			getUser().collect(classArmor);

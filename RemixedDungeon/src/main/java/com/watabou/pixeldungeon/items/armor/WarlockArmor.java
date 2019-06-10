@@ -16,7 +16,7 @@ public class WarlockArmor extends MageArmor {
 
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.WARLOCK) {
+		if (hero.getSubClass() == HeroSubClass.WARLOCK) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.MageArmor_NotMage) );

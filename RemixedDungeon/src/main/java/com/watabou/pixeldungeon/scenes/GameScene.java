@@ -158,7 +158,7 @@ public class GameScene extends PixelScene {
 
         Level level = Dungeon.level;
 
-        RemixedDungeon.lastClass(Dungeon.hero.heroClass.ordinal());
+        RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().classIndex());
 
         super.create();
 
@@ -254,8 +254,6 @@ public class GameScene extends PixelScene {
             }
         }
 
-        Dungeon.hero.updateSprite();
-
         add(emitters);
         add(effects);
 
@@ -294,8 +292,6 @@ public class GameScene extends PixelScene {
         add(new HealthIndicator());
 
         add(cellSelector = new CellSelector(baseTiles));
-
-        Dungeon.hero.updateLook();
 
         statusPane = new StatusPane(Dungeon.hero, level);
         statusPane.camera = uiCamera;
@@ -391,6 +387,7 @@ public class GameScene extends PixelScene {
         fadeIn();
 
         Dungeon.observe();
+        Dungeon.hero.readyAndIdle();
 
         doSelfTest();
     }
@@ -428,7 +425,7 @@ public class GameScene extends PixelScene {
             return;
         }
 
-        if (Dungeon.level == null) {
+        if (Dungeon.isLoading()) {
             return;
         }
 
@@ -551,7 +548,7 @@ public class GameScene extends PixelScene {
     // -------------------------------------------------------
 
     public static void add(Blob gas) {
-        if (scene != null && Dungeon.level != null) {
+        if (isSceneReady()) {
             Actor.add(gas);
             addBlobSprite(gas);
         } else {
@@ -583,8 +580,12 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static boolean mayCreateSprites() {
+        return scene != null;
+    }
+
     public static boolean isSceneReady() {
-        return scene != null && Dungeon.level != null;
+        return scene != null && !Dungeon.isLoading();
     }
 
     public static void add(EmoIcon icon) {
@@ -747,8 +748,7 @@ public class GameScene extends PixelScene {
     public static WndBag selectItem(WndBag.Listener listener, WndBag.Mode mode, String title) {
         cancelCellSelector();
 
-        WndBag wnd = mode == Mode.SEED ? WndBag.seedPouch(listener, mode, title)
-                : WndBag.lastBag(listener, mode, title);
+        WndBag wnd = WndBag.lastBag(listener, mode, title);
         scene.add(wnd);
 
         return wnd;

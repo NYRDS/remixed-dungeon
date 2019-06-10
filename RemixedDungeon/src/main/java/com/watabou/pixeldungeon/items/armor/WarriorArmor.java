@@ -36,7 +36,6 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Callback;
 
 public class WarriorArmor extends ClassArmor {
 	
@@ -59,7 +58,7 @@ public class WarriorArmor extends ClassArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.heroClass == HeroClass.WARRIOR) {
+		if (hero.getHeroClass() == HeroClass.WARRIOR) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.WarriorArmor_NotWarrior) );
@@ -89,26 +88,23 @@ public class WarriorArmor extends ClassArmor {
 				
 				final int dest = cell;
 				getUser().busy();
-				((HeroSpriteDef) getUser().getSprite()).jump( getUser().getPos(), cell, new Callback() {
-					@Override
-					public void call() {
-						getUser().move( dest );
-						Dungeon.level.press( dest, getUser() );
-						Dungeon.observe();
-						
-						for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-							Char mob = Actor.findChar( getUser().getPos() + Level.NEIGHBOURS8[i] );
-							if (mob != null && mob != getUser()) {
-								Buff.prolong( mob, Paralysis.class, SHOCK_TIME );
-							}
+				((HeroSpriteDef) getUser().getSprite()).jump( getUser().getPos(), cell, () -> {
+					getUser().move( dest );
+					Dungeon.level.press( dest, getUser() );
+					Dungeon.observe();
+
+					for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
+						Char mob = Actor.findChar( getUser().getPos() + Level.NEIGHBOURS8[i] );
+						if (mob != null && mob != getUser()) {
+							Buff.prolong( mob, Paralysis.class, SHOCK_TIME );
 						}
-						
-						CellEmitter.center( dest ).burst( Speck.factory( Speck.DUST ), 10 );
-						Camera.main.shake( 2, 0.5f );
-						
-						getUser().spendAndNext( LEAP_TIME );
 					}
-				} );
+
+					CellEmitter.center( dest ).burst( Speck.factory( Speck.DUST ), 10 );
+					Camera.main.shake( 2, 0.5f );
+
+					getUser().spendAndNext( LEAP_TIME );
+				});
 			}
 		}
 		

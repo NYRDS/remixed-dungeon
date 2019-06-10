@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Amok extends FlavourBuff {
@@ -29,7 +30,12 @@ public class Amok extends FlavourBuff {
 	}
 	
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Amok_Info);
+	}
+
+	@Override
+	public void attachVisual() {
+		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
 	}
 }

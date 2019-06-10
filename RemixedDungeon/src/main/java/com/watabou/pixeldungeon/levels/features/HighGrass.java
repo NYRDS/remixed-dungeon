@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
@@ -37,9 +36,11 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.Nullable;
+
 public class HighGrass {
 
-	public static void trample( Level level, int pos, Char ch ) {
+	public static void trample( Level level, int pos, @Nullable Char ch ) {
 		
 		level.set( pos, Terrain.GRASS );
 		GameScene.updateMap( pos );
@@ -68,16 +69,18 @@ public class HighGrass {
 		}
 		
 		int leaves = 4;
-		
-		// Barkskin
-		if (ch instanceof Hero && ((Hero)ch).subClass == HeroSubClass.WARDEN) {
-			Buff.affect( ch, Barkskin.class ).level( ch.ht() / 3 );
-			leaves = 8;
-		}
-		
-		if (ch instanceof Hero && ((Hero) ch).subClass == HeroSubClass.SCOUT) {
-			Buff.prolong( ch, Invisibility.class, 5);
-			leaves = 2;
+
+		if(ch != null) {
+			// Barkskin
+			if (ch.getSubClass() == HeroSubClass.WARDEN) {
+				Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
+				leaves = 8;
+			}
+
+			if (ch.getSubClass() == HeroSubClass.SCOUT) {
+				Buff.prolong(ch, Invisibility.class, 5);
+				leaves = 2;
+			}
 		}
 		
 		Emitter emitter = CellEmitter.get(pos);

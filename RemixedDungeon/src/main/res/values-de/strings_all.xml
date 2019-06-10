@@ -1,11 +1,8 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosHelmet_Info">Ein Blutroter Helm. Das Symbol ein Chaos Kriegers.</string>
-
-
 
     <string name="Spells_SummonLimitReached">%1$s: Beschwörungslimit erreicht (momentanes maximum: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -66,8 +63,6 @@
 
 
     <string name="Torch_Info2">Dies ist ein unverzichtbarer Gegenstand in diesem Dungeon, der für seine schlechte Beleuchtung bekannt ist.</string>
-
-
 
     <string name="WndSpells_Title">Zaubersprüche</string>
     <string name="WndSpells_Level">Magie Level:</string>
@@ -339,17 +334,6 @@
     <string name="StoneBlood_Buff">Steinblut</string>
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Herzlich willkommen!</string>
-
-    <string name="Welcome_Text_28_1">
-remix.28.1\n
-- Große Renovierung in der Stadt\n
-- Viele verbesserte Grafiken und Fehlerbehebungen\n
-Neue Darts und Pfeile\n
-- Jetzt werden alle Gegner (außer Untote) regenerieren\n
-- Stärke bietet jetzt zusätzlichen Schaden für alle Klassen\n
-- Die Wahrsagerin besitzt jetzt eine Katze\n
-- Das Gnoll-Tomahawk zerbricht nicht, wenn es auf ein Ziel geworfen wird\n
-</string>
 
     <string name="Welcome_Text_28_2">
 remix.28.2\n
@@ -1176,7 +1160,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
     <string name="WndDonate_goldDonateText">Vielen Dank für ihre Unterstützung</string>
     <string name="WndDonate_silverDonateText2">Entfernt auch die Werbung in allen Spielmodi und macht die Jägerin von Anfang an verfügbar.</string>
     <string name="WndDonate_goldDonateText2">Schaltet auch den Elf von Anfang an frei.</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">Standard</string>
@@ -2223,8 +2207,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Badges_LevelReached4">Level 24 erreicht</string>
     <string name="Badges_AllPotions">Alle Tränke identifiziert</string>
     <string name="Badges_AllScrolls">Alle Schriftrollen identifiziert</string>
-    <string name="Badges_AllRings">Alle Ringe identifiziert</string>
-    <string name="Badges_AllWands">Alle Zauberstäbe identifiziert</string>
     <string name="Badges_AllItems">Alle Tränke, Schriftrollen, Ringe und Zauberstäbe identifiziert</string>
 
 
@@ -3380,4 +3362,5 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="Potion_ItemFliesAway">%s fliegt dir gerade aus deinen Händen.</string>
     <string name="Potion_FoodRefreshed">%s sieht nun genießbar aus</string>
 
-</resources>
+
+    </resources>

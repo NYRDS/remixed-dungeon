@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -45,7 +45,7 @@ public class EnslavedSoul extends UndeadMob {
 
     @SuppressWarnings("unchecked")
     @Override
-    public int attackProc(@NonNull Char enemy, int damage ) {
+    public int attackProc(@NotNull Char enemy, int damage ) {
         //Buff proc
         if (Random.Int(5) == 1){
             if(enemy instanceof Hero) {

@@ -14,6 +14,7 @@ import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -31,18 +32,16 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import androidx.annotation.NonNull;
-
 /**
  * Created by mike on 08.03.2016.
  */
 public class StringsManager {
 
 	@SuppressLint("UseSparseArrays")
-	@NonNull
+	@NotNull
 	private static Map<Integer, String>   stringMap  = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
-	@NonNull
+	@NotNull
 	private static Map<Integer, String[]> stringsMap = new HashMap<>();
 
 	private static Map<String, String>   sStringMap  = new HashMap<>();
@@ -98,7 +97,7 @@ public class StringsManager {
 			return;
 		}
 
-		String line = "";
+		String line = Utils.EMPTY_STRING;
 
 		try {
 			InputStream fis = new FileInputStream(jsonFile);
@@ -199,7 +198,7 @@ public class StringsManager {
 		} catch (Resources.NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
 		}
-		return "";
+		return Utils.EMPTY_STRING;
 	}
 
 	public static String[] getVars(int id) {
@@ -213,7 +212,7 @@ public class StringsManager {
 
 	public static String getVar(String id) {
 		if(nonModdable.contains(id)) {
-			return "";
+			return Utils.EMPTY_STRING;
 		}
 
 		if (sStringMap.containsKey(id)) {
@@ -224,7 +223,7 @@ public class StringsManager {
 			return getVar(keyToInt.get(id));
 		}
 
-		return "";
+		return Utils.EMPTY_STRING;
 	}
 
 

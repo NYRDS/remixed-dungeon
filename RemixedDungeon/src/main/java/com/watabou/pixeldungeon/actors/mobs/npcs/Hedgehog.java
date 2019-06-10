@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -7,11 +8,12 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.levels.RegularLevel;
-import com.watabou.utils.Bundle;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Hedgehog extends NPC {
 
@@ -25,7 +27,7 @@ public class Hedgehog extends NPC {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src ) {
+	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
 	
 	@Override
@@ -33,27 +35,12 @@ public class Hedgehog extends NPC {
 	}
 	
 	private static boolean spawned;
-	
-	private static String action_tag = "action";
-	private static String speed_tag  = "speed";
-	
-	private int     action = 0;
-	private  float  speed  = 0.5f;
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
-		bundle.put(action_tag, action);
-		bundle.put(speed_tag,  speed);
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		action = bundle.getInt(action_tag);
-		speed  = bundle.getFloat(speed_tag);
-	}
-	
+
+	@Packable
+	private int    action = 0;
+	@Packable
+	private float  speed  = 0.5f;
+
 	public static void spawn( RegularLevel level ) {
 		if (!spawned && Dungeon.depth == 23) {
 			Hedgehog hedgehog = new Hedgehog();
@@ -68,7 +55,7 @@ public class Hedgehog extends NPC {
 	}
 
 	@Override
-	public boolean interact(final Hero hero) {
+	public boolean interact(final Char hero) {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		
 		switch (action)
@@ -90,7 +77,7 @@ public class Hedgehog extends NPC {
 				
 				Pasty pie = new Pasty();
 				
-				Dungeon.level.drop( pie, getPos() ).sprite.drop();
+				level().drop( pie, getPos() ).sprite.drop();
 			break;
 			
 			default:

@@ -5,5 +5,5 @@ import com.watabou.pixeldungeon.items.Item;
 
 public interface ItemOwner {
     Belongings getBelongings();
-    void collect(Item item);
+    boolean collect(Item item);
 }

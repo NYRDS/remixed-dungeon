@@ -6,10 +6,10 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.android.tools.build:gradle:3.4.1'
         //noinspection GradleDynamicVersion
         classpath 'io.fabric.tools:gradle:1.+'
-        classpath 'com.google.firebase:firebase-plugins:1.2.0'
+        classpath 'com.google.firebase:perf-plugin:1.2.1'
         classpath 'com.google.gms:google-services:4.2.0' // google-services plugin
     }
 }
@@ -25,8 +25,8 @@ allprojects {
         flatDir {
             dirs 'lib'
         }
-        jcenter()
 
+        jcenter()
 
         maven {
             url 'https://dl.bintray.com/humanteq/HQM/'

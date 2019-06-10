@@ -16,7 +16,7 @@ public class SniperArmor extends HuntressArmor {
 	
 	@Override
 	public boolean doEquip( Hero hero ) {
-		if (hero.subClass == HeroSubClass.SNIPER) {
+		if (hero.getSubClass() == HeroSubClass.SNIPER) {
 			return super.doEquip( hero );
 		} else {
 			GLog.w( Game.getVar(R.string.HuntressArmor_NotHuntress) );

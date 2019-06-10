@@ -1,11 +1,8 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
     <string name="ChaosHelmet_Name">混沌头盔</string>
-    <string name="ChaosHelmet_Info">血红色的头盔，ck你懂吗</string>
-
-
+    <string name="ChaosHelmet_Info">血红色的头盔是混沌之战士的基本标志。</string>
 
     <string name="Spells_SummonLimitReached">%1$s: 召唤上限提升 (最大值: %2$d)!</string>
     <string name="Mana_Title">魔法</string>
@@ -14,7 +11,7 @@
 
 
     <string name="SummonDeathling_Name">召唤死灵</string>
-    <string name="SummonDeathling_Info">召唤死灵。 死灵的生命和攻击随你的等级的提升而提升。\n\n召唤上限：%1$d (每点法强提供+1上限)</string>
+    <string name="SummonDeathling_Info">召唤死亡的灵魂。 死灵的生命和攻击随你的等级的提升而提升。\n\n召唤上限：%1$d (每点法强提供+1上限)</string>
 
 
     <string name="Ignite_Name">引燃</string>
@@ -22,23 +19,23 @@
 
 
     <string name="RootSpell_Name">缠绕</string>
-    <string name="RootSpell_Info">缠绕一个单位，使其无法移动及进入隐身</string>
+    <string name="RootSpell_Info">缠绕所选生物，使其无法在短时间内移动。</string>
 
 
     <string name="WindGust_Name">狂风</string>
-    <string name="WindGust_Info">击退一个单位并将其沉默</string>
+    <string name="WindGust_Info">召唤一阵狂风，将选定生物吹走。</string>
 
 
     <string name="FreezeGlobe_Name">冰封</string>
-    <string name="FreezeGlobe_Info">冻结一个单位</string>
+    <string name="FreezeGlobe_Info">冻结所选生物，使其在短时间内无法执行任何操作。</string>
 
 
     <string name="MagicTorch_Name">魔法之光</string>
-    <string name="MagicTorch_Info">魔法版火把</string>
+    <string name="MagicTorch_Info">一种产生光的魔法，用来照亮黑暗的地牢。</string>
 
 
     <string name="Healing_Name">活血术</string>
-    <string name="Healing_Info">治疗你1/3的最大生命值</string>
+    <string name="Healing_Info">这个法术对任何冒险家都是至关重要的。它将恢复施法者最大生命值的1/3。</string>
 
 
 
@@ -49,25 +46,23 @@
     <string name="Drink_Message">清爽的饮品！</string>
 
 
-    <string name="TomeOfKnowledge_Name">法强书</string>
-    <string name="TomeOfKnowledge_Info">+1法强</string>
+    <string name="TomeOfKnowledge_Name">知识之书</string>
+    <string name="TomeOfKnowledge_Info">这本古书充满了神秘的谜语和咒文！这可能很难读懂，但如果你能读懂它，一定会增加你的魔法力量。</string>
 
 
-    <string name="SpellBook_Name">技能书</string>
-    <string name="SpellBook_Info">装备来释放技能</string>
+    <string name="SpellBook_Name">咒语书</string>
+    <string name="SpellBook_Info">它看起来更像是一个拼凑在一起的各种页面的汇编，而不是一本真正的书。如果你足够注意的话，也许能从中得到一些东西。</string>
     <string name="SpellBook_Info_Identified">在这本书上你了解了\"%1$s\"技能.\n\" %2$s \"</string>
 
 
     <string name="ManaPotion_Name">魔法药水</string>
-    <string name="ManaPotion_Info">提供魔法值</string>
+    <string name="ManaPotion_Info">这药水会为你恢复的少量魔法值。</string>
 
 
     <string name="Mushroom_Eat_Message">这个蘑菇吃起来很怪！</string>
 
 
     <string name="Torch_Info2">地牢的组成要素之一，极差的基础照明。</string>
-
-
 
     <string name="WndSpells_Title">技能</string>
     <string name="WndSpells_Level">法强：</string>
@@ -263,6 +258,8 @@
     <string name="WndPriest_Instruction2">很可惜没有免费提供治疗，但只需 %d 金币还是能为您提供治疗服务！
 如果您需要神圣的祝福，或者去除诅咒，请前往我身后的圣教堂与主教会面。</string>
 
+    <string name="WndDontLikeAds_NotThisTime">这次不会了</string>
+
     <string name="Item_Info2">啥玩意</string>
 
 
@@ -282,12 +279,12 @@
     <string name="Spell_SelectACell">选择一个位置</string>
 
 
-    <string name="WndJournal_Levels">等级</string>
+    <string name="WndJournal_Levels">特殊地点</string>
     <string name="WndJournal_Logbook">事件记录</string>
 
     <string name="Wand_Name">%s法杖</string>
     <string name="Wand_ACZap">施放</string>
-    <string name="Wand_Wood">這根%s法杖摸上去很暖和。誰能知曉知使用它會發生甚麼事？</string>
+    <string name="Wand_Wood">这根%s法杖摸上去很暖和。谁能知道使用它会发生什么事？</string>
     <string name="Wand_Damage">當這根法杖用於近戰時，它的平均傷害為%d。</string>
     <string name="Wand_Weapon">您可以將這根法杖當近戰武器使用。</string>
     <string name="Wand_Fizzles">您的法杖滋滋作響：一定是沒能量了</string>
@@ -417,17 +414,6 @@
     <string name="Welcome_Ok">棒极了！</string>
     <string name="Welcome_Title">欢迎！</string>
 
-    <string name="Welcome_Text_28_1">
-remix.28.1 \ n
--城镇大改造\n
--大量gfx改进和修复\n
--新飞镖和箭\n
-现在所有的怪物(亡灵除外)都会重新生成\n
--现在力量将为所有职业提供额外的伤害加成
--算命师现在有一只黑猫
-- 豺狼人的战斧在投掷目标时不会打断
--</string>
-
     <string name="Welcome_Text_28_2">
 remix.28.2\n
 - 快捷栏：重做\n
@@ -504,7 +490,7 @@ remix.28.5\n
     <string name="town_deco_INN_sign_desc">里面是酒馆</string>
 
 
-    <string name="HealthDart_Name">治疗弹</string>
+    <string name="HealthDart_Name">治疗飞镖</string>
     <string name="HealthDart_Gender">阳刚的</string>
     <string name="HealthDart_Info">治疗药水制作的飞镖。</string>
 
@@ -683,7 +669,7 @@ remix.28.5\n
     <string name="WndGame_Ranking">排名</string>
     <string name="WndGame_Start">开始新游戏</string>
     <string name="WndGame_menu">主菜單</string>
-    <string name="WndGame_Exit">关闭游戏</string>
+    <string name="WndGame_Exit">关闭混合地牢</string>
     <string name="WndGame_Return">返回遊戲</string>
     <string name="WndGame_Save">保存</string>
     <string name="WndGame_Load">讀取</string>
@@ -843,7 +829,7 @@ remix.28.5\n
     <string name="LloidsBeacon_Creatures">附近的生物的精神干擾阻止了您使用萊德傳送信標！</string>
     <string name="LloidsBeacon_Return">萊德傳送信標設置成功，現在您已經隨時可以回來了。</string>
     <string name="LloidsBeacon_Set">
-这个传送信标被设置在像素地牢的%d层的某个地方。</string>
+这个传送信标被设置在混合地牢的%d层的某个地方。</string>
 
 
     <string name="Stylus_Name">奥術刻筆</string>
@@ -1055,7 +1041,7 @@ remix.28.5\n
     <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，您的进度可能会丢失！</string>
 
 
-    <string name="AboutScene_Txt_Intro">混合的像素地牢是由NYRDS以Watabou的Pixel Dungeon源码为基础制作的。</string>
+    <string name="AboutScene_Txt_Intro">混合地牢是由NYRDS以Watabou的Pixel Dungeon源码为基础制作的。</string>
     <string name="AboutScene_Code">源码:</string>
     <string name="AboutScene_Graphics">圖畫：</string>
     <string name="AboutScene_Music">音樂：</string>
@@ -1315,7 +1301,7 @@ remix.28.5\n
 
     <string name="WndDonate_donate">捐獻：</string>
     <string name="WndDonate_notConnected">無網絡連接 :(</string>
-    <string name="WndDonate_commonDonateText">混合的像素地牢——永远对所有人免费。
+    <string name="WndDonate_commonDonateText">混合地牢——永远对所有人免费。
 但是，你能帮我们让这个游戏变得更好。
 除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
 
@@ -1329,7 +1315,7 @@ remix.28.5\n
 
     <string name="WndDonate_silverDonateText2">且會使所有模式的廣告失效，並從一開始就解鎖女獵手職業。</string>
     <string name="WndDonate_goldDonateText2">更從一開始就解鎖精靈職業。</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
 
 
     <string name="WndPremiumSettings_std">標準</string>
@@ -2547,6 +2533,7 @@ remix.28.5\n
     <string name="Mods_AuthorEmail">創建者電郵地址：</string>
     <string name="Mods_RestartRequired">需重新開啟遊戲</string>
 
+    <string name="Spells_NotTooFast">%s 没有准备好使用</string>
     <string name="ElvenBow_Name">精灵长弓</string>
     <string name="ElvenBow_Gender">阳刚的</string>
 
@@ -3079,9 +3066,9 @@ remix.28.5\n
     <string name="ZombieGnoll_Desc">扭曲、破损、不再具有人形的豺狼人僵尸。由一堆腐烂的肉、骨头以及毁灭、杀戮的意识组成。</string>
 
 
-    <string name="Worm_Name">古神幼虫</string>
+    <string name="Worm_Name">古神巨虫</string>
     <string name="Worm_Gender">masculine</string>
-    <string name="Worm_Name_Objective">古神幼虫</string>
+    <string name="Worm_Name_Objective">古神巨虫</string>
     <string name="Worm_Desc">没人知道这巨大的虫子是什么。从地下钻出，身上覆盖着腐肉和烂泥。它巨大的下颚告诉了你它钻出地面的方法。</string>
 
 
@@ -3283,7 +3270,7 @@ remix.28.5\n
     <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
 
     <string name="Plant_ACPlant">种植</string>
-    <string name="Plant_Info">将这个种子扔到你想种的地方%1$s.\n\n%2$s</string>
+    <string name="Plant_Info">将这个%1$s.\n\n%2$s种子扔到你想种植的地方。</string>
     <string name="Plant_Seed">%s种子</string>
 
 
@@ -3440,7 +3427,7 @@ remix.28.5\n
     <string name="LightningTrap_Name">闪电陷阱</string>
     <string name="LightningTrap_Desc">你被闪电陷阱的电击杀死了……</string>
 
-    <string name="HeroClass_Gnoll">豺狼王</string>
+    <string name="HeroClass_Gnoll">豺狼人</string>
     <string name="GnollArmor_ACSpecial">号召</string>
     <string name="GnollArmor_NotGnoll">只有豺狼才能穿豺狼甲!</string>
 
@@ -3455,16 +3442,16 @@ remix.28.5\n
     <string name="WndPlayGames_BackupProgress">备份游戏进程</string>
     <string name="WndPlayGames_RestoreProgress">恢复游戏进程</string>
     <string name="WndPlayGames_WorkInCloud">上传中...请等待</string>
-    <string name="StartScene_UnlockGnoll">控制一只豺狼暴徒，并且带它回小镇治疗来解锁</string>
+    <string name="StartScene_UnlockGnoll">控制一只豺狼暴徒，并且带它回小镇找牧师治疗解锁</string>
     <string name="WndPriest_Heal_Minions">治疗你所有的随从 - 只需%d金币!</string>
-    <string name="Badges_GnollUnlocked">豺狼王解锁</string>
+    <string name="Badges_GnollUnlocked">豺狼人解锁</string>
 
     <string-array name="HeroClass_GnollPerks">
-        <item>豺狼王初始拥有15点力量。</item>
-        <item>豺狼王初始只拥有5点生命上限。</item>
-        <item>豺狼王初始没有基础护甲，但有一把独特的战斧和一些飞镖。</item>
-        <item>豺狼王对于文字不会读也不会写。</item>
-        <item>其它豺狼在被激怒之前不会主动攻击豺狼王。</item>
+        <item>豺狼人初始拥有15点力量。</item>
+        <item>豺狼人初始只拥有5点生命上限。</item>
+        <item>豺狼人初始没有基础护甲，但有一把独特的战斧和一些飞镖。</item>
+        <item>豺狼人对于文字不会读也不会写。</item>
+        <item>其它豺狼在被激怒之前不会主动攻击豺狼人。</item>
     </string-array>
     <string name="Potion_Name">%s药水</string>
     <string name="Potion_Info">这个瓶子里装着不断旋转的%s液体。谁知道饮用或投掷它时会怎么样呢？</string>
@@ -3561,7 +3548,7 @@ remix.28.5\n
     <string name="WndSettings_ActionButtonSize">按钮大小</string>
     <string name="WndSettings_Handedness">惯用方向</string>
     <string name="WndSettings_InGameUiSettings">用户界面设置</string>
-    <string name="WndSettings_GameplaySettings">游戏选项</string>
+    <string name="WndSettings_GameplaySettings">特殊设置</string>
     <string name="WndPremiumSettings_marble">大理石</string>
     <string name="QuickSlot_SelectSlot">更改快捷使用</string>
 
@@ -3573,5 +3560,68 @@ remix.28.5\n
     <string name="Potion_ArrowMoisten">你成功的浸润了这些箭。</string>
     <string name="Potion_ItemFliesAway">%s从你的手中飘走了。</string>
     <string name="Potion_FoodRefreshed">%s现在看起来能吃了。</string>
+
+
+    <string name="KindOfBow_SelectArrowKind">我应该使用哪些箭头？</string>
+    <string name="KindOfBow_ChooseArrows">选择箭</string>
+
+    <string name="BodyArmorSpell_Name">格挡</string>
+    <string name="BodyArmorSpell_Info">激活身体的肌肉力量，使你暂时变强，从而增加你的护甲，但会减少移动速度。</string>
+
+    <string name="BodyArmorBuff_Name">重甲</string>
+    <string name="BodyArmorBuff_Info">牺牲移动速度增加护甲。</string>
+
+    <string name="DieHardSpell_Name">再起</string>
+    <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
+
+    <string name="DieHardBuff_Name">顽固</string>
+    <string name="DieHardBuff_Info">回复速度提高</string>
+
+    <string name="SmashSpell_Name">猛劈</string>
+    <string name="SmashSpell_Info">向上跃起，进行落地猛击，暂时震晕周围敌人，同时造成物理伤害。</string>
+    <string name="SmashSpell_NeedWeapon">我需要一个武器来完成这个行动。</string>
+
+    <string name="DashSpell_Name">冲撞</string>
+    <string name="DashSpell_Info">冲向指定方向，与敌人相撞，造成伤害并残废敌人。</string>
+    <string name="DashSpell_OnSelf">我现在不能使用冲撞</string>
+    <string name="DashSpell_TooFar">我冲不了那么远。</string>
+
+    <string name="CloakSpell_Name">斗篷</string>
+    <string name="CloakSpell_Info">进入阴影中使敌人看不见，减少被发现的机会。附近有敌人不能使用。</string>
+    <string name="CloakSpell_EnemiesNearby">敌人在附近，你不能进入阴影中。</string>
+
+    <string name="CloakBuff_Name">潜伏</string>
+    <string name="CloakBuff_Info">躲在阴影里。</string>
+
+    <string name="TitleScene_Mods">模组</string>
+    <string name="WndHero_Stealth">潜行</string>
+    <string name="WndHero_Awareness">察觉</string>
+    <string name="WndHero_AttackSkill">攻击力</string>
+    <string name="WndHero_DefenceSkill">防御力</string>
+
+
+    <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - 游戏机制:\n
+    -- 战士特殊技能!\n
+    -- 人物的饥饿感降低\n
+    -- 死灵法师拥有法术\n
+    -- 盗贼斗篷能力\n
+    -- 新徽章\n
+    - Mod调整:\n
+    -- 自定义脚本化的Buff\n
+    -- 自定义 gfx\n
+    </string>
+    <string name="Badges_GamesPlayed5">5000次游戏</string>
+    <string name="Badges_PotionsCooked5">制作25瓶药水</string>
+    <string name="Badges_ItemLvl5">获得15级物品</string>
+    <string name="Badges_FoodEaten5">吃了60个食物</string>
+    <string name="Badges_StrengthAttained5">达到21点力量</string>
+    <string name="Badges_LevelReached5">达到30级</string>
+    <string name="Badges_GoldCollected5">获得35000枚金币</string>
+    <string name="Badges_MonsterSlain5">击杀1000个敌人</string>
+    <string name="Spells_NotInOwnBody">当你的灵魂与身体分离时，你不能%s。</string>
+    <string name="WndHero_Satiety">饱食</string>
+
 
 </resources>

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -67,7 +68,8 @@ public class WndBag extends WndTabbed {
 		MOISTABLE, 
 		FUSEABLE, 
 		UPGRADABLE_WEAPON,
-		FOR_BUY
+		FOR_BUY,
+		ARROWS
 	}
 
 
@@ -117,6 +119,11 @@ public class WndBag extends WndTabbed {
 		this.stuff = stuff;
 		
 		lastMode = mode;
+
+		if(bag==null) {
+			bag = stuff.backpack;
+		}
+
 		lastBag = bag;
 		
 		int panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
@@ -182,22 +189,31 @@ public class WndBag extends WndTabbed {
 	}
 	
 	public static WndBag lastBag( Listener listener, Mode mode, String title ) {
-		
+
+		ItemOwner owner = Dungeon.hero;
+
+		Belongings belongings = owner.getBelongings();
+
 		if (mode == lastMode && lastBag != null && 
-			Dungeon.hero.belongings.backpack.contains( lastBag )) {
+			belongings.backpack.contains( lastBag )) {
 			
-			return new WndBag(Dungeon.hero.belongings, lastBag, listener, mode, title );
+			return new WndBag(belongings, lastBag, listener, mode, title );
 			
 		} else {
-			return new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
+			switch (mode) {
+				case WAND:
+					return new WndBag(belongings, belongings.getItem(WandHolster.class), listener, mode, title );
+
+				case SEED:
+					return new WndBag(belongings, belongings.getItem(SeedPouch.class), listener, mode, title );
+
+				case ARROWS:
+					return new WndBag(belongings, belongings.getItem(Quiver.class), listener, mode, title );
+
+				default:
+					return new WndBag(belongings, belongings.backpack, listener, mode, title );
+			}
 		}
-	}
-	
-	public static WndBag seedPouch( Listener listener, Mode mode, String title ) {
-		SeedPouch pouch = Dungeon.hero.belongings.getItem( SeedPouch.class );
-		return pouch != null ?
-			new WndBag(Dungeon.hero.belongings, pouch, listener, mode, title ) :
-			new WndBag(Dungeon.hero.belongings, Dungeon.hero.belongings.backpack, listener, mode, title );
 	}
 
 	public void updateItems() {

@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
@@ -19,7 +20,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
-import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
@@ -41,7 +42,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		return crystal;
 	}
 
-	@NonNull
+	@NotNull
 	private Wand ensureWand() {
 		if (loot instanceof  Wand) {
 			return (Wand) loot;
@@ -107,7 +108,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 
 	@Override
-	public boolean attack(@NonNull Char enemy) {
+	public boolean attack(@NotNull Char enemy) {
 		zap(enemy);
 		return true;
 	}
@@ -146,8 +147,8 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	}
 
 	@Override
-	public boolean zap(@NonNull Char enemy) {
-		if (enemy == DUMMY) {
+	public boolean zap(@NotNull Char enemy) {
+		if (enemy == CharsList.DUMMY) {
 			EventCollector.logException("zapping dummy enemy");
 			return false;
 		}

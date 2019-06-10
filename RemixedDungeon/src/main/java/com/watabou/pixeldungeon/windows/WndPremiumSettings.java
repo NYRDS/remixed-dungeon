@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -60,7 +61,7 @@ public class WndPremiumSettings extends Window {
 			@Override
 			protected void onClick() {
 				RemixedDungeon.scene().add(
-						new WndOptions(assetName, "", options) {
+						new WndOptions(assetName, Utils.EMPTY_STRING, options) {
 							@Override
 							protected void onSelect(int index) {
 								if (RemixedDungeon.donated() >= material2level.get(options[index])) {

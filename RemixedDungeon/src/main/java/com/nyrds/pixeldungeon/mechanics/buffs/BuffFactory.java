@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -15,7 +16,7 @@ public class BuffFactory {
 
     static {
         initBuffsMap();
-        script.run("loadSpells",null);
+        script.run("loadBuffs",null);
     }
 
     private static void registerBuffClass(Class<? extends Buff> buffClass) {
@@ -48,6 +49,6 @@ public class BuffFactory {
         } catch (IllegalAccessException e) {
             throw new TrackedRuntimeException(e);
         }
-        return null;
+        throw new ModError(name, new Exception("Unknown Buff"));
     }
 }
