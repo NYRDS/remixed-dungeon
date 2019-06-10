@@ -3,7 +3,6 @@ package com.nyrds.android.util;
 import android.content.SharedPreferences;
 
 import com.watabou.pixeldungeon.Preferences;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.UUID;
 
@@ -27,8 +26,6 @@ public class UserKey {
 			userId = UUID.fromString(key);
 		}
 
-		GLog.debug("UserKey", userId.toString());
-		
 		crypter = new Crypter("RPD_UserKey_"+userId.toString());
 	}
 
