@@ -42,7 +42,7 @@ public class Hunger extends Buff implements Hero.Doom {
 	public static final float STARVING	= 400f;
 
 	@Packable
-	private float level;
+	private float hungerLevel;
 
 	@Override
 	public boolean act() {
@@ -87,7 +87,7 @@ public class Hunger extends Buff implements Hero.Doom {
 					delta = 0;
 				}
 				
-				float newLevel = level + delta;
+				float newLevel = hungerLevel + delta;
 
 				if(target==Dungeon.hero) {
 					boolean statusUpdated = false;
@@ -96,13 +96,13 @@ public class Hunger extends Buff implements Hero.Doom {
 						GLog.n(Game.getVars(R.array.Hunger_Starving)[target.getGender()]);
 						statusUpdated = true;
 
-					} else if (newLevel >= HUNGRY && level < HUNGRY) {
+					} else if (newLevel >= HUNGRY && hungerLevel < HUNGRY) {
 						GLog.w(Game.getVars(R.array.Hunger_Hungry)[target.getGender()]);
 						statusUpdated = true;
 
 					}
 
-					level = GameMath.gate(0, newLevel, STARVING);
+					hungerLevel = GameMath.gate(0, newLevel, STARVING);
 
 					if (statusUpdated) {
 						BuffIndicator.refreshHero();
@@ -125,22 +125,22 @@ public class Hunger extends Buff implements Hero.Doom {
 	}
 	
 	public void satisfy( float energy ) {
-		level -= energy;
+		hungerLevel -= energy;
 
-		level = GameMath.gate(0, level, STARVING);
+		hungerLevel = GameMath.gate(0, hungerLevel, STARVING);
 
 		BuffIndicator.refreshHero();
 	}
 	
 	public boolean isStarving() {
-		return level >= STARVING;
+		return hungerLevel >= STARVING;
 	}
 	
 	@Override
 	public int icon() {
-		if (level < HUNGRY) {
+		if (hungerLevel < HUNGRY) {
 			return BuffIndicator.NONE;
-		} else if (level < STARVING) {
+		} else if (hungerLevel < STARVING) {
 			return BuffIndicator.HUNGER;
 		} else {
 			return BuffIndicator.STARVATION;
@@ -149,7 +149,7 @@ public class Hunger extends Buff implements Hero.Doom {
 	
 	@Override
 	public String name() {
-		if (level < STARVING) {
+		if (hungerLevel < STARVING) {
 			return Game.getVar(R.string.Hunger_Info1);
 		} else {
 			return Game.getVar(R.string.Hunger_Info2);
@@ -170,7 +170,7 @@ public class Hunger extends Buff implements Hero.Doom {
 		GLog.n( Game.getVar(R.string.Hunger_Death) );
 	}
 
-	public float getLevel() {
-		return level;
+	public float getHungerLevel() {
+		return hungerLevel;
 	}
 }

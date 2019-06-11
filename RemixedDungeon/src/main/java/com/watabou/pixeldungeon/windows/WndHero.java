@@ -130,7 +130,7 @@ public class WndHero extends WndTabbed {
 			Hunger hunger = hero.hunger();
 
 			statSlot(Game.getVar(R.string.WndHero_Satiety),
-					Utils.EMPTY_STRING+((int)((Hunger.STARVING - hunger.getLevel())/ Hunger.STARVING * 100))+"%");
+					Utils.EMPTY_STRING+((int)((Hunger.STARVING - hunger.getHungerLevel())/ Hunger.STARVING * 100))+"%");
 
 			statSlot(Game.getVar(R.string.WndHero_Stealth), hero.stealth());
 
