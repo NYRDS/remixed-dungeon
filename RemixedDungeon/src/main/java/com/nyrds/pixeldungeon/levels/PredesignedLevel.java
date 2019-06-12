@@ -4,13 +4,11 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.Nullable;
@@ -217,11 +215,6 @@ public class PredesignedLevel extends CustomLevel {
 				String descId = mLevelDesc.getJSONArray(property).getString(tile);
 				if(!descId.isEmpty()) {
 					String desc = StringsManager.maybeId(descId);
-					if(BuildConfig.DEBUG) {
-						if (descId.equals(desc)) {
-							GLog.n("Missing tile desc for: %s", descId);
-						}
-					}
 					return desc;
 				}
 			} catch (JSONException e) {

@@ -51,6 +51,9 @@ public class StringsManager {
 
     private static Set<String> nonModdable = new HashSet<>();
 
+
+    public static Set<String> missingStrings = new HashSet<>();
+
 	static {
 		addMappingForClass(R.string.class);
 		addMappingForClass(R.array.class);
@@ -230,15 +233,17 @@ public class StringsManager {
 	public static String maybeId(String maybeId, int index) {
 		String[] ret = getVars(maybeId);
 		if (ret.length > index) {
+			missingStrings.add(maybeId);
 			return ret[index];
 		}
-		return Utils.format("%s[%d]",maybeId,index);
+		return Utils.format("%s[%d]", maybeId, index);
 	}
 
 	public static String maybeId(String maybeId) {
 
 		String ret = getVar(maybeId);
 		if (ret.isEmpty()) {
+			missingStrings.add(maybeId);
 			return maybeId;
 		}
 		return ret;
