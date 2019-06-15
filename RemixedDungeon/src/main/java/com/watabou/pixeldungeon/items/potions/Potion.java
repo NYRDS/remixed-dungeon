@@ -51,6 +51,8 @@ public class Potion extends Item implements UnknownItem {
 	
 	private static final float TIME_TO_DRINK = 1f;
 	private static final float TIME_TO_MOISTEN = 1f;
+
+	protected int labelIndex = -1;
 	
 	private static final Class<?>[] potions = {
 		PotionOfHealing.class, 
@@ -394,5 +396,13 @@ public class Potion extends Item implements UnknownItem {
 		getUser().getSprite().operate( getUser().getPos() );
 		getUser().spend( TIME_TO_MOISTEN );
 		getUser().busy();
+	}
+
+	@Override
+	public int overlayIndex() {
+		if(!isIdentified()) {
+			return super.overlayIndex();
+		}
+		return labelIndex;
 	}
 }

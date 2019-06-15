@@ -88,9 +88,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	protected String info2 = getClassParam("Info2", Game.getVar(R.string.Item_Info2), false);
 
 	protected int image = 0;
-	protected int overlayIndex;
+	protected int overlayIndex = -1;
 
-	protected String overlayFile;
+	static private final String overlayFile = "items/overlays.png";
 	protected String imageFile;
 
 	public  boolean stackable = false;

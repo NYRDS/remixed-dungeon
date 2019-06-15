@@ -36,7 +36,7 @@ public class Image extends Visual {
 	public boolean flipVertical;
 	
 	protected float[] vertices;
-	protected FloatBuffer verticesBuffer;
+	private FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
 	
@@ -185,5 +185,9 @@ public class Image extends Visual {
 
 	public float bottom() {
 		return y + height();
+	}
+
+	public FloatBuffer getVerticesBuffer() {
+		return verticesBuffer;
 	}
 }

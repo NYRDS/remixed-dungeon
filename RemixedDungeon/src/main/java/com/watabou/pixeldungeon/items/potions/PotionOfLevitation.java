@@ -29,6 +29,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfLevitation extends UpgradablePotion {
 
+	{
+		labelIndex = 2;
+	}
+
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

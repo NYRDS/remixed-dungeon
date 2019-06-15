@@ -41,7 +41,7 @@ public class CompositeImage extends Image {
         for (Image img : mLayers) {
             img.texture.bind();
             img.updateVerticesBuffer();
-            script.drawQuad(img.verticesBuffer);
+            script.drawQuad(img.getVerticesBuffer());
         }
     }
 }

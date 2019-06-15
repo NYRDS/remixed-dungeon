@@ -67,7 +67,7 @@ public class CompositeMovieClip extends MovieClip {
 
 			for (LayerDesc layer : mLayers) {
 					layer.texture.bind();
-					script.drawQuad(verticesBuffer);
+					script.drawQuad(getVerticesBuffer());
 			}
 		}
 	}

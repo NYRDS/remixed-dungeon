@@ -30,6 +30,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfInvisibility extends UpgradablePotion {
 
+	{
+		labelIndex =3;
+	}
+
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

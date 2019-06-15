@@ -40,6 +40,10 @@ import com.watabou.utils.PathFinder;
 
 public class PotionOfPurity extends UpgradablePotion{
 
+	{
+		labelIndex = 4;
+	}
+
 	private static final int DISTANCE = 2;
 
 	@Override

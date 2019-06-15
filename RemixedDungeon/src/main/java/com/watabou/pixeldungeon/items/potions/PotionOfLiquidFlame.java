@@ -29,6 +29,10 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfLiquidFlame extends UpgradablePotion {
 
+	{
+		labelIndex = 1;
+	}
+
 	@Override
 	public void shatter( int cell ) {
 		

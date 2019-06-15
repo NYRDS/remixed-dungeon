@@ -35,7 +35,7 @@ public class CompositeTextureImage extends Image {
 
 		for (Texture img : mLayers) {
 			img.bind();
-			script.drawQuad(verticesBuffer);
+			script.drawQuad(getVerticesBuffer());
 		}
 	}
 
