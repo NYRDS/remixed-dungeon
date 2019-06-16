@@ -57,7 +57,6 @@ public class SewerLevel extends RegularLevel {
 	}
 
 	protected boolean[] water() {
-
 		return Patch.generate(this, getFeeling() == Feeling.WATER ? 0.60f : 0.45f, 5);
 	}
 

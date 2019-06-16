@@ -3,12 +3,13 @@ package com.nyrds.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Patch;
+import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.List;
 
-public class TestLevel extends Level {
+public class TestLevel extends RegularLevel {
 
 	public TestLevel() {
 		color1 = 0x801500;
@@ -19,18 +20,27 @@ public class TestLevel extends Level {
 
 	@Override
 	public String tilesTex() {
-		return Assets.WATER_HALLS;
+		return Assets.TILES_SEWERS;
 	}
 
 	@Override
 	public String waterTex() {
-		return Assets.WATER_HALLS;
+		return Assets.WATER_SEWERS;
 	}
 
 	@Override
 	protected boolean build() {
+		super.build();
 		Tools.makeEmptyLevel(this);
 		return true;
+	}
+
+	protected boolean[] water() {
+		return Patch.generate(this, getFeeling() == Feeling.WATER ? 0.60f : 0.45f, 5);
+	}
+
+	protected boolean[] grass() {
+		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.60f : 0.40f, 4);
 	}
 
 	@Override
@@ -43,7 +53,7 @@ public class TestLevel extends Level {
 
 		for(Mob mob:mobs) {
 
-			int cell = mob.respawnCell(this);
+			int cell = randomRespawnCell(passable);
 			if(!cellValid(cell)) {
 				GLog.debug("no cell for %s", mob.getMobClassName());
 				continue;
@@ -60,6 +70,6 @@ public class TestLevel extends Level {
 
 	@Override
 	public boolean isBossLevel() {
-		return true;
+		return false;
 	}
 }
