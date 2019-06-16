@@ -243,7 +243,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return false;
 		}
 
-		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
+		boolean visibleFight = Char.isVisible(this) || Char.isVisible(enemy);
 
 		if (hit(this, enemy, false)) {
 
@@ -431,7 +431,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (hasBuff(Paralysis.class)) {
 			if (Random.Int(dmg) >= Random.Int(hp())) {
 				Buff.detach(this, Paralysis.class);
-				if (Dungeon.visible[getPos()]) {
+				if (Char.isVisible(this)) {
 					GLog.i(Game.getVar(R.string.Char_OutParalysis), getName_objective());
 				}
 			}
@@ -1083,5 +1083,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public int effectiveSTR() {
 		return 10;
+	}
+
+	static public boolean isVisible(@Nullable Char ch) {
+		if(ch==null) {
+			return false;
+		}
+
+		if(!ch.level().cellValid(ch.getPos())) {
+			EventCollector.logException("Checking visibility on invalid cell");
+			return false;
+		}
+
+		return Dungeon.visible[ch.getPos()];
 	}
 }

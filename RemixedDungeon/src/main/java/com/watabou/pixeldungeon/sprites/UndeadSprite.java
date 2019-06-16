@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.sprites;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 
 public class UndeadSprite extends MobSprite {
@@ -50,7 +50,7 @@ public class UndeadSprite extends MobSprite {
 	@Override
 	public void die() {
 		super.die();
-		if (Dungeon.visible[ch.getPos()]) {
+		if (Char.isVisible(ch)) {
 			emitter().burst( Speck.factory( Speck.BONE ), 3 );
 		}
 	}

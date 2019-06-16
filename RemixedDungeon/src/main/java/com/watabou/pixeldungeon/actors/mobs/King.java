@@ -231,7 +231,7 @@ public class King extends Boss {
 		public void die(NamedEntityKind cause) {
 			super.die( cause );
 			
-			if (Dungeon.visible[getPos()]) {
+			if (Char.isVisible(this)) {
 				Sample.INSTANCE.play( Assets.SND_BONES );
 			}
 		}

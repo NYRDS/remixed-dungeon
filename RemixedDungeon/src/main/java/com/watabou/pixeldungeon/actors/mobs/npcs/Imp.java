@@ -54,7 +54,7 @@ public class Imp extends NPC {
 	@Override
     public boolean act() {
 		
-		if (!Quest.given && Dungeon.visible[getPos()]) {
+		if (!Quest.given && Char.isVisible(this)) {
 			if (!seenBefore) {
 				say( Utils.format( Game.getVar(R.string.Imp_Hey), Dungeon.hero.className() ) );
 			}

@@ -86,7 +86,7 @@ public class Skeleton extends UndeadMob {
 			}
 		}
 		
-		if (Dungeon.visible[getPos()]) {
+		if (Char.isVisible(this)) {
 			Sample.INSTANCE.play( Assets.SND_BONES );
 		}
 		

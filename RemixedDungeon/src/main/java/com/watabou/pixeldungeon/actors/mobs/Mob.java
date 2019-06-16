@@ -506,7 +506,7 @@ public abstract class Mob extends Char {
 			dropLoot();
 		}
 
-		if (hero.isAlive() && !Dungeon.visible[getPos()]) {
+		if (hero.isAlive() && !Char.isVisible(this)) {
 			GLog.i(Game.getVar(R.string.Mob_Died));
 		}
 	}

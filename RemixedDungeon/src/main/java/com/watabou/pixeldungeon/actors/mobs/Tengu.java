@@ -154,7 +154,7 @@ public class Tengu extends Boss implements IZapper {
 		getSprite().move( getPos(), newPos );
 		move( newPos );
 		
-		if (Dungeon.visible[newPos]) {
+		if (Char.isVisible(this)) {
 			CellEmitter.get( newPos ).burst( Speck.factory( Speck.WOOL ), 6 );
 			Sample.INSTANCE.play( Assets.SND_PUFF );
 		}
