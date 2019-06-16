@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 
@@ -17,6 +18,11 @@ public class LevelHelpers {
 
         int dx = x - hx;
         int dy = y - hy;
+
+        if(dx==0 && dy == 0) {
+            EventCollector.logException("push from same position?");
+            return Level.INVALID_CELL;
+        }
 
         if (onlyRect && dx * dy != 0) {
             return Level.INVALID_CELL;

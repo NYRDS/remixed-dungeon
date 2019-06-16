@@ -736,16 +736,6 @@ public abstract class Mob extends Char {
 		enemyId = enemy.getId();
 	}
 
-	@Override
-	public boolean attack(@NotNull Char enemy) {
-
-		if (enemy == CharsList.DUMMY) {
-			EventCollector.logException(getName() + " attacking dummy enemy");
-			return false;
-		}
-		return super.attack(enemy);
-	}
-
 	public boolean zap(@NotNull Char enemy) {
 
 		if(zapHit(enemy)) {

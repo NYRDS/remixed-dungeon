@@ -233,6 +233,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public boolean attack(@NotNull Char enemy) {
 
+		if (enemy == CharsList.DUMMY) {
+			EventCollector.logException(getName() + " attacking dummy enemy");
+			return false;
+		}
+
+		if(!level().cellValid(enemy.getPos())) {
+			EventCollector.logException(getName() + " attacking " +enemy.getName() + "on invalid cell" );
+			return false;
+		}
+
 		boolean visibleFight = Dungeon.visible[getPos()] || Dungeon.visible[enemy.getPos()];
 
 		if (hit(this, enemy, false)) {
