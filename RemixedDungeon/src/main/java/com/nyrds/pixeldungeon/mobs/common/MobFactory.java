@@ -94,7 +94,9 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -247,5 +249,15 @@ public class MobFactory {
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}
+	}
+
+	public static List<Mob> allMobs() {
+		List<Mob> mobs = new ArrayList<>();
+
+		for(String mobClass:mMobsList.keySet()) {
+			mobs.add(mobByName(mobClass));
+		}
+
+		return mobs;
 	}
 }

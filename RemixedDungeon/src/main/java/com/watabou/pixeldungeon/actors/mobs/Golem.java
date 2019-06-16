@@ -25,14 +25,12 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.sprites.GolemSprite;
 import com.watabou.utils.Random;
 
 public class Golem extends Mob {
 	
 	public Golem() {
-		spriteClass = GolemSprite.class;
-		
+
 		hp(ht(85));
 		defenseSkill = 18;
 		

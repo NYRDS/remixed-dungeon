@@ -4,6 +4,7 @@
     "empty_interior":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true, "file":"levelsDesc/empty_interior.json", "music":"ost_town_1.mp3"},
     "vwArena":{"kind":"PredesignedLevel", "depth":0, "isSafe":true, "file":"levelsDesc/vwArena.json"},
     "test":{"kind":"PredesignedLevel", "depth":0, "isSafe":true, "file":"levelsDesc/TestLevelSewers.json"},
+    "testLevel":{"kind":"TestLevel", "depth":0, "size":[64,64]},
 
     "library":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "noFogOfWar":true, "isSafe":true, "file":"levelsDesc/TownLibrary.json", "music":"ost_town_1.mp3"},
     "church":{"kind":"PredesignedLevel", "depth":0,  "size":[32,32], "isSafe":true,"noFogOfWar":true, "file":"levelsDesc/Church.json", "music":"ost_town_1.mp3"},
@@ -75,7 +76,7 @@
     "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
   },
   "Graph":{
-    "0":[["town"],[]],
+    "0":[["testLevel"],[]],
 
     "town_shop":[[],["town"]],
     "movie_theater":[[],["town"]],

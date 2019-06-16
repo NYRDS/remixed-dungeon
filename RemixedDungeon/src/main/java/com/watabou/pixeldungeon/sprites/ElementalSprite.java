@@ -51,13 +51,7 @@ public class ElementalSprite extends MobSprite {
 		super.link( ch );
 		add( State.BURNING );
 	}
-	
-	@Override
-	public void die() {
-		super.die();
-		remove( State.BURNING );
-	}
-	
+
 	@Override
 	public int blood() {
 		return 0xFFFF7D13;

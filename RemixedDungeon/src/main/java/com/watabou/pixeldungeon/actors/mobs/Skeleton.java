@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.sprites.SkeletonSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -38,8 +37,6 @@ import com.watabou.utils.Random;
 public class Skeleton extends UndeadMob {
 
 	public Skeleton() {
-		spriteClass = SkeletonSprite.class;
-		
 		hp(ht(25));
 		defenseSkill = 9;
 		

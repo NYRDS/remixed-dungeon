@@ -34,6 +34,7 @@ public class MobSpriteDef extends MobSprite {
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
 	private String name;
+	private String deathEffect;
 
 	public MobSpriteDef(String defName, int kind) {
 		super();
@@ -109,6 +110,10 @@ public class MobSpriteDef extends MobSprite {
 				zapEffect = json.getString("zapEffect");
 			}
 
+			if(json.has("deathEffect")) {
+				deathEffect = json.getString("deathEffect");
+			}
+
 			loadAdditionalData(json,film, kind);
 
 		} catch (Exception e) {
@@ -135,6 +140,10 @@ public class MobSpriteDef extends MobSprite {
 
 	@Override
 	public void die() {
+		if(deathEffect!=null) {
+			ZapEffect.play(null,ch.getPos(),deathEffect);
+		}
+
 		removeAllStates();
 		super.die();
 	}
