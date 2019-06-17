@@ -42,6 +42,10 @@ public class LuaEngine implements ResourceFinder {
 
 	private Globals globals;
 
+	public static void reset() {
+		engine = new LuaEngine();
+	}
+
 	public LuaValue call(String method) {
 		return globals.get(method).call();
 	}
@@ -55,17 +59,7 @@ public class LuaEngine implements ResourceFinder {
 		}
 		return LuaValue.NIL;
 	}
-/*
-	public LuaValue call(String method, Object arg1, Object arg2) {
-		try {
-			LuaValue methodForData = globals.get(method);
-			methodForData.call(CoerceJavaToLua.coerce(arg1),CoerceJavaToLua.coerce(arg2));
-		} catch (LuaError err) {
-			reportLuaError(err);
-		}
-		return LuaValue.NIL;
-	}
-*/
+
 	@Nullable
 	public static LuaTable module(String module, String fallback) {
 		LuaValue luaModule = getEngine().call("require", module);

@@ -144,6 +144,8 @@ public class Dungeon {
 
         gameId = String.valueOf(SystemTime.now());
 
+        LuaEngine.reset();
+
         challenges = RemixedDungeon.challenges();
 
         Scroll.initLabels();
