@@ -72,6 +72,13 @@ public class RemixedDungeonApp extends MultiDexApplication {
     }
 
     @Override
+    public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callback) {
+        if (!callback.getClass().getName().startsWith("com.google.android.gms.measurement.")) {
+            super.registerActivityLifecycleCallbacks(callback);
+        }
+    }
+
+    @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);

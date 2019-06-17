@@ -18,6 +18,11 @@ import java.util.Map;
 
 public class MobSpriteDef extends MobSprite {
 
+	private static final String DEATH_EFFECT = "deathEffect";
+	private static final String ZAP_EFFECT = "zapEffect";
+	private static final String ZAP = "zap";
+	private static final String ATTACK = "attack";
+	private static final String LAYERS = "layers";
 	private int      bloodColor;
 	private boolean  levitating;
 	private int      framesInRow;
@@ -57,8 +62,8 @@ public class MobSpriteDef extends MobSprite {
 		try {
 			texture(json.getString("texture"));
 
-			if(json.has("layers")) {
-				JSONArray layers = json.getJSONArray("layers");
+			if(json.has(LAYERS)) {
+				JSONArray layers = json.getJSONArray(LAYERS);
 
 				for(int i=0;i<layers.length();++i) {
 					JSONObject layer = layers.getJSONObject(i);
@@ -94,24 +99,24 @@ public class MobSpriteDef extends MobSprite {
 			run = readAnimation(json, "run", film);
 			die = readAnimation(json, "die", film);
 
-			if(json.has("attack")) { //attack was not defined for some peaceful NPC's
-				attack = readAnimation(json, "attack", film);
+			if(json.has(ATTACK)) { //attack was not defined for some peaceful NPC's
+				attack = readAnimation(json, ATTACK, film);
 			} else {
 				attack = run.clone();
 			}
 
-			if (json.has("zap")) {
-				zap = readAnimation(json, "zap", film);
+			if (json.has(ZAP)) {
+				zap = readAnimation(json, ZAP, film);
 			} else {
 				zap = attack.clone();
 			}
 
-			if (json.has("zapEffect")) {
-				zapEffect = json.getString("zapEffect");
+			if (json.has(ZAP_EFFECT)) {
+				zapEffect = json.getString(ZAP_EFFECT);
 			}
 
-			if(json.has("deathEffect")) {
-				deathEffect = json.getString("deathEffect");
+			if(json.has(DEATH_EFFECT)) {
+				deathEffect = json.getString(DEATH_EFFECT);
 			}
 
 			loadAdditionalData(json,film, kind);
