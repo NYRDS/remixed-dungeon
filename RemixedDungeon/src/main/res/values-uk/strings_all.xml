@@ -3577,7 +3577,11 @@
     <string name="Potion_FoodRefreshed">%s тепер виглядає їстівним</string>
 
 
-    <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
+    <string name="town_deco_pillar_name">Стовп</string>
+   <string name="town_deco_entrance_name">Вхід</string>
+   <string name="town_deco_chest_name">Скриня</string>   
+   <string name="town_deco_scrolls_name">Сувої</string>   
+   <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
     <string name="Badges_ItemLvl5">Придбано предмет 15 рівня</string>
     <string name="Badges_FoodEaten5">60 порцій їжі вжито</string>
     <string name="Badges_StrengthAttained5">21 одиниць сили набрано</string>

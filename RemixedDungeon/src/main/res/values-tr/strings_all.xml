@@ -3391,6 +3391,10 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="CloakSpell_Name">Pelerin</string>
     <string name="CloakSpell_Info">Görünmez olmak için gölgelere karış. Fark edilme şansını büyük oranda düşürür. Yakında düşmanlar varken kullanılamaz. </string>
     <string name="WndHero_Awareness">Farkındalık</string>
-    <string name="Badges_GoldCollected5">35000 altın toplandı</string>
+    <string name="town_deco_pillar_name">Sütun</string>
+   <string name="town_deco_entrance_name">giriş</string>
+   <string name="town_deco_chest_name">Sandık</string>   
+   <string name="town_deco_scrolls_name">Parşömenler</string>   
+   <string name="Badges_GoldCollected5">35000 altın toplandı</string>
     <string name="Spells_NotInOwnBody">Ruhun bedeninden ayrıyken %s yapamazsın. </string>
     </resources>

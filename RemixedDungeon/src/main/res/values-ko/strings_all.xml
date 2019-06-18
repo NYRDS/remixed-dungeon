@@ -3413,4 +3413,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Potion_FoodRefreshed">지금은 %s 을/를 먹을 수 있을꺼 같습니다.</string>
 
 
-    </resources>
+    <string name="town_deco_pillar_name">기둥</string>
+   <string name="town_deco_entrance_name">입구</string>
+   <string name="town_deco_chest_name">보물 상자</string>   
+   <string name="town_deco_scrolls_name">두루마리</string>   
+   </resources>

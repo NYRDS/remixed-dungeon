@@ -263,13 +263,13 @@
     <string name="Item_Info2">啥玩意</string>
 
 
-    <string name="NecromancerArmor_Info2">获得释放瘟疫的能力</string>
+    <string name="NecromancerArmor_Info2">穿上这件盔甲，死灵法师可以使用“天灾”能力，这将传播一种魔法瘟疫，它可能感染附近的任何生物，无论是死的还是活的。</string>
 
 
     <string name="NecromancerRobe_Info2">获得召唤死灵的能力</string>
 
 
-    <string name="Necrotism_Info">死亡精灵</string>
+    <string name="Necrotism_Info">天灾</string>
     <string name="Necrotism_ACSpecial">死亡精灵</string>
     <string name="ResultDescriptions_Necrotism">在%d死亡</string>
     <string name="Necrotism_Death">你被死亡精灵击杀</string>
@@ -694,14 +694,14 @@ remix.28.5\n
     <string name="WndInfoCell_Nothing">那裏甚麼也沒有。</string>
 
 
-    <string name="WndInfoItem_Chest">寶箱</string>
-    <string name="WndInfoItem_LockedChest">上鎖的寶箱</string>
-    <string name="WndInfoItem_CrystalChest">水晶寶箱</string>
+    <string name="WndInfoItem_Chest">宝箱</string>
+    <string name="WndInfoItem_LockedChest">上锁的宝箱</string>
+    <string name="WndInfoItem_CrystalChest">水晶宝箱</string>
     <string name="WndInfoItem_Tomb">墳墓</string>
     <string name="WndInfoItem_Skeleton">骸骨</string>
     <string name="WndInfoItem_WontKnow">直至打開一刻，方曉裏面為何物！</string>
     <string name="WndInfoItem_NeedKey">您需要一把金鑰匙來打開它。</string>
-    <string name="WndInfoItem_Inside">您能看到裏面有 %s，但是您需要一把金鑰匙才能打開這個寶箱。</string>
+    <string name="WndInfoItem_Inside">你能感觉到面有 %s，但是你需要一把金钥匙才能打开这个宝箱。</string>
     <string name="WndInfoItem_Owner">這座墳墓裏可能有一些有用的東西，但它的主人肯定不太歡迎您深入探究。</string>
     <string name="WndInfoItem_Remains">這是您的一個前輩所留下的。也許有甚麼貴重物品在裏面。</string>
 
@@ -884,7 +884,7 @@ remix.28.5\n
 
 
     <string name="GoldenKey_Name">金鑰匙</string>
-    <string name="GoldenKey_Info">這把金鑰匙的凹凸處分外精細，也許能解開某些寶箱的鎖？</string>
+    <string name="GoldenKey_Info">这把金钥匙的凸凹纹路很精密，也许能解开些宝箱的锁？</string>
 
 
     <string name="IronKey_Name">鐵鑰匙</string>
@@ -1179,7 +1179,7 @@ remix.28.5\n
 
     <string name="BlackSkullOfMastery_Lich">成为巫妖</string>
     <string name="BlackSkullOfMastery_Necromancer">改造神器</string>
-    <string name="BlackSkullOfMastery_BecomeLichDesc">_巫妖_在死灵法术上有着极高的造诣，并且存在于生与死的边界，所以它的力量水平很差。</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">_巫妖_在死灵法术上有着极高的造诣，并且存在于生与死的边界，所以它的战斗水平很差，但不会受到一些生者状态的影响。</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">或者，若果你 ＿改造神器＿，你便能正常地使用这件神器。</string>
 
 
@@ -1228,7 +1228,7 @@ remix.28.5\n
     <string name="Necromancy_ReincarnationTriggered">你的力量使你从死亡中归来！但你失去了所有已收集的灵魂和所有物。</string>
     <string name="Necromancy_SummonDeathlingName">召唤死灵</string>
 
-    <string name="Necromancy_BecameALich">您成为了巫妖！你的力量正在增強，同時你的灵魂容量提升了一倍！但是你失去了 %1$d 点力量。</string>
+    <string name="Necromancy_BecameALich">你成为了巫妖！你的身体正在变化，同時你的灵魂容量提升了一倍！但是你失去了 %1$d 点力量。</string>
 
 
 
@@ -1538,7 +1538,7 @@ remix.28.5\n
     <string name="Hero_NewLevel">恭喜你升到了%d級！現在的您更加健康和專注。這讓您更容易命中敵人和躲避敵人攻擊。</string>
     <string name="Hero_YouNowHave">你获得了%s</string>
     <string name="Hero_SomethingElse">這裏還有其他東西</string>
-    <string name="Hero_LockedChest">寶箱已上鎖，您有鑰匙時才回來吧</string>
+    <string name="Hero_LockedChest">宝箱已上锁，等你有钥匙时再回来吧</string>
     <string name="Hero_LockedDoor">您沒有相配的鑰匙</string>
     <string name="Hero_NoticedSmth">您眼角一轉，發現前方有點異常。</string>
     <string name="Hero_Wait">人生的意義是甚麼呢?...</string>
@@ -1558,11 +1558,11 @@ remix.28.5\n
     <string name="Hero_StaVertigo">您周圍的一切都在旋轉！</string>
 
 
-    <string name="HeroClass_War">戰士</string>
+    <string name="HeroClass_War">战士</string>
     <string name="HeroClass_Mag">法師</string>
     <string name="HeroClass_Rog">盗賊</string>
     <string name="HeroClass_Hun">女獵手</string>
-    <string name="HeroClass_Elf">精靈</string>
+    <string name="HeroClass_Elf">精灵</string>
 
     <string-array name="HeroClass_WarPerks">
         <item>戰士起始擁有11點力量。</item>
@@ -2882,7 +2882,7 @@ remix.28.5\n
 
 
     <string name="ScrollOfTeleportation_Name">传送卷轴</string>
-    <string name="ScrollOfTeleportation_Info">将你传送到该层的随机一个位置，福祸未知的位置。</string>
+    <string name="ScrollOfTeleportation_Info">这张羊皮纸上的咒语会立即将阅读者传送到当前层的随机位置。它可以在危险的情况用来逃避，但不幸的读者可能会发现自己处在一个更危险的地方。</string>
     <string name="ScrollOfTeleportation_Teleport">眼前一闪，传送完成。</string>
     <string name="ScrollOfTeleportation_NoTeleport">强大的能量阻止了你的传送！</string>
 
@@ -3598,6 +3598,89 @@ remix.28.5\n
     <string name="WndHero_Awareness">察觉</string>
     <string name="WndHero_AttackSkill">攻击力</string>
     <string name="WndHero_DefenceSkill">防御力</string>
+	
+   <string name="town_deco_grave_name">坟墓</string>
+   <string name="town_deco_grave_desc">一个标准的坟墓，经受住了风化的考验。</string>
+   <string name="town_deco_pillar_name">台柱</string>
+   <string name="town_deco_pillar_desc">在过去时，这根柱子是一个很好的支撑物和装饰品。</string>
+   <string name="town_deco_wood_wall_name">木墙</string>
+   <string name="town_deco_wood_wall_desc">很坚固的木墙</string>
+   <string name="town_deco_entrance_name">入口</string>
+   <string name="town_deco_entrance_desc">这个入口通向地牢的上层。</string>
+   <string name="town_deco_exit_name">出口</string>
+   <string name="town_deco_exit_desc">如果你走下去了，等待你的将是未知的。</string>
+   <string name="town_deco_tile_name">地砖</string>
+   <string name="town_deco_tile_desc">这些地砖被时间磨坏了。</string>
+   <string name="town_deco_snowdrift_name">雪堆</string>
+   <string name="town_deco_snowdrift_desc">这是一个相当大的雪堆，显然没有人会来清理它。</string>
+   <string name="town_deco_misc_name">无用物品</string>
+   <string name="town_deco_misc_desc">一大堆没有用的东西。</string>
+   <string name="town_deco_broken_roof_name">损坏的屋顶</string>
+   <string name="town_deco_broken_roof_desc">这个屋顶上的瓦片有损坏，需要更换。</string>
+   <string name="town_deco_broken_wall_name">破旧的墙</string>
+   <string name="town_deco_broken_wall_desc">这堵墙里的木块早已腐朽，失去了正常的作用。</string>
+   <string name="town_deco_mud_name">泥浆</string>
+   <string name="town_deco_mud_desc">在这个冻土区融化后形成的冰水与土壤混合而成的。</string>
+   <string name="town_deco_stock_name">贮备</string>
+   <string name="town_deco_stock_desc">这里储存着食物，还有一堆带有各种各样颜色的垃圾。</string>
+   <string name="town_deco_barrel_name">桶</string>
+   <string name="town_deco_barrel_desc">一个普通的桶，可惜打不开。</string>
+   <string name="town_deco_hay_name">干草</string>
+   <string name="town_deco_hay_desc">一小堆散发着气味的干草</string>
+   <string name="town_deco_firewood_name">木柴</string>
+   <string name="town_deco_firewood_desc">在如此严寒之中这是必不可少的。</string>
+   <string name="town_deco_stakes_name">木桩</string>
+   <string name="town_deco_stakes_desc">这些削尖的圆木确实有一个可怕的外观，但事实上，它们本身是无用的。</string>
+   <string name="town_deco_fence_name">栅栏</string>
+   <string name="town_deco_fence_desc">被雪覆盖的木栅栏。</string>
+   <string name="town_deco_pole_name">杆子</string>
+   <string name="town_deco_pole_desc">一根用来把绳子串起来的高杆。</string>
+   <string name="town_deco_rope_name">绳索</string>
+   <string name="town_deco_rope_desc">圈起来的绳子。</string>
+   <string name="town_deco_slush_name">烂泥</string>
+   <string name="town_deco_slush_desc">雪融化后，把周围的地方变成了糊状。</string>
+   <string name="town_deco_chest_name">宝箱</string>   
+   <string name="town_deco_chest_desc">用来方便存放不同物品和珠宝的家具。</string>
+   <string name="town_deco_emptyboard_name">陈列架</string>
+   <string name="town_deco_emptyboard_desc">很普通的陈列架。</string>
+   <string name="town_deco_grandclock_name">时钟</string>
+   <string name="town_deco_grandclock_desc">相当古老但仍在运行的机械装置。</string>
+   <string name="town_deco_wall_beam_name">梁</string>
+   <string name="town_deco_wall_beam_desc">为建筑物提供可靠的支持力。</string>
+   <string name="town_deco_wall_candles_name">蜡烛</string>
+   <string name="town_deco_wall_candles_desc">熄灭的蜡烛，仍然散发出吸引人的香味。</string>
+   <string name="town_deco_wooden_drawer_name">抽屉</string>
+   <string name="town_deco_wooden_drawer_desc">让人感兴趣的是里面有什么。</string>
+   <string name="town_deco_scrolls_name">卷軸</string>   
+   <string name="town_deco_scrolls_desc">这个满是灰尘的架子上摆满了各种各样的卷轴和书。</string>
+   <string name="town_deco_medicine_name">药水架</string>   
+   <string name="town_deco_medicine_desc">将烧瓶和其他医疗原料小心地放在这些架子上。</string>
+   <string name="town_deco_wooden_stairs_name">楼梯</string>   
+   <string name="town_deco_wooden_stairs_desc">它让你更高一点。</string>
+   <string name="town_deco_canvas_name">帆布</string>
+   <string name="town_deco_canvas_desc">墙上挂着一块厚布。</string>
+   <string name="town_deco_projector_name">电影放映机</string>
+   <string name="town_deco_projector_desc">用来放电影娱乐人们的老旧设备。</string>
+   <string name="town_deco_filmtape_name">影片</string>
+   <string name="town_deco_filmtape_desc">有趣的是这件什么样的作品。</string>
+   <string name="town_deco_painting_name">油画</string>
+   <string name="town_deco_painting_desc">一件漂亮的艺术品。</string>
+   <string name="town_deco_curtains_name">幕布</string>
+   <string name="town_deco_curtains_desc">挡住一些不需要的光线，同时也作为一个漂亮的装饰。</string>
+   <string name="town_deco_rug_name">地毯</string>
+   <string name="town_deco_rug_desc">设计的很有品味。</string>
+   <string name="town_deco_trapdoor_name">活板门</string>
+   <string name="town_deco_trapdoor_desc">这可以到哪里去呢？</string>
+   <string name="town_deco_glass_stained_name">彩色玻璃</string>
+   <string name="town_deco_glass_stained_desc">这个玻璃的作者肯定用了很多精力。</string>
+   <string name="town_deco_glass_name">宽窗口</string>
+   <string name="town_deco_glass_desc">这一个比其它的更宽，当然也拥有更多的光。</string>
+   <string name="town_deco_counter_name">柜台</string>
+   <string name="town_deco_counter_desc">让你和站在它后面的人保持良好的距离。</string>
+   <string name="town_deco_library_books_name">阅读物</string>
+   <string name="town_deco_library_books_desc">比地牢里的书还要好。</string>
+   <string name="town_deco_wallpaper_name">墙纸</string>
+   <string name="town_deco_wallpaper_desc">这个装饰是一个很好的解决方案。</string>
 
 
     <string name="Welcome_Text_28_6">

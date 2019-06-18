@@ -3383,4 +3383,8 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Potion_FoodRefreshed">%s ahora parece comestible.</string>
 
 
-    </resources>
+    <string name="town_deco_pillar_name">Columna</string>
+   <string name="town_deco_entrance_name">Entrada</string>
+   <string name="town_deco_chest_name">Cofre</string>   
+   <string name="town_deco_scrolls_name">Pergaminos</string>   
+   </resources>

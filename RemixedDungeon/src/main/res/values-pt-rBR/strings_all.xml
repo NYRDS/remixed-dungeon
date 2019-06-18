@@ -3567,9 +3567,53 @@ Parede
     <string name="WndHero_Awareness">Consciência</string>
     <string name="WndHero_AttackSkill">Habilidade de Ataque</string>
     <string name="WndHero_DefenceSkill">Habilidade de Defesa</string>
-
-
-    <string name="Welcome_Text_28_6">
+	
+   <string name="town_deco_grave_name">Sepultura</string>
+   <string name="town_deco_grave_desc">Uma lápide comum,  com uma escritura danificada pelo tempo.</string>
+   <string name="town_deco_pillar_name">Pilar</string>
+   <string name="town_deco_pillar_desc">Antigamente, este pilar servia como um excelente suporte e decoração.</string>
+   <string name="town_deco_wood_wall_name">Parede de madeira</string>
+   <string name="town_deco_wood_wall_desc">Uma parede de madeira de aparência robusta.</string>
+   <string name="town_deco_entrance_name">Entrada</string>
+   <string name="town_deco_entrance_desc">Essa entrada leva a um nível superior do calabouço.</string>
+   <string name="town_deco_exit_name">Sair</string>
+   <string name="town_deco_exit_desc">Não se sabe o que te espera se você descer esses degraus.</string>
+   <string name="town_deco_tile_name">Azulejo</string>
+   <string name="town_deco_tile_desc">Estes azulejos estão bastante desgastados pelo tempo.</string>
+   <string name="town_deco_snowdrift_name">Monte de neve</string>
+   <string name="town_deco_snowdrift_desc">É uma pilha de neve bem grande e aparentemente ninguém vai limpa-la</string>
+   <string name="town_deco_misc_name">Lixo</string>
+   <string name="town_deco_misc_desc">Uma pilha de lixo</string>
+   <string name="town_deco_broken_roof_name">Telha quebrada</string>
+   <string name="town_deco_broken_roof_desc">As telhas desse telhado estão quebrada e precisam ser substituídas.</string>
+   <string name="town_deco_broken_wall_name">Parede quebrada</string>
+   <string name="town_deco_broken_wall_desc">A madeira dessa parece estão a muito tempo podres e perderam a sua resistência habitual.</string>
+   <string name="town_deco_mud_name">Lama</string>
+   <string name="town_deco_mud_desc">Solo descongelado nesta área de permafrost</string>
+   <string name="town_deco_stock_name">Estoque</string>
+   <string name="town_deco_stock_desc">Suprimentos de comida são mantidos aqui, assim como um monte de lixo de todos os tipos e cores.</string>
+   <string name="town_deco_barrel_name">Barril</string>
+   <string name="town_deco_barrel_desc">Um barril normal, que infelizmente não pode ser aberto.</string>
+   <string name="town_deco_hay_name">Feno</string>
+   <string name="town_deco_hay_desc">Uma pequena pilha de feno agradavelmente cheiroso.</string>
+   <string name="town_deco_firewood_name">Lenha</string>
+   <string name="town_deco_firewood_desc">Algo essencial em tais geadas severas.</string>
+   <string name="town_deco_stakes_name">Estacas</string>
+   <string name="town_deco_stakes_desc">Esses troncos afiados têm uma aparência assustadora, enquanto na verdade são inúteis por si mesmos.</string>
+   <string name="town_deco_fence_name">Cerca</string>
+   <string name="town_deco_fence_desc">Uma cerca de madeira degradado pela neve.</string>
+   <string name="town_deco_pole_name">Poste</string>
+   <string name="town_deco_pole_desc">Um poste alto designado para amarrar a corda.</string>
+   <string name="town_deco_rope_name">Corda</string>
+   <string name="town_deco_rope_desc">Corda torcida manualmente</string>
+   <string name="town_deco_slush_name">Lama</string>
+   <string name="town_deco_slush_desc">A neve começou a derreter, tornado o lugar em volta num lamaçal.</string>
+   <string name="town_deco_chest_name">Baú</string>   
+   <string name="town_deco_chest_desc">Conveniente mobília para guardar diferentes coisas e joias.</string>
+   <string name="town_deco_emptyboard_name">Prateleira</string>
+   <string name="town_deco_emptyboard_desc">A prateleira mais comum para colocar coias em exibição.</string>
+   <string name="town_deco_scrolls_name">Pergaminhos</string>   
+   <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mecânicas do Jogo:\n
     -- Habilidades especiais do Guerreiro!\n
