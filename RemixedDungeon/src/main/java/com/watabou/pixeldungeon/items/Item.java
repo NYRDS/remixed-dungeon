@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
@@ -79,6 +80,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	@NotNull
 	private String defaultAction = AC_THROW;
+
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	private int id = EntityIdSource.INVALID_ID;
 
 	@NotNull
 	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
@@ -436,6 +440,11 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
+
+		if(id==EntityIdSource.INVALID_ID) {
+			id = EntityIdSource.getNextId();
+		}
+
 		quantity(bundle.getInt(QUANTITY));
 
 		int level = bundle.getInt(LEVEL);
@@ -682,5 +691,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public int overlayIndex() {
 		return overlayIndex;
+	}
+
+	public int getId() {
+		if(id==EntityIdSource.INVALID_ID) {
+			id = EntityIdSource.getNextId();
+		}
+		return id;
 	}
 }
