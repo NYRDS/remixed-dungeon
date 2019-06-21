@@ -49,6 +49,8 @@ public class GLog {
 
 
 	public static synchronized void toFile(String text, Object... args) {
+		debug(text,args);
+
 		if(readonlySd) {
 			return;
 		}
