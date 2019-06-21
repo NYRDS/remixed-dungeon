@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
@@ -7,12 +8,9 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -20,7 +18,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -49,12 +46,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	//private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
-	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON = "hero_modern/spritesDesc/Hero.json";
+	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON   = "hero_modern/spritesDesc/Hero.json";
 	private static final String HERO_MODERN_SPRITES_DESC_STATUE_JSON = "hero_modern/spritesDesc/Statue.json";
+
+	private static final String BODY_TYPE = "bodyType";
 
 	private CustomClipEffect deathEffect;
 
 	private Map<String, Animation> weapon_anims;
+	private Map<String, String>    body_types;
 
 	private static final String[] layersOrder = {
 		LAYER_BODY,
@@ -298,26 +298,20 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		return HERO_EMPTY_PNG;
 	}
 
-	private String bodyDescriptor(Hero hero) {
-		String descriptor = "man";
+	private String bodyDescriptor(@NotNull Hero hero) {
+		String key = hero.getSubClass().name();
 
-		if(hero.getGender()== Utils.FEMININE) {
-			descriptor = "woman";
+		if(body_types.containsKey(key)) {
+			return body_types.get(key);
 		}
 
-		if(hero.getSubClass().equals(HeroSubClass.WARLOCK)) {
-			descriptor = "warlock";
+		key = hero.getHeroClass().name();
+
+		if(body_types.containsKey(key)) {
+			return body_types.get(key);
 		}
 
-		if(hero.getSubClass().equals(HeroSubClass.LICH)) {
-			descriptor = "lich";
-		}
-
-		if(hero.getHeroClass() == HeroClass.GNOLL) {
-			descriptor = "gnoll";
-		}
-
-		return descriptor;
+		return "man";
 	}
 
 	@Override
@@ -327,13 +321,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		if(json.has(WEAPON_ANIM)){
 			weapon_anims = new HashMap<>();
 
-			JSONObject anims = json.getJSONObject(WEAPON_ANIM);
-			Iterator<String> keys = anims.keys();
+			JsonHelper.foreach(json.getJSONObject(WEAPON_ANIM),
+					(root, key) -> weapon_anims.put(key,readAnimation(root,key,film)));
+		}
 
-			while( keys.hasNext() ) {
-				String key = keys.next();
-				weapon_anims.put(key,readAnimation(anims,key,film));
-			}
+		if(json.has(BODY_TYPE)) {
+			body_types = new HashMap<>();
+
+			JsonHelper.foreach(json.getJSONObject(BODY_TYPE),
+					(root, key) -> body_types.put(key,root.getString(key)));
 		}
 	}
 
