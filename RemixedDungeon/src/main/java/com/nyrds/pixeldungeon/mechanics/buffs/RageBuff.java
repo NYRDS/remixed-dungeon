@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -36,5 +37,10 @@ public class RageBuff extends ArtifactBuff {
     @Override
     public String toString() {
         return Game.getVar(R.string.CorpseDust_Buff);
+    }
+
+    @Override
+    public boolean attachTo( Char target ) {
+        return target.hasBuff(RageBuff.class) || super.attachTo(target);
     }
 }
