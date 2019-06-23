@@ -32,7 +32,7 @@ import org.json.JSONObject;
 public class Codex extends Book {
 
 	@Packable(defaultValue = "-1")
-	private int codexId;
+	private int codexId=-1;
 
 	@Packable(defaultValue = "")
 	private String text;
