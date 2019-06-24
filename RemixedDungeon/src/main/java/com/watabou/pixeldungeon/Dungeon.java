@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -335,6 +336,7 @@ public class Dungeon {
     private static final String GAME_ID      = "game_id";
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
+    private static final String MOD          = "mod";
 
     public static void gameOver() {
         Dungeon.deleteGame(true);
@@ -394,6 +396,7 @@ public class Dungeon {
                 LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
 
         bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
+        bundle.put(MOD, ModdingMode.activeMod());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
         Bundle.write(bundle, output);
@@ -427,7 +430,7 @@ public class Dungeon {
 
             Actor.fixTime();
             try {
-                SaveUtils.copySaveToSlot(SaveUtils.PREV_SAVE, heroClass);
+                SaveUtils.copySaveToSlot(SaveUtils.getPrevSave(), heroClass);
 
                 Position current = currentPosition();
 
@@ -440,7 +443,7 @@ public class Dungeon {
                 Badges.saveGlobal();
                 Library.saveLibrary();
 
-                SaveUtils.copySaveToSlot(SaveUtils.AUTO_SAVE, heroClass);
+                SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
             } catch (IOException e) {
                 throw new TrackedRuntimeException("cannot write save", e);
             }
@@ -492,6 +495,10 @@ public class Dungeon {
     }
 
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
+
+        if(!bundle.optString("mod","Remixed").equals(ModdingMode.activeMod())) {
+            EventCollector.logException(new Exception("loading save from another mod"));
+        }
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
