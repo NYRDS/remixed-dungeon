@@ -320,7 +320,6 @@ public class Dungeon {
     }
 
     private static final String VERSION      = "version";
-    private static final String CHALLENGES   = "challenges";
     private static final String HERO         = "hero";
     private static final String DEPTH        = "depth";
     private static final String LEVEL        = "level";
@@ -401,7 +400,7 @@ public class Dungeon {
         output.close();
     }
 
-    public static void saveLevel(String saveTo) throws IOException {
+    public static void saveLevel(String saveTo, Level level) throws IOException {
         Bundle bundle = new Bundle();
         bundle.put(LEVEL, level);
 
@@ -422,7 +421,9 @@ public class Dungeon {
             Game.toast("Low memory condition");
         }
 
-        if (hero!= null && hero.isAlive()) {
+        if (level != null && hero!= null && hero.isAlive()) {
+
+            Level thisLevel = Dungeon.level;
 
             Actor.fixTime();
             try {
@@ -434,7 +435,10 @@ public class Dungeon {
                 String saveToGame = SaveUtils.gameFile(hero.getHeroClass());
 
                 saveGame(saveToGame);
-                saveLevel(saveToLevel);
+                saveLevel(saveToLevel, thisLevel);
+
+                Badges.saveGlobal();
+                Library.saveLibrary();
 
                 SaveUtils.copySaveToSlot(SaveUtils.AUTO_SAVE, heroClass);
             } catch (IOException e) {
@@ -447,10 +451,9 @@ public class Dungeon {
 
             WndResurrect.instance.hide();
             Hero.reallyDie(WndResurrect.causeOfDeath);
+        } else {
+            EventCollector.logException(new Exception("spurious save"));
         }
-
-        Badges.saveGlobal();
-        Library.saveLibrary();
     }
 
     @NotNull
@@ -840,7 +843,7 @@ public class Dungeon {
 
     public static void saveCurrentLevel() {
         try {
-            saveLevel(getLevelSaveFile(currentPosition()));
+            saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
         } catch (IOException e) {
             throw new TrackedRuntimeException(e);
         }
