@@ -473,9 +473,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         scene = requestedScene;
         scene.create();
 
-        // probably we don't need it
-        //EventCollector.logScene(scene.getClass().getCanonicalName());
-
         Game.elapsed = 0f;
         Game.timeScale = 1f;
 
