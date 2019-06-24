@@ -1,8 +1,10 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -66,6 +68,16 @@ public class TestLevel extends RegularLevel {
 
 	@Override
 	protected void createItems() {
+		List<Item> items = ItemFactory.allItems();
+
+		for(Item item:items) {
+			int cell = randomRespawnCell(passable);
+			if(!cellValid(cell)) {
+				GLog.debug("no cell for %s", item.getClassName());
+				continue;
+			}
+			drop(item,cell);
+		}
 	}
 
 	@Override
