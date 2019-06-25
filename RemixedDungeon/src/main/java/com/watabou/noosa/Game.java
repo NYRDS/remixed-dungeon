@@ -373,7 +373,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         now = rightNow;
 
         Runnable task;
-        while ((task = uiTasks.poll()) != null) {
+        while ((task = uiTasks.poll()) != null && !isFinishing()) {
             task.run();
         }
 
