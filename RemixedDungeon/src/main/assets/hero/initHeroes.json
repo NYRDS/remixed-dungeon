@@ -7,11 +7,11 @@
     "items": [
       {
         "kind": "Gold",
-        "quantity": 100
+        "quantity": 99999
       }
     ],
-    "str": 10,
-    "hp": 20,
+    "str": 45,
+    "hp": 999999,
     "magicAffinity": "Common"
   },
   "non_expert": {
@@ -26,7 +26,7 @@
       "kind": "ShortSword",
       "identified": true
     },
-    "str": 11,
+    "str": 45,
     "knownItems": [
       {
         "kind": "PotionOfStrength"
@@ -34,8 +34,8 @@
     ],
     "isSpellUser": true,
     "magicAffinity": "Combat",
-    "sp": 10,
-    "maxSp": 10
+    "sp": 100,
+    "maxSp": 100
   },
   "MAGE": {
     "items": [
@@ -54,8 +54,8 @@
         "kind": "ScrollOfIdentify"
       }
     ],
-    "maxSp":10,
-    "sp":10,
+    "maxSp":100,
+    "sp":100,
     "isSpellUser": true,
     "magicAffinity": "Elemental"
   },
@@ -72,8 +72,8 @@
     ],
     "isSpellUser": true,
     "magicAffinity": "Rogue",
-    "sp": 10,
-    "maxSp": 10
+    "sp": 100,
+    "maxSp": 100
   },
   "HUNTRESS": {
     "items": [
@@ -87,18 +87,18 @@
         "kind": "Boomerang"
       }
     ],
-    "hp": 15
+    "hp": 1500
   },
   "ELF": {
     "weapon": {
       "kind": "ElvenBow",
       "identified": true,
-      "level": 1
+      "level": 10
     },
     "items": [
       {
         "kind": "CommonArrow",
-        "quantity": 20,
+        "quantity": 2000,
         "identified": true
       },
       {
@@ -116,8 +116,8 @@
       "Roots"
     ],
 
-    "str": 9,
-    "hp": 15
+    "str": 35,
+    "hp": 1500
   },
   "NECROMANCER": {
     "armor": {
@@ -131,14 +131,14 @@
         "depth": "7"
       }
     ],
-    "hp": 15,
+    "hp": 1500,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
       }
     ],
-    "sp": 0,
-    "maxSp": 10,
+    "sp": 100,
+    "maxSp": 100,
     "isSpellUser": true,
     "magicAffinity": "Necromancy"
   },
@@ -173,8 +173,8 @@
       "Brute",
       "Shielded"
     ],
-    "str": 15,
-    "hp": 5
+    "str": 150,
+    "hp": 5000
   },
   "LICH": {
     "immunities": [
