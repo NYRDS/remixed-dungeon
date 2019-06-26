@@ -96,8 +96,8 @@ public class RemixedDungeonApp extends MultiDexApplication {
         try {
             if (HQSdk.getInstance() != null) {
 
-                HqmCollectInstalledApps.INSTANCE.start();
-                HQSdk.startSystemEventsTracking();
+                HqmCollectInstalledApps.INSTANCE.start(instanceContext);
+                HQSdk.startSystemEventsTracking(instanceContext);
 
                 HQSdk.getUserGroups(new HqmCallback<List<GroupResponse>>() {
 
