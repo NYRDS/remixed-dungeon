@@ -73,9 +73,12 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     @Override
     public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callback) {
+        /*
+        Log.d("Callbacks",callback.getClass().getName() );
         if (!callback.getClass().getName().startsWith("com.google.android.gms.measurement.")) {
             super.registerActivityLifecycleCallbacks(callback);
         }
+        */
     }
 
     @Override
