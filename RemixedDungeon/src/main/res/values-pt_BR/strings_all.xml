@@ -4,20 +4,20 @@
 
 
     <string name="ChaosHelmet_Name">Capacete do Caos</string>
-    <string name="ChaosHelmet_Info">O Capacete de Sangue, e um Símbolo do Caos Para o Guerreiro.</string>
+    <string name="ChaosHelmet_Info">Um capacete na cor de sangue é um símbolo essencial para um guerreiro do caos.</string>
 
-    <string name="Spells_SummonLimitReached">%1$s:O Limite de Invocação foi Excedido(O Máximo:%2$d)!</string>
+    <string name="Spells_SummonLimitReached">%1$s: limite de invocação excedido (máximo atual: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
     <string name="Mana_Cost">Custo de Mana: </string>
     <string name="Spells_NotEnoughSP">Você não tem mana o suficiente para lançar uma \'\'%1$s\'\' magia.</string>
 
 
     <string name="SummonDeathling_Name">Invocar Morto-Vivo</string>
-    <string name="SummonDeathling_Info">Invocar um Morto Vivo Seguidor. A Vida e o Dano cresce com o Aumento do Level do Herói. Limite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
+    <string name="SummonDeathling_Info">Invocar um seguidor morto vivo. A vida e o dano cresce com o aumento do nível do herói. \n\nLimite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
 
 
     <string name="Ignite_Name">Incendiar</string>
-    <string name="Ignite_Info">Acende uma Chama na Célula Selecionada. Pode ser Usado Para Queimar Grama, Monstros e Objetos.</string>
+    <string name="Ignite_Info">Acende uma chama na célula selecionada. Pode ser usado para queimar grama, monstros e objetos.</string>
 
 
     <string name="RootSpell_Name">Enraizar</string>
@@ -37,15 +37,15 @@
 
 
     <string name="Healing_Name">Cura</string>
-    <string name="Healing_Info">O Pergaminho e Crucial Para Todos os Aventureiros. Ele Pode Restaurar 1/3 do Máximo do Hp dos Conjuradores.</string>
+    <string name="Healing_Info">O pergaminho é crucial para todos os aventureiros. Ele pode restaurar 1/3 do máximo do hp dos conjuradores.</string>
 
 
 
-    <string name="ClassArmor_LowMana">Mana Insuficiente</string>
+    <string name="ClassArmor_LowMana">Mana insuficiente!</string>
 
 
-    <string name="Drink_ACDrink">Tomar</string>
-    <string name="Drink_Message">Aquela Bebida Estava Refrescante!</string>
+    <string name="Drink_ACDrink">BEBER</string>
+    <string name="Drink_Message">Aquela bebida estava refrescante!</string>
 
 
     <string name="TomeOfKnowledge_Name">Livro do Conhecimento</string>
@@ -53,7 +53,7 @@
 
 
     <string name="SpellBook_Name">Livro de feitiços</string>
-    <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas,do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
+    <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas, do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
     <string name="SpellBook_Info_Identified">Entre as páginas você descobriu um texto completo com o feitiço \"%1$s\".\n\"%2$s\"</string>
 
 
@@ -64,7 +64,7 @@
     <string name="Mushroom_Eat_Message">Esse cogumelo tem um gosto estranho! </string>
 
 
-    <string name="Torch_Info2">É um item indispensável na masmorra,que é infame pela sua iluminação ambiente fraca.</string>
+    <string name="Torch_Info2">É um item indispensável na masmorra, que é infame pela sua iluminação ambiente fraca.</string>
 
     <string name="WndSpells_Title">Magias</string>
     <string name="WndSpells_Level">Nível Mágico:</string>
@@ -93,7 +93,7 @@
     <string name="Ring_Info3a">%1$s\n\nO %2$s está em seu dedo%3$s</string>
     <string name="Ring_Info3b">, e porque ele é amaldiçoado, você não tem como removê-lo.</string>
     <string name="Ring_Info4">%1$s\n\nVocê pode sentir a magia maléfica escondida dentro do %2$s.</string>
-    <string name="Ring_BuffKnown">Isto é um/a %s</string>
+    <string name="Ring_BuffKnown">Isto é um(a) %s</string>
 
 
     <string name="RingOfAccuracy_Name">Anel da Precisão</string>
@@ -101,7 +101,7 @@
 
 
     <string name="RingOfDetection_Name">Anel de Detecção</string>
-    <string name="RingOfDetection_Info">Usar este anel permitirá que o usuário note segredos escondidos -armadilhas e portas secretas- sem perder tempo para pesquisar. Anéis de Detecção degradados são maçantes para seus sentidos, tornando-o mais difícil de encontrar segredos mesmo quando busca ativamente por eles.</string>
+    <string name="RingOfDetection_Info">Usar este anel permitirá que o usuário note segredos escondidos -armadilhas e portas secretas- sem perder tempo para pesquisar. Anéis de detecção degradados são maçantes para seus sentidos, tornando-o mais difícil de encontrar segredos mesmo quando busca ativamente por eles.</string>
 
 
     <string name="RingOfElements_Name">Anel dos Elementos</string>
@@ -3495,9 +3495,9 @@ Parede
 
 
     <string name="PotionOfPurity_Name">Poção da Purificação</string>
-    <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Beber ele vai te dar uma imunidade temporária para esses gases.</string>
+    <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Bebê-lo vai te dar uma imunidade temporária para esses gases.</string>
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
-    <string name="PotionOfPurity_NoSmell">Você não sente odores!</string>
+    <string name="PotionOfPurity_NoSmell">Você parou de sentir qualquer odor!</string>
 
 
     <string name="PotionOfStrength_Name">Poção da Força</string>
@@ -3519,7 +3519,7 @@ Parede
     <string name="WndSettings_ActionButtonSize">Tamanho dos botões</string>
     <string name="WndSettings_Handedness">Lado dos botões </string>
     <string name="WndSettings_InGameUiSettings">Configurações da Interface</string>
-    <string name="WndSettings_GameplaySettings">Jogabigidade</string>
+    <string name="WndSettings_GameplaySettings">Jogabilidade</string>
     <string name="WndPremiumSettings_marble">mármore</string>
     <string name="QuickSlot_SelectSlot">Escolha um atalho rápido para isso</string>
 
@@ -3569,6 +3569,89 @@ Parede
     <string name="WndHero_Awareness">Consciência</string>
     <string name="WndHero_AttackSkill">Habilidade de Ataque</string>
     <string name="WndHero_DefenceSkill">Habilidade de Defesa</string>
+	
+   <string name="town_deco_grave_name">Sepultura</string>
+   <string name="town_deco_grave_desc">Uma lápide comum,  com uma escritura danificada pelo tempo.</string>
+   <string name="town_deco_pillar_name">Pilar</string>
+   <string name="town_deco_pillar_desc">Antigamente, este pilar servia como um excelente suporte e decoração.</string>
+   <string name="town_deco_wood_wall_name">Parede de madeira</string>
+   <string name="town_deco_wood_wall_desc">Uma parede de madeira de aparência robusta.</string>
+   <string name="town_deco_entrance_name">Entrada</string>
+   <string name="town_deco_entrance_desc">Essa entrada leva a um nível superior do calabouço.</string>
+   <string name="town_deco_exit_name">Sair</string>
+   <string name="town_deco_exit_desc">Não se sabe o que te espera se você descer esses degraus.</string>
+   <string name="town_deco_tile_name">Azulejo</string>
+   <string name="town_deco_tile_desc">Estes azulejos estão bastante desgastados pelo tempo.</string>
+   <string name="town_deco_snowdrift_name">Monte de neve</string>
+   <string name="town_deco_snowdrift_desc">É uma pilha de neve bem grande e aparentemente ninguém vai limpa-la</string>
+   <string name="town_deco_misc_name">Lixo</string>
+   <string name="town_deco_misc_desc">Uma pilha de lixo</string>
+   <string name="town_deco_broken_roof_name">Telha quebrada</string>
+   <string name="town_deco_broken_roof_desc">As telhas desse telhado estão quebrada e precisam ser substituídas.</string>
+   <string name="town_deco_broken_wall_name">Parede quebrada</string>
+   <string name="town_deco_broken_wall_desc">A madeira dessa parece estão a muito tempo podres e perderam a sua resistência habitual.</string>
+   <string name="town_deco_mud_name">Lama</string>
+   <string name="town_deco_mud_desc">Solo descongelado nesta área de permafrost</string>
+   <string name="town_deco_stock_name">Estoque</string>
+   <string name="town_deco_stock_desc">Suprimentos de comida são mantidos aqui, assim como um monte de lixo de todos os tipos e cores.</string>
+   <string name="town_deco_barrel_name">Barril</string>
+   <string name="town_deco_barrel_desc">Um barril normal, que infelizmente não pode ser aberto.</string>
+   <string name="town_deco_hay_name">Feno</string>
+   <string name="town_deco_hay_desc">Uma pequena pilha de feno agradavelmente cheiroso.</string>
+   <string name="town_deco_firewood_name">Lenha</string>
+   <string name="town_deco_firewood_desc">Algo essencial em tais geadas severas.</string>
+   <string name="town_deco_stakes_name">Estacas</string>
+   <string name="town_deco_stakes_desc">Esses troncos afiados têm uma aparência assustadora, enquanto na verdade são inúteis por si mesmos.</string>
+   <string name="town_deco_fence_name">Cerca</string>
+   <string name="town_deco_fence_desc">Uma cerca de madeira degradado pela neve.</string>
+   <string name="town_deco_pole_name">Poste</string>
+   <string name="town_deco_pole_desc">Um poste alto designado para amarrar a corda.</string>
+   <string name="town_deco_rope_name">Corda</string>
+   <string name="town_deco_rope_desc">Corda torcida manualmente</string>
+   <string name="town_deco_slush_name">Lama</string>
+   <string name="town_deco_slush_desc">A neve começou a derreter, tornado o lugar em volta num lamaçal.</string>
+   <string name="town_deco_chest_name">Baú</string>   
+   <string name="town_deco_chest_desc">Conveniente mobília para guardar diferentes coisas e joias.</string>
+   <string name="town_deco_emptyboard_name">Prateleira</string>
+   <string name="town_deco_emptyboard_desc">A prateleira mais comum para colocar coias em exibição.</string>
+   <string name="town_deco_grandclock_name">Torre do Relogio</string>
+   <string name="town_deco_grandclock_desc">Um mecanismo muito antigo, mas ainda em funcionamento.</string>
+   <string name="town_deco_wall_beam_name">Feixe</string>
+   <string name="town_deco_wall_beam_desc">É um bom suporte para essa construção.</string>
+   <string name="town_deco_wall_candles_name">Velas</string>
+   <string name="town_deco_wall_candles_desc">Velas apagadas das quais ainda emana um cheiro repousante.</string>
+   <string name="town_deco_wooden_drawer_name">Gaveta</string>
+   <string name="town_deco_wooden_drawer_desc">O que contém aqui dentro é interessante.</string>
+   <string name="town_deco_scrolls_name">Pergaminhos</string>   
+   <string name="town_deco_scrolls_desc">Esta prateleira empoeirada contém vários livros e pergaminhos.</string>
+   <string name="town_deco_medicine_name">Remédio</string>   
+   <string name="town_deco_medicine_desc">Frascos e outros ingredientes medicinais são cuidadosamente colocados nestas prateleiras.</string>
+   <string name="town_deco_wooden_stairs_name">Escadas</string>   
+   <string name="town_deco_wooden_stairs_desc">Isso te torna um pouco mais alto.</string>
+   <string name="town_deco_canvas_name">Tela</string>
+   <string name="town_deco_canvas_desc">Um pedaço de um tecido grosso pendurado na parede.</string>
+   <string name="town_deco_projector_name">Retroprojetor</string>
+   <string name="town_deco_projector_desc">Dispositivo antigo para quem gosta de cinema e entretenimento.</string>
+   <string name="town_deco_filmtape_name">Filme</string>
+   <string name="town_deco_filmtape_desc">Interessante... O que será que tem nessa peça?</string>
+   <string name="town_deco_painting_name">Pintura</string>
+   <string name="town_deco_painting_desc">Uma bela obra de arte.</string>
+   <string name="town_deco_curtains_name">Cortinas</string>
+   <string name="town_deco_curtains_desc">Oculta toda a luz desnecessária e também serve como uma boa decoração.</string>
+   <string name="town_deco_rug_name">Tapete</string>
+   <string name="town_deco_rug_desc">Feito com bom gosto!</string>
+   <string name="town_deco_trapdoor_name">Alçapão</string>
+   <string name="town_deco_trapdoor_desc">Para onde isso poderia levar?</string>
+   <string name="town_deco_glass_stained_name">Vitral</string>
+   <string name="town_deco_glass_stained_desc">Quem fez isso provavelmente se esforçou bastante!</string>
+   <string name="town_deco_glass_name">Grande janela</string>
+   <string name="town_deco_glass_desc">Este é maior que os outros, certamente deixa entrar mais luz.</string>
+   <string name="town_deco_counter_name">Balcão</string>
+   <string name="town_deco_counter_desc">Mantém uma boa distância entre você e a pessoa que está atrás dele.</string>
+   <string name="town_deco_library_books_name">Analizando o assunto</string>
+   <string name="town_deco_library_books_desc">Ainda melhor que os livros do calabouço.</string>
+   <string name="town_deco_wallpaper_name">Papel de parede</string>
+   <string name="town_deco_wallpaper_desc">Uma ótima solução de decoração para este lugar.</string>
 
 
     <string name="Welcome_Text_28_6">
