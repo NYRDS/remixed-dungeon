@@ -1,11 +1,9 @@
 
-
-    {
+{
     "Levels":{
     "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
 
     "testLevel":{"kind":"TestLevel", "depth":0, "size":[32,32]},
-
 
     "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
     "cinema":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
@@ -76,7 +74,7 @@
     },
     "Graph":{
     "0":[["town"],[]],
-      "testLevel":[[],[]],
+    "testLevel":[[],[]],
 
     "town":[["church","cinema","1","library","shop_town","fortune"],[]],
     "church":[[],["town"]],
@@ -139,4 +137,4 @@
     "ice5":[["ice1"],["ice4"]]
     },
     "Entrance":"0"
-    }
+}
