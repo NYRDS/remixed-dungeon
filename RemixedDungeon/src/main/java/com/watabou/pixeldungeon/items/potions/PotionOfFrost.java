@@ -29,7 +29,11 @@ import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
 
 public class PotionOfFrost extends UpgradablePotion {
-	
+
+	{
+		labelIndex = 0;
+	}
+
 	private static final int DISTANCE	= 2;
 	
 	@Override

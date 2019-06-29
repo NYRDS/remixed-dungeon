@@ -11,11 +11,11 @@
         },
 
       {
-        "kind": "TomeOfMastery",
+        "kind": "PotionOfMindVision",
         "level":10
       },
       {
-        "kind": "Rotberry.Seed",
+        "kind": "TestItem",
         "quantity" :10
       },
       {
@@ -27,11 +27,11 @@
         "quantity": 100
       },
       {
-        "kind": "DewVial"
+        "kind": "PotionOfPurity"
       },
       {
-        "kind": "Ankh",
-        "level": 5
+        "kind": "RottenRation",
+        "quantity": 5
       },
       {
         "kind": "Dewdrop",
@@ -43,7 +43,7 @@
       }
     ],
     "str": 1500,
-    "hp": 20,
+    "hp": 200000,
     "sp" : 100,
     "sl" : 100,
     "magicAffinity": "Common"

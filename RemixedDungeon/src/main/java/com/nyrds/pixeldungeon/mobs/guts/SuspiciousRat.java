@@ -73,7 +73,7 @@ public class SuspiciousRat extends Mob {
 			if (!transforming) {
 				spend(TIME_TO_HATCH);
 				transforming = true;
-				if (Dungeon.visible[getPos()]) {
+				if (Char.isVisible(this)) {
 					getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 					GLog.n(Game.getVar(R.string.SuspiciousRat_Info1));
 				}

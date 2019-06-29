@@ -1,0 +1,10 @@
+{
+  "texture" : "succubus.png",
+  "width"  : 12,
+  "height" : 15,
+  "deathEffect" : "Succubus",
+  "idle"   : { "fps" : 8,  "looped" : true,    "frames" : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 1] },
+  "run"    : { "fps" : 15, "looped" : true,     "frames" : [3, 4, 5, 6, 7, 8] },
+  "attack" : { "fps" : 15, "looped" : false,    "frames" : [9, 10, 11 ] },
+  "die"    : { "fps" : 10, "looped" : false,    "frames" : [12] }
+}

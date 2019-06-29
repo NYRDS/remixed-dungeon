@@ -145,7 +145,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 
 		m.getSprite().turnTo(pos, Dungeon.hero.getPos());
 
-		if (Dungeon.visible[m.getPos()]) {
+		if (Char.isVisible(m)) {
 			CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
 			Sample.INSTANCE.play(Assets.SND_MIMIC);
 		}

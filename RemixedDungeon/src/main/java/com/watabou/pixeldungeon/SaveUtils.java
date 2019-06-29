@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -12,8 +13,8 @@ import java.io.File;
 
 public class SaveUtils {
 
-	public static final String AUTO_SAVE = "autoSave";
-	public static final String PREV_SAVE = "prevSave";
+	private static final String AUTO_SAVE = "autoSave";
+	private static final String PREV_SAVE = "prevSave";
 
 	static private boolean hasClassTag(HeroClass cl, String fname) {
 		return fname.contains(cl.tag());
@@ -171,5 +172,13 @@ public class SaveUtils {
 	
 	private static String _depthFile(HeroClass cl) {
 		return cl.tag()+"%d.dat";
+	}
+
+	public static String getAutoSave() {
+		return ModdingMode.activeMod() + "_" + AUTO_SAVE;
+	}
+
+	public static String getPrevSave() {
+		return ModdingMode.activeMod() + "_" + PREV_SAVE;
 	}
 }

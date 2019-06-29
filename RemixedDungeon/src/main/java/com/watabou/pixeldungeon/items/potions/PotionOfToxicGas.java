@@ -30,6 +30,9 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfToxicGas extends UpgradablePotion {
 
+	{
+		labelIndex = 9;
+	}
 	
 	@Override
 	public void shatter( int cell ) {

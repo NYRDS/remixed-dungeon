@@ -3577,9 +3577,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndHero_Awareness">Внимательность</string>
     <string name="WndHero_AttackSkill">Навыки Атаки</string>
     <string name="WndHero_DefenceSkill">Навыки Защиты</string>
-
-
-    <string name="Welcome_Text_28_6">
+	
+   <string name="town_deco_pillar_name">Столб</string>
+   <string name="town_deco_entrance_name">Вход</string>
+   <string name="town_deco_chest_name">Сундук</string>   
+   <string name="town_deco_scrolls_name">Свитки</string>   
+   <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Игровые механики:\n
     -- Способности Воина!\n

@@ -38,6 +38,10 @@ public class PotionOfHealing extends Potion {
 
 	private static PotionOfHealing pseudoPotion = new PotionOfHealing();
 
+	{
+		labelIndex = 5;
+	}
+
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

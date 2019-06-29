@@ -72,6 +72,16 @@ public class RemixedDungeonApp extends MultiDexApplication {
     }
 
     @Override
+    public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callback) {
+        /*
+        Log.d("Callbacks",callback.getClass().getName() );
+        if (!callback.getClass().getName().startsWith("com.google.android.gms.measurement.")) {
+            super.registerActivityLifecycleCallbacks(callback);
+        }
+        */
+    }
+
+    @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
@@ -89,8 +99,8 @@ public class RemixedDungeonApp extends MultiDexApplication {
         try {
             if (HQSdk.getInstance() != null) {
 
-                HqmCollectInstalledApps.INSTANCE.start();
-                HQSdk.startSystemEventsTracking();
+                HqmCollectInstalledApps.INSTANCE.start(instanceContext);
+                HQSdk.startSystemEventsTracking(instanceContext);
 
                 HQSdk.getUserGroups(new HqmCallback<List<GroupResponse>>() {
 

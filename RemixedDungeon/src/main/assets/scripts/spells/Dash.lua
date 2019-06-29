@@ -67,7 +67,10 @@ return spell.init{
         local function hitCell(cell)
             local victim = RPD.Actor:findChar(cell)
             if victim ~= nil then
-                local dmg = items.weapon:damageRoll(caster)
+                local dmg = caster:effectiveSTR() - 5;
+                if items.weapon ~= nil then
+                    dmg = dmg + items.weapon:damageRoll(caster)
+                end
                 dmg = victim:defenseProc(caster, dmg)
                 victim:damage(dmg, caster)
                 RPD.Sfx.Wound:hit(victim)

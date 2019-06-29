@@ -10,18 +10,25 @@ local RPD = require "scripts/lib/commonClasses"
 local item = require "scripts/lib/item"
 
 return item.init{
-    desc  = function ()
+    desc  = function (self, item)
+
+        RPD.glog("Created item with id:"..tostring(item:getId()))
+
         return {
             image     = 12,
             imageFile = "items/food.png",
             name      = "Test item",
             info      = "Item for script tests",
-            stackable = true,
+            stackable = false,
             defaultAction = "action1",
             price         = 7
         }
     end,
-    actions = function() return {"action1","action2","action3"} end,
+    actions = function(self, item, hero)
+        return {"action1",
+                "action2",
+                "action3",
+                tostring(item:getId())} end,
 
     cellSelected = function(self, thisItem, action, cell)
         if action == "action1" then
@@ -36,11 +43,11 @@ return item.init{
         end
 
         if action == "action2" then
-            RPD.glogp(action)
+            RPD.glogp(tostring(item:getId()).." "..action)
         end
 
         if action == "action3" then
-            RPD.glogn(action)
+            RPD.glogn(tostring(item:getId()).." "..action)
         end
     end,
 }

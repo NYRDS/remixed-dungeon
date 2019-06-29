@@ -3363,4 +3363,8 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="Potion_FoodRefreshed">%s sieht nun genießbar aus</string>
 
 
-    </resources>
+    <string name="town_deco_pillar_name">Säule</string>
+   <string name="town_deco_entrance_name">Eingang</string>
+   <string name="town_deco_chest_name">Kiste</string>   
+   <string name="town_deco_scrolls_name">Schriftrollen</string>   
+   </resources>

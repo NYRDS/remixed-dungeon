@@ -49,9 +49,9 @@ function item.defaultDesc()
     }
 end
 
-function item.itemDesc(self)
-    local ret = item.defaultDesc()
-    local own = self:desc()
+function item.itemDesc(self,thisItem)
+    local ret = item.defaultDesc(thisItem)
+    local own = self:desc(thisItem)
 
     for k,v in pairs(ret) do
         ret[k] = own[k] or v

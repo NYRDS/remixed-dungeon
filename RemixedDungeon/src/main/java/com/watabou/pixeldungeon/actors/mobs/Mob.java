@@ -506,7 +506,7 @@ public abstract class Mob extends Char {
 			dropLoot();
 		}
 
-		if (hero.isAlive() && !Dungeon.visible[getPos()]) {
+		if (hero.isAlive() && !Char.isVisible(this)) {
 			GLog.i(Game.getVar(R.string.Mob_Died));
 		}
 	}
@@ -734,16 +734,6 @@ public abstract class Mob extends Char {
 		}
 
 		enemyId = enemy.getId();
-	}
-
-	@Override
-	public boolean attack(@NotNull Char enemy) {
-
-		if (enemy == CharsList.DUMMY) {
-			EventCollector.logException(getName() + " attacking dummy enemy");
-			return false;
-		}
-		return super.attack(enemy);
 	}
 
 	public boolean zap(@NotNull Char enemy) {

@@ -23,6 +23,10 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class PotionOfExperience extends Potion {
 
+	{
+		labelIndex = 11;
+	}
+
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

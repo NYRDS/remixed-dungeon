@@ -100,14 +100,14 @@ public class DM300 extends Boss {
 
 			getSprite().emitter().burst( ElmoParticle.FACTORY, 5 );
 			
-			if (Dungeon.visible[step] && Dungeon.hero.isAlive()) {
+			if (Char.isVisible(this) && Dungeon.hero.isAlive()) {
 				GLog.n(Game.getVar(R.string.DM300_Info1));
 			}
 		}
 		
 		int cell = step + Level.NEIGHBOURS8[Random.Int( Level.NEIGHBOURS8.length )];
 		
-		if (Dungeon.visible[cell]) {
+		if (Char.isVisible(this)) {
 			CellEmitter.get( cell ).start( Speck.factory( Speck.ROCK ), 0.07f, 10 );
 			Camera.main.shake( 3, 0.7f );
 			Sample.INSTANCE.play( Assets.SND_ROCKS );

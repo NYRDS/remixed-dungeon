@@ -45,7 +45,9 @@ public class AppodealAdapter {
                 AppodealNetworks.MOPUB,
                 AppodealNetworks.MINTEGRAL,
                 AppodealNetworks.OGURY_PRESAGE,
-                AppodealNetworks.VUNGLE
+                AppodealNetworks.VUNGLE,
+                AppodealNetworks.YANDEX
+
         };
 
         for (String net : disableNetworks) {

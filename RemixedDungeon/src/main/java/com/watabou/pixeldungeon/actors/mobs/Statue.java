@@ -87,7 +87,7 @@ public class Statue extends Mob {
 	
 	@Override
     public boolean act() {
-		if (!isPet() && Dungeon.visible[getPos()]) {
+		if (!isPet() && Char.isVisible(this)) {
 			Journal.add( Journal.Feature.STATUE.desc() );
 		}
 		return super.act();

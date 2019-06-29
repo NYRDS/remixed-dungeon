@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -143,6 +144,8 @@ public class Dungeon {
         SaveUtils.deleteLevels(heroClass);
 
         gameId = String.valueOf(SystemTime.now());
+
+        LuaEngine.reset();
 
         challenges = RemixedDungeon.challenges();
 
@@ -318,7 +321,6 @@ public class Dungeon {
     }
 
     private static final String VERSION      = "version";
-    private static final String CHALLENGES   = "challenges";
     private static final String HERO         = "hero";
     private static final String DEPTH        = "depth";
     private static final String LEVEL        = "level";
@@ -334,6 +336,7 @@ public class Dungeon {
     private static final String GAME_ID      = "game_id";
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
+    private static final String MOD          = "mod";
 
     public static void gameOver() {
         Dungeon.deleteGame(true);
@@ -393,13 +396,14 @@ public class Dungeon {
                 LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
 
         bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
+        bundle.put(MOD, ModdingMode.activeMod());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
         Bundle.write(bundle, output);
         output.close();
     }
 
-    public static void saveLevel(String saveTo) throws IOException {
+    public static void saveLevel(String saveTo, Level level) throws IOException {
         Bundle bundle = new Bundle();
         bundle.put(LEVEL, level);
 
@@ -420,11 +424,13 @@ public class Dungeon {
             Game.toast("Low memory condition");
         }
 
-        if (hero!= null && hero.isAlive()) {
+        if (level != null && hero!= null && hero.isAlive()) {
+
+            Level thisLevel = Dungeon.level;
 
             Actor.fixTime();
             try {
-                SaveUtils.copySaveToSlot(SaveUtils.PREV_SAVE, heroClass);
+                SaveUtils.copySaveToSlot(SaveUtils.getPrevSave(), heroClass);
 
                 Position current = currentPosition();
 
@@ -432,9 +438,12 @@ public class Dungeon {
                 String saveToGame = SaveUtils.gameFile(hero.getHeroClass());
 
                 saveGame(saveToGame);
-                saveLevel(saveToLevel);
+                saveLevel(saveToLevel, thisLevel);
 
-                SaveUtils.copySaveToSlot(SaveUtils.AUTO_SAVE, heroClass);
+                Badges.saveGlobal();
+                Library.saveLibrary();
+
+                SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
             } catch (IOException e) {
                 throw new TrackedRuntimeException("cannot write save", e);
             }
@@ -445,10 +454,9 @@ public class Dungeon {
 
             WndResurrect.instance.hide();
             Hero.reallyDie(WndResurrect.causeOfDeath);
+        } else {
+            EventCollector.logException(new Exception("spurious save"));
         }
-
-        Badges.saveGlobal();
-        Library.saveLibrary();
     }
 
     @NotNull
@@ -487,6 +495,10 @@ public class Dungeon {
     }
 
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
+
+        if(!bundle.optString("mod","Remixed").equals(ModdingMode.activeMod())) {
+            EventCollector.logException(new Exception("loading save from another mod"));
+        }
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
@@ -838,7 +850,7 @@ public class Dungeon {
 
     public static void saveCurrentLevel() {
         try {
-            saveLevel(getLevelSaveFile(currentPosition()));
+            saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
         } catch (IOException e) {
             throw new TrackedRuntimeException(e);
         }

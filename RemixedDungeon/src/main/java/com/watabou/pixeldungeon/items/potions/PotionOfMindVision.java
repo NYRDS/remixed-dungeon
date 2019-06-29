@@ -24,6 +24,11 @@ import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class PotionOfMindVision extends UpgradablePotion {
+
+	{
+		labelIndex = 10;
+	}
+
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();

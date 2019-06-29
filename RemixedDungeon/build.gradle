@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 724
-        versionName "remix.28.6.fix.4.5"
+        versionCode 731
+        versionName "remix.28.6.fix.6"
     }
 
     aaptOptions {
@@ -98,9 +98,9 @@ dependencies {
 
     implementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
-    implementation 'com.google.android.gms:play-services-base:16.1.0'
-    implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation "com.google.android.gms:play-services-games:17.0.0"
+    implementation 'com.google.android.gms:play-services-base:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation "com.google.android.gms:play-services-games:18.0.0"
 
     implementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
     implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.0.0'
@@ -110,17 +110,17 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
 
-    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.0-rc25'
-    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.0-rc25'
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.2-alpha06'
+    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.2-alpha06'
 
     implementation 'androidx.core:core:1.0.2'
 
     implementation 'com.android.billingclient:billing:1.1'
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
-    implementation 'com.google.firebase:firebase-core:16.0.9'
-    implementation 'com.google.firebase:firebase-perf:17.0.2'
-    implementation 'com.google.firebase:firebase-ads:17.2.1'
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.firebase:firebase-perf:18.0.1'
+    implementation 'com.google.firebase:firebase-ads:18.0.0'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'org.jetbrains:annotations:15.0'

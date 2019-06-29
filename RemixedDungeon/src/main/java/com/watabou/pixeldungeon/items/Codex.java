@@ -17,13 +17,13 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.books.Book;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.windows.WndStory;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.json.JSONException;
@@ -31,27 +31,23 @@ import org.json.JSONObject;
 
 public class Codex extends Book {
 
-	private static String idTag   = "id";
-	private static String textTag = "text";
-	private int    maxId = 0;
-	
-	private int    id;
+	@Packable(defaultValue = "-1")
+	private int codexId=-1;
+
+	@Packable(defaultValue = "")
 	private String text;
 
 	public Codex(){
 		stackable = false;
 		image     = 4;
-		//TODO Need rework this. Transifex just hates string-arrays
-		maxId     = Game.getVars(R.array.Codex_Story).length;
-		id        = Random.Int(maxId);
 	}
 
 	@Override
 	protected void doRead(Hero hero) {
-		if(text != null) {
+		if(text != null && !text.isEmpty()) {
 			WndStory.showCustomStory(text);
 		} else {
-			WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[id]);
+			WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[getCodexId()]);
 		}
 	}
 
@@ -68,28 +64,25 @@ public class Codex extends Book {
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 
-		text = StringsManager.maybeId(itemDesc.optString(textTag));
+		text = StringsManager.maybeId(itemDesc.optString("text"));
 	}
 
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		id   = bundle.getInt( idTag );
-		if(!(id < maxId)){
-			id = Random.Int(maxId);
-		}
-		text = bundle.optString(textTag,null);
-	}
-
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
-		bundle.put(idTag, id);
-		bundle.put(textTag, text);
-	}
-	
 	@Override
 	public int price(){
 		return 5 * quantity();
+	}
+
+	private int getCodexId()
+	{
+		int maxId = Game.getVars(R.array.Codex_Story).length;
+		if(codexId < 0) {
+			codexId = Random.Int(maxId);
+		}
+
+		if(codexId > maxId-1) {
+			codexId = 0;
+		}
+
+		return codexId;
 	}
 }

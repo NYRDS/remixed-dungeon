@@ -29,6 +29,10 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class PotionOfParalyticGas extends UpgradablePotion {
 
+	{
+		labelIndex = 8;
+	}
+
 	@Override
 	public void shatter( int cell ) {
 		

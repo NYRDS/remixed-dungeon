@@ -24,6 +24,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
+import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -66,11 +67,8 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public ItemSprite(@NotNull Item item) {
-		this(item.imageFile(), item.image(), item.glowing());
-
-		if(item.overlayFile()!=null) {
-			overlay = new Image(item.overlayFile(),16,item.overlayIndex());
-		}
+		super();
+		view(item);
 	}
 
 	public ItemSprite(String file, int imageIndex, Glowing glowing) {
@@ -162,6 +160,13 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public ItemSprite view(Item item) {
+
+		if(item.overlayIndex()>=0) {
+			overlay = new Image(item.overlayFile(),16,item.overlayIndex());
+		} else {
+			overlay = null;
+		}
+
 		return view(item.imageFile(), item.image(), item.glowing());
 	}
 
@@ -219,6 +224,20 @@ public class ItemSprite extends MovieClip {
 				ga = glowing.green * value;
 				ba = glowing.blue * value;
 			}
+	}
+
+	@Override
+	public void draw() {
+		super.draw();
+
+
+		if(overlay != null) {
+			NoosaScript script = NoosaScript.get();
+
+			overlay.texture.bind();
+			overlay.updateVerticesBuffer();
+			script.drawQuad(overlay.getVerticesBuffer());
+		}
 	}
 
 	public static int pick(int index, int x, int y) {

@@ -3552,9 +3552,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndHero_Awareness">Kesedaran</string>
     <string name="WndHero_AttackSkill">Kemahiran Menyerang</string>
     <string name="WndHero_DefenceSkill">Kemahiran Pertahanan</string>
-
-
-    <string name="Welcome_Text_28_6">
+	
+   <string name="town_deco_pillar_name">Tiang</string>
+   <string name="town_deco_entrance_name">Jalan Masuk</string>
+   <string name="town_deco_chest_name">Peti</string>   
+   <string name="town_deco_scrolls_name">Skrol</string>   
+   <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mekanisma Permainan:\n
     -- Keupayaan istimewa Satria!\n

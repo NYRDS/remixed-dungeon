@@ -9,9 +9,13 @@ import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.DeathRay;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
+import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
@@ -64,6 +68,34 @@ public class ZapEffect {
             if(zapEffect.equals("Ice")) {
                 MagicMissile.ice(parent, from, to, Util.nullCallback);
                 return;
+            }
+        }
+    }
+
+    static public void play(Group parent, int pos, String effect) {
+        Level level = Dungeon.level;
+        if (effect != null && level.cellValid(pos)) {
+
+            if (!Dungeon.visible[pos]) {
+                return;
+            }
+
+            if (EffectsFactory.isValidEffectName(effect)) {
+                GameScene.clipEffect(pos, 1, effect);
+                return;
+            }
+
+            if (effect.equals("Bones")) {
+                CellEmitter.get(pos).burst( Speck.factory( Speck.BONE ), 6 );
+            }
+
+            if(effect.equals("Succubus")) {
+                CellEmitter.get(pos).burst( Speck.factory( Speck.HEART ), 6 );
+                CellEmitter.get(pos).burst( ShadowParticle.UP, 8 );
+            }
+
+            if(effect.equals("Golem")) {
+                CellEmitter.get(pos).burst( ElmoParticle.FACTORY, 4 );
             }
         }
     }

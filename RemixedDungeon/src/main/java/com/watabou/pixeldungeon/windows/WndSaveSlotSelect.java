@@ -191,7 +191,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
             RedButton autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave) {
                 @Override
                 protected void onClick() {
-                    showAd(SaveUtils.AUTO_SAVE);
+                    showAd(SaveUtils.getAutoSave());
                 }
             };
 

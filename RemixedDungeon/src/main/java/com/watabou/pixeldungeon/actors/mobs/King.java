@@ -41,7 +41,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.sprites.UndeadSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -190,8 +189,6 @@ public class King extends Boss {
 	public static class Undead extends UndeadMob {
 
 		public Undead() {
-			spriteClass = UndeadSprite.class;
-			
 			hp(ht(28));
 			defenseSkill = 15;
 			
@@ -231,7 +228,7 @@ public class King extends Boss {
 		public void die(NamedEntityKind cause) {
 			super.die( cause );
 			
-			if (Dungeon.visible[getPos()]) {
+			if (Char.isVisible(this)) {
 				Sample.INSTANCE.play( Assets.SND_BONES );
 			}
 		}

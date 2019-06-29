@@ -196,7 +196,9 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -477,5 +479,15 @@ public class ItemFactory {
         } catch (Exception e) {
             throw new TrackedRuntimeException("ItemFactory.virtual");
         }
+    }
+
+    public static List<Item> allItems() {
+        List<Item> items = new ArrayList<>();
+
+        for(String itemClass:mItemsList.keySet()) {
+            items.add(itemByName(itemClass));
+        }
+
+        return items;
     }
 }

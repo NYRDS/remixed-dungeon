@@ -32,7 +32,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.SuccubusSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -44,7 +43,6 @@ public class Succubus extends Mob {
 	private int delay = 0;
 
 	public Succubus() {
-		spriteClass = SuccubusSprite.class;
 
 		hp(ht(80));
 		defenseSkill = 25;
