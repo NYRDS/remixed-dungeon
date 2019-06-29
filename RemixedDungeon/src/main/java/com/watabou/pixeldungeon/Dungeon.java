@@ -207,7 +207,16 @@ public class Dungeon {
     public static Level newLevel(Position pos) {
         updateStatistics();
         loading = true;
+
+        if(!DungeonGenerator.isLevelExist(pos.levelId)) {
+            pos.levelId = DungeonGenerator.getEntryLevel();
+            pos.cellId = -1;
+            pos = DungeonGenerator.descend(pos);
+        }
+
         Level level = DungeonGenerator.createLevel(pos);
+
+        Dungeon.hero.setPos(level.entrance);
 
         Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
 

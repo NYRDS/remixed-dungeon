@@ -345,6 +345,11 @@ public class DungeonGenerator {
 		return "1";
 	}
 
+
+	public static boolean isLevelExist(String id) {
+		return !getLevelKind(id).equals(DEAD_END_LEVEL);
+	}
+
 	@NotNull
 	public static String getLevelKind(String id) {
 		return getLevelProperty(id,"kind",DEAD_END_LEVEL);
