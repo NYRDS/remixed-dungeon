@@ -159,6 +159,10 @@ public class GameScene extends PixelScene {
 
         Level level = Dungeon.level;
 
+        if(level==null) {
+            throw new TrackedRuntimeException("Trying to create GameScene when level is nil!");
+        }
+
         RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().classIndex());
 
         super.create();

@@ -10,8 +10,15 @@
  "multiexit":[[13, 7]],
  "objects":[
         {
-         "kind":"Deco",
-         "object_desc":"PortalGateSender",
+         "kind":"PortalGateSender",
+
+         "target":
+         {
+          "levelId":"town",
+          "x":12,
+          "y":28
+         },
+
          "x":7,
          "y":7
         }],

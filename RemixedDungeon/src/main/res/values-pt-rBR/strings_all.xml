@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
-    <string name="ChaosHelmet_Name">Capacete do Caos</string>
-    <string name="ChaosHelmet_Info">Um capacete cor de sangue é um símbolo essencial para um guerreiro do caos.</string>
+    <string name="ChaosHelmet_Name">Capacete caótico</string>
+    <string name="ChaosHelmet_Info">Um capacete na cor de sangue é um símbolo essencial para um guerreiro do caos.</string>
 
     <string name="Spells_SummonLimitReached">%1$s: limite de invocação excedido (máximo atual: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -3612,8 +3612,47 @@ Parede
    <string name="town_deco_chest_desc">Conveniente mobília para guardar diferentes coisas e joias.</string>
    <string name="town_deco_emptyboard_name">Prateleira</string>
    <string name="town_deco_emptyboard_desc">A prateleira mais comum para colocar coias em exibição.</string>
+   <string name="town_deco_grandclock_name">Torre do Relogio</string>
+   <string name="town_deco_grandclock_desc">Um mecanismo muito antigo, mas ainda em funcionamento.</string>
+   <string name="town_deco_wall_beam_name">Feixe</string>
+   <string name="town_deco_wall_beam_desc">É um bom suporte para essa construção.</string>
+   <string name="town_deco_wall_candles_name">Velas</string>
+   <string name="town_deco_wall_candles_desc">Velas apagadas das quais ainda emana um cheiro repousante.</string>
+   <string name="town_deco_wooden_drawer_name">Gaveta</string>
+   <string name="town_deco_wooden_drawer_desc">O que contém aqui dentro é interessante.</string>
    <string name="town_deco_scrolls_name">Pergaminhos</string>   
-   <string name="Welcome_Text_28_6">
+   <string name="town_deco_scrolls_desc">Esta prateleira empoeirada contém vários livros e pergaminhos.</string>
+   <string name="town_deco_medicine_name">Remédio</string>   
+   <string name="town_deco_medicine_desc">Frascos e outros ingredientes medicinais são cuidadosamente colocados nestas prateleiras.</string>
+   <string name="town_deco_wooden_stairs_name">Escadas</string>   
+   <string name="town_deco_wooden_stairs_desc">Isso te torna um pouco mais alto.</string>
+   <string name="town_deco_canvas_name">Tela</string>
+   <string name="town_deco_canvas_desc">Um pedaço de um tecido grosso pendurado na parede.</string>
+   <string name="town_deco_projector_name">Retroprojetor</string>
+   <string name="town_deco_projector_desc">Dispositivo antigo para quem gosta de cinema e entretenimento.</string>
+   <string name="town_deco_filmtape_name">Filme</string>
+   <string name="town_deco_filmtape_desc">Interessante... O que será que tem nessa peça?</string>
+   <string name="town_deco_painting_name">Pintura</string>
+   <string name="town_deco_painting_desc">Uma bela obra de arte.</string>
+   <string name="town_deco_curtains_name">Cortinas</string>
+   <string name="town_deco_curtains_desc">Oculta toda a luz desnecessária e também serve como uma boa decoração.</string>
+   <string name="town_deco_rug_name">Tapete</string>
+   <string name="town_deco_rug_desc">Feito com bom gosto!</string>
+   <string name="town_deco_trapdoor_name">Alçapão</string>
+   <string name="town_deco_trapdoor_desc">Para onde isso poderia levar?</string>
+   <string name="town_deco_glass_stained_name">Vitral</string>
+   <string name="town_deco_glass_stained_desc">Quem fez isso provavelmente se esforçou bastante!</string>
+   <string name="town_deco_glass_name">Grande janela</string>
+   <string name="town_deco_glass_desc">Este é maior que os outros, certamente deixa entrar mais luz.</string>
+   <string name="town_deco_counter_name">Balcão</string>
+   <string name="town_deco_counter_desc">Mantém uma boa distância entre você e a pessoa que está atrás dele.</string>
+   <string name="town_deco_library_books_name">Analizando o assunto</string>
+   <string name="town_deco_library_books_desc">Ainda melhor que os livros do calabouço.</string>
+   <string name="town_deco_wallpaper_name">Papel de parede</string>
+   <string name="town_deco_wallpaper_desc">Uma ótima opção de decoração para este lugar.</string>
+
+
+    <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mecânicas do Jogo:\n
     -- Habilidades especiais do Guerreiro!\n
