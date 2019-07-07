@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.CustomItem;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
@@ -192,6 +193,7 @@ import com.watabou.pixeldungeon.plants.Firebloom;
 import com.watabou.pixeldungeon.plants.Icecap;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -209,6 +211,10 @@ public class ItemFactory {
 
     static {
         initItemsMap();
+
+        for(String itemFile: ModdingMode.listResources("scripts/items", (dir, name) -> name.endsWith(".lua"))) {
+            mItemsList.put(itemFile.replace(".lua", Utils.EMPTY_STRING), CustomItem.class);
+        }
     }
 
     private static void registerItemClass(Class<? extends Item> itemClass) {
@@ -431,7 +437,12 @@ public class ItemFactory {
     public static Item itemByName(String selectedItemClass) {
         try {
             Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
-            if (itemClass != null) {
+
+            if(itemClass == null) {
+                throw new TrackedRuntimeException(selectedItemClass + " is not a item class");
+            }
+
+            if (itemClass != CustomItem.class) {
                 return itemClass.newInstance();
             } else {
                 try {

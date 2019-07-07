@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
@@ -92,6 +93,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -105,6 +107,10 @@ public class MobFactory {
 
 	static {
 		initMobsMap();
+
+		for(String mobFile: ModdingMode.listResources("mobsDesc", (dir, name) -> name.endsWith(".json"))) {
+			mMobsList.put(mobFile.replace(".json", Utils.EMPTY_STRING), CustomMob.class);
+		}
 	}
 
 	private static void registerMobClass(Class<? extends Mob> mobClass) {
@@ -241,7 +247,7 @@ public class MobFactory {
 
 		try {
 			Class<? extends Mob> mobClass = mMobsList.get(selectedMobClass);
-			if (mobClass != null) {
+			if (mobClass != CustomMob.class) {
 				return mobClass.newInstance();
 			} else {
 				return new CustomMob(selectedMobClass);
