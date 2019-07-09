@@ -2025,10 +2025,10 @@ remix.28.5\n
     <string name="DM300_Info2">任务失败，系统关闭。</string>
     <string name="DM300_Info3">检测到未授权人员。</string>
 
-    <string name="Elemental_Name">火元素</string>
-    <string name="Elemental_Gender">陽剛的</string>
-    <string name="Elemental_Name_Objective">火元素</string>
-    <string name="Elemental_Desc">这些游荡的火元素是在召唤某种更强大存在时的副产品。由于其特性太过混乱，以至于最强大的恶魔学者都无法驱使。</string>
+    <string name="FireElemental_Name">火元素</string>
+    <string name="FireElemental_Gender">陽剛的</string>
+    <string name="FireElemental_Name_Objective">火元素</string>
+    <string name="FireElemental_Desc">这些游荡的火元素是在召唤某种更强大存在时的副产品。由于其特性太过混乱，以至于最强大的恶魔学者都无法驱使。</string>
 
     <string name="Eye_Name">邪眼</string>
     <string name="Eye_Gender">中性的</string>

@@ -2017,10 +2017,10 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="DM300_Info2">Misja nie powiodła się. Wyłączanie systemu.</string>
     <string name="DM300_Info3">Nieautoryzowany personel wykryty. Rozpocząć eksterminację.</string>
 
-    <string name="Elemental_Name">Żywiołak ognia</string>
-    <string name="Elemental_Gender">meski</string>
-    <string name="Elemental_Name_Objective">Żywiołak ognia</string>
-    <string name="Elemental_Desc">Podróżujące tam i z powrotem żywiołaki ognia są skutkiem ubocznym przyzywania większych istnień. Są zbyt chaotyczne z natury by być kontrolowanymi nawet przez najpotężniejszego demonologa.</string>
+    <string name="FireElemental_Name">Żywiołak ognia</string>
+    <string name="FireElemental_Gender">meski</string>
+    <string name="FireElemental_Name_Objective">Żywiołak ognia</string>
+    <string name="FireElemental_Desc">Podróżujące tam i z powrotem żywiołaki ognia są skutkiem ubocznym przyzywania większych istnień. Są zbyt chaotyczne z natury by być kontrolowanymi nawet przez najpotężniejszego demonologa.</string>
 
     <string name="Eye_Name">Złe oko</string>
     <string name="Eye_Gender">kastrat</string>

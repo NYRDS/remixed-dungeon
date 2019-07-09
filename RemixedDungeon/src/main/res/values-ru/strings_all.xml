@@ -2008,10 +2008,10 @@
     <string name="DM300_Info2">Миссия провалена. Отключаюсь.</string>
     <string name="DM300_Info3">Обнаружено несанкционированное проникновение.</string>
 
-    <string name="Elemental_Name">огненный элементаль</string>
-    <string name="Elemental_Gender">masculine</string>
-    <string name="Elemental_Name_Objective">элементаля</string>
-    <string name="Elemental_Desc">Огненные элементали являются побочным эффектом ритуалов призыва великих сущностей. Ввиду своей хаотичной природы, воля этих созданий не подвластна даже сильнейшим демонологам.</string>
+    <string name="FireElemental_Name">огненный элементаль</string>
+    <string name="FireElemental_Gender">masculine</string>
+    <string name="FireElemental_Name_Objective">элементаля</string>
+    <string name="FireElemental_Desc">Огненные элементали являются побочным эффектом ритуалов призыва великих сущностей. Ввиду своей хаотичной природы, воля этих созданий не подвластна даже сильнейшим демонологам.</string>
 
     <string name="Eye_Name">око зла</string>
     <string name="Eye_Gender">neuter</string>

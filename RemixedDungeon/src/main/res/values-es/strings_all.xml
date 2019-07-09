@@ -1865,10 +1865,10 @@
     <string name="DM300_Info2">Misión fallida. Apagando sistema. </string>
     <string name="DM300_Info3">Personal no autorizado detectado.</string>
 
-    <string name="Elemental_Name">elemental de fuego</string>
-    <string name="Elemental_Gender">masculino</string>
-    <string name="Elemental_Name_Objective">elemental de fuego</string>
-    <string name="Elemental_Desc">Los elementales de fuego son la consecuencia de invocar entidades mayores. Su naturaleza es demasiado caótica para ser controlada incluso por el demonólogo más poderoso.</string>
+    <string name="FireElemental_Name">elemental de fuego</string>
+    <string name="FireElemental_Gender">masculino</string>
+    <string name="FireElemental_Name_Objective">elemental de fuego</string>
+    <string name="FireElemental_Desc">Los elementales de fuego son la consecuencia de invocar entidades mayores. Su naturaleza es demasiado caótica para ser controlada incluso por el demonólogo más poderoso.</string>
 
     <string name="Eye_Name">ojo malvado</string>
     <string name="Eye_Gender">neutro</string>

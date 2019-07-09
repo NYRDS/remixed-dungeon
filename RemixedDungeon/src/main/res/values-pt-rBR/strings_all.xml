@@ -2011,10 +2011,10 @@
     <string name="DM300_Info2">Missão falhou. Desligando.</string>
     <string name="DM300_Info3">Pessoas não autorizadas detectadas.</string>
 
-    <string name="Elemental_Name">elemental do fogo</string>
-    <string name="Elemental_Gender">masculino</string>
-    <string name="Elemental_Name_Objective">elemental de fogo</string>
-    <string name="Elemental_Desc">Elementais do fogo errantes são conhecidas por convocar outras entidades. Eles são muito caóticos e são dificeis de serem controlados até pelo mais poderoso Demonologista.</string>
+    <string name="FireElemental_Name">elemental do fogo</string>
+    <string name="FireElemental_Gender">masculino</string>
+    <string name="FireElemental_Name_Objective">elemental de fogo</string>
+    <string name="FireElemental_Desc">Elementais do fogo errantes são conhecidas por convocar outras entidades. Eles são muito caóticos e são dificeis de serem controlados até pelo mais poderoso Demonologista.</string>
 
     <string name="Eye_Name">olho do mal</string>
     <string name="Eye_Gender">neutro</string>

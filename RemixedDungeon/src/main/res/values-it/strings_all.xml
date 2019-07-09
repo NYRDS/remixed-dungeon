@@ -1483,10 +1483,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="DM300_Info2">Missione Fallita. Chiudi.</string>
     <string name="DM300_Info3">personale non autorizzato rilevato.</string>
 
-    <string name="Elemental_Name">elementale del fuoco</string>
-    <string name="Elemental_Gender">mascolino</string>
-    <string name="Elemental_Name_Objective">Elementale del fuoco</string>
-    <string name="Elemental_Desc">Gli elementali del fuoco erranti sono un sottoprodotto dell\'evocazione di più grandi entità. Sono troppo caotici nella loro forma per essere controllati anche dal più potente demonologo.</string>
+    <string name="FireElemental_Name">elementale del fuoco</string>
+    <string name="FireElemental_Gender">mascolino</string>
+    <string name="FireElemental_Name_Objective">Elementale del fuoco</string>
+    <string name="FireElemental_Desc">Gli elementali del fuoco erranti sono un sottoprodotto dell\'evocazione di più grandi entità. Sono troppo caotici nella loro forma per essere controllati anche dal più potente demonologo.</string>
 
     <string name="Eye_Name">malocchio </string>
     <string name="Eye_Gender">neutro</string>

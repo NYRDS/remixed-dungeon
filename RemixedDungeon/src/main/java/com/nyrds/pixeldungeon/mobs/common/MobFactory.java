@@ -57,8 +57,8 @@ import com.watabou.pixeldungeon.actors.mobs.Bat;
 import com.watabou.pixeldungeon.actors.mobs.Brute;
 import com.watabou.pixeldungeon.actors.mobs.Crab;
 import com.watabou.pixeldungeon.actors.mobs.DM300;
-import com.watabou.pixeldungeon.actors.mobs.Elemental;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
+import com.watabou.pixeldungeon.actors.mobs.FireElemental;
 import com.watabou.pixeldungeon.actors.mobs.Gnoll;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
@@ -145,7 +145,7 @@ public class MobFactory {
 		registerMobClass(SpiderQueen.class);
 
 		registerMobClass(Spinner.class);
-		registerMobClass(Elemental.class);
+		registerMobClass(FireElemental.class);
 		registerMobClass(Monk.class);
 		registerMobClass(DM300.class);
 		registerMobClass(Shielded.class);

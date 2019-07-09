@@ -2013,10 +2013,10 @@
     <string name="DM300_Info2">Mission failed. Shutting down.</string>
     <string name="DM300_Info3">Unauthorized personnel detected.</string>
 
-    <string name="Elemental_Name">fire elemental</string>
-    <string name="Elemental_Gender">masculine</string>
-    <string name="Elemental_Name_Objective">fire elemental</string>
-    <string name="Elemental_Desc">Wandering fire elementals are a byproduct of summoning greater entities. They are too chaotic in their nature to be controlled by even the most powerful demonologist.</string>
+    <string name="FireElemental_Name">fire elemental</string>
+    <string name="FireElemental_Gender">masculine</string>
+    <string name="FireElemental_Name_Objective">fire elemental</string>
+    <string name="FireElemental_Desc">Wandering fire elementals are a byproduct of summoning greater entities. They are too chaotic in their nature to be controlled by even the most powerful demonologist.</string>
 
     <string name="Eye_Name">evil eye</string>
     <string name="Eye_Gender">neuter</string>

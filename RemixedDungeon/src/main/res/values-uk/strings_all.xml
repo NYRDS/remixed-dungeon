@@ -2021,10 +2021,10 @@
     <string name="DM300_Info2">Місію провалено. Вимикаюсь.</string>
     <string name="DM300_Info3">Виявлено неавторизовану персону.</string>
 
-    <string name="Elemental_Name">вогняний елементаль</string>
-    <string name="Elemental_Gender">masculine</string>
-    <string name="Elemental_Name_Objective">вогняного елементаля</string>
-    <string name="Elemental_Desc">Вогняні елементалі - це побічний продукт прикликання великих сутностей. Через свою хаотичну природу, воля цих створінь не піддається підкоренню навіть видатним демонологам.</string>
+    <string name="FireElemental_Name">вогняний елементаль</string>
+    <string name="FireElemental_Gender">masculine</string>
+    <string name="FireElemental_Name_Objective">вогняного елементаля</string>
+    <string name="FireElemental_Desc">Вогняні елементалі - це побічний продукт прикликання великих сутностей. Через свою хаотичну природу, воля цих створінь не піддається підкоренню навіть видатним демонологам.</string>
 
     <string name="Eye_Name">зле око</string>
     <string name="Eye_Gender">neuter</string>

@@ -72,7 +72,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Image avatar;
 
     public enum State {
-        NONE,BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
+        NONE, BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
     }
 
     protected Animation idle;

@@ -90,6 +90,12 @@ public class RemixedDungeon extends Game {
 				com.nyrds.pixeldungeon.mechanics.buffs.RageBuff.class,
 			"com.watabou.pixeldungeon.items.quest.CorpseDust.UndeadRageAuraBuff"
 		);
+
+		com.watabou.utils.Bundle.addAlias(
+				com.watabou.pixeldungeon.actors.mobs.FireElemental.class,
+				"com.watabou.pixeldungeon.actors.mobs.Elemental"
+		);
+
 	}
 
     public static boolean isAlpha() {

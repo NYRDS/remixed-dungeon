@@ -14,7 +14,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 public class MobSpriteDef extends MobSprite {
 
@@ -24,10 +27,13 @@ public class MobSpriteDef extends MobSprite {
 	private static final String ATTACK = "attack";
 	private static final String LAYERS = "layers";
 	private int      bloodColor;
+
 	private boolean  levitating;
 	private int      framesInRow;
 	private int      kind;
 	private String   zapEffect;
+
+	private Set<State> initialState = new HashSet<>();
 
 	private float visualWidth;
 	private float visualHeight;
@@ -92,7 +98,13 @@ public class MobSpriteDef extends MobSprite {
 				bloodColor = Long.decode((String) _bloodColor).intValue();
 			}
 
-			levitating = json.optBoolean("levitating", false);
+			Set<String> states = new HashSet<>();
+			JsonHelper.readStringSet(json, "states", states);
+
+			for(String state : states) {
+				initialState.add(CharSprite.State.valueOf(state.toUpperCase(Locale.ROOT)));
+			}
+
 			framesInRow = texture.width / width;
 
 			idle = readAnimation(json, "idle", film);
@@ -138,8 +150,8 @@ public class MobSpriteDef extends MobSprite {
 	@Override
 	public void link(Char ch) {
 		super.link(ch);
-		if (levitating) {
-			add(State.LEVITATING);
+		for(CharSprite.State state:initialState) {
+			add(state);
 		}
 	}
 

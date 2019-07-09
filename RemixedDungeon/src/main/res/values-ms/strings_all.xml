@@ -2011,10 +2011,10 @@
     <string name="DM300_Info2">Misi gagal. Mematikan diri sendiri.</string>
     <string name="DM300_Info3">Individu tidak dikenali dikesan.</string>
 
-    <string name="Elemental_Name">keunsuran api</string>
-    <string name="Elemental_Gender">maskulin</string>
-    <string name="Elemental_Name_Objective">keunsuran api</string>
-    <string name="Elemental_Desc">Keunsuran api yang merayau adalah hasil dari penyeruan entiti yang lebih hebat. Mereka terlalu ganas untuk dikawal walaupun oleh ahli setan yang terhebat.</string>
+    <string name="FireElemental_Name">keunsuran api</string>
+    <string name="FireElemental_Gender">maskulin</string>
+    <string name="FireElemental_Name_Objective">keunsuran api</string>
+    <string name="FireElemental_Desc">Keunsuran api yang merayau adalah hasil dari penyeruan entiti yang lebih hebat. Mereka terlalu ganas untuk dikawal walaupun oleh ahli setan yang terhebat.</string>
 
     <string name="Eye_Name">mata jahat</string>
     <string name="Eye_Gender">neuter</string>

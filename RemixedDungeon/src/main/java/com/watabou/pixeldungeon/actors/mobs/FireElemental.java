@@ -26,16 +26,14 @@ import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
-import com.watabou.pixeldungeon.sprites.ElementalSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Elemental extends Mob {
+public class FireElemental extends Mob {
 
-	public Elemental() {
-		spriteClass = ElementalSprite.class;
-		
+	public FireElemental() {
+
 		hp(ht(65));
 		defenseSkill = 20;
 		

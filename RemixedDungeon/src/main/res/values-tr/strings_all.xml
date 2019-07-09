@@ -1984,10 +1984,10 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="DM300_Info2">Görev başarısız. Kapatılıyor.</string>
     <string name="DM300_Info3">Yetkisiz personel tespit edildi.</string>
 
-    <string name="Elemental_Name">Ateş elementali</string>
-    <string name="Elemental_Gender">masculine</string>
-    <string name="Elemental_Name_Objective">Ateş elementali</string>
-    <string name="Elemental_Desc">Göçebe ateş elementleri en ulu varlıkların çağrısının ürünüdür. Doğaları gereği en güçlü şeytani ilimler ustaları tarafından bile kontrol edilmek için çok karışıktırlar.</string>
+    <string name="FireElemental_Name">Ateş elementali</string>
+    <string name="FireElemental_Gender">masculine</string>
+    <string name="FireElemental_Name_Objective">Ateş elementali</string>
+    <string name="FireElemental_Desc">Göçebe ateş elementleri en ulu varlıkların çağrısının ürünüdür. Doğaları gereği en güçlü şeytani ilimler ustaları tarafından bile kontrol edilmek için çok karışıktırlar.</string>
 
     <string name="Eye_Name">şeytani göz</string>
     <string name="Eye_Gender">neuter</string>
