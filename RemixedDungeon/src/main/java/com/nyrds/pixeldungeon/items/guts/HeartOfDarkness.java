@@ -33,7 +33,7 @@ public class HeartOfDarkness extends Artifact {
 		}
 
 		@Override
-		public String toString() {
+		public String name() {
 			return Game.getVar(R.string.DarkVeil_Buff);
 		}
 

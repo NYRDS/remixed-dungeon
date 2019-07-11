@@ -73,7 +73,7 @@ public class RingOfFrost extends Artifact {
 		}
 
 		@Override
-		public String toString() {
+		public String name() {
 			return Game.getVar(R.string.FrostAura_Buff);
 		}
 	}

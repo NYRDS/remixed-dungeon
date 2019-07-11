@@ -35,7 +35,7 @@ public class RageBuff extends ArtifactBuff {
     }
 
     @Override
-    public String toString() {
+    public String name() {
         return Game.getVar(R.string.CorpseDust_Buff);
     }
 

@@ -56,7 +56,7 @@ public class DriedRose extends Artifact {
 		}
 
 		@Override
-		public String toString() {
+		public String name() {
 			return Game.getVar(R.string.DriedRose_Buff);
 		}
 	}
@@ -68,7 +68,7 @@ public class DriedRose extends Artifact {
 		}
 
 		@Override
-		public String toString() {
+		public String name() {
 			return Game.getVar(R.string.DriedRose_CursedBuff);
 		}
 	}
