@@ -1,13 +1,13 @@
 {
    "Levels":{
       "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
-	  
-      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-	  "cinema":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-	  "church":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-	  "fortune":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-	  "library":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-	  "shop_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
+
+      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1.mp3"},
+	  "cinema":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1.mp3"},
+	  "church":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
+	  "fortune":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
+	  "library":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json","noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1.mp3"},
+	  "shop_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
 
       "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true},
       "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/Portal.json", "isSafe":true},
@@ -69,6 +69,7 @@
       "31":{"kind":"HallsBossLevel", "depth":31,  "size":[32,32], "music":"ost_boss_1_fight.mp3"},
       "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
    },
+
    "Graph":{
       "0":[["town"],[]],
 

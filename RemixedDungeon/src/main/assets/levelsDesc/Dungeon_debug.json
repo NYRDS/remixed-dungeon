@@ -5,12 +5,12 @@
 
     "testLevel":{"kind":"TestLevel", "depth":0, "size":[32,32]},
 
-    "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-    "cinema":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-    "church":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-    "fortune":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-    "library":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
-    "shop_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json", "noFogOfWar":false, "isSafe":true, "isStatic":true, "music":"ost_town_1.mp3"},
+    "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json",  "isSafe":true,  "music":"ost_town_1.mp3"},
+    "cinema":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json",  "isSafe":true,  "music":"ost_town_1.mp3"},
+    "church":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json",  "isSafe":true,  "music":"ost_town_1.mp3"},
+    "fortune":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json",  "isSafe":true,  "music":"ost_town_1.mp3"},
+    "library":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json",  "isSafe":true,  "music":"ost_town_1.mp3"},
+    "shop_town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json",  "isSafe":true,  "music":"ost_town_1.mp3"},
 
     "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true},
     "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/Portal.json", "isSafe":true},
