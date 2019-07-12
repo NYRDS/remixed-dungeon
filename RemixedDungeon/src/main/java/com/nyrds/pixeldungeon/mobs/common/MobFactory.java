@@ -109,7 +109,10 @@ public class MobFactory {
 		initMobsMap();
 
 		for(String mobFile: ModdingMode.listResources("mobsDesc", (dir, name) -> name.endsWith(".json"))) {
-			mMobsList.put(mobFile.replace(".json", Utils.EMPTY_STRING), CustomMob.class);
+			String mobKind = mobFile.replace(".json", Utils.EMPTY_STRING);
+			if(!mMobsList.containsKey(mobKind)) {	// do not shadow built-in classes by partial json definitions
+				mMobsList.put(mobKind, CustomMob.class);
+			}
 		}
 	}
 
