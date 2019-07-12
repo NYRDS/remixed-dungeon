@@ -50,6 +50,8 @@ return spell.init{
             local newPos = char:getPos()
             if char:push(caster) then
                 dst = newPos
+            else
+                dst = level:getEmptyCellNextTo(newPos)
             end
         end
 
@@ -59,6 +61,8 @@ return spell.init{
             local newPos = object:getPos()
             if object:push(caster) then
                 dst = newPos
+            else
+                dst = level:getEmptyCellNextTo(newPos)
             end
         end
 

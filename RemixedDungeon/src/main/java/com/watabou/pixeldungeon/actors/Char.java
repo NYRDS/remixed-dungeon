@@ -622,6 +622,26 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return bonus[0];
 	}
 
+	public void placeTo(int cell) {
+		if (level().map[getPos()] == Terrain.OPEN_DOOR) {
+			Door.leave(getPos());
+		}
+
+		setPos(cell);
+
+		if (!isFlying()) {
+			level().press(getPos(),this);
+		}
+
+		if (isFlying() && level().map[getPos()] == Terrain.DOOR) {
+			Door.enter(getPos());
+		}
+
+		if (this != Dungeon.hero) {
+			getSprite().setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+		}
+	}
+
 	public void move(int step) {
 		
 		if(!isMovable()) {
@@ -646,23 +666,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			step = Random.element(candidates);
 		}
 
-		if (level().map[getPos()] == Terrain.OPEN_DOOR) {
-			Door.leave(getPos());
-		}
-
-		setPos(step);
-
-		if (!isFlying()) {
-			level().press(getPos(),this);
-		}
-
-		if (isFlying() && level().map[getPos()] == Terrain.DOOR) {
-			Door.enter(getPos());
-		}
-
-		if (this != Dungeon.hero) {
-			getSprite().setVisible(Dungeon.visible[getPos()] && invisible >= 0);
-		}
+		placeTo(step);
 	}
 
 	public int distance(Char other) {
@@ -960,13 +964,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		int nextCell = LevelHelpers.pushDst(chr, this, false);
 
-		Level level = chr.level();
-
-		if (!level.cellValid(nextCell)) {
+		if (!level().cellValid(nextCell)) {
 			return false;
 		}
 
-		LevelObject lo = level.getLevelObject(nextCell);
+		LevelObject lo = level().getLevelObject(nextCell);
 
 		if (lo != null && !lo.push(this)) {
 			return false;
@@ -985,7 +987,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		moveSprite(getPos(),nextCell);
-		move(nextCell);
+		placeTo(nextCell);
 		return true;
 	}
 
