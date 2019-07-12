@@ -72,7 +72,7 @@ public class WandOfTelekinesis extends Wand {
 					int next = Ballistica.trace[i + 1];
 					if (ch.isMovable() && (level.passable[next] || level.avoid[next]) && Actor.findChar(next) == null) {
 
-                        ch.move(next);
+                        ch.placeTo(next);
                         ch.getSprite().move(ch.getPos(), next);
                         Dungeon.observe();
 					} else {

@@ -89,7 +89,7 @@ public class WarriorArmor extends ClassArmor {
 				final int dest = cell;
 				getUser().busy();
 				((HeroSpriteDef) getUser().getSprite()).jump( getUser().getPos(), cell, () -> {
-					getUser().move( dest );
+					getUser().placeTo( dest );
 					Dungeon.level.press( dest, getUser() );
 					Dungeon.observe();
 

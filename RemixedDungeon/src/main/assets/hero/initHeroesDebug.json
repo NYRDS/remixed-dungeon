@@ -6,24 +6,24 @@
     },
     "items": [
         {
-          "kind": "Gold",
+          "kind": "Codex",
           "quantity": 1000
         },
 
       {
-        "kind": "PotionOfMindVision",
+        "kind": "PotionOfParalyticGas",
         "level":10
       },
       {
-        "kind": "TestItem",
+        "kind": "RatKingCrown",
         "quantity" :10
       },
       {
-        "kind": "Fadeleaf.Seed",
+        "kind": "Stylus",
         "quantity" :10
       },
       {
-        "kind": "PotionOfInvisibility",
+        "kind": "ScrollOfTerror",
         "quantity": 100
       },
       {

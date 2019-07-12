@@ -79,7 +79,7 @@ public class WandOfBlink extends Wand {
 
 		if(level.cellValid(ch.getPos())) { //ch already on level
 			ch.getSprite().interruptMotion();
-			ch.move(pos);
+			ch.placeTo(pos);
 		} else { // brand new ch
 			ch.setPos(pos);
 			if(ch instanceof Mob) {

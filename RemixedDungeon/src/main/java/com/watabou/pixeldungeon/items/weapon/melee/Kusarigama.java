@@ -50,7 +50,7 @@ public class Kusarigama extends SpecialWeapon {
                     Char chr = Actor.findChar(hitCell);
 
                     if (chr != null && chr.isMovable()) {
-                        chr.move(Ballistica.trace[1]);
+                        chr.placeTo(Ballistica.trace[1]);
                         chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
 
                         Dungeon.observe();

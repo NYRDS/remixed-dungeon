@@ -1013,11 +1013,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		int myPos = getPos(), chPos = chr.getPos();
         moveSprite(myPos, chPos);
-		move(chPos);
+		placeTo(chPos);
 		ensureOpenDoor();
 
 		chr.getSprite().move(chPos, myPos);
-		chr.move(myPos);
+		chr.placeTo(myPos);
 		chr.ensureOpenDoor();
 
 		float timeToSwap = 1 / chr.speed();

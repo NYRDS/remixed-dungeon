@@ -99,7 +99,7 @@ public class Warlock extends Mob implements IZapper {
 			final int tgt = cell;
 			final Char ch = this;
 
-			move(cell);
+			placeTo(cell);
 			fx(cell, () -> WandOfBlink.appear(ch, tgt));
 		}
 	}
