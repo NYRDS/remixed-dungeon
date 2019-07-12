@@ -45,7 +45,6 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
@@ -222,7 +221,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         iap = new Iap(this);
 
         if (!BuildConfig.DEBUG) {
-            if(!checkOwnSignature()) {
+            if(!RemixedDungeonApp.checkOwnSignature()) {
                 String signature = Util.getSignature(this);
 
                 EventCollector.collectSessionData("tampered signature", signature);
@@ -582,11 +581,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public LinearLayout getLayout() {
         return layout;
-    }
-
-    public boolean checkOwnSignature() {
-        //Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
-        return Util.getSignature(this).equals(getVar(R.string.ownSignature));
     }
 
     public void openUrl(String prompt, String address) {

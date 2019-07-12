@@ -9,6 +9,8 @@ import androidx.multidex.MultiDexApplication;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
+import com.nyrds.android.util.Util;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Preferences;
 
 import org.jetbrains.annotations.NotNull;
@@ -24,7 +26,7 @@ import io.humanteq.hqsdkcore.models.GroupResponse;
 public class RemixedDungeonApp extends MultiDexApplication {
 
     @SuppressLint("StaticFieldLeak")
-    static Context instanceContext;
+    static RemixedDungeonApp remixedDungeonApp;
 
     static class HqSdkCrash extends Exception {
         HqSdkCrash(Throwable cause) {
@@ -42,10 +44,9 @@ public class RemixedDungeonApp extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
 
+        remixedDungeonApp = this;
 
-        instanceContext = getApplicationContext();
-
-        if(instanceContext.getResources().getString(R.string.fabric_api_key).length()>5) {
+        if(checkOwnSignature()) {
             FirebaseApp.initializeApp(this);
 
             Fabric.with(this, new Crashlytics());
@@ -59,7 +60,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
             }
 
             try {
-                HQSdk.init(instanceContext, "22b4f34f2616d7f", true, false);
+                HQSdk.init(getApplicationContext(), "22b4f34f2616d7f", true, false);
             } catch (Throwable hqSdkCrash) {
                 EventCollector.logException(new HqSdkCrash(hqSdkCrash));
             }
@@ -81,6 +82,11 @@ public class RemixedDungeonApp extends MultiDexApplication {
         */
     }
 
+    static public boolean checkOwnSignature() {
+        //Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
+        return Util.getSignature(getContext()).equals(StringsManager.getVar(R.string.ownSignature));
+    }
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
@@ -99,8 +105,8 @@ public class RemixedDungeonApp extends MultiDexApplication {
         try {
             if (HQSdk.getInstance() != null) {
 
-                HqmCollectInstalledApps.INSTANCE.start(instanceContext);
-                HQSdk.startSystemEventsTracking(instanceContext);
+                HqmCollectInstalledApps.INSTANCE.start(getContext());
+                HQSdk.startSystemEventsTracking(getContext());
 
                 HQSdk.getUserGroups(new HqmCallback<List<GroupResponse>>() {
 
@@ -154,6 +160,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
     }
 
     static public Context getContext() {
-        return instanceContext;
+        return remixedDungeonApp.getApplicationContext();
     }
 }

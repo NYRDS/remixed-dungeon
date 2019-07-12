@@ -7,6 +7,7 @@ import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.noosa.Game;
 
 import java.util.HashMap;
@@ -22,7 +23,7 @@ public class AdsUtils {
         bannerFails.put(new AdMobComboProvider(),-2);
         interstitialFails.put(new AdMobComboProvider(), -2);
 
-        if(!Game.instance().checkOwnSignature()) {
+        if(!RemixedDungeonApp.checkOwnSignature()) {
             bannerFails.put(new AAdsComboProvider(), 0);
             interstitialFails.put(new AAdsComboProvider(), 0);
         }
