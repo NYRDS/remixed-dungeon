@@ -250,13 +250,18 @@ public class MobFactory {
 
 		try {
 			Class<? extends Mob> mobClass = mMobsList.get(selectedMobClass);
+
+			if(mobClass==null) {
+				throw new TrackedRuntimeException(new Exception(selectedMobClass));
+			}
+
 			if (mobClass != CustomMob.class) {
 				return mobClass.newInstance();
 			} else {
 				return new CustomMob(selectedMobClass);
 			}
 		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
+			throw new TrackedRuntimeException(selectedMobClass,e);
 		}
 	}
 
