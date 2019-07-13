@@ -60,7 +60,7 @@ public class Terror extends FlavourBuff {
 	@Override
 	public boolean attachTo(Char target) {
 		if(super.attachTo(target)) {
-			if(target instanceof Mob) {
+			if(target instanceof Mob && target.fraction!=Fraction.NEUTRAL) {
 				Mob tgt = (Mob)target;
 				tgt.setFraction(Fraction.DUNGEON);
 			}
