@@ -20,17 +20,17 @@
    "CavesLevel":{
       "11":{"Bat":1,"Brute":0.2},
       "12":{"Bat":1,"Brute":1,"Spinner":0.2,"Shielded":0.03},
-      "13":{"Bat":1,"Brute":3,"Spinner":1,"Shaman":1,"Elemental":0.02,"Shielded":0.1},
-      "14":{"Bat":1,"Brute":3,"Spinner":4,"Shaman":1,"Elemental":0.02,"Monk":0.01,"Shielded":0.1}
+      "13":{"Bat":1,"Brute":3,"Spinner":1,"Shaman":1,"FireElemental":0.02,"Shielded":0.1},
+      "14":{"Bat":1,"Brute":3,"Spinner":4,"Shaman":1,"FireElemental":0.02,"Monk":0.01,"Shielded":0.1}
    },
    "CavesBossLevel":{
       "any":{"DM300":1}
    },
    "CityLevel":{
-      "16":{"Elemental":1,"Monk":0.2,"Warlock":1},
-      "17":{"Elemental":1,"Monk":1,"Warlock":1,"Senior":0.03},
-      "18":{"Elemental":1,"Monk":2,"Warlock":1,"Golem":1,"Senior":0.06},
-      "19":{"Elemental":1,"Monk":2,"Warlock":1,"Golem":3,"Succubus":0.02,"Senior":0.06}
+      "16":{"FireElemental":1,"Monk":0.2,"Warlock":1},
+      "17":{"FireElemental":1,"Monk":1,"Warlock":1,"Senior":0.03},
+      "18":{"FireElemental":1,"Monk":2,"Warlock":1,"Golem":1,"Senior":0.06},
+      "19":{"FireElemental":1,"Monk":2,"Warlock":1,"Golem":3,"Succubus":0.02,"Senior":0.06}
    },
    "CityBossLevel":{
       "any":{"King":1}
