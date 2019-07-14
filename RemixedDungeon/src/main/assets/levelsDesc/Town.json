@@ -37,8 +37,13 @@
          "kind":"TownsfolkMovieNPC",
          "x":12,
          "y":15
-        }, 
+        },
         {
+         "kind":"HealerNPC",
+         "x":7,
+         "y":10
+        },
+       {
          "kind":"TownGuardNPC",
          "x":15,
          "y":21
