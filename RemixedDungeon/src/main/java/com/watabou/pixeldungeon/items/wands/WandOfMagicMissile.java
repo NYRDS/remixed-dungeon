@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -127,7 +128,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 				
 				Sample.INSTANCE.play( Assets.SND_EVOKE );
 				ScrollOfUpgrade.upgrade( getUser() );
-				evoke( getUser() );
+				ItemUtils.evoke( getUser() );
 				
 				GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
 				

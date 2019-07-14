@@ -40,7 +40,6 @@ import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -116,7 +115,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	private static Comparator<Item> itemComparator = (lhs, rhs) -> Generator.Category.order(lhs) - Generator.Category.order(rhs);
 
-	public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = new ArrayList<>();
 		setUser(hero);
 		actions.add(AC_DROP);
@@ -361,11 +360,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return this;
 	}
 
-	public static void evoke(Hero hero) {
-		hero.getSprite().emitter().burst(Speck.factory(Speck.EVOKE), 5);
-	}
-
-	@NotNull
+    @NotNull
 	@Override
 	public String toString() {
 

@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import androidx.annotation.Keep;
+
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -20,6 +22,7 @@ public class Barrel extends LevelObject {
 
 	private boolean burned = false;
 
+	@Keep
 	public Barrel() {
 		this(-1);
 	}

@@ -23,8 +23,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -43,17 +41,6 @@ public abstract class NPC extends Mob {
 		fraction = Fraction.NEUTRAL;
 		
 		gender = Utils.MASCULINE;
-	}
-	
-	protected void throwItem() {
-		Heap heap = level().getHeap( getPos() );
-		if (heap != null) {
-			int n;
-			do {
-				n = getPos() + Level.NEIGHBOURS8[Random.Int( 8 )];
-			} while (!level().passable[n] && !level().avoid[n]);
-			level().drop( heap.pickUp(), n ).sprite.drop( getPos() );
-		}
 	}
 
 	@Override

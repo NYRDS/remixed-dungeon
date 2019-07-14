@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -60,9 +61,9 @@ public class Shopkeeper extends NPC {
 
 	@Override
     public boolean act() {
-		
-		throwItem();
-		
+
+		ItemUtils.throwItemAway(getPos());
+
 		getSprite().turnTo( getPos(), Dungeon.hero.getPos() );
 		spend( TICK );
 		return true;

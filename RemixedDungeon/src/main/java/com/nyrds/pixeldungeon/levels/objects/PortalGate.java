@@ -2,11 +2,13 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -113,6 +115,14 @@ public abstract class PortalGate extends Deco {
 
 		if(activated) {
 			playActiveLoop();
+		}
+	}
+
+
+	@Override
+	public void bump(Presser presser) {
+		if(presser instanceof Item) {
+			ItemUtils.throwItemAway(getPos());
 		}
 	}
 

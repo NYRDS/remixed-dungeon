@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -55,7 +56,7 @@ public class Blacksmith extends NPC {
 	
 	@Override
     public boolean act() {
-		throwItem();		
+		ItemUtils.throwItemAway(getPos());
 		return super.act();
 	}
 	
@@ -188,7 +189,7 @@ public class Blacksmith extends NPC {
 
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 		ScrollOfUpgrade.upgrade( Dungeon.hero );
-		Item.evoke( Dungeon.hero );
+		ItemUtils.evoke( Dungeon.hero );
 		
 		if (first.isEquipped( Dungeon.hero )) {
 			((EquipableItem)first).doUnequip( Dungeon.hero, true );

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.food.Candy;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.ml.R;
@@ -23,7 +24,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 
 	@Override
     public boolean act() {
-		throwItem();
+		ItemUtils.throwItemAway(getPos());
 
 		getSprite().turnTo(getPos(), Dungeon.hero.getPos());
 		spend(TICK);

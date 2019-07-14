@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -76,7 +77,8 @@ public class WandMaker extends NPC {
 
 	@Override
     public boolean act() {
-		throwItem();
+		ItemUtils.throwItemAway(getPos());
+
 		return super.act();
 	}
 	

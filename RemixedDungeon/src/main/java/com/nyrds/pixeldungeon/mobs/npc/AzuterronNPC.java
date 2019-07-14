@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -61,7 +62,7 @@ public class AzuterronNPC extends Shopkeeper {
 	@Override
     public boolean act() {
 
-		throwItem();
+		ItemUtils.throwItemAway(getPos());
 
 		getSprite().turnTo( getPos(), Dungeon.hero.getPos() );
 		spend( TICK );
