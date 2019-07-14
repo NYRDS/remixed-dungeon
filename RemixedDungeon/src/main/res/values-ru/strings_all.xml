@@ -2009,8 +2009,8 @@
     <string name="DM300_Info3">Обнаружено несанкционированное проникновение.</string>
 
     <string name="FireElemental_Name">огненный элементаль</string>
-    <string name="FireElemental_Gender">masculine</string>
-    <string name="FireElemental_Name_Objective">элементаля</string>
+    <string name="FireElemental_Gender">feminine</string>
+    <string name="FireElemental_Name_Objective">огненный элементаль</string>
     <string name="FireElemental_Desc">Огненные элементали являются побочным эффектом ритуалов призыва великих сущностей. Ввиду своей хаотичной природы, воля этих созданий не подвластна даже сильнейшим демонологам.</string>
 
     <string name="Eye_Name">око зла</string>

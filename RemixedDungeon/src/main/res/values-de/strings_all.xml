@@ -1841,7 +1841,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="DM300_Info3">Nicht autorisierter Zugang registriert.</string>
 
     <string name="FireElemental_Name">Feuergeist</string>
-    <string name="FireElemental_Gender">männlich</string>
+    <string name="FireElemental_Gender">geschlechtslos</string>
     <string name="FireElemental_Name_Objective">Feuergeist</string>
     <string name="FireElemental_Desc">Umherziehende Feuergeister sind ein Nebenprodukt von mächtigeren Beschwörungen. Ihre chaotische Natur macht es selbst den mächtigsten Dämonologen nahezu unmöglich, sie zu kontrollieren. </string>
 

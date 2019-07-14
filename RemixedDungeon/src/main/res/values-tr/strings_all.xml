@@ -2,7 +2,7 @@
 
 
     <string name="ChaosHelmet_Name">Kaos Kaskı</string>
-    <string name="ChaosHelmet_Info">Kan kırmızısı bir kask. Ve üzerinde kaos savaşçısının sembolü kazılı.</string>
+    <string name="ChaosHelmet_Info">Kan kırmızısı kask, kaos savaşçısı için gerekli olan semboldür.</string>
 
     <string name="Spells_SummonLimitReached">%1$s: çağırma limiti doldu (Şuanki sınır: %2$d)!</string>
     <string name="Mana_Title">Mana</string>
@@ -684,7 +684,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="WndHero_Depth">Maksimum Derinlik</string>
     <string name="WndHero_StaTitle">%1$d seviye %2$s</string>
     <string name="WndHero_StaCatalogus">Kataloglar</string>
-    <string name="WndHero_StaJournal">Dergi</string>
+    <string name="WndHero_StaJournal">Seyir defteri</string>
 
 
     <string name="WndImp_Message">Evet, sen benim kahramanımsın. Ödülüne gelince, şu anda üzerimde para yok ama daha iyi birşeyim var senin için.Bu ata yadigarı yüzüğü büyükbabam ölü bir paladinden almış.</string>
@@ -1565,7 +1565,12 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
         <item>Güç İksirlerini Tanıyabilirsin.</item>
     </string-array>
     <string-array name="HeroClass_MagPerks">
+        <item>Büyücüler, Büyülü Füzesinin Benzersiz Asası ile başladılar. Bu asa daha sonra başka asaları geliştirebilmek için büyüden kurtarılabilir.</item>
+        <item>Büyücüler asalarını daha çabuk şarj edebilir.</item>
+        <item>Yiyeceğin herhangi bir parçası yenildiğinde, envanterindeki her asa 1 puan yenilenir.</item>
         <item>Büyücüler, asaları yakın dövüş silahı olarak kullanabilir. </item>
+        <item>Büyücüler elementsel büyüleri kullanmak için mana harcarlar.</item>
+        <item>Tespit Parşömeni başından beri tespit edilmiştir.</item>
     </string-array>
     <string-array name="HeroClass_RogPerks">
         <item>Başıbozuk oyuna Gölge Yüzüğü+1 ile başlar.</item>
@@ -1583,6 +1588,8 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
         <item>Etraftaki yaratıkları sezme yeteneği fazladır.</item>
     </string-array>
     <string-array name="HeroClass_ElfPerks">
+        <item>Elveler 15 Can ve 9 Güç ile başlar.</item>
+        <item>Elveler köklenmeye karşı bağışıklıdırlar.</item>
         <item>Elfler geliştirilmiş ahşap bir yay ve bir sürü ok ile başlarlar. </item>
         <item>Elfler yaylarda son derece uzmandır ve de çeviktirler. </item>
         <item>Elfler çiy damlacıklarından daha fazla can kazanır. </item>
@@ -1616,31 +1623,52 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
 
 
     <string name="Rudolph_Name">Kırmızı burun ve boynuzlar</string>
+    <string name="Rudolph_Info">Kırmızı parlayan bir burundan başka ne daha eğlencelidir? Kırmızı parlayan burunların boynuzlarla birlikte olması tabii ki.</string>
+
+
+
     <string name="Kobold_Name">cüce</string>
     <string name="Kobold_Gender">erkek</string>
     <string name="Kobold_Name_Objective">cüce</string>
+    <string name="Kobold_Desc">Koboldların efsaneden başka bişey olmadıklarına inanılmıştır. Çoğu gnolların atası koboldlar, mağaraların derin ve serin yerlerinde yaşamıştır. Üstelik söylentilere göre onların ırkları cücelerden çok daha önce mühendislikte ustalaşmışlardır.</string>
+
+
     <string name="KoboldIcemancer_Name">cüce buzbüyücüsü</string>
     <string name="KoboldIcemancer_Gender">erkek</string>
     <string name="KoboldIcemancer_Name_Objective">cüce buzbüyücüsü</string>
+    <string name="KoboldIcemancer_Desc">Kobold Buzbükücüleri toplumun elitleriydi. Kayda değer savaşçılar, büyücüler ve en önemlisi, biliminsanlarıydı. Antik buz efendileri buz kontrolü sanatını ele geçirmişlerdi ve kompleks makineler özel büyülerle güçlendirilmişti.</string>
     <string name="KoboldIcemancer_Killed">%s\'nin buz oku seni öldürdü.</string>
 
 
     <string name="ColdSpirit_Name">soğuk ruh</string>
     <string name="ColdSpirit_Gender">erkek</string>
     <string name="ColdSpirit_Name_Objective">soğuk ruh</string>
+    <string name="ColdSpirit_Desc">Soğuk Ruhlar, donukluğun şekil almış halleridir ve bu onların en saf formlarıdır. Büyüsel enerjinin akılsız avanaklarıdır, onları çağıran büyücünün isteğine uyarlar yada bunun yerine daha kolay davranışları yeğlerler.</string>
+
+
     <string name="IceElemental_Name">buz elementi</string>
     <string name="IceElemental_Gender">erkek</string>
     <string name="IceElemental_Name_Objective">buz elementi</string>
+    <string name="IceElemental_Desc">Zindanda var olan tüm kullanıcılar arasında buz kullanıcıları, zorlarsak ancak güçlü sayılabilir. Ancak buz kullanıcıları kesinlikle aralarında en tehlikeli olanlarından biri. Onların bedenlerinden gelen donuk aura, herhangi bir düşmanını yavaşlatabilir.</string>
+
+
     <string name="IceGuardian_Name">buz gardiyanı</string>
     <string name="IceGuardian_Gender">erkek</string>
     <string name="IceGuardian_Name_Objective">buz gardiyanı</string>
+    <string name="IceGuardian_Desc">Buz Gardiyanları antik koboldlar tarafından mağaralarını korumak için yaratılmıştır. Gardiyanların çekirdeğinde yeterince enerji varsa, savaşın ortasında kendisini yeniden yapılandırabilir.</string>
+
+
     <string name="IceGuardianCore_Name">buz gardiyanı</string>
     <string name="IceGuardianCore_Gender">erkek</string>
     <string name="IceGuardianCore_Name_Objective">buz gardiyanı</string>
+    <string name="IceGuardianCore_Desc">Buz Gardiyanları antik koboldlar tarafından mağaralarını korumak için yaratılmıştır. Gardiyanların çekirdeğinde yeterince enerji varsa, savaşın ortasında kendisini yeniden yapılandırabilir.</string>
+
+
     <string name="CagedKobold_Name">kafeslenmiş cüce</string>
     <string name="CagedKobold_Gender">erkek</string>
     <string name="CagedKobold_Name_Objective">kafeslenmiş cüce</string>
     <string name="CagedKobold_Desc">Kafeslenmiş, bir cüce.</string>
+    <string name="CagedKobold_Intro">Hey... HEY! Sen o maceracı zımbırtısısın, değil mi? Yardım et bana kardeşim, o lanet savaş çığırtkanları beni buraya kitlediler! Onlar yeryüzünde bulunan insanlık zımbırtısını fethetmek için antik bir silahı yeniden aktive etmek istiyorlar! Ama ne kadar tehlikeli olduğu düşünüldüğünde buna karşı çıktım, ancak onlar beni bu kafesin içine fırlattılar ve kafesi kilitlediler! Sana yalvarıyorum, lütfen hücremi açan anahtarı bul ve buraya geri dön, geri döndüğünde sana her şeyimle yardım edeceğim.</string>
     <string name="CagedKobold_Quest_End">Teşekkürler, çok çok teşekkürler! Anahtarı nasıl bulabildin? Silahı... silahımı mı yokettin?! Bu akıl almaz! Sana yardım edeceğimi söylemiştim, ve düşünüyorum ki bunun en iyi yolu; senle biraz takılmak. * Kafeslenmiş Kobold muma dönüştü</string>
     <string name="CagedKobold_Message1">Lütfen...</string>
     <string name="CagedKobold_Message2">Buradan kaçmamız lazım, güçlerimizi birleştirirsek kolayca çıkabilirim.</string>
@@ -2259,6 +2287,9 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="JarOfSouls_Name">ruhlar kavanozu</string>
     <string name="JarOfSouls_Gender">erkeksi</string>
     <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
+    <string name="JarOfSouls_Desc">Bu eski kavonozda tasvir edilen kurukafanın parlayan gözleri, garip bir enerji yaydığı sürece seni rahatsız edecek.</string>
+
+
     <string name="Lich_Name">lich</string>
     <string name="Lich_Gender">erkeksi</string>
     <string name="Lich_Name_Objective">lich</string>
@@ -2288,8 +2319,21 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
 
     <string name="ElvenDagger_Name">elf hançeri</string>
+    <string name="ElvenDagger_Info">Bu silah özel bir metal alaşımdan yapılmıştır ve normal hançerlerle karşılaştırıldığında çok daha hafiftir.</string>
     <string name="ElvenDagger_Gender">erkeksi</string>
 
+
+
+    <string name="IceGuardianCoreModule_Name">Buz Gardiyanı Çekirdeği</string>
+    <string name="IceGuardianCoreModule_Info">Büyüsel buzdan yapılmış karışık bir yapı. Bu fevkalade buluşun içinde parlayan bir taş bulunuyor.</string>
+
+
+    <string name="RingOfFrost_Name">Donukluğun Yüzüğü</string>
+    <string name="RingOfFrost_Info">Bu yüzük büyüsel buzdan oyularak yapıldı. Bu yüzüğü kuşanan kişi donukluğun aurası tarafından korunacaktır, düşmanları yavaşlatır ve hasar verir.</string>
+
+
+    <string name="SpiderQueenCarapace_Name">Kraliçe Örümcek Kabuğu</string>
+    <string name="SpiderQueenCarapace_Info">Örümcek Kraliçe\'nin kabuğundan bir parça. Eğer dikkatli bakacak olursan içinde bir miktar örümcek bezesi görürsün, neredeyse canlı gibi duruyor.</string>
 
 
     <string name="LibrarianNPC_Message_Instruction">M-merhaba. Kütüphaneye hoşgeldin. Burada zindanda bulunabilecek herşeyle ilgili bilgi bulabilirsin... aslında maceracılar tarafından keşfedilen bilgileri bulabilirsin sadece. Bu... birazcık utanç verici. Bu yüzden her ziyaretinizde, büyük ihtimalle okunacak yeni şeyler bulunabilir.</string>
@@ -2301,6 +2345,9 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="LibraryBook_Description">Bu cilt gerçekten devasa. Maceracıların zindanda keşfettikleri hakkında tüm bilgileri içeriyor.</string>
 
 
+
+
+    <string name="WndSettings_moveTimeout">Hareket zaman aşımı: %s</string>
 
 
     <string name="TrapWnd_Title">Tuzak</string>
@@ -3385,14 +3432,74 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
 
 
     <string name="KindOfBow_SelectArrowKind">Hangi okları kullanmalıyım? </string>
+    <string name="BodyArmorSpell_Name">Vücut zırhı</string>
+    <string name="BodyArmorBuff_Name">Vücut zırhı</string>
+    <string name="BodyArmorBuff_Info">Zırh, hareket için harcanan enerjiyi arttırdı.</string>
+
+    <string name="DieHardSpell_Name">Ölümü Zor (Ya \"die hard\" ne diye çevrilir ki a*k)</string>
+    <string name="DieHardSpell_Info">Geçici olarak yenilenme hızını arttıracak ve seni zor ölen birisi yapacak.</string>
+
+    <string name="DieHardBuff_Name">Ölümü Zor (Ya \"die hard\" ne diye çevrilir ki a*k)</string>
+    <string name="DieHardBuff_Info">Yenilenme hızı arttı</string>
+
+    <string name="SmashSpell_Name">Ez</string>
     <string name="SmashSpell_Info">Yukarı zıpla ve yere çarptığında etraftaki düşmanları sersemletip, fiziksel hasar veren bir darbe yap. </string>
     <string name="SmashSpell_NeedWeapon">Bu eylem için bir silaha ihtiyacım var. </string>
 
+    <string name="DashSpell_Name">Atıl</string>
+    <string name="DashSpell_OnSelf">Hedefe atılamıyorum</string>
+    <string name="DashSpell_TooFar">O kadar uzağa atılamam</string>
+
     <string name="CloakSpell_Name">Pelerin</string>
     <string name="CloakSpell_Info">Görünmez olmak için gölgelere karış. Fark edilme şansını büyük oranda düşürür. Yakında düşmanlar varken kullanılamaz. </string>
+    <string name="CloakSpell_EnemiesNearby">Etrafında düşmanlar varken gölgeye giremezsin.</string>
+
+    <string name="CloakBuff_Name">Pelerin takılı</string>
+    <string name="CloakBuff_Info">Gölgelerin içinde saklandın</string>
+
+    <string name="TitleScene_Mods">Modlar</string>
+    <string name="WndHero_Stealth">Gizlilik</string>
     <string name="WndHero_Awareness">Farkındalık</string>
-    <string name="town_deco_pillar_name">Sütun</string>
+    <string name="WndHero_AttackSkill">Saldırı Becerisi</string>
+    <string name="WndHero_DefenceSkill">Savunma Becerisi</string>
+	
+   <string name="town_deco_grave_name">Mezarlık</string>
+   <string name="town_deco_grave_desc">Yıpranmış halde, her yerde bulunabilen mezartaşı.</string>
+   <string name="town_deco_pillar_name">Sütun</string>
+   <string name="town_deco_pillar_desc">Eski zamanlarda bu kolonlar müthiş bir destek ve dekorasyon sağlıyorlardı.</string>
+   <string name="town_deco_wood_wall_name">Kütükten duvar</string>
+   <string name="town_deco_wood_wall_desc">Sağlam görünümlü kütükten duvar.</string>
    <string name="town_deco_entrance_name">giriş</string>
+   <string name="town_deco_entrance_desc">Bu giriş zindanın üst seviyelerine çıkıyor.</string>
+   <string name="town_deco_exit_name">Çıkış</string>
+   <string name="town_deco_exit_desc">Eğer aşağıya adım atarsan bilinmezliğin içine gireceksin.</string>
+   <string name="town_deco_tile_name">Fayans</string>
+   <string name="town_deco_tile_desc">Bu fayanslar zamanla birlikte baya aşınmış olmalı.</string>
+   <string name="town_deco_snowdrift_desc">Bu çok büyük bir kar yığını, görünüşe göre kimse temizlemeyecek.</string>
+   <string name="town_deco_misc_name">Atık</string>
+   <string name="town_deco_misc_desc">Atık ve ıvır zıvırlardan oluşmuş yığın.</string>
+   <string name="town_deco_broken_roof_name">Kırılmış tavan.</string>
+   <string name="town_deco_broken_roof_desc">Çatıdaki fayanslar çatlamış ve görünüşe göre değiştirilmesi gerek.</string>
+   <string name="town_deco_broken_wall_name">Kırılmış duvar.</string>
+   <string name="town_deco_broken_wall_desc">Bu duvardaki odunlar baya çürümüş ve esnekliklerini kaybetmiş.</string>
+   <string name="town_deco_mud_name">Çamur</string>
+   <string name="town_deco_mud_desc">Permafrost bölgede çözülmüş toprak.</string>
+   <string name="town_deco_stock_name">Stock (Mevcut, Hammadde, Standart)</string>
+   <string name="town_deco_stock_desc">Yiyecekler burada depolanmış, birçok türden atık ve renklerle birlikte.</string>
+   <string name="town_deco_barrel_name">Fıçı</string>
+   <string name="town_deco_barrel_desc">Herzamanki fıçı, ne yazıkki açılamıyor.</string>
+   <string name="town_deco_hay_name">Saman</string>
+   <string name="town_deco_hay_desc">Hoş kokan küçük bi\' yığın saman.</string>
+   <string name="town_deco_firewood_name">Çıra</string>
+   <string name="town_deco_stakes_name">Direkler</string>
+   <string name="town_deco_stakes_desc">Keskinleştirilmiş odunlar korkutucu görünüyorlar, ancak tek başlarınayken hiçbir işe yaramazlar.</string>
+   <string name="town_deco_fence_name">Çit</string>
+   <string name="town_deco_fence_desc">Kar tarafından beneklendirilmiş çit.</string>
+   <string name="town_deco_pole_name">Delik</string>
+   <string name="town_deco_pole_desc">İpi takmak için uzunca bir delik.</string>
+   <string name="town_deco_rope_name">İp</string>
+   <string name="town_deco_rope_desc">El ile bükülmüş ip</string>
+   <string name="town_deco_slush_name">Eriyik kar</string>
    <string name="town_deco_chest_name">Sandık</string>   
    <string name="town_deco_scrolls_name">Parşömenler</string>   
    <string name="Badges_GoldCollected5">35000 altın toplandı</string>

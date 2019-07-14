@@ -1877,7 +1877,7 @@ Vous maintenez la %s prête à l\'emploi.</string>
     <string name="DM300_Info3">Personnel non autorisé détecté.</string>
 
     <string name="FireElemental_Name">élémentaire de feu</string>
-    <string name="FireElemental_Gender">mâle</string>
+    <string name="FireElemental_Gender">masculin</string>
     <string name="FireElemental_Name_Objective">élémentaire de feu</string>
     <string name="FireElemental_Desc">Les élémentaires de feu sont les résidus des invocations de plus grandes entités. Leur nature est trop chaotique pour être contrôlée, même par les démonologues les plus puissants.</string>
 

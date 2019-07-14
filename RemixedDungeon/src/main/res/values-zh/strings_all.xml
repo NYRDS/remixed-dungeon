@@ -47,7 +47,7 @@
 
 
     <string name="TomeOfKnowledge_Name">知识之书</string>
-    <string name="TomeOfKnowledge_Info">这本古书充满了神秘的谜语和咒文！这可能很难读懂，但如果你能读懂它，一定会增加你的魔法力量。</string>
+    <string name="TomeOfKnowledge_Info">这本古书充满了神秘的谜语和咒文！这可能很难读懂，但如果你能够读懂它，肯定能增加一些魔法力量。</string>
 
 
     <string name="SpellBook_Name">咒语书</string>
@@ -86,7 +86,7 @@
         <item>瑪瑙</item>
     </string-array>
 
-    <string name="Ring_Info1">您最多同時配戴2枚指環。</string>
+    <string name="Ring_Info1">你最多同时佩戴2枚戒指。</string>
     <string name="Ring_Info2">您你的 %s 緊緊箍著您的手指，疼痛無比！</string>
     <string name="Ring_Info3a">%1$s
 您个 %2$s 正 %3$s 地在您的手指上。</string>
@@ -285,8 +285,8 @@
     <string name="Wand_Name">%s法杖</string>
     <string name="Wand_ACZap">施放</string>
     <string name="Wand_Wood">这根%s法杖摸上去很暖和。谁能知道使用它会发生什么事？</string>
-    <string name="Wand_Damage">當這根法杖用於近戰時，它的平均傷害為%d。</string>
-    <string name="Wand_Weapon">您可以將這根法杖當近戰武器使用。</string>
+    <string name="Wand_Damage">当这根法杖用于近战时，它的平均伤害是%d点。</string>
+    <string name="Wand_Weapon">你可以将这根法杖当近战武器使用。</string>
     <string name="Wand_Fizzles">您的法杖滋滋作響：一定是沒能量了</string>
     <string name="Wand_SelfTarget">你不能以自己為施法目標。</string>
     <string name="Wand_Prompt">選擇要施放魔法的位置</string>
@@ -528,12 +528,12 @@ remix.28.5\n
 
     <string name="DogeMask_Name">柴犬面具</string>
     <string name="DogeMask_Info">你想伪装成著名的狗吗？现在是你的机会！\n这样的面具！伪装性很强！真的！</string>
-    <string name="IntroScene_Txt">在您之前，已经有许多英雄向地牢进发。有些人携着财宝和魔法物品满足载而归，可是他们大部分人却杳无音讯。然而，从未有人成功取回Yendor护符——那个据说被藏在地牢深处的东西。\n\n您认为您已经准备好面对这个挑战了，更重要的是，你感觉到命运女神正向您投以一丝微笑。现在，是时候展开属于您的冒险了！</string>
+    <string name="IntroScene_Txt">在您之前，已经有许多英雄向地牢进发。有些人携着财宝和魔法物品满足载而归，可是他们大部分人却杳无音讯。然而，从未有人成功取回尼德罗护符——那个据说被藏在地牢深处的东西。\n\n您认为您已经准备好面对这个挑战了，更重要的是，你感觉到命运女神正向您投以一丝微笑。现在，是时候展开属于您的冒险了！</string>
 
 
     <string name="AmuletScene_Exit">让这一切结束吧</string>
     <string name="AmuletScene_Stay">我还有未做之事</string>
-    <string name="AmuletScene_Txt">您终于把Yendor护符握在手中。通过它的“力量”，您可以征服世界，也可以为人们带来“和平”，或是其他任何事。无论如何，您的命运将永远改变，游戏也将要终结。或者，您也可以作为一个凡人再在这里逗留一会，揭开真正的阴谋。</string>
+    <string name="AmuletScene_Txt">你终于把尼德罗护符握在手中。通过它的“力量”，你可以征服世界，也可以为人们带来“和平”，或是其他任何事。无论如何，你的命运将永远改变，游戏也将要终结。或者，你也可以作为一个凡人再在这里逗留一会，揭开真正的阴谋。</string>
 
 
     <string name="GameScene_Welcome">欢迎来到混合地牢第%d层！</string>
@@ -609,7 +609,7 @@ remix.28.5\n
         <item>危险! 重型机械会使你受伤，残废，甚至死亡!</item>
         <item>像素市场。 地牢里的安全房。</item>
         <item>升级附魔过的装备会有损坏附魔的可能。</item>
-        <item>你可以从转化之井里获得平时无法获得的物品。</item>
+        <item>你可以从嬗化之井里获得平时无法获得的物品。</item>
         <item>唯一附魔武器的方法-使用武器升级卷轴。</item>
         <item>上朝觐见严禁刀具!</item>
         <item>像素市场。给与恶魔猎手最好的优惠!</item>
@@ -741,7 +741,7 @@ remix.28.5\n
     <string name="WndStory_Sewers">這個地牢位於城市的正下方，較靠近地面的樓層是城市的下水道系統，因此不太危險。儘管如此，沒人會認為這裏是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
     <string name="WndStory_Prision">為了收納最具威脅的罪犯，此地下監獄於多年前建立。因為要逃出此地極之困難，起初大家都覺得此為上策，但不久之後從地底更深處散發出的黑暗瘴氣在獄中彌漫開去，令該處的罪犯和守衛喪失理智。監獄裏變成一片混亂。秩序、服從、法則、人性通通崩潰。於是城市封鎖了整個監獄，然而尚有些人仍然被鎖上，不能重見天日。</string>
     <string name="WndStory_Caves">這個從廢棄監獄延伸而下的洞穴，早已空無一人。對於地上城市，要開發它難若登天，加上洞內礦物少得可憐，矮人對其嗤之以鼻。曾幾何時，從都市起步到達矮人之都的路途上，有一個小型貿易點。但當矮人之都衰落後，只有無處不在的豺狼人和地下生物還在此地定居。</string>
-    <string name="WndStory_Metropolis">矮人都市曾經是最宏偉的矮人城邦。鼎盛時期的矮人們派遣的機械化部隊曾成功擊退過古神及其惡魔軍隊的入侵。但是也有傳聞說，凱旋而歸的戰士同時帶來了腐壞的種子，矮人王國的勝利正是其步向毀滅的開端。</string>
+    <string name="WndStory_Metropolis">矮人都市曾经是最宏伟的矮人城邦。鼎盛时期的矮人们派遣的机械化部队曾成功击退过古神及其恶魔军队的入侵。但是也有传闻说，凯旋而归的战士同时带来了腐坏的种子，矮人王国的胜利正是其步向毁灭的开端。</string>
     <string name="WndStory_Halls">很久以前，這片區域曾是矮人都市的郊區。在與古神的戰爭中取得慘勝的矮人已經無力掌控並清理惡魔餘黨。於是存活的爪牙漸漸鞏固了對這裏的控制。現在，這裏被稱為惡魔大廳。
 
 很少有冒險者能夠深入到這種地方...</string>
@@ -783,9 +783,9 @@ remix.28.5\n
     <string name="Heap_Mimic">它是擬型怪！</string>
 
 
-    <string name="Amulet_Name">Yendor護符</string>
+    <string name="Amulet_Name">尼德罗护符</string>
     <string name="Amulet_ACEnd">結束遊戲</string>
-    <string name="Amulet_Info">Yendor護身符是來自未知領域中最強大的且最著名的神器。據說它能夠實現持有者的一切願望，只要持有者具備足夠的力量來「說服」它去做。</string>
+    <string name="Amulet_Info">尼德罗护身符是来自未知领域中最强大的且最著名的神器。据说它能够实现持有者的一切愿望，只要持有者具备足够的力量来“说服”它去做。</string>
 
 
     <string name="Ankh_Name">十字架</string>
@@ -870,10 +870,10 @@ remix.28.5\n
     <string name="Keyring_Info">這是一個銅鑰匙圈，它能讓你將你的鑰匙和其他物品分開存放。</string>
 
     <string name="ScrollHolder_Name">卷軸筒</string>
-    <string name="ScrollHolder_Info">您可以把許多捲軸裝入筒內，以免它們被燒毀。</string>
+    <string name="ScrollHolder_Info">你可以把很多卷轴放在里面，既节省了空间，又保证了它们不会被火所烧毁。</string>
 
     <string name="SeedPouch_Name">種子袋</string>
-    <string name="SeedPouch_Info">裝種子的袋子，十分方便。</string>
+    <string name="SeedPouch_Info">这个小天鹅绒袋允许你在里面储存任何数量的种子，非常的方便。</string>
 
     <string name="WandHolster_Name">法杖套</string>
     <string name="WandHolster_Info">這個法杖套是由一些有異國情調的動物皮革製成的，它可以裝入%d 枝法杖。</string>
@@ -1105,14 +1105,14 @@ remix.28.5\n
     <string name="WndSettings_Brightness">光暗度</string>
     <string name="WndSettings_SwitchPort">轉換至豎屏</string>
     <string name="WndSettings_SwitchLand">轉換至橫屏</string>
-    <string name="WndSettings_SelectLanguage">選擇語言</string>
+    <string name="WndSettings_SelectLanguage">选择语言</string>
     <string name="WndSettings_SecondQuickslot">第二快捷欄</string>
     <string name="WndSettings_ThirdQuickslot">第三快捷欄</string>
     <string name="WndSettings_ExperementalFont">新字體</string>
     <string name="WndSettings_ClassicFont">經典字體</string>
 
 
-    <string name="WndSaveSlotSelect_SelectSlot">選擇空格</string>
+    <string name="WndSaveSlotSelect_SelectSlot">选择空格</string>
 
 
     <string name="ModsButton_SelectMod">選擇mod</string>
@@ -1122,15 +1122,15 @@ remix.28.5\n
     <string name="AzuterronNPC_Gender">男孩</string>
     <string name="AzuterronNPC_Name_Objective">陌生人</string>
     <string name="AzuterronNPC_Desc">被黑雾包围着的神秘人</string>
-    <string name="AzuterronNPC_Quest_Start">嗯……为什么……噢，你能看到我，对吗？这说明你并不是“它们”的一份子。看你也不喜欢这里的怪物，告诉你，只要你能帮我解决一个小问题，我就会给你提供帮助。在这一楼层的某处有一只暗黑怪物，一只_奸诈幽灵_，干掉它，把它的_心脏_拿给我，我会卖给你一些好的东西的。</string>
+    <string name="AzuterronNPC_Quest_Start">嗯……为什么……噢，你能看到我，对吗？这说明你并不是“它们”的一份子。看你也不喜欢这里的怪物，告诉你，只要你能帮我解决一个小问题，我就会给你提供帮助。在这一楼层的某处有一只暗黑怪物，一只_背叛的精神_，干掉它，把它的_心脏_拿给我，我会卖给你一些好的东西的。</string>
     <string name="AzuterronNPC_Quest_Reminder">如果你帮助我，那我将帮助你。</string>
     <string name="AzuterronNPC_Quest_End">棒极了。把这瓶药水拿去吧，当然，它是有益的。</string>
     <string name="Journal_Azuterron">陌生人</string>
 
 
-    <string name="TreacherousSpirit_Name">奸诈幽灵</string>
+    <string name="TreacherousSpirit_Name">背叛的精神</string>
     <string name="TreacherousSpirit_Gender">男孩</string>
-    <string name="TreacherousSpirit_Name_Objective">奸诈幽灵</string>
+    <string name="TreacherousSpirit_Name_Objective">背叛的精神</string>
     <string name="TreacherousSpirit_Desc">这个巨大的怪物看起来像是一片有生命的黑暗之云。它无眼睑的眼睛凝视这你，随着你的每个动作而颤动。</string>
 
 
@@ -1140,11 +1140,11 @@ remix.28.5\n
     <string name="SpiritOfPain_Desc">黑暗的一部分</string>
 
 
-    <string name="SuspiciousRat_Name">多疑老鼠</string>
+    <string name="SuspiciousRat_Name">可疑的老鼠</string>
     <string name="SuspiciousRat_Gender">女孩</string>
-    <string name="SuspiciousRat_Name_Objective">多疑老鼠</string>
+    <string name="SuspiciousRat_Name_Objective">可疑的老鼠</string>
     <string name="SuspiciousRat_Desc">老鼠在地牢中并不少见，可是居住在如此深的地方……当它移动时，你能清楚的看到它整个身体是如何颤动的。</string>
-    <string name="SuspiciousRat_Info1">多疑老鼠正在猛烈的抽搐。</string>
+    <string name="SuspiciousRat_Info1">可疑老鼠的正在猛烈的抽搐。</string>
 
 
     <string name="PseudoRat_Name">伪鼠</string>
@@ -1158,7 +1158,7 @@ remix.28.5\n
 
 
     <string name="HeartOfDarkness_Name">黑暗之心</string>
-    <string name="HeartOfDarkness_Info">黑暗的，跳动着的奸诈幽灵之心</string>
+    <string name="HeartOfDarkness_Info">黑暗的，跳动着的背叛的精神之心。</string>
     <string name="HeartOfDarkness_Gender">扶她</string>
 
 
@@ -1166,7 +1166,7 @@ remix.28.5\n
     <string name="DarkVeil_Buff">暗黑面纱</string>
 
 
-    <string name="Badges_Yog_Slain">击杀Yog-Dzewa</string>
+    <string name="Badges_Yog_Slain">击杀犹格-德泽瓦</string>
     <string name="Badges_ShadowLord_Slain">击杀暗影领主</string>
     <string name="Badges_SpiderQueen_Slain">击杀蜘蛛女王</string>
 
@@ -1432,7 +1432,7 @@ remix.28.5\n
     <string name="WndHats_EquipButton">装备</string>
     <string name="WndHats_InfoButton">检查</string>
     <string name="WndHats_UnequipButton">取下</string>
-    <string name="Artifact_Limit">你最多只能同時佩戴2件神器。</string>
+    <string name="Artifact_Limit">你最多只能同時佩戴2件饰品。</string>
 
 
 
@@ -1547,7 +1547,7 @@ remix.28.5\n
     <string name="Hero_StaParalysis">您麻痹了！</string>
     <string name="Hero_StaPoison">您中毒了！</string>
     <string name="Hero_StaOoze">腐蝕污泥正在侵蝕你的肉體！快把它洗掉！</string>
-    <string name="Hero_StaRoots">您無法移動！</string>
+    <string name="Hero_StaRoots">你无法移动！</string>
     <string name="Hero_StaWeakness">您感覺自己變虛弱了！</string>
     <string name="Hero_StaBlindness">您暫時瞎了！</string>
     <string name="Hero_StaFury">您陷入了暴怒！</string>
@@ -1640,10 +1640,10 @@ remix.28.5\n
     <string name="Kobold_Desc">狗头人被认为是一个传说。虽然它们和豺狼人有着同样的祖先，但是它们居住在冰霜洞穴中。同时它们也有很高的工程机械造诣。但没人知道为什么它们消失了这么多年...</string>
 
 
-    <string name="KoboldIcemancer_Name">狗头人冰结</string>
+    <string name="KoboldIcemancer_Name">蓝袍狗头人</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
-    <string name="KoboldIcemancer_Name_Objective">狗头人冰结师</string>
-    <string name="KoboldIcemancer_Desc"> 狗头人冰结师是狗头人中的精英。它们既是战士，也是法师，更是科学家。冰结师们会用它们先进的理论和实践经验来加强它们的冰系魔法...</string>
+    <string name="KoboldIcemancer_Name_Objective">蓝袍狗头人</string>
+    <string name="KoboldIcemancer_Desc">蓝袍狗头人是狗头人中的精英。它们既是战士，也是法师，更是科学家。蓝袍狗头人们会用它们先进的理论和实践经验来加强它们的冰系魔法...</string>
     <string name="KoboldIcemancer_Killed">%s的寒冰箭击杀了你...</string>
 
 
@@ -1653,10 +1653,10 @@ remix.28.5\n
     <string name="ColdSpirit_Desc">寒冰精灵是由纯粹的寒冷和冷酷所构成的。它们被它们的创造者造成充满魔法的空壳，听从创造者的指令或者根据本能来行动。</string>
 
 
-    <string name="IceElemental_Name">霜元素</string>
+    <string name="IceElemental_Name">冰元素</string>
     <string name="IceElemental_Gender">masculine</string>
-    <string name="IceElemental_Name_Objective">霜元素</string>
-    <string name="IceElemental_Desc">虽然说地牢中的所有元素中霜元素不是最难遇到的，但是它往往被认为是最危险的。因为它很冷，而且它的攻击可以减速敌人。</string>
+    <string name="IceElemental_Name_Objective">冰元素</string>
+    <string name="IceElemental_Desc">虽然在地牢里所有元素生物中冰元素不是最难遇到的，但是它往往被认为是最危险的。因为它的身体非常坚固，而且攻击还带有极寒。</string>
 
 
     <string name="IceGuardian_Name">冰霜巨人</string>
@@ -1668,7 +1668,7 @@ remix.28.5\n
     <string name="IceGuardianCore_Name">冰霜巨人</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name_Objective">冰霜巨人</string>
-    <string name="IceGuardianCore_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许它在接受足够的能量后重生。</string>
+    <string name="IceGuardianCore_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许其它冰霜巨人在接受足够的能量后重生。</string>
 
 
     <string name="CagedKobold_Name">被囚禁的狗头人</string>
@@ -1811,8 +1811,8 @@ remix.28.5\n
     <string name="MeleeWeapon_Info1b">一把</string>
     <string name="MeleeWeapon_Info1c">一把升级過的</string>
     <string name="MeleeWeapon_Info1d">一把負等级的</string>
-    <string name="MeleeWeapon_Info2a">它的平均傷害為%d點。</string>
-    <string name="MeleeWeapon_Info2b">一般情况下這把武器每次攻擊能造成平均%1$d點的傷害，並需要 %2$d 點力量才能裝備。</string>
+    <string name="MeleeWeapon_Info2a">它的平均伤害是%d点。</string>
+    <string name="MeleeWeapon_Info2b">一般情况下这把武器每次攻击能造成平均%1$d点的伤害，并需要 %2$d 点力量才能正常使用。</string>
     <string name="MeleeWeapon_Info2c">也許這把武器對您來說太重了。</string>
     <string name="MeleeWeapon_Info3a">這是一把比較%s的武器。</string>
     <string name="MeleeWeapon_Info3b">快速</string>
@@ -1846,8 +1846,8 @@ remix.28.5\n
     <string name="Glaive_Gender">女性</string>
 
 
-    <string name="Knuckles_Name">鐵蓮花</string>
-    <string name="Knuckles_Info">一塊專為切合指節輪廓的鐵片</string>
+    <string name="Knuckles_Name">指虎</string>
+    <string name="Knuckles_Info">一块专门切合指节轮廓的铁片。</string>
     <string name="Knuckles_Gender">男性的</string>
 
 
@@ -1869,7 +1869,7 @@ remix.28.5\n
     <string name="ShortSword_Name">短劍</string>
     <string name="ShortSword_Info">它確實十分短，只比匕首長幾英寸。</string>
     <string name="ShortSword_ACReforge">重鑄</string>
-    <string name="ShortSword_Select">選擇您要強化的武器</string>
+    <string name="ShortSword_Select">选择你要强化的武器</string>
     <string name="ShortSword_Reforged">您將您的短劍重鑄以升級你的%s</string>
     <string name="ShortSword_NotBoomerang">您不能以這個方式為回力鏢升級</string>
     <string name="ShortSword_Gender">男性的</string>
@@ -1896,7 +1896,7 @@ remix.28.5\n
     <string name="MissileWeapon_No">不，我改主意了</string>
     <string name="MissileWeapon_Sure">您確定要將其用作近戰武器？</string>
     <string name="MissileWeapon_Info1">
-\n\n這件武器平均造成%d點傷害。</string>
+这件武器平均能造成%d点伤害。</string>
     <string name="MissileWeapon_Info2">因為你的力量不足，您在使用這把%s攻擊時，精準度和攻速因而下降。</string>
     <string name="MissileWeapon_Info3">因為您的力量已遠遠高過武器所需，您在使用這把%s攻擊時傷害會增加。</string>
     <string name="MissileWeapon_Info4">
@@ -2044,7 +2044,7 @@ remix.28.5\n
     <string name="Golem_Name">魔像</string>
     <string name="Golem_Gender">陽剛的</string>
     <string name="Golem_Name_Objective">魔像</string>
-    <string name="Golem_Desc">矮人们尝试将他们关于机械的知识与新发现的元素力量相结合。土地之灵作为公认的最容易掌控的元素之灵，被用来当作机械的\"灵魂\"。即使这样，仪式中任何细微的失误都会造成严重的爆炸。</string>
+    <string name="Golem_Desc">矮人们尝试将他们关于机械的知识与新发现的元素力量相结合。土之灵作为公认的最容易掌控的元素之灵，被用来当作机械的\"灵魂\"。即使这样，仪式中任何细微的失误都会造成严重的爆炸。</string>
     <string name="Golem_Defense">格挡</string>
 
     <string name="Goo_Name">粘咕</string>
@@ -2100,9 +2100,9 @@ remix.28.5\n
     <string name="Rat_Name_Objective">啮齿小鼠</string>
     <string name="Rat_Desc">啮齿小鼠是极具侵略性却比较弱小的下水道居民，只有在拥有大量数量时才会造成威胁。</string>
 
-    <string name="Scorpio_Name">蝎子</string>
+    <string name="Scorpio_Name">恶魔蝎子</string>
     <string name="Scorpio_Gender">陽剛的</string>
-    <string name="Scorpio_Name_Objective">蝎子</string>
+    <string name="Scorpio_Name_Objective">恶魔蝎子</string>
     <string name="Scorpio_Desc">这些巨大的节肢类恶魔生物会尽可能的避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
 
     <string name="Senior_Name">武僧大师</string>
@@ -2176,16 +2176,16 @@ remix.28.5\n
     <string name="Warlock_Desc">当矮人们的兴趣由工程转向奥术时，城市中的权力开始被术士掌握。他们最开始研究元素魔法，但不久就转为研究恶魔学和死灵术。</string>
     <string name="Warlock_Killed">%s的暗影箭杀死了你……</string>
 
-    <string name="Wraith_Name">鬼魂</string>
+    <string name="Wraith_Name">幽魂</string>
     <string name="Wraith_Gender">陽剛的</string>
-    <string name="Wraith_Name_Objective">鬼魂</string>
-    <string name="Wraith_Desc">怨灵来自于被惊扰的墓穴中渴望复仇的罪人之魂。其飘渺的存在使它很难被通常武器击中。</string>
+    <string name="Wraith_Name_Objective">幽魂</string>
+    <string name="Wraith_Desc">幽魂来自于被惊扰的墓穴中渴望复仇的冒险者之魂。其飘渺的存在使它很难被通常武器击中。</string>
     <string name="Wraith_Defense">回避</string>
 
-    <string name="Yog_Name">Yog-Dzewa</string>
+    <string name="Yog_Name">犹格-德泽瓦</string>
     <string name="Yog_Gender">陽剛的</string>
-    <string name="Yog_Name_Objective">Yog-Dzewa</string>
-    <string name="Yog_Desc">Yog-Dzewa是一位上古之神，来源于混沌中的强大存在。一个世纪前，古代矮人们虽然勉强赢得了与恶魔军团的战争，却无法将古神杀死。作为替代方案，矮人们将它封印在城市下的大堂中，并相信虚弱的它无法再度复苏。</string>
+    <string name="Yog_Name_Objective">犹格-德泽瓦</string>
+    <string name="Yog_Desc">犹格-德泽瓦是一位上古之神，来源于混沌中的强大存在。一个世纪前，古代矮人们虽然勉强赢得了与恶魔军团的战争，却无法将古神杀死。作为替代方案，矮人们将它封印在城市下的大堂中，并相信虚弱的它无法再度复苏。</string>
     <string name="Yog_Info1">……</string>
     <string name="Yog_Info2">希望的存在只是幻觉……</string>
     <string name="RottingFist_Name">腐烂之拳</string>
@@ -2241,19 +2241,19 @@ remix.28.5\n
     <string name="WaterElemental_Name">水元素</string>
     <string name="WaterElemental_Gender">陽剛的</string>
     <string name="WaterElemental_Name_Objective">水元素</string>
-    <string name="WaterElemental_Desc">水元素会在有大量水体存在的环境中出现。通常这些由魔法结合而成的水浪只会在附近徘徊。</string>
+    <string name="WaterElemental_Desc">水元素会在有大量水体存在的环境中出现。通常这些由魔法结合而成的水浪只会在水流附近徘徊。</string>
 
 
-    <string name="AirElemental_Name">气元素</string>
+    <string name="AirElemental_Name">风元素</string>
     <string name="AirElemental_Gender">陽剛的</string>
-    <string name="AirElemental_Name_Objective">气元素</string>
-    <string name="AirElemental_Desc">气元素是由有生命的气体构成的飞行魔法生物。</string>
+    <string name="AirElemental_Name_Objective">风元素</string>
+    <string name="AirElemental_Desc">风元素是由有生命的气体构成的飞行元素生物。</string>
 
 
-    <string name="EarthElemental_Name">地元素</string>
+    <string name="EarthElemental_Name">土元素</string>
     <string name="EarthElemental_Gender">陽剛的</string>
-    <string name="EarthElemental_Name_Objective">地元素</string>
-    <string name="EarthElemental_Desc">地元素是由凝缩的自然之力所操纵着的的土块。</string>
+    <string name="EarthElemental_Name_Objective">土元素</string>
+    <string name="EarthElemental_Desc">土元素是由凝缩的自然之力所操纵着的的土块。</string>
 
 
     <string name="Crystal_Name">悬浮水晶</string>
@@ -2453,8 +2453,8 @@ remix.28.5\n
 
 
 
-    <string name="Badges_Victory">獲得Yendor護符</string>
-    <string name="Badges_VictoryAll">分别使用战士，法师，盗贼和女猎手获得Yendor护符</string>
+    <string name="Badges_Victory">获得尼德罗护符</string>
+    <string name="Badges_VictoryAll">使用所有人物获得尼德罗护符</string>
     <string name="Badges_MasteryCombo">使用角鬥士達到7連擊</string>
     <string name="Badges_PotionsCooked1">一場遊戲中釀造3瓶藥水</string>
     <string name="Badges_PotionsCooked2">一場遊戲中釀造6瓶藥水</string>
@@ -2826,7 +2826,7 @@ remix.28.5\n
     </string-array>
 
 
-    <string name="InventoryScroll_Title">選擇一個物品</string>
+    <string name="InventoryScroll_Title">选择一个物品</string>
     <string name="InventoryScroll_Warning">您確定您要打斷此卷軸的法術嗎？反正它早晚也會被用掉。</string>
     <string name="InventoryScroll_Yes"> 是的</string>
     <string name="InventoryScroll_No">不，我改主意了</string>
@@ -3072,27 +3072,27 @@ remix.28.5\n
     <string name="Worm_Desc">没人知道这巨大的虫子是什么。从地下钻出，身上覆盖着腐肉和烂泥。它巨大的下颚告诉了你它钻出地面的方法。</string>
 
 
-    <string name="YogsBrain_Name">Yog之脑</string>
+    <string name="YogsBrain_Name">犹格之脑</string>
     <string name="YogsBrain_Gender">masculine</string>
-    <string name="YogsBrain_Name_Objective">Yog之脑</string>
-    <string name="YogsBrain_Desc">Yog-Dzewa的大脑，所有邪恶的根源。</string>
+    <string name="YogsBrain_Name_Objective">犹格之脑</string>
+    <string name="YogsBrain_Desc">犹格-德泽瓦的大脑，地牢所有邪恶的根源。</string>
 
 
-    <string name="YogsEye_Name">Yog之眼</string>
+    <string name="YogsEye_Name">犹格之眼</string>
     <string name="YogsEye_Gender">masculine</string>
-    <string name="YogsEye_Name_Objective">Yog之眼</string>
+    <string name="YogsEye_Name_Objective">犹格之眼</string>
     <string name="YogsEye_Desc">Yog-Dzewa的眼睛，你感觉它充满仇恨的目光刺穿了你的灵魂。</string>
 
 
-    <string name="YogsHeart_Name">Yog之心</string>
+    <string name="YogsHeart_Name">犹格之心</string>
     <string name="YogsHeart_Gender">masculine</string>
-    <string name="YogsHeart_Name_Objective">Yog之心</string>
+    <string name="YogsHeart_Name_Objective">犹格之心</string>
     <string name="YogsHeart_Desc">从古至今人们都认同的有邪恶透顶的绝情的生物就在这儿，Yog-Dzewa的巨大心脏。</string>
 
 
-    <string name="YogsTeeth_Name">Yog之牙</string>
+    <string name="YogsTeeth_Name">犹格之牙</string>
     <string name="YogsTeeth_Gender">masculine</string>
-    <string name="YogsTeeth_Name_Objective">Yog之牙</string>
+    <string name="YogsTeeth_Name_Objective">犹格之牙</string>
     <string name="YogsTeeth_Desc">Yog-Dzewa的大嘴和锋利牙齿，表现了出强烈的破坏欲望。</string>
 
     <string name="Food_ACEat">食用</string>
@@ -3163,18 +3163,19 @@ remix.28.5\n
     <string name="ResultDescriptions_Bleeding">在第 %d 层流血而死</string>
     <string name="ResultDescriptions_Ooze">在第 %d 层被腐蚀淤泥杀死</string>
     <string name="ResultDescriptions_Fall">在第 %d 层摔死</string>
-    <string name="ResultDescriptions_Win">获得Yendor护符</string>
+    <string name="ResultDescriptions_Win">获得尼德罗护符</string>
     <string name="ResultDescriptions_Immured">在第%d层被囚禁于牆中</string>
     <string name="ResultDescriptions_Unknown">在神秘情况下死亡 %d</string>
     <string name="Armor_EquipCursed">你的%s緊緊的束縛著你，讓你疼痛無比！</string>
     <string name="Armor_Identify">你現在已經熟悉了%1$s的性質，以致能夠自行鑒定它。這件裝備是%2$s</string>
     <string name="Armor_ToString">%1$s : %2$d</string>
     <string name="Armor_Incompatible">不同屬性的魔法產生了衝突，消除了這件護甲上的附魔效果！</string>
-    <string name="Armor_Info1">這件%1$s在每次受到傷害時可以抵擋%2$d點的傷害。</string>
+    <string name="Armor_Info1">这件%1$s在每次受到物理伤害时可以平均抵挡%2$d点的伤害。</string>
     <string name="Armor_Info2">
 因為你的力量不足，所以你的移動速度和防禦能力都下降了。</string>
     <string name="Armor_Info3">因為您的力量不足，穿上這件護甲會降低你的移動速度和防禦能力。</string>
-    <string name="Armor_Info4">一般情况下 %1$s 對每次受到的攻擊提供最高 %2$d 點的傷害減免，並需要 %3$d 點力量才能穿上。</string>
+    <string name="Armor_Info4">
+一般情况下 %1$s 对于受到的物理攻击提供平均 %2$d 点的减伤，并需要 %3$d 点力量才能正常使用。</string>
     <string name="Armor_Info5">也許這件護甲對您來說太重了。</string>
     <string name="Armor_Info6">這件裝備已經被刻上符文。</string>
     <string name="Armor_Info7a">您正在裝備着 %1$s %2$s 。</string>
@@ -3228,7 +3229,7 @@ remix.28.5\n
     <string name="RogueArmor_Desc">盗賊穿着这件漆黑的外套，可以弄一個小把戲 —— 「煙霧爆彈」（雖然使用時並不會用上真的爆炸品）：他會使敵人暫時失去視覺，自己並會跳到一旁。</string>
     <string name="RogueArmor_ACSpecial">煙霧爆彈</string>
     <string name="RogueArmor_NotRogue">只有盗賊能使用賊這件護甲！</string>
-    <string name="RogueArmor_Fov">您只能跳到你視野中內的一個空位</string>
+    <string name="RogueArmor_Fov">你只能跳到你视野中的一个空位</string>
     <string name="RogueArmor_Prompt">選擇您要躍到的位置</string>
 
 
@@ -3270,7 +3271,7 @@ remix.28.5\n
     <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
 
     <string name="Plant_ACPlant">种植</string>
-    <string name="Plant_Info">将这个%1$s.\n\n%2$s种子扔到你想种植的地方。</string>
+    <string name="Plant_Info">将这个%1$s种子扔到你想种植的地方。\n\n%2$s</string>
     <string name="Plant_Seed">%s种子</string>
 
 

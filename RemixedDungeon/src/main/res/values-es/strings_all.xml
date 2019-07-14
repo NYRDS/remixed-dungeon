@@ -1866,7 +1866,7 @@
     <string name="DM300_Info3">Personal no autorizado detectado.</string>
 
     <string name="FireElemental_Name">elemental de fuego</string>
-    <string name="FireElemental_Gender">masculino</string>
+    <string name="FireElemental_Gender">femenino</string>
     <string name="FireElemental_Name_Objective">elemental de fuego</string>
     <string name="FireElemental_Desc">Los elementales de fuego son la consecuencia de invocar entidades mayores. Su naturaleza es demasiado caótica para ser controlada incluso por el demonólogo más poderoso.</string>
 
