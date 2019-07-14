@@ -11,10 +11,14 @@ public class ModError extends RuntimeException {
     }
 
     static public void doReport(String s, Exception e) {
-        Game.toast("[%s -> %s]", s, e.getMessage());
+        String errMsg = e.getMessage();
+        if(errMsg==null) {
+            errMsg = "";
+        }
+        Game.toast("[%s -> %s]", s, errMsg);
         EventCollector.logException(e,s);
-        Notifications.displayNotification(e.getClass().getSimpleName(), s, e.getMessage());
+        Notifications.displayNotification(e.getClass().getSimpleName(), s, errMsg);
         GLog.toFile(s);
-        GLog.toFile(e.getMessage());
+        GLog.toFile(errMsg);
     }
 }

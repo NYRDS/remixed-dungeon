@@ -48,6 +48,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
@@ -145,6 +146,7 @@ public class MobFactory {
 		registerMobClass(SpiderGuard.class);
 		registerMobClass(SpiderExploding.class);
 		registerMobClass(SpiderMind.class);
+		registerMobClass(SpiderMindAmber.class);
 		registerMobClass(SpiderEgg.class);
 		registerMobClass(SpiderNest.class);
 		registerMobClass(SpiderQueen.class);
@@ -246,6 +248,10 @@ public class MobFactory {
 			EventCollector.logException(e);
 		}
 		return null;
+	}
+
+	public static boolean hasMob(String mobClass) {
+		return mMobsList.containsKey(mobClass);
 	}
 
 	public static Mob mobByName(String selectedMobClass) {

@@ -46,6 +46,7 @@ public class Bestiary {
 			feelingChance = Feelings.optDouble("Chance", 0.2);
 		}
 
+        selfTest(bestiaryData);
 	}
 
 	private static String currentLevelId;
@@ -69,6 +70,29 @@ public class Bestiary {
 			return MobFactory.mobByName("Rat");
 		}
 	}
+
+	public static void  selfTest(JSONObject root) {
+	    Iterator<String> keyI = root.keys();
+	    while (keyI.hasNext()) {
+	        String key = keyI.next();
+
+	        if(key.equals("Chance")) {
+	        	continue;
+			}
+
+	        double chances = root.optDouble(key,-1);
+	        if(chances>0) {
+	            if(!MobFactory.hasMob(key)) {
+	                ModError.doReport("missing mob class: "+key+" found in Bestiary.json", new Exception());
+                }
+	            continue;
+            }
+	        JSONObject childObject = root.optJSONObject(key);
+	        if(childObject!=null) {
+	            selfTest(childObject);
+            }
+        }
+    }
 
 	private static void cacheLevelData(Level level) throws JSONException {
 		currentLevelId = level.levelId;

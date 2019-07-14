@@ -46,7 +46,7 @@
    "GutsLevel":{
       "26":{"SuspiciousRat":1,"ZombieGnoll":2,"Worm":0.3,"Succubus":0.02},
       "27":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":1,"Eye":1},
-      "28":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2,"Elemental":0.02},
+      "28":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2,"FireElemental":0.02},
 	  "29":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":2},
       "30":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2}
    },
