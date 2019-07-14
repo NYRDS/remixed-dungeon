@@ -46,6 +46,7 @@ import com.nyrds.pixeldungeon.mobs.npc.TownsfolkNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkSilentNPC;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
+import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
@@ -141,6 +142,7 @@ public class MobFactory {
 		registerMobClass(Bandit.class);
 
 		registerMobClass(SpiderServant.class);
+		registerMobClass(SpiderGuard.class);
 		registerMobClass(SpiderExploding.class);
 		registerMobClass(SpiderMind.class);
 		registerMobClass(SpiderEgg.class);
