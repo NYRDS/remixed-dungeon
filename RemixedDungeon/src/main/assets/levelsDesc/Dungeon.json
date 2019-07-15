@@ -2,7 +2,7 @@
    "Levels":{
       "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
 
-      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1.mp3"},
+      "town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1.mp3","script": "scripts/actors/town/Compass"},
 	  "cinema":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1.mp3"},
 	  "church":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
 	  "fortune":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
