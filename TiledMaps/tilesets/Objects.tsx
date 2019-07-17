@@ -6,13 +6,20 @@
  <image source="../Png/Objects.png" width="256" height="256"/>
  <tile id="0">
   <properties>
-   <property name="kind" value="PortalGateReceiver"/>
+   <property name="kind" value="Deco"/>
+   <property name="object_desc" value="PortalGateReceiver"/>
   </properties>
  </tile>
  <tile id="1">
   <properties>
    <property name="kind" value="Deco"/>
    <property name="object_desc" value="PortalGateSender"/>
+  </properties>
+ </tile>
+ <tile id="16">
+  <properties>
+   <property name="kind" value="Deco"/>
+   <property name="object_desc" value="PortalGateReceiver"/>
   </properties>
  </tile>
  <tile id="32">
