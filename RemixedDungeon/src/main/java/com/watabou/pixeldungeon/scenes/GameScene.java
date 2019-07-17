@@ -843,10 +843,16 @@ public class GameScene extends PixelScene {
     }
 
     public static Image getTile(int cell) {
-        Image ret = scene.baseTiles.tile(cell);
-        if (ret == null) {
-            ret = scene.logicTiles.tile(cell);
+        Image ret = scene.roofTiles.tile(cell);
+
+        if(ret!=null){
+            return ret;
         }
-        return ret;
+
+        ret = scene.baseTiles.tile(cell);
+        if (ret != null) {
+            return ret;
+        }
+        return scene.logicTiles.tile(cell);
     }
 }

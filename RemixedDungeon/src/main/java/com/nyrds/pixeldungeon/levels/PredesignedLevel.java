@@ -20,6 +20,8 @@ public class PredesignedLevel extends CustomLevel {
 
 	private boolean useCustomTiles;
 
+	private  LayerId[] descOrder = {LayerId.Roof_Deco,LayerId.Roof_Base,LayerId.Deco2,LayerId.Deco,LayerId.Base};
+
 	//for restoreFromBundle
 	public PredesignedLevel() {
 		super();
@@ -227,14 +229,26 @@ public class PredesignedLevel extends CustomLevel {
 
 	@Override
 	public String tileDescByCell(int cell) {
-		String ret = tilePropertyByCell(cell, "decoDesc", LayerId.Deco);
-		return ret!=null ? ret :super.tileDescByCell(cell);
+		String ret;
+		for(LayerId layerId:descOrder) {
+			 ret = tilePropertyByCell(cell, "decoDesc",layerId);
+			 if(ret!=null) {
+			 	return ret;
+			 }
+		}
+		return super.tileDescByCell(cell);
 	}
 
 	@Override
 	public String tileNameByCell(int cell) {
-		String ret = tilePropertyByCell(cell, "decoName", LayerId.Deco);
-		return ret!=null ? ret :super.tileNameByCell(cell);
+		String ret;
+		for(LayerId layerId:descOrder) {
+			ret = tilePropertyByCell(cell, "decoName",layerId);
+			if(ret!=null) {
+				return ret;
+			}
+		}
+		return super.tileDescByCell(cell);
 	}
 
 	@Override
