@@ -153,6 +153,6 @@ public class Statue extends Mob {
 			EventCollector.logException("no weapon");
 		}
 
-		return HeroSpriteDef.createHeroSpriteDef(new Dagger());
+		return HeroSpriteDef.createHeroSpriteDef(weapon);
 	}
 }
