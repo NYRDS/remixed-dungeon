@@ -89,6 +89,8 @@ import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.HashSet;
 
 public class GameScene extends PixelScene {
@@ -101,6 +103,8 @@ public class GameScene extends PixelScene {
 
     private DungeonTilemap logicTiles;
     private DungeonTilemap baseTiles;
+
+    @Nullable
     private DungeonTilemap roofTiles;
 
     private FogOfWar fog;
@@ -843,16 +847,21 @@ public class GameScene extends PixelScene {
     }
 
     public static Image getTile(int cell) {
-        Image ret = scene.roofTiles.tile(cell);
+        Image ret;
 
-        if(ret!=null){
-            return ret;
+        if(scene.roofTiles!=null) {
+            ret = scene.roofTiles.tile(cell);
+
+            if (ret != null) {
+                return ret;
+            }
         }
 
         ret = scene.baseTiles.tile(cell);
         if (ret != null) {
             return ret;
         }
+
         return scene.logicTiles.tile(cell);
     }
 }

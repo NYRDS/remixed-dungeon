@@ -19,20 +19,13 @@ package com.watabou.gltextures;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.LinearGradient;
-import android.graphics.Paint;
-import android.graphics.Shader.TileMode;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Texture;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.InputStream;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,32 +58,6 @@ public class TextureCache {
 
 			return tx;
 		}
-	}
-
-	public static SmartTexture createGradient(int width, int height,
-			int... colors) {
-
-		String key = Utils.EMPTY_STRING + width + "x" + height + ":" + Arrays.toString(colors);
-
-		if (all.containsKey(key)) {
-
-			return all.get(key);
-
-		} else {
-
-			Bitmap bmp = Bitmap.createBitmap(width, height,
-					Bitmap.Config.ARGB_8888);
-			Canvas canvas = new Canvas(bmp);
-			Paint paint = new Paint();
-			paint.setShader(new LinearGradient(0, 0, 0, height, colors, null,
-					TileMode.CLAMP));
-			canvas.drawPaint(paint);
-
-			SmartTexture tx = new SmartTexture(bmp);
-			all.put(key, tx);
-			return tx;
-		}
-
 	}
 
 	public static void add(Object key, SmartTexture tx) {
@@ -131,14 +98,10 @@ public class TextureCache {
 		}
 	}
 
-	public static Bitmap getBitmap(Object src) {
+	private static Bitmap getBitmap(Object src) {
 		if (src instanceof String) {
 			String resName = (String) src;
-			InputStream stream = ModdingMode.getInputStream(resName);
-			if(stream != null){
-				return BitmapFactory.decodeStream(stream);
-			}
-			throw new TrackedRuntimeException("Failed to load "+ resName + "(mod: "+ ModdingMode.activeMod() + ")");
+			return BitmapFactory.decodeStream(ModdingMode.getInputStream(resName));
 		} else if (src instanceof Bitmap) {
 			return (Bitmap) src;
 		}
