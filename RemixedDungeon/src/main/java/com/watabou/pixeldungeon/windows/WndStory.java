@@ -90,13 +90,7 @@ public class WndStory extends Window {
 
 		list.setRect(0, 0, w, h);
 	}
-	
-	@Override
-	public void update() {
-		super.update();
-		
-	}
-	
+
 	public static void showCustomStory( String text ) {
 		if (text != null) {
 			WndStory wnd = new WndStory( text );
