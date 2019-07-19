@@ -86,8 +86,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     private Tweener motion;
 
-    protected Emitter burning;
-    protected Emitter levitation;
+    private Emitter burning;
+    private Emitter levitation;
 
     private IceBlock iceBlock;
     private TorchHalo halo;
@@ -190,7 +190,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 GameScene.ripple(from);
             }
         }
-        ch.onMotionComplete();
     }
 
     public void interruptMotion() {
@@ -461,6 +460,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         if (tweener == motion) {
 
             isMoving = false;
+
+            ch.onMotionComplete();
 
             motion.killAndErase();
             motion = null;
