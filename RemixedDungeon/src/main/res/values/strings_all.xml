@@ -413,16 +413,6 @@
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Welcome!</string>
 
-    <string name="Welcome_Text_28_2">
-    remix.28.2\n
-    - Gui refactoring:\n
-    -- Quickslots quantity limited only by screen width\n
-    -- Spells and abilities can be placed in quickslots\n
-    -- Handedness option\n
-    - Move time limit now persist in game state\n
-    - Realtime!(still very experimental) mode now available and persistent per game session\n
-    </string>
-
     <string name="Welcome_Text_28_3">
     remix.28.3\n
     - New Necromancer abilities:\n
@@ -3674,6 +3664,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Badges_MonsterSlain5">1000 enemies slain</string>
     <string name="Spells_NotInOwnBody">You can\'t perform %s while your soul separated from body.</string>
     <string name="WndHero_Satiety">Satiety</string>
+
+    <string name="Welcome_Text_29">
+    remix.29\n
+    - Town renovation!\n
+    </string>
 
 
 </resources>
