@@ -22,14 +22,20 @@ import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public enum Sample implements SoundPool.OnLoadCompleteListener {
 
@@ -38,17 +44,19 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	public static final int MAX_STREAMS = 8;
 	String playOnComplete;
 
-	@SuppressWarnings("deprecation")
 	protected SoundPool pool =
 			new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
 
+	@NonNull
+	protected Set<String> missingAssets = new HashSet<>();
+
+	@NotNull
 	protected Map<String, Integer> ids =
 			new HashMap<>();
 
 	private AssetManager manager;
 	private boolean enabled = true;
 
-	@SuppressWarnings("deprecation")
 	public void reset() {
 
 		pool.release();
@@ -77,7 +85,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 
 	private void load(String asset) {
 
-		if (!ids.containsKey(asset)) {
+		if (!ids.containsKey(asset) && !missingAssets.contains(asset)) {
 			try {
 				String assetFile = "sound/" + asset;
 				int streamID;
@@ -92,7 +100,9 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 				ids.put(asset, streamID);
 
 			} catch (IOException e) {
-				throw new TrackedRuntimeException(e);
+				missingAssets.add(asset);
+				playOnComplete = null;
+				EventCollector.logException(e,asset);
 			}
 		}
 	}
@@ -114,7 +124,11 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	}
 
 	public int play(String id, float leftVolume, float rightVolume, float rate) {
-		if (enabled && ids.containsKey(id)) {
+		if(!enabled) {
+			return -1;
+		}
+
+		if (ids.containsKey(id)) {
 			return pool.play(ids.get(id), leftVolume, rightVolume, 0, 0, rate);
 		} else {
 			playOnComplete = id;
