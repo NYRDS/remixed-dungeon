@@ -413,14 +413,6 @@
     <string name="Welcome_Ok">Ладушки!</string>
     <string name="Welcome_Title">Добро пожаловать!</string>
 
-    <string name="Welcome_Text_28_2">remix.28.2\n
-- Изменения интерфейса:\n
--- Количество быстрых слотов ограничено только шириной экрана\n
--- Заклинания и Способности теперь можно помещать в быстрые слоты\n
--- Опция для выбораведущей руки\n
-- Ограничение времени хода теперь сохраняется в сейве\n
-- Realtime! (крайне эксперементальный) режим теперь доступен длявсех и сохраняется в сейве\n</string>
-
     <string name="Welcome_Text_28_3"> remix.28.3\n
 - Новые способности Некроманта:\n
 -- Темная Жертва\n
@@ -2010,10 +2002,10 @@
     <string name="DM300_Info2">Миссия провалена. Отключаюсь.</string>
     <string name="DM300_Info3">Обнаружено несанкционированное проникновение.</string>
 
-    <string name="Elemental_Name">огненный элементаль</string>
-    <string name="Elemental_Gender">masculine</string>
-    <string name="Elemental_Name_Objective">элементаля</string>
-    <string name="Elemental_Desc">Огненные элементали являются побочным эффектом ритуалов призыва великих сущностей. Ввиду своей хаотичной природы, воля этих созданий не подвластна даже сильнейшим демонологам.</string>
+    <string name="FireElemental_Name">огненный элементаль</string>
+    <string name="FireElemental_Gender">feminine</string>
+    <string name="FireElemental_Name_Objective">огненный элементаль</string>
+    <string name="FireElemental_Desc">Огненные элементали являются побочным эффектом ритуалов призыва великих сущностей. Ввиду своей хаотичной природы, воля этих созданий не подвластна даже сильнейшим демонологам.</string>
 
     <string name="Eye_Name">око зла</string>
     <string name="Eye_Gender">neuter</string>
@@ -3579,6 +3571,89 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndHero_Awareness">Внимательность</string>
     <string name="WndHero_AttackSkill">Навыки Атаки</string>
     <string name="WndHero_DefenceSkill">Навыки Защиты</string>
+	
+   <string name="town_deco_grave_name">Могила</string>
+   <string name="town_deco_grave_desc">Обычное надгробие со стертыми надписями.</string>
+   <string name="town_deco_pillar_name">Столб</string>
+   <string name="town_deco_pillar_desc">Когда-то давно это столб был прекрасной опорой и украшением.</string>
+   <string name="town_deco_wood_wall_name">Бревенчатая стена</string>
+   <string name="town_deco_wood_wall_desc">Бревенчатая стена, выглядит надежно.</string>
+   <string name="town_deco_entrance_name">Вход</string>
+   <string name="town_deco_entrance_desc">Проход к верхним уровням подземелья.</string>
+   <string name="town_deco_exit_name">Выход</string>
+   <string name="town_deco_exit_desc">Что же ждет тебя там внизу?</string>
+   <string name="town_deco_tile_name">Плитка</string>
+   <string name="town_deco_tile_desc">Время не пощадило эти плитки. </string>
+   <string name="town_deco_snowdrift_name">Сугроб</string>
+   <string name="town_deco_snowdrift_desc">Огромный сугроб и похоже убирать его никто не собирается.</string>
+   <string name="town_deco_misc_name">Барахло</string>
+   <string name="town_deco_misc_desc">Куча барахла и побрякушек.</string>
+   <string name="town_deco_broken_roof_name">Дырявая крыша</string>
+   <string name="town_deco_broken_roof_desc">Черепица на этой крыше вся в трещинах, нужен ремонт.</string>
+   <string name="town_deco_broken_wall_name">Сломанная стена</string>
+   <string name="town_deco_broken_wall_desc">Бревна в этой стене давно прогнили и утратили былую прочность.</string>
+   <string name="town_deco_mud_name">Грязь.</string>
+   <string name="town_deco_mud_desc">Оттаявший клочок грязи в этом царстве вечной зимы.</string>
+   <string name="town_deco_stock_name">Припасы</string>
+   <string name="town_deco_stock_desc">Здесь хранится провиант вперемежку с кучей разносортного барахла. </string>
+   <string name="town_deco_barrel_name">Бочка</string>
+   <string name="town_deco_barrel_desc">Обычная бочка, не открывается, а жаль.</string>
+   <string name="town_deco_hay_name">Сено</string>
+   <string name="town_deco_hay_desc">Стожок ароматного сена.</string>
+   <string name="town_deco_firewood_name">Дрова</string>
+   <string name="town_deco_firewood_desc">Необходимая вещь, особенно в такой дикий холод.</string>
+   <string name="town_deco_stakes_name">Колья</string>
+   <string name="town_deco_stakes_desc">Эти заостренные бревна выглядят угрожающе, но сами по себе довольно бесполезны.</string>
+   <string name="town_deco_fence_name">Забор</string>
+   <string name="town_deco_fence_desc">Деревянный забор припорошенный снегом.</string>
+   <string name="town_deco_pole_name">Шест</string>
+   <string name="town_deco_pole_desc">Длинный шест, как раз подходит для натягивания веревок.</string>
+   <string name="town_deco_rope_name">Веревка</string>
+   <string name="town_deco_rope_desc">Веревка скрученная вручную.</string>
+   <string name="town_deco_slush_name">Слякоть</string>
+   <string name="town_deco_slush_desc">Этот снег подтаивает, так что он теперь не снег, а грязная мокрая кашица.</string>
+   <string name="town_deco_chest_name">Сундук</string>   
+   <string name="town_deco_chest_desc">Удобный предмет обстановки для хранения всяких вещиц и украшений.</string>
+   <string name="town_deco_emptyboard_name">Стеллаж</string>
+   <string name="town_deco_emptyboard_desc">Обыкновеннейший стеллаж для всяческих предметов.</string>
+   <string name="town_deco_grandclock_name">Напольные часы</string>
+   <string name="town_deco_grandclock_desc">Старинный, но все ещё рабочий механизм.</string>
+   <string name="town_deco_wall_beam_name">Балка</string>
+   <string name="town_deco_wall_beam_desc">Надежная опора для этого сооружения.</string>
+   <string name="town_deco_wall_candles_name">Свечи</string>
+   <string name="town_deco_wall_candles_desc">Свечи погасли, но аромат благовоний все ещё витает в воздухе.</string>
+   <string name="town_deco_wooden_drawer_name">Ящик</string>
+   <string name="town_deco_wooden_drawer_desc">Интересно что же там внутри?</string>
+   <string name="town_deco_scrolls_name">Свитки</string>   
+   <string name="town_deco_scrolls_desc">Пыльный шкаф с кучей свитков и книг.</string>
+   <string name="town_deco_medicine_name">Лекарства</string>   
+   <string name="town_deco_medicine_desc">Пузырьки, и прочие ингредиенты аккуратно расставлены по этим полкам.</string>
+   <string name="town_deco_wooden_stairs_name">Лестницы</string>   
+   <string name="town_deco_wooden_stairs_desc">Они добавят тебе немного роста.</string>
+   <string name="town_deco_canvas_name">Холст</string>
+   <string name="town_deco_canvas_desc">Толстый кусок ткани натянутый на стене.</string>
+   <string name="town_deco_projector_name">Кинопроектор</string>
+   <string name="town_deco_projector_desc">Старое устройство для проигрывания кинопленок людям на радость.</string>
+   <string name="town_deco_filmtape_name">Кинопленка</string>
+   <string name="town_deco_filmtape_desc">Интересно, что на ней?</string>
+   <string name="town_deco_painting_name">Картина</string>
+   <string name="town_deco_painting_desc">Прекрасное произведение искусства.</string>
+   <string name="town_deco_curtains_name">Занавес</string>
+   <string name="town_deco_curtains_desc">Не пропускает лишний свет и выглядит красиво.</string>
+   <string name="town_deco_rug_name">Ковер</string>
+   <string name="town_deco_rug_desc">Выткан со вкусом.</string>
+   <string name="town_deco_trapdoor_name">Люк</string>
+   <string name="town_deco_trapdoor_desc">Куда же он ведет?</string>
+   <string name="town_deco_glass_stained_name">Витраж</string>
+   <string name="town_deco_glass_stained_desc">Похож автор этого витража не плохо постарался.</string>
+   <string name="town_deco_glass_name">Широкое окно</string>
+   <string name="town_deco_glass_desc">Это окно гире остальных и уж точно пропускает внутрь больше света.</string>
+   <string name="town_deco_counter_name">Стойка</string>
+   <string name="town_deco_counter_desc">Позволяет сохранить приличную дистанцию между тобой и тем кто стоит за ней.</string>
+   <string name="town_deco_library_books_name">Периодика.</string>
+   <string name="town_deco_library_books_desc">Даже это лучше книг из подземелья.</string>
+   <string name="town_deco_wallpaper_name">Обои</string>
+   <string name="town_deco_wallpaper_desc">Отличный дизайнерский ход для такого места.</string>
 
 
     <string name="Welcome_Text_28_6">
@@ -3603,6 +3678,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Badges_MonsterSlain5">1000 врагов побеждено</string>
     <string name="Spells_NotInOwnBody">Ты не можешь использовать %s пока душа твоя вне тела.</string>
     <string name="WndHero_Satiety">Сытость</string>
+
+    <string name="Welcome_Text_29">
+    remix.29\n
+    - Обновление города!\n
+    </string>
 
 
 </resources>
