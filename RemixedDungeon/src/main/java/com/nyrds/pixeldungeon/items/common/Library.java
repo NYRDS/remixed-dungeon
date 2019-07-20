@@ -8,7 +8,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -111,8 +110,7 @@ public class Library {
 		if(category.equals(MOB)) {
 			Mob mob = MobFactory.mobByName(clazz);
 			ret.header = Utils.capitalize(mob.getName());
-			ret.icon = new CompositeTextureImage();
-			ret.icon.copy(mob.sprite().avatar());
+			ret.icon = mob.sprite().avatar();
 			return ret;
 		}
 

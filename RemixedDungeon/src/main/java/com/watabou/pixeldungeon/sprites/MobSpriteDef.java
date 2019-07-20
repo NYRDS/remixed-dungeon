@@ -28,7 +28,6 @@ public class MobSpriteDef extends MobSprite {
 	private static final String LAYERS = "layers";
 	private int      bloodColor;
 
-	private boolean  levitating;
 	private int      framesInRow;
 	private int      kind;
 	private String   zapEffect;

@@ -47,12 +47,14 @@ public class CompositeMovieClip extends MovieClip {
 
 	public Image snapshot(RectF frame) {
 		CompositeTextureImage img = new CompositeTextureImage(texture);
+		img.copy(this);
 		img.clearLayers();
 
-		for (LayerDesc layer : mLayers) {
-			img.addLayer(layer.texture);
+		if(mLayers!=null) {
+			for (LayerDesc layer : mLayers) {
+				img.addLayer(layer.texture);
+			}
 		}
-
 		img.frame(frame);
 
 		return img;

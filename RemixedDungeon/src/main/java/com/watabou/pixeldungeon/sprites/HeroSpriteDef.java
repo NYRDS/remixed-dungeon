@@ -5,7 +5,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.JumpTweener;
 import com.watabou.noosa.tweeners.Tweener;
@@ -85,16 +84,6 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         run.delay = on ? 0.625f / RUN_FRAMERATE : 1f / RUN_FRAMERATE;
         return on;
     }
-
-	@Override
-	public Image avatar() {
-
-		if(avatar==null) {
-			avatar = snapshot(idle.frames[0]);
-		}
-
-		return avatar;
-	}
 
 	@Override
 	public void idle() {

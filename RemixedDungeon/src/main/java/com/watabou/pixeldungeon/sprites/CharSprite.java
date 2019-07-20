@@ -21,7 +21,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
-import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
@@ -516,12 +515,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public Image avatar() {
-        if(avatar == null) {
-            CompositeTextureImage newAvatar = new CompositeTextureImage(texture);
-            newAvatar.frame(idle.frames[0]);
-            newAvatar.addLayer(texture);
-            avatar = newAvatar;
+
+        if(avatar==null) {
+            avatar = snapshot(idle.frames[0]);
         }
+
         return avatar;
     }
 
