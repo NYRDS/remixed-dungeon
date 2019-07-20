@@ -385,16 +385,6 @@
     <string name="Welcome_Ok">알겠습니다!</string>
     <string name="Welcome_Title">환영합니다!</string>
 
-    <string name="Welcome_Text_28_2">
- remix.28.2\n
- GUI 리팩토링\n
- -- 퀵슬롯의 양이 스크린의 너비에 따라 늘어남 \n
- -- 마법과 능력들이 퀵슬롯에 장착될 수 있음 \n
- --손잡이 옵션\n
- - 행동 시간 제한이 게임 상태에 유지됨 \n
- - 실시간!(여전히 매우 실험적임)모드가 가능하고 게임 세션당 영구적으로 사용이 가능함 \n
- </string>
-
     <string name="Welcome_Text_28_3">
  remix.28.3\n
  - 새로운 강령술사 능력:\n

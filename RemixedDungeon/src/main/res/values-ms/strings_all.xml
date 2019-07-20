@@ -411,16 +411,6 @@
     <string name="Welcome_Ok">Baiklah!</string>
     <string name="Welcome_Title">Selamat Datang!</string>
 
-    <string name="Welcome_Text_28_2">
-    remix.28.2\n
-    - Pemfaktoran semula Gui:\n
-    -- Kuantiti slot pantas dihadkan mengikut lebar skrin\n
-    -- Mantera dan keupayaan boleh diletak ke dalam slot pantas\n
-    -- Pilihan cangkat tangan\n
-    - Had masa gerakan kini ditetapkan dalam keadaan permainan\n
-    - Mod masa nyata!(masih dalam eksperimental) kini tersedia dan ditetapkan per sesi permainan\n
-    </string>
-
     <string name="Welcome_Text_28_3">
     remix.28.3\n
     - Keupayaan Necromancer baharu:\n
@@ -3534,16 +3524,27 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
 
     <string name="BodyArmorSpell_Name">Perisai Badan</string>
     <string name="BodyArmorBuff_Name">Perisai Badan</string>
+    <string name="BodyArmorBuff_Info">Perisai meningkat tetapi menjejaskan kelajuan pergerakan.</string>
+
     <string name="DieHardSpell_Name">Sukar Mati</string>
+    <string name="DieHardSpell_Info">Akan meningkatkan kadar penjanaan semula buat sementara yang menyebabkan anda Sukar Mati.</string>
+
     <string name="DieHardBuff_Name">Sukar Mati</string>
     <string name="DieHardBuff_Info">Kadar penjanaan semula meningkat</string>
 
     <string name="SmashSpell_Name">Hentaman</string>
+    <string name="SmashSpell_Info">Lompat ke atas dan hentam dengan kuat ketika menjejak tanah, menyebabkan pihak musuh di sekitar menjadi pengsan, pada masa yang sama menghasilkan kecederaan fizikal.</string>
     <string name="SmashSpell_NeedWeapon">Saya perlukan satu senjata untuk gerakan ini.</string>
 
     <string name="DashSpell_Name">Pecut</string>
+    <string name="DashSpell_Info">Pecut pada arah dikehendaki ketika merempuh pihak musuh, menyebabkan kecederaan dan kecacatan.</string>
     <string name="DashSpell_OnSelf">Saya tidak boleh memecut serta-merta.</string>
+    <string name="DashSpell_TooFar">Saya tidak boleh memecut sejauh ini.</string>
+
     <string name="CloakSpell_Name">Selubung</string>
+    <string name="CloakSpell_Info">Gerak langkah dibalik bayang menjadikan anda halimunan. Dapat mengurangkan secara mendadak peluang anda dikesan oleh pihak musuh. Tidak boleh digunakan ketika pihak musuh berhampiran anda.</string>
+    <string name="CloakSpell_EnemiesNearby">Anda tidak boleh melangkah dalam bayang ketika pihak musuh berhampiran anda.</string>
+
     <string name="CloakBuff_Name">Berselubung</string>
     <string name="CloakBuff_Info">Diselubungi bayang.</string>
 
@@ -3553,10 +3554,20 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndHero_AttackSkill">Kemahiran Menyerang</string>
     <string name="WndHero_DefenceSkill">Kemahiran Pertahanan</string>
 	
+   <string name="town_deco_grave_name">Kubur</string>
    <string name="town_deco_pillar_name">Tiang</string>
+   <string name="town_deco_wood_wall_name">Dinding balak</string>
    <string name="town_deco_entrance_name">Jalan Masuk</string>
+   <string name="town_deco_broken_roof_name">Bumbung bocor</string>
+   <string name="town_deco_barrel_name">Tong</string>
+   <string name="town_deco_firewood_name">Kayu api</string>
+   <string name="town_deco_fence_name">Pagar</string>
    <string name="town_deco_chest_name">Peti</string>   
+   <string name="town_deco_emptyboard_name">Rak</string>
    <string name="town_deco_scrolls_name">Skrol</string>   
+   <string name="town_deco_curtains_name">Langsir</string>
+   <string name="town_deco_glass_name">Tingkap Lebar</string>
+   <string name="town_deco_wallpaper_name">Kertas dinding</string>
    <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mekanisma Permainan:\n
@@ -3570,6 +3581,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     -- gfx suai\n
     </string>
     <string name="Badges_GamesPlayed5">5000 permainan telah dimainkan</string>
+    <string name="Badges_PotionsCooked5">25 potion dibru</string>
     <string name="Badges_ItemLvl5">Item aras 15 diperoleh</string>
     <string name="Badges_FoodEaten5">60 unit makanan dimakan</string>
     <string name="Badges_StrengthAttained5">21 mata Kekuatan dicapai</string>

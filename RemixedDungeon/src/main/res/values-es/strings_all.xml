@@ -177,7 +177,17 @@
     <string name="RatKingCrown_Name">Corona del rey rata</string>
     <string name="RatKingCrown_Info">Corona de oro de su Ratalteza, simbolo de su Raterno poder.</string>
 
+    <string name="BishopNPC_Name">obispo</string>
+    <string name="BishopNPC_Desc">Obispo de la Santa Iglesia de Santa el Profundo Señor</string>
     <string name="BishopNPC_Gender">masculino</string>
+    <string name="BishopNPC_Name_Objective">obispo</string>
+
+    <string name="Bishop_title">obispo</string>
+    <string name="Bishop_text">Días y noches rezo por ti mi hijo.</string>
+    <string name="Bishop_remove_curse">Eliminar la maldición -%d g</string>
+
+    <string name="Bishop_not_interested">Salir</string>
+    <string name="Bishop_no_money">No puedes pagarlo.</string>
     <string name="town_deco_potions_name">Pociones</string>
     <string name="town_deco_covered_table_name">Mesa</string>
     <string name="town_deco_pedestal_name">Pedestal</string>
@@ -334,16 +344,6 @@
     <string name="StoneBlood_Buff">Piedra Sangrienta</string>
     <string name="Welcome_Ok">¡Muy bien!</string>
     <string name="Welcome_Title">¡Bienvenido!</string>
-
-    <string name="Welcome_Text_28_2">
-    remix.28.2\n
-    - Cambios en el Gui:\n
-    -- Cantidad de ranuras rápidas limitadas solo por el ancho de la pantalla\n
-    -- Hechizos y habilidades pueden ser colocados en las ranuras rápidas\n
-    -- Opción para lado preferido (diestro o zurdo)\n
-    - El tiempo para movimiento ahora persiste en los estados del juego\n
-    - ¡Modo de tiempo real! (aún muy experimental) disponible y persiste en los estados del juego\n
-    </string>
 
     <string name="Welcome_Text_28_3">
     remix.28.3\n

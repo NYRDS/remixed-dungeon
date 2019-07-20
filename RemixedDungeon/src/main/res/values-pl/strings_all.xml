@@ -411,16 +411,6 @@
     <string name="Welcome_Ok">Dobra!</string>
     <string name="Welcome_Title">Witaj!</string>
 
-    <string name="Welcome_Text_28_2">
-    remix.28.2\n
-    - Zmiany w interfejsie graficznym:\n
-    --Liczba slotów szybkiego użycia ograniczana tylko przez szerokość ekranu\n
-    -- Zaklęcia i umiejętności mogą być umiejscowione w slocie szybkiego użycia\n
-    -- Opcje dotyczące używanej ręki \n
-    - Limit czasu ruchu będzie nadal trwał podczas trybu gry\n
-    - Czas rzeczywisty!(wciąż bardzo eksperymentalny) tryb ten jest dostępny i będzie trwać przez cały okres rozgrywki\n
-    </string>
-
     <string name="Welcome_Text_28_3">
     remix.28.3\n
     - Nowe umiejętności Nekromanty:\n
@@ -3694,5 +3684,4 @@ remix.28.6
     <string name="Spells_NotInOwnBody">Nie możesz wykonywać! %s, gdy twoja dusza oddzieliła się od ciała.</string>
     <string name="WndHero_Satiety">Sytość</string>
 
-
-</resources>
+    </resources>

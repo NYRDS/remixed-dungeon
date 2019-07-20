@@ -335,16 +335,6 @@
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Title">Herzlich willkommen!</string>
 
-    <string name="Welcome_Text_28_2">
-remix.28.2\n
-- Gui verbesserungen:\n
--- Schnellzugriffe werden nur durch die Bildschirmbreite begrenzt\n
--- Zaubersprüche und Fähigkeiten können in der Schnellzugriffsleiste platziert werden\n
--- Händigkeitsoptionen\n
-- Bewegungszeitbegrenzung steht nun auch in den Spielstatistiken\n
-- Echtzeit!(immer noch experimentell) -modus ist nun verfügbar und besteht pro Spiel Sitzung\n
-</string>
-
     <string name="Welcome_Text_28_3">
 remix.28.3\n
 - Neue Nekromanten-Fähigkeiten:\n

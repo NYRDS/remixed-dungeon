@@ -411,16 +411,6 @@
     <string name="Welcome_Ok">Ok!</string>
     <string name="Welcome_Title">Bem vindo!</string>
 
-    <string name="Welcome_Text_28_2">
-    remix.28.2\n
-    - Reformulação da Interface:\n
-    -- Quantidade de Atalhos rápidos está limitada pela largura da tela\n
-    -- Feitiços e habilidades podem ser colocadas nos atalhos rápidos\n
-    -- Opção de escolha do lado dos botões\n
-    - Limite de tempo de ação agora ficará nas estatísticas\n
-    - Modo Realtime!(Ainda muito experimental) agora disponível e segue pela sessão de jogo\n
-    </string>
-
     <string name="Welcome_Text_28_3">
     remix.28.3\n
     - Novas habilidades do Necromante:\n
@@ -3675,5 +3665,4 @@ Parede
     <string name="Spells_NotInOwnBody">Você não pode %s enquanto sua alma se separa do corpo.</string>
     <string name="WndHero_Satiety">Saciedade</string>
 
-
-</resources>
+    </resources>

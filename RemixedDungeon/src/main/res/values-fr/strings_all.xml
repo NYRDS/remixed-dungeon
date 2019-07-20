@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
 
 
-    <string name="ChaosHelmet_Name">Casque du Choas</string>
+    <string name="ChaosHelmet_Name">Casque du Chaos</string>
     <string name="ChaosHelmet_Info">Casque couleur rouge sang. Le symbole incontestable d\'un guerrier du Chaos.</string>
 
     <string name="Spells_SummonLimitReached">%1$s : limite d\'invocation atteinte (Max actuel: %2$d) ! </string>
@@ -120,7 +120,7 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="RingOfHaste_Info">Cet anneau accélère le cours du temps pour son porteur, lui permettant de tout faire un peu plus vite.</string>
 
 
-    <string name="RingOfHerbalism_Name">Anneau de l\'herbier</string>
+    <string name="RingOfHerbalism_Name">Anneau de d\'herboriste</string>
     <string name="RingOfHerbalism_Info">Cet anneau augmente vos chances de collecter la rosée et les graines des hautes herbes.</string>
 
 
@@ -179,10 +179,86 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="RatKingCrown_Name">Couronne du Roi des rats</string>
     <string name="RatKingCrown_Info">Couronne d\'or de sa Ratitude, symbole de Puissance infinirate</string>
 
-    <string name="BishopNPC_Gender">féminin</string>
+    <string name="BishopNPC_Name">Évêque</string>
+    <string name="BishopNPC_Desc">Evêque de la Sainte Eglise du Saint Seigneur des Profondeurs</string>
+    <string name="BishopNPC_Gender">masculine</string>
+    <string name="BishopNPC_Name_Objective">Évêque</string>
+
+    <string name="Bishop_title">Évêque</string>
+    <string name="Bishop_text">Jour et nuit, je prie pour vous, mon enfant.</string>
+    <string name="Bishop_lesser_bless">Petite bénédiction - %d g</string>
+    <string name="Bishop_great_bless">Grande bénédiction - %d g</string>
+
+    <string name="Bishop_remove_curse">Désensorcellement - %d g</string>
+
+    <string name="Bishop_not_interested">Partez</string>
+    <string name="Bishop_no_money">Vous n\'avez pas assez d\'argent pour cela.</string>
+    <string name="Bishop_bye">Je prierai pour vous, mon enfant.</string>
+
+    <string name="Blessed_Info">Béni par le vénérable prêtre</string>
+
+    <string name="deco_candle_name">Bougie</string>
+    <string name="deco_candle_desc">Grand cierge</string>
+
+    <string name="Possess_Name">Possession</string>
+    <string name="Possess_Info">L\'art sombre du contrôle de l\'esprit permet au sorcier de plier la volonté de la plupart des créatures</string>
+    <string name="Possess_PossessionFailed">La volonté du %s est trop forte</string>
+    <string name="Possess_Possessed">%s attends vos ordres</string>
+    <string name="Possess_MustTargetChar">Seules les créatures peuvent devenir possédées.</string>
+    <string name="Possess_CantPossessSelf">Vous ne pouvez vous posséder vous-même</string>
+
+    <string name="Mob_StaControlledStatus">Ce %s est sous votre possession sacrilège</string>
+
+    <string name="BlackCat_AiStatus">Ce chat noir domestique ne fait rien de plus qu\'un chat ordinaire</string>
+    <string name="Shopkeeper_Buy">Choisissez quelque chose à acheter</string>
+    <string name="Shopkeeper_title">Magasin</string>
+    <string name="Shopkeeper_text">Bienvenue dans votre succursale Pixel-Market.\nQue puis-je faire pour vous ?</string>
+    <string name="Shopkeeper_SellPrompt">J\'ai beaucoup de matérielles à vendre</string>
+    <string name="Shopkeeper_BuyPrompt">Laissez-moi voir votre inventaire</string>
+
+    <string name="WndTradeItem_BuyN">Acheter %1$d pour %2$dg</string>
+    <string name="WndTradeItem_BuyAll">Tout acheter pour %dg</string>
+    <string name="WndTradeItem_SellN">Vendre %1$d pour %2$dg</string>
+    <string name="WndBag_BuySubtitle">(Vous avez %dg)</string>
+
+    <string name="town_deco_weaponboard_name">Arme</string>
+    <string name="town_deco_weaponboard_desc">Diverse sorte d\'armes accrochées dans un cadre.</string>
+    <string name="town_deco_shieldboard_name">Boucliers</string>
+    <string name="town_deco_shieldboard_desc">Différents boucliers accrochés dans un cadre. Ils ne sont pas à vendre.</string>
+    <string name="town_deco_armoronhanger_name">Armure</string>
+    <string name="town_deco_armoronhanger_desc">Un modèle d\'armure suspendue à un crochet.</string>
     <string name="town_deco_potions_name">Potions</string>
+    <string name="town_deco_potions_desc">Diverses potions sur l\'étagère.</string>
+    <string name="town_deco_wardrobe_name">Armoire en bois</string>
+    <string name="town_deco_wardrobe_desc">Grande armoire en bois</string>
+
+    <string name="town_deco_porch_name">Porche</string>
+    <string name="town_deco_porch_desc">Porche en bois</string>
+
+    <string name="town_deco_common_bed_name">Lit</string>
+    <string name="town_deco_common_bed_desc">Lit ordinaire.</string>
+
+    <string name="town_deco_wooden_table_name">Table en bois</string>
+    <string name="town_deco_wooden_table_desc">C\'est une belle et solide table de bois.</string>
+
+    <string name="town_deco_wooden_bench_name">Banc en bois</string>
+    <string name="town_deco_wooden_bench_desc">Banc de bois ne paraissant pas très confortable.</string>
+
     <string name="town_deco_covered_table_name">Table</string>
+    <string name="town_deco_covered_table_desc">Table de bois recouverte d\'une nappe toute blanche.</string>
+
     <string name="town_deco_pedestal_name">Piédestal</string>
+    <string name="town_deco_pedestal_desc">Pupitre supportant un saint livre.</string>
+
+    <string name="town_deco_shelf_name">Étagères</string>
+    <string name="town_deco_shelf_desc">Étagères vides.</string>
+
+    <string name="WndPriest_Instruction2_m">Bienvenue, mon fils, bienvenue à la Sainte Église du grand Saint Seigneur des Profondeurs !</string>
+    <string name="WndPriest_Instruction2_f">Bienvenue, ma fille, bienvenue à la Sainte Église du grand Saint Seigneur des Profondeurs !</string>
+    <string name="WndPriest_Instruction2">Si tu as besoin d\'aide, je peux te fournir des soins de guérison pour seulement %d pièces d\'or !\nSi tu as besoin d\'une sainte bénédiction, ou, Dieu m\'en préserve, si tu es ensorcelé, entre dans notre humble église pour rencontrer l\'évêque.</string>
+
+    <string name="WndDontLikeAds_NotThisTime">Pas cette fois</string>
+
     <string name="Item_Info2">quelque chose</string>
 
 
@@ -224,23 +300,23 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
         <item>de saule</item>
         <item>d\'acajou</item>
         <item>de bambou</item>
-        <item>pourpre</item>
+        <item>de pernambouc</item>
         <item>de chêne</item>
         <item>de bouleau</item>
     </string-array>
 
 
-    <string name="WandOfAmok_Name">Sceptre d\'Amok</string>
+    <string name="WandOfAmok_Name">Sceptre d\'amok</string>
     <string name="WandOfAmok_Info">La lumière mauve de ce sceptre va enrager la créature ciblée qui attaquera tout ce qui se trouve à proximité.</string>
     <string name="WandOfAmok_Info1">rien ne se passe</string>
 
 
-    <string name="WandOfAvalanche_Name">Sceptre des avalanches</string>
+    <string name="WandOfAvalanche_Name">Sceptre d\'avalanche</string>
     <string name="WandOfAvalanche_Info">Quand une décharge de ce sceptre atteint un mur ( ou quelconque obstacle solide ) il déclenche un éboulement, blessant et sonnant toutes les créatures dans la zone d\'effet.</string>
     <string name="WandOfAvalanche_Info1">Vous vous êtes tué sous les gravats de votre propre sceptre d\'avalanche...</string>
 
 
-    <string name="WandOfBlink_Name">Sceptre de scintillement</string>
+    <string name="WandOfBlink_Name">Sceptre d\'auto-téléportation</string>
     <string name="WandOfBlink_Info">Ce sceptre vous téléportera dans la direction choisie. Les obstacles bloqueront la téléportation.</string>
 
 
@@ -248,7 +324,7 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="WandOfDisintegration_Info">Ce sceptre émet un rayon d\'énergie destructrice, qui traverse toutes les créatures qui lui font obstacle. Plus il touche de cibles, plus il leur inflige de dommages.</string>
 
 
-    <string name="WandOfFirebolt_Name">Sceptre de tirs enflammés</string>
+    <string name="WandOfFirebolt_Name">Sceptre de feu</string>
     <string name="WandOfFirebolt_Info">Ce sceptre relâche des explosions de feu magiques. Elles brûleront  toutes les zones inflammables, et blesseront et brûleront les créatures qu\'elles touchent.</string>
     <string name="WandOfFirebolt_Info1">Vous vous êtes tué avec votre propre sceptre de tirs enflammés...</string>
 
@@ -275,7 +351,7 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="WandOfLightning_Info1">Vous vous êtes tués avec votre propre sceptre de foudre...</string>
 
 
-    <string name="WandOfMagicMissile_Name">sceptre de projectiles magiques</string>
+    <string name="WandOfMagicMissile_Name">Sceptre de projectiles magiques</string>
     <string name="WandOfMagicMissile_Info">Ce sceptre lance des projectiles d\'énergie magique pure, infligeant des dommages moyens à une créature ciblée</string>
     <string name="WandOfMagicMissile_ACDisenchant">DESENCHANTER</string>
     <string name="WandOfMagicMissile_Info1">Vous vous êtes tué avec votre propre sceptre de projectiles magiques</string>
@@ -336,15 +412,6 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="StoneBlood_Buff">Pierre de sang</string>
     <string name="Welcome_Ok">Okey!</string>
     <string name="Welcome_Title">Bienvenue!</string>
-
-    <string name="Welcome_Text_28_2">
- remix.28.2\n
-- Interface repensée :\n
--- Nombre de raccourcis limité seulement par la largeur de l\'écran n
--- Les sorts et les capacités peuvent être placés dans les raccourcis.\n
--- Option d\'orientation de l\'affichage\n
-- Limite du temps de mouvement persiste maintenant dans l\'état du jeu\n
-- Mode temps réel ! (encore très expérimentale) à présent disponible et persistant durant une partie\n</string>
 
     <string name="Welcome_Text_28_3">
 remix.28.3\n
@@ -444,20 +511,20 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
 
     <string name="GameScene_Welcome">Bienvenue à l\'étage %d de Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Vous êtes de retour à l\'étage %d de Remixed Dungeon!</string>
-    <string name="GameScene_NightMode">Soyez prudent, le donjon est encore plus dangereux pendant la nuit !</string>
-    <string name="GameScene_Chasm">Vos pas résonnent à travers le donjon.</string>
-    <string name="GameScene_Water">Vous entendez de l\'eau éclabousser autour de vous.</string>
-    <string name="GameScene_Grass">Vous sentez un épais relent de végétation.</string>
-    <string name="GameScene_Secrets">L\'atmosphère de cet endroit vous indique que cet étage vous cache beaucoup de secrets</string>
+    <string name="GameScene_NightMode">Soyez prudent, le donjon est encore plus dangereux la nuit !</string>
+    <string name="GameScene_Chasm">L\'échos de vos pas résonnent à travers le donjon.</string>
+    <string name="GameScene_Water">Vous entendez de l\'eau ruisseler autour de vous.</string>
+    <string name="GameScene_Grass">Les effluves végétales appesantissent l\'atmosphère de ce niveau.</string>
+    <string name="GameScene_Secrets">L\'atmosphère de cet endroit vous indique que cet étage regorge de secrets</string>
 
 
     <string name="Char_Name">ennemi</string>
     <string name="Char_Name_Objective">ennemi</string>
 
     <string-array name="Char_Hit">
-        <item>%1$s%2$s frappe</item>
-        <item>%1$s%2$s frappe</item>
-        <item>%1$s%2$s frappe </item>
+        <item>%1$s %2$s frappe</item>
+        <item>%1$s %2$s frappe</item>
+        <item>%1$s %2$s frappe </item>
     </string-array>
     <string-array name="Char_Kill">
         <item>%s vous a tué...</item>
@@ -481,10 +548,10 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     </string-array>
 
     <string name="Char_StaPoisoned">empoisonné</string>
-    <string name="Char_StaAmok">Folie</string>
+    <string name="Char_StaAmok">pris de folie meurtrière</string>
     <string name="Char_StaSlowed">ralenti</string>
-    <string name="Char_StaMind">vision</string>
-    <string name="Char_StaVision">esprit</string>
+    <string name="Char_StaMind">esprit</string>
+    <string name="Char_StaVision">vision</string>
     <string name="Char_StaParalysed">paralysé</string>
     <string name="Char_StaFrightened">effrayé</string>
     <string name="Char_StaRooted">enraciné</string>
@@ -496,6 +563,34 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
 
     <string name="Dungeon_NoTips">Le texte est indéchiffrable...</string>
     <string name="Dungeon_DeadEnd">Que faites vous ici ?!</string>
+
+    <string-array name="Dungeon_Tips">
+        <item>Ne surestimez pas votre force. N\'utilisez que des armes et une armure que vous pouvez manipuler.</item>
+        <item>Toutes les portes du donjon ne sont pas visibles au premier coup d\'œil. Si vous êtes coincé, cherchez les portes cachées.</item>
+        <item>N\'oubliez pas qu\'augmenter votre force n\'est pas le seul moyen d\'utiliser du meilleur équipement. Vous pouvez au contraire abaisser la force nécessaire à l\'emploi d\'un objet en utilisant sur lui des Parchemins d\'Amélioration.</item>
+        <item>Vous pouvez dépenser vos pièces d\'or dans les magasins et les services en ville ou dans les profondeurs du donjon.</item>
+        <item>Prenez garde à Goo !</item>
+        <item>Aventurier ! Trouve tout pour ta quête chez Pixel-Market !</item>
+        <item>Identifiez les potions et les parchemins aussitôt que possible. Ne remettez pas cela au moment où vous en avez réellement besoin.</item>
+        <item>Avoir un petit creux n\'est pas mortel, la famine n\'achève que les mal-portants.</item>
+        <item>Les attaques-surprises ont plus de chance de succès. Par exemple, vous pouvez tendre une embuscade à votre ennemi derrière une porte fermée lorsque vous savez que celui-ci approche.</item>
+        <item>Ne laissez pas le Tengu s\'échapper !</item>
+        <item>Pour vivre longtemps, c\'est chez Pixel-Market qu\'il vous faut dépenser votre argent.</item>
+        <item>Lorsque vous êtes attaqué par beaucoup de monstres en même temps, essayez de vous replier derrière une porte.</item>
+        <item>Si vous prenez feu en volant, vous ne pourrez pas éteindre les flammes en passant au-dessus de l\'eau.</item>
+        <item>Il n\'y a aucun intérêt d\'avoir plus d’une Ankh à la fois, car vous perdrez les autres lorsque vous ressusciterez.</item>
+        <item>ATTENTION DANGER ! Une énorme machine peut causer des blessures, des amputations ou la mort !</item>
+        <item>Pixel-Market - De tout pour la vie.</item>
+        <item>Lorsque vous améliorez une arme enchantée, il est possible que cet enchantement disparaisse.</item>
+        <item>Un Puits de Transmutation peut vous donner un objet qui ne peut pas être obtenu autrement.</item>
+        <item>La seule façon de fabriquer une arme enchantée, c\'est d\'améliorer une arme existante en utilisant un Parchemin d\'Amélioration d\'Arme.</item>
+        <item>Aucune arme autorisée en la présence de Sa Majesté !</item>
+        <item>En ce moment chez Pixel-Market, des promotions réservées aux chasseurs de démons.</item>
+        <item>Cette pancarte est écrite en langue démoniaque.</item>
+        <item>Cette pancarte est écrite en langue démoniaque.</item>
+        <item>Cette pancarte est écrite en langue démoniaque.</item>
+    </string-array>
+
 
     <string-array name="Challenges_Names">
         <item>Au régime</item>
@@ -634,7 +729,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndTradeItem_Bought">Vous avez acheté %1$s pour %2$dor</string>
 
 
-    <string name="WndWandmaker_Message">Oh, je vois que vous avez réussi ! J\'espère ne pas vous avoir trop dérangé. Comme promis, vous pouvez prendre l\'un de mes sceptres de haute qualité.</string>
+    <string name="WndWandmaker_Message">Oh, je vois que vous avez réussi ! J\'espère ne pas vous avoir trop dérangé. Comme promis, vous pouvez prendre l\'un de mes meilleurs sceptres.</string>
     <string name="WndWandmaker_Battle">Sceptre pour le combat</string>
     <string name="WndWandmaker_NonBattle">Autres sceptres</string>
     <string name="WndWandmaker_Farawell">Bonne chance dans votre quête, %s !</string>
@@ -765,7 +860,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="SkeletonKey_Name">Clé squelette</string>
-    <string name="SkeletonKey_Info">Cette clé doit être du sérieur : sa tête est taillée en forme de crâne. Elle ouvrira sûrement une porte importante.</string>
+    <string name="SkeletonKey_Info">Cette clé doit être importante : son anneau est taillé en forme de crâne. Elle ouvrira sûrement une porte crucial.</string>
 
 
 
@@ -780,7 +875,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="DriedRose_Name">rose séchée</string>
     <string name="DriedRose_Info">La rose est fanée depuis longtemps, mais elle a réussi à garder toutes ses pétales.</string>
-    <string name="DriedRose_Info2">Et il n\'a pas perdu son charme. Il a l\'air si beau, que vous voulez le garder pour toujours</string>
+    <string name="DriedRose_Info2">Et elle n\'a pas perdu son charme. Elle a l\'air si belle, que vous voulez la garder pour toujours</string>
 
 
     <string name="DwarfToken_Name">Jeton de nain</string>
@@ -811,13 +906,13 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="ToxicGas_Info">Un nuage verdâtre de gaz toxique flotte par ici.</string>
     <string name="ToxicGas_Info1">Le gaz toxique vous a asphyxié...</string>
 
-    <string name="WaterOfAwareness_Info">Le pouvoir du savoir rayonne dans l\'eau de ce puits. Prenez en une gorgée pour révéler tous les secrets des objets équipés.</string>
-    <string name="WaterOfAwareness_Procced">En buvant cette eau, vous sentez la connaissance s\'épanouir dans votre esprit. Vous savez tout des objets équipés maintenant. Vous ressentez également tous les objets et tous les secrets de l\'étage.</string>
+    <string name="WaterOfAwareness_Info">Le pouvoir du savoir rayonne de l\'eau de ce puits. Prenez en une gorgée pour révéler tous les secrets des objets équipés.</string>
+    <string name="WaterOfAwareness_Procced">En buvant cette eau, vous sentez la connaissance s\'épanouir dans votre esprit. Vous connaissez tout des objets équipés maintenant. Vous ressentez également tous les objets et tous les secrets de l\'étage.</string>
 
-    <string name="WaterOfHealth_Info">Le pouvoir de la santé rayonne dans l\'eau de ce puits. Prenez en une gorgée pour soigner vos blessures et calmer votre faim.</string>
+    <string name="WaterOfHealth_Info">Le pouvoir de la santé rayonne de l\'eau de ce puits. Prenez en une gorgée pour soigner vos blessures et calmer votre faim.</string>
     <string name="WaterOfHealth_Procced">Alors que vous buvez, toutes vos blessures se referment</string>
 
-    <string name="WaterOfTransmutation_Info">Le pouvoir du changement rayonne dans l\'eau de ce puits. Jetez y un objet pour le transformer en autre chose.</string>
+    <string name="WaterOfTransmutation_Info">Le pouvoir du changement rayonne de l\'eau de ce puits. Jetez y un objet pour le transformer en autre chose.</string>
 
     <string name="Web_Info">Tout est couvert d\'une toile épaisse ici</string>
 
@@ -874,7 +969,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="MindVision_Info">Vision de l\'esprit</string>
 
-    <string name="Ooze_Info">Limon caustique</string>
+    <string name="Ooze_Info">Boue caustique</string>
     <string name="Ooze_Death">%s vous a tué...</string>
 
     <string name="Paralysis_Info">Paralysé</string>
@@ -900,7 +995,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
 
-    <string name="ItemSprite_Info1">posé à côté : %1$.1f%2$.1f</string>
+    <string name="ItemSprite_Info1">posé à côté : %1$.1f %2$.1f</string>
 
 
 
@@ -1010,17 +1105,17 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="SpiritOfPain_Desc">Un éclat de ténèbres vivantes.</string>
 
 
-    <string name="SuspiciousRat_Name">rat suspect</string>
-    <string name="SuspiciousRat_Gender">femelle</string>
-    <string name="SuspiciousRat_Name_Objective">rat suspect</string>
+    <string name="SuspiciousRat_Name">Rat étrange</string>
+    <string name="SuspiciousRat_Gender">masculine</string>
+    <string name="SuspiciousRat_Name_Objective">Rat suspect</string>
     <string name="SuspiciousRat_Desc">Les rats ne sont pas rares dans les donjons, mais à demeurer aussi profondément... Vous pouvez voir que le corps du rat est rempli de spasmes quand il bouge.</string>
     <string name="SuspiciousRat_Info1">Le rat suspect se contracte violemment.</string>
 
 
     <string name="PseudoRat_Name">Pseudo-rat</string>
-    <string name="PseudoRat_Gender">femelle</string>
+    <string name="PseudoRat_Gender">masculine</string>
     <string name="PseudoRat_Name_Objective">Pseudo-rat</string>
-    <string name="PseudoRat_Desc">Une horrible bête émergeant du corps du rat qui ne ressemble ni à un rongeur ni à aucun autre animal que vous ayez déjà vu. Une énorme bouche, pleine de dents tranchantes, occupe la plus grande partie de son corps.</string>
+    <string name="PseudoRat_Desc">Une horrible bête émerge du corps du rat qui ne ressemble ni à un rongeur ni à aucun autre animal que vous ayez déjà vu. Une énorme bouche, pleine de dents tranchantes, occupe la plus grande partie de son corps.</string>
 
 
     <string name="ZombieGnoll_Info">Le Gnoll-Zombie a ressuscité!</string>
@@ -1029,7 +1124,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="HeartOfDarkness_Name">Coeur des ténébres</string>
     <string name="HeartOfDarkness_Info">Le coeur noir et palpitant de l\'Esprit perfide.</string>
-    <string name="HeartOfDarkness_Gender">neutre</string>
+    <string name="HeartOfDarkness_Gender">masuculin</string>
 
 
 
@@ -1043,14 +1138,14 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Vous ne pouvez pas changer votre destin !</string>
 
 
-    <string name="BlackSkullOfMastery_Name">Le porteur d\'âme</string>
-    <string name="BlackSkullOfMastery_Info">C\'est un artefact ancien, conçu par les premiers nécromanciens pour collecter les âmes des morts. En détectant vos capacités nécromanciennes, il se présente avec un puissant sortilège. Mais puisque le sort est celui d\'autrefois, sa structure primitive est assez facile à casser.</string>
-    <string name="BlackSkullOfMastery_Title">Vous pouvez casser le sort. Ou vous pouvez manipuler la formule magique d\'une manière qui vous permettra de consommer des pouvoirs à la fois du sort et de l\'artefact lui-même, en vous transformant en Lich.</string>
+    <string name="BlackSkullOfMastery_Name">Le Porteur d\'Âme</string>
+    <string name="BlackSkullOfMastery_Info">C\'est un artefact ancien, conçu par les premiers nécromanciens pour collecter les âmes des trépassés. En détectant vos capacités nécromanciennes, le Crâne Noir vous attire avec un très puissant sortilège. Mais le sort étant très ancien, vous pouvez facilement le détruire pour y échapper.</string>
+    <string name="BlackSkullOfMastery_Title">Si vous ne brisez pas le sortilège, le Porteur d\'Âme se consumera et vous serez transformé en une puissante Liche.</string>
 
-    <string name="BlackSkullOfMastery_Lich">Devenir la Lich</string>
+    <string name="BlackSkullOfMastery_Lich">Devenir une Liche</string>
     <string name="BlackSkullOfMastery_Necromancer">Briser le sortilège</string>
-    <string name="BlackSkullOfMastery_BecomeLichDesc">Le _Lich_ est un nécromancien qui a atteint l\'apogée de ses capacités. Existant entre la vie et la mort le _Lich_ excelle dans la nécromancie, mais ses compétences de combat sont considérablement réduites.</string>
-    <string name="BlackSkullOfMastery_RemainHumanDesc">Si vous _break the spell_ vous pourrez utiliser cet artefact normalement.</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">Une _Liche_ est un nécromancien qui a atteint l\'apogée de ses capacités. Existant entre la vie et la mort la _Liche_ excelle dans la nécromancie, mais ses compétences de combat sont considérablement réduites.</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Si vous _brisez le sortilège_ vous pourrez utiliser cet artefact normalement.</string>
 
 
     <string name="BlackSkull_Activated">Le Crâne Noir est éveillé !</string>
@@ -1059,12 +1154,12 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="NecromancerArmor_Name">Armure d\'os</string>
-    <string name="NecromancerArmor_Info">Cette armure permettra au Nécromancien de convoquer jusqu\'à 2 Deathlings au coût de 5 âmes chacune. Ces serviteurs morts-vivants suivront leur maître et attaqueront leurs ennemis. Les Deathlings deviennent plus forts à chaque niveau de héros.</string>
+    <string name="NecromancerArmor_Info">Cette armure permettra au Nécromancien d\'invoquer jusqu\'à 2 Serviteurs des Morts au prix de 5 âmes chacun. Ces serviteurs morts-vivants suivront leur maître et attaqueront ses ennemis. Les Serviteurs des Morts deviennent plus forts à chaque niveau du héros.</string>
     <string name="NecromancerArmor_NotNecromancer">Seuls les Nécromanciens peuvent utiliser cette armure !</string>
 
 
     <string name="NecromancerRobe_Name">Robe du Nécromancien</string>
-    <string name="NecromancerRobe_Info">Cette Robe permet au Nécromancien d\'invoquer un Serviteur des Morts au prix de 5 âmes. Les Serviteurs des morts sont des esclaves morts-vivants dont les pouvoirs grandissent avec leur maître,</string>
+    <string name="NecromancerRobe_Info">Cette robe permet au Nécromancien d\'invoquer un Serviteur des Morts au prix de 5 âmes. Les Serviteurs des Morts sont des esclaves morts-vivants dont la force grandis avec le niveau de leur maître.</string>
 
 
 
@@ -1098,17 +1193,17 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Necromancy_ReincarnationTriggered">Vos pouvoirs défient la mort ! Mais vous avez perdu toutes les âmes collectées et vos possessions. </string>
     <string name="Necromancy_SummonDeathlingName">Invoquer un Serviteur des Morts </string>
 
-    <string name="Necromancy_BecameALich">You êtes désormais une Liche ! Vos pouvoirs grandissent et vous pouvez récolter deux fois plus d\'âmes ! Mais vous avez perdu %1$dpoints de force.</string>
+    <string name="Necromancy_BecameALich">You êtes désormais une Liche ! Vos pouvoirs grandissent et vous pouvez récolter deux fois plus d\'âmes ! Mais vous avez perdu %1$d points de force.</string>
 
 
 
-    <string name="StartScene_UnlockNecromancer">Pour débloquer cette classe, tuez la Liche avec une autre.</string>
+    <string name="StartScene_UnlockNecromancer">Pour débloquer cette classe, tuez la Liche avec un aventurier d\'une autre classe.</string>
 
 
     <string name="Necromancy_Title">Nécromancie</string>
 
 
-    <string name="WndSadGhostNecro_Text">Cet esprit à l\'air se débattre dans le sort qui le hante. Il semble vouloir quelque de vous. \"Si j\'utilise mes pouvoirs de nécromancier, je pourrai le persuader que j\'ai déjà fait ce qu\'il demande. Comme ça, je ne perdrai pas mon temps ici. Est-ce la chose à faire ?\"</string>
+    <string name="WndSadGhostNecro_Text">Cet esprit à l\'air de se débattre dans le sort qui le hante. Il semble vouloir quelque de vous. \"Si j\'utilise mes pouvoirs de nécromancier, je pourrai le persuader que j\'ai déjà fait ce qu\'il demande. Comme ça, je ne perdrai pas mon temps ici. Est-ce la chose à faire ?\"</string>
     <string name="WndSadGhostNecro_Yes">Oui, soumettez-le à votre volonté.</string>
     <string name="WndSadGhostNecro_No">Non, laissez-le s\'expliquer</string>
     <string name="WndSadGhostNecro_Persuaded">Le fantôme triste a été asservi.</string>
@@ -1124,27 +1219,27 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="DarkSacrifice_Hint">Choisissez le fidèle serviteur à sacrifier !</string>
 
     <string name="Exhumation_Name">Exhumation</string>
-    <string name="Exhumation_Info">Ouvrir des tombes est certes une activité en sinistre en soi, mais envisageable pour quelqu\'un au service de la Faucheuse elle-même. Celui qui exécute ce Rituel Sombre a une change non négligeable (grandissant en même temps que le niveau de maîtrise de l\'officiant) de soumettre la pauvre âme de celui qui repose à ses pieds.</string>
+    <string name="Exhumation_Info">Ouvrir des tombes est certes une activité sinistre en soi, mais envisageable pour quelqu\'un au service de la Faucheuse elle-même. Celui qui exécute ce Rituel Sombre a une chance non négligeable (grandissant en même temps que le niveau de maîtrise de l\'officiant) de soumettre la pauvre âme de celui qui repose à ses pieds.</string>
     <string name="Exhumation_NoGrave">Il n\'y a aucune tombe ici pour mener une exhumation.</string>
     <string name="Exhumation_Ok">Je vous obéirai.</string>
 
     <string name="RaiseDead_Name">Réveil des morts</string>
-    <string name="RaiseDead_Info">Essayez de faire revenir la dernière créature que vous avez massacrée (ce Rituel exige de la chair suffisamment fraîche). Souvenez-vous néanmoins en recourant à cet art macabre que, même si toute presque toute créature peut être rappelée, elle ne se plie pas toujours facilement à votre volonté.</string>
+    <string name="RaiseDead_Info">Essayez de faire revenir la dernière créature que vous avez massacrée (ce rituel exige de la chair suffisamment fraîche). Souvenez-vous néanmoins en recourant à cet art macabre que, même si presque toute créature peut être rappelée, elle ne se plie pas toujours facilement à votre volonté.</string>
     <string name="RaiseDead_NoSpace">Réveil des morts a échoué parce qu\'il n\'y a pas assez d\'espace à proximité.</string>
     <string name="RaiseDead_NoKill">Vous devez tuer quelque chose si vous voulez le réveiller d\'entre les morts.</string>
 
-    <string name="RawFish_Name">sashimi</string>
+    <string name="RawFish_Name">Sashimi</string>
     <string name="RawFish_Info">Sashimi, à consommer en connaissance de cause</string>
     <string name="RawFish_Taste">C\'est bien du poisson !</string>
 
     <string name="FrozenFish_Name">poisson congelé</string>
     <string name="FrozenFish_Info">Poisson congelé, qu\'on croirait être encore vivant.</string>
 
-    <string name="FriedFish_Name">poisson frit</string>
+    <string name="FriedFish_Name">Poisson frit</string>
     <string name="FriedFish_Info">Poisson frit, alléchant !</string>
     <string name="FriedFish_Taste">Délicieux !</string>
 
-    <string name="RottenFish_Name">poisson pourri</string>
+    <string name="RottenFish_Name">Poisson pourri</string>
     <string name="RottenFish_Info">Poisson pourri, puant à la ronde.</string>
     <string name="RottenFish_Taste">Dégoûtant !</string>
 
@@ -1177,6 +1272,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="WndDonate_silverDonateText">Tout don aidera le développement du projet</string>
     <string name="WndDonate_goldDonateText">Merci pour votre aide</string>
+    <string name="WndDonate_rubyDonateText">Votre générosité nous aidera à continuer à améliorer Remixed Dungeon !</string>
+
     <string name="WndDonate_silverDonateText2">Désactive aussi toutes les pubs dans tous les modes de jeu et débloque la Chasseresse dès le départ</string>
     <string name="WndDonate_goldDonateText2">Débloque également l\'Elfe dès le début du jeu</string>
     <string name="WndDonate_rubyDonateText2"/>

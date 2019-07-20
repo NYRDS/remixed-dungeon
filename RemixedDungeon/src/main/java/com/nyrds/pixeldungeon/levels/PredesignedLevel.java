@@ -248,7 +248,7 @@ public class PredesignedLevel extends CustomLevel {
 				return ret;
 			}
 		}
-		return super.tileDescByCell(cell);
+		return super.tileNameByCell(cell);
 	}
 
 	@Override

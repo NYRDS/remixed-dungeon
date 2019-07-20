@@ -413,16 +413,6 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="Welcome_Ok">Tamamdır!</string>
     <string name="Welcome_Title">Hoşgeldiniz!</string>
 
-    <string name="Welcome_Text_28_2">
-    remix.28.2\n
-    - Arayüz yenileştirmesi:\n
-    -- Artık hızlı yuva sayısı ekran genişliğine bağlı\n
-    -- Büyüler ve yetenekler hızlı yuvalara yerleştirilebilir\n
-    -- Kullanılan el seçeneği/\n
-    - Hareket zaman sınırı artık oyun boyunca sürmekte\n
-    - Gerçek zamanlı!(halen deneysel) kip artık kullanılabilir ve oyun oturumu boyunca geçerlidir\n
-    </string>
-
     <string name="Welcome_Text_28_3">
     remix.28.3\n
     - Yeni Ölüçağıran yetenekleri:\n
@@ -3501,6 +3491,13 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
    <string name="town_deco_rope_desc">El ile bükülmüş ip</string>
    <string name="town_deco_slush_name">Eriyik kar</string>
    <string name="town_deco_chest_name">Sandık</string>   
+   <string name="town_deco_emptyboard_name">Raf</string>
+   <string name="town_deco_emptyboard_desc">Üstüne konulan eşyanın sergilenmesi için her yerde bulunabilecek bir raf.</string>
+   <string name="town_deco_grandclock_name">Topuzlu saat (Türkçesini unuttum)</string>
+   <string name="town_deco_grandclock_desc">Oldukça eski birşey ancak hâlâ işlevi olan bir mekanizması var.</string>
+   <string name="town_deco_wall_beam_name">Kiriş</string>
+   <string name="town_deco_wall_beam_desc">Bu bina için güvenilir bir destek sağlıyor.</string>
+   <string name="town_deco_wall_candles_name">Mumlar.</string>
    <string name="town_deco_scrolls_name">Parşömenler</string>   
    <string name="Badges_GoldCollected5">35000 altın toplandı</string>
     <string name="Spells_NotInOwnBody">Ruhun bedeninden ayrıyken %s yapamazsın. </string>
