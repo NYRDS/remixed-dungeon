@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="tiles_town_outside_winter" tilewidth="16" tileheight="16" tilecount="243" columns="16">
+<tileset name="tiles_town_outside_winter" tilewidth="16" tileheight="16" tilecount="256" columns="16">
  <image source="../Png/tiles_town_outside_winter.png" trans="000000" width="256" height="256"/>
  <tile id="0">
   <properties>
@@ -849,8 +849,8 @@
  </tile>
  <tile id="143">
   <properties>
-   <property name="deco_desc" value="town_deco_pillar_desc"/>
-   <property name="deco_name" value="town_deco_pillar_name"/>
+   <property name="deco_desc" value="town_deco_stones_desc"/>
+   <property name="deco_name" value="town_deco_stones_name"/>
   </properties>
  </tile>
  <tile id="144">
@@ -1107,8 +1107,8 @@
  </tile>
  <tile id="188">
   <properties>
-   <property name="deco_desc" value="town_deco_misc_desc"/>
-   <property name="deco_name" value="town_deco_misc_name"/>
+   <property name="deco_desc" value="town_deco_fireplace_desc"/>
+   <property name="deco_name" value="town_deco_fireplace_name"/>
   </properties>
  </tile>
  <tile id="189">
