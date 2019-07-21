@@ -58,6 +58,19 @@ public class Library {
 		}
 	}
 
+
+	private static void loadOldLibrary() {
+		try {
+			mKnowledgeLevel = gson.fromJson(
+					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE)).toString(),
+					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
+			);
+		} catch (Exception e) {
+			mKnowledgeLevel = new HashMap<>();
+			EventCollector.logException(e,"library restore failed");
+		}
+	}
+
 	private static void loadLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
@@ -65,8 +78,7 @@ public class Library {
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
 		} catch (Exception e) {
-			mKnowledgeLevel = new HashMap<>();
-			EventCollector.logException(e,"library restore failed");
+			loadOldLibrary();
 		}
 	}
 
