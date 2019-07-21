@@ -41,7 +41,7 @@
 
 
 
-    <string name="ClassArmor_LowMana">Niewystarczająca ilość many!</string>
+    <string name="ClassArmor_LowMana">Za mało many!</string>
 
 
     <string name="Drink_ACDrink">PIJ</string>
@@ -64,12 +64,12 @@
     <string name="Mushroom_Eat_Message">Ten grzyb smakuje dziwnie!</string>
 
 
-    <string name="Torch_Info2">Jest to nieodzowny przedmiot w Lochacg, które są znane ze swego słabego oświetlenia.</string>
+    <string name="Torch_Info2">Jest to nieodzowny przedmiot w Lochach które są znane ze swego słabego oświetlenia.</string>
 
     <string name="WndSpells_Title">Zaklęcia</string>
     <string name="WndSpells_Level">Poziom Magi:</string>
 
-    <string name="Ring_Name">%s pierscien</string>
+    <string name="Ring_Name">%s pierścień </string>
     <string name="Ring_Info">Na tej metalowej obrączce znajduje się wielki, %s klejnot, który połyskuje w ciemności. Kto wie jakie ma właściwości po założeniu?</string>
     <string name="Ring_Identify">%1$s i jego działanie są teraz dla ciebie zrozumiałe. To %2$s.</string>
 
@@ -128,7 +128,7 @@
     <string name="RingOfMending_Info">Ten pierścień przyspiesza naturalną regenerację ciała, przywracając stracone zdrowie szybciej niż normalnie. Zdegradowane pierścienie zmniejszą, a nawet zatrzymają naturalną regenerację.</string>
 
 
-    <string name="RingOfPower_Name">Piersien Energii Magicznej</string>
+    <string name="RingOfPower_Name">Pierścień Mocy</string>
     <string name="RingOfPower_Info">Pierścień tworzy energetyczną aurę, sprawiając, że twoje kostury są znacznie potężniejsze. Zdegradowane natomiast je osłabią.</string>
 
 
@@ -137,7 +137,7 @@
 
 
     <string name="RingOfShadows_Name">Pierścień Cieni</string>
-    <string name="RingOfShadows_Info">Wrogowie mają mniejszą szansę na wykrycie ciebie jeśli nosisz ten pierścień. Zdegradowane pierścienie wręcz zaalarmują wrogów, którzy nie dostrzegli ciebie wcześniej.</string>
+    <string name="RingOfShadows_Info">Wrogowie mają mniejszą szansę na wykrycie Cię jeśli nosisz ten pierścień. Zdegradowane pierścienie wręcz zaalarmują wrogów, którzy nie dostrzegli ciebie wcześniej.</string>
 
 
     <string name="RingOfThorns_Name">Pierścień Cierni</string>
@@ -185,7 +185,7 @@
     <string name="BishopNPC_Name_Objective">Biskup</string>
 
     <string name="Bishop_title">Biskup</string>
-    <string name="Bishop_text">Dni i noce modlę sie za ciebie synu.</string>
+    <string name="Bishop_text">Dni i noce modlę się za ciebie synu.</string>
     <string name="Bishop_lesser_bless">Zwykłe Błogosławieństwo - %d złota</string>
     <string name="Bishop_great_bless">Wielkie Błogosławieństwo -  %d złota.</string>
 
@@ -214,7 +214,7 @@
     <string name="Shopkeeper_title">Sklep</string>
     <string name="Shopkeeper_text">Witamy w lolalnym Pixel-Mart\'cie \nW czym mogę pomóc ?</string>
     <string name="Shopkeeper_SellPrompt">Chciałbym sprzedać trochę rzeczy.</string>
-    <string name="Shopkeeper_BuyPrompt">Sprawdzmy twój ekwipunek</string>
+    <string name="Shopkeeper_BuyPrompt">Pokaż mi swoje towary.</string>
 
     <string name="WndTradeItem_BuyN">Kup %1$d za %2$dg</string>
     <string name="WndTradeItem_BuyAll">Kup wszystko za %dg</string>
@@ -228,7 +228,7 @@
     <string name="town_deco_armoronhanger_name">Zbroja</string>
     <string name="town_deco_armoronhanger_desc">Jakaś zbroja wisząca na wieszaku.</string>
     <string name="town_deco_potions_name">Mikstury.</string>
-    <string name="town_deco_potions_desc">Jakieś milstury na półce.</string>
+    <string name="town_deco_potions_desc">Jakieś mikstury na półce.</string>
     <string name="town_deco_wardrobe_name">Drewniana szafa</string>
     <string name="town_deco_wardrobe_desc">Duża drewniana szafa.</string>
 
@@ -236,7 +236,7 @@
     <string name="town_deco_porch_desc">Ganek zrobiony z drewna</string>
 
     <string name="town_deco_common_bed_name">Łóżko</string>
-    <string name="town_deco_common_bed_desc">Zwyczajne łożko</string>
+    <string name="town_deco_common_bed_desc">Zwyczajne łóżko</string>
 
     <string name="town_deco_wooden_table_name">Drewniany stół</string>
     <string name="town_deco_wooden_table_desc">To bardzo dobrze zrobiony stół</string>
@@ -254,18 +254,18 @@
     <string name="town_deco_shelf_desc">Puste półki</string>
 
     <string name="WndPriest_Instruction2_m">Witaj synu, Witaj w świętym kościele Świętego Władcy Podziemi!</string>
-    <string name="WndPriest_Instruction2_f">Witaj Córko Witaj w świętym kościele Świętego Władcy podziemi!</string>
-    <string name="WndPriest_Instruction2">Jeśli szukasz pomocy, Ja mogę zapewnić ci leczenie tylko za %dzłotych monet! jeśli szukasz błogosławieństwa albo nie daj boże masz klątwę, proszę spotkaj się z biskupem w naszym pokornym kościele.</string>
+    <string name="WndPriest_Instruction2_f">Witaj Córko, Witaj w świętym kościele Świętego Władcy podziemi!</string>
+    <string name="WndPriest_Instruction2">Jeśli szukasz pomocy, Ja mogę zapewnić ci leczenie tylko za %dzłotych monet! jeśli szukasz błogosławieństwa albo nie daj boże masz klątwę, Proszę spotkaj się z biskupem w naszym pokornym kościele.</string>
 
     <string name="WndDontLikeAds_NotThisTime">Nie tym razem</string>
 
     <string name="Item_Info2">coś</string>
 
 
-    <string name="NecromancerArmor_Info2">Wypozażenie tej zbroji pozwala nekromancie na użycie umiejętności \"Nekrozy\", rozsiewa ona magiczną plagę, która może zarazić każde stworzenie w pobliżu, nieważne czy martwe czy też żywe.</string>
+    <string name="NecromancerArmor_Info2">Wyposażenie tej zbroi pozwala nekromancie na użycie umiejętności \"Nekrozy\", rozsiewa ona magiczną plagę, która może zarazić każde stworzenie w pobliżu, nieważne czy martwe czy też żywe.</string>
 
 
-    <string name="NecromancerRobe_Info2">Szata ta wypelniona jest czarną magią i pozwala Nekromancie na pochłanianie dusz poległych.</string>
+    <string name="NecromancerRobe_Info2">Szata ta wypełniona jest czarną magią i pozwala nekromancie na pochłanianie dusz poległych.</string>
 
 
     <string name="Necrotism_Info">Nekroza</string>
@@ -313,7 +313,7 @@
 
     <string name="WandOfAvalanche_Name">Kostur Lawiny</string>
     <string name="WandOfAvalanche_Info">Kiedy ładunek tego kostura uderzy w ścianę (lub w jakąkolwiek solidną przeszkodę) wywoła lawinę kamieni, zadając obrażenia i ogłuszając wszystkie stworzenia w zasięgu efektu.</string>
-    <string name="WandOfAvalanche_Info1">Zabiłeś siebie Kosturem Lawiny...</string>
+    <string name="WandOfAvalanche_Info1">Zabiłeś się Kosturem Lawiny...</string>
 
 
     <string name="WandOfBlink_Name">Kostur Błysku</string>
@@ -326,7 +326,7 @@
 
     <string name="WandOfFirebolt_Name">Kostur Kuli Ognistej </string>
     <string name="WandOfFirebolt_Info">Ten kostur wyzwala wybuch magicznego ognia, który podpali łatwopalny teren, nakładając ten efekt również na stworzenia, w które uderzy. </string>
-    <string name="WandOfFirebolt_Info1">Zabiłeś siebie Kosturem Kuli Ognistej...</string>
+    <string name="WandOfFirebolt_Info1">Zabiłeś się Kosturem Kuli Ognistej...</string>
 
 
     <string name="WandOfFlock_Name">Kostur Trzody</string>
@@ -348,15 +348,15 @@
 
     <string name="WandOfLightning_Name">Kostur Błyskawicy</string>
     <string name="WandOfLightning_Info">Ten kostur przywołuje śmiertelnie niebezpieczne wiązki błyskawic, które zranią kilka stworzeń stojących blisko siebie.</string>
-    <string name="WandOfLightning_Info1">Zabiłeś siebie Kosturem Błyskawicy...</string>
+    <string name="WandOfLightning_Info1">Zabiłeś się Kosturem Błyskawicy...</string>
 
 
     <string name="WandOfMagicMissile_Name">Kostur Magicznego Pocisku</string>
     <string name="WandOfMagicMissile_Info">Ten kostur wystrzeliwuje pociski czystej energii magicznej, zadając niewielkie obrażenia celowi w który uderzy.</string>
     <string name="WandOfMagicMissile_ACDisenchant">WYŁADUJ</string>
-    <string name="WandOfMagicMissile_Info1">Zabiłeś siebie Kosturem Magicznego Pocisku...</string>
+    <string name="WandOfMagicMissile_Info1">Zabiłeś się Kosturem Magicznego Pocisku...</string>
     <string name="WandOfMagicMissile_SelectWand">Wybierz kostur do ulepszenia </string>
-    <string name="WandOfMagicMissile_Desinchanted">wyładowałeś Kostur Magicznego Pocisku i użyłeś jego esencji by %s stał się znacznie silniejszy.</string>
+    <string name="WandOfMagicMissile_Desinchanted">Wyładowałeś Kostur Magicznego Pocisku i użyłeś jego esencji by %s stał się znacznie silniejszy.</string>
 
 
     <string name="WandOfPoison_Name">Kostur Trucizny</string>
@@ -389,10 +389,10 @@
     <string name="WndPortal_Info_Return">Ten portal zabierze cię spowotem do podziemia.\nChciałbyś go użyć ?</string>
 
     <string name="WndPortal_Warning_Title">Uwaga Portal!</string>
-    <string name="WndPortal_Warning_Info">Nie użyłeś portalu na tym poziomie. Po oouszczeniu niebbędziesz mógł użyć go ponownie!\n Napewno chcesz odejść ?</string>
+    <string name="WndPortal_Warning_Info">Nie użyłeś portalu na tym poziomie. Po opuszczeniu nie będziesz mógł użyć go ponownie!\n Na pewno chcesz odejść ?</string>
 
     <string name="PortalGate_Name">Portal</string>
-    <string name="PortalGate_Desc">Żłobienia na powierzchni portau tworzą dziwaczny wzrór. Wygląda on jak gigantyczny tunel prowadzący w odchłań. Jednak spoglądając na niego z boku widzisz że jego tafla jest niemal idealne płaska.</string>
+    <string name="PortalGate_Desc">Żłobienia na powierzchni portalu tworzą dziwaczny wzór. Wygląda on jak gigantyczny tunel prowadzący w otchłań. Jednak spoglądając na niego z boku widzisz że jego tafla jest niemal idealne płaska.</string>
     <string name="PortalGate_Desc_Activated">Portal ten emanuje jakiegoś rodzaju świecącą materią. Wygląda na to że jest perfekcujnie równy , nielicząc falowania emanującego z jego wnętrza.</string>
 
     <string name="PortalGate_Activated">Aktywowano starożytny portal !</string>
@@ -400,7 +400,7 @@
 
     <string name="PortalExit_Desc">Ten portal zabierze cię na pierwszy poziom %s.</string>
     <string name="PortalExit_Desc_SpiderNest">Leżę Pająków</string>
-    <string name="PortalExit_Desc_Necropolis">Nekropolis</string>
+    <string name="PortalExit_Desc_Necropolis">Nekropolia </string>
     <string name="PortalExit_Desc_IceCaves">Lodowe Jaskinie</string>
 
 
@@ -412,16 +412,6 @@
     <string name="StoneBlood_Buff">Kamienna Krew.</string>
     <string name="Welcome_Ok">Dobra!</string>
     <string name="Welcome_Title">Witaj!</string>
-
-    <string name="Welcome_Text_28_2">
-    remix.28.2\n
-    - Zmiany w interfejsie graficznym:\n
-    --Liczba slotów szybkiego użycia ograniczana tylko przez szerokość ekranu\n
-    -- Zaklęcia i umiejętności mogą być umiejscowione w slocie szybkiego użycia\n
-    -- Opcje dotyczące używanej ręki \n
-    - Limit czasu ruchu będzie nadal trwał podczas trybu gry\n
-    - Czas rzeczywisty!(wciąż bardzo eksperymentalny) tryb ten jest dostępny i będzie trwać przez cały okres rozgrywki\n
-    </string>
 
     <string name="Welcome_Text_28_3">
     remix.28.3\n
@@ -476,7 +466,7 @@ remiks.28.4 \ n
     <string name="SociologistNPC_InternetRequired">Przepraszam, ale bez dostępu do internetu nie możesz wypełnić naszej ankiety</string>
     <string name="SociologistNPC_DownloadError">Przepraszam, coś poszło nie tak może lepiej spróbować później ?</string>
 
-    <string name="town_deco_library_sign_name">Znak Bbiblioteki</string>
+    <string name="town_deco_library_sign_name">Znak Biblioteki</string>
     <string name="town_deco_library_sign_desc">Wygląda na to że w środku tego budynku znajduje się biblioteka </string>
     <string name="town_deco_identifier_sign_name">Znak Magicznej Kuli</string>
     <string name="town_deco_identifier_sign_desc">Wygląda na to, że w tym budynku znajduje się wróżbita </string>
@@ -528,12 +518,12 @@ remiks.28.4 \ n
 
 
     <string name="AmuletScene_Exit">Tyle na dzisiaj</string>
-    <string name="AmuletScene_Stay">Jeszcze nie skończyłem</string>
-    <string name="AmuletScene_Txt">W końcu trzymaj to w swoich rękach, Amulet Yendoru. Wykorzystując jego moc, możesz przejąć świat lub przynieść pokój i dobrobyt ludziom lub czymkolwiek innym. W każdym razie twoje życie zmieni się na zawsze, a ta gra się skończy. Możesz też pozostać zwykłym śmiertelnikiem trochę dłużej.</string>
+    <string name="AmuletScene_Stay">To jeszcze nie koniec</string>
+    <string name="AmuletScene_Txt">W końcu trzymasz to w swoich rękach, Amulet Yendoru. Wykorzystując jego moc, możesz przejąć świat lub przynieść pokój i dobrobyt ludziom lub cokolwiek innego. W każdym razie twoje życie zmieni się na zawsze, a ta gra się skończy. Możesz też pozostać zwykłym śmiertelnikiem trochę dłużej.</string>
 
 
-    <string name="GameScene_Welcome">Witamy na poziomie %d Lochów Remixed Pixel Dungeon!</string>
-    <string name="GameScene_WelcomeBack">Witamy ponownie na poziomie %d Lochów Remixed Pixel Dungeon!</string>
+    <string name="GameScene_Welcome">Witamy na poziomie %d Lochów Remixed  Dungeon!</string>
+    <string name="GameScene_WelcomeBack">Witamy ponownie na poziomie %d Lochów Remixed  Dungeon!</string>
     <string name="GameScene_NightMode">Bądź ostrożny, ponieważ loch jest jeszcze bardziej niebezpieczny w nocy!</string>
     <string name="GameScene_Chasm">Twoje kroki odbijają się echem w lochu.</string>
     <string name="GameScene_Water">Słyszysz plusk wody wokół ciebie.</string>
@@ -550,14 +540,14 @@ remiks.28.4 \ n
         <item> %1$s uderzył %2$s</item>
     </string-array>
     <string-array name="Char_Kill">
-        <item>%s zabił ciebie...</item>
-        <item>%s zabił ciebie...</item>
-        <item>%s zabił ciebie...</item>
+        <item>%s zabił Cię...</item>
+        <item>%s zabił Cię...</item>
+        <item>%s zabił Cię...</item>
     </string-array>
     <string-array name="Char_Defeat">
-        <item>%1$s pokonany %2$s</item>
-        <item>%1$s pokonany %2$s</item>
-        <item>%1$s pokonany %2$s</item>
+        <item>%1$s pokonał %2$s</item>
+        <item>%1$s pokonał %2$s</item>
+        <item>%1$s pokonał %2$s</item>
     </string-array>
 
     <string name="Char_YouMissed">%1$s %2$s twój atak</string>
@@ -591,23 +581,23 @@ remiks.28.4 \ n
         <item>Nie przeceniaj swojej siły, użyj broni i pancerza który zdołasz unieść. </item>
         <item>Nie wszystkie drzwi w lochu są widoczne na pierwszy rzut oka. Jeśli utknąłeś, poszukaj ukrytych drzwi.</item>
         <item>Pamiętaj że zwiększanie siły to nie jedyny sposób by zdobyć lepszy ekwipunek, możesz na przykład  obniżaj wagę przedmiotu zwojem ulepszenia.</item>
-        <item>Możesz wydać swoje złoto w mieście albo u kupca w lochach albo na usługi</item>
+        <item>Możesz wydać swoje złoto w mieście albo u kupca w lochach albo na usługi.</item>
         <item>Strzeż się Szlamu!</item>
         <item>Pixel-Mart - wszystko co potrzebujesz na udaną przygodę!</item>
         <item>Identyfikuj mikstury i zwoje kiedy to możliwe Nie odkładaj tego na ostatni moment kiedy akurat ich potrzebujesz.</item>
         <item>Bycie głodnym nie boli ale głodowanie już tak</item>
-        <item>atak z zaskoczenia ma większą szanse na trafienie. Na przykład możesz zaczaić się na przeciwnika za zamkniętymi drzwiami kiedy wiesz że się zbliża. </item>
+        <item>Atak z zaskoczenia ma większą szanse na trafienie. Na przykład możesz zaczaić się na przeciwnika za zamkniętymi drzwiami kiedy wiesz że się zbliża. </item>
         <item>Nie pozwól wyjść Tengu!</item>
         <item>Pixel-Mart. Wydaj pieniądze. Żyj dłużej</item>
         <item>Kiedy zostaniesz zaatakowany przez kilka istot jednocześnie spróbuj wycofać się za drzwi. </item>
         <item>Jeśli się palisz i lewitujesz, nie możesz ugasić się w wodzie.</item>
-        <item>Nie ma sensu kupować więcej niż jedno Ankh jednocześnie ponieważ i tak to stracisz po wskrzeszeniu. </item>
+        <item>Nie ma sensu kupować więcej niż jedno Ankh jednocześnie ponieważ i je stracisz po wskrzeszeniu. </item>
         <item>Niebezpieczeństwo! Ciężka maszyneria może zranić,pozbawić kończyn albo zabić!</item>
         <item>Pixel-Mart. Bezpieczniejsze życie w lochach.</item>
         <item>Kiedy ulepszasz zaklęty przedmiot, Istnieje szansa ze zaklęcie zniknie.</item>
         <item>Studnia transformacji może dać przedmiot którego nie da się inaczej zdobyć.</item>
         <item>Jedynym sposobem na zaczarowanie broni jest ulepszenie jej za pomocą Zwoju ulepszenia broni.</item>
-        <item>Żadna broni przy jego Królewskości!.</item>
+        <item>Żadnej broni przy jego Królewskości!</item>
         <item>Pixel-Mart. Specjalne oferty dla łowców demonów.</item>
         <item>Treść jest zapisana w języku demonów.</item>
         <item>Treść jest zapisana w w języku demonów.</item>
@@ -743,13 +733,13 @@ remiks.28.4 \ n
 
 
     <string name="WndTradeItem_Sale">WYPRZEDAŻ: %1$s - %2$dg</string>
-    <string name="WndTradeItem_Buy">Kup za %dg</string>
-    <string name="WndTradeItem_Sell">Sprzedaj za %dg</string>
-    <string name="WndTradeItem_Sell1">Sprzedaj 1 za %dg</string>
-    <string name="WndTradeItem_SellAll">Sprzedaj wszystko za %dg</string>
+    <string name="WndTradeItem_Buy">Kup za %dzłota</string>
+    <string name="WndTradeItem_Sell">Sprzedaj za %dzłota</string>
+    <string name="WndTradeItem_Sell1">Sprzedaj 1 za %dzłota</string>
+    <string name="WndTradeItem_SellAll">Sprzedaj wszystko za %dzłota</string>
     <string name="WndTradeItem_Cancel">Nieważne</string>
-    <string name="WndTradeItem_Sold">Sprzedałes %1$s za %2$dg</string>
-    <string name="WndTradeItem_Bought">Kupiłeś %1$s za %2$dg</string>
+    <string name="WndTradeItem_Sold">Sprzedałes %1$s za %2$dzłota</string>
+    <string name="WndTradeItem_Bought">Kupiłeś %1$s za %2$dzłota</string>
 
 
     <string name="WndWandmaker_Message">Och, widzę, że ci się udało! Mam nadzieję, że nie zdobycie tego nie przysporzyło ci wielu kłopotów. Jak obiecałem, możesz wybrać jeden z moich wysokiej jakości kosturów.</string>
@@ -758,7 +748,7 @@ remiks.28.4 \ n
     <string name="WndWandmaker_Farawell">Powodzenia w twej misji, %s!</string>
 
 
-    <string name="QuickSlot_SelectedItem">Wybierz przedmiot, który chcesz przyporządkować do quickslota</string>
+    <string name="QuickSlot_SelectedItem">Wybierz przedmiot, który chcesz przyporządkować do paska wyboru</string>
 
 
     <string name="Item_Name">smth</string>
@@ -891,7 +881,7 @@ remiks.28.4 \ n
 
 
 
-    <string name="CorpseDust_Name">pył trupa</string>
+    <string name="CorpseDust_Name">Trupi pył</string>
     <string name="CorpseDust_Info">Ta kulka trupiego pyłu nie różni się nadzwyczajnie od zwykłej kuli pyłu. W każdym razie, wiesz, że najlepiej pozbyć się tego najszybciej jak to tylko możliwe.</string>
     <string name="CorpseDust_Info2">Prawdopodobnie ponieważ samo trzymanie sprawia, że jesteś trwożny i zezłoszczony.</string>
 
@@ -911,7 +901,7 @@ remiks.28.4 \ n
 
     <string name="Pickaxe_Name">Kilof</string>
     <string name="Pickaxe_Info">Jest to duże i wytrzymałe narzędzie do rozbijania skał. Może można tego używać jako broń.</string>
-    <string name="Pickaxe_ACMine">WYDOBĄDŹ</string>
+    <string name="Pickaxe_ACMine">Wykop</string>
     <string name="Pickaxe_Gender">damski</string>
     <string name="Pickaxe_NoVein">Nie ma w pobliżu żyły mrocznego złota do wydobycia</string>
 
@@ -997,7 +987,7 @@ remiks.28.4 \ n
     <string name="MindVision_Info">Wizja Telepatyczna</string>
 
     <string name="Ooze_Info">Żrący śluz</string>
-    <string name="Ooze_Death">%s zabił ciebie...</string>
+    <string name="Ooze_Death">%s zabił Cię...</string>
 
     <string name="Paralysis_Info">Sparaliżowany</string>
 
@@ -1049,7 +1039,6 @@ remiks.28.4 \ n
     <string name="AboutScene_Translation_Names">Marek Piętka
 Przemo10371
 assassynkk32
-267901
 (oraz inni)
 </string>
 
@@ -1228,7 +1217,7 @@ assassynkk32
     <string name="Necromancy_ReincarnationTriggered">Twoja potęga opiera się śmierci! Ale utraciłeś wszelkie dusze i dobytek...</string>
     <string name="Necromancy_SummonDeathlingName">Przyzwij Trupiarza</string>
 
-    <string name="Necromancy_BecameALich">Stajesz się Liczem! Twoja potęga rośnie, a ilość Dusz możliwych do złapania zostaje podwojona! Jednakże straciłeś 1 %1$d punktów Siły.</string>
+    <string name="Necromancy_BecameALich">Stajesz się Liczem! Twoja potęga rośnie, a ilość Dusz możliwych do złapania zostaje podwojona! Jednakże straciłeś  %1$d punktów Siły.</string>
 
 
 
@@ -1240,7 +1229,7 @@ assassynkk32
 
     <string name="WndSadGhostNecro_Text">\"Ten duch wydaje się wierzgać w jego klątwie. Wygląda na to, że czegoś ode mnie chce. Jeśli użyję mojej nekromanckiej mocy, będę w stanie przekonać go, że wykonałem jego prośbę. Nie będę wtedy musiał marnować tutaj mojego czasu. Czy powinienem to uczynić?\"</string>
     <string name="WndSadGhostNecro_Yes">Tak, podporządkuj sobie jego wolę.</string>
-    <string name="WndSadGhostNecro_No">Nie, pozwól jemu mówić.</string>
+    <string name="WndSadGhostNecro_No">Nie, pozwól mu mówić.</string>
     <string name="WndSadGhostNecro_Persuaded">Smutny Duch został zdominowany!</string>
 
 
@@ -1271,7 +1260,7 @@ assassynkk32
     <string name="FrozenFish_Info">Zamrożona ryba, wygląda jak żywa, tylko zamrożona.</string>
 
     <string name="FriedFish_Name">pieczona ryba</string>
-    <string name="FriedFish_Info">pieczona ryba, wygląda smacznie</string>
+    <string name="FriedFish_Info">Pieczona ryba, wygląda smacznie</string>
     <string name="FriedFish_Taste">Pychota !</string>
 
     <string name="RottenFish_Name">zgniła ryba</string>
@@ -1324,7 +1313,7 @@ assassynkk32
     <string name="WndPremiumSettings_chrome">Wybierz materiał GUI</string>
     <string name="WndPremiumSettings_status">Wybierz materiał paska statusu</string>
     <string name="WndPremiumSettings_toolbar">Wybierz materiał paska narzędzi</string>
-    <string name="WndPremiumSettings_banners">Wybierz materiał bannera</string>
+    <string name="WndPremiumSettings_banners">Wybierz materiał sztandaru</string>
 
     <string name="WndPremiumSettings_notAvailbale">Ta opcja jeszcze nie jest dostępna</string>
 
@@ -1621,7 +1610,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="HeroSubClass_DescShaman">Elf _Szaman_ może używać różdżki jako broń do walki wręcz ! Ma duże szanse na uderzenie wroga nie ponosząc straty ładunków!</string>
 
     <string name="SantaHat_Name">Czapka Mikołaja</string>
-    <string name="SantaHat_Info">Nic tak nie wyraża nastroju Świąt Zlochowacenia, jak czerwona, jedwabna czapka Mikołaja, Władcy Podziemi!</string>
+    <string name="SantaHat_Info">Nic tak nie wyraża nastroju Świąt Zlodowacenia, jak czerwona, jedwabna czapka Mikołaja, Władcy Podziemi!</string>
 
 
     <string name="Rudolph_Name">Czerwony nos i poroże</string>
@@ -2019,10 +2008,10 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="DM300_Info2">Misja nie powiodła się. Wyłączanie systemu.</string>
     <string name="DM300_Info3">Nieautoryzowany personel wykryty. Rozpocząć eksterminację.</string>
 
-    <string name="Elemental_Name">Żywiołak ognia</string>
-    <string name="Elemental_Gender">meski</string>
-    <string name="Elemental_Name_Objective">Żywiołak ognia</string>
-    <string name="Elemental_Desc">Podróżujące tam i z powrotem żywiołaki ognia są skutkiem ubocznym przyzywania większych istnień. Są zbyt chaotyczne z natury by być kontrolowanymi nawet przez najpotężniejszego demonologa.</string>
+    <string name="FireElemental_Name">Żywiołak ognia</string>
+    <string name="FireElemental_Gender">meski</string>
+    <string name="FireElemental_Name_Objective">Żywiołak ognia</string>
+    <string name="FireElemental_Desc">Podróżujące tam i z powrotem żywiołaki ognia są skutkiem ubocznym przyzywania większych istnień. Są zbyt chaotyczne z natury by być kontrolowanymi nawet przez najpotężniejszego demonologa.</string>
 
     <string name="Eye_Name">Złe oko</string>
     <string name="Eye_Gender">kastrat</string>
@@ -2300,7 +2289,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="JarOfSouls_Name">Słój Dusz</string>
     <string name="JarOfSouls_Gender">męski</string>
     <string name="JarOfSouls_Name_Objective">Słój Dusz</string>
-    <string name="JarOfSouls_Desc">Świecące oczy czaszki w tym starym słoju, tak samo jak dziwna energia którą emituja, sprawiają że czujesz się nieswojo.</string>
+    <string name="JarOfSouls_Desc">Świecące oczy czaszki w tym starym słoju, tak samo jak dziwna energia którą emanują, sprawiają że czujesz się nieswojo.</string>
 
 
     <string name="Lich_Name">Licz</string>
@@ -2337,7 +2326,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
 
 
 
-    <string name="IceGuardianCoreModule_Name">Rdzeń Lodowwgo Strażnika</string>
+    <string name="IceGuardianCoreModule_Name">Rdzeń Lodowego Strażnika</string>
     <string name="IceGuardianCoreModule_Info">To skomplikowana struktura utworzona z magicznego lodu. Świecący kryształ umiejscowiony jest w samym środku tego dziwnego urządzenia.</string>
 
 
@@ -2382,7 +2371,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Badges_LevelReached1">Osiągnięty poziom 6</string>
     <string name="Badges_LevelReached2">Poziom 12 osiągnięty</string>
     <string name="Badges_LevelReached3">Osiągnął 18 poziom</string>
-    <string name="Badges_LevelReached4">Pziom 24 osiągnięty</string>
+    <string name="Badges_LevelReached4">Poziom 24 osiągnięty</string>
     <string name="Badges_AllPotions">Wszystkie mikstury zidentyfikowane</string>
     <string name="Badges_AllScrolls">Wszystkie zwoje zidentyfikowane</string>
     <string name="Badges_AllRings">Wszystkie pierścienie zidentyfikowane</string>
@@ -2732,7 +2721,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="town_deco_snow_desc">Pomimo plotek o rzekomej popularności tego miejsca dla poszukiwaczy przygód, jest tutaj całkiem dużo śniegu, jak gdyby nikt nie postawił tutaj stopy.</string>
 
     <string name="town_deco_cross_name">Krzyż</string>
-    <string name="town_deco_cross_desc">Solidny, srebrny krzyż, symbol miejscowego wyznania - \"Świadków Mikołaja, Władcy Podziemi\"</string>
+    <string name="town_deco_cross_desc">Solidny, srebrny krzyż, symbol miejscowego wyznania - \"Świadków Świętego Władcy Podziemi\"</string>
 
     <string name="town_deco_bell_name">Dzwon</string>
     <string name="town_deco_bell_desc">Typowy dzwon kościelny. Wygląda na to, że nikt od dawna w niego nie bił i nigdzie nie widać jego liny.</string>
@@ -2938,7 +2927,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
 
     <string name="Blacksmith_Name">Kowal Trolli </string>
     <string name="Blacksmith_Desc">Ten kowal Trolli wygląda jak każdy Troll: jest wysoki i chudy, jego skóra przypomina kamień z koloru jak i wyglądu. Kowal Trolli pracuje z nieproporcjonalnie małymi narzędziami.</string>
-    <string name="Blacksmith_Gold1">Hej, człowieku! Chcesz się na coś przydać, hę? Weź ten kilof i wydobądź mi trochę _Rudy Mrocznego Złota_. Myślę, że _15 kawalkow_ powinno wystarczyć. Jak ci mam zapłacić? Jesteś chciwy... \nDobrze, dobrze, nie mam złota by ci zapłacić, ale mogę odwalić dla ciebie trochę kowalskiej roboty! Uznaj siebie za szczęściarza, bo jestem jedynym kowalem w okolicy.</string>
+    <string name="Blacksmith_Gold1">Hej, człowieku! Chcesz się na coś przydać, hę? Weź ten kilof i wydobądź mi trochę _Rudy Mrocznego Złota_. Myślę, że _15 kawałków_ powinno wystarczyć. Jak ci mam zapłacić? Jesteś chciwy... \nDobrze, dobrze, nie mam złota by ci zapłacić, ale mogę odwalić dla ciebie trochę kowalskiej roboty! Uznaj siebie za szczęściarza, bo jestem jedynym kowalem w okolicy.</string>
     <string name="Blacksmith_Blood1">Hej człowieku! Chcesz się na coś przydać, hę? Weź ten kilof i  _zabij nim nietoperza_ . Potrzebuję jego krwi do ukończenia mojego projektu. Jak mam ci zapłacić? Jesteś chciwy... \nDobrze, dobrze, nie mam złota by ci zapłacić, ale mogę odwalić dla ciebie trochę kowalskiej roboty! Uznaj siebie za szczęściarza, bo jestem jedynym kowalem w okolicy.</string>
     <string name="Blacksmith_Txt2">Żarty sobie ze mnie robisz? Gdzie jest mój kilof?!</string>
     <string name="Blacksmith_Txt3">Ruda Mrocznego Złota. 15 kawałków. Naprawdę? To aż takie trudne?</string>
@@ -3000,7 +2989,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="RatKing_Info1">Ja wcale nie śpię!</string>
     <string name="RatKing_Info2">Co jest?! Nie mam czasu na takie dyrdymały. Moje królestwo nie będzie się rządzić samemu!</string>
     <string name="RatKing_Info3">Jak śmiesz, żałosna kreaturo, niepokoić Naszą Szczurowatość?!</string>
-    <string name="RatKing_Died">Król umarł. Niech żyje król!</string>
+    <string name="RatKing_Died">Umarł król, Niech żyje król!</string>
 
 
     <string name="Shopkeeper_Name">kupiec</string>
@@ -3125,7 +3114,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="RottenRation_Info">dawno temu to można było zjeść</string>
 
 
-    <string name="OverpricedRation_Name">przeceniona racja żywieniowa</string>
+    <string name="OverpricedRation_Name">Przeceniona racja żywieniowa</string>
     <string name="OverpricedRation_Info">Wygląda dokładnie jak zwykła racja żywieniowa, ale jest mniejsza.</string>
     <string name="OverpricedRation_Message">To jedzenie smakowało dobrze.</string>
 
@@ -3509,7 +3498,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
 
 
     <string name="PotionOfParalyticGas_Name">Mikstura Gazu Paraliżującego</string>
-    <string name="PotionOfParalyticGas_Info">Po kontakcie z powietrzem, płyn w tej flaszce wyparuje tworząc żółty obłok. Każdy kto weźmie wdech tej chmury zostanie natychmiast sparaliżowany. Nie będzie mógł się poruszać dopóki chmura nie zniknie. Ten przedmiot może zostać rzucony w odległych wrogów, by złapać ich w pułapkę gazu.</string>
+    <string name="PotionOfParalyticGas_Info">Po kontakcie z powietrzem, płyn w tej butelce wyparuje tworząc żółty obłok. Każdy kto weźmie wdech tej chmury zostanie natychmiast sparaliżowany. Nie będzie mógł się poruszać dopóki chmura nie zniknie. Ten przedmiot może zostać rzucony w odległych wrogów, by złapać ich w pułapkę gazu.</string>
 
 
     <string name="PotionOfPurity_Name">Mikstura Czystości</string>
@@ -3525,7 +3514,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
 
 
     <string name="PotionOfToxicGas_Name">Mikstura Toksycznego Gazu</string>
-    <string name="PotionOfToxicGas_Info">Odkorkowanie lub zbicie flaszki zawierającej tę ciecz sprawi, że wybuchnie ona, tworząc śmiercionośną chmurę toksycznego, zielonego gazu. Możesz wybrać czy rzucić tą miksturą we wrogów zamiast odkorkowywać ją własnoręcznie</string>
+    <string name="PotionOfToxicGas_Info">Odkorkowanie lub zbicie butelki zawierającej tę ciecz sprawi, że wybuchnie ona, tworząc śmiercionośną chmurę toksycznego, zielonego gazu. Możesz wybrać czy rzucić tą miksturą we wrogów zamiast odkorkowywać ją własnoręcznie</string>
 
     <string name="WndSettings_Quickslots">Sloty szybkiego wyboru</string>
 
@@ -3696,6 +3685,10 @@ remix.28.6
     <string name="Badges_MonsterSlain5">Pokonano 1000 wrogów</string>
     <string name="Spells_NotInOwnBody">Nie możesz wykonywać! %s, gdy twoja dusza oddzieliła się od ciała.</string>
     <string name="WndHero_Satiety">Sytość</string>
+
+    <string name="Welcome_Text_29">remix.29/m
+-Remont miasta!/n
+</string>
 
 
 </resources>
