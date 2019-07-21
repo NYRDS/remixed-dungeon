@@ -49,12 +49,14 @@ public class WndLibraryCatalogue extends Window {
 			//Button
 			Library.EntryHeader entryHeader = Library.infoHeader(category, entry);
 
-			LibraryListItem rb = new LibraryListItem(category, entry, entryHeader);
+			if(entryHeader!=null) {
+				LibraryListItem rb = new LibraryListItem(category, entry, entryHeader);
 
-			rb.setRect(0, yPos, WIDTH, BTN_HEIGHT);
-			content.add(rb);
+				rb.setRect(0, yPos, WIDTH, BTN_HEIGHT);
+				content.add(rb);
 
-			yPos = (int) rb.bottom() + 1;
+				yPos = (int) rb.bottom() + 1;
+			}
 		}
 
 		int HEIGHT = WndHelper.getFullscreenHeight() - BTN_HEIGHT * 2;

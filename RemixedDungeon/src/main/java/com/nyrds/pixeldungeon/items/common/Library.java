@@ -50,7 +50,7 @@ public class Library {
 		saveNeeded = false;
 		gson.toJson(mKnowledgeLevel);
 		try {
-			OutputStream output = FileSystem.getOutputStream(LIBRARY_FILE);
+			OutputStream output = FileSystem.getOutputStream(getLibraryFile());
 			output.write(gson.toJson(mKnowledgeLevel).getBytes());
 			output.close();
 		} catch (IOException e) {
@@ -61,7 +61,7 @@ public class Library {
 	private static void loadLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE)).toString(),
+					JsonHelper.readJsonFromStream(FileSystem.getInputStream(getLibraryFile())).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
 		} catch (Exception e) {
@@ -100,14 +100,14 @@ public class Library {
 
 	public static EntryHeader infoHeader(String category, String clazz) {
 		EntryHeader ret = new EntryHeader();
-		if(category.equals(ITEM)) {
+		if(category.equals(ITEM) && ItemFactory.isValidItemClass(clazz)) {
 			Item item = ItemFactory.itemByName(clazz);
 			ret.header = Utils.capitalize(item.name());
 			ret.icon = new ItemSprite(item);
 			return ret;
 		}
 
-		if(category.equals(MOB)) {
+		if(category.equals(MOB) && MobFactory.hasMob(clazz)) {
 			Mob mob = MobFactory.mobByName(clazz);
 			ret.header = Utils.capitalize(mob.getName());
 			ret.icon = mob.sprite().avatar();
@@ -129,11 +129,7 @@ public class Library {
 	}
 
 	public static String getLibraryFile() {
-		if(!ModdingMode.inMod()) {
-			return LIBRARY_FILE;
-		} else {
-			return ModdingMode.activeMod() + "_" + LIBRARY_FILE;
-		}
+		return ModdingMode.activeMod() + "_" + LIBRARY_FILE;
 	}
 
 	public static class EntryHeader {
