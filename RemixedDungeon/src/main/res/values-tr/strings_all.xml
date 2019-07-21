@@ -3477,7 +3477,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
    <string name="town_deco_stock_name">Stock (Mevcut, Hammadde, Standart)</string>
    <string name="town_deco_stock_desc">Yiyecekler burada depolanmış, birçok türden atık ve renklerle birlikte.</string>
    <string name="town_deco_barrel_name">Fıçı</string>
-   <string name="town_deco_barrel_desc">Herzamanki fıçı, ne yazıkki açılamıyor.</string>
    <string name="town_deco_hay_name">Saman</string>
    <string name="town_deco_hay_desc">Hoş kokan küçük bi\' yığın saman.</string>
    <string name="town_deco_firewood_name">Çıra</string>

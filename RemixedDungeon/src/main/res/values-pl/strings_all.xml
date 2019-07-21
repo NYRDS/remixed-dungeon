@@ -3600,7 +3600,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
    <string name="town_deco_stock_name">Zbiory</string>
    <string name="town_deco_stock_desc">Zapasy żywności są tu przechowywane, a także trochę złomu o różnym  kolorach.</string>
    <string name="town_deco_barrel_name">Beczka</string>
-   <string name="town_deco_barrel_desc">Zwykła beczka ,której niestety nie da się otworzyć</string>
    <string name="town_deco_hay_name">Siano</string>
    <string name="town_deco_hay_desc">Mały stos przyjemnie pachnącego siana.</string>
    <string name="town_deco_firewood_name">drewno opałowe</string>
@@ -3657,9 +3656,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
    <string name="town_deco_library_books_desc">Wciąż lepsze niż książki z lochów.</string>
    <string name="town_deco_wallpaper_name">Tapeta</string>
    <string name="town_deco_wallpaper_desc">Świetne dekoracyjne rozwiązanie dla  takiego miejsca.</string>
-
-
-    <string name="Welcome_Text_28_6">
+   <string name="Welcome_Text_28_6">
 remix.28.6
 -Mechaniki gry
 --Specjalne zdolności wojownika!
@@ -3684,4 +3681,10 @@ remix.28.6
     <string name="Spells_NotInOwnBody">Nie możesz wykonywać! %s, gdy twoja dusza oddzieliła się od ciała.</string>
     <string name="WndHero_Satiety">Sytość</string>
 
-    </resources>
+    <string name="Welcome_Text_29">
+    remix.29/n
+    -Remont miasta!/n
+         </string>
+
+
+</resources>

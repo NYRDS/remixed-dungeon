@@ -3583,7 +3583,6 @@ Parede
    <string name="town_deco_stock_name">Estoque</string>
    <string name="town_deco_stock_desc">Suprimentos de comida são mantidos aqui, assim como um monte de lixo de todos os tipos e cores.</string>
    <string name="town_deco_barrel_name">Barril</string>
-   <string name="town_deco_barrel_desc">Um barril normal, que infelizmente não pode ser aberto.</string>
    <string name="town_deco_hay_name">Feno</string>
    <string name="town_deco_hay_desc">Uma pequena pilha de feno agradavelmente cheiroso.</string>
    <string name="town_deco_firewood_name">Lenha</string>
@@ -3640,9 +3639,7 @@ Parede
    <string name="town_deco_library_books_desc">Ainda melhor que os livros do calabouço.</string>
    <string name="town_deco_wallpaper_name">Papel de parede</string>
    <string name="town_deco_wallpaper_desc">Uma ótima opção de decoração para este lugar.</string>
-
-
-    <string name="Welcome_Text_28_6">
+   <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mecânicas do Jogo:\n
     -- Habilidades especiais do Guerreiro!\n

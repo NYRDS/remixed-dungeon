@@ -88,11 +88,9 @@
 
     <string name="Ring_Info1">Vous ne pouvez porter que 2 anneaux à la fois</string>
     <string name="Ring_Info2">Votre %s se resserre douloureusement autour de votre doigt</string>
-    <string name="Ring_Info3a">%1$s
-L\'%2$s est sur votre doigt%3$s</string>
+    <string name="Ring_Info3a">%1$s\n\nL\'%2$s est sur votre doigt%3$s</string>
     <string name="Ring_Info3b">, et parce qu\'il est maudit, vous n\'arrivez pas à l\'enlever.</string>
-    <string name="Ring_Info4">%1$s
-Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
+    <string name="Ring_Info4">%1$s\n\nVous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="Ring_BuffKnown">C\'est un %s</string>
 
 
@@ -120,7 +118,7 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="RingOfHaste_Info">Cet anneau accélère le cours du temps pour son porteur, lui permettant de tout faire un peu plus vite.</string>
 
 
-    <string name="RingOfHerbalism_Name">Anneau de d\'herboriste</string>
+    <string name="RingOfHerbalism_Name">Anneau d\'herboriste</string>
     <string name="RingOfHerbalism_Info">Cet anneau augmente vos chances de collecter la rosée et les graines des hautes herbes.</string>
 
 
@@ -165,9 +163,9 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="ChaosCrystal_Prompt">Choisissez un endroit pour la Cible du Chaos</string>
     <string name="ChaosCrystal_SelectForFuse">Choisissez un objet à fusionner avec le Crystal chaotique</string>
     <string name="ChaosCrystal_ScrollFused">Le crystal a été absorbé par les runes inscrites sur le parchemin. C\'est maintenant un %s</string>
-    <string name="ChaosCrystal_SwordFused">Le cristal à absorbé votre arme, et à pris la forme d\'une épée.</string>
-    <string name="ChaosCrystal_BowFused">Le cristal à absorbé votre arme, et à pris la forme d\'un arc.</string>
-    <string name="ChaosCrystal_StaffFused">Le cristal à absorbé votre arme, et à pris la forme d\'un bâton.</string>
+    <string name="ChaosCrystal_SwordFused">Le cristal a absorbé votre arme, et a pris la forme d\'une épée.</string>
+    <string name="ChaosCrystal_BowFused">Le cristal a absorbé votre arme, et a pris la forme d\'un arc.</string>
+    <string name="ChaosCrystal_StaffFused">Le cristal a absorbé votre arme, et à pris la forme d\'un bâton.</string>
 
     <string name="CorpseDust_Buff">Bloodlust</string>
     <string name="DriedRose_Buff">Charmant</string>
@@ -209,7 +207,7 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
 
     <string name="Mob_StaControlledStatus">Ce %s est sous votre possession sacrilège</string>
 
-    <string name="BlackCat_AiStatus">Ce chat noir domestique ne fait rien de plus qu\'un chat ordinaire</string>
+    <string name="BlackCat_AiStatus">Ce chat noir domestique ne fait rien de plus qu'un chat ordinaire</string>
     <string name="Shopkeeper_Buy">Choisissez quelque chose à acheter</string>
     <string name="Shopkeeper_title">Magasin</string>
     <string name="Shopkeeper_text">Bienvenue dans votre succursale Pixel-Market.\nQue puis-je faire pour vous ?</string>
@@ -333,7 +331,7 @@ Vous ressentez une magie maléfique cachée dans l\'%2$s.</string>
     <string name="WandOfFlock_Info">Un petit coup de ce sceptre invoque un troupeau de moutons magiques, créant ainsi un obstacle temporaire impénétrable.</string>
     <string name="Sheep_Name">mouton</string>
     <string name="Sheep_Name_Objective">mouton</string>
-    <string name="Sheep_Gender">femelle</string>
+    <string name="Sheep_Gender">masculin</string>
     <string name="Sheep_Desc">C\'est un mouton magique. Qu\'y a-t-il de si magique chez lui ? On ne peut pas le tuer. Il restera là, en mâchant du foin, le regard vide, jusqu\'à ce qu\'il disparaisse par magie.</string>
 
     <string-array name="WandOfFlock_SheepBaa">
@@ -430,14 +428,14 @@ remix.28.4\n
 -- Armes de Héros maintenant visibles en jeu\n</string>
 
     <string name="BlackCat_Name">Chat noir</string>
-    <string name="BlackCat_Gender">féminin</string>
+    <string name="BlackCat_Gender">masculin</string>
     <string name="BlackCat_Name_Objective">Chat</string>
     <string name="BlackCat_Desc">C\'est un chat noir</string>
 
     <string-array name="BlackCat_Phrases">
         <item>Ron-ron</item>
         <item>Miaou ...</item>
-        <item>Miaou!</item>
+        <item>Miaou !</item>
     </string-array>
 
     <string name="Str_lose">-1 str</string>
@@ -448,7 +446,7 @@ remix.28.4\n
     <string name="SociologistNPC_Desc">Ce sociologue est en mission sacrée pour récolter l\'opinion publique</string>
 
     <string name="SociologistNPC_AlreadyTaken">Vous avez déjà répondu à ce questionnaire. Pouvez-vous repasser plus tard ?</string>
-    <string name="SociologistNPC_Hi">Salut!!\n Voulez-vous participer à notre sondage ? (un accès internit est requis)!\n Votre opinion compte !</string>
+    <string name="SociologistNPC_Hi">Salut!!\n Voulez-vous participer à notre sondage ? (un accès internet est nécessaire)!\n Votre opinion compte !</string>
     <string name="SociologistNPC_InternetRequired">Navré, mais vous ne pouvez pas prendre part au sondage sans un accès Internet.</string>
     <string name="SociologistNPC_DownloadError">Désolé, quelque chose cloche... Veuillez réessayer plus tard.</string>
 
@@ -499,7 +497,7 @@ remix.28.4\n
     <string name="town_deco_snowy_plate_desc">La neige recouvre cette plaque ancienne.</string>
 
     <string name="DogeMask_Name">Masque de Doge</string>
-    <string name="DogeMask_Info">Vous avez toujours eu envie de vous déguiser en un Doge célèbre ?C\'est votre chance! \nQuelle classe ce masque ! So kool! Si Wow !</string>
+    <string name="DogeMask_Info">Vous avez toujours eu envie de vous déguiser en un Doge célèbre ? C\'est votre chance ! \nQuelle classe ce masque ! So kool! Si Wow !</string>
     <string name="IntroScene_Txt">Bien des héros de tous les horizons se sont aventurés dans le donjon avant vous. Quelques uns en sont ressortis avec des trésors et des artefacts magiques, la plupart n\'en sont jamais revenus. Mais aucun d\'entre eux n\'a réussi à retrouver l\'amulette de Yendor, qui serait cachée dans les profondeurs du donjon.
 Vous vous considérez prêt à relever le défi, mais plus important encore, vous sentez que la chance vous sourit. Il est temps de commencer votre propre aventure !</string>
 
@@ -566,7 +564,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
 
     <string-array name="Dungeon_Tips">
         <item>Ne surestimez pas votre force. N\'utilisez que des armes et une armure que vous pouvez manipuler.</item>
-        <item>Toutes les portes du donjon ne sont pas visibles au premier coup d\'œil. Si vous êtes coincé, cherchez les portes cachées.</item>
+        <item>Toutes les portes du donjon ne sont pas visibles au premier coup d\'oeil. Si vous êtes coincé, cherchez les portes cachées.</item>
         <item>N\'oubliez pas qu\'augmenter votre force n\'est pas le seul moyen d\'utiliser du meilleur équipement. Vous pouvez au contraire abaisser la force nécessaire à l\'emploi d\'un objet en utilisant sur lui des Parchemins d\'Amélioration.</item>
         <item>Vous pouvez dépenser vos pièces d\'or dans les magasins et les services en ville ou dans les profondeurs du donjon.</item>
         <item>Prenez garde à Goo !</item>
@@ -711,12 +709,12 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
 
 
     <string name="WndStory_Sewers">Le donjon se trouve juste sous la ville, ses niveaux les plus élevés sont en fait le système des égouts de la ville. Etant officiellement une partie de la ville, ces niveaux ne sont pas si dangereux. On ne peut pas dire que c\'est un endroit sûr, mais au moins, vous n\'aurez pas affaire à de la magie noire par ici.</string>
-    <string name="WndStory_Prision">Il y a des années, une prison souterraine fut bâtie ici pour les criminels les plus dangereux. A l\'époque, cela semblait être une bonne idée, car il était très dur de s\'échapper de cet endroit. Mais un miasme de magie noire ne tarda pas à venir des profondeurs, rendant prisonniers et gardes fous à lier. Au final, la prison fut abandonnée, même si certains condamnés sont restés enfermés dans ces murs...</string>
-    <string name="WndStory_Caves">Les grottes, qui s\'étendent sous la prison abandonnée, ne sont que peu peuplées. Elles sont top profondes pour être exploitées par la ville, et sont trop pauvres en minéraux pour susciter l\'intérêt des nains. Il y avait un avant-poste d\'échange quelque part sur le chemin entre les deux nations, mais il a péri depuis le déclin de la métropole naine. Seuls les gnolls et autres créatures souterraines résident ici désormais. </string>
+    <string name="WndStory_Prision">Il y a des années, une prison souterraine fut bâtie ici pour les criminels les plus dangereux. A l\'époque, cela semblait une bonne idée, car il était très difficile de s\'échapper de cet endroit. Mais des vapeurs ténébreuses de magie noire ne tardèrent pas à monter des profondeurs, rendant prisonniers et gardes fous à lier. Au final, la prison fut abandonnée, même si certains condamnés sont restés enfermés dans ces murs...</string>
+    <string name="WndStory_Caves">Les grottes, qui s\'étendent sous la prison abandonnée, ne sont que peu peuplées. Elles sont top profondes pour être exploitées par la ville, et sont trop pauvres en minéraux pour susciter l\'intérêt des nains. Il y avait un avant-poste commercial quelque part sur le chemin entre les deux nations, mais il a disparu depuis le déclin de la métropole naine. Seuls les gnolls et autres créatures souterraines résident ici désormais. </string>
     <string name="WndStory_Metropolis">La métropole naine était la plus grande de toutes les cités-états naines. Lors de son apogée, l\'armée mécanique des nains repoussa avec succès l\'invasion du dieu ancien et son armée de démons. Mais on raconte que les guerriers qui en sont revenus ont apportés les graines de la corruption avec eux, et que la victoire n\'était que le début de la fin de ce royaume souterrain.</string>
     <string name="WndStory_Halls">Ces niveaux sont les vestiges des banlieues de la métropole naine. Après la victoire coûteuse dans la guerre contre l\'ancien dieu, les nains furent trop affaiblis pour se débarrasser des démons restants. Peu à peu les démons se sont attachés à cet endroit qu\'on appelle désormais le Hall des Démons.
 Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
-    <string name="WndStory_Spiders">Il y a des années, il y avait une mine, remplie de pierres magiques. Mais quand les veines de minerais se sont asséchées les mineurs sont partis, laissant derrière eux un grand réseau de tunnels. Éventuellement, cet endroit fut habité par des araignées. Mais même ces créatures tapies dans le noir ne sont pas suffisantes pour effrayer les plus braves et les plus fous qui recherchent les trésors qui peuvent se trouver dans les mines. La taille du danger est toujours proportionnelle à la quantité de rumeurs à propos d’artefacts magiques. Il était une fois, une sorcière maléfique errant dans les tunnels pour échapper à ses persécuteurs. Mais les gens superstitieux n\'osent pas entrer dans les ténèbres. Donc ils ont décidé d\'attendre. Mais elle ne s\'est jamais montrée. Peut-être la sorcière avait trouvé un autre moyen de sortir, peut-être a-t-elle réussi à se glisser parmi les gardes ... ou elle a péri, entourée par les bruissements des créatures de la nuit</string>
+    <string name="WndStory_Spiders">Il y a bien longtemps, il y avait ici une mine de gemmes magiques. Mais quand les filons finirent par s\'épuiser, les mineurs partirent, abandonnant derrière eux un vaste réseau de tunnels. Puis des araignées venimeuses vinrent s\'y installer. Mais ces dangereuses créatures, tapis dans le noir, n\'ont jamais suffi à décourager de pauvres fous de partir à la recherche des trésors peut-être encore présents dans cette mine. Les légendes sur les objets magiques qu\'il pouvait y rester grandissaient en mesure du danger de ce lieu. Un jour, une sorcière maléfique prit la fuite dans ces tunnels pour échapper à ces bourreaux. Mais la superstition populaire les dissuada de la poursuivre dans ces ténèbres. Ils décidèrent tout simplement de l\'attendre à l\'entrée, mais la sorcière ne fut jamais revue. Peut-être avait-elle trouvé une autre sortie, ou réussi à passer à travers les gardiens sans qu'on la voie ? Ou, plus certainement, était-elle morte au coeur de ce nid obscur d\'araignées grouillantes ?</string>
 
 
     <string name="WndTradeItem_Sale">A VENDRE : %1$s - %2$dor</string>
@@ -1084,36 +1082,37 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="ModsButton_SelectMod">Choisissez un mod</string>
 
     <string name="RemixedPixelDungeonApp_sendCrash">Notre jeu s\'est planté... \n Désolé.\nVeuillez-nous envoyer un rapport de plantage pour nous aider à régler le problème.</string>
-    <string name="AzuterronNPC_Name">Etranger</string>
-    <string name="AzuterronNPC_Gender">mâle</string>
-    <string name="AzuterronNPC_Name_Objective">Etranger</string>
+    <string name="AzuterronNPC_Name">Apparition</string>
+    <string name="AzuterronNPC_Gender">Feminin</string>
+    <string name="AzuterronNPC_Name_Objective">Apparition</string>
     <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
+    <string name="AzuterronNPC_Quest_Start">Oh, quoi ... mais tu me vois ! C'est que tu n\'es pas l\'un d\' \"eux\". Je vois que toi non plus tu n\'aimes pas tous ces monstres. J\'ai un petit problème. Si tu m\'aides à le résoudre, je t\'aiderai également. Quelque part dans ce niveau, tu trouveras une créature de l\'ombre, un _Esprit Perfide_. Tue-le,  arrache-lui le coeur et reviens me voir. Encore une chose, si tu es intéressé : j'ai des choses à vendre. N\'hésite pas à demander.</string>
     <string name="AzuterronNPC_Quest_Reminder">Aide-moi et je t\'aiderai.</string>
-    <string name="AzuterronNPC_Quest_End">Excellent. Prends cette potion, tu la trouveras bénéfique</string>
-    <string name="Journal_Azuterron">Etranger</string>
+    <string name="AzuterronNPC_Quest_End">Excellent. Prend cette potion, tu en tireras certainement profit.</string>
+    <string name="Journal_Azuterron">Apparition</string>
 
 
     <string name="TreacherousSpirit_Name">Esprit perfide</string>
-    <string name="TreacherousSpirit_Gender">mâle</string>
+    <string name="TreacherousSpirit_Gender">masculin</string>
     <string name="TreacherousSpirit_Name_Objective">Esprit perfide</string>
     <string name="TreacherousSpirit_Desc">Cette monstrueuse créature ressemble à un nuage de ténèbres vivantes. Son oeil sans paupière vous regarde, palpitant à chacun de vos mouvements.</string>
 
 
     <string name="SpiritOfPain_Name">esprit de la douleur</string>
-    <string name="SpiritOfPain_Gender">mâle</string>
+    <string name="SpiritOfPain_Gender">masculin</string>
     <string name="SpiritOfPain_Name_Objective">esprit de la douleur</string>
     <string name="SpiritOfPain_Desc">Un éclat de ténèbres vivantes.</string>
 
 
     <string name="SuspiciousRat_Name">Rat étrange</string>
-    <string name="SuspiciousRat_Gender">masculine</string>
+    <string name="SuspiciousRat_Gender">masculin</string>
     <string name="SuspiciousRat_Name_Objective">Rat suspect</string>
     <string name="SuspiciousRat_Desc">Les rats ne sont pas rares dans les donjons, mais à demeurer aussi profondément... Vous pouvez voir que le corps du rat est rempli de spasmes quand il bouge.</string>
     <string name="SuspiciousRat_Info1">Le rat suspect se contracte violemment.</string>
 
 
     <string name="PseudoRat_Name">Pseudo-rat</string>
-    <string name="PseudoRat_Gender">masculine</string>
+    <string name="PseudoRat_Gender">masculin</string>
     <string name="PseudoRat_Name_Objective">Pseudo-rat</string>
     <string name="PseudoRat_Desc">Une horrible bête émerge du corps du rat qui ne ressemble ni à un rongeur ni à aucun autre animal que vous ayez déjà vu. Une énorme bouche, pleine de dents tranchantes, occupe la plus grande partie de son corps.</string>
 
@@ -1240,7 +1239,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="FriedFish_Taste">Délicieux !</string>
 
     <string name="RottenFish_Name">Poisson pourri</string>
-    <string name="RottenFish_Info">Poisson pourri, puant à la ronde.</string>
+    <string name="RottenFish_Info">Poisson pourri, puant partout à la ronde.</string>
     <string name="RottenFish_Taste">Dégoûtant !</string>
 
     <string name="gdpr_title">Personnalisez vos publicités</string>
@@ -1266,6 +1265,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="WndDonate_donate">faire un don: </string>
     <string name="WndDonate_notConnected">pas de connexion :(</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon est libre et gratuit pour tout le monde, et le restera toujours.\n\nMais vous pouvez nous aider à rendre le jeu encore meilleur.\n\nEn plus de nos sincères remerciements, vous obtiendrez des améliorations cosmétiques.</string>
+
     <string name="WndDonate_silverDonate">don en argent</string>
     <string name="WndDonate_goldDonate">don en or</string>
     <string name="WndDonate_rubyDonate">don en rubis</string>
@@ -1298,8 +1299,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="WndSaveSlotSelect_dontLike">Vous n\'aimez pas les pubs ? Faites un don, et elles disparaîtront. Pour toujours.</string>
 
-    <string name="Bow_Info1">C\'est une arme à distance. Elle est inutile pour tout le monde sauf les elfes à distance rapprochée. Etre équipé d\'un arc vous permet de tirer des flèches.
-</string>
+    <string name="Bow_Info1">C\'est une arme à distance. À distance rapprochée, elle est inutile pour tout le monde sauf pour les elfes . Etre équipé d\'un arc vous permet de tirer des flèches.\n\n</string>
 
 
     <string name="WoodenBow_Name">arc en bois</string>
@@ -1408,8 +1408,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
 
-    <string name="WndFortuneTeller_Instruction">Je peux révéler les secrets derrière vos possessions.\n Une identification vous coûtera %dpièces.</string>
-    <string name="WndFortuneTeller_No_Item">Faites attention, vous ne voulez quand même pas dépenser votre avoir pour rien ? Il n\'y a rien à identifier dans votre inventaire.</string>
+    <string name="WndFortuneTeller_Instruction">Je peux révéler les secrets que recèlent vos possessions.\n Une identification vous coûtera %dpièces.</string>
+    <string name="WndFortuneTeller_No_Item">Faites attention, vous ne voulez quand même pas dépenser votre argent pour rien ? Il n\'y a rien à identifier dans votre inventaire.</string>
     <string name="WndFortuneTeller_Title">Diseuse de bonne aventure.</string>
 
 
@@ -1428,7 +1428,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndLibrary_Levels_Btn">Donjon</string>
 
 
-    <string name="WndMovieTheatre_Instruction_2">Vous avez regardé %1$d parmi les %2$ddisponibles. Vous pourrez voir un film de plus à chaque nouveau niveau de héros que vous atteindrez. </string>
+    <string name="WndMovieTheatre_Instruction_2">Vous avez regardé %1$d parmi les %2$d disponibles. Vous pourrez voir un film de plus à chaque nouveau niveau de héros que vous atteindrez. </string>
 
 
 
@@ -1451,25 +1451,36 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="AllowStatisticsCollectionScene_Title">Collection des statistiques d\'utilisation</string>
+    <string name="AllowStatisticsCollectionScene_Request">Si vous le permettez, Remixed Dungeon collectera des statistiques d\'utilisation. Ces données seront utilisées pour : \n
+     - repérez et corrigez divers problèmes mineurs (en cas d\'erreur critique, le jeu vous demandera explicitement d\'envoyer un rapport) \n
+     - amélioration de la balance de jeu \n
+     - résoudre les problèmes de performances spécifiques à un périphérique\n
+     - publier des statistiques amusantes de temps en temps \n
+     Vous pouvez modifier votre décision à tout moment (cliquez sur l\'icône des graphiques dans l\'écran de titre)
+</string>
+
     <string name="AllowStatisticsCollectionScene_Allow">Autoriser</string>
     <string name="AllowStatisticsCollectionScene_Deny">Refuser</string>
     <string name="Darkness_Info">Cela ressemble à des parcelles d\'éternelles ténèbres flottant dans l\'air.</string>
+    <string name="WndSelectLanguage_ImproveTranslation">Aidez-nous à améliorer les traductions de Remixed Dungeon</string>
+    <string name="WndSelectLanguage_LinkToTranslationSite">Cliquez ici pour rejoindre l\'équipe de traduction de Remixed Dungeon</string>
+
     <string name="ArmoredStatue_Name">statue animée</string>
-    <string name="ArmoredStatue_Gender">femelle</string>
+    <string name="ArmoredStatue_Gender">feminin</string>
     <string name="ArmoredStatue_Name_Objective">statue animée</string>
-    <string name="ArmoredStatue_Desc">Vous ne pourriez penser, ne serait-ce qu\'une seconde, que ce soit encore une horrible statue. Non seulement à cause de ses yeux rouges lumineux, mais aussi parce que personne ne poserait d\'_%s_ sur une telle chose.</string>
+    <string name="ArmoredStatue_Desc">Personne ne pourrait penser que c'est juste une statue ordinaire. Non seulement à cause de ses yeux rouges lumineux, mais aussi parce que personne ne poserait d\'_%s_ sur une telle chose.</string>
 
 
     <string name="SpiderGuard_Name">araignée garde</string>
-    <string name="SpiderGuard_Gender">mâle</string>
+    <string name="SpiderGuard_Gender">feminin</string>
     <string name="SpiderGuard_Name_Objective">araignée garde</string>
     <string name="SpiderGuard_Desc">Comme les soldats, les araignées gardes ont juré de protéger leur royaume. Le poison des gardes est utilisé pour immobiliser leurs cibles et les paralyser.</string>
 
 
     <string name="SpiderMindAmber_Name">araignée ambre</string>
-    <string name="SpiderMindAmber_Gender">mâle</string>
+    <string name="SpiderMindAmber_Gender">feminin</string>
     <string name="SpiderMindAmber_Name_Objective">araignée ambre</string>
-    <string name="SpiderMindAmber_Desc">Les araignées ambres sont de rares et mystérieuses créatures possédant des pouvoirs psychiques similaires à ceux des psi-araignées, mais sont bien plus fortes que leurs frères. Le mot \"ambre\" fait référence à la couleur de leurs cerveaux géants, qui sont révélés à leurs victimes, car les Araingnées Ambres frappent avec leurs pouvoirs.</string>
+    <string name="SpiderMindAmber_Desc">Les araignées ambres sont de rares et mystérieuses créatures possédant des pouvoirs psychiques similaires à ceux des psi-araignées, mais sont bien plus fortes que leurs soeurs. Le mot \"ambre\" fait référence à la couleur de leurs cerveaux géants, qui est révélés à leurs victimes, au moment où les Araingnées Ambres attaquent avec leurs pouvoirs.</string>
 
 
 
@@ -1483,6 +1494,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndSaveSlotSelect_Delete_Title">Etes vous sur de vouloir supprimer cette sauvegarde ?</string>
     <string name="Hero_Name">vous</string>
     <string name="Hero_Name_Objective">vous</string>
+    <string name="Hero_Leave">On ne quitte pas si simplement Remixde Dungeon.</string>
     <string name="Hero_LevelUp">Niveau supérieur !</string>
     <string name="Hero_NewLevel">Bienvenue au niveau %d ! Vous êtes désormais en meilleure santé et plus concentré. Il vous est plus facile de toucher vos ennemis et d\'esquiver leurs attaques.</string>
     <string name="Hero_YouNowHave">Vous avez %s</string>
@@ -1495,7 +1507,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Hero_StaBurning">Vous prenez feu !</string>
     <string name="Hero_StaParalysis">Vous êtes paralysé !</string>
     <string name="Hero_StaPoison">Vous êtes empoisonné !</string>
-    <string name="Hero_StaOoze">Une substance caustique ronge votre chair. Débarrassez vous en!</string>
+    <string name="Hero_StaOoze">Une substance caustique ronge votre chair. Débarrassez vous en !</string>
     <string name="Hero_StaRoots">Vous ne pouvez pas bouger !</string>
     <string name="Hero_StaWeakness">Vous vous sentez affaibli !</string>
     <string name="Hero_StaBlindness">Vous êtes aveuglé !</string>
@@ -1514,14 +1526,14 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="HeroClass_Elf">elfe</string>
 
     <string-array name="HeroClass_WarPerks">
-        <item>Les guerriers commencent avec 11 points de force.</item>
-        <item>Les guerriers commencent avec une épée courte unique. Celle-ci pourra être \"reforgée\" pour améliorer une autre arme de mélée.</item>
+        <item>Les guerriers commencent avec 11 points de Force.</item>
+        <item>Les guerriers commencent avec une épée courte exclusive. Celle-ci pourra être \"reforgée\" pour améliorer une autre arme de mélée.</item>
         <item>Les guerriers sont moins efficaces avec les armes à distance.</item>
         <item>Chaque ration redonne un peu de santé lors de sa consommation.</item>
         <item>Les potions de force sont identifiées dès le début.</item>
     </string-array>
     <string-array name="HeroClass_MagPerks">
-        <item>Les Mages commencent avec une baguette de projectile magique unique. Cette baguette peut ensuite être \"désenchantée\" pour améliorer une autre baguette.</item>
+        <item>Les Mages commencent avec une baguette de projectile magique exclusive. Cette baguette peut ensuite être \"désenchantée\" pour améliorer une autre baguette.</item>
         <item>Les Mages rechargent leurs baguettes plus vite</item>
         <item>Lorsque consommés, les aliments restaurent 1 charge de chaque baguette dans l\'inventaire.</item>
         <item>Les Mages peuvent utiliser les baguettes comme arme de corps-à-corps.</item>
@@ -1534,22 +1546,22 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
         <item>Les voleurs sont plus à l\'aise avec les armures légères, ils esquivent mieux quand ils en portent une.</item>
         <item>Les voleurs détectent plus facilement les pièges et les portes cachées.</item>
         <item>Les voleurs survivent plus longtemps sans manger.</item>
-        <item>Les parchemins de repérage magique sont identifiés dès le début.</item>
+        <item>Les parchemins de vision magique sont identifiés dès le début.</item>
     </string-array>
     <string-array name="HeroClass_HunPerks">
-        <item>Les chasseresses ne commencent qu\'avec 15 points de vie.</item>
-        <item>Les chasseresses commencent avec un unique boomerang améliorable.</item>
-        <item>Les chasseresses sont douées lors de l\'utilisation des armes à distance et font des dommages supplémentaires en fonction de leur force quand elles les utilisent.</item>
+        <item>Les chasseresses ne commencent qu\'avec 15 points de Vie.</item>
+        <item>Les chasseresses commencent avec un boomerang exclusif améliorable.</item>
+        <item>Les chasseresses sont expertes dans l\'utilisation d\'armes à distance et leur excès de force inflige des dommages supplémentaires lorsqu\’elles y ont recours.</item>
         <item>Les chasseresses gagnent plus de points de vie en buvant la rosée.</item>
         <item>Les chasseresses détectent les monstres à proximité même s\'ils sont cachés par des obstacles.</item>
     </string-array>
     <string-array name="HeroClass_ElfPerks">
-        <item>Les Elfes commencent avec 15 PV et 9 Force</item>
+        <item>Les Elfes commencent avec seulement 15 points de Vie et 9 point de Force</item>
         <item>Les Elfes ne peuvent pas être immobilisés.</item>
-        <item>Les Elfes commencent avec un arc à flèches en bois amélioré et des flèches</item>
+        <item>Les Elfes commencent avec un arc en bois amélioré et des flèches</item>
         <item>Les Elfes sont extrêmement efficaces avec les arcs et sont agiles</item>
         <item>Les Elfes se soignent beaucoup plus avec les gouttes de rosée.</item>
-        <item>Les Elfes sont moins efficaces avec des armes de mêlée.</item>
+        <item>Les Elfes maîtrisent moins bien les armes de mêlée.</item>
     </string-array>
 
 
@@ -1558,7 +1570,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="HeroSubClass_NameBers">berzerker</string>
     <string name="HeroSubClass_DescBers">Quand il est sévèrement blessé, le _Berzerker_ entre dans un état de furie sauvage et augmente significativement les dégâts qu\'il inflige.</string>
     <string name="HeroSubClass_NameWarL">sorcier</string>
-    <string name="HeroSubClass_DescWarL">Après avoir tué un ennemi, le _Sorcier_ consomme son âme. Cela soigne ses blessures et satisfait sa faim.</string>
+    <string name="HeroSubClass_DescWarL">Après avoir tué un ennemi, le _Sorcier_ consomme son âme. Cela soigne ses blessures et apaise sa faim.</string>
     <string name="HeroSubClass_NameBatM">mage de bataille</string>
     <string name="HeroSubClass_DescBatM">Quand il se bat avec un sceptre à la main, le _Mage de bataille_ inflige des dégâts supplémentaires en fonction du nombre de charges du sceptre. Chaque attaque réussie restaure 1 charge à ce sceptre.</string>
     <string name="HeroSubClass_NameAssa">assassin</string>
@@ -1566,11 +1578,11 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="HeroSubClass_NameFreR">coureur</string>
     <string name="HeroSubClass_DescFreR">Le _Coureur_ se déplace presque deux fois plus vite que la plupart des monstres. Quand il court, le coureur est beaucoup plus dur à toucher. Mais pour cela, il ne doit pas être encombré et ne pas être affamé.</string>
     <string name="HeroSubClass_NameSnip">sniper</string>
-    <string name="HeroSubClass_DescSnip">Les _Snipers_ sont capables de détecter les points faibles dans l\'armure d\'un ennemi, ignorant cette protection lors de l\'utilisation d\'armes à distance. </string>
+    <string name="HeroSubClass_DescSnip">Les _Snipers_ sont capables de détecter les points faibles dans l\'armure d\'un ennemi, infligeant des dégats ignorant cette protection lors de l\'utilisation d\'armes à distance. </string>
     <string name="HeroSubClass_NameWard">gardienne</string>
-    <string name="HeroSubClass_DescWard">Les _Gardiennes_ ont une forte connexion avec les forces de la nature, ce qui leur donne la possibilité de collecter de la rosée et des graines sur les plantes. Fouler des herbes hautes leur octroie par ailleurs un bonus d\'armure temporaire.</string>
-    <string name="HeroSubClass_NameScout">scout</string>
-    <string name="HeroSubClass_DescScout">Les Elfes _Scouts_ sont les maîtres de la discrétion. Piétiner les hautes herbes leur octroie un bonus d\'invisibilité temporaire. Ils sont également plus rapides que les Elfes classiques.</string>
+    <string name="HeroSubClass_DescWard">Les _Gardiennes_ ont une forte connexion avec les forces de la nature, ce qui leur donne la possibilité de collecter plus de rosée et des graines sur les plantes. Fouler des herbes hautes leur octroie par ailleurs un bonus d\'armure temporaire.</string>
+    <string name="HeroSubClass_NameScout">éclaireur</string>
+    <string name="HeroSubClass_DescScout">Les Elfes _Éclaireurs_ sont les maîtres de la discrétion. Piétiner les hautes herbes leur octroie un bonus d\'invisibilité temporaire. Ils sont également plus rapides que les Elfes classiques.</string>
     <string name="HeroSubClass_NameShaman">shaman</string>
     <string name="HeroSubClass_DescShaman">Les Elfes _Shamans_ peuvent utiliser les sceptres comme armes de mêlée. Des coups réussis ont une chance d\'activer le pouvoir du sceptre sur une cible sans utiliser de charge.</string>
 
@@ -1586,14 +1598,14 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Gender">masculin</string>
     <string name="Kobold_Name_Objective">kobold</string>
-    <string name="Kobold_Desc">Les kobolds étaient considérés comme des êtres de légende. Ancêtre des gnolls communs, les kobolds vivent dans les caves profondes et froides. On dit que leur peuple a maîtrisé l\'ingénierie et la machinerie bien avant les nains. Toutefois, on ne sait pas pourquoi ils ont disparu il y a tant d\'années...</string>
+    <string name="Kobold_Desc">Les kobolds étaient considérés comme des êtres de légende. Ancêtre des gnolls communs, les kobolds vivent dans les grottes profondes et froides. On dit que leur peuple a maîtrisé l\'ingénierie et la machinerie bien avant les nains. Toutefois, on ne sait pas pourquoi ils ont disparu il y a tant d\'années...</string>
 
 
-    <string name="KoboldIcemancer_Name">kobold glacier</string>
+    <string name="KoboldIcemancer_Name">kobold glaçomancier</string>
     <string name="KoboldIcemancer_Gender">masculin</string>
-    <string name="KoboldIcemancer_Name_Objective">kobold glacier</string>
-    <string name="KoboldIcemancer_Desc">Les kobolds glaciers formaient une élite dans leur société, en tant que guerriers, magiciens et avant tout scientifiques. Les anciens kobolds glaciers maîtrisaient l\'art de tailler la glace, créant ainsi des mécanismes avancés à partir de la glace, renforcés magiquement...</string>
-    <string name="KoboldIcemancer_Killed">L\'éclair glacé de %svous a tué...</string>
+    <string name="KoboldIcemancer_Name_Objective">kobold glaçomancier</string>
+    <string name="KoboldIcemancer_Desc">Les kobolds glaçomanciers formaient une élite dans leur société, en tant que guerriers, magiciens et avant tout scientifiques. Les anciens kobolds glaçomanciers maîtrisaient l\'art de tailler la glace, créant ainsi des mécanismes avancés à partir de la glace, renforcés magiquement...</string>
+    <string name="KoboldIcemancer_Killed">L\'éclair glacé de %s vous a tué...</string>
 
 
     <string name="ColdSpirit_Name">esprit froid</string>
@@ -1609,26 +1621,26 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="IceGuardian_Name">gardien de glace</string>
-    <string name="IceGuardian_Gender">masculine</string>
+    <string name="IceGuardian_Gender">masculin</string>
     <string name="IceGuardian_Name_Objective">gardien de glace</string>
-    <string name="IceGuardian_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs caves. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
+    <string name="IceGuardian_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs grottes. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
 
 
     <string name="IceGuardianCore_Name">gardien de glace</string>
     <string name="IceGuardianCore_Gender">masculin</string>
     <string name="IceGuardianCore_Name_Objective">gardien de glace</string>
-    <string name="IceGuardianCore_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs caves. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
+    <string name="IceGuardianCore_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs grottes. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
 
 
     <string name="CagedKobold_Name">kobold en cage</string>
     <string name="CagedKobold_Gender">masculin</string>
     <string name="CagedKobold_Name_Objective">kobold en cage</string>
     <string name="CagedKobold_Desc">Un kobold, dans une cage.</string>
-    <string name="CagedKobold_Intro">Hey... HEY ! Tu es dois être cet aventurier. Aide-moi à sortir ami, ces meutriers de militaristes m\'ont enfermé. Ils ont l\'intention de réactiver une ancienne arme pour conquérir le monde des hommes au-dessus ! Je me suis opposé parce que c\'est trop dangereux. Mais ils ont monté un conseil et m\'ont jeté dans cette cage. Trouve la clé de la cage s\'il te plaît. En échange, je t\'aiderai du mieux que je peux. </string>
-    <string name="CagedKobold_Quest_End">Oh, merci, vraiment ! Comment as-tu pu trouver la clé ? Tu as... détruit l\'arme ? C\'est incroyable ! Tu sais quoi, j\'ai dis que j\'allais t\'aider, et je crois savoir quel est le meilleur moyen. Je vais t\'accompagner un moment. * Le Kobold en cage s\'est transformé en une bougie</string>
+    <string name="CagedKobold_Intro">Hé... Ho ! Tu dois être ce fameux aventurier ? Aide-moi, mon pote, ces maudits militaristes m\'ont enfermé là-dedans ! Ils essaient de réactiver une ancienne arme pour conquérir le monde des humains à la surface. Mais c\'est très dangereux, alors je m\'y suis opposé. Ils m\'ont tout de suite attrapé et enfermé dans cette cage. Je t\'en supplie : trouve la clé de ma cellule. En retour, je t\'aiderai du mieux que je pourrai.</string>
+    <string name="CagedKobold_Quest_End">Oh, merci, vraiment ! Comment as-tu pu trouver la clé ? Tu as... détruit cette arme ? C\'est incroyable ! Tu sais quoi, j\'ai dis que j\'allais t\'aider, et je crois savoir quel est le meilleur moyen. Je vais t\'accompagner un moment. * Le Kobold en cage s\'est transformé en une bougie</string>
     <string name="CagedKobold_Message1">S\'il te plaît...</string>
     <string name="CagedKobold_Message2">Tu dois m\'aider, mon pote</string>
-    <string name="CagedKobold_Message3">Cette cage me répugne complètement</string>
+    <string name="CagedKobold_Message3">Cette cage est horrible</string>
 
     <string name="Journal_Caged_Kobold">Kobold en cage</string>
 
@@ -1652,22 +1664,22 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
 
-    <string name="WandOfIcebolt_Name">Baguette d\'éclair glacé</string>
-    <string name="WandOfIcebolt_Info">Ce sceptre tire un missile de glace, infligeant des dégâts léger à la créature ciblée. Il peut réussir à ralentir ou même geler sa cible. </string>
-    <string name="WandOfIcebolt_Info1">Vous vous êtes tué avec votre propre sceptre d\'éclair glacé...</string>
+    <string name="WandOfIcebolt_Name">Sceptre de Glace</string>
+    <string name="WandOfIcebolt_Info">Ce sceptre tire un projectile de glace, infligeant des dégâts léger à la créature ciblée. Il peut réussir à ralentir ou même geler sa cible. </string>
+    <string name="WandOfIcebolt_Info1">Vous vous êtes tué avec votre propre Sceptre de Glace...</string>
 
 
     <string name="Badges_Ice_Guardian_Slain">Gardien de glace tué</string>
 
     <string name="GoldenSword_Name">épée en or</string>
     <string name="GoldenSword_Info">Normalement les armes faites d\'un tel métal sont considérées comme de la décoration. Cependant cette lame semble être très coupante.</string>
-    <string name="GoldenSword_Gender">masculin</string>
+    <string name="GoldenSword_Gender">feminin</string>
 
 
 
     <string name="GoldenStatue_Name">statue en or</string>
     <string name="GoldenStatue_Gender">féminin</string>
-    <string name="GoldenStatue_Name_Objective">épée en or</string>
+    <string name="GoldenStatue_Name_Objective">statue en or</string>
     <string name="GoldenStatue_Desc">C\'est impensable, cette magnifique statue n\'est pas une décoration, mais une créature malicieuse attendant l\'aventurier sans méfiance. Au premier abord vous auriez juré que cette _%s_ était juste une partie de son bras.</string>
 
 
@@ -1682,76 +1694,76 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="NecromancerNPC_Message4">Il y a quelque chose de vraiment spécial dans la Nécropole.</string>
 
     <string name="RatKing_Name_Objective">roi des rats</string>
-    <string name="RatKing_Gender">mâle</string>
+    <string name="RatKing_Gender">masculin</string>
     <string name="Weapon_Identify">Vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
     <string name="Weapon_Incompatible">L\'interaction entre les différents types de magie a annulé l\'enchantement de cette arme !</string>
 
 
 
     <string-array name="Death_Name">
-        <item>Macabre %s</item>
-        <item>Macabre %s</item>
-        <item>Macabre %s</item>
+        <item>%s Fatale</item>
+        <item>%s Fatale</item>
+        <item>%s Fatale</item>
     </string-array>
 
     <string-array name="Fire_Name">
-        <item>Enflammée %s</item>
-        <item>Enflammée %s</item>
-        <item>Enflammée %s</item>
+        <item>%s Enflammée</item>
+        <item>%s Enflammée</item>
+        <item>%s Enflammée</item>
     </string-array>
 
     <string-array name="Horror_Name">
-        <item>d\'Eldritch %s</item>
-        <item>d\'Eldritch %s</item>
-        <item>d\'Eldritch %s</item>
+        <item>%s Terrifiante</item>
+        <item>%s Terrifiante</item>
+        <item>%s Terrifiante</item>
     </string-array>
 
     <string-array name="Instability_Name">
-        <item>Instable %s</item>
-        <item>Instable %s</item>
-        <item>Instable %s</item>
+        <item>%s Instable</item>
+        <item>%s Instable</item>
+        <item>%s Instable</item>
     </string-array>
 
     <string-array name="Leech_Name">
-        <item>Vampirique %s</item>
-        <item>Vampirique %s</item>
-        <item>Vampirique %s</item>
+        <item>%s Vampirique</item>
+        <item>%s Vampirique</item>
+        <item>%s Vampirique</item>
     </string-array>
 
     <string-array name="Luck_Name">
-        <item>Chanceuse %s</item>
-        <item>Chanceuse %s</item>
-        <item>Chanceuse %s</item>
+        <item>%s Chanceuse</item>
+        <item>%s Chanceuse</item>
+        <item>%s Chanceuse</item>
     </string-array>
 
     <string-array name="Paralysis_Name">
-        <item>Etourdissante %s</item>
-        <item>Etourdissante %s</item>
-        <item>Etourdissante %s</item>
+        <item>%s Etourdissante</item>
+        <item>%s Etourdissante</item>
+        <item>%s Etourdissante</item>
     </string-array>
 
     <string-array name="Piercing_Name">
-        <item>Perçante %s</item>
-        <item>Perçante %s</item>
-        <item>Perçante %s</item>
+        <item>%s Perçante</item>
+        <item>%s Perçante</item>
+        <item>%s Perçante</item>
     </string-array>
 
     <string-array name="Poison_Name">
-        <item>Venimeuse %s</item>
-        <item>Venimeuse %s</item>
-        <item>Venimeuse %s</item>
+        <item>%s Venimeuse</item>
+        <item>%s Venimeuse</item>
+        <item>%s Venimeuse</item>
     </string-array>
 
     <string-array name="Slow_Name">
-        <item>Glaçante %s</item>
-        <item>Glaçante %s</item>
-        <item>Glaçante %s</item>
+        <item>%s Glaçante</item>
+        <item>%s Glaçante</item>
+        <item>%s Glaçante</item>
     </string-array>
 
     <string-array name="Swing_Name">
-        <item>Sauvage %s</item>
-        <item>Sauvage %s</item>
-        <item>Sauvage %s</item>
+        <item>%s Sauvage</item>
+        <item>%s Sauvage</item>
+        <item>%s Sauvage</item>
     </string-array>
 
 
@@ -1759,7 +1771,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="MeleeWeapon_Info1a">Cette %1$s est une arme de mélée %2$s de rang %3$d.</string>
     <string name="MeleeWeapon_Info1b">une</string>
     <string name="MeleeWeapon_Info1c">l\'amélioration d\'une</string>
-    <string name="MeleeWeapon_Info1d">la dégradation d\'une </string>
+    <string name="MeleeWeapon_Info1d">la dégradation d\'une</string>
     <string name="MeleeWeapon_Info2a">Ses dommages moyens sont de %d points par coup.</string>
     <string name="MeleeWeapon_Info2b">Ses dommages moyens sont typiquement de %1$d points par coup et elle requiert %2$d points de force.</string>
     <string name="MeleeWeapon_Info2c">Cette arme est sûrement trop lourde pour vous.</string>
@@ -1781,13 +1793,13 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="BattleAxe_Name">hache de bataille</string>
-    <string name="BattleAxe_Info">L\'énorme tête en acier de cette hache de bataille impose un soulèvement intense à chaque coup.</string>
-    <string name="BattleAxe_Gender">masculin</string>
+    <string name="BattleAxe_Info">Le fer énorme de cette hache de bataille porte un choc meurtrier à l\'adversaire à chaque foi qu'il s\'abat.</string>
+    <string name="BattleAxe_Gender">feminin</string>
 
 
     <string name="Dagger_Name">dague</string>
     <string name="Dagger_Info">Une dague de fer simple avec une poignée de bois bien ancrée.</string>
-    <string name="Dagger_Gender">masculin</string>
+    <string name="Dagger_Gender">feminin</string>
 
 
     <string name="Glaive_Name">hallebarde</string>
@@ -1802,7 +1814,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="Longsword_Name">épée longue</string>
     <string name="Longsword_Info">Cette lame imposante inflige de lourds dommages en utilisant son poids à son avantage.</string>
-    <string name="Longsword_Gender">masculin</string>
+    <string name="Longsword_Gender">feminin</string>
 
 
     <string name="Mace_Name">masse</string>
@@ -1810,8 +1822,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Mace_Gender">féminin</string>
 
 
-    <string name="Quarterstaff_Name">gourdin</string>
-    <string name="Quarterstaff_Info">Un bâton de bois épais, ses extrémités sont chaussées avec du fer.</string>
+    <string name="Quarterstaff_Name">penn bazh</string>
+    <string name="Quarterstaff_Info">Un fort bâton de bois dur, ses extrémités sont chaussées avec du fer.</string>
     <string name="Quarterstaff_Gender">masculin</string>
 
 
@@ -1821,21 +1833,21 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="ShortSword_Select">Choisissez une arme à améliorer</string>
     <string name="ShortSword_Reforged">vous reforgez votre épée courte pour améliorer votre %s</string>
     <string name="ShortSword_NotBoomerang">vous ne pouvez pas améliorer votre boomerang comme ça</string>
-    <string name="ShortSword_Gender">masculin</string>
+    <string name="ShortSword_Gender">feminin</string>
 
 
     <string name="Spear_Name">lance</string>
-    <string name="Spear_Info">Un bâton de bois fin surmonté d\'un morceau de fer pointu.</string>
-    <string name="Spear_Gender">neutre</string>
+    <string name="Spear_Info">Un bâton de bois surmonté d\'une fine pointe de fer.</string>
+    <string name="Spear_Gender">feminin</string>
 
 
     <string name="Sword_Name">épée</string>
-    <string name="Sword_Info">La longueur de la lame d\'acier, aiguisée comme un rasoir, brille et vous rassure.</string>
-    <string name="Sword_Gender">masculin</string>
+    <string name="Sword_Info">Cette longue lame d\'acier polie aiguisée comme un rasoir vous rassure.</string>
+    <string name="Sword_Gender">feminin</string>
 
 
     <string name="WarHammer_Name">marteau de guerre</string>
-    <string name="WarHammer_Info">Peu de créatures peuvent supporter les coups écrasants de cette masse imposante de plomb et d\'acier, mais seuls les aventuriers les plus forts peuvent l\'utiliser efficacement.</string>
+    <string name="WarHammer_Info">Peu de créatures peuvent résister aux coups de cette enorme masse d\'acier et de plomb, mais seuls les aventuriers les plus forts peuvent l\'utiliser efficacement.</string>
     <string name="WarHammer_Gender">masculin</string>
 
 
@@ -1846,10 +1858,10 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="MissileWeapon_Sure">Voulez vous vraiment vous en équiper en tant qu\'arme de mêlée ?</string>
     <string name="MissileWeapon_Info1">
 Les dommages moyens de cette arme sont de %d points par coup.</string>
-    <string name="MissileWeapon_Info2">A cause de votre manque de force, la précision et la vitesse de vos coups avec cette %s diminuent.</string>
-    <string name="MissileWeapon_Info3">Grâce à votre excès de force les dommages de vos attaques avec cette %s sont augmentés.</string>
+    <string name="MissileWeapon_Info2">A cause de votre manque de force, la précision et la vitesse de vos coups avec ce %s diminuent.</string>
+    <string name="MissileWeapon_Info3">Grâce à votre excès de force les dommages de vos attaques avec ce %s sont augmentés.</string>
     <string name="MissileWeapon_Info4">
-Vous maintenez la %s prête à l\'emploi.</string>
+Vous maintenez le %s prête à l\'emploi.</string>
 
 
     <string name="Boomerang_Name">boomerang</string>
@@ -1857,28 +1869,28 @@ Vous maintenez la %s prête à l\'emploi.</string>
     <string name="Boomerang_Gender">masculin</string>
 
 
-    <string name="CurareDart_Name">flèche paralysante</string>
+    <string name="CurareDart_Name">flèchette paralysante</string>
     <string name="CurareDart_Info">Ces petites fléchettes ne font que peu de dommages mais elles peuvent paralyser leur cible, la laissant immobile et sans défense pour un certain temps.</string>
-    <string name="CurareDart_Gender">masculin</string>
+    <string name="CurareDart_Gender">feminin</string>
 
 
-    <string name="Dart_Name">flèche</string>
+    <string name="Dart_Name">flèchette</string>
     <string name="Dart_Info">Ces simples pointes de métal sont faites pour voler et transpercer leur cible d\'un simple mouvement du poignet.</string>
-    <string name="Dart_Gender">masculin</string>
+    <string name="Dart_Gender">feminin</string>
 
 
-    <string name="IncendiaryDart_Name">flèche incendiaire</string>
-    <string name="IncendiaryDart_Info">Les pointes de chacune de ces flèches sont faites pour se clouer à la cible pendant que les composants instables sanglés au reste explosent en flammes brillantes.</string>
-    <string name="IncendiaryDart_Gender">masculin</string>
+    <string name="IncendiaryDart_Name">flèchette incendiaire</string>
+    <string name="IncendiaryDart_Info">Les pointes de chacune de ces flèchettes sont conçues pour se ficher dans la cible pendant que les composants instables explosent en flammes brillantes.</string>
+    <string name="IncendiaryDart_Gender">feminin</string>
 
 
     <string name="Javelin_Name">javelot</string>
-    <string name="Javelin_Info">Ce projectile de métal est équilibré pour garder la pointe du bout en avant alors qu\'il prend le vent.</string>
-    <string name="Javelin_Gender">neutre</string>
+    <string name="Javelin_Info">Cette tige de métal est équilibrée pour garder sa pointe en avant alors qu\'elle file dans le vent.</string>
+    <string name="Javelin_Gender">masculin</string>
 
 
     <string name="Shuriken_Name">shuriken</string>
-    <string name="Shuriken_Info">Des morceaux de métal en forme d\'étoile avec des lames aiguisées font des dommages considérables quand ils atteignent leur cible. Ils peuvent être jetés à un rythme soutenu.</string>
+    <string name="Shuriken_Info">Des morceaux de métal en forme d\'étoile avec des lames aiguisées font des dommages considérables quand ils atteignent leur cible. Ils peuvent être lancés à un rythme soutenu.</string>
     <string name="Shuriken_Gender">masculin</string>
 
 
@@ -1887,39 +1899,40 @@ Vous maintenez la %s prête à l\'emploi.</string>
     <string name="Tamahawk_Gender">masculin</string>
 
 
-    <string name="Kusarigama_Name">Kusarigama</string>
-    <string name="Kusarigama_Info">Cette arme est faite d\'une faux sur une chaîne en métal avec un poids en fer à son extrémité</string>
-    <string name="Kusarigama_Gender">féminin</string>
+    <string name="Kusarigama_Name">kusarigama</string>
+    <string name="Kusarigama_Info">Cette arme est constituée d\'une chaîne en métal, avec une faux à une extrémité, et une lourde masse en fer à l\'autre.</string>
+    <string name="Kusarigama_Gender">masculin</string>
     <string name="Kusarigama_Pull">TIRER</string>
 
 
-    <string name="ChaosSword_Name">Epée du Chaos</string>
-    <string name="ChaosSword_Info">La lame de cette épée est faite de chaos pur et parfois vibre légèrement. Un grand pouvoir loge dans cette arme, qui peut couper en deux presque n\'importe quoi. Néanmoins, un habileté importante est requise pour maîtriser l\'énorme force de l\'arme.</string>
-    <string name="ChaosSword_Gender">masculin</string>
+    <string name="ChaosSword_Name">épée du Chaos</string>
+    <string name="ChaosSword_Info">La lame de cette épée est faite de chaos pur et parfois vibre légèrement. Un grand pouvoir loge dans cette arme, qui peut couper en deux presque n\'importe quoi. Néanmoins, un habileté importante est requise pour maîtriser l\'énorme puissance de cette arme.</string>
+    <string name="ChaosSword_Gender">feminin</string>
 
 
     <string name="ChaosBow_Name">arc du chaos</string>
-    <string name="ChaosBow_Info">Un arc effrayant rempli du pouvoir du Chaos. Chaque flaque décochée avec cet arc portera un morceau d\'énergie chaotique à la cible. Mais si vous ratez... </string>
+    <string name="ChaosBow_Info">Un arc effrayant rempli du pouvoir du Chaos. Chaque flèche décochée avec cet arc portera un morceau d\'énergie chaotique à la cible. Mais si vous ratez... </string>
     <string name="ChaosBow_Gender">masculin</string>
 
 
-    <string name="ChaosStaff_Name">Baton du Chaos</string>
-    <string name="ChaosStaff_Info">Un baton regorgeant du pouvoir du chaos! Les mages en rèvent-ils ou en ont peur ?</string>
+    <string name="ChaosStaff_Name">baton du Chaos</string>
+    <string name="ChaosStaff_Info">Un baton regorgeant du pouvoir du chaos ! Les mages en rèvent-ils ou en ont peur ?</string>
     <string name="ChaosStaff_Gender">masculin</string>
 
 
     <string name="SacrificialSword_Name">épée de sacrifice</string>
     <string name="SacrificialSword_Info">Au premier regard, cette vieille épée en bronze, couverte de taches de patine, semble complètement inutile. Or une sorte de pouvoir ancien, archaïque, dort à l\'intérieur. Ce pouvoir peut transformer presque toute créature en un esclave dénué de volonté. Il faut juste trouver le bon moyen pour les réveiller... </string>
-    <string name="SacrificialSword_Gender">masculin</string>
+    <string name="SacrificialSword_Gender">feminin</string>
 
     <string name="ScrollOfSummoning_Name">Parchemin d\'invocation</string>
+    <string name="ScrollOfSummoning_Info">Lorsqu\'il est lu à haute voix, ce parchemin invoque l\'un des monstres du niveau actuel du donjon. Et si sa volonté est suffisamment faible, il deviendra votre serviteur.</string>
     <string name="ScrollOfSummoning_Info_2">Le monstre a répondu à votre invocation !</string>
 
 
     <string name="Using_Failed_Because_Magic">Une magie puissante vous empêche d\'utiliser \"%s\".</string>
     <string name="Using_Failed_Because_Blind">Vous ne pouvez pas utiliser \"%s\" en étant aveuglé.</string>
 
-    <string name="Mob_Cannot_Be_Pet">La volonté de \"%s\" est trop forte pour être contrôlée!</string>
+    <string name="Mob_Cannot_Be_Pet">La volonté de \"%s\" est trop forte pour être contrôlée !</string>
     <string name="No_Valid_Cell">Il n\'y a aucune case disponible à proximité. </string>
 
     <string name="Mob_Desc">La vraie description arrive bientôt !</string>
@@ -1931,23 +1944,23 @@ Vous maintenez la %s prête à l\'emploi.</string>
     <string name="Mob_StaPassiveStatus">Ce %s est passif</string>
 
     <string name="Acidic_Name">scorpion acide</string>
-    <string name="Acidic_Gender">mâle</string>
+    <string name="Acidic_Gender">masculin</string>
     <string name="Acidic_Name_Objective">scorpion acide</string>
-    <string name="Acidic_Desc">Ces énormes démons à la forme arachnide évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées depuis de longues distances.</string>
+    <string name="Acidic_Desc">Ces énormes arachnides démoniaques évitent le combat rapproché à tout prix, en tirant des dards barbelés à longues portées et qui vous paralysent.</string>
 
 
     <string name="Albino_Name">rat albinos</string>
-    <string name="Albino_Gender">mâle</string>
+    <string name="Albino_Gender">masculin</string>
     <string name="Albino_Name_Objective">rat albinos</string>
     <string name="Albino_Desc">Les rats géants sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre. Ce rat particulier semble être albinos. Ses dents sont anormalement aiguisées.</string>
 
-    <string name="Bandit_Name">bandit fou</string>
+    <string name="Bandit_Name">bandit dément</string>
     <string name="Bandit_Gender">mâle</string>
-    <string name="Bandit_Name_Objective">bandit fou</string>
+    <string name="Bandit_Name_Objective">bandit dément</string>
     <string name="Bandit_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant ces excursions si loin de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
 
     <string name="Bat_Name">chauve-souris vampire</string>
-    <string name="Bat_Gender">mâle</string>
+    <string name="Bat_Gender">feminin</string>
     <string name="Bat_Name_Objective">chauve-souris vampire</string>
     <string name="Bat_Desc">Ces résidents des grottes, rapides et teigneux, peuvent vaincre des ennemis bien plus gros en regagnant leur santé à chaque morsure réussie.</string>
     <string name="Bat_Defense">esquivé</string>
@@ -1968,7 +1981,7 @@ Vous maintenez la %s prête à l\'emploi.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Gender">mâle</string>
     <string name="DM300_Name_Objective">DM-300</string>
-    <string name="DM300_Desc">Cette machine fut créée par les nains des siècles plus tôt. Puis les nains ont commencé à remplacer les machines par des golems, des élémentaires et même des démons. Cela a mené à la perte de leur civilisation. Le DM-300 et les autres machines étaient utilisés pour la construction, le minage, et dans certains cas, à la défense de la ville. </string>
+    <string name="DM300_Desc">Cette machine fut créée par les nains il y a bien des siècles. Puis les nains ont commencé à remplacer les machines par des golems, des élémentaires et même des démons. Cela a mené à la perte de leur civilisation. Le DM-300 et les autres machines étaient utilisés pour la construction, l\'exploitation des mines, et dans certains cas, à la défense de la ville. </string>
     <string name="DM300_Info1">Le DM-300 se répare !</string>
     <string name="DM300_Info2">Echec de la mission. Extinction du système.</string>
     <string name="DM300_Info3">Personnel non autorisé détecté.</string>
@@ -2150,7 +2163,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Larva_Desc">Larve du dieu ancien</string>
 
 
-    <string name="SpiderEgg_Name">Œuf d\'araignée</string>
+    <string name="SpiderEgg_Name">Oeuf d\'araignée</string>
     <string name="SpiderEgg_Gender">neutre</string>
     <string name="SpiderEgg_Name_Objective">oeuf d\'araignée</string>
     <string name="SpiderEgg_Desc">Cet oeuf fragile palpite brièvement, à l\'intérieur vous pouvez voir de nombreuses pattes.</string>
@@ -2289,7 +2302,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
 
-    <string name="IceGuardianCoreModule_Name">Cœur du Gardien de Glace</string>
+    <string name="IceGuardianCoreModule_Name">Coeur du Gardien de Glace</string>
     <string name="IceGuardianCoreModule_Info">C\'est une structure complexe faite de glace magique. Une gemme brillante se trouve au centre de l\'appareil.</string>
 
 
@@ -2475,8 +2488,9 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Mods_AuthorEmail">Mail du créateur :</string>
     <string name="Mods_RestartRequired">Redémarrage requis</string>
 
+    <string name="Spells_NotTooFast">%s n\'est pas prêt à être utilisé.</string>
     <string name="ElvenBow_Name">arc d\'elf</string>
-    <string name="ElvenBow_Gender">féminin</string>
+    <string name="ElvenBow_Gender">masculin</string>
 
     <string name="ElvenBow_Info">Un exemple exceptionnel de l\'artisanat des elfs. Cet arc est clairement plus efficace et précis qu\'un arc en bois classique.</string>
 
@@ -2486,7 +2500,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="RatArmor_Name">Armure en rats</string>
-    <string name="RatArmor_Info">Une armure cuir de rats. Ce n\'est probablement non contagieux</string>
+    <string name="RatArmor_Info">Une armure en cuir de rats. Elle n\'est peut-être pas contagieuse</string>
 
 
 
@@ -2579,9 +2593,9 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
         <item>Glyphe de déplacement - Quand le héros reçoit des coups, il pourra être téléporté à un endroit aléatoire de son étage. Cela ne marchera pas pour les étages des boss.</item>
         <item>Glyphe de constriction - Le héros recevra une armure végétale, mais pourra être enraciné aussi.</item>
 
-        <item>Arme macabre - Un coup réussi peut tuer instantanément sa cible (ou infliger 2 fois plus de dégâts à un boss).</item>
+        <item>Arme fatale - Un coup réussi peut tuer instantanément sa cible (ou infliger 2 fois plus de dégâts à un boss).</item>
         <item>Arme enflammée - Un coup réussi pourra brûler l\'ennemi ciblé.</item>
-        <item>Arme d\'Eldritch - Un coup réussi pourra faire fuir l\'ennemi.</item>
+        <item>Arme terrifiante - Un coup réussi pourra faire fuir l\'ennemi.</item>
         <item>Arme instable - Un coup réussi peut déclencher l\'effet de n\'importe quel enchantement.</item>
         <item>Arme vampirique - Un coup réussi soignera le héros de la moitié des dégâts infligés à l\'ennemi.</item>
         <item>Arme chanceuse - inflige des dégâts bien plus importants.</item>
@@ -2590,6 +2604,10 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
         <item>Arme venimeuse - peut empoisonner la cible.</item>
         <item>Arme gelée - peut ralentir la cible et l\'empêcher de brûler si le coup est réussi.</item>
         <item>Arme sauvage - peut toucher tous les ennemis à côté de la cible.</item>
+
+        <item>Ce livre est écrit en langue démoniaque</item>
+        <item>Ce livre est écrit dans la langue des nains.</item>
+        <item>Ce livre est écrit dans la langue des elfes.</item>
     </string-array>
 
     <string name="WandOfShadowbolt_Name">Sceptre de Foudre Noire</string>
@@ -2600,6 +2618,9 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="TownGuardNPC_Desc">Un garde ordinaire de la ville.</string>
     <string name="TownGuardNPC_Message1">Bougez d\'ici</string>
     <string name="TownGuardNPC_Message2">Grâce aux aventuriers comme vous, c\'est vraiment redevenu paisible ici.</string>
+    <string name="TownGuardNPC_Message3">Vous trouvez qu\'il y a trop de gardes dans cette ville ? Vous ne croyez pas que c\'est parce que c\'est la seule ville dotée d'un gigantesque donjon infesté de monstre ?</string>
+
+
     <string name="TownsfolkNPC_Name">habitant</string>
     <string name="TownsfolkNPC_Gender">masculin</string>
     <string name="TownsfolkNPC_Name_Objective">habitant</string>
@@ -2743,9 +2764,9 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="InventoryScroll_No">Non, j\'ai changé d\'avis</string>
 
 
-    <string name="BlankScroll_Name">Parchemin blanc</string>
+    <string name="BlankScroll_Name">Parchemin vierge</string>
     <string name="BlankScroll_Info">Juste un parchemin blanc</string>
-    <string name="BlankScroll_ReallyBlank">Le parchemin est vraiment blanc</string>
+    <string name="BlankScroll_ReallyBlank">Il n\'y a vraiment rien d\'écrit sur ce parchemin</string>
 
 
     <string name="ScrollOfChallenge_Name">Parchemin de défi</string>
@@ -2812,7 +2833,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="ScrollOfWeaponUpgrade_Name">Parchemin d\'amélioration d\'arme</string>
-    <string name="ScrollOfWeaponUpgrade_Info">Le parchemin va améliorer une arme de mélée, augmentant sa qualité. Par rapport à un parchemin d\'amélioration classique, cette version spécialisée n\'enlèvera jamais l\'enchantement d\'une arme, au contraire, elle peut même octroyer une arme non-enchantée avec un enchantement aléatoire.</string>
+    <string name="ScrollOfWeaponUpgrade_Info">Le parchemin va améliorer une arme de mélée, augmentant sa qualité. Par rapport à un parchemin d\'amélioration classique, cette version spécialisée n\'enlèvera jamais l\'enchantement d\'une arme, au contraire, elle peut même octroyer un enchantement aléatoire à une arme non-enchantée.</string>
     <string name="ScrollOfWeaponUpgrade_InvTitle">Choisissez une arme à améliorer</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">votre %s a l\'air mieux maintenant</string>
 
@@ -2830,27 +2851,27 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="Halberd_Name">Hallebarde</string>
-    <string name="Halberd_Info">Une arme constituée d\'une hache au bout d\'un bâton.</string>
+    <string name="Halberd_Info">Une arme constituée d\'un fer de hache au bout d\'un bâton.</string>
     <string name="Halberd_Gender">féminin</string>
 
 
     <string name="WoodenCrossbow_Name">Arbalète en bois</string>
     <string name="WoodenCrossbow_Info">Une simple arbalète en bois, destinée à tirer des flèches.</string>
-    <string name="WoodenCrossbow_Gender">masculin</string>
+    <string name="WoodenCrossbow_Gender">feminin</string>
 
 
     <string name="CompositeCrossbow_Name">Arbalète composée</string>
     <string name="CompositeCrossbow_Info">Cette arbalète renforcée s\'avère être un outil plus efficace que son homologue en bois.</string>
-    <string name="CompositeCrossbow_Gender">masculin</string>
+    <string name="CompositeCrossbow_Gender">feminin</string>
 
 
     <string name="RubyCrossbow_Name">Arbalète en rubis</string>
     <string name="RubyCrossbow_Info">Cette arme mortelle est en fait un chef d\'oeuvre d\'ingénierie naine.</string>
-    <string name="RubyCrossbow_Gender">masculin</string>
+    <string name="RubyCrossbow_Gender">feminin</string>
 
 
     <string name="GothicArmor_Name">Armure gothique</string>
-    <string name="GothicArmor_Info">Une armure gothique est le sommet de l\'art de la forge d\'armures.</string>
+    <string name="GothicArmor_Info">Une armure gothique est le chef-d\'oeuvre de l'art des forgerons.</string>
 
 
     <string name="ChaosArmor_Name">Armure du chaos</string>
@@ -2968,7 +2989,7 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
     <string name="Nightmare_Desc">Une créature grotesque faite de tentacules de chair tremblantes. Les Cauchemars sont une manifestation des pensées sinistres de l\'Ancien Dieu.</string>
 
 
-    <string name="Tengu_Info3">Je t\'ai eu, %s!</string>
+    <string name="Tengu_Info3">Je t\'ai eu, %s !</string>
 
 
     <string name="ZombieGnoll_Name">gnoll zombie</string>
@@ -2980,7 +3001,7 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
     <string name="Worm_Name">ver</string>
     <string name="Worm_Gender">mâle</string>
     <string name="Worm_Name_Objective">ver</string>
-    <string name="Worm_Desc">La taille de ce ver est immesurable. Emergeant partiellement du sol, le corps de cette créature est couverte de morceaux de chair pourrie et de boue. Ses mandibules géantes donnent une idée de la façon dont il est remonté à la surface.</string>
+    <string name="Worm_Desc">La taille de ce ver est incommensurable. Emergeant partiellement du sol, le corps de cette créature est couverte de morceaux de chair pourrie et de boue. Ses mandibules géantes donnent une idée de la façon dont il est remonté à la surface.</string>
 
 
     <string name="YogsBrain_Name">cerveau de yog</string>
@@ -3072,7 +3093,7 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
     <string name="ResultDescriptions_Poison">Empoisonné au niveau %d</string>
     <string name="ResultDescriptions_Gas">Asphyxié au niveau %d</string>
     <string name="ResultDescriptions_Bleeding">Mort d\'anémie au niveau %d</string>
-    <string name="ResultDescriptions_Ooze">Tué par le limon toxique au niveau %d</string>
+    <string name="ResultDescriptions_Ooze">Tué par la boue toxique au niveau %d</string>
     <string name="ResultDescriptions_Fall">Est tombé au niveau %d</string>
     <string name="ResultDescriptions_Win">A obtenu l\'amulette de Yendor</string>
     <string name="ResultDescriptions_Immured">Emmuré au niveau %d</string>
@@ -3103,7 +3124,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="ClassArmor_NotEquipped">Vous avez besoin de porter cette armure pour utiliser son pouvoir spécial !</string>
 
 
-    <string name="ClothArmor_Name">armure de vêtements</string>
+    <string name="ClothArmor_Name">armure en tissu</string>
     <string name="ClothArmor_Desc">Cette armure légère offre une protection basique.</string>
 
 
@@ -3121,7 +3142,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
 
 
     <string name="LeatherArmor_Name">armure de cuir</string>
-    <string name="LeatherArmor_Desc">Armure faite de peaux de monstre tannées. Un peu plus lourde que l\'armure de vêtements, mais offre une meilleure protection.</string>
+    <string name="LeatherArmor_Desc">Armure faite de peaux de monstre tannées. Un peu plus lourde que l\'armure de tissu, mais offre une meilleure protection.</string>
 
 
     <string name="MageArmor_Name">robe de mage</string>
@@ -3130,8 +3151,8 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="MageArmor_NotMage">Seuls les mages peuvent porter cette armure !</string>
 
 
-    <string name="MailArmor_Name">armure de mailles</string>
-    <string name="MailArmor_Desc">Des liens de métal joints ensemble forment une armure dure mais flexible.</string>
+    <string name="MailArmor_Name">cotte de mailles</string>
+    <string name="MailArmor_Desc">De petits anneaux de métal habilement entremêlés forment une armure solide, mais flexible.</string>
 
 
     <string name="PlateArmor_Name">armure de plates</string>
@@ -3384,7 +3405,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
         <item>turquoise</item>
         <item>cramoisie</item>
         <item>azur</item>
-        <item>jaune</item>
+        <item>jade</item>
         <item>dorée</item>
         <item>magenta</item>
         <item>charbonneuse</item>
@@ -3477,6 +3498,25 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="Potion_ItemFliesAway">%s s\'envole de vos mains.</string>
     <string name="Potion_FoodRefreshed">%s semble maintenant comestible</string>
 
+
+    <string name="KindOfBow_SelectArrowKind">Quelles flèches vais-je utiliser?</string>
+    <string name="KindOfBow_ChooseArrows">CHOISIR FLECHES</string>
+
+    <string name="BodyArmorSpell_Name">Body Armor</string>
+    <string name="BodyArmorSpell_Info">Active votre réserve de puissance musculaire, la rendant temporairement plus forte, augmentant ainsi considérablement votre armure, mais au détriment de votre vitesse de déplacement.</string>
+
+    <string name="BodyArmorBuff_Name">Body Armor</string>
+    <string name="BodyArmorBuff_Info">Protection corporelle augmentée au détriment de la vitesse de déplacement.</string>
+
+    <string name="DieHardSpell_Name">Die Hard</string>
+    <string name="DieHardSpell_Info">Augmentera temporairement votre régénération, faisant de vous un véritable dur à cuire.</string>
+
+    <string name="DieHardBuff_Name">Die Hard</string>
+    <string name="DieHardBuff_Info">Taux de régénération augmenté</string>
+
+    <string name="SmashSpell_Name">Smash</string>
+    <string name="SmashSpell_Info">Sautez en l\'air et créez une puissante onde de choc lorsque vous touchez le sol. Elle étourdit temporairement vos ennemis et leur inflige des dégâts physiques.</string>
+    <string name="SmashSpell_NeedWeapon">J\'ai besoin d'une arme pour ce mouvement.</string>
 
     <string name="town_deco_pillar_name">Pilier</string>
    <string name="town_deco_entrance_name">Entrée</string>

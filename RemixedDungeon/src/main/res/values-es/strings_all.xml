@@ -188,9 +188,43 @@
 
     <string name="Bishop_not_interested">Salir</string>
     <string name="Bishop_no_money">No puedes pagarlo.</string>
+    <string name="Bishop_bye">Rezaré por ti mi hijo.</string>
+
+    <string name="Blessed_Info">Bendecido por el sacerdote legítimo</string>
+
+    <string name="deco_candle_name">Vela</string>
+    <string name="deco_candle_desc">Vela grande</string>
+
+    <string name="Possess_Name">Posesión</string>
+    <string name="Possess_Info">El oscuro arte del control mental permite al lanzador doblar la voluntad de la mayoría de las criaturas</string>
+    <string name="Possess_CantPossessSelf">No puedes poseerte</string>
+
+    <string name="BlackCat_AiStatus">Este gato está haciendo cosas ordinarias de gato.</string>
+    <string name="Shopkeeper_Buy">Selecciona un objeto para vender</string>
+    <string name="Shopkeeper_title">Tienda</string>
+    <string name="Shopkeeper_text">Bienvenido a la sucursal local de Pixel-Mart. \ N¿Cómo puedo ayudarlo?</string>
+    <string name="Shopkeeper_SellPrompt">Tengo cosas para vender</string>
+    <string name="Shopkeeper_BuyPrompt">Dejame ver tu inventario</string>
+
+    <string name="WndTradeItem_BuyN">Comprar %1$d por %2$dg</string>
+    <string name="WndTradeItem_BuyAll">Comprar todo para%dg</string>
+    <string name="town_deco_weaponboard_name">Arma</string>
+    <string name="town_deco_weaponboard_desc">Una especie de arma colgada en el tablero.</string>
+    <string name="town_deco_shieldboard_name">Escudos</string>
+    <string name="town_deco_shieldboard_desc">Varios escudos que cuelgan en el tablero. Todavía no está a la venta.</string>
+    <string name="town_deco_armoronhanger_name">Armadura</string>
     <string name="town_deco_potions_name">Pociones</string>
+    <string name="town_deco_wardrobe_name">Armario de madera</string>
+    <string name="town_deco_porch_name">Porche</string>
+    <string name="town_deco_common_bed_name">Cama</string>
     <string name="town_deco_covered_table_name">Mesa</string>
     <string name="town_deco_pedestal_name">Pedestal</string>
+    <string name="town_deco_pedestal_desc">Pedestal con un libro sagrado en él.</string>
+
+    <string name="town_deco_shelf_name">Estantería</string>
+    <string name="town_deco_shelf_desc">Estantes vacíos.</string>
+
+    <string name="WndPriest_Instruction2_f">¡Bienvenido, hija mía, bienvenido a la santa iglesia del gran Señor el Profundo!</string>
     <string name="Item_Info2">algo</string>
 
 
@@ -363,6 +397,11 @@
     -- Las armas del héroe ahora son visibles en el juego\n
     </string>
 
+    <string name="Welcome_Text_28_5">
+    remix.28.5\n
+- Modding: \ n     - AI modificable para Mobs y NPCs \ n     - Ciudad: \ n     - Iglesia ahora abierta a los creyentes.     - La tienda de la ciudad fue renovada \ n     - Mecánica de juego: \ n     - Comercio ui mejorado \ n     - El portal se puede usar varias veces \ n</string>
+
+
     <string name="BlackCat_Name">Gata negra</string>
     <string name="BlackCat_Gender">femenino</string>
     <string name="BlackCat_Name_Objective">gata</string>
@@ -494,6 +533,13 @@
 
     <string name="Dungeon_NoTips">El texto es indescifrable...</string>
     <string name="Dungeon_DeadEnd">¡¿Qué haces aquí?!</string>
+
+    <string-array name="Dungeon_Tips">
+        <item>No sobreestimes tu fuerza, usa armas y armaduras que puedas manejar.</item>
+        <item>No todas las puertas en el calabozo son visibles a primera vista. Si estás atascado, busca puertas ocultas.</item>
+        <item>Pixel-Mart. Gastar dinero. Vivir más tiempo.</item>
+    </string-array>
+
 
     <string-array name="Challenges_Names">
         <item>A régimen</item>

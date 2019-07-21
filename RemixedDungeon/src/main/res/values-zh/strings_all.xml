@@ -3615,7 +3615,6 @@ remix.28.5\n
    <string name="town_deco_stock_name">贮备</string>
    <string name="town_deco_stock_desc">这里储存着食物，还有一堆带有各种各样颜色的垃圾。</string>
    <string name="town_deco_barrel_name">桶</string>
-   <string name="town_deco_barrel_desc">一个普通的桶，可惜打不开。</string>
    <string name="town_deco_hay_name">干草</string>
    <string name="town_deco_hay_desc">一小堆散发着气味的干草</string>
    <string name="town_deco_firewood_name">木柴</string>
@@ -3672,6 +3671,10 @@ remix.28.5\n
    <string name="town_deco_library_books_desc">比地牢里的书还要好。</string>
    <string name="town_deco_wallpaper_name">墙纸</string>
    <string name="town_deco_wallpaper_desc">这个装饰是一个很好的解决方案。</string>
+   <string name="town_deco_stones_name">石头</string>
+   <string name="town_deco_stones_desc">只是一大堆石头。</string>
+   <string name="town_deco_fireplace_name">壁炉</string>
+   <string name="town_deco_fireplace_desc">很适合在这种寒冷的地方热热身子。</string>
 
 
     <string name="Welcome_Text_28_6">
