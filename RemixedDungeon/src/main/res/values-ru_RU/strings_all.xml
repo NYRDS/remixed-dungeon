@@ -3597,7 +3597,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
    <string name="town_deco_stock_name">Припасы</string>
    <string name="town_deco_stock_desc">Здесь хранится провиант вперемежку с кучей разносортного барахла. </string>
    <string name="town_deco_barrel_name">Бочка</string>
-   <string name="town_deco_barrel_desc">Обычная бочка, не открывается, а жаль.</string>
+   <string name="town_deco_barrel_desc">Просто бочка, причем лучшие времена её уже прошли.</string>
    <string name="town_deco_hay_name">Сено</string>
    <string name="town_deco_hay_desc">Стожок ароматного сена.</string>
    <string name="town_deco_firewood_name">Дрова</string>
@@ -3654,6 +3654,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
    <string name="town_deco_library_books_desc">Даже это лучше книг из подземелья.</string>
    <string name="town_deco_wallpaper_name">Обои</string>
    <string name="town_deco_wallpaper_desc">Отличный дизайнерский ход для такого места.</string>
+   <string name="town_deco_stones_name">Камни</string>
+   <string name="town_deco_stones_desc">Просто куча камней.</string>
+   <string name="town_deco_fireplace_name">Кострище</string>
+   <string name="town_deco_fireplace_desc">Отлично подойдет для согрева в таком холодном месте.</string>
 
 
     <string name="Welcome_Text_28_6">
