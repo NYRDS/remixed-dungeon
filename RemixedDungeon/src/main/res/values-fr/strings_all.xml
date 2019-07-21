@@ -207,7 +207,7 @@
 
     <string name="Mob_StaControlledStatus">Ce %s est sous votre possession sacrilège</string>
 
-    <string name="BlackCat_AiStatus">Ce chat noir domestique ne fait rien de plus qu'un chat ordinaire</string>
+    <string name="BlackCat_AiStatus">Ce chat noir domestique ne fait rien de plus qu\'un chat ordinaire</string>
     <string name="Shopkeeper_Buy">Choisissez quelque chose à acheter</string>
     <string name="Shopkeeper_title">Magasin</string>
     <string name="Shopkeeper_text">Bienvenue dans votre succursale Pixel-Market.\nQue puis-je faire pour vous ?</string>
@@ -714,7 +714,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="WndStory_Metropolis">La métropole naine était la plus grande de toutes les cités-états naines. Lors de son apogée, l\'armée mécanique des nains repoussa avec succès l\'invasion du dieu ancien et son armée de démons. Mais on raconte que les guerriers qui en sont revenus ont apportés les graines de la corruption avec eux, et que la victoire n\'était que le début de la fin de ce royaume souterrain.</string>
     <string name="WndStory_Halls">Ces niveaux sont les vestiges des banlieues de la métropole naine. Après la victoire coûteuse dans la guerre contre l\'ancien dieu, les nains furent trop affaiblis pour se débarrasser des démons restants. Peu à peu les démons se sont attachés à cet endroit qu\'on appelle désormais le Hall des Démons.
 Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
-    <string name="WndStory_Spiders">Il y a bien longtemps, il y avait ici une mine de gemmes magiques. Mais quand les filons finirent par s\'épuiser, les mineurs partirent, abandonnant derrière eux un vaste réseau de tunnels. Puis des araignées venimeuses vinrent s\'y installer. Mais ces dangereuses créatures, tapis dans le noir, n\'ont jamais suffi à décourager de pauvres fous de partir à la recherche des trésors peut-être encore présents dans cette mine. Les légendes sur les objets magiques qu\'il pouvait y rester grandissaient en mesure du danger de ce lieu. Un jour, une sorcière maléfique prit la fuite dans ces tunnels pour échapper à ces bourreaux. Mais la superstition populaire les dissuada de la poursuivre dans ces ténèbres. Ils décidèrent tout simplement de l\'attendre à l\'entrée, mais la sorcière ne fut jamais revue. Peut-être avait-elle trouvé une autre sortie, ou réussi à passer à travers les gardiens sans qu'on la voie ? Ou, plus certainement, était-elle morte au coeur de ce nid obscur d\'araignées grouillantes ?</string>
+    <string name="WndStory_Spiders">Il y a bien longtemps, il y avait ici une mine de gemmes magiques. Mais quand les filons finirent par s\'épuiser, les mineurs partirent, abandonnant derrière eux un vaste réseau de tunnels. Puis des araignées venimeuses vinrent s\'y installer. Mais ces dangereuses créatures, tapis dans le noir, n\'ont jamais suffi à décourager de pauvres fous de partir à la recherche des trésors peut-être encore présents dans cette mine. Les légendes sur les objets magiques qu\'il pouvait y rester grandissaient en mesure du danger de ce lieu. Un jour, une sorcière maléfique prit la fuite dans ces tunnels pour échapper à ces bourreaux. Mais la superstition populaire les dissuada de la poursuivre dans ces ténèbres. Ils décidèrent tout simplement de l\'attendre à l\'entrée, mais la sorcière ne fut jamais revue. Peut-être avait-elle trouvé une autre sortie, ou réussi à passer à travers les gardiens sans qu\'on la voie ? Ou, plus certainement, était-elle morte au coeur de ce nid obscur d\'araignées grouillantes ?</string>
 
 
     <string name="WndTradeItem_Sale">A VENDRE : %1$s - %2$dor</string>
@@ -1086,7 +1086,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="AzuterronNPC_Gender">Feminin</string>
     <string name="AzuterronNPC_Name_Objective">Apparition</string>
     <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
-    <string name="AzuterronNPC_Quest_Start">Oh, quoi ... mais tu me vois ! C'est que tu n\'es pas l\'un d\' \"eux\". Je vois que toi non plus tu n\'aimes pas tous ces monstres. J\'ai un petit problème. Si tu m\'aides à le résoudre, je t\'aiderai également. Quelque part dans ce niveau, tu trouveras une créature de l\'ombre, un _Esprit Perfide_. Tue-le,  arrache-lui le coeur et reviens me voir. Encore une chose, si tu es intéressé : j'ai des choses à vendre. N\'hésite pas à demander.</string>
+    <string name="AzuterronNPC_Quest_Start">Oh, quoi ... mais tu me vois ! C\'est que tu n\'es pas l\'un d\' \"eux\". Je vois que toi non plus tu n\'aimes pas tous ces monstres. J\'ai un petit problème. Si tu m\'aides à le résoudre, je t\'aiderai également. Quelque part dans ce niveau, tu trouveras une créature de l\'ombre, un _Esprit Perfide_. Tue-le,  arrache-lui le coeur et reviens me voir. Encore une chose, si tu es intéressé : j\'ai des choses à vendre. N\'hésite pas à demander.</string>
     <string name="AzuterronNPC_Quest_Reminder">Aide-moi et je t\'aiderai.</string>
     <string name="AzuterronNPC_Quest_End">Excellent. Prend cette potion, tu en tireras certainement profit.</string>
     <string name="Journal_Azuterron">Apparition</string>
@@ -1468,7 +1468,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="ArmoredStatue_Name">statue animée</string>
     <string name="ArmoredStatue_Gender">feminin</string>
     <string name="ArmoredStatue_Name_Objective">statue animée</string>
-    <string name="ArmoredStatue_Desc">Personne ne pourrait penser que c'est juste une statue ordinaire. Non seulement à cause de ses yeux rouges lumineux, mais aussi parce que personne ne poserait d\'_%s_ sur une telle chose.</string>
+    <string name="ArmoredStatue_Desc">Personne ne pourrait penser que c\'est juste une statue ordinaire. Non seulement à cause de ses yeux rouges lumineux, mais aussi parce que personne ne poserait d\'_%s_ sur une telle chose.</string>
 
 
     <string name="SpiderGuard_Name">araignée garde</string>
@@ -1793,7 +1793,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="BattleAxe_Name">hache de bataille</string>
-    <string name="BattleAxe_Info">Le fer énorme de cette hache de bataille porte un choc meurtrier à l\'adversaire à chaque foi qu'il s\'abat.</string>
+    <string name="BattleAxe_Info">Le fer énorme de cette hache de bataille porte un choc meurtrier à l\'adversaire à chaque foi qu\'il s\'abat.</string>
     <string name="BattleAxe_Gender">feminin</string>
 
 
@@ -2618,7 +2618,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="TownGuardNPC_Desc">Un garde ordinaire de la ville.</string>
     <string name="TownGuardNPC_Message1">Bougez d\'ici</string>
     <string name="TownGuardNPC_Message2">Grâce aux aventuriers comme vous, c\'est vraiment redevenu paisible ici.</string>
-    <string name="TownGuardNPC_Message3">Vous trouvez qu\'il y a trop de gardes dans cette ville ? Vous ne croyez pas que c\'est parce que c\'est la seule ville dotée d'un gigantesque donjon infesté de monstre ?</string>
+    <string name="TownGuardNPC_Message3">Vous trouvez qu\'il y a trop de gardes dans cette ville ? Vous ne croyez pas que c\'est parce que c\'est la seule ville dotée d\'un gigantesque donjon infesté de monstre ?</string>
 
 
     <string name="TownsfolkNPC_Name">habitant</string>
@@ -2871,7 +2871,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="GothicArmor_Name">Armure gothique</string>
-    <string name="GothicArmor_Info">Une armure gothique est le chef-d\'oeuvre de l'art des forgerons.</string>
+    <string name="GothicArmor_Info">Une armure gothique est le chef-d\'oeuvre de l\'art des forgerons.</string>
 
 
     <string name="ChaosArmor_Name">Armure du chaos</string>
@@ -3516,7 +3516,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
 
     <string name="SmashSpell_Name">Smash</string>
     <string name="SmashSpell_Info">Sautez en l\'air et créez une puissante onde de choc lorsque vous touchez le sol. Elle étourdit temporairement vos ennemis et leur inflige des dégâts physiques.</string>
-    <string name="SmashSpell_NeedWeapon">J\'ai besoin d'une arme pour ce mouvement.</string>
+    <string name="SmashSpell_NeedWeapon">J\'ai besoin d\'une arme pour ce mouvement.</string>
 
     <string name="town_deco_pillar_name">Pilier</string>
    <string name="town_deco_entrance_name">Entrée</string>
