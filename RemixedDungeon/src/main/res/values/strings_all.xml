@@ -3583,7 +3583,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
    <string name="town_deco_stock_name">Stock</string>
    <string name="town_deco_stock_desc">Food supplies are stored here, as well as a bunch of different junk of all sorts and colors.</string>
    <string name="town_deco_barrel_name">Barrel</string>
-   <string name="town_deco_barrel_desc">A regular barrel that sadly cannot be opened.</string>
+   <string name="town_deco_barrel_desc">A regular barrel, not in the best condition as well.</string>
    <string name="town_deco_hay_name">Hay</string>
    <string name="town_deco_hay_desc">A small stack of pleasantly smelling hay.</string>
    <string name="town_deco_firewood_name">Firewood</string>
@@ -3640,6 +3640,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
    <string name="town_deco_library_books_desc">Still better than the books from the dungeon.</string>
    <string name="town_deco_wallpaper_name">Wallpaper</string>
    <string name="town_deco_wallpaper_desc">A great decorating solution for such a place.</string>
+   <string name="town_deco_stones_name">Stones</string>
+   <string name="town_deco_stones_desc">Just a pile of stones.</string>
+   <string name="town_deco_fireplace_name">Fireplace</string>
+   <string name="town_deco_fireplace_desc">Great for warming up in a cold place like this.</string>
 
 
     <string name="Welcome_Text_28_6">
