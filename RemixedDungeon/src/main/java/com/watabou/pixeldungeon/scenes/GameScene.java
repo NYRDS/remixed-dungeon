@@ -849,6 +849,8 @@ public class GameScene extends PixelScene {
     public static Image getTile(int cell) {
         Image ret;
 
+        GameScene scene = GameScene.scene;
+
         if(scene.roofTiles!=null) {
             ret = scene.roofTiles.tile(cell);
 

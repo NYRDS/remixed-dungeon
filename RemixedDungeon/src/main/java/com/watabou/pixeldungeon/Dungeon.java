@@ -269,6 +269,8 @@ public class Dungeon {
 
     public static void switchLevel(final Level level, int pos, Collection<Mob> followers) {
 
+        EventCollector.collectSessionData("level",level.levelId);
+
         nightMode = new Date().getHours() < 7;
 
         Actor.init(level);
