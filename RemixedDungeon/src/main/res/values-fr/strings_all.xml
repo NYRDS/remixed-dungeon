@@ -11,7 +11,7 @@
 
 
     <string name="SummonDeathling_Name">Invoquer un Serviteur des Morts </string>
-    <string name="SummonDeathling_Info">Invoquez un Serviteur des Morts. Ses HP et dégâts augmenteront en même temps que le niveau du héros.  \n\Limite d\'invocation : %1$d (+1 à chaque niveau magique)</string>
+    <string name="SummonDeathling_Info">Invoquez un Serviteur des Morts. Ses HP et dégâts augmenteront en même temps que le niveau du héros.  \n\nLimite d\'invocation : %1$d (+1 à chaque niveau magique)</string>
 
 
     <string name="Ignite_Name">Enflammer</string>
@@ -331,7 +331,7 @@
     <string name="WandOfFlock_Info">Un petit coup de ce sceptre invoque un troupeau de moutons magiques, créant ainsi un obstacle temporaire impénétrable.</string>
     <string name="Sheep_Name">mouton</string>
     <string name="Sheep_Name_Objective">mouton</string>
-    <string name="Sheep_Gender">masculin</string>
+    <string name="Sheep_Gender">masculine</string>
     <string name="Sheep_Desc">C\'est un mouton magique. Qu\'y a-t-il de si magique chez lui ? On ne peut pas le tuer. Il restera là, en mâchant du foin, le regard vide, jusqu\'à ce qu\'il disparaisse par magie.</string>
 
     <string-array name="WandOfFlock_SheepBaa">
@@ -412,23 +412,38 @@
     <string name="Welcome_Title">Bienvenue!</string>
 
     <string name="Welcome_Text_28_3">
-remix.28.3\n
-- Nouvelles capacités du Nécromancier :\n
-* Sacrifice macabre\n
-* Exhumation\n
-* Réveil des morts\n
-- Poisson frit, gelé, pourri et en sashimi\n
-- Modding:\n
-* Sorts peuvent être modifiés\n
-* Objets peuvent être modifiés</string>
+    remix.28.3\n
+    - Nouvelles capacités du Nécromancier :\n
+    -- Sacrifice macabre\n
+    -- Exhumation\n
+    -- Réveil des morts\n
+    - Poisson frit, gelé, pourri et en sashimi\n
+    - Modding:\n
+    -- Sorts peuvent être modifiés\n
+    -- Objets peuvent être modifiés
+    </string>
 
     <string name="Welcome_Text_28_4">
-remix.28.4\n
-- Améliorations graphiques:\n
--- Armes de Héros maintenant visibles en jeu\n</string>
+    remix.28.4\n
+    - Améliorations graphiques:\n
+    -- Armes de Héros maintenant visibles en jeu\n
+    </string>
+
+    <string name="Welcome_Text_28_5">
+    remix.28.5\n
+    - Modding :\n
+    -- IA modifiable pour les ennemis et les personnages non joueurs (NPC)\n
+    - Ville :\n
+    -- L\'église est maintenant ouverte aux croyants\n
+    -- Le magasin en ville est rénové\n
+    - Mécanique de jeu :\n
+    -- Interface Utilisateur (UI) des commerces améliorées\n
+    -- Le portail peut être utilisé autant de fois que nécessaire\n
+    </string>
+
 
     <string name="BlackCat_Name">Chat noir</string>
-    <string name="BlackCat_Gender">masculin</string>
+    <string name="BlackCat_Gender">masculine</string>
     <string name="BlackCat_Name_Objective">Chat</string>
     <string name="BlackCat_Desc">C\'est un chat noir</string>
 
@@ -441,7 +456,7 @@ remix.28.4\n
     <string name="Str_lose">-1 str</string>
 
     <string name="SociologistNPC_Name">Sociologue</string>
-    <string name="SociologistNPC_Gender">masculin</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name_Objective">Sociologue </string>
     <string name="SociologistNPC_Desc">Ce sociologue est en mission sacrée pour récolter l\'opinion publique</string>
 
@@ -461,19 +476,19 @@ remix.28.4\n
 
 
     <string name="HealthDart_Name">Fléchette de guérison</string>
-    <string name="HealthDart_Gender">féminin</string>
+    <string name="HealthDart_Gender">feminine</string>
     <string name="HealthDart_Info">La pointe de cette fléchette a été trempée dans une potion de guérison.</string>
 
     <string name="HealthArrow_Name">Flèche de guérison</string>
-    <string name="HealthArrow_Gender">féminin</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">La pointe de cette flèche a été trempée dans une potion de guérison.</string>
 
     <string name="AmokDart_Name">Fléchette de folie meutrière</string>
-    <string name="AmokDart_Gender">féminin</string>
+    <string name="AmokDart_Gender">feminine</string>
     <string name="AmokDart_Info">Le liquide empreignant la pointe de cette fléchette transformera tout être vivant en fou furieux sans pitié.</string>
 
     <string name="AmokArrow_Name">Flèche de folie meutrière </string>
-    <string name="AmokArrow_Gender">féminin</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">Le liquide empreignant la pointe de cette flèche transformera tout être vivant en fou furieux sans pitié.</string>
 
     <string name="WndHero_SkillLevel">Niveau de compétence</string>
@@ -640,6 +655,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="WndGame_Ranking">Classement</string>
     <string name="WndGame_Start">Nouvelle partie</string>
     <string name="WndGame_menu">Menu principal</string>
+    <string name="WndGame_Exit">Fermer Remixed Dungeon</string>
     <string name="WndGame_Return">Revenir à la partie</string>
     <string name="WndGame_Save">Sauvegarder</string>
     <string name="WndGame_Load">Charger</string>
@@ -797,6 +813,9 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="LloidsBeacon_Preventing">Une forte aura magique vous empêche d\'utiliser la balise de lloyd !</string>
     <string name="LloidsBeacon_Creatures">L\'aura psychique des créatures aux alentours vous empêchent d\'utiliser la balise de lloyd pour le moment.</string>
     <string name="LloidsBeacon_Return">La balise est bien installée à votre position, vous pourrez revenir ici n\'importe quand maintenant. </string>
+    <string name="LloidsBeacon_Set">\n\nCette balise a été placée quelque part au niveau %d de Remixed Dungeon.</string>
+
+
     <string name="Stylus_Name">stylet arcanique</string>
     <string name="Stylus_ACInscribe">INSCRIRE</string>
     <string name="Stylus_Info">Le stylet arcanique est fait d\'une pierre noire et très dure. Vous pouvez graver des glyphes et des runes avec, mais vous ne pourrez choisir lesquelles, le stylet choisira pour vous.</string>
@@ -883,7 +902,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Pickaxe_Name">pioche</string>
     <string name="Pickaxe_Info">C\'est un outil grand et robuste fait pour casser la pierre. Il pourrait peut-être servir d\'arme.</string>
     <string name="Pickaxe_ACMine">MINER</string>
-    <string name="Pickaxe_Gender">féminin</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_NoVein">Il n\'y a aucune veine de minerai d\'or noir à proximité</string>
 
 
@@ -1006,6 +1025,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="TitleScene_InternalStorageLow">Pas assez de place\n dans l\'espace de stockage interne\n Votre progression peut être perdue !</string>
 
 
+    <string name="AboutScene_Txt_Intro">Remixed Dungeon par NYRDS est basé sur le code source de Pixel Dungeon de Watabou.</string>
     <string name="AboutScene_Code">Code :</string>
     <string name="AboutScene_Graphics">Graphismes : </string>
     <string name="AboutScene_Music">Musique :</string>
@@ -1016,7 +1036,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="AboutScene_Snd">Envoyer un E-Mail</string>
     <string name="AboutScene_Translation">Localisé par :</string>
-    <string name="AboutScene_Translation_Names">Rémi Schneider &amp; Emmanuel Dempuré &amp; Bastien PIXEL&amp; Nikolay &amp; Clément Tetu &amp; Laurent Stehlin</string>
+    <string name="AboutScene_Translation_Names">Rémi Schneider &amp; Emmanuel Dempuré &amp; Bastien PIXEL&amp; Nikolay &amp; Clément Tetu &amp; Tib de Bar &amp; Laurent Stehlin</string>
 
 
 
@@ -1083,7 +1103,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="RemixedPixelDungeonApp_sendCrash">Notre jeu s\'est planté... \n Désolé.\nVeuillez-nous envoyer un rapport de plantage pour nous aider à régler le problème.</string>
     <string name="AzuterronNPC_Name">Apparition</string>
-    <string name="AzuterronNPC_Gender">Feminin</string>
+    <string name="AzuterronNPC_Gender">feminine</string>
     <string name="AzuterronNPC_Name_Objective">Apparition</string>
     <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
     <string name="AzuterronNPC_Quest_Start">Oh, quoi ... mais tu me vois ! C\'est que tu n\'es pas l\'un d\' \"eux\". Je vois que toi non plus tu n\'aimes pas tous ces monstres. J\'ai un petit problème. Si tu m\'aides à le résoudre, je t\'aiderai également. Quelque part dans ce niveau, tu trouveras une créature de l\'ombre, un _Esprit Perfide_. Tue-le,  arrache-lui le coeur et reviens me voir. Encore une chose, si tu es intéressé : j\'ai des choses à vendre. N\'hésite pas à demander.</string>
@@ -1093,26 +1113,26 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="TreacherousSpirit_Name">Esprit perfide</string>
-    <string name="TreacherousSpirit_Gender">masculin</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name_Objective">Esprit perfide</string>
     <string name="TreacherousSpirit_Desc">Cette monstrueuse créature ressemble à un nuage de ténèbres vivantes. Son oeil sans paupière vous regarde, palpitant à chacun de vos mouvements.</string>
 
 
     <string name="SpiritOfPain_Name">esprit de la douleur</string>
-    <string name="SpiritOfPain_Gender">masculin</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name_Objective">esprit de la douleur</string>
     <string name="SpiritOfPain_Desc">Un éclat de ténèbres vivantes.</string>
 
 
     <string name="SuspiciousRat_Name">Rat étrange</string>
-    <string name="SuspiciousRat_Gender">masculin</string>
+    <string name="SuspiciousRat_Gender">masculine</string>
     <string name="SuspiciousRat_Name_Objective">Rat suspect</string>
     <string name="SuspiciousRat_Desc">Les rats ne sont pas rares dans les donjons, mais à demeurer aussi profondément... Vous pouvez voir que le corps du rat est rempli de spasmes quand il bouge.</string>
     <string name="SuspiciousRat_Info1">Le rat suspect se contracte violemment.</string>
 
 
     <string name="PseudoRat_Name">Pseudo-rat</string>
-    <string name="PseudoRat_Gender">masculin</string>
+    <string name="PseudoRat_Gender">masculine</string>
     <string name="PseudoRat_Name_Objective">Pseudo-rat</string>
     <string name="PseudoRat_Desc">Une horrible bête émerge du corps du rat qui ne ressemble ni à un rongeur ni à aucun autre animal que vous ayez déjà vu. Une énorme bouche, pleine de dents tranchantes, occupe la plus grande partie de son corps.</string>
 
@@ -1123,7 +1143,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="HeartOfDarkness_Name">Coeur des ténébres</string>
     <string name="HeartOfDarkness_Info">Le coeur noir et palpitant de l\'Esprit perfide.</string>
-    <string name="HeartOfDarkness_Gender">masuculin</string>
+    <string name="HeartOfDarkness_Gender">masuculine</string>
 
 
 
@@ -1176,7 +1196,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="Deathling_Name">Serviteur des Morts</string>
-    <string name="Deathling_Gender">masculin </string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name_Objective">Serviteur des Morts</string>
     <string name="Deathling_Desc">Un Serviteur des Morts est l\'âme d\'un héros trépassé, et suffisament malchanceuse pour être invoquée par les pouvoirs de nécromancien d\'un autre aventurier. </string>
 
@@ -1304,47 +1324,47 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="WoodenBow_Name">arc en bois</string>
     <string name="WoodenBow_Info">Ce simple arc en bois pourrait s\'avérer utile dès que vous aurez trouvé quelques flèches .</string>
-    <string name="WoodenBow_Gender">masculin</string>
+    <string name="WoodenBow_Gender">masculine</string>
 
 
     <string name="CompoundBow_Name">Arc à poulies</string>
     <string name="CompoundBow_Info">Les flèches tirées avec un arc à poulies infligent une grande quantité de dégâts et ont une précision améliorée en échange d\'un peu moins de vitesse.</string>
-    <string name="CompoundBow_Gender">masculin</string>
+    <string name="CompoundBow_Gender">masculine</string>
 
 
     <string name="RubyBow_Name">arc rubis</string>
     <string name="RubyBow_Info">Seuls les meilleurs archers peuvent utiliser l\'arc de rubis. Presque toutes les flèches transpercent l\'ennemi, laissant un énorme trou dans son corps. Mais une force élevée est requise pour tendre la corde.</string>
-    <string name="RubyBow_Gender">masculin</string>
+    <string name="RubyBow_Gender">masculine</string>
 
 
     <string name="Quiver_Name">carquois</string>
     <string name="Quiver_Info">carquois</string>
-    <string name="Quiver_Gender">masculin</string>
+    <string name="Quiver_Gender">masculine</string>
 
 
     <string name="CommonArrow_Name">flèche</string>
     <string name="CommonArrow_Info">Flèches en bois communes avec tête en fer.</string>
-    <string name="CommonArrow_Gender">féminin</string>
+    <string name="CommonArrow_Gender">feminine</string>
 
 
     <string name="FireArrow_Name">flèche de feu</string>
     <string name="FireArrow_Info">Cette flèche ressemble tout à fait à une flèche normale, excepté la tiède lumière rouge qui émane de sa tête.</string>
-    <string name="FireArrow_Gender">féminin</string>
+    <string name="FireArrow_Gender">feminine</string>
 
 
     <string name="PoisonArrow_Name">flèche empoisonnée</string>
     <string name="PoisonArrow_Info">Des gouttes d\'un poison mortel brillent sur la tête de cette flèche.</string>
-    <string name="PoisonArrow_Gender">féminin</string>
+    <string name="PoisonArrow_Gender">feminine</string>
 
 
     <string name="ParalysisArrow_Name">flèche paralysante</string>
     <string name="ParalysisArrow_Info">Cette flèche libère une odeur très faible mais familière de curare.</string>
-    <string name="ParalysisArrow_Gender">féminin</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
 
 
     <string name="FrostArrow_Name">flèche de froid</string>
     <string name="FrostArrow_Info">Vous pouvez ressentir une aura glaçante émaner de la flèche.</string>
-    <string name="FrostArrow_Gender">féminin</string>
+    <string name="FrostArrow_Gender">feminine</string>
 
     <string name="Bowknot_Name">Noeud papillon</string>
     <string name="Bowknot_Info">Un joli ruban rose brillant noué et attaché à une épingle à cheveux.</string>
@@ -1399,7 +1419,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="FortuneTellerNPC_Name">diseuse de bonne aventure</string>
-    <string name="FortuneTellerNPC_Gender">féminin</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name_Objective">diseuse de bonne aventure</string>
     <string name="FortuneTellerNPC_Desc">Cette femme porte une longue et brillante robe colorée. Elle a l\'air curieusement jeune pour quelqu\'un qui maîtrise la science arcanique des voyants. En vous rapprochant, vous pouvez l\'entendre marmonner pendant qu\'elle fixe sa boule de crystal. </string>
 
@@ -1443,7 +1463,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Hero_AnotherTry">Vous êtes mort.\n Voulez-vous essayer encore une fois ?</string>
 
     <string name="ShadowLord_Name">seigneur de l\'ombre</string>
-    <string name="ShadowLord_Gender">masculin</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name_Objective">Seigneur de l\'ombre</string>
     <string name="ShadowLord_Desc">Créature faite exclusivement de mal et de ténèbres, beaucoup croient qu\'il s\'agit de l\'Ancien Dieu en personne, vu comme il est puissant. D\'autres pensent que ce n\'est qu\'un gardien des chambres de l\'Ancien Dieu.</string>
     <string name="ShadowLord_Intro">En garde !</string>
@@ -1466,19 +1486,19 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Cliquez ici pour rejoindre l\'équipe de traduction de Remixed Dungeon</string>
 
     <string name="ArmoredStatue_Name">statue animée</string>
-    <string name="ArmoredStatue_Gender">feminin</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name_Objective">statue animée</string>
     <string name="ArmoredStatue_Desc">Personne ne pourrait penser que c\'est juste une statue ordinaire. Non seulement à cause de ses yeux rouges lumineux, mais aussi parce que personne ne poserait d\'_%s_ sur une telle chose.</string>
 
 
     <string name="SpiderGuard_Name">araignée garde</string>
-    <string name="SpiderGuard_Gender">feminin</string>
+    <string name="SpiderGuard_Gender">feminine</string>
     <string name="SpiderGuard_Name_Objective">araignée garde</string>
     <string name="SpiderGuard_Desc">Comme les soldats, les araignées gardes ont juré de protéger leur royaume. Le poison des gardes est utilisé pour immobiliser leurs cibles et les paralyser.</string>
 
 
     <string name="SpiderMindAmber_Name">araignée ambre</string>
-    <string name="SpiderMindAmber_Gender">feminin</string>
+    <string name="SpiderMindAmber_Gender">feminine</string>
     <string name="SpiderMindAmber_Name_Objective">araignée ambre</string>
     <string name="SpiderMindAmber_Desc">Les araignées ambres sont de rares et mystérieuses créatures possédant des pouvoirs psychiques similaires à ceux des psi-araignées, mais sont bien plus fortes que leurs soeurs. Le mot \"ambre\" fait référence à la couleur de leurs cerveaux géants, qui est révélés à leurs victimes, au moment où les Araingnées Ambres attaquent avec leurs pouvoirs.</string>
 
@@ -1596,44 +1616,44 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="Kobold_Name">kobold</string>
-    <string name="Kobold_Gender">masculin</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="Kobold_Desc">Les kobolds étaient considérés comme des êtres de légende. Ancêtre des gnolls communs, les kobolds vivent dans les grottes profondes et froides. On dit que leur peuple a maîtrisé l\'ingénierie et la machinerie bien avant les nains. Toutefois, on ne sait pas pourquoi ils ont disparu il y a tant d\'années...</string>
 
 
     <string name="KoboldIcemancer_Name">kobold glaçomancier</string>
-    <string name="KoboldIcemancer_Gender">masculin</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Name_Objective">kobold glaçomancier</string>
     <string name="KoboldIcemancer_Desc">Les kobolds glaçomanciers formaient une élite dans leur société, en tant que guerriers, magiciens et avant tout scientifiques. Les anciens kobolds glaçomanciers maîtrisaient l\'art de tailler la glace, créant ainsi des mécanismes avancés à partir de la glace, renforcés magiquement...</string>
     <string name="KoboldIcemancer_Killed">L\'éclair glacé de %s vous a tué...</string>
 
 
     <string name="ColdSpirit_Name">esprit froid</string>
-    <string name="ColdSpirit_Gender">masculin</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">esprit froid</string>
     <string name="ColdSpirit_Desc">Un esprit froid est une manifestation du froid, sous sa forme la plus pure. C\'est une simple enveloppe, créée grâce à la magie, agissant suivant la volonté de son créatuer ou d\'instints et réflexes basiques. </string>
 
 
     <string name="IceElemental_Name">élémentaire de glace</string>
-    <string name="IceElemental_Gender">masculin</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name_Objective">élémentaire de glace</string>
     <string name="IceElemental_Desc">Parmi tous les élémentaux qui existent dans les donjons, ceux de glace ne sont peut-être pas les plus forts, mais ils peuvent facilement être vus comme appartenant aux plus dangereux. Leur corps irradie de froid, refroidissant leurs enemis. </string>
 
 
     <string name="IceGuardian_Name">gardien de glace</string>
-    <string name="IceGuardian_Gender">masculin</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">gardien de glace</string>
     <string name="IceGuardian_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs grottes. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
 
 
     <string name="IceGuardianCore_Name">gardien de glace</string>
-    <string name="IceGuardianCore_Gender">masculin</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name_Objective">gardien de glace</string>
     <string name="IceGuardianCore_Desc">Les gardiens de glace ont été fabriqués par les anciens kobolts pour protéger leurs grottes. La puissance emmagasiné dans leur noyau leur permet de se reconstruire tant qu\'ils ont assez d\'énergie.</string>
 
 
     <string name="CagedKobold_Name">kobold en cage</string>
-    <string name="CagedKobold_Gender">masculin</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Name_Objective">kobold en cage</string>
     <string name="CagedKobold_Desc">Un kobold, dans une cage.</string>
     <string name="CagedKobold_Intro">Hé... Ho ! Tu dois être ce fameux aventurier ? Aide-moi, mon pote, ces maudits militaristes m\'ont enfermé là-dedans ! Ils essaient de réactiver une ancienne arme pour conquérir le monde des humains à la surface. Mais c\'est très dangereux, alors je m\'y suis opposé. Ils m\'ont tout de suite attrapé et enfermé dans cette cage. Je t\'en supplie : trouve la clé de ma cellule. En retour, je t\'aiderai du mieux que je pourrai.</string>
@@ -1673,18 +1693,18 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="GoldenSword_Name">épée en or</string>
     <string name="GoldenSword_Info">Normalement les armes faites d\'un tel métal sont considérées comme de la décoration. Cependant cette lame semble être très coupante.</string>
-    <string name="GoldenSword_Gender">feminin</string>
+    <string name="GoldenSword_Gender">feminine</string>
 
 
 
     <string name="GoldenStatue_Name">statue en or</string>
-    <string name="GoldenStatue_Gender">féminin</string>
+    <string name="GoldenStatue_Gender">féminine</string>
     <string name="GoldenStatue_Name_Objective">statue en or</string>
     <string name="GoldenStatue_Desc">C\'est impensable, cette magnifique statue n\'est pas une décoration, mais une créature malicieuse attendant l\'aventurier sans méfiance. Au premier abord vous auriez juré que cette _%s_ était juste une partie de son bras.</string>
 
 
     <string name="NecromancerNPC_Name">nécromancien</string>
-    <string name="NecromancerNPC_Gender">mâle</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Name_Objective">nécromancien</string>
     <string name="NecromancerNPC_Desc">Cet homme ayant la cinquantaine semble être à la fois légèrement énervé et excité. Il porte une armure composite faite de fragments d\'os.</string>
     <string name="NecromancerNPC_Intro"> Ah! C\'est si rare! Un aventurier qui n\'est pas mort. Remarquable! Oh... excusez-moi, parfois je suis tellement excité. Comme vous pouvez le voir, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est mon métier, voir encore et toujours la même chose devient finalement très ennuyeux. D\'un autre côté c\'est exactement la raison pour laquelle je suis ici. D\'après quelques semaines de calculs, quelque part dans ce donjon se prépare une chose spectaculaire. Une _Nécropole_, une ancienne cité de la mort va ouvrir ses portes. Et... je ne le dirais jamais assez, j\'ai perdu suffisamment de temps. J\'ai besoin d\'être prêt, _revenez plus tard_.</string>
@@ -1694,7 +1714,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="NecromancerNPC_Message4">Il y a quelque chose de vraiment spécial dans la Nécropole.</string>
 
     <string name="RatKing_Name_Objective">roi des rats</string>
-    <string name="RatKing_Gender">masculin</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="Weapon_Identify">Vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
     <string name="Weapon_Incompatible">L\'interaction entre les différents types de magie a annulé l\'enchantement de cette arme !</string>
 
@@ -1794,37 +1814,37 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="BattleAxe_Name">hache de bataille</string>
     <string name="BattleAxe_Info">Le fer énorme de cette hache de bataille porte un choc meurtrier à l\'adversaire à chaque foi qu\'il s\'abat.</string>
-    <string name="BattleAxe_Gender">feminin</string>
+    <string name="BattleAxe_Gender">feminine</string>
 
 
     <string name="Dagger_Name">dague</string>
     <string name="Dagger_Info">Une dague de fer simple avec une poignée de bois bien ancrée.</string>
-    <string name="Dagger_Gender">feminin</string>
+    <string name="Dagger_Gender">feminine</string>
 
 
-    <string name="Glaive_Name">hallebarde</string>
-    <string name="Glaive_Info">Une arme constituée d\'une lame d\'épée au bout d\'un bâton.</string>
-    <string name="Glaive_Gender">féminin</string>
+    <string name="Glaive_Name">glaive</string>
+    <string name="Glaive_Info">Une épée courte et rapide, parfaite pour un jeune guerrier.</string>
+    <string name="Glaive_Gender">masuculine</string>
 
 
     <string name="Knuckles_Name">poing américain</string>
     <string name="Knuckles_Info">Un morceau de fer forgé s\'adaptant au poing.</string>
-    <string name="Knuckles_Gender">masculin</string>
+    <string name="Knuckles_Gender">masculine</string>
 
 
     <string name="Longsword_Name">épée longue</string>
     <string name="Longsword_Info">Cette lame imposante inflige de lourds dommages en utilisant son poids à son avantage.</string>
-    <string name="Longsword_Gender">feminin</string>
+    <string name="Longsword_Gender">feminine</string>
 
 
     <string name="Mace_Name">masse</string>
     <string name="Mace_Info">La tête de fer de cette arme inflige des dommages considérables.</string>
-    <string name="Mace_Gender">féminin</string>
+    <string name="Mace_Gender">feminine</string>
 
 
     <string name="Quarterstaff_Name">penn bazh</string>
     <string name="Quarterstaff_Info">Un fort bâton de bois dur, ses extrémités sont chaussées avec du fer.</string>
-    <string name="Quarterstaff_Gender">masculin</string>
+    <string name="Quarterstaff_Gender">masculine</string>
 
 
     <string name="ShortSword_Name">épée courte</string>
@@ -1833,22 +1853,22 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="ShortSword_Select">Choisissez une arme à améliorer</string>
     <string name="ShortSword_Reforged">vous reforgez votre épée courte pour améliorer votre %s</string>
     <string name="ShortSword_NotBoomerang">vous ne pouvez pas améliorer votre boomerang comme ça</string>
-    <string name="ShortSword_Gender">feminin</string>
+    <string name="ShortSword_Gender">feminine</string>
 
 
     <string name="Spear_Name">lance</string>
     <string name="Spear_Info">Un bâton de bois surmonté d\'une fine pointe de fer.</string>
-    <string name="Spear_Gender">feminin</string>
+    <string name="Spear_Gender">feminine</string>
 
 
     <string name="Sword_Name">épée</string>
     <string name="Sword_Info">Cette longue lame d\'acier polie aiguisée comme un rasoir vous rassure.</string>
-    <string name="Sword_Gender">feminin</string>
+    <string name="Sword_Gender">feminine</string>
 
 
     <string name="WarHammer_Name">marteau de guerre</string>
     <string name="WarHammer_Info">Peu de créatures peuvent résister aux coups de cette enorme masse d\'acier et de plomb, mais seuls les aventuriers les plus forts peuvent l\'utiliser efficacement.</string>
-    <string name="WarHammer_Gender">masculin</string>
+    <string name="WarHammer_Gender">masculine</string>
 
 
 
@@ -1866,32 +1886,32 @@ Vous maintenez le %s prête à l\'emploi.</string>
 
     <string name="Boomerang_Name">boomerang</string>
     <string name="Boomerang_Info">Cette arme de jet plate et incurvée retournera dans les mains de son propriétaire après avoir été lancée sur un ennemi.</string>
-    <string name="Boomerang_Gender">masculin</string>
+    <string name="Boomerang_Gender">masculine</string>
 
 
     <string name="CurareDart_Name">flèchette paralysante</string>
     <string name="CurareDart_Info">Ces petites fléchettes ne font que peu de dommages mais elles peuvent paralyser leur cible, la laissant immobile et sans défense pour un certain temps.</string>
-    <string name="CurareDart_Gender">feminin</string>
+    <string name="CurareDart_Gender">feminine</string>
 
 
     <string name="Dart_Name">flèchette</string>
     <string name="Dart_Info">Ces simples pointes de métal sont faites pour voler et transpercer leur cible d\'un simple mouvement du poignet.</string>
-    <string name="Dart_Gender">feminin</string>
+    <string name="Dart_Gender">feminine</string>
 
 
     <string name="IncendiaryDart_Name">flèchette incendiaire</string>
     <string name="IncendiaryDart_Info">Les pointes de chacune de ces flèchettes sont conçues pour se ficher dans la cible pendant que les composants instables explosent en flammes brillantes.</string>
-    <string name="IncendiaryDart_Gender">feminin</string>
+    <string name="IncendiaryDart_Gender">feminine</string>
 
 
     <string name="Javelin_Name">javelot</string>
     <string name="Javelin_Info">Cette tige de métal est équilibrée pour garder sa pointe en avant alors qu\'elle file dans le vent.</string>
-    <string name="Javelin_Gender">masculin</string>
+    <string name="Javelin_Gender">masculine</string>
 
 
     <string name="Shuriken_Name">shuriken</string>
     <string name="Shuriken_Info">Des morceaux de métal en forme d\'étoile avec des lames aiguisées font des dommages considérables quand ils atteignent leur cible. Ils peuvent être lancés à un rythme soutenu.</string>
-    <string name="Shuriken_Gender">masculin</string>
+    <string name="Shuriken_Gender">masculine</string>
 
 
     <string name="Tamahawk_Name">tomahawk</string>
@@ -1900,29 +1920,29 @@ Vous maintenez le %s prête à l\'emploi.</string>
 
 
     <string name="Kusarigama_Name">kusarigama</string>
-    <string name="Kusarigama_Info">Cette arme est constituée d\'une chaîne en métal, avec une faux à une extrémité, et une lourde masse en fer à l\'autre.</string>
-    <string name="Kusarigama_Gender">masculin</string>
+    <string name="Kusarigama_Info">Cette arme est constituée d\'une chaîne de métal, avec une faux à une extrémité, et une lourde masse en fer à l\'autre.</string>
+    <string name="Kusarigama_Gender">masculine</string>
     <string name="Kusarigama_Pull">TIRER</string>
 
 
     <string name="ChaosSword_Name">épée du Chaos</string>
     <string name="ChaosSword_Info">La lame de cette épée est faite de chaos pur et parfois vibre légèrement. Un grand pouvoir loge dans cette arme, qui peut couper en deux presque n\'importe quoi. Néanmoins, un habileté importante est requise pour maîtriser l\'énorme puissance de cette arme.</string>
-    <string name="ChaosSword_Gender">feminin</string>
+    <string name="ChaosSword_Gender">feminine</string>
 
 
     <string name="ChaosBow_Name">arc du chaos</string>
     <string name="ChaosBow_Info">Un arc effrayant rempli du pouvoir du Chaos. Chaque flèche décochée avec cet arc portera un morceau d\'énergie chaotique à la cible. Mais si vous ratez... </string>
-    <string name="ChaosBow_Gender">masculin</string>
+    <string name="ChaosBow_Gender">masculine</string>
 
 
     <string name="ChaosStaff_Name">baton du Chaos</string>
     <string name="ChaosStaff_Info">Un baton regorgeant du pouvoir du chaos ! Les mages en rèvent-ils ou en ont peur ?</string>
-    <string name="ChaosStaff_Gender">masculin</string>
+    <string name="ChaosStaff_Gender">masculine</string>
 
 
     <string name="SacrificialSword_Name">épée de sacrifice</string>
     <string name="SacrificialSword_Info">Au premier regard, cette vieille épée en bronze, couverte de taches de patine, semble complètement inutile. Or une sorte de pouvoir ancien, archaïque, dort à l\'intérieur. Ce pouvoir peut transformer presque toute créature en un esclave dénué de volonté. Il faut juste trouver le bon moyen pour les réveiller... </string>
-    <string name="SacrificialSword_Gender">feminin</string>
+    <string name="SacrificialSword_Gender">feminine</string>
 
     <string name="ScrollOfSummoning_Name">Parchemin d\'invocation</string>
     <string name="ScrollOfSummoning_Info">Lorsqu\'il est lu à haute voix, ce parchemin invoque l\'un des monstres du niveau actuel du donjon. Et si sa volonté est suffisamment faible, il deviendra votre serviteur.</string>
@@ -1944,23 +1964,23 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Mob_StaPassiveStatus">Ce %s est passif</string>
 
     <string name="Acidic_Name">scorpion acide</string>
-    <string name="Acidic_Gender">masculin</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name_Objective">scorpion acide</string>
     <string name="Acidic_Desc">Ces énormes arachnides démoniaques évitent le combat rapproché à tout prix, en tirant des dards barbelés à longues portées et qui vous paralysent.</string>
 
 
     <string name="Albino_Name">rat albinos</string>
-    <string name="Albino_Gender">masculin</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name_Objective">rat albinos</string>
     <string name="Albino_Desc">Les rats géants sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre. Ce rat particulier semble être albinos. Ses dents sont anormalement aiguisées.</string>
 
     <string name="Bandit_Name">bandit dément</string>
-    <string name="Bandit_Gender">mâle</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name_Objective">bandit dément</string>
     <string name="Bandit_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant ces excursions si loin de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
 
     <string name="Bat_Name">chauve-souris vampire</string>
-    <string name="Bat_Gender">feminin</string>
+    <string name="Bat_Gender">feminine</string>
     <string name="Bat_Name_Objective">chauve-souris vampire</string>
     <string name="Bat_Desc">Ces résidents des grottes, rapides et teigneux, peuvent vaincre des ennemis bien plus gros en regagnant leur santé à chaque morsure réussie.</string>
     <string name="Bat_Defense">esquivé</string>
@@ -1968,18 +1988,18 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Brute_Name">gnoll brutal</string>
     <string name="Brute_Name_Objective">gnoll brutal</string>
     <string name="Brute_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils passent en mode berzerk, infligeant encore plus de dégâts à leurs ennemis.</string>
-    <string name="Brute_Gender">mâle</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Enraged">%s devient enragé !</string>
     <string name="Brute_StaEnraged">enragé</string>
 
     <string name="Crab_Name">crabe des égouts</string>
-    <string name="Crab_Gender">mâle</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name_Objective">crabe des égouts</string>
     <string name="Crab_Desc">Ces énormes crabes sont au sommet de la chaîne alimentaire dans les égouts. Ils sont très rapides et leur exosquelette épais peut résister à des coups puissants.</string>
     <string name="Crab_Defense">paré</string>
 
     <string name="DM300_Name">DM-300</string>
-    <string name="DM300_Gender">mâle</string>
+    <string name="DM300_Gender">masculine</string>
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="DM300_Desc">Cette machine fut créée par les nains il y a bien des siècles. Puis les nains ont commencé à remplacer les machines par des golems, des élémentaires et même des démons. Cela a mené à la perte de leur civilisation. Le DM-300 et les autres machines étaient utilisés pour la construction, l\'exploitation des mines, et dans certains cas, à la défense de la ville. </string>
     <string name="DM300_Info1">Le DM-300 se répare !</string>
@@ -1987,29 +2007,29 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="DM300_Info3">Personnel non autorisé détecté.</string>
 
     <string name="FireElemental_Name">élémentaire de feu</string>
-    <string name="FireElemental_Gender">masculin</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name_Objective">élémentaire de feu</string>
     <string name="FireElemental_Desc">Les élémentaires de feu sont les résidus des invocations de plus grandes entités. Leur nature est trop chaotique pour être contrôlée, même par les démonologues les plus puissants.</string>
 
     <string name="Eye_Name">oeil démoniaque</string>
-    <string name="Eye_Gender">neutre</string>
+    <string name="Eye_Gender">masculine</string>
     <string name="Eye_Name_Objective">oeil démoniaque</string>
-    <string name="Eye_Desc">L\'un des autres noms de ce démon est \"orbe de haine\", car lorsqu\'il aperçoit un ennemi, il utilise des gaz toxiques inconsciemment, en ignorant souvent ses alliés et leurs blessures.</string>
-    <string name="Eye_Kill">les gaz toxique de l\'%s vous ont tué...</string>
+    <string name="Eye_Desc">L\'un des autres noms de ce démon est \"orbe de la haine\", car lorsqu\'il aperçoit un ennemi, il utilise son regard transperçant sans retenue, ignorant ses alliés et les blessants souvent.</string>
+    <string name="Eye_Kill">le regard perçant de l\'%s vous a tué...</string>
 
     <string name="Gnoll_Name">gnoll scout</string>
-    <string name="Gnoll_Gender">mâle</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name_Objective">gnoll scout</string>
     <string name="Gnoll_Desc">Les gnolls sont des hommes-hyènes. Ils errent dans les égouts et les donjons, s\'aventurant à la surface pour mener des raids de temps en temps. Les scouts sont des membres courants de leur meute, ils ne sont pas aussi forts que les brutes et pas aussi intelligents que les shamans.</string>
 
     <string name="Golem_Name">golem</string>
-    <string name="Golem_Gender">mâle</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Golem_Desc">Les nains ont essayé de combiner leurs connaissances en mécanique avec leur nouveaux pouvoirs engageant les pouvoirs des élémentaires. Ils utilisèrent les esprits de la terre comme \"âmes\" pour les corps mécaniques des golems, qu\'ils pensaient être les plus dociles de tous. Malgré cela, la plus petite erreur dans le rituel pouvait déclencher un débordement.</string>
     <string name="Golem_Defense">bloqué</string>
 
     <string name="Goo_Name">Goo</string>
-    <string name="Goo_Gender">femelle</string>
+    <string name="Goo_Gender">masculine</string>
     <string name="Goo_Name_Objective">Goo</string>
     <string name="Goo_Desc">On ne sait pas grand chose du Goo. Il est même possible que ce ne soit pas une créature, mais plutôt un agglomérat de substances des égouts qui aurait gagné des rudiments de volonté propre. Quoi qu\'il en soit, c\'est de la magie noire qui est à l\'oeuvre ici</string>
     <string name="Goo_Info1">Le Goo se gonfle !</string>
@@ -2018,7 +2038,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Goo_StaInfo1">!!!</string>
 
     <string name="King_Name">Roi des nains</string>
-    <string name="King_Gender">mâle</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Name_Objective">Roi des nains</string>
     <string name="King_Desc">Le dernier souverain nain était connu pour sa profonde connaissance des choses sur le processus de la vie et de la mort. Il a persuadé des membres de la cour de participer à un rituel qui aurait dû leur donner la jeunesse éternelle. Au final, il fut le seul à l\'obtenir - avec une armée de morts-vivants en bonus.</string>
     <string name="King_Defense">paré</string>
@@ -2026,105 +2046,105 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="King_Info2">Levez-vous, esclaves !</string>
     <string name="King_Info3">Comment osez-vous !</string>
     <string name="Undead_Name">mort-vivant nain</string>
-    <string name="Undead_Gender">mâle</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name_Objective">mort-vivant nain</string>
     <string name="Undead_Desc">Ces nains morts-vivants, créés par le roi des nains, furent des membres de sa cour. Ils ressemblent à des squelettes portant une quantité impressionnante de poils sur le visage.</string>
     <string name="Undead_Defense">bloqué</string>
 
 
     <string name="Mimic_Name">mime</string>
-    <string name="Mimic_Gender">mâle</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name_Objective">mime</string>
-    <string name="Mimic_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Dans les donjons, ils prennent très souvent la forme de coffres, car ils savent comment attirer les aventuriers.\";</string>
+    <string name="Mimic_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Dans les donjons, ils prennent très souvent la forme de coffres, car ils savent comment attirer les aventuriers.</string>
 
 
     <string name="MimicPie_Name">mime</string>
-    <string name="MimicPie_Gender">mâle</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">mime</string>
-    <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celui-ci ressemble à une grosse pâte appétissante;</string>
+    <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celui-ci ressemble à un grosse tourte appétissante.</string>
 
 
     <string name="Monk_Name">moine nain</string>
-    <string name="Monk_Gender">mâle</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name_Objective">moine nain</string>
     <string name="Monk_Desc">Ces moines sont des fanatiques, ils se sont dévoués à protéger les secrets de leur cité des intrus. Ils n\'utilisent pas d\'armure ou d\'armes, se reposant uniquement sur le combat à mains nues.</string>
     <string name="Monk_Defense">paré</string>
     <string name="Monk_Disarm">%1$s vous a arraché le %2$s des mains !</string>
 
     <string name="Piranha_Name">piranha géant</string>
-    <string name="Piranha_Gender">femelle</string>
+    <string name="Piranha_Gender">masculine</string>
     <string name="Piranha_Name_Objective">piranha géant</string>
     <string name="Piranha_Desc">Ces poissons carnivores ne sont pas des habitants naturels des eaux des sous-sols. Ils ont été amenés spécifiquement pour protéger les trésors submergés.</string>
 
     <string name="Rat_Name">rat géant</string>
-    <string name="Rat_Gender">femelle</string>
+    <string name="Rat_Gender">masculine</string>
     <string name="Rat_Name_Objective">rat géant</string>
     <string name="Rat_Desc">Les rats géants sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre.</string>
 
     <string name="Scorpio_Name">scorpion</string>
-    <string name="Scorpio_Gender">mâle</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name_Objective">scorpion</string>
     <string name="Scorpio_Desc">Ces énormes arachnides démoniaques évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées sur de longues distances.</string>
 
     <string name="Senior_Name">moine senior</string>
-    <string name="Senior_Gender">mâle</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name_Objective">mâle senior</string>
     <string name="Senior_Desc">Ces moines sont des fanatiques, ils se sont dévoués à protéger les secrets de leur cité des intrus. Ils n\'utilisent pas d\'armure ou d\'armes, se reposant uniquement sur le combat à mains nues.</string>
 
     <string name="Shadow_Name">ombre</string>
-    <string name="Shadow_Gender">femelle</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">ombre</string>
     <string name="Shadow_Desc">Les ombres errent silencieusement dans les ruines des anciennes prisons. Elles ne se montrent que rarement aux aventuriers, menant en général leur dernière aventure.</string>
 
     <string name="Shaman_Name">gnoll shaman</string>
-    <string name="Shaman_Gender">mâle</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name_Objective">gnoll shaman</string>
     <string name="Shaman_Desc">Les gnolls les plus intelligents peuvent maîtriser de la magie shamanique. Les gnoll shamans préfèrent les sorts de combat pour compenser leur manque de force, n\'hésitant pas à les utiliser sur ceux qui remettent leur statut en question dans la tribu.</string>
     <string name="Shaman_Killed">L\'éclair du %s vous a tué...</string>
 
-    <string name="Shielded_Name">brute au bouclier</string>
-    <string name="Shielded_Gender">mâle</string>
-    <string name="Shielded_Name_Objective">brute au bouclier</string>
+    <string name="Shielded_Name">brute en armure</string>
+    <string name="Shielded_Gender">masculine</string>
+    <string name="Shielded_Name_Objective">brute en armure</string>
     <string name="Shielded_Defense">bloqué</string>
     <string name="Shielded_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils deviennent furieux, infligeant encore plus de dommages à leurs ennemis.</string>
 
     <string name="Skeleton_Name">squelette</string>
-    <string name="Skeleton_Gender">mâle</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name_Objective">squelette</string>
     <string name="Skeleton_Desc">Les squelettes sont composés des os cadavériques des aventuriers malchanceux et des résidents du donjon, animés par la magie noire venant des profondeurs. En les blessant suffisamment, ils se désintègreront dans une explosion osseuse.</string>
     <string name="Skeleton_Defense">bloqué</string>
     <string name="Skeleton_Killed">Vous avez été tué par l\'explosion des os...</string>
 
     <string name="Spinner_Name">tisseur des cavernes</string>
-    <string name="Spinner_Gender">mâle</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name_Objective">tisseur des cavernes</string>
     <string name="Spinner_Desc">Ces araignées verdâtres et poilues évitent le combat direct, préférant attendre à distance alors que leurs victimes, prises dans leur toile, succombent lentement d\'une morsure empoisonnée.</string>
 
     <string name="Statue_Name">statue animée</string>
-    <string name="Statue_Gender">femelle</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name_Objective">statue animée</string>
     <string name="Statue_Desc">On pourrait penser que ce n\'est qu\'une autre de ces statues un peu moches du donjon, mais ses yeux rouges luminescents la mettent à part. Tandis que la statue est faite de pierre, le %s qu\'elle porte a bien l\'air réel.</string>
 
     <string name="Succubus_Name">succube</string>
-    <string name="Succubus_Gender">mâle</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name_Objective">succube</string>
-    <string name="Succubus_Desc">Les succubes sont des démones séduisantes ( d\'un point de vue gothique ). En utilisant leur magie, elles peuvent envoûter un héros, qui deviendra incapable d\'attaquer quoi que ce soit avant la fin de l\'envoûtement.</string>
+    <string name="Succubus_Desc">Les succubes sont des démons ayant l\'aspec de jeunes femmes séductrices ( d\'un point de vue gothique ). En utilisant leur magie, ils peuvent envoûter un héros, qui deviendra incapable d\'attaquer quoi que ce soit avant la fin de l\'envoûtement.</string>
 
     <string name="Swarm_Name">essaim de mouches</string>
-    <string name="Swarm_Gender">mâle</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name_Objective">essaim de mouches</string>
     <string name="Swarm_Desc">L\'essaim de mouches meurtrières bourdonne de colère. Chaque attaque non-magique le séparera en deux essaims plus petits, mais tout aussi dangereux.</string>
     <string name="Swarm_Defense">esquivé</string>
 
     <string name="Tengu_Name">Tengu</string>
-    <string name="Tengu_Gender">mâle</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Name_Objective">Tengu</string>
     <string name="Tengu_Desc">Les Tengu sont les membres d\'un ancien clan d\'assassins, qui est aussi appelé Tengu. Ces assassins sont connus pour leur usage excessif de shurikens et de pièges.</string>
     <string name="Tengu_Info1">Enfin libre...</string>
     <string name="Tengu_Info2">Attrape ça, %s !</string>
 
     <string name="Thief_Name">voleur fou</string>
-    <string name="Thief_Gender">mâle</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name_Objective">voleur fou</string>
     <string name="Thief_Desc">Les profondeurs du donjon ont toujours été une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardé la raison pendant ces excursions si loin de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oublié qui ils étaient et pourquoi ils volaient.</string>
     <string name="Thief_Stole">%1$s vous a volé votre %2$s !</string>
@@ -2132,13 +2152,13 @@ Vous maintenez le %s prête à l\'emploi.</string>
 Le %1$s transporte un %2$s. Volé visiblement.</string>
 
     <string name="Warlock_Name">sorcier nain</string>
-    <string name="Warlock_Gender">mâle</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Name_Objective">sorcier nain</string>
     <string name="Warlock_Desc">Quand les intérêts des nains sont passés de la mécanique à l\'art des arcanes, les sorciers sont arrivés au pouvoir dans la ville. Ils ont commencé avec la magie élémentaire, mais ont vite préféré la démonologie et la nécromancie.</string>
     <string name="Warlock_Killed">La flèche des ténèbres du %s vous a tué...</string>
 
     <string name="Wraith_Name">spectre</string>
-    <string name="Wraith_Gender">mâle</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name_Objective">spectre</string>
     <string name="Wraith_Desc">Un spectre est l\'esprit vengeur de quelqu\'un qui a péché, ou de quelqu\'un dont la tombe a été profanée. Etant une entité éternelle, il est très difficile de les frapper avec des armes normales.</string>
     <string name="Wraith_Defense">esquivé</string>
@@ -2150,86 +2170,86 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">L\'espoir n\'est qu\'une illusion...</string>
     <string name="RottingFist_Name">poing pourissant</string>
-    <string name="RottingFist_Gender">mâle</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name_Objective">poing pourissant</string>
     <string name="RottingFist_Desc">Poing pourissant du dieu ancien</string>
     <string name="BurningFist_Name">poing ardent</string>
-    <string name="BurningFist_Gender">mâle</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name_Objective">poing ardent</string>
     <string name="BurningFist_Desc">Poing ardent du dieu ancien</string>
     <string name="Larva_Name">larve du dieu</string>
-    <string name="Larva_Gender">femelle</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name_Objective">larve du dieu</string>
     <string name="Larva_Desc">Larve du dieu ancien</string>
 
 
     <string name="SpiderEgg_Name">Oeuf d\'araignée</string>
-    <string name="SpiderEgg_Gender">neutre</string>
+    <string name="SpiderEgg_Gender">masculine</string>
     <string name="SpiderEgg_Name_Objective">oeuf d\'araignée</string>
     <string name="SpiderEgg_Desc">Cet oeuf fragile palpite brièvement, à l\'intérieur vous pouvez voir de nombreuses pattes.</string>
 
 
     <string name="SpiderNest_Name">cocon d\'araignée</string>
-    <string name="SpiderNest_Gender">neutre</string>
+    <string name="SpiderNest_Gender">masculine</string>
     <string name="SpiderNest_Name_Objective">cocon d\'araignée</string>
     <string name="SpiderNest_Desc">Ce cocon est fait de fine soie et dissimule quelque chose de vivant.</string>
 
 
     <string name="SpiderServant_Name">araignée soldat</string>
-    <string name="SpiderServant_Gender">masculin</string>
+    <string name="SpiderServant_Gender">feminine</string>
     <string name="SpiderServant_Name_Objective">araignée soldat</string>
     <string name="SpiderServant_Desc">Il se trouve que les soldats sont les occupants les plus nombreux du repaire arachnéen. Nés pour protéger leur territoire. Les chélicères des soldats développent des glandes venimeuses pour empoisonner leurs ennemis.</string>
 
 
     <string name="SpiderExploding_Name">araignée ouvrière</string>
-    <string name="SpiderExploding_Gender">masculin</string>
+    <string name="SpiderExploding_Gender">feminine</string>
     <string name="SpiderExploding_Name_Objective">araignée ouvrière</string>
     <string name="SpiderExploding_Desc">Travailleurs acharnés en temps prospères, ces créatures n\'hésitent pas à charger leurs ennemis et à saisir la première plante sur laquelle elles tombent, les transformant en bombes vivantes.</string>
 
 
     <string name="SpiderMind_Name">Psi-Araignée</string>
-    <string name="SpiderMind_Gender">masculin</string>
+    <string name="SpiderMind_Gender">feminine</string>
     <string name="SpiderMind_Name_Objective">Psi-Araignée</string>
     <string name="SpiderMind_Desc">Ces araignées d\'apparence fragiles possèdent des pouvoirs mentaux uniques, qui leur permettent de contrôler toute la colonie. Les Psi-Araignées sont capables de contrôler n\'importe quelle créature vivante, mais sont plutôt froussards.</string>
 
 
     <string name="SpiderQueen_Name">reine des araignées</string>
-    <string name="SpiderQueen_Gender">féminin</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name_Objective">reine des araignées</string>
-    <string name="SpiderQueen_Desc">Un corps de belle femme hybridée avec d\'hideuses araignées. Chaque araignée vivant dans ce repaire est sa servante. Rencontrer cette extraordinaire demoiselle s\'avère être une expérience mortelle. Parce que vous êtes un intrus!</string>
+    <string name="SpiderQueen_Desc">Un corps de belle femme hybridée avec celui d\'une hideuses araignées. Chaque araignée vivant dans ce repaire est sa servante. Rencontrer cette extraordinaire demoiselle s\'avère être une expérience mortelle. Parce que vous êtes un intrus !</string>
 
 
     <string name="WaterElemental_Name">élémentaire d\'eau</string>
-    <string name="WaterElemental_Gender">masculin</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">élémentaire d\'eau</string>
     <string name="WaterElemental_Desc">Les élémentaires d\'eau peuvent être trouvés à proximité de grosses masses d\'eau. Générallement ces vagues magiques se promènent.</string>
 
 
     <string name="AirElemental_Name">élémentaire d\'air</string>
-    <string name="AirElemental_Gender">masculin</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name_Objective">élémentaire d\'air</string>
     <string name="AirElemental_Desc">Les élémentaires d\'air sont faits d\'air vivant.</string>
 
 
     <string name="EarthElemental_Name">élémentaire de terre</string>
-    <string name="EarthElemental_Gender">masculin</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name_Objective">élémentaire de terre</string>
     <string name="EarthElemental_Desc">Les élémentaires de terre sont des masses de terre dirigées par les forces de la nature.</string>
 
 
     <string name="Crystal_Name">cristal flottant</string>
-    <string name="Crystal_Gender">masculin</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name_Objective">cristal flottant</string>
     <string name="Crystal_Desc">Un gros cristal flottant dans l\'air. Probablement rempli d\'une magie puissante.</string>
 
     <string name="SpiderArmor_Name">armure araignée</string>
     <string name="SpiderArmor_Info">Cette armure est fabriquée avec d\'anciennes carcasses et un tissu étrange. Aussi surprenant soit-il, on dirait qu\'elle contient encore des filières fonctionnelles. En exerçant assez de pression sur une des plaques, celle-ci expulse une toile d\'araignée. Le dessous hérissé des bottes vous permet de marcher sur la toile librement.</string>
-    <string name="SpiderArmor_Gender">féminin</string>
+    <string name="SpiderArmor_Gender">feminine</string>
 
 
     <string name="BlackSkull_Name">crâne noir</string>
     <string name="BlackSkull_Info">Un petit crâne en obsidienne. C\'était une source de puissance nécropolienne, or après la défaite de la Liche, il semble qu\'il ait perdu ses pouvoirs. Mais en le tenant dans vos mains, une idée curieuse vous traverse l\'esprit : \"Il a faim\":</string>
-    <string name="BlackSkull_Gender">masculin</string>
+    <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">crâne noir réveillé</string>
     <string name="BlackSkull_Info_Awakened">Le crâne vibre d\'une grande puissance que vous pouvez voir sortir de ses yeux creux. Alors que vous le tenez dans votre main, vous distinguez une voix terrifiante : \"La mort marche\".</string>
@@ -2237,7 +2257,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
     <string name="SoulShard_Name">éclat d\'âme</string>
     <string name="SoulShard_Info">Il s\'agit d\'un éclat ramassé des restes de la Jarre des âmes. Il rayonne d\'une énergie mystique. Peut-être y a-t-il quelqu\'un qui serait intéressé par un tel objet.</string>
-    <string name="SoulShard_Gender">masculin</string>
+    <string name="SoulShard_Gender">masculine</string>
 
 
 
@@ -2248,13 +2268,13 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="DreadKnight_Name">Chevalier Maudit</string>
-    <string name="DreadKnight_Gender">masculin</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name_Objective">cheval maudit</string>
     <string name="DreadKnight_Desc">Un chevalier maudit est un ancien guerrier qui n\'a jamais été bon ou vertueux de toute son existence. Pour ses péchés, il a été condamné à errer éternellement dans un corps de mort-vivant disloqué. Et à chaque instant de cette vie de damné, il sera tourmenté par la douleur et la souffrance qu\'il a infligées à ses victimes.</string>
 
 
     <string name="EnslavedSoul_Name">âme enchaînée</string>
-    <string name="EnslavedSoul_Gender">féminin</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">âme enchaînée</string>
     <string name="EnslavedSoul_Desc">Vous pouvez quasiment voir à travers cette apparition fantomatique. Bien que cela ressemble à un crâne, parfois, pendant une fraction de seconde, un visage apparaît à la place : un visage tourmenté rempli de souffrance.</string>
 
@@ -2266,22 +2286,25 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="JarOfSouls_Name">jarre des âmes</string>
-    <string name="JarOfSouls_Gender">masculin</string>
+    <string name="JarOfSouls_Gender">feminine</string>
     <string name="JarOfSouls_Name_Objective">jarre des âmes</string>
+    <string name="JarOfSouls_Desc">Les orbites luisantes du crâne représenté sur cette vieille jarre en terre cuite, ainsi que l\'étrange énergie qu\'elle émet, vous mettent mal à l\'aise.</string>
+
+
     <string name="Lich_Name">liche</string>
-    <string name="Lich_Gender">in</string>
+    <string name="Lich_Gender">feminine</string>
     <string name="Lich_Name_Objective">liche</string>
     <string name="Lich_Desc">Le nécromancier a connu le trépas dans les tréfonds de la Nécropole, et alors que l\'énergie maléfique de cet endroit emplissait son corps, il a finit par se transformer en une Liche. Ce sorcier mort-vivant, marionnette sans volonté, est contrôlé par des forces malveillantes.</string>
 
 
     <string name="RunicSkull_Name">crâne runique</string>
-    <string name="RunicSkull_Gender">masculin</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name_Objective">crâne runique</string>
     <string name="RunicSkull_Desc">En tant qu\'artefact, ce crâne ressemble un peu trop à un véritable crâne. Vous pouvez voir une lueur pâle l\'entourer. </string>
 
 
     <string name="Zombie_Name">zombie</string>
-    <string name="Zombie_Gender">masculin</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="Zombie_Desc">Le donjon est un endroit dangereux dans lequel bien des aventuriers ont trépassé. Mais les plus infortunés d\'entre eux sont ceux qui sont morts dans la Nécropole. Ils sont désormais condamnés à errer dans ces couloirs sous la forme de corps pourrisants.</string>
 
@@ -2298,7 +2321,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
     <string name="ElvenDagger_Name">Dague Elfique</string>
     <string name="ElvenDagger_Info">Cette arme est faite d\'un alliage spécial, la rendant plus légère qu\'une dague classique.</string>
-    <string name="ElvenDagger_Gender">masculin</string>
+    <string name="ElvenDagger_Gender">feminine</string>
 
 
 
@@ -2342,8 +2365,8 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Badges_MonsterSlain4">250 ennemis vaincus</string>
     <string name="Badges_GoldColleted1">100 pièces d\'or collectées</string>
     <string name="Badges_GoldColleted2">500 pièces d\'or collectées</string>
-    <string name="Badges_GoldColleted3">2500 pièces d\'or collectées</string>
-    <string name="Badges_GoldColleted4">7500 pièces d\'or collectées</string>
+    <string name="Badges_GoldColleted3">2.500 pièces d\'or collectées</string>
+    <string name="Badges_GoldColleted4">7.500 pièces d\'or collectées</string>
     <string name="Badges_LevelReached1">Niveau 6 atteint</string>
     <string name="Badges_LevelReached2">Niveau 12 atteint</string>
     <string name="Badges_LevelReached3">Niveau 18 atteint</string>
@@ -2391,7 +2414,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Badges_FoodEaten1">10 rations consommées</string>
     <string name="Badges_FoodEaten2">20 rations consommées</string>
     <string name="Badges_FoodEaten3">30 rations consommées</string>
-    <string name="Badges_FoodEaten4">40  rations consommées</string>
+    <string name="Badges_FoodEaten4">40 rations consommées</string>
 
 
 
@@ -2424,7 +2447,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Badges_GamesPlayed1">10 parties jouées</string>
     <string name="Badges_GamesPlayed2">100 parties jouées</string>
     <string name="Badges_GamesPlayed3">500 parties jouées</string>
-    <string name="Badges_GamesPlayed4">2000 parties jouées</string>
+    <string name="Badges_GamesPlayed4">2.000 parties jouées</string>
     <string name="Badges_HappyEnd">Fin heureuse</string>
     <string name="Badges_Champion">Challenge réussi</string>
     <string name="Badges_Supporter">Merci pour votre soutien !</string>
@@ -2474,7 +2497,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="ScarecrowNPC_Name">Epouvantail</string>
-    <string name="ScarecrowNPC_Gender">neutre</string>
+    <string name="ScarecrowNPC_Gender">masculine</string>
     <string name="ScarecrowNPC_Name_Objective">Epouvantail </string>
     <string name="ScarecrowNPC_Desc">A n\'en pas douter, cet épouvantail observe chacun de vos mouvements. Ses yeux rouges et brillants vous transpercent, mais étonnament, vous ne vous sentez pas menacé.</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Hey, bonjour mon garçon, comment ça va ?\n J\'ai un truc qui va te plaire !\n\n Comme je te serais reconnaissant,\n si tu allais me trouver quelques bonbons !\n\n</string>
@@ -2490,7 +2513,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
     <string name="Spells_NotTooFast">%s n\'est pas prêt à être utilisé.</string>
     <string name="ElvenBow_Name">arc d\'elf</string>
-    <string name="ElvenBow_Gender">masculin</string>
+    <string name="ElvenBow_Gender">masculine</string>
 
     <string name="ElvenBow_Info">Un exemple exceptionnel de l\'artisanat des elfs. Cet arc est clairement plus efficace et précis qu\'un arc en bois classique.</string>
 
@@ -2505,7 +2528,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="PlagueDoctorNPC_Name">médecin de la peste</string>
-    <string name="PlagueDoctorNPC_Gender">masculin</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">médecin de la peste</string>
     <string name="PlagueDoctorNPC_Desc">Cet homme bossu est complètement recouvert de cuir. Il sent très fort les préparations médicinales et... l\'aïl ?</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
@@ -2517,7 +2540,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="TownsfolkMovieNPC_Name">villageois</string>
-    <string name="TownsfolkMovieNPC_Gender">masculin</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name_Objective">villageois</string>
     <string name="TownsfolkMovieNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers. </string>
     <string name="TownsfolkMovieNPC_Message">Est-ce que vous connaissez ce service spécial offert par la \"salle de cinéma\" ? Trop dommage qu\'un truc aussi étrange que l\'\"Internet\" soit nécessaire... Jamais entendu parler de ça.</string>
@@ -2543,7 +2566,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="BellaNPC_Name">Bella</string>
-    <string name="BellaNPC_Gender">féminin</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
     <string name="BellaNPC_Desc">Une fille tout à fait bon chic bon genre. Toute son apparence semble vous dire \"Je suis trop bien pour des gens comme toi\".</string>
     <string name="BellaNPC_Message">Je ne porte aucun intérêt aux membres de la populace comme toi.</string>
@@ -2613,7 +2636,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WandOfShadowbolt_Name">Sceptre de Foudre Noire</string>
     <string name="WandOfShadowbolt_Info">Ce Sceptre émet une énergie noire et malveillante.</string>
     <string name="TownGuardNPC_Name">garde de la ville</string>
-    <string name="TownGuardNPC_Gender">masculin</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Name_Objective">garde de la ville</string>
     <string name="TownGuardNPC_Desc">Un garde ordinaire de la ville.</string>
     <string name="TownGuardNPC_Message1">Bougez d\'ici</string>
@@ -2622,7 +2645,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="TownsfolkNPC_Name">habitant</string>
-    <string name="TownsfolkNPC_Gender">masculin</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Name_Objective">habitant</string>
     <string name="TownsfolkNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers.</string>
     <string name="TownsfolkNPC_Message1">Ah ! Encore un aventurier, quel plaisir ! Assurez-vous de piller autant de choses que vous le pouvez !</string>
@@ -2632,7 +2655,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="HealerNPC_Name">prêtre de la ville</string>
-    <string name="HealerNPC_Gender">masculin</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Name_Objective">prêtre de la ville</string>
     <string name="HealerNPC_Desc">Un vieil homme, dont on pourrait penser qu\'il fabrique des sceptres magiques.</string>
     <string name="HealerNPC_Message1">Soins gratuits pour chaque aventurier !</string>
@@ -2641,7 +2664,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="ServiceManNPC_Name">employé</string>
-    <string name="ServiceManNPC_Gender">masculin</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Name_Objective">employé</string>
     <string name="ServiceManNPC_Desc">Un employé classique d\'un établissement local.</string>
 
@@ -2676,7 +2699,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="town_deco_snow_desc">Malgré les rumeurs courant sur la popularité de cet endroit auprès des aventuiers, il y a un bon paquet de neige dans les environs, comme si jamais personne ne mettait les pieds dehors.</string>
 
     <string name="town_deco_cross_name">Croix</string>
-    <string name="town_deco_cross_desc">Une solide croix argentée, symbole de la religion locale - \"Les Témoins de Santa Seigneur des Profondeurs\".</string>
+    <string name="town_deco_cross_desc">Une solide croix argentée, symbole de la religion locale - \"Les Témoins du Saint Seigneur des Profondeurs\".</string>
 
     <string name="town_deco_bell_name">Cloche</string>
     <string name="town_deco_bell_desc">On dirait que personne n\'a plus fait sonner cette cloche typique depuis un moment. La corde est introuvable. </string>
@@ -2847,27 +2870,27 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
     <string name="Claymore_Name">Claymore</string>
     <string name="Claymore_Info">Cette épée massive devrait être capable de cisailler n\'importe quoi.</string>
-    <string name="Claymore_Gender">féminin</string>
+    <string name="Claymore_Gender">feminine</string>
 
 
     <string name="Halberd_Name">Hallebarde</string>
     <string name="Halberd_Info">Une arme constituée d\'un fer de hache au bout d\'un bâton.</string>
-    <string name="Halberd_Gender">féminin</string>
+    <string name="Halberd_Gender">feminine</string>
 
 
     <string name="WoodenCrossbow_Name">Arbalète en bois</string>
     <string name="WoodenCrossbow_Info">Une simple arbalète en bois, destinée à tirer des flèches.</string>
-    <string name="WoodenCrossbow_Gender">feminin</string>
+    <string name="WoodenCrossbow_Gender">feminine</string>
 
 
     <string name="CompositeCrossbow_Name">Arbalète composée</string>
     <string name="CompositeCrossbow_Info">Cette arbalète renforcée s\'avère être un outil plus efficace que son homologue en bois.</string>
-    <string name="CompositeCrossbow_Gender">feminin</string>
+    <string name="CompositeCrossbow_Gender">feminine</string>
 
 
     <string name="RubyCrossbow_Name">Arbalète en rubis</string>
     <string name="RubyCrossbow_Info">Cette arme mortelle est en fait un chef d\'oeuvre d\'ingénierie naine.</string>
-    <string name="RubyCrossbow_Gender">feminin</string>
+    <string name="RubyCrossbow_Gender">feminine</string>
 
 
     <string name="GothicArmor_Name">Armure gothique</string>
@@ -2906,7 +2929,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Ghost_Defense">esquivé</string>
     <string name="FetidRat_Name">rat fétide</string>
     <string name="FetidRat_Name_Objective">rat fétide</string>
-    <string name="FetidRat_Gender">femelle</string>
+    <string name="FetidRat_Gender">masculine</string>
     <string name="FetidRat_Desc">Ce rat est plus gros que les autres. Il est entouré d\'un nuage nauséabond.</string>
 
 
@@ -2937,7 +2960,7 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
 
     <string name="MirrorImage_Name">image miroir</string>
     <string name="MirrorImage_Name_Objective">image miroir</string>
-    <string name="MirrorImage_Gender">mâle</string>
+    <string name="MirrorImage_Gender">feminine</string>
     <string name="MirrorImage_Desc">Cette illusion possède une forte ressemblance avec vous, mais elle est plus pâle et frissonne un peu.</string>
 
 
@@ -2978,13 +3001,13 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
 
 
     <string name="MimicAmulet_Name">mime</string>
-    <string name="MimicAmulet_Gender">mâle</string>
+    <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name_Objective">mime</string>
     <string name="MimicAmulet_Desc">Le moment le plus glorieux de votre carrière d\'aventurier se révèle être un piège.</string>
 
 
     <string name="Nightmare_Name">cauchemar</string>
-    <string name="Nightmare_Gender">masculin</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">cauchemar</string>
     <string name="Nightmare_Desc">Une créature grotesque faite de tentacules de chair tremblantes. Les Cauchemars sont une manifestation des pensées sinistres de l\'Ancien Dieu.</string>
 
@@ -2993,37 +3016,37 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
 
 
     <string name="ZombieGnoll_Name">gnoll zombie</string>
-    <string name="ZombieGnoll_Gender">mâle</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnoll zombie</string>
     <string name="ZombieGnoll_Desc">Un corps cassé, tordu de gnoll zombie ne ressemblant plus ni à un humanoïde ni à une hyène. Juste un tas une chair pourrie et d\'os rempli d\'une envie irrépressible de tuer et comsommer.</string>
 
 
     <string name="Worm_Name">ver</string>
-    <string name="Worm_Gender">mâle</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name_Objective">ver</string>
     <string name="Worm_Desc">La taille de ce ver est incommensurable. Emergeant partiellement du sol, le corps de cette créature est couverte de morceaux de chair pourrie et de boue. Ses mandibules géantes donnent une idée de la façon dont il est remonté à la surface.</string>
 
 
     <string name="YogsBrain_Name">cerveau de yog</string>
-    <string name="YogsBrain_Gender">mâle</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name_Objective">cerveau de Yog</string>
     <string name="YogsBrain_Desc">Cerveau de Yog-Dzewa. Source du mal de tout le donjon.</string>
 
 
     <string name="YogsEye_Name">oeil de yog</string>
-    <string name="YogsEye_Gender">mâle</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name_Objective">oeil de Yog</string>
     <string name="YogsEye_Desc">L\'oeil de l\'Ancien Dieu, regard rempli de haine. Vous pouvez le sentir regarder à travers votre âme.</string>
 
 
     <string name="YogsHeart_Name">coeur de yog</string>
-    <string name="YogsHeart_Gender">mâle</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name_Objective">coeur de Yog</string>
     <string name="YogsHeart_Desc">Pendant des siècles, les gens pensaient que seules les créatures dépourvues de coeur étaient capables d\'actes maléfiques. Et voici l\'énorme coeur battant de l\'Ancien Dieu.</string>
 
 
     <string name="YogsTeeth_Name">dents de yog</string>
-    <string name="YogsTeeth_Gender">mâle</string>
+    <string name="YogsTeeth_Gender">feminine</string>
     <string name="YogsTeeth_Name_Objective">dents de Yog</string>
     <string name="YogsTeeth_Desc">L\'énorme bouche de l\'Ancien Dieu remplie de dents tranchantes. Une manifestation évidente de son envie de tout détruire et dévorer.</string>
 
@@ -3159,10 +3182,10 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="PlateArmor_Desc">D\'énormes plaques de métal forment une tenue qui offre une protection sans égal pour tout aventurier assez fort pour supporter son poids colossal.</string>
 
 
-    <string name="RogueArmor_Name">costume de gredin</string>
-    <string name="RogueArmor_Desc">En étant vêtu de ce sombre attirail, un gredin peut effectuer un mouvement appelé \"La bombe de fumée\" ( même si aucun explosif n\'est utilisé): il aveugle les ennemis qui peuvent le voir et saute sur le côté.</string>
+    <string name="RogueArmor_Name">costume de voleur</string>
+    <string name="RogueArmor_Desc">En étant vêtu de ce sombre attirail, un voleur peut effectuer un mouvement appelé \"La bombe de fumée\" ( même si aucun explosif n\'est utilisé): il aveugle les ennemis qui peuvent le voir et saute sur le côté.</string>
     <string name="RogueArmor_ACSpecial">BOMBE DE FUMEE</string>
-    <string name="RogueArmor_NotRogue">Seuls les gredins peuvent porter cette armure !</string>
+    <string name="RogueArmor_NotRogue">Seuls les voleurs peuvent porter cette armure !</string>
     <string name="RogueArmor_Fov">Vous pouvez seulement sauter à un endroit libre dans votre champ de vision</string>
     <string name="RogueArmor_Prompt">Choisissez l\'endroit où vous voulez sauter</string>
 
@@ -3372,7 +3395,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
 
     <string name="GnollTamahawk_Name">Tomahawk Gnoll</string>
     <string name="GnollTamahawk_Info">Tomahawk traditionnel créé par des artisans Gnoll ; chaque clan possède son propre modèle. Celui-ci est légèrement plus léger que ceux fabriqués par les humains.</string>
-    <string name="GnollTamahawk_Gender">masculin</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
 
 
     <string name="WndPlayGames_BackupProgress">Sauvegarder la progression du jeu</string>
@@ -3518,8 +3541,133 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="SmashSpell_Info">Sautez en l\'air et créez une puissante onde de choc lorsque vous touchez le sol. Elle étourdit temporairement vos ennemis et leur inflige des dégâts physiques.</string>
     <string name="SmashSpell_NeedWeapon">J\'ai besoin d\'une arme pour ce mouvement.</string>
 
-    <string name="town_deco_pillar_name">Pilier</string>
+    <string name="DashSpell_Name">Défonceur</string>
+    <string name="DashSpell_Info">Se ruer dans une direction  tout en entrant en collision avec les ennemis, infligeant des dégâts et causant des dommages.</string>
+    <string name="DashSpell_OnSelf">Je ne peux pas me jeter à cet endroit.</string>
+    <string name="DashSpell_TooFar">Je ne peux pas foncer aussi loin.</string>
+
+    <string name="CloakSpell_Name">Furtivité</string>
+    <string name="CloakSpell_Info">Entrez dans l\'ombre pour devenir invisible. Réduis considérablement vos chances d\'être détecté. Ne peut pas être utilisé tant que les ennemis sont à proximité.</string>
+    <string name="CloakSpell_EnemiesNearby">Vous ne pouvez pas entrer dans l\'ombre tant que des ennemis sont à proximité.</string>
+
+    <string name="CloakBuff_Name">Furtif</string>
+    <string name="CloakBuff_Info">Caché dans l\'ombre.</string>
+
+    <string name="TitleScene_Mods">Mods</string>
+    <string name="WndHero_Stealth">Furtivité</string>
+    <string name="WndHero_Awareness">Conscience</string>
+    <string name="WndHero_AttackSkill">Compétence d\'attaque</string>
+    <string name="WndHero_DefenceSkill">Compétence de défense</string>
+	
+   <string name="town_deco_grave_name">Tombe</string>
+   <string name="town_deco_grave_desc">Pierre tombale ordinaire, avec une gravure presque effacée.</string>
+   <string name="town_deco_pillar_name">Pilier</string>
+   <string name="town_deco_pillar_desc">Il y a longtemps, ce pilier était un excellent soutènement et reste aujourd\'hui très décoratif</string>
+   <string name="town_deco_wood_wall_name">Mur en rondin</string>
+   <string name="town_deco_wood_wall_desc">Un robuste mur fait en tronc d\'arbre</string>
    <string name="town_deco_entrance_name">Entrée</string>
+   <string name="town_deco_entrance_desc">Cette entrée mène aux étages supérieurs du donjon.</string>
+   <string name="town_deco_exit_name">Sortie</string>
+   <string name="town_deco_exit_desc">Ce qui vous attend si vous descendez ces marches est inconnu.</string>
+   <string name="town_deco_tile_name">Carrelage</string>
+   <string name="town_deco_tile_desc">Ces carreaux sont assez usés par le temps.</string>
+   <string name="town_deco_snowdrift_name">Congère de neige</string>
+   <string name="town_deco_snowdrift_desc">C\'est un assez gros tas de neige et apparemment personne ne va le nettoyer.</string>
+   <string name="town_deco_misc_name">Camelote</string>
+   <string name="town_deco_misc_desc">Un tas de bric-à-brac et de bibelots.</string>
+   <string name="town_deco_broken_roof_name">Toit crevé</string>
+   <string name="town_deco_broken_roof_desc">Les tuiles de ce toit sont cassées et doivent être remplacées.</string>
+   <string name="town_deco_broken_wall_name">Mur effondré</string>
+   <string name="town_deco_broken_wall_desc">Les rondins de ce mur sont pourris depuis longtemps et ont perdu toute résistance.</string>
+   <string name="town_deco_mud_name">Boue</string>
+   <string name="town_deco_mud_desc">Sol dégelé dans cette zone de pergélisol.</string>
+   <string name="town_deco_stock_name">Stock</string>
+   <string name="town_deco_stock_desc">Les denrées alimentaires sont stockées ici, ainsi que toute sorte d\'autres articles d\'épicerie.</string>
+   <string name="town_deco_barrel_name">Tonneau</string>
+   <string name="town_deco_barrel_desc">Un banal tonneau qui ne peut malheureusement pas être ouvert.</string>
+   <string name="town_deco_hay_name">Foin</string>
+   <string name="town_deco_hay_desc">Une petite meule de foin d\'une senteur agréable.</string>
+   <string name="town_deco_firewood_name">Bois de chauffage</string>
+   <string name="town_deco_firewood_desc">Quelque chose d\'essentiel par ce froid rude.</string>
+   <string name="town_deco_stakes_name">Poteaux</string>
+   <string name="town_deco_stakes_desc">Ces pieux taillés en pointe paraissent effrayants, alors qu’ils sont en fait tout à fait inutiles.</string>
+   <string name="town_deco_fence_name">Barrière</string>
+   <string name="town_deco_fence_desc">Barrière en bois couverte de neige.</string>
+   <string name="town_deco_pole_name">Bobine</string>
+   <string name="town_deco_pole_desc">Un axe en bois conçu pour enrouler une corde.</string>
+   <string name="town_deco_rope_name">Corde</string>
+   <string name="town_deco_rope_desc">Corde fabriquée à la main</string>
+   <string name="town_deco_slush_name">Neige fondante</string>
+   <string name="town_deco_slush_desc">La neige a commencé à fondre, transformant cette zone en bouillasse.</string>
    <string name="town_deco_chest_name">Coffre</string>   
+   <string name="town_deco_chest_desc">Meuble pratique pour ranger différentes choses et notamment des bijoux.</string>
+   <string name="town_deco_emptyboard_name">Casier</string>
+   <string name="town_deco_emptyboard_desc">Plateau d\'usage courant pour présenter des objets.</string>
+   <string name="town_deco_grandclock_name">Horloge comtoise</string>
+   <string name="town_deco_grandclock_desc">Un mécanisme assez ancien, mais qui fonctionne encore vaillamment.</string>
+   <string name="town_deco_wall_beam_name">Poutrelle</string>
+   <string name="town_deco_wall_beam_desc">Sert de soutènement pour cette construction.</string>
+   <string name="town_deco_wall_candles_name">Bougies</string>
+   <string name="town_deco_wall_candles_desc">Bougies éteintes d\'où émane encore un parfum agréable.</string>
+   <string name="town_deco_wooden_drawer_name">Tiroir</string>
+   <string name="town_deco_wooden_drawer_desc">Intéressant, ce qu\'il y a à l\'intérieur.</string>
    <string name="town_deco_scrolls_name">Parchemins</string>   
-   </resources>
+   <string name="town_deco_scrolls_desc">Cette étagère poussiéreuse est pleine de parchemins et de livres de toute sorte.</string>
+   <string name="town_deco_medicine_name">Médicaments</string>   
+   <string name="town_deco_medicine_desc">Fioles et autres ingrédients médicaux sont soigneusement rangés sur ces étagères.</string>
+   <string name="town_deco_wooden_stairs_name">Escaliers</string>   
+   <string name="town_deco_wooden_stairs_desc">Vous y paraissez un peu plus grand.</string>
+   <string name="town_deco_canvas_name">Canevas</string>
+   <string name="town_deco_canvas_desc">Lourde tapisserie brodée accrochée au mur</string>
+   <string name="town_deco_projector_name">Projecteur de film</string>
+   <string name="town_deco_projector_desc">Un vieil appareil pour jouer des films et divertir les gens.</string>
+   <string name="town_deco_filmtape_name">Bobine de film</string>
+   <string name="town_deco_filmtape_desc">Qu\'il y a-t-il sur cette pellicule ?</string>
+   <string name="town_deco_painting_name">Peinture</string>
+   <string name="town_deco_painting_desc">Incontestablement, une belle oeuvre d\'art.</string>
+   <string name="town_deco_curtains_name">Rideaux</string>
+   <string name="town_deco_curtains_desc">Ils arrêtent la lumière excessive et ont un trềs bel aspect décoratif.</string>
+   <string name="town_deco_rug_name">Tapis</string>
+   <string name="town_deco_rug_desc">Réalisé avec bon goût.</string>
+   <string name="town_deco_trapdoor_name">Trappe</string>
+   <string name="town_deco_trapdoor_desc">Vers où peut-elle bien mener ?</string>
+   <string name="town_deco_glass_stained_name">Vitrail</string>
+   <string name="town_deco_glass_stained_desc">L\'artisan qui a créé ce vitrail n\'a pas ménagé ses efforts.</string>
+   <string name="town_deco_glass_name">Large fenêtre</string>
+   <string name="town_deco_glass_desc">Celle-ci est plus large que les autres pour laisser entrer plus de lumière.</string>
+   <string name="town_deco_counter_name">Comptoir</string>
+   <string name="town_deco_counter_desc">Maintient une bonne distance entre vous et la personne qui se tient derrière.</string>
+   <string name="town_deco_library_books_name">de quoi lire</string>
+   <string name="town_deco_library_books_desc">Bien meilleur que les livres que l\'on peut trouver dans le donjon.</string>
+   <string name="town_deco_wallpaper_name">Papier peint</string>
+   <string name="town_deco_wallpaper_desc">Une excellente solution pour décorer un tel endroit.</string>
+   <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Mécanique de jeu :\n
+    -- Des capacités spéciales pour le Guerrier !\n
+    -- Faim des Héros réduite\n
+    -- Des sorts pour le Nécromancier\n
+    -- Capacité de furtivité pour le Voleur\n
+    -- Nouveaux Badges\n
+    - Modding:\n
+    -- scripte de Buffs modifiable\n
+    -- gfx personisable\n
+    </string>
+    <string name="Badges_GamesPlayed5">5.000 parties jouées</string>
+    <string name="Badges_PotionsCooked5">25 potions préparées</string>
+    <string name="Badges_ItemLvl5">Objet de niveau 15 acquis</string>
+    <string name="Badges_FoodEaten5">60 rations consommées</string>
+    <string name="Badges_StrengthAttained5">21 points de force obtenus</string>
+    <string name="Badges_LevelReached5">Niveau 30 atteint</string>
+    <string name="Badges_GoldCollected5">35.000 pièces d\'or collectées</string>
+    <string name="Badges_MonsterSlain5">1.000 ennemis vaincus</string>
+    <string name="Spells_NotInOwnBody">Vous ne pouvez pas continuer %s tant que votre âme est séparée de votre corps.</string>
+    <string name="WndHero_Satiety">Satiété</string>
+
+    <string name="Welcome_Text_29">
+    remix.29\n
+    - Ville rénovée !\n
+    </string>
+
+
+</resources>

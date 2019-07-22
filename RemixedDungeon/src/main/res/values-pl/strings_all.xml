@@ -3600,6 +3600,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
    <string name="town_deco_stock_name">Zbiory</string>
    <string name="town_deco_stock_desc">Zapasy żywności są tu przechowywane, a także trochę złomu o różnym  kolorach.</string>
    <string name="town_deco_barrel_name">Beczka</string>
+   <string name="town_deco_barrel_desc">Zwykła beczka, nie jest w najlepszym stanie.</string>
    <string name="town_deco_hay_name">Siano</string>
    <string name="town_deco_hay_desc">Mały stos przyjemnie pachnącego siana.</string>
    <string name="town_deco_firewood_name">drewno opałowe</string>
@@ -3656,7 +3657,13 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
    <string name="town_deco_library_books_desc">Wciąż lepsze niż książki z lochów.</string>
    <string name="town_deco_wallpaper_name">Tapeta</string>
    <string name="town_deco_wallpaper_desc">Świetne dekoracyjne rozwiązanie dla  takiego miejsca.</string>
-   <string name="Welcome_Text_28_6">
+   <string name="town_deco_stones_name">Kamienie</string>
+   <string name="town_deco_stones_desc">Zwykły stos kamieni</string>
+   <string name="town_deco_fireplace_name">Kominek</string>
+   <string name="town_deco_fireplace_desc">Dobre ogrzania się w zimnych miejscach jak to.</string>
+
+
+    <string name="Welcome_Text_28_6">
 remix.28.6
 -Mechaniki gry
 --Specjalne zdolności wojownika!
