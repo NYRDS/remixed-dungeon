@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class Library {
 	public static final String ITEM = "item";
-	public static final String MOB = "me";
+	public static final String MOB = "mob";
 
 	private static Map<String, Map<String, Integer>> mKnowledgeLevel;
 
