@@ -6,7 +6,7 @@
 
     <string name="Spells_SummonLimitReached">%1$s : limite d\'invocation atteinte (Max actuel: %2$d) ! </string>
     <string name="Mana_Title">Mana</string>
-    <string name="Mana_Cost">Coût Mana :</string>
+    <string name="Mana_Cost">Coût Mana : </string>
     <string name="Spells_NotEnoughSP">Vous manquez de mana pour lancer un sort \"%1$s\".</string>
 
 
@@ -31,7 +31,7 @@
 
 
     <string name="MagicTorch_Name">Torche magique</string>
-    <string name="MagicTorch_Info">Sort qui produit une lumière illuminant les niveaux les plus sombres du donjon.</string>
+    <string name="MagicTorch_Info">Sort qui produit une lumière illuminant les étages les plus sombres du donjon.</string>
 
 
     <string name="Healing_Name">Guérison</string>
@@ -184,10 +184,10 @@
 
     <string name="Bishop_title">Évêque</string>
     <string name="Bishop_text">Jour et nuit, je prie pour vous, mon enfant.</string>
-    <string name="Bishop_lesser_bless">Petite bénédiction - %d g</string>
-    <string name="Bishop_great_bless">Grande bénédiction - %d g</string>
+    <string name="Bishop_lesser_bless">Petite bénédiction - %d pièces</string>
+    <string name="Bishop_great_bless">Grande bénédiction - %d pièces</string>
 
-    <string name="Bishop_remove_curse">Désensorcellement - %d g</string>
+    <string name="Bishop_remove_curse">Désensorcellement - %d pièces</string>
 
     <string name="Bishop_not_interested">Partez</string>
     <string name="Bishop_no_money">Vous n\'avez pas assez d\'argent pour cela.</string>
@@ -268,7 +268,7 @@
 
     <string name="Necrotism_Info">Nécrotisme</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
-    <string name="ResultDescriptions_Necrotism">Mort de Nécrotisme au niveau %d</string>
+    <string name="ResultDescriptions_Necrotism">Mort de Nécrotisme à l\'étage %d</string>
     <string name="Necrotism_Death">Le Nécrotisme vous a tué(e)...</string>
     <string name="Badges_DeathNecrotism">Mort de nécrotisme</string>
 
@@ -387,7 +387,7 @@
     <string name="WndPortal_Info_Return">Ce portail vous ramènera dans le donjon.\nVoulez-vous l\'utiliser ?</string>
 
     <string name="WndPortal_Warning_Title">Avertissement du portail !</string>
-    <string name="WndPortal_Warning_Info">Vous n\'avez pas utilisé le portail de ce niveau. Vous ne pourrez plus l\'employer si vous partez !\n Etes-vous sûr de vouloir partir ?</string>
+    <string name="WndPortal_Warning_Info">Vous n\'avez pas utilisé le portail de cet étage. Vous ne pourrez plus l\'employer si vous partez !\n Etes-vous sûr de vouloir partir ?</string>
 
     <string name="PortalGate_Name">Portail</string>
     <string name="PortalGate_Desc">Des gravures sur la surface de ce portail forment un motif étrange. On dirait qu\'un tunnel géant mène à quelque lieu lointain. Mais en regardant depuis le côté, vous constatez clairement que la surface du portal est en fait presque plate. </string>
@@ -396,10 +396,10 @@
     <string name="PortalGate_Activated">L\'antique portail s\'est réveillé !</string>
     <string name="PortalGate_Used">Vous touchez le portail et... rien ne se passe.</string>
 
-    <string name="PortalExit_Desc">Ce portail vous amènera au premier niveau de %s.</string>
-    <string name="PortalExit_Desc_SpiderNest">Antre des araignées</string>
-    <string name="PortalExit_Desc_Necropolis">Nécropole</string>
-    <string name="PortalExit_Desc_IceCaves">Caves glacées</string>
+    <string name="PortalExit_Desc">Ce portail vous amènera au premier étage de%s.</string>
+    <string name="PortalExit_Desc_SpiderNest"> l\'Antre des araignées</string>
+    <string name="PortalExit_Desc_Necropolis"> Nécropolis</string>
+    <string name="PortalExit_Desc_IceCaves">s Caves glacées</string>
 
 
 
@@ -527,7 +527,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="GameScene_NightMode">Soyez prudent, le donjon est encore plus dangereux la nuit !</string>
     <string name="GameScene_Chasm">L\'échos de vos pas résonnent à travers le donjon.</string>
     <string name="GameScene_Water">Vous entendez de l\'eau ruisseler autour de vous.</string>
-    <string name="GameScene_Grass">Les effluves végétales appesantissent l\'atmosphère de ce niveau.</string>
+    <string name="GameScene_Grass">Les effluves végétales appesantissent l\'atmosphère de cet étage.</string>
     <string name="GameScene_Secrets">L\'atmosphère de cet endroit vous indique que cet étage regorge de secrets</string>
 
 
@@ -724,23 +724,23 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="WndSadGhost_Farewell">Adieu, aventurier !</string>
 
 
-    <string name="WndStory_Sewers">Le donjon se trouve juste sous la ville, ses niveaux les plus élevés sont en fait le système des égouts de la ville. Etant officiellement une partie de la ville, ces niveaux ne sont pas si dangereux. On ne peut pas dire que c\'est un endroit sûr, mais au moins, vous n\'aurez pas affaire à de la magie noire par ici.</string>
+    <string name="WndStory_Sewers">Le donjon se trouve juste sous la ville, ses étages les plus élevés sont en fait le système des égouts de la ville. Etant officiellement une partie de la ville, ces étages ne sont pas si dangereux. On ne peut pas dire que c\'est un endroit sûr, mais au moins, vous n\'aurez pas affaire à de la magie noire par ici.</string>
     <string name="WndStory_Prision">Il y a des années, une prison souterraine fut bâtie ici pour les criminels les plus dangereux. A l\'époque, cela semblait une bonne idée, car il était très difficile de s\'échapper de cet endroit. Mais des vapeurs ténébreuses de magie noire ne tardèrent pas à monter des profondeurs, rendant prisonniers et gardes fous à lier. Au final, la prison fut abandonnée, même si certains condamnés sont restés enfermés dans ces murs...</string>
     <string name="WndStory_Caves">Les grottes, qui s\'étendent sous la prison abandonnée, ne sont que peu peuplées. Elles sont top profondes pour être exploitées par la ville, et sont trop pauvres en minéraux pour susciter l\'intérêt des nains. Il y avait un avant-poste commercial quelque part sur le chemin entre les deux nations, mais il a disparu depuis le déclin de la métropole naine. Seuls les gnolls et autres créatures souterraines résident ici désormais. </string>
     <string name="WndStory_Metropolis">La métropole naine était la plus grande de toutes les cités-états naines. Lors de son apogée, l\'armée mécanique des nains repoussa avec succès l\'invasion du dieu ancien et son armée de démons. Mais on raconte que les guerriers qui en sont revenus ont apportés les graines de la corruption avec eux, et que la victoire n\'était que le début de la fin de ce royaume souterrain.</string>
-    <string name="WndStory_Halls">Ces niveaux sont les vestiges des banlieues de la métropole naine. Après la victoire coûteuse dans la guerre contre l\'ancien dieu, les nains furent trop affaiblis pour se débarrasser des démons restants. Peu à peu les démons se sont attachés à cet endroit qu\'on appelle désormais le Hall des Démons.
+    <string name="WndStory_Halls">Ces étages sont les vestiges des banlieues de la métropole naine. Après la victoire coûteuse dans la guerre contre l\'ancien dieu, les nains furent trop affaiblis pour se débarrasser des démons restants. Peu à peu les démons se sont attachés à cet endroit qu\'on appelle désormais le Hall des Démons.
 Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndStory_Spiders">Il y a bien longtemps, il y avait ici une mine de gemmes magiques. Mais quand les filons finirent par s\'épuiser, les mineurs partirent, abandonnant derrière eux un vaste réseau de tunnels. Puis des araignées venimeuses vinrent s\'y installer. Mais ces dangereuses créatures, tapis dans le noir, n\'ont jamais suffi à décourager de pauvres fous de partir à la recherche des trésors peut-être encore présents dans cette mine. Les légendes sur les objets magiques qu\'il pouvait y rester grandissaient en mesure du danger de ce lieu. Un jour, une sorcière maléfique prit la fuite dans ces tunnels pour échapper à ces bourreaux. Mais la superstition populaire les dissuada de la poursuivre dans ces ténèbres. Ils décidèrent tout simplement de l\'attendre à l\'entrée, mais la sorcière ne fut jamais revue. Peut-être avait-elle trouvé une autre sortie, ou réussi à passer à travers les gardiens sans qu\'on la voie ? Ou, plus certainement, était-elle morte au coeur de ce nid obscur d\'araignées grouillantes ?</string>
 
 
-    <string name="WndTradeItem_Sale">A VENDRE : %1$s - %2$dor</string>
-    <string name="WndTradeItem_Buy">Acheter pour %dor</string>
-    <string name="WndTradeItem_Sell">Vendre pour %dor</string>
-    <string name="WndTradeItem_Sell1">Vendre 1 pour %dor</string>
-    <string name="WndTradeItem_SellAll">Tout vendre pour %dor</string>
+    <string name="WndTradeItem_Sale">A VENDRE : %1$s - %2$d pièces d\'or</string>
+    <string name="WndTradeItem_Buy">Acheter pour %d pièces d\'or</string>
+    <string name="WndTradeItem_Sell">Vendre pour %d pièces d\'or</string>
+    <string name="WndTradeItem_Sell1">Vendre 1 pour %d pièces d\'or</string>
+    <string name="WndTradeItem_SellAll">Tout vendre pour %d pièces d\'or</string>
     <string name="WndTradeItem_Cancel">En fait non</string>
-    <string name="WndTradeItem_Sold">Vous avez vendu votre %1$s pour %2$dor</string>
-    <string name="WndTradeItem_Bought">Vous avez acheté %1$s pour %2$dor</string>
+    <string name="WndTradeItem_Sold">Vous avez vendu votre %1$s pour %2$d pièces d\'or</string>
+    <string name="WndTradeItem_Bought">Vous avez acheté %1$s pour %2$d pièces d\'or</string>
 
 
     <string name="WndWandmaker_Message">Oh, je vois que vous avez réussi ! J\'espère ne pas vous avoir trop dérangé. Comme promis, vous pouvez prendre l\'un de mes meilleurs sceptres.</string>
@@ -765,7 +765,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="EquipableItem_Unequip">Vous ne pouvez pas enlever la %s maudite !</string>
 
 
-    <string name="Heap_Mimic">C\'est un mime !</string>
+    <string name="Heap_Mimic">C\'est une ophrys !</string>
 
 
     <string name="Amulet_Name">Amulette de Yendor</string>
@@ -813,7 +813,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="LloidsBeacon_Preventing">Une forte aura magique vous empêche d\'utiliser la balise de lloyd !</string>
     <string name="LloidsBeacon_Creatures">L\'aura psychique des créatures aux alentours vous empêchent d\'utiliser la balise de lloyd pour le moment.</string>
     <string name="LloidsBeacon_Return">La balise est bien installée à votre position, vous pourrez revenir ici n\'importe quand maintenant. </string>
-    <string name="LloidsBeacon_Set">\n\nCette balise a été placée quelque part au niveau %d de Remixed Dungeon.</string>
+    <string name="LloidsBeacon_Set">\n\nCette balise a été placée quelque part à l\'étage %d de Remixed Dungeon.</string>
 
 
     <string name="Stylus_Name">stylet arcanique</string>
@@ -892,7 +892,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="DriedRose_Name">rose séchée</string>
     <string name="DriedRose_Info">La rose est fanée depuis longtemps, mais elle a réussi à garder toutes ses pétales.</string>
-    <string name="DriedRose_Info2">Et elle n\'a pas perdu son charme. Elle a l\'air si belle, que vous voulez la garder pour toujours</string>
+    <string name="DriedRose_Info2">Et elle n\'a pas perdu son attrait. Elle a l\'air si belle, que vous voulez la garder pour toujours</string>
 
 
     <string name="DwarfToken_Name">Jeton de nain</string>
@@ -1106,7 +1106,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="AzuterronNPC_Gender">feminine</string>
     <string name="AzuterronNPC_Name_Objective">Apparition</string>
     <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
-    <string name="AzuterronNPC_Quest_Start">Oh, quoi ... mais tu me vois ! C\'est que tu n\'es pas l\'un d\' \"eux\". Je vois que toi non plus tu n\'aimes pas tous ces monstres. J\'ai un petit problème. Si tu m\'aides à le résoudre, je t\'aiderai également. Quelque part dans ce niveau, tu trouveras une créature de l\'ombre, un _Esprit Perfide_. Tue-le,  arrache-lui le coeur et reviens me voir. Encore une chose, si tu es intéressé : j\'ai des choses à vendre. N\'hésite pas à demander.</string>
+    <string name="AzuterronNPC_Quest_Start">Oh, quoi ... mais tu me vois ! C\'est que tu n\'es pas l\'un d\' \"eux\". Je vois que toi non plus tu n\'aimes pas tous ces monstres. J\'ai un petit problème. Si tu m\'aides à le résoudre, je t\'aiderai également. Quelque part dans cet étage, tu trouveras une créature de l\'ombre, un _Esprit Perfide_. Tue-le,  arrache-lui le coeur et reviens me voir. Encore une chose, si tu es intéressé : j\'ai des choses à vendre. N\'hésite pas à demander.</string>
     <string name="AzuterronNPC_Quest_Reminder">Aide-moi et je t\'aiderai.</string>
     <string name="AzuterronNPC_Quest_End">Excellent. Prend cette potion, tu en tireras certainement profit.</string>
     <string name="Journal_Azuterron">Apparition</string>
@@ -1285,7 +1285,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="WndDonate_donate">faire un don: </string>
     <string name="WndDonate_notConnected">pas de connexion :(</string>
-    <string name="WndDonate_commonDonateText">Remixed Dungeon est libre et gratuit pour tout le monde, et le restera toujours.\n\nMais vous pouvez nous aider à rendre le jeu encore meilleur.\n\nEn plus de nos sincères remerciements, vous obtiendrez des améliorations cosmétiques.</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon est libre pour tout le monde, et le restera toujours.\n\nMais vous pouvez nous aider à rendre le jeu encore meilleur.\n\nEn plus de nos sincères remerciements, vous obtiendrez des améliorations cosmétiques.</string>
 
     <string name="WndDonate_silverDonate">don en argent</string>
     <string name="WndDonate_goldDonate">don en or</string>
@@ -1421,14 +1421,14 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="FortuneTellerNPC_Name">diseuse de bonne aventure</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name_Objective">diseuse de bonne aventure</string>
-    <string name="FortuneTellerNPC_Desc">Cette femme porte une longue et brillante robe colorée. Elle a l\'air curieusement jeune pour quelqu\'un qui maîtrise la science arcanique des voyants. En vous rapprochant, vous pouvez l\'entendre marmonner pendant qu\'elle fixe sa boule de crystal. </string>
+    <string name="FortuneTellerNPC_Desc">Cette femme porte une longue et brillante robe colorée. Elle a l\'air curieusement jeune pour quelqu\'un qui maîtrise ler arcanes de la voyance. En vous rapprochant, vous pouvez l\'entendre marmonner pendant qu\'elle fixe sa boule de crystal. </string>
 
 
     <string name="ServiceManNPC_Limit_Reached">Veuillez me pardonner, mais vous avez atteint votre limite actuelle. Mais vous pourrez de nouveau utiliser notre service à chaque fois que vous atteindrez un nouveau niveau de héros. </string>
 
 
 
-    <string name="WndFortuneTeller_Instruction">Je peux révéler les secrets que recèlent vos possessions.\n Une identification vous coûtera %dpièces.</string>
+    <string name="WndFortuneTeller_Instruction">Je peux révéler les secrets que recèlent vos possessions.\n Une identification vous coûtera %d pièces.</string>
     <string name="WndFortuneTeller_No_Item">Faites attention, vous ne voulez quand même pas dépenser votre argent pour rien ? Il n\'y a rien à identifier dans votre inventaire.</string>
     <string name="WndFortuneTeller_Title">Diseuse de bonne aventure.</string>
 
@@ -1706,12 +1706,12 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="NecromancerNPC_Name">nécromancien</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Name_Objective">nécromancien</string>
-    <string name="NecromancerNPC_Desc">Cet homme ayant la cinquantaine semble être à la fois légèrement énervé et excité. Il porte une armure composite faite de fragments d\'os.</string>
-    <string name="NecromancerNPC_Intro"> Ah! C\'est si rare! Un aventurier qui n\'est pas mort. Remarquable! Oh... excusez-moi, parfois je suis tellement excité. Comme vous pouvez le voir, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est mon métier, voir encore et toujours la même chose devient finalement très ennuyeux. D\'un autre côté c\'est exactement la raison pour laquelle je suis ici. D\'après quelques semaines de calculs, quelque part dans ce donjon se prépare une chose spectaculaire. Une _Nécropole_, une ancienne cité de la mort va ouvrir ses portes. Et... je ne le dirais jamais assez, j\'ai perdu suffisamment de temps. J\'ai besoin d\'être prêt, _revenez plus tard_.</string>
+    <string name="NecromancerNPC_Desc">Cet homme ayant la cinquantaine semble être à la fois légèrement énervé et excité. Il porte une armure composée de morceaux d\'ossement.</string>
+    <string name="NecromancerNPC_Intro"> Ah! C\'est si rare! Un aventurier qui n\'est pas mort. Remarquable! Oh... excusez-moi, parfois je suis tellement excité. Comme vous pouvez le voir, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est mon métier, voir encore et toujours la même chose devient finalement très ennuyeux. D\'un autre côté c\'est exactement la raison pour laquelle je suis ici. D\'après mes calculs dans quelques semaines, quelque part dans ce donjon une chose spectaculaire va arriver. _Nécropolis_, une ancienne cité de la Mort va ouvrir ses portes. Et... je ne le dirais jamais assez, j\'ai perdu suffisamment de temps. J\'ai besoin de me préparer, _revenez plus tard_.</string>
     <string name="NecromancerNPC_Message1">Si peu de temps, si peu de temps...</string>
     <string name="NecromancerNPC_Message2">Je dois être prêt.</string>
-    <string name="NecromancerNPC_Message3">Je peux entendre l\'appel de la mort.</string>
-    <string name="NecromancerNPC_Message4">Il y a quelque chose de vraiment spécial dans la Nécropole.</string>
+    <string name="NecromancerNPC_Message3">Je peux entendre l\'appel de la Mort.</string>
+    <string name="NecromancerNPC_Message4">Je perçois quelque chose d\'unique terré dans la Nécropole.</string>
 
     <string name="RatKing_Name_Objective">roi des rats</string>
     <string name="RatKing_Gender">masculine</string>
@@ -1945,7 +1945,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="SacrificialSword_Gender">feminine</string>
 
     <string name="ScrollOfSummoning_Name">Parchemin d\'invocation</string>
-    <string name="ScrollOfSummoning_Info">Lorsqu\'il est lu à haute voix, ce parchemin invoque l\'un des monstres du niveau actuel du donjon. Et si sa volonté est suffisamment faible, il deviendra votre serviteur.</string>
+    <string name="ScrollOfSummoning_Info">Lorsqu\'il est lu à haute voix, ce parchemin invoque l\'un des monstres de l\'étage actuel du donjon. Et si sa volonté est suffisamment faible, il deviendra votre serviteur.</string>
     <string name="ScrollOfSummoning_Info_2">Le monstre a répondu à votre invocation !</string>
 
 
@@ -2052,16 +2052,16 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Undead_Defense">bloqué</string>
 
 
-    <string name="Mimic_Name">mime</string>
-    <string name="Mimic_Gender">masculine</string>
-    <string name="Mimic_Name_Objective">mime</string>
-    <string name="Mimic_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Dans les donjons, ils prennent très souvent la forme de coffres, car ils savent comment attirer les aventuriers.</string>
+    <string name="Mimic_Name">ophrys</string>
+    <string name="Mimic_Gender">feminine</string>
+    <string name="Mimic_Name_Objective">ophrys</string>
+    <string name="Mimic_Desc">Les ophrys sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Dans les donjons, elles prennent très souvent la forme de coffres, car elles savent comment attirer les aventuriers.</string>
 
 
-    <string name="MimicPie_Name">mime</string>
-    <string name="MimicPie_Gender">masculine</string>
-    <string name="MimicPie_Name_Objective">mime</string>
-    <string name="MimicPie_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celui-ci ressemble à un grosse tourte appétissante.</string>
+    <string name="MimicPie_Name">ophrys</string>
+    <string name="MimicPie_Gender">feminine</string>
+    <string name="MimicPie_Name_Objective">ophrys</string>
+    <string name="MimicPie_Desc">Les ophrys sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celle-ci ressemble à un grosse tourte appétissante.</string>
 
 
     <string name="Monk_Name">moine nain</string>
@@ -2309,12 +2309,12 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Zombie_Desc">Le donjon est un endroit dangereux dans lequel bien des aventuriers ont trépassé. Mais les plus infortunés d\'entre eux sont ceux qui sont morts dans la Nécropole. Ils sont désormais condamnés à errer dans ces couloirs sous la forme de corps pourrisants.</string>
 
 
-    <string name="NecromancerNPC_Intro2">Ah ! Un aventurier encore vivant. Incroyable ! Oh... Je vous prie de m\'excuser. Vous voyez, je suis moi-même nécromancier de métier. Et même si étudier les morts et la mort elle-même est mon gagne-pain, voir et revoir les mêmes choses finit par être lassant. De l\'autre côté, c\'est précisément pourquoi je suis ici. Les porte d\'une_Nécropole_, d\'une ancienne ville des morts, sont finalement apparues ici. En fait, nous nous tenons juste à l\'entrée. Et... vous savez quoi, prenez cette clé et entrez en premier. C\'est que vous aimez les aventures et ces trucs, non ? Je vous suis dans quelques instants, le temps que je me prépare.  </string>
+    <string name="NecromancerNPC_Intro2">Ah ! Un aventurier bel et bien vivant ! A peine croyable ! Oh... Je vous demande pardon, je suis parfois si excité. Voyez-vous, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est notre vocation, voir et revoir les mêmes choses finit par être lassant. D\'autre part, c\'est exactement pour cela que je suis ici. L\'autre jour quelque chose de grandiose est arrivé ! _Nécropolis_, une ancienne cité de la Mort a fait apparaître ses portes juste ici. Et... vous savez quoi, prenez cette clé et entrez le premier. Vous appréciez l\'aventure et tout ce genre de chose, non ? Je vous suis dans quelques instants, juste le temps que je me prépare.</string>
 
 
     <string name="Badges_Lich_Slain">Liche tuée</string>
 
-    <string name="FrostAura_Buff">Aura de glace</string>
+    <string name="FrostAura_Buff">Aura glacée</string>
 
 
 
@@ -2631,6 +2631,17 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
         <item>Ce livre est écrit en langue démoniaque</item>
         <item>Ce livre est écrit dans la langue des nains.</item>
         <item>Ce livre est écrit dans la langue des elfes.</item>
+
+        <item>Elle se figea devant la lourde porte de chêne, et observa les rayons de lumière passant à travers les bordures de la porte. Du fond embrouillé de sa mémoire, elle essaya de rassembler ses souvenirs.\n
+\"La lumière du soleil...\" murmura-t-elle pour elle-même. Combien de temps cela avait pris ? Dans la noirceur perpétuelle du Donjon, elle avait depuis longtemps arrêté de compter les jours. La lumière commençait à éclaircir sa mémoire affaiblie. Elle se souvenait de son terrible entraînement, de ces durs exercices avec les armes ou les sorts, de l\'enseignent de la prise de notes et de la réalisation de cartes. Elle se souvenait des mantras et de la discipline qu\'elle s\'était imposés pour acquérir le contrôle mental qui lui était nécessaire pour affronter ces profondeurs inconnues. Ce dont elle ne pouvait plus se souvenir, c\'était de ces compagnons.\n
+Elle se souvenait de leurs ordres, de leurs avertissements et de leurs intonations, mais plus de leurs visages ni de leurs personnalités.\n
+La souffrance l\'avait reprise. Les souvenirs du danger, de tant de dangers... Des animaux enragés, des morts-vivants, des brigands déments, de rusés ninjas ... Tous étaient tombés à terre de ses mains. Elle avait tranché, brûlé, poignardé et empoisonné des abominations, des démons, des machines perverses et des nécromanciens vicieux. Même des dieux étaient tombés devant elle.\n
+Elle avait poursuivi Yog partout du Ciel jusqu\'en Enfer, avant de faire taire pour toujours l\'infâme corrupteur. Mais ce n\'était pas fini. Yog n\'était que le serviteur d\'une Puissance encore plus grande.\n
+Donc elle continua. Elle fut guidée par les pages d\'un puissant almanach magique. Avec leur aide, elle traversa un pays inconnu, et atteint un petit village installé au coeur d\'une profonde forêt séculaire. Là, elle pénétra sur les traces du mal dans un véritable labyrinthe, et vainquit encore tous ceux qui se dressèrent devant elle.\n
+Maintenant, au petit jour, elle se regardait dans une flaque d\'eau souterraine. Son corps présentait les difformités propres aux blessures magiques. Sa peau pâle, presque transparente, était couverte de saleté, de crasse et de suie. Sa collection de bagues était suffisante pour payer la rançon d\'un roi et sa hotte contenait suffisamment de sceptres magiques pour anéantir une armée. Elle étreignit ses armes, suffisamment acérées pour abattre les dieux eux-mêmes. Elle était désormais devenue la véritable maîtresse de ce royaume obscure, ce désert de désespoir.\n
+Elle avait chassé le mal aux quatre coins de l\'univers, mais elle était à présent paralysée par la peur. Et s’ils la rejetaient ? Et s\'ils ne le faisaient pas ? Comment pourrait-elle encore vivre avec ces gens ? Bon sang, elle avait cessé de compter le nombre de fois où la mort l\'avait réclamée, uniquement pour échapper à sa froide emprise.\n
+Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle tourna le dos à la faible lumière et descendit dans le noir, peut-être pour la dernière fois.\n
+\n\n\tby drazool from reddit</item>
     </string-array>
 
     <string name="WandOfShadowbolt_Name">Sceptre de Foudre Noire</string>
@@ -2649,7 +2660,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="TownsfolkNPC_Name_Objective">habitant</string>
     <string name="TownsfolkNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers.</string>
     <string name="TownsfolkNPC_Message1">Ah ! Encore un aventurier, quel plaisir ! Assurez-vous de piller autant de choses que vous le pouvez !</string>
-    <string name="TownsfolkNPC_Message2">La ville est devenu si riche grâce au donjon que tous ses habitants peuvent se permettre de partir en vacances quand bon ça leur semble ! En fait, c\'est pourquoi il y a si peu de gens ici en ce moment.</string>
+    <string name="TownsfolkNPC_Message2">La ville est devenu si riche grâce au donjon que tous ses habitants peuvent se permettre de partir en vacances quand bon ça leur semble ! En fait, c\'est pour ça qu\'il y a si peu de gens ici en ce moment.</string>
     <string name="TownsfolkNPC_Message3">Quelle belle journée.</string>
     <string name="TownsfolkNPC_Message4">J\'espère que les égouts ne vont pas à nouveau être inondés au moment du printemps. Nous n\'avons pas besoin d\'une autre invasion de rats.</string>
 
@@ -2904,9 +2915,9 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="ChaosCrystal_ArmorFused">Le cristal a abosrbé votre armure, et a pris la forme d\'une armure composite.</string>
 
     <string name="Blacksmith_Name">forgeron troll</string>
-    <string name="Blacksmith_Desc">Ce forgeron troll a l\'air d\'un troll comme un autre : il est grand et maigre, et sa peau ressemble à de la pierre, que ce soit la couleur ou la texture. Il est en train de bricoler avec des outils un peu trop petits pour lui.</string>
-    <string name="Blacksmith_Gold1">Hé l\'humain ! Tu veux te rendre utile, pas vrai ? Prends c\'te pioche et va miner du minerai noir, 15 morceaux devraient suffire. Comment ça, comment je vais payer ? Radin... Ok, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
-    <string name="Blacksmith_Blood1">Hé l\'humain ! Tu veux être utile, pas vrai ? Prends c\'te pioche et démonte une chauve-souris avec : j\'ai besoin de son sang sur l\'outil.  Comment ça, je donne quoi en échange ? Cupide... Ok, ok, j\'ai pas d\'argent, mais je peux forger pour toi. T\'as une sacrée veine, je suis le seul forgeron du coin !</string>
+    <string name="Blacksmith_Desc">Ce forgeron troll a l\'air d\'un troll comme un autre : il est grand et maigre, et sa peau ressemble à de la pierre, que ce soit sa couleur ou sa texture. Il est en train de travailer avec des outils trop petits pour lui.</string>
+    <string name="Blacksmith_Gold1">Hé l\'humain ! Tu veux te rendre utile, pas vrai ? Prends c\'te pioche et va miner du _minerai d\'or noir_, _15 morceaux_ devraient suffire. Comment ça, comment je vais payer ? Radin... Ok, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
+    <string name="Blacksmith_Blood1">Hé l\'humain ! Tu veux être utile, pas vrai ? Prends c\'te pioche et _tue une chauve-souris_ avec : j\'ai besoin de son sang sur l\'outil.  Comment ça, je donne quoi en échange ? Cupide... Ok, ok, j\'ai pas d\'argent, mais je peux forger pour toi. T\'as une sacrée veine, je suis le seul forgeron du coin !</string>
     <string name="Blacksmith_Txt2">Tu te fous de moi ? Elle est où ma pioche ?!</string>
     <string name="Blacksmith_Txt3">Du minerai noir. 15 morceaux. Sérieusement, c\'est si dur que ça ?</string>
     <string name="Blacksmith_Txt4">J\'ai dit que j\'avais besoin de sang de chauve-souris sur la pioche. Allez allez !</string>
@@ -2945,13 +2956,11 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Imp_Name">diablotin ambitieux</string>
     <string name="Imp_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pour leur force ou leur aptitude à la magie, mais plutôt pour leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
     <string name="Imp_Defense">esquivé</string>
-    <string name="Imp_Golems1">Etes-vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)
-Moi, j\'aurai besoin de tuer des golems. Vous voyez, j\'aimerais commencer ma petite affaire par ici, mais ces _golems_ sont très mauvais pour le business ! C\'est dur de négocier avec des grumeaux de granite errants, maudits soient-ils ! Alors, s\'il vous plaît, tuez... disons 6 d\'entre eux, et la récompense est à vous. </string>
+    <string name="Imp_Golems1">Etes-vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)\nMoi, j\'aurai besoin qu\'on me débarasse des _golems_. Vous voyez, j\'aimerais commencer ma petite affaire par ici, mais ces golems sont très mauvais pour le business ! C\'est dur de négocier avec des morceaux de granite errants, maudits soient-ils ! Alors, s\'il vous plaît, tuez... disons _6_ d\'entre eux, et la récompense est à vous.</string>
     <string name="Imp_Golems2">Comment se passe votre safari avec les golems ?</string>
-    <string name="Imp_Monks1">Etes vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)
-Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un petit commerce par ici, mais ces lunatiques n\'achètent rien et vont effrayer les autres clients... Alors, s\'il vous plaît, tuez... disons 8 d\'entre eux, et la récompense est à vous. </string>
+    <string name="Imp_Monks1">Etes vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)/nMoi, j\'aurai besoin qu\'on me débarasse des _moines_. Vous voyez, j\'aimerais établir un petit commerce par ici, mais ces dingues n\'achètent jamais rien et effrayent les autres clients... Alors, s\'il vous plaît, tuez... disons _8_ d\'entre eux, et la récompense est à vous. </string>
     <string name="Imp_Monks2">Oh, vous êtes encore en vie ! Je savais que votre kung-fu était plus fort ;) Au fait, n\'oubliez pas de ramasser les jetons de ces moines.</string>
-    <string name="Imp_Cya">A plus ,%s !</string>
+    <string name="Imp_Cya">A plus, %s !</string>
     <string name="Imp_Hey">Psst, %s !</string>
 
     <string name="ImpShopkeeper_Name">diablotin ambitieux</string>
@@ -2969,11 +2978,11 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
     <string name="RatKing_Info1">Je ne dormais pas !</string>
     <string name="RatKing_Info2">Qu\'est ce que c\'est ? Je n\'ai pas le temps pour ces calomnies. Mon royaume ne va pas se gouverner tout seul !</string>
     <string name="RatKing_Info3">Comment osez-vous, créature chétive, perturber Notre Ratness?!</string>
-    <string name="RatKing_Died">Roi est mort. Vive le roi!</string>
+    <string name="RatKing_Died">Roi est mort. Vive le roi !</string>
 
 
     <string name="Shopkeeper_Name">marchand</string>
-    <string name="Shopkeeper_Desc">Ce mec un peu épais aurait l\'air plus approprié dans un quartier marchand d\'une grande ville plutôt qu\'un donjon. Ses prix expliquent pourquoi il préfère établir son business ici.</string>
+    <string name="Shopkeeper_Desc">Ce mec un peu épais aurait plus sa place dans le quartier marchand d\'une grande ville que dans un donjon. Ses prix expliquent pourquoi il préfère établir son business ici.</string>
     <string name="Shopkeeper_Sell">Choisissez un objet à vendre</string>
 
     <string name="WandMaker_Name">vieux fabricant de sceptres</string>
@@ -2985,24 +2994,24 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
     <string name="WandMaker_Dust2">Vous avez la poussière des morts , %s ? Les piles d\'ossements sont les endroits à vérifier.</string>
     <string name="WandMaker_RotberryName">Rougebaie</string>
     <string name="WandMaker_RotberryDesc">Les baies de cet arbrisseau ont le goût délicieux de la mort.</string>
-    <string name="WandMaker_RotberryInfo">La graine pousse un rugissement qui fait écho dans le donjon !</string>
+    <string name="WandMaker_RotberryInfo">La graine pousse un rugissement qui se répends en écho dans tout le donjon !</string>
 
     <string name="Guts_TileGrass">Arbuste sec</string>
     <string name="Guts_TileHighGrass">Arbuste sec</string>
     <string name="Guts_TileWater">Etrange liquide visqueux</string>
     <string name="Guts_TileDescEntrance">Trou béant dans le plafond menant à l\'étage supérieur</string>
     <string name="Guts_TileDescExit">Trou béant dans le sol menant à l\'étage inférieur</string>
-    <string name="Guts_TileDescDeco">On dirait que cet endroit était... blessé</string>
+    <string name="Guts_TileDescDeco">On dirait que cet endroit est... blessé</string>
     <string name="Guts_TileDescBookshelf">Cette étagère est complètement recouverte de toiles épaisses, il n\'y a pas moyen d\'atteindre un des livres.</string>
 
 
-    <string name="WndStory_Guts">Défait, déchiré en mille morceaux, mais pas complètement détruit, l\'Ancien Dieu était enfermé dans les plus profonds étages du donjon. Mais récemment le sceau fut cassé, laissant le passage menant à l\'antre du démon grand ouvert. Les monstres cauchemardesques, créés par l\'Ancien Dieu pendant son sommeil étaient si nombreux qu\'ils n\'offraient aucun moyen de s\'échapper d\'où ils devaient fusionner pour former ces halls grotesques. Et en marchant sur leur chair vivante vous pouvez sentir le battement d\'un coeur de l\'Ancien Dieu se répercutant à travers eux.</string>
+    <string name="WndStory_Guts">Défait, déchiré en mille morceaux, mais pas complètement détruit, l\'Ancien Dieu était enfermé dans les plus profonds étages du donjon. Mais récemment le sceau fut brisé, laissant le passage menant vers l\'antre du démon ouvert. Les monstres cauchemardesques, créés par l\'Ancien Dieu pendant son sommeil étaient si nombreux qu\'ils ne trouvaient aucun moyen de s\'échapper ensemble, et ils finirent par fusionner pour former ces salles grotesques. Et en marchant sur le sol constitué de leurs chairs vivantes vous pouvez sentir les battements d\'un coeur de l\'Ancien Dieu palpitant à travers eux.</string>
 
 
 
-    <string name="MimicAmulet_Name">mime</string>
-    <string name="MimicAmulet_Gender">masculine</string>
-    <string name="MimicAmulet_Name_Objective">mime</string>
+    <string name="MimicAmulet_Name">ophrys</string>
+    <string name="MimicAmulet_Gender">feminine</string>
+    <string name="MimicAmulet_Name_Objective">ophrys</string>
     <string name="MimicAmulet_Desc">Le moment le plus glorieux de votre carrière d\'aventurier se révèle être un piège.</string>
 
 
@@ -3018,7 +3027,7 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
     <string name="ZombieGnoll_Name">gnoll zombie</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnoll zombie</string>
-    <string name="ZombieGnoll_Desc">Un corps cassé, tordu de gnoll zombie ne ressemblant plus ni à un humanoïde ni à une hyène. Juste un tas une chair pourrie et d\'os rempli d\'une envie irrépressible de tuer et comsommer.</string>
+    <string name="ZombieGnoll_Desc">Un corps cassé, tordu de gnoll zombie ne ressemblant plus ni à un humanoïde ni à une hyène. Juste un tas une chair pourrie et d\'os rempli d\'une envie irrépressible de tuer et de dévorer.</string>
 
 
     <string name="Worm_Name">ver</string>
@@ -3106,39 +3115,34 @@ Moi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un p
     <string name="PseudoPasty_Name">pâté en croute</string>
     <string name="PseudoPasty_Info">L\'authentique pâté en croute de Cornouailles, avec sa farce traditionnelle de boeuf et de pommes de terre. </string>
 
-    <string name="ResultDescriptions_Mob">Tué par %1$s au niveau %2$d</string>
-    <string name="ResultDescriptions_Boss">Tué par le %1$s au niveau %2$d</string>
-    <string name="ResultDescriptions_Wand">Tué par votre propre %1$s au niveau %2$d</string>
-    <string name="ResultDescriptions_Glyph">Tué par le %1$s au niveau %2$d</string>
-    <string name="ResultDescriptions_Trap">Tué par une décharge du %1$s au niveau %2$d</string>
-    <string name="ResultDescriptions_Burning">Brûlé à mort au niveau %d</string>
-    <string name="ResultDescriptions_Hunger">Mort de faim au niveau %d</string>
-    <string name="ResultDescriptions_Poison">Empoisonné au niveau %d</string>
-    <string name="ResultDescriptions_Gas">Asphyxié au niveau %d</string>
-    <string name="ResultDescriptions_Bleeding">Mort d\'anémie au niveau %d</string>
-    <string name="ResultDescriptions_Ooze">Tué par la boue toxique au niveau %d</string>
-    <string name="ResultDescriptions_Fall">Est tombé au niveau %d</string>
+    <string name="ResultDescriptions_Mob">Tué par %1$s à l\'étage %2$d</string>
+    <string name="ResultDescriptions_Boss">Tué par le %1$s à l\'étage %2$d</string>
+    <string name="ResultDescriptions_Wand">Tué par votre propre %1$s à l\'étage %2$d</string>
+    <string name="ResultDescriptions_Glyph">Tué par le %1$s à l\'étage %2$d</string>
+    <string name="ResultDescriptions_Trap">Tué par une décharge du %1$s à l\'étage %2$d</string>
+    <string name="ResultDescriptions_Burning">Brûlé à mort à l\'étage %d</string>
+    <string name="ResultDescriptions_Hunger">Mort de faim à l\'étage %d</string>
+    <string name="ResultDescriptions_Poison">Empoisonné à l\'étage %d</string>
+    <string name="ResultDescriptions_Gas">Asphyxié à l\'étage %d</string>
+    <string name="ResultDescriptions_Bleeding">Mort d\'anémie à l\'étage %d</string>
+    <string name="ResultDescriptions_Ooze">Tué par la boue toxique à l\'étage %d</string>
+    <string name="ResultDescriptions_Fall">Est tombé à l\'étage %d</string>
     <string name="ResultDescriptions_Win">A obtenu l\'amulette de Yendor</string>
-    <string name="ResultDescriptions_Immured">Emmuré au niveau %d</string>
-    <string name="ResultDescriptions_Unknown">Mort dans de mystérieuses circonstances au niveau %d</string>
+    <string name="ResultDescriptions_Immured">Emmuré à l\'étage %d</string>
+    <string name="ResultDescriptions_Unknown">Mort dans de mystérieuses circonstances à l\'étage %d</string>
     <string name="Armor_EquipCursed">Votre %s vous enserre douloureusement</string>
     <string name="Armor_Identify">Vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="Armor_Incompatible">L\'interaction entre les différents types de magie a effacé le glyphe de cette armure !</string>
     <string name="Armor_Info1">Cette %1$s procure jusqu\'à \"%2$d\" points d\'absorption de dégâts par attaque.</string>
-    <string name="Armor_Info2">
-Votre force est inadéquate, vous êtes ralenti et votre défense est diminuée.</string>
-    <string name="Armor_Info3">
-Votre force est inadéquate, porter cette armure vous ralentira et diminuera votre défense.</string>
-    <string name="Armor_Info4">
-Une %1$s typique procure jusqu\'à %2$d points d\'absorption de dégâts par attaque et requiert %3$d points de force.</string>
+    <string name="Armor_Info2">\n\nVotre force est inadéquate, vous êtes ralenti et votre défense est diminuée.</string>
+    <string name="Armor_Info3">\n\nVotre force est inadéquate, porter cette armure vous ralentira et diminuera votre défense.</string>
+    <string name="Armor_Info4">\n\nUne %1$s typique procure jusqu\'à %2$d points d\'absorption de dégâts par attaque et requiert %3$d points de force.</string>
     <string name="Armor_Info5">Cette armure est probablement trop lourde pour vous.</string>
     <string name="Armor_Info6">Elle a un glyphe.</string>
-    <string name="Armor_Info7a">
-Vous portez l\' %1$s%2$s.</string>
+    <string name="Armor_Info7a">\n\nVous portez l\' %1$s%2$s.</string>
     <string name="Armor_Info7b">, et parce qu\'elle est maudite, vous n\'arrivez pas à l\'enlever</string>
-    <string name="Armor_Info8">
-Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
+    <string name="Armor_Info8">\n\nVous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="Armor_Glyph">glyphe</string>
 
 
@@ -3182,7 +3186,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="PlateArmor_Desc">D\'énormes plaques de métal forment une tenue qui offre une protection sans égal pour tout aventurier assez fort pour supporter son poids colossal.</string>
 
 
-    <string name="RogueArmor_Name">costume de voleur</string>
+    <string name="RogueArmor_Name">costume de shinobi</string>
     <string name="RogueArmor_Desc">En étant vêtu de ce sombre attirail, un voleur peut effectuer un mouvement appelé \"La bombe de fumée\" ( même si aucun explosif n\'est utilisé): il aveugle les ennemis qui peuvent le voir et saute sur le côté.</string>
     <string name="RogueArmor_ACSpecial">BOMBE DE FUMEE</string>
     <string name="RogueArmor_NotRogue">Seuls les voleurs peuvent porter cette armure !</string>
@@ -3251,7 +3255,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
 
 
     <string name="Icecap_Name">Champiglace</string>
-    <string name="Icecap_Desc">Le champiglace va , au toucher, relâcher des spores qui vont geler tout ce qui se trouve dans les environs.</string>
+    <string name="Icecap_Desc">Le champiglace va, au toucher, relâcher des spores qui vont geler tout ce qui se trouve dans les environs.</string>
 
 
     <string name="Sorrowmoss_Name">Tristemousse</string>
@@ -3306,8 +3310,8 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescChasm">Vous n\'arrivez pas à voir le sol.</string>
     <string name="Level_TileDescWater">En cas de brûlure, marchez dans l\'eau pour éteindre les flammes.</string>
-    <string name="Level_TileDescEntrance">Les escaliers mènent à l\'étage du dessus.</string>
-    <string name="Level_TileDescExit">Les escaliers mènent à l\'étage du dessous.</string>
+    <string name="Level_TileDescEntrance">L\'escaliers mène à l\'étage du dessus.</string>
+    <string name="Level_TileDescExit">L\'escaliers mène à l\'étage du dessous.</string>
     <string name="Level_TileDescEmbers">Des braises recouvrent le sol.</string>
     <string name="Level_TileDescHighGrass">La végétation dense empêche de voir plus loin.</string>
     <string name="Level_TileDescLockedDoor">Cette porte est verrouillée, vous avez besoin de la clé correspondante pour l\'ouvrir.</string>
@@ -3329,7 +3333,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="Caves_TileDescDeco">Une veine de minerai est visible sur le mur. De l\'or ?</string>
     <string name="Caves_TileDescBookshelf">Qui aurait besoin d\'une bibliothèque dans une grotte ?</string>
 
-    <string name="City_TileWater">Eau colorée douteuse</string>
+    <string name="City_TileWater">Eau colorée suspecte</string>
     <string name="City_TileHighGrass">Hautes fleurs épanouies</string>
     <string name="City_TileDescEntrance">Une rampe mène à l\'étage du dessus.</string>
     <string name="City_TileDescExit">Une rampe mène à l\'étage du bas.</string>
@@ -3353,7 +3357,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="LastLevel_TileDescWater">Ca ressemble à de la lave, mais c\'est froid et probablement pas dangereux à toucher.</string>
     <string name="LastLevel_TileDescStatue">Le pilier est fait de véritables crânes humains. Magnifique.</string>
 
-    <string name="LastShopLevel_TileWater">Eau colorée douteuse</string>
+    <string name="LastShopLevel_TileWater">Eau colorée suspecte</string>
     <string name="LastShopLevel_TileHighGrass">Hautes fleurs épanouies</string>
     <string name="LastShopLevel_TileDescEntrance">Une rampe amène à l\'étage du dessus.</string>
     <string name="LastShopLevel_TileDescExit">Une rampe mène tout droit en enfer.</string>
@@ -3366,7 +3370,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
 
     <string name="Sewer_TileWater">Eau boueuse</string>
     <string name="Sewer_TileDescDeco">De la mousse jaunâtre et humide recouvre le sol.</string>
-    <string name="Sewer_TileDescBookshelf">La bibliothèque est remplie de livres inutiles et pas chers. Pourrait-elle brûler ?</string>
+    <string name="Sewer_TileDescBookshelf">La bibliothèque est remplie de pauvres vieux bouquins inutiles. Pourrait-elle brûler ?</string>
 
 
 
@@ -3401,7 +3405,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="WndPlayGames_BackupProgress">Sauvegarder la progression du jeu</string>
     <string name="WndPlayGames_RestoreProgress">Restaurer la progression du jeu</string>
     <string name="WndPlayGames_WorkInCloud">Travail dans le Cloud... Un instant svp</string>
-    <string name="StartScene_UnlockGnoll">Pour débloquer cette classe, vous devez persuader le prêtre de la ville de guérir une Brute Gnoll.</string>
+    <string name="StartScene_UnlockGnoll">Pour débloquer cette classe, vous devez persuader le prêtre de la ville de guérir un Gnoll brutal.</string>
     <string name="WndPriest_Heal_Minions">Guérison de tous vos serviteurs pour juste %d pieces d\'or !
 </string>
     <string name="Badges_GnollUnlocked">Gnoll débloqué</string>
@@ -3409,7 +3413,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string-array name="HeroClass_GnollPerks">
         <item>Le Gnoll débute avec 15 points de force</item>
         <item>Le Gnoll débute avec 5 points de vie</item>
-        <item>Le Gnoll débute sans armure, mais possède un tomahawk unique</item>
+        <item>Le Gnoll débute sans armure, mais possède un tomahawk exclusif</item>
         <item>Les Gnolls ne savent ni lire ni écrire...</item>
         <item>Les Gnolls n\'attaquent pas d\'autres Gnolls à moins d\'être provoqués</item>
     </string-array>
@@ -3470,7 +3474,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="PotionOfMight_Name">Potion de Vigueur</string>
     <string name="PotionOfMight_Info">Ce puissant liquide parcourra vos muscles, augmentant votre force d\'un point et votre santé de 5 points en permanence.</string>
     <string name="PotionOfMight_Apply">Votre corps acquiert une vigueur nouvelle.</string>
-    <string name="PotionOfMight_StaApply">+1 for, +5 san</string>
+    <string name="PotionOfMight_StaApply">+1 force, +5 jauge de santé</string>
 
 
     <string name="PotionOfMindVision_Name">Potion de Vision de l\'Esprit</string>
@@ -3492,11 +3496,11 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="PotionOfStrength_Name">Potion de Force </string>
     <string name="PotionOfStrength_Info">Ce puissant liquide parcourra vos muscles, augmentant en permanence votre force d\'un point.</string>
     <string name="PotionOfStrength_Apply">Votre corps acquiert une force nouvelle.</string>
-    <string name="PotionOfStrength_StaApply">+1 for</string>
+    <string name="PotionOfStrength_StaApply">+1 force</string>
 
 
     <string name="PotionOfToxicGas_Name">Potion de Gaz Toxiques</string>
-    <string name="PotionOfToxicGas_Info">Déboucher ou secouer ce gaz pressurisé fera exploser son contenu en un nuage de gaz vert mortel. Vous devriez lancer cette potion à des ennemis distants plutôt que de la déboucher à la main.</string>
+    <string name="PotionOfToxicGas_Info">Déboucher ou secouer ce gaz pressurisé fera exploser son contenu en un nuage de gaz verdâtre mortel. Vous devriez lancer cette potion à des ennemis distants plutôt que de la déboucher à la main.</string>
 
     <string name="WndSettings_Quickslots">Raccourcis</string>
 
@@ -3513,7 +3517,7 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
     <string name="QuickSlot_SelectSlot">Choisissez un raccourci</string>
 
     <string name="Potion_ACMoisten">HUMECTER</string>
-    <string name="Potion_SelectForMoisten">Sélectionnez l\'item à humecter</string>
+    <string name="Potion_SelectForMoisten">Sélectionnez l\'objet à humecter</string>
     <string name="Potion_MoistenUseless">On dirait que vous avez gaspillé cette potion.</string>
 
     <string name="Potion_RuneDissaperaed">Rune disparue du %s</string>
@@ -3641,7 +3645,13 @@ Vous pouvez ressentir une énergie maléfique cachée dans l\' %s</string>
    <string name="town_deco_library_books_desc">Bien meilleur que les livres que l\'on peut trouver dans le donjon.</string>
    <string name="town_deco_wallpaper_name">Papier peint</string>
    <string name="town_deco_wallpaper_desc">Une excellente solution pour décorer un tel endroit.</string>
-   <string name="Welcome_Text_28_6">
+   <string name="town_deco_stones_name">Pierres</string>
+   <string name="town_deco_stones_desc">Juste un tas de pierres.</string>
+   <string name="town_deco_fireplace_name">Foyer</string>
+   <string name="town_deco_fireplace_desc">Idéal pour se réchauffer dans un endroit froid comme celui-ci.</string>
+
+
+    <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mécanique de jeu :\n
     -- Des capacités spéciales pour le Guerrier !\n
