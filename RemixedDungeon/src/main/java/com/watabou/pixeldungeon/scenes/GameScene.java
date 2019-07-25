@@ -204,10 +204,12 @@ public class GameScene extends PixelScene {
             tiles.addLayer(Level.LayerId.Deco2);
             baseTiles = tiles;
 
-            tiles = new CustomLayerTilemap(level,Level.LayerId.Roof_Base);
-            tiles.addLayer(Level.LayerId.Roof_Deco);
-            tiles.setTransparent(true);
-            roofTiles = tiles;
+            //if(level.hasTilesetForLayer(Level.LayerId.Roof_Base)) {
+                tiles = new CustomLayerTilemap(level, Level.LayerId.Roof_Base);
+                tiles.addLayer(Level.LayerId.Roof_Deco);
+                tiles.setTransparent(true);
+                roofTiles = tiles;
+            //}
         }
         terrain.add(baseTiles);
 

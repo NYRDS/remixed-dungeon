@@ -291,7 +291,13 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int[] getTileLayer(LayerId id) {
-		return customLayers.get(id);
+		if(customLayers.containsKey(id)) {
+			return customLayers.get(id);
+		}
+
+		int [] ret = new int[getLength()];
+		Arrays.fill(ret,-1);
+		return ret;
 	}
 
 	public static Collection<Mob> mobsFollowLevelChange(InterlevelScene.Mode changeMode) {

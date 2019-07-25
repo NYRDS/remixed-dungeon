@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon;
 
+import android.graphics.RectF;
+
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;
 import com.watabou.noosa.CompositeImage;
@@ -52,8 +54,11 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
         if (data[pos] >= 0) {
             Image img = new Image(getTexture());
-            img.frame(getTileset().get(data[pos]));
-            imgs.add(img);
+            RectF frame = getTileset().get(data[pos]);
+            if(frame!=null) {
+                img.frame(frame);
+                imgs.add(img);
+            }
         }
 
         for (CustomLayerTilemap layer : mLayers) {
