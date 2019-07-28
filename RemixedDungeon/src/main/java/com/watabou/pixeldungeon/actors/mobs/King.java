@@ -39,7 +39,6 @@ import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -90,11 +89,10 @@ public class King extends Boss {
 	@Override
 	public boolean getCloser(int target) {
 
-		Level level = Dungeon.level;
-		int x = level.cellX(getPos());
-		int y = level.cellY(getPos());
+		int x = level().cellX(getPos());
+		int y = level().cellY(getPos());
 
- 		targetPedestal = level.getNearestTerrain(x,y, Terrain.PEDESTAL, lastPedestal);
+ 		targetPedestal = level().getNearestTerrain(x,y, Terrain.PEDESTAL, lastPedestal);
 
 		if(canTryToSummon()) {
 			return super.getCloser( targetPedestal );
