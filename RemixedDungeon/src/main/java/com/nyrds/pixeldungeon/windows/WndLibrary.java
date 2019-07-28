@@ -54,6 +54,11 @@ public class WndLibrary extends Window {
 
 		int i = 0;
 		for(final Map.Entry<String,String> entry:categoriesMap.entrySet()) {
+
+			if(!Library.isValidCategory(entry.getKey())) {
+				continue;
+			}
+
 			TextButton browse = new RedButton(entry.getValue()) {
 				@Override
 				protected void onClick() {

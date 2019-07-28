@@ -110,23 +110,40 @@ public class Library {
 		return Collections.unmodifiableMap(getCategory(category));
 	}
 
+
+	public static boolean isValidCategory(String category) {
+		if(category.equals(ITEM)) {
+			return true;
+		}
+
+		if(category.equals(MOB)) {
+			return true;
+		}
+
+		return false;
+	}
+
 	public static EntryHeader infoHeader(String category, String clazz) {
 		EntryHeader ret = new EntryHeader();
-		if(category.equals(ITEM) && ItemFactory.isValidItemClass(clazz)) {
-			Item item = ItemFactory.itemByName(clazz);
-			ret.header = Utils.capitalize(item.name());
-			ret.icon = new ItemSprite(item);
-			return ret;
+		if(category.equals(ITEM)) {
+			if(ItemFactory.isValidItemClass(clazz)) {
+				Item item = ItemFactory.itemByName(clazz);
+				ret.header = Utils.capitalize(item.name());
+				ret.icon = new ItemSprite(item);
+				return ret;
+			}
 		}
 
-		if(category.equals(MOB) && MobFactory.hasMob(clazz)) {
-			Mob mob = MobFactory.mobByName(clazz);
-			ret.header = Utils.capitalize(mob.getName());
-			ret.icon = mob.sprite().avatar();
-			return ret;
+		if(category.equals(MOB)) {
+			if(MobFactory.hasMob(clazz)) {
+				Mob mob = MobFactory.mobByName(clazz);
+				ret.header = Utils.capitalize(mob.getName());
+				ret.icon = mob.sprite().avatar();
+				return ret;
+			}
 		}
 
-		throw new TrackedRuntimeException("unknown category: "+category);
+		return null;
 	}
 
 	public static Window infoWindow(String category, String clazz) {
