@@ -91,17 +91,20 @@ abstract public class ClassArmor extends Armor {
 
 			if (hero.getSkillPoints() < cost) {
 				GLog.w( Game.getVar(R.string.ClassArmor_LowMana) );
-			} else if (!isEquipped( hero )) {
-				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
-			} else {
-				setUser(hero);
-				doSpecial();
-				hero.spendSkillPoints(cost);
+				return;
 			}
-			
-		} else {	
-			super.execute( hero, action );		
+			if (!isEquipped( hero )) {
+				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
+				return;
+			}
+
+			setUser(hero);
+			doSpecial();
+			hero.spendSkillPoints(cost);
+			return;
 		}
+
+		super.execute( hero, action );
 	}
 	
 	abstract public String special();
