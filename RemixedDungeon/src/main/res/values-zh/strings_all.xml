@@ -1412,7 +1412,7 @@ remix.28.5\n
 
 
 
-    <string name="WndHats_ListTitle">饰品列表</string>
+    <string name="WndHats_ListTitle">帽子列表</string>
     <string name="WndHats_SlotTitle">已装备</string>
     <string name="WndHats_NoConnectionMsg">无法连接到Google Play服务</string>
     <string name="WndHats_Purchased">购买成功！</string>
@@ -2996,7 +2996,7 @@ remix.28.5\n
     <string name="MirrorImage_Name">镜像</string>
     <string name="MirrorImage_Name_Objective">镜像</string>
     <string name="MirrorImage_Gender">masculine</string>
-    <string name="MirrorImage_Desc">这个镜像与你十分相似，但是他们更黯淡且在微微震颤。</string>
+    <string name="MirrorImage_Desc">这个镜像与你十分相似，但是它更黯淡且在微微震颤。</string>
 
 
     <string name="RatKing_Name">鼠王</string>
@@ -3656,7 +3656,7 @@ remix.28.5\n
    <string name="town_deco_filmtape_desc">有趣的是这件什么样的作品。</string>
    <string name="town_deco_painting_name">油画</string>
    <string name="town_deco_painting_desc">一件漂亮的艺术品。</string>
-   <string name="town_deco_curtains_name">幕布</string>
+   <string name="town_deco_curtains_name">窗帘</string>
    <string name="town_deco_curtains_desc">挡住一些不需要的光线，同时也作为一个漂亮的装饰。</string>
    <string name="town_deco_rug_name">地毯</string>
    <string name="town_deco_rug_desc">设计的很有品味。</string>

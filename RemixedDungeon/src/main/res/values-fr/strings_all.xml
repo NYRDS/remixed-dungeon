@@ -877,7 +877,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="SkeletonKey_Name">Clé squelette</string>
-    <string name="SkeletonKey_Info">Cette clé doit être importante : son anneau est taillé en forme de crâne. Elle ouvrira sûrement une porte crucial.</string>
+    <string name="SkeletonKey_Info">Cette clé doit être importante : son anneau est taillé en forme de crâne. Elle ouvre sûrement une porte importante.</string>
 
 
 
@@ -2248,7 +2248,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
 
 
     <string name="BlackSkull_Name">crâne noir</string>
-    <string name="BlackSkull_Info">Un petit crâne en obsidienne. C\'était une source de puissance nécropolienne, or après la défaite de la Liche, il semble qu\'il ait perdu ses pouvoirs. Mais en le tenant dans vos mains, une idée curieuse vous traverse l\'esprit : \"Il a faim\":</string>
+    <string name="BlackSkull_Info">Un petit crâne en obsidienne. C\'était la source du pouvoir de Nécropolis, or après la défaite de la Liche, il semble qu\'il ait perdu ses pouvoirs. Mais en le tenant dans vos mains, une idée curieuse vous traverse l\'esprit : \"Il a faim\":</string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">crâne noir réveillé</string>
@@ -3310,8 +3310,8 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescChasm">Vous n\'arrivez pas à voir le sol.</string>
     <string name="Level_TileDescWater">En cas de brûlure, marchez dans l\'eau pour éteindre les flammes.</string>
-    <string name="Level_TileDescEntrance">L\'escaliers mène à l\'étage du dessus.</string>
-    <string name="Level_TileDescExit">L\'escaliers mène à l\'étage du dessous.</string>
+    <string name="Level_TileDescEntrance">Les escaliers mènent à l\'étage du dessus.</string>
+    <string name="Level_TileDescExit">Les escaliers mènenet à l\'étage du dessous.</string>
     <string name="Level_TileDescEmbers">Des braises recouvrent le sol.</string>
     <string name="Level_TileDescHighGrass">La végétation dense empêche de voir plus loin.</string>
     <string name="Level_TileDescLockedDoor">Cette porte est verrouillée, vous avez besoin de la clé correspondante pour l\'ouvrir.</string>
