@@ -215,10 +215,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			QuickSlot.refresh();
 			Collections.sort(items, itemComparator);
 			return true;
-		} else {
-			GLog.n(Game.getVar(R.string.Item_PackFull), name());
-			return false;
 		}
+
+		GLog.n(Game.getVar(R.string.Item_PackFull), name());
+		return false;
 	}
 
 	public boolean collect(ItemOwner owner) {

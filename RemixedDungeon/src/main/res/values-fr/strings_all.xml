@@ -189,7 +189,7 @@
 
     <string name="Bishop_remove_curse">Désensorcellement - %d pièces</string>
 
-    <string name="Bishop_not_interested">Partez</string>
+    <string name="Bishop_not_interested">S\'en aller.</string>
     <string name="Bishop_no_money">Vous n\'avez pas assez d\'argent pour cela.</string>
     <string name="Bishop_bye">Je prierai pour vous, mon enfant.</string>
 
@@ -323,8 +323,8 @@
 
 
     <string name="WandOfFirebolt_Name">Sceptre de feu</string>
-    <string name="WandOfFirebolt_Info">Ce sceptre relâche des explosions de feu magiques. Elles brûleront  toutes les zones inflammables, et blesseront et brûleront les créatures qu\'elles touchent.</string>
-    <string name="WandOfFirebolt_Info1">Vous vous êtes tué avec votre propre sceptre de tirs enflammés...</string>
+    <string name="WandOfFirebolt_Info">Ce sceptre magique relâche des boules de feu. Elles brûleront toutes les zones inflammables, et blesseront et brûleront les créatures qu\'elles touchent.</string>
+    <string name="WandOfFirebolt_Info1">Vous vous êtes tué avec votre propre sceptre de feu...</string>
 
 
     <string name="WandOfFlock_Name">Sceptre du troupeau</string>
@@ -467,7 +467,7 @@
 
     <string name="town_deco_library_sign_name">Enseigne d\'une librairie</string>
     <string name="town_deco_library_sign_desc">Il doit y avoir une bibliothèque à l\'intérieur.</string>
-    <string name="town_deco_identifier_sign_name">Symbole d\'une boule de crystal</string>
+    <string name="town_deco_identifier_sign_name">Enseigne représentant une boule de cristal</string>
     <string name="town_deco_identifier_sign_desc">On devrait trouver une diseuse de bonne aventure à l\'intérieur.</string>
     <string name="town_deco_cinema_sign_name">Enseigne de cinéma</string>
     <string name="town_deco_cinema_sign_desc">N\'y aurait-il pas un cinéma à l\'intérieur ?</string>
@@ -535,9 +535,9 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="Char_Name_Objective">ennemi</string>
 
     <string-array name="Char_Hit">
-        <item>%1$s %2$s frappe</item>
-        <item>%1$s %2$s frappe</item>
-        <item>%1$s %2$s frappe </item>
+        <item>%2$s %1$s frappe</item>
+        <item>%2$s %1$s frappe</item>
+        <item>%2$s %1$s frappe </item>
     </string-array>
     <string-array name="Char_Kill">
         <item>%s vous a tué...</item>
@@ -1327,7 +1327,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WoodenBow_Gender">masculine</string>
 
 
-    <string name="CompoundBow_Name">Arc à poulies</string>
+    <string name="CompoundBow_Name">arc à poulies</string>
     <string name="CompoundBow_Info">Les flèches tirées avec un arc à poulies infligent une grande quantité de dégâts et ont une précision améliorée en échange d\'un peu moins de vitesse.</string>
     <string name="CompoundBow_Gender">masculine</string>
 
@@ -1456,7 +1456,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_deco_blue_carpet_desc">Un tapis bleu exquis, décoré avec de la soie violette.</string>
 
     <string name="town_table_fortune_name">Table</string>
-    <string name="town_table_fortune_desc">Cette table est couverte avec de la soie blanche. Vous pouvez voir de nombreuses cartes de tarot posées dans un ordre particulier.</string>
+    <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
 
     <string name="ConcreteBlock_Name">Lourd bloc de béton.</string>
     <string name="ConcreteBlock_Description">Il semblerait que ce bloc exige %d points de force pour être poussé.</string>
@@ -1514,7 +1514,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="WndSaveSlotSelect_Delete_Title">Etes vous sur de vouloir supprimer cette sauvegarde ?</string>
     <string name="Hero_Name">vous</string>
     <string name="Hero_Name_Objective">vous</string>
-    <string name="Hero_Leave">On ne quitte pas si simplement Remixde Dungeon.</string>
+    <string name="Hero_Leave">On ne quitte pas si simplement Remixed Dungeon.</string>
     <string name="Hero_LevelUp">Niveau supérieur !</string>
     <string name="Hero_NewLevel">Bienvenue au niveau %d ! Vous êtes désormais en meilleure santé et plus concentré. Il vous est plus facile de toucher vos ennemis et d\'esquiver leurs attaques.</string>
     <string name="Hero_YouNowHave">Vous avez %s</string>
@@ -1790,8 +1790,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
     <string name="MeleeWeapon_Info1a">Cette %1$s est une arme de mélée %2$s de rang %3$d.</string>
     <string name="MeleeWeapon_Info1b">une</string>
-    <string name="MeleeWeapon_Info1c">l\'amélioration d\'une</string>
-    <string name="MeleeWeapon_Info1d">la dégradation d\'une</string>
+    <string name="MeleeWeapon_Info1c">améliorée</string>
+    <string name="MeleeWeapon_Info1d">dégradée</string>
     <string name="MeleeWeapon_Info2a">Ses dommages moyens sont de %d points par coup.</string>
     <string name="MeleeWeapon_Info2b">Ses dommages moyens sont typiquement de %1$d points par coup et elle requiert %2$d points de force.</string>
     <string name="MeleeWeapon_Info2c">Cette arme est sûrement trop lourde pour vous.</string>
@@ -1807,7 +1807,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="MeleeWeapon_Info5">Elle est enchantée.</string>
     <string name="MeleeWeapon_Info6a">A cause de votre force insuffisante, la précision et la vitesse de vos attaques avec cette %s sont diminuées.</string>
     <string name="MeleeWeapon_Info6b">Grâce à votre excès de force, les dommages de vos attaques avec cette %s sont augmentés.</string>
-    <string name="MeleeWeapon_Info7a">Vous gardez la %1$s prête à l\'emploi%2$s.</string>
+    <string name="MeleeWeapon_Info7a">Vous gardez la %1$s prête à l\'emploi %2$s.</string>
     <string name="MeleeWeapon_Info7b">, et à cause de sa malédiction, vous ne pouvez vous en défaire</string>
     <string name="MeleeWeapon_Info7c">Vous pouvez ressentir une magie maléfique qui se terre dans la %s.</string>
 
@@ -2061,7 +2061,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="MimicPie_Name">ophrys</string>
     <string name="MimicPie_Gender">feminine</string>
     <string name="MimicPie_Name_Objective">ophrys</string>
-    <string name="MimicPie_Desc">Les ophrys sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celle-ci ressemble à un grosse tourte appétissante.</string>
+    <string name="MimicPie_Desc">Les ophrys sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Celle-ci ressemble à une grosse tourte appétissante.</string>
 
 
     <string name="Monk_Name">moine nain</string>
@@ -2164,7 +2164,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Wraith_Defense">esquivé</string>
 
     <string name="Yog_Name">Yog-Dzewa</string>
-    <string name="Yog_Gender">mâle</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="Yog_Desc">Yog-Dzewa est une divinité ancestrale, une puissante entité venant des méandres du chaos. Un siècle plus tôt, les nains ont gagné la guerre de justesse contre son armée de démons, mais furent incapables de tuer leur dieu. A la place, ils l\'ont enfermé dans les grands halls sous leur cité, espérant qu\'il soit trop faible pour revenir un jour.</string>
     <string name="Yog_Info1">...</string>
@@ -2252,7 +2252,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="BlackSkull_Gender">masculine</string>
 
     <string name="BlackSkull_Name_Awakened">crâne noir réveillé</string>
-    <string name="BlackSkull_Info_Awakened">Le crâne vibre d\'une grande puissance que vous pouvez voir sortir de ses yeux creux. Alors que vous le tenez dans votre main, vous distinguez une voix terrifiante : \"La mort marche\".</string>
+    <string name="BlackSkull_Info_Awakened">Le crâne vibre d\'une grande puissance que vous pouvez voir sortir de ses yeux creux. Alors que vous le tenez dans votre main, vous distinguez une voix terrifiante : \"Voici la Mort qui s\'approche\".</string>
 
 
     <string name="SoulShard_Name">éclat d\'âme</string>
@@ -2309,7 +2309,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="Zombie_Desc">Le donjon est un endroit dangereux dans lequel bien des aventuriers ont trépassé. Mais les plus infortunés d\'entre eux sont ceux qui sont morts dans la Nécropole. Ils sont désormais condamnés à errer dans ces couloirs sous la forme de corps pourrisants.</string>
 
 
-    <string name="NecromancerNPC_Intro2">Ah ! Un aventurier bel et bien vivant ! A peine croyable ! Oh... Je vous demande pardon, je suis parfois si excité. Voyez-vous, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est notre vocation, voir et revoir les mêmes choses finit par être lassant. D\'autre part, c\'est exactement pour cela que je suis ici. L\'autre jour quelque chose de grandiose est arrivé ! _Nécropolis_, une ancienne cité de la Mort a fait apparaître ses portes juste ici. Et... vous savez quoi, prenez cette clé et entrez le premier. Vous appréciez l\'aventure et tout ce genre de chose, non ? Je vous suis dans quelques instants, juste le temps que je me prépare.</string>
+    <string name="NecromancerNPC_Intro2">Ah ! Un aventurier bel et bien vivant ! A peine croyable ! Oh... Je vous demande pardon, je suis parfois si excité. Voyez-vous, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est notre vocation, voir et revoir les mêmes choses finit par être lassant. D\'autre part, c\'est exactement pour cela que je suis ici. L\'autre jour quelque chose de grandiose est arrivé ! _Nécropolis_, une ancienne cité de la Mort a fait apparaître ses portes juste ici. Et... vous savez quoi, prenez cette clé et entrez le premier. Vous appréciez l\'aventure et tout ce genre de chose, non ? Alors, allez s\'y, passez devant... je vous suis dans quelques instants, juste le temps que vous mour... pardon, juste le temps que je me prépare.</string>
 
 
     <string name="Badges_Lich_Slain">Liche tuée</string>
@@ -2677,7 +2677,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="ServiceManNPC_Name">employé</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Name_Objective">employé</string>
-    <string name="ServiceManNPC_Desc">Un employé classique d\'un établissement local.</string>
+    <string name="ServiceManNPC_Desc">Un employé habituel d\'un établissement local.</string>
 
 
     <string name="TownShopkeeper_Name">commerçant</string>
@@ -2701,10 +2701,10 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
 
 
     <string name="town_deco_roof_name">Toit</string>
-    <string name="town_deco_roof_desc">Une tuile ordinaire du toit.</string>
+    <string name="town_deco_roof_desc">Un banal toit de tuiles.</string>
 
     <string name="town_deco_wall_name">Mur</string>
-    <string name="town_deco_wall_desc">Un mur simple en rondins.</string>
+    <string name="town_deco_wall_desc">Un simple mur de rondin.</string>
 
     <string name="town_deco_snow_name">Neige</string>
     <string name="town_deco_snow_desc">Malgré les rumeurs courant sur la popularité de cet endroit auprès des aventuiers, il y a un bon paquet de neige dans les environs, comme si jamais personne ne mettait les pieds dehors.</string>
@@ -3585,10 +3585,10 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
    <string name="town_deco_broken_wall_desc">Les rondins de ce mur sont pourris depuis longtemps et ont perdu toute résistance.</string>
    <string name="town_deco_mud_name">Boue</string>
    <string name="town_deco_mud_desc">Sol dégelé dans cette zone de pergélisol.</string>
-   <string name="town_deco_stock_name">Stock</string>
+   <string name="town_deco_stock_name">Entrepôt</string>
    <string name="town_deco_stock_desc">Les denrées alimentaires sont stockées ici, ainsi que toute sorte d\'autres articles d\'épicerie.</string>
    <string name="town_deco_barrel_name">Tonneau</string>
-   <string name="town_deco_barrel_desc">Un banal tonneau qui ne peut malheureusement pas être ouvert.</string>
+   <string name="town_deco_barrel_desc">Un vieux tonneau presque pourri.</string>
    <string name="town_deco_hay_name">Foin</string>
    <string name="town_deco_hay_desc">Une petite meule de foin d\'une senteur agréable.</string>
    <string name="town_deco_firewood_name">Bois de chauffage</string>
@@ -3597,12 +3597,12 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
    <string name="town_deco_stakes_desc">Ces pieux taillés en pointe paraissent effrayants, alors qu’ils sont en fait tout à fait inutiles.</string>
    <string name="town_deco_fence_name">Barrière</string>
    <string name="town_deco_fence_desc">Barrière en bois couverte de neige.</string>
-   <string name="town_deco_pole_name">Bobine</string>
-   <string name="town_deco_pole_desc">Un axe en bois conçu pour enrouler une corde.</string>
+   <string name="town_deco_pole_name">Poteau</string>
+   <string name="town_deco_pole_desc">Un pateau conçu pour attacher une corde à linge.</string>
    <string name="town_deco_rope_name">Corde</string>
    <string name="town_deco_rope_desc">Corde fabriquée à la main</string>
    <string name="town_deco_slush_name">Neige fondante</string>
-   <string name="town_deco_slush_desc">La neige a commencé à fondre, transformant cette zone en bouillasse.</string>
+   <string name="town_deco_slush_desc">La neige a commencé à fondre ici, transformant cette zone en bouillasse.</string>
    <string name="town_deco_chest_name">Coffre</string>   
    <string name="town_deco_chest_desc">Meuble pratique pour ranger différentes choses et notamment des bijoux.</string>
    <string name="town_deco_emptyboard_name">Casier</string>
@@ -3614,15 +3614,15 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
    <string name="town_deco_wall_candles_name">Bougies</string>
    <string name="town_deco_wall_candles_desc">Bougies éteintes d\'où émane encore un parfum agréable.</string>
    <string name="town_deco_wooden_drawer_name">Tiroir</string>
-   <string name="town_deco_wooden_drawer_desc">Intéressant, ce qu\'il y a à l\'intérieur.</string>
+   <string name="town_deco_wooden_drawer_desc">C\'est intéressant, ce qu\'il y a là dedans.</string>
    <string name="town_deco_scrolls_name">Parchemins</string>   
    <string name="town_deco_scrolls_desc">Cette étagère poussiéreuse est pleine de parchemins et de livres de toute sorte.</string>
    <string name="town_deco_medicine_name">Médicaments</string>   
    <string name="town_deco_medicine_desc">Fioles et autres ingrédients médicaux sont soigneusement rangés sur ces étagères.</string>
    <string name="town_deco_wooden_stairs_name">Escaliers</string>   
    <string name="town_deco_wooden_stairs_desc">Vous y paraissez un peu plus grand.</string>
-   <string name="town_deco_canvas_name">Canevas</string>
-   <string name="town_deco_canvas_desc">Lourde tapisserie brodée accrochée au mur</string>
+   <string name="town_deco_canvas_name">Ecran</string>
+   <string name="town_deco_canvas_desc">Une large toile blanche épaisse suspendue au mur.</string>
    <string name="town_deco_projector_name">Projecteur de film</string>
    <string name="town_deco_projector_desc">Un vieil appareil pour jouer des films et divertir les gens.</string>
    <string name="town_deco_filmtape_name">Bobine de film</string>

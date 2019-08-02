@@ -67,7 +67,7 @@
     <string name="WndSpells_Title">技能</string>
     <string name="WndSpells_Level">法强：</string>
 
-    <string name="Ring_Name">%s指環</string>
+    <string name="Ring_Name">%s戒指</string>
     <string name="Ring_Info">這金屬環上鑲有一大顆在黑暗中熠熠生光的%s。問誰會知道戴上它後，會有甚麼效果呢？</string>
     <string name="Ring_Identify">現在，您對您的%1$s已有足夠的認知去鑒定它。它是%2$s。</string>
 

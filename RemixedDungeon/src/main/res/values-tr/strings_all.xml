@@ -2634,6 +2634,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="town_deco_wall_desc">ağaçlardan yapılmış basit bir duvar </string>
 
     <string name="town_deco_snow_name">kar</string>
+    <string name="town_deco_cross_name">Haç</string>
     <string name="town_deco_bell_name">çan </string>
     <string name="town_deco_bell_desc">Tipik bir kilise çanı. Uzun zamandır kimse çalmamış gibi görünüyor. Hatta halatı bile kayıp. </string>
 
@@ -3498,6 +3499,23 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
    <string name="town_deco_wall_beam_desc">Bu bina için güvenilir bir destek sağlıyor.</string>
    <string name="town_deco_wall_candles_name">Mumlar.</string>
    <string name="town_deco_scrolls_name">Parşömenler</string>   
-   <string name="Badges_GoldCollected5">35000 altın toplandı</string>
+   <string name="town_deco_wallpaper_name">Duvar kağıdı</string>
+   <string name="town_deco_wallpaper_desc">Böyle bir yer için güzel bir süsleme tercihi.</string>
+   <string name="town_deco_stones_name">Taşlar</string>
+   <string name="town_deco_stones_desc">Yalnızca bir taş yığını.</string>
+   <string name="town_deco_fireplace_name">Şömine</string>
+   <string name="town_deco_fireplace_desc">Böyle soğuk bir yeri ısıtmak için iyi.</string>
+
+
+    <string name="Badges_GamesPlayed5">5000 oyun oynandı</string>
+    <string name="Badges_GoldCollected5">35000 altın toplandı</string>
     <string name="Spells_NotInOwnBody">Ruhun bedeninden ayrıyken %s yapamazsın. </string>
-    </resources>
+    <string name="WndHero_Satiety">Doygunluk</string>
+
+    <string name="Welcome_Text_29">
+    remix.29\n
+    - Kasaba yenilemesi!\n
+    </string>
+
+
+</resources>
