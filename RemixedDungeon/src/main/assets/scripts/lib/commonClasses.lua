@@ -103,6 +103,7 @@ local Wands = {
 local ItemFactory     = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory")
 local MobFactory      = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory")
 local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.EffectsFactory")
+local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory")
 
 
 local Tweeners = {
@@ -270,6 +271,12 @@ local RPD = {
         local item = ItemFactory:itemByName(itemClass)
         item:quantity(quantity)
         return item
+    end,
+
+    levelObject = function(objectClass, cell)
+        local object = LevelObjectsFactory:objectByName(objectClass)
+        object:setPos(cell)
+        Dungeon.level:addLevelObject(object)
     end,
 
     forCellsAround = function(cell, action)

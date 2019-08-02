@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.levels.Level;
@@ -69,6 +70,7 @@ public class LevelObjectsFactory {
 		return obj;
 	}
 
+	@LuaInterface
 	public static LevelObject objectByName(String objectClassName) {
 		try {
 			return objectClassByName(objectClassName).newInstance();

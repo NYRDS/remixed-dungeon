@@ -94,27 +94,26 @@ public class Trap extends LevelObject {
 	@Override
 	public void bump(Presser presser) {
 		if(presser instanceof Hero) {
-			interact((Char)presser);
+			activate((Char)presser);
 			return;
 		}
 
 		if (presser instanceof LevelObject) {
-			interact(null);
+			activate(null);
 			return;
 		}
 
 		if (presser instanceof Mob && activatedByMob) {
-			interact(null);
+			activate(null);
 			return;
 		}
 
 		if (presser instanceof Item && activatedByItem) {
-			interact(null);
+			activate(null);
 		}
 	}
 
-	@Override
-	public boolean interact(Char hero) {
+	public void activate(Char hero) {
 		discover();
 
 		if (uses != 0) {
@@ -134,8 +133,6 @@ public class Trap extends LevelObject {
 				sprite.reset(usedImage());
 			}
 		}
-
-		return super.interact(hero);
 	}
 
 	@Override

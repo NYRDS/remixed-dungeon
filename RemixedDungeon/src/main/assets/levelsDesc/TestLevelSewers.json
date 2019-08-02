@@ -79,8 +79,7 @@
 
     {"kind":"Trap","x":13,"y":9, "uses":10,
       "trapKind":"scriptFile",
-      "script":"scripts/traps/Message",
-      "data": "Test Message"
+      "script":"scripts/traps/Spawner"
     },
 
     {"kind":"Trap","x":9,"y":9, "uses":2000,
@@ -91,9 +90,9 @@
       "data":"IronKey"
     },
 
-    {"kind":"Trap","x":5,"y":9, "uses":1,
+    {"kind":"Trap","x":5,"y":9, "uses":100,
       "trapKind":"scriptFile",
-      "script":"scripts/traps/SpecialBeacon",
+      "script":"scripts/traps/Spawner",
       "data":"BlackRat"
     }
     
