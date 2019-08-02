@@ -237,6 +237,9 @@ public class MobFactory {
 		registerMobClass(InquirerNPC.class);
 		registerMobClass(Shopkeeper.class);
 		registerMobClass(TownShopkeeper.class);
+
+		//old mods compatibility
+		mMobsList.put("Elemental", FireElemental.class);
 	}
 	
 	public static Mob mobRandom() {
