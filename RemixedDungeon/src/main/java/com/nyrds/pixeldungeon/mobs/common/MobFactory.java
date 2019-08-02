@@ -10,6 +10,7 @@ import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
 import com.nyrds.pixeldungeon.mobs.guts.PseudoRat;
+import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
 import com.nyrds.pixeldungeon.mobs.guts.Worm;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
@@ -237,6 +238,7 @@ public class MobFactory {
 		registerMobClass(InquirerNPC.class);
 		registerMobClass(Shopkeeper.class);
 		registerMobClass(TownShopkeeper.class);
+		registerMobClass(SpiritOfPain.class);
 
 		//old mods compatibility
 		mMobsList.put("Elemental", FireElemental.class);

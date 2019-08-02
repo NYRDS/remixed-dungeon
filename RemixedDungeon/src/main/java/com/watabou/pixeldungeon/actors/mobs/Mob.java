@@ -553,7 +553,7 @@ public abstract class Mob extends Char {
 		try {
 			new_mob = MobFactory.mobByName(getMobClassName());
 		} catch (Exception e) {
-			throw new TrackedRuntimeException("resurrect issue");
+			throw new TrackedRuntimeException("resurrect issue:"+getMobClassName());
 		}
 
 		if (level().cellValid(spawnPos)) {

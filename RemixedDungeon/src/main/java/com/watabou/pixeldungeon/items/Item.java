@@ -511,7 +511,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	};
 
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+		return Utils.getClassParam(getClassName(), paramName, defaultValue, warnIfAbsent);
 	}
 
 	protected Item morphTo(Class<? extends Item> itemClass) {
