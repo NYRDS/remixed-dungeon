@@ -1657,7 +1657,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="CagedKobold_Name_Objective">kobold en cage</string>
     <string name="CagedKobold_Desc">Un kobold, dans une cage.</string>
     <string name="CagedKobold_Intro">Hé... Ho ! Tu dois être ce fameux aventurier ? Aide-moi, mon pote, ces maudits militaristes m\'ont enfermé là-dedans ! Ils essaient de réactiver une ancienne arme pour conquérir le monde des humains à la surface. Mais c\'est très dangereux, alors je m\'y suis opposé. Ils m\'ont tout de suite attrapé et enfermé dans cette cage. Je t\'en supplie : trouve la clé de ma cellule. En retour, je t\'aiderai du mieux que je pourrai.</string>
-    <string name="CagedKobold_Quest_End">Oh, merci, vraiment ! Comment as-tu pu trouver la clé ? Tu as... détruit cette arme ? C\'est incroyable ! Tu sais quoi, j\'ai dis que j\'allais t\'aider, et je crois savoir quel est le meilleur moyen. Je vais t\'accompagner un moment. * Le Kobold en cage s\'est transformé en une bougie</string>
+    <string name="CagedKobold_Quest_End">Oh, merci, vraiment ! Comment as-tu pu trouver la clé ? Tu as... détruit cette arme ? C\'est incroyable ! Tu sais quoi, j\'ai dis que j\'allais t\'aider, et je crois savoir quel est le meilleur moyen. Je vais t\'accompagner un moment.\n
+ * Le Kobold en cage s\'est transformé en une bougie</string>
     <string name="CagedKobold_Message1">S\'il te plaît...</string>
     <string name="CagedKobold_Message2">Tu dois m\'aider, mon pote</string>
     <string name="CagedKobold_Message3">Cette cage est horrible</string>
@@ -1822,9 +1823,9 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Dagger_Gender">feminine</string>
 
 
-    <string name="Glaive_Name">glaive</string>
-    <string name="Glaive_Info">Une épée courte et rapide, parfaite pour un jeune guerrier.</string>
-    <string name="Glaive_Gender">masuculine</string>
+    <string name="Glaive_Name">pertuisane</string>
+    <string name="Glaive_Info">Une forte lance munie à son extrémité d\'une longue lame triangulaire.</string>
+    <string name="Glaive_Gender">feminine</string>
 
 
     <string name="Knuckles_Name">poing américain</string>
@@ -1843,7 +1844,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
 
 
     <string name="Quarterstaff_Name">penn bazh</string>
-    <string name="Quarterstaff_Info">Un fort bâton de bois dur, ses extrémités sont chaussées avec du fer.</string>
+    <string name="Quarterstaff_Info">Un bâton de bois dur, ses extrémités sont chaussées avec du fer.</string>
     <string name="Quarterstaff_Gender">masculine</string>
 
 
@@ -2958,7 +2959,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="Imp_Defense">esquivé</string>
     <string name="Imp_Golems1">Etes-vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)\nMoi, j\'aurai besoin qu\'on me débarasse des _golems_. Vous voyez, j\'aimerais commencer ma petite affaire par ici, mais ces golems sont très mauvais pour le business ! C\'est dur de négocier avec des morceaux de granite errants, maudits soient-ils ! Alors, s\'il vous plaît, tuez... disons _6_ d\'entre eux, et la récompense est à vous.</string>
     <string name="Imp_Golems2">Comment se passe votre safari avec les golems ?</string>
-    <string name="Imp_Monks1">Etes vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)/nMoi, j\'aurai besoin qu\'on me débarasse des _moines_. Vous voyez, j\'aimerais établir un petit commerce par ici, mais ces dingues n\'achètent jamais rien et effrayent les autres clients... Alors, s\'il vous plaît, tuez... disons _8_ d\'entre eux, et la récompense est à vous. </string>
+    <string name="Imp_Monks1">Etes vous un aventurier ? J\'adooore les aventuriers ! On peut toujours compter sur eux quand on a besoin de tuer un truc ! Pas vrai ? Avec une prime à la clé bien sûr ;)\nMoi, j\'aurai besoin qu\'on me débarasse des _moines_. Vous voyez, j\'aimerais établir un petit commerce par ici, mais ces dingues n\'achètent jamais rien et effrayent les autres clients... Alors, s\'il vous plaît, tuez... disons _8_ d\'entre eux, et la récompense est à vous. </string>
     <string name="Imp_Monks2">Oh, vous êtes encore en vie ! Je savais que votre kung-fu était plus fort ;) Au fait, n\'oubliez pas de ramasser les jetons de ces moines.</string>
     <string name="Imp_Cya">A plus, %s !</string>
     <string name="Imp_Hey">Psst, %s !</string>
