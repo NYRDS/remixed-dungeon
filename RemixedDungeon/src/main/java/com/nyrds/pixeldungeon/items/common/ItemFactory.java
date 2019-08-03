@@ -448,6 +448,7 @@ public class ItemFactory {
                 try {
                     return new CustomItem(selectedItemClass);
                 } catch (Exception e){
+                    EventCollector.logException(e,selectedItemClass);
                     Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
                     return itemByName("Gold");
                 }
