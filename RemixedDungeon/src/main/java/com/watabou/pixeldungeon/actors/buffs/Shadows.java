@@ -86,9 +86,9 @@ public class Shadows extends Invisibility {
 	public int icon() {
 		return BuffIndicator.SHADOWS;
 	}
-	
+
 	@Override
-	public String toString() {
+	public String name() {
 		return Game.getVar(R.string.Shadows_Info);
 	}
 

@@ -90,8 +90,6 @@ public class Artifact extends EquipableItem {
 			return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
 		}
 		return false;
-
-
 	}
 
 	public void activate(Char ch) {
