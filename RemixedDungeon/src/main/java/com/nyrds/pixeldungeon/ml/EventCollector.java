@@ -179,6 +179,8 @@ public class EventCollector {
 	}
 
 	public static void collectSessionData(String key, String value) {
-		Crashlytics.setString(key,value);
+		if(!mDisabled) {
+			Crashlytics.setString(key, value);
+		}
 	}
 }

@@ -48,7 +48,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
         if(checkOwnSignature()) {
             FirebaseApp.initializeApp(this);
-
             Fabric.with(this, new Crashlytics());
             EventCollector.init();
         }

@@ -42,8 +42,6 @@ import androidx.core.content.PermissionChecker;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -219,14 +217,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         super.onCreate(savedInstanceState);
 
         iap = new Iap(this);
-
-        if (!BuildConfig.DEBUG) {
-            if(!RemixedDungeonApp.checkOwnSignature()) {
-                String signature = Util.getSignature(this);
-
-                EventCollector.collectSessionData("tampered signature", signature);
-            }
-        }
 
         try {
             version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
