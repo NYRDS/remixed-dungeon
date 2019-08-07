@@ -1,0 +1,28 @@
+﻿Dies ist ein open source roguelike Spiel mit Pixelgraphik
+
+Es war einmal eine kleine Stadt. Die Einwohner der Stadt lebten glücklich, doch sie waren arm, also konnten sie es sich nicht leisten, an einem schönen ort Urlaub zu machen. Eines Tages aber, als jeder schon die Hoffnung verloren hatte, passierte ein Wunder. Der Boden unter der Stadt bebte gewaltig umd aus ihm traten eine Unmenge an gefährlichen Monstern. Seit dem Tag lebten die Einwohner der Stadt glücklich weiter. Warum? Weil der Dungeon alle möglichen Helden und Abenteurer anlockte. Sie beschützten die Unschuldigen und stellten sich als ziemlich gute Kunden heraus, was die Wirtschaft der Stadt ankurbelte.
+Nun gedeiht die kleine Stadt, an ihrem Platz über dem gefährlichen Dungeon, mit all seinen toten Abenteurern und ihren geplagten Seelen. 
+
+Spielfunktionen:
+- Dieses Spiel unterstützt Mods die von anderen Nutzern erstellt wurden! Wir entwickeln diese Funktion stetig weiter! Bald werdet ihr die Möglichkeit haben, komplett neue Spiele in Remixed Dungeon zu erstellen!
+- Hardcore roguelike Erlebnis!
+- 7 Helden-Klassen zum Auswählen
+- Eine Stadt die als Knotenpunkt für dein Abenteuer dient, dich Vorbereitet und mit der Spielwelt vertraut macht
+- Mehr als 30 Level des Hauptdungeons, aufgeteilt in 6 verschiedene Typen
+- 3 Optionale Dungeons: Spinnenbau, Necropolis, Eishölen
+- Dutzende Gegenstände und Monster
+- Diverse Bosse
+- Hüte! Jeder mag Hüte! 
+
+Folge uns auf Twitter:
+https://twitter.com/nyrds
+
+Dieses Spiel ist eine open source Software mit der GPLv3-Lizenz. Der Code von Remixed Dungeon kann hier gefunden werden: 
+https://github.com/NYRDS/remixed-dungeon
+
+Wenn du Interesse hast bei der Übersetzung in andere Sprachen zu helfen, schau hier vorbei:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Du kannst
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+Anschauen, um den gesamten changelog einzusehen
