@@ -535,9 +535,9 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="Char_Name_Objective">ennemi</string>
 
     <string-array name="Char_Hit">
-        <item>%2$s %1$s frappe</item>
-        <item>%2$s %1$s frappe</item>
-        <item>%2$s %1$s frappe </item>
+        <item>%1$s frappe %2$s</item>
+        <item>%1$s frappe %2$s</item>
+        <item>%1$s frappe %2$s</item>
     </string-array>
     <string-array name="Char_Kill">
         <item>%s vous a tué...</item>
@@ -1222,7 +1222,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="Necromancy_Title">Nécromancie</string>
 
 
-    <string name="WndSadGhostNecro_Text">Cet esprit à l\'air de se débattre dans le sort qui le hante. Il semble vouloir quelque de vous. \"Si j\'utilise mes pouvoirs de nécromancier, je pourrai le persuader que j\'ai déjà fait ce qu\'il demande. Comme ça, je ne perdrai pas mon temps ici. Est-ce la chose à faire ?\"</string>
+    <string name="WndSadGhostNecro_Text">Cet esprit à l\'air de se débattre dans le sort qui le hante. Il semble vouloir quelque chose de vous. \"Si j\'utilise mes pouvoirs de nécromancier, je pourrai le persuader que j\'ai déjà fait ce qu\'il demande. Comme ça, je ne perdrai pas mon temps ici. Est-ce la chose à faire ?\"</string>
     <string name="WndSadGhostNecro_Yes">Oui, soumettez-le à votre volonté.</string>
     <string name="WndSadGhostNecro_No">Non, laissez-le s\'expliquer</string>
     <string name="WndSadGhostNecro_Persuaded">Le fantôme triste a été asservi.</string>

@@ -3498,7 +3498,17 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
    <string name="town_deco_wall_beam_name">Kiriş</string>
    <string name="town_deco_wall_beam_desc">Bu bina için güvenilir bir destek sağlıyor.</string>
    <string name="town_deco_wall_candles_name">Mumlar.</string>
+   <string name="town_deco_wooden_drawer_name">Çekmece</string>
    <string name="town_deco_scrolls_name">Parşömenler</string>   
+   <string name="town_deco_medicine_name">İlaç</string>   
+   <string name="town_deco_wooden_stairs_name">Merdivenler</string>   
+   <string name="town_deco_canvas_name">Kanvas</string>
+   <string name="town_deco_filmtape_name">Film</string>
+   <string name="town_deco_painting_name">Resim</string>
+   <string name="town_deco_painting_desc">Güzel görünümlü bir eser.</string>
+   <string name="town_deco_curtains_name">Perdeler</string>
+   <string name="town_deco_rug_name">Halı</string>
+   <string name="town_deco_rug_desc">İyi bir tat ile tasarlanmış.</string>
    <string name="town_deco_wallpaper_name">Duvar kağıdı</string>
    <string name="town_deco_wallpaper_desc">Böyle bir yer için güzel bir süsleme tercihi.</string>
    <string name="town_deco_stones_name">Taşlar</string>
