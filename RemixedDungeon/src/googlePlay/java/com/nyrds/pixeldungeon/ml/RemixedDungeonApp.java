@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.ml;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -73,12 +74,12 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     @Override
     public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callback) {
-        /*
-        Log.d("Callbacks",callback.getClass().getName() );
-        if (!callback.getClass().getName().startsWith("com.google.android.gms.measurement.")) {
-            super.registerActivityLifecycleCallbacks(callback);
+        if(BuildConfig.DEBUG) {
+            Log.d("Callbacks", callback.getClass().getName());
         }
-        */
+//        if (!callback.getClass().getName().startsWith("com.google.android.gms.measurement.")) {
+            super.registerActivityLifecycleCallbacks(callback);
+//        }
     }
 
     static public boolean checkOwnSignature() {
