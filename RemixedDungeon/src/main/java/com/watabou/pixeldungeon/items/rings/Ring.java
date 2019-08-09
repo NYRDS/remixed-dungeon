@@ -204,7 +204,7 @@ public class Ring extends Artifact implements UnknownItem{
 	
 			if (target.getHeroClass() == HeroClass.ROGUE && !isKnown()) {
 				setKnown();
-				GLog.i( Game.getVar(R.string.Ring_BuffKnown), name() );
+				GLog.i( Game.getVar(R.string.Ring_BuffKnown), Ring.this.trueName() );
 				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			
