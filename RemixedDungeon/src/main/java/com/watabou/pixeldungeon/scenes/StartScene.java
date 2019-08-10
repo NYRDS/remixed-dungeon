@@ -375,7 +375,6 @@ public class StartScene extends PixelScene {
             Game.switchScene(IntroScene.class);
         } else {
             InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
-            Game.switchScene(InterlevelScene.class);
         }
     }
 

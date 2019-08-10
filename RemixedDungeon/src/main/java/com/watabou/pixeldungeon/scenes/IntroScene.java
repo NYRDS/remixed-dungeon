@@ -32,7 +32,6 @@ public class IntroScene extends PixelScene {
 			public void hide() {
 				super.hide();
 				InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
-				Game.switchScene( InterlevelScene.class );
 			}
 		} );
 		
