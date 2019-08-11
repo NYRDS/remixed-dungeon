@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.google.gson.JsonObject;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
@@ -383,10 +384,21 @@ public class Generator {
 	}
 
 	public static void reset() {
+
+		JsonObject ItemSet = new JsonObject();
+
 		for (Category cat : Category.values()) {
 			if (cat.probs.length != cat.classes.length) {
 				throw new TrackedRuntimeException(String.format(Locale.ROOT, "Category: %s %d items %d probs", cat.name(), cat.classes.length, cat.probs.length));
 			}
+
+			JsonObject category = new JsonObject();
+
+			for(int i=0;i<cat.classes.length;++i) {
+				category.addProperty(cat.classes[i].getSimpleName(), cat.probs[i]);
+			}
+
+			ItemSet.add(cat.name(), category );
 
 			categoryProbs.put(cat, cat.prob);
 		}

@@ -11,8 +11,8 @@
         },
 
       {
-        "kind": "PotionOfParalyticGas",
-        "level":10
+        "kind": "PotionOfMindVision",
+        "quantity": 10
       },
       {
         "kind": "RawFish",
