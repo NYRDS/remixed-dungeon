@@ -77,7 +77,7 @@ abstract public class ClassArmor extends Armor {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if (hero.getSkillPoints() >= hero.getSkillPointsMax()/specialCostModifier && isEquipped( hero )) {
+		if (hero.getSkillPoints() >= hero.getSkillPointsMax()/specialCostModifier + 1 && isEquipped( hero )) {
 			actions.add( special() );
 		}
 		return actions;
