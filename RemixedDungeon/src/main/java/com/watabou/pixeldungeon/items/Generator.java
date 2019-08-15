@@ -17,10 +17,11 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import com.google.gson.JsonObject;
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.items.drinks.Drink;
 import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
@@ -149,6 +150,8 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -385,23 +388,31 @@ public class Generator {
 
 	public static void reset() {
 
-		JsonObject ItemSet = new JsonObject();
+		try {
 
-		for (Category cat : Category.values()) {
-			if (cat.probs.length != cat.classes.length) {
-				throw new TrackedRuntimeException(String.format(Locale.ROOT, "Category: %s %d items %d probs", cat.name(), cat.classes.length, cat.probs.length));
+			JSONObject ItemSet = new JSONObject();
+
+			for (Category cat : Category.values()) {
+				if (cat.probs.length != cat.classes.length) {
+					throw new TrackedRuntimeException(String.format(Locale.ROOT, "Category: %s %d items %d probs", cat.name(), cat.classes.length, cat.probs.length));
+				}
+
+				JSONObject category = new JSONObject();
+
+				for(int i=0;i<cat.classes.length;++i) {
+					category.put(ItemFactory.itemNameByClass((Class<? extends Item>)cat.classes[i]), cat.probs[i]);
+				}
+
+				ItemSet.put(cat.name(), category );
+
+				categoryProbs.put(cat, cat.prob);
 			}
 
-			JsonObject category = new JsonObject();
+			JsonHelper.writeJson(ItemSet, "Treasury");
+		} catch (JSONException ignored) {
 
-			for(int i=0;i<cat.classes.length;++i) {
-				category.addProperty(cat.classes[i].getSimpleName(), cat.probs[i]);
-			}
-
-			ItemSet.add(cat.name(), category );
-
-			categoryProbs.put(cat, cat.prob);
 		}
+
 	}
 
 	public static Item random() {
