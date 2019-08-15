@@ -3523,6 +3523,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="KindOfBow_ChooseArrows">PILIH ANAK PANAH</string>
 
     <string name="BodyArmorSpell_Name">Perisai Badan</string>
+    <string name="BodyArmorSpell_Info">Aktifkan kuasa otot simpanan, jadi lebih kuat buat sementara, seterusnya meningkatkan perisai anda tetapi menjejaskan kelajuan pergerakan anda.</string>
+
     <string name="BodyArmorBuff_Name">Perisai Badan</string>
     <string name="BodyArmorBuff_Info">Perisai meningkat tetapi menjejaskan kelajuan pergerakan.</string>
 
@@ -3555,20 +3557,82 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndHero_DefenceSkill">Kemahiran Pertahanan</string>
 	
    <string name="town_deco_grave_name">Kubur</string>
+   <string name="town_deco_grave_desc">Batu nisan biasa, dengan ukiran yang sudah lusuh.</string>
    <string name="town_deco_pillar_name">Tiang</string>
+   <string name="town_deco_pillar_desc">Waktu dulu-dulu, tiang ini berfungsi sebagai sokongan dan juga hiasan.</string>
    <string name="town_deco_wood_wall_name">Dinding balak</string>
+   <string name="town_deco_wood_wall_desc">Dinding balak yang nampak tegar.</string>
    <string name="town_deco_entrance_name">Jalan Masuk</string>
+   <string name="town_deco_entrance_desc">Pintu masuk ini menuju ke aras-aras atas kurungan bawah tanah.</string>
+   <string name="town_deco_exit_name">Keluar</string>
+   <string name="town_deco_tile_name">Jubin</string>
+   <string name="town_deco_tile_desc">Jubin kelihatan lusuh.</string>
    <string name="town_deco_broken_roof_name">Bumbung bocor</string>
+   <string name="town_deco_broken_roof_desc">Jubin bumbung ini telah retak dan perlu diganti yang baharu.</string>
+   <string name="town_deco_broken_wall_name">Dinding rosak</string>
+   <string name="town_deco_broken_wall_desc">Kayu balak pada bahagian dinding ini telah reput dan tidak memberi manfaat lagi.</string>
+   <string name="town_deco_mud_name">Lumpur</string>
+   <string name="town_deco_mud_desc">Tanah beku yang telah mencair.</string>
+   <string name="town_deco_stock_name">Stok</string>
+   <string name="town_deco_stock_desc">Bekalan makanan di simpan di sini, dan juga ada pelbagai jenis dan warna barang-barang lama.</string>
    <string name="town_deco_barrel_name">Tong</string>
+   <string name="town_deco_barrel_desc">Tong biasa, dan sudah lusuh.</string>
+   <string name="town_deco_hay_name">Rumput Kering</string>
+   <string name="town_deco_hay_desc">Rumput kering yang disusun cantik dan kuat aroma rumputnya.</string>
    <string name="town_deco_firewood_name">Kayu api</string>
+   <string name="town_deco_stakes_name">Kayu Pancang</string>
+   <string name="town_deco_stakes_desc">Batu kayu runcing ini nampak menakutkan, tetapi tidak memberi apa-apa manfaat.</string>
    <string name="town_deco_fence_name">Pagar</string>
+   <string name="town_deco_fence_desc">Pagar kayu yang diselimuti salji.</string>
+   <string name="town_deco_pole_name">Tiang</string>
+   <string name="town_deco_pole_desc">Tiang panjang yang diikat tali</string>
+   <string name="town_deco_rope_name">Tali</string>
+   <string name="town_deco_rope_desc">Tali yang diikat kemas.</string>
+   <string name="town_deco_slush_name">Lecah Salji</string>
+   <string name="town_deco_slush_desc">Salji yang mencair, menyebabkan tanah di sekitarnya menjadi lecah.</string>
    <string name="town_deco_chest_name">Peti</string>   
+   <string name="town_deco_chest_desc">Perabot khusus untuk menyimpan barang dan perhiasan berharga.</string>
    <string name="town_deco_emptyboard_name">Rak</string>
+   <string name="town_deco_emptyboard_desc">Rak biasa khusus untuk mempamerkan barangan.</string>
+   <string name="town_deco_grandclock_name">Jam Tua</string>
+   <string name="town_deco_grandclock_desc">Jam tua yang masih lagi berfungsi.</string>
+   <string name="town_deco_wall_beam_name">Alang</string>
+   <string name="town_deco_wall_beam_desc">Ia dipasang untuk menyokong bangunan ini.</string>
+   <string name="town_deco_wall_candles_name">Lilin</string>
+   <string name="town_deco_wall_candles_desc">Lilin yang terpadam, tetapi bau aroma dari lilin ini masih terasa.</string>
+   <string name="town_deco_wooden_drawer_name">Laci</string>
+   <string name="town_deco_wooden_drawer_desc">Apakah benda yang berguna di dalamnya.</string>
    <string name="town_deco_scrolls_name">Skrol</string>   
+   <string name="town_deco_scrolls_desc">Rak berdebu yang penuh dengan skrol-skrol dan buku-buku.</string>
+   <string name="town_deco_medicine_name">Ubat</string>   
+   <string name="town_deco_medicine_desc">Kelalang dan lain-lain bahan ubat yang disusun cermat di atas rak.</string>
+   <string name="town_deco_wooden_stairs_name">Tangga</string>   
+   <string name="town_deco_wooden_stairs_desc">Kalau berdiri di atasnya anda pasti lebih tinggi.</string>
+   <string name="town_deco_canvas_name">Kanvas</string>
+   <string name="town_deco_canvas_desc">Helaian kain tebal yang tergantung di atas dinding.</string>
+   <string name="town_deco_projector_name">Projektor Filem</string>
+   <string name="town_deco_projector_desc">Sebuah peranti lama yang dapat memainkan filem dan menjadi hiburan orang ramai.</string>
+   <string name="town_deco_filmtape_name">Filem</string>
+   <string name="town_deco_filmtape_desc">Apakah yang terkandung di dalam benda ini.</string>
+   <string name="town_deco_painting_name">Lukisan</string>
+   <string name="town_deco_painting_desc">Sebuah lakaran seni yang indah.</string>
    <string name="town_deco_curtains_name">Langsir</string>
+   <string name="town_deco_trapdoor_name">Pintu Kolong</string>
+   <string name="town_deco_trapdoor_desc">Tak nampak penghujungnya.</string>
    <string name="town_deco_glass_name">Tingkap Lebar</string>
+   <string name="town_deco_counter_name">Kaunter</string>
+   <string name="town_deco_counter_desc">Sebagai pemisah antara anda dengan orang yang berada dihadapannya.</string>
+   <string name="town_deco_library_books_name">Bahan Bacaan</string>
+   <string name="town_deco_library_books_desc">Hmm lebih menarik berbanding buku-buku berkenaan ruangan bawah tanah.</string>
    <string name="town_deco_wallpaper_name">Kertas dinding</string>
-   <string name="Welcome_Text_28_6">
+   <string name="town_deco_wallpaper_desc">Memang bijak orang yang menghias tempat ini.</string>
+   <string name="town_deco_stones_name">Batu</string>
+   <string name="town_deco_stones_desc">Hanyalah timbunan batu.</string>
+   <string name="town_deco_fireplace_name">Pendiangan</string>
+   <string name="town_deco_fireplace_desc">Boleh menghangatkan tempat sejuk seperti ini.</string>
+
+
+    <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mekanisma Permainan:\n
     -- Keupayaan istimewa Satria!\n
@@ -3589,4 +3653,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Badges_GoldCollected5">35000 keping emas dikumpul</string>
     <string name="Badges_MonsterSlain5">1000 pihak musuh dibunuh</string>
     <string name="Spells_NotInOwnBody">Anda tidak boleh buat %s ketika roh anda  tidak berada di dalam jasad anda.</string>
-    </resources>
+    <string name="WndHero_Satiety">Muak</string>
+
+    <string name="Welcome_Text_29">
+    remix.29\n
+    - Renovasi pekan!\n
+    </string>
+
+
+</resources>
