@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 751
-        versionName "remix.29.fix.1.1"
+        versionCode 752
+        versionName "remix.29.fix.1.2"
     }
 
     aaptOptions {
@@ -98,7 +98,7 @@ dependencies {
 
     implementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
-    implementation 'com.google.android.gms:play-services-base:17.0.0'
+    implementation 'com.google.android.gms:play-services-base:17.1.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation "com.google.android.gms:play-services-games:18.0.0"
 
@@ -110,8 +110,8 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
 
-    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.2-alpha09'
-    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.2-alpha09'
+    implementation 'io.humanteq.hqsdk:hqsdk-core:1.2.2-beta02'
+    implementation 'io.humanteq.hqsdk:hqsdk-apps:1.2.2-beta02'
 
     implementation 'androidx.core:core:1.0.2'
 
@@ -120,7 +120,7 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-core:17.0.1'
     implementation 'com.google.firebase:firebase-perf:18.0.1'
-    implementation 'com.google.firebase:firebase-ads:18.1.0'
+    implementation 'com.google.firebase:firebase-ads:18.1.1'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'org.jetbrains:annotations:15.0'
