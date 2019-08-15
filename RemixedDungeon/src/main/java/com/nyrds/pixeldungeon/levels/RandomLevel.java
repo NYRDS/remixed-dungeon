@@ -1,5 +1,8 @@
 package com.nyrds.pixeldungeon.levels;
 
+import androidx.annotation.Keep;
+
+import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -11,7 +14,6 @@ import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.json.JSONArray;
@@ -24,11 +26,10 @@ import java.util.List;
 
 public class RandomLevel extends RegularLevel {
 
+	@Packable
 	private int mobsSpawned = 0;
 
-	private String MOBS_SPAWNED = "mobs_spawned";
-
-	//for restoreFromBundle
+	@Keep
 	public RandomLevel() {
 		super();
 	}
@@ -167,17 +168,4 @@ public class RandomLevel extends RegularLevel {
 	protected boolean[] grass() {
 		return Patch.generate(this, getFeeling() == Feeling.GRASS ? 0.60f : 0.40f, 4);
 	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		bundle.put(MOBS_SPAWNED, mobsSpawned);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		mobsSpawned = bundle.getInt(MOBS_SPAWNED);
-	}
-
 }
