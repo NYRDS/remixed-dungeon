@@ -321,22 +321,19 @@ public class Potion extends Item implements UnknownItem {
 		return null;
 	}
 	
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				
-				if(item instanceof Arrow) {
-					moistenArrow ((Arrow) item );
-				}
-				
-				if(item instanceof Scroll) {
-					moistenScroll ((Scroll) item );
-				}
-				
-				if(item instanceof RottenFood) {
-					moistenRottenFood((RottenFood) item);
-				}
+	private final WndBag.Listener itemSelector = item -> {
+		if (item != null) {
+
+			if(item instanceof Arrow) {
+				moistenArrow ((Arrow) item );
+			}
+
+			if(item instanceof Scroll) {
+				moistenScroll ((Scroll) item );
+			}
+
+			if(item instanceof RottenFood) {
+				moistenRottenFood((RottenFood) item);
 			}
 		}
 	};

@@ -19,6 +19,7 @@ package com.watabou.utils;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
@@ -50,6 +51,10 @@ public class Random {
 	
 	public static int NormalIntRange( int min, int max ) {
 		return min + (int)((Math.random() + Math.random()) * (max - min + 1) / 2f);
+	}
+
+	public static int chances(ArrayList<Float> values) {
+		return chances(values.toArray(new Float[0]));
 	}
 
 	public static int chances( Float[] floats ) {
@@ -96,7 +101,11 @@ public class Random {
 
 	@SuppressWarnings("unchecked")
 	public static <K> K chances( Map<K,Float> chances ) {
-		
+
+		if(chances.isEmpty()){
+			return null;
+		}
+
 		int size = chances.size();
 
 		K[] values = (K[])chances.keySet().toArray();
