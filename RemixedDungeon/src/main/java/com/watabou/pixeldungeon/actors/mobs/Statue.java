@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -29,7 +30,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
@@ -54,7 +54,7 @@ public class Statue extends Mob {
 		setState(MobAi.getStateByClass(Passive.class));
 		
 		do {
-			weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
+			weapon = (Weapon)level().getTreasury().random(Treasury.Category.WEAPON );;
 		} while (!(weapon instanceof MeleeWeapon) || weapon.level() < 0);
 		
 		weapon.identify();

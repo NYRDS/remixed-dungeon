@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -29,7 +30,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.quest.DwarfToken;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.levels.CityLevel;
@@ -199,7 +199,7 @@ public class Imp extends NPC {
 				given = false;
 				
 				do {
-					reward = (Ring)Generator.random( Generator.Category.RING );
+					reward = (Ring) level.getTreasury().random( Treasury.Category.RING );
 				} while (reward.cursed);
 				reward.upgrade( 2 );
 				reward.cursed = true;

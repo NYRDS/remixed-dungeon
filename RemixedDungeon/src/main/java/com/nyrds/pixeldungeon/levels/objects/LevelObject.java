@@ -178,4 +178,8 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
     }
 
     public void resetVisualState(){}
+
+    public Level level() {
+        return Dungeon.level;
+    }
 }

@@ -2,10 +2,10 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 
 import android.util.SparseBooleanArray;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Generator;
 
 public class SpiderEgg extends Mob {
 
@@ -21,7 +21,7 @@ public class SpiderEgg extends Mob {
 
 		postpone(20);
 		
-		loot = Generator.random(Generator.Category.SEED);
+		loot = level().getTreasury().random(Treasury.Category.SEED);
 		lootChance = 0.2f;
 
 		movable = false;

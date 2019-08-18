@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.items.Generator;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -60,20 +60,10 @@ public class CryptPainter extends Painter {
 			cy = room.top + 2;
 		}
 		
-		level.drop( prize(), cx + cy * level.getWidth() ).type = Type.TOMB;
+		level.drop( prize(level), cx + cy * level.getWidth() ).type = Type.TOMB;
 	}
 	
-	private static Item prize() {
-		
-		Item prize = Generator.random( Generator.Category.ARMOR );
-
-		for (int i=0; i < 3; i++) {
-			Item another = Generator.random( Generator.Category.ARMOR );
-			if (another.level() > prize.level()) {
-				prize = another;
-			}
-		}
-		
-		return prize;
+	private static Item prize(Level level) {
+		return level.getTreasury().bestOf( Treasury.Category.ARMOR,4 );
 	}
 }

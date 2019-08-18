@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
@@ -27,7 +28,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.GooSprite;
@@ -47,7 +47,7 @@ public class Goo extends Boss {
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
 
-		loot = Generator.random(Generator.Category.POTION);
+		loot = Treasury.Category.POTION;
 
 		lootChance = 0.8f;
 		

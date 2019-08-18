@@ -399,6 +399,7 @@ public class Generator {
 
 				JSONObject category = new JSONObject();
 
+				category.put("categoryChance",cat.prob);
 				for(int i=0;i<cat.classes.length;++i) {
 					category.put(ItemFactory.itemNameByClass((Class<? extends Item>)cat.classes[i]), cat.probs[i]);
 				}

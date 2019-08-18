@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -175,7 +174,7 @@ public class Shopkeeper extends NPC {
 	{
 		Item newItem;
 		do {
-			newItem = Generator.random();
+			newItem = level().getTreasury().random();
 		} while (newItem instanceof Gold);
 
 		placeItemInShop(newItem);

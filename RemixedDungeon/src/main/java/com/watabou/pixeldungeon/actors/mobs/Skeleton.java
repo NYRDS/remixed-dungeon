@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.NecroBossLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -27,8 +28,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -43,17 +42,9 @@ public class Skeleton extends UndeadMob {
 		exp = 5;
 		maxLvl = 10;
 
-		if (!(Dungeon.level instanceof NecroBossLevel)) {
+		if (!(level() instanceof NecroBossLevel)) {
 			if (Random.Int(5) == 0) {
-
-				Item loot = Generator.random(Generator.Category.WEAPON);
-				for (int i = 0; i < 2; i++) {
-					Item l = Generator.random(Generator.Category.WEAPON);
-					if (l.level() < loot.level()) {
-						loot = l;
-					}
-				}
-				this.loot  = loot;
+				this.loot = level().getTreasury().worstOf(Treasury.Category.WEAPON,3 );
 				lootChance = 1;
 			} else {
 				lootChance = 0;

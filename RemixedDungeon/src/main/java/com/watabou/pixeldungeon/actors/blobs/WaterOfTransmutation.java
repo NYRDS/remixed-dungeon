@@ -17,16 +17,16 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.Generator;
-import com.watabou.pixeldungeon.items.Generator.Category;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
@@ -163,7 +163,7 @@ public class WaterOfTransmutation extends WellWater {
 	private Ring changeRing( Ring r ) {
 		Ring n;
 		do {
-			n = (Ring)Generator.random( Category.RING );
+			n = (Ring) Dungeon.level.getTreasury().random(Treasury.Category.RING );
 		} while (n.getClass() == r.getClass());
 		
 		n.level(0);
@@ -186,7 +186,7 @@ public class WaterOfTransmutation extends WellWater {
 		
 		Wand n;
 		do {
-			n = (Wand)Generator.random( Category.WAND );
+			n = (Wand) Dungeon.level.getTreasury().random(Treasury.Category.WAND );
 		} while (n.getClass() == w.getClass());
 		
 		n.level(0);
@@ -204,7 +204,7 @@ public class WaterOfTransmutation extends WellWater {
 		Seed n;
 		
 		do {
-			n = (Seed)Generator.random( Category.SEED );
+			n = (Seed) Dungeon.level.getTreasury().random(Treasury.Category.SEED );
 		} while (n.getClass() == s.getClass());
 		
 		return n;
@@ -223,7 +223,7 @@ public class WaterOfTransmutation extends WellWater {
 			
 			Scroll n;
 			do {
-				n = (Scroll)Generator.random( Category.SCROLL );
+				n = (Scroll) Dungeon.level.getTreasury().random(Treasury.Category.SCROLL );
 			} while (n.getClass() == s.getClass());
 			return n;
 		}
@@ -242,7 +242,7 @@ public class WaterOfTransmutation extends WellWater {
 			
 			Potion n;
 			do {
-				n = (Potion)Generator.random( Category.POTION );
+				n = (Potion) Dungeon.level.getTreasury().random(Treasury.Category.POTION );
 			} while (n.getClass() == p.getClass());
 			return n;
 		}

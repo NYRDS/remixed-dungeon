@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.features;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -28,7 +29,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
 import com.watabou.pixeldungeon.items.Dewdrop;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.rings.RingOfHerbalism.Herbalism;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -53,7 +53,7 @@ public class HighGrass {
 			
 			// Seed
 			if (herbalismLevel >= 0 && Random.Int( 18 ) <= Random.Int( herbalismLevel + 1 )) {
-				ItemSprite is = level.drop( Generator.random( Generator.Category.SEED ), pos ).sprite;
+				ItemSprite is = level.drop( level.getTreasury().random( Treasury.Category.SEED ), pos ).sprite;
 				if(is != null) {
 					is.drop();
 				}

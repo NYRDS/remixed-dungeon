@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.watabou.pixeldungeon.Assets;
@@ -29,7 +30,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
 import com.watabou.pixeldungeon.items.Dewdrop;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -63,11 +63,11 @@ public class Plant extends LevelObject {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 
 			if (Random.Int(5) == 0) {
-				ch.level().drop(Generator.random(Generator.Category.SEED),
+				level().drop(level().getTreasury().random(Treasury.Category.SEED),
 						pos).sprite.drop();
 			}
 			if (Random.Int(5) == 0) {
-				ch.level().drop(new Dewdrop(), pos).sprite.drop();
+				level().drop(new Dewdrop(), pos).sprite.drop();
 			}
 		}
 

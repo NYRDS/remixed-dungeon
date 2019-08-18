@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -27,7 +28,6 @@ import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -41,10 +41,8 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -274,28 +272,11 @@ public class Ghost extends NPC {
 
 		private static void makeReward() {
 			do {
-				weapon = (Weapon)Generator.random( Generator.Category.WEAPON );
+				weapon = (Weapon)Dungeon.level.getTreasury().bestOf(Treasury.Category.WEAPON, 4 );
 			} while (weapon instanceof MissileWeapon);
 
-			if (Dungeon.isChallenged( Challenges.NO_ARMOR )) {
-				armor = (Armor)new ClothArmor().degrade();
-			} else {
-				armor = (Armor)Generator.random( Generator.Category.ARMOR );
-			}
+			armor = (Armor) Dungeon.level.getTreasury().bestOf(Treasury.Category.ARMOR,4 );
 
-			for (int i=0; i < 3; i++) {
-				Item another;
-				do {
-					another = Generator.random( Generator.Category.WEAPON );
-				} while (another instanceof MissileWeapon);
-				if (another.level() > weapon.level()) {
-					weapon = (Weapon)another;
-				}
-				another = Generator.random( Generator.Category.ARMOR );
-				if (another.level() > armor.level()) {
-					armor = (Armor)another;
-				}
-			}
 			weapon.identify();
 			armor.identify();
 		}

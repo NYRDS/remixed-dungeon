@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
@@ -570,8 +571,8 @@ public abstract class Mob extends Char {
 	protected void dropLoot() {
 		if (loot != null && Random.Float() <= lootChance) {
 			Item item;
-			if (loot instanceof Generator.Category) {
-				item = Generator.random((Generator.Category) loot);
+			if (loot instanceof Treasury.Category) {
+				item = level().getTreasury().random((Treasury.Category) loot);
 			} else if (loot instanceof Class<?>) {
 				item = Generator.random((Class<? extends Item>) loot);
 			} else {

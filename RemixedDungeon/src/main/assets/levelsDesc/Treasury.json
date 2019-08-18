@@ -1,0 +1,163 @@
+{
+  "BULLETS": {
+    "AmokArrow": 2,
+    "HealthArrow": 2,
+    "CommonArrow": 10,
+    "categoryChance": 5,
+    "PoisonArrow": 2,
+    "ParalysisArrow": 2,
+    "FireArrow": 2
+  },
+  "UNIQUE": {
+    "Torch": 4,
+    "categoryChance": 2,
+    "SpellBook": 1
+  },
+  "FOOD": {
+    "categoryChance": 0,
+    "MysteryMeat": 0,
+    "Pasty": 1,
+    "ChristmasTurkey": 0,
+    "PumpkinPie": 0,
+    "Ration": 4
+  },
+  "RANGED": {
+    "CompoundBow": 3,
+    "categoryChance": 2,
+    "CompositeCrossbow": 3,
+    "RubyCrossbow": 1,
+    "WoodenBow": 3,
+    "WoodenCrossbow": 4,
+    "RubyBow": 1
+  },
+  "GOLD": {
+    "categoryChance": 50,
+    "Gold": 1
+  },
+  "THROWABLE": {
+    "categoryChance": 0,
+    "Dart": 1,
+    "Shuriken": 1,
+    "Javelin": 1,
+    "Tamahawk": 1,
+    "CurareDart": 1,
+    "IncendiaryDart": 1
+  },
+  "ARMOR": {
+    "PlateArmor": 1,
+    "categoryChance": 10,
+    "ScaleArmor": 1,
+    "GothicArmor": 1,
+    "LeatherArmor": 1,
+    "ClothArmor": 1,
+    "MailArmor": 1
+  },
+  "DRINK": {
+    "categoryChance": 25,
+    "ManaPotion": 1
+  },
+  "RING": {
+    "RingOfElements": 1,
+    "RingOfDetection": 1,
+    "RingOfThorns": 0,
+    "RingOfEvasion": 1,
+    "RingOfHaste": 1,
+    "RingOfSatiety": 1,
+    "RingOfShadows": 1,
+    "RingOfHerbalism": 1,
+    "categoryChance": 2,
+    "RingOfPower": 1,
+    "RingOfHaggler": 0,
+    "RingOfAccuracy": 1,
+    "RingOfMending": 1
+  },
+  "WAND": {
+    "WandOfSlowness": 10,
+    "WandOfFirebolt": 15,
+    "WandOfTelekinesis": 6,
+    "WandOfMagicMissile": 0,
+    "WandOfPoison": 10,
+    "WandOfAvalanche": 5,
+    "WandOfAmok": 10,
+    "WandOfFlock": 10,
+    "WandOfRegrowth": 6,
+    "WandOfBlink": 11,
+    "WandOfTeleportation": 10,
+    "WandOfLightning": 15,
+    "categoryChance": 4,
+    "WandOfDisintegration": 5
+  },
+  "SEED": {
+    "Dreamweed.Seed": 1,
+    "Firebloom.Seed": 1,
+    "Rotberry.Seed": 0,
+    "Sorrowmoss.Seed": 1,
+    "Icecap.Seed": 1,
+    "Earthroot.Seed": 1,
+    "Sungrass.Seed": 1,
+    "categoryChance": 5,
+    "Fadeleaf.Seed": 1
+  },
+  "SCROLL": {
+    "ScrollOfDomination": 8,
+    "ScrollOfRemoveCurse": 15,
+    "ScrollOfTerror": 8,
+    "ScrollOfRecharging": 10,
+    "ScrollOfMirrorImage": 6,
+    "ScrollOfChallenge": 12,
+    "BlankScroll": 10,
+    "ScrollOfPsionicBlast": 4,
+    "ScrollOfUpgrade": 0,
+    "ScrollOfSummoning": 4,
+    "ScrollOfLullaby": 8,
+    "ScrollOfMagicMapping": 15,
+    "ScrollOfTeleportation": 10,
+    "ScrollOfIdentify": 30,
+    "categoryChance": 40,
+    "ScrollOfWeaponUpgrade": 0,
+    "ScrollOfCurse": 6
+  },
+  "POTION": {
+    "PotionOfInvisibility": 10,
+    "PotionOfMindVision": 20,
+    "PotionOfLiquidFlame": 15,
+    "PotionOfStrength": 0,
+    "PotionOfParalyticGas": 10,
+    "categoryChance": 50,
+    "PotionOfExperience": 4,
+    "PotionOfLevitation": 10,
+    "PotionOfFrost": 10,
+    "PotionOfMight": 0,
+    "PotionOfPurity": 12,
+    "PotionOfToxicGas": 15,
+    "PotionOfHealing": 45
+  },
+  "WEAPON": {
+    "AmokDart": 0.10000000149011612,
+    "Dart": 0,
+    "Sword": 1,
+    "SacrificialSword": 0.10000000149011612,
+    "Knuckles": 1,
+    "Javelin": 1,
+    "Claymore": 1,
+    "Mace": 1,
+    "Boomerang": 0,
+    "HealthDart": 0.10000000149011612,
+    "Kusarigama": 0.10000000149011612,
+    "categoryChance": 15,
+    "Shuriken": 1,
+    "GoldenSword": 0.10000000149011612,
+    "Halberd": 1,
+    "Glaive": 1,
+    "Tamahawk": 1,
+    "IncendiaryDart": 1,
+    "Spear": 1,
+    "BattleAxe": 1,
+    "Quarterstaff": 1,
+    "WarHammer": 1,
+    "ShortSword": 0,
+    "Longsword": 1,
+    "CurareDart": 1,
+    "Dagger": 1
+  }
+}

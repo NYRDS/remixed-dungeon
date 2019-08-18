@@ -24,7 +24,6 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -633,7 +632,7 @@ public abstract class RegularLevel extends CustomLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			drop(Generator.random(), randomDropCell()).type = Random.chances(Heap.regularHeaps);
+			drop(getTreasury().random(), randomDropCell()).type = Random.chances(Heap.regularHeaps);
 		}
 
 		for (Item item : itemsToSpawn) {

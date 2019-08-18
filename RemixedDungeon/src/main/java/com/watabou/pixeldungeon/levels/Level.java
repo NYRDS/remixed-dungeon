@@ -25,6 +25,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
@@ -57,7 +58,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -111,6 +111,8 @@ public abstract class Level implements Bundlable {
 
 	private static final String SCRIPTS = "scripts";
 	public static final int INVALID_CELL = -1;
+
+	private Treasury treasury;
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
@@ -319,6 +321,10 @@ public abstract class Level implements Bundlable {
 		return mobsToNextLevel;
 	}
 
+	public Treasury getTreasury() {
+		return treasury;
+	}
+
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
@@ -505,8 +511,10 @@ public abstract class Level implements Bundlable {
 
 		initSizeDependentStuff();
 
+		treasury = Treasury.create(DungeonGenerator.getLevelProperty(levelId, "treasury","Treasury.json"));
+
 		if (!isBossLevel()) {
-			addItemToSpawn(Generator.random(Generator.Category.FOOD));
+			addItemToSpawn(treasury.random(Treasury.Category.FOOD));
 			if (Dungeon.posNeeded()) {
 				addItemToSpawn(new PotionOfStrength());
 				Dungeon.potionOfStrength++;
@@ -521,7 +529,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (Random.Int(5) == 0) {
-				addItemToSpawn(Generator.random(Generator.Category.RANGED));
+				addItemToSpawn(treasury.random(Treasury.Category.RANGED));
 			}
 
 			if (Random.Int(15) == 0) {
@@ -529,7 +537,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (Random.Int(2) == 0) {
-				addItemToSpawn(Generator.random(Generator.Category.BULLETS));
+				addItemToSpawn(treasury.random(Treasury.Category.BULLETS));
 			}
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);

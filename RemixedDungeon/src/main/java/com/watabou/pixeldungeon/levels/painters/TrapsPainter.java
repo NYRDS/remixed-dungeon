@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.items.Generator;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
@@ -82,15 +82,15 @@ public class TrapsPainter extends Painter {
 			return prize;
 		}
 		
-		prize = Generator.random( Random.oneOf(  
-			Generator.Category.WEAPON, 
-			Generator.Category.ARMOR 
+		prize = level.getTreasury().random( Random.oneOf(
+				Treasury.Category.WEAPON,
+				Treasury.Category.ARMOR
 		) );
 
 		for (int i=0; i < 3; i++) {
-			Item another = Generator.random( Random.oneOf(  
-				Generator.Category.WEAPON, 
-				Generator.Category.ARMOR 
+			Item another = level.getTreasury().random( Random.oneOf(
+				Treasury.Category.WEAPON,
+				Treasury.Category.ARMOR
 			) );
 			if (another.level() > prize.level()) {
 				prize = another;

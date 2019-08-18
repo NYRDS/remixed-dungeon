@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.items.Generator;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
@@ -41,15 +41,15 @@ public class VaultPainter extends Painter {
 		switch (Random.Int( 3 )) {
 		
 		case 0:
-			level.drop( prize(), c ).type = Type.LOCKED_CHEST;
+			level.drop( prize(level), c ).type = Type.LOCKED_CHEST;
 			level.addItemToSpawn( new GoldenKey() );
 			break;
 			
 		case 1:
 			Item i1, i2;
 			do {
-				i1 = prize();
-				i2 = prize();
+				i1 = prize(level);
+				i2 = prize(level);
 			} while (i1.getClass() == i2.getClass());
 			level.drop( i1, c ).type = Type.CRYSTAL_CHEST;
 			level.drop( i2, c + Level.NEIGHBOURS8[Random.Int( 8 )]).type = Type.CRYSTAL_CHEST;
@@ -57,7 +57,7 @@ public class VaultPainter extends Painter {
 			break;
 			
 		case 2:
-			level.drop( prize(), c );
+			level.drop( prize(level), c );
 			set( level, c, Terrain.PEDESTAL );
 			break;
 		}
@@ -66,10 +66,10 @@ public class VaultPainter extends Painter {
 		level.addItemToSpawn( new IronKey() );
 	}
 	
-	private static Item prize() {
-		return Generator.random( Random.oneOf(  
-			Generator.Category.WAND, 
-			Generator.Category.RING 
+	private static Item prize(Level level) {
+		return level.getTreasury().random( Random.oneOf(
+			Treasury.Category.WAND,
+			Treasury.Category.RING
 		) );
 	}
 }

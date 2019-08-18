@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -40,8 +40,8 @@ public class WarehousePainter extends Painter {
 				if(Math.random() < 0.5) {
 					level.addLevelObject(new Barrel(level.cell(i, j)));
 				} else {
-					Item prize = Random.oneOf(Generator.random(Generator.Category.BULLETS),
-							Generator.random(Generator.Category.THROWABLE));
+					Item prize = Random.oneOf(level.getTreasury().random(Treasury.Category.BULLETS),
+							level.getTreasury().random(Treasury.Category.THROWABLE));
 					level.drop(prize, level.cell(i,j));
 				}
 			}

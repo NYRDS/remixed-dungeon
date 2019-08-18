@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -357,7 +358,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 				Statistics.potionsCooked++;
 				Badges.validatePotionsCooked();
 				
-				return Generator.random( Generator.Category.POTION );
+				return Dungeon.level.getTreasury().random( Treasury.Category.POTION );
 				
 			} else {
 				
@@ -370,7 +371,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 				Badges.validatePotionsCooked();
 				
 				if (itemClass == null) {
-					return Generator.random( Generator.Category.POTION );
+					return Dungeon.level.getTreasury().random( Treasury.Category.POTION );
 				} else {
 					try {
 						return itemClass.newInstance();
