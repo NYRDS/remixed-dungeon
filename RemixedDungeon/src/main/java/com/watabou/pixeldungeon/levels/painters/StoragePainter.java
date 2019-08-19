@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.items.Generator;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
@@ -54,11 +54,11 @@ public class StoragePainter extends Painter {
 			return prize;
 		}
 		
-		return Generator.random( Random.oneOf( 
-			Generator.Category.POTION, 
-			Generator.Category.SCROLL,
-			Generator.Category.FOOD, 
-			Generator.Category.GOLD
+		return level.getTreasury().random( Random.oneOf(
+				Treasury.Category.POTION,
+				Treasury.Category.SCROLL,
+				Treasury.Category.FOOD,
+				Treasury.Category.GOLD
 		) );
 	}
 }

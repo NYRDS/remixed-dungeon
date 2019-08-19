@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Camera;
@@ -28,7 +29,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -48,7 +48,7 @@ public class Shaman extends Mob implements IZapper {
 		exp = 6;
 		maxLvl = 14;
 
-		loot = Generator.Category.SCROLL;
+		loot = Treasury.Category.SCROLL;
 		lootChance = 0.33f;
 
 		addResistance(LightningTrap.Electricity.class);

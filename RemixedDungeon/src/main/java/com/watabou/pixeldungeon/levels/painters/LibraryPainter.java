@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Codex;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
@@ -99,6 +99,6 @@ public class LibraryPainter extends Painter {
 			level.addItemToSpawn(prize);
 		}
 
-		return Generator.random(Generator.Category.SCROLL);
+		return level.getTreasury().random(Treasury.Category.SCROLL);
 	}
 }

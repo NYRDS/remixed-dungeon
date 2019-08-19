@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -39,9 +39,9 @@ public class BlacksmithPainter extends Painter {
 				pos = room.random(level);
 			} while (level.map[pos] != Terrain.EMPTY_SP);
 			level.drop( 
-				Generator.random( Random.oneOf( 
-					Generator.Category.ARMOR, 
-					Generator.Category.WEAPON
+				level.getTreasury().random( Random.oneOf(
+					Treasury.Category.ARMOR,
+					Treasury.Category.WEAPON
 				) ), pos );
 		}
 		

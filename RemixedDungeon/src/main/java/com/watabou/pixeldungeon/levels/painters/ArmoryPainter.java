@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.items.Generator;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
@@ -54,17 +54,17 @@ public class ArmoryPainter extends Painter {
 			do {
 				pos = room.random(level);
 			} while (level.map[pos] != Terrain.EMPTY || level.getHeap( pos ) != null);
-			level.drop( prize(), pos );
+			level.drop( prize(level), pos );
 		}
 		
 		entrance.set( Room.Door.Type.LOCKED );
 		level.addItemToSpawn( new IronKey() );
 	}
 	
-	private static Item prize() {
-		return Generator.random( Random.oneOf( 
-			Generator.Category.ARMOR, 
-			Generator.Category.WEAPON
+	private static Item prize(Level level) {
+		return level.getTreasury().random( Random.oneOf(
+			Treasury.Category.ARMOR,
+			Treasury.Category.WEAPON
 		) );
 	}
 }

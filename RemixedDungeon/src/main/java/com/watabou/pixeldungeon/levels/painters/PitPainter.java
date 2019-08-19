@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 
-import com.watabou.pixeldungeon.items.Generator;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -58,11 +58,11 @@ public class PitPainter extends Painter {
 		level.drop( new IronKey(), remains ).type = Type.SKELETON;
 		
 		if (Random.Int( 5 ) == 0) {
-			level.drop( Generator.random( Generator.Category.RING ), remains );
+			level.drop( level.getTreasury().random( Treasury.Category.RING ), remains );
 		} else {
-			level.drop( Generator.random( Random.oneOf( 
-				Generator.Category.WEAPON, 
-				Generator.Category.ARMOR
+			level.drop( level.getTreasury().random( Random.oneOf(
+					Treasury.Category.WEAPON,
+					Treasury.Category.ARMOR
 			) ), remains );
 		}
 		
@@ -79,11 +79,11 @@ public class PitPainter extends Painter {
 			return prize;
 		}
 		
-		return Generator.random( Random.oneOf( 
-			Generator.Category.POTION, 
-			Generator.Category.SCROLL,
-			Generator.Category.FOOD, 
-			Generator.Category.GOLD
+		return level.getTreasury().random( Random.oneOf(
+				Treasury.Category.POTION,
+				Treasury.Category.SCROLL,
+				Treasury.Category.FOOD,
+				Treasury.Category.GOLD
 		) );
 	}
 }

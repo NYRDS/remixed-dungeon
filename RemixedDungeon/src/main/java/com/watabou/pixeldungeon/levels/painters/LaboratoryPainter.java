@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.actors.blobs.Alchemy;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.potions.Potion;
@@ -77,6 +77,6 @@ public class LaboratoryPainter extends Painter {
 			level.addItemToSpawn( prize );
 		}
 		
-		return Generator.random( Generator.Category.POTION );
+		return level.getTreasury().random( Treasury.Category.POTION );
 	}
 }

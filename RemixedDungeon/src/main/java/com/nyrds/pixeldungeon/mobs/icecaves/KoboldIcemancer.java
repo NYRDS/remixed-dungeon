@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.icecaves;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
@@ -9,7 +10,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -27,7 +27,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 		exp = 11;
 		maxLvl = 21;
 
-		loot = Generator.Category.POTION;
+		loot = Treasury.Category.POTION;
 		lootChance = 0.83f;
 
 		addResistance(Death.class);

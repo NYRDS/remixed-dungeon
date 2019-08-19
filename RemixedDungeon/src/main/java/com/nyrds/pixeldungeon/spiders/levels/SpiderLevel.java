@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -206,7 +205,7 @@ public class SpiderLevel extends CommonLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			drop(Generator.random(), randomRespawnCell()).type = Heap.Type.SKELETON;
+			drop(getTreasury().random(), randomRespawnCell()).type = Heap.Type.SKELETON;
 		}
 
 		for (Item item : itemsToSpawn) {

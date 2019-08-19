@@ -438,14 +438,6 @@ public class Generator {
 		}
 	}
 
-	public static Item random(Class<? extends Item> cl) {
-		try {
-			return cl.newInstance().random();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
-	}
-
 	private static Armor randomArmor() throws Exception {
 
 		int curStr = Hero.STARTING_STR + Dungeon.potionOfStrength;

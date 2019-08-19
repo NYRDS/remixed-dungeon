@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
@@ -26,7 +27,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.Ankh;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
@@ -145,13 +145,13 @@ public class ShopPainter extends Painter {
 
 		shopkeeper.addItem( new PotionOfHealing() );
 		for (int i=0; i < 2; i++) {
-			shopkeeper.addItem( Generator.random( Generator.Category.POTION ) );
+			shopkeeper.addItem( level.getTreasury().random( Treasury.Category.POTION ) );
 		}
 
 		shopkeeper.addItem( new ScrollOfIdentify() );
 		shopkeeper.addItem( new ScrollOfRemoveCurse() );
 		shopkeeper.addItem( new ScrollOfMagicMapping() );
-		shopkeeper.addItem( Generator.random( Generator.Category.SCROLL ) );
+		shopkeeper.addItem( level.getTreasury().random( Treasury.Category.SCROLL ) );
 
 		shopkeeper.addItem( new OverpricedRation() );
 		shopkeeper.addItem( new OverpricedRation() );

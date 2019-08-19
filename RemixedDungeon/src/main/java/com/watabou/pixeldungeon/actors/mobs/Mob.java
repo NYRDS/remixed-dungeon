@@ -63,7 +63,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -574,7 +573,7 @@ public abstract class Mob extends Char {
 			if (loot instanceof Treasury.Category) {
 				item = level().getTreasury().random((Treasury.Category) loot);
 			} else if (loot instanceof Class<?>) {
-				item = Generator.random((Class<? extends Item>) loot);
+				item = Treasury.random((Class<? extends Item>) loot);
 			} else {
 				item = (Item) loot;
 			}

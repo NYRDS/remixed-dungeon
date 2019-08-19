@@ -17,6 +17,14 @@ import java.util.Set;
 
 public class Treasury {
 
+    public static Item random(Class<? extends Item> cl) {
+        try {
+            return cl.newInstance().random();
+        } catch (Exception e) {
+            throw new TrackedRuntimeException(e);
+        }
+    }
+
     public enum Category {
         WEAPON,
         ARMOR,

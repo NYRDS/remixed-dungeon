@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -13,7 +14,6 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
@@ -37,7 +37,7 @@ public class ArmoredStatue extends Mob {
 		setState(MobAi.getStateByClass(Passive.class));
 
 		do {
-			armor = (Armor) Generator.random( Generator.Category.ARMOR );
+			armor = (Armor) level().getTreasury().random( Treasury.Category.ARMOR );
 		} while (armor == null || armor.level() < 0);
 
 		armor.identify();

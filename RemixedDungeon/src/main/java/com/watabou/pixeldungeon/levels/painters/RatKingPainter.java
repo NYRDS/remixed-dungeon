@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -74,7 +74,7 @@ public class RatKingPainter extends Painter {
 		Item prize;
 		switch (Random.Int( 10 )) {
 		case 0:
-			prize = Generator.random( Generator.Category.WEAPON );
+			prize = level.getTreasury().random( Treasury.Category.WEAPON );
 			if (prize instanceof MissileWeapon) {
 				prize.quantity( 1 );
 			} else {
@@ -82,7 +82,7 @@ public class RatKingPainter extends Painter {
 			}
 			break;
 		case 1:
-			prize = Generator.random( Generator.Category.ARMOR ).degrade( Random.Int( 3 ) );
+			prize = level.getTreasury().random( Treasury.Category.ARMOR ).degrade( Random.Int( 3 ) );
 			break;
 		default:
 			prize = new Gold( Random.IntRange( 1, 5 ) );
