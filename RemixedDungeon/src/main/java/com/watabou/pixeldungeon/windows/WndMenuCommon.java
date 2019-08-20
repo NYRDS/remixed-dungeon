@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.ui.Window;
 public abstract class WndMenuCommon extends Window {
 
 	protected static final int WIDTH      = 112;
-	protected static final int BTN_HEIGHT = 18;
+
     protected final VBox menuItems;
 
 
@@ -77,13 +77,13 @@ public abstract class WndMenuCommon extends Window {
     public class MenuButton extends RedButton {
 		protected MenuButton(String txt){
 			super(txt);
-			setSize(WIDTH,BTN_HEIGHT);
+			setSize(WIDTH,BUTTON_HEIGHT);
 		}
 
         protected MenuButton(String txt, Image img){
             super(txt);
             icon(img);
-            setSize(WIDTH,BTN_HEIGHT);
+            setSize(WIDTH,BUTTON_HEIGHT);
         }
 	}
 
@@ -91,7 +91,7 @@ public abstract class WndMenuCommon extends Window {
 
 		public MenuCheckBox(String label, boolean checked) {
 			super(label, checked);
-			setSize(WIDTH,BTN_HEIGHT);
+			setSize(WIDTH,BUTTON_HEIGHT);
 		}
 	}
 }

@@ -27,6 +27,7 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Signal;
@@ -41,6 +42,9 @@ public class Window extends Group implements Signal.Listener<Key> {
 	protected static final int SMALL_GAP     = 1;
 	protected static final int BUTTON_HEIGHT = 18;
 	protected static final int STD_WIDTH     = 120;
+
+	protected static final int STD_WIDTH_P = 120;
+	protected static final int STD_WIDTH_L = 160;
 
 	protected int width;
 	protected int height;
@@ -97,7 +101,11 @@ public class Window extends Group implements Signal.Listener<Key> {
 		
 		Keys.event.add( this );
 	}
-	
+
+	public int stdWidth() {
+		return RemixedDungeon.landscape() ? STD_WIDTH_L : STD_WIDTH_P;
+	}
+
 	public void resize( int w, int h ) {
 		this.width = w;
 		this.height = h;

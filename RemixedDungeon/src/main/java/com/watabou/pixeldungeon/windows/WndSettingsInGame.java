@@ -53,7 +53,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 	}
 
 	private Selector createZoomButtons() {
-		return new Selector(WIDTH, BTN_HEIGHT, Game
+		return new Selector(WIDTH, BUTTON_HEIGHT, Game
 				.getVar(R.string.WndSettings_ZoomDef), new Selector.PlusMinusDefault() {
 
 			@Override

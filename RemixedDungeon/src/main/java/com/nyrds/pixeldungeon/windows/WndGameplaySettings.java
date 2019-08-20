@@ -27,7 +27,7 @@ public class WndGameplaySettings extends WndMenuCommon {
 
     private Selector createMoveTimeoutSelector() {
 
-        return new Selector( WIDTH, BTN_HEIGHT, moveTimeoutText(), new Selector.PlusMinusDefault() {
+        return new Selector( WIDTH, BUTTON_HEIGHT, moveTimeoutText(), new Selector.PlusMinusDefault() {
 
             private int selectedTimeout = RemixedDungeon.limitTimeoutIndex(RemixedDungeon.moveTimeout());
 
