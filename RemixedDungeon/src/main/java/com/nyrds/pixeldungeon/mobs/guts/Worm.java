@@ -21,6 +21,7 @@ public class Worm extends Mob {
         defenseSkill = 15;
 
         exp = 18;
+        maxLvl = 35;
 
         loot = Gold.class;
         lootChance = 0.4f;
