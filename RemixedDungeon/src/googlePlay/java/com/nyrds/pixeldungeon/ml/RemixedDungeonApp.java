@@ -68,7 +68,12 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
         try {
             Class.forName("android.os.AsyncTask");
+            Class.forName("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory");
         } catch (Throwable ignore) {
+            if(BuildConfig.DEBUG) {
+                Log.d("Classes", ignore.getMessage());
+            }
+
         }
     }
 

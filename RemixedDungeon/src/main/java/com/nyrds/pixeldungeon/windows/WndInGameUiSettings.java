@@ -41,7 +41,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 	}
 
 	private Selector createQuickSlotsSelector() {
-		return new Selector(WIDTH, BTN_HEIGHT, Game
+		return new Selector(WIDTH, BUTTON_HEIGHT, Game
 				.getVar(R.string.WndSettings_Quickslots), new Selector.PlusMinusDefault() {
 
 			@Override
@@ -63,7 +63,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 	}
 
 	private Selector createUiZoomButtons() {
-		return new Selector(WIDTH, BTN_HEIGHT, Game.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
+		return new Selector(WIDTH, BUTTON_HEIGHT, Game.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
 
 			@Override
 			public void onPlus(Selector s) {

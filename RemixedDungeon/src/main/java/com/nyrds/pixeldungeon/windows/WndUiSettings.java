@@ -34,7 +34,7 @@ public class WndUiSettings extends WndMenuCommon {
 			}
 		});
 
-		final String texts [] = {Game.getVar(R.string.WndSettings_ExperementalFont),
+		final String[] texts = {Game.getVar(R.string.WndSettings_ExperementalFont),
 				Game.getVar(R.string.WndSettings_ClassicFont)
 		};
 
@@ -53,7 +53,7 @@ public class WndUiSettings extends WndMenuCommon {
 	}
 
 	private Selector createTextScaleButtons() {
-		return new Selector(WIDTH,BTN_HEIGHT,Game
+		return new Selector(WIDTH,BUTTON_HEIGHT,Game
 				.getVar(R.string.WndSettings_TextScaleDefault), new Selector.PlusMinusDefault() {
 			@Override
 			public void onPlus(Selector s) {
