@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 752
-        versionName "remix.29.fix.1.2"
+        versionCode 753
+        versionName "remix.29.fix.1.3"
     }
 
     aaptOptions {
@@ -100,7 +100,7 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-base:17.1.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
-    implementation "com.google.android.gms:play-services-games:18.0.0"
+    implementation "com.google.android.gms:play-services-games:18.0.1"
 
     implementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
     implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.0.0'
@@ -118,8 +118,8 @@ dependencies {
     implementation 'com.android.billingclient:billing:1.1'
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
-    implementation 'com.google.firebase:firebase-core:17.0.1'
-    implementation 'com.google.firebase:firebase-perf:18.0.1'
+    implementation 'com.google.firebase:firebase-core:17.1.0'
+    implementation 'com.google.firebase:firebase-perf:19.0.0'
     implementation 'com.google.firebase:firebase-ads:18.1.1'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
