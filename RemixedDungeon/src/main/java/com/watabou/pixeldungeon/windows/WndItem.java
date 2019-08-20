@@ -18,10 +18,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.windows.HBox;
+import com.nyrds.pixeldungeon.windows.VHBox;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -33,16 +34,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class WndItem extends Window {
 
 	private static final float BUTTON_WIDTH		= 36;
-	private static final float BUTTON_HEIGHT	= 16;
-	
-	private static final int WIDTH_P = 120;
-	private static final int WIDTH_L = 160;
-	
+
 	public WndItem( final WndBag owner, final Item item ) {	
 		
 		super();
 
-		int WIDTH = RemixedDungeon.landscape() ? WIDTH_L : WIDTH_P;
+		int WIDTH = stdWidth();
 
 		IconTitle titlebar = new IconTitle(new ItemSprite( item ), Utils.capitalize( item.toString() ));
 		titlebar.setRect( 0, 0, WIDTH, 0 );
@@ -61,8 +58,10 @@ public class WndItem extends Window {
 		add(info);
 		 
 		float y = info.y + info.height() + GAP;
-		float x = 0;
-		
+
+		VHBox actions = new VHBox(WIDTH);
+		actions.setAlign(HBox.Align.Width);
+
 		if (Dungeon.hero.isAlive() && owner != null) {
 			for (final String action:item.actions( Dungeon.hero )) {
 
@@ -79,17 +78,14 @@ public class WndItem extends Window {
 					}
 				};
 				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );
-				if (x + btn.width() > WIDTH) {
-					x = 0;
-					y += BUTTON_HEIGHT + GAP;
-				}
-				btn.setPos( x, y );
-				add(btn);
-				
-				x += btn.width() + GAP;
+
+				actions.add(btn);
 			}
 		}
-		
-		resize( WIDTH, (int)(y + (x > 0 ? BUTTON_HEIGHT : 0)) );
+
+		add(actions);
+		actions.setPos(titlebar.left(), y);
+
+		resize( WIDTH, (int) (actions.bottom() + GAP));
 	}
 }
