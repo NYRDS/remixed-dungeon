@@ -31,8 +31,8 @@ public abstract class PortalGate extends Deco {
 	@Packable
 	protected int uses;
 
-	protected Animation activation;
-	protected Animation activatedLoop;
+	private Animation activation;
+	private Animation activatedLoop;
 
 
 	public PortalGate(){
@@ -124,6 +124,11 @@ public abstract class PortalGate extends Deco {
 		if(presser instanceof Item) {
 			ItemUtils.throwItemAway(getPos());
 		}
+	}
+
+	@Override
+	public boolean nonPassable(Char ch) {
+		return true;
 	}
 
 	public abstract boolean portalInteract(Hero hero);
