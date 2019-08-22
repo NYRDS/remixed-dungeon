@@ -10,11 +10,11 @@
         "quantity": 100
       },
       {
-        "kind": "ArmorKit",
+        "kind": "RawFish",
         "quantity": 100
       },
       {
-        "kind": "ManaPotion",
+        "kind": "Firebloom.Seed",
         "quantity": 100
       }
     ],

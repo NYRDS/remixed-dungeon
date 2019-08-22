@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Badges;
@@ -35,6 +37,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -46,7 +49,7 @@ import org.json.JSONObject;
 
 import java.util.Iterator;
 
-public class Belongings implements Iterable<Item> {
+public class Belongings implements Iterable<Item>, Bundlable {
 
 	public static final int BACKPACK_SIZE	= 19;
 	
@@ -54,9 +57,13 @@ public class Belongings implements Iterable<Item> {
 	
 	public Bag backpack;	
 
+	@Packable
 	public KindOfWeapon weapon = null;
+	@Packable
 	public Armor        armor  = null;
+	@Packable
 	public Artifact     ring1  = null;
+	@Packable
 	public Artifact     ring2  = null;
 
 	public Belongings( Char owner ) {
@@ -67,40 +74,31 @@ public class Belongings implements Iterable<Item> {
 
 		collect(new Gold(0));
 	}
-	
-	private static final String WEAPON		= "weapon";
-	private static final String ARMOR		= "armor";
-	private static final String RING1		= "ring1";
-	private static final String RING2		= "ring2";
-	
+
 	public void storeInBundle( Bundle bundle ) {
-		
 		backpack.storeInBundle(bundle);
-		
-		bundle.put( WEAPON, weapon );
-		bundle.put( ARMOR, armor );
-		bundle.put( RING1, ring1 );
-		bundle.put( RING2, ring2 );
+		BundleHelper.Pack(this,bundle);
 	}
-	
+
+	@Override
+	public boolean dontPack() {
+		return false;
+	}
+
 	public void restoreFromBundle( Bundle bundle ) {
 		
 		backpack.clear();
 		backpack.restoreFromBundle(bundle);
-		
-		weapon = (KindOfWeapon)bundle.get( WEAPON );
+		BundleHelper.UnPack(this,bundle);
+
 		if (weapon != null) {
 			weapon.activate( owner );
 		}
-		
-		armor = (Armor)bundle.get( ARMOR );
-		
-		ring1 = (Artifact)bundle.get( RING1 );
+
 		if (ring1 != null) {
 			ring1.activate( owner );
 		}
 		
-		ring2 = (Artifact)bundle.get( RING2 );
 		if (ring2 != null) {
 			ring2.activate( owner );
 		}

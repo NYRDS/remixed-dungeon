@@ -1,0 +1,39 @@
+{
+  "FOOD": {
+    "categoryChance": 10,
+    "OverpricedRation" : 1
+  },
+  "THROWABLE": {
+    "categoryChance": 10,
+    "Dart": 1,
+    "CurareDart": 0.1,
+    "IncendiaryDart": 0.1
+  },
+  "ARMOR": {
+    "categoryChance": 5,
+    "LeatherArmor": 2,
+    "ClothArmor": 5,
+    "MailArmor": 1
+  },
+  "SCROLL": {
+    "categoryChance": 10,
+    "ScrollOfMagicMapping": 1,
+    "ScrollOfIdentify": 1
+  },
+  "POTION": {
+    "categoryChance": 10,
+    "PotionOfMindVision": 1,
+    "PotionOfFrost": 1,
+    "PotionOfPurity": 1,
+    "PotionOfHealing": 1,
+    "ManaPotion": 1
+  },
+  "WEAPON": {
+    "categoryChance": 5,
+    "Sword": 1,
+    "Knuckles": 1,
+    "Spear": 1,
+    "CurareDart": 1,
+    "Dagger": 1
+  }
+}

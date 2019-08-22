@@ -7,7 +7,8 @@
 	  "church_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
 	  "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
 	  "library_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json","noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1.mp3"},
-	  "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3"},
+      "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json",
+         "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1.mp3","treasury":"TownShopTreasury.json"},
 
       "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true},
       "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/Portal.json", "isSafe":true},

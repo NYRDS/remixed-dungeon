@@ -308,7 +308,7 @@ public class WndTradeItem extends Window {
 		}
 
 		Item soldItem = item.detach( customer.getBelongings().backpack, quantity );
-		shopkeeper.placeItemInShop(soldItem);
+		//shopkeeper.placeItemInShop(soldItem);
 
 		int price = price(soldItem, false);
 
