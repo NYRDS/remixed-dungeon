@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.utils.SparseArray;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WndStory extends Window {
 
 	private static final int WIDTH  = 120;
@@ -91,12 +93,8 @@ public class WndStory extends Window {
 		list.setRect(0, 0, w, h);
 	}
 
-	public static void showCustomStory( String text ) {
-		if (text != null) {
-			WndStory wnd = new WndStory( text );
-			
-			Game.scene().add( wnd );
-		}
+	public static void showCustomStory( @NotNull String text ) {
+			Game.scene().add( new WndStory( text ) );
 	}
 	
 	public static void showChapter( int id ) {

@@ -34,7 +34,7 @@ public class Codex extends Book {
 	@Packable(defaultValue = "-1")
 	private int codexId=-1;
 
-	@Packable(defaultValue = "")
+	@Packable
 	private String text;
 
 	public Codex(){
@@ -44,7 +44,7 @@ public class Codex extends Book {
 
 	@Override
 	protected void doRead(Hero hero) {
-		if(text != null && !text.isEmpty()) {
+		if(text != null && !text.isEmpty() && !text.equals("Unknown")) {
 			WndStory.showCustomStory(text);
 		} else {
 			WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[getCodexId()]);
