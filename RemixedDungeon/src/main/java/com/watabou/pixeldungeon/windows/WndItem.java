@@ -61,6 +61,7 @@ public class WndItem extends Window {
 
 		VHBox actions = new VHBox(WIDTH);
 		actions.setAlign(HBox.Align.Width);
+		actions.setGap(GAP);
 
 		if (Dungeon.hero.isAlive() && owner != null) {
 			for (final String action:item.actions( Dungeon.hero )) {
