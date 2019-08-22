@@ -322,6 +322,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public Treasury getTreasury() {
+		if(treasury == null) {
+			treasury = Treasury.create(DungeonGenerator.getLevelProperty(levelId, "treasury","Treasury.json"));
+		}
 		return treasury;
 	}
 
@@ -511,10 +514,8 @@ public abstract class Level implements Bundlable {
 
 		initSizeDependentStuff();
 
-		treasury = Treasury.create(DungeonGenerator.getLevelProperty(levelId, "treasury","Treasury.json"));
-
 		if (!isBossLevel()) {
-			addItemToSpawn(treasury.random(Treasury.Category.FOOD));
+			addItemToSpawn(getTreasury().random(Treasury.Category.FOOD));
 			if (Dungeon.posNeeded()) {
 				addItemToSpawn(new PotionOfStrength());
 				Dungeon.potionOfStrength++;
@@ -529,7 +530,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (Random.Int(5) == 0) {
-				addItemToSpawn(treasury.random(Treasury.Category.RANGED));
+				addItemToSpawn(getTreasury().random(Treasury.Category.RANGED));
 			}
 
 			if (Random.Int(15) == 0) {
@@ -537,7 +538,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (Random.Int(2) == 0) {
-				addItemToSpawn(treasury.random(Treasury.Category.BULLETS));
+				addItemToSpawn(getTreasury().random(Treasury.Category.BULLETS));
 			}
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);

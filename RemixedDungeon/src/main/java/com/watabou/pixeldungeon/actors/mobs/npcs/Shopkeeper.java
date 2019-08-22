@@ -131,8 +131,6 @@ public class Shopkeeper extends NPC {
 	@Override
 	public boolean interact(final Char hero) {
 
-
-
 		while(getBelongings().backpack.items.size() < getBelongings().backpack.size + 2) {
 			generateNewItem();
 		}
