@@ -438,21 +438,18 @@ public class ItemFactory {
         try {
             Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
 
-            if(itemClass == null) {
-                throw new TrackedRuntimeException(selectedItemClass + " is not a item class");
+            if (itemClass != null && itemClass != CustomItem.class) {
+                return itemClass.newInstance();
             }
 
-            if (itemClass != CustomItem.class) {
-                return itemClass.newInstance();
-            } else {
-                try {
-                    return new CustomItem(selectedItemClass);
-                } catch (Exception e){
-                    EventCollector.logException(e,selectedItemClass);
-                    Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
-                    return itemByName("Gold");
-                }
+            try {
+                return new CustomItem(selectedItemClass);
+            } catch (Exception e){
+                EventCollector.logException(e,selectedItemClass);
+                Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
+                return itemByName("Gold");
             }
+
         } catch (InstantiationException e) {
             throw new TrackedRuntimeException("itemFactory", e);
         } catch (IllegalAccessException e) {

@@ -19,7 +19,7 @@ return item.init{
             info          = "FriedFish_Info",
             stackable     = true,
             defaultAction = "Food_ACEat",
-            price         = 10
+            price         = 30
         }
     end,
     actions = function() return {RPD.Actions.eat} end,

@@ -163,7 +163,7 @@ public class Shopkeeper extends NPC {
 	}
 
 	public void placeItemInShop(Item item) {
-		if(!item.cursed && item.price() > 10 ) {
+		if(!item.cursed) {
 			addItem(item);
 		}
 	}

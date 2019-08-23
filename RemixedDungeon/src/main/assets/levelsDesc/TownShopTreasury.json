@@ -1,7 +1,8 @@
 {
   "FOOD": {
     "categoryChance": 10,
-    "OverpricedRation" : 1
+    "OverpricedRation" : 1,
+    "FriedFish" : 0.1
   },
   "THROWABLE": {
     "categoryChance": 10,

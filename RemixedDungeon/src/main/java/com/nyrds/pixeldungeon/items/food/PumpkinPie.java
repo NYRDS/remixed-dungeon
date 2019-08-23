@@ -14,7 +14,7 @@ public class PumpkinPie extends Food {
 	
 	@Override
 	public int price() {
-		return 20 * quantity();
+		return 30 * quantity();
 	}
 	
 	@Override
