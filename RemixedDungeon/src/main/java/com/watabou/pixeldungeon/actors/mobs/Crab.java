@@ -33,7 +33,7 @@ public class Crab extends Mob {
 		exp = 3;
 		maxLvl = 9;
 		
-		loot = new MysteryMeat();
+		loot = MysteryMeat.class;
 		lootChance = 0.314f;
 	}
 	

@@ -343,7 +343,7 @@ public class Ghost extends NPC {
 			
 			setState(MobAi.getStateByClass(Wandering.class));
 			lootChance = 1;
-			loot = new RatSkull();
+			loot = RatSkull.class;
 			addImmunity( Paralysis.class );
 		}
 		

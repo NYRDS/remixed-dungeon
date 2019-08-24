@@ -573,7 +573,9 @@ public abstract class Mob extends Char {
 			if (loot instanceof Treasury.Category) {
 				item = level().getTreasury().random((Treasury.Category) loot);
 			} else if (loot instanceof Class<?>) {
-				item = Treasury.random((Class<? extends Item>) loot);
+				item = level().getTreasury().random((Class<? extends Item>) loot);
+			} else if(loot instanceof String) {
+				item = level().getTreasury().random((String) loot);
 			} else {
 				item = (Item) loot;
 			}

@@ -58,14 +58,10 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Stylus;
-import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.PseudoPasty;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -324,6 +320,7 @@ public abstract class Level implements Bundlable {
 	public Treasury getTreasury() {
 		if(treasury == null) {
 			treasury = Treasury.create(DungeonGenerator.getLevelProperty(levelId, "treasury","Treasury.json"));
+			Challenges.forbidCategories(Dungeon.challenges,treasury);
 		}
 		return treasury;
 	}
@@ -1050,6 +1047,8 @@ public abstract class Level implements Bundlable {
 	@NotNull
 	public Heap drop(Item item, int cell) {
 
+		item = getTreasury().check(item);
+
 		if (solid[cell] && map[cell] != Terrain.DOOR){
 			for (int n : Level.NEIGHBOURS8) {
 				int p = n + cell;
@@ -1060,16 +1059,6 @@ public abstract class Level implements Bundlable {
 					}
 				}
 			}
-		}
-
-		if (Dungeon.isChallenged(Challenges.NO_FOOD) && item instanceof Food) {
-			item = new Gold(item.price());
-		} else if (Dungeon.isChallenged(Challenges.NO_ARMOR)
-				&& item instanceof Armor) {
-			item = new Gold(item.price());
-		} else if (Dungeon.isChallenged(Challenges.NO_HEALING)
-				&& item instanceof PotionOfHealing) {
-			item = new Gold(item.price());
 		}
 
 		if (((map[cell] == Terrain.ALCHEMY) && !(item instanceof Seed))

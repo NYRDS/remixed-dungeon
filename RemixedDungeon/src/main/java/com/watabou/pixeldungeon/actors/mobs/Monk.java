@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -27,7 +28,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
-import com.watabou.pixeldungeon.items.food.Ration;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.sprites.MonkSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -47,7 +47,7 @@ public class Monk extends Mob {
 		exp = 11;
 		maxLvl = 21;
 		
-		loot = new Ration();
+		loot = Treasury.Category.FOOD;
 		lootChance = 0.153f;
 		
 		addImmunity( Amok.class );

@@ -42,7 +42,7 @@ public class FireElemental extends Mob {
 		
 		flying = true;
 		
-		loot = new PotionOfLiquidFlame();
+		loot = PotionOfLiquidFlame.class;
 		lootChance = 0.1f;
 		
 		addImmunity( Burning.class );

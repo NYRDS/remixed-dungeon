@@ -92,9 +92,8 @@ public class Gold extends Item {
 	}
 	
 	@Override
-	public void quantity(int value) {
-		super.quantity(value);
-		
+	public Item quantity(int value) {
+
 		image = 0;
 		
 		if(value > 9 ) {
@@ -112,8 +111,8 @@ public class Gold extends Item {
 		if(value > 9999) {
 			image = 4;
 		}
-		
-		
+
+		return super.quantity(value);
 	}
 	
 	@Override

@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.Item;
@@ -16,14 +16,6 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class Treasury {
-
-    public static Item random(Class<? extends Item> cl) {
-        try {
-            return cl.newInstance().random();
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
-        }
-    }
 
     public enum Category {
         WEAPON,
@@ -51,7 +43,7 @@ public class Treasury {
     private ArrayList<CategoryItems> items = new ArrayList<>();
     private ArrayList<Float>         probs = new ArrayList<>();
 
-    private Set<String> forbiddenCategories = new HashSet<>();
+    private Set<String> forbidden = new HashSet<>();
 
     public static Treasury create(String file) {
         Treasury treasury = new Treasury();
@@ -122,32 +114,57 @@ public class Treasury {
     public Item random() {
         int categoryIndex = Random.chances(probs);
 
-        if(forbiddenCategories.contains(names.get(categoryIndex))){
+        String categoryName = names.get(categoryIndex);
+        if(forbidden.contains(categoryName)){
             return ItemFactory.itemByName("Gold");
         }
 
-        CategoryItems category = items.get(categoryIndex);
-        int itemIndex = Random.chances(category.probs);
-        return ItemFactory.itemByName(category.names.get(itemIndex)).random();
+        return random(categoryName);
+    }
+
+    public Item check(Item item) {
+        if(forbidden.contains(item.getClassName())) {
+            return ItemFactory.itemByName("Gold").quantity(item.price());
+        }
+        return item;
     }
 
     public Item random(Category category){
         return random(category.name());
     }
 
-    public Item random(String Category) {
+    private Item randomItem(String itemName) {
+        return check(ItemFactory.itemByName(itemName).random());
+    }
 
-        if(forbiddenCategories.contains(Category)) {
+    @LuaInterface
+    public Item random(String categoryOrItem) {
+
+        if(forbidden.contains(categoryOrItem)) {
             return ItemFactory.itemByName("Gold");
         }
 
         for(int i = 0;i<names.size();++i) {
-            if(names.get(i).equals(Category)) {
+            if(names.get(i).equals(categoryOrItem)) {
                 CategoryItems category = items.get(i);
                 int itemIndex = Random.chances(category.probs);
-                return ItemFactory.itemByName(category.names.get(itemIndex)).random();
+                String itemName = category.names.get(itemIndex);
+                randomItem(itemName);
             }
         }
-        throw new ModError("Unknown item category:"+Category);
+
+        return randomItem(categoryOrItem);
+    }
+
+    public Item random(Class<? extends Item> cl) {
+        try {
+            return check(cl.newInstance().random());
+        } catch (Exception e) {
+            throw new TrackedRuntimeException(e);
+        }
+    }
+
+    public void forbid(String itemOrCat) {
+        forbidden.add(itemOrCat);
     }
 }

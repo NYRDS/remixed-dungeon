@@ -50,7 +50,7 @@ public class WndChallenges extends Window {
 		boxes = new ArrayList<>();
 		
 		float pos = title.height() + GAP;
-		final String challenges[] = Game.getVars(R.array.Challenges_Names);
+		final String[] challenges = Game.getVars(R.array.Challenges_Names);
 
 		for (int i=0; i < Challenges.MASKS.length; i++) {
 

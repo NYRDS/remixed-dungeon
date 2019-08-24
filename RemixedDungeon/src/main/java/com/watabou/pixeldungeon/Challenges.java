@@ -17,6 +17,14 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.annotation.SuppressLint;
+
+import com.nyrds.pixeldungeon.items.Treasury;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Challenges {
 
 	public static final int NO_FOOD				= 1;
@@ -26,8 +34,26 @@ public class Challenges {
 	public static final int SWARM_INTELLIGENCE	= 16;
 	public static final int DARKNESS			= 32;
 
+
 	public static final int[] MASKS = {
 		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS
 	};
-	
+
+	@SuppressLint("UseSparseArrays")
+	private static Map<Integer, String> forbiddenCategories = new HashMap<>();
+
+	static {
+		forbiddenCategories.put(NO_FOOD,      Treasury.Category.FOOD.name());
+		forbiddenCategories.put(NO_ARMOR,     Treasury.Category.ARMOR.name());
+		forbiddenCategories.put(NO_HEALING,   PotionOfHealing.class.getSimpleName());
+		forbiddenCategories.put(NO_HERBALISM, Treasury.Category.SEED.name());
+	}
+
+	public static void forbidCategories(int challenge,Treasury treasury) {
+		for(int mask:MASKS) {
+			if((mask & challenge) != 0 && forbiddenCategories.containsKey(mask)) {
+				treasury.forbid(forbiddenCategories.get(mask));
+			}
+		}
+	}
 }

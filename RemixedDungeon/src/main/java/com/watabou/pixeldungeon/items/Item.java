@@ -113,7 +113,22 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	@Packable(defaultValue = "-1")
 	private int quickSlotIndex = -1;
 
-	private static Comparator<Item> itemComparator = (lhs, rhs) -> Generator.Category.order(lhs) - Generator.Category.order(rhs);
+	private static Comparator<Item> itemComparator = (lhs, rhs) -> {
+
+		if(lhs.isIdentified() &&  !rhs.isIdentified()) {
+			return -1;
+		}
+
+		if(!lhs.isIdentified() && rhs.isIdentified()) {
+			return 1;
+		}
+
+		if(!lhs.isIdentified() && !rhs.isIdentified()) {
+			return 0;
+		}
+
+		return lhs.price() - rhs.price();
+	};
 
     public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = new ArrayList<>();
@@ -403,13 +418,14 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return Scrambler.descramble(quantity);
 	}
 
-	public void quantity(int value) {
+	public Item quantity(int value) {
 
 		if(value < 0) {
 			EventCollector.logException();
 		}
 
 		quantity = Scrambler.scramble(value);
+		return this;
 	}
 
 	public int price() {

@@ -36,7 +36,7 @@ public class Bat extends Mob {
 		
 		flying = true;
 		
-		loot = new PotionOfHealing();
+		loot = PotionOfHealing.class;
 		lootChance = 0.125f;
 		
 		addResistance( Leech.class );

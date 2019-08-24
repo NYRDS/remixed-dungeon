@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.levels.features;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.noosa.particles.Emitter;
-import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
@@ -44,30 +43,27 @@ public class HighGrass {
 		
 		level.set( pos, Terrain.GRASS );
 		GameScene.updateMap( pos );
-		
-		if (!Dungeon.isChallenged( Challenges.NO_HERBALISM )) {
-			int herbalismLevel = 0;
-			if (ch != null) {
-				herbalismLevel = ch.buffLevel(Herbalism.class);
-			}
-			
+
+		if (ch != null) {
+			int herbalismLevel = ch.buffLevel(Herbalism.class);
+
 			// Seed
-			if (herbalismLevel >= 0 && Random.Int( 18 ) <= Random.Int( herbalismLevel + 1 )) {
-				ItemSprite is = level.drop( level.getTreasury().random( Treasury.Category.SEED ), pos ).sprite;
-				if(is != null) {
+			if (herbalismLevel >= 0 && Random.Int(18) <= Random.Int(herbalismLevel + 1)) {
+				ItemSprite is = level.drop(level.getTreasury().random(Treasury.Category.SEED), pos).sprite;
+				if (is != null) {
 					is.drop();
 				}
 			}
-			
+
 			// Dew
-			if (herbalismLevel >= 0 && Random.Int( 6 ) <= Random.Int( herbalismLevel + 1 )) {
-				ItemSprite is = level.drop( new Dewdrop(), pos ).sprite;
-				if(is != null) {
+			if (herbalismLevel >= 0 && Random.Int(6) <= Random.Int(herbalismLevel + 1)) {
+				ItemSprite is = level.drop(level.getTreasury().random(Dewdrop.class.getSimpleName()), pos).sprite;
+				if (is != null) {
 					is.drop();
 				}
 			}
 		}
-		
+
 		int leaves = 4;
 
 		if(ch != null) {

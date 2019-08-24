@@ -54,7 +54,7 @@ public class Eye extends Mob {
 
 		flying = true;
 
-		loot = new Dewdrop();
+		loot = Dewdrop.class;
 		lootChance = 0.5f;
 
 		addResistance( WandOfDisintegration.class );

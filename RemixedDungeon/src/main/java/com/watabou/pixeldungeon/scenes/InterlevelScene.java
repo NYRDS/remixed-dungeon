@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
@@ -84,7 +83,6 @@ public class InterlevelScene extends PixelScene {
         @Override
         public void run() {
             try {
-                Generator.reset();
                 switch (mode) {
                     case DESCEND:
                         descend();
