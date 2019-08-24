@@ -23,8 +23,6 @@
   },
   "POTION": {
     "categoryChance": 10,
-    "PotionOfMindVision": 1,
-    "PotionOfFrost": 1,
     "PotionOfPurity": 1,
     "PotionOfHealing": 1,
     "ManaPotion": 1

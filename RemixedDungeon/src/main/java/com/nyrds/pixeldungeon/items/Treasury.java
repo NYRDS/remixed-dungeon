@@ -30,7 +30,6 @@ public class Treasury {
         RANGED,
         BULLETS,
         THROWABLE,
-        DRINK,
         UNIQUE
     }
 
@@ -149,7 +148,7 @@ public class Treasury {
                 CategoryItems category = items.get(i);
                 int itemIndex = Random.chances(category.probs);
                 String itemName = category.names.get(itemIndex);
-                randomItem(itemName);
+                return randomItem(itemName);
             }
         }
 

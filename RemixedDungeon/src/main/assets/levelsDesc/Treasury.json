@@ -14,11 +14,11 @@
     "SpellBook": 1
   },
   "FOOD": {
-    "categoryChance": 0,
+    "categoryChance": 1,
     "MysteryMeat": 0,
     "Pasty": 1,
-    "ChristmasTurkey": 0,
-    "PumpkinPie": 0,
+    "ChristmasTurkey": 0.1,
+    "PumpkinPie": 0.1,
     "Ration": 4
   },
   "RANGED": {
@@ -34,15 +34,6 @@
     "categoryChance": 50,
     "Gold": 1
   },
-  "THROWABLE": {
-    "categoryChance": 0,
-    "Dart": 1,
-    "Shuriken": 1,
-    "Javelin": 1,
-    "Tamahawk": 1,
-    "CurareDart": 1,
-    "IncendiaryDart": 1
-  },
   "ARMOR": {
     "PlateArmor": 1,
     "categoryChance": 10,
@@ -52,14 +43,9 @@
     "ClothArmor": 1,
     "MailArmor": 1
   },
-  "DRINK": {
-    "categoryChance": 25,
-    "ManaPotion": 1
-  },
   "RING": {
     "RingOfElements": 1,
     "RingOfDetection": 1,
-    "RingOfThorns": 0,
     "RingOfEvasion": 1,
     "RingOfHaste": 1,
     "RingOfSatiety": 1,
@@ -67,7 +53,6 @@
     "RingOfHerbalism": 1,
     "categoryChance": 2,
     "RingOfPower": 1,
-    "RingOfHaggler": 0,
     "RingOfAccuracy": 1,
     "RingOfMending": 1
   },
@@ -90,7 +75,6 @@
   "SEED": {
     "Dreamweed.Seed": 1,
     "Firebloom.Seed": 1,
-    "Rotberry.Seed": 0,
     "Sorrowmoss.Seed": 1,
     "Icecap.Seed": 1,
     "Earthroot.Seed": 1,
@@ -107,34 +91,31 @@
     "ScrollOfChallenge": 12,
     "BlankScroll": 10,
     "ScrollOfPsionicBlast": 4,
-    "ScrollOfUpgrade": 0,
     "ScrollOfSummoning": 4,
     "ScrollOfLullaby": 8,
     "ScrollOfMagicMapping": 15,
     "ScrollOfTeleportation": 10,
     "ScrollOfIdentify": 30,
     "categoryChance": 40,
-    "ScrollOfWeaponUpgrade": 0,
     "ScrollOfCurse": 6
   },
   "POTION": {
     "PotionOfInvisibility": 10,
     "PotionOfMindVision": 20,
     "PotionOfLiquidFlame": 15,
-    "PotionOfStrength": 0,
     "PotionOfParalyticGas": 10,
     "categoryChance": 50,
     "PotionOfExperience": 4,
     "PotionOfLevitation": 10,
     "PotionOfFrost": 10,
-    "PotionOfMight": 0,
     "PotionOfPurity": 12,
     "PotionOfToxicGas": 15,
-    "PotionOfHealing": 45
+    "PotionOfHealing": 45,
+    "ManaPotion": 40
   },
   "WEAPON": {
     "AmokDart": 0.10000000149011612,
-    "Dart": 0,
+    "Dart": 1,
     "Sword": 1,
     "SacrificialSword": 0.10000000149011612,
     "Knuckles": 1,
