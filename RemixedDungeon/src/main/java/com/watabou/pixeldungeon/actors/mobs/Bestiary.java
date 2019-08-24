@@ -71,7 +71,7 @@ public class Bestiary {
 		}
 	}
 
-	public static void  selfTest(JSONObject root) {
+	public static void selfTest(JSONObject root) {
 	    Iterator<String> keyI = root.keys();
 	    while (keyI.hasNext()) {
 	        String key = keyI.next();

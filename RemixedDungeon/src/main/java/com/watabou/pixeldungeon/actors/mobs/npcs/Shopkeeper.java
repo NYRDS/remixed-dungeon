@@ -131,8 +131,10 @@ public class Shopkeeper extends NPC {
 	@Override
 	public boolean interact(final Char hero) {
 
-		while(getBelongings().backpack.items.size() < getBelongings().backpack.size + 2) {
+		int attempts = 0;
+		while(getBelongings().backpack.items.size() < getBelongings().backpack.size + 2 && attempts < 100) {
 			generateNewItem();
+			attempts++;
 		}
 
 		Collections.shuffle(getBelongings().backpack.items);
@@ -185,6 +187,9 @@ public class Shopkeeper extends NPC {
 				return;
 			}
 		}
+
+		item = level().getTreasury().check(item);
+
 		item.collect(this);
 	}
 

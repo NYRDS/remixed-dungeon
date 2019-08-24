@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.IceElemental;
@@ -97,7 +96,8 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -243,18 +243,8 @@ public class MobFactory {
 		//old mods compatibility
 		mMobsList.put("Elemental", FireElemental.class);
 	}
-	
-	public static Mob mobRandom() {
-		try {
-			return Random.element(mMobsList.values()).newInstance();
-		} catch (InstantiationException e) {
-			EventCollector.logException(e);
-		} catch (IllegalAccessException e) {
-			EventCollector.logException(e);
-		}
-		return null;
-	}
 
+	@Contract(pure = true)
 	public static boolean hasMob(String mobClass) {
 		return mMobsList.containsKey(mobClass);
 	}

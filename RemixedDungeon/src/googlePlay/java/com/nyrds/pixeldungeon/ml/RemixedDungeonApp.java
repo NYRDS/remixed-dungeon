@@ -10,9 +10,11 @@ import androidx.multidex.MultiDexApplication;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -67,6 +69,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
         }
 
         try {
+            ModdingMode.selectMod(RemixedDungeon.activeMod());
             Class.forName("android.os.AsyncTask");
             Class.forName("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory");
         } catch (Throwable ignore) {

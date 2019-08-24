@@ -111,7 +111,6 @@ public class RemixedDungeon extends Game {
 		playGames = new _PlayGames(this);
 		MobileAds.initialize(this, Game.getVar(R.string.admob_app_id));
 
-		ModdingMode.selectMod(RemixedDungeon.activeMod());
 		RemixedDungeon.activeMod(ModdingMode.activeMod());
 
 		if(!Utils.canUseClassicFont(uiLanguage())) {

@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -121,7 +122,7 @@ public class Treasury {
         return random(categoryName);
     }
 
-    public Item check(Item item) {
+    public Item check(@NotNull Item item) {
         if(forbidden.contains(item.getClassName())) {
             return ItemFactory.itemByName("Gold").quantity(item.price());
         }
@@ -165,5 +166,13 @@ public class Treasury {
 
     public void forbid(String itemOrCat) {
         forbidden.add(itemOrCat);
+
+        for(int i = 0;i<names.size();++i) {
+            if(names.get(i).equals(itemOrCat)) {
+                CategoryItems category = items.get(i);
+                forbidden.addAll(category.names);
+                return;
+            }
+        }
     }
 }

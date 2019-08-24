@@ -19,7 +19,8 @@
     "Pasty": 1,
     "ChristmasTurkey": 0.1,
     "PumpkinPie": 0.1,
-    "Ration": 4
+    "Ration": 4,
+    "OverpricedRation" : 0.1
   },
   "RANGED": {
     "CompoundBow": 3,
@@ -114,20 +115,20 @@
     "ManaPotion": 40
   },
   "WEAPON": {
-    "AmokDart": 0.10000000149011612,
+    "AmokDart": 0.1,
     "Dart": 1,
     "Sword": 1,
-    "SacrificialSword": 0.10000000149011612,
+    "SacrificialSword": 0.1,
     "Knuckles": 1,
     "Javelin": 1,
     "Claymore": 1,
     "Mace": 1,
     "Boomerang": 0,
-    "HealthDart": 0.10000000149011612,
-    "Kusarigama": 0.10000000149011612,
+    "HealthDart": 0.1,
+    "Kusarigama": 0.1,
     "categoryChance": 15,
     "Shuriken": 1,
-    "GoldenSword": 0.10000000149011612,
+    "GoldenSword": 0.1,
     "Halberd": 1,
     "Glaive": 1,
     "Tamahawk": 1,

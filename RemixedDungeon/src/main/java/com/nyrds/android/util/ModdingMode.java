@@ -90,6 +90,7 @@ public class ModdingMode {
 		return false;
 	}
 
+	@NotNull
 	public static List<String> listResources(String path, FilenameFilter filter) {
 		try{
 
