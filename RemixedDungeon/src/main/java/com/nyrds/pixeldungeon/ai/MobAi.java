@@ -68,6 +68,10 @@ public abstract class MobAi implements AiState {
                 continue;
             }
 
+            if(chr.invisible>0) {
+                continue;
+            }
+
             if (me.level().fieldOfView[chr.getPos()]) {
                 int candidateDist = me.level().distance(me.getPos(), chr.getPos());
                 if (candidateDist < dist) {
@@ -87,6 +91,11 @@ public abstract class MobAi implements AiState {
         int dist = me.level().getLength();
 
         for (Char chr : Actor.chars.values()) {
+
+            if(chr.invisible>0) {
+                continue;
+            }
+
             if (me.level().fieldOfView[chr.getPos()]) {
                 if (!me.friendly(chr)) {
                     int candidateDist = me.level().distance(me.getPos(), chr.getPos());
