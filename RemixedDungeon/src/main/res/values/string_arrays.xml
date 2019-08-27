@@ -1,0 +1,274 @@
+<resources>
+  <string-array name="Ring_Gems">
+    <item>@string/Ring_Gems_0</item>
+    <item>@string/Ring_Gems_1</item>
+    <item>@string/Ring_Gems_2</item>
+    <item>@string/Ring_Gems_3</item>
+    <item>@string/Ring_Gems_4</item>
+    <item>@string/Ring_Gems_5</item>
+    <item>@string/Ring_Gems_6</item>
+    <item>@string/Ring_Gems_7</item>
+    <item>@string/Ring_Gems_8</item>
+    <item>@string/Ring_Gems_9</item>
+    <item>@string/Ring_Gems_10</item>
+    <item>@string/Ring_Gems_11</item>
+  </string-array>
+  <string-array name="Wand_Wood_Types">
+    <item>@string/Wand_Wood_Types_0</item>
+    <item>@string/Wand_Wood_Types_1</item>
+    <item>@string/Wand_Wood_Types_2</item>
+    <item>@string/Wand_Wood_Types_3</item>
+    <item>@string/Wand_Wood_Types_4</item>
+    <item>@string/Wand_Wood_Types_5</item>
+    <item>@string/Wand_Wood_Types_6</item>
+    <item>@string/Wand_Wood_Types_7</item>
+    <item>@string/Wand_Wood_Types_8</item>
+    <item>@string/Wand_Wood_Types_9</item>
+    <item>@string/Wand_Wood_Types_10</item>
+    <item>@string/Wand_Wood_Types_11</item>
+  </string-array>
+  <string-array name="WandOfFlock_SheepBaa">
+    <item>@string/WandOfFlock_SheepBaa_0</item>
+    <item>@string/WandOfFlock_SheepBaa_1</item>
+    <item>@string/WandOfFlock_SheepBaa_2</item>
+    <item>@string/WandOfFlock_SheepBaa_3</item>
+    <item>@string/WandOfFlock_SheepBaa_4</item>
+    <item>@string/WandOfFlock_SheepBaa_5</item>
+  </string-array>
+  <string-array name="BlackCat_Phrases">
+    <item>@string/BlackCat_Phrases_0</item>
+    <item>@string/BlackCat_Phrases_1</item>
+    <item>@string/BlackCat_Phrases_2</item>
+  </string-array>
+  <string-array name="Char_Hit">
+    <item>@string/Char_Hit_0</item>
+    <item>@string/Char_Hit_1</item>
+    <item>@string/Char_Hit_2</item>
+  </string-array>
+  <string-array name="Char_Kill">
+    <item>@string/Char_Kill_0</item>
+    <item>@string/Char_Kill_1</item>
+    <item>@string/Char_Kill_2</item>
+  </string-array>
+  <string-array name="Char_Defeat">
+    <item>@string/Char_Defeat_0</item>
+    <item>@string/Char_Defeat_1</item>
+    <item>@string/Char_Defeat_2</item>
+  </string-array>
+  <string-array name="Char_StaDodged">
+    <item>@string/Char_StaDodged_0</item>
+    <item>@string/Char_StaDodged_1</item>
+    <item>@string/Char_StaDodged_2</item>
+  </string-array>
+  <string-array name="Dungeon_Tips">
+    <item>@string/Dungeon_Tips_0</item>
+    <item>@string/Dungeon_Tips_1</item>
+    <item>@string/Dungeon_Tips_2</item>
+    <item>@string/Dungeon_Tips_3</item>
+    <item>@string/Dungeon_Tips_4</item>
+    <item>@string/Dungeon_Tips_5</item>
+    <item>@string/Dungeon_Tips_6</item>
+    <item>@string/Dungeon_Tips_7</item>
+    <item>@string/Dungeon_Tips_8</item>
+    <item>@string/Dungeon_Tips_9</item>
+    <item>@string/Dungeon_Tips_10</item>
+    <item>@string/Dungeon_Tips_11</item>
+    <item>@string/Dungeon_Tips_12</item>
+    <item>@string/Dungeon_Tips_13</item>
+    <item>@string/Dungeon_Tips_14</item>
+    <item>@string/Dungeon_Tips_15</item>
+    <item>@string/Dungeon_Tips_16</item>
+    <item>@string/Dungeon_Tips_17</item>
+    <item>@string/Dungeon_Tips_18</item>
+    <item>@string/Dungeon_Tips_19</item>
+    <item>@string/Dungeon_Tips_20</item>
+    <item>@string/Dungeon_Tips_21</item>
+    <item>@string/Dungeon_Tips_22</item>
+    <item>@string/Dungeon_Tips_23</item>
+  </string-array>
+  <string-array name="Challenges_Names">
+    <item>@string/Challenges_Names_0</item>
+    <item>@string/Challenges_Names_1</item>
+    <item>@string/Challenges_Names_2</item>
+    <item>@string/Challenges_Names_3</item>
+    <item>@string/Challenges_Names_4</item>
+    <item>@string/Challenges_Names_5</item>
+  </string-array>
+  <string-array name="Hunger_Hungry">
+    <item>@string/Hunger_Hungry_0</item>
+    <item>@string/Hunger_Hungry_1</item>
+    <item>@string/Hunger_Hungry_2</item>
+  </string-array>
+  <string-array name="Hunger_Starving">
+    <item>@string/Hunger_Starving_0</item>
+    <item>@string/Hunger_Starving_1</item>
+    <item>@string/Hunger_Starving_2</item>
+  </string-array>
+  <string-array name="HeroClass_NecromancerPerks">
+    <item>@string/HeroClass_NecromancerPerks_0</item>
+    <item>@string/HeroClass_NecromancerPerks_1</item>
+    <item>@string/HeroClass_NecromancerPerks_2</item>
+    <item>@string/HeroClass_NecromancerPerks_3</item>
+    <item>@string/HeroClass_NecromancerPerks_4</item>
+  </string-array>
+  <string-array name="HeroClass_WarPerks">
+    <item>@string/HeroClass_WarPerks_0</item>
+    <item>@string/HeroClass_WarPerks_1</item>
+    <item>@string/HeroClass_WarPerks_2</item>
+    <item>@string/HeroClass_WarPerks_3</item>
+    <item>@string/HeroClass_WarPerks_4</item>
+  </string-array>
+  <string-array name="HeroClass_MagPerks">
+    <item>@string/HeroClass_MagPerks_0</item>
+    <item>@string/HeroClass_MagPerks_1</item>
+    <item>@string/HeroClass_MagPerks_2</item>
+    <item>@string/HeroClass_MagPerks_3</item>
+    <item>@string/HeroClass_MagPerks_4</item>
+    <item>@string/HeroClass_MagPerks_5</item>
+  </string-array>
+  <string-array name="HeroClass_RogPerks">
+    <item>@string/HeroClass_RogPerks_0</item>
+    <item>@string/HeroClass_RogPerks_1</item>
+    <item>@string/HeroClass_RogPerks_2</item>
+    <item>@string/HeroClass_RogPerks_3</item>
+    <item>@string/HeroClass_RogPerks_4</item>
+    <item>@string/HeroClass_RogPerks_5</item>
+  </string-array>
+  <string-array name="HeroClass_HunPerks">
+    <item>@string/HeroClass_HunPerks_0</item>
+    <item>@string/HeroClass_HunPerks_1</item>
+    <item>@string/HeroClass_HunPerks_2</item>
+    <item>@string/HeroClass_HunPerks_3</item>
+    <item>@string/HeroClass_HunPerks_4</item>
+  </string-array>
+  <string-array name="HeroClass_ElfPerks">
+    <item>@string/HeroClass_ElfPerks_0</item>
+    <item>@string/HeroClass_ElfPerks_1</item>
+    <item>@string/HeroClass_ElfPerks_2</item>
+    <item>@string/HeroClass_ElfPerks_3</item>
+    <item>@string/HeroClass_ElfPerks_4</item>
+    <item>@string/HeroClass_ElfPerks_5</item>
+  </string-array>
+  <string-array name="Death_Name">
+    <item>@string/Death_Name_0</item>
+    <item>@string/Death_Name_1</item>
+    <item>@string/Death_Name_2</item>
+  </string-array>
+  <string-array name="Fire_Name">
+    <item>@string/Fire_Name_0</item>
+    <item>@string/Fire_Name_1</item>
+    <item>@string/Fire_Name_2</item>
+  </string-array>
+  <string-array name="Horror_Name">
+    <item>@string/Horror_Name_0</item>
+    <item>@string/Horror_Name_1</item>
+    <item>@string/Horror_Name_2</item>
+  </string-array>
+  <string-array name="Instability_Name">
+    <item>@string/Instability_Name_0</item>
+    <item>@string/Instability_Name_1</item>
+    <item>@string/Instability_Name_2</item>
+  </string-array>
+  <string-array name="Leech_Name">
+    <item>@string/Leech_Name_0</item>
+    <item>@string/Leech_Name_1</item>
+    <item>@string/Leech_Name_2</item>
+  </string-array>
+  <string-array name="Luck_Name">
+    <item>@string/Luck_Name_0</item>
+    <item>@string/Luck_Name_1</item>
+    <item>@string/Luck_Name_2</item>
+  </string-array>
+  <string-array name="Paralysis_Name">
+    <item>@string/Paralysis_Name_0</item>
+    <item>@string/Paralysis_Name_1</item>
+    <item>@string/Paralysis_Name_2</item>
+  </string-array>
+  <string-array name="Piercing_Name">
+    <item>@string/Piercing_Name_0</item>
+    <item>@string/Piercing_Name_1</item>
+    <item>@string/Piercing_Name_2</item>
+  </string-array>
+  <string-array name="Poison_Name">
+    <item>@string/Poison_Name_0</item>
+    <item>@string/Poison_Name_1</item>
+    <item>@string/Poison_Name_2</item>
+  </string-array>
+  <string-array name="Slow_Name">
+    <item>@string/Slow_Name_0</item>
+    <item>@string/Slow_Name_1</item>
+    <item>@string/Slow_Name_2</item>
+  </string-array>
+  <string-array name="Swing_Name">
+    <item>@string/Swing_Name_0</item>
+    <item>@string/Swing_Name_1</item>
+    <item>@string/Swing_Name_2</item>
+  </string-array>
+  <string-array name="Codex_Story">
+    <item>@string/Codex_Story_0</item>
+    <item>@string/Codex_Story_1</item>
+    <item>@string/Codex_Story_2</item>
+    <item>@string/Codex_Story_3</item>
+    <item>@string/Codex_Story_4</item>
+    <item>@string/Codex_Story_5</item>
+    <item>@string/Codex_Story_6</item>
+    <item>@string/Codex_Story_7</item>
+    <item>@string/Codex_Story_8</item>
+    <item>@string/Codex_Story_9</item>
+    <item>@string/Codex_Story_10</item>
+    <item>@string/Codex_Story_11</item>
+    <item>@string/Codex_Story_12</item>
+    <item>@string/Codex_Story_13</item>
+    <item>@string/Codex_Story_14</item>
+    <item>@string/Codex_Story_15</item>
+    <item>@string/Codex_Story_16</item>
+    <item>@string/Codex_Story_17</item>
+    <item>@string/Codex_Story_18</item>
+    <item>@string/Codex_Story_19</item>
+    <item>@string/Codex_Story_20</item>
+    <item>@string/Codex_Story_21</item>
+    <item>@string/Codex_Story_22</item>
+    <item>@string/Codex_Story_23</item>
+    <item>@string/Codex_Story_24</item>
+    <item>@string/Codex_Story_25</item>
+  </string-array>
+  <string-array name="Scroll_Runes">
+    <item>@string/Scroll_Runes_0</item>
+    <item>@string/Scroll_Runes_1</item>
+    <item>@string/Scroll_Runes_2</item>
+    <item>@string/Scroll_Runes_3</item>
+    <item>@string/Scroll_Runes_4</item>
+    <item>@string/Scroll_Runes_5</item>
+    <item>@string/Scroll_Runes_6</item>
+    <item>@string/Scroll_Runes_7</item>
+    <item>@string/Scroll_Runes_8</item>
+    <item>@string/Scroll_Runes_9</item>
+    <item>@string/Scroll_Runes_10</item>
+    <item>@string/Scroll_Runes_11</item>
+    <item>@string/Scroll_Runes_12</item>
+    <item>@string/Scroll_Runes_13</item>
+    <item>@string/Scroll_Runes_14</item>
+    <item>@string/Scroll_Runes_15</item>
+  </string-array>
+  <string-array name="HeroClass_GnollPerks">
+    <item>@string/HeroClass_GnollPerks_0</item>
+    <item>@string/HeroClass_GnollPerks_1</item>
+    <item>@string/HeroClass_GnollPerks_2</item>
+    <item>@string/HeroClass_GnollPerks_3</item>
+    <item>@string/HeroClass_GnollPerks_4</item>
+  </string-array>
+  <string-array name="Potion_Colors">
+    <item>@string/Potion_Colors_0</item>
+    <item>@string/Potion_Colors_1</item>
+    <item>@string/Potion_Colors_2</item>
+    <item>@string/Potion_Colors_3</item>
+    <item>@string/Potion_Colors_4</item>
+    <item>@string/Potion_Colors_5</item>
+    <item>@string/Potion_Colors_6</item>
+    <item>@string/Potion_Colors_7</item>
+    <item>@string/Potion_Colors_8</item>
+    <item>@string/Potion_Colors_9</item>
+    <item>@string/Potion_Colors_10</item>
+    <item>@string/Potion_Colors_11</item>
+  </string-array>
+</resources>
