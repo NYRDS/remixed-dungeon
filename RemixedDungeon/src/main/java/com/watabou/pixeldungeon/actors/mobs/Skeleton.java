@@ -42,16 +42,23 @@ public class Skeleton extends UndeadMob {
 		exp = 5;
 		maxLvl = 10;
 
-		if (!(level() instanceof NecroBossLevel)) {
-			if (Random.Int(5) == 0) {
-				this.loot = level().getTreasury().worstOf(Treasury.Category.WEAPON,3 );
-				lootChance = 1;
-			} else {
-				lootChance = 0;
-			}
+		if (Random.Int(5) == 0) {
+			lootChance = 1;
+		} else {
+			lootChance = 0;
 		}
+
+
 	}
-	
+
+	@Override
+	protected Object getLoot() {
+		if (!(level() instanceof NecroBossLevel)) {
+			return level().getTreasury().worstOf(Treasury.Category.WEAPON,3 );
+		}
+		return null;
+	}
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 3, 8 );

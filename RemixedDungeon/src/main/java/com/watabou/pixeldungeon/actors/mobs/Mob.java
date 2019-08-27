@@ -568,6 +568,7 @@ public abstract class Mob extends Char {
 
 	@SuppressWarnings("unchecked")
 	protected void dropLoot() {
+		Object loot = getLoot();
 		if (loot != null && Random.Float() <= lootChance) {
 			Item item;
 			if (loot instanceof Treasury.Category) {
@@ -783,5 +784,9 @@ public abstract class Mob extends Char {
 	@LuaInterface
 	public String getMobClassName() {
 		return getEntityKind();
+	}
+
+	protected Object getLoot() {
+		return loot;
 	}
 }

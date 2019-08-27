@@ -193,6 +193,7 @@ import com.watabou.pixeldungeon.plants.Firebloom;
 import com.watabou.pixeldungeon.plants.Icecap;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONException;
@@ -494,6 +495,7 @@ public class ItemFactory {
         List<Item> items = new ArrayList<>();
 
         for(String itemClass:mItemsList.keySet()) {
+            GLog.debug("Spawning: %s",itemClass);
             items.add(itemByName(itemClass));
         }
 

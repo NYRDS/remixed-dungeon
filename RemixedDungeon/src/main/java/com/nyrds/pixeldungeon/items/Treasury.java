@@ -5,6 +5,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -116,6 +117,7 @@ public class Treasury {
 
         String categoryName = names.get(categoryIndex);
         if(forbidden.contains(categoryName)){
+            GLog.debug("Forbidden category:",categoryName);
             return ItemFactory.itemByName("Gold");
         }
 
@@ -124,6 +126,7 @@ public class Treasury {
 
     public Item check(@NotNull Item item) {
         if(forbidden.contains(item.getClassName())) {
+            GLog.debug("Forbidden item:",item.getClassName());
             return ItemFactory.itemByName("Gold").quantity(item.price());
         }
         return item;
@@ -141,6 +144,7 @@ public class Treasury {
     public Item random(String categoryOrItem) {
 
         if(forbidden.contains(categoryOrItem)) {
+            GLog.debug("Forbidden category or item:",categoryOrItem);
             return ItemFactory.itemByName("Gold");
         }
 

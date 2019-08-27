@@ -141,5 +141,14 @@
     "Longsword": 1,
     "CurareDart": 1,
     "Dagger": 1
+  },
+  "THROWABLE": {
+    "categoryChance": 0,
+    "Dart": 1,
+    "Shuriken": 1,
+    "Javelin": 1,
+    "Tamahawk": 1,
+    "CurareDart": 1,
+    "IncendiaryDart": 1
   }
 }

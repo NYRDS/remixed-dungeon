@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.mobs.common.ArmoredStatue;
 import com.nyrds.pixeldungeon.mobs.common.GoldenStatue;
+import com.watabou.pixeldungeon.Challenges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
@@ -78,7 +80,11 @@ public class StatuePainter extends Painter {
 			}
 		}
 		else{
-			statue = new ArmoredStatue();
+			if(Dungeon.isChallenged(Challenges.NO_ARMOR)) {
+				statue = new Statue();
+			} else {
+				statue = new ArmoredStatue();
+			}
 		}
 
 		statue.setPos(cx + cy * level.getWidth());

@@ -95,6 +95,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Contract;
@@ -268,6 +269,7 @@ public class MobFactory {
 		List<Mob> mobs = new ArrayList<>();
 
 		for(String mobClass:mMobsList.keySet()) {
+			GLog.debug("Spawning: %s",mobClass);
 			mobs.add(mobByName(mobClass));
 		}
 

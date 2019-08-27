@@ -52,14 +52,7 @@ public class Statue extends Mob {
 	public Statue() {
 		exp = 0;
 		setState(MobAi.getStateByClass(Passive.class));
-		
-		do {
-			weapon = (Weapon)level().getTreasury().random(Treasury.Category.WEAPON );;
-		} while (!(weapon instanceof MeleeWeapon) || weapon.level() < 0);
-		
-		weapon.identify();
-		weapon.enchant( Enchantment.random() );
-		
+
 		hp(ht(15 + Dungeon.depth * 5));
 		defenseSkill = 4 + Dungeon.depth;
 
@@ -76,7 +69,7 @@ public class Statue extends Mob {
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( WEAPON, weapon );
+		bundle.put( WEAPON, getWeapon());
 	}
 	
 	@Override
@@ -95,17 +88,17 @@ public class Statue extends Mob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( weapon.MIN, weapon.MAX );
+		return Random.NormalIntRange( getWeapon().MIN, getWeapon().MAX );
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return (int)((9 + Dungeon.depth) * weapon.ACU);
+		return (int)((9 + Dungeon.depth) * getWeapon().ACU);
 	}
 	
 	@Override
 	protected float attackDelay() {
-		return weapon.DLY;
+		return getWeapon().DLY;
 	}
 	
 	@Override
@@ -115,7 +108,7 @@ public class Statue extends Mob {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
-		weapon.proc( this, enemy, damage );
+		getWeapon().proc( this, enemy, damage );
 		return damage;
 	}
 	
@@ -125,7 +118,7 @@ public class Statue extends Mob {
 	
 	@Override
 	public void die(NamedEntityKind cause) {
-		Dungeon.level.drop( weapon, getPos() ).sprite.drop();
+		Dungeon.level.drop(getWeapon(), getPos() ).sprite.drop();
 		super.die( cause );
 	}
 	
@@ -143,16 +136,28 @@ public class Statue extends Mob {
 
 	@Override
 	public String description() {
-		return Utils.format(Game.getVar(R.string.Statue_Desc), weapon.name());
+		return Utils.format(Game.getVar(R.string.Statue_Desc), getWeapon().name());
 	}
 
 	@Override
 	public CharSprite sprite() {
-		if(weapon==null) {
+		if(getWeapon() ==null) {
 			weapon = new Dagger();
 			EventCollector.logException("no weapon");
 		}
 
-		return HeroSpriteDef.createHeroSpriteDef(weapon);
+		return HeroSpriteDef.createHeroSpriteDef(getWeapon());
+	}
+
+	public Weapon getWeapon() {
+		if(weapon==null) {
+			do {
+				weapon = (Weapon)level().getTreasury().random(Treasury.Category.WEAPON );
+			} while (!(weapon instanceof MeleeWeapon) || weapon.level() < 0);
+
+			weapon.identify();
+			weapon.enchant( Enchantment.random() );
+		}
+		return weapon;
 	}
 }

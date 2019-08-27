@@ -21,7 +21,7 @@ public class SpiderEgg extends Mob {
 
 		postpone(20);
 		
-		loot = level().getTreasury().random(Treasury.Category.SEED);
+		loot = Treasury.Category.SEED;
 		lootChance = 0.2f;
 
 		movable = false;
