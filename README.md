@@ -1,7 +1,7 @@
-Remixed Dungeon 
+Remixed Dungeon
 
-[![Build Status (Bitrise)](https://www.bitrise.io/app/e26fee6867be46dc/status.svg?token=6vQccAuFDO9IBcSGhQbwSg)](https://www.bitrise.io/app/e26fee6867be46dc)
-[![codebeat badge](https://codebeat.co/badges/53dde841-192d-4c22-8025-b4036864919f)](https://codebeat.co/projects/github-com-nyrds-pixel-dungeon-remix-master) 
+[![Build Status (Bitrise)](https://lh3.googleusercontent.com/1kJR5snqm5q-HfYXNGEVrKQ-qypPstOZJBfJDT4U7wOPFtd26ULHSVC-cUl8LEykxJ8=s360)](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml)
+[![codebeat badge](https://codebeat.co/badges/53dde841-192d-4c22-8025-b4036864919f)](https://codebeat.co/projects/github-com-nyrds-pixel-dungeon-remix-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2f7c71d126c649df96191e91bcb5d4c1)](https://www.codacy.com/app/NYRDS/pixel-dungeon-remix?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NYRDS/pixel-dungeon-remix&amp;utm_campaign=Badge_Grade)
 =====================
 
