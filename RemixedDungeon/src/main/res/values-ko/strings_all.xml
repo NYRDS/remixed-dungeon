@@ -2168,8 +2168,8 @@
   <string name="Char_Defeat_1">%1$s이(가) %2$s를 죽였다.</string>
   <string name="Char_Defeat_2">%1$s이(가) %2$s를 죽였다.</string>
   <string name="Char_StaDodged_0">피함!</string>
-  <string name="Char_StaDodged_1">피함! </string>
-  <string name="Char_StaDodged_2">피함! </string>
+  <string name="Char_StaDodged_1">피함!</string>
+  <string name="Char_StaDodged_2">피함!</string>
   <string name="Challenges_Names_0">식습관</string>
   <string name="Challenges_Names_1">신념은 나의 갑옷</string>
   <string name="Challenges_Names_2">약물공포증</string>

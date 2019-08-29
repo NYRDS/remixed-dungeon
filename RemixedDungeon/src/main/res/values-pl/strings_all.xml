@@ -2405,7 +2405,7 @@ remix.28.6
   <string name="Dungeon_Tips_19">Żadnej broni przy jego Królewskości!</string>
   <string name="Dungeon_Tips_20">Pixel-Mart. Specjalne oferty dla łowców demonów.</string>
   <string name="Dungeon_Tips_21">Treść jest zapisana w języku demonów.</string>
-  <string name="Dungeon_Tips_22">Treść jest zapisana w w języku demonów.</string>
+  <string name="Dungeon_Tips_22">Treść jest zapisana w języku demonów.</string>
   <string name="Dungeon_Tips_23">Treść jest zapisana w języku demonów.</string>
   <string name="Challenges_Names_0">Na diecie</string>
   <string name="Challenges_Names_1">Ma wiara, mą zbroją</string>
@@ -2551,5 +2551,12 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="Potion_Colors_8">bursztynowa</string>
   <string name="Potion_Colors_9">ciemnobrunatna</string>
   <string name="Potion_Colors_10">indigo</string>
-  <string name="Potion_Colors_11">srebna</string>
+  <string name="Potion_Colors_11">srebny</string>
+  <string name="Welcome_Text_29_1">
+remix.29.1/n
+- modowanie:/n
+-- Modowalna częstotliwość pojawiania się przedmiotów/n
+- możliwość noszenia niestandardowych przedmiotów/n
+- naprawa błędów/n
+</string>
 </resources>

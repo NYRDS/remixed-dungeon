@@ -76,17 +76,17 @@
   <string name="SpiderCharm_Use">使用</string>
   <string name="ChaosCrystal_Name">奇怪的水晶</string>
   <string name="ChaosCrystal_Name_1">混乱水晶</string>
-  <string name="ChaosCrystal_Name_2">混沌晶石</string>
+  <string name="ChaosCrystal_Name_2">混沌晶石·融合体</string>
   <string name="ChaosCrystal_Info">当你握着它时，你能感受到有一股能量流穿过了你的手。</string>
   <string name="ChaosCrystal_Info_1">混乱的能量在这枚水晶中流淌，也许它能派上什么用场。</string>
   <string name="ChaosCrystal_Info_2">棒极了！现在你知道你能把它和你的一件物品融合。可是融合后会发生什么？</string>
   <string name="ChaosCrystal_Use">使用</string>
   <string name="ChaosCrystal_Fuse">融合</string>
-  <string name="ChaosCrystal_Prompt">选择一个地点设置混沌标记</string>
+  <string name="ChaosCrystal_Prompt">选择一个地点释放混沌标记</string>
   <string name="ChaosCrystal_SelectForFuse">选择你要与混沌晶石融合的物品</string>
   <string name="ChaosCrystal_ScrollFused">镌刻在卷轴上的符文吸收了这枚晶石，现在它变成了%s</string>
   <string name="ChaosCrystal_SwordFused">水晶吸收了你的武器，并化成了一把剑形态。</string>
-  <string name="ChaosCrystal_BowFused">水晶吸收了你的弓，并化成了一把弓的形态。</string>
+  <string name="ChaosCrystal_BowFused">水晶吸收了你的弓弩，并化成了一把弓的形态。</string>
   <string name="ChaosCrystal_StaffFused">水晶吸收了你的法杖，并化成了一根法杖的形态。</string>
   <string name="CorpseDust_Buff">嗜血</string>
   <string name="DriedRose_Buff">迷人</string>
@@ -110,7 +110,7 @@
   <string name="Blessed_Info">由正直的牧师祝福</string>
   <string name="deco_candle_name">蜡烛</string>
   <string name="deco_candle_desc">蜡烛散发着烛光</string>
-  <string name="Possess_Name">拥有</string>
+  <string name="Possess_Name">换魂</string>
   <string name="Possess_Info">心灵控制的黑暗力量允许施法者扭曲大多数生物的意志。</string>
   <string name="Possess_PossessionFailed"> %s 的意志太强了</string>
   <string name="Possess_Possessed">%s正在等待您的命令</string>
@@ -159,10 +159,10 @@
   <string name="Item_Info2">啥玩意</string>
   <string name="NecromancerArmor_Info2">穿上这件盔甲，死灵法师可以使用“天灾”能力，这将传播一种魔法瘟疫，它可能感染附近的任何生物，无论是死的还是活的。</string>
   <string name="NecromancerRobe_Info2">获得召唤死灵的能力</string>
-  <string name="Necrotism_Info">天灾</string>
-  <string name="Necrotism_ACSpecial">死亡精灵</string>
+  <string name="Necrotism_Info">坏死</string>
+  <string name="Necrotism_ACSpecial">天灾</string>
   <string name="ResultDescriptions_Necrotism">在%d死亡</string>
-  <string name="Necrotism_Death">你被死亡精灵击杀</string>
+  <string name="Necrotism_Death">你被坏死所杀…</string>
   <string name="Badges_DeathNecrotism">死于瘟疫</string>
   <string name="Spell_SelectACell">选择一个位置</string>
   <string name="WndJournal_Levels">特殊地点</string>
@@ -175,9 +175,9 @@
   <string name="Wand_Fizzles">您的法杖滋滋作響：一定是沒能量了</string>
   <string name="Wand_SelfTarget">你不能以自己為施法目標。</string>
   <string name="Wand_Prompt">選擇要施放魔法的位置</string>
-  <string name="WandOfAmok_Name">狂亂法杖</string>
+  <string name="WandOfAmok_Name">狂乱法杖</string>
   <string name="WandOfAmok_Info">這根法杖施放的紫色光芒會使目標陷入狂亂狀態，並隨機攻擊它附近的生物。</string>
-  <string name="WandOfAmok_Info1">甚麼事都沒有發生</string>
+  <string name="WandOfAmok_Info1">什么事也没有发生</string>
   <string name="WandOfAvalanche_Name">落石法杖</string>
   <string name="WandOfAvalanche_Info">當這根法杖釋放的能量擊中了牆壁 ( 或者其他堅固的障礙物 ) 時，它會造成岩石下塌，對那片區域的生物造成麻痺及傷害。</string>
   <string name="WandOfAvalanche_Info1">您揮動了落石法杖，沒想到周邊的石頭砸死了您...</string>
@@ -205,30 +205,30 @@
   <string name="WandOfMagicMissile_Desinchanted">您抽取了魔彈法杖的強化，並將其轉移到了您的%s上</string>
   <string name="WandOfPoison_Name">劇毒法杖</string>
   <string name="WandOfPoison_Info">這根法杖會對目標灌注致命的劇毒。生物會在劇毒作用下受到持續傷害直到效果結束。劇毒的持續回合會隨著法杖等級而提升。</string>
-  <string name="WandOfPoison_Info1">甚麼事都沒有發生</string>
+  <string name="WandOfPoison_Info1">什么事也没有发生</string>
   <string name="WandOfRegrowth_Name">再生法杖</string>
   <string name="WandOfRegrowth_Info">“枯木逢春，始渡終，終啟始，永生永存！”</string>
-  <string name="WandOfRegrowth_Info1">甚麼事都沒有發生</string>
+  <string name="WandOfRegrowth_Info1">什么事也没有发生</string>
   <string name="WandOfSlowness_Name">緩速法杖</string>
   <string name="WandOfSlowness_Info">這根法杖會使目標行動遲鈍，從而降低其移動力及攻速，直到效果結束。</string>
-  <string name="WandOfSlowness_Info1">甚麼事都沒有發生</string>
+  <string name="WandOfSlowness_Info1">什么事也没有发生</string>
   <string name="WandOfTelekinesis_Name">念動法杖</string>
   <string name="WandOfTelekinesis_Info">這根法杖釋放的魔力波會對路徑上的所有物體造成影響。陷阱會被觸發，高草會被吹倒，門會被打開或者關閉，而怪物則會被擊退。</string>
   <string name="WandOfTelekinesis_YouNowHave">您用念動魔法將%s收入了您的背包</string>
   <string name="WandOfTeleportation_Name">傳送法杖</string>
   <string name="WandOfTeleportation_Info">這根法杖釋放的能量會將目標生物傳送到當前層的隨機位置。</string>
   <string name="WandOfTeleportation_Info1">%1$s將%2$s傳送到了其他地方</string>
-  <string name="WandOfTeleportation_Info2">甚麼事都沒有發生</string>
-  <string name="WndPortal_Title">傳送門</string>
+  <string name="WandOfTeleportation_Info2">什么事也没有发生</string>
+  <string name="WndPortal_Title">传送门</string>
   <string name="WndPortal_Info">此傳送門能帶您回到鎮上，但它看起來不太穩定，可能過了一段時間之後便不會運作。\n您要使用它嗎？</string>
   <string name="WndPortal_Info_Return">此傳送門會帶您回到地牢中。\n您要使用它嗎？</string>
   <string name="WndPortal_Warning_Title">警告！傳送門變得不穩定！</string>
   <string name="WndPortal_Warning_Info">在此樓層中，您並沒有使用過傳送門。離開此層後，您將沒法再使用它！\n您確定要離開嗎？</string>
   <string name="PortalGate_Name">傳送門</string>
-  <string name="PortalGate_Desc">傳送門表面雕有一串奇妙的圖樣。它看上去好像帶您跨越一大段距離，到達遙遠的某處。然而，從側面看的話，能十分明顯地看出那表面比紙更平。</string>
+  <string name="PortalGate_Desc">传送门表面雕有一串奇妙的图样。它看上去好像带你跨越一大段距离，到达遥远的某处。然而，从侧面看的话，能十分明显地看出那表面比纸更平。</string>
   <string name="PortalGate_Desc_Activated">傳送門中散發出某種隱隱發光的物體。門本身不會移動，但漣漪卻一直在中央盪漾著。</string>
-  <string name="PortalGate_Activated">遠古傳送門已經甦醒！</string>
-  <string name="PortalGate_Used">您戰戰兢兢地伸出微顫的手，碰探眼前的傳送門... 可是，門沒有任何反應。</string>
+  <string name="PortalGate_Activated">远古传送门已经苏醒！</string>
+  <string name="PortalGate_Used">你触碰了传送门……门没有任何反应。</string>
   <string name="PortalExit_Desc">此傳送門會引領您到%s的第一層。</string>
   <string name="PortalExit_Desc_SpiderNest">蜘蛛巢穴</string>
   <string name="PortalExit_Desc_Necropolis">死靈都市</string>
@@ -321,10 +321,10 @@ remix.28.5\n
   <string name="GameScene_Welcome">欢迎来到混合地牢第%d层！</string>
   <string name="GameScene_WelcomeBack">欢迎回到混合地牢第%d层！</string>
   <string name="GameScene_NightMode">请提高警觉，地牢在晚上会变得更加危险！</string>
-  <string name="GameScene_Chasm">您的腳步聲在地牢中迴響。</string>
-  <string name="GameScene_Water">您聽到身邊流水潺潺。</string>
-  <string name="GameScene_Grass">空氣中彌漫着濃濃的青草香味。</string>
-  <string name="GameScene_Secrets">詭異的氛圍暗示着這一層隱藏了許多秘密。</string>
+  <string name="GameScene_Chasm">你的脚步在地牢里回响。</string>
+  <string name="GameScene_Water">你听到附近流水潺潺。</string>
+  <string name="GameScene_Grass">空气中弥漫着浓浓的青草香味。</string>
+  <string name="GameScene_Secrets">诡异的氛围暗示着这一层隐藏了许多秘密。</string>
   <string name="Char_Name">怪物</string>
   <string name="Char_Name_Objective">怪物</string>
   <string name="Char_YouMissed">%1$s %2$s了您的攻擊</string>
@@ -359,7 +359,7 @@ remix.28.5\n
   <string name="WndBlacksmith_Reforge">重鑄它們</string>
   <string name="WndCatalogus_Potions">藥水瓶</string>
   <string name="WndCatalogus_Scrolls">卷軸</string>
-  <string name="WndCatalogus_Title">目錄</string>
+  <string name="WndCatalogus_Title">图鉴</string>
   <string name="WndChallenges_Title">挑戰</string>
   <string name="WndChooseWay_Message">您選擇步上哪條路？</string>
   <string name="WndChooseWay_Cancel">我待會再決定</string>
@@ -373,7 +373,7 @@ remix.28.5\n
   <string name="WndGame_Exit">关闭混合地牢</string>
   <string name="WndGame_Return">返回遊戲</string>
   <string name="WndGame_Save">保存</string>
-  <string name="WndGame_Load">讀取</string>
+  <string name="WndGame_Load">读取</string>
   <string name="WndHero_Stats">屬性</string>
   <string name="WndHero_Buffs">状态</string>
   <string name="WndHero_Exp">经验值</string>
@@ -617,7 +617,7 @@ remix.28.5\n
   <string name="StartScene_Load">讀取進度</string>
   <string name="StartScene_New">新遊戲</string>
   <string name="StartScene_Erase">清除進度</string>
-  <string name="StartScene_Depth">层数：%1$d，等级: %2$d</string>
+  <string name="StartScene_Depth">层数：%1$d\n等级: %2$d</string>
   <string name="StartScene_Really">確定要重新開始？</string>
   <string name="StartScene_Warning">您當前的所有進度會被清除。</string>
   <string name="StartScene_Yes">是的，重新開始</string>
@@ -685,7 +685,7 @@ remix.28.5\n
   <string name="PseudoRat_Desc">这只从老鼠尸体中出现的可怕野兽不像你见过的任何动物，排满了尖利牙齿的巨嘴占据了它的大部分身体。</string>
   <string name="ZombieGnoll_Info">豺狼僵尸死而复生了！</string>
   <string name="HeartOfDarkness_Name">黑暗之心</string>
-  <string name="HeartOfDarkness_Info">黑暗的，跳动着的背叛的精神之心。</string>
+  <string name="HeartOfDarkness_Info">黑暗的，跳动着的“背叛的精神”之心脏。</string>
   <string name="HeartOfDarkness_Gender">扶她</string>
   <string name="DarkVeil_Buff">暗黑面纱</string>
   <string name="Badges_Yog_Slain">击杀犹格-德泽瓦</string>
@@ -698,7 +698,7 @@ remix.28.5\n
   <string name="BlackSkullOfMastery_Lich">成为巫妖</string>
   <string name="BlackSkullOfMastery_Necromancer">改造神器</string>
   <string name="BlackSkullOfMastery_BecomeLichDesc">_巫妖_在死灵法术上有着极高的造诣，并且存在于生与死的边界，所以它的战斗水平很差，但不会受到一些生者状态的影响。</string>
-  <string name="BlackSkullOfMastery_RemainHumanDesc">或者，若果你 ＿改造神器＿，你便能正常地使用这件神器。</string>
+  <string name="BlackSkullOfMastery_RemainHumanDesc">或者，若果你 _改造神器_ ，你便能正常地使用这件神器。</string>
   <string name="BlackSkull_Activated">黑色骷髅被唤醒了！</string>
   <string name="BlackSkull_Ressurrect">黑色骷髅召唤了死去的怪物来为你战斗！</string>
   <string name="BlackSkull_Deactivated">黑色骷髅又一次沉睡了…</string>
@@ -735,7 +735,7 @@ remix.28.5\n
   <string name="DarkSacrifice_Resist">你没有能力控制我！</string>
   <string name="DarkSacrifice_Hint">选择你忠诚的仆人来献祭！</string>
   <string name="Exhumation_Name">控灵</string>
-  <string name="Exhumation_Info">打开坟墓本身就是一种险恶的行为，但对于一个掌控死亡的人来说这还不够。这个黑暗法术的使用者有很大的机会（它将随着使用使的法术强度而成长）能控制埋葬在这里的可怜灵魂。</string>
+  <string name="Exhumation_Info">挖坟本身就是一种险恶的行为，但对于一个掌控死亡的人来说这不算什么。这个黑暗法术的使用者有很大的机会（它将随着使用使的法术强度而成长）能控制埋葬在这里的可怜灵魂。</string>
   <string name="Exhumation_NoGrave">这里没有坟墓可以进行施法。</string>
   <string name="Exhumation_Ok">我会服从于你。</string>
   <string name="RaiseDead_Name">回魂</string>
@@ -2231,15 +2231,15 @@ remix.28.5\n
   <string name="town_deco_grave_name">坟墓</string>
   <string name="town_deco_grave_desc">一个标准的坟墓，经受过了风化的考验。</string>
   <string name="town_deco_pillar_name">台柱</string>
-  <string name="town_deco_pillar_desc">在过去时，这根柱子是一个很好的支撑物和装饰品。</string>
+  <string name="town_deco_pillar_desc">曾经这根柱子是一个很好的支撑物和装饰品。</string>
   <string name="town_deco_wood_wall_name">木墙</string>
   <string name="town_deco_wood_wall_desc">很坚固的木墙</string>
   <string name="town_deco_entrance_name">入口</string>
   <string name="town_deco_entrance_desc">这个入口通向地牢的上层。</string>
   <string name="town_deco_exit_name">出口</string>
-  <string name="town_deco_exit_desc">如果你走下去了，等待你的将是未知的。</string>
+  <string name="town_deco_exit_desc">如果你走下去了，等待你的将是未知。</string>
   <string name="town_deco_tile_name">地砖</string>
-  <string name="town_deco_tile_desc">这些地砖被时间磨坏了。</string>
+  <string name="town_deco_tile_desc">这些地砖经过了时间侵蚀。</string>
   <string name="town_deco_snowdrift_name">雪堆</string>
   <string name="town_deco_snowdrift_desc">这是一个相当大的雪堆，显然没有人会来清理它。</string>
   <string name="town_deco_misc_name">无用物品</string>
@@ -2284,7 +2284,7 @@ remix.28.5\n
   <string name="town_deco_scrolls_desc">这个满是灰尘的架子上摆满了各种各样的卷轴和书。</string>
   <string name="town_deco_medicine_name">药水架</string>
   <string name="town_deco_medicine_desc">将烧瓶和其他医疗原料小心地放在这些架子上。</string>
-  <string name="town_deco_wooden_stairs_name">楼梯</string>
+  <string name="town_deco_wooden_stairs_name">台阶</string>
   <string name="town_deco_wooden_stairs_desc">它让你更高一点。</string>
   <string name="town_deco_canvas_name">帆布</string>
   <string name="town_deco_canvas_desc">墙上挂着一块厚布。</string>
@@ -2319,7 +2319,7 @@ remix.28.5\n
     - 游戏机制:\n
     -- 战士特殊技能!\n
     -- 人物的饥饿感降低\n
-    -- 死灵法师拥有法术\n
+    -- 死灵法师拥有新法术\n
     -- 盗贼斗篷能力\n
     -- 新徽章\n
     - Mod调整:\n
@@ -2352,18 +2352,18 @@ remix.28.5\n
   <string name="Ring_Gems_9">藍寶石</string>
   <string name="Ring_Gems_10">石英</string>
   <string name="Ring_Gems_11">瑪瑙</string>
-  <string name="Wand_Wood_Types_0">\"冬青\"</string>
-  <string name="Wand_Wood_Types_1">\"紅豆杉\"</string>
-  <string name="Wand_Wood_Types_2">\"烏木\"</string>
-  <string name="Wand_Wood_Types_3">\"櫻桃\"</string>
-  <string name="Wand_Wood_Types_4">\"柚木\"</string>
-  <string name="Wand_Wood_Types_5">\"花楸\"</string>
-  <string name="Wand_Wood_Types_6">\"柳\"</string>
-  <string name="Wand_Wood_Types_7">\"桃花心木\"</string>
-  <string name="Wand_Wood_Types_8">\"竹\"</string>
-  <string name="Wand_Wood_Types_9">\"紫心\"</string>
-  <string name="Wand_Wood_Types_10">\"橡木\"</string>
-  <string name="Wand_Wood_Types_11">\"樺木\"</string>
+  <string name="Wand_Wood_Types_0">"冬青"</string>
+  <string name="Wand_Wood_Types_1">"紅豆杉"</string>
+  <string name="Wand_Wood_Types_2">"烏木"</string>
+  <string name="Wand_Wood_Types_3">"櫻桃"</string>
+  <string name="Wand_Wood_Types_4">"柚木"</string>
+  <string name="Wand_Wood_Types_5">"花楸"</string>
+  <string name="Wand_Wood_Types_6">"柳"</string>
+  <string name="Wand_Wood_Types_7">"桃花心木"</string>
+  <string name="Wand_Wood_Types_8">"竹"</string>
+  <string name="Wand_Wood_Types_9">"紫心"</string>
+  <string name="Wand_Wood_Types_10">"橡木"</string>
+  <string name="Wand_Wood_Types_11">"樺木"</string>
   <string name="WandOfFlock_SheepBaa_0">咩！</string>
   <string name="WandOfFlock_SheepBaa_1">咩？</string>
   <string name="WandOfFlock_SheepBaa_2">咩。</string>
@@ -2564,5 +2564,12 @@ remix.28.5\n
   <string name="Potion_Colors_8">琥珀</string>
   <string name="Potion_Colors_9">深褐</string>
   <string name="Potion_Colors_10">靛蓝</string>
-  <string name="Potion_Colors_11">银灰</string>
+  <string name="Potion_Colors_11">白銀</string>
+  <string name="Welcome_Text_29_1">
+    remix.29.1\n
+    - 模组修改:\n
+    -- 修改了模组一些项的生成率\n
+    -- 穿戴可自定义\n
+    - 修复了一些错误\n
+    </string>
 </resources>

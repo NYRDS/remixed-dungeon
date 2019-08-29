@@ -2344,9 +2344,9 @@ Parede
   <string name="Char_Hit_0">%1$s bateu em %2$s</string>
   <string name="Char_Hit_1">%1$s bateu em %2$s</string>
   <string name="Char_Hit_2">%1$s bateu em %2$s</string>
-  <string name="Char_Kill_0">%s matou você...</string>
-  <string name="Char_Kill_1">%s matou você...</string>
-  <string name="Char_Kill_2">%s matou você...</string>
+  <string name="Char_Kill_0">%s te matou...</string>
+  <string name="Char_Kill_1">%s te matou...</string>
+  <string name="Char_Kill_2">%s te matou...</string>
   <string name="Char_Defeat_0">%1$s derrotou %2$s</string>
   <string name="Char_Defeat_1">%1$s derrotou %2$s</string>
   <string name="Char_Defeat_2">%1$s derrotou %2$s</string>
@@ -2446,9 +2446,9 @@ Parede
   <string name="Piercing_Name_0">%s Perfurante</string>
   <string name="Piercing_Name_1">%s Perfurante</string>
   <string name="Piercing_Name_2">%s Perfurante</string>
-  <string name="Poison_Name_0">%s Venenoso</string>
+  <string name="Poison_Name_0">%s Venenosa</string>
   <string name="Poison_Name_1">%s Venenosa</string>
-  <string name="Poison_Name_2">%s Venenoso(a)</string>
+  <string name="Poison_Name_2">%s Venenosa</string>
   <string name="Slow_Name_0">%s Arrepiante</string>
   <string name="Slow_Name_1">%s Arrepiante</string>
   <string name="Slow_Name_2">%s Arrepiante</string>
