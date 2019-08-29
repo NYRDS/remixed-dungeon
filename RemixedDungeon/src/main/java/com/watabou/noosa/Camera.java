@@ -227,20 +227,21 @@ public class Camera extends Gizmo {
 	}
 	
 	protected void updateMatrix() {
-
-	/*	Matrix.setIdentity( matrix );
+/*
+		Matrix.setIdentity( matrix );
 		Matrix.translate( matrix, -1, +1 );
-		Matrix.scale( matrix, 2f / G.width, -2f / G.height );
-		Matrix.translate( matrix, x, y );
 		Matrix.scale( matrix, zoom, zoom );
-		Matrix.translate( matrix, scroll.x, scroll.y );*/
-		
+
+		Matrix.translate( matrix, x, y);
+		Matrix.scale( matrix, invW2, -invH2 );
+		Matrix.translate( matrix, (scroll.x + shakeX), (scroll.y + shakeY) );
+*/
 		matrix[0] = +zoom * invW2;
 		matrix[5] = -zoom * invH2;
-		
+
 		matrix[12] = -1 + x * invW2 - (scroll.x + shakeX) * matrix[0];
 		matrix[13] = +1 - y * invH2 - (scroll.y + shakeY) * matrix[5];
-		
+
 	}
 	
 	public void shake( float magnitude, float duration ) {

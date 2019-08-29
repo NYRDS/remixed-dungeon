@@ -123,6 +123,7 @@ public class NoosaScript extends Script {
 		}
 		if (camera != lastCamera) {
 			lastCamera = camera;
+
 			uCamera.valueM4( camera.matrix );
 			
 			GLES20.glScissor( 

@@ -272,10 +272,5 @@ public enum Rankings {
 		}
 	}
 
-	private static final Comparator<Record> scoreComparator = new Comparator<Rankings.Record>() {
-		@Override
-		public int compare( Record lhs, Record rhs ) {
-			return (int)Math.signum( rhs.score - lhs.score );
-		}
-	};
+	private static final Comparator<Record> scoreComparator = (lhs, rhs) -> (int)Math.signum( rhs.score - lhs.score );
 }
