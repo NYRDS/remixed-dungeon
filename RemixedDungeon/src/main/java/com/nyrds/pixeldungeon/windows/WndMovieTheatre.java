@@ -92,7 +92,8 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 					if(needReward) {
 						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
 						ServiceManNPC.reward();
-						EventCollector.logCountedEvent("ad_reward5", 6);
+						EventCollector.logCountedEvent("ad_reward5",  6);
+						EventCollector.logCountedEvent("ad_reward10", 11);
 						needReward = false;
 					} else {
 						serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));

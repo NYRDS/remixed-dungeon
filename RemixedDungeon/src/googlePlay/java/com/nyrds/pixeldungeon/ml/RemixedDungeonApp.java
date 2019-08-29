@@ -16,15 +16,9 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
-
 import io.fabric.sdk.android.Fabric;
 import io.humanteq.hqsdkapps.HqmCollectInstalledApps;
 import io.humanteq.hqsdkcore.HQSdk;
-import io.humanteq.hqsdkcore.api.interfaces.HqmCallback;
-import io.humanteq.hqsdkcore.models.GroupResponse;
 
 public class RemixedDungeonApp extends MultiDexApplication {
 
@@ -76,7 +70,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
             if(BuildConfig.DEBUG) {
                 Log.d("Classes", ignore.getMessage());
             }
-
         }
     }
 
@@ -103,7 +96,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     private void hqClear() {
         if(!Preferences.INSTANCE.getBoolean("job_reset",false)) {
-            HQSdk.clearJobs(getContext().getApplicationContext());
             Preferences.INSTANCE.put("job_reset",true);
         }
     }
@@ -112,29 +104,8 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
         try {
             if (HQSdk.getInstance() != null) {
-
                 HqmCollectInstalledApps.INSTANCE.start(getContext());
                 HQSdk.startSystemEventsTracking(getContext());
-
-                HQSdk.getUserGroups(new HqmCallback<List<GroupResponse>>() {
-
-                    @Override
-                    public void onSuccess(List<GroupResponse> groupResponses) {
-                        if(!Preferences.INSTANCE.getBoolean("hq_groups",false)) {
-                            if (!groupResponses.isEmpty()) {
-                                EventCollector.logEvent("hq_non_empty_groups");
-                                Preferences.INSTANCE.put("hq_groups",true);
-                            } else {
-                                EventCollector.logEvent("hq_empty_groups");
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onError(@NotNull Throwable throwable) {
-                        EventCollector.logException(new HqSdkError(throwable));
-                    }
-                });
             } else {
                 EventCollector.logException(new HqSdkError(new Exception("HQM not initialized")));
             }
@@ -142,29 +113,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
             EventCollector.logException(new HqSdkCrash(hqSdkCrash));
         }
 
-    }
-
-    static public int getExperimentSegment(String key, int vars) {
-
-        if (!HQSdk.isInitialized()) {
-            EventCollector.logEvent("experiments", key, "hqApi not ready");
-            return -1;
-        }
-
-        try {
-            Long hqsdkRet = HQSdk.getTestGroup(key, vars);
-            if (hqsdkRet != null) {
-                int groupId = hqsdkRet.intValue();
-                EventCollector.logEvent("experiments", key, Integer.toString(groupId));
-                return groupId;
-            }
-        } catch (Throwable hqSdkCrash) {
-            EventCollector.logEvent("experiments", key, "hqApi crash");
-            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
-        }
-        EventCollector.logEvent("experiments", key, Integer.toString(-1));
-
-        return -1;
     }
 
     static public Context getContext() {

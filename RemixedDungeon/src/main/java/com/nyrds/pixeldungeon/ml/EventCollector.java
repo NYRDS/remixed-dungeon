@@ -60,6 +60,16 @@ public class EventCollector {
 		}
 	}
 
+	static public void logEvent(String event, double value) {
+		if (!mDisabled) {
+			Crashlytics.log(event);
+
+			Bundle params = new Bundle();
+			params.putDouble("value", value);
+			mFirebaseAnalytics.logEvent(event, params);
+		}
+	}
+
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
 			Crashlytics.log(category+":"+event);

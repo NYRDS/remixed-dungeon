@@ -7,7 +7,6 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
@@ -307,12 +306,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                 SaveUtils.loadGame(slot, Dungeon.hero.getHeroClass());
             } else {
                 if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
-                    int group = RemixedDungeonApp.getExperimentSegment(EventCollector.SAVE_ADS_EXPERIMENT, 2);
-                    if (group <= 0) {
-                        return;
-                    }
 
-                    if (Math.random() < 0.2) {
+                    if (Math.random() < 0.1) {
                         Game.pushUiTask(() -> {
                             Iap iap = Game.instance().iap;
                             if (iap != null && iap.isReady() || BuildConfig.DEBUG) {
@@ -323,6 +318,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                             }
                         });
                     }
+
                 }
             }
 

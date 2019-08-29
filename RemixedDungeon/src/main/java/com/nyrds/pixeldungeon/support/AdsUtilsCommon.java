@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import androidx.annotation.MainThread;
 
+import com.appodeal.ads.Appodeal;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
@@ -56,6 +57,8 @@ class AdsUtilsCommon {
     private static void tryNextRewardVideo(final InterstitialPoint retTo) {
         final IRewardVideoProvider chosenProvider = choseLessFailedFrom(AdsUtils.rewardVideoFails, Integer.MAX_VALUE);
 
+        AppodealAdapter.logEcpm(Appodeal.REWARDED_VIDEO, chosenProvider instanceof AppodealInterstitialProvider);
+
         if(chosenProvider!=null) {
             Game.instance().runOnUiThread(() -> chosenProvider.showRewardVideo(retTo));
         } else {
@@ -66,6 +69,8 @@ class AdsUtilsCommon {
     private static void tryNextInterstitial(final InterstitialPoint retTo) {
         final IInterstitialProvider chosenProvider = choseLessFailedFrom(AdsUtils.interstitialFails, Integer.MAX_VALUE);
 
+        AppodealAdapter.logEcpm(Appodeal.INTERSTITIAL, chosenProvider instanceof AppodealInterstitialProvider);
+
         if(chosenProvider!=null) {
             Game.instance().runOnUiThread(() -> chosenProvider.showInterstitial(retTo));
         } else {
@@ -75,6 +80,8 @@ class AdsUtilsCommon {
 
     static private void tryNextBanner() {
         final IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
+
+        AppodealAdapter.logEcpm(Appodeal.BANNER, chosenProvider instanceof AppodealInterstitialProvider);
 
         if(chosenProvider!=null) {
             Game.instance().runOnUiThread(chosenProvider::displayBanner);

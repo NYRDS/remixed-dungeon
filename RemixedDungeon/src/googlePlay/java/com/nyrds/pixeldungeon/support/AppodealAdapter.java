@@ -7,6 +7,7 @@ import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.AppodealNetworks;
 import com.appodeal.ads.utils.Log;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -21,6 +22,13 @@ public class AppodealAdapter {
 
     public static boolean usable() {
         return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
+    }
+
+    public static void logEcpm(int adType, boolean spared) {
+        if(usable() && Appodeal.isInitialized(Appodeal.BANNER)) {
+
+            EventCollector.logEvent("Appodeal_ecpm_"+adType+"_"+spared, Appodeal.getPredictedEcpm(adType));
+        }
     }
 
     public static void init() {

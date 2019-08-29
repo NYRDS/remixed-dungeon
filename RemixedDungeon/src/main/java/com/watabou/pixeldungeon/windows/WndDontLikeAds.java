@@ -6,7 +6,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.ui.IconButton;
 import com.watabou.pixeldungeon.ui.Icons;
-import com.watabou.pixeldungeon.ui.RedButton;
 
 class WndDontLikeAds extends WndQuest {
 
@@ -27,7 +26,7 @@ class WndDontLikeAds extends WndQuest {
         add(btnDonate);
 
         y=btnDonate.bottom();
-
+/*
         RedButton btnNo = new RedButton(R.string.WndDontLikeAds_NotThisTime){
             @Override
             protected void onClick() {
@@ -39,14 +38,13 @@ class WndDontLikeAds extends WndQuest {
         btnNo.setPos((width - btnNo.width()) / 2, y + GAP*2);
 
         add(btnNo);
-
-        resize(width, (int) btnNo.bottom()+GAP);
+*/
+        resize(width, (int) btnDonate.bottom()+GAP);
     }
 
     @Override
     public void hide() {
         super.hide();
         EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT,"DialogClosed");
-
     }
 }
