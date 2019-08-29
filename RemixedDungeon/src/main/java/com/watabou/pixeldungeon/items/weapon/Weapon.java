@@ -75,8 +75,8 @@ public class Weapon extends KindOfWeapon {
 	private Enchantment enchantment;
 	
 	public void usedForHit() {
-		if (!levelKnown && --hitsToKnow <= 0) {
-			levelKnown = true;
+		if (!isLevelKnown() && --hitsToKnow <= 0) {
+			setLevelKnown(true);
 			GLog.i(Game.getVar(R.string.Weapon_Identify), name(), toString());
 			Badges.validateItemLevelAcquired(this);
 		}
@@ -187,7 +187,7 @@ public class Weapon extends KindOfWeapon {
 	@NotNull
     @Override
 	public String toString() {
-		return levelKnown ? Utils.format("%s: %d", super.toString(), STR ) : super.toString();
+		return isLevelKnown() ? Utils.format("%s: %d", super.toString(), STR ) : super.toString();
 	}
 	
 	@Override

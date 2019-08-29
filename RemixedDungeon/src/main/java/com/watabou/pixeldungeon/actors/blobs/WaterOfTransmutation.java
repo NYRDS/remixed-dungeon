@@ -148,7 +148,7 @@ public class WaterOfTransmutation extends WellWater {
 				n.enchant( Enchantment.random() );
 			}
 			
-			n.levelKnown = w.levelKnown;
+			n.setLevelKnown(w.isLevelKnown());
 			n.cursedKnown = w.cursedKnown;
 			n.cursed = w.cursed;
 			
@@ -175,7 +175,7 @@ public class WaterOfTransmutation extends WellWater {
 			n.degrade( -level );
 		}
 		
-		n.levelKnown = r.levelKnown;
+		n.setLevelKnown(r.isLevelKnown());
 		n.cursedKnown = r.cursedKnown;
 		n.cursed = r.cursed;
 		
@@ -192,7 +192,7 @@ public class WaterOfTransmutation extends WellWater {
 		n.level(0);
 		n.upgrade( w.level() );
 		
-		n.levelKnown = w.levelKnown;
+		n.setLevelKnown(w.isLevelKnown());
 		n.cursedKnown = w.cursedKnown;
 		n.cursed = w.cursed;
 		

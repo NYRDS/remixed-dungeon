@@ -94,12 +94,12 @@ public class MeleeWeapon extends Weapon {
 		String typical  = Game.getVar(R.string.MeleeWeapon_Info1b);
 		String upgraded = Game.getVar(R.string.MeleeWeapon_Info1c);
 		String degraded = Game.getVar(R.string.MeleeWeapon_Info1d);
-		String quality = levelKnown && level() != 0 ? (level() > 0 ? upgraded : degraded) : typical;
+		String quality = isLevelKnown() && level() != 0 ? (level() > 0 ? upgraded : degraded) : typical;
 		info.append(p);
 		info.append(Utils.capitalize(Utils.format(Game.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier)));
 		info.append(" ");
 		
-		if (levelKnown) {
+		if (isLevelKnown()) {
 			info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info2a), (MIN + (MAX - MIN) / 2)));
 		} else {
 			info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
@@ -144,7 +144,7 @@ public class MeleeWeapon extends Weapon {
 			info.append(Game.getVar(R.string.MeleeWeapon_Info5));
 		}
 
-		if (levelKnown && Dungeon.hero.belongings.backpack.items.contains( this )) {
+		if (isLevelKnown() && Dungeon.hero.belongings.backpack.items.contains( this )) {
 			info.append(p);
 			if (STR > Dungeon.hero.effectiveSTR()) {
 				info.append(Utils.format(R.string.MeleeWeapon_Info6a, name));
@@ -173,22 +173,10 @@ public class MeleeWeapon extends Weapon {
 		if (getEnchantment() != null) {
 			price *= 1.5;
 		}
-		if (cursed && cursedKnown) {
-			price /= 2;
-		}
-		if (levelKnown) {
-			if (level() > 0) {
-				price *= (level() + 1);
-			} else if (level() < 0) {
-				price /= (1 - level());
-			}
-		}
-		if (price < 1) {
-			price = 1;
-		}
+		price = adjustPrice(price);
 		return price;
 	}
-	
+
 	@Override
 	public Item random() {
 		super.random();

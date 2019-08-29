@@ -97,12 +97,13 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	protected String imageFile;
 
 	public  boolean stackable = false;
+
 	private int     quantity  = Scrambler.scramble(1);
 
 	private int     level      = Scrambler.scramble(0);
 
 	@Packable
-	public  boolean levelKnown = false;
+	private boolean levelKnown = false;
 
 	@Packable
 	public boolean cursed;
@@ -332,7 +333,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public int visiblyUpgraded() {
-		return levelKnown ? level() : 0;
+		return isLevelKnown() ? level() : 0;
 	}
 
 	public boolean isUpgradable() {
@@ -340,7 +341,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public boolean isIdentified() {
-		return levelKnown && cursedKnown;
+		return isLevelKnown() && cursedKnown;
 	}
 
 	public boolean isEquipped(Char chr) {
@@ -367,7 +368,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public Item identify() {
 
-		levelKnown = true;
+		setLevelKnown(true);
 		cursedKnown = true;
 
 		Library.identify(Library.ITEM,getClassName());
@@ -379,7 +380,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	@Override
 	public String toString() {
 
-		if (levelKnown && level() != 0) {
+		if (isLevelKnown() && level() != 0) {
 			if (quantity() > 1) {
 				return Utils.format(TXT_TO_STRING_LVL_X, name(), level(), quantity());
 			} else {
@@ -430,6 +431,23 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public int price() {
 		return 0;
+	}
+
+	protected int adjustPrice(int price) {
+		if (cursed && cursedKnown) {
+			price /= 2;
+		}
+		if (isLevelKnown()) {
+			if (level() > 0) {
+				price *= (level() + 1);
+			} else if (level() < 0) {
+				price /= (1 - level());
+			}
+		}
+		if (price < 1) {
+			price = 1;
+		}
+		return price;
 	}
 
 	public Item random() {
@@ -709,5 +727,13 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			id = EntityIdSource.getNextId();
 		}
 		return id;
+	}
+
+	public boolean isLevelKnown() {
+		return levelKnown;
+	}
+
+	public void setLevelKnown(boolean levelKnown) {
+		this.levelKnown = levelKnown;
 	}
 }

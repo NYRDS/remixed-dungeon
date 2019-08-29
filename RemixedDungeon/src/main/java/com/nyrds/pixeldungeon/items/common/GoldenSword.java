@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.items.common;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
@@ -31,7 +30,7 @@ public class GoldenSword extends SpecialWeapon {
 		if (Random.Int(10) == 1){
 			int price = this.price() / 10;
 			if ( price > 500) { price = 500;}
-			Dungeon.level.drop(new Gold(price), defender.getPos());
+			defender.level().drop(new Gold(price), defender.getPos());
 		}
 		usedForHit();
 	}

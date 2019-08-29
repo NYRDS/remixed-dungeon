@@ -31,7 +31,7 @@ abstract public class ClassArmor extends Armor {
 	private int specialCostModifier = 3;
 	
 	{
-		levelKnown = true;
+		setLevelKnown(true);
 		cursedKnown = true;
 		setDefaultAction(special());
 	}

@@ -247,9 +247,9 @@ public class WndTradeItem extends Window {
 		add( titlebar );
 		
 		// Upgraded / degraded
-		if (item.levelKnown && item.level() > 0) {
+		if (item.isLevelKnown() && item.level() > 0) {
 			titlebar.color( ItemSlot.UPGRADED );	
-		} else if (item.levelKnown && item.level() < 0) {
+		} else if (item.isLevelKnown() && item.level() < 0) {
 			titlebar.color( ItemSlot.DEGRADED );	
 		}
 		

@@ -180,7 +180,7 @@ public class Ring extends Artifact implements UnknownItem{
 		if (cursed && cursedKnown) {
 			price /= 2;
 		}
-		if (levelKnown) {
+		if (isLevelKnown()) {
 			if (level() > 0) {
 				price *= (level() + 1);
 			} else if (level() < 0) {

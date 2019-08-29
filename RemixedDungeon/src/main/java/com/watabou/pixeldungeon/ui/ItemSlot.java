@@ -169,7 +169,7 @@ public class ItemSlot extends Button {
         boolean isWeapon = item instanceof Weapon;
         if ((isArmor || isWeapon) && !inQuickSlot) {
 
-            if (item.levelKnown || (isWeapon && !(item instanceof MeleeWeapon))) {
+            if (item.isLevelKnown() || (isWeapon && !(item instanceof MeleeWeapon))) {
 
                 int str = isArmor ? ((Armor) item).STR : ((Weapon) item).STR;
                 topRight.text(Utils.format(TXT_STRENGTH, str));

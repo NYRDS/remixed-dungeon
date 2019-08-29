@@ -263,7 +263,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 				|| Dungeon.hero.getSubClass() == HeroSubClass.SHAMAN) {
 			damageRoll(Dungeon.hero);
 			info.append("\n\n");
-			if (levelKnown) {
+			if (isLevelKnown()) {
 				info.append(Utils.format(R.string.Wand_Damage, MIN + (MAX - MIN) / 2));
 			} else {
 				info.append(Game.getVar(R.string.Wand_Weapon));
@@ -279,7 +279,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	@Override
 	public String status() {
-		if (levelKnown) {
+		if (isLevelKnown()) {
 			return (curChargeKnown ? curCharges() : "?") + "/" + maxCharges();
 		} else {
 			return Utils.EMPTY_STRING;
@@ -359,7 +359,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		if (cursed && cursedKnown) {
 			price /= 2;
 		}
-		if (levelKnown) {
+		if (isLevelKnown()) {
 			if (level() > 0) {
 				price *= (level() + 1);
 			} else if (level() < 0) {
@@ -411,7 +411,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 			getUser().spendAndNext(TIME_TO_ZAP);
 			GLog.w(Game.getVar(R.string.Wand_Fizzles));
-			levelKnown = true;
+			setLevelKnown(true);
 
 			if (Random.Int(5) == 0) {
 				identify();

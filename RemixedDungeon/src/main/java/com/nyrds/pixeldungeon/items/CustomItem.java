@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.items;
 
+import androidx.annotation.Keep;
+
 import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
@@ -14,8 +16,6 @@ import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
-
-import androidx.annotation.Keep;
 
 /**
  * Created by mike on 26.05.2018.
@@ -159,6 +159,11 @@ public class CustomItem extends Item {
 
     @Override
     public int price() {
-        return price * quantity();
+        return adjustPrice(price * quantity());
+    }
+
+    @Override
+    public boolean isLevelKnown() {
+        return identified;
     }
 }

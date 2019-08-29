@@ -397,7 +397,7 @@ public class Badges {
 		// 1) When an item is obtained (Item.collect)
 		// 2) When an item is upgraded (ScrollOfUpgrade, ScrollOfWeaponUpgrade, ShortSword, WandOfMagicMissile)
 		// 3) When an item is identified
-		if (!item.levelKnown) {
+		if (!item.isLevelKnown()) {
 			return;
 		}
 

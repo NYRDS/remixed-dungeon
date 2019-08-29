@@ -191,9 +191,9 @@ public class Armor extends EquipableItem {
 			damage = glyph.proc( this, attacker, defender, damage );
 		}
 		
-		if (!levelKnown) {
+		if (!isLevelKnown()) {
 			if (--hitsToKnow <= 0) {
-				levelKnown = true;
+				setLevelKnown(true);
 				GLog.w( Game.getVar(R.string.Armor_Identify), name(), toString() );
 				Badges.validateItemLevelAcquired( this );
 			}
@@ -205,7 +205,7 @@ public class Armor extends EquipableItem {
 	@NotNull
     @Override
 	public String toString() {
-		return levelKnown ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), STR ) : super.toString();
+		return isLevelKnown() ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), STR ) : super.toString();
 	}
 	
 	@Override
@@ -221,7 +221,7 @@ public class Armor extends EquipableItem {
 		
 		String name = name();
 		
-		if (levelKnown) {
+		if (isLevelKnown()) {
 			info.append(p);
 			info.append(Utils.capitalize(Utils.format(Game.getVar(R.string.Armor_Info1), name, Math.max( DR, 0 ))));
 			
@@ -295,19 +295,9 @@ public class Armor extends EquipableItem {
 		if (glyph != null) {
 			price *= 1.5;
 		}
-		if (cursed && cursedKnown) {
-			price /= 2;
-		}
-		if (levelKnown) {
-			if (level() > 0) {
-				price *= (level() + 1);
-			} else if (level() < 0) {
-				price /= (1 - level());
-			}
-		}
-		if (price < 1) {
-			price = 1;
-		}
+
+		price = adjustPrice(price);
+
 		return price;
 	}
 	

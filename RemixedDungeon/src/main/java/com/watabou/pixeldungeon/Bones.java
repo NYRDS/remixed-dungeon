@@ -115,7 +115,7 @@ public class Bones {
 						if (lvl < item.level()) {
 							item.degrade( item.level() - lvl );
 						}
-						item.levelKnown = false;
+						item.setLevelKnown(false);
 					}
 				}
 				

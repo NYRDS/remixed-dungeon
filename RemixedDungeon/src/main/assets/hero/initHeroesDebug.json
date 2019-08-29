@@ -11,7 +11,8 @@
       },
       {
         "kind": "RawFish",
-        "quantity": 100
+        "quantity": 100,
+        "level": 10
       },
       {
         "kind": "Firebloom.Seed",
