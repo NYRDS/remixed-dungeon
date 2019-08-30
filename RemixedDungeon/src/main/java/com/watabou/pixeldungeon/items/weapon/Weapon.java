@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -71,7 +72,8 @@ public class Weapon extends KindOfWeapon {
 	public Imbue imbue = Imbue.NONE;
 	
 	private int hitsToKnow = 20;
-	
+
+	@Packable
 	private Enchantment enchantment;
 	
 	public void usedForHit() {
@@ -98,14 +100,12 @@ public class Weapon extends KindOfWeapon {
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
-		bundle.put( ENCHANTMENT, getEnchantment() );
 		bundle.put( IMBUE, imbue );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		enchantment = (Enchantment)bundle.get( ENCHANTMENT );
 		imbue = bundle.getEnum( IMBUE, Imbue.class );
 	}
 	

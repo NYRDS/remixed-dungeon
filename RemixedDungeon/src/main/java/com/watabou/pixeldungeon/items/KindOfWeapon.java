@@ -17,19 +17,16 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.ui.QuickSlot;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
 public class KindOfWeapon extends EquipableItem {
 
-	protected static final float TIME_TO_EQUIP = 1f;
+	public static final float TIME_TO_EQUIP = 1f;
 
 	public static final String BASIC_ATTACK = "none";
 	public static final String SWORD_ATTACK = "sword";
@@ -66,30 +63,9 @@ public class KindOfWeapon extends EquipableItem {
 	public boolean doEquip( Hero hero ) {
 		
 		detachAll( hero.belongings.backpack );
-		
-		if (hero.belongings.weapon == null || hero.belongings.weapon.doUnequip( hero, true )) {
-			
-			hero.belongings.weapon = this;
-			activate( hero );
-			
-			QuickSlot.refresh();
 
-			hero.updateSprite();
+		return hero.belongings.equip(this, Belongings.Slot.WEAPON);
 
-			cursedKnown = true;
-			if (cursed) {
-				equipCursed( hero );
-				GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name() );
-			}
-			
-			hero.spendAndNext( TIME_TO_EQUIP );
-			return true;
-			
-		} else {
-			
-			collect( hero.belongings.backpack );
-			return false;
-		}
 	}
 	
 	@Override

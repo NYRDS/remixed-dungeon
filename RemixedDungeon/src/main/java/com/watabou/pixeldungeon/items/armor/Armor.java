@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -25,6 +26,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
@@ -63,7 +65,8 @@ public class Armor extends EquipableItem {
 	public int DR;
 
 	private int hitsToKnow = 10;
-	
+
+	@Packable
 	public Glyph glyph;
 	
 	public Armor( int tier ) {
@@ -79,19 +82,7 @@ public class Armor extends EquipableItem {
 	}
 	
 	private static final String GLYPH	= "glyph";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( GLYPH, glyph );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		inscribe((Glyph)bundle.get( GLYPH ));
-	}
-	
+
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
@@ -103,32 +94,12 @@ public class Armor extends EquipableItem {
 	public boolean doEquip( Hero hero ) {
 		
 		detach( hero.belongings.backpack );
-		
-		if (hero.belongings.armor == null || hero.belongings.armor.doUnequip( hero, true, false )) {
-			
-			hero.belongings.armor = this;
-			
-			cursedKnown = true;
-			if (cursed) {
-				equipCursed( hero );
-				GLog.n( Game.getVar(R.string.Armor_EquipCursed), toString() );
-			}
-			
-			hero.updateSprite();
-			
-			hero.spendAndNext( 2 * time2equip( hero ) );
-			return true;
-			
-		} else {
-			
-			collect( hero.belongings.backpack );
-			return false;
-			
-		}
+
+		return hero.belongings.equip(this, Belongings.Slot.ARMOR);
 	}
 	
 	@Override
-	protected float time2equip(Char hero ) {
+	public float time2equip(Char hero) {
 		return hero.speed();
 	}
 	

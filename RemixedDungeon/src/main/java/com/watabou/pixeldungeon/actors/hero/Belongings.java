@@ -20,8 +20,11 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.generated.BundleHelper;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -36,11 +39,13 @@ import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.ui.QuickSlot;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
@@ -56,6 +61,12 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	private Char owner;
 	
 	public Bag backpack;	
+
+	public enum Slot{
+		WEAPON,
+		ARMOR,
+		ARTIFACT
+	}
 
 	@Packable
 	public KindOfWeapon weapon = null;
@@ -394,8 +405,88 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return true;
 	}
 	
+	@Contract(pure = true)
 	public static int getBackpackSize(){
 		return BACKPACK_SIZE;
+	}
+
+	public boolean equip(Item item, Slot slot) {
+
+		if(slot==Slot.WEAPON) {
+			if (weapon == null || weapon.doUnequip( owner, true )) {
+
+				weapon = (KindOfWeapon) item;
+				weapon.activate( owner );
+
+				QuickSlot.refresh();
+
+				owner.updateSprite();
+
+				weapon.cursedKnown = true;
+				if (weapon.cursed) {
+					ItemUtils.equipCursed( owner );
+					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), weapon.name() );
+				}
+
+				owner.spendAndNext(KindOfWeapon.TIME_TO_EQUIP);
+				return true;
+			} else {
+				item.collect( backpack );
+				return false;
+			}
+		}
+
+		if(slot==Slot.ARMOR) {
+			if (armor == null || armor.doUnequip( owner, true, false )) {
+
+				armor = (Armor) item;
+
+				armor.cursedKnown = true;
+				if (armor.cursed) {
+					ItemUtils.equipCursed( owner );
+					GLog.n( Game.getVar(R.string.Armor_EquipCursed), toString() );
+				}
+
+				owner.updateSprite();
+
+				owner.spendAndNext( 2 * armor.time2equip( owner ) );
+				return true;
+			} else {
+				armor.collect( backpack );
+				return false;
+			}
+		}
+
+		if(slot==Slot.ARTIFACT) {
+			if (ring1 != null && ring2 != null) {
+
+				GLog.w(Game.getVar(R.string.Artifact_Limit));
+				return false;
+
+			} else {
+
+				if (ring1 == null) {
+					ring1 = (Artifact) item;
+				} else {
+					ring2 = (Artifact) item;
+				}
+
+				item.detach(backpack);
+
+				((Artifact) item).activate(owner);
+
+				item.cursedKnown = true;
+				if (item.cursed) {
+					ItemUtils.equipCursed(owner);
+					GLog.n(Utils.format(Game.getVar(R.string.Ring_Info2), item.name()));
+				}
+				owner.spendAndNext(Artifact.TIME_TO_EQUIP);
+				return true;
+			}
+
+		}
+
+		return false;
 	}
 
 }

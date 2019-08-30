@@ -1,13 +1,10 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -15,7 +12,7 @@ import java.util.ArrayList;
 
 public class Artifact extends EquipableItem {
 
-	private static final float TIME_TO_EQUIP = 1f;
+	public static final float TIME_TO_EQUIP = 1f;
 
 	@Nullable
 	protected ArtifactBuff buff;
@@ -24,31 +21,7 @@ public class Artifact extends EquipableItem {
 	public boolean doEquip(Hero hero) {
 		setUser(hero);
 
-		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null) {
-
-			GLog.w(Game.getVar(R.string.Artifact_Limit));
-			return false;
-
-		} else {
-
-			if (hero.belongings.ring1 == null) {
-				hero.belongings.ring1 = this;
-			} else {
-				hero.belongings.ring2 = this;
-			}
-
-			detach(hero.belongings.backpack);
-
-			activate(hero);
-
-			cursedKnown = true;
-			if (cursed) {
-				equipCursed(hero);
-				GLog.n(Utils.format(Game.getVar(R.string.Ring_Info2), this));
-			}
-			hero.spendAndNext(Artifact.TIME_TO_EQUIP);
-			return true;
-		}
+		return hero.belongings.equip(this, Belongings.Slot.ARTIFACT);
 	}
 
 	@Override

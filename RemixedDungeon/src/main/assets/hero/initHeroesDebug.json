@@ -10,12 +10,12 @@
         "quantity": 100
       },
       {
-        "kind": "RawFish",
+        "kind": "ScrollOfWeaponUpgrade",
         "quantity": 100,
         "level": 10
       },
       {
-        "kind": "Firebloom.Seed",
+        "kind": "Stylus",
         "quantity": 100
       }
     ],
