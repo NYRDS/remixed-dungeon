@@ -65,7 +65,7 @@ public class EventCollector {
 			Crashlytics.log(event);
 
 			Bundle params = new Bundle();
-			params.putDouble("value", value);
+			params.putDouble("dv", value);
 			mFirebaseAnalytics.logEvent(event, params);
 		}
 	}
