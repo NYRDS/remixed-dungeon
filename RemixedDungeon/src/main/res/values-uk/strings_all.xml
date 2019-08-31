@@ -1033,6 +1033,7 @@
   <string name="Weapon_Identify">Ти достатньо ознайомився з предметом: %1$s, аби ідентифікувати. Це %2$s.</string>
   <string name="Weapon_Incompatible">Взаємодія несумісних типів магії зняло зачарування з зброї!</string>
   <string name="MeleeWeapon_Info1a">%1$s - %2$s зброя ближнього бою %3$d рангу.</string>
+  <string name="MeleeWeapon_Info1b"> </string>
   <string name="MeleeWeapon_Info1c">покращена</string>
   <string name="MeleeWeapon_Info1d">послаблена</string>
   <string name="MeleeWeapon_Info2a">Середня шкода становить %d одиниць за удар.</string>
@@ -2218,6 +2219,13 @@
   <string name="town_deco_entrance_name">Вхід</string>
   <string name="town_deco_chest_name">Скриня</string>
   <string name="town_deco_scrolls_name">Сувої</string>
+  <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
+  <string name="Badges_ItemLvl5">Придбано предмет 15 рівня</string>
+  <string name="Badges_FoodEaten5">60 порцій їжі вжито</string>
+  <string name="Badges_StrengthAttained5">21 одиниць сили набрано</string>
+  <string name="Badges_LevelReached5">30 рівня досягнуто</string>
+  <string name="Badges_GoldCollected5">Зібрано 35000 золотих монет</string>
+  <string name="Badges_MonsterSlain5">1000 супротивників подолано</string>
   <string name="Ring_Gems_0">діамантом</string>
   <string name="Ring_Gems_1">опалом</string>
   <string name="Ring_Gems_2">гранатом</string>

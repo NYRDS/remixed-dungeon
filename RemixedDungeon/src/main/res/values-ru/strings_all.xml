@@ -1026,6 +1026,7 @@
   <string name="Weapon_Identify">Ты достаточно хорошо знаком с предметом %1$s, чтобы его опознать. Это %2$s.</string>
   <string name="Weapon_Incompatible">Взаимодействие несовместимых типов магии разрушило чары, наложенные на это оружие!</string>
   <string name="MeleeWeapon_Info1a">%1$s - %2$s оружие ближнего боя %3$d порядка.</string>
+  <string name="MeleeWeapon_Info1b"> </string>
   <string name="MeleeWeapon_Info1c">улучшенное</string>
   <string name="MeleeWeapon_Info1d">ослабленное</string>
   <string name="MeleeWeapon_Info2a">Средний урон %d единиц за удар.</string>
@@ -2192,15 +2193,22 @@
   <string name="KindOfBow_SelectArrowKind">Какие стрелы мне использовать?</string>
   <string name="KindOfBow_ChooseArrows">ВЫБРАТЬ СТРЕЛЫ</string>
   <string name="BodyArmorSpell_Name">Тело-щит</string>
+  <string name="BodyArmorSpell_Info">Активирует скрытые резервы мышц, делая их крепче и повышая защиту ценой скорости передвижения.</string>
   <string name="BodyArmorBuff_Name">Тело-щит</string>
+  <string name="BodyArmorBuff_Info">Броня улучшена за счет скорости ходьбы.</string>
   <string name="DieHardSpell_Name">Крепкий Орешек</string>
+  <string name="DieHardSpell_Info">Временно повышает регенерацию делая тебя настоящим Крепким Орешком.</string>
   <string name="DieHardBuff_Name">Крепкий Орешек</string>
   <string name="DieHardBuff_Info">Скорость регенерации увеличена </string>
   <string name="SmashSpell_Name">Сокрушительный Удар</string>
+  <string name="SmashSpell_Info">Прыгает вверх, с силой врезается в землю, оглушая противников вокруг и нанося физический урон.</string>
   <string name="SmashSpell_NeedWeapon">Необходимо оружие для данного действия.</string>
   <string name="DashSpell_Name">Рывок</string>
+  <string name="DashSpell_Info">Совершает рывок в указанном направлении, нанося увечья попавшемуся на пути противнику.</string>
   <string name="DashSpell_OnSelf">Я не могу сделать рывок на месте.</string>
+  <string name="DashSpell_TooFar">Нельзя выполнить рывок так далеко.</string>
   <string name="CloakSpell_Name">Укрытие</string>
+  <string name="CloakSpell_Info">Шагните в тень, чтобы остаться незамеченным. Значительно уменьшит ваши шансы быть обнаруженным. Не может быть использовано, когда рядом враги.</string>
   <string name="CloakSpell_EnemiesNearby">Когда враги рядом,вы не можете уйти в тень</string>
   <string name="CloakBuff_Name">Укрыт</string>
   <string name="CloakBuff_Info">Укрыт в тени</string>
@@ -2209,21 +2217,92 @@
   <string name="WndHero_Awareness">Внимательность</string>
   <string name="WndHero_AttackSkill">Навыки Атаки</string>
   <string name="WndHero_DefenceSkill">Навыки Защиты</string>
+  <string name="town_deco_grave_name">Могила</string>
+  <string name="town_deco_grave_desc">Обычное надгробие со стертыми надписями.</string>
   <string name="town_deco_pillar_name">Столб</string>
+  <string name="town_deco_pillar_desc">Когда-то давно это столб был прекрасной опорой и украшением.</string>
+  <string name="town_deco_wood_wall_name">Бревенчатая стена</string>
+  <string name="town_deco_wood_wall_desc">Бревенчатая стена, выглядит надежно.</string>
   <string name="town_deco_entrance_name">Вход</string>
+  <string name="town_deco_entrance_desc">Проход к верхним уровням подземелья.</string>
   <string name="town_deco_exit_name">Выход</string>
+  <string name="town_deco_exit_desc">Что же ждет тебя там внизу?</string>
   <string name="town_deco_tile_name">Слот</string>
+  <string name="town_deco_tile_desc">Время не пощадило эти плитки. </string>
+  <string name="town_deco_snowdrift_name">Сугроб</string>
+  <string name="town_deco_snowdrift_desc">Огромный сугроб и похоже убирать его никто не собирается.</string>
+  <string name="town_deco_misc_name">Барахло</string>
+  <string name="town_deco_misc_desc">Куча барахла и побрякушек.</string>
+  <string name="town_deco_broken_roof_name">Дырявая крыша</string>
+  <string name="town_deco_broken_roof_desc">Черепица на этой крыше вся в трещинах, нужен ремонт.</string>
   <string name="town_deco_broken_wall_name">Разрушенная стена</string>
+  <string name="town_deco_broken_wall_desc">Бревна в этой стене давно прогнили и утратили былую прочность.</string>
   <string name="town_deco_mud_name">Грязь</string>
+  <string name="town_deco_mud_desc">Оттаявший клочок грязи в этом царстве вечной зимы.</string>
+  <string name="town_deco_stock_name">Припасы</string>
+  <string name="town_deco_stock_desc">Здесь хранится провиант вперемежку с кучей разносортного барахла. </string>
   <string name="town_deco_barrel_name">Бочка</string>
+  <string name="town_deco_barrel_desc">Просто бочка, причем лучшие времена её уже прошли.</string>
+  <string name="town_deco_hay_name">Сено</string>
+  <string name="town_deco_hay_desc">Стожок ароматного сена.</string>
+  <string name="town_deco_firewood_name">Дрова</string>
+  <string name="town_deco_firewood_desc">Необходимая вещь, особенно в такой дикий холод.</string>
+  <string name="town_deco_stakes_name">Колья</string>
+  <string name="town_deco_stakes_desc">Эти заостренные бревна выглядят угрожающе, но сами по себе довольно бесполезны.</string>
   <string name="town_deco_fence_name">Забор</string>
+  <string name="town_deco_fence_desc">Деревянный забор припорошенный снегом.</string>
+  <string name="town_deco_pole_name">Шест</string>
+  <string name="town_deco_pole_desc">Длинный шест, как раз подходит для натягивания веревок.</string>
   <string name="town_deco_rope_name">Верёвка</string>
+  <string name="town_deco_rope_desc">Веревка скрученная вручную.</string>
+  <string name="town_deco_slush_name">Слякоть</string>
+  <string name="town_deco_slush_desc">Этот снег подтаивает, так что он теперь не снег, а грязная мокрая кашица.</string>
   <string name="town_deco_chest_name">Сундук</string>
+  <string name="town_deco_chest_desc">Удобный предмет обстановки для хранения всяких вещиц и украшений.</string>
+  <string name="town_deco_emptyboard_name">Стеллаж</string>
+  <string name="town_deco_emptyboard_desc">Обыкновеннейший стеллаж для всяческих предметов.</string>
+  <string name="town_deco_grandclock_name">Напольные часы</string>
+  <string name="town_deco_grandclock_desc">Старинный, но все ещё рабочий механизм.</string>
   <string name="town_deco_wall_beam_name">Балка</string>
+  <string name="town_deco_wall_beam_desc">Надежная опора для этого сооружения.</string>
+  <string name="town_deco_wall_candles_name">Свечи</string>
+  <string name="town_deco_wall_candles_desc">Свечи погасли, но аромат благовоний все ещё витает в воздухе.</string>
   <string name="town_deco_wooden_drawer_name">Художник</string>
+  <string name="town_deco_wooden_drawer_desc">Интересно что же там внутри?</string>
   <string name="town_deco_scrolls_name">Свитки</string>
+  <string name="town_deco_scrolls_desc">Пыльный шкаф с кучей свитков и книг.</string>
   <string name="town_deco_medicine_name">Медицина</string>
+  <string name="town_deco_medicine_desc">Пузырьки, и прочие ингредиенты аккуратно расставлены по этим полкам.</string>
   <string name="town_deco_wooden_stairs_name">Ступеньки</string>
+  <string name="town_deco_wooden_stairs_desc">Они добавят тебе немного роста.</string>
+  <string name="town_deco_canvas_name">Холст</string>
+  <string name="town_deco_canvas_desc">Толстый кусок ткани натянутый на стене.</string>
+  <string name="town_deco_projector_name">Кинопроектор</string>
+  <string name="town_deco_projector_desc">Старое устройство для проигрывания кинопленок людям на радость.</string>
+  <string name="town_deco_filmtape_name">Кинопленка</string>
+  <string name="town_deco_filmtape_desc">Интересно, что на ней?</string>
+  <string name="town_deco_painting_name">Картина</string>
+  <string name="town_deco_painting_desc">Прекрасное произведение искусства.</string>
+  <string name="town_deco_curtains_name">Занавес</string>
+  <string name="town_deco_curtains_desc">Не пропускает лишний свет и выглядит красиво.</string>
+  <string name="town_deco_rug_name">Ковер</string>
+  <string name="town_deco_rug_desc">Выткан со вкусом.</string>
+  <string name="town_deco_trapdoor_name">Люк</string>
+  <string name="town_deco_trapdoor_desc">Куда же он ведет?</string>
+  <string name="town_deco_glass_stained_name">Витраж</string>
+  <string name="town_deco_glass_stained_desc">Похож автор этого витража не плохо постарался.</string>
+  <string name="town_deco_glass_name">Широкое окно</string>
+  <string name="town_deco_glass_desc">Это окно гире остальных и уж точно пропускает внутрь больше света.</string>
+  <string name="town_deco_counter_name">Стойка</string>
+  <string name="town_deco_counter_desc">Позволяет сохранить приличную дистанцию между тобой и тем кто стоит за ней.</string>
+  <string name="town_deco_library_books_name">Периодика.</string>
+  <string name="town_deco_library_books_desc">Даже это лучше книг из подземелья.</string>
+  <string name="town_deco_wallpaper_name">Обои</string>
+  <string name="town_deco_wallpaper_desc">Отличный дизайнерский ход для такого места.</string>
+  <string name="town_deco_stones_name">Камни</string>
+  <string name="town_deco_stones_desc">Просто куча камней.</string>
+  <string name="town_deco_fireplace_name">Кострище</string>
+  <string name="town_deco_fireplace_desc">Отлично подойдет для согрева в таком холодном месте.</string>
   <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Игровые механики:\n
@@ -2237,12 +2316,19 @@
     -- Кастомные спецэффекты\n
     </string>
   <string name="Badges_GamesPlayed5">5000 игр сыграно</string>
+  <string name="Badges_PotionsCooked5">25 зелий сварено</string>
   <string name="Badges_ItemLvl5">Получен предмет 15 уровня</string>
   <string name="Badges_FoodEaten5">60 порций пищи съедено</string>
   <string name="Badges_StrengthAttained5">21 очко Силы достигнуто</string>
   <string name="Badges_LevelReached5">Уровень 30 достигнут</string>
   <string name="Badges_GoldCollected5">35000 золота собрано</string>
   <string name="Badges_MonsterSlain5">1000 врагов побеждено</string>
+  <string name="Spells_NotInOwnBody">Ты не можешь использовать %s пока душа твоя вне тела.</string>
+  <string name="WndHero_Satiety">Сытость</string>
+  <string name="Welcome_Text_29">
+    remix.29\n
+    - Обновление города!\n
+    </string>
   <string name="Ring_Gems_0">бриллиантом</string>
   <string name="Ring_Gems_1">опалом</string>
   <string name="Ring_Gems_2">гранатом</string>
@@ -2415,6 +2501,17 @@
   <string name="Codex_Story_22">Эта книга написана на языке демонов</string>
   <string name="Codex_Story_23">Эта книга написана на языке дворфов</string>
   <string name="Codex_Story_24">Эта книга написана на языке эльфов</string>
+  <string name="Codex_Story_25">She stopped, frozen, at the heavy oaken door, and eyed the light emerging from the door\'s borders. From some neglected corner of her mind, recognition.\n
+\"Sunlight..\" she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
+She remembered their voices, their commands, and their warnings, but not their faces, nor their touch.\n
+Pain had trained her. Remember the dangers, always the dangers. Rabid animals, undead, insane brigands, and cunning ninjas had fallen before her. She had cut, burned, stabbed, and poisoned her way through abominations, demons, clockwork abominations, and insane necromancers. Even Gods had fallen before her.\n
+She had tracked Yog through Heaven and Hell, before silencing his corrupting whispers forever. Even then, there was work to be done. Yog was a servant of one even more occult and powerful than himself.\n
+So she delved further, deeper. The old wizard\'s journal, still radiating power, had shown her the path. With the magic in it\'s pages, she traveled to a wild new land, a tiny village ensconced in a mighty forest. There, she finally tracked the evil to its labyrinthine source, and vanquished all who stood before her.\n
+Now, in the faint daylight, she examined herself in a pool of cavewater. Her body was warped almost beyond recognition by magic. Her skin, pale to he point of translucency, was caked with dirt, grime, and soot. Her necklace of rings could pay a kings ransom, and her holster of wands contained enough magical energy to lay waste to armies. She gripped her weapons, literally fine enough to cut down the very gods. Truly, she had become master of this dark realm, this wasteland of despair.\n
+She had chased evil to the far corners of the multiverse, but now she was paralyzed with fear. What if they reject her? What if they don\'t? How could she interact with these people anymore? Hell, she had lost count of the times death had claimed her, only to be pulled from its icy grasp.\n
+No, there was no place for her in the light, not anymore. She turned from the meager light, and descended into the dark, perhaps for the last time.\n
+\n\n\tby drazool from reddit
+</string>
   <string name="Scroll_Runes_0">КАУНАН</string>
   <string name="Scroll_Runes_1">СОВИЛО</string>
   <string name="Scroll_Runes_2">ЛАГУЗ</string>

@@ -93,10 +93,66 @@
   <string name="RatKingCrown_Buff">Rattigkeit</string>
   <string name="RatKingCrown_Name">Krone des Rattenkönigs</string>
   <string name="RatKingCrown_Info">Die goldene Krone Seiner Rattigkeit, Symbol der immerrattigen Macht</string>
+  <string name="BishopNPC_Name">Bischhof</string>
+  <string name="BishopNPC_Desc">Bischof der heiligen Kirche von Santa dem Tiefenlord</string>
   <string name="BishopNPC_Gender">männlich</string>
+  <string name="BishopNPC_Name_Objective">Bischhof</string>
+  <string name="Bishop_title">Bischhof</string>
+  <string name="Bishop_text">Tag und Nacht bete ich für dich, mein Kind.</string>
+  <string name="Bishop_lesser_bless">kleiner Segen - %d g</string>
+  <string name="Bishop_great_bless">großer Segen - %d g</string>
+  <string name="Bishop_remove_curse">Entfernt den %d Fluch</string>
+  <string name="Bishop_not_interested">Verlassen</string>
+  <string name="Bishop_no_money">Du besitzt nicht genug Geld, um das zu kaufen.</string>
+  <string name="Bishop_bye">Ich werde für dich beten, mein Kind.</string>
+  <string name="Blessed_Info">gesegnet vom rechtschaffenen Priester</string>
+  <string name="deco_candle_name">Kerze</string>
+  <string name="deco_candle_desc">Große Kerze</string>
+  <string name="Possess_Name">Besitzergreifung</string>
+  <string name="Possess_Info">Die dunkle Kunst der Gedankenkontrolle erlaubt dem Nutzer, den Willen der meisten Kreaturen zu bändigen.</string>
+  <string name="Possess_PossessionFailed">Der Wille von %s ist zu stark.</string>
+  <string name="Possess_Possessed">%s wartet auf deine Anweisungen.</string>
+  <string name="Possess_MustTargetChar">Nur Kreaturen können das Ziel von Besitzergreifung sein</string>
+  <string name="Possess_CantPossessSelf">Du kannst nicht Besitz von dir selbst ergreifen</string>
+  <string name="Mob_StaControlledStatus">Von %s wurde Besitz ergriffen</string>
+  <string name="BlackCat_AiStatus">Diese Katze macht normale Katzen Sachen.</string>
+  <string name="Shopkeeper_Buy">Wähle das Item, welches du kaufen willst.</string>
+  <string name="Shopkeeper_title">Geschäft</string>
+  <string name="Shopkeeper_text">Wilkommen zum lokalen Pixel-Mart.\nWie.kann ich Ihnen.helfen?</string>
+  <string name="Shopkeeper_SellPrompt">Ich habe etwas zu verkaufen.</string>
+  <string name="Shopkeeper_BuyPrompt">Lass mich dein Inventar sehen.</string>
+  <string name="WndTradeItem_BuyN">Kaufe %1$d für %2$d Gold</string>
+  <string name="WndTradeItem_BuyAll">Kaufe alles für %d Gold</string>
+  <string name="WndTradeItem_SellN">Verkaufe%1$d für %2$d Gold</string>
+  <string name="WndBag_BuySubtitle">(Du hast %d Gold)</string>
+  <string name="town_deco_weaponboard_name">Waffe</string>
+  <string name="town_deco_weaponboard_desc">Eine Art von Waffe hängt am Waffenständer.</string>
+  <string name="town_deco_shieldboard_name">Schilde</string>
+  <string name="town_deco_shieldboard_desc">Verschiedene Arten von Schilden hängen an der Wandtafel. Sie sind noch nicht zu verkaufen.</string>
+  <string name="town_deco_armoronhanger_name">Rüstung</string>
+  <string name="town_deco_armoronhanger_desc">Einige Arten von Rüstungen auf einem Ständer.</string>
   <string name="town_deco_potions_name">Tränke</string>
+  <string name="town_deco_potions_desc">Einige Arten von Tränken auf einem Regal.</string>
+  <string name="town_deco_wardrobe_name">Holzschrank</string>
+  <string name="town_deco_wardrobe_desc">Großer Holzschrank</string>
+  <string name="town_deco_porch_name">Veranda</string>
+  <string name="town_deco_porch_desc">Eine Varanda aus Holz.</string>
+  <string name="town_deco_common_bed_name">Bett</string>
+  <string name="town_deco_common_bed_desc">Normales Bett</string>
+  <string name="town_deco_wooden_table_name">Holztisch</string>
+  <string name="town_deco_wooden_table_desc">Dies ist ein gut verarbeiteter Holztisch.</string>
+  <string name="town_deco_wooden_bench_name">Holzbank</string>
+  <string name="town_deco_wooden_bench_desc">Eine Bank aus Holz. Sieht ungemütlich zum sitzen aus.</string>
   <string name="town_deco_covered_table_name">Tisch</string>
+  <string name="town_deco_covered_table_desc">Ein Holztisch mit einer einfachen weißen Tischdecke.</string>
   <string name="town_deco_pedestal_name">Podest</string>
+  <string name="town_deco_pedestal_desc">Ein Podest mit einem heiligen Buch darauf.</string>
+  <string name="town_deco_shelf_name">Regale</string>
+  <string name="town_deco_shelf_desc">Leere Regale</string>
+  <string name="WndPriest_Instruction2_m">Wilkommen mein Sohn, wilkommen zur heiligen Kirche des Großen Santa dem Tiefenlord!</string>
+  <string name="WndPriest_Instruction2_f">Wilkommen meine Tochter, wilkommen zur heiligen Kirche des Großen Santa dem Tiefenlord!</string>
+  <string name="WndPriest_Instruction2">Wenn du Hilfe brauchst, kann ich dir eine Heilung für nur %d Goldmünzen anbieten! Falls du jedoch auf der Suche nach heiligen Segen bist, oder gar verflucht worden bist, triff dich bitte mit dem Bischof in unserer Kirche.</string>
+  <string name="WndDontLikeAds_NotThisTime">Nicht dieses Mal.</string>
   <string name="Item_Info2">etwas</string>
   <string name="NecromancerArmor_Info2">Diese Rüstung  verleiht dem Nekromanten die Fähigkeit \"Nekrose\", welche eine magische Seuche, welche einige Kreaturen in der näheren Umgebung infiziert, tot oder lebendig.</string>
   <string name="NecromancerRobe_Info2">Diese Robe ist voller dunkler Magie und erlaubt dem Nekromanten die Seelen der gefallenen Monster zu absorbieren.</string>
@@ -189,6 +245,22 @@ remix.28.3\n
 -- Modifizierbare Zaubersprüche\n
 -- Modifizierbare Gegenstände\n
 </string>
+  <string name="Welcome_Text_28_4">
+    remix.28.4\n
+    - Graphik Verbesserungen:\n
+    -- Heldenwaffen jetzt sichtbar im Spiel\n
+    </string>
+  <string name="Welcome_Text_28_5">
+    remix.28.5\n
+    - Modding:\n
+    -- Modbare KI für Mobs und NPC\'s\n
+    - Stadt:\n
+    -- Kirche jetzt offen für Gläubige\n
+    -- Stadtladen wurde renoviert\n
+    - Spielmechaniken:\n
+    -- Handels UI wurde verbessert\n
+    -- Portal kann jetzt mehrmals verwendet werden\n
+    </string>
   <string name="BlackCat_Name">Schwarze Katze</string>
   <string name="BlackCat_Gender">weiblich</string>
   <string name="BlackCat_Name_Objective">Katze</string>
@@ -241,6 +313,8 @@ remix.28.3\n
   <string name="AmuletScene_Exit">Lassen wir es gut sein</string>
   <string name="AmuletScene_Stay">Ich bin noch nicht fertig</string>
   <string name="AmuletScene_Txt">Endlich hältst du es in deinen Händen, das Amulett von Yendor. Mit seiner Macht kannst du die Welt erobern oder allen Frieden und Reichtum bringen oder was auch immer. Jedenfalls wird sich dein Leben für immer verändern und dieses Spiel endet hier. Oder du kannst noch ein bisschen länger ein gewöhnlicher Sterblicher bleiben.</string>
+  <string name="GameScene_Welcome">Willkommen in der %d Ebene des Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Willkommen zurück auf der %d Ebene des Remixed Dungeon!</string>
   <string name="GameScene_NightMode">Sei vorsichtig, der Dungeon ist nachts noch gefährlicher!</string>
   <string name="GameScene_Chasm">Deine Schritte hallen durch den Dungeon.</string>
   <string name="GameScene_Water">Du hörst Wasser um dich plätschern.</string>
@@ -291,6 +365,7 @@ remix.28.3\n
   <string name="WndGame_Ranking">Ranglisten</string>
   <string name="WndGame_Start">Starte ein neues Spiel</string>
   <string name="WndGame_menu">Hauptmenü</string>
+  <string name="WndGame_Exit">Verlasse Remixed Dungeon</string>
   <string name="WndGame_Return">Zurück zum Spiel</string>
   <string name="WndGame_Save">Speichern</string>
   <string name="WndGame_Load">Laden</string>
@@ -402,6 +477,9 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="LloidsBeacon_Preventing">Die starke magische Aura dieses Ortes hindert dich daran, Lloyds Leuchtfeuer zu benutzen.</string>
   <string name="LloidsBeacon_Creatures">Die übersinnliche Aura naher Kreaturen hindert dich daran, Lloyds Leuchtfeuer jetzt zu benutzen.</string>
   <string name="LloidsBeacon_Return">Lloyd\'s Leutfeuer wurde mit Erfolg an deine momentane Stelle gesetzt, jetzt kannst du jederzeit hierher zurückkehren.</string>
+  <string name="LloidsBeacon_Set">
+
+Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gesetzt.</string>
   <string name="Stylus_Name">Arkaner Stift</string>
   <string name="Stylus_ACInscribe">GRAVIEREN</string>
   <string name="Stylus_Info">Dieser arkane Stift wurde aus schwarzem, sehr harten Stein gemacht. Du kannst mit ihm eine Glyphe oder eine Rune schreiben, aber nicht bestimmen, welche es sein soll, da sie sich der Stift aussucht.</string>
@@ -516,6 +594,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="TitleScene_Badges">Abzeichen</string>
   <string name="TitleScene_About">Über</string>
   <string name="TitleScene_InternalStorageLow">Nicht genügend Platz\n im internen Speicher\n Dein Fortschritt kann verloren gehen!</string>
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon by NYRDS basierend auf dem ursprünglichem Pixel Dungeon von Watabou.</string>
   <string name="AboutScene_Code">Programmierung:</string>
   <string name="AboutScene_Graphics">Grafik:</string>
   <string name="AboutScene_Music">Musik:</string>
@@ -578,6 +657,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="AzuterronNPC_Gender">männlich</string>
   <string name="AzuterronNPC_Name_Objective">Fremder</string>
   <string name="AzuterronNPC_Desc">Eine mysteriöse Gestalt, umgeben von schwarzem Nebel.</string>
+  <string name="AzuterronNPC_Quest_Start">Huh, warum... oh, du kannst mich sehen, nicht wahr? Das bedeutet, das du nicht zu \"Ihnen\" gehörst. Dazu sehe ich, dass du all diese Monster nicht lieb hast. Weißt du was? Wenn du mir mit einem kleinen Problem hilfst, biete ich dir meinen Beistand an. Irgendwo auf dieser Ebene wirst du ein Monster der Dunkelheit finden, einen _Heimtückischen Geist_. Vernichte ihn, nimm sein _Herz_ und komm zurück zu mir. Und eines noch! Wenn du daran interessiert bist, meine Angebote zu kaufen, scheue dich nicht, zu fragen.</string>
   <string name="AzuterronNPC_Quest_Reminder">Hilf mir und ich werde dir helfen</string>
   <string name="AzuterronNPC_Quest_End">Exzellent. Hier, nimm diesen Trank, du wirst ihn sicher großartig finden.</string>
   <string name="Journal_Azuterron">Fremder</string>
@@ -669,20 +749,29 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="RottenFish_Info">Vergammelter Fisch, riecht fürchterlich</string>
   <string name="RottenFish_Taste">Widerlich!</string>
   <string name="gdpr_title">Personalisiere deine Werbe-Erfahrung</string>
+  <string name="gdpr_text">Remixes Dungeon personalisiert deine Werbung mithilfe von Admob und Appodeal (weitere Werbe-Anbieter). Werbe-Anbierter und ihre Partner können personalisierte Daten wie Gerätedaten, Demographie und interest Daten sammel umd verarbeiten um dir auf dich zugeschnittene Werbung zu zeigen. Bei Zustimmung zu dieser verbesserten Werbe-Erfahrung siehst du Werbung, bei der Werbe-Anbieter und ihre Partner glauben, dass diese relevanter für dich sind.\n\nBei Zustimmung bestätigst du, dass du über 16 Jahre alt bist und personalisierte Werbung empfangen möchtest.\n\n</string>
   <string name="gdpr_agree">Ja, ich Stimme zu</string>
   <string name="gdpr_disagree">Nein danke</string>
   <string name="gdpr_choose">Bitte wähle</string>
   <string name="Mob_StaHuntingStatus2">Dieser %1$s jagt nach %2$s</string>
+  <string name="Mob_StaFleeingStatus2">Dieser%1$sflieht vor%2$s</string>
+  <string name="Mob_StaTerrorStatus">Dieser %1$sist entsetzt.</string>
+  <string name="Mob_StaTerrorStatus2">Dieser%1$s ist entsetzt wegen %2$s</string>
+  <string name="Mob_StaAmokStatus">Dieser %1$s läuft Amok</string>
+  <string name="WndSaveSlotSelect_LoadAutoSave">Lade Auto-Speicherung</string>
+  <string name="TownScript_NeedWeapon">Ich gehe nicht in den Dungeon ohne Waffe!\nVielleicht lohnt es sich erst mal im Laden vorbei zu schauen?</string>
   <string name="WndDonate_silver">Silber</string>
   <string name="WndDonate_gold">Gold</string>
   <string name="WndDonate_ruby">Rubin</string>
   <string name="WndDonate_donate">Spenden:</string>
   <string name="WndDonate_notConnected">Keine Internetverbindung :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Dungeon - für jeden kostenlos und wird es auch immer bleiben.\n\Allerdings können Sie uns dabei helfen, das Spiel noch besser zu machen.\n\Neben unserem herzlichen Dank bekommst du auch einige kosmetische Verbesserungen.</string>
   <string name="WndDonate_silverDonate">Silberspende</string>
   <string name="WndDonate_goldDonate">Goldspende</string>
   <string name="WndDonate_rubyDonate">Rubinspende</string>
   <string name="WndDonate_silverDonateText">Jede Spende wird zur Entwicklung des Projekts beitragen</string>
   <string name="WndDonate_goldDonateText">Vielen Dank für ihre Unterstützung</string>
+  <string name="WndDonate_rubyDonateText">Deine Großzügigkeit wird uns helfen, Remixed Dungeon weiter zu verbessern!</string>
   <string name="WndDonate_silverDonateText2">Entfernt auch die Werbung in allen Spielmodi und macht die Jägerin von Anfang an verfügbar.</string>
   <string name="WndDonate_goldDonateText2">Schaltet auch den Elf von Anfang an frei.</string>
   <string name="WndDonate_rubyDonateText2"/>
@@ -789,9 +878,17 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
   <string name="ShadowLord_Intro">Bereite dich vor!</string>
   <string name="ShadowLord_Death">Neeeeeeeiiiiiiiinnnnn...</string>
   <string name="AllowStatisticsCollectionScene_Title">Verwendungsstatistiksammlung</string>
+  <string name="AllowStatisticsCollectionScene_Request">Wenn du Remixed Dungeon erlaubst Verwendungsstatistiken zu sammeln, werden die Daten verwendet um:\n
+- Verschiedene kleine Störungen ausfindig zu machen und zu beseitigen ( bei kritischen Fehlern wirst du ausdrücklich gefragt, einen Bericht zu senden )\n
+- Spiel-Balance-Verbesserungen\n
+- Gerätespezifische Performancefehler zu beheben\n
+- Lustige Statistik Fakten von Zeit zu Zeit zu veröffentlichen\n
+Du kannst deine Entscheidung jederzeit ändern (Klicke auf das Diagrammsymbol beim Titelbildschirm ) </string>
   <string name="AllowStatisticsCollectionScene_Allow">Erlauben</string>
   <string name="AllowStatisticsCollectionScene_Deny">Verweigern</string>
   <string name="Darkness_Info">Sieht aus als ob Stücke ewiger Dunkelheit in der Luft schweben</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Bitte hilf die Übersetzungen von Remixed Dungeon zu verbessern</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Klicke hier um dem Remixed Dungeon Übersetzungsteam beizutreten</string>
   <string name="ArmoredStatue_Name">Lebendige Statue</string>
   <string name="ArmoredStatue_Gender">weiblich</string>
   <string name="ArmoredStatue_Name_Objective">Lebendige Statue</string>
@@ -812,6 +909,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="WndSaveSlotSelect_Delete_Title">Bist du sicher, dass du diesen gespeicherten Wert löschen möchtest?</string>
   <string name="Hero_Name">du</string>
   <string name="Hero_Name_Objective">du</string>
+  <string name="Hero_Leave">Man verlässt Remixed Dungeon nicht einfach so.</string>
   <string name="Hero_LevelUp">Level up!</string>
   <string name="Hero_NewLevel">Du hast Level %d erreicht! Du hast nun mehr Lebenskraft und kannst dich besser konzentrieren. Es ist einfacher für dich geworden einen Gegner zu treffen und seinen Angriffen auszuweichen.</string>
   <string name="Hero_YouNowHave">Du hast %s gefunden</string>
@@ -1037,6 +1135,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="SacrificialSword_Info">Auf den ersten Blick scheint dieses alte Bronzeschwert, das mit Dreck bedeckt ist, absolut nutzlos zu sein. Doch eine gewisse veraltete Kraft schläft darin. Diese Kraft kann beinahe jede Kreatur in eine willenlose Marionette verwandeln. Man muss nur den richtigen finden, um es aufzuwecken...</string>
   <string name="SacrificialSword_Gender">männlich</string>
   <string name="ScrollOfSummoning_Name">Schriftrolle der Beschwörung</string>
+  <string name="ScrollOfSummoning_Info">Wenn laut gelesen, wird diese Schriftrolle ein Monster des derzeitigen Dungeon-Levels beschwören. Wenn der Wille des Monsters schwach genug ist, wird es dein Diener.</string>
   <string name="ScrollOfSummoning_Info_2">Das Monster antwortet auf deine Beschwörungen!</string>
   <string name="Using_Failed_Because_Magic">Eine mächtige Magie hindert dich daran, die \"%s\" zu benutzen.</string>
   <string name="Using_Failed_Because_Blind">Du kannst die \"%s\" nicht benutzen, wenn du geblendet bist.</string>
@@ -1304,6 +1403,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="JarOfSouls_Name">Gefäß der Seelen</string>
   <string name="JarOfSouls_Gender">männlich</string>
   <string name="JarOfSouls_Name_Objective">Gefäß der Seelen</string>
+  <string name="JarOfSouls_Desc">Die glühenden Augen eines Schädels, die auf diesem alten Glas abgebildet sind, sowie die unheimliche Energie, die es absondert, lässt dich unruhig werden.</string>
   <string name="Lich_Name">Lich</string>
   <string name="Lich_Gender">männlich</string>
   <string name="Lich_Name_Objective">Lich</string>
@@ -1438,6 +1538,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="Mods_AuthorSite">Entwickler Seite:</string>
   <string name="Mods_AuthorEmail">Entwickler Email:</string>
   <string name="Mods_RestartRequired">Neustart erforderlich</string>
+  <string name="Spells_NotTooFast">%s ist noch nicht zum Benutzen bereit</string>
   <string name="ElvenBow_Name">Elfenbogen</string>
   <string name="ElvenBow_Gender">männlich</string>
   <string name="ElvenBow_Info">Ein außergewöhnliches Beispiel der elfischen Handwerkskunst. Es ist eindeutig effektiver und genauer als normale Holzbögen.</string>
@@ -1508,6 +1609,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="TownGuardNPC_Desc">Eine gewöhnliche Stadtwache.</string>
   <string name="TownGuardNPC_Message1">Geh weiter.</string>
   <string name="TownGuardNPC_Message2">Dank euch Abenteurern ist es hier oben echt friedlich geworden.</string>
+  <string name="TownGuardNPC_Message3">Du glaubst es gibt hier zu viele Wachen? Naja, das liegt daran, dass das hier die einzige Stadt mit eine#@m mit Monstern infizierten Dungeon ist, oder?</string>
   <string name="TownsfolkNPC_Name">Stadtbewohner</string>
   <string name="TownsfolkNPC_Gender">Maskulin</string>
   <string name="TownsfolkNPC_Name_Objective">Dorfbewohner</string>
@@ -2092,6 +2194,13 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="Potion_ArrowMoisten">Du hast die Pfeile erfolgreich benetzt.</string>
   <string name="Potion_ItemFliesAway">%s fliegt dir gerade aus deinen Händen.</string>
   <string name="Potion_FoodRefreshed">%s sieht nun genießbar aus</string>
+  <string name="KindOfBow_SelectArrowKind">Welche Pfeile soll ich benutzen?</string>
+  <string name="KindOfBow_ChooseArrows">WÄHLE PFEILE AUS</string>
+  <string name="BodyArmorSpell_Name">Körperrüstung</string>
+  <string name="BodyArmorBuff_Name">Körperrüstung</string>
+  <string name="BodyArmorBuff_Info">Rüstung wird auf Kosten von Bewegungs-Geschwindigkeit erhöht.</string>
+  <string name="DieHardBuff_Info">Regenerationsrate erhöht</string>
+  <string name="SmashSpell_NeedWeapon">Ich brauche eine Waffe für diese Aktion.</string>
   <string name="town_deco_pillar_name">Säule</string>
   <string name="town_deco_entrance_name">Eingang</string>
   <string name="town_deco_chest_name">Kiste</string>
@@ -2141,6 +2250,30 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="Char_StaDodged_0">wich aus</string>
   <string name="Char_StaDodged_1">wich aus</string>
   <string name="Char_StaDodged_2">wich aus</string>
+  <string name="Dungeon_Tips_0">Überschätze nicht deine Stärke und benutze Waffen und Rüstungen, die du auch beherrschst!</string>
+  <string name="Dungeon_Tips_1">Nicht alle Türen sind auf den ersten Blick sichtbar. Wenn du feststeckst, suche nach versteckten Türen.</string>
+  <string name="Dungeon_Tips_2">Denk daran, dass die Erhöhung deiner Stärke nicht der einzige Weg ist, um an bessere Ausrüstung zu kommen. Du kannst ebenfalls Schriftrollen der Verbesserung verwenden um die benötigte Stärke eines Gegenstandes zu senken.</string>
+  <string name="Dungeon_Tips_3">Du kannst dein Gold in der Stadt, in den Geschäften des Dungeons oder für Hilfen ausgeben.</string>
+  <string name="Dungeon_Tips_4">Vorsicht! Ein Schleim bewacht diese Ebene des Dungeons!</string>
+  <string name="Dungeon_Tips_5">Pixel-Mart - alles was man für ein erfolgreiches Abenteuer braucht!</string>
+  <string name="Dungeon_Tips_6">Identifiziere deine Tränke und Schriftrollen so schnell wie möglich. Tue es nicht erst, wenn du sie wirklich brauchst.</string>
+  <string name="Dungeon_Tips_7">Hungrig zu sein verletzt dich nicht, außer du bist gerade am verhungern.</string>
+  <string name="Dungeon_Tips_8">Überraschungsangriffe haben eine höhere Chance zu treffen, zum Beispiel kannst du deinen Gegner hinter einer geschlossenen Tür überraschen, wenn du weißt, dass er auf dem Weg dorthin ist.</string>
+  <string name="Dungeon_Tips_9">Lass Der Tengu nicht heraus!</string>
+  <string name="Dungeon_Tips_10">Pixel-Mart. Verbrauche dein Geld. Lebe länger.</string>
+  <string name="Dungeon_Tips_11">Wenn du von mehreren Monstern gleichzeitig angegriffen wirst, versuche dich hinter eine Tür zurückzuziehen.</string>
+  <string name="Dungeon_Tips_12">Wenn du schwebst und brennst, kannst du das Feuer nicht in Wasser löschen.</string>
+  <string name="Dungeon_Tips_13">Es ergibt keinen Sinn, mehrere Ankh\'s zu besitzen, da du sie beim Wiederbeleben verlierst.</string>
+  <string name="Dungeon_Tips_14">WARNUNG! Schwere Maschienerie kann Verletzungen, das Verlieren von Gliedmaßen oder den Tod herbeiführen.</string>
+  <string name="Dungeon_Tips_15">Pixel-Mart. Ein sichereres Leben im Dungeon.</string>
+  <string name="Dungeon_Tips_16">Wenn du eine verzauberte Waffe aufwertest, besteht die Chance dass die Verzauberung zerstört wird.</string>
+  <string name="Dungeon_Tips_17">Ein Brunnen der Transmutation kann dir Items geben, die du anders nicht bekommen kannst.</string>
+  <string name="Dungeon_Tips_18">Der einzige Weg eine verzauberte Waffe zu verbessern, ist mit einer Schriftrolle der Waffenaufwertung.</string>
+  <string name="Dungeon_Tips_19">Es sind keine Waffen in der Gegenwart der Majestät erlaubt!</string>
+  <string name="Dungeon_Tips_20">Pixel-Mart. Besondere Preise für Dämonenjäger!</string>
+  <string name="Dungeon_Tips_21">Der Text ist in der Sprache der Dämonen geschrieben.</string>
+  <string name="Dungeon_Tips_22">Der Text ist in der Sprache der Dämonen geschrieben.</string>
+  <string name="Dungeon_Tips_23">Der Text ist in der Sprache der Dämonen geschrieben.</string>
   <string name="Challenges_Names_0">Auf Diät</string>
   <string name="Challenges_Names_1">Der Glaube ist meine Rüstung</string>
   <string name="Challenges_Names_2">Pharmacophobie</string>
@@ -2164,6 +2297,11 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="HeroClass_WarPerks_3">Jede Form von Nahrung gibt beim Verzehr etwas Gesundheit zurück.</string>
   <string name="HeroClass_WarPerks_4">Stärketränke sind von Beginn an bekannt.</string>
   <string name="HeroClass_MagPerks_0">Magier beginnen mit einem einzigartigen Wand of Magic Missile. Dieser Stab kann später \"entzaubert\" werden, um einen andereb Stab zu verbessern.</string>
+  <string name="HeroClass_MagPerks_1">Magier können schneller nach ihren Stäben greifen.</string>
+  <string name="HeroClass_MagPerks_2">Wenn gegessen, gibt jede Form von Nahrung eine Aufladung für alle Stäbe im Inventar.</string>
+  <string name="HeroClass_MagPerks_3">Magier können Stäbe als Nahkampfwaffe verwenden.</string>
+  <string name="HeroClass_MagPerks_4">Magier nutzen Mana um Elementar-Zaubersprüche zu zaubern.</string>
+  <string name="HeroClass_MagPerks_5">Schriftrollen der Identifikation sind von Beginn an identifiziert.</string>
   <string name="HeroClass_RogPerks_0">Schurken beginnen mit einem Schattenring+1.</string>
   <string name="HeroClass_RogPerks_1">Schurken identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </string>
   <string name="HeroClass_RogPerks_2">Schurken sind am besten mit leichter Rüstung, weichen besser aus, wenn sie sie tragen </string>
@@ -2175,6 +2313,12 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="HeroClass_HunPerks_2">Jägerinnen sind effektiv im Umgang mit Fernkampfwaffen und erhalten einen Schadensbonus beim Benutzen, wenn ihre Stärke die erforderliche Stärke für die Waffe übersteigt.</string>
   <string name="HeroClass_HunPerks_3">Jägerinnen erhalten mehr Gesundheit von Tautropfen.</string>
   <string name="HeroClass_HunPerks_4">Jägerinnen spüren benachbarte Monster sogar dann, wenn sie hinter Hindernissen versteckt sind.</string>
+  <string name="HeroClass_ElfPerks_0">Elfen beginnen mit 15 HP und 9 STR.</string>
+  <string name="HeroClass_ElfPerks_1">Elfen sind immun zu festsetzen.</string>
+  <string name="HeroClass_ElfPerks_2">Elfen beginnen mit einem verstärkten Holzbogen und ein paar Pfeilen.</string>
+  <string name="HeroClass_ElfPerks_3">Elfen sind sehr effektiv mit Bögen und sind agil.</string>
+  <string name="HeroClass_ElfPerks_4">Elfen erhalten mehr Gesundheit von Tautropfen.</string>
+  <string name="HeroClass_ElfPerks_5">Elfen sind weniger effektiv im Umgang mit Nahkampfwaffen.</string>
   <string name="Death_Name_0">Todes %s</string>
   <string name="Death_Name_1">Todes %s</string>
   <string name="Death_Name_2">Todes %s</string>
