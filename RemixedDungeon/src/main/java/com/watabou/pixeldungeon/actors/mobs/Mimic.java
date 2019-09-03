@@ -63,7 +63,6 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		bundle.put(ITEMS, items);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);

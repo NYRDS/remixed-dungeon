@@ -13,13 +13,12 @@ public enum WalkingType {
 	public boolean[] passableCells(Level level) {
 		switch (this) {
 			case NORMAL:
+			case GRASS:
 				return level.passable;
 			case WATER:
 				return level.water;
 			case WALL:
 				return level.solid;
-			case GRASS:
-				return level.passable;
 			case CHASM:
 				return level.pit;
 			case ABSOLUTE:
@@ -40,18 +39,15 @@ public enum WalkingType {
 
 	public int respawnCell(Level level) {
 		switch (this) {
-			case NORMAL:
-				return level.randomRespawnCell();
 			case WATER:
 				return level.randomRespawnCell(level.water);
 			case WALL:
 				return level.randomRespawnCell(level.solid);
-			case GRASS:
-				return level.randomRespawnCell();
 			case CHASM:
 				return level.randomRespawnCell(level.pit);
+			case NORMAL:
+			case GRASS:
 			case ABSOLUTE:
-				return level.randomRespawnCell();
 			default:
 				return level.randomRespawnCell();
 		}

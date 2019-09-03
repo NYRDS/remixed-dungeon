@@ -27,7 +27,6 @@ public class ColdSpirit extends Mob {
         lootChance = 0.02f;
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public int attackProc(@NotNull Char enemy, int damage ) {
         //Buff proc

@@ -410,7 +410,6 @@ public class Heap implements Bundlable, NamedEntityKind {
 	private static final String TYPE	= "type";
 	private static final String ITEMS	= "items";
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		type  = Type.valueOf( bundle.getString( TYPE ) );

@@ -115,9 +115,9 @@ public class Bundle {
     }
 
     private Bundlable get() {
-        String clName = "no class";
+        String clName = "no_class";
         try {
-            clName = getString(CLASS_NAME);
+            clName = optString(CLASS_NAME,clName);
             if (aliases.containsKey(clName)) {
                 clName = aliases.get(clName);
             }
@@ -424,7 +424,7 @@ public class Bundle {
             return new Bundle(json);
         } catch (Exception e) {
             EventCollector.logException(e);
-            return null;
+            return new Bundle();
         }
     }
 

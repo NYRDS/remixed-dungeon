@@ -138,7 +138,6 @@ public class Yog extends Boss {
 	public void beckon(int cell) {
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void die(NamedEntityKind cause) {
 

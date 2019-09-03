@@ -108,7 +108,6 @@ public class Util {
     }
 
     @SuppressLint("NewApi")
-    @SuppressWarnings("deprecation")
     public static long getAvailableInternalMemorySize() {
         File path = Environment.getDataDirectory();
         StatFs stat = new StatFs(path.getPath());
