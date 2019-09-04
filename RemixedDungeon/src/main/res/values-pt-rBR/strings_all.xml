@@ -15,7 +15,7 @@
   <string name="WindGust_Info">Uma rajada de vento que afasta o alvo selecionado.</string>
   <string name="FreezeGlobe_Name">Congela</string>
   <string name="FreezeGlobe_Info">Congela o mob selecionado tornando-o incapaz de executar qualquer ação por um curto período de tempo.</string>
-  <string name="MagicTorch_Name">Tocha magica</string>
+  <string name="MagicTorch_Name">Tocha mágica</string>
   <string name="MagicTorch_Info">Feitiço que produz luz para iluminar a escuridão da masmorra.</string>
   <string name="Healing_Name">Cura</string>
   <string name="Healing_Info">O pergaminho é crucial para todos os aventureiros. Ele pode restaurar 1/3 do máximo do hp dos conjuradores.</string>
@@ -99,8 +99,8 @@
   <string name="BishopNPC_Name_Objective">Bispo</string>
   <string name="Bishop_title">Bispo</string>
   <string name="Bishop_text">Todos os dias e noites eu rezo por você, meu filho.</string>
-  <string name="Bishop_lesser_bless">Benção pequena - %dg</string>
-  <string name="Bishop_great_bless">Benção grande - %dg</string>
+  <string name="Bishop_lesser_bless">Bênção pequena - %dg</string>
+  <string name="Bishop_great_bless">Bênção grande - %dg</string>
   <string name="Bishop_remove_curse">Remover maldição - %dg</string>
   <string name="Bishop_not_interested">Sair</string>
   <string name="Bishop_no_money">Você não pode pagar por isso.</string>
@@ -233,7 +233,7 @@
   <string name="Devour_Buff">Devorar</string>
   <string name="StoneBlood_Buff">Sangue de pedra</string>
   <string name="Welcome_Ok">Ok!</string>
-  <string name="Welcome_Title">Bem vindo!</string>
+  <string name="Welcome_Title">Bem-vindo!</string>
   <string name="Welcome_Text_28_3">
     remix.28.3\n
     - Novas habilidades do Necromante:\n
@@ -1115,7 +1115,7 @@
   <string name="Tamahawk_Info">Este machado de arremesso não é tão pesado, mas ainda exige força significativa para ser usado de forma eficaz.</string>
   <string name="Tamahawk_Gender">masculino</string>
   <string name="Kusarigama_Name">kusarigama</string>
-  <string name="Kusarigama_Info">Esta arma é constituída por uma foice em uma corrente de metal com um bloco de ferro ferro na extremidade.</string>
+  <string name="Kusarigama_Info">Esta arma é constituída por uma foice em uma corrente de metal com um bloco de ferro na extremidade.</string>
   <string name="Kusarigama_Gender">feminino</string>
   <string name="Kusarigama_Pull">PUXAR</string>
   <string name="ChaosSword_Name">Espada do Caos</string>
@@ -1251,7 +1251,7 @@
   <string name="Shadow_Name">sombra</string>
   <string name="Shadow_Gender">feminino</string>
   <string name="Shadow_Name_Objective">sombra</string>
-  <string name="Shadow_Desc">Sombras vagam silenciosamente as ruínas dessa prisão, apenas ocasionalmente aparecendo para aventureiros, geralmente em sua ultima aventura.</string>
+  <string name="Shadow_Desc">Sombras vagam silenciosamente as ruínas dessa prisão, apenas ocasionalmente aparecendo para aventureiros, geralmente em sua última aventura.</string>
   <string name="Shaman_Name">gnoll Xamã</string>
   <string name="Shaman_Gender">masculino</string>
   <string name="Shaman_Name_Objective">gnoll xamã</string>
@@ -1745,7 +1745,7 @@
   <string name="CompositeCrossbow_Info">Esta besta reforçada revela-se uma ferramenta mais eficiente em comparação com a sua contrapartida de madeira.</string>
   <string name="CompositeCrossbow_Gender">masculino</string>
   <string name="RubyCrossbow_Name">Besta de ruby</string>
-  <string name="RubyCrossbow_Info">Esta arma mortífera é verdadeiramente uma uma obra-prima da engenharia dwarven.</string>
+  <string name="RubyCrossbow_Info">Esta arma mortífera é verdadeiramente uma obra-prima da engenharia dwarven.</string>
   <string name="RubyCrossbow_Gender">masculino</string>
   <string name="GothicArmor_Name">armadura gótica</string>
   <string name="GothicArmor_Info">A armadura gótica é o pináculo da arte da forja de armaduras.</string>
@@ -1832,7 +1832,7 @@
   <string name="MimicAmulet_Name">mímico</string>
   <string name="MimicAmulet_Gender">masculino</string>
   <string name="MimicAmulet_Name_Objective">mímico</string>
-  <string name="MimicAmulet_Desc">O momento mais glorioso da sua carreira de aventureiro acabou por se se tornar uma armadilha.</string>
+  <string name="MimicAmulet_Desc">O momento mais glorioso da sua carreira de aventureiro acabou por se tornar uma armadilha.</string>
   <string name="Nightmare_Name">pesadelo</string>
   <string name="Nightmare_Gender">masculino</string>
   <string name="Nightmare_Name_Objective">pesadelo</string>
@@ -2224,7 +2224,7 @@ Parede
   <string name="town_deco_broken_roof_name">Telha quebrada</string>
   <string name="town_deco_broken_roof_desc">As telhas desse telhado estão quebrada e precisam ser substituídas.</string>
   <string name="town_deco_broken_wall_name">Parede quebrada</string>
-  <string name="town_deco_broken_wall_desc">A madeira dessa parece estão a muito tempo podres e perderam a sua resistência habitual.</string>
+  <string name="town_deco_broken_wall_desc">A madeira dessa parece estão há muito tempo podres e perderam a sua resistência habitual.</string>
   <string name="town_deco_mud_name">Lama</string>
   <string name="town_deco_mud_desc">Solo descongelado nesta área de permafrost</string>
   <string name="town_deco_stock_name">Estoque</string>
@@ -2395,11 +2395,11 @@ Parede
   <string name="HeroClass_NecromancerPerks_3">Necromantes começam com a chave esqueleto do nível 7.</string>
   <string name="HeroClass_NecromancerPerks_4">Poção de cura é identificada do começo.</string>
   <string name="HeroClass_WarPerks_0">Guerreiros começam com 11 pontos de força.</string>
-  <string name="HeroClass_WarPerks_1">Guerreiros começam com uma Espada Curta. Esta espada pode ser \"reforjada\" para se tranformar em outra arma.</string>
+  <string name="HeroClass_WarPerks_1">Guerreiros começam com uma Espada Curta. Esta espada pode ser \"reforjada\" para se transformar em outra arma.</string>
   <string name="HeroClass_WarPerks_2">Guerreiros são menos hábeis com armas de arremesso.</string>
   <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida recupera um pouco de vida quando comidos.</string>
   <string name="HeroClass_WarPerks_4">Poções de Força são identificadas desde o início.</string>
-  <string name="HeroClass_MagPerks_0">Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se tranformar em outra varinha.</string>
+  <string name="HeroClass_MagPerks_0">Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se transformar em outra varinha.</string>
   <string name="HeroClass_MagPerks_1">Magos recarregam suas varinhas mais rápido.</string>
   <string name="HeroClass_MagPerks_2">Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</string>
   <string name="HeroClass_MagPerks_3">Magos podem usar varinhas como uma arma de combate.</string>

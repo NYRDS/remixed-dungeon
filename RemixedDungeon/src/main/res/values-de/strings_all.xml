@@ -421,8 +421,8 @@ remix.28.3\n
   <string name="WndStory_Caves">Die Höhlen, welche sich weit unter dem verlassenen Gefängnis erstrecken, sind sehr dünn besiedelt. Sie sind zu tief, um von der Stadt ausgebeutet zu werden und zu arm an Mineralien, um das Interesse der Zwerge zu entfachen. Vor langer Zeit befand sich hier ein Handelaußenposten, doch dieser zerfiel, als die Metropole der Zwerge unterging. Hier leben nur noch Gnolle und unterirdische Tiere.</string>
   <string name="WndStory_Metropolis">Die Metropole der Zwerge war einst einer der größten Zwergenstadtstaaten. In ihrer Glanzzeit schaffte es die mechanisierte Zwergenarmee die Invasion der alten Götter mit ihrer Dämonenschar abzuwehren. Doch man erzählt sich auch, dass die wiederkehrenden Krieger den Samen der Korruption in sich trugen und dass der Sieg der Anfang des Endes für das gesamte unterirdische Königreich war.</string>
   <string name="WndStory_Halls">In der Vergangenheit waren dies die Randgebiete der Metropole. Nach dem kostenspieligen Sieg in der Schlacht gegen die Alten Götter waren die Zwerge zu geschwächt, um die übrigen Dämonen zu beseitigen. Nach und nach haben die Dämonen ihren Griff um dieses Gebiet gefestigt, welches nun die Hallen der Dämonen genannt wird.\n\nNur sehr wenige Abenteurer sind jemals hier her gekommen...</string>
-  <string name="WndStory_Spiders">Vor vielen, vielen Jahren gab es eine reichhaltige Mine, voll mit magischen Steinen. Aber als die Mineral-Minen erschöpft waren verliessen die Minenarbeiter die Mine und hinterliessen ein weites Netzwerk an Tunneln.
-Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen, lauernd in der Dunkelheit, waren nicht genug um die Mutigen und Wahnsinnigen davon abzuhalten, sehensüchtig nach den Schätzen zu suchen, die hier vieleicht zu finden sind. Für die Größe der Gefahr gibt es immer eine große Menge an Gerüchten über magische Artefakte. Vor langer Zeit wanderte mal eine böse Hexe in die Tunnel, um vor Hexenjägern zu flüchten. Die Abergläubischen wagten es nicht in die Dunkelheit zu treten. Also warteten sie. Aber niemand hat sie je wieder gesehen. Vieleicht hat die Hexe einen Weg raus gefunden, vieleicht hat sie sich an den Wachen vorbeigeschliechen... Oder sie starb, umgeben vom Rascheln der Kreaturen in der Dunkelheit.</string>
+  <string name="WndStory_Spiders">Vor vielen, vielen Jahren gab es eine reichhaltige Mine, voll mit magischen Steinen. Aber als die Mineral-Minen erschöpft waren verliessen die Minenarbeiter die Mine und hinterließen ein weites Netzwerk an Tunneln.
+Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen, lauernd in der Dunkelheit, waren nicht genug um die Mutigen und Wahnsinnigen davon abzuhalten, sehensüchtig nach den Schätzen zu suchen, die hier vielleicht zu finden sind. Für die Größe der Gefahr gibt es immer eine große Menge an Gerüchten über magische Artefakte. Vor langer Zeit wanderte mal eine böse Hexe in die Tunnel, um vor Hexenjägern zu flüchten. Die Abergläubischen wagten es nicht in die Dunkelheit zu treten. Also warteten sie. Aber niemand hat sie je wieder gesehen. Vielleicht hat die Hexe einen Weg raus gefunden, vielleicht hat sie sich an den Wachen vorbeigeschliechen... Oder sie starb, umgeben vom Rascheln der Kreaturen in der Dunkelheit.</string>
   <string name="WndTradeItem_Sale">IM ANGEBOT: %1$s - %2$dg</string>
   <string name="WndTradeItem_Buy">Kaufen für %dg</string>
   <string name="WndTradeItem_Sell">Verkaufen für %dg</string>
@@ -505,7 +505,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="Weightstone_WndCancel">Vergiss es</string>
   <string name="Bag_ACOpen">ÖFFNEN</string>
   <string name="Keyring_Name">Schlüsselbund</string>
-  <string name="Keyring_Info">Das ist ein Schlüsselbund aus Kupfer, der all deine Schlüssel seperat zusammenhält.</string>
+  <string name="Keyring_Info">Das ist ein Schlüsselbund aus Kupfer, der all deine Schlüssel separat zusammenhält.</string>
   <string name="ScrollHolder_Name">Schriftrollenhalter</string>
   <string name="ScrollHolder_Info">Du kannst eine beliebige Anzahl an Schriftrollen in diesem röhrenförmigen Behälter aufbewahren. Es spart Platz und beschützt die Schriftrollen vor Feuer.</string>
   <string name="SeedPouch_Name">Samenbeutel</string>
@@ -677,7 +677,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="PseudoRat_Name">Pseudo-Ratte</string>
   <string name="PseudoRat_Gender">weiblich</string>
   <string name="PseudoRat_Name_Objective">Pseudo-Ratte</string>
-  <string name="PseudoRat_Desc">Ein entsetzliches Biest, dass sich aus der Leiche der Ratte herausgeschält hat und jede Ähnlichkeit, mit einem Nagetier oder irgend einem anderen Tier, das du je gesehen hast, entbehrt.</string>
+  <string name="PseudoRat_Desc">Ein entsetzliches Biest, dass sich aus der Leiche der Ratte herausgeschält hat und jede Ähnlichkeit, mit einem Nagetier oder irgendeinem anderen Tier, das du je gesehen hast, entbehrt.</string>
   <string name="ZombieGnoll_Info">Zombie-Gnoll ist vom Tod auferstanden!</string>
   <string name="HeartOfDarkness_Name">Herz der Dunkelheit</string>
   <string name="HeartOfDarkness_Info">Das schwarz pulsierende Herz des heimtückischen Geistes.</string>
@@ -688,7 +688,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="Badges_SpiderQueen_Slain">Spinnenkönigin getötet</string>
   <string name="TomeOfMastery_WayAlreadyChosen">Du kannst deine Klasse nicht mehr ändern!</string>
   <string name="BlackSkullOfMastery_Name">Der Seelenbringer</string>
-  <string name="BlackSkullOfMastery_Info">Ein uraltes Artefakt, erschaffen von den ersten Nekromanten, die die Seelen der Gefallenen sammelten. Es hat deine Nekromantischen Fähigkeiten wahrgenommen und sich mit einem starken Zauber geschützt. Da es ein alter Zauber ist, ist er von primitiver Struktur, und ist einfach zu brechen. </string>
+  <string name="BlackSkullOfMastery_Info">Ein uraltes Artefakt, erschaffen von den ersten Nekromanten, die Seelen der Gefallenen sammelten. Es hat deine Nekromantischen Fähigkeiten wahrgenommen und sich mit einem starken Zauber geschützt. Da es ein alter Zauber ist, ist er von primitiver Struktur, und ist einfach zu brechen. </string>
   <string name="BlackSkullOfMastery_Title">Du könntest den Zauberspruch kaputt machen. Oder du könntest die magische Formel so verändern, dass du den Spruch und das Artefakt in dich aufnimmst und dich in einen Lich verwandelst.</string>
   <string name="BlackSkullOfMastery_Lich">Werde zum Lich</string>
   <string name="BlackSkullOfMastery_Necromancer">Zerstöre den Zauber</string>
@@ -749,7 +749,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="RottenFish_Info">Vergammelter Fisch, riecht fürchterlich</string>
   <string name="RottenFish_Taste">Widerlich!</string>
   <string name="gdpr_title">Personalisiere deine Werbe-Erfahrung</string>
-  <string name="gdpr_text">Remixes Dungeon personalisiert deine Werbung mithilfe von Admob und Appodeal (weitere Werbe-Anbieter). Werbe-Anbierter und ihre Partner können personalisierte Daten wie Gerätedaten, Demographie und interest Daten sammel umd verarbeiten um dir auf dich zugeschnittene Werbung zu zeigen. Bei Zustimmung zu dieser verbesserten Werbe-Erfahrung siehst du Werbung, bei der Werbe-Anbieter und ihre Partner glauben, dass diese relevanter für dich sind.\n\nBei Zustimmung bestätigst du, dass du über 16 Jahre alt bist und personalisierte Werbung empfangen möchtest.\n\n</string>
+  <string name="gdpr_text">Remixes Dungeon personalisiert deine Werbung mithilfe von Admob und Appodeal (weitere Werbe-Anbieter). Werbe-Anbierter und ihre Partner können personalisierte Daten wie Gerätedaten, Demographie und interest Daten sammel und verarbeiten um dir auf dich zugeschnittene Werbung zu zeigen. Bei Zustimmung zu dieser verbesserten Werbe-Erfahrung siehst du Werbung, bei der Werbe-Anbieter und ihre Partner glauben, dass diese relevanter für dich sind.\n\nBei Zustimmung bestätigst du, dass du über 16 Jahre alt bist und personalisierte Werbung empfangen möchtest.\n\n</string>
   <string name="gdpr_agree">Ja, ich Stimme zu</string>
   <string name="gdpr_disagree">Nein danke</string>
   <string name="gdpr_choose">Bitte wähle</string>
@@ -811,7 +811,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="PoisonArrow_Info">Tödliche Gifttropfen glänzen auf der Pfeilspitze. </string>
   <string name="PoisonArrow_Gender">weiblich</string>
   <string name="ParalysisArrow_Name">Lähmender Pfeil</string>
-  <string name="ParalysisArrow_Info">Dieser Pfeil ist ist mit Curare beschichtet.</string>
+  <string name="ParalysisArrow_Info">Dieser Pfeil ist mit Curare beschichtet.</string>
   <string name="ParalysisArrow_Gender">weiblich</string>
   <string name="FrostArrow_Name">Frostpfeil</string>
   <string name="FrostArrow_Info">Du fühlst eine eiskalte Aura, welche von der Pfeilspitze ausgeht.</string>
@@ -954,7 +954,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="HeroSubClass_NameWard">Bewahrer</string>
   <string name="HeroSubClass_DescWard">_Bewahrer_ haben eine starke Bindung zu den Kräften der Natur. Sie besitzen die Fähigkeit, Tautropfen und Samen von Pflanzen zu sammeln. Zusätzlich erhalten sie eine temporäre Rüstungsverbesserung, wenn sie hohes Gras niedertreten.</string>
   <string name="HeroSubClass_NameScout">Späher</string>
-  <string name="HeroSubClass_DescScout">Elfen_Späher_sind Meister der Heimlichkeit. Wenn sie hohes Gras zertrampeln, gewährt ihnen dies einen vorrübergehenden Unsichtbarkeitseffekt. Ausserdem sind sie noch schneller als normale Elfen.</string>
+  <string name="HeroSubClass_DescScout">Elfen_Späher_sind Meister der Heimlichkeit. Wenn sie hohes Gras zertrampeln, gewährt ihnen dies einen vorübergehenden Unsichtbarkeitseffekt. Außerdem sind sie noch schneller als normale Elfen.</string>
   <string name="HeroSubClass_NameShaman">Schamane</string>
   <string name="HeroSubClass_DescShaman">Elfen_Schamanen_ können Zauberstäbe als Nahkampfwaffe benutzen. Erfolgreiche Treffer haben die Chance, die Fahigkeit des Zauberstabes auf ein Ziel zu wirken, ohne eine Ladung zu benutzen.</string>
   <string name="SantaHat_Name">Weihnachtsmann Hut</string>
@@ -964,7 +964,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="Kobold_Name">Kobold</string>
   <string name="Kobold_Gender">männlich</string>
   <string name="Kobold_Name_Objective">Kobold</string>
-  <string name="Kobold_Desc">Kobolde sind bekannt aber eine Legende zugleich. Als Vorfahren von Gnolls leben Kobolde in tiefen und kalten Hölen. Es wird geglaubt, dass ihre Leute schon lange vor den Zwergen die Technik und den Maschinenbau beherrschten. Trotzdem weiss niemand, warum sie vor vielen Jahren verschwanden...</string>
+  <string name="Kobold_Desc">Kobolde sind bekannt aber eine Legende zugleich. Als Vorfahren von Gnolls leben Kobolde in tiefen und kalten Hölen. Es wird geglaubt, dass ihre Leute schon lange vor den Zwergen die Technik und den Maschinenbau beherrschten. Trotzdem weiß niemand, warum sie vor vielen Jahren verschwanden...</string>
   <string name="KoboldIcemancer_Name">Kobold-Eiszauberer</string>
   <string name="KoboldIcemancer_Gender">männlich</string>
   <string name="KoboldIcemancer_Name_Objective">Kobold-Eiszauberer</string>
@@ -1093,7 +1093,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="MissileWeapon_Yes">Ja, ich weiß was ich tue.</string>
   <string name="MissileWeapon_No">Nein, ich habe meine Meinung geändert.</string>
   <string name="MissileWeapon_Sure">Willst du es wirklich als Nahkampfwaffe ausrüsten?</string>
-  <string name="MissileWeapon_Info1">\n\nDer durschnittliche Schaden dieser Waffe ist %d punkte pro Treffer.</string>
+  <string name="MissileWeapon_Info1">\n\nDer durchschnittliche Schaden dieser Waffe ist %d punkte pro Treffer.</string>
   <string name="MissileWeapon_Info2">Aufgrund deiner unzulänglichen Stärke sind die Angriffsgenauigkeit und -geschwindigkeit des %s verringert.</string>
   <string name="MissileWeapon_Info3">Aufgrund deiner übermäßigen Stärke sind die Angriffsgenauigkeit und -geschwindigkeit des %s erhöht.</string>
   <string name="MissileWeapon_Info4">\n\nDu hast dein %s ausgerüstet.</string>
@@ -1155,7 +1155,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="Albino_Name">Albino Ratte</string>
   <string name="Albino_Gender">männlich</string>
   <string name="Albino_Name_Objective">Albino Ratte</string>
-  <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte scheint ein Albino zu sein. Sie hat ausserdem aussergewöhnlich scharfe Zähne.</string>
+  <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte scheint ein Albino zu sein. Sie hat außerdem außergewöhnlich scharfe Zähne.</string>
   <string name="Bandit_Name">Verrückter Bandit</string>
   <string name="Bandit_Gender">männlich</string>
   <string name="Bandit_Name_Objective">Verrückter Bandit</string>
@@ -1335,7 +1335,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
   <string name="SpiderEgg_Name">Spinnenei</string>
   <string name="SpiderEgg_Gender">geschlechtslos</string>
   <string name="SpiderEgg_Name_Objective">Spinnenei</string>
-  <string name="SpiderEgg_Desc">Dieses zerbrechliche Ei pulsiert sanft, im seinem Inneren kann man etwas mit vielen Beinen sehen</string>
+  <string name="SpiderEgg_Desc">Dieses zerbrechliche Ei pulsiert sanft, in seinem Inneren kann man etwas mit vielen Beinen sehen</string>
   <string name="SpiderNest_Name">Spinnenkokon</string>
   <string name="SpiderNest_Gender">geschlechtslos</string>
   <string name="SpiderNest_Name_Objective">Spinnenkokon</string>
@@ -1371,7 +1371,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
   <string name="Crystal_Name">Fließender Kristall</string>
   <string name="Crystal_Gender">männlich</string>
   <string name="Crystal_Name_Objective">Fließender Kristall</string>
-  <string name="Crystal_Desc">Ein grosser leuchtender Kristall schwebt in der Luft. Wahrscheinlich steckt ein starker Zauber drin.</string>
+  <string name="Crystal_Desc">Ein großer leuchtender Kristall schwebt in der Luft. Wahrscheinlich steckt ein starker Zauber drin.</string>
   <string name="SpiderArmor_Name">Spinnenrüstung</string>
   <string name="SpiderArmor_Info">Diese Rüstung besteht aus alten Spinnenkörpern und einem seltsamen Stoff. Überraschenderweise scheint es noch funktionsfähige Spinndrüsen zu enthalten. Wenn Du genügend Druck auf diese ausübst, verschießen sie Spinnweben. Die stachelige Oberfläche der Schuhsohlen erlaubt es dir, auf diesem Netz frei zu gehen.</string>
   <string name="SpiderArmor_Gender">weiblich</string>
@@ -1435,9 +1435,9 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="TrapWnd_Title">Falle</string>
   <string name="TrapWnd_Step">Willst du wirklich auf diese Falle treten? Du könntest womöglich sterben.</string>
   <string name="BadgesScene_Title">Deine Medallien</string>
-  <string name="Badges_Info1">Medallie erhalten: %s</string>
-  <string name="Badges_Info2">Neue Super Medallie: %s</string>
-  <string name="Badges_Info3">Neue Medallie: %s</string>
+  <string name="Badges_Info1">Medaille erhalten: %s</string>
+  <string name="Badges_Info2">Neue Super Medaille: %s</string>
+  <string name="Badges_Info3">Neue Medaille: %s</string>
   <string name="Badges_MonsterSlain1">10 Gegner getötet</string>
   <string name="Badges_MonsterSlain2">50 Gegner getötet</string>
   <string name="Badges_MonsterSlain3">150 Gegner getötet</string>
@@ -1634,7 +1634,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="WndMovieTheatre_Watch">Schaue einen Film</string>
   <string name="WndMovieTheatre_No">Verlassen</string>
   <string name="WndMovieTheatre_Bye">Komm jederzeit zurück, wir freuen uns auf dich!</string>
-  <string name="WndMovieTheatre_Instruction">Hallo und herzlich willkommen in unserem Film Theater! Wir bieten einen speziellen Service an. Du kannst hier kostenlos ein Video schauen und wenn du es zuende geschaut hast, erhältst du %d Münzen.</string>
+  <string name="WndMovieTheatre_Instruction">Hallo und herzlich willkommen in unserem Film Theater! Wir bieten einen speziellen Service an. Du kannst hier kostenlos ein Video schauen und wenn du es zu Ende geschaut hast, erhältst du %d Münzen.</string>
   <string name="WndMovieTheatre_Title">Kino</string>
   <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
   <string name="WndPriest_Heal">Heilen -%d Gold</string>
@@ -1773,7 +1773,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="Blacksmith_GetLost">Ich bin beschäftigt. Verschwinde!</string>
   <string name="Blacksmith_LooksBetter">Dein/e %s schaut nun besser aus</string>
   <string name="Blacksmith_Verify1">Wähle 2 verschiedene Gegenstände aus, nicht zweimal den Selben!</string>
-  <string name="Blacksmith_Verify2">Wähle 2 Gegenstände der selben Art aus!</string>
+  <string name="Blacksmith_Verify2">Wähle 2 Gegenstände derselben Art aus!</string>
   <string name="Blacksmith_Verify3">Ich muss wissen, womit ich arbeite. Identifiziere sie erst!</string>
   <string name="Blacksmith_Verify4">Ich arbeite nicht mit verfluchten Gegenständen!</string>
   <string name="Blacksmith_Verify5">Das ist Müll, die Qualität ist zu schlecht!</string>
@@ -1819,7 +1819,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="RatKing_Info3">Wie kannst du kümmerliche Kreatur es wagen unseren Rattenkönig zu stören.</string>
   <string name="RatKing_Died">Der König ist tot. Lang lebe der König!</string>
   <string name="Shopkeeper_Name">Verkäufer</string>
-  <string name="Shopkeeper_Desc">Dieser dicke Typ sieht eher danach aus als würde er in einer grossen Stadt handel treiben als in einem Verliess.
+  <string name="Shopkeeper_Desc">Dieser dicke Typ sieht eher danach aus als würde er in einer großen Stadt handel treiben als in einem Verließ.
 Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
   <string name="Shopkeeper_Sell">Wähle einen Gegenstand zum Verkaufen</string>
   <string name="WandMaker_Name">alter Zauberstabmacher</string>
@@ -2304,7 +2304,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="HeroClass_MagPerks_5">Schriftrollen der Identifikation sind von Beginn an identifiziert.</string>
   <string name="HeroClass_RogPerks_0">Schurken beginnen mit einem Schattenring+1.</string>
   <string name="HeroClass_RogPerks_1">Schurken identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </string>
-  <string name="HeroClass_RogPerks_2">Schurken sind am besten mit leichter Rüstung, weichen besser aus, wenn sie sie tragen </string>
+  <string name="HeroClass_RogPerks_2">Schurken sind am besten mit leichter Rüstung, weichen besser aus, wenn sie tragen </string>
   <string name="HeroClass_RogPerks_3">Schurken sind am besten im versteckte Türen und Fallen finden</string>
   <string name="HeroClass_RogPerks_4">Schurken können es länger ohne Essen aushalten </string>
   <string name="HeroClass_RogPerks_5">Schriftrollen des Vermessens sind schon zu Beginn bekannt. </string>
@@ -2378,13 +2378,13 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="Codex_Story_23">Dieses Buch ist in der Sprache der Zwerge geschrieben</string>
   <string name="Codex_Story_24">Dieses Buch ist in der Sprache der Elfen geschrieben</string>
   <string name="Codex_Story_25">Sie stoppte, gefroren an der schweren Eichentür und sah das Licht um die Ränder der Tür.Daran erinnert sie sich aus einem dunklen Winkel in ihrem Geist.\n
-\"Sonnenlicht...\" Murmelt sie zu sich selbst. Wie lang ist es her? In der ewigen Dunkelheit des Dungeons, hat sie schon lange aufgegeben die Tage zu zählen. Das Licht scheint auf ihre ungenutzte Erinnerungen. Sie erinnert sich an ihr Training, lange anstrengende Tage mit Übungen und Karten erstellen. Sie erinnert sich an an ihre Mantras und Disziplinen die ihr erlauben den Anschein der Geistigen Gesundheit zu wahren, als sie die unbekannten Tiefen ausgelotet hat. An was sie sich nicht erinnern kann, sind Menschen.\n
+\"Sonnenlicht...\" Murmelt sie zu sich selbst. Wie lang ist es her? In der ewigen Dunkelheit des Dungeons, hat sie schon lange aufgegeben die Tage zu zählen. Das Licht scheint auf ihre ungenutzte Erinnerungen. Sie erinnert sich an ihr Training, lange anstrengende Tage mit Übungen und Karten erstellen. Sie erinnert sich an ihre Mantras und Disziplinen die ihr erlauben den Anschein der Geistigen Gesundheit zu wahren, als sie die unbekannten Tiefen ausgelotet hat. An was sie sich nicht erinnern kann, sind Menschen.\n
 Sie erinnert sich an ihre Stimmen, ihre Befehle und ihre Warnungen, aber nicht ihre Gesichter, oder ihre Berührung.\n
 Schmerz hat sie trainiert. Erinnere dich an dich an die Gefahren, immer die Gefahren. Wilde Tiere, Untote, verrückte Räuber und Geschickte Ninjas sind vor ihr gefallen. Sie hat sich ihren Weg durch Abscheulichkeiten, Dämonen, Uhrwerk-Abscheulichkeiten und verrückte Nekromanten geschnitten, verbrannt, erstochen und vergiftet. Sogar Götter sind vor ihr Gefallen.\n
 Sie hat Yog durch Himmel und Hölle verfolgt, bevor sein korrumpierendes Flüstern für immer verstummt ist. Sogar dann war noch Arbeit da, die erledigt werden will. Yog war ein Diener eines verborgenen und mächtigeren als sich selbst.\n
 Also forschte sie weiter und tiefer. Der alte Zauberjournal, der immer noch Energie abstrahlt, zeigte ihr den Weg. Mit der Magie in diesen Seiten, reiste sie in wildes neues Land, wo ein kleines Dorf sich in einem Wald niedergelassen hat. Dort, fand sie endlich die Labyrinthquelle des Bösen und tötete alle, die ihr im Weg standen.\n
 Nun im schwachen Tageslicht, fand sie sich selbst in einem Pool aus Höhlenwasser. Ihr Körper war durch Magie verzerrt worden. Ihre Haut, weiß und fast durchsichtig war mit Erde, Schmutz und Ruß verdreckt. Ihre Halskette aus Ringen könnte einen König Freikaufen und ihr Holster voller Stäbe enthielt genug Magische Energie um Armeen zu verschwenden. Sie nahm ihre Waffen, womit sie sogar die größten Götter töten könnte. Wahrhaftig ist sie ein Meister dieses dunklen Reichs geworden, dem Ödland der Verzweiflung.\n
-Sie jagte das Böse in die fernen Ecken des Multiversum, aber jetzt ist sie gelähmt durch Angst. Was wenn sie sie zurückweisen? Was wenn nicht? Wie könnte sie jetzt mit diesen Leuten interagieren? Sie hat vergessen, wie oft der Tod sie erobert hat, um dann von ihrem eisigen Griff zurückgezogen zu werden.\n
+Sie jagte das Böse in die fernen Ecken des Multiversum, aber jetzt ist sie gelähmt durch Angst. Was wenn sie zurückweisen? Was wenn nicht? Wie könnte sie jetzt mit diesen Leuten interagieren? Sie hat vergessen, wie oft der Tod sie erobert hat, um dann von ihrem eisigen Griff zurückgezogen zu werden.\n
 Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihrem spärlichen Licht weg und stieg hinab in die Dunkelheit, vielleicht für das letzte Mal.\n
 \n\n\tby drazool von Reddit
 </string>

@@ -175,7 +175,7 @@
   <string name="WandOfLightning_Name">Varita de Relámpago</string>
   <string name="WandOfLightning_Info">Esta varita evoca arcos mortales de electricidad, que hacen daño a varias criaturas que estén paradas cerca una de otra.</string>
   <string name="WandOfLightning_Info1">Te has suicidado con tu propia Varita de Relámpago...</string>
-  <string name="WandOfMagicMissile_Name">Varita de Misil Magico</string>
+  <string name="WandOfMagicMissile_Name">Varita de Misil Mágico</string>
   <string name="WandOfMagicMissile_Info">Esta varita lanza misiles de energía mágica pura, haciendo daño moderado a una criatura objetivo.</string>
   <string name="WandOfMagicMissile_ACDisenchant">DESENCANTAR</string>
   <string name="WandOfMagicMissile_Info1">Te has suicidado con tu propia Varita de Misil Mágico...</string>
@@ -314,7 +314,7 @@
   <string name="Journal_WellAwareness">Pozo de la Conciencia</string>
   <string name="Journal_WellTransmut">Pozo de la Transmutación</string>
   <string name="Journal_Alchemy">Olla de alquimia</string>
-  <string name="Journal_Garden">Jardin</string>
+  <string name="Journal_Garden">Jardín</string>
   <string name="Journal_Statue">Estatua con vida</string>
   <string name="Journal_Ghost">Fantasma triste</string>
   <string name="Journal_Wandmaker">Viejo creador de varas</string>
@@ -605,7 +605,7 @@
   <string name="WndSettings_TextScaleDefault">Fuente por defecto</string>
   <string name="WndSettings_ScaleUp">Escalar UI</string>
   <string name="WndSettings_Immersive">Modo inmersivo</string>
-  <string name="WndSettings_Music">Musica</string>
+  <string name="WndSettings_Music">Música</string>
   <string name="WndSettings_Sound">Sonido</string>
   <string name="WndSettings_Brightness">Brillo</string>
   <string name="WndSettings_SwitchPort">Cambiar a horizontal</string>
@@ -623,7 +623,7 @@
   <string name="AzuterronNPC_Name_Objective">Desconocido</string>
   <string name="AzuterronNPC_Desc">Una misteriosa figura cubierta por niebla negra.</string>
   <string name="AzuterronNPC_Quest_Reminder">Ayudame y te ayudaré.</string>
-  <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te sera útil.</string>
+  <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te será útil.</string>
   <string name="Journal_Azuterron">Desconocido</string>
   <string name="TreacherousSpirit_Name">Espíritu traicionero</string>
   <string name="TreacherousSpirit_Gender">masculino</string>
@@ -889,7 +889,7 @@
   <string name="HeroClass_Hun">cazadora</string>
   <string name="HeroClass_Elf">elfo</string>
   <string name="HeroSubClass_NameGlad">gladiador</string>
-  <string name="HeroSubClass_DescGlad">Un ataque con exito con un arma cuerpo a cuerpo permite al _Gladiador_ empezar un combo, con lo que cada golpe consecutivo causa más daño.</string>
+  <string name="HeroSubClass_DescGlad">Un ataque con éxito con un arma cuerpo a cuerpo permite al _Gladiador_ empezar un combo, con lo que cada golpe consecutivo causa más daño.</string>
   <string name="HeroSubClass_NameBers">berserker</string>
   <string name="HeroSubClass_DescBers">Cuando está seriamente herido, el _Berserker_ entra en un estado de furia salvaje que aumente el daño causado.</string>
   <string name="HeroSubClass_NameWarL">brujo</string>
@@ -958,7 +958,7 @@
   <string name="IceKey_Name">llave de hielo</string>
   <string name="IceKey_Info">Esta llave parece estar hecha de hielo, aún así es tan dura como el acero.</string>
   <string name="WandOfIcebolt_Name">Varita de Hielo</string>
-  <string name="WandOfIcebolt_Info">Esta varita lanza un misil de hielo, causando un ligero daño daño a su objetivo. Tiene la posibilidad de ralentizar o congelar su objetivo.</string>
+  <string name="WandOfIcebolt_Info">Esta varita lanza un misil de hielo, causando un ligero daño a su objetivo. Tiene la posibilidad de ralentizar o congelar su objetivo.</string>
   <string name="WandOfIcebolt_Info1">Te has suicidado con tu propia Varita de Hielo...</string>
   <string name="Badges_Ice_Guardian_Slain">Guardián de Hielo Cazado</string>
   <string name="GoldenSword_Name">espada dorada</string>
@@ -1578,7 +1578,7 @@
   <string name="ServiceManNPC_Desc">Un trabajador de los establecimientos locales.</string>
   <string name="TownShopkeeper_Name">comerciante</string>
   <string name="TownShopkeeper_Desc">Este tipo es un comerciante típico. Usted puede decir que ya conoce los precios.</string>
-  <string name="WndMovieTheatre_Watch">mirar una pelicula</string>
+  <string name="WndMovieTheatre_Watch">mirar una película</string>
   <string name="WndMovieTheatre_No">salir</string>
   <string name="WndMovieTheatre_Bye">¡Vuelve cuando quieras, siempre estaremos felices de verte!</string>
   <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenido a nuestro cine! Ofrecemos un servicio especial, puedes ver una película de manera gratuita, y si lo ves todo !usted será recompensado con %d monedas de oro!</string>
@@ -1696,7 +1696,7 @@
   <string name="Halberd_Info">Un arma de asta con una hacha en el extremo del poste.</string>
   <string name="Halberd_Gender">femenino</string>
   <string name="WoodenCrossbow_Name">Ballesta de madera</string>
-  <string name="WoodenCrossbow_Info">Una básica ballesta de madera, parece que fué diseñada para disparar flechas de arco.</string>
+  <string name="WoodenCrossbow_Info">Una básica ballesta de madera, parece que fue diseñada para disparar flechas de arco.</string>
   <string name="WoodenCrossbow_Gender">masculino</string>
   <string name="CompositeCrossbow_Name">Ballesta compuesta</string>
   <string name="CompositeCrossbow_Info">Esta ballesta reforzada es una herramienta más eficaz comparandola con una hecha de madera.</string>
@@ -2283,7 +2283,7 @@
   <string name="Codex_Story_15">Arma vampiro - Un golpe exitoso, puede curar al parcialmente al héroe en base al daño producido al enemigo.</string>
   <string name="Codex_Story_16">Arma de la suerte - Puede ignorar por completo la armadura del enemigo y hacer mucho mas daño.</string>
   <string name="Codex_Story_17">Arma contundente - Un golpe exitoso, puede paralizar al objetivo.</string>
-  <string name="Codex_Story_18">Arma perforante -  Un golpe exitoso, puede dañar a los enemigos en linea recta detrás del objetivo.</string>
+  <string name="Codex_Story_18">Arma perforante -  Un golpe exitoso, puede dañar a los enemigos en línea recta detrás del objetivo.</string>
   <string name="Codex_Story_19">Arma venenosa - Un golpe exitoso, puede envenenar al objetivo.</string>
   <string name="Codex_Story_20">Arma congelante - Un golpe exitoso, puede ralentizar al enemigo y prevenir que se queme.</string>
   <string name="Codex_Story_21">Arma salvaje - Un golpe exitoso, puede dañar los enemigos cercanos al objetivo.</string>

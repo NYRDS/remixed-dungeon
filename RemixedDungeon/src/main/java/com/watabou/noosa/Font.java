@@ -203,8 +203,8 @@ public class Font extends TextureFilm {
 					.replaceAll("[çć]", "c")
 					.replace("Ł", "L")
 					.replace("ł", "l")
-					.replace("Ś", "S")
-					.replace("ś", "s");
+					.replaceAll("[ŚŞ]", "S")
+					.replaceAll("[śş]", "s");
 
 			tmp = str.charAt(0);
 			rec = super.get((int)(autoUppercase ? Character.toUpperCase(tmp) : tmp));
