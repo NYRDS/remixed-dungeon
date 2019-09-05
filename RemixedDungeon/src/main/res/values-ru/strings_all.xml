@@ -2227,7 +2227,7 @@
   <string name="town_deco_entrance_desc">Проход к верхним уровням подземелья.</string>
   <string name="town_deco_exit_name">Выход</string>
   <string name="town_deco_exit_desc">Что же ждет тебя там внизу?</string>
-  <string name="town_deco_tile_name">Слот</string>
+  <string name="town_deco_tile_name">Плитка</string>
   <string name="town_deco_tile_desc">Время не пощадило эти плитки. </string>
   <string name="town_deco_snowdrift_name">Сугроб</string>
   <string name="town_deco_snowdrift_desc">Огромный сугроб и похоже убирать его никто не собирается.</string>
@@ -2530,7 +2530,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Scroll_Runes_15">ДАГАЗ</string>
   <string name="HeroClass_GnollPerks_0">Гноллы стартуют с 15 очками силы</string>
   <string name="HeroClass_GnollPerks_1">Гноллы стартуют с 5 очками здоровья</string>
-  <string name="HeroClass_GnollPerks_2">Гноллы стартуют без брони, зато с уникальным томагавком</string>
   <string name="HeroClass_GnollPerks_3">Гноллы не умеют читать или писать</string>
   <string name="HeroClass_GnollPerks_4">Гноллы не атакуют других Гноллов просто так</string>
   <string name="Potion_Colors_0">голубое</string>
