@@ -41,6 +41,7 @@ import com.watabou.pixeldungeon.windows.WndStory;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.concurrent.FutureTask;
 
 public class InterlevelScene extends PixelScene {
 
@@ -68,17 +69,11 @@ public class InterlevelScene extends PixelScene {
 
     private Text message;
 
-    private LevelChanger levelChanger;
+    private FutureTask<Boolean> levelChanger;
 
     volatile private String error = null;
 
-    class LevelChanger implements InterstitialPoint, Runnable {
-        private volatile boolean ready;
-
-        @Override
-        public void returnToWork(boolean result) {
-            ready = true;
-        }
+    class LevelChanger implements Runnable {
 
         @Override
         public void run() {
@@ -109,12 +104,6 @@ public class InterlevelScene extends PixelScene {
             } catch (IOException e) {
                 EventCollector.logException(e);
                 error = Game.getVar(R.string.InterLevelScene_ErrorGeneric) + "\n" + e.getMessage();
-            }
-
-            if (mode != Mode.CONTINUE) {
-                Ads.displayEasyModeSmallScreenAd(this);
-            } else {
-                returnToWork(true);
             }
         }
     }
@@ -158,7 +147,7 @@ public class InterlevelScene extends PixelScene {
         phase = Phase.FADE_IN;
         timeLeft = TIME_TO_FADE;
 
-        levelChanger = new LevelChanger();
+        levelChanger = new FutureTask<>(new LevelChanger(), true);
         Game.instance().executor.execute(levelChanger);
     }
 
@@ -183,7 +172,7 @@ public class InterlevelScene extends PixelScene {
             case FADE_IN:
                 message.alpha(1 - p);
                 if ((timeLeft -= Game.elapsed) <= 0) {
-                    if (error == null && levelChanger.ready) {
+                    if (error == null && levelChanger.isDone()) {
                         phase = Phase.FADE_OUT;
                         timeLeft = TIME_TO_FADE;
                     } else {
@@ -205,7 +194,7 @@ public class InterlevelScene extends PixelScene {
                 break;
 
             case STATIC:
-                if (levelChanger.ready) {
+                if (levelChanger.isDone()) {
                     phase = Phase.FADE_OUT;
                 }
                 break;

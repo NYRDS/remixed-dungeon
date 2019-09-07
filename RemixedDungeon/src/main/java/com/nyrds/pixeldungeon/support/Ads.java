@@ -13,10 +13,6 @@ public class Ads {
         return (Game.width() < 400 || Game.height() < 400);
     }
 
-    private static boolean needDisplaySmallScreenEasyModeIs() {
-        return Game.getDifficulty() == 0 && isSmallScreen() && RemixedDungeon.donated() == 0;
-    }
-
     public static void displayEasyModeBanner() {
         if (!isSmallScreen()) {
             AdsUtilsCommon.displayTopBanner();
@@ -33,13 +29,5 @@ public class Ads {
 
     public static void displaySaveAndLoadAd(final InterstitialPoint work) {
         AdsUtilsCommon.showInterstitial(work);
-    }
-
-    public static void displayEasyModeSmallScreenAd(final InterstitialPoint work) {
-        if (needDisplaySmallScreenEasyModeIs()) {
-            AdsUtilsCommon.showInterstitial(work);
-        } else {
-            work.returnToWork(true);
-        }
     }
 }
