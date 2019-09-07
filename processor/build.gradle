@@ -1,10 +1,10 @@
 apply plugin: 'java'
 
 dependencies {
-    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
-    compileOnly 'com.google.auto.service:auto-service:1.0-rc4'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc6'
 
     compile project(path: ':annotation')
-    compile 'com.google.guava:guava:24.1-jre'
-    compile 'com.squareup:javapoet:1.11.1'
+    implementation 'com.google.guava:guava:28.1-jre'
+    implementation 'com.squareup:javapoet:1.11.1'
 }

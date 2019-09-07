@@ -309,11 +309,10 @@ public class InterlevelScene extends PixelScene {
             rescueMode = true;
             EventCollector.logException(cause, "enter rescue mode");
 
-            if(SaveUtils.slotUsed(SaveUtils.getPrevSave(),Dungeon.heroClass)) {
+            if(SaveUtils.slotUsed(SaveUtils.getPrevSave(), Dungeon.heroClass)) {
                 SaveUtils.loadGame(SaveUtils.getPrevSave(), Dungeon.heroClass);
             } else {
-                EventCollector.logException(cause,"no backup save");
-                error = Utils.format("Sorry, but there is no backup save for %s\n",Dungeon.heroClass.name());
+                Game.switchScene(TitleScene.class);
             }
             return;
         }

@@ -417,10 +417,6 @@ public abstract class Level implements Bundlable {
 	private static final String SECONDARY_EXIT = "secondaryExit";
 	private static final String OBJECTS        = "objects";
 
-	public static Level fromBundle(Bundle bundle, String key) {
-		return (Level) bundle.get(key);
-	}
-
 	public String levelKind() {
 		return this.getClass().getSimpleName();
 	}

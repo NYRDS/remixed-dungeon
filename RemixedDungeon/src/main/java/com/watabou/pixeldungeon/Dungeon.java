@@ -350,6 +350,7 @@ public class Dungeon {
     private static final String MOD          = "mod";
 
     public static void gameOver() {
+        SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(),heroClass);
         Dungeon.deleteGame(true);
     }
 
@@ -618,12 +619,7 @@ public class Dungeon {
 
         input.close();
 
-        if (bundle == null) {
-            EventCollector.logEvent("Dungeon.loadLevel", "read fail");
-            return newLevel(next);
-        }
-
-        Level level = Level.fromBundle(bundle, "level");
+        Level level = (Level) bundle.get("level");
         LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
 
         if (level == null) {
