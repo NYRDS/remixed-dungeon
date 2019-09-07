@@ -89,6 +89,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
 
@@ -107,7 +108,7 @@ public class Dungeon {
     public static Level level;
 
     public static  int depth;
-    private static boolean loading = false;
+    private static AtomicInteger loading = new AtomicInteger();
     private static long lastSaveTimestamp;
 
     public static  String  gameId;
@@ -205,24 +206,26 @@ public class Dungeon {
 
     @NotNull
     public static Level newLevel(Position pos) {
-        updateStatistics();
-        loading = true;
+        try {
+            loading.incrementAndGet();
+            updateStatistics();
 
-        if(!DungeonGenerator.isLevelExist(pos.levelId)) {
-            pos.levelId = DungeonGenerator.getEntryLevel();
-            pos.cellId = -1;
-            pos = DungeonGenerator.descend(pos);
+            if (!DungeonGenerator.isLevelExist(pos.levelId)) {
+                pos.levelId = DungeonGenerator.getEntryLevel();
+                pos.cellId = -1;
+                pos = DungeonGenerator.descend(pos);
+            }
+
+            Level level = DungeonGenerator.createLevel(pos);
+
+            Dungeon.hero.setPos(level.entrance);
+
+            Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
+
+            return level;
+        } finally {
+            loading.decrementAndGet();
         }
-
-        Level level = DungeonGenerator.createLevel(pos);
-
-        Dungeon.hero.setPos(level.entrance);
-
-        Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
-
-        loading = false;
-
-        return level;
     }
 
     public static void resetLevel() {
@@ -587,51 +590,56 @@ public class Dungeon {
     }
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
-        loading = true;
-        Bundle bundle = gameBundle(fileName);
+        try {
+            loading.incrementAndGet();
+            Bundle bundle = gameBundle(fileName);
 
-        loadGameFromBundle(bundle, fullLoad);
-        loading = false;
+            loadGameFromBundle(bundle, fullLoad);
+        }  finally {
+            loading.decrementAndGet();
+        }
     }
 
     public static Level loadLevel(Position next) throws IOException {
-        loading = true;
 
-        DungeonGenerator.loadingLevel(next);
+        try {
+            loading.incrementAndGet();
+            DungeonGenerator.loadingLevel(next);
 
-        String loadFrom = SaveUtils.depthFileForLoad(heroClass,
-                DungeonGenerator.getLevelDepth(next.levelId),
-                DungeonGenerator.getLevelKind(next.levelId),
-                next.levelId);
+            String loadFrom = SaveUtils.depthFileForLoad(heroClass,
+                    DungeonGenerator.getLevelDepth(next.levelId),
+                    DungeonGenerator.getLevelKind(next.levelId),
+                    next.levelId);
 
-        GLog.toFile("loading level: %s", loadFrom);
+            GLog.toFile("loading level: %s", loadFrom);
 
-        InputStream input;
+            InputStream input;
 
-        if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists()) {
-            input = new FileInputStream(FileSystem.getFile(loadFrom));
-        } else {
-            GLog.toFile("File %s not found!", loadFrom);
-            return newLevel(next);
+            if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists()) {
+                input = new FileInputStream(FileSystem.getFile(loadFrom));
+            } else {
+                GLog.toFile("File %s not found!", loadFrom);
+                return newLevel(next);
+            }
+
+            Bundle bundle = Bundle.read(input);
+
+            input.close();
+
+            Level level = (Level) bundle.get("level");
+            LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
+
+            if (level == null) {
+                level = newLevel(next);
+            }
+
+            level.levelId = next.levelId;
+            initSizeDependentStuff(level.getWidth(), level.getHeight());
+
+            return level;
+        } finally {
+            loading.decrementAndGet();
         }
-
-        Bundle bundle = Bundle.read(input);
-
-        input.close();
-
-        Level level = (Level) bundle.get("level");
-        LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
-
-        if (level == null) {
-            level = newLevel(next);
-        }
-
-        level.levelId = next.levelId;
-        initSizeDependentStuff(level.getWidth(), level.getHeight());
-
-        loading = false;
-
-        return level;
     }
 
     public static void deleteGame(boolean deleteLevels) {
@@ -844,7 +852,7 @@ public class Dungeon {
     }
 
     public static boolean isLoading() {
-        return hero==null || level == null || loading;
+        return hero==null || level == null || loading.get()>0;
     }
 
     public static boolean realtime() {

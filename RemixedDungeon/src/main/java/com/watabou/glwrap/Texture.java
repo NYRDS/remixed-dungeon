@@ -40,7 +40,11 @@ public class Texture {
 		int[] ids = new int[1];
 		GLES20.glGenTextures( 1, ids, 0 );
 		id = ids[0];
-		
+
+		if(id==0) {
+			throw new AssertionError();
+		}
+
 		//Log.i("texture",Utils.format("creating %d", id));
 		bind();
 	}
@@ -50,9 +54,6 @@ public class Texture {
 	}
 	
 	public void bind() {
-		if(id==0) {
-			throw new AssertionError();
-		}
 		GLES20.glBindTexture( GLES20.GL_TEXTURE_2D, id );
 	}
 	
@@ -69,11 +70,9 @@ public class Texture {
 	}
 	
 	public void delete() {
-		if(id != 0) {
-			int[] ids = {id};
-			GLES20.glDeleteTextures( 1, ids, 0 );
-			//Log.i("texture",Utils.format("deleting %d", id));
-		}
+		int[] ids = {id};
+		GLES20.glDeleteTextures( 1, ids, 0 );
+		//Log.i("texture",Utils.format("deleting %d", id));
 	}
 	
 	public void bitmap( Bitmap bitmap ) {

@@ -28,6 +28,9 @@ public class Shader {
 	
 	public Shader( int type ) {
 		handle = GLES20.glCreateShader( type );
+		if(handle==0){
+			throw new AssertionError();
+		}
 	}
 	
 	public int handle() {
