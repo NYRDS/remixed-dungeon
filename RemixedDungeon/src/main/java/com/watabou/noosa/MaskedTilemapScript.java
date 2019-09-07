@@ -57,6 +57,16 @@ public class MaskedTilemapScript extends Script {
 
     }
 
+
+    @Override
+    public void unuse() {
+        super.unuse();
+
+        aXY.disable();
+        aUV.disable();
+        aUV_mask.disable();
+    }
+
     @Override
     public void use() {
 
@@ -80,6 +90,15 @@ public class MaskedTilemapScript extends Script {
             return;
         }
 
+        if(vertices.limit() < 16 * size){
+            throw new AssertionError();
+        }
+
+        if(mask.limit() < 8 * size){
+            throw new AssertionError();
+        }
+
+
         vertices.position(0);
         aXY.vertexPointer(2, 4, vertices);
 
@@ -96,7 +115,6 @@ public class MaskedTilemapScript extends Script {
                 Quad.SIZE * size,
                 GLES20.GL_UNSIGNED_SHORT,
                 Quad.getIndices(size));
-
     }
 
     public void lighting(float rm, float gm, float bm, float am, float ra, float ga, float ba, float aa) {

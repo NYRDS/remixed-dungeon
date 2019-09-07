@@ -64,8 +64,16 @@ public class NoosaScript extends Script {
 		
 	}
 
-	public void drawElements( FloatBuffer vertices, ShortBuffer indices, int size ) {
-		
+	@Override
+	public void unuse() {
+		super.unuse();
+
+		aXY.disable();
+		aUV.disable();
+	}
+
+	public void drawElements(FloatBuffer vertices, ShortBuffer indices, int size ) {
+
 		vertices.position( 0 );
 		aXY.vertexPointer( 2, 4, vertices );
 		
@@ -73,11 +81,14 @@ public class NoosaScript extends Script {
 		aUV.vertexPointer( 2, 4, vertices );
 		
 		GLES20.glDrawElements( GLES20.GL_TRIANGLES, size, GLES20.GL_UNSIGNED_SHORT, indices );
-		
 	}
 	
 	public void drawQuad( FloatBuffer vertices ) {
-		
+
+		if(vertices.limit()<16){
+			throw new AssertionError();
+		}
+
 		vertices.position( 0 );
 		aXY.vertexPointer( 2, 4, vertices );
 		
@@ -89,11 +100,15 @@ public class NoosaScript extends Script {
 	}
 	
 	public void drawQuadSet( FloatBuffer vertices, int size ) {
-		
+
 		if (size == 0) {
 			return;
 		}
-		
+
+		if(vertices.limit() < 16 * size){
+			throw new AssertionError();
+		}
+
 		vertices.position( 0 );
 		aXY.vertexPointer( 2, 4, vertices );
 		
