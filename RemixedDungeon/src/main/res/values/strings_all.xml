@@ -2535,8 +2535,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     remix.29.1\n
     - Modding:\n
     -- Moddable item spawn rate\n
+    - Translations:\n
+    --Hungarian translation added\n
     - Bugs fixed\n
-  </string>
+    </string>
   <string name="town_deco_stone_wall_broken_name">Broken wall</string>
   <string name="town_deco_stone_wall_broken_desc">Old stone wall, in bad condition</string>
 </resources>

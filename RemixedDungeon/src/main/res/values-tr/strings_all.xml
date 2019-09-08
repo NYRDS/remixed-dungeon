@@ -2419,6 +2419,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Scroll_Runes_15">DAGAZ</string>
   <string name="HeroClass_GnollPerks_0">Gnollar 15 güç puanı ile başlarlar</string>
   <string name="HeroClass_GnollPerks_1">Gnollar 5 can puanı ile başlarlar</string>
+  <string name="HeroClass_GnollPerks_2">Gnollar zırhsız ama kendine özgün savaş baltalarıyla başlarlar</string>
   <string name="HeroClass_GnollPerks_3">Gnollar okuyamaz ya da yazamazlar</string>
   <string name="HeroClass_GnollPerks_4">Gnollar tahrik edilmediği sürece diğer Gnollar\'a saldırmazlar</string>
   <string name="Potion_Colors_0">turkuaz</string>
