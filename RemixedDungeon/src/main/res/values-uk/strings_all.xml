@@ -2215,8 +2215,12 @@
   <string name="Potion_ArrowMoisten">Стріли вдало змазані.</string>
   <string name="Potion_ItemFliesAway">Предмет %s вилетів з твоїх рук.</string>
   <string name="Potion_FoodRefreshed">%s тепер виглядає їстівним</string>
+  <string name="SmashSpell_NeedWeapon">Мені необхідна зброя для цього прийому.</string>
   <string name="town_deco_pillar_name">Стовп</string>
   <string name="town_deco_entrance_name">Вхід</string>
+  <string name="town_deco_exit_name">Вихід.</string>
+  <string name="town_deco_hay_desc">Невелика купа запашного сіна.</string>
+  <string name="town_deco_rope_name">Мотузка</string>
   <string name="town_deco_chest_name">Скриня</string>
   <string name="town_deco_scrolls_name">Сувої</string>
   <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
@@ -2436,7 +2440,7 @@
   <string name="Scroll_Runes_15">ДАГАЗ</string>
   <string name="HeroClass_GnollPerks_0">Гнолл починає з 15 одиницями сили</string>
   <string name="HeroClass_GnollPerks_1">Гнолл починає з 5 одиницями здоров\'я</string>
-  <string name="HeroClass_GnollPerks_2">Гнолл починає без броні але з унікальним томагавком</string>
+  <string name="HeroClass_GnollPerks_2">Гнолли стартують без обладунку але з унікальним томагавком.</string>
   <string name="HeroClass_GnollPerks_3">Гнолли не можуть читати чи писати</string>
   <string name="HeroClass_GnollPerks_4">Гнолл не атакуватиме іншого гнолла, якщо не спровокують</string>
   <string name="Potion_Colors_0">бірюзове</string>

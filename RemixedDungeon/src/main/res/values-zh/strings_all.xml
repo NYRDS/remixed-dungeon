@@ -1879,11 +1879,11 @@ remix.28.5\n
   <string name="YogsHeart_Name">犹格之心</string>
   <string name="YogsHeart_Gender">masculine</string>
   <string name="YogsHeart_Name_Objective">犹格之心</string>
-  <string name="YogsHeart_Desc">从古至今人们都认同的有邪恶透顶的绝情的生物就在这儿，Yog-Dzewa的巨大心脏。</string>
+  <string name="YogsHeart_Desc">从古至今人们都认同的有邪恶透顶的绝情的生物就在这儿，一颗跳动的巨大心脏，古神的心脏！</string>
   <string name="YogsTeeth_Name">犹格之牙</string>
   <string name="YogsTeeth_Gender">masculine</string>
   <string name="YogsTeeth_Name_Objective">犹格之牙</string>
-  <string name="YogsTeeth_Desc">Yog-Dzewa的大嘴和锋利牙齿，表现了出强烈的破坏欲望。</string>
+  <string name="YogsTeeth_Desc">古神的大嘴和锋利牙齿，表现了出强烈的破坏欲望，祂渴望毁灭和吞噬所有的生物。</string>
   <string name="Food_ACEat">食用</string>
   <string name="Food_Message">这份食物吃起来异常地美味！</string>
   <string name="Ration_Name">口粮</string>
@@ -2567,8 +2567,8 @@ remix.28.5\n
   <string name="Potion_Colors_11">白銀</string>
   <string name="Welcome_Text_29_1">
     remix.29.1\n
-    - 模组修改:\n
-    -- 修改了模组一些项的生成率\n
+    - 修改:\n
+    -- 修改了一些项目的生成率\n
     -- 穿戴可自定义\n
     - 修复了一些错误\n
     </string>

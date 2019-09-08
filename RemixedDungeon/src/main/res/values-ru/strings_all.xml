@@ -2530,6 +2530,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Scroll_Runes_15">ДАГАЗ</string>
   <string name="HeroClass_GnollPerks_0">Гноллы стартуют с 15 очками силы</string>
   <string name="HeroClass_GnollPerks_1">Гноллы стартуют с 5 очками здоровья</string>
+  <string name="HeroClass_GnollPerks_2">Гноллы стартуют без брони, зато с уникальным томагавком</string>
   <string name="HeroClass_GnollPerks_3">Гноллы не умеют читать или писать</string>
   <string name="HeroClass_GnollPerks_4">Гноллы не атакуют других Гноллов просто так</string>
   <string name="Potion_Colors_0">голубое</string>
