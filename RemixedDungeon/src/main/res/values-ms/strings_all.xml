@@ -622,7 +622,7 @@
   <string name="StartScene_DifficultyNormalWithSaves">Biasa boleh simpan (dan iklan)</string>
   <string name="StartScene_DifficultyNormal">Biasa</string>
   <string name="StartScene_DifficultyExpert">Pakar</string>
-  <string name="InterLevelScene_Descending">Menurun...</string>
+  <string name="InterLevelScene_Descending">Masuk...</string>
   <string name="InterLevelScene_Ascending">Menaik...</string>
   <string name="InterLevelScene_Loading">Memuatkan...</string>
   <string name="InterLevelScene_Resurrecting">Menghidupkan semula...</string>
@@ -1180,7 +1180,7 @@
   <string name="DM300_Info2">Misi gagal. Mematikan diri sendiri.</string>
   <string name="DM300_Info3">Individu tidak dikenali dikesan.</string>
   <string name="FireElemental_Name">keunsuran api</string>
-  <string name="FireElemental_Gender">maskulin</string>
+  <string name="FireElemental_Gender">feminin</string>
   <string name="FireElemental_Name_Objective">keunsuran api</string>
   <string name="FireElemental_Desc">Keunsuran api yang merayau adalah hasil dari penyeruan entiti yang lebih hebat. Mereka terlalu ganas untuk dikawal walaupun oleh ahli setan yang terhebat.</string>
   <string name="Eye_Name">mata jahat</string>
@@ -1548,9 +1548,9 @@
   <string name="PlagueDoctorNPC_Quest_End">Bagus bagus, terima kasih, saya harap kulit ini dapat memberi petunjuk ada penyakit di dalamnya. Sampel sebelum ini tidak memberi apa-apa bukti. Jadi saya buat ini untuk awak semasa menunggu sampel baharu tiba.</string>
   <string name="PlagueDoctorNPC_After_Quest">Saya buktikan, Saya buktikan kepada mereka semua!</string>
   <string name="Journal_PlagueDoctorNPC">Doktor wabak</string>
-  <string name="TownsfolkMovieNPC_Name">orang pekan</string>
+  <string name="TownsfolkMovieNPC_Name">penduduk pekan</string>
   <string name="TownsfolkMovieNPC_Gender">maskulin</string>
-  <string name="TownsfolkMovieNPC_Name_Objective">orang pekan</string>
+  <string name="TownsfolkMovieNPC_Name_Objective">penduduk pekan</string>
   <string name="TownsfolkMovieNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
   <string name="TownsfolkMovieNPC_Message">Tahukah anda ada perkhidmatan istimewa \"panggung wayang\" disediakan? Tetapi memerlukan \"Internet\", saya pun tak tahu apa kebendanya tu?</string>
   <string name="LibrarianNPC_Name">pustakawan</string>
@@ -1558,9 +1558,9 @@
   <string name="LibrarianNPC_Name_Objective">pustakawan</string>
   <string name="LibrarianNPC_Desc">Orang yang sangat pemalu, memakai baju panas yang pelik dan memakai cermin mata yang tebal.</string>
   <string name="LibrarianNPC_Message_Not_Ready">Maafkan saya, ppperpustakaan belum dibuka... lagi.</string>
-  <string name="TownsfolkSilentNPC_Name">orang pekan</string>
+  <string name="TownsfolkSilentNPC_Name">penduduk pekan</string>
   <string name="TownsfolkSilentNPC_Gender">maskulin</string>
-  <string name="TownsfolkSilentNPC_Name_Objective">orang pekan</string>
+  <string name="TownsfolkSilentNPC_Name_Objective">penduduk pekan</string>
   <string name="TownsfolkSilentNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
   <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
   <string name="TownsfolkSilentNPC_Message2">...</string>
@@ -1600,9 +1600,9 @@
   <string name="TownGuardNPC_Message1">Berambus.</string>
   <string name="TownGuardNPC_Message2">Terima kasih kepada para pengembara seperti awak, sekarang tempat ini sentiasa aman.</string>
   <string name="TownGuardNPC_Message3">Anda fikir terlalu ramai pengawal dalam pekan ini? Sebenarnya hanyalah pekan kecil dengan kurungan bawah tanah gergasi yang dikuasai oleh raksaksa, kan begitu?</string>
-  <string name="TownsfolkNPC_Name">orang pekan</string>
+  <string name="TownsfolkNPC_Name">penduduk pekan</string>
   <string name="TownsfolkNPC_Gender">maskulin</string>
-  <string name="TownsfolkNPC_Name_Objective">orang pekan</string>
+  <string name="TownsfolkNPC_Name_Objective">penduduk pekan</string>
   <string name="TownsfolkNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal</string>
   <string name="TownsfolkNPC_Message1">Ohh! Ada pengembara lain, baguslah! Carilah sebanyak mungkin harta rampasan yang bernilai!</string>
   <string name="TownsfolkNPC_Message2">Pekan kecil ini menjadi semakin makmur dan mewah kerana kehadiran kurungan bawah tanah, sesiapa sahaja dapat pergi melancong! Sebab itulah kenapa sedikit sahaja penduduk di sini sekarang.</string>
@@ -2176,10 +2176,140 @@
   <string name="Potion_ArrowMoisten">Anda berjaya melembabkan anak panah.</string>
   <string name="Potion_ItemFliesAway">%s telah terbang menjauhi tangan anda.</string>
   <string name="Potion_FoodRefreshed">%s sekarang nampak enak dimakan</string>
+  <string name="KindOfBow_SelectArrowKind">Anak panah manakah patut saya gunakan?</string>
+  <string name="KindOfBow_ChooseArrows">PILIH ANAK PANAH</string>
+  <string name="BodyArmorSpell_Name">Perisai Badan</string>
+  <string name="BodyArmorSpell_Info">Aktifkan kuasa otot simpanan, jadi lebih kuat buat sementara, seterusnya meningkatkan perisai anda tetapi menjejaskan kelajuan pergerakan anda.</string>
+  <string name="BodyArmorBuff_Name">Perisai Badan</string>
+  <string name="BodyArmorBuff_Info">Perisai meningkat tetapi menjejaskan kelajuan pergerakan.</string>
+  <string name="DieHardSpell_Name">Sukar Mati</string>
+  <string name="DieHardSpell_Info">Akan meningkatkan kadar penjanaan semula buat sementara yang menyebabkan anda Sukar Mati.</string>
+  <string name="DieHardBuff_Name">Sukar Mati</string>
+  <string name="DieHardBuff_Info">Kadar penjanaan semula meningkat</string>
+  <string name="SmashSpell_Name">Hentaman</string>
+  <string name="SmashSpell_Info">Lompat ke atas dan hentam dengan kuat ketika menjejak tanah, menyebabkan pihak musuh di sekitar menjadi pengsan, pada masa yang sama menghasilkan kecederaan fizikal.</string>
+  <string name="SmashSpell_NeedWeapon">Saya perlukan satu senjata untuk gerakan ini.</string>
+  <string name="DashSpell_Name">Pecut</string>
+  <string name="DashSpell_Info">Pecut pada arah dikehendaki ketika merempuh pihak musuh, menyebabkan kecederaan dan kecacatan.</string>
+  <string name="DashSpell_OnSelf">Saya tidak boleh memecut serta-merta.</string>
+  <string name="DashSpell_TooFar">Saya tidak boleh memecut sejauh ini.</string>
+  <string name="CloakSpell_Name">Selubung</string>
+  <string name="CloakSpell_Info">Gerak langkah dibalik bayang menjadikan anda halimunan. Dapat mengurangkan secara mendadak peluang anda dikesan oleh pihak musuh. Tidak boleh digunakan ketika pihak musuh berhampiran anda.</string>
+  <string name="CloakSpell_EnemiesNearby">Anda tidak boleh melangkah dalam bayang ketika pihak musuh berhampiran anda.</string>
+  <string name="CloakBuff_Name">Berselubung</string>
+  <string name="CloakBuff_Info">Diselubungi bayang.</string>
+  <string name="TitleScene_Mods">Mod</string>
+  <string name="WndHero_Stealth">Selinap</string>
+  <string name="WndHero_Awareness">Kesedaran</string>
+  <string name="WndHero_AttackSkill">Kemahiran Menyerang</string>
+  <string name="WndHero_DefenceSkill">Kemahiran Pertahanan</string>
+  <string name="town_deco_grave_name">Kubur</string>
+  <string name="town_deco_grave_desc">Batu nisan biasa, dengan ukiran yang sudah lusuh.</string>
   <string name="town_deco_pillar_name">Tiang</string>
+  <string name="town_deco_pillar_desc">Waktu dulu-dulu, tiang ini berfungsi sebagai sokongan dan juga hiasan.</string>
+  <string name="town_deco_wood_wall_name">Dinding balak</string>
+  <string name="town_deco_wood_wall_desc">Dinding balak yang nampak tegar.</string>
   <string name="town_deco_entrance_name">Jalan Masuk</string>
+  <string name="town_deco_entrance_desc">Pintu masuk ini menuju ke aras-aras atas kurungan bawah tanah.</string>
+  <string name="town_deco_exit_name">Keluar</string>
+  <string name="town_deco_tile_name">Jubin</string>
+  <string name="town_deco_tile_desc">Jubin kelihatan lusuh.</string>
+  <string name="town_deco_misc_name">Sampah</string>
+  <string name="town_deco_misc_desc">Selonggok sampah sarap.</string>
+  <string name="town_deco_broken_roof_name">Bumbung bocor</string>
+  <string name="town_deco_broken_roof_desc">Jubin bumbung ini telah retak dan perlu diganti yang baharu.</string>
+  <string name="town_deco_broken_wall_name">Dinding rosak</string>
+  <string name="town_deco_broken_wall_desc">Kayu balak pada bahagian dinding ini telah reput dan tidak memberi manfaat lagi.</string>
+  <string name="town_deco_mud_name">Lumpur</string>
+  <string name="town_deco_mud_desc">Tanah beku yang telah mencair.</string>
+  <string name="town_deco_stock_name">Stok</string>
+  <string name="town_deco_stock_desc">Bekalan makanan di simpan di sini, dan juga ada pelbagai jenis dan warna barang-barang lama.</string>
+  <string name="town_deco_barrel_name">Tong</string>
+  <string name="town_deco_barrel_desc">Tong biasa, dan sudah lusuh.</string>
+  <string name="town_deco_hay_name">Rumput Kering</string>
+  <string name="town_deco_hay_desc">Rumput kering yang disusun cantik dan kuat aroma rumputnya.</string>
+  <string name="town_deco_firewood_name">Kayu api</string>
+  <string name="town_deco_stakes_name">Kayu Pancang</string>
+  <string name="town_deco_stakes_desc">Batu kayu runcing ini nampak menakutkan, tetapi tidak memberi apa-apa manfaat.</string>
+  <string name="town_deco_fence_name">Pagar</string>
+  <string name="town_deco_fence_desc">Pagar kayu yang diselimuti salji.</string>
+  <string name="town_deco_pole_name">Tiang</string>
+  <string name="town_deco_pole_desc">Tiang panjang yang diikat tali</string>
+  <string name="town_deco_rope_name">Tali</string>
+  <string name="town_deco_rope_desc">Tali yang diikat kemas.</string>
+  <string name="town_deco_slush_name">Lecah Salji</string>
+  <string name="town_deco_slush_desc">Salji yang mencair, menyebabkan tanah di sekitarnya menjadi lecah.</string>
   <string name="town_deco_chest_name">Peti</string>
+  <string name="town_deco_chest_desc">Perabot khusus untuk menyimpan barang dan perhiasan berharga.</string>
+  <string name="town_deco_emptyboard_name">Rak</string>
+  <string name="town_deco_emptyboard_desc">Rak biasa khusus untuk mempamerkan barangan.</string>
+  <string name="town_deco_grandclock_name">Jam Tua</string>
+  <string name="town_deco_grandclock_desc">Jam tua yang masih lagi berfungsi.</string>
+  <string name="town_deco_wall_beam_name">Alang</string>
+  <string name="town_deco_wall_beam_desc">Ia dipasang untuk menyokong bangunan ini.</string>
+  <string name="town_deco_wall_candles_name">Lilin</string>
+  <string name="town_deco_wall_candles_desc">Lilin yang terpadam, tetapi bau aroma dari lilin ini masih terasa.</string>
+  <string name="town_deco_wooden_drawer_name">Laci</string>
+  <string name="town_deco_wooden_drawer_desc">Apakah benda yang berguna di dalamnya.</string>
   <string name="town_deco_scrolls_name">Skrol</string>
+  <string name="town_deco_scrolls_desc">Rak berdebu yang penuh dengan skrol-skrol dan buku-buku.</string>
+  <string name="town_deco_medicine_name">Ubat</string>
+  <string name="town_deco_medicine_desc">Kelalang dan lain-lain bahan ubat yang disusun cermat di atas rak.</string>
+  <string name="town_deco_wooden_stairs_name">Tangga</string>
+  <string name="town_deco_wooden_stairs_desc">Kalau berdiri di atasnya anda pasti lebih tinggi.</string>
+  <string name="town_deco_canvas_name">Kanvas</string>
+  <string name="town_deco_canvas_desc">Helaian kain tebal yang tergantung di atas dinding.</string>
+  <string name="town_deco_projector_name">Projektor Filem</string>
+  <string name="town_deco_projector_desc">Sebuah peranti lama yang dapat memainkan filem dan menjadi hiburan orang ramai.</string>
+  <string name="town_deco_filmtape_name">Filem</string>
+  <string name="town_deco_filmtape_desc">Apakah yang terkandung di dalam benda ini.</string>
+  <string name="town_deco_painting_name">Lukisan</string>
+  <string name="town_deco_painting_desc">Sebuah lakaran seni yang indah.</string>
+  <string name="town_deco_curtains_name">Langsir</string>
+  <string name="town_deco_rug_name">Ambal</string>
+  <string name="town_deco_rug_desc">Direka dengan citarasa yang menakjubkan.</string>
+  <string name="town_deco_trapdoor_name">Pintu Kolong</string>
+  <string name="town_deco_trapdoor_desc">Tak nampak penghujungnya.</string>
+  <string name="town_deco_glass_stained_name">Kaca Berwarna</string>
+  <string name="town_deco_glass_stained_desc">Pengukir kaca ini telah menghabiskan masa yang banyak untuk menciptanya</string>
+  <string name="town_deco_glass_name">Tingkap Lebar</string>
+  <string name="town_deco_glass_desc">Yang lebih lebar berbanding yang lain mungkin untuk memastikan lebih banyak cahaya dapat memasuki ruang ini.</string>
+  <string name="town_deco_counter_name">Kaunter</string>
+  <string name="town_deco_counter_desc">Sebagai pemisah antara anda dengan orang yang berada dihadapannya.</string>
+  <string name="town_deco_library_books_name">Bahan Bacaan</string>
+  <string name="town_deco_library_books_desc">Hmm lebih menarik berbanding buku-buku berkenaan ruangan bawah tanah.</string>
+  <string name="town_deco_wallpaper_name">Kertas dinding</string>
+  <string name="town_deco_wallpaper_desc">Memang bijak orang yang menghias tempat ini.</string>
+  <string name="town_deco_stones_name">Batu</string>
+  <string name="town_deco_stones_desc">Hanyalah timbunan batu.</string>
+  <string name="town_deco_fireplace_name">Pendiangan</string>
+  <string name="town_deco_fireplace_desc">Boleh menghangatkan tempat sejuk seperti ini.</string>
+  <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Mekanisma Permainan:\n
+    -- Keupayaan istimewa Satria!\n
+    -- Rasa lapar adiwira dikurangkan\n
+    -- Jampi Merasuk Necromancer\n
+    -- Keupayaan Selubung Pemburu\n
+    -- Lencana Baharu\n
+    - Pengemodan:\n
+    -- Buff boleh skrip suai\n
+    -- gfx suai\n
+    </string>
+  <string name="Badges_GamesPlayed5">5000 permainan telah dimainkan</string>
+  <string name="Badges_PotionsCooked5">25 potion dibru</string>
+  <string name="Badges_ItemLvl5">Item aras 15 diperoleh</string>
+  <string name="Badges_FoodEaten5">60 unit makanan dimakan</string>
+  <string name="Badges_StrengthAttained5">21 mata Kekuatan dicapai</string>
+  <string name="Badges_LevelReached5">Aras 30 dicapai</string>
+  <string name="Badges_GoldCollected5">35000 keping emas dikumpul</string>
+  <string name="Badges_MonsterSlain5">1000 pihak musuh dibunuh</string>
+  <string name="Spells_NotInOwnBody">Anda tidak boleh buat %s ketika roh anda  tidak berada di dalam jasad anda.</string>
+  <string name="WndHero_Satiety">Muak</string>
+  <string name="Welcome_Text_29">
+    remix.29\n
+    - Renovasi pekan!\n
+    </string>
   <string name="Ring_Gems_0">berlian</string>
   <string name="Ring_Gems_1">baiduri</string>
   <string name="Ring_Gems_2">garnet</string>
@@ -2216,9 +2346,9 @@
   <string name="Char_Hit_0">%1$s pukul %2$s</string>
   <string name="Char_Hit_1">%1$s pukul %2$s</string>
   <string name="Char_Hit_2">%1$s pukul %2$s</string>
-  <string name="Char_Kill_0">%s telah membunuh anda...</string>
-  <string name="Char_Kill_1">%s telah membunuh anda...</string>
-  <string name="Char_Kill_2">%s telah membunuh anda...</string>
+  <string name="Char_Kill_0">%s bunuh anda...</string>
+  <string name="Char_Kill_1">%s bunuh anda...</string>
+  <string name="Char_Kill_2">%s bunuh anda...</string>
   <string name="Char_Defeat_0">%1$s menewaskan %2$s</string>
   <string name="Char_Defeat_1">%1$s menewaskan %2$s</string>
   <string name="Char_Defeat_2">%1$s menewaskan %2$s</string>
