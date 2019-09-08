@@ -42,7 +42,8 @@
     "GothicArmor": 1,
     "LeatherArmor": 1,
     "ClothArmor": 1,
-    "MailArmor": 1
+    "MailArmor": 1,
+    "RatArmor": 0
   },
   "RING": {
     "RingOfElements": 1,

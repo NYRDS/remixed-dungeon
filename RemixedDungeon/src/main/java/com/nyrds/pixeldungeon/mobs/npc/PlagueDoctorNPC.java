@@ -35,7 +35,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 			if (item != null && item.quantity() >= 5) {
 				item.removeItemFrom(hero);
 
-				Item reward = new RatArmor();
+				Item reward = level().getTreasury().check(new RatArmor());
 				reward.identify();
 
 				if (reward.doPickUp(hero)) {

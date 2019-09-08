@@ -2,7 +2,10 @@
   "FOOD": {
     "categoryChance": 10,
     "OverpricedRation" : 1,
-    "FriedFish" : 0.1
+    "FriedFish" : 0.05,
+    "Pasty": 0.05,
+    "ChristmasTurkey": 0.05,
+    "PumpkinPie": 0.05
   },
   "THROWABLE": {
     "categoryChance": 10,
