@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
+import json
 import os
 import pprint
-from lxml import etree as ElementTree
-
-import json
 import re
+from lxml import etree as ElementTree
 
 dstDir = "../../RemixedDungeon/src/main/res/"
 
 xml_ext = '.xml'
 translations_dir = 'translations/'
 
+source_locales = {"en","tr","ko","hu","it","" 'de_DE', 'es_ES', 'fr_FR', 'pl_PL', 'ru_RU',
+                  'uk_UA', 'pt_BR', "ms_MY"}
+
 locale_remap = {'de_DE': 'de', 'es_ES': 'es', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro', 'ru_RU': 'ru',
                 'uk_UA': 'uk', 'pt_BR': 'pt-rBR', 'pt_PT': 'pt-rPT', 'es_MX': 'es-rMX', "ms_MY": "ms"}
-
-used_locales = {'en', 'de', 'es', 'fr', 'it', 'pl', 'pt-rBR', 'ru', 'tr', 'uk', 'zh', 'ko', "ms"}
 
 counters = {}
 totalCounter = {}
@@ -66,11 +66,12 @@ for _, _, files in os.walk(translations_dir + dir_name):
 
         locale_code = file_name[:-4]
 
+        if not locale_code in source_locales:
+            continue
+
         if locale_code in locale_remap:
             locale_code = locale_remap[locale_code]
 
-        if not locale_code in used_locales:
-            continue
 
         if locale_code not in totalCounter:
             totalCounter[locale_code] = 0
