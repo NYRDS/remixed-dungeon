@@ -30,7 +30,7 @@ public class AdsUtils {
 
         if(AppodealAdapter.usable()) {
             AppodealAdapter.init();
-            bannerFails.put(new AppodealBannerProvider(), -1);
+            bannerFails.put(AppodealBannerProvider.getInstance(), -1);
             interstitialFails.put(new AppodealInterstitialProvider(), -1);
         }
     }

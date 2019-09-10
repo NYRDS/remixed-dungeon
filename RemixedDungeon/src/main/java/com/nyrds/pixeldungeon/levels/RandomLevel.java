@@ -60,8 +60,8 @@ public class RandomLevel extends RegularLevel {
 	public void create(int w, int h) {
 
 		try {
-			width = mLevelDesc.getInt("width");
-			height = mLevelDesc.getInt("height");
+			width = mLevelDesc.optInt("width",w);
+			height = mLevelDesc.optInt("height",h);
 
 			initSizeDependentStuff();
 
@@ -78,7 +78,7 @@ public class RandomLevel extends RegularLevel {
 			}
 
 		} catch (JSONException e) {
-			throw ModdingMode.modException(e);
+			throw ModdingMode.modException("RandomLevel",e);
 		}
 
 		do {

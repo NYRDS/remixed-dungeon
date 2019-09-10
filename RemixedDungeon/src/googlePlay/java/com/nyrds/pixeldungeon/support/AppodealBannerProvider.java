@@ -6,9 +6,23 @@ import com.appodeal.ads.BannerView;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
+import org.jetbrains.annotations.NotNull;
+
 class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
     private BannerView adView;
+
+    private static AppodealBannerProvider instance;
+
+    private AppodealBannerProvider() { }
+
+    @NotNull
+    static public AppodealBannerProvider getInstance() {
+        if(instance==null) {
+            instance = new AppodealBannerProvider();
+        }
+        return instance;
+    }
 
     @Override
     public void displayBanner() {

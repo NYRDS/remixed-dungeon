@@ -24,11 +24,13 @@ public class AppodealAdapter {
         return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
     }
 
-    public static void logEcpm(int adType, boolean spared) {
-        if(usable() && Appodeal.isInitialized(Appodeal.BANNER)) {
-
-            EventCollector.logEvent("Appodeal_ecpm_"+adType+"_"+spared, Appodeal.getPredictedEcpm(adType));
+    public static double logEcpm(int adType, boolean spared) {
+        if(usable() && Appodeal.isInitialized(adType)) {
+            double ecpm = Appodeal.getPredictedEcpm(adType);
+            EventCollector.logEvent("Appodeal_ecpm_"+adType+"_"+spared, ecpm);
+            return ecpm;
         }
+        return 0;
     }
 
     public static void init() {

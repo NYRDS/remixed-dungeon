@@ -10,12 +10,12 @@
         "quantity": 100
       },
       {
-        "kind": "ScrollOfWeaponUpgrade",
+        "kind": "PotionOfFrost",
         "quantity": 100,
         "level": 10
       },
       {
-        "kind": "Stylus",
+        "kind": "ScrollOfMagicMapping",
         "quantity": 100
       }
     ],

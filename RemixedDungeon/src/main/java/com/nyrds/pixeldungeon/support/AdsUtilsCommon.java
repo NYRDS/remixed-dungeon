@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import androidx.annotation.MainThread;
 
 import com.appodeal.ads.Appodeal;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 
@@ -79,9 +80,13 @@ class AdsUtilsCommon {
     }
 
     static private void tryNextBanner() {
-        final IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
+        IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
 
-        AppodealAdapter.logEcpm(Appodeal.BANNER, chosenProvider instanceof AppodealInterstitialProvider);
+        double appodealEcmp = AppodealAdapter.logEcpm(Appodeal.BANNER, chosenProvider instanceof AppodealInterstitialProvider);
+        if( appodealEcmp > 1 ) {
+            chosenProvider = AppodealBannerProvider.getInstance();
+            EventCollector.logEvent("Banner_override", appodealEcmp);
+        }
 
         if(chosenProvider!=null) {
             Game.instance().runOnUiThread(chosenProvider::displayBanner);
