@@ -182,12 +182,12 @@ public class WaterOfTransmutation extends WellWater {
 		return n;
 	}
 	
-	private Wand changeWand( Wand w ) {
+	private Item changeWand( Wand w ) {
 		
-		Wand n;
+		Item n;
 		do {
-			n = (Wand) Dungeon.level.getTreasury().random(Treasury.Category.WAND );
-		} while (n.getClass() == w.getClass());
+			n = Dungeon.level.getTreasury().random(Treasury.Category.WAND );
+		} while (n.getClassName().equals(w.getClassName()));
 		
 		n.level(0);
 		n.upgrade( w.level() );
@@ -199,18 +199,18 @@ public class WaterOfTransmutation extends WellWater {
 		return n;
 	}
 	
-	private Seed changeSeed(Seed s ) {
+	private Item changeSeed(Seed s ) {
 		
-		Seed n;
+		Item n;
 		
 		do {
-			n = (Seed) Dungeon.level.getTreasury().random(Treasury.Category.SEED );
-		} while (n.getClass() == s.getClass());
+			n = Dungeon.level.getTreasury().random(Treasury.Category.SEED );
+		} while (n.getClassName().equals(s.getClassName()));
 		
 		return n;
 	}
 	
-	private Scroll changeScroll( Scroll s ) {
+	private Item changeScroll( Scroll s ) {
 		if (s instanceof ScrollOfUpgrade) {
 			
 			return new ScrollOfWeaponUpgrade();
@@ -221,15 +221,15 @@ public class WaterOfTransmutation extends WellWater {
 			
 		} else {
 			
-			Scroll n;
+			Item n;
 			do {
-				n = (Scroll) Dungeon.level.getTreasury().random(Treasury.Category.SCROLL );
-			} while (n.getClass() == s.getClass());
+				n =  Dungeon.level.getTreasury().random(Treasury.Category.SCROLL );
+			} while (n.getClassName().equals(s.getClassName()));
 			return n;
 		}
 	}
 	
-	private Potion changePotion( Potion p ) {
+	private Item changePotion( Potion p ) {
 		if (p instanceof PotionOfStrength) {
 			
 			return new PotionOfMight();
@@ -240,10 +240,10 @@ public class WaterOfTransmutation extends WellWater {
 			
 		} else {
 			
-			Potion n;
+			Item n;
 			do {
-				n = (Potion) Dungeon.level.getTreasury().random(Treasury.Category.POTION );
-			} while (n.getClass() == p.getClass());
+				n  = Dungeon.level.getTreasury().random(Treasury.Category.POTION );
+			} while (n.getClassName().equals(p.getClassName()));
 			return n;
 		}
 	}
