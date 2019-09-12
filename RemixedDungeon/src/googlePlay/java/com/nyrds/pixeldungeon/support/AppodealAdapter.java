@@ -56,7 +56,11 @@ public class AppodealAdapter {
                 AppodealNetworks.MINTEGRAL,
                 AppodealNetworks.OGURY_PRESAGE,
                 AppodealNetworks.VUNGLE,
-                AppodealNetworks.YANDEX
+                AppodealNetworks.YANDEX,
+                AppodealNetworks.CHARTBOOST,
+                AppodealNetworks.MY_TARGET,
+                AppodealNetworks.TAPJOY,
+                AppodealNetworks.INMOBI
 
         };
 
