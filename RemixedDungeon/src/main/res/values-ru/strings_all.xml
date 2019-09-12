@@ -2545,5 +2545,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Potion_Colors_9">коричневое</string>
   <string name="Potion_Colors_10">фиолетовое</string>
   <string name="Potion_Colors_11">серебряное</string>
+  <string name="Welcome_Text_29_1">
+    remix.29.1\n
+    - Моды:\n
+    -- Моды могут управлять появлением предметов на уровнях и у торговцев\n
+    - Переводы:\n
+    -- Добавлен Венгерский перевод\n
+    - Исправлено множество ошибок\n
+    </string>
   <string name="town_deco_stone_wall_broken_name">Разрушенная стена</string>
+  <string name="town_deco_stone_wall_broken_desc">Старая стена, в довольно плохом состоянии</string>
 </resources>

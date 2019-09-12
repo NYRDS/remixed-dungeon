@@ -23,7 +23,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -157,7 +156,7 @@ public class Goo extends Boss {
 	
 	@Override
 	public void move( int step ) {
-		Dungeon.level.seal();
+		level().seal();
 		super.move( step );
 	}
 	
@@ -166,9 +165,9 @@ public class Goo extends Boss {
 		
 		super.die( cause );
 		
-		Dungeon.level.unseal();
+		level().unseal();
 		
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+		level().drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_1);
 		
