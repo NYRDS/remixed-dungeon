@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.Item;
@@ -44,6 +45,8 @@ public class Treasury {
     private ArrayList<CategoryItems> items = new ArrayList<>();
     private ArrayList<Float>         probs = new ArrayList<>();
 
+    private float decayFactor = 1;
+
     private Set<String> forbidden = new HashSet<>();
 
     public static Treasury create(String file) {
@@ -59,30 +62,60 @@ public class Treasury {
 
             JSONObject treasury = JsonHelper.readJsonFromAsset(file);
 
-            Iterator<String> cats = treasury.keys();
+            int version = treasury.optInt("version", 0);
+            switch (version) {
+                case 0:
+                    loadCategories(treasury);
+                break;
 
-            while (cats.hasNext()) {
-                String cat = cats.next();
-                CategoryItems currentCategory = new CategoryItems();
-                names.add(cat);
-                items.add(currentCategory);
-
-                JSONObject catData = treasury.getJSONObject(cat);
-                Iterator<String> items = catData.keys();
-                while (items.hasNext()) {
-                    String item = items.next();
-
-                    if(item.equals("categoryChance")) {
-                        probs.add((float) catData.getDouble(item));
-                        continue;
-                    }
-
-                    currentCategory.names.add(item);
-                    currentCategory.probs.add((float) catData.getDouble(item));
-                }
+                case 1:
+                    loadTreasury(treasury,version);
+                break;
+                default:
+                    throw new ModError("Unknown version in "+ file);
             }
         } catch (JSONException e) {
             throw new TrackedRuntimeException(e);
+        }
+    }
+
+    private void loadTreasury(@NotNull JSONObject treasury, int version) throws JSONException {
+        JSONObject categories = treasury.getJSONObject("categories");
+        loadCategories(categories);
+
+        JSONObject settings = treasury.getJSONObject("settings");
+
+        JSONObject probabilities = settings.getJSONObject("probabilities");
+
+        for (String name:names) {
+            probs.add((float) probabilities.optDouble(name,0));
+        }
+
+        decayFactor = (float) settings.optDouble("decayFactor");
+    }
+
+    private void loadCategories(@NotNull JSONObject treasury) throws JSONException {
+        Iterator<String> cats = treasury.keys();
+
+        while (cats.hasNext()) {
+            String cat = cats.next();
+            CategoryItems currentCategory = new CategoryItems();
+            names.add(cat);
+            items.add(currentCategory);
+
+            JSONObject catData = treasury.getJSONObject(cat);
+            Iterator<String> items = catData.keys();
+            while (items.hasNext()) {
+                String item = items.next();
+
+                if(item.equals("categoryChance")) {
+                    probs.add((float) catData.getDouble(item));
+                    continue;
+                }
+
+                currentCategory.names.add(item);
+                currentCategory.probs.add((float) catData.getDouble(item));
+            }
         }
     }
 
@@ -114,6 +147,7 @@ public class Treasury {
 
     public Item random() {
         int categoryIndex = Random.chances(probs);
+        probs.set(categoryIndex,probs.get(categoryIndex)/decayFactor);
 
         String categoryName = names.get(categoryIndex);
         if(forbidden.contains(categoryName)){
