@@ -136,6 +136,7 @@
   <string name="town_deco_wardrobe_desc">커다란 나무 옷장.</string>
   <string name="town_deco_covered_table_name">탁자</string>
   <string name="town_deco_pedestal_name">받침대</string>
+  <string name="town_deco_pedestal_desc">성서가 놓여있는 제단이다.</string>
   <string name="Item_Info2">무언가</string>
   <string name="NecromancerArmor_Info2">이 갑옷을 입는다면 강령술사는 \"네크로티즘\" 기술을 사용해 마법의 독을 뿌려서 근처의 모든 생물체에게 죽던 살던 강력한  영향을 끼칠 것입니다.</string>
   <string name="NecromancerRobe_Info2">이 로브는 흑마법으로 가득 차 있어서 강령술사에게 쓰러진 몬스터들의 영혼을 흡수할 수 있게 해 줄 것입니다.</string>
@@ -1341,6 +1342,7 @@
   <string name="JarOfSouls_Name">영혼의 단지</string>
   <string name="JarOfSouls_Gender">남성</string>
   <string name="JarOfSouls_Name_Objective">영혼의 단지</string>
+  <string name="JarOfSouls_Desc">이 오래된 항아리에 새겨진 해골 문양의 빛나는 눈과 이것이 내뿜는 이상한 에니지가, 당신이 불길함을 느끼도록 합니다. </string>
   <string name="Lich_Name">리치</string>
   <string name="Lich_Gender">남성</string>
   <string name="Lich_Name_Objective">리치</string>
