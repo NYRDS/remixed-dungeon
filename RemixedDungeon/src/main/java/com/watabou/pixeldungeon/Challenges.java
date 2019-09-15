@@ -33,10 +33,12 @@ public class Challenges {
 	public static final int NO_HERBALISM		= 8;
 	public static final int SWARM_INTELLIGENCE	= 16;
 	public static final int DARKNESS			= 32;
+	public static final int NO_SCROLLS          = 64;
+	public static final int NO_WEAPON           = 128;
 
 
 	public static final int[] MASKS = {
-		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS
+		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS, NO_WEAPON
 	};
 
 	@SuppressLint("UseSparseArrays")
@@ -47,6 +49,8 @@ public class Challenges {
 		forbiddenCategories.put(NO_ARMOR,     Treasury.Category.ARMOR.name());
 		forbiddenCategories.put(NO_HEALING,   PotionOfHealing.class.getSimpleName());
 		forbiddenCategories.put(NO_HERBALISM, Treasury.Category.SEED.name());
+		forbiddenCategories.put(NO_SCROLLS,   Treasury.Category.SCROLL.name());
+		forbiddenCategories.put(NO_WEAPON,    Treasury.Category.WEAPON.name());
 	}
 
 	public static void forbidCategories(int challenge,Treasury treasury) {

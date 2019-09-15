@@ -93,6 +93,8 @@
     <item>@string/Challenges_Names_3</item>
     <item>@string/Challenges_Names_4</item>
     <item>@string/Challenges_Names_5</item>
+    <item>@string/Challenges_Names_6</item>
+    <item>@string/Challenges_Names_7</item>
   </string-array>
   <string-array name="Hunger_Hungry">
     <item>@string/Hunger_Hungry_0</item>
