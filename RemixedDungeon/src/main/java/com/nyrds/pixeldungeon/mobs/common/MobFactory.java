@@ -52,6 +52,8 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
+import com.watabou.pixeldungeon.Challenges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
@@ -247,6 +249,9 @@ public class MobFactory {
 
 	@Contract(pure = true)
 	public static boolean hasMob(String mobClass) {
+		if(Dungeon.isChallenged(Challenges.NO_ARMOR) && mobClass.equals("ArmoredStatue")) {
+			return false;
+		}
 		return mMobsList.containsKey(mobClass);
 	}
 
