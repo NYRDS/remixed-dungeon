@@ -76,7 +76,8 @@ public class BuffIndicator extends Component {
 	public static final int BLEESSED    = 42;
 
 	
-	public static final int SIZE	= 7;
+	public static final int   SIZE	= 16;
+	public static final float ICON_SIZE = 7;
 
     private static BuffIndicator heroInstance;
 	
@@ -107,7 +108,7 @@ public class BuffIndicator extends Component {
 	
 	@Override
 	protected void createChildren() {
-		texture = TextureCache.get( Assets.BUFFS_SMALL );
+		texture = TextureCache.get( Assets.BUFFS_LARGE  );
 		film = new TextureFilm( texture, SIZE, SIZE );
 	}
 	
@@ -123,8 +124,9 @@ public class BuffIndicator extends Component {
 			if (icon != NONE) {
 				Image img = new Image( texture );
 				img.frame( film.get( icon ) );
-				img.x = x + members.size() * (SIZE + 2);
+				img.x = x + members.size() * (ICON_SIZE + 2);
 				img.y = y;
+				img.setScale(ICON_SIZE/SIZE,ICON_SIZE/SIZE);
 				add( img );
 
 				newIcons.put( icon, img );
@@ -134,13 +136,13 @@ public class BuffIndicator extends Component {
 		for (Integer key : icons.keyArray()) {
 			if (newIcons.get( key ) == null) {
 				Image icon = icons.get( key );
-				icon.origin.set( SIZE / 2 );
+				icon.origin.set( ICON_SIZE / 2 );
 				add( icon );
 				add( new AlphaTweener( icon, 0, 0.6f ) {
 					@Override
 					protected void updateValues( float progress ) {
 						super.updateValues( progress );
-						image.Scale().set( 1 + 5 * progress );
+						image.Scale().set( ICON_SIZE/SIZE*(1 + 5 * progress) );
 					}
 				} );
 			}
