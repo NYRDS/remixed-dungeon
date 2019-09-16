@@ -147,10 +147,9 @@ public class Treasury {
 
     public Item random() {
         int categoryIndex = Random.chances(probs);
-        probs.set(categoryIndex,probs.get(categoryIndex)/decayFactor);
 
         String categoryName = names.get(categoryIndex);
-        if(forbidden.contains(categoryName)){
+        if(forbidden.contains(categoryName)) {
             GLog.debug("Forbidden category:",categoryName);
             return ItemFactory.itemByName("Gold");
         }
@@ -184,6 +183,7 @@ public class Treasury {
 
         for(int i = 0;i<names.size();++i) {
             if(names.get(i).equals(categoryOrItem)) {
+                probs.set(i,probs.get(i)/decayFactor);
                 CategoryItems category = items.get(i);
                 int itemIndex = Random.chances(category.probs);
                 String itemName = category.names.get(itemIndex);
