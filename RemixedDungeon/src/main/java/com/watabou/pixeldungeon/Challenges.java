@@ -22,8 +22,10 @@ import android.annotation.SuppressLint;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Challenges {
 
@@ -42,21 +44,30 @@ public class Challenges {
 	};
 
 	@SuppressLint("UseSparseArrays")
-	private static Map<Integer, String> forbiddenCategories = new HashMap<>();
+	private static Map<Integer, ArrayList<String>> forbiddenCategories = new HashMap<>();
 
 	static {
-		forbiddenCategories.put(NO_FOOD,      Treasury.Category.FOOD.name());
-		forbiddenCategories.put(NO_ARMOR,     Treasury.Category.ARMOR.name());
-		forbiddenCategories.put(NO_HEALING,   PotionOfHealing.class.getSimpleName());
-		forbiddenCategories.put(NO_HERBALISM, Treasury.Category.SEED.name());
-		forbiddenCategories.put(NO_SCROLLS,   Treasury.Category.SCROLL.name());
-		forbiddenCategories.put(NO_WEAPON,    Treasury.Category.WEAPON.name());
+		for(Integer mask:MASKS) {
+			forbiddenCategories.put(mask, new ArrayList<>());
+		}
+
+		Objects.requireNonNull(forbiddenCategories.get(NO_FOOD)).add(Treasury.Category.FOOD.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_ARMOR)).add(Treasury.Category.ARMOR.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_HEALING)).add(PotionOfHealing.class.getSimpleName());
+		Objects.requireNonNull(forbiddenCategories.get(NO_HERBALISM)).add(Treasury.Category.SEED.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_SCROLLS)).add(Treasury.Category.SCROLL.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.WEAPON.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.WAND.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.THROWABLE.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.BULLETS.name());
 	}
 
 	public static void forbidCategories(int challenge,Treasury treasury) {
 		for(int mask:MASKS) {
 			if((mask & challenge) != 0 && forbiddenCategories.containsKey(mask)) {
-				treasury.forbid(forbiddenCategories.get(mask));
+				for(String catOrItem: Objects.requireNonNull(forbiddenCategories.get(mask))) {
+					treasury.forbid(catOrItem);
+				}
 			}
 		}
 	}
