@@ -33,6 +33,7 @@ abstract public class Boss extends Mob {
 		if (state instanceof Hunting) {
 			if (battleMusic != null) {
 				Music.INSTANCE.play(battleMusic, true);
+				level().seal();
 			}
 		}
 		super.setState(state);
@@ -42,6 +43,7 @@ abstract public class Boss extends Mob {
 	public void die(NamedEntityKind cause) {
 		GameScene.playLevelMusic();
 		GameScene.bossSlain();
+		level().unseal();
 		super.die(cause);
 	}
 

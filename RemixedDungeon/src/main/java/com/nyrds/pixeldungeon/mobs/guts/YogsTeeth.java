@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
-import com.watabou.pixeldungeon.actors.mobs.Boss;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -19,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class YogsTeeth extends Boss {
+public class YogsTeeth extends Mob {
     {
         hp(ht(150));
         defenseSkill = 44;

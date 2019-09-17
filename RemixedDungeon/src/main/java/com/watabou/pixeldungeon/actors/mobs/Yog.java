@@ -165,7 +165,7 @@ public class Yog extends Boss {
 		return Game.getVar(R.string.Yog_Desc);
 	}
 
-	public static class RottingFist extends Boss {
+	public static class RottingFist extends Mob {
 
 		private static final int REGENERATION = 10;
 
@@ -232,7 +232,7 @@ public class Yog extends Boss {
 		}
 	}
 
-	public static class BurningFist extends Boss implements IZapper {
+	public static class BurningFist extends Mob implements IZapper {
 
 		{
 
