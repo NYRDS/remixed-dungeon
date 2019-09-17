@@ -17,6 +17,10 @@
       {
         "kind": "ScrollOfMagicMapping",
         "quantity": 100
+      },
+      {
+        "kind": "ScrollOfMirrorImage",
+        "quantity": 100
       }
     ],
     "str": 10,
