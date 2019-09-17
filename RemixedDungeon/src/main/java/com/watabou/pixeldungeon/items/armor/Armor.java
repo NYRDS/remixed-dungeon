@@ -51,8 +51,6 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 public class Armor extends EquipableItem {
 
 	protected boolean hasHelmet;
@@ -84,20 +82,13 @@ public class Armor extends EquipableItem {
 	private static final String GLYPH	= "glyph";
 
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		actions.add( isEquipped( hero ) ? AC_UNEQUIP : AC_EQUIP );
-		return actions;
-	}
-	
-	@Override
 	public boolean doEquip( Hero hero ) {
 		
 		detach( hero.belongings.backpack );
 
 		return hero.belongings.equip(this, Belongings.Slot.ARMOR);
 	}
-	
+
 	@Override
 	public float time2equip(Char hero) {
 		return hero.speed();
@@ -113,15 +104,6 @@ public class Armor extends EquipableItem {
 		} else {
 			return false;
 		}
-	}
-	
-	@Override
-	public boolean isEquipped( Char chr ) {
-		if(chr instanceof Hero) {
-			Hero hero = (Hero)chr;
-			return hero.belongings.armor == this;
-		}
-		return false;
 	}
 	
 	@Override

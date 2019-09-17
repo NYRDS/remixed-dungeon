@@ -3,6 +3,8 @@ package com.watabou.pixeldungeon.windows;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 
+import org.jetbrains.annotations.NotNull;
+
 class ItemPlaceholder extends Item {
 
     public ItemPlaceholder(int image ) {
@@ -15,7 +17,7 @@ class ItemPlaceholder extends Item {
     }
 
     @Override
-    public boolean isEquipped( Char chr ) {
+    public boolean isEquipped(@NotNull Char chr ) {
         return true;
     }
 }

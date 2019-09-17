@@ -344,16 +344,14 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return isLevelKnown() && cursedKnown;
 	}
 
-	public boolean isEquipped(Char chr) {
+	public boolean isEquipped(@NotNull Char chr) {
 
-		if(chr instanceof Hero) {
-			Hero hero = (Hero)chr;
-			return this.equals(hero.belongings.weapon) ||
-					this.equals(hero.belongings.armor) ||
-					this.equals(hero.belongings.ring1) ||
-					this.equals(hero.belongings.ring2);
+    	Belongings belongings = chr.getBelongings();
+    	if(belongings == null) {
+    		return false;
 		}
-		return false;
+
+    	return belongings.isEquipped(this);
 	}
 
 	public void removeItemFrom(Char hero) {

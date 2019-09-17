@@ -134,6 +134,14 @@ public class Utils {
                 || localeCode.startsWith("zh")
                 || localeCode.startsWith("ja")
                 || localeCode.startsWith("tr"));
+    }
 
+    public static<T> boolean isOneOf(T value, T... array ) {
+        for (T item:array) {
+            if(value.equals(item)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

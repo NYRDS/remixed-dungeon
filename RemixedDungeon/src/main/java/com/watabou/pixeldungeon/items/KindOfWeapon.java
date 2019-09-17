@@ -22,8 +22,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.utils.Random;
 
-import java.util.ArrayList;
-
 public class KindOfWeapon extends EquipableItem {
 
 	public static final float TIME_TO_EQUIP = 1f;
@@ -42,23 +40,7 @@ public class KindOfWeapon extends EquipableItem {
 
 	public int		MIN	= 0;
 	public int		MAX = 1;
-	
-	@Override
-	public ArrayList<String> actions( Hero hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		actions.add( isEquipped( hero ) ? AC_UNEQUIP : AC_EQUIP );
-		return actions;
-	}
-	
-	@Override
-	public boolean isEquipped( Char chr ) {
-		if(chr instanceof Hero) {
-			Hero hero = (Hero)chr;
-			return hero.belongings.weapon == this;
-		}
-		return false;
-	}
-	
+
 	@Override
 	public boolean doEquip( Hero hero ) {
 		
@@ -82,11 +64,8 @@ public class KindOfWeapon extends EquipableItem {
 			
 		}
 	}
-	
-	public void activate( Char hero ) {
-	}
-	
-	public int damageRoll( Hero owner ) {
+
+	public int damageRoll(Hero owner ) {
 		return Random.NormalIntRange( MIN, MAX );
 	}
 	

@@ -28,6 +28,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
@@ -60,7 +61,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	
 	private Char owner;
 	
-	public Bag backpack;	
+	public Bag backpack;
 
 	public enum Slot{
 		WEAPON,
@@ -73,9 +74,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	@Packable
 	public Armor        armor  = null;
 	@Packable
-	public Artifact     ring1  = null;
+	public EquipableItem ring1  = null;
 	@Packable
-	public Artifact     ring2  = null;
+	public EquipableItem ring2  = null;
 
 	public Belongings( Char owner ) {
 		this.owner = owner;
@@ -106,6 +107,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			weapon.activate( owner );
 		}
 
+		if (armor != null) {
+			armor.activate( owner );
+		}
+
 		if (ring1 != null) {
 			ring1.activate( owner );
 		}
@@ -115,6 +120,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 	}
 
+	public boolean isEquipped(Item item) {
+		return item.equals(weapon) || item.equals(armor) || item.equals(ring1) || item.equals(ring2);
+	}
 
 	public Item checkItem( Item src ) {
 		for (Item item : this) {
@@ -242,6 +250,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		
 		if (armor != null) {
 			armor.cursed = false;
+			armor.activate( owner );
 		}
 		
 		if (ring1 != null) {
@@ -410,7 +419,32 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return BACKPACK_SIZE;
 	}
 
-	public boolean equip(Item item, Slot slot) {
+	public boolean unequip(EquipableItem item) {
+
+		if(weapon==item) {
+			weapon = null;
+			return true;
+		}
+
+		if(armor==item) {
+			armor = null;
+			return true;
+		}
+
+		if(ring1==item) {
+			ring1 = null;
+			return true;
+		}
+
+		if(ring2==item) {
+			ring2 = null;
+			return true;
+		}
+
+		return false;
+	}
+
+	public boolean equip(EquipableItem item, Slot slot) {
 
 		if(slot==Slot.WEAPON) {
 			if (weapon == null || weapon.doUnequip( owner, true )) {
@@ -465,18 +499,18 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 			} else {
 
+				EquipableItem slot_item = (EquipableItem) item.detach(backpack);
+
 				if (ring1 == null) {
-					ring1 = (Artifact) item;
+					ring1 = slot_item ;
 				} else {
-					ring2 = (Artifact) item;
+					ring2 = slot_item ;
 				}
 
-				item.detach(backpack);
+				slot_item.activate(owner);
 
-				((Artifact) item).activate(owner);
-
-				item.cursedKnown = true;
-				if (item.cursed) {
+				slot_item .cursedKnown = true;
+				if (slot_item .cursed) {
 					ItemUtils.equipCursed(owner);
 					GLog.n(Utils.format(Game.getVar(R.string.Ring_Info2), item.name()));
 				}

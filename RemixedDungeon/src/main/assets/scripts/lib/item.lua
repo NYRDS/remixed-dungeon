@@ -35,6 +35,12 @@ end
 function item.cellSelected(self, item, action, cell)
 end
 
+function item.activate(self, item, hero)
+end
+
+function item.deactivate(self, item, hero)
+end
+
 function item.defaultDesc()
     return {
         image         = 14,
@@ -45,7 +51,8 @@ function item.defaultDesc()
         upgradable    = false,
         identified    = true,
         defaultAction = "Item_ACThrow",
-        price         = 0
+        price         = 0,
+        isArtifact    = false
     }
 end
 

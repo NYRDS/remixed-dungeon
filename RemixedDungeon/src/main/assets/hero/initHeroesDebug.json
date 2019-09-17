@@ -10,7 +10,7 @@
         "quantity": 100
       },
       {
-        "kind": "PotionOfFrost",
+        "kind": "TestItem",
         "quantity": 100,
         "level": 10
       },
@@ -24,7 +24,7 @@
       }
     ],
     "str": 10,
-    "hp": 20,
+    "hp": 200000,
     "magicAffinity": "Common",
     "sp": 10,
     "maxSp": 10

@@ -143,9 +143,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public boolean doUnequip(Char hero, boolean collect) {
+	public void deactivate(Char ch) {
 		onDetach();
-		return super.doUnequip(hero, collect);
 	}
 
 	@Override

@@ -6,7 +6,10 @@ import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -21,13 +24,15 @@ import java.util.ArrayList;
  * Created by mike on 26.05.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
-public class CustomItem extends Item {
+public class CustomItem extends EquipableItem {
 
     @Packable
     private String scriptFile;
 
     private boolean upgradable;
     private boolean identified;
+
+    private boolean isArtifact;
 
     private LuaScript script;
     private int price;
@@ -44,7 +49,7 @@ public class CustomItem extends Item {
     private void initItem() {
         script = new LuaScript("scripts/items/"+scriptFile, this);
 
-        script.run("itemDesc",null,null);
+        script.run("itemDesc");
         LuaTable desc = script.getResult().checktable();
 
         image        = desc.rawget("image").checkint();
@@ -52,10 +57,13 @@ public class CustomItem extends Item {
         name         = StringsManager.maybeId(desc.rawget("name").checkjstring());
         info         = StringsManager.maybeId(desc.rawget("info").checkjstring());
         stackable    = desc.rawget("stackable").checkboolean();
-        upgradable    = desc.rawget("upgradable").checkboolean();
-        identified    = desc.rawget("identified").checkboolean();
+        upgradable   = desc.rawget("upgradable").checkboolean();
+        identified   = desc.rawget("identified").checkboolean();
+
         setDefaultAction(desc.rawget("defaultAction").checkjstring());
-        price         = desc.rawget("price").checkint();
+
+        price        = desc.rawget("price").checkint();
+        isArtifact   = desc.rawget("isArtifact").checkboolean();
     }
 
     @Override
@@ -75,8 +83,32 @@ public class CustomItem extends Item {
     }
 
     @Override
+    public boolean doEquip(Hero hero) {
+        if(isArtifact) {
+            return hero.belongings.equip(this, Belongings.Slot.ARTIFACT);
+        }
+
+        return false;
+    }
+
+    @Override
+    public void activate(Char ch) {
+        script.run("activate", ch);
+    }
+
+    @Override
+    public void deactivate(Char ch) {
+        script.run("deactivate", ch);
+    }
+
+    @Override
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
+
+        if(!isArtifact) {
+            actions.remove(AC_EQUIP);
+            actions.remove(AC_UNEQUIP);
+        }
 
         script.run("actions", hero, null);
 
@@ -88,8 +120,8 @@ public class CustomItem extends Item {
             for(int i =1;i<=n;++i){
                 actions.add(luaActions.rawget(i).checkjstring());
             }
-
         }
+
         return actions;
     }
 
@@ -149,7 +181,7 @@ public class CustomItem extends Item {
 
     @Override
     protected void onThrow(int cell) {
-        script.run("onThrow", cell, null);
+        script.run("onThrow", cell);
     }
 
     @Override

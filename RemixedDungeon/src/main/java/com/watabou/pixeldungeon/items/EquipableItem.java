@@ -17,12 +17,15 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import java.util.ArrayList;
 
 public abstract class EquipableItem extends Item {
 
@@ -66,8 +69,18 @@ public abstract class EquipableItem extends Item {
 	protected float time2equip(Char hero ) {
 		return 1;
 	}
-	
-	public abstract boolean doEquip( Hero hero );
+
+	@Override
+	public ArrayList<String> actions(Hero hero ) {
+		ArrayList<String> actions = super.actions( hero );
+		actions.add( isEquipped( hero ) ? AC_UNEQUIP : AC_EQUIP );
+		return actions;
+	}
+
+	public abstract boolean doEquip(Hero hero );
+
+	public void activate(Char ch) {}
+	public void deactivate(Char ch) {}
 	
 	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
 		
@@ -75,7 +88,19 @@ public abstract class EquipableItem extends Item {
 			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );
 			return false;
 		}
-		
+
+		Belongings belongings = hero.getBelongings();
+
+		if (belongings==null) {
+			throw new TrackedRuntimeException("null belongings");
+		}
+
+		if(!belongings.unequip(this)) {
+			return false;
+		}
+
+		deactivate(hero);
+
 		if (single) {
 			hero.spendAndNext( time2equip( hero ) );
 		} else {
@@ -83,7 +108,7 @@ public abstract class EquipableItem extends Item {
 		}
 		
 		if (collect && !collect( hero.getBelongings().backpack )) {
-			Dungeon.level.drop( this, hero.getPos() );
+			hero.level().drop( this, hero.getPos() );
 		}
 				
 		return true;

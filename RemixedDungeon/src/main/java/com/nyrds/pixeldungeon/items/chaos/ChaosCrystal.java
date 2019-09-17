@@ -73,52 +73,49 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		}
 	};
 
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect(Item item) {
-			if (item != null) {
+	private final WndBag.Listener itemSelector = item -> {
+		if (item != null) {
 
-				if (item.quantity() > 1) {
-					item.detach(getUser().belongings.backpack);
-				} else {
-					item.removeItemFrom(getUser());
-				}
+			if (item.quantity() > 1) {
+				item.detach(getUser().belongings.backpack);
+			} else {
+				item.removeItemFrom(getUser());
+			}
 
-				removeItemFrom(getUser());
+			removeItemFrom(getUser());
 
-				getUser().getSprite().operate(getUser().getPos());
-				getUser().spend(TIME_TO_FUSE);
-				getUser().busy();
+			getUser().getSprite().operate(getUser().getPos());
+			getUser().spend(TIME_TO_FUSE);
+			getUser().busy();
 
-				if (item instanceof Scroll) {
-					Item newItem = new ScrollOfWeaponUpgrade();
-					getUser().collect(newItem);
-					GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
-					return;
-				}
+			if (item instanceof Scroll) {
+				Item newItem = new ScrollOfWeaponUpgrade();
+				getUser().collect(newItem);
+				GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
+				return;
+			}
 
-				if (item instanceof KindOfBow) {
-					getUser().collect(new ChaosBow());
-					GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
-					return;
-				}
+			if (item instanceof KindOfBow) {
+				getUser().collect(new ChaosBow());
+				GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
+				return;
+			}
 
-				if (item instanceof MeleeWeapon) {
-					getUser().collect(new ChaosSword());
-					GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
-					return;
-				}
+			if (item instanceof MeleeWeapon) {
+				getUser().collect(new ChaosSword());
+				GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
+				return;
+			}
 
-				if (item instanceof Armor) {
-					getUser().collect(new ChaosArmor());
-					GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
-					return;
-				}
+			if (item instanceof Armor) {
+				getUser().collect(new ChaosArmor());
+				GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
+				return;
+			}
 
-				if (item instanceof Wand) {
-					getUser().collect(new ChaosStaff());
-					GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
-				}
+			if (item instanceof Wand) {
+				getUser().collect(new ChaosStaff());
+				GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
 			}
 		}
 	};

@@ -15,20 +15,30 @@ return item.init{
         RPD.glog("Created item with id:"..tostring(item:getId()))
 
         return {
-            image     = 12,
-            imageFile = "items/food.png",
-            name      = "Test item",
-            info      = "Item for script tests",
-            stackable = false,
+            image         = 12,
+            imageFile     = "items/food.png",
+            name          = "Test item",
+            info          = "Item for script tests",
+            stackable     = false,
             defaultAction = "action1",
-            price         = 7
+            price         = 7,
+            isArtifact    = true
         }
     end,
     actions = function(self, item, hero)
-        return {"action1",
-                "action2",
-                "action3",
-                tostring(item:getId())} end,
+
+        if item:isEquipped(hero) then
+            return {"eq_action1",
+                    "eq_action2",
+                    "eq_action3",
+                    tostring(item:getId())}
+        else
+            return {"action1",
+                    "action2",
+                    "action3",
+                    tostring(item:getId())}
+        end
+    end,
 
     cellSelected = function(self, thisItem, action, cell)
         if action == "action1" then
@@ -50,4 +60,12 @@ return item.init{
             RPD.glogn(tostring(item:getId()).." "..action)
         end
     end,
+
+    activate = function(self, item, hero)
+        RPD.glogp(tostring(item).." activated on "..tostring(hero).."\n")
+    end,
+
+    deactivate = function(self, item, hero)
+        RPD.glogp(tostring(item).." deactivated on "..tostring(hero).."\n")
+    end
 }
