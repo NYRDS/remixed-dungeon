@@ -19,7 +19,7 @@
         "quantity": 100
       },
       {
-        "kind": "ScrollOfMirrorImage",
+        "kind": "ScrollOfWeaponUpgrade",
         "quantity": 100
       }
     ],

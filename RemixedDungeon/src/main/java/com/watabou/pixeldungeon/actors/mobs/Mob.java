@@ -75,6 +75,7 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
@@ -513,6 +514,7 @@ public abstract class Mob extends Char {
 
 	private final String LOOT = "loot";
 
+	@Nullable
 	protected Object loot       = null;
 	protected float  lootChance = 0;
 

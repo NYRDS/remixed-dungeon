@@ -177,8 +177,9 @@ public class PredesignedLevel extends CustomLevel {
 
 					if (cellValid(x, y)) {
 						Item item = ItemFactory.createItemFromDesc(itemDesc);
-
-						drop(item, cell(x, y));
+						if(item != null) {
+							drop(item, cell(x, y));
+						}
 					}
 				}
 			}

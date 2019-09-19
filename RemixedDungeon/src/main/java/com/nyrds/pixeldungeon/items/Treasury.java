@@ -5,6 +5,8 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.watabou.pixeldungeon.Challenges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
@@ -49,9 +51,24 @@ public class Treasury {
 
     private Set<String> forbidden = new HashSet<>();
 
+    private static Treasury defaultTreasury;
+
+    public static void reset() {
+        defaultTreasury = null;
+    }
+
+    public static Treasury get() {
+        if(defaultTreasury == null) {
+            defaultTreasury = create("Treasury.json");
+        }
+        return defaultTreasury;
+
+    }
+
     public static Treasury create(String file) {
         Treasury treasury = new Treasury();
         treasury.loadFromFile("levelsDesc/"+file);
+        Challenges.forbidCategories(Dungeon.challenges,treasury);
         return treasury;
     }
 
@@ -155,6 +172,13 @@ public class Treasury {
         }
 
         return random(categoryName);
+    }
+
+    public boolean isForbidden(@NotNull String itemClass) {
+        if(forbidden.contains(itemClass)) {
+            return true;
+        }
+        return false;
     }
 
     public Item check(@NotNull Item item) {

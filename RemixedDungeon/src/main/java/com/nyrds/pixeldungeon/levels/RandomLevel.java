@@ -73,7 +73,9 @@ public class RandomLevel extends RegularLevel {
 				for (int i = 0; i < itemsDesc.length(); ++i) {
 					JSONObject itemDesc = itemsDesc.optJSONObject(i);
 					Item item = ItemFactory.createItemFromDesc(itemDesc);
-					addItemToSpawn(item);
+					if(item!=null) {
+						addItemToSpawn(item);
+					}
 				}
 			}
 

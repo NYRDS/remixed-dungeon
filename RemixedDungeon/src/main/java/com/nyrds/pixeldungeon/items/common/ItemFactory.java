@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items.common;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.CustomItem;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
@@ -196,6 +197,7 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -463,15 +465,16 @@ public class ItemFactory {
         String ret = mNamesList.get(clazz);
         if (ret == null) {
             EventCollector.logException("Unregistered entry " + clazz.getCanonicalName());
-            ret = "ClothArmor";
+            ret = "NoItem";
         }
         return ret;
     }
 
+    @Nullable
     public static Item createItemFromDesc(JSONObject itemDesc) throws  JSONException {
         String kind = itemDesc.getString("kind");
 
-        if (kind.equals("NoItem")) {
+        if (kind.equals("NoItem") || Treasury.get().isForbidden(kind)) {
             return null;
         }
 

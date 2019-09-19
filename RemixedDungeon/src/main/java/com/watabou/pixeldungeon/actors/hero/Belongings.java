@@ -306,11 +306,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 
 			if (desc.has("ring1")) {
-				ring1 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
+				ring1 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
 			}
 
 			if (desc.has("ring2")) {
-				ring2 = (Artifact) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2"));
+				ring2 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2"));
 			}
 		} catch (ClassCastException e) {
 			throw ModdingMode.modException(e);
@@ -318,7 +318,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		if (desc.has("items")) {
 			JSONArray items = desc.getJSONArray("items");
 			for (int i = 0; i < items.length(); ++i) {
-				collect(ItemFactory.createItemFromDesc(items.getJSONObject(i)));
+				Item item = ItemFactory.createItemFromDesc(items.getJSONObject(i));
+				if(item!=null) {
+					collect(item);
+				}
 			}
 		}
 	}

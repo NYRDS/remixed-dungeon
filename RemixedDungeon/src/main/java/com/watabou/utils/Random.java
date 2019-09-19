@@ -17,6 +17,8 @@
 
 package com.watabou.utils;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -53,11 +55,11 @@ public class Random {
 		return min + (int)((Math.random() + Math.random()) * (max - min + 1) / 2f);
 	}
 
-	public static int chances(ArrayList<Float> values) {
+	public static int chances(@NotNull ArrayList<Float> values) {
 		return chances(values.toArray(new Float[0]));
 	}
 
-	public static int chances( Float[] floats ) {
+	public static int chances(@NotNull Float[] floats ) {
 		
 		int length = floats.length;
 		
@@ -78,7 +80,7 @@ public class Random {
 		return 0;
 	}
 	
-	public static int chances( float[] floats ) {
+	public static int chances(@NotNull float[] floats ) {
 		
 		int length = floats.length;
 		
@@ -99,6 +101,7 @@ public class Random {
 		return 0;
 	}
 
+	@Contract
 	@SuppressWarnings("unchecked")
 	public static <K> K chances( Map<K,Float> chances ) {
 

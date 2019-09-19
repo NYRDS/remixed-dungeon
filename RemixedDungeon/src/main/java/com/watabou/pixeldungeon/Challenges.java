@@ -60,6 +60,7 @@ public class Challenges {
 		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.WAND.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.THROWABLE.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.BULLETS.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.RANGED.name());
 	}
 
 	public static void forbidCategories(int challenge,Treasury treasury) {

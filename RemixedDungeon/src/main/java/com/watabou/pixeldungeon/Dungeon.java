@@ -25,6 +25,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
@@ -147,6 +148,7 @@ public class Dungeon {
         gameId = String.valueOf(SystemTime.now());
 
         LuaEngine.reset();
+        Treasury.reset();
 
         challenges = RemixedDungeon.challenges();
 
@@ -518,6 +520,8 @@ public class Dungeon {
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
 
+        Treasury.reset();
+
         Scroll.restore(bundle);
         Potion.restore(bundle);
         Wand.restore(bundle);
@@ -532,7 +536,7 @@ public class Dungeon {
 
         if (fullLoad) {
             chapters = new HashSet<>();
-            int ids[] = bundle.getIntArray(CHAPTERS);
+            int[] ids = bundle.getIntArray(CHAPTERS);
             for (int id : ids) {
                 chapters.add(id);
             }

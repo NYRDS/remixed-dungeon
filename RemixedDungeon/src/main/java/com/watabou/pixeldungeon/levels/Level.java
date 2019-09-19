@@ -320,7 +320,6 @@ public abstract class Level implements Bundlable {
 	public Treasury getTreasury() {
 		if(treasury == null) {
 			treasury = Treasury.create(DungeonGenerator.getLevelProperty(levelId, "treasury","Treasury.json"));
-			Challenges.forbidCategories(Dungeon.challenges,treasury);
 		}
 		return treasury;
 	}
