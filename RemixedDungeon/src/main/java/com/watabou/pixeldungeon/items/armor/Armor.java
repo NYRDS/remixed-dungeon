@@ -114,7 +114,7 @@ public class Armor extends EquipableItem {
 	public Item upgrade( boolean inscribe ) {
 		
 		if (glyph != null) {
-			if (!inscribe && Random.Int( level() ) > 0) {
+			if (!inscribe && Random.Int( level() ) > 0 && !Dungeon.isLoading()) {
 				GLog.w( Game.getVar(R.string.Armor_Incompatible) );
 				inscribe( null );
 			}
@@ -254,7 +254,7 @@ public class Armor extends EquipableItem {
 		return price;
 	}
 	
-	public Armor inscribe( Glyph glyph ) {
+	public void inscribe(Glyph glyph ) {
 		
 		if (glyph != null && this.glyph == null) {
 			DR += tier;
@@ -263,8 +263,7 @@ public class Armor extends EquipableItem {
 		}
 		
 		this.glyph = glyph;
-		
-		return this;
+
 	}
 
 	@Override

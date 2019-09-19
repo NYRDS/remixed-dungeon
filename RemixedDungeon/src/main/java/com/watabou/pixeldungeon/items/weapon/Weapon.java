@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -55,6 +56,9 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
 public class Weapon extends KindOfWeapon {
 
 	public int		STR	= 10;
@@ -156,22 +160,21 @@ public class Weapon extends KindOfWeapon {
 		int damage = super.damageRoll( hero );
 		int exStr = hero.effectiveSTR() - STR;
 
-		if ((hero.rangedWeapon != null) == (hero.getHeroClass() == HeroClass.HUNTRESS)) {
-			if (exStr > 0) {
-				damage += Random.IntRange( 0, exStr );
+		if(exStr > 0) {
+			if ((hero.rangedWeapon != null) == (hero.getHeroClass() == HeroClass.HUNTRESS)) {
+				damage += Random.IntRange(0, exStr);
+			}
+
+			if (hero.getHeroClass() == HeroClass.GNOLL) {
+				damage += Random.IntRange(0, exStr);
 			}
 		}
-
-		if(hero.getHeroClass() == HeroClass.GNOLL) {
-			damage += Random.IntRange(0, exStr);
-		}
-
 		return damage;
 	}
 	
 	public Item upgrade( boolean enchant ) {		
 		if (getEnchantment() != null) {
-			if (!enchant && Random.Int( level() ) > 0) {
+			if (!enchant && Random.Int( level() ) > 0 && !Dungeon.isLoading()) {
 				GLog.w(Game.getVar(R.string.Weapon_Incompatible));
 				enchant( null );
 			}
@@ -183,7 +186,7 @@ public class Weapon extends KindOfWeapon {
 		
 		return super.upgrade();
 	}
-	
+
 	@NotNull
     @Override
 	public String toString() {
