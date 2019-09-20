@@ -105,12 +105,9 @@ public class Weightstone extends Item {
 		return 40 * quantity();
 	}
 	
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				GameScene.show( new WndBalance( (Weapon)item ) );
-			}
+	private final WndBag.Listener itemSelector = item -> {
+		if (item != null) {
+			GameScene.show( new WndBalance( (Weapon)item ) );
 		}
 	};
 	

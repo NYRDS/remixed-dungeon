@@ -42,10 +42,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -180,8 +178,8 @@ public class Ghost extends NPC {
 		private static int depth;
 		private static int left2kill;
 		
-		private static Weapon weapon;
-		private static Armor armor;
+		private static Item weapon;
+		private static Item armor;
 		
 		public static void reset() {
 			spawned = false;
@@ -239,8 +237,8 @@ public class Ghost extends NPC {
 				depth	= node.getInt( DEPTH );
 				processed	= node.getBoolean( PROCESSED );
 				
-				weapon	= (Weapon)node.get( WEAPON );
-				armor	= (Armor)node.get( ARMOR );
+				weapon	= (Item)node.get( WEAPON );
+				armor	= (Item)node.get( ARMOR );
 			} else {
 				reset();
 			}
@@ -272,10 +270,10 @@ public class Ghost extends NPC {
 
 		private static void makeReward() {
 			do {
-				weapon = (Weapon)Dungeon.level.getTreasury().bestOf(Treasury.Category.WEAPON, 4 );
+				weapon = Dungeon.level.getTreasury().bestOf(Treasury.Category.WEAPON, 4 );
 			} while (weapon instanceof MissileWeapon);
 
-			armor = (Armor) Dungeon.level.getTreasury().bestOf(Treasury.Category.ARMOR,4 );
+			armor = Dungeon.level.getTreasury().bestOf(Treasury.Category.ARMOR,4 );
 
 			weapon.identify();
 			armor.identify();
@@ -312,7 +310,7 @@ public class Ghost extends NPC {
 			Journal.remove( Journal.Feature.GHOST.desc() );
 		}
 
-		public static Weapon getWeapon() {
+		public static Item getWeapon() {
 			if(weapon==null) {
 				EventCollector.logException("null weapon");
 				makeReward();
@@ -321,7 +319,7 @@ public class Ghost extends NPC {
 		}
 
 
-		public static Armor getArmor() {
+		public static Item getArmor() {
 			if(armor==null) {
 				EventCollector.logException("null armor");
 				makeReward();
