@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -10,7 +11,6 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -34,23 +34,8 @@ public class SuspiciousRat extends Mob {
 		addImmunity(ToxicGas.class);
 	}
 
-	private static final String RAT_TRANSFORMING_STATE = "rat_transforming_state";
-
+	@Packable
 	private boolean transforming = false;
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-
-		bundle.put(RAT_TRANSFORMING_STATE, transforming);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-
-		super.restoreFromBundle(bundle);
-		transforming = bundle.getBoolean(RAT_TRANSFORMING_STATE);
-	}
 
 	@Override
 	public int damageRoll() {

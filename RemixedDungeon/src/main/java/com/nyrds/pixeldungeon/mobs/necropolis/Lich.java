@@ -36,6 +36,8 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -97,7 +99,7 @@ public class Lich extends Boss {
     }
 
     @Override
-    public boolean canAttack(Char enemy) {
+    public boolean canAttack(@NotNull Char enemy) {
         return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
     }
 

@@ -101,7 +101,7 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-    public boolean canAttack(Char enemy) {
+    public boolean canAttack(@NotNull Char enemy) {
 		return pumpedUp ? distance( enemy ) <= 2 : super.canAttack(enemy);
 	}
 	

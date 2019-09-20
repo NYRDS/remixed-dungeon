@@ -295,7 +295,7 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	public boolean canAttack(Char enemy) {
+	public boolean canAttack(@NotNull Char enemy) {
 		return level().adjacent(getPos(), enemy.getPos()) && !pacified;
 	}
 

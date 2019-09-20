@@ -461,6 +461,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             isMoving = false;
 
             ch.onMotionComplete();
+            place(ch.getPos());
+
 
             motion.killAndErase();
             motion = null;

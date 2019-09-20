@@ -83,7 +83,7 @@ public class Eye extends Mob {
     private int hitCell;
 
     @Override
-    public boolean canAttack(Char enemy) {
+    public boolean canAttack(@NotNull Char enemy) {
 
         hitCell = Ballistica.cast(getPos(), enemy.getPos(), true, false);
 

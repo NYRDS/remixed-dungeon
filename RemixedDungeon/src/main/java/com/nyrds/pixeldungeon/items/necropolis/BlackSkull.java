@@ -1,12 +1,12 @@
 package com.nyrds.pixeldungeon.items.necropolis;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 
 import java.util.Collection;
 
@@ -18,11 +18,10 @@ public class BlackSkull extends Artifact {
 	private static final int    RESURRECTION_COST = 10;
 	private static final int    MAXIMUM_CHARGE  = 10;
 
-	private static final String CHARGE_KEY      = "charge";
-	private static final String ACTIVATED_KEY   = "activated";
-
+	@Packable
 	private boolean activated = false;
 
+	@Packable
 	private int charge = 0;
 
 	public BlackSkull() {
@@ -82,21 +81,5 @@ public class BlackSkull extends Artifact {
 		} else {
 			return Game.getVar(R.string.BlackSkull_Name);
 		}
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-
-		bundle.put(CHARGE_KEY, charge);
-		bundle.put(ACTIVATED_KEY, activated);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-
-		charge = bundle.getInt(CHARGE_KEY);
-		activated = bundle.getBoolean(ACTIVATED_KEY);
 	}
 }

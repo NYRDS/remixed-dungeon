@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Rat extends Mob {
 
 	public Rat() {
@@ -55,7 +57,7 @@ public class Rat extends Mob {
 	}
 
 	@Override
-    public boolean canAttack(Char enemy) {
+    public boolean canAttack(@NotNull Char enemy) {
 		if(enemy.hasBuff(RatSkull.RatterAura.class)) {
 			setState(MobAi.getStateByClass(Fleeing.class));
 			if(!hasBuff(Terror.class)) {

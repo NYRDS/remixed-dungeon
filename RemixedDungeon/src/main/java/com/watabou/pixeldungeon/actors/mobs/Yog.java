@@ -270,7 +270,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-        public boolean canAttack(Char enemy) {
+        public boolean canAttack(@NotNull Char enemy) {
 			return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 		}
 

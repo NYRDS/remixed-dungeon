@@ -172,10 +172,11 @@ public class Shopkeeper extends NPC {
 
 	public void generateNewItem()
 	{
-		Item newItem;
-		do {
-			newItem = level().getTreasury().random();
-		} while (newItem instanceof Gold);
+		Item newItem = level().getTreasury().random();
+
+		if(newItem instanceof Gold) {
+			return;
+		}
 
 		placeItemInShop(newItem);
 	}

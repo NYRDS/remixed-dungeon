@@ -99,8 +99,8 @@ public class Warlock extends Mob implements IZapper {
 			final int tgt = cell;
 			final Char ch = this;
 
-			placeTo(cell);
 			fx(cell, () -> WandOfBlink.appear(ch, tgt));
+			placeTo(cell);
 		}
 	}
 
@@ -121,7 +121,7 @@ public class Warlock extends Mob implements IZapper {
 	}
 
 	@Override
-    public boolean canAttack(Char enemy) {
+    public boolean canAttack(@NotNull Char enemy) {
 		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 

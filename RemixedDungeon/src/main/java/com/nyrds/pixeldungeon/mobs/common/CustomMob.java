@@ -18,6 +18,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 /**
@@ -93,7 +94,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-    public boolean canAttack(Char enemy) {
+    public boolean canAttack(@NotNull Char enemy) {
 
 		if(friendly(enemy)) {
 			return false;

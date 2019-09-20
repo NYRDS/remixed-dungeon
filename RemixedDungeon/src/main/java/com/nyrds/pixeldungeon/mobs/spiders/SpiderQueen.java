@@ -54,7 +54,7 @@ public class SpiderQueen extends Boss {
 	}
 	
 	@Override
-    public boolean canAttack(Char enemy) {
+    public boolean canAttack(@NotNull Char enemy) {
 		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && hp() > ht() / 2;
 	}
 	
