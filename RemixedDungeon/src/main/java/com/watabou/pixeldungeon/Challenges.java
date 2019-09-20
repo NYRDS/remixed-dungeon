@@ -20,6 +20,9 @@ package com.watabou.pixeldungeon;
 import android.annotation.SuppressLint;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.watabou.pixeldungeon.items.DewVial;
+import com.watabou.pixeldungeon.items.Dewdrop;
+import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 
 import java.util.ArrayList;
@@ -55,7 +58,10 @@ public class Challenges {
 		Objects.requireNonNull(forbiddenCategories.get(NO_ARMOR)).add(Treasury.Category.ARMOR.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_HEALING)).add(PotionOfHealing.class.getSimpleName());
 		Objects.requireNonNull(forbiddenCategories.get(NO_HERBALISM)).add(Treasury.Category.SEED.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_HERBALISM)).add(Dewdrop.class.getSimpleName());
+		Objects.requireNonNull(forbiddenCategories.get(NO_HERBALISM)).add(DewVial.class.getSimpleName());
 		Objects.requireNonNull(forbiddenCategories.get(NO_SCROLLS)).add(Treasury.Category.SCROLL.name());
+		Objects.requireNonNull(forbiddenCategories.get(NO_SCROLLS)).add(Stylus.class.getSimpleName());
 		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.WEAPON.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.WAND.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_WEAPON)).add(Treasury.Category.THROWABLE.name());

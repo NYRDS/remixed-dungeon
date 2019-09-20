@@ -64,7 +64,8 @@
       "LeatherArmor": 1,
       "ClothArmor": 1,
       "MailArmor": 1,
-      "RatArmor": 0
+      "RatArmor": 0,
+      "SpiderArmor":0
     },
     "RING": {
       "RingOfElements": 1,
@@ -116,7 +117,8 @@
       "ScrollOfMagicMapping": 15,
       "ScrollOfTeleportation": 10,
       "ScrollOfIdentify": 30,
-      "ScrollOfCurse": 6
+      "ScrollOfCurse": 6,
+      "ScrollOfWeaponUpgrade": 0
     },
     "POTION": {
       "PotionOfInvisibility": 10,
@@ -157,14 +159,15 @@
       "Longsword": 1,
       "CurareDart": 1,
       "Dagger": 1,
-      "GnollTamahawk":0,
-      "ElvenDagger": 0
+      "ElvenDagger": 0,
+      "GnollTamahawk":0
     },
     "THROWABLE": {
       "Dart": 1,
       "Shuriken": 1,
       "Javelin": 1,
       "Tamahawk": 1,
+      "GnollTamahawk":0,
       "CurareDart": 1,
       "IncendiaryDart": 1
     }

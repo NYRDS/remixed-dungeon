@@ -130,8 +130,12 @@ public class Treasury {
                     continue;
                 }
 
-                currentCategory.names.add(item);
-                currentCategory.probs.add((float) catData.getDouble(item));
+                if(ItemFactory.isValidItemClass(item)) {
+                    currentCategory.names.add(item);
+                    currentCategory.probs.add((float) catData.getDouble(item));
+                } else {
+                    ModError.doReport(item,new Exception("Treasury: unknown item"));
+                }
             }
         }
     }
@@ -167,7 +171,7 @@ public class Treasury {
 
         String categoryName = names.get(categoryIndex);
         if(forbidden.contains(categoryName)) {
-            GLog.debug("Forbidden category:",categoryName);
+            GLog.debug("Forbidden category: %s",categoryName);
             return ItemFactory.itemByName("Gold");
         }
 
@@ -183,7 +187,7 @@ public class Treasury {
 
     public Item check(@NotNull Item item) {
         if(forbidden.contains(item.getClassName())) {
-            GLog.debug("Forbidden item:",item.getClassName());
+            GLog.debug("Forbidden item: %s",item.getClassName());
             return ItemFactory.itemByName("Gold").quantity(item.price());
         }
         return item;
@@ -201,7 +205,7 @@ public class Treasury {
     public Item random(String categoryOrItem) {
 
         if(forbidden.contains(categoryOrItem)) {
-            GLog.debug("Forbidden category or item:",categoryOrItem);
+            GLog.debug("Forbidden category or item: %s",categoryOrItem);
             return ItemFactory.itemByName("Gold");
         }
 
