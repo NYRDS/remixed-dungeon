@@ -22,6 +22,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import lombok.var;
+
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
 
@@ -92,24 +94,28 @@ public class ModdingMode {
 
 	@NotNull
 	public static List<String> listResources(String path, FilenameFilter filter) {
-		try{
+		var list = _listResources(path, filter);
 
+		for (int i = 0;i<list.size();++i) {
+			list.set(i,list.get(i).replaceFirst(path+"/",""));
+		}
+
+		return list;
+	}
+
+	@NotNull
+	private static List<String> _listResources(String path, FilenameFilter filter) {
+		try{
 			Set<String> resList = new HashSet<>();
 
 			String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
-
-			if (fullList != null) {
-				for(String resource : fullList) {
-					if(filter.accept(null, resource)) {
-						resList.add(resource);
-					}
-				}
-			}
+			collectResources(path, filter, resList, fullList);
 
 			if(inMod()) {
 				String resourcesPath = mActiveMod + "/" + path;
 				if(isResourceExistInMod(path)) {
-					resList.addAll(Arrays.asList(FileSystem.getExternalStorageFile(resourcesPath).list(filter)));
+					String[] modList = FileSystem.getExternalStorageFile(resourcesPath).list();
+					collectResources(path, filter, resList, modList);
 				}
 			}
 
@@ -117,6 +123,19 @@ public class ModdingMode {
 
 		} catch (IOException e) {
 			throw new TrackedRuntimeException(e);
+		}
+	}
+
+	private static void collectResources(String path, FilenameFilter filter, Set<String> resList, String[] fullList) {
+		if(fullList==null) {
+			return;
+		}
+		for(String resource : fullList) {
+			if(filter.accept(null, resource)) {
+				resList.add(path+"/"+resource);
+			} else {
+				resList.addAll(_listResources(path+"/"+resource,filter));
+			}
 		}
 	}
 

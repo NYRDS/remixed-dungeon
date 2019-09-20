@@ -197,6 +197,7 @@ import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -471,7 +472,7 @@ public class ItemFactory {
     }
 
     @Nullable
-    public static Item createItemFromDesc(JSONObject itemDesc) throws  JSONException {
+    public static Item createItemFromDesc(@NotNull JSONObject itemDesc) throws  JSONException {
         String kind = itemDesc.getString("kind");
 
         if (kind.equals("NoItem") || Treasury.get().isForbidden(kind)) {

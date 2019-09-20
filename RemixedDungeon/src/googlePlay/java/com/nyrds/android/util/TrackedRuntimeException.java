@@ -17,26 +17,24 @@ public class TrackedRuntimeException extends RuntimeException {
 			message = "";
 			EventCollector.logException(e,"exception with empty message");
 		}
-		Notifications.displayNotification(this.getClass().getSimpleName(), e.getClass().getSimpleName(), message);
-
 		GLog.toFile(message);
 		EventCollector.logException(e, Utils.EMPTY_STRING);
+		Notifications.displayNotification(this.getClass().getSimpleName(), e.getClass().getSimpleName(), message);
 	}
 
 	public TrackedRuntimeException( String s) {
 		super(s);
-		Notifications.displayNotification(this.getClass().getSimpleName(), s, s);
 		GLog.toFile(s);
-
 		EventCollector.logException(this,s);
+		Notifications.displayNotification(this.getClass().getSimpleName(), s, s);
 	}
 
 	public TrackedRuntimeException( String s,Exception e) {
 		super(s,e);
-		Notifications.displayNotification(this.getClass().getSimpleName(), s, e.getMessage());
 		GLog.toFile(s);
 		GLog.toFile(e.getMessage());
 		EventCollector.logException(this,s);
+		Notifications.displayNotification(this.getClass().getSimpleName(), s, e.getMessage());
 	}
 
 }
