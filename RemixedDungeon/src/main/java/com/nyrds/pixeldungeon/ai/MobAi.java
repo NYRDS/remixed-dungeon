@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -53,11 +55,11 @@ public abstract class MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         return Utils.format("This %s is %s", me.getName(), getTag());
     }
 
-    protected Char chooseNearestChar(Mob me) {
+    protected Char chooseNearestChar(@NotNull Mob me) {
 
         Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();
@@ -85,7 +87,7 @@ public abstract class MobAi implements AiState {
     }
 
 
-    protected Char chooseEnemy(Mob me) {
+    protected Char chooseEnemy(@NotNull Mob me) {
 
         Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();
@@ -110,7 +112,7 @@ public abstract class MobAi implements AiState {
         return bestEnemy;
     }
 
-    protected void huntEnemy(Mob me) {
+    protected void huntEnemy(@NotNull Mob me) {
 
         if (me.getEnemy().valid()) {
             me.enemySeen = true;
@@ -121,7 +123,7 @@ public abstract class MobAi implements AiState {
         }
     }
 
-    public boolean returnToOwnerIfTooFar(Mob me, int maxDist) {
+    public boolean returnToOwnerIfTooFar(@NotNull Mob me, int maxDist) {
         if(     me.level().distance(me.getPos(),me.getOwnerPos())>maxDist
             &&  me.level().distance(me.target,  me.getOwnerPos())>maxDist
         ) {
@@ -132,7 +134,7 @@ public abstract class MobAi implements AiState {
         return false;
     }
 
-    private static void registerAiState(Class<? extends AiState> stateClass) {
+    private static void registerAiState(@NotNull Class<? extends AiState> stateClass) {
         try {
             aiStateInstances.put(stateClass.getSimpleName().toUpperCase(Locale.ROOT), stateClass.newInstance());
         } catch (InstantiationException e) {
@@ -142,7 +144,7 @@ public abstract class MobAi implements AiState {
         }
     }
 
-    public static AiState getStateByTag(String stateTag) {
+    public static AiState getStateByTag(@NotNull String stateTag) {
         String tag = stateTag.toUpperCase(Locale.ROOT);
         AiState aiState = aiStateInstances.get(tag);
 
@@ -158,7 +160,7 @@ public abstract class MobAi implements AiState {
     }
 
 
-    public static AiState getStateByClass(Class<? extends AiState> stateClass) {
+    public static AiState getStateByClass(@NotNull Class<? extends AiState> stateClass) {
         return aiStateInstances.get(stateClass.getSimpleName().toUpperCase(Locale.ROOT));
     }
 
