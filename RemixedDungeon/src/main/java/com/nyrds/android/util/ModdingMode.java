@@ -15,6 +15,7 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -30,6 +31,8 @@ public class ModdingMode {
 	private static final Set<String> trustedMods = new HashSet<>();
 
 	public static boolean useRetroHeroSprites = false;
+
+	private static Set<String> pathsChecked = new HashSet<>();
 
 	static {
 		trustedMods.add("Maze");
@@ -94,7 +97,9 @@ public class ModdingMode {
 
 	@NotNull
 	public static List<String> listResources(String path, FilenameFilter filter) {
-		var list = _listResources(path, filter);
+        pathsChecked.clear();
+
+	    var list = _listResources(path, filter);
 
 		for (int i = 0;i<list.size();++i) {
 			list.set(i,list.get(i).replaceFirst(path+"/",""));
@@ -106,7 +111,13 @@ public class ModdingMode {
 	@NotNull
 	private static List<String> _listResources(String path, FilenameFilter filter) {
 		try{
-			Set<String> resList = new HashSet<>();
+            if(pathsChecked.contains(path)) {
+                return new ArrayList<>();
+            }
+
+            pathsChecked.add(path);
+
+            Set<String> resList = new HashSet<>();
 
 			String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
 			collectResources(path, filter, resList, fullList);
