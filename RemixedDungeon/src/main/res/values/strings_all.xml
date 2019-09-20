@@ -234,22 +234,6 @@
   <string name="StoneBlood_Buff">Stone blood</string>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Welcome!</string>
-  <string name="Welcome_Text_28_3">
-    remix.28.3\n
-    - New Necromancer abilities:\n
-    -- Dark Sacrifice\n
-    -- Exhumation\n
-    -- Raise Dead\n
-    - Fried, Frozen, Rotten and Raw Fish\n
-    - Modding:\n
-    -- Moddable Spells\n
-    -- Moddable Items\n
-    </string>
-  <string name="Welcome_Text_28_4">
-    remix.28.4\n
-    - Graphics improvements:\n
-    -- Hero weapons now visible in game\n
-    </string>
   <string name="Welcome_Text_28_5">
     remix.28.5\n
     - Modding:\n
@@ -2543,4 +2527,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_stone_wall_broken_desc">Old stone wall, in bad condition</string>
   <string name="Challenges_Names_6">Forbidden Runes</string>
   <string name="Challenges_Names_7">Pacifism</string>
+  <string name="Welcome_Text_29_2">
+    remix.29.2\n
+    - Gameplay:\n
+    -- New challenges:\n
+    --- Forbidden Runes\n
+    --- Pacifism
+    - Modding:\n
+    -- Custom Artifacts\n
+    - Bugs fixed\n
+    </string>
 </resources>
