@@ -36,7 +36,14 @@
       "ChristmasTurkey": 0.1,
       "PumpkinPie": 0.1,
       "Ration": 4,
-      "OverpricedRation": 0.1
+      "OverpricedRation": 0.1,
+      "RottenMeat": 0,
+      "RottenRation": 0,
+      "RottenPasty": 0,
+      "RottenPumpkinPie": 0,
+      "RawFish": 0,
+      "FriedFish": 0,
+      "RottenFish": 0
     },
     "RANGED": {
       "CompoundBow": 3,
@@ -44,7 +51,8 @@
       "RubyCrossbow": 1,
       "WoodenBow": 3,
       "WoodenCrossbow": 4,
-      "RubyBow": 1
+      "RubyBow": 1,
+      "ElvenBow": 0
     },
     "GOLD": {
       "Gold": 1
@@ -148,7 +156,9 @@
       "ShortSword": 0,
       "Longsword": 1,
       "CurareDart": 1,
-      "Dagger": 1
+      "Dagger": 1,
+      "GnollTamahawk":0,
+      "ElvenDagger": 0
     },
     "THROWABLE": {
       "Dart": 1,
