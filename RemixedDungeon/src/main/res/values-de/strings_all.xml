@@ -2202,6 +2202,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="BodyArmorBuff_Info">Rüstung wird auf Kosten von Bewegungs-Geschwindigkeit erhöht.</string>
   <string name="DieHardBuff_Name">Stirb Hart</string>
   <string name="DieHardBuff_Info">Regenerationsrate erhöht</string>
+  <string name="SmashSpell_Name">Zerschmettern</string>
   <string name="SmashSpell_Info">Springe aufwärts und erzeuge einen kraftvollen Schlag nachdem der Boden getroffen ist, was temporär Gegner in der Nähe betäubt und ihnen physischen Schaden zufügt.</string>
   <string name="SmashSpell_NeedWeapon">Ich brauche eine Waffe für diese Aktion.</string>
   <string name="DashSpell_Name">Rennen</string>
@@ -2240,8 +2241,91 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="town_deco_broken_wall_desc">Die Stämme dieser Mauer sind vor langer Zeit verrottet und haben ihre normale Wiederstandsfähigkeit verloren.</string>
   <string name="town_deco_mud_name">Matsch</string>
   <string name="town_deco_stock_name">Vorrat</string>
+  <string name="town_deco_barrel_name">Fass</string>
+  <string name="town_deco_barrel_desc">Ein gewöhnliches Fass, in einem nicht ganz so guten Zustand.</string>
+  <string name="town_deco_hay_name">Heu</string>
+  <string name="town_deco_hay_desc">Ein kleiner Haufen angenehm riechendes Heu.</string>
+  <string name="town_deco_firewood_name">Feuerholz</string>
+  <string name="town_deco_firewood_desc">Eine notwendige Sache bei dieser Kälte.</string>
+  <string name="town_deco_stakes_name">Pfähle</string>
+  <string name="town_deco_stakes_desc">Diese geschärften Holzstämme haben ein angsteinflößendes Aussehen, wobei sie allerdings alleine eher nutzlos sind.</string>
+  <string name="town_deco_fence_name">Zaun</string>
+  <string name="town_deco_fence_desc">Ein hölzerner Zaun, mit Schnee bedeckt.</string>
+  <string name="town_deco_pole_name">Pfahl</string>
+  <string name="town_deco_pole_desc">Ein hoher Pfahl, der dafür gedacht ist, ein Seil aufzuhängen.</string>
+  <string name="town_deco_rope_name">Seil</string>
+  <string name="town_deco_rope_desc">Manuell verdrehtes Seil.</string>
+  <string name="town_deco_slush_name">Schlamm</string>
+  <string name="town_deco_slush_desc">Der Schnee begann zu schmelzen, weshalb der Boden zu Schlamm wurde.</string>
   <string name="town_deco_chest_name">Kiste</string>
+  <string name="town_deco_chest_desc">Geeignete Möbelstücke, um verschiedene Dinge und Schmuck zu lagern.</string>
+  <string name="town_deco_emptyboard_name">Regal</string>
+  <string name="town_deco_emptyboard_desc">Das standard Regal um Sachen zur Schau zu stellen.</string>
+  <string name="town_deco_grandclock_name">Standuhr</string>
+  <string name="town_deco_grandclock_desc">Sehr alt, funktioniert aber immer noch.</string>
+  <string name="town_deco_wall_beam_name">Balken</string>
+  <string name="town_deco_wall_beam_desc">Dient als tragkräftige Stütze für diese Konstruktion.</string>
+  <string name="town_deco_wall_candles_name">Kerzen</string>
+  <string name="town_deco_wall_candles_desc">Erloschene Kerzen, von denen immer noch ein angenehmes Aroma ausgeht.</string>
+  <string name="town_deco_wooden_drawer_name">Schublade</string>
+  <string name="town_deco_wooden_drawer_desc">Interessant, was da drin ist.</string>
   <string name="town_deco_scrolls_name">Schriftrollen</string>
+  <string name="town_deco_scrolls_desc">Dieses staubige Regal ist voll mit verschieden Schriftrollen und Büchern.</string>
+  <string name="town_deco_medicine_name">Medizin</string>
+  <string name="town_deco_wooden_stairs_name">Stufen</string>
+  <string name="town_deco_wooden_stairs_desc">Sie machen dich ein bisschen höher.</string>
+  <string name="town_deco_canvas_name">Leinwand</string>
+  <string name="town_deco_canvas_desc">Ein dickes Stück Stoff hängt an der Wand.</string>
+  <string name="town_deco_projector_name">Filmprojektor</string>
+  <string name="town_deco_projector_desc">Ein altes Gerät um Filme abzuspielen und alte Leute zu unterhalten.</string>
+  <string name="town_deco_filmtape_name">Film</string>
+  <string name="town_deco_filmtape_desc">Interessant, was dieses Stück enthält.</string>
+  <string name="town_deco_painting_name">Gemälde</string>
+  <string name="town_deco_painting_desc">Ein wunderschön anzusehendes Stück Kunst.</string>
+  <string name="town_deco_curtains_name">Vorhänge</string>
+  <string name="town_deco_curtains_desc">Stoppt alles unnötige Licht und dient außerdem der Dekoration.</string>
+  <string name="town_deco_rug_name">Teppich</string>
+  <string name="town_deco_rug_desc">Mit einem guten Geschmack entworfen.</string>
+  <string name="town_deco_trapdoor_name">Falltür</string>
+  <string name="town_deco_trapdoor_desc">Wo könnte das hinführen.</string>
+  <string name="town_deco_glass_stained_name">Buntglass</string>
+  <string name="town_deco_glass_stained_desc">Der Entwickler dieses Glases hat möglicherweise sehr viel Arbeit hineingesteckt.</string>
+  <string name="town_deco_glass_name">Breites Fenster</string>
+  <string name="town_deco_glass_desc">Dieses Fenster ist breiter als die Anderen und lässt wahrscheinlich mehr Licht hinein.</string>
+  <string name="town_deco_counter_name">Tresen</string>
+  <string name="town_deco_counter_desc">Hält eine gewisse Distanz zwischen dir und der Person dahinter.</string>
+  <string name="town_deco_library_books_name">Lesestoff</string>
+  <string name="town_deco_library_books_desc">Immer noch besser als die Bücher des Dungeons.</string>
+  <string name="town_deco_wallpaper_name">Tapete</string>
+  <string name="town_deco_wallpaper_desc">Eine großartige Dekoration für einen solchen Ort.</string>
+  <string name="town_deco_stones_name">Steine</string>
+  <string name="town_deco_stones_desc">Nur ein Haufen Steine.</string>
+  <string name="town_deco_fireplace_name">Feuerstelle</string>
+  <string name="town_deco_fireplace_desc">Gut um sich an kalten Orten wie diesem aufzuwärmen.</string>
+  <string name="Welcome_Text_28_6">
+remix.28.6\n
+- Spielmechaniken:\n
+-- Krieger Spezialfähigkeiten!\n
+-- Helden Hunger reduziert\n
+-- Nekromant Besessenheits Zauber\n
+-- Dieb Verhüllen Fähigkeit\n
+-- Neue Abzeichen\n
+- Modding:\n
+-- Eigene Buffs mit Skripten\n
+-- Eigene gfx\n</string>
+  <string name="Badges_GamesPlayed5">5000 Spiele gespielt</string>
+  <string name="Badges_PotionsCooked5">25 Tränke gebraut</string>
+  <string name="Badges_ItemLvl5">Gegenstand mit Level 15 errungen</string>
+  <string name="Badges_FoodEaten5">60 Mahlzeiten gegessen</string>
+  <string name="Badges_StrengthAttained5">21 Stärkepunkte erhalten</string>
+  <string name="Badges_LevelReached5">Level 30 erreicht</string>
+  <string name="Badges_GoldCollected5">35000 Gold gesammelt</string>
+  <string name="Badges_MonsterSlain5">1000 Gegner getötet</string>
+  <string name="Spells_NotInOwnBody">Du kannst %s nicht ausführen, solange deine Seele von deinem Körper getrennt ist.</string>
+  <string name="WndHero_Satiety">Sättigung</string>
+  <string name="Welcome_Text_29">
+remix.29\n
+ - Stadt überarbeitet!\n</string>
   <string name="Ring_Gems_0">Diamant</string>
   <string name="Ring_Gems_1">Opal</string>
   <string name="Ring_Gems_2">Granat</string>
@@ -2458,5 +2542,12 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
   <string name="Potion_Colors_9">Braun</string>
   <string name="Potion_Colors_10">Indigoblau</string>
   <string name="Potion_Colors_11">Silbern</string>
+  <string name="Welcome_Text_29_1">
+remix.29.1\n
+ - Modding:\n
+-- Veränderbare Gegenstand Spawn rate\n
+- Übersetzungen:\n
+-- Ungarische Übersetzung hinzugefügt\n
+- Bugs behoben\n</string>
   <string name="town_deco_stone_wall_broken_name">Kaputte Mauer</string>
 </resources>
