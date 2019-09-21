@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.mobs.common.ArmoredStatue;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -29,6 +28,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
+import com.watabou.utils.Random;
 
 public class StatuePainter extends Painter {
 
@@ -68,24 +68,30 @@ public class StatuePainter extends Painter {
 			
 		}
 
-
 		Mob statue = null;
 
-
 		if(Dungeon.isChallenged(Challenges.NO_ARMOR) && Dungeon.isChallenged(Challenges.NO_WEAPON)) {
-			statue = new Golem();
+			return;
 		}
 
-		if(statue == null && Dungeon.isChallenged(Challenges.NO_WEAPON)) {
+		if(Dungeon.isChallenged(Challenges.NO_WEAPON)) {
 			statue = new ArmoredStatue();
 		}
 
-		if(statue == null &&Dungeon.isChallenged(Challenges.NO_ARMOR)) {
+		if(Dungeon.isChallenged(Challenges.NO_ARMOR)) {
 			statue = new Statue();
 		}
 
+		if(statue == null) {
+			if(Random.Float()>0.5) {
+				statue = new Statue();
+			} else {
+				statue = new ArmoredStatue();
+			}
+		}
+
 		statue.setPos(cx + cy * level.getWidth());
-		level.mobs.add( statue );
-		Actor.occupyCell( statue );
+		level.mobs.add(statue);
+		Actor.occupyCell(statue);
 	}
 }
