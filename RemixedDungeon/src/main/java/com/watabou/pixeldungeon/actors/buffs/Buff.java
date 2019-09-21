@@ -158,7 +158,13 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 			buff.detach();
 		}
 	}
-	
+
+	@LuaInterface
+	public static void detach( Char target, String cl ) {
+		detach( target.buff( cl ) );
+	}
+
+	@LuaInterface
 	public static void detach( Char target, Class<? extends Buff> cl ) {
 		detach( target.buff( cl ) );
 	}

@@ -528,6 +528,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return null;
 	}
 
+
+	@LuaInterface
+	public Buff buff(String buffName) {
+		for (Buff b : buffs) {
+			if (buffName.equals(b.getEntityKind())) {
+				return b;
+			}
+		}
+		return null;
+	}
+
 	@LuaInterface
 	public int buffLevel(String buffName) {
 		int level = 0;
