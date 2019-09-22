@@ -63,9 +63,11 @@ return item.init{
 
     activate = function(self, item, hero)
         RPD.glogp(tostring(item).." activated on "..tostring(hero).."\n")
+        RPD.permanentBuff(hero,"Cloak")
     end,
 
     deactivate = function(self, item, hero)
         RPD.glogp(tostring(item).." deactivated on "..tostring(hero).."\n")
+        RPD.removeBuff(hero,"Cloak")
     end
 }
