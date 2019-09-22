@@ -234,22 +234,6 @@
   <string name="StoneBlood_Buff">Pierre de sang</string>
   <string name="Welcome_Ok">Okey!</string>
   <string name="Welcome_Title">Bienvenue!</string>
-  <string name="Welcome_Text_28_3">
-    remix.28.3\n
-    - Nouvelles capacités du Nécromancier :\n
-    -- Sacrifice macabre\n
-    -- Exhumation\n
-    -- Réveil des morts\n
-    - Poisson frit, gelé, pourri et en sashimi\n
-    - Modding:\n
-    -- Sorts peuvent être modifiés\n
-    -- Objets peuvent être modifiés
-    </string>
-  <string name="Welcome_Text_28_4">
-    remix.28.4\n
-    - Améliorations graphiques:\n
-    -- Armes de Héros maintenant visibles en jeu\n
-    </string>
   <string name="Welcome_Text_28_5">
     remix.28.5\n
     - Modding :\n

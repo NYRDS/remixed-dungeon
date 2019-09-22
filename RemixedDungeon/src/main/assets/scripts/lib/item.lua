@@ -52,6 +52,14 @@ function item.loadData(self, _, str)
     self.data = data or {}
 end
 
+function item.storeData(self, data)
+    self.data = data or {}
+end
+
+function item.restoreData(self)
+    return self.data or {}
+end
+
 function item.defaultDesc()
     return {
         image         = 14,

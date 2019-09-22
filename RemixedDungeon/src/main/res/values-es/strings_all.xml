@@ -215,22 +215,6 @@
   <string name="StoneBlood_Buff">Piedra Sangrienta</string>
   <string name="Welcome_Ok">¡Muy bien!</string>
   <string name="Welcome_Title">¡Bienvenido!</string>
-  <string name="Welcome_Text_28_3">
-    remix.28.3\n
-    - Nuevas habilidades para el Nigromante:\n
-    -- Sacrificio Oscuro\n
-    -- Exhumación\n
-    -- Levantar Muertos\n
-    - Pescado frito, congelado, podrido y crudo\n
-    - Mods:\n
-    -- Hechizos modificables\n
-    -- Objetos modificables\n
-    </string>
-  <string name="Welcome_Text_28_4">
-    remix.28.4\n
-    - Mejoras gráficas :\n
-    -- Las armas del héroe ahora son visibles en el juego\n
-    </string>
   <string name="Welcome_Text_28_5">
     remix.28.5\n
 - Modding: \ n     - AI modificable para Mobs y NPCs \ n     - Ciudad: \ n     - Iglesia ahora abierta a los creyentes.     - La tienda de la ciudad fue renovada \ n     - Mecánica de juego: \ n     - Comercio ui mejorado \ n     - El portal se puede usar varias veces \ n</string>

@@ -234,22 +234,6 @@
   <string name="StoneBlood_Buff">Кам\'яна кров</string>
   <string name="Welcome_Ok">Добре!</string>
   <string name="Welcome_Title">Ласкаво просимо!</string>
-  <string name="Welcome_Text_28_3">
-    remix.28.3\n
-    - Нові можливості некроманта:\n
-    -- Темна жертва\n
-    -- Ексгумація\n
-    -- Підняття мерця\n
-    - Смажена, морожена , зіпсована та сира риба\n
-    - Модифікації:\n
-    -- Модифікація заклять\n
-    -- Модифікація предметів\n
-    </string>
-  <string name="Welcome_Text_28_4">
-    remix.28.4\n
-    - Покращення графіки:\n
-    -- Зброю героя тепер видно в грі\n
-    </string>
   <string name="Welcome_Text_28_5">
     remix.28.5\n
     - Модифікації:\n

@@ -234,22 +234,6 @@
   <string name="StoneBlood_Buff">Steinblut</string>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Herzlich willkommen!</string>
-  <string name="Welcome_Text_28_3">
-remix.28.3\n
-- Neue Nekromanten-Fähigkeiten:\n
--- Dunkle Opferung\n
--- Exhumierung\n
--- Wiederauferstehung der Toten\n
-- Gebratener, gefrorener, verrotteter und roher Fisch\n
-- Mods:\n
--- Modifizierbare Zaubersprüche\n
--- Modifizierbare Gegenstände\n
-</string>
-  <string name="Welcome_Text_28_4">
-    remix.28.4\n
-    - Graphik Verbesserungen:\n
-    -- Heldenwaffen jetzt sichtbar im Spiel\n
-    </string>
   <string name="Welcome_Text_28_5">
     remix.28.5\n
     - Modding:\n

@@ -236,22 +236,6 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
   <string name="StoneBlood_Buff">Delikanlı</string>
   <string name="Welcome_Ok">Tamamdır!</string>
   <string name="Welcome_Title">Hoşgeldiniz!</string>
-  <string name="Welcome_Text_28_3">
-    remix.28.3\n
-    - Yeni Ölüçağıran yetenekleri:\n
-    -- Kara Kurban\n
-    -- Mezardan çıkarma\n
-    -- Ölü diriltme\n
-    - Kızartılmış, Dondurulmuş, Çürümüş ve Çiğ Balık\n
-    - Modlama:\n
-    -- Modlanabilir Büyüler\n
-    -- Modlanabilir Öğeler\n
-    </string>
-  <string name="Welcome_Text_28_4">
-    remix.28.4\n
-    - Grafik iyileştirmeleri:\n
-    -- Kahraman silahları artık oyun içinde gözükmekte\n
-    </string>
   <string name="Welcome_Text_28_5">
 remix.28.5\n
 - Modlar:\n

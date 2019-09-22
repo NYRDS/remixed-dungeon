@@ -38,11 +38,11 @@ mob.installOnDieCallback = function(callback)
     onDieCallbacks[callback] = true
 end
 
-function mob.saveData(self, _)
+mob.saveData = function (self, _)
     return serpent.dump(self.data or {})
 end
 
-function mob.loadData(self, _, str)
+mob.loadData = function (self, _, str)
     local _,data = serpent.load(str)
     self.data = data or {}
 end

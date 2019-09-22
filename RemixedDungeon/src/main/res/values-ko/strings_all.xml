@@ -218,22 +218,6 @@
   <string name="StoneBlood_Buff">혈석</string>
   <string name="Welcome_Ok">알겠습니다!</string>
   <string name="Welcome_Title">환영합니다!</string>
-  <string name="Welcome_Text_28_3">
- remix.28.3\n
- - 새로운 강령술사 능력:\n
- -- 어둠의 희생\n
- -- 도굴\n
- -- 강령술\n
- - 구운,얼은,상한 그리고 날 생선 \n
- - 모딩:\n
- -- 모드가 가능한 마법 \n
- -- 모드가 가능한 아이템 \n
- </string>
-  <string name="Welcome_Text_28_4">
-   remix.28.4\n
-   -그래픽 향상:\n
-   --이제 게임 안에서 표시되는 영웅 무기\n
-</string>
   <string name="BlackCat_Name">검은 고양이</string>
   <string name="BlackCat_Gender">여성</string>
   <string name="BlackCat_Name_Objective">고양이</string>
