@@ -3,9 +3,11 @@ package com.nyrds.pixeldungeon.mobs.common;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
@@ -27,9 +29,6 @@ import org.json.JSONObject;
  */
 
 public class CustomMob extends MultiKindMob implements IZapper {
-
-	@Packable
-	private String luaData;
 
 	private int dmgMin, dmgMax;
 	private int attackSkill;
@@ -54,6 +53,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	public CustomMob(String mobClass) {
 		this.mobClass = mobClass;
 		fillMobStats(false);
+		script.run("fillStats");
 	}
 
 	@Override
@@ -77,10 +77,23 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+
+		bundle.put(LuaEngine.LUA_DATA, script.run("saveData").checkjstring());
+	}
+
+	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		fillMobStats(true);
 
 		super.restoreFromBundle(bundle);
+
+		String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
+		if(luaData!=null) {
+			script.run("loadData",luaData);
+		}
+		script.run("fillStats");
 	}
 
 	@Override
@@ -104,7 +117,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		int distance = level().distance(getPos(), enemyPos);
 
         return distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos;
-
     }
 
 	@Override
@@ -112,13 +124,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-	public void setData(String data) {
-		luaData = data;
-	}
-
-	public String getData() {
-		return luaData;
-	}
 
 	private void fillMobStats(boolean restoring) {
 		try {
@@ -163,7 +168,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			attackRange = classDesc.optInt("attackRange",attackRange);
 
-			scriptFile = classDesc.optString("scriptFile", scriptFile);
+			String scriptFile = classDesc.optString("scriptFile",null);
+			if(scriptFile!=null) {
+				script = new LuaScript(scriptFile, this);
+			}
 
 			friendly = classDesc.optBoolean("friendly",friendly);
 
@@ -175,9 +183,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 				hp(ht(classDesc.optInt("ht", 1)));
 				fromJson(classDesc);
 			}
-
-			runMobScript("fillStats");
-
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(e);
 		}

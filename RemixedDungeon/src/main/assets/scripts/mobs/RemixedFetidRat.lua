@@ -33,7 +33,7 @@ local function makeFetidRat()
     return {
         stats = function(self)
             data = mob.restoreData(self)
-            print("rat kind", tostring(data.kind))
+            RPD.glog("rat kind %s", tostring(data.kind))
             data.kind = data.kind or math.random(1, 3)
             mob.storeData(self,data)
 

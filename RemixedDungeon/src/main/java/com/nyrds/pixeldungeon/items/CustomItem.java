@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
@@ -20,6 +21,8 @@ import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 
+import static com.nyrds.android.lua.LuaEngine.LUA_DATA;
+
 /**
  * Created by mike on 26.05.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -36,6 +39,9 @@ public class CustomItem extends EquipableItem {
 
     private LuaScript script;
     private int price;
+
+    @Packable
+    private boolean activated = false;
 
     @Keep
     public CustomItem() {
@@ -93,12 +99,18 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public void activate(Char ch) {
-        script.run("activate", ch);
+        if(!activated) {
+            script.run("activate", ch);
+            activated = true;
+        }
     }
 
     @Override
     public void deactivate(Char ch) {
-        script.run("deactivate", ch);
+        if(activated) {
+            script.run("deactivate", ch);
+            activated = false;
+        }
     }
 
     @Override
@@ -143,9 +155,20 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(LUA_DATA, script.run("saveData").checkjstring());
+    }
+
+    @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
         initItem();
+
+        String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
+        if(luaData!=null) {
+            script.run("loadData",luaData);
+        }
     }
 
     private Item applyOnItem(int cell,String effect) {

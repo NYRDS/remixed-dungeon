@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
@@ -35,6 +34,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -78,9 +78,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
-import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -90,13 +88,13 @@ public abstract class Mob extends Char {
 	public static final String TXT_RAGE = "#$%^";
 
 	private static final float SPLIT_DELAY = 1f;
+
+
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 
-	@Packable (defaultValue = DEFAULT_MOB_SCRIPT)
-	protected String scriptFile = DEFAULT_MOB_SCRIPT;
-
-	private LuaTable mobScript;
-	private LuaValue scriptResult = LuaValue.NIL;
+	@NotNull
+	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
+	protected LuaValue scriptResult = LuaValue.NIL;
 
 	private AiState state = MobAi.getStateByClass(Sleeping.class);
 
@@ -218,12 +216,12 @@ public abstract class Mob extends Char {
 	public CharSprite sprite() {
 
 		try {
-			{
-				String descName = "spritesDesc/" + getEntityKind() + ".json";
-				if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
-					return new MobSpriteDef(descName, getKind());
+				{
+					String descName = "spritesDesc/" + getEntityKind() + ".json";
+					if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
+						return new MobSpriteDef(descName, getKind());
+					}
 				}
-			}
 
 			if (spriteClass instanceof Class) {
 				CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
@@ -327,7 +325,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void move(int step) {
-		runMobScript("onMove", step);
+		script.run("onMove", step);
 
 		super.move(step);
 	}
@@ -363,7 +361,6 @@ public abstract class Mob extends Char {
 		super.onZapComplete();
 	}
 
-
 	@Override
 	public int defenseSkill(Char enemy) {
 		return enemySeen && !paralysed ? defenseSkill : 0;
@@ -371,13 +368,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage) {
-		runMobScript("onAttackProc", enemy, damage);
-
-		if(scriptResult.isnumber()) {
-			return scriptResult.checknumber().toint();
-		}
-
-		return damage;
+		return script.run("onAttackProc", enemy, damage).optint(damage);
 	}
 
 	@Override
@@ -391,19 +382,12 @@ public abstract class Mob extends Char {
 			setEnemy(enemy);
 		}
 
-		runMobScript("onDefenceProc", enemy, damage);
-
-		if(scriptResult.isnumber()) {
-			return scriptResult.checknumber().toint();
-		}
-
-		return damage;
+		return script.run("onDefenceProc", enemy, damage).optint(damage);
 	}
 
 	@Override
 	public void damage(int dmg,@NotNull NamedEntityKind src) {
-
-		runMobScript("onDamage", dmg, src);
+		script.run("onDamage", dmg, src);
 
         getState().gotDamage(this,src, dmg);
 
@@ -422,43 +406,11 @@ public abstract class Mob extends Char {
 		super.die(this);
 	}
 
-	private boolean mobScriptLoaded;
-	protected boolean runMobScript(String method, Object arg1, Object arg2) {
-		if (!mobScriptLoaded) {
-			mobScript=LuaEngine.module(scriptFile, DEFAULT_MOB_SCRIPT);
-			mobScriptLoaded = true;
-		}
-
-		if(mobScript != null) {
-			LuaValue[] args = new LuaValue[]{
-					CoerceJavaToLua.coerce(this),
-					CoerceJavaToLua.coerce(arg1),
-					CoerceJavaToLua.coerce(arg2)};
-
-			scriptResult = mobScript.invokemethod(method, args).arg1();
-
-			if(scriptResult.isboolean()) {
-				return scriptResult.checkboolean();
-			}
-			return true;
-		}
-		return false;
-	}
-
-	protected boolean runMobScript(String method, Object arg) {
-		return runMobScript(method, arg, null);
-	}
-
-	protected boolean runMobScript(String method) {
-		return runMobScript(method, null, null);
-	}
-
-
 	public void die(NamedEntityKind cause) {
 
 		getState().onDie();
 
-		runMobScript("onDie",cause);
+		script.run("onDie", cause);
 
 		Hero hero = Dungeon.hero;
 
@@ -564,12 +516,12 @@ public abstract class Mob extends Char {
 				Mob.makePet(new_mob, parent.getId());
 				Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			}
-			Dungeon.level.spawnMob(new_mob);
+			level().spawnMob(new_mob);
 		}
 	}
 
 	@SuppressWarnings("unchecked")
-	protected void dropLoot() {
+	private void dropLoot() {
 		Object loot = getLoot();
 		if (loot != null && Random.Float() <= lootChance) {
 			Item item;
@@ -651,7 +603,7 @@ public abstract class Mob extends Char {
 
 	public void onSpawn(Level level) {
 		Buff.affect(this, Regeneration.class);
-		runMobScript("onSpawn",level);
+		script.run("onSpawn",level);
 	}
 
 	public void loot(Item loot) {
@@ -696,12 +648,8 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean interact(Char chr) {
-
-		if(runMobScript("onInteract", chr)) {
-			return true;
-		}
-
-		return super.interact(chr);
+		return  script.run("onInteract", chr).optboolean(true) ||
+				super.interact(chr);
 	}
 
 
@@ -754,14 +702,8 @@ public abstract class Mob extends Char {
 		return false;
 	}
 
-	public int zapProc(@NotNull Char enemy, int damage) {
-		runMobScript("onZapProc", enemy, damage);
-
-		if(scriptResult.isnumber()) {
-			return scriptResult.checknumber().toint();
-		}
-
-		return damage;
+	private int zapProc(@NotNull Char enemy, int damage) {
+		return script.run("onZapProc", enemy, damage).optint(damage);
 	}
 
 	protected boolean zapHit(@NotNull Char enemy) {
@@ -788,6 +730,7 @@ public abstract class Mob extends Char {
 		return getEntityKind();
 	}
 
+	@Nullable
 	protected Object getLoot() {
 		return loot;
 	}

@@ -5,6 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
+local serpent = require "scripts/lib/serpent"
+
 local item = {}
 
 item.__index = item
@@ -41,6 +43,15 @@ end
 function item.deactivate(self, item, hero)
 end
 
+function item.saveData(self)
+    return serpent.dump(self.data or {})
+end
+
+function item.loadData(self, _, str)
+    local _,data = serpent.load(str)
+    self.data = data or {}
+end
+
 function item.defaultDesc()
     return {
         image         = 14,
@@ -73,6 +84,8 @@ end
 
 item.init = function(desc)
     setmetatable(desc, item)
+
+    desc.data = {}
 
     return desc
 end

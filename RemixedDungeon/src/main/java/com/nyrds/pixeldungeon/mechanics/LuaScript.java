@@ -18,8 +18,8 @@ public class LuaScript {
     private boolean scriptLoaded = false;
     private LuaTable script;
 
-    private static final LuaValue emptyArgs[] = new LuaValue[0];
-    private final LuaValue onlyParentArgs[] = new LuaValue[1];
+    private static final LuaValue[] emptyArgs = new LuaValue[0];
+    private final LuaValue[] onlyParentArgs = new LuaValue[1];
 
     @Nullable
     private Object   parent;

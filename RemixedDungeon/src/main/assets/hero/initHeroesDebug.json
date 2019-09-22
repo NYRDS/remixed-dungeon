@@ -19,7 +19,7 @@
         "quantity": 100
       },
       {
-        "kind": "ScrollOfWeaponUpgrade",
+        "kind": "ManaPotion",
         "quantity": 100
       }
     ],

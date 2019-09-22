@@ -37,8 +37,9 @@ import java.io.InputStream;
 public class LuaEngine implements ResourceFinder {
 
 	public static final String    SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
+    public static final String    LUA_DATA = "luaData";
 
-	static private      LuaEngine engine              = new LuaEngine();
+    static private      LuaEngine engine              = new LuaEngine();
 
 	private Globals globals;
 
@@ -114,13 +115,7 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	private void reportLuaError(LuaError err) {
-
 		throw new TrackedRuntimeException(err);
-		/*
-		Notifications.displayNotification("LuaError", "RD LuaError", err.getMessage());
-
-		GLog.w(err.getMessage());
-		*/
 	}
 
 	public LuaTable require(String module) {

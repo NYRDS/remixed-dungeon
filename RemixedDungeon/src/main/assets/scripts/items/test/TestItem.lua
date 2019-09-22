@@ -62,7 +62,8 @@ return item.init{
     end,
 
     activate = function(self, item, hero)
-        RPD.glogp(tostring(item).." activated on "..tostring(hero).."\n")
+        self.data.activationCount = (self.data.activationCount or 0) + 1
+        RPD.glogp(tostring(item).." activated on "..tostring(hero).." "..self.data.activationCount.."\n")
         RPD.permanentBuff(hero,"Cloak")
     end,
 

@@ -27,6 +27,4 @@ public class ArtifactBuff extends Buff {
     public boolean dontPack() {
         return source != null;
     }
-
-
 }
