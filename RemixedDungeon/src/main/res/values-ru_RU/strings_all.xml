@@ -234,20 +234,6 @@
   <string name="StoneBlood_Buff">Каменная Кровь</string>
   <string name="Welcome_Ok">Ладушки!</string>
   <string name="Welcome_Title">Добро пожаловать!</string>
-  <string name="Welcome_Text_28_3"> remix.28.3\n
-- Новые способности Некроманта:\n
--- Темная Жертва\n
--- Эксгумация\n
--- Поднять Мертвеца\n
-- Жаренная, Замороженная, Тухлая и Сырая Рыба\n
-- Моддинг:\n
--- Моддабельные заклятья\n
--- Моддабельные предметы\n</string>
-  <string name="Welcome_Text_28_4">
-    remix.28.4\n
-    - Графические улучшения:\n
-    -- Теперь оружие героя отображается в игре\n
-    </string>
   <string name="Welcome_Text_28_5">
     remix.28.5\n
     - Моддинг:\n
@@ -2555,4 +2541,16 @@ No, there was no place for her in the light, not anymore. She turned from the me
     </string>
   <string name="town_deco_stone_wall_broken_name">Разрушенная стена</string>
   <string name="town_deco_stone_wall_broken_desc">Старая стена, в довольно плохом состоянии</string>
+  <string name="Challenges_Names_6">Запретные Руны</string>
+  <string name="Challenges_Names_7">Пацифизм</string>
+  <string name="Welcome_Text_29_2">
+    remix.29.2\n
+    - Геймплей:\n
+    -- Новые испытания:\n
+    --- Запретные Руны\n
+    --- Пацифизм
+    - Моддинг:\n
+    -- Ксатомизируемые Артифакты\n
+    - Исправления ошибок\n
+    </string>
 </resources>
