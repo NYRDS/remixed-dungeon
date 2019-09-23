@@ -101,9 +101,9 @@
   <string name="BishopNPC_Name_Objective">主教</string>
   <string name="Bishop_title">主教</string>
   <string name="Bishop_text">我的孩子，我日夜为你祈祷。</string>
-  <string name="Bishop_lesser_bless">小型祝福 - %d g</string>
-  <string name="Bishop_great_bless">大型祝福 - %d g</string>
-  <string name="Bishop_remove_curse">圣光洗礼 - %d g</string>
+  <string name="Bishop_lesser_bless">小型祝福 - %d 金币</string>
+  <string name="Bishop_great_bless">大型祝福 - %d 金币</string>
+  <string name="Bishop_remove_curse">圣光洗礼 - %d 金币</string>
   <string name="Bishop_not_interested">离开</string>
   <string name="Bishop_no_money">您金币不足。</string>
   <string name="Bishop_bye">我的孩子，我会为你祈祷的。</string>
@@ -123,10 +123,10 @@
   <string name="Shopkeeper_text">欢迎来到地牢商店分店，有什么需要吗？</string>
   <string name="Shopkeeper_SellPrompt">我有东西要卖</string>
   <string name="Shopkeeper_BuyPrompt">让我看看商品</string>
-  <string name="WndTradeItem_BuyN">购买 %1$d 个，付出 %2$dg</string>
-  <string name="WndTradeItem_BuyAll">购买所有的，付出 %dg</string>
-  <string name="WndTradeItem_SellN">卖出 %1$d 获得 %2$dg</string>
-  <string name="WndBag_BuySubtitle">(您拥有 %dg)</string>
+  <string name="WndTradeItem_BuyN">购买 %1$d 个，付出 %2$d金币</string>
+  <string name="WndTradeItem_BuyAll">购买所有的，付出 %d金币</string>
+  <string name="WndTradeItem_SellN">卖出 %1$d 获得 %2$d金币</string>
+  <string name="WndBag_BuySubtitle">(您拥有 %d金币)</string>
   <string name="town_deco_weaponboard_name">武器架</string>
   <string name="town_deco_weaponboard_desc">一种挂在架子上的武器，看上去只是仿制品。</string>
   <string name="town_deco_shieldboard_name">盾牌架</string>
@@ -158,7 +158,7 @@
   <string name="WndDontLikeAds_NotThisTime">这次不会了</string>
   <string name="Item_Info2">啥玩意</string>
   <string name="NecromancerArmor_Info2">穿上这件盔甲，死灵法师可以使用“天灾”能力，这将传播一种魔法瘟疫，它可能感染附近的任何生物，无论是死的还是活的。</string>
-  <string name="NecromancerRobe_Info2">获得召唤死灵的能力</string>
+  <string name="NecromancerRobe_Info2">这件长袍上充满了黑暗魔法，它会吸收死亡怪物灵魂力量来回馈使用者。</string>
   <string name="Necrotism_Info">坏死</string>
   <string name="Necrotism_ACSpecial">天灾</string>
   <string name="ResultDescriptions_Necrotism">在%d死亡</string>
@@ -237,26 +237,10 @@
   <string name="StoneBlood_Buff">石中血</string>
   <string name="Welcome_Ok">棒极了！</string>
   <string name="Welcome_Title">欢迎！</string>
-  <string name="Welcome_Text_28_3">
-remix.28.3\n
-- 新的法术能力：\n
---黑暗献祭\n
---控灵\n
---回魂\n
-- 烤、冻、烂、生鱼片\n
-- MOD增加:\n
---可修改的咒语\n
---可改装物品\n
--</string>
-  <string name="Welcome_Text_28_4">
-remix.28.4\n
-- 图形改进:\n
---英雄武器现在在游戏中可见\n
--</string>
   <string name="Welcome_Text_28_5">
 remix.28.5\n
-- MOD增加:\n
---为生物提供可修改的难度\n
+- 修改:\n
+--生物的难度进行调整\n
 - 城镇：\n
 --教会现在向信徒开放\n
 --镇上的商店被翻新了\n
@@ -330,19 +314,19 @@ remix.28.5\n
   <string name="Char_YouMissed">%1$s %2$s了您的攻擊</string>
   <string name="Char_SmbMissed">%1$s%2$s了%3$s 的攻擊</string>
   <string name="Char_OutParalysis">疼痛使%s的麻痺解除了</string>
-  <string name="Char_StaPoisoned">劇毒</string>
-  <string name="Char_StaAmok">狂亂</string>
-  <string name="Char_StaSlowed">緩速</string>
-  <string name="Char_StaMind">全視</string>
+  <string name="Char_StaPoisoned">剧毒</string>
+  <string name="Char_StaAmok">狂乱</string>
+  <string name="Char_StaSlowed">缓速</string>
+  <string name="Char_StaMind">全视</string>
   <string name="Char_StaVision">意象</string>
   <string name="Char_StaParalysed">麻痺</string>
-  <string name="Char_StaFrightened">恐懼</string>
-  <string name="Char_StaRooted">纏繞</string>
-  <string name="Char_StaCrippled">殘疾</string>
+  <string name="Char_StaFrightened">恐惧</string>
+  <string name="Char_StaRooted">缠绕</string>
+  <string name="Char_StaCrippled">残疾</string>
   <string name="Char_StaBleeding">流血</string>
-  <string name="Char_StaDizzy">眩暈</string>
-  <string name="Char_StaInvisible">隱形</string>
-  <string name="Dungeon_NoTips">這些文字無法辦認...</string>
+  <string name="Char_StaDizzy">眩晕</string>
+  <string name="Char_StaInvisible">隐形</string>
+  <string name="Dungeon_NoTips">这些文字无法辨认...</string>
   <string name="Dungeon_DeadEnd">你来这做什么？！</string>
   <string name="Journal_WellHealt">生命之泉</string>
   <string name="Journal_WellAwareness">全知之水</string>
@@ -358,7 +342,7 @@ remix.28.5\n
   <string name="WndBlacksmith_Select">選擇一件物品重鑄</string>
   <string name="WndBlacksmith_Reforge">重鑄它們</string>
   <string name="WndCatalogus_Potions">藥水瓶</string>
-  <string name="WndCatalogus_Scrolls">卷軸</string>
+  <string name="WndCatalogus_Scrolls">卷轴</string>
   <string name="WndCatalogus_Title">图鉴</string>
   <string name="WndChallenges_Title">挑戰</string>
   <string name="WndChooseWay_Message">您選擇步上哪條路？</string>
@@ -429,11 +413,11 @@ remix.28.5\n
 
 很少有冒險者能夠深入到這種地方...</string>
   <string name="WndStory_Spiders">许多年前，这是一个充满了魔法石的富裕矿山。但随着矿脉的枯竭，矿工们纷纷离去，留下了大量的坑道网络。最后这个地方被蜘蛛占领了。虽然这些危险的生物在黑暗中潜伏，但是这吓不倒一些疯狂而勇敢的寻宝者和冒险者们，因为传言里面的魔法神器的价值值得他们为之冒险。据说有一个为了逃避追捕的女巫进入了这个矿洞，追捕她的士兵由于畏惧黑暗而不敢靠近，只能派人在矿洞门口看守。结果到他们放弃后女巫也没出现。没准她找到另一个出口？亦或是趁看守不注意时跑了？或者...死在了矿洞深处，与蜘蛛们融为一体。</string>
-  <string name="WndTradeItem_Sale">出售：%1$s-%2$dg</string>
-  <string name="WndTradeItem_Buy">以%dg買入</string>
-  <string name="WndTradeItem_Sell">以%dg賣出</string>
-  <string name="WndTradeItem_Sell1">以%dg賣出1个</string>
-  <string name="WndTradeItem_SellAll">以%dg賣出全部</string>
+  <string name="WndTradeItem_Sale">出售：%1$s-%2$d金币</string>
+  <string name="WndTradeItem_Buy">以%d金币买入</string>
+  <string name="WndTradeItem_Sell">以%d金币卖出</string>
+  <string name="WndTradeItem_Sell1">以%d金币卖出1个</string>
+  <string name="WndTradeItem_SellAll">以%d金币卖出全部</string>
   <string name="WndTradeItem_Cancel">算了</string>
   <string name="WndTradeItem_Sold">您賣出了你的%1$s，並獲得 %2$d金幣</string>
   <string name="WndTradeItem_Bought">您購買了%1$s花費%2$d金幣</string>
@@ -526,7 +510,7 @@ remix.28.5\n
   <string name="IronKey_FromDepth">第%d層的鐵鑰匙</string>
   <string name="SkeletonKey_Name">骷髏鑰匙</string>
   <string name="SkeletonKey_Info">此鑰匙看上來一本正經，它的頭型呈骷髏頭狀。可能能用它打開某些一本正經的門。</string>
-  <string name="CorpseDust_Name">屍塵</string>
+  <string name="CorpseDust_Name">尸尘</string>
   <string name="CorpseDust_Info">在外觀上這團屍塵和普通灰塵球差不多。而您卻能夠感受到其中潛伏著一股充滿惡意的魔力。盡快脫手為上策。</string>
   <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
   <string name="DarkGold_Name">暗金礦</string>
@@ -749,7 +733,7 @@ remix.28.5\n
   <string name="FrozenFish_Info">冰冻的鱼，你拿在手上时感觉它好像动了一下，就像是还活的一样。</string>
   <string name="FriedFish_Name">熟鱼</string>
   <string name="FriedFish_Info">烤鱼，看起来很好吃。丘比认证:绝对美味</string>
-  <string name="FriedFish_Taste">美味的！</string>
+  <string name="FriedFish_Taste">美味！</string>
   <string name="RottenFish_Name">烂鱼</string>
   <string name="RottenFish_Info">腐烂的鱼，闻起来很难闻。</string>
   <string name="RottenFish_Taste">恶心！</string>
@@ -792,10 +776,9 @@ remix.28.5\n
   <string name="WndPremiumSettings_banners">選擇橫標素材</string>
   <string name="WndPremiumSettings_notAvailbale">此選項暫未開放供選</string>
   <string name="DonateButton_pleaseDonate">請考慮捐獻</string>
-  <string name="DonateButton_thanks">感謝您的支持！</string>
+  <string name="DonateButton_thanks">感谢您的支持！</string>
   <string name="WndSaveSlotSelect_dontLike">不喜欢广告？进行捐献吧！广告会永远的消失。</string>
-  <string name="Bow_Info1">這是一件遠程武器。除了精靈，其他人不能在極近距離正常使用。裝備好弓後，您便能夠發射箭矢。
-</string>
+  <string name="Bow_Info1">这是一件远程武器。除了精灵，其他人无法在近距离正常使用。装备好弓后，你便能够发射箭矢。\n\n</string>
   <string name="WoodenBow_Name">木弓</string>
   <string name="WoodenBow_Info">如果您找到一些箭矢的话，這把簡單的木製弓也許會派上用場。</string>
   <string name="WoodenBow_Gender">男性的</string>
@@ -851,9 +834,9 @@ remix.28.5\n
   <string name="WndHats_InfoButton">检查</string>
   <string name="WndHats_UnequipButton">取下</string>
   <string name="Artifact_Limit">你最多只能同時佩戴2件饰品。</string>
-  <string name="FortuneTellerNPC_Name">算命家</string>
+  <string name="FortuneTellerNPC_Name">占卜师</string>
   <string name="FortuneTellerNPC_Gender">女性的</string>
-  <string name="FortuneTellerNPC_Name_Objective">算命家</string>
+  <string name="FortuneTellerNPC_Name_Objective">占卜师</string>
   <string name="FortuneTellerNPC_Desc">此女身穿一襲色彩鮮艷的長袍。對於一位已精通算命奧術的算命家來說，她算是年少有為。您一步一步地靠近，隱約能聽到她微聲低語。然而，她只是目不轉晴地盯著水晶球。</string>
   <string name="ServiceManNPC_Limit_Reached">抱歉，目前您已達界限，但每升一級，您便可以再次享用我們的服務！</string>
   <string name="WndFortuneTeller_Instruction">我可以為您揭開任何道具的神秘面紗！
@@ -1147,7 +1130,7 @@ remix.28.5\n
   <string name="ScrollOfSummoning_Name">召唤卷轴</string>
   <string name="ScrollOfSummoning_Info">当大声朗读时，这个卷轴将召唤当前地牢同一级别的一个怪物。如果怪物的意志足够软弱，它就会成为你的仆人。</string>
   <string name="ScrollOfSummoning_Info_2">这只怪物归你了</string>
-  <string name="Using_Failed_Because_Magic">强大魔力阻止使用 \"%s\".</string>
+  <string name="Using_Failed_Because_Magic">强大魔力阻止使用 \"%s\"。</string>
   <string name="Using_Failed_Because_Blind">失明状态下 \"%s\"无法使用</string>
   <string name="Mob_Cannot_Be_Pet">你没法控制住 \"%s\"</string>
   <string name="No_Valid_Cell">没有召唤的空间</string>
@@ -1459,10 +1442,10 @@ remix.28.5\n
   <string name="Badges_LevelReached3">達到18級</string>
   <string name="Badges_LevelReached4">達到24級</string>
   <string name="Badges_AllPotions">鑒定所有藥水</string>
-  <string name="Badges_AllScrolls">鑒定所有卷軸</string>
+  <string name="Badges_AllScrolls">大学者:鉴定所有卷轴</string>
   <string name="Badges_AllRings">鑒定所有戒指</string>
   <string name="Badges_AllWands">鑒定所有法杖</string>
-  <string name="Badges_AllItems">鑒定所有藥水，卷軸，戒指，法杖</string>
+  <string name="Badges_AllItems">无所不知:鉴定所有药水，卷轴，戒指，法杖</string>
   <string name="Badges_AllBags">買下所有袋套筒帶環</string>
   <string name="Badges_DeathFire">燃燒生命 ,照亮別人</string>
   <string name="Badges_DeathPoison">金正男2.0</string>
@@ -2018,8 +2001,8 @@ remix.28.5\n
   <string name="Sungrass_Name">阳春草</string>
   <string name="Sungrass_Desc">阳春草因其汁液缓慢但显著的疗伤效果而家喻户晓。</string>
   <string name="Sungrass_Buff">草药疗养</string>
-  <string name="WndPlayGames_Title">Google Play Games</string>
-  <string name="WndPlayGames_Use">使用 Google Play 遊戲</string>
+  <string name="WndPlayGames_Title">Google Play游戏</string>
+  <string name="WndPlayGames_Use">使用 Google Play 游戏</string>
   <string name="WndPlayGames_Connecting">正在連線到 Google Play Games, 請閣下稍等...</string>
   <string name="WndPlayGames_Show_Badges">查看徽章</string>
   <string name="WndPlayGames_Show_Leaderboards">查看成績板</string>
@@ -2229,7 +2212,7 @@ remix.28.5\n
   <string name="WndHero_AttackSkill">攻击力</string>
   <string name="WndHero_DefenceSkill">防御力</string>
   <string name="town_deco_grave_name">坟墓</string>
-  <string name="town_deco_grave_desc">一个标准的坟墓，经受过了风化的考验。</string>
+  <string name="town_deco_grave_desc">一个标准的坟墓，经受了风化的考验。</string>
   <string name="town_deco_pillar_name">台柱</string>
   <string name="town_deco_pillar_desc">曾经这根柱子是一个很好的支撑物和装饰品。</string>
   <string name="town_deco_wood_wall_name">木墙</string>
@@ -2239,7 +2222,7 @@ remix.28.5\n
   <string name="town_deco_exit_name">出口</string>
   <string name="town_deco_exit_desc">如果你走下去了，等待你的将是未知。</string>
   <string name="town_deco_tile_name">地砖</string>
-  <string name="town_deco_tile_desc">这些地砖经过了时间侵蚀。</string>
+  <string name="town_deco_tile_desc">这些地砖经受了时间的侵蚀。</string>
   <string name="town_deco_snowdrift_name">雪堆</string>
   <string name="town_deco_snowdrift_desc">这是一个相当大的雪堆，显然没有人会来清理它。</string>
   <string name="town_deco_misc_name">无用物品</string>
@@ -2251,11 +2234,11 @@ remix.28.5\n
   <string name="town_deco_mud_name">泥浆地</string>
   <string name="town_deco_mud_desc">在这个冻土区融化后形成的冰水与土壤混合而成的。</string>
   <string name="town_deco_stock_name">贮备</string>
-  <string name="town_deco_stock_desc">这里储存着食物，还有一堆带有各种各样颜色的垃圾。</string>
+  <string name="town_deco_stock_desc">这里储存着食物，还有一堆带有各种各样颜色的物品。</string>
   <string name="town_deco_barrel_name">桶</string>
-  <string name="town_deco_barrel_desc">一个普通的桶，破损的很厉害。</string>
+  <string name="town_deco_barrel_desc">一个普通的桶，有些破损。</string>
   <string name="town_deco_hay_name">干草</string>
-  <string name="town_deco_hay_desc">一小堆散发着气味的干草</string>
+  <string name="town_deco_hay_desc">一小堆散发着气味的干草。</string>
   <string name="town_deco_firewood_name">木柴</string>
   <string name="town_deco_firewood_desc">在这严寒之中，这是必不可少的。</string>
   <string name="town_deco_stakes_name">木桩</string>
@@ -2280,7 +2263,7 @@ remix.28.5\n
   <string name="town_deco_wall_candles_desc">熄灭的蜡烛，仍然散发出吸引人的香味。</string>
   <string name="town_deco_wooden_drawer_name">抽屉</string>
   <string name="town_deco_wooden_drawer_desc">让人感兴趣的是里面有什么。</string>
-  <string name="town_deco_scrolls_name">卷軸</string>
+  <string name="town_deco_scrolls_name">卷轴架</string>
   <string name="town_deco_scrolls_desc">这个满是灰尘的架子上摆满了各种各样的卷轴和书。</string>
   <string name="town_deco_medicine_name">药水架</string>
   <string name="town_deco_medicine_desc">将烧瓶和其他医疗原料小心地放在这些架子上。</string>
@@ -2301,7 +2284,7 @@ remix.28.5\n
   <string name="town_deco_trapdoor_name">活板门</string>
   <string name="town_deco_trapdoor_desc">这可以到哪里去呢？</string>
   <string name="town_deco_glass_stained_name">彩色玻璃</string>
-  <string name="town_deco_glass_stained_desc">这个玻璃的作者肯定用了很多精力。</string>
+  <string name="town_deco_glass_stained_desc">这个玻璃的作者肯定在它身上投入了很多的精力。</string>
   <string name="town_deco_glass_name">宽窗口</string>
   <string name="town_deco_glass_desc">这一个比其它的更宽，当然也拥有更多的光。</string>
   <string name="town_deco_counter_name">柜台</string>
@@ -2322,18 +2305,18 @@ remix.28.5\n
     -- 死灵法师拥有新法术\n
     -- 盗贼斗篷能力\n
     -- 新徽章\n
-    - Mod调整:\n
-    -- 自定义脚本化的Buff\n
-    -- 自定义 gfx\n
+    - 修改:\n
+    -- 一些Buff贴图\n
+    -- 重画一些图像\n
     </string>
-  <string name="Badges_GamesPlayed5">5000次游戏</string>
+  <string name="Badges_GamesPlayed5">骨灰级玩家，进行5000次游戏</string>
   <string name="Badges_PotionsCooked5">制作25瓶药水</string>
   <string name="Badges_ItemLvl5">获得15级物品</string>
-  <string name="Badges_FoodEaten5">吃了60个食物</string>
+  <string name="Badges_FoodEaten5">还不够:吃了60个食物</string>
   <string name="Badges_StrengthAttained5">达到21点力量</string>
-  <string name="Badges_LevelReached5">达到30级</string>
-  <string name="Badges_GoldCollected5">获得35000枚金币</string>
-  <string name="Badges_MonsterSlain5">击杀1000个敌人</string>
+  <string name="Badges_LevelReached5">你满级了？:达到30级</string>
+  <string name="Badges_GoldCollected5">金钱如粪土:获得35000枚金币</string>
+  <string name="Badges_MonsterSlain5">疯狂杀戮:击杀1000个敌人</string>
   <string name="Spells_NotInOwnBody">当你的灵魂与身体分离时，你不能%s。</string>
   <string name="WndHero_Satiety">饱食</string>
   <string name="Welcome_Text_29">
@@ -2442,7 +2425,7 @@ remix.28.5\n
   <string name="HeroClass_RogPerks_2">盗賊穿起輕甲時靈巧得很，將更容易躲避攻擊。</string>
   <string name="HeroClass_RogPerks_3">盗賊於偵測隱藏門與陷阱。</string>
   <string name="HeroClass_RogPerks_4">盗賊更加耐餓。</string>
-  <string name="HeroClass_RogPerks_5">魔法地圖卷軸在遊戲開始時就已經鑒定好了。</string>
+  <string name="HeroClass_RogPerks_5">魔法地图卷轴在游戏开始时就已经鉴定了。</string>
   <string name="HeroClass_HunPerks_0">女獵手起始擁有15點生命值。</string>
   <string name="HeroClass_HunPerks_1">女獵手起始擁有一把獨等，可升级的回力鏢。</string>
   <string name="HeroClass_HunPerks_2">女擅獵手精通遠程武器。使用它們时，她可以獲得基於額外力量值的傷害加成。</string>
@@ -2569,7 +2552,22 @@ remix.28.5\n
     remix.29.1\n
     - 修改:\n
     -- 修改了一些项目的生成率\n
-    -- 穿戴可自定义\n
-    - 修复了一些错误\n
+    - 翻译:\n
+    --增加匈牙利语翻译\n
+    - 修复了bug\n
+    </string>
+  <string name="town_deco_stone_wall_broken_name">破旧的墙</string>
+  <string name="town_deco_stone_wall_broken_desc">老旧的石墙，看起来状况很差</string>
+  <string name="Challenges_Names_6">禁忌符文</string>
+  <string name="Challenges_Names_7">和平主义</string>
+  <string name="Welcome_Text_29_2">
+    remix.29.2\n
+    - 游戏性:\n
+    -- 新的挑战:\n
+    --- 禁忌符文\n
+    --- 和平主义\n
+    - 修改:\n
+    -- 部分贴图\n
+    - 修复了bug\n
     </string>
 </resources>
