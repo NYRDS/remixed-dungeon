@@ -94,7 +94,7 @@ public class DM300 extends Boss {
 	public void move( int step ) {
 		super.move( step );
 
-		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && hp() < ht()) {
+		if (level().map[step] == Terrain.INACTIVE_TRAP && hp() < ht()) {
 
 			heal(Random.Int( 1, ht() - hp() ), this, true);
 
@@ -112,10 +112,10 @@ public class DM300 extends Boss {
 			Camera.main.shake( 3, 0.7f );
 			Sample.INSTANCE.play( Assets.SND_ROCKS );
 
-			if (Dungeon.level.water[cell]) {
+			if (level().water[cell]) {
 				GameScene.ripple( cell );
-			} else if (Dungeon.level.map[cell] == Terrain.EMPTY) {
-				Dungeon.level.set( cell, Terrain.EMPTY_DECO );
+			} else if (level().map[cell] == Terrain.EMPTY) {
+				level().set( cell, Terrain.EMPTY_DECO );
 				GameScene.updateMap( cell );
 			}
 		}
@@ -131,7 +131,7 @@ public class DM300 extends Boss {
 		
 		super.die( cause );
 		
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+		level().drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 		
