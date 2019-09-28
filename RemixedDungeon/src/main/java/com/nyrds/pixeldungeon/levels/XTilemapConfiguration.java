@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import lombok.var;
+
 /**
  * Created by mike on 26.12.2016.
  * This file is part of Remixed Pixel Dungeon.
@@ -51,10 +53,10 @@ public class XTilemapConfiguration {
 		JSONObject terrainDesc = JsonHelper.readJsonFromAsset(filename);
 		XTilemapConfiguration ret = new XTilemapConfiguration();
 
-		Iterator<?> keys = terrainDesc.keys();
+		var keys = terrainDesc.keys();
 
 		while( keys.hasNext() ) {
-			String key = (String)keys.next();
+			String key = keys.next();
 			if(terrainMapping.containsKey(key)) {
 				int terrain = terrainMapping.get(key);
 				ret.tilemapConfiguration.put(terrain,createTileDescFromKey(terrainDesc, key));
@@ -69,8 +71,8 @@ public class XTilemapConfiguration {
 		for(int waterBorder = Terrain.WATER_TILES;waterBorder<=Terrain.WATER;++waterBorder) {
 			TileDesc borderPieceDesc = new TileDesc();
 
-			borderPieceDesc.baseTiles = (ArrayList<Integer>) waterTileDesc.baseTiles.clone();
-			borderPieceDesc.decoTiles = (ArrayList<Integer>) waterTileDesc.decoTiles.clone();
+			borderPieceDesc.baseTiles.addAll(waterTileDesc.baseTiles);
+			borderPieceDesc.decoTiles.addAll(waterTileDesc.decoTiles);
 
 			for(int i = 0;i< waterTileDesc.baseTiles.size();++i) {
 				borderPieceDesc.baseTiles.set(i, borderPieceDesc.baseTiles.get(i) + waterBorder - Terrain.WATER_TILES);
