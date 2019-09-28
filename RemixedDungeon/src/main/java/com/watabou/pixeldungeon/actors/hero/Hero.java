@@ -996,7 +996,7 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public void damage(int dmg, NamedEntityKind src) {
+	public void damage(int dmg, @NotNull NamedEntityKind src) {
 		restoreHealth = false;
 		super.damage(dmg, src);
 
@@ -1901,7 +1901,7 @@ public class Hero extends Char {
     }
 
 	@Override
-	public boolean friendly(Char chr) {
+	public boolean friendly(@NotNull Char chr) {
 		if(chr instanceof Mob) {
 			Mob mob = (Mob)chr;
 			return heroClass.friendlyTo(mob.getEntityKind());

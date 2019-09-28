@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -44,7 +45,7 @@ public abstract class NPC extends Mob {
 	}
 
 	@Override
-	public boolean friendly(Char chr) {
+	public boolean friendly(@NotNull Char chr) {
 		if(fraction.belongsTo(Fraction.NEUTRAL)) {
 			return true;
 		} else {

@@ -120,7 +120,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
     }
 
 	@Override
-	public boolean friendly(Char chr) {
+	public boolean friendly(@NotNull Char chr) {
 		return friendly || super.friendly(chr);
 	}
 

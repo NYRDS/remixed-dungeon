@@ -40,6 +40,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -150,7 +151,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public boolean act() {
 		level().updateFieldOfView(this);
 
-		forEachBuff(buff -> buff.charAct());
+		forEachBuff(CharModifier::charAct);
 
 		return false;
 	}
@@ -414,7 +415,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         hp(hp() + heal);
 
         if(!noAnim && heal > 0) {
-			getSprite().emitter().burst(Speck.factory(Speck.HEALING), Math.max(1, heal * 10 / ht()));
+			getSprite().emitter().burst(Speck.factory(Speck.HEALING), Math.max(1, heal * 5 / ht()));
 		}
     }
 
@@ -606,7 +607,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return new Hunger();
 		}
 
-
 		Hunger hunger = buff(Hunger.class);
 
 		if(hunger == null) {
@@ -660,6 +660,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		if (hasBuff(Vertigo.class) && level().adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
+
 			List<Integer> candidates = new ArrayList<>();
 			for (int dir : Level.NEIGHBOURS8) {
 				int p = getPos() + dir;
@@ -680,7 +681,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		placeTo(step);
 	}
 
-	public int distance(Char other) {
+	public int distance(@NotNull Char other) {
 		return level().distance(getPos(), other.getPos());
 	}
 
@@ -822,7 +823,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return movable;
 	}
 
-	public boolean collect(Item item) {
+	public boolean collect(@NotNull Item item) {
 		if (!item.collect(this)) {
 			if (level() != null && level().cellValid(getPos())) {
 				level().drop(item, getPos()).sprite.drop();
@@ -858,7 +859,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
-	public boolean friendly(Char chr){
+	public boolean friendly(@NotNull Char chr){
 		return !fraction.isEnemy(chr.fraction);
 	}
 

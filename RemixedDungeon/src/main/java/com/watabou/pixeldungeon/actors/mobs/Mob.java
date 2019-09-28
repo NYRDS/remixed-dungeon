@@ -615,7 +615,7 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public boolean friendly(Char chr) {
+	public boolean friendly(@NotNull Char chr) {
 
 		if(chr == this) {
 			return true;

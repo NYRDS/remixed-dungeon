@@ -67,7 +67,7 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public boolean friendly(Char chr){
+	public boolean friendly(@NotNull Char chr){
 		if(chr instanceof Hero) {
 			return anger < 2;
 		} else {
