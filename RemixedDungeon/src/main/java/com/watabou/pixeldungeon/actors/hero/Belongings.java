@@ -462,7 +462,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				weapon.cursedKnown = true;
 				if (weapon.cursed) {
 					ItemUtils.equipCursed( owner );
-					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), weapon.name() );
+					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), item.name() );
 				}
 
 				owner.spendAndNext(KindOfWeapon.TIME_TO_EQUIP);
@@ -481,7 +481,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				armor.cursedKnown = true;
 				if (armor.cursed) {
 					ItemUtils.equipCursed( owner );
-					GLog.n( Game.getVar(R.string.Armor_EquipCursed), toString() );
+					GLog.n( Game.getVar(R.string.Armor_EquipCursed), item.name() );
 				}
 
 				owner.updateSprite();
