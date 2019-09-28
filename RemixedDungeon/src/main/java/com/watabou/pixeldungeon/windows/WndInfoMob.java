@@ -100,7 +100,7 @@ public class WndInfoMob extends WndTitledMessage {
 			
 			buffs.setPos( 
 				name.x + name.width() + GAP, 
-				name.y + name.baseLine() - BuffIndicator.SIZE );
+				name.y + name.baseLine() - BuffIndicator.ICON_SIZE );
 			
 			height = hpBg.y + hpBg.height();
 		}
