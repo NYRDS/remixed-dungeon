@@ -35,15 +35,11 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import org.jetbrains.annotations.NotNull;
-
-public class CavesBossLevel extends Level {
+public class CavesBossLevel extends BossLevel {
 	
 	{
 		color1 = 0x534f3e;
@@ -51,18 +47,14 @@ public class CavesBossLevel extends Level {
 		
 		viewDistance = 6;
 	}
-		
-	private int arenaDoor;
-	private boolean enteredArena = false;
-	private boolean keyDropped = false;
-	
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_CAVES;
 	}
 
 	@Override
-	protected String tilesTexEx() {
+	public String tilesTexEx() {
 		return Assets.TILES_CAVES_X;
 	}
 
@@ -70,27 +62,7 @@ public class CavesBossLevel extends Level {
 	public String waterTex() {
 		return Assets.WATER_CAVES;
 	}
-	
-	private static final String DOOR	= "door";
-	private static final String ENTERED	= "entered";
-	private static final String DROPPED	= "droppped";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( DOOR, arenaDoor );
-		bundle.put( ENTERED, enteredArena );
-		bundle.put( DROPPED, keyDropped );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		arenaDoor = bundle.getInt( DOOR );
-		enteredArena = bundle.getBoolean( ENTERED );
-		keyDropped = bundle.getBoolean( DROPPED );
-	}
-	
+
 	@Override
 	protected boolean build() {
 		
@@ -206,12 +178,7 @@ public class CavesBossLevel extends Level {
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
-	
-	@Override
-	public boolean isBossLevel() {
-		return true;
-	}
-	
+
 	@Override
 	protected void pressHero(int cell, Hero hero) {
 		
@@ -239,24 +206,6 @@ public class CavesBossLevel extends Level {
 			Camera.main.shake( 3, 0.7f );
 			Sample.INSTANCE.play( Assets.SND_ROCKS );
 		}
-	}
-	
-	@NotNull
-    @Override
-	public Heap drop( Item item, int cell ) {
-		
-		if (!keyDropped && item instanceof SkeletonKey) {
-			
-			keyDropped = true;
-			
-			CellEmitter.get( arenaDoor ).start( Speck.factory( Speck.ROCK ), 0.07f, 10 );
-			
-			set( arenaDoor, Terrain.EMPTY_DECO );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
-		}
-		
-		return super.drop( item, cell );
 	}
 	
 	private boolean outsideEntraceRoom( int cell ) {

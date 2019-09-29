@@ -164,9 +164,7 @@ public class Goo extends Boss {
 	public void die(NamedEntityKind cause) {
 		
 		super.die( cause );
-		
-		level().unseal();
-		
+
 		level().drop( new SkeletonKey(), getPos() ).sprite.drop();
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_1);

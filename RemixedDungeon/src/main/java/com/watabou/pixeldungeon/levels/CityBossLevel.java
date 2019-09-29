@@ -31,15 +31,11 @@ import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import org.jetbrains.annotations.NotNull;
-
-public class CityBossLevel extends Level {
+public class CityBossLevel extends BossLevel {
 	
 	{
 		color1 = 0x4b6636;
@@ -50,11 +46,7 @@ public class CityBossLevel extends Level {
 	private static final int HALL_WIDTH		= 7;
 	private static final int HALL_HEIGHT	= 15;
 	private static final int CHAMBER_HEIGHT	= 3;
-	
-	private int arenaDoor;
-	private boolean enteredArena = false;
-	private boolean keyDropped = false;
-	
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_CITY;
@@ -64,27 +56,7 @@ public class CityBossLevel extends Level {
 	public String waterTex() {
 		return Assets.WATER_CITY;
 	}
-	
-	private static final String DOOR	= "door";
-	private static final String ENTERED	= "entered";
-	private static final String DROPPED	= "droppped";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( DOOR, arenaDoor );
-		bundle.put( ENTERED, enteredArena );
-		bundle.put( DROPPED, keyDropped );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		arenaDoor = bundle.getInt( DOOR );
-		enteredArena = bundle.getBoolean( ENTERED );
-		keyDropped = bundle.getBoolean( DROPPED );
-	}
-	
+
 	@Override
 	protected boolean build() {
 		
@@ -161,18 +133,13 @@ public class CityBossLevel extends Level {
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
-	
-	@Override
-	public boolean isBossLevel() {
-		return true;
-	}
-	
+
 	@Override
 	public void pressHero(int cell, Hero hero ) {
 		
 		super.pressHero( cell, hero );
 		
-		if (!enteredArena && outsideEntraceRoom( cell ) && hero == Dungeon.hero) {
+		if (!enteredArena && outsideEntranceRoom( cell ) && hero == Dungeon.hero) {
 			
 			enteredArena = true;
 			
@@ -182,7 +149,7 @@ public class CityBossLevel extends Level {
 				boss.setPos(Random.Int( getLength() ));
 			} while (
 				!passable[boss.getPos()] ||
-				!outsideEntraceRoom( boss.getPos() ) ||
+				!outsideEntranceRoom( boss.getPos() ) ||
 				Dungeon.visible[boss.getPos()]);
 			spawnMob(boss);
 			
@@ -191,24 +158,8 @@ public class CityBossLevel extends Level {
 			Dungeon.observe();
 		}
 	}
-	
-	@NotNull
-    @Override
-	public Heap drop( Item item, int cell ) {
-		
-		if (!keyDropped && item instanceof SkeletonKey) {
-			
-			keyDropped = true;
-			
-			set( arenaDoor, Terrain.DOOR );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
-		}
-		
-		return super.drop( item, cell );
-	}
-	
-	private boolean outsideEntraceRoom( int cell ) {
+
+	private boolean outsideEntranceRoom(int cell ) {
 		return cell / getWidth() < arenaDoor / getWidth();
 	}
 	

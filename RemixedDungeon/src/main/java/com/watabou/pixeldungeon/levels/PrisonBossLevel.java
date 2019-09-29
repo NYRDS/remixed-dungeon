@@ -32,7 +32,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -41,11 +40,9 @@ import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
 
-public class PrisonBossLevel extends RegularLevel {
+public class PrisonBossLevel extends BossLevel {
 
 	{
 		color1 = 0x6a723d;
@@ -53,11 +50,7 @@ public class PrisonBossLevel extends RegularLevel {
 	}
 	
 	private Room anteroom;
-	private int arenaDoor;
-	
-	private boolean enteredArena = false;
-	private boolean keyDropped = false;
-	
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_PRISON_BOSS;
@@ -68,27 +61,18 @@ public class PrisonBossLevel extends RegularLevel {
 		return Assets.WATER_PRISON;
 	}
 	
-	private static final String ARENA	= "arena";
-	private static final String DOOR	= "door";
-	private static final String ENTERED	= "entered";
-	private static final String DROPPED	= "droppped";
+	private static final String ARENA	= "arena";;
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		bundle.put( ARENA, exitRoom(0) );
-		bundle.put( DOOR, arenaDoor );
-		bundle.put( ENTERED, enteredArena );
-		bundle.put( DROPPED, keyDropped );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		setRoomExit((Room)bundle.get( ARENA ));
-		arenaDoor = bundle.getInt( DOOR );
-		enteredArena = bundle.getBoolean( ENTERED );
-		keyDropped = bundle.getBoolean( DROPPED );
 	}
 	
 	@Override
@@ -324,28 +308,7 @@ public class PrisonBossLevel extends RegularLevel {
 			Dungeon.observe();
 		}
 	}
-	
-	@NotNull
-    @Override
-	public Heap drop( Item item, int cell ) {
-		
-		if (!keyDropped && item instanceof SkeletonKey) {
-			
-			keyDropped = true;
-			
-			set( arenaDoor, Terrain.DOOR );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
-		}
-		
-		return super.drop( item, cell );
-	}
-	
-	@Override
-	public boolean isBossLevel() {
-		return true;
-	}
-	
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {

@@ -29,15 +29,11 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import org.jetbrains.annotations.NotNull;
-
-public class HallsBossLevel extends Level {
+public class HallsBossLevel extends BossLevel {
 	
 	{
 		color1 = 0x801500;
@@ -46,10 +42,6 @@ public class HallsBossLevel extends Level {
 		viewDistance = 3;
 	}
 
-	private int stairs = -1;
-	private boolean enteredArena = false;
-	private boolean keyDropped = false;
-	
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;
@@ -59,27 +51,7 @@ public class HallsBossLevel extends Level {
 	public String waterTex() {
 		return Assets.WATER_HALLS;
 	}
-	
-	private static final String STAIRS	= "stairs";
-	private static final String ENTERED	= "entered";
-	private static final String DROPPED	= "droppped";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( STAIRS, stairs );
-		bundle.put( ENTERED, enteredArena );
-		bundle.put( DROPPED, keyDropped );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		stairs = bundle.getInt( STAIRS );
-		enteredArena = bundle.getBoolean( ENTERED );
-		keyDropped = bundle.getBoolean( DROPPED );
-	}
-	
+
 	@Override
 	protected boolean build() {
 		
@@ -147,12 +119,7 @@ public class HallsBossLevel extends Level {
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
-	
-	@Override
-	public boolean isBossLevel() {
-		return true;
-	}
-	
+
 	@Override
 	protected void pressHero(int cell, Hero hero) {
 		
@@ -193,22 +160,7 @@ public class HallsBossLevel extends Level {
 		set( cell, Terrain.EMPTY_SP );
 		CellEmitter.get( cell ).start( FlameParticle.FACTORY, 0.1f, 3 );
 	}
-	
-	@NotNull
-    @Override
-	public Heap drop( Item item, int cell ) {
-		
-		if (!keyDropped && item instanceof SkeletonKey) {
-			keyDropped = true;
-			
-			entrance = stairs;
-			set( entrance, Terrain.ENTRANCE );
-			GameScene.updateMap( entrance );
-		}
-		
-		return super.drop( item, cell );
-	}
-	
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {

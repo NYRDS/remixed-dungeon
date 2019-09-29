@@ -27,24 +27,20 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Room.Type;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SewerBossLevel extends RegularLevel {
+public class SewerBossLevel extends BossLevel {
 
 	{
 		color1 = 0x48763c;
 		color2 = 0x59994a;
 	}
-	
-	private int stairs = 0;
-	
-	@Override
+
+    @Override
 	public String tilesTex() {
 		return Assets.TILES_SEWERS;
 	}
@@ -200,44 +196,7 @@ public class SewerBossLevel extends RegularLevel {
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
-	
-	public void seal() {
-		if (entrance != 0) {
-			
-			set( entrance, Terrain.WATER_TILES );
-			GameScene.updateMap( entrance );
-			GameScene.ripple( entrance );
-			
-			stairs = entrance;
-			entrance = 0;
-		}
-	}
-	
-	public void unseal() {
-		if (stairs != 0) {
-			
-			entrance = stairs;
-			stairs = 0;
-			
-			set( entrance, Terrain.ENTRANCE );
-			GameScene.updateMap( entrance );
-		}
-	}
-	
-	private static final String STAIRS	= "stairs";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( STAIRS, stairs );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		stairs = bundle.getInt( STAIRS );
-	}
-	
+
 	@Override
 	public String tileName( int tile ) {
 		switch (tile) {

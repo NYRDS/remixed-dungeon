@@ -2,9 +2,9 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.BossLevel;
 
-public class ShadowLordLevel extends Level {
+public class ShadowLordLevel extends BossLevel {
 
 	public ShadowLordLevel() {
 		color1 = 0x801500;
@@ -42,10 +42,5 @@ public class ShadowLordLevel extends Level {
 
 	@Override
 	protected void createItems() {
-	}
-
-	@Override
-	public boolean isBossLevel() {
-		return true;
 	}
 }

@@ -2,8 +2,6 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.watabou.noosa.Game;
@@ -14,18 +12,15 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.BossLevel;
 import com.watabou.pixeldungeon.levels.CityLevel;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import org.jetbrains.annotations.NotNull;
-
-public class NecroBossLevel extends Level {
+public class NecroBossLevel extends BossLevel {
 	
 	{
 		color1 = 0x4b6636;
@@ -50,27 +45,7 @@ public class NecroBossLevel extends Level {
 	public String waterTex() {
 		return Assets.WATER_NECRO;
 	}
-	
-	private static final String DOOR	= "door";
-	private static final String ENTERED	= "entered";
-	private static final String DROPPED	= "droppped";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( DOOR, arenaDoor );
-		bundle.put( ENTERED, enteredArena );
-		bundle.put( DROPPED, keyDropped );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		arenaDoor = bundle.getInt( DOOR );
-		enteredArena = bundle.getBoolean( ENTERED );
-		keyDropped = bundle.getBoolean( DROPPED );
-	}
-	
+
 	@Override
 	protected boolean build() {
 
@@ -131,18 +106,13 @@ public class NecroBossLevel extends Level {
 			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
-	
-	@Override
-	public boolean isBossLevel() {
-		return true;
-	}
-	
+
 	@Override
 	protected void pressHero(int cell, Hero hero) {
 
 		super.pressHero( cell, hero );
 
-		if (!enteredArena && outsideEntraceRoom( cell ) ) {
+		if (!enteredArena && outsideEntranceRoom( cell ) ) {
 			
 			enteredArena = true;
 			
@@ -158,23 +128,7 @@ public class NecroBossLevel extends Level {
 		}
 	}
 
-	@NotNull
-    @Override
-	public Heap drop( Item item, int cell ) {
-		
-		if (!keyDropped && (item instanceof BlackSkull || item instanceof BlackSkullOfMastery)) {
-			
-			keyDropped = true;
-			
-			set( arenaDoor, Terrain.DOOR );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
-		}
-		
-		return super.drop( item, cell );
-	}
-	
-	private boolean outsideEntraceRoom( int cell ) {
+	private boolean outsideEntranceRoom(int cell ) {
 		return cell / getWidth() < arenaDoor / getWidth();
 	}
 	
