@@ -18,7 +18,7 @@ import org.json.JSONObject;
 public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLevel {
 
     @Packable
-    protected int pos = Level.INVALID_CELL;
+    protected int pos;
 
     @Packable
     protected int layer = 0;
@@ -57,7 +57,7 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
     }
 
     protected void remove() {
-        Dungeon.level.remove(this);
+        level().remove(this);
         sprite.kill();
     }
 
@@ -153,7 +153,7 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
         if (sprite != null) {
             sprite.fall();
         }
-        Dungeon.level.remove(this);
+        level().remove(this);
     }
 
     @Override
