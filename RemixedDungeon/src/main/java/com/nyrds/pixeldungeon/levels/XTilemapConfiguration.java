@@ -12,7 +12,6 @@ import org.json.JSONObject;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import lombok.var;
@@ -94,13 +93,9 @@ public class XTilemapConfiguration {
 
 		JSONObject desc = terrainDesc.getJSONObject(key);
 		JSONArray baseDesc = desc.getJSONArray("base");
-
-		tileDesc.baseTiles = new ArrayList<>();
 		toIntArray(tileDesc.baseTiles, baseDesc);
 
 		JSONArray decoDesc = desc.getJSONArray("deco");
-
-		tileDesc.decoTiles = new ArrayList<>();
 		toIntArray(tileDesc.decoTiles, decoDesc);
 		return  tileDesc;
 	}
@@ -112,8 +107,8 @@ public class XTilemapConfiguration {
 	}
 
 	private static class TileDesc {
-		ArrayList<Integer> baseTiles;
-		ArrayList<Integer> decoTiles;
+		ArrayList<Integer> baseTiles = new ArrayList<>();
+		ArrayList<Integer> decoTiles = new ArrayList<>();
 	}
 
 	public int baseTile(Level level, int cell) {

@@ -61,7 +61,7 @@ public class PrisonBossLevel extends BossLevel {
 		return Assets.WATER_PRISON;
 	}
 	
-	private static final String ARENA	= "arena";;
+	private static final String ARENA	= "arena";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {

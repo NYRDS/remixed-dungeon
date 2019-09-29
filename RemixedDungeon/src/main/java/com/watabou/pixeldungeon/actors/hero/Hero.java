@@ -475,7 +475,6 @@ public class Hero extends Char {
 		}
 
 		checkVisibleEnemies();
-		AttackIndicator.updateState();
 
 		if(controlTargetId != getId()) {
 			curAction = null;
@@ -1043,6 +1042,8 @@ public class Hero extends Char {
 		}
 
 		visibleEnemies = visible;
+
+		AttackIndicator.updateState(this);
 	}
 
 	public Char getNearestEnemy() {
@@ -1182,7 +1183,7 @@ public class Hero extends Char {
 			return false;
 		}
 
-		Level level = Dungeon.level;
+		Level level = level();
 
 		if (!level.cellValid(cell)) {
 			return false;

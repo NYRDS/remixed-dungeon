@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-import com.watabou.pixeldungeon.ui.AttackIndicator;
 
 public class PseudoPasty extends Food {
 
@@ -42,7 +41,6 @@ public class PseudoPasty extends Food {
 		level.spawnMob(mob);
 
 		Dungeon.hero.checkVisibleEnemies();
-		AttackIndicator.updateState();
 
 		CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
 		Sample.INSTANCE.play(Assets.SND_MIMIC);

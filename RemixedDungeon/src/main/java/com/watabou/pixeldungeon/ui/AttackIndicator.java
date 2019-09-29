@@ -26,6 +26,8 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
+import lombok.var;
+
 public class AttackIndicator extends Tag {
 	
 	private static final float ENABLED	= 1.0f;
@@ -34,10 +36,8 @@ public class AttackIndicator extends Tag {
 	private static AttackIndicator instance;
 	
 	private CharSprite sprite = null;
-	
 	private static Char lastTarget = null;
-	private ArrayList<Char> candidates = new ArrayList<>();
-	
+
 	public AttackIndicator() {
 		super( DangerIndicator.COLOR );
 		
@@ -62,9 +62,15 @@ public class AttackIndicator extends Tag {
 	@Override
 	public void update() {
 		super.update();
-		
+
+		if(lastTarget !=null && !lastTarget.isAlive()) {
+			lastTarget = null;
+			visible(false);
+			return;
+		}
+
 		if (Dungeon.hero.isAlive()) {
-			
+
 			if (!Dungeon.hero.isReady()) {
 				enable( false );
 			}		
@@ -75,8 +81,8 @@ public class AttackIndicator extends Tag {
 		}
 	}
 	
-	private void checkEnemies() {
-		Hero hero = Dungeon.hero;
+	private void checkEnemies(Hero hero) {
+		var candidates = new ArrayList<Char>();
 
 		candidates.clear();
 		int v = hero.visibleEnemies();
@@ -92,8 +98,7 @@ public class AttackIndicator extends Tag {
 			if (candidates.isEmpty()) {
 				lastTarget = null;
 			} else {
-				lastTarget = Random.element( candidates );
-				updateImage();				
+				target( Random.element( candidates ));
 				flash();
 			}
 		} else {
@@ -152,9 +157,9 @@ public class AttackIndicator extends Tag {
 		HealthIndicator.instance.target( target );
 	}
 	
-	public static void updateState() {
+	public static void updateState(Hero hero) {
 		if(instance != null){
-			instance.checkEnemies();
+			instance.checkEnemies(hero);
 		}
 	}
 }
