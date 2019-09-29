@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.ai.Hunting;
-import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -27,12 +25,9 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Bestiary;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 public class CityBossLevel extends BossLevel {
@@ -142,20 +137,17 @@ public class CityBossLevel extends BossLevel {
 		if (!enteredArena && outsideEntranceRoom( cell ) && hero == Dungeon.hero) {
 			
 			enteredArena = true;
-			
-			Mob boss = Bestiary.mob(this);
-			boss.setState(MobAi.getStateByClass(Hunting.class));
+
+			int pos;
+
 			do {
-				boss.setPos(Random.Int( getLength() ));
+				pos = Random.Int(getLength());
 			} while (
-				!passable[boss.getPos()] ||
-				!outsideEntranceRoom( boss.getPos() ) ||
-				Dungeon.visible[boss.getPos()]);
-			spawnMob(boss);
-			
-			set( arenaDoor, Terrain.LOCKED_DOOR );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
+					!passable[pos] ||
+							!outsideEntranceRoom(pos ) ||
+							Dungeon.visible[pos]);
+
+			spawnBoss(pos);
 		}
 	}
 

@@ -153,13 +153,7 @@ public class Goo extends Boss {
 		pumpedUp = false;
 		return super.getCloser( target );
 	}
-	
-	@Override
-	public void move( int step ) {
-		level().seal();
-		super.move( step );
-	}
-	
+
 	@Override
 	public void die(NamedEntityKind cause) {
 		

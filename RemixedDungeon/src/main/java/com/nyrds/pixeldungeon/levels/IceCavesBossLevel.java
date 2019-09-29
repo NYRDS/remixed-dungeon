@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.BossLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -133,9 +132,7 @@ public class IceCavesBossLevel extends BossLevel {
 				mob = guard;
 			}
 
-			set( arenaDoor, Terrain.LOCKED_DOOR );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
+			seal();
 		}
 	}
 

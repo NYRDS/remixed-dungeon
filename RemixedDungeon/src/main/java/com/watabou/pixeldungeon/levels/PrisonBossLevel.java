@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.ai.Hunting;
-import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
@@ -27,14 +25,11 @@ import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Bestiary;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
@@ -294,18 +289,8 @@ public class PrisonBossLevel extends BossLevel {
 			do {
 				pos = getRoomExit().random(this);
 			} while (pos == cell || Actor.findChar( pos ) != null);
-			
-			Mob boss = Bestiary.mob(this);
-			boss.setState(MobAi.getStateByClass(Hunting.class));
-			boss.setPos(pos);
-			Dungeon.level.spawnMob(boss);
-			boss.notice();
-			
-			press( boss.getPos(), boss );
-			
-			set( arenaDoor, Terrain.LOCKED_DOOR );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
+
+			spawnBoss(pos);
 		}
 	}
 

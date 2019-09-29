@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.icecaves;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -58,7 +57,7 @@ public class IceGuardian extends MultiKindMob {
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
-		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
+		for (Mob mob : level().getCopyOfMobsArray()) {
 			if (mob instanceof IceGuardianCore) {
 				mob.damage(150,cause);
 				if (mob.isAlive()){

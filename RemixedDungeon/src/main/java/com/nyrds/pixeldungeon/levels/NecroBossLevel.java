@@ -1,14 +1,10 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.ai.Hunting;
-import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -16,7 +12,6 @@ import com.watabou.pixeldungeon.levels.BossLevel;
 import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -31,11 +26,7 @@ public class NecroBossLevel extends BossLevel {
 	private static final int HALL_WIDTH		= 9;
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 4;
-	
-	private int arenaDoor;
-	private boolean enteredArena = false;
-	private boolean keyDropped = false;
-	
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_NECRO;
@@ -115,16 +106,8 @@ public class NecroBossLevel extends BossLevel {
 		if (!enteredArena && outsideEntranceRoom( cell ) ) {
 			
 			enteredArena = true;
-			
-			Lich boss = new Lich();
-			boss.setState(MobAi.getStateByClass(Hunting.class));
-			boss.setPos((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 
-			spawnMob(boss);
-
-			set( arenaDoor, Terrain.LOCKED_DOOR );
-			GameScene.updateMap( arenaDoor );
-			Dungeon.observe();
+			spawnBoss((TOP + HALL_HEIGHT / 2) * getWidth() + _Center());
 		}
 	}
 

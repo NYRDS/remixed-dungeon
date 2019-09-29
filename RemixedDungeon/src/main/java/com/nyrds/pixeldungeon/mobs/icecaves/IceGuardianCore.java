@@ -66,8 +66,6 @@ public class IceGuardianCore extends Boss {
 			}
 		}
 
-		level.unseal();
-
 		level.drop( new SkeletonKey(), getPos() ).sprite.drop();
 		level.drop( new IceKey(), getPos() ).sprite.drop();
 

@@ -1,7 +1,11 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.mobs.Bestiary;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -38,6 +42,13 @@ public abstract class BossLevel extends RegularLevel {
             stairs = entrance;
             entrance = 0;
         }
+
+        if(cellValid(arenaDoor)) {
+            set(arenaDoor, Terrain.LOCKED_DOOR);
+            GameScene.updateMap(arenaDoor);
+        }
+
+        Dungeon.observe();
     }
 
     public void unseal() {
@@ -77,5 +88,16 @@ public abstract class BossLevel extends RegularLevel {
     @Override
     public boolean isBossLevel() {
         return true;
+    }
+
+    protected void spawnBoss(int pos) {
+        Mob boss = Bestiary.mob(this);
+        boss.setState(MobAi.getStateByClass(Hunting.class));
+        boss.setPos(pos);
+        spawnMob(boss);
+        boss.notice();
+
+        press( boss.getPos(), boss );
+        seal();
     }
 }
