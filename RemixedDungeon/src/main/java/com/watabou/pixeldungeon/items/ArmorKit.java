@@ -93,12 +93,9 @@ public class ArmorKit extends Item {
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				ArmorKit.this.upgrade( (Armor)item );
-			}
+	private final WndBag.Listener itemSelector = item -> {
+		if (item != null) {
+			ArmorKit.this.upgrade( (Armor)item );
 		}
 	};
 }

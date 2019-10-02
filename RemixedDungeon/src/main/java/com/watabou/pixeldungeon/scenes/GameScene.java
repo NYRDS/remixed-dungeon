@@ -398,6 +398,7 @@ public class GameScene extends PixelScene {
         fadeIn();
 
         Dungeon.observe();
+        Dungeon.hero.updateSprite();
         Dungeon.hero.readyAndIdle();
 
         doSelfTest();
