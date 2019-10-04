@@ -1,16 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
   <string name="ChaosHelmet_Name">Chaos Helm</string>
-  <string name="ChaosHelmet_Info">Ein Blutroter Helm. Das Symbol ein Chaos Kriegers.</string>
-  <string name="Spells_SummonLimitReached">%1$s: Beschwörungslimit erreicht (momentanes maximum: %2$d)!</string>
+  <string name="ChaosHelmet_Info">Ein Blutroter Helm. Das Symbol ein Chaos Kriegers.
+Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
+  <string name="Spells_SummonLimitReached">%1$s: Beschwörungslimit erreicht (derzeitiges Maximum: %2$d)!</string>
   <string name="Mana_Title">Mana</string>
   <string name="Mana_Cost">Mana Kosten:</string>
-  <string name="Spells_NotEnoughSP">Du hast nicht genug Mana um einen \"%1$s\" Zauberspruch auszuführen.</string>
+  <string name="Spells_NotEnoughSP">Du hast nicht genug Mana um einen \"%1$s\" Zauberspruch zu wirken.</string>
   <string name="SummonDeathling_Name">Beschwöre einen Untoten</string>
-  <string name="SummonDeathling_Info">Beschwört einen Untoten, der dir folgt. Untoten LP und sein Schaden erhöht sich mit dem Level des Helden. \n\nBeschwörungslimit: %1$d (+1 je Magie Level)</string>
-  <string name="Ignite_Name">Anzünden</string>
-  <string name="Ignite_Info">Zündet ausgewähltes Feld an. Kann benutzt werden um Gras, Charaktere und Objekte anzuzünden.</string>
-  <string name="RootSpell_Name">Festwachsen</string>
-  <string name="RootSpell_Info">Verwurzelt ausgewählten Charakter und macht es ihm unmöglich für eine kurze Weile sich zu Bewegen.</string>
+  <string name="SummonDeathling_Info">Beschwört einen Untoten, welcher dir folgt. Die Leben und der Schaden des Untoten erhöhen sich mit dem Level des Helden. \n\nBeschwörungslimit: %1$d (+1 je Magielevel)</string>
+  <string name="Ignite_Name">Entzünden</string>
+  <string name="Ignite_Info">Entzündet das ausgewählte Feld. Dies kann genutzt werden, um Gras, Charaktere und Objekte zu verbrennen.</string>
+  <string name="RootSpell_Name">Verwurzeln</string>
+  <string name="RootSpell_Info">Verwurzelt ausgewählten Charakter und macht es ihm unmöglich für eine kurze Weile sich zu Bewegen.
+Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich sich fortzubewegen.</string>
   <string name="WindGust_Name">Windstoß</string>
   <string name="WindGust_Info">Bläst einen Windstoß gegen den ausgewählten Charakter und stößt in weg.</string>
   <string name="FreezeGlobe_Name">Einfrieren</string>
@@ -2184,6 +2186,8 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="BodyArmorSpell_Info">Aktiviert ungenutzte Kraftreserven, um die Muskeln temporär stärker zu machen, was die Rüstung deutlich verstärkt, aber die Bewegungsgeschwindigkeit drastisch reduziert.</string>
   <string name="BodyArmorBuff_Name">Körperrüstung</string>
   <string name="BodyArmorBuff_Info">Rüstung wird auf Kosten von Bewegungs-Geschwindigkeit erhöht.</string>
+  <string name="DieHardSpell_Name">Hartnäckig</string>
+  <string name="DieHardSpell_Info">Wird temporär deine Regeration erhöhen um dich sehr widerstandsfähig zu machen.</string>
   <string name="DieHardBuff_Name">Stirb Hart</string>
   <string name="DieHardBuff_Info">Regenerationsrate erhöht</string>
   <string name="SmashSpell_Name">Zerschmettern</string>
@@ -2224,7 +2228,9 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="town_deco_broken_wall_name">Kaputte Mauer</string>
   <string name="town_deco_broken_wall_desc">Die Stämme dieser Mauer sind vor langer Zeit verrottet und haben ihre normale Wiederstandsfähigkeit verloren.</string>
   <string name="town_deco_mud_name">Matsch</string>
+  <string name="town_deco_mud_desc">Angetauter Boden in diesem Permafrost Gebiet.</string>
   <string name="town_deco_stock_name">Vorrat</string>
+  <string name="town_deco_stock_desc">Nahrungsreserven lagern hier, sowie ein Haufen Müll in allen Formen und Farben.</string>
   <string name="town_deco_barrel_name">Fass</string>
   <string name="town_deco_barrel_desc">Ein gewöhnliches Fass, in einem nicht ganz so guten Zustand.</string>
   <string name="town_deco_hay_name">Heu</string>
@@ -2256,6 +2262,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="town_deco_scrolls_name">Schriftrollen</string>
   <string name="town_deco_scrolls_desc">Dieses staubige Regal ist voll mit verschieden Schriftrollen und Büchern.</string>
   <string name="town_deco_medicine_name">Medizin</string>
+  <string name="town_deco_medicine_desc">Glasfläschchen und andere Medizinische Zutaten sind vorsichtig auf diesen Regalen platziert.</string>
   <string name="town_deco_wooden_stairs_name">Stufen</string>
   <string name="town_deco_wooden_stairs_desc">Sie machen dich ein bisschen höher.</string>
   <string name="town_deco_canvas_name">Leinwand</string>
@@ -2529,9 +2536,22 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
   <string name="Welcome_Text_29_1">
 remix.29.1\n
  - Modding:\n
--- Veränderbare Gegenstand Spawn rate\n
+-- Benutzerdefinierbare Gegenstand Spawn rate\n
 - Übersetzungen:\n
 -- Ungarische Übersetzung hinzugefügt\n
 - Bugs behoben\n</string>
   <string name="town_deco_stone_wall_broken_name">Kaputte Mauer</string>
+  <string name="town_deco_stone_wall_broken_desc">Alte Steinwand, in schlechtem Zustand.</string>
+  <string name="Challenges_Names_6">Verbotene Runen</string>
+  <string name="Challenges_Names_7">Pazifismus</string>
+  <string name="Welcome_Text_29_2">
+remix.29.2\n
+- Spielmechaniken:\n
+-- Neue Herausforderungen:\n
+--- Verbotene Runen\n
+--- Pazifismus\n
+- Modding:\n
+-- Benutzerdefinierte Artefakte\n
+- Bugs behoben\n
+</string>
 </resources>

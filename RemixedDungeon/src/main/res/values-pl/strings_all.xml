@@ -2546,4 +2546,15 @@ remix.29.1
 -Naprawiono błędy:\n</string>
   <string name="town_deco_stone_wall_broken_name">Zniszczona ściana</string>
   <string name="town_deco_stone_wall_broken_desc">Stara , uszkodzona kamienna ściana.</string>
+  <string name="Challenges_Names_6">Zapomniane runy</string>
+  <string name="Challenges_Names_7">Pacyfizm</string>
+  <string name="Welcome_Text_29_2">
+remix.29.2/n
+-Rozgrywka:/n
+--Nowe wyzwania
+---Zapomniane runy:/n
+---Pacyfizm:/n
+-Modowanie
+--Niestandardowe artefakty/n
+-Naprawy błędów/n</string>
 </resources>
