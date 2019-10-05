@@ -618,7 +618,7 @@ public abstract class Level implements Bundlable {
 		entrance = bundle.getInt(ENTRANCE);
 		compassTarget = bundle.optInt(COMPASS_TARGET, INVALID_CELL);
 
-		int exits[] = bundle.getIntArray(EXIT);
+		int[] exits = bundle.getIntArray(EXIT);
 		if (exits.length > 0) {
 			for (int i = 0; i < exits.length; ++i) {
 				setExit(exits[i], i);
@@ -846,33 +846,7 @@ public abstract class Level implements Bundlable {
 			return null;
 		}
 
-		return new Actor() {
-			@Override
-			protected boolean act() {
-
-				int hostileMobsCount = 0;
-				for (Mob mob : mobs) {
-					if (!mob.isPet()) {
-						hostileMobsCount++;
-					}
-				}
-
-				if (hostileMobsCount < nMobs()) {
-
-					Mob mob = createMob();
-					mob.setState(MobAi.getStateByClass(Wandering.class));
-					if (Dungeon.hero.isAlive() && cellValid(mob.getPos())) {
-						spawnMob(mob);
-						if (Statistics.amuletObtained) {
-							mob.beckon(Dungeon.hero.getPos());
-						}
-					}
-				}
-				spend(Dungeon.nightMode || Statistics.amuletObtained ? TIME_TO_RESPAWN / 2
-						: TIME_TO_RESPAWN);
-				return true;
-			}
-		};
+		return new RespawnerActor();
 	}
 
 	public int randomRespawnCell() {
@@ -1770,5 +1744,33 @@ public abstract class Level implements Bundlable {
 
 	public Mob[] getCopyOfMobsArray() {
 		return mobs.toArray(new Mob[0]);
+	}
+
+	private class RespawnerActor extends Actor {
+		@Override
+		protected boolean act() {
+
+			int hostileMobsCount = 0;
+			for (Mob mob : mobs) {
+				if (!mob.isPet()) {
+					hostileMobsCount++;
+				}
+			}
+
+			if (hostileMobsCount < nMobs()) {
+
+				Mob mob = createMob();
+				mob.setState(MobAi.getStateByClass(Wandering.class));
+				if (Dungeon.hero.isAlive() && cellValid(mob.getPos())) {
+					spawnMob(mob);
+					if (Statistics.amuletObtained) {
+						mob.beckon(Dungeon.hero.getPos());
+					}
+				}
+			}
+			spend(Dungeon.nightMode || Statistics.amuletObtained ? TIME_TO_RESPAWN / 2
+					: TIME_TO_RESPAWN);
+			return true;
+		}
 	}
 }
