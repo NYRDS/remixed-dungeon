@@ -2537,4 +2537,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Custom Artifacts\n
     - Bugs fixed\n
     </string>
+  <string name="town_deco_crossroad_name">Crossroads sign</string>
+  <string name="town_deco_crossroad_desc">Crude wooden pillar with arrow shaped plates text on which was faded long ago probably due to harsh weather conditions.</string>
 </resources>
