@@ -2196,8 +2196,11 @@
   <string name="town_deco_entrance_name">Jalan Masuk</string>
   <string name="town_deco_entrance_desc">Pintu masuk ini menuju ke aras-aras atas kurungan bawah tanah.</string>
   <string name="town_deco_exit_name">Keluar</string>
+  <string name="town_deco_exit_desc">Tak tahulah apa yang menunggu anda sekiranya anda menuruni tangga ini.</string>
   <string name="town_deco_tile_name">Jubin</string>
   <string name="town_deco_tile_desc">Jubin kelihatan lusuh.</string>
+  <string name="town_deco_snowdrift_name">Hanyutan Salji</string>
+  <string name="town_deco_snowdrift_desc">Satu longgokan besar salji dan nampaknya tiada siapa yang mahu bersihkannya.</string>
   <string name="town_deco_misc_name">Sampah</string>
   <string name="town_deco_misc_desc">Selonggok sampah sarap.</string>
   <string name="town_deco_broken_roof_name">Bumbung bocor</string>
@@ -2213,6 +2216,7 @@
   <string name="town_deco_hay_name">Rumput Kering</string>
   <string name="town_deco_hay_desc">Rumput kering yang disusun cantik dan kuat aroma rumputnya.</string>
   <string name="town_deco_firewood_name">Kayu api</string>
+  <string name="town_deco_firewood_desc">Perkara penting ketika berada di dalam hutan yang teruk ini</string>
   <string name="town_deco_stakes_name">Kayu Pancang</string>
   <string name="town_deco_stakes_desc">Batu kayu runcing ini nampak menakutkan, tetapi tidak memberi apa-apa manfaat.</string>
   <string name="town_deco_fence_name">Pagar</string>
@@ -2250,6 +2254,7 @@
   <string name="town_deco_painting_name">Lukisan</string>
   <string name="town_deco_painting_desc">Sebuah lakaran seni yang indah.</string>
   <string name="town_deco_curtains_name">Langsir</string>
+  <string name="town_deco_curtains_desc">Hentikan semua cahaya yang tidak diperlukan dan juga bertindak sebagai hiasan yang baik.</string>
   <string name="town_deco_rug_name">Ambal</string>
   <string name="town_deco_rug_desc">Direka dengan citarasa yang menakjubkan.</string>
   <string name="town_deco_trapdoor_name">Pintu Kolong</string>
@@ -2510,5 +2515,15 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="Potion_Colors_9">bister</string>
   <string name="Potion_Colors_10">indigo</string>
   <string name="Potion_Colors_11">perak</string>
+  <string name="Welcome_Text_29_1">
+    remix.29.1\n
+    - Pengemodan:\n
+    -- Kadar biak item boleh dimodkan\n
+    - Terjemahan:\n
+    --Terjemahan bahasa Hungary ditambah\n
+    - Pepijat dibaiki\n
+    </string>
   <string name="town_deco_stone_wall_broken_name">Dinding rosak</string>
+  <string name="town_deco_stone_wall_broken_desc">Dinding batu lama, dalam keadaan rosak</string>
+  <string name="town_deco_crossroad_name">Tanda simpang</string>
 </resources>

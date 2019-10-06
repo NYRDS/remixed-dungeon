@@ -2553,4 +2553,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Ксатомизируемые Артефакты\n
     - Исправления ошибок\n
     </string>
+  <string name="town_deco_crossroad_name">Дорожный указатель</string>
+  <string name="town_deco_crossroad_desc">Грубо сделанный деревянный столб с приколоченными дощечками в форме стрелок, текст на них давно выцвел, похоже что из-за суровой погоды.</string>
 </resources>
