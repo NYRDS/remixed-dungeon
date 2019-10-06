@@ -489,7 +489,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				owner.spendAndNext( 2 * armor.time2equip( owner ) );
 				return true;
 			} else {
-				armor.collect( backpack );
+				item.collect( backpack );
 				return false;
 			}
 		}
