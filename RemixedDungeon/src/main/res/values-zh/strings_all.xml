@@ -510,7 +510,7 @@ remix.28.5\n
   <string name="IronKey_FromDepth">第%d層的鐵鑰匙</string>
   <string name="SkeletonKey_Name">骷髏鑰匙</string>
   <string name="SkeletonKey_Info">此鑰匙看上來一本正經，它的頭型呈骷髏頭狀。可能能用它打開某些一本正經的門。</string>
-  <string name="CorpseDust_Name">屍塵</string>
+  <string name="CorpseDust_Name">尸尘</string>
   <string name="CorpseDust_Info">在外觀上這團屍塵和普通灰塵球差不多。而您卻能夠感受到其中潛伏著一股充滿惡意的魔力。盡快脫手為上策。</string>
   <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
   <string name="DarkGold_Name">暗金礦</string>
@@ -2570,4 +2570,6 @@ remix.28.5\n
     -- 部分贴图\n
     - 修复了bug\n
     </string>
+  <string name="town_deco_crossroad_name">路口告示牌</string>
+  <string name="town_deco_crossroad_desc">粗糙的木柱，上面刻有模糊的箭头形文字，可能是由于恶劣的气候而褪色了。</string>
 </resources>
