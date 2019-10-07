@@ -72,10 +72,10 @@ android {
     flavorDimensions "minApi"
     productFlavors {
         googlePlay {
-            buildToolsVersion '28.0.3'
-            targetSdkVersion 28
+            buildToolsVersion = '29.0.2'
+            targetSdkVersion 29
             minSdkVersion 16
-            compileSdkVersion 28
+            compileSdkVersion = 29
 
             versionCode defaultConfig.versionCode + 10000
             // Enabling multidex support.
@@ -84,6 +84,8 @@ android {
         }
 
     }
+
+
 }
 
 apply plugin: 'io.fabric'
