@@ -86,6 +86,7 @@ local Objects = {
 
 local GameScene = luajava.bindClass("com.watabou.pixeldungeon.scenes.GameScene")
 local Dungeon   = luajava.bindClass("com.watabou.pixeldungeon.Dungeon")
+local Camera    = luajava.bindClass("com.watabou.noosa.Camera")
 
 local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
 
@@ -280,16 +281,22 @@ local RPD = {
     end,
 
     forCellsAround = function(cell, action)
-        local x = Dungeon.level:cellX(cell)
-        local y = Dungeon.level:cellY(cell)
+        local level = Dungeon.level
+
+        local x = level:cellX(cell)
+        local y = level:cellY(cell)
 
         for i = x - 1, x + 1 do
             for j = y - 1, y + 1 do
                 if i~=x or j~=y then
-                    action(Dungeon.level:cell(i,j))
+                    action(level:cell(i,j))
                 end
             end
         end
+    end,
+
+    shakeCamera = function(time, power)
+        Camera.main:shake(time, power)
     end
 }
 
