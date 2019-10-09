@@ -20,6 +20,12 @@
     "items": [
       {
         "kind": "Ration"
+      },
+      {
+        "kind": "TestWeapon1"
+      },
+      {
+        "kind": "TestWeapon2"
       }
     ]
   },

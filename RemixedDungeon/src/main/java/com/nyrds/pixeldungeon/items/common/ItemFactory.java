@@ -432,6 +432,9 @@ public class ItemFactory {
         registerItemClass(AmokArrow.class);
         registerItemClass(CandyOfDeath.class);
         registerItemClass(TacticalCrossbow.class);
+
+        registerItemClass(TestWeapon1.class);
+        registerItemClass(TestWeapon2.class);
     }
 
     public static boolean isValidItemClass(String itemClass) {

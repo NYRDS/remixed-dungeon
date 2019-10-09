@@ -15,12 +15,18 @@
         "level": 10
       },
       {
-        "kind": "ScrollOfMagicMapping",
+        "kind": "ScrollOfCurse",
         "quantity": 100
       },
       {
         "kind": "ManaPotion",
         "quantity": 100
+      },
+      {
+        "kind": "PlateArmor"
+      },
+      {
+        "kind": "ClothArmor"
       }
     ],
     "str": 10,
