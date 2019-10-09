@@ -2557,4 +2557,6 @@ remix.29.2/n
 -Modowanie
 --Niestandardowe artefakty/n
 -Naprawy błędów/n</string>
+  <string name="town_deco_crossroad_name">Tabliczka na rozdrożu </string>
+  <string name="town_deco_crossroad_desc">Szorstki drewniany słup z tekstem w kształcie strzałek, na którym już dawno wyblakły, prawdopodobnie z powodu trudnych warunków pogodowych.</string>
 </resources>

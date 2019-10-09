@@ -76,7 +76,8 @@ public class BuffIndicator extends Component {
 	public static final int BLEESSED    = 42;
 
 	
-	public static final int   SIZE	= 16;
+	//public static final int   SIZE	= 16;
+	public static final int   SIZE	= 7;
 	public static final float ICON_SIZE = 7;
 
     private static BuffIndicator heroInstance;
@@ -108,7 +109,8 @@ public class BuffIndicator extends Component {
 	
 	@Override
 	protected void createChildren() {
-		texture = TextureCache.get( Assets.BUFFS_LARGE  );
+		//texture = TextureCache.get( Assets.BUFFS_LARGE  );
+		texture = TextureCache.get( Assets.BUFFS_SMALL );
 		film = new TextureFilm( texture, SIZE, SIZE );
 	}
 	
