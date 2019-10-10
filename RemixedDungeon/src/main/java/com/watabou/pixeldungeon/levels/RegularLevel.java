@@ -239,6 +239,7 @@ public abstract class RegularLevel extends CustomLevel {
 	}
 
 	protected boolean initRooms() {
+		rooms.clear();
 
 		split(new Rect(0, 0, getWidth() - 1, getHeight() - 1));
 
@@ -608,7 +609,7 @@ public abstract class RegularLevel extends CustomLevel {
 	@Override
 	public int randomDestination() {
 
-		if(rooms == null) {
+		if(rooms.isEmpty()) {
 			return super.randomDestination();
 		}
 
@@ -660,6 +661,10 @@ public abstract class RegularLevel extends CustomLevel {
 	}
 
 	protected Room randomRoom(Room.Type type, int tries) {
+	    if(rooms.isEmpty()) {
+	        return null;
+        }
+
 		for (int i = 0; i < tries; i++) {
 			Room room = Random.element(rooms);
 			if (room.type == type) {
@@ -679,7 +684,7 @@ public abstract class RegularLevel extends CustomLevel {
 		return null;
 	}
 
-	protected int randomDropCell() {
+	private int randomDropCell() {
 		while (true) {
 			Room room = randomRoom(Room.Type.STANDARD, 1);
 			if (room != null) {

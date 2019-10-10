@@ -35,7 +35,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
-import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.audio.Music;
@@ -410,7 +409,7 @@ public class GameScene extends PixelScene {
                 Dungeon.level.tileDescByCell(i);
                 Dungeon.level.tileNameByCell(i);
             }
-            GLog.toFile(StringsManager.missingStrings.toString());
+            //GLog.toFile(StringsManager.missingStrings.toString());
         }
     }
 
