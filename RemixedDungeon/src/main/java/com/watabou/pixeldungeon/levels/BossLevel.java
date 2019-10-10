@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.Dungeon;
@@ -91,8 +92,12 @@ public abstract class BossLevel extends RegularLevel {
     }
 
     protected void spawnBoss(int pos) {
+        spawnBoss(pos, MobAi.getStateByClass(Hunting.class));
+    }
+
+    protected void spawnBoss(int pos, AiState state) {
         Mob boss = Bestiary.mob(this);
-        boss.setState(MobAi.getStateByClass(Hunting.class));
+        boss.setState(state);
         boss.setPos(pos);
         spawnMob(boss);
         boss.notice();
@@ -100,4 +105,6 @@ public abstract class BossLevel extends RegularLevel {
         press( boss.getPos(), boss );
         seal();
     }
+
+
 }

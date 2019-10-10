@@ -22,8 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
-import com.watabou.pixeldungeon.actors.mobs.Bestiary;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Room.Type;
@@ -175,16 +174,19 @@ public class SewerBossLevel extends BossLevel {
 	public void addVisuals( Scene scene ) {
 		SewerLevel.addVisuals( this, scene );
 	}
-	
-	
-	@Override
-	protected void createMobs() {
-		Mob mob = Bestiary.mob( this );
 
-		mob.setPos(getEmptyCellNextTo(getRoomExit().random(this)));
-		mobs.add( mob );
+
+	@Override
+	protected void pressHero(int cell, Hero ch) {
+
+		super.pressHero( cell, ch );
+
+		if (!enteredArena && getRoomExit().inside( cell )) {
+			enteredArena = true;
+			spawnBoss(getEmptyCellFromRoom(getRoomExit()));
+		}
 	}
-	
+
 	@Override
 	protected void createItems() {
 		Item item = Bones.get();
@@ -215,10 +217,5 @@ public class SewerBossLevel extends BossLevel {
 		default:
 			return super.tileDesc( tile );
 		}
-	}
-	
-	@Override
-	public boolean isBossLevel() {
-		return true;
 	}
 }

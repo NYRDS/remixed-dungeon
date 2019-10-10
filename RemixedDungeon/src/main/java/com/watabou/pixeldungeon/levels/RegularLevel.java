@@ -37,13 +37,16 @@ import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
 import com.watabou.utils.SparseArray;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 public abstract class RegularLevel extends CustomLevel {
 
-	protected HashSet<Room> rooms;
+	@NotNull
+	protected HashSet<Room> rooms = new HashSet<>();
 
 	private SparseArray<Room> exits = new SparseArray<>();
 
@@ -237,7 +240,6 @@ public abstract class RegularLevel extends CustomLevel {
 
 	protected boolean initRooms() {
 
-		rooms = new HashSet<>();
 		split(new Rect(0, 0, getWidth() - 1, getHeight() - 1));
 
 		if (rooms.size() < 8) {
@@ -606,6 +608,10 @@ public abstract class RegularLevel extends CustomLevel {
 	@Override
 	public int randomDestination() {
 
+		if(rooms == null) {
+			return super.randomDestination();
+		}
+
 		int cell;
 
 		while (true) {
@@ -721,5 +727,15 @@ public abstract class RegularLevel extends CustomLevel {
 
 	protected void setRoomExit(Room roomExit) {
 		exits.put(0, roomExit);
+	}
+
+	int getEmptyCellFromRoom(Room room){
+		int pos;
+
+		do {
+			pos = room.random(this);
+		} while (Actor.findChar( pos ) != null);
+
+		return pos;
 	}
 }

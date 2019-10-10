@@ -22,8 +22,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -281,16 +279,9 @@ public class PrisonBossLevel extends BossLevel {
 		
 		super.pressHero( cell, ch );
 		
-		if (ch == Dungeon.hero && !enteredArena && getRoomExit().inside( cell )) {
-			
+		if (!enteredArena && getRoomExit().inside( cell )) {
 			enteredArena = true;
-		
-			int pos;
-			do {
-				pos = getRoomExit().random(this);
-			} while (pos == cell || Actor.findChar( pos ) != null);
-
-			spawnBoss(pos);
+			spawnBoss(getEmptyCellFromRoom(getRoomExit()));
 		}
 	}
 

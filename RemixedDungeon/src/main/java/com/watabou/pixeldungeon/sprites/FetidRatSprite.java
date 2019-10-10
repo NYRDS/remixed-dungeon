@@ -21,12 +21,14 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 
+import org.jetbrains.annotations.NotNull;
+
 public class FetidRatSprite extends RatSprite {
 	
 	private Emitter cloud;
 	
 	@Override
-	public void link( Char ch ) {
+	public void link(@NotNull Char ch ) {
 		super.link( ch );
 		
 		if (cloud == null) {

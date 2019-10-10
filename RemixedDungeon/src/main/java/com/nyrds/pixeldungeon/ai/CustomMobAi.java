@@ -4,6 +4,8 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CustomMobAi extends MobAi implements AiState {
 
     String scriptFile;
@@ -31,7 +33,7 @@ public class CustomMobAi extends MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         script.run("status", me);
         return StringsManager.maybeId(script.getResult().toString());
     }

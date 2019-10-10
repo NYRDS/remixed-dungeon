@@ -103,6 +103,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.var;
+
 public abstract class Level implements Bundlable {
 
 	private static final String SCRIPTS = "scripts";
@@ -647,7 +649,9 @@ public abstract class Level implements Bundlable {
 			putLevelObject(object);
 		}
 
-		for (Mob mob : bundle.getCollection(MOBS, Mob.class)) {
+		var loadedMobs = bundle.getCollection(MOBS, Mob.class);
+
+		for (Mob mob : loadedMobs) {
 			if (mob != null && cellValid(mob.getPos())) {
 				mobs.add(mob);
 			}
@@ -1532,7 +1536,7 @@ public abstract class Level implements Bundlable {
 		return false;
 	}
 
-	public void seal() {
+	protected void seal() {
 	}
 
 	public void unseal() {

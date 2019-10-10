@@ -17,13 +17,9 @@
       {
         "kind": "ScrollOfMagicMapping",
         "quantity": 100
-      },
-      {
-        "kind": "ManaPotion",
-        "quantity": 100
       }
     ],
-    "str": 10,
+    "str": 1000,
     "hp": 200000,
     "magicAffinity": "Common",
     "sp": 10,
@@ -39,7 +35,8 @@
   "WARRIOR": {
     "weapon": {
       "kind": "ShortSword",
-      "identified": true
+      "identified": true,
+      "level" : 20
     },
     "str": 11,
     "knownItems": [

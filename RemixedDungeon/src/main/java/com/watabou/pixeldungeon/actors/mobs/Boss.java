@@ -31,7 +31,6 @@ abstract public class Boss extends Mob {
 	@Override
 	public void setState(AiState state) {
 		if (state instanceof Hunting) {
-			level().seal();
 			if (battleMusic != null) {
 				Music.INSTANCE.play(battleMusic, true);
 			}

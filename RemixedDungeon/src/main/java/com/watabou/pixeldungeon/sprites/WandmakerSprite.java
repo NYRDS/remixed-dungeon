@@ -28,6 +28,8 @@ import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.utils.PointF;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.microedition.khronos.opengles.GL10;
 
 public class WandmakerSprite extends MobSprite {
@@ -54,7 +56,7 @@ public class WandmakerSprite extends MobSprite {
 	}
 	
 	@Override
-	public void link( Char ch ) {
+	public void link(@NotNull Char ch ) {
 		super.link( ch );
 		
 		if (shield == null) {
