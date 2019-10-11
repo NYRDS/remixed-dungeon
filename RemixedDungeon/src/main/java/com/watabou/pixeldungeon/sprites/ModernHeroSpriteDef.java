@@ -172,7 +172,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
-		//	layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(hero.belongings.weapon, "left"));
+			layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/items/none_left.png");
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
 		}
 
@@ -195,7 +195,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
 
-		//layersDesc.put(LAYER_LEFT_ITEM, itemHandDescriptor(weapon, "left"));
+		layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/items/none_left.png");
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
 
