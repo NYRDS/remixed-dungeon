@@ -409,6 +409,8 @@ public class GameScene extends PixelScene {
                 Dungeon.level.tileDescByCell(i);
                 Dungeon.level.tileNameByCell(i);
             }
+
+            GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
         }
     }

@@ -97,8 +97,8 @@ public enum HeroSubClass implements CharModifier {
 
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( SUBCLASS, toString() );
-		bundle.put(Char.IMMUNITIES,immunities.toArray(new String[0]));
-		bundle.put(Char.RESISTANCES,resistances.toArray(new String[0]));
+		bundle.put(toString()+Char.IMMUNITIES,immunities.toArray(new String[0]));
+		bundle.put(toString()+Char.RESISTANCES,resistances.toArray(new String[0]));
 	}
 
 	public static HeroSubClass restoreFromBundle(Bundle bundle) {
@@ -111,8 +111,8 @@ public enum HeroSubClass implements CharModifier {
 			ret = NONE;
 		}
 
-		Collections.addAll(ret.immunities,bundle.getStringArray(Char.IMMUNITIES));
-		Collections.addAll(ret.resistances,bundle.getStringArray(Char.RESISTANCES));
+		Collections.addAll(ret.immunities,bundle.getStringArray(value+Char.IMMUNITIES));
+		Collections.addAll(ret.resistances,bundle.getStringArray(value+Char.RESISTANCES));
 		return ret;
 	}
 
