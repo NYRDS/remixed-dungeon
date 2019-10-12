@@ -247,8 +247,8 @@ public enum HeroClass implements CharModifier {
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
         bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[0]));
         bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[0]));
-        bundle.put(Char.IMMUNITIES,immunities.toArray(new String[0]));
-        bundle.put(Char.RESISTANCES,resistances.toArray(new String[0]));
+        bundle.put(toString()+Char.IMMUNITIES,immunities.toArray(new String[0]));
+        bundle.put(toString()+Char.RESISTANCES,resistances.toArray(new String[0]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {
@@ -259,8 +259,8 @@ public enum HeroClass implements CharModifier {
 
         Collections.addAll(ret.forbiddenActions,bundle.getStringArray(FORBIDDEN_ACTIONS));
         Collections.addAll(ret.friendlyMobs,bundle.getStringArray(FRIENDLY_MOBS));
-        Collections.addAll(ret.immunities,bundle.getStringArray(Char.IMMUNITIES));
-        Collections.addAll(ret.resistances,bundle.getStringArray(Char.RESISTANCES));
+        Collections.addAll(ret.immunities,bundle.getStringArray(value+Char.IMMUNITIES));
+        Collections.addAll(ret.resistances,bundle.getStringArray(value+Char.RESISTANCES));
 
         return ret;
     }

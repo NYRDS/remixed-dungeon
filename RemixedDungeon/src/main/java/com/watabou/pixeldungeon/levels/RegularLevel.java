@@ -35,7 +35,8 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
-import com.watabou.utils.SparseArray;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -43,9 +44,10 @@ import java.util.List;
 
 public abstract class RegularLevel extends CustomLevel {
 
-	protected HashSet<Room> rooms;
+	@NotNull
+	protected HashSet<Room> rooms = new HashSet<>();
 
-	private SparseArray<Room> exits = new SparseArray<>();
+	private ArrayList<Room> exits = new ArrayList<>();
 
 	protected Room roomEntrance;
 
@@ -185,7 +187,7 @@ public abstract class RegularLevel extends CustomLevel {
 					secondaryExit.height() < 4
 					);
 			secondaryExit.type = Type.EXIT;
-			exits.put(i, secondaryExit);
+			exits.add(secondaryExit);
 
 			buildPath(exitRoom(i-1),exitRoom(i));
 		}
@@ -236,8 +238,9 @@ public abstract class RegularLevel extends CustomLevel {
 	}
 
 	protected boolean initRooms() {
+		rooms.clear();
+		exits.clear();
 
-		rooms = new HashSet<>();
 		split(new Rect(0, 0, getWidth() - 1, getHeight() - 1));
 
 		if (rooms.size() < 8) {
@@ -606,6 +609,10 @@ public abstract class RegularLevel extends CustomLevel {
 	@Override
 	public int randomDestination() {
 
+		if(rooms.isEmpty()) {
+			return super.randomDestination();
+		}
+
 		int cell;
 
 		while (true) {
@@ -654,6 +661,10 @@ public abstract class RegularLevel extends CustomLevel {
 	}
 
 	protected Room randomRoom(Room.Type type, int tries) {
+	    if(rooms.isEmpty()) {
+	        return null;
+        }
+
 		for (int i = 0; i < tries; i++) {
 			Room room = Random.element(rooms);
 			if (room.type == type) {
@@ -673,7 +684,7 @@ public abstract class RegularLevel extends CustomLevel {
 		return null;
 	}
 
-	protected int randomDropCell() {
+	private int randomDropCell() {
 		while (true) {
 			Room room = randomRoom(Room.Type.STANDARD, 1);
 			if (room != null) {
@@ -700,6 +711,7 @@ public abstract class RegularLevel extends CustomLevel {
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		bundle.put("rooms", rooms);
+		bundle.put("exits", exits);
 	}
 
 	@Override
@@ -713,6 +725,16 @@ public abstract class RegularLevel extends CustomLevel {
 				break;
 			}
 		}
+
+		exits.clear();
+		exits.addAll(bundle.getCollection("exits", Room.class));
+
+		//TODO hack for pre 29.2
+		for (Room r:rooms) {
+			if(r.type == Type.EXIT || r.type == Type.SEWER_BOSS_EXIT || r.type == Type.PRISON_BOSS_EXIT) {
+				exits.add(r);
+			}
+		}
 	}
 
 	protected Room getRoomExit() {
@@ -720,6 +742,16 @@ public abstract class RegularLevel extends CustomLevel {
 	}
 
 	protected void setRoomExit(Room roomExit) {
-		exits.put(0, roomExit);
+		exits.add(roomExit);
+	}
+
+	int getEmptyCellFromRoom(Room room){
+		int pos;
+
+		do {
+			pos = room.random(this);
+		} while (Actor.findChar( pos ) != null);
+
+		return pos;
 	}
 }

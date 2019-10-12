@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 
+import org.jetbrains.annotations.NotNull;
+
 public class BlacksmithSprite extends MobSprite {
 	
 	private Emitter emitter;
@@ -50,7 +52,7 @@ public class BlacksmithSprite extends MobSprite {
 	}
 	
 	@Override
-	public void link( Char ch ) {
+	public void link(@NotNull Char ch ) {
 		super.link( ch );
 		
 		emitter = new Emitter();

@@ -35,16 +35,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
-import java.util.ArrayList;
-
 public class WndCatalogus extends WndTabbed {
 
 	private static final int ITEM_HEIGHT = 18;
 
 	private Text       txtTitle;
 	private ScrollPane list;
-
-	private ArrayList<CatalogusListItem> items = new ArrayList<>();
 
 	private static boolean showPotions = true;
 
@@ -94,8 +90,6 @@ public class WndCatalogus extends WndTabbed {
 				Game.getVar(R.string.WndCatalogus_Potions) : Game.getVar(R.string.WndCatalogus_Scrolls)));
 		txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
 
-		items.clear();
-
 		Component content = list.content();
 		content.clear();
 		list.scrollTo(0, 0);
@@ -105,7 +99,6 @@ public class WndCatalogus extends WndTabbed {
 			CatalogusListItem item = new CatalogusListItem(itemClass);
 			item.setRect(0, pos, width, ITEM_HEIGHT);
 			content.add(item);
-			items.add(item);
 
 			pos += item.height();
 		}
@@ -114,7 +107,6 @@ public class WndCatalogus extends WndTabbed {
 			CatalogusListItem item = new CatalogusListItem(itemClass);
 			item.setRect(0, pos, width, ITEM_HEIGHT);
 			content.add(item);
-			items.add(item);
 
 			pos += item.height();
 		}

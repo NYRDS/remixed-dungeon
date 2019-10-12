@@ -106,6 +106,7 @@ public class Dungeon {
     public static int challenges;
 
     public static Hero  hero;
+
     public static Level level;
 
     public static  int depth;
@@ -707,11 +708,9 @@ public class Dungeon {
     }
 
     private static void markActorsAsUnpassableIgnoreFov() {
-        for (Actor actor : Actor.all()) {
-            if (actor instanceof Char) {
-                int pos = ((Char) actor).getPos();
-                passable[pos] = false;
-            }
+        for (Char actor : Actor.chars.values()) {
+            int pos = actor.getPos();
+            passable[pos] = false;
         }
     }
 
@@ -728,13 +727,16 @@ public class Dungeon {
     }
 
     private static void markActorsAsUnpassable(Hero ch, boolean[] visible) {
-        for (Actor actor : Actor.all()) {
-            if (actor instanceof Char) {
-                int pos = ((Char) actor).getPos();
-                if (visible[pos]) {
-                    if (actor instanceof Mob) {
-                        passable[pos] = passable[pos] && !level.avoid[pos] && ((Mob) actor).isPet();
-                    }
+        for (Char actor : Actor.chars.values()) {
+            int pos = actor.getPos();
+
+            if(!level.cellValid(pos)) {
+                GLog.debug("WTF?");
+            }
+
+            if (visible[pos]) {
+                if (actor instanceof Mob) {
+                    passable[pos] = passable[pos] && !level.avoid[pos] && ((Mob) actor).isPet();
                 }
             }
         }

@@ -24,6 +24,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.effects.Speck;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ImpSprite extends MobSprite {
 	
 	public ImpSprite() {
@@ -48,7 +50,7 @@ public class ImpSprite extends MobSprite {
 	}
 	
 	@Override
-	public void link( Char ch ) {
+	public void link(@NotNull Char ch ) {
 		super.link( ch );
 		
 		if (ch instanceof Imp) {
