@@ -90,18 +90,6 @@ public class Armor extends EquipableItem {
 	}
 
 	@Override
-	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
-		if (super.doUnequip( hero, collect, single )) {
-			
-			hero.getBelongings().armor = null;
-			hero.updateSprite();
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	@Override
 	public Item upgrade() {
 		return upgrade( false );
 	}

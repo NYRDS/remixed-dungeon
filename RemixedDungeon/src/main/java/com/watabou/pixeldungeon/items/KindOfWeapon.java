@@ -49,21 +49,6 @@ public class KindOfWeapon extends EquipableItem {
 		return hero.belongings.equip(this, Belongings.Slot.WEAPON);
 
 	}
-	
-	@Override
-	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
-		if (super.doUnequip( hero, collect, single )) {
-			
-			hero.getBelongings().weapon = null;
-			hero.updateSprite();
-			return true;
-			
-		} else {
-			
-			return false;
-			
-		}
-	}
 
 	public int damageRoll(Hero owner ) {
 		return Random.NormalIntRange( MIN, MAX );

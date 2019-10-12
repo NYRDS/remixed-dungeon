@@ -99,6 +99,7 @@ public abstract class EquipableItem extends Item {
 			return false;
 		}
 
+		hero.updateSprite();
 		deactivate(hero);
 
 		if (single) {

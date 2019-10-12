@@ -55,6 +55,8 @@ import org.json.JSONObject;
 
 import java.util.Iterator;
 
+import lombok.var;
+
 public class Belongings implements Iterable<Item>, Bundlable {
 
 	public static final int BACKPACK_SIZE	= 19;
@@ -108,25 +110,18 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		backpack.restoreFromBundle(bundle);
 		BundleHelper.UnPack(this,bundle);
 
-		if (weapon != null) {
-			weapon.activate( owner );
-		}
+		var itemIterator = iterator();
 
-		if (armor != null) {
-			armor.activate( owner );
-		}
-
-		if (ring1 != null) {
-			ring1.activate( owner );
-		}
-		
-		if (ring2 != null) {
-			ring2.activate( owner );
+		while (itemIterator.hasNextEquipped()) {
+			EquipableItem item = (EquipableItem) itemIterator.next();
+			if(item!=null){
+				item.activate(owner);
+			}
 		}
 	}
 
 	public boolean isEquipped(Item item) {
-		return item.equals(weapon) || item.equals(armor) || item.equals(ring1) || item.equals(ring2);
+		return item.equals(weapon) || item.equals(armor) || item.equals(leftHand) || item.equals(ring1) || item.equals(ring2);
 	}
 
 	public Item checkItem( Item src ) {
@@ -192,29 +187,21 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 	
 	public void observe() {
-		if (weapon != null) {
-			weapon.identify();
-			Badges.validateItemLevelAcquired( weapon );
+		var itemIterator = iterator();
+
+		while (itemIterator.hasNextEquipped()) {
+			EquipableItem item = (EquipableItem) itemIterator.next();
+			item.identify();
+			Badges.validateItemLevelAcquired(item);
 		}
-		if (armor != null) {
-			armor.identify();
-			Badges.validateItemLevelAcquired( armor );
-		}
-		if (ring1 != null) {
-			ring1.identify();
-			Badges.validateItemLevelAcquired( ring1 );
-		}
-		if (ring2 != null) {
-			ring2.identify();
-			Badges.validateItemLevelAcquired( ring2 );
-		}
+
 		for (Item item : backpack) {
 			item.cursedKnown = true;
 		}
 	}
 	
 	public void uncurseEquipped() {
-		ScrollOfRemoveCurse.uncurse( owner, armor, weapon, ring1, ring2 );
+		ScrollOfRemoveCurse.uncurse( owner, armor, weapon, leftHand, ring1, ring2 );
 	}
 	
 	public Item randomUnequipped() {
@@ -247,24 +234,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				item.detachAll(backpack);
 			}
 		}
-		
-		if (weapon != null) {
-			weapon.cursed = false;
-			weapon.activate( owner );
-		}
-		
-		if (armor != null) {
-			armor.cursed = false;
-			armor.activate( owner );
-		}
-		
-		if (ring1 != null) {
-			ring1.cursed = false;
-			ring1.activate( owner );
-		}
-		if (ring2 != null) {
-			ring2.cursed = false;
-			ring2.activate( owner );
+
+		var itemIterator = iterator();
+
+		while (itemIterator.hasNextEquipped()) {
+			EquipableItem item = (EquipableItem) itemIterator.next();
+			item.cursed = false;
+			item.activate(owner);
 		}
 	}
 	
@@ -310,6 +286,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
 			}
 
+			if (desc.has("left_hand")) {
+				leftHand = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("left_hand"));
+			}
+
+
 			if (desc.has("ring1")) {
 				ring1 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
 			}
@@ -333,7 +314,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	@Override
 	@NotNull
-	public Iterator<Item> iterator() {
+	public ItemIterator iterator() {
 		return new ItemIterator(); 
 	}
 
@@ -347,24 +328,25 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		
 		private Iterator<Item> backpackIterator = backpack.iterator();
 		
-		private Item[] equipped = {weapon, armor, ring1, ring2};
-		private int backpackIndex = equipped.length;
-		
-		@Override
-		public boolean hasNext() {
-			
-			for (int i=index; i < backpackIndex; i++) {
+		private Item[] equipped = {weapon, armor, leftHand, ring1, ring2};
+
+		public boolean hasNextEquipped(){
+			for (int i = index; i < equipped.length; i++) {
 				if (equipped[i] != null) {
 					return true;
 				}
 			}
-			
-			return backpackIterator.hasNext();
+			return false;
+		}
+
+		@Override
+		public boolean hasNext() {
+			return hasNextEquipped() || backpackIterator.hasNext();
 		}
 
 		@Override
 		public Item next() {
-			while (index < backpackIndex) {
+			while (index < equipped.length) {
 				Item item = equipped[index++];
 				if (item != null) {
 					return item;
@@ -387,10 +369,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				equipped[1] = armor = null;
 				break;
 			case 2:
-				equipped[2] = ring1 = null;
+				equipped[2] = leftHand = null;
 				break;
 			case 3:
-				equipped[3] = ring2 = null;
+				equipped[3] = ring1 = null;
+				break;
+			case 4:
+				equipped[4] = ring2 = null;
 				break;
 			default:
 				backpackIterator.remove();
@@ -429,24 +414,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public boolean unequip(EquipableItem item) {
 
-		if(weapon==item) {
-			weapon = null;
-			return true;
-		}
+		var itemIterator = iterator();
 
-		if(armor==item) {
-			armor = null;
-			return true;
-		}
-
-		if(ring1==item) {
-			ring1 = null;
-			return true;
-		}
-
-		if(ring2==item) {
-			ring2 = null;
-			return true;
+		while (itemIterator.hasNextEquipped()) {
+			if(itemIterator.next()==item) {
+				itemIterator.remove();
+				return true;
+			}
 		}
 
 		return false;
@@ -502,13 +476,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		if(slot==Slot.LEFT_HAND) {
 			if (leftHand == null || leftHand.doUnequip( owner, true, false )) {
 
-				leftHand = item;
+				leftHand = (EquipableItem) item.detach(backpack);
 
 				leftHand.cursedKnown = true;
 				if (leftHand.cursed) {
 					ItemUtils.equipCursed( owner );
 					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), item.name() );
 				}
+
+				leftHand.activate(owner);
 
 				owner.updateSprite();
 
