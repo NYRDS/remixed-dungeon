@@ -26,6 +26,9 @@
       },
       {
         "kind": "TestWeapon2"
+      },
+      {
+        "kind": "WoodenShield"
       }
     ]
   },

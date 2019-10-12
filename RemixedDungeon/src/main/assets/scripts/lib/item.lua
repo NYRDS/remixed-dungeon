@@ -71,13 +71,17 @@ function item.defaultDesc()
         identified    = true,
         defaultAction = "Item_ACThrow",
         price         = 0,
-        isArtifact    = false
+        equipable     = ""
     }
 end
 
 function item.itemDesc(self,thisItem)
     local ret = item.defaultDesc(thisItem)
     local own = self:desc(thisItem)
+
+    if own.isArtifact then
+        own.equipable = "artifact"
+    end
 
     for k,v in pairs(ret) do
         ret[k] = own[k] or v

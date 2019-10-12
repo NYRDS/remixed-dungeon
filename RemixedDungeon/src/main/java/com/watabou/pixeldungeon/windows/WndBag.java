@@ -224,11 +224,13 @@ public class WndBag extends WndTabbed {
 		
 		// Equipped items
 		if(stuff.getOwner() instanceof Hero) {
-			placeItem(stuff.weapon != null ? stuff.weapon : new ItemPlaceholder(ItemSpriteSheet.WEAPON));
-			placeItem(stuff.armor  != null ? stuff.armor  : new ItemPlaceholder(ItemSpriteSheet.ARMOR));
-			placeItem(stuff.ring1  != null ? stuff.ring1  : new ItemPlaceholder(ItemSpriteSheet.RING));
-			placeItem(stuff.ring2  != null ? stuff.ring2  : new ItemPlaceholder(ItemSpriteSheet.RING));
+			placeItem(stuff.weapon    != null ? stuff.weapon    : new ItemPlaceholder(ItemSpriteSheet.WEAPON));
+			placeItem(stuff.armor     != null ? stuff.armor     : new ItemPlaceholder(ItemSpriteSheet.ARMOR));
+			placeItem(stuff.leftHand  != null ? stuff.leftHand  : new ItemPlaceholder(ItemSpriteSheet.RING));
+			placeItem(stuff.ring1     != null ? stuff.ring1     : new ItemPlaceholder(ItemSpriteSheet.RING));
+			placeItem(stuff.ring2     != null ? stuff.ring2     : new ItemPlaceholder(ItemSpriteSheet.RING));
 		}
+
 		// Unequipped items
 		for (Item item : container.items) {
 			if(! (item instanceof Gold)) {

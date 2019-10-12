@@ -90,11 +90,6 @@ public class Armor extends EquipableItem {
 	}
 
 	@Override
-	public float time2equip(Char hero) {
-		return hero.speed();
-	}
-	
-	@Override
 	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
 		if (super.doUnequip( hero, collect, single )) {
 			
@@ -291,11 +286,6 @@ public class Armor extends EquipableItem {
 			glyph = Util.byNameFromList(Glyph.glyphs, itemDesc.getString(GLYPH));
 		}
 	}
-
-	public String getVisualName() {
-		return getClassName();
-	}
-
 
 	public static abstract class Glyph implements Bundlable, NamedEntityKind {
 		

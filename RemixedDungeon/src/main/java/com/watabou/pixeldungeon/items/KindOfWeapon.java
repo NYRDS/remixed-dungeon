@@ -80,10 +80,6 @@ public class KindOfWeapon extends EquipableItem {
 	public void proc( Char attacker, Char defender, int damage ) {
 	}
 
-	public String getVisualName() {
-		return getClassName();
-	}
-
 	public String getAnimationClass() {
 		return animation_class;
 	}

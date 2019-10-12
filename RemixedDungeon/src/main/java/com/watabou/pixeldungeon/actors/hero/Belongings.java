@@ -65,12 +65,17 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public enum Slot{
 		WEAPON,
+		LEFT_HAND,
 		ARMOR,
 		ARTIFACT
 	}
 
 	@Packable
 	public KindOfWeapon weapon = null;
+
+	@Packable
+	public EquipableItem leftHand = null;
+
 	@Packable
 	public Armor        armor  = null;
 	@Packable
@@ -465,7 +470,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), item.name() );
 				}
 
-				owner.spendAndNext(KindOfWeapon.TIME_TO_EQUIP);
+				owner.spendAndNext(weapon.time2equip( owner ));
 				return true;
 			} else {
 				item.collect( backpack );
@@ -486,12 +491,35 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 				owner.updateSprite();
 
-				owner.spendAndNext( 2 * armor.time2equip( owner ) );
+				owner.spendAndNext(  2 * armor.time2equip( owner ) );
 				return true;
 			} else {
 				item.collect( backpack );
 				return false;
 			}
+		}
+
+		if(slot==Slot.LEFT_HAND) {
+			if (leftHand == null || leftHand.doUnequip( owner, true, false )) {
+
+				leftHand = item;
+
+				leftHand.cursedKnown = true;
+				if (leftHand.cursed) {
+					ItemUtils.equipCursed( owner );
+					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), item.name() );
+				}
+
+				owner.updateSprite();
+
+				owner.spendAndNext(  leftHand.time2equip( owner ) );
+				return true;
+			} else {
+				item.collect( backpack );
+				return false;
+			}
+
+
 		}
 
 		if(slot==Slot.ARTIFACT) {

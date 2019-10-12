@@ -27,6 +27,15 @@
       },
       {
         "kind": "ClothArmor"
+      },
+      {
+        "kind": "TestWeapon1"
+      },
+      {
+        "kind": "TestWeapon2"
+      },
+      {
+        "kind": "WoodenShield"
       }
     ],
     "str": 10,

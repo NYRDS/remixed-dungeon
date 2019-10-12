@@ -8,6 +8,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -172,7 +173,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
-			layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/items/none_left.png");
+			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.leftHand,"left"));
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
 		}
 
@@ -195,7 +196,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
 
-		layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/items/none_left.png");
+		//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/items/none_left.png");
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
 
@@ -273,9 +274,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		return "hero_modern/armor/" +armor.getVisualName()+".png";
 	}
 
-	private String itemHandDescriptor(KindOfWeapon item, String hand) {
+	private String itemHandDescriptor(EquipableItem item, String hand) {
 		if(item==null) {
-			return HERO_EMPTY_PNG;
+			return "hero_modern/items/none_"+hand+".png";
 		}
 		return "hero_modern/items/" +item.getVisualName()+"_"+hand+".png";
 	}

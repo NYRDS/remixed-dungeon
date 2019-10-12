@@ -66,8 +66,8 @@ public abstract class EquipableItem extends Item {
 		super.cast( user, dst );
 	}
 
-	protected float time2equip(Char hero ) {
-		return 1;
+	public float time2equip(Char hero ) {
+		return hero.speed();
 	}
 
 	@Override
@@ -116,5 +116,9 @@ public abstract class EquipableItem extends Item {
 
 	public boolean doUnequip( Char hero, boolean collect ) {
 		return doUnequip( hero, collect, true );
+	}
+
+	public String getVisualName() {
+		return getClassName();
 	}
 }

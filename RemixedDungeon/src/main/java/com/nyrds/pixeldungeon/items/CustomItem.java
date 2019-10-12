@@ -35,7 +35,7 @@ public class CustomItem extends EquipableItem {
     private boolean upgradable;
     private boolean identified;
 
-    private boolean isArtifact;
+    private String equipable;
 
     private LuaScript script;
     private int price;
@@ -69,7 +69,7 @@ public class CustomItem extends EquipableItem {
         setDefaultAction(desc.rawget("defaultAction").checkjstring());
 
         price        = desc.rawget("price").checkint();
-        isArtifact   = desc.rawget("isArtifact").checkboolean();
+        equipable    = desc.rawget("equipable").checkjstring();
     }
 
     @Override
@@ -90,8 +90,10 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public boolean doEquip(Hero hero) {
-        if(isArtifact) {
-            return hero.belongings.equip(this, Belongings.Slot.ARTIFACT);
+        for(Belongings.Slot slot: Belongings.Slot.values()) {
+            if (equipable.equalsIgnoreCase(slot.toString())) {
+                return hero.belongings.equip(this, slot);
+            }
         }
 
         return false;
@@ -117,7 +119,7 @@ public class CustomItem extends EquipableItem {
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
 
-        if(!isArtifact) {
+        if(equipable.isEmpty()) {
             actions.remove(AC_EQUIP);
             actions.remove(AC_UNEQUIP);
         }
