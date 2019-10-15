@@ -32,10 +32,7 @@ public class IceCavesBossLevel extends BossLevel {
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 1;
 	
-	private int arenaDoor;
-	private boolean enteredArena = false;
-	private boolean keyDropped = false;
-	
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_ICE_CAVES_X;
