@@ -30,7 +30,9 @@ import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+
+import lombok.var;
 
 public class SewerBossLevel extends BossLevel {
 
@@ -56,8 +58,10 @@ public class SewerBossLevel extends BossLevel {
 	
 	@Override
 	protected boolean build() {
-		
-		initRooms();
+
+		if(!initRooms()){
+			return false;
+		}
 	
 		int distance;
 		int retry = 0;
@@ -93,47 +97,21 @@ public class SewerBossLevel extends BossLevel {
 
 		placeSecondaryExits();
 
-		Graph.buildDistanceMap( rooms, getRoomExit());
-		List<Room> path = Graph.buildPath(roomEntrance, getRoomExit());
-		
-		Graph.setPrice( path, roomEntrance.distance );
-		
-		Graph.buildDistanceMap( rooms, getRoomExit());
-		path = Graph.buildPath(roomEntrance, getRoomExit());
-		
-		Room room = roomEntrance;
-		for (Room next : path) {
-			room.connect( next );
-			room = next;
-		}
-		
-		room = (Room) getRoomExit().connected.keySet().toArray()[0];
-		if (getRoomExit().top == room.bottom) {
-			return false;
-		}
-		
+		buildPath(roomEntrance, getRoomExit());
+		buildPath(roomEntrance,exitRoom(1));
+
+		var ignoredRooms = new HashSet<Room.Type>();
+		ignoredRooms.add(Type.NULL);
+
+		connectRooms(ignoredRooms);
+
 		for (Room r : rooms) {
 			if (r.type == Type.NULL && r.connected.size() > 0) {
-				r.type = Type.TUNNEL; 
+				r.type = Type.TUNNEL;
 			}
-		}
-		
-		ArrayList<Room> candidates = new ArrayList<>();
-		for (Room r : getRoomExit().neighbours) {
-			if (!getRoomExit().connected.containsKey( r ) &&
-				(getRoomExit().left == r.right || getRoomExit().right == r.left || getRoomExit().bottom == r.top) &&
-				!(r.type == Type.EXIT)
-					) {
-				candidates.add( r );
-			}
-		}
-		if (!candidates.isEmpty()) {
-			Room kingsRoom = Random.element( candidates );
-			kingsRoom.connect(getRoomExit());
-			kingsRoom.type = Room.Type.RAT_KING;
 		}
 
-		Graph.setPrice( path, roomEntrance.distance );
+		placeKingRoom();
 
 		paint();
 		
@@ -145,7 +123,24 @@ public class SewerBossLevel extends BossLevel {
 		
 		return true;
 	}
-		
+
+	private void placeKingRoom() {
+		ArrayList<Room> candidates = new ArrayList<>();
+		for (Room r : getRoomExit().neighbours) {
+			if (!getRoomExit().connected.containsKey( r ) &&
+				(getRoomExit().left == r.right || getRoomExit().right == r.left || getRoomExit().bottom == r.top) &&
+				!(r.type == Type.EXIT)) {
+				candidates.add( r );
+			}
+		}
+
+		if (!candidates.isEmpty()) {
+			Room kingsRoom = Random.element( candidates );
+			kingsRoom.connect(getRoomExit());
+			kingsRoom.type = Type.RAT_KING;
+		}
+	}
+
 	protected boolean[] water() {
 		return Patch.generate(this, 0.5f, 5 );
 	}
