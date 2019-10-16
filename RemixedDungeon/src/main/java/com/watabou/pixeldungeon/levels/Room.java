@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
 import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;
@@ -45,6 +46,7 @@ import com.watabou.pixeldungeon.levels.painters.TunnelPainter;
 import com.watabou.pixeldungeon.levels.painters.VaultPainter;
 import com.watabou.pixeldungeon.levels.painters.WarehousePainter;
 import com.watabou.pixeldungeon.levels.painters.WeakFloorPainter;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
@@ -115,8 +117,10 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 				return;
 			}
 			try {
+				GLog.debug("room: %s", room.type.toString());
 				paint.invoke( null, level, room );
 			} catch (Exception e) {
+				EventCollector.logException(e);
 				throw new TrackedRuntimeException(e);
 			}
 		}
