@@ -15,7 +15,7 @@ return item.init{
         RPD.glog("Created item with id:"..tostring(item:getId()))
 
         return {
-            image         = 3,
+            image         = 2,
             imageFile     = "items/shields.png",
             name          = "WoodenShield_name",
             info          = "WoodenShield_desc",
