@@ -17,8 +17,8 @@ return item.init{
         return {
             image         = 3,
             imageFile     = "items/shields.png",
-            name          = "WoodenShield_name",
-            info          = "WoodenShield_desc",
+            name          = "RoyalShield_name",
+            info          = "RoyalShield_desc",
             price         = 20,
             equipable     = "left_hand"
         }
