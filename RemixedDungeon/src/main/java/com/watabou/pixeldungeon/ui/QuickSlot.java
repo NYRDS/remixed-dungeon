@@ -52,8 +52,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private static final String QUICKSLOT       = "quickslot";
 
-    private static float lastRefreshTime;
-
     private static ArrayList<QuickSlot>     slots   = new ArrayList<>();
     @SuppressLint("UseSparseArrays")
     private static Map<Integer, Item> qsStorage = new HashMap<>();
@@ -237,7 +235,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             if(quickslotItem.quantity()>0) {
                 item = Dungeon.hero.belongings.checkItem(quickslotItem);
             } else {
-                item = Dungeon.hero.belongings.getItem(quickslotItem.getClass());
+                item = Dungeon.hero.belongings.getItem(quickslotItem.getClassName());
             }
             if(item != null) {
                 quickslotItem = item.quickSlotContent();

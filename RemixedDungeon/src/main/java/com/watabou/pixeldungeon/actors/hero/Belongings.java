@@ -142,6 +142,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return null;
 	}
 
+	@Deprecated
 	@SuppressWarnings("unchecked")
 	public<T extends Item> T getItem( Class<T> itemClass ) {
 
