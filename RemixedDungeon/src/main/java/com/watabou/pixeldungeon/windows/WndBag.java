@@ -36,7 +36,6 @@ import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -224,11 +223,11 @@ public class WndBag extends WndTabbed {
 		
 		// Equipped items
 		if(stuff.getOwner() instanceof Hero) {
-			placeItem(stuff.weapon    != null ? stuff.weapon    : new ItemPlaceholder(ItemSpriteSheet.WEAPON));
-			placeItem(stuff.armor     != null ? stuff.armor     : new ItemPlaceholder(ItemSpriteSheet.ARMOR));
-			placeItem(stuff.leftHand  != null ? stuff.leftHand  : new ItemPlaceholder(ItemSpriteSheet.RING));
-			placeItem(stuff.ring1     != null ? stuff.ring1     : new ItemPlaceholder(ItemSpriteSheet.RING));
-			placeItem(stuff.ring2     != null ? stuff.ring2     : new ItemPlaceholder(ItemSpriteSheet.RING));
+			placeItem(stuff.weapon    != null ? stuff.weapon    : new ItemPlaceholder(ItemPlaceholder.RIGHT_HAND));
+			placeItem(stuff.armor     != null ? stuff.armor     : new ItemPlaceholder(ItemPlaceholder.BODY));
+			placeItem(stuff.leftHand  != null ? stuff.leftHand  : new ItemPlaceholder(ItemPlaceholder.LEFT_HAND));
+			placeItem(stuff.ring1     != null ? stuff.ring1     : new ItemPlaceholder(ItemPlaceholder.ARTIFACT));
+			placeItem(stuff.ring2     != null ? stuff.ring2     : new ItemPlaceholder(ItemPlaceholder.ARTIFACT));
 		}
 
 		// Unequipped items
