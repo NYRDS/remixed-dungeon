@@ -481,6 +481,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			degrade(-level);
 		}
 
+		//We still need this because upgrade erase cursed flag
+		cursed = bundle.optBoolean("cursed",false);
+
 		if(quickSlotIndex >= 0 ) {
 			QuickSlot.selectItem(this, quickSlotIndex);
 		}
