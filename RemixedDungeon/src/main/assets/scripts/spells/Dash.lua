@@ -55,6 +55,10 @@ return spell.init{
             end
         end
 
+        if not level:cellValid(dst) then
+            return true
+        end
+
         local object = level:getLevelObject(dst)
 
         if object then
