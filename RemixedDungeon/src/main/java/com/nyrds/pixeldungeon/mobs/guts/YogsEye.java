@@ -33,4 +33,9 @@ public class YogsEye extends Mob {
     public int dr() {
         return 2;
     }
+
+    @Override
+    public boolean canBePet() {
+        return false;
+    }
 }
