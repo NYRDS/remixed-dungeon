@@ -66,4 +66,9 @@ public class YogsTeeth extends Mob {
 
     @Override
     public int dr() { return 21; }
+
+    @Override
+    public boolean canBePet() {
+        return false;
+    }
 }

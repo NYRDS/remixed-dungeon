@@ -69,4 +69,9 @@ public class YogsHeart extends Mob {
 
 		return super.act();
 	}
+
+    @Override
+    public boolean canBePet() {
+        return false;
+    }
 }
