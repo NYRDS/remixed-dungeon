@@ -41,6 +41,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public abstract class RegularLevel extends CustomLevel {
 
@@ -101,30 +102,7 @@ public abstract class RegularLevel extends CustomLevel {
 
 		buildPath(roomEntrance, exitRoom(0));
 
-		ArrayList<Room> connectedRooms = new ArrayList<>();
-		connectedRooms.add(roomEntrance);
-
-		for (int i = 0; i<DungeonGenerator.exitCount(levelId);++i) {
-			connectedRooms.add(exitRoom(i));
-		}
-
-		int isolatedCounter = 0;
-		int roomCounter = 0;
-		for (Room r: rooms) {
-			if(!connectedRooms.contains(r)) {
-				roomCounter++;
-				Room connectedRoom = Random.element(connectedRooms);
-				if (r.isRoomIsolatedFrom(connectedRoom)) {
-					buildPath(connectedRoom,r);
-					isolatedCounter++;
-					GLog.i("%s isolated rooms: %d | %d ",r.type.toString(), isolatedCounter, roomCounter);
-				} else {
-					if(connectedRoom.width()>=3 || connectedRoom.height()>=3) {
-						connectedRooms.add(r);
-					}
-				}
-			}
-		}
+		connectRooms(new HashSet<>());
 
 		if (Dungeon.shopOnLevel(this)) {
 			Room shop = null;
@@ -154,7 +132,34 @@ public abstract class RegularLevel extends CustomLevel {
 		return true;
 	}
 
-	private void buildPath(Room from, Room to) {
+	protected void connectRooms(Set<Room.Type> ignored) {
+		ArrayList<Room> connectedRooms = new ArrayList<>();
+		connectedRooms.add(roomEntrance);
+
+		for (int i = 0; i< DungeonGenerator.exitCount(levelId); ++i) {
+			connectedRooms.add(exitRoom(i));
+		}
+
+		int isolatedCounter = 0;
+		int roomCounter = 0;
+		for (Room r: rooms) {
+			if(!ignored.contains(r.type) && !connectedRooms.contains(r)) {
+				roomCounter++;
+				Room connectedRoom = Random.element(connectedRooms);
+				if (r.isRoomIsolatedFrom(connectedRoom)) {
+					buildPath(connectedRoom,r);
+					isolatedCounter++;
+					GLog.i("%s isolated rooms: %d | %d ",r.type.toString(), isolatedCounter, roomCounter);
+				} else {
+					if(connectedRoom.width()>=3 || connectedRoom.height()>=3) {
+						connectedRooms.add(r);
+					}
+				}
+			}
+		}
+	}
+
+	protected void buildPath(Room from, Room to) {
 		Graph.buildDistanceMap(rooms, to);
 		List<Room> path = Graph.buildPath(from, to);
 		if(path!=null) {
@@ -590,7 +595,7 @@ public abstract class RegularLevel extends CustomLevel {
 		while (true) {
 
 			if (++count > 10) {
-				return -1;
+				return INVALID_CELL;
 			}
 
 			Room room = randomRoom(Room.Type.STANDARD, 10);

@@ -2199,11 +2199,42 @@
   <string name="Potion_ArrowMoisten">Стріли вдало змазані.</string>
   <string name="Potion_ItemFliesAway">Предмет %s вилетів з твоїх рук.</string>
   <string name="Potion_FoodRefreshed">%s тепер виглядає їстівним</string>
+  <string name="KindOfBow_SelectArrowKind">Які стріли використовувати?</string>
+  <string name="KindOfBow_ChooseArrows">ОБРАТИ СТРІЛИ</string>
+  <string name="BodyArmorSpell_Name">Міць тіла</string>
+  <string name="BodyArmorSpell_Info">Активує резерви м\'язів, тимчасово збільшуючи їх силу значно підвищуючи захист, але ціною швидкості пересування.</string>
+  <string name="BodyArmorBuff_Name">Міць тіла</string>
+  <string name="BodyArmorBuff_Info">Захист збільшено за рахунок швидкості пересування.</string>
+  <string name="DieHardSpell_Name">Міцний горішок</string>
+  <string name="DieHardSpell_Info">Тимчасово прискорює регенерацію і робить з тебе справжнього Міцного Горішка.</string>
+  <string name="DieHardBuff_Name">Міцний горішок</string>
+  <string name="DieHardBuff_Info">Швидкість регенерації прискорено</string>
   <string name="SmashSpell_NeedWeapon">Мені необхідна зброя для цього прийому.</string>
+  <string name="CloakSpell_Name">Маскування</string>
+  <string name="CloakSpell_Info">Зробіть крок у тінь, аби лишитися непоміченим. Значно зменшить ваші шанси бути поміченим. Не може бути використано при наявності ворогів поблизу.</string>
+  <string name="CloakSpell_EnemiesNearby">Ви не можете відійти у тінь, коли поруч вороги.</string>
+  <string name="CloakBuff_Name">Замасковано</string>
+  <string name="CloakBuff_Info">Замасковано у тінях.</string>
+  <string name="TitleScene_Mods">Модифікації</string>
+  <string name="WndHero_Stealth">Скритність</string>
+  <string name="WndHero_Awareness">Обізнаність</string>
+  <string name="WndHero_AttackSkill">Навички атаки</string>
+  <string name="WndHero_DefenceSkill">Навички захисту</string>
+  <string name="town_deco_grave_name">Надгробок</string>
+  <string name="town_deco_grave_desc">Звичний надгробок із потертими написами.</string>
   <string name="town_deco_pillar_name">Стовп</string>
   <string name="town_deco_entrance_name">Вхід</string>
   <string name="town_deco_exit_name">Вихід.</string>
+  <string name="town_deco_barrel_name">Діжка</string>
+  <string name="town_deco_barrel_desc">Звична діжка, яка вже бачила кращі часи.</string>
+  <string name="town_deco_hay_name">Сіно</string>
   <string name="town_deco_hay_desc">Невелика купа запашного сіна.</string>
+  <string name="town_deco_firewood_name">Дрова</string>
+  <string name="town_deco_firewood_desc">Необхідна річ при таких морозах.</string>
+  <string name="town_deco_stakes_name">Кілки</string>
+  <string name="town_deco_stakes_desc">Ці загострені кілки виглядають моторошно, але самі по собі доволі безкорисні.</string>
+  <string name="town_deco_fence_name">Паркан</string>
+  <string name="town_deco_fence_desc">Дерев\'яний паркан припорошений снігом.</string>
   <string name="town_deco_rope_name">Мотузка</string>
   <string name="town_deco_chest_name">Скриня</string>
   <string name="town_deco_scrolls_name">Сувої</string>
@@ -2214,6 +2245,10 @@
   <string name="Badges_LevelReached5">30 рівня досягнуто</string>
   <string name="Badges_GoldCollected5">Зібрано 35000 золотих монет</string>
   <string name="Badges_MonsterSlain5">1000 супротивників подолано</string>
+  <string name="Welcome_Text_29">
+    remix.29\n
+    - Реновація міста!\n
+    </string>
   <string name="Ring_Gems_0">діамантом</string>
   <string name="Ring_Gems_1">опалом</string>
   <string name="Ring_Gems_2">гранатом</string>

@@ -24,6 +24,9 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 
 import lombok.var;
@@ -36,6 +39,8 @@ public class AttackIndicator extends Tag {
 	private static AttackIndicator instance;
 	
 	private CharSprite sprite = null;
+
+	@Nullable
 	private static Char lastTarget = null;
 
 	public AttackIndicator() {
@@ -77,7 +82,6 @@ public class AttackIndicator extends Tag {
 			
 		} else {
 			visible( false );
-			enable( false );
 		}
 	}
 	
@@ -111,13 +115,13 @@ public class AttackIndicator extends Tag {
 		enable( bg.getVisible() );
 	}
 	
-	private void updateImage() {
+	private void updateImage(@NotNull Char target) {
 		
 		if (sprite != null) {
 			sprite.killAndErase();
 		}
 
-		sprite = lastTarget.sprite();
+		sprite = target.sprite();
 		sprite.idle();
 		sprite.paused = true;
 		add(sprite);
@@ -137,6 +141,10 @@ public class AttackIndicator extends Tag {
 	}
 	
 	private void visible( boolean value ) {
+		if(!value) {
+			enable(false);
+		}
+
 		bg.setVisible(value);
 		if (sprite != null) {
 			sprite.setVisible(value);
@@ -145,14 +153,14 @@ public class AttackIndicator extends Tag {
 	
 	@Override
 	protected void onClick() {
-		if (enabled) {
+		if (enabled && lastTarget != null) {
 			Dungeon.hero.handle( lastTarget.getPos() );
 		}
 	}
 	
-	public static void target( Char target ) {
+	public static void target( @NotNull Char target ) {
 		lastTarget = target;
-		instance.updateImage();
+		instance.updateImage(target);
 		
 		HealthIndicator.instance.target( target );
 	}

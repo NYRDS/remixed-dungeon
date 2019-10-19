@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.PredesignedLevel;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -189,8 +190,11 @@ public class Shopkeeper extends NPC {
 			}
 		}
 
-		item = level().getTreasury().check(item);
-
+		if(level()!=null) {
+			item = level().getTreasury().check(item);
+		} else {
+			item = Treasury.get().check(item);
+		}
 		item.collect(this);
 	}
 
