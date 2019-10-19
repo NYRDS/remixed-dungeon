@@ -53,8 +53,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private CustomClipEffect deathEffect;
 
-	private Map<String, Animation> weapon_anims;
-	private Map<String, String>    body_types;
+	@NotNull
+	private Map<String, Animation> weapon_anims = new HashMap<>();
+
+	@NotNull
+	private Map<String, String>    body_types = new HashMap<>();
 
 	private static final String[] layersOrder = {
 		LAYER_BODY,
