@@ -25,8 +25,10 @@ return item.init{
     end,
 
     activate = function(self, item, hero)
+        RPD.permanentBuff(hero,"Shield"):level(3)
     end,
 
     deactivate = function(self, item, hero)
+        RPD.removeBuff(hero,"Shield")
     end
 }

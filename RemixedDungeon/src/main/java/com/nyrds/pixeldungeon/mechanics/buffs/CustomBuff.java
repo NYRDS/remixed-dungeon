@@ -115,6 +115,11 @@ public class CustomBuff extends Buff {
     }
 
     @Override
+    public int defenceProc(Char defender, Char enemy, int damage) {
+        return script.runOptional("defenceProc", enemy, damage, damage).checkint();
+    }
+
+    @Override
     public String name() {
         return name;
     }

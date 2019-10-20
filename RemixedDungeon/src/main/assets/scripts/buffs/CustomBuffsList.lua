@@ -8,6 +8,7 @@
 local buffs = {"BodyArmor",
                "DieHard",
                "Cloak",
-               "Counter"}
+               "Counter",
+               "Shield"}
 
 return buffs

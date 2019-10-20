@@ -106,4 +106,11 @@ public class LuaScript {
             return run(method, onlyParentArgs);
         }
     }
+
+    public <T> LuaValue runOptional(String method, Object arg1, Object arg2, T defaultValue) {
+        if(!script.get(method).isfunction()) {
+            return CoerceJavaToLua.coerce(defaultValue);
+        }
+        return run(method,arg1,arg2);
+    }
 }
