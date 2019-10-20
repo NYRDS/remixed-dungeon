@@ -32,7 +32,7 @@ public class GnollTamahawk extends Tamahawk {
 
         quantity(quantity);
 
-        imageFile = "items/gnoll_tamahawks.png";
+        imageFile = "items/gnoll_tomahawks.png";
         image = imageIndex = Random.Int(0,8);
     }
 
