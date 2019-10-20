@@ -43,7 +43,7 @@ public class JarOfSouls extends UndeadMob {
 	}
 
 	private void spawnUndead(){
-		getSprite().zap(getEnemy().getPos(), null);
+		getSprite().zap(getEnemy().getPos());
 
 		MobSpawner.spawnRandomMob(Dungeon.level,getPos());
 

@@ -63,7 +63,7 @@ public class RunicSkull extends MultiKindMob {
 	{
 		if (activated){
 			if (!zapping) {
-				getSprite().zap(getPos(), null);
+				getSprite().zap(getPos());
 				zapping = true;
 			}
 		} else{
