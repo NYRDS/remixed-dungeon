@@ -22,10 +22,10 @@
         "kind": "Ration"
       },
       {
-        "kind": "TestWeapon1"
+        "kind": "Tomahawk"
       },
       {
-        "kind": "TestWeapon2"
+        "kind": "Tomahawk2"
       },
       {
         "kind": "WoodenShield"
