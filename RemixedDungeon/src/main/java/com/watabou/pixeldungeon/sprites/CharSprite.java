@@ -32,6 +32,7 @@ import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.EmoIcon;
@@ -214,12 +215,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void zap(int cell) {
-        turnTo(ch.getPos(), cell);
-        play(zap);
-    }
-
-    public void zap(int cell, Callback callback) {
-        animCallback = callback;
         turnTo(ch.getPos(), cell);
         play(zap);
     }
@@ -460,9 +455,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             isMoving = false;
 
-            ch.onMotionComplete();
-            place(ch.getPos());
-
+            if(ch!=null && Actor.all().contains(ch)) {
+                ch.onMotionComplete();
+                place(ch.getPos());
+            }
 
             motion.killAndErase();
             motion = null;
@@ -471,20 +467,25 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Override
     public void onComplete(Animation anim) {
+        if(!Actor.all().contains(ch)) {
+            return;
+        }
 
         if (animCallback != null) {
             animCallback.call();
             animCallback = null;
         } else {
-            if (anim == attack) {
-                ch.onAttackComplete();
-                idle();
-            } else if (anim == zap) {
-                ch.onZapComplete();
-                idle();
-            } else if (anim == operate) {
-                ch.onOperateComplete();
-                idle();
+            if(ch!=null) {
+                if (anim == attack) {
+                    ch.onAttackComplete();
+                    idle();
+                } else if (anim == zap) {
+                    ch.onZapComplete();
+                    idle();
+                } else if (anim == operate) {
+                    ch.onOperateComplete();
+                    idle();
+                }
             }
         }
     }

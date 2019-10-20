@@ -62,7 +62,7 @@ public class SuspiciousRat extends Mob {
 					getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 					GLog.n(Game.getVar(R.string.SuspiciousRat_Info1));
 				}
-				getSprite().zap(getEnemy().getPos(), null);
+				getSprite().zap(getEnemy().getPos());
 				return true;
 			} else {
 				int wereratPos = this.getPos();

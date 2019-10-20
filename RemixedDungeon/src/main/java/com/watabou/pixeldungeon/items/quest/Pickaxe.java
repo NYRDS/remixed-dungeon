@@ -40,7 +40,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Callback;
 
 import java.util.ArrayList;
 
@@ -90,30 +89,26 @@ public class Pickaxe extends Weapon {
 					hero.spend( TIME_TO_MINE );
 					hero.busy();
 					
-					hero.getSprite().attack( pos, new Callback() {
-						
-						@Override
-						public void call() {
+					hero.getSprite().attack( pos, () -> {
 
-							CellEmitter.center( pos ).burst( Speck.factory( Speck.STAR ), 7 );
-							Sample.INSTANCE.play( Assets.SND_EVOKE );
-							
-							Dungeon.level.set( pos, Terrain.WALL );
-							GameScene.updateMap( pos );
-							
-							DarkGold gold = new DarkGold();
-							if (gold.doPickUp( Dungeon.hero )) {
-								GLog.i( Hero.getHeroYouNowHave(), gold.name() );
-							} else {
-								Dungeon.level.drop( gold, hero.getPos() ).sprite.drop();
-							}
-							
-							hero.hunger().satisfy( -Hunger.STARVING / 10 );
-							BuffIndicator.refreshHero();
+						CellEmitter.center( pos ).burst( Speck.factory( Speck.STAR ), 7 );
+						Sample.INSTANCE.play( Assets.SND_EVOKE );
 
-							hero.onOperateComplete();
+						Dungeon.level.set( pos, Terrain.WALL );
+						GameScene.updateMap( pos );
+
+						DarkGold gold = new DarkGold();
+						if (gold.doPickUp( Dungeon.hero )) {
+							GLog.i( Hero.getHeroYouNowHave(), gold.name() );
+						} else {
+							Dungeon.level.drop( gold, hero.getPos() ).sprite.drop();
 						}
-					} );
+
+						hero.hunger().satisfy( -Hunger.STARVING / 10 );
+						BuffIndicator.refreshHero();
+
+						hero.onOperateComplete();
+					});
 					
 					return;
 				}

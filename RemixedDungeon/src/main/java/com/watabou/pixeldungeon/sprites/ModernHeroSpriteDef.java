@@ -223,7 +223,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
 
-		if(weapon_anims!=null) { //old mods compatibility
+		if(!weapon_anims.isEmpty()) { //old mods compatibility
 			KindOfWeapon weapon = hero.belongings.weapon;
 
 			if (weapon != null) {
