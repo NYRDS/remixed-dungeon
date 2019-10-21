@@ -101,6 +101,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -255,6 +256,7 @@ public class MobFactory {
 		return mMobsList.containsKey(mobClass);
 	}
 
+	@NotNull
 	public static Mob mobByName(String selectedMobClass) {
 
 		try {

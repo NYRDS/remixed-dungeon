@@ -97,14 +97,18 @@ public abstract class BossLevel extends RegularLevel {
 
     protected void spawnBoss(int pos, AiState state) {
         Mob boss = Bestiary.mob(this);
-        boss.setState(state);
+
         boss.setPos(pos);
         spawnMob(boss);
+
+        boss.setState(state);
         boss.notice();
 
         press( boss.getPos(), boss );
         seal();
     }
 
-
+    @Override
+    protected void createMobs() {
+    }
 }
