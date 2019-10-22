@@ -253,6 +253,11 @@ public class MobFactory {
 		if(Dungeon.isChallenged(Challenges.NO_ARMOR) && mobClass.equals("ArmoredStatue")) {
 			return false;
 		}
+
+		if(Dungeon.isChallenged(Challenges.NO_WEAPON) && mobClass.equals("Statue")) {
+			return false;
+		}
+
 		return mMobsList.containsKey(mobClass);
 	}
 
