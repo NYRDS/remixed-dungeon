@@ -10,7 +10,12 @@
         "quantity": 100
       },
       {
-        "kind": "test/TestItem",
+        "kind": "TomeOfKnowledge",
+        "quantity": 100,
+        "level": 10
+      },
+      {
+        "kind": "PotionOfMindVision",
         "quantity": 100,
         "level": 10
       },

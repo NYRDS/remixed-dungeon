@@ -21,8 +21,6 @@ import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 
-import static com.nyrds.android.lua.LuaEngine.LUA_DATA;
-
 /**
  * Created by mike on 26.05.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -159,7 +157,7 @@ public class CustomItem extends EquipableItem {
     @Override
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
-        bundle.put(LUA_DATA, script.run("saveData").checkjstring());
+        bundle.put(LuaEngine.LUA_DATA, script.run("saveData").checkjstring());
     }
 
     @Override

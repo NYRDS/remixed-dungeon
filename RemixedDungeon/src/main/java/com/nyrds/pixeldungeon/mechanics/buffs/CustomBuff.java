@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mechanics.buffs;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
+import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
@@ -50,14 +51,25 @@ public class CustomBuff extends Buff {
     }
 
     @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(LuaEngine.LUA_DATA, script.run("saveData").checkjstring());
+    }
+
+    @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
         initFromFile(scriptFile);
+
+        String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
+        if(luaData!=null) {
+            script.run("loadData",luaData);
+        }
     }
 
     @Override
     public int icon() {
-        return icon;
+        return script.runOptional("icon",icon).checkint();
     }
 
     @Override
@@ -121,6 +133,6 @@ public class CustomBuff extends Buff {
 
     @Override
     public String name() {
-        return name;
+        return StringsManager.maybeId(script.runOptional("name",name).checkjstring());
     }
 }

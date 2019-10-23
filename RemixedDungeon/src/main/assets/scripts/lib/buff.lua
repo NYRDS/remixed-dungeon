@@ -4,6 +4,8 @@
 --- DateTime: 24.03.19 18:35
 ---
 
+local serpent = require "scripts/lib/serpent"
+
 local buff = {}
 
 buff.__index = buff
@@ -20,6 +22,24 @@ function buff.act(self, buff)
     buff:detach()
     return true
 end
+
+function buff.saveData(self)
+    return serpent.dump(self.data or {})
+end
+
+function buff.loadData(self, _, str)
+    local _,data = serpent.load(str)
+    self.data = data or {}
+end
+
+function buff.storeData(self, data)
+    self.data = data or {}
+end
+
+function buff.restoreData(self)
+    return self.data or {}
+end
+
 
 function buff.defaultDesc()
     return {
@@ -47,6 +67,8 @@ end
 
 buff.init = function(desc)
     setmetatable(desc, buff)
+
+    desc.data = {}
 
     return desc
 end

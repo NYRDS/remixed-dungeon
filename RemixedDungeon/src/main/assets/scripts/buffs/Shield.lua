@@ -18,22 +18,44 @@ return buff.init{
         }
     end,
 
+    icon = function(self, buff)
+        if self.data.state then
+            return 47
+        end
+        return 48
+    end,
+
+    name = function(self, buff)
+        if self.data.state then
+            return "ShiledBuffReady_Name"
+        end
+        return "ShiledBuffNotReady_Name"
+    end,
+
     attachTo = function(self, buff, target)
+        self.data.state = false
         return true
     end,
 
-    defenceProc = function(self, buff, enemy, damage)
+    act = function(self,buff)
+        self.data.state = true
+        buff:spend(10/buff:level())
+    end,
 
-        if math.random() > 0.5 then
+    defenceProc = function(self, buff, enemy, damage)
+        if self.data.state then
             RPD.topEffect(buff.target:getPos(),"shield_blocked")
 
             RPD.playSound("body_armor.mp3")
-            return damage/2
+
+            self.data.state = false
+
+            return damage / 2
         else
             RPD.topEffect(buff.target:getPos(),"shield_broken")
 
             RPD.playSound("body_armor.mp3")
-            return damage/2
+            return damage / 1.2
         end
     end
 }

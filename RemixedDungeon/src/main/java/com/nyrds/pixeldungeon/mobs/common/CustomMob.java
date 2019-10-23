@@ -168,8 +168,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 			attackRange = classDesc.optInt("attackRange",attackRange);
 
-			String scriptFile = classDesc.optString("scriptFile",null);
-			if(scriptFile!=null) {
+			String scriptFile = classDesc.optString("scriptFile","");
+			if(!scriptFile.isEmpty()) {
 				script = new LuaScript(scriptFile, this);
 			}
 
