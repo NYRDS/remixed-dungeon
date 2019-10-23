@@ -17,6 +17,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Collections;
@@ -58,25 +59,29 @@ public class Library {
 		}
 	}
 
-
+	@Deprecated
 	private static void loadOldLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
 					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE)).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
+		} catch (FileNotFoundException ignore) {
+
 		} catch (Exception e) {
-			mKnowledgeLevel = new HashMap<>();
 			EventCollector.logException(e,"library restore failed");
 		}
 	}
 
 	private static void loadLibrary() {
+		mKnowledgeLevel = new HashMap<>();
 		try {
 			mKnowledgeLevel = gson.fromJson(
 					JsonHelper.readJsonFromStream(FileSystem.getInputStream(getLibraryFile())).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
+		} catch (FileNotFoundException ignore) {
+
 		} catch (Exception e) {
 			loadOldLibrary();
 		}
