@@ -2209,7 +2209,13 @@
   <string name="DieHardSpell_Info">Тимчасово прискорює регенерацію і робить з тебе справжнього Міцного Горішка.</string>
   <string name="DieHardBuff_Name">Міцний горішок</string>
   <string name="DieHardBuff_Info">Швидкість регенерації прискорено</string>
+  <string name="SmashSpell_Name">Приголомшливий удар</string>
+  <string name="SmashSpell_Info">Підстрибує, і з силою врізається у землю, приголомшуючи противників навколо, та наносячи фізичну шкоду.</string>
   <string name="SmashSpell_NeedWeapon">Мені необхідна зброя для цього прийому.</string>
+  <string name="DashSpell_Name">Прорив</string>
+  <string name="DashSpell_Info">Проривається у вказаному напрямку, наносячи шкоду всім противникам, що трапляються на шляху.</string>
+  <string name="DashSpell_OnSelf">Не можливо прорватися на місці.</string>
+  <string name="DashSpell_TooFar">Неможливо прорватися настільки далеко.</string>
   <string name="CloakSpell_Name">Маскування</string>
   <string name="CloakSpell_Info">Зробіть крок у тінь, аби лишитися непоміченим. Значно зменшить ваші шанси бути поміченим. Не може бути використано при наявності ворогів поблизу.</string>
   <string name="CloakSpell_EnemiesNearby">Ви не можете відійти у тінь, коли поруч вороги.</string>
@@ -2223,8 +2229,27 @@
   <string name="town_deco_grave_name">Надгробок</string>
   <string name="town_deco_grave_desc">Звичний надгробок із потертими написами.</string>
   <string name="town_deco_pillar_name">Стовп</string>
+  <string name="town_deco_pillar_desc">Колись за давніх часів цей стовп був чудовою опорою та прикрасою.</string>
+  <string name="town_deco_wood_wall_name">Стіна з деревʼяних колод</string>
+  <string name="town_deco_wood_wall_desc">Стіна з колод виглядає міцною.</string>
   <string name="town_deco_entrance_name">Вхід</string>
+  <string name="town_deco_entrance_desc">Прохід до верхніх рівнів підземелля.</string>
   <string name="town_deco_exit_name">Вихід.</string>
+  <string name="town_deco_exit_desc">Невідомо, що чекає тебе там, у низу, доки ти не спустишся.</string>
+  <string name="town_deco_tile_name">Плитка</string>
+  <string name="town_deco_tile_desc">Час не пощадив ці плитки.</string>
+  <string name="town_deco_snowdrift_name">Перемет</string>
+  <string name="town_deco_snowdrift_desc">Величезний перемет, і схоже ніхто не збирається його розбирати.</string>
+  <string name="town_deco_misc_name">Сміття</string>
+  <string name="town_deco_misc_desc">Купа сміття та дрібничок.</string>
+  <string name="town_deco_broken_roof_name">Ламаний дах</string>
+  <string name="town_deco_broken_roof_desc">Плитки на цьому даху поламані і потребують заміни.</string>
+  <string name="town_deco_broken_wall_name">Зруйнована стіна</string>
+  <string name="town_deco_broken_wall_desc">Колоди цієї стіни давно прогнили і втратили колишню міць.</string>
+  <string name="town_deco_mud_name">Багно</string>
+  <string name="town_deco_mud_desc">шмат розмороженого багна посеред цієї мерзлоти.</string>
+  <string name="town_deco_stock_name">Припаси</string>
+  <string name="town_deco_stock_desc">Тут зберігаються припаси, а також трохи різноманітного та різнокольорового мотлоху.</string>
   <string name="town_deco_barrel_name">Діжка</string>
   <string name="town_deco_barrel_desc">Звична діжка, яка вже бачила кращі часи.</string>
   <string name="town_deco_hay_name">Сіно</string>
@@ -2235,16 +2260,80 @@
   <string name="town_deco_stakes_desc">Ці загострені кілки виглядають моторошно, але самі по собі доволі безкорисні.</string>
   <string name="town_deco_fence_name">Паркан</string>
   <string name="town_deco_fence_desc">Дерев\'яний паркан припорошений снігом.</string>
+  <string name="town_deco_pole_name">Жердина</string>
+  <string name="town_deco_pole_desc">Довга жердина, якраз підходить для натягування мотузки для сушки білизни.</string>
   <string name="town_deco_rope_name">Мотузка</string>
+  <string name="town_deco_rope_desc">Вручну змотана мотузка.</string>
+  <string name="town_deco_slush_name">Шуга</string>
+  <string name="town_deco_slush_desc">Цей сніг підтанув, і тепер це брудна мокра каша.</string>
   <string name="town_deco_chest_name">Скриня</string>
+  <string name="town_deco_chest_desc">Зручна частина інтер\'єру для зберігання різноманітних дрібничок та прикрас.</string>
+  <string name="town_deco_emptyboard_name">Стелаж</string>
+  <string name="town_deco_emptyboard_desc">Звичайний стелаж для зберігання різних предметів.</string>
+  <string name="town_deco_grandclock_name">Величезний годинник</string>
+  <string name="town_deco_grandclock_desc">Досить старий механізм, але ще функціонує.</string>
+  <string name="town_deco_wall_beam_name">Балка</string>
+  <string name="town_deco_wall_beam_desc">Досить надійна опора для даної споруди.</string>
+  <string name="town_deco_wall_candles_name">Свічки</string>
+  <string name="town_deco_wall_candles_desc">Свічки згасли, але аромат від них ще тримається в повітрі.</string>
+  <string name="town_deco_wooden_drawer_name">Шухляда</string>
+  <string name="town_deco_wooden_drawer_desc">Цікаво, що вона зберігає в собі.</string>
   <string name="town_deco_scrolls_name">Сувої</string>
+  <string name="town_deco_scrolls_desc">Запилена шафа із купою різноманітних сувоїв та книг.</string>
+  <string name="town_deco_medicine_name">Медицина</string>
+  <string name="town_deco_medicine_desc">Флакони та інші медичні інгредієнти обережно розставлені по полицям.</string>
+  <string name="town_deco_wooden_stairs_name">Сходи</string>
+  <string name="town_deco_wooden_stairs_desc">Вони допомагають піднятися тобі вище.</string>
+  <string name="town_deco_canvas_name">Полотно</string>
+  <string name="town_deco_canvas_desc">Товстий шмат тканини висить на стіні.</string>
+  <string name="town_deco_projector_name">Кінопроектор</string>
+  <string name="town_deco_projector_desc">Старий пристрій, для відтворення фільмів та розваг людей.</string>
+  <string name="town_deco_filmtape_name">Плівка</string>
+  <string name="town_deco_filmtape_desc">Цікаво, що на ній міститься.</string>
+  <string name="town_deco_painting_name">Картина</string>
+  <string name="town_deco_painting_desc">Чудовий витвір мистецтва.</string>
+  <string name="town_deco_curtains_name">Портьєра</string>
+  <string name="town_deco_curtains_desc">Не пропускає зайве світло та забезпечує чудовий декор.</string>
+  <string name="town_deco_rug_name">Килим</string>
+  <string name="town_deco_rug_desc">Виткано з гарним смаком.</string>
+  <string name="town_deco_trapdoor_name">Люк</string>
+  <string name="town_deco_trapdoor_desc">Куди ж він веде?</string>
+  <string name="town_deco_glass_stained_name">Вітраж</string>
+  <string name="town_deco_glass_stained_desc">Автор вітражу доклав чи немало зусиль.</string>
+  <string name="town_deco_glass_name">Широке вікно</string>
+  <string name="town_deco_glass_desc">Це вікно ширше за інших, і пропускає значно більше світла.</string>
+  <string name="town_deco_counter_name">Прилавок</string>
+  <string name="town_deco_counter_desc">Дозволяє тримати добру дистанцію між вами і тим, хто стоїть за ним.</string>
+  <string name="town_deco_library_books_name">Періодика</string>
+  <string name="town_deco_library_books_desc">Це навіть краще за книги з підземелля.</string>
+  <string name="town_deco_wallpaper_name">Шпалери</string>
+  <string name="town_deco_wallpaper_desc">Чудове рішення для даного місця.</string>
+  <string name="town_deco_stones_name">Каміння</string>
+  <string name="town_deco_stones_desc">Просто купа каміння.</string>
+  <string name="town_deco_fireplace_name">Вогнище</string>
+  <string name="town_deco_fireplace_desc">Гарне місце, аби зігрітися.</string>
+  <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Ігрова механіка:\n
+    -- Можливості воїна!\n
+    -- Герої тепер не так швидко відчувають голод\n
+    -- Закляття некроманта - Одержимість\n
+    -- Можливість крадія - Маскування\n
+    -- Нові значки\n
+    - Модифікації:\n
+    -- Налаштовані бафи з підтримкою скриптів\n
+    -- Налаштована графіка\n
+    </string>
   <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
+  <string name="Badges_PotionsCooked5">Приготовлено 25 зілля</string>
   <string name="Badges_ItemLvl5">Придбано предмет 15 рівня</string>
   <string name="Badges_FoodEaten5">60 порцій їжі вжито</string>
   <string name="Badges_StrengthAttained5">21 одиниць сили набрано</string>
   <string name="Badges_LevelReached5">30 рівня досягнуто</string>
   <string name="Badges_GoldCollected5">Зібрано 35000 золотих монет</string>
   <string name="Badges_MonsterSlain5">1000 супротивників подолано</string>
+  <string name="Spells_NotInOwnBody">Ти не можеш використовувати %sдоки твоя душа поза тілом.</string>
+  <string name="WndHero_Satiety">Насичення</string>
   <string name="Welcome_Text_29">
     remix.29\n
     - Реновація міста!\n
@@ -2474,4 +2563,28 @@
   <string name="Potion_Colors_9">коричневе</string>
   <string name="Potion_Colors_10">індигове</string>
   <string name="Potion_Colors_11">срібне</string>
+  <string name="Welcome_Text_29_1">
+    remix.29.1\n
+    - Модифікації:\n
+    -- Моди впливають на частоту появи предметів\n
+    - Переклади:\n
+    --Додано угорську\n
+    - Правка вад\n
+    </string>
+  <string name="town_deco_stone_wall_broken_name">Зруйнована стіна</string>
+  <string name="town_deco_stone_wall_broken_desc">Стара камʼяна стіна, в поганому стані</string>
+  <string name="Challenges_Names_6">Заборонені руни</string>
+  <string name="Challenges_Names_7">Пацифізм</string>
+  <string name="Welcome_Text_29_2">
+    remix.29.2\n
+    - Ігровий процес:\n
+    -- Нові досягнення:\n
+    --- Заборонені руни\n
+    --- Пацифізм\n
+    - Модифікації:\n
+    -- Налаштовані артефакти\n
+    - Правка вад\n
+    </string>
+  <string name="town_deco_crossroad_name">Вказівник на роздоріжжі</string>
+  <string name="town_deco_crossroad_desc">Грубо зроблений стовп із прибитими дощечками у вигляді стрілок, текст на них давно вигорів, схоже через погані погодні умови.</string>
 </resources>

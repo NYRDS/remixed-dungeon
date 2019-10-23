@@ -21,6 +21,7 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 import com.nyrds.Packable;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -131,6 +132,9 @@ public abstract class Actor implements Bundlable {
 	}
 	
 	public static void occupyCell( Char ch ) {
+		if(ch.getPos() == Level.INVALID_CELL && ! (ch instanceof DummyChar)) {
+			throw new TrackedRuntimeException("trying to spawn mob in void");
+		}
 		chars.put(ch.getPos(), ch);
 	}
 	
