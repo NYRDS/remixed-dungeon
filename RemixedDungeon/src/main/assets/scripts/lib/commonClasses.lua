@@ -76,7 +76,7 @@ local Objects = {
         WndMessage    = "com.watabou.pixeldungeon.windows.WndMessage",
         WndStory      = "com.watabou.pixeldungeon.windows.WndStory",
         WndQuest      = "com.watabou.pixeldungeon.windows.WndQuest",
-        WndOptionsLua = "com.nyrds.pixeldungeon.windows.WndOptionsLua"
+        WndOptionsLua = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
     },
 
     Actors = {
@@ -161,6 +161,7 @@ local RPD = {
     MobAi = MobAi,
 
     Buffs = Buffs,
+    BuffIndicator = luajava.bindClass("com.watabou.pixeldungeon.ui.BuffIndicator"),
 
     Actions = actions,
 

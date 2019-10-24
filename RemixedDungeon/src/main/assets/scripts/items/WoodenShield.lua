@@ -12,8 +12,6 @@ local item = require "scripts/lib/item"
 return item.init{
     desc  = function (self, item)
 
-        RPD.glog("Created item with id:"..tostring(item:getId()))
-
         return {
             image         = 0,
             imageFile     = "items/shields.png",
@@ -25,9 +23,8 @@ return item.init{
     end,
 
     activate = function(self, item, hero)
-        self.buff = RPD.affectBuff(hero,"Shield", 2)
+        self.buff = RPD.affectBuff(hero,"ShieldLeft", 2)
         self.buff:level(1)
-
     end,
 
     deactivate = function(self, item, hero)

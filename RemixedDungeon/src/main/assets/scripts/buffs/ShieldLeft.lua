@@ -10,14 +10,6 @@ local buff = require "scripts/lib/buff"
 
 
 return buff.init{
-    desc  = function ()
-        return {
-            icon          = 47,
-            name          = "ShiledBuff_Name",
-            info          = "ShieldBuff_Info",
-        }
-    end,
-
     icon = function(self, buff)
         if self.data.state then
             return 47
@@ -27,9 +19,9 @@ return buff.init{
 
     name = function(self, buff)
         if self.data.state then
-            return "ShiledBuffReady_Name"
+            return "ShieldBuffReady_Name"
         end
-        return "ShiledBuffNotReady_Name"
+        return "ShieldBuffNotReady_Name"
     end,
 
     attachTo = function(self, buff, target)
@@ -38,7 +30,11 @@ return buff.init{
     end,
 
     act = function(self,buff)
-        self.data.state = true
+        if not self.data.state then
+            self.data.state = true
+            RPD.BuffIndicator:refreshHero()
+        end
+
         buff:spend(10/buff:level())
     end,
 
@@ -49,6 +45,7 @@ return buff.init{
             RPD.playSound("body_armor.mp3")
 
             self.data.state = false
+            RPD.BuffIndicator:refreshHero()
 
             return damage / 2
         else

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.LuaInterface;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
@@ -152,7 +153,8 @@ public class BuffIndicator extends Component {
 		
 		icons = newIcons;
 	}
-	
+
+	@LuaInterface
 	public static void refreshHero() {
 		if (heroInstance != null) {
 			heroInstance.layout();
