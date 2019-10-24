@@ -20,8 +20,8 @@ package com.watabou.gltextures;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.glwrap.Texture;
 
 import org.jetbrains.annotations.NotNull;
@@ -106,7 +106,7 @@ public class TextureCache {
 			return (Bitmap) src;
 		}
 
-		throw new TrackedRuntimeException("Bad resource source for Bitmap "+ src.getClass().getName());
+		throw new ModError("Bad resource source for Bitmap "+ src.getClass().getName());
 	}
 
 	public static boolean contains(Object key) {

@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
@@ -47,6 +48,12 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private static final String LAYER_LEFT_ITEM   = "left_hand_item";
 	private static final String LAYER_RIGHT_ITEM  = "right_hand_item";
+
+	private static final String LAYER_LEFT_ITEM_BACK  = "left_back_item";
+	private static final String LAYER_RIGHT_ITEM_BACK = "right_back_item";
+
+
+
 	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON   = "hero_modern/spritesDesc/Hero.json";
 	private static final String HERO_MODERN_SPRITES_DESC_STATUE_JSON = "hero_modern/spritesDesc/Statue.json";
 
@@ -61,6 +68,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private Map<String, String>    body_types = new HashMap<>();
 
 	private static final String[] layersOrder = {
+		LAYER_RIGHT_ITEM_BACK,
+		LAYER_LEFT_ITEM_BACK,
 		LAYER_BODY,
 		LAYER_COLLAR,
 		LAYER_HEAD,
@@ -176,6 +185,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
+			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(hero.belongings.leftHand,"left"));
+			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(hero.belongings.weapon, "right"));
+
 			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.leftHand,"left"));
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
 		}
@@ -265,7 +277,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void applyLayersDesc(String[] lookDesc) {
 		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
-			addLayer(layersOrder[i],TextureCache.get(lookDesc[i]));
+			try {
+				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
+			} catch (ModError ignored) {
+			}
 		}
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
@@ -283,6 +298,14 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 		return "hero_modern/items/" +item.getVisualName()+"_"+hand+".png";
 	}
+
+	private String itemBackDescriptor(EquipableItem item, String hand) {
+		if(item==null) {
+			return "hero_modern/items/none_back_"+hand+".png";
+		}
+		return "hero_modern/items/" +item.getVisualName()+"_back_"+hand+".png";
+	}
+
 
 	private String helmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
