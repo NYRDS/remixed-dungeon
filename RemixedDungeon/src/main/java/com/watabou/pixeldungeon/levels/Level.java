@@ -1246,6 +1246,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	private void updateFovForObjectAt(int p) {
+		if(!cellValid(p)) {
+			EventCollector.logException("invalid cell");
+			return;
+		}
+
 		for (int a : NEIGHBOURS9) {
 			markFovCellSafe(p + a);
 		}
