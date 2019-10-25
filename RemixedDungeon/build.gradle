@@ -121,7 +121,7 @@ dependencies {
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
     implementation 'com.google.firebase:firebase-core:17.2.0'
-    implementation 'com.google.firebase:firebase-perf:19.0.0'
+    implementation 'com.google.firebase:firebase-perf:19.0.1'
     implementation 'com.google.firebase:firebase-ads:18.2.0'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
@@ -139,3 +139,4 @@ dependencies {
 
 
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.getkeepsafe.dexcount'
