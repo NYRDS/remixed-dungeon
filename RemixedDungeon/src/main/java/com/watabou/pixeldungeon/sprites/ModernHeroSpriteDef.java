@@ -53,8 +53,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private CustomClipEffect deathEffect;
 
-	@NotNull
-	private Map<String, Animation> weapon_anims = new HashMap<>();
+	private Map<String, Animation> weapon_anims;
 
 	@NotNull
 	private Map<String, String>    body_types = new HashMap<>();
@@ -222,11 +221,21 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		createLayersDesc(hero);
 		applyLayersDesc(getLayersDesc());
 
-		if(!weapon_anims.isEmpty()) { //old mods compatibility
+		avatar = null;
+
+		zap = attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
+
+		Accessory accessory = Accessory.equipped();
+
+		if(accessory != null && accessory.isCoveringItems()) { // no fancy attacks in costumes
+			return;
+		}
+
+		if(weapon_anims != null && !weapon_anims.isEmpty()) { //old mods compatibility
 			KindOfWeapon weapon = hero.belongings.weapon;
 
 			if (weapon != null) {
-				attack = weapon_anims.get(weapon.getAnimationClass());
+				zap = attack = weapon_anims.get(weapon.getAnimationClass());
 
 				String zapAnim = weapon.getAnimationClass()+"_zap";
 
@@ -234,20 +243,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
                     zap = weapon_anims.get(zapAnim);
                 }
 
-			} else {
-				attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
-				zap    = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
 			}
 		}
 
-		Accessory accessory = Accessory.equipped();
-
-		if(accessory != null && accessory.isCoveringItems()) { // no fancy attacks in costumes
-			attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
-			zap    = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
-		}
-
-		avatar = null;
 	}
 
 	public String[] getLayersDesc() {
