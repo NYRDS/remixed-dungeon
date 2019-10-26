@@ -813,7 +813,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void setPos(int pos) {
-		if(level().cellValid(pos)) {
+		if(pos == Level.INVALID_CELL) {
 			throw new TrackedRuntimeException("Trying to set invalid pos "+pos+" for "+getEntityKind());
 		}
 		prevPos = this.pos;
