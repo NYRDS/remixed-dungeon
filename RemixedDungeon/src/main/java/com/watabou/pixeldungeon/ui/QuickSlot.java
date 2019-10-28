@@ -52,8 +52,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private static final String QUICKSLOT       = "quickslot";
 
-    private static float lastRefreshTime;
-
     private static ArrayList<QuickSlot>     slots   = new ArrayList<>();
     @SuppressLint("UseSparseArrays")
     private static Map<Integer, Item> qsStorage = new HashMap<>();
@@ -104,7 +102,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                     return;
                 }
 
-                if (targeting) {
+                if (targeting && lastTarget != null) {
                     GameScene.handleCell(lastTarget.getPos());
                 } else {
                     if (quickslotItem == lastItem) {
