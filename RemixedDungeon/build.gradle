@@ -34,8 +34,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 788
-        versionName "remix.29.2.fix.14"
+        versionCode 789
+        versionName "remix.29.2.fix.15"
     }
 
     aaptOptions {
@@ -111,7 +111,7 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'io.humanteq.hqm:hqm-core:2.0.0-alpha01'
+    implementation 'io.humanteq.hqm:hqm-core:2.0.0-alpha03'
 
     implementation 'androidx.core:core:1.1.0'
 
