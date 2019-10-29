@@ -150,7 +150,7 @@ public class Hero extends Char {
 	public boolean spellUser;
 
 	@Packable
-	private int attackSkill = 100000;
+	private int attackSkill = 10;
 
 	@Packable
 	private int defenseSkill = 5;
