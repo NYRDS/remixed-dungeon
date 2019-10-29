@@ -150,7 +150,7 @@ public class Hero extends Char {
 	public boolean spellUser;
 
 	@Packable
-	private int attackSkill = 10;
+	private int attackSkill = 100000;
 
 	@Packable
 	private int defenseSkill = 5;
@@ -1769,6 +1769,7 @@ public class Hero extends Char {
 
 	}
 
+	@NotNull
 	public Char getControlTarget() {
 
 		Char controlTarget = CharsList.getById(controlTargetId);
