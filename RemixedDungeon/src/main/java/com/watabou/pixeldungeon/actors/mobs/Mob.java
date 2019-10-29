@@ -78,7 +78,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.luaj.vm2.LuaValue;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -94,7 +93,6 @@ public abstract class Mob extends Char {
 
 	@NotNull
 	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
-	protected LuaValue scriptResult = LuaValue.NIL;
 
 	private AiState state = MobAi.getStateByClass(Sleeping.class);
 
