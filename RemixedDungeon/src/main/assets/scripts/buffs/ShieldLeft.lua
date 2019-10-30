@@ -51,7 +51,7 @@ return buff.init{
         else
             RPD.topEffect(buff.target:getPos(),"shield_broken")
 
-            RPD.playSound("snd_.shattermp3")
+            RPD.playSound("snd_shatter.mp3")
             return damage / 1.2
         end
     end
