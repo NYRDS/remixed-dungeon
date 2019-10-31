@@ -5,17 +5,14 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class DummyChar extends Char {
 
-    {
-        setPos(Level.INVALID_CELL);
-    }
-
     @Override
     public CharSprite sprite() {
         return null;
     }
 
     @Override
-    protected void moveSprite(int oldPos, int pos) {}
+    protected void moveSprite(int oldPos, int pos) {
+    }
 
     @Override
     protected boolean getCloser(int cell) {
@@ -30,5 +27,10 @@ public class DummyChar extends Char {
     @Override
     public boolean dontPack() {
         return true;
+    }
+
+    @Override
+    public int getPos() {
+        return Level.INVALID_CELL;
     }
 }

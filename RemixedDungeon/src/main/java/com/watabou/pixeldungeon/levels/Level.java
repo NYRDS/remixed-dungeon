@@ -39,9 +39,9 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.RespawnerActor;
 import com.watabou.pixeldungeon.actors.blobs.Alchemy;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.WellWater;
@@ -340,8 +340,6 @@ public abstract class Level implements Bundlable {
 
 	protected static final int MAX_VIEW_DISTANCE = 8;
 	public static final    int MIN_VIEW_DISTANCE = 3;
-
-	private static final float TIME_TO_RESPAWN = 50;
 
 	public int[]     map;
 
@@ -824,7 +822,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	protected Mob createMob() {
+	public Mob createMob() {
 		Mob mob = Bestiary.mob(this);
 		setMobSpawnPos(mob);
 		return mob;
@@ -833,11 +831,11 @@ public abstract class Level implements Bundlable {
 	protected void setMobSpawnPos(Mob mob) {
 		int pos = mob.respawnCell(this);
 
-		mob.setPos(pos);
-
 		if (!cellValid(pos)) {
 			return;
 		}
+
+		mob.setPos(pos);
 
 		if (!passable[pos]) {
 			mob.setState(MobAi.getStateByClass(Wandering.class));
@@ -850,7 +848,7 @@ public abstract class Level implements Bundlable {
 			return null;
 		}
 
-		return new RespawnerActor();
+		return new RespawnerActor(this);
 	}
 
 	public int randomRespawnCell() {
@@ -1246,12 +1244,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	private void updateFovForObjectAt(int p) {
-		if(!cellValid(p)) {
-			EventCollector.logException("invalid cell");
-			return;
-		}
-
 		for (int a : NEIGHBOURS9) {
+            if(!cellValid(p+a)) {
+                EventCollector.logException("invalid cell");
+                return;
+            }
 			markFovCellSafe(p + a);
 		}
 	}
@@ -1755,31 +1752,4 @@ public abstract class Level implements Bundlable {
 		return mobs.toArray(new Mob[0]);
 	}
 
-	private class RespawnerActor extends Actor {
-		@Override
-		protected boolean act() {
-
-			int hostileMobsCount = 0;
-			for (Mob mob : mobs) {
-				if (!mob.isPet()) {
-					hostileMobsCount++;
-				}
-			}
-
-			if (hostileMobsCount < nMobs()) {
-
-				Mob mob = createMob();
-				mob.setState(MobAi.getStateByClass(Wandering.class));
-				if (Dungeon.hero.isAlive() && cellValid(mob.getPos())) {
-					spawnMob(mob);
-					if (Statistics.amuletObtained) {
-						mob.beckon(Dungeon.hero.getPos());
-					}
-				}
-			}
-			spend(Dungeon.nightMode || Statistics.amuletObtained ? TIME_TO_RESPAWN / 2
-					: TIME_TO_RESPAWN);
-			return true;
-		}
-	}
 }

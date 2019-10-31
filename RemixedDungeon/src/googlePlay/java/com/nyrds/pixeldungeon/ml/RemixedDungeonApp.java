@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 import android.util.Log;
 
 import androidx.multidex.MultiDex;
@@ -13,12 +12,12 @@ import com.google.firebase.FirebaseApp;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.StringsManager;
-import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
 import io.fabric.sdk.android.Fabric;
-import io.humanteq.hqsdkapps.HqmCollectInstalledApps;
-import io.humanteq.hqsdkcore.HQSdk;
+import io.humanteq.hq_core.HQCallback;
+import io.humanteq.hq_core.HQSdk;
+
 
 public class RemixedDungeonApp extends MultiDexApplication {
 
@@ -49,18 +48,23 @@ public class RemixedDungeonApp extends MultiDexApplication {
             EventCollector.init();
         }
 
-        if( Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
-            hqClear();
-            if(BuildConfig.DEBUG) {
-                HQSdk.enableDebug(true);
-            }
+        try {
+            HQSdk.init(getApplicationContext(), "22b4f34f2616d7f", BuildConfig.DEBUG, new HQCallback<Void>(){
 
-            try {
-                HQSdk.init(getApplicationContext(), "22b4f34f2616d7f", true, false);
-            } catch (Throwable hqSdkCrash) {
-                EventCollector.logException(new HqSdkCrash(hqSdkCrash));
-            }
+                @Override
+                public void onSuccess(Void aVoid) {
+
+                }
+
+                @Override
+                public void onError(Exception e) {
+                    EventCollector.logException(new HqSdkError(e));
+                }
+            });
+        } catch (Throwable hqSdkCrash) {
+            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
         }
+
 
         try {
             ModdingMode.selectMod(RemixedDungeon.activeMod());
@@ -93,21 +97,10 @@ public class RemixedDungeonApp extends MultiDexApplication {
         MultiDex.install(this);
     }
 
-    private void hqClear() {
-        if(!Preferences.INSTANCE.getBoolean("job_reset",false)) {
-            Preferences.INSTANCE.put("job_reset",true);
-        }
-    }
-
     static public void startScene() {
 
         try {
-            if (HQSdk.getInstance() != null) {
-                HqmCollectInstalledApps.INSTANCE.start(getContext());
-                HQSdk.startSystemEventsTracking(getContext());
-            } else {
-                EventCollector.logException(new HqSdkError(new Exception("HQM not initialized")));
-            }
+            HQSdk.start(getContext());
         } catch (Throwable hqSdkCrash) {
             EventCollector.logException(new HqSdkCrash(hqSdkCrash));
         }

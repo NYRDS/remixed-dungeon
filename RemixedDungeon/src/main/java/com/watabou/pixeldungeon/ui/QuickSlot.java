@@ -102,7 +102,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                     return;
                 }
 
-                if (targeting) {
+                if (targeting && lastTarget != null) {
                     GameScene.handleCell(lastTarget.getPos());
                 } else {
                     if (quickslotItem == lastItem) {

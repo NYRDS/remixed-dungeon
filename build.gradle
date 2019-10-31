@@ -30,7 +30,7 @@ allprojects {
         jcenter()
 
         maven {
-            url 'https://dl.bintray.com/humanteq/HQM/'
+            url 'https://dl.bintray.com/humanteq/hqm-sdk/'
         }
     }
 }

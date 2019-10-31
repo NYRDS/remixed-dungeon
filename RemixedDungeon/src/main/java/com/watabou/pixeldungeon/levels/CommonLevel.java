@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
@@ -57,8 +58,14 @@ abstract public class CommonLevel extends Level {
 		int nMobs = nMobs();
 		for (int i = 0; i < nMobs; i++) {
 			Mob mob = createMob();
-			mobs.add(mob);
-			Actor.occupyCell(mob);
+
+			if(cellValid(mob.getPos())) {
+				mobs.add(mob);
+				Actor.occupyCell(mob);
+				continue;
+			}
+
+			EventCollector.logException("trying to spawn " + mob.getEntityKind() + "on invalid cell " + mob.getPos());
 		}
 	}
 }

@@ -1769,6 +1769,7 @@ public class Hero extends Char {
 
 	}
 
+	@NotNull
 	public Char getControlTarget() {
 
 		Char controlTarget = CharsList.getById(controlTargetId);

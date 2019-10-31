@@ -96,7 +96,7 @@ public class RandomLevel extends RegularLevel {
 	}
 
 	@Override
-	protected Mob createMob() {
+	public Mob createMob() {
 		try {
 			if (mLevelDesc.has("mobs")) {
 

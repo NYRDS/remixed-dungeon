@@ -151,13 +151,13 @@ public class EventCollector {
 	}
 
 	static public void logException(Throwable e) {
-		logException(e,2);
+		logException(e,0);
 	}
 
 	static public void logException(Throwable e, String desc) {
 		if(!mDisabled) {
 			Crashlytics.log(desc);
-			logException(e, 2);
+			logException(e, 0);
 		}
 	}
 

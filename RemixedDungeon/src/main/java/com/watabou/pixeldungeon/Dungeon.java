@@ -286,10 +286,11 @@ public class Dungeon {
             Actor.add(respawner);
         }
 
-        hero.setPos(pos);
         hero.levelId = level.levelId;
 
-        if (!level.cellValid(hero.getPos())) {
+        if (level.cellValid(pos)) {
+            hero.setPos(pos);
+        } else {
             hero.setPos(level.entrance);
         }
 
