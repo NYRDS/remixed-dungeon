@@ -2546,9 +2546,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WoodenShield_name">Wooden Shield</string>
   <string name="WoodenShield_desc">A crude made wooden shield is the simplest shield available. It is round in shape and can block some damage from time to time.</string>
   <string name="ToughShield_name">Tough Shield</string>
-  <string name="ToughShield_desc">This shield looks tougher than wooden. Made from rare wood and have metall edgingcan block some damage.</string>
+  <string name="ToughShield_desc">This shield looks tougher than wooden. Made from rare wood and metall it can block more damage.</string>
   <string name="StrongShield_name">Strong Shield</string>
-  <string name="StrongShield_desc">A  made wooden shield is the simplest shield available. It is round in shape and can block some damage.</string>
-  <string name="RoyalShield_name">Wooden Shield</string>
-  <string name="RoyalShield_desc">A crude made wooden shield is the simplest shield available. It is round in shape and can block some damage.</string>
+  <string name="StrongShield_desc">This rectangular shield is made of bronze and decorated with colored cloth. It is significantly heavier, but can block much more damage.</string>
+  <string name="RoyalShield_name">Royal Shield</string>
+  <string name="RoyalShield_desc">A royal full metal shield. Yes, it's heavy, but only it can provide you better protection.</string>
 </resources>
