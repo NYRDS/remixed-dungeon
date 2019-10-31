@@ -2544,5 +2544,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldBuffNotReady_Name">Not Ready</string>
 
   <string name="WoodenShield_name">Wooden Shield</string>
-  <string name="WoodenShield_desc">A crude made wooden shield is the simplest shield available. It is round in shape.</string>
+  <string name="WoodenShield_desc">A crude made wooden shield is the simplest shield available. It is round in shape and can block some damage from time to time.</string>
+  <string name="ToughShield_name">Tough Shield</string>
+  <string name="ToughShield_desc">This shield looks tougher than wooden. Made from rare wood and have metall edgingcan block some damage.</string>
+  <string name="StrongShield_name">Strong Shield</string>
+  <string name="StrongShield_desc">A  made wooden shield is the simplest shield available. It is round in shape and can block some damage.</string>
+  <string name="RoyalShield_name">Wooden Shield</string>
+  <string name="RoyalShield_desc">A crude made wooden shield is the simplest shield available. It is round in shape and can block some damage.</string>
 </resources>
