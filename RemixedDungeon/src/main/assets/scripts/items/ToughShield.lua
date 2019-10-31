@@ -23,11 +23,10 @@ return item.init{
     end,
 
     activate = function(self, item, hero)
-        self.buff = RPD.affectBuff(hero,"ShieldLeft", 2)
-        self.buff:level(3)
+        RPD.affectBuff(hero,"ShieldLeft", 2):level(3)
     end,
 
     deactivate = function(self, item, hero)
-        self.buff:detach()
+        RPD.removeBuff(hero,"ShieldLeft")
     end
 }

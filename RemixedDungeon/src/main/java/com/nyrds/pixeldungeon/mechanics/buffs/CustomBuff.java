@@ -135,4 +135,9 @@ public class CustomBuff extends Buff {
     public String name() {
         return StringsManager.maybeId(script.runOptional("name",name).checkjstring());
     }
+
+    @Override
+    public boolean dontPack() {
+        return script.runOptional("dontPack", false).checkboolean();
+    }
 }

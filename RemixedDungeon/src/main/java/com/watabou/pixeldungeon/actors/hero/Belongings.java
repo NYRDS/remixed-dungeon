@@ -110,6 +110,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		backpack.restoreFromBundle(bundle);
 		BundleHelper.UnPack(this,bundle);
 
+		activateEquippedItems();
+	}
+
+	private void activateEquippedItems() {
 		var itemIterator = iterator();
 
 		while (itemIterator.hasNextEquipped()) {
@@ -302,6 +306,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		} catch (ClassCastException e) {
 			throw ModdingMode.modException(e);
 		}
+
 		if (desc.has("items")) {
 			JSONArray items = desc.getJSONArray("items");
 			for (int i = 0; i < items.length(); ++i) {
@@ -311,6 +316,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				}
 			}
 		}
+
+		activateEquippedItems();
 	}
 
 	@Override
@@ -495,8 +502,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				item.collect( backpack );
 				return false;
 			}
-
-
 		}
 
 		if(slot==Slot.ARTIFACT) {

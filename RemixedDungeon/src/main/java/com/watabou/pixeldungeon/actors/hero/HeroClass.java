@@ -118,14 +118,6 @@ public enum HeroClass implements CharModifier {
 
                 hero.belongings.setupFromJson(classDesc);
 
-                if(hero.belongings.ring1!=null) {
-                    hero.belongings.ring1.activate(hero);
-                }
-
-                if(hero.belongings.ring2!=null) {
-                    hero.belongings.ring2.activate(hero);
-                }
-
                 if (classDesc.has("quickslot")) {
                     int slot = 0;
                     JSONArray quickslots = classDesc.getJSONArray("quickslot");

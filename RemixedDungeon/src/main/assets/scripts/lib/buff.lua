@@ -4,6 +4,8 @@
 --- DateTime: 24.03.19 18:35
 ---
 
+local RPD = require "scripts/lib/commonClasses"
+
 local serpent = require "scripts/lib/serpent"
 
 local buff = {}
@@ -27,7 +29,9 @@ function buff.saveData(self)
     return serpent.dump(self.data or {})
 end
 
-function buff.loadData(self, _, str)
+function buff.loadData(self, buff, str)
+    print(str)
+
     local _,data = serpent.load(str)
     self.data = data or {}
 end

@@ -38,9 +38,6 @@ public class CustomItem extends EquipableItem {
     private LuaScript script;
     private int price;
 
-    @Packable
-    private boolean activated = false;
-
     @Keep
     public CustomItem() {
     }
@@ -99,18 +96,12 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public void activate(Char ch) {
-        if(!activated) {
-            script.run("activate", ch);
-            activated = true;
-        }
+        script.run("activate", ch);
     }
 
     @Override
     public void deactivate(Char ch) {
-        if(activated) {
-            script.run("deactivate", ch);
-            activated = false;
-        }
+        script.run("deactivate", ch);
     }
 
     @Override

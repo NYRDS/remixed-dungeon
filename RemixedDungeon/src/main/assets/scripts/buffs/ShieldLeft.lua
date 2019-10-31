@@ -11,6 +11,13 @@ local buff = require "scripts/lib/buff"
 
 return buff.init{
     icon = function(self, buff)
+
+        print("icon")
+
+        for k,v in pairs(self.data) do
+            print(k,v)
+        end
+
         if self.data.state then
             return 47
         end
@@ -25,7 +32,7 @@ return buff.init{
     end,
 
     attachTo = function(self, buff, target)
-        self.data.state = false
+        self.data.state = self.data.state or false
         return true
     end,
 
