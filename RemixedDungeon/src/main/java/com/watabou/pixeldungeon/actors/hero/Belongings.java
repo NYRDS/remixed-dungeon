@@ -59,7 +59,7 @@ import lombok.var;
 
 public class Belongings implements Iterable<Item>, Bundlable {
 
-	public static final int BACKPACK_SIZE	= 19;
+	public static final int BACKPACK_SIZE	= 18;
 	
 	private Char owner;
 	
