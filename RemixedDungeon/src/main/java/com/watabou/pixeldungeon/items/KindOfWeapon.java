@@ -17,9 +17,12 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 public class KindOfWeapon extends EquipableItem {
@@ -42,12 +45,8 @@ public class KindOfWeapon extends EquipableItem {
 	public int		MAX = 1;
 
 	@Override
-	public boolean doEquip( Hero hero ) {
-		
-		detachAll( hero.belongings.backpack );
-
-		return hero.belongings.equip(this, Belongings.Slot.WEAPON);
-
+	protected Belongings.Slot slot() {
+		return Belongings.Slot.WEAPON;
 	}
 
 	public int damageRoll(Hero owner ) {
@@ -71,5 +70,10 @@ public class KindOfWeapon extends EquipableItem {
 
 	public boolean goodForMelee() {
 		return true;
+	}
+
+	@Override
+	public void equippedCursed() {
+		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name());
 	}
 }

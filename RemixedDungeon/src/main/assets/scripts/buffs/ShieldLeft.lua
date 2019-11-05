@@ -8,12 +8,10 @@ local RPD  = require "scripts/lib/commonClasses"
 
 local buff = require "scripts/lib/buff"
 
+local shields = require "scripts/lib/shields"
 
 return buff.init{
     icon = function(self, buff)
-
-        print("icon")
-
         for k,v in pairs(self.data) do
             print(k,v)
         end
@@ -42,24 +40,28 @@ return buff.init{
             RPD.BuffIndicator:refreshHero()
         end
 
-        buff:spend(10/buff:level())
+        buff:spend(shields.rechargeTime(buff:level(),buff.target:effectiveSTR()))
     end,
 
     defenceProc = function(self, buff, enemy, damage)
-        if self.data.state then
-            RPD.topEffect(buff.target:getPos(),"shield_blocked")
+        if self.data.state then -- shield was ready
+            local lvl = buff:level()
 
-            RPD.playSound("body_armor.mp3")
 
-            self.data.state = false
-            RPD.BuffIndicator:refreshHero()
+            if math.random() < shields.blockChance(lvl, buff.target:effectiveSTR()) then
+                RPD.topEffect(buff.target:getPos(),"shield_blocked")
 
-            return damage / 2
-        else
-            RPD.topEffect(buff.target:getPos(),"shield_broken")
+                RPD.playSound("body_armor.mp3")
 
-            RPD.playSound("snd_shatter.mp3")
-            return damage / 1.2
+                self.data.state = false
+                RPD.BuffIndicator:refreshHero()
+
+                return math.max(damage - shields.blockDamage(lvl), 0)
+            else
+                RPD.topEffect(buff.target:getPos(),"shield_broken")
+                RPD.playSound("snd_shatter.mp3")
+            end
         end
+        return damage
     end
 }

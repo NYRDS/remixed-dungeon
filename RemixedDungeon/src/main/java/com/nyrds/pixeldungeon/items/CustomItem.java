@@ -84,14 +84,14 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public boolean doEquip(Hero hero) {
+    protected Belongings.Slot slot() {
         for(Belongings.Slot slot: Belongings.Slot.values()) {
             if (equipable.equalsIgnoreCase(slot.toString())) {
-                return hero.belongings.equip(this, slot);
+                return slot;
             }
         }
 
-        return false;
+        return Belongings.Slot.NONE;
     }
 
     @Override

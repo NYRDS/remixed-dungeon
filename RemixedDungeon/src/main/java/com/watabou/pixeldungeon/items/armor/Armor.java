@@ -81,12 +81,10 @@ public class Armor extends EquipableItem {
 	
 	private static final String GLYPH	= "glyph";
 
-	@Override
-	public boolean doEquip( Hero hero ) {
-		
-		detach( hero.belongings.backpack );
 
-		return hero.belongings.equip(this, Belongings.Slot.ARMOR);
+	@Override
+	protected Belongings.Slot slot() {
+		return Belongings.Slot.ARMOR;
 	}
 
 	@Override
@@ -273,6 +271,11 @@ public class Armor extends EquipableItem {
 		if(itemDesc.has(GLYPH)) {
 			glyph = Util.byNameFromList(Glyph.glyphs, itemDesc.getString(GLYPH));
 		}
+	}
+
+	@Override
+	public void equippedCursed() {
+		GLog.n( Game.getVar(R.string.Armor_EquipCursed), name() );
 	}
 
 	public static abstract class Glyph implements Bundlable, NamedEntityKind {

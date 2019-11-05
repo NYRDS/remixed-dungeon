@@ -1,9 +1,12 @@
 package com.watabou.pixeldungeon.items.rings;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -15,10 +18,8 @@ public class Artifact extends EquipableItem {
 	protected ArtifactBuff buff;
 
 	@Override
-	public boolean doEquip(Hero hero) {
-		setUser(hero);
-
-		return hero.belongings.equip(this, Belongings.Slot.ARTIFACT);
+	protected Belongings.Slot slot() {
+		return Belongings.Slot.ARTIFACT;
 	}
 
 	@Override
@@ -53,5 +54,10 @@ public class Artifact extends EquipableItem {
 
 	public int getColor() {
 		return 0;
+	}
+
+	@Override
+	public void equippedCursed() {
+		GLog.n(Utils.format(Game.getVar(R.string.Ring_Info2), name()));
 	}
 }

@@ -36,7 +36,6 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
-import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -66,6 +65,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public Bag backpack;
 
 	public enum Slot{
+		NONE,
 		WEAPON,
 		LEFT_HAND,
 		ARMOR,
@@ -435,69 +435,29 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean equip(EquipableItem item, Slot slot) {
+		if(slot==Slot.NONE) {
+			return false;
+		}
 
 		if(slot==Slot.WEAPON) {
 			if (weapon == null || weapon.doUnequip( owner, true )) {
-
 				weapon = (KindOfWeapon) item;
-				weapon.activate( owner );
-
-				QuickSlot.refresh();
-
-				owner.updateSprite();
-
-				weapon.cursedKnown = true;
-				if (weapon.cursed) {
-					ItemUtils.equipCursed( owner );
-					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), item.name() );
-				}
-
-				owner.spendAndNext(weapon.time2equip( owner ));
-				return true;
 			} else {
-				item.collect( backpack );
 				return false;
 			}
 		}
 
 		if(slot==Slot.ARMOR) {
 			if (armor == null || armor.doUnequip( owner, true, false )) {
-
 				armor = (Armor) item;
-
-				armor.cursedKnown = true;
-				if (armor.cursed) {
-					ItemUtils.equipCursed( owner );
-					GLog.n( Game.getVar(R.string.Armor_EquipCursed), item.name() );
-				}
-
-				owner.updateSprite();
-
-				owner.spendAndNext(  2 * armor.time2equip( owner ) );
-				return true;
 			} else {
-				item.collect( backpack );
 				return false;
 			}
 		}
 
 		if(slot==Slot.LEFT_HAND) {
 			if (leftHand == null || leftHand.doUnequip( owner, true, false )) {
-
-				leftHand = (EquipableItem) item.detach(backpack);
-
-				leftHand.cursedKnown = true;
-				if (leftHand.cursed) {
-					ItemUtils.equipCursed( owner );
-					GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), item.name() );
-				}
-
-				leftHand.activate(owner);
-
-				owner.updateSprite();
-
-				owner.spendAndNext(  leftHand.time2equip( owner ) );
-				return true;
+				leftHand = item;
 			} else {
 				item.collect( backpack );
 				return false;
@@ -506,34 +466,33 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		if(slot==Slot.ARTIFACT) {
 			if (ring1 != null && ring2 != null) {
-
 				GLog.w(Game.getVar(R.string.Artifact_Limit));
 				return false;
-
 			} else {
-
 				EquipableItem slot_item = (EquipableItem) item.detach(backpack);
-
 				if (ring1 == null) {
 					ring1 = slot_item ;
 				} else {
 					ring2 = slot_item ;
 				}
-
-				slot_item.activate(owner);
-
-				slot_item .cursedKnown = true;
-				if (slot_item .cursed) {
-					ItemUtils.equipCursed(owner);
-					GLog.n(Utils.format(Game.getVar(R.string.Ring_Info2), item.name()));
-				}
-				owner.spendAndNext(Artifact.TIME_TO_EQUIP);
-				return true;
 			}
-
 		}
 
-		return false;
+		item.detach(backpack);
+		item.activate(owner);
+
+		item.cursedKnown = true;
+		if(item.cursed) {
+			ItemUtils.equipCursed( owner );
+			item.equippedCursed();
+		}
+
+		QuickSlot.refresh();
+		owner.updateSprite();
+
+		owner.spendAndNext(item.time2equip(owner));
+
+		return true;
 	}
 
 }

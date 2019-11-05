@@ -77,11 +77,14 @@ public abstract class EquipableItem extends Item {
 		return actions;
 	}
 
-	public abstract boolean doEquip(Hero hero );
+	public boolean doEquip(Hero hero ) {
+		setUser(hero);
+		return hero.getBelongings().equip(this,slot());
+	}
 
 	public void activate(Char ch) {}
 	public void deactivate(Char ch) {}
-	
+
 	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
 		
 		if (cursed) {
@@ -122,4 +125,11 @@ public abstract class EquipableItem extends Item {
 	public String getVisualName() {
 		return getClassName();
 	}
+
+	protected abstract Belongings.Slot slot();
+
+	public void equippedCursed() {
+		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name() );
+	}
+
 }

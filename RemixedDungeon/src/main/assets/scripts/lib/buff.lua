@@ -44,6 +44,13 @@ function buff.restoreData(self)
     return self.data or {}
 end
 
+function buff.setProperty(self, buff, key, value)
+    self.data[key] = value
+end
+
+function buff.getProperty(self, buff, key)
+    return self.data[key]
+end
 
 function buff.defaultDesc()
     return {
