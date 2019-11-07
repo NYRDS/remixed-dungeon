@@ -4,24 +4,46 @@
 --- DateTime: 11/5/19 11:02 PM
 ---
 
+local RPD = require "scripts/lib/commonClasses"
+
 local shields = {}
 
 local strForLevel    = {12,  14, 16, 18}
 local chanceForLevel = {.3, .4, .4, .5}
 local blockForLevel  = {4,   6,  8,  10}
 
+---@param lvl number
 shields.blockDamage = function (lvl)
     return blockForLevel[lvl]
 end
 
+---@param lvl number
+---@param str number
 shields.blockChance = function (lvl, str)
     local weightPenalty = math.max(str - strForLevel[lvl],0)
     return chanceForLevel[lvl] * (1 - weightPenalty * 0.1)
 end
 
+---@param lvl number
+---@param str number
 shields.rechargeTime = function(lvl, str)
     local weightPenalty = math.max(str - strForLevel[lvl],0)
     return 5 + weightPenalty
+end
+
+---@param baseDesc string
+---@param lvl number
+---@param str number
+shields.info = function(baseDesc, str, lvl)
+
+    local infoTemplate = RPD.textById("ShieldInfoTemplate")
+
+    return RPD.textById(baseDesc) .. "\n\n" ..
+            string.format(infoTemplate,
+                          shields.blockDamage(lvl),
+                          shields.blockChance(lvl,str) * 100,
+                          shields.rechargeTime(lvl,str)
+            )
 end
 
 return shields

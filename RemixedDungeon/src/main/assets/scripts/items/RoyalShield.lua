@@ -9,6 +9,8 @@ local RPD = require "scripts/lib/commonClasses"
 
 local item = require "scripts/lib/item"
 
+local shields = require "scripts/lib/shields"
+
 return item.init{
     desc  = function (self, item)
 
@@ -28,5 +30,12 @@ return item.init{
 
     deactivate = function(self, item, hero)
         RPD.removeBuff(hero,"ShieldLeft")
+    end,
+
+    info = function(self, item)
+        local hero = RPD.Dungeon.hero --TODO fix me
+        local str = hero:effectiveSTR()
+
+        return shields.info("RoyalShield_desc", str, 4)
     end
 }

@@ -212,4 +212,9 @@ public class CustomItem extends EquipableItem {
     public boolean isLevelKnown() {
         return identified;
     }
+
+    @Override
+    public String desc() {
+        return StringsManager.maybeId(script.runOptional("info",info).checkjstring());
+    }
 }

@@ -60,7 +60,8 @@ public class AppodealAdapter {
                 AppodealNetworks.CHARTBOOST,
                 AppodealNetworks.MY_TARGET,
                 AppodealNetworks.TAPJOY,
-                AppodealNetworks.INMOBI
+                AppodealNetworks.INMOBI,
+                AppodealNetworks.SMAATO
 
         };
 
