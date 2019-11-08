@@ -74,6 +74,10 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 			return false;
 		}
 
+		if(Dungeon.level.distance(getPos(), enemy.getPos()) >= skillLevel()) {
+			return false;
+		}
+
 		Ballistica.cast(getPos(), enemy.getPos(), true, false);
 
 		for (int i = 1; i < skillLevel(); i++) {
