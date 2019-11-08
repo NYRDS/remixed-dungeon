@@ -1774,9 +1774,9 @@ public class Hero extends Char {
 
 		Char controlTarget = CharsList.getById(controlTargetId);
 		if(controlTarget.getId() == EntityIdSource.INVALID_ID) {
-			EventCollector.logException("invalid control target");
-			setControlTarget(this);
-			return this;
+            EventCollector.logException("invalid control target");
+            controlTargetId = getId();
+            return this;
 		}
 
 		return controlTarget;
