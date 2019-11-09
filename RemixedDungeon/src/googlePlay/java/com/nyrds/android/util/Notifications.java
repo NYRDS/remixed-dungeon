@@ -22,7 +22,7 @@ public class Notifications {
         Notifications.createNotificationChannel(channelId);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(Game.instance(), channelId)
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.notification_ic)
                 .setContentTitle(title)
                 .setContentText(text)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(text))
