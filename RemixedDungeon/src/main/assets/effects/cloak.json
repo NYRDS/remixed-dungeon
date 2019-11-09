@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/cloak.png",
+  "width"  : 32,
+  "height" : 32,
+  "anim"   : { "fps" : 15,  "looped" : false,    "frames" : [0,1,2,3,3,3] }
+}

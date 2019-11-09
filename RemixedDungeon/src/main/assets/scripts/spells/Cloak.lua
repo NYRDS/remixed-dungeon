@@ -24,6 +24,7 @@ return spell.init{
         }
     end,
     cast = function(self, spell, caster, cell)
+        RPD.topEffect(caster:getPos(),"cloak")
         local duration = caster:skillLevel() * 5
 
         if caster:visibleEnemies() > 0 then
