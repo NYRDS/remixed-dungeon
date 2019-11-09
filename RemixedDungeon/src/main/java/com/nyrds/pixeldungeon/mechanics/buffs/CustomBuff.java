@@ -9,8 +9,10 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaTable;
 
 public class CustomBuff extends Buff {
@@ -25,6 +27,8 @@ public class CustomBuff extends Buff {
 
     private LuaScript script;
 
+    @Nullable
+    private Item source;
 
     @Keep
     public CustomBuff() {
@@ -139,5 +143,13 @@ public class CustomBuff extends Buff {
     @Override
     public boolean dontPack() {
         return script.runOptional("dontPack", false).checkboolean();
+    }
+
+    public Item getSource() {
+        return source;
+    }
+
+    public void setSource(Item source) {
+        this.source = source;
     }
 }

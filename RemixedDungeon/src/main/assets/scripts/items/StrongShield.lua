@@ -11,31 +11,20 @@ local item = require "scripts/lib/item"
 
 local shields = require "scripts/lib/shields"
 
-return item.init{
-    desc  = function (self, item)
+local shieldLevel = 3
+local shieldDesc  = "StrongShield_desc"
 
-        return {
-            image         = 2,
-            imageFile     = "items/shields.png",
-            name          = "StrongShield_name",
-            info          = "StrongShield_desc",
-            price         = 20,
-            equipable     = "left_hand"
-        }
-    end,
+local baseDesc = shields.makeShield(shieldLevel,shieldDesc)
 
-    activate = function(self, item, hero)
-        RPD.affectBuff(hero,"ShieldLeft", 2):level(2)
-    end,
+baseDesc.desc = function (self, item)
+    return {
+        image         = 2,
+        imageFile     = "items/shields.png",
+        name          = "StrongShield_name",
+        info          = shieldDesc,
+        price         = 20 * shieldLevel,
+        equipable     = "left_hand"
+    }
+end
 
-    deactivate = function(self, item, hero)
-        RPD.removeBuff(hero,"ShieldLeft")
-    end,
-
-    info = function(self, item)
-        local hero = RPD.Dungeon.hero --TODO fix me
-        local str = hero:effectiveSTR()
-
-        return shields.info("StrongShield_desc", str, 2)
-    end
-}
+return item.init(baseDesc)

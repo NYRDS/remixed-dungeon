@@ -56,7 +56,7 @@ return buff.init{
                 self.data.state = false
                 RPD.BuffIndicator:refreshHero()
 
-                return math.max(damage - shields.blockDamage(lvl), 0)
+                return math.max(damage - shields.blockDamage(lvl,buff:getSource():level()), 0)
             else
                 RPD.topEffect(buff.target:getPos(),"shield_broken")
                 RPD.playSound("snd_shatter.mp3")
