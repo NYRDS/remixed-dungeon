@@ -11,6 +11,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -49,6 +50,10 @@ public class JsonHelper {
 		} catch (FileNotFoundException e) {
 			return new JSONObject();
 		}
+	}
+
+	public static JSONObject readJsonFromString(final String in) throws JSONException {
+		return readJsonFromStream(new ByteArrayInputStream(in.getBytes()));
 	}
 
 	@NotNull

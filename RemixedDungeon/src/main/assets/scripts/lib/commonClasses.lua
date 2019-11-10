@@ -279,6 +279,18 @@ local RPD = {
         local object = LevelObjectsFactory:objectByName(objectClass)
         object:setPos(cell)
         Dungeon.level:addLevelObject(object)
+        return object
+    end,
+
+    createLevelObject = function(desc, cell)
+        local json = require("scripts/lib/json")
+        desc.x = Dungeon.level:cellX(cell)
+        desc.y = Dungeon.level:cellY(cell)
+
+        local object = LevelObjectsFactory:createObject(Dungeon.level, json.encode(desc))
+
+        Dungeon.level:addLevelObject(object)
+        return object
     end,
 
     forCellsAround = function(cell, action)

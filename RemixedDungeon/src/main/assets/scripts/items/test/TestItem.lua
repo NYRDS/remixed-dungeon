@@ -9,6 +9,12 @@ local RPD = require "scripts/lib/commonClasses"
 
 local item = require "scripts/lib/item"
 
+local candle =
+{
+    kind="Deco",
+    object_desc="candle"
+}
+
 return item.init{
     desc  = function (self, item)
 
@@ -44,6 +50,8 @@ return item.init{
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
+
+            RPD.createLevelObject(candle, cell)
         end
     end,
 

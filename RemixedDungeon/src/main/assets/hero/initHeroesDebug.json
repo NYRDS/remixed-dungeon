@@ -20,7 +20,7 @@
         "level": 10
       },
       {
-        "kind": "ScrollOfCurse",
+        "kind": "test/TestItem",
         "quantity": 100
       },
       {

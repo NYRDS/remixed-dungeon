@@ -55,7 +55,7 @@ public class Torch extends Item {
 	@Override
 	public void execute( Hero hero, String action ) {
 		
-		if (action == AC_LIGHT) {
+		if (action.equals(AC_LIGHT)) {
 			
 			hero.spend( TIME_TO_LIGHT );
 			hero.busy();

@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.levels.Level;
@@ -55,6 +56,11 @@ public class LevelObjectsFactory {
 
 	public static boolean isValidObjectClass(String objectClass) {
 		return mObjectsList.containsKey(objectClass);
+	}
+
+	@LuaInterface
+	public static LevelObject createObject(Level level, String jsonDesc) throws JSONException {
+		return createObject(level, JsonHelper.readJsonFromString(jsonDesc));
 	}
 
 	public static LevelObject createObject(Level level, JSONObject desc) throws JSONException {
