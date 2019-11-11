@@ -126,7 +126,11 @@ public abstract class EquipableItem extends Item {
 		return getClassName();
 	}
 
-	protected abstract Belongings.Slot slot();
+	public abstract Belongings.Slot slot();
+
+	public Belongings.Slot blockSlot() {
+		return Belongings.Slot.NONE;
+	}
 
 	public void equippedCursed() {
 		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name() );

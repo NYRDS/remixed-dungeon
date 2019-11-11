@@ -52,7 +52,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import lombok.var;
 
@@ -69,8 +71,12 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		WEAPON,
 		LEFT_HAND,
 		ARMOR,
-		ARTIFACT
+		ARTIFACT,
+		LEFT_ARTIFACT
 	}
+
+	public Set<Slot> blockedSlots = new HashSet<>();
+
 
 	@Packable
 	public KindOfWeapon weapon = null;
@@ -113,6 +119,19 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		activateEquippedItems();
 	}
 
+	private void blockSlots() {
+		blockedSlots.clear();
+		var itemIterator = iterator();
+
+		while (itemIterator.hasNextEquipped()) {
+			EquipableItem item = (EquipableItem) itemIterator.next();
+
+			if(item!=null){
+				blockedSlots.add(item.blockSlot());
+			}
+		}
+	}
+
 	private void activateEquippedItems() {
 		var itemIterator = iterator();
 
@@ -122,6 +141,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				item.activate(owner);
 			}
 		}
+		blockSlots();
 	}
 
 	public boolean isEquipped(Item item) {
@@ -240,13 +260,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 		}
 
-		var itemIterator = iterator();
-
-		while (itemIterator.hasNextEquipped()) {
-			EquipableItem item = (EquipableItem) itemIterator.next();
-			item.cursed = false;
-			item.activate(owner);
-		}
+		uncurseEquipped();
+		activateEquippedItems();
 	}
 	
 	public int charge( boolean full) {
@@ -427,6 +442,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		while (itemIterator.hasNextEquipped()) {
 			if(itemIterator.next()==item) {
 				itemIterator.remove();
+				blockSlots();
 				return true;
 			}
 		}
@@ -434,8 +450,34 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return false;
 	}
 
+	public Item itemBySlot(Belongings.Slot slot) {
+		switch (slot) {
+			case NONE:
+				return null;
+			case WEAPON:
+				return weapon;
+			case LEFT_HAND:
+				return leftHand;
+			case ARMOR:
+				return armor;
+			case ARTIFACT:
+				return ring1 !=null?ring1:ring2;
+		}
+		return null;
+	}
+
 	public boolean equip(EquipableItem item, Slot slot) {
 		if(slot==Slot.NONE) {
+			return false;
+		}
+
+		if(blockedSlots.contains(slot)) {
+			GLog.w(Game.getVar(R.string.Belongings_SlotBlocked));
+			return false;
+		}
+
+		if(itemBySlot(item.blockSlot())!=null) {
+			GLog.w(Game.getVar(R.string.Belongings_SlotWillBecomeBlocked));
 			return false;
 		}
 
@@ -487,6 +529,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			item.equippedCursed();
 		}
 
+		blockSlots();
 		QuickSlot.refresh();
 		owner.updateSprite();
 

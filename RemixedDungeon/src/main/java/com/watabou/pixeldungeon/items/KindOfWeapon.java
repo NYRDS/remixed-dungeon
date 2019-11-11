@@ -45,7 +45,7 @@ public class KindOfWeapon extends EquipableItem {
 	public int		MAX = 1;
 
 	@Override
-	protected Belongings.Slot slot() {
+	public Belongings.Slot slot() {
 		return Belongings.Slot.WEAPON;
 	}
 

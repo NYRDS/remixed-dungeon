@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.pixeldungeon.actors.hero.Belongings;
+
 public class Polearm extends SpecialWeapon {
 
 	{
@@ -15,5 +17,10 @@ public class Polearm extends SpecialWeapon {
 	@Override
 	public boolean isFliesStraight() {
 		return true;
+	}
+
+	@Override
+	public Belongings.Slot blockSlot() {
+		return Belongings.Slot.LEFT_HAND;
 	}
 }

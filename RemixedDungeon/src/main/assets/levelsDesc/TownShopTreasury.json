@@ -37,5 +37,9 @@
     "Spear": 1,
     "CurareDart": 1,
     "Dagger": 1
+  },
+  "SHIELDS": {
+    "categoryChance": 5,
+    "WoodenShield": 1
   }
 }

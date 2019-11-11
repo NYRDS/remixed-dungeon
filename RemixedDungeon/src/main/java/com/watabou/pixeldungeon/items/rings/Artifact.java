@@ -11,14 +11,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.Nullable;
 
 public class Artifact extends EquipableItem {
-
-	public static final float TIME_TO_EQUIP = 1f;
-
 	@Nullable
 	protected ArtifactBuff buff;
 
 	@Override
-	protected Belongings.Slot slot() {
+	public Belongings.Slot slot() {
 		return Belongings.Slot.ARTIFACT;
 	}
 

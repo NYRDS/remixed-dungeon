@@ -11,6 +11,8 @@ class ItemPlaceholder extends Item {
     public static final int BODY = 1;
     public static final int LEFT_HAND = 2;
     public static final int ARTIFACT = 3;
+    public static final int HELMET   = 5;
+    public static final int LOCKED   = 6;
 
     public ItemPlaceholder(int image ) {
         this.imageFile = "items/placeholders.png";

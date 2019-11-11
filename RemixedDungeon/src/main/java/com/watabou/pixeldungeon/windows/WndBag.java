@@ -219,15 +219,31 @@ public class WndBag extends WndTabbed {
 		GameScene.show(new WndBag(stuff, lastBag, listener, mode, title));
 	}
 
+
+	private void placeEquipped(Item item,Belongings.Slot slot, int image) {
+		if(item!=null) {
+			placeItem(item);
+			return;
+		}
+
+		if(stuff.blockedSlots.contains(slot)) {
+			placeItem(new ItemPlaceholder(ItemPlaceholder.LOCKED));
+			return;
+		}
+
+		placeItem(new ItemPlaceholder(image));
+
+	}
+
 	private void placeItems(Bag container) {
 		
 		// Equipped items
 		if(stuff.getOwner() instanceof Hero) {
-			placeItem(stuff.weapon    != null ? stuff.weapon    : new ItemPlaceholder(ItemPlaceholder.RIGHT_HAND));
-			placeItem(stuff.armor     != null ? stuff.armor     : new ItemPlaceholder(ItemPlaceholder.BODY));
-			placeItem(stuff.leftHand  != null ? stuff.leftHand  : new ItemPlaceholder(ItemPlaceholder.LEFT_HAND));
-			placeItem(stuff.ring1     != null ? stuff.ring1     : new ItemPlaceholder(ItemPlaceholder.ARTIFACT));
-			placeItem(stuff.ring2     != null ? stuff.ring2     : new ItemPlaceholder(ItemPlaceholder.ARTIFACT));
+			placeEquipped(stuff.weapon,   Belongings.Slot.WEAPON,    ItemPlaceholder.RIGHT_HAND);
+			placeEquipped(stuff.armor,    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
+			placeEquipped(stuff.leftHand, Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
+			placeEquipped(stuff.ring1,    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
+			placeEquipped(stuff.ring2,    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
 		}
 
 		// Unequipped items

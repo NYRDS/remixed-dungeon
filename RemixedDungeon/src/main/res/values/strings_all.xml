@@ -2553,4 +2553,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="RoyalShield_desc">A royal full metal shield. Yes, it\'s heavy, but only it can provide you better protection.</string>
 
   <string name="ShieldInfoTemplate">This shield will block up to %d of incoming damage.  With %d %% chance. It will take %3.1f seconds to recover after successful block.</string>
+    <string name="Belongings_SlotBlocked">Slot blocked --add real text here</string>
+    <string name="Belongings_SlotWillBecomeBlocked">Slot will become blocked -- add real text here</string>
 </resources>

@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Longsword extends MeleeWeapon {
@@ -34,5 +35,10 @@ public class Longsword extends MeleeWeapon {
 	@Override
 	public String desc() {
 		return Game.getVar(R.string.Longsword_Info);
+	}
+
+	@Override
+	public Belongings.Slot blockSlot() {
+		return Belongings.Slot.LEFT_HAND;
 	}
 }
