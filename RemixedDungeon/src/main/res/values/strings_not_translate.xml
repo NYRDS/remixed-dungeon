@@ -59,5 +59,7 @@
     <string name="town_deco_bar_name" translatable="false">Bar</string>
     <string name="town_deco_bar_desc" translatable="false">This bar contain some alcohol</string>
 
+    <string name="Belongings_SlotBlocked" translatable="false">Slot blocked --add real text here</string>
+    <string name="Belongings_SlotWillBecomeBlocked" translatable="false">Slot will become blocked -- add real text here</string>
 
 </resources>
