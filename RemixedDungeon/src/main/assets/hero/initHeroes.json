@@ -20,27 +20,6 @@
     "items": [
       {
         "kind": "Ration"
-      },
-      {
-        "kind": "Tomahawk"
-      },
-      {
-        "kind": "Tomahawk2"
-      },
-      {
-        "kind": "WoodenShield"
-      },
-      {
-        "kind": "ToughShield"
-      },
-      {
-        "kind": "StrongShield"
-      },
-      {
-        "kind": "RoyalShield"
-      },
-      {
-        "kind": "Claymore"
       }
     ]
   },

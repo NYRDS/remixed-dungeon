@@ -67,8 +67,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private Map<String, String>    body_types = new HashMap<>();
 
 	private static final String[] layersOrder = {
-		LAYER_RIGHT_ITEM_BACK,
-		LAYER_LEFT_ITEM_BACK,
+		//LAYER_RIGHT_ITEM_BACK,
+		//LAYER_LEFT_ITEM_BACK,
 		LAYER_BODY,
 		LAYER_COLLAR,
 		LAYER_HEAD,
