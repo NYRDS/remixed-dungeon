@@ -2524,4 +2524,8 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="Potion_Colors_10">indigo</string>
   <string name="Potion_Colors_11">argentée</string>
   <string name="town_deco_stone_wall_broken_name">Mur effondré</string>
+  <string name="town_deco_stone_wall_broken_desc">Mur d\'anciennes pierres en mauvais état</string>
+  <string name="Challenges_Names_6">Runes interdites</string>
+  <string name="Challenges_Names_7">Pacifisme</string>
+  <string name="town_deco_crossroad_name">Panneau de direction</string>
 </resources>

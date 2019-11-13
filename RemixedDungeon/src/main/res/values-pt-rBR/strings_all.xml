@@ -2214,6 +2214,7 @@ Parede
   <string name="town_deco_stock_name">Estoque</string>
   <string name="town_deco_stock_desc">Suprimentos de comida são mantidos aqui, assim como um monte de lixo de todos os tipos e cores.</string>
   <string name="town_deco_barrel_name">Barril</string>
+  <string name="town_deco_barrel_desc">Um barril regular, não esta nas melhores condições também.</string>
   <string name="town_deco_hay_name">Feno</string>
   <string name="town_deco_hay_desc">Uma pequena pilha de feno agradavelmente cheiroso.</string>
   <string name="town_deco_firewood_name">Lenha</string>
@@ -2270,6 +2271,10 @@ Parede
   <string name="town_deco_library_books_desc">Ainda melhor que os livros do calabouço.</string>
   <string name="town_deco_wallpaper_name">Papel de parede</string>
   <string name="town_deco_wallpaper_desc">Uma ótima opção de decoração para este lugar.</string>
+  <string name="town_deco_stones_name">Pedras</string>
+  <string name="town_deco_stones_desc">Apenas uma pilha de pedras.</string>
+  <string name="town_deco_fireplace_name">Lareira</string>
+  <string name="town_deco_fireplace_desc">Ótimo para aquecer em um local frio como este.</string>
   <string name="Welcome_Text_28_6">
     remix.28.6\n
     - Mecânicas do Jogo:\n
@@ -2292,6 +2297,10 @@ Parede
   <string name="Badges_MonsterSlain5">1000 inimigos mortos</string>
   <string name="Spells_NotInOwnBody">Você não pode %s enquanto sua alma se separa do corpo.</string>
   <string name="WndHero_Satiety">Saciedade</string>
+  <string name="Welcome_Text_29">
+    remix.29\n
+    - Renovação da Cidade!\n
+    </string>
   <string name="Ring_Gems_0">diamante</string>
   <string name="Ring_Gems_1">opala</string>
   <string name="Ring_Gems_2">granada</string>
@@ -2508,5 +2517,28 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="Potion_Colors_9">marron escuro</string>
   <string name="Potion_Colors_10">azul escuro</string>
   <string name="Potion_Colors_11">prata</string>
+  <string name="Welcome_Text_29_1">
+    remix.29.1\n
+    - Modding:\n
+    -- Taxa de spawn dos itens modificáveis\n
+    - Traduções::\n
+    -- Tradução húngara adicionada\n
+    - Defeitos consertados\n
+   </string>
   <string name="town_deco_stone_wall_broken_name">Parede quebrada</string>
+  <string name="town_deco_stone_wall_broken_desc">Velho muro de pedra, em mau estado</string>
+  <string name="Challenges_Names_6">Runas Proibidas</string>
+  <string name="Challenges_Names_7">Pacifismo</string>
+  <string name="Welcome_Text_29_2">
+    remix.29.2\n
+    - Jogabilidade:\n
+    -- Novos desafios:\n
+    --- Runas Proibidas\n
+    --- Pacifismo\n
+    - Modding:\n
+    -- Artefatos Customizados\n
+    - Defeitos consertados\n
+    </string>
+  <string name="town_deco_crossroad_name">Sinal de encruzilhada</string>
+  <string name="town_deco_crossroad_desc">Pilar de madeira bruto com texto em placas em forma de flecha, desbotado há muito tempo, provavelmente devido a condições climáticas adversas.</string>
 </resources>

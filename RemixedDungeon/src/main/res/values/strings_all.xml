@@ -2539,10 +2539,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     </string>
   <string name="town_deco_crossroad_name">Crossroads sign</string>
   <string name="town_deco_crossroad_desc">Crude wooden pillar with arrow shaped plates text on which was faded long ago probably due to harsh weather conditions.</string>
-
   <string name="ShieldBuffReady_Name">Ready</string>
   <string name="ShieldBuffNotReady_Name">Not Ready</string>
-
   <string name="WoodenShield_name">Wooden Shield</string>
   <string name="WoodenShield_desc">A crude made wooden shield is the simplest shield available. It is round and can block some damage from time to time.</string>
   <string name="ToughShield_name">Tough Shield</string>
@@ -2551,7 +2549,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="StrongShield_desc">This rectangular shield is made of bronze and decorated with colored cloth. It is significantly heavier, but can block much more damage.</string>
   <string name="RoyalShield_name">Royal Shield</string>
   <string name="RoyalShield_desc">A full metal shield. Yes, it\'s heavy, but only it can provide you the best protection.</string>
-
   <string name="ShieldInfoTemplate">This shield will block up to %d of incoming damage.  With %d %% chance. It will take %3.1f seconds to recover after successful block.</string>
-
 </resources>

@@ -2278,7 +2278,7 @@
   <string name="town_deco_glass_stained_name">Витраж</string>
   <string name="town_deco_glass_stained_desc">Похож автор этого витража не плохо постарался.</string>
   <string name="town_deco_glass_name">Широкое окно</string>
-  <string name="town_deco_glass_desc">Это окно гире остальных и уж точно пропускает внутрь больше света.</string>
+  <string name="town_deco_glass_desc">Это окно шире остальных и уж точно пропускает внутрь больше света.</string>
   <string name="town_deco_counter_name">Стойка</string>
   <string name="town_deco_counter_desc">Позволяет сохранить приличную дистанцию между тобой и тем кто стоит за ней.</string>
   <string name="town_deco_library_books_name">Периодика.</string>
