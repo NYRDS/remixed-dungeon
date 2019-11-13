@@ -2570,6 +2570,21 @@ remix.28.5\n
     -- 部分贴图\n
     - 修复了bug\n
     </string>
-  <string name="town_deco_crossroad_name">路口告示牌</string>
+  <string name="town_deco_crossroad_name">路口指示牌</string>
   <string name="town_deco_crossroad_desc">粗糙的木柱，上面刻有模糊的箭头形文字，可能是由于恶劣的气候而褪色了。</string>
+
+  <string name="ShieldBuffReady_Name">准备完毕</string>
+  <string name="ShieldBuffNotReady_Name">还未准备</string>
+
+  <string name="WoodenShield_name">木制盾牌</string>
+  <string name="WoodenShield_desc">粗糙的木制盾牌是最简单的盾牌。它的形状是圆的，有时可以阻挡一些伤害。</string>
+  <string name="ToughShield_name">皮革圆盾</string>
+  <string name="ToughShield_desc">这个盾牌看起来比木头硬一些。它由坚硬的木头和皮革制成，可以阻止更多的伤害。</string>
+  <string name="StrongShield_name">青铜方盾</string>
+  <string name="StrongShield_desc">这个方形盾牌是以青铜打造，并用彩布装饰。它明显更重，也明显可以阻止更多的伤害。</string>
+  <string name="RoyalShield_name">皇家鸢形盾</string>
+  <string name="RoyalShield_desc">全金属制盾牌。因此，它很重，但只有它能给你最好的保护。</string>
+
+  <string name="ShieldInfoTemplate">这个盾牌最多可以格挡%d伤害。  格挡几率为%d %% 。 成功格挡后需要%3.1f个回合来恢复。</string>
+
 </resources>
