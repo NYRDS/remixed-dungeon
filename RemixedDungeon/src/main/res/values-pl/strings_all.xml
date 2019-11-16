@@ -2549,14 +2549,30 @@ remix.29.1
   <string name="Challenges_Names_6">Zapomniane runy</string>
   <string name="Challenges_Names_7">Pacyfizm</string>
   <string name="Welcome_Text_29_2">
-remix.29.2/n
--Rozgrywka:/n
---Nowe wyzwania
----Zapomniane runy:/n
----Pacyfizm:/n
--Modowanie
---Niestandardowe artefakty/n
--Naprawy błędów/n</string>
+remix.29.2\n
+-Rozgrywka:\n
+--Nowe wyzwania\n
+---Zapomniane runy:\n
+---Pacyfizm:\n
+-Modowanie\n
+--Niestandardowe artefakty\n
+-Naprawy błędów\n
+</string>
   <string name="town_deco_crossroad_name">Tabliczka na rozdrożu </string>
   <string name="town_deco_crossroad_desc">Szorstki drewniany słup z tekstem w kształcie strzałek, na którym już dawno wyblakły, prawdopodobnie z powodu trudnych warunków pogodowych.</string>
+
+  <string name="ShieldBuffReady_Name">Gotowy</string>
+  <string name="ShieldBuffNotReady_Name">Nie gotowy</string>
+
+  <string name="WoodenShield_name">Drewniana Tarcza</string>
+  <string name="WoodenShield_desc">Drewniana tarcza jest najprostszą dostępną tarczą. Jest okrągłą i może zablokować niektóre ataki , czasami...</string>
+  <string name="ToughShield_name">Wytrzymała Tarcza</string>
+  <string name="ToughShield_desc">Ta tarcza wygląda na wytrzymalszą niż Drewniana Tarcza. Zrobioną ją z twardego drewna i skóry więc wytrzyma więcej.</string>
+  <string name="StrongShield_name">Potężna tarcza</string>
+  <string name="StrongShield_desc">Ta prostokątna tarcza jest wykonana z brązu i ozdobiona kolorową tkaniną. Jest znacznie cięższa, ale wytrzyma też zdecydowanie dłużej.</string>
+  <string name="RoyalShield_name">Królewska Tarcza</string>
+  <string name="RoyalShield_desc">W pełni metalowa tarcza. Tak, jest ciężka ale tylko w ona zapewni ci najlepszą ochronę.</string>
+
+  <string name="ShieldInfoTemplate">Ta tarcza zablokuje atak o sile %d z %d%% szansą.  Podniesienie gardy zajmie %3.1f sekund po udanym bloku.</string>
+
 </resources>
