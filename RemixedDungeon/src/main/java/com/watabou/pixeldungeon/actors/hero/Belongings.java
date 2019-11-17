@@ -52,9 +52,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Set;
+import java.util.Map;
 
 import lombok.var;
 
@@ -75,7 +75,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		LEFT_ARTIFACT
 	}
 
-	public Set<Slot> blockedSlots = new HashSet<>();
+	public Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
 
 
 	@Packable
@@ -127,7 +127,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			EquipableItem item = (EquipableItem) itemIterator.next();
 
 			if(item!=null){
-				blockedSlots.add(item.blockSlot());
+				blockedSlots.put(item.blockSlot(), item);
 			}
 		}
 	}
@@ -466,20 +466,22 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return null;
 	}
 
-	public boolean equip(EquipableItem item, Slot slot) {
+	public boolean equip(@NotNull EquipableItem item, Slot slot) {
 		if(slot==Slot.NONE) {
 			return false;
 		}
 
-		if(blockedSlots.contains(slot)) {
-			GLog.w(Game.getVar(R.string.Belongings_SlotBlocked));
+		Item blockingItem = blockedSlots.get(slot);
+
+		if(blockingItem==null) {
+			blockingItem = itemBySlot(item.blockSlot());
+		}
+
+		if(blockingItem!=null) {
+			GLog.w(Game.getVar(R.string.Belongings_CantWearBoth),item.name(),blockingItem.name());
 			return false;
 		}
 
-		if(itemBySlot(item.blockSlot())!=null) {
-			GLog.w(Game.getVar(R.string.Belongings_SlotWillBecomeBlocked));
-			return false;
-		}
 
 		if(slot==Slot.WEAPON) {
 			if (weapon == null || weapon.doUnequip( owner, true )) {
@@ -490,7 +492,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.ARMOR) {
-			if (armor == null || armor.doUnequip( owner, true, false )) {
+			if (armor == null || armor.doUnequip( owner, true)) {
 				armor = (Armor) item;
 			} else {
 				return false;
@@ -498,10 +500,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.LEFT_HAND) {
-			if (leftHand == null || leftHand.doUnequip( owner, true, false )) {
+			if (leftHand == null || leftHand.doUnequip( owner, true)) {
 				leftHand = item;
 			} else {
-				item.collect( backpack );
 				return false;
 			}
 		}

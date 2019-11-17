@@ -226,7 +226,7 @@ public class WndBag extends WndTabbed {
 			return;
 		}
 
-		if(stuff.blockedSlots.contains(slot)) {
+		if(stuff.blockedSlots.get(slot)!=null) {
 			placeItem(new ItemPlaceholder(ItemPlaceholder.LOCKED));
 			return;
 		}
@@ -254,7 +254,8 @@ public class WndBag extends WndTabbed {
 		}
 		
 		// Empty slots
-		int margin = stuff.getOwner() instanceof Hero ?  4 :  5;
+		//int margin = stuff.getOwner() instanceof Hero ?  4 :  5;
+		int margin = 5;
 		while (count - margin < container.size) {
 			placeItem( null );
 		}
