@@ -163,9 +163,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
-
-		getSprite().completeForce();
-
 		super.storeInBundle(bundle);
 
 		bundle.put(TAG_HP, hp());

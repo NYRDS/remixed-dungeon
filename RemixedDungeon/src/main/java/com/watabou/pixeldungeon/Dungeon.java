@@ -297,8 +297,6 @@ public class Dungeon {
         hero.viewDistance = hero.hasBuff(Light.class) ? Math.max(Level.MIN_VIEW_DISTANCE + 1, level.getViewDistance()) : level.getViewDistance();
 
         for(Mob mob : followers) {
-                mob.sprite().completeForce();
-
                 int cell = level.getEmptyCellNextTo(hero.getPos());
                 if (!level.cellValid(cell)) {
                     cell = hero.getPos();
