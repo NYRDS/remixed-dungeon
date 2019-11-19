@@ -2297,8 +2297,8 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Challenges_Names_1">İman benim zırhımdır</string>
   <string name="Challenges_Names_2">İlaç korkusu</string>
   <string name="Challenges_Names_3">Çorak topraklar</string>
-  <string name="Challenges_Names_4">Akıllı sürü</string>
-  <string name="Challenges_Names_5">Karanlığın içinde</string>
+  <string name="Challenges_Names_4">Sürü zekası</string>
+  <string name="Challenges_Names_5">Karanlığın içine</string>
   <string name="Hunger_Hungry_0">Acıkmaya başladın.</string>
   <string name="Hunger_Hungry_1">Acıkmaya başladın.</string>
   <string name="Hunger_Hungry_2">Acıkmaya başladın.</string>
@@ -2344,9 +2344,9 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Fire_Name_0">Işıltılı %s</string>
   <string name="Fire_Name_1">Işıltılı %s</string>
   <string name="Fire_Name_2">Işıltılı %s</string>
-  <string name="Horror_Name_0">Çirkin %s</string>
-  <string name="Horror_Name_1">Çirkin %s</string>
-  <string name="Horror_Name_2">Çirkin %s</string>
+  <string name="Horror_Name_0">Korkunç %s</string>
+  <string name="Horror_Name_1">Korkunç %s</string>
+  <string name="Horror_Name_2">Korkunç %s</string>
   <string name="Instability_Name_0">Dengesiz %s</string>
   <string name="Instability_Name_1">Dengesiz %s</string>
   <string name="Instability_Name_2">Dengesiz %s</string>
@@ -2405,7 +2405,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Scroll_Runes_6">ISAZ</string>
   <string name="Scroll_Runes_7">MANNAZ</string>
   <string name="Scroll_Runes_8">NAUDIZ</string>
-  <string name="Scroll_Runes_9">BERKANAN</string>
+  <string name="Scroll_Runes_9">BARKUNA</string>
   <string name="Scroll_Runes_10">ODAL</string>
   <string name="Scroll_Runes_11">TIWAZ</string>
   <string name="Scroll_Runes_12">ANSUZ</string>
@@ -2429,5 +2429,5 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Potion_Colors_9">kahverengi</string>
   <string name="Potion_Colors_10">çivit mavisi</string>
   <string name="Potion_Colors_11">gümüş rengi</string>
-  <string name="town_deco_stone_wall_broken_name">Kırılmış duvar.</string>
+  <string name="town_deco_stone_wall_broken_name">Kırık duvar</string>
 </resources>

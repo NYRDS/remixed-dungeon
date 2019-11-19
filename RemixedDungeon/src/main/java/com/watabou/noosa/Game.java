@@ -442,7 +442,19 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
             }
         }
 
-        update();
+        Game.elapsed = Game.timeScale * step * 0.001f;
+
+        synchronized (motionEvents) {
+            Touchscreen.processTouchEvents(motionEvents);
+            motionEvents.clear();
+        }
+        synchronized (keysEvents) {
+            Keys.processTouchEvents(keysEvents);
+            keysEvents.clear();
+        }
+
+        scene.update();
+        Camera.updateAll();
     }
 
     private void draw() {
@@ -466,22 +478,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.timeScale = 1f;
 
         syncAdsState();
-    }
-
-    private void update() {
-        Game.elapsed = Game.timeScale * step * 0.001f;
-
-        synchronized (motionEvents) {
-            Touchscreen.processTouchEvents(motionEvents);
-            motionEvents.clear();
-        }
-        synchronized (keysEvents) {
-            Keys.processTouchEvents(keysEvents);
-            keysEvents.clear();
-        }
-
-        scene.update();
-        Camera.updateAll();
     }
 
     public static void vibrate(int milliseconds) {

@@ -2583,4 +2583,5 @@ remix.28.5\n
   <string name="RoyalShield_name">皇家鸢形盾</string>
   <string name="RoyalShield_desc">全金属制盾牌。因此，它很重，但只有它能给你最好的保护。</string>
   <string name="ShieldInfoTemplate">这个盾牌最多可以格挡%d伤害。  格挡几率为%d %% 。 成功格挡后需要%3.1f个回合来恢复。</string>
+  <string name="Belongings_CantWearBoth">你不能同时装备%s和%s!</string>
 </resources>
