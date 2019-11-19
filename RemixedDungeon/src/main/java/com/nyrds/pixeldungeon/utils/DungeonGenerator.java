@@ -260,7 +260,8 @@ public class DungeonGenerator {
 		return descendOrAscend(current, true);
 	}
 
-	public static Level createLevel(Position pos) {
+	@NotNull
+	public static Level createLevel(@NotNull Position pos) {
 		String newLevelKind = getLevelKind(pos.levelId);
 		Class<? extends Level> levelClass = mLevelKindList.get(newLevelKind);
 

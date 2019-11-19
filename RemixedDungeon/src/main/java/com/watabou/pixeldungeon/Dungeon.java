@@ -273,7 +273,7 @@ public class Dungeon {
         return Dungeon.level != null && Dungeon.level.isBossLevel();
     }
 
-    public static void switchLevel(final Level level, int pos, Collection<Mob> followers) {
+    public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
 
         EventCollector.collectSessionData("level",level.levelId);
 
@@ -578,6 +578,9 @@ public class Dungeon {
         String version = bundle.getString(VERSION);
 
         hero = (Hero) bundle.get(HERO);
+        if(hero==null) {
+            throw new TrackedRuntimeException("no hero in bundle");
+        }
 
         //pre 28.5 saves compatibility
         int gold = bundle.optInt("gold",0);
@@ -606,6 +609,7 @@ public class Dungeon {
         }
     }
 
+    @NotNull
     public static Level loadLevel(Position next) throws IOException {
 
         try {
