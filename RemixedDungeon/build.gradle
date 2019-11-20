@@ -34,8 +34,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 795
-        versionName "remix.29.3.alpha.3"
+        versionCode 796
+        versionName "remix.29.3.alpha.4"
     }
 
     aaptOptions {
@@ -95,7 +95,7 @@ dependencies {
 
     annotationProcessor project(':processor')
 
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
@@ -103,7 +103,7 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-base:17.1.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
-    implementation "com.google.android.gms:play-services-games:18.0.1"
+    implementation "com.google.android.gms:play-services-games:19.0.0"
 
     implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.0.0'
 
@@ -119,8 +119,8 @@ dependencies {
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 
     implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-perf:19.0.1'
-    implementation 'com.google.firebase:firebase-ads:18.2.0'
+    implementation 'com.google.firebase:firebase-perf:19.0.2'
+    implementation 'com.google.firebase:firebase-ads:18.3.0'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'org.jetbrains:annotations:15.0'

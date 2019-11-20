@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -35,6 +36,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndStory;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -84,7 +87,7 @@ public class InterlevelScene extends PixelScene {
                         ascend();
                         break;
                     case CONTINUE:
-                        restoreAtPosition(Dungeon.currentPosition());
+                        restoreAtPosition(null);
                         break;
                     case RESURRECT:
                         resurrect();
@@ -102,6 +105,8 @@ public class InterlevelScene extends PixelScene {
             } catch (IOException e) {
                 EventCollector.logException(e);
                 error = Game.getVar(R.string.InterLevelScene_ErrorGeneric) + "\n" + e.getMessage();
+            } catch (Exception e) {
+                throw new TrackedRuntimeException(e);
             }
         }
     }
@@ -316,11 +321,15 @@ public class InterlevelScene extends PixelScene {
     }
 
 
-    private void restoreAtPosition(Position restorePos) {
+    private void restoreAtPosition(@Nullable Position restorePos) {
         Actor.fixTime();
 
         try {
             Dungeon.loadGame();
+
+            if(restorePos == null) {
+                restorePos = Dungeon.currentPosition();
+            }
 
             Level level = Dungeon.loadLevel(restorePos);
 
@@ -332,7 +341,6 @@ public class InterlevelScene extends PixelScene {
         }
         rescueMode = false;
     }
-
 
     private void resurrect() {
 
