@@ -15,8 +15,8 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
 import io.fabric.sdk.android.Fabric;
-import io.humanteq.hq_core.HQCallback;
 import io.humanteq.hq_core.HQSdk;
+import io.humanteq.hq_core.interfaces.HQCallback;
 
 
 public class RemixedDungeonApp extends MultiDexApplication {
@@ -57,8 +57,8 @@ public class RemixedDungeonApp extends MultiDexApplication {
                 }
 
                 @Override
-                public void onError(Exception e) {
-                    EventCollector.logException(new HqSdkError(e));
+                public void onError(Throwable throwable) {
+                    EventCollector.logException(new HqSdkError(throwable));
                 }
             });
         } catch (Throwable hqSdkCrash) {

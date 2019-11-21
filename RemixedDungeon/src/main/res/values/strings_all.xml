@@ -234,17 +234,6 @@
   <string name="StoneBlood_Buff">Stone blood</string>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Welcome!</string>
-  <string name="Welcome_Text_28_5">
-    remix.28.5\n
-    - Modding:\n
-    -- Moddable AI for Mobs and NPCs\n
-    - Town:\n
-    -- Church now open to believers\n
-    -- Town shop was renovated\n
-    - Game Mechanics:\n
-    -- Trade ui improved\n
-    -- Portal can be used multiple times\n
-    </string>
   <string name="BlackCat_Name">Black cat</string>
   <string name="BlackCat_Gender">feminine</string>
   <string name="BlackCat_Name_Objective">cat</string>
@@ -2551,4 +2540,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="RoyalShield_desc">A full metal shield. Yes, it\'s heavy, but only it can provide you the best protection.</string>
   <string name="ShieldInfoTemplate">This shield will block up to %d of incoming damage.  With %d %% chance. It will take %3.1f seconds to recover after successful block.</string>
   <string name="Belongings_CantWearBoth">You can\'t equip %s and %s at same time!</string>
+
+  <string name="Welcome_Text_29_3">
+    remix.29.3\n
+    - Gameplay:\n
+    -- Shields!\n
+    - Modding:\n
+    -- Custom Shields!\n
+    - Bugs fixed\n
+    </string>
+
 </resources>
