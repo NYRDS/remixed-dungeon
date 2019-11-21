@@ -17,7 +17,6 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
@@ -102,7 +101,6 @@ public class Dungeon {
     public static boolean dewVial; // true if the dew vial can be spawned
     public static int     transmutation; // depth number for a well of transmutation
 
-    @Packable
     public static int challenges;
 
     public static Hero  hero;
@@ -115,7 +113,6 @@ public class Dungeon {
 
     public static  String  gameId;
 
-    @Packable(defaultValue = "false")
     private static boolean realtime;
 
     private static int     moveTimeoutIndex;
@@ -355,6 +352,9 @@ public class Dungeon {
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
     private static final String MOD          = "mod";
+    private static final String REALTIME     = "realtime";
+    private static final String CHALLENGES   = "challenges";
+
 
     public static void gameOver() {
         SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(),heroClass);
@@ -374,6 +374,9 @@ public class Dungeon {
         bundle.put(AS, arcaneStyli);
         bundle.put(DV, dewVial);
         bundle.put(WT, transmutation);
+
+        bundle.put(REALTIME, realtime);
+        bundle.put(CHALLENGES, challenges);
 
         int count = 0;
         int ids[] = new int[chapters.size()];
@@ -535,6 +538,9 @@ public class Dungeon {
         arcaneStyli = bundle.getInt(AS);
         dewVial = bundle.getBoolean(DV);
         transmutation = bundle.getInt(WT);
+
+        realtime = bundle.getBoolean(REALTIME);
+        challenges = bundle.optInt(CHALLENGES,0);
 
         if (fullLoad) {
             chapters = new HashSet<>();
