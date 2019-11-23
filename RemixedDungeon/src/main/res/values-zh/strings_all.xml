@@ -237,17 +237,6 @@
   <string name="StoneBlood_Buff">石中血</string>
   <string name="Welcome_Ok">棒极了！</string>
   <string name="Welcome_Title">欢迎！</string>
-  <string name="Welcome_Text_28_5">
-remix.28.5\n
-- 修改:\n
---生物的难度进行调整\n
-- 城镇：\n
---教会现在向信徒开放\n
---镇上的商店被翻新了\n
-- 游戏机制：\n
---贸易用户界面改进\n
---传送门可以多次使用\n
--</string>
   <string name="BlackCat_Name">黑猫_丘比</string>
   <string name="BlackCat_Gender">阴柔的</string>
   <string name="BlackCat_Name_Objective">猫</string>
@@ -2584,4 +2573,12 @@ remix.28.5\n
   <string name="RoyalShield_desc">全金属制盾牌。因此，它很重，但只有它能给你最好的保护。</string>
   <string name="ShieldInfoTemplate">这个盾牌最多可以格挡%d伤害。  格挡几率为%d %% 。 成功格挡后需要%3.1f个回合来恢复。</string>
   <string name="Belongings_CantWearBoth">你不能同时装备%s和%s!</string>
+  <string name="Welcome_Text_29_3">
+    remix.29.3\n
+    - 游戏性:\n
+    -- 新增独特的盾牌!\n
+    - 修改:\n
+    -- 盾牌贴图 !\n
+    - 修复了一些Bug\n
+    </string>
 </resources>

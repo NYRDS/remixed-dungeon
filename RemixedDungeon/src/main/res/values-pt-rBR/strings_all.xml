@@ -234,17 +234,6 @@
   <string name="StoneBlood_Buff">Sangue de pedra</string>
   <string name="Welcome_Ok">Ok!</string>
   <string name="Welcome_Title">Bem-vindo!</string>
-  <string name="Welcome_Text_28_5">
-    remix.28.5\n
-    - Modificações:\n
-    -- Inteligência Artificial dos Mobs e NPCs podem ser modificadas\n
-    - Cidade:\n
-    -- Igreja agora está aberta para crentes\n
-    -- A Loja da cidade foi remodelada\n
-    - Mecânicas do jogo:\n
-    -- Interface de compras melhorada\n
-    -- O Portal pode ser usado várias vezes\n
-    </string>
   <string name="BlackCat_Name">Gato preto</string>
   <string name="BlackCat_Gender">feminino</string>
   <string name="BlackCat_Name_Objective">gato</string>
