@@ -152,8 +152,9 @@ public class StartScene extends PixelScene {
                 .getVar(R.string.StartScene_Load)) {
             @Override
             protected void onClick() {
-                InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+                Dungeon.hero = null;
                 Dungeon.heroClass = curShield.cl;
+                InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
             }
         };
         add(btnLoad);

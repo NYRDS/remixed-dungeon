@@ -2532,10 +2532,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldBuffNotReady_Name">Not Ready</string>
   <string name="WoodenShield_name">Wooden Shield</string>
   <string name="WoodenShield_desc">A crude made wooden shield is the simplest shield available. It is round and can block some damage from time to time.</string>
-  <string name="ToughShield_name">Tough Shield</string>
-  <string name="ToughShield_desc">This shield looks tougher than wooden. Made from hard wood and leather it can block more damage.</string>
-  <string name="StrongShield_name">Strong Shield</string>
-  <string name="StrongShield_desc">This rectangular shield is made of bronze and decorated with colored cloth. It is significantly heavier, but can block much more damage.</string>
+  <string name="ToughShield_name">Leather Reinforced Shield</string>
+  <string name="ToughShield_desc">This shield reinforced with leather straps looks tougher than wooden one. It can block more damage for sure.</string>
+  <string name="StrongShield_name">Bronze Plated Shield</string>
+  <string name="StrongShield_desc">This rectangular shield plated with bronze sheets and decorated with colored cloth. It is significantly heavier, but can block much more damage.</string>
   <string name="RoyalShield_name">Royal Shield</string>
   <string name="RoyalShield_desc">A full metal shield. Yes, it\'s heavy, but only it can provide you the best protection.</string>
   <string name="ShieldInfoTemplate">This shield will block up to %d of incoming damage.  With %d %% chance. It will take %3.1f seconds to recover after successful block.</string>
