@@ -2544,4 +2544,24 @@ No, there was no place for her in the light, not anymore. She turned from the me
     </string>
   <string name="town_deco_crossroad_name">Дорожный указатель</string>
   <string name="town_deco_crossroad_desc">Грубо сделанный деревянный столб с приколоченными дощечками в форме стрелок, текст на них давно выцвел, похоже что из-за суровой погоды.</string>
+  <string name="ShieldBuffReady_Name">Готов</string>
+  <string name="ShieldBuffNotReady_Name">Не Готов</string>
+  <string name="WoodenShield_name">Деревянный щит</string>
+  <string name="WoodenShield_desc">Грубо сделанный деревянный щит - самый простой из доступных вариантов. Он круглый и время от времени может заблокировать немного урона.</string>
+  <string name="ToughShield_name">Усиленный кожаный щит</string>
+  <string name="ToughShield_desc">Этот щит усиленный кожаными ремнями выглядит надежнее просто деревянного. Он точно может принять на себя больше урона.</string>
+  <string name="StrongShield_name">Покрытый бронзой щит</string>
+  <string name="StrongShield_desc">Этот прямоугольный щит покрыт бронзовыми пластинами и украшен цветной тканью. Он значительно тяжелее, однако блокирует урон куда как лучше.</string>
+  <string name="RoyalShield_name">Королевский щит</string>
+  <string name="RoyalShield_desc">Цельнометаллический щит. О да, он тяжел, но только он может обеспечить максимальную защиту.</string>
+  <string name="ShieldInfoTemplate">Этот щит заблокирует до %d очков урона. С шансом %d %%. Потребуется %3.1f секунд что бы привести его в готовность после успешного блока. </string>
+  <string name="Belongings_CantWearBoth">Ты не можешь использовать %s и %s одновременно!</string>
+  <string name="Welcome_Text_29_3">
+    remix.29.3\n
+    - :\n
+    -- Shields!\n
+    - Modding:\n
+    -- Custom Shields!\n
+    - Bugs fixed\n
+    </string>
 </resources>
