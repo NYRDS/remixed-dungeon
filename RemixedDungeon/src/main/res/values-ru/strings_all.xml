@@ -2554,14 +2554,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="StrongShield_desc">Этот прямоугольный щит покрыт бронзовыми пластинами и украшен цветной тканью. Он значительно тяжелее, однако блокирует урон куда как лучше.</string>
   <string name="RoyalShield_name">Королевский щит</string>
   <string name="RoyalShield_desc">Цельнометаллический щит. О да, он тяжел, но только он может обеспечить максимальную защиту.</string>
-  <string name="ShieldInfoTemplate">Этот щит заблокирует до %d очков урона. С шансом %d %%. Потребуется %3.1f секунд что бы привести его в готовность после успешного блока. </string>
-  <string name="Belongings_CantWearBoth">Ты не можешь использовать %s и %s одновременно!</string>
+  <string name="ShieldInfoTemplate">Этот щит заблокирует до %1$d очков урона. С шансом %2$d %%. Потребуется %3$3.1f секунд что бы привести его в готовность после успешного блока. </string>
+  <string name="Belongings_CantWearBoth">Ты не можешь использовать %1$s и %2$s одновременно!</string>
   <string name="Welcome_Text_29_3">
     remix.29.3\n
-    - :\n
-    -- Shields!\n
-    - Modding:\n
-    -- Custom Shields!\n
-    - Bugs fixed\n
+    - Геймплей:\n
+    -- Щиты!\n
+    - Моддинг:\n
+    -- Полностью моддабельные щиты!\n
+    - Багофиксы\n
     </string>
 </resources>
