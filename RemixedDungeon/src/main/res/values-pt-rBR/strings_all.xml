@@ -2530,4 +2530,24 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     </string>
   <string name="town_deco_crossroad_name">Sinal de encruzilhada</string>
   <string name="town_deco_crossroad_desc">Pilar de madeira bruto com texto em placas em forma de flecha, desbotado há muito tempo, provavelmente devido a condições climáticas adversas.</string>
+  <string name="ShieldBuffReady_Name">Pronto</string>
+  <string name="ShieldBuffNotReady_Name">Não está Pronto</string>
+  <string name="WoodenShield_name">Escudo de Madeira</string>
+  <string name="WoodenShield_desc">Um escudo bruto feito de madeira é o escudo mais simples disponível. É redondo e pode bloquear alguns danos de tempos em tempos.</string>
+  <string name="ToughShield_name">Escudo Reforçado em Couro</string>
+  <string name="ToughShield_desc">Este escudo reforçado com tiras de couro parece mais resistente que o de madeira. Pode bloquear mais danos, com certeza.</string>
+  <string name="StrongShield_name">Escudo Chapeado em Bronze</string>
+  <string name="StrongShield_desc">Escudo retangular revestido com chapas de bronze e decorado com pano colorido. É significativamente mais pesado, mas pode bloquear muito mais danos.</string>
+  <string name="RoyalShield_name">Escudo Real</string>
+  <string name="RoyalShield_desc">Um escudo cheio de metal. Sim, é pesado, mas somente ele pode fornecer a melhor proteção.</string>
+  <string name="ShieldInfoTemplate">Esse escudo bloqueará até %d do dano recebido. Com %d de %% chance. Levará %3.1f segundos para recuperar após o bloqueio bem-sucedido.</string>
+  <string name="Belongings_CantWearBoth">Você não pode equipar %s e %s ao mesmo tempo!</string>
+  <string name="Welcome_Text_29_3">
+    remix.29.3\n
+    - Jogabilidade:\n
+    -- Escudos!!\n
+    - Modding:\n
+    -- Escudos Personalizados!:\n
+    - Defeitos consertados\n
+    </string>
 </resources>
