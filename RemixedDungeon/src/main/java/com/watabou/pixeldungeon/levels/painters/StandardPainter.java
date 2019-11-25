@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Gold;
@@ -125,7 +126,7 @@ public class StandardPainter extends Painter {
 			int pos = w > h ?
 				room.left + 1 + shift + i * 2 + (room.top + 2 + Random.Int( h-2 )) * level.getWidth() :
 				(room.left + 2 + Random.Int( w-2 )) + (room.top + 1 + shift + i * 2) * level.getWidth();	
-			level.drop( i == index ? level.getTreasury().random() : new Gold(), pos ).type = Heap.Type.TOMB;
+			level.drop( i == index ? Treasury.getLevelTreasury().random() : new Gold(), pos ).type = Heap.Type.TOMB;
 		}
 	}
 	

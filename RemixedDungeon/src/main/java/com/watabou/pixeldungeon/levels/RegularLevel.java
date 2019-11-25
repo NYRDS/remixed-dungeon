@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.CustomLevel;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
@@ -644,7 +645,7 @@ public abstract class RegularLevel extends CustomLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			drop(getTreasury().random(), randomDropCell()).type = Random.chances(Heap.regularHeaps);
+			drop(Treasury.getLevelTreasury().random(), randomDropCell()).type = Random.chances(Heap.regularHeaps);
 		}
 
 		for (Item item : itemsToSpawn) {

@@ -64,6 +64,6 @@ public class CryptPainter extends Painter {
 	}
 	
 	private static Item prize(Level level) {
-		return level.getTreasury().bestOf( Treasury.Category.ARMOR,4 );
+		return Treasury.getLevelTreasury().bestOf( Treasury.Category.ARMOR,4 );
 	}
 }

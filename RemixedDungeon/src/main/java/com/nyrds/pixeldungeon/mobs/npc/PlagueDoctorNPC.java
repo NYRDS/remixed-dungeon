@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.RatArmor;
 import com.nyrds.pixeldungeon.items.common.RatHide;
 import com.nyrds.pixeldungeon.ml.R;
@@ -35,7 +36,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 			if (item != null && item.quantity() >= 5) {
 				item.removeItemFrom(hero);
 
-				Item reward = level().getTreasury().check(new RatArmor());
+				Item reward = Treasury.getLevelTreasury().check(new RatArmor());
 				reward.identify();
 
 				if (reward.doPickUp(hero)) {

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.spiders.levels;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.watabou.noosa.Game;
@@ -205,7 +206,7 @@ public class SpiderLevel extends CommonLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			drop(getTreasury().random(), randomRespawnCell()).type = Heap.Type.SKELETON;
+			drop(Treasury.getLevelTreasury().random(), randomRespawnCell()).type = Heap.Type.SKELETON;
 		}
 
 		for (Item item : itemsToSpawn) {

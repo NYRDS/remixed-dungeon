@@ -63,7 +63,7 @@ public class Plant extends LevelObject {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 
 			if (Random.Int(5) == 0) {
-				level().drop(level().getTreasury().random(Treasury.Category.SEED),
+				level().drop(Treasury.getLevelTreasury().random(Treasury.Category.SEED),
 						pos).sprite.drop();
 			}
 			if (Random.Int(5) == 0) {

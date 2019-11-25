@@ -124,7 +124,7 @@ public class ArmoredStatue extends Mob {
 	public Armor getArmor() {
 		if(armor==null) {
 			do {
-				armor = (Armor) level().getTreasury().random(Treasury.Category.ARMOR);
+				armor = (Armor) Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
 			} while (armor == null || armor.level() < 0);
 
 			armor.identify();

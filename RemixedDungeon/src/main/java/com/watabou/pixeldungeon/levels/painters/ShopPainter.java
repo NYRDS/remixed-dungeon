@@ -145,13 +145,13 @@ public class ShopPainter extends Painter {
 
 		shopkeeper.addItem( new PotionOfHealing() );
 		for (int i=0; i < 2; i++) {
-			shopkeeper.addItem( level.getTreasury().random( Treasury.Category.POTION ) );
+			shopkeeper.addItem( Treasury.getLevelTreasury().random( Treasury.Category.POTION ) );
 		}
 
 		shopkeeper.addItem( new ScrollOfIdentify() );
 		shopkeeper.addItem( new ScrollOfRemoveCurse() );
 		shopkeeper.addItem( new ScrollOfMagicMapping() );
-		shopkeeper.addItem( level.getTreasury().random( Treasury.Category.SCROLL ) );
+		shopkeeper.addItem( Treasury.getLevelTreasury().random( Treasury.Category.SCROLL ) );
 
 		shopkeeper.addItem( new OverpricedRation() );
 		shopkeeper.addItem( new OverpricedRation() );

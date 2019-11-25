@@ -91,13 +91,13 @@ public class PoolPainter extends Painter {
 			return prize;
 		}
 		
-		prize = level.getTreasury().random( Random.oneOf(
+		prize = Treasury.getLevelTreasury().random( Random.oneOf(
 				Treasury.Category.WEAPON,
 				Treasury.Category.ARMOR
 		) );
 
 		for (int i=0; i < 4; i++) {
-			Item another = level.getTreasury().random( Random.oneOf(
+			Item another = Treasury.getLevelTreasury().random( Random.oneOf(
 					Treasury.Category.WEAPON,
 					Treasury.Category.ARMOR
 			) );

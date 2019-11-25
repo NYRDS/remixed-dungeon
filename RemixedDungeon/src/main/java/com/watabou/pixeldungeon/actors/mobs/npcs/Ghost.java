@@ -270,10 +270,10 @@ public class Ghost extends NPC {
 
 		private static void makeReward() {
 			do {
-				weapon = Dungeon.level.getTreasury().bestOf(Treasury.Category.WEAPON, 4 );
+				weapon = Treasury.getLevelTreasury().bestOf(Treasury.Category.WEAPON, 4 );
 			} while (weapon instanceof MissileWeapon);
 
-			armor = Dungeon.level.getTreasury().bestOf(Treasury.Category.ARMOR,4 );
+			armor = Treasury.getLevelTreasury().bestOf(Treasury.Category.ARMOR,4 );
 
 			weapon.identify();
 			armor.identify();

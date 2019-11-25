@@ -99,6 +99,6 @@ public class LibraryPainter extends Painter {
 			level.addItemToSpawn(prize);
 		}
 
-		return level.getTreasury().random(Treasury.Category.SCROLL);
+		return Treasury.getLevelTreasury().random(Treasury.Category.SCROLL);
 	}
 }

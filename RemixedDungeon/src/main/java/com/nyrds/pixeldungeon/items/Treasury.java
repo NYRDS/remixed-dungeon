@@ -5,6 +5,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
@@ -16,8 +17,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 
 public class Treasury {
@@ -52,6 +55,7 @@ public class Treasury {
     private Set<String> forbidden = new HashSet<>();
 
     private static Treasury defaultTreasury;
+    private static Map<String, Treasury> tresurySet = new HashMap<>();
 
     public static void reset() {
         defaultTreasury = null;
@@ -63,6 +67,16 @@ public class Treasury {
         }
         return defaultTreasury;
 
+    }
+
+    public static Treasury getLevelTreasury() {
+        String id = Dungeon.levelId;
+
+        if(!tresurySet.containsKey(id)) {
+            tresurySet.put(id, create(DungeonGenerator.getLevelProperty(id, "treasury","Treasury.json")));
+        }
+
+        return tresurySet.get(id);
     }
 
     public static Treasury create(String file) {

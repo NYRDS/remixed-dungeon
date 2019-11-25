@@ -524,11 +524,11 @@ public abstract class Mob extends Char {
 		if (loot != null && Random.Float() <= lootChance) {
 			Item item;
 			if (loot instanceof Treasury.Category) {
-				item = level().getTreasury().random((Treasury.Category) loot);
+				item = Treasury.getLevelTreasury().random((Treasury.Category) loot);
 			} else if (loot instanceof Class<?>) {
-				item = level().getTreasury().random((Class<? extends Item>) loot);
+				item = Treasury.getLevelTreasury().random((Class<? extends Item>) loot);
 			} else if(loot instanceof String) {
-				item = level().getTreasury().random((String) loot);
+				item = Treasury.getLevelTreasury().random((String) loot);
 			} else {
 				item = (Item) loot;
 			}

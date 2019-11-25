@@ -105,7 +105,8 @@ public class Dungeon {
 
     public static Hero  hero;
 
-    public static Level level;
+    public static Level  level;
+    public static String levelId;
 
     public static  int depth;
     private static AtomicInteger loading = new AtomicInteger();
@@ -305,6 +306,7 @@ public class Dungeon {
                 level.spawnMob(mob);
             }
 
+        levelId = level.levelId;
         Dungeon.level = level;
     }
 
@@ -620,18 +622,20 @@ public class Dungeon {
 
         try {
             loading.incrementAndGet();
+            levelId = next.levelId;
+            Dungeon.level = null;
             DungeonGenerator.loadingLevel(next);
 
             String loadFrom = SaveUtils.depthFileForLoad(heroClass,
-                    DungeonGenerator.getLevelDepth(next.levelId),
-                    DungeonGenerator.getLevelKind(next.levelId),
-                    next.levelId);
+                    DungeonGenerator.getLevelDepth(levelId),
+                    DungeonGenerator.getLevelKind(levelId),
+                    levelId);
 
             GLog.toFile("loading level: %s", loadFrom);
 
             InputStream input;
 
-            if (!DungeonGenerator.isStatic(next.levelId) && FileSystem.getFile(loadFrom).exists()) {
+            if (!DungeonGenerator.isStatic(levelId) && FileSystem.getFile(loadFrom).exists()) {
                 input = new FileInputStream(FileSystem.getFile(loadFrom));
             } else {
                 GLog.toFile("File %s not found!", loadFrom);

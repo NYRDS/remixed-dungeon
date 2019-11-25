@@ -67,7 +67,7 @@ public class VaultPainter extends Painter {
 	}
 	
 	private static Item prize(Level level) {
-		return level.getTreasury().random( Random.oneOf(
+		return Treasury.getLevelTreasury().random( Random.oneOf(
 			Treasury.Category.WAND,
 			Treasury.Category.RING
 		) );

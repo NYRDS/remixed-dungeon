@@ -49,7 +49,7 @@ public class HighGrass {
 
 			// Seed
 			if (herbalismLevel >= 0 && Random.Int(18) <= Random.Int(herbalismLevel + 1)) {
-				ItemSprite is = level.drop(level.getTreasury().random(Treasury.Category.SEED), pos).sprite;
+				ItemSprite is = level.drop(Treasury.getLevelTreasury().random(Treasury.Category.SEED), pos).sprite;
 				if (is != null) {
 					is.drop();
 				}
@@ -57,7 +57,7 @@ public class HighGrass {
 
 			// Dew
 			if (herbalismLevel >= 0 && Random.Int(6) <= Random.Int(herbalismLevel + 1)) {
-				ItemSprite is = level.drop(level.getTreasury().random(Dewdrop.class.getSimpleName()), pos).sprite;
+				ItemSprite is = level.drop(Treasury.getLevelTreasury().random(Dewdrop.class.getSimpleName()), pos).sprite;
 				if (is != null) {
 					is.drop();
 				}

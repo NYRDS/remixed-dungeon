@@ -40,8 +40,8 @@ public class WarehousePainter extends Painter {
 				if(Math.random() < 0.5) {
 					level.addLevelObject(new Barrel(level.cell(i, j)));
 				} else {
-					Item prize = Random.oneOf(level.getTreasury().random(Treasury.Category.BULLETS),
-							level.getTreasury().random(Treasury.Category.THROWABLE));
+					Item prize = Random.oneOf(Treasury.getLevelTreasury().random(Treasury.Category.BULLETS),
+							Treasury.getLevelTreasury().random(Treasury.Category.THROWABLE));
 					level.drop(prize, level.cell(i,j));
 				}
 			}

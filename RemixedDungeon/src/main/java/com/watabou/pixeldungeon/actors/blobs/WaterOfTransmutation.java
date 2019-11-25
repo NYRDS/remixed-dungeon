@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -163,7 +162,7 @@ public class WaterOfTransmutation extends WellWater {
 	private Ring changeRing( Ring r ) {
 		Ring n;
 		do {
-			n = (Ring) Dungeon.level.getTreasury().random(Treasury.Category.RING );
+			n = (Ring) Treasury.getLevelTreasury().random(Treasury.Category.RING );
 		} while (n.getClass() == r.getClass());
 		
 		n.level(0);
@@ -186,7 +185,7 @@ public class WaterOfTransmutation extends WellWater {
 		
 		Item n;
 		do {
-			n = Dungeon.level.getTreasury().random(Treasury.Category.WAND );
+			n = Treasury.getLevelTreasury().random(Treasury.Category.WAND );
 		} while (n.getClassName().equals(w.getClassName()));
 		
 		n.level(0);
@@ -204,7 +203,7 @@ public class WaterOfTransmutation extends WellWater {
 		Item n;
 		
 		do {
-			n = Dungeon.level.getTreasury().random(Treasury.Category.SEED );
+			n = Treasury.getLevelTreasury().random(Treasury.Category.SEED );
 		} while (n.getClassName().equals(s.getClassName()));
 		
 		return n;
@@ -223,7 +222,7 @@ public class WaterOfTransmutation extends WellWater {
 			
 			Item n;
 			do {
-				n =  Dungeon.level.getTreasury().random(Treasury.Category.SCROLL );
+				n =  Treasury.getLevelTreasury().random(Treasury.Category.SCROLL );
 			} while (n.getClassName().equals(s.getClassName()));
 			return n;
 		}
@@ -242,7 +241,7 @@ public class WaterOfTransmutation extends WellWater {
 			
 			Item n;
 			do {
-				n  = Dungeon.level.getTreasury().random(Treasury.Category.POTION );
+				n  = Treasury.getLevelTreasury().random(Treasury.Category.POTION );
 			} while (n.getClassName().equals(p.getClassName()));
 			return n;
 		}

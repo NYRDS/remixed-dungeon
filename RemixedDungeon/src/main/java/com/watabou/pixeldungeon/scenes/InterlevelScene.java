@@ -260,6 +260,7 @@ public class InterlevelScene extends PixelScene {
 
         Position next = DungeonGenerator.descend(Dungeon.currentPosition());
         Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
+
         Level level = Dungeon.loadLevel(next);
 
         Dungeon.switchLevel(level,

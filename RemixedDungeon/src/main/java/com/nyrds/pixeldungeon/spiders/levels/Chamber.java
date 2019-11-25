@@ -100,7 +100,7 @@ public class Chamber {
 			case 1:		//garden
 				level.map[cellId] = Terrain.HIGH_GRASS;
 				if(Random.Int(5)==0) {
-					level.plant( (Seed)level.getTreasury().random(Treasury.Category.SEED), cellId);
+					level.plant( (Seed) Treasury.getLevelTreasury().random(Treasury.Category.SEED), cellId);
 				}
 			break;
 			

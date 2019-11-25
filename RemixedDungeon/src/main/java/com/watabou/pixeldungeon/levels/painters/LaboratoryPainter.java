@@ -77,6 +77,6 @@ public class LaboratoryPainter extends Painter {
 			level.addItemToSpawn( prize );
 		}
 		
-		return level.getTreasury().random( Treasury.Category.POTION );
+		return Treasury.getLevelTreasury().random( Treasury.Category.POTION );
 	}
 }

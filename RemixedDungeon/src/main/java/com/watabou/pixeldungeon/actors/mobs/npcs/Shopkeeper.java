@@ -173,7 +173,7 @@ public class Shopkeeper extends NPC {
 
 	public void generateNewItem()
 	{
-		Item newItem = level().getTreasury().random();
+		Item newItem = Treasury.getLevelTreasury().random();
 
 		if(newItem instanceof Gold) {
 			return;
@@ -191,7 +191,7 @@ public class Shopkeeper extends NPC {
 		}
 
 		if(level()!=null) {
-			item = level().getTreasury().check(item);
+			item = Treasury.getLevelTreasury().check(item);
 		} else {
 			item = Treasury.get().check(item);
 		}

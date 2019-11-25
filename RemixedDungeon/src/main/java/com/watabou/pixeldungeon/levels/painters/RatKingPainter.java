@@ -74,7 +74,7 @@ public class RatKingPainter extends Painter {
 		Item prize;
 		switch (Random.Int( 10 )) {
 		case 0:
-			prize = level.getTreasury().random( Treasury.Category.WEAPON );
+			prize = Treasury.getLevelTreasury().random( Treasury.Category.WEAPON );
 			if (prize instanceof MissileWeapon) {
 				prize.quantity( 1 );
 			} else {
@@ -82,7 +82,7 @@ public class RatKingPainter extends Painter {
 			}
 			break;
 		case 1:
-			prize = level.getTreasury().random( Treasury.Category.ARMOR ).degrade( Random.Int( 3 ) );
+			prize = Treasury.getLevelTreasury().random( Treasury.Category.ARMOR ).degrade( Random.Int( 3 ) );
 			break;
 		default:
 			prize = new Gold( Random.IntRange( 1, 5 ) );

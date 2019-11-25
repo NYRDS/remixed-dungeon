@@ -54,7 +54,7 @@ public class StoragePainter extends Painter {
 			return prize;
 		}
 		
-		return level.getTreasury().random( Random.oneOf(
+		return Treasury.getLevelTreasury().random( Random.oneOf(
 				Treasury.Category.POTION,
 				Treasury.Category.SCROLL,
 				Treasury.Category.FOOD,

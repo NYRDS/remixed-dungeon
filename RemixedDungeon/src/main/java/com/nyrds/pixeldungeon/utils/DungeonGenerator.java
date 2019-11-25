@@ -379,4 +379,5 @@ public class DungeonGenerator {
 		mCurrentLevelDepth = getLevelDepth(mCurrentLevelId);
 		mCurrentLevelKind  = getLevelKind(mCurrentLevelId);
 	}
+
 }

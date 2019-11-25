@@ -58,9 +58,9 @@ public class PitPainter extends Painter {
 		level.drop( new IronKey(), remains ).type = Type.SKELETON;
 		
 		if (Random.Int( 5 ) == 0) {
-			level.drop( level.getTreasury().random( Treasury.Category.RING ), remains );
+			level.drop( Treasury.getLevelTreasury().random( Treasury.Category.RING ), remains );
 		} else {
-			level.drop( level.getTreasury().random( Random.oneOf(
+			level.drop( Treasury.getLevelTreasury().random( Random.oneOf(
 					Treasury.Category.WEAPON,
 					Treasury.Category.ARMOR
 			) ), remains );
@@ -79,7 +79,7 @@ public class PitPainter extends Painter {
 			return prize;
 		}
 		
-		return level.getTreasury().random( Random.oneOf(
+		return Treasury.getLevelTreasury().random( Random.oneOf(
 				Treasury.Category.POTION,
 				Treasury.Category.SCROLL,
 				Treasury.Category.FOOD,

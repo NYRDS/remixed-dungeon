@@ -199,7 +199,7 @@ public class Imp extends NPC {
 				given = false;
 				
 				do {
-					reward = (Ring) level.getTreasury().random( Treasury.Category.RING );
+					reward = (Ring) Treasury.getLevelTreasury().random( Treasury.Category.RING );
 				} while (reward.cursed);
 				reward.upgrade( 2 );
 				reward.cursed = true;

@@ -110,7 +110,6 @@ public abstract class Level implements Bundlable {
 	private static final String SCRIPTS = "scripts";
 	public static final int INVALID_CELL = -1;
 
-	private Treasury treasury;
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
@@ -319,13 +318,6 @@ public abstract class Level implements Bundlable {
 		return mobsToNextLevel;
 	}
 
-	public Treasury getTreasury() {
-		if(treasury == null) {
-			treasury = Treasury.create(DungeonGenerator.getLevelProperty(levelId, "treasury","Treasury.json"));
-		}
-		return treasury;
-	}
-
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
@@ -507,7 +499,7 @@ public abstract class Level implements Bundlable {
 		initSizeDependentStuff();
 
 		if (!isBossLevel()) {
-			addItemToSpawn(getTreasury().random(Treasury.Category.FOOD));
+			addItemToSpawn(Treasury.getLevelTreasury().random(Treasury.Category.FOOD));
 			if (Dungeon.posNeeded()) {
 				addItemToSpawn(new PotionOfStrength());
 				Dungeon.potionOfStrength++;
@@ -522,7 +514,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (Random.Int(5) == 0) {
-				addItemToSpawn(getTreasury().random(Treasury.Category.RANGED));
+				addItemToSpawn(Treasury.getLevelTreasury().random(Treasury.Category.RANGED));
 			}
 
 			if (Random.Int(15) == 0) {
@@ -530,7 +522,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (Random.Int(2) == 0) {
-				addItemToSpawn(getTreasury().random(Treasury.Category.BULLETS));
+				addItemToSpawn(Treasury.getLevelTreasury().random(Treasury.Category.BULLETS));
 			}
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);
@@ -1018,7 +1010,7 @@ public abstract class Level implements Bundlable {
 	@NotNull
 	public Heap drop(Item item, int cell) {
 
-		item = getTreasury().check(item);
+		item = Treasury.getLevelTreasury().check(item);
 
 		if (solid[cell] && map[cell] != Terrain.DOOR){
 			for (int n : Level.NEIGHBOURS8) {

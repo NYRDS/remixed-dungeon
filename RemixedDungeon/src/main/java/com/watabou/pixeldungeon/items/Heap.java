@@ -358,7 +358,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 				Statistics.potionsCooked++;
 				Badges.validatePotionsCooked();
 				
-				return Dungeon.level.getTreasury().random( Treasury.Category.POTION );
+				return Treasury.getLevelTreasury().random( Treasury.Category.POTION );
 				
 			} else {
 				
@@ -371,7 +371,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 				Badges.validatePotionsCooked();
 				
 				if (itemClass == null) {
-					return Dungeon.level.getTreasury().random( Treasury.Category.POTION );
+					return Treasury.getLevelTreasury().random( Treasury.Category.POTION );
 				} else {
 					try {
 						return itemClass.newInstance();
