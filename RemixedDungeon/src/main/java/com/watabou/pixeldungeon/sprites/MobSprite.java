@@ -31,11 +31,13 @@ public class MobSprite extends CharSprite {
 
 	@Override
 	public void update() {
-		if(ch instanceof  Mob) {
-			Mob mob = (Mob) ch;
-			sleeping = mob.getState() instanceof Sleeping;
-			controlled = mob.isPet();
-		}
+		ch.ifPresent( chr -> {
+			if (chr instanceof Mob) {
+				Mob mob = (Mob) chr;
+				sleeping = mob.getState() instanceof Sleeping;
+				controlled = mob.isPet();
+			}
+		});
 		super.update();
 	}
 	

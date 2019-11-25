@@ -27,57 +27,60 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
     private static final int RUN_FRAMERATE = 20;
 
-	protected Animation fly;
-    private Tweener  jumpTweener;
+    protected Animation fly;
+    private Tweener jumpTweener;
     private Callback jumpCallback;
 
 
     protected HeroSpriteDef(String defName, int kind) {
-		super(defName, kind);
-	}
+        super(defName, kind);
+    }
 
-	public static HeroSpriteDef createHeroSpriteDef(Armor armor) {
-		return new ModernHeroSpriteDef(armor);
-	}
+    public static HeroSpriteDef createHeroSpriteDef(Armor armor) {
+        return new ModernHeroSpriteDef(armor);
+    }
 
-	public static HeroSpriteDef createHeroSpriteDef(String[] lookDesc, String deathEffectDesc) {
-		if(ModdingMode.useRetroHeroSprites) {
-			return new RetroHeroSpriteDef(lookDesc);
-		} else {
-			return new ModernHeroSpriteDef(lookDesc, deathEffectDesc);
-		}
-	}
-	public static HeroSpriteDef createHeroSpriteDef(Hero hero) {
-		if(ModdingMode.useRetroHeroSprites) {
-			return new RetroHeroSpriteDef(hero);
-		} else {
-			return new ModernHeroSpriteDef(hero);
-		}
-	}
+    public static HeroSpriteDef createHeroSpriteDef(String[] lookDesc, String deathEffectDesc) {
+        if (ModdingMode.useRetroHeroSprites) {
+            return new RetroHeroSpriteDef(lookDesc);
+        } else {
+            return new ModernHeroSpriteDef(lookDesc, deathEffectDesc);
+        }
+    }
 
-	public static HeroSpriteDef createHeroSpriteDef(Weapon weapon) {
-		return new ModernHeroSpriteDef(weapon);
-	}
+    public static HeroSpriteDef createHeroSpriteDef(Hero hero) {
+        if (ModdingMode.useRetroHeroSprites) {
+            return new RetroHeroSpriteDef(hero);
+        } else {
+            return new ModernHeroSpriteDef(hero);
+        }
+    }
 
-	public static HeroSpriteDef createHeroSpriteDef(Hero hero, Accessory accessory) {
-		return new ModernHeroSpriteDef(hero, accessory);
-	}
+    public static HeroSpriteDef createHeroSpriteDef(Weapon weapon) {
+        return new ModernHeroSpriteDef(weapon);
+    }
 
-	public abstract String[] getLayersDesc();
+    public static HeroSpriteDef createHeroSpriteDef(Hero hero, Accessory accessory) {
+        return new ModernHeroSpriteDef(hero, accessory);
+    }
+
+    public abstract String[] getLayersDesc();
 
     @Override
     public void onComplete(Tweener tweener) {
-        if (tweener == jumpTweener) {
 
-            if (getVisible() && Dungeon.level.water[ch.getPos()] && !ch.isFlying()) {
-                GameScene.ripple(ch.getPos());
+            if (tweener == jumpTweener) {
+                ch.ifPresent(chr -> {
+                    if (getVisible() && Dungeon.level.water[chr.getPos()] && !chr.isFlying()) {
+                        GameScene.ripple(chr.getPos());
+                    }
+                });
+                if (jumpCallback != null) {
+                    jumpCallback.call();
+                }
+            } else {
+                super.onComplete(tweener);
             }
-            if (jumpCallback != null) {
-                jumpCallback.call();
-            }
-        } else {
-            super.onComplete(tweener);
-        }
     }
 
     public boolean sprint(boolean on) {
@@ -85,73 +88,80 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         return on;
     }
 
-	@Override
-	public void idle() {
-		if(ch!=null && ch.isFlying()) { //ch can be null when used in indicators
-			play(fly);
-		} else {
-			super.idle();
-		}
-	}
+    @Override
+    public void idle() {
+        ch.ifPresent(chr -> {
+            if (chr.isFlying()) { //ch can be null when used in indicators
+                play(fly);
+            } else {
+                super.idle();
+            }
+        });
+    }
 
-	@Override
-	public void move(int from, int to, boolean playRunAnimation) {
-		super.move(from, to, !ch.isFlying());
-		if (ch.isFlying()) {
-			play(fly);
-		}
-		if(ch instanceof Hero) {
-			Camera.main.target = this;
-		}
-	}
+    @Override
+    public void move(int from, int to, boolean playRunAnimation) {
+        ch.ifPresent(chr -> {
+            super.move(from, to, !chr.isFlying());
+            if (chr.isFlying()) {
+                play(fly);
+            }
+            if (chr instanceof Hero) {
+                Camera.main.target = this;
+            }
+        });
+    }
 
-	@NotNull
-	public abstract String getDeathEffect();
+    @NotNull
+    public abstract String getDeathEffect();
 
-	public abstract void heroUpdated(Hero hero);
+    public abstract void heroUpdated(Hero hero);
 
     @Override
     public void place(int p) {
-        super.place(p);
-        if(ch instanceof Hero) {
-            Camera.main.target = this;
-        }
+        ch.ifPresent(chr -> {
+            super.place(p);
+            if (chr instanceof Hero) {
+                Camera.main.target = this;
+            }
+        });
     }
 
     @Override
     protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
         super.loadAdditionalData(json, film, kind);
-        fly     = readAnimation(json, "fly", film);
+        fly = readAnimation(json, "fly", film);
         operate = readAnimation(json, "operate", film);
     }
 
 
     @LuaInterface
-	public void jump(float height) {
-		jumpCallback = null;
+    public void jump(float height) {
+        jumpCallback = null;
+        ch.ifPresent(chr -> {
+            jumpTweener = new JumpTweener(this, worldToCamera(chr.getPos()), height,
+                    height / 40);
 
-		jumpTweener = new JumpTweener(this, worldToCamera(ch.getPos()), height,
-				height/40);
-
-		getParent().add(jumpTweener);
-	}
+            getParent().add(jumpTweener);
+        });
+    }
 
     @LuaInterface
-	public void dash(int from, int to) {
-		jumpCallback = null;
+    public void dash(int from, int to) {
+        jumpCallback = null;
 
-		int distance = Dungeon.level.distance(from, to);
-		jumpTweener = new JumpTweener(this, worldToCamera(to), 0,
-				distance * 0.1f);
-		jumpTweener.listener = this;
-		getParent().add(jumpTweener);
+        int distance = Dungeon.level.distance(from, to);
+        jumpTweener = new JumpTweener(this, worldToCamera(to), 0,
+                distance * 0.1f);
+        jumpTweener.listener = this;
+        getParent().add(jumpTweener);
 
-		turnTo(from, to);
-		play(fly);
-	}
+        turnTo(from, to);
+        play(fly);
+    }
 
 
-	public void jump(int from, int to, Callback callback) {
+    public void jump(int from, int to, Callback callback) {
         jumpCallback = callback;
 
         int distance = Dungeon.level.distance(from, to);

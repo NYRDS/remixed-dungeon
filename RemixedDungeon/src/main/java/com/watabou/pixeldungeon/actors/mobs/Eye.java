@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.EyeSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -48,8 +47,6 @@ public class Eye extends Mob {
     private Set<Char> victims = new HashSet<>();
 
     public Eye() {
-        spriteClass = EyeSprite.class;
-
         hp(ht(100));
         defenseSkill = 20;
 

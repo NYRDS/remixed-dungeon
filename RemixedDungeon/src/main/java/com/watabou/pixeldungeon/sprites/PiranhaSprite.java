@@ -48,10 +48,12 @@ public class PiranhaSprite extends MobSprite {
 	
 	@Override
 	public void onComplete( Animation anim ) {
+
+		ch.ifPresent( chr -> {
 		super.onComplete( anim );
 		
 		if (anim == attack) {
-			GameScene.ripple( ch.getPos() );
-		}
+			GameScene.ripple( chr.getPos() );
+		}});
 	}
 }

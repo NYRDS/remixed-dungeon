@@ -360,17 +360,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	@Override
 	public void die() {
-		deathEffect.place(ch.getPos());
-		getParent().add(deathEffect);
-		deathEffect.setVisible(true);
+		ch.ifPresent(chr -> {
+			deathEffect.place(chr.getPos());
+			getParent().add(deathEffect);
+			deathEffect.setVisible(true);
 
-		if(ch instanceof Hero) {
-			deathEffect.playAnim(die, Util.nullCallback);
-		} else {
-			deathEffect.playAnim(die, () -> deathEffect.killAndErase());
-		}
-
+			if (chr instanceof Hero) {
+				deathEffect.playAnim(die, Util.nullCallback);
+			} else {
+				deathEffect.playAnim(die, () -> deathEffect.killAndErase());
+			}
+		});
 		killAndErase();
+
 	}
 
 	@NotNull

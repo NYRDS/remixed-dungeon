@@ -1,7 +1,6 @@
 package com.watabou.noosa;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
@@ -151,22 +150,22 @@ public class StringsManager {
 			return;
 		}
 
-		Configuration config = getContext().getResources().getConfiguration();
+		Configuration config = getResources().getConfiguration();
 
-		if(!getContext().getResources().getConfiguration().locale.equals(userSelectedLocale)) {
+		if(!getResources().getConfiguration().locale.equals(userSelectedLocale)) {
 			if(BuildConfig.DEBUG){
 				GLog.i("Locale is messed up! Restoring");
 			}
 			config.locale = userSelectedLocale;
-			getContext().getResources().updateConfiguration(config,
-					getContext().getResources().getDisplayMetrics());
+			getResources().updateConfiguration(config,
+					getResources().getDisplayMetrics());
 		}
 	}
 
 	public static void useLocale(Locale locale, String lang) {
 		userSelectedLocale = locale;
 
-		Configuration config = getContext().getResources().getConfiguration();
+		Configuration config = getResources().getConfiguration();
 
 		GLog.i("context locale: %s -> %s", config.locale, locale);
 
@@ -175,8 +174,8 @@ public class StringsManager {
 		} else {
 			config.setLocale(locale);
 		}
-		getContext().getResources().updateConfiguration(config,
-				getContext().getResources().getDisplayMetrics());
+		getResources().updateConfiguration(config,
+				getResources().getDisplayMetrics());
 
 		clearModStrings();
 
@@ -197,7 +196,7 @@ public class StringsManager {
 
 		try {
 			ensureCorrectLocale();
-			return getContext().getResources().getString(id);
+			return getResources().getString(id);
 		} catch (Resources.NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
 		}
@@ -210,7 +209,7 @@ public class StringsManager {
 			return stringsMap.get(id);
 		}
 		ensureCorrectLocale();
-		return getContext().getResources().getStringArray(id);
+		return getResources().getStringArray(id);
 	}
 
 	public static String getVar(String id) {
@@ -261,7 +260,7 @@ public class StringsManager {
 		return new String[0];
 	}
 
-	public static Context getContext() {
-		return RemixedDungeonApp.getContext();
+	public static Resources getResources() {
+		return RemixedDungeonApp.getContext().getResources();
 	}
 }

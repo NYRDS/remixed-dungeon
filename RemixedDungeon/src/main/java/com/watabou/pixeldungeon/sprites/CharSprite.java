@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.WeakOptional;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
@@ -64,9 +65,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public static final int NEUTRAL = 0xFFFF00;
     public static final int BLUE = 0x0000FF;
 
-    private static final float MOVE_INTERVAL        = 0.1f;
-    private static final float FLASH_INTERVAL       = 0.05f;
-    private static final float INVISIBILITY_ALPHA	= 0.4f;
+    private static final float MOVE_INTERVAL = 0.1f;
+    private static final float FLASH_INTERVAL = 0.05f;
+    private static final float INVISIBILITY_ALPHA = 0.4f;
 
     @Nullable
     protected Image avatar;
@@ -100,8 +101,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     boolean controlled = false;
 
     // Char owner
-    @Nullable
-    public Char ch;
+    public WeakOptional<Char> ch = WeakOptional.empty();
 
     // The sprite is currently in motion
     public boolean isMoving = false;
@@ -111,17 +111,21 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         listener = this;
     }
 
-    public void link(@NotNull Char ch) {
-        this.ch = ch;
+    public void link(Char owner) {
+        ch = WeakOptional.of(owner);
 
-        place(ch.getPos());
-        turnTo(ch.getPos(), Random.Int(ch.level().getLength()));
+        ch.ifPresent(chr -> {
+                    place(chr.getPos());
+                    turnTo(chr.getPos(), Random.Int(chr.level().getLength()));
 
-        removeAllStates();
+                    removeAllStates();
 
-        ch.forEachBuff(b->this.add(b.charSpriteStatus()));
+                    chr.forEachBuff(b -> this.add(b.charSpriteStatus()));
 
-        isMoving = false;
+                    isMoving = false;
+                }
+        );
+
     }
 
 
@@ -148,14 +152,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public void showStatus(int color, String text) {
         if (getVisible()) {
-
-            if (ch != null) {
-                if (ModdingMode.getClassicTextRenderingMode()) {
-                    FloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
-                } else {
-                    SystemFloatingText.show(x + width * 0.5f, y, ch.getPos(), text, color);
-                }
-            }
+            ch.ifPresent(
+                    chr -> {
+                        if (ModdingMode.getClassicTextRenderingMode()) {
+                            FloatingText.show(x + width * 0.5f, y, chr.getPos(), text, color);
+                        } else {
+                            SystemFloatingText.show(x + width * 0.5f, y, chr.getPos(), text, color);
+                        }
+                    }
+            );
         }
     }
 
@@ -173,23 +178,25 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void move(int from, int to, boolean playRunAnimation) {
-        if(playRunAnimation) {
-            play(run);
-        }
-
-        if (getParent() != null) {
-            motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
-            motion.listener = this;
-            getParent().add(motion);
-
-            isMoving = true;
-
-            turnTo(from, to);
-
-            if (getVisible() && Dungeon.level.water[from] && !ch.isFlying()) {
-                GameScene.ripple(from);
+        ch.ifPresent(chr -> {
+            if (playRunAnimation) {
+                play(run);
             }
-        }
+
+            if (getParent() != null) {
+                motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
+                motion.listener = this;
+                getParent().add(motion);
+
+                isMoving = true;
+
+                turnTo(from, to);
+
+                if (getVisible() && Dungeon.level.water[from] && !chr.isFlying()) {
+                    GameScene.ripple(from);
+                }
+            }
+        });
     }
 
     public void interruptMotion() {
@@ -199,24 +206,32 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void attack(int cell) {
-        turnTo(ch.getPos(), cell);
-        play(attack);
+        ch.ifPresent(chr -> {
+            turnTo(chr.getPos(), cell);
+            play(attack);
+        });
     }
 
     public void attack(int cell, Callback callback) {
-        animCallback = callback;
-        turnTo(ch.getPos(), cell);
-        play(attack);
+        ch.ifPresent(chr -> {
+            animCallback = callback;
+            turnTo(chr.getPos(), cell);
+            play(attack);
+        });
     }
 
     public void operate(int cell) {
-        turnTo(ch.getPos(), cell);
-        play(operate);
+        ch.ifPresent(chr -> {
+            turnTo(chr.getPos(), cell);
+            play(operate);
+        });
     }
 
     public void zap(int cell) {
-        turnTo(ch.getPos(), cell);
-        play(zap);
+        ch.ifPresent(chr -> {
+            turnTo(chr.getPos(), cell);
+            play(zap);
+        });
     }
 
     public void turnTo(int from, int to) {
@@ -261,11 +276,13 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void bloodBurstA(PointF from, int damage) {
-        if (getVisible()) {
-            PointF c = center();
-            int n = (int) Math.min(9 * Math.sqrt((double) damage / ch.ht()), 9);
-            Splash.at(c, PointF.angle(from, c), 3.1415926f / 2, blood(), n);
-        }
+        ch.ifPresent(chr -> {
+            if (getVisible()) {
+                PointF c = center();
+                int n = (int) Math.min(9 * Math.sqrt((double) damage / chr.ht()), 9);
+                Splash.at(c, PointF.angle(from, c), 3.1415926f / 2, blood(), n);
+            }
+        });
     }
 
     // Blood color
@@ -279,38 +296,40 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void add(State state) {
-        switch (state) {
-            case BURNING:
-                burning = emitter();
-                burning.pour(FlameParticle.FACTORY, 0.06f);
-                if (getVisible()) {
-                    Sample.INSTANCE.play(Assets.SND_BURNING);
-                }
-                break;
-            case LEVITATING:
-                levitation = emitter();
-                levitation.pour(Speck.factory(Speck.JET), 0.02f);
-                break;
-            case INVISIBLE:
-                float alpha = ch instanceof Hero ? INVISIBILITY_ALPHA : 0.0f;
+        ch.ifPresent(chr -> {
+            switch (state) {
+                case BURNING:
+                    burning = emitter();
+                    burning.pour(FlameParticle.FACTORY, 0.06f);
+                    if (getVisible()) {
+                        Sample.INSTANCE.play(Assets.SND_BURNING);
+                    }
+                    break;
+                case LEVITATING:
+                    levitation = emitter();
+                    levitation.pour(Speck.factory(Speck.JET), 0.02f);
+                    break;
+                case INVISIBLE:
+                    float alpha = chr instanceof Hero ? INVISIBILITY_ALPHA : 0.0f;
 
-                if (hasParent()) {
-                    getParent().add( new AlphaTweener( this, alpha, 0.4f ) );
-                } else {
-                    alpha( alpha );
-                }
-                break;
-            case PARALYSED:
-                paused = true;
-                break;
-            case FROZEN:
-                iceBlock = IceBlock.freeze(this);
-                paused = true;
-                break;
-            case ILLUMINATED:
-                GameScene.effect(halo = new TorchHalo(this));
-                break;
-        }
+                    if (hasParent()) {
+                        getParent().add(new AlphaTweener(this, alpha, 0.4f));
+                    } else {
+                        alpha(alpha);
+                    }
+                    break;
+                case PARALYSED:
+                    paused = true;
+                    break;
+                case FROZEN:
+                    iceBlock = IceBlock.freeze(this);
+                    paused = true;
+                    break;
+                case ILLUMINATED:
+                    GameScene.effect(halo = new TorchHalo(this));
+                    break;
+            }
+        });
     }
 
     private void removeEmo() {
@@ -380,31 +399,32 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         if (flashTime > 0 && (flashTime -= Game.elapsed) <= 0) {
             resetColor();
         }
+        ch.ifPresent(chr -> {
+            boolean visible = getVisible() && chr.invisible <= 0;
 
-        boolean visible = getVisible() && (ch == null || ch.invisible <= 0);
+            if (burning != null) {
+                burning.setVisible(visible);
+            }
+            if (levitation != null) {
+                levitation.setVisible(visible);
+            }
+            if (iceBlock != null) {
+                iceBlock.setVisible(visible);
+            }
+            if (sleeping && visible) {
+                showSleep();
+            } else {
+                hideSleep();
+            }
 
-        if (burning != null) {
-            burning.setVisible(visible);
-        }
-        if (levitation != null) {
-            levitation.setVisible(visible);
-        }
-        if (iceBlock != null) {
-            iceBlock.setVisible(visible);
-        }
-        if (sleeping && visible) {
-            showSleep();
-        } else {
-            hideSleep();
-        }
+            if (controlled && visible) {
+                showMindControl(chr);
+            }
 
-        if (controlled && visible) {
-            showMindControl();
-        }
-
-        if (emo != null) {
-            emo.setVisible(visible);
-        }
+            if (emo != null) {
+                emo.setVisible(visible);
+            }
+        });
     }
 
     private void showSleep() {
@@ -420,11 +440,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
     }
 
-    private void showMindControl() {
+    private void showMindControl(@NotNull Char chr) {
         if (!(emo instanceof EmoIcon.Controlled)) {
             removeEmo();
 
-            if (ch != null && ch.isAlive()) {
+            if (chr.isAlive()) {
                 emo = new EmoIcon.Controlled(this);
             }
         }
@@ -454,12 +474,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         if (tweener == motion) {
 
             isMoving = false;
-
-            if(ch!=null && Actor.all().contains(ch)) {
-                ch.onMotionComplete();
-                place(ch.getPos());
-            }
-
+            ch.ifPresent(chr -> {
+                if (Actor.all().contains(chr)) {
+                    chr.onMotionComplete();
+                    place(chr.getPos());
+                }
+            });
             motion.killAndErase();
             motion = null;
         }
@@ -467,50 +487,47 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Override
     public void onComplete(Animation anim) {
-        if(!Actor.all().contains(ch)) {
-            return;
-        }
+        ch.ifPresent(chr -> {
+            if (!Actor.all().contains(chr)) {
+                return;
+            }
 
-        if (animCallback != null) {
-            animCallback.call();
-            animCallback = null;
-        } else {
-            if(ch!=null) {
+            if (animCallback != null) {
+                animCallback.call();
+                animCallback = null;
+            } else {
                 if (anim == attack) {
-                    ch.onAttackComplete();
+                    chr.onAttackComplete();
                     idle();
                 } else if (anim == zap) {
-                    ch.onZapComplete();
+                    chr.onZapComplete();
                     idle();
                 } else if (anim == operate) {
-                    ch.onOperateComplete();
+                    chr.onOperateComplete();
                     idle();
                 }
             }
-        }
+        });
     }
 
     @Override
     public void play(Animation anim) {
-        if (anim == null) {
-            if (ch == null) {
-                EventCollector.logException("null anim on null char, WTF?");
-                return;
-            } else {
-                EventCollector.logException(String.format(Locale.ROOT, "null anim for %s", ch.getClass()));
-                ch.next();
+        ch.ifPresent(chr -> {
+            if (anim == null) {
+                EventCollector.logException(String.format(Locale.ROOT, "null anim for %s", chr.getClass()));
+                chr.next();
                 return;
             }
-        }
 
-        if (ch != null && !Dungeon.visible[ch.getPos()]) {
-            onComplete(anim);
-            return;
-        }
+            if (!Dungeon.visible[chr.getPos()]) {
+                onComplete(anim);
+                return;
+            }
 
-        if (curAnim == die) {
-            return;
-        }
+            if (curAnim == die) {
+                return;
+            }
+        });
         super.play(anim);
     }
 
@@ -519,7 +536,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public Image avatar() {
 
-        if(avatar==null) {
+        if (avatar == null) {
             avatar = snapshot(idle.frames[0]);
         }
 
@@ -537,7 +554,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public void completeForce() {
         interruptMotion();
-        if(curAnim!=null) {
+        if (curAnim != null) {
             onComplete(curAnim);
         }
         reset();

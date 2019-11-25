@@ -26,8 +26,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 
-import org.jetbrains.annotations.NotNull;
-
 public class BlacksmithSprite extends MobSprite {
 	
 	private Emitter emitter;
@@ -52,7 +50,7 @@ public class BlacksmithSprite extends MobSprite {
 	}
 	
 	@Override
-	public void link(@NotNull Char ch ) {
+	public void link(Char ch ) {
 		super.link( ch );
 		
 		emitter = new Emitter();
@@ -72,13 +70,15 @@ public class BlacksmithSprite extends MobSprite {
 	
 	@Override
 	public void onComplete( Animation anim ) {
-		super.onComplete( anim );
-		
-		if (getVisible() && emitter != null && anim == idle) {
-			emitter.burst( Speck.factory( Speck.FORGE ), 3 );
-			float volume = 0.2f / (Dungeon.level.distance( ch.getPos(), Dungeon.hero.getPos() ));
-			Sample.INSTANCE.play( Assets.SND_EVOKE, volume, volume, 0.8f  );
-		}
+		ch.ifPresent( chr -> {
+			super.onComplete(anim);
+
+			if (getVisible() && emitter != null && anim == idle) {
+				emitter.burst(Speck.factory(Speck.FORGE), 3);
+				float volume = 0.2f / (chr.distance(Dungeon.hero));
+				Sample.INSTANCE.play(Assets.SND_EVOKE, volume, volume, 0.8f);
+			}
+		});
 	}
 
 }

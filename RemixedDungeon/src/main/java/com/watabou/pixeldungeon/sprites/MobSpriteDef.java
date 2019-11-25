@@ -9,7 +9,6 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -148,7 +147,7 @@ public class MobSpriteDef extends MobSprite {
 	}
 
 	@Override
-	public void link(@NotNull Char ch) {
+	public void link(Char ch) {
 		super.link(ch);
 		for(CharSprite.State state:initialState) {
 			add(state);
@@ -157,9 +156,10 @@ public class MobSpriteDef extends MobSprite {
 
 	@Override
 	public void die() {
+		ch.ifPresent( chr -> {
 		if(deathEffect!=null) {
-			ZapEffect.play(null,ch.getPos(),deathEffect);
-		}
+			ZapEffect.play(null,chr.getPos(),deathEffect);
+		}});
 
 		removeAllStates();
 		super.die();
@@ -167,9 +167,11 @@ public class MobSpriteDef extends MobSprite {
 
 	@Override
 	public void zap(int cell) {
-		super.zap(cell);
+		ch.ifPresent( chr -> {
+			super.zap(cell);
 
-		ZapEffect.zap(getParent(),ch.getPos(),cell, zapEffect);
+			ZapEffect.zap(getParent(), chr.getPos(), cell, zapEffect);
+		});
 	}
 
 	@Override
