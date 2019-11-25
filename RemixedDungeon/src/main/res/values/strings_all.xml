@@ -2538,8 +2538,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="StrongShield_desc">This rectangular shield plated with bronze sheets and decorated with colored cloth. It is significantly heavier, but can block much more damage.</string>
   <string name="RoyalShield_name">Royal Shield</string>
   <string name="RoyalShield_desc">A full metal shield. Yes, it\'s heavy, but only it can provide you the best protection.</string>
-  <string name="ShieldInfoTemplate">This shield will block up to %d of incoming damage.  With %d %% chance. It will take %3.1f seconds to recover after successful block.</string>
-  <string name="Belongings_CantWearBoth">You can\'t equip %s and %s at same time!</string>
+  <string name="ShieldInfoTemplate">This shield will block up to %1$d of incoming damage.  With %2$d %% chance. It will take %3$3.1f seconds to recover after successful block.</string>
+  <string name="Belongings_CantWearBoth">You can\'t equip %1$s and %2$s at same time!</string>
   <string name="Welcome_Text_29_3">
     remix.29.3\n
     - Gameplay:\n
