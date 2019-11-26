@@ -34,8 +34,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 799
-        versionName "remix.29.3.alpha.7"
+        versionCode 800
+        versionName "remix.29.3.alpha.8"
     }
 
     aaptOptions {
@@ -105,7 +105,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation "com.google.android.gms:play-services-games:19.0.0"
 
-    implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.0.0'
+    implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.1.0'
 
     implementation fileTree(dir: 'lib', include: ['*.jar','*.aar'])
 
