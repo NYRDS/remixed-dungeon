@@ -310,6 +310,17 @@ local RPD = {
 
     shakeCamera = function(time, power)
         Camera.main:shake(time, power)
+    end,
+
+    format = function(fmt, ...)
+        local args, order = {...}, {}
+
+        fmt = fmt:gsub('%%(%d+)%$', function(i)
+            table.insert(order, args[tonumber(i)])
+            return '%'
+        end)
+
+        return string.format(fmt, table.unpack(order))
     end
 }
 

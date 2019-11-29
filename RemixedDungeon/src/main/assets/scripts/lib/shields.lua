@@ -40,7 +40,7 @@ shields.info = function(baseDesc, str, lvl, shieldLevel)
     local infoTemplate = RPD.textById("ShieldInfoTemplate")
 
     return RPD.textById(baseDesc) .. "\n\n" ..
-            string.format(infoTemplate,
+            RPD.format(infoTemplate,
                           shields.blockDamage(lvl, shieldLevel),
                           shields.blockChance(lvl,str) * 100,
                           shields.rechargeTime(lvl,str)
