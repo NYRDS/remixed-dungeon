@@ -521,13 +521,14 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             if (!Dungeon.visible[chr.getPos()]) {
                 onComplete(anim);
-                return;
             }
 
-            if (curAnim == die) {
-                return;
-            }
         });
+
+        if (curAnim == die) {
+            return;
+        }
+
         super.play(anim);
     }
 

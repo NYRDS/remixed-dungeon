@@ -23,7 +23,8 @@ baseDesc.desc = function (self, item)
         name          = "WoodenShield_name",
         info          = shieldDesc,
         price         = 20 * shieldLevel,
-        equipable     = "left_hand"
+        equipable     = "left_hand",
+        upgradable    = true
     }
 end
 

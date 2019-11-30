@@ -20,7 +20,7 @@
         "level": 10
       },
       {
-        "kind": "test/TestItem",
+        "kind": "ScrollOfUpgrade",
         "quantity": 100
       },
       {

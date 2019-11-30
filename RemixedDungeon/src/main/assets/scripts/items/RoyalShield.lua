@@ -17,12 +17,13 @@ local baseDesc = shields.makeShield(shieldLevel,shieldDesc)
 
 baseDesc.desc = function (self, item)
     return {
-        image         = 2,
+        image         = 3,
         imageFile     = "items/shields.png",
         name          = "RoyalShield_name",
         info          = shieldDesc,
-        price         = 20 * shieldLevel,
-        equipable     = "left_hand"
+        price         = 160 * shieldLevel,
+        equipable     = "left_hand",
+        upgradable    = true
     }
 end
 

@@ -22,8 +22,9 @@ baseDesc.desc = function (self, item)
         imageFile     = "items/shields.png",
         name          = "ToughShield_name",
         info          = shieldDesc,
-        price         = 20 * shieldLevel,
-        equipable     = "left_hand"
+        price         = 40 * shieldLevel,
+        equipable     = "left_hand",
+        upgradable    = true
     }
 end
 

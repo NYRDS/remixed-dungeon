@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -25,16 +24,12 @@ public class ExplodingSkull extends UndeadMob {
     }
 
     @Override
-    public int attackProc(@NotNull Char enemy, int damage ) {
-
-        try {
-
+    public boolean attack(@NotNull Char enemy) {
+        if(super.attack(enemy)) {
             die(this);
-
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
+            return true;
         }
-        return damage;
+        return false;
     }
 
     @Override

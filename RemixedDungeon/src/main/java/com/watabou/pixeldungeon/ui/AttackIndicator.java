@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -38,7 +38,7 @@ public class AttackIndicator extends Tag {
 	
 	private static AttackIndicator instance;
 	
-	private CharSprite sprite = null;
+	private Image sprite = null;
 
 	@Nullable
 	private static Char lastTarget = null;
@@ -121,9 +121,7 @@ public class AttackIndicator extends Tag {
 			sprite.killAndErase();
 		}
 
-		sprite = target.sprite();
-		sprite.idle();
-		sprite.paused = true;
+		sprite = target.sprite().avatar();
 		add(sprite);
 
 		sprite.x = x + (width - sprite.width()) / 2 + 1;

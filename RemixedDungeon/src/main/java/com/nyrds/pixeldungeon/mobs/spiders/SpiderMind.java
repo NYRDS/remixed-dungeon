@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -19,12 +18,12 @@ import org.jetbrains.annotations.NotNull;
 
 public class SpiderMind extends Mob {
 
-	private static Class<?> BuffsForEnemy[] = {
-		Blindness.class,
-		Slow.class,
-		Weakness.class
+	private static Class<?>[] BuffsForEnemy = {
+			Blindness.class,
+			Slow.class,
+			Weakness.class
 	};
-	
+
 	public SpiderMind() {
 		hp(ht(5));
 		defenseSkill = 1;
@@ -76,11 +75,6 @@ public class SpiderMind extends Mob {
 	@Override
 	public int dr() {
 		return 0;
-	}
-	
-	@Override
-	public void die(NamedEntityKind cause) {
-		super.die( cause );
 	}
 
 	@Override
