@@ -2553,7 +2553,20 @@ remix.29.2\n
   <string name="ShieldBuffNotReady_Name">Nie gotowy</string>
   <string name="WoodenShield_name">Drewniana Tarcza</string>
   <string name="WoodenShield_desc">Drewniana tarcza jest najprostszą dostępną tarczą. Jest okrągłą i może zablokować niektóre ataki , czasami...</string>
+  <string name="ToughShield_name">Wzmocniona skórzana tarcza</string>
+  <string name="ToughShield_desc">Ta tarcza wzmocniona skórzanymi paskami tarcza wygląda mocniej niż drewniana. Na pewno może zablokować więcej obrażeń.</string>
+  <string name="StrongShield_name">Płytowa brązowa tarcza</string>
+  <string name="StrongShield_desc">Ta prostokątna tarcza pokryta brązowymi płytami i ozdobiona kolorową tkaniną. Jest znacznie cięższa, ale może blokować znacznie więcej obrażeń.</string>
   <string name="RoyalShield_name">Królewska Tarcza</string>
   <string name="RoyalShield_desc">W pełni metalowa tarcza. Tak, jest ciężka ale tylko w ona zapewni ci najlepszą ochronę.</string>
   <string name="ShieldInfoTemplate">Ta tarcza zablokuje atak o sile %1$d z %2$d%% szansą.  Podniesienie gardy zajmie %3$3.1f sekund po udanym bloku.</string>
+  <string name="Belongings_CantWearBoth">Nie możesz założyć %1$s i %2$s jednocześnie!</string>
+  <string name="Welcome_Text_29_3">
+remix.29.3/n
+-Rozgrywka:\n
+--Tarcze!!\n
+-Modowanie:\n
+--modyfikowalne tarcze!:\n
+-Naprawy błędów\n
+</string>
 </resources>
