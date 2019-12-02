@@ -449,6 +449,7 @@ public class Dungeon {
         }
 
         if (level != null && hero!= null && hero.isAlive()) {
+            EventCollector.startTrace("saveGame");
 
             Level thisLevel = Dungeon.level;
 
@@ -473,6 +474,8 @@ public class Dungeon {
             }
 
             GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
+
+            EventCollector.stopTrace("saveGame", "saveGame", level.levelId, Game.version);
 
         } else if (WndResurrect.instance != null) {
 
@@ -500,9 +503,7 @@ public class Dungeon {
         lastSaveTimestamp = SystemTime.now();
 
         try {
-            EventCollector.startTrace("saveGame");
             saveAllImpl();
-            EventCollector.stopTrace("saveGame", "saveGame", Dungeon.level.levelId, Game.version);
         } catch (Exception e) {
             EventCollector.logException(e);
             throw new TrackedRuntimeException(e);
