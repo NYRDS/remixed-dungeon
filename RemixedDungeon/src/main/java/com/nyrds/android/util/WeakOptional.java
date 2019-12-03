@@ -12,7 +12,7 @@ public class WeakOptional<T> {
         reference = new WeakReference<>(Objects.requireNonNull(value));
     }
 
-    public WeakOptional() {
+    private WeakOptional() {
     }
 
     public static<T> WeakOptional<T> empty() {

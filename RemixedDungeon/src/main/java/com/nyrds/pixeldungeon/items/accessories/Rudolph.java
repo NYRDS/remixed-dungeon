@@ -15,7 +15,7 @@ public class Rudolph extends Accessory{
 
     @Override
     public boolean usableBy(Hero hero) {
-        if (hero.getHeroClass() == HeroClass.GNOLL) {
+        if (hero.getHeroClass().equals(HeroClass.GNOLL)) {
             return false;
         }
         return super.usableBy(hero);

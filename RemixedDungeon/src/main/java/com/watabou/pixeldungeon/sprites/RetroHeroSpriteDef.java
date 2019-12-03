@@ -156,7 +156,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			descriptor = "lich";
 		}
 
-		if(hero.getHeroClass() == HeroClass.GNOLL) {
+		if(hero.getHeroClass().equals(HeroClass.GNOLL)) {
 			descriptor = "gnoll";
 		}
 

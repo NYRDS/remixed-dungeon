@@ -197,7 +197,7 @@ public class ModdingMode {
 			}
 			return RemixedDungeonApp.getContext().getAssets().open(resName);
 		} catch (IOException e) {
-			throw new ModError("Missing file: "+resName + " in" + activeMod() + " " + activeModVersion(),e);
+			throw new ModError("Missing file: "+resName + " in: " + activeMod() + " " + activeModVersion(),e);
 		}
 	}
 

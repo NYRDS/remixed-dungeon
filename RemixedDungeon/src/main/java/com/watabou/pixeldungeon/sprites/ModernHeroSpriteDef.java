@@ -62,9 +62,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private CustomClipEffect deathEffect;
 
 	private Map<String, Animation> weapon_anims;
-
-	@NotNull
-	private Map<String, String>    body_types = new HashMap<>();
+	private Map<String, String>    body_types;
 
 	private static final String[] layersOrder = {
 		//LAYER_RIGHT_ITEM_BACK,
@@ -244,7 +242,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			return;
 		}
 
-		if(weapon_anims != null && !weapon_anims.isEmpty()) { //old mods compatibility
+		if(!weapon_anims.isEmpty()) { //old mods compatibility
 			KindOfWeapon weapon = hero.belongings.weapon;
 
 			if (weapon != null) {
@@ -343,16 +341,14 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 		super.loadAdditionalData(json,film,kind);
 
+		weapon_anims = new HashMap<>();
 		if(json.has(WEAPON_ANIM)){
-			weapon_anims = new HashMap<>();
-
 			JsonHelper.foreach(json.getJSONObject(WEAPON_ANIM),
 					(root, key) -> weapon_anims.put(key,readAnimation(root,key,film)));
 		}
 
+		body_types = new HashMap<>();
 		if(json.has(BODY_TYPE)) {
-			body_types = new HashMap<>();
-
 			JsonHelper.foreach(json.getJSONObject(BODY_TYPE),
 					(root, key) -> body_types.put(key,root.getString(key)));
 		}

@@ -874,7 +874,7 @@ public abstract class Level implements Bundlable {
 		return cell;
 	}
 
-	public void addItemToSpawn(Item item) {
+	public void addItemToSpawn(@Nullable Item item) {
 		if (item != null) {
 			itemsToSpawn.add(item);
 		}
