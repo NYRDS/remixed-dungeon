@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
@@ -193,10 +194,7 @@ public class Treasury {
     }
 
     public boolean isForbidden(@NotNull String itemClass) {
-        if(forbidden.contains(itemClass)) {
-            return true;
-        }
-        return false;
+        return forbidden.contains(itemClass);
     }
 
     public Item check(@NotNull Item item) {
@@ -207,7 +205,10 @@ public class Treasury {
         return item;
     }
 
-    public Item random(Category category){
+    public Item random(@NotNull Category category){
+        if(!names.contains(category.name())) {
+            return new Gold();
+        }
         return random(category.name());
     }
 
