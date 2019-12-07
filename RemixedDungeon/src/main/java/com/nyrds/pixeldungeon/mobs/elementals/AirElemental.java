@@ -33,7 +33,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public int skillLevel() {
-		return Math.max(Math.min(7, exp / 2),3);
+		return Math.max(Math.min(5, exp / 2),2);
 	}
 
 	public void adjustStats(int depth) {
