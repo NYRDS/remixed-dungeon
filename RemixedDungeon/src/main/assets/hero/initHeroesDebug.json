@@ -28,7 +28,7 @@
         "quantity": 100
       },
       {
-        "kind": "PlateArmor"
+        "kind": "ElfArmor"
       },
       {
         "kind": "ClothArmor"
@@ -41,6 +41,11 @@
       },
       {
         "kind": "WoodenShield"
+      },
+      {
+        "kind": "TomeOfMastery",
+        "quantity": 100,
+        "level": 10
       }
     ],
     "str": 10,
