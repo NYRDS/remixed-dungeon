@@ -275,6 +275,12 @@ local RPD = {
         return item
     end,
 
+    creteItem = function(itemClass, itemDesc)
+        local json = require("scripts/lib/json")
+        local item = ItemFactory:createItem(itemClass, json.encode(itemDesc))
+        return item
+    end,
+
     levelObject = function(objectClass, cell)
         local object = LevelObjectsFactory:objectByName(objectClass)
         object:setPos(cell)

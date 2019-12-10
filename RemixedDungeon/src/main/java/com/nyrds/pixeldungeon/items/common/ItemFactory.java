@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.nyrds.LuaInterface;
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.CustomItem;
@@ -472,6 +474,13 @@ public class ItemFactory {
             ret = "NoItem";
         }
         return ret;
+    }
+
+    @LuaInterface
+    public static Item createItem(String itemClass, String jsonDesc) throws JSONException {
+        Item item = itemByName(itemClass);
+        item.fromJson(JsonHelper.readJsonFromString(jsonDesc));
+        return item;
     }
 
     @Nullable
