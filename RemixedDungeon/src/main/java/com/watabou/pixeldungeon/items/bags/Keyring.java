@@ -32,7 +32,7 @@ public class Keyring extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Key || item instanceof Ring || item instanceof RingOfStoneWalking || item instanceof IceKey;
+		return super.grab(item) || item instanceof Key || item instanceof Ring || item instanceof RingOfStoneWalking || item instanceof IceKey;
 	}
 	
 	@Override

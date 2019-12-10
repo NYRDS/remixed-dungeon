@@ -31,13 +31,13 @@
         "kind": "ElfArmor"
       },
       {
-        "kind": "ClothArmor"
+        "kind": "test/TestItem"
       },
       {
         "kind": "Claymore"
       },
       {
-        "kind": "TestWeapon2"
+        "kind": "SeedPouch"
       },
       {
         "kind": "WoodenShield"

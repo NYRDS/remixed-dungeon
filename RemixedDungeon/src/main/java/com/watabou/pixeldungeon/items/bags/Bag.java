@@ -142,7 +142,7 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	public boolean grab( Item item ) {
-		return false;
+		return item.bag().equals(getClassName());
 	}
 
 	@Override

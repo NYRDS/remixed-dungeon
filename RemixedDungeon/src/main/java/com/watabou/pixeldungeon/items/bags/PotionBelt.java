@@ -13,7 +13,7 @@ public class PotionBelt extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Potion || item instanceof ManaPotion;
+		return super.grab(item) || item instanceof Potion || item instanceof ManaPotion;
 	}
 	
 	@Override

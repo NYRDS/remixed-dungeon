@@ -29,7 +29,7 @@ public class WandHolster extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Wand;
+		return super.grab(item) || item instanceof Wand;
 	}
 	
 	@Override

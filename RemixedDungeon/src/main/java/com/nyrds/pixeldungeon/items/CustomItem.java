@@ -217,4 +217,9 @@ public class CustomItem extends EquipableItem {
     public String desc() {
         return StringsManager.maybeId(script.runOptional("info",info).checkjstring());
     }
+
+    @Override
+    public String bag() {
+        return script.runOptional("bag",super.bag()).checkjstring();
+    }
 }

@@ -50,8 +50,9 @@ return item.init{
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
-
-            RPD.createLevelObject(candle, cell)
+            local book = RPD.creteItem("Codex", {text="Test codex"})
+            RPD.Dungeon.level:drop(book, cell)
+            --RPD.createLevelObject(candle, cell)
         end
     end,
 
@@ -78,5 +79,9 @@ return item.init{
     deactivate = function(self, item, hero)
         RPD.glogp(tostring(item).." deactivated on "..tostring(hero).."\n")
         RPD.removeBuff(hero,"Cloak")
+    end,
+
+    bag = function(self, item)
+        return "SeedPouch"
     end
 }

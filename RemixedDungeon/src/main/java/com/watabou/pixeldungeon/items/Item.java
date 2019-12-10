@@ -737,4 +737,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public void setLevelKnown(boolean levelKnown) {
 		this.levelKnown = levelKnown;
 	}
+
+	public String bag() {
+		return Utils.EMPTY_STRING;
+	}
 }
