@@ -234,16 +234,33 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean removeItem(Item itemToRemove) {
-		Iterator<Item> it = iterator();
 
-		while(it.hasNext()) {
-			Item item = it.next();
-			if(item == itemToRemove) {
-				it.remove();
-				return true;
-			}
+		if(itemToRemove.equals(weapon)) {
+			weapon = null;
+			return true;
 		}
-		return false;
+
+		if(itemToRemove.equals(armor)) {
+			armor = null;
+			return true;
+		}
+
+		if(itemToRemove.equals(leftHand)) {
+			leftHand = null;
+			return true;
+		}
+
+		if(itemToRemove.equals(ring1)) {
+			ring1 = null;
+			return true;
+		}
+
+		if(itemToRemove.equals(ring2)) {
+			ring2 = null;
+			return true;
+		}
+
+		return backpack.remove(itemToRemove);
 	}
 
 	public void resurrect( int depth ) {
@@ -378,32 +395,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			index++;
 			return backpackIterator.next();
 		}
-
-		@Override
-		public void remove() {
-			if(index == 0) {
-				throw new IllegalStateException();
-			}
-			switch (index-1) {
-			case 0:
-				equipped[0] = weapon = null;
-				break;
-			case 1:
-				equipped[1] = armor = null;
-				break;
-			case 2:
-				equipped[2] = leftHand = null;
-				break;
-			case 3:
-				equipped[3] = ring1 = null;
-				break;
-			case 4:
-				equipped[4] = ring2 = null;
-				break;
-			default:
-				backpackIterator.remove();
-			}
-		}
 	}
 
 	public boolean collect(Item newItem){
@@ -436,17 +427,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean unequip(EquipableItem item) {
-
-		var itemIterator = iterator();
-
-		while (itemIterator.hasNextEquipped()) {
-			if(itemIterator.next()==item) {
-				itemIterator.remove();
-				blockSlots();
-				return true;
-			}
+		if(removeItem(item)) {
+			blockSlots();
+			return true;
 		}
-
 		return false;
 	}
 

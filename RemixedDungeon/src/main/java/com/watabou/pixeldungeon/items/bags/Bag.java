@@ -27,6 +27,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -149,17 +151,33 @@ public class Bag extends Item implements Iterable<Item> {
 	public String desc() {
 		return Utils.format(super.desc(),size);
 	}
-	
-	@Override
-	public Iterator<Item> iterator() {
-		return new ItemIterator();
+
+
+	public boolean remove(Item item) {
+		for(Item i:items) {
+			if(i instanceof Bag) {
+				if(((Bag)i).remove(item)) {
+					return true;
+				}
+			}
+		}
+
+		return items.remove(item);
 	}
-	
-	private class ItemIterator implements Iterator<Item> {
+
+	@NotNull
+	@Override
+	public BagIterator iterator() {
+		return new BagIterator();
+	}
+
+
+
+	private class BagIterator implements Iterator<Item> {
 
 		private int index = 0;
-		private Iterator<Item> nested = null;
-		
+		private BagIterator nested = null;
+
 		@Override
 		public boolean hasNext() {
 			if (nested != null) {
@@ -171,14 +189,13 @@ public class Bag extends Item implements Iterable<Item> {
 
 		@Override
 		public Item next() {
+
 			if (nested != null && nested.hasNext()) {
-				
 				return nested.next();
-				
 			} else {
 				
 				nested = null;
-				
+
 				Item item = items.get( index++ );
 				if (item instanceof Bag) {
 					Bag bag = (Bag)item;
@@ -196,8 +213,8 @@ public class Bag extends Item implements Iterable<Item> {
 			if (nested != null) {
 				nested.remove();
 			} else {
-				items.remove( index - 1);
+				items.remove( index - 1 );
 			}
-		}	
+		}
 	}
 }
