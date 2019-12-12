@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items.chaos;
 
 import com.nyrds.Packable;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.utils.Bundle;
 
@@ -71,5 +72,10 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 		super.restoreFromBundle(bundle);
 
 		selectImage();
+	}
+
+	@Override
+	public Belongings.Slot blockSlot() {
+		return Belongings.Slot.LEFT_HAND;
 	}
 }
