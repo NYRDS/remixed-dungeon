@@ -113,7 +113,7 @@ public class InterlevelScene extends PixelScene {
 
     static public void Do(InterlevelScene.Mode mode) {
 
-        if(Dungeon.level!=null && Dungeon.hero!=null) { // not game start
+        if(Game.scene() instanceof GameScene && Dungeon.level!=null && Dungeon.hero!=null) { // not game start
             Dungeon.hero.getSprite().completeForce();
             for(Mob mob:Dungeon.level.getCopyOfMobsArray()) {
                 mob.getSprite().completeForce();
