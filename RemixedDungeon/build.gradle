@@ -35,8 +35,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 808
-        versionName "remix.29.3.fix.2"
+        versionCode 809
+        versionName "remix.29.3.fix.3"
     }
 
     aaptOptions {
@@ -106,29 +106,23 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation "com.google.android.gms:play-services-games:19.0.0"
 
-    implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.1.0'
-
     implementation 'com.android.support:multidex:1.0.3'
 
     implementation 'io.humanteq.hqm:hqm-core:2.0.0-beta01'
 
-    implementation 'androidx.core:core:1.1.0'
-
-    implementation 'com.android.billingclient:billing:2.1.0'
-    implementation group: 'commons-io', name: 'commons-io', version: '2.5'
+    implementation 'com.android.billingclient:billing:1.1'
+    implementation 'commons-io:commons-io:2.5'
 
     implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-perf:19.0.2'
+    implementation 'com.google.firebase:firebase-perf:19.0.3'
     implementation 'com.google.firebase:firebase-ads:18.3.0'
 
-    dependencies {
-        implementation 'com.appodeal.ads.sdk:core:2.6.0'
-        implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.1'
-        implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.1'
-        implementation 'com.appodeal.ads.sdk.networks:appodealx:2.6.0.1'
-        implementation 'com.appodeal.ads.sdk.networks:ironsource:2.6.0.1'
-        implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.6.0.1'
-    }
+    implementation 'com.appodeal.ads.sdk:core:2.6.0'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:appodealx:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.6.0.1'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'org.jetbrains:annotations:15.0'
@@ -140,7 +134,6 @@ dependencies {
     androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation 'androidx.test:core:1.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-
 }
 
 

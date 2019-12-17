@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider {
 
-    private static final String APPODEAL_REWARD_VIDEO = "appodeal reward video";
+    private static final String APPODEAL_REWARD_VIDEO = "appodeal_reward_video";
     private static InterstitialPoint returnTo;
     private static boolean firstLoad = true;
 
