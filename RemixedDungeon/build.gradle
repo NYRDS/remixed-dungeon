@@ -110,7 +110,7 @@ dependencies {
 
     implementation 'io.humanteq.hqm:hqm-core:2.0.0-beta01'
 
-    implementation 'com.android.billingclient:billing:1.1'
+    implementation 'com.android.billingclient:billing:1.2.2'
     implementation 'commons-io:commons-io:2.5'
 
     implementation 'com.google.firebase:firebase-core:17.2.1'
