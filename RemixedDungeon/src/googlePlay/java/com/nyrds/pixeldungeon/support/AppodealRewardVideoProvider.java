@@ -46,6 +46,11 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
                 }
 
                 @Override
+                public void onRewardedVideoShowFailed() {
+                    returnTo.returnToWork(false);
+                }
+
+                @Override
                 public void onRewardedVideoFinished(double v, String s) {
 
                 }
