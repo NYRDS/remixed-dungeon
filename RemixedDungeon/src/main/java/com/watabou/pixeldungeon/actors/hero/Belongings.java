@@ -36,6 +36,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -228,7 +229,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public void uncurseEquipped() {
 		ScrollOfRemoveCurse.uncurse( owner, armor, weapon, leftHand, ring1, ring2 );
 	}
-	
+
+	public void curseEquipped() {
+		ScrollOfCurse.curse( owner, armor, weapon, leftHand, ring1, ring2 );
+	}
+
 	public Item randomUnequipped() {
 		return Random.element( backpack.items );
 	}
