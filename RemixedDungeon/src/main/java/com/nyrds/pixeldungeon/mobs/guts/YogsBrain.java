@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -31,7 +32,7 @@ public class YogsBrain extends Mob {
 
     {
 
-        hp(ht(150));
+        hp(ht(350));
         defenseSkill = 30;
 
         exp = 25;
@@ -43,6 +44,7 @@ public class YogsBrain extends Mob {
         addImmunity(Amok.class);
         addImmunity(Sleep.class);
         addImmunity(Terror.class);
+        addImmunity(Burning.class);
     }
 
     @Override
@@ -56,7 +58,7 @@ public class YogsBrain extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(10, 20);
+        return Random.NormalIntRange(15, 25);
     }
 
     @Override

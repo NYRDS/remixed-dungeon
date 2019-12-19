@@ -4,6 +4,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -17,8 +18,8 @@ import com.watabou.utils.Random;
  */
 public class YogsHeart extends Mob {
     {
-        hp(ht(250));
-        defenseSkill = 30;
+        hp(ht(450));
+        defenseSkill = 40;
 
         exp = 12;
 
@@ -27,11 +28,12 @@ public class YogsHeart extends Mob {
         addImmunity(Amok.class);
         addImmunity(Sleep.class);
         addImmunity(Terror.class);
+        addImmunity(Burning.class);
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(25, 35);
+        return Random.NormalIntRange(35, 45);
     }
 
     @Override
@@ -41,7 +43,7 @@ public class YogsHeart extends Mob {
 
     @Override
     public int dr() {
-        return 12;
+        return 22;
     }
 
     @Override
@@ -64,7 +66,7 @@ public class YogsHeart extends Mob {
 		Mob mob = Dungeon.level.getRandomMob();
 
 		if(mob!=null && mob.isAlive() && !mob.isPet()) {
-			PotionOfHealing.heal(mob,0.1f);
+			PotionOfHealing.heal(mob,0.2f);
 		}
 
 		return super.act();
