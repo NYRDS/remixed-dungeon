@@ -18,25 +18,25 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="FreezeGlobe_Name">Einfrieren</string>
   <string name="FreezeGlobe_Info">Friert ausgewählten Charakter ein und macht es ihm für eine kurze Zeit unmöglich jedwede Aktion auszuführen.</string>
   <string name="MagicTorch_Name">Magische Fackel</string>
-  <string name="MagicTorch_Info">Ein Zauberspruch, der Licht produziert, um dunkle Dungeon-Level zu erhellen.</string>
+  <string name="MagicTorch_Info">Ein Zauber, der Licht erzeugt, um die dunklen Ebenen des Dungeons zu beleuchten.</string>
   <string name="Healing_Name">Heilung</string>
-  <string name="Healing_Info">Dieser Spruch ist wichtig für jeden Abenteurer. Er wird den Helden um 1/3 der maximalen Leben Heilen.</string>
+  <string name="Healing_Info">Dieser Zauber ist für jeden Abenteurer entscheidend. Er wird 1/3 der maximalen Leben des Zaubernden wiederherstellen.</string>
   <string name="ClassArmor_LowMana">Nicht genügend Mana!</string>
   <string name="Drink_ACDrink">TRINKEN</string>
   <string name="Drink_Message">Dieses Getränk war erfrischend!</string>
   <string name="TomeOfKnowledge_Name">Wälzer des Wissens</string>
-  <string name="TomeOfKnowledge_Info">Dieser alte Wälzer ist mit arkanen Rätseln und Mysterien gefüllt. Es mag hart sein ihn zu Lesen, aber wenn du ihn durch hast, werden deine magischen Kräfte definitiv gesteigert.</string>
+  <string name="TomeOfKnowledge_Info">Dieser uralte Wälzer ist voll mit arkanen Rätseln und Mysterien! Es mag schwer zu lesen sein, aber wenn du es durch hast, wirst du deine magischen Kräfte definitiv erhöhen.</string>
   <string name="SpellBook_Name">Zauberbuch</string>
-  <string name="SpellBook_Info">Es sieht mehr wie eine Zusammenstellung sortierter Seiten aus, die zusammengeheftet sind, als wie ein Buch. Du könntest in der Lage sein etwas draus zu machen, wenn du dich darauf konzentrierst.</string>
-  <string name="SpellBook_Info_Identified">In diesen Seiten hast du den kompletten Text eines \"%1$s\" Spruches gefunden.\n\" %2$s \"</string>
+  <string name="SpellBook_Info">Es sieht eher wie eine Zusammenstellung von zusammengenähten Seiten aus, als wie ein richtiges Buch. Du kannst vielleicht etwas daraus machen, wenn du dich genug darauf konzentrierst.</string>
+  <string name="SpellBook_Info_Identified">In diesen Seiten hast du den kompletten Text eines \"%1$s\" Zaubers gefunden.\n\" %2$s \"</string>
   <string name="ManaPotion_Name">Mana Trank</string>
   <string name="ManaPotion_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
   <string name="Mushroom_Eat_Message">Dieser Pilz hat komisch geschmeckt!</string>
-  <string name="Torch_Info2">Dies ist ein unverzichtbarer Gegenstand in diesem Dungeon, der für seine schlechte Beleuchtung bekannt ist.</string>
+  <string name="Torch_Info2">Dies ist ein unverzichtbarer Gegenstand in diesem Dungeon, der für seine schlechte Umgebungsbeleuchtung bekannt ist.</string>
   <string name="WndSpells_Title">Zaubersprüche</string>
   <string name="WndSpells_Level">Magie Level:</string>
   <string name="Ring_Name">%sring</string>
-  <string name="Ring_Info">Dieser metallene Ring ist mit einem großen %s verziert, der im Dunkeln glitzert. Was wird passieren wenn du ihn anlegst?</string>
+  <string name="Ring_Info">Dieser metallene Ring ist mit einem großen %s Juwel verziert, der im Dunkeln glitzert. Was wird passieren wenn du ihn anlegst?</string>
   <string name="Ring_Identify">Du bist nun vertraut genug mit deinem %1$s, um ihn zu identifizieren. Es ist ein %2$s.</string>
   <string name="Ring_Info1">Du kannst nur 2 Ringe gleichzeitig tragen</string>
   <string name="Ring_Info2">Dein %s schneidet sich schmerzhaft ins Fleisch deines Fingers</string>
@@ -46,14 +46,14 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="Ring_BuffKnown">Dies ist ein %s</string>
   <string name="RingOfAccuracy_Name">Ring der Präzision</string>
   <string name="RingOfAccuracy_Info">Dieser Ring erhöht deine Chance den Feind zu treffen.</string>
-  <string name="RingOfDetection_Name">Ring der Erkennung</string>
-  <string name="RingOfDetection_Info">Der Träger dieses Rings bemerkt Geheimnisse wie versteckte Fallen und Türen ohne danach suchen zu müssen. Verschlechterte Ringe trüben jedoch deine Sinne und erschweren auch die aktive Suche nach Geheimnissen erheblich.</string>
+  <string name="RingOfDetection_Name">Ring der Entdeckung</string>
+  <string name="RingOfDetection_Info">Das Tragen dieses Rings ermöglicht es dem Träger, versteckte Geheimnisse - Fallen und geheime Türen - zu erkennen, ohne sich Zeit für die Suche zu nehmen. Verschlechterte Ringe der Entdeckung trüben jedoch deine Sinne und erschweren es, Geheimnisse zu bemerken, selbst wenn Sie aktiv nach ihnen suchen.</string>
   <string name="RingOfElements_Name">Ring der Elemente</string>
-  <string name="RingOfElements_Info">Dieser Ring ermöglicht es dem Träger Schaden aus Elementen wie Feuer, Elektrizität, Gas etc. besser zu widerstehen. Außerdem verringert es die Dauer negativer Effekte.</string>
+  <string name="RingOfElements_Info">Dieser Ring bietet Widerstand gegen verschiedene Elemente, wie Feuer, Elektrizität, Gase usw. Außerdem verringert er die Dauer der negativen Auswirkungen.</string>
   <string name="RingOfEvasion_Name">Ring des Ausweichens</string>
   <string name="RingOfEvasion_Info">Dieser Ring erhöht deine Chance feindlichen Attacken auszuweichen.</string>
   <string name="RingOfHaggler_Name">Ring des Feilschers</string>
-  <string name="RingOfHaggler_Info">Der Ring des Feilschers verfügt über keinerlei magischen Effekte, wirkt aber auf Händler einschüchternd. Diese ziehen es jedenfalls vor dem Träger bessere Preise zu machen als einen Diebstahl ihrer Waren zu riskieren. Da dieser Ring nicht magischer Natur ist wäre jeglicher Verbesserungsversuch ohne Effekt.</string>
+  <string name="RingOfHaggler_Info">Eigentlich bietet dieser Ring keinen magischen Effekt, aber er demonstriert Ladenbesitzern und Verkäufern, dass der Besitzer des Rings Mitglied der Diebesgilde ist. Normalerweise sind sie froh, einen Rabatt im Austausch für eine vorübergehende Immunitätsgarantie zu gewähren. Eine Aufwertung des Rings bringt keine zusätzlichen Boni.</string>
   <string name="RingOfHaste_Name">Ring der Eile</string>
   <string name="RingOfHaste_Info">Dieser Ring beschleunigt die allgemeine Zeitwahrnehmung des Trägers wodurch jegliche Aktionen ein wenig schneller durchgeführt werden.</string>
   <string name="RingOfHerbalism_Name">Ring der Pflanzen</string>
@@ -205,7 +205,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="WandOfPoison_Name">Zauberstab des Giftes</string>
   <string name="WandOfPoison_Info">Ein Schuss dieses verdrehten Stück Holzes wird das Ziel mit einem tödlichen Gift vergiften. Eine Kreatur, die vergiftet ist erhält durchgehend Schaden bis der Effekt endet. Die Dauer des Effektes erhöht sich mit dem Level des Stabes.</string>
   <string name="WandOfPoison_Info1">nichts ist geschehen</string>
-  <string name="WandOfRegrowth_Name">Zauberstab der Begrünung</string>
+  <string name="WandOfRegrowth_Name">Zauberstab des Nachwachsens</string>
   <string name="WandOfRegrowth_Info">Wenn Leben aufhört, fängt neues Leben an zu wachsen... Dieser Zyklus bleibt immer bestehen.</string>
   <string name="WandOfRegrowth_Info1">nichts ist geschehen</string>
   <string name="WandOfSlowness_Name">Zauberstab der Verlangsamung</string>
@@ -2541,6 +2541,28 @@ remix.29.2\n
 --- Pazifismus\n
 - Modding:\n
 -- Benutzerdefinierte Artefakte\n
+- Bugs behoben\n
+</string>
+  <string name="town_deco_crossroad_name">Kreuzungsschild</string>
+  <string name="town_deco_crossroad_desc">Grobe Holzsäule mit pfeilförmigen Platten, auf denen der Text vor langer Zeit verblasst ist, wahrscheinlich aufgrund der rauen Wetterbedingungen.</string>
+  <string name="ShieldBuffReady_Name">Bereit</string>
+  <string name="ShieldBuffNotReady_Name">Nicht Bereit</string>
+  <string name="WoodenShield_name">Holzschild</string>
+  <string name="WoodenShield_desc">Ein grob gefertigter Holzschild ist der einfachste verfügbare Schild. Er ist rund und kann von Zeit zu Zeit einige Schäden abwehren.</string>
+  <string name="ToughShield_name">Lederverstärkter Schild</string>
+  <string name="ToughShield_desc">Diesers mit Lederriemen verstärkte Schild sieht robuster aus als dar hölzerne. Er kann garantiert mehr Schaden abwehren.</string>
+  <string name="StrongShield_name">Bronzebeschichtetes Schild</string>
+  <string name="StrongShield_desc">Dieser rechteckige Schild ist mit Bronzeplatten überzogen und mit farbigem Tuch verziert. Er ist deutlich schwerer, kann aber viel mehr Schaden abwehren.</string>
+  <string name="RoyalShield_name">Königlicher Schild</string>
+  <string name="RoyalShield_desc">Ein Schild vollständig aus Metall. Ja, er ist schwer, aber nur er bietet den besten Schutz.</string>
+  <string name="ShieldInfoTemplate">Dieser Schild blockiert bis zu %1$d des eingehenden Schadens. Mit einer Chance von %2$d %% . Es wird %3$3.1f Sekunden dauern, um sich nach erfolgreicher Blockade zu erholen.</string>
+  <string name="Belongings_CantWearBoth">Du kannst %1$s und %2$s nicht gleichzeitig tragen!</string>
+  <string name="Welcome_Text_29_3">
+remix.29.3\n
+- Spielmechaniken:\n
+-- Schilde!\n
+- Modding:\n
+-- Benutzerdefinierte Schilde!\n
 - Bugs behoben\n
 </string>
 </resources>
