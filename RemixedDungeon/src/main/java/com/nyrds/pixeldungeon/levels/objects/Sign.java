@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import androidx.annotation.Keep;
+
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -27,6 +29,7 @@ public class Sign extends LevelObject {
 	@Packable
 	private String text;
 
+	@Keep
 	public Sign(){
 		super(Level.INVALID_CELL);
 	}
