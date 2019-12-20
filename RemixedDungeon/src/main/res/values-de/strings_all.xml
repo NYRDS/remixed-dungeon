@@ -2543,4 +2543,26 @@ remix.29.2\n
 -- Benutzerdefinierte Artefakte\n
 - Bugs behoben\n
 </string>
+  <string name="town_deco_crossroad_name">Kreuzungsschild</string>
+  <string name="town_deco_crossroad_desc">Grobe Holzsäule mit pfeilförmigen Platten, auf denen der Text vor langer Zeit verblasst ist, wahrscheinlich aufgrund der rauen Wetterbedingungen.</string>
+  <string name="ShieldBuffReady_Name">Bereit</string>
+  <string name="ShieldBuffNotReady_Name">Nicht Bereit</string>
+  <string name="WoodenShield_name">Holzschild</string>
+  <string name="WoodenShield_desc">Ein grob gefertigter Holzschild ist der einfachste verfügbare Schild. Er ist rund und kann von Zeit zu Zeit einige Schäden abwehren.</string>
+  <string name="ToughShield_name">Lederverstärkter Schild</string>
+  <string name="ToughShield_desc">Diesers mit Lederriemen verstärkte Schild sieht robuster aus als dar hölzerne. Er kann garantiert mehr Schaden abwehren.</string>
+  <string name="StrongShield_name">Bronzebeschichtetes Schild</string>
+  <string name="StrongShield_desc">Dieser rechteckige Schild ist mit Bronzeplatten überzogen und mit farbigem Tuch verziert. Er ist deutlich schwerer, kann aber viel mehr Schaden abwehren.</string>
+  <string name="RoyalShield_name">Königlicher Schild</string>
+  <string name="RoyalShield_desc">Ein Schild vollständig aus Metall. Ja, er ist schwer, aber nur er bietet den besten Schutz.</string>
+  <string name="ShieldInfoTemplate">Dieser Schild blockiert bis zu %1$d des eingehenden Schadens. Mit einer Chance von %2$d %% . Es wird %3$3.1f Sekunden dauern, um sich nach erfolgreicher Blockade zu erholen.</string>
+  <string name="Belongings_CantWearBoth">Du kannst %1$s und %2$s nicht gleichzeitig tragen!</string>
+  <string name="Welcome_Text_29_3">
+remix.29.3\n
+- Spielmechaniken:\n
+-- Schilde!\n
+- Modding:\n
+-- Benutzerdefinierte Schilde!\n
+- Bugs behoben\n
+</string>
 </resources>
