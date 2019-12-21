@@ -1113,4 +1113,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		return Dungeon.visible[ch.getPos()];
 	}
+
+	public void busy(){}
 }

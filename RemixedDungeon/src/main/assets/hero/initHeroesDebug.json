@@ -15,12 +15,12 @@
         "level": 10
       },
       {
-        "kind": "PotionOfMindVision",
+        "kind": "PotionOfPurity",
         "quantity": 100,
         "level": 10
       },
       {
-        "kind": "ScrollOfUpgrade",
+        "kind": "PotionOfToxicGas",
         "quantity": 100
       },
       {

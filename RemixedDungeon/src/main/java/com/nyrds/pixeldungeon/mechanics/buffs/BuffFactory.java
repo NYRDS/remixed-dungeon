@@ -21,6 +21,7 @@ public class BuffFactory {
     static {
         initBuffsMap();
         predefinedCustomBuffs.add("ShieldLeft"); // buff for shield in left hand
+        predefinedCustomBuffs.add("GasesImmunity");
         script.run("loadBuffs",null);
     }
 

@@ -15,6 +15,11 @@ import com.watabou.utils.Bundle;
 import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaTable;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import lombok.var;
+
 public class CustomBuff extends Buff {
 
     private String name;
@@ -151,5 +156,25 @@ public class CustomBuff extends Buff {
 
     public void setSource(Item source) {
         this.source = source;
+    }
+
+    @Override
+    public Set<String> immunities() {
+        var table = script.runOptional("immunities", LuaEngine.emptyTable);
+
+        var ret = new HashSet<String>();
+
+        LuaEngine.forEach(table.checktable(), (key,val)->ret.add(val.checkjstring()));
+        return ret;
+    }
+
+    @Override
+    public Set<String> resistances() {
+        var table = script.runOptional("resistances", LuaEngine.emptyTable);
+
+        var ret = new HashSet<String>();
+
+        LuaEngine.forEach(table.checktable(), (key,val)->ret.add(val.checkjstring()));
+        return ret;
     }
 }

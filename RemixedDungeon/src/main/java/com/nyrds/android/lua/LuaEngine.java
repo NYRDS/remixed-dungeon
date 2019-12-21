@@ -34,10 +34,13 @@ import org.luaj.vm2.lib.jse.JseOsLib;
 
 import java.io.InputStream;
 
+import lombok.var;
+
 public class LuaEngine implements ResourceFinder {
 
 	public static final String    SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
     public static final String    LUA_DATA = "luaData";
+	public static final LuaTable  emptyTable = new LuaTable();
 
     static private      LuaEngine engine              = new LuaEngine();
 
@@ -130,10 +133,18 @@ public class LuaEngine implements ResourceFinder {
 		}
 	}
 
-
 	@Override
 	public InputStream findResource(String filename) {
 		return new BOMInputStream(ModdingMode.getInputStream(filename));
 	}
 
+	static public void forEach(@NotNull LuaTable tbl, LuaEntryAction action) {
+		var k = LuaValue.NIL;
+		while ( true ) {
+			var n = tbl.next(k);
+			if ( (k = n.arg1()).isnil() )
+				break;
+			action.apply(k, n.arg(2));
+		}
+	}
 }

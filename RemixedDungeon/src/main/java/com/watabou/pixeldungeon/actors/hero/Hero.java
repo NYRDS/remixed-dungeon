@@ -557,6 +557,7 @@ public class Hero extends Char {
 		return false;
 	}
 
+	@Override
 	public void busy() {
 		ready = false;
 	}
