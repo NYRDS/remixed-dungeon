@@ -18,10 +18,12 @@ public class BuffFactory {
 
     static private LuaScript script = new LuaScript("scripts/buffs/Buffs", null);
 
+    public static final String GASES_IMMUNITY = "GasesImmunity";
+
     static {
         initBuffsMap();
         predefinedCustomBuffs.add("ShieldLeft"); // buff for shield in left hand
-        predefinedCustomBuffs.add("GasesImmunity");
+        predefinedCustomBuffs.add(GASES_IMMUNITY);
         script.run("loadBuffs",null);
     }
 

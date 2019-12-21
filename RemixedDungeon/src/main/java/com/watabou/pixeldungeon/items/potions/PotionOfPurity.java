@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -110,7 +111,7 @@ public class PotionOfPurity extends UpgradablePotion{
 	protected void apply(Hero hero) {
 		GLog.w(Game.getVar(R.string.PotionOfPurity_NoSmell));
 
-		Buff.prolong(hero, "GasesImmunity", (float) (5 * qualityFactor()));
+		Buff.prolong(hero, BuffFactory.GASES_IMMUNITY, (float) (5 * qualityFactor()));
 
 		setKnown();
 	}
