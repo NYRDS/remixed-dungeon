@@ -1,7 +1,7 @@
-Este é um jogo de código aberto rogue-like com gráficos em pixel art
+Este é um jogo roguelike de código aberto com gráficos no estilo pixel
 
-Era uma vez uma pequena cidade. Os aldeões viviam felizes, porem eram muito pobres, tanto que sequer tinham condições para ir em algum lugar decente nas férias. Mas em um dia, quando todos abandonaram as esperanças, um milagre aconteceu. O chão em baixo da cidade começou a estremecer violentamente e explodiu uma miríade de monstros desprezíveis. E, a partir daquele momento, todos os aldeões, que tinham sobrevivido, viveram felizes para sempre. Por que? Porque a masmorra atraiu a todos os tipos de heróis e aventureiros. Eles protegeram os inocentes e acabaram por ser muito bom gastadores, impulsionando a economia da cidade.
-E agora a pequena cidade floresce, como está em cima de uma perigosa masmorra, cheia de aventureiros mortos e suas almas miseráveis.
+Era uma vez uma cidade pequena. Os habitantes da cidade viviam felizes, mas eram tão pobres que nem podiam ir a algum lugar decente nas férias. Mas no dia em que todos abandonaram toda a esperança, ocorreu um milagre. O chão em baixo da cidade tremeu violentamente e explodiu uma miríade de monstros desprezíveis. A partir daí, todos os habitantes da cidade que sobreviveram viveram felizes para sempre. Por quê? Porque a masmorra atraiu todos os tipos de heróis e aventureiros. Eles protegeram os inocentes e acabaram sendo excelentes gastadores, impulsionando a economia da cidade.
+E agora a pequena cidade floresce, em cima de uma masmorra perigosa cheia de aventureiros mortos e suas almas miseráveis.
 
 Características do jogo:
 - Este jogo suporta mods criados por fãs! E, à medida que desenvolvemos esse recurso, logo você poderá criar todo um novo jogo dentro do Remixed Dungeon!
@@ -14,10 +14,13 @@ Características do jogo:
 -Vários chefes
 -Chapéus! Todo mundo gosta de chapéus 
 
-Segue-nos no twitter: 
+Entre no nosso servidor do Discord:
+https://discordapp.com/invite/AMXrhQZ
+
+Siga-nos no twitter: 
 https://twitter.com/nyrds
 
-Este jogo é um programa de código aberto debaixo da licença GPLv3. O código fonte do Remixed Dungeon pode ser encontrado aqui:
+Este jogo é um programa de código aberto sob a licença GPLv3. O código fonte do Remixed Dungeon pode ser encontrado aqui:
 https://github.com/NYRDS/remixed-dungeon
 
 Se deseja participar na localização de outras linguagens, por favor visite: 
