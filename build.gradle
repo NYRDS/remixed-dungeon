@@ -10,8 +10,8 @@ buildscript {
         //noinspection GradleDynamicVersion
         classpath 'io.fabric.tools:gradle:1.+'
         classpath 'com.google.firebase:perf-plugin:1.3.1'
-        classpath 'com.google.gms:google-services:4.3.2' // google-services plugin
-        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.6'
+        classpath 'com.google.gms:google-services:4.3.3' // google-services plugin
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.0'
     }
 }
 

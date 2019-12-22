@@ -33,7 +33,6 @@ local Buffs  = {
     Amok         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Amok"),
     Awareness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Awareness"),
     Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),
-    GasesImmunity= luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.GasesImmunity"),
     Sleep        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Sleep"),
     Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow")
 }

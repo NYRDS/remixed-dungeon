@@ -262,7 +262,7 @@ public class WndRanking extends WndTabbed {
 			
 			for(int i = 0;i<25;++i) {
 				Item qsItem = QuickSlot.getEarlyLoadItem(i);
-				if(qsItem != null && (Dungeon.hero.getBelongings().backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
+				if(qsItem != null && (stuff.backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
 					addItem(qsItem);
 				}
 			}
