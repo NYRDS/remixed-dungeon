@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -40,7 +41,7 @@ abstract public class ClassArmor extends Armor {
 		super( 6 );
 	}
 	
-	public static Armor upgrade ( Hero owner, Armor armor ) {
+	public static Armor upgrade (Char owner, Armor armor ) {
 
 		ClassArmor classArmor;
 		if(owner.getSubClass() == HeroSubClass.NONE) {

@@ -693,7 +693,7 @@ public class Dungeon {
     }
 
     public static void fail(String desc) {
-        if (hero.belongings.getItem(Ankh.class) == null) {
+        if (hero.getBelongings().getItem(Ankh.class) == null) {
             Rankings.INSTANCE.submit(Rankings.gameOver.LOSE, desc);
         }
     }

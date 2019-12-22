@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -65,7 +64,7 @@ public class Monk extends Mob {
 	}
 	
 	@Override
-	protected float attackDelay() {
+	protected float _attackDelay() {
 		return 0.5f;
 	}
 	
@@ -84,16 +83,15 @@ public class Monk extends Mob {
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		
-		if (Random.Int( 6 ) == 0 && enemy == Dungeon.hero) {
-			
-			Hero hero = Dungeon.hero;
-			KindOfWeapon weapon = hero.belongings.weapon;
+		if (Random.Int( 6 ) == 0) {
+
+			KindOfWeapon weapon = enemy.getBelongings().weapon;
 			
 			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
-				hero.belongings.weapon = null;
-				hero.updateSprite();
+				enemy.getBelongings().weapon = null;
+				enemy.updateSprite();
 				QuickSlot.refresh();
-				Dungeon.level.drop( weapon, hero.getPos() ).sprite.drop();
+				Dungeon.level.drop( weapon, enemy.getPos() ).sprite.drop();
 				GLog.w( Game.getVar(R.string.Monk_Disarm), getName(), weapon.name() );
 			}
 		}

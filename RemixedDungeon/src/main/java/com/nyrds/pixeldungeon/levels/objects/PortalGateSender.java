@@ -21,7 +21,7 @@ public class PortalGateSender extends PortalGate {
 	protected Position target;
 
 	public boolean portalInteract(Hero hero) {
-		if(!used && hero.belongings.getItem(Amulet.class) == null){
+		if(!used && hero.getBelongings().getItem(Amulet.class) == null){
 			if(!animationRunning){
 				if (!activated){
 					playStartUpAnim();

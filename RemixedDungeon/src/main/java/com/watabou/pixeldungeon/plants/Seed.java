@@ -55,12 +55,12 @@ public class Seed extends Item {
 
             hero.spend(TIME_TO_PLANT);
             hero.busy();
-            ((Seed) detach(hero.belongings.backpack)).onThrow(hero.getPos());
+            ((Seed) detach(hero.getBelongings().backpack)).onThrow(hero.getPos());
 
             hero.getSprite().operate(hero.getPos());
 
         } else if (action.equals(CommonActions.AC_EAT)) {
-            detach(hero.belongings.backpack);
+            detach(hero.getBelongings().backpack);
 
             hero.getSprite().operate(hero.getPos());
             hero.busy();

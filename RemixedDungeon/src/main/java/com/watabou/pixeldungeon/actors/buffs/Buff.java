@@ -223,7 +223,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	}
 
 	private void collectOrDropItem(Item item){
-		if(!item.collect( ((Hero)target).belongings.backpack )){
+		if(!item.collect( target.getBelongings().backpack )){
 			Dungeon.level.drop(item, target.getPos()).sprite.drop();
 		}	
 	}
@@ -239,13 +239,13 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 			}
 			
 			for (int i = 0; i < n; i++) {
-				Item item = hero.belongings.randomUnequipped();
+				Item item = hero.getBelongings().randomUnequipped();
 
 				if (item == null || item instanceof Bag || item instanceof Gold) {
 					continue;
 				}
 
-				Item srcItem = item.detach(hero.belongings.backpack);
+				Item srcItem = item.detach(hero.getBelongings().backpack);
 
 				if(srcItem == null) {
 					EventCollector.logException(item.getClassName());

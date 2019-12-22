@@ -57,7 +57,7 @@ public class KindOfWeapon extends EquipableItem {
 		return 1f;
 	}
 	
-	public float speedFactor( Hero hero ) {
+	public float speedFactor(Char hero ) {
 		return 1f;
 	}
 	

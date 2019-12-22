@@ -23,6 +23,7 @@ import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -62,7 +63,8 @@ import lombok.var;
 public class Belongings implements Iterable<Item>, Bundlable {
 
 	public static final int BACKPACK_SIZE	= 18;
-	
+	public static final Belongings empty = new Belongings(CharsList.DUMMY);
+
 	private Char owner;
 	
 	public Bag backpack;

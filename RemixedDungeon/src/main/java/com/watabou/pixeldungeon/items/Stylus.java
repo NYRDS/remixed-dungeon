@@ -98,7 +98,7 @@ public class Stylus extends Item {
 	
 	private void inscribeArmor ( Armor armor ) {
 		
-		detach( getUser().belongings.backpack );
+		detach( getUser().getBelongings().backpack );
 		
 		Class<? extends Armor.Glyph> oldGlyphClass = armor.glyph != null ? armor.glyph.getClass() : null;
 		Armor.Glyph glyph = Armor.Glyph.random();
@@ -115,7 +115,7 @@ public class Stylus extends Item {
 	
 	private void inscribeScroll (BlankScroll scroll){
 		
-		scroll.detach( getUser().belongings.backpack );
+		scroll.detach( getUser().getBelongings().backpack );
 		
 		inscribeEffect();
 		

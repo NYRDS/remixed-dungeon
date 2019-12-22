@@ -146,7 +146,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 				GLog.w( Game.getVar(R.string.Scroll_Blinded) );
 			} else {
 				setUser(hero);
-				curItem = detach( hero.belongings.backpack );
+				curItem = detach( hero.getBelongings().backpack );
 				
 				doRead();
 			}

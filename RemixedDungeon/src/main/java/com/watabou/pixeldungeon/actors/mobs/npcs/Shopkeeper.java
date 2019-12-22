@@ -200,6 +200,7 @@ public class Shopkeeper extends NPC {
 		item.collect(this);
 	}
 
+	@NotNull
 	@Override
 	public Belongings getBelongings() {
 		return belongings;

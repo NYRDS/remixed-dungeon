@@ -77,7 +77,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		if (item != null) {
 
 			if (item.quantity() > 1) {
-				item.detach(getUser().belongings.backpack);
+				item.detach(getUser().getBelongings().backpack);
 			} else {
 				item.removeItemFrom(getUser());
 			}

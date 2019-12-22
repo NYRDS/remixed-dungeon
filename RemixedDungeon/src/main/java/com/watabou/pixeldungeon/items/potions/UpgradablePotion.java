@@ -25,7 +25,7 @@ public class UpgradablePotion extends Potion {
 	@Override
 	public Item upgrade() {
 		if(getUser()!= null && quantity() > 1) {
-			Item potion = detach(getUser().belongings.backpack);
+			Item potion = detach(getUser().getBelongings().backpack);
 			getUser().collect(potion.upgrade());
 			return this;
 		}
@@ -36,7 +36,7 @@ public class UpgradablePotion extends Potion {
 	public Item degrade() {
 
 		if(getUser()!= null && quantity() > 1) {
-			Item potion = detach(getUser().belongings.backpack);
+			Item potion = detach(getUser().getBelongings().backpack);
 			getUser().collect(potion.degrade());
 			return this;
 		}

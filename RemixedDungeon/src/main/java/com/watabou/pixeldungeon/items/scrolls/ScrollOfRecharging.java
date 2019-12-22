@@ -21,8 +21,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.particles.EnergyParticle;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -32,7 +32,7 @@ public class ScrollOfRecharging extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		int count = getUser().belongings.charge( true );
+		int count = getUser().getBelongings().charge( true );
 		charge( getUser() );
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
@@ -50,7 +50,7 @@ public class ScrollOfRecharging extends Scroll {
 		getUser().spendAndNext( TIME_TO_READ );
 	}
 
-	public static void charge( Hero hero ) {
+	public static void charge(Char hero ) {
 		hero.getSprite().centerEmitter().burst( EnergyParticle.FACTORY, 15 );
 	}
 	

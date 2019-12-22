@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
@@ -56,10 +55,7 @@ public class ScrollOfCurse extends Scroll {
 		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(badBuffs);
 		Buff.prolong( getUser(), buffClass, 10);
 
-		Belongings belongings = getUser().getBelongings();
-		if(belongings!=null) {
-			belongings.curseEquipped();
-		}
+		getUser().getBelongings().curseEquipped();
 
 		setKnown();
 		getUser().spendAndNext( TIME_TO_READ );
