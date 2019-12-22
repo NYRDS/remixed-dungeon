@@ -243,12 +243,15 @@ public class WndRanking extends WndTabbed {
 			list = new ScrollableList(new Component());
 			add(list);
 
-			Belongings stuff = Dungeon.hero.belongings;
+			Belongings stuff = Dungeon.hero.getBelongings();
 			if (stuff.weapon != null) {
 				addItem( stuff.weapon );
 			}
 			if (stuff.armor != null) {
 				addItem( stuff.armor );
+			}
+			if (stuff.leftHand != null) {
+				addItem( stuff.leftHand );
 			}
 			if (stuff.ring1 != null) {
 				addItem( stuff.ring1 );
@@ -259,7 +262,7 @@ public class WndRanking extends WndTabbed {
 			
 			for(int i = 0;i<25;++i) {
 				Item qsItem = QuickSlot.getEarlyLoadItem(i);
-				if(qsItem != null && (Dungeon.hero.belongings.backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
+				if(qsItem != null && (Dungeon.hero.getBelongings().backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
 					addItem(qsItem);
 				}
 			}
