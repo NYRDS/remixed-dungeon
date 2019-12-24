@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
@@ -105,11 +104,7 @@ public class WndGame extends WndMenuCommon {
 		menuItems.add( new MenuButton(Game.getVar(R.string.WndGame_menu)) {
 			@Override
 			protected void onClick() {
-				try {
-					Dungeon.save();
-				} catch (Exception e) {
-					throw new TrackedRuntimeException(e);
-				}
+				Dungeon.save();
 				Game.switchScene( TitleScene.class );
 			}
 		} );

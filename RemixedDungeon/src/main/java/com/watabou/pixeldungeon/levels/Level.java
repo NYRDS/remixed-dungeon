@@ -21,6 +21,7 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -103,6 +104,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.SneakyThrows;
 import lombok.var;
 
 public abstract class Level implements Bundlable {
@@ -166,7 +168,7 @@ public abstract class Level implements Bundlable {
 				return index;
 			}
 		}
-		throw new TrackedRuntimeException(new Exception("no exit at this cell"));
+		throw new ModError("no exit at"+ levelId + "["+ pos +"]");
 	}
 
 	@Nullable
@@ -1628,14 +1630,12 @@ public abstract class Level implements Bundlable {
 		fillAreaWith(blobClass, cellX(cell), cellY(cell), xs, ys, amount);
 	}
 
+	@SneakyThrows
 	public void fillAreaWith(Class<? extends Blob> blobClass, int x, int y, int xs, int ys, int amount) {
 		Blob blob = Dungeon.level.blobs.get(blobClass);
 		if (blob == null) {
-			try {
-				blob = blobClass.newInstance();
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			blob = blobClass.newInstance();
+
 			GameScene.add(blob);
 		}
 

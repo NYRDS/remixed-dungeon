@@ -17,11 +17,11 @@
 
 package com.watabou.noosa;
 
-import com.nyrds.android.util.TrackedRuntimeException;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+
+import lombok.SneakyThrows;
 
 public class Group extends Gizmo {
 
@@ -91,6 +91,7 @@ public class Group extends Gizmo {
 		g.setParent(this);
 	}
 
+	@SneakyThrows
 	public Gizmo recycle(@NotNull Class<? extends Gizmo> c) {
 
 		Gizmo g = getFirstAvailable(c);
@@ -98,11 +99,7 @@ public class Group extends Gizmo {
 			return g;
 		}
 
-		try {
-			return add(c.newInstance());
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		return add(c.newInstance());
 	}
 
 	// Real removal

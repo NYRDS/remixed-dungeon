@@ -23,7 +23,8 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by mike on 01.03.2016.
@@ -51,19 +52,14 @@ public class Util {
 		return connectionStatus;
 	}
 
+	@SneakyThrows
 	static public String getSignature(Context context) {
-		try {
-			PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
-			MessageDigest md = MessageDigest.getInstance("SHA-1");
-			for (Signature signature : packageInfo.signatures) {
-				md.update(signature.toByteArray());
-			}
-			return Base64.encodeToString(md.digest(), Base64.URL_SAFE|Base64.NO_WRAP);
-		} catch (PackageManager.NameNotFoundException e) {
-			throw new TrackedRuntimeException(e);
-		} catch (NoSuchAlgorithmException e) {
-			return "No SHA-1?";
+		PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
+		MessageDigest md = MessageDigest.getInstance("SHA-1");
+		for (Signature signature : packageInfo.signatures) {
+			md.update(signature.toByteArray());
 		}
+		return Base64.encodeToString(md.digest(), Base64.URL_SAFE|Base64.NO_WRAP);
 	}
 
 	public static int signum(int x) {
@@ -71,14 +67,11 @@ public class Util {
 	}
 
 	@Nullable
+	@SneakyThrows
 	public static <T> T byNameFromList(Class<?>[] classList, @NotNull String name) {
 		for (Class<?> clazz : classList) {
 			if (clazz.getSimpleName().equals(name)) {
-				try {
-					return (T) clazz.newInstance();
-				} catch (Exception e) {
-					throw new TrackedRuntimeException(e);
-				}
+				return (T) clazz.newInstance();
 			}
 		}
 		return null;

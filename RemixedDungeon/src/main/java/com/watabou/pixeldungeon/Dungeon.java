@@ -91,6 +91,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import lombok.SneakyThrows;
+
 import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
@@ -427,7 +429,8 @@ public class Dungeon {
         output.close();
     }
 
-    public static void saveLevel(String saveTo, Level level) throws IOException {
+    @SneakyThrows
+    public static void saveLevel(String saveTo, Level level) {
         Bundle bundle = new Bundle();
         bundle.put(LEVEL, level);
 
@@ -502,12 +505,7 @@ public class Dungeon {
 
         lastSaveTimestamp = SystemTime.now();
 
-        try {
-            saveAllImpl();
-        } catch (Exception e) {
-            EventCollector.logException(e);
-            throw new TrackedRuntimeException(e);
-        }
+        saveAllImpl();
     }
 
 
@@ -886,10 +884,6 @@ public class Dungeon {
     }
 
     public static void saveCurrentLevel() {
-        try {
-            saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
-        } catch (IOException e) {
-            throw new TrackedRuntimeException(e);
-        }
+        saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
     }
 }

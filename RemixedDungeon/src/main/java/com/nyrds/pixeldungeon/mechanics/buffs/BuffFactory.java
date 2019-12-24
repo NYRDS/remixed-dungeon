@@ -1,15 +1,18 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
 import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 public class BuffFactory {
     static private Map<String, Class<? extends Buff>> buffList = new HashMap<>();
@@ -36,7 +39,7 @@ public class BuffFactory {
 
     }
 
-    public static boolean hasBuffForName (String name) {
+    private static boolean hasBuffForName(String name) {
         if(predefinedCustomBuffs.contains(name)) {
             return true;
         }
@@ -48,20 +51,17 @@ public class BuffFactory {
         return script.getResult().checkboolean();
     }
 
+    @NotNull
+    @SneakyThrows
     public static Buff getBuffByName(String name) {
-        try {
-            if(hasBuffForName(name)) {
-                Class<? extends Buff> buffClass = buffList.get(name);
-                if (buffClass == null) {
-                    return new CustomBuff(name);
-                }
-                return buffClass.newInstance();
+        if(hasBuffForName(name)) {
+            Class<? extends Buff> buffClass = buffList.get(name);
+            if (buffClass == null) {
+                return new CustomBuff(name);
             }
-        } catch (InstantiationException e) {
-            throw new TrackedRuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new TrackedRuntimeException(e);
+            return buffClass.newInstance();
         }
+
         throw new ModError(name, new Exception("Unknown Buff"));
     }
 }

@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -46,6 +45,8 @@ import org.json.JSONObject;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 public enum HeroSubClass implements CharModifier {
 
@@ -116,12 +117,9 @@ public enum HeroSubClass implements CharModifier {
 		return ret;
 	}
 
+	@SneakyThrows
 	public ClassArmor classArmor() {
-		try {
-			return armorClass.newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		return armorClass.newInstance();
 	}
 
 	@Override

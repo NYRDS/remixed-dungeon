@@ -82,6 +82,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.SneakyThrows;
+
 public abstract class Mob extends Char {
 
 	public static final String TXT_RAGE = "#$%^";
@@ -211,31 +213,24 @@ public abstract class Mob extends Char {
 		return 0;
 	}
 
+	@SneakyThrows
 	public CharSprite sprite() {
-
-		try {
-				{
-					String descName = "spritesDesc/" + getEntityKind() + ".json";
-					if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
-						return new MobSpriteDef(descName, getKind());
-					}
-				}
-
-			if (spriteClass instanceof Class) {
-				CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
-				sprite.selectKind(getKind());
-				return sprite;
-			}
-
-			if (spriteClass instanceof String) {
-				return new MobSpriteDef((String) spriteClass, getKind());
-			}
-
-			throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
-
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
+		String descName = "spritesDesc/" + getEntityKind() + ".json";
+		if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
+			return new MobSpriteDef(descName, getKind());
 		}
+
+		if (spriteClass instanceof Class) {
+			CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
+			sprite.selectKind(getKind());
+			return sprite;
+		}
+
+		if (spriteClass instanceof String) {
+			return new MobSpriteDef((String) spriteClass, getKind());
+		}
+
+		throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
 	}
 
 	@Override

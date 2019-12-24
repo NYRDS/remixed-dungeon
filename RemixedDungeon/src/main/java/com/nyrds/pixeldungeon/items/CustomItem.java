@@ -4,7 +4,6 @@ import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -16,7 +15,6 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
-import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
@@ -163,19 +161,15 @@ public class CustomItem extends EquipableItem {
     }
 
     private Item applyOnItem(int cell,String effect) {
-        try {
-            script.run(effect, cell, null);
-            if(script.getResult().isnil()) {
-                return null;
-            }
-
-            Item item = (Item) script.getResult().checkuserdata(Item.class);
-            item.quantity(quantity());
-            return item;
-        } catch (LuaError e) {
-            throw new TrackedRuntimeException(e);
+        script.run(effect, cell, null);
+        if(script.getResult().isnil()) {
+            return null;
         }
-    }
+
+        Item item = (Item) script.getResult().checkuserdata(Item.class);
+        item.quantity(quantity());
+        return item;
+}
 
 
     @Override

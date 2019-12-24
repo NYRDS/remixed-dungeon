@@ -41,7 +41,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -71,6 +70,8 @@ import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import lombok.SneakyThrows;
 
 @SuppressLint("Registered")
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -430,17 +431,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return instance().scene;
     }
 
+    @SneakyThrows
     private void step() {
 
         if (requestedReset) {
             requestedReset = false;
-            try {
-                switchScene(sceneClass.newInstance());
-                return;
-            } catch (Exception e) {
-                throw new TrackedRuntimeException(e);
-            }
-        }
+            switchScene(sceneClass.newInstance());
+            return;
+       }
 
         Game.elapsed = Game.timeScale * step * 0.001f;
 

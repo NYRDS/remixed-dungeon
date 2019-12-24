@@ -24,6 +24,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import lombok.SneakyThrows;
+
 public class JsonHelper {
 
 	@NotNull
@@ -56,9 +58,9 @@ public class JsonHelper {
 		return readJsonFromStream(new ByteArrayInputStream(in.getBytes()));
 	}
 
+	@SneakyThrows
 	@NotNull
 	public static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
-		try {
 			StringBuilder jsonDef = new StringBuilder();
 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
@@ -79,9 +81,6 @@ public class JsonHelper {
 				EventCollector.logException(e, value.toString());
 				return new JSONObject();
 			}
-		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
-		}
 	}
 
 	public static void readStringSet(JSONObject desc, String field, Set<String> placeTo) throws JSONException {

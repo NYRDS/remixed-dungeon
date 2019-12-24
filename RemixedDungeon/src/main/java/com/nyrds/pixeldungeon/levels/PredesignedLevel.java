@@ -1,7 +1,8 @@
 package com.nyrds.pixeldungeon.levels;
 
+import androidx.annotation.Keep;
+
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -16,6 +17,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import lombok.SneakyThrows;
+
 public class PredesignedLevel extends CustomLevel {
 
 	private boolean useCustomTiles;
@@ -23,6 +26,7 @@ public class PredesignedLevel extends CustomLevel {
 	private  LayerId[] descOrder = {LayerId.Roof_Deco,LayerId.Roof_Base,LayerId.Deco2,LayerId.Deco,LayerId.Base};
 
 	//for restoreFromBundle
+	@Keep
 	public PredesignedLevel() {
 		super();
 	}
@@ -134,6 +138,7 @@ public class PredesignedLevel extends CustomLevel {
 	}
 
 	@Override
+	@SneakyThrows
 	protected void createMobs() {
 		try {
 			if (mLevelDesc.has("mobs")) {
@@ -159,8 +164,6 @@ public class PredesignedLevel extends CustomLevel {
 			}
 		} catch (JSONException e) {
 			throw ModdingMode.modException("bad mob description",e);
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -185,8 +188,6 @@ public class PredesignedLevel extends CustomLevel {
 			}
 		} catch (JSONException e) {
 			throw ModdingMode.modException("bad items description", e);
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
 		}
 	}
 
@@ -199,15 +200,11 @@ public class PredesignedLevel extends CustomLevel {
 	public void discover() {
 	}
 
+	@SneakyThrows
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		try {
-			readLevelParams();
-		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
-		}
-
+		readLevelParams();
 	}
 
 	@Nullable

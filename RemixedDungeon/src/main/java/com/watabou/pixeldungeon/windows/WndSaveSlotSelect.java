@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -262,15 +261,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
     protected void onSelect(int index) {
         if (saving) {
-            try {
-                Dungeon.save();
-                slot = slotNameFromIndexAndMod(index);
-                SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
-
-            } catch (Exception e) {
-                EventCollector.logException(e, "bug in save");
-                throw new TrackedRuntimeException(e);
-            }
+            Dungeon.save();
+            slot = slotNameFromIndexAndMod(index);
+            SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
         }
 
         showAd(getSlotToLoad(index));

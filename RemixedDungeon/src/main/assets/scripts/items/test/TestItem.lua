@@ -28,21 +28,28 @@ return item.init{
             stackable     = false,
             defaultAction = "action1",
             price         = 7,
-            isArtifact    = true
+            isArtifact    = true,
+            data = {
+                activationCount = 0
+            }
         }
     end,
+
     actions = function(self, item, hero)
 
         if item:isEquipped(hero) then
             return {"eq_action1",
                     "eq_action2",
                     "eq_action3",
-                    tostring(item:getId())}
+                    tostring(item:getId()),
+                    tostring(self.data.activationCount)
+                    }
         else
             return {"action1",
                     "action2",
                     "action3",
-                    tostring(item:getId())}
+                    tostring(item:getId()),
+                    tostring(self.data.activationCount)}
         end
     end,
 
@@ -62,6 +69,7 @@ return item.init{
         end
 
         if action == "action2" then
+            self.data.activationCount = self.data.activationCount + 1
             RPD.glogp(tostring(item:getId()).." "..action)
         end
 
@@ -71,7 +79,7 @@ return item.init{
     end,
 
     activate = function(self, item, hero)
-        self.data.activationCount = (self.data.activationCount or 0) + 1
+        self.data.activationCount = self.data.activationCount + 1
         RPD.glogp(tostring(item).." activated on "..tostring(hero).." "..self.data.activationCount.."\n")
         RPD.permanentBuff(hero,"Cloak")
     end,
@@ -80,8 +88,9 @@ return item.init{
         RPD.glogp(tostring(item).." deactivated on "..tostring(hero).."\n")
         RPD.removeBuff(hero,"Cloak")
     end,
-
+--[[
     bag = function(self, item)
         return "SeedPouch"
     end
+ ]]
 }

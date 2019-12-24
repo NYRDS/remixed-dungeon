@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
@@ -16,6 +15,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by DeadDie on 26.05.2016
@@ -82,12 +83,9 @@ public class Accessory {
         return true;
     }
 
+    @SneakyThrows
     public static Accessory getByName(String name) {
-        try {
-            return allAccessoriesList.get(name).newInstance();
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
-        }
+        return allAccessoriesList.get(name).newInstance();
     }
 
     private String getClassParam(String paramName, String defaultValue) {

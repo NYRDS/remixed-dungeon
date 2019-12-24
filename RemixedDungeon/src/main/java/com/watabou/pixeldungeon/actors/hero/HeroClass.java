@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
@@ -54,6 +53,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 public enum HeroClass implements CharModifier {
 
@@ -257,12 +258,9 @@ public enum HeroClass implements CharModifier {
         return ret;
     }
 
+    @SneakyThrows
     public ClassArmor classArmor() {
-        try {
-            return armorClass.newInstance();
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
-        }
+        return armorClass.newInstance();
     }
 
     public String getMagicAffinity() {

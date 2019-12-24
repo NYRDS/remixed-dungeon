@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -61,6 +60,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
+import lombok.SneakyThrows;
 
 public class Item implements Bundlable, Presser, NamedEntityKind {
 
@@ -263,15 +264,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 				if(container.owner instanceof Hero) {
 					QuickSlot.refresh();
 				}
-				try {
-					Item detached = ItemFactory.itemByName(getClassName());
-					detached.quantity(n);
-					detached.level(level());
-					detached.onDetach();
-					return detached;
-				} catch (Exception e) {
-					throw new TrackedRuntimeException(e);
-				}
+
+				Item detached = ItemFactory.itemByName(getClassName());
+				detached.quantity(n);
+				detached.level(level());
+				detached.onDetach();
+				return detached;
 			}
 		}
 	}
@@ -549,14 +547,11 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
 
-	protected Item morphTo(Class<? extends Item> itemClass) {
-		try {
-			Item result = itemClass.newInstance();
-			result.quantity(quantity());
-			return result;
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+	@SneakyThrows
+	protected Item morphTo(@NotNull Class<? extends Item> itemClass) {
+		Item result = itemClass.newInstance();
+		result.quantity(quantity());
+		return result;
 	}
 
 	public Item burn(int cell) {

@@ -6,7 +6,6 @@ import android.content.res.Resources;
 import android.os.Build;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
@@ -20,7 +19,6 @@ import org.json.JSONException;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
@@ -30,6 +28,8 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by mike on 08.03.2016.
@@ -68,17 +68,13 @@ public class StringsManager {
 		nonModdable.add("pollfish_key");
 	}
 
+	@SneakyThrows
 	private static void addMappingForClass(Class<?> clazz) {
 		for (Field f : clazz.getDeclaredFields()) {
 			if (f.isSynthetic()) {
 				continue;
 			}
-			int key;
-			try {
-				key = f.getInt(null);
-			} catch (IllegalAccessException | IllegalArgumentException e) {
-				throw new TrackedRuntimeException(e);
-			}
+			int key = f.getInt(null);
 			String name = f.getName();
 
 			keyToInt.put(name, key);
@@ -93,6 +89,7 @@ public class StringsManager {
 		sStringsMap.clear();
 	}
 
+	@SneakyThrows
 	private static void parseStrings(String resource) {
 		File jsonFile = ModdingMode.getFile(resource);
 		if (jsonFile == null || !jsonFile.exists()) {
@@ -136,8 +133,6 @@ public class StringsManager {
 				}
 			}
 			br.close();
-		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
 		} catch (JSONException e) {
 			Game.toast("malformed json: [%s] in [%s] ignored ", line, resource);
 		}

@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.utils;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.IceCavesBossLevel;
@@ -42,6 +41,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+
+import lombok.SneakyThrows;
 
 public class DungeonGenerator {
 	private static final String DEAD_END_LEVEL = "DeadEndLevel";
@@ -261,6 +262,7 @@ public class DungeonGenerator {
 	}
 
 	@NotNull
+	@SneakyThrows
 	public static Level createLevel(@NotNull Position pos) {
 		String newLevelKind = getLevelKind(pos.levelId);
 		Class<? extends Level> levelClass = mLevelKindList.get(newLevelKind);
@@ -298,10 +300,6 @@ public class DungeonGenerator {
 			ret.create(xs, ys);
 
 			return ret;
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException(e);
-		} catch (IllegalAccessException e) {
-			throw new TrackedRuntimeException(e);
 		} catch (JSONException e) {
 			throw ModdingMode.modException(e);
 		}

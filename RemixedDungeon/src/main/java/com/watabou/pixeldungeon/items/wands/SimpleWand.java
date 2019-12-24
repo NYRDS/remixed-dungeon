@@ -1,7 +1,8 @@
 package com.watabou.pixeldungeon.items.wands;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.utils.Random;
+
+import lombok.SneakyThrows;
 
 public abstract class SimpleWand extends Wand {
 	
@@ -14,13 +15,10 @@ public abstract class SimpleWand extends Wand {
 		WandOfPoison.class, 
 		WandOfRegrowth.class, 
 		WandOfSlowness.class};
-	
+
+	@SneakyThrows
 	static public SimpleWand createRandomSimpleWand() {
-		try {
-			return (SimpleWand) Random.element(variants).newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		return (SimpleWand) Random.element(variants).newInstance();
 	}
 	
 	

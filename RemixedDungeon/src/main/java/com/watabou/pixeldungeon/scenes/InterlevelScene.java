@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -43,6 +42,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.concurrent.FutureTask;
+
+import lombok.SneakyThrows;
 
 public class InterlevelScene extends PixelScene {
 
@@ -76,6 +77,7 @@ public class InterlevelScene extends PixelScene {
 
     class LevelChanger implements Runnable {
 
+        @SneakyThrows
         @Override
         public void run() {
             try {
@@ -102,11 +104,6 @@ public class InterlevelScene extends PixelScene {
 
             } catch (FileNotFoundException e) {
                 error = Game.getVar(R.string.InterLevelScene_FileNotFound);
-            } catch (IOException e) {
-                EventCollector.logException(e);
-                error = Game.getVar(R.string.InterLevelScene_ErrorGeneric) + "\n" + e.getMessage();
-            } catch (Exception e) {
-                throw new TrackedRuntimeException(e);
             }
         }
     }
@@ -313,6 +310,7 @@ public class InterlevelScene extends PixelScene {
     private void rescue(Exception cause) {
         if (!rescueMode) {
             rescueMode = true;
+
             EventCollector.logException(cause, "enter rescue mode");
 
             if(SaveUtils.slotUsed(SaveUtils.getPrevSave(), Dungeon.heroClass)) {

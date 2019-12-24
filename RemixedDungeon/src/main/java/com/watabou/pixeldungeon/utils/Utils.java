@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -26,6 +25,8 @@ import com.watabou.noosa.Game;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
+
+import lombok.SneakyThrows;
 
 public class Utils {
 
@@ -37,12 +38,9 @@ public class Utils {
     @NotNull
     private static final Class<?> stringArrays = getR_Field("array");
 
+    @SneakyThrows
     static private Class<?> getR_Field(String field) {
-        try {
-            return Class.forName("com.nyrds.pixeldungeon.ml.R$" + field);
-        } catch (Exception e) {// well this is newer happens :)
-            throw new TrackedRuntimeException(e);
-        }
+        return Class.forName("com.nyrds.pixeldungeon.ml.R$" + field);
     }
 
     public static String capitalize(String str) {
@@ -74,6 +72,7 @@ public class Utils {
         }
     }
 
+    @SneakyThrows
     public static String[] getClassParams(String className, String paramName, String[] defaultValues, boolean warnIfAbsent) {
 
         if (className.length() == 0) { // isEmpty() require api level 9
@@ -86,8 +85,6 @@ public class Utils {
             if (warnIfAbsent) {
                 GLog.w("no definition for  %s_%s :(", className, paramName);
             }
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
         }
 
         return defaultValues;

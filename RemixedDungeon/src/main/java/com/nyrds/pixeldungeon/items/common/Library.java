@@ -18,11 +18,12 @@ import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by mike on 30.04.2017.
@@ -44,19 +45,16 @@ public class Library {
 		loadLibrary();
 	}
 
+	@SneakyThrows
 	public static void saveLibrary() {
 		if(!saveNeeded) {
 			return;
 		}
 		saveNeeded = false;
 		gson.toJson(mKnowledgeLevel);
-		try {
-			OutputStream output = FileSystem.getOutputStream(getLibraryFile());
-			output.write(gson.toJson(mKnowledgeLevel).getBytes());
-			output.close();
-		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
-		}
+		OutputStream output = FileSystem.getOutputStream(getLibraryFile());
+		output.write(gson.toJson(mKnowledgeLevel).getBytes());
+		output.close();
 	}
 
 	@Deprecated

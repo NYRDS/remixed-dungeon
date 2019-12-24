@@ -23,6 +23,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import lombok.SneakyThrows;
 import lombok.var;
 
 public class ModdingMode {
@@ -108,33 +109,29 @@ public class ModdingMode {
 		return list;
 	}
 
+	@SneakyThrows
 	@NotNull
 	private static List<String> _listResources(String path, FilenameFilter filter) {
-		try{
-            if(pathsChecked.contains(path)) {
-                return new ArrayList<>();
-            }
-
-            pathsChecked.add(path);
-
-            Set<String> resList = new HashSet<>();
-
-			String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
-			collectResources(path, filter, resList, fullList);
-
-			if(inMod()) {
-				String resourcesPath = mActiveMod + "/" + path;
-				if(isResourceExistInMod(path)) {
-					String[] modList = FileSystem.getExternalStorageFile(resourcesPath).list();
-					collectResources(path, filter, resList, modList);
-				}
-			}
-
-			return Arrays.asList(resList.toArray(new String[0]));
-
-		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
+		if(pathsChecked.contains(path)) {
+			return new ArrayList<>();
 		}
+
+		pathsChecked.add(path);
+
+		Set<String> resList = new HashSet<>();
+
+		String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
+		collectResources(path, filter, resList, fullList);
+
+		if(inMod()) {
+			String resourcesPath = mActiveMod + "/" + path;
+			if(isResourceExistInMod(path)) {
+				String[] modList = FileSystem.getExternalStorageFile(resourcesPath).list();
+				collectResources(path, filter, resList, modList);
+			}
+		}
+
+		return Arrays.asList(resList.toArray(new String[0]));
 	}
 
 	private static void collectResources(String path, FilenameFilter filter, Set<String> resList, String[] fullList) {
@@ -241,16 +238,10 @@ public class ModdingMode {
 	}
 
 	public static RuntimeException modException(Exception e) {
-		if(inMod()) {
-			return new ModError(mActiveMod,e);
-		}
-		return new TrackedRuntimeException(e);
+		return new ModError(mActiveMod,e);
 	}
 
 	public static RuntimeException modException(String s, JSONException e) {
-		if(inMod()) {
-			return new ModError(mActiveMod + ":" + s, e);
-		}
-		return new TrackedRuntimeException(s,e);
+		return new ModError(mActiveMod + ":" + s, e);
 	}
 }

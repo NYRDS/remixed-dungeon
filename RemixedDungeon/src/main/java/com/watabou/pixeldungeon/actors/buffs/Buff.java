@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -35,8 +34,12 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashSet;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
@@ -91,19 +94,16 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	public int icon() {
 		return BuffIndicator.NONE;
 	}
-	
-	public static<T extends Buff> T affect( Char target, Class<T> buffClass ) {
+
+	@SneakyThrows
+	public static<T extends Buff> T affect(@NotNull Char target, Class<T> buffClass ) {
 		T buff = target.buff( buffClass );
 		if (buff != null) {
 			return buff;
 		} else {
-			try {
-				buff = buffClass.newInstance();
-				buff.attachTo(target);
-				return buff;
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			buff = buffClass.newInstance();
+			buff.attachTo(target);
+			return buff;
 		}
 	}
 

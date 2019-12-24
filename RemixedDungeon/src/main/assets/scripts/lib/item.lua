@@ -97,7 +97,7 @@ end
 item.init = function(desc)
     setmetatable(desc, item)
 
-    desc.data = {}
+    desc.data = desc.data or {}
 
     return desc
 end

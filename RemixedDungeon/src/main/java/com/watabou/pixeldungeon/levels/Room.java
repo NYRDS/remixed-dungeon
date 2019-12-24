@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
 import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;
@@ -62,6 +60,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import lombok.SneakyThrows;
+
 public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	public HashSet<Room>       neighbours = new HashSet<>();
@@ -100,29 +100,23 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		
 		private Method paint;
 		
+		@SneakyThrows
 		Type(Class<? extends Painter> painter) {
 			if(painter==null) {
 				return;
 			}
-			
-			try {
-				paint = painter.getMethod( "paint", Level.class, Room.class );
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+
+			paint = painter.getMethod( "paint", Level.class, Room.class );
 		}
-		
+
+		@SneakyThrows
 		public void paint( Level level, Room room ) {
 			if(paint==null){
 				return;
 			}
-			try {
-				GLog.debug("room: %s", room.type.toString());
-				paint.invoke( null, level, room );
-			} catch (Exception e) {
-				EventCollector.logException(e);
-				throw new TrackedRuntimeException(e);
-			}
+
+			GLog.debug("room: %s", room.type.toString());
+			paint.invoke( null, level, room );
 		}
 	}
 

@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfHealth;
@@ -29,11 +28,14 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 
+import lombok.SneakyThrows;
+
 public class MagicWellPainter extends Painter {
 
 	private static final Class<?>[] WATERS = 
 		{WaterOfAwareness.class, WaterOfHealth.class, WaterOfTransmutation.class};
-	
+
+	@SneakyThrows
 	public static void paint( Level level, Room room ) {
 
 		fill( level, room, Terrain.WALL );
@@ -54,11 +56,7 @@ public class MagicWellPainter extends Painter {
 		
 		WellWater water = (WellWater)level.blobs.get( waterClass );
 		if (water == null) {
-			try {
-				water = waterClass.newInstance();
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			water = waterClass.newInstance();
 		}
 		water.seed( c.x + level.getWidth() * c.y, 1 );
 		level.blobs.put( waterClass, water );
