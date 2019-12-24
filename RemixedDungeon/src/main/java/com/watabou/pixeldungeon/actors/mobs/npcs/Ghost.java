@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.FetidRatSprite;
@@ -282,11 +283,12 @@ public class Ghost extends NPC {
 		public static void process( int pos ) {
 			if (spawned && given && !processed && (depth == Dungeon.depth)) {
 				if (alternative) {
-					
+					Level level = Dungeon.level;
 					FetidRat rat = new FetidRat();
-					rat.setPos(Dungeon.level.randomRespawnCell());
-					if (rat.getPos() != -1) {
-						Dungeon.level.spawnMob(rat);
+					int ratPos = rat.respawnCell(level);
+					if (level.cellValid(ratPos)) {
+						rat.setPos(ratPos);
+						level.spawnMob(rat);
 						processed = true;
 					}
 					
