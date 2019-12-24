@@ -166,6 +166,11 @@ public class GameScene extends PixelScene {
             throw new TrackedRuntimeException("Trying to create GameScene when level is nil!");
         }
 
+        if(Dungeon.hero==null) {
+            throw new TrackedRuntimeException("Trying to create GameScene when hero is nil!");
+        }
+
+
         RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().classIndex());
 
         super.create();
@@ -779,15 +784,11 @@ public class GameScene extends PixelScene {
 
     static boolean cancel() {
         if (Dungeon.hero != null && (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth)) {
-
             Dungeon.hero.curAction = null;
             Dungeon.hero.restoreHealth = false;
             return true;
-
         } else {
-
             return cancelCellSelector();
-
         }
     }
 

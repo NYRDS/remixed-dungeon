@@ -22,9 +22,11 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.RankingsScene;
+import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
 
@@ -32,6 +34,13 @@ public class WndGame extends WndMenuCommon {
 
 	@Override
 	protected void createItems() {
+
+		Hero hero = Dungeon.hero;
+
+		if (hero == null) {
+			Game.switchScene(StartScene.class);
+			return;
+		}
 
 		menuItems.add( new MenuButton(Game
                 .getVar(R.string.WndGame_Settings)) {
@@ -43,7 +52,7 @@ public class WndGame extends WndMenuCommon {
 		} );
 
 
-		if(Dungeon.hero.getDifficulty() < 2 && Dungeon.hero.isAlive()) {
+		if(hero.getDifficulty() < 2 && hero.isAlive()) {
 			menuItems.add( new MenuButton( Game.getVar(R.string.WndGame_Save) ) {
 				@Override
 				protected void onClick() {
@@ -52,7 +61,7 @@ public class WndGame extends WndMenuCommon {
 			} );
 		}
 
-		if(Dungeon.hero.getDifficulty() < 2) {
+		if(hero.getDifficulty() < 2) {
 			menuItems.add( new MenuButton( Game.getVar(R.string.WndGame_Load) ) {
 				@Override
 				protected void onClick() {
@@ -74,7 +83,7 @@ public class WndGame extends WndMenuCommon {
 
 		if (!Dungeon.hero.isAlive()) {
 
-			menuItems.add(new MenuButton(Game.getVar(R.string.WndGame_Start),Icons.get(Dungeon.hero.getHeroClass()) ) {
+			menuItems.add(new MenuButton(Game.getVar(R.string.WndGame_Start),Icons.get(hero.getHeroClass()) ) {
 				@Override
 				protected void onClick() {
 					Dungeon.hero = null;
