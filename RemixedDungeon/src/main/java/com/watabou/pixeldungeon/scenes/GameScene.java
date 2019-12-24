@@ -158,8 +158,6 @@ public class GameScene extends PixelScene {
 
     @Override
     public void create() {
-        playLevelMusic();
-
         Level level = Dungeon.level;
 
         if(level==null) {
@@ -170,6 +168,7 @@ public class GameScene extends PixelScene {
             throw new TrackedRuntimeException("Trying to create GameScene when hero is nil!");
         }
 
+        playLevelMusic();
 
         RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().classIndex());
 

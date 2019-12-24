@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.RankingsScene;
-import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
 
@@ -38,7 +37,7 @@ public class WndGame extends WndMenuCommon {
 		Hero hero = Dungeon.hero;
 
 		if (hero == null) {
-			Game.switchScene(StartScene.class);
+			Game.switchScene(TitleScene.class);
 			return;
 		}
 

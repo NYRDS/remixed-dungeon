@@ -469,6 +469,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Camera.reset();
 
         if (scene != null) {
+            EventCollector.collectSessionData("pre_scene",scene.getClass().getSimpleName());
             scene.destroy();
         }
         scene = requestedScene;

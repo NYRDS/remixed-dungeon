@@ -62,7 +62,7 @@ public class InterlevelScene extends PixelScene {
     public static boolean fallIntoPit;
 
     private enum Phase {
-        FADE_IN, STATIC, FADE_OUT
+        FADE_IN, STATIC, FADE_OUT, ERROR
     }
 
     private Phase phase;
@@ -166,6 +166,10 @@ public class InterlevelScene extends PixelScene {
     public void update() {
         super.update();
 
+        if(phase == Phase.ERROR) {
+            return;
+        }
+
         float p = timeLeft / TIME_TO_FADE;
 
         if (error != null) {
@@ -175,6 +179,7 @@ public class InterlevelScene extends PixelScene {
                     Game.switchScene(TitleScene.class);
                 }
             });
+            phase = Phase.ERROR;
             error = null;
         }
 
