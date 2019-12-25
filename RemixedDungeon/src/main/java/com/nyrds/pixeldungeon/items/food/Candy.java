@@ -21,7 +21,7 @@ public class Candy extends Food {
 	public void execute(Hero hero, String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 
-			detach( hero.belongings.backpack );
+			detach( hero.getBelongings().backpack );
 
 			GLog.w(Game.getVar(R.string.Candy_Warning_1));
 

@@ -144,7 +144,7 @@ public class DewVial extends Item {
     }
 	
 	public static void autoDrink( Hero hero ) {
-		DewVial vial = hero.belongings.getItem( DewVial.class );
+		DewVial vial = hero.getBelongings().getItem( DewVial.class );
 		if (vial != null && vial.isFull()) {
 
 			hero.hp(1);//resurrect Hero because simple heal can't

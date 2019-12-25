@@ -196,7 +196,7 @@ public class Potion extends Item implements UnknownItem {
 	
 	protected void drink( Hero hero ) {
 		
-		detach( hero.belongings.backpack );
+		detach( hero.getBelongings().backpack );
 		
 		hero.spend( TIME_TO_DRINK );
 		hero.busy();
@@ -344,10 +344,10 @@ public class Potion extends Item implements UnknownItem {
 		
 		if(quantity <= maxQuantity){
 			
-			if(item.equals(getUser().belongings.weapon)) {
-				getUser().belongings.weapon = null;
+			if(item.equals(getUser().getBelongings().weapon)) {
+				getUser().getBelongings().weapon = null;
 			} else {
-				item.detachAll( getUser().belongings.backpack );
+				item.detachAll( getUser().getBelongings().backpack );
 			}
 		} else {
 			item.quantity(item.quantity() - maxQuantity);
@@ -380,7 +380,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	private void moistenUseless() {
-		detach(getUser().belongings.backpack );
+		detach(getUser().getBelongings().backpack );
 		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
 		getUser().getSprite().operate( getUser().getPos() );
 		getUser().spend( TIME_TO_MOISTEN );
@@ -388,7 +388,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	protected void moistenEffective() {
-		detach(getUser().belongings.backpack );
+		detach(getUser().getBelongings().backpack );
 		identify();
 		getUser().getSprite().operate( getUser().getPos() );
 		getUser().spend( TIME_TO_MOISTEN );

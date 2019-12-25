@@ -58,7 +58,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	protected float attackDelay() {
+	protected float _attackDelay() {
 		return attackDelay;
 	}
 

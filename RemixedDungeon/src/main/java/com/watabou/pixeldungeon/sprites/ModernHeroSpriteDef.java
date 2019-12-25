@@ -141,9 +141,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if (accessory  == null){
-			if(hero.belongings.armor  != null && hero.belongings.armor.hasHelmet()){
-				helmetDescriptor = helmetDescriptor(hero.belongings.armor, hero);
-				if(hero.belongings.armor.isCoveringHair()){
+			if(hero.getBelongings().armor  != null && hero.getBelongings().armor.hasHelmet()){
+				helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
+				if(hero.getBelongings().armor.isCoveringHair()){
 					drawHair = false;
 				}
 			}
@@ -160,10 +160,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String bodyType = bodyDescriptor(hero);
 
 		layersDesc.put(LAYER_BODY, "hero_modern/body/" +bodyType+".png" );
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.belongings.armor, hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().armor, hero));
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
@@ -171,9 +171,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
 		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
 
-		if(hero.belongings.weapon!=null) {
-			weaponAnimationClassLeft = hero.belongings.weapon.getAnimationClass();
-			weaponAnimationClassRight = hero.belongings.weapon.getAnimationClass();
+		if(hero.getBelongings().weapon!=null) {
+			weaponAnimationClassLeft = hero.getBelongings().weapon.getAnimationClass();
+			weaponAnimationClassRight = hero.getBelongings().weapon.getAnimationClass();
 		}
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
@@ -182,11 +182,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
-			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(hero.belongings.leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(hero.belongings.weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(hero.getBelongings().leftHand,"left"));
+			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(hero.getBelongings().weapon, "right"));
 
-			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.belongings.leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.belongings.weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.getBelongings().leftHand,"left"));
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.getBelongings().weapon, "right"));
 		}
 
 		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
@@ -243,7 +243,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if(!weapon_anims.isEmpty()) { //old mods compatibility
-			KindOfWeapon weapon = hero.belongings.weapon;
+			KindOfWeapon weapon = hero.getBelongings().weapon;
 
 			if (weapon != null) {
 				zap = attack = weapon_anims.get(weapon.getAnimationClass());
@@ -305,7 +305,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String helmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.hasHelmet()){
+			if(hero.getBelongings().armor.hasHelmet()){
 				return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 			}
 		}
@@ -314,7 +314,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String collarDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.hasCollar()){
+			if(hero.getBelongings().armor.hasCollar()){
 				return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";
 			}
 		}

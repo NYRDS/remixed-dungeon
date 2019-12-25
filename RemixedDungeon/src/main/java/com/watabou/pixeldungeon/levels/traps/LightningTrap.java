@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
@@ -54,7 +53,7 @@ public class LightningTrap implements ITrigger{
 					Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.TRAP), Game.getVar(R.string.LightningTrap_Name), Dungeon.depth ) );
 					GLog.n(Game.getVar(R.string.LightningTrap_Desc));
 				} else {
-					((Hero)ch).belongings.charge( false );
+					ch.getBelongings().charge( false );
 				}
 			}
 			

@@ -70,7 +70,7 @@ public class Thief extends Mob {
 	}
 	
 	@Override
-	protected float attackDelay() {
+	protected float _attackDelay() {
 		return 0.5f;
 	}
 	
@@ -114,12 +114,12 @@ public class Thief extends Mob {
 	
 	protected boolean steal( Hero hero ) {
 		
-		Item item = hero.belongings.randomUnequipped();
+		Item item = hero.getBelongings().randomUnequipped();
 		if (item != null) {
 			
 			GLog.w( Game.getVar(R.string.Thief_Stole), this.getName(), item.name() );
 			
-			item.detachAll( hero.belongings.backpack );
+			item.detachAll( hero.getBelongings().backpack );
 			this.item = item;
 			
 			return true;

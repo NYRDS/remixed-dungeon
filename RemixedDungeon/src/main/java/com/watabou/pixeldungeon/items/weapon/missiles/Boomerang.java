@@ -90,14 +90,14 @@ public class Boomerang extends MissileWeapon {
 		circleBack( cell, getUser() );
 	}
 	
-	private void circleBack(int from, final Hero owner) {
+	private void circleBack(int from, final Char owner) {
 
 		((MissileSprite) getUser().getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, getUser().getPos(),
 				curItem, ()-> {
 					if (throwEquiped) {
 						owner.spend(-TIME_TO_EQUIP);
-						owner.belongings.weapon = this;
+						owner.getBelongings().weapon = this;
 					} else {
 						owner.collect(this);
 					}
@@ -108,7 +108,7 @@ public class Boomerang extends MissileWeapon {
 	private boolean throwEquiped;
 	
 	@Override
-	public void cast( Hero user, int dst ) {
+	public void cast(Char user, int dst ) {
 		throwEquiped = isEquipped( user );
 		super.cast( user, dst );
 	}

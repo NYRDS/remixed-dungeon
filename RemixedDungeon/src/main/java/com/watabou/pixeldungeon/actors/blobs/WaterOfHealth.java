@@ -43,7 +43,7 @@ public class WaterOfHealth extends WellWater {
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
 		PotionOfHealing.heal( hero, 1f );
-		hero.belongings.uncurseEquipped();
+		hero.getBelongings().uncurseEquipped();
 		hero.hunger().satisfy(Hunger.STARVING);
 		
 		CellEmitter.get( pos ).start( ShaftParticle.FACTORY, 0.2f, 3 );

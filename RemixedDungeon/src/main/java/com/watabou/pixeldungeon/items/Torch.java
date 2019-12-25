@@ -62,7 +62,7 @@ public class Torch extends Item {
 			
 			hero.getSprite().operate( hero.getPos() );
 			
-			detach( hero.belongings.backpack );
+			detach( hero.getBelongings().backpack );
 			Buff.affect( hero, Light.class, Light.DURATION );
 			
 			Emitter emitter = hero.getSprite().centerEmitter();

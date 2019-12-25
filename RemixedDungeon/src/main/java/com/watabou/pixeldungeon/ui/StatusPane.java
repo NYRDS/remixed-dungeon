@@ -109,7 +109,7 @@ public class StatusPane extends Component {
         if (currentLevel.hasCompassTarget()) {
             compassTarget = currentLevel.getCompassTarget();    // Set to compass target if exists
         } else if ( currentLevel.hasExit(0)
-                    && hero.belongings.getItem(Amulet.class) == null) {
+                    && hero.getBelongings().getItem(Amulet.class) == null) {
             compassTarget = currentLevel.getExit(0);    // Set to first exit if exists
         }
 
@@ -134,7 +134,7 @@ public class StatusPane extends Component {
         depth.hardlight(0xCACFC2);
         add(depth);
 
-        hero.belongings.countIronKeys();
+        hero.getBelongings().countIronKeys();
         keys = new BitmapText(PixelScene.font1x);
         keys.hardlight(0xCACFC2);
         add(keys);

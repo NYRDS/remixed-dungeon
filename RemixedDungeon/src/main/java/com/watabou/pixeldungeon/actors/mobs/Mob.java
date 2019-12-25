@@ -323,10 +323,6 @@ public abstract class Mob extends Char {
 		super.move(step);
 	}
 
-	protected float attackDelay() {
-		return 1f;
-	}
-
 	public boolean doAttack(Char enemy) {
 
 		setEnemy(enemy);
@@ -411,12 +407,13 @@ public abstract class Mob extends Char {
 			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.getHeroClass() == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
-					if(hero.belongings.armor instanceof NecromancerRobe){
+					if(hero.getBelongings().armor instanceof NecromancerRobe){
 						hero.accumulateSkillPoints();
 					}
 				}
 			}
-			for (Item item : hero.belongings) {
+
+			for (Item item : hero.getBelongings()) {
 				if (item instanceof BlackSkull && item.isEquipped(hero)) {
 					((BlackSkull) item).mobDied(this, hero);
 				}
@@ -464,12 +461,8 @@ public abstract class Mob extends Char {
 	protected float  lootChance = 0;
 
 	public Mob split(int cell, int damage) {
-		Mob clone;
-		try {
-			clone = MobFactory.mobByName(getEntityKind());
-		} catch (Exception e) {
-			throw new TrackedRuntimeException("split issue");
-		}
+
+		Mob clone = (Mob)makeClone();
 
 		clone.hp(Math.max((hp() - damage) / 2, 1));
 		clone.setPos(cell);
@@ -726,5 +719,19 @@ public abstract class Mob extends Char {
 	@Nullable
 	protected Object getLoot() {
 		return loot;
+	}
+
+	@Override
+	public Char makeClone() {
+		try {
+			return MobFactory.mobByName(getEntityKind());
+		} catch (Exception e) {
+			throw new TrackedRuntimeException("clone issue");
+		}
+	}
+
+	@Override
+	protected float _attackDelay() {
+		return 1f;
 	}
 }

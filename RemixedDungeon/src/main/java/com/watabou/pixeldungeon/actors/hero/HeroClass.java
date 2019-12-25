@@ -117,7 +117,7 @@ public enum HeroClass implements CharModifier {
             try {
                 JSONObject classDesc = initHeroes.getJSONObject(className);
 
-                hero.belongings.setupFromJson(classDesc);
+                hero.getBelongings().setupFromJson(classDesc);
 
                 if (classDesc.has("quickslot")) {
                     int slot = 0;
@@ -125,7 +125,7 @@ public enum HeroClass implements CharModifier {
                     for (int i = 0; i < quickslots.length(); ++i) {
                         Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
                         if(item!=null) {
-                            item = hero.belongings.getItem(item.getClass());
+                            item = hero.getBelongings().getItem(item.getClass());
                             if (item != null) {
                                 QuickSlot.selectItem(item, slot);
                                 slot++;

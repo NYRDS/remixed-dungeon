@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.hero.Backpack;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -153,9 +152,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	public void doDrop(Hero hero) {
-		hero.spendAndNext(TIME_TO_DROP);
-		Dungeon.level.drop(detachAll(hero.belongings.backpack), hero.getPos()).sprite.drop(hero.getPos());
+	public void doDrop(Char chr) {
+		chr.spendAndNext(TIME_TO_DROP);
+		int pos = chr.getPos();
+		Dungeon.level.drop(detachAll(chr.getBelongings().backpack), pos).sprite.drop(pos);
 	}
 
 	public void doThrow(Hero hero) {
@@ -238,13 +238,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return false;
 	}
 
-	public boolean collect(ItemOwner owner) {
-		Belongings belongings = owner.getBelongings();
-		if(belongings==null) {
-			return false;
-		}
-
-		return belongings.collect(this);
+	public boolean collect(@NotNull ItemOwner owner) {
+		return owner.getBelongings().collect(this);
 	}
 
 	@Nullable
@@ -343,13 +338,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public boolean isEquipped(@NotNull Char chr) {
-
-    	Belongings belongings = chr.getBelongings();
-    	if(belongings == null) {
-    		return false;
-		}
-
-    	return belongings.isEquipped(this);
+    	return chr.getBelongings().isEquipped(this);
 	}
 
 	public void removeItemFrom(Char hero) {
@@ -491,7 +480,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return false;
 	}
 
-	public void cast(final Hero user, int dst) {
+	public void cast(final Char user, int dst) {
 
 	    if(quantity()<=0) {
 	        return;
@@ -499,7 +488,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		setUser(user);
 
-		final int cell = Ballistica.cast(user.getPos(), dst, false, true);
+	    int pos = user.getPos();
+
+		final int cell = Ballistica.cast(pos, dst, false, true);
 		user.getSprite().zap(cell);
 		user.busy();
 
@@ -517,16 +508,16 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 		final float finalDelay = delay;
 
-		final Item item = detach(user.belongings.backpack);
+		final Item item = detach(user.getBelongings().backpack);
 
 		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
-				reset(user.getPos(), cell, this, () -> {
+				reset(pos, cell, this, () -> {
 					user.spendAndNext(finalDelay);
 					item.onThrow(cell);
 				});
 	}
 
-	private static   Hero user = null;
+	private static Char user = null;
 	protected static Item curItem = null;
 
 	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
@@ -613,11 +604,11 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return ItemSpritesDescription.isFliesFastRotating(this);
 	}
 
-	public static Hero getUser() {
+	public static Char getUser() {
 		return user;
 	}
 
-	protected static void setUser(Hero user) {
+	protected static void setUser(Char user) {
 		Item.user = user;
 	}
 
@@ -681,7 +672,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public boolean usableByHero() {
-		return quantity() >= 1 && (Dungeon.hero.belongings.getItem(getClassName()) != null || isEquipped(Dungeon.hero));
+		return quantity() >= 1 && (Dungeon.hero.getBelongings().getItem(getClassName()) != null || isEquipped(Dungeon.hero));
 	}
 
 	public boolean announcePickUp() {
@@ -694,8 +685,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public void setDefaultAction(@NotNull String newDefaultAction) {
-		@Nullable
-		Hero hero = getUser();
+		Char hero = getUser();
 
 		if(hero==null) {
 			this.defaultAction = newDefaultAction;

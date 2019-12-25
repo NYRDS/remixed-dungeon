@@ -74,9 +74,9 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
-		if(hero.belongings.armor  != null && hero.belongings.armor.hasHelmet()){
-			helmetDescriptor = helmetDescriptor(hero.belongings.armor, hero);
-			if(hero.belongings.armor.isCoveringHair()){
+		if(hero.getBelongings().armor  != null && hero.getBelongings().armor.hasHelmet()){
+			helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
+			if(hero.getBelongings().armor.isCoveringHair()){
 				drawHair = false;
 			}
 		}
@@ -84,10 +84,10 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
 
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.belongings.armor, hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().armor, hero));
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.belongings.armor));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 		layersDesc.put(LAYER_DEATH, "hero/death/" +deathDescriptor+".png");
@@ -125,7 +125,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 
 	private String helmetDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.hasHelmet()){
+			if(hero.getBelongings().armor.hasHelmet()){
 				return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 			}
 		}
@@ -134,7 +134,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 
 	private String collarDescriptor(Armor armor, Hero hero) {
 		if(armor!=null) {
-			if(hero.belongings.armor.hasCollar()){
+			if(hero.getBelongings().armor.hasCollar()){
 				return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";
 			}
 		}

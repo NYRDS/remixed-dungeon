@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.quest;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -49,11 +49,11 @@ public class DarkGold extends Item {
 	}
 
 	@Override
-	public void doDrop(Hero hero) {
+	public void doDrop(Char hero) {
 		if(Dungeon.depth > 0) {
 			super.doDrop(hero);
 		}   else {
-			detachAll(hero.belongings.backpack);
+			detachAll(hero.getBelongings().backpack);
 			new ItemSprite(this).drop(hero.getPos());
 			melt(hero.getPos());
 		}

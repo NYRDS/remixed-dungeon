@@ -144,7 +144,7 @@ public class MeleeWeapon extends Weapon {
 			info.append(Game.getVar(R.string.MeleeWeapon_Info5));
 		}
 
-		if (isLevelKnown() && Dungeon.hero.belongings.backpack.items.contains( this )) {
+		if (isLevelKnown() && Dungeon.hero.getBelongings().backpack.items.contains( this )) {
 			info.append(p);
 			if (STR > Dungeon.hero.effectiveSTR()) {
 				info.append(Utils.format(R.string.MeleeWeapon_Info6a, name));

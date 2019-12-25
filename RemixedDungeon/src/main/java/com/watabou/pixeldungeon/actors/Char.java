@@ -62,6 +62,9 @@ import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.KindOfWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
@@ -88,7 +91,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public static final String IMMUNITIES        = "immunities";
 	public static final String RESISTANCES       = "resistances";
-	@NotNull
+    public MissileWeapon rangedWeapon = null;
+
+    @NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
@@ -133,6 +138,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	private Map<String, Number> spellsUsage = new HashMap<>();
 
 	public CharAction curAction = null;
+
+	//TODO store&restore it for all chars
+	private int lvl = Scrambler.scramble(1);
 
 	public boolean canSpawnAt(Level level,int cell) {
 		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
@@ -325,6 +333,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
 	}
 
+    public boolean shoot(Char enemy, MissileWeapon wep) {
+
+        rangedWeapon = wep;
+        boolean result = attack(enemy);
+        rangedWeapon = null;
+
+        return result;
+    }
+
+	public boolean bowEquipped() {
+		return getBelongings().weapon instanceof KindOfBow;
+	}
+
 	public int attackSkill(Char target) {
 		return 0;
 	}
@@ -481,6 +502,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public boolean isAlive() {
 		return hp() > 0;
+	}
+
+	abstract protected float _attackDelay();
+
+	public float attackDelay() {
+		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
+		if (wep != null) {
+			return _attackDelay()*wep.speedFactor(this);
+		} else {
+			return _attackDelay();
+		}
 	}
 
 	@Override
@@ -702,12 +734,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void spendGold(int spend) {
         Belongings belongings = getBelongings();
-        if(belongings!=null) {
-            Gold gold = belongings.getItem(Gold.class);
-            if(gold!=null) {
-                gold.quantity(gold.quantity()-spend);
-            }
-        }
+
+		Gold gold = belongings.getItem(Gold.class);
+		if(gold!=null) {
+			gold.quantity(gold.quantity()-spend);
+		}
     }
 
 	public Set<String> resistances() {
@@ -905,21 +936,28 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return visibleEnemies.get(index % visibleEnemies.size());
 	}
 
+	public void checkIfFurious() {
+		if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
+			if (!hasBuff(Fury.class)) {
+				Buff.affect(this, Fury.class);
+			}
+		}
+	}
+
 	protected abstract boolean getCloser(final int cell);
 	protected abstract boolean getFurther(final int cell);
 
+	@NotNull
 	@Override
 	public Belongings getBelongings() {
-		return null;
+		return Belongings.empty;
 	}
 
     public int gold() {
 		Belongings belongings = getBelongings();
-		if(belongings!=null) {
-			Gold gold = belongings.getItem(Gold.class);
-			if(gold!=null) {
-				return gold.quantity();
-			}
+		Gold gold = belongings.getItem(Gold.class);
+		if(gold!=null) {
+			return gold.quantity();
 		}
 		return 0;
     }
@@ -1060,6 +1098,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return name();
 	}
 
+	public int lvl() {
+		return Scrambler.descramble(lvl);
+	}
+
+	protected void lvl(int lvl) {
+		this.lvl = Scrambler.scramble(lvl);
+	}
+
 	public HeroClass getHeroClass() {
 		return HeroClass.NONE;
 	}
@@ -1115,4 +1161,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void busy(){}
+
+	public void itemPickedUp(Item item) {
+	}
+
+	public abstract Char makeClone();
 }

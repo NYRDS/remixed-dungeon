@@ -24,7 +24,7 @@ public class Shadow extends Mob {
 	}
 	
 	@Override
-	protected float attackDelay() {
+	protected float _attackDelay() {
 		return 0.5f;
 	}
 

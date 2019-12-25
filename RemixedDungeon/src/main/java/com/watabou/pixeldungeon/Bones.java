@@ -46,16 +46,16 @@ public class Bones {
 
 		switch (2) {
 		case 0:
-			item = Dungeon.hero.belongings.weapon;
+			item = Dungeon.hero.getBelongings().weapon;
 			break;
 		case 1:
-			item = Dungeon.hero.belongings.armor;
+			item = Dungeon.hero.getBelongings().armor;
 			break;
 		case 2:
-			item = Dungeon.hero.belongings.ring1;
+			item = Dungeon.hero.getBelongings().ring1;
 			break;
 		case 3:
-			item = Dungeon.hero.belongings.ring2;
+			item = Dungeon.hero.getBelongings().ring2;
 			break;
 		}
 		if (item == null || (item instanceof Artifact && !(item instanceof Ring))) {

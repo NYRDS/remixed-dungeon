@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -48,14 +47,14 @@ public abstract class EquipableItem extends Item {
 	}
 	
 	@Override
-	public void doDrop( Hero hero ) {
+	public void doDrop( Char hero ) {
 		if (!isEquipped( hero ) || doUnequip( hero, false, false )) {
 			super.doDrop( hero );
 		}
 	}
 	
 	@Override
-	public void cast( final Hero user, int dst ) {
+	public void cast(final Char user, int dst ) {
 
 		if (isEquipped( user )) {
 			if (quantity() == 1 && !this.doUnequip( user, false, false )) {
@@ -93,10 +92,6 @@ public abstract class EquipableItem extends Item {
 		}
 
 		Belongings belongings = hero.getBelongings();
-
-		if (belongings==null) {
-			throw new TrackedRuntimeException("null belongings");
-		}
 
 		if(!belongings.unequip(this)) {
 			return false;
