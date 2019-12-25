@@ -6,6 +6,8 @@
 --
 
 local serpent = require "scripts/lib/serpent"
+local RPD = require "scripts/lib/commonClasses"
+local util = require "scripts/lib/util"
 
 local item = {}
 
@@ -83,8 +85,10 @@ function item.itemDesc(self,thisItem)
         own.equipable = "artifact"
     end
 
-    for k,v in pairs(ret) do
-        ret[k] = own[k] or v
+    self.data = own.data or {}
+
+    for k,v in pairs(own) do
+        ret[k] = v
     end
 
     return ret
@@ -96,9 +100,6 @@ end
 
 item.init = function(desc)
     setmetatable(desc, item)
-
-    desc.data = desc.data or {}
-
     return desc
 end
 

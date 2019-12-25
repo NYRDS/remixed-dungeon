@@ -6,7 +6,6 @@ package com.nyrds.android.lua;
  */
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Notifications;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
@@ -65,7 +64,20 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	@Nullable
-	public static LuaTable module(String module, String fallback) {
+	public static LuaTable moduleInstance(String module) {
+		LuaValue luaModule = getEngine().call("dofile", module+".lua");
+
+		if(luaModule.istable()) {
+			return luaModule.checktable();
+		}
+
+		EventCollector.logException("failed to load instance of lua module: "+module);
+		return null;
+	}
+
+
+	@Nullable
+	public static LuaTable module(String module) {
 		LuaValue luaModule = getEngine().call("require", module);
 
 		if(luaModule.istable()) {
@@ -74,19 +86,9 @@ public class LuaEngine implements ResourceFinder {
 
 		EventCollector.logException("failed to load lua module: "+module);
 
-		if(!module.equals(fallback)) {
-			luaModule = getEngine().call("require", fallback);
-
-			if (luaModule.istable()) {
-				return luaModule.checktable();
-			}
-
-			Notifications.displayNotification("LuaError", "RD LuaError", "failed to load lua module:" + module);
-
-			EventCollector.logException("failed to load fallback lua module:" + fallback);
-		}
 		return null;
 	}
+
 
 	private class resLoader extends OneArgFunction {
 		public LuaValue call(LuaValue x) {
@@ -122,7 +124,7 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	public LuaTable require(String module) {
-		return module(module,module);
+		return module(module);
 	}
 
 	public void runScriptFile(@NotNull String fileName) {

@@ -12,10 +12,6 @@ local shields = require "scripts/lib/shields"
 
 return buff.init{
     icon = function(self, buff)
-        for k,v in pairs(self.data) do
-            print(k,v)
-        end
-
         if self.data.state then
             return 47
         end

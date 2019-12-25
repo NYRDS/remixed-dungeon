@@ -171,6 +171,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		String scriptFile = classDesc.optString("scriptFile","");
 		if(!scriptFile.isEmpty()) {
 			script = new LuaScript(scriptFile, this);
+			script.asInstance();
 		}
 
 		friendly = classDesc.optBoolean("friendly",friendly);

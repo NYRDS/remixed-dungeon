@@ -16,6 +16,7 @@ public class LuaScript {
 
     private String scriptFile;
     private boolean scriptLoaded = false;
+    private boolean asInstance = false;
     private LuaTable script;
 
     private static final LuaValue[] emptyArgs = new LuaValue[0];
@@ -33,10 +34,18 @@ public class LuaScript {
         onlyParentArgs[0] = CoerceJavaToLua.coerce(parent);
     }
 
+    public void asInstance() {
+        asInstance = true;
+    }
+
     private LuaValue run(String method, LuaValue[] args) {
         try {
             if (!scriptLoaded) {
-                script = LuaEngine.module(scriptFile, scriptFile);
+                if(asInstance) {
+                    script = LuaEngine.moduleInstance(scriptFile);
+                } else {
+                    script = LuaEngine.module(scriptFile);
+                }
                 scriptLoaded = true;
             }
 

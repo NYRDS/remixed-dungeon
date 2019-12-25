@@ -37,19 +37,26 @@ return item.init{
 
     actions = function(self, item, hero)
 
+        for k,v in pairs(self) do
+            RPD.glog(tostring(k).."->"..tostring(v))
+        end
+
         if item:isEquipped(hero) then
             return {"eq_action1",
                     "eq_action2",
                     "eq_action3",
                     tostring(item:getId()),
-                    tostring(self.data.activationCount)
+                    tostring(self.data.activationCount),
+                    tostring(self)
                     }
         else
             return {"action1",
                     "action2",
                     "action3",
                     tostring(item:getId()),
-                    tostring(self.data.activationCount)}
+                    tostring(self.data.activationCount),
+                    tostring(self)
+            }
         end
     end,
 

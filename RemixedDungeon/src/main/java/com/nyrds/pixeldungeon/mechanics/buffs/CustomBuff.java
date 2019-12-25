@@ -48,6 +48,7 @@ public class CustomBuff extends Buff {
             this.scriptFile = scriptFile;
 
             script = new LuaScript("scripts/buffs/" + scriptFile, this);
+            script.asInstance();
 
             LuaTable desc = script.run("buffDesc").checktable();
 
