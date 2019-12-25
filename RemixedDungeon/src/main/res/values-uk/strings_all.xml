@@ -2576,4 +2576,24 @@
     </string>
   <string name="town_deco_crossroad_name">Вказівник на роздоріжжі</string>
   <string name="town_deco_crossroad_desc">Грубо зроблений стовп із прибитими дощечками у вигляді стрілок, текст на них давно вигорів, схоже через погані погодні умови.</string>
+  <string name="ShieldBuffReady_Name">Готовий</string>
+  <string name="ShieldBuffNotReady_Name">Не готовий</string>
+  <string name="WoodenShield_name">Деревʼяний щит</string>
+  <string name="WoodenShield_desc">Деревʼяний щит із сирої деревини, найпростіший із щитів. Він круглий і час від часу може блокувати деяку шкоду.</string>
+  <string name="ToughShield_name">Шкіряний армований щит</string>
+  <string name="ToughShield_desc">Щит посилено шкіряними ремінцями, виглядає ліпше за дерев’яний. Він може блокувати більше шкоди.</string>
+  <string name="StrongShield_name">Бронзовий щит</string>
+  <string name="StrongShield_desc">Прямокутний щит, обшитий бронзовими листами та прикрашений кольоровою тканиною. Він значно важчий, але може блокувати набагато більше шкоди.</string>
+  <string name="RoyalShield_name">Королівський щит</string>
+  <string name="RoyalShield_desc">Цілометалевий щит. Так, він важелезний, але лише він може забезпечити найкращий захист.</string>
+  <string name="ShieldInfoTemplate">Цей щит блокує до %1$d заданої шкоди. Із %2$d %% шансом. Потребує %3$3.1fсекунд на відновлення після успішного блокування.</string>
+  <string name="Belongings_CantWearBoth">Ви не можете одягти %1$s та %2$s одночасно!</string>
+  <string name="Welcome_Text_29_3">
+    remix.29.3\n
+    - Ігровий процес:\n
+    -- Щити!\n
+    - Модифікації:\n
+    -- Налаштовані щити!\n
+    - Виправлення вад\n
+    </string>
 </resources>
