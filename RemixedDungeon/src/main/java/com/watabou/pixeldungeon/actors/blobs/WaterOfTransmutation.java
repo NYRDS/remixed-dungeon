@@ -159,10 +159,10 @@ public class WaterOfTransmutation extends WellWater {
 		}
 	}
 	
-	private Ring changeRing( Ring r ) {
-		Ring n;
+	private Item changeRing( Item r ) {
+		Item n;
 		do {
-			n = (Ring) Treasury.getLevelTreasury().random(Treasury.Category.RING );
+			n = Treasury.getLevelTreasury().random(Treasury.Category.RING );
 		} while (n.getClass() == r.getClass());
 		
 		n.level(0);
@@ -181,7 +181,7 @@ public class WaterOfTransmutation extends WellWater {
 		return n;
 	}
 	
-	private Item changeWand( Wand w ) {
+	private Item changeWand( Item w ) {
 		
 		Item n;
 		do {
@@ -198,7 +198,7 @@ public class WaterOfTransmutation extends WellWater {
 		return n;
 	}
 	
-	private Item changeSeed(Seed s ) {
+	private Item changeSeed(Item s ) {
 		
 		Item n;
 		
@@ -209,7 +209,7 @@ public class WaterOfTransmutation extends WellWater {
 		return n;
 	}
 	
-	private Item changeScroll( Scroll s ) {
+	private Item changeScroll( Item s ) {
 		if (s instanceof ScrollOfUpgrade) {
 			
 			return new ScrollOfWeaponUpgrade();
@@ -228,17 +228,10 @@ public class WaterOfTransmutation extends WellWater {
 		}
 	}
 	
-	private Item changePotion( Potion p ) {
+	private Item changePotion(Item p ) {
 		if (p instanceof PotionOfStrength) {
-			
 			return new PotionOfMight();
-			
-		} else if (p instanceof PotionOfMight) {
-			
-			return new PotionOfStrength();
-			
 		} else {
-			
 			Item n;
 			do {
 				n  = Treasury.getLevelTreasury().random(Treasury.Category.POTION );
