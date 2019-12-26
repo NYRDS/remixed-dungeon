@@ -40,7 +40,7 @@ class WndPlayGames extends Window {
 
                 if (value) {
                     Game.instance().playGames.connect();
-                    Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
+                    Game.addToScene(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
                 } else {
                     Game.instance().playGames.disconnect();
                 }
@@ -102,14 +102,14 @@ class WndPlayGames extends Window {
         private WndMessage working;
         ResultHandler() {
             working = new WndMessage(Game.getVar(R.string.WndPlayGames_WorkInCloud));
-            Game.scene().add(working);
+            Game.addToScene(working);
         }
         @Override
         public void status(final boolean status) {
             Game.pushUiTask(() -> {
                 working.hide();
                 String msg = Game.getVar(status ? R.string.WndPlayGames_Show_Ok : R.string.WndPlayGames_Show_Error );
-                Game.scene().add(new WndMessage(msg));
+                Game.addToScene(new WndMessage(msg));
             }
             );
         }

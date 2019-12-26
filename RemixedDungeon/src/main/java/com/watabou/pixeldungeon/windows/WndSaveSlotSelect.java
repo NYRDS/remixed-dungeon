@@ -63,7 +63,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                         }
                     };
 
-                    Game.scene().add(refreshing);
+                    Game.addToScene(refreshing);
                     Game.instance().playGames.loadSnapshots(() -> Game.pushUiTask(() -> {
                         refreshing.hide();
                         refreshWindow();
@@ -284,9 +284,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
     private void showActionResult(final boolean res) {
         if (res) {
-            Game.scene().add(new WndMessage("ok!"));
+            Game.addToScene(new WndMessage("ok!"));
         } else {
-            Game.scene().add(new WndMessage("something went wrong..."));
+            Game.addToScene(new WndMessage("something went wrong..."));
         }
     }
 
@@ -305,7 +305,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                             Iap iap = Game.instance().iap;
                             if (iap != null && iap.isReady() || BuildConfig.DEBUG) {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogShown");
-                                Hero.doOnNextAction = () -> Game.scene().add(new WndDontLikeAds());
+                                Hero.doOnNextAction = () -> Game.addToScene(new WndDontLikeAds());
                             } else {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogNotShownIapNotReady");
                             }

@@ -213,7 +213,7 @@ public class PixelScene extends Scene {
 					(banner.camera.width - banner.width) / 2);
 			banner.y = align(banner.camera,
 					(banner.camera.height - banner.height) / 3);
-			Game.scene().add(banner);
+			Game.addToScene(banner);
 		}
 	}
 

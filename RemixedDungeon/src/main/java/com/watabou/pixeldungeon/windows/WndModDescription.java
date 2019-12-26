@@ -134,6 +134,6 @@ public class WndModDescription extends Window {
 
 	public void onBackPressed() {
 		hide();
-		Game.scene().add(new WndModSelect());
+		Game.addToScene(new WndModSelect());
 	}
 }

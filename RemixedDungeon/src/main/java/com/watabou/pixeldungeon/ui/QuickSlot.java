@@ -388,7 +388,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         prompt.camera = uiCamera;
         prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
 
-        Game.scene().add(prompt);
+        Game.addToScene(prompt);
     }
 
     public Item getQuickslotItem() {

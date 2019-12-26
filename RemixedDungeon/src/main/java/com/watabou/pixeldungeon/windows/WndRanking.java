@@ -113,7 +113,7 @@ public class WndRanking extends WndTabbed {
 
 	private void reportError() {
 		hide();
-		Game.scene().add( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
+		Game.addToScene( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
 	}
 
 	private void createControls() {
@@ -162,7 +162,7 @@ public class WndRanking extends WndTabbed {
 				RedButton btnCatalogus = new RedButton( Game.getVar(R.string.WndRanking_StaChallenges) ) {
 					@Override
 					protected void onClick() {
-						Game.scene().add( new WndChallenges( Dungeon.challenges, false ) );
+						Game.addToScene( new WndChallenges( Dungeon.challenges, false ) );
 					}
 				};
 				btnCatalogus.setRect( 0, pos + GAP, btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
@@ -373,7 +373,7 @@ public class WndRanking extends WndTabbed {
 
 		@Override
 		protected void onClick() {
-			Game.scene().add( new WndItem( null, item ) );
+			Game.addToScene( new WndItem( null, item ) );
 		}
 	}
 }

@@ -154,6 +154,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return difficulty;
     }
 
+    public static void addToScene(Gizmo gizmo) {
+        Scene scene = scene();
+        if(scene!=null) {
+            scene.add(gizmo);
+        }
+    }
+
     public void useLocale(String lang) {
         EventCollector.collectSessionData("Locale", lang);
 
@@ -381,7 +388,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         GLES20.glClearColor(0, 0, 0, 0.0f);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 
-        draw();
+        if (scene != null) {
+            scene.draw();
+        }
     }
 
     @Override
@@ -453,12 +462,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         scene.update();
         Camera.updateAll();
-    }
-
-    private void draw() {
-        if (scene != null) {
-            scene.draw();
-        }
     }
 
     private void switchScene(Scene requestedScene) {
