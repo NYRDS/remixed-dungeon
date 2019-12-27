@@ -45,7 +45,6 @@ public class FireElemental extends Mob {
 		loot = PotionOfLiquidFlame.class;
 		lootChance = 0.1f;
 		
-		addImmunity( Burning.class );
 		addImmunity( Fire.class );
 		addImmunity( WandOfFirebolt.class );
 		addImmunity( ScrollOfPsionicBlast.class );
@@ -79,12 +78,12 @@ public class FireElemental extends Mob {
 	@Override
 	public void add( Buff buff ) {
 		if (buff instanceof Burning) {
-			if (hp() < ht()) {
-				heal(1, buff);
-			}
+		    heal(Random.NormalIntRange( 1, ht() * 4 ), buff);
+			return;
 		} else {
 			if (buff instanceof Frost) {
 				damage( Random.NormalIntRange( 1, ht() * 2 / 3 ), buff );
+				return;
 			}
 		}
 		super.add( buff );
