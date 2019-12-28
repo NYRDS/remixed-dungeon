@@ -430,7 +430,7 @@ public class Dungeon {
     }
 
     @SneakyThrows
-    public static void saveLevel(String saveTo, Level level) {
+    private static void saveLevel(String saveTo, Level level) {
         Bundle bundle = new Bundle();
         bundle.put(LEVEL, level);
 
