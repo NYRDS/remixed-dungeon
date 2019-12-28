@@ -489,12 +489,7 @@ public abstract class Mob extends Char {
 	public void resurrect(Char parent) {
 
 		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
-		Mob new_mob;
-		try {
-			new_mob = MobFactory.mobByName(getMobClassName());
-		} catch (Exception e) {
-			throw new TrackedRuntimeException("resurrect issue:"+getMobClassName());
-		}
+		Mob new_mob = MobFactory.mobByName(getMobClassName());
 
 		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
@@ -723,11 +718,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public Char makeClone() {
-		try {
-			return MobFactory.mobByName(getEntityKind());
-		} catch (Exception e) {
-			throw new TrackedRuntimeException("clone issue");
-		}
+		return MobFactory.mobByName(getEntityKind());
 	}
 
 	@Override

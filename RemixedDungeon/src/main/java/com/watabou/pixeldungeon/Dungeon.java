@@ -618,7 +618,6 @@ public class Dungeon {
 
     @NotNull
     public static Level loadLevel(Position next) throws IOException {
-
         try {
             loading.incrementAndGet();
             levelId = next.levelId;

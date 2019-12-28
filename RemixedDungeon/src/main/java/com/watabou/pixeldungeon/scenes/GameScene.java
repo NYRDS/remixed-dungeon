@@ -578,7 +578,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             scene.addLevelObjectSprite(obj);
         } else {
-            throw new TrackedRuntimeException(obj.toString());
+            EventCollector.logException(obj.toString());
         }
     }
 

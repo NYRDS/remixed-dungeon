@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.levels.Level;
@@ -94,7 +95,7 @@ public class LevelObjectsFactory {
 		if(objectClass != null) {
 			return objectClass;
 		} else {
-			throw new TrackedRuntimeException(Utils.format("Unknown object: [%s]",objectClassName));
+			throw new ModError(Utils.format("Unknown object: [%s]",objectClassName));
 		}
 	}
 
