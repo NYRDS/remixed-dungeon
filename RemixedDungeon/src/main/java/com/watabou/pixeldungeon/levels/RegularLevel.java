@@ -572,7 +572,7 @@ public abstract class RegularLevel extends CustomLevel {
 		int attempts = 0;
 		while (attempts++ < 100) {
 			int pos = roomEntrance.random(this);
-			if (pos != entrance && !avoid[pos]) {
+			if (pos != entrance && !avoid[pos] && getTopLevelObject(pos)==null) {
 				Sign sign = new Sign(pos, Dungeon.tip(this));
 				addLevelObject(sign);
 				break;
