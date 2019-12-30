@@ -138,6 +138,8 @@ local Sfx = {
     Wound = luajava.bindClass("com.watabou.pixeldungeon.effects.Wound"),
 }
 
+local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
+
 local RPD = {
     RemixedDungeon = RemixedDungeon,
     GameScene = GameScene,
@@ -315,6 +317,10 @@ local RPD = {
 
     shakeCamera = function(time, power)
         Camera.main:shake(time, power)
+    end,
+
+    checkBadge = function(badgeName)
+        return Badges:isUnlocked(Badges.Badge:valueOf(badgeName))
     end,
 
     format = function(fmt, ...)

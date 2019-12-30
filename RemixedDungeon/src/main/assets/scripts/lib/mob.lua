@@ -66,9 +66,10 @@ mob.onDie = function(self,mob,cause)
 end
 
 mob.onInteract = function(self,mob,chr)
-    if self.interact == nil then
+    if not self.interact then
         return false
     end
+
     self.interact(mob, chr)
     return true
 end
@@ -86,21 +87,21 @@ mob.onSpawn = function(self,mob,level)
 end
 
 mob.onDefenceProc = function(self,mob, enemy, damage)
-    if self.defenceProc == nil then
+    if not self.defenceProc then
         return damage
     end
     return self.defenceProc(mob, enemy, damage)
 end
 
 mob.onAttackProc = function(self,mob, enemy, damage)
-    if self.attackProc == nil then
+    if not self.attackProc then
         return damage
     end
     return self.attackProc(mob, enemy, damage)
 end
 
 mob.onZapProc = function(self,mob, enemy, damage)
-    if self.zapProc == nil then
+    if not self.zapProc then
         return damage
     end
     return self.zapProc(mob, enemy, damage)
