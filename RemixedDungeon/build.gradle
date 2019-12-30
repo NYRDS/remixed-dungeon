@@ -35,8 +35,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 818
-        versionName "29.3.fix.11"
+        versionCode 819
+        versionName "29.3.fix.12"
     }
 
     aaptOptions {
@@ -108,7 +108,7 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'io.humanteq.hqm:hqm-core:2.0.0-beta01'
+    implementation 'io.humanteq.hqm:hqm-core:2.0.0'
 
     implementation 'com.android.billingclient:billing:1.2.2'
     implementation 'commons-io:commons-io:2.5'
