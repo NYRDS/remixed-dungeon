@@ -498,13 +498,9 @@ public class ItemFactory {
     }
 
     public static Item virtual(String cl) {
-        try {
-            Item item = itemByName(cl);
-            item.quantity(0);
-            return item;
-        } catch (Exception e) {
-            throw new TrackedRuntimeException("ItemFactory.virtual");
-        }
+        Item item = itemByName(cl);
+        item.quantity(0);
+        return item;
     }
 
     public static List<Item> allItems() {

@@ -174,5 +174,4 @@ public class Group extends Gizmo {
 	public Gizmo getMember(int i) {
 		return members.get(i);
 	}
-
 }
