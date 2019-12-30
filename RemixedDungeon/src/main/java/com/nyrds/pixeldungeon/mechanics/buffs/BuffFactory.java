@@ -62,6 +62,6 @@ public class BuffFactory {
             return buffClass.newInstance();
         }
 
-        throw new ModError(name, new Exception("Unknown Buff"));
+        throw new ModError(name, new Exception("Unknown Buff:"+name));
     }
 }
