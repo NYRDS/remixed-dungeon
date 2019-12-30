@@ -3,19 +3,21 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.ListItem;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
+import java.text.Collator;
+import java.util.Arrays;
 import java.util.Map;
+
+import lombok.var;
 
 public class WndLibraryCatalogue extends Window {
 
@@ -43,8 +45,20 @@ public class WndLibraryCatalogue extends Window {
 
 		Map<String, Integer> knownMap = Library.getKnowledgeMap(category);
 
+		var sortedKeys = knownMap.keySet().toArray(new String[0]);
+
+		Arrays.sort(sortedKeys,
+				(o1, o2) -> {
+					var e1 = Library.infoHeader(category, o1);
+					var e2 = Library.infoHeader(category, o2);
+					if (e1 == null || e2 == null) {
+						return 0;
+					}
+					return Collator.getInstance().compare(e1.header, e2.header);
+				});
+
 		//List
-		for (final String entry : knownMap.keySet()) {
+		for (final String entry : sortedKeys) {
 
 			//Button
 			Library.EntryHeader entryHeader = Library.infoHeader(category, entry);
@@ -88,29 +102,6 @@ public class WndLibraryCatalogue extends Window {
 		back.setRect((WIDTH / 2) - (BTN_WIDTH / 2), (int) list.bottom() + GAP, BTN_WIDTH + GAP, BTN_HEIGHT);
 
 		add(back);
-	}
-
-	private static class LibraryListItem extends ListItem {
-		private final String finalCategory;
-		private final String entryId;
-
-		public LibraryListItem(String category, String entry, Library.EntryHeader desc) {
-			finalCategory = category;
-			entryId = entry;
-			clickable = true;
-
-			if(desc.icon instanceof CompositeTextureImage) {
-				sprite.copy((CompositeTextureImage) desc.icon);
-			} else {
-				sprite.copy(desc.icon);
-			}
-			label.text(desc.header);
-		}
-
-		@Override
-		protected void onClick() {
-			GameScene.show(Library.infoWindow(finalCategory, entryId));
-		}
 	}
 
 }
