@@ -28,7 +28,7 @@ return spell.init{
 
         local goodSacrifice = false
 
-        if sacrifice~=nil then
+        if sacrifice then
             if sacrifice:getOwnerId()==caster:getId() then
                 sacrifice:yell("DarkSacrifice_Ok")
                 goodSacrifice = true

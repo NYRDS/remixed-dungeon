@@ -109,9 +109,6 @@ public abstract class Mob extends Char {
 	protected int maxLvl = 50;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-	protected int owner = -1;
-
-	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int enemyId = EntityIdSource.INVALID_ID;
 
 	@Packable(defaultValue = "false")
@@ -133,15 +130,6 @@ public abstract class Mob extends Char {
 		owner = EntityIdSource.INVALID_ID;
 	}
 
-
-	public int getOwnerId() {
-		return owner;
-	}
-
-	Char getOwner() {
-		return CharsList.getById(owner);
-	}
-
 	@LuaInterface
 	@NotNull
 	public static Mob makePet(@NotNull Mob pet, @NotNull Char owner) {
@@ -159,7 +147,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
-		return owner >= 0 && CharsList.getById(owner) instanceof Hero;
+		return owner >= 0 && getOwner() instanceof Hero;
 	}
 
 	public int getOwnerPos() {

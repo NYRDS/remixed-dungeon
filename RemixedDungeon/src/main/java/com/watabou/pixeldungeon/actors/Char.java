@@ -96,6 +96,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	protected int owner = -1;
+
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
 	private int pos     = Level.INVALID_CELL;
 	private int prevPos = Level.INVALID_CELL;
@@ -797,6 +800,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return fraction;
 	}
 
+	public int getOwnerId() {
+		return owner;
+	}
+
+	protected Char getOwner() {
+		return CharsList.getById(owner);
+	}
+
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
 		return false;
 	}
@@ -1116,7 +1127,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public int countPets() {
 		int ret = 0;
-		for(Mob mob:level ().mobs) {
+		for(Mob mob : level().mobs) {
 			if(mob.getOwnerId()==getId()) {
 				ret++;
 			}
@@ -1127,7 +1138,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@NotNull
 	public Collection<Integer> getPets() {
 		ArrayList<Integer> pets = new ArrayList<>();
-		for(Mob mob:level ().mobs) {
+		for(Mob mob : level().mobs) {
 			if(mob.getOwnerId()==getId()) {
 				pets.add(mob.getId());
 			}
@@ -1136,7 +1147,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void releasePets() {
-		for(Mob mob:level ().mobs) {
+		for(Mob mob : level().mobs) {
 			if(mob.getOwnerId()==getId()) {
 				mob.releasePet();
 			}
