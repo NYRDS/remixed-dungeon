@@ -59,7 +59,7 @@ quest.isGiven = function(name)
 end
 
 quest.isCompleted = function(name)
-    local state = quest.state(name)
+    local state = quest.state(name) or {}
     return state.completed or false
 end
 
