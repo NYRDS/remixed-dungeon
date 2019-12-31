@@ -178,4 +178,15 @@ public class CustomBuff extends Buff {
         LuaEngine.forEach(table.checktable(), (key,val)->ret.add(val.checkjstring()));
         return ret;
     }
+
+    @Override
+    public String textureLarge() {
+        return script.runOptional("textureLarge",super.textureLarge()).checkjstring();
+    }
+
+    @Override
+    public String textureSmall() {
+        return script.runOptional("textureSmall",super.textureSmall()).checkjstring();
+    }
+
 }

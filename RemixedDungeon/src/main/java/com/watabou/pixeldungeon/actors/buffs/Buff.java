@@ -22,6 +22,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -57,6 +58,16 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	@Override
 	public String name() {
 		return getEntityKind();
+	}
+
+	@Override
+	public String textureSmall() {
+		return Assets.BUFFS_SMALL;
+	}
+
+	@Override
+	public Object textureLarge() {
+		return Assets.BUFFS_LARGE;
 	}
 
 	public void attachVisual() {

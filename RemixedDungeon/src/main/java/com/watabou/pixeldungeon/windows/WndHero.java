@@ -192,7 +192,7 @@ public class WndHero extends WndTabbed {
 			
 			if (index != BuffIndicator.NONE) {
 				
-				Image icon = new Image( icons );
+				Image icon = new Image( TextureCache.get(buff.textureLarge()) );
 				icon.frame( film.get( index ) );
 				icon.y = pos;
 				add( icon );

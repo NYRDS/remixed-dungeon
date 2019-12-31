@@ -22,6 +22,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.armor.AssasinArmor;
@@ -182,4 +183,15 @@ public enum HeroSubClass implements CharModifier {
 	public int icon() {
 		return BuffIndicator.NONE;
 	}
+
+	@Override
+	public String textureSmall() {
+		return Assets.BUFFS_SMALL;
+	}
+
+	@Override
+	public Object textureLarge() {
+		return Assets.BUFFS_LARGE;
+	}
+
 }

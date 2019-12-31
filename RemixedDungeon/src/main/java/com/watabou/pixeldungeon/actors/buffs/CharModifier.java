@@ -23,4 +23,8 @@ public interface CharModifier {
     int icon();
 
     String name();
+
+    String textureSmall();
+
+    Object textureLarge();
 }

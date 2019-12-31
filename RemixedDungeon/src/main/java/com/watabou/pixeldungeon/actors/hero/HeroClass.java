@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
@@ -351,4 +352,15 @@ public enum HeroClass implements CharModifier {
     public int classIndex() {
         return ordinal() - 1;
     }
+
+    @Override
+    public String textureSmall() {
+        return Assets.BUFFS_SMALL;
+    }
+
+    @Override
+    public Object textureLarge() {
+        return Assets.BUFFS_LARGE;
+    }
+
 }
