@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
+import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -76,5 +77,10 @@ public class RingOfFrost extends Artifact {
 		public String name() {
 			return Game.getVar(R.string.FrostAura_Buff);
 		}
+	}
+
+	@Override
+	public String bag() {
+		return Bag.KEYRING;
 	}
 }

@@ -35,6 +35,8 @@ import java.util.Iterator;
 public class Bag extends Item implements Iterable<Item> {
 
 	public static final String AC_OPEN = "Bag_ACOpen";
+
+	public static final String KEYRING = "Keyring";
 	
 	{
 		image = 11;
