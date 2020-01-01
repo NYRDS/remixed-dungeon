@@ -58,7 +58,7 @@ public class JsonHelper {
 		return readJsonFromStream(new ByteArrayInputStream(in.getBytes()));
 	}
 
-	@SneakyThrows
+	@SneakyThrows(IOException.class)
 	@NotNull
 	public static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
 			StringBuilder jsonDef = new StringBuilder();
