@@ -2,16 +2,19 @@ package com.nyrds.pixeldungeon.support.Google;
 
 import android.content.Context;
 
+import androidx.annotation.Nullable;
+
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchaseHistoryRecord;
 import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
-import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.IPurchasesUpdated;
@@ -38,63 +41,40 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     private ConcurrentLinkedQueue<Runnable> mRequests = new ConcurrentLinkedQueue<>();
 
     public GoogleIap(Context context, IPurchasesUpdated purchasesUpdatedListener) {
-        mBillingClient = BillingClient.newBuilder(context).setListener(this).build();
+        mBillingClient = BillingClient.newBuilder(context)
+                .enablePendingPurchases()
+                .setListener(this)
+                .build();
         mPurchasesUpdatedListener = purchasesUpdatedListener;
     }
 
     public void querySkuList(final List<String> skuList) {
-        Runnable queryRequest = new Runnable() {
-            @Override
-            public void run() {
-                SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-                params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
-                mBillingClient.querySkuDetailsAsync(params.build(),
-                        new SkuDetailsResponseListener() {
-                            @Override
-                            public void onSkuDetailsResponse(int responseCode, List<SkuDetails> skuDetailsList) {
-                                if (responseCode == BillingClient.BillingResponse.OK
-                                        && skuDetailsList != null) {
-                                    mSkuDetails = new HashMap<>();
-                                    for (SkuDetails skuDetails : skuDetailsList) {
-                                        mSkuDetails.put(skuDetails.getSku().toLowerCase(Locale.ROOT), skuDetails);
-                                    }
-                                }
+        Runnable queryRequest = () -> {
+            SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
+            params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
+            mBillingClient.querySkuDetailsAsync(params.build(),
+                    (billingResult, list) -> {
+                        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
+                                && list != null) {
+                            mSkuDetails = new HashMap<>();
+                            for (SkuDetails skuDetails : list) {
+                                mSkuDetails.put(skuDetails.getSku().toLowerCase(Locale.ROOT), skuDetails);
                             }
-                        });
-            }
+                        }
+                    });
         };
         executeServiceRequest(queryRequest);
     }
 
     public void doPurchase(final String skuId) {
-        Runnable purchaseFlowRequest = new Runnable() {
-            @Override
-            public void run() {
-
-                BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
-                        .setSku(skuId)
-                        .setType(BillingClient.SkuType.INAPP)
-                        .build();
-                mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
-            }
+        Runnable purchaseFlowRequest = () -> {
+            BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
+                    .setSkuDetails(mSkuDetails.get(skuId))
+                    .build();
+            mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
         };
 
         executeServiceRequest(purchaseFlowRequest);
-    }
-
-    @Override
-    public void onPurchasesUpdated(@BillingClient.BillingResponse int responseCode, List<Purchase> purchases) {
-        if (responseCode == BillingClient.BillingResponse.OK
-                && purchases != null) {
-            for (Purchase purchase : purchases) {
-                handlePurchase(purchase);
-            }
-            mPurchasesUpdatedListener.onPurchasesUpdated();
-        } else if (responseCode == BillingClient.BillingResponse.USER_CANCELED) {
-            // Handle an error caused by a user cancelling the purchase flow.
-        } else {
-            // Handle any other error codes.
-        }
     }
 
     private void handlePurchase(Purchase purchase) {
@@ -108,14 +88,11 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     }
 
     public void queryPurchases() {
-        Runnable queryToExecute = new Runnable() {
-            @Override
-            public void run() {
-                Purchase.PurchasesResult result = mBillingClient.queryPurchases(BillingClient.SkuType.INAPP);
-                onPurchasesUpdated(result.getResponseCode(), result.getPurchasesList());
+        Runnable queryToExecute = () -> {
+            Purchase.PurchasesResult result = mBillingClient.queryPurchases(BillingClient.SkuType.INAPP);
+            onPurchasesUpdated(result.getBillingResult(), result.getPurchasesList());
 
-                //mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, GoogleIap.this);
-            }
+            //mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, GoogleIap.this);
         };
 
         executeServiceRequest(queryToExecute);
@@ -129,15 +106,15 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         mIsServiceConnecting = true;
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
-            public void onBillingSetupFinished(@BillingClient.BillingResponse int billingResponseCode) {
+            public void onBillingSetupFinished(BillingResult billingResult) {
 
-                if (billingResponseCode == BillingClient.BillingResponse.OK) {
+                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     mIsServiceConnected = true;
                     for (Runnable runnable:mRequests) {
                         getExecutor().execute(runnable);
                     }
                 }   else {
-                    EventCollector.logException("google play billing" + billingResponseCode);
+                    EventCollector.logException("google play billing:" + billingResult.getDebugMessage());
                 }
                 mIsServiceConnecting = false;
             }
@@ -151,15 +128,12 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     }
 
     private void executeServiceRequest(final Runnable runnable) {
-        Game.instance().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (isServiceConnected()) {
-                    getExecutor().execute(runnable);
-                } else {
-                    mRequests.add(runnable);
-                    startServiceConnection();
-                }
+        Game.instance().runOnUiThread(() -> {
+            if (isServiceConnected()) {
+                getExecutor().execute(runnable);
+            } else {
+                mRequests.add(runnable);
+                startServiceConnection();
             }
         });
 
@@ -196,15 +170,32 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         return mIsServiceConnected && !mIsServiceConnecting;
     }
 
+
     @Override
-    public void onPurchaseHistoryResponse(int responseCode, List<Purchase> purchasesList) {
-        if (responseCode != BillingClient.BillingResponse.OK) {
-            EventCollector.logException("queryPurchasesHistory" + responseCode);
-        }
+    public void onConsumeResponse(BillingResult billingResult, String s) {
+        GLog.w("consumed: %d %s", billingResult.getDebugMessage(), s);
     }
 
     @Override
-    public void onConsumeResponse(int responseCode, String purchaseToken) {
-        GLog.w("consumed: %d %s", responseCode, purchaseToken);
+    public void onPurchaseHistoryResponse(BillingResult billingResult, List<PurchaseHistoryRecord> list) {
+        if (billingResult.getResponseCode() != BillingClient.BillingResponseCode.OK) {
+            EventCollector.logException("queryPurchasesHistory" + billingResult.getDebugMessage());
+        }
+
+    }
+
+    @Override
+    public void onPurchasesUpdated(BillingResult billingResult, @Nullable List<Purchase> list) {
+        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
+                && list != null) {
+            for (Purchase purchase : list ){
+                handlePurchase(purchase);
+            }
+            mPurchasesUpdatedListener.onPurchasesUpdated();
+        } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
+            // Handle an error caused by a user cancelling the purchase flow.
+        } else {
+            // Handle any other error codes.
+        }
     }
 }
