@@ -33,7 +33,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
-import com.nyrds.pixeldungeon.support.Google._PlayGames;
+import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -108,7 +108,7 @@ public class RemixedDungeon extends Game {
 		super.onCreate(savedInstanceState);
 
 		EuConsent.check(this);
-		playGames = new _PlayGames(this);
+		playGames = new PlayGames(this);
 		MobileAds.initialize(this, Game.getVar(R.string.admob_app_id));
 
 		RemixedDungeon.activeMod(ModdingMode.activeMod());

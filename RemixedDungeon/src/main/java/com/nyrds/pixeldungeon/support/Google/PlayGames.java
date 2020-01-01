@@ -1,17 +1,17 @@
 package com.nyrds.pixeldungeon.support.Google;
 
 import android.app.Activity;
-import android.app.Dialog;
+import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.os.Build;
-import android.os.Bundle;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.games.snapshot.Snapshot;
@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.ByteArrayInputStream;
@@ -43,40 +42,87 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import static android.app.Activity.RESULT_OK;
-
 /**
  * Created by mike on 09.05.2017.
  * This file is part of Remixed Pixel Dungeon.
  */
 
-@Deprecated
-public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class PlayGames {
 	private static final int RC_SIGN_IN          = 42353;
 	private static final int RC_SHOW_BADGES      = 67584;
 	private static final int RC_SHOW_LEADERBOARD = 96543;
 
 	private static final String PROGRESS = "Progress";
 
-	private GoogleApiClient   googleApiClient;
-	private Activity          activity;
 	private ArrayList<String> mSavedGamesNames;
 
-	public _PlayGames(Activity ctx) {
-		activity = ctx;
+	GoogleSignInAccount signedInAccount;
 
-		googleApiClient = new GoogleApiClient.Builder(activity)
-				.addConnectionCallbacks(this)
-				.addOnConnectionFailedListener(this)
-				.addApi(Games.API).addScope(Games.SCOPE_GAMES)
-				.addApi(Drive.API).addScope(Drive.SCOPE_APPFOLDER)
-				.build();
+	GoogleSignInOptions signInOptions;
+
+	public PlayGames(Activity ctx) {
+
+		signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
+						.requestScopes(Drive.SCOPE_APPFOLDER)
+						.build();
+
+		connect();
 	}
+
+
+	private void startSignInIntent(Activity ctx) {
+		GoogleSignInClient signInClient = GoogleSignIn.getClient(ctx,
+				signInOptions;
+		Intent intent = signInClient.getSignInIntent();
+		Game.instance().startActivityForResult(intent, RC_SIGN_IN);
+	}
+
+	public void connect() {
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
+
+		GoogleSignInOptions signInOptions =
+				new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
+						.requestScopes(Drive.SCOPE_APPFOLDER)
+						.build();
+
+		GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(Game.instance());
+		if (GoogleSignIn.hasPermissions(account, signInOptions.getScopeArray())) {
+			signedInAccount = account;
+			onConnected();
+		} else {
+			GoogleSignInClient signInClient = GoogleSignIn.getClient(Game.instance(), signInOptions);
+			signInClient
+					.silentSignIn()
+					.addOnCompleteListener(
+							Game.instance().executor,
+							task -> {
+								if (task.isSuccessful()) {
+									 signedInAccount = task.getResult();
+									 onConnected();
+								} else {
+									startSignInIntent(Game.instance());
+								}
+							});
+		}
+	}
+
+	public void disconnect() {
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+
+		GoogleSignInClient signInClient = GoogleSignIn.getClient(Game.instance(),
+				GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
+		signInClient.signOut().addOnCompleteListener(Game.instance().executor,
+				task -> {
+					// at this point, the user is signed out.
+				});
+	}
+
+
 
 	public void unlockAchievement(String achievementCode) {
 		//TODO store it locally if not connected
 		if (isConnected()) {
-			Games.Achievements.unlock(googleApiClient, achievementCode);
+			Games.getAchievementsClient(Game.instance(),signedInAccount).unlock(achievementCode);
 		}
 	}
 
@@ -84,25 +130,6 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 		return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
 	}
 
-	public void connect() {
-
-		if(usable()) {
-			Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
-			if (!isConnected()) {
-				googleApiClient.connect();
-			}
-		} else {
-			disconnect();
-		}
-	}
-
-	public void disconnect() {
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
-		if (isConnected()) {
-			Games.signOut(googleApiClient);
-			googleApiClient.disconnect();
-		}
-	}
 
 	private OutputStream streamToSnapshot(final String snapshotId) {
 		return new ByteArrayOutputStream() {
@@ -160,31 +187,30 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 	}
 
 	public boolean isConnected() {
-		return googleApiClient.isConnected();
+		if(signedInAccount != null && !signedInAccount.isExpired()) {
+			return true;
+		}
+		return false;
 	}
 
-	@Override
-	public void onConnected(@Nullable Bundle bundle) {
+	private void onConnected() {
 		loadSnapshots(null);
 	}
 
 	public void loadSnapshots(@Nullable final Runnable doneCallback) {
 		if (isConnected()) {
-			Games.Snapshots.load(googleApiClient, false).setResultCallback(new ResultCallback<Snapshots.LoadSnapshotsResult>() {
-				@Override
-				public void onResult(@NotNull Snapshots.LoadSnapshotsResult result) {
-					if (result.getStatus().isSuccess()) {
+			Games.Snapshots.load(googleApiClient, false).setResultCallback(result -> {
+				if (result.getStatus().isSuccess()) {
 
-						mSavedGamesNames = new ArrayList<>();
-						for (SnapshotMetadata m : result.getSnapshots()) {
-							mSavedGamesNames.add(m.getUniqueName());
-						}
-					} else {
-						EventCollector.logEvent("Play Games", "load " + result.getStatus().getStatusMessage());
+					mSavedGamesNames = new ArrayList<>();
+					for (SnapshotMetadata m : result.getSnapshots()) {
+						mSavedGamesNames.add(m.getUniqueName());
 					}
-					if (doneCallback != null) {
-						doneCallback.run();
-					}
+				} else {
+					EventCollector.logEvent("Play Games", "load " + result.getStatus().getStatusMessage());
+				}
+				if (doneCallback != null) {
+					doneCallback.run();
 				}
 			}, 3, TimeUnit.SECONDS);
 		}
@@ -211,47 +237,25 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 		return true;
 	}
 
-	@Override
-	public void onConnectionSuspended(int i) {
-		googleApiClient.connect();
-	}
-
-	@Override
-	public void onConnectionFailed(@NotNull ConnectionResult result) {
-		int requestCode = RC_SIGN_IN;
-
-		if (result.hasResolution()) {
-			try {
-				result.startResolutionForResult(activity, requestCode);
-
-			} catch (IntentSender.SendIntentException e) {
-				googleApiClient.connect();
-			}
-		} else {
-			// not resolvable... so show an error message
-			int errorCode = result.getErrorCode();
-			Dialog dialog = GooglePlayServicesUtil.getErrorDialog(errorCode,
-					activity, requestCode);
-			if (dialog != null) {
-				dialog.show();
-			}
-		}
-	}
-
 	public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == RC_SIGN_IN) {
-			if (resultCode == RESULT_OK) {
-				googleApiClient.connect();
-			} else {
-				Dialog dialog = GooglePlayServicesUtil.getErrorDialog(resultCode,
-						activity, requestCode);
-				if (dialog != null) {
-					dialog.show();
-				}
-			}
-			return true;
+		if (requestCode != RC_SIGN_IN) {
+			return false;
 		}
-		return false;
+
+		GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+		if (result.isSuccess()) {
+			signedInAccount = result.getSignInAccount();
+			onConnected();
+		} else {
+			String message = result.getStatus().getStatusMessage();
+			if (message == null || message.isEmpty()) {
+				message = "Something gonna wrong with google play games";
+			}
+			new AlertDialog.Builder(Game.instance()).setMessage(message)
+					.setNeutralButton(android.R.string.ok, null).show();
+		}
+		return true;
+
 	}
 
 	public void backupProgress(final IResult resultCallback) {
@@ -262,27 +266,27 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 
 		Game.instance().executor.execute(() -> {
 			try {
-				boolean res = packFilesToSnapshot(_PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), new FileFilter() {
+				boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), new FileFilter() {
 					@Override
 					public boolean accept(File pathname) {
 						String filename = pathname.getName();
-						if (filename.equals(Badges.BADGES_FILE)) {
-							return true;
-						}
+							if (filename.equals(Badges.BADGES_FILE)) {
+								return true;
+							}
 
-						if (filename.equals(Library.getLibraryFile())) {
-							return true;
-						}
+							if (filename.equals(Library.getLibraryFile())) {
+								return true;
+							}
 
-						if (filename.equals(Rankings.RANKINGS_FILE)) {
-							return true;
-						}
+							if (filename.equals(Rankings.RANKINGS_FILE)) {
+								return true;
+							}
 
                             return filename.startsWith("game_") && filename.endsWith(".dat");
                         }
 					});
 					resultCallback.status(res);
-				}catch (Exception e) {
+				} catch (Exception e) {
 					EventCollector.logException(e);
 					Game.toast("Error while uploading save to cloud: %s", e.getMessage());
 
@@ -305,9 +309,11 @@ public class _PlayGames implements GoogleApiClient.ConnectionCallbacks, GoogleAp
 
 	public void showBadges() {
 		if (isConnected()) {
-			activity.startActivityForResult(
-					Games.Achievements.getAchievementsIntent(googleApiClient),
-					RC_SHOW_BADGES
+			Games.getAchievementsClient(Game.instance(),signedInAccount)
+					.getAchievementsIntent()
+					.addOnSuccessListener(
+							intent -> Game.instance().startActivityForResult(intent,RC_SHOW_BADGES)
+					);
 			);
 		}
 	}
