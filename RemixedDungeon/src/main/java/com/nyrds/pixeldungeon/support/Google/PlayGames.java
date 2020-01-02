@@ -11,14 +11,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.drive.Drive;
 import com.google.android.gms.games.Games;
+import com.google.android.gms.games.SnapshotsClient;
 import com.google.android.gms.games.snapshot.Snapshot;
-import com.google.android.gms.games.snapshot.SnapshotContents;
 import com.google.android.gms.games.snapshot.SnapshotMetadata;
 import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
-import com.google.android.gms.games.snapshot.Snapshots;
+import com.google.android.gms.tasks.Task;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -37,10 +35,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by mike on 09.05.2017.
@@ -56,23 +52,20 @@ public class PlayGames {
 
 	private ArrayList<String> mSavedGamesNames;
 
-	GoogleSignInAccount signedInAccount;
+	private GoogleSignInAccount signedInAccount;
 
-	GoogleSignInOptions signInOptions;
+	private GoogleSignInOptions signInOptions;
 
-	public PlayGames(Activity ctx) {
-
+	public PlayGames() {
 		signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
-						.requestScopes(Drive.SCOPE_APPFOLDER)
+						.requestScopes(Games.SCOPE_GAMES_SNAPSHOTS)
 						.build();
-
-		connect();
 	}
 
 
 	private void startSignInIntent(Activity ctx) {
 		GoogleSignInClient signInClient = GoogleSignIn.getClient(ctx,
-				signInOptions;
+				signInOptions);
 		Intent intent = signInClient.getSignInIntent();
 		Game.instance().startActivityForResult(intent, RC_SIGN_IN);
 	}
@@ -82,7 +75,7 @@ public class PlayGames {
 
 		GoogleSignInOptions signInOptions =
 				new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
-						.requestScopes(Drive.SCOPE_APPFOLDER)
+						.requestScopes(Games.SCOPE_GAMES_SNAPSHOTS)
 						.build();
 
 		GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(Game.instance());
@@ -117,8 +110,6 @@ public class PlayGames {
 				});
 	}
 
-
-
 	public void unlockAchievement(String achievementCode) {
 		//TODO store it locally if not connected
 		if (isConnected()) {
@@ -141,41 +132,73 @@ public class PlayGames {
 		};
 	}
 
+	private Task<SnapshotMetadata> writeSnapshot(Snapshot snapshot,
+												 byte[] data) {
+
+		// Set the data payload for the snapshot
+		snapshot.getSnapshotContents().writeBytes(data);
+
+		// Create the change operation
+		SnapshotMetadataChange metadataChange = new SnapshotMetadataChange.Builder()
+				.build();
+
+		SnapshotsClient snapshotsClient =
+				Games.getSnapshotsClient(Game.instance(), signedInAccount);
+
+		// Commit the operation
+		return snapshotsClient.commitAndClose(snapshot, metadataChange);
+	}
+
+
 	private void writeToSnapshot(String snapshotId, byte[] content) {
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(googleApiClient, snapshotId, true, Snapshots.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED);
 
-		Snapshots.OpenSnapshotResult openResult = result.await(5, TimeUnit.SECONDS);
-		Snapshot snapshot = openResult.getSnapshot();
+		SnapshotsClient snapshotsClient =
+				Games.getSnapshotsClient(Game.instance(), signedInAccount);
 
-		if (openResult.getStatus().isSuccess() && snapshot != null) {
-			SnapshotContents contents = snapshot.getSnapshotContents();
-			contents.writeBytes(content);
-
-			PendingResult<Snapshots.CommitSnapshotResult> pendingResult = Games.Snapshots.commitAndClose(googleApiClient, snapshot, SnapshotMetadataChange.EMPTY_CHANGE);
-			pendingResult.setResultCallback(commitSnapshotResult -> {
-				if (commitSnapshotResult.getStatus().isSuccess()) {
-				} else {
-					EventCollector.logEvent("Play Games", "commit" + commitSnapshotResult.getStatus().getStatusMessage());
-				}
-			});
-		}
+		snapshotsClient.open(snapshotId, true, SnapshotsClient.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED)
+				.addOnFailureListener( e -> EventCollector.logException(e))
+				.addOnSuccessListener(snapshotDataOrConflict -> {
+					if(snapshotDataOrConflict.isConflict()) {
+						EventCollector.logException(snapshotDataOrConflict.getConflict().getConflictId());
+						//Just remove conflicting snapshot and try again
+						snapshotsClient.delete(snapshotDataOrConflict.getConflict().getConflictingSnapshot().getMetadata())
+								.addOnCompleteListener(
+										task -> PlayGames.this.writeToSnapshot(snapshotId, content)
+								);
+						return;
+					}
+					writeSnapshot(snapshotDataOrConflict.getData(),content);
+				});
 	}
 
-	private InputStream streamFromSnapshot(String snapshotId) throws IOException {
-		return new ByteArrayInputStream(readFromSnapshot(snapshotId));
-	}
+	public void unpackSnapshotTo(String snapshotId, File readTo, IResult result) {
+		// Get the SnapshotsClient from the signed in account.
+		SnapshotsClient snapshotsClient =
+				Games.getSnapshotsClient(Game.instance(), signedInAccount);
 
-	private byte[] readFromSnapshot(String snapshotId) throws IOException {
-		PendingResult<Snapshots.OpenSnapshotResult> result = Games.Snapshots.open(googleApiClient, snapshotId, false);
+		// Open the saved game using its name.
+		snapshotsClient.open(snapshotId, true, SnapshotsClient.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED)
+				.addOnFailureListener(e1 -> EventCollector.logException(e1))
+				.continueWith(task -> {
+					Snapshot snapshot = task.getResult().getData();
 
-		Snapshots.OpenSnapshotResult openResult = result.await(15, TimeUnit.SECONDS);
-		Snapshot snapshot = openResult.getSnapshot();
-
-		if (openResult.getStatus().isSuccess() && snapshot != null) {
-			return snapshot.getSnapshotContents().readFully();
-		} else {
-			throw new IOException("snapshot timeout");
-		}
+					// Opening the snapshot was a success and any conflicts have been resolved.
+					try {
+						// Extract the raw data from the snapshot.
+						return snapshot.getSnapshotContents().readFully();
+					} catch (IOException e) {
+						EventCollector.logException(e);
+					}
+					result.status(false);
+					return null;
+				})
+				.addOnCompleteListener(task -> {
+					result.status(
+							Unzip.unzip(
+									new ByteArrayInputStream(
+											task.getResult()),
+											readTo.getAbsolutePath()));
+				});
 	}
 
 	public boolean haveSnapshot(String snapshotId) {
@@ -199,20 +222,20 @@ public class PlayGames {
 
 	public void loadSnapshots(@Nullable final Runnable doneCallback) {
 		if (isConnected()) {
-			Games.Snapshots.load(googleApiClient, false).setResultCallback(result -> {
-				if (result.getStatus().isSuccess()) {
+			Games.getSnapshotsClient(Game.instance(), signedInAccount)
+					.load(false).addOnSuccessListener(
+					snapshotMetadataBufferAnnotatedData -> {
 
-					mSavedGamesNames = new ArrayList<>();
-					for (SnapshotMetadata m : result.getSnapshots()) {
-						mSavedGamesNames.add(m.getUniqueName());
+						mSavedGamesNames = new ArrayList<>();
+						for (SnapshotMetadata m : snapshotMetadataBufferAnnotatedData.get()) {
+							mSavedGamesNames.add(m.getUniqueName());
+						}
+						if (doneCallback!=null) {
+							doneCallback.run();
+						}
 					}
-				} else {
-					EventCollector.logEvent("Play Games", "load " + result.getStatus().getStatusMessage());
-				}
-				if (doneCallback != null) {
-					doneCallback.run();
-				}
-			}, 3, TimeUnit.SECONDS);
+			)
+			.addOnFailureListener(e -> EventCollector.logException(e,"Play Games load"));
 		}
 	}
 
@@ -221,16 +244,6 @@ public class PlayGames {
 		try {
 			FileSystem.zipFolderTo(out, dir, 0, filter);
 		} catch (Exception e) {
-			EventCollector.logException(e);
-			return false;
-		}
-		return true;
-	}
-
-	public boolean unpackSnapshotTo(String id, File dir) {
-		try {
-			Unzip.unzip(streamFromSnapshot(id), dir.getAbsolutePath());
-		} catch (IOException e) {
 			EventCollector.logException(e);
 			return false;
 		}
@@ -301,20 +314,19 @@ public class PlayGames {
 		}
 
 		Game.instance().executor.execute(() -> {
-			boolean res = unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING));
-			resultCallback.status(res);
+			unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING),
+					res -> resultCallback.status(res));
 		});
 	}
 
 
 	public void showBadges() {
 		if (isConnected()) {
-			Games.getAchievementsClient(Game.instance(),signedInAccount)
+			Games.getAchievementsClient(Game.instance(), signedInAccount)
 					.getAchievementsIntent()
 					.addOnSuccessListener(
-							intent -> Game.instance().startActivityForResult(intent,RC_SHOW_BADGES)
+							intent -> Game.instance().startActivityForResult(intent, RC_SHOW_BADGES)
 					);
-			);
 		}
 	}
 
@@ -325,17 +337,18 @@ public class PlayGames {
 
 	public  void submitScores(int level, int scores) {
 		if (isConnected()) {
-			Games.Leaderboards.submitScore(googleApiClient, Game.getVar(boards[level]),
-					scores);
+			Games.getLeaderboardsClient(Game.instance(),signedInAccount).
+					submitScore(Game.getVar(boards[level]), scores);
 		}
 	}
 
 	public void showLeaderboard() {
 		if (isConnected()) {
-			activity.startActivityForResult(
-					Games.Leaderboards.getAllLeaderboardsIntent(googleApiClient),
-					RC_SHOW_LEADERBOARD
-			);
+			Games.getLeaderboardsClient(Game.instance(),signedInAccount)
+					.getAllLeaderboardsIntent()
+					.addOnSuccessListener(
+							intent -> Game.instance().startActivityForResult(intent, RC_SHOW_LEADERBOARD)
+					);
 		}
 	}
 

@@ -27,7 +27,7 @@ return item.init{
             info          = "Item for script tests",
             stackable     = false,
             defaultAction = "action1",
-            price         = 7,
+            price         = 0,
             isArtifact    = true,
             data = {
                 activationCount = 0
