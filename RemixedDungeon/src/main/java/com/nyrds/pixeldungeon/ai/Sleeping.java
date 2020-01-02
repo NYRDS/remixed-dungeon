@@ -2,8 +2,6 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Challenges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -29,14 +27,6 @@ public class Sleeping extends MobAi implements AiState {
                 + (enemy.isFlying() ? 2 : 0)) == 0) {
 
             huntEnemy(me);
-
-            if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
-                for (Mob mob : me.level().mobs) {
-                    if (me != mob) {
-                        mob.beckon(me.target);
-                    }
-                }
-            }
 
             me.spend(Mob.TIME_TO_WAKE_UP);
 
