@@ -429,9 +429,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 				price /= (1 - level());
 			}
 		}
-		if (price < 1) {
-			price = 1;
-		}
+
 		return price;
 	}
 
