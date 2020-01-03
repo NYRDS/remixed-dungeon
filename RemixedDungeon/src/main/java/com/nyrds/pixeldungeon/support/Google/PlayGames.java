@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.support.Google;
 
-import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Build;
 
@@ -11,6 +11,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.games.SnapshotsClient;
 import com.google.android.gms.games.snapshot.Snapshot;
@@ -63,15 +64,23 @@ public class PlayGames {
 	}
 
 
-	private void startSignInIntent(Activity ctx) {
-		GoogleSignInClient signInClient = GoogleSignIn.getClient(ctx,
-				signInOptions);
-		Intent intent = signInClient.getSignInIntent();
+	public void connectExplicit() {
+		if(isConnected()) {
+			return;
+		}
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+		Intent intent = GoogleSignIn.getClient(Game.instance(), signInOptions)
+				.getSignInIntent();
 		Game.instance().startActivityForResult(intent, RC_SIGN_IN);
 	}
 
 	public void connect() {
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
+
+		if(isConnected()) {
+			return;
+		}
+
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
 
 		GoogleSignInOptions signInOptions =
 				new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
@@ -83,8 +92,7 @@ public class PlayGames {
 			signedInAccount = account;
 			onConnected();
 		} else {
-			GoogleSignInClient signInClient = GoogleSignIn.getClient(Game.instance(), signInOptions);
-			signInClient
+			GoogleSignIn.getClient(Game.instance(), signInOptions)
 					.silentSignIn()
 					.addOnCompleteListener(
 							Game.instance().executor,
@@ -92,9 +100,9 @@ public class PlayGames {
 								if (task.isSuccessful()) {
 									 signedInAccount = task.getResult();
 									 onConnected();
-								} else {
-									startSignInIntent(Game.instance());
-								}
+								}// else {
+								//	startSignInIntent(Game.instance());
+								//}
 							});
 		}
 	}
@@ -106,6 +114,7 @@ public class PlayGames {
 				GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
 		signInClient.signOut().addOnCompleteListener(Game.instance().executor,
 				task -> {
+					signedInAccount = null;
 					// at this point, the user is signed out.
 				});
 	}
@@ -217,6 +226,7 @@ public class PlayGames {
 	}
 
 	private void onConnected() {
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
 		loadSnapshots(null);
 	}
 
@@ -256,13 +266,26 @@ public class PlayGames {
 		}
 
 		GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+		
 		if (result.isSuccess()) {
 			signedInAccount = result.getSignInAccount();
 			onConnected();
 		} else {
-			String message = result.getStatus().getStatusMessage();
+
+			Status status = result.getStatus();
+
+			if(status.hasResolution()) {
+				try {
+					status.getResolution().send();
+				} catch (PendingIntent.CanceledException e) {
+					EventCollector.logException(e);
+				}
+				return true;
+			}
+
+			String message = status.getStatusMessage();
 			if (message == null || message.isEmpty()) {
-				message = "Something gonna wrong with google play games";
+				message = status.toString();
 			}
 			new AlertDialog.Builder(Game.instance()).setMessage(message)
 					.setNeutralButton(android.R.string.ok, null).show();

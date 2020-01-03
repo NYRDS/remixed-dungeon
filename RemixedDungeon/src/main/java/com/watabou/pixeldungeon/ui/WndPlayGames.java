@@ -39,7 +39,7 @@ class WndPlayGames extends Window {
                 super.checked(value);
 
                 if (value) {
-                    Game.instance().playGames.connect();
+                    Game.instance().playGames.connectExplicit();
                     Game.addToScene(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
                 } else {
                     Game.instance().playGames.disconnect();
