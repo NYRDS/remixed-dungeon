@@ -51,9 +51,6 @@ public class WndLibraryCatalogue extends Window {
 				(o1, o2) -> {
 					var e1 = Library.infoHeader(category, o1);
 					var e2 = Library.infoHeader(category, o2);
-					if (e1 == null || e2 == null) {
-						return 0;
-					}
 					return Collator.getInstance().compare(e1.header, e2.header);
 				});
 
@@ -63,7 +60,7 @@ public class WndLibraryCatalogue extends Window {
 			//Button
 			Library.EntryHeader entryHeader = Library.infoHeader(category, entry);
 
-			if(entryHeader!=null) {
+			if(!entryHeader.header.isEmpty()) {
 				LibraryListItem rb = new LibraryListItem(category, entry, entryHeader);
 
 				rb.setRect(0, yPos, WIDTH, BTN_HEIGHT);

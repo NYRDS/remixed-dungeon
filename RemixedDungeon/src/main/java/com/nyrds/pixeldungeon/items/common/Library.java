@@ -17,6 +17,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.FileNotFoundException;
 import java.io.OutputStream;
 import java.util.Collections;
@@ -126,27 +128,27 @@ public class Library {
 		return false;
 	}
 
+	@NotNull
 	public static EntryHeader infoHeader(String category, String clazz) {
-		EntryHeader ret = new EntryHeader();
 		if(category.equals(ITEM)) {
 			if(ItemFactory.isValidItemClass(clazz)) {
 				Item item = ItemFactory.itemByName(clazz);
-				ret.header = Utils.capitalize(item.name());
-				ret.icon = new ItemSprite(item);
-				return ret;
+				return new EntryHeader(
+					Utils.capitalize(item.name()),
+					new ItemSprite(item));
 			}
 		}
 
 		if(category.equals(MOB)) {
 			if(MobFactory.hasMob(clazz)) {
 				Mob mob = MobFactory.mobByName(clazz);
-				ret.header = Utils.capitalize(mob.getName());
-				ret.icon = mob.sprite().avatar();
-				return ret;
+				return new EntryHeader(
+					Utils.capitalize(mob.getName()),
+					mob.sprite().avatar());
 			}
 		}
 
-		return null;
+		return new EntryHeader(Utils.EMPTY_STRING,null);
 	}
 
 	public static Window infoWindow(String category, String clazz) {
@@ -167,5 +169,10 @@ public class Library {
 	public static class EntryHeader {
 		public String header;
 		public Image icon;
+
+		public EntryHeader(String hdr, Image icn) {
+			header = hdr;
+			icon = icn;
+		}
 	}
 }
