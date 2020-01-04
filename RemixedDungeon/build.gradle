@@ -13,10 +13,10 @@ repositories {
     maven { url "https://artifactory.appodeal.com/appodeal" }
 }
 
-def jks_keyAlias    = hasProperty('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
-def jks_keyPassword = hasProperty('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
-def jks_storePassword = hasProperty('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
-def jks_storePath = hasProperty('jks_storePath') ? System.getenv('jks_storePath') : 'testKey/test.jks'
+def jks_keyAlias    = System.getenv('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
+def jks_keyPassword = System.getenv('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
+def jks_storePassword = System.getenv('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
+def jks_storePath = System.getenv('jks_storePath')  ? System.getenv('jks_storePath') : 'testKey/test.jks'
 
 android {
 
@@ -35,8 +35,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 821
-        versionName "29.3.fix.14"
+        versionCode 822
+        versionName "29.3.fix.15"
     }
 
     aaptOptions {
