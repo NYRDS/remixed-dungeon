@@ -57,8 +57,8 @@ public class SpellFactory {
 		if (mSpellsList.get(name) != null) {
 			return true;
 		}
-		script.run("haveSpell", name);
-		return script.getResult().checkboolean();
+		;
+		return script.run("haveSpell", name).checkboolean();
 	}
 
 	@NotNull
@@ -77,8 +77,7 @@ public class SpellFactory {
 
 	@NotNull
 	public static ArrayList<String> getSpellsByAffinity(String affinity) {
-		script.run("getSpellsList", affinity);
-		LuaTable luaList = script.getResult().checktable();
+		LuaTable luaList = script.run("getSpellsList", affinity).checktable();
 
 		ArrayList<String> spellList = new ArrayList<>();
 

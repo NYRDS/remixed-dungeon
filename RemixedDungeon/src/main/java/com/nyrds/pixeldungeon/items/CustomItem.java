@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 
@@ -49,8 +50,7 @@ public class CustomItem extends EquipableItem {
         script = new LuaScript("scripts/items/"+scriptFile, this);
         script.asInstance();
 
-        script.run("itemDesc");
-        LuaTable desc = script.getResult().checktable();
+        LuaTable desc = script.run("itemDesc").checktable();
 
         image        = desc.rawget("image").checkint();
         imageFile    = desc.rawget("imageFile").checkjstring();
@@ -112,10 +112,10 @@ public class CustomItem extends EquipableItem {
             actions.remove(AC_UNEQUIP);
         }
 
-        script.run("actions", hero, null);
+        LuaValue ret = script.run("actions", hero);
 
-        if(script.getResult().istable()) {
-            LuaTable luaActions = script.getResult().checktable();
+        if(ret.istable()) {
+            LuaTable luaActions = ret.checktable();
 
             int n = luaActions.rawlen();
 
@@ -162,12 +162,12 @@ public class CustomItem extends EquipableItem {
     }
 
     private Item applyOnItem(int cell,String effect) {
-        script.run(effect, cell, null);
-        if(script.getResult().isnil()) {
+        LuaValue ret = script.run(effect, cell);
+        if(ret.isnil()) {
             return null;
         }
 
-        Item item = (Item) script.getResult().checkuserdata(Item.class);
+        Item item = (Item) ret.checkuserdata(Item.class);
         item.quantity(quantity());
         return item;
 }
@@ -210,11 +210,11 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public String desc() {
-        return StringsManager.maybeId(script.runOptional("info",info).checkjstring());
+        return StringsManager.maybeId(script.runOptional("info",info));
     }
 
     @Override
     public String bag() {
-        return script.runOptional("bag",super.bag()).checkjstring();
+        return script.runOptional("bag",super.bag());
     }
 }

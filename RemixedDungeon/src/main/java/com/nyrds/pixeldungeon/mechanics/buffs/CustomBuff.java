@@ -79,7 +79,7 @@ public class CustomBuff extends Buff {
 
     @Override
     public int icon() {
-        return script.runOptional("icon",icon).checkint();
+        return script.runOptional("icon",icon);
     }
 
     @Override
@@ -102,33 +102,33 @@ public class CustomBuff extends Buff {
     @Override
     public void detach() {
         super.detach();
-        script.run("detach");
+        script.runOptional("detach");
     }
 
     @Override
     public boolean act() {
-        script.run("act");
+        script.runOptional("act");
         return true;
     }
 
     @Override
     public int drBonus() {
-        return script.runOptional("drBonus",0).checkint();
+        return script.runOptional("drBonus",0);
     }
 
     @Override
     public int stealthBonus() {
-        return script.runOptional("stealthBonus",0).checkint();
+        return script.runOptional("stealthBonus",0);
     }
 
     @Override
     public float speedMultiplier() {
-        return (float) script.runOptional("speedMultiplier",1.f).checkdouble();
+        return script.runOptional("speedMultiplier",1.f);
     }
 
     @Override
     public int regenerationBonus() {
-        return script.runOptional("regenerationBonus",0).checkint();
+        return script.runOptional("regenerationBonus",0);
     }
 
     @Override
@@ -138,17 +138,17 @@ public class CustomBuff extends Buff {
 
     @Override
     public int defenceProc(Char defender, Char enemy, int damage) {
-        return script.runOptional("defenceProc", enemy, damage, damage).checkint();
+        return script.runOptional("defenceProc", damage, enemy, damage);
     }
 
     @Override
     public String name() {
-        return StringsManager.maybeId(script.runOptional("name",name).checkjstring());
+        return StringsManager.maybeId(script.runOptional("name",name));
     }
 
     @Override
     public boolean dontPack() {
-        return script.runOptional("dontPack", false).checkboolean();
+        return script.runOptional("dontPack", false);
     }
 
     public Item getSource() {
@@ -181,12 +181,12 @@ public class CustomBuff extends Buff {
 
     @Override
     public String textureLarge() {
-        return script.runOptional("textureLarge",super.textureLarge()).checkjstring();
+        return script.runOptional("textureLarge",super.textureLarge());
     }
 
     @Override
     public String textureSmall() {
-        return script.runOptional("textureSmall",super.textureSmall()).checkjstring();
+        return script.runOptional("textureSmall",super.textureSmall());
     }
 
 }

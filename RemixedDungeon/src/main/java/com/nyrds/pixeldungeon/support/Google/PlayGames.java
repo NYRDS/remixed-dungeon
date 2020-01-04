@@ -80,8 +80,6 @@ public class PlayGames {
 			return;
 		}
 
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
-
 		GoogleSignInOptions signInOptions =
 				new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
 						.requestScopes(Games.SCOPE_GAMES_SNAPSHOTS)
@@ -100,9 +98,9 @@ public class PlayGames {
 								if (task.isSuccessful()) {
 									 signedInAccount = task.getResult();
 									 onConnected();
-								}// else {
-								//	startSignInIntent(Game.instance());
-								//}
+								} else {
+                                    Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+                                }
 							});
 		}
 	}

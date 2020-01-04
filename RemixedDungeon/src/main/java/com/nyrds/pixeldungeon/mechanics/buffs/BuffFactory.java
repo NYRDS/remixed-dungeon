@@ -47,8 +47,8 @@ public class BuffFactory {
         if (buffList.get(name) != null) {
             return true;
         }
-        script.run("haveBuff", name);
-        return script.getResult().checkboolean();
+
+        return script.runOptional("haveBuff", false, name);
     }
 
     @NotNull

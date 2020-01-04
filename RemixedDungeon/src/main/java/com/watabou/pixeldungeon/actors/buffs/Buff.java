@@ -66,7 +66,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	}
 
 	@Override
-	public Object textureLarge() {
+	public String textureLarge() {
 		return Assets.BUFFS_LARGE;
 	}
 

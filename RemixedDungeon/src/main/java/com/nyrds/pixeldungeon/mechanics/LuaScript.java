@@ -4,9 +4,11 @@ import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 
 import org.jetbrains.annotations.Nullable;
+import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
+import org.luaj.vm2.lib.jse.CoerceLuaToJava;
 
 /**
  * Created by mike on 26.05.2018.
@@ -18,6 +20,7 @@ public class LuaScript {
     private boolean scriptLoaded = false;
     private boolean asInstance = false;
     private LuaTable script;
+    private String latestMethod;
 
     private static final LuaValue[] emptyArgs = new LuaValue[0];
     private final LuaValue[] onlyParentArgs = new LuaValue[1];
@@ -50,6 +53,7 @@ public class LuaScript {
             }
 
             if (script != null) {
+                latestMethod = method;
                 return scriptResult = script.invokemethod(method, args).arg1();
             }
             throw new ModError("Can't load "+scriptFile, new Exception());
@@ -90,15 +94,12 @@ public class LuaScript {
                 CoerceJavaToLua.coerce(arg3)});
     }
 
-    public LuaValue getResult() {
-        return scriptResult;
-    }
-
-    public <T> LuaValue runOptional(String method, T defaultValue) {
-        if(!script.get(method).isfunction()) {
-            return CoerceJavaToLua.coerce(defaultValue);
+    public LuaValue run(String method) {
+        if(parent==null) {
+            return run(method, emptyArgs);
+        } else {
+            return run(method, onlyParentArgs);
         }
-        return run(method);
     }
 
     public void runOptional(String method) {
@@ -108,18 +109,34 @@ public class LuaScript {
         run(method);
     }
 
-    public LuaValue run(String method) {
-        if(parent==null) {
-            return run(method, emptyArgs);
-        } else {
-            return run(method, onlyParentArgs);
-        }
-    }
+    public <T> T runOptional(String method, T defaultValue, Object... args) {
+        try {
+            if (!script.get(method).isfunction()) {
+                return defaultValue;
+            }
 
-    public <T> LuaValue runOptional(String method, Object arg1, Object arg2, T defaultValue) {
-        if(!script.get(method).isfunction()) {
-            return CoerceJavaToLua.coerce(defaultValue);
+            int startIndex = 1;
+
+            if(parent==null) {
+                startIndex = 0;
+            }
+
+            LuaValue []luaArgs = new LuaValue[args.length+startIndex];
+
+            if(parent!=null) {
+                luaArgs[0] = CoerceJavaToLua.coerce(parent);
+            }
+
+
+            for (int i = startIndex;i<luaArgs.length;++i) {
+                luaArgs[i] = CoerceJavaToLua.coerce(args[i-startIndex]);
+            }
+
+            return (T) CoerceLuaToJava.coerce(
+                    run(method, luaArgs),
+                    defaultValue.getClass());
+        } catch (LuaError e) {
+            throw new ModError("Error when call:" + latestMethod+"@"+scriptFile);
         }
-        return run(method,arg1,arg2);
     }
 }

@@ -34,7 +34,6 @@ public class CustomMobAi extends MobAi implements AiState {
 
     @Override
     public String status(@NotNull Mob me) {
-        script.run("status", me);
-        return StringsManager.maybeId(script.getResult().toString());
+        return StringsManager.maybeId(script.runOptional("status","CustomAi:"+scriptFile, me));
     }
 }
