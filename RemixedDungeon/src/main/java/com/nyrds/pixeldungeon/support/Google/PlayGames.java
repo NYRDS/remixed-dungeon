@@ -233,7 +233,8 @@ public class PlayGames {
 	public void loadSnapshots(@Nullable final Runnable doneCallback) {
 		if (isConnected()) {
 			Games.getSnapshotsClient(Game.instance(), signedInAccount)
-					.load(false).addOnSuccessListener(
+					.load(false)
+                    .addOnSuccessListener(
 					snapshotMetadataBufferAnnotatedData -> {
 
 						mSavedGamesNames = new ArrayList<>();
@@ -245,7 +246,9 @@ public class PlayGames {
 						}
 					}
 			)
-			.addOnFailureListener(e -> EventCollector.logException(e,"Play Games load"));
+			.addOnFailureListener(e -> {
+                EventCollector.logException(e, "Play Games load");
+            });
 		}
 	}
 

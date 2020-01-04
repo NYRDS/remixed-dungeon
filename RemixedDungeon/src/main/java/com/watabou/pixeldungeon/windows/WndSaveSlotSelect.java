@@ -133,14 +133,15 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
                                     if (_saving) {
                                         boolean res = Game.instance().playGames.packFilesToSnapshot(saveSnapshotId,
-                                                FileSystem.getInternalStorageFile(slotDirProbe),
+                                                FileSystem.getInternalStorageFile(modernSlotDir),
                                                 pathname -> SaveUtils.isRelatedTo(
                                                         pathname.getPath(),
                                                         hero.getHeroClass()));
                                         showActionResult(res);
                                     } else {
                                         Game.instance().playGames.unpackSnapshotTo(snapshotId,
-                                                FileSystem.getInternalStorageFile(modernSlotDir), res -> showActionResult(res));
+                                                FileSystem.getInternalStorageFile(modernSlotDir),
+                                                res -> Game.pushUiTask(() -> showActionResult(res)));
                                     }
                                 }
                             };
@@ -305,12 +306,13 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
     private void showActionResult(final boolean res) {
+        refreshWindow();
+
         if (res) {
             Game.addToScene(new WndMessage("ok!"));
         } else {
             Game.addToScene(new WndMessage("something went wrong..."));
         }
-        refreshWindow();
     }
 
     @Override
