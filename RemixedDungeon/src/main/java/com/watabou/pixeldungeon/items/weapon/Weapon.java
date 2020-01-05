@@ -89,7 +89,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		
 		if (getEnchantment() != null) {
 			getEnchantment().proc( this, attacker, defender, damage );

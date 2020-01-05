@@ -32,10 +32,10 @@ public class FrostArrow extends Arrow {
 	}
 
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		if(activateSpecial(attacker, defender, damage)) {
 			Buff.prolong( defender, Slow.class, DURATION );
 		}
-		super.proc( attacker, defender, damage );
+		super.attackProc( attacker, defender, damage );
 	}
 }

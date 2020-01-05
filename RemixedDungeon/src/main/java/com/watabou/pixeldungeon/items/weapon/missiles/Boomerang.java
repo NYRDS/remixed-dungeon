@@ -78,8 +78,8 @@ public class Boomerang extends MissileWeapon {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
-		super.proc( attacker, defender, damage );
+	public void attackProc(Char attacker, Char defender, int damage ) {
+		super.attackProc( attacker, defender, damage );
 		if (attacker instanceof Hero && ((Hero)attacker).rangedWeapon == this) {
 			circleBack( defender.getPos(), (Hero)attacker );
 		}

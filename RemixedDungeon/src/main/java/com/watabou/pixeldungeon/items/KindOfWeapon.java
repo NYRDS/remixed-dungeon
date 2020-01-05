@@ -61,7 +61,7 @@ public class KindOfWeapon extends EquipableItem {
 		return 1f;
 	}
 	
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 	}
 
 	public String getAnimationClass() {

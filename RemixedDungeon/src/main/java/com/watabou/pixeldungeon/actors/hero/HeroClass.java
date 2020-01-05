@@ -309,6 +309,11 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
+    public int attackProc(Char attacker, Char defender, int damage) {
+        return damage;
+    }
+
+    @Override
     public int regenerationBonus() {
         return 0;
     }

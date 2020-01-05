@@ -392,7 +392,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int attackProc(@NotNull Char enemy, int damage) {
-		return damage;
+		final int[] dmg = {damage};
+		forEachBuff(b->dmg[0] = b.attackProc(this, enemy, dmg[0]));
+		return dmg[0];
 	}
 
 	public int defenseProc(Char enemy, int baseDamage) {
@@ -403,7 +405,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		forEachBuff(b->damage[0] = b.defenceProc(this, enemy, damage[0]));
 
-		if (getBelongings()!=null && getBelongings().armor != null) {
+		if (getBelongings().armor != null) {
 			damage[0] = getBelongings().armor.proc(enemy, this, damage[0]);
 		}
 

@@ -142,6 +142,11 @@ public class CustomBuff extends Buff {
     }
 
     @Override
+    public int attackProc(Char attacker, Char defender, int damage) {
+        return script.runOptional("attackProc", damage, defender, damage);
+    }
+
+    @Override
     public String name() {
         return StringsManager.maybeId(script.runOptional("name",name));
     }

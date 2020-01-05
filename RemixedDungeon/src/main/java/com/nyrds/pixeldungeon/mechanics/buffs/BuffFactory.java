@@ -1,9 +1,11 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
 import com.nyrds.android.util.ModError;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -27,7 +29,12 @@ public class BuffFactory {
         initBuffsMap();
         predefinedCustomBuffs.add("ShieldLeft"); // buff for shield in left hand
         predefinedCustomBuffs.add(GASES_IMMUNITY);
-        script.run("loadBuffs",null);
+
+        script.run("loadBuffs");
+
+        for(String itemFile: ModdingMode.listResources("scripts/buffs", (dir, name) -> name.endsWith(".lua"))) {
+            predefinedCustomBuffs.add(itemFile.replace(".lua", Utils.EMPTY_STRING));
+        }
     }
 
     private static void registerBuffClass(Class<? extends Buff> buffClass) {

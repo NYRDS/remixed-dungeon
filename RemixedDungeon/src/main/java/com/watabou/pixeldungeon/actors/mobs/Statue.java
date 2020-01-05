@@ -108,7 +108,7 @@ public class Statue extends Mob {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
-		getWeapon().proc( this, enemy, damage );
+		getWeapon().attackProc( this, enemy, damage );
 		return damage;
 	}
 	

@@ -64,9 +64,9 @@ public class IncendiaryDart extends Dart {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		Buff.affect( defender, Burning.class ).reignite( defender );
-		super.proc( attacker, defender, damage );
+		super.attackProc( attacker, defender, damage );
 	}
 
 	@Override

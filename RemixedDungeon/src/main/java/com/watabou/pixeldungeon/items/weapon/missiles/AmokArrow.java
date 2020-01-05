@@ -30,13 +30,13 @@ public class AmokArrow extends Arrow {
 	}
 
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		if(activateSpecial(attacker, defender, damage)) {
 			Buff.affect(defender, Amok.class,20);
 			Buff.affect(defender, Speed.class,20);
 			Buff rage = new RageBuff();
 			rage.attachTo(defender);
 		}
-		super.proc( attacker, defender, damage );
+		super.attackProc( attacker, defender, damage );
 	}
 }

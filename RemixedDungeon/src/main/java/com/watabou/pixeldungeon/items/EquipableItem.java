@@ -84,7 +84,7 @@ public abstract class EquipableItem extends Item {
 	public void activate(Char ch) {}
 	public void deactivate(Char ch) {}
 
-	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
+	protected boolean doUnequip(Char hero, boolean collect, boolean single) {
 		
 		if (cursed) {
 			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );

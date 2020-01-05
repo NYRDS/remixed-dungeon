@@ -24,7 +24,11 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
+import com.watabou.pixeldungeon.actors.buffs.Combo;
+import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
+import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.AssasinArmor;
 import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
 import com.watabou.pixeldungeon.items.armor.BerserkArmor;
@@ -36,9 +40,14 @@ import com.watabou.pixeldungeon.items.armor.ShamanArmor;
 import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
+import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -140,6 +149,54 @@ public enum HeroSubClass implements CharModifier {
 
 	@Override
 	public int defenceProc(Char defender, Char enemy, int damage) {
+		return damage;
+	}
+
+	@Override
+	public int attackProc(Char attacker, Char defender, int damage) {
+		KindOfWeapon wep = attacker.rangedWeapon != null ? attacker.rangedWeapon : attacker.getBelongings().weapon;
+
+		if (wep != null) {
+
+			wep.attackProc(attacker, defender, damage);
+
+			switch (this) {
+				case GLADIATOR:
+					if (wep instanceof MeleeWeapon) {
+						damage += Buff.affect(attacker, Combo.class).hit(defender, damage);
+					}
+					break;
+				case BATTLEMAGE:
+					if (wep instanceof Wand) {
+						Wand wand = (Wand) wep;
+						if (wand.curCharges() < wand.maxCharges() && damage > 0) {
+
+							wand.curCharges(wand.curCharges() + 1);
+							QuickSlot.refresh();
+
+							ScrollOfRecharging.charge(attacker);
+						}
+						damage += wand.curCharges();
+					}
+					break;
+				case SNIPER:
+					if (attacker.rangedWeapon != null) {
+						Buff.prolong(defender, SnipersMark.class, attacker.attackDelay() * 1.1f);
+					}
+					break;
+				case SHAMAN:
+					if (wep instanceof Wand) {
+						Wand wand = (Wand) wep;
+						if (wand.affectTarget()) {
+							if (Random.Int(4) == 0) {
+								wand.zapCell(attacker, defender.getPos());
+							}
+						}
+					}
+					break;
+				default:
+			}
+		}
 		return damage;
 	}
 

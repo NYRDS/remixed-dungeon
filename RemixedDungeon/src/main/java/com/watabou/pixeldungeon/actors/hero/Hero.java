@@ -53,7 +53,6 @@ import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -63,7 +62,6 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
@@ -97,9 +95,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
-import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
@@ -920,48 +916,8 @@ public class Hero extends Char {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage) {
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
-		if (wep != null) {
 
-			wep.proc(this, enemy, damage);
-
-			switch (subClass) {
-				case GLADIATOR:
-					if (wep instanceof MeleeWeapon) {
-						damage += Buff.affect(this, Combo.class).hit(enemy, damage);
-					}
-					break;
-				case BATTLEMAGE:
-					if (wep instanceof Wand) {
-						Wand wand = (Wand) wep;
-						if (wand.curCharges() < wand.maxCharges() && damage > 0) {
-
-							wand.curCharges(wand.curCharges() + 1);
-							QuickSlot.refresh();
-
-							ScrollOfRecharging.charge(this);
-						}
-						damage += wand.curCharges();
-					}
-					break;
-				case SNIPER:
-					if (rangedWeapon != null) {
-						Buff.prolong(enemy, SnipersMark.class, attackDelay() * 1.1f);
-					}
-					break;
-				case SHAMAN:
-					if (wep instanceof Wand) {
-						Wand wand = (Wand) wep;
-						if (wand.affectTarget()) {
-							if (Random.Int(4) == 0) {
-								wand.zapCell(this, enemy.getPos());
-							}
-						}
-					}
-					break;
-				default:
-			}
-		}
+		damage = super.attackProc(enemy,damage);
 
 		if (!(enemy instanceof NPC)) {
 			for (Item item : belongings) {

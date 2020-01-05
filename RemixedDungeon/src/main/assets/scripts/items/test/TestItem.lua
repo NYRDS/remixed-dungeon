@@ -86,15 +86,16 @@ return item.init{
     end,
 
     activate = function(self, item, hero)
-        self.data.activationCount = self.data.activationCount + 1
-        RPD.glogp(tostring(item).." activated on "..tostring(hero).." "..self.data.activationCount.."\n")
-        RPD.permanentBuff(hero,"Cloak")
+
+        local Buff = RPD.affectBuff(hero,"TestBuff", 10)
+        Buff:level(3)
+        Buff:setSource(item)
     end,
 
     deactivate = function(self, item, hero)
-        RPD.glogp(tostring(item).." deactivated on "..tostring(hero).."\n")
-        RPD.removeBuff(hero,"Cloak")
+        RPD.removeBuff(hero,"TestBuff")
     end,
+
 --[[
     bag = function(self, item)
         return "SeedPouch"

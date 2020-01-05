@@ -25,9 +25,9 @@ public class HealthDart extends Dart {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		PotionOfHealing.heal(defender,0.1f);
-		super.proc( attacker, defender, damage );
+		super.attackProc( attacker, defender, damage );
 	}
 
 	@Override

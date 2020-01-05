@@ -10,6 +10,8 @@ public interface CharModifier {
     int stealthBonus();
     float speedMultiplier();
     int defenceProc(Char defender, Char enemy, int damage);
+    int attackProc(Char attacker, Char defender, int damage );
+
     int regenerationBonus();
     void charAct();
 

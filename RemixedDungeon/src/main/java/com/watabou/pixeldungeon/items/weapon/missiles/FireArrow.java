@@ -30,10 +30,10 @@ public class FireArrow extends Arrow {
 	}
 
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		if(activateSpecial(attacker, defender, damage)) {
 			Buff.affect( defender, Burning.class ).reignite( defender );
 		}
-		super.proc( attacker, defender, damage );
+		super.attackProc( attacker, defender, damage );
 	}
 }

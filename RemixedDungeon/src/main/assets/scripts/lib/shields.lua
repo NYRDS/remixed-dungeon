@@ -51,7 +51,8 @@ shields.makeShield = function(shieldLevel, shieldDesc)
     return {
         activate = function(self, item, hero)
 
-            local shieldBuff = RPD.affectBuff(hero,"ShieldLeft", shields.rechargeTime(shieldLevel,hero:effectiveSTR()))
+            local shieldBuff = RPD.affectBuff(hero,"ShieldLeft",
+                                              shields.rechargeTime(shieldLevel,hero:effectiveSTR()))
             shieldBuff:level(shieldLevel)
             shieldBuff:setSource(item)
         end,

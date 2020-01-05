@@ -75,9 +75,9 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	@Override
-	public void proc(Char attacker, Char defender, int damage) {
+	public void attackProc(Char attacker, Char defender, int damage) {
 
-		super.proc(attacker, defender, damage);
+		super.attackProc(attacker, defender, damage);
 		
 		if(this instanceof Arrow) {
 			Arrow arrow = (Arrow) this;

@@ -30,8 +30,6 @@ function buff.saveData(self)
 end
 
 function buff.loadData(self, buff, str)
-    print(str)
-
     local _,data = serpent.load(str)
     self.data = data or {}
 end
