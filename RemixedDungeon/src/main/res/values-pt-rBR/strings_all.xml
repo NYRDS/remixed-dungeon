@@ -1597,7 +1597,7 @@
   <string name="WndMovieTheatre_Watch">Assistir um filme</string>
   <string name="WndMovieTheatre_No">sair</string>
   <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
-  <string name="WndMovieTheatre_Instruction">Saudações e Bem-vindo ao nosso cinema! Nós providenciamos um serviço especial, você pode assistir filmes de graça, e se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
+  <string name="WndMovieTheatre_Instruction">Saudações e bem-vindo ao nosso cinema! Nós fornecemos um serviço especial, onde você pode assistir a um filme de graça. E se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
   <string name="WndMovieTheatre_Title">Cinema</string>
   <string name="WndMovieTheatre_Thank_You">Obrigado pela sua participação!</string>
   <string name="WndPriest_Heal">Vida - %d ouro</string>
