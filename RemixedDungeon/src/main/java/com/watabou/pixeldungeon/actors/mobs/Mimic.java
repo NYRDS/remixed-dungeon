@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -144,7 +145,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 
 		m.getSprite().turnTo(pos, Dungeon.hero.getPos());
 
-		if (Char.isVisible(m)) {
+		if (CharUtils.isVisible(m)) {
 			CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
 			Sample.INSTANCE.play(Assets.SND_MIMIC);
 		}

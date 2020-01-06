@@ -254,7 +254,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return false;
 		}
 
-		boolean visibleFight = Char.isVisible(this) || Char.isVisible(enemy);
+		boolean visibleFight = CharUtils.isVisible(this) || CharUtils.isVisible(enemy);
 
 		if (hit(this, enemy, false)) {
 
@@ -387,10 +387,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return (hasBuff(Fury.class) || hasBuff(RageBuff.class) );
 	}
 
-	public int damageRoll() {
-		return 1;
-	}
-
 	public int attackProc(@NotNull Char enemy, int damage) {
 		final int[] dmg = {damage};
 		forEachBuff(b->dmg[0] = b.attackProc(this, enemy, dmg[0]));
@@ -414,6 +410,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	protected KindOfWeapon getActiveWeapon() {
 		return rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
+	}
+
+	public int damageRoll() {
+		KindOfWeapon wep = getActiveWeapon();
+		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
+
+		if (wep != null) {
+			dmg += wep.damageRoll(this);
+		}
+
+		return dmg;
 	}
 
 	public float speed() {
@@ -461,7 +468,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (hasBuff(Paralysis.class)) {
 			if (Random.Int(dmg) >= Random.Int(hp())) {
 				Buff.detach(this, Paralysis.class);
-				if (Char.isVisible(this)) {
+				if (CharUtils.isVisible(this)) {
 					GLog.i(Game.getVar(R.string.Char_OutParalysis), getName_objective());
 				}
 			}
@@ -1162,19 +1169,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public int effectiveSTR() {
 		return 10;
-	}
-
-	static public boolean isVisible(@Nullable Char ch) {
-		if(ch==null) {
-			return false;
-		}
-
-		if(!ch.level().cellValid(ch.getPos())) {
-			EventCollector.logException("Checking visibility on invalid cell");
-			return false;
-		}
-
-		return Dungeon.visible[ch.getPos()];
 	}
 
 	public void busy(){}

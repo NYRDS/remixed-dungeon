@@ -375,18 +375,6 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public int damageRoll() {
-		KindOfWeapon wep = getActiveWeapon();
-		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
-
-		if (wep != null) {
-			dmg += wep.damageRoll(this);
-		}
-
-		return dmg;
-	}
-
-	@Override
 	public float speed() {
 
 		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;

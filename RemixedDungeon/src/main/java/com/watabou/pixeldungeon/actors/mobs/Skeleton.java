@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -81,7 +82,7 @@ public class Skeleton extends UndeadMob {
 			}
 		}
 		
-		if (Char.isVisible(this)) {
+		if (CharUtils.isVisible(this)) {
 			Sample.INSTANCE.play( Assets.SND_BONES );
 		}
 		

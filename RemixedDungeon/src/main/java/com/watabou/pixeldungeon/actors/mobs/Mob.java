@@ -49,6 +49,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -437,7 +438,7 @@ public abstract class Mob extends Char {
 			dropLoot();
 		}
 
-		if (hero.isAlive() && !Char.isVisible(this)) {
+		if (hero.isAlive() && !CharUtils.isVisible(this)) {
 			GLog.i(Game.getVar(R.string.Mob_Died));
 		}
 	}

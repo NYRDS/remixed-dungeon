@@ -49,7 +49,7 @@ public class KindOfWeapon extends EquipableItem {
 		return Belongings.Slot.WEAPON;
 	}
 
-	public int damageRoll(Hero owner ) {
+	public int damageRoll(Char owner ) {
 		return Random.NormalIntRange( MIN, MAX );
 	}
 	

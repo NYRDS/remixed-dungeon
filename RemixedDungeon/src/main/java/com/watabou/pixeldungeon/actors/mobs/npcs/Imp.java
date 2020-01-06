@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -55,7 +56,7 @@ public class Imp extends NPC {
 	@Override
     public boolean act() {
 		
-		if (!Quest.given && Char.isVisible(this)) {
+		if (!Quest.given && CharUtils.isVisible(this)) {
 			if (!seenBefore) {
 				say( Utils.format( Game.getVar(R.string.Imp_Hey), Dungeon.hero.className() ) );
 			}

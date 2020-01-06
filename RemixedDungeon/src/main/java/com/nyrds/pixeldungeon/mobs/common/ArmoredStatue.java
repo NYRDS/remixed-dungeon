@@ -9,6 +9,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -61,7 +62,7 @@ public class ArmoredStatue extends Mob {
 	
 	@Override
     public boolean act() {
-		if (!isPet() && Char.isVisible(this)) {
+		if (!isPet() && CharUtils.isVisible(this)) {
 			Journal.add( Journal.Feature.STATUE.desc() );
 		}
 		return super.act();

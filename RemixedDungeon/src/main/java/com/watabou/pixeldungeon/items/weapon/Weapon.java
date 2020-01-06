@@ -155,7 +155,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public int damageRoll( Hero hero ) {
+	public int damageRoll(Char hero ) {
 		
 		int damage = super.damageRoll( hero );
 		int exStr = hero.effectiveSTR() - STR;
