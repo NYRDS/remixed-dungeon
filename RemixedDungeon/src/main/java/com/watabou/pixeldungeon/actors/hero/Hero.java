@@ -328,7 +328,7 @@ public class Hero extends Char {
 			accuracy *= 1.2;
 		}
 
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
+		KindOfWeapon wep = getActiveWeapon();
 		if (wep != null) {
 			return (int) (attackSkill * accuracy * wep.accuracyFactor(this));
 		} else {
@@ -376,7 +376,7 @@ public class Hero extends Char {
 
 	@Override
 	public int damageRoll() {
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
+		KindOfWeapon wep = getActiveWeapon();
 		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
 
 		if (wep != null) {

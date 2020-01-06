@@ -412,6 +412,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return damage[0];
 	}
 
+	protected KindOfWeapon getActiveWeapon() {
+		return rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
+	}
+
 	public float speed() {
 		final float[] speed = {baseSpeed};
 		forEachBuff(b-> speed[0] *=b.speedMultiplier());
@@ -512,7 +516,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	abstract protected float _attackDelay();
 
 	public float attackDelay() {
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
+		KindOfWeapon wep = getActiveWeapon();
 		if (wep != null) {
 			return _attackDelay()*wep.speedFactor(this);
 		} else {
