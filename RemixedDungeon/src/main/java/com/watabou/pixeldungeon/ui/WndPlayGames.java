@@ -33,7 +33,10 @@ class WndPlayGames extends Window {
 
         y += listTitle.height() + GAP;
 
-        CheckBox usePlayGames = new CheckBox(Game.getVar(R.string.WndPlayGames_Use), Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
+        CheckBox usePlayGames = new CheckBox(Game.getVar(R.string.WndPlayGames_Use),
+                Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)
+                && Game.instance().playGames.isConnected()
+                ) {
             @Override
             public void checked(boolean value) {
                 super.checked(value);
