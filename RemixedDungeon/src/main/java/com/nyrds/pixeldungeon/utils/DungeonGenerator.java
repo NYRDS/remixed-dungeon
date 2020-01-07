@@ -36,6 +36,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -139,10 +140,12 @@ public class DungeonGenerator {
 		}
 	}
 
+	@Nullable
 	public static Position ascend(Position current) {
 		return descendOrAscend(current, false);
 	}
 
+	@Nullable
 	private static Position descendOrAscend(Position current, boolean descend) {
 		try {
 
@@ -175,7 +178,14 @@ public class DungeonGenerator {
 
 			mCurrentLevelId = nextLevelSet.optString(index,"0");
 
+			if(!mLevels.has(mCurrentLevelId)) {
+				ModError.doReport("Dungeon.json", new Exception("There is no level "+ mCurrentLevelId) );
+				return null;
+			}
+
 			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);
+
+
 			next.levelId = mCurrentLevelId;
 
 			if (!descend) {
@@ -257,6 +267,7 @@ public class DungeonGenerator {
 		}
 	}
 
+	@Nullable
 	public static Position descend(Position current) {
 		return descendOrAscend(current, true);
 	}
