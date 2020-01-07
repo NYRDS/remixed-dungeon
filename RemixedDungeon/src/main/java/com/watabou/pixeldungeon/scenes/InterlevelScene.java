@@ -38,8 +38,6 @@ import com.watabou.pixeldungeon.windows.WndStory;
 
 import org.jetbrains.annotations.Nullable;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Collection;
 import java.util.concurrent.FutureTask;
 
@@ -80,32 +78,27 @@ public class InterlevelScene extends PixelScene {
         @SneakyThrows
         @Override
         public void run() {
-            try {
-                switch (mode) {
-                    case DESCEND:
-                        descend();
-                        break;
-                    case ASCEND:
-                        ascend();
-                        break;
-                    case CONTINUE:
-                        restoreAtPosition(null);
-                        break;
-                    case RESURRECT:
-                        resurrect();
-                        break;
-                    case RETURN:
-                        returnTo();
-                        break;
-                    case FALL:
-                        fall();
-                        break;
-                }
-
-            } catch (FileNotFoundException e) {
-                error = Game.getVar(R.string.InterLevelScene_FileNotFound);
+            switch (mode) {
+                case DESCEND:
+                    descend();
+                    break;
+                case ASCEND:
+                    ascend();
+                    break;
+                case CONTINUE:
+                    restoreAtPosition(null);
+                    break;
+                case RESURRECT:
+                    resurrect();
+                    break;
+                case RETURN:
+                    returnTo();
+                    break;
+                case FALL:
+                    fall();
+                    break;
             }
-        }
+       }
     }
 
     static public void Do(InterlevelScene.Mode mode) {
@@ -235,22 +228,16 @@ public class InterlevelScene extends PixelScene {
         Position thisPosition = Dungeon.currentPosition();
         Level newLevel;
 
-        try {
-            next = DungeonGenerator.descend(thisPosition);
-            Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
-            newLevel = Dungeon.loadLevel(next);
-        } catch (Exception e) {
-            EventCollector.logException(e);
-            restoreAtPosition(thisPosition);
-            return;
-        }
+        next = DungeonGenerator.descend(thisPosition);
+        Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
+        newLevel = Dungeon.loadLevel(next);
 
         Dungeon.switchLevel(newLevel,
                 newLevel.entrance,
                 followers);
     }
 
-    private void fall() throws IOException {
+    private void fall() {
 
         Actor.fixTime();
 
@@ -270,7 +257,7 @@ public class InterlevelScene extends PixelScene {
                 followers);
     }
 
-    private void ascend() throws IOException {
+    private void ascend() {
         Actor.fixTime();
 
         Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.ASCEND);
@@ -289,7 +276,7 @@ public class InterlevelScene extends PixelScene {
                 followers);
     }
 
-    private void returnTo() throws IOException {
+    private void returnTo() {
 
         Actor.fixTime();
 

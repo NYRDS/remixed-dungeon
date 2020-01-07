@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
 import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;
@@ -44,7 +45,6 @@ import com.watabou.pixeldungeon.levels.painters.TunnelPainter;
 import com.watabou.pixeldungeon.levels.painters.VaultPainter;
 import com.watabou.pixeldungeon.levels.painters.WarehousePainter;
 import com.watabou.pixeldungeon.levels.painters.WeakFloorPainter;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
@@ -112,10 +112,10 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		@SneakyThrows
 		public void paint( Level level, Room room ) {
 			if(paint==null){
+				EventCollector.logException("no painter for " + this.name());
 				return;
 			}
 
-			GLog.debug("room: %s", room.type.toString());
 			paint.invoke( null, level, room );
 		}
 	}
@@ -247,19 +247,11 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( "left",   left );
-		bundle.put( "top",    top );
-		bundle.put( "right",  right );
-		bundle.put( "bottom", bottom );
 		bundle.put( "type",   type.toString() );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		left   = bundle.getInt( "left" );
-		top    = bundle.getInt( "top" );
-		right  = bundle.getInt( "right" );
-		bottom = bundle.getInt( "bottom" );
 		type   = Type.valueOf( bundle.getString( "type" ) );
 	}
 	

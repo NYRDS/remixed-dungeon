@@ -44,6 +44,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import lombok.SneakyThrows;
+
 public abstract class RegularLevel extends CustomLevel {
 
 	@NotNull
@@ -246,6 +248,7 @@ public abstract class RegularLevel extends CustomLevel {
 	protected boolean initRooms() {
 		rooms.clear();
 		exits.clear();
+		//paintedRoom.clear();
 
 		split(new Rect(0, 0, getWidth() - 1, getHeight() - 1));
 
@@ -407,7 +410,17 @@ public abstract class RegularLevel extends CustomLevel {
 		}
 	}
 
+	private Set<Room> paintedRoom = new HashSet<>();
+
+	@SneakyThrows
 	private void paintRoom(Room r) {
+
+		if(paintedRoom.contains(r)) {
+			throw new Exception("room "+ r.type + " painted twice");
+		}
+
+		paintedRoom.add(r);
+
 		placeDoors(r);
 		r.type.paint(this, r);
 	}
@@ -749,6 +762,7 @@ public abstract class RegularLevel extends CustomLevel {
 	}
 
 	protected void setRoomExit(Room roomExit) {
+		exits.clear();
 		exits.add(roomExit);
 	}
 

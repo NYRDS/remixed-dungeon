@@ -41,6 +41,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.ReportingExecutor;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -66,7 +67,6 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -120,7 +120,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     // Accumulated key events
     private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
-    public Executor executor = Executors.newSingleThreadExecutor();
+    public Executor executor = new ReportingExecutor();
 
     private Runnable doOnResume;
 
@@ -583,5 +583,4 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     static public void pushUiTask(Runnable task) {
         instance().uiTasks.add(task);
     }
-
 }
