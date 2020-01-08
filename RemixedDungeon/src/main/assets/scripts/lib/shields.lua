@@ -12,44 +12,53 @@ local strForLevel    = {12,  14, 16, 18}
 local chanceForLevel = {.3, .4, .4, .5}
 local blockForLevel  = {4,   6,  8,  10}
 
----@param lvl number
 ---@param shieldLevel number
-shields.blockDamage = function (lvl, shieldLevel)
-    return blockForLevel[lvl] * (shieldLevel + 1)
+---@param itemLevel number
+shields.blockDamage = function (shieldLevel, itemLevel)
+    return blockForLevel[shieldLevel] * math.pow(1.3, itemLevel)
 end
 
----@param lvl number
+---@param shieldLevel number
 ---@param str number
-shields.blockChance = function (lvl, str)
-    local weightPenalty = math.max(str - strForLevel[lvl],0)
-    return chanceForLevel[lvl] * (1 - weightPenalty * 0.1)
+shields.blockChance = function (shieldLevel, str)
+    local weightPenalty = math.max(str - strForLevel[shieldLevel], 0)
+    return chanceForLevel[shieldLevel] * (1 - weightPenalty * 0.1)
 end
 
----@param lvl number
+---@param shieldLevel number
 ---@param str number
-shields.rechargeTime = function(lvl, str)
-    local weightPenalty = math.max(str - strForLevel[lvl],0)
+shields.rechargeTime = function(shieldLevel, str)
+    local weightPenalty = math.max(str - strForLevel[shieldLevel], 0)
     return 5 + weightPenalty
 end
 
----@param baseDesc string
----@param lvl number
+---@param shieldLevel number
 ---@param str number
-shields.info = function(baseDesc, str, lvl, shieldLevel)
+shields.waitAfterBlockTime = function(shieldLevel, str)
+    return math.max(str - strForLevel[shieldLevel], 0)
+end
+
+---@param baseDesc string
+---@param shieldLevel number
+---@param str number
+shields.info = function(baseDesc, str, shieldLevel, itemLevel)
 
     local infoTemplate = RPD.textById("ShieldInfoTemplate")
+    local strTemplate  = RPD.textById("ShieldStrTemplate")
 
-    return RPD.textById(baseDesc) .. "\n\n" ..
-            RPD.format(infoTemplate,
-                          shields.blockDamage(lvl, shieldLevel),
-                          shields.blockChance(lvl,str) * 100,
-                          shields.rechargeTime(lvl,str)
-            )
+    return RPD.textById(baseDesc)
+            .. "\n\n"
+            .. RPD.format(infoTemplate,
+                          shields.blockDamage(shieldLevel, itemLevel),
+                          shields.blockChance(shieldLevel, str) * 100,
+                          shields.rechargeTime(shieldLevel, str))
+            .. "\n\n"
+            .. RPD.format(strTemplate, strForLevel[shieldLevel])
 end
 
 shields.makeShield = function(shieldLevel, shieldDesc)
     return {
-        activate = function(self, item, hero)
+        activate    = function(self, item, hero)
 
             local shieldBuff = RPD.affectBuff(hero,"ShieldLeft",
                                               shields.rechargeTime(shieldLevel,hero:effectiveSTR()))
@@ -57,15 +66,23 @@ shields.makeShield = function(shieldLevel, shieldDesc)
             shieldBuff:setSource(item)
         end,
 
-        deactivate = function(self, item, hero)
+        deactivate  = function(self, item, hero)
             RPD.removeBuff(hero,"ShieldLeft")
         end,
 
-        info = function(self, item)
+        info        = function(self, item)
             local hero = RPD.Dungeon.hero --TODO fix me
             local str = hero:effectiveSTR()
 
             return shields.info(shieldDesc, str, shieldLevel ,item:level())
+        end,
+
+        typicalSTR  = function(self, item)
+            return strForLevel[shieldLevel]
+        end,
+
+        requiredSTR = function(self, item)
+            return strForLevel[shieldLevel]
         end
     }
 end

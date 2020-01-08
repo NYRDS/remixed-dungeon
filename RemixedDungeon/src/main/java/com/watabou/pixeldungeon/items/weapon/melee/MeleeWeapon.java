@@ -184,7 +184,11 @@ public class MeleeWeapon extends Weapon {
 		if (Random.Int( 10 + level() ) == 0) {
 			enchant( Enchantment.random() );
 		}
-		
 		return this;
+	}
+
+	@Override
+	public int requiredSTR() {
+		return STR;
 	}
 }

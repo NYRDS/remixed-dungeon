@@ -2548,4 +2548,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Custom Shields!\n
     - Bugs fixed\n
     </string>
+  <string name="ShieldStrTemplate">Wearer of the shield should have at least %1$d points of Strength to use it properly.</string>
 </resources>

@@ -123,6 +123,10 @@ public abstract class EquipableItem extends Item {
 
 	public abstract Belongings.Slot slot();
 
+	public int typicalSTR() {
+		return 0;
+	}
+
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.NONE;
 	}
@@ -131,4 +135,7 @@ public abstract class EquipableItem extends Item {
 		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name() );
 	}
 
+	public int requiredSTR() {
+		return 0;
+	}
 }

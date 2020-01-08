@@ -170,7 +170,7 @@ public class CustomItem extends EquipableItem {
         Item item = (Item) ret.checkuserdata(Item.class);
         item.quantity(quantity());
         return item;
-}
+    }
 
 
     @Override
@@ -217,4 +217,15 @@ public class CustomItem extends EquipableItem {
     public String bag() {
         return script.runOptional("bag",super.bag());
     }
+
+    @Override
+    public int typicalSTR() {
+        return script.runOptional("typicalSTR", super.typicalSTR());
+    }
+
+    @Override
+    public int requiredSTR() {
+        return script.runOptional("requiredSTR", super.requiredSTR());
+    }
+
 }

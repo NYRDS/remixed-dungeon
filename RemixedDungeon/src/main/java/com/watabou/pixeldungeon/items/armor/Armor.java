@@ -279,6 +279,11 @@ public class Armor extends EquipableItem {
 		GLog.n( Game.getVar(R.string.Armor_EquipCursed), name() );
 	}
 
+	@Override
+	public int requiredSTR() {
+		return STR;
+	}
+
 	public static abstract class Glyph implements Bundlable, NamedEntityKind {
 		
 		private static final Class<?>[] glyphs = new Class<?>[]{ 
@@ -332,6 +337,5 @@ public class Armor extends EquipableItem {
 		public static Glyph random() {
 			return ((Class<Glyph>)glyphs[ Random.chances( chances ) ]).newInstance();
 		}
-		
 	}
 }
