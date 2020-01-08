@@ -20,15 +20,12 @@ public class LuaScript {
     private boolean scriptLoaded = false;
     private boolean asInstance = false;
     private LuaTable script;
-    private String latestMethod;
 
     private static final LuaValue[] emptyArgs = new LuaValue[0];
     private final LuaValue[] onlyParentArgs = new LuaValue[1];
 
     @Nullable
     private Object   parent;
-
-    private LuaValue scriptResult;
 
     public LuaScript(String scriptFile, @Nullable Object parent)
     {
@@ -41,22 +38,26 @@ public class LuaScript {
         asInstance = true;
     }
 
+    private LuaTable getScript() {
+        if (!scriptLoaded) {
+            if(asInstance) {
+                script = LuaEngine.moduleInstance(scriptFile);
+            } else {
+                script = LuaEngine.module(scriptFile);
+            }
+            scriptLoaded = true;
+        }
+
+        if(script == null) {
+            throw new ModError("Can't load "+scriptFile, new Exception());
+        }
+
+        return script;
+    }
+
     private LuaValue run(String method, LuaValue[] args) {
         try {
-            if (!scriptLoaded) {
-                if(asInstance) {
-                    script = LuaEngine.moduleInstance(scriptFile);
-                } else {
-                    script = LuaEngine.module(scriptFile);
-                }
-                scriptLoaded = true;
-            }
-
-            if (script != null) {
-                latestMethod = method;
-                return scriptResult = script.invokemethod(method, args).arg1();
-            }
-            throw new ModError("Can't load "+scriptFile, new Exception());
+            return getScript().invokemethod(method, args).arg1();
         } catch (Exception e) {
             throw new ModError("Error in "+scriptFile+"."+method,e);
         }
@@ -103,7 +104,7 @@ public class LuaScript {
     }
 
     public void runOptional(String method) {
-        if(!script.get(method).isfunction()) {
+        if(!getScript().get(method).isfunction()) {
             return;
         }
         run(method);
@@ -111,7 +112,7 @@ public class LuaScript {
 
     public <T> T runOptional(String method, T defaultValue, Object... args) {
         try {
-            if (!script.get(method).isfunction()) {
+            if (!getScript().get(method).isfunction()) {
                 return defaultValue;
             }
 
@@ -136,7 +137,7 @@ public class LuaScript {
                     run(method, luaArgs),
                     defaultValue.getClass());
         } catch (LuaError e) {
-            throw new ModError("Error when call:" + latestMethod+"@"+scriptFile);
+            throw new ModError("Error when call:" + method+"."+scriptFile,e);
         }
     }
 }
