@@ -37,7 +37,9 @@ public class WandHolster extends Bag {
 		if (super.collect( container )) {
 			if (owner != null) {
 				for (Item item : items) {
-					((Wand)item).charge( owner );
+					if(item instanceof Wand) {
+						((Wand) item).charge(owner);
+					}
 				}
 			}
 			return true;
