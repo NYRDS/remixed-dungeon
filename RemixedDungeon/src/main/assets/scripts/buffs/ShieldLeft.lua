@@ -51,7 +51,7 @@ return buff.init{
                 self.data.state = false
                 RPD.BuffIndicator:refreshHero()
 
-                buff:target():spend(
+                buff.target:spend(
                         shields.waitAfterBlockTime(
                                 buff:level(),
                                 buff.target:effectiveSTR()))
