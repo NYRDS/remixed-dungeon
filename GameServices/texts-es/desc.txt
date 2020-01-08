@@ -1,0 +1,31 @@
+Este es un juego roguelike de código abierto con gráficos de estilo pixel
+
+Había una vez una pequeña ciudad. La gente de la ciudad vivía feliz, pero eran tan pobres que ni siquiera podían permitirse ir a un lugar decente en vacaciones. Pero el día en que todos abandonaron toda esperanza, ocurrió un milagro. El suelo debajo de la ciudad se sacudió violentamente y estalló una miríada de monstruos despreciables. A partir de ese momento, todos los habitantes de la ciudad que sobrevivieron vivieron felices para siempre. ¿Por qué? porque la mazmorra ha atraído a todo tipo de héroes y aventureros. terminó siendo excelentes gastadores, impulsando la economía de la ciudad.
+Y ahora la pequeña ciudad florece, ya que se encuentra en la cima de una mazmorra peligrosa llena de aventureros muertos y sus almas miserables.
+
+Características del juego:
+- ¡Este juego soporta mods creados por el usuario! Y a medida que desarrollemos más esta característica, ¡pronto podrás crear un juego completamente nuevo dentro de Remixed Dungeon!
+- ¡Experiencia hardcore roguelike!
+- 7 clases de héroe para elegir
+- Town hub te prepara para tu viaje y te presenta el mundo del juego.
+- Más de 30 niveles de mazmorra de mazmorra principal divididos en 6 tipos de mazmorra
+- 3 mazmorras opcionales: Spider Lair, Necropolis, Ice Caves
+- Decenas de artículos y monstruos.
+- Varios jefes
+- ¡Sombreros! A todos les gustan los sombreros
+
+Únete a nuestro servidor Discord:
+https://discordapp.com/invite/AMXrhQZ
+
+Síganos en Twitter:
+https://twitter.com/nyrds
+
+Este juego es un software de código abierto bajo la licencia GPLv3. El código fuente de Remixed Dungeon se puede encontrar aquí:
+https://github.com/NYRDS/remixed-dungeon
+
+Si desea participar en la localización a otros idiomas, visite:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Puedes revisar
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+para el registro de cambios completo en nuestro wiki
