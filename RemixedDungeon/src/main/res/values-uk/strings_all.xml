@@ -1625,7 +1625,7 @@
   <string name="WndMovieTheatre_Watch">переглянути фільм</string>
   <string name="WndMovieTheatre_No">піти</string>
   <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді вас бачити!</string>
-  <string name="WndMovieTheatre_Instruction">Вітаємо і ласкаво просимо до нашого кінотеатру! Ви маєте змогу прийняти участь в особливій акції, перегляньте фільм, до того ж абсолютно безкоштовно. І якщо ви додивитесь його до кінця, то отримаєте у винагороду %d золотих монет!</string>
+  <string name="WndMovieTheatre_Instruction">Вітаємо і ласкаво просимо до нашого кінотеатру! Ви маєте змогу взяти участь в особливій акції, перегляньте фільм, до того ж абсолютно безкоштовно. І якщо ви додивитесь його до кінця, то отримаєте у винагороду %d золотих монет!</string>
   <string name="WndMovieTheatre_Title">Кінотеатр</string>
   <string name="WndMovieTheatre_Thank_You">Дякуємо за участь!</string>
   <string name="WndPriest_Heal">лікування - %d золотих монет</string>
@@ -2596,4 +2596,5 @@
     -- Налаштовані щити!\n
     - Виправлення вад\n
     </string>
+  <string name="ShieldStrTemplate">Для правильного використання щита необхідно мати хоча б %1$dсили.</string>
 </resources>
