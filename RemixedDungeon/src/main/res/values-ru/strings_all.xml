@@ -2564,4 +2564,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Полностью моддабельные щиты!\n
     - Багофиксы\n
     </string>
+  <string name="ShieldStrTemplate">Чтобы использовать этот щит как следует, его обладателю потребуется не меньше чем %1$d очков Силы.</string>
 </resources>
