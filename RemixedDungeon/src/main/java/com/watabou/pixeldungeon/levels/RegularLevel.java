@@ -771,7 +771,7 @@ public abstract class RegularLevel extends CustomLevel {
 
 		do {
 			pos = room.random(this);
-		} while (Actor.findChar( pos ) != null);
+		} while (passable[pos] && Actor.findChar( pos ) != null);
 
 		return pos;
 	}

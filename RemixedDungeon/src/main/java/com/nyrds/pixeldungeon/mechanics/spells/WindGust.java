@@ -23,7 +23,7 @@ public class WindGust extends Spell{
 
 	@Override
 	public boolean cast(Char chr, int cell)  {
-		Level level = Dungeon.level;
+		Level level = chr.level();
 
 		if (level.cellValid(cell)) {
 			Char ch;

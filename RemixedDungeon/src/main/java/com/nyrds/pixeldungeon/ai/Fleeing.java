@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.ai;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
@@ -37,7 +38,7 @@ public class Fleeing extends MobAi implements AiState {
     }
 
     @Override
-    public void gotDamage(Mob me,Object src, int dmg) {
+    public void gotDamage(Mob me, NamedEntityKind src, int dmg) {
         seekRevenge(me,src);
     }
 }

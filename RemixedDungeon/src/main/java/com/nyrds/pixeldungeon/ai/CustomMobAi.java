@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
@@ -23,7 +24,7 @@ public class CustomMobAi extends MobAi implements AiState {
     }
 
     @Override
-    public void gotDamage(Mob me, Object src, int dmg) {
+    public void gotDamage(Mob me, NamedEntityKind src, int dmg) {
         script.run("gotDamage",me, src, dmg);
     }
 

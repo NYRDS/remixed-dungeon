@@ -33,7 +33,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public int skillLevel() {
-		return Math.max(Math.min(5, exp / 2),2);
+		return 2;
 	}
 
 	public void adjustStats(int depth) {
@@ -60,7 +60,8 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public boolean getCloser(int target) {
-		if (getState() instanceof Hunting && Dungeon.level.distance(getPos(), target) < skillLevel() - 1) {
+		if (getState() instanceof Hunting
+				&& level().distance(getPos(), target) < skillLevel() - 1) {
 			return getFurther(target);
 		}
 
