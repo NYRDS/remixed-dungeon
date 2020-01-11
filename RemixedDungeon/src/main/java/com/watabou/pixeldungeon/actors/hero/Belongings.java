@@ -55,8 +55,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import lombok.var;
 
@@ -79,7 +81,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
-
+	private Set<EquipableItem> activatedItems = new HashSet<>();
 
 	@Packable
 	public KindOfWeapon weapon = null;
@@ -140,8 +142,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		while (itemIterator.hasNextEquipped()) {
 			EquipableItem item = (EquipableItem) itemIterator.next();
-			if(item!=null){
+			if(item!=null && !activatedItems.contains(item)){
 				item.activate(owner);
+				activatedItems.add(item);
 			}
 		}
 		blockSlots();
@@ -435,7 +438,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public boolean unequip(EquipableItem item) {
 		if(removeItem(item)) {
+			item.deactivate(owner);
+			activatedItems.remove(item);
 			blockSlots();
+			owner.updateSprite();
 			return true;
 		}
 		return false;
@@ -469,14 +475,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(blockingItem!=null) {
-			GLog.w(Game.getVar(R.string.Belongings_CantWearBoth),item.name(),blockingItem.name());
+			GLog.w(Game.getVar(R.string.Belongings_CantWearBoth),
+					item.name(),
+					blockingItem.name());
 			return false;
 		}
 
-
 		if(slot==Slot.WEAPON) {
 			if (weapon == null || weapon.doUnequip( owner, true )) {
-				weapon = (KindOfWeapon) item;
+				weapon = (KindOfWeapon) item.detach(backpack);
 			} else {
 				return false;
 			}
@@ -484,7 +491,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		if(slot==Slot.ARMOR) {
 			if (armor == null || armor.doUnequip( owner, true)) {
-				armor = (Armor) item;
+				armor = (Armor) item.detach(backpack);
 			} else {
 				return false;
 			}
@@ -492,7 +499,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		if(slot==Slot.LEFT_HAND) {
 			if (leftHand == null || leftHand.doUnequip( owner, true)) {
-				leftHand = item;
+				leftHand = (EquipableItem) item.detach(backpack);
 			} else {
 				return false;
 			}
@@ -503,17 +510,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				GLog.w(Game.getVar(R.string.Artifact_Limit));
 				return false;
 			} else {
-				EquipableItem slot_item = (EquipableItem) item.detach(backpack);
 				if (ring1 == null) {
-					ring1 = slot_item ;
+					ring1 = (EquipableItem) item.detach(backpack);;
 				} else {
-					ring2 = slot_item ;
+					ring2 = (EquipableItem) item.detach(backpack);;
 				}
 			}
 		}
-
-		item.detach(backpack);
-		item.activate(owner);
 
 		item.cursedKnown = true;
 		if(item.cursed) {
@@ -521,6 +524,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			item.equippedCursed();
 		}
 
+		activateEquippedItems();
 		blockSlots();
 		QuickSlot.refresh();
 		owner.updateSprite();
