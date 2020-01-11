@@ -2,12 +2,14 @@ package com.nyrds.pixeldungeon.levels;
 
 import androidx.annotation.Keep;
 
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
@@ -146,19 +148,29 @@ public class PredesignedLevel extends CustomLevel {
 
 				for (int i = 0; i < mobsDesc.length(); ++i) {
 					JSONObject mobDesc = mobsDesc.optJSONObject(i);
+
+					String kind = mobDesc.getString("kind");
+
 					int x = mobDesc.getInt("x");
 					int y = mobDesc.getInt("y");
 
-					if(Actor.findChar(cell(x,y))!=null) {
+					Char chr = Actor.findChar(cell(x,y));
+
+					if(chr!=null) {
+						ModError.doReport(kind + ": cell "+ x + "," + y + "already occupied by "+chr.getEntityKind(),
+								new Exception("Mobs block error"));
 						continue;
 					}
 
 					if (cellValid(x, y)) {
-						String kind = mobDesc.getString("kind");
 						Mob mob = MobFactory.mobByName(kind);
 						mob.fromJson(mobDesc);
 						mob.setPos(cell(x, y));
 						spawnMob(mob);
+					} else {
+						ModError.doReport(kind+":cell "+ x + "," + y + "are outside valid level area",
+								new Exception("Mobs block error"));
+						continue;
 					}
 				}
 			}
