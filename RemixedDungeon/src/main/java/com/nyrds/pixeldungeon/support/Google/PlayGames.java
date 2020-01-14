@@ -19,6 +19,7 @@ import com.google.android.gms.games.snapshot.SnapshotMetadata;
 import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.tasks.Task;
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -324,9 +325,7 @@ public class PlayGames {
 					});
 					resultCallback.status(res);
 				} catch (Exception e) {
-					EventCollector.logException(e);
-					Game.toast("Error while uploading save to cloud: %s", e.getMessage());
-
+					ModError.doReport("Error while uploading save to cloud: %s", e);
 			}
 		});
 	}
