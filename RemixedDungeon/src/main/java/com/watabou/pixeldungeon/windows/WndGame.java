@@ -68,13 +68,13 @@ public class WndGame extends WndMenuCommon {
 			} );
 		}
 
-		if (Dungeon.challenges > 0) {
+		if (Dungeon.getChallenges() > 0) {
 			menuItems.add( new MenuButton(Game
                     .getVar(R.string.WndGame_Challenges)) {
 				@Override
 				protected void onClick() {
 					hide();
-					GameScene.show( new WndChallenges( Dungeon.challenges, false ) );
+					GameScene.show( new WndChallenges(Dungeon.getChallenges(), false ) );
 				}
 			} );
 		}
@@ -85,7 +85,7 @@ public class WndGame extends WndMenuCommon {
 				@Override
 				protected void onClick() {
 					Dungeon.hero = null;
-					RemixedDungeon.challenges( Dungeon.challenges );
+					RemixedDungeon.challenges(Dungeon.getChallenges());
 
 					InterlevelScene.noStory = true;
 					InterlevelScene.Do(InterlevelScene.Mode.DESCEND);

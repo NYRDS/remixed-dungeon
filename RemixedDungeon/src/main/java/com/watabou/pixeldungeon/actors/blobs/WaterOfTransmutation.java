@@ -61,27 +61,27 @@ public class WaterOfTransmutation extends WellWater {
 		} else if (item instanceof Scroll) {
 			
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
-			return changeScroll( (Scroll)item );
+			return changeScroll(item);
 			
 		} else if (item instanceof Potion) {
 			
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
-			return changePotion( (Potion)item );
+			return changePotion(item);
 			
 		} else if (item instanceof Ring) {
 			
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
-			return changeRing( (Ring)item );
+			return changeRing(item);
 			
 		} else if (item instanceof Wand) {	
 			
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
-			return changeWand( (Wand)item );
+			return changeWand(item);
 			
 		} else if (item instanceof Seed) {
 			
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
-			return changeSeed( (Seed)item );
+			return changeSeed(item);
 			
 		} else {
 			return null;

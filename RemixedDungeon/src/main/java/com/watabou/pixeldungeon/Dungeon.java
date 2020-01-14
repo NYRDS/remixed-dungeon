@@ -103,7 +103,7 @@ public class Dungeon {
     public static boolean dewVial; // true if the dew vial can be spawned
     public static int     transmutation; // depth number for a well of transmutation
 
-    public static int challenges;
+    private static int challenges;
 
     public static Hero  hero;
 
@@ -151,7 +151,7 @@ public class Dungeon {
         LuaEngine.reset();
         Treasury.reset();
 
-        challenges = RemixedDungeon.challenges();
+        setChallenges(RemixedDungeon.challenges());
 
         Scroll.initLabels();
         Potion.initColors();
@@ -196,7 +196,7 @@ public class Dungeon {
 
     @Contract(pure = true)
     public static boolean isChallenged(int mask) {
-        return (challenges & mask) != 0;
+        return (getChallenges() & mask) != 0;
     }
 
     private static void updateStatistics() {
@@ -380,7 +380,7 @@ public class Dungeon {
         bundle.put(WT, transmutation);
 
         bundle.put(REALTIME, realtime);
-        bundle.put(CHALLENGES, challenges);
+        bundle.put(CHALLENGES, getChallenges());
 
         int count = 0;
         int ids[] = new int[chapters.size()];
@@ -541,7 +541,7 @@ public class Dungeon {
         transmutation = bundle.getInt(WT);
 
         realtime = bundle.getBoolean(REALTIME);
-        challenges = bundle.optInt(CHALLENGES,0);
+        setChallenges(bundle.optInt(CHALLENGES,0));
 
         if (fullLoad) {
             chapters = new HashSet<>();
@@ -698,7 +698,7 @@ public class Dungeon {
 
     public static void win(String desc, gameOver kind) {
 
-        if (challenges != 0) {
+        if (getChallenges() != 0) {
             Badges.validateChampion();
         }
 
@@ -883,5 +883,14 @@ public class Dungeon {
 
     public static void saveCurrentLevel() {
         saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
+    }
+
+    public static int getChallenges() {
+        return challenges;
+    }
+
+    public static void setChallenges(int challenges) {
+        EventCollector.collectSessionData("challenges",String.valueOf(challenges));
+        Dungeon.challenges = challenges;
     }
 }

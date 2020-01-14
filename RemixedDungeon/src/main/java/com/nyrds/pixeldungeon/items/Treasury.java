@@ -84,7 +84,7 @@ public class Treasury {
     public static Treasury create(String file) {
         Treasury treasury = new Treasury();
         treasury.loadFromFile("levelsDesc/"+file);
-        Challenges.forbidCategories(Dungeon.challenges,treasury);
+        Challenges.forbidCategories(Dungeon.getChallenges(),treasury);
         return treasury;
     }
 
