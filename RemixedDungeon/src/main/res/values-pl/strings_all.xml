@@ -1614,7 +1614,7 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="WndMovieTheatre_Watch">obejrzyj film</string>
   <string name="WndMovieTheatre_No">wyjdź</string>
   <string name="WndMovieTheatre_Bye">Wróć kiedy zechcesz, jesteś zawsze mile widziany!</string>
-  <string name="WndMovieTheatre_Instruction">Witamy w naszym kinie! Zapewniamy specjalne usługi, możesz obejrzeć film za darmo, a jeśli obejrzysz go do końca, otrzymasz%dzłotych monet</string>
+  <string name="WndMovieTheatre_Instruction">Witamy w naszym kinie! Zapewniamy specjalne usługi, możesz obejrzeć film za darmo, a jeśli obejrzysz go do końca, otrzymasz %d złotych monet!</string>
   <string name="WndMovieTheatre_Title">Kino</string>
   <string name="WndMovieTheatre_Thank_You">Dziękujemy za udział!</string>
   <string name="WndPriest_Heal">Ulecz się - %d sztuk złota</string>
