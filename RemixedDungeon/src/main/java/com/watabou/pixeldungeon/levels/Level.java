@@ -1043,14 +1043,11 @@ public abstract class Level implements Bundlable {
 			heap = new Heap();
 			heap.pos = cell;
 			if (map[cell] == Terrain.CHASM || pit[cell]) {
-				if (GameScene.isSceneReady()) {
-					GameScene.discard(heap);
-				}
+				GameScene.discard(heap);
+
 			} else {
 				heaps.put(cell, heap);
-				if (GameScene.isSceneReady()) {
-					GameScene.add(heap);
-				}
+				GameScene.add(heap);
 			}
 
 		} else if (heap.type == Heap.Type.LOCKED_CHEST
@@ -1081,10 +1078,7 @@ public abstract class Level implements Bundlable {
 
 	public void addLevelObject(LevelObject obj) {
 		putLevelObject(obj);
-
-		if (GameScene.isSceneReady()) {
-			GameScene.add(obj);
-		}
+		GameScene.add(obj);
 	}
 
 	public void plant(Seed seed, int pos) {
@@ -1098,9 +1092,7 @@ public abstract class Level implements Bundlable {
 		Plant plant = seed.couch(pos);
 		putLevelObject(plant);
 
-		if (GameScene.isSceneReady()) {
-			GameScene.add(plant);
-		}
+		GameScene.add(plant);
 	}
 
 	public boolean remove(LevelObject levelObject) {
@@ -1746,6 +1738,16 @@ public abstract class Level implements Bundlable {
 
 	public Mob[] getCopyOfMobsArray() {
 		return mobs.toArray(new Mob[0]);
+	}
+
+	public int countMobsOfKind(String kind) {
+		int ret = 0;
+		for(Mob mob: mobs) {
+			if(mob.getEntityKind().equals(kind)) {
+				ret++;
+			}
+		}
+		return ret;
 	}
 
 }

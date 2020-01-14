@@ -10,9 +10,9 @@
         "quantity": 100
       },
       {
-        "kind": "TomeOfKnowledge",
+        "kind": "ScrollOfCurse",
         "quantity": 100,
-        "level": 10
+        "level": 1000
       },
       {
         "kind": "ScrollOfUpgrade",
@@ -20,7 +20,7 @@
         "level": 10
       },
       {
-        "kind": "PotionOfToxicGas",
+        "kind": "Ankh",
         "quantity": 100
       },
       {
@@ -52,7 +52,7 @@
       }
     ],
     "str": 10,
-    "hp": 200000,
+    "hp": 20,
     "magicAffinity": "Common",
     "sp": 10,
     "maxSp": 10

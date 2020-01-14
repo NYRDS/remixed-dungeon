@@ -716,9 +716,7 @@ public class Dungeon {
 
         BArray.or(level.visited, visible, level.visited);
 
-        if (GameScene.isSceneReady()) {
-            GameScene.afterObserve();
-        }
+        GameScene.afterObserve();
     }
 
     private static void markActorsAsUnpassableIgnoreFov() {

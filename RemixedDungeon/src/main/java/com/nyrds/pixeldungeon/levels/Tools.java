@@ -110,9 +110,7 @@ public class Tools {
 		level.setExit(level.cell(width-width/4,height-height/4),0);
 		level.set(level.getExit(0), Terrain.EXIT);
 
-		if(GameScene.isSceneReady()) {
-			GameScene.updateMap();
-		}
+		GameScene.updateMap();
 	}
 
 	public static void makeShadowLordLevel(Level level) {
@@ -151,8 +149,6 @@ public class Tools {
 		level.setExit(level.cell(width-width/4 + 1,height-height/4 + 1),0);
 		level.set(level.getExit(0), Terrain.EXIT);
 
-		if(GameScene.isSceneReady()) {
-			GameScene.updateMap();
-		}
+		GameScene.updateMap();
 	}
 }
