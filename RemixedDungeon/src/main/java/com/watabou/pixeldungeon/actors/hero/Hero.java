@@ -1468,18 +1468,7 @@ public class Hero extends Char {
 
 		boolean smthFound = false;
 
-		int positive = 0;
-		int negative = 0;
-
-		for (Buff buff : buffs(RingOfDetection.Detection.class)) {
-			int bonus = buff.level();
-			if (bonus > positive) {
-				positive = bonus;
-			} else if (bonus < 0) {
-				negative += bonus;
-			}
-		}
-		int distance = 1 + positive + negative;
+		int distance = 1 + buffLevel(RingOfDetection.Detection.class);
 
 		float searchLevel = intentional ? (2 * awareness - awareness * awareness) : awareness;
 		if (distance <= 0) {
