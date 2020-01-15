@@ -140,7 +140,7 @@ public class PrisonLevel extends RegularLevel {
 
 		placeEntranceSign();
 
-		if(Dungeon.depth == 7) {
+		if(Dungeon.depth == 7 && hasExit(1)) {
 			Room NecroExit = exitRoom(1);
 			if(NecroExit!=null) {
 				NecroExitPainter.paint(this, NecroExit);
