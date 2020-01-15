@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
@@ -152,9 +153,11 @@ public class Statue extends Mob {
 
 	public Weapon getWeapon() {
 		if(weapon==null) {
+			Item weaponCandidate;
 			do {
-				weapon = (Weapon) Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
-			} while (!(weapon instanceof MeleeWeapon) || weapon.level() < 0);
+				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
+			} while (!(weaponCandidate instanceof MeleeWeapon) || weapon.level() < 0);
+			weapon = (Weapon) weaponCandidate;
 
 			weapon.identify();
 			weapon.enchant( Enchantment.random() );
