@@ -21,14 +21,14 @@ end
 ---@param shieldLevel number
 ---@param str number
 shields.blockChance = function (shieldLevel, str)
-    local weightPenalty = math.max(str - strForLevel[shieldLevel], 0)
+    local weightPenalty = math.max(strForLevel[shieldLevel] - str, 0)
     return chanceForLevel[shieldLevel] * (1 - weightPenalty * 0.1)
 end
 
 ---@param shieldLevel number
 ---@param str number
 shields.rechargeTime = function(shieldLevel, str)
-    local weightPenalty = math.max(str - strForLevel[shieldLevel], 0)
+    local weightPenalty = math.max(strForLevel[shieldLevel] - str, 0)
     return 5 + weightPenalty
 end
 

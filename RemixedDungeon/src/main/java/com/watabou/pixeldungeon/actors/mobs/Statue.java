@@ -156,7 +156,7 @@ public class Statue extends Mob {
 			Item weaponCandidate;
 			do {
 				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
-			} while (!(weaponCandidate instanceof MeleeWeapon) || weapon.level() < 0);
+			} while (!(weaponCandidate instanceof MeleeWeapon) || weaponCandidate.level() < 0);
 			weapon = (Weapon) weaponCandidate;
 
 			weapon.identify();

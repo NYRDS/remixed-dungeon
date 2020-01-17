@@ -128,7 +128,7 @@ public class ArmoredStatue extends Mob {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
-			} while (!(armorCandidate instanceof Armor) || armor.level() < 0);
+			} while (!(armorCandidate instanceof Armor) || armorCandidate.level() < 0);
 
 			armor = (Armor) armorCandidate;
 			armor.identify();
