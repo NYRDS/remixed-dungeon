@@ -64,7 +64,7 @@ return item.init{
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
-            local book = RPD.creteItem("Codex", {text="Test codex"})
+            local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
             RPD.Dungeon.level:drop(book, cell)
             --RPD.createLevelObject(candle, cell)
         end
@@ -82,6 +82,7 @@ return item.init{
 
         if action == "action3" then
             RPD.glogn(tostring(item:getId()).." "..action)
+            item:detach(hero:getBelongings().backpack)
         end
     end,
 
