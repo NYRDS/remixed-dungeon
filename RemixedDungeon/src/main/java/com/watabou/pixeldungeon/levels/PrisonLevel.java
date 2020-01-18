@@ -84,7 +84,7 @@ public class PrisonLevel extends RegularLevel {
 		
 		WandMaker.Quest.spawn( this, roomEntrance );
 
-		if(Dungeon.depth==7 && !necromancerSpawned) {
+		if(Dungeon.depth==7 && !necromancerSpawned && hasExit(1)) {
 			Room NecroExit = exitRoom(1);
 			if(NecroExit!=null && Dungeon.heroClass != HeroClass.NECROMANCER) {
 				NecromancerNPC.spawn(this, exitRoom(1));
