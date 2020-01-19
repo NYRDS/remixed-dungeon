@@ -1604,7 +1604,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="WndMovieTheatre_Watch">voir un film</string>
   <string name="WndMovieTheatre_No">s\'en aller</string>
   <string name="WndMovieTheatre_Bye">Revenez quand vous le voulez, nous serons ravis de vous revoir ! </string>
-  <string name="WndMovieTheatre_Instruction">La bienvenue dans notre salle de cinéma ! Nous offrons un service spécial, car vous pouvez voir un film gratuitement, et si vous le regardez jusqu\'au bout, vous recevrez une récompense de %d pièces !</string>
+  <string name="WndMovieTheatre_Instruction">Bonjour et bienvenue à notre cinéma! Nous fournissons un service spécial, où vous pouvez regarder un film gratuitement. Et si vous le regardez en entier, vous allez être récompensé avec %d de pièces d\'or!</string>
   <string name="WndMovieTheatre_Title">Salle de cinéma</string>
   <string name="WndMovieTheatre_Thank_You">Merci de votre participation !</string>
   <string name="WndPriest_Heal">soins - %d pièces</string>
@@ -2488,7 +2488,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="Scroll_Runes_6">ISAZ</string>
   <string name="Scroll_Runes_7">MANNAZ</string>
   <string name="Scroll_Runes_8">NAUDIZ</string>
-  <string name="Scroll_Runes_9">BERKANAN</string>
+  <string name="Scroll_Runes_9">BARKUNA</string>
   <string name="Scroll_Runes_10">ODAL</string>
   <string name="Scroll_Runes_11">TIWAZ</string>
   <string name="Scroll_Runes_12">ANSUZ</string>
@@ -2512,9 +2512,46 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="Potion_Colors_9">noir-brun</string>
   <string name="Potion_Colors_10">indigo</string>
   <string name="Potion_Colors_11">argentée</string>
+  <string name="Welcome_Text_29_1">
+remix.29.1\n
+- Modding:\n
+-- Taux d\'apparition d\'objets modifiables\n
+- Traductions:\n
+-- Ajout de la traduction en hongrois\n
+- Bugs fixé</string>
   <string name="town_deco_stone_wall_broken_name">Mur effondré</string>
   <string name="town_deco_stone_wall_broken_desc">Mur d\'anciennes pierres en mauvais état</string>
   <string name="Challenges_Names_6">Runes interdites</string>
   <string name="Challenges_Names_7">Pacifisme</string>
+  <string name="Welcome_Text_29_2">
+remix.29.2\n
+- Gameplay:\n
+-- Nouveaux défis:\n
+--- Runes oubliées\n
+--- Pacifisme\n
+- Modding:\n
+-- Artéfacts customisé\n
+- Bugs fixé</string>
   <string name="town_deco_crossroad_name">Panneau de direction</string>
+  <string name="town_deco_crossroad_desc">Pilier en bois brut avec un texte de plaques en forme de flèche sur lequel s\'est délavé il y a longtemps, probablement en raison des conditions météorologiques difficiles.</string>
+  <string name="ShieldBuffReady_Name">Prêt</string>
+  <string name="ShieldBuffNotReady_Name">Pas prêt</string>
+  <string name="WoodenShield_name">Bouclier en bois</string>
+  <string name="WoodenShield_desc">Un bouclier en bois brut est le bouclier le plus simple disponible. Il est rond et peut parfois bloquer certains dégâts.</string>
+  <string name="ToughShield_name">Bouclier en cuir renforcé</string>
+  <string name="ToughShield_desc">Ce bouclier renforcé avec des lanières en cuir semble plus résistant que celui en bois. Il peut bloquer plus de dégâts à coup sûr.</string>
+  <string name="StrongShield_name">Bouclier de bronze</string>
+  <string name="StrongShield_desc">Ce bouclier rectangulaire est plaqué de feuilles de bronze et décoré de tissu coloré. Il est beaucoup plus lourd, mais peut bloquer beaucoup plus de dégâts.</string>
+  <string name="RoyalShield_name">Bouclier royal</string>
+  <string name="RoyalShield_desc">Un bouclier complètement en métal. Oui, c\'est lourd, mais il vous propose la meilleure protection.</string>
+  <string name="ShieldInfoTemplate">Ce bouclier bloquera jusqu\'à %1$d des dégâts entrants. Avec %2$d %% de chances. Il faudra %3$3.1f secondes pour récupérer après un blocage réussi.</string>
+  <string name="Belongings_CantWearBoth">Vous ne pouvez pas équipez %1$s et %2$s en même temps!</string>
+  <string name="Welcome_Text_29_3">
+remix.29.3\n
+- Gameplay:\n
+-- Boucliers!\n
+- Modding:\n
+-- Boucliers customisé!\n
+- Bugs fixé</string>
+  <string name="ShieldStrTemplate">L\'utilisateur du bouclier doit avoir au moins %1$d points de force pour l\'utiliser correctement.</string>
 </resources>
