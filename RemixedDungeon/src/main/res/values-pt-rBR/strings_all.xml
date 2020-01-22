@@ -2550,4 +2550,5 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     -- Escudos Personalizados!:\n
     - Defeitos consertados\n
     </string>
+  <string name="ShieldStrTemplate">O usuário do escudo deve ter pelo menos %1$d pontos de força para usá-lo corretamente.</string>
 </resources>
