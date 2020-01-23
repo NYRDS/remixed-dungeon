@@ -31,7 +31,7 @@ return ai.init{
             if edible[item:getClassName()] then
                 heap:pickUp()
                 RPD.Sfx.SpellSprite:show(me, RPD.Sfx.SpellSprite.FOOD)
-                RPD.playSound("snd_eat.mp3")
+                RPD.playSound("snd_eat")
                 me:spend(1)
                 return
             end

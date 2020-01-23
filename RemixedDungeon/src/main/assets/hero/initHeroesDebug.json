@@ -10,7 +10,7 @@
         "quantity": 100
       },
       {
-        "kind": "ScrollOfCurse",
+        "kind": "ManaPotion",
         "quantity": 100,
         "level": 1000
       },
@@ -20,7 +20,7 @@
         "level": 10
       },
       {
-        "kind": "Ankh",
+        "kind": "PotionOfStrength",
         "quantity": 100
       },
       {
@@ -52,7 +52,7 @@
       }
     ],
     "str": 10,
-    "hp": 20,
+    "hp": 20000000,
     "magicAffinity": "Common",
     "sp": 10,
     "maxSp": 10
@@ -170,7 +170,7 @@
         "depth": "7"
       }
     ],
-    "hp": 15,
+    "hp": 15000000,
     "knownItems": [
       {
         "kind": "PotionOfHealing"

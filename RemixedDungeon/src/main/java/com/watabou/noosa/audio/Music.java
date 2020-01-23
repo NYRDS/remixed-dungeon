@@ -54,8 +54,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 			return;
 		}
 
-
-		String assetFilename = "sound/"+assetName;
+		String assetFilename = ModdingMode.getSoundById("sound/"+assetName);
 
 		String filename = null;
 		AssetFileDescriptor afd = null;

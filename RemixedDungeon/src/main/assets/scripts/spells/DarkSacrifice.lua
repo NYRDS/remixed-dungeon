@@ -46,7 +46,7 @@ return spell.init{
 
         if goodSacrifice then
            sacrifice:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
-           RPD.playSound( "snd_cursed.mp3" )
+           RPD.playSound( "snd_cursed" )
            RPD.placeBlob(RPD.Blobs.LiquidFlame, sacrifice:getPos(), sacrifice:hp()* caster:magicLvl())
            sacrifice:damage(sacrifice:hp(), caster)
            return true

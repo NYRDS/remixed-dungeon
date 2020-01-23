@@ -19,8 +19,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import lombok.SneakyThrows;
@@ -34,6 +36,7 @@ public class ModdingMode {
 	public static boolean useRetroHeroSprites = false;
 
 	private static Set<String> pathsChecked = new HashSet<>();
+	private static Map<String, Boolean> assetsExistanceCache = new HashMap<>();
 
 	static {
 		trustedMods.add("Maze");
@@ -47,6 +50,8 @@ public class ModdingMode {
 
 	public static void selectMod(String mod) {
 		try {
+			assetsExistanceCache.clear();
+
 			File modPath = FileSystem.getExternalStorageFile(mod);
 			if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
 				mActiveMod = mod;
@@ -74,13 +79,36 @@ public class ModdingMode {
 		return mActiveMod;
 	}
 
+	public static String getSoundById(String id) {
+
+		String candidate = id + ".ogg";
+		if(ModdingMode.isAssetExist(candidate)) {
+			return candidate;
+		}
+
+		candidate = id + ".mp3";
+		if(ModdingMode.isAssetExist(candidate)) {
+			return candidate;
+		}
+
+		return id;
+	}
+
 	public static boolean isAssetExist(String resName) {
+		Boolean isExist = assetsExistanceCache.get(resName);
+
+		if(isExist != null) {
+			return isExist;
+		}
+
 		InputStream str;
 		try {
 			str = RemixedDungeonApp.getContext().getAssets().open(resName);
 			str.close();
+			assetsExistanceCache.put(resName, true);
 			return true;
 		} catch (IOException e) {
+			assetsExistanceCache.put(resName, false);
 			return false;
 		}
 	}

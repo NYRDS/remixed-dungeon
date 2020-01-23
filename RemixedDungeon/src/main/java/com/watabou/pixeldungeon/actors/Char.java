@@ -928,6 +928,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	    return !(this instanceof DummyChar);
     }
 
+    @LuaInterface
 	public boolean doStepTo(final int target) {
 		int oldPos = getPos();
 		spend(1 / speed());
@@ -939,6 +940,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return false;
 	}
 
+	@LuaInterface
 	public boolean doStepFrom(final int target) {
 		int oldPos = getPos();
 		spend(1 / speed());
