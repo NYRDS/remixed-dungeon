@@ -87,7 +87,7 @@ return spell.init{
 
         RPD.forCellsAround(dst, hitCell)
 
-        RPD.playSound("dash")
+        RPD.playSound("dash.mp3")
         RPD.zapEffect(ownPos,dst,"dash")
         caster:getSprite():dash(ownPos,dst)
         caster:move(dst)

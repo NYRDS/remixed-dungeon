@@ -82,6 +82,6 @@ return mob.init({
 
         hero:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
 
-        RPD.playSound( "snd_cursed" )
+        RPD.playSound( "snd_cursed.mp3" )
     end,
 })

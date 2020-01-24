@@ -87,7 +87,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 
 		if (!ids.containsKey(asset) && !missingAssets.contains(asset)) {
 			try {
-				String assetFile = ModdingMode.getSoundById("sound/" + asset);
+				String assetFile = "sound/" + asset;
 				int streamID;
 
 				File file = ModdingMode.getFile(assetFile);
@@ -128,9 +128,8 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 			return -1;
 		}
 
-		Integer sampleId = ids.get(id);
-		if (sampleId!=null) {
-			return pool.play(sampleId, leftVolume, rightVolume, 0, 0, rate);
+		if (ids.containsKey(id)) {
+			return pool.play(ids.get(id), leftVolume, rightVolume, 0, 0, rate);
 		} else {
 			playOnComplete = id;
 			load(id);
