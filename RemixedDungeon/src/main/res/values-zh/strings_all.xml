@@ -1511,7 +1511,7 @@
   <string name="ScarecrowNPC_Desc">毫无疑问…这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
   <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
 </string>
-  <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
+  <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\\n 我有一个令你惊喜的消息！\\n\\n 如果你为我收集一些糖果的话，\\n 我会十分感激你的！\\n\\n
 </string>
   <string name="ScarecrowNPC_Quest_Reminder">我所需要的五个糖果。\n 你将的到很甜蜜的奖励！</string>
   <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n 为此，你可以得到一份实在的食物！</string>
@@ -1616,7 +1616,7 @@
   <string name="WndMovieTheatre_Watch">觀看影片</string>
   <string name="WndMovieTheatre_No">離開</string>
   <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
-  <string name="WndMovieTheatre_Instruction">歡迎來到我們的戲院！我們正提供一項特別服務：您可免費看一齣電影。若果您看畢整套影片，您將獲賞 %d 個金幣！</string>
+  <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，您可以免费观看“电影”。如果您成功看完，将得到%d枚金币的奖励!</string>
   <string name="WndMovieTheatre_Title">戲院</string>
   <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
   <string name="WndPriest_Heal">治疗-花费%d金币</string>
@@ -2565,6 +2565,10 @@
   <string name="ShieldBuffNotReady_Name">还未准备</string>
   <string name="WoodenShield_name">木制盾牌</string>
   <string name="WoodenShield_desc">粗糙的木制盾牌是最简单的盾牌。它的形状是圆的，有时可以阻挡一些伤害。</string>
+  <string name="ToughShield_name">皮制圆盾</string>
+  <string name="ToughShield_desc">这种用皮革加固过的圆牌看起来比木质盾牌还要坚硬。 当然，它可以阻挡更多的伤害</string>
+  <string name="StrongShield_name">镀金青铜盾</string>
+  <string name="StrongShield_desc">这块方形盾牌镀有青铜，并用彩色布装饰。它明显较重，但可以阻挡更多的伤害。</string>
   <string name="RoyalShield_name">皇家鸢形盾</string>
   <string name="RoyalShield_desc">全金属制盾牌。因此，它很重，但只有它能给你最好的保护。</string>
   <string name="ShieldInfoTemplate">这个盾牌最多可以格挡%1$d伤害。  格挡几率为%2$d %% 。 成功格挡后需要%3$3.1f个回合来恢复。</string>
@@ -2577,4 +2581,5 @@
     -- 盾牌贴图 !\n
     - 修复了一些Bug\n
     </string>
+  <string name="ShieldStrTemplate">盾牌的佩戴者应至少具有%1$d强度点才能正常的使用它。</string>
 </resources>
