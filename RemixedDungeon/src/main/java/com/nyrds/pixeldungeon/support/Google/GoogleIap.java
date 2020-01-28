@@ -20,6 +20,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.IPurchasesUpdated;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.IOException;
@@ -87,8 +88,6 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         //mBillingClient.consumeAsync(purchase.getPurchaseToken(),this);
         if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
 
-            mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
-
             // Acknowledge the purchase if it hasn't already been acknowledged.
             if (!purchase.isAcknowledged()) {
                 AcknowledgePurchaseParams acknowledgePurchaseParams =
@@ -96,8 +95,16 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
                                 .setPurchaseToken(purchase.getPurchaseToken())
                                 .build();
                 mBillingClient.acknowledgePurchase(acknowledgePurchaseParams, billingResult -> {
-                    EventCollector.logEvent("billing result",billingResult.toString());
+                    EventCollector.logEvent("billing_result",billingResult.toString());
                 });
+            }
+
+            mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
+
+            String purchaseData = purchase.getOriginalJson();
+            if( !Preferences.INSTANCE.getBoolean(purchaseData,false) ) {
+                EventCollector.logEvent("iap_data", purchaseData);
+                Preferences.INSTANCE.put(purchaseData,true);
             }
         }
 
