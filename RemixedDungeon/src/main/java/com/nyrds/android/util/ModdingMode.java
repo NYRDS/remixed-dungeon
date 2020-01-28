@@ -82,6 +82,19 @@ public class ModdingMode {
 	public static String getSoundById(String id) {
 
 		String candidate = id + ".ogg";
+
+		if(ModdingMode.isResourceExistInMod(candidate)) {
+			return candidate;
+		}
+
+		candidate = id + ".mp3";
+
+		if(ModdingMode.isResourceExistInMod(candidate)) {
+			return candidate;
+		}
+
+		candidate = id + ".ogg";
+
 		if(ModdingMode.isAssetExist(candidate)) {
 			return candidate;
 		}
