@@ -14,13 +14,12 @@
     "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json",
         "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","treasury":"TownShopTreasury.json"},
 
-    "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true},
-    "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/Portal.json", "isSafe":true},
-    "portal_room_lvl15":{"kind":"PredesignedLevel", "depth":15, "file":"levelsDesc/Portal.json", "isSafe":true},
-    "portal_room_lvl20":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/Portal.json", "isSafe":true},
-    "portal_room_lvl25":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/Portal.json", "isSafe":true},
-    "portal_room_lvl31":{"kind":"PredesignedLevel", "depth":31, "file":"levelsDesc/Portal.json", "isSafe":true},
-
+        "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl15":{"kind":"PredesignedLevel", "depth":15, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl20":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl25":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl31":{"kind":"PredesignedLevel", "depth":31, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
     "shadow_lord_level":{"kind":"ShadowLordLevel", "depth":25, "size":[20,20]},
 
     "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16]},
