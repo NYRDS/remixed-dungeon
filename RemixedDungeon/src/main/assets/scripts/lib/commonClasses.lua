@@ -107,7 +107,8 @@ local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.ob
 
 
 local Tweeners = {
-    PosTweener = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener")
+    PosTweener  = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener"),
+    JumpTweener = luajava.bindClass("com.watabou.noosa.tweeners.JumpTweener")
 }
 
 local Sfx = {
@@ -267,6 +268,10 @@ local RPD = {
 
     attachMoveTweener = function(img,dx,dy,time)
         Tweeners.PosTweener:attachTo(img,dx,dy,time)
+    end,
+
+    attachJumpTweener = function(chr, target, height, time)
+        Tweeners.JumpTweener:attachTo(chr:getSprite(), target, height, time)
     end,
 
     item = function(itemClass, quantity)
