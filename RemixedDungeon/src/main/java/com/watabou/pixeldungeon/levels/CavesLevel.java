@@ -19,16 +19,12 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;
-import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
+import com.nyrds.pixeldungeon.effects.emitters.Vein;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
 
@@ -223,58 +219,5 @@ public class CavesLevel extends RegularLevel {
 			}
 		}
 	}
-	
-	private static class Vein extends Group {
-		
-		private int pos;
-		
-		private float delay;
-		
-		public Vein( int pos ) {
-			super();
-			
-			this.pos = pos;
-			
-			delay = Random.Float( 2 );
-		}
-		
-		@Override
-		public void update() {
-			
-			if (setVisible(Dungeon.visible[pos])) {
-				
-				super.update();
-				
-				if ((delay -= Game.elapsed) <= 0) {
-					
-					delay = Random.Float();
-					
-					PointF p = DungeonTilemap.tileToWorld( pos );
-					((Sparkle)recycle( Sparkle.class )).reset( 
-						p.x + Random.Float( DungeonTilemap.SIZE ), 
-						p.y + Random.Float( DungeonTilemap.SIZE ) );
-				}
-			}
-		}
-	}
-	
-	public static final class Sparkle extends PixelParticle {
-		
-		public void reset( float x, float y ) {
-			revive();
-			
-			this.x = x;
-			this.y = y;
-			
-			left = lifespan = 0.5f;
-		}
-		
-		@Override
-		public void update() {
-			super.update();
-			
-			float p = left / lifespan;
-			size( (am = p < 0.5f ? p * 2 : (1 - p) * 2) * 2 );
-		}
-	}
+
 }

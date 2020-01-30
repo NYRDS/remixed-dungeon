@@ -21,18 +21,14 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
-import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
-import com.watabou.pixeldungeon.effects.Halo;
-import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+import com.nyrds.pixeldungeon.effects.emitters.Torch;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.NecroExitPainter;
-import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class PrisonLevel extends RegularLevel {
@@ -201,29 +197,5 @@ public class PrisonLevel extends RegularLevel {
 			}
 		}
 	}
-	
-	private static class Torch extends Emitter {
-		
-		private int pos;
-		
-		public Torch( int pos ) {
-			super();
-			
-			this.pos = pos;
-			
-			PointF p = DungeonTilemap.tileCenterToWorld( pos );
-			pos( p.x - 1, p.y + 3, 2, 0 );
-			
-			pour( FlameParticle.FACTORY, 0.15f );
-			
-			add( new Halo( 16, 0xFFFFCC, 0.2f ).point( p.x, p.y ) );
-		}
-		
-		@Override
-		public void update() {
-			if (setVisible(Dungeon.visible[pos])) {
-				super.update();
-			}
-		}
-	}
+
 }

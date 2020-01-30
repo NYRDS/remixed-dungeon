@@ -4,19 +4,14 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
-import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.effects.Halo;
-import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+import com.nyrds.pixeldungeon.effects.emitters.Candle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class NecroLevel extends RegularLevel {
@@ -149,28 +144,4 @@ public class NecroLevel extends RegularLevel {
 		}
 	}
 
-	private static class Candle extends Emitter {
-
-		private int pos;
-
-		public Candle( int pos ) {
-			super();
-
-			this.pos = pos;
-
-			PointF p = DungeonTilemap.tileCenterToWorld( pos );
-			pos( p.x - 1, p.y - 3, 2, 0 );
-
-			pour( FlameParticle.FACTORY, 0.15f );
-
-			add( new Halo( 16, 0xFFFFCC, 0.2f ).point( p.x, p.y ) );
-		}
-
-		@Override
-		public void update() {
-			if (setVisible(Dungeon.visible[pos])) {
-				super.update();
-			}
-		}
-	}
 }
