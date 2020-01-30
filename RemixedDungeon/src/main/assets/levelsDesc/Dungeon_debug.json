@@ -76,7 +76,7 @@
     "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
     },
     "Graph":{
-    "0":[["testLevel"],[]],
+    "0":[["1"],[]],
     "testLevel":[[],[]],
 
     "town_2":[["church_22","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],

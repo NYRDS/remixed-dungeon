@@ -143,7 +143,8 @@ public class RemixedDungeon extends Game {
 		super.onResume();
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
 			playGames.connect();
-		}	}
+		}
+	}
 
 	public static boolean differentVersions(String v1, String v2) {
 		try {
