@@ -1,7 +1,7 @@
-Ez egy nyílt forráskódú "rogue" szerű játék, pixel stílusú grafikával.
+Ez egy nyílt forráskódú "rogue"-szerű játék, pixeles stílusú grafikával. 
 
-Egyszer volt, hol nem volt, létezett egy kisváros. A helyiek boldogan éltek, de olyan szegények voltak, hogy még nyaralásra sem telt nekik. Aznap azonban, amikor mindenki felhagyott a reménnyel, csoda történt. A város alatt megremegett a föld, és számtalan undorító szörnyet köpött ki magából. Attól a naptól kezdve pedig boldogan éltek a helyiek. Miért? Mert a kripták mindenféle hősöket és kalandorokat vonzottak oda. Megvédték az ártatlanokat, és igen jó ügyfeleknek bizonyultak, felvirágoztatva a helyi gazdaságot.
-A kisváros most már virágkorát éli, ahogy egy veszélyes kripta tetején áll, melyet halott kalandorok és nyomorúságos lelkeik töltenek meg.
+Egyszer volt, hol nem volt, volt egyszer egy kisváros. A helyiek boldogan éltek, de olyan szegények voltak, hogy még nyaralásra sem telt nekik. Aznap azonban, amikor mindenki felhagyott a reménnyel, csoda történt. A város alatt megremegett a föld, és számtalan undorító szörnyet köpött ki magából. Attól a naptól kezdve pedig boldogan éltek a helyiek. Miért? Mert a kripták mindenféle hősöket és kalandorokat vonzottak oda. Megvédték az ártatlanokat, és igen jó ügyfeleknek bizonyultak, felvirágoztatva a helyi gazdaságot. 
+A kisváros most már virágkorát éli, ahogy áll egy veszélyes kripta tetején, melyet halott kalandorok és nyomorúságos lelkeik töltenek meg. 
 
 Játék jellemzők:
 - Ez a játék támogatja a felhasználó-készítette mod-okat! És ahogy továbbfejlesztjük ezt a jellemzőt, hamarosan képes leszel egy teljesen új játékot csinálni a Remixed Pixel Dungeon -ban!
@@ -13,6 +13,9 @@ Játék jellemzők:
 - Több tucat tárgy és szörny
 - Változatos főellenségek
 - Sapkák! Mindenki szereti őket, nemde?
+
+Kapcsolódj a Discord szerverünkhöz:
+https://discordapp.com/invite/AMXrhQZ
 
 Kövess minket a Twitteren:
 https://twitter.com/nyrds
