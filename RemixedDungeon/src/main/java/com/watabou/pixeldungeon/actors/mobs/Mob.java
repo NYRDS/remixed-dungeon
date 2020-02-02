@@ -701,7 +701,8 @@ public abstract class Mob extends Char {
 	}
 
 	@Nullable
-	protected Object getLoot() {
+	@LuaInterface
+	public Object getLoot() {
 		return loot;
 	}
 
