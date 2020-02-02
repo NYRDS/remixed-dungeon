@@ -104,6 +104,14 @@ public class ModdingMode {
 			return candidate;
 		}
 
+		if(id.contains(".mp3")) {
+			return getSoundById(id.replace(".mp3",""));
+		}
+
+		if(id.contains(".ogg")) {
+			return getSoundById(id.replace(".ogg",""));
+		}
+
 		return id;
 	}
 
