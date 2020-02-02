@@ -53,7 +53,7 @@ public class Skeleton extends UndeadMob {
 	}
 
 	@Override
-	protected Object getLoot() {
+	public Object getLoot() {
 		if (!(level() instanceof NecroBossLevel)) {
 			return Treasury.getLevelTreasury().worstOf(Treasury.Category.WEAPON,3 );
 		}
