@@ -95,16 +95,23 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
                                 .setPurchaseToken(purchase.getPurchaseToken())
                                 .build();
                 mBillingClient.acknowledgePurchase(acknowledgePurchaseParams, billingResult -> {
-                    EventCollector.logEvent("billing_result",billingResult.toString());
+                    EventCollector.logEvent("billing_result",
+                            billingResult.getResponseCode()
+                            + "->"
+                            + billingResult.getDebugMessage());
                 });
             }
 
             mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
 
-            String purchaseData = purchase.getOriginalJson();
-            if( !Preferences.INSTANCE.getBoolean(purchaseData,false) ) {
+            String orderId = purchase.getOrderId();
+            String purchaseData = purchase.getOrderId() +","
+                    + purchase.getPackageName() + ","
+                    + purchase.getSku() + ","
+                    + purchase.getPurchaseToken();
+            if( !Preferences.INSTANCE.getBoolean(orderId,false) ) {
                 EventCollector.logEvent("iap_data", purchaseData);
-                Preferences.INSTANCE.put(purchaseData,true);
+                Preferences.INSTANCE.put(orderId,true);
             }
         }
 
