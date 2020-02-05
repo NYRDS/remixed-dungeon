@@ -2385,7 +2385,7 @@ Parede
   <string name="HeroClass_MagPerks_1">Magos recarregam suas varinhas mais rápido.</string>
   <string name="HeroClass_MagPerks_2">Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</string>
   <string name="HeroClass_MagPerks_3">Magos podem usar varinhas como uma arma de combate.</string>
-  <string name="HeroClass_MagPerks_4">Pergaminhos de Identificação são identificados desde o início.</string>
+  <string name="HeroClass_MagPerks_4">Magos usam mana para lançar feitiços Elementais.</string>
   <string name="HeroClass_MagPerks_5">Pergaminhos de Identificação são identificados desde o início.</string>
   <string name="HeroClass_RogPerks_0">Ladrões começam com um Anel de Sombras +1.</string>
   <string name="HeroClass_RogPerks_1">Ladrões podem identificar um anel ao equipa-lo.</string>
