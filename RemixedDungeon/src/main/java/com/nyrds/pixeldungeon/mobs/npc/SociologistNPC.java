@@ -35,7 +35,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
 
     public boolean interact(Char hero) {
 
-        Game.scene().add(new WndOptions(this.name,
+        Game.addToScene(new WndOptions(this.name,
                 Game.getVar(R.string.SociologistNPC_Hi),
                 Game.getVar(R.string.Wnd_Button_Yes), Game.getVar(R.string.Wnd_Button_No)
         ) {
@@ -61,7 +61,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
                 try {
                     survey = JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(SURVEY_JSON));
 
-                    Game.scene().add(new WndSurvey(survey));
+                    Game.addToScene(new WndSurvey(survey));
 
                 } catch (JSONException e) {
                     reportError();
@@ -71,7 +71,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
     }
 
     private void reportError() {
-        Game.scene().add(new WndError(Game.getVar(R.string.SociologistNPC_DownloadError)));
+        Game.addToScene(new WndError(Game.getVar(R.string.SociologistNPC_DownloadError)));
     }
 
     @Override

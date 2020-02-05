@@ -22,8 +22,7 @@ public class CustomSpell extends Spell {
 
         script = new LuaScript("scripts/spells/" + scriptFile, this);
 
-        script.run("spellDesc", null, null);
-        LuaTable desc = script.getResult().checktable();
+        LuaTable desc = script.run("spellDesc").checktable();
 
         image = desc.rawget("image").checkint();
         imageFile = desc.rawget("imageFile").checkjstring();
@@ -40,8 +39,7 @@ public class CustomSpell extends Spell {
 
     @Override
     protected boolean cast(Char chr, int cell) {
-        script.run("castOnCell", chr, cell);
-        boolean ret = script.getResult().checkboolean();
+        boolean ret = script.run("castOnCell", chr, cell).checkboolean();
         if(ret) {
             castCallback(chr);
         }
@@ -54,8 +52,7 @@ public class CustomSpell extends Spell {
             return false;
         }
 
-        script.run("cast", chr);
-        boolean ret = script.getResult().checkboolean();
+        boolean ret = script.run("cast", chr).checkboolean();
         if(ret) {
             castCallback(chr);
         }

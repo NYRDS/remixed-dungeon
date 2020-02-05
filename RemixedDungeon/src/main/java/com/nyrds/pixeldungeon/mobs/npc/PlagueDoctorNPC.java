@@ -107,7 +107,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 		}
 
 		public static void process(int pos) {
-			Item item = Dungeon.hero.belongings.getItem(RatHide.class);
+			Item item = Dungeon.hero.getBelongings().getItem(RatHide.class);
 			if (completed){
 				return;
 			}

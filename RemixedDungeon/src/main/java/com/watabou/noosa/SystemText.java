@@ -394,7 +394,7 @@ public class SystemText extends Text {
 	}
 
 	static void invalidate() {
-		for (SystemText txt : texts) {
+		for (SystemText txt : texts.toArray(new SystemText[0])) {
 			txt.dirty = true;
 			txt.destroyLines();
 		}

@@ -10,34 +10,37 @@
         "quantity": 100
       },
       {
-        "kind": "TomeOfKnowledge",
+        "kind": "ManaPotion",
         "quantity": 100,
-        "level": 10
-      },
-      {
-        "kind": "PotionOfMindVision",
-        "quantity": 100,
-        "level": 10
+        "level": 1000
       },
       {
         "kind": "ScrollOfUpgrade",
+        "quantity": 100,
+        "level": 10
+      },
+      {
+        "kind": "PotionOfStrength",
         "quantity": 100
       },
       {
-        "kind": "ManaPotion",
+        "kind": "ScrollOfMagicMapping",
         "quantity": 100
       },
       {
-        "kind": "ElfArmor"
+        "kind": "RoyalShield"
       },
       {
-        "kind": "ClothArmor"
+        "kind": "test/TestItem"
+      },
+      {
+        "kind": "test/TestItem"
       },
       {
         "kind": "Claymore"
       },
       {
-        "kind": "TestWeapon2"
+        "kind": "SeedPouch"
       },
       {
         "kind": "WoodenShield"
@@ -49,7 +52,7 @@
       }
     ],
     "str": 10,
-    "hp": 200000,
+    "hp": 20000000,
     "magicAffinity": "Common",
     "sp": 10,
     "maxSp": 10
@@ -167,7 +170,7 @@
         "depth": "7"
       }
     ],
-    "hp": 15,
+    "hp": 15000000,
     "knownItems": [
       {
         "kind": "PotionOfHealing"

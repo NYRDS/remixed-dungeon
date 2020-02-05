@@ -4,7 +4,6 @@ import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -16,8 +15,8 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
-import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 
@@ -49,9 +48,9 @@ public class CustomItem extends EquipableItem {
 
     private void initItem() {
         script = new LuaScript("scripts/items/"+scriptFile, this);
+        script.asInstance();
 
-        script.run("itemDesc");
-        LuaTable desc = script.getResult().checktable();
+        LuaTable desc = script.run("itemDesc").checktable();
 
         image        = desc.rawget("image").checkint();
         imageFile    = desc.rawget("imageFile").checkjstring();
@@ -113,10 +112,10 @@ public class CustomItem extends EquipableItem {
             actions.remove(AC_UNEQUIP);
         }
 
-        script.run("actions", hero, null);
+        LuaValue ret = script.run("actions", hero);
 
-        if(script.getResult().istable()) {
-            LuaTable luaActions = script.getResult().checktable();
+        if(ret.istable()) {
+            LuaTable luaActions = ret.checktable();
 
             int n = luaActions.rawlen();
 
@@ -163,18 +162,14 @@ public class CustomItem extends EquipableItem {
     }
 
     private Item applyOnItem(int cell,String effect) {
-        try {
-            script.run(effect, cell, null);
-            if(script.getResult().isnil()) {
-                return null;
-            }
-
-            Item item = (Item) script.getResult().checkuserdata(Item.class);
-            item.quantity(quantity());
-            return item;
-        } catch (LuaError e) {
-            throw new TrackedRuntimeException(e);
+        LuaValue ret = script.run(effect, cell);
+        if(ret.isnil()) {
+            return null;
         }
+
+        Item item = (Item) ret.checkuserdata(Item.class);
+        item.quantity(quantity());
+        return item;
     }
 
 
@@ -215,6 +210,22 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public String desc() {
-        return StringsManager.maybeId(script.runOptional("info",info).checkjstring());
+        return StringsManager.maybeId(script.runOptional("info",info));
     }
+
+    @Override
+    public String bag() {
+        return script.runOptional("bag",super.bag());
+    }
+
+    @Override
+    public int typicalSTR() {
+        return script.runOptional("typicalSTR", super.typicalSTR());
+    }
+
+    @Override
+    public int requiredSTR() {
+        return script.runOptional("requiredSTR", super.requiredSTR());
+    }
+
 }

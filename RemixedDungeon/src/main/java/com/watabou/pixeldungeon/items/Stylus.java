@@ -88,6 +88,8 @@ public class Stylus extends Item {
 	}
 	
 	private void inscribeEffect(){
+		detach( getUser().getBelongings().backpack );
+
 		getUser().getSprite().operate( getUser().getPos() );
 		getUser().getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
 		Sample.INSTANCE.play( Assets.SND_BURNING );
@@ -97,9 +99,7 @@ public class Stylus extends Item {
 	}
 	
 	private void inscribeArmor ( Armor armor ) {
-		
-		detach( getUser().belongings.backpack );
-		
+
 		Class<? extends Armor.Glyph> oldGlyphClass = armor.glyph != null ? armor.glyph.getClass() : null;
 		Armor.Glyph glyph = Armor.Glyph.random();
 		while (glyph.getClass() == oldGlyphClass) {
@@ -115,13 +115,13 @@ public class Stylus extends Item {
 	
 	private void inscribeScroll (BlankScroll scroll){
 		
-		scroll.detach( getUser().belongings.backpack );
-		
-		inscribeEffect();
+		scroll.detach( getUser().getBelongings().backpack );
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
 		getUser().collect(inscribedScroll);
 		GLog.i(Hero.getHeroYouNowHave(), inscribedScroll.name());	// Let know which scroll was inscribed
+
+		inscribeEffect();
 	}
 	
 	@Override

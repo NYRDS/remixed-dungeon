@@ -25,7 +25,7 @@ public class GoldenSword extends SpecialWeapon {
 	}
 
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		//Gold proc
 		if (Random.Int(10) == 1){
 			int price = this.price() / 10;

@@ -29,7 +29,7 @@ public class DownloadProgressWindow implements DownloadStateListener {
             public void run() {
                 if (progress == null) {
                     progress = new WndMessage(Utils.EMPTY_STRING);
-                    Game.scene().add(progress);
+                    Game.addToScene(progress);
                 }
                 if (progress.getParent() == Game.scene()) {
                     progress.setText(Utils.format("%s  %4.2fMb", prefix, bytes / 1024f / 1024f));

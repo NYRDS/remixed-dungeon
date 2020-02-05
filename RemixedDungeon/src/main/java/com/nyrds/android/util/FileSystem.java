@@ -17,6 +17,8 @@ import java.io.OutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import lombok.SneakyThrows;
+
 public class FileSystem {
 
 	static public File getInternalStorageFile(String fileName) {
@@ -81,8 +83,8 @@ public class FileSystem {
 		fileOrDirectory.delete();
 	}
 
+	@SneakyThrows
 	static public void copyStream(InputStream in, OutputStream out) {
-		try {
 			byte[] buffer = new byte[4096];
 			int read;
 			while ((read = in.read(buffer)) != -1) {
@@ -92,33 +94,22 @@ public class FileSystem {
 
 			out.flush();
 			out.close();
-
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
 	}
 
+	@SneakyThrows
 	static public void copyFile(String inputFile, OutputStream out) {
-		try {
-			InputStream in = new FileInputStream(inputFile);
-
-			copyStream(in, out);
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		InputStream in = new FileInputStream(inputFile);
+		copyStream(in, out);
 	}
 
+	@SneakyThrows
 	static public void copyFile(String inputFile, String outputFile) {
-		try {
-			File dir = new File(outputFile).getParentFile();
-			if (!dir.exists()) {
-				dir.mkdirs();
-			}
-
-			copyFile(inputFile, new FileOutputStream(outputFile));
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
+		File dir = new File(outputFile).getParentFile();
+		if (!dir.exists()) {
+			dir.mkdirs();
 		}
+
+		copyFile(inputFile, new FileOutputStream(outputFile));
 	}
 
 	public static void zipFolderTo(OutputStream out, File srcFolder, int depth, FileFilter filter) throws IOException {

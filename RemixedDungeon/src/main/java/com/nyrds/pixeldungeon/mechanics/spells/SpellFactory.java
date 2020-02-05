@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.utils.Random;
 
@@ -10,6 +9,8 @@ import org.luaj.vm2.LuaTable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import lombok.SneakyThrows;
 
 public class SpellFactory {
 
@@ -24,10 +25,10 @@ public class SpellFactory {
 		script.run("loadSpells",null);
 	}
 
+	@SneakyThrows
 	private static void registerSpellClass(Class<? extends Spell> spellClass) {
 		mSpellsList.put(spellClass.getSimpleName(), spellClass);
 
-		try {
 			Spell spell = spellClass.newInstance();
 			String affinity = spell.getMagicAffinity();
 
@@ -36,12 +37,6 @@ public class SpellFactory {
 			}
 
 			mSpellsByAffinity.get(affinity).add(spellClass.getSimpleName());
-
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException(e);
-		} catch (IllegalAccessException e) {
-			throw new TrackedRuntimeException(e);
-		}
 	}
 
 	private static void initSpellsMap() {
@@ -62,34 +57,27 @@ public class SpellFactory {
 		if (mSpellsList.get(name) != null) {
 			return true;
 		}
-		script.run("haveSpell", name);
-		return script.getResult().checkboolean();
+		;
+		return script.run("haveSpell", name).checkboolean();
 	}
 
 	@NotNull
+	@SneakyThrows
 	public static Spell getSpellByName(String name) {
-		try {
-			if(hasSpellForName(name)) {
-				Class<? extends Spell> spellClass = mSpellsList.get(name);
-				if (spellClass == null) {
-					return new CustomSpell(name);
-				}
-				return spellClass.newInstance();
-			} else {
-				return getSpellByName(Random.element(getSpellsByAffinity(SpellHelper.AFFINITY_COMMON)));
+		if(hasSpellForName(name)) {
+			Class<? extends Spell> spellClass = mSpellsList.get(name);
+			if (spellClass == null) {
+				return new CustomSpell(name);
 			}
-
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException(e);
-		} catch (IllegalAccessException e) {
-			throw new TrackedRuntimeException(e);
+			return spellClass.newInstance();
+		} else {
+			return getSpellByName(Random.element(getSpellsByAffinity(SpellHelper.AFFINITY_COMMON)));
 		}
 	}
 
 	@NotNull
 	public static ArrayList<String> getSpellsByAffinity(String affinity) {
-		script.run("getSpellsList", affinity);
-		LuaTable luaList = script.getResult().checktable();
+		LuaTable luaList = script.run("getSpellsList", affinity).checktable();
 
 		ArrayList<String> spellList = new ArrayList<>();
 

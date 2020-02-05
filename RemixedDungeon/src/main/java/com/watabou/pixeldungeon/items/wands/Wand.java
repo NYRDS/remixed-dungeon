@@ -133,7 +133,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		if (hero.getHeroClass() == HeroClass.MAGE
 			|| hero.getSubClass() == HeroSubClass.SHAMAN) {
 			
-			if(hero.belongings.weapon == this) {
+			if(hero.getBelongings().weapon == this) {
 				actions.add(AC_UNEQUIP); 
 			} else {
 				actions.add(AC_EQUIP);
@@ -165,7 +165,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		super.execute(hero, action);
 	}
 
-	public void zapCell(Hero chr, int cell) {
+	public void zapCell(Char chr, int cell) {
 		setUser(chr);
 		wandUser = chr;
 		getDestinationCell(chr.getPos(),cell);
@@ -506,7 +506,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public int damageRoll(Hero owner) {
+	public int damageRoll(Char owner) {
 		int tier = 1 + effectiveLevel() / 3;
 		MIN = tier + owner.skillLevel();
 		MAX = (tier * tier - tier + 10) / 2 + owner.skillLevel()*tier + effectiveLevel();

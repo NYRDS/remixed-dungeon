@@ -56,7 +56,7 @@ return spell.init{
                 level:spawnMob(mob)
                 chr:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
                 mob:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
-                RPD.playSound( "snd_cursed.mp3" )
+                RPD.playSound( "snd_cursed" )
 
                 return true
             else

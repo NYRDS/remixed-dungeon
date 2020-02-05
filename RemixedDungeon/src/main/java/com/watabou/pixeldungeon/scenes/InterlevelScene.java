@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -39,10 +38,10 @@ import com.watabou.pixeldungeon.windows.WndStory;
 
 import org.jetbrains.annotations.Nullable;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Collection;
 import java.util.concurrent.FutureTask;
+
+import lombok.SneakyThrows;
 
 public class InterlevelScene extends PixelScene {
 
@@ -62,7 +61,7 @@ public class InterlevelScene extends PixelScene {
     public static boolean fallIntoPit;
 
     private enum Phase {
-        FADE_IN, STATIC, FADE_OUT
+        FADE_IN, STATIC, FADE_OUT, ERROR
     }
 
     private Phase phase;
@@ -76,44 +75,35 @@ public class InterlevelScene extends PixelScene {
 
     class LevelChanger implements Runnable {
 
+        @SneakyThrows
         @Override
         public void run() {
-            try {
-                switch (mode) {
-                    case DESCEND:
-                        descend();
-                        break;
-                    case ASCEND:
-                        ascend();
-                        break;
-                    case CONTINUE:
-                        restoreAtPosition(null);
-                        break;
-                    case RESURRECT:
-                        resurrect();
-                        break;
-                    case RETURN:
-                        returnTo();
-                        break;
-                    case FALL:
-                        fall();
-                        break;
-                }
-
-            } catch (FileNotFoundException e) {
-                error = Game.getVar(R.string.InterLevelScene_FileNotFound);
-            } catch (IOException e) {
-                EventCollector.logException(e);
-                error = Game.getVar(R.string.InterLevelScene_ErrorGeneric) + "\n" + e.getMessage();
-            } catch (Exception e) {
-                throw new TrackedRuntimeException(e);
+            switch (mode) {
+                case DESCEND:
+                    descend();
+                    break;
+                case ASCEND:
+                    ascend();
+                    break;
+                case CONTINUE:
+                    restoreAtPosition(null);
+                    break;
+                case RESURRECT:
+                    resurrect();
+                    break;
+                case RETURN:
+                    returnTo();
+                    break;
+                case FALL:
+                    fall();
+                    break;
             }
-        }
+       }
     }
 
     static public void Do(InterlevelScene.Mode mode) {
 
-        if(Dungeon.level!=null && Dungeon.hero!=null) { // not game start
+        if(Game.scene() instanceof GameScene && Dungeon.level!=null && Dungeon.hero!=null) { // not game start
             Dungeon.hero.getSprite().completeForce();
             for(Mob mob:Dungeon.level.getCopyOfMobsArray()) {
                 mob.getSprite().completeForce();
@@ -166,6 +156,10 @@ public class InterlevelScene extends PixelScene {
     public void update() {
         super.update();
 
+        if(phase == Phase.ERROR) {
+            return;
+        }
+
         float p = timeLeft / TIME_TO_FADE;
 
         if (error != null) {
@@ -175,6 +169,7 @@ public class InterlevelScene extends PixelScene {
                     Game.switchScene(TitleScene.class);
                 }
             });
+            phase = Phase.ERROR;
             error = null;
         }
 
@@ -233,22 +228,22 @@ public class InterlevelScene extends PixelScene {
         Position thisPosition = Dungeon.currentPosition();
         Level newLevel;
 
-        try {
-            next = DungeonGenerator.descend(thisPosition);
-            Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
-            newLevel = Dungeon.loadLevel(next);
-        } catch (Exception e) {
-            EventCollector.logException(e);
+        next = DungeonGenerator.descend(thisPosition);
+
+        if(next == null) {
             restoreAtPosition(thisPosition);
             return;
         }
+
+        Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
+        newLevel = Dungeon.loadLevel(next);
 
         Dungeon.switchLevel(newLevel,
                 newLevel.entrance,
                 followers);
     }
 
-    private void fall() throws IOException {
+    private void fall() {
 
         Actor.fixTime();
 
@@ -268,7 +263,7 @@ public class InterlevelScene extends PixelScene {
                 followers);
     }
 
-    private void ascend() throws IOException {
+    private void ascend() {
         Actor.fixTime();
 
         Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.ASCEND);
@@ -287,7 +282,7 @@ public class InterlevelScene extends PixelScene {
                 followers);
     }
 
-    private void returnTo() throws IOException {
+    private void returnTo() {
 
         Actor.fixTime();
 
@@ -308,6 +303,7 @@ public class InterlevelScene extends PixelScene {
     private void rescue(Exception cause) {
         if (!rescueMode) {
             rescueMode = true;
+
             EventCollector.logException(cause, "enter rescue mode");
 
             if(SaveUtils.slotUsed(SaveUtils.getPrevSave(), Dungeon.heroClass)) {

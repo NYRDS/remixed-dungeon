@@ -33,7 +33,6 @@ local Buffs  = {
     Amok         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Amok"),
     Awareness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Awareness"),
     Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),
-    GasesImmunity= luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.GasesImmunity"),
     Sleep        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Sleep"),
     Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow")
 }
@@ -108,7 +107,8 @@ local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.ob
 
 
 local Tweeners = {
-    PosTweener = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener")
+    PosTweener  = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener"),
+    JumpTweener = luajava.bindClass("com.watabou.noosa.tweeners.JumpTweener")
 }
 
 local Sfx = {
@@ -138,6 +138,8 @@ local Sfx = {
     DeathStroke= luajava.bindClass("com.nyrds.pixeldungeon.effects.DeathStroke"),
     Wound = luajava.bindClass("com.watabou.pixeldungeon.effects.Wound"),
 }
+
+local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -268,10 +270,20 @@ local RPD = {
         Tweeners.PosTweener:attachTo(img,dx,dy,time)
     end,
 
+    attachJumpTweener = function(chr, target, height, time)
+        Tweeners.JumpTweener:attachTo(chr:getSprite(), target, height, time)
+    end,
+
     item = function(itemClass, quantity)
         quantity = quantity or 1
         local item = ItemFactory:itemByName(itemClass)
         item:quantity(quantity)
+        return item
+    end,
+
+    creteItem = function(itemClass, itemDesc)
+        local json = require("scripts/lib/json")
+        local item = ItemFactory:createItem(itemClass, json.encode(itemDesc))
         return item
     end,
 
@@ -310,6 +322,10 @@ local RPD = {
 
     shakeCamera = function(time, power)
         Camera.main:shake(time, power)
+    end,
+
+    checkBadge = function(badgeName)
+        return Badges:isUnlocked(Badges.Badge:valueOf(badgeName))
     end,
 
     format = function(fmt, ...)

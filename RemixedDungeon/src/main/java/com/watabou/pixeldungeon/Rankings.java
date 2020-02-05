@@ -157,7 +157,7 @@ public enum Rankings {
 	private int score(gameOver win ) {
 
 		double winC        = Math.pow(1.4f, win.ordinal());
-		double challengesC = Math.pow(1.3f, Integer.bitCount(Dungeon.challenges));
+		double challengesC = Math.pow(1.3f, Integer.bitCount(Dungeon.getChallenges()));
 		double difficultyC = Math.pow(1.4f, Game.getDifficulty());
 
 		return (int) (difficultyC * challengesC * winC * ( Statistics.goldCollected

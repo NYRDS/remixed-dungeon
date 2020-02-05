@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -29,8 +28,9 @@ import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import java.io.File;
 import java.util.ArrayList;
+
+import lombok.var;
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
@@ -43,7 +43,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
     public WndSaveSlotSelect(final boolean _saving, String title) {
-        String options[] = slotInfos();
+        String[] options = slotInfos();
+
+        Hero hero = Dungeon.hero;
 
         final int WIDTH = WndHelper.getFullscreenWidth();
         final int maxW = WIDTH - GAP * 2;
@@ -64,7 +66,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                         }
                     };
 
-                    Game.scene().add(refreshing);
+                    Game.addToScene(refreshing);
                     Game.instance().playGames.loadSnapshots(() -> Game.pushUiTask(() -> {
                         refreshing.hide();
                         refreshWindow();
@@ -110,36 +112,48 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                 buttons.add(btn);
 
                 if (Game.instance().playGames.isConnected()) {
-                    final String snapshotId = slotNameFromIndexAndMod(index) + "_" + Dungeon.hero.getHeroClass().toString();
 
-                    if ((_saving && !options[index].isEmpty())
-                            || (!_saving
-                            && Game.instance().playGames.haveSnapshot(snapshotId)
-                    )) {
+                    final String[] slotsDir = {SaveUtils.buildSlotFromTag(slotNameFromIndex(index)),
+                            slotNameFromIndexAndMod(index),
+                            slotNameFromIndex(index)};
 
-                        Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
-                        SimpleButton syncBtn = new SimpleButton(Icons.get(icon)) {
-                            protected void onClick() {
-                                File slotDir = FileSystem.getInternalStorageFile(slotNameFromIndexAndMod(index));
-                                boolean res;
-                                if (_saving) {
-                                    res = Game.instance().playGames.packFilesToSnapshot(snapshotId, slotDir, pathname -> SaveUtils.isRelatedTo(pathname.getPath(), Dungeon.hero.getHeroClass()));
-                                } else {
-                                    res = Game.instance().playGames.unpackSnapshotTo(snapshotId, slotDir);
+                    final String modernSlotDir = slotsDir[0];
+
+                    for (var slotDirProbe:slotsDir) {
+                        final String snapshotId = slotDirProbe + "_" + hero.getHeroClass().toString();
+                        final String saveSnapshotId = modernSlotDir + "_" + hero.getHeroClass().toString();
+
+                        if ((_saving && !options[index].isEmpty())
+                                || (!_saving
+                                && Game.instance().playGames.haveSnapshot(snapshotId)
+                        )) {
+                            Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
+                            SimpleButton syncBtn = new SimpleButton(Icons.get(icon)) {
+                                protected void onClick() {
+
+                                    if (_saving) {
+                                        boolean res = Game.instance().playGames.packFilesToSnapshot(saveSnapshotId,
+                                                FileSystem.getInternalStorageFile(modernSlotDir),
+                                                pathname -> SaveUtils.isRelatedTo(
+                                                        pathname.getPath(),
+                                                        hero.getHeroClass()));
+                                        showActionResult(res);
+                                    } else {
+                                        Game.instance().playGames.unpackSnapshotTo(snapshotId,
+                                                FileSystem.getInternalStorageFile(modernSlotDir),
+                                                res -> Game.pushUiTask(() -> showActionResult(res)));
+                                    }
                                 }
-                                refreshWindow();
-                                showActionResult(res);
-                            }
-                        };
+                            };
 
-                        syncBtn.setPos(xColumn, pos + BUTTON_HEIGHT / 2);
-                        additionalMargin = syncBtn.width();
-                        add(syncBtn);
+                            syncBtn.setPos(xColumn, pos + BUTTON_HEIGHT / 2);
+                            additionalMargin = syncBtn.width();
+                            add(syncBtn);
 
-                        xBtn = syncBtn.right() + GAP;
+                            xBtn = syncBtn.right() + GAP;
+                        }
                     }
                 }
-
                 if (!options[index].isEmpty()) {
                     SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
                         protected void onClick() {
@@ -150,7 +164,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                                 @Override
                                 protected void onSelect(int index) {
                                     if (index == 0) {
-                                        SaveUtils.deleteSaveFromSlot(slotNameFromIndexAndMod(slotIndex), Dungeon.heroClass);
+                                        while(isSlotIndexUsed(slotIndex)) {
+                                            SaveUtils.deleteSaveFromSlot(getSlotToLoad(slotIndex), Dungeon.heroClass);
+                                        }
                                         WndSaveSlotSelect.this.hide();
                                         GameScene.show(new WndSaveSlotSelect(_saving));
                                     }
@@ -221,17 +237,23 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
     private static boolean isSlotIndexUsed(int index) {
-        return SaveUtils.slotUsed(slotNameFromIndex(index), Dungeon.heroClass)
-                || SaveUtils.slotUsed(slotNameFromIndexAndMod(index), Dungeon.heroClass);
+        return SaveUtils.slotUsed(getSlotToLoad(index), Dungeon.heroClass);
     }
 
     private static String getSlotToLoad(int index) {
-        String slot = slotNameFromIndexAndMod(index);
+
+        String slot = SaveUtils.buildSlotFromTag(slotNameFromIndex(index));
+        if(SaveUtils.slotUsed(slot,Dungeon.heroClass)) {
+            return slot;
+        }
+
+        slot = slotNameFromIndexAndMod(index);
         if (SaveUtils.slotUsed(slot, Dungeon.heroClass)) {
             return slot;
-        } else {
-            return slotNameFromIndex(index);
         }
+
+        return slotNameFromIndex(index);
+
     }
 
     private static String windowText() {
@@ -262,15 +284,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
     protected void onSelect(int index) {
         if (saving) {
-            try {
-                Dungeon.save();
-                slot = slotNameFromIndexAndMod(index);
-                SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
-
-            } catch (Exception e) {
-                EventCollector.logException(e, "bug in save");
-                throw new TrackedRuntimeException(e);
-            }
+            Dungeon.save();
+            slot = SaveUtils.buildSlotFromTag(slotNameFromIndex(index));
+            SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
         }
 
         showAd(getSlotToLoad(index));
@@ -290,10 +306,12 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
     private void showActionResult(final boolean res) {
+        refreshWindow();
+
         if (res) {
-            Game.scene().add(new WndMessage("ok!"));
+            Game.addToScene(new WndMessage("ok!"));
         } else {
-            Game.scene().add(new WndMessage("something went wrong..."));
+            Game.addToScene(new WndMessage("something went wrong..."));
         }
     }
 
@@ -312,7 +330,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                             Iap iap = Game.instance().iap;
                             if (iap != null && iap.isReady() || BuildConfig.DEBUG) {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogShown");
-                                Hero.doOnNextAction = () -> Game.scene().add(new WndDontLikeAds());
+                                Hero.doOnNextAction = () -> Game.addToScene(new WndDontLikeAds());
                             } else {
                                 EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogNotShownIapNotReady");
                             }

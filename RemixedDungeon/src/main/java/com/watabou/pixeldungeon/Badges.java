@@ -276,11 +276,6 @@ public class Badges {
 			Bundle bundle = Bundle.read(input);
 			input.close();
 
-			if (bundle == null) {
-				global = new HashSet<>();
-				return;
-			}
-
 			global = restore(bundle);
 
 		} catch (FileNotFoundException e) {

@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -42,5 +43,10 @@ public class RingOfStoneWalking extends Artifact{
 			GLog.n( Game.getVar(R.string.RingOfStoneWalking_ImmuredInStone));
 			
 		}
+	}
+
+	@Override
+	public String bag() {
+		return Bag.KEYRING;
 	}
 }

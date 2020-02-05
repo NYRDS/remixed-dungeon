@@ -49,7 +49,7 @@ public class KindOfWeapon extends EquipableItem {
 		return Belongings.Slot.WEAPON;
 	}
 
-	public int damageRoll(Hero owner ) {
+	public int damageRoll(Char owner ) {
 		return Random.NormalIntRange( MIN, MAX );
 	}
 	
@@ -57,11 +57,11 @@ public class KindOfWeapon extends EquipableItem {
 		return 1f;
 	}
 	
-	public float speedFactor( Hero hero ) {
+	public float speedFactor(Char hero ) {
 		return 1f;
 	}
 	
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 	}
 
 	public String getAnimationClass() {

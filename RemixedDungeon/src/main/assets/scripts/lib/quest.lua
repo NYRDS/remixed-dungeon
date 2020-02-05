@@ -7,26 +7,30 @@
 
 local storage = require "scripts/lib/storage"
 
+local RPD = require "scripts/lib/commonClasses"
 --[[
     kills.kind = {questName1, questName2, guestName3}
  ]]
 
 
-local condintionsList = {}
-condintionsList.kills = {}
+local conditionsList = {}
+conditionsList.kills = {}
 
-condintionsList = storage.gameGet("__quest__condintionsList") or condintionsList
+conditionsList = storage.gameGet("__quest__conditionsList") or conditionsList
 
 
 local function questDataIndex(name)
     return "__quest_"..name
 end
 
-
 local quest = {}
 
+quest.debug = function(val)
+    conditionsList.debug = val
+end
+
 quest.state = function(name,state)
-    if state ~= nil then
+    if state then
         storage.gamePut(questDataIndex(name),state)
     end
     return storage.gameGet(questDataIndex(name))
@@ -39,14 +43,14 @@ quest.give = function(name, chr, conditions)
 
     quest.state(name, {hero = chr, conditions = conditions, kills = {}})
 
-    if conditions.kills ~= nil then
+    if conditions.kills then
         for _,kind in pairs(conditions.kills) do
-            condintionsList.kills[kind] = condintionsList.kills[kind] or {}
-            table.insert(condintionsList.kills[kind], name)
+            conditionsList.kills[kind] = conditionsList.kills[kind] or {}
+            conditionsList.kills[kind][name] = true
         end
     end
 
-    storage.gamePut("__quest__condintionsList",condintionsList)
+    storage.gamePut("__quest__conditionsList", conditionsList)
 
 end
 
@@ -55,27 +59,35 @@ quest.isGiven = function(name)
 end
 
 quest.isCompleted = function(name)
-    local state = quest.state(name)
-    return state.completed
+    local state = quest.state(name) or {}
+    return state.completed or false
 end
 
 quest.complete = function(name)
     local state = quest.state(name)
     state.completed = true
     quest.state(name,state)
+
+    for _, quests in pairs(conditionsList.kills) do
+        quests[name] = nil
+    end
 end
 
 quest.mobDied = function(mob,cause)
     local kind = mob:getMobClassName()
 
-    local affectedQuests = condintionsList.kills[kind] or {}
+    local affectedQuests = conditionsList.kills[kind] or {}
 
-    for _,questName in pairs(affectedQuests) do
+    for questName,_ in pairs(affectedQuests) do
         local state = quest.state(questName)
         state.kills[kind] = (state.kills[kind] or 0) + 1
+
+        if conditionsList.debug then
+            RPD.glog("quest: %s kills %s %d", questName, kind, state.kills[kind])
+        end
+
         quest.state(questName, state)
     end
-
 end
 
 return quest

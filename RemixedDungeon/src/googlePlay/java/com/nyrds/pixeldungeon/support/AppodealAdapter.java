@@ -4,7 +4,6 @@ package com.nyrds.pixeldungeon.support;
 import android.os.Build;
 
 import com.appodeal.ads.Appodeal;
-import com.appodeal.ads.AppodealNetworks;
 import com.appodeal.ads.utils.Log;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -48,26 +47,6 @@ public class AppodealAdapter {
             return;
         }
 
-        String[] disableNetworks = {AppodealNetworks.AMAZON_ADS,
-                AppodealNetworks.FACEBOOK,
-                AppodealNetworks.FLURRY,
-                AppodealNetworks.STARTAPP,
-                AppodealNetworks.MOPUB,
-                AppodealNetworks.MINTEGRAL,
-                AppodealNetworks.OGURY_PRESAGE,
-                AppodealNetworks.VUNGLE,
-                AppodealNetworks.YANDEX,
-                AppodealNetworks.CHARTBOOST,
-                AppodealNetworks.MY_TARGET,
-                AppodealNetworks.TAPJOY,
-                AppodealNetworks.INMOBI,
-                AppodealNetworks.SMAATO
-
-        };
-
-        for (String net : disableNetworks) {
-            Appodeal.disableNetwork(RemixedDungeon.instance(), net);
-        }
         Appodeal.disableLocationPermissionCheck();
 
 

@@ -74,9 +74,9 @@ return spell.init{
 
         local function hitCell(cell)
             local victim = RPD.Actor:findChar(cell)
-            if victim ~= nil then
+            if victim and victim ~= caster then
                 local dmg = caster:effectiveSTR() - 5;
-                if items.weapon ~= nil then
+                if items.weapon then
                     dmg = dmg + items.weapon:damageRoll(caster)
                 end
                 dmg = victim:defenseProc(caster, dmg)
@@ -87,7 +87,7 @@ return spell.init{
 
         RPD.forCellsAround(dst, hitCell)
 
-        RPD.playSound("dash.mp3")
+        RPD.playSound("dash")
         RPD.zapEffect(ownPos,dst,"dash")
         caster:getSprite():dash(ownPos,dst)
         caster:move(dst)

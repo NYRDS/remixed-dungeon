@@ -63,6 +63,12 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
         }
 
         @Override
+        public void onBannerShowFailed() {
+            EventCollector.logException("appodeal_no_banner");
+            AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
+        }
+
+        @Override
         public void onBannerClicked() {
 
         }

@@ -17,7 +17,6 @@
 
 package com.watabou.utils;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -44,6 +43,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
+
+import lombok.SneakyThrows;
 
 public class Bundle {
 
@@ -123,15 +124,12 @@ public class Bundle {
             }
 
             Class<?> cl = Class.forName(clName);
-            if (cl != null) {
-                Bundlable object = (Bundlable) cl.newInstance();
-                BundleHelper.UnPack(object, this);
-                object.restoreFromBundle(this);
-                return object;
-            } else {
-                EventCollector.logException("unknown class "+ clName);
-                return null;
-            }
+
+            Bundlable object = (Bundlable) cl.newInstance();
+            BundleHelper.UnPack(object, this);
+            object.restoreFromBundle(this);
+            return object;
+
         } catch (Exception e) {
             EventCollector.logException(e, clName);
             return null;
@@ -221,122 +219,90 @@ public class Bundle {
         return list;
     }
 
+    @SneakyThrows
     public void put(String key, boolean value) {
-        try {
-            data.put(key, value);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
-        }
+        data.put(key, value);
     }
 
+    @SneakyThrows
     public void put(String key, int value) {
-        try {
-            data.put(key, value);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
-        }
+        data.put(key, value);
     }
 
+    @SneakyThrows
     public void put(String key, float value) {
-        try {
-            if(Float.isInfinite(value)) {
-                value = Float.MAX_VALUE;
-                EventCollector.logException(key+" is infinity");
-            }
-            data.put(key, value);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
+        if(Float.isInfinite(value)) {
+            value = Float.MAX_VALUE;
+            EventCollector.logException(key+" is infinity");
         }
+        data.put(key, value);
     }
 
+    @SneakyThrows
     public void put(String key, String value) {
-        try {
-            data.put(key, value);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
-        }
+        data.put(key, value);
     }
 
+    @SneakyThrows
     public void put(String key, Bundle bundle) {
-        try {
-            data.put(key, bundle.data);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
-        }
+        data.put(key, bundle.data);
     }
 
+    @SneakyThrows
     public void put(String key, Bundlable object) {
         if (object != null && !object.dontPack()) {
-            try {
-                Bundle bundle = new Bundle();
-                bundle.put(CLASS_NAME, object.getClass().getName());
-                object.storeInBundle(bundle);
-                BundleHelper.Pack(object, bundle);
-                data.put(key, bundle.data);
-            } catch (JSONException e) {
-                throw new TrackedRuntimeException("key:" + key, e);
-            }
+            Bundle bundle = new Bundle();
+            bundle.put(CLASS_NAME, object.getClass().getName());
+            object.storeInBundle(bundle);
+            BundleHelper.Pack(object, bundle);
+            data.put(key, bundle.data);
         }
     }
 
+    @SneakyThrows
     public void put(String key, Enum<?> value) {
         if (value != null) {
-            try {
-                data.put(key, value.name());
-            } catch (JSONException e) {
-                throw new TrackedRuntimeException("key:" + key, e);
-            }
+            data.put(key, value.name());
         }
     }
 
+    @SneakyThrows
     public void put(String key, Integer[] array) {
-        try {
-            JSONArray jsonArray = new JSONArray();
-            for (int i = 0; i < array.length; i++) {
-                jsonArray.put(i, array[i]);
-            }
-            data.put(key, jsonArray);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
+        JSONArray jsonArray = new JSONArray();
+        for (int i = 0; i < array.length; i++) {
+            jsonArray.put(i, array[i]);
         }
+        data.put(key, jsonArray);
     }
 
+    @SneakyThrows
     public void put(String key, int[] array) {
-        try {
-            JSONArray jsonArray = new JSONArray();
-            for (int i = 0; i < array.length; i++) {
-                jsonArray.put(i, array[i]);
-            }
-            data.put(key, jsonArray);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
+        JSONArray jsonArray = new JSONArray();
+        for (int i = 0; i < array.length; i++) {
+            jsonArray.put(i, array[i]);
         }
+        data.put(key, jsonArray);
     }
 
+    @SneakyThrows
     public void put(String key, boolean[] array) {
-        try {
-            JSONArray jsonArray = new JSONArray();
-            for (int i = 0; i < array.length; i++) {
-                jsonArray.put(i, array[i]);
-            }
-            data.put(key, jsonArray);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
+        JSONArray jsonArray = new JSONArray();
+        for (int i = 0; i < array.length; i++) {
+            jsonArray.put(i, array[i]);
         }
+        data.put(key, jsonArray);
     }
 
+    @SneakyThrows
     public void put(String key, String[] array) {
-        try {
-            JSONArray jsonArray = new JSONArray();
-            for (int i = 0; i < array.length; i++) {
-                jsonArray.put(i, array[i]);
-            }
-            data.put(key, jsonArray);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
+        JSONArray jsonArray = new JSONArray();
+        for (int i = 0; i < array.length; i++) {
+            jsonArray.put(i, array[i]);
         }
+        data.put(key, jsonArray);
     }
 
+    @SneakyThrows
     public void put(String key, Collection<? extends Bundlable> collection) {
         JSONArray array = new JSONArray();
         for (Bundlable object : collection) {
@@ -348,25 +314,19 @@ public class Bundle {
                 array.put(bundle.data);
             }
         }
-        try {
-            data.put(key, array);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
-        }
+        data.put(key, array);
     }
 
+    @SneakyThrows
     public <T> void put(String key, Map<String, T> map) {
-        try {
-            JSONObject object = new JSONObject();
-            for (Map.Entry<String,T> entry: map.entrySet()) {
-                object.put(entry.getKey(),entry.getValue());
-            }
-            data.put(key,object);
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
+        JSONObject object = new JSONObject();
+        for (Map.Entry<String,T> entry: map.entrySet()) {
+            object.put(entry.getKey(),entry.getValue());
         }
+        data.put(key,object);
     }
 
+    @SneakyThrows
     public <T> Map<String,T> getMap(String key) {
         Map<String,T> ret = new HashMap<>();
 
@@ -374,21 +334,16 @@ public class Bundle {
             return ret;
         }
 
-        try {
+        JSONObject object = data.getJSONObject(key);
 
-            JSONObject object = data.getJSONObject(key);
-
-            Iterator<String> oi = object.keys();
-            while(oi.hasNext()) {
-                String name = oi.next();
-                //noinspection unchecked
-                ret.put(name, (T)object.get(name));
-            }
-
-            return ret;
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException("key:" + key, e);
+        Iterator<String> oi = object.keys();
+        while(oi.hasNext()) {
+            String name = oi.next();
+            //noinspection unchecked
+            ret.put(name, (T)object.get(name));
         }
+
+        return ret;
     }
 
     private static final int GZIP_BUFFER_SIZE = 4096;
@@ -428,25 +383,19 @@ public class Bundle {
         }
     }
 
+    @SneakyThrows
     public static void write(Bundle bundle, OutputStream stream) {
-        try {
-
-            if(BuildConfig.DEBUG) { //cleartext for debugging
-                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(stream));
-                writer.write(bundle.data.toString(2));
-                writer.close();
-                return;
-            }
-
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new GZIPOutputStream(stream, GZIP_BUFFER_SIZE)));
-            writer.write(bundle.data.toString());
+        if(BuildConfig.DEBUG) { //cleartext for debugging
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(stream));
+            writer.write(bundle.data.toString(2));
             writer.close();
-
-        } catch (Exception e) {
-            throw new TrackedRuntimeException("bundle write failed: %s\n", e);
+            return;
         }
-    }
 
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new GZIPOutputStream(stream, GZIP_BUFFER_SIZE)));
+        writer.write(bundle.data.toString());
+        writer.close();
+    }
 
     public static void addAlias(Class<?> cl, String alias) {
         aliases.put(alias, cl.getName());

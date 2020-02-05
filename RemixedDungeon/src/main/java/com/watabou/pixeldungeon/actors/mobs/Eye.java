@@ -98,7 +98,7 @@ public class Eye extends Mob {
     }
 
     @Override
-    protected float attackDelay() {
+    public float _attackDelay() {
         return 1.6f;
     }
 

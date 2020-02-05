@@ -46,7 +46,7 @@ public class WaterOfAwareness extends WellWater {
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		emitter.getParent().add( new Identification( DungeonTilemap.tileCenterToWorld( pos ) ) );
 		
-		hero.belongings.observe();
+		hero.getBelongings().observe();
 		
 		for (int i=0; i < Dungeon.level.getLength(); i++) {
 			

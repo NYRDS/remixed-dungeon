@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -46,8 +47,12 @@ public class MasteryItem extends Item {
 
 	public void choose( HeroSubClass way ) {
 
-		Hero hero = getUser();
-		detach( hero.belongings.backpack );
+		if(! (getUser() instanceof Hero) ) {
+			throw new TrackedRuntimeException("Mobs can't subclass yet");
+		}
+
+		Hero hero = (Hero)getUser();
+		detach( hero.getBelongings().backpack );
 
 		hero.setSubClass(way);
 
@@ -56,7 +61,7 @@ public class MasteryItem extends Item {
 
 		SpellSprite.show(hero, SpellSprite.MASTERY );
 		hero.getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
-		if (way == HeroSubClass.LICH){
+		if (way == HeroSubClass.LICH) {
 			int penalty = 2;
 			specialChooseMessage(penalty);
 			hero.STR(hero.STR() - penalty);

@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
@@ -46,7 +45,6 @@ import com.watabou.pixeldungeon.levels.painters.TunnelPainter;
 import com.watabou.pixeldungeon.levels.painters.VaultPainter;
 import com.watabou.pixeldungeon.levels.painters.WarehousePainter;
 import com.watabou.pixeldungeon.levels.painters.WeakFloorPainter;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
@@ -61,6 +59,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+
+import lombok.SneakyThrows;
 
 public class Room extends Rect implements Graph.Node, Bundlable {
 	
@@ -100,29 +100,23 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		
 		private Method paint;
 		
+		@SneakyThrows
 		Type(Class<? extends Painter> painter) {
 			if(painter==null) {
 				return;
 			}
-			
-			try {
-				paint = painter.getMethod( "paint", Level.class, Room.class );
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+
+			paint = painter.getMethod( "paint", Level.class, Room.class );
 		}
-		
+
+		@SneakyThrows
 		public void paint( Level level, Room room ) {
 			if(paint==null){
+				EventCollector.logException("no painter for " + this.name());
 				return;
 			}
-			try {
-				GLog.debug("room: %s", room.type.toString());
-				paint.invoke( null, level, room );
-			} catch (Exception e) {
-				EventCollector.logException(e);
-				throw new TrackedRuntimeException(e);
-			}
+
+			paint.invoke( null, level, room );
 		}
 	}
 
@@ -253,19 +247,11 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
-		bundle.put( "left",   left );
-		bundle.put( "top",    top );
-		bundle.put( "right",  right );
-		bundle.put( "bottom", bottom );
 		bundle.put( "type",   type.toString() );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		left   = bundle.getInt( "left" );
-		top    = bundle.getInt( "top" );
-		right  = bundle.getInt( "right" );
-		bottom = bundle.getInt( "bottom" );
 		type   = Type.valueOf( bundle.getString( "type" ) );
 	}
 	

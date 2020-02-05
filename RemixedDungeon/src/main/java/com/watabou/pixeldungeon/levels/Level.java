@@ -21,6 +21,7 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -103,6 +104,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.SneakyThrows;
 import lombok.var;
 
 public abstract class Level implements Bundlable {
@@ -166,7 +168,7 @@ public abstract class Level implements Bundlable {
 				return index;
 			}
 		}
-		throw new TrackedRuntimeException(new Exception("no exit at this cell"));
+		throw new ModError("no exit at"+ levelId + "["+ pos +"]");
 	}
 
 	@Nullable
@@ -862,7 +864,11 @@ public abstract class Level implements Bundlable {
 			}
 			cell = Random.Int(getLength());
 		}
-		while (!selectFrom[cell] || Dungeon.visible[cell] || Actor.findChar(cell) != null || getTopLevelObject(cell) != null);
+		while (!selectFrom[cell]
+				|| Dungeon.visible[cell]
+				|| Actor.findChar(cell) != null
+				|| getTopLevelObject(cell) != null
+				|| cell == entrance);
 		return cell;
 	}
 
@@ -1037,14 +1043,11 @@ public abstract class Level implements Bundlable {
 			heap = new Heap();
 			heap.pos = cell;
 			if (map[cell] == Terrain.CHASM || pit[cell]) {
-				if (GameScene.isSceneReady()) {
-					GameScene.discard(heap);
-				}
+				GameScene.discard(heap);
+
 			} else {
 				heaps.put(cell, heap);
-				if (GameScene.isSceneReady()) {
-					GameScene.add(heap);
-				}
+				GameScene.add(heap);
 			}
 
 		} else if (heap.type == Heap.Type.LOCKED_CHEST
@@ -1075,10 +1078,7 @@ public abstract class Level implements Bundlable {
 
 	public void addLevelObject(LevelObject obj) {
 		putLevelObject(obj);
-
-		if (GameScene.isSceneReady()) {
-			GameScene.add(obj);
-		}
+		GameScene.add(obj);
 	}
 
 	public void plant(Seed seed, int pos) {
@@ -1092,9 +1092,7 @@ public abstract class Level implements Bundlable {
 		Plant plant = seed.couch(pos);
 		putLevelObject(plant);
 
-		if (GameScene.isSceneReady()) {
-			GameScene.add(plant);
-		}
+		GameScene.add(plant);
 	}
 
 	public boolean remove(LevelObject levelObject) {
@@ -1624,14 +1622,12 @@ public abstract class Level implements Bundlable {
 		fillAreaWith(blobClass, cellX(cell), cellY(cell), xs, ys, amount);
 	}
 
+	@SneakyThrows
 	public void fillAreaWith(Class<? extends Blob> blobClass, int x, int y, int xs, int ys, int amount) {
 		Blob blob = Dungeon.level.blobs.get(blobClass);
 		if (blob == null) {
-			try {
-				blob = blobClass.newInstance();
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			blob = blobClass.newInstance();
+
 			GameScene.add(blob);
 		}
 
@@ -1742,6 +1738,16 @@ public abstract class Level implements Bundlable {
 
 	public Mob[] getCopyOfMobsArray() {
 		return mobs.toArray(new Mob[0]);
+	}
+
+	public int countMobsOfKind(String kind) {
+		int ret = 0;
+		for(Mob mob: mobs) {
+			if(mob.getEntityKind().equals(kind)) {
+				ret++;
+			}
+		}
+		return ret;
 	}
 
 }

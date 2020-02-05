@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -78,7 +79,7 @@ public class Brute extends Mob {
 		if (isAlive() && !enraged && hp() < ht() / 4) {
 			enraged = true;
 			spend( TICK );
-			if (Char.isVisible(this)) {
+			if (CharUtils.isVisible(this)) {
 				GLog.w( Game.getVar(R.string.Brute_Enraged), getName() );
 				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Brute_StaEnraged));
 			}

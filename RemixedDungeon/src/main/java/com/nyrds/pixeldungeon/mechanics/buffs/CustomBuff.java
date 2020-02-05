@@ -15,6 +15,11 @@ import com.watabou.utils.Bundle;
 import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaTable;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import lombok.var;
+
 public class CustomBuff extends Buff {
 
     private String name;
@@ -43,6 +48,7 @@ public class CustomBuff extends Buff {
             this.scriptFile = scriptFile;
 
             script = new LuaScript("scripts/buffs/" + scriptFile, this);
+            script.asInstance();
 
             LuaTable desc = script.run("buffDesc").checktable();
 
@@ -73,7 +79,7 @@ public class CustomBuff extends Buff {
 
     @Override
     public int icon() {
-        return script.runOptional("icon",icon).checkint();
+        return script.runOptional("icon",icon);
     }
 
     @Override
@@ -96,33 +102,33 @@ public class CustomBuff extends Buff {
     @Override
     public void detach() {
         super.detach();
-        script.run("detach");
+        script.runOptional("detach");
     }
 
     @Override
     public boolean act() {
-        script.run("act");
+        script.runOptional("act");
         return true;
     }
 
     @Override
     public int drBonus() {
-        return script.runOptional("drBonus",0).checkint();
+        return script.runOptional("drBonus",0);
     }
 
     @Override
     public int stealthBonus() {
-        return script.runOptional("stealthBonus",0).checkint();
+        return script.runOptional("stealthBonus",0);
     }
 
     @Override
     public float speedMultiplier() {
-        return (float) script.runOptional("speedMultiplier",1.f).checkdouble();
+        return script.runOptional("speedMultiplier",1.f);
     }
 
     @Override
     public int regenerationBonus() {
-        return script.runOptional("regenerationBonus",0).checkint();
+        return script.runOptional("regenerationBonus",0);
     }
 
     @Override
@@ -132,17 +138,22 @@ public class CustomBuff extends Buff {
 
     @Override
     public int defenceProc(Char defender, Char enemy, int damage) {
-        return script.runOptional("defenceProc", enemy, damage, damage).checkint();
+        return script.runOptional("defenceProc", damage, enemy, damage);
+    }
+
+    @Override
+    public int attackProc(Char attacker, Char defender, int damage) {
+        return script.runOptional("attackProc", damage, defender, damage);
     }
 
     @Override
     public String name() {
-        return StringsManager.maybeId(script.runOptional("name",name).checkjstring());
+        return StringsManager.maybeId(script.runOptional("name",name));
     }
 
     @Override
     public boolean dontPack() {
-        return script.runOptional("dontPack", false).checkboolean();
+        return script.runOptional("dontPack", false);
     }
 
     public Item getSource() {
@@ -152,4 +163,35 @@ public class CustomBuff extends Buff {
     public void setSource(Item source) {
         this.source = source;
     }
+
+    @Override
+    public Set<String> immunities() {
+        var table = script.runOptional("immunities", LuaEngine.emptyTable);
+
+        var ret = new HashSet<String>();
+
+        LuaEngine.forEach(table.checktable(), (key,val)->ret.add(val.checkjstring()));
+        return ret;
+    }
+
+    @Override
+    public Set<String> resistances() {
+        var table = script.runOptional("resistances", LuaEngine.emptyTable);
+
+        var ret = new HashSet<String>();
+
+        LuaEngine.forEach(table.checktable(), (key,val)->ret.add(val.checkjstring()));
+        return ret;
+    }
+
+    @Override
+    public String textureLarge() {
+        return script.runOptional("textureLarge",super.textureLarge());
+    }
+
+    @Override
+    public String textureSmall() {
+        return script.runOptional("textureSmall",super.textureSmall());
+    }
+
 }

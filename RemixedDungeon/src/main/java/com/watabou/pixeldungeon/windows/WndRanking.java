@@ -113,7 +113,7 @@ public class WndRanking extends WndTabbed {
 
 	private void reportError() {
 		hide();
-		Game.scene().add( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
+		Game.addToScene( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
 	}
 
 	private void createControls() {
@@ -158,11 +158,11 @@ public class WndRanking extends WndTabbed {
 			
 			float pos = title.bottom();
 			
-			if (Dungeon.challenges > 0) {
+			if (Dungeon.getChallenges() > 0) {
 				RedButton btnCatalogus = new RedButton( Game.getVar(R.string.WndRanking_StaChallenges) ) {
 					@Override
 					protected void onClick() {
-						Game.scene().add( new WndChallenges( Dungeon.challenges, false ) );
+						Game.addToScene( new WndChallenges(Dungeon.getChallenges(), false ) );
 					}
 				};
 				btnCatalogus.setRect( 0, pos + GAP, btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
@@ -243,12 +243,15 @@ public class WndRanking extends WndTabbed {
 			list = new ScrollableList(new Component());
 			add(list);
 
-			Belongings stuff = Dungeon.hero.belongings;
+			Belongings stuff = Dungeon.hero.getBelongings();
 			if (stuff.weapon != null) {
 				addItem( stuff.weapon );
 			}
 			if (stuff.armor != null) {
 				addItem( stuff.armor );
+			}
+			if (stuff.leftHand != null) {
+				addItem( stuff.leftHand );
 			}
 			if (stuff.ring1 != null) {
 				addItem( stuff.ring1 );
@@ -259,7 +262,7 @@ public class WndRanking extends WndTabbed {
 			
 			for(int i = 0;i<25;++i) {
 				Item qsItem = QuickSlot.getEarlyLoadItem(i);
-				if(qsItem != null && (Dungeon.hero.belongings.backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
+				if(qsItem != null && (stuff.backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
 					addItem(qsItem);
 				}
 			}
@@ -370,7 +373,7 @@ public class WndRanking extends WndTabbed {
 
 		@Override
 		protected void onClick() {
-			Game.scene().add( new WndItem( null, item ) );
+			Game.addToScene( new WndItem( null, item ) );
 		}
 	}
 }

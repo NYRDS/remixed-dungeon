@@ -24,6 +24,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
@@ -132,7 +133,7 @@ public class Goo extends Boss {
 			
 			((GooSprite)getSprite()).pumpUp();
 			
-			if (Char.isVisible(this)) {
+			if (CharUtils.isVisible(this)) {
 				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 				GLog.n(Game.getVar(R.string.Goo_Info1));
 			}

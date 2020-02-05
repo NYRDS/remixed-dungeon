@@ -134,7 +134,7 @@ public class Pickaxe extends Weapon {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		if (!bloodStained && defender instanceof Bat && (defender.hp() <= damage)) {
 			bloodStained = true;
             QuickSlot.refresh();

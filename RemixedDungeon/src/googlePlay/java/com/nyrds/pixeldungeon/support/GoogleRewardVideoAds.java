@@ -19,7 +19,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
-	private static final String GOOGLE_REWARD_VIDEO = "google reward video";
+	private static final String GOOGLE_REWARD_VIDEO = "google_reward_video";
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
 

@@ -11,7 +11,7 @@ local trap = require "scripts/lib/trap"
 
 return trap.init(function(cell, char, data)
     local hero = RPD.Dungeon.hero
-    local belongings = hero.belongings
+    local belongings = hero:getBelongings()
     local level = RPD.Dungeon.level
 
     local notRemoveClass = data or " "

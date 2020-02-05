@@ -24,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import lombok.SneakyThrows;
+
 public class RandomLevel extends RegularLevel {
 
 	@Packable
@@ -96,6 +98,7 @@ public class RandomLevel extends RegularLevel {
 	}
 
 	@Override
+	@SneakyThrows
 	public Mob createMob() {
 		try {
 			if (mLevelDesc.has("mobs")) {
@@ -117,8 +120,6 @@ public class RandomLevel extends RegularLevel {
 			}
 		} catch (JSONException e) {
 			throw ModdingMode.modException("invalid mob desc",e);
-		} catch (Exception e) {
-			EventCollector.logException(e);
 		}
 		return super.createMob();
 	}

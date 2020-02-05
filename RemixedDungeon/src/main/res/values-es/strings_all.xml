@@ -6,7 +6,7 @@
   <string name="Mana_Cost">Costo de Mana:</string>
   <string name="Spells_NotEnoughSP">No tienes la cantidad de mana necesaria para \"%1$s\".</string>
   <string name="SummonDeathling_Name">Invocar Necrófago</string>
-  <string name="SummonDeathling_Info">Invocar a un seguidor no-muerto. La vida y daño del necrófago se incrementan con el nivel del héroe.\n\nLímite de Invocaciones: %1$d(+1 por cada Nivel Mágico)</string>
+  <string name="SummonDeathling_Info">Invocar a un seguidor no-muerto. La vida y daño del necrófago se incrementan con el nivel del héroe.\n\nLímite de Invocaciones: %1$d (+1 por cada Nivel Mágico)</string>
   <string name="Ignite_Name">Incendiar</string>
   <string name="Ignite_Info">Incendia la ubicación seleccionada. Puede ser usado para quemar césped, personajes/enemigos y objetos.</string>
   <string name="RootSpell_Name">Raíces</string>
@@ -101,39 +101,58 @@
   <string name="Bishop_text">Días y noches rezo por ti mi hijo.</string>
   <string name="Bishop_lesser_bless">Bendición menor- %d g</string>
   <string name="Bishop_great_bless">Gran bendición %d g</string>
-  <string name="Bishop_remove_curse">Eliminar la maldición -%d g</string>
+  <string name="Bishop_remove_curse">Remover maldición - %d g</string>
   <string name="Bishop_not_interested">Salir</string>
-  <string name="Bishop_no_money">No puedes pagarlo.</string>
+  <string name="Bishop_no_money">No puedes costearte eso.</string>
   <string name="Bishop_bye">Rezaré por ti mi hijo.</string>
   <string name="Blessed_Info">Bendecido por el sacerdote legítimo</string>
   <string name="deco_candle_name">Vela</string>
   <string name="deco_candle_desc">Vela grande</string>
   <string name="Possess_Name">Posesión</string>
   <string name="Possess_Info">El oscuro arte del control mental permite al lanzador doblar la voluntad de la mayoría de las criaturas</string>
-  <string name="Possess_CantPossessSelf">No puedes poseerte</string>
+  <string name="Possess_PossessionFailed">La voluntad de %s es muy fuerte.</string>
+  <string name="Possess_Possessed">%s espera tus órdenes.</string>
+  <string name="Possess_MustTargetChar">Solo puedes usar Posesión con criaturas.</string>
+  <string name="Possess_CantPossessSelf">No puedes poseerte a tí mismo.</string>
+  <string name="Mob_StaControlledStatus">Este %s esta bajo posesión impía.</string>
   <string name="BlackCat_AiStatus">Este gato está haciendo cosas ordinarias de gato.</string>
-  <string name="Shopkeeper_Buy">Selecciona un objeto para vender</string>
+  <string name="Shopkeeper_Buy">Selecciona el objeto a comprar.</string>
   <string name="Shopkeeper_title">Tienda</string>
-  <string name="Shopkeeper_text">Bienvenido a la sucursal local de Pixel-Mart. \ N¿Cómo puedo ayudarlo?</string>
+  <string name="Shopkeeper_text">Bienvenido a la sucursal Pixel-Mart local.\n¿Cómo puedo ayudarte?</string>
   <string name="Shopkeeper_SellPrompt">Tengo cosas para vender</string>
   <string name="Shopkeeper_BuyPrompt">Deja ver tu inventario</string>
-  <string name="WndTradeItem_BuyN">Comprar %1$d por %2$dg</string>
-  <string name="WndTradeItem_BuyAll">Comprar todo para%dg</string>
+  <string name="WndTradeItem_BuyN">Comprar %1$d por %2$d g</string>
+  <string name="WndTradeItem_BuyAll">Comprar todo por %d g</string>
+  <string name="WndTradeItem_SellN">Vender %1$d por %2$dg</string>
+  <string name="WndBag_BuySubtitle">(Tienes %dg)</string>
   <string name="town_deco_weaponboard_name">Arma</string>
-  <string name="town_deco_weaponboard_desc">Una especie de arma colgada en el tablero.</string>
+  <string name="town_deco_weaponboard_desc">Algún tipo de arma colgada en la tabla.</string>
   <string name="town_deco_shieldboard_name">Escudos</string>
-  <string name="town_deco_shieldboard_desc">Varios escudos que cuelgan en el tablero. Todavía no está a la venta.</string>
+  <string name="town_deco_shieldboard_desc">Varios escudos colgando en una tablero. Todavia no están a la venta.</string>
   <string name="town_deco_armoronhanger_name">Armadura</string>
+  <string name="town_deco_armoronhanger_desc">Algún tipo de armadura en un colgador.</string>
   <string name="town_deco_potions_name">Pociones</string>
+  <string name="town_deco_potions_desc">Algunas cuantas pociones en el estante.</string>
   <string name="town_deco_wardrobe_name">Armario de madera</string>
-  <string name="town_deco_porch_name">Porche</string>
+  <string name="town_deco_wardrobe_desc">Un gran armario de madera.</string>
+  <string name="town_deco_porch_name">Pórtico</string>
+  <string name="town_deco_porch_desc">Un pórtico hecho de madera.</string>
   <string name="town_deco_common_bed_name">Cama</string>
+  <string name="town_deco_common_bed_desc">Una cama ordinaria.</string>
+  <string name="town_deco_wooden_table_name">Mesa de madera</string>
+  <string name="town_deco_wooden_table_desc">Esta es una mesa de madera bien hecha.</string>
+  <string name="town_deco_wooden_bench_name">Banco de madera</string>
+  <string name="town_deco_wooden_bench_desc">Un banco, hecho de madera. Se ve incómoda para sentarse.</string>
   <string name="town_deco_covered_table_name">Mesa</string>
+  <string name="town_deco_covered_table_desc">Una mesa de madera con mantel blanco</string>
   <string name="town_deco_pedestal_name">Pedestal</string>
-  <string name="town_deco_pedestal_desc">Pedestal con un libro sagrado en él.</string>
-  <string name="town_deco_shelf_name">Estantería</string>
-  <string name="town_deco_shelf_desc">Estantes vacíos.</string>
-  <string name="WndPriest_Instruction2_f">¡Bienvenido, hija mía, bienvenido a la santa iglesia del gran Señor el Profundo!</string>
+  <string name="town_deco_pedestal_desc">Un pedestal con un libro santo en él.</string>
+  <string name="town_deco_shelf_name">Estantes</string>
+  <string name="town_deco_shelf_desc">Unos estantes vacíos.</string>
+  <string name="WndPriest_Instruction2_m">Bienvenido hijo mío, bienvenido a la santa iglesia del gran Santa el Profundo Señor!</string>
+  <string name="WndPriest_Instruction2_f">Bienvenida hija mía, bienvenida a la santa iglesia del gran Santa el Profundo Señor!</string>
+  <string name="WndPriest_Instruction2">Si buscas auxilio, puedo proveerte servicio de curación por solo %d monedas de oro!\nSi estas en busca de Bendición, el perdón del Señor o estas maldecido,  por favor, reúnete con el Obispo en nuestra humilde iglesia.</string>
+  <string name="WndDontLikeAds_NotThisTime">No ésta vez.</string>
   <string name="Item_Info2">algo</string>
   <string name="NecromancerArmor_Info2">Cuando el Nigromante usa esta armadura, puede usar la habilidad especial \"Necrosis\", produce una enfermedad mágica, infectando a los que estén cerca, vivos o muertos.</string>
   <string name="NecromancerRobe_Info2">Esta túnica esta imbuida con magia y permite al Nigromante consumir las almas de lo monstruos caídos.</string>
@@ -175,7 +194,7 @@
   <string name="WandOfLightning_Name">Varita de Relámpago</string>
   <string name="WandOfLightning_Info">Esta varita evoca arcos mortales de electricidad, que hacen daño a varias criaturas que estén paradas cerca una de otra.</string>
   <string name="WandOfLightning_Info1">Te has suicidado con tu propia Varita de Relámpago...</string>
-  <string name="WandOfMagicMissile_Name">Varita de Misil Mágico</string>
+  <string name="WandOfMagicMissile_Name">Varita de Misil Magico</string>
   <string name="WandOfMagicMissile_Info">Esta varita lanza misiles de energía mágica pura, haciendo daño moderado a una criatura objetivo.</string>
   <string name="WandOfMagicMissile_ACDisenchant">DESENCANTAR</string>
   <string name="WandOfMagicMissile_Info1">Te has suicidado con tu propia Varita de Misil Mágico...</string>
@@ -267,6 +286,8 @@
   <string name="AmuletScene_Exit">Es hora de volver a casa</string>
   <string name="AmuletScene_Stay">Aún no he acabado</string>
   <string name="AmuletScene_Txt">Finalmente tienes el Amuleto de Yendor en tus manos. Usando su poder puedes dominar el mundo, traer prosperidad y paz a le gente o lo que sea. En cualquier caso, tu vida cambiará para siempre y este juego acabará aquí. O puedes seguir siendo un simple mortal un poco más.</string>
+  <string name="GameScene_Welcome">Bienvenido al nivel %d de Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">Bienvenido de vuelta al nivel %d de Remixed Dungeon!</string>
   <string name="GameScene_NightMode">¡Ten cuidado, ya que la mazmorra es aún más peligrosa de noche!</string>
   <string name="GameScene_Chasm">Tus pasos resuenan por la mazmorra</string>
   <string name="GameScene_Water">Oyes el agua salpicando a tu alrededor.</string>
@@ -295,7 +316,7 @@
   <string name="Journal_WellAwareness">Pozo de la Conciencia</string>
   <string name="Journal_WellTransmut">Pozo de la Transmutación</string>
   <string name="Journal_Alchemy">Olla de alquimia</string>
-  <string name="Journal_Garden">Jardín</string>
+  <string name="Journal_Garden">Jardin</string>
   <string name="Journal_Statue">Estatua con vida</string>
   <string name="Journal_Ghost">Fantasma triste</string>
   <string name="Journal_Wandmaker">Viejo creador de varas</string>
@@ -317,6 +338,7 @@
   <string name="WndGame_Ranking">Rankings</string>
   <string name="WndGame_Start">Empezar nueva partida</string>
   <string name="WndGame_menu">Menú Principal</string>
+  <string name="WndGame_Exit">Salir de Remixed Dungeon</string>
   <string name="WndGame_Return">Volver al juego</string>
   <string name="WndGame_Save">Guardar</string>
   <string name="WndGame_Load">Cargar</string>
@@ -427,6 +449,7 @@
   <string name="LloidsBeacon_Preventing">¡El fuerte aura mágica de este lugar te impide usar la baliza de Lloyd!</string>
   <string name="LloidsBeacon_Creatures">El aura psíquica de los enemigos cercanos te impide usar la baliza de Lloyd en este momento.</string>
   <string name="LloidsBeacon_Return">La baliza de Lloyd se fija correctamente a tu posición actual. Ahora puedes regresar aquí cuando quieras.</string>
+  <string name="LloidsBeacon_Set">\n\nÉste faro ha sido colocado en alguna parte del nivel %d de Remixed Dungeon.</string>
   <string name="Stylus_Name">pluma arcana</string>
   <string name="Stylus_ACInscribe">INSCRIBIR</string>
   <string name="Stylus_Info">Esta pluma arcana está hecha de una piedra dura y oscura. Puedes usarla para inscribir un glifo o una runa, pero no puedes elegir cuál será: la pluma lo decidirá por ti.</string>
@@ -451,7 +474,7 @@
   <string name="Weightstone_WndAccuracy">Puntería</string>
   <string name="Weightstone_WndCancel">Olvídalo</string>
   <string name="Bag_ACOpen">ABRIR</string>
-  <string name="Keyring_Name">llavero</string>
+  <string name="Keyring_Name">Llavero</string>
   <string name="Keyring_Info">Es un llavero de cobre que te permite mantener tus llaves separadas del resto de tus pertenencias.</string>
   <string name="ScrollHolder_Name">estuche para pergaminos</string>
   <string name="ScrollHolder_Info">Puedes poner cualquier cantidad de pergaminos en este estuche. Ahorra espacio en tu mochila y protege los pergaminos del fuego.</string>
@@ -460,7 +483,7 @@
   <string name="WandHolster_Name">funda para varita</string>
   <string name="WandHolster_Info">Esta delgada funda está hecha de cuero de un exótico animal. Permite llevar hasta %d varitas.</string>
   <string name="PotionBelt_Info">Este fuerte cinturón de cuero es capaz de guardar todas tus pociones mientras las protege de que no se rompan debido al frío.</string>
-  <string name="PotionBelt_Name">cinturón de pociones</string>
+  <string name="PotionBelt_Name">Cinturón de pociones</string>
   <string name="GoldenKey_Name">llave dorada</string>
   <string name="GoldenKey_Info">Las muescas en esta llave dorada son pequeñas y complejas. ¿Podría abrir algún tipo de cofre?</string>
   <string name="IronKey_Name">llave de hierro</string>
@@ -541,6 +564,7 @@
   <string name="TitleScene_Badges">Logros</string>
   <string name="TitleScene_About">Acerca de</string>
   <string name="TitleScene_InternalStorageLow">No hay espacio suficiente\n en la memoria interna\n ¡Podrías perder tu progreso!</string>
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS basado en la Fuente de Pixel Dungeon por Watabou.</string>
   <string name="AboutScene_Code">Código:</string>
   <string name="AboutScene_Graphics">Gráficos:</string>
   <string name="AboutScene_Music">Música:</string>
@@ -586,7 +610,7 @@
   <string name="WndSettings_TextScaleDefault">Fuente por defecto</string>
   <string name="WndSettings_ScaleUp">Escalar UI</string>
   <string name="WndSettings_Immersive">Modo inmersivo</string>
-  <string name="WndSettings_Music">Música</string>
+  <string name="WndSettings_Music">Musica</string>
   <string name="WndSettings_Sound">Sonido</string>
   <string name="WndSettings_Brightness">Brillo</string>
   <string name="WndSettings_SwitchPort">Cambiar a horizontal</string>
@@ -603,8 +627,9 @@
   <string name="AzuterronNPC_Gender">masculino</string>
   <string name="AzuterronNPC_Name_Objective">Desconocido</string>
   <string name="AzuterronNPC_Desc">Una misteriosa figura cubierta por niebla negra.</string>
+  <string name="AzuterronNPC_Quest_Start">Huh, por qué... oh, puedes verme, no es así? Eso significa que no eres uno de \"ellos\". Veo que no te llevas mucho con estos mounstros tampoco. Te cuento algo, si me apañas con un pequeño problemita, entonces te ofreceré mi asistencia. En alguna parte de este nivel encontrarás a una bestia de la oscuridad, un _Espíritu Traicionero_. Mátalo, toma su _corazón_ y vuelve conmigo. Y una cosa más, si estás interesado en comprar mis productos, no dudes en preguntar.</string>
   <string name="AzuterronNPC_Quest_Reminder">Ayudame y te ayudaré.</string>
-  <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te será útil.</string>
+  <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te sera útil.</string>
   <string name="Journal_Azuterron">Desconocido</string>
   <string name="TreacherousSpirit_Name">Espíritu traicionero</string>
   <string name="TreacherousSpirit_Gender">masculino</string>
@@ -710,11 +735,13 @@
   <string name="WndDonate_ruby">rubí</string>
   <string name="WndDonate_donate">donar:</string>
   <string name="WndDonate_notConnected">sin conexión :(</string>
+  <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis para todos y siempre lo será.\n\nSin embargo, puedes ayudarnos a hacer el juego mucho mejor.\n\nEn adición a nuestro cordial agradecimiento, recibirás algunos cosméticos.</string>
   <string name="WndDonate_silverDonate">donación de plata</string>
   <string name="WndDonate_goldDonate">donación de oro</string>
   <string name="WndDonate_rubyDonate">donación de rubí</string>
   <string name="WndDonate_silverDonateText">Cualquier donación ayudará al desarrollo del proyecto</string>
   <string name="WndDonate_goldDonateText">Gracias por tu ayuda</string>
+  <string name="WndDonate_rubyDonateText">Tu generosidad nos ayudará a seguir improvisando Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Además, elimina los anuncios y desbloquea a la cazadora desde el principio.</string>
   <string name="WndDonate_goldDonateText2">Además, desbloquea al elfo desde el principio.</string>
   <string name="WndDonate_rubyDonateText2"/>
@@ -820,9 +847,18 @@
   <string name="ShadowLord_Intro">¡Preparate!</string>
   <string name="ShadowLord_Death">Nooooo...</string>
   <string name="AllowStatisticsCollectionScene_Title">Uso de las estadísticas recolectadas</string>
+  <string name="AllowStatisticsCollectionScene_Request">Si tú lo permites, Remixed Dungeon reunirá estadísticas de uso. Esos datos se usarán para:\n
+    - Encontrar y arreglar fallos menores ( en caso de error crítico, el juego te pedirá explícitamente enviar un reporte )\n
+    - Mejoras en el balance del juego\n
+    - Arreglar problemas de rendimiento en dispositivos específicos\n
+    - Publicar datos estadísticos divertidos de vez en cuando\n
+    Puedes cambiar tu decisión en cualquier momento ( tocando el icono de barras en el menú principal )
+    </string>
   <string name="AllowStatisticsCollectionScene_Allow">Permitir</string>
   <string name="AllowStatisticsCollectionScene_Deny">Denegar</string>
   <string name="Darkness_Info">Parecen piezas de oscuridad eterna que flotan en el aire</string>
+  <string name="WndSelectLanguage_ImproveTranslation">Por favor, ayuda a mejorar las traducciones de Remixed Dungeon</string>
+  <string name="WndSelectLanguage_LinkToTranslationSite">Toca aquí para unirte al equipo de traducción de Remixed Dungeon</string>
   <string name="ArmoredStatue_Name">estatua animada</string>
   <string name="ArmoredStatue_Gender">femenino</string>
   <string name="ArmoredStatue_Name_Objective">estatua animada</string>
@@ -842,6 +878,7 @@
   <string name="WndSaveSlotSelect_Delete_Title">¿Estas seguro de querer eliminar esta partida guardada?</string>
   <string name="Hero_Name">el héroe</string>
   <string name="Hero_Name_Objective">el héroe</string>
+  <string name="Hero_Leave">Uno no simplemente se retira de Remixed Dungeon.</string>
   <string name="Hero_LevelUp">¡Ascenso!</string>
   <string name="Hero_NewLevel">¡Bienvenido al nivel %d! Ahora estás más centrado y sano. Te resulta más fácil golpear a los enemigos y esquivar su ataques.</string>
   <string name="Hero_YouNowHave">Ahora tienes %s</string>
@@ -870,7 +907,7 @@
   <string name="HeroClass_Hun">cazadora</string>
   <string name="HeroClass_Elf">elfo</string>
   <string name="HeroSubClass_NameGlad">gladiador</string>
-  <string name="HeroSubClass_DescGlad">Un ataque con éxito con un arma cuerpo a cuerpo permite al _Gladiador_ empezar un combo, con lo que cada golpe consecutivo causa más daño.</string>
+  <string name="HeroSubClass_DescGlad">Un ataque con exito con un arma cuerpo a cuerpo permite al _Gladiador_ empezar un combo, con lo que cada golpe consecutivo causa más daño.</string>
   <string name="HeroSubClass_NameBers">berserker</string>
   <string name="HeroSubClass_DescBers">Cuando está seriamente herido, el _Berserker_ entra en un estado de furia salvaje que aumente el daño causado.</string>
   <string name="HeroSubClass_NameWarL">brujo</string>
@@ -939,7 +976,7 @@
   <string name="IceKey_Name">llave de hielo</string>
   <string name="IceKey_Info">Esta llave parece estar hecha de hielo, aún así es tan dura como el acero.</string>
   <string name="WandOfIcebolt_Name">Varita de Hielo</string>
-  <string name="WandOfIcebolt_Info">Esta varita lanza un misil de hielo, causando un ligero daño a su objetivo. Tiene la posibilidad de ralentizar o congelar su objetivo.</string>
+  <string name="WandOfIcebolt_Info">Esta varita lanza un misil de hielo, causando un ligero daño daño a su objetivo. Tiene la posibilidad de ralentizar o congelar su objetivo.</string>
   <string name="WandOfIcebolt_Info1">Te has suicidado con tu propia Varita de Hielo...</string>
   <string name="Badges_Ice_Guardian_Slain">Guardián de Hielo Cazado</string>
   <string name="GoldenSword_Name">espada dorada</string>
@@ -1069,6 +1106,7 @@
   <string name="SacrificialSword_Info">A primera vista, esta vieja espada de bronce cubierta de óxido parece totalmente inútil. Pero en ella descansan algún tipo de poderes arcaicos. Esos poderes pueden convertir en tu esclavo a casi cualquier criatura. Solo necesitas encontrar la manera de despertarlos...</string>
   <string name="SacrificialSword_Gender">masculino</string>
   <string name="ScrollOfSummoning_Name">Pergamino de Invocación</string>
+  <string name="ScrollOfSummoning_Info">Cuando es leído en voz alta, este pergamino invocará a uno de los monstruos del actual nivel. Y si la voluntad del monstruo es suficientemente débil, este se convertirá en tu sirviente.</string>
   <string name="ScrollOfSummoning_Info_2">¡El monstruo ha respondido a tu llamada!</string>
   <string name="Using_Failed_Because_Magic">Una fuerza mágica te impide usar \"%s\".</string>
   <string name="Using_Failed_Because_Blind">No puedes usar \"%s\" estando cegado.</string>
@@ -1333,6 +1371,7 @@
   <string name="JarOfSouls_Name">tarro de almas</string>
   <string name="JarOfSouls_Gender">masculino</string>
   <string name="JarOfSouls_Name_Objective">tarro de almas</string>
+  <string name="JarOfSouls_Desc">Los brillantes ojos de un cráneo representado en esta vieja jarra, como la extraña energía que emite, te hacen sentir inquieto.</string>
   <string name="Lich_Name">Lich</string>
   <string name="Lich_Gender">masculino</string>
   <string name="Lich_Name_Objective">Lich</string>
@@ -1365,7 +1404,7 @@
   <string name="TrapWnd_Step">¿Realmente quieres pisar esta trampa? Probablemente mueras.</string>
   <string name="BadgesScene_Title">Tus logros</string>
   <string name="Badges_Info1">Logro conseguido: %s</string>
-  <string name="Badges_Info2">Nuev super logro: %s</string>
+  <string name="Badges_Info2">Nuevo super logro: %s</string>
   <string name="Badges_Info3">Nuevo logro: %s</string>
   <string name="Badges_MonsterSlain1">10 enemigos asesinados</string>
   <string name="Badges_MonsterSlain2">50 enemigos asesinados</string>
@@ -1470,6 +1509,7 @@
   <string name="Mods_AuthorSite">Sitio del autor:</string>
   <string name="Mods_AuthorEmail">E-mail del autor:</string>
   <string name="Mods_RestartRequired">Requiere reinicio</string>
+  <string name="Spells_NotTooFast">%s no esta listo para usarse todavía.</string>
   <string name="ElvenBow_Name">arco élfico</string>
   <string name="ElvenBow_Gender">masculino</string>
   <string name="ElvenBow_Info">Un gran ejemplo de artesanía élfica. Es claramente mas efectivo y preciso que un arco de madera normal.</string>
@@ -1538,6 +1578,7 @@
   <string name="TownGuardNPC_Desc">Un guardia normal.</string>
   <string name="TownGuardNPC_Message1">Camina.</string>
   <string name="TownGuardNPC_Message2">Gracias a los aventureros como usted, hay paz aquí arriba.</string>
+  <string name="TownGuardNPC_Message3">¿Crees que hay bastantes guardias en este pueblo? Bueno, eso es porque este es el único con un gigantesco calabozo infestado de monstruos, no es así?</string>
   <string name="TownsfolkNPC_Name">ciudadano</string>
   <string name="TownsfolkNPC_Gender">masculino</string>
   <string name="TownsfolkNPC_Name_Objective">ciudadano</string>
@@ -1559,10 +1600,10 @@
   <string name="ServiceManNPC_Desc">Un trabajador de los establecimientos locales.</string>
   <string name="TownShopkeeper_Name">comerciante</string>
   <string name="TownShopkeeper_Desc">Este tipo es un comerciante típico. Usted puede decir que ya conoce los precios.</string>
-  <string name="WndMovieTheatre_Watch">mirar una película</string>
+  <string name="WndMovieTheatre_Watch">mirar una pelicula</string>
   <string name="WndMovieTheatre_No">salir</string>
   <string name="WndMovieTheatre_Bye">¡Vuelve cuando quieras, siempre estaremos felices de verte!</string>
-  <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenido a nuestro cine! Ofrecemos un servicio especial, puedes ver una película de manera gratuita, y si lo ves todo !usted será recompensado con %d monedas de oro!</string>
+  <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenidos a nuestro cine! Brindamos un servicio especial, donde puedes ver una película gratis. ¡Y si observa todo esto, será recompensado con %d monedas de oro!</string>
   <string name="WndMovieTheatre_Title">Cine</string>
   <string name="WndMovieTheatre_Thank_You">¡Gracias por tu participación!</string>
   <string name="WndPriest_Heal">sanar - %d monedas de oro.</string>
@@ -1677,7 +1718,7 @@
   <string name="Halberd_Info">Un arma de asta con una hacha en el extremo del poste.</string>
   <string name="Halberd_Gender">femenino</string>
   <string name="WoodenCrossbow_Name">Ballesta de madera</string>
-  <string name="WoodenCrossbow_Info">Una básica ballesta de madera, parece que fue diseñada para disparar flechas de arco.</string>
+  <string name="WoodenCrossbow_Info">Una básica ballesta de madera, parece que fué diseñada para disparar flechas de arco.</string>
   <string name="WoodenCrossbow_Gender">masculino</string>
   <string name="CompositeCrossbow_Name">Ballesta compuesta</string>
   <string name="CompositeCrossbow_Info">Esta ballesta reforzada es una herramienta más eficaz comparandola con una hecha de madera.</string>
@@ -2119,14 +2160,149 @@
   <string name="Potion_ArrowMoisten">Has impregnado las flechas satisfactoriamente.</string>
   <string name="Potion_ItemFliesAway">%s se marcha volando de tus manos.</string>
   <string name="Potion_FoodRefreshed">%s ahora parece comestible.</string>
+  <string name="KindOfBow_SelectArrowKind">¿Qué flechas debería usar?</string>
+  <string name="KindOfBow_ChooseArrows">ELIJE FLECHAS</string>
+  <string name="BodyArmorSpell_Name">Armadura Corporal</string>
+  <string name="BodyArmorSpell_Info">Activa la fuerza de tus músculos reservada, haciéndolos temporalmente más fuertes, así aumentando enormemente tu armadura pero a coste de tu velocidad de movimiento.</string>
+  <string name="BodyArmorBuff_Name">Armadura Corporal</string>
+  <string name="BodyArmorBuff_Info">La Armadura es incrementada a coste de Velocidad de Movimiento.</string>
+  <string name="DieHardSpell_Name">Duro de matar</string>
+  <string name="DieHardSpell_Info">Temporalmente incrementará tu regeneración haciéndote un verdadero Duro de Matar.</string>
+  <string name="DieHardBuff_Name">Duro de matar</string>
+  <string name="DieHardBuff_Info">Tasa de Regeneración incrementada.</string>
+  <string name="SmashSpell_Name">Impacto</string>
+  <string name="SmashSpell_Info">Saltas hacia arriba creando un potente Impacto al golpear el piso, que temporalmente aturde a los enemigos alrededor y a la vez provoca daño físico.</string>
+  <string name="SmashSpell_NeedWeapon">Necesito un arma para este movimiento.</string>
+  <string name="DashSpell_Name">Embestida</string>
+  <string name="DashSpell_Info">Embiste hacia la dirección elegida colisionando con enemigos, provocando daños y causando \"Mutilado\".</string>
+  <string name="DashSpell_OnSelf">No puedo embestir ahí.</string>
+  <string name="DashSpell_TooFar">No puedo embestir tan lejos.</string>
+  <string name="CloakSpell_Name">Ocultarse</string>
+  <string name="CloakSpell_Info">Adéntrate en las sombras para volverte invisible. Reduce increíblemente tus probabilidades de ser detectado. No se puede usar mientras haya enemigos cerca.</string>
+  <string name="CloakSpell_EnemiesNearby">No puedes adentrarte en las sombras mientras haya enemigos cerca.</string>
+  <string name="CloakBuff_Name">Oculto</string>
+  <string name="CloakBuff_Info">Oculto en las sombras.</string>
+  <string name="TitleScene_Mods">Mods</string>
+  <string name="WndHero_Stealth">Sigilo</string>
+  <string name="WndHero_Awareness">Conciencia</string>
+  <string name="WndHero_AttackSkill">Habilidad de Ataque</string>
+  <string name="WndHero_DefenceSkill">Habilidad de Defensa</string>
+  <string name="town_deco_grave_name">Tumba</string>
+  <string name="town_deco_grave_desc">Una tumba común, con un grabado desgastado.</string>
   <string name="town_deco_pillar_name">Columna</string>
+  <string name="town_deco_pillar_desc">En sus días, este pilar sirvió como un excelente soporte y decoración.</string>
+  <string name="town_deco_wood_wall_name">Pared de troncos.</string>
+  <string name="town_deco_wood_wall_desc">Una pared de troncos con un aspecto robusto.</string>
   <string name="town_deco_entrance_name">Entrada</string>
+  <string name="town_deco_entrance_desc">Esta entrada lleva a los niveles superiores del calabozo.</string>
+  <string name="town_deco_exit_name">Salida</string>
+  <string name="town_deco_exit_desc">Se desconoce que te espera si bajas por estos pasillos.</string>
+  <string name="town_deco_tile_name">Baldosa</string>
+  <string name="town_deco_tile_desc">Estas baldosas han sido desgastadas por el tiempo.</string>
+  <string name="town_deco_snowdrift_name">Pila de nieve</string>
+  <string name="town_deco_snowdrift_desc">Es una pila de nieve destacablemente grande y por lo que se ve nadie la va a limpiar.</string>
+  <string name="town_deco_misc_name">Basura</string>
+  <string name="town_deco_misc_desc">Un montón de basura y bagatelas.</string>
+  <string name="town_deco_broken_roof_name">Techo roto</string>
+  <string name="town_deco_broken_roof_desc">Las tejas en este techo están agrirtadas y en necesidad de remplazo.</string>
+  <string name="town_deco_broken_wall_name">Pared rota</string>
+  <string name="town_deco_broken_wall_desc">Los troncos en esta pared se han podrido por mucho y han perdido su usual resiliencia.</string>
+  <string name="town_deco_mud_name">Barro</string>
+  <string name="town_deco_mud_desc">Suelo descongelado en esta area siempre fría.</string>
+  <string name="town_deco_stock_name">Almacén</string>
+  <string name="town_deco_stock_desc">Los suministros de comida son guardados aquí, al igual que un montón de cachivaches de todo tipos y colores.</string>
+  <string name="town_deco_barrel_name">Barril</string>
+  <string name="town_deco_barrel_desc">Un barril corriente, aún así no en las mejores condiciones.</string>
+  <string name="town_deco_hay_name">Heno</string>
+  <string name="town_deco_hay_desc">Un pequeño manojo de heno con un olor agradable.</string>
+  <string name="town_deco_firewood_name">Leña</string>
+  <string name="town_deco_firewood_desc">Una cosa esencial en estas severas heladas.</string>
+  <string name="town_deco_stakes_name">Estacas</string>
+  <string name="town_deco_stakes_desc">Estas varas afiladas tienen una apariencia intimidante, mientras de hecho son bastantes inútiles en sí.</string>
+  <string name="town_deco_fence_name">Cerca</string>
+  <string name="town_deco_fence_desc">Una cerca de madera cubierta en nieve.</string>
+  <string name="town_deco_pole_name">Poste</string>
+  <string name="town_deco_pole_desc">Un poste alto diseñado para atar el cordel.</string>
+  <string name="town_deco_rope_name">Cordel</string>
+  <string name="town_deco_rope_desc">Un cordel trenzado manualmente.</string>
+  <string name="town_deco_slush_name">Fango</string>
+  <string name="town_deco_slush_desc">La nieve se empezó a derretir, convirtiendo la zona alrededor en gachas.</string>
   <string name="town_deco_chest_name">Cofre</string>
+  <string name="town_deco_chest_desc">Un mueble conveniente para guardar varias joyas y otras cosas.</string>
+  <string name="town_deco_emptyboard_name">Estante</string>
+  <string name="town_deco_emptyboard_desc">El estante más estándar para poner las cosas en exhibición.</string>
+  <string name="town_deco_grandclock_name">Gran reloj</string>
+  <string name="town_deco_grandclock_desc">Un mecanismo bastante antiguo pero que sigue funcionando.</string>
+  <string name="town_deco_wall_beam_name">Viga</string>
+  <string name="town_deco_wall_beam_desc">Sirve como un confiable soporte para esta construcción.</string>
+  <string name="town_deco_wall_candles_name">Velas</string>
+  <string name="town_deco_wall_candles_desc">Velas extinguidas, de las cuales un aroma agradable todavía emana.</string>
+  <string name="town_deco_wooden_drawer_name">Gaveta</string>
+  <string name="town_deco_wooden_drawer_desc">Se ve interesante lo que contiene dentro.</string>
   <string name="town_deco_scrolls_name">Pergaminos</string>
+  <string name="town_deco_scrolls_desc">Este polvoriento estante está lleno de varios tipos de pergaminos y libros.</string>
+  <string name="town_deco_medicine_name">Medicina</string>
+  <string name="town_deco_medicine_desc">Matraces y otros ingredientes medicinales cuidadosamente colocados en estos estantes.</string>
+  <string name="town_deco_wooden_stairs_name">Escaleras</string>
+  <string name="town_deco_wooden_stairs_desc">Te hacen un poco más alto.</string>
+  <string name="town_deco_canvas_name">Lona</string>
+  <string name="town_deco_canvas_desc">Un grueso trozo de tela colgado en la pared.</string>
+  <string name="town_deco_projector_name">Proyector de películas</string>
+  <string name="town_deco_projector_desc">Un viejo dispositivo para reproducir filmes y entretener gente.</string>
+  <string name="town_deco_filmtape_name">Filme</string>
+  <string name="town_deco_filmtape_desc">Se ve interesante lo que contiene esta pieza.</string>
+  <string name="town_deco_painting_name">Pintura</string>
+  <string name="town_deco_painting_desc">Una pieza de arte con un aspecto hermoso.</string>
+  <string name="town_deco_curtains_name">Cortinas</string>
+  <string name="town_deco_curtains_desc">Mantiene toda la luz innecesaria a raya y también sirve de decoración.</string>
+  <string name="town_deco_rug_name">Alfombra</string>
+  <string name="town_deco_rug_desc">Diseñado con buen gusto.</string>
+  <string name="town_deco_trapdoor_name">Puertilla</string>
+  <string name="town_deco_trapdoor_desc">¿A dónde te llevará?</string>
+  <string name="town_deco_glass_stained_name">Vitral</string>
+  <string name="town_deco_glass_stained_desc">El autor de este vidrio probablemente le dedico bastante esfuerzo.</string>
+  <string name="town_deco_glass_name">Ventana ancha</string>
+  <string name="town_deco_glass_desc">Esta es más ancha que las demás ventanas y ciertamente deja entrar más luz.</string>
+  <string name="town_deco_counter_name">Mostrador</string>
+  <string name="town_deco_counter_desc">Mantiene una buena distancia entre tú y la persona detrás de él.</string>
+  <string name="town_deco_library_books_name">Material de lectura</string>
+  <string name="town_deco_library_books_desc">Preferiblemente mejor que los libros del calabozo.</string>
+  <string name="town_deco_wallpaper_name">Papel pintado</string>
+  <string name="town_deco_wallpaper_desc">Una gran solución decorativa para el lugar.</string>
+  <string name="town_deco_stones_name">Piedras</string>
+  <string name="town_deco_stones_desc">Solo una pila de piedras.</string>
+  <string name="town_deco_fireplace_name">Fogata</string>
+  <string name="town_deco_fireplace_desc">Genial para calentarse en un lugar frío como este.</string>
+  <string name="Welcome_Text_28_6">
+    remix.28.6\n
+    - Mecánicas del juego:\n
+    -- Habilidades especiales del Guerrero!\n
+    -- El hambre de los héroes se ha reducido\n
+    -- Hechizo de Posesión del Nigromante\n
+    -- Habilidad de Ocultarse del Ladrón\n
+    -- Nuevas insignias\n
+    - Modding:\n
+    -- Buffs programables customizables\n
+    -- GFX customizables\n
+    </string>
+  <string name="Badges_GamesPlayed5">5000 partidas jugadas</string>
+  <string name="Badges_PotionsCooked5">25 pociones cocinadas</string>
+  <string name="Badges_ItemLvl5">Objeto de nivel 15 adquirido</string>
+  <string name="Badges_FoodEaten5">60 piezas de comida consumidas</string>
+  <string name="Badges_StrengthAttained5">21 puntos de fuerza obtenidos</string>
+  <string name="Badges_LevelReached5">Nivel 30 alcanzado</string>
+  <string name="Badges_GoldCollected5">35000 de oro conseguidos</string>
+  <string name="Badges_MonsterSlain5">1000 enemigos asesinados</string>
+  <string name="Spells_NotInOwnBody">No puedes realizar %s mientras tu alma se encuentra separada de tu cuerpo.</string>
+  <string name="WndHero_Satiety">Saciedad</string>
+  <string name="Welcome_Text_29">
+    remix.29\n
+    - Renovación del pueblo!\n
+    </string>
   <string name="Ring_Gems_0">de diamante</string>
   <string name="Ring_Gems_1">de ópalo</string>
   <string name="Ring_Gems_2">de granate</string>
-  <string name="Ring_Gems_3">de rubí</string>
+  <string name="Ring_Gems_3">rubí</string>
   <string name="Ring_Gems_4">de amatista</string>
   <string name="Ring_Gems_5">de topacio</string>
   <string name="Ring_Gems_6">de ónix</string>
@@ -2164,13 +2340,34 @@
   <string name="Char_Kill_2">%s te ha matado...</string>
   <string name="Char_Defeat_0">%1$s derrotó a %2$s</string>
   <string name="Char_Defeat_1">%1$s derrotó a %2$s</string>
-  <string name="Char_Defeat_2">%1$s derrotó  a %2$s</string>
+  <string name="Char_Defeat_2">%1$s derrotó a %2$s</string>
   <string name="Char_StaDodged_0">esquivó</string>
   <string name="Char_StaDodged_1">esquivó</string>
   <string name="Char_StaDodged_2">esquivó</string>
   <string name="Dungeon_Tips_0">No sobreestimes tu fuerza, usa armas y armaduras que puedas manejar.</string>
-  <string name="Dungeon_Tips_1">No todas las puertas en el calabozo son visibles a primera vista. Si estás atascado, busca puertas ocultas.</string>
-  <string name="Dungeon_Tips_10">Pixel-Mart. Gastar dinero. Vivir más tiempo.</string>
+  <string name="Dungeon_Tips_1">No todas las puertas en el calabozo son visibles a primera vista. Si estas atascado, busca puertas escondidas.</string>
+  <string name="Dungeon_Tips_2">Recuerda que aumentar tu fuerza no es la única manera de acceder a mejor equipamiento, puedes ir por el otro lado bajando su requisito de fuerza con Pergaminos de Mejora.</string>
+  <string name="Dungeon_Tips_3">Puedes gastar tu oro en el pueblo, tiendas del calabozo o servicios.</string>
+  <string name="Dungeon_Tips_4">Atento con la Viscosidad!</string>
+  <string name="Dungeon_Tips_5">Pixel-Mart - todo lo que necesitas para una aventura exitosa!</string>
+  <string name="Dungeon_Tips_6">Identifica tus pociones y pergaminos tan pronto como puedas. No los uses en el momento que en serio los necesites.</string>
+  <string name="Dungeon_Tips_7">Estar hambriento no duele, pero estar famélico sí.</string>
+  <string name="Dungeon_Tips_8">Los ataques sorpresa tienen mejor chance de acertar. Por ejemplo, puedes emboscar a tu enemigo detrás de una puerta cerrada cuando sepas que se acerca.</string>
+  <string name="Dungeon_Tips_9">¡No dejes salir a el Tengu!</string>
+  <string name="Dungeon_Tips_10">Pixel-Mart. Gasta dinero. Vive por más.</string>
+  <string name="Dungeon_Tips_11">Cuando te ataquen varios monstruos al mismo tiempo, intenta retirarte detrás de una puerta.</string>
+  <string name="Dungeon_Tips_12">Si está ardiendo mientras levitas, no puedes apagar el fuego en el agua.</string>
+  <string name="Dungeon_Tips_13">No tiene sentido poseer más de un Ankh al mismo tiempo, porque los perderá al resucitar.</string>
+  <string name="Dungeon_Tips_14">¡PELIGRO! ¡La maquinaria pesada puede causar lesiones, pérdida de extremidades o la muerte!</string>
+  <string name="Dungeon_Tips_15">Pixel-Mart. Una vida más segura en el calabozo.</string>
+  <string name="Dungeon_Tips_16">Cuando actualizas un arma encantada, existe la posibilidad de destruir ese encantamiento.</string>
+  <string name="Dungeon_Tips_17">Un Pozo de transmutación puede darle un artículo que no se puede obtener de otra manera.</string>
+  <string name="Dungeon_Tips_18">La única forma de encantar un arma es actualizándola con una mejora de desplazamiento de arma.</string>
+  <string name="Dungeon_Tips_19">¡No se permiten armas en presencia de Su Majestad!</string>
+  <string name="Dungeon_Tips_20">Pixel-Mart. Precios especiales para cazadores de demonios!</string>
+  <string name="Dungeon_Tips_21">El texto está escrito en lenguaje demoníaco.</string>
+  <string name="Dungeon_Tips_22">El texto está escrito en lenguaje demoníaco.</string>
+  <string name="Dungeon_Tips_23">El texto está escrito en lenguaje demoníaco.</string>
   <string name="Challenges_Names_0">A régimen</string>
   <string name="Challenges_Names_1">La fe es mi armadura</string>
   <string name="Challenges_Names_2">Farmacofobia</string>
@@ -2237,6 +2434,9 @@
   <string name="Paralysis_Name_0">%s paralizante</string>
   <string name="Paralysis_Name_1">%s paralizante</string>
   <string name="Paralysis_Name_2">%s paralizante</string>
+  <string name="Piercing_Name_0">%s perforador.</string>
+  <string name="Piercing_Name_1">%s perforador.</string>
+  <string name="Piercing_Name_2">%s perforador.</string>
   <string name="Poison_Name_0">%s venenosa</string>
   <string name="Poison_Name_1">%s venenosa</string>
   <string name="Poison_Name_2">%s venenosa</string>
@@ -2264,7 +2464,7 @@
   <string name="Codex_Story_15">Arma vampiro - Un golpe exitoso, puede curar al parcialmente al héroe en base al daño producido al enemigo.</string>
   <string name="Codex_Story_16">Arma de la suerte - Puede ignorar por completo la armadura del enemigo y hacer mucho mas daño.</string>
   <string name="Codex_Story_17">Arma contundente - Un golpe exitoso, puede paralizar al objetivo.</string>
-  <string name="Codex_Story_18">Arma perforante -  Un golpe exitoso, puede dañar a los enemigos en línea recta detrás del objetivo.</string>
+  <string name="Codex_Story_18">Arma perforante -  Un golpe exitoso, puede dañar a los enemigos en linea recta detrás del objetivo.</string>
   <string name="Codex_Story_19">Arma venenosa - Un golpe exitoso, puede envenenar al objetivo.</string>
   <string name="Codex_Story_20">Arma congelante - Un golpe exitoso, puede ralentizar al enemigo y prevenir que se queme.</string>
   <string name="Codex_Story_21">Arma salvaje - Un golpe exitoso, puede dañar los enemigos cercanos al objetivo.</string>
@@ -2300,7 +2500,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
   <string name="Scroll_Runes_15">DAGAZ</string>
   <string name="HeroClass_GnollPerks_0">Gnoll comienza con 15 puntos de fuerza</string>
   <string name="HeroClass_GnollPerks_1">Gnoll comienza con 5 puntos de vida</string>
-  <string name="HeroClass_GnollPerks_2">Gnoll comienza sin ninguna armadura, pero con un tomagawk único</string>
+  <string name="HeroClass_GnollPerks_2">Los gnolls empiezan sin armadura pero con un tomahawk único.</string>
   <string name="HeroClass_GnollPerks_3">Gnoll no puede escribir o leer</string>
   <string name="HeroClass_GnollPerks_4">Los gnoll no atacan a otros gnolls sin ser provocados.</string>
   <string name="Potion_Colors_0">turquesa</string>
@@ -2315,4 +2515,47 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
   <string name="Potion_Colors_9">bistre</string>
   <string name="Potion_Colors_10">índigo</string>
   <string name="Potion_Colors_11">plateada</string>
+  <string name="Welcome_Text_29_1">remix.29.1\n
+     - Modding:\n
+     - Tasa de generación de elementos modificables:\n
+     - Traducciones:\n
+     - Traducción húngara agregada:\n
+     - Errores solucionados:\n</string>
+  <string name="town_deco_stone_wall_broken_name">Pared rota</string>
+  <string name="town_deco_stone_wall_broken_desc">Viejo muro de piedra, en mal estado</string>
+  <string name="Challenges_Names_6">Runas Prohibidas</string>
+  <string name="Challenges_Names_7">Pacifismo</string>
+  <string name="Welcome_Text_29_2">
+    remix.29.2\n
+    - Como se juega:\n
+    -- Nuevos Desafios:\n
+    --- Runas Prohibidas\n
+    --- Pacifismo\n
+    - Modding:\n
+    -- Artefactos Personalizables\n
+    - Errores corregidos\n
+    </string>
+  <string name="town_deco_crossroad_name">Señal de encrucijada</string>
+  <string name="town_deco_crossroad_desc">Pilar de madera en bruto con placas en forma de flecha con texto que se desvaneció hace mucho tiempo probablemente debido a las duras condiciones climáticas.</string>
+  <string name="ShieldBuffReady_Name">Listo</string>
+  <string name="ShieldBuffNotReady_Name">no Listo</string>
+  <string name="WoodenShield_name">Escudo de madera</string>
+  <string name="WoodenShield_desc">Un escudo de madera cruda es el escudo más simple disponible. Es redondo y puede bloquear algunos daños de vez en cuando.</string>
+  <string name="ToughShield_name">Escudo reforzado de cuero</string>
+  <string name="ToughShield_desc">Este escudo reforzado con correas de cuero se ve más resistente que el de madera. Puede bloquear más daños con seguridad.</string>
+  <string name="StrongShield_name">Escudo chapado en bronce</string>
+  <string name="StrongShield_desc">Este escudo rectangular chapado con láminas de bronce y decorado con tela de colores. Es significativamente más pesado, pero puede bloquear mucho más daño.</string>
+  <string name="RoyalShield_name">Escudo real</string>
+  <string name="RoyalShield_desc">Un escudo de metal completo. Sí, es pesado, pero puede brindarle la mejor protección.</string>
+  <string name="ShieldInfoTemplate">Este escudo bloqueará hasta un %1$d de daño recibido. Con %2$d %% de posibilidad. Tardará %3$3.1f segundos en recuperarse después de un bloqueo existoso.</string>
+  <string name="Belongings_CantWearBoth">No puedes equiparte %1$s y %2$s al mismo tiempo!</string>
+  <string name="Welcome_Text_29_3">
+    remix.29.3\n
+    - Como se juega:\n
+    -- Escudos!\n
+    - Modding:\n
+    -- Escudos Personalizables!\n
+    - Errores corregidos\n
+    </string>
+  <string name="ShieldStrTemplate">El portador del escudo debe tener al menos %1$d puntos de Fuerza para usarlo apropiadamente.</string>
 </resources>

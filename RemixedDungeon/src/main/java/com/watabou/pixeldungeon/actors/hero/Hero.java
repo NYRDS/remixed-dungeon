@@ -53,7 +53,6 @@ import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -63,12 +62,12 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
+import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -96,12 +95,9 @@ import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
-import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
-import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
@@ -169,14 +165,12 @@ public class Hero extends Char {
 
 	public boolean restoreHealth = false;
 
-	public MissileWeapon rangedWeapon = null;
-	public Belongings belongings;
+	private Belongings belongings;
 
 	private int STR;
 
 	private float awareness;
 
-	private int lvl = Scrambler.scramble(1);
 	private int magicLvl = Scrambler.scramble(1);
 	private int exp = Scrambler.scramble(0);
 	private int sp = Scrambler.scramble(0);
@@ -318,19 +312,6 @@ public class Hero extends Char {
 		return belongings.armor == null ? 0 : belongings.armor.tier;
 	}
 
-	public boolean bowEquipped() {
-		return belongings.weapon instanceof KindOfBow;
-	}
-
-	public boolean shoot(Char enemy, MissileWeapon wep) {
-
-		rangedWeapon = wep;
-		boolean result = attack(enemy);
-		rangedWeapon = null;
-
-		return result;
-	}
-
 	@Override
 	public int attackSkill(Char target) {
 
@@ -347,7 +328,7 @@ public class Hero extends Char {
 			accuracy *= 1.2;
 		}
 
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
+		KindOfWeapon wep = getActiveWeapon();
 		if (wep != null) {
 			return (int) (attackSkill * accuracy * wep.accuracyFactor(this));
 		} else {
@@ -394,18 +375,6 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public int damageRoll() {
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
-		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
-
-		if (wep != null) {
-			dmg += wep.damageRoll(this);
-		}
-
-		return dmg;
-	}
-
-	@Override
 	public float speed() {
 
 		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;
@@ -418,17 +387,6 @@ public class Hero extends Char {
 			float speed = super.speed();
 			return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
 
-		}
-	}
-
-	public float attackDelay() {
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
-		if (wep != null) {
-
-			return wep.speedFactor(this);
-
-		} else {
-			return 1f;
 		}
 	}
 
@@ -557,6 +515,7 @@ public class Hero extends Char {
 		return false;
 	}
 
+	@Override
 	public void busy() {
 		ready = false;
 	}
@@ -716,6 +675,11 @@ public class Hero extends Char {
 				GLog.i(getHeroYouNowHave(), item.name());
 			}
 		}
+	}
+
+	@Override
+	public Char makeClone() {
+		return new MirrorImage(this);
 	}
 
 	private boolean actOpenChest(CharAction.OpenChest action) {
@@ -940,48 +904,8 @@ public class Hero extends Char {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage) {
-		KindOfWeapon wep = rangedWeapon != null ? rangedWeapon : belongings.weapon;
-		if (wep != null) {
 
-			wep.proc(this, enemy, damage);
-
-			switch (subClass) {
-				case GLADIATOR:
-					if (wep instanceof MeleeWeapon) {
-						damage += Buff.affect(this, Combo.class).hit(enemy, damage);
-					}
-					break;
-				case BATTLEMAGE:
-					if (wep instanceof Wand) {
-						Wand wand = (Wand) wep;
-						if (wand.curCharges() < wand.maxCharges() && damage > 0) {
-
-							wand.curCharges(wand.curCharges() + 1);
-							QuickSlot.refresh();
-
-							ScrollOfRecharging.charge(this);
-						}
-						damage += wand.curCharges();
-					}
-					break;
-				case SNIPER:
-					if (rangedWeapon != null) {
-						Buff.prolong(enemy, SnipersMark.class, attackDelay() * 1.1f);
-					}
-					break;
-				case SHAMAN:
-					if (wep instanceof Wand) {
-						Wand wand = (Wand) wep;
-						if (wand.affectTarget()) {
-							if (Random.Int(4) == 0) {
-								wand.zapCell(this, enemy.getPos());
-							}
-						}
-					}
-					break;
-				default:
-			}
-		}
+		damage = super.attackProc(enemy,damage);
 
 		if (!(enemy instanceof NPC)) {
 			for (Item item : belongings) {
@@ -1009,15 +933,6 @@ public class Hero extends Char {
 				if (!(src instanceof Hunger)) {
 					((IChaosItem) item).ownerTakesDamage(dmg);
 				}
-			}
-		}
-	}
-
-	public void checkIfFurious() {
-		if (subClass == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
-			if (!hasBuff(Fury.class)) {
-				Buff.affect(this, Fury.class);
-				readyAndIdle();
 			}
 		}
 	}
@@ -1406,6 +1321,11 @@ public class Hero extends Char {
 		}
 	}
 
+	@Override
+	protected float _attackDelay() {
+		return 1f;
+	}
+
 	public void clearActions() {
 		curAction = null;
 		lastAction = null;
@@ -1548,18 +1468,7 @@ public class Hero extends Char {
 
 		boolean smthFound = false;
 
-		int positive = 0;
-		int negative = 0;
-
-		for (Buff buff : buffs(RingOfDetection.Detection.class)) {
-			int bonus = buff.level();
-			if (bonus > positive) {
-				positive = bonus;
-			} else if (bonus < 0) {
-				negative += bonus;
-			}
-		}
-		int distance = 1 + positive + negative;
+		int distance = 1 + buffLevel(RingOfDetection.Detection.class);
 
 		float searchLevel = intentional ? (2 * awareness - awareness * awareness) : awareness;
 		if (distance <= 0) {
@@ -1677,14 +1586,6 @@ public class Hero extends Char {
 		CharSprite sprite = super.getSprite();
 		sprite.setVisible(true);
 		return sprite;
-	}
-
-	public int lvl() {
-		return Scrambler.descramble(lvl);
-	}
-
-	private void lvl(int lvl) {
-		this.lvl = Scrambler.scramble(lvl);
 	}
 
 	public static String getHeroYouNowHave() {
@@ -1897,7 +1798,8 @@ public class Hero extends Char {
 		setSkillLevel(skillLevel() + 1);
 	}
 
-    @Override
+    @NotNull
+	@Override
     public Belongings getBelongings() {
         return belongings;
     }

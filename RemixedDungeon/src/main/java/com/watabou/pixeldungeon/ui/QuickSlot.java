@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -232,10 +233,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     private void refreshSelf() {
         if(quickslotItem != null && !(quickslotItem instanceof Spell.SpellItem)) {
             Item item;
+            Belongings belongings = Dungeon.hero.getBelongings();
             if(quickslotItem.quantity()>0) {
-                item = Dungeon.hero.belongings.checkItem(quickslotItem);
+                item = belongings.checkItem(quickslotItem);
             } else {
-                item = Dungeon.hero.belongings.getItem(quickslotItem.getClassName());
+                item = belongings.getItem(quickslotItem.getClassName());
             }
             if(item != null) {
                 quickslotItem = item.quickSlotContent();
@@ -386,7 +388,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         prompt.camera = uiCamera;
         prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
 
-        Game.scene().add(prompt);
+        Game.addToScene(prompt);
     }
 
     public Item getQuickslotItem() {

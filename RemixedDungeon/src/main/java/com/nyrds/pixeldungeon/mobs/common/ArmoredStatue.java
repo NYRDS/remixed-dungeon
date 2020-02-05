@@ -9,10 +9,12 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
@@ -61,7 +63,7 @@ public class ArmoredStatue extends Mob {
 	
 	@Override
     public boolean act() {
-		if (!isPet() && Char.isVisible(this)) {
+		if (!isPet() && CharUtils.isVisible(this)) {
 			Journal.add( Journal.Feature.STATUE.desc() );
 		}
 		return super.act();
@@ -123,10 +125,12 @@ public class ArmoredStatue extends Mob {
 	@NotNull
 	public Armor getArmor() {
 		if(armor==null) {
+			Item armorCandidate;
 			do {
-				armor = (Armor) Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
-			} while (armor == null || armor.level() < 0);
+				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
+			} while (!(armorCandidate instanceof Armor) || armorCandidate.level() < 0);
 
+			armor = (Armor) armorCandidate;
 			armor.identify();
 			armor.inscribe(Armor.Glyph.random());
 		}

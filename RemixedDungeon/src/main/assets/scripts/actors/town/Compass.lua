@@ -17,7 +17,7 @@ local time = 0
 return actor.init({
     act = function()
         local hero = RPD.Dungeon.hero
-        local belongings = hero.belongings
+        local belongings = hero:getBelongings()
 
         time = time + 1
 

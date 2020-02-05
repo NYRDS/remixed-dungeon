@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -226,7 +227,7 @@ public class King extends Boss {
 		public void die(NamedEntityKind cause) {
 			super.die( cause );
 			
-			if (Char.isVisible(this)) {
+			if (CharUtils.isVisible(this)) {
 				Sample.INSTANCE.play( Assets.SND_BONES );
 			}
 		}

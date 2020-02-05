@@ -20,7 +20,7 @@ public class MobSpawner {
 		return mob;
 	}
 
-	static public void spawnJarOfSouls(Level level, int position) {
+	static public void spawnJarOfSouls(@NotNull Level level, int position) {
 		Mob mob = new JarOfSouls();
 		mob.setPos(position);
 		mob.setState(MobAi.getStateByClass(Wandering.class));

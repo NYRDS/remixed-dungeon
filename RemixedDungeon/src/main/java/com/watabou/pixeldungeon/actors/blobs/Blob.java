@@ -17,13 +17,14 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.Bundle;
+
+import lombok.SneakyThrows;
 
 public class Blob extends Actor implements NamedEntityKind {
 
@@ -179,22 +180,17 @@ public class Blob extends Actor implements NamedEntityKind {
 	}
 
 	@SuppressWarnings("unchecked")
+	@SneakyThrows
 	public static <T extends Blob> T seed(int cell, int amount, Class<T> type) {
-		try {
-
-			T gas = (T) Dungeon.level.blobs.get(type);
-			if (gas == null) {
-				gas = type.newInstance();
-				Dungeon.level.blobs.put(type, gas);
-			}
-
-			gas.seed(cell, amount);
-
-			return gas;
-
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
+		T gas = (T) Dungeon.level.blobs.get(type);
+		if (gas == null) {
+			gas = type.newInstance();
+			Dungeon.level.blobs.put(type, gas);
 		}
+
+		gas.seed(cell, amount);
+
+		return gas;
 	}
 
 

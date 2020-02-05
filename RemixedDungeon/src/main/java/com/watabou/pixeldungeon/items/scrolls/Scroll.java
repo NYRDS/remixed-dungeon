@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -33,8 +32,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.HashSet;
+
+import lombok.SneakyThrows;
 
 public abstract class Scroll extends Item implements UnknownItem {
 
@@ -122,13 +125,11 @@ public abstract class Scroll extends Item implements UnknownItem {
 		image = handler.index( this );
 		rune  = Game.getVars(R.array.Scroll_Runes)[ItemStatusHandler.indexByImage(image,images)];
 	}
-	
+
+	@NotNull
+	@SneakyThrows
 	static public Scroll createRandomScroll(){
-		try {
-			return (Scroll) Random.element(inscribableScrolls).newInstance();
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
-		}
+		return (Scroll) Random.element(inscribableScrolls).newInstance();
 	}
 	
 	@Override
@@ -146,7 +147,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 				GLog.w( Game.getVar(R.string.Scroll_Blinded) );
 			} else {
 				setUser(hero);
-				curItem = detach( hero.belongings.backpack );
+				curItem = detach( hero.getBelongings().backpack );
 				
 				doRead();
 			}

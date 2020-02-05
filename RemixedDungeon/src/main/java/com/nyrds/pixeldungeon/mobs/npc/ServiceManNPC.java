@@ -42,7 +42,7 @@ public class ServiceManNPC extends ImmortalNPC {
     public boolean interact(final Char hero) {
 
         if (EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-            Game.scene().add(new WndEuConsent() {
+            Game.addToScene(new WndEuConsent() {
                 @Override
                 public void done() {
                     AdsUtils.initRewardVideo();

@@ -35,7 +35,7 @@ import java.util.ArrayList;
 
 public class TomeOfMastery extends MasteryItem {
 
-	public static final String AC_READ                 = "TomeOfMastery_ACRead";
+	public static final String AC_READ = "TomeOfMastery_ACRead";
 
 	{
 		stackable = false;
@@ -86,8 +86,8 @@ public class TomeOfMastery extends MasteryItem {
 
 			setUser(hero);
 			
-			HeroSubClass way1 = null;
-			HeroSubClass way2 = null;
+			HeroSubClass way1;
+			HeroSubClass way2;
 			switch (hero.getHeroClass()) {
 			case WARRIOR:
 				way1 = HeroSubClass.GLADIATOR;
@@ -116,9 +116,7 @@ public class TomeOfMastery extends MasteryItem {
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );
 			
 		} else {
-			
 			super.execute( hero, action );
-			
 		}
 	}
 }

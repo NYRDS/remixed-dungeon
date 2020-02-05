@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.items.weapon;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -57,6 +56,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import lombok.EqualsAndHashCode;
+import lombok.SneakyThrows;
 
 @EqualsAndHashCode(callSuper = true)
 public class Weapon extends KindOfWeapon {
@@ -89,7 +89,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		
 		if (getEnchantment() != null) {
 			getEnchantment().proc( this, attacker, defender, damage );
@@ -142,7 +142,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public float speedFactor( Hero hero ) {
+	public float speedFactor(Char hero ) {
 
 		int encumbrance = STR - hero.effectiveSTR();
 		if (this instanceof MissileWeapon && hero.getHeroClass() == HeroClass.HUNTRESS) {
@@ -155,7 +155,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public int damageRoll( Hero hero ) {
+	public int damageRoll(Char hero ) {
 		
 		int damage = super.damageRoll( hero );
 		int exStr = hero.effectiveSTR() - STR;
@@ -297,12 +297,10 @@ public class Weapon extends KindOfWeapon {
 		}
 		
 		@SuppressWarnings("unchecked")
+		@SneakyThrows
+		@NotNull
 		public static Enchantment random() {
-			try {
-				return ((Class<Enchantment>)enchants[ Random.chances( chances ) ]).newInstance();
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			return ((Class<Enchantment>)enchants[ Random.chances( chances ) ]).newInstance();
 		}
 	}
 }

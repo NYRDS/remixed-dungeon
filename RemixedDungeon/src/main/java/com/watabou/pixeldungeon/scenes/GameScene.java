@@ -39,6 +39,7 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.DummyEmitter;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -88,6 +89,7 @@ import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
@@ -158,13 +160,17 @@ public class GameScene extends PixelScene {
 
     @Override
     public void create() {
-        playLevelMusic();
-
         Level level = Dungeon.level;
 
         if(level==null) {
             throw new TrackedRuntimeException("Trying to create GameScene when level is nil!");
         }
+
+        if(Dungeon.hero==null) {
+            throw new TrackedRuntimeException("Trying to create GameScene when hero is nil!");
+        }
+
+        playLevelMusic();
 
         RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().classIndex());
 
@@ -565,32 +571,24 @@ public class GameScene extends PixelScene {
         if (isSceneReady()) {
             Actor.add(gas);
             addBlobSprite(gas);
-        } else {
-            EventCollector.logException();
         }
     }
 
     public static void add(LevelObject obj) {
         if (isSceneReady()) {
             scene.addLevelObjectSprite(obj);
-        } else {
-            throw new TrackedRuntimeException(obj.toString());
         }
     }
 
     public static void add(Heap heap) {
         if (isSceneReady()) {
             scene.addHeapSprite(heap);
-        } else {
-            EventCollector.logException();
         }
     }
 
     public static void discard(Heap heap) {
         if (isSceneReady()) {
             scene.addDiscardedSprite(heap);
-        } else {
-            EventCollector.logException();
         }
     }
 
@@ -644,13 +642,14 @@ public class GameScene extends PixelScene {
         return (SpellSprite) scene.spells.recycle(SpellSprite.class);
     }
 
+    @NotNull
     public static Emitter emitter() {
-        if (scene != null) {
+        if (isSceneReady()) {
             Emitter emitter = (Emitter) scene.emitters.recycle(Emitter.class);
             emitter.revive();
             return emitter;
         } else {
-            return null;
+            return new DummyEmitter();
         }
     }
 
@@ -665,32 +664,24 @@ public class GameScene extends PixelScene {
     public static void pickUp(Item item) {
         if(isSceneReady()) {
             scene.toolbar.pickup(item);
-        } else {
-            EventCollector.logException();
         }
     }
 
     public static void updateMap() {
         if (isSceneReady()) {
             scene.baseTiles.updateAll();
-        } else {
-            EventCollector.logException();
         }
     }
 
     public static void updateMap(int cell) {
         if (isSceneReady()) {
             scene.baseTiles.updateCell(cell, Dungeon.level);
-        } else {
-            EventCollector.logException();
         }
     }
 
     public static void discoverTile(int pos) {
         if (isSceneReady()) {
             scene.baseTiles.discover(pos);
-        } else {
-            EventCollector.logException();
         }
     }
 
@@ -700,15 +691,13 @@ public class GameScene extends PixelScene {
     }
 
     public static void afterObserve() {
-        if (scene != null && scene.sceneCreated) {
+        if (isSceneReady() && scene.sceneCreated) {
 
             scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
 
             for (Mob mob : Dungeon.level.mobs) {
                 mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
             }
-        } else {
-            EventCollector.logException();
         }
     }
 
@@ -740,7 +729,9 @@ public class GameScene extends PixelScene {
 
     public static void selectCell(CellSelector.Listener listener) {
         cellSelector.listener = listener;
-        scene.prompt(listener.prompt());
+        if(scene!=null) {
+            scene.prompt(listener.prompt());
+        }
     }
 
     private static boolean cancelCellSelector() {
@@ -754,7 +745,7 @@ public class GameScene extends PixelScene {
 
     public static WndBag selectItemFromBag(WndBag.Listener listener, Bag bag, Mode mode, String title) {
         cancelCellSelector();
-        WndBag wnd = new WndBag(Dungeon.hero.belongings, bag, listener, mode, title);
+        WndBag wnd = new WndBag(Dungeon.hero.getBelongings(), bag, listener, mode, title);
         scene.add(wnd);
         return wnd;
     }
@@ -779,15 +770,11 @@ public class GameScene extends PixelScene {
 
     static boolean cancel() {
         if (Dungeon.hero != null && (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth)) {
-
             Dungeon.hero.curAction = null;
             Dungeon.hero.restoreHealth = false;
             return true;
-
         } else {
-
             return cancelCellSelector();
-
         }
     }
 
@@ -852,8 +839,6 @@ public class GameScene extends PixelScene {
 
     public static Image getTile(int cell) {
         Image ret;
-
-        GameScene scene = GameScene.scene;
 
         if(scene.roofTiles!=null) {
             ret = scene.roofTiles.tile(cell);

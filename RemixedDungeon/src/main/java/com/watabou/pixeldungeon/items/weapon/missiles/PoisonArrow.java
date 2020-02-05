@@ -30,7 +30,7 @@ public class PoisonArrow extends Arrow {
 	}
 
 	@Override
-	public void proc(Char attacker, Char defender, int damage) {
+	public void attackProc(Char attacker, Char defender, int damage) {
 
 		int poisonFactor = 1;
 
@@ -43,6 +43,6 @@ public class PoisonArrow extends Arrow {
 					com.watabou.pixeldungeon.actors.buffs.Poison
 							.durationFactor(defender) * poisonFactor);
 		}
-		super.proc(attacker, defender, damage);
+		super.attackProc(attacker, defender, damage);
 	}
 }

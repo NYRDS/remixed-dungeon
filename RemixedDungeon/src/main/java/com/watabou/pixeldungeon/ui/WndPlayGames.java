@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Google._PlayGames;
+import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Preferences;
@@ -33,14 +33,18 @@ class WndPlayGames extends Window {
 
         y += listTitle.height() + GAP;
 
-        CheckBox usePlayGames = new CheckBox(Game.getVar(R.string.WndPlayGames_Use), Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
+        CheckBox usePlayGames = new CheckBox(Game.getVar(R.string.WndPlayGames_Use),
+                Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)
+                && Game.instance().playGames.isConnected()
+                )
+        {
             @Override
             public void checked(boolean value) {
                 super.checked(value);
 
                 if (value) {
-                    Game.instance().playGames.connect();
-                    Game.scene().add(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
+                    Game.instance().playGames.connectExplicit();
+                    Game.addToScene(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
                 } else {
                     Game.instance().playGames.disconnect();
                 }
@@ -97,19 +101,19 @@ class WndPlayGames extends Window {
         y += btn.height() + GAP;
     }
 
-    private static class ResultHandler implements _PlayGames.IResult {
+    private static class ResultHandler implements PlayGames.IResult {
 
         private WndMessage working;
         ResultHandler() {
             working = new WndMessage(Game.getVar(R.string.WndPlayGames_WorkInCloud));
-            Game.scene().add(working);
+            Game.addToScene(working);
         }
         @Override
         public void status(final boolean status) {
             Game.pushUiTask(() -> {
                 working.hide();
                 String msg = Game.getVar(status ? R.string.WndPlayGames_Show_Ok : R.string.WndPlayGames_Show_Error );
-                Game.scene().add(new WndMessage(msg));
+                Game.addToScene(new WndMessage(msg));
             }
             );
         }

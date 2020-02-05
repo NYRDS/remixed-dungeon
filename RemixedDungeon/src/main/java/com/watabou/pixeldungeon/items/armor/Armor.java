@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -50,6 +49,8 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import lombok.SneakyThrows;
 
 public class Armor extends EquipableItem {
 
@@ -278,6 +279,11 @@ public class Armor extends EquipableItem {
 		GLog.n( Game.getVar(R.string.Armor_EquipCursed), name() );
 	}
 
+	@Override
+	public int requiredSTR() {
+		return STR;
+	}
+
 	public static abstract class Glyph implements Bundlable, NamedEntityKind {
 		
 		private static final Class<?>[] glyphs = new Class<?>[]{ 
@@ -327,13 +333,9 @@ public class Armor extends EquipableItem {
 		}
 		
 		@SuppressWarnings("unchecked")
+		@SneakyThrows
 		public static Glyph random() {
-			try {
-				return ((Class<Glyph>)glyphs[ Random.chances( chances ) ]).newInstance();
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			return ((Class<Glyph>)glyphs[ Random.chances( chances ) ]).newInstance();
 		}
-		
 	}
 }

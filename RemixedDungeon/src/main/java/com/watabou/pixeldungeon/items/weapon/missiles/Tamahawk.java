@@ -43,8 +43,8 @@ public class Tamahawk extends MissileWeapon {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
-		super.proc( attacker, defender, damage );
+	public void attackProc(Char attacker, Char defender, int damage ) {
+		super.attackProc( attacker, defender, damage );
 		Buff.affect( defender, Bleeding.class ).level( damage );
 	}	
 

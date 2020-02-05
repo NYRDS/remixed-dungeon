@@ -29,7 +29,7 @@ public class SeedPouch extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Seed;
+		return super.grab(item) || item instanceof Seed;
 	}
 	
 	@Override

@@ -4,9 +4,11 @@ import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 
 import org.jetbrains.annotations.Nullable;
+import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
+import org.luaj.vm2.lib.jse.CoerceLuaToJava;
 
 /**
  * Created by mike on 26.05.2018.
@@ -16,6 +18,7 @@ public class LuaScript {
 
     private String scriptFile;
     private boolean scriptLoaded = false;
+    private boolean asInstance = false;
     private LuaTable script;
 
     private static final LuaValue[] emptyArgs = new LuaValue[0];
@@ -24,8 +27,6 @@ public class LuaScript {
     @Nullable
     private Object   parent;
 
-    private LuaValue scriptResult;
-
     public LuaScript(String scriptFile, @Nullable Object parent)
     {
         this.parent = parent;
@@ -33,17 +34,30 @@ public class LuaScript {
         onlyParentArgs[0] = CoerceJavaToLua.coerce(parent);
     }
 
+    public void asInstance() {
+        asInstance = true;
+    }
+
+    private LuaTable getScript() {
+        if (!scriptLoaded) {
+            if(asInstance) {
+                script = LuaEngine.moduleInstance(scriptFile);
+            } else {
+                script = LuaEngine.module(scriptFile);
+            }
+            scriptLoaded = true;
+        }
+
+        if(script == null) {
+            throw new ModError("Can't load "+scriptFile, new Exception());
+        }
+
+        return script;
+    }
+
     private LuaValue run(String method, LuaValue[] args) {
         try {
-            if (!scriptLoaded) {
-                script = LuaEngine.module(scriptFile, scriptFile);
-                scriptLoaded = true;
-            }
-
-            if (script != null) {
-                return scriptResult = script.invokemethod(method, args).arg1();
-            }
-            throw new ModError("Can't load "+scriptFile, new Exception());
+            return getScript().invokemethod(method, args).arg1();
         } catch (Exception e) {
             throw new ModError("Error in "+scriptFile+"."+method,e);
         }
@@ -81,24 +95,6 @@ public class LuaScript {
                 CoerceJavaToLua.coerce(arg3)});
     }
 
-    public LuaValue getResult() {
-        return scriptResult;
-    }
-
-    public <T> LuaValue runOptional(String method, T defaultValue) {
-        if(!script.get(method).isfunction()) {
-            return CoerceJavaToLua.coerce(defaultValue);
-        }
-        return run(method);
-    }
-
-    public void runOptional(String method) {
-        if(!script.get(method).isfunction()) {
-            return;
-        }
-        run(method);
-    }
-
     public LuaValue run(String method) {
         if(parent==null) {
             return run(method, emptyArgs);
@@ -107,10 +103,41 @@ public class LuaScript {
         }
     }
 
-    public <T> LuaValue runOptional(String method, Object arg1, Object arg2, T defaultValue) {
-        if(!script.get(method).isfunction()) {
-            return CoerceJavaToLua.coerce(defaultValue);
+    public void runOptional(String method) {
+        if(!getScript().get(method).isfunction()) {
+            return;
         }
-        return run(method,arg1,arg2);
+        run(method);
+    }
+
+    public <T> T runOptional(String method, T defaultValue, Object... args) {
+        try {
+            if (!getScript().get(method).isfunction()) {
+                return defaultValue;
+            }
+
+            int startIndex = 1;
+
+            if(parent==null) {
+                startIndex = 0;
+            }
+
+            LuaValue []luaArgs = new LuaValue[args.length+startIndex];
+
+            if(parent!=null) {
+                luaArgs[0] = CoerceJavaToLua.coerce(parent);
+            }
+
+
+            for (int i = startIndex;i<luaArgs.length;++i) {
+                luaArgs[i] = CoerceJavaToLua.coerce(args[i-startIndex]);
+            }
+
+            return (T) CoerceLuaToJava.coerce(
+                    run(method, luaArgs),
+                    defaultValue.getClass());
+        } catch (LuaError e) {
+            throw new ModError("Error when call:" + method+"."+scriptFile,e);
+        }
     }
 }
