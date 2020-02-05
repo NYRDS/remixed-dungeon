@@ -28,6 +28,7 @@ import java.util.ArrayList;
 
 public abstract class EquipableItem extends Item {
 
+	public static final String NO_ANIMATION = "none";
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
@@ -78,7 +79,8 @@ public abstract class EquipableItem extends Item {
 
 	public boolean doEquip(Hero hero ) {
 		setUser(hero);
-		return hero.getBelongings().equip(this,slot());
+		Belongings belongings = hero.getBelongings();
+		return belongings.equip(this, slot(belongings));
 	}
 
 	public void activate(Char ch) {}
@@ -118,7 +120,7 @@ public abstract class EquipableItem extends Item {
 		return getClassName();
 	}
 
-	public abstract Belongings.Slot slot();
+	public abstract Belongings.Slot slot(Belongings belongings);
 
 	public int typicalSTR() {
 		return 0;
@@ -126,6 +128,10 @@ public abstract class EquipableItem extends Item {
 
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.NONE;
+	}
+
+	public String getAnimationClass() {
+		return NO_ANIMATION;
 	}
 
 	public void equippedCursed() {

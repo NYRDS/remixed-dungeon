@@ -26,7 +26,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
@@ -114,7 +113,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public float accuracyFactor(Hero hero ) {
+	public float accuracyFactor(Char hero ) {
 		
 		int encumbrance = STR - hero.effectiveSTR();
 		

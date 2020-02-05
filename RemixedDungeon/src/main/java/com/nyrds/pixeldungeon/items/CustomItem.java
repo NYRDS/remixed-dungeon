@@ -83,7 +83,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public Belongings.Slot slot() {
+    public Belongings.Slot slot(Belongings belongings) {
         for(Belongings.Slot slot: Belongings.Slot.values()) {
             if (equipable.equalsIgnoreCase(slot.toString())) {
                 return slot;

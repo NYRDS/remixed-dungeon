@@ -168,12 +168,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
 
-		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
-		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
+		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
+		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
 
-		if(hero.getBelongings().weapon!=null) {
-			weaponAnimationClassLeft = hero.getBelongings().weapon.getAnimationClass();
-			weaponAnimationClassRight = hero.getBelongings().weapon.getAnimationClass();
+		EquipableItem weapon = hero.getBelongings().weapon;
+
+		if(weapon !=null) {
+			weaponAnimationClassRight = weapon.getAnimationClass();
+		}
+
+		EquipableItem leftHand = hero.getBelongings().leftHand;
+
+		if(leftHand != null) {
+			weaponAnimationClassLeft = leftHand.getAnimationClass();
 		}
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
@@ -182,11 +189,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
-			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(hero.getBelongings().leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(hero.getBelongings().weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(leftHand,"left"));
+			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(weapon, "right"));
 
-			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.getBelongings().leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.getBelongings().weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(leftHand,"left"));
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 		}
 
 		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
@@ -196,12 +203,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
 
+		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
+		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
 
-		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
-		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
-
-		if(weapon!=null) {
-			weaponAnimationClassLeft = weapon.getAnimationClass();
+		if(weapon !=null) {
 			weaponAnimationClassRight = weapon.getAnimationClass();
 		}
 
@@ -234,7 +239,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 		avatar = null;
 
-		zap = attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
+		zap = attack = weapon_anims.get(EquipableItem.NO_ANIMATION);
 
 		Accessory accessory = Accessory.equipped();
 
