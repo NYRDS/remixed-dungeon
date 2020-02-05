@@ -84,13 +84,13 @@ public class WandOfMagicMissile extends SimpleWand  {
 	public void execute( Hero hero, String action ) {
 		if (action.equals( AC_DISENCHANT )) {
 			
-			if (hero.belongings.weapon == this) {
+			if (hero.getBelongings().weapon == this) {
 				disenchantEquipped = true;
-				hero.belongings.weapon = null;
+				hero.getBelongings().weapon = null;
                 QuickSlot.refresh();
             } else {
 				disenchantEquipped = false;
-				detach( hero.belongings.backpack );
+				detach( hero.getBelongings().backpack );
 			}
 			
 			setUser(hero);
@@ -139,10 +139,10 @@ public class WandOfMagicMissile extends SimpleWand  {
 				
 			} else {
 				if (disenchantEquipped) {
-					getUser().belongings.weapon = WandOfMagicMissile.this;
+					getUser().getBelongings().weapon = WandOfMagicMissile.this;
                     QuickSlot.refresh();
                 } else {
-					collect( getUser().belongings.backpack );
+					collect( getUser().getBelongings().backpack );
 				}
 			}
 		}

@@ -91,6 +91,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import lombok.SneakyThrows;
+
 import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
@@ -101,7 +103,7 @@ public class Dungeon {
     public static boolean dewVial; // true if the dew vial can be spawned
     public static int     transmutation; // depth number for a well of transmutation
 
-    public static int challenges;
+    private static int challenges;
 
     public static Hero  hero;
 
@@ -149,7 +151,7 @@ public class Dungeon {
         LuaEngine.reset();
         Treasury.reset();
 
-        challenges = RemixedDungeon.challenges();
+        setChallenges(RemixedDungeon.challenges());
 
         Scroll.initLabels();
         Potion.initColors();
@@ -194,7 +196,7 @@ public class Dungeon {
 
     @Contract(pure = true)
     public static boolean isChallenged(int mask) {
-        return (challenges & mask) != 0;
+        return (getChallenges() & mask) != 0;
     }
 
     private static void updateStatistics() {
@@ -378,7 +380,7 @@ public class Dungeon {
         bundle.put(WT, transmutation);
 
         bundle.put(REALTIME, realtime);
-        bundle.put(CHALLENGES, challenges);
+        bundle.put(CHALLENGES, getChallenges());
 
         int count = 0;
         int ids[] = new int[chapters.size()];
@@ -427,7 +429,8 @@ public class Dungeon {
         output.close();
     }
 
-    public static void saveLevel(String saveTo, Level level) throws IOException {
+    @SneakyThrows
+    private static void saveLevel(String saveTo, Level level) {
         Bundle bundle = new Bundle();
         bundle.put(LEVEL, level);
 
@@ -502,12 +505,7 @@ public class Dungeon {
 
         lastSaveTimestamp = SystemTime.now();
 
-        try {
-            saveAllImpl();
-        } catch (Exception e) {
-            EventCollector.logException(e);
-            throw new TrackedRuntimeException(e);
-        }
+        saveAllImpl();
     }
 
 
@@ -543,7 +541,7 @@ public class Dungeon {
         transmutation = bundle.getInt(WT);
 
         realtime = bundle.getBoolean(REALTIME);
-        challenges = bundle.optInt(CHALLENGES,0);
+        setChallenges(bundle.optInt(CHALLENGES,0));
 
         if (fullLoad) {
             chapters = new HashSet<>();
@@ -619,8 +617,8 @@ public class Dungeon {
     }
 
     @NotNull
-    public static Level loadLevel(Position next) throws IOException {
-
+    @SneakyThrows
+    public static Level loadLevel(Position next) {
         try {
             loading.incrementAndGet();
             levelId = next.levelId;
@@ -693,14 +691,14 @@ public class Dungeon {
     }
 
     public static void fail(String desc) {
-        if (hero.belongings.getItem(Ankh.class) == null) {
+        if (hero.getBelongings().getItem(Ankh.class) == null) {
             Rankings.INSTANCE.submit(Rankings.gameOver.LOSE, desc);
         }
     }
 
     public static void win(String desc, gameOver kind) {
 
-        if (challenges != 0) {
+        if (getChallenges() != 0) {
             Badges.validateChampion();
         }
 
@@ -718,9 +716,7 @@ public class Dungeon {
 
         BArray.or(level.visited, visible, level.visited);
 
-        if (GameScene.isSceneReady()) {
-            GameScene.afterObserve();
-        }
+        GameScene.afterObserve();
     }
 
     private static void markActorsAsUnpassableIgnoreFov() {
@@ -886,10 +882,15 @@ public class Dungeon {
     }
 
     public static void saveCurrentLevel() {
-        try {
-            saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
-        } catch (IOException e) {
-            throw new TrackedRuntimeException(e);
-        }
+        saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
+    }
+
+    public static int getChallenges() {
+        return challenges;
+    }
+
+    public static void setChallenges(int challenges) {
+        EventCollector.collectSessionData("challenges",String.valueOf(challenges));
+        Dungeon.challenges = challenges;
     }
 }

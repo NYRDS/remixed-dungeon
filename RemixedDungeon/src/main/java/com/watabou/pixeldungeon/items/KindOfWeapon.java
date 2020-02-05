@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
@@ -29,7 +28,6 @@ public class KindOfWeapon extends EquipableItem {
 
 	public static final float TIME_TO_EQUIP = 1f;
 
-	public static final String BASIC_ATTACK = "none";
 	public static final String SWORD_ATTACK = "sword";
 	public static final String SPEAR_ATTACK = "spear";
 	public static final String BOW_ATTACK   = "bow";
@@ -39,31 +37,36 @@ public class KindOfWeapon extends EquipableItem {
 	public static final String KUSARIGAMA_ATTACK  = "kusarigama";
     public static final String CROSSBOW_ATTACK = "crossbow";
 
-    protected String animation_class = BASIC_ATTACK;
+    protected String animation_class = NO_ANIMATION;
 
 	public int		MIN	= 0;
 	public int		MAX = 1;
 
 	@Override
-	public Belongings.Slot slot() {
+	public Belongings.Slot slot(Belongings belongings) {
+		if(belongings.weapon != null
+				|| belongings.blockedSlots.containsKey(Belongings.Slot.WEAPON)) {
+			return Belongings.Slot.LEFT_HAND;
+		}
 		return Belongings.Slot.WEAPON;
 	}
 
-	public int damageRoll(Hero owner ) {
+	public int damageRoll(Char owner ) {
 		return Random.NormalIntRange( MIN, MAX );
 	}
 	
-	public float accuracyFactor(Hero hero ) {
+	public float accuracyFactor(Char hero ) {
 		return 1f;
 	}
 	
-	public float speedFactor( Hero hero ) {
+	public float speedFactor(Char hero ) {
 		return 1f;
 	}
 	
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 	}
 
+	@Override
 	public String getAnimationClass() {
 		return animation_class;
 	}

@@ -1,9 +1,8 @@
 package com.nyrds.pixeldungeon.ai;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Challenges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -30,14 +29,6 @@ public class Sleeping extends MobAi implements AiState {
 
             huntEnemy(me);
 
-            if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
-                for (Mob mob : me.level().mobs) {
-                    if (me != mob) {
-                        mob.beckon(mob.target);
-                    }
-                }
-            }
-
             me.spend(Mob.TIME_TO_WAKE_UP);
 
         } else {
@@ -49,7 +40,7 @@ public class Sleeping extends MobAi implements AiState {
     }
 
     @Override
-    public void gotDamage(Mob me,Object src, int dmg) {
+    public void gotDamage(Mob me, NamedEntityKind src, int dmg) {
         seekRevenge(me,src);
     }
 

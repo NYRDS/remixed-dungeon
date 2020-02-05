@@ -19,10 +19,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
+import lombok.SneakyThrows;
 import lombok.var;
 
 public class ModdingMode {
@@ -33,6 +36,7 @@ public class ModdingMode {
 	public static boolean useRetroHeroSprites = false;
 
 	private static Set<String> pathsChecked = new HashSet<>();
+	private static Map<String, Boolean> assetsExistanceCache = new HashMap<>();
 
 	static {
 		trustedMods.add("Maze");
@@ -46,6 +50,8 @@ public class ModdingMode {
 
 	public static void selectMod(String mod) {
 		try {
+			assetsExistanceCache.clear();
+
 			File modPath = FileSystem.getExternalStorageFile(mod);
 			if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
 				mActiveMod = mod;
@@ -73,13 +79,57 @@ public class ModdingMode {
 		return mActiveMod;
 	}
 
+	public static String getSoundById(String id) {
+
+		String candidate = id + ".ogg";
+
+		if(ModdingMode.isResourceExistInMod(candidate)) {
+			return candidate;
+		}
+
+		candidate = id + ".mp3";
+
+		if(ModdingMode.isResourceExistInMod(candidate)) {
+			return candidate;
+		}
+
+		candidate = id + ".ogg";
+
+		if(ModdingMode.isAssetExist(candidate)) {
+			return candidate;
+		}
+
+		candidate = id + ".mp3";
+		if(ModdingMode.isAssetExist(candidate)) {
+			return candidate;
+		}
+
+		if(id.contains(".mp3")) {
+			return getSoundById(id.replace(".mp3",""));
+		}
+
+		if(id.contains(".ogg")) {
+			return getSoundById(id.replace(".ogg",""));
+		}
+
+		return id;
+	}
+
 	public static boolean isAssetExist(String resName) {
+		Boolean isExist = assetsExistanceCache.get(resName);
+
+		if(isExist != null) {
+			return isExist;
+		}
+
 		InputStream str;
 		try {
 			str = RemixedDungeonApp.getContext().getAssets().open(resName);
 			str.close();
+			assetsExistanceCache.put(resName, true);
 			return true;
 		} catch (IOException e) {
+			assetsExistanceCache.put(resName, false);
 			return false;
 		}
 	}
@@ -108,33 +158,29 @@ public class ModdingMode {
 		return list;
 	}
 
+	@SneakyThrows
 	@NotNull
 	private static List<String> _listResources(String path, FilenameFilter filter) {
-		try{
-            if(pathsChecked.contains(path)) {
-                return new ArrayList<>();
-            }
-
-            pathsChecked.add(path);
-
-            Set<String> resList = new HashSet<>();
-
-			String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
-			collectResources(path, filter, resList, fullList);
-
-			if(inMod()) {
-				String resourcesPath = mActiveMod + "/" + path;
-				if(isResourceExistInMod(path)) {
-					String[] modList = FileSystem.getExternalStorageFile(resourcesPath).list();
-					collectResources(path, filter, resList, modList);
-				}
-			}
-
-			return Arrays.asList(resList.toArray(new String[0]));
-
-		} catch (IOException e) {
-			throw new TrackedRuntimeException(e);
+		if(pathsChecked.contains(path)) {
+			return new ArrayList<>();
 		}
+
+		pathsChecked.add(path);
+
+		Set<String> resList = new HashSet<>();
+
+		String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
+		collectResources(path, filter, resList, fullList);
+
+		if(inMod()) {
+			String resourcesPath = mActiveMod + "/" + path;
+			if(isResourceExistInMod(path)) {
+				String[] modList = FileSystem.getExternalStorageFile(resourcesPath).list();
+				collectResources(path, filter, resList, modList);
+			}
+		}
+
+		return Arrays.asList(resList.toArray(new String[0]));
 	}
 
 	private static void collectResources(String path, FilenameFilter filter, Set<String> resList, String[] fullList) {
@@ -241,16 +287,10 @@ public class ModdingMode {
 	}
 
 	public static RuntimeException modException(Exception e) {
-		if(inMod()) {
-			return new ModError(mActiveMod,e);
-		}
-		return new TrackedRuntimeException(e);
+		return new ModError(mActiveMod,e);
 	}
 
 	public static RuntimeException modException(String s, JSONException e) {
-		if(inMod()) {
-			return new ModError(mActiveMod + ":" + s, e);
-		}
-		return new TrackedRuntimeException(s,e);
+		return new ModError(mActiveMod + ":" + s, e);
 	}
 }

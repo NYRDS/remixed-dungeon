@@ -6,6 +6,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -61,7 +62,7 @@ public class ZombieGnoll extends Mob {
 
             CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);
             Sample.INSTANCE.play(Assets.SND_DEATH);
-            if (Char.isVisible(this)) {
+            if (CharUtils.isVisible(this)) {
                 getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
                 GLog.n(Game.getVar(R.string.ZombieGnoll_Info));
             }

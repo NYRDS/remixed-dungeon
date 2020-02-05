@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.plants;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -15,6 +14,8 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
+
+import lombok.SneakyThrows;
 
 public class Seed extends Item {
 
@@ -55,12 +56,12 @@ public class Seed extends Item {
 
             hero.spend(TIME_TO_PLANT);
             hero.busy();
-            ((Seed) detach(hero.belongings.backpack)).onThrow(hero.getPos());
+            ((Seed) detach(hero.getBelongings().backpack)).onThrow(hero.getPos());
 
             hero.getSprite().operate(hero.getPos());
 
         } else if (action.equals(CommonActions.AC_EAT)) {
-            detach(hero.belongings.backpack);
+            detach(hero.getBelongings().backpack);
 
             hero.getSprite().operate(hero.getPos());
             hero.busy();
@@ -80,15 +81,12 @@ public class Seed extends Item {
         return null;
     }
 
+    @SneakyThrows
     public Plant couch(int pos) {
-        try {
-            Sample.INSTANCE.play(Assets.SND_PLANT);
-            Plant plant = plantClass.newInstance();
-            plant.setPos(pos);
-            return plant;
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
-        }
+        Sample.INSTANCE.play(Assets.SND_PLANT);
+        Plant plant = plantClass.newInstance();
+        plant.setPos(pos);
+        return plant;
     }
 
     @Override

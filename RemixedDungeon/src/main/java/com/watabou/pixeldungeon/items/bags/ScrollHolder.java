@@ -29,7 +29,7 @@ public class ScrollHolder extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Scroll;
+		return super.grab(item) || item instanceof Scroll;
 	}
 	
 	@Override

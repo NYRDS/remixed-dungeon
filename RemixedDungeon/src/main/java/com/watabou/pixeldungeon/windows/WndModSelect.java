@@ -116,7 +116,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		if (getParent() != null) {
 			hide();
 		}
-		Game.scene().add(new WndModSelect());
+		Game.addToScene(new WndModSelect());
 	}
 
 	protected void onSelect(String option) {
@@ -145,7 +145,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		if (getParent() != null) {
 			hide();
 		}
-		Game.scene().add(new WndModDescription(option, prevMod));
+		Game.addToScene(new WndModDescription(option, prevMod));
 	}
 
 
@@ -155,7 +155,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			if (result) {
 				new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);
 			} else {
-				Game.scene().add(new WndError(Utils.format("Downloading %s failed", selectedMod)));
+				Game.addToScene(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 			}
 		});
 	}
@@ -164,9 +164,9 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	public void UnzipComplete(final Boolean result) {
 		Game.pushUiTask(() -> {
 			if (result) {
-				Game.scene().add(new WndModSelect());
+				Game.addToScene(new WndModSelect());
 			} else {
-				Game.scene().add(new WndError(Utils.format("unzipping %s failed", downloadTo)));
+				Game.addToScene(new WndError(Utils.format("unzipping %s failed", downloadTo)));
 			}
 		});
 

@@ -27,22 +27,36 @@ return item.init{
             info          = "Item for script tests",
             stackable     = false,
             defaultAction = "action1",
-            price         = 7,
-            isArtifact    = true
+            price         = 0,
+            isArtifact    = true,
+            data = {
+                activationCount = 0
+            }
         }
     end,
+
     actions = function(self, item, hero)
+
+        for k,v in pairs(self) do
+            RPD.glog(tostring(k).."->"..tostring(v))
+        end
 
         if item:isEquipped(hero) then
             return {"eq_action1",
                     "eq_action2",
                     "eq_action3",
-                    tostring(item:getId())}
+                    tostring(item:getId()),
+                    tostring(self.data.activationCount),
+                    tostring(self)
+                    }
         else
             return {"action1",
                     "action2",
                     "action3",
-                    tostring(item:getId())}
+                    tostring(item:getId()),
+                    tostring(self.data.activationCount),
+                    tostring(self)
+            }
         end
     end,
 
@@ -50,8 +64,9 @@ return item.init{
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
-
-            RPD.createLevelObject(candle, cell)
+            local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
+            RPD.Dungeon.level:drop(book, cell)
+            --RPD.createLevelObject(candle, cell)
         end
     end,
 
@@ -61,22 +76,30 @@ return item.init{
         end
 
         if action == "action2" then
+            self.data.activationCount = self.data.activationCount + 1
             RPD.glogp(tostring(item:getId()).." "..action)
         end
 
         if action == "action3" then
             RPD.glogn(tostring(item:getId()).." "..action)
+            item:detach(hero:getBelongings().backpack)
         end
     end,
 
     activate = function(self, item, hero)
-        self.data.activationCount = (self.data.activationCount or 0) + 1
-        RPD.glogp(tostring(item).." activated on "..tostring(hero).." "..self.data.activationCount.."\n")
-        RPD.permanentBuff(hero,"Cloak")
+
+        local Buff = RPD.affectBuff(hero,"TestBuff", 10)
+        Buff:level(3)
+        Buff:setSource(item)
     end,
 
     deactivate = function(self, item, hero)
-        RPD.glogp(tostring(item).." deactivated on "..tostring(hero).."\n")
-        RPD.removeBuff(hero,"Cloak")
+        RPD.removeBuff(hero,"TestBuff")
+    end,
+
+--[[
+    bag = function(self, item)
+        return "SeedPouch"
     end
+ ]]
 }

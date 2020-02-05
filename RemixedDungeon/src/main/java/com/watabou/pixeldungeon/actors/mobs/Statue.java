@@ -27,9 +27,11 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
@@ -80,7 +82,7 @@ public class Statue extends Mob {
 	
 	@Override
     public boolean act() {
-		if (!isPet() && Char.isVisible(this)) {
+		if (!isPet() && CharUtils.isVisible(this)) {
 			Journal.add( Journal.Feature.STATUE.desc() );
 		}
 		return super.act();
@@ -97,7 +99,7 @@ public class Statue extends Mob {
 	}
 	
 	@Override
-	protected float attackDelay() {
+	protected float _attackDelay() {
 		return getWeapon().DLY;
 	}
 	
@@ -108,7 +110,7 @@ public class Statue extends Mob {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
-		getWeapon().proc( this, enemy, damage );
+		getWeapon().attackProc( this, enemy, damage );
 		return damage;
 	}
 	
@@ -151,9 +153,11 @@ public class Statue extends Mob {
 
 	public Weapon getWeapon() {
 		if(weapon==null) {
+			Item weaponCandidate;
 			do {
-				weapon = (Weapon) Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
-			} while (!(weapon instanceof MeleeWeapon) || weapon.level() < 0);
+				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
+			} while (!(weaponCandidate instanceof MeleeWeapon) || weaponCandidate.level() < 0);
+			weapon = (Weapon) weaponCandidate;
 
 			weapon.identify();
 			weapon.enchant( Enchantment.random() );

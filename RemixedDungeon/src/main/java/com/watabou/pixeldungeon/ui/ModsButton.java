@@ -105,7 +105,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
     @Override
     public void DownloadComplete(String file, final Boolean result) {
         Game.pushUiTask(() -> {
-            Game.scene().add(new WndModSelect());
+            Game.addToScene(new WndModSelect());
 
             if (!result) {
                 Game.toast("Mod list download failed :(");

@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -100,14 +101,14 @@ public class DM300 extends Boss {
 
 			getSprite().emitter().burst( ElmoParticle.FACTORY, 5 );
 			
-			if (Char.isVisible(this) && Dungeon.hero.isAlive()) {
+			if (CharUtils.isVisible(this) && Dungeon.hero.isAlive()) {
 				GLog.n(Game.getVar(R.string.DM300_Info1));
 			}
 		}
 		
 		int cell = step + Level.NEIGHBOURS8[Random.Int( Level.NEIGHBOURS8.length )];
 		
-		if (Char.isVisible(this)) {
+		if (CharUtils.isVisible(this)) {
 			CellEmitter.get( cell ).start( Speck.factory( Speck.ROCK ), 0.07f, 10 );
 			Camera.main.shake( 3, 0.7f );
 			Sample.INSTANCE.play( Assets.SND_ROCKS );

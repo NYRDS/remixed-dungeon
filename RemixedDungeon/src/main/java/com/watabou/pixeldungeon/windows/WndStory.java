@@ -94,7 +94,7 @@ public class WndStory extends Window {
 	}
 
 	public static void showCustomStory( @NotNull String text ) {
-			Game.scene().add( new WndStory( text ) );
+			Game.addToScene( new WndStory( text ) );
 	}
 	
 	public static void showChapter( int id ) {
@@ -107,7 +107,7 @@ public class WndStory extends Window {
 		if (text != null) {
 			WndStory wnd = new WndStory( text );
 			
-			Game.scene().add( wnd );
+			Game.addToScene( wnd );
 			
 			Dungeon.chapters.add( id );
 		}

@@ -72,7 +72,7 @@ public class ArmorKit extends Item {
 	
 	private void upgrade( Armor armor ) {
 		
-		detach( getUser().belongings.backpack );
+		detach( getUser().getBelongings().backpack );
 		
 		getUser().getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
 		getUser().spend( TIME_TO_UPGRADE );
@@ -81,11 +81,11 @@ public class ArmorKit extends Item {
 		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
 		Armor classArmor = ClassArmor.upgrade( getUser(), armor );
-		if (getUser().belongings.armor == armor) {
-			getUser().belongings.armor = classArmor;
+		if (getUser().getBelongings().armor == armor) {
+			getUser().getBelongings().armor = classArmor;
 			getUser().updateSprite();
 		} else {
-			armor.detach( getUser().belongings.backpack );
+			armor.detach( getUser().getBelongings().backpack );
 			getUser().collect(classArmor);
 		}
 		

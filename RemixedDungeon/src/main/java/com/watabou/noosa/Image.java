@@ -19,7 +19,7 @@ package com.watabou.noosa;
 
 import android.graphics.RectF;
 
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.ModError;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
@@ -69,7 +69,7 @@ public class Image extends Visual {
 
 		RectF frame = film.get(index);
 		if (frame == null) {
-			throw new TrackedRuntimeException(Utils.format("bad index %d for image %s", index, tx.toString()));
+			throw new ModError(Utils.format("bad index %d for image %s", index, tx.toString()));
 		}
 		frame(frame);
 	}

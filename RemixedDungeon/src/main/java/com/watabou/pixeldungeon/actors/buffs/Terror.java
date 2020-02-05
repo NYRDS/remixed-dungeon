@@ -62,7 +62,7 @@ public class Terror extends FlavourBuff {
 		if(super.attachTo(target)) {
 			if(target instanceof Mob && target.fraction!=Fraction.NEUTRAL) {
 				Mob tgt = (Mob)target;
-				tgt.setFraction(Fraction.DUNGEON);
+				tgt.releasePet();
 			}
 			return true;
 		}

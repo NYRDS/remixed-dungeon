@@ -23,7 +23,7 @@ public class ManaPotion extends Drink {
 	@Override
 	public void execute(Hero hero, String action ) {
 		if (action.equals( AC_DRINK )) {
-			detach( hero.belongings.backpack );
+			detach( hero.getBelongings().backpack );
 			GLog.i( Game.getVar(R.string.Drink_Message) );
 
 			hero.setSoulPoints(hero.getSkillPoints() + hero.getSkillPointsMax()/3);

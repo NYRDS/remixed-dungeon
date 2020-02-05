@@ -1,9 +1,15 @@
 package com.watabou.pixeldungeon.actors;
 
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class DummyChar extends Char {
+
+    @Override
+    protected float _attackDelay() {
+        return 1f;
+    }
 
     @Override
     public CharSprite sprite() {
@@ -22,6 +28,11 @@ public class DummyChar extends Char {
     @Override
     protected boolean getFurther(int cell) {
         return false;
+    }
+
+    @Override
+    public Char makeClone() {
+        return CharsList.DUMMY;
     }
 
     @Override

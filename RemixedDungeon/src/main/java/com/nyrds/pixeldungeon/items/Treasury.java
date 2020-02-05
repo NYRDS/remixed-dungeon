@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.items;
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Challenges;
@@ -23,6 +22,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 public class Treasury {
 
@@ -83,31 +84,28 @@ public class Treasury {
     public static Treasury create(String file) {
         Treasury treasury = new Treasury();
         treasury.loadFromFile("levelsDesc/"+file);
-        Challenges.forbidCategories(Dungeon.challenges,treasury);
+        Challenges.forbidCategories(Dungeon.getChallenges(),treasury);
         return treasury;
     }
 
+    @SneakyThrows
     private void loadFromFile(String file) {
-        try {
-            names.clear();
-            items.clear();
+        names.clear();
+        items.clear();
 
-            JSONObject treasury = JsonHelper.readJsonFromAsset(file);
+        JSONObject treasury = JsonHelper.readJsonFromAsset(file);
 
-            int version = treasury.optInt("version", 0);
-            switch (version) {
-                case 0:
-                    loadCategories(treasury);
-                break;
+        int version = treasury.optInt("version", 0);
+        switch (version) {
+            case 0:
+                loadCategories(treasury);
+            break;
 
-                case 1:
-                    loadTreasury(treasury,version);
-                break;
-                default:
-                    throw new ModError("Unknown version in "+ file);
-            }
-        } catch (JSONException e) {
-            throw new TrackedRuntimeException(e);
+            case 1:
+                loadTreasury(treasury,version);
+            break;
+            default:
+                throw new ModError("Unknown version in "+ file);
         }
     }
 
@@ -237,12 +235,9 @@ public class Treasury {
         return randomItem(categoryOrItem);
     }
 
+    @SneakyThrows
     public Item random(Class<? extends Item> cl) {
-        try {
-            return check(cl.newInstance().random());
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
-        }
+        return check(cl.newInstance().random());
     }
 
     public void forbid(String itemOrCat) {

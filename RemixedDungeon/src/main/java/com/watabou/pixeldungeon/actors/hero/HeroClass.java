@@ -20,13 +20,13 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
@@ -54,6 +54,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 public enum HeroClass implements CharModifier {
 
@@ -116,7 +118,7 @@ public enum HeroClass implements CharModifier {
             try {
                 JSONObject classDesc = initHeroes.getJSONObject(className);
 
-                hero.belongings.setupFromJson(classDesc);
+                hero.getBelongings().setupFromJson(classDesc);
 
                 if (classDesc.has("quickslot")) {
                     int slot = 0;
@@ -124,7 +126,7 @@ public enum HeroClass implements CharModifier {
                     for (int i = 0; i < quickslots.length(); ++i) {
                         Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
                         if(item!=null) {
-                            item = hero.belongings.getItem(item.getClass());
+                            item = hero.getBelongings().getItem(item.getClass());
                             if (item != null) {
                                 QuickSlot.selectItem(item, slot);
                                 slot++;
@@ -257,12 +259,9 @@ public enum HeroClass implements CharModifier {
         return ret;
     }
 
+    @SneakyThrows
     public ClassArmor classArmor() {
-        try {
-            return armorClass.newInstance();
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
-        }
+        return armorClass.newInstance();
     }
 
     public String getMagicAffinity() {
@@ -310,6 +309,11 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
+    public int attackProc(Char attacker, Char defender, int damage) {
+        return damage;
+    }
+
+    @Override
     public int regenerationBonus() {
         return 0;
     }
@@ -353,4 +357,15 @@ public enum HeroClass implements CharModifier {
     public int classIndex() {
         return ordinal() - 1;
     }
+
+    @Override
+    public String textureSmall() {
+        return Assets.BUFFS_SMALL;
+    }
+
+    @Override
+    public Object textureLarge() {
+        return Assets.BUFFS_LARGE;
+    }
+
 }

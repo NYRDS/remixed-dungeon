@@ -98,7 +98,6 @@ public class SewerBossLevel extends BossLevel {
 		placeSecondaryExits();
 
 		buildPath(roomEntrance, getRoomExit());
-		buildPath(roomEntrance,exitRoom(1));
 
 		var ignoredRooms = new HashSet<Room.Type>();
 		ignoredRooms.add(Type.NULL);

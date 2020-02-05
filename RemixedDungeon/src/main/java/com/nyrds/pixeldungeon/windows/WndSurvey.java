@@ -47,7 +47,7 @@ public class WndSurvey extends Window {
             String surveyId = survey.getString("survey_id");
 
             if (Preferences.INSTANCE.getString(SURVEY_TAKEN, Utils.EMPTY_STRING).equals(surveyId)) {
-                Game.scene().add(new WndMessage(Game.getVar(R.string.SociologistNPC_AlreadyTaken)));
+                Game.addToScene(new WndMessage(Game.getVar(R.string.SociologistNPC_AlreadyTaken)));
                 super.hide();
                 return;
             }

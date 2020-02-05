@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -21,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class YogsTeeth extends Mob {
     {
-        hp(ht(150));
+        hp(ht(350));
         defenseSkill = 44;
 
         exp = 26;
@@ -32,6 +33,7 @@ public class YogsTeeth extends Mob {
         addImmunity(Amok.class);
         addImmunity(Sleep.class);
         addImmunity(Terror.class);
+        addImmunity(Burning.class);
     }
 
 
@@ -58,11 +60,11 @@ public class YogsTeeth extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(40, 40);
+        return Random.NormalIntRange(50, 80);
     }
 
     @Override
-    public int attackSkill( Char target ) { return 36; }
+    public int attackSkill( Char target ) { return 46; }
 
     @Override
     public int dr() { return 21; }

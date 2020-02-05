@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.spiders.levels;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.plants.Seed;
@@ -100,7 +101,10 @@ public class Chamber {
 			case 1:		//garden
 				level.map[cellId] = Terrain.HIGH_GRASS;
 				if(Random.Int(5)==0) {
-					level.plant( (Seed) Treasury.getLevelTreasury().random(Treasury.Category.SEED), cellId);
+					Item seedCandidate = Treasury.getLevelTreasury().random(Treasury.Category.SEED);
+					if(seedCandidate instanceof Seed) {
+						level.plant((Seed) seedCandidate, cellId);
+					}
 				}
 			break;
 			

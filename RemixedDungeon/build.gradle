@@ -10,12 +10,13 @@ ext.getApiField = { name ->
 repositories {
     google()
     maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://artifactory.appodeal.com/appodeal" }
 }
 
-def jks_keyAlias    = hasProperty('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
-def jks_keyPassword = hasProperty('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
-def jks_storePassword = hasProperty('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
-def jks_storePath = hasProperty('jks_storePath') ? System.getenv('jks_storePath') : 'testKey/test.jks'
+def jks_keyAlias    = System.getenv('jks_keyAlias') ? System.getenv('jks_keyAlias') : 'testKey'
+def jks_keyPassword = System.getenv('jks_keyPassword') ? System.getenv('jks_keyPassword') : '123456'
+def jks_storePassword = System.getenv('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
+def jks_storePath = System.getenv('jks_storePath')  ? System.getenv('jks_storePath') : 'testKey/test.jks'
 
 android {
 
@@ -34,12 +35,12 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 805
-        versionName "remix.29.3.beta.5"
+        versionCode 843
+        versionName "29.3.fix.36"
     }
 
     aaptOptions {
-        noCompress "mp3"
+        noCompress "mp3","ogg"
     }
 
     buildTypes {
@@ -99,28 +100,29 @@ dependencies {
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
-    implementation 'com.google.android.ads.consent:consent-library:1.0.7'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
     implementation 'com.google.android.gms:play-services-base:17.1.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation "com.google.android.gms:play-services-games:19.0.0"
 
-    implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.1.0'
-
-    implementation fileTree(dir: 'lib', include: ['*.jar','*.aar'])
-
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'io.humanteq.hqm:hqm-core:2.0.0-alpha05-fix2'
+    implementation 'io.humanteq.hqm:hqm-core:2.0.1'
 
-    implementation 'androidx.core:core:1.1.0'
+    implementation 'com.android.billingclient:billing:2.1.0'
+    implementation 'commons-io:commons-io:2.5'
 
-    implementation 'com.android.billingclient:billing:1.1'
-    implementation group: 'commons-io', name: 'commons-io', version: '2.5'
-
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-perf:19.0.2'
+    implementation 'com.google.firebase:firebase-analytics:17.1.0'
+    implementation 'com.google.firebase:firebase-perf:19.0.5'
     implementation 'com.google.firebase:firebase-ads:18.3.0'
+
+    implementation 'com.appodeal.ads.sdk:core:2.6.0'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:appodealx:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.6.0.1'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'org.jetbrains:annotations:15.0'
@@ -132,7 +134,6 @@ dependencies {
     androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation 'androidx.test:core:1.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-
 }
 
 

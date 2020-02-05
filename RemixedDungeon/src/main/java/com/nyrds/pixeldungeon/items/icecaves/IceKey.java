@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.items.icecaves;
 
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.Bag;
 
 public class IceKey extends Item {
 
@@ -15,4 +16,8 @@ public class IceKey extends Item {
 		return true;
 	}
 
+	@Override
+	public String bag() {
+		return Bag.KEYRING;
+	}
 }

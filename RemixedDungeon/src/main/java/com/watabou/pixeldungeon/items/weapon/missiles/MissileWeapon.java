@@ -75,9 +75,9 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	@Override
-	public void proc(Char attacker, Char defender, int damage) {
+	public void attackProc(Char attacker, Char defender, int damage) {
 
-		super.proc(attacker, defender, damage);
+		super.attackProc(attacker, defender, damage);
 		
 		if(this instanceof Arrow) {
 			Arrow arrow = (Arrow) this;
@@ -86,11 +86,10 @@ public class MissileWeapon extends Weapon {
 			}
 		}
 
-		Hero hero = (Hero) attacker;
-		if (hero.rangedWeapon == null && stackable) {
-			if (this != hero.belongings.weapon) {
+		if (attacker.rangedWeapon == null && stackable) {
+			if (this != attacker.getBelongings().weapon) {
 				if (quantity() == 1) {
-					doUnequip(hero, false, false);
+					doUnequip(attacker, false, false);
 				} else {
 					detach(null);
 				}
@@ -147,7 +146,7 @@ public class MissileWeapon extends Weapon {
 		info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
 		info.append(" ");
 
-		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
+		if (Dungeon.hero.getBelongings().backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.effectiveSTR()) {
 				info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info2), name));
 			}

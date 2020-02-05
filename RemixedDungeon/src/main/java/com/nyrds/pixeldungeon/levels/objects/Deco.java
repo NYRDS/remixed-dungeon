@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.levels.objects;
 import com.nyrds.Packable;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.StringsManager;
@@ -17,6 +16,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by mike on 01.07.2016.
@@ -58,14 +59,11 @@ public class Deco extends LevelObject {
 	}
 
 
+	@SneakyThrows
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		try {
-			readObjectDesc();
-		} catch (JSONException e) {
-			throw new TrackedRuntimeException(e);
-		}
+		readObjectDesc();
 	}
 
 	private void readObjectDesc() throws JSONException {

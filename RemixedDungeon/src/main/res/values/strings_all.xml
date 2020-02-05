@@ -1597,7 +1597,7 @@
   <string name="WndMovieTheatre_Watch">watch a movie</string>
   <string name="WndMovieTheatre_No">leave</string>
   <string name="WndMovieTheatre_Bye">Come back any time, we are always happy to see you!</string>
-  <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theater! We provide a special service, where you can watch a movie for free. And if you watch trough all of it, you will be rewarded with %d gold coins!</string>
+  <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theater! We provide a special service, where you can watch a movie for free. And if you watch through all of it, you will be rewarded with %d gold coins!</string>
   <string name="WndMovieTheatre_Title">Movie Theatre</string>
   <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
   <string name="WndPriest_Heal">heal - %d gold</string>
@@ -2548,4 +2548,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Custom Shields!\n
     - Bugs fixed\n
     </string>
+  <string name="ShieldStrTemplate">Wearer of the shield should have at least %1$d points of Strength to use it properly.</string>
 </resources>

@@ -1,10 +1,11 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.scenes.GameScene;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by mike on 30.05.2016.
@@ -54,14 +55,10 @@ class MenuButton extends ImageButton {
 	}
 
 	@Override
+	@SneakyThrows
 	protected void onClick() {
 		if (enabled) {
-			try {
-				GameScene.show(wndClass.newInstance());
-
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			GameScene.show(wndClass.newInstance());
 		}
 	}
 }

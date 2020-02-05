@@ -4,7 +4,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Heap;
@@ -22,7 +21,7 @@ public class ItemUtils {
 		}
 	}
 
-    public static void evoke(Hero hero) {
+    public static void evoke(Char hero) {
         hero.getSprite().emitter().burst(Speck.factory(Speck.EVOKE), 5);
     }
 

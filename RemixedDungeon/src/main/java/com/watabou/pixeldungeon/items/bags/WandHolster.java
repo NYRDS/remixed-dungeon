@@ -29,7 +29,7 @@ public class WandHolster extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof Wand;
+		return super.grab(item) || item instanceof Wand;
 	}
 	
 	@Override
@@ -37,7 +37,9 @@ public class WandHolster extends Bag {
 		if (super.collect( container )) {
 			if (owner != null) {
 				for (Item item : items) {
-					((Wand)item).charge( owner );
+					if(item instanceof Wand) {
+						((Wand) item).charge(owner);
+					}
 				}
 			}
 			return true;

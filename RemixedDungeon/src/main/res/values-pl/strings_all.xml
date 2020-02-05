@@ -2569,4 +2569,5 @@ remix.29.3/n
 --modyfikowalne tarcze!:\n
 -Naprawy błędów\n
 </string>
+  <string name="ShieldStrTemplate">Osoba nosząca tarczę powinna mieć co najmniej %1$d punktów Siły, aby prawidłowo z niej korzystać.</string>
 </resources>

@@ -1,0 +1,31 @@
+C'est un jeu roguelike avec une source libre et un style graphique pixelisé
+
+Il était une fois une petite ville. Les citadins vivaient heureux, mais ils étaient si pauvres qu’ils n’avaient même pas les moyens d’aller dans un endroit décent en vacances. Mais le jour où tout le monde a abandonné tout espoir, un miracle s'est produit. Le sol sous la ville trembla violemment et éclata une myriade de monstres ignobles. À partir de ce moment-là, tous les citadins qui avaient survécu ont vécu heureux pour toujours. Pourquoi? Parce que le donjon a attiré toutes sortes de héros et d'aventuriers. Ils ont protégé les innocents et ont fini par être d'excellents dépensiers, stimulant l'économie de la ville.
+Et maintenant, la petite ville s'épanouit, alors qu'elle se dresse au sommet d'un donjon dangereux rempli d'aventuriers morts et de leurs âmes misérables.
+
+Caractéristiques du jeu :
+Ce jeu supporte les mods des joueurs ! Quand cette fonctionnalité sera suffisamment avancée, vous pourrez créer vous-même des jeux entiers dans Remixed Dungeon !
+- Une expérience roguelike hardcore !
+- 7 classes de héros disponibles
+- Une ville pour préparer votre voyage et vous introduire au jeu
+- Plus de 30 étages dans le donjon principal réparti en 6 styles de donjon
+- 3 donjons secondaires : L'antre des Araignées, Necropolis, Cavernes de Glace
+- Des dizaines d'objets et de monstres
+- Des boss variés
+- Des Chapeaux ! Tout le monde aime les chapeaux
+
+Rejoignez notre serveur Discord:
+https://discordapp.com/invite/AMXrhQZ
+
+Suivez-nous sur Twitter :
+https://twitter.com/nyrds
+
+Ce jeu est un logiciel Open Source sous licence GPLv3. Le code source de Remixed Dungeon peut être trouvé ici:
+https://github.com/NYRDS/remixed-dungeon
+
+Si vous souhaitez participer à la traduction dans d'autres langues, rendez-vous sur :
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Vous pouvez vérifier ici  
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+la liste complète des modifications sur notre wiki.

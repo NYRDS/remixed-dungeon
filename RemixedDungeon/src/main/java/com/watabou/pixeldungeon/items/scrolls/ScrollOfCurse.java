@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
@@ -28,52 +29,52 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
 public class ScrollOfCurse extends Scroll {
 
-	static Class<?> badBuffs[] = {
+	private static Class<?>[] badBuffs = {
 			Blindness.class,
 			Charm.class,
 			Roots.class,
 			Slow.class,
 			Vertigo.class,
 			Weakness.class
-		};
+	};
 
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void doRead() {
 		Invisibility.dispel(getUser());
-		
-		if(getUser() instanceof Hero) {
-			Hero hero =  getUser();
-			
-			hero.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
-			Sample.INSTANCE.play( Assets.SND_CURSED );
-			
-			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(badBuffs);
-			Buff.prolong( hero, buffClass, 10);
-			
-			if(getUser().belongings.armor != null) {
-				getUser().belongings.armor.cursed = true;
-			}
-			if(getUser().belongings.weapon != null) {
-				getUser().belongings.weapon.cursed = true;
-			}
-			if(getUser().belongings.ring1 != null) {
-				getUser().belongings.ring1.cursed = true;
-			}
-			
-			if(getUser().belongings.ring2 != null) {
-				getUser().belongings.ring2.cursed = true;
-			}
-		}
-		
+
+		getUser().getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
+		Sample.INSTANCE.play( Assets.SND_CURSED );
+
+		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(badBuffs);
+		Buff.prolong( getUser(), buffClass, 10);
+
+		getUser().getBelongings().curseEquipped();
+
 		setKnown();
 		getUser().spendAndNext( TIME_TO_READ );
+	}
+
+
+	public static void curse(Char hero, Item... items) {
+
+		boolean procced = false;
+		for(Item item:items) {
+			if(item!=null && !item.cursed) {
+				item.cursed = true;
+				procced = true;
+			}
+		}
+
+		if (procced) {
+			hero.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
+		}
 	}
 
 	@Override

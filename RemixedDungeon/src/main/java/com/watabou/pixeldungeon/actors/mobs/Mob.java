@@ -49,6 +49,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -82,6 +83,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.SneakyThrows;
+
 public abstract class Mob extends Char {
 
 	public static final String TXT_RAGE = "#$%^";
@@ -107,9 +110,6 @@ public abstract class Mob extends Char {
 	protected int maxLvl = 50;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-	protected int owner = -1;
-
-	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int enemyId = EntityIdSource.INVALID_ID;
 
 	@Packable(defaultValue = "false")
@@ -131,15 +131,6 @@ public abstract class Mob extends Char {
 		owner = EntityIdSource.INVALID_ID;
 	}
 
-
-	public int getOwnerId() {
-		return owner;
-	}
-
-	Char getOwner() {
-		return CharsList.getById(owner);
-	}
-
 	@LuaInterface
 	@NotNull
 	public static Mob makePet(@NotNull Mob pet, @NotNull Char owner) {
@@ -157,7 +148,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
-		return owner >= 0 && CharsList.getById(owner) instanceof Hero;
+		return owner >= 0 && getOwner() instanceof Hero;
 	}
 
 	public int getOwnerPos() {
@@ -211,31 +202,24 @@ public abstract class Mob extends Char {
 		return 0;
 	}
 
+	@SneakyThrows
 	public CharSprite sprite() {
-
-		try {
-				{
-					String descName = "spritesDesc/" + getEntityKind() + ".json";
-					if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
-						return new MobSpriteDef(descName, getKind());
-					}
-				}
-
-			if (spriteClass instanceof Class) {
-				CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
-				sprite.selectKind(getKind());
-				return sprite;
-			}
-
-			if (spriteClass instanceof String) {
-				return new MobSpriteDef((String) spriteClass, getKind());
-			}
-
-			throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
-
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
+		String descName = "spritesDesc/" + getEntityKind() + ".json";
+		if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
+			return new MobSpriteDef(descName, getKind());
 		}
+
+		if (spriteClass instanceof Class) {
+			CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
+			sprite.selectKind(getKind());
+			return sprite;
+		}
+
+		if (spriteClass instanceof String) {
+			return new MobSpriteDef((String) spriteClass, getKind());
+		}
+
+		throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
 	}
 
 	@Override
@@ -328,10 +312,6 @@ public abstract class Mob extends Char {
 		super.move(step);
 	}
 
-	protected float attackDelay() {
-		return 1f;
-	}
-
 	public boolean doAttack(Char enemy) {
 
 		setEnemy(enemy);
@@ -416,12 +396,13 @@ public abstract class Mob extends Char {
 			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.getHeroClass() == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
-					if(hero.belongings.armor instanceof NecromancerRobe){
+					if(hero.getBelongings().armor instanceof NecromancerRobe){
 						hero.accumulateSkillPoints();
 					}
 				}
 			}
-			for (Item item : hero.belongings) {
+
+			for (Item item : hero.getBelongings()) {
 				if (item instanceof BlackSkull && item.isEquipped(hero)) {
 					((BlackSkull) item).mobDied(this, hero);
 				}
@@ -457,7 +438,7 @@ public abstract class Mob extends Char {
 			dropLoot();
 		}
 
-		if (hero.isAlive() && !Char.isVisible(this)) {
+		if (hero.isAlive() && !CharUtils.isVisible(this)) {
 			GLog.i(Game.getVar(R.string.Mob_Died));
 		}
 	}
@@ -469,12 +450,8 @@ public abstract class Mob extends Char {
 	protected float  lootChance = 0;
 
 	public Mob split(int cell, int damage) {
-		Mob clone;
-		try {
-			clone = MobFactory.mobByName(getEntityKind());
-		} catch (Exception e) {
-			throw new TrackedRuntimeException("split issue");
-		}
+
+		Mob clone = (Mob)makeClone();
 
 		clone.hp(Math.max((hp() - damage) / 2, 1));
 		clone.setPos(cell);
@@ -501,12 +478,7 @@ public abstract class Mob extends Char {
 	public void resurrect(Char parent) {
 
 		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
-		Mob new_mob;
-		try {
-			new_mob = MobFactory.mobByName(getMobClassName());
-		} catch (Exception e) {
-			throw new TrackedRuntimeException("resurrect issue:"+getMobClassName());
-		}
+		Mob new_mob = MobFactory.mobByName(getMobClassName());
 
 		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
@@ -729,7 +701,18 @@ public abstract class Mob extends Char {
 	}
 
 	@Nullable
-	protected Object getLoot() {
+	@LuaInterface
+	public Object getLoot() {
 		return loot;
+	}
+
+	@Override
+	public Char makeClone() {
+		return MobFactory.mobByName(getEntityKind());
+	}
+
+	@Override
+	protected float _attackDelay() {
+		return 1f;
 	}
 }

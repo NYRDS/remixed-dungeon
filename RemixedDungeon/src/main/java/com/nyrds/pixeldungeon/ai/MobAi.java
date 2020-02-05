@@ -3,6 +3,8 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.watabou.pixeldungeon.Challenges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -120,6 +122,20 @@ public abstract class MobAi implements AiState {
 
             me.notice();
             me.setState(getStateByClass(Hunting.class));
+
+
+            if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
+                for (Mob mob : me.level().mobs) {
+                    if (me != mob && mob.getOwnerId() != me.getEnemy().getId()) {
+                        mob.setEnemy(me.getEnemy());
+                        mob.target = me.getEnemy().getPos();
+                        mob.notice();
+                        mob.setState(getStateByClass(Hunting.class));
+                    }
+                }
+            }
+
+
         }
     }
 

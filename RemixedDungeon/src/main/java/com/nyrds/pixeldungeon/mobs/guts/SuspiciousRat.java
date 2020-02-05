@@ -7,6 +7,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -58,7 +59,7 @@ public class SuspiciousRat extends Mob {
 			if (!transforming) {
 				spend(TIME_TO_HATCH);
 				transforming = true;
-				if (Char.isVisible(this)) {
+				if (CharUtils.isVisible(this)) {
 					getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 					GLog.n(Game.getVar(R.string.SuspiciousRat_Info1));
 				}

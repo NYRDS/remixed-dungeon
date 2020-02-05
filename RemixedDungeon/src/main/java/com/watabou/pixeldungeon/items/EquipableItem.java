@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -29,6 +28,7 @@ import java.util.ArrayList;
 
 public abstract class EquipableItem extends Item {
 
+	public static final String NO_ANIMATION = "none";
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
@@ -48,14 +48,14 @@ public abstract class EquipableItem extends Item {
 	}
 	
 	@Override
-	public void doDrop( Hero hero ) {
+	public void doDrop( Char hero ) {
 		if (!isEquipped( hero ) || doUnequip( hero, false, false )) {
 			super.doDrop( hero );
 		}
 	}
 	
 	@Override
-	public void cast( final Hero user, int dst ) {
+	public void cast(final Char user, int dst ) {
 
 		if (isEquipped( user )) {
 			if (quantity() == 1 && !this.doUnequip( user, false, false )) {
@@ -79,13 +79,14 @@ public abstract class EquipableItem extends Item {
 
 	public boolean doEquip(Hero hero ) {
 		setUser(hero);
-		return hero.getBelongings().equip(this,slot());
+		Belongings belongings = hero.getBelongings();
+		return belongings.equip(this, slot(belongings));
 	}
 
 	public void activate(Char ch) {}
 	public void deactivate(Char ch) {}
 
-	public boolean doUnequip(Char hero, boolean collect, boolean single ) {
+	protected boolean doUnequip(Char hero, boolean collect, boolean single) {
 		
 		if (cursed) {
 			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );
@@ -94,16 +95,9 @@ public abstract class EquipableItem extends Item {
 
 		Belongings belongings = hero.getBelongings();
 
-		if (belongings==null) {
-			throw new TrackedRuntimeException("null belongings");
-		}
-
 		if(!belongings.unequip(this)) {
 			return false;
 		}
-
-		hero.updateSprite();
-		deactivate(hero);
 
 		if (single) {
 			hero.spendAndNext( time2equip( hero ) );
@@ -126,14 +120,25 @@ public abstract class EquipableItem extends Item {
 		return getClassName();
 	}
 
-	public abstract Belongings.Slot slot();
+	public abstract Belongings.Slot slot(Belongings belongings);
+
+	public int typicalSTR() {
+		return 0;
+	}
 
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.NONE;
+	}
+
+	public String getAnimationClass() {
+		return NO_ANIMATION;
 	}
 
 	public void equippedCursed() {
 		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name() );
 	}
 
+	public int requiredSTR() {
+		return 0;
+	}
 }

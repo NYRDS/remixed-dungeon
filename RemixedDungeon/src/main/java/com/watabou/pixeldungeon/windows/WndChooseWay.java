@@ -135,7 +135,7 @@ public class WndChooseWay extends Window {
 			protected void onClick() {
 				hide();
 				Hero hero = Dungeon.hero;
-				Item a = hero.belongings.getItem( BlackSkullOfMastery.class );
+				Item a = hero.getBelongings().getItem( BlackSkullOfMastery.class );
 				a.removeItemFrom(hero);
 				Item b = new BlackSkull();
 				Dungeon.level.drop( b, hero.getPos() ).sprite.drop();

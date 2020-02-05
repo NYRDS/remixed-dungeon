@@ -555,9 +555,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public void completeForce() {
         interruptMotion();
-        if (curAnim != null) {
+        interruptAnimation();
+        animCallback = null;
+        /*if (curAnim != null) {
             onComplete(curAnim);
-        }
+        }*/
         reset();
     }
 }

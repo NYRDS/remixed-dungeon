@@ -85,22 +85,24 @@ public class Warlock extends Mob implements IZapper {
 
 		int cell = getPos();
 
-		Ballistica.cast(epos, cell, true, false);
+		Ballistica.cast(cell, epos, true, false);
 
-		for (int i = 1; i < 4; i++) {
+		for (int i = 1; i < 4 && i < Ballistica.distance; i++) {
 			int next = Ballistica.trace[i + 1];
-			if (level().cellValid(next) && (level().passable[next] || level().avoid[next]) && Actor.findChar(next) == null) {
+			if (level().cellValid(next)
+					&& (level().passable[next] || level().avoid[next])
+					&& Actor.findChar(next) == null) {
 				cell = next;
-				Dungeon.observe();
 			}
 		}
 		
-		if (cell != getPos()){
+		if (cell != getPos()) {
 			final int tgt = cell;
 			final Char ch = this;
 
 			fx(cell, () -> WandOfBlink.appear(ch, tgt));
 			placeTo(cell);
+			Dungeon.observe();
 		}
 	}
 

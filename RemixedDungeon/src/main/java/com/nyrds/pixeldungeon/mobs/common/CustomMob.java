@@ -5,7 +5,6 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.ml.R;
@@ -22,6 +21,8 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by mike on 11.04.2017.
@@ -57,7 +58,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	protected float attackDelay() {
+	protected float _attackDelay() {
 		return attackDelay;
 	}
 
@@ -124,67 +125,64 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-
+	@SneakyThrows
 	private void fillMobStats(boolean restoring) {
-		try {
-			JSONObject classDesc = getClassDef();
+		JSONObject classDesc = getClassDef();
 
-			defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
-			attackSkill = classDesc.optInt("attackSkill", attackSkill);
+		defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
+		attackSkill = classDesc.optInt("attackSkill", attackSkill);
 
-			exp = classDesc.optInt("exp", exp);
-			maxLvl = classDesc.optInt("maxLvl", maxLvl);
-			dmgMin = classDesc.optInt("dmgMin", dmgMin);
-			dmgMax = classDesc.optInt("dmgMax", dmgMax);
+		exp = classDesc.optInt("exp", exp);
+		maxLvl = classDesc.optInt("maxLvl", maxLvl);
+		dmgMin = classDesc.optInt("dmgMin", dmgMin);
+		dmgMax = classDesc.optInt("dmgMax", dmgMax);
 
-			dr = classDesc.optInt("dr", dr);
+		dr = classDesc.optInt("dr", dr);
 
-			baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
-			attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
+		baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
+		attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 
-			name = StringsManager.maybeId(classDesc.optString("name", mobClass+"_Name"));
-			name_objective = StringsManager.maybeId(classDesc.optString("name_objective", mobClass+"_Name_Objective"));
-			description = StringsManager.maybeId(classDesc.optString("description", mobClass+"_Desc"));
-			gender = Utils.genderFromString(classDesc.optString("gender", mobClass+"_Gender"));
+		name = StringsManager.maybeId(classDesc.optString("name", mobClass+"_Name"));
+		name_objective = StringsManager.maybeId(classDesc.optString("name_objective", mobClass+"_Name_Objective"));
+		description = StringsManager.maybeId(classDesc.optString("description", mobClass+"_Desc"));
+		gender = Utils.genderFromString(classDesc.optString("gender", mobClass+"_Gender"));
 
-			spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
+		spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
 
-			flying = classDesc.optBoolean("flying", flying);
+		flying = classDesc.optBoolean("flying", flying);
 
-			lootChance = (float) classDesc.optDouble("lootChance", lootChance);
+		lootChance = (float) classDesc.optDouble("lootChance", lootChance);
 
-			if (classDesc.has("loot")) {
-				loot = ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot"));
-			}
+		if (classDesc.has("loot")) {
+			loot = ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot"));
+		}
 
-			viewDistance = classDesc.optInt("viewDistance",viewDistance);
-			viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
+		viewDistance = classDesc.optInt("viewDistance",viewDistance);
+		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
 
-			walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
+		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
 
-			defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", Game.getVars(R.array.Char_StaDodged)[gender]));
+		defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", Game.getVars(R.array.Char_StaDodged)[gender]));
 
-			canBePet = classDesc.optBoolean("canBePet",canBePet);
+		canBePet = classDesc.optBoolean("canBePet",canBePet);
 
-			attackRange = classDesc.optInt("attackRange",attackRange);
+		attackRange = classDesc.optInt("attackRange",attackRange);
 
-			String scriptFile = classDesc.optString("scriptFile","");
-			if(!scriptFile.isEmpty()) {
-				script = new LuaScript(scriptFile, this);
-			}
+		String scriptFile = classDesc.optString("scriptFile","");
+		if(!scriptFile.isEmpty()) {
+			script = new LuaScript(scriptFile, this);
+			script.asInstance();
+		}
 
-			friendly = classDesc.optBoolean("friendly",friendly);
+		friendly = classDesc.optBoolean("friendly",friendly);
 
-			JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
-			JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
+		JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
+		JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
 
-			if(!restoring) {
-				setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
-				hp(ht(classDesc.optInt("ht", 1)));
-				fromJson(classDesc);
-			}
-		} catch (Exception e) {
-			throw new TrackedRuntimeException(e);
+		if(!restoring) {
+			setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
+			hp(ht(classDesc.optInt("ht", 1)));
+			fromJson(classDesc);
 		}
 	}
 

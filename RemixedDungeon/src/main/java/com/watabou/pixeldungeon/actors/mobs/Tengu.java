@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.Badges.Badge;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -156,7 +157,7 @@ public class Tengu extends Boss implements IZapper {
 		getSprite().move( getPos(), newPos );
 		move( newPos );
 		
-		if (Char.isVisible(this)) {
+		if (CharUtils.isVisible(this)) {
 			CellEmitter.get( newPos ).burst( Speck.factory( Speck.WOOL ), 6 );
 			Sample.INSTANCE.play( Assets.SND_PUFF );
 		}

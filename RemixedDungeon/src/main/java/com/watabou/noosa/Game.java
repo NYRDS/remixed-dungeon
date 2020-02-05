@@ -41,12 +41,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.ReportingExecutor;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
-import com.nyrds.pixeldungeon.support.Google._PlayGames;
+import com.nyrds.pixeldungeon.support.Google.PlayGames;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
@@ -67,10 +67,11 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import lombok.SneakyThrows;
 
 @SuppressLint("Registered")
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -84,7 +85,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static String version;
     public static int versionCode;
-    public _PlayGames playGames;
+    public PlayGames playGames;
     public Iap iap;
 
     // Current scene
@@ -119,7 +120,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     // Accumulated key events
     private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
-    public Executor executor = Executors.newSingleThreadExecutor();
+    public Executor executor = new ReportingExecutor();
 
     private Runnable doOnResume;
 
@@ -151,6 +152,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static int getDifficulty() {
         return difficulty;
+    }
+
+    public static void addToScene(Gizmo gizmo) {
+        Scene scene = scene();
+        if(scene!=null) {
+            scene.add(gizmo);
+        }
     }
 
     public void useLocale(String lang) {
@@ -380,7 +388,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         GLES20.glClearColor(0, 0, 0, 0.0f);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 
-        draw();
+        if (scene != null) {
+            scene.draw();
+        }
     }
 
     @Override
@@ -430,17 +440,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return instance().scene;
     }
 
+    @SneakyThrows
     private void step() {
 
         if (requestedReset) {
             requestedReset = false;
-            try {
-                switchScene(sceneClass.newInstance());
-                return;
-            } catch (Exception e) {
-                throw new TrackedRuntimeException(e);
-            }
-        }
+            switchScene(sceneClass.newInstance());
+            return;
+       }
 
         Game.elapsed = Game.timeScale * step * 0.001f;
 
@@ -457,22 +464,18 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Camera.updateAll();
     }
 
-    private void draw() {
-        if (scene != null) {
-            scene.draw();
-        }
-    }
-
     private void switchScene(Scene requestedScene) {
 
         SystemText.invalidate();
         Camera.reset();
 
         if (scene != null) {
+            EventCollector.collectSessionData("pre_scene",scene.getClass().getSimpleName());
             scene.destroy();
         }
         scene = requestedScene;
         scene.create();
+        EventCollector.collectSessionData("scene",scene.getClass().getSimpleName());
 
         Game.elapsed = 0f;
         Game.timeScale = 1f;
@@ -580,5 +583,4 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     static public void pushUiTask(Runnable task) {
         instance().uiTasks.add(task);
     }
-
 }

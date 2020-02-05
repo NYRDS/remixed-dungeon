@@ -1597,7 +1597,7 @@
   <string name="WndMovieTheatre_Watch">Assistir um filme</string>
   <string name="WndMovieTheatre_No">sair</string>
   <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
-  <string name="WndMovieTheatre_Instruction">Saudações e Bem-vindo ao nosso cinema! Nós providenciamos um serviço especial, você pode assistir filmes de graça, e se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
+  <string name="WndMovieTheatre_Instruction">Saudações e bem-vindo ao nosso cinema! Nós fornecemos um serviço especial, onde você pode assistir a um filme de graça. E se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
   <string name="WndMovieTheatre_Title">Cinema</string>
   <string name="WndMovieTheatre_Thank_You">Obrigado pela sua participação!</string>
   <string name="WndPriest_Heal">Vida - %d ouro</string>
@@ -2385,7 +2385,7 @@ Parede
   <string name="HeroClass_MagPerks_1">Magos recarregam suas varinhas mais rápido.</string>
   <string name="HeroClass_MagPerks_2">Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</string>
   <string name="HeroClass_MagPerks_3">Magos podem usar varinhas como uma arma de combate.</string>
-  <string name="HeroClass_MagPerks_4">Pergaminhos de Identificação são identificados desde o início.</string>
+  <string name="HeroClass_MagPerks_4">Magos usam mana para lançar feitiços Elementais.</string>
   <string name="HeroClass_MagPerks_5">Pergaminhos de Identificação são identificados desde o início.</string>
   <string name="HeroClass_RogPerks_0">Ladrões começam com um Anel de Sombras +1.</string>
   <string name="HeroClass_RogPerks_1">Ladrões podem identificar um anel ao equipa-lo.</string>
@@ -2550,4 +2550,5 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     -- Escudos Personalizados!:\n
     - Defeitos consertados\n
     </string>
+  <string name="ShieldStrTemplate">O usuário do escudo deve ter pelo menos %1$d pontos de força para usá-lo corretamente.</string>
 </resources>

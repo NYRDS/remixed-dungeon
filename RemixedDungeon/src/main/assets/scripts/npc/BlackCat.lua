@@ -22,7 +22,7 @@ return mob.init({
 
         hero:getSprite():showStatus( 0xFF0000, RPD.textById("Str_lose"))
 
-        RPD.playSound( "snd_cursed.mp3" )
+        RPD.playSound( "snd_cursed" )
     end,
 
     spawn = function(me, level)

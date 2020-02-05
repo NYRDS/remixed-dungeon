@@ -29,7 +29,7 @@ public class Quiver extends Bag {
 	
 	@Override
 	public boolean grab( Item item ) {
-		return item instanceof MissileWeapon;
+		return super.grab(item) || item instanceof MissileWeapon;
 	}
 	
 	@Override

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
-  <string name="ChaosHelmet_Name">Kaos Kaskı</string>
-  <string name="ChaosHelmet_Info">Kan kırmızısı kask, kaos savaşçısı için gerekli olan bir semboldür.</string>
+  <string name="ChaosHelmet_Name">Kaos Miğferi</string>
+  <string name="ChaosHelmet_Info">Kan kırmızısı miğfer, kaos savaşçısının vazgeçilmez bir sembolüdür.</string>
   <string name="Spells_SummonLimitReached">%1$s: çağırma limiti doldu (Şuanki sınır: %2$d)!</string>
   <string name="Mana_Title">Mana</string>
   <string name="Mana_Cost">Gereken Mana:</string>
@@ -2121,6 +2121,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Potion_ItemFliesAway">%s elinden uçup gitti.</string>
   <string name="Potion_FoodRefreshed">%s artık yenebilir gibi görünüyor</string>
   <string name="KindOfBow_SelectArrowKind">Hangi okları kullanmalıyım? </string>
+  <string name="KindOfBow_ChooseArrows">OK SEÇ</string>
   <string name="BodyArmorSpell_Name">Vücut zırhı</string>
   <string name="BodyArmorBuff_Name">Vücut zırhı</string>
   <string name="BodyArmorBuff_Info">Zırh, hareket için harcanan enerjiyi arttırdı.</string>
@@ -2193,12 +2194,24 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="town_deco_medicine_name">İlaç</string>
   <string name="town_deco_wooden_stairs_name">Merdivenler</string>
   <string name="town_deco_canvas_name">Kanvas</string>
+  <string name="town_deco_projector_name">Projeksiyon Cihazı</string>
+  <string name="town_deco_projector_desc">Film oynatmaya ve insanları eğlendirmeye yarayan eski bir aygıt.</string>
   <string name="town_deco_filmtape_name">Film</string>
+  <string name="town_deco_filmtape_desc">Ne içerdiği merak uyandırıyor.</string>
   <string name="town_deco_painting_name">Resim</string>
   <string name="town_deco_painting_desc">Güzel görünümlü bir eser.</string>
   <string name="town_deco_curtains_name">Perdeler</string>
+  <string name="town_deco_curtains_desc">Gereksiz tüm ışığı durdurur ve güzel bir dekorasyon olarak kullanılabilir.</string>
   <string name="town_deco_rug_name">Halı</string>
   <string name="town_deco_rug_desc">İyi bir tat ile tasarlanmış.</string>
+  <string name="town_deco_trapdoor_name">Tuzak kapısı</string>
+  <string name="town_deco_trapdoor_desc">Acaba nereye gidiyor.</string>
+  <string name="town_deco_glass_name">Geniş Pencere</string>
+  <string name="town_deco_glass_desc">Bu diğerlerine kıyasla daha geniş ve kesinlikle içeriye daha fazla ışık alıyor.</string>
+  <string name="town_deco_counter_name">Tezgah</string>
+  <string name="town_deco_counter_desc">Arkasında duran kişiyle aranızda yeterli mesafe sağlar.</string>
+  <string name="town_deco_library_books_name">Okumalık Şey</string>
+  <string name="town_deco_library_books_desc">Yine de zindandaki kitaplardan daha iyidir.</string>
   <string name="town_deco_wallpaper_name">Duvar kağıdı</string>
   <string name="town_deco_wallpaper_desc">Böyle bir yer için güzel bir süsleme tercihi.</string>
   <string name="town_deco_stones_name">Taşlar</string>
@@ -2206,7 +2219,13 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="town_deco_fireplace_name">Şömine</string>
   <string name="town_deco_fireplace_desc">Böyle soğuk bir yeri ısıtmak için iyi.</string>
   <string name="Badges_GamesPlayed5">5000 oyun oynandı</string>
+  <string name="Badges_PotionsCooked5">25 iksir hazırlandı</string>
+  <string name="Badges_ItemLvl5">15 seviyesine sahip bir öğe ele geçirildi</string>
+  <string name="Badges_FoodEaten5">60 parça yiyecek yenildi</string>
+  <string name="Badges_StrengthAttained5">Güç seviyesi 21 puana yükseltildi</string>
+  <string name="Badges_LevelReached5">30. seviyeye erişildi</string>
   <string name="Badges_GoldCollected5">35000 altın toplandı</string>
+  <string name="Badges_MonsterSlain5">1000 düşman kesildi</string>
   <string name="Spells_NotInOwnBody">Ruhun bedeninden ayrıyken %s yapamazsın. </string>
   <string name="WndHero_Satiety">Doygunluk</string>
   <string name="Welcome_Text_29">
@@ -2420,4 +2439,20 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Potion_Colors_10">çivit mavisi</string>
   <string name="Potion_Colors_11">gümüş rengi</string>
   <string name="town_deco_stone_wall_broken_name">Kırık duvar</string>
+  <string name="town_deco_stone_wall_broken_desc">Eski taş duvar, kötü durumda</string>
+  <string name="Challenges_Names_6">Yasaklı Runikler</string>
+  <string name="Challenges_Names_7">Barışseverlik</string>
+  <string name="town_deco_crossroad_name">Kavşak tabelası</string>
+  <string name="ShieldBuffReady_Name">Hazır</string>
+  <string name="ShieldBuffNotReady_Name">Hazır Değil</string>
+  <string name="WoodenShield_name">Tahta kalkan</string>
+  <string name="ToughShield_name">Güçlendirilmiş Deri Kalkan</string>
+  <string name="ToughShield_desc">Bu deri kayışlarla güçlendirilmiş kalkan tahta olandan daha güçlü duruyor. Daha fazla hasar engelleyebileceği şüphesiz.</string>
+  <string name="StrongShield_name">Tunç Kaplamalı Kalkan</string>
+  <string name="StrongShield_desc">Bu dikdörtgen kalkan tunç levhalar ile kaplanmış ve kumaşla renklendirilip süslenmiş. Daha ağır, fakat çok daha fazla hasarı engelleyebilir.</string>
+  <string name="RoyalShield_name">Kraliyet Kalkanı</string>
+  <string name="RoyalShield_desc">Tamamen metal bir kalkan. Evet, ağır, fakat en iyi korumayı yalnızca bu sağlayabilir.</string>
+  <string name="ShieldInfoTemplate">Bu kalkan gelen hasarın en fazla %1$d kadarını engelleyebilir. %%%2$d ihtimalle. Başarılı bir engelleme sonrasında geri toparlanması için %3$3.1f saniye gerektirir.</string>
+  <string name="Belongings_CantWearBoth">%1$s ve %2$s öğelerini aynı anda kuşanamazsın!</string>
+  <string name="ShieldStrTemplate">Düzgün kullanabilmek için kalkanı kuşananın en az %1$d güç puanına sahip olmalıdır.</string>
 </resources>

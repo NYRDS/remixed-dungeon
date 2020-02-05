@@ -338,7 +338,7 @@ public class StartScene extends PixelScene {
             protected void onSelect(final int index) {
 
                 if (index < 2 && EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-                    Game.scene().add(new WndEuConsent() {
+                    Game.addToScene(new WndEuConsent() {
                         @Override
                         public void done() {
                             startNewGame(index);

@@ -174,11 +174,15 @@ public class SaveUtils {
 		return cl.tag()+"%d.dat";
 	}
 
+	static public String buildSlotFromTag(String tag) {
+		return ModdingMode.activeMod() + "_" + tag + "_" + Game.getDifficulty();
+	}
+
 	public static String getAutoSave() {
-		return ModdingMode.activeMod() + "_" + AUTO_SAVE;
+		return buildSlotFromTag(AUTO_SAVE);
 	}
 
 	public static String getPrevSave() {
-		return ModdingMode.activeMod() + "_" + PREV_SAVE;
+		return buildSlotFromTag(PREV_SAVE);
 	}
 }

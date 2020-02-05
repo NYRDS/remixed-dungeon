@@ -165,12 +165,6 @@ public class Shopkeeper extends NPC {
 		return true;
 	}
 
-	public void placeItemInShop(Item item) {
-		if(!item.cursed) {
-			addItem(item);
-		}
-	}
-
 	public void generateNewItem()
 	{
 		Item newItem = Treasury.getLevelTreasury().random();
@@ -179,7 +173,15 @@ public class Shopkeeper extends NPC {
 			return;
 		}
 
-		placeItemInShop(newItem);
+		if(newItem.cursed) {
+			return;
+		}
+
+		if(!newItem.stackable && getBelongings().getItem(newItem.getEntityKind())!=null) {
+			return;
+		}
+
+		addItem(newItem);
 	}
 
 
@@ -198,6 +200,7 @@ public class Shopkeeper extends NPC {
 		item.collect(this);
 	}
 
+	@NotNull
 	@Override
 	public Belongings getBelongings() {
 		return belongings;

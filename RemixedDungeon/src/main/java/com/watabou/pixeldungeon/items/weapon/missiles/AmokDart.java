@@ -45,13 +45,13 @@ public class AmokDart extends Dart {
 	}
 	
 	@Override
-	public void proc( Char attacker, Char defender, int damage ) {
+	public void attackProc(Char attacker, Char defender, int damage ) {
 		Buff.affect(defender, Amok.class,20);
 		Buff.affect(defender, Speed.class,20);
 		Buff rage = new RageBuff();
 		rage.attachTo(defender);
 
-		super.proc( attacker, defender, damage );
+		super.attackProc( attacker, defender, damage );
 	}
 
 	@Override

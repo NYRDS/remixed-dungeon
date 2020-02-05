@@ -19,10 +19,10 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -35,8 +35,12 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashSet;
 import java.util.Set;
+
+import lombok.SneakyThrows;
 
 public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
@@ -54,6 +58,16 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	@Override
 	public String name() {
 		return getEntityKind();
+	}
+
+	@Override
+	public String textureSmall() {
+		return Assets.BUFFS_SMALL;
+	}
+
+	@Override
+	public String textureLarge() {
+		return Assets.BUFFS_LARGE;
 	}
 
 	public void attachVisual() {
@@ -91,19 +105,16 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	public int icon() {
 		return BuffIndicator.NONE;
 	}
-	
-	public static<T extends Buff> T affect( Char target, Class<T> buffClass ) {
+
+	@SneakyThrows
+	public static<T extends Buff> T affect(@NotNull Char target, Class<T> buffClass ) {
 		T buff = target.buff( buffClass );
 		if (buff != null) {
 			return buff;
 		} else {
-			try {
-				buff = buffClass.newInstance();
-				buff.attachTo(target);
-				return buff;
-			} catch (Exception e) {
-				throw new TrackedRuntimeException(e);
-			}
+			buff = buffClass.newInstance();
+			buff.attachTo(target);
+			return buff;
 		}
 	}
 
@@ -195,6 +206,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	}
 
 	@Override
+	public int attackProc(Char attacker, Char defender, int damage) {
+		return damage;
+	}
+
+	@Override
 	public int regenerationBonus() {
 		return 0;
 	}
@@ -223,7 +239,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 	}
 
 	private void collectOrDropItem(Item item){
-		if(!item.collect( ((Hero)target).belongings.backpack )){
+		if(!item.collect( target.getBelongings().backpack )){
 			Dungeon.level.drop(item, target.getPos()).sprite.drop();
 		}	
 	}
@@ -239,13 +255,13 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 			}
 			
 			for (int i = 0; i < n; i++) {
-				Item item = hero.belongings.randomUnequipped();
+				Item item = hero.getBelongings().randomUnequipped();
 
 				if (item == null || item instanceof Bag || item instanceof Gold) {
 					continue;
 				}
 
-				Item srcItem = item.detach(hero.belongings.backpack);
+				Item srcItem = item.detach(hero.getBelongings().backpack);
 
 				if(srcItem == null) {
 					EventCollector.logException(item.getClassName());

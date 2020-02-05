@@ -17,11 +17,17 @@
 
 package com.watabou.utils;
 
+import com.nyrds.Packable;
+
 public class Rect {
 
+	@Packable
 	public int left;
+	@Packable
 	public int top;
+	@Packable
 	public int right;
+	@Packable
 	public int bottom;
 	
 	public Rect() {

@@ -25,6 +25,8 @@ import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.microedition.khronos.opengles.GL10;
 
 public class Emitter extends Group {
@@ -79,7 +81,7 @@ public class Emitter extends Group {
 		start( factory, interval, 0 );
 	}
 
-	public void start( Factory factory, float interval, int quantity ) {
+	public void start(@NotNull Factory factory, float interval, int quantity ) {
 		
 		this.factory = factory;
 		this.lightMode = factory.lightMode();

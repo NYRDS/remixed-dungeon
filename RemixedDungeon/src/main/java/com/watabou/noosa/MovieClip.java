@@ -78,6 +78,10 @@ public class MovieClip extends Image {
         }
     }
 
+    public void interruptAnimation() {
+        finished = true;
+    }
+
     public void play(Animation anim) {
         play(anim, false);
     }

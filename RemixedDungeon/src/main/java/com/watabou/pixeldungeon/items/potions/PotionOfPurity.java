@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -27,7 +28,6 @@ import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.GasesImmunity;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -110,7 +110,9 @@ public class PotionOfPurity extends UpgradablePotion{
 	@Override
 	protected void apply(Hero hero) {
 		GLog.w(Game.getVar(R.string.PotionOfPurity_NoSmell));
-		Buff.prolong(hero, GasesImmunity.class, (float) (GasesImmunity.DURATION * qualityFactor()));
+
+		Buff.prolong(hero, BuffFactory.GASES_IMMUNITY, (float) (5 * qualityFactor()));
+
 		setKnown();
 	}
 

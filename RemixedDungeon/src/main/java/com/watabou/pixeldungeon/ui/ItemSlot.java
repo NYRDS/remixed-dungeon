@@ -21,11 +21,9 @@ import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.rings.Artifact;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -165,30 +163,28 @@ public class ItemSlot extends Button {
 
         topLeft.text(item.status());
 
-        boolean isArmor = item instanceof Armor;
-        boolean isWeapon = item instanceof Weapon;
-        if ((isArmor || isWeapon) && !inQuickSlot) {
+        if(item instanceof EquipableItem) {
 
-            if (item.isLevelKnown() || (isWeapon && !(item instanceof MeleeWeapon))) {
+            EquipableItem eitem = (EquipableItem)item;
+            int typicalStr = eitem.typicalSTR();
 
-                int str = isArmor ? ((Armor) item).STR : ((Weapon) item).STR;
-                topRight.text(Utils.format(TXT_STRENGTH, str));
-                if (str > Dungeon.hero.effectiveSTR()) {
-                    topRight.hardlight(DEGRADED);
+            if(typicalStr>0 && !inQuickSlot) {
+                if (item.isLevelKnown()) {
+
+                    int str = eitem.requiredSTR();
+                    topRight.text(Utils.format(TXT_STRENGTH, str));
+                    if (str > Dungeon.hero.effectiveSTR()) {
+                        topRight.hardlight(DEGRADED);
+                    } else {
+                        topRight.resetColor();
+                    }
                 } else {
-                    topRight.resetColor();
+                    topRight.text(Utils.format(TXT_TYPICAL_STR, typicalStr));
+                    topRight.hardlight(WARNING);
                 }
-
             } else {
-
-                topRight.text(Utils.format(TXT_TYPICAL_STR, isArmor ?
-                        ((Armor) item).typicalSTR() :
-                        ((MeleeWeapon) item).typicalSTR()));
-                topRight.hardlight(WARNING);
-
+                topRight.text(Utils.EMPTY_STRING);
             }
-        } else {
-            topRight.text(Utils.EMPTY_STRING);
         }
 
         int level = item.visiblyUpgraded();

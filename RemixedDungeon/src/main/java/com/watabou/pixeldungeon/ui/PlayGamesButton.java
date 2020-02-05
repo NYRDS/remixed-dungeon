@@ -31,6 +31,6 @@ public class PlayGamesButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		Game.scene().add(new WndPlayGames());
+		Game.addToScene(new WndPlayGames());
 	}
 }

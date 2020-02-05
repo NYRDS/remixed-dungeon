@@ -172,7 +172,7 @@
       "CurareDart": 1,
       "IncendiaryDart": 1
     },
-    "SHIELDS": {
+    "SHIELD": {
       "WoodenShield": 1,
       "ToughShield" : 0.5,
       "StrongShield": 0.25,
