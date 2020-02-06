@@ -78,6 +78,7 @@ return item.init{
         if action == "action2" then
             self.data.activationCount = self.data.activationCount + 1
             RPD.glogp(tostring(item:getId()).." "..action)
+            RPD.affectBuff(hero,"Counter",1):level(10)
         end
 
         if action == "action3" then
