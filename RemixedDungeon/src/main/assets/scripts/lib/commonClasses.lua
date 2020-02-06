@@ -10,7 +10,7 @@ local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
 local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
 
-local Sample = luajava.bindClass("com.watabou.noosa.audio.Sample")
+local Sample           = luajava.bindClass("com.watabou.noosa.audio.Sample")
 local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
 
 local Buffs  = {
@@ -69,6 +69,8 @@ local actions = {
     drink = "Drink_ACDrink",
     equip ="EquipableItem_ACEquip"
 }
+
+local Bundle           = "com.watabou.utils.Bundle"
 
 local Objects = {
     Ui = {
@@ -326,6 +328,29 @@ local RPD = {
 
     checkBadge = function(badgeName)
         return Badges:isUnlocked(Badges.Badge:valueOf(badgeName))
+    end,
+
+    packEntity = function(entity)
+        local bundle = luajava.newInstance(Bundle)
+        bundle:putEntity("entity",entity)
+        return bundle:serialize()
+    end,
+
+    unpackEntity = function(str)
+        return luajava.newInstance(Bundle,str):get("entity")
+    end,
+
+    toLua = function(entity)
+        local json = require("scripts/lib/json")
+        local bundle = luajava.newInstance(Bundle)
+        bundle:putEntity("entity",entity)
+        return json.decode(bundle:serialize())["entity"]
+    end,
+
+    fromLua = function(entityDesc)
+        local json = require("scripts/lib/json")
+        local jsonDesc = json.encode({entity = entityDesc})
+        return luajava.newInstance(Bundle, jsonDesc):get("entity")
     end,
 
     format = function(fmt, ...)

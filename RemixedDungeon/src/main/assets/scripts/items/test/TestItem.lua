@@ -53,6 +53,7 @@ return item.init{
             return {"action1",
                     "action2",
                     "action3",
+                    "action4",
                     tostring(item:getId()),
                     tostring(self.data.activationCount),
                     tostring(self)
@@ -84,6 +85,16 @@ return item.init{
         if action == "action3" then
             RPD.glogn(tostring(item:getId()).." "..action)
             item:detach(hero:getBelongings().backpack)
+        end
+
+        if action == "action4" then
+            local packedItem = RPD.packEntity(item)
+            RPD.glog(packedItem)
+            local restoredItem = RPD.unpackEntity(packedItem)
+            local luaDesc = RPD.toLua(restoredItem)
+            restoredItem = RPD.fromLua(luaDesc)
+            packedItem = RPD.packEntity(restoredItem)
+            RPD.glog(packedItem)
         end
     end,
 
