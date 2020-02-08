@@ -10,7 +10,6 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 
@@ -248,17 +247,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if(!weapon_anims.isEmpty()) { //old mods compatibility
-			KindOfWeapon weapon = hero.getBelongings().weapon;
+			EquipableItem weapon = hero.getBelongings().weapon;
+			EquipableItem leftHand = hero.getBelongings().leftHand;
 
-			if (weapon != null) {
-				zap = attack = weapon_anims.get(weapon.getAnimationClass());
+			if(weapon != null && leftHand != null) {
+				zap = attack = weapon_anims.get("dual");
+			}
 
-				String zapAnim = weapon.getAnimationClass()+"_zap";
+			if(weapon != null) {
+				zap = attack = weapon_anims.get("right");
+			}
 
-				if(weapon_anims.containsKey(zapAnim)) {
-                    zap = weapon_anims.get(zapAnim);
-                }
-
+			if(leftHand != null) {
+				zap = attack = weapon_anims.get("left");
 			}
 		}
 

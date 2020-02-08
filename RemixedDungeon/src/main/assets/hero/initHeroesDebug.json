@@ -31,7 +31,7 @@
         "kind": "RoyalShield"
       },
       {
-        "kind": "test/TestItem"
+        "kind": "Dagger"
       },
       {
         "kind": "test/TestItem"
@@ -40,7 +40,7 @@
         "kind": "ShortSword"
       },
       {
-        "kind": "SeedPouch"
+        "kind": "Sword"
       },
       {
         "kind": "WoodenShield"
