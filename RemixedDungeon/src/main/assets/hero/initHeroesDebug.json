@@ -34,7 +34,7 @@
         "kind": "Dagger"
       },
       {
-        "kind": "test/TestItem"
+        "kind": "Quarterstaff"
       },
       {
         "kind": "ShortSword"
@@ -43,8 +43,21 @@
         "kind": "Sword"
       },
       {
-        "kind": "WoodenShield"
+        "kind": "Mace"
       },
+
+      {
+        "kind": "WandOfFirebolt"
+      },
+
+      {
+        "kind": "WoodenBow"
+      },
+
+      {
+        "kind": "Kusarigama"
+      },
+
       {
         "kind": "TomeOfMastery",
         "quantity": 100,

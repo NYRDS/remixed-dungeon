@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -88,4 +89,11 @@ public abstract class KindOfBow extends MeleeWeapon {
 		}
 		super.execute(hero, action);
 	}
+
+
+	@Override
+	public Belongings.Slot blockSlot() {
+		return Belongings.Slot.LEFT_HAND;
+	}
+
 }

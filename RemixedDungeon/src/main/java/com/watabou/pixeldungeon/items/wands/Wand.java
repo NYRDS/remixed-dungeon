@@ -133,7 +133,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		if (hero.getHeroClass() == HeroClass.MAGE
 			|| hero.getSubClass() == HeroSubClass.SHAMAN) {
 			
-			if(hero.getBelongings().weapon == this) {
+			if(isEquipped(hero)) {
 				actions.add(AC_UNEQUIP); 
 			} else {
 				actions.add(AC_EQUIP);
