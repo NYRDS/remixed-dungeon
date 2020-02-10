@@ -35,8 +35,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 844
-        versionName "29.3.fix.37"
+        versionCode 845
+        versionName "29.3.fix.38"
     }
 
     aaptOptions {

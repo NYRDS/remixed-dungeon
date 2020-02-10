@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -528,5 +529,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public String getVisualName() {
 		return "Wand";
+	}
+
+	@Override
+	public Belongings.Slot blockSlot() {
+		return Belongings.Slot.LEFT_HAND;
 	}
 }
