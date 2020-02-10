@@ -34,7 +34,7 @@
         "kind": "test/TestItem"
       },
       {
-        "kind": "test/TestItem"
+        "kind": "Quarterstaff"
       },
       {
         "kind": "Claymore"
@@ -43,8 +43,21 @@
         "kind": "SeedPouch"
       },
       {
-        "kind": "WoodenShield"
+        "kind": "Mace"
       },
+
+      {
+        "kind": "WandOfFirebolt"
+      },
+
+      {
+        "kind": "WoodenBow"
+      },
+
+      {
+        "kind": "Kusarigama"
+      },
+
       {
         "kind": "TomeOfMastery",
         "quantity": 100,
