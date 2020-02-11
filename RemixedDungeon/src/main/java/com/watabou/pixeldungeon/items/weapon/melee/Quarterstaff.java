@@ -37,6 +37,10 @@ public class Quarterstaff extends MeleeWeapon {
 		return Game.getVar(R.string.Quarterstaff_Info);
 	}
 
+	@Override
+	public Belongings.Slot slot(Belongings belongings) {
+		return Belongings.Slot.WEAPON;
+	}
 
 	@Override
 	public Belongings.Slot blockSlot() {

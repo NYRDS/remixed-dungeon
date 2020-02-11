@@ -90,6 +90,10 @@ public abstract class KindOfBow extends MeleeWeapon {
 		super.execute(hero, action);
 	}
 
+	@Override
+	public Belongings.Slot slot(Belongings belongings) {
+		return Belongings.Slot.WEAPON;
+	}
 
 	@Override
 	public Belongings.Slot blockSlot() {
