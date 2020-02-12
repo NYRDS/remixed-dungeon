@@ -41,8 +41,9 @@ public class Ballistica {
 
 		Level level = Dungeon.level;
 		int w = level.getWidth();
+		int h = level.getHeight();
 
-		int lSize = Math.max( w, level.getHeight());
+		int lSize = (int) Math.ceil(Math.sqrt( w*w + h*h));
 
 		if(trace.length < lSize) {
 			trace = new int[lSize]; 
