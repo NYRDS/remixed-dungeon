@@ -252,10 +252,12 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 			if(weapon != null && leftHand != null) {
 				zap = attack = weapon_anims.get("dual");
+				return;
 			}
 
 			if(weapon != null) {
 				zap = attack = weapon_anims.get("right");
+				return;
 			}
 
 			if(leftHand != null) {
