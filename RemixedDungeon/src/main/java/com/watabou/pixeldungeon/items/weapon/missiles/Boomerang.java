@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
@@ -80,8 +79,8 @@ public class Boomerang extends MissileWeapon {
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		super.attackProc( attacker, defender, damage );
-		if (attacker instanceof Hero && ((Hero)attacker).rangedWeapon == this) {
-			circleBack( defender.getPos(), (Hero)attacker );
+		if (attacker.rangedWeapon == this) {
+			circleBack( defender.getPos(), attacker);
 		}
 	}
 	

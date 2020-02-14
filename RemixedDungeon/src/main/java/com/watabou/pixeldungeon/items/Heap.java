@@ -71,8 +71,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 
 	public enum Type {
 		HEAP, 
-		FOR_SALE, 
-		CHEST, 
+		CHEST,
 		LOCKED_CHEST, 
 		CRYSTAL_CHEST,
 		TOMB, 
@@ -100,19 +99,15 @@ public class Heap implements Bundlable, NamedEntityKind {
 	public LinkedList<Item> items = new LinkedList<>();
 
 	public String imageFile() {
-		switch (type) {
-		case HEAP:
-		case FOR_SALE:
+		if (type == Type.HEAP) {
 			return size() > 0 ? items.peek().imageFile() : Assets.ITEMS;
-		default:
-			return Assets.ITEMS;
 		}
+		return Assets.ITEMS;
 	}
 	
 	public int image() {
 		switch (type) {
 		case HEAP:
-		case FOR_SALE:
 			return size() > 0 ? items.peek().image() : 0;
 		case CHEST:
 		case MIMIC:
@@ -131,7 +126,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 	
 	public ItemSprite.Glowing glowing() {
-		return (type == Type.HEAP || type == Type.FOR_SALE) && items.size() > 0 ? items.peek().glowing() : null;
+		return (type == Type.HEAP) && items.size() > 0 ? items.peek().glowing() : null;
 	}
 	
 	public void open( Char chr ) {
@@ -329,8 +324,8 @@ public class Heap implements Bundlable, NamedEntityKind {
 		
 		CellEmitter.get( pos ).burst( Speck.factory( Speck.BUBBLE ), 3 );
 		Splash.at( pos, 0xFFFFFF, 3 );
-		
-		float chances[] = new float[items.size()];
+
+		float[] chances = new float[items.size()];
 		int count = 0;
 		
 		int index = 0;
