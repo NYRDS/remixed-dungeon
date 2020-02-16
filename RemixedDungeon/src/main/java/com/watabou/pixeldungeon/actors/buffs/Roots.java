@@ -33,12 +33,7 @@ public class Roots extends FlavourBuff {
 
         return super.attachTo(target);
 	}
-	
-	@Override
-	public void detach() {
-		super.detach();
-	}
-	
+
 	@Override
 	public int icon() {
 		return BuffIndicator.ROOTS;

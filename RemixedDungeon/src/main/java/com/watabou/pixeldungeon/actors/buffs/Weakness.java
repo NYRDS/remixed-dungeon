@@ -46,12 +46,7 @@ public class Weakness extends FlavourBuff {
 			return false;
 		}
 	}
-	
-	@Override
-	public void detach() {
-		super.detach();
-	}
-	
+
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;

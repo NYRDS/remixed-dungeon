@@ -107,20 +107,4 @@ public class TownShopLevel extends Level {
 	public int randomRespawnCell() {
 		return -1;
 	}
-
-	@Override
-	public String tileName( int tile ) {
-		switch (tile) {
-		default:
-			return super.tileName( tile );
-		}
-	}
-
-	@Override
-	public String tileDesc(int tile) {
-		switch (tile) {
-		default:
-			return super.tileDesc(tile);
-		}
-	}
 }

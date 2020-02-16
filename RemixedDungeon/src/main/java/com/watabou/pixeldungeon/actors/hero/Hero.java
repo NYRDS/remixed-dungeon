@@ -116,7 +116,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
-import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
@@ -478,10 +477,6 @@ public class Hero extends Char {
 
 				return actInteract((CharAction.Interact) curAction);
 
-			} else if (curAction instanceof CharAction.Buy) {
-
-				return actBuy((CharAction.Buy) curAction);
-
 			} else if (curAction instanceof CharAction.PickUp) {
 
 				return actPickUp((CharAction.PickUp) curAction);
@@ -578,29 +573,6 @@ public class Hero extends Char {
 				readyAndIdle();
 				return false;
 			}
-		}
-	}
-
-	private boolean actBuy(CharAction.Buy action) {
-		int dst = action.dst;
-		if (getPos() == dst || level().adjacent(getPos(), dst)) {
-
-			readyAndIdle();
-
-			Heap heap = level().getHeap(dst);
-			if (heap != null && heap.type == Type.FOR_SALE && heap.size() == 1) {
-				GameScene.show(new WndTradeItem(heap, true));
-			}
-
-			return false;
-
-		} else if (getCloser(dst)) {
-
-			return true;
-
-		} else {
-			readyAndIdle();
-			return false;
 		}
 	}
 
@@ -835,8 +807,8 @@ public class Hero extends Char {
 		}
 	}
 
-	private boolean getCloserToEnemy() {
-		if (Dungeon.level.fieldOfView[enemy.getPos()] && getCloser(enemy.getPos())) {
+	private boolean getCloserToEnemy(int pos) {
+		if (Dungeon.level.fieldOfView[pos] && getCloser(pos)) {
 			return true;
 		} else {
 			readyAndIdle();
@@ -844,7 +816,7 @@ public class Hero extends Char {
 		}
 	}
 
-	private boolean actMeleeAttack() {
+	private boolean actMeleeAttack(Char enemy) {
 
 		if (canAttack(enemy)) {
 			spend(attackDelay());
@@ -852,10 +824,10 @@ public class Hero extends Char {
 
 			return false;
 		}
-		return getCloserToEnemy();
+		return getCloserToEnemy(enemy.getPos());
 	}
 
-	private boolean actBowAttack() {
+	private boolean actBowAttack(Char enemy) {
 
 		KindOfBow kindOfBow = (KindOfBow) belongings.weapon;
 
@@ -872,7 +844,7 @@ public class Hero extends Char {
 			return false;
 		} // no arrows? Go Melee
 
-		return actMeleeAttack();
+		return actMeleeAttack(enemy);
 	}
 
     private boolean actAttack(CharAction.Attack action) {
@@ -883,16 +855,14 @@ public class Hero extends Char {
 
             if (bowEquipped()) {
                 if (level().adjacent(getPos(), enemy.getPos()) && belongings.weapon.goodForMelee()) {
-                    return actMeleeAttack();
+                    return actMeleeAttack(enemy);
                 }
-                return actBowAttack();
+                return actBowAttack(enemy);
             }
-            return actMeleeAttack();
+            return actMeleeAttack(enemy);
         }
-        return getCloserToEnemy();
+        return getCloserToEnemy(enemy.getPos());
     }
-
-
 
 	public void rest(boolean tillHealthy) {
 		spendAndNext(TIME_TO_REST);
@@ -1123,16 +1093,10 @@ public class Hero extends Char {
 
 		} else if ((heap = level.getHeap(cell)) != null) {
 
-			switch (heap.type) {
-				case HEAP:
-					curAction = new CharAction.PickUp(cell);
-					break;
-				case FOR_SALE:
-					curAction = heap.size() == 1 && heap.peek().price() > 0 ? new CharAction.Buy(cell)
-							: new CharAction.PickUp(cell);
-					break;
-				default:
-					curAction = new CharAction.OpenChest(cell);
+			if (heap.type == Type.HEAP) {
+				curAction = new CharAction.PickUp(cell);
+			} else {
+				curAction = new CharAction.OpenChest(cell);
 			}
 
 		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
@@ -1352,12 +1316,7 @@ public class Hero extends Char {
 	public static void reallyDie(final Object cause) {
 
 		if (Dungeon.hero.getDifficulty() < 2 && !Game.isPaused()) {
-			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)) {
-				@Override
-				public void hide() {
-					super.hide();
-				}
-			});
+			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)));
 			return;
 		}
 
@@ -1413,6 +1372,7 @@ public class Hero extends Char {
 		}
 
 		curAction = null;
+		enemy     = null;
 
 		Invisibility.dispel(this);
 

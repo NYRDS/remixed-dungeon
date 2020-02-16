@@ -74,11 +74,6 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	}
 
 	@Override
-	public void update() {
-		super.update();
-	}
-
-	@Override
 	public void onComplete(Tweener tweener) {
 
 	}
