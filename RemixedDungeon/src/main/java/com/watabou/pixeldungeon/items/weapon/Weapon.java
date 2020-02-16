@@ -113,12 +113,12 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public float accuracyFactor(Char hero ) {
+	public float accuracyFactor(Char user) {
 		
-		int encumbrance = STR - hero.effectiveSTR();
+		int encumbrance = STR - user.effectiveSTR();
 		
 		if (this instanceof MissileWeapon) {
-			switch (hero.getHeroClass()) {
+			switch (user.getHeroClass()) {
 			case WARRIOR:
 				encumbrance += 3;
 				break;
@@ -130,7 +130,7 @@ public class Weapon extends KindOfWeapon {
 		}
 		
 		if (this instanceof MeleeWeapon && !(this instanceof KindOfBow)) {
-			if( hero.getHeroClass() == HeroClass.ELF) {
+			if( user.getHeroClass() == HeroClass.ELF) {
 				encumbrance += 3;
 			}
 		}
@@ -141,10 +141,10 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public float speedFactor(Char hero ) {
+	public float speedFactor(Char user) {
 
-		int encumbrance = STR - hero.effectiveSTR();
-		if (this instanceof MissileWeapon && hero.getHeroClass() == HeroClass.HUNTRESS) {
+		int encumbrance = STR - user.effectiveSTR();
+		if (this instanceof MissileWeapon && user.getHeroClass() == HeroClass.HUNTRESS) {
 			encumbrance -= 2;
 		}
 		

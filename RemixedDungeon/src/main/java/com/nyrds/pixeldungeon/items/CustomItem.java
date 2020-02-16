@@ -82,8 +82,13 @@ public class CustomItem extends EquipableItem {
         script.run("execute", hero, action);
     }
 
+
     @Override
     public Belongings.Slot slot(Belongings belongings) {
+        return Belongings.Slot.valueOf(script.runOptional("slot",_slot().name(), belongings));
+    }
+
+    private Belongings.Slot _slot() {
         for(Belongings.Slot slot: Belongings.Slot.values()) {
             if (equipable.equalsIgnoreCase(slot.toString())) {
                 return slot;
@@ -228,4 +233,32 @@ public class CustomItem extends EquipableItem {
         return script.runOptional("requiredSTR", super.requiredSTR());
     }
 
+    @Override
+    public float accuracyFactor(Char user) {
+        return script.runOptional("accuracyFactor", super.accuracyFactor(user), user);
+    }
+
+    public float speedFactor(Char user) {
+        return script.runOptional("speedFactor", super.speedFactor(user), user);
+    }
+
+    public int damageRoll(Char user) {
+        return script.runOptional("damageRoll", super.damageRoll(user), user);
+    }
+
+    public void attackProc(Char attacker, Char defender, int damage ) {
+        script.runOptionalNoRet("attackProc",
+                    attacker,
+                    defender,
+                    damage
+                );
+    }
+
+    public String getAttackAnimationClass() {
+        return script.runOptional("getAttackAnimationClass", NO_ANIMATION);
+    }
+
+    public boolean goodForMelee() {
+        return script.runOptional("goodForMelee", true);
+    }
 }

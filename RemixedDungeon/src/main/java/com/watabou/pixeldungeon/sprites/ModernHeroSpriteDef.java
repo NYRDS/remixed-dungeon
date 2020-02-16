@@ -173,13 +173,13 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		EquipableItem weapon = hero.getBelongings().weapon;
 
 		if(weapon !=null) {
-			weaponAnimationClassRight = weapon.getAnimationClass();
+			weaponAnimationClassRight = weapon.getAttackAnimationClass();
 		}
 
 		EquipableItem leftHand = hero.getBelongings().leftHand;
 
 		if(leftHand != null) {
-			weaponAnimationClassLeft = leftHand.getAnimationClass();
+			weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
 		}
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
@@ -206,7 +206,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
 
 		if(weapon !=null) {
-			weaponAnimationClassRight = weapon.getAnimationClass();
+			weaponAnimationClassRight = weapon.getAttackAnimationClass();
 		}
 
 		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");

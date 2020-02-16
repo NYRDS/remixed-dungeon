@@ -76,10 +76,10 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
@@ -327,7 +327,7 @@ public class Hero extends Char {
 			accuracy *= 1.2;
 		}
 
-		KindOfWeapon wep = getActiveWeapon();
+		EquipableItem wep = getActiveWeapon();
 		if (wep != null) {
 			return (int) (attackSkill * accuracy * wep.accuracyFactor(this));
 		} else {

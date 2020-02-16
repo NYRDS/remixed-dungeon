@@ -24,6 +24,8 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public abstract class EquipableItem extends Item {
@@ -66,7 +68,7 @@ public abstract class EquipableItem extends Item {
 		super.cast( user, dst );
 	}
 
-	public float time2equip(Char hero ) {
+	public float time2equip(@NotNull Char hero ) {
 		return hero.speed();
 	}
 
@@ -130,8 +132,27 @@ public abstract class EquipableItem extends Item {
 		return Belongings.Slot.NONE;
 	}
 
-	public String getAnimationClass() {
+	public float accuracyFactor(Char user) {
+		return 1f;
+	}
+
+	public float speedFactor(Char user) {
+		return 1f;
+	}
+
+	public int damageRoll(Char user) {
+		return 1;
+	}
+
+	public void attackProc(Char attacker, Char defender, int damage ) {
+	}
+
+	public String getAttackAnimationClass() {
 		return NO_ANIMATION;
+	}
+
+	public boolean goodForMelee() {
+		return true;
 	}
 
 	public void equippedCursed() {
