@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
+import lombok.var;
 
 public class SpellFactory {
 
@@ -83,6 +84,23 @@ public class SpellFactory {
 
 		if(mSpellsByAffinity.containsKey(affinity)) {
 			spellList.addAll(mSpellsByAffinity.get(affinity));
+		}
+
+		for (int i = 1;i<=luaList.length();i++) {
+			spellList.add(luaList.rawget(i).checkjstring());
+		}
+
+		return spellList;
+	}
+
+	@NotNull
+	public static ArrayList<String> getAllSpells() {
+		LuaTable luaList = script.run("getSpellsList").checktable();
+
+		ArrayList<String> spellList = new ArrayList<>();
+
+		for(var aff: mSpellsByAffinity.values()) {
+			spellList.addAll(aff);
 		}
 
 		for (int i = 1;i<=luaList.length();i++) {
