@@ -1093,12 +1093,10 @@ public class Hero extends Char {
 
 		} else if ((heap = level.getHeap(cell)) != null) {
 
-			switch (heap.type) {
-				case HEAP:
-					curAction = new CharAction.PickUp(cell);
-					break;
-				default:
-					curAction = new CharAction.OpenChest(cell);
+			if (heap.type == Type.HEAP) {
+				curAction = new CharAction.PickUp(cell);
+			} else {
+				curAction = new CharAction.OpenChest(cell);
 			}
 
 		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
@@ -1318,12 +1316,7 @@ public class Hero extends Char {
 	public static void reallyDie(final Object cause) {
 
 		if (Dungeon.hero.getDifficulty() < 2 && !Game.isPaused()) {
-			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)) {
-				@Override
-				public void hide() {
-					super.hide();
-				}
-			});
+			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)));
 			return;
 		}
 
