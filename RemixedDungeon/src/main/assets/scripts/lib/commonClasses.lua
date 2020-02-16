@@ -11,6 +11,7 @@ local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
 
 local Sample           = luajava.bindClass("com.watabou.noosa.audio.Sample")
+local Music            = luajava.bindClass("com.watabou.noosa.audio.Music")
 local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
 
 local Buffs  = {
@@ -206,6 +207,14 @@ local RPD = {
 
     playSound = function(sound)
         Sample.INSTANCE:play(sound)
+    end,
+
+    playMusic = function(music, looped)
+        Music:play(music, looped)
+    end,
+
+    stopMusic = function()
+        Music:stop()
     end,
 
     textById = function(id)
