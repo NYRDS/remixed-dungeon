@@ -1051,8 +1051,7 @@ public abstract class Level implements Bundlable {
 			}
 
 		} else if (heap.type == Heap.Type.LOCKED_CHEST
-				|| heap.type == Heap.Type.CRYSTAL_CHEST
-				|| heap.type == Heap.Type.FOR_SALE) {
+				|| heap.type == Heap.Type.CRYSTAL_CHEST) {
 
 			int n;
 			do {

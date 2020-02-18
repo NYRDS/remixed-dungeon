@@ -28,7 +28,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.armor.AssasinArmor;
 import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
 import com.watabou.pixeldungeon.items.armor.BerserkArmor;
@@ -154,7 +154,7 @@ public enum HeroSubClass implements CharModifier {
 
 	@Override
 	public int attackProc(Char attacker, Char defender, int damage) {
-		KindOfWeapon wep = attacker.rangedWeapon != null ? attacker.rangedWeapon : attacker.getBelongings().weapon;
+		EquipableItem wep = attacker.rangedWeapon != null ? attacker.rangedWeapon : attacker.getBelongings().weapon;
 
 		if (wep != null) {
 

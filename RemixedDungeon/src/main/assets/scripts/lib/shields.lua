@@ -83,6 +83,13 @@ shields.makeShield = function(shieldLevel, shieldDesc)
 
         requiredSTR = function(self, item)
             return strForLevel[shieldLevel]
+        end,
+
+        slot = function(self, item, belongings)
+            if belongings:slotBlocked("LEFT_HAND") then
+                return "WEAPON"
+            end
+            return "LEFT_HAND"
         end
     }
 end

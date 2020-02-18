@@ -75,6 +75,11 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 	}
 
 	@Override
+	public Belongings.Slot slot(Belongings belongings) {
+		return Belongings.Slot.WEAPON;
+	}
+
+	@Override
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.LEFT_HAND;
 	}

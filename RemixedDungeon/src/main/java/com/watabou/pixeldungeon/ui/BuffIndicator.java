@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.LuaInterface;
-import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -82,8 +81,7 @@ public class BuffIndicator extends Component {
 	public static final float ICON_SIZE = 7;
 
     private static BuffIndicator heroInstance;
-	
-	private SmartTexture texture;
+
 	private TextureFilm film;
 	
 	private SparseArray<Image> icons = new SparseArray<>();
@@ -111,8 +109,7 @@ public class BuffIndicator extends Component {
 	@Override
 	protected void createChildren() {
 		//texture = TextureCache.get( Assets.BUFFS_LARGE  );
-		texture = TextureCache.get( Assets.BUFFS_SMALL );
-		film = new TextureFilm( texture, SIZE, SIZE );
+		film = new TextureFilm(TextureCache.get(Assets.BUFFS_SMALL), SIZE, SIZE );
 	}
 	
 	@Override

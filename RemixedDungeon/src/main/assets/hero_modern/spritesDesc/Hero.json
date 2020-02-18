@@ -23,8 +23,8 @@
   "weapon_anim" : {
     "none"      : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0]},
     "right"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "left"      : { "fps" : 8,  "looped" : false,    "frames" : [14, 15, 0]},
-    "dual"      : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]}
+    "left"      : { "fps" : 8,  "looped" : false,    "frames" : [15, 16, 0]},
+    "dual"      : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0, 15, 16, 0]}
   },
 
   "bodyType": {

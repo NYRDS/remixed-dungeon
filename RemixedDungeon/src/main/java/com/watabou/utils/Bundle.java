@@ -17,6 +17,7 @@
 
 package com.watabou.utils;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -66,8 +67,7 @@ public class Bundle {
         this.data = data;
     }
 
-    @Override
-    public String toString() {
+    public String serialize() {
         return data.toString();
     }
 
@@ -115,6 +115,7 @@ public class Bundle {
         return new Bundle(data.optJSONObject(key));
     }
 
+    @Nullable
     private Bundlable get() {
         String clName = "no_class";
         try {
@@ -259,6 +260,11 @@ public class Bundle {
         }
     }
 
+    @LuaInterface
+    public void putEntity(String key, Bundlable object) {
+        put(key,object);
+    }
+
     @SneakyThrows
     public void put(String key, Enum<?> value) {
         if (value != null) {
@@ -393,7 +399,7 @@ public class Bundle {
         }
 
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new GZIPOutputStream(stream, GZIP_BUFFER_SIZE)));
-        writer.write(bundle.data.toString());
+        writer.write(bundle.serialize());
         writer.close();
     }
 

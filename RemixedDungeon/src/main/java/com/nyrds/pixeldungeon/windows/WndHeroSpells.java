@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
-import java.util.ArrayList;
+import lombok.var;
 
 public class WndHeroSpells extends Window {
 
@@ -48,10 +48,12 @@ public class WndHeroSpells extends Window {
 
         add(masteryTitle);
 
-        HBox spellsSet = new HBox(WndHelper.getLimitedWidth(120) - chrome.marginHor());
+        var spellsSet = new VHBox(WndHelper.getLimitedWidth(120) - chrome.marginHor());
         spellsSet.setAlign(HBox.Align.Width);
+        spellsSet.setGap(4);
 
-        ArrayList<String> spells = SpellFactory.getSpellsByAffinity(affinity);
+        var spells = SpellFactory.getSpellsByAffinity(affinity);
+        // var spells = SpellFactory.getAllSpells();
         for (String spellName : spells) {
             Spell spell = SpellFactory.getSpellByName(spellName);
             if (spell.level() > hero.skillLevel()) {

@@ -14,7 +14,12 @@ public class Claymore extends MeleeWeapon {
 		super( 6, 1f, 1f );
 	}
 
-	@Override
+    @Override
+    public Belongings.Slot slot(Belongings belongings) {
+        return Belongings.Slot.WEAPON;
+    }
+
+    @Override
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.LEFT_HAND;
 	}

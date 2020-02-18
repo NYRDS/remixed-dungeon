@@ -60,9 +60,9 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
@@ -408,12 +408,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return damage[0];
 	}
 
-	protected KindOfWeapon getActiveWeapon() {
+	protected EquipableItem getActiveWeapon() {
 		return rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
 	}
 
 	public int damageRoll() {
-		KindOfWeapon wep = getActiveWeapon();
+		EquipableItem wep = getActiveWeapon();
 		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
 
 		if (wep != null) {
@@ -523,7 +523,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	abstract protected float _attackDelay();
 
 	public float attackDelay() {
-		KindOfWeapon wep = getActiveWeapon();
+		EquipableItem wep = getActiveWeapon();
 		if (wep != null) {
 			return _attackDelay()*wep.speedFactor(this);
 		} else {

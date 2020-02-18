@@ -497,7 +497,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="CorpseDust_Info">Ce tas de poussière cadavérique ne se démarque pas plus qu\'un tas de poussière lambda. Mais bon, vous sentez qu\'il vaudrait mieux vous en débarrasser au plus vite.</string>
   <string name="CorpseDust_Info2">Peut-être parce que le simple fait de la tenir vous rend anxieux et en colère.</string>
   <string name="DarkGold_Name">minerai d\'or noir</string>
-  <string name="DarkGold_Info">Ce métal n\'est pas appelé noir à cause de sa couleur (en fait, on dirait de l\'or), mais pace qu\'il fond à la lumière du jour, le rendant inutile à la surface.</string>
+  <string name="DarkGold_Info">Ce métal n\'est pas appelé noir à cause de sa couleur (en fait, on dirait de l\'or), mais parce qu\'il fond à la lumière du jour, le rendant inutile à la surface.</string>
   <string name="DriedRose_Name">rose séchée</string>
   <string name="DriedRose_Info">La rose est fanée depuis longtemps, mais elle a réussi à garder toutes ses pétales.</string>
   <string name="DriedRose_Info2">Et elle n\'a pas perdu son attrait. Elle a l\'air si belle, que vous voulez la garder pour toujours</string>
@@ -770,7 +770,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="RubyBow_Info">Seuls les meilleurs archers peuvent utiliser l\'arc de rubis. Presque toutes les flèches transpercent l\'ennemi, laissant un énorme trou dans son corps. Mais une force élevée est requise pour tendre la corde.</string>
   <string name="RubyBow_Gender">masculine</string>
   <string name="Quiver_Name">carquois</string>
-  <string name="Quiver_Info">carquois</string>
+  <string name="Quiver_Info">Carquois en cuir pouvant contenir n\'importe quelle quantité de flèches</string>
   <string name="Quiver_Gender">masculine</string>
   <string name="CommonArrow_Name">flèche</string>
   <string name="CommonArrow_Info">Flèches en bois communes avec tête en fer.</string>
@@ -2488,7 +2488,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="Scroll_Runes_6">ISAZ</string>
   <string name="Scroll_Runes_7">MANNAZ</string>
   <string name="Scroll_Runes_8">NAUDIZ</string>
-  <string name="Scroll_Runes_9">BARKUNA</string>
+  <string name="Scroll_Runes_9">BERKANAN</string>
   <string name="Scroll_Runes_10">ODAL</string>
   <string name="Scroll_Runes_11">TIWAZ</string>
   <string name="Scroll_Runes_12">ANSUZ</string>

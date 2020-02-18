@@ -2,49 +2,52 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.watabou.noosa.ColorBlock;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 
-class SpellButton extends ImageButton {
+class SpellButton extends Button {
 
     private WndHeroSpells wndHeroSpells;
     private final Spell spell;
     private final Char caster;
+    private final Image image;
 
     protected ColorBlock bg;
     protected ColorBlock cooldownMeter;
 
     public SpellButton(WndHeroSpells wndHeroSpells, Char caster, Spell spell) {
-        super(spell.image());
+        this.image = spell.image();
         this.wndHeroSpells = wndHeroSpells;
         this.spell = spell;
         this.caster = caster;
-    }
 
-    @Override
-    protected void createChildren() {
-        super.createChildren();
-        bg = new ColorBlock(width + 6, height + 6, 0xFF4A4D44);
+        width = image.width + 6;
+        height = image.height + 6;
+
+        bg = new ColorBlock(width, height, 0xFF4A4D44);
         add(bg);
 
-        cooldownMeter = new ColorBlock(width + 6, height + 6, 0xff000000);
+        add(image);
+
+        cooldownMeter = new ColorBlock(width, height, 0xff000000);
         add(cooldownMeter);
     }
 
     @Override
     protected void layout() {
         super.layout();
-        bg.x = x - 3;
-        bg.y = y - 3;
-        bg.size(width + 6, height + 6);
+        bg.x = x;
+        bg.y = y;
+        bg.size(width, height);
 
-        cooldownMeter.x = x - 3;
-        cooldownMeter.y = y - 3;
-        cooldownMeter.size(width + 6, (height + 6) * (1-spell.getCooldownFactor(caster)));
+        cooldownMeter.x = x;
+        cooldownMeter.y = y ;
+        cooldownMeter.size(width, height * (1-spell.getCooldownFactor(caster)));
 
-        image.x = x;
-        image.y = y;
+        image.x = x + 3;
+        image.y = y + 3;
     }
 
     @Override

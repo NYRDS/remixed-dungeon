@@ -51,28 +51,13 @@ public class KindOfWeapon extends EquipableItem {
 		return Belongings.Slot.WEAPON;
 	}
 
-	public int damageRoll(Char owner ) {
+	public int damageRoll(Char user) {
 		return Random.NormalIntRange( MIN, MAX );
-	}
-	
-	public float accuracyFactor(Char hero ) {
-		return 1f;
-	}
-	
-	public float speedFactor(Char hero ) {
-		return 1f;
-	}
-	
-	public void attackProc(Char attacker, Char defender, int damage ) {
 	}
 
 	@Override
-	public String getAnimationClass() {
+	public String getAttackAnimationClass() {
 		return animation_class;
-	}
-
-	public boolean goodForMelee() {
-		return true;
 	}
 
 	@Override

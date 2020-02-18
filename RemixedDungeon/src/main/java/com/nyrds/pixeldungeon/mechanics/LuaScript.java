@@ -110,6 +110,10 @@ public class LuaScript {
         run(method);
     }
 
+    public void runOptionalNoRet(String method, Object... args) {
+        runOptional(method, null, args);
+    }
+
     public <T> T runOptional(String method, T defaultValue, Object... args) {
         try {
             if (!getScript().get(method).isfunction()) {

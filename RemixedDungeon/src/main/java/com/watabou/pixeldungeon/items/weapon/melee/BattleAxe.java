@@ -38,6 +38,11 @@ public class BattleAxe extends MeleeWeapon {
 	}
 
 	@Override
+	public Belongings.Slot slot(Belongings belongings) {
+		return Belongings.Slot.WEAPON;
+	}
+
+	@Override
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.LEFT_HAND;
 	}

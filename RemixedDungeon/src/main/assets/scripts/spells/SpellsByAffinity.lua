@@ -10,7 +10,17 @@ local spells = require "scripts/spells/CustomSpellsList"
 local module = {}
 
 function module.getSpellsList(self,affinity)
-    local ret = spells[affinity] or {}
+    if affinity then
+        return spells[affinity] or {}
+    end
+
+    local ret = {}
+
+    for _,  aff in pairs(spells) do
+        for _,spell in pairs(aff) do
+            table.insert(ret,spell)
+        end
+    end
     return ret
 end
 

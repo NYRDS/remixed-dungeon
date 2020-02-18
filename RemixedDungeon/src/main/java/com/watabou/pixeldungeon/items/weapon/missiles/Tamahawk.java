@@ -60,7 +60,7 @@ public class Tamahawk extends MissileWeapon {
 	}
 
 	@Override
-	public String getAnimationClass() {
+	public String getAttackAnimationClass() {
 		return SWORD_ATTACK;
 	}
 
