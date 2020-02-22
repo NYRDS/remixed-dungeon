@@ -21,6 +21,7 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -407,7 +408,12 @@ public class Heap implements Bundlable, NamedEntityKind {
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		type  = Type.valueOf( bundle.getString( TYPE ) );
+		try {
+			type = Type.valueOf(bundle.getString(TYPE));
+		} catch (Throwable e) {
+			EventCollector.logException(e);
+			type = Type.HEAP;
+		}
 		items = new LinkedList<>(bundle.getCollection(ITEMS, Item.class));
 	}
 
