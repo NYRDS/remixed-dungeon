@@ -124,7 +124,6 @@ public class PlayGames {
 	}
 
 	public void unlockAchievement(String achievementCode) {
-		//TODO store it locally if not connected
 		if (isConnected()) {
 			Games.getAchievementsClient(Game.instance(),signedInAccount).unlock(achievementCode);
 		}
