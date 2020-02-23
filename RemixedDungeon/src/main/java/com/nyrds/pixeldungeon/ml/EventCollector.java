@@ -163,28 +163,36 @@ public class EventCollector {
 
 	static public void startTrace(String id) {
 		if(!mDisabled) {
-			Trace trace = FirebasePerformance.getInstance().newTrace(id);
-			trace.start();
-			timings.put(id,trace);
+			Game.instance().runOnUiThread(
+					() -> {
+						Trace trace = FirebasePerformance.getInstance().newTrace(id);
+						trace.start();
+						timings.put(id,trace);
+
+					}
+			);
 		}
 	}
 
 	static public void stopTrace(String id, String category, String variable, String label) {
 
 		if(!mDisabled) {
+			Game.instance().runOnUiThread(
+					() -> {
+						Trace trace = timings.get(id);
+						if (trace==null) {
+							logException("attempt to stop null timer:"+id);
+							return;
+						}
 
-		    Trace trace = timings.get(id);
-			if (trace==null) {
-				logException("attempt to stop null timer:"+id);
-				return;
-			}
+						trace.putAttribute("category", category);
+						trace.putAttribute("variable", variable);
+						trace.putAttribute("label",    label);
 
-		    trace.putAttribute("category", category);
-            trace.putAttribute("variable", variable);
-            trace.putAttribute("label",    label);
-
-		    trace.stop();
-		    timings.remove(id);
+						trace.stop();
+						timings.remove(id);
+					}
+			);
 		}
 	}
 
