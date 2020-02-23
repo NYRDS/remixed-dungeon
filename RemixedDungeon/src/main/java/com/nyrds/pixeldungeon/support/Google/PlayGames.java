@@ -58,6 +58,8 @@ public class PlayGames {
 
 	private GoogleSignInOptions signInOptions;
 
+	private boolean connecting = false;
+
 	public PlayGames() {
 		signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
 						.requestScopes(Games.SCOPE_GAMES_SNAPSHOTS)
@@ -66,10 +68,11 @@ public class PlayGames {
 
 
 	public void connectExplicit() {
-		if(isConnected()) {
+		if(isConnected() || connecting) {
 			return;
 		}
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+		connecting = true;
+
 		Intent intent = GoogleSignIn.getClient(Game.instance(), signInOptions)
 				.getSignInIntent();
 		Game.instance().startActivityForResult(intent, RC_SIGN_IN);
@@ -77,9 +80,11 @@ public class PlayGames {
 
 	public void connect() {
 
-		if(isConnected()) {
+		if(isConnected() || connecting) {
 			return;
 		}
+
+		connecting = true;
 
 		GoogleSignInOptions signInOptions =
 				new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
@@ -100,7 +105,7 @@ public class PlayGames {
 									 signedInAccount = task.getResult();
 									 onConnected();
 								} else {
-                                    Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+                                    //Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
                                 }
 							});
 		}
@@ -225,6 +230,7 @@ public class PlayGames {
 	}
 
 	private void onConnected() {
+		connecting = false;
 		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
 		loadSnapshots(null);
 	}
