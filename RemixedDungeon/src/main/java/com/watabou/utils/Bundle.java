@@ -146,13 +146,18 @@ public class Bundle {
         return null;
     }
 
-    public <E extends Enum<E>> E getEnum(String key, Class<E> enumClass) {
+
+    public <E extends Enum<E>> E getEnum(String key, Class<E> enumClass, E defaultValue) {
         try {
             return Enum.valueOf(enumClass, data.getString(key));
         } catch (JSONException e) {
             EventCollector.logException(e);
-            return enumClass.getEnumConstants()[0];
+            return defaultValue;
         }
+    }
+
+    public <E extends Enum<E>> E getEnum(String key, Class<E> enumClass) {
+        return getEnum(key, enumClass, enumClass.getEnumConstants()[0]);
     }
 
     @NotNull

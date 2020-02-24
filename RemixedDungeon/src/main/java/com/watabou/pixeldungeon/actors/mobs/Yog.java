@@ -232,6 +232,11 @@ public class Yog extends Boss {
 		public String description() {
 			return Game.getVar(R.string.Yog_Desc);
 		}
+
+		@Override
+		public boolean canBePet() {
+			return false;
+		}
 	}
 
 	public static class BurningFist extends Mob implements IZapper {
@@ -300,6 +305,11 @@ public class Yog extends Boss {
 		@Override
 		public String description() {
 			return Game.getVar(R.string.Yog_Desc);
+		}
+
+		@Override
+		public boolean canBePet() {
+			return false;
 		}
 	}
 
