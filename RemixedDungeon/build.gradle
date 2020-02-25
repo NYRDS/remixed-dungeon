@@ -35,8 +35,8 @@ android {
         manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 849
-        versionName "29.3.fix.42"
+        versionCode 850
+        versionName "29.3.fix.43"
     }
 
     aaptOptions {
@@ -117,7 +117,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-perf:19.0.5'
     implementation 'com.google.firebase:firebase-ads:18.3.0'
 
-    implementation 'com.appodeal.ads.sdk:core:2.6.1'
+    implementation 'com.appodeal.ads.sdk:core:2.6.2'
     implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.2'
     implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.2'
     implementation 'com.appodeal.ads.sdk.networks:appodealx:2.6.0.1'
