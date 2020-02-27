@@ -136,7 +136,7 @@ public abstract class EquipableItem extends Item {
 		return 1f;
 	}
 
-	public float speedFactor(Char user) {
+	public float attackDelayFactor(Char user) {
 		return 1f;
 	}
 

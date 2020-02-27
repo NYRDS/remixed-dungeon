@@ -137,6 +137,11 @@ public class LuaScript {
                 luaArgs[i] = CoerceJavaToLua.coerce(args[i-startIndex]);
             }
 
+            if(defaultValue==null) {
+                run(method, luaArgs);
+                return null;
+            }
+
             return (T) CoerceLuaToJava.coerce(
                     run(method, luaArgs),
                     defaultValue.getClass());

@@ -59,11 +59,12 @@ end
 shields.makeShield = function(shieldLevel, shieldDesc)
     return {
         activate    = function(self, item, hero)
-
-            local shieldBuff = RPD.affectBuff(hero,"ShieldLeft",
-                                              shields.rechargeTime(shieldLevel,hero:effectiveSTR()))
-            shieldBuff:level(shieldLevel)
-            shieldBuff:setSource(item)
+            if hero:getBelongings():itemSlotName() == "LEFT_HAND" then
+                local shieldBuff = RPD.affectBuff(hero,"ShieldLeft",
+                                                  shields.rechargeTime(shieldLevel,hero:effectiveSTR()))
+                shieldBuff:level(shieldLevel)
+                shieldBuff:setSource(item)
+            end
         end,
 
         deactivate  = function(self, item, hero)
@@ -90,6 +91,27 @@ shields.makeShield = function(shieldLevel, shieldDesc)
                 return "WEAPON"
             end
             return "LEFT_HAND"
+        end,
+
+        accuracyFactor       = function(self, item, user)
+            return 1
+        end,
+
+        damageRoll           = function(self, item, user)
+            local strBonus = user:effectiveSTR() - 10
+            return math.random( strBonus , strBonus ^ (1 + shieldLevel*0.1) )
+        end,
+
+        attackDelayFactor    = function(self, item, user)
+            return 1
+        end,
+
+        attackProc = function(self, item, attacker, defender, damage)
+            if attacker:getBelongings():itemSlotName() == "WEAPON" then
+                user:spend(1)
+            end
+
+            return damage
         end
     }
 end

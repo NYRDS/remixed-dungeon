@@ -82,6 +82,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
+	public Map<EquipableItem, Slot> usedSlots    = new HashMap<>();
+
 	private Set<EquipableItem> activatedItems = new HashSet<>();
 
 	@Packable
@@ -91,7 +93,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public EquipableItem leftHand = null;
 
 	@Packable
-	public Armor        armor  = null;
+	public Armor         armor  = null;
 	@Packable
 	public EquipableItem ring1  = null;
 	@Packable
@@ -155,6 +157,14 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 		}
 		blockSlots();
+	}
+
+	@LuaInterface
+	public String itemSlotName(EquipableItem item) {
+		if (usedSlots.containsKey(item)) {
+			return usedSlots.get(item).name();
+		}
+		return Slot.NONE.name();
 	}
 
 	public boolean isEquipped(Item item) {
@@ -251,6 +261,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean removeItem(Item itemToRemove) {
+		usedSlots.remove(itemToRemove);
 
 		if(itemToRemove.equals(weapon)) {
 			weapon = null;
@@ -531,6 +542,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			ItemUtils.equipCursed( owner );
 			item.equippedCursed();
 		}
+
+		usedSlots.put(item, slot);
 
 		activateEquippedItems();
 		blockSlots();

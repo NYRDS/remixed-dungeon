@@ -238,8 +238,8 @@ public class CustomItem extends EquipableItem {
         return script.runOptional("accuracyFactor", super.accuracyFactor(user), user);
     }
 
-    public float speedFactor(Char user) {
-        return script.runOptional("speedFactor", super.speedFactor(user), user);
+    public float attackDelayFactor(Char user) {
+        return script.runOptional("attackDelayFactor", super.attackDelayFactor(user), user);
     }
 
     public int damageRoll(Char user) {

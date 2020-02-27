@@ -141,7 +141,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public float speedFactor(Char user) {
+	public float attackDelayFactor(Char user) {
 
 		int encumbrance = STR - user.effectiveSTR();
 		if (this instanceof MissileWeapon && user.getHeroClass() == HeroClass.HUNTRESS) {

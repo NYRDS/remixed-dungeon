@@ -525,7 +525,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public float attackDelay() {
 		EquipableItem wep = getActiveWeapon();
 		if (wep != null) {
-			return _attackDelay()*wep.speedFactor(this);
+			return _attackDelay()*wep.attackDelayFactor(this);
 		} else {
 			return _attackDelay();
 		}
