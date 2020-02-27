@@ -64,6 +64,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
+import lombok.var;
+
 public class Badges {
 
 	public enum Badge {
@@ -277,6 +279,10 @@ public class Badges {
 			input.close();
 
 			global = restore(bundle);
+
+			for (var badge:global) {
+				unlockPlayGamesBadge(badge);
+			}
 
 		} catch (FileNotFoundException e) {
 			global = new HashSet<>();
@@ -886,15 +892,7 @@ public class Badges {
 			return;
 		}
 
-		if (playGamesList.contains(badge) && !ModdingMode.inMod()) {
-			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
-
-			if(achievementCode.isEmpty()) {
-				EventCollector.logException("empty achievement " + badge.name());
-			}
-
-			Game.instance().playGames.unlockAchievement(achievementCode);
-		}
+		unlockPlayGamesBadge(badge);
 
 		if (global.contains(badge)) {
 			if (!badge.meta) {
@@ -912,6 +910,25 @@ public class Badges {
 				GLog.h(Game.getVar(R.string.Badges_Info3), badge.description);
 			}
 			PixelScene.showBadge(badge);
+		}
+	}
+
+	private static void unlockPlayGamesBadge(Badge badge) {
+		if (playGamesList.contains(badge) && !ModdingMode.inMod()) {
+			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
+
+			if(achievementCode.isEmpty()) {
+				EventCollector.logException("empty achievement " + badge.name());
+				return;
+			}
+
+			if(Preferences.INSTANCE.getBoolean(achievementCode,false)) {
+				return;
+			}
+
+			Preferences.INSTANCE.put(achievementCode,true);
+
+			Game.instance().playGames.unlockAchievement(achievementCode);
 		}
 	}
 

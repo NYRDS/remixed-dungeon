@@ -252,7 +252,7 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
-		type   = Type.valueOf( bundle.getString( "type" ) );
+		type   = bundle.getEnum("type", Type.class, Type.STANDARD);
 	}
 	
 	public boolean dontPack() {
