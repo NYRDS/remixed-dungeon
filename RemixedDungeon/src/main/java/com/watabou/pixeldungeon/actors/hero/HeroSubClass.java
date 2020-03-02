@@ -154,7 +154,7 @@ public enum HeroSubClass implements CharModifier {
 
 	@Override
 	public int attackProc(Char attacker, Char defender, int damage) {
-		EquipableItem wep = attacker.rangedWeapon != null ? attacker.rangedWeapon : attacker.getBelongings().weapon;
+		EquipableItem wep = attacker.getActiveWeapon();
 
 		if (wep != null) {
 
@@ -197,6 +197,13 @@ public enum HeroSubClass implements CharModifier {
 				default:
 			}
 		}
+
+		EquipableItem secondaryWeapon = attacker.getSecondaryWeapon();
+
+		if(secondaryWeapon != null) {
+			secondaryWeapon.attackProc(attacker, defender, damage);
+		}
+
 		return damage;
 	}
 

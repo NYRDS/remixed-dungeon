@@ -408,9 +408,21 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return damage[0];
 	}
 
-	protected EquipableItem getActiveWeapon() {
+	@Nullable
+	public EquipableItem getActiveWeapon() {
 		return rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
 	}
+
+	@Nullable
+	public EquipableItem getSecondaryWeapon() {
+	    EquipableItem leftItem = getBelongings().leftHand;
+
+	    if(leftItem!=null && leftItem.goodForMelee()) {
+	        return leftItem;
+        }
+
+	    return null;
+    }
 
 	public int damageRoll() {
 		EquipableItem wep = getActiveWeapon();
@@ -419,6 +431,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if (wep != null) {
 			dmg += wep.damageRoll(this);
 		}
+
+		EquipableItem secondaryWep = getSecondaryWeapon();
+
+		if(secondaryWep != null) {
+		    dmg += secondaryWep.damageRoll(this);
+        }
 
 		return dmg;
 	}
@@ -524,23 +542,27 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public float attackDelay() {
 		EquipableItem wep = getActiveWeapon();
-		if (wep != null) {
-			return _attackDelay()*wep.attackDelayFactor(this);
-		} else {
-			return _attackDelay();
-		}
+
+		float delayFactor = 1;
+
+		if(wep != null) {
+		    delayFactor = wep.attackDelayFactor(this);
+        }
+
+		EquipableItem secondaryWep = getSecondaryWeapon();
+		if (secondaryWep != null) {
+		    delayFactor += secondaryWep.attackDelayFactor(this);
+        }
+
+		return _attackDelay() * delayFactor;
 	}
 
 	@Override
 	public void spend(float time) {
 
 		float timeScale = 1f;
-		if (hasBuff(Slow.class)) {
-			timeScale *= 0.5f;
-		}
-		if (hasBuff(Speed.class)) {
-			timeScale *= 2.0f;
-		}
+		timeScale *= 0.5f/(1+buffLevel(Slow.class));
+		timeScale *= (1 + buffLevel(Speed.class));
 
 		float scaledTime = time / timeScale;
 

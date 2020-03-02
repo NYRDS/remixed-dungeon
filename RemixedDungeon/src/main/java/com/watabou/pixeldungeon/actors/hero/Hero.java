@@ -328,6 +328,7 @@ public class Hero extends Char {
 		}
 
 		EquipableItem wep = getActiveWeapon();
+
 		if (wep != null) {
 			return (int) (attackSkill * accuracy * wep.accuracyFactor(this));
 		} else {

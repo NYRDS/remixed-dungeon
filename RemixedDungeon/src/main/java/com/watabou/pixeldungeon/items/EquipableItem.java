@@ -69,7 +69,7 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public float time2equip(@NotNull Char hero ) {
-		return hero.speed();
+		return 1f/(hero.speed()+0.01f);
 	}
 
 	@Override
@@ -132,18 +132,22 @@ public abstract class EquipableItem extends Item {
 		return Belongings.Slot.NONE;
 	}
 
+
 	public float accuracyFactor(Char user) {
 		return 1f;
 	}
 
+	//dual
 	public float attackDelayFactor(Char user) {
 		return 1f;
 	}
 
+	//dual
 	public int damageRoll(Char user) {
 		return 1;
 	}
 
+	//dual
 	public void attackProc(Char attacker, Char defender, int damage ) {
 	}
 
