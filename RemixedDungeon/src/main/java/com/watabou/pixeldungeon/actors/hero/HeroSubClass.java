@@ -156,53 +156,46 @@ public enum HeroSubClass implements CharModifier {
 	public int attackProc(Char attacker, Char defender, int damage) {
 		EquipableItem wep = attacker.getActiveWeapon();
 
-		if (wep != null) {
+		wep.attackProc(attacker, defender, damage);
 
-			wep.attackProc(attacker, defender, damage);
+		switch (this) {
+			case GLADIATOR:
+				if (wep instanceof MeleeWeapon) {
+					damage += Buff.affect(attacker, Combo.class).hit(defender, damage);
+				}
+				break;
+			case BATTLEMAGE:
+				if (wep instanceof Wand) {
+					Wand wand = (Wand) wep;
+					if (wand.curCharges() < wand.maxCharges() && damage > 0) {
 
-			switch (this) {
-				case GLADIATOR:
-					if (wep instanceof MeleeWeapon) {
-						damage += Buff.affect(attacker, Combo.class).hit(defender, damage);
+						wand.curCharges(wand.curCharges() + 1);
+						QuickSlot.refresh();
+
+						ScrollOfRecharging.charge(attacker);
 					}
-					break;
-				case BATTLEMAGE:
-					if (wep instanceof Wand) {
-						Wand wand = (Wand) wep;
-						if (wand.curCharges() < wand.maxCharges() && damage > 0) {
-
-							wand.curCharges(wand.curCharges() + 1);
-							QuickSlot.refresh();
-
-							ScrollOfRecharging.charge(attacker);
-						}
-						damage += wand.curCharges();
-					}
-					break;
-				case SNIPER:
-					if (attacker.rangedWeapon != null) {
-						Buff.prolong(defender, SnipersMark.class, attacker.attackDelay() * 1.1f);
-					}
-					break;
-				case SHAMAN:
-					if (wep instanceof Wand) {
-						Wand wand = (Wand) wep;
-						if (wand.affectTarget()) {
-							if (Random.Int(4) == 0) {
-								wand.zapCell(attacker, defender.getPos());
-							}
+					damage += wand.curCharges();
+				}
+				break;
+			case SNIPER:
+				if (attacker.rangedWeapon != null) {
+					Buff.prolong(defender, SnipersMark.class, attacker.attackDelay() * 1.1f);
+				}
+				break;
+			case SHAMAN:
+				if (wep instanceof Wand) {
+					Wand wand = (Wand) wep;
+					if (wand.affectTarget()) {
+						if (Random.Int(4) == 0) {
+							wand.zapCell(attacker, defender.getPos());
 						}
 					}
-					break;
-				default:
-			}
+				}
+				break;
+			default:
 		}
 
-		EquipableItem secondaryWeapon = attacker.getSecondaryWeapon();
-
-		if(secondaryWeapon != null) {
-			secondaryWeapon.attackProc(attacker, defender, damage);
-		}
+		attacker.getSecondaryWeapon().attackProc(attacker, defender, damage);
 
 		return damage;
 	}

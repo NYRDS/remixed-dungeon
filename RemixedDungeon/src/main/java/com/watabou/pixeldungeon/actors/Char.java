@@ -408,12 +408,22 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return damage[0];
 	}
 
-	@Nullable
+	@NotNull
 	public EquipableItem getActiveWeapon() {
-		return rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
+		if(rangedWeapon!=null) {
+			return rangedWeapon;
+		}
+
+		EquipableItem weapon = getBelongings().weapon;
+
+		if(weapon!=null) {
+			return weapon;
+		}
+
+		return CharsList.DUMMY_ITEM;
 	}
 
-	@Nullable
+	@NotNull
 	public EquipableItem getSecondaryWeapon() {
 	    EquipableItem leftItem = getBelongings().leftHand;
 
@@ -421,22 +431,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	        return leftItem;
         }
 
-	    return null;
+	    return CharsList.DUMMY_ITEM;
     }
 
 	public int damageRoll() {
-		EquipableItem wep = getActiveWeapon();
 		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
 
-		if (wep != null) {
-			dmg += wep.damageRoll(this);
-		}
-
-		EquipableItem secondaryWep = getSecondaryWeapon();
-
-		if(secondaryWep != null) {
-		    dmg += secondaryWep.damageRoll(this);
-        }
+		dmg += getActiveWeapon().damageRoll(this);
+		dmg += getSecondaryWeapon().damageRoll(this);
 
 		return dmg;
 	}
@@ -541,18 +543,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	abstract protected float _attackDelay();
 
 	public float attackDelay() {
-		EquipableItem wep = getActiveWeapon();
-
 		float delayFactor = 1;
 
-		if(wep != null) {
-		    delayFactor = wep.attackDelayFactor(this);
-        }
-
-		EquipableItem secondaryWep = getSecondaryWeapon();
-		if (secondaryWep != null) {
-		    delayFactor += secondaryWep.attackDelayFactor(this);
-        }
+		delayFactor = getActiveWeapon().impactDelayFactor(this,delayFactor);
+		delayFactor = getSecondaryWeapon().impactDelayFactor(this, delayFactor);
 
 		return _attackDelay() * delayFactor;
 	}
@@ -1101,6 +1095,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		cb.onBuff(getSubClass());
 	}
 
+	@LuaInterface
 	public boolean swapPosition(final Char chr) {
 
 		if(!walkingType.canSpawnAt(level(),chr.getPos())) {

@@ -137,6 +137,14 @@ public abstract class EquipableItem extends Item {
 		return 1f;
 	}
 
+	public float impactDelayFactor(Char user, float delayFactor) {
+		return delayFactor + attackDelayFactor(user);
+	}
+
+	public float impactAccuracyFactor(Char user, float accuracyFactor) {
+		return Math.min(accuracyFactor(user), accuracyFactor);
+	}
+
 	//dual
 	public float attackDelayFactor(Char user) {
 		return 1f;
@@ -144,7 +152,7 @@ public abstract class EquipableItem extends Item {
 
 	//dual
 	public int damageRoll(Char user) {
-		return 1;
+		return 0;
 	}
 
 	//dual

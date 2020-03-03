@@ -112,6 +112,10 @@ shields.makeShield = function(shieldLevel, shieldDesc)
             end
 
             return damage
+        end,
+
+        goodForMelee = function(self, item)
+            return true
         end
     }
 end

@@ -1,8 +1,10 @@
 package com.nyrds.pixeldungeon.utils;
 
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.DummyChar;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.EquipableItem;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -15,6 +17,7 @@ public class CharsList {
 
     // Unreachable target
     public static final Char DUMMY = new DummyChar();
+    public static final EquipableItem DUMMY_ITEM = new DummyItem();
 
     private static ConcurrentHashMap<Integer, Char> charsMap = new ConcurrentHashMap<>();
 

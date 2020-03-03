@@ -235,6 +235,7 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
+		script.runOptional("onAct");
 		getState().act(this);
 		return true;
 	}
