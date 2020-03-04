@@ -36,7 +36,7 @@ android {
 
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 851
-        versionName "29.4.pre_alpha"
+        versionName "29.4.pre_alpha.1"
     }
 
     aaptOptions {

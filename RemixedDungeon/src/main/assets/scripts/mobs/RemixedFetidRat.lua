@@ -27,7 +27,6 @@ kinds[3].speck = RPD.Sfx.Speck.TOXIC
 
 
 local function makeFetidRat()
-    local cloud
     local data
 
     return {
@@ -37,16 +36,10 @@ local function makeFetidRat()
             data.kind = data.kind or math.random(1, 3)
             mob.storeData(self,data)
 
-            self:immunities():add(kinds[data.kind].immunity)
+            self:addImmunity(kinds[data.kind].immunity)
         end,
-        move = function(self, cell)
-            if cloud == nil then
-                cloud = self:getSprite():emitter()
-                cloud:pour(RPD.Sfx.Speck:factory(kinds[data.kind].speck), 0.7);
-            end
-        end,
-        defenceProc = function(self, enemy, dmg)
-            RPD.placeBlob(kinds[data.kind].blob, self:getPos(), 20);
+        act = function(self)
+            RPD.placeBlob(kinds[data.kind].blob, self:getPos(), 50);
         end
     }
 end
