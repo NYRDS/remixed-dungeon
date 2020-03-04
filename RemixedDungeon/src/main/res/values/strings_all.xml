@@ -2549,4 +2549,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     - Bugs fixed\n
     </string>
   <string name="ShieldStrTemplate">Wearer of the shield should have at least %1$d points of Strength to use it properly.</string>
+  <string name="town_deco_flowerinthepot_name" translatable="false">Flower in a pot</string>
+  <string name="town_deco_flowerinthepot_desc" translatable="false">Decorative flower with sweet flavor</string>
 </resources>

@@ -16,6 +16,8 @@ import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
+import com.gameofwhales.sdk.GameOfWhales;
+import com.gameofwhales.sdk.NoProductDetailsException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.IPurchasesUpdated;
@@ -61,6 +63,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
                             mSkuDetails = new HashMap<>();
                             for (SkuDetails skuDetails : list) {
                                 mSkuDetails.put(skuDetails.getSku().toLowerCase(Locale.ROOT), skuDetails);
+                                GameOfWhales.DetailsFromString(skuDetails.toString());
                             }
                         }
                     });
@@ -100,6 +103,12 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
                             + "->"
                             + billingResult.getDebugMessage());
                 });
+
+                try {
+                    GameOfWhales.InAppPurchased(purchase.getOriginalJson(),purchase.getSignature());
+                } catch (NoProductDetailsException e) {
+                    EventCollector.logException(e,"GOW");
+                }
             }
 
             mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
