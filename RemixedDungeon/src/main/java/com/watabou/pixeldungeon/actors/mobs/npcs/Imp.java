@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DwarfToken;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.levels.CityLevel;
@@ -138,7 +139,7 @@ public class Imp extends NPC {
 		private static boolean given;
 		private static boolean completed;
 		
-		public static Ring reward;
+		public static Item reward;
 		
 		public static void reset() {
 			spawned = false;
@@ -200,7 +201,7 @@ public class Imp extends NPC {
 				given = false;
 				
 				do {
-					reward = (Ring) Treasury.getLevelTreasury().random( Treasury.Category.RING );
+					reward = Treasury.getLevelTreasury().random( Treasury.Category.RING );
 				} while (reward.cursed);
 				reward.upgrade( 2 );
 				reward.cursed = true;
