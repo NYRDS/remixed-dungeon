@@ -59,7 +59,7 @@ end
 shields.makeShield = function(shieldLevel, shieldDesc)
     return {
         activate    = function(self, item, hero)
-            if hero:getBelongings():itemSlotName() == "LEFT_HAND" then
+            if hero:getBelongings():itemSlotName(item) == "LEFT_HAND" then
                 local shieldBuff = RPD.affectBuff(hero,"ShieldLeft",
                                                   shields.rechargeTime(shieldLevel,hero:effectiveSTR()))
                 shieldBuff:level(shieldLevel)
