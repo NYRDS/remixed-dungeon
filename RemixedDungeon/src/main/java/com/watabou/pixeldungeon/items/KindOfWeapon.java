@@ -64,4 +64,9 @@ public class KindOfWeapon extends EquipableItem {
 	public void equippedCursed() {
 		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name());
 	}
+
+	@Override
+	public boolean goodForMelee() {
+		return true;
+	}
 }

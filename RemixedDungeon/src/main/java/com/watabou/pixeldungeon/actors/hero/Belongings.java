@@ -454,13 +454,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean unequip(EquipableItem item) {
-		if(removeItem(item)) {
+		if(checkItem(item)!=null) {
 			item.deactivate(owner);
+			removeItem(item);
 			activatedItems.remove(item);
 			blockSlots();
 			owner.updateSprite();
 			return true;
 		}
+
 		return false;
 	}
 

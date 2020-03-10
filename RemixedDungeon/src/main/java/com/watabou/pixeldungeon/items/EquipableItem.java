@@ -138,12 +138,20 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public float impactDelayFactor(Char user, float delayFactor) {
-		float ownFactor = attackDelayFactor(user);
-		return Math.max(ownFactor * 1.5f, ownFactor * 0.75f + delayFactor * 0.75f);
+		if(goodForMelee()) {
+			float ownFactor = attackDelayFactor(user);
+			return Math.max(ownFactor * 1.5f, ownFactor * 0.75f + delayFactor * 0.75f);
+		} else {
+			return delayFactor;
+		}
 	}
 
 	public float impactAccuracyFactor(Char user, float accuracyFactor) {
-		return Math.min(accuracyFactor(user), accuracyFactor);
+		if(goodForMelee()) {
+			return Math.min(accuracyFactor(user), accuracyFactor);
+		} else {
+			return accuracyFactor;
+		}
 	}
 
 	//dual

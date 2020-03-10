@@ -259,6 +259,6 @@ public class CustomItem extends EquipableItem {
     }
 
     public boolean goodForMelee() {
-        return script.runOptional("goodForMelee", true);
+        return script.runOptional("goodForMelee", false);
     }
 }

@@ -324,7 +324,7 @@ local RPD = {
 
         for i = x - 1, x + 1 do
             for j = y - 1, y + 1 do
-                if i~=x or j~=y then
+                if (i~=x or j~=y) and level:cellValid(i,j) then
                     action(level:cell(i,j))
                 end
             end

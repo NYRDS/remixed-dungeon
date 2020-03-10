@@ -4,30 +4,38 @@
 --- DateTime: 11/5/19 11:02 PM
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD                  = require "scripts/lib/commonClasses"
 
-local shields = {}
+local shields              = {}
 
-local strForLevel    = {12,  14, 16, 18}
-local chanceForLevel = {.3, .4, .4, .5}
-local blockForLevel  = {4,   6,  8,  10}
+local strForLevel          = { 12, 14, 16, 18 }
+local chanceForLevel       = { .3, .4, .4, .5 }
+local blockForLevel        = { 4, 6, 8, 10 }
+
+function damageMin (str, shieldLevel)
+    return math.max(str - 10, 0)
+end
+
+function damageMax (str, shieldLevel)
+    return math.max(str - 10, 0) ^ (1 + shieldLevel * 0.1) + shieldLevel
+end
 
 ---@param shieldLevel number
 ---@param itemLevel number
-shields.blockDamage = function (shieldLevel, itemLevel)
+shields.blockDamage        = function(shieldLevel, itemLevel)
     return blockForLevel[shieldLevel] * math.pow(1.3, itemLevel)
 end
 
 ---@param shieldLevel number
 ---@param str number
-shields.blockChance = function (shieldLevel, str)
+shields.blockChance        = function(shieldLevel, str)
     local weightPenalty = math.max(strForLevel[shieldLevel] - str, 0)
     return chanceForLevel[shieldLevel] * (1 - weightPenalty * 0.1)
 end
 
 ---@param shieldLevel number
 ---@param str number
-shields.rechargeTime = function(shieldLevel, str)
+shields.rechargeTime       = function(shieldLevel, str)
     local weightPenalty = math.max(strForLevel[shieldLevel] - str, 0)
     return 5 + weightPenalty
 end
@@ -41,7 +49,7 @@ end
 ---@param baseDesc string
 ---@param shieldLevel number
 ---@param str number
-shields.info = function(baseDesc, str, shieldLevel, itemLevel)
+shields.info               = function(baseDesc, str, shieldLevel, itemLevel)
 
     local infoTemplate = RPD.textById("ShieldInfoTemplate")
     local strTemplate  = RPD.textById("ShieldStrTemplate")
@@ -56,69 +64,88 @@ shields.info = function(baseDesc, str, shieldLevel, itemLevel)
             .. RPD.format(strTemplate, strForLevel[shieldLevel])
 end
 
-shields.makeShield = function(shieldLevel, shieldDesc)
+shields.infoWeapon         = function(baseDesc, str, shieldLevel, itemLevel)
+
+    local infoWeaponTemplate = RPD.textById("ShieldWeaponInfo")
+
+    local avgDamage = damageMin(str, shieldLevel)
+                        + damageMax(str, shieldLevel)
+
+    return RPD.textById(baseDesc)
+            .. "\n\n"
+            .. RPD.format(infoWeaponTemplate,
+                          avgDamage)
+end
+
+shields.makeShield         = function(shieldLevel, shieldDesc)
     return {
-        activate    = function(self, item, hero)
+        activate          = function(self, item, hero)
             if hero:getBelongings():itemSlotName(item) == "LEFT_HAND" then
-                local shieldBuff = RPD.affectBuff(hero,"ShieldLeft",
-                                                  shields.rechargeTime(shieldLevel,hero:effectiveSTR()))
+                local shieldBuff = RPD.affectBuff(hero, "ShieldLeft",
+                                                  shields.rechargeTime(shieldLevel, hero:effectiveSTR()))
                 shieldBuff:level(shieldLevel)
                 shieldBuff:setSource(item)
             end
         end,
 
-        deactivate  = function(self, item, hero)
-            RPD.removeBuff(hero,"ShieldLeft")
+        deactivate        = function(self, item, hero)
+            if hero:getBelongings():itemSlotName(item) == "LEFT_HAND" then
+                RPD.removeBuff(hero, "ShieldLeft")
+            end
         end,
 
-        info        = function(self, item)
+        info              = function(self, item)
             local hero = RPD.Dungeon.hero --TODO fix me
-            local str = hero:effectiveSTR()
+            local str  = hero:effectiveSTR()
 
-            return shields.info(shieldDesc, str, shieldLevel ,item:level())
+            if hero:getBelongings():itemSlotName(item) == "WEAPON" then
+                return shields.infoWeapon(shieldDesc, str, shieldLevel, item:level())
+            else
+                return shields.info(shieldDesc, str, shieldLevel, item:level())
+            end
         end,
 
-        typicalSTR  = function(self, item)
+        typicalSTR        = function(self, item)
             return strForLevel[shieldLevel]
         end,
 
-        requiredSTR = function(self, item)
+        requiredSTR       = function(self, item)
             return strForLevel[shieldLevel]
         end,
 
-        slot = function(self, item, belongings)
+        slot              = function(self, item, belongings)
             if belongings:slotBlocked("LEFT_HAND") then
                 return "WEAPON"
             end
             return "LEFT_HAND"
         end,
 
-        accuracyFactor       = function(self, item, user)
+        accuracyFactor    = function(self, item, user)
             return 1
         end,
 
-        damageRoll           = function(self, item, user)
-            local strBonus = user:effectiveSTR() - 10
-            return math.random( strBonus , strBonus ^ (1 + shieldLevel*0.1) )
+        damageRoll        = function(self, item, user)
+            local str = user:effectiveSTR()
+            return math.random(damageMin(str,shieldLevel),
+                               damageMax(str,shieldLevel))
         end,
 
-        attackDelayFactor    = function(self, item, user)
+        attackDelayFactor = function(self, item, user)
             return 1
         end,
 
-        attackProc = function(self, item, attacker, defender, damage)
-            if attacker:getBelongings():itemSlotName() == "WEAPON" then
-                user:spend(1)
+        attackProc        = function(self, item, attacker, defender, damage)
+            if attacker:getBelongings():itemSlotName(item) == "WEAPON" then
+                attacker:spend(1)
             end
 
             return damage
         end,
 
-        goodForMelee = function(self, item)
+        goodForMelee      = function(self, item)
             return true
         end
     }
 end
-
 
 return shields

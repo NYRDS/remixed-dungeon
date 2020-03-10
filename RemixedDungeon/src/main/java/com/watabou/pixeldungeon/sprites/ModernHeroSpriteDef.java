@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModError;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
@@ -212,7 +212,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
 
-		//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/items/none_left.png");
+		//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/empty.png");
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
 
@@ -281,10 +281,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void applyLayersDesc(String[] lookDesc) {
 		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
-			try {
-				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
-			} catch (ModError ignored) {
-			}
+			addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
 		}
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
@@ -298,16 +295,21 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String itemHandDescriptor(EquipableItem item, String hand) {
 		if(item==null) {
-			return "hero_modern/items/none_"+hand+".png";
+			return "hero_modern/empty.png";
 		}
 		return "hero_modern/items/" +item.getVisualName()+"_"+hand+".png";
 	}
 
 	private String itemBackDescriptor(EquipableItem item, String hand) {
-		if(item==null) {
-			return "hero_modern/items/none_back_"+hand+".png";
+		String defaultLayerFile = "hero_modern/empty.png";
+
+		if(item!=null) {
+			String itemLayerFile = "hero_modern/items/" +item.getVisualName()+"_back_"+hand+".png";
+			if(ModdingMode.isResourceExist(itemLayerFile)) {
+				return itemLayerFile;
+			}
 		}
-		return "hero_modern/items/" +item.getVisualName()+"_back_"+hand+".png";
+		return defaultLayerFile;
 	}
 
 
