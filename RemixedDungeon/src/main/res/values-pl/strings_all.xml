@@ -2570,4 +2570,25 @@ remix.29.3/n
 -Naprawy błędów\n
 </string>
   <string name="ShieldStrTemplate">Osoba nosząca tarczę powinna mieć co najmniej %1$d punktów Siły, aby prawidłowo z niej korzystać.</string>
+  <string name="town_deco_flowerinthepot_name">Kwiat w doniczce</string>
+  <string name="town_deco_flowerinthepot_desc">Dekoracyjny kwiat ze słodkim aromatem</string>
+  <string name="Welcome_Text_29_4">
+    remix.29.4\n
+    - Rozgrywka:\n
+    -- Dwóręczne władanie!\n
+    - Modowanie:\n
+    -- Customowe bronie!\n
+    - Błędy naprawione\n
+    </string>
+
+    <string name="Mods_Disclaimer">
+        Mody są tworzone przez graczy dla graczy.\n
+        Mody czasami zmieniają rozgrywkę w niespodziewane lub dziwne sposoby, zostałeś ostrzeżony!\n
+        Zespół NYRDS w żaden sposób nie jest odpowiedzialny za zawartość, jakość lub stabilność modów.\n
+        Pobieraj je na swoją własną odpowiedzialność i baw się dobrze!\n
+    </string>
+
+
+  <string name="ShieldWeaponInfo">Kiedy użyte jako broń ta tarcza pochłonie średnio%1$d obrażeń. </string>
+
 </resources>
