@@ -49,23 +49,7 @@ public class SClient {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                if (mBufferOut != null) {
-                    try{
-                        Log.d(TAG, "Sending: " + message);
-
-                        byte mData[] = message.getBytes("UTF-8"); //Get message data in bytes
-                        int mLenght = (int) mData.length; //We need send lenght of our message
-
-                        //.NET Has another byte order in reading integer. We need to flip bytes before sending.
-                        ByteBuffer temp = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
-                        byte mLenghtData[] = temp.putInt(mLenght).array();
-
-                        mBufferOut.write(mLenghtData); //Write lenght
-                        mBufferOut.write(mData); //Write data
-                    } catch (Exception e){
-                        Log.e("TCP", "S: Error", e);
-                    }
-                }
+                sendMessageSc(message);
             }
         };
         Thread thread = new Thread(runnable);
@@ -135,6 +119,26 @@ public class SClient {
     private void receiveMessage(){
         if (mServerMessage != null && mMessageListener != null) {
             mMessageListener.messageReceived(mServerMessage); //call the method messageReceived from MyActivity class
+        }
+    }
+
+    private void sendMessageSc(String message){
+        if (mBufferOut != null) {
+            try{
+                Log.d(TAG, "Sending: " + message);
+
+                byte mData[] = message.getBytes("UTF-8"); //Get message data in bytes
+                int mLenght = (int) mData.length; //We need send lenght of our message
+
+                //.NET Has another byte order in reading integer. We need to flip bytes before sending.
+                ByteBuffer temp = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
+                byte mLenghtData[] = temp.putInt(mLenght).array();
+
+                mBufferOut.write(mLenghtData); //Write lenght
+                mBufferOut.write(mData); //Write data
+            } catch (Exception e){
+                Log.e("TCP", "S: Error", e);
+            }
         }
     }
 
