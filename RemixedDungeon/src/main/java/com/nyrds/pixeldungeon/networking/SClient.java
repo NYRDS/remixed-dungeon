@@ -98,12 +98,13 @@ public class SClient {
     public void run() {
         mRun = true;
 
+        Socket socket = null;
+
         try {
             InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
             Log.d("TCP Client", "C: Connecting...");
-            Socket socket = new Socket(serverAddr, SERVER_PORT);
+            socket = new Socket(serverAddr, SERVER_PORT);
 
-            try {
                 mBufferOut = new DataOutputStream(socket.getOutputStream());
                 mBufferIn = new DataInputStream(socket.getInputStream());
 
@@ -125,11 +126,12 @@ public class SClient {
             } catch (Exception e) {
                 Log.e("TCP", "S: Error", e);
             } finally {
-                socket.close();
+                try{
+                    socket.close();
+                } catch (Exception e){
+                    Log.e("TCP_Closing", "S: Error", e);
+                }
             }
-        } catch (Exception e) {
-            Log.e("TCP", "C: Error", e);
-        }
     }
 
     //Declare the interface. The method messageReceived(String message) will must be implemented in the Activity
