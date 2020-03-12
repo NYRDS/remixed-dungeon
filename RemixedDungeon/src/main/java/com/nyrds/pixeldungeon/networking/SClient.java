@@ -81,9 +81,7 @@ public class SClient {
 
     public void run() {
         mRun = true;
-
         Socket socket = null;
-
         try {
             InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
             Log.d("TCP Client", "C: Connecting...");
@@ -95,9 +93,9 @@ public class SClient {
                 while (mRun) {
                     byte mLenghtData[] = new byte[4]; //MessageLenght native byte data
                     mBufferIn.read(mLenghtData, 0, 4);
-                    
-                    ByteBuffer temp = ByteBuffer.wrap(mLenghtData).order(ByteOrder.LITTLE_ENDIAN);
-                    int mLenght = temp.getInt(); //Message lenght
+
+                    ByteBuffer temp = ByteBuffer.wrap(mLenghtData);
+                    int mLenght = temp.order(ByteOrder.LITTLE_ENDIAN).getInt();
                     byte mData[] = new byte[mLenght];
 
                     mBufferIn.read(mData, 0, mLenght);
