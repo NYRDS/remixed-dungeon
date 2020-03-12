@@ -19,8 +19,6 @@ public class SClient {
     public static final String TAG = SClient.class.getSimpleName();
     public static String SERVER_IP; //server IP address
     public static int SERVER_PORT;
-    // message to send to the server
-    private String mServerMessage;
     // sends message received notifications
     private OnMessageReceived mMessageListener = null;
     // while this is true, the server will continue running
@@ -76,13 +74,14 @@ public class SClient {
         mBufferIn = null;
 
         mBufferOut = null;
-        mServerMessage = null;
     }
 
     public void run() {
+        String mServerMessage = "";
+
         mRun = true;
         Socket socket = null;
-        
+
         try {
             InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
 
@@ -103,7 +102,7 @@ public class SClient {
                     mBufferIn.read(mData, 0, mLenght);
                     mServerMessage = new String(mData, "UTF-8");
 
-                    receiveMessage();
+                    receiveMessage(mServerMessage);
                 }
                 Log.d("RESPONSE FROM SERVER", "S: Received Message: '" + mServerMessage + "'");
             } catch (Exception e) {
@@ -117,7 +116,7 @@ public class SClient {
             }
     }
 
-    private void receiveMessage(){
+    private void receiveMessage(String mServerMessage){
         if (mServerMessage != null && mMessageListener != null) {
             mMessageListener.messageReceived(mServerMessage); //call the method messageReceived from MyActivity class
         }
