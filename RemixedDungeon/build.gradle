@@ -111,14 +111,14 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'io.humanteq.hqm:hqm-core:2.0.1'
+    implementation 'io.humanteq.hqm:hqm-core:2.0.3-fix1'
 
     implementation 'com.android.billingclient:billing:2.1.0'
     implementation 'commons-io:commons-io:2.5'
 
     implementation 'com.google.firebase:firebase-analytics:17.2.3'
     implementation 'com.google.firebase:firebase-perf:19.0.5'
-    implementation 'com.google.firebase:firebase-ads:18.3.0'
+    implementation 'com.google.firebase:firebase-ads:19.0.0'
 
     implementation 'com.appodeal.ads.sdk:core:2.6.2'
     implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.2'
