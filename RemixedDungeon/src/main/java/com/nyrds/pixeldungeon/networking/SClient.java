@@ -7,12 +7,14 @@
 package com.nyrds.pixeldungeon.networking;
 
 import android.util.Log;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class SClient {
 
@@ -22,7 +24,7 @@ public class SClient {
     // sends message received notifications
     private OnMessageReceived mMessageListener = null;
     // while this is true, the server will continue running
-    private boolean mRun = false;
+    private AtomicBoolean mRun = new AtomicBoolean(false);
     // used to send messages
     private DataOutputStream mBufferOut;
     // used to read messages from the server
@@ -59,7 +61,7 @@ public class SClient {
      */
     public void stopClient() {
 
-        mRun = false;
+        mRun.set(false);
 
         if (mBufferOut != null) {
             try {
@@ -79,7 +81,7 @@ public class SClient {
     public void run() {
         String mServerMessage = "";
 
-        mRun = true;
+        mRun.set(true);
         Socket socket = null;
 
         try {
@@ -90,17 +92,17 @@ public class SClient {
             mBufferOut = new DataOutputStream(socket.getOutputStream());
             mBufferIn = new DataInputStream(socket.getInputStream());
 
-            while (mRun) {
-                byte mLenghtData[] = new byte[4]; //MessageLenght native byte data
-                mBufferIn.read(mLenghtData, 0, 4);
+            while (mRun.get()) {
+                byte[] lengthData = new byte[4]; //MessageLength native byte data
+                mBufferIn.read(lengthData, 0, 4);
 
-                ByteBuffer temp = ByteBuffer.wrap(mLenghtData);
+                ByteBuffer temp = ByteBuffer.wrap(lengthData);
                 temp.order(ByteOrder.LITTLE_ENDIAN);
-                int mLenght = temp.getInt();
-                byte mData[] = new byte[mLenght];
+                int len = temp.getInt();
+                byte[] inData = new byte[len];
 
-                mBufferIn.read(mData, 0, mLenght);
-                mServerMessage = new String(mData, "UTF-8");
+                mBufferIn.read(inData, 0, len);
+                mServerMessage = new String(inData, "UTF-8");
 
                 receiveMessage(mServerMessage);
             }
@@ -126,15 +128,15 @@ public class SClient {
             try{
                 Log.d(TAG, "Sending: " + message);
 
-                byte mData[] = message.getBytes("UTF-8"); //Get message data in bytes
-                int mLenght = (int) mData.length; //We need send lenght of our message
+                byte[] data = message.getBytes("UTF-8"); //Get message data in bytes
+                int length = data.length; //We need send length of our message
 
                 //.NET Has another byte order in reading integer. We need to flip bytes before sending.
                 ByteBuffer temp = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
-                byte mLenghtData[] = temp.putInt(mLenght).array();
+                byte[] lenData = temp.putInt(length).array();
 
-                mBufferOut.write(mLenghtData); //Write lenght
-                mBufferOut.write(mData); //Write data
+                mBufferOut.write(lenData); //Write length
+                mBufferOut.write(data); //Write data
             } catch (Exception e){
                 Log.e("TCP", "S: Error", e);
             }
