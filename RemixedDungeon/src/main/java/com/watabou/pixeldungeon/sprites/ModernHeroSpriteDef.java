@@ -250,17 +250,20 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			EquipableItem weapon = hero.getBelongings().weapon;
 			EquipableItem leftHand = hero.getBelongings().leftHand;
 
-			if(weapon != null && leftHand != null) {
+			boolean right = weapon != null && weapon.goodForMelee();
+			boolean left  = leftHand != null && leftHand.goodForMelee();
+
+			if(right && left) {
 				zap = attack = weapon_anims.get("dual");
 				return;
 			}
 
-			if(weapon != null) {
+			if(right) {
 				zap = attack = weapon_anims.get("right");
 				return;
 			}
 
-			if(leftHand != null) {
+			if(left) {
 				zap = attack = weapon_anims.get("left");
 			}
 		}

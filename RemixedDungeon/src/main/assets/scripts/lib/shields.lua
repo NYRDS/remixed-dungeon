@@ -80,7 +80,7 @@ end
 shields.makeShield         = function(shieldLevel, shieldDesc)
     return {
         activate          = function(self, item, hero)
-            if hero:getBelongings():itemSlotName(item) == "LEFT_HAND" then
+            if item:slotName() == "LEFT_HAND" then
                 local shieldBuff = RPD.affectBuff(hero, "ShieldLeft",
                                                   shields.rechargeTime(shieldLevel, hero:effectiveSTR()))
                 shieldBuff:level(shieldLevel)
@@ -89,7 +89,7 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         deactivate        = function(self, item, hero)
-            if hero:getBelongings():itemSlotName(item) == "LEFT_HAND" then
+            if item:slotName() == "LEFT_HAND" then
                 RPD.removeBuff(hero, "ShieldLeft")
             end
         end,
@@ -98,7 +98,7 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
             local hero = RPD.Dungeon.hero --TODO fix me
             local str  = hero:effectiveSTR()
 
-            if hero:getBelongings():itemSlotName(item) == "WEAPON" then
+            if item:slotName() == "WEAPON" then
                 return shields.infoWeapon(shieldDesc, str, shieldLevel, item:level())
             else
                 return shields.info(shieldDesc, str, shieldLevel, item:level())
@@ -135,7 +135,7 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         attackProc        = function(self, item, attacker, defender, damage)
-            if attacker:getBelongings():itemSlotName(item) == "WEAPON" then
+            if item:slotName() == "WEAPON" then
                 attacker:spend(1)
             end
 
@@ -143,7 +143,7 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         goodForMelee      = function(self, item)
-            return true
+            return item:slotName() == "WEAPON"
         end
     }
 end

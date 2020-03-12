@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -33,6 +34,8 @@ public abstract class EquipableItem extends Item {
 	public static final String NO_ANIMATION = "none";
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
+
+	private Belongings.Slot equipedTo = Belongings.Slot.NONE;
 
 	@Override
 	public void execute( Hero hero, String action ) {
@@ -85,8 +88,20 @@ public abstract class EquipableItem extends Item {
 		return belongings.equip(this, slot(belongings));
 	}
 
-	public void activate(Char ch) {}
-	public void deactivate(Char ch) {}
+	public void activate(Char ch) {
+		equipedTo = ch.getBelongings().usedSlots.get(this);
+		if(equipedTo==null) {
+			equipedTo = Belongings.Slot.NONE;
+		}
+	}
+	public void deactivate(Char ch) {
+		equipedTo = Belongings.Slot.NONE;
+	}
+
+	@LuaInterface
+	public String slotName() {
+		return equipedTo.name();
+	}
 
 	protected boolean doUnequip(Char hero, boolean collect, boolean single) {
 		

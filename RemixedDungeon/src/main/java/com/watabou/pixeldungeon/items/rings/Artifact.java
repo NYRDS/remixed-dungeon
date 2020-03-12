@@ -21,6 +21,8 @@ public class Artifact extends EquipableItem {
 
 	@Override
 	public void deactivate(Char ch) {
+		super.deactivate(ch);
+
 		if(buff!=null) {
 			ch.remove(buff);
 			buff = null;
@@ -28,6 +30,7 @@ public class Artifact extends EquipableItem {
 	}
 
 	public void activate(Char ch) {
+		super.activate(ch);
 		buff = buff();
 		if (buff != null) {
 			buff.setSource(this);
