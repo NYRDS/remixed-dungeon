@@ -80,10 +80,10 @@ public class SClient {
         mRun = false;
 
         if (mBufferOut != null) {
-            try{
+            try {
                 mBufferOut.flush();
                 mBufferOut.close();
-            } catch (Exception e){
+            } catch (Exception e) {
                 Log.e("TCP", "S: Error", e);
             }
         }
@@ -118,9 +118,7 @@ public class SClient {
                     mBufferIn.read(mData, 0, mLenght);
                     mServerMessage = new String(mData, "UTF-8");
 
-                    if (mServerMessage != null && mMessageListener != null) {
-                        mMessageListener.messageReceived(mServerMessage); //call the method messageReceived from MyActivity class
-                    }
+                    receiveMessage();
                 }
                 Log.d("RESPONSE FROM SERVER", "S: Received Message: '" + mServerMessage + "'");
             } catch (Exception e) {
@@ -132,6 +130,12 @@ public class SClient {
                     Log.e("TCP_Closing", "S: Error", e);
                 }
             }
+    }
+
+    private void receiveMessage(){
+        if (mServerMessage != null && mMessageListener != null) {
+            mMessageListener.messageReceived(mServerMessage); //call the method messageReceived from MyActivity class
+        }
     }
 
     //Declare the interface. The method messageReceived(String message) will must be implemented in the Activity
