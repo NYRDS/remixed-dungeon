@@ -2581,5 +2581,26 @@
     -- 盾牌贴图 !\n
     - 修复了一些Bug\n
     </string>
-  <string name="ShieldStrTemplate">盾牌的佩戴者应至少具有%1$d强度点才能正常的使用它。</string>
+  <string name="ShieldStrTemplate">盾牌的佩戴者应至少具有%1$d力量才能正常的使用它。</string>
+  <string name="town_deco_flowerinthepot_name">花盆</string>
+  <string name="town_deco_flowerinthepot_desc">当地特色装饰花</string>
+  <string name="Welcome_Text_29_4">
+    remix.29.4\n
+    - 新增:\n
+    -- 双手系统!\n
+    - 修改:\n
+    -- 常用武器!\n
+    - 修复了一些Bug\n
+    </string>
+
+    <string name="Mods_Disclaimer">
+        模组是由玩家为玩家创建的.\n
+        模组有时会以不可预测或怪异的方式改变游戏规则，请注意说明！\n
+        NYRDS团队对模组的内容、质量或稳定性不负任何责任。\n
+        模组需要独立下载，祝您玩得开心!\n
+    </string>
+
+
+  <string name="ShieldWeaponInfo">当作为武器使用时，这个盾牌平均会造成 %1$d 点伤害。</string>
+
 </resources>
