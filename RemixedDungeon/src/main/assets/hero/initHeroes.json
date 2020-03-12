@@ -7,7 +7,7 @@
     "items": [
       {
         "kind": "Gold",
-        "quantity": 1000000
+        "quantity": 100
       }
     ],
     "str": 10,
