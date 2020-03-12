@@ -55,7 +55,10 @@ public class SClient {
 
                         byte mData[] = message.getBytes("UTF-8"); //Get message data in bytes
                         int mLenght = (int) mData.length; //We need send lenght of our message
-                        byte mLenghtData[] = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(mLenght).array(); //.NET Has another byte order in reading integer. We need to flip bytes before sending.
+
+                        //.NET Has another byte order in reading integer. We need to flip bytes before sending.
+                        ByteBuffer temp = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
+                        byte mLenghtData[] = temp.putInt(mLenght).array();
 
                         mBufferOut.write(mLenghtData); //Write lenght
                         mBufferOut.write(mData); //Write data
@@ -81,70 +84,52 @@ public class SClient {
                 mBufferOut.flush();
                 mBufferOut.close();
             } catch (Exception e){
-
+                Log.e("TCP", "S: Error", e);
             }
         }
 
         mMessageListener = null;
         mBufferIn = null;
+
         mBufferOut = null;
         mServerMessage = null;
     }
 
     public void run() {
-
         mRun = true;
 
         try {
-            //here you must put your computer's IP address.
             InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
-
             Log.d("TCP Client", "C: Connecting...");
-
-            //create a socket to make the connection with the server
             Socket socket = new Socket(serverAddr, SERVER_PORT);
 
             try {
-
-                //sends the message to the server
                 mBufferOut = new DataOutputStream(socket.getOutputStream());
-
-                //receives the message which the server sends back
                 mBufferIn = new DataInputStream(socket.getInputStream());
 
-
-                //in this while the client listens for the messages sent by the server
                 while (mRun) {
                     byte mLenghtData[] = new byte[4]; //MessageLenght native byte data
                     mBufferIn.read(mLenghtData, 0, 4);
 
                     int mLenght = ByteBuffer.wrap(mLenghtData).order(ByteOrder.LITTLE_ENDIAN).getInt(); //Message lenght
-
                     byte mData[] = new byte[mLenght];
-                    mBufferIn.read(mData, 0, mLenght);
 
+                    mBufferIn.read(mData, 0, mLenght);
                     mServerMessage = new String(mData, "UTF-8");
 
                     if (mServerMessage != null && mMessageListener != null) {
-                        //call the method messageReceived from MyActivity class
-                        mMessageListener.messageReceived(mServerMessage);
+                        mMessageListener.messageReceived(mServerMessage); //call the method messageReceived from MyActivity class
                     }
                 }
-
                 Log.d("RESPONSE FROM SERVER", "S: Received Message: '" + mServerMessage + "'");
-
             } catch (Exception e) {
                 Log.e("TCP", "S: Error", e);
             } finally {
-                //the socket must be closed. It is not possible to reconnect to this socket
-                // after it is closed, which means a new socket instance has to be created.
                 socket.close();
             }
-
         } catch (Exception e) {
             Log.e("TCP", "C: Error", e);
         }
-
     }
 
     //Declare the interface. The method messageReceived(String message) will must be implemented in the Activity
