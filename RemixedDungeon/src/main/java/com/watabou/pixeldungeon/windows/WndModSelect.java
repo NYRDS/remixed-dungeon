@@ -163,6 +163,11 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	@Override
 	public void UnzipComplete(final Boolean result) {
 		Game.pushUiTask(() -> {
+			if(unzipProgress!=null) {
+				unzipProgress.hide();
+				unzipProgress = null;
+			}
+
 			if (result) {
 				Game.addToScene(new WndModSelect());
 			} else {
@@ -170,5 +175,20 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			}
 		});
 
+	}
+
+	private WndMessage        unzipProgress;
+
+	@Override
+	public void UnzipProgress(Integer unpacked) {
+		Game.pushUiTask(() -> {
+			if (unzipProgress == null) {
+				unzipProgress = new WndMessage(Utils.EMPTY_STRING);
+				Game.addToScene(unzipProgress);
+			}
+			if (unzipProgress.getParent() == Game.scene()) {
+				unzipProgress.setText(Utils.format("Unpacking: %d", unpacked));
+			}
+		});
 	}
 }

@@ -3,6 +3,8 @@ package com.nyrds.android.util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,7 +15,7 @@ import java.util.zip.ZipInputStream;
 
 public class Unzip {
 
-	private static final int    BUFFER_SIZE = 4096;
+	private static final int    BUFFER_SIZE = 16384;
 
 	private static void ensureDir(String dir) {
 		File f = new File(dir);
@@ -23,15 +25,22 @@ public class Unzip {
 		}
 	}
 
-	static public boolean unzip(InputStream fin, String tgtDir) {
+	static public boolean unzipStream(InputStream fin, String tgtDir, @Nullable UnzipProgress listener) {
 		ensureDir(tgtDir);
 		try {
 			ZipInputStream zin = new ZipInputStream(fin);
 			ZipEntry ze;
 
-			byte data[] = new byte[BUFFER_SIZE];
+			byte[] data = new byte[BUFFER_SIZE];
+
+			int entriesProcessed = 0;
 
 			while ((ze = zin.getNextEntry()) != null) {
+				entriesProcessed = entriesProcessed + 1;
+				if(listener!=null) {
+					listener.progress(entriesProcessed);
+				}
+
 				GLog.debug( "Unzipping " + ze.getName());
 
 				if (ze.isDirectory()) {
@@ -58,11 +67,23 @@ public class Unzip {
 		return true;
 	}
 
-	static public boolean unzip(String zipFile, String tgtDir) {
+	static public boolean unzip(String zipFile, String tgtDir, @Nullable UnzipProgress listener) {
 		try {
-			return unzip(new FileInputStream(zipFile), tgtDir);
+			return unzipStream(new FileInputStream(zipFile), tgtDir, listener);
 		} catch (FileNotFoundException e) {
 			return false;
 		}
+	}
+
+	static public boolean unzip(String zipFile, String tgtDir) {
+		try {
+			return unzipStream(new FileInputStream(zipFile), tgtDir, null);
+		} catch (FileNotFoundException e) {
+			return false;
+		}
+	}
+
+	interface UnzipProgress {
+		void progress(int unpacked);
 	}
 }

@@ -24,7 +24,9 @@ public class UnzipTask extends AsyncTask<String, Integer, Boolean> {
 			tmpDirFile.delete();
 		}
 
-		if (Unzip.unzip(zipFile, FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath())) {
+		if (Unzip.unzip(zipFile,
+				FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath(),
+				unpacked -> publishProgress(unpacked))) {
 
 			File[] unpackedList = tmpDirFile.listFiles();
 
@@ -49,6 +51,7 @@ public class UnzipTask extends AsyncTask<String, Integer, Boolean> {
 	}
 
 	protected void onProgressUpdate(Integer... progress) {
+		m_listener.UnzipProgress(progress[0]);
 	}
 
 	protected void onPostExecute(Boolean result) {

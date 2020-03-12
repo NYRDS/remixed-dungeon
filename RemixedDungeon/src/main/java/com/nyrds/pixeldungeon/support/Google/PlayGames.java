@@ -206,10 +206,11 @@ public class PlayGames {
 				})
 				.addOnCompleteListener(task -> {
 					result.status(
-							Unzip.unzip(
+							Unzip.unzipStream(
 									new ByteArrayInputStream(
 											task.getResult()),
-											readTo.getAbsolutePath()));
+											readTo.getAbsolutePath(),
+											null));
 				});
 	}
 

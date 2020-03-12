@@ -23,17 +23,13 @@ public class DownloadProgressWindow implements DownloadStateListener {
 
     @Override
     public void DownloadProgress(final String file, final Integer bytes) {
-        Game.pushUiTask(new Runnable() {
-
-            @Override
-            public void run() {
-                if (progress == null) {
-                    progress = new WndMessage(Utils.EMPTY_STRING);
-                    Game.addToScene(progress);
-                }
-                if (progress.getParent() == Game.scene()) {
-                    progress.setText(Utils.format("%s  %4.2fMb", prefix, bytes / 1024f / 1024f));
-                }
+        Game.pushUiTask(() -> {
+            if (progress == null) {
+                progress = new WndMessage(Utils.EMPTY_STRING);
+                Game.addToScene(progress);
+            }
+            if (progress.getParent() == Game.scene()) {
+                progress.setText(Utils.format("%s  %4.2fMb", prefix, bytes / 1024f / 1024f));
             }
         });
     }
