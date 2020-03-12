@@ -19,6 +19,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
@@ -42,7 +43,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
         text2.text(RemixedDungeon.activeMod());
         add(text2);
 
-        setSize(DashboardItem.SIZE,DashboardItem.SIZE);
+        setSize(DashboardItem.SIZE, DashboardItem.SIZE);
     }
 
     static public void modUpdated() {
@@ -82,23 +83,33 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
     @Override
     public void returnToWork(final boolean result) {
         final Group parent = getParent();
-        Game.pushUiTask(() -> {
-            if (result) {
-                if (Util.isConnectedToInternet()) {
-                    File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
-                    modsCommon.delete();
-                    String downloadTo = modsCommon.getAbsolutePath();
 
-                    new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this)).download("https://nyrds.github.io/NYRDS/mods.json", downloadTo);
+        Game.scene().add(new WndMessage(Game.getVar(R.string.Mods_Disclaimer)) {
+                             @Override
+                             public void hide() {
+                                 super.hide();
+                                 Game.pushUiTask(() -> {
+                                     if (result) {
+                                         if (Util.isConnectedToInternet()) {
+                                             File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
+                                             modsCommon.delete();
+                                             String downloadTo = modsCommon.getAbsolutePath();
 
-                } else {
-                    DownloadComplete("no internet", true);
-                }
+                                             new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this)).download("https://nyrds.github.io/NYRDS/mods.json", downloadTo);
 
-            } else {
-                parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
-            }
-        });
+                                         } else {
+                                             DownloadComplete("no internet", true);
+                                         }
+
+                                     } else {
+                                         parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
+                                     }
+                                 });
+
+                             }
+                         }
+        );
+
 
     }
 
