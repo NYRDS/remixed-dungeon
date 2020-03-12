@@ -94,7 +94,9 @@ public class SClient {
                 byte mLenghtData[] = new byte[4]; //MessageLenght native byte data
                 mBufferIn.read(mLenghtData, 0, 4);
 
-                int mLenght = ByteBuffer.wrap(mLenghtData).order(ByteOrder.LITTLE_ENDIAN).getInt();
+                ByteBuffer temp = ByteBuffer.wrap(mLenghtData);
+                temp.order(ByteOrder.LITTLE_ENDIAN);
+                int mLenght = temp.getInt();
                 byte mData[] = new byte[mLenght];
 
                 mBufferIn.read(mData, 0, mLenght);
