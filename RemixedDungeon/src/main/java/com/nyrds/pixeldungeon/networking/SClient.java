@@ -85,35 +85,32 @@ public class SClient {
         try {
             InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
 
-            Log.d("TCP Client", "C: Connecting...");
-
             socket = new Socket(serverAddr, SERVER_PORT);
 
-                mBufferOut = new DataOutputStream(socket.getOutputStream());
-                mBufferIn = new DataInputStream(socket.getInputStream());
+            mBufferOut = new DataOutputStream(socket.getOutputStream());
+            mBufferIn = new DataInputStream(socket.getInputStream());
 
-                while (mRun) {
-                    byte mLenghtData[] = new byte[4]; //MessageLenght native byte data
-                    mBufferIn.read(mLenghtData, 0, 4);
+            while (mRun) {
+                byte mLenghtData[] = new byte[4]; //MessageLenght native byte data
+                mBufferIn.read(mLenghtData, 0, 4);
 
-                    int mLenght = ByteBuffer.wrap(mLenghtData).order(ByteOrder.LITTLE_ENDIAN).getInt();
-                    byte mData[] = new byte[mLenght];
+                int mLenght = ByteBuffer.wrap(mLenghtData).order(ByteOrder.LITTLE_ENDIAN).getInt();
+                byte mData[] = new byte[mLenght];
 
-                    mBufferIn.read(mData, 0, mLenght);
-                    mServerMessage = new String(mData, "UTF-8");
+                mBufferIn.read(mData, 0, mLenght);
+                mServerMessage = new String(mData, "UTF-8");
 
-                    receiveMessage(mServerMessage);
-                }
-                Log.d("RESPONSE FROM SERVER", "S: Received Message: '" + mServerMessage + "'");
-            } catch (Exception e) {
-                Log.e("TCP", "S: Error", e);
-            } finally {
-                try{
-                    socket.close();
-                } catch (Exception e){
-                    Log.e("TCP_Closing", "S: Error", e);
-                }
+                receiveMessage(mServerMessage);
             }
+        } catch (Exception e) {
+            Log.e("TCP", "S: Error", e);
+        } finally {
+            try{
+                socket.close();
+            } catch (Exception e){
+                Log.e("TCP_Closing", "S: Error", e);
+            }
+        }
     }
 
     private void receiveMessage(String mServerMessage){
