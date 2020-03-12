@@ -110,6 +110,10 @@ public class LuaScript {
         run(method);
     }
 
+    public void runOptionalNoRet(String method, Object... args) {
+        runOptional(method, null, args);
+    }
+
     public <T> T runOptional(String method, T defaultValue, Object... args) {
         try {
             if (!getScript().get(method).isfunction()) {
@@ -131,6 +135,11 @@ public class LuaScript {
 
             for (int i = startIndex;i<luaArgs.length;++i) {
                 luaArgs[i] = CoerceJavaToLua.coerce(args[i-startIndex]);
+            }
+
+            if(defaultValue==null) {
+                run(method, luaArgs);
+                return null;
             }
 
             return (T) CoerceLuaToJava.coerce(

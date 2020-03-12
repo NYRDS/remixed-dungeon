@@ -60,9 +60,9 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
@@ -408,17 +408,37 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return damage[0];
 	}
 
-	protected KindOfWeapon getActiveWeapon() {
-		return rangedWeapon != null ? rangedWeapon : getBelongings().weapon;
+	@NotNull
+	public EquipableItem getActiveWeapon() {
+		if(rangedWeapon!=null) {
+			return rangedWeapon;
+		}
+
+		EquipableItem weapon = getBelongings().weapon;
+
+		if(weapon!=null) {
+			return weapon;
+		}
+
+		return CharsList.DUMMY_ITEM;
 	}
 
+	@NotNull
+	public EquipableItem getSecondaryWeapon() {
+	    EquipableItem leftItem = getBelongings().leftHand;
+
+	    if(leftItem!=null && leftItem.goodForMelee()) {
+	        return leftItem;
+        }
+
+	    return CharsList.DUMMY_ITEM;
+    }
+
 	public int damageRoll() {
-		KindOfWeapon wep = getActiveWeapon();
 		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
 
-		if (wep != null) {
-			dmg += wep.damageRoll(this);
-		}
+		dmg += getActiveWeapon().damageRoll(this);
+		dmg += getSecondaryWeapon().damageRoll(this);
 
 		return dmg;
 	}
@@ -523,24 +543,20 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	abstract protected float _attackDelay();
 
 	public float attackDelay() {
-		KindOfWeapon wep = getActiveWeapon();
-		if (wep != null) {
-			return _attackDelay()*wep.speedFactor(this);
-		} else {
-			return _attackDelay();
-		}
+		float delayFactor = 1;
+
+		delayFactor = getActiveWeapon().impactDelayFactor(this,delayFactor);
+		delayFactor = getSecondaryWeapon().impactDelayFactor(this, delayFactor);
+
+		return _attackDelay() * delayFactor;
 	}
 
 	@Override
 	public void spend(float time) {
 
 		float timeScale = 1f;
-		if (hasBuff(Slow.class)) {
-			timeScale *= 0.5f;
-		}
-		if (hasBuff(Speed.class)) {
-			timeScale *= 2.0f;
-		}
+		timeScale *= 0.5f/(1+buffLevel(Slow.class));
+		timeScale *= (1 + buffLevel(Speed.class));
 
 		float scaledTime = time / timeScale;
 
@@ -1079,6 +1095,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		cb.onBuff(getSubClass());
 	}
 
+	@LuaInterface
 	public boolean swapPosition(final Char chr) {
 
 		if(!walkingType.canSpawnAt(level(),chr.getPos())) {

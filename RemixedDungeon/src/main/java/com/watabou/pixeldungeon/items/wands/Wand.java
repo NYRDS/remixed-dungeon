@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -133,7 +134,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		if (hero.getHeroClass() == HeroClass.MAGE
 			|| hero.getSubClass() == HeroSubClass.SHAMAN) {
 			
-			if(hero.getBelongings().weapon == this) {
+			if(isEquipped(hero)) {
 				actions.add(AC_UNEQUIP); 
 			} else {
 				actions.add(AC_EQUIP);
@@ -506,12 +507,12 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public int damageRoll(Char owner) {
+	public int damageRoll(Char user) {
 		int tier = 1 + effectiveLevel() / 3;
-		MIN = tier + owner.skillLevel();
-		MAX = (tier * tier - tier + 10) / 2 + owner.skillLevel()*tier + effectiveLevel();
+		MIN = tier + user.skillLevel();
+		MAX = (tier * tier - tier + 10) / 2 + user.skillLevel()*tier + effectiveLevel();
 
-		return super.damageRoll(owner);
+		return super.damageRoll(user);
 	}
 
 	@Override
@@ -528,5 +529,15 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public String getVisualName() {
 		return "Wand";
+	}
+
+	@Override
+	public Belongings.Slot slot(Belongings belongings) {
+		return Belongings.Slot.WEAPON;
+	}
+
+	@Override
+	public Belongings.Slot blockSlot() {
+		return Belongings.Slot.LEFT_HAND;
 	}
 }

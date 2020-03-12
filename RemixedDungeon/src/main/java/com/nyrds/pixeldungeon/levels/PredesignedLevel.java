@@ -27,7 +27,6 @@ public class PredesignedLevel extends CustomLevel {
 
 	private  LayerId[] descOrder = {LayerId.Roof_Deco,LayerId.Roof_Base,LayerId.Deco2,LayerId.Deco,LayerId.Base};
 
-	//for restoreFromBundle
 	@Keep
 	public PredesignedLevel() {
 		super();

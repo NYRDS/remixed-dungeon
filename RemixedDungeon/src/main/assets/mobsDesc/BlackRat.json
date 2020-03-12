@@ -1,6 +1,6 @@
 {
    "defenseSkill"  :1,
-   "attackSkill"   :1,
+   "attackSkill"   :10,
    "exp"           :1,
    "maxLvl"        :1,
    "dmgMin"        :1,
@@ -8,12 +8,14 @@
    "dr"            :1,
    "baseSpeed"     :2,
    "attackDelay"   :1,
-   "ht"            :55555,
+   "ht"            :5,
    "viewDistance"  :1,
+   "lootChance"    :1,
    "name"          :"Black Rat",
    "name_objective":"Black Rat",
    "description"   :"Just a common house rat, not marsupial",
    "gender"        :"feminine",
    "spriteDesc"    :"spritesDesc/BlackRat.json",
-   "walkingType"   :"NORMAL"
+   "walkingType"   :"NORMAL",
+   "scriptFile"    :"scripts/mobs/ScriptedThief"
 }

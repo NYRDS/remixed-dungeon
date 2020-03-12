@@ -36,7 +36,8 @@ class WndPlayGames extends Window {
         CheckBox usePlayGames = new CheckBox(Game.getVar(R.string.WndPlayGames_Use),
                 Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)
                 && Game.instance().playGames.isConnected()
-                ) {
+                )
+        {
             @Override
             public void checked(boolean value) {
                 super.checked(value);

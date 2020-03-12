@@ -78,6 +78,10 @@ mob.onMove = function(self,mob,cell)
     return not not (self.move and self.move(mob, cell))
 end
 
+mob.onAct = function(self,mob)
+    return not not (self.act and self.act(mob))
+end
+
 mob.onDamage = function(self,mob,dmg,src)
     return not not (self.damage and self.damage(mob, dmg, src))
 end

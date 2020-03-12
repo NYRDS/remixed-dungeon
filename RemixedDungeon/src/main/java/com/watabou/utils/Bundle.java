@@ -17,6 +17,7 @@
 
 package com.watabou.utils;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -66,8 +67,7 @@ public class Bundle {
         this.data = data;
     }
 
-    @Override
-    public String toString() {
+    public String serialize() {
         return data.toString();
     }
 
@@ -115,6 +115,7 @@ public class Bundle {
         return new Bundle(data.optJSONObject(key));
     }
 
+    @Nullable
     private Bundlable get() {
         String clName = "no_class";
         try {
@@ -145,13 +146,18 @@ public class Bundle {
         return null;
     }
 
-    public <E extends Enum<E>> E getEnum(String key, Class<E> enumClass) {
+
+    public <E extends Enum<E>> E getEnum(String key, Class<E> enumClass, E defaultValue) {
         try {
             return Enum.valueOf(enumClass, data.getString(key));
         } catch (JSONException e) {
             EventCollector.logException(e);
-            return enumClass.getEnumConstants()[0];
+            return defaultValue;
         }
+    }
+
+    public <E extends Enum<E>> E getEnum(String key, Class<E> enumClass) {
+        return getEnum(key, enumClass, enumClass.getEnumConstants()[0]);
     }
 
     @NotNull
@@ -257,6 +263,11 @@ public class Bundle {
             BundleHelper.Pack(object, bundle);
             data.put(key, bundle.data);
         }
+    }
+
+    @LuaInterface
+    public void putEntity(String key, Bundlable object) {
+        put(key,object);
     }
 
     @SneakyThrows
@@ -393,7 +404,7 @@ public class Bundle {
         }
 
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new GZIPOutputStream(stream, GZIP_BUFFER_SIZE)));
-        writer.write(bundle.data.toString());
+        writer.write(bundle.serialize());
         writer.close();
     }
 

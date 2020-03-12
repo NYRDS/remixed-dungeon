@@ -45,13 +45,11 @@ public class BlackSkullOfMastery extends MasteryItem {
 			
 			HeroSubClass way;
 
-			switch (hero.getHeroClass()) {
-			default:
+			if (hero.getHeroClass() == HeroClass.NECROMANCER) {
+				way = HeroSubClass.LICH;
+			} else {
 				GLog.w("Error: How did you get this item?! You're not supposed to be able to obtain it!!");
 				return;
-			case NECROMANCER:
-				way = HeroSubClass.LICH;
-				break;
 			}
 			GameScene.show( new WndChooseWay( this, way ) );
 		} else {

@@ -2565,4 +2565,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     - Багофиксы\n
     </string>
   <string name="ShieldStrTemplate">Чтобы использовать этот щит как следует, его обладателю потребуется не меньше чем %1$d очков Силы.</string>
+  <string name="town_deco_flowerinthepot_name">Цветок в горшке</string>
+  <string name="town_deco_flowerinthepot_desc">Декоративное растение в милом горшке</string>
 </resources>

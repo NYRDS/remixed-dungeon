@@ -10,7 +10,8 @@ local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
 local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
 
-local Sample = luajava.bindClass("com.watabou.noosa.audio.Sample")
+local Sample           = luajava.bindClass("com.watabou.noosa.audio.Sample")
+local Music            = luajava.bindClass("com.watabou.noosa.audio.Music")
 local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
 
 local Buffs  = {
@@ -70,6 +71,8 @@ local actions = {
     equip ="EquipableItem_ACEquip"
 }
 
+local Bundle           = "com.watabou.utils.Bundle"
+
 local Objects = {
     Ui = {
         WndMessage    = "com.watabou.pixeldungeon.windows.WndMessage",
@@ -107,7 +110,8 @@ local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.ob
 
 
 local Tweeners = {
-    PosTweener = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener")
+    PosTweener  = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener"),
+    JumpTweener = luajava.bindClass("com.watabou.noosa.tweeners.JumpTweener")
 }
 
 local Sfx = {
@@ -205,6 +209,14 @@ local RPD = {
         Sample.INSTANCE:play(sound)
     end,
 
+    playMusic = function(music, looped)
+        Music:play(music, looped)
+    end,
+
+    stopMusic = function()
+        Music:stop()
+    end,
+
     textById = function(id)
         return StringsManager:getVar(id)
     end,
@@ -269,6 +281,10 @@ local RPD = {
         Tweeners.PosTweener:attachTo(img,dx,dy,time)
     end,
 
+    attachJumpTweener = function(chr, target, height, time)
+        Tweeners.JumpTweener:attachTo(chr:getSprite(), target, height, time)
+    end,
+
     item = function(itemClass, quantity)
         quantity = quantity or 1
         local item = ItemFactory:itemByName(itemClass)
@@ -308,7 +324,7 @@ local RPD = {
 
         for i = x - 1, x + 1 do
             for j = y - 1, y + 1 do
-                if i~=x or j~=y then
+                if (i~=x or j~=y) and level:cellValid(i,j) then
                     action(level:cell(i,j))
                 end
             end
@@ -321,6 +337,29 @@ local RPD = {
 
     checkBadge = function(badgeName)
         return Badges:isUnlocked(Badges.Badge:valueOf(badgeName))
+    end,
+
+    packEntity = function(entity)
+        local bundle = luajava.newInstance(Bundle)
+        bundle:putEntity("entity",entity)
+        return bundle:serialize()
+    end,
+
+    unpackEntity = function(str)
+        return luajava.newInstance(Bundle,str):get("entity")
+    end,
+
+    toLua = function(entity)
+        local json = require("scripts/lib/json")
+        local bundle = luajava.newInstance(Bundle)
+        bundle:putEntity("entity",entity)
+        return json.decode(bundle:serialize())["entity"]
+    end,
+
+    fromLua = function(entityDesc)
+        local json = require("scripts/lib/json")
+        local jsonDesc = json.encode({entity = entityDesc})
+        return luajava.newInstance(Bundle, jsonDesc):get("entity")
     end,
 
     format = function(fmt, ...)

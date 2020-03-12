@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.generated.BundleHelper;
@@ -81,16 +82,18 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
+	public Map<EquipableItem, Slot> usedSlots    = new HashMap<>();
+
 	private Set<EquipableItem> activatedItems = new HashSet<>();
 
 	@Packable
-	public KindOfWeapon weapon = null;
+	public EquipableItem weapon = null;
 
 	@Packable
 	public EquipableItem leftHand = null;
 
 	@Packable
-	public Armor        armor  = null;
+	public Armor         armor  = null;
 	@Packable
 	public EquipableItem ring1  = null;
 	@Packable
@@ -124,6 +127,12 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		activateEquippedItems();
 	}
 
+	@LuaInterface
+	public boolean slotBlocked(String slot) {
+		Slot eSlot = Slot.valueOf(slot);
+		return itemBySlot(eSlot) != null || blockedSlots.containsKey(eSlot);
+	}
+
 	private void blockSlots() {
 		blockedSlots.clear();
 		var itemIterator = iterator();
@@ -148,6 +157,14 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 		}
 		blockSlots();
+	}
+
+	@LuaInterface
+	public String itemSlotName(EquipableItem item) {
+		if (usedSlots.containsKey(item)) {
+			return usedSlots.get(item).name();
+		}
+		return Slot.NONE.name();
 	}
 
 	public boolean isEquipped(Item item) {
@@ -244,6 +261,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean removeItem(Item itemToRemove) {
+		usedSlots.remove(itemToRemove);
 
 		if(itemToRemove.equals(weapon)) {
 			weapon = null;
@@ -322,8 +340,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 	}
 
-
-	void setupFromJson(JSONObject desc) throws JSONException {
+	void setupFromJson(@NotNull JSONObject desc) throws JSONException {
 		try {
 			if (desc.has("armor")) {
 				armor = (Armor) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
@@ -437,13 +454,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean unequip(EquipableItem item) {
-		if(removeItem(item)) {
+		if(checkItem(item)!=null) {
 			item.deactivate(owner);
+			removeItem(item);
 			activatedItems.remove(item);
 			blockSlots();
 			owner.updateSprite();
 			return true;
 		}
+
 		return false;
 	}
 
@@ -458,7 +477,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			case ARMOR:
 				return armor;
 			case ARTIFACT:
-				return ring1 !=null?ring1:ring2;
+				return ring1;
+			case LEFT_ARTIFACT:
+				return ring2;
 		}
 		return null;
 	}
@@ -483,7 +504,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		if(slot==Slot.WEAPON) {
 			if (weapon == null || weapon.doUnequip( owner, true )) {
-				weapon = (KindOfWeapon) item.detach(backpack);
+				weapon = (EquipableItem) item.detach(backpack);
 			} else {
 				return false;
 			}
@@ -523,6 +544,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			ItemUtils.equipCursed( owner );
 			item.equippedCursed();
 		}
+
+		usedSlots.put(item, slot);
 
 		activateEquippedItems();
 		blockSlots();

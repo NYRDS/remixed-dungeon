@@ -31,20 +31,39 @@
         "kind": "RoyalShield"
       },
       {
-        "kind": "test/TestItem"
-      },
-      {
-        "kind": "test/TestItem"
-      },
-      {
-        "kind": "Claymore"
-      },
-      {
-        "kind": "SeedPouch"
+        "kind": "WoodenShield"
       },
       {
         "kind": "WoodenShield"
       },
+      {
+        "kind": "Dagger"
+      },
+      {
+        "kind": "TomeOfMastery"
+      },
+      {
+        "kind": "ShortSword"
+      },
+      {
+        "kind": "Sword"
+      },
+      {
+        "kind": "Mace"
+      },
+
+      {
+        "kind": "WandOfFirebolt"
+      },
+
+      {
+        "kind": "WoodenBow"
+      },
+
+      {
+        "kind": "Kusarigama"
+      },
+
       {
         "kind": "TomeOfMastery",
         "quantity": 100,

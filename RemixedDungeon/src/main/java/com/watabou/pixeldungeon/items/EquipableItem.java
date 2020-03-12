@@ -24,10 +24,13 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public abstract class EquipableItem extends Item {
 
+	public static final String NO_ANIMATION = "none";
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
@@ -65,8 +68,8 @@ public abstract class EquipableItem extends Item {
 		super.cast( user, dst );
 	}
 
-	public float time2equip(Char hero ) {
-		return hero.speed();
+	public float time2equip(@NotNull Char hero ) {
+		return 1f/(hero.speed()+0.01f);
 	}
 
 	@Override
@@ -78,7 +81,8 @@ public abstract class EquipableItem extends Item {
 
 	public boolean doEquip(Hero hero ) {
 		setUser(hero);
-		return hero.getBelongings().equip(this,slot());
+		Belongings belongings = hero.getBelongings();
+		return belongings.equip(this, slot(belongings));
 	}
 
 	public void activate(Char ch) {}
@@ -118,7 +122,7 @@ public abstract class EquipableItem extends Item {
 		return getClassName();
 	}
 
-	public abstract Belongings.Slot slot();
+	public abstract Belongings.Slot slot(Belongings belongings);
 
 	public int typicalSTR() {
 		return 0;
@@ -126,6 +130,50 @@ public abstract class EquipableItem extends Item {
 
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.NONE;
+	}
+
+
+	public float accuracyFactor(Char user) {
+		return 1f;
+	}
+
+	public float impactDelayFactor(Char user, float delayFactor) {
+		if(goodForMelee()) {
+			float ownFactor = attackDelayFactor(user);
+			return Math.max(ownFactor * 1.5f, ownFactor * 0.75f + delayFactor * 0.75f);
+		} else {
+			return delayFactor;
+		}
+	}
+
+	public float impactAccuracyFactor(Char user, float accuracyFactor) {
+		if(goodForMelee()) {
+			return Math.min(accuracyFactor(user), accuracyFactor);
+		} else {
+			return accuracyFactor;
+		}
+	}
+
+	//dual
+	public float attackDelayFactor(Char user) {
+		return 1f;
+	}
+
+	//dual
+	public int damageRoll(Char user) {
+		return 0;
+	}
+
+	//dual
+	public void attackProc(Char attacker, Char defender, int damage ) {
+	}
+
+	public String getAttackAnimationClass() {
+		return NO_ANIMATION;
+	}
+
+	public boolean goodForMelee() {
+		return true;
 	}
 
 	public void equippedCursed() {

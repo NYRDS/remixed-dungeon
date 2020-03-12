@@ -255,7 +255,7 @@ public class Assets {
         premiumSettings.put(KEY_TOOLBAR, toolbarType);
         premiumSettings.put(KEY_BANNERS, bannersType);
 
-        Preferences.INSTANCE.put(Preferences.KEY_PREMIUM_SETTINGS, premiumSettings.toString());
+        Preferences.INSTANCE.put(Preferences.KEY_PREMIUM_SETTINGS, premiumSettings.serialize());
 
     }
 }

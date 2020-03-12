@@ -41,7 +41,6 @@ import com.watabou.pixeldungeon.windows.WndInfoCell;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
 import com.watabou.pixeldungeon.windows.WndMessage;
-import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
 import org.jetbrains.annotations.Nullable;
@@ -265,12 +264,7 @@ public class Toolbar extends Component {
 
             Heap heap = Dungeon.level.getHeap(cell);
             if (heap != null) {
-                if (heap.type == Heap.Type.FOR_SALE && heap.size() == 1
-                        && heap.peek().price() > 0) {
-                    GameScene.show(new WndTradeItem(heap, false));
-                } else {
-                    GameScene.show(new WndInfoItem(heap));
-                }
+                GameScene.show(new WndInfoItem(heap));
                 return;
             }
 

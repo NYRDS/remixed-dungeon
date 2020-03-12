@@ -22,20 +22,9 @@
 
   "weapon_anim" : {
     "none"      : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0]},
-    "sword"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "sword_zap" : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "spear"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "bow"       : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "bow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "crossbow"       : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "crossbow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "staff"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "staff_zap"  : { "fps" : 10, "looped" : false,    "frames": [19, 20, 0]},
-    "heavy"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "wand"      : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "wand_zap"  : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "kusarigama"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "kusarigama_zap" : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]}
+    "right"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
+    "left"      : { "fps" : 8,  "looped" : false,    "frames" : [15, 16, 0]},
+    "dual"      : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0, 15, 16, 0]}
   },
 
   "bodyType": {

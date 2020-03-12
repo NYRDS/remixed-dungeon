@@ -62,12 +62,7 @@ public abstract class Text extends Visual {
 		
 		return new BitmapTextMultiline(text, font);
 	}
-	
-	@Override
-	public void destroy(){
-		super.destroy();
-	}
-	
+
 	@Override
 	public void draw(){
 		clean();

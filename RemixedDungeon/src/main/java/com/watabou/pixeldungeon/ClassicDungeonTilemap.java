@@ -22,11 +22,6 @@ public class ClassicDungeonTilemap extends DungeonTilemap {
         return img;
     }
 
-    @Override
-    public void draw() {
-        super.draw();
-    }
-
     public void updateAll() {
         updated.set(0, 0, level.getWidth(), level.getHeight());
     }

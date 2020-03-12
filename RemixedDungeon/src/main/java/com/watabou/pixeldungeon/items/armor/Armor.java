@@ -84,7 +84,7 @@ public class Armor extends EquipableItem {
 
 
 	@Override
-	public Belongings.Slot slot() {
+	public Belongings.Slot slot(Belongings belongings) {
 		return Belongings.Slot.ARMOR;
 	}
 

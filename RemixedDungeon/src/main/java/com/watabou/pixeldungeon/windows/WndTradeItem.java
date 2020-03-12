@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -68,48 +67,6 @@ public class WndTradeItem extends Window {
 		} else {
 			makeSellWnd(item);
 		}
-	}
-
-	@Deprecated
-	public WndTradeItem(final Heap heap, boolean canBuy) {
-		
-		super();
-
-		this.customer   = Dungeon.hero;
-
-		Item item = heap.peek();
-		
-		float pos = createDescription( item, true );
-
-		add(vbox);
-
-		int price = price( item, true );
-		
-		if (canBuy) {
-			
-			RedButton btnBuy = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Buy), price ) ) {
-				@Override
-				protected void onClick() {
-					hide();
-					buy( heap );
-				}
-			};
-			btnBuy.setSize(WIDTH, BTN_HEIGHT );
-			btnBuy.enable( price <= customer.gold());
-			vbox.add( btnBuy );
-			
-			RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
-				@Override
-				protected void onClick() {
-					hide();
-				}
-			};
-			btnCancel.setSize( WIDTH, BTN_HEIGHT );
-			vbox.add( btnCancel );
-		}
-		vbox.setPos(0, pos+GAP);
-
-		resize( WIDTH, (int)vbox.bottom());
 	}
 
 	private void makeSellWnd(final Item item) {
@@ -320,22 +277,6 @@ public class WndTradeItem extends Window {
 			GameScene.show(new WndTradeItem(item,shopkeeper,false));
 		}
 
-	}
-
-	@Deprecated
-	private void buy( Heap heap ) {
-		
-		Hero hero = Dungeon.hero;
-		Item item = heap.pickUp();
-		
-		int price = price( item, true);
-		hero.spendGold(price);
-
-		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), item.name(), price );
-		
-		if (!item.doPickUp( hero )) {
-			Dungeon.level.drop( item, heap.pos ).sprite.drop();
-		}
 	}
 
 	@Override

@@ -235,6 +235,7 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
+		script.runOptional("onAct");
 		getState().act(this);
 		return true;
 	}
@@ -701,7 +702,8 @@ public abstract class Mob extends Char {
 	}
 
 	@Nullable
-	protected Object getLoot() {
+	@LuaInterface
+	public Object getLoot() {
 		return loot;
 	}
 

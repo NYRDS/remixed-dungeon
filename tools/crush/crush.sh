@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # loop through all files ending in .png
-for file in `find ../../ -name '*.png' `
+for file in `find ../../RemixedDungeon/src -name '*.png' `
 do
 
   # crush image and save it's output
-  pngcrush -brute $file /tmp/crushed.png
+  pngcrush $file /tmp/crushed.png
 
   # overwrite original image with crushed version
   mv /tmp/crushed.png $file

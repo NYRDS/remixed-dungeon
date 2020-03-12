@@ -109,7 +109,7 @@ public class Eye extends Mob {
 
         boolean rayVisible = false;
 
-        for (int i = 0; i < Ballistica.distance; i++) {
+        for (int i = 1; i < Ballistica.distance; i++) {
             int cell = Ballistica.trace[i];
 
             Char victim = Actor.findChar(cell);

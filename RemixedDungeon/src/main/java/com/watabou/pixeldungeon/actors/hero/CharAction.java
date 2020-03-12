@@ -40,13 +40,7 @@ public class CharAction {
 			this.dst = dst;
 		}
 	}
-	
-	public static class Buy extends CharAction {
-		public Buy( int dst ) {
-			this.dst = dst;
-		}
-	}
-	
+
 	public static class Interact extends CharAction {
 		public Char chr;
 		public Interact( Char chr) {

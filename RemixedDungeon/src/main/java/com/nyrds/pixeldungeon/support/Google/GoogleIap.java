@@ -4,6 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.Nullable;
 
+import com.android.billingclient.api.AcknowledgePurchaseParams;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
@@ -15,10 +16,13 @@ import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
+import com.gameofwhales.sdk.GameOfWhales;
+import com.gameofwhales.sdk.NoProductDetailsException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.IPurchasesUpdated;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.IOException;
@@ -59,6 +63,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
                             mSkuDetails = new HashMap<>();
                             for (SkuDetails skuDetails : list) {
                                 mSkuDetails.put(skuDetails.getSku().toLowerCase(Locale.ROOT), skuDetails);
+                                GameOfWhales.DetailsFromString(skuDetails.toString());
                             }
                         }
                     });
@@ -84,7 +89,41 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         }
         //GLog.w("purchase: %s",purchase.toString());
         //mBillingClient.consumeAsync(purchase.getPurchaseToken(),this);
-        mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
+        if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
+
+            // Acknowledge the purchase if it hasn't already been acknowledged.
+            if (!purchase.isAcknowledged()) {
+                AcknowledgePurchaseParams acknowledgePurchaseParams =
+                        AcknowledgePurchaseParams.newBuilder()
+                                .setPurchaseToken(purchase.getPurchaseToken())
+                                .build();
+                mBillingClient.acknowledgePurchase(acknowledgePurchaseParams, billingResult -> {
+                    EventCollector.logEvent("billing_result",
+                            billingResult.getResponseCode()
+                            + "->"
+                            + billingResult.getDebugMessage());
+                });
+
+                try {
+                    GameOfWhales.InAppPurchased(purchase.getOriginalJson(),purchase.getSignature());
+                } catch (NoProductDetailsException e) {
+                    EventCollector.logException(e,"GOW");
+                }
+            }
+
+            mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
+
+            String orderId = purchase.getOrderId();
+            String purchaseData = purchase.getOrderId() +","
+                    + purchase.getPackageName() + ","
+                    + purchase.getSku() + ","
+                    + purchase.getPurchaseToken();
+            if( !Preferences.INSTANCE.getBoolean(orderId,false) ) {
+                EventCollector.logEvent("iap_data", purchaseData);
+                Preferences.INSTANCE.put(orderId,true);
+            }
+        }
+
     }
 
     public void queryPurchases() {
@@ -99,7 +138,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     }
 
     private void startServiceConnection() {
-        if(mIsServiceConnecting) {
+        if (mIsServiceConnecting) {
             return;
         }
 
@@ -110,10 +149,10 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
 
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     mIsServiceConnected = true;
-                    for (Runnable runnable:mRequests) {
+                    for (Runnable runnable : mRequests) {
                         getExecutor().execute(runnable);
                     }
-                }   else {
+                } else {
                     EventCollector.logException("google play billing:" + billingResult.getDebugMessage());
                 }
                 mIsServiceConnecting = false;
@@ -188,7 +227,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     public void onPurchasesUpdated(BillingResult billingResult, @Nullable List<Purchase> list) {
         if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
                 && list != null) {
-            for (Purchase purchase : list ){
+            for (Purchase purchase : list) {
                 handlePurchase(purchase);
             }
             mPurchasesUpdatedListener.onPurchasesUpdated();

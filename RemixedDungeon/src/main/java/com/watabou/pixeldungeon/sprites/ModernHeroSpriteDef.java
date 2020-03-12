@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModError;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
@@ -10,7 +10,6 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 
@@ -65,8 +64,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private Map<String, String>    body_types;
 
 	private static final String[] layersOrder = {
-		//LAYER_RIGHT_ITEM_BACK,
-		//LAYER_LEFT_ITEM_BACK,
+		LAYER_RIGHT_ITEM_BACK,
+		LAYER_LEFT_ITEM_BACK,
 		LAYER_BODY,
 		LAYER_COLLAR,
 		LAYER_HEAD,
@@ -168,12 +167,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
 
-		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
-		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
+		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
+		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
 
-		if(hero.getBelongings().weapon!=null) {
-			weaponAnimationClassLeft = hero.getBelongings().weapon.getAnimationClass();
-			weaponAnimationClassRight = hero.getBelongings().weapon.getAnimationClass();
+		EquipableItem weapon = hero.getBelongings().weapon;
+
+		if(weapon !=null) {
+			weaponAnimationClassRight = weapon.getAttackAnimationClass();
+		}
+
+		EquipableItem leftHand = hero.getBelongings().leftHand;
+
+		if(leftHand != null) {
+			weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
 		}
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
@@ -182,11 +188,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
-			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(hero.getBelongings().leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(hero.getBelongings().weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(leftHand,"left"));
+			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(weapon, "right"));
 
-			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(hero.getBelongings().leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(hero.getBelongings().weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(leftHand,"left"));
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 		}
 
 		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
@@ -196,19 +202,17 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
 
+		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
+		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
 
-		String weaponAnimationClassLeft  = KindOfWeapon.BASIC_ATTACK;
-		String weaponAnimationClassRight = KindOfWeapon.BASIC_ATTACK;
-
-		if(weapon!=null) {
-			weaponAnimationClassLeft = weapon.getAnimationClass();
-			weaponAnimationClassRight = weapon.getAnimationClass();
+		if(weapon !=null) {
+			weaponAnimationClassRight = weapon.getAttackAnimationClass();
 		}
 
 		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
 
-		//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/items/none_left.png");
+		//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/empty.png");
 		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
 
@@ -234,7 +238,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 		avatar = null;
 
-		zap = attack = weapon_anims.get(KindOfWeapon.BASIC_ATTACK);
+		zap = attack = weapon_anims.get(EquipableItem.NO_ANIMATION);
 
 		Accessory accessory = Accessory.equipped();
 
@@ -243,17 +247,21 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if(!weapon_anims.isEmpty()) { //old mods compatibility
-			KindOfWeapon weapon = hero.getBelongings().weapon;
+			EquipableItem weapon = hero.getBelongings().weapon;
+			EquipableItem leftHand = hero.getBelongings().leftHand;
 
-			if (weapon != null) {
-				zap = attack = weapon_anims.get(weapon.getAnimationClass());
+			if(weapon != null && leftHand != null) {
+				zap = attack = weapon_anims.get("dual");
+				return;
+			}
 
-				String zapAnim = weapon.getAnimationClass()+"_zap";
+			if(weapon != null) {
+				zap = attack = weapon_anims.get("right");
+				return;
+			}
 
-				if(weapon_anims.containsKey(zapAnim)) {
-                    zap = weapon_anims.get(zapAnim);
-                }
-
+			if(leftHand != null) {
+				zap = attack = weapon_anims.get("left");
 			}
 		}
 
@@ -273,10 +281,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void applyLayersDesc(String[] lookDesc) {
 		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
-			try {
-				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
-			} catch (ModError ignored) {
-			}
+			addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
 		}
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
@@ -290,16 +295,21 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String itemHandDescriptor(EquipableItem item, String hand) {
 		if(item==null) {
-			return "hero_modern/items/none_"+hand+".png";
+			return "hero_modern/empty.png";
 		}
 		return "hero_modern/items/" +item.getVisualName()+"_"+hand+".png";
 	}
 
 	private String itemBackDescriptor(EquipableItem item, String hand) {
-		if(item==null) {
-			return "hero_modern/items/none_back_"+hand+".png";
+		String defaultLayerFile = "hero_modern/empty.png";
+
+		if(item!=null) {
+			String itemLayerFile = "hero_modern/items/" +item.getVisualName()+"_back_"+hand+".png";
+			if(ModdingMode.isResourceExist(itemLayerFile)) {
+				return itemLayerFile;
+			}
 		}
-		return "hero_modern/items/" +item.getVisualName()+"_back_"+hand+".png";
+		return defaultLayerFile;
 	}
 
 

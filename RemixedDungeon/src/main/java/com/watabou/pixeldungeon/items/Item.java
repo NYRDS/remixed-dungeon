@@ -499,7 +499,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		if (this instanceof MissileWeapon) {
 
 			// FIXME
-			delay *= ((MissileWeapon) this).speedFactor(user);
+			delay *= ((MissileWeapon) this).attackDelayFactor(user);
 			if (enemy != null && enemy.hasBuff(SnipersMark.class)) {
 				delay *= 0.5f;
 			}

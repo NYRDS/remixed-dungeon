@@ -9,7 +9,6 @@ ext.getApiField = { name ->
 
 repositories {
     google()
-    maven { url 'https://maven.fabric.io/public' }
     maven { url "https://artifactory.appodeal.com/appodeal" }
 }
 
@@ -32,15 +31,16 @@ android {
     defaultConfig {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders = [ "fabric_api_key":getApiField("fabric_api_key"), "admob_app_id":getApiField("admob_app_id")]
+        manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id"),
+                                "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 838
-        versionName "29.4.pre_alpha"
+        versionCode 851
+        versionName "29.4.pre_alpha.1"
     }
 
     aaptOptions {
-        noCompress "mp3"
+        noCompress "mp3","ogg"
     }
 
     buildTypes {
@@ -96,6 +96,9 @@ dependencies {
 
     annotationProcessor project(':processor')
 
+    implementation fileTree(dir: 'lib', include: ['*.jar','*.aar'])
+    implementation 'com.android.installreferrer:installreferrer:1.1.1'
+
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
@@ -108,21 +111,28 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'io.humanteq.hqm:hqm-core:2.0.0'
+    implementation 'io.humanteq.hqm:hqm-core:2.0.1'
 
     implementation 'com.android.billingclient:billing:2.1.0'
     implementation 'commons-io:commons-io:2.5'
 
-    implementation 'com.google.firebase:firebase-core:17.2.2'
+    implementation 'com.google.firebase:firebase-analytics:17.2.3'
     implementation 'com.google.firebase:firebase-perf:19.0.5'
     implementation 'com.google.firebase:firebase-ads:18.3.0'
 
-    implementation 'com.appodeal.ads.sdk:core:2.6.0'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.1'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk:core:2.6.2'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.2'
     implementation 'com.appodeal.ads.sdk.networks:appodealx:2.6.0.1'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.6.0.1'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:chartboost:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:inmobi:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:mraid:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:smaato:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:tapjoy:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:vast:2.6.0.1'
+    implementation 'com.appodeal.ads.sdk.networks:vungle:2.6.0.1'
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'org.jetbrains:annotations:15.0'

@@ -15,7 +15,7 @@ public class Artifact extends EquipableItem {
 	protected ArtifactBuff buff;
 
 	@Override
-	public Belongings.Slot slot() {
+	public Belongings.Slot slot(Belongings belongings) {
 		return Belongings.Slot.ARTIFACT;
 	}
 
