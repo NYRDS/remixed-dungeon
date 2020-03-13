@@ -96,10 +96,8 @@ public class SClient {
                 byte[] lengthData = new byte[4]; //MessageLength native byte data
                 mBufferIn.read(lengthData, 0, 4);
 
-                ByteBuffer temp = ByteBuffer.wrap(lengthData);
-                temp.order(ByteOrder.LITTLE_ENDIAN);
-                int len = temp.getInt();
-                byte[] inData = new byte[len];
+                int len = arrtoint(lenghtData);
+                byte inData[] = new byte[len];
 
                 mBufferIn.read(inData, 0, len);
                 mServerMessage = new String(inData, "UTF-8");
@@ -115,6 +113,10 @@ public class SClient {
                 Log.e("TCP_Closing", "S: Error", e);
             }
         }
+    }
+
+    private int arrtoint(byte data[]){
+        return ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN).getInt();
     }
 
     private void receiveMessage(String mServerMessage){
