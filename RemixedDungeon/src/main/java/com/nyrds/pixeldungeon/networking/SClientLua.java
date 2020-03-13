@@ -37,8 +37,12 @@
 package com.nyrds.pixeldungeon.networking;
 
 import android.os.AsyncTask;
-import java.util.ArrayList;
 
+import com.nyrds.LuaInterface;
+
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+@LuaInterface
 public class SClientLua {
     public static final String anunknownip = "37.194.195.213";
     public static final int    anunknownport = 3002;
@@ -46,13 +50,14 @@ public class SClientLua {
     private String ip;
     private int port;
     private SClient mTcpClient;
-    private ArrayList<String> buffer = new ArrayList<>();
+    private ConcurrentLinkedQueue<String> buffer = new ConcurrentLinkedQueue<>();
 
     public SClientLua(String f_ip, int f_port){
         ip = f_ip;
         port = f_port;
     }
 
+    @LuaInterface
     public static SClientLua createNew(String ip, int port){ return new SClientLua(ip, port); } //Function for lua...
 
     public SClientLua connect(){ //Connect to server
@@ -66,26 +71,17 @@ public class SClientLua {
     }
 
     public String receiveMessage(){ //Get message from buffer
-        String message = buffer.get(0);
-
-        buffer.remove(0);
-
-        return message;
+        return buffer.poll();
     }
 
-    public boolean canReceive(){ return (buffer.size() == 0 ? false : true); }
+    public boolean canReceive(){ return (buffer.size() != 0); }
 
     public class SClientTask extends AsyncTask<String, String, SClient> {
         @Override
         protected SClient doInBackground(String... message) {
             //we create a TCPClient object
-            mTcpClient = new SClient(new SClient.OnMessageReceived() {
-                @Override
-                //here the messageReceived method is implemented
-                public void messageReceived(final String message) {
-                    buffer.add(message);
-                }
-            }, ip, port);
+            //here the messageReceived method is implemented
+            mTcpClient = new SClient(msg -> buffer.add(msg), ip, port);
 
             mTcpClient.run();
 
