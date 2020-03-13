@@ -94,9 +94,7 @@ public class SClient {
                 byte mLenghtData[] = new byte[4]; //MessageLenght native byte data
                 mBufferIn.read(mLenghtData, 0, 4);
 
-                ByteBuffer temp = ByteBuffer.wrap(mLenghtData);
-                temp.order(ByteOrder.LITTLE_ENDIAN);
-                int mLenght = temp.getInt();
+                int mLenght = arrtoint(mLenghtData);
                 byte mData[] = new byte[mLenght];
 
                 mBufferIn.read(mData, 0, mLenght);
@@ -113,6 +111,10 @@ public class SClient {
                 Log.e("TCP_Closing", "S: Error", e);
             }
         }
+    }
+
+    private int arrtoint(byte data[]){
+        return ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN).getInt();
     }
 
     private void receiveMessage(String mServerMessage){
