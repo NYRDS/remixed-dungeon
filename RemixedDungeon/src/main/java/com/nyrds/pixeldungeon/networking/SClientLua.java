@@ -44,9 +44,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 @LuaInterface
 public class SClientLua {
-    public static final String anunknownip = "37.194.195.213";
-    public static final int    anunknownport = 3002;
-
     private String ip;
     private int port;
     private SClient mTcpClient;
@@ -61,10 +58,16 @@ public class SClientLua {
     public static SClientLua createNew(String ip, int port){ return new SClientLua(ip, port); } //Function for lua...
 
     public SClientLua connect(){ //Connect to server
+        mTcpClient = new SClient(msg -> buffer.add(msg), ip, port);
+
         new SClientTask().execute("");
+
+        while (!mTcpClient.isInitialized.get()){}
 
         return this;
     }
+
+    public void stop(){mTcpClient.stopClient();}
 
     public void sendMessage(String message){ //Send message to server
         mTcpClient.sendMessage(message);
@@ -79,10 +82,6 @@ public class SClientLua {
     public class SClientTask extends AsyncTask<String, String, SClient> {
         @Override
         protected SClient doInBackground(String... message) {
-            //we create a TCPClient object
-            //here the messageReceived method is implemented
-            mTcpClient = new SClient(msg -> buffer.add(msg), ip, port);
-
             mTcpClient.run();
 
             return null;
