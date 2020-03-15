@@ -21,6 +21,8 @@ public class SClient {
     public static final String TAG = SClient.class.getSimpleName();
     public static String SERVER_IP; //server IP address
     public static int SERVER_PORT;
+
+    public AtomicBoolean isInitialized = new AtomicBoolean(false);
     // sends message received notifications
     private OnMessageReceived mMessageListener = null;
     // while this is true, the server will continue running
@@ -93,6 +95,8 @@ public class SClient {
 
                 mBufferOut = new DataOutputStream(socket.getOutputStream());
                 mBufferIn = new DataInputStream(socket.getInputStream());
+
+                isInitialized.set(true);
 
                 while (mRun.get()) {
                     byte[] lengthData = new byte[4]; //MessageLength native byte data
