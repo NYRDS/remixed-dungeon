@@ -35,8 +35,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 853
-        versionName "29.4.pre_alpha.3"
+        versionCode 854
+        versionName "29.4.pre_alpha.3.2"
     }
 
     aaptOptions {
