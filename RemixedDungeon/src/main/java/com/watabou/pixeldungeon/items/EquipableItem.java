@@ -155,7 +155,7 @@ public abstract class EquipableItem extends Item {
 	public float impactDelayFactor(Char user, float delayFactor) {
 		if(goodForMelee()) {
 			float ownFactor = attackDelayFactor(user);
-			return Math.max(ownFactor * 1.5f, ownFactor * 0.75f + delayFactor * 0.75f);
+			return Math.max(ownFactor, delayFactor);
 		} else {
 			return delayFactor;
 		}

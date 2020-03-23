@@ -6,13 +6,13 @@ import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 
-import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaTable;
 
 import java.util.HashSet;
@@ -32,8 +32,7 @@ public class CustomBuff extends Buff {
 
     private LuaScript script;
 
-    @Nullable
-    private Item source;
+    private Item source = CharsList.DUMMY_ITEM;
 
     @Keep
     public CustomBuff() {

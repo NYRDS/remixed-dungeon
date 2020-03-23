@@ -40,6 +40,7 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.ReportingExecutor;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -150,6 +151,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
     }
 
+    @LuaInterface
     public static int getDifficulty() {
         return difficulty;
     }
@@ -285,8 +287,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Sample.INSTANCE.resume();
 
         if (doOnResume != null) {
-            doOnResume.run();
-            doOnResume = null;
+            Game.pushUiTask( () -> {
+                doOnResume.run();
+                doOnResume = null;
+                }
+            );
         }
     }
 

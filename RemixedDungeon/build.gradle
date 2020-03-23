@@ -35,8 +35,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 854
-        versionName "29.4.pre_alpha.3.2"
+        versionCode 855
+        versionName "29.4.alpha.1"
     }
 
     aaptOptions {
@@ -105,7 +105,7 @@ dependencies {
 
     implementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
-    implementation 'com.google.android.gms:play-services-base:17.1.0'
+    implementation 'com.google.android.gms:play-services-base:17.2.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation "com.google.android.gms:play-services-games:19.0.0"
 
@@ -113,24 +113,24 @@ dependencies {
 
     implementation 'io.humanteq.hqm:hqm-core:2.0.3-fix1'
 
-    implementation 'com.android.billingclient:billing:2.1.0'
+    implementation 'com.android.billingclient:billing:2.2.0'
     implementation 'commons-io:commons-io:2.5'
 
     implementation 'com.google.firebase:firebase-analytics:17.2.3'
     implementation 'com.google.firebase:firebase-perf:19.0.5'
-    implementation 'com.google.firebase:firebase-ads:19.0.0'
+    implementation 'com.google.firebase:firebase-ads:19.0.1'
 
-    implementation 'com.appodeal.ads.sdk:core:2.6.2'
+    implementation 'com.appodeal.ads.sdk:core:2.7.0'
     implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.2'
     implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.2'
     implementation 'com.appodeal.ads.sdk.networks:appodealx:2.6.0.1'
-    implementation 'com.appodeal.ads.sdk.networks:chartboost:2.6.0.1'
-    implementation 'com.appodeal.ads.sdk.networks:inmobi:2.6.0.1'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:chartboost:2.7.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:inmobi:2.7.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.0.3'
     implementation 'com.appodeal.ads.sdk.networks:mraid:2.6.0.1'
     implementation 'com.appodeal.ads.sdk.networks:smaato:2.6.0.2'
-    implementation 'com.appodeal.ads.sdk.networks:tapjoy:2.6.0.2'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:tapjoy:2.7.0.3'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.0.3'
     implementation 'com.appodeal.ads.sdk.networks:vast:2.6.0.1'
     implementation 'com.appodeal.ads.sdk.networks:vungle:2.6.0.1'
 
