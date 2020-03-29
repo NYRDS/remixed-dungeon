@@ -263,4 +263,19 @@ public class CustomItem extends EquipableItem {
     public boolean goodForMelee() {
         return script.runOptional("goodForMelee", false);
     }
+
+    @Override
+    public int image() {
+        return script.runOptional("image",super.image());
+    }
+
+    @Override
+    public boolean isFliesStraight() {
+        return script.runOptional("isFliesStraight",super.isFliesStraight());
+    }
+
+    @Override
+    public boolean isFliesFastRotating() {
+        return script.runOptional("isFliesFastRotating",super.isFliesFastRotating());
+    }
 }
