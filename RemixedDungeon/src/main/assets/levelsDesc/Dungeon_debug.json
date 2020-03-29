@@ -5,6 +5,7 @@
 
     "testLevel":{"kind":"TestLevel", "depth":0, "size":[32,32]},
     "testLevelSewers":{"kind":"PredesignedLevel", "file":"levelsDesc/TestLevelSewers.json"},
+    "missingLevel":{"kind":"PredesignedLevel", "file":"levelsDesc/MissingLevel.json"},
 
     "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1"},
     "cinema_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1"},
@@ -76,10 +77,10 @@
     "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
     },
     "Graph":{
-    "0":[["1"],[]],
+    "0":[["town_2"],[]],
     "testLevel":[[],[]],
 
-    "town_2":[["church_22","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],
+    "town_2":[["church_22","cinema_2","missingLevel","library_2","shop_town_2","fortune_2"],[]],
     "church_2":[[],["town_2"]],
     "shop_town_2":[[],["town_2"]],
     "cinema_2":[[],["town_2"]],

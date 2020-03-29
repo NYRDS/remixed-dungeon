@@ -148,6 +148,11 @@ local RPD = {
     RemixedDungeon = RemixedDungeon,
     GameScene = GameScene,
     Dungeon = Dungeon,
+
+    System = {
+        Input = luajava.bindClass("com.nyrds.platform.Input")
+    },
+
     SystemTime = luajava.bindClass("com.watabou.utils.SystemTime"),
     Terrain = luajava.bindClass("com.watabou.pixeldungeon.levels.Terrain"),
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),

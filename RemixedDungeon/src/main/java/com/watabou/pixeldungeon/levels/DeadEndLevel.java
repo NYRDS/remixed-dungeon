@@ -63,8 +63,8 @@ public class DeadEndLevel extends Level {
 		}
 		
 		entrance = SIZE * getWidth() + SIZE / 2 + 1;
-		map[entrance] = Terrain.ENTRANCE;
-		
+		//map[entrance] = Terrain.ENTRANCE;
+
 		setExit(-1,0);
 
 		addLevelObject(new Sign((SIZE / 2 + 1) * (getWidth() + 1), Dungeon.tip(this)));
@@ -96,4 +96,13 @@ public class DeadEndLevel extends Level {
 		return -1;
 	}
 
+
+	@Override
+	public void activateScripts() {
+		super.activateScripts();
+
+		if(cellValid(entrance)) {
+			entrance = INVALID_CELL;
+		}
+	}
 }

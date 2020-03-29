@@ -272,6 +272,32 @@ public class DungeonGenerator {
 		return descendOrAscend(current, true);
 	}
 
+	@SneakyThrows
+	@NotNull
+	private static Level createFromId(String levelId, Class<? extends Level> levelClass) {
+		Level ret = new DeadEndLevel();
+		if(levelClass!=PredesignedLevel.class &&
+				levelClass!=RandomLevel.class) {
+			ret = levelClass.newInstance();
+		} else {
+			String levelFile = mLevels.getJSONObject(levelId).getString("file");
+			if(ModdingMode.isResourceExist(levelFile))	{
+				if (levelClass == PredesignedLevel.class) {
+					ret = new PredesignedLevel(levelFile);
+				}
+
+				if (levelClass == RandomLevel.class) {
+					ret = new RandomLevel(levelFile);
+				}
+			} else {
+				levelId = "missingLevel";
+			}
+		}
+
+		ret.levelId = levelId;
+		return ret;
+	}
+
 	@NotNull
 	@SneakyThrows
 	public static Level createLevel(@NotNull Position pos) {
@@ -285,20 +311,11 @@ public class DungeonGenerator {
 				levelClass = DeadEndLevel.class;
 			}
 
-			Level ret;
 			String levelId = pos.levelId;
-			if (levelClass == PredesignedLevel.class) {
-				String levelFile = mLevels.getJSONObject(levelId).getString("file");
-				ret = new PredesignedLevel(levelFile);
-			} else if (levelClass == RandomLevel.class) {
-				String levelFile = mLevels.getJSONObject(levelId).getString("file");
-				ret = new RandomLevel(levelFile);
-			} else {
-				ret = levelClass.newInstance();
-			}
-			ret.levelId = levelId;
 
-			JSONObject levelDesc = mLevels.getJSONObject(pos.levelId);
+			Level ret = createFromId(levelId,levelClass);
+
+			JSONObject levelDesc = mLevels.getJSONObject(levelId);
 
 			int xs = 32;
 			int ys = 32;

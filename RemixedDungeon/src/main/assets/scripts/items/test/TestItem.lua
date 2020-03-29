@@ -54,6 +54,8 @@ return item.init{
                     "action2",
                     "action3",
                     "action4",
+                    "inputText",
+                    "checkText",
                     tostring(item:getId()),
                     tostring(self.data.activationCount),
                     tostring(self)
@@ -95,6 +97,15 @@ return item.init{
             restoredItem = RPD.fromLua(luaDesc)
             packedItem = RPD.packEntity(restoredItem)
             RPD.glog(packedItem)
+        end
+
+        if action == "inputText" then
+            RPD.System.Input:showInputDialog("Text title", "Text subtitle")
+        end
+
+        if action == "checkText" then
+            local userText = RPD.System.Input:getInputString()
+            RPD.glog(userText)
         end
     end,
 
