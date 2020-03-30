@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
 
 public class Sleeping extends MobAi implements AiState {
 
@@ -20,12 +19,10 @@ public class Sleeping extends MobAi implements AiState {
             return;
         }
 
-        Char enemy = chooseEnemy(me);
+        Char enemy = chooseEnemy(me, 0.5f);
         me.setEnemy(enemy);
 
-        if (me.isEnemyInFov()
-                && Random.Int(me.distance(enemy) + enemy.stealth()
-                + (enemy.isFlying() ? 2 : 0)) == 0) {
+        if (me.isEnemyInFov() ){
 
             huntEnemy(me);
 

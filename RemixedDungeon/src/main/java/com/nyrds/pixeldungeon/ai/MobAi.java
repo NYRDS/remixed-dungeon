@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -45,7 +46,7 @@ public abstract class MobAi implements AiState {
         if (src instanceof Char && !me.friendly((Char)src)) {
             me.setEnemy((Char) src);
         }else {
-            me.setEnemy(chooseEnemy(me));
+            me.setEnemy(chooseEnemy(me,1.0f));
         }
 
         if (me.isEnemyInFov()) {
@@ -89,7 +90,7 @@ public abstract class MobAi implements AiState {
     }
 
 
-    protected Char chooseEnemy(@NotNull Mob me) {
+    protected Char chooseEnemy(@NotNull Mob me, float attentionFactor) {
 
         Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();
@@ -104,8 +105,11 @@ public abstract class MobAi implements AiState {
                 if (!me.friendly(chr)) {
                     int candidateDist = me.level().distance(me.getPos(), chr.getPos());
                     if (candidateDist < dist) {
-                        bestEnemy = chr;
-                        dist = candidateDist;
+                        if(Random.Int((int) ((candidateDist + chr.stealth())/attentionFactor
+                                                        + (chr.isFlying() ? 2 : 0))) == 0) {
+                            bestEnemy = chr;
+                            dist = candidateDist;
+                        }
                     }
                 }
             }
@@ -122,7 +126,6 @@ public abstract class MobAi implements AiState {
 
             me.notice();
             me.setState(getStateByClass(Hunting.class));
-
 
             if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
                 for (Mob mob : me.level().mobs) {

@@ -19,7 +19,7 @@ public class Hunting extends MobAi implements AiState {
         }
 
         if(me.getEnemy() == CharsList.DUMMY) {
-            me.setEnemy(chooseEnemy(me));
+            me.setEnemy(chooseEnemy(me,1.0f));
         }
 
         if(me.friendly(me.getEnemy())) {
