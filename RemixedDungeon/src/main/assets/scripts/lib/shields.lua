@@ -8,9 +8,11 @@ local RPD                  = require "scripts/lib/commonClasses"
 
 local shields              = {}
 
-local strForLevel          = { 12, 14, 16, 18 }
-local chanceForLevel       = { .3, .4, .4, .5 }
-local blockForLevel        = { 4, 6, 8, 10 }
+local stats = require "scripts.stats.shields"
+
+local strForLevel     = stats.strForLevel
+local chanceForLevel  = stats.chanceForLevel
+local blockForLevel   = stats.blockForLevel
 
 function damageMin (str, shieldLevel)
     return math.max(str - 10, 0)
@@ -80,7 +82,7 @@ end
 shields.makeShield         = function(shieldLevel, shieldDesc)
     return {
         activate          = function(self, item, hero)
-            if item:slotName() == "LEFT_HAND" then
+            if item:slotName() == RPD.Slots.leftHand then
                 local shieldBuff = RPD.affectBuff(hero, "ShieldLeft",
                                                   shields.rechargeTime(shieldLevel, hero:effectiveSTR()))
                 shieldBuff:level(shieldLevel)
@@ -89,16 +91,16 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         deactivate        = function(self, item, hero)
-            if item:slotName() == "LEFT_HAND" then
+            if item:slotName() == RPD.Slots.leftHand then
                 RPD.removeBuff(hero, "ShieldLeft")
             end
         end,
 
         info              = function(self, item)
-            local hero = RPD.Dungeon.hero --TODO fix me
+            local hero = item:getOwner()
             local str  = hero:effectiveSTR()
 
-            if item:slotName() == "WEAPON" then
+            if item:slotName() == RPD.Slots.weapon then
                 return shields.infoWeapon(shieldDesc, str, shieldLevel, item:level())
             else
                 return shields.info(shieldDesc, str, shieldLevel, item:level())
@@ -114,10 +116,10 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         slot              = function(self, item, belongings)
-            if belongings:slotBlocked("LEFT_HAND") then
-                return "WEAPON"
+            if belongings:slotBlocked(RPD.Slots.leftHand) then
+                return RPD.Slots.weapon
             end
-            return "LEFT_HAND"
+            return RPD.Slots.leftHand
         end,
 
         accuracyFactor    = function(self, item, user)
@@ -135,7 +137,7 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         attackProc        = function(self, item, attacker, defender, damage)
-            if item:slotName() == "WEAPON" then
+            if item:slotName() == RPD.Slots.weapon then
                 attacker:spend(1)
             end
 
@@ -143,7 +145,7 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         goodForMelee      = function(self, item)
-            return item:slotName() == "WEAPON"
+            return item:slotName() == RPD.Slots.weapon
         end
     }
 end

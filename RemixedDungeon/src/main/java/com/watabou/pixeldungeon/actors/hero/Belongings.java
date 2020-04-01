@@ -262,6 +262,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public boolean removeItem(Item itemToRemove) {
 		usedSlots.remove(itemToRemove);
+		itemToRemove.setOwner(CharsList.DUMMY);
 
 		if(itemToRemove.equals(weapon)) {
 			weapon = null;
@@ -424,7 +425,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 	}
 
-	public boolean collect(Item newItem){
+	public boolean collect(Item newItem) {
 		if(owner instanceof Hero) {
 			return newItem.collect(backpack);
 		}

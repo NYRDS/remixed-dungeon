@@ -151,6 +151,7 @@ public abstract class Mob extends Char {
 		return owner >= 0 && getOwner() instanceof Hero;
 	}
 
+	@LuaInterface
 	public int getOwnerPos() {
 		if(owner<0) {
 			return getPos();

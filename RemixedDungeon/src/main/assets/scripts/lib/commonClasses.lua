@@ -7,7 +7,6 @@
 
 local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
-
 local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
 
 local Sample           = luajava.bindClass("com.watabou.noosa.audio.Sample")
@@ -151,6 +150,14 @@ local RPD = {
 
     System = {
         Input = luajava.bindClass("com.nyrds.platform.Input")
+    },
+
+    Slots = {
+        weapon       = "WEAPON",
+        armor        = "ARMOR",
+        leftHand     = "LEFT_HAND",
+        artifact     = "ARTIFACT",
+        leftArtifact = "LEFT_ARTIFACT"
     },
 
     SystemTime = luajava.bindClass("com.watabou.utils.SystemTime"),

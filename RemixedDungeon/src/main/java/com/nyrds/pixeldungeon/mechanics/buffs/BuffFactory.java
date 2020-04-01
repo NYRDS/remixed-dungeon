@@ -3,8 +3,11 @@ package com.nyrds.pixeldungeon.mechanics.buffs;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.buffs.Levitation;
+import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -43,6 +46,9 @@ public class BuffFactory {
 
     private static void initBuffsMap() {
         registerBuffClass(Burning.class);
+        registerBuffClass(Bleeding.class);
+        registerBuffClass(Levitation.class);
+        registerBuffClass(Sleep.class);
 
     }
 

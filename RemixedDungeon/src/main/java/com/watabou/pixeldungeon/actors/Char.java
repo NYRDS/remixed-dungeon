@@ -833,7 +833,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return owner;
 	}
 
-	protected Char getOwner() {
+	@LuaInterface
+	public Char getOwner() {
 		return CharsList.getById(owner);
 	}
 

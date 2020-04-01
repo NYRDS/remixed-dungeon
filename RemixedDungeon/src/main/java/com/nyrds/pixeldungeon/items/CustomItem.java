@@ -260,6 +260,11 @@ public class CustomItem extends EquipableItem {
         return script.runOptional("getAttackAnimationClass", NO_ANIMATION);
     }
 
+    @Override
+    public String getVisualName() {
+        return script.runOptional("getVisualName", super.getVisualName());
+    }
+
     public boolean goodForMelee() {
         return script.runOptional("goodForMelee", false);
     }

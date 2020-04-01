@@ -49,6 +49,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
         }
 
         try {
+            HQSdk.enableAttribution(false);
             HQSdk.init(getApplicationContext(), "22b4f34f2616d7f", BuildConfig.DEBUG, new HQCallback<Void>(){
 
                 @Override

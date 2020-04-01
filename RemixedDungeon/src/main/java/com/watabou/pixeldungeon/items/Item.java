@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -202,6 +203,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		ArrayList<Item> items = container.items;
 
+		setOwner(container.owner);
+
 		if (items.contains(this)) {
 			return true;
 		}
@@ -234,6 +237,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			return true;
 		}
 
+		setOwner(CharsList.DUMMY);
 		GLog.n(Game.getVar(R.string.Item_PackFull), name());
 		return false;
 	}
@@ -518,6 +522,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	private static Char user = null;
 	protected static Item curItem = null;
 
+	private Char owner = null;
+
 	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer target) {
@@ -723,5 +729,13 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public String bag() {
 		return Utils.EMPTY_STRING;
+	}
+
+	public Char getOwner() {
+		return owner;
+	}
+
+	public void setOwner(Char owner) {
+		this.owner = owner;
 	}
 }

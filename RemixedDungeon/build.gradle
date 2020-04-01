@@ -35,8 +35,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 856
-        versionName "29.4.alpha.2"
+        versionCode 857
+        versionName "29.4.alpha.3"
     }
 
     aaptOptions {
@@ -111,7 +111,7 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'io.humanteq.hqm:hqm-core:2.0.3-fix1'
+    implementation 'io.humanteq.hqm:hqm-core:2.0.4'
 
     implementation 'com.android.billingclient:billing:2.2.0'
     implementation 'commons-io:commons-io:2.5'
