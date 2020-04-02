@@ -24,7 +24,6 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-import com.gameofwhales.sdk.GameOfWhales;
 import com.google.android.gms.ads.MobileAds;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
@@ -35,7 +34,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.Google.PlayGames;
-import com.nyrds.pixeldungeon.support.TestGameOfWhalesListener;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -55,8 +53,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.microedition.khronos.opengles.GL10;
-
-import lombok.var;
 
 public class RemixedDungeon extends Game {
 
@@ -114,10 +110,6 @@ public class RemixedDungeon extends Game {
 		EuConsent.check(this);
 		playGames = new PlayGames();
 		MobileAds.initialize(this, Game.getVar(R.string.admob_app_id));
-
-		GameOfWhales.Init(this, GameOfWhales.STORE_GOOGLEPLAY, new TestGameOfWhalesListener(), true);
-		var properties = GameOfWhales.GetProperties();
-		var serverTime = GameOfWhales.GetServerTime();
 
 		RemixedDungeon.activeMod(ModdingMode.activeMod());
 
