@@ -96,9 +96,6 @@ dependencies {
 
     annotationProcessor project(':processor')
 
-    //implementation fileTree(dir: 'lib', include: ['*.jar','*.aar'])
-    //implementation 'com.android.installreferrer:installreferrer:1.1.2'
-
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
