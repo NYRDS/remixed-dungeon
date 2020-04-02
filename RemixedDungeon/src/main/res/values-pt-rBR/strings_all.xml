@@ -2561,15 +2561,11 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     -- Armas Personalizadas!\n
     - Erros corrigidos\n
     </string>
-
-    <string name="Mods_Disclaimer">
+  <string name="Mods_Disclaimer">
         Os mods são criados por jogadores para jogadores.\n
         Os mods às vezes mudam a jogabilidade de forma imprevisível ou estranha, você foi avisado!\n
         A equipe NYRDS não é de forma alguma responsável pelo conteúdo, qualidade ou estabilidade dos mods.\n
         Baixe por sua conta e risco e divirta-se!\n
     </string>
-
-
   <string name="ShieldWeaponInfo">Quando usado como arma, este escudo irá infligir %1$d danos em média.</string>
-
 </resources>

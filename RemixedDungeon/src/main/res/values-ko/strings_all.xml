@@ -134,6 +134,10 @@
   <string name="town_deco_potions_desc">여러 물약이 찬장에 진열되어 있다.</string>
   <string name="town_deco_wardrobe_name">나무 옷장</string>
   <string name="town_deco_wardrobe_desc">커다란 나무 옷장.</string>
+  <string name="town_deco_porch_name">마루</string>
+  <string name="town_deco_porch_desc">나무 마루</string>
+  <string name="town_deco_common_bed_name">침대</string>
+  <string name="town_deco_common_bed_desc">평범한 침대</string>
   <string name="town_deco_covered_table_name">탁자</string>
   <string name="town_deco_pedestal_name">받침대</string>
   <string name="town_deco_pedestal_desc">성서가 놓여있는 제단이다.</string>
@@ -658,6 +662,9 @@
   <string name="Necromancy_SummonDeathlingName">데슬링 소환</string>
   <string name="StartScene_UnlockNecromancer">이 캐릭터를 잠금 해제하기 위해서는, 리치를 아무 직업으로 물리치세요.</string>
   <string name="Necromancy_Title">강령술</string>
+  <string name="WndSadGhostNecro_Text">이 영혼은 저주에 고통스러워 하고 있어. 나에게 무언가를 부탁하려는 듯해. 
+강령술을 쓴다면, 그의 부탁이 이미 이루어 졌다고 믿게 할수 있는 듯해. 
+그렇게 하면 내 시간을 아낄 수 있지. 그럴 가치가 있을까?</string>
   <string name="WndSadGhostNecro_Yes">맞아, 저것이 내 의지대로 꺾이게 해.</string>
   <string name="WndSadGhostNecro_No">아니, 저것이 말하게 해줘.</string>
   <string name="WndSadGhostNecro_Persuaded">슬픈 유령이 지배당했습니다!</string>
