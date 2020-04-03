@@ -976,7 +976,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public Char visibleEnemy(int index) {
-		return visibleEnemies.get(index % visibleEnemies.size());
+		if (index >= visibleEnemies.size()) {
+			return CharsList.DUMMY;
+		}
+		return visibleEnemies.get(index);
 	}
 
 	public void checkIfFurious() {

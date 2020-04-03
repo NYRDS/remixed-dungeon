@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.ItemOwner;
@@ -522,7 +523,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	private static Char user = null;
 	protected static Item curItem = null;
 
-	private Char owner = null;
+	@NotNull
+	private Char owner = CharsList.DUMMY;
 
 	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
@@ -684,10 +686,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	@NotNull
+	@LuaInterface
 	public String getDefaultAction() {
 		return defaultAction;
 	}
 
+	@LuaInterface
 	public void setDefaultAction(@NotNull String newDefaultAction) {
 		Char hero = getUser();
 
@@ -731,11 +735,13 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return Utils.EMPTY_STRING;
 	}
 
+	@LuaInterface
+	@NotNull
 	public Char getOwner() {
 		return owner;
 	}
 
-	public void setOwner(Char owner) {
+	public void setOwner(@NotNull Char owner) {
 		this.owner = owner;
 	}
 }
