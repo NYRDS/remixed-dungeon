@@ -65,7 +65,7 @@
       },
 
       {
-        "kind": "TomeOfMastery",
+        "kind": "SpellBook",
         "quantity": 100,
         "level": 10
       }

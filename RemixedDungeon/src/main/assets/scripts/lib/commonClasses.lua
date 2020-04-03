@@ -91,6 +91,7 @@ local Camera    = luajava.bindClass("com.watabou.noosa.Camera")
 
 local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
 
+local Position = "com.nyrds.pixeldungeon.utils.Position"
 
 local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfBlink")
 local wandOfTelekinesis = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis")
@@ -256,6 +257,11 @@ local RPD = {
 
     blinkTo = function(mob, target)
         wandOfBlink:mobWandUse(mob, target)
+    end,
+
+    teleportTo = function(levelId, x, y)
+        local position = luajava.newInstance(Position,levelId, x, y)
+        Dungeon.hero:teleportTo(position)
     end,
 
     chooseOption = function(handler, title, text, ...)

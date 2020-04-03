@@ -1789,9 +1789,10 @@ public class Hero extends Char {
 
 	@LuaInterface
 	public void teleportTo(Position newPos) {
-		if (newPos.levelId.equals(Dungeon.level.levelId)) {
+		if (newPos.levelId.equals(levelId)) {
+			newPos.computeCell(level());
 			WandOfBlink.appear( this, newPos.cellId );
-			Dungeon.level.press( newPos.cellId, this );
+			level().press( newPos.cellId, this );
 			Dungeon.observe();
 		} else {
 			InterlevelScene.returnTo = new Position(newPos);

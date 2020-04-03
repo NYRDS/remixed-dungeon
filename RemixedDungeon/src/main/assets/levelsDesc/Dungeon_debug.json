@@ -80,7 +80,7 @@
     "0":[["town_2"],[]],
     "testLevel":[[],[]],
 
-    "town_2":[["church_22","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],
+    "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],
     "church_2":[[],["town_2"]],
     "shop_town_2":[[],["town_2"]],
     "cinema_2":[[],["town_2"]],

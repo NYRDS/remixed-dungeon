@@ -22,7 +22,8 @@
   "SCROLL": {
     "categoryChance": 10,
     "ScrollOfMagicMapping": 1,
-    "ScrollOfIdentify": 1
+    "ScrollOfIdentify": 1,
+    "SpellBook": 100
   },
   "POTION": {
     "categoryChance": 10,
