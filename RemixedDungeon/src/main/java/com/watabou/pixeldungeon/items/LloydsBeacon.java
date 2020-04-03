@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -33,7 +34,6 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 
@@ -43,7 +43,8 @@ public class LloydsBeacon extends Item {
 
 	private static final String AC_SET    = "LloidsBeacon_ACSet";
 	private static final String AC_RETURN = "LloidsBeacon_ACReturn";
-	
+
+	@Packable
 	private Position returnTo;
 	
 	public LloydsBeacon() {
@@ -53,22 +54,7 @@ public class LloydsBeacon extends Item {
 		
 		name = Game.getVar(R.string.LloidsBeacon_Name);
 	}
-	
-	private static final String POSITION = "position";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		
-		bundle.put(POSITION, returnTo);
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-		returnTo = (Position) bundle.get(POSITION);
-	}
-	
+
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
