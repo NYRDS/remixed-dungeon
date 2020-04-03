@@ -27,9 +27,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -97,20 +95,11 @@ public class LloydsBeacon extends Item {
 			GLog.i( Game.getVar(R.string.LloidsBeacon_Return) );
 			
 		} else if (action.equals(AC_RETURN)) {
-			if (returnTo.levelId.equals(Dungeon.level.levelId)) {
-				WandOfBlink.appear( hero, returnTo.cellId );
-				Dungeon.level.press( returnTo.cellId, hero );
-				reset();
-				Dungeon.observe();
-			} else {
-				InterlevelScene.returnTo = new Position(returnTo);
-				reset();
-				InterlevelScene.Do(InterlevelScene.Mode.RETURN);
-			}
+			Position target = new Position(returnTo);
+			reset();
+			hero.teleportTo(target);
 		} else {
-			
 			super.execute( hero, action );
-			
 		}
 	}
 	

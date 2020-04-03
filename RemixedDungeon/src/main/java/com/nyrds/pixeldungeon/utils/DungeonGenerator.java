@@ -353,26 +353,6 @@ public class DungeonGenerator {
 		WndStory.showChapter(id);
 	}
 
-	static String guessLevelId(String levelKind, int levelDepth) {
-		try {
-			JSONArray ids = mLevels.names();
-			for (int i = 0; i < ids.length(); i++) {
-				String id = ids.getString(i);
-				JSONObject levelDesc = mLevels.getJSONObject(id);
-
-				if (levelDesc.getString("kind").equals(levelKind)) {
-					if (levelDesc.getInt("depth") == levelDepth) {
-						return id;
-					}
-				}
-			}
-		} catch (JSONException e) {
-			throw ModdingMode.modException(e);
-		}
-		return "1";
-	}
-
-
 	public static boolean isLevelExist(String id) {
 		return !getLevelKind(id).equals(DEAD_END_LEVEL);
 	}

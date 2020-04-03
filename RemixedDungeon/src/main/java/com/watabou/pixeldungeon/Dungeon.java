@@ -57,7 +57,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Ankh;
-import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
@@ -589,12 +588,6 @@ public class Dungeon {
             throw new TrackedRuntimeException("no hero in bundle");
         }
 
-        //pre 28.5 saves compatibility
-        int gold = bundle.optInt("gold",0);
-        if(gold > 0) {
-            hero.getBelongings().collect(new Gold(gold));
-        }
-
         depth = bundle.getInt(DEPTH);
 
         Statistics.restoreFromBundle(bundle);
@@ -853,9 +846,7 @@ public class Dungeon {
         ch.getSprite().centerEmitter().start(Speck.factory(Speck.SCREAM), 0.3f, 3);
 
         Sample.INSTANCE.play(sound);
-        if (ch instanceof Hero) {
-            Invisibility.dispel((Hero) ch);
-        }
+        Invisibility.dispel(ch);
     }
 
     public static Position currentPosition() {

@@ -43,7 +43,9 @@ public class PortalGateSender extends PortalGate {
 		if(obj.has(TARGET)){
 			JSONObject portalDesc = obj.getJSONObject(TARGET);
 			String levelId = portalDesc.optString("levelId" ,"1");
-			target = new Position(levelId, portalDesc.optInt("x" ,1), portalDesc.optInt("y" ,1));
+			target = new Position(levelId,
+							portalDesc.optInt("x" ,1),
+							portalDesc.optInt("y" ,1));
 		}
 	}
 }

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Scrambler;
@@ -94,6 +95,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -130,7 +132,7 @@ import java.util.Set;
 public class Hero extends Char {
 	private static final String TXT_EXP = "%+dEXP";
 
-	public static final int STARTING_STR = 10;
+	private static final int STARTING_STR = 10;
 
 	private static final float TIME_TO_REST = 1f;
 	private static final float TIME_TO_SEARCH = 2f;
@@ -1783,5 +1785,17 @@ public class Hero extends Char {
 			return true;
 		}
 		return false;
+	}
+
+	@LuaInterface
+	public void teleportTo(Position newPos) {
+		if (newPos.levelId.equals(Dungeon.level.levelId)) {
+			WandOfBlink.appear( this, newPos.cellId );
+			Dungeon.level.press( newPos.cellId, this );
+			Dungeon.observe();
+		} else {
+			InterlevelScene.returnTo = new Position(newPos);
+			InterlevelScene.Do(InterlevelScene.Mode.RETURN);
+		}
 	}
 }
