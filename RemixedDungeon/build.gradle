@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.google.firebase.crashlytics'
 
 
 ext.getApiField = { name ->
@@ -35,8 +36,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 860
-        versionName "29.4.beta.1.2"
+        versionCode 861
+        versionName "29.4.beta.2"
     }
 
     aaptOptions {
@@ -89,7 +90,6 @@ android {
 
 }
 
-apply plugin: 'io.fabric'
 
 dependencies {
     implementation project(':annotation')
@@ -116,6 +116,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.3.0'
     implementation 'com.google.firebase:firebase-perf:19.0.5'
     implementation 'com.google.firebase:firebase-ads:19.0.1'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta03'
+
 
     implementation 'com.appodeal.ads.sdk:core:2.7.0'
     implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.2'
@@ -131,7 +133,6 @@ dependencies {
     implementation 'com.appodeal.ads.sdk.networks:vast:2.6.0.1'
     implementation 'com.appodeal.ads.sdk.networks:vungle:2.6.0.1'
 
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'org.jetbrains:annotations:15.0'
 
     compileOnly 'org.projectlombok:lombok:1.18.10'

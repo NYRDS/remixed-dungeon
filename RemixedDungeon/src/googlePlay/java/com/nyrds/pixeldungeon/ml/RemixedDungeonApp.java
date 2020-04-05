@@ -7,14 +7,12 @@ import android.util.Log;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
-import com.crashlytics.android.Crashlytics;
 import com.google.firebase.FirebaseApp;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
-import io.fabric.sdk.android.Fabric;
 import io.humanteq.hq_core.HQSdk;
 import io.humanteq.hq_core.interfaces.HQCallback;
 
@@ -44,7 +42,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
         if(checkOwnSignature()) {
             FirebaseApp.initializeApp(this);
-            Fabric.with(this, new Crashlytics());
             EventCollector.init();
         }
 

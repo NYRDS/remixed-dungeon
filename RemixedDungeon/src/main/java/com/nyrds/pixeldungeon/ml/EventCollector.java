@@ -2,8 +2,8 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.os.Bundle;
 
-import com.crashlytics.android.Crashlytics;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
 import com.nyrds.android.util.ModdingMode;
@@ -53,7 +53,7 @@ public class EventCollector {
 
 	static public void logEvent(String event) {
 		if (!mDisabled) {
-			Crashlytics.log(event);
+			FirebaseCrashlytics.getInstance().log(event);
 
 			Bundle params = new Bundle();
 			mFirebaseAnalytics.logEvent(event, params);
@@ -62,7 +62,7 @@ public class EventCollector {
 
 	static public void logEvent(String event, double value) {
 		if (!mDisabled) {
-			Crashlytics.log(event);
+			FirebaseCrashlytics.getInstance().log(event);
 
 			Bundle params = new Bundle();
 			params.putDouble("dv", value);
@@ -72,7 +72,7 @@ public class EventCollector {
 
 	static public void logEvent(String category, String event) {
 		if (!mDisabled) {
-			Crashlytics.log(category+":"+event);
+			FirebaseCrashlytics.getInstance().log(category+":"+event);
 
 			Bundle params = new Bundle();
 			params.putString("event", event);
@@ -112,7 +112,7 @@ public class EventCollector {
 
 	static public void logEvent(String category, String event, String label) {
 		if (!mDisabled) {
-			Crashlytics.log(category+":"+event+":"+label);
+			FirebaseCrashlytics.getInstance().log(category+":"+event+":"+label);
 
 			Bundle params = new Bundle();
 			params.putString("event", event);
@@ -139,14 +139,14 @@ public class EventCollector {
 		if(!mDisabled) {
 			StackTraceElement [] stackTraceElements = e.getStackTrace();
 			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,level,stackTraceElements.length));
-			Crashlytics.logException(e);
+			FirebaseCrashlytics.getInstance().recordException(e);
 
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			PrintStream ps = new PrintStream(baos);
 			e.printStackTrace(ps);
 			ps.close();
 
-			Crashlytics.log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
+			FirebaseCrashlytics.getInstance().log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
 		}
 	}
 
@@ -156,7 +156,7 @@ public class EventCollector {
 
 	static public void logException(Throwable e, String desc) {
 		if(!mDisabled) {
-			Crashlytics.log(desc);
+			FirebaseCrashlytics.getInstance().log(desc);
 			logException(e, 0);
 		}
 	}
@@ -198,7 +198,7 @@ public class EventCollector {
 
 	public static void collectSessionData(String key, String value) {
 		if(!mDisabled) {
-			Crashlytics.setString(key, value);
+			FirebaseCrashlytics.getInstance().setCustomKey(key, value);
 		}
 	}
 }
