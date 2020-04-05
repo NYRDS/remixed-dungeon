@@ -36,8 +36,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 861
-        versionName "29.4.beta.2"
+        versionCode 862
+        versionName "29.4.beta.2.1"
     }
 
     aaptOptions {
@@ -121,7 +121,7 @@ dependencies {
 
     implementation 'com.appodeal.ads.sdk:core:2.7.0'
     implementation 'com.appodeal.ads.sdk.networks:adcolony:2.6.0.2'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.2'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.6.0.3'
     implementation 'com.appodeal.ads.sdk.networks:appodealx:2.6.0.1'
     implementation 'com.appodeal.ads.sdk.networks:chartboost:2.7.0.2'
     implementation 'com.appodeal.ads.sdk.networks:inmobi:2.7.0.2'

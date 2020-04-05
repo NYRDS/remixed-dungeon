@@ -88,6 +88,5 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 		addToBack(archs);
 
 		fadeIn();
-		throw new RuntimeException("test Crash");
 	}
 }
