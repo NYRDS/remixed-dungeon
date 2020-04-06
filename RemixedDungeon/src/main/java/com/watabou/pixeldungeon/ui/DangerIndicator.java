@@ -25,6 +25,8 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
+import lombok.var;
+
 public class DangerIndicator extends Tag {
 	
 	public static final int COLOR	= 0xFF4C4C;
@@ -101,8 +103,12 @@ public class DangerIndicator extends Tag {
 	
 	@Override
 	protected void onClick() {
-		if(Dungeon.hero.visibleEnemies() >0) {
-			Char target = Dungeon.hero.visibleEnemy(enemyIndex++);
+		var hero = Dungeon.hero;
+		int enemies = hero.visibleEnemies();
+		if(enemies > 0) {
+			enemyIndex++;
+			enemyIndex %= enemies;
+			Char target = Dungeon.hero.visibleEnemy(enemyIndex);
 
 			HealthIndicator.instance.target(target == HealthIndicator.instance.target() ? null : target);
 
