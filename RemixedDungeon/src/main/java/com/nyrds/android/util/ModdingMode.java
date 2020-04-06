@@ -38,9 +38,13 @@ public class ModdingMode {
 	private static Set<String> pathsChecked = new HashSet<>();
 	private static Map<String, Boolean> assetsExistanceCache = new HashMap<>();
 
+	private static Map<String, String> resourcesRemap = new HashMap<>();
+
 	static {
 		trustedMods.add("Maze");
 		trustedMods.add("Conundrum");
+
+		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
 	}
 
 	@NotNull
@@ -241,6 +245,11 @@ public class ModdingMode {
 					return new FileInputStream(file);
 				}
 			}
+
+			if(resourcesRemap.containsKey(resName)) {
+				resName = resourcesRemap.get(resName);
+			}
+
 			return RemixedDungeonApp.getContext().getAssets().open(resName);
 		} catch (IOException e) {
 			throw new ModError("Missing file: "+resName + " in: " + activeMod() + " " + activeModVersion(),e);
