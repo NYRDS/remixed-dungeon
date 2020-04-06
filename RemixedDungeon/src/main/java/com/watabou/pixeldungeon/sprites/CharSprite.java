@@ -472,6 +472,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     @Override
     public void onComplete(Tweener tweener) {
         if (tweener == motion) {
+            motion.killAndErase();
+            motion = null;
 
             isMoving = false;
             ch.ifPresent(chr -> {
@@ -480,8 +482,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     place(chr.getPos());
                 }
             });
-            motion.killAndErase();
-            motion = null;
         }
     }
 
