@@ -69,6 +69,11 @@ public class ZapEffect {
                 MagicMissile.ice(parent, from, to, Util.nullCallback);
                 return;
             }
+
+            if(zapEffect.equals("Telekinesis")) {
+                MagicMissile.force(parent, from, to, Util.nullCallback);
+                return;
+            }
         }
     }
 
