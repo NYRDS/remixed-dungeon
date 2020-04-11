@@ -2566,9 +2566,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
         Download them on your own risk and have fun!\n
     </string>
   <string name="ShieldWeaponInfo">When used as weapon this shield will inflict %1$d damage on average.</string>
-
   <string name="TownPortal_Name">Town Portal</string>
   <string name="TownPortal_Info">This spell allows you instantly return to safety. However, powerful magic source nearby may prevent it from work as intended.</string>
-
-
 </resources>
