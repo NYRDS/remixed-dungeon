@@ -19,7 +19,7 @@ public class TrapHelper {
 		GameScene.show(
 				new WndOptions( Game.getVar(R.string.TrapWnd_Title), Game.getVar(R.string.TrapWnd_Step), Game.getVar(R.string.Chasm_Yes), Game.getVar(R.string.Chasm_No) ) {
 					@Override
-					protected void onSelect( int index ) {
+					public void onSelect(int index) {
 						if (index == 0) {
 							stepConfirmed = true;
 							hero.resume();

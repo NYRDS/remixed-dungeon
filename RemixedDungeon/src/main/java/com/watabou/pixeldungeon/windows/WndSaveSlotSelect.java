@@ -162,7 +162,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                                     Game.getVar(R.string.WndSaveSlotSelect_Delete_Yes),
                                     Game.getVar(R.string.WndSaveSlotSelect_Delete_No)) {
                                 @Override
-                                protected void onSelect(int index) {
+                                public void onSelect(int index) {
                                     if (index == 0) {
                                         while(isSlotIndexUsed(slotIndex)) {
                                             SaveUtils.deleteSaveFromSlot(getSlotToLoad(slotIndex), Dungeon.heroClass);

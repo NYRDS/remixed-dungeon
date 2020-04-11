@@ -139,7 +139,7 @@ public class Potion extends Item implements UnknownItem {
 									Game.getVar(R.string.Potion_Yes),
 									Game.getVar(R.string.Potion_No)) {
 								@Override
-								protected void onSelect(int index) {
+								public void onSelect(int index) {
 									if (index == 0) {
 										drink(hero);
 									}
@@ -181,7 +181,7 @@ public class Potion extends Item implements UnknownItem {
 						Game.getVar(R.string.Potion_Yes),
 						Game.getVar(R.string.Potion_No) ) {
 					@Override
-					protected void onSelect(int index) {
+					public void onSelect(int index) {
 						if (index == 0) {
 							Potion.super.doThrow( hero );
 						}

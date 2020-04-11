@@ -355,7 +355,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				leftHand = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("left_hand"));
 			}
 
-
 			if (desc.has("ring1")) {
 				ring1 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
 			}

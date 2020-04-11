@@ -41,7 +41,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
         ) {
 
             @Override
-            protected void onSelect(int index) {
+            public void onSelect(int index) {
                 if (index == 0) {
                     String[] requiredPermissions = {Manifest.permission.INTERNET};
                     Game.instance().doPermissionsRequest(SociologistNPC.this, requiredPermissions);

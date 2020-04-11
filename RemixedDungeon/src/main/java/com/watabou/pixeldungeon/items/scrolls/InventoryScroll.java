@@ -51,7 +51,7 @@ public abstract class InventoryScroll extends Scroll {
 										Game.getVar(R.string.InventoryScroll_Yes),
 										Game.getVar(R.string.InventoryScroll_No) ) {
 			@Override
-			protected void onSelect( int index ) {
+			public void onSelect(int index) {
 				switch (index) {
 				case 0:
 					getUser().spendAndNext( TIME_TO_READ );

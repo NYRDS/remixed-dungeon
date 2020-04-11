@@ -18,7 +18,7 @@ public class WndOptionsLua extends WndOptions {
     }
 
     @Override
-    protected void onSelect(int index) {
+    public void onSelect(int index) {
         callback.invoke(new LuaValue[]{CoerceJavaToLua.coerce(index)});
     }
 }

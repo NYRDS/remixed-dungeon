@@ -67,5 +67,5 @@ public abstract class WndOptions extends Window {
 		resize(STD_WIDTH, (int) vbox.height());
 	}
 
-	abstract protected void onSelect( int index );
+	abstract public void onSelect( int index );
 }

@@ -23,6 +23,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
+import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
@@ -418,6 +419,11 @@ public class GameScene extends PixelScene {
 
             GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
+        }
+
+        if(Dungeon.level instanceof TestLevel) {
+            TestLevel level = (TestLevel)Dungeon.level;
+            level.runEquipTest();
         }
     }
 

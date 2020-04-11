@@ -2,12 +2,18 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.List;
 
@@ -83,5 +89,40 @@ public class TestLevel extends RegularLevel {
 	@Override
 	public boolean isBossLevel() {
 		return false;
+	}
+
+	public void runEquipTest() {
+		List<Item> items = ItemFactory.allItems();
+
+		Hero hero = Dungeon.hero;
+		hero.spend(-10000);
+
+		Belongings initial = hero.getBelongings();
+
+		for(Item item:items) {
+			GLog.i(item.name());
+			item.actions(hero);
+
+			if(item instanceof EquipableItem) {
+
+				EquipableItem equipableItem = (EquipableItem)item;
+				hero.resetBelongings(new Belongings(hero));
+				equipableItem.doEquip(hero);
+
+				equipableItem.actions(hero);
+
+				int itemDialog = Game.scene().findByClass(WndOptions.class,0);
+				if( itemDialog > 0) {
+					WndOptions dialog = (WndOptions) Game.scene().getMember(itemDialog);
+					dialog.onSelect(0);  // skip warning in MissileWeapon
+					dialog.hide();
+				}
+
+				equipableItem.cursed = false;
+				equipableItem.doUnequip(hero,false);
+			}
+		}
+		hero.resetBelongings(initial);
+		hero.postpone(0);
 	}
 }

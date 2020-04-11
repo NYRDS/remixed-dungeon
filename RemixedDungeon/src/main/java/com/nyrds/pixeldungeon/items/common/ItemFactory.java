@@ -31,7 +31,6 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.CompositeCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.RubyCrossbow;
-import com.nyrds.pixeldungeon.items.guts.weapon.ranged.TacticalCrossbow;
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.WoodenCrossbow;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
@@ -40,7 +39,6 @@ import com.nyrds.pixeldungeon.items.material.SoulShard;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
-import com.nyrds.pixeldungeon.items.necropolis.BladeOfSouls;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
@@ -387,7 +385,7 @@ public class ItemFactory {
         registerItemClass(GoldenSword.class);
         registerItemClass(BlackSkull.class);
         registerItemClass(SpiderArmor.class);
-        registerItemClass(BladeOfSouls.class);
+        //registerItemClass(BladeOfSouls.class);
         registerItemClass(SoulShard.class);
         registerItemClass(NecromancerArmor.class);
         registerItemClass(NecromancerRobe.class);
@@ -433,10 +431,7 @@ public class ItemFactory {
         registerItemClass(HealthArrow.class);
         registerItemClass(AmokArrow.class);
         registerItemClass(CandyOfDeath.class);
-        registerItemClass(TacticalCrossbow.class);
-
-        registerItemClass(TestWeapon1.class);
-        registerItemClass(TestWeapon2.class);
+        //registerItemClass(TacticalCrossbow.class); // no item pic
     }
 
     public static boolean isValidItemClass(String itemClass) {

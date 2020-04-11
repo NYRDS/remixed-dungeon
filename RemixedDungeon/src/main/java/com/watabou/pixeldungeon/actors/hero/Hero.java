@@ -1799,4 +1799,9 @@ public class Hero extends Char {
 			InterlevelScene.Do(InterlevelScene.Mode.RETURN);
 		}
 	}
+
+	public void resetBelongings(Belongings belongings) {
+		this.belongings = belongings;
+		updateSprite();
+	}
 }

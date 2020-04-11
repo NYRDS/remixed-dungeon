@@ -106,7 +106,7 @@ public class MissileWeapon extends Weapon {
 							Game.getVar(R.string.MissileWeapon_Yes),
 							Game.getVar(R.string.MissileWeapon_No)) {
 						@Override
-						protected void onSelect(int index) {
+						public void onSelect(int index) {
 							if (index == 0) {
 								MissileWeapon.super.doEquip(hero);
 							}

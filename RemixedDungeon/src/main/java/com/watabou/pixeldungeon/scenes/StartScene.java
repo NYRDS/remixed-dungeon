@@ -134,7 +134,7 @@ public class StartScene extends PixelScene {
                             .getVar(R.string.StartScene_Warning),
                             Game.getVar(R.string.StartScene_Yes), Game.getVar(R.string.StartScene_No)) {
                         @Override
-                        protected void onSelect(int index) {
+                        public void onSelect(int index) {
                             if (index == 0) {
                                 selectDifficulty();
                             }
@@ -335,7 +335,7 @@ public class StartScene extends PixelScene {
                 Game.getVar(R.string.StartScene_DifficultyNormal),
                 Game.getVar(R.string.StartScene_DifficultyExpert)) {
             @Override
-            protected void onSelect(final int index) {
+            public void onSelect(final int index) {
 
                 if (index < 2 && EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
                     Game.addToScene(new WndEuConsent() {

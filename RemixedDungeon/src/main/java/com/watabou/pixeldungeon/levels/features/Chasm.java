@@ -51,7 +51,7 @@ public class Chasm implements Hero.Doom {
 					Game.getVar(R.string.Chasm_Yes),
 					Game.getVar(R.string.Chasm_No) ) {
 				@Override
-				protected void onSelect( int index ) {
+				public void onSelect(int index) {
 					if (index == 0) {
 						jumpConfirmed = true;
 						hero.resume();

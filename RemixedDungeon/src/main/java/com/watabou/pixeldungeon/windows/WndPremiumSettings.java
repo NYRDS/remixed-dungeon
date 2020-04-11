@@ -63,7 +63,7 @@ public class WndPremiumSettings extends Window {
 				RemixedDungeon.scene().add(
 						new WndOptions(assetName, Utils.EMPTY_STRING, options) {
 							@Override
-							protected void onSelect(int index) {
+							public void onSelect(int index) {
 								if (RemixedDungeon.donated() >= material2level.get(options[index])) {
 									Assets.use(assetKind, index);
 									RemixedDungeon.scene().add(
