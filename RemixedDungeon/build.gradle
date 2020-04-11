@@ -103,7 +103,7 @@ dependencies {
     implementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
     implementation 'com.google.android.gms:play-services-base:17.2.1'
-    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
     implementation "com.google.android.gms:play-services-games:19.0.0"
 
     implementation 'com.android.support:multidex:1.0.3'

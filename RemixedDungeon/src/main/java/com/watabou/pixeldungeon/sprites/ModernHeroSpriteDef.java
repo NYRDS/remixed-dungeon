@@ -298,8 +298,14 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String itemHandDescriptor(EquipableItem item, String hand) {
 		if(item==null) {
-			return "hero_modern/empty.png";
+			return HERO_EMPTY_PNG;
 		}
+
+		String visualName = item.getVisualName();
+		if(visualName.equals("none")) {
+			return HERO_EMPTY_PNG;
+		}
+
 		return "hero_modern/items/" +item.getVisualName()+"_"+hand+".png";
 	}
 
