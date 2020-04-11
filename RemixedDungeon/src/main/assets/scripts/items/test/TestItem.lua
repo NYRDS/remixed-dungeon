@@ -67,9 +67,10 @@ return item.init{
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
-            local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
-            RPD.Dungeon.level:drop(book, cell)
+            --local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
+            --RPD.Dungeon.level:drop(book, cell)
             --RPD.createLevelObject(candle, cell)
+            RPD.GameScene:particleEffect("BloodSink", cell);
         end
     end,
 

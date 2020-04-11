@@ -22,6 +22,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
+import com.nyrds.pixeldungeon.effects.ParticleEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -616,6 +617,18 @@ public class GameScene extends PixelScene {
 
     public static void zapEffect(int from, int to, String zapEffect) {
         ZapEffect.zap(scene.effects, from, to, zapEffect);
+    }
+
+    @LuaInterface
+    public static void remove(Group obj) {
+        scene.remove(obj);
+    }
+
+    @LuaInterface
+    public static Group particleEffect(String effectName, int cell) {
+        Group effect = ParticleEffect.addToCell(effectName, cell);
+        scene.add(effect);
+        return effect;
     }
 
     @LuaInterface
