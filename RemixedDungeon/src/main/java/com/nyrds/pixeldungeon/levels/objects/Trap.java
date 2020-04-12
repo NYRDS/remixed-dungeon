@@ -138,6 +138,7 @@ public class Trap extends LevelObject {
 
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+		super.setupFromJson(level,obj);
 
 		if (obj.has("target")) {
 			JSONObject targetDesc = obj.getJSONObject("target");
