@@ -626,9 +626,12 @@ public class GameScene extends PixelScene {
 
     @LuaInterface
     public static Group particleEffect(String effectName, int cell) {
-        Group effect = ParticleEffect.addToCell(effectName, cell);
-        scene.add(effect);
-        return effect;
+        if (isSceneReady()) {
+            Group effect = ParticleEffect.addToCell(effectName, cell);
+            scene.add(effect);
+            return effect;
+        }
+        return new Group();
     }
 
     @LuaInterface
