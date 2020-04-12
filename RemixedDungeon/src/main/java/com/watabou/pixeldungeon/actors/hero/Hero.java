@@ -530,7 +530,7 @@ public class Hero extends Char {
 		if (curAction != null && curAction.dst != getPos()) {
 			lastAction = curAction;
 		}
-		getSprite().interruptMotion();
+		//getSprite().interruptMotion();
 
 		curAction = null;
 	}

@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class LloydsBeacon extends Item {
@@ -42,12 +44,12 @@ public class LloydsBeacon extends Item {
 	private static final String AC_SET    = "LloidsBeacon_ACSet";
 	private static final String AC_RETURN = "LloidsBeacon_ACReturn";
 
+	@NotNull
 	@Packable
-	private Position returnTo;
+	private Position returnTo = new Position();
 	
 	public LloydsBeacon() {
 		image = ItemSpriteSheet.BEACON;
-		returnTo = new Position();
 		returnTo.cellId = -1;
 		
 		name = Game.getVar(R.string.LloidsBeacon_Name);
