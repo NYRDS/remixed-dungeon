@@ -15,6 +15,13 @@ local candle =
     object_desc="candle"
 }
 
+local chest =
+{
+    kind="Deco",
+    object_desc="chest_3"
+}
+
+
 return item.init{
     desc  = function (self, item)
 
@@ -69,8 +76,8 @@ return item.init{
             RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
             --local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
             --RPD.Dungeon.level:drop(book, cell)
-            --RPD.createLevelObject(candle, cell)
-            RPD.GameScene:particleEffect("BloodSink", cell);
+            RPD.createLevelObject(chest, cell)
+            --RPD.GameScene:particleEffect("BloodSink", cell);
         end
     end,
 

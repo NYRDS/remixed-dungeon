@@ -72,8 +72,9 @@ public class LevelObjectsFactory {
 
 		int x = desc.getInt("x");
 		int y = desc.getInt("y");
-		obj.setPos(level.cell(x,y));
+
 		obj.setupFromJson(level, desc);
+		obj.setPos(level.cell(x,y));
 		return obj;
 	}
 

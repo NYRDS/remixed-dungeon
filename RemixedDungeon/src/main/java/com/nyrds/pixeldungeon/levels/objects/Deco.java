@@ -5,9 +5,12 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.Animation;
+import com.watabou.noosa.Group;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.Nullable;
@@ -35,11 +38,15 @@ public class Deco extends LevelObject {
 
 	private Animation basic;
 
+	private Group effect = new Group();
+
 	@Packable
 	protected String object_desc;
 
 	private int width = 16;
 	private int height = 16;
+
+	private String effectName = Utils.EMPTY_STRING;
 
 	public Deco(){
 		super(Level.INVALID_CELL);
@@ -73,6 +80,9 @@ public class Deco extends LevelObject {
 
 		JSONObject objectDesc = defMap.get(object_desc);
 		JSONObject appearance  = objectDesc.getJSONObject("appearance");
+
+		effectName = appearance.optString("particles", effectName);
+
 		JSONObject desc = appearance.getJSONObject("desc");
 
 		this.name = desc.optString("name","smth");
@@ -85,7 +95,6 @@ public class Deco extends LevelObject {
 
 		width = sprite.optInt("width", width);
 		height = sprite.optInt("height", height);
-
 
 		if(sprite.has(ANIMATIONS)) {
 			animations = sprite.getJSONObject(ANIMATIONS);
@@ -118,12 +127,24 @@ public class Deco extends LevelObject {
 		return null;
 	}
 
+	private void updateEffect() {
+		effect.killAndErase();
+		effect = GameScene.particleEffect(effectName,pos);
+	}
+
+	@Override
+	public void setPos(int pos) {
+		super.setPos(pos);
+		updateEffect();
+	}
+
 	@Override
 	public void resetVisualState() {
 		if(basic==null) {
 			basic = loadAnimation("basic");
 			sprite.playAnim(basic, Util.nullCallback);
 		}
+		updateEffect();
 	}
 
 	@Override

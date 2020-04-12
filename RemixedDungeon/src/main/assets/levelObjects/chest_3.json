@@ -1,0 +1,15 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "WndInfoItem_WontKnow",
+      "name": "WndInfoItem_Chest"
+    },
+    "sprite":{
+      "textureFile": "items.png",
+      "imageIndex" : 12
+    },
+    "particles": "Vein"
+  }
+}
