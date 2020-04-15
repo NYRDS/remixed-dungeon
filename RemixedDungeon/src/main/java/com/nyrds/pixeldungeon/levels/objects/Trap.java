@@ -140,14 +140,16 @@ public class Trap extends LevelObject {
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
 		super.setupFromJson(level,obj);
 
+		int targetX = obj.getInt("x");
+		int targetY = obj.getInt("y");
+
 		if (obj.has("target")) {
 			JSONObject targetDesc = obj.getJSONObject("target");
-			int x = targetDesc.getInt("x");
-			int y = targetDesc.getInt("y");
-			targetCell = level.cell(x, y);
-		} else {
-			targetCell = getPos();
+			targetX = targetDesc.getInt("x");
+			targetY = targetDesc.getInt("y");
 		}
+
+		targetCell = level.cell(targetX, targetY);
 
 		kind = obj.optString("trapKind", "none");
 		uses = obj.optInt("uses", 1);
