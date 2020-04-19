@@ -33,15 +33,16 @@ public class ScrollOfMirrorImage extends Scroll {
 	protected void doRead() {
 
 		Level level = Dungeon.level;
+		Char owner = getOwner();
 
 		int nImages = NIMAGES;
 		while (nImages > 0 ) {
-			int cell = level.getEmptyCellNextTo(getUser().getPos());
+			int cell = level.getEmptyCellNextTo(owner.getPos());
 
 			if(!level.cellValid(cell))
 				break;
 
-			Char image  = getUser().makeClone();
+			Char image  = owner.makeClone();
 			WandOfBlink.appear( image, cell );
 			nImages--;
 		}
@@ -51,8 +52,8 @@ public class ScrollOfMirrorImage extends Scroll {
 		}
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(owner);
 		
-		getUser().spendAndNext( TIME_TO_READ );
+		owner.spendAndNext( TIME_TO_READ );
 	}
 }

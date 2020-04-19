@@ -59,28 +59,30 @@ public abstract class Arrow extends MissileWeapon {
 
 	@Override
 	protected void onThrow(int cell) {
-		if (getUser().bowEquipped()) {
+		Char owner = getOwner();
+		
+		if (owner.bowEquipped()) {
 
-			if (Dungeon.level.adjacent(getUser().getPos(), cell)
-					&& getUser().getHeroClass() != HeroClass.ELF) {
+			if (Dungeon.level.adjacent(owner.getPos(), cell)
+					&& owner.getHeroClass() != HeroClass.ELF) {
 				miss(cell);
 				return;
 			}
 
-			firedFrom = (KindOfBow) getUser().getBelongings().weapon;
+			firedFrom = (KindOfBow) owner.getBelongings().weapon;
 
 			MAX = (int) (baseMax * firedFrom.dmgFactor());
 			MIN = (int) (baseMin * firedFrom.dmgFactor());
 			ACU = (float) (baseAcu * firedFrom.acuFactor());
 			DLY = (float) (baseDly * firedFrom.dlyFactor());
 
-			float sDelta = getUser().effectiveSTR() - firedFrom.STR;
+			float sDelta = owner.effectiveSTR() - firedFrom.STR;
 
 			if (sDelta > 2) {
 				MAX += MIN + sDelta;
 			}
 
-			if (getUser().getHeroClass() == HeroClass.ELF) {
+			if (owner.getHeroClass() == HeroClass.ELF) {
 				ACU *= 1.1;
 				DLY *= 0.9;
 			}

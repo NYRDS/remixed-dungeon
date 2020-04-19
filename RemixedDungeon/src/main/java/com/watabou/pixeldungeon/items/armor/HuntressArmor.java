@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.armor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -49,6 +50,8 @@ public class HuntressArmor extends ClassArmor {
 	@Override
 	public void doSpecial() {
 		
+		Char owner = getOwner();
+		
 		Item proto = new Shuriken();
 		
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
@@ -57,16 +60,16 @@ public class HuntressArmor extends ClassArmor {
 				Callback callback = new Callback() {	
 					@Override
 					public void call() {
-						getUser().attack( targets.get( this ) );
+						owner.attack( targets.get( this ) );
 						targets.remove( this );
 						if (targets.isEmpty()) {
-							getUser().spendAndNext( getUser().attackDelay() );
+							owner.spendAndNext( owner.attackDelay() );
 						}
 					}
 				};
 				
-				((MissileSprite) getUser().getSprite().getParent().recycle( MissileSprite.class )).
-					reset( getUser().getPos(), mob.getPos(), proto, callback );
+				((MissileSprite) owner.getSprite().getParent().recycle( MissileSprite.class )).
+					reset( owner.getPos(), mob.getPos(), proto, callback );
 				
 				targets.put( callback, mob );
 			}
@@ -77,8 +80,8 @@ public class HuntressArmor extends ClassArmor {
 			return;
 		}
 
-		getUser().getSprite().zap( getUser().getPos() );
-		getUser().busy();
+		owner.getSprite().zap( owner.getPos() );
+		owner.busy();
 	}
 	
 	@Override

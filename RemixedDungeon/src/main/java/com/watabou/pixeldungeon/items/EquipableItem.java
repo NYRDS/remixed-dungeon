@@ -83,7 +83,6 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public boolean doEquip(Hero hero ) {
-		setUser(hero);
 		Belongings belongings = hero.getBelongings();
 		return belongings.equip(this, slot(belongings));
 	}

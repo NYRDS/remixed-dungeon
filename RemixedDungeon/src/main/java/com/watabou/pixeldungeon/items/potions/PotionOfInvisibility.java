@@ -62,6 +62,6 @@ public class PotionOfInvisibility extends UpgradablePotion {
 		
 		BlankScroll moistenScroll = new BlankScroll();
 		moistenScroll.quantity(quantity);
-		getUser().collect(moistenScroll);
+		getOwner().collect(moistenScroll);
 	}
 }

@@ -23,6 +23,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
@@ -58,11 +59,13 @@ public class MageArmor extends ClassArmor {
 			}
 		}
 		
-		getUser().spend( Actor.TICK );
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().busy();
+		Char owner = getOwner();
 		
-		getUser().getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
+		owner.spend( Actor.TICK );
+		owner.getSprite().operate( owner.getPos() );
+		owner.busy();
+		
+		owner.getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	

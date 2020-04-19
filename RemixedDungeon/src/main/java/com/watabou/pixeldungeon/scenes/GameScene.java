@@ -53,6 +53,7 @@ import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.BannerSprites;
@@ -807,7 +808,7 @@ public class GameScene extends PixelScene {
 
     private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer cell) {
+        public void onSelect(Integer cell, Char selector) {
             if (Dungeon.hero.handle(cell)) {
                 Dungeon.hero.next();
             }

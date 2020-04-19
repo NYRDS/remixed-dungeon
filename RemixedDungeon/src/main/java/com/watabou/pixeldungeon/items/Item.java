@@ -135,7 +135,6 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
     public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		setUser(hero);
 		actions.add(AC_DROP);
 		actions.add(AC_THROW);
 		return actions;
@@ -165,7 +164,6 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public void execute(Hero hero, String action) {
-		setUser(hero);
 		curItem = this;
 
 		if (action.equals(AC_DROP)) {
@@ -489,8 +487,6 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	        return;
         }
 
-		setUser(user);
-
 	    int pos = user.getPos();
 
 		final int cell = Ballistica.cast(pos, dst, false, true);
@@ -528,9 +524,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
-		public void onSelect(Integer target) {
+		public void onSelect(Integer target, Char selector) {
 			if (target != null) {
-				curItem.cast(getUser(), target);
+				curItem.cast(curItem.getOwner(), target);
 			}
 		}
 
@@ -610,12 +606,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return ItemSpritesDescription.isFliesFastRotating(this);
 	}
 
-	public static Char getUser() {
-		return user;
-	}
-
-	protected static void setUser(Char user) {
-		Item.user = user;
+	@Deprecated
+	public Char getUser() {
+		return getOwner();
 	}
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
@@ -693,12 +686,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	@LuaInterface
 	public void setDefaultAction(@NotNull String newDefaultAction) {
-		Char hero = getUser();
-
-		if(hero==null) {
-			this.defaultAction = newDefaultAction;
-			return;
-		}
+		Char hero = getOwner();
 
 		if(hero.getHeroClass().forbidden(newDefaultAction)) {
 			newDefaultAction = AC_THROW;

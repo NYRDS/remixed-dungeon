@@ -33,12 +33,12 @@ public class ScrollOfTeleportation extends Scroll {
 	protected void doRead() {
 
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(getOwner());
 		
-		teleportHero( getUser() );
+		teleportHero( getOwner() );
 		setKnown();
 		
-		getUser().spendAndNext( TIME_TO_READ );
+		getOwner().spendAndNext( TIME_TO_READ );
 	}
 	
 	public static void teleportHero( Char hero ) {

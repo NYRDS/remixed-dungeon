@@ -79,6 +79,6 @@ public class ChaosBow extends Bow implements IChaosItem {
 	
 	@Override
 	public void onMiss() {
-		ChaosCommon.doChaosMark(getUser().getPos(), charge + 3*level());
+		ChaosCommon.doChaosMark(getOwner().getPos(), charge + 3*level());
 	}
 }

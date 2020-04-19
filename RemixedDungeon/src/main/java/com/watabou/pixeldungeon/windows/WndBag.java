@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
@@ -303,7 +304,7 @@ public class WndBag extends WndTabbed {
 	@Override
 	public void onBackPressed() {
 		if (listener != null) {
-			listener.onSelect( null );
+			listener.onSelect( null, Dungeon.hero);
 		}
 		super.onBackPressed();
 	}
@@ -323,6 +324,6 @@ public class WndBag extends WndTabbed {
 	}
 
 	public interface Listener {
-		void onSelect( Item item );
+		void onSelect(Item item, Char selector);
 	}
 }

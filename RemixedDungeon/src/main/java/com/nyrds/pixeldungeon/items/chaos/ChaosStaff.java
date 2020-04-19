@@ -79,10 +79,10 @@ public class ChaosStaff extends Wand implements IChaosItem {
 
                 switch (Random.Int(0, 4)) {
                     case 0:
-                        mob.die(getUser());
+                        mob.die(getOwner());
                         break;
                     case 1:
-                        Mob.makePet(mob, getUser().getId());
+                        Mob.makePet(mob, getOwner().getId());
                         break;
 
                     case 2:
@@ -94,7 +94,7 @@ public class ChaosStaff extends Wand implements IChaosItem {
                         }
                         break;
                     case 3:
-                        WandOfTeleportation.teleport(mob);
+                        WandOfTeleportation.teleport(mob,getOwner());
                         break;
                     case 4:
                         PotionOfHealing.heal(ch, 1);

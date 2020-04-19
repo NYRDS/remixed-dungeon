@@ -25,6 +25,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -72,7 +73,7 @@ public class RogueArmor extends ClassArmor {
 	protected static CellSelector.Listener teleporter = new  CellSelector.Listener() {
 		
 		@Override
-		public void onSelect( Integer target ) {
+		public void onSelect(Integer target, Char selector) {
 			if (target != null) {
 
 				if (!Dungeon.level.fieldOfView[target] || 
@@ -90,14 +91,14 @@ public class RogueArmor extends ClassArmor {
 						mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );
 					}
 				}
-				
-				WandOfBlink.appear( getUser(), target );
+
+				WandOfBlink.appear( selector, target );
 				CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
 				Sample.INSTANCE.play( Assets.SND_PUFF );
-				Dungeon.level.press( target, getUser() );
+				Dungeon.level.press( target, selector );
 				Dungeon.observe();
 				
-				getUser().spendAndNext( Actor.TICK );
+				selector.spendAndNext( Actor.TICK );
 			}
 		}
 		

@@ -37,24 +37,26 @@ public class ScrollOfRemoveCurse extends Scroll {
 	@Override
 	protected void doRead() {
 
-		new Flare(6, 32).show(getUser().getSprite(), 2f);
+		Char owner = getOwner();
+		
+		new Flare(6, 32).show(owner.getSprite(), 2f);
 		Sample.INSTANCE.play(Assets.SND_READ);
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(owner);
 
-		boolean procced = uncurse(getUser().getBelongings());
+		boolean procced = uncurse(owner.getBelongings());
 
-		Weakness.detach(getUser(), Weakness.class);
+		Weakness.detach(owner, Weakness.class);
 
 		if (procced) {
 			GLog.p(Game.getVar(R.string.ScrollOfRemoveCurse_Proced));
-			getUser().getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
+			owner.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
 		} else {
 			GLog.i(Game.getVar(R.string.ScrollOfRemoveCurse_NoProced));
 		}
 
 		setKnown();
 
-		getUser().spendAndNext(TIME_TO_READ);
+		owner.spendAndNext(TIME_TO_READ);
 	}
 
 	public static void uncurse(Char hero, Item ... items) {

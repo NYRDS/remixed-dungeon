@@ -87,6 +87,6 @@ public class PotionOfHealing extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 
 		HealthArrow moistenArrows = new HealthArrow(quantity);
-		getUser().collect(moistenArrows);
+		getOwner().collect(moistenArrows);
 	}
 }

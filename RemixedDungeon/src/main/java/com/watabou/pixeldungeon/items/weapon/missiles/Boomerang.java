@@ -86,13 +86,13 @@ public class Boomerang extends MissileWeapon {
 	
 	@Override
 	protected void miss( int cell ) {
-		circleBack( cell, getUser() );
+		circleBack( cell, getOwner());
 	}
 	
 	private void circleBack(int from, final Char owner) {
 
-		((MissileSprite) getUser().getSprite().getParent()
-				.recycle(MissileSprite.class)).reset(from, getUser().getPos(),
+		((MissileSprite) owner.getSprite().getParent()
+				.recycle(MissileSprite.class)).reset(from, owner.getPos(),
 				curItem, ()-> {
 					if (throwEquiped) {
 						owner.spend(-TIME_TO_EQUIP);

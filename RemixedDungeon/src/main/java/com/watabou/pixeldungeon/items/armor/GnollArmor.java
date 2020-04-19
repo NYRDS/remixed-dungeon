@@ -5,6 +5,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -34,29 +35,30 @@ public class GnollArmor extends ClassArmor {
 
     @Override
     public void doSpecial() {
-
-        SpellSprite.show( getUser(), SpellSprite.DOMINATION );
+        Char owner = getOwner();
+        
+        SpellSprite.show( owner, SpellSprite.DOMINATION );
         Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 
-        int mobsDominated = getUser().countPets();
-        Level level = getUser().level();
+        int mobsDominated = owner.countPets();
+        Level level = owner.level();
 
         for (Mob mob : level.getCopyOfMobsArray()) {
 
             if (level.fieldOfView[mob.getPos()]) {
-                if(mobsDominated > getUser().lvl() / 6) {
+                if(mobsDominated > owner.lvl() / 6) {
                     break;
                 }
 
                 if(mob.canBePet()) {
-                    Mob.makePet(mob, getUser().getId());
+                    Mob.makePet(mob, owner.getId());
                     new Flare(3, 32).show(mob.getSprite(), 2f);
                     mobsDominated++;
                 }
             }
         }
 
-        getUser().spend( Actor.TICK );
+        owner.spend( Actor.TICK );
     }
 
     @Override

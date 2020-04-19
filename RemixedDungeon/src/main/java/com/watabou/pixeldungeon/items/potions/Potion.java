@@ -24,6 +24,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
@@ -124,8 +125,6 @@ public class Potion extends Item implements UnknownItem {
 	
 	@Override
 	public void execute( final Hero hero, String action ) {
-		setUser(hero);
-
 		switch (action) {
 			case AC_DRINK:
 				if (isKnown() && (
@@ -321,7 +320,7 @@ public class Potion extends Item implements UnknownItem {
 		return null;
 	}
 	
-	private final WndBag.Listener itemSelector = item -> {
+	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
 
 			if(item instanceof Arrow) {
@@ -343,11 +342,12 @@ public class Potion extends Item implements UnknownItem {
 		int quantity = item.quantity();
 		
 		if(quantity <= maxQuantity){
-			
-			if(item.equals(getUser().getBelongings().weapon)) {
-				getUser().getBelongings().weapon = null;
+			Char owner = getOwner();
+
+			if(item.equals(owner.getBelongings().weapon)) {
+				owner.getBelongings().weapon = null;
 			} else {
-				item.detachAll( getUser().getBelongings().backpack );
+				item.detachAll( owner.getBelongings().backpack );
 			}
 		} else {
 			item.quantity(item.quantity() - maxQuantity);
@@ -380,19 +380,23 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	private void moistenUseless() {
-		detach(getUser().getBelongings().backpack );
+		Char owner = getOwner();
+
+		detach(owner.getBelongings().backpack );
 		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().spend( TIME_TO_MOISTEN );
-		getUser().busy();
+		owner.getSprite().operate( owner.getPos() );
+		owner.spend( TIME_TO_MOISTEN );
+		owner.busy();
 	}
 	
 	protected void moistenEffective() {
-		detach(getUser().getBelongings().backpack );
+		Char owner = getOwner();
+
+		detach(owner.getBelongings().backpack );
 		identify();
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().spend( TIME_TO_MOISTEN );
-		getUser().busy();
+		owner.getSprite().operate( owner.getPos() );
+		owner.spend( TIME_TO_MOISTEN );
+		owner.busy();
 	}
 
 	@Override

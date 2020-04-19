@@ -143,7 +143,7 @@ class ItemButton extends ItemSlot {
             if(wndBag.hideOnSelect()) {
                 wndBag.hide();
             }
-            wndBag.getListener().onSelect( item );
+            wndBag.getListener().onSelect( item, Dungeon.hero);
             
         } else {
             

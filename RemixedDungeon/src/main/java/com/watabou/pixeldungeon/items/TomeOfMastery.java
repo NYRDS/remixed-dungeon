@@ -84,8 +84,6 @@ public class TomeOfMastery extends MasteryItem {
 				return;
 			}
 
-			setUser(hero);
-			
 			HeroSubClass way1;
 			HeroSubClass way2;
 			switch (hero.getHeroClass()) {

@@ -26,6 +26,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -99,7 +100,7 @@ public class WndBlacksmith extends Window {
 
 	protected WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
-		public void onSelect( Item item ) {
+		public void onSelect(Item item, Char selector) {
 			if (item != null) {
 				btnPressed.item( item );
 				

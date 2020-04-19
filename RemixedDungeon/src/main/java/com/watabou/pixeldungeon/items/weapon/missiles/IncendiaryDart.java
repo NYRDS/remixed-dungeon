@@ -50,14 +50,14 @@ public class IncendiaryDart extends Dart {
 	@Override
 	protected void onThrow( int cell ) {
 		Char enemy = Actor.findChar( cell );
-		if (enemy == null || enemy == getUser()) {
+		if (enemy == null || enemy == getOwner()) {
 			if (Dungeon.level.flammable[cell]) {
 				GameScene.add( Blob.seed( cell, 4, Fire.class ) );
 			} else {
 				super.onThrow( cell );
 			}
 		} else {
-			if (!getUser().shoot( enemy, this )) {
+			if (!getOwner().shoot( enemy, this )) {
 				Dungeon.level.drop( this, cell ).sprite.drop();
 			}
 		}

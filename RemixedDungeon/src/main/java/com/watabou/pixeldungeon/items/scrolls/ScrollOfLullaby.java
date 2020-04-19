@@ -34,7 +34,7 @@ public class ScrollOfLullaby extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		getUser().getSprite().centerEmitter().start( Speck.factory( Speck.NOTE ), 0.3f, 5 );
+		getOwner().getSprite().centerEmitter().start( Speck.factory( Speck.NOTE ), 0.3f, 5 );
 		Sample.INSTANCE.play( Assets.SND_LULLABY );
 		
 		int count = 0;
@@ -61,7 +61,7 @@ public class ScrollOfLullaby extends Scroll {
 		}
 		setKnown();
 		
-		getUser().spendAndNext( TIME_TO_READ );
+		getOwner().spendAndNext( TIME_TO_READ );
 	}
 
 	@Override

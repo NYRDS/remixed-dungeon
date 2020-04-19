@@ -36,17 +36,17 @@ public class Kusarigama extends SpecialWeapon {
 
     private static CellSelector.Listener impaler = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer target) {
+        public void onSelect(Integer target, Char selector) {
 
             if (target != null) {
-                getUser().spendAndNext(TIME_TO_IMPALE);
-                int hitCell = Ballistica.cast(getUser().getPos(), target, false, true);
+                selector.spendAndNext(TIME_TO_IMPALE);
+                int hitCell = Ballistica.cast(selector.getPos(), target, false, true);
 
-                if (hitCell == getUser().getPos()) {
+                if (hitCell == selector.getPos()) {
                     return;
                 }
 
-                if (Dungeon.level.distance(getUser().getPos(), hitCell) < 4) {
+                if (Dungeon.level.distance(selector.getPos(), hitCell) < 4) {
                     Char chr = Actor.findChar(hitCell);
 
                     if (chr != null && chr.isMovable()) {
@@ -56,9 +56,9 @@ public class Kusarigama extends SpecialWeapon {
                         Dungeon.observe();
                     }
 
-                    drawChain(hitCell);
+                    drawChain(hitCell, selector);
                 } else {
-                    drawChain(Ballistica.trace[4]);
+                    drawChain(Ballistica.trace[4], selector);
                 }
             }
         }
@@ -69,17 +69,17 @@ public class Kusarigama extends SpecialWeapon {
         }
     };
 
-    private static void drawChain(int tgt) {
-        getUser().getSprite().zap(tgt);
-        getUser().getSprite()
+    private static void drawChain(int tgt, Char caster) {
+        caster.getSprite().zap(tgt);
+        caster.getSprite()
                 .getParent()
-                .add(new KusarigamaChain(getUser().getSprite().center(),
+                .add(new KusarigamaChain(caster.getSprite().center(),
                         DungeonTilemap.tileCenterToWorld(tgt)));
     }
 
     @Override
     public void execute(Hero hero, String action) {
-        setUser(hero);
+
         if (action.equals(AC_PULL)) {
             GameScene.selectCell(impaler);
         } else {
@@ -98,9 +98,8 @@ public class Kusarigama extends SpecialWeapon {
 
     @Override
     public void preAttack(Hero user, Char tgt) {
-        setUser(user);
         if (user.level().distance(user.getPos(), tgt.getPos()) > 1) {
-            drawChain(tgt.getPos());
+            drawChain(tgt.getPos(), user);
         }
     }
 

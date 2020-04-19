@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -17,10 +18,11 @@ public class ScrollOfDomination extends Scroll {
 
 	@Override
 	protected void doRead() {
-
-		SpellSprite.show( getUser(), SpellSprite.DOMINATION );
+		Char owner = getOwner();
+		
+		SpellSprite.show( owner, SpellSprite.DOMINATION );
 		Sample.INSTANCE.play( Assets.SND_DOMINANCE );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(getOwner());
 		
 		ArrayList<Mob> mobsInSight = new ArrayList<>();
 		
@@ -34,7 +36,7 @@ public class ScrollOfDomination extends Scroll {
 			Mob pet = Random.element(mobsInSight);
 
 			if(pet.canBePet()) {
-				Mob.makePet(pet, getUser().getId());
+				Mob.makePet(pet, owner.getId());
 				new Flare(3, 32).show(pet.getSprite(), 2f);
 				break;
 			}
@@ -45,7 +47,7 @@ public class ScrollOfDomination extends Scroll {
 		
 		setKnown();
 		
-		getUser().spendAndNext( TIME_TO_READ );
+		owner.spendAndNext( TIME_TO_READ );
 	}
 
 	@Override

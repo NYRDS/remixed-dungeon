@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -35,16 +36,18 @@ public class ScrollOfTerror extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		new Flare( 5, 32 ).color( 0xFF0000, true ).show( getUser().getSprite(), 2f );
+		Char owner = getOwner();
+		
+		new Flare( 5, 32 ).color( 0xFF0000, true ).show( owner.getSprite(), 2f );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(owner);
 		
 		int count = 0;
 		Mob affected = null;
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Terror terror = Buff.affect( mob, Terror.class, Terror.DURATION );
-				terror.source = getUser();
+				terror.source = owner;
 				
 				count++;
 				affected = mob;
@@ -63,7 +66,7 @@ public class ScrollOfTerror extends Scroll {
 		}
 		setKnown();
 		
-		getUser().spendAndNext( TIME_TO_READ );
+		owner.spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

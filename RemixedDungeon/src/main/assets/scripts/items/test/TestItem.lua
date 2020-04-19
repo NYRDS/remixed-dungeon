@@ -73,7 +73,7 @@ return item.init{
     cellSelected = function(self, thisItem, action, cell)
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
-            RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
+            RPD.zapEffect(thisItem:getOwner():getPos(), cell, "Lightning")
             --local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
             --RPD.Dungeon.level:drop(book, cell)
             RPD.createLevelObject(chest, cell)

@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -73,9 +74,7 @@ public class ShortSword extends MeleeWeapon {
 				equipped = false;
 				detach( hero.getBelongings().backpack );
 			}
-			
-			setUser(hero);
-			
+
 			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select) );
 			
 		} else {
@@ -92,17 +91,17 @@ public class ShortSword extends MeleeWeapon {
 	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
-		public void onSelect( Item item ) {
+		public void onSelect(Item item, Char selector) {
 			if (item != null && !(item instanceof Boomerang)) {
 				
 				Sample.INSTANCE.play( Assets.SND_EVOKE );
-				ScrollOfUpgrade.upgrade( getUser() );
-				ItemUtils.evoke( getUser() );
+				ScrollOfUpgrade.upgrade( selector );
+				ItemUtils.evoke( selector );
 				
 				GLog.w( Game.getVar(R.string.ShortSword_Reforged), item.name() );
 				
 				((MeleeWeapon)item).safeUpgrade();
-				getUser().spendAndNext( TIME_TO_REFORGE );
+				selector.spendAndNext( TIME_TO_REFORGE );
 				
 				Badges.validateItemLevelAcquired( item );
 				
@@ -113,9 +112,9 @@ public class ShortSword extends MeleeWeapon {
 				}
 				
 				if (equipped) {
-					getUser().getBelongings().weapon = ShortSword.this;
+					selector.getBelongings().weapon = ShortSword.this;
 				} else {
-					collect( getUser().getBelongings().backpack );
+					collect( selector.getBelongings().backpack );
 				}
 			}
 		}

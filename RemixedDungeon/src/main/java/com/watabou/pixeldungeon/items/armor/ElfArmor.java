@@ -6,6 +6,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -34,14 +35,15 @@ public class ElfArmor extends ClassArmor {
 				GameScene.add( Blob.seed( mob.getPos(), 100, Regrowth.class ) );
 			}
 		}
+		Char owner = getOwner();
 		
-		getUser().spend( Actor.TICK );
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().busy();
+		owner.spend( Actor.TICK );
+		owner.getSprite().operate( owner.getPos() );
+		owner.busy();
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
 		
-		GameScene.add( Blob.seed( getUser().getPos(), 100, Regrowth.class ) );
+		GameScene.add( Blob.seed( owner.getPos(), 100, Regrowth.class ) );
 	}
 	
 	@Override

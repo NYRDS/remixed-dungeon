@@ -350,14 +350,14 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         if (n < slots.size()) {
             QuickSlot slot = slots.get(n);
             slot.quickslotItem(object);
-            slot.onSelect(slot.quickslotItem);
+            slot.onSelect(slot.quickslotItem, Dungeon.hero);
         } else {
             qsStorage.put(n, object);
         }
     }
 
     @Override
-    public void onSelect(Item item) {
+    public void onSelect(Item item, Char selector) {
         if (item != null) {
             quickslotItem(item.quickSlotContent());
             refresh();

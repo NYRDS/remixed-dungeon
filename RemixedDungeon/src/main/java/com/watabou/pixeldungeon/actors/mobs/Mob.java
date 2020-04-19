@@ -653,7 +653,7 @@ public abstract class Mob extends Char {
 			}
 
 			if (enemyId != enemy.getId() && enemy != CharsList.DUMMY) {
-				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
+//				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 				GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
 			}
 		}

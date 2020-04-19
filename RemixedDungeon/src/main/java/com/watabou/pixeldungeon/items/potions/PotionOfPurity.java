@@ -132,7 +132,7 @@ public class PotionOfPurity extends UpgradablePotion{
 		moistenEffective();
 		GLog.i(Game.getVar(R.string.Potion_FoodRefreshed), rfood.name());
 
-		getUser().collect(rfood.purify());
+		getOwner().collect(rfood.purify());
 	}
 
 	@Override
@@ -140,6 +140,6 @@ public class PotionOfPurity extends UpgradablePotion{
 		int quantity = reallyMoistArrows(arrow);
 
 		CommonArrow moistenArrows = new CommonArrow(quantity);
-		getUser().collect(moistenArrows);
+		getOwner().collect(moistenArrows);
 	}
 }

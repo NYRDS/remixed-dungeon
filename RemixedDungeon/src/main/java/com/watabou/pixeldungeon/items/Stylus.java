@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -56,8 +57,7 @@ public class Stylus extends Item {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(AC_INSCRIBE)) {
 
-			setUser(hero);
-			GameScene.selectItem(item -> {
+			GameScene.selectItem((item, selector) -> {
 				if (item != null) {
 					if(item instanceof Armor){
 						inscribeArmor ( (Armor)item );
@@ -88,14 +88,16 @@ public class Stylus extends Item {
 	}
 	
 	private void inscribeEffect(){
-		detach( getUser().getBelongings().backpack );
+		Char owner = getOwner();
+		
+		detach( owner.getBelongings().backpack );
 
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
+		owner.getSprite().operate( owner.getPos() );
+		owner.getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
 		Sample.INSTANCE.play( Assets.SND_BURNING );
 		
-		getUser().spend( TIME_TO_INSCRIBE );
-		getUser().busy();
+		owner.spend( TIME_TO_INSCRIBE );
+		owner.busy();
 	}
 	
 	private void inscribeArmor ( Armor armor ) {
@@ -115,10 +117,10 @@ public class Stylus extends Item {
 	
 	private void inscribeScroll (BlankScroll scroll){
 		
-		scroll.detach( getUser().getBelongings().backpack );
+		scroll.detach( getOwner().getBelongings().backpack );
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
-		getUser().collect(inscribedScroll);
+		getOwner().collect(inscribedScroll);
 		GLog.i(Hero.getHeroYouNowHave(), inscribedScroll.name());	// Let know which scroll was inscribed
 
 		inscribeEffect();

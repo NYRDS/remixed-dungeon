@@ -18,13 +18,13 @@ public class TomeOfKnowledge extends Book {
 	protected void doRead(Hero hero) {
 		curItem = detach( hero.getBelongings().backpack );
 
-		SpellSprite.show( getUser(), SpellSprite.MASTERY );
-		getUser().getSprite().emitter().burst( Speck.factory( Speck.MAGIC ), 8 );
+		SpellSprite.show( hero, SpellSprite.MASTERY );
+		hero.getSprite().emitter().burst( Speck.factory( Speck.MAGIC ), 8 );
 		hero.getSprite().showStatus( CharSprite.BLUE, "+ 1");
 		Sample.INSTANCE.play( Assets.SND_READ );
 
-		getUser().spendAndNext( TIME_TO_READ );
-		getUser().busy();
+		hero.spendAndNext( TIME_TO_READ );
+		hero.busy();
 		hero.skillLevelUp();
 	}
 

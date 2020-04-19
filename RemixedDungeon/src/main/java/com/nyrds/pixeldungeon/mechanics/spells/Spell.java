@@ -95,7 +95,7 @@ public class Spell implements NamedEntityKind {
             if (targetingType.equals(SpellHelper.TARGET_CELL)) {
                 GameScene.selectCell(new CellSelector.Listener() {
                     @Override
-                    public void onSelect(Integer cell) {
+                    public void onSelect(Integer cell, Char selector) {
                         if (cell != null) {
                             cast(chr, cell);
 

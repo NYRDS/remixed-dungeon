@@ -138,7 +138,7 @@ public class CustomItem extends EquipableItem {
         CellSelector.Listener cellSelectorListener= new CellSelector.Listener(){
 
             @Override
-            public void onSelect(Integer cell) {
+            public void onSelect(Integer cell, Char selector) {
                 script.run("cellSelected", action, cell);
             }
 

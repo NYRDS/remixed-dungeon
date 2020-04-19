@@ -28,8 +28,7 @@ public class SpiderCharm extends UsableArtifact {
 	
 	@Override
 	public void execute( final Hero ch, String action ) {
-		setUser(ch);
-		
+
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);
 			ch.damage(ch.ht()/4, this);

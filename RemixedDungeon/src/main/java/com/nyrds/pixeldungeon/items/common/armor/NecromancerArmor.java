@@ -6,6 +6,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -31,13 +32,15 @@ public class NecromancerArmor extends ClassArmor {
 
 	@Override
 	public void doSpecial() {
-		getUser().spend( Actor.TICK );
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().busy();
+		Char owner = getOwner();
 
-		Buff.affect( getUser(), Necrotism.class ).set(Necrotism.duration, 1);
+		owner.spend( Actor.TICK );
+		owner.getSprite().operate( owner.getPos() );
+		owner.busy();
 
-		getUser().getSprite().burst( 0x6935a5, 3 );
+		Buff.affect( owner, Necrotism.class ).set(Necrotism.duration, 1);
+
+		owner.getSprite().burst( 0x6935a5, 3 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	

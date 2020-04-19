@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -54,7 +55,7 @@ public abstract class InventoryScroll extends Scroll {
 			public void onSelect(int index) {
 				switch (index) {
 				case 0:
-					getUser().spendAndNext( TIME_TO_READ );
+					getOwner().spendAndNext( TIME_TO_READ );
 					identifiedByUse = false;
 					break;
 				case 1:
@@ -69,14 +70,15 @@ public abstract class InventoryScroll extends Scroll {
 	protected abstract void onItemSelected( Item item );
 
 	protected static boolean identifiedByUse = false;
-	protected static WndBag.Listener itemSelector = item -> {
+	protected static WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
+			Char owner = item.getOwner();
 
 			((InventoryScroll)curItem).onItemSelected( item );
-			getUser().spendAndNext( TIME_TO_READ );
+			owner.spendAndNext( TIME_TO_READ );
 
 			Sample.INSTANCE.play( Assets.SND_READ );
-			Invisibility.dispel(getUser());
+			Invisibility.dispel(owner);
 
 		} else if (identifiedByUse) {
 
@@ -84,7 +86,7 @@ public abstract class InventoryScroll extends Scroll {
 
 		} else {
 
-			curItem.collect( getUser().getBelongings().backpack );
+			curItem.collect( curItem.getOwner().getBelongings().backpack );
 
 		}
 	};

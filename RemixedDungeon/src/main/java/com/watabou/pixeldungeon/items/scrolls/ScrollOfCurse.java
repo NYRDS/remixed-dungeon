@@ -47,18 +47,20 @@ public class ScrollOfCurse extends Scroll {
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void doRead() {
-		Invisibility.dispel(getUser());
+		Char owner = getOwner();
+		
+		Invisibility.dispel(owner);
 
-		getUser().getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
+		owner.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
 		Sample.INSTANCE.play( Assets.SND_CURSED );
 
 		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(badBuffs);
-		Buff.prolong( getUser(), buffClass, 10);
+		Buff.prolong( owner, buffClass, 10);
 
-		getUser().getBelongings().curseEquipped();
+		owner.getBelongings().curseEquipped();
 
 		setKnown();
-		getUser().spendAndNext( TIME_TO_READ );
+		owner.spendAndNext( TIME_TO_READ );
 	}
 
 

@@ -158,7 +158,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public void execute(Hero hero, String action) {
 		if (action.equals(AC_ZAP)) {
-			setUser(hero);
 			wandUser = hero;
 			curItem = this;
 			GameScene.selectCell(zapper);
@@ -169,7 +168,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public void zapCell(Char chr, int cell) {
-		setUser(chr);
 		wandUser = chr;
 		getDestinationCell(chr.getPos(),cell);
 		onZap(cell);
@@ -336,7 +334,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		curCharges(curCharges() - 1);
         QuickSlot.refresh();
 
-        getUser().spendAndNext(TIME_TO_ZAP);
+        getOwner().spendAndNext(TIME_TO_ZAP);
 	}
 
 	@Override
@@ -401,17 +399,17 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		if (curCharges() > 0) {
 
-			getUser().busy();
+			getOwner().busy();
 
 			fx(cell, () -> {
 				onZap(cell);
 				wandUsed();
 			});
 
-			Invisibility.dispel(getUser());
+			Invisibility.dispel(getOwner());
 		} else {
 
-			getUser().spendAndNext(TIME_TO_ZAP);
+			getOwner().spendAndNext(TIME_TO_ZAP);
 			GLog.w(Game.getVar(R.string.Wand_Fizzles));
 			setLevelKnown(true);
 
@@ -426,17 +424,17 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	protected static CellSelector.Listener zapper = new CellSelector.Listener() {
 		@Override
-		public void onSelect(Integer target) {
+		public void onSelect(Integer target, Char selector) {
 
 			if (target != null) {
-				if (target == getUser().getPos()) {
+				if (target == selector.getPos()) {
 					GLog.i(Game.getVar(R.string.Wand_SelfTarget));
 					return;
 				}
 
 				final Wand curWand = (Wand) Wand.curItem;
-				final int cell = curWand.getDestinationCell(getUser().getPos(),target);
-				getUser().getSprite().zap(cell);
+				final int cell = curWand.getDestinationCell(selector.getPos(),target);
+				selector.getSprite().zap(cell);
 				curWand.wandEffect(cell);
 			}
 		}

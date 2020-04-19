@@ -47,11 +47,12 @@ public class MasteryItem extends Item {
 
 	public void choose( HeroSubClass way ) {
 
-		if(! (getUser() instanceof Hero) ) {
+		Char owner = getOwner();
+		if(! (owner instanceof Hero) ) {
 			throw new TrackedRuntimeException("Mobs can't subclass yet");
 		}
 
-		Hero hero = (Hero)getUser();
+		Hero hero = (Hero)owner;
 		detach( hero.getBelongings().backpack );
 
 		hero.setSubClass(way);

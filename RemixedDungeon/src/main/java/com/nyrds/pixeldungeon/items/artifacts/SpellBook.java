@@ -51,7 +51,6 @@ public class SpellBook extends Artifact {
 
 	@Override
 	public void execute(final Hero ch, String action) {
-		setUser(ch);
 		if (action.equals(CommonActions.AC_READ)) {
 			spell().cast(ch);
 		} else {

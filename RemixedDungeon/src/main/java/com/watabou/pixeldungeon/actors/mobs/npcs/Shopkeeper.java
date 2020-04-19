@@ -102,7 +102,7 @@ public class Shopkeeper extends NPC {
 
 	private WndBag.Listener sellItemSelector = new WndBag.Listener() {
 		@Override
-		public void onSelect( Item item ) {
+		public void onSelect(Item item, Char selector) {
 			if (item != null) {
 
 				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
@@ -115,7 +115,7 @@ public class Shopkeeper extends NPC {
 		}
 	};
 
-	private WndBag.Listener buyItemSelector = item -> {
+	private WndBag.Listener buyItemSelector = (item, selector) -> {
 		if (item != null) {
 			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true) );
 		}
