@@ -235,15 +235,15 @@ local RPD = {
     end,
 
     glog = function (text,...)
-        GLog:i(text,{...})
+        GLog:i(tostring(text),{...})
     end,
 
     glogp = function (text,...)
-        GLog:p(text,{...})
+        GLog:p(tostring(text),{...})
     end,
 
     glogn = function (text,...)
-        GLog:n(text,{...})
+        GLog:n(tostring(text),{...})
     end,
 
     getXy = function (chr)

@@ -72,7 +72,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -1129,6 +1128,7 @@ public class Hero extends Char {
 		getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP, exp);
 
 		boolean levelUp = false;
+
 		while (this.getExp() >= maxExp()) {
 			this.setExp(this.getExp() - maxExp());
 			lvl(lvl() + 1);
@@ -1165,11 +1165,7 @@ public class Hero extends Char {
 		if (subClass == HeroSubClass.WARLOCK) {
 
 			int value = Math.min(ht() - hp(), 1 + (Dungeon.depth - 1) / 5);
-			if (value > 0) {
-				hp(hp() + value);
-				getSprite().emitter().burst(Speck.factory(Speck.HEALING), 1);
-			}
-
+			heal(value, this);
 			hunger().satisfy(10);
 		}
 	}
