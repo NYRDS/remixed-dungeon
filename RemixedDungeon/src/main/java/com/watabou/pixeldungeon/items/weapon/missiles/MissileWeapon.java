@@ -87,7 +87,7 @@ public class MissileWeapon extends Weapon {
 		}
 
 		if (attacker.rangedWeapon == null && stackable) {
-			if (this != attacker.getBelongings().weapon) {
+			if (!attacker.getBelongings().isEquipped(this)) {
 				if (quantity() == 1) {
 					doUnequip(attacker, false, false);
 				} else {
