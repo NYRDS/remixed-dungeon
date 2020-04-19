@@ -28,6 +28,8 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.GenericInfo;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WndInfoItem extends Window {
 
 	public WndInfoItem( Heap heap ) {
@@ -37,15 +39,12 @@ public class WndInfoItem extends Window {
 		if (heap.type == Heap.Type.HEAP) {
 			
 			Item item = heap.peek();
-			
-			int color = TITLE_COLOR;
-			if (item.isLevelKnown() && item.level() > 0) {
-				color = ItemSlot.UPGRADED;				
-			} else if (item.isLevelKnown() && item.level() < 0) {
-				color = ItemSlot.DEGRADED;				
-			}
-			fillFields( item, color, item.toString(), item.info() );
-			
+
+			GenericInfo.makeInfo(this,
+									new ItemSprite(item),
+									item.toString(),
+									itemDescColor(item),
+									item.info());
 		} else {
 			
 			String title;
@@ -67,39 +66,37 @@ public class WndInfoItem extends Window {
 				title = Game.getVar(R.string.WndInfoItem_LockedChest);
 				info = Game.getVar(R.string.WndInfoItem_WontKnow) +" "+ Game.getVar(R.string.WndInfoItem_NeedKey);
 			}
-			
-			fillFields( heap, TITLE_COLOR, title, info );
-			
+
+			GenericInfo.makeInfo(this,
+									new ItemSprite(heap),
+									title,
+									TITLE_COLOR,
+									info);
+
 		}
 	}
-	
+
 	public WndInfoItem( Item item ) {
 		
 		super();
-		
-		int color = TITLE_COLOR;
-		if (item.isLevelKnown() && item.level() > 0) {
-			color = ItemSlot.UPGRADED;				
-		} else if (item.isLevelKnown() && item.level() < 0) {
-			color = ItemSlot.DEGRADED;				
-		}
-		
-		fillFields( item, color, item.toString(), item.info() );
+
+		GenericInfo.makeInfo(this,
+								new ItemSprite(item),
+								item.toString(),
+								itemDescColor(item),
+								item.info());
 	}
 
-	private void fillFields( Heap heap, int titleColor, String title, String info ) {
-		GenericInfo.makeInfo(	this,
-								new ItemSprite( heap ), 
-								title, 
-								titleColor, 
-								info);
-	}
-	
-	private void fillFields( Item item, int titleColor, String title, String info ) {
-		GenericInfo.makeInfo(	this,
-								new ItemSprite( item ), 
-								title, 
-								titleColor, 
-								info);
+	private int itemDescColor(@NotNull Item item) {
+		int color = TITLE_COLOR;
+		if(item.isLevelKnown()) {
+			if (item.level() > 0) {
+				color = ItemSlot.UPGRADED;
+			}
+			if (item.level() < 0) {
+				color = ItemSlot.DEGRADED;
+			}
+		}
+		return color;
 	}
 }

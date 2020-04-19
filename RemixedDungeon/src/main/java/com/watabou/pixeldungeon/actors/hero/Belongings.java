@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -88,10 +87,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	@Packable
 	public EquipableItem weapon = null;
-
 	@Packable
 	public EquipableItem leftHand = null;
-
 	@Packable
 	public Armor         armor  = null;
 	@Packable
@@ -151,9 +148,12 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		while (itemIterator.hasNextEquipped()) {
 			EquipableItem item = (EquipableItem) itemIterator.next();
-			if(item!=null && !activatedItems.contains(item)){
-				item.activate(owner);
-				activatedItems.add(item);
+			if(item!=null) {
+				item.setOwner(owner);
+				if (!activatedItems.contains(item)) {
+					item.activate(owner);
+					activatedItems.add(item);
+				}
 			}
 		}
 		blockSlots();
@@ -348,7 +348,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 
 			if (desc.has("weapon")) {
-				weapon = (KindOfWeapon) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
+				weapon = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
 			}
 
 			if (desc.has("left_hand")) {
