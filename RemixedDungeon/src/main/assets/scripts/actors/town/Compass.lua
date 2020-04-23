@@ -21,7 +21,7 @@ return actor.init({
 
         time = time + 1
 
-        if belongings.weapon then
+        if belongings.weapon or belongings.leftHand then
             RPD.Dungeon.level:setCompassTarget(table.unpack(dungeonEntrance))
         else
             RPD.Dungeon.level:setCompassTarget(table.unpack(shopEntrance))

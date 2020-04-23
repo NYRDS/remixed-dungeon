@@ -438,7 +438,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		int dmg = effectiveSTR() > 10 ? Random.IntRange(1, effectiveSTR() - 9) : 1;
 
 		dmg += getActiveWeapon().damageRoll(this);
-		dmg += getSecondaryWeapon().damageRoll(this);
+
+		if(rangedWeapon!=null) {
+			dmg += getSecondaryWeapon().damageRoll(this);
+		}
 
 		return dmg;
 	}
