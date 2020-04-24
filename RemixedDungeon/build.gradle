@@ -110,7 +110,7 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-analytics:17.3.0'
     implementation 'com.google.firebase:firebase-perf:19.0.6'
-    implementation 'com.google.firebase:firebase-ads:19.0.1'
+    implementation 'com.google.firebase:firebase-ads:19.1.0'
     implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta04'
 
 
