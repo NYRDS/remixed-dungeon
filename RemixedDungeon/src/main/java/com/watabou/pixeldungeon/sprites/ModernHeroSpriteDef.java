@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -73,10 +74,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		LAYER_ARMOR,
 		LAYER_FACIAL_HAIR,
 		LAYER_HELMET,
-		LAYER_LEFT_ARMOR,
-		LAYER_RIGHT_ARMOR,
 		LAYER_LEFT_HAND,
 		LAYER_RIGHT_HAND,
+		LAYER_LEFT_ARMOR,
+		LAYER_RIGHT_ARMOR,
 		LAYER_ACCESSORY,
 		LAYER_LEFT_ITEM,
 		LAYER_RIGHT_ITEM,
@@ -170,6 +171,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
 		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
 
+		Armor armor = hero.getBelongings().armor;
+
 		EquipableItem weapon = hero.getBelongings().weapon;
 
 		if(weapon !=null) {
@@ -193,6 +196,12 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(leftHand,"left"));
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
+
+			if(armor!=null) {
+				layersDesc.put(LAYER_LEFT_ARMOR, armorShoulderDescriptor(armor,leftHand,"left"));
+				layersDesc.put(LAYER_RIGHT_ARMOR, armorShoulderDescriptor(armor,weapon,"right"));
+			}
+
 		}
 
 		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
@@ -295,6 +304,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 		return "hero_modern/armor/" +armor.getVisualName()+".png";
 	}
+
+	private String armorShoulderDescriptor(Armor armor, EquipableItem item, String hand) {
+		if(item==null || item.blockSlot()==Belongings.Slot.NONE) {
+			return "hero_modern/armor/shoulders/" + armor.getClassName() + "_" + hand + ".png";
+		}
+
+		return "hero_modern/armor/shoulders/" + armor.getClassName() + "_" + item.getAttackAnimationClass() + ".png";
+	}
+
 
 	private String itemHandDescriptor(EquipableItem item, String hand) {
 		if(item==null) {
