@@ -608,20 +608,21 @@ public class GameScene extends PixelScene {
     }
 
     public static void add(EmoIcon icon) {
-        scene.emoicons.add(icon);
+        if (isSceneReady()) {
+            scene.emoicons.add(icon);
+        }
     }
 
     public static void effect(Visual effect) {
-        scene.effects.add(effect);
+        if (isSceneReady()) {
+            scene.effects.add(effect);
+        }
     }
 
     public static void zapEffect(int from, int to, String zapEffect) {
-        ZapEffect.zap(scene.effects, from, to, zapEffect);
-    }
-
-    @LuaInterface
-    public static void remove(Group obj) {
-        scene.remove(obj);
+        if (isSceneReady()) {
+            ZapEffect.zap(scene.effects, from, to, zapEffect);
+        }
     }
 
     @LuaInterface
@@ -636,20 +637,21 @@ public class GameScene extends PixelScene {
 
     @LuaInterface
     public static CustomClipEffect clipEffect(int cell, int layer, String effectName) {
+
         CustomClipEffect effect = EffectsFactory.getEffectByName(effectName);
         effect.place(cell);
-
-        switch (layer) {
-            case 0:
-                scene.bottomEffects.add(effect);
-            break;
-            case 1:
-                scene.effects.add(effect);
-            break;
-            default:
-                GLog.n("Bad layer %d for %s", layer, effectName);
+        if (isSceneReady()) {
+            switch (layer) {
+                case 0:
+                    scene.bottomEffects.add(effect);
+                    break;
+                case 1:
+                    scene.effects.add(effect);
+                    break;
+                default:
+                    GLog.n("Bad layer %d for %s", layer, effectName);
+            }
         }
-
         effect.playAnimOnce();
         return effect;
     }
@@ -709,7 +711,9 @@ public class GameScene extends PixelScene {
 
     public static void show(Window wnd) {
         cancelCellSelector();
-        scene.add(wnd);
+        if (isSceneReady() && scene.sceneCreated) {
+            scene.add(wnd);
+        }
     }
 
     public static void afterObserve() {
@@ -724,19 +728,24 @@ public class GameScene extends PixelScene {
     }
 
     public static void flash(int color) {
-        scene.fadeIn(0xFF000000 | color, true);
+        if (isSceneReady()) {
+            scene.fadeIn(0xFF000000 | color, true);
+        }
     }
 
     public static void gameOver() {
-        Banner gameOver = new Banner(BannerSprites.get(BannerSprites.Type.GAME_OVER));
-        gameOver.show(0x000000, 1f);
-        scene.showBanner(gameOver);
+        if (isSceneReady()) {
 
-        Sample.INSTANCE.play(Assets.SND_DEATH);
+            Banner gameOver = new Banner(BannerSprites.get(BannerSprites.Type.GAME_OVER));
+            gameOver.show(0x000000, 1f);
+            scene.showBanner(gameOver);
+
+            Sample.INSTANCE.play(Assets.SND_DEATH);
+        }
     }
 
     public static void bossSlain() {
-        if (Dungeon.hero.isAlive()) {
+        if (isSceneReady() && Dungeon.hero.isAlive()) {
             Banner bossSlain = new Banner(BannerSprites.get(BannerSprites.Type.BOSS_SLAIN));
             bossSlain.show(0xFFFFFF, 0.3f, 5f);
             scene.showBanner(bossSlain);
@@ -751,7 +760,7 @@ public class GameScene extends PixelScene {
 
     public static void selectCell(CellSelector.Listener listener) {
         cellSelector.listener = listener;
-        if(scene!=null) {
+        if(isSceneReady()) {
             scene.prompt(listener.prompt());
         }
     }
@@ -850,7 +859,6 @@ public class GameScene extends PixelScene {
         super.resume();
 
         InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
-
     }
 
     public static void addMobSpriteDirect(CharSprite sprite) {
