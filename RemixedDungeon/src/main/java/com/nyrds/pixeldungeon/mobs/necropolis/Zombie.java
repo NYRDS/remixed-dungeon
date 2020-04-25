@@ -27,7 +27,7 @@ public class Zombie extends UndeadMob {
     public int attackProc(@NotNull Char enemy, int damage ) {
         //Poison proc
         if (Random.Int(3) == 1){
-            Buff.affect( enemy, Poison.class ).set( Random.Int( 2, 4 ) * Poison.durationFactor( enemy ) );
+            Buff.affect( enemy, Poison.class, Random.Int( 2, 4 ) * Poison.durationFactor( enemy ) );
         }
 
         return damage;
