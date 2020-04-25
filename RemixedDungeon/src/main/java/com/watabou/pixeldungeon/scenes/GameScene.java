@@ -626,13 +626,6 @@ public class GameScene extends PixelScene {
     }
 
     @LuaInterface
-    public static void remove(Group obj) {
-        if (isSceneReady()) {
-            scene.remove(obj);
-        }
-    }
-
-    @LuaInterface
     public static Group particleEffect(String effectName, int cell) {
         if (isSceneReady()) {
             Group effect = ParticleEffect.addToCell(effectName, cell);
@@ -866,7 +859,6 @@ public class GameScene extends PixelScene {
         super.resume();
 
         InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
-
     }
 
     public static void addMobSpriteDirect(CharSprite sprite) {
