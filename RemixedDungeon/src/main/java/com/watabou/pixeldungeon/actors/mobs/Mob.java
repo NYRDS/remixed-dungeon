@@ -467,7 +467,7 @@ public abstract class Mob extends Char {
 			Buff.affect(clone, Burning.class).reignite(clone);
 		}
 		if (hasBuff(Poison.class)) {
-			Buff.affect(clone, Poison.class).set(2);
+			Buff.affect(clone, Poison.class,2);
 		}
 
 		return clone;

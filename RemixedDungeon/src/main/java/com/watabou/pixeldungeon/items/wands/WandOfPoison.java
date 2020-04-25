@@ -35,7 +35,7 @@ public class WandOfPoison extends SimpleWand  {
 	protected void onZap( int cell ) {
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
-			Buff.affect( ch, Poison.class ).set( Poison.durationFactor( ch ) * (5 + effectiveLevel()) );
+			Buff.affect( ch, Poison.class,Poison.durationFactor( ch ) * (5 + effectiveLevel()) );
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfPoison_Info1));
 		}

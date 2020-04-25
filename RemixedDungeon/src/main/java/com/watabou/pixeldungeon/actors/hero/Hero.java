@@ -895,7 +895,10 @@ public class Hero extends Char {
 		setControlTarget(this);
 
 		checkIfFurious();
-		interrupt();
+
+		if(!myMove()) {
+			interrupt();
+		}
 
 		for (Item item : belongings) {
 			if (item instanceof IChaosItem && item.isEquipped(this)) {
