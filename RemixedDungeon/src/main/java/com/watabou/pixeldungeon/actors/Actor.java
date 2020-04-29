@@ -42,10 +42,6 @@ public abstract class Actor implements Bundlable {
 	@Packable
 	private float time;
 
-	public Actor() {
-		time = now;
-	}
-
 	public static void setRealTimeMultiplier(float realTimeMultiplier) {
 		Actor.realTimeMultiplier = realTimeMultiplier;
 	}
@@ -151,6 +147,7 @@ public abstract class Actor implements Bundlable {
 			current = null;
 		}
 	}
+	
 
 	private static void processReaTime(float elapsed) {
 
@@ -315,11 +312,7 @@ public abstract class Actor implements Bundlable {
 	public static Char findChar(int pos) {
 		return chars.get(pos);
 	}
-
-	public boolean myMove() {
-		return current == this;
-	}
-
+	
 	public static HashSet<Actor> all() {
 		return all;
 	}

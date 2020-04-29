@@ -42,37 +42,37 @@ public class Sorrowmoss extends Plant {
 	public void effect(int pos, Presser ch ) {
 		if (ch instanceof Char) {
 			Char chr = (Char)ch;
-			Buff.affect( chr, Poison.class, Poison.durationFactor( chr ) * (4 + Dungeon.depth / 2) );
+			Buff.affect( chr, Poison.class ).set( Poison.durationFactor( chr ) * (4 + Dungeon.depth / 2) );
 		}
-
+		
 		if (Dungeon.visible[pos]) {
 			CellEmitter.center( pos ).burst( PoisonParticle.SPLASH, 3 );
 		}
 	}
-
+	
 	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
 			plantName = Game.getVar(R.string.Sorrowmoss_Name);
-
+			
 			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_SORROWMOSS;
-
+			
 			plantClass = Sorrowmoss.class;
 			alchemyClass = PotionOfToxicGas.class;
 		}
-
+		
 		@Override
 		public String desc() {
 			return Game.getVar(R.string.Sorrowmoss_Desc);
 		}
-
+		
 		@Override
 		public void execute( Hero hero, String action ) {
-
+			
 			super.execute( hero, action );
-
+			
 			if (action.equals( CommonActions.AC_EAT )) {
-				Buff.affect( hero, Poison.class, Poison.durationFactor( hero ) * (hero.lvl()) );
+				Buff.affect( hero, Poison.class ).set( Poison.durationFactor( hero ) * (hero.lvl()) );
 				Buff.affect( hero, Invisibility.class, 2 );
 			}
 		}

@@ -26,7 +26,7 @@ public class SpiderServant extends MultiKindMob {
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 4 ) == 0) {
-			Buff.affect(enemy, Poison.class, Random.Int(2, 3) * Poison.durationFactor(enemy));
+			Buff.affect(enemy, Poison.class).set(Random.Int(2, 3) * Poison.durationFactor(enemy));
 		}
 		return damage;
 	}

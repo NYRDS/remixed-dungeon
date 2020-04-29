@@ -160,6 +160,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 		return buff;
 	}
 
+
 	@LuaInterface
 	public static<T extends Buff> T prolong( Char target, Class<T> buffClass, float duration ) {
 		T buff = affect( target, buffClass );

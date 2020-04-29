@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -34,29 +35,42 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class Poison extends Buff implements Hero.Doom {
 
+	@Packable
+	protected float left;
+
+	public void set( float duration ) {
+		this.left = duration;
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.POISON;
 	}
-
+	
 	@Override
 	public String name() {
 		return Game.getVar(R.string.Poison_Info);
 	}
-
-	@Override
-	public void charAct() {
-		float timeLeft = cooldown();
-		target.damage( (int)(timeLeft / 3) + 1, this );
-	}
-
+	
 	@Override
 	public boolean act() {
-		detach();
+		if (target.isAlive()) {
+			
+			target.damage( (int)(left / 3) + 1, this );
+			spend( TICK );
+			
+			if ((left -= TICK) <= 0) {
+				detach();
+			}
+			
+		} else {
+			detach();
+		}
+		
 		return true;
 	}
 
-	public static float durationFactor(Char ch ) {
+	public static float durationFactor( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() : 1;
 	}
