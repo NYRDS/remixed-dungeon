@@ -2568,4 +2568,6 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
         Baixe por sua conta e risco e divirta-se!\n
     </string>
   <string name="ShieldWeaponInfo">Quando usado como arma, este escudo irá infligir %1$d danos em média.</string>
+  <string name="TownPortal_Name">Portal da Cidade</string>
+  <string name="TownPortal_Info">Este feitiço permite-lhe regressar instantaneamente à segurança. No entanto, uma fonte mágica poderosa nas proximidades pode impedi-lo de funcionar como pretendido.</string>
 </resources>
