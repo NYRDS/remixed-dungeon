@@ -67,9 +67,19 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public static final int BACKPACK_SIZE	= 18;
 	public static final Belongings empty = new Belongings(CharsList.DUMMY);
 
-	private Char owner;
+	private Item selectedItem = CharsList.DUMMY_ITEM;
+
+    private Char owner;
 	
 	public Bag backpack;
+
+	public Item getSelectedItem() {
+		return selectedItem;
+	}
+
+	public void setSelectedItem(Item selectedItem) {
+		this.selectedItem = selectedItem;
+	}
 
 	public enum Slot{
 		NONE,

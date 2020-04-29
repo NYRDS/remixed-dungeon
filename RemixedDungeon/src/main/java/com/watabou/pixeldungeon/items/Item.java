@@ -164,7 +164,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public void execute(Hero hero, String action) {
-		curItem = this;
+		hero.getBelongings().setSelectedItem(this);
 
 		if (action.equals(AC_DROP)) {
 			doDrop(hero);
@@ -516,9 +516,6 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 				});
 	}
 
-	private static Char user = null;
-	protected static Item curItem = null;
-
 	@NotNull
 	private Char owner = CharsList.DUMMY;
 
@@ -526,7 +523,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		@Override
 		public void onSelect(Integer target, Char selector) {
 			if (target != null) {
-				curItem.cast(curItem.getOwner(), target);
+				selector.getBelongings().getSelectedItem().cast(selector, target);
 			}
 		}
 

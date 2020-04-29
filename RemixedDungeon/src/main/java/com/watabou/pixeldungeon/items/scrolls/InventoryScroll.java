@@ -73,20 +73,16 @@ public abstract class InventoryScroll extends Scroll {
 	protected static WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
 
-			((InventoryScroll)curItem).onItemSelected( item, selector );
+			((InventoryScroll) selector.getBelongings().getSelectedItem()).onItemSelected( item, selector );
 			selector.spendAndNext( TIME_TO_READ );
 
 			Sample.INSTANCE.play( Assets.SND_READ );
 			Invisibility.dispel(selector);
 
 		} else if (identifiedByUse) {
-
-			((InventoryScroll)curItem).confirmCancelation();
-
+			((InventoryScroll) selector.getBelongings().getSelectedItem()).confirmCancelation();
 		} else {
-
-			curItem.collect( selector.getBelongings().backpack );
-
+			selector.getBelongings().getSelectedItem().collect( selector.getBelongings().backpack );
 		}
 	};
 }

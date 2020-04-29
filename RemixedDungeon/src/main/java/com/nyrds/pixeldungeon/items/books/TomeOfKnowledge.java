@@ -16,7 +16,7 @@ public class TomeOfKnowledge extends Book {
 
 	@Override
 	protected void doRead(Hero hero) {
-		curItem = detach( hero.getBelongings().backpack );
+		hero.getBelongings().setSelectedItem(detach( hero.getBelongings().backpack ));
 
 		SpellSprite.show( hero, SpellSprite.MASTERY );
 		hero.getSprite().emitter().burst( Speck.factory( Speck.MAGIC ), 8 );

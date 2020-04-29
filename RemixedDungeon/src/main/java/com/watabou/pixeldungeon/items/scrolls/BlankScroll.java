@@ -34,7 +34,7 @@ public class BlankScroll extends Scroll {
 
 	@Override
 	protected void doRead() {
-		curItem.collect( getOwner().getBelongings().backpack );
+		collect( getOwner().getBelongings().backpack );
 		getOwner().spendAndNext( TIME_TO_READ );
 		
 		GLog.i(Game.getVar(R.string.BlankScroll_ReallyBlank));

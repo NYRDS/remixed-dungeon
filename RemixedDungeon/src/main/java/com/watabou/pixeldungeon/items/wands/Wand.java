@@ -159,7 +159,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	public void execute(Hero hero, String action) {
 		if (action.equals(AC_ZAP)) {
 			wandUser = hero;
-			curItem = this;
+			hero.getBelongings().setSelectedItem(this);
 			GameScene.selectCell(zapper);
 			return;
 		}
@@ -395,7 +395,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	protected void wandEffect(final int cell) {
 		setKnown();
 
-		QuickSlot.target(curItem, Actor.findChar(cell));
+		QuickSlot.target(getOwner().getBelongings().getSelectedItem(), Actor.findChar(cell));
 
 		if (curCharges() > 0) {
 
@@ -432,7 +432,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 					return;
 				}
 
-				final Wand curWand = (Wand) Wand.curItem;
+				final Wand curWand = (Wand) selector.getBelongings().getSelectedItem();
 				final int cell = curWand.getDestinationCell(selector.getPos(),target);
 				selector.getSprite().zap(cell);
 				curWand.wandEffect(cell);

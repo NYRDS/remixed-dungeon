@@ -93,7 +93,7 @@ public class Boomerang extends MissileWeapon {
 
 		((MissileSprite) owner.getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, owner.getPos(),
-				curItem, ()-> {
+				this, ()-> {
 					if (throwEquiped) {
 						owner.spend(-TIME_TO_EQUIP);
 						owner.getBelongings().weapon = this;
