@@ -77,7 +77,7 @@ public class Spinner extends Mob {
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
-			Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
+			Buff.affect( enemy, Poison.class,Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
 			setState(MobAi.getStateByClass(Fleeing.class));
 		}
 		

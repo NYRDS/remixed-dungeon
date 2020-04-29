@@ -37,8 +37,7 @@ public class Poison extends Weapon.Enchantment {
 		
 		if (Random.Int( level + 3 ) >= 2) {
 			
-			Buff.affect( defender, com.watabou.pixeldungeon.actors.buffs.Poison.class ).
-				set( com.watabou.pixeldungeon.actors.buffs.Poison.durationFactor( defender ) * (level + 1) );
+			Buff.affect( defender, com.watabou.pixeldungeon.actors.buffs.Poison.class, com.watabou.pixeldungeon.actors.buffs.Poison.durationFactor( defender ) * (level + 1) );
 			
 			return true;
 		} else {
