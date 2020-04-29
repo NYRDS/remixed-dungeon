@@ -67,18 +67,17 @@ public abstract class InventoryScroll extends Scroll {
 		} );
 	}
 	
-	protected abstract void onItemSelected( Item item );
+	protected abstract void onItemSelected(Item item, Char selector);
 
 	protected static boolean identifiedByUse = false;
 	protected static WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
-			Char owner = item.getOwner();
 
-			((InventoryScroll)curItem).onItemSelected( item );
-			owner.spendAndNext( TIME_TO_READ );
+			((InventoryScroll)curItem).onItemSelected( item, selector );
+			selector.spendAndNext( TIME_TO_READ );
 
 			Sample.INSTANCE.play( Assets.SND_READ );
-			Invisibility.dispel(owner);
+			Invisibility.dispel(selector);
 
 		} else if (identifiedByUse) {
 
@@ -86,7 +85,7 @@ public abstract class InventoryScroll extends Scroll {
 
 		} else {
 
-			curItem.collect( curItem.getOwner().getBelongings().backpack );
+			curItem.collect( selector.getBelongings().backpack );
 
 		}
 	};

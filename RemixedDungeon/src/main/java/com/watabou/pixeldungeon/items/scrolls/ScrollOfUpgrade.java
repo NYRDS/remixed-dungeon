@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.items.scrolls;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
@@ -35,16 +34,16 @@ public class ScrollOfUpgrade extends InventoryScroll {
 	}
 	
 	@Override
-	protected void onItemSelected( Item item ) {
+	protected void onItemSelected(Item item, Char selector) {
 
-		ScrollOfRemoveCurse.uncurse( Dungeon.hero, item );
+		ScrollOfRemoveCurse.uncurse( selector, item );
 		item.upgrade();
 		
 		GLog.p( Game.getVar(R.string.ScrollOfUpgrade_LooksBetter), item.name() );
 		
 		Badges.validateItemLevelAcquired( item );
 		
-		upgrade( getOwner() );
+		upgrade( selector );
 	}
 	
 	public static void upgrade(Char hero ) {
