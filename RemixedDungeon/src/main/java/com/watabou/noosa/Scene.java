@@ -17,13 +17,16 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.input.Keys;
 import com.watabou.utils.Signal;
 
 public class Scene extends Group {
 	
 	private Signal.Listener<Keys.Key> keyListener;
-	
+
+	protected LuaScript script = new LuaScript("scripts/services/scene", null);
+
 	public void create() {
 		Keys.event.add( keyListener = key -> {
 			if (Game.instance() != null && key.pressed) {
@@ -38,7 +41,14 @@ public class Scene extends Group {
 			}
 		});
 	}
-	
+
+	@Override
+	public void update() {
+		script.runOptionalNoRet("onStep", this.getClass().getSimpleName());
+
+		super.update();
+	}
+
 	@Override
 	public void destroy() {
 		Keys.event.remove( keyListener );

@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors;
 import android.annotation.SuppressLint;
 import android.util.Log;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
@@ -42,12 +43,12 @@ public abstract class Actor implements Bundlable {
 	@Packable
 	private float time;
 
-	public Actor() {
-		time = now;
-	}
-
 	public static void setRealTimeMultiplier(float realTimeMultiplier) {
 		Actor.realTimeMultiplier = realTimeMultiplier;
+	}
+
+	public Actor() {
+		time = now;
 	}
 
 	protected abstract boolean act();
@@ -322,5 +323,15 @@ public abstract class Actor implements Bundlable {
 
 	public static HashSet<Actor> all() {
 		return all;
+	}
+
+	@LuaInterface
+	public float actorTime() {
+		return time;
+	}
+
+	@LuaInterface
+	static public float localTime() {
+		return now;
 	}
 }
