@@ -495,7 +495,7 @@ public class GameScene extends PixelScene {
 
     public void brightness(boolean value) {
 
-        float levelLimit = Math.min(Dungeon.level.getPropertyFloat("maxBrightness", MAX_BRIGHTNESS),
+        float levelLimit = Math.min(Dungeon.level.getProperty("maxBrightness", MAX_BRIGHTNESS),
                 DungeonGenerator.getLevelProperty(Dungeon.level.levelId,"maxBrightness", MAX_BRIGHTNESS));
 
 

@@ -27,6 +27,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
@@ -549,6 +550,14 @@ public abstract class Level implements Bundlable {
 
 		boolean pitNeeded = Dungeon.depth > 1 && weakFloorCreated;
 
+		if(DungeonGenerator.getLevelProperty(levelId, "noBuild", false)) {
+			Tools.makeEmptyLevel(this);
+			createScript();
+			buildFlagMaps();
+			cleanWalls();
+			return;
+		}
+
 		do {
 			Arrays.fill(map, feeling == Feeling.CHASM ? Terrain.CHASM
 					: Terrain.WALL);
@@ -558,10 +567,8 @@ public abstract class Level implements Bundlable {
 
 		} while (!build());
 		decorate();
-
 		buildFlagMaps();
 		cleanWalls();
-
 		createMobs();
 		createItems();
 		createScript();
@@ -1717,10 +1724,12 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public float getPropertyFloat(String key, float defVal) {
-		String propValue = getProperty(key, Float.toString(defVal));
+	public boolean getProperty(String key, boolean defVal) {
+		return defVal;
+	}
 
-		return Float.parseFloat(propValue);
+	public float getProperty(String key, float defVal) {
+		return defVal;
 	}
 
 	public String getProperty(String key, String defVal) {

@@ -43,7 +43,7 @@
 
     "random":{"kind":"RandomLevel", "depth":1,       "size":[32,32], "file": "levelsDesc/TestLevelRandom.json"},
 
-    "1":{"kind":"SewerLevel", "depth":1,       "size":[32,32]},
+    "1":{"kind":"SewerLevel", "depth":1,       "size":[32,32], "noBuild": true},
     "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
     "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
     "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
@@ -77,7 +77,7 @@
     "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
     },
     "Graph":{
-    "0":[["testLevel"],[]],
+    "0":[["1"],[]],
     "testLevel":[[],[]],
 
     "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],
