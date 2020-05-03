@@ -16,7 +16,6 @@ public class Position implements Bundlable {
 
 	@Packable
 	public int x = -1;
-
 	@Packable
 	public int y = -1;
 

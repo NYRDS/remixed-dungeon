@@ -201,4 +201,8 @@ public class EventCollector {
 			FirebaseCrashlytics.getInstance().setCustomKey(key, value);
 		}
 	}
+
+    public static void disable() {
+		mDisabled = true;
+    }
 }

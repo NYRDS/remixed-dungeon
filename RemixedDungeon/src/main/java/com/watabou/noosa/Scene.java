@@ -25,7 +25,7 @@ public class Scene extends Group {
 	
 	private Signal.Listener<Keys.Key> keyListener;
 
-	protected LuaScript script = new LuaScript("scripts/services/scene", null);
+	static protected LuaScript script = new LuaScript("scripts/services/scene", null);
 
 	public void create() {
 		Keys.event.add( keyListener = key -> {
@@ -73,4 +73,7 @@ public class Scene extends Group {
 	protected void onMenuPressed() {
 	}
 
+	public static void setMode(String mode) {
+		script.run("setMode", mode);
+	}
 }

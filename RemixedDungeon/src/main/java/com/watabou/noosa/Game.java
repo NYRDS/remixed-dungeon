@@ -129,7 +129,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public Game(Class<? extends Scene> c) {
         super();
-        instance(this);
+        instance = this;
         sceneClass = c;
     }
 
@@ -254,8 +254,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public static void syncAdsState() {
-
-        //GLog.w("diff %d", getDifficulty());
 
         if(RemixedDungeon.donated() > 0) {
             AdsUtils.removeTopBanner();
@@ -502,10 +500,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public synchronized static Game instance() {
         return instance;
-    }
-
-    private synchronized static void instance(Game instance) {
-        Game.instance = instance;
     }
 
     public static boolean smallResScreen() {

@@ -19,11 +19,10 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
-import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.EuConsent;
+import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -36,7 +35,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
-import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BannerSprites;
@@ -51,9 +49,7 @@ import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 public class StartScene extends PixelScene {
 
@@ -355,28 +351,7 @@ public class StartScene extends PixelScene {
     }
 
     private void startNewGame(int difficulty) {
-
-        Dungeon.setDifficulty(difficulty);
-        Dungeon.hero = null;
-        Dungeon.heroClass = curShield.cl;
-
-
-        Map<String,String> resDesc = new HashMap<>();
-        resDesc.put("class",curShield.cl.name());
-        resDesc.put("mod", RemixedDungeon.activeMod());
-        resDesc.put("difficulty",  String.valueOf(difficulty));
-
-        EventCollector.logEvent("game", resDesc);
-
-        Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
-        ServiceManNPC.resetLimit();
-
-        if (RemixedDungeon.intro()) {
-            RemixedDungeon.intro(false);
-            Game.switchScene(IntroScene.class);
-        } else {
-            InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
-        }
+        GameControl.startNewGame(curShield.cl.name(), difficulty, false);
     }
 
     @Override

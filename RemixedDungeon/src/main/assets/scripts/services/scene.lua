@@ -8,13 +8,56 @@ local RPD = require "scripts/lib/commonClasses"
 
 local gameScene = require "scripts/services/gameScene"
 
+local GameControl = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
+
+local levels = RPD.DungeonGenerator:getLevelsList()
+local levelsSize = levels:size()
+local currentLevel = 0
+local framesOnLevel = 0
+
 local service = {}
 
-service.onStep = function(self, scene)
+local function noneMode(self, scene)
+
+end
+
+local function stdMode(self, scene)
     if scene == "GameScene" then
         gameScene.onStep()
     end
 end
 
+local function levelsTestMode(self, scene)
+    if scene == "GameScene" then
+
+        framesOnLevel = framesOnLevel + 1
+
+        if framesOnLevel > 100 then
+            currentLevel = currentLevel + 1
+
+            if currentLevel < levelsSize then
+                framesOnLevel = 0
+                GameControl:changeLevel(levels:get(currentLevel))
+            else
+                service.onStep = stdMode
+                GameControl:titleScene()
+            end
+        end
+    end
+
+    if scene == "TitleScene" then
+        GameControl:startNewGame("WARRIOR", 2, true)
+    end
+end
+
+local modes = {}
+modes["std"] = stdMode
+modes["levelsTest"] = levelsTestMode
+
+service.onStep = stdMode
+
+service.setMode = function(self, mode)
+    service.onStep = modes[mode] or noneMode
+end
 
 return service

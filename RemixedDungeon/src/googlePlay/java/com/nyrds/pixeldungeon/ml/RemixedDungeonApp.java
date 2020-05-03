@@ -102,7 +102,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
         } catch (Throwable hqSdkCrash) {
             EventCollector.logException(new HqSdkCrash(hqSdkCrash));
         }
-
     }
 
     static public Context getContext() {
