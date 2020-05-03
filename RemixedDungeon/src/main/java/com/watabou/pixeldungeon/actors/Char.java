@@ -558,7 +558,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void spend(float time) {
 
 		float timeScale = 1f;
-		timeScale *= 0.5f/(1+buffLevel(Slow.class));
+		timeScale *= 1.f/(1+buffLevel(Slow.class));
 		timeScale *= (1 + buffLevel(Speed.class));
 
 		float scaledTime = time / timeScale;
