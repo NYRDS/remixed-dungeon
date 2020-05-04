@@ -35,7 +35,7 @@ public class Metabolism extends Glyph {
 	private static ItemSprite.Glowing RED = new ItemSprite.Glowing( 0xCC0000 );
 	
 	@Override
-	public int proc( Armor armor, Char attacker, Char defender, int damage) {
+	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {
 
 		int level = Math.max( 0, armor.level() );
 		if (Random.Int( level / 2 + 5 ) >= 4) {

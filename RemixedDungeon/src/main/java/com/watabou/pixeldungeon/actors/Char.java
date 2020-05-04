@@ -402,7 +402,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		forEachBuff(b->damage[0] = b.defenceProc(this, enemy, damage[0]));
 
 		if (getBelongings().armor != null) {
-			damage[0] = getBelongings().armor.proc(enemy, this, damage[0]);
+			damage[0] = getBelongings().armor.defenceProc(enemy, this, damage[0]);
 		}
 
 		return damage[0];
@@ -1203,4 +1203,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public abstract Char makeClone();
+
+	public ArrayList<String> actions(Char hero) {
+		ArrayList<String> actions = new ArrayList<>();
+		actions.add("niy");
+		actions.add("niy");
+		return actions;
+	}
+
+	public void execute(Char hero, String action) {
+	}
 }

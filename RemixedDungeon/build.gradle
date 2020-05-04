@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.google.firebase.crashlytics'
 
-
 ext.getApiField = { name ->
     def stringsFile = "RemixedDungeon/src/main/res/values/strings_api_signature.xml"
     return new XmlParser().parse(stringsFile).string.find { it.@name.equals name }.text()
@@ -31,8 +30,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 876
-        versionName "29.5.pre_alpha.3"
+        versionCode 877
+        versionName "29.5.pre_alpha.4"
     }
 
     aaptOptions {
@@ -81,8 +80,6 @@ android {
         }
 
     }
-
-
 }
 
 

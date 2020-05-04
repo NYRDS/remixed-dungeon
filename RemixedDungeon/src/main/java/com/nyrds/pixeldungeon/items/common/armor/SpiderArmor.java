@@ -16,10 +16,10 @@ public class SpiderArmor extends Armor {
 	}
 
 	@Override
-	public int proc(Char attacker, Char defender, int damage) {
+	public int defenceProc(Char attacker, Char defender, int damage) {
 		if (Random.Int(100) < 50) {
 			GameScene.add(Blob.seed(defender.getPos(), Random.Int(5, 7), Web.class));
 		}
-		return super.proc(attacker, defender, damage);
+		return super.defenceProc(attacker, defender, damage);
 	}
 }

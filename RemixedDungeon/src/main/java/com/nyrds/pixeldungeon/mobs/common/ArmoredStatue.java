@@ -87,7 +87,7 @@ public class ArmoredStatue extends Mob {
 	@Override
 	public int defenseProc(Char enemy, int damage) {
 		damage = super.defenseProc(enemy, damage);
-		return getArmor().proc(enemy, this, damage);
+		return getArmor().defenceProc(enemy, this, damage);
 	}
 
 	@Override

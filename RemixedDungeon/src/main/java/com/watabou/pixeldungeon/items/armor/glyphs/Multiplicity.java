@@ -37,7 +37,7 @@ public class Multiplicity extends Glyph {
 	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xCCAA88 );
 	
 	@Override
-	public int proc( Armor armor, Char attacker, Char defender, int damage) {
+	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {
 
 		int level = Math.max( 0, armor.level() );
 		

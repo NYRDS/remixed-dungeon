@@ -18,19 +18,55 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.windows.HBox;
+import com.nyrds.pixeldungeon.windows.VHBox;
 import com.watabou.noosa.ColorBlock;
+import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoMob extends WndTitledMessage {
 
+	private static final float BUTTON_WIDTH		= 36;
+
 	public WndInfoMob( Mob mob ) {
 		super( new MobTitle( mob ), desc( mob, true ) );
+
+		VHBox actions = new VHBox(width - 2* GAP);
+		actions.setAlign(HBox.Align.Width);
+		actions.setGap(GAP);
+
+		if (Dungeon.hero.isAlive() && mob.getOwner() == Dungeon.hero) {
+			for (final String action:mob.actions( Dungeon.hero )) {
+
+				if(Dungeon.hero.getHeroClass().forbidden(action)){
+					continue;
+				}
+
+				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
+					@Override
+					protected void onClick() {
+						mob.execute( Dungeon.hero, action );
+						hide();
+					}
+				};
+				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );
+
+				actions.add(btn);
+			}
+		}
+
+		add(actions);
+		actions.setPos(GAP, height+2*GAP);
+
+		resize( width, (int) (actions.bottom() + GAP));
 	}
 
 	public WndInfoMob( Mob mob, int knowledge) {

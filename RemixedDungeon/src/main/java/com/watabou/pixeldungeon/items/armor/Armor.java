@@ -120,10 +120,10 @@ public class Armor extends EquipableItem {
 		return super.degrade();
 	}
 	
-	public int proc( Char attacker, Char defender, int damage ) {
+	public int defenceProc(Char attacker, Char defender, int damage ) {
 		
 		if (glyph != null) {
-			damage = glyph.proc( this, attacker, defender, damage );
+			damage = glyph.defenceProc( this, attacker, defender, damage );
 		}
 		
 		if (!isLevelKnown()) {
@@ -293,7 +293,7 @@ public class Armor extends EquipableItem {
 		
 		private static final float[] chances= new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 			
-		public abstract int proc( Armor armor, Char attacker, Char defender, int damage );
+		public abstract int defenceProc(Armor armor, Char attacker, Char defender, int damage );
 		
 		public String name() {
 			return name( Game.getVar(R.string.Armor_Glyph));

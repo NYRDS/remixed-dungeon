@@ -35,7 +35,7 @@ public class Displacement extends Glyph {
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66AAFF );
 	
 	@Override
-	public int proc( Armor armor, Char attacker, Char defender, int damage ) {
+	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {
 
 		if (Dungeon.bossLevel()) {
 			return damage;
