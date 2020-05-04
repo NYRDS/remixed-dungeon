@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels;
 
 import android.annotation.SuppressLint;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
@@ -903,7 +904,8 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	protected void buildFlagMaps() {
+	@LuaInterface
+	public void buildFlagMaps() {
 
 		for (int i = 0; i < getLength(); i++) {
 			int flags = TerrainFlags.flags[map[i]];
@@ -970,7 +972,8 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	protected void cleanWalls() {
+	@LuaInterface
+	public void cleanWalls() {
 		for (int i = 0; i < getLength(); i++) {
 
 			boolean d = false;
