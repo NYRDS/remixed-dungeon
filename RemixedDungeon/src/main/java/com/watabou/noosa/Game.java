@@ -430,6 +430,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return paused;
     }
 
+    @LuaInterface
     public static void resetScene() {
         switchScene(instance().sceneClass);
     }
