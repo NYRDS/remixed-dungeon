@@ -39,7 +39,7 @@ public class TestLevel extends RegularLevel {
 	@Override
 	protected boolean build() {
 		super.build();
-		Tools.makeEmptyLevel(this);
+		Tools.makeEmptyLevel(this, true);
 		return true;
 	}
 

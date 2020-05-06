@@ -30,8 +30,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 877
-        versionName "29.5.pre_alpha.4"
+        versionCode 878
+        versionName "29.5.pre_alpha.5"
     }
 
     aaptOptions {
@@ -100,7 +100,7 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'io.humanteq.hqm:hqm-core:2.0.4'
+    implementation 'io.humanteq.hqm:hqm-core:2.0.5'
 
     implementation 'com.android.billingclient:billing:2.2.0'
     implementation 'commons-io:commons-io:2.5'
@@ -115,12 +115,12 @@ dependencies {
     implementation 'com.appodeal.ads.sdk.networks:adcolony:2.7.1.3'
     implementation 'com.appodeal.ads.sdk.networks:applovin:2.7.1.4'
     implementation 'com.appodeal.ads.sdk.networks:appodealx:2.7.1.1'
-    implementation 'com.appodeal.ads.sdk.networks:chartboost:2.7.1.2'
+    //implementation 'com.appodeal.ads.sdk.networks:chartboost:2.7.1.2'
     implementation 'com.appodeal.ads.sdk.networks:inmobi:2.7.1.2'
     implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.1.4'
     implementation 'com.appodeal.ads.sdk.networks:mraid:2.7.1.1'
     implementation 'com.appodeal.ads.sdk.networks:smaato:2.7.1.2'
-    implementation 'com.appodeal.ads.sdk.networks:tapjoy:2.7.1.3'
+    //implementation 'com.appodeal.ads.sdk.networks:tapjoy:2.7.1.3'
     implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.1.3'
     implementation 'com.appodeal.ads.sdk.networks:vast:2.7.1.1'
     implementation 'com.appodeal.ads.sdk.networks:vungle:2.7.1.1'

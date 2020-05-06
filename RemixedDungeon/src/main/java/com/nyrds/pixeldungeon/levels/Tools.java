@@ -84,7 +84,7 @@ public class Tools {
 		}
 	}
 
-	public static void makeEmptyLevel(Level level) {
+	public static void makeEmptyLevel(Level level, boolean randomEntrance) {
 		int width = level.getWidth();
 		int height = level.getHeight();
 
@@ -104,10 +104,22 @@ public class Tools {
 			level.set(width-1, j , Terrain.WALL);
 		}
 
-		level.entrance = level.cell(width/4,height/4);
+		int entrance = level.cell(width/4,height/4);
+		int exit     = level.cell(width-width/4,height-height/4);
+
+		if (randomEntrance) {
+			entrance = level.getRandomTerrainCell(Terrain.EMPTY);
+
+			do {
+				exit = level.getRandomTerrainCell(Terrain.EMPTY);
+			} while (level.distance(entrance,exit) < Math.max(width,height) / 4);
+
+		}
+
+		level.entrance = entrance;
 		level.set(level.entrance, Terrain.ENTRANCE);
 
-		level.setExit(level.cell(width-width/4,height-height/4),0);
+		level.setExit(exit,0);
 		level.set(level.getExit(0), Terrain.EXIT);
 
 		GameScene.updateMap();

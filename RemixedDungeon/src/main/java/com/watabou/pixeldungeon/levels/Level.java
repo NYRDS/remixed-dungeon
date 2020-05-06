@@ -552,7 +552,7 @@ public abstract class Level implements Bundlable {
 		boolean pitNeeded = Dungeon.depth > 1 && weakFloorCreated;
 
 		if(DungeonGenerator.getLevelProperty(levelId, "noBuild", false)) {
-			Tools.makeEmptyLevel(this);
+			Tools.makeEmptyLevel(this, true);
 			createScript();
 			buildFlagMaps();
 			cleanWalls();

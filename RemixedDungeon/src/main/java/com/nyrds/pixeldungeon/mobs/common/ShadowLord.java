@@ -89,7 +89,7 @@ public class ShadowLord extends Boss implements IZapper {
 
 		if(!levelCreated)
 		{
-			Tools.makeEmptyLevel(level);
+			Tools.makeEmptyLevel(level, false);
 			Tools.buildShadowLordMaze(level, 6);
 			levelCreated = true;
 		}
@@ -214,7 +214,7 @@ public class ShadowLord extends Boss implements IZapper {
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
 		yell(Game.getVar(R.string.ShadowLord_Death));
-		Tools.makeEmptyLevel(Dungeon.level);
+		Tools.makeEmptyLevel(Dungeon.level, false);
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}
 
