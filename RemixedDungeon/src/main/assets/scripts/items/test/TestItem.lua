@@ -63,6 +63,7 @@ return item.init{
                     "action4",
                     "inputText",
                     "checkText",
+                    "runAsCommand",
                     tostring(item:getId()),
                     tostring(self.data.activationCount),
                     tostring(self)
@@ -114,6 +115,14 @@ return item.init{
         if action == "checkText" then
             local userText = RPD.System.Input:getInputString()
             RPD.glog(userText)
+        end
+
+        if action == "runAsCommand" then
+            local userText = RPD.System.Input:getInputString()
+            local res, ret = pcall(load(userText, nil,nil, RPD))
+            if not res then
+                RPD.glogn(ret)
+            end
         end
     end,
 

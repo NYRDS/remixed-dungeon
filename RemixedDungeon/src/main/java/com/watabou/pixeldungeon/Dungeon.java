@@ -451,8 +451,6 @@ public class Dungeon {
         }
 
         if (level != null && hero!= null && hero.isAlive()) {
-            EventCollector.startTrace("saveGame");
-
             Level thisLevel = Dungeon.level;
 
             Actor.fixTime();
@@ -476,8 +474,6 @@ public class Dungeon {
             }
 
             GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
-
-            EventCollector.stopTrace("saveGame", "saveGame", level.levelId, Game.version);
 
         } else if (WndResurrect.instance != null) {
 

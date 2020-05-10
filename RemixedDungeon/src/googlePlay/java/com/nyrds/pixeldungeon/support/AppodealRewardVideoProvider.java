@@ -2,11 +2,9 @@ package com.nyrds.pixeldungeon.support;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.RemixedDungeon;
-import com.watabou.pixeldungeon.utils.Utils;
 
 class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider {
 
@@ -18,7 +16,6 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
         Game.instance().runOnUiThread(() -> {
             AppodealAdapter.init();
-            EventCollector.startTrace(APPODEAL_REWARD_VIDEO);
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
@@ -29,7 +26,6 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
                 public void onRewardedVideoLoaded(boolean b) {
                     if(firstLoad) {
                         firstLoad = false;
-                        EventCollector.stopTrace(APPODEAL_REWARD_VIDEO, APPODEAL_REWARD_VIDEO, "ok", Utils.EMPTY_STRING);
                     }
                 }
 
@@ -37,7 +33,6 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
                 public void onRewardedVideoFailedToLoad() {
                     if(firstLoad) {
                         firstLoad = false;
-                        EventCollector.stopTrace(APPODEAL_REWARD_VIDEO, APPODEAL_REWARD_VIDEO, "fail", Utils.EMPTY_STRING);
                     }
                 }
 
