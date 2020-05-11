@@ -97,7 +97,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-	protected int owner = -1;
+	private
+	int owner = EntityIdSource.INVALID_ID;
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
 	private int pos     = Level.INVALID_CELL;
@@ -213,6 +214,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             id = EntityIdSource.getNextId();
             CharsList.add(this,id);
         }
+
+		if(getOwnerId() < 0) { //fix pre 29.4.fix.6 saves
+			setOwnerId(id);
+		}
 
 		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);
@@ -833,12 +838,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int getOwnerId() {
+		if(owner<0) {
+			setOwnerId(getId());
+		}
 		return owner;
 	}
 
+	@NotNull
 	@LuaInterface
 	public Char getOwner() {
-		return CharsList.getById(owner);
+		return CharsList.getById(getOwnerId());
 	}
 
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
@@ -1203,4 +1212,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public abstract Char makeClone();
+
+	protected void setOwnerId(int owner) {
+		this.owner = owner;
+	}
 }
