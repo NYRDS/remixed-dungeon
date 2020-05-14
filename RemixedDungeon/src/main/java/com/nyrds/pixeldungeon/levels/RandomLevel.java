@@ -85,6 +85,9 @@ public class RandomLevel extends RegularLevel {
 			throw ModdingMode.modException("RandomLevel",e);
 		}
 
+
+		if (noBuild()) return;
+
 		do {
 			Arrays.fill(map, feeling == Feeling.CHASM ? Terrain.CHASM
 					: Terrain.WALL);

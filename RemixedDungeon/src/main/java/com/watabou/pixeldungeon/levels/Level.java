@@ -551,13 +551,7 @@ public abstract class Level implements Bundlable {
 
 		boolean pitNeeded = Dungeon.depth > 1 && weakFloorCreated;
 
-		if(DungeonGenerator.getLevelProperty(levelId, "noBuild", false)) {
-			Tools.makeEmptyLevel(this, true);
-			createScript();
-			buildFlagMaps();
-			cleanWalls();
-			return;
-		}
+		if (noBuild()) return;
 
 		do {
 			Arrays.fill(map, feeling == Feeling.CHASM ? Terrain.CHASM
@@ -573,6 +567,17 @@ public abstract class Level implements Bundlable {
 		createMobs();
 		createItems();
 		createScript();
+	}
+
+	protected boolean noBuild() {
+		if(DungeonGenerator.getLevelProperty(levelId, "noBuild", false)) {
+			Tools.makeEmptyLevel(this, true);
+			createScript();
+			buildFlagMaps();
+			cleanWalls();
+			return true;
+		}
+		return false;
 	}
 
 	protected void createScript() {
