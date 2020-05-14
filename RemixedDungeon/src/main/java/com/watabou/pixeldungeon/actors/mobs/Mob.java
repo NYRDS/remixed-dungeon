@@ -128,7 +128,7 @@ public abstract class Mob extends Char {
 
 	public void releasePet() {
 		setFraction(Fraction.DUNGEON);
-		owner = EntityIdSource.INVALID_ID;
+		setOwnerId(getId());
 	}
 
 	@LuaInterface
@@ -141,22 +141,18 @@ public abstract class Mob extends Char {
 	public static Mob makePet(@NotNull Mob pet, int ownerId) {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
-			pet.owner = ownerId;
+			pet.setOwnerId(ownerId);
 		}
 		return pet;
 	}
 
 	@Override
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
-		return owner >= 0 && getOwner() instanceof Hero;
+		return getOwner() instanceof Hero;
 	}
 
 	@LuaInterface
 	public int getOwnerPos() {
-		if(owner<0) {
-			return getPos();
-		}
-
 		return getOwner().getPos();
 	}
 
@@ -358,7 +354,7 @@ public abstract class Mob extends Char {
 			Wound.hit(this);
 		}
 
-		if(owner!=enemy.getId()) {
+		if(getOwnerId() !=enemy.getId()) {
 			setEnemy(enemy);
 		}
 
@@ -597,7 +593,7 @@ public abstract class Mob extends Char {
 
 		if(getEnemy() == chr) {return false;}
 
-		if(owner == chr.getId()) {
+		if(getOwnerId() == chr.getId()) {
 			return true;
 		}
 
@@ -607,7 +603,7 @@ public abstract class Mob extends Char {
 
 		if(chr instanceof Mob) {
 			Mob mob = (Mob)chr;
-			if(owner >= 0 && owner == mob.owner) {
+			if(getOwnerId() == mob.getOwnerId()) {
 				return true;
 			}
 		}

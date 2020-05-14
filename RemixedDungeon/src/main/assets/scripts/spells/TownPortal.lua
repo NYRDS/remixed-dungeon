@@ -23,7 +23,11 @@ return spell.init{
             spellCost     = 3
         }
     end,
-    cast = function(self, spell, chr)
+    cast = function(self, spell, caster)
+        if caster:level():isBossLevel() then
+            RPD.glogn("ScrollOfTeleportation_NoTeleport")
+            return false
+        end
         RPD.teleportTo("town_2", 15,11)
         return true
     end
