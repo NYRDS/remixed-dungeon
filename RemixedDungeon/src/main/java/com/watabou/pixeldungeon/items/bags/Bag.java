@@ -46,7 +46,6 @@ public class Bag extends Item implements Iterable<Item> {
 	
 	public Char owner;
 	public ArrayList<Item> items = new ArrayList<>();
-	public int size = Belongings.getBackpackSize();
 		
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
@@ -151,7 +150,7 @@ public class Bag extends Item implements Iterable<Item> {
 
 	@Override
 	public String desc() {
-		return Utils.format(super.desc(),size);
+		return Utils.format(super.desc(), getSize());
 	}
 
 
@@ -173,6 +172,9 @@ public class Bag extends Item implements Iterable<Item> {
 		return new BagIterator();
 	}
 
+	public int getSize() {
+		return owner instanceof Hero ? Belongings.getBackpackSize() : Belongings.getBackpackSize() + 1;
+	}
 
 
 	private class BagIterator implements Iterator<Item> {

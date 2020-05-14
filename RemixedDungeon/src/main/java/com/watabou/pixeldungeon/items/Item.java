@@ -225,7 +225,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			}
 		}
 
-		if (items.size() < (container instanceof Backpack ? container.size + 1 : container.size)) {
+		if (items.size() < (container instanceof Backpack ? container.getSize() + 1 : container.getSize())) {
 			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
 				Badges.validateItemLevelAcquired(this);
 			}

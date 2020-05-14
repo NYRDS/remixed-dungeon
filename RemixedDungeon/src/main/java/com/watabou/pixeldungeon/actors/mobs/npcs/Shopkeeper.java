@@ -19,8 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.levels.PredesignedLevel;
-import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -34,7 +32,6 @@ import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -44,6 +41,8 @@ import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Collections;
 
@@ -90,16 +89,6 @@ public class Shopkeeper extends NPC {
 		return true;
 	}
 
-
-	@Override
-	public void onSpawn(Level level) {
-		super.onSpawn(level);
-
-		if(level instanceof PredesignedLevel) {
-			TownShopLevel.fillInventory(this);
-		}
-	}
-
 	private WndBag.Listener sellItemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect(Item item, Char selector) {
@@ -125,7 +114,7 @@ public class Shopkeeper extends NPC {
 	public boolean interact(final Char hero) {
 
 		int attempts = 0;
-		while(getBelongings().backpack.items.size() < getBelongings().backpack.size + 2 && attempts < 100) {
+		while(getBelongings().backpack.items.size() < getBelongings().backpack.getSize() + 2 && attempts < 100) {
 			generateNewItem();
 			attempts++;
 		}
@@ -196,6 +185,13 @@ public class Shopkeeper extends NPC {
 	@Override
 	public Belongings getBelongings() {
 		return belongings;
+	}
+
+	@Override
+	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+		super.fromJson(mobDesc);
+
+		belongings.setupFromJson(mobDesc);
 	}
 
 	@Override

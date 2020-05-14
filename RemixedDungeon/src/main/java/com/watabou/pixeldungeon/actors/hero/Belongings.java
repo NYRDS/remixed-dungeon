@@ -351,7 +351,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 	}
 
-	void setupFromJson(@NotNull JSONObject desc) throws JSONException {
+	public void setupFromJson(@NotNull JSONObject desc) throws JSONException {
 		try {
 			if (desc.has("armor")) {
 				armor = (Armor) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
