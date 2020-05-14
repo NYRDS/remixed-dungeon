@@ -1272,7 +1272,7 @@ public class Hero extends Char {
 
 		if (ankh == null) {
 			if (this.subClass == HeroSubClass.LICH && this.getSkillPoints() == this.getSkillPointsMax()) {
-				this.setSoulPoints(0);
+				this.setSkillPoints(0);
 				GameScene.show(new WndResurrect(null, cause));
 			} else {
 				reallyDie(cause);
@@ -1697,7 +1697,7 @@ public class Hero extends Char {
 	}
 
 	public void accumulateSkillPoints(int n) {
-		setSoulPoints(Math.min(Scrambler.descramble(sp)+n, getSkillPointsMax()));
+		setSkillPoints(Math.min(Scrambler.descramble(sp)+n, getSkillPointsMax()));
 	}
 
 	public int getSkillPoints() {
@@ -1709,14 +1709,14 @@ public class Hero extends Char {
 	}
 
 	public void spendSkillPoints(int cost) {
-		setSoulPoints(Scrambler.descramble(sp) - cost);
+		setSkillPoints(Scrambler.descramble(sp) - cost);
 	}
 
 	public boolean enoughSP(int cost) {
 		return getSkillPoints() >= cost;
 	}
 
-	public void setSoulPoints(int points) {
+	public void setSkillPoints(int points) {
 		sp = Scrambler.scramble(Math.max(0,Math.min(points, getSkillPointsMax())));
 		QuickSlot.refresh();
 	}

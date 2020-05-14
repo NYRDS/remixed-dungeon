@@ -26,7 +26,7 @@ public class ManaPotion extends Drink {
 			detach( hero.getBelongings().backpack );
 			GLog.i( Game.getVar(R.string.Drink_Message) );
 
-			hero.setSoulPoints(hero.getSkillPoints() + hero.getSkillPointsMax()/3);
+			hero.setSkillPoints(hero.getSkillPoints() + hero.getSkillPointsMax()/3);
 			hero.getSprite().operate( hero.getPos() );
 			hero.busy();
 

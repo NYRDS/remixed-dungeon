@@ -156,7 +156,7 @@ public enum HeroClass implements CharModifier {
                 hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
                 hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
-                hero.setSoulPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", 0)));
+                hero.setSkillPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", 0)));
 
             } catch (JSONException e) {
                 throw ModdingMode.modException("bad InitHero.json",e);
