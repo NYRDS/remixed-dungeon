@@ -1,0 +1,31 @@
+ini adalah game roguelike open source dengan grafis gaya piksel
+
+Sekali waktu, ada sebuah kota kecil. Penduduk kota hidup bahagia, tetapi mereka sangat miskin sehingga mereka bahkan tidak mampu pergi ke suatu tempat yang layak pada hari libur. Tetapi pada hari ketika semua orang meninggalkan semua harapan, sebuah keajaiban terjadi. Tanah di bawah kota berguncang dengan keras dan mengeluarkan banyak sekali monster tercela. Sejak saat itu, semua penduduk kota yang selamat hidup bahagia selamanya. Mengapa? Karena penjara bawah tanah telah menarik semua jenis pahlawan dan petualang. Mereka melindungi orang-orang tak berdosa dan akhirnya menjadi pembelanja yang luar biasa, meningkatkan perekonomian kota.
+dan sekarang kota kecil itu berkembang, karena berdiri di atas dungeon berbahaya yang penuh dengan petualang mati dan jiwa mereka yang menyedihkan.
+
+Fitur permainan:
+Permainan ini memungkinan modifikasi dari pemain. Dan seiring pengembangan fitur ini, secepatnya kamu dapat membuat permainan baru didalam Remixed Dungeon!
+- Pengalaman hardcore roguelike!
+7 tipe pahlawan yang bisa dipilih
+- Kota sebagai pusat untuk mempersiapkan perjalanan Anda dan memperkenalkan Anda ke dunia permainan ini
+- Lebih dari 30 level penjara utama terbagi menjadi 6 tipe penjara
+- 3 penjara bawah tanah pilihan: Sarang Laba-laba, Nekropolis, Gua Es
+- Berlusin-lusin item dan monster
+- Berbagai bos
+- Topi! Semua suka topi
+
+Bergabunglah dengan server Discord kami:
+https://discordapp.com/invite/AMXrhQZ
+
+Ikuti kami di twitter:
+https://twitter.com/nyrds
+
+Permainan ini adalah perangkat lunak kode terbuka dibawah lisensi GPLv3. Kode sumber Remixed Dungeon dapat dilihat disini:
+https://github.com/NYRDS/remixed-dungeon
+
+Jika Anda ingin membantu dalam penerjemahan ke bahasa lain mohon kunjungi:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Kamu bisa mengecek
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+untuk catatan perubahan lengkap ada di wiki kami
