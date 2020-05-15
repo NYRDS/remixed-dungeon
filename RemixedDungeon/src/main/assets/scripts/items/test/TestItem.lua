@@ -72,6 +72,11 @@ return item.init{
     end,
 
     cellSelected = function(self, thisItem, action, cell)
+
+        local owner = thisItem:getOwner()
+
+        RPD.glog("owner: %s", tostring(owner))
+
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getOwner():getPos(), cell, "Lightning")

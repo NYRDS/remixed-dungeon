@@ -1700,6 +1700,7 @@ public class Hero extends Char {
 		setSkillPoints(Math.min(Scrambler.descramble(sp)+n, getSkillPointsMax()));
 	}
 
+	@LuaInterface
 	public int getSkillPoints() {
 		return Scrambler.descramble(sp);
 	}
@@ -1716,11 +1717,13 @@ public class Hero extends Char {
 		return getSkillPoints() >= cost;
 	}
 
+	@LuaInterface
 	public void setSkillPoints(int points) {
 		sp = Scrambler.scramble(Math.max(0,Math.min(points, getSkillPointsMax())));
 		QuickSlot.refresh();
 	}
 
+	@LuaInterface
 	public void setMaxSkillPoints(int points) {
 		maxSp = Scrambler.scramble(points);
 	}
