@@ -75,7 +75,7 @@ return item.init{
 
         local owner = thisItem:getOwner()
 
-        RPD.glog("owner: %s", tostring(owner))
+        RPD.glog("cellSelected owner: %s", tostring(owner))
 
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
@@ -88,6 +88,11 @@ return item.init{
     end,
 
     execute = function(self, item, hero, action)
+
+        local owner = item:getOwner()
+
+        RPD.glog("execute owner: %s", tostring(owner))
+
         if action == "action1" then
             item:selectCell("action1","Please select cell for action 1")
         end
