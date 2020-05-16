@@ -236,6 +236,11 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public int effectiveDr() {
+        return script.runOptional("effectiveDr", super.effectiveDr());
+    }
+
+    @Override
     public float accuracyFactor(Char user) {
         return script.runOptional("accuracyFactor", super.accuracyFactor(user), user);
     }
@@ -254,6 +259,15 @@ public class CustomItem extends EquipableItem {
                     defender,
                     damage
                 );
+    }
+
+    public int defenceProc(Char attacker, Char defender, int damage ) {
+        return script.runOptional("defenceProc",
+                super.defenceProc(attacker,defender,damage),
+                attacker,
+                defender,
+                damage
+        );
     }
 
     public String getAttackAnimationClass() {
@@ -282,5 +296,20 @@ public class CustomItem extends EquipableItem {
     @Override
     public boolean isFliesFastRotating() {
         return script.runOptional("isFliesFastRotating",super.isFliesFastRotating());
+    }
+
+    @Override
+    public boolean hasCollar() {
+        return script.runOptional("hasCollar",super.hasCollar());
+    }
+
+    @Override
+    public boolean hasHelmet() {
+        return script.runOptional("hasHelmet",super.hasHelmet());
+    }
+
+    @Override
+    public boolean isCoveringHair() {
+        return script.runOptional("isCoveringHair",super.isCoveringHair());
     }
 }

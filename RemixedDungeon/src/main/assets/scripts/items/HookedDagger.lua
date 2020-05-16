@@ -53,7 +53,4 @@ return item.init{
         RPD.affectBuff(defender,"Bleeding",3)
         return damage
     end,
-
-
-
 }

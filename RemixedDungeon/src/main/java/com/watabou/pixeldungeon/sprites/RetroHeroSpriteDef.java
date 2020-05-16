@@ -120,7 +120,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/armor/" +armor.getClass().getSimpleName()+".png";
+		return "hero/armor/" +armor.getVisualName()+".png";
 	}
 
 	private String helmetDescriptor(EquipableItem armor, Hero hero) {
