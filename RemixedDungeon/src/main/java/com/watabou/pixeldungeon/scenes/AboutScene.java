@@ -134,17 +134,23 @@ public class AboutScene extends PixelScene {
 			protected void onClick( Touch touch ) {
 				clickCounter++;
 
-				if(clickCounter>3) {
-					Game.toast("%d", clickCounter);
-				}
-
-				if(clickCounter>7) {
-					Game.toast("Are you sure?");
+				if(clickCounter > 11) {
+					return;
 				}
 
 				if(clickCounter>10) {
 					Game.toast("Levels test mode enabled");
 					Scene.setMode("levelsTest");
+					return;
+				}
+
+				if(clickCounter>7) {
+					Game.toast("Are you sure?");
+					return;
+				}
+
+				if(clickCounter>3) {
+					Game.toast("%d", clickCounter);
 				}
 			}
 		};
