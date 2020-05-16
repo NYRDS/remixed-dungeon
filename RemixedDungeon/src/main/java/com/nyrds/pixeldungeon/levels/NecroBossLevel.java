@@ -4,10 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.BossLevel;
 import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -78,23 +75,6 @@ public class NecroBossLevel extends BossLevel {
 			if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) {
 				map[i] = Terrain.WALL_DECO;
 			}
-		}
-	}
-	
-	@Override
-	protected void createMobs() {}
-	
-	@Override
-	protected void createItems() {
-		Item item = Bones.get();
-		if (item != null) {
-			int pos;
-			do {
-				pos = 
-					Random.IntRange( _Left() + 1, _Left() + HALL_WIDTH - 2 ) + 
-					Random.IntRange( TOP + HALL_HEIGHT + 1, TOP + HALL_HEIGHT  + CHAMBER_HEIGHT ) * getWidth();
-			} while (pos == entrance);
-			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
 

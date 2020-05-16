@@ -21,14 +21,11 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
@@ -101,22 +98,6 @@ public class HallsBossLevel extends BossLevel {
 			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
 				map[i] = Terrain.EMPTY_DECO;
 			}
-		}
-	}
-	
-	@Override
-	protected void createMobs() {
-	}
-	
-	@Override
-	protected void createItems() {
-		Item item = Bones.get();
-		if (item != null) {
-			int pos;
-			do {
-				pos = Random.IntRange( _RoomLeft(), _RoomRight() ) + Random.IntRange( _RoomTop() + 1, _RoomBottom() ) * getWidth();
-			} while (pos == entrance);
-			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
 

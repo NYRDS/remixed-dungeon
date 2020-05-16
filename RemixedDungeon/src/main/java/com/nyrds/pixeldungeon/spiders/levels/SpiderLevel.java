@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.items.Heap;
@@ -222,10 +221,7 @@ public class SpiderLevel extends CommonLevel {
 			drop(item, cell).type = Heap.Type.HEAP;
 		}
 
-		Item item = Bones.get();
-		if (item != null) {
-			drop(item, randomRespawnCell()).type = Heap.Type.SKELETON;
-		}
+		dropBones();
 	}
 
 	@Override

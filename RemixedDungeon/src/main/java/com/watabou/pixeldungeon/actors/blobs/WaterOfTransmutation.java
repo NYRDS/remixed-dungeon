@@ -149,7 +149,7 @@ public class WaterOfTransmutation extends WellWater {
 			
 			n.setLevelKnown(w.isLevelKnown());
 			n.cursedKnown = w.cursedKnown;
-			n.cursed = w.cursed;
+			n.setCursed(w.isCursed());
 			
 			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
 			
@@ -176,7 +176,7 @@ public class WaterOfTransmutation extends WellWater {
 		
 		n.setLevelKnown(r.isLevelKnown());
 		n.cursedKnown = r.cursedKnown;
-		n.cursed = r.cursed;
+		n.setCursed(r.isCursed());
 		
 		return n;
 	}
@@ -193,7 +193,7 @@ public class WaterOfTransmutation extends WellWater {
 		
 		n.setLevelKnown(w.isLevelKnown());
 		n.cursedKnown = w.cursedKnown;
-		n.cursed = w.cursed;
+		n.setCursed(w.isCursed());
 		
 		return n;
 	}

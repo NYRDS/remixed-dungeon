@@ -111,4 +111,9 @@ public abstract class BossLevel extends RegularLevel {
     @Override
     protected void createMobs() {
     }
+
+    @Override
+    protected void createItems() {
+        dropBones();
+    }
 }

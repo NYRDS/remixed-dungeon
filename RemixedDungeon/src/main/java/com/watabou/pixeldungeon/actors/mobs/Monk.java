@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -29,7 +28,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.sprites.MonkSprite;
-import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
@@ -84,14 +82,9 @@ public class Monk extends Mob {
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		if (Random.Int( 6 ) == 0) {
-
 			EquipableItem weapon = enemy.getBelongings().weapon;
-			
-			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
-				enemy.getBelongings().weapon = null;
-				enemy.updateSprite();
-				QuickSlot.refresh();
-				Dungeon.level.drop( weapon, enemy.getPos() ).sprite.drop();
+
+			if (!(weapon instanceof Knuckles) && !weapon.isCursed() && enemy.getBelongings().drop(weapon)) {
 				GLog.w( Game.getVar(R.string.Monk_Disarm), getName(), weapon.name() );
 			}
 		}

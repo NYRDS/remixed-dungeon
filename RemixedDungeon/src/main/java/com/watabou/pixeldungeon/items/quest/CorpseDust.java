@@ -29,7 +29,7 @@ public class CorpseDust extends Artifact {
 	public CorpseDust() {
 		image = ItemSpriteSheet.DUST;
 
-		cursed = true;
+		setCursed(true);
 		cursedKnown = true;
 	}
 

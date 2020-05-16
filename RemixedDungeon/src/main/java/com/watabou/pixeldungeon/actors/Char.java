@@ -410,11 +410,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		forEachBuff(b->damage[0] = b.defenceProc(this, enemy, damage[0]));
 
-		if (getBelongings().armor != null) {
-			damage[0] = getBelongings().armor.defenceProc(enemy, this, damage[0]);
-		}
-
-		return damage[0];
+		return getBelongings().armor.defenceProc(enemy, this, damage[0]);
 	}
 
 	@NotNull
@@ -423,20 +419,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return rangedWeapon;
 		}
 
-		EquipableItem weapon = getBelongings().weapon;
-
-		if(weapon!=null) {
-			return weapon;
-		}
-
-		return CharsList.DUMMY_ITEM;
+		return getBelongings().weapon;
 	}
 
 	@NotNull
 	public EquipableItem getSecondaryWeapon() {
 	    EquipableItem leftItem = getBelongings().leftHand;
 
-	    if(leftItem!=null && leftItem.goodForMelee()) {
+	    if(leftItem.goodForMelee()) {
 	        return leftItem;
         }
 

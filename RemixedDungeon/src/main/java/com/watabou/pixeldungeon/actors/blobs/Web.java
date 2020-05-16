@@ -47,7 +47,7 @@ public class Web extends Blob {
 
 					rootable = !ch.immunities().contains(getEntityKind());
 
-					if(ch.getBelongings() != null && ch.getBelongings().armor instanceof SpiderArmor)
+					if(ch.getBelongings().armor instanceof SpiderArmor)
 						rootable = false;
 					}
 

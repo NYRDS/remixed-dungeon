@@ -48,7 +48,7 @@ public class ChaosSword extends SpecialWeapon implements IChaosItem {
 	@Override
 	public void ownerDoesDamage(Char ch,int damage) {
 		
-		if(cursed) {
+		if(isCursed()) {
 			return;
 		}
 		

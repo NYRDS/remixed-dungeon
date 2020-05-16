@@ -298,7 +298,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public Item upgrade() {
 
-		cursed = false;
+		setCursed(false);
 		cursedKnown = true;
 		this.level(this.level() + 1);
 
@@ -346,7 +346,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public void removeItemFrom(Char hero) {
 		onDetach();
-		cursed = false;
+		setCursed(false);
 		if (!(this instanceof EquipableItem) || !isEquipped(hero) || !((EquipableItem) this).doUnequip(hero, false)) {
 			hero.getBelongings().removeItem(this);
 		}
@@ -422,7 +422,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	protected int adjustPrice(int price) {
-		if (cursed && cursedKnown) {
+		if (isCursed() && cursedKnown) {
 			price /= 2;
 		}
 		if (isLevelKnown()) {
@@ -470,7 +470,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 
 		//We still need this because upgrade erase cursed flag
-		cursed = bundle.optBoolean("cursed",false);
+		setCursed(bundle.optBoolean("cursed",false));
 
 		if(quickSlotIndex >= 0 ) {
 			QuickSlot.selectItem(this, quickSlotIndex);
@@ -621,7 +621,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			degrade(-level);
 		}
 
-		cursed = itemDesc.optBoolean("cursed", false);
+		setCursed(itemDesc.optBoolean("cursed", false));
 
 		if(itemDesc.optBoolean("identified",false)) {
 			identify();
@@ -728,5 +728,14 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public void setOwner(@NotNull Char owner) {
 		this.owner = owner;
+	}
+
+	public boolean isCursed() {
+		return cursed;
+	}
+
+	public boolean setCursed(boolean cursed) {
+		this.cursed = cursed;
+		return this.cursed;
 	}
 }

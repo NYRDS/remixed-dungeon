@@ -356,7 +356,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public int price() {
 		int price = 50;
-		if (cursed && cursedKnown) {
+		if (isCursed() && cursedKnown) {
 			price /= 2;
 		}
 		if (isLevelKnown()) {

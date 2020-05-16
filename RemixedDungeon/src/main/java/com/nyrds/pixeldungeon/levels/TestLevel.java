@@ -118,7 +118,7 @@ public class TestLevel extends RegularLevel {
 					dialog.hide();
 				}
 
-				equipableItem.cursed = false;
+				equipableItem.setCursed(false);
 				equipableItem.doUnequip(hero,false);
 			}
 		}

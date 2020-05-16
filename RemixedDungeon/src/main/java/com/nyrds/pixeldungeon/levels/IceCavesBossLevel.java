@@ -7,13 +7,10 @@ import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.BossLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
@@ -82,24 +79,6 @@ public class IceCavesBossLevel extends BossLevel {
 			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
 		} else {
 			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
-		}
-	}
-	
-	@Override
-	protected void createMobs() {	
-	}
-	
-	@Override
-	protected void createItems() {
-		Item item = Bones.get();
-		if (item != null) {
-			int pos;
-			do {
-				pos = 
-					Random.IntRange( _Left() + 1, _Left() + HALL_WIDTH - 2 ) + 
-					Random.IntRange( TOP + HALL_HEIGHT + 1, TOP + HALL_HEIGHT  + CHAMBER_HEIGHT ) * getWidth();
-			} while (pos == entrance);
-			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
 

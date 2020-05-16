@@ -72,8 +72,8 @@ public class ScrollOfRemoveCurse extends Scroll {
 	}
 
 	private static boolean uncurseItem(boolean procced, Item item) {
-		if (item != null && item.cursed) {
-			item.cursed = false;
+		if (item != null && item.isCursed()) {
+			item.setCursed(false);
 			procced = true;
 		}
 		return procced;

@@ -104,7 +104,7 @@ public abstract class EquipableItem extends Item {
 
 	protected boolean doUnequip(Char hero, boolean collect, boolean single) {
 		
-		if (cursed) {
+		if (isCursed()) {
 			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );
 			return false;
 		}

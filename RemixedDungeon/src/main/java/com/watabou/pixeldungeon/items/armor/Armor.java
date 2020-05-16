@@ -164,9 +164,9 @@ public class Armor extends EquipableItem {
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(Utils.format(Game.getVar(R.string.Armor_Info7a), name,
-				(cursed ? Game.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
+				(isCursed() ? Game.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {
-			if (cursedKnown && cursed) {
+			if (cursedKnown && isCursed()) {
 				info.append(Utils.format(Game.getVar(R.string.Armor_Info8), name));
 			}
 		}
@@ -188,7 +188,7 @@ public class Armor extends EquipableItem {
 				upgrade( n );
 			} else {
 				degrade( n );
-				cursed = true;
+				setCursed(true);
 			}
 		}
 		

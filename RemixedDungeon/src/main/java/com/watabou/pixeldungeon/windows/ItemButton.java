@@ -65,7 +65,7 @@ class ItemButton extends ItemSlot {
         if (item != null) {
 
             bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
-            if (item.cursed && item.cursedKnown) {
+            if (item.isCursed() && item.cursedKnown) {
                 bg.ra = +0.2f;
                 bg.ga = -0.1f;
             } else if (!item.isIdentified()) {
@@ -90,7 +90,7 @@ class ItemButton extends ItemSlot {
                         enableItem = item.isUpgradable();
                         break;
                     case FOR_SALE:
-                        enableItem=(item.price() > 0) && (!item.isEquipped(Dungeon.hero) || !item.cursed);
+                        enableItem=(item.price() > 0) && (!item.isEquipped(Dungeon.hero) || !item.isCursed());
                         break;
                     case WEAPON:
                         enableItem=(!(item instanceof KindOfBow) && (item instanceof MeleeWeapon || item instanceof Boomerang));

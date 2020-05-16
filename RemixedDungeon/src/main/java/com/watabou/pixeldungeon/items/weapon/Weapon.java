@@ -211,7 +211,7 @@ public class Weapon extends KindOfWeapon {
 				upgrade( n );
 			} else {
 				degrade( n );
-				cursed = true;
+				setCursed(true);
 			}
 		}
 		return this;

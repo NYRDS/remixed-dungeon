@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -86,7 +87,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			
 			if (hero.getBelongings().weapon == this) {
 				disenchantEquipped = true;
-				hero.getBelongings().weapon = null;
+				hero.getBelongings().weapon = CharsList.DUMMY_ITEM;
                 QuickSlot.refresh();
             } else {
 				disenchantEquipped = false;

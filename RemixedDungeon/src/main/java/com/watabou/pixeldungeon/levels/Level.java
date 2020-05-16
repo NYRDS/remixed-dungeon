@@ -40,6 +40,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -1029,6 +1030,14 @@ public abstract class Level implements Bundlable {
 	}
 
 	@NotNull
+	public void drop(Item item, int cell, Heap.Type type) {
+		if(item == CharsList.DUMMY_ITEM) {
+			return;
+		}
+		drop(item, cell).type = type;
+	}
+
+	@NotNull
 	public Heap drop(Item item, int cell) {
 
 		item = Treasury.getLevelTreasury().check(item);
@@ -1128,6 +1137,10 @@ public abstract class Level implements Bundlable {
 
 	public int pitCell() {
 		return randomRespawnCell();
+	}
+
+	protected void dropBones() {
+		drop( Bones.get(), getRandomTerrainCell(Terrain.EMPTY), Heap.Type.SKELETON);
 	}
 
 	protected void pressHero(int cell, Hero hero) {

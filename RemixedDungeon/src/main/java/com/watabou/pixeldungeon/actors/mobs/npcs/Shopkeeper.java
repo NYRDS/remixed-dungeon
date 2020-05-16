@@ -154,7 +154,7 @@ public class Shopkeeper extends NPC {
 			return;
 		}
 
-		if(newItem.cursed) {
+		if(newItem.isCursed()) {
 			return;
 		}
 

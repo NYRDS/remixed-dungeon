@@ -343,7 +343,7 @@ public class Hero extends Char {
 			evasion *= 1.2;
 		}
 
-		int aEnc = belongings.armor != null ? belongings.armor.requiredSTR() - effectiveSTR() : 0;
+		int aEnc = belongings.armor != CharsList.DUMMY_ITEM ? belongings.armor.requiredSTR() - effectiveSTR() : 0;
 
 		if (aEnc > 0) {
 			return (int) (defenseSkill * evasion / Math.pow(1.5, aEnc));
@@ -364,22 +364,18 @@ public class Hero extends Char {
 
 	@Override
 	public int dr() {
-		return belongings.armor != null ? Math.max(belongings.armor.effectiveDr(), 0) : 0;
+		return Math.max(belongings.armor.effectiveDr(), 0);
 	}
 
 	@Override
 	public float speed() {
 
-		int aEnc = belongings.armor != null ? belongings.armor.requiredSTR() - effectiveSTR() : 0;
+		int aEnc = belongings.armor != CharsList.DUMMY_ITEM ? belongings.armor.requiredSTR() - effectiveSTR() : 0;
 		if (aEnc > 0) {
-
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));
-
 		} else {
-
 			float speed = super.speed();
 			return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
-
 		}
 	}
 

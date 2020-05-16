@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.levels.CustomLevel;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.items.Heap;
@@ -674,10 +673,7 @@ public abstract class RegularLevel extends CustomLevel {
 			drop(item, cell).type = Heap.Type.HEAP;
 		}
 
-		Item item = Bones.get();
-		if (item != null) {
-			drop(item, randomDropCell()).type = Heap.Type.SKELETON;
-		}
+		dropBones();
 	}
 
 	protected Room randomRoom(Room.Type type, int tries) {

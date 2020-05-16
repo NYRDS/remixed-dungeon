@@ -46,7 +46,7 @@ public class ChaosArmor extends Armor implements IChaosItem {
 	@Override
 	public void ownerDoesDamage(Char ch, int damage) {
 
-		if(cursed) {
+		if(isCursed()) {
 			return;
 		}
 

@@ -43,7 +43,7 @@
 
     "random":{"kind":"RandomLevel", "depth":1,       "size":[32,32], "file": "levelsDesc/TestLevelRandom.json"},
 
-    "1":{"kind":"SewerLevel", "depth":1,       "size":[32,32], "noBuild": true},
+    "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
     "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
     "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
     "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},

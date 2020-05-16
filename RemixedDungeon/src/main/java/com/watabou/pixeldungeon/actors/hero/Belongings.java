@@ -96,13 +96,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	private Set<EquipableItem> activatedItems = new HashSet<>();
 
 	@Packable
-	public EquipableItem weapon = null;
+	public EquipableItem weapon = CharsList.DUMMY_ITEM;
 	@Packable
-	public EquipableItem leftHand = null;
+	public EquipableItem leftHand = CharsList.DUMMY_ITEM;
 	@Packable
-	public EquipableItem armor  = null;
+	public EquipableItem armor  = CharsList.DUMMY_ITEM;
 	@Packable
-	public EquipableItem ring1  = null;
+	public EquipableItem ring1  = CharsList.DUMMY_ITEM;
 	@Packable
 	public EquipableItem ring2  = null;
 
@@ -136,8 +136,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	@LuaInterface
 	public boolean slotBlocked(String slot) {
-		Slot eSlot = Slot.valueOf(slot);
-		return itemBySlot(eSlot) != null || blockedSlots.containsKey(eSlot);
+		return slotBlocked(Slot.valueOf(slot));
+	}
+
+	public boolean slotBlocked(Slot slot) {
+		return itemBySlot(slot) != CharsList.DUMMY_ITEM || blockedSlots.containsKey(slot);
 	}
 
 	private void blockSlots() {
@@ -182,6 +185,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public Item checkItem( Item src ) {
+		if(src==CharsList.DUMMY_ITEM){
+			return null;
+		}
+
 		for (Item item : this) {
 			if (item == src ) {
 				return item;
@@ -275,27 +282,27 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		itemToRemove.setOwner(CharsList.DUMMY);
 
 		if(itemToRemove.equals(weapon)) {
-			weapon = null;
+			weapon = CharsList.DUMMY_ITEM;
 			return true;
 		}
 
 		if(itemToRemove.equals(armor)) {
-			armor = null;
+			armor = CharsList.DUMMY_ITEM;
 			return true;
 		}
 
 		if(itemToRemove.equals(leftHand)) {
-			leftHand = null;
+			leftHand = CharsList.DUMMY_ITEM;
 			return true;
 		}
 
 		if(itemToRemove.equals(ring1)) {
-			ring1 = null;
+			ring1 = CharsList.DUMMY_ITEM;
 			return true;
 		}
 
 		if(itemToRemove.equals(ring2)) {
-			ring2 = null;
+			ring2 = CharsList.DUMMY_ITEM;
 			return true;
 		}
 
@@ -409,7 +416,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		public boolean hasNextEquipped(){
 			for (int i = index; i < equipped.length; i++) {
-				if (equipped[i] != null) {
+				if (equipped[i] != CharsList.DUMMY_ITEM) {
 					return true;
 				}
 			}
@@ -425,7 +432,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		public Item next() {
 			while (index < equipped.length) {
 				Item item = equipped[index++];
-				if (item != null) {
+				if (item != CharsList.DUMMY_ITEM) {
 					return item;
 				}
 			}
@@ -476,6 +483,14 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return false;
 	}
 
+	public boolean drop(EquipableItem item) {
+		if(unequip(item)) {
+			owner.level().drop( weapon, owner.getPos() ).sprite.drop();
+			return true;
+		}
+		return false;
+	}
+
 	public Item itemBySlot(Belongings.Slot slot) {
 		switch (slot) {
 			case NONE:
@@ -513,7 +528,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.WEAPON) {
-			if (weapon == null || weapon.doUnequip( owner, true )) {
+			if (weapon.doUnequip( owner, true )) {
 				weapon = (EquipableItem) item.detach(backpack);
 			} else {
 				return false;
@@ -521,7 +536,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.ARMOR) {
-			if (armor == null || armor.doUnequip( owner, true)) {
+			if (armor.doUnequip( owner, true)) {
 				armor = (EquipableItem) item.detach(backpack);
 			} else {
 				return false;
@@ -529,7 +544,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.LEFT_HAND) {
-			if (leftHand == null || leftHand.doUnequip( owner, true)) {
+			if (leftHand.doUnequip( owner, true)) {
 				leftHand = (EquipableItem) item.detach(backpack);
 			} else {
 				return false;
@@ -537,11 +552,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.ARTIFACT) {
-			if (ring1 != null && ring2 != null) {
+			if (ring1 != CharsList.DUMMY_ITEM && ring2 != CharsList.DUMMY_ITEM) {
 				GLog.w(Game.getVar(R.string.Artifact_Limit));
 				return false;
 			} else {
-				if (ring1 == null) {
+				if (ring1 == CharsList.DUMMY_ITEM) {
 					ring1 = (EquipableItem) item.detach(backpack);;
 				} else {
 					ring2 = (EquipableItem) item.detach(backpack);;
@@ -550,7 +565,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		item.cursedKnown = true;
-		if(item.cursed) {
+		if(item.isCursed()) {
 			ItemUtils.equipCursed( owner );
 			item.equippedCursed();
 		}

@@ -46,7 +46,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 	@Override
 	public void ownerDoesDamage(Char ch,int damage) {
 		
-		if(cursed) {
+		if(isCursed()) {
 			return;
 		}
 		

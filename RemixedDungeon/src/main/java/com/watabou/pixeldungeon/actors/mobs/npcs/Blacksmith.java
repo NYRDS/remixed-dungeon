@@ -161,7 +161,7 @@ public class Blacksmith extends NPC {
 			return Game.getVar(R.string.Blacksmith_Verify3);
 		}
 		
-		if (item1.cursed || item2.cursed) {
+		if (item1.isCursed() || item2.isCursed()) {
 			return Game.getVar(R.string.Blacksmith_Verify4);
 		}
 		

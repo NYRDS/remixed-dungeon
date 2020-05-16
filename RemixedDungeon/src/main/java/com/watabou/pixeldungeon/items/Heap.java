@@ -146,7 +146,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 		case SKELETON:
 			CellEmitter.center( pos ).start( Speck.factory( Speck.RATTLE ), 0.1f, 3 );
 			for (Item item : items) {
-				if (item.cursed) {
+				if (item.isCursed()) {
 					if (Wraith.spawnAt( pos ) == null) {
 						chr.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
 						chr.damage( chr.hp() / 2, this );

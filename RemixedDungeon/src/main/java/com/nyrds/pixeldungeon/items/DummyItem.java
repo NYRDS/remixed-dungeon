@@ -24,4 +24,24 @@ public class DummyItem extends EquipableItem {
     public boolean dontPack() {
         return true;
     }
+
+    @Override
+    protected boolean doUnequip(Char hero, boolean collect, boolean single) {
+        return true;
+    }
+
+    @Override
+    public boolean goodForMelee() {
+        return false;
+    }
+
+    @Override
+    public boolean setCursed(boolean cursed) {
+        return false;
+    }
+
+    @Override
+    public String getVisualName() {
+        return "none";
+    }
 }

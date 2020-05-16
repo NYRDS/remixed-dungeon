@@ -57,7 +57,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		public void onSelect(Integer cell, Char selector) {
 			if (cell != null) {
 
-				if (cursed) {
+				if (isCursed()) {
 					cell = getOwner().getPos();
 				}
 
@@ -213,7 +213,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	@Override
 	public void ownerDoesDamage(Char ch,int damage) {
-		if (cursed) {
+		if (isCursed()) {
 			if (charge > 0) {
 				ChaosCommon.doChaosMark(ch.getPos(), charge);
 			}
