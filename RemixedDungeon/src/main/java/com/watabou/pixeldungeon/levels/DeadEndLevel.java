@@ -32,7 +32,12 @@ public class DeadEndLevel extends Level {
 		color1 = 0x534f3e;
 		color2 = 0xb9d661;
 	}
-	
+
+	@Override
+	public void create(int w, int h) {
+		super.create(32, 32);
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_CAVES;
