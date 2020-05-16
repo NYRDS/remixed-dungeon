@@ -193,7 +193,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     }
 
     private Executor getExecutor() {
-        return Game.instance().executor;
+        return Game.instance().serviceExecutor;
     }
 
     public boolean isServiceConnected() {

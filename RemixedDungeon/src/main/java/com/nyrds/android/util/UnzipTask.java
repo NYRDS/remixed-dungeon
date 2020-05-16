@@ -1,22 +1,19 @@
 package com.nyrds.android.util;
 
-import android.os.AsyncTask;
-
 import java.io.File;
 
-public class UnzipTask extends AsyncTask<String, Integer, Boolean> {
+public class UnzipTask implements Runnable {
 
 	private UnzipStateListener m_listener;
+	private String m_zipFile;
 
-	public UnzipTask(UnzipStateListener listener) {
+	public UnzipTask(UnzipStateListener listener, String zipFile) {
 		m_listener = listener;
+		m_zipFile = zipFile;
 	}
 
 	@Override
-	protected Boolean doInBackground(String... args) {
-
-		String zipFile = args[0];
-
+	public void run() {
 		String tmpDirName = "tmp";
 
 		File tmpDirFile = FileSystem.getExternalStorageFile(tmpDirName);
@@ -24,38 +21,29 @@ public class UnzipTask extends AsyncTask<String, Integer, Boolean> {
 			tmpDirFile.delete();
 		}
 
-		if (Unzip.unzip(zipFile,
+		if (Unzip.unzip(m_zipFile,
 				FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath(),
-				unpacked -> publishProgress(unpacked))) {
+				unpacked -> m_listener.UnzipProgress(unpacked))) {
 
 			File[] unpackedList = tmpDirFile.listFiles();
 
 			for (File file : unpackedList) {
 				if (file.isDirectory()) {
 
-					String modDir = zipFile.substring(0, zipFile.length() - 4);
+					String modDir = m_zipFile.substring(0, m_zipFile.length() - 4);
 
 					if (file.renameTo(new File(modDir))) {
 						FileSystem.deleteRecursive(tmpDirFile);
-						FileSystem.deleteRecursive(new File(zipFile));
+						FileSystem.deleteRecursive(new File(m_zipFile));
 						break;
 					} else {
-						return false;
+						m_listener.UnzipComplete(false);
 					}
 				}
 			}
-			return true;
+			m_listener.UnzipComplete(true);
 		} else {
-			return false;
+			m_listener.UnzipComplete(false);
 		}
 	}
-
-	protected void onProgressUpdate(Integer... progress) {
-		m_listener.UnzipProgress(progress[0]);
-	}
-
-	protected void onPostExecute(Boolean result) {
-		m_listener.UnzipComplete(result);
-	}
-
 }

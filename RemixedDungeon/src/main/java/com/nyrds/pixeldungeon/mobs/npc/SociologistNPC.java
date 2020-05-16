@@ -81,7 +81,9 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
             survey.delete();
             String downloadTo = survey.getAbsolutePath();
 
-            new DownloadTask(new DownloadProgressWindow("Downloading", this)).download("https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json", downloadTo);
+            new DownloadTask(new DownloadProgressWindow("Downloading", this),
+                    "https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json",
+                    downloadTo);
         } else {
             say(Game.getVar(R.string.SociologistNPC_InternetRequired));
         }

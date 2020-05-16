@@ -99,7 +99,7 @@ public class PlayGames {
 			GoogleSignIn.getClient(Game.instance(), signInOptions)
 					.silentSignIn()
 					.addOnCompleteListener(
-							Game.instance().executor,
+							Game.instance().serviceExecutor,
 							task -> {
 								if (task.isSuccessful()) {
 									 signedInAccount = task.getResult();
@@ -116,7 +116,7 @@ public class PlayGames {
 
 		GoogleSignInClient signInClient = GoogleSignIn.getClient(Game.instance(),
 				GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
-		signInClient.signOut().addOnCompleteListener(Game.instance().executor,
+		signInClient.signOut().addOnCompleteListener(Game.instance().serviceExecutor,
 				task -> {
 					signedInAccount = null;
 					// at this point, the user is signed out.
@@ -308,7 +308,7 @@ public class PlayGames {
 			return;
 		}
 
-		Game.instance().executor.execute(() -> {
+		Game.instance().serviceExecutor.execute(() -> {
 			try {
 				boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), new FileFilter() {
 					@Override
@@ -342,7 +342,7 @@ public class PlayGames {
 			return;
 		}
 
-		Game.instance().executor.execute(() -> {
+		Game.instance().serviceExecutor.execute(() -> {
 			unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING),
 					res -> resultCallback.status(res));
 		});

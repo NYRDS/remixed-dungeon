@@ -4,6 +4,7 @@ import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -11,11 +12,17 @@ import lombok.SneakyThrows;
 
 public class ReportingExecutor extends ThreadPoolExecutor {
     public ReportingExecutor() {
-        super(  1, // core threads
+        super(1, // core threads
                 1, // max threads
                 1, // timeout
                 TimeUnit.MINUTES, // timeout units
-                new LinkedBlockingQueue<>() // work queue
+                new LinkedBlockingQueue<>(), // work queue
+                new ThreadFactory() {
+                    @Override
+                    public Thread newThread(Runnable r) {
+                        return new Thread(r, "ReportingExecutor: "+this.hashCode());
+                    }
+                }
         );
     }
 

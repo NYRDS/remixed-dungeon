@@ -95,7 +95,9 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
                                              modsCommon.delete();
                                              String downloadTo = modsCommon.getAbsolutePath();
 
-                                             new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this)).download("https://nyrds.github.io/NYRDS/mods.json", downloadTo);
+                                             Game.execute(new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this),
+                                                     "https://nyrds.github.io/NYRDS/mods.json",
+                                                     downloadTo));
 
                                          } else {
                                              DownloadComplete("no internet", true);

@@ -149,7 +149,7 @@ public class InterlevelScene extends PixelScene {
         timeLeft = TIME_TO_FADE;
 
         levelChanger = new FutureTask<>(new LevelChanger(), true);
-        Game.instance().executor.execute(levelChanger);
+        Game.execute(levelChanger);
     }
 
     @Override
