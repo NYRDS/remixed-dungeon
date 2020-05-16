@@ -116,9 +116,16 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
         end,
 
         slot              = function(self, item, belongings)
-            if belongings:slotBlocked(RPD.Slots.leftHand) then
+            local rb, lb = belongings:slotBlocked(RPD.Slots.weapon), belongings:slotBlocked(RPD.Slots.leftHand)
+
+            if rb and lb then
+                return RPD.Slots.leftHand
+            end
+
+            if lb then
                 return RPD.Slots.weapon
             end
+
             return RPD.Slots.leftHand
         end,
 

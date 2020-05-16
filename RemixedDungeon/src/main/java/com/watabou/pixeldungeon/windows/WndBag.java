@@ -228,7 +228,7 @@ public class WndBag extends WndTabbed {
 			return;
 		}
 
-		if(stuff.blockedSlots.get(slot)!=null) {
+		if(stuff.slotBlocked(slot)) {
 			placeItem(new ItemPlaceholder(ItemPlaceholder.LOCKED));
 			return;
 		}
@@ -245,7 +245,7 @@ public class WndBag extends WndTabbed {
 			placeEquipped(stuff.armor,    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
 			placeEquipped(stuff.leftHand, Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
 			placeEquipped(stuff.ring1,    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
-			placeEquipped(stuff.ring2,    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
+			placeEquipped(stuff.ring2,    Belongings.Slot.LEFT_ARTIFACT,  ItemPlaceholder.ARTIFACT);
 		}
 
 		// Unequipped items

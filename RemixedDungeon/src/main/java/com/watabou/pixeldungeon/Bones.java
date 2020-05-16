@@ -45,7 +45,7 @@ public class Bones {
 		
 		item = CharsList.DUMMY_ITEM;
 
-		switch (2) {
+		switch (Random.Int( 4 )) {
 		case 0:
 			item = Dungeon.hero.getBelongings().weapon;
 			break;

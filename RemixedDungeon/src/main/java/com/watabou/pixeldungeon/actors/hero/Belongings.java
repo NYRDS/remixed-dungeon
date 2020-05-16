@@ -104,7 +104,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	@Packable
 	public EquipableItem ring1  = CharsList.DUMMY_ITEM;
 	@Packable
-	public EquipableItem ring2  = null;
+	public EquipableItem ring2  = CharsList.DUMMY_ITEM;
 
 	public Belongings( Char owner ) {
 		this.owner = owner;
@@ -150,9 +150,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		while (itemIterator.hasNextEquipped()) {
 			EquipableItem item = (EquipableItem) itemIterator.next();
 
-			if(item!=null){
-				blockedSlots.put(item.blockSlot(), item);
-			}
+			blockedSlots.put(item.blockSlot(), item);
 		}
 	}
 
@@ -491,10 +489,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return false;
 	}
 
+	@NotNull
 	public Item itemBySlot(Belongings.Slot slot) {
 		switch (slot) {
-			case NONE:
-				return null;
 			case WEAPON:
 				return weapon;
 			case LEFT_HAND:
@@ -506,7 +503,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			case LEFT_ARTIFACT:
 				return ring2;
 		}
-		return null;
+		return CharsList.DUMMY_ITEM;
 	}
 
 	public boolean equip(@NotNull EquipableItem item, Slot slot) {
@@ -520,7 +517,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			blockingItem = itemBySlot(item.blockSlot());
 		}
 
-		if(blockingItem!=null) {
+		if(blockingItem!=CharsList.DUMMY_ITEM) {
 			GLog.w(Game.getVar(R.string.Belongings_CantWearBoth),
 					item.name(),
 					blockingItem.name());
@@ -551,7 +548,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 		}
 
-		if(slot==Slot.ARTIFACT) {
+		if(slot==Slot.ARTIFACT || slot==Slot.LEFT_ARTIFACT) {
 			if (ring1 != CharsList.DUMMY_ITEM && ring2 != CharsList.DUMMY_ITEM) {
 				GLog.w(Game.getVar(R.string.Artifact_Limit));
 				return false;

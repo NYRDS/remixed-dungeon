@@ -44,6 +44,12 @@ public class KindOfWeapon extends EquipableItem {
 
 	@Override
 	public Belongings.Slot slot(Belongings belongings) {
+
+		if(belongings.slotBlocked(Belongings.Slot.WEAPON)
+				&& belongings.slotBlocked(Belongings.Slot.LEFT_HAND)) {
+			return Belongings.Slot.WEAPON;
+		}
+
 		if(belongings.slotBlocked(Belongings.Slot.WEAPON)) {
 			return Belongings.Slot.LEFT_HAND;
 		}
