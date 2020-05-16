@@ -100,7 +100,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	@Packable
 	public EquipableItem leftHand = null;
 	@Packable
-	public Armor         armor  = null;
+	public EquipableItem armor  = null;
 	@Packable
 	public EquipableItem ring1  = null;
 	@Packable
@@ -522,7 +522,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		if(slot==Slot.ARMOR) {
 			if (armor == null || armor.doUnequip( owner, true)) {
-				armor = (Armor) item.detach(backpack);
+				armor = (EquipableItem) item.detach(backpack);
 			} else {
 				return false;
 			}

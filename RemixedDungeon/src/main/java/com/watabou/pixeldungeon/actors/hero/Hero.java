@@ -307,10 +307,6 @@ public class Hero extends Char {
 		Buff.affect(this, Hunger.class);
 	}
 
-	public int tier() {
-		return belongings.armor == null ? 0 : belongings.armor.tier;
-	}
-
 	@Override
 	public int attackSkill(Char target) {
 
@@ -347,7 +343,7 @@ public class Hero extends Char {
 			evasion *= 1.2;
 		}
 
-		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;
+		int aEnc = belongings.armor != null ? belongings.armor.requiredSTR() - effectiveSTR() : 0;
 
 		if (aEnc > 0) {
 			return (int) (defenseSkill * evasion / Math.pow(1.5, aEnc));
@@ -368,13 +364,13 @@ public class Hero extends Char {
 
 	@Override
 	public int dr() {
-		return belongings.armor != null ? Math.max(belongings.armor.DR, 0) : 0;
+		return belongings.armor != null ? Math.max(belongings.armor.effectiveDr(), 0) : 0;
 	}
 
 	@Override
 	public float speed() {
 
-		int aEnc = belongings.armor != null ? belongings.armor.STR - effectiveSTR() : 0;
+		int aEnc = belongings.armor != null ? belongings.armor.requiredSTR() - effectiveSTR() : 0;
 		if (aEnc > 0) {
 
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));

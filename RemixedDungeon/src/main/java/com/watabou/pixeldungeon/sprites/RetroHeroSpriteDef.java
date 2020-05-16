@@ -4,7 +4,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -116,14 +116,14 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		}
 	}
 
-	private String armorDescriptor(Armor armor) {
+	private String armorDescriptor(EquipableItem armor) {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
 		return "hero/armor/" +armor.getClass().getSimpleName()+".png";
 	}
 
-	private String helmetDescriptor(Armor armor, Hero hero) {
+	private String helmetDescriptor(EquipableItem armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.getBelongings().armor.hasHelmet()){
 				return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
@@ -132,7 +132,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		return HERO_EMPTY_PNG;
 	}
 
-	private String collarDescriptor(Armor armor, Hero hero) {
+	private String collarDescriptor(EquipableItem armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.getBelongings().armor.hasCollar()){
 				return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";

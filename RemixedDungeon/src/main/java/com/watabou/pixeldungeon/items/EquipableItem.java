@@ -197,4 +197,25 @@ public abstract class EquipableItem extends Item {
 	public int requiredSTR() {
 		return 0;
 	}
+
+	public int effectiveDr() {
+		return 0;
+	}
+
+    public int defenceProc(Char attacker, Char defender, int damage) {
+		return damage;
+    }
+
+    //Armor visuals
+	public boolean hasHelmet(){
+		return false;
+	}
+
+	public boolean hasCollar() {
+		return false;
+	}
+
+	public boolean isCoveringHair() {
+		return false;
+	}
 }

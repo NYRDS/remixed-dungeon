@@ -37,7 +37,7 @@ public class SacrificialSword extends SpecialWeapon {
 		double armorPenalty = 1;
 		
 		if(hero.getBelongings().armor != null) {
-			armorPenalty += hero.getBelongings().armor.tier;
+			armorPenalty += hero.getBelongings().armor.effectiveDr() / 8.f;
 		}
 		
 		double classBonus = 1;

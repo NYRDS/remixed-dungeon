@@ -289,7 +289,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
 
-	private String armorDescriptor(Armor armor) {
+	private String armorDescriptor(EquipableItem armor) {
 		if(armor==null) {
 			return HERO_EMPTY_PNG;
 		}
@@ -322,7 +322,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	}
 
 
-	private String helmetDescriptor(Armor armor, Hero hero) {
+	private String helmetDescriptor(EquipableItem armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.getBelongings().armor.hasHelmet()){
 				return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
@@ -331,7 +331,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			return HERO_EMPTY_PNG;
 	}
 
-	private String collarDescriptor(Armor armor, Hero hero) {
+	private String collarDescriptor(EquipableItem armor, Hero hero) {
 		if(armor!=null) {
 			if(hero.getBelongings().armor.hasCollar()){
 				return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";

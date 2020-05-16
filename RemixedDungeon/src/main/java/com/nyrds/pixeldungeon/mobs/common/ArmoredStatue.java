@@ -71,7 +71,7 @@ public class ArmoredStatue extends Mob {
 
 	@Override
 	public int dr() {
-		return Dungeon.depth + getArmor().DR;
+		return Dungeon.depth + getArmor().effectiveDr();
 	}
 
 	@Override
