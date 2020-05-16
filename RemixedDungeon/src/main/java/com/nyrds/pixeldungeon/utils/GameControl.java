@@ -52,7 +52,7 @@ public class GameControl {
 
     @LuaInterface
     static public void changeLevel(String levelId) {
-        Position p = new Position(levelId,-1);
-        Dungeon.hero.teleportTo(p);
+        InterlevelScene.returnTo = new Position(levelId,-1);
+        InterlevelScene.Do(InterlevelScene.Mode.RETURN);
     }
 }

@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
@@ -219,11 +220,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			setOwnerId(id);
 		}
 
-		name = getClassParam("Name", name, true);
-		name_objective = getClassParam("Name_Objective", name, true);
-		description = getClassParam("Desc", description, true);
-		gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
-		defenceVerb = getClassParam("Defense", null, false);
+
+		if(!(this instanceof CustomMob)) {
+			name = getClassParam("Name", name, true);
+			name_objective = getClassParam("Name_Objective", name, true);
+			description = getClassParam("Desc", description, true);
+			gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
+			defenceVerb = getClassParam("Defense", null, false);
+		}
 	}
 
 	public void yell(String str) {

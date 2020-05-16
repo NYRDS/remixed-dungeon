@@ -37,7 +37,10 @@ local function levelsTestMode(self, scene)
 
             if currentLevel < levelsSize then
                 framesOnLevel = 0
-                GameControl:changeLevel(levels:get(currentLevel))
+
+                local nextLevelId = levels:get(currentLevel)
+                RPD.glog("trying level: %s", nextLevelId)
+                GameControl:changeLevel(nextLevelId)
             else
                 service.onStep = stdMode
                 GameControl:titleScene()
