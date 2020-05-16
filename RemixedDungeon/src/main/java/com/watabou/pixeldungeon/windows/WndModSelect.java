@@ -130,7 +130,9 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
 				desc.needUpdate = false;
 
-				new DownloadTask(new DownloadProgressWindow(Utils.format("Downloading %s", selectedMod),this)).download(desc.url, downloadTo);
+				Game.execute(new DownloadTask(new DownloadProgressWindow(Utils.format("Downloading %s", selectedMod),this),
+						desc.url,
+						downloadTo));
 
 				return;
 			}
@@ -153,7 +155,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	public void DownloadComplete(String url, final Boolean result) {
 		Game.pushUiTask(() -> {
 			if (result) {
-				new UnzipTask(WndModSelect.this).executeOnExecutor(Game.instance().executor,downloadTo);
+				Game.execute(new UnzipTask(WndModSelect.this, downloadTo));
 			} else {
 				Game.addToScene(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 			}

@@ -122,7 +122,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     // Accumulated key events
     private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
-    public Executor executor = new ReportingExecutor();
+    private Executor executor = new ReportingExecutor();
+    public Executor serviceExecutor = new ReportingExecutor();
 
     private Runnable doOnResume;
 
@@ -590,5 +591,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     static public void pushUiTask(Runnable task) {
         instance().uiTasks.add(task);
+    }
+
+    static public void execute(Runnable task) {
+        instance().executor.execute(task);
     }
 }
