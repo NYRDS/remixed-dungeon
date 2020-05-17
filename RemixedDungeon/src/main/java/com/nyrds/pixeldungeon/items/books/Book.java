@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items.books;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -27,23 +28,23 @@ abstract public class Book extends Item {
 
 
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 
-			if (hero.hasBuff( Blindness.class )) {
+			if (chr.hasBuff( Blindness.class )) {
 				GLog.w(Game.getVar(R.string.Codex_Blinded));
 			} else {
-				doRead(hero);
+				doRead(chr);
 			}
 
 		} else {
 
-			super.execute( hero, action );
+			super.execute(chr, action );
 
 		}
 	}
 
-	abstract protected void doRead(Hero hero);
+	abstract protected void doRead(Char hero);
 
 	@Override
 	public boolean isUpgradable() {

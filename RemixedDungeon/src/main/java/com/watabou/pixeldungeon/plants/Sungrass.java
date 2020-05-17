@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -68,15 +67,15 @@ public class Sungrass extends Plant {
 		}
 
 		@Override
-		public void execute(Hero hero, String action) {
+		public void execute(Char chr, String action) {
 
-			super.execute(hero, action);
+			super.execute(chr, action);
 
 			if (action.equals(CommonActions.AC_EAT)) {
 
-				Buff.affect(hero, Charm.class, Charm.durationFactor(hero) * Random.IntRange(10, 15));
+				Buff.affect(chr, Charm.class, Charm.durationFactor(chr) * Random.IntRange(10, 15));
 
-				hero.heal(Random.Int(0, Math.max((hero.ht() - hero.hp()) / 4, 15)), this);
+				chr.heal(Random.Int(0, Math.max((chr.ht() - chr.hp()) / 4, 15)), this);
 			}
 		}
 	}

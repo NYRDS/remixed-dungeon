@@ -44,11 +44,8 @@ public class CellSelector extends TouchArea {
 	@Override
 	protected void onClick( Touch touch ) {
 		if (dragging) {
-			
 			dragging = false;
-			
 		} else {
-			
 			select( ((DungeonTilemap)target).screenToTile( 
 				(int)touch.current.x, 
 				(int)touch.current.y ) );
@@ -57,14 +54,10 @@ public class CellSelector extends TouchArea {
 	
 	public void select( int cell ) {
 		if (enabled && listener != null && cell != Level.INVALID_CELL) {
-			
 			listener.onSelect( cell, Dungeon.hero);
 			GameScene.ready();
-			
 		} else {
-			
 			GameScene.cancel();
-			
 		}
 	}
 	

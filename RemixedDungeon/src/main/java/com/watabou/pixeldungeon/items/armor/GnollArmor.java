@@ -6,7 +6,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -62,7 +61,7 @@ public class GnollArmor extends ClassArmor {
     }
 
     @Override
-    public boolean doEquip( Hero hero ) {
+    public boolean doEquip(Char hero ) {
         if (hero.getHeroClass() == HeroClass.GNOLL) {
             return super.doEquip( hero );
         } else {

@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.books;
 
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
@@ -15,7 +15,7 @@ public class TomeOfKnowledge extends Book {
 	}
 
 	@Override
-	protected void doRead(Hero hero) {
+	protected void doRead(Char hero) {
 		hero.getBelongings().setSelectedItem(detach( hero.getBelongings().backpack ));
 
 		SpellSprite.show( hero, SpellSprite.MASTERY );

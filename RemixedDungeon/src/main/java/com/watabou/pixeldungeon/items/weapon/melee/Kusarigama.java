@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.KusarigamaChain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -78,12 +77,12 @@ public class Kusarigama extends SpecialWeapon {
     }
 
     @Override
-    public void execute(Hero hero, String action) {
+    public void execute(Char chr, String action) {
 
         if (action.equals(AC_PULL)) {
-            GameScene.selectCell(impaler);
+            chr.selectCell(impaler);
         } else {
-            super.execute(hero, action);
+            super.execute(chr, action);
         }
     }
 

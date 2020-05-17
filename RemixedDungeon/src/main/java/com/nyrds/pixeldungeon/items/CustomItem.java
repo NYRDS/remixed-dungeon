@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaTable;
@@ -77,9 +76,9 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void execute(Hero hero, String action) {
-        super.execute(hero,action);
-        script.run("execute", hero, action);
+    public void execute(Char chr, String action) {
+        super.execute(chr,action);
+        script.run("execute", chr, action);
     }
 
 
@@ -148,7 +147,7 @@ public class CustomItem extends EquipableItem {
             }
         };
 
-        GameScene.selectCell(cellSelectorListener);
+        getOwner().selectCell(cellSelectorListener);
     }
 
     @Override

@@ -21,13 +21,13 @@ local function noneMode(self, scene)
 
 end
 
-local function stdMode(self, scene)
+local function stdModeOnStep(self, scene)
     if scene == "GameScene" then
         gameScene.onStep()
     end
 end
 
-local function levelsTestMode(self, scene)
+local function levelsTestModeOnStep(self, scene)
     if scene == "GameScene" then
 
         framesOnLevel = framesOnLevel + 1
@@ -42,7 +42,7 @@ local function levelsTestMode(self, scene)
                 RPD.glog("trying level: %s", nextLevelId)
                 GameControl:changeLevel(nextLevelId)
             else
-                service.onStep = stdMode
+                service.onStep = stdModeOnStep
                 GameControl:titleScene()
             end
         end
@@ -54,13 +54,17 @@ local function levelsTestMode(self, scene)
 end
 
 local modes = {}
-modes["std"] = stdMode
-modes["levelsTest"] = levelsTestMode
+modes["std"] = stdModeOnStep
+modes["levelsTest"] = levelsTestModeOnStep
 
-service.onStep = stdMode
+service.onStep = stdModeOnStep
 
 service.setMode = function(self, mode)
     service.onStep = modes[mode] or noneMode
+end
+
+service.selectCell = function(self)
+    gameScene.selectCell()
 end
 
 return service

@@ -33,6 +33,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.audio.Sample;
@@ -64,11 +65,13 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
+import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -1219,5 +1222,32 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	protected void setOwnerId(int owner) {
 		this.owner = owner;
+	}
+
+	public void selectCell(CellSelector.Listener listener) {
+		GLog.w("select cell for %s niy.", getEntityKind());
+	}
+
+	public int getSkillPointsMax() {
+		return 10;
+	}
+
+	public int getSkillPoints() {
+		return 10;
+	}
+
+	public void spendSkillPoints(int cost) {
+	}
+
+	public void setSkillPoints(int i) {
+	}
+
+	public void eat(Food food, float energy, String message) {
+	}
+
+	public void skillLevelUp() {
+	}
+
+	public void teleportTo(Position target) {
 	}
 }

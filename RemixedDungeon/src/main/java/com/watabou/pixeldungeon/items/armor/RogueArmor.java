@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
@@ -36,7 +35,6 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class RogueArmor extends ClassArmor {
@@ -52,11 +50,11 @@ public class RogueArmor extends ClassArmor {
 	
 	@Override
 	public void doSpecial() {			
-		GameScene.selectCell( teleporter );
+		getOwner().selectCell( teleporter );
 	}
 	
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip(Char hero ) {
 		if (hero.getHeroClass() == HeroClass.ROGUE) {
 			return super.doEquip( hero );
 		} else {

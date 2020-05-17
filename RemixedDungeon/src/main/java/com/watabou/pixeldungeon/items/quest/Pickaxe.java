@@ -72,7 +72,7 @@ public class Pickaxe extends Weapon {
 	}
 	
 	@Override
-	public void execute( final Hero hero, String action ) {
+	public void execute(final Char chr, String action ) {
 		
 		if (action.equals(AC_MINE)) {
 			
@@ -83,13 +83,13 @@ public class Pickaxe extends Weapon {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				
-				final int pos = hero.getPos() + Level.NEIGHBOURS8[i];
+				final int pos = chr.getPos() + Level.NEIGHBOURS8[i];
 				if (Dungeon.level.map[pos] == Terrain.WALL_DECO) {
 				
-					hero.spend( TIME_TO_MINE );
-					hero.busy();
+					chr.spend( TIME_TO_MINE );
+					chr.busy();
 					
-					hero.getSprite().attack( pos, () -> {
+					chr.getSprite().attack( pos, () -> {
 
 						CellEmitter.center( pos ).burst( Speck.factory( Speck.STAR ), 7 );
 						Sample.INSTANCE.play( Assets.SND_EVOKE );
@@ -101,13 +101,13 @@ public class Pickaxe extends Weapon {
 						if (gold.doPickUp( Dungeon.hero )) {
 							GLog.i( Hero.getHeroYouNowHave(), gold.name() );
 						} else {
-							Dungeon.level.drop( gold, hero.getPos() ).sprite.drop();
+							Dungeon.level.drop( gold, chr.getPos() ).sprite.drop();
 						}
 
-						hero.hunger().satisfy( -Hunger.STARVING / 10 );
+						chr.hunger().satisfy( -Hunger.STARVING / 10 );
 						BuffIndicator.refreshHero();
 
-						hero.onOperateComplete();
+						chr.onOperateComplete();
 					});
 					
 					return;
@@ -118,7 +118,7 @@ public class Pickaxe extends Weapon {
 			
 		} else {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}

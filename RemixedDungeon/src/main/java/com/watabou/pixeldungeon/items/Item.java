@@ -159,17 +159,17 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		Dungeon.level.drop(detachAll(chr.getBelongings().backpack), pos).sprite.drop(pos);
 	}
 
-	public void doThrow(Hero hero) {
-		GameScene.selectCell(thrower);
+	public void doThrow(Char chr) {
+		chr.selectCell(thrower);
 	}
 
-	public void execute(Hero hero, String action) {
-		hero.getBelongings().setSelectedItem(this);
+	public void execute(Char chr, String action) {
+		chr.getBelongings().setSelectedItem(this);
 
 		if (action.equals(AC_DROP)) {
-			doDrop(hero);
+			doDrop(chr);
 		} else if (action.equals(AC_THROW)) {
-			doThrow(hero);
+			doThrow(chr);
 		}
 	}
 

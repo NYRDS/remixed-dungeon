@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -47,7 +46,7 @@ public class ElfArmor extends ClassArmor {
 	}
 	
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip(Char hero ) {
 		if (hero.getHeroClass() == HeroClass.ELF) {
 			return super.doEquip( hero );
 		} else {

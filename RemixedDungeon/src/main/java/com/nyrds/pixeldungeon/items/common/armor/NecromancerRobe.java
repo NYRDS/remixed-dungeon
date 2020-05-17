@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.common.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -19,7 +19,7 @@ public class NecromancerRobe extends Armor {
 	}
 
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip(Char hero ) {
 		if (hero.getHeroClass() == HeroClass.NECROMANCER) {
 			return super.doEquip( hero );
 		} else {

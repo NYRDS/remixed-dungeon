@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.particles.Emitter;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -53,24 +54,24 @@ public class Torch extends Item {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		
 		if (action.equals(AC_LIGHT)) {
 			
-			hero.spend( TIME_TO_LIGHT );
-			hero.busy();
+			chr.spend( TIME_TO_LIGHT );
+			chr.busy();
 			
-			hero.getSprite().operate( hero.getPos() );
+			chr.getSprite().operate( chr.getPos() );
 			
-			detach( hero.getBelongings().backpack );
-			Buff.affect( hero, Light.class, Light.DURATION );
+			detach( chr.getBelongings().backpack );
+			Buff.affect(chr, Light.class, Light.DURATION );
 			
-			Emitter emitter = hero.getSprite().centerEmitter();
+			Emitter emitter = chr.getSprite().centerEmitter();
 			emitter.start( FlameParticle.FACTORY, 0.2f, 3 );
 			
 		} else {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}

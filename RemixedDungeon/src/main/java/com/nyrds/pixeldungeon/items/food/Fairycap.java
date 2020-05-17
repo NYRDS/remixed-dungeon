@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 
 abstract public class Fairycap extends Mushroom {
 	{
@@ -11,7 +11,7 @@ abstract public class Fairycap extends Mushroom {
 	}
 
 	@Override
-	protected void applyEffect(Hero hero){
+	protected void applyEffect(Char hero){
 		//TODO: + 1 max sp. А нызывается он Ведьмин Зонтик
 	}
 }

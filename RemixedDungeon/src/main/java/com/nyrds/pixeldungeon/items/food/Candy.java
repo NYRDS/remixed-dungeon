@@ -5,7 +5,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.CommonActions;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -18,23 +18,23 @@ public class Candy extends Food {
 	}
 
 	@Override
-	public void execute(Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 
-			detach( hero.getBelongings().backpack );
+			detach( chr.getBelongings().backpack );
 
 			GLog.w(Game.getVar(R.string.Candy_Warning_1));
 
-			hero.getSprite().operate( hero.getPos() );
-			hero.busy();
-			SpellSprite.show( hero, SpellSprite.FOOD );
+			chr.getSprite().operate( chr.getPos() );
+			chr.busy();
+			SpellSprite.show(chr, SpellSprite.FOOD );
 			Sample.INSTANCE.play( Assets.SND_EAT );
 
-			hero.spend( TIME_TO_EAT );
+			chr.spend( TIME_TO_EAT );
 
 		} else {
 
-			super.execute( hero, action );
+			super.execute(chr, action );
 
 		}
 	}

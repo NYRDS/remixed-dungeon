@@ -116,4 +116,8 @@ mob.fillStats = function(self,mob)
     return not not (self.stats and self.stats(mob))
 end
 
+mob.onSelectCell = function(self, mob)
+    return not not (self.selectCell and self.selectCell(mob))
+end
+
 return mob

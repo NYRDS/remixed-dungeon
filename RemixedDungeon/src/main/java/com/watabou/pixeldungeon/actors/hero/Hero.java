@@ -104,6 +104,7 @@ import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.SurfaceScene;
@@ -1797,5 +1798,10 @@ public class Hero extends Char {
 	public void resetBelongings(Belongings belongings) {
 		this.belongings = belongings;
 		updateSprite();
+	}
+
+	@Override
+	public void selectCell(CellSelector.Listener listener) {
+		GameScene.selectCell(listener);
 	}
 }

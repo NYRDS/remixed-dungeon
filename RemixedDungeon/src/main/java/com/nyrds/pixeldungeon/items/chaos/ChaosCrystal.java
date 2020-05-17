@@ -122,16 +122,16 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		}
 	};
 
-	private void fuse(Hero hero) {
+	private void fuse(Char hero) {
 		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
 		hero.getSprite().operate(hero.getPos());
 	}
 
 	@Override
-	public void execute(final Hero ch, String action) {
+	public void execute(final Char ch, String action) {
 		switch (action) {
 			case AC_USE:
-				GameScene.selectCell(chaosMark);
+				getOwner().selectCell(chaosMark);
 				break;
 			case AC_FUSE:
 				fuse(ch);

@@ -65,22 +65,22 @@ public class ShortSword extends MeleeWeapon {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals(AC_REFORGE)) {
 			
-			if (hero.getBelongings().weapon == this) {
+			if (chr.getBelongings().weapon == this) {
 				equipped = true;
-				hero.getBelongings().weapon = CharsList.DUMMY_ITEM;
+				chr.getBelongings().weapon = CharsList.DUMMY_ITEM;
 			} else {
 				equipped = false;
-				detach( hero.getBelongings().backpack );
+				detach( chr.getBelongings().backpack );
 			}
 
 			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select) );
 			
 		} else {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}

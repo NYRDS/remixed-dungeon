@@ -71,22 +71,22 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals( AC_READ )) {
 			
-			if (hero.hasBuff( Blindness.class )) {
+			if (chr.hasBuff( Blindness.class )) {
 				GLog.w( Game.getVar(R.string.TomeOfMastery_Blinded) );
 				return;
 			}
 
-			if(hero.getSubClass() != HeroSubClass.NONE) {
+			if(chr.getSubClass() != HeroSubClass.NONE) {
 				GLog.w( Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen) );
 				return;
 			}
 
 			HeroSubClass way1;
 			HeroSubClass way2;
-			switch (hero.getHeroClass()) {
+			switch (chr.getHeroClass()) {
 			case WARRIOR:
 				way1 = HeroSubClass.GLADIATOR;
 				way2 = HeroSubClass.BERSERKER;
@@ -114,7 +114,7 @@ public class TomeOfMastery extends MasteryItem {
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );
 			
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 }

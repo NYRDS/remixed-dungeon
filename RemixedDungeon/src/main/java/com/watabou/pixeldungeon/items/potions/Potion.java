@@ -125,7 +125,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public void execute( final Hero hero, String action ) {
+	public void execute(final Char chr, String action ) {
 		switch (action) {
 			case AC_DRINK:
 				if (isKnown() && (
@@ -141,30 +141,30 @@ public class Potion extends Item implements UnknownItem {
 								@Override
 								public void onSelect(int index) {
 									if (index == 0) {
-										drink(hero);
+										drink(chr);
 									}
 								}
 							}
 					);
 
 				} else {
-					drink(hero);
+					drink(chr);
 				}
 
 				break;
 			case AC_MOISTEN:
-				moisten(hero);
+				moisten(chr);
 				break;
 			default:
 
-				super.execute(hero, action);
+				super.execute(chr, action);
 
 				break;
 		}
 	}
 	
 	@Override
-	public void doThrow( final Hero hero ) {
+	public void doThrow( final Char chr) {
 
 		if (isKnown() && (
 			this instanceof PotionOfExperience || 
@@ -183,18 +183,18 @@ public class Potion extends Item implements UnknownItem {
 					@Override
 					public void onSelect(int index) {
 						if (index == 0) {
-							Potion.super.doThrow( hero );
+							Potion.super.doThrow(chr);
 						}
 					}
 				}
 			);
 			
 		} else {
-			super.doThrow( hero );
+			super.doThrow(chr);
 		}
 	}
 	
-	protected void drink( Hero hero ) {
+	protected void drink(Char hero ) {
 		
 		detach( hero.getBelongings().backpack );
 		
@@ -208,7 +208,7 @@ public class Potion extends Item implements UnknownItem {
 		shatterd = false;
 	}
 	
-	private void moisten(Hero hero) {
+	private void moisten(Char hero) {
 		
 		hero.spend( TIME_TO_MOISTEN);
 		hero.busy();

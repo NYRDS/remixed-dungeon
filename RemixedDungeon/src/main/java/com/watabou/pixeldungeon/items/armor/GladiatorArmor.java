@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -15,7 +15,7 @@ public class GladiatorArmor extends WarriorArmor {
 		coverHair = true;
 	}
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip(Char hero ) {
 		if (hero.getSubClass() == HeroSubClass.GLADIATOR) {
 			return super.doEquip( hero );
 		} else {

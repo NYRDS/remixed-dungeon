@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.items.books.Book;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Random;
 
@@ -43,7 +43,7 @@ public class Codex extends Book {
 	}
 
 	@Override
-	protected void doRead(Hero hero) {
+	protected void doRead(Char hero) {
 		if(text != null && !text.isEmpty() && !text.equals("Unknown")) {
 			WndStory.showCustomStory(text);
 		} else {

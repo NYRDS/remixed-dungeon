@@ -6,6 +6,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
@@ -51,28 +52,28 @@ public class Seed extends Item {
     }
 
     @Override
-    public void execute(Hero hero, String action) {
+    public void execute(Char chr, String action) {
         if (action.equals(AC_PLANT)) {
 
-            hero.spend(TIME_TO_PLANT);
-            hero.busy();
-            ((Seed) detach(hero.getBelongings().backpack)).onThrow(hero.getPos());
+            chr.spend(TIME_TO_PLANT);
+            chr.busy();
+            ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos());
 
-            hero.getSprite().operate(hero.getPos());
+            chr.getSprite().operate(chr.getPos());
 
         } else if (action.equals(CommonActions.AC_EAT)) {
-            detach(hero.getBelongings().backpack);
+            detach(chr.getBelongings().backpack);
 
-            hero.getSprite().operate(hero.getPos());
-            hero.busy();
+            chr.getSprite().operate(chr.getPos());
+            chr.busy();
 
-            SpellSprite.show(hero, SpellSprite.FOOD);
+            SpellSprite.show(chr, SpellSprite.FOOD);
             Sample.INSTANCE.play(Assets.SND_EAT);
 
-            hero.spend(Food.TIME_TO_EAT);
+            chr.spend(Food.TIME_TO_EAT);
         }
 
-        super.execute(hero, action);
+        super.execute(chr, action);
     }
 
 

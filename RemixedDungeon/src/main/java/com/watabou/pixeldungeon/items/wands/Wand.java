@@ -41,7 +41,6 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.rings.RingOfPower.Power;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -156,15 +155,15 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public void execute(Hero hero, String action) {
+	public void execute(Char chr, String action) {
 		if (action.equals(AC_ZAP)) {
-			wandUser = hero;
-			hero.getBelongings().setSelectedItem(this);
-			GameScene.selectCell(zapper);
+			wandUser = chr;
+			chr.getBelongings().setSelectedItem(this);
+			chr.selectCell(zapper);
 			return;
 		}
 
-		super.execute(hero, action);
+		super.execute(chr, action);
 	}
 
 	public void zapCell(Char chr, int cell) {

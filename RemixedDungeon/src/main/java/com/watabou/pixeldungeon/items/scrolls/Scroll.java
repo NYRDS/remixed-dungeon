@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.CommonActions;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -140,20 +141,20 @@ public abstract class Scroll extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 			
-			if (hero.hasBuff( Blindness.class )) {
+			if (chr.hasBuff( Blindness.class )) {
 				GLog.w( Game.getVar(R.string.Scroll_Blinded) );
 			} else {
-				hero.getBelongings().setSelectedItem(detach( hero.getBelongings().backpack ));
+				chr.getBelongings().setSelectedItem(detach( chr.getBelongings().backpack ));
 				
 				doRead();
 			}
 			
 		} else {
 		
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}

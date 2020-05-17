@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -329,13 +328,13 @@ public class WandMaker extends NPC {
 			}
 			
 			@Override
-			public void execute( Hero hero, String action ) {
+			public void execute(Char chr, String action ) {
 				
-				super.execute( hero, action );
+				super.execute(chr, action );
 				
 				if (action.equals( CommonActions.AC_EAT )) {
-					GameScene.add( Blob.seed( hero.getPos(), 100, ToxicGas.class ) );
-					GameScene.add( Blob.seed( hero.getPos(), 100, ParalyticGas.class ) );					
+					GameScene.add( Blob.seed( chr.getPos(), 100, ToxicGas.class ) );
+					GameScene.add( Blob.seed( chr.getPos(), 100, ParalyticGas.class ) );
 				}
 			}
 

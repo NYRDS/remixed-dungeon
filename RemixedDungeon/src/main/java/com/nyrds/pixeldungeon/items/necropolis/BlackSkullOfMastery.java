@@ -38,12 +38,12 @@ public class BlackSkullOfMastery extends MasteryItem {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals( AC_NECROMANCY )) {
 
 			HeroSubClass way;
 
-			if (hero.getHeroClass() == HeroClass.NECROMANCER) {
+			if (chr.getHeroClass() == HeroClass.NECROMANCER) {
 				way = HeroSubClass.LICH;
 			} else {
 				GLog.w("Error: How did you get this item?! You're not supposed to be able to obtain it!!");
@@ -51,7 +51,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 			}
 			GameScene.show( new WndChooseWay( this, way ) );
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 }

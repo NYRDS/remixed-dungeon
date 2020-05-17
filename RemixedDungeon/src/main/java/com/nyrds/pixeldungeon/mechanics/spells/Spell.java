@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -93,7 +92,7 @@ public class Spell implements NamedEntityKind {
             final Hero hero = (Hero) chr;
 
             if (targetingType.equals(SpellHelper.TARGET_CELL)) {
-                GameScene.selectCell(new CellSelector.Listener() {
+                chr.selectCell(new CellSelector.Listener() {
                     @Override
                     public void onSelect(Integer cell, Char selector) {
                         if (cell != null) {

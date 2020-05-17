@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -68,25 +69,25 @@ public class DewVial extends Item {
 	private static final double POW = Math.log10( NUM );
 	
 	@Override
-	public void execute( final Hero hero, String action ) {
+	public void execute(final Char chr, String action ) {
 		if (action.equals( AC_DRINK )) {
 			
 			if (getVolume() > 0) {
 
-				int value = (int)Math.ceil( Math.pow( getVolume(), POW ) / NUM * hero.ht() );
-				int effect = Math.min( hero.ht() - hero.hp(), value );
+				int value = (int)Math.ceil( Math.pow( getVolume(), POW ) / NUM * chr.ht() );
+				int effect = Math.min( chr.ht() - chr.hp(), value );
 				if (effect > 0) {
-					hero.heal(effect,this);
-					hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
+					chr.heal(effect,this);
+					chr.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				}
 				
 				setVolume(0);
 				
-				hero.spend( TIME_TO_DRINK );
-				hero.busy();
+				chr.spend( TIME_TO_DRINK );
+				chr.busy();
 				
 				Sample.INSTANCE.play( Assets.SND_DRINK );
-				hero.getSprite().operate( hero.getPos() );
+				chr.getSprite().operate( chr.getPos() );
 
                 QuickSlot.refresh();
 
@@ -95,7 +96,7 @@ public class DewVial extends Item {
 			}
 			
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 	

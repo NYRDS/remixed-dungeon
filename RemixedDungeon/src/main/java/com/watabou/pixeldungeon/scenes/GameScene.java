@@ -753,14 +753,18 @@ public class GameScene extends PixelScene {
         }
     }
 
+    @LuaInterface
     public static void handleCell(int cell) {
-        cellSelector.select(cell);
+        if(isSceneReady()) {
+            cellSelector.select(cell);
+        }
     }
 
     public static void selectCell(CellSelector.Listener listener) {
-        cellSelector.listener = listener;
         if(isSceneReady()) {
+            cellSelector.listener = listener;
             scene.prompt(listener.prompt());
+            script.runOptional("selectCell");
         }
     }
 

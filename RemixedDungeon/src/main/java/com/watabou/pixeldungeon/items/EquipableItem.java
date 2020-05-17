@@ -38,16 +38,16 @@ public abstract class EquipableItem extends Item {
 	private Belongings.Slot equipedTo = Belongings.Slot.NONE;
 
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		switch (action) {
 			case AC_EQUIP:
-				doEquip(hero);
+				doEquip(chr);
 				break;
 			case AC_UNEQUIP:
-				doUnequip(hero, true);
+				doUnequip(chr, true);
 				break;
 			default:
-				super.execute(hero, action);
+				super.execute(chr, action);
 				break;
 		}
 	}
@@ -82,7 +82,7 @@ public abstract class EquipableItem extends Item {
 		return actions;
 	}
 
-	public boolean doEquip(Hero hero ) {
+	public boolean doEquip(Char hero ) {
 		Belongings belongings = hero.getBelongings();
 		return belongings.equip(this, slot(belongings));
 	}

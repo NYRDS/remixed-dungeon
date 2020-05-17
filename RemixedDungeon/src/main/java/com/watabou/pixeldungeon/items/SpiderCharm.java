@@ -3,8 +3,8 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
@@ -27,7 +27,7 @@ public class SpiderCharm extends UsableArtifact {
 	}
 	
 	@Override
-	public void execute( final Hero ch, String action ) {
+	public void execute(final Char ch, String action ) {
 
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);

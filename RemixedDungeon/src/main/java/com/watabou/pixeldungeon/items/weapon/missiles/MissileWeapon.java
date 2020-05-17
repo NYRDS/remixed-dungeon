@@ -98,7 +98,7 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	@Override
-	public boolean doEquip( final Hero hero ) {
+	public boolean doEquip( final Char hero ) {
 		if(notUsableInMelee()) {
 			GameScene.show(
 					new WndOptions(Game.getVar(R.string.MissileWeapon_Missiles),

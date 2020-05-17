@@ -82,23 +82,23 @@ public class WandOfMagicMissile extends SimpleWand  {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals( AC_DISENCHANT )) {
 			
-			if (hero.getBelongings().weapon == this) {
+			if (chr.getBelongings().weapon == this) {
 				disenchantEquipped = true;
-				hero.getBelongings().weapon = CharsList.DUMMY_ITEM;
+				chr.getBelongings().weapon = CharsList.DUMMY_ITEM;
                 QuickSlot.refresh();
             } else {
 				disenchantEquipped = false;
-				detach( hero.getBelongings().backpack );
+				detach( chr.getBelongings().backpack );
 			}
 
 			GameScene.selectItem( itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand) );
 			
 		} else {
 		
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}

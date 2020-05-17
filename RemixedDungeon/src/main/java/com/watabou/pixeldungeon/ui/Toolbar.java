@@ -101,7 +101,7 @@ public class Toolbar extends Component {
             @Override
             protected void onClick() {
                 if (hero.isReady()) {
-                    GameScene.selectCell(informer);
+                    hero.selectCell(informer);
                 }
             }
         };

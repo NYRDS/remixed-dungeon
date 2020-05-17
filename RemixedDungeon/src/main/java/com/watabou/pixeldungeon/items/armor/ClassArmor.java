@@ -86,26 +86,26 @@ abstract public class ClassArmor extends Armor {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(Char chr, String action ) {
 		if (action.equals(special())) {
 
-			int cost = hero.getSkillPointsMax()/specialCostModifier;
+			int cost = chr.getSkillPointsMax()/specialCostModifier;
 
-			if (hero.getSkillPoints() < cost) {
+			if (chr.getSkillPoints() < cost) {
 				GLog.w( Game.getVar(R.string.ClassArmor_LowMana) );
 				return;
 			}
-			if (!isEquipped( hero )) {
+			if (!isEquipped(chr)) {
 				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
 				return;
 			}
 
 			doSpecial();
-			hero.spendSkillPoints(cost);
+			chr.spendSkillPoints(cost);
 			return;
 		}
 
-		super.execute( hero, action );
+		super.execute(chr, action );
 	}
 	
 	abstract public String special();

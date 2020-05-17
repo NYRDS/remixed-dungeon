@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 
 abstract public class Milkberry extends Mushroom {
 	{
@@ -11,7 +11,7 @@ abstract public class Milkberry extends Mushroom {
 	}
 
 	@Override
-	protected void applyEffect(Hero hero){
+	protected void applyEffect(Char hero){
 		//TODO: Я его добавил исключительно ради названия и концепции. На грибе есть нарост, собрающий влагу, которая постепенно первращается в жидкость белого цвета со сладковатым, белковым вкусом.  А называется он Млековика
 	}
 }
