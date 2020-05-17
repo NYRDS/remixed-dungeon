@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -98,7 +97,8 @@ public class TestLevel extends RegularLevel {
 	public void runEquipTest() {
 		List<Item> items = ItemFactory.allItems();
 
-		Hero hero = Dungeon.hero;
+		Hero hero = new Hero(2);
+		hero.setPos(entrance+1);
 		hero.spend(-10000);
 
 		Belongings initial = hero.getBelongings();
