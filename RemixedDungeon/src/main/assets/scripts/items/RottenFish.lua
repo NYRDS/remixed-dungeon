@@ -23,7 +23,7 @@ return item.init{
     actions = function() return {RPD.Actions.eat} end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.eat then
-            RPD.Buffs.Buff:affect(hero, RPD.Buffs.Poison):set(2*math.random(1, hero:lvl()))
+            RPD.affectBuff(hero,RPD.Buffs.Poison,2*math.random(1, hero:lvl()))
             hero:eat(item,RPD.Buffs.Hunger.HUNGRY / 4,"RottenFish_Taste")
         end
     end
