@@ -43,6 +43,7 @@ import androidx.core.content.PermissionChecker;
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.ReportingExecutor;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -383,6 +384,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
                 step();
             } catch (LuaError e) {
                 throw ModdingMode.modException(e);
+            } catch (Exception e) {
+                throw new TrackedRuntimeException(e);
             }
         }
 
