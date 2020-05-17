@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -134,7 +133,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( CommonActions.AC_READ );
 		return actions;

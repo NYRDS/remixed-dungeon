@@ -8,7 +8,6 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -110,7 +109,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
 
         if(equipable.isEmpty()) {

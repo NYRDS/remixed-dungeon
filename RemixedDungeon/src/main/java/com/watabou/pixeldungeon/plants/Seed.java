@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.Food;
@@ -35,7 +34,7 @@ public class Seed extends Item {
     public Class<? extends Item> alchemyClass;
 
     @Override
-    public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
         actions.add(AC_PLANT);
         actions.add(CommonActions.AC_EAT);

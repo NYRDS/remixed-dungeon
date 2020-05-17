@@ -87,7 +87,7 @@ public class Kusarigama extends SpecialWeapon {
     }
 
     @Override
-    public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
         if (isEquipped(hero)) {
             actions.add(AC_PULL);

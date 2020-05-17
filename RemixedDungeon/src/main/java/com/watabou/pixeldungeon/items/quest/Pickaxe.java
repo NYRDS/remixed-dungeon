@@ -65,7 +65,7 @@ public class Pickaxe extends Weapon {
 	public boolean bloodStained = false;
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_MINE );
 		return actions;

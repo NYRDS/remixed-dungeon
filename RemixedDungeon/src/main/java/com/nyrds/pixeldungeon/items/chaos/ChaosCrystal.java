@@ -4,7 +4,6 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.rings.UsableArtifact;
@@ -143,7 +142,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	}
 
 	@Override
-	public ArrayList<String> actions(Hero hero) {
+	public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = super.actions(hero);
 		if (charge == 0 || identetifyLevel == 0) {
 			actions.remove(AC_USE);

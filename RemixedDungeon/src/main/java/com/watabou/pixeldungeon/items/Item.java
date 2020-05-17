@@ -133,7 +133,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return lhs.price() - rhs.price();
 	};
 
-    public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = new ArrayList<>();
 		actions.add(AC_DROP);
 		actions.add(AC_THROW);

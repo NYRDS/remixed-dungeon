@@ -57,7 +57,7 @@ public class DewVial extends Item {
 	private int volume = 0;
 
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (getVolume() > 0) {
 			actions.add( AC_DRINK );

@@ -43,7 +43,9 @@ public class WndInfoMob extends WndTitledMessage {
 		actions.setAlign(HBox.Align.Width);
 		actions.setGap(GAP);
 
-		if (Dungeon.hero.isAlive() && mob.getOwner() == Dungeon.hero) {
+		//if (Dungeon.hero.isAlive() && mob.getOwner() == Dungeon.hero) {
+		if (Dungeon.hero.isAlive()) {
+
 			for (final String action:mob.actions( Dungeon.hero )) {
 
 				if(Dungeon.hero.getHeroClass().forbidden(action)){

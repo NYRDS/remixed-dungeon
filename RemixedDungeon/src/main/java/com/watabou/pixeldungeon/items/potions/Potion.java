@@ -117,7 +117,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_DRINK );
 		actions.add( AC_MOISTEN );
