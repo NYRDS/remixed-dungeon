@@ -12,10 +12,14 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.List;
+
+import lombok.var;
 
 public class TestLevel extends RegularLevel {
 
@@ -101,7 +105,9 @@ public class TestLevel extends RegularLevel {
 
 		for(Item item:items) {
 			GLog.i(item.name());
-			item.actions(hero);
+
+			GLog.i("unequipped");
+			testItemActions(hero, item);
 
 			if(item instanceof EquipableItem) {
 
@@ -110,6 +116,9 @@ public class TestLevel extends RegularLevel {
 				equipableItem.doEquip(hero);
 
 				equipableItem.actions(hero);
+
+				GLog.i("equipped");
+				testItemActions(hero, equipableItem);
 
 				int itemDialog = Game.scene().findByClass(WndOptions.class,0);
 				if( itemDialog > 0) {
@@ -124,5 +133,31 @@ public class TestLevel extends RegularLevel {
 		}
 		hero.resetBelongings(initial);
 		hero.postpone(0);
+	}
+
+	protected void testItemActions(Hero hero, Item item) {
+
+		if(item.getEntityKind().equals("Amulet")) {
+			return;
+		}
+
+		if(item.getEntityKind().equals("CandyOfDeath")) {
+			return;
+		}
+
+		if(item.getEntityKind().equals("SpellBook")) {
+			return;
+		}
+
+
+		var actions = item.actions(hero);
+
+		for (String action:actions) {
+			GLog.i("%s : %s", item.getEntityKind(), action);
+			item.setOwner(hero);
+			item.execute(hero,action);
+			hero.hp(hero.ht());
+			GameScene.handleCell(getRandomTerrainCell(Terrain.EMPTY));
+		}
 	}
 }
