@@ -223,14 +223,15 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			setOwnerId(id);
 		}
 
-
-		if(!(this instanceof CustomMob)) {
-			name = getClassParam("Name", name, true);
-			name_objective = getClassParam("Name_Objective", name, true);
-			description = getClassParam("Desc", description, true);
-			gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
-			defenceVerb = getClassParam("Defense", null, false);
+		if(this instanceof CustomMob || this instanceof Hero) {
+			return;
 		}
+
+		name = getClassParam("Name", name, true);
+		name_objective = getClassParam("Name_Objective", name, true);
+		description = getClassParam("Desc", description, true);
+		gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
+		defenceVerb = getClassParam("Defense", null, false);
 	}
 
 	public void yell(String str) {
@@ -1212,8 +1213,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		actions.add("niy");
-		actions.add("niy");
+		actions.add("???");
+		actions.add("???");
 		return actions;
 	}
 
