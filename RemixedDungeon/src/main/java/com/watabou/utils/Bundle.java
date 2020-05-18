@@ -140,7 +140,7 @@ public class Bundle {
     @NotNull
     public <T extends Bundlable> T opt(String key, T defaultValue) {
         Object ret = get(key);
-        if(defaultValue.getClass().isAssignableFrom(ret.getClass())) {
+        if(ret != null) {
             return (T)ret;
         }
 
