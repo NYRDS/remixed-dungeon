@@ -22,8 +22,11 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CellEmitter {
 
+	@NotNull
 	public static Emitter get( int cell ) {
 		PointF p = DungeonTilemap.tileToWorld( cell );
 		Emitter emitter = GameScene.emitter();

@@ -245,7 +245,7 @@ public class PrisonBossLevel extends BossLevel {
 		while (!passable[keyPos]) {
 			keyPos = anteroom.random(this);
 		}
-		drop( new IronKey(), keyPos ).type = Heap.Type.CHEST;
+		drop( new IronKey(), keyPos, Heap.Type.CHEST);
 		
 		dropBones();
 	}

@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
@@ -30,13 +31,13 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
 public class Thief extends Mob {
 
+	@Packable(defaultValue = "DUMMY_ITEM")
 	public Item item;
 	
 	{
@@ -49,21 +50,7 @@ public class Thief extends Mob {
 		loot = RingOfHaggler.class;
 		lootChance = 0.01f;
 	}
-	
-	private static final String ITEM = "item";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( ITEM, item );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		item = (Item)bundle.get( ITEM );
-	}
-	
+
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 1, 7 );
@@ -76,12 +63,8 @@ public class Thief extends Mob {
 	
 	@Override
 	public void die(NamedEntityKind cause) {
-
 		super.die( cause );
-		
-		if (item != null) {
-			Dungeon.level.drop( item, getPos() ).sprite.drop();
-		}
+		item.doDrop(this);
 	}
 	
 	@Override
@@ -96,7 +79,7 @@ public class Thief extends Mob {
 	
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
-		if (item == null && enemy instanceof Hero && steal( (Hero)enemy )) {
+		if (item == CharsList.DUMMY_ITEM && enemy instanceof Hero && steal( (Hero)enemy )) {
 			setState(MobAi.getStateByClass(ThiefFleeing.class));
 		}
 		
@@ -106,7 +89,7 @@ public class Thief extends Mob {
 	@Override
 	public int defenseProc(Char enemy, int damage) {
 		if (getState() instanceof ThiefFleeing) {
-			Dungeon.level.drop( new Gold(), getPos() ).sprite.drop();
+			new Gold().doDrop(this);
 		}
 		
 		return damage;

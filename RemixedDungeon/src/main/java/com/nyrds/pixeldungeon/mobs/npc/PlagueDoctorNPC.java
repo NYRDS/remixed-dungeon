@@ -42,7 +42,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 				if (reward.doPickUp(hero)) {
 					GLog.i(Hero.getHeroYouNowHave(), reward.name());
 				} else {
-					level().drop(reward, hero.getPos()).sprite.drop();
+					reward.doDrop(hero);
 				}
 				Quest.complete();
 				GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_Quest_End)));
@@ -118,7 +118,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 
 			if (given && !processed) {
 				if (Random.Int(2) == 1) {
-					Dungeon.level.drop(new RatHide(), pos).sprite.drop();
+					Dungeon.level.animatedDrop(new RatHide(), pos);
 				}
 			}
 		}

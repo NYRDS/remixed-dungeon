@@ -23,7 +23,6 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -239,7 +238,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
 	private void collectOrDropItem(Item item){
 		if(!item.collect( target.getBelongings().backpack )){
-			Dungeon.level.drop(item, target.getPos()).sprite.drop();
+			item.doDrop(target);
 		}	
 	}
 

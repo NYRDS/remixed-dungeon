@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.levels.painters;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -42,7 +43,7 @@ public class BlacksmithPainter extends Painter {
 				Treasury.getLevelTreasury().random( Random.oneOf(
 					Treasury.Category.ARMOR,
 					Treasury.Category.WEAPON
-				) ), pos );
+				) ), pos, Heap.Type.HEAP );
 		}
 		
 		for (Room.Door door : room.connected.values()) {

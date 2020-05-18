@@ -95,15 +95,20 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	private Set<EquipableItem> activatedItems = new HashSet<>();
 
-	@Packable
+	@Packable(defaultValue = "DUMMY_ITEM")
+	@NotNull
 	public EquipableItem weapon = CharsList.DUMMY_ITEM;
-	@Packable
+	@Packable(defaultValue = "DUMMY_ITEM")
+	@NotNull
 	public EquipableItem leftHand = CharsList.DUMMY_ITEM;
-	@Packable
+	@Packable(defaultValue = "DUMMY_ITEM")
+	@NotNull
 	public EquipableItem armor  = CharsList.DUMMY_ITEM;
-	@Packable
+	@Packable(defaultValue = "DUMMY_ITEM")
+	@NotNull
 	public EquipableItem ring1  = CharsList.DUMMY_ITEM;
-	@Packable
+	@Packable(defaultValue = "DUMMY_ITEM")
+	@NotNull
 	public EquipableItem ring2  = CharsList.DUMMY_ITEM;
 
 	public Belongings( Char owner ) {
@@ -414,7 +419,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		public boolean hasNextEquipped(){
 			for (int i = index; i < equipped.length; i++) {
-				if (equipped[i] != CharsList.DUMMY_ITEM) {
+				if (equipped[i] != CharsList.DUMMY_ITEM && equipped[i] != null) {
 					return true;
 				}
 			}
@@ -430,7 +435,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		public Item next() {
 			while (index < equipped.length) {
 				Item item = equipped[index++];
-				if (item != CharsList.DUMMY_ITEM) {
+				if (item != CharsList.DUMMY_ITEM && item != null) {
 					return item;
 				}
 			}
@@ -483,7 +488,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public boolean drop(EquipableItem item) {
 		if(unequip(item)) {
-			owner.level().drop( weapon, owner.getPos() ).sprite.drop();
+			item.doDrop(owner);
 			return true;
 		}
 		return false;

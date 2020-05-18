@@ -16,7 +16,7 @@ public class ItemUtils {
 			Item item = heap.pickUp();
 			int cell = Dungeon.level.getEmptyCellNextTo(pos);
 			if (Dungeon.level.cellValid(cell)) {
-				Dungeon.level.drop(item, cell).sprite.drop(cell);
+				Dungeon.level.animatedDrop(item,cell);
 			}
 		}
 	}

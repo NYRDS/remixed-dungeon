@@ -41,7 +41,7 @@ public class VaultPainter extends Painter {
 		switch (Random.Int( 3 )) {
 		
 		case 0:
-			level.drop( prize(level), c ).type = Type.LOCKED_CHEST;
+			level.drop( prize(level), c, Type.LOCKED_CHEST);
 			level.addItemToSpawn( new GoldenKey() );
 			break;
 			
@@ -51,13 +51,13 @@ public class VaultPainter extends Painter {
 				i1 = prize(level);
 				i2 = prize(level);
 			} while (i1.getClass() == i2.getClass());
-			level.drop( i1, c ).type = Type.CRYSTAL_CHEST;
-			level.drop( i2, c + Level.NEIGHBOURS8[Random.Int( 8 )]).type = Type.CRYSTAL_CHEST;
+			level.drop( i1, c, Type.CRYSTAL_CHEST);
+			level.drop( i2, c + Level.NEIGHBOURS8[Random.Int( 8 )], Type.CRYSTAL_CHEST);
 			level.addItemToSpawn( new GoldenKey() );
 			break;
 			
 		case 2:
-			level.drop( prize(level), c );
+			level.drop( prize(level), c, Type.HEAP );
 			set( level, c, Terrain.PEDESTAL );
 			break;
 		}

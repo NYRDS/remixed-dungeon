@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.levels.features;
 
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
@@ -32,7 +31,6 @@ import com.watabou.pixeldungeon.items.rings.RingOfHerbalism.Herbalism;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.Nullable;
@@ -49,18 +47,12 @@ public class HighGrass {
 
 			// Seed
 			if (herbalismLevel >= 0 && Random.Int(18) <= Random.Int(herbalismLevel + 1)) {
-				ItemSprite is = level.drop(Treasury.getLevelTreasury().random(Treasury.Category.SEED), pos).sprite;
-				if (is != null) {
-					is.drop();
-				}
+				Treasury.getLevelTreasury().random(Treasury.Category.SEED).doDrop(ch);
 			}
 
 			// Dew
 			if (herbalismLevel >= 0 && Random.Int(6) <= Random.Int(herbalismLevel + 1)) {
-				ItemSprite is = level.drop(Treasury.getLevelTreasury().random(Dewdrop.class.getSimpleName()), pos).sprite;
-				if (is != null) {
-					is.drop();
-				}
+				Treasury.getLevelTreasury().random(Dewdrop.class.getSimpleName()).doDrop(ch);
 			}
 		}
 
@@ -79,10 +71,7 @@ public class HighGrass {
 			}
 		}
 		
-		Emitter emitter = CellEmitter.get(pos);
-		if (emitter != null) {
-			emitter.burst(LeafParticle.LEVEL_SPECIFIC, leaves);
-		}
+		CellEmitter.get(pos).burst(LeafParticle.LEVEL_SPECIFIC, leaves);
 		Dungeon.observe();
 	}
 }

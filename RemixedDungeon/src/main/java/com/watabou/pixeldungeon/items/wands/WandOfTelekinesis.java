@@ -128,7 +128,7 @@ public class WandOfTelekinesis extends Wand {
 			if (item.doPickUp(owner)) {
 				owner.itemPickedUp(item);
 			} else {
-				Dungeon.level.drop(item, owner.getPos()).sprite.drop();
+				item.doDrop(owner);
 			}
 		}
 	}

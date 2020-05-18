@@ -63,7 +63,7 @@ public class Alchemy extends Blob {
 			
 			Item result = heap.transmute();
 			if (result != null) {
-				Dungeon.level.drop( result, cell ).sprite.drop( cell );
+				Dungeon.level.animatedDrop( result, cell );
 			}
 		}
 	}

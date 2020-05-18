@@ -65,8 +65,7 @@ public class PoolPainter extends Painter {
 		}
 		
 		int pos = x + y * level.getWidth();
-		level.drop( prize( level ), pos ).type = 
-			Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP;
+		level.drop( prize( level ), pos, Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP);
 		set( level, pos, Terrain.PEDESTAL );
 		
 		level.addItemToSpawn( new PotionOfInvisibility() );

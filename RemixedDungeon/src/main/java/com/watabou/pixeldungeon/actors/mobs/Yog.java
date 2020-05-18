@@ -147,7 +147,7 @@ public class Yog extends Boss {
 			mob = Dungeon.level.getRandomMob();
 		}
 
-		Dungeon.level.drop(new SkeletonKey(), getPos()).sprite.drop();
+		level().animatedDrop(new SkeletonKey(), getPos());
 		Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
 		super.die(cause);
 

@@ -156,7 +156,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public void doDrop(Char chr) {
 		chr.spendAndNext(TIME_TO_DROP);
 		int pos = chr.getPos();
-		Dungeon.level.drop(detachAll(chr.getBelongings().backpack), pos).sprite.drop(pos);
+		Dungeon.level.animatedDrop(detachAll(chr.getBelongings().backpack), pos);
 	}
 
 	public void doThrow(Char chr) {
@@ -192,10 +192,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			QuickSlot.refresh();
 		}
 
-		Heap heap = Dungeon.level.drop(this, cell);
-		if (!heap.isEmpty()) {
-			heap.sprite.drop(cell);
-		}
+		Dungeon.level.animatedDrop(this, cell);
 	}
 
 	public boolean collect(Bag container) {

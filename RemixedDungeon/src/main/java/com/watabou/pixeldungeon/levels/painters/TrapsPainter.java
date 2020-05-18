@@ -66,10 +66,10 @@ public class TrapsPainter extends Painter {
 			if (lastRow == Terrain.CHASM) {
 				set( level, pos, Terrain.EMPTY );
 			}
-			level.drop( prize( level ), pos ).type = Heap.Type.CHEST;
+			level.drop( prize( level ), pos, Heap.Type.CHEST);
 		} else {
 			set( level, pos, Terrain.PEDESTAL );
-			level.drop( prize( level ), pos );
+			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		
 		level.addItemToSpawn( new PotionOfLevitation() );

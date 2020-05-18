@@ -121,7 +121,7 @@ public abstract class EquipableItem extends Item {
 		}
 		
 		if (collect && !collect( hero.getBelongings().backpack )) {
-			hero.level().drop( this, hero.getPos() );
+			doDrop(hero);
 		}
 				
 		return true;

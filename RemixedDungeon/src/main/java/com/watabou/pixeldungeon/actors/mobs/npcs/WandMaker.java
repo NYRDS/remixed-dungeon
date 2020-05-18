@@ -268,9 +268,7 @@ public class WandMaker extends NPC {
 						pos = Dungeon.level.randomRespawnCell();
 					}
 					
-					Heap heap = Dungeon.level.drop( new CorpseDust(), pos );
-					heap.type = Heap.Type.SKELETON;
-					heap.sprite.link();
+					Dungeon.level.drop( new CorpseDust(), pos, Heap.Type.SKELETON );
 				}
 				
 			} else {
@@ -304,7 +302,7 @@ public class WandMaker extends NPC {
 		public void effect(int pos, Presser ch) {
 			GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
 
-			Dungeon.level.drop( new Seed(), pos ).sprite.drop();
+			level().animatedDrop( new Seed(), pos );
 
 			if (ch instanceof Char) {
 				Buff.prolong( (Char)ch, Roots.class, TICK * 3 );

@@ -137,6 +137,16 @@ public class Bundle {
         }
     }
 
+    @NotNull
+    public <T extends Bundlable> T opt(String key, T defaultValue) {
+        Object ret = get(key);
+        if(defaultValue.getClass().isAssignableFrom(ret.getClass())) {
+            return (T)ret;
+        }
+
+        return defaultValue;
+    }
+
     @Nullable
     public Bundlable get(String key) {
         JSONObject obj = data.optJSONObject(key);

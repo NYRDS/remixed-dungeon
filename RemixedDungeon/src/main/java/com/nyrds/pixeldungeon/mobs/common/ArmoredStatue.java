@@ -96,7 +96,7 @@ public class ArmoredStatue extends Mob {
 	
 	@Override
 	public void die(NamedEntityKind cause) {
-		Dungeon.level.drop(getArmor(), getPos() ).sprite.drop();
+		level().animatedDrop(getArmor(), getPos());
 		super.die( cause );
 	}
 	

@@ -66,8 +66,8 @@ public class IceGuardianCore extends Boss {
 			}
 		}
 
-		level.drop( new SkeletonKey(), getPos() ).sprite.drop();
-		level.drop( new IceKey(), getPos() ).sprite.drop();
+		new SkeletonKey().doDrop(this);
+		new IceKey().doDrop(this);
 
 		Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
 	}

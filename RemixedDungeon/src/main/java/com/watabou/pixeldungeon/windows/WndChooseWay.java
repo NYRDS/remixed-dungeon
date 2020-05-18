@@ -138,7 +138,7 @@ public class WndChooseWay extends Window {
 				Item a = hero.getBelongings().getItem( BlackSkullOfMastery.class );
 				a.removeItemFrom(hero);
 				Item b = new BlackSkull();
-				Dungeon.level.drop( b, hero.getPos() ).sprite.drop();
+				b.doDrop(hero);
 			}
 		};
 		btnWay2.setRect( btnWay1.right() + GAP, btnWay1.top(), btnWay1.width(), BTN_HEIGHT );

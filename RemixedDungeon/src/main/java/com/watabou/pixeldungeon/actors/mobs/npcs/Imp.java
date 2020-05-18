@@ -212,8 +212,8 @@ public class Imp extends NPC {
 			if (spawned && given && !completed) {
 				if ((alternative && mob instanceof Monk) ||
 					(!alternative && mob instanceof Golem)) {
-					
-					Dungeon.level.drop( new DwarfToken(), mob.getPos() ).sprite.drop();
+
+					new DwarfToken().doDrop(mob);
 				}
 			}
 		}

@@ -27,6 +27,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -894,20 +895,20 @@ public abstract class Level implements Bundlable {
 		return cell;
 	}
 
-	public void addItemToSpawn(@Nullable Item item) {
-		if (item != null) {
+	public void addItemToSpawn(@NotNull Item item) {
+		if (!(item instanceof DummyItem)) {
 			itemsToSpawn.add(item);
 		}
 	}
 
+	@NotNull
 	public Item itemToSpanAsPrize() {
 		if (Random.Int(itemsToSpawn.size() + 1) > 0) {
 			Item item = Random.element(itemsToSpawn);
 			itemsToSpawn.remove(item);
 			return item;
-		} else {
-			return null;
 		}
+		return CharsList.DUMMY_ITEM;
 	}
 
 	@LuaInterface
@@ -1035,6 +1036,13 @@ public abstract class Level implements Bundlable {
 			return;
 		}
 		drop(item, cell).type = type;
+	}
+
+	public void animatedDrop(Item item, int cell) {
+		if(item == CharsList.DUMMY_ITEM) {
+			return;
+		}
+		drop(item,cell).sprite.drop();
 	}
 
 	@NotNull

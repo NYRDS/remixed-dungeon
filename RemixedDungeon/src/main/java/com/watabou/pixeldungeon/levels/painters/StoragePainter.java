@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
@@ -40,7 +41,7 @@ public class StoragePainter extends Painter {
 			do {
 				pos = room.random(level);
 			} while (level.map[pos] != floor);
-			level.drop( prize( level ), pos );
+			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		
 		room.entrance().set( Room.Door.Type.BARRICADE );

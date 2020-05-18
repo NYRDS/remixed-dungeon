@@ -136,8 +136,8 @@ public class King extends Boss {
 	@Override
 	public void die(NamedEntityKind cause) {
 
-		level().drop( new ArmorKit(), getPos() ).sprite.drop();
-		level().drop( new SkeletonKey(), getPos() ).sprite.drop();
+		new ArmorKit().doDrop(this);
+		new SkeletonKey().doDrop(this);
 		
 		super.die( cause );
 		

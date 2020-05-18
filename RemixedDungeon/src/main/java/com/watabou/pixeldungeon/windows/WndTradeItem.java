@@ -245,7 +245,7 @@ public class WndTradeItem extends Window {
 		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price );
 
 		if (!boughtItem.doPickUp( customer )) {
-			Dungeon.level.drop( boughtItem, customer.getPos() ).sprite.drop();
+			boughtItem.doDrop(customer);
 		}
 
 		if(boughtItem != item) {

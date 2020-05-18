@@ -55,20 +55,20 @@ public class PitPainter extends Painter {
 			remains = room.random(level);
 		}
 		
-		level.drop( new IronKey(), remains ).type = Type.SKELETON;
+		level.drop( new IronKey(), remains, Type.SKELETON);
 		
 		if (Random.Int( 5 ) == 0) {
-			level.drop( Treasury.getLevelTreasury().random( Treasury.Category.RING ), remains );
+			level.drop( Treasury.getLevelTreasury().random( Treasury.Category.RING ), remains, Type.HEAP );
 		} else {
 			level.drop( Treasury.getLevelTreasury().random( Random.oneOf(
 					Treasury.Category.WEAPON,
 					Treasury.Category.ARMOR
-			) ), remains );
+			) ), remains, Type.HEAP );
 		}
 		
 		int n = Random.IntRange( 1, 2 );
 		for (int i=0; i < n; i++) {
-			level.drop( prize( level ), remains );
+			level.drop( prize( level ), remains, Type.HEAP );
 		}
 	}
 	

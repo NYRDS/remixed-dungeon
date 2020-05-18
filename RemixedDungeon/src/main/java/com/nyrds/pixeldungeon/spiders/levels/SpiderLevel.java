@@ -205,7 +205,7 @@ public class SpiderLevel extends CommonLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			drop(Treasury.getLevelTreasury().random(), randomRespawnCell()).type = Heap.Type.SKELETON;
+			drop(Treasury.getLevelTreasury().random(), randomRespawnCell(),Heap.Type.SKELETON);
 		}
 
 		for (Item item : itemsToSpawn) {
@@ -218,7 +218,7 @@ public class SpiderLevel extends CommonLevel {
 				}
 			}
 
-			drop(item, cell).type = Heap.Type.HEAP;
+			drop(item, cell, Heap.Type.HEAP);
 		}
 
 		dropBones();

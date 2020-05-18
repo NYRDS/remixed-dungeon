@@ -1,22 +1,17 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
-import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
-import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 
@@ -58,19 +53,8 @@ public class CagedKobold extends ImmortalNPC {
 			return true;
 		}
 		if (Quest.given) {
-			
-			Item item = hero.getBelongings().getItem( IceKey.class );
-			if (item != null) {
 
-				item.removeItemFrom(hero);
-
-				Item reward = new CandleOfMindVision();
-
-				if (reward.doPickUp( hero )) {
-					GLog.i( Hero.getHeroYouNowHave(), reward.name() );
-				} else {
-					level().drop(reward, hero.getPos()).sprite.drop();
-				}
+			if (exchangeItem(hero,"IceKey", "CandleOfMindVision")) {
 				Quest.complete();
 				GameScene.show( new WndQuest( this, Game.getVar(R.string.CagedKobold_Quest_End) ) );
 

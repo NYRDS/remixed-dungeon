@@ -295,7 +295,7 @@ public class Ghost extends NPC {
 				} else {
 					
 					if (Random.Int( left2kill ) == 0) {
-						Dungeon.level.drop( new DriedRose(), pos ).sprite.drop();
+						Dungeon.level.animatedDrop( new DriedRose(), pos );
 						processed = true;
 					} else {
 						left2kill--;

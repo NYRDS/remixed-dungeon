@@ -83,10 +83,9 @@ public class Tengu extends Boss implements IZapper {
 	public void die(NamedEntityKind cause) {
 
 		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
-			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
+			new TomeOfMastery().doDrop(this);
 		}
-
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+		new SkeletonKey().doDrop(this);
 		super.die(cause);
 		
 		Badges.validateBossSlain(Badge.BOSS_SLAIN_2);

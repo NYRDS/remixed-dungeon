@@ -58,7 +58,7 @@ public class IncendiaryDart extends Dart {
 			}
 		} else {
 			if (!getOwner().shoot( enemy, this )) {
-				Dungeon.level.drop( this, cell ).sprite.drop();
+				Dungeon.level.animatedDrop( this, cell );
 			}
 		}
 	}

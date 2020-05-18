@@ -99,7 +99,10 @@ public class TestLevel extends RegularLevel {
 
 		Hero hero = new Hero(2);
 		hero.setPos(entrance+1);
+
 		hero.spend(-10000);
+
+
 
 		Belongings initial = hero.getBelongings();
 

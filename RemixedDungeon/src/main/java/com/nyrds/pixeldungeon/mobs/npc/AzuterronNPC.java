@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
-import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
@@ -12,12 +11,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 
@@ -77,18 +72,7 @@ public class AzuterronNPC extends Shopkeeper {
 		}
 		if (Quest.given) {
 			
-			Item item = hero.getBelongings().getItem( HeartOfDarkness.class );
-			if (item != null) {
-
-				item.removeItemFrom(Dungeon.hero);
-
-				Item reward = new PotionOfMight();
-
-				if (reward.doPickUp( Dungeon.hero )) {
-					GLog.i( Hero.getHeroYouNowHave(), reward.name() );
-				} else {
-					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
-				}
+			if (exchangeItem(hero,"HeartOfDarkness", "PotionOfMight")) {
 				Quest.complete();
 				GameScene.show( new WndQuest( this, Game.getVar(R.string.AzuterronNPC_Quest_End) ) );
 			} else {

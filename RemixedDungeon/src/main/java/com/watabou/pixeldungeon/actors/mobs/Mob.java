@@ -502,7 +502,7 @@ public abstract class Mob extends Char {
 			} else {
 				item = (Item) loot;
 			}
-			level().drop(item, getPos()).sprite.drop();
+			item.doDrop(this);
 		}
 	}
 

@@ -604,7 +604,7 @@ public class Hero extends Char {
 						}
 						curAction = null;
 					} else {
-						Heap newHeap = Dungeon.level.drop(item, getPos());
+						Heap newHeap = level().drop(item, getPos());
 
 						newHeap.sprite.drop();
 						newHeap.pickUpFailed();

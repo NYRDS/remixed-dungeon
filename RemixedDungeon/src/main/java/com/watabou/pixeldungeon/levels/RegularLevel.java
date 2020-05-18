@@ -658,7 +658,7 @@ public abstract class RegularLevel extends CustomLevel {
 		}
 
 		for (int i = 0; i < nItems; i++) {
-			drop(Treasury.getLevelTreasury().random(), randomDropCell()).type = Random.chances(Heap.regularHeaps);
+			drop(Treasury.getLevelTreasury().random(), randomDropCell(),Random.chances(Heap.regularHeaps));
 		}
 
 		for (Item item : itemsToSpawn) {
@@ -670,7 +670,7 @@ public abstract class RegularLevel extends CustomLevel {
 				}
 			}
 
-			drop(item, cell).type = Heap.Type.HEAP;
+			drop(item, cell, Heap.Type.HEAP);
 		}
 
 		dropBones();

@@ -88,7 +88,7 @@ public class SpiderQueen extends Boss {
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+		new SkeletonKey().doDrop(this);
 		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);
 	}
 }

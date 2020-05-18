@@ -19,10 +19,15 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -77,5 +82,23 @@ public abstract class NPC extends Mob {
 	public void sayRandomPhrase(int ...phrases) {
 		int index = Random.Int(0, phrases.length);
 		say(Game.getVar(phrases[index]));
+	}
+
+	public boolean exchangeItem(Char hero ,String itemClass, String rewardClass) {
+		Item item = hero.getBelongings().getItem(itemClass );
+		if (item != null) {
+
+			item.removeItemFrom(Dungeon.hero);
+
+			Item reward = ItemFactory.itemByName(rewardClass);
+
+			if (reward.doPickUp(hero)) {
+				GLog.i(Hero.getHeroYouNowHave(), reward.name());
+			} else {
+				reward.doDrop(hero);
+			}
+			return true;
+		}
+		return false;
 	}
 }
