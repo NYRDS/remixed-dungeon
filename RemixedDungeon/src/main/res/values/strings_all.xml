@@ -2568,4 +2568,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldWeaponInfo">When used as weapon this shield will inflict %1$d damage on average.</string>
   <string name="TownPortal_Name">Town Portal</string>
   <string name="TownPortal_Info">This spell allows you instantly return to safety. However, powerful magic source nearby may prevent it from work as intended.</string>
+
+
+  <string name="MedicineMask_Name">Surgical mask</string>
+  <string name="MedicineMask_Info"></string>
+
+  <string name="FilteredMask_Name">N95 mask</string>
+  <string name="FilteredMask_Info"></string>
+
+
+  <string name="FullFaceMask_Name">Gas mask</string>
+  <string name="FullFaceMask_Info"></string>
+
+
 </resources>

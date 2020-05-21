@@ -55,6 +55,9 @@ public class Accessory {
         registerAccessory(GnollCostume.class);
         registerAccessory(ChaosHelmet.class);
         registerAccessory(DogeMask.class);
+        registerAccessory(MedicineMask.class);
+        registerAccessory(FilteredMask.class);
+        registerAccessory(FullFaceMask.class);
     }
 
     public static List<String> getAccessoriesList() {
