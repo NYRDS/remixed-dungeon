@@ -47,10 +47,6 @@ public abstract class Actor implements Bundlable {
 		Actor.realTimeMultiplier = realTimeMultiplier;
 	}
 
-	public Actor() {
-		time = now;
-	}
-
 	protected abstract boolean act();
 
 	public void spend( float time ) {
