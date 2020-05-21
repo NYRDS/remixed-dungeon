@@ -299,7 +299,8 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static int donated() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
+		return 4;
+		//return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
 	}
 
 	public static void lastClass(int value) {
