@@ -124,16 +124,16 @@ public class Eye extends Mob {
         }
 
         if (rayVisible) {
-            getSprite().attack(hitCell);
+            getSprite().zap(hitCell);
             return false;
         } else {
-            attack(enemy);
+            zap(enemy);
             return true;
         }
     }
 
     @Override
-    public boolean attack(@NotNull Char enemy) {
+    public boolean zap(@NotNull Char enemy) {
 
         for (Char ch : victims) {
             if (hit(this, ch, true)) {
