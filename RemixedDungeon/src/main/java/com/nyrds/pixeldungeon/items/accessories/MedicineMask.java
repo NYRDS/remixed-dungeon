@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
+import com.watabou.pixeldungeon.Badges;
+
 public class MedicineMask extends Accessory {
     {
         image = 19;
@@ -7,6 +9,6 @@ public class MedicineMask extends Accessory {
 
     @Override
     public boolean haveIt() {
-        return true;
+        return Badges.isUnlocked(Badges.Badge.DOCTOR_QUEST_COMPLETED);
     }
 }

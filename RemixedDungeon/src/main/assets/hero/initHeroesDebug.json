@@ -34,7 +34,8 @@
         "kind": "WoodenShield"
       },
       {
-        "kind": "Longsword"
+        "kind": "RatHide",
+        "quantity": 100
       },
       {
         "kind": "LloydsBeacon"

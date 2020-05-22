@@ -60,7 +60,7 @@ public class RemixedDungeon extends Game {
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
-		
+
 		// remix 0.5
 		com.watabou.utils.Bundle.addAlias(
 				com.watabou.pixeldungeon.items.food.Ration.class,
@@ -299,8 +299,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static int donated() {
-		return 4;
-		//return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
+		return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
 	}
 
 	public static void lastClass(int value) {

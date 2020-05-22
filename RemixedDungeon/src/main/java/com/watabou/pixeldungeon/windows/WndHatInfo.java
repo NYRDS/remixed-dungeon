@@ -87,9 +87,10 @@ public class WndHatInfo extends Window {
 							RemixedDungeon.instance().iap.doPurchase(accessory, () -> {
 								item.ownIt(true);
 								item.equip();
-								Dungeon.hero.updateSprite();
 								onBackPressed();
-								parent.hide();
+								if(parent!=null) {
+									parent.hide();
+								}
 								if(!Game.isPaused()) {
 									GameScene.show(new WndHats());
 								}

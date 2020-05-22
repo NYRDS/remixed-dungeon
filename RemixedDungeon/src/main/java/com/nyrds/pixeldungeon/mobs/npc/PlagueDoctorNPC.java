@@ -1,10 +1,12 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.accessories.MedicineMask;
 import com.nyrds.pixeldungeon.items.common.RatArmor;
 import com.nyrds.pixeldungeon.items.common.RatHide;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
@@ -13,9 +15,12 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndHatInfo;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import lombok.var;
 
 public class PlagueDoctorNPC extends ImmortalNPC {
 
@@ -26,6 +31,18 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 	public boolean interact(final Char hero) {
 		getSprite().turnTo(getPos(), hero.getPos());
 		if (Quest.completed) {
+
+			if(!Badges.isUnlocked(Badges.Badge.DOCTOR_QUEST_COMPLETED)) {
+				Badges.displayBadge(Badges.Badge.DOCTOR_QUEST_COMPLETED);
+
+				var mask = new MedicineMask();
+				mask.equip();
+
+				GameScene.show(new WndHatInfo(mask.getClass().getSimpleName(),"",null));
+
+				return true;
+			}
+
 			GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_After_Quest)));
 			return true;
 		}
