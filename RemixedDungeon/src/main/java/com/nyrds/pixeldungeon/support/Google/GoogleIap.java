@@ -188,7 +188,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
             return mSkuDetails.get(skuLowerCase).getPrice();
         } else {
             EventCollector.logException(sku);
-            return "N/A";
+            return "";
         }
     }
 

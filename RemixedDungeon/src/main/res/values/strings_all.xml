@@ -2568,4 +2568,22 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldWeaponInfo">When used as weapon this shield will inflict %1$d damage on average.</string>
   <string name="TownPortal_Name">Town Portal</string>
   <string name="TownPortal_Info">This spell allows you instantly return to safety. However, powerful magic source nearby may prevent it from work as intended.</string>
+
+
+  <string name="MedicineMask_Name">Surgical mask</string>
+  <string name="MedicineMask_Info">A surgical mask is designed to catch microorganisms shed in liquid droplets and aerosols from the wearer\'s mouth and nose.
+  \n\nWearing a mask means you care about others.</string>
+  <string name="MedicineMask_Obtained">Surgical mask obtained</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">You are still here? Here! Take this.</string>
+
+
+
+  <string name="FilteredMask_Name">N95 mask</string>
+  <string name="FilteredMask_Info">A respirator is a device designed to protect the wearer from inhaling hazardous atmospheres, including fumes, vapours, gases and particulate matter such as dusts and airborne microorganisms.
+  \n\nThis mask however serves only decorative purpose.</string>
+
+  <string name="FullFaceMask_Name">Gas mask</string>
+  <string name="FullFaceMask_Info">A gas mask is a mask used to protect the wearer from inhaling airborne pollutants and toxic gases. The mask forms a sealed cover over the nose, mouth and eyes.
+  \n\nFilters are missing from this mask but it looks cool nevertheless.</string>
+
 </resources>

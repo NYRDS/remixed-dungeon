@@ -149,6 +149,7 @@ public class Accessory {
         }
 
         Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());
+        Dungeon.hero.updateSprite();
     }
 
     public static void unequip() {
