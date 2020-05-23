@@ -51,8 +51,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private static final String LAYER_LEFT_ITEM_BACK  = "left_back_item";
 	private static final String LAYER_RIGHT_ITEM_BACK = "right_back_item";
 
-
-
 	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON   = "hero_modern/spritesDesc/Hero.json";
 	private static final String HERO_MODERN_SPRITES_DESC_STATUE_JSON = "hero_modern/spritesDesc/Statue.json";
 
@@ -82,7 +80,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		LAYER_RIGHT_ITEM,
 	};
 
-	private Map<String,String> layersDesc = new HashMap<>();
+	private Map<String,String> layerOverrides = new HashMap<>();
+	private Map<String,String> layersDesc    = new HashMap<>();
 
 	private String deathEffectDesc;
 
@@ -122,6 +121,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	}
 
 	private void createLayersDesc(Hero hero, Accessory accessory) {
+
+		layerOverrides = hero.getLayersOverrides();
+
 		layersDesc.clear();
 		boolean drawHair = true;
 
@@ -265,9 +267,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	public String[] getLayersDesc() {
 		ArrayList<String> ret= new ArrayList<>();
-		for (String aLayersOrder : layersOrder) {
-			if (layersDesc.containsKey(aLayersOrder)) {
-				ret.add(layersDesc.get(aLayersOrder));
+		for (String layer : layersOrder) {
+			if (layersDesc.containsKey(layer)) {
+				String override = layerOverrides.get(layer);
+				if(override==null) {
+					ret.add(layersDesc.get(layer));
+					continue;
+				}
+
+				if(override.equals("remove")) {
+					continue;
+				}
+
+				ret.add(override);
 			}
 		}
 

@@ -1251,4 +1251,15 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void teleportTo(Position target) {
 	}
+
+	private Map<String, String> layersOverrides =  new HashMap<>();
+
+    public Map<String, String> getLayersOverrides() {
+        return layersOverrides;
+    }
+
+	@LuaInterface
+    public void overrideSpriteLayer(String layer, String texture) {
+        layersOverrides.put(layer, texture);
+    }
 }
