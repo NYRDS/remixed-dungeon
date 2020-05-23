@@ -156,19 +156,9 @@ public class EventCollector {
 		}
 	}
 
-	static public void startTrace(String id) {
-		if(!mDisabled) {
-
-		}
-	}
-
 	public static void collectSessionData(String key, String value) {
 		if(!mDisabled) {
 			FirebaseCrashlytics.getInstance().setCustomKey(key, value);
 		}
 	}
-
-    public static void disable() {
-		mDisabled = true;
-    }
 }
