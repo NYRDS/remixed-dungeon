@@ -45,9 +45,9 @@ return spell.init{
             return false
         end
 
-        local victim = RPD.Actor:findChar(dst)
+        local victim = RPD.Actor:findChar(cell)
 
-        if victim == nil then
+        if not victim then
             RPD.glogn("Backstab_EmptyCell")
             return false
         end
@@ -57,7 +57,7 @@ return spell.init{
             return false
         end
 
-        victim:getSprite():showStatus(0xffa07060,"backstab")
+        victim:getSprite():showStatus(0xff2030,"backstab")
 
         local weapon = caster:getBelongings().weapon
         local damage = caster:skillLevel() * weapon:damageRoll(caster)
