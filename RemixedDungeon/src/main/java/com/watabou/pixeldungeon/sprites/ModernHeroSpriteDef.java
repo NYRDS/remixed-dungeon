@@ -124,7 +124,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void createLayersDesc(Hero hero, Accessory accessory) {
 		layersDesc.clear();
 		boolean drawHair = true;
-		boolean drawFacialHair = true;
 
 		String accessoryDescriptor = HERO_EMPTY_PNG;
 		String classDescriptor = hero.getHeroClass().toString()+"_"+ hero.getSubClass().toString();
@@ -142,17 +141,18 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			}
 		}
 
-		if (accessory  == null){
-			if(hero.getBelongings().armor  != null && hero.getBelongings().armor.hasHelmet()){
-				helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
+		if (accessory == null){
+			if(hero.getBelongings().armor != null) {
+				if(hero.getBelongings().armor.hasHelmet()) {
+					helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
+				}
 				if(hero.getBelongings().armor.isCoveringHair()){
 					drawHair = false;
 				}
 			}
-		}
-		else{
+		} else {
 			accessoryDescriptor = accessory.getLayerFile();
-			if(accessory.isCoveringHair()){
+			if(accessory.isCoveringHair()) {
 				drawHair = false;
 			}
 		}
