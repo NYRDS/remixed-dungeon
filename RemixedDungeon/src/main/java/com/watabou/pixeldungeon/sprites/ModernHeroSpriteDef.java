@@ -124,6 +124,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void createLayersDesc(Hero hero, Accessory accessory) {
 		layersDesc.clear();
 		boolean drawHair = true;
+		boolean drawFacialHair = true;
 
 		String accessoryDescriptor = HERO_EMPTY_PNG;
 		String classDescriptor = hero.getHeroClass().toString()+"_"+ hero.getSubClass().toString();
@@ -132,11 +133,13 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String hairDescriptor = HERO_EMPTY_PNG;
 		String helmetDescriptor = HERO_EMPTY_PNG;
 
-		if(classDescriptor.equals("MAGE_WARLOCK")
-				|| classDescriptor.equals("MAGE_BATTLEMAGE")
-				|| classDescriptor.equals("WARRIOR_BERSERKER")
-				|| classDescriptor.equals("NECROMANCER_NONE")){
-			facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+		if(accessory == null || !accessory.isCoverFacialHair()) {
+			if (classDescriptor.equals("MAGE_WARLOCK")
+					|| classDescriptor.equals("MAGE_BATTLEMAGE")
+					|| classDescriptor.equals("WARRIOR_BERSERKER")
+					|| classDescriptor.equals("NECROMANCER_NONE")) {
+				facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+			}
 		}
 
 		if (accessory  == null){

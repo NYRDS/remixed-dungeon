@@ -5,6 +5,7 @@ import com.watabou.pixeldungeon.Badges;
 public class MedicineMask extends Accessory {
     {
         image = 19;
+        coverFacialHair = true;
     }
 
     @Override

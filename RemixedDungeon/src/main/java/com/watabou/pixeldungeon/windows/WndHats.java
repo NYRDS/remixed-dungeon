@@ -93,10 +93,6 @@ public class WndHats extends Window {
 				price = Game.getVar(R.string.WndHats_Purchased);
 			}
 
-			if(price.isEmpty()) {
-				continue;
-			}
-
 			//Image
 			Image hat = accessory.getImage();
 			hat.setPos(GAP, yPos);
@@ -172,7 +168,6 @@ public class WndHats extends Window {
 		add(list);
 
 		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
-
 	}
 
 	public boolean updateSlotImage() {
