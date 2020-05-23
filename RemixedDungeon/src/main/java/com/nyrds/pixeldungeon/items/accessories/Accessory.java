@@ -24,6 +24,7 @@ import lombok.SneakyThrows;
 public class Accessory {
 
     protected boolean coverHair;
+    protected boolean coverFacialHair;
     protected boolean coverItems;
 
     protected int image = 0;
@@ -72,6 +73,10 @@ public class Accessory {
 
     public boolean isCoveringHair() {
         return coverHair;
+    }
+
+    public boolean isCoverFacialHair() {
+        return coverFacialHair;
     }
 
     public boolean isCoveringItems() {

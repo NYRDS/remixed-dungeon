@@ -67,7 +67,7 @@ public class WndHatInfo extends Window {
 
 		//Button
 		String buttonText = Game.getVar(R.string.WndHats_BuyButton);
-		if(item.haveIt()) {
+		if(item.haveIt() || price.isEmpty()) {
 			buttonText = Game.getVar(R.string.WndHats_BackButton);
 		}
 
@@ -76,7 +76,7 @@ public class WndHatInfo extends Window {
 			protected void onClick() {
 				super.onClick();
 
-				if(item.haveIt()) {
+				if(item.haveIt()||price.isEmpty()) {
 					onBackPressed();
 					return;
 				}
