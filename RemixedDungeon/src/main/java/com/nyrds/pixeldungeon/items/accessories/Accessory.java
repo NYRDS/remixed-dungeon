@@ -66,10 +66,7 @@ public class Accessory {
         return "hero_modern/accessories/" + getClass().getSimpleName() + ".png";
     }
 
-    Accessory() {
-        coverHair  = false;
-        coverItems = false;
-    }
+    Accessory() { }
 
     public boolean isCoveringHair() {
         return coverHair;
