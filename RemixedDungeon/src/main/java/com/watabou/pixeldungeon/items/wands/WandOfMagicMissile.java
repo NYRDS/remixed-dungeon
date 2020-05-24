@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -45,9 +46,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 	public static final String AC_DISENCHANT    = "WandOfMagicMissile_ACDisenchant";
 	
 	private static final float TIME_TO_DISENCHANT	= 2f;
-	
-	private boolean disenchantEquipped;
-	
+
 	{
 		image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
 	}
@@ -83,18 +82,9 @@ public class WandOfMagicMissile extends SimpleWand  {
 	@Override
 	public void execute(Char chr, String action ) {
 		if (action.equals( AC_DISENCHANT )) {
-			
-			if (chr.getBelongings().weapon == this) {
-				disenchantEquipped = true;
-				chr.getBelongings().weapon = CharsList.DUMMY_ITEM;
-                QuickSlot.refresh();
-            } else {
-				disenchantEquipped = false;
-				detach( chr.getBelongings().backpack );
-			}
 
 			GameScene.selectItem( itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand) );
-			
+			chr.getBelongings().removeItem(this);
 		} else {
 		
 			super.execute(chr, action );
@@ -137,13 +127,13 @@ public class WandOfMagicMissile extends SimpleWand  {
 				Badges.validateItemLevelAcquired( item );
 				
 			} else {
-				if (disenchantEquipped) {
-					selector.getBelongings().weapon = WandOfMagicMissile.this;
-                    QuickSlot.refresh();
-                } else {
+				if (equipedTo != Belongings.Slot.NONE) {
+					selector.getBelongings().equip(WandOfMagicMissile.this, equipedTo);
+				} else {
 					collect( selector.getBelongings().backpack );
 				}
 			}
+			QuickSlot.refresh();
 		}
 	};
 }

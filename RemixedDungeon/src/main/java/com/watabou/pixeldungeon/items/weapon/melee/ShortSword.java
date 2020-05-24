@@ -24,12 +24,14 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.hero.Belongings.Slot;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 
@@ -40,8 +42,7 @@ public class ShortSword extends MeleeWeapon {
 	public static final String AC_REFORGE = "ShortSword_ACReforge";
 	
 	private static final float TIME_TO_REFORGE	= 2f;
-	
-	private boolean  equipped;
+
 	{
 		image = ItemSpriteSheet.SHORT_SWORD;
 	}
@@ -66,21 +67,10 @@ public class ShortSword extends MeleeWeapon {
 	@Override
 	public void execute(Char chr, String action ) {
 		if (action.equals(AC_REFORGE)) {
-			
-			if (chr.getBelongings().weapon == this) {
-				equipped = true;
-				chr.getBelongings().weapon = CharsList.DUMMY_ITEM;
-			} else {
-				equipped = false;
-				detach( chr.getBelongings().backpack );
-			}
-
 			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select) );
-			
+			chr.getBelongings().removeItem(this);
 		} else {
-			
 			super.execute(chr, action );
-			
 		}
 	}
 	
@@ -111,12 +101,13 @@ public class ShortSword extends MeleeWeapon {
 					GLog.w( Game.getVar(R.string.ShortSword_NotBoomerang) );
 				}
 				
-				if (equipped) {
-					selector.getBelongings().weapon = ShortSword.this;
+				if (equipedTo != Slot.NONE) {
+					selector.getBelongings().equip(ShortSword.this, equipedTo);
 				} else {
 					collect( selector.getBelongings().backpack );
 				}
 			}
+			QuickSlot.refresh();
 		}
 	};
 }
