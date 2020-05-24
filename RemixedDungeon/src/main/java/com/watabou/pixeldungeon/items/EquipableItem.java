@@ -35,7 +35,7 @@ public abstract class EquipableItem extends Item {
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
-	private Belongings.Slot equipedTo = Belongings.Slot.NONE;
+	protected Belongings.Slot equipedTo = Belongings.Slot.NONE;
 
 	@Override
 	public void execute( Hero hero, String action ) {
