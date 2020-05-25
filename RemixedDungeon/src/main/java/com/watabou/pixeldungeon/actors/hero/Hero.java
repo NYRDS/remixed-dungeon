@@ -1579,6 +1579,7 @@ public class Hero extends Char {
 		return false;
 	}
 
+	@Override
 	public void eat(Item food, float energy, String message) {
 		food.detach( belongings.backpack );
 

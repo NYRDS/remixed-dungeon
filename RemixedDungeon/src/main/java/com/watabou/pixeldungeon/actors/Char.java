@@ -65,7 +65,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
@@ -1243,7 +1242,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void setSkillPoints(int i) {
 	}
 
-	public void eat(Food food, float energy, String message) {
+	public void eat(Item food, float energy, String message) {
 	}
 
 	public void skillLevelUp() {
