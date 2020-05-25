@@ -194,8 +194,8 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    protected void onThrow(int cell) {
-        script.run("onThrow", cell);
+    protected void onThrow(int cell, Char thrower) {
+        script.run("onThrow", cell, thrower);
     }
 
     @Override

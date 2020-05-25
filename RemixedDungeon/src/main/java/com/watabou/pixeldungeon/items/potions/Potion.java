@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
@@ -200,7 +199,7 @@ public class Potion extends Item implements UnknownItem {
 		
 		hero.spend( TIME_TO_DRINK );
 		hero.busy();
-		onThrow( hero.getPos() );
+		onThrow( hero.getPos(), hero);
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
@@ -219,17 +218,17 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	protected void onThrow( int cell ) {
-		if (Dungeon.hero.getPos() == cell) {
-			apply( Dungeon.hero );
+	protected void onThrow(int cell, Char thrower) {
+		if (thrower.getPos() == cell) {
+			apply( thrower );
 		} else if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
-			super.onThrow( cell );
+			super.onThrow( cell, thrower);
 		} else  {
 			shatter( cell );
 		}
 	}
 	
-	protected void apply( Hero hero ) {
+	protected void apply(Char hero ) {
 		shatter( hero.getPos() );
 	}
 

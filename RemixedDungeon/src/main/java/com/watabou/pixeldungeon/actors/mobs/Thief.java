@@ -115,7 +115,7 @@ public class Thief extends Mob {
 	public String description() {
 		String desc = Game.getVar(R.string.Thief_Desc);
 		
-		if (item != null) {
+		if (item != CharsList.DUMMY_ITEM) {
 			desc += Utils.format( Game.getVar(R.string.Thief_Carries), Utils.capitalize( this.getName() ), item.name() );
 		}
 		

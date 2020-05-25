@@ -1803,6 +1803,6 @@ public class Hero extends Char {
 
 	@Override
 	public void selectCell(CellSelector.Listener listener) {
-		GameScene.selectCell(listener);
+		GameScene.selectCell(listener, this);
 	}
 }

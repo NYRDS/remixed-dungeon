@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
@@ -58,31 +57,29 @@ public abstract class Arrow extends MissileWeapon {
 	}
 
 	@Override
-	protected void onThrow(int cell) {
-		Char owner = getOwner();
-		
-		if (owner.bowEquipped()) {
+	protected void onThrow(int cell, Char thrower) {
+		if (thrower.bowEquipped()) {
 
-			if (Dungeon.level.adjacent(owner.getPos(), cell)
-					&& owner.getHeroClass() != HeroClass.ELF) {
+			if (thrower.level().adjacent(thrower.getPos(), cell)
+					&& thrower.getHeroClass() != HeroClass.ELF) {
 				miss(cell);
 				return;
 			}
 
-			firedFrom = (KindOfBow) owner.getBelongings().weapon;
+			firedFrom = (KindOfBow) thrower.getBelongings().weapon;
 
 			MAX = (int) (baseMax * firedFrom.dmgFactor());
 			MIN = (int) (baseMin * firedFrom.dmgFactor());
 			ACU = (float) (baseAcu * firedFrom.acuFactor());
 			DLY = (float) (baseDly * firedFrom.dlyFactor());
 
-			float sDelta = owner.effectiveSTR() - firedFrom.STR;
+			float sDelta = thrower.effectiveSTR() - firedFrom.STR;
 
 			if (sDelta > 2) {
 				MAX += MIN + sDelta;
 			}
 
-			if (owner.getHeroClass() == HeroClass.ELF) {
+			if (thrower.getHeroClass() == HeroClass.ELF) {
 				ACU *= 1.1;
 				DLY *= 0.9;
 			}
@@ -90,7 +87,7 @@ public abstract class Arrow extends MissileWeapon {
 			firedFrom.usedForHit();
 			firedFrom.useArrowType(this);
 
-			super.onThrow(cell);
+			super.onThrow(cell, thrower);
 		} else {
 			miss(cell);
 		}

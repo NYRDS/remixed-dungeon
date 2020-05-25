@@ -37,10 +37,10 @@ public class GnollTamahawk extends Tamahawk {
     }
 
     @Override
-    protected void onThrow(int cell) {
+    protected void onThrow(int cell, Char thrower) {
         Char enemy = Actor.findChar( cell );
-        if (enemy != null && enemy != getOwner()) {
-            getOwner().shoot( enemy, this );
+        if (enemy != null && enemy != thrower) {
+            thrower.shoot( enemy, this );
         }
         dropTo( cell );
     }

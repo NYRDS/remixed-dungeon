@@ -760,9 +760,10 @@ public class GameScene extends PixelScene {
         }
     }
 
-    public static void selectCell(CellSelector.Listener listener) {
+    public static void selectCell(CellSelector.Listener listener, Char selector) {
         if(isSceneReady()) {
             cellSelector.listener = listener;
+            cellSelector.selector = selector;
             scene.prompt(listener.prompt());
             script.runOptional("selectCell");
         }
@@ -813,7 +814,7 @@ public class GameScene extends PixelScene {
     }
 
     public static void ready() {
-        selectCell(defaultCellListener);
+        selectCell(defaultCellListener, Dungeon.hero);
         QuickSlot.cancel();
     }
 

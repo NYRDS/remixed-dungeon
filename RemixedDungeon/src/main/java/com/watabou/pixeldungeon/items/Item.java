@@ -183,7 +183,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	protected void onThrow(int cell) {
+	protected void onThrow(int cell, Char thrower) {
 		dropTo(cell);
 	}
 
@@ -509,7 +509,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
 				reset(pos, cell, this, () -> {
 					user.spendAndNext(finalDelay);
-					item.onThrow(cell);
+					item.onThrow(cell, user);
 				});
 	}
 

@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.potions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -27,16 +28,18 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class PotionOfMight extends PotionOfStrength {
 	
 	@Override
-	protected void apply( Hero hero ) {
+	protected void apply(Char chr ) {
 		setKnown();
-		
-		hero.STR(hero.STR() + 1);
-		hero.ht(hero.ht() + 5);
-		hero.heal(5, this);
-		hero.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.PotionOfMight_StaApply));
-		GLog.p(Game.getVar(R.string.PotionOfMight_Apply));
-		
-		Badges.validateStrengthAttained(hero);
+		if(chr instanceof Hero) {
+			Hero hero = (Hero) chr;
+			hero.STR(hero.STR() + 1);
+			hero.ht(hero.ht() + 5);
+			hero.heal(5, this);
+			hero.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.PotionOfMight_StaApply));
+			GLog.p(Game.getVar(R.string.PotionOfMight_Apply));
+
+			Badges.validateStrengthAttained(hero);
+		}
 	}
 	
 	@Override

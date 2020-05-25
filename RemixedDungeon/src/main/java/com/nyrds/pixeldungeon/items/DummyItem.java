@@ -44,4 +44,8 @@ public class DummyItem extends EquipableItem {
     public String getVisualName() {
         return "none";
     }
+
+    @Override
+    public void doDrop(Char hero) {
+    }
 }

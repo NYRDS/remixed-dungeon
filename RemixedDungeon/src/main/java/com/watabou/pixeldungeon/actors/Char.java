@@ -287,11 +287,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			enemy.damage(effectiveDamage, this);
 
 			if (visibleFight) {
-				Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
-			}
+                Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
 
-			enemy.getSprite().bloodBurstA(getSprite().center(), effectiveDamage);
-			enemy.getSprite().flash();
+                enemy.getSprite().bloodBurstA(
+                        getSprite().center(), effectiveDamage);
+                enemy.getSprite().flash();
+            }
 
 			if (!enemy.isAlive() && visibleFight) {
 				if (enemy == Dungeon.hero) {

@@ -46,7 +46,8 @@
         "kind": "ShortSword"
       },
       {
-        "kind": "Sword"
+        "kind": "Dart",
+        "quantity": 100
       },
       {
         "kind": "Mace"

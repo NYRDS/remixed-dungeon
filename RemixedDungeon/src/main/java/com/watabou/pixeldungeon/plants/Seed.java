@@ -42,9 +42,9 @@ public class Seed extends Item {
     }
 
     @Override
-    protected void onThrow(int cell) {
+    protected void onThrow(int cell, Char thrower) {
         if (Dungeon.level.map[cell] == Terrain.ALCHEMY || Dungeon.level.pit[cell]) {
-            super.onThrow(cell);
+            super.onThrow(cell, thrower);
         } else {
             Dungeon.level.plant(this, cell);
         }
@@ -56,7 +56,7 @@ public class Seed extends Item {
 
             chr.spend(TIME_TO_PLANT);
             chr.busy();
-            ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos());
+            ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos(), chr);
 
             chr.getSprite().operate(chr.getPos());
 
