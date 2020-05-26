@@ -260,7 +260,7 @@ public class Armor extends EquipableItem {
 
 	@Override
 	public int requiredSTR() {
-		return Math.max(typicalSTR() + level(),2);
+		return Math.max(typicalSTR() - level(),2);
 	}
 
 	public static abstract class Glyph implements Bundlable, NamedEntityKind {
