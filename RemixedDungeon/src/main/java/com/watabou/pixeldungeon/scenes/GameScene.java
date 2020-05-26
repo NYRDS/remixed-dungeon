@@ -487,7 +487,7 @@ public class GameScene extends PixelScene {
     @Override
     protected void onMenuPressed() {
         if (Dungeon.hero.isReady()) {
-            selectItem(null, WndBag.Mode.ALL, null);
+            selectItem(Dungeon.hero, null, Mode.ALL, null);
         }
     }
 
@@ -785,7 +785,7 @@ public class GameScene extends PixelScene {
         return wnd;
     }
 
-    public static WndBag selectItem(WndBag.Listener listener, WndBag.Mode mode, String title) {
+    public static WndBag selectItem(Char selector, WndBag.Listener listener, Mode mode, String title) {
         cancelCellSelector();
 
         WndBag wnd = WndBag.lastBag(listener, mode, title);

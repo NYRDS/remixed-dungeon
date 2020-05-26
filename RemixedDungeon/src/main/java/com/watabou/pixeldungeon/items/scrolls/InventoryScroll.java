@@ -43,7 +43,7 @@ public abstract class InventoryScroll extends Scroll {
 			identifiedByUse = false;
 		}
 		
-		GameScene.selectItem( itemSelector, mode, inventoryTitle );
+		GameScene.selectItem(getOwner(), itemSelector, mode, inventoryTitle);
 	}
 	
 	private void confirmCancelation() {
@@ -59,7 +59,7 @@ public abstract class InventoryScroll extends Scroll {
 					identifiedByUse = false;
 					break;
 				case 1:
-					GameScene.selectItem( itemSelector, mode, inventoryTitle );
+					GameScene.selectItem(getOwner(), itemSelector, mode, inventoryTitle);
 					break;
 				}
 			}

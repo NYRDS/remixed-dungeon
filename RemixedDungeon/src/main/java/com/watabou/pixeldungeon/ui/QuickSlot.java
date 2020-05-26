@@ -172,7 +172,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             return;
         }
 
-        GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
+        GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
     }
 
     @Override
@@ -180,7 +180,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         if (Dungeon.hero.spellUser) {
             GameScene.selectSpell(this);
         } else {
-            GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
+            GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
         }
         return true;
     }

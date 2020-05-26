@@ -57,18 +57,18 @@ public class Stylus extends Item {
 	public void execute(Char chr, String action ) {
 		if (action.equals(AC_INSCRIBE)) {
 
-			GameScene.selectItem((item, selector) -> {
-				if (item != null) {
-					if(item instanceof Armor){
-						inscribeArmor ( (Armor)item );
-					}
-					if(item instanceof BlankScroll){
-						inscribeScroll( (BlankScroll)item );
-					}
-				}
-			},
-			WndBag.Mode.INSCRIBABLE,
-			Game.getVar(R.string.Stylus_SelectArmor) );
+			GameScene.selectItem(chr,
+                    (item, selector) -> {
+                        if (item != null) {
+                            if(item instanceof Armor){
+                                inscribeArmor ( (Armor)item );
+                            }
+                            if(item instanceof BlankScroll){
+                                inscribeScroll( (BlankScroll)item );
+                            }
+                        }
+                    },
+                    WndBag.Mode.INSCRIBABLE, Game.getVar(R.string.Stylus_SelectArmor));
 			
 		} else {
 			

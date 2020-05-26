@@ -122,7 +122,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	};
 
 	private void fuse(Char hero) {
-		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
+		GameScene.selectItem(hero, itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
 		hero.getSprite().operate(hero.getPos());
 	}
 

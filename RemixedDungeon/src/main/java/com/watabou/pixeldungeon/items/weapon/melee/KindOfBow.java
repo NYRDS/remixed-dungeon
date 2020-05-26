@@ -76,15 +76,15 @@ public abstract class KindOfBow extends MeleeWeapon {
 	@Override
 	public void execute(Char chr, String action) {
 		if(AC_CHOOSE_ARROWS.equals(action)) {
-			GameScene.selectItem((item, selector) -> {
-						if (item != null) {
-							if(item instanceof Arrow){
-								useArrowType((Arrow)item);
-							}
-						}
-					},
-					WndBag.Mode.ARROWS,
-					Game.getVar(R.string.KindOfBow_SelectArrowKind) );
+			GameScene.selectItem(chr,
+                    (item, selector) -> {
+                                if (item != null) {
+                                    if(item instanceof Arrow){
+                                        useArrowType((Arrow)item);
+                                    }
+                                }
+                            },
+                    WndBag.Mode.ARROWS, Game.getVar(R.string.KindOfBow_SelectArrowKind));
 			return;
 		}
 		super.execute(chr, action);

@@ -19,13 +19,12 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.actors.hero.Belongings.Slot;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings.Slot;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
@@ -67,7 +66,7 @@ public class ShortSword extends MeleeWeapon {
 	@Override
 	public void execute(Char chr, String action ) {
 		if (action.equals(AC_REFORGE)) {
-			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select) );
+			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select));
 			chr.getBelongings().removeItem(this);
 		} else {
 			super.execute(chr, action );

@@ -61,7 +61,7 @@ public class Weightstone extends Item {
 	public void execute(Char chr, String action ) {
 		if (action.equals(AC_APPLY)) {
 
-			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.Weightstone_Select) );
+			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.Weightstone_Select));
 			
 		} else {
 			

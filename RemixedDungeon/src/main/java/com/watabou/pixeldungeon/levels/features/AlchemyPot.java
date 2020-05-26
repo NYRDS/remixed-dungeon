@@ -35,7 +35,7 @@ public class AlchemyPot {
 		AlchemyPot.hero = hero;
 		AlchemyPot.pos = pos;
 		
-		GameScene.selectItem( itemSelector, WndBag.Mode.SEED, Game.getVar(R.string.AlchemyPot_SelectSeed) );
+		GameScene.selectItem(hero, itemSelector, WndBag.Mode.SEED, Game.getVar(R.string.AlchemyPot_SelectSeed));
 	}
 	
 	private static final WndBag.Listener itemSelector = new WndBag.Listener() {

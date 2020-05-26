@@ -212,7 +212,7 @@ public class Potion extends Item implements UnknownItem {
 		hero.spend( TIME_TO_MOISTEN);
 		hero.busy();
 		
-		GameScene.selectItem( itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten) );
+		GameScene.selectItem(hero, itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten));
 		
 		hero.getSprite().operate( hero.getPos() );
 	}
