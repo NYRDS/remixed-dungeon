@@ -51,7 +51,7 @@ public class WandOfIcebolt extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.ice( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		MagicMissile.ice( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

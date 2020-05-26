@@ -104,7 +104,7 @@ public class Bones {
 				
 				if (!item.stackable) {
 					item.setCursed(true);
-					item.cursedKnown = true;
+					item.setCursedKnown(true);
 					if (item.isUpgradable()) {
 						int lvl = (Dungeon.depth - 1) * 3 / 5 + 1;
 						if (lvl < item.level()) {

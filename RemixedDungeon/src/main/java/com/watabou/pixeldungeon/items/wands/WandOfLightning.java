@@ -89,7 +89,7 @@ public class WandOfLightning extends SimpleWand  {
 	protected void fx( int cell, Callback callback ) {
 		
 		nPoints = 0;
-		points[nPoints++] = wandUser.getPos();
+		points[nPoints++] = getOwner().getPos();
 		
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
@@ -104,7 +104,7 @@ public class WandOfLightning extends SimpleWand  {
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
 			
 		}
-		wandUser.getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
+		getOwner().getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
 	}
 	
 	@Override

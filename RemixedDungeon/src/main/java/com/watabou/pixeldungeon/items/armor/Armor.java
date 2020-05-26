@@ -166,7 +166,7 @@ public class Armor extends EquipableItem {
 			info.append(Utils.format(Game.getVar(R.string.Armor_Info7a), name,
 				(isCursed() ? Game.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {
-			if (cursedKnown && isCursed()) {
+			if (isCursedKnown() && isCursed()) {
 				info.append(Utils.format(Game.getVar(R.string.Armor_Info8), name));
 			}
 		}

@@ -90,6 +90,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.Getter;
+
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKind {
 
     public static final String IMMUNITIES        = "immunities";
@@ -100,26 +102,32 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-	private
-	int owner = EntityIdSource.INVALID_ID;
+	private int owner = EntityIdSource.INVALID_ID;
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
+	@Getter
 	private int pos     = Level.INVALID_CELL;
+
 	private int prevPos = Level.INVALID_CELL;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	@Getter
 	private int id = EntityIdSource.INVALID_ID;
 
 	public  Fraction fraction = Fraction.DUNGEON;
 
 	protected CharSprite sprite;
 
+	@Getter
 	protected String name           = Game.getVar(R.string.Char_Name);
+	@Getter
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
 
+	@Getter
 	protected String description = Game.getVar(R.string.Mob_Desc);
+	@Getter
 	protected String defenceVerb = null;
-
+	@Getter
 	protected int gender = Utils.NEUTER;
 
 	protected WalkingType walkingType = WalkingType.NORMAL;
@@ -222,21 +230,28 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			setOwnerId(id);
 		}
 
-		if(this instanceof CustomMob || this instanceof Hero) {
+		if(this instanceof CustomMob) {
 			return;
 		}
 
 		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);
+
+		if(this instanceof Hero) {
+			return;
+		}
+
 		description = getClassParam("Desc", description, true);
 		gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
 		defenceVerb = getClassParam("Defense", null, false);
 	}
 
+	@LuaInterface
 	public void yell(String str) {
         GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
     }
 
+    @LuaInterface
     public void say(String str) {
         GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
     }
@@ -246,6 +261,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
     }
 
+    @LuaInterface
     public void say(String str, int index) {
         GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
     }
@@ -620,6 +636,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return level;
 	}
 
+	@Deprecated
 	public int buffLevel(Class<? extends Buff> c) {
 		int level = 0;
 		for (Buff b : buffs) {
@@ -630,6 +647,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return level;
 	}
 
+	@Deprecated
 	public boolean hasBuff(Class<? extends Buff> c) {
 		for (Buff b : buffs) {
 			if (c.isInstance(b)) {
@@ -871,22 +889,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		HP = Scrambler.scramble(hP);
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public String getName_objective() {
-		return name_objective;
-	}
-
-	public int getGender() {
-		return gender;
-	}
-
-	public int getPos() {
-		return pos;
-	}
-
 	public void _stepBack() {
 		if(level().cellValid(prevPos)){
 			setPos(prevPos);
@@ -1017,10 +1019,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 		return 0;
     }
-
-	public int getId() {
-		return id;
-	}
 
 	public void spellCasted(String spellName) {
 		spellsUsage.put(spellName, 0.f);

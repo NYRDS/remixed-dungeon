@@ -158,7 +158,7 @@ public class MeleeWeapon extends Weapon {
 			info.append(p);
 			info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (isCursed() ? Game.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
 		} else {
-			if (cursedKnown && isCursed()) {
+			if (isCursedKnown() && isCursed()) {
 				info.append(p);
 				info.append(Utils.format(R.string.MeleeWeapon_Info7c, name));
 			}

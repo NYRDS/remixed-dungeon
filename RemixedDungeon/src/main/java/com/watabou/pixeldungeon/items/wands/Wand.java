@@ -62,8 +62,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	private int maxCharges = Scrambler.scramble(initialCharges());
 	private int curCharges = Scrambler.scramble(maxCharges());
-	
-	protected Char wandUser;
 
 	private Charger charger;
 
@@ -156,7 +154,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public void execute(Char chr, String action) {
 		if (action.equals(AC_ZAP)) {
-			wandUser = chr;
 			chr.getBelongings().setSelectedItem(this);
 			chr.selectCell(zapper);
 			return;
@@ -166,7 +163,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public void zapCell(Char chr, int cell) {
-		wandUser = chr;
 		getDestinationCell(chr.getPos(),cell);
 		onZap(cell);
 	}
@@ -314,16 +310,13 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public void mobWandUse(Char user, final int tgt) {
-		wandUser = user;
 
 		final int cell = getDestinationCell(user.getPos(),tgt);
-
 		fx(cell, () -> onZap(cell));
-		
 	}
 	
 	protected void fx(int cell, Callback callback) {
-		MagicMissile.blueLight(wandUser.getSprite().getParent(), wandUser.getPos(), cell,
+		MagicMissile.blueLight(getOwner().getSprite().getParent(), getOwner().getPos(), cell,
 				callback);
 		Sample.INSTANCE.play(Assets.SND_ZAP);
 	}
@@ -354,7 +347,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public int price() {
 		int price = 50;
-		if (isCursed() && cursedKnown) {
+		if (isCursed() && isCursedKnown()) {
 			price /= 2;
 		}
 		if (isLevelKnown()) {

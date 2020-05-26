@@ -87,7 +87,7 @@ public class WandOfAvalanche extends SimpleWand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.earth( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		MagicMissile.earth( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

@@ -35,7 +35,7 @@ public class WandOfShadowbolt extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.shadow( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		MagicMissile.shadow( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

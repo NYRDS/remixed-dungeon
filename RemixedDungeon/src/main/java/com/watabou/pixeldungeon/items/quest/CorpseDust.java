@@ -30,7 +30,7 @@ public class CorpseDust extends Artifact {
 		image = ItemSpriteSheet.DUST;
 
 		setCursed(true);
-		cursedKnown = true;
+		setCursedKnown(true);
 	}
 
 	@Override

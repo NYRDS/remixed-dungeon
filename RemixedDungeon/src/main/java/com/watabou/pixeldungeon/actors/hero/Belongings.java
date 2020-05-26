@@ -264,7 +264,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		for (Item item : backpack) {
-			item.cursedKnown = true;
+			item.setCursedKnown(true);
 		}
 	}
 	
@@ -566,7 +566,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 		}
 
-		item.cursedKnown = true;
+		item.setCursedKnown(true);
 		if(item.isCursed()) {
 			ItemUtils.equipCursed( owner );
 			item.equippedCursed();

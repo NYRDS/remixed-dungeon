@@ -68,8 +68,11 @@ public class ScrollOfCurse extends Scroll {
 
 		boolean procced = false;
 		for(Item item:items) {
-			if(!item.isCursed() && item.setCursed(true)) {
-				procced = true;
+			if(!item.isCursed()) {
+				item.setCursed(true);
+				if(item.isCursed()) {
+					procced = true;
+				}
 			}
 		}
 

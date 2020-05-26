@@ -42,7 +42,7 @@ public class WandOfSlowness extends SimpleWand  {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.slowness( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		MagicMissile.slowness( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

@@ -65,7 +65,7 @@ class ItemButton extends ItemSlot {
         if (item != null) {
 
             bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
-            if (item.isCursed() && item.cursedKnown) {
+            if (item.isCursed() && item.isCursedKnown()) {
                 bg.ra = +0.2f;
                 bg.ga = -0.1f;
             } else if (!item.isIdentified()) {

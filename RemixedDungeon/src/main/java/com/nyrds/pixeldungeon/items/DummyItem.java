@@ -36,8 +36,7 @@ public class DummyItem extends EquipableItem {
     }
 
     @Override
-    public boolean setCursed(boolean cursed) {
-        return false;
+    public void setCursed(boolean cursed) {
     }
 
     @Override

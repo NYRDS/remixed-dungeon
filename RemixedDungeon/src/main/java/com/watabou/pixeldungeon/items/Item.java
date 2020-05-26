@@ -62,6 +62,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.SneakyThrows;
 
 public class Item implements Bundlable, Presser, NamedEntityKind {
@@ -105,14 +107,22 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	private int     level      = Scrambler.scramble(0);
 
 	@Packable
+	@Getter
+	@Setter
 	private boolean levelKnown = false;
 
 	@Packable
+	@Getter
+	@Setter
 	public boolean cursed;
 
 	@Packable
-	public boolean cursedKnown;
+	@Getter
+	@Setter
+	private boolean cursedKnown;
 
+	@Setter
+	@Getter
 	@Packable(defaultValue = "-1")
 	private int quickSlotIndex = -1;
 
@@ -296,7 +306,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public Item upgrade() {
 
 		setCursed(false);
-		cursedKnown = true;
+		setCursedKnown(true);
 		this.level(this.level() + 1);
 
 		return this;
@@ -334,7 +344,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public boolean isIdentified() {
-		return isLevelKnown() && cursedKnown;
+		return isLevelKnown() && isCursedKnown();
 	}
 
 	public boolean isEquipped(@NotNull Char chr) {
@@ -354,7 +364,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public Item identify() {
 
 		setLevelKnown(true);
-		cursedKnown = true;
+		setCursedKnown(true);
 
 		Library.identify(Library.ITEM,getClassName());
 
@@ -419,7 +429,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	protected int adjustPrice(int price) {
-		if (isCursed() && cursedKnown) {
+		if (isCursed() && isCursedKnown()) {
 			price /= 2;
 		}
 		if (isLevelKnown()) {
@@ -514,6 +524,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	@NotNull
+	@LuaInterface
+	@Setter
+	@Getter
 	private Char owner = CharsList.DUMMY;
 
 	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
@@ -639,18 +652,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return 0;
 	}
 
-	public void setQuickSlotIndex(int quickSlotIndex) {
-		this.quickSlotIndex = quickSlotIndex;
-	}
-
-	public int getQuickSlotIndex() {
-		return quickSlotIndex;
-	}
-
 	public String getClassName() {
 		return ItemFactory.itemNameByClass(getClass());
 	}
-
 
 	public Item quickSlotContent() {
 		if(!stackable) {
@@ -705,34 +709,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return id;
 	}
 
-	public boolean isLevelKnown() {
-		return levelKnown;
-	}
-
-	public void setLevelKnown(boolean levelKnown) {
-		this.levelKnown = levelKnown;
-	}
-
 	public String bag() {
 		return Utils.EMPTY_STRING;
-	}
-
-	@LuaInterface
-	@NotNull
-	public Char getOwner() {
-		return owner;
-	}
-
-	public void setOwner(@NotNull Char owner) {
-		this.owner = owner;
-	}
-
-	public boolean isCursed() {
-		return cursed;
-	}
-
-	public boolean setCursed(boolean cursed) {
-		this.cursed = cursed;
-		return this.cursed;
 	}
 }

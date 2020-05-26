@@ -137,7 +137,7 @@ public class Ring extends Artifact implements UnknownItem{
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
 			return Utils.format(Game.getVar(R.string.Ring_Info3a), desc(), name(), (isCursed() ? Game.getVar(R.string.Ring_Info3b) : "."));
-		} else if (isCursed() && cursedKnown) {
+		} else if (isCursed() && isCursedKnown()) {
 			return Utils.format(Game.getVar(R.string.Ring_Info4), desc(), name());
 		} else {
 			return desc();
@@ -177,7 +177,7 @@ public class Ring extends Artifact implements UnknownItem{
 	@Override
 	public int price() {
 		int price = 80;
-		if (isCursed() && cursedKnown) {
+		if (isCursed() && isCursedKnown()) {
 			price /= 2;
 		}
 		if (isLevelKnown()) {

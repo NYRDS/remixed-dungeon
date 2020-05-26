@@ -37,7 +37,7 @@ abstract public class ClassArmor extends Armor {
 
 	{
 		setLevelKnown(true);
-		cursedKnown = true;
+		setCursedKnown(true);
 		setDefaultAction(special());
 	}
 	
