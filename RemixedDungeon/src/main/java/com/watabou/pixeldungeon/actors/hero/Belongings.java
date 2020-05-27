@@ -115,7 +115,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		this.owner = owner;
 		
 		backpack = new Backpack();
-		backpack.owner = owner;
+		backpack.setOwner(owner);
 
 		collect(new Gold(0));
 	}

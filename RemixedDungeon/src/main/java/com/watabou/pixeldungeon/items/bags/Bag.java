@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -43,8 +44,7 @@ public class Bag extends Item implements Iterable<Item> {
 		
 		setDefaultAction(AC_OPEN);
 	}
-	
-	public Char owner;
+
 	public ArrayList<Item> items = new ArrayList<>();
 		
 	@Override
@@ -67,7 +67,7 @@ public class Bag extends Item implements Iterable<Item> {
 	public boolean collect( Bag container ) {
 		if (super.collect( container )) {	
 			
-			owner = container.owner;
+			setOwner(container.getOwner());
 			
 			for (Item item : container.items.toArray(new Item[0])) {
 				if (grab( item )) {
@@ -90,13 +90,13 @@ public class Bag extends Item implements Iterable<Item> {
 		for (Item item : items.toArray(new Item[0])) {
 			if (grab( item )) {
 				item.detachAll( this );
-				if(owner.isAlive()) {
-					owner.collect(item);
+				if(getOwner().isAlive()) {
+					getOwner().collect(item);
 				}
 			}
 		}
 
-		this.owner = null;
+		this.setOwner(CharsList.DUMMY);
 	}
 	
 	@Override
@@ -125,8 +125,8 @@ public class Bag extends Item implements Iterable<Item> {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		for (Item item : bundle.getCollection( ITEMS,Item.class )) {
-			if(owner!=null) {
-				owner.getBelongings().collect(item);
+			if(getOwner() !=CharsList.DUMMY) {
+				getOwner().getBelongings().collect(item);
 			} else {
 				item.collect(this);
 			}
@@ -173,7 +173,7 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 
 	public int getSize() {
-		return owner instanceof Hero ? Belongings.getBackpackSize() : Belongings.getBackpackSize() + 1;
+		return getOwner() instanceof Hero ? Belongings.getBackpackSize() : Belongings.getBackpackSize() + 1;
 	}
 
 

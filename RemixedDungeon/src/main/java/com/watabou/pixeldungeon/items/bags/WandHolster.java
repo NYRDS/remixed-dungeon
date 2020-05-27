@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -35,10 +36,10 @@ public class WandHolster extends Bag {
 	@Override
 	public boolean collect( Bag container ) {
 		if (super.collect( container )) {
-			if (owner != null) {
+			if (getOwner() != CharsList.DUMMY) {
 				for (Item item : items) {
 					if(item instanceof Wand) {
-						((Wand) item).charge(owner);
+						((Wand) item).charge(getOwner());
 					}
 				}
 			}

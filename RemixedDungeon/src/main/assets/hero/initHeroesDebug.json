@@ -46,8 +46,8 @@
         "kind": "ShortSword"
       },
       {
-        "kind": "Dart",
-        "quantity": 100
+        "kind": "Gold",
+        "quantity": 10000
       },
       {
         "kind": "Mace"

@@ -66,11 +66,10 @@ public class Journal {
 		@Deprecated
 		private static final String FEATURE	= "feature";
 
-		private static final String DEPTH	= "depth";
-
 		@Packable
 		private String feature;
 
+		@Packable
 		public int depth;
 
 		public Record() {
@@ -99,14 +98,12 @@ public class Journal {
 			} catch (Exception ignored) {
 			}
 
-			depth = bundle.getInt( DEPTH );
 		}
 
 		@Override
 		public void storeInBundle( Bundle bundle ) {
-			bundle.put( DEPTH, depth );
 		}
-		
+
 		public boolean dontPack() {
 			return false;
 		}

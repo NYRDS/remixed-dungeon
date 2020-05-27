@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.wands;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -172,8 +173,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public boolean collect(Bag container) {
 		if (super.collect(container)) {
-			if (container.owner != null) {
-				charge(container.owner);
+			if (container.getOwner() != CharsList.DUMMY) {
+				charge(container.getOwner());
 			}
 			return true;
 		} else {

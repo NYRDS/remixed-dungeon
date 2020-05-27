@@ -209,7 +209,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		ArrayList<Item> items = container.items;
 
-		setOwner(container.owner);
+		setOwner(container.getOwner());
 
 		if (items.contains(this)) {
 			return true;
@@ -266,7 +266,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 				return detachAll(container);
 			} else {
 				quantity(quantity() - n);
-				if(container.owner instanceof Hero) {
+				if(container.getOwner() instanceof Hero) {
 					QuickSlot.refresh();
 				}
 
@@ -285,7 +285,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			if (item == this) {
 				container.items.remove(this);
 				item.onDetach();
-				if(container.owner instanceof Hero) {
+				if(container.getOwner() instanceof Hero) {
 					QuickSlot.refresh();
 				}
 				return this;
