@@ -38,7 +38,7 @@ import org.jetbrains.annotations.NotNull;
 public class Thief extends Mob {
 
 	@Packable(defaultValue = "DUMMY_ITEM")
-	public Item item;
+	public Item item = CharsList.DUMMY_ITEM;
 	
 	{
 		hp(ht(20));
