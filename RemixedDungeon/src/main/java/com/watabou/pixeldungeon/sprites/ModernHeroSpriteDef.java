@@ -171,10 +171,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 
 		EquipableItem weapon = hero.getBelongings().weapon;
-		String weaponAnimationClassLeft  = weapon.getAttackAnimationClass();
+		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();
 
 		EquipableItem leftHand = hero.getBelongings().leftHand;
-		String weaponAnimationClassRight = leftHand.getAttackAnimationClass();
+		String weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
 
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
