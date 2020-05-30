@@ -311,7 +311,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public void mobWandUse(Char user, final int tgt) {
-
+		setOwner(user);
 		final int cell = getDestinationCell(user.getPos(),tgt);
 		fx(cell, () -> onZap(cell));
 	}
