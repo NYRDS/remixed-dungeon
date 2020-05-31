@@ -84,7 +84,7 @@ public class Yog extends Boss {
 			name1 = Random.element(secondaryBossArray);
 			name2 = Random.element(secondaryBossArray);
 			name3 = Random.element(secondaryBossArray);
-		} while (name1 == name2 || name2 == name3 || name1 == name3);
+		} while (name1.equals(name2) || name2.equals(name3) || name1.equals(name3));
 
 		fist1 = MobFactory.mobByName(name1);
 		fist2 = MobFactory.mobByName(name2);

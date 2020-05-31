@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -41,15 +40,11 @@ public class SpiderMind extends Mob {
 		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
-	public int attackProc(@NotNull Char enemy, int damage ) {
-		
-		if(enemy instanceof Hero) {
-			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);		
-			Buff.prolong( enemy, buffClass, 3 );
-		}
-		
+	public int zapProc(@NotNull Char enemy, int damage ) {
+		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);
+		Buff.prolong( enemy, buffClass, 3 );
+
 		return damage;
 	}
 	
@@ -76,12 +71,4 @@ public class SpiderMind extends Mob {
 	public int dr() {
 		return 0;
 	}
-
-	@Override
-	public boolean zap(@NotNull Char enemy) {
-		attackProc(enemy, damageRoll());
-		super.zap(enemy);
-		return true;
-	}
-
 }

@@ -880,4 +880,8 @@ public class Dungeon {
         EventCollector.collectSessionData("challenges",String.valueOf(challenges));
         Dungeon.challenges = challenges;
     }
+
+    public static boolean isPathVisible(int from, int to) {
+        return visible[from] || visible[to];
+    }
 }

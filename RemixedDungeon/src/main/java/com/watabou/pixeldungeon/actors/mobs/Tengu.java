@@ -95,7 +95,7 @@ public class Tengu extends Boss implements IZapper {
 	
 	@Override
 	public boolean getCloser(int target) {
-		if (Dungeon.level.fieldOfView[target]) {
+		if (level().fieldOfView[target]) {
 			jump();
 			return true;
 		} else {
@@ -123,10 +123,10 @@ public class Tengu extends Boss implements IZapper {
 		timeToJump = JUMP_DELAY;
 
 		for (int i=0; i < 4; i++) {
-			int trapPos = Dungeon.level.getRandomTerrainCell(Terrain.INACTIVE_TRAP);
+			int trapPos = level().getRandomTerrainCell(Terrain.INACTIVE_TRAP);
 
-			if (Dungeon.level.cellValid(trapPos)) {
-				Dungeon.level.set( trapPos, Terrain.POISON_TRAP );
+			if (level().cellValid(trapPos)) {
+				level().set( trapPos, Terrain.POISON_TRAP );
 				GameScene.updateMap( trapPos );
 				ScrollOfMagicMapping.discover( trapPos );
 			} else {
@@ -136,10 +136,10 @@ public class Tengu extends Boss implements IZapper {
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 		int enemyPos = getEnemy().getPos();
-		for(int i = 0;i<Dungeon.level.getLength();++i) {
-			if(Dungeon.level.fieldOfView[i]
-					&& Dungeon.level.passable[i]
-					&& !Dungeon.level.adjacent( i, enemyPos )
+		for(int i = 0;i<level().getLength();++i) {
+			if(level().fieldOfView[i]
+					&& level().passable[i]
+					&& !level().adjacent( i, enemyPos )
 					&& Actor.findChar(i) == null) {
 				candidates.add(i);
 			}

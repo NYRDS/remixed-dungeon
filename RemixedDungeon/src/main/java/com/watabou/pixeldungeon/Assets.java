@@ -60,14 +60,9 @@ public class Assets {
     public static final String SHEEP     = "sheep.png";
     public static final String KEEPER    = "shopkeeper.png";
     public static final String DM300     = "dm300.png";
-    public static final String ELEMENTAL = "elemental.png";
     public static final String MONK      = "monk.png";
-    public static final String GOLEM     = "golem.png";
-    public static final String UNDEAD    = "undead.png";
     public static final String STATUE    = "statue.png";
     public static final String PIRANHA   = "piranha.png";
-    public static final String EYE       = "eye.png";
-    public static final String SUCCUBUS  = "succubus.png";
     public static final String ROTTING   = "rotting_fist.png";
     public static final String YOG       = "yog.png";
     public static final String LARVA     = "larva.png";

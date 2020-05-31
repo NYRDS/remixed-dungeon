@@ -246,7 +246,7 @@ public abstract class Mob extends Char {
 	public void moveSprite(int from, int to) {
 
 		if (getSprite().isVisible()
-				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
+				&& (Dungeon.isPathVisible(from, to))) {
 			getSprite().move(from, to);
 		} else {
 			getSprite().place(to);
@@ -315,9 +315,17 @@ public abstract class Mob extends Char {
 		setEnemy(enemy);
 
 		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
-			getSprite().attack(enemy.getPos());
+			if(Dungeon.visible[getPos()]) {
+				getSprite().attack(enemy.getPos());
+			} else {
+				onAttackComplete();
+			}
 		} else {
-			getSprite().zap( enemy.getPos() );
+			if(Dungeon.isPathVisible(getPos(), enemy.getPos())) {
+				getSprite().zap(enemy.getPos());
+			} else {
+				onZapComplete();
+			}
 		}
 
 		spend(attackDelay());
@@ -670,7 +678,7 @@ public abstract class Mob extends Char {
 		return false;
 	}
 
-	private int zapProc(@NotNull Char enemy, int damage) {
+	protected int zapProc(@NotNull Char enemy, int damage) {
 		return script.run("onZapProc", enemy, damage).optint(damage);
 	}
 

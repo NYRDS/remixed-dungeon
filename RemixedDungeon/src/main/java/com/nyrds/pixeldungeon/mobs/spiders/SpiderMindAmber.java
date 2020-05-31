@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
@@ -47,13 +46,10 @@ public class SpiderMindAmber extends MultiKindMob {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public int attackProc(@NotNull Char enemy, int damage ) {
-		
-		if(enemy instanceof Hero) {
-			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);		
-			Buff.prolong( enemy, buffClass, 3 );
-		}
-		
+	public int zapProc(@NotNull Char enemy, int damage ) {
+		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);
+		Buff.prolong( enemy, buffClass, 3 );
+
 		return damage;
 	}
 	
@@ -86,12 +82,4 @@ public class SpiderMindAmber extends MultiKindMob {
 		super.die( cause );
 		Badges.validateRare( this );
 	}
-
-	@Override
-	public boolean zap(@NotNull Char enemy) {
-		attackProc(enemy, damageRoll());
-		super.zap(enemy);
-		return true;
-	}
-
 }

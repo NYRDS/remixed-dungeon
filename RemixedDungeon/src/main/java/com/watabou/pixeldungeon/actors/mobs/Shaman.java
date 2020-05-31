@@ -103,28 +103,25 @@ public class Shaman extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean zap(@NotNull Char enemy) {
-		if (zapHit(enemy)) {
-			int dmg = damageRoll() * 2;
-			if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {
-				dmg *= 1.5f;
-			}
-			enemy.damage(dmg, LightningTrap.LIGHTNING);
-
-			enemy.getSprite().centerEmitter().burst(SparkParticle.FACTORY, 3);
-			enemy.getSprite().flash();
-
-			if (enemy == Dungeon.hero) {
-				Camera.main.shake(2, 0.3f);
-
-				if (!enemy.isAlive()) {
-					Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-							Utils.indefinite(getName()), Dungeon.depth));
-					GLog.n(Game.getVar(R.string.Shaman_Killed), getName());
-				}
-			}
-			return true;
+	protected int zapProc(@NotNull Char enemy, int damage) {
+		int dmg = damageRoll() * 2;
+		if (level().water[enemy.getPos()] && !enemy.isFlying()) {
+			dmg *= 1.5f;
 		}
-		return false;
+		enemy.damage(dmg, LightningTrap.LIGHTNING);
+
+		enemy.getSprite().centerEmitter().burst(SparkParticle.FACTORY, 3);
+		enemy.getSprite().flash();
+
+		if (enemy == Dungeon.hero) {
+			Camera.main.shake(2, 0.3f);
+
+			if (!enemy.isAlive()) {
+				Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
+						Utils.indefinite(getName()), Dungeon.depth));
+				GLog.n(Game.getVar(R.string.Shaman_Killed), getName());
+			}
+		}
+		return dmg;
 	}
 }

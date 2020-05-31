@@ -20,11 +20,11 @@
         "level": 10
       },
       {
-        "kind": "PotionOfStrength",
+        "kind": "ScrollOfCurse",
         "quantity": 100
       },
       {
-        "kind": "Sorrowmoss.Seed",
+        "kind": "ScrollOfRemoveCurse",
         "quantity": 100
       },
       {
