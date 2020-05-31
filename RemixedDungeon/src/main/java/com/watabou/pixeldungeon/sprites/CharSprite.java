@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.nyrds.android.util.WeakOptional;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Animation;
@@ -218,6 +220,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             turnTo(chr.getPos(), cell);
             play(attack);
         });
+    }
+
+    @LuaInterface
+    public void dummyAttack(int cell) {
+        attack(cell, Util.nullCallback);
     }
 
     public void operate(int cell) {
@@ -552,9 +559,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         interruptMotion();
         interruptAnimation();
         animCallback = null;
-        /*if (curAnim != null) {
-            onComplete(curAnim);
-        }*/
+
         reset();
     }
 }
