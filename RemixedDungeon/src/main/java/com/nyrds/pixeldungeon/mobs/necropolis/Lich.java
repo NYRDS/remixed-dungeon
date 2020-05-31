@@ -104,13 +104,12 @@ public class Lich extends Boss {
     }
 
     @Override
-    public boolean doAttack(Char enemy) {
+    public void doAttack(Char enemy) {
         if(timeToJump) {
-            jump();
-            return true;
+            jump();;
         }
 
-        return super.doAttack(enemy);
+        super.doAttack(enemy);
     }
 
     private void jump() {

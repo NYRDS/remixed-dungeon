@@ -310,7 +310,7 @@ public abstract class Mob extends Char {
 		super.move(step);
 	}
 
-	public boolean doAttack(Char enemy) {
+	public void doAttack(Char enemy) {
 
 		setEnemy(enemy);
 
@@ -329,8 +329,6 @@ public abstract class Mob extends Char {
 		}
 
 		spend(attackDelay());
-
-		return false;
 	}
 
 	@Override

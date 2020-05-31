@@ -2,11 +2,11 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
-import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
@@ -78,22 +77,13 @@ public class YogsBrain extends Mob implements IZapper {
 
     @Override
     protected int zapProc(@NotNull Char enemy, int damage) {
-        if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {
-            damage *= 2f;
-        }
 
-        enemy.damage( damage, LightningTrap.LIGHTNING );
 
-        enemy.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
-        enemy.getSprite().flash();
-
-        if (enemy == Dungeon.hero) {
-            Camera.main.shake( 2, 0.3f );
-        }
+        CharUtils.lightningProc(enemy, damage);
         return damage;
     }
 
-	@Override
+    @Override
     public boolean getCloser(int target) {
 		if (getState() instanceof Hunting) {
 			return enemySeen && getFurther( target );

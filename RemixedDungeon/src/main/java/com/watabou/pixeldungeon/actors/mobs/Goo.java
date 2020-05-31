@@ -121,11 +121,9 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	public boolean doAttack(Char enemy) {
+	public void doAttack(Char enemy) {
 		if (pumpedUp || Random.Int( 3 ) > 0) {
-		
-			return super.doAttack( enemy );
-
+			super.doAttack( enemy );
 		} else {
 			
 			pumpedUp = true;
@@ -137,8 +135,6 @@ public class Goo extends Boss {
 				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 				GLog.n(Game.getVar(R.string.Goo_Info1));
 			}
-				
-			return true;
 		}
 	}
 	
