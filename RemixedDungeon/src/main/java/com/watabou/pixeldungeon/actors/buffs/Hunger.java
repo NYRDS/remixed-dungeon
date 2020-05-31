@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
 
-public class Hunger extends Buff implements Hero.Doom {
+public class Hunger extends Buff implements Doom {
 
 	private static final float STEP	= 10f;
 	

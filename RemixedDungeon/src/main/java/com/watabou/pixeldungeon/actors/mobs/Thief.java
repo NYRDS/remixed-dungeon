@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -25,21 +24,17 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Thief extends Mob {
+import lombok.val;
 
-	@Packable(defaultValue = "DUMMY_ITEM")
-	public Item item = CharsList.DUMMY_ITEM;
-	
+public class Thief extends Mob {
 	{
 		hp(ht(20));
 		defenseSkill = 12;
@@ -64,7 +59,6 @@ public class Thief extends Mob {
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die( cause );
-		item.doDrop(this);
 	}
 	
 	@Override
@@ -79,7 +73,7 @@ public class Thief extends Mob {
 	
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
-		if (item == CharsList.DUMMY_ITEM && enemy instanceof Hero && steal( (Hero)enemy )) {
+		if (CharUtils.steal(this, enemy )) {
 			setState(MobAi.getStateByClass(ThiefFleeing.class));
 		}
 		
@@ -94,29 +88,14 @@ public class Thief extends Mob {
 		
 		return damage;
 	}
-	
-	protected boolean steal( Hero hero ) {
-		
-		Item item = hero.getBelongings().randomUnequipped();
-		if (item != null) {
-			
-			GLog.w( Game.getVar(R.string.Thief_Stole), this.getName(), item.name() );
-			
-			item.detachAll( hero.getBelongings().backpack );
-			this.item = item;
-			
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
+
 	@Override
 	public String description() {
 		String desc = Game.getVar(R.string.Thief_Desc);
-		
+		val item = getBelongings().randomUnequipped();
 		if (item != CharsList.DUMMY_ITEM) {
-			desc += Utils.format( Game.getVar(R.string.Thief_Carries), Utils.capitalize( this.getName() ), item.name() );
+			desc += Utils.format( Game.getVar(R.string.Thief_Carries),
+						Utils.capitalize( this.getName() ), item.name() );
 		}
 		
 		return desc;

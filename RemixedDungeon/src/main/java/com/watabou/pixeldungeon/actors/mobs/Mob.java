@@ -163,7 +163,6 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
-
 		super.storeInBundle(bundle);
 
 		bundle.put(STATE,  getState().getTag());
@@ -350,13 +349,16 @@ public abstract class Mob extends Char {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage) {
-		return script.run("onAttackProc", enemy, damage).optint(damage);
+		int baseDamage = super.attackProc(enemy, damage);
+		return script.run("onAttackProc", enemy, baseDamage).optint(baseDamage);
 	}
 
 	@Override
 	public int defenseProc(Char enemy, int damage) {
+		int baseDamage = super.defenseProc(enemy, damage);
+
 		if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
-			damage += Random.Int(1, damage);
+			baseDamage += Random.Int(1, baseDamage);
 			Wound.hit(this);
 		}
 
@@ -364,7 +366,7 @@ public abstract class Mob extends Char {
 			setEnemy(enemy);
 		}
 
-		return script.run("onDefenceProc", enemy, damage).optint(damage);
+		return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
 	}
 
 	@Override
@@ -510,6 +512,8 @@ public abstract class Mob extends Char {
 			}
 			item.doDrop(this);
 		}
+
+		belongings.dropAll();
 	}
 
 	public boolean reset() {

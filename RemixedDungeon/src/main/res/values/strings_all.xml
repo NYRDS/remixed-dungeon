@@ -2586,4 +2586,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="FullFaceMask_Info">A gas mask is a mask used to protect the wearer from inhaling airborne pollutants and toxic gases. The mask forms a sealed cover over the nose, mouth and eyes.
   \n\nFilters are missing from this mask but it looks cool nevertheless.</string>
 
+
+  <string name="Generic_Stole">%1$s stole %2$s from %3$s!</string>
+
 </resources>

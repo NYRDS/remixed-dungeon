@@ -166,7 +166,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public void doDrop(Char chr) {
 		chr.spendAndNext(TIME_TO_DROP);
 		int pos = chr.getPos();
-		Dungeon.level.animatedDrop(detachAll(chr.getBelongings().backpack), pos);
+		chr.level().animatedDrop(detachAll(chr.getBelongings().backpack), pos);
 	}
 
 	public void doThrow(Char chr) {
@@ -205,7 +205,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		Dungeon.level.animatedDrop(this, cell);
 	}
 
-	public boolean collect(Bag container) {
+	public boolean collect(@NotNull Bag container) {
 
 		ArrayList<Item> items = container.items;
 

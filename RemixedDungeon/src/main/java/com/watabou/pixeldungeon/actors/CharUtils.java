@@ -1,11 +1,15 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -48,5 +52,26 @@ public class CharUtils {
         if (enemy == Dungeon.hero) {
             Camera.main.shake( 2, 0.3f );
         }
+    }
+
+    public static boolean canDoOnlyRangedAttack(@NotNull Char attacker, @NotNull Char enemy) {
+        return !Dungeon.level.adjacent( attacker.getPos(), enemy.getPos() )
+                && Ballistica.cast( attacker.getPos(), enemy.getPos(), false, true ) == enemy.getPos();
+    }
+
+    public static boolean steal(@NotNull Char thief, @NotNull Char victim) {
+
+        if (victim.getBelongings().isBackpackEmpty()) {
+            return false;
+        }
+
+        Item item = victim.getBelongings().randomUnequipped();
+
+        GLog.w( Game.getVar(R.string.Generic_Stole), thief.getName(), item.name(), victim.getName_objective() );
+
+        item.detachAll( victim.getBelongings().backpack );
+        item.collect(thief);
+
+        return true;
     }
 }

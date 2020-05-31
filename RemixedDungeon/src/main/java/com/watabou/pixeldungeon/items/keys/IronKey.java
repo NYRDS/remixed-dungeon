@@ -35,7 +35,7 @@ public class IronKey extends Key {
 	}
 	
 	@Override
-	public boolean collect( Bag bag ) {
+	public boolean collect(@NotNull Bag bag ) {
 		boolean result = super.collect( bag );
 		if (result && depth == Dungeon.depth && Dungeon.hero != null) {
 			Dungeon.hero.getBelongings().countIronKeys();

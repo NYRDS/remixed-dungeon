@@ -100,6 +100,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
+	protected Belongings belongings;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int owner = EntityIdSource.INVALID_ID;
@@ -157,6 +158,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	//TODO store&restore it for all chars
 	private int lvl = Scrambler.scramble(1);
 
+	public Char() {
+		belongings = new Belongings(this);
+	}
+
 	public boolean canSpawnAt(Level level,int cell) {
 		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
 	}
@@ -192,6 +197,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		bundle.put(TAG_HT, ht());
 		bundle.put(BUFFS, buffs);
 		bundle.put(SPELLS_USAGE, spellsUsage);
+
+		belongings.storeInBundle(bundle);
 	}
 
 	@Override
@@ -208,11 +215,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
 				b.attachTo(this);
-			}
+		}
 
 		spellsUsage = bundle.getMap(SPELLS_USAGE);
 
 		setupCharData();
+
+		belongings.restoreFromBundle(bundle);
 	}
 
 	private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
@@ -409,7 +418,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int dr() {
-		return 0;
+		return getBelongings().armor.effectiveDr();
 	}
 
 	protected boolean inFury() {

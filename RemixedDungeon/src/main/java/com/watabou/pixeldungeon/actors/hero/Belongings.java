@@ -90,7 +90,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		LEFT_ARTIFACT
 	}
 
-	public Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
+	private Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
 	public Map<EquipableItem, Slot> usedSlots    = new HashMap<>();
 
 	private Set<EquipableItem> activatedItems = new HashSet<>();
@@ -218,7 +218,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				return (T)item;
 			}
 		}
-		
 		return null;
 	}
 
@@ -276,8 +275,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		ScrollOfCurse.curse( owner, armor, weapon, leftHand, ring1, ring2 );
 	}
 
+	@NotNull
 	public Item randomUnequipped() {
-		return Random.element( backpack.items );
+		Item ret = Random.element( backpack.items );
+		if (ret == null) {
+			return CharsList.DUMMY_ITEM;
+		}
+		return ret;
 	}
 
 	public boolean removeItem(Item itemToRemove) {
@@ -390,9 +394,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			JSONArray items = desc.getJSONArray("items");
 			for (int i = 0; i < items.length(); ++i) {
 				Item item = ItemFactory.createItemFromDesc(items.getJSONObject(i));
-				if(item!=null) {
-					collect(item);
-				}
+				collect(item);
 			}
 		}
 
@@ -493,6 +495,17 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 		return false;
 	}
+
+	public void dropAll() {
+		for (Item item : this) {
+			item.doDrop(owner);
+		}
+	}
+
+	public boolean isBackpackEmpty() {
+		return backpack.items.isEmpty();
+	}
+
 
 	@NotNull
 	public Item itemBySlot(Belongings.Slot slot) {

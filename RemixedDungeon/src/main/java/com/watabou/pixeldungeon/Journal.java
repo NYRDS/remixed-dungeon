@@ -38,7 +38,6 @@ public class Journal {
 		WELL_OF_TRANSMUTATION	(Game.getVar(R.string.Journal_WellTransmut)),
 		ALCHEMY					(Game.getVar(R.string.Journal_Alchemy)),
 		GARDEN					(Game.getVar(R.string.Journal_Garden)),
-		STATUE					(Game.getVar(R.string.Journal_Statue)),
 
 		GHOST					(Game.getVar(R.string.Journal_Ghost)),
 		WANDMAKER				(Game.getVar(R.string.Journal_Wandmaker)),
@@ -129,7 +128,11 @@ public class Journal {
 	public static boolean dontPack() {
 		return false;
 	}
-	
+
+	public static void add (int featureResourceId) {
+		add(Game.getVar(featureResourceId));
+	}
+
 	public static void add( String feature ) {
 		int size = records.size();
 		for (int i=0; i < size; i++) {
@@ -141,7 +144,11 @@ public class Journal {
 		
 		records.add( new Record( feature, Dungeon.depth ) );
 	}
-	
+
+	public static void remove( int featureResourceId) {
+		remove(Game.getVar(featureResourceId));
+	}
+
 	public static void remove( String feature ) {
 		int size = records.size();
 		for (int i=0; i < size; i++) {

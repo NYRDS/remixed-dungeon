@@ -342,7 +342,7 @@ public class WandMaker extends NPC {
 			}
 
 			@Override
-			public boolean collect( Bag container ) {
+			public boolean collect(@NotNull Bag container ) {
 				if (super.collect( container )) {
 
 					Dungeon.challengeAllMobs(Dungeon.hero,Assets.SND_CHALLENGE);

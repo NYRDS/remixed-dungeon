@@ -171,7 +171,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	protected abstract void onZap(int cell);
 
 	@Override
-	public boolean collect(Bag container) {
+	public boolean collect(@NotNull Bag container) {
 		if (super.collect(container)) {
 			if (container.getOwner() != CharsList.DUMMY) {
 				charge(container.getOwner());

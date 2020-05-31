@@ -90,10 +90,8 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public boolean zap(@NotNull Char enemy) {
+	protected int zapProc(@NotNull Char enemy, int damage) {
 		windGust.cast(this, enemy.getPos());
-		super.zap(enemy);
-		return true;
+		return damage;
 	}
-
 }

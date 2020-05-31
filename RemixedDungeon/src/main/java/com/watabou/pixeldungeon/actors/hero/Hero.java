@@ -123,6 +123,7 @@ import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.TestOnly;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -165,8 +166,6 @@ public class Hero extends Char {
 
 	public boolean restoreHealth = false;
 
-	private Belongings belongings;
-
 	private int STR;
 
 	private float awareness;
@@ -185,6 +184,7 @@ public class Hero extends Char {
 	private int difficulty;
 
 	public Hero() {
+		super();
 		setupCharData();
 		name = Game.getVar(R.string.Hero_Name);
 		name_objective = Game.getVar(R.string.Hero_Name_Objective);
@@ -196,7 +196,6 @@ public class Hero extends Char {
 
 		controlTargetId = getId();
 
-		belongings = new Belongings(this);
 	}
 
 	public Hero(int difficulty) {
@@ -251,8 +250,6 @@ public class Hero extends Char {
 		bundle.put(SP, getSkillPoints());
 		bundle.put(MAX_SP, getSkillPointsMax());
 
-		belongings.storeInBundle(bundle);
-
 		bundle.put(IS_SPELL_USER, spellUser);
 		bundle.put(MAGIC_LEVEL, skillLevel());
 	}
@@ -285,8 +282,6 @@ public class Hero extends Char {
 
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
 		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
-
-		belongings.restoreFromBundle(bundle);
 
 		gender = heroClass.getGender();
 
@@ -1294,12 +1289,12 @@ public class Hero extends Char {
 
 		Dungeon.observe();
 
-		Dungeon.hero.belongings.identify();
+		Dungeon.hero.getBelongings().identify();
 
 		GameScene.gameOver();
 
-		if (cause instanceof Hero.Doom) {
-			((Hero.Doom) cause).onDeath();
+		if (cause instanceof Doom) {
+			((Doom) cause).onDeath();
 		}
 
 		Dungeon.gameOver();
@@ -1658,10 +1653,6 @@ public class Hero extends Char {
         this.subClass = subClass;
     }
 
-    public interface Doom extends NamedEntityKind{
-		void onDeath();
-	}
-
 	@Override
 	public void updateSprite() {
 		super.updateSprite();
@@ -1796,6 +1787,7 @@ public class Hero extends Char {
 		}
 	}
 
+	@TestOnly
 	public void resetBelongings(Belongings belongings) {
 		this.belongings = belongings;
 		updateSprite();

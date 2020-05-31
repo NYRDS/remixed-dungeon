@@ -22,6 +22,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WandHolster extends Bag {
 
 	{
@@ -34,7 +36,7 @@ public class WandHolster extends Bag {
 	}
 	
 	@Override
-	public boolean collect( Bag container ) {
+	public boolean collect(@NotNull Bag container ) {
 		if (super.collect( container )) {
 			if (getOwner() != CharsList.DUMMY) {
 				for (Item item : items) {

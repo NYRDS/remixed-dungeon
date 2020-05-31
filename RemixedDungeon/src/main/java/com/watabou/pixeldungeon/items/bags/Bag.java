@@ -64,7 +64,7 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	@Override
-	public boolean collect( Bag container ) {
+	public boolean collect(@NotNull Bag container ) {
 		if (super.collect( container )) {	
 			
 			setOwner(container.getOwner());
@@ -125,7 +125,7 @@ public class Bag extends Item implements Iterable<Item> {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		for (Item item : bundle.getCollection( ITEMS,Item.class )) {
-			if(getOwner() !=CharsList.DUMMY) {
+			if(getOwner()!=CharsList.DUMMY) {
 				getOwner().getBelongings().collect(item);
 			} else {
 				item.collect(this);

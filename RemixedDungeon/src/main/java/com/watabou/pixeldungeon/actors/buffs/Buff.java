@@ -22,11 +22,12 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -43,261 +44,255 @@ import lombok.SneakyThrows;
 
 public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
-	protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
-	public Char target;
+    protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
+    public Char target;
 
-	@Packable(defaultValue = "1")
-	protected int level=1;
+    @Packable(defaultValue = "1")
+    protected int level = 1;
 
-	@Override
-	public String getEntityKind() {
-		return getClass().getSimpleName();
-	}
+    @Override
+    public String getEntityKind() {
+        return getClass().getSimpleName();
+    }
 
-	@Override
-	public String name() {
-		return getEntityKind();
-	}
+    @Override
+    public String name() {
+        return getEntityKind();
+    }
 
-	@Override
-	public String textureSmall() {
-		return Assets.BUFFS_SMALL;
-	}
+    @Override
+    public String textureSmall() {
+        return Assets.BUFFS_SMALL;
+    }
 
-	@Override
-	public String textureLarge() {
-		return Assets.BUFFS_LARGE;
-	}
+    @Override
+    public String textureLarge() {
+        return Assets.BUFFS_LARGE;
+    }
 
-	public void attachVisual() {
-		target.getSprite().add(charSpriteStatus());
-	}
+    public void attachVisual() {
+        target.getSprite().add(charSpriteStatus());
+    }
 
-	interface itemAction{
-		Item   act(Item srcItem);
-		String actionText(Item srcItem);
-		void   carrierFx();
-	}
-	
-	public boolean attachTo( Char target ) {
+    interface itemAction {
+        Item act(Item srcItem);
 
-		if (target.immunities().contains( getEntityKind() )) {
-			return false;
-		}
-		
-		this.target = target;
-		target.add(this);
-		
-		return true;
-	}
-	
-	public void detach() {
-		target.remove(this);
-	}
+        String actionText(Item srcItem);
 
-	@Override
-	public boolean act() {
-		deactivate();
-		return true;
-	}
+        void carrierFx();
+    }
 
-	public int icon() {
-		return BuffIndicator.NONE;
-	}
+    public boolean attachTo(Char target) {
 
-	@SneakyThrows
-	public static<T extends Buff> T affect(@NotNull Char target, Class<T> buffClass ) {
-		T buff = target.buff( buffClass );
-		if (buff != null) {
-			return buff;
-		} else {
-			buff = buffClass.newInstance();
-			buff.attachTo(target);
-			return buff;
-		}
-	}
+        if (target.immunities().contains(getEntityKind())) {
+            return false;
+        }
 
-	@LuaInterface
-	public static Buff permanent( Char target, String buffClass ) {
-		Buff buff = BuffFactory.getBuffByName(buffClass);
-		buff.attachTo(target);
-		buff.deactivate();
-		return buff;
-	}
+        this.target = target;
+        target.add(this);
 
-	@LuaInterface
-	public static<T extends Buff> T permanent( Char target, Class<T> buffClass ) {
-		T buff = affect( target, buffClass );
-		buff.deactivate();
-		return buff;
-	}
+        return true;
+    }
 
-	@LuaInterface
-	public static Buff affect( Char target, String buffClass, float duration ) {
-		Buff buff = target.buff(buffClass);
-		if (buff == null) {
-			buff = BuffFactory.getBuffByName(buffClass);
-			buff.attachTo(target);
-		}
+    public void detach() {
+        target.remove(this);
+    }
 
-		buff.spend( duration );
-		return buff;
-	}
+    @Override
+    public boolean act() {
+        deactivate();
+        return true;
+    }
 
-	@LuaInterface
-	public static<T extends Buff> T affect( Char target, Class<T> buffClass, float duration ) {
-		T buff = affect( target, buffClass );
-		buff.spend( duration );
-		return buff;
-	}
+    public int icon() {
+        return BuffIndicator.NONE;
+    }
 
-	@LuaInterface
-	public static Buff prolong( Char target, String  buffClass, float duration ) {
-		Buff buff = BuffFactory.getBuffByName(buffClass);
-		buff.attachTo(target);
-		buff.postpone( duration );
-		return buff;
-	}
+    @SneakyThrows
+    public static <T extends Buff> T affect(@NotNull Char target, Class<T> buffClass) {
+        T buff = target.buff(buffClass);
+        if (buff != null) {
+            return buff;
+        } else {
+            buff = buffClass.newInstance();
+            buff.attachTo(target);
+            return buff;
+        }
+    }
 
-	@LuaInterface
-	public static<T extends Buff> T prolong( Char target, Class<T> buffClass, float duration ) {
-		T buff = affect( target, buffClass );
-		buff.postpone( duration );
-		return buff;
-	}
-	
-	public static void detach( Buff buff ) {
-		if (buff != null) {
-			buff.detach();
-		}
-	}
+    @LuaInterface
+    public static Buff permanent(Char target, String buffClass) {
+        Buff buff = BuffFactory.getBuffByName(buffClass);
+        buff.attachTo(target);
+        buff.deactivate();
+        return buff;
+    }
 
-	@LuaInterface
-	public static void detach( Char target, String cl ) {
-		detach( target.buff( cl ) );
-	}
+    @LuaInterface
+    public static <T extends Buff> T permanent(Char target, Class<T> buffClass) {
+        T buff = affect(target, buffClass);
+        buff.deactivate();
+        return buff;
+    }
 
-	@LuaInterface
-	public static void detach( Char target, Class<? extends Buff> cl ) {
-		detach( target.buff( cl ) );
-	}
+    @LuaInterface
+    public static Buff affect(Char target, String buffClass, float duration) {
+        Buff buff = target.buff(buffClass);
+        if (buff == null) {
+            buff = BuffFactory.getBuffByName(buffClass);
+            buff.attachTo(target);
+        }
 
-	public void level(int level ) {
-		this.level = level;
-	}
+        buff.spend(duration);
+        return buff;
+    }
 
-	public int level() {
-		return level;
-	}
+    @LuaInterface
+    public static <T extends Buff> T affect(Char target, Class<T> buffClass, float duration) {
+        T buff = affect(target, buffClass);
+        buff.spend(duration);
+        return buff;
+    }
 
-	public int drBonus() {
-		return 0;
-	}
+    @LuaInterface
+    public static Buff prolong(Char target, String buffClass, float duration) {
+        Buff buff = BuffFactory.getBuffByName(buffClass);
+        buff.attachTo(target);
+        buff.postpone(duration);
+        return buff;
+    }
 
-	public int stealthBonus() { return 0; }
+    @LuaInterface
+    public static <T extends Buff> T prolong(Char target, Class<T> buffClass, float duration) {
+        T buff = affect(target, buffClass);
+        buff.postpone(duration);
+        return buff;
+    }
 
-	public float speedMultiplier() { return 1;}
+    public static void detach(Buff buff) {
+        if (buff != null) {
+            buff.detach();
+        }
+    }
 
-	public int defenceProc(Char defender, Char enemy, int damage)
-	{
-		return damage;
-	}
+    @LuaInterface
+    public static void detach(Char target, String cl) {
+        detach(target.buff(cl));
+    }
 
-	@Override
-	public int attackProc(Char attacker, Char defender, int damage) {
-		return damage;
-	}
+    @LuaInterface
+    public static void detach(Char target, Class<? extends Buff> cl) {
+        detach(target.buff(cl));
+    }
 
-	@Override
-	public int regenerationBonus() {
-		return 0;
-	}
+    public void level(int level) {
+        this.level = level;
+    }
 
-	@Override
-	public void charAct() {
-	}
+    public int level() {
+        return level;
+    }
 
-	@Override
-	public int dewBonus() {
-		return 0;
-	}
+    public int drBonus() {
+        return 0;
+    }
 
-	@Override
-	public Set<String> resistances() {
-		return EMPTY_STRING_SET;
-	}
+    public int stealthBonus() {
+        return 0;
+    }
 
-	@Override
-	public Set<String> immunities() {
-		return EMPTY_STRING_SET;
-	}
+    public float speedMultiplier() {
+        return 1;
+    }
 
-	public CharSprite.State charSpriteStatus() {
-		return CharSprite.State.NONE;
-	}
+    public int defenceProc(Char defender, Char enemy, int damage) {
+        return damage;
+    }
 
-	private void collectOrDropItem(Item item){
-		if(!item.collect( target.getBelongings().backpack )){
-			item.doDrop(target);
-		}	
-	}
+    @Override
+    public int attackProc(Char attacker, Char defender, int damage) {
+        return damage;
+    }
 
-	protected void applyToCarriedItems(itemAction action ){
-		if (target instanceof Hero) {
-			Hero hero = (Hero) target;
-			
-			int n = 1;
-			
-			if(hero.getDifficulty()>=3) {
-				n = 5;
-			}
-			
-			for (int i = 0; i < n; i++) {
-				Item item = hero.getBelongings().randomUnequipped();
+    @Override
+    public int regenerationBonus() {
+        return 0;
+    }
 
-				if (item == null || item instanceof Bag || item instanceof Gold) {
-					continue;
-				}
+    @Override
+    public void charAct() {
+    }
 
-				Item srcItem = item.detach(hero.getBelongings().backpack);
+    @Override
+    public int dewBonus() {
+        return 0;
+    }
 
-				if(srcItem == null) {
-					EventCollector.logException(item.getClassName());
-					continue;
-				}
+    @Override
+    public Set<String> resistances() {
+        return EMPTY_STRING_SET;
+    }
 
-				item = action.act(srcItem);
+    @Override
+    public Set<String> immunities() {
+        return EMPTY_STRING_SET;
+    }
 
-				if (item == srcItem) { // item unaffected by buff
-					collectOrDropItem(item);
-					continue;
-				}
+    public CharSprite.State charSpriteStatus() {
+        return CharSprite.State.NONE;
+    }
 
-				String actionText = null;
+    private void collectOrDropItem(Item item) {
+        if (!item.collect(target.getBelongings().backpack)) {
+            item.doDrop(target);
+        }
+    }
 
-				if (item == null) {
-					actionText = action.actionText(srcItem);
-					action.carrierFx();
-				} else {
-					if (!item.equals(srcItem)) {
-						actionText = action.actionText(srcItem);
-						collectOrDropItem(item);
+    protected void applyToCarriedItems(itemAction action) {
+        int n = 1;
 
-						action.carrierFx();
-					}
-				}
+        if (Game.getDifficulty() >= 3) {
+            n = 5;
+        }
 
-				if (actionText != null) {
-					GLog.w(actionText);
-				}
-			}
-		} else if (target instanceof Thief){
-			if (((Thief)target).item == null)
-			{
-				return;
-			}
-			((Thief)target).item = action.act(((Thief)target).item);
-			action.carrierFx();
-		}
-	}
+        for (int i = 0; i < n; i++) {
+            Item item = target.getBelongings().randomUnequipped();
+
+            if (item == CharsList.DUMMY_ITEM || item instanceof Bag || item instanceof Gold) {
+                continue;
+            }
+
+            Item srcItem = item.detach(target.getBelongings().backpack);
+
+            if (srcItem == null) {
+                EventCollector.logException(item.getClassName());
+                continue;
+            }
+
+            item = action.act(srcItem);
+
+            if (item == srcItem) { // item unaffected by buff
+                collectOrDropItem(item);
+                continue;
+            }
+
+            String actionText = null;
+
+            if (item == null || item == CharsList.DUMMY_ITEM) {
+                actionText = action.actionText(srcItem);
+                action.carrierFx();
+            } else {
+                if (!item.equals(srcItem)) {
+                    actionText = action.actionText(srcItem);
+                    collectOrDropItem(item);
+
+                    action.carrierFx();
+                }
+            }
+
+            if (actionText != null || target == Dungeon.hero) {
+                GLog.w(actionText);
+            }
+        }
+    }
 }

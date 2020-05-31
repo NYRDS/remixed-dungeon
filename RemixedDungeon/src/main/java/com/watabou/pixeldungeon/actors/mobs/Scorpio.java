@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -80,18 +79,15 @@ public class Scorpio extends Mob implements IZapper {
 	
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
-		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
+		return CharUtils.canDoOnlyRangedAttack(this, enemy);
 	}
 
 	@Override
-	public boolean zap(@NotNull Char enemy) {
-		if(super.zap(enemy)) {
-			if (Random.Int( 2 ) == 0) {
-				Buff.prolong( enemy, Cripple.class, Cripple.DURATION );
-			}
-			return true;
+	protected int zapProc(@NotNull Char enemy, int damage) {
+		if (Random.Int( 2 ) == 0) {
+			Buff.prolong( enemy, Cripple.class, Cripple.DURATION );
 		}
-		return false;
+		return damage;
 	}
 
 	@Override
