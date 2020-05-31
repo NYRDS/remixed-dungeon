@@ -123,11 +123,8 @@ public class Viscosity extends Glyph {
 				if (--damage <= 0) {
 					detach();
 				}
-				
 			} else {
-				
 				detach();
-				
 			}
 			
 			return true;

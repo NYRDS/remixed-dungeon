@@ -65,7 +65,6 @@ import lombok.var;
 public class Belongings implements Iterable<Item>, Bundlable {
 
 	public static final int BACKPACK_SIZE	= 18;
-	public static final Belongings empty = new Belongings(CharsList.DUMMY);
 
 	private Item selectedItem = CharsList.DUMMY_ITEM;
 
@@ -498,12 +497,19 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public void dropAll() {
 		for (Item item : this) {
-			item.doDrop(owner);
+			if (item.quantity()>0) {
+				item.doDrop(owner);
+			}
 		}
 	}
 
 	public boolean isBackpackEmpty() {
-		return backpack.items.isEmpty();
+		for (Item item : backpack) {
+			if (item.quantity()>0) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 

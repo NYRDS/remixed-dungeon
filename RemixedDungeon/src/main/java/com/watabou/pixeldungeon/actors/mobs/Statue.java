@@ -40,6 +40,7 @@ import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -136,6 +137,7 @@ public class Statue extends Mob {
 			} while (!(weaponCandidate instanceof EquipableItem)
 					||!(((EquipableItem) weaponCandidate).goodForMelee())
 					|| weaponCandidate.level() < 0
+					|| weaponCandidate instanceof MissileWeapon
 			);
 			EquipableItem chosenItem = ((EquipableItem) weaponCandidate);
 			chosenItem.identify();

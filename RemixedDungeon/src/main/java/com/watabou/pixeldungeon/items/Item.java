@@ -684,9 +684,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	@LuaInterface
 	public void setDefaultAction(@NotNull String newDefaultAction) {
-		Char hero = getOwner();
-
-		if(hero.getHeroClass().forbidden(newDefaultAction)) {
+		if(getOwner().getHeroClass().forbidden(newDefaultAction)) {
 			newDefaultAction = AC_THROW;
 		}
 

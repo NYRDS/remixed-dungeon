@@ -158,10 +158,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	//TODO store&restore it for all chars
 	private int lvl = Scrambler.scramble(1);
 
-	public Char() {
-		belongings = new Belongings(this);
-	}
-
 	public boolean canSpawnAt(Level level,int cell) {
 		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
 	}
@@ -238,6 +234,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if(getOwnerId() < 0) { //fix pre 29.4.fix.6 saves
 			setOwnerId(id);
 		}
+
+		belongings = new Belongings(this);
 
 		if(this instanceof CustomMob) {
 			return;
@@ -1017,7 +1015,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@NotNull
 	@Override
 	public Belongings getBelongings() {
-		return Belongings.empty;
+		return belongings;
 	}
 
     public int gold() {
