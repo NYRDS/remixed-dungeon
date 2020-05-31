@@ -2575,7 +2575,7 @@ remix.29.3/n
   <string name="Welcome_Text_29_4">
     remix.29.4\n
     - Rozgrywka:\n
-    -- Dwóręczne władanie!\n
+    -- Dwuręczne władanie!\n
     - Modowanie:\n
     -- Customowe bronie!\n
     - Błędy naprawione\n
@@ -2589,4 +2589,25 @@ remix.29.3/n
   <string name="ShieldWeaponInfo">Kiedy użyte jako broń ta tarcza pochłonie średnio%1$d obrażeń. </string>
   <string name="TownPortal_Name">Portal miejski</string>
   <string name="TownPortal_Info">To zaklęcie pozwala ci natychmiast powrócić do bezpiecznego miejsca. Jednak potężne źródło magii w pobliżu może uniemożliwić jego działanie zgodnie z przeznaczeniem.</string>
+
+
+  <string name="MedicineMask_Name">Maska Chirurgiczna</string>
+  <string name="MedicineMask_Info">Maska chirurgiczna przeznaczona jest do wychwytywania mikroorganizmów wydychanych  z ust i nosa użytkownika.
+\n\n Noszenie maski oznacza, że ​​zależy Ci na innych.</string>
+  <string name="MedicineMask_Obtained">Maska Chirurgiczna Zdobyta!</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Jesteś tam jeszcze? Masz! Weź to.</string>
+
+
+
+  <string name="FilteredMask_Name">Maska N95</string>
+  <string name="FilteredMask_Info">Maska oddechowa to urządzenie zaprojektowane w celu ochrony użytkownika przed wdychaniem niebezpiecznych gazów i cząstek stałych, takich jak pyły i mikroorganizmy zawieszone w powietrzu.
+  \ n\n  a maska ​​służy jednak wyłącznie do celów dekoracyjnych.</string>
+
+  <string name="FullFaceMask_Name">Maska Przeciwgazowa</string>
+  <string name="FullFaceMask_Info">Maska przeciwgazowa jest używana do ochrony użytkownika przed wdychaniem zanieczyszczeń i toksycznych gazów. Maska tworzy szczelną osłonę na nosie, ustach i oczach.
+ \n\n Filtrów brakuje w tej masce, ale mimo to wygląda fajnie.</string>
+
+
+  <string name="Generic_Stole">%1$sukradł %2$s od %3$s</string>
+
 </resources>
