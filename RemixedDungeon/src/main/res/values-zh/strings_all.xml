@@ -2617,6 +2617,9 @@
 
   <string name="FullFaceMask_Name">防毒面具</string>
   <string name="FullFaceMask_Info">防毒面具是用来防止佩戴者吸入空气中的污染物和有毒气体的面具。面具在鼻子、嘴和眼睛上形成一个密封罩。 
- \n\n不过这个面具只起装饰作用。</string>
+ \n\n这个面具上没有过滤器，但是看起来很酷。</string>
+
+
+  <string name="Generic_Stole">%1$s把%3$s的%2$s偷窃了！</string>
 
 </resources>
