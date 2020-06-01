@@ -384,24 +384,23 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		curChargeKnown = bundle.getBoolean(CUR_CHARGE_KNOWN);
 	}
 
-	protected void wandEffect(final int cell) {
+	protected void wandEffect(final int cell, Char selector) {
 		setKnown();
 
-		QuickSlot.target(getOwner().getBelongings().getSelectedItem(), Actor.findChar(cell));
+		QuickSlot.target(selector.getBelongings().getSelectedItem(), Actor.findChar(cell));
 
 		if (curCharges() > 0) {
-
-			getOwner().busy();
+			selector.busy();
 
 			fx(cell, () -> {
 				onZap(cell);
 				wandUsed();
 			});
 
-			Invisibility.dispel(getOwner());
+			Invisibility.dispel(selector);
 		} else {
 
-			getOwner().spendAndNext(TIME_TO_ZAP);
+			selector.spendAndNext(TIME_TO_ZAP);
 			GLog.w(Game.getVar(R.string.Wand_Fizzles));
 			setLevelKnown(true);
 
@@ -427,7 +426,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 				final Wand curWand = (Wand) selector.getBelongings().getSelectedItem();
 				final int cell = curWand.getDestinationCell(selector.getPos(),target);
 				selector.getSprite().zap(cell);
-				curWand.wandEffect(cell);
+				curWand.wandEffect(cell, selector);
 			}
 		}
 
