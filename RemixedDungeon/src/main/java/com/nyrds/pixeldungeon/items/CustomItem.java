@@ -75,13 +75,6 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void execute(Char chr, String action) {
-        super.execute(chr,action);
-        script.run("execute", chr, action);
-    }
-
-
-    @Override
     public Belongings.Slot slot(Belongings belongings) {
         return Belongings.Slot.valueOf(script.runOptional("slot",_slot().name(), belongings));
     }
@@ -109,6 +102,12 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public void execute(Char chr, String action) {
+        super.execute(chr,action);
+        script.run("execute", chr, action);
+    }
+
+    @Override
     public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
 
@@ -119,15 +118,7 @@ public class CustomItem extends EquipableItem {
 
         LuaValue ret = script.run("actions", hero);
 
-        if(ret.istable()) {
-            LuaTable luaActions = ret.checktable();
-
-            int n = luaActions.rawlen();
-
-            for(int i =1;i<=n;++i){
-                actions.add(luaActions.rawget(i).checkjstring());
-            }
-        }
+        LuaEngine.forEach(ret.checktable(), (key,val)->actions.add(val.tojstring()));
 
         return actions;
     }

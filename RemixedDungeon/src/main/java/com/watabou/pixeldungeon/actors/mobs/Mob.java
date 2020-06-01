@@ -45,6 +45,7 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -722,5 +723,23 @@ public abstract class Mob extends Char {
 	@Override
 	protected float _attackDelay() {
 		return 1f;
+	}
+
+	@Override
+	public void execute(Char hero, String action) {
+		if(action.equals(CommonActions.MAC_STEAL)) {
+			CharUtils.steal(hero, this);
+			hero.spend(1);
+			return;
+		}
+
+		if(action.equals(CommonActions.MAC_TAUNT)) {
+			setState(MobAi.getStateByClass(Hunting.class));
+			target=hero.getId();
+			hero.spend(0.1f);
+			return;
+		}
+
+		super.execute(hero, action);
 	}
 }

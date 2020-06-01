@@ -21,6 +21,9 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
+
+import java.util.ArrayList;
 
 import lombok.SneakyThrows;
 
@@ -124,6 +127,23 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	public boolean friendly(@NotNull Char chr) {
 		return friendly || super.friendly(chr);
 	}
+
+	@Override
+	public void execute(Char chr, String action) {
+		super.execute(chr,action);
+		script.run("executeAction", chr, action);
+	}
+
+	@Override
+	public ArrayList<String> actions(Char hero) {
+		ArrayList<String> actions = super.actions(hero);
+
+		LuaValue ret = script.run("actionsList", hero);
+		LuaEngine.forEach(ret.checktable(), (key,val)->actions.add(val.tojstring()));
+
+		return actions;
+	}
+
 
 	@SneakyThrows
 	private void fillMobStats(boolean restoring) {
