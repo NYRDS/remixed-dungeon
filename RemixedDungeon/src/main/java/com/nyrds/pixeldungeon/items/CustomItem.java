@@ -79,6 +79,10 @@ public class CustomItem extends EquipableItem {
         return Belongings.Slot.valueOf(script.runOptional("slot",_slot().name(), belongings));
     }
 
+    public Belongings.Slot blockSlot() {
+        return Belongings.Slot.valueOf(script.runOptional("blockSlot",super.blockSlot().name()));
+    }
+
     private Belongings.Slot _slot() {
         for(Belongings.Slot slot: Belongings.Slot.values()) {
             if (equipable.equalsIgnoreCase(slot.toString())) {
