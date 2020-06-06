@@ -1,28 +1,31 @@
-Bu, açık kaynak yazılımlı, piksel piksel grafikli bir roguelike oyundur.
+Bu açık kaynaklı piksel grafikli roguelike bir oyundur
 
 Uzun zaman önce küçük bir kasaba varmış. Mutlu bir hayat süren kasaba halkı o kadar fakirmiş ki hiçbiri tatil için ayıracak para bulamıyormuş. Ama herkesin tüm umutlarını yitirdiği gün, bir mucize gerçekleşmiş. Kasabanın zemini şiddetli bir şekilde sarsılmış ve on binlerce hilkat garibesini gün yüzüne çıkarmış. O güden itibaren hayatta kalan tüm kasaba halkı daima mutlu yaşamış. Neden mi? Çünkü zindan her türlü kahramanın ve maceracının dikkatini çekmiş. Masumları korumuşlar ve ciddi miktarlarda para harcayarak kasabanın ekonomisini güçlendirmişler.
-Ölü maceracıların ve zavallı ruhlarının doldurduğu tehlikeli zindanın üzerinde kaim oldukça bu küçük kasaba gelişmeye devam edecek.
+Ve kasaba, can vermiş maceracıların ve zavallı ruhlarının dolup taştığı bu zindanın tepesinde durdukça, zenginliğine zenginlik katmaya devam edecek.
 
 Oyun özellikleri:
-- Bu oyun kullanıcılar tarafından yapılmış modları destekler! Ve bu özelliği geliştirdikçe sen de Remixed Dungeon'ın içinde yepyeni bir oyun yapabileceksin!
-- Ekstrem rogue-like deneyimi!
+- Bu oyun kullanıcılar tarafından yapılmış modları destekler! Bu özellik geliştirildikçe sen de Remixed Dungeon'ın içinde yepyeni bir oyun yapabileceksin!
+- Ekstrem roguelike deneyimi!
 - 7 seçilebilir karakter sınıfı
 - Kasaba merkezi sizi maceranıza hazırlayacak ve oyun dünyasını tanıtacak
-- 6 ana tema içerisinde 30'u aşkın zindan tipi
-- 3 isteğe bağlı zindan: Örümcek Sığınağı, Ölümtopya, Buz İnleri
+- 6 türe ayrılmış 30'u aşkın zindan türü
+- 3 isteğe bağlı zindan: Örümcek İni, Ölü kent, Buz Mağaraları
 - Düzinelerce eşya ve canavarlar
 - Çeşitli bosslar
 - Şapkalar! Kim şapka sevmez ki?
 
+Discord sunucumuza katılın:
+https://discordapp.com/invite/AMXrhQZ
+
 Bizi Twitter'da takip edin:
 https://twitter.com/nyrds
 
-Bu oyun GPLv3 Lisansı esas alınmış açık kaynaklı bir yazılımdır. Remixed Dungeon'un kaynak kodunu burada bulabilirsiniz:
+Bu oyun bir GPLv3 Lisanslı açık kaynaklı yazılımdır. Remixed Dungeon'ın kaynak kodu şu adreste bulunmaktadır:
 https://github.com/NYRDS/remixed-dungeon
 
 Eğer diğer dillere çevrilmesinde katkıda bulunmak istiyorsanız lütfen şu adresi ziyaret edin:
 https://www.transifex.com/projects/p/remixed-dungeon/
 
-Bir göz atın:
+Oyundaki değişiklikleri
 http://wiki.nyrds.net/doku.php?id=rpd:changelog
 adresinden kontrol edebilirsin
