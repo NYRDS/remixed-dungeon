@@ -403,17 +403,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 
 	public int defenceRoll(Char enemy) {
-
 		if(enemy.ignoreDr()) {
 			return 0;
 		}
 
 		final int[] dr = {dr()};
-
 		forEachBuff(b-> dr[0] +=b.drBonus());
-
 		return  Random.IntRange(0, dr[0]);
-
 	}
 
 	public int dr() {
@@ -431,13 +427,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int defenseProc(Char enemy, int baseDamage) {
-
 		int dr = defenceRoll(enemy);
-
 		final int[] damage = {baseDamage - dr};
-
 		forEachBuff(b->damage[0] = b.defenceProc(this, enemy, damage[0]));
-
 		return getBelongings().armor.defenceProc(enemy, this, damage[0]);
 	}
 
@@ -491,7 +483,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         heal = resist(heal, src);
-
         heal = Math.min(ht()-hp(),heal);
 
         if(heal<0) {
@@ -666,7 +657,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void add(Buff buff) {
-
 		if(!isAlive()) {
 			return;
 		}
@@ -682,7 +672,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void remove(@Nullable Buff buff) {
-
 		buffs.remove(buff);
 		Actor.remove(buff);
 
@@ -693,7 +682,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@NotNull
 	public Hunger hunger() {
-
 		if(!(this instanceof Hero)) { //fix it later
 			return new Hunger();
 		}
@@ -711,7 +699,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		return hunger;
-
 	}
 
     public boolean isStarving() {
@@ -749,7 +736,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void move(int step) {
-		
 		if(!isMovable()) {
 			return;
 		}
@@ -946,6 +932,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return !paralysed && (flying || hasBuff(Levitation.class));
 	}
 
+	@LuaInterface
+	public boolean isParalysed() {
+		return paralysed;
+	}
+
 	public void paralyse(boolean paralysed) {
 		this.paralysed = paralysed;
 		if(paralysed && GameScene.isSceneReady()) {
@@ -1000,6 +991,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return CharsList.DUMMY;
 		}
 		return visibleEnemies.get(index);
+	}
+
+	@LuaInterface
+	public Char randomEnemy() {
+		return Random.element(visibleEnemies);
 	}
 
 	public void checkIfFurious() {
@@ -1117,7 +1113,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public boolean swapPosition(final Char chr) {
-
 		if(!walkingType.canSpawnAt(level(),chr.getPos())) {
 			return false;
 		}

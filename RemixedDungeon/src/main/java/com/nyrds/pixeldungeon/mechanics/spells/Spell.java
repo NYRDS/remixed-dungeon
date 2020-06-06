@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -17,6 +16,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
+
+import lombok.val;
+import lombok.var;
 
 public class Spell implements NamedEntityKind {
 
@@ -37,8 +39,6 @@ public class Spell implements NamedEntityKind {
     protected int image = 0;
 
     private SpellItem spellItem;
-
-    private Image spellImage;
 
     protected boolean cast(Char chr, int cell) {
         return true;
@@ -146,13 +146,17 @@ public class Spell implements NamedEntityKind {
         return imageFile;
     }
 
-    public Image image() {
-        if(spellImage==null) {
-            SmartTexture texture = TextureCache.get(texture());
-            spellImage = new Image(texture);
-            spellImage.frame(new TextureFilm(texture, 16, 16).get(image));
-        }
+    public Image image(Char caster) {
+        val texture = TextureCache.get(texture());
+        var spellImage = new Image(texture);
+
+        spellImage.frame(new TextureFilm(texture, 16, 16).get(getImage(caster)));
+
         return spellImage;
+    }
+
+    protected int getImage(Char caster) {
+        return image;
     }
 
     public int spellCost() {
@@ -186,11 +190,11 @@ public class Spell implements NamedEntityKind {
 
                 @Override
                 public int image() {
-                    return Spell.this.image;
+                    return Spell.this.getImage(Dungeon.hero);
                 }
 
                 @Override
-                public void execute(Hero hero) {
+                public void execute(Char hero) {
                     Spell.this.cast(hero);
                 }
 

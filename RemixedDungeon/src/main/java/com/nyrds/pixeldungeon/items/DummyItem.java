@@ -47,4 +47,9 @@ public class DummyItem extends EquipableItem {
     @Override
     public void doDrop(Char hero) {
     }
+
+    @Override
+    public int requiredSTR() {
+        return 0;
+    }
 }

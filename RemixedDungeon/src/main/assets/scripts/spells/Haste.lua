@@ -12,8 +12,8 @@ local spell = require "scripts/lib/spell"
 return spell.init{
     desc  = function ()
         return {
-            image         = 2,
-            imageFile     = "spellsIcons/common.png",
+            image         = 3,
+            imageFile     = "spellsIcons/rogue.png",
             name          = "Haste_Name",
             info          = "Haste_Info",
             magicAffinity = "Rogue",

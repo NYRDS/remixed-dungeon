@@ -48,9 +48,9 @@ public class Hunger extends Buff implements Doom {
 	public boolean act() {
 		if (target.isAlive()) {
 
-			int difficulty = Dungeon.hero.getDifficulty();
+			int difficulty = Game.getDifficulty();
 
-			if (!Dungeon.level.isSafe() && isStarving()) {
+			if (!target.level().isSafe() && isStarving()) {
 
 				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
 
@@ -83,7 +83,7 @@ public class Hunger extends Buff implements Doom {
 
 				delta *= RemixedDungeon.getDifficultyFactor() / 1.5f;
 
-				if(Dungeon.level.isSafe()){
+				if(target.level().isSafe()){
 					delta = 0;
 				}
 				
@@ -116,7 +116,6 @@ public class Hunger extends Buff implements Doom {
 			step *= Dungeon.realtime() ? 10f : 1;
 
 			spend( step );
-			
 		} else {
 			deactivate();
 		}

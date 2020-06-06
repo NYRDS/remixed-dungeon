@@ -183,7 +183,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	public void execute(Hero hero) {
+	public void execute(Char hero) {
 		if(hero.getHeroClass().forbidden(getDefaultAction())){
 			setDefaultAction(AC_THROW);
 		}

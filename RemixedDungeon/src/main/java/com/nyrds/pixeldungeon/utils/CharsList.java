@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.utils;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.DummyChar;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
 
@@ -18,7 +17,6 @@ public class CharsList {
 
     // Unreachable target
     public static final Char DUMMY = new DummyChar();
-    public static final Belongings EMPTY_BELONGINGS = new Belongings(DUMMY);
     public static final EquipableItem DUMMY_ITEM = new DummyItem();
 
     private static ConcurrentHashMap<Integer, Char> charsMap = new ConcurrentHashMap<>();

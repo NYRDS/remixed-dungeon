@@ -5,10 +5,10 @@
 ---
 
 local RPD                 = require "scripts/lib/commonClasses"
-
 local spell               = require "scripts/lib/spell"
 
 local distracted          = {}
+distracted["PASSIVE"]     = true
 distracted["SLEEPING"]    = true
 distracted["FLEEING"]     = true
 distracted["HORRIFIED"]   = true
@@ -17,42 +17,31 @@ distracted["RUNNINGAMOK"] = true
 return spell.init{
     desc  = function ()
         return {
-            image         = 3,
-            imageFile     = "spellsIcons/common.png",
+            image         = 2,
+            imageFile     = "spellsIcons/rogue.png",
             name          = "Backstab_Name",
             info          = "Backstab_Info",
             magicAffinity = "Rogue",
-            targetingType = "cell",
+            targetingType = "self",
             level         = 2,
             castTime      = 1,
             spellCost     = 2
         }
     end,
 
-    castOnCell = function(self, spell, caster, cell)
+    cast = function(self, spell, caster)
 
         local level = caster:level()
         local ownPos = caster:getPos()
-        local dist = level:distance(ownPos, cell)
 
-        if ownPos == cell then
-            RPD.glogn("Backstab_OnSelf")
-            return false
-        end
+        local victim = caster:getNearestEnemy()
 
-        if dist  > 1 then
+        if victim == nil or level:distance(ownPos, victim:getPos()) > 1 then
             RPD.glogn("Backstab_TooFar")
             return false
         end
 
-        local victim = RPD.Actor:findChar(cell)
-
-        if not victim then
-            RPD.glogn("Backstab_EmptyCell")
-            return false
-        end
-
-        if not distracted[victim:getState():getTag()] then
+        if not (distracted[victim:getState():getTag()] or victim:isParalysed()) then
             RPD.glogn("Backstab_Aware")
             return false
         end
@@ -60,8 +49,11 @@ return spell.init{
         victim:getSprite():showStatus(0xff2030,"backstab")
 
         local weapon = caster:getBelongings().weapon
-        local damage = caster:skillLevel() * weapon:damageRoll(caster)
+        local secondaryWeapon = caster:getBelongings().leftHand
+        local damage = caster:skillLevel() * (weapon:damageRoll(caster) + secondaryWeapon:damageRoll(caster))
+
         victim:damage(damage, caster)
+        RPD.Sfx.Wound:hit(victim)
 
         return true
     end

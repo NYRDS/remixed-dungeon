@@ -11,6 +11,7 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaTable;
@@ -18,6 +19,7 @@ import org.luaj.vm2.LuaTable;
 import java.util.HashSet;
 import java.util.Set;
 
+import lombok.val;
 import lombok.var;
 
 public class CustomBuff extends Buff {
@@ -165,7 +167,7 @@ public class CustomBuff extends Buff {
 
     @Override
     public Set<String> immunities() {
-        var table = script.runOptional("immunities", LuaEngine.emptyTable);
+        val table = script.runOptional("immunities", LuaEngine.emptyTable);
 
         var ret = new HashSet<String>();
 
@@ -175,7 +177,7 @@ public class CustomBuff extends Buff {
 
     @Override
     public Set<String> resistances() {
-        var table = script.runOptional("resistances", LuaEngine.emptyTable);
+        val table = script.runOptional("resistances", LuaEngine.emptyTable);
 
         var ret = new HashSet<String>();
 
@@ -193,4 +195,9 @@ public class CustomBuff extends Buff {
         return script.runOptional("textureSmall",super.textureSmall());
     }
 
+
+    @Override
+    public CharSprite.State charSpriteStatus() {
+        return CharSprite.State.valueOf(script.runOptional("charSpriteStatus",super.charSpriteStatus().name()));
+    }
 }

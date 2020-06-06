@@ -63,4 +63,9 @@ public class CustomSpell extends Spell {
     public String getClassName() {
         return scriptFile;
     }
+
+    @Override
+    protected int getImage(Char caster) {
+        return script.runOptional("image", super.getImage(caster), caster);
+    }
 }
