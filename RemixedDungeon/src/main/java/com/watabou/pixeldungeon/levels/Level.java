@@ -52,7 +52,6 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.WellWater;
 import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Shadows;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -1292,20 +1291,14 @@ public abstract class Level implements Bundlable {
 
 		boolean sighted = !c.hasBuff(Blindness.class) && !c.hasBuff(Shadows.class) && c.isAlive();
 		if (sighted) {
-			ShadowCaster.castShadow(cx, cy, fieldOfView, c.viewDistance);
+			ShadowCaster.castShadow(cx, cy, fieldOfView, c.getViewDistance());
 		} else {
 			Arrays.fill(fieldOfView, false);
 		}
 
-		int sense = 1;
-		if (c.isAlive()) {
-			for (Buff b : c.buffs(MindVision.class)) {
-				sense = Math.max(((MindVision) b).distance, sense);
-			}
-		}
+		int sense = c.buffLevel(MindVision.class);
 
 		if (!sighted || sense > 1) {
-
 			int ax = Math.max(0, cx - sense);
 			int bx = Math.min(cx + sense, getWidth() - 1);
 			int ay = Math.max(0, cy - sense);
@@ -1322,7 +1315,6 @@ public abstract class Level implements Bundlable {
 				fieldOfView[from] &= discoverable[from];
 			}
 		}
-
 
 		if(c instanceof Hero) {
 			for (Integer mobId: c.getPets()) {

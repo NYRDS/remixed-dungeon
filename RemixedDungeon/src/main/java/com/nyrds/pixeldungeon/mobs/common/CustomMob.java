@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -177,8 +176,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			loot = ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot"));
 		}
 
-		viewDistance = classDesc.optInt("viewDistance",viewDistance);
-		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
+		setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));
 
 		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
 

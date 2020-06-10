@@ -46,7 +46,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
@@ -292,8 +291,6 @@ public class Dungeon {
         } else {
             hero.setPos(level.entrance);
         }
-
-        hero.viewDistance = hero.hasBuff(Light.class) ? Math.max(Level.MIN_VIEW_DISTANCE + 1, level.getViewDistance()) : level.getViewDistance();
 
         for(Mob mob : followers) {
                 int cell = level.getEmptyCellNextTo(hero.getPos());
@@ -686,16 +683,13 @@ public class Dungeon {
     }
 
     public static void win(String desc, gameOver kind) {
-
         if (getChallenges() != 0) {
             Badges.validateChampion();
         }
-
         Rankings.INSTANCE.submit(kind, desc);
     }
 
     public static void observe() {
-
         if (isLoading()) {
             return;
         }

@@ -60,7 +60,7 @@ public class Succubus extends Mob {
 	@Override
 	public void onSpawn(Level level) {
 		super.onSpawn(level);
-		viewDistance = level.getViewDistance() + 1;
+		setViewDistance(level.getViewDistance() + 1);
 	}
 
 	@Override

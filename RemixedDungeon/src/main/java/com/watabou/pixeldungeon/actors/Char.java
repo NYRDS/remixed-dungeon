@@ -48,6 +48,7 @@ import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
+import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
@@ -71,6 +72,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
+import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -92,6 +94,8 @@ import java.util.Map;
 import java.util.Set;
 
 import lombok.Getter;
+
+import static com.watabou.pixeldungeon.Dungeon.level;
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKind {
 
@@ -145,7 +149,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected boolean flying    = false;
 	public    int     invisible = 0;
 
-	public int viewDistance = 8;
+	private int viewDistance = 8;
 
 	protected Set<String> immunities = new HashSet<>();
 	protected Set<String> resistances = new HashSet<>();
@@ -949,7 +953,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public Level level(){
-		return Dungeon.level;
+		return level;
 	}
 
 	public boolean valid(){
@@ -1262,5 +1266,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@LuaInterface
     public void overrideSpriteLayer(String layer, String texture) {
         layersOverrides.put(layer, texture);
+    }
+
+    public int getViewDistance() {
+		int computedViewDistance = viewDistance;
+
+		if(hasBuff(Light.class)) {
+			computedViewDistance = Utils.max(computedViewDistance,Level.MIN_VIEW_DISTANCE + 1, level().getViewDistance());
+		}
+
+		return Math.min(computedViewDistance, ShadowCaster.MAX_DISTANCE);
+    }
+
+    public void setViewDistance(int viewDistance) {
+        this.viewDistance = viewDistance;
     }
 }
