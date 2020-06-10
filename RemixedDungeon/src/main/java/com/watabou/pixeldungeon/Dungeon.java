@@ -689,11 +689,12 @@ public class Dungeon {
         Rankings.INSTANCE.submit(kind, desc);
     }
 
-    public static void observe() {
-        if (isLoading()) {
-            return;
-        }
 
+    public static void observe() {
+        GameScene.observeRequest();
+    }
+
+    public static void observeImpl() {
         level.updateFieldOfView(hero.getControlTarget());
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
 

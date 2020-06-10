@@ -166,7 +166,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
     }
 
-
     public void showStatus(int color, String text, Object... args) {
         showStatus(color, Utils.format(text, args));
     }

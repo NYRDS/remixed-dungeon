@@ -441,6 +441,12 @@ public class GameScene extends PixelScene {
         }
     }
 
+    private static transient boolean observeRequested = false;
+
+    public static void observeRequest() {
+        observeRequested = true;
+    }
+
     @Override
     public synchronized void update() {
         if (!sceneCreated) {
@@ -473,6 +479,11 @@ public class GameScene extends PixelScene {
             cellSelector.enabled = Dungeon.hero.isReady();
         } else {
             cellSelector.enabled = Dungeon.hero.isAlive();
+        }
+
+        if(observeRequested) {
+            observeRequested = false;
+            Dungeon.observeImpl();
         }
 
     }
