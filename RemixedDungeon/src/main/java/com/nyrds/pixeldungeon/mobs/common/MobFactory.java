@@ -30,13 +30,16 @@ import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
+import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.InquirerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
+import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
+import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.mobs.npc.SociologistNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownGuardNPC;
@@ -92,11 +95,14 @@ import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.actors.mobs.Yog.BurningFist;
 import com.watabou.pixeldungeon.actors.mobs.Yog.Larva;
 import com.watabou.pixeldungeon.actors.mobs.Yog.RottingFist;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
+import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -234,6 +240,12 @@ public class MobFactory {
 		registerMobClass(LibrarianNPC.class);
 		registerMobClass(FortuneTellerNPC.class);
 		registerMobClass(CagedKobold.class);
+		registerMobClass(WandMaker.class);
+		registerMobClass(Blacksmith.class);
+		registerMobClass(ScarecrowNPC.class);
+		registerMobClass(NecromancerNPC.class);
+		registerMobClass(Imp.class);
+		registerMobClass(AzuterronNPC.class);
 
 		registerMobClass(Deathling.class);
 
