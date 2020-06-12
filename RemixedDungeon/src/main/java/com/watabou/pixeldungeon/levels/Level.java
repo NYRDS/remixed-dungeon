@@ -582,8 +582,15 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected void createScript() {
-		String script = DungeonGenerator.getLevelProperty(levelId,"script", null);
-		if(script !=null) {
+		var scriptSet = DungeonGenerator.getLevelPropertySet(levelId, "script");
+
+		if(scriptSet.isEmpty()) {
+			scriptSet.add(DungeonGenerator.getLevelProperty(levelId, "script", null));
+		}
+
+		scriptSet.remove(null);
+
+		for(var script:scriptSet) {
 			addScriptedActor(new ScriptedActor(script));
 		}
 	}

@@ -7,7 +7,8 @@
     "testLevelSewers":{"kind":"PredesignedLevel", "file":"levelsDesc/TestLevelSewers.json"},
     "missingLevel":{"kind":"PredesignedLevel", "file":"levelsDesc/MissingLevel.json"},
 
-    "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1"},
+    "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1",
+        "script":["scripts/actors/town/Compass", "scripts/actors/Snow", "scripts/actors/Burn"]},
     "cinema_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1"},
     "church_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
     "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
