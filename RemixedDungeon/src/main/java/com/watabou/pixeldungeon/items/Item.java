@@ -65,6 +65,7 @@ import java.util.Comparator;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
+import lombok.var;
 
 public class Item implements Bundlable, Presser, NamedEntityKind {
 
@@ -152,12 +153,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public boolean doPickUp(Char hero) {
 		if (collect(hero.getBelongings().backpack)) {
-
 			GameScene.pickUp(this);
 			Sample.INSTANCE.play(Assets.SND_ITEM);
 			hero.spendAndNext(TIME_TO_PICK_UP);
 			return true;
-
 		} else {
 			return false;
 		}
@@ -516,8 +515,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		final Item item = detach(user.getBelongings().backpack);
 
-		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
-				reset(pos, cell, this, () -> {
+		var sprite = ((MissileSprite) user.
+				getSprite().
+				getParent().
+				recycle(MissileSprite.class));
+
+		sprite.reset(pos, cell, this, () -> {
 					user.spendAndNext(finalDelay);
 					item.onThrow(cell, user);
 				});
@@ -709,5 +712,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public String bag() {
 		return Utils.EMPTY_STRING;
+	}
+
+	public float heapScale() {
+		return 1.f;
 	}
 }

@@ -36,6 +36,7 @@ return item.init{
             defaultAction = "action1",
             price         = 0,
             isArtifact    = true,
+            heapScale     = 3.;
             data = {
                 activationCount = 0
             }

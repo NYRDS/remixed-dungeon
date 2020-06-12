@@ -129,16 +129,11 @@ public class Blacksmith extends NPC {
 					Quest.completed = true;
 					Quest.reforged = false;
 				}
-				
 			}
 		} else if (!Quest.reforged) {
-			
 			GameScene.show( new WndBlacksmith( this) );
-			
 		} else {
-			
 			tell( Game.getVar(R.string.Blacksmith_GetLost) );
-			
 		}
 		return true;
 	}

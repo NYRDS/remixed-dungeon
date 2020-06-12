@@ -1048,7 +1048,9 @@ public abstract class Level implements Bundlable {
 		if(item == CharsList.DUMMY_ITEM) {
 			return;
 		}
-		drop(item,cell).sprite.drop();
+		var heap = drop(item,cell);
+
+		heap.sprite.drop();
 	}
 
 	@NotNull
@@ -1077,28 +1079,31 @@ public abstract class Level implements Bundlable {
 		}
 
 		Heap heap = heaps.get(cell);
-		if (heap == null) {
-			heap = new Heap();
-			heap.pos = cell;
-			if (map[cell] == Terrain.CHASM || pit[cell]) {
-				GameScene.discard(heap);
 
-			} else {
-				heaps.put(cell, heap);
-				GameScene.add(heap);
-			}
-
-		} else if (heap.type == Heap.Type.LOCKED_CHEST
-				|| heap.type == Heap.Type.CRYSTAL_CHEST) {
-
+		if (heap  != null && (heap.type == Heap.Type.LOCKED_CHEST
+				|| heap.type == Heap.Type.CRYSTAL_CHEST)) {
 			int n;
 			do {
 				n = cell + Level.NEIGHBOURS8[Random.Int(8)];
 			} while (!passable[n] && !avoid[n]);
 			return drop(item, n);
-
 		}
+
+		if (heap == null) {
+			heap = new Heap();
+			heap.pos = cell;
+		}
+
 		heap.drop(item);
+
+		if(heap.items.size()==1) {
+			if (map[cell] == Terrain.CHASM || pit[cell]) {
+				GameScene.discard(heap);
+			} else {
+				heaps.put(cell, heap);
+				GameScene.add(heap);
+			}
+		}
 
 		if (!Dungeon.isLoading()) {
 			press(cell, item);

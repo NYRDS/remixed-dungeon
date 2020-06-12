@@ -36,24 +36,27 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 
 	public void reset(int from, int to, Item item, Callback listener) {
 		revive();
-		
+
+		float scale = item.heapScale();
+		setScale(scale, scale);
 		view(item);
-		
+
 		this.callback = listener;
 
 		point( DungeonTilemap.tileToWorld( from ) );
+
 		PointF dest = DungeonTilemap.tileToWorld( to );
-		
+
 		PointF d = PointF.diff( dest, point() ); 
 		speed.set( d ).normalize().scale( ZapEffect.SPEED );
-		
+
 		if (item.isFliesStraight()) {
 			angularSpeed = 0;
 			angle = 135 - (float)(Math.atan2( d.x, d.y ) / Math.PI * 180);
 		} else {
 			angularSpeed = item.isFliesFastRotating() ? 1440 : 720;
 		}
-		
+
 		PosTweener tweener = new PosTweener( this, dest, d.length() / ZapEffect.SPEED );
 		tweener.listener = this;
 		getParent().add( tweener );

@@ -34,6 +34,7 @@ public class CustomItem extends EquipableItem {
 
     private LuaScript script;
     private int price;
+    private float heapScale;
 
     @Keep
     public CustomItem() {
@@ -62,6 +63,7 @@ public class CustomItem extends EquipableItem {
 
         price        = desc.rawget("price").checkint();
         equipable    = desc.rawget("equipable").checkjstring();
+        heapScale    = (float) desc.rawget("heapScale").optdouble(1.);
     }
 
     @Override
@@ -304,5 +306,10 @@ public class CustomItem extends EquipableItem {
     @Override
     public boolean isCoveringHair() {
         return script.runOptional("isCoveringHair",super.isCoveringHair());
+    }
+
+    @Override
+    public float heapScale() {
+        return heapScale;
     }
 }

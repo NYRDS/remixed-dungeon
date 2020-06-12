@@ -73,13 +73,11 @@ public class ItemSprite extends MovieClip {
 
 	public ItemSprite(String file, int imageIndex, Glowing glowing) {
 		super();
-
 		view(file, imageIndex, glowing);
 	}
 
 	public ItemSprite(Heap heap) {
 		super();
-
 		link(heap);
 	}
 
@@ -89,7 +87,7 @@ public class ItemSprite extends MovieClip {
 	}
 
 	protected void originToCenter() {
-		origin.set(SIZE / 2);
+		origin.set(scale.x * SIZE / 2, scale.y * SIZE / 2);
 	}
 
 	public void link() {
@@ -98,6 +96,8 @@ public class ItemSprite extends MovieClip {
 
 	public void link(Heap heap) {
 		this.heap = heap;
+		float scale = heap.scale();
+		setScale(scale, scale);
 		view(heap.imageFile(), heap.image(), heap.glowing());
 		place(heap.pos);
 	}
@@ -113,12 +113,13 @@ public class ItemSprite extends MovieClip {
 		heap = null;
 	}
 
-	private PointF worldToCamera(int cell) {
+
+	protected PointF worldToCamera(int cell) {
 		final int csize = DungeonTilemap.SIZE;
 
 		return new PointF(
-				Dungeon.level.cellX(cell) * csize + (csize - SIZE) * 0.5f,
-				Dungeon.level.cellY(cell) * csize + (csize - SIZE) * 0.5f
+				Dungeon.level.cellX(cell) * csize + (csize - SIZE * scale.x) * 0.5f,
+				Dungeon.level.cellY(cell) * csize + (csize - SIZE * scale.y) * 0.5f
 		);
 	}
 
@@ -148,7 +149,6 @@ public class ItemSprite extends MovieClip {
 		if (heap!= null && heap.pos == from) {
 			drop();
 		} else {
-
 			float px = x;
 			float py = y;
 			drop();

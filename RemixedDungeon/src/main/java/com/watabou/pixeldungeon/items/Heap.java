@@ -105,7 +105,14 @@ public class Heap implements Bundlable, NamedEntityKind {
 		}
 		return Assets.ITEMS;
 	}
-	
+
+	public float scale() {
+		if (items.peek() != null) {
+			return items.peek().heapScale();
+		}
+		return 1.f;
+	}
+
 	public int image() {
 		switch (type) {
 		case HEAP:
@@ -171,11 +178,8 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 	
 	public Item pickUp() {
-		
 		Item item = items.removeFirst();
-		
 		updateHeap();
-		
 		return item;
 	}
 
@@ -191,7 +195,11 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 	
 	public void drop( Item item ) {
-		
+
+		if(items.contains(item)) { //TODO fix me
+			return;
+		}
+
 		if (item.stackable) {
 			
 			String c = item.getClassName();
@@ -231,7 +239,10 @@ public class Heap implements Bundlable, NamedEntityKind {
 		if (isEmpty()) {
 			destroy();
 		} else if (sprite != null) {
+			float scale = scale();
+			sprite.setScale(scale,scale);
 			sprite.view(imageFile(), image(), glowing() );
+			sprite.place(pos);
 		}		
 	}
 	
