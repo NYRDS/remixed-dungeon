@@ -124,7 +124,7 @@ public class CustomItem extends EquipableItem {
 
         LuaValue ret = script.run("actions", hero);
 
-        LuaEngine.forEach(ret.checktable(), (key,val)->actions.add(val.tojstring()));
+        LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
 
         return actions;
     }

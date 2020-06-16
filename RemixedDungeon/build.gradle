@@ -29,8 +29,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 899
-        versionName "29.5.pre_alpha.24"
+        versionCode 900
+        versionName "29.5.pre_alpha.25"
     }
 
     aaptOptions {
@@ -99,14 +99,14 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation "io.humanteq.hqm:hqm-core:2.0.6-alpha01"
+    implementation "io.humanteq.hqm:hqm-core:2.1.1"
 
-    implementation 'com.android.billingclient:billing:2.2.1'
+    implementation 'com.android.billingclient:billing:3.0.0'
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'com.google.firebase:firebase-analytics:17.4.2'
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
     implementation 'com.google.firebase:firebase-ads:19.1.0'
-    implementation 'com.google.firebase:firebase-crashlytics:17.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.1'
 
 
     implementation 'com.appodeal.ads.sdk:core:2.7.1'

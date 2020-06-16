@@ -140,7 +140,10 @@ public class LuaEngine implements ResourceFinder {
 		return new BOMInputStream(ModdingMode.getInputStream(filename));
 	}
 
-	static public void forEach(@NotNull LuaTable tbl, LuaEntryAction action) {
+	static public void forEach(@NotNull LuaValue arg, LuaEntryAction action) {
+
+		LuaTable tbl = arg.opttable(emptyTable);
+
 		var k = LuaValue.NIL;
 		while ( true ) {
 			var n = tbl.next(k);

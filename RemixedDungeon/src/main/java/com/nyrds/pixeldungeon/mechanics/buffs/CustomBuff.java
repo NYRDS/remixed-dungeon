@@ -171,7 +171,7 @@ public class CustomBuff extends Buff {
 
         var ret = new HashSet<String>();
 
-        LuaEngine.forEach(table.checktable(), (key,val)->ret.add(val.checkjstring()));
+        LuaEngine.forEach(table, (key,val)->ret.add(val.checkjstring()));
         return ret;
     }
 
@@ -181,7 +181,7 @@ public class CustomBuff extends Buff {
 
         var ret = new HashSet<String>();
 
-        LuaEngine.forEach(table.checktable(), (key,val)->ret.add(val.checkjstring()));
+        LuaEngine.forEach(table, (key,val)->ret.add(val.checkjstring()));
         return ret;
     }
 
