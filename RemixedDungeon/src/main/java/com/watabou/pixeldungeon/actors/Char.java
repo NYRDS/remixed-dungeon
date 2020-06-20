@@ -956,6 +956,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return level;
 	}
 
+	@LuaInterface
 	public boolean valid(){
 	    return !(this instanceof DummyChar);
     }

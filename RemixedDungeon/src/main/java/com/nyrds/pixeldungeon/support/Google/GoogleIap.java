@@ -23,6 +23,8 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -136,7 +138,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         mIsServiceConnecting = true;
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
-            public void onBillingSetupFinished(BillingResult billingResult) {
+            public void onBillingSetupFinished(@NotNull BillingResult billingResult) {
 
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     mIsServiceConnected = true;
@@ -202,7 +204,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
 
 
     @Override
-    public void onConsumeResponse(BillingResult billingResult, String s) {
+    public void onConsumeResponse(BillingResult billingResult, @NotNull String s) {
         GLog.w("consumed: %d %s", billingResult.getDebugMessage(), s);
     }
 
