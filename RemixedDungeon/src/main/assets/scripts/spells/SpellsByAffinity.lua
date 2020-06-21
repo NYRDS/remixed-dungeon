@@ -7,10 +7,17 @@
 
 local spells = require "scripts/spells/CustomSpellsList"
 
+local RPD = require "scripts.lib.commonClasses"
+
 local module = {}
 
 function module.getSpellsList(self,affinity)
+
     if affinity then
+        if not spells[affinity] then
+            RPD.debug("Missing spells list for ".. affinity)
+        end
+
         return spells[affinity] or {}
     end
 
@@ -26,7 +33,7 @@ end
 
 function module.haveSpell(self,spell)
     for _,v in pairs(spells) do
-        for __, vv in pairs(v) do
+        for _, vv in pairs(v) do
             if spell == vv then
                 return true
             end
@@ -37,7 +44,7 @@ end
 
 function module.loadSpells()
     for _,affinity in pairs(spells) do
-        for __, spell in pairs(affinity) do
+        for _, spell in pairs(affinity) do
             require("scripts/spells/"..spell)
         end
     end

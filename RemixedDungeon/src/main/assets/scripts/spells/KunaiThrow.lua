@@ -25,7 +25,7 @@ return spell.init{
             targetingType = "self",
             level         = spellLevel,
             castTime      = 0.01,
-            spellCost     = 2
+            spellCost     = 5
         }
     end,
 

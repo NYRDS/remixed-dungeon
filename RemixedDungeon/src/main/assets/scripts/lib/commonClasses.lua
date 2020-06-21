@@ -252,6 +252,11 @@ local RPD = {
         GLog:n(tostring(text),{...})
     end,
 
+    debug = function (text,...)
+        GLog:toFile(tostring(text),{...})
+        GLog:n(tostring(text),{...})
+    end,
+
     getXy = function (chr)
         local pos = chr:getPos()
         return {Dungeon.level:cellX(pos),Dungeon.level:cellY(pos)}
