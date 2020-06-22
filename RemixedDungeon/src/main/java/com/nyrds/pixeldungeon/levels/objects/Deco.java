@@ -8,6 +8,7 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -46,6 +47,9 @@ public class Deco extends LevelObject {
 	private int width = 16;
 	private int height = 16;
 
+	private boolean canStepOn   = false;
+	private boolean nonPassable = true;
+
 	private String effectName = Utils.EMPTY_STRING;
 
 	public Deco(){
@@ -54,6 +58,15 @@ public class Deco extends LevelObject {
 
 	public Deco(int pos) {
 		super(pos);
+	}
+
+	public boolean stepOn(Char hero) {
+		return canStepOn;
+	}
+
+	@Override
+	public boolean nonPassable(Char ch) {
+		return nonPassable;
 	}
 
 	@Override
@@ -87,6 +100,9 @@ public class Deco extends LevelObject {
 
 		this.name = desc.optString("name","smth");
 		this.desc = desc.optString("desc","smth");
+
+		canStepOn = desc.optBoolean("canStepOn",canStepOn);
+		nonPassable = desc.optBoolean("nonPassable",nonPassable);
 
 		JSONObject sprite = appearance.getJSONObject("sprite");
 
