@@ -9,6 +9,8 @@ import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ControlledAi extends MobAi implements AiState {
 
     @Override
@@ -67,7 +69,7 @@ public class ControlledAi extends MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         return Utils.format(Game.getVar(R.string.Mob_StaControlledStatus),me.getEntityKind());
     }
 }

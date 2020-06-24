@@ -1,5 +1,7 @@
 package com.nyrds.android.util;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -19,7 +21,7 @@ public class ReportingExecutor extends ThreadPoolExecutor {
                 new LinkedBlockingQueue<>(), // work queue
                 new ThreadFactory() {
                     @Override
-                    public Thread newThread(Runnable r) {
+                    public Thread newThread(@NotNull Runnable r) {
                         return new Thread(r, "ReportingExecutor: "+this.hashCode());
                     }
                 }

@@ -1758,7 +1758,7 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public boolean collect(Item item) {
+	public boolean collect(@NotNull Item item) {
 		if(super.collect(item)) {
 			QuickSlot.refresh();
 			return true;

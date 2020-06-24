@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
@@ -367,7 +366,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public void setupFromJson(@NotNull JSONObject desc) throws JSONException {
 		try {
 			if (desc.has("armor")) {
-				armor = (Armor) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
+				armor = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
 			}
 
 			if (desc.has("weapon")) {

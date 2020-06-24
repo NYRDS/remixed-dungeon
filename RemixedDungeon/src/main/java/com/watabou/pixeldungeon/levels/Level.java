@@ -1036,7 +1036,6 @@ public abstract class Level implements Bundlable {
 				|| terrain >= Terrain.WATER_TILES;
 	}
 
-	@NotNull
 	public void drop(Item item, int cell, Heap.Type type) {
 		if(item == CharsList.DUMMY_ITEM) {
 			return;

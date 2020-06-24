@@ -326,8 +326,8 @@ public class StartScene extends PixelScene {
     private void selectDifficulty() {
 
         WndOptions difficultyOptions = new WndOptions(Game.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING,
-                Game.getVar(R.string.StartScene_DifficultyEasy),
-                Game.getVar(R.string.StartScene_DifficultyNormalWithSaves),
+                Game.getVar(RemixedDungeon.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy),
+                Game.getVar(RemixedDungeon.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves),
                 Game.getVar(R.string.StartScene_DifficultyNormal),
                 Game.getVar(R.string.StartScene_DifficultyExpert)) {
             @Override

@@ -120,10 +120,7 @@ public class Spell implements NamedEntityKind {
 
     protected void castCallback(Char chr) {
         chr.spellCasted(getClassName());
-
-        if (chr instanceof Hero) {
-            ((Hero) chr).spendSkillPoints(spellCost());
-        }
+        chr.spendSkillPoints(spellCost());
     }
 
     public String getClassName() {

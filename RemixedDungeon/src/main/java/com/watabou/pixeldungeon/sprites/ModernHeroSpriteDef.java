@@ -136,7 +136,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			}
 		}
 
-		if (accessory  == null){
+		if (accessory == null){
 			if(hero.getBelongings().armor.hasHelmet()) {
                 helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
             }
@@ -162,13 +162,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-
 		EquipableItem weapon = hero.getBelongings().weapon;
 		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();
 
 		EquipableItem leftHand = hero.getBelongings().leftHand;
 		String weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
-
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassRight + "_right.png");

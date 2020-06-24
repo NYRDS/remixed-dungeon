@@ -9,6 +9,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -125,7 +126,7 @@ public class WndHats extends Window {
 			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
 			final Accessory finalAccessory = accessory;
 
-			if (accessory.haveIt()) {
+			if (accessory.haveIt() && accessory.usableBy(Dungeon.hero)) {
 				buttonText = Game.getVar(R.string.WndHats_EquipButton);
 			}
 

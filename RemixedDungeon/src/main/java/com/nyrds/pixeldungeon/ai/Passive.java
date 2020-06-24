@@ -7,6 +7,8 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Passive extends MobAi implements AiState {
 
     public Passive(){}
@@ -18,7 +20,7 @@ public class Passive extends MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         return Utils.format(Game.getVar(R.string.Mob_StaPassiveStatus),
                 me.getName());
     }

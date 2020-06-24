@@ -9,6 +9,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Fleeing extends MobAi implements AiState {
 
 
@@ -27,7 +29,7 @@ public class Fleeing extends MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         Char enemy = me.getEnemy();
         if(enemy != CharsList.DUMMY) {
             return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus2),

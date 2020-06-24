@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Wandering extends MobAi implements AiState {
 
     public Wandering(){ }
@@ -36,7 +38,7 @@ public class Wandering extends MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         return Utils.format(Game.getVar(R.string.Mob_StaWanderingStatus),
                 me.getName());
     }
