@@ -51,11 +51,8 @@ public class Shopkeeper extends NPC {
 	{
 		spriteClass = ShopkeeperSprite.class;
 		movable = false;
-		belongings = new Belongings(this);
 		addImmunity(Regeneration.class);
 	}
-
-	private Belongings belongings;
 
 	@Override
     public boolean act() {
@@ -164,7 +161,6 @@ public class Shopkeeper extends NPC {
 
 		addItem(newItem);
 	}
-
 
 	public void addItem(Item item) {
 		if(item instanceof Bag && Dungeon.hero != null) {

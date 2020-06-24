@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
@@ -47,7 +48,11 @@ public class ArmoredStatue extends Statue {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
-			} while (!(armorCandidate instanceof Armor) || armorCandidate.level() < 0);
+
+			} while (!(armorCandidate instanceof EquipableItem)
+						|| armorCandidate.level() < 0
+						|| !(ItemUtils.usableAsArmor((EquipableItem) armorCandidate))
+					);
 
 			val armor = (Armor) armorCandidate;
 			armor.identify();

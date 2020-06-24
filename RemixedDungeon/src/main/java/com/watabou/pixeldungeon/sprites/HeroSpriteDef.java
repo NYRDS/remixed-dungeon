@@ -10,8 +10,7 @@ import com.watabou.noosa.tweeners.JumpTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 
@@ -24,7 +23,6 @@ import org.json.JSONObject;
  */
 public abstract class HeroSpriteDef extends MobSpriteDef {
 
-
     private static final int RUN_FRAMERATE = 20;
 
     protected Animation fly;
@@ -36,8 +34,8 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         super(defName, kind);
     }
 
-    public static HeroSpriteDef createHeroSpriteDef(Armor armor) {
-        return new ModernHeroSpriteDef(armor);
+    public static HeroSpriteDef createHeroSpriteDef(EquipableItem item) {
+        return new ModernHeroSpriteDef(item);
     }
 
     public static HeroSpriteDef createHeroSpriteDef(String[] lookDesc, String deathEffectDesc) {
@@ -54,10 +52,6 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         } else {
             return new ModernHeroSpriteDef(hero);
         }
-    }
-
-    public static HeroSpriteDef createHeroSpriteDef(Weapon weapon) {
-        return new ModernHeroSpriteDef(weapon);
     }
 
     public static HeroSpriteDef createHeroSpriteDef(Hero hero, Accessory accessory) {

@@ -4,14 +4,13 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -91,9 +90,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		applyLayersDesc(lookDesc);
 	}
 
-	public ModernHeroSpriteDef(Armor armor){
+	public ModernHeroSpriteDef(EquipableItem item){
 		super(HERO_MODERN_SPRITES_DESC_STATUE_JSON,0);
-		createStatueSprite(armor);
+		createStatueSprite(item);
 		applyLayersDesc(getLayersDesc());
 	}
 
@@ -106,12 +105,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	public ModernHeroSpriteDef(Hero hero, Accessory accessory) {
 		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
 		createLayersDesc(hero, accessory);
-		applyLayersDesc(getLayersDesc());
-	}
-
-	public ModernHeroSpriteDef(Weapon weapon) {
-		super(HERO_MODERN_SPRITES_DESC_STATUE_JSON,0);
-		createStatueSprite(weapon);
 		applyLayersDesc(getLayersDesc());
 	}
 
@@ -193,37 +186,30 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
 	}
 
-	private void createStatueSprite(Weapon weapon) {
+	private void createStatueSprite(EquipableItem item) {
 		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
-
-		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
-		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
-
-		if(weapon !=null) {
-			weaponAnimationClassRight = weapon.getAttackAnimationClass();
-		}
-
-		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
-
-		//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/empty.png");
-		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
-
-
-		deathEffectDesc = "hero_modern/death/statue.png";
-	}
-
-	private void createStatueSprite(Armor armor) {
-		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
-		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
-		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
-
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/statue_none_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_none_right.png");
 
 		deathEffectDesc = "hero_modern/death/statue.png";
+
+		if (ItemUtils.usableAsArmor(item)) {
+			layersDesc.put(LAYER_ARMOR, armorDescriptor(item));
+		}
+
+
+		if (ItemUtils.usableAsWeapon(item)) {
+			String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
+			String weaponAnimationClassRight = item.getAttackAnimationClass();
+
+			layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
+			layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
+
+			//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/empty.png");
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(item, "right"));
+		}
 	}
 
 	public void heroUpdated(Hero hero) {

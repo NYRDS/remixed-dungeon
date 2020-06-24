@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -33,9 +34,7 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
@@ -103,11 +102,11 @@ public class Statue extends Mob {
 	public String description() {
 		val item = getItem();
 
-		if(item instanceof Weapon) {
+		if(ItemUtils.usableAsWeapon(item)) {
 			return Utils.format(Game.getVar(R.string.Statue_Desc), getItem().name());
 		}
 
-		if(item instanceof Armor) {
+		if(ItemUtils.usableAsArmor(item)) {
 			return Utils.format(Game.getVar(R.string.ArmoredStatue_Desc), getItem().name());
 		}
 
@@ -116,17 +115,7 @@ public class Statue extends Mob {
 
 	@Override
 	public CharSprite sprite() {
-		val item = getItem();
-
-		if(item instanceof Weapon) {
-			return HeroSpriteDef.createHeroSpriteDef((Weapon)item);
-		}
-
-		if(item instanceof Armor) {
-			return HeroSpriteDef.createHeroSpriteDef((Armor)item);
-		}
-
-		throw new TrackedRuntimeException("Can't equip statue with " + item.getEntityKind());
+		return HeroSpriteDef.createHeroSpriteDef(getItem());
 	}
 
 	public EquipableItem getItem() {
