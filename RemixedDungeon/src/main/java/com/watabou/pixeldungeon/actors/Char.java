@@ -104,6 +104,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
+
 	protected Belongings belongings;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID

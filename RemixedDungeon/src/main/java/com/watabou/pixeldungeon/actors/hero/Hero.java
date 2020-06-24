@@ -272,14 +272,6 @@ public class Hero extends Char {
 		setExp(bundle.getInt(EXPERIENCE));
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
-		{ // handle pre 28.6 saves
-			ArrayList<Mob> loadedPets = new ArrayList<>(bundle.getCollection("pets", Mob.class));
-
-			for (Mob pet : loadedPets) {
-				Mob.makePet(pet, getId());
-			}
-		}
-
 		sp = Scrambler.scramble(bundle.optInt(SP, 0));
 		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
 
