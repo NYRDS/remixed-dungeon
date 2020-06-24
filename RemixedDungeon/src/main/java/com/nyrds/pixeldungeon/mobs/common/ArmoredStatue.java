@@ -48,15 +48,18 @@ public class ArmoredStatue extends Statue {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
-
 			} while (!(armorCandidate instanceof EquipableItem)
 						|| armorCandidate.level() < 0
 						|| !(ItemUtils.usableAsArmor((EquipableItem) armorCandidate))
 					);
 
-			val armor = (Armor) armorCandidate;
+
+			val armor = (EquipableItem)armorCandidate;
 			armor.identify();
-			armor.inscribe(Armor.Glyph.random());
+
+			if(armor instanceof Armor) {
+				((Armor)armor).inscribe(Armor.Glyph.random());
+			}
 
 			armor.doEquip(this);
 		}
