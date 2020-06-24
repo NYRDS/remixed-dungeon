@@ -148,7 +148,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 			} else {
 				chr.getBelongings().setSelectedItem(detach( chr.getBelongings().backpack ));
 				
-				doRead();
+				doRead(chr);
 			}
 			
 		} else {
@@ -158,7 +158,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 		}
 	}
 	
-	abstract protected void doRead();
+	abstract protected void doRead(@NotNull Char reader);
 	
 	public boolean isKnown() {
 		return handler.isKnown( this );

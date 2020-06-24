@@ -15,25 +15,26 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfSummoning extends Scroll {
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 		Level level = Dungeon.level;
-		Char owner = getOwner();
 
 		if(level.isBossLevel() || !level.cellValid(level.randomRespawnCell())) {
 			GLog.w( Utils.format(R.string.Using_Failed_Because_Magic, this.name()) );
 			return;
 		}
 
-		int cell = level.getEmptyCellNextTo(owner.getPos());
+		int cell = level.getEmptyCellNextTo(reader.getPos());
 
 		if(level.cellValid(cell)){
 			Mob mob = Bestiary.mob( level );
 			GLog.i(Game.getVar(R.string.ScrollOfSummoning_Info_2));
 			if(mob.canBePet()){
-				Mob.makePet(mob, owner.getId());
+				Mob.makePet(mob, reader.getId());
 			} else {
 				GLog.w( Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}
@@ -44,10 +45,10 @@ public class ScrollOfSummoning extends Scroll {
 
 		setKnown();
 
-		SpellSprite.show( owner, SpellSprite.SUMMON );
+		SpellSprite.show( reader, SpellSprite.SUMMON );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(owner);
+		Invisibility.dispel(reader);
 
-		owner.spendAndNext( TIME_TO_READ );
+		reader.spendAndNext( TIME_TO_READ );
 	}
 }

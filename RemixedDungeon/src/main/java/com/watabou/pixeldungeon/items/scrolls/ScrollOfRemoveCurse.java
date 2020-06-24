@@ -30,33 +30,33 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Iterator;
 
 public class ScrollOfRemoveCurse extends Scroll {
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 
-		Char owner = getOwner();
-		
-		new Flare(6, 32).show(owner.getSprite(), 2f);
+		new Flare(6, 32).show(reader.getSprite(), 2f);
 		Sample.INSTANCE.play(Assets.SND_READ);
-		Invisibility.dispel(owner);
+		Invisibility.dispel(reader);
 
-		boolean procced = uncurse(owner.getBelongings());
+		boolean procced = uncurse(reader.getBelongings());
 
-		Weakness.detach(owner, Weakness.class);
+		Weakness.detach(reader, Weakness.class);
 
 		if (procced) {
 			GLog.p(Game.getVar(R.string.ScrollOfRemoveCurse_Proced));
-			owner.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
+			reader.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
 		} else {
 			GLog.i(Game.getVar(R.string.ScrollOfRemoveCurse_NoProced));
 		}
 
 		setKnown();
 
-		owner.spendAndNext(TIME_TO_READ);
+		reader.spendAndNext(TIME_TO_READ);
 	}
 
 	public static void uncurse(Char hero, Item ... items) {

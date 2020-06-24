@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -29,12 +30,14 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfLullaby extends Scroll {
 	
 	@Override
-	protected void doRead() {
-		
-		getOwner().getSprite().centerEmitter().start( Speck.factory( Speck.NOTE ), 0.3f, 5 );
+	protected void doRead(@NotNull Char reader) {
+
+		reader.getSprite().centerEmitter().start( Speck.factory( Speck.NOTE ), 0.3f, 5 );
 		Sample.INSTANCE.play( Assets.SND_LULLABY );
 		
 		int count = 0;
@@ -60,8 +63,8 @@ public class ScrollOfLullaby extends Scroll {
 			GLog.i(Game.getVar(R.string.ScrollOfLullaby_Info3));
 		}
 		setKnown();
-		
-		getOwner().spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 
 	@Override

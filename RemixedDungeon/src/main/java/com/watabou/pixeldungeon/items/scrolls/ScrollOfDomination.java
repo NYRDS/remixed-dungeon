@@ -12,17 +12,17 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class ScrollOfDomination extends Scroll {
 
 	@Override
-	protected void doRead() {
-		Char owner = getOwner();
-		
-		SpellSprite.show( owner, SpellSprite.DOMINATION );
+	protected void doRead(@NotNull Char reader) {
+		SpellSprite.show( reader, SpellSprite.DOMINATION );
 		Sample.INSTANCE.play( Assets.SND_DOMINANCE );
-		Invisibility.dispel(getOwner());
+		Invisibility.dispel(reader);
 		
 		ArrayList<Mob> mobsInSight = new ArrayList<>();
 		
@@ -36,7 +36,7 @@ public class ScrollOfDomination extends Scroll {
 			Mob pet = Random.element(mobsInSight);
 
 			if(pet.canBePet()) {
-				Mob.makePet(pet, owner.getId());
+				Mob.makePet(pet, reader.getId());
 				new Flare(3, 32).show(pet.getSprite(), 2f);
 				break;
 			}
@@ -46,8 +46,8 @@ public class ScrollOfDomination extends Scroll {
 		Dungeon.observe();
 		
 		setKnown();
-		
-		owner.spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 
 	@Override

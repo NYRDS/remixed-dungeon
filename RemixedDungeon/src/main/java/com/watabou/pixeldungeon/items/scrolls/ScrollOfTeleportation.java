@@ -27,18 +27,20 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfTeleportation extends Scroll {
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getOwner());
+		Invisibility.dispel(reader);
 		
-		teleportHero( getOwner() );
+		teleportHero( reader);
 		setKnown();
-		
-		getOwner().spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 	
 	public static void teleportHero( Char hero ) {

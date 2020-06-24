@@ -28,13 +28,15 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
+import org.jetbrains.annotations.NotNull;
+
 public abstract class InventoryScroll extends Scroll {
 
 	protected String inventoryTitle = Game.getVar(R.string.InventoryScroll_Title);
 	protected WndBag.Mode mode = WndBag.Mode.ALL;
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 		
 		if (!isKnown()) {
 			setKnown();
@@ -43,7 +45,7 @@ public abstract class InventoryScroll extends Scroll {
 			identifiedByUse = false;
 		}
 		
-		GameScene.selectItem(getOwner(), itemSelector, mode, inventoryTitle);
+		GameScene.selectItem(reader, itemSelector, mode, inventoryTitle);
 	}
 	
 	private void confirmCancelation() {

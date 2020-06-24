@@ -31,23 +31,23 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfTerror extends Scroll {
 
 	@Override
-	protected void doRead() {
-		
-		Char owner = getOwner();
-		
-		new Flare( 5, 32 ).color( 0xFF0000, true ).show( owner.getSprite(), 2f );
+	protected void doRead(@NotNull Char reader) {
+
+		new Flare( 5, 32 ).color( 0xFF0000, true ).show( reader.getSprite(), 2f );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(owner);
+		Invisibility.dispel(reader);
 		
 		int count = 0;
 		Mob affected = null;
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Terror terror = Buff.affect( mob, Terror.class, Terror.DURATION );
-				terror.source = owner;
+				terror.source = reader;
 				
 				count++;
 				affected = mob;
@@ -65,8 +65,8 @@ public class ScrollOfTerror extends Scroll {
 			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info3));
 		}
 		setKnown();
-		
-		owner.spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

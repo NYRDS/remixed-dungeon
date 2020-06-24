@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfCurse extends Scroll {
 
 	private static Class<?>[] badBuffs = {
@@ -46,21 +48,19 @@ public class ScrollOfCurse extends Scroll {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	protected void doRead() {
-		Char owner = getOwner();
-		
-		Invisibility.dispel(owner);
+	protected void doRead(@NotNull Char reader) {
+		Invisibility.dispel(reader);
 
-		owner.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
+		reader.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
 		Sample.INSTANCE.play( Assets.SND_CURSED );
 
 		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(badBuffs);
-		Buff.prolong( owner, buffClass, 10);
+		Buff.prolong( reader, buffClass, 10);
 
-		owner.getBelongings().curseEquipped();
+		reader.getBelongings().curseEquipped();
 
 		setKnown();
-		owner.spendAndNext( TIME_TO_READ );
+		reader.spendAndNext( TIME_TO_READ );
 	}
 
 
