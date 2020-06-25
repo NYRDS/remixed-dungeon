@@ -38,6 +38,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class WandOfMagicMissile extends SimpleWand  {
@@ -79,7 +81,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DISENCHANT )) {
 
 			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand));

@@ -4,6 +4,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 
+import org.jetbrains.annotations.NotNull;
+
 public class DummyItem extends EquipableItem {
     @Override
     public Belongings.Slot slot(Belongings belongings) {
@@ -45,7 +47,7 @@ public class DummyItem extends EquipableItem {
     }
 
     @Override
-    public void doDrop(Char hero) {
+    public void doDrop(@NotNull Char hero) {
     }
 
     @Override

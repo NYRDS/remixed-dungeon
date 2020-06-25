@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class MysteryMeat extends Food {
 
 	{
@@ -42,7 +44,7 @@ public class MysteryMeat extends Food {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		
 		super.execute(chr, action );
 		

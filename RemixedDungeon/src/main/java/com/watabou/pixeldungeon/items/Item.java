@@ -151,7 +151,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return actions;
 	}
 
-	public boolean doPickUp(Char hero) {
+	public boolean doPickUp(@NotNull Char hero) {
 		if (collect(hero.getBelongings().backpack)) {
 			GameScene.pickUp(this);
 			Sample.INSTANCE.play(Assets.SND_ITEM);
@@ -162,17 +162,17 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	public void doDrop(Char chr) {
+	public void doDrop(@NotNull Char chr) {
 		chr.spendAndNext(TIME_TO_DROP);
 		int pos = chr.getPos();
 		chr.level().animatedDrop(detachAll(chr.getBelongings().backpack), pos);
 	}
 
-	public void doThrow(Char chr) {
+	public void doThrow(@NotNull Char chr) {
 		chr.selectCell(thrower);
 	}
 
-	public void execute(Char chr, String action) {
+	public void execute(@NotNull Char chr, @NotNull String action) {
 		chr.getBelongings().setSelectedItem(this);
 
 		if (action.equals(AC_DROP)) {
@@ -182,7 +182,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	public void execute(Char hero) {
+	public void execute(@NotNull Char hero) {
 		if(hero.getHeroClass().forbidden(getDefaultAction())){
 			setDefaultAction(AC_THROW);
 		}
@@ -205,10 +205,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public boolean collect(@NotNull Bag container) {
+		setOwner(container.getOwner());
 
 		ArrayList<Item> items = container.items;
-
-		setOwner(container.getOwner());
 
 		if (items.contains(this)) {
 			return true;
@@ -232,13 +231,14 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 
 		if (items.size() < (container instanceof Backpack ? container.getSize() + 1 : container.getSize())) {
-			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
+			items.add(this);
+			Collections.sort(items, itemComparator);
+
+			if (owner == Dungeon.hero && owner.isAlive()) {
 				Badges.validateItemLevelAcquired(this);
+				QuickSlot.refresh();
 			}
 
-			items.add(this);
-			QuickSlot.refresh();
-			Collections.sort(items, itemComparator);
 			return true;
 		}
 
@@ -278,7 +278,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	public final Item detachAll(Bag container) {
+	public final Item detachAll(@NotNull Bag container) {
 
 		for (Item item : container.items) {
 			if (item == this) {
@@ -350,7 +350,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
     	return chr.getBelongings().isEquipped(this);
 	}
 
-	public void removeItemFrom(Char hero) {
+	public void removeItemFrom(@NotNull Char hero) {
 		onDetach();
 		setCursed(false);
 		if (!(this instanceof EquipableItem) || !isEquipped(hero) || !((EquipableItem) this).doUnequip(hero, false)) {

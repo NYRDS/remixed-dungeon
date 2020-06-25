@@ -29,6 +29,8 @@ import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 
 public class HuntressArmor extends ClassArmor {
@@ -47,10 +49,8 @@ public class HuntressArmor extends ClassArmor {
 	}
 
 	@Override
-	public void doSpecial() {
-		
-		Char owner = getOwner();
-		
+	public void doSpecial(@NotNull Char user) {
+
 		Item proto = new Shuriken();
 		
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
@@ -59,16 +59,16 @@ public class HuntressArmor extends ClassArmor {
 				Callback callback = new Callback() {	
 					@Override
 					public void call() {
-						owner.attack( targets.get( this ) );
+						user.attack( targets.get( this ) );
 						targets.remove( this );
 						if (targets.isEmpty()) {
-							owner.spendAndNext( owner.attackDelay() );
+							user.spendAndNext( user.attackDelay() );
 						}
 					}
 				};
 				
-				((MissileSprite) owner.getSprite().getParent().recycle( MissileSprite.class )).
-					reset( owner.getPos(), mob.getPos(), proto, callback );
+				((MissileSprite) user.getSprite().getParent().recycle( MissileSprite.class )).
+					reset( user.getPos(), mob.getPos(), proto, callback );
 				
 				targets.put( callback, mob );
 			}
@@ -79,8 +79,8 @@ public class HuntressArmor extends ClassArmor {
 			return;
 		}
 
-		owner.getSprite().zap( owner.getPos() );
-		owner.busy();
+		user.getSprite().zap( user.getPos() );
+		user.busy();
 	}
 	
 	@Override

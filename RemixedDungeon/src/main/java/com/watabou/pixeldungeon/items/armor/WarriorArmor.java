@@ -35,6 +35,8 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WarriorArmor extends ClassArmor {
 	
 	private static int LEAP_TIME	= 1;
@@ -50,8 +52,8 @@ public class WarriorArmor extends ClassArmor {
 	}
 	
 	@Override
-	public void doSpecial() {
-		getOwner().selectCell( leaper );
+	public void doSpecial(@NotNull Char user) {
+		user.selectCell( leaper );
 	}
 	
 	@Override

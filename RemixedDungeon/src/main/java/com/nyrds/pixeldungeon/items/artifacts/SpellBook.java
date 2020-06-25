@@ -12,6 +12,8 @@ import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class SpellBook extends Artifact {
@@ -50,7 +52,7 @@ public class SpellBook extends Artifact {
 	}
 
 	@Override
-	public void execute(final Char ch, String action) {
+	public void execute(@NotNull final Char ch, @NotNull String action) {
 		if (action.equals(CommonActions.AC_READ)) {
 			spell().cast(ch);
 		} else {

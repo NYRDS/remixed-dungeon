@@ -19,6 +19,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class ChaosCrystal extends UsableArtifact implements IChaosItem {
@@ -57,13 +59,13 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 			if (cell != null) {
 
 				if (isCursed()) {
-					cell = getOwner().getPos();
+					cell = selector.getPos();
 				}
 
 				ChaosCommon.doChaosMark(cell, charge);
 				charge = 0;
 			}
-			getOwner().spendAndNext(TIME_TO_USE);
+			selector.spendAndNext(TIME_TO_USE);
 		}
 
 		@Override
@@ -74,48 +76,46 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
-
-			Char owner = item.getOwner();
-
+			
 			if (item.quantity() > 1) {
-				item.detach(owner.getBelongings().backpack);
+				item.detach(selector.getBelongings().backpack);
 			} else {
-				item.removeItemFrom(owner);
+				item.removeItemFrom(selector);
 			}
 
-			removeItemFrom(owner);
+			removeItemFrom(selector);
 
-			owner.getSprite().operate(owner.getPos());
-			owner.spend(TIME_TO_FUSE);
-			owner.busy();
+			selector.getSprite().operate(selector.getPos());
+			selector.spend(TIME_TO_FUSE);
+			selector.busy();
 
 			if (item instanceof Scroll) {
 				Item newItem = new ScrollOfWeaponUpgrade();
-				owner.collect(newItem);
+				selector.collect(newItem);
 				GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
 				return;
 			}
 
 			if (item instanceof KindOfBow) {
-				owner.collect(new ChaosBow());
+				selector.collect(new ChaosBow());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
 				return;
 			}
 
 			if (item instanceof MeleeWeapon) {
-				owner.collect(new ChaosSword());
+				selector.collect(new ChaosSword());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
 				return;
 			}
 
 			if (item instanceof Armor) {
-				owner.collect(new ChaosArmor());
+				selector.collect(new ChaosArmor());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
 				return;
 			}
 
 			if (item instanceof Wand) {
-				owner.collect(new ChaosStaff());
+				selector.collect(new ChaosStaff());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
 			}
 		}
@@ -127,10 +127,10 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	}
 
 	@Override
-	public void execute(final Char ch, String action) {
+	public void execute(@NotNull final Char ch, @NotNull String action) {
 		switch (action) {
 			case AC_USE:
-				getOwner().selectCell(chaosMark);
+				ch.selectCell(chaosMark);
 				break;
 			case AC_FUSE:
 				fuse(ch);

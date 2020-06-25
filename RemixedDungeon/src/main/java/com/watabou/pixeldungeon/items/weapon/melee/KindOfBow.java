@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public abstract class KindOfBow extends MeleeWeapon {
@@ -74,7 +76,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 	}
 
 	@Override
-	public void execute(Char chr, String action) {
+	public void execute(@NotNull Char chr, @NotNull String action) {
 		if(AC_CHOOSE_ARROWS.equals(action)) {
 			GameScene.selectItem(chr,
                     (item, selector) -> {

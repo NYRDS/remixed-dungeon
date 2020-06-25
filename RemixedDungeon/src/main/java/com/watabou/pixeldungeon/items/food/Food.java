@@ -23,6 +23,8 @@ import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 abstract public class Food extends Item {
@@ -46,7 +48,7 @@ abstract public class Food extends Item {
 
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 			chr.eat(this, energy, message);
 		} else {

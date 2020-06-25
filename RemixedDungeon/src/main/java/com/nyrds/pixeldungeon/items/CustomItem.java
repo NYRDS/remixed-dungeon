@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 
@@ -108,7 +109,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void execute(Char chr, String action) {
+    public void execute(@NotNull Char chr, @NotNull String action) {
         super.execute(chr,action);
         script.run("execute", chr, action);
     }

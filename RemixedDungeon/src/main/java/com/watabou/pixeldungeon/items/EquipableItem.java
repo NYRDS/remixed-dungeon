@@ -37,7 +37,7 @@ public abstract class EquipableItem extends Item {
 	protected Belongings.Slot equipedTo = Belongings.Slot.NONE;
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		switch (action) {
 			case AC_EQUIP:
 				doEquip(chr);
@@ -52,7 +52,7 @@ public abstract class EquipableItem extends Item {
 	}
 	
 	@Override
-	public void doDrop( Char hero ) {
+	public void doDrop(@NotNull Char hero ) {
 		if (!isEquipped( hero ) || doUnequip( hero, false, false )) {
 			super.doDrop( hero );
 		}

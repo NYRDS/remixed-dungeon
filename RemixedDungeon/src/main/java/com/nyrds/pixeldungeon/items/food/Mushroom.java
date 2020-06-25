@@ -7,6 +7,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 abstract public class Mushroom extends Food {
 	{
 		imageFile = "items/shrooms";
@@ -15,7 +17,7 @@ abstract public class Mushroom extends Food {
 	}
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 			applyEffect(chr);
 			GLog.i( message );

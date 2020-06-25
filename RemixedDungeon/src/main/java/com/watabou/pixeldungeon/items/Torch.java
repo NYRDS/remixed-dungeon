@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Torch extends Item {
@@ -53,7 +55,7 @@ public class Torch extends Item {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		
 		if (action.equals(AC_LIGHT)) {
 			

@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Dreamweed extends Plant {
 
 	public Dreamweed() {
@@ -60,7 +62,7 @@ public class Dreamweed extends Plant {
 		}
 		
 		@Override
-		public void execute(Char chr, String action ) {
+		public void execute(@NotNull Char chr, @NotNull String action ) {
 			
 			super.execute(chr, action );
 			

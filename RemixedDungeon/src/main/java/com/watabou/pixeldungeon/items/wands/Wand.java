@@ -153,7 +153,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public void execute(Char chr, String action) {
+	public void execute(@NotNull Char chr, @NotNull String action) {
 		if (action.equals(AC_ZAP)) {
 			chr.getBelongings().setSelectedItem(this);
 			chr.selectCell(zapper);

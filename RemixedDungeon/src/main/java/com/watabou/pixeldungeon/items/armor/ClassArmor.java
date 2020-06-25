@@ -24,6 +24,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
@@ -85,7 +87,7 @@ abstract public class ClassArmor extends Armor {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(special())) {
 
 			int cost = chr.getSkillPointsMax()/specialCostModifier;
@@ -99,7 +101,7 @@ abstract public class ClassArmor extends Armor {
 				return;
 			}
 
-			doSpecial();
+			doSpecial(chr);
 			chr.spendSkillPoints(cost);
 			return;
 		}
@@ -108,7 +110,7 @@ abstract public class ClassArmor extends Armor {
 	}
 	
 	abstract public String special();
-	abstract public void doSpecial();
+	abstract public void doSpecial(@NotNull Char user);
 	
 	@Override
 	public boolean isUpgradable() {

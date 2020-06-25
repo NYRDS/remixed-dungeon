@@ -32,6 +32,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Stylus extends Item {
@@ -54,7 +56,7 @@ public class Stylus extends Item {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_INSCRIBE)) {
 
 			GameScene.selectItem(chr,
@@ -115,7 +117,7 @@ public class Stylus extends Item {
 		inscribeEffect();
 	}
 	
-	private void inscribeScroll (BlankScroll scroll){
+	private void inscribeScroll (@NotNull BlankScroll scroll){
 		
 		scroll.detach( getOwner().getBelongings().backpack );
 		

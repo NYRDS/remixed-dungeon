@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Icecap extends Plant {
 
 	public Icecap() {
@@ -67,7 +69,7 @@ public class Icecap extends Plant {
 		}
 		
 		@Override
-		public void execute(Char chr, String action ) {
+		public void execute(@NotNull Char chr, @NotNull String action ) {
 			
 			super.execute(chr, action );
 			

@@ -191,7 +191,7 @@ public class Spell implements NamedEntityKind {
                 }
 
                 @Override
-                public void execute(Char hero) {
+                public void execute(@NotNull Char hero) {
                     Spell.this.cast(hero);
                 }
 

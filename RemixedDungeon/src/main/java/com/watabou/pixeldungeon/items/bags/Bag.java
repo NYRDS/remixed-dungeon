@@ -55,7 +55,7 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_OPEN )) {
 			GameScene.show( new WndBag(chr.getBelongings(), this, null, WndBag.Mode.ALL, null ) );
 		} else {
@@ -66,9 +66,11 @@ public class Bag extends Item implements Iterable<Item> {
 	@Override
 	public boolean collect(@NotNull Bag container ) {
 		if (super.collect( container )) {	
-			
-			setOwner(container.getOwner());
-			
+
+			for(Item item : items) {
+				item.setOwner(getOwner());
+			}
+
 			for (Item item : container.items.toArray(new Item[0])) {
 				if (grab( item )) {
 					item.detachAll( container );
@@ -125,11 +127,7 @@ public class Bag extends Item implements Iterable<Item> {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		for (Item item : bundle.getCollection( ITEMS,Item.class )) {
-			if(getOwner()!=CharsList.DUMMY) {
-				getOwner().getBelongings().collect(item);
-			} else {
-				item.collect(this);
-			}
+			item.collect(this);
 		}
 	}
 	
@@ -144,7 +142,7 @@ public class Bag extends Item implements Iterable<Item> {
 		return false;
 	}
 	
-	public boolean grab( Item item ) {
+	public boolean grab(@NotNull Item item ) {
 		return item.bag().equals(getClassName());
 	}
 

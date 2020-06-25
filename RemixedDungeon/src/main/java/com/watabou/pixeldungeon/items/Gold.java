@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Gold extends Item {
@@ -53,7 +55,7 @@ public class Gold extends Item {
 	}
 
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		collect(hero);
 
 		Statistics.goldCollected += quantity();

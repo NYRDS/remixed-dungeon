@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Dewdrop extends Item {
 
 	private static final String TXT_VALUE	= "%+dHP";
@@ -38,7 +40,7 @@ public class Dewdrop extends Item {
 	}
 	
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		boolean collected = false;
 
 		if(hero.hp() < hero.ht()) {

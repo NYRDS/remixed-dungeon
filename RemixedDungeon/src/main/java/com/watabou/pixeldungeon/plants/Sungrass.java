@@ -34,6 +34,8 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Sungrass extends Plant {
 
 	public Sungrass() {
@@ -67,7 +69,7 @@ public class Sungrass extends Plant {
 		}
 
 		@Override
-		public void execute(Char chr, String action) {
+		public void execute(@NotNull Char chr, @NotNull String action) {
 
 			super.execute(chr, action);
 

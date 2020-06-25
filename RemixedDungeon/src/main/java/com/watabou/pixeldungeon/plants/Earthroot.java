@@ -35,6 +35,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Earthroot extends Plant {
 
 	public Earthroot() {
@@ -72,7 +74,7 @@ public class Earthroot extends Plant {
 		}
 		
 		@Override
-		public void execute(Char chr, String action ) {
+		public void execute(@NotNull Char chr, @NotNull String action ) {
 			
 			super.execute(chr, action );
 			

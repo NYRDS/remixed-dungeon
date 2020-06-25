@@ -37,6 +37,8 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RogueArmor extends ClassArmor {
 	
 	{
@@ -49,8 +51,8 @@ public class RogueArmor extends ClassArmor {
 	}
 	
 	@Override
-	public void doSpecial() {			
-		getOwner().selectCell( teleporter );
+	public void doSpecial(@NotNull Char user) {
+		user.selectCell( teleporter );
 	}
 	
 	@Override

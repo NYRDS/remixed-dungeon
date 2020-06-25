@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndChooseWay;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class BlackSkullOfMastery extends MasteryItem {
@@ -37,7 +39,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_NECROMANCY )) {
 
 			HeroSubClass way;

@@ -32,6 +32,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class MageArmor extends ClassArmor {
 
 	{
@@ -49,7 +51,7 @@ public class MageArmor extends ClassArmor {
 	}
 	
 	@Override
-	public void doSpecial() {	
+	public void doSpecial(@NotNull Char user) {
 
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
@@ -57,14 +59,12 @@ public class MageArmor extends ClassArmor {
 				Buff.prolong( mob, Roots.class, 3 );
 			}
 		}
+
+		user.spend( Actor.TICK );
+		user.getSprite().operate( user.getPos() );
+		user.busy();
 		
-		Char owner = getOwner();
-		
-		owner.spend( Actor.TICK );
-		owner.getSprite().operate( owner.getPos() );
-		owner.busy();
-		
-		owner.getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
+		user.getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	

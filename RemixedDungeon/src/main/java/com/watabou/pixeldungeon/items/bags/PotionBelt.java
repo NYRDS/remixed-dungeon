@@ -5,6 +5,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class PotionBelt extends Bag {
 
 	{
@@ -12,7 +14,7 @@ public class PotionBelt extends Bag {
 	}
 	
 	@Override
-	public boolean grab( Item item ) {
+	public boolean grab(@NotNull Item item ) {
 		return super.grab(item) || item instanceof Potion || item instanceof ManaPotion;
 	}
 	

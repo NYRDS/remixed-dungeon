@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 abstract public class Book extends Item {
@@ -27,7 +29,7 @@ abstract public class Book extends Item {
 
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 
 			if (chr.hasBuff( Blindness.class )) {

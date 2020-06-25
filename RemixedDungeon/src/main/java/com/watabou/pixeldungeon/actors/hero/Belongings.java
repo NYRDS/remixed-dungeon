@@ -444,28 +444,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 	}
 
-	public boolean collect(Item newItem) {
-		if(owner instanceof Hero) {
-			return newItem.collect(backpack);
-		}
-
-		if (backpack.items.contains(newItem)) {
-			return true;
-		}
-
-		if (newItem.stackable) {
-			String c = newItem.getClassName();
-			for (Item item : backpack.items) {
-				if (item.getClassName().equals(c) && item.level() == newItem.level()) {
-					item.quantity(item.quantity() + newItem.quantity());
-					return true;
-				}
-			}
-		}
-
-		backpack.items.add(newItem);
-
-		return true;
+	public boolean collect(@NotNull Item newItem) {
+		return newItem.collect(backpack);
 	}
 	
 	@Contract(pure = true)

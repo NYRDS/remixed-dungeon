@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by mike on 10.01.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -33,31 +35,30 @@ public class GnollArmor extends ClassArmor {
     }
 
     @Override
-    public void doSpecial() {
-        Char owner = getOwner();
-        
-        SpellSprite.show( owner, SpellSprite.DOMINATION );
+    public void doSpecial(@NotNull Char user) {
+
+        SpellSprite.show( user, SpellSprite.DOMINATION );
         Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 
-        int mobsDominated = owner.countPets();
-        Level level = owner.level();
+        int mobsDominated = user.countPets();
+        Level level = user.level();
 
         for (Mob mob : level.getCopyOfMobsArray()) {
 
             if (level.fieldOfView[mob.getPos()]) {
-                if(mobsDominated > owner.lvl() / 6) {
+                if(mobsDominated > user.lvl() / 6) {
                     break;
                 }
 
                 if(mob.canBePet()) {
-                    Mob.makePet(mob, owner.getId());
+                    Mob.makePet(mob, user.getId());
                     new Flare(3, 32).show(mob.getSprite(), 2f);
                     mobsDominated++;
                 }
             }
         }
 
-        owner.spend( Actor.TICK );
+        user.spend( Actor.TICK );
     }
 
     @Override

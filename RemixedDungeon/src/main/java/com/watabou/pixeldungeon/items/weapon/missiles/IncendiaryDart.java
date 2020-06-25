@@ -56,7 +56,7 @@ public class IncendiaryDart extends Dart {
 				super.onThrow( cell, thrower);
 			}
 		} else {
-			if (!getOwner().shoot( enemy, this )) {
+			if (!thrower.shoot( enemy, this )) {
 				thrower.level().animatedDrop( this, cell );
 			}
 		}

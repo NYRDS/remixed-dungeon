@@ -10,6 +10,8 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Candy extends Food {
 
 	public Candy() {
@@ -18,7 +20,7 @@ public class Candy extends Food {
 	}
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 
 			detach( chr.getBelongings().backpack );

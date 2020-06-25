@@ -15,6 +15,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class PseudoPasty extends Food {
 
 	public PseudoPasty() {
@@ -48,7 +50,7 @@ public class PseudoPasty extends Food {
 	}
 
 	@Override
-	public void execute(Char chr, String action) {
+	public void execute(@NotNull Char chr, @NotNull String action) {
 		if (action.equals(CommonActions.AC_EAT)) {
 			pick(chr, Dungeon.level.getEmptyCellNextTo(chr.getPos()));
 			this.removeItemFrom(chr);

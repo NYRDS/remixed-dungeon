@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 import lombok.SneakyThrows;
@@ -51,7 +53,7 @@ public class Seed extends Item {
     }
 
     @Override
-    public void execute(Char chr, String action) {
+    public void execute(@NotNull Char chr, @NotNull String action) {
         if (action.equals(AC_PLANT)) {
 
             chr.spend(TIME_TO_PLANT);

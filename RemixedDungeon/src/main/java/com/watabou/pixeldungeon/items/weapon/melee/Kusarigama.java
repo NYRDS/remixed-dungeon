@@ -14,6 +14,8 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Kusarigama extends SpecialWeapon {
@@ -77,7 +79,7 @@ public class Kusarigama extends SpecialWeapon {
     }
 
     @Override
-    public void execute(Char chr, String action) {
+    public void execute(@NotNull Char chr, @NotNull String action) {
 
         if (action.equals(AC_PULL)) {
             chr.selectCell(impaler);

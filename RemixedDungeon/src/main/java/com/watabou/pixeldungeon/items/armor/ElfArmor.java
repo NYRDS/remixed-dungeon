@@ -14,6 +14,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ElfArmor extends ClassArmor {
 	
 	public ElfArmor() {
@@ -27,22 +29,21 @@ public class ElfArmor extends ClassArmor {
 	}
 	
 	@Override
-	public void doSpecial() {
+	public void doSpecial(@NotNull Char user) {
 		
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				GameScene.add( Blob.seed( mob.getPos(), 100, Regrowth.class ) );
 			}
 		}
-		Char owner = getOwner();
-		
-		owner.spend( Actor.TICK );
-		owner.getSprite().operate( owner.getPos() );
-		owner.busy();
+
+		user.spend( Actor.TICK );
+		user.getSprite().operate( user.getPos() );
+		user.busy();
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
 		
-		GameScene.add( Blob.seed( owner.getPos(), 100, Regrowth.class ) );
+		GameScene.add( Blob.seed( user.getPos(), 100, Regrowth.class ) );
 	}
 	
 	@Override

@@ -29,7 +29,7 @@ import lombok.SneakyThrows;
 public class Deco extends LevelObject {
 
 
-	public static final String ANIMATIONS = "animations";
+	private static final String ANIMATIONS = "animations";
 	static private Map<String, JSONObject> defMap = new HashMap<>();
 
 	private JSONObject animations;

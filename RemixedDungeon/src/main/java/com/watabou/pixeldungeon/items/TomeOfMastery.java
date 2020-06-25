@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndChooseWay;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class TomeOfMastery extends MasteryItem {
@@ -61,7 +63,7 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		if (hero.getHeroClass() != HeroClass.NECROMANCER)
 		{
 			Badges.validateMastery();
@@ -70,7 +72,7 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_READ )) {
 			
 			if (chr.hasBuff( Blindness.class )) {

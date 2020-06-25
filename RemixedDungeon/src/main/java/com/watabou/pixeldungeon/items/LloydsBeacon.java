@@ -66,7 +66,7 @@ public class LloydsBeacon extends Item {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		
 		if (action.equals(AC_SET) || action.equals(AC_RETURN)) {
 			

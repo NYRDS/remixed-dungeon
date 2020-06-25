@@ -34,6 +34,8 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Fadeleaf extends Plant {
 
 	public Fadeleaf () {
@@ -85,7 +87,7 @@ public class Fadeleaf extends Plant {
 		}
 		
 		@Override
-		public void execute(Char chr, String action ) {
+		public void execute(@NotNull Char chr, @NotNull String action ) {
 			
 			super.execute(chr, action );
 			

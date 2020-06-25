@@ -15,12 +15,14 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class MasteryItem extends Item {
 
 	public static final float TIME_TO_READ = 10;
 
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		if(givesMasteryTo(hero)) {
 			Badges.validateMastery();
 		}

@@ -42,6 +42,8 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -124,7 +126,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public void execute(final Char chr, String action ) {
+	public void execute(@NotNull final Char chr, @NotNull String action ) {
 		switch (action) {
 			case AC_DRINK:
 				if (isKnown() && (
@@ -163,7 +165,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public void doThrow( final Char chr) {
+	public void doThrow(@NotNull final Char chr) {
 
 		if (isKnown() && (
 			this instanceof PotionOfExperience || 

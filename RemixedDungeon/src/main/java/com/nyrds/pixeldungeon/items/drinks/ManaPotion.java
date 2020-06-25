@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ManaPotion extends Drink {
 
 	public ManaPotion() {
@@ -21,7 +23,7 @@ public class ManaPotion extends Drink {
 	}
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DRINK )) {
 			detach( chr.getBelongings().backpack );
 			GLog.i( Game.getVar(R.string.Drink_Message) );

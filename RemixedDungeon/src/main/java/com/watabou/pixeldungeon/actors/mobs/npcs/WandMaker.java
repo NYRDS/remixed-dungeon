@@ -326,7 +326,7 @@ public class WandMaker extends NPC {
 			}
 			
 			@Override
-			public void execute(Char chr, String action ) {
+			public void execute(@NotNull Char chr, @NotNull String action ) {
 				
 				super.execute(chr, action );
 				

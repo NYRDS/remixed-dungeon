@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class DarkGold extends Item {
 	
 	{
@@ -49,7 +51,7 @@ public class DarkGold extends Item {
 	}
 
 	@Override
-	public void doDrop(Char hero) {
+	public void doDrop(@NotNull Char hero) {
 		if(Dungeon.depth > 0) {
 			super.doDrop(hero);
 		}   else {

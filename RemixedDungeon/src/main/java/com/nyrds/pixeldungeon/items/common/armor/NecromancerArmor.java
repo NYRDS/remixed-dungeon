@@ -12,6 +12,8 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class NecromancerArmor extends ClassArmor {
 
 
@@ -30,16 +32,14 @@ public class NecromancerArmor extends ClassArmor {
 	}
 
 	@Override
-	public void doSpecial() {
-		Char owner = getOwner();
+	public void doSpecial(@NotNull Char user) {
+		user.spend( Actor.TICK );
+		user.getSprite().operate( user.getPos() );
+		user.busy();
 
-		owner.spend( Actor.TICK );
-		owner.getSprite().operate( owner.getPos() );
-		owner.busy();
+		Buff.affect( user, Necrotism.class ).set(Necrotism.duration, 1);
 
-		Buff.affect( owner, Necrotism.class ).set(Necrotism.duration, 1);
-
-		owner.getSprite().burst( 0x6935a5, 3 );
+		user.getSprite().burst( 0x6935a5, 3 );
 		Sample.INSTANCE.play( Assets.SND_READ );
 	}
 	

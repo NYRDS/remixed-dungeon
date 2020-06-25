@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.AmuletScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Amulet extends Item {
@@ -45,7 +47,7 @@ public class Amulet extends Item {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_END)) {
 			showAmuletScene( false );
 		} else {
@@ -54,7 +56,7 @@ public class Amulet extends Item {
 	}
 	
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		if (super.doPickUp( hero )) {
 			
 			if (!Statistics.amuletObtained) {

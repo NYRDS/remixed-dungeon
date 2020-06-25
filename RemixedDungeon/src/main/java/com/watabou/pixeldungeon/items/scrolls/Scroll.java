@@ -140,7 +140,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 			
 			if (chr.hasBuff( Blindness.class )) {

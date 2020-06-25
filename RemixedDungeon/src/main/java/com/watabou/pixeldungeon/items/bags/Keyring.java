@@ -22,6 +22,8 @@ import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Keyring extends Bag {
 
 	{
@@ -29,7 +31,7 @@ public class Keyring extends Bag {
 	}
 	
 	@Override
-	public boolean grab( Item item ) {
+	public boolean grab(@NotNull Item item ) {
 		return super.grab(item) || item instanceof Key || item instanceof Ring;
 	}
 	

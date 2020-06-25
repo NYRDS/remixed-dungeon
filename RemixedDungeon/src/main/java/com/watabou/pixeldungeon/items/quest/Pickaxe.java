@@ -41,6 +41,8 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Pickaxe extends Weapon {
@@ -72,7 +74,7 @@ public class Pickaxe extends Weapon {
 	}
 	
 	@Override
-	public void execute(final Char chr, String action ) {
+	public void execute(@NotNull final Char chr, @NotNull String action ) {
 		
 		if (action.equals(AC_MINE)) {
 			

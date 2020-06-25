@@ -3,6 +3,8 @@ package com.nyrds.pixeldungeon.items.common.debug;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.Food;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CandyOfDeath extends Food {
 
 	// DIE, DIE, DIE, DIE
@@ -13,7 +15,7 @@ public class CandyOfDeath extends Food {
 	}
 
 	@Override
-	public void execute(Char chr, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		super.execute(chr, action );
 		chr.damage(chr.ht(), this);
 	}

@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.plants.Sungrass.Health;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class SpiderCharm extends UsableArtifact {
 
 	public SpiderCharm() {
@@ -27,7 +29,7 @@ public class SpiderCharm extends UsableArtifact {
 	}
 	
 	@Override
-	public void execute(final Char ch, String action ) {
+	public void execute(@NotNull final Char ch, @NotNull String action ) {
 
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);

@@ -48,7 +48,7 @@ public abstract class InventoryScroll extends Scroll {
 		GameScene.selectItem(reader, itemSelector, mode, inventoryTitle);
 	}
 	
-	private void confirmCancelation() {
+	private void confirmCancellation() {
 		GameScene.show( new WndOptions( name(),
 										Game.getVar(R.string.InventoryScroll_Warning),
 										Game.getVar(R.string.InventoryScroll_Yes),
@@ -82,7 +82,7 @@ public abstract class InventoryScroll extends Scroll {
 			Invisibility.dispel(selector);
 
 		} else if (identifiedByUse) {
-			((InventoryScroll) selector.getBelongings().getSelectedItem()).confirmCancelation();
+			((InventoryScroll) selector.getBelongings().getSelectedItem()).confirmCancellation();
 		} else {
 			selector.getBelongings().getSelectedItem().collect( selector.getBelongings().backpack );
 		}
