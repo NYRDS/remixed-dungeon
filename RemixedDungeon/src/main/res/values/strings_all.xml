@@ -2596,4 +2596,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     - Bugs fixed\n
     </string>
 
+  <string name="Char_Stole_0">%1$s stole %2$s from %3$s!</string>
+  <string name="Char_Stole_1">%1$s stole %2$s from %3$s!</string>
+  <string name="Char_Stole_2">%1$s stole %2$s from %3$s!</string>
+
 </resources>

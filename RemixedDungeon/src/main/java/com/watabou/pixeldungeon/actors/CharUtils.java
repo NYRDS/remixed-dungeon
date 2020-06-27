@@ -67,7 +67,7 @@ public class CharUtils {
 
         Item item = victim.getBelongings().randomUnequipped();
 
-        GLog.w( Game.getVar(R.string.Generic_Stole), thief.getName(), item.name(), victim.getName_objective() );
+        GLog.w( Game.getVars(R.array.Char_Stole)[thief.getGender()], thief.getName(), item.name(), victim.getName_objective() );
 
         item.detachAll( victim.getBelongings().backpack );
         item.collect(thief);
