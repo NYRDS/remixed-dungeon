@@ -2275,17 +2275,6 @@ Ezért nagy jutalomban lesz részed!</string>
   <string name="town_deco_stones_desc">Csak egy rakás kő.</string>
   <string name="town_deco_fireplace_name">Tűzrakóhely</string>
   <string name="town_deco_fireplace_desc">Segít jól felmelegedni egy ilyen hideg helyen.</string>
-  <string name="Welcome_Text_28_6">
-remix.28.6
-- Játék Mechanika:
--- Harcos különleges képességei
--- Hősök éhsége visszavéve
--- Halottidéző Megszállás varázslat
--- Zsivány Álcázás képesség
--- Új Jelvények
-- Modok:
--- Egyénileg írható Fejlesztések
--- Egyéni gfx</string>
   <string name="Badges_GamesPlayed5">5000 játszma</string>
   <string name="Badges_PotionsCooked5">25 bájítal kifőzve</string>
   <string name="Badges_ItemLvl5">15-ös szintű tárgy megszerzése</string>
@@ -2296,9 +2285,6 @@ remix.28.6
   <string name="Badges_MonsterSlain5">1000 lemészárolt ellenfél</string>
   <string name="Spells_NotInOwnBody">Nem tudod végrehajtani %s amíg a lelked el van választva a testedtől.</string>
   <string name="WndHero_Satiety">Jóllakottság</string>
-  <string name="Welcome_Text_29">
-remix.29
-- Város felújítva</string>
   <string name="Ring_Gems_0">gyémánt</string>
   <string name="Ring_Gems_1">opál</string>
   <string name="Ring_Gems_2">gránát</string>
@@ -2574,25 +2560,18 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
   <string name="ShieldWeaponInfo">Ha fegyverként használod ezt a pajzsot, átlagosan %1$d sebzést fog okozni.</string>
   <string name="TownPortal_Name">Hazajutási Portál</string>
   <string name="TownPortal_Info">Ez a varázslat lehetővé teszi, hogy azonnal visszatérj biztonságba. Azonban egy közeli, erős varázslat forrása megakadályozhatja, hogy megfelelően működjön.</string>
-
-
   <string name="MedicineMask_Name">Sebészi maszk</string>
   <string name="MedicineMask_Info">A Sebészi maszk arra lett kitalálva, hogy megállítsa a viselő szájából kijövő, cseppfolyós mikroorganizmusokat és aeroszolokat.
 Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
   <string name="MedicineMask_Obtained">Sebészi maszk megszerezve</string>
   <string name="PlagueDoctorNPC_After_Quest_2">Még mindig itt vagy? Tessék! Tedd ezt el.</string>
-
-
-
   <string name="FilteredMask_Name">N95-ös maszk</string>
   <string name="FilteredMask_Info">A légzőkészülékeket arra tervezték, hogy megvédjék viselőjüket a veszélyes levegő beszívásától, beleértve mindenféle gőzöket, gázokat, port és légi mikroorganizmusokat.
 Ez a maszk azonban csak dekoratív célt szolgál.</string>
-
   <string name="FullFaceMask_Name">Gázmaszk</string>
   <string name="FullFaceMask_Info">A Gázmaszk megvédi viselőjét a szennyező levegőtől és más mérgező gázoktól. A maszk egyszerre zárja le az orrot, a szájat és a szemeket.
 A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetlenül.</string>
-
-
-  <string name="Generic_Stole">%1$s ellopta: %2$s innen: %3$s !</string>
-
+  <string name="Char_Stole_0">%1$s ellopta: %2$s innen: %3$s !</string>
+  <string name="Char_Stole_1">%1$s ellopta: %2$s innen: %3$s !</string>
+  <string name="Char_Stole_2">%1$s ellopta: %2$s innen: %3$s !</string>
 </resources>

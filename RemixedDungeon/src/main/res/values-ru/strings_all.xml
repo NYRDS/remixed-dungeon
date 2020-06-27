@@ -2278,18 +2278,6 @@
   <string name="town_deco_stones_desc">Просто куча камней.</string>
   <string name="town_deco_fireplace_name">Кострище</string>
   <string name="town_deco_fireplace_desc">Отлично подойдет для согрева в таком холодном месте.</string>
-  <string name="Welcome_Text_28_6">
-    remix.28.6\n
-    - Игровые механики:\n
-    -- Способности Воина!\n
-    -- Герои теперь становятся голодными не так быстро\n
-    -- Заклятье Некроманта - Одержимость\n
-    -- Способность Вора - Плащ Тени\n
-    -- Новые значки\n
-    - Моддинг:\n
-    -- Кастомные баффы с поддержкой скриптов\n
-    -- Кастомные спецэффекты\n
-    </string>
   <string name="Badges_GamesPlayed5">5000 игр сыграно</string>
   <string name="Badges_PotionsCooked5">25 зелий сварено</string>
   <string name="Badges_ItemLvl5">Получен предмет 15 уровня</string>
@@ -2300,10 +2288,6 @@
   <string name="Badges_MonsterSlain5">1000 врагов побеждено</string>
   <string name="Spells_NotInOwnBody">Ты не можешь использовать %s пока душа твоя вне тела.</string>
   <string name="WndHero_Satiety">Сытость</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - Обновление города!\n
-    </string>
   <string name="Ring_Gems_0">бриллиантом</string>
   <string name="Ring_Gems_1">опалом</string>
   <string name="Ring_Gems_2">гранатом</string>
@@ -2584,4 +2568,36 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldWeaponInfo">Будучи использованным в качестве оружия этот щит в среднем нанесет %1$dочков урона .</string>
   <string name="TownPortal_Name">Городской Портал</string>
   <string name="TownPortal_Info">Это заклятье позволит вам мгновенно вернуться в безопасное место. Однако вблизи мощных источников магии оно может работать не так как ожидалось.</string>
+  <string name="MedicineMask_Name">Медицинская маска</string>
+  <string name="MedicineMask_Info">Медицинская маска предназначена, чтобы улавливать микробные частицы в капельках жидкости и аэрозоля в выдохе носителя.
+\n\nНошение маски показывает что вы заботитесь о здоровье окружающих.</string>
+  <string name="MedicineMask_Obtained">Медицинская маска получена</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Ты ещё здесь? Вот! Возьми это.</string>
+  <string name="FilteredMask_Name">Респиратор</string>
+  <string name="FilteredMask_Info">Респиратор это устройство предназначенное защищать носителя от вдыхания дымов, паров, газов и микрочастиц таких как пыль и микроорганизмы.
+\n\nЭтот респиратор, однако, исключительно декоративный.</string>
+  <string name="FullFaceMask_Name">Противогаз</string>
+  <string name="FullFaceMask_Info">Противогаз защищает носителя от попадания загрязнений и токсичных газов в дыхательные пути и в глаза. Противогаз полностью защищает нос, рот и глаза.
+\n\nВ этом экземпляре не хватает фильтров, но все равно выглядит очень круто.</string>
+  <string name="StartScene_DifficultyEasyNoAds">Легкий</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">Нормальный с сохранениями</string>
+  <string name="Backstab_Name">Удар в спину</string>
+  <string name="Backstab_Info">Бесшумный удар в спину. Бесчестно, но весьма эффективно, урон от закалывания растет вместе с уровнем мастерства.\n\nУспешный удар в спину полностью игнорирует броню или специальные защитные техники жертвы.</string>
+  <string name="Backstab_TooFar">Жертва слишком далеко для успешного удара.</string>
+  <string name="Backstab_Aware">Внимание жертвы не должно быть обращено к тебе для успешного удара в спину.</string>
+  <string name="KunaiThrow_Name">Бросок Кунай</string>
+  <string name="KunaiThrow_Info">Смертельный бросок Кунай выполняется быстро, так быстро что ты даже не сможешь выбрать для него цели.\n\nНастоящие мастера могут метать больше чем один Кунай одновременно.</string>
+  <string name="Haste_Name">Неимоверная Спешка</string>
+  <string name="Haste_Info">Спешка позволяет двигаться с настолько невообразимой скоростью что все вокруг выглядит замершим. Движение с такой скоростью требует огромного напряжения сил и возможно только на краткий период времени.\n\nВеликие мастера способны дольше выдерживать такую скорость. </string>
+  <string name="Welcome_Text_29_5">
+    remix.29.5\n
+    - Геймплей:\n
+    -- Способности Разбойника!\n
+    - Моддинг:\n
+    -- Кастомизируемая броня!\n
+    - Исправления ошибок\n
+    </string>
+  <string name="Char_Stole_0">%1$s украло предмет %2$s у %3$s!</string>
+  <string name="Char_Stole_1">%1$s украл предмет %2$s у %3$s!</string>
+  <string name="Char_Stole_2">%1$s украла предмет %2$s у %3$s!</string>
 </resources>

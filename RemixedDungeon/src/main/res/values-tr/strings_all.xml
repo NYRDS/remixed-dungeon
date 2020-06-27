@@ -25,45 +25,45 @@
   <string name="TomeOfKnowledge_Name">Kadim Cilt</string>
   <string name="TomeOfKnowledge_Info">Bu antik cilt esrarlı bilmeceler ve sırlarla dolu! Okuması zor olabilir, fakat okuduğunda büyü gücünün artacağından emin olabilirsin.</string>
   <string name="SpellBook_Name">Büyü Kitabı</string>
-  <string name="SpellBook_Info">Bir kitap gibi değilde, çeşitli sayfalar birleştirilip derleme yapılmış haline benziyor. Eğer dikkatini yeterince verirsen, birşeyler öğrenebileceğini seziyorsun.</string>
+  <string name="SpellBook_Info">Bir kitaptan daha çok çeşitli sayfaların birleştirilip derleme yapılmış haline benziyor. Eğer dikkatini yeterince verirsen, bir şeyler öğrenebileceğini seziyorsun.</string>
   <string name="SpellBook_Info_Identified">Sayfalara gözatarken \"%1$s\" büyüsüne dair açıklamalı metin buldun.\n\"%2$s\"</string>
   <string name="ManaPotion_Name">Mana İksiri</string>
   <string name="ManaPotion_Info">Bu iksir ruhsal enerjini yenileyecek.</string>
   <string name="Mushroom_Eat_Message">Bu mantarın tadı bi garip!</string>
   <string name="Torch_Info2">Bu zindanın olmazsa olmaz öğesidir, ortamı kötü aydınlattığı için adı çıkmış.</string>
   <string name="WndSpells_Title">Büyüler</string>
-  <string name="WndSpells_Level">Büyü Seviyesi</string>
+  <string name="WndSpells_Level">Büyü Seviyesi:</string>
   <string name="Ring_Name">%s yüzük</string>
-  <string name="Ring_Info">metal halka üzerinde  karanlıkta parlayan kocaman bir %s mücevheri duruyor. kim bilir acaba giydiğinde ne etkileri olacak ?</string>
+  <string name="Ring_Info">Metal halka üzerinde karanlıkta parlayan kocaman bir %s mücevheri duruyor. Kim bilir acaba giydiğinde ne etkileri olacak?</string>
   <string name="Ring_Identify">%1$s ile aşina olduğundan dolayı %2$s olduğunu anlıyorsun.</string>
   <string name="Ring_Info1">Tek seferde yalnızca 2 yüzük giyebilirsin</string>
   <string name="Ring_Info2">%s parmağını acı dolu bir şekilde sıkıyor.</string>
   <string name="Ring_Info3a">%1$s\n\n %2$s parmağında%3$s</string>
   <string name="Ring_Info3b">, lanetli olduğundan dolayı, kaldırmak için güçsüzsün.</string>
   <string name="Ring_Info4">%1$s\n\n%2$s üzerinde gizlenmiş kötü büyüyü hissediyorsun.</string>
-  <string name="Ring_BuffKnown">Bu %s</string>
-  <string name="RingOfAccuracy_Name">Nişan alma yüzüğü</string>
-  <string name="RingOfAccuracy_Info">Bu yüzük rakibe vuruş şansını arttırır.</string>
+  <string name="Ring_BuffKnown">Bu bir%s</string>
+  <string name="RingOfAccuracy_Name">İsabet Yüzüğü</string>
+  <string name="RingOfAccuracy_Info">Bu yüzük rakibe vurma şansını arttırır.</string>
   <string name="RingOfDetection_Name">Farkındalık yüzüğü</string>
-  <string name="RingOfDetection_Info">Bu yüzük takan kişiye gizli şeyleri arama yapmadan bulma yeteneği verir (tuzaklar, gizli kapılar) . Bozulmuş bir yüzük ise tam tersi bu gizemleri farketmeni zorlaştırır.</string>
-  <string name="RingOfElements_Name">Elementlerin yüzüğü</string>
-  <string name="RingOfElements_Info">Bu yüzük farklı elementlere karşı direnç sağlar (elektrik,gaz,hava gibi) aynı zaman negatif etkilerinin de süresini azaltır.</string>
-  <string name="RingOfEvasion_Name">Korunma Yüzüğü</string>
+  <string name="RingOfDetection_Info">Bu yüzük takan kişiye gizli şeyleri (tuzaklar, gizli kapılar) aramadan bulmasını sağlar. Bozulmuş Farkındalık Yüzüğü ise tam tersi bu gizemleri fark etmeni zorlaştırır.</string>
+  <string name="RingOfElements_Name">Elementler Yüzüğü</string>
+  <string name="RingOfElements_Info">Bu yüzük farklı elementlere karşı direnç sağlar: ateş, elektrik, gazlar vb. Aynı zamanda negatif etkilerin de süresini azaltır.</string>
+  <string name="RingOfEvasion_Name">Kaçınma Yüzüğü</string>
   <string name="RingOfEvasion_Info">Bu yüzük rakibin saldırından kaçınma şansını arttırır.</string>
   <string name="RingOfHaggler_Name">Pazarlık Yüzüğü</string>
-  <string name="RingOfHaggler_Info">Gerçekte bu yüzük hiç bir sihirli güç sağlamaz.Ancak dükkân sahiplerine bu yüzüğü takan kişinin Hırsızlar Loncasının üyesi olduğunu gösterir ve onların sana indirim yapmalarını sağlar.</string>
+  <string name="RingOfHaggler_Info">Gerçekte bu yüzük hiç bir sihirli güç sağlamaz. Ancak dükkân sahiplerine bu yüzüğü takan kişinin Hırsızlar Loncasının üyesi olduğunu gösterir ve onların sana indirim yapmalarını sağlar. Bu yüzüğü geliştirmek fazladan özellik kazandırmaz.</string>
   <string name="RingOfHaste_Name">Hız Yüzüğü</string>
-  <string name="RingOfHaste_Info">Yüzüğü takan kişinin işleri daha hızlı yapmasını sağlar.</string>
-  <string name="RingOfHerbalism_Name">Şifacı Yüzüğü</string>
+  <string name="RingOfHaste_Info">Yüzüğü takan kişinin zaman akışını hızlandırarak işleri biraz daha hızlı yapmasını sağlar.</string>
+  <string name="RingOfHerbalism_Name">Bitki Tedavisi Yüzüğü</string>
   <string name="RingOfHerbalism_Info">Çimlerden çiy ve tohum elde etme ihtimalini arttırır.</string>
-  <string name="RingOfMending_Name">Tamir Yüzüğü</string>
-  <string name="RingOfMending_Info">Bu yüzük vücudunun kendini yenileme hızını arttırarak sağlığının daha hızlı artmasını sağlar. Bozulmuş yüzük ise tam tersi etki yapacktır.</string>
-  <string name="RingOfPower_Name">Güç yüzüğü</string>
-  <string name="RingOfPower_Info">Asan daha güçlü olacaktır ancak yüzüğün bozulursa bu ters etki yapacaktır.</string>
+  <string name="RingOfMending_Name">Onarım Yüzüğü</string>
+  <string name="RingOfMending_Info">Bu yüzük vücudunun kendini yenileme hızını arttırarak sağlığının daha hızlı artmasını sağlar. Bozulmuş Onarım Yüzüğü ise yenileme hızını düşürür.</string>
+  <string name="RingOfPower_Name">Güç Yüzüğü</string>
+  <string name="RingOfPower_Info">Asaların bu yüzüğün enerji alanı içerisinde daha güçlü olur. Bozulmuş Güç Yüzüğü ise asalarını güçsüzleştirir.</string>
   <string name="RingOfSatiety_Name">Tokluk Yüzüğü</string>
-  <string name="RingOfSatiety_Info">Bu yüzüğü taktığında daha az yemek yeme ihtiyacı duyacaksın.</string>
-  <string name="RingOfShadows_Name">gölgelerin yüzüğü </string>
-  <string name="RingOfShadows_Info">Bu yüzüğü giydiğinda düşmanların seni daha zor farkedecek.</string>
+  <string name="RingOfSatiety_Info">Bu yüzüğü taktığında yemek yemeden daha uzun süre dayanabilirsin. Bozulmuş Tokluk Yüzüğü ise bu etkinin tam tersine sebep olur.</string>
+  <string name="RingOfShadows_Name">Gölgeler Yüzüğü</string>
+  <string name="RingOfShadows_Info">Bu yüzüğü giydiğinde düşmanların seni daha zor fark eder. Bozulmuş Gölgeler Yüzüğü ise seni normalde fark edemeyecek düşmanların alarma geçmesine sebep olur.</string>
   <string name="RingOfThorns_Name">Diken Yüzüğü</string>
   <string name="RingOfThorns_Info">Bu yüzüğü taktığında sana saldıran düşman kendiside zarar görecektir. Bu yüzüğü yükseltmek ek bir getiri sağlamaz.</string>
   <string name="RingOfStoneWalking_Name">kan taşı yüzüğü</string>
@@ -2210,7 +2210,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="town_deco_broken_wall_desc">Bu duvardaki odunlar baya çürümüş ve esnekliklerini kaybetmiş.</string>
   <string name="town_deco_mud_name">Çamur</string>
   <string name="town_deco_mud_desc">Permafrost bölgede çözülmüş toprak.</string>
-  <string name="town_deco_stock_name">Stock (Mevcut, Hammadde, Standart)</string>
+  <string name="town_deco_stock_name">Stok (Mevcut, Hammadde, Standart)</string>
   <string name="town_deco_stock_desc">Yiyecekler burada depolanmış, birçok türden atık ve renklerle birlikte.</string>
   <string name="town_deco_barrel_name">Fıçı</string>
   <string name="town_deco_barrel_desc">Sıradan bir fıçı. Ve pek de formunda değil.</string>
@@ -2237,11 +2237,17 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="town_deco_wall_beam_name">Kiriş</string>
   <string name="town_deco_wall_beam_desc">Bu bina için güvenilir bir destek sağlıyor.</string>
   <string name="town_deco_wall_candles_name">Mumlar.</string>
+  <string name="town_deco_wall_candles_desc">Feri sönmüş mumlar, ancak hâlâ hoş bir koku yayıyor.</string>
   <string name="town_deco_wooden_drawer_name">Çekmece</string>
+  <string name="town_deco_wooden_drawer_desc">İçinde ne varsa gerçekten ilgi çekici.</string>
   <string name="town_deco_scrolls_name">Parşömenler</string>
+  <string name="town_deco_scrolls_desc">Bu tozlu rafta bir sürü parşömen ve kitap var.</string>
   <string name="town_deco_medicine_name">İlaç</string>
+  <string name="town_deco_medicine_desc">Şişeler ve sağlık ekipmanları muntazam şekilde raflara dizilmiş.</string>
   <string name="town_deco_wooden_stairs_name">Merdivenler</string>
+  <string name="town_deco_wooden_stairs_desc">Seni biraz daha uzun gösterir.</string>
   <string name="town_deco_canvas_name">Kanvas</string>
+  <string name="town_deco_canvas_desc">Kalın bir parça kumaş duvara asılmış.</string>
   <string name="town_deco_projector_name">Projeksiyon Cihazı</string>
   <string name="town_deco_projector_desc">Film oynatmaya ve insanları eğlendirmeye yarayan eski bir aygıt.</string>
   <string name="town_deco_filmtape_name">Film</string>
@@ -2254,6 +2260,8 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="town_deco_rug_desc">İyi bir tat ile tasarlanmış.</string>
   <string name="town_deco_trapdoor_name">Tuzak kapısı</string>
   <string name="town_deco_trapdoor_desc">Acaba nereye gidiyor.</string>
+  <string name="town_deco_glass_stained_name">Dekoratif Cam</string>
+  <string name="town_deco_glass_stained_desc">Bu \"glass\"ın yazarı üzerine baya efor sarfetmiş.</string>
   <string name="town_deco_glass_name">Geniş Pencere</string>
   <string name="town_deco_glass_desc">Bu diğerlerine kıyasla daha geniş ve kesinlikle içeriye daha fazla ışık alıyor.</string>
   <string name="town_deco_counter_name">Tezgah</string>
@@ -2276,10 +2284,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Badges_MonsterSlain5">1000 düşman kesildi</string>
   <string name="Spells_NotInOwnBody">Ruhun bedeninden ayrıyken %s yapamazsın. </string>
   <string name="WndHero_Satiety">Doygunluk</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - Kasaba yenilemesi!\n
-    </string>
   <string name="Ring_Gems_0">elmas</string>
   <string name="Ring_Gems_1">opal</string>
   <string name="Ring_Gems_2">lal</string>
@@ -2494,6 +2498,8 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="ShieldBuffReady_Name">Hazır</string>
   <string name="ShieldBuffNotReady_Name">Hazır Değil</string>
   <string name="WoodenShield_name">Tahta kalkan</string>
+  <string name="WoodenShield_desc">Kabaca yapılmış tahta kalkan bulabileceğin en basit kalkan.
+Yuvarlak ve bazen biraz hasar soğurabilir.</string>
   <string name="ToughShield_name">Güçlendirilmiş Deri Kalkan</string>
   <string name="ToughShield_desc">Bu deri kayışlarla güçlendirilmiş kalkan tahta olandan daha güçlü duruyor. Daha fazla hasar engelleyebileceği şüphesiz.</string>
   <string name="StrongShield_name">Tunç Kaplamalı Kalkan</string>
@@ -2503,4 +2509,37 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="ShieldInfoTemplate">Bu kalkan gelen hasarın en fazla %1$d kadarını engelleyebilir. %%%2$d ihtimalle. Başarılı bir engelleme sonrasında geri toparlanması için %3$3.1f saniye gerektirir.</string>
   <string name="Belongings_CantWearBoth">%1$s ve %2$s öğelerini aynı anda kuşanamazsın!</string>
   <string name="ShieldStrTemplate">Düzgün kullanabilmek için kalkanı kuşananın en az %1$d güç puanına sahip olmalıdır.</string>
+  <string name="town_deco_flowerinthepot_name">Saksıda çiçek</string>
+  <string name="town_deco_flowerinthepot_desc">Hoş kokulu bir süs çiçeği</string>
+  <string name="Welcome_Text_29_4">
+remix.29.4\n
+- Oynanış:\n
+-- Çift elli kullanım!\n
+- Modlama:\n
+-- Özel Silahlar!\n
+- Hatalar düzeltildi\n
+</string>
+  <string name="Mods_Disclaimer">
+Modlar oyuncular tarafından oyuncular için oluşturulur. \n
+Modlar bazen oynanışı tahmin edilemeyen veya garip bir biçimde değiştirebilir, uyarmadı demeyin!\n
+NYRDS takımının modların içeriği, kalitesi ve stabilizasyonu ile hiçbir alakası yoktur.\n
+Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
+</string>
+  <string name="ShieldWeaponInfo">Silah olarak kullanıldığında bu kalkan ortalama %1$d hasar soğuracak.</string>
+  <string name="TownPortal_Name">Kasaba Portalı</string>
+  <string name="TownPortal_Info">Bu büyü aniden güvenliğe dönmeni sağlar. Fakat yakınındaki güçlü bir büyü kaynağı düzgün çalışmasını engelleyebilir.</string>
+  <string name="MedicineMask_Name">Ameliyat maskesi</string>
+  <string name="MedicineMask_Info">Ameliyat maskesi giyen kişinin ağzından ve burnundan çıkan sıvı damlacıklarında ve havada gizlenen mikroorganizmaları yakalamak için tasarlanmıştır.
+\n\nMaske giymek diğer insanları umursadığınızı gösterir. Evde kalın!</string>
+  <string name="MedicineMask_Obtained">Ameliyat maskesi bulundu</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Sen hala burada mısın? İşte, al bunu.</string>
+  <string name="FilteredMask_Name">N95 maskesi</string>
+  <string name="FilteredMask_Info">Nefes filtresi giyen kişiyi duman, buhar gibi tehlikeli gazlardan ve toz ile havada gezen mikroorganizmalar gibi partiküllerden korumak için tasarlanmış bir araçtır.
+\n\nAma nedense bu maske süs olmak dışında bir işe yaramıyor.</string>
+  <string name="FullFaceMask_Name">Gaz maskesi</string>
+  <string name="FullFaceMask_Info">Gaz maskesi giyen kişiyi toksik gazlardan ve havada süzülen kirlerden koruması için kullanılan bir maskedir. Maske; gözler, ağız, ve burun etrafında sıkı bir koruma sağlar.
+\n\nBu maskenin filtre kısmı eksik ama yine de çok havalı duruyor.</string>
+  <string name="Char_Stole_0">%1$s%3$sden %2$s çaldı!</string>
+  <string name="Char_Stole_1">%1$s%3$sden %2$s çaldı!</string>
+  <string name="Char_Stole_2">%1$s%3$sden %2$s çaldı!</string>
 </resources>

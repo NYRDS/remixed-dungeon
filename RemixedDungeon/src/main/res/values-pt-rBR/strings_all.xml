@@ -2264,18 +2264,6 @@ Parede
   <string name="town_deco_stones_desc">Apenas uma pilha de pedras.</string>
   <string name="town_deco_fireplace_name">Lareira</string>
   <string name="town_deco_fireplace_desc">Ótimo para aquecer em um local frio como este.</string>
-  <string name="Welcome_Text_28_6">
-    remix.28.6\n
-    - Mecânicas do Jogo:\n
-    -- Habilidades especiais do Guerreiro!\n
-    -- Fome dos Heróis reduzida\n
-    -- Magia de Possessão do Necromante\n
-    -- Habilidade de Ocultar-se\n
-    -- Novas Medalhas\n
-    - Modificações:\n
-    -- Scripts de Buffs personalizáveis\n
-    -- Gfx personalizáveis \n
-    </string>
   <string name="Badges_GamesPlayed5">5000 jogos iniciados</string>
   <string name="Badges_PotionsCooked5">25 poções realizadas</string>
   <string name="Badges_ItemLvl5">Item de Level 15 adquirido</string>
@@ -2286,10 +2274,6 @@ Parede
   <string name="Badges_MonsterSlain5">1000 inimigos mortos</string>
   <string name="Spells_NotInOwnBody">Você não pode %s enquanto sua alma se separa do corpo.</string>
   <string name="WndHero_Satiety">Saciedade</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - Renovação da Cidade!\n
-    </string>
   <string name="Ring_Gems_0">diamante</string>
   <string name="Ring_Gems_1">opala</string>
   <string name="Ring_Gems_2">granada</string>
