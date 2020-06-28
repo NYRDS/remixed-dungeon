@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -32,6 +33,7 @@ import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -45,6 +47,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Collections;
+
+import lombok.var;
 
 public class Shopkeeper extends NPC {
 
@@ -111,6 +115,15 @@ public class Shopkeeper extends NPC {
 	public boolean interact(final Char hero) {
 
 		int attempts = 0;
+
+		if(!ModdingMode.inMod() && Game.getDifficulty() < 2) {
+			if (belongings.countFood() < 3) {
+				var foodSupply = new OverpricedRation();
+				foodSupply.quantity(5);
+				addItem(foodSupply);
+			}
+		}
+
 		while(getBelongings().backpack.items.size() < getBelongings().backpack.getSize() + 2 && attempts < 100) {
 			generateNewItem();
 			attempts++;
@@ -155,7 +168,13 @@ public class Shopkeeper extends NPC {
 			return;
 		}
 
-		if(!newItem.stackable && getBelongings().getItem(newItem.getEntityKind())!=null) {
+		var supply = belongings.getItem(newItem.getEntityKind());
+
+		if(!newItem.stackable && supply != null) {
+			return;
+		}
+
+		if(newItem.stackable && supply != null && supply.price() > 100) {
 			return;
 		}
 

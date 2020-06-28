@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
@@ -232,6 +233,17 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 		}
 		return null;
+	}
+
+	public int countFood() {
+		int ret = 0;
+
+		for (Item item : backpack) {
+			if (item instanceof Food) {
+				ret+=item.quantity();
+			}
+		}
+		return ret;
 	}
 
 	public void countIronKeys() {
