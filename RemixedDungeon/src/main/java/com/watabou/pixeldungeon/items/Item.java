@@ -242,8 +242,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			return true;
 		}
 
+		if (owner == Dungeon.hero && owner.isAlive()) {
+			GLog.n(Game.getVar(R.string.Item_PackFull), name());
+		}
+
 		setOwner(CharsList.DUMMY);
-		GLog.n(Game.getVar(R.string.Item_PackFull), name());
+
 		return false;
 	}
 
