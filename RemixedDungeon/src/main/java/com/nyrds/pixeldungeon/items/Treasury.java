@@ -147,7 +147,7 @@ public class Treasury {
                     currentCategory.names.add(item);
                     currentCategory.probs.add((float) catData.getDouble(item));
                 } else {
-                    ModError.doReport(item,new Exception("Treasury: unknown item"));
+                    ModError.doReport(item,new Exception("Treasury: unknown item: "+ item));
                 }
             }
         }

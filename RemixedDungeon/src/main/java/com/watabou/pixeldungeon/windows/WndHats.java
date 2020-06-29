@@ -87,11 +87,14 @@ public class WndHats extends Window {
 
 		//List
 		for (final String item : hats) {
-			String price = RemixedDungeon.instance().iap.getSkuPrice(item);
 			Accessory accessory = Accessory.getByName(item);
+
+			String price;
 
 			if (accessory.haveIt()) {
 				price = Game.getVar(R.string.WndHats_Purchased);
+			} else {
+				price = RemixedDungeon.instance().iap.getSkuPrice(item);
 			}
 
 			//Image
