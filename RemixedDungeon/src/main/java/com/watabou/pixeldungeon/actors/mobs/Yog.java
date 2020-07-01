@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
@@ -54,6 +55,10 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+
+import lombok.var;
+
 public class Yog extends Boss {
 
 	public Yog() {
@@ -77,31 +82,25 @@ public class Yog extends Boss {
 
 	public void spawnFists() {
         String [] secondaryBossArray = {"RottingFist", "BurningFist", "YogsBrain", "YogsHeart", "YogsTeeth"};
-		String name1, name2, name3;
-		Mob fist1, fist2, fist3;
+        var names = new ArrayList<String>();
 
-		do{
-			name1 = Random.element(secondaryBossArray);
-			name2 = Random.element(secondaryBossArray);
-			name3 = Random.element(secondaryBossArray);
-		} while (name1.equals(name2) || name2.equals(name3) || name1.equals(name3));
+        int organsCount = Game.getDifficulty() > 2 ? 3 : 2;
 
-		fist1 = MobFactory.mobByName(name1);
-		fist2 = MobFactory.mobByName(name2);
-		fist3 = MobFactory.mobByName(name3);
+        do {
+			var candidate = Random.oneOf(secondaryBossArray);
+			if(!names.contains(candidate)) {
+				names.add(candidate);
+			}
+		} while (names.size() < organsCount);
 
-		do {
-			fist1.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
-			fist2.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
-			fist3.setPos(getPos() + Level.NEIGHBOURS8[Random.Int(8)]);
-		} while (!Dungeon.level.passable[fist1.getPos()] || !Dungeon.level.passable[fist2.getPos()] || !Dungeon.level.passable[fist3.getPos()] || fist1.getPos() == fist2.getPos() || fist2.getPos() == fist3.getPos() || fist1.getPos() == fist3.getPos());
-
-		Dungeon.level.spawnMob(fist1);
-		Dungeon.level.spawnMob(fist2);
-		if(Game.getDifficulty() > 2){
-			Dungeon.level.spawnMob(fist3);
+        for(var candidate:names) {
+        	var organ = MobFactory.mobByName(candidate);
+        	organ.setPos(level().getNearestTerrain(level().cellX(getPos()),
+					level().cellY(getPos()),
+					(level, cell) -> level.passable[cell] && Actor.findChar(cell) == null)
+			);
+        	level().spawnMob(organ);
 		}
-
 	}
 
 	@Override

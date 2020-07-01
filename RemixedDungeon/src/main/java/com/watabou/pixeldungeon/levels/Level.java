@@ -404,8 +404,6 @@ public abstract class Level implements Bundlable {
 	private static final String EXIT           = "exit";
 	private static final String HEAPS          = "heaps";
 
-	@Deprecated
-	private static final String PLANTS         = "plants";
 	private static final String MOBS           = "mobs";
 	private static final String BLOBS          = "blobs";
 	private static final String WIDTH          = "width";
@@ -652,11 +650,6 @@ public abstract class Level implements Bundlable {
 			heaps.put(heap.pos, heap);
 		}
 
-
-		///Pre 28.6 saves compatibility
-		for (Plant plant : bundle.getCollection(PLANTS, Plant.class)) {
-			putLevelObject(plant);
-		}
 
 		for (LevelObject object : bundle.getCollection(OBJECTS, LevelObject.class)) {
 			putLevelObject(object);
@@ -1585,22 +1578,18 @@ public abstract class Level implements Bundlable {
 		return minima;
 	}
 
-	public int getDistToNearestTerrain(int x, int y, int terr) {
-		return getDistToNearestTerrain(cell(x, y), terr);
-	}
+	public interface cellCondition {
+		boolean pass(Level level, int cell);
+	};
 
-	public int getNearestTerrain(int x, int y, int terr) {
-		return getNearestTerrain(x, y, terr, INVALID_CELL);
-	}
-
-	public int getNearestTerrain(int x, int y, int terr, int ignoreCell) {
+	public int getNearestTerrain(int x, int y, cellCondition condition) {
 		int minima = getLength();
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		int cell = cell(x, y);
 		for (int i = 0; i < getLength(); i++) {
-			if (i != ignoreCell && map[i] == terr) {
+			if (condition.pass(this, i)) {
 				int delta = distance(cell, i);
 
 				if(delta < minima) {
@@ -1617,7 +1606,7 @@ public abstract class Level implements Bundlable {
 		return oneCellFrom(candidates);
 	}
 
-	private int oneCellFrom(ArrayList<Integer> candidates) {
+	private int oneCellFrom(@NotNull ArrayList<Integer> candidates) {
 		if (!candidates.isEmpty()) {
 			return Random.element(candidates);
 		}
