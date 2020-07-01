@@ -369,7 +369,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		setLevelKnown(true);
 		setCursedKnown(true);
 
-		Library.identify(Library.ITEM,getClassName());
+		Library.identify(Library.ITEM,getEntityKind());
 
 		return this;
 	}
