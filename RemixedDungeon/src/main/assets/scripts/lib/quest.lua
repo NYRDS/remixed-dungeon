@@ -80,6 +80,7 @@ quest.mobDied = function(mob,cause)
 
     for questName,_ in pairs(affectedQuests) do
         local state = quest.state(questName)
+        state.kills = state.kills or {}
         state.kills[kind] = (state.kills[kind] or 0) + 1
 
         if conditionsList.debug then
