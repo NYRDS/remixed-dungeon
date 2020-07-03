@@ -220,4 +220,9 @@ public class Shopkeeper extends NPC {
 		super.restoreFromBundle(bundle);
 		belongings.restoreFromBundle(bundle);
 	}
+
+	@Override
+	public boolean useBags() {
+		return false;
+	}
 }

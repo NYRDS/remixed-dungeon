@@ -253,14 +253,14 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         item(quickslotItem);
     }
 
-    public static void refresh() {
-        Game.pushUiTask(() -> {
-            if(Dungeon.hero != null) {
-                for (QuickSlot slot : slots) {
-                    slot.refreshSelf();
-                }
-            }
-        });
+    private static boolean refreshRequested;
+
+    public static void refresh(Char owner) {
+        if(owner!=Dungeon.hero) {
+            return;
+        }
+
+        refreshRequested = true;
     }
 
     public static void target(Item item, Char target) {
@@ -343,7 +343,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                 selectItem(ItemFactory.itemByName(classes[i]).quickSlotContent(), i);
             }
         }
-        refresh();
+        refresh(Dungeon.hero);
     }
 
     public static void selectItem(Item object, int n) {
@@ -360,15 +360,15 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     public void onSelect(Item item, Char selector) {
         if (item != null) {
             quickslotItem(item.quickSlotContent());
-            refresh();
+            refresh(selector);
         }
     }
 
     @Override
-    public void onSelect(Spell.SpellItem spell) {
+    public void onSelect(Spell.SpellItem spell, Char hero) {
         if (spell != null) {
             quickslotItem(spell);
-            refresh();
+            refresh(hero);
         }
     }
 
@@ -393,5 +393,19 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     public Item getQuickslotItem() {
         return quickslotItem;
+    }
+
+    @Override
+    public void update() {
+        super.update();
+
+        if(refreshRequested) {
+            if(Dungeon.hero != null) {
+                for (QuickSlot slot : slots) {
+                    slot.refreshSelf();
+                }
+            }
+            refreshRequested = false;
+        }
     }
 }

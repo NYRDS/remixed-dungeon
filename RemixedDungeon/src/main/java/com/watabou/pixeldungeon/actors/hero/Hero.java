@@ -386,7 +386,7 @@ public class Hero extends Char {
 			}
 		}
 
-		QuickSlot.refresh();
+		QuickSlot.refresh(this);
 
 		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1, -hasteLevel)));
 	}
@@ -1697,7 +1697,7 @@ public class Hero extends Char {
 	@LuaInterface
 	public void setSkillPoints(int points) {
 		sp = Scrambler.scramble(Math.max(0,Math.min(points, getSkillPointsMax())));
-		QuickSlot.refresh();
+		QuickSlot.refresh(this);
 	}
 
 	@LuaInterface
@@ -1760,7 +1760,7 @@ public class Hero extends Char {
 	@Override
 	public boolean collect(@NotNull Item item) {
 		if(super.collect(item)) {
-			QuickSlot.refresh();
+			QuickSlot.refresh(this);
 			return true;
 		}
 		return false;

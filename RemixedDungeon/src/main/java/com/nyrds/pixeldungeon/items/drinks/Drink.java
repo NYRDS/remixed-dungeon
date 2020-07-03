@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items.drinks;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
 
 import java.util.ArrayList;
 
@@ -32,5 +33,10 @@ abstract public class Drink extends Item {
 	@Override
 	public boolean isIdentified() {
 		return true;
+	}
+
+	@Override
+	public String bag() {
+		return PotionBelt.class.getSimpleName();
 	}
 }

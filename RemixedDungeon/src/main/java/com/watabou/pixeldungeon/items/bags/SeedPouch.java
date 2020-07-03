@@ -17,23 +17,14 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
-import org.jetbrains.annotations.NotNull;
 
 public class SeedPouch extends Bag {
 
 	{
 		image = ItemSpriteSheet.POUCH;
 	}
-	
-	@Override
-	public boolean grab(@NotNull Item item ) {
-		return super.grab(item) || item instanceof Seed;
-	}
-	
+
 	@Override
 	public int price() {
 		return 50;

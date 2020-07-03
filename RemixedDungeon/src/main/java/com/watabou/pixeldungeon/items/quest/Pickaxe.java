@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -39,7 +40,6 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -63,7 +63,8 @@ public class Pickaxe extends Weapon {
 		MAX = 12;
 		animation_class = SWORD_ATTACK;
 	}
-	
+
+	@Packable
 	public boolean bloodStained = false;
 	
 	@Override
@@ -139,26 +140,10 @@ public class Pickaxe extends Weapon {
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		if (!bloodStained && defender instanceof Bat && (defender.hp() <= damage)) {
 			bloodStained = true;
-            QuickSlot.refresh();
+            QuickSlot.refresh(attacker);
         }
 	}
-	
-	private static final String BLOODSTAINED = "bloodStained";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		
-		bundle.put( BLOODSTAINED, bloodStained );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		
-		bloodStained = bundle.getBoolean( BLOODSTAINED );
-	}
-	
+
 	@Override
 	public Glowing glowing() {
 		return bloodStained ? BLOODY : null;

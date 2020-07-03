@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -111,30 +110,27 @@ public class WandOfMagicMissile extends SimpleWand  {
 		return Game.getVar(R.string.WandOfMagicMissile_Info);
 	}
 	
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect(Item item, Char selector) {
-			if (item != null) {
-				
-				Sample.INSTANCE.play( Assets.SND_EVOKE );
-				ScrollOfUpgrade.upgrade( selector );
-				ItemUtils.evoke( selector );
-				
-				GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
-				
-				item.upgrade();
-				selector.spendAndNext( TIME_TO_DISENCHANT );
-				
-				Badges.validateItemLevelAcquired( item );
-				
+	private final WndBag.Listener itemSelector = (item, selector) -> {
+		if (item != null) {
+
+			Sample.INSTANCE.play( Assets.SND_EVOKE );
+			ScrollOfUpgrade.upgrade( selector );
+			ItemUtils.evoke( selector );
+
+			GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
+
+			item.upgrade();
+			selector.spendAndNext( TIME_TO_DISENCHANT );
+
+			Badges.validateItemLevelAcquired( item );
+
+		} else {
+			if (equipedTo != Belongings.Slot.NONE) {
+				selector.getBelongings().equip(WandOfMagicMissile.this, equipedTo);
 			} else {
-				if (equipedTo != Belongings.Slot.NONE) {
-					selector.getBelongings().equip(WandOfMagicMissile.this, equipedTo);
-				} else {
-					collect( selector.getBelongings().backpack );
-				}
+				collect( selector.getBelongings().backpack );
 			}
-			QuickSlot.refresh();
 		}
+		QuickSlot.refresh(selector);
 	};
 }

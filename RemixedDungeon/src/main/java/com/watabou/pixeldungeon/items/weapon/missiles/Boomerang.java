@@ -55,8 +55,6 @@ public class Boomerang extends MissileWeapon {
 		MAX += 2;
 		super.upgrade( enchant );
 
-        QuickSlot.refresh();
-
         return this;
 	}
 	
@@ -100,7 +98,7 @@ public class Boomerang extends MissileWeapon {
 					} else {
 						owner.collect(this);
 					}
-					QuickSlot.refresh();
+					QuickSlot.refresh(owner);
 				});
 	}
 	

@@ -17,38 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.nyrds.pixeldungeon.utils.CharsList;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
-import org.jetbrains.annotations.NotNull;
 
 public class WandHolster extends Bag {
 
 	{
 		image = ItemSpriteSheet.HOLSTER;
-	}
-	
-	@Override
-	public boolean grab(@NotNull Item item ) {
-		return super.grab(item) || item instanceof Wand;
-	}
-	
-	@Override
-	public boolean collect(@NotNull Bag container ) {
-		if (super.collect( container )) {
-			if (getOwner() != CharsList.DUMMY) {
-				for (Item item : items) {
-					if(item instanceof Wand) {
-						((Wand) item).charge(getOwner());
-					}
-				}
-			}
-			return true;
-		} else {
-			return false;
-		}
 	}
 
 	@Override

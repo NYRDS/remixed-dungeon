@@ -227,7 +227,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		for (Item item : backpack) {
 			if (item instanceof Key && item.getClass() == kind) {
 				Key key = (Key) item;
-				if (levelId.equals(key.levelId) || (Utils.UNKNOWN.equals(key.levelId) && key.depth == depth)) {
+				if (levelId.equals(key.levelId) || (Utils.UNKNOWN.equals(key.levelId) && key.getDepth() == depth)) {
 					return (T) item;
 				}
 			}
@@ -330,7 +330,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		for (Item item : backpack.items.toArray(new Item[0])) {
 			if (item instanceof Key) {
-				if (((Key) item).depth == depth) {
+				if (((Key) item).getDepth() == depth) {
 					item.detachAll(backpack);
 				}
 			} else if (item instanceof Amulet) {
@@ -355,7 +355,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 					wand.curCharges(full ? wand.maxCharges() : wand.curCharges() + 1);
 					count++;
 
-					QuickSlot.refresh();
+					QuickSlot.refresh(owner);
 				}
 			}
 		}
@@ -369,7 +369,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				Wand wand = (Wand)item;
 				if (wand.curCharges() > 0) {
 					wand.curCharges(wand.curCharges() - 1);
-					QuickSlot.refresh();
+					QuickSlot.refresh(owner);
 				}
 			}
 		}
@@ -586,7 +586,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		activateEquippedItems();
 		blockSlots();
-		QuickSlot.refresh();
+		QuickSlot.refresh(owner);
 		owner.updateSprite();
 
 		owner.spendAndNext(item.time2equip(owner));

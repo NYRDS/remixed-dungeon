@@ -345,9 +345,10 @@ public class WandMaker extends NPC {
 			public boolean collect(@NotNull Bag container ) {
 				if (super.collect( container )) {
 
-					Dungeon.challengeAllMobs(Dungeon.hero,Assets.SND_CHALLENGE);
-					
-					GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
+					Dungeon.challengeAllMobs(getOwner(), Assets.SND_CHALLENGE);
+					if(getOwner()==Dungeon.hero) {
+						GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
+					}
 					return true;
 				} else {
 					return false;

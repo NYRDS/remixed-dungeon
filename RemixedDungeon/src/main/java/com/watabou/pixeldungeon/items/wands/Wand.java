@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
@@ -28,7 +29,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -38,6 +38,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.rings.RingOfPower.Power;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -66,6 +67,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	private Charger charger;
 
+	@Packable
 	private boolean curChargeKnown = false;
 
 	protected boolean hitChars    = true;
@@ -183,7 +185,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public void charge(Char owner) {
-		(charger = new Charger()).attachTo(owner);
+		(charger = new Charger(this)).attachTo(owner);
 	}
 
 	@Override
@@ -226,7 +228,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		curChargeKnown = true;
 		super.identify();
 
-        QuickSlot.refresh();
+        QuickSlot.refresh(getOwner());
 
         return this;
 	}
@@ -289,8 +291,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		maxCharges(Math.max(Math.min(maxCharges()+1, 9),maxCharges()));
 		curCharges(Math.max(curCharges(), maxCharges()));
 
-        QuickSlot.refresh();
-
         return this;
 	}
 
@@ -300,8 +300,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		maxCharges(Math.max(maxCharges()-1, 0));
 		curCharges(Math.min(curCharges(), maxCharges()));
-
-        QuickSlot.refresh();
 
         return this;
 	}
@@ -324,7 +322,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	protected void wandUsed() {
 		curCharges(curCharges() - 1);
-        QuickSlot.refresh();
+        QuickSlot.refresh(getOwner());
 
         getOwner().spendAndNext(TIME_TO_ZAP);
 	}
@@ -347,33 +345,17 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	@Override
 	public int price() {
-		int price = 50;
-		if (isCursed() && isCursedKnown()) {
-			price /= 2;
-		}
-		if (isLevelKnown()) {
-			if (level() > 0) {
-				price *= (level() + 1);
-			} else if (level() < 0) {
-				price /= (1 - level());
-			}
-		}
-		if (price < 1) {
-			price = 1;
-		}
-		return price;
+		return adjustPrice(50);
 	}
 
 	private static final String MAX_CHARGES = "maxCharges";
 	private static final String CUR_CHARGES = "curCharges";
-	private static final String CUR_CHARGE_KNOWN = "curChargeKnown";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		bundle.put(MAX_CHARGES, maxCharges());
 		bundle.put(CUR_CHARGES, curCharges());
-		bundle.put(CUR_CHARGE_KNOWN, curChargeKnown);
 	}
 
 	@Override
@@ -381,7 +363,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		super.restoreFromBundle(bundle);
 		maxCharges(bundle.getInt(MAX_CHARGES));
 		curCharges(bundle.getInt(CUR_CHARGES));
-		curChargeKnown = bundle.getBoolean(CUR_CHARGE_KNOWN);
 	}
 
 	protected void wandEffect(final int cell, Char selector) {
@@ -408,7 +389,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 				identify();
 			}
 
-            QuickSlot.refresh();
+            QuickSlot.refresh(getOwner());
         }
 
 	}
@@ -456,43 +437,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		this.maxCharges = Scrambler.scramble(maxCharges);
 	}
 
-	protected class Charger extends Buff {
-		private static final float TIME_TO_CHARGE = 40f;
-
-		@Override
-		public boolean dontPack(){
-			return true;
-		}
-
-		@Override
-		public boolean attachTo(Char target) {
-			super.attachTo(target);
-			delay();
-
-			return true;
-		}
-
-		@Override
-		public boolean act() {
-
-			if (curCharges() < maxCharges()) {
-				curCharges(curCharges() + 1);
-                QuickSlot.refresh();
-            }
-
-			delay();
-
-			return true;
-		}
-
-		protected void delay() {
-			float time2charge = target.getHeroClass() == HeroClass.MAGE ? TIME_TO_CHARGE
-					/ (float) Math.sqrt(1 + effectiveLevel())
-					: TIME_TO_CHARGE;
-			spend(time2charge);
-		}
-	}
-
 	public boolean affectTarget() {
 		return true;
 	}
@@ -530,5 +474,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.LEFT_HAND;
+	}
+
+	@Override
+	public String bag() {
+		return WandHolster.class.getSimpleName();
 	}
 }

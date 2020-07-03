@@ -42,7 +42,7 @@ public class GnollTamahawk extends Tamahawk {
         if (enemy != null && enemy != thrower) {
             thrower.shoot( enemy, this );
         }
-        dropTo( cell );
+        dropTo( cell, thrower);
     }
 
     @Override

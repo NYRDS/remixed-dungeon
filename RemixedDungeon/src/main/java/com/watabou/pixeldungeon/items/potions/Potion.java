@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -407,5 +408,10 @@ public class Potion extends Item implements UnknownItem {
 			return super.overlayIndex();
 		}
 		return labelIndex;
+	}
+
+	@Override
+	public String bag() {
+		return PotionBelt.class.getSimpleName();
 	}
 }

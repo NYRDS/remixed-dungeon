@@ -1282,4 +1282,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void setViewDistance(int viewDistance) {
         this.viewDistance = viewDistance;
     }
+
+	@Override
+	public boolean useBags() {
+		return true;
+	}
+
+	@LuaInterface
+	boolean canStepOn() {
+    	return walkingType.canSpawnAt(level(),getPos()) && (Actor.findChar(pos) == null);
+	}
 }

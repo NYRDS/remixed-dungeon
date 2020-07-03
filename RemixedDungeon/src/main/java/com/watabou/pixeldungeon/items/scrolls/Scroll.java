@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
+import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -218,5 +219,10 @@ public abstract class Scroll extends Item implements UnknownItem {
 	@Override
 	public Item burn(int cell){
 		return null;
+	}
+
+	@Override
+	public String bag() {
+		return ScrollHolder.class.getSimpleName();
 	}
 }

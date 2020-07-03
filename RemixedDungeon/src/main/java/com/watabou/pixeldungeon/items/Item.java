@@ -193,12 +193,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	protected void onThrow(int cell, Char thrower) {
-		dropTo(cell);
+		dropTo(cell, thrower);
 	}
 
-	public void dropTo(int cell) {
+	public void dropTo(int cell, Char thrower) {
 		if(quickSlotIndex!=-1) {
-			QuickSlot.refresh();
+			QuickSlot.refresh(thrower);
 		}
 
 		Dungeon.level.animatedDrop(this, cell);
@@ -220,11 +220,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 
 		if (stackable) {
-			String c = getClassName();
 			for (Item item : items) {
-				if (item.getClassName().equals(c) && item.level() == level()) {
+				if (item.getEntityKind().equals(getEntityKind()) && item.level() == level()) {
 					item.quantity(item.quantity() + quantity());
-					QuickSlot.refresh();
+					QuickSlot.refresh(getOwner());
 					return true;
 				}
 			}
@@ -236,7 +235,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 			if (owner == Dungeon.hero && owner.isAlive()) {
 				Badges.validateItemLevelAcquired(this);
-				QuickSlot.refresh();
+				QuickSlot.refresh(getOwner());
 			}
 
 			return true;
@@ -270,7 +269,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			} else {
 				quantity(quantity() - n);
 				if(container.getOwner() instanceof Hero) {
-					QuickSlot.refresh();
+					QuickSlot.refresh(getOwner());
 				}
 
 				Item detached = ItemFactory.itemByName(getClassName());
@@ -283,14 +282,11 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public final Item detachAll(@NotNull Bag container) {
-
 		for (Item item : container.items) {
 			if (item == this) {
 				container.items.remove(this);
 				item.onDetach();
-				if(container.getOwner() instanceof Hero) {
-					QuickSlot.refresh();
-				}
+				QuickSlot.refresh(getOwner());
 				return this;
 			} else if (item instanceof Bag) {
 				Bag bag = (Bag) item;
@@ -299,7 +295,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 				}
 			}
 		}
-		QuickSlot.refresh();
+		QuickSlot.refresh(getOwner());
 		return this;
 	}
 
@@ -311,6 +307,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		setCursed(false);
 		setCursedKnown(true);
 		this.level(this.level() + 1);
+
+		QuickSlot.refresh(getOwner());
 
 		return this;
 	}
@@ -324,8 +322,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public Item degrade() {
-
 		this.level(this.level() - 1);
+
+		QuickSlot.refresh(owner);
 
 		return this;
 	}
@@ -361,7 +360,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			hero.getBelongings().removeItem(this);
 		}
 
-		QuickSlot.refresh();
+		QuickSlot.refresh(hero);
 	}
 
 	public Item identify() {
@@ -441,6 +440,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			} else if (level() < 0) {
 				price /= (1 - level());
 			}
+		}
+
+		if (price < 1) {
+			price = 1;
 		}
 
 		return price;

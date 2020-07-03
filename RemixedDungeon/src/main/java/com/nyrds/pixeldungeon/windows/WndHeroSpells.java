@@ -10,6 +10,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -71,14 +72,14 @@ public class WndHeroSpells extends Window {
 
     public void onSpellClick(Spell spell){
         if (listener != null) {
-            listener.onSelect(spell.itemForSlot());
+            listener.onSelect(spell.itemForSlot(), hero);
         } else {
             GameScene.show(new WndSpellInfo(this, hero, spell));
         }
     }
 
     public interface Listener {
-        void onSelect(Spell.SpellItem spell);
+        void onSelect(Spell.SpellItem spell, Char selector);
     }
 
 }

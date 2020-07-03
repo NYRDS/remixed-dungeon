@@ -43,7 +43,14 @@ public class Dewdrop extends Item {
 	public boolean doPickUp(@NotNull Char hero ) {
 		boolean collected = false;
 
-		if(hero.hp() < hero.ht()) {
+		DewVial vial = hero.getBelongings().getItem( DewVial.class );
+
+		if (vial != null && !vial.isFull()) {
+			vial.collectDew( this );
+			collected = true;
+		}
+
+		if(!collected && hero.hp() < hero.ht()) {
 			final int[] value = {1 + (Dungeon.depth - 1) / 5};
 
 			hero.forEachBuff(b-> value[0] +=b.dewBonus());
@@ -54,13 +61,6 @@ public class Dewdrop extends Item {
 				hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				collected = true;
 			}
-		}
-
-		DewVial vial = hero.getBelongings().getItem( DewVial.class );
-
-		if (!collected && vial != null && !vial.isFull()) {
-			vial.collectDew( this );
-			collected = true;
 		}
 
 		if (collected) {

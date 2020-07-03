@@ -89,7 +89,7 @@ public class DewVial extends Item {
 				Sample.INSTANCE.play( Assets.SND_DRINK );
 				chr.getSprite().operate( chr.getPos() );
 
-                QuickSlot.refresh();
+                QuickSlot.refresh(chr);
 
             } else {
 				GLog.w( Game.getVar(R.string.DewVial_Empty) );
@@ -114,7 +114,7 @@ public class DewVial extends Item {
 		return getVolume() >= MAX_VOLUME;
 	}
 	
-	public void collectDew( Dewdrop dew ) {
+	public void collectDew(@NotNull Dewdrop dew ) {
 		
 		GLog.i( Game.getVar(R.string.DewVial_Collected) );
 		setVolume(getVolume() + dew.quantity());
@@ -123,15 +123,15 @@ public class DewVial extends Item {
 			GLog.p( Game.getVar(R.string.DewVial_Full) );
 		}
 
-        QuickSlot.refresh();
+        QuickSlot.refresh(getOwner());
     }
 	
 	public void fill() {
 		setVolume(MAX_VOLUME);
-        QuickSlot.refresh();
+        QuickSlot.refresh(getOwner());
     }
 	
-	public static void autoDrink( Hero hero ) {
+	public static void autoDrink(@NotNull Hero hero ) {
 		DewVial vial = hero.getBelongings().getItem( DewVial.class );
 		if (vial != null && vial.isFull()) {
 

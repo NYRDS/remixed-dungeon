@@ -24,11 +24,4 @@ public class SkeletonKey extends Key {
 	{
 		image = ItemSpriteSheet.SKELETON_KEY;
 	}
-
-	static public SkeletonKey makeNewKey(String levelId, int depth) {
-		SkeletonKey key = new SkeletonKey();
-		key.levelId = levelId;
-		key.depth = depth;
-		return key;
-	}
 }

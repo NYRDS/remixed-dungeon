@@ -108,7 +108,7 @@ public class ShortSword extends MeleeWeapon {
 					collect( selector.getBelongings().backpack );
 				}
 			}
-			QuickSlot.refresh();
+			QuickSlot.refresh(selector);
 		}
 	};
 }

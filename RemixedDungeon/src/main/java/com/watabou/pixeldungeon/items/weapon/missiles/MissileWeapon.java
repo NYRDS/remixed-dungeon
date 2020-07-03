@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -169,5 +170,10 @@ public class MissileWeapon extends Weapon {
 	@Override
 	public String getVisualName() {
 		return "none";
+	}
+
+	@Override
+	public String bag() {
+		return Quiver.class.getSimpleName();
 	}
 }
