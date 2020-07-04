@@ -6,6 +6,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ShamanArmor extends ElfArmor {
 
 	public ShamanArmor()
@@ -16,7 +18,7 @@ public class ShamanArmor extends ElfArmor {
 		coverHair = true;
 	}	
 	@Override
-	public boolean doEquip(Char hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		if (hero.getSubClass() == HeroSubClass.SHAMAN) {
 			return super.doEquip( hero );
 		} else {

@@ -97,7 +97,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void activate(Char ch) {
+    public void activate(@NotNull Char ch) {
         super.activate(ch);
         script.run("activate", ch);
     }

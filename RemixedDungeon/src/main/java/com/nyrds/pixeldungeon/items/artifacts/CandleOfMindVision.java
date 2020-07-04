@@ -9,6 +9,8 @@ import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CandleOfMindVision extends Artifact implements IActingItem {
 
 	private static final String CHARGES   = "charges";
@@ -48,7 +50,7 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 	}
 
 	@Override
-	public boolean doEquip(Char hero) {
+	public boolean doEquip(@NotNull Char hero) {
 		boolean ret = super.doEquip(hero);
 		
 		if(ret) {

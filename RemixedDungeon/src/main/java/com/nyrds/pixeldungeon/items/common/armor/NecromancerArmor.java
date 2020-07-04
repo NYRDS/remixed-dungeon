@@ -44,7 +44,7 @@ public class NecromancerArmor extends ClassArmor {
 	}
 	
 	@Override
-	public boolean doEquip(Char hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		if (hero.getHeroClass() == HeroClass.NECROMANCER) {
 			return super.doEquip( hero );
 		} else {

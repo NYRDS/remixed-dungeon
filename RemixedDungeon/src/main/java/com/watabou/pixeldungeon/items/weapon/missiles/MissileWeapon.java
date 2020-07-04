@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class MissileWeapon extends Weapon {
@@ -98,7 +100,7 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	@Override
-	public boolean doEquip( final Char hero ) {
+	public boolean doEquip(@NotNull final Char hero ) {
 		if(notUsableInMelee()) {
 			GameScene.show(
 					new WndOptions(Game.getVar(R.string.MissileWeapon_Missiles),

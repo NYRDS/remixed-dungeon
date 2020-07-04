@@ -34,7 +34,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         super(defName, kind);
     }
 
-    public static HeroSpriteDef createHeroSpriteDef(EquipableItem item) {
+    public static HeroSpriteDef createHeroSpriteDef(@NotNull EquipableItem item) {
         return new ModernHeroSpriteDef(item);
     }
 

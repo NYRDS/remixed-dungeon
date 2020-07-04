@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import lombok.val;
 
 public class ArmoredStatue extends Statue {
@@ -42,7 +44,8 @@ public class ArmoredStatue extends Statue {
 	}
 
 
-	@Override
+	@NotNull
+    @Override
 	public EquipableItem getItem() {
 		if(getBelongings().armor == CharsList.DUMMY_ITEM) {
 			Item armorCandidate;

@@ -6,6 +6,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class FreeRunnerArmor extends RogueArmor {
 
 	{
@@ -14,7 +16,7 @@ public class FreeRunnerArmor extends RogueArmor {
 		hasHelmet = true;
 	}
 	@Override
-	public boolean doEquip(Char hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		if (hero.getSubClass() == HeroSubClass.FREERUNNER) {
 			return super.doEquip( hero );
 		} else {

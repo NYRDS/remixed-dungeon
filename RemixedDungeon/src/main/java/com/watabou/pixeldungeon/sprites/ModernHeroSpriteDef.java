@@ -90,7 +90,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		applyLayersDesc(lookDesc);
 	}
 
-	public ModernHeroSpriteDef(EquipableItem item){
+	public ModernHeroSpriteDef(@NotNull EquipableItem item){
 		super(HERO_MODERN_SPRITES_DESC_STATUE_JSON,0);
 		createStatueSprite(item);
 		applyLayersDesc(getLayersDesc());
@@ -184,7 +184,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
 	}
 
-	private void createStatueSprite(EquipableItem item) {
+	private void createStatueSprite(@NotNull EquipableItem item) {
 		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
 

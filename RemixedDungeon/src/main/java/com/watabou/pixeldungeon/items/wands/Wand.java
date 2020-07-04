@@ -149,7 +149,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public void activate(Char chr) {
+	public void activate(@NotNull Char chr) {
 		super.activate(chr);
 		charge(chr);
 	}

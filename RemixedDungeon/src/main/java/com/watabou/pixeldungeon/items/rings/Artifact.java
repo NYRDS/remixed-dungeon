@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class Artifact extends EquipableItem {
@@ -29,7 +30,7 @@ public class Artifact extends EquipableItem {
 		}
 	}
 
-	public void activate(Char ch) {
+	public void activate(@NotNull Char ch) {
 		super.activate(ch);
 		buff = buff();
 		if (buff != null) {

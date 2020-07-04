@@ -45,6 +45,8 @@ import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import lombok.val;
 
 public class Statue extends Mob {
@@ -118,6 +120,7 @@ public class Statue extends Mob {
 		return HeroSpriteDef.createHeroSpriteDef(getItem());
 	}
 
+	@NotNull
 	public EquipableItem getItem() {
 		if(getBelongings().weapon==CharsList.DUMMY_ITEM) {
 			Item weaponCandidate;
@@ -125,6 +128,7 @@ public class Statue extends Mob {
 				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
 			} while (!(weaponCandidate instanceof EquipableItem)
 					||!(((EquipableItem) weaponCandidate).goodForMelee())
+					|| !ItemUtils.usableAsWeapon((EquipableItem) weaponCandidate)
 					|| weaponCandidate.level() < 0
 					|| weaponCandidate instanceof MissileWeapon
 			);

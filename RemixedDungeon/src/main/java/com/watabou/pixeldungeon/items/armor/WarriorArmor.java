@@ -57,7 +57,7 @@ public class WarriorArmor extends ClassArmor {
 	}
 	
 	@Override
-	public boolean doEquip(Char hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		if (hero.getHeroClass() == HeroClass.WARRIOR) {
 			return super.doEquip( hero );
 		} else {

@@ -81,12 +81,12 @@ public abstract class EquipableItem extends Item {
 		return actions;
 	}
 
-	public boolean doEquip(Char hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		Belongings belongings = hero.getBelongings();
 		return belongings.equip(this, slot(belongings));
 	}
 
-	public void activate(Char ch) {
+	public void activate(@NotNull Char ch) {
 		equipedTo = ch.getBelongings().usedSlots.get(this);
 		if(equipedTo==null) {
 			equipedTo = Belongings.Slot.NONE;

@@ -10,6 +10,8 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class GoldenStatue extends Statue {
 
 	public GoldenStatue() {
@@ -22,7 +24,8 @@ public class GoldenStatue extends Statue {
 		return Utils.format(Game.getVar(R.string.GoldenStatue_Desc), getItem().name());
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public EquipableItem getItem() {
 		if(getBelongings().weapon == CharsList.DUMMY_ITEM) {
 			Weapon weapon = new GoldenSword();
