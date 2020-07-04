@@ -367,7 +367,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
-	public static boolean hit(Char attacker, Char defender, boolean magic) {
+	public static boolean hit(@NotNull Char attacker, Char defender, boolean magic) {
 		if(attacker.invisible>0) {
 			return true;
 		}

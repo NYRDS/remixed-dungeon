@@ -206,7 +206,7 @@ public class Dungeon {
     }
 
     @NotNull
-    public static Level newLevel(Position pos) {
+    public static Level newLevel(@NotNull Position pos) {
         try {
             loading.incrementAndGet();
             updateStatistics();
@@ -489,9 +489,9 @@ public class Dungeon {
                 current.levelId);
     }
 
-    public synchronized static void save() {
+    public synchronized static void save(boolean force) {
 
-        if (SystemTime.now() - lastSaveTimestamp < 1000) {
+        if (!force && SystemTime.now() - lastSaveTimestamp < 1000) {
             return;
         }
 

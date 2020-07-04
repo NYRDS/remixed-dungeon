@@ -17,7 +17,6 @@ import com.watabou.noosa.InterstitialPoint;
 
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
-	private static final String GOOGLE_REWARD_VIDEO = "google_reward_video";
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
 
@@ -47,12 +46,8 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	private class RewardVideoAdListener implements RewardedVideoAdListener {
 
-		private boolean videoCompleted = false;
-
 		@Override
-		public void onRewardedVideoAdLoaded() {
-			videoCompleted = false;
-		}
+		public void onRewardedVideoAdLoaded() { }
 
 		@Override
 		public void onRewardedVideoAdOpened() { }
@@ -63,16 +58,16 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 		@Override
 		public void onRewardedVideoAdClosed() {
 			Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
-			Game.pushUiTask(() -> returnTo.returnToWork(videoCompleted));
 		}
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
-			videoCompleted = true;
+			returnTo.returnToWork(true);
 		}
 
 		@Override
 		public void onRewardedVideoAdLeftApplication() {
+			returnTo.returnToWork(true);
 		}
 
 		@Override
@@ -80,9 +75,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 		}
 
 		@Override
-		public void onRewardedVideoCompleted() {
-			videoCompleted = true;
-		}
+		public void onRewardedVideoCompleted() {}
 	}
 
 }

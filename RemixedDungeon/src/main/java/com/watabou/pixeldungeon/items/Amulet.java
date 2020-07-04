@@ -73,7 +73,7 @@ public class Amulet extends Item {
 	}
 	
 	private void showAmuletScene( boolean showText ) {
-		Dungeon.save();
+		Dungeon.save(false);
 		AmuletScene.noText = !showText;
 		Game.switchScene( AmuletScene.class );
 	}

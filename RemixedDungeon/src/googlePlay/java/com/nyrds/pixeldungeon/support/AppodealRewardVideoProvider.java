@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider {
 
     private static InterstitialPoint returnTo;
-    private static boolean firstLoad = true;
 
     public static void init() {
 
@@ -23,16 +22,10 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoLoaded(boolean b) {
-                    if(firstLoad) {
-                        firstLoad = false;
-                    }
                 }
 
                 @Override
                 public void onRewardedVideoFailedToLoad() {
-                    if(firstLoad) {
-                        firstLoad = false;
-                    }
                 }
 
                 @Override
@@ -45,8 +38,8 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
                 }
 
                 @Override
-                public void onRewardedVideoFinished(double v, String s) {
-
+                public void onRewardedVideoFinished(double amount, String name) {
+                    returnTo.returnToWork(true);
                 }
 
                 @Override
@@ -60,6 +53,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoClicked() {
+                    returnTo.returnToWork(true);
                 }
             });
         });

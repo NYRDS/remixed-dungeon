@@ -337,7 +337,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
         if (keyCode == Keys.VOLUME_DOWN || keyCode == Keys.VOLUME_UP) {
-            return super.onKeyUp(keyCode, event);
+            return super.onKeyDown(keyCode, event);
         }
 
         synchronized (keysEvents) {

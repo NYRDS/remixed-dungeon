@@ -20,6 +20,7 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 public class ServiceManNPC extends ImmortalNPC {
 
     private static final int BASIC_GOLD_REWARD = 150;
+
     @Packable
     private static int filmsSeen = 0;
 
@@ -87,5 +88,4 @@ public class ServiceManNPC extends ImmortalNPC {
     public static void resetLimit() {
         filmsSeen = 0;
     }
-
 }

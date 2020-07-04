@@ -437,7 +437,7 @@ public class GameScene extends PixelScene {
     @Override
     public synchronized void pause() {
         if(!Game.softPaused) {
-            Dungeon.save();
+            Dungeon.save(false);
         }
     }
 

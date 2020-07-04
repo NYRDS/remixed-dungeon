@@ -34,6 +34,7 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -159,6 +160,9 @@ public class Hero extends Char {
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int controlTargetId;
+
+	@Packable
+	public static boolean movieRewardPending;
 
 	public Armor.Glyph killerGlyph = null;
 
@@ -1047,6 +1051,12 @@ public class Hero extends Char {
 		if (doOnNextAction != null) {
 			doOnNextAction.run();
 			doOnNextAction = null;
+			return false;
+		}
+
+		if(movieRewardPending) {
+			new MovieRewardTask(true).run();
+			movieRewardPending = false;
 			return false;
 		}
 

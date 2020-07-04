@@ -58,7 +58,7 @@ class AdsUtilsCommon {
     private static void tryNextRewardVideo(final InterstitialPoint retTo) {
         final IRewardVideoProvider chosenProvider = choseLessFailedFrom(AdsUtils.rewardVideoFails, Integer.MAX_VALUE);
 
-        AppodealAdapter.logEcpm(Appodeal.REWARDED_VIDEO, chosenProvider instanceof AppodealInterstitialProvider);
+        AppodealAdapter.logEcpm(Appodeal.REWARDED_VIDEO, chosenProvider instanceof AppodealRewardVideoProvider);
 
         if(chosenProvider!=null) {
             Game.instance().runOnUiThread(() -> chosenProvider.showRewardVideo(retTo));

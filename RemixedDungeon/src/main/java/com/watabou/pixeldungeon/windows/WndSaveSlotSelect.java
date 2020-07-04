@@ -284,7 +284,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
     protected void onSelect(int index) {
         if (saving) {
-            Dungeon.save();
+            Dungeon.save(false);
             slot = SaveUtils.buildSlotFromTag(slotNameFromIndex(index));
             SaveUtils.copySaveToSlot(slot, Dungeon.heroClass);
         }
