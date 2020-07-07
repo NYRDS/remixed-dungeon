@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
@@ -55,12 +54,7 @@ public class Thief extends Mob {
 	protected float _attackDelay() {
 		return 0.5f;
 	}
-	
-	@Override
-	public void die(NamedEntityKind cause) {
-		super.die( cause );
-	}
-	
+
 	@Override
 	public int attackSkill( Char target ) {
 		return 12;

@@ -71,6 +71,9 @@ public class PlayGames {
 		if(isConnected() || connecting) {
 			return;
 		}
+
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
+
 		connecting = true;
 
 		Intent intent = GoogleSignIn.getClient(Game.instance(), signInOptions)
@@ -103,9 +106,16 @@ public class PlayGames {
 							task -> {
 								if (task.isSuccessful()) {
 									 signedInAccount = task.getResult();
+									Preferences.INSTANCE.put(Preferences.KEY_PLAY_GAMES_CONNECT_FAILURES, 0);
 									 onConnected();
 								} else {
-                                    //Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+								    connecting = false;
+									int failCount = Preferences.INSTANCE.getInt(Preferences.KEY_PLAY_GAMES_CONNECT_FAILURES, 0);
+									failCount++;
+									Preferences.INSTANCE.put(Preferences.KEY_PLAY_GAMES_CONNECT_FAILURES, failCount);
+									if(failCount > 5) {
+										Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+									}
                                 }
 							});
 		}
@@ -231,7 +241,6 @@ public class PlayGames {
 
 	private void onConnected() {
 		connecting = false;
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
 		loadSnapshots(null);
 	}
 

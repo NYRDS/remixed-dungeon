@@ -98,7 +98,7 @@ class WndPlayGames extends Window {
     private void addButton(TextButton btn) {
         btn.setRect(0, y, width, BUTTON_HEIGHT);
         add(btn);
-        y += btn.height() + GAP;
+        y += btn.height();
     }
 
     private static class ResultHandler implements PlayGames.IResult {
