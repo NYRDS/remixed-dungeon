@@ -144,11 +144,8 @@ class ItemButton extends ItemSlot {
                 wndBag.hide();
             }
             wndBag.getListener().onSelect( item, item.getOwner());
-            
         } else {
-            
             wndBag.add( new WndItem(wndBag, item ) );
-            
         }
     }
     

@@ -75,7 +75,10 @@ public abstract class InventoryScroll extends Scroll {
 	protected static WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
 
-			((InventoryScroll) selector.getBelongings().getSelectedItem()).onItemSelected( item, selector );
+			((InventoryScroll) selector.
+					getBelongings().
+					getSelectedItem()).
+						onItemSelected( item, selector );
 			selector.spendAndNext( TIME_TO_READ );
 
 			Sample.INSTANCE.play( Assets.SND_READ );

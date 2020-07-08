@@ -76,7 +76,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return selectedItem;
 	}
 
-	public void setSelectedItem(Item selectedItem) {
+	public void setSelectedItem(@NotNull Item selectedItem) {
 		this.selectedItem = selectedItem;
 	}
 
