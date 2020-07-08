@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -43,19 +42,19 @@ public class Multiplicity extends Glyph {
 		
 		if (Random.Int( level / 2 + 6 ) >= 5) {
 			
-			int imgCell = Dungeon.level.getEmptyCellNextTo(defender.getPos());
+			int imgCell = attacker.level().getEmptyCellNextTo(defender.getPos());
 
-			if (Dungeon.level.cellValid(imgCell)) {
+			if (attacker.level().cellValid(imgCell)) {
 				if(defender instanceof Hero) {
 					MirrorImage img = new MirrorImage((Hero) defender);
 					WandOfBlink.appear( img, imgCell );
+					defender.damage( Random.IntRange( 1, defender.ht() / 6 ), this );
 				}
 
 				if(defender instanceof Mob) {
 					((Mob) defender).split(imgCell, damage);
 				}
 
-				defender.damage( Random.IntRange( 1, defender.ht() / 6 ), this );
 				checkOwner( defender );
 			}
 			

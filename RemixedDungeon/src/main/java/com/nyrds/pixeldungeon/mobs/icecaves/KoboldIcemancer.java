@@ -59,8 +59,6 @@ public class KoboldIcemancer extends Mob implements IZapper {
 				Buff.prolong( enemy, Slow.class, 1 );
 			}
 
-			enemy.damage(damageRoll(), this);
-
 			CharUtils.checkDeathReport(this ,enemy, Game.getVar(R.string.KoboldIcemancer_Killed));
 			return true;
 		}

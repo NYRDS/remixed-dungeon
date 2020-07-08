@@ -56,6 +56,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
 
+import lombok.val;
+
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 
     // Color constants for floating text
@@ -222,7 +224,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @LuaInterface
     public void dummyAttack(int cell) {
-        attack(cell, this::idle);
+        ch.ifPresent(chr -> {
+            if(Dungeon.visible[chr.getPos()]) {
+                attack(cell, this::idle);
+            }
+        });
     }
 
     public void operate(int cell) {
@@ -498,8 +504,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             }
 
             if (animCallback != null) {
-                animCallback.call();
+                val callback = animCallback;
                 animCallback = null;
+                callback.call();
             } else {
                 if (anim == attack) {
                     chr.onAttackComplete();
