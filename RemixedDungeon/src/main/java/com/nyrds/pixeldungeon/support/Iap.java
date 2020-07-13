@@ -8,7 +8,7 @@ import com.nyrds.pixeldungeon.support.Google.GoogleIap;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,9 +73,8 @@ public class Iap implements IPurchasesUpdated {
         }
     }
 
-    @Nullable
+    @NotNull
     public String getDonationPriceString(int level) {
-
         switch (level) {
             case 1:
                 return mIap.getSkuPrice(SKU_LEVEL_1);
@@ -86,11 +85,11 @@ public class Iap implements IPurchasesUpdated {
             case 4:
                 return mIap.getSkuPrice(SKU_LEVEL_4);
         }
-        return null;
+        return "";
     }
 
 
-    public void doPurchase(String sku, IIapCallback callback) {
+    public void doPurchase(@NotNull String sku, IIapCallback callback) {
         mIapCallback = callback;
 	    mIap.doPurchase(sku.toLowerCase(Locale.ROOT));
     }

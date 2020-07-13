@@ -31,7 +31,10 @@ public class WndDonate extends WndTabbed {
 				Game.getVar(R.string.WndDonate_ruby),
 				Game.getVar(R.string.WndDonate_royal)
 		};
-		Group[] pages = { new DonateTab(1), new DonateTab(2), new DonateTab(3), new DonateTab(4) };
+		Group[] pages = {	new DonateTab(1),
+							new DonateTab(2),
+							new DonateTab(3),
+							new DonateTab(4) };
 
 		for (int i = 0; i < pages.length; i++) {
 			add(pages[i]);
@@ -73,7 +76,7 @@ public class WndDonate extends WndTabbed {
 			if (RemixedDungeon.donated() < level) {
 				String price = RemixedDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
-				if( price != null ) {
+				if( !price.isEmpty() ) {
 					btnText = Game.getVar(R.string.WndDonate_donate) + " " + price;
 				} else {
 					btnText = Game.getVar(R.string.WndDonate_notConnected);
@@ -86,7 +89,7 @@ public class WndDonate extends WndTabbed {
 					}
 				};
 				
-				if( price == null) {
+				if( price.isEmpty()) {
 					donate.enable(false);
 				}
 

@@ -192,7 +192,8 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         return mPurchases.containsKey(item.toLowerCase(Locale.ROOT));
     }
 
-    public String getSkuPrice(String sku) {
+    @NotNull
+    public String getSkuPrice(@NotNull String sku) {
         String skuLowerCase = sku.toLowerCase(Locale.ROOT);
         if (mSkuDetails.containsKey(skuLowerCase)) {
             return mSkuDetails.get(skuLowerCase).getPrice();
