@@ -33,6 +33,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 
+import lombok.var;
+
 public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
 
     private final Map<String, Purchase> mPurchases = new HashMap<>();
@@ -71,14 +73,20 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     }
 
     public void doPurchase(final String skuId) {
-        Runnable purchaseFlowRequest = () -> {
-            BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
-                    .setSkuDetails(mSkuDetails.get(skuId))
-                    .build();
-            mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
-        };
+        if(mSkuDetails.containsKey(skuId)) {
+            var sku = mSkuDetails.get(skuId);
 
-        executeServiceRequest(purchaseFlowRequest);
+            Runnable purchaseFlowRequest = () -> {
+                BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
+                        .setSkuDetails(sku)
+                        .build();
+                mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
+            };
+
+            executeServiceRequest(purchaseFlowRequest);
+        } else {
+            EventCollector.logException("No sku: |"+ skuId+"|");
+        }
     }
 
     private void handlePurchase(Purchase purchase) {
