@@ -419,7 +419,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public Item quantity(int value) {
 
 		if(value < 0) {
-			EventCollector.logException();
+			EventCollector.logException("negative quantity for:" + getEntityKind());
 		}
 
 		quantity = Scrambler.scramble(value);
