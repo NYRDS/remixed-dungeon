@@ -56,7 +56,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 		return 1;
 	}
 
-	public void onMiss() {}
+	public void onMiss(Char user) {}
 
 	@Override
 	public boolean goodForMelee() {

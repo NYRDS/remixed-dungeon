@@ -62,7 +62,7 @@ public abstract class Arrow extends MissileWeapon {
 
 			if (thrower.level().adjacent(thrower.getPos(), cell)
 					&& thrower.getHeroClass() != HeroClass.ELF) {
-				miss(cell);
+				miss(cell, thrower);
 				return;
 			}
 
@@ -89,7 +89,7 @@ public abstract class Arrow extends MissileWeapon {
 
 			super.onThrow(cell, thrower);
 		} else {
-			miss(cell);
+			miss(cell, thrower);
 		}
 	}
 

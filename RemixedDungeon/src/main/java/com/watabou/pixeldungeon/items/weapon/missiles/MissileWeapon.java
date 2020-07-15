@@ -59,21 +59,21 @@ public class MissileWeapon extends Weapon {
 			super.onThrow( cell, thrower);
 		} else {
 			if (!thrower.shoot( enemy, this )) {
-				miss( cell );
+				miss( cell,thrower );
 			}
 		}
 	}
 	
-	protected void miss( int cell ) {
+	protected void miss(int cell, Char thrower) {
 		
 		if(this instanceof Arrow) {
 			Arrow arrow = (Arrow) this;
 			if(arrow.firedFrom != null ) {
-				arrow.firedFrom.onMiss();
+				arrow.firedFrom.onMiss(thrower);
 			}
 		}
 		
-		super.onThrow( cell, getOwner());
+		super.onThrow( cell, thrower);
 	}
 	
 	@Override
