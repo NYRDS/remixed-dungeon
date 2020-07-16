@@ -70,7 +70,8 @@ public class CharUtils {
         GLog.w( Game.getVars(R.array.Char_Stole)[thief.getGender()], thief.getName(), item.name(), victim.getName_objective() );
 
         item.detachAll( victim.getBelongings().backpack );
-        item.collect(thief);
+
+        thief.collect(item);
 
         return true;
     }
