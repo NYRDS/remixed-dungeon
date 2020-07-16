@@ -417,7 +417,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return new ItemIterator(); 
 	}
 
-	public Object getOwner() {
+	@LuaInterface
+	@NotNull
+	public Char getOwner() {
 		return owner;
 	}
 

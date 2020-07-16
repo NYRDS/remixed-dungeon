@@ -160,6 +160,7 @@ local RPD = {
     },
 
     Slots = {
+        none         = "NONE",
         weapon       = "WEAPON",
         armor        = "ARMOR",
         leftHand     = "LEFT_HAND",

@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Boomerang extends MissileWeapon {
 
 	{
@@ -87,7 +89,7 @@ public class Boomerang extends MissileWeapon {
 		circleBack( cell, thrower);
 	}
 	
-	private void circleBack(int from, final Char owner) {
+	private void circleBack(int from, @NotNull final Char owner) {
 
 		((MissileSprite) owner.getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, owner.getPos(),
