@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.ColorBlock;
@@ -65,13 +66,7 @@ class ItemButton extends ItemSlot {
         if (item != null) {
 
             bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
-            if (item.isCursed() && item.isCursedKnown()) {
-                bg.ra = +0.2f;
-                bg.ga = -0.1f;
-            } else if (!item.isIdentified()) {
-                bg.ra = 0.1f;
-                bg.ba = 0.1f;
-            }
+            ItemUtils.tintBackground(item, bg);
             if (item instanceof ItemPlaceholder) {
                 enable(false);
             } else {
@@ -126,7 +121,7 @@ class ItemButton extends ItemSlot {
             bg.color( NORMAL );
         }
     }
-    
+
     @Override
     protected void onTouchDown() {
         bg.brightness( 1.5f );
@@ -143,7 +138,7 @@ class ItemButton extends ItemSlot {
             if(wndBag.hideOnSelect()) {
                 wndBag.hide();
             }
-            wndBag.getListener().onSelect( item, item.getOwner());
+            wndBag.getListener().onSelect( item, Dungeon.hero);
         } else {
             wndBag.add( new WndItem(wndBag, item ) );
         }

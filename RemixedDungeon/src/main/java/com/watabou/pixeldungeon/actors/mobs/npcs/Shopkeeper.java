@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Gold;
@@ -194,12 +193,6 @@ public class Shopkeeper extends NPC {
 			item = Treasury.get().check(item);
 		}
 		item.collect(this);
-	}
-
-	@NotNull
-	@Override
-	public Belongings getBelongings() {
-		return belongings;
 	}
 
 	@Override

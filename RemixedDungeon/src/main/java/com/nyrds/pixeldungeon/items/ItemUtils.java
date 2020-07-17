@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -42,4 +43,14 @@ public class ItemUtils {
 	public static boolean usableAsWeapon(@NotNull EquipableItem item) {
 		return item.slot(new Belongings(CharsList.DUMMY)) == Belongings.Slot.WEAPON;
 	}
+
+    public static void tintBackground(@NotNull Item item, @NotNull ColorBlock bg) {
+        if (item.isCursed() && item.isCursedKnown()) {
+            bg.ra = +0.2f;
+            bg.ga = -0.1f;
+        } else if (!item.isIdentified()) {
+            bg.ra = 0.1f;
+            bg.ba = 0.1f;
+        }
+    }
 }

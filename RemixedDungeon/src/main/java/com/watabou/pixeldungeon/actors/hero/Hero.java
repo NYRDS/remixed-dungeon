@@ -199,7 +199,6 @@ public class Hero extends Char {
 		awareness = 0.1f;
 
 		controlTargetId = getId();
-
 	}
 
 	public Hero(int difficulty) {
@@ -1746,12 +1745,6 @@ public class Hero extends Char {
 	public void skillLevelUp() {
 		setSkillLevel(skillLevel() + 1);
 	}
-
-    @NotNull
-	@Override
-    public Belongings getBelongings() {
-        return belongings;
-    }
 
 	@Override
 	public boolean friendly(@NotNull Char chr) {

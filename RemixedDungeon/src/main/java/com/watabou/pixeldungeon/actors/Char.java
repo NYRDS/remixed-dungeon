@@ -163,6 +163,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	//TODO store&restore it for all chars
 	private int lvl = Scrambler.scramble(1);
 
+	public Char() {
+	}
+
 	public boolean canSpawnAt(Level level,int cell) {
 		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
 	}

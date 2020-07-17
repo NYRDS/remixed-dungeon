@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -269,7 +270,7 @@ public class WndRanking extends WndTabbed {
 			}
 
 			ItemButton slot = new ItemButton( item );
-			slot.setRect( 0, posY, width, ItemButton.HEIGHT );
+			slot.setRect( 0, posY, width, ItemButton.SIZE);
 			list.content().add( slot );
 			
 			posY += slot.height() + 1;
@@ -292,7 +293,7 @@ public class WndRanking extends WndTabbed {
 	
 	private class ItemButton extends Button {
 		
-		public static final int HEIGHT	= 23;
+		public static final int SIZE = 23;
 		
 		private Item item;
 		
@@ -301,25 +302,16 @@ public class WndRanking extends WndTabbed {
 		private Text name;
 		
 		public ItemButton( Item item ) {
-			
 			super();
-
 			this.item = item;
-			
 			slot.item( item );
-			if (item.isCursed() && item.isCursedKnown()) {
-				bg.ra = +0.2f;
-				bg.ga = -0.1f;
-			} else if (!item.isIdentified()) {
-				bg.ra = 0.1f;
-				bg.ba = 0.1f;
-			}
+			ItemUtils.tintBackground(item,bg);
 		}
 		
 		@Override
 		protected void createChildren() {	
 			
-			bg = new ColorBlock( HEIGHT, HEIGHT, 0xFF4A4D44 );
+			bg = new ColorBlock(SIZE, SIZE, 0xFF4A4D44 );
 			add( bg );
 			
 			slot = new ItemSlot();
@@ -336,12 +328,12 @@ public class WndRanking extends WndTabbed {
 			bg.x = x;
 			bg.y = y;
 			
-			slot.setRect( x, y, HEIGHT, HEIGHT );
+			slot.setRect( x, y, SIZE, SIZE);
 
 			hotArea.x = x;
 			hotArea.y = y;
-			hotArea.width = HEIGHT;
-			hotArea.height = HEIGHT;
+			hotArea.width = SIZE;
+			hotArea.height = SIZE;
 
 			name.x = slot.right() + 2;
 			name.y = y + (height - name.baseLine()) / 2;
