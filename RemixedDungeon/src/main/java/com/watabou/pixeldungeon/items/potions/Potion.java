@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -207,6 +208,7 @@ public class Potion extends Item implements UnknownItem {
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
 		hero.getSprite().operate( hero.getPos() );
+		new Hook().Call("onPotionDrink", this, hero);
 		shatterd = false;
 	}
 	

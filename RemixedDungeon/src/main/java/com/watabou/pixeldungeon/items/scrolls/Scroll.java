@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.CommonActions;
@@ -160,7 +161,9 @@ public abstract class Scroll extends Item implements UnknownItem {
 		}
 	}
 	
-	abstract protected void doRead(@NotNull Char reader);
+	protected void doRead(@NotNull Char reader) {
+		new Hook().Call("onScrollRead", this, reader);
+	}
 	
 	public boolean isKnown() {
 		return handler.isKnown( this );

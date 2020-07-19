@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.Char;
@@ -51,6 +52,7 @@ abstract public class Food extends Item {
 	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 			chr.eat(this, energy, message);
+			new Hook().Call("onFoodEat", this, chr);
 		} else {
 			super.execute(chr, action );
 		}

@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.modding;
 
 import org.luaj.vm2.LuaClosure;
 import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.Varargs;
 
 public class Event {
     public String event;
@@ -12,7 +13,7 @@ public class Event {
         this.action = action;
     }
 
-    public void execute(Object... args) {
-        this.action.invoke((LuaValue[]) args);
+    public Varargs execute(LuaValue... args) {
+        return this.action.invoke(args);
     }
 }
