@@ -124,7 +124,6 @@ import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.TestOnly;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -334,7 +333,7 @@ public class Hero extends Char {
 			evasion *= 1.2;
 		}
 
-		int aEnc = belongings.armor.requiredSTR() - effectiveSTR();
+		int aEnc = getBelongings().armor.requiredSTR() - effectiveSTR();
 
 		if (aEnc > 0) {
 			return (int) (defenseSkill * evasion / Math.pow(1.5, aEnc));
@@ -355,13 +354,13 @@ public class Hero extends Char {
 
 	@Override
 	public int dr() {
-		return Math.max(belongings.armor.effectiveDr(), 0);
+		return Math.max(getBelongings().armor.effectiveDr(), 0);
 	}
 
 	@Override
 	public float speed() {
 
-		int aEnc = belongings.armor != CharsList.DUMMY_ITEM ? belongings.armor.requiredSTR() - effectiveSTR() : 0;
+		int aEnc = getBelongings().armor != CharsList.DUMMY_ITEM ? getBelongings().armor.requiredSTR() - effectiveSTR() : 0;
 		if (aEnc > 0) {
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));
 		} else {
@@ -383,7 +382,7 @@ public class Hero extends Char {
 
 		hasteLevel+= buffLevel(RingOfHaste.Haste.class);
 
-		for (Item item : belongings) {
+		for (Item item : getBelongings()) {
 			if (item instanceof IActingItem && item.isEquipped(this)) {
 				((IActingItem) item).spend(this, time);
 			}
@@ -648,7 +647,7 @@ public class Hero extends Char {
 
 				if (heap.type == Type.LOCKED_CHEST || heap.type == Type.CRYSTAL_CHEST) {
 
-					theKey = belongings.getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
+					theKey = getBelongings().getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
 
 					if (theKey == null) {
 						GLog.w(Game.getVar(R.string.Hero_LockedChest));
@@ -695,9 +694,9 @@ public class Hero extends Char {
 			int door = Dungeon.level.map[doorCell];
 
 			if (door == Terrain.LOCKED_DOOR) {
-				theKey = belongings.getKey(IronKey.class, Dungeon.depth, Dungeon.level.levelId);
+				theKey = getBelongings().getKey(IronKey.class, Dungeon.depth, Dungeon.level.levelId);
 			} else if (door == Terrain.LOCKED_EXIT) {
-				theKey = belongings.getKey(SkeletonKey.class, Dungeon.depth, Dungeon.level.levelId);
+				theKey = getBelongings().getKey(SkeletonKey.class, Dungeon.depth, Dungeon.level.levelId);
 			}
 
 			if (theKey != null) {
@@ -755,7 +754,7 @@ public class Hero extends Char {
 
 			if (nextLevel.levelId.equals("0")) {
 
-				if (belongings.getItem(Amulet.class) == null) {
+				if (getBelongings().getItem(Amulet.class) == null) {
 					GameScene.show(new WndMessage(Game.getVar(R.string.Hero_Leave)));
 					readyAndIdle();
 				} else {
@@ -811,13 +810,13 @@ public class Hero extends Char {
 
 	private boolean actBowAttack(Char enemy) {
 
-		KindOfBow kindOfBow = (KindOfBow) belongings.weapon;
+		KindOfBow kindOfBow = (KindOfBow) getBelongings().weapon;
 
 		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
 
-		Arrow arrow = belongings.getItem(arrowType);
+		Arrow arrow = getBelongings().getItem(arrowType);
 		if(arrow==null || arrow.quantity() == 0) {
-			arrow = belongings.getItem(Arrow.class);
+			arrow = getBelongings().getItem(Arrow.class);
 		}
 
 		if (arrow != null && arrow.quantity() > 0) { // We have arrows!
@@ -836,7 +835,7 @@ public class Hero extends Char {
         if (enemy.isAlive() && !pacified) {
 
             if (bowEquipped()) {
-                if (level().adjacent(getPos(), enemy.getPos()) && belongings.weapon.goodForMelee()) {
+                if (level().adjacent(getPos(), enemy.getPos()) && getBelongings().weapon.goodForMelee()) {
                     return actMeleeAttack(enemy);
                 }
                 return actBowAttack(enemy);
@@ -860,7 +859,7 @@ public class Hero extends Char {
 		damage = super.attackProc(enemy,damage);
 
 		if (!(enemy instanceof NPC)) {
-			for (Item item : belongings) {
+			for (Item item : getBelongings()) {
 				if (item instanceof IChaosItem && item.isEquipped(this)) {
 					((IChaosItem) item).ownerDoesDamage(this, damage);
 				}
@@ -883,7 +882,7 @@ public class Hero extends Char {
 			interrupt();
 		}
 
-		for (Item item : belongings) {
+		for (Item item : getBelongings()) {
 			if (item instanceof IChaosItem && item.isEquipped(this)) {
 				if (!(src instanceof Hunger)) {
 					((IChaosItem) item).ownerTakesDamage(dmg);
@@ -1257,7 +1256,7 @@ public class Hero extends Char {
 		Actor.fixTime();
 		super.die(cause);
 
-		Ankh ankh = belongings.getItem(Ankh.class);
+		Ankh ankh = getBelongings().getItem(Ankh.class);
 
 		if (ankh == null) {
 			if (this.subClass == HeroSubClass.LICH && this.getSkillPoints() == this.getSkillPointsMax()) {
@@ -1267,7 +1266,7 @@ public class Hero extends Char {
 				reallyDie(cause);
 			}
 		} else {
-			while (belongings.removeItem(ankh)) {
+			while (getBelongings().removeItem(ankh)) {
 			}
 			GameScene.show(new WndResurrect(ankh, cause));
 		}
@@ -1344,13 +1343,13 @@ public class Hero extends Char {
 			} else {
 				AttackIndicator.target(enemy);
 
-				if (belongings.weapon instanceof SpecialWeapon) {
-					((SpecialWeapon) belongings.weapon).preAttack(this, enemy);
+				if (getBelongings().weapon instanceof SpecialWeapon) {
+					((SpecialWeapon) getBelongings().weapon).preAttack(this, enemy);
 				}
 
 				if (attack(enemy)) {
-					if (belongings.weapon instanceof SpecialWeapon) {
-						((SpecialWeapon) belongings.weapon).postAttack(this, enemy);
+					if (getBelongings().weapon instanceof SpecialWeapon) {
+						((SpecialWeapon) getBelongings().weapon).postAttack(this, enemy);
 					}
 				}
 
@@ -1373,7 +1372,7 @@ public class Hero extends Char {
 		if (curAction instanceof CharAction.Unlock) {
 
 			if (theKey != null) {
-				theKey.detach(belongings.backpack);
+				theKey.detach(getBelongings().backpack);
 				theKey = null;
 			}
 
@@ -1395,7 +1394,7 @@ public class Hero extends Char {
 		} else if (curAction instanceof CharAction.OpenChest) {
 
 			if (theKey != null) {
-				theKey.detach(belongings.backpack);
+				theKey.detach(getBelongings().backpack);
 				theKey = null;
 			}
 
@@ -1496,7 +1495,7 @@ public class Hero extends Char {
 	}
 
 	public void resurrect(int resetLevel) {
-		belongings.resurrect(resetLevel);
+		getBelongings().resurrect(resetLevel);
 
 		hp(ht());
 		setExp(0);
@@ -1553,8 +1552,8 @@ public class Hero extends Char {
 			return true;
 		}
 
-		if (belongings.weapon instanceof SpecialWeapon) {
-			SpecialWeapon weapon = (SpecialWeapon) belongings.weapon;
+		if (getBelongings().weapon instanceof SpecialWeapon) {
+			SpecialWeapon weapon = (SpecialWeapon) getBelongings().weapon;
 
 			Ballistica.cast(getPos(), enemy.getPos(), false, true);
 
@@ -1566,8 +1565,8 @@ public class Hero extends Char {
 			}
 		}
 
-		if(belongings.weapon instanceof KindOfBow) {
-			if(belongings.getItem(Arrow.class)!=null) {
+		if(getBelongings().weapon instanceof KindOfBow) {
+			if(getBelongings().getItem(Arrow.class)!=null) {
 				return enemy.getPos() == Ballistica.cast(getPos(), enemy.getPos(), false, true);
 			}
 		}
@@ -1577,7 +1576,7 @@ public class Hero extends Char {
 
 	@Override
 	public void eat(Item food, float energy, String message) {
-		food.detach( belongings.backpack );
+		food.detach( getBelongings().backpack );
 
 		hunger().satisfy(energy);
 
@@ -1590,7 +1589,7 @@ public class Hero extends Char {
             }
             break;
         case MAGE:
-            belongings.charge( false );
+            getBelongings().charge( false );
             ScrollOfRecharging.charge(this);
             break;
         default:
@@ -1780,12 +1779,6 @@ public class Hero extends Char {
 			InterlevelScene.returnTo = new Position(newPos);
 			InterlevelScene.Do(InterlevelScene.Mode.RETURN);
 		}
-	}
-
-	@TestOnly
-	public void resetBelongings(Belongings belongings) {
-		this.belongings = belongings;
-		updateSprite();
 	}
 
 	@Override

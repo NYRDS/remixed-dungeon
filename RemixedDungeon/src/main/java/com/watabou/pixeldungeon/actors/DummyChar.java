@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 public class DummyChar extends Char {
 
     public DummyChar() {
-        setupCharData();
+        super();
     }
 
     @Override
