@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.modding;
 
-import android.util.Log;
-
 import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
@@ -10,7 +8,6 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @LuaInterface

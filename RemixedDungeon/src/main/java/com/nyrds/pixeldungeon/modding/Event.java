@@ -5,7 +5,7 @@ import org.luaj.vm2.LuaValue;
 
 public class Event {
     public String event;
-    public LuaClosure action;
+    private LuaClosure action;
 
     Event(String event, LuaClosure action) {
         this.event = event;
