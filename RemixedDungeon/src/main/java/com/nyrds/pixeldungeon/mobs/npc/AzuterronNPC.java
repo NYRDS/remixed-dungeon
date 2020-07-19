@@ -8,7 +8,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -44,11 +43,7 @@ public class AzuterronNPC extends Shopkeeper {
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 	}
-	
-	@Override
-	public void add( Buff buff ) {
-	}
-	
+
 	@Override
 	public boolean reset() {
 		return true;
