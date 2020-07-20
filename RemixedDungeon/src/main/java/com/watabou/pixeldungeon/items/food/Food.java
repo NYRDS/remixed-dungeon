@@ -52,7 +52,6 @@ abstract public class Food extends Item {
 	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 			chr.eat(this, energy, message);
-			new Hook().Call("onFoodEat", this, chr);
 		} else {
 			super.execute(chr, action );
 		}

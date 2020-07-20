@@ -67,7 +67,6 @@ public class Gold extends Item {
 		hero.spendAndNext( TIME_TO_PICK_UP );
 		
 		Sample.INSTANCE.play( Assets.SND_GOLD, 1, 1, Random.Float( 0.9f, 1.1f ) );
-		new Hook().Call("onGoldPickup", this, hero);
 		
 		return true;
 	}

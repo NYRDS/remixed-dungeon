@@ -1607,6 +1607,8 @@ public class Hero extends Char {
 
 		Statistics.foodEaten++;
 		Badges.validateFoodEaten();
+
+		new Hook().Call("onFoodEat", food, this);
 	}
 
 	public void setControlTarget(Char controlTarget) {
