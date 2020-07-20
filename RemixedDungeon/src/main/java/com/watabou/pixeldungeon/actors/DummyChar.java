@@ -6,6 +6,10 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class DummyChar extends Char {
 
+    public DummyChar() {
+        super();
+    }
+
     @Override
     protected float _attackDelay() {
         return 1f;

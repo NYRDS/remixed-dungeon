@@ -124,6 +124,7 @@ public abstract class Mob extends Char {
 	private static final String FRACTION   = "fraction";
 
 	public Mob() {
+		super();
 		setupCharData();
 	}
 
@@ -514,7 +515,7 @@ public abstract class Mob extends Char {
 			item.doDrop(this);
 		}
 
-		belongings.dropAll();
+		getBelongings().dropAll();
 	}
 
 	public boolean reset() {
@@ -553,6 +554,8 @@ public abstract class Mob extends Char {
 			loot = ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot"));
 			lootChance = (float) mobDesc.optDouble("lootChance", 1f);
 		}
+
+		getBelongings().setupFromJson(mobDesc);
 
 		if (this instanceof IDepthAdjustable) {
 			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));

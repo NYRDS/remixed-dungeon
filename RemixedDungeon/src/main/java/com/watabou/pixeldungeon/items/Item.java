@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
@@ -66,8 +67,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.var;
-
-import com.nyrds.pixeldungeon.modding.Hook;
 
 public class Item implements Bundlable, Presser, NamedEntityKind {
 
@@ -159,7 +158,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			Sample.INSTANCE.play(Assets.SND_ITEM);
 			hero.spendAndNext(TIME_TO_PICK_UP);
 
-			new Hook().Call("onItemPickup", this, hero);
+			Hook.Call("onItemPickup", this, hero);
 			return true;
 		} else {
 			return false;
@@ -171,12 +170,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		int pos = chr.getPos();
 		chr.level().animatedDrop(detachAll(chr.getBelongings().backpack), pos);
 
-		new Hook().Call("onItemDrop", this, chr);
+		Hook.Call("onItemDrop", this, chr);
 	}
 
 	public void doThrow(@NotNull Char chr) {
     	chr.selectCell(thrower);
-		new Hook().Call("onItemThrow", this, chr);
+		Hook.Call("onItemThrow", this, chr);
 	}
 
 	public void execute(@NotNull Char chr, @NotNull String action) {
@@ -317,7 +316,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		QuickSlot.refresh(getOwner());
 
-		new Hook().Call("onItemUpgrade", this, owner);
+		Hook.Call("onItemUpgrade", this, owner);
 
 		return this;
 	}
@@ -334,7 +333,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		this.level(this.level() - 1);
 
 		QuickSlot.refresh(owner);
-		new Hook().Call("onItemDegrade", this, owner);
+		Hook.Call("onItemDegrade", this, owner);
 
 		return this;
 	}
@@ -379,7 +378,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		setCursedKnown(true);
 
 		Library.identify(Library.ITEM,getEntityKind());
-		new Hook().Call("onItemIdentify", this, owner);
+		Hook.Call("onItemIdentify", this, owner);
 
 		return this;
 	}

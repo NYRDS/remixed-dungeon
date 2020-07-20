@@ -156,7 +156,7 @@ public class Treasury {
     public Item worstOf(Category cat, int n) {
         Item ret = random(cat);
 
-        for (int i=n+1; i < n; i++) {
+        for (int i=1; i < n; i++) {
             Item another = random(cat);
 
             if (another.level() < ret.level()) {
@@ -169,7 +169,7 @@ public class Treasury {
     public Item bestOf(Category cat, int n) {
         Item ret = random(cat);
 
-        for (int i=n+1; i < n; i++) {
+        for (int i=1; i < n; i++) {
             Item another = random(cat);
 
             if (another.level() > ret.level()) {

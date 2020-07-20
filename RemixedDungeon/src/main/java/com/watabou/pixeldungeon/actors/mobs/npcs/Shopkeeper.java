@@ -25,9 +25,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Gold;
@@ -40,11 +38,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
-import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.Collections;
 
@@ -72,12 +67,7 @@ public class Shopkeeper extends NPC {
 	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		flee();
 	}
-	
-	@Override
-	public void add( Buff buff ) {
-		flee();
-	}
-	
+
 	private void flee() {
 		destroy();
 		
@@ -117,7 +107,7 @@ public class Shopkeeper extends NPC {
 		int attempts = 0;
 
 		if(!ModdingMode.inMod() && Game.getDifficulty() < 2) {
-			if (belongings.countFood() < 3) {
+			if (getBelongings().countFood() < 3) {
 				var foodSupply = new OverpricedRation();
 				foodSupply.quantity(5);
 				addItem(foodSupply);
@@ -144,7 +134,7 @@ public class Shopkeeper extends NPC {
 						wndBag = new WndBag(hero.getBelongings(),hero.getBelongings().backpack,sellItemSelector,WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 						break;
 					case 1:
-						wndBag = new WndBag(belongings,belongings.backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
+						wndBag = new WndBag(getBelongings(), getBelongings().backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
 						break;
 				}
 
@@ -168,7 +158,7 @@ public class Shopkeeper extends NPC {
 			return;
 		}
 
-		var supply = belongings.getItem(newItem.getEntityKind());
+		var supply = getBelongings().getItem(newItem.getEntityKind());
 
 		if(!newItem.stackable && supply != null) {
 			return;
@@ -194,31 +184,6 @@ public class Shopkeeper extends NPC {
 			item = Treasury.get().check(item);
 		}
 		item.collect(this);
-	}
-
-	@NotNull
-	@Override
-	public Belongings getBelongings() {
-		return belongings;
-	}
-
-	@Override
-	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
-		super.fromJson(mobDesc);
-
-		belongings.setupFromJson(mobDesc);
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		belongings.storeInBundle(bundle);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		belongings.restoreFromBundle(bundle);
 	}
 
 	@Override

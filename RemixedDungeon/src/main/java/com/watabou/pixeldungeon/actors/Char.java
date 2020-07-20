@@ -84,6 +84,7 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.TestOnly;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -106,7 +107,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
-	protected Belongings belongings;
+	private Belongings belongings;
+
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int owner = EntityIdSource.INVALID_ID;
@@ -164,6 +166,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	//TODO store&restore it for all chars
 	private int lvl = Scrambler.scramble(1);
 
+	public Char() {
+	}
+
 	public boolean canSpawnAt(Level level,int cell) {
 		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
 	}
@@ -200,7 +205,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		bundle.put(BUFFS, buffs);
 		bundle.put(SPELLS_USAGE, spellsUsage);
 
-		belongings.storeInBundle(bundle);
+		getBelongings().storeInBundle(bundle);
 	}
 
 	@Override
@@ -223,7 +228,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		setupCharData();
 
-		belongings.restoreFromBundle(bundle);
+		getBelongings().restoreFromBundle(bundle);
 	}
 
 	private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
@@ -241,7 +246,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			setOwnerId(id);
 		}
 
-		belongings = new Belongings(this);
+		setBelongings(new Belongings(this));
 
 		if(this instanceof CustomMob) {
 			return;
@@ -315,7 +320,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			effectiveDamage = enemy.defenseProc(this, effectiveDamage);
 			enemy.damage(effectiveDamage, this);
 
-			new Hook().Call("onCharAttack", this, enemy, effectiveDamage);
+			Hook.Call("onCharAttack", this, enemy, effectiveDamage);
 
 			if (visibleFight) {
                 Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
@@ -1020,6 +1025,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@NotNull
 	@Override
 	public Belongings getBelongings() {
+		if(belongings == null) {
+			belongings = new Belongings(this);
+		}
 		return belongings;
 	}
 
@@ -1234,6 +1242,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		this.owner = owner;
 	}
 
+	@TestOnly
+	public void resetBelongings(Belongings belongings) {
+		setBelongings(belongings);
+		updateSprite();
+	}
+
 	public void selectCell(CellSelector.Listener listener) {
 		GLog.w("select cell for %s niy.", getEntityKind());
 	}
@@ -1294,5 +1308,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@LuaInterface
 	boolean canStepOn() {
     	return walkingType.canSpawnAt(level(),getPos()) && (Actor.findChar(pos) == null);
+	}
+
+	public void setBelongings(Belongings belongings) {
+		this.belongings = belongings;
 	}
 }

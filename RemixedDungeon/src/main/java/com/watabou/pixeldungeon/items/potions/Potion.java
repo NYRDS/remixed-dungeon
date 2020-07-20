@@ -208,7 +208,7 @@ public class Potion extends Item implements UnknownItem {
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
 		hero.getSprite().operate( hero.getPos() );
-		new Hook().Call("onPotionDrink", this, hero);
+		Hook.Call("onPotionDrink", this, hero);
 		shatterd = false;
 	}
 	
