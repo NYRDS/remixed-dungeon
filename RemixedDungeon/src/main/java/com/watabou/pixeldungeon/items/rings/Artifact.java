@@ -30,7 +30,7 @@ public class Artifact extends EquipableItem {
 			buff = null;
 		}
 
-		new Hook().Call("onArtifactDeactivate", this, ch);
+		Hook.Call("onArtifactDeactivate", this, ch);
 	}
 
 	public void activate(@NotNull Char ch) {
@@ -41,7 +41,7 @@ public class Artifact extends EquipableItem {
 			buff.attachTo(ch);
 		}
 
-		new Hook().Call("onArtifactActivate", this, ch);
+		Hook.Call("onArtifactActivate", this, ch);
 	}
 
 	@Override

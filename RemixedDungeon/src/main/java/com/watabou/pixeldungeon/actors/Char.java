@@ -320,7 +320,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			effectiveDamage = enemy.defenseProc(this, effectiveDamage);
 			enemy.damage(effectiveDamage, this);
 
-			new Hook().Call("onCharAttack", this, enemy, effectiveDamage);
+			Hook.Call("onCharAttack", this, enemy, effectiveDamage);
 
 			if (visibleFight) {
                 Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));

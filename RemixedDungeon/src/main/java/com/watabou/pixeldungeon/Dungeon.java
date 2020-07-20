@@ -308,7 +308,7 @@ public class Dungeon {
         levelId = level.levelId;
         Dungeon.level = level;
 
-        new Hook().Call("onLevelSwitch", level);
+        Hook.Call("onLevelSwitch", level);
     }
 
     public static boolean posNeeded() {

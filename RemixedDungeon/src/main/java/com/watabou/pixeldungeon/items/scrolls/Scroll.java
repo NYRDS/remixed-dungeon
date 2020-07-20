@@ -162,7 +162,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 	}
 	
 	protected void doRead(@NotNull Char reader) {
-		new Hook().Call("onScrollRead", this, reader);
+		Hook.Call("onScrollRead", this, reader);
 	}
 	
 	public boolean isKnown() {

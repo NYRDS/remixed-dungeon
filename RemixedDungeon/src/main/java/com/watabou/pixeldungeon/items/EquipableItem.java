@@ -84,7 +84,7 @@ public abstract class EquipableItem extends Item {
 
 	public boolean doEquip(@NotNull Char hero ) {
 		Belongings belongings = hero.getBelongings();
-		new Hook().Call("onArmorEquip", this, hero);
+		Hook.Call("onEquip", this, hero);
 		return belongings.equip(this, slot(belongings));
 	}
 
@@ -126,7 +126,7 @@ public abstract class EquipableItem extends Item {
 			doDrop(hero);
 		}
 
-		new Hook().Call("onArmorUnequip", this, hero);
+		Hook.Call("onUnequip", this, hero);
 		return true;
 	}
 

@@ -8,10 +8,9 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+
+import lombok.var;
 
 @LuaInterface
 public class Hook {
@@ -27,37 +26,31 @@ public class Hook {
 
     @LuaInterface
     public static void Call(String event, Object... args) {
-        for (Map.Entry<String, List<LuaClosure>> entry : RemixedDungeon.events.entrySet()) {
-            String name = entry.getKey();
-            List<LuaClosure> callbacks = entry.getValue();
 
-            if (name.equals(event)) {
-                Iterator<LuaClosure> it = callbacks.iterator();
-                List<LuaValue> values = objectsToValues(args);
+        if(!RemixedDungeon.events.containsKey(event)) {
+            return;
+        }
 
-                while(it.hasNext()){
-                    LuaClosure cb = (LuaClosure) it.next();
-                    cb.invoke(values.toArray(new LuaValue[values.size()]));
-                }
-            }
+        var hookList = RemixedDungeon.events.get(event);
+
+        if(hookList.isEmpty()) {
+            return;
+        }
+
+        var argsList = objectsToValues(args).toArray(new LuaValue[0]);
+
+        for (var hook: hookList) {
+            hook.invoke(argsList);
         }
     }
 
     @LuaInterface
-    public static void Add(String name, LuaClosure callback) {
-        for (Map.Entry<String, List<LuaClosure>> entry : RemixedDungeon.events.entrySet()) {
-            String n = entry.getKey();
-            List<LuaClosure> callbacks = entry.getValue();
+    public static void Add(String event, LuaClosure callback) {
 
-            if (n.equals(name)) {
-                callbacks.add(callback);
-                RemixedDungeon.events.put(entry.getKey(), callbacks);
-            }
+        if(!RemixedDungeon.events.containsKey(event)) {
+            RemixedDungeon.events.put(event, new ArrayList<>());
         }
 
-        List<LuaClosure> callbacks = new ArrayList<>();
-        callbacks.add(callback);
-
-        RemixedDungeon.events.put(name, callbacks);
+        RemixedDungeon.events.get(event).add(callback);
     }
 }
