@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -28,6 +29,8 @@ public class Artifact extends EquipableItem {
 			ch.remove(buff);
 			buff = null;
 		}
+
+		new Hook().Call("onArtifactDeactivate", this, ch);
 	}
 
 	public void activate(@NotNull Char ch) {
@@ -37,6 +40,8 @@ public class Artifact extends EquipableItem {
 			buff.setSource(this);
 			buff.attachTo(ch);
 		}
+
+		new Hook().Call("onArtifactActivate", this, ch);
 	}
 
 	@Override

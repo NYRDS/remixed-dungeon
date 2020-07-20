@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.actors.Char;

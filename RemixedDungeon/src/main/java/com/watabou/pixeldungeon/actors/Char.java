@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.CustomMob;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -318,6 +319,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			effectiveDamage = attackProc(enemy, effectiveDamage);
 			effectiveDamage = enemy.defenseProc(this, effectiveDamage);
 			enemy.damage(effectiveDamage, this);
+
+			new Hook().Call("onCharAttack", this, enemy, effectiveDamage);
 
 			if (visibleFight) {
                 Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));

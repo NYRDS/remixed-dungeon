@@ -35,6 +35,7 @@ import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
@@ -306,6 +307,8 @@ public class Dungeon {
 
         levelId = level.levelId;
         Dungeon.level = level;
+
+        new Hook().Call("onLevelSwitch", level);
     }
 
     public static boolean posNeeded() {

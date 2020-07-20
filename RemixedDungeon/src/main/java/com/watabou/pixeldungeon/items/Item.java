@@ -67,6 +67,8 @@ import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.var;
 
+import com.nyrds.pixeldungeon.modding.Hook;
+
 public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	private static final String TXT_TO_STRING       = "%s";
@@ -156,6 +158,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			GameScene.pickUp(this);
 			Sample.INSTANCE.play(Assets.SND_ITEM);
 			hero.spendAndNext(TIME_TO_PICK_UP);
+
+			new Hook().Call("onItemPickup", this, hero);
 			return true;
 		} else {
 			return false;
@@ -166,10 +170,13 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		chr.spendAndNext(TIME_TO_DROP);
 		int pos = chr.getPos();
 		chr.level().animatedDrop(detachAll(chr.getBelongings().backpack), pos);
+
+		new Hook().Call("onItemDrop", this, chr);
 	}
 
 	public void doThrow(@NotNull Char chr) {
-		chr.selectCell(thrower);
+    	chr.selectCell(thrower);
+		new Hook().Call("onItemThrow", this, chr);
 	}
 
 	public void execute(@NotNull Char chr, @NotNull String action) {
@@ -310,6 +317,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		QuickSlot.refresh(getOwner());
 
+		new Hook().Call("onItemUpgrade", this, owner);
+
 		return this;
 	}
 
@@ -325,6 +334,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		this.level(this.level() - 1);
 
 		QuickSlot.refresh(owner);
+		new Hook().Call("onItemDegrade", this, owner);
 
 		return this;
 	}
@@ -369,6 +379,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		setCursedKnown(true);
 
 		Library.identify(Library.ITEM,getEntityKind());
+		new Hook().Call("onItemIdentify", this, owner);
 
 		return this;
 	}

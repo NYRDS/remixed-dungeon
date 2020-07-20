@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;

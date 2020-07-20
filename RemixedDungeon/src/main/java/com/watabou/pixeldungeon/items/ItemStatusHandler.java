@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

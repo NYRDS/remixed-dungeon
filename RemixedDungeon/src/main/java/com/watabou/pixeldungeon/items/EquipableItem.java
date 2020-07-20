@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -83,6 +84,7 @@ public abstract class EquipableItem extends Item {
 
 	public boolean doEquip(@NotNull Char hero ) {
 		Belongings belongings = hero.getBelongings();
+		new Hook().Call("onArmorEquip", this, hero);
 		return belongings.equip(this, slot(belongings));
 	}
 
@@ -123,7 +125,8 @@ public abstract class EquipableItem extends Item {
 		if (collect && !collect( hero.getBelongings().backpack )) {
 			doDrop(hero);
 		}
-				
+
+		new Hook().Call("onArmorUnequip", this, hero);
 		return true;
 	}
 
