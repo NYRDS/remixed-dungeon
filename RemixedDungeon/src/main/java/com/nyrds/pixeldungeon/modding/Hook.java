@@ -9,7 +9,6 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -26,38 +25,50 @@ public class Hook {
     }
 
     @LuaInterface
+    public static void Remove(String event, String name) {
+        if(!RemixedDungeon.events.containsKey(event)) {
+            return;
+        }
+
+        Map<String, LuaClosure> hookMap = RemixedDungeon.events.get(event);
+        if(hookMap.isEmpty()) {
+            return;
+        }
+
+        if(hookMap.get(name) == null) {
+            return;
+        }
+
+        hookMap.remove(name);
+    }
+
+    @LuaInterface
     public static void Call(String event, Object... args) {
-        for (Map.Entry<String, List<LuaClosure>> entry : RemixedDungeon.events.entrySet()) {
-            String name = entry.getKey();
-            List<LuaClosure> callbacks = entry.getValue();
 
-            if (name.equals(event)) {
-                Iterator<LuaClosure> it = callbacks.iterator();
-                List<LuaValue> values = objectsToValues(args);
+        if(!RemixedDungeon.events.containsKey(event)) {
+            return;
+        }
 
-                while(it.hasNext()){
-                    LuaClosure cb = (LuaClosure) it.next();
-                    cb.invoke(values.toArray(new LuaValue[values.size()]));
-                }
-            }
+        Map<String, LuaClosure> hookMap = RemixedDungeon.events.get(event);
+
+        if(hookMap.isEmpty()) {
+            return;
+        }
+
+        LuaValue[] argsList = objectsToValues(args).toArray(new LuaValue[0]);
+
+        for (Map.Entry<String, LuaClosure> entry: hookMap.entrySet()) {
+            entry.getValue().invoke(argsList);
         }
     }
 
     @LuaInterface
-    public static void Add(String name, LuaClosure callback) {
-        for (Map.Entry<String, List<LuaClosure>> entry : RemixedDungeon.events.entrySet()) {
-            String n = entry.getKey();
-            List<LuaClosure> callbacks = entry.getValue();
+    public static void Add(String event, String name, LuaClosure callback) {
 
-            if (n.equals(name)) {
-                callbacks.add(callback);
-                RemixedDungeon.events.put(entry.getKey(), callbacks);
-            }
+        if(!RemixedDungeon.events.containsKey(event)) {
+            RemixedDungeon.events.put(event, new HashMap<>());
         }
 
-        List<LuaClosure> callbacks = new ArrayList<>();
-        callbacks.add(callback);
-
-        RemixedDungeon.events.put(name, callbacks);
+        RemixedDungeon.events.get(event).put(name, callback);
     }
 }

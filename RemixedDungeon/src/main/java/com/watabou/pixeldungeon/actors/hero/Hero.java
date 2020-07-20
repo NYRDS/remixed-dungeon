@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.modding.Hook;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
@@ -1608,7 +1609,7 @@ public class Hero extends Char {
 		Statistics.foodEaten++;
 		Badges.validateFoodEaten();
 
-		new Hook().Call("onFoodEat", food, this);
+		Hook.Call("onFoodEat", food, this);
 	}
 
 	public void setControlTarget(Char controlTarget) {
