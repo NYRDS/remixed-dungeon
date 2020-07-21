@@ -63,7 +63,7 @@ import javax.microedition.khronos.opengles.GL10;
 public class RemixedDungeon extends Game {
 
 	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
-	public static Map<String, List<LuaClosure>> events = new HashMap<String, List<LuaClosure>>();
+	public static Map<String, HashMap<String, LuaClosure>> events = new HashMap<>();
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
