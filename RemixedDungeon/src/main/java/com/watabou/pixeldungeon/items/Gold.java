@@ -91,31 +91,30 @@ public class Gold extends Item {
 			return Utils.format( Game.getVar(R.string.Gold_Info)+" "+Game.getVar(R.string.Gold_Collect), quantity() );
 		}
 	}
-	
+
 	@Override
-	public Item quantity(int value) {
+	public int image() {
+		int value = quantity();
 
-		image = 0;
-		
-		if(value > 9 ) {
-			image = 1;
-		}
-		
-		if(value > 99) {
-			image = 2;
-		}
-		
-		if(value > 999) {
-			image = 3;
-		}
-		
 		if(value > 9999) {
-			image = 4;
+			return  4;
 		}
 
-		return super.quantity(value);
+		if(value > 999) {
+			return  3;
+		}
+
+		if(value > 99) {
+			return  2;
+		}
+
+		if(value > 9 ) {
+			return  1;
+		}
+
+		return 0;
 	}
-	
+
 	@Override
 	public Item random() {
 		quantity(Math.max(Random.Int( 20 + Dungeon.depth * 10, 40 + Dungeon.depth * 20 ),0));

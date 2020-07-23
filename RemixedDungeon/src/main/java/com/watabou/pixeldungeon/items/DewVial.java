@@ -161,20 +161,23 @@ public class DewVial extends Item {
 		return super.toString() + " (" + status() +  ")" ;
 	}
 
+	@Override
+	public int image() {
+		if(volume == 0) {
+			return  0;
+		} else if(volume < MAX_VOLUME/2) {
+			return  1;
+		} else if(volume < MAX_VOLUME) {
+			return  2;
+		}
+		return  3;
+	}
+
 	private int getVolume() {
 		return volume;
 	}
 
 	private void setVolume(int volume) {
 		this.volume = volume;
-		if(volume == 0) {
-			image = 0;
-		} else if(volume < MAX_VOLUME/2) {
-			image = 1;
-		} else if(volume < MAX_VOLUME) {
-			image = 2;
-		} else {
-			image = 3;
-		}
 	}
 }

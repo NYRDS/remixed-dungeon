@@ -1769,7 +1769,7 @@ public class Hero extends Char {
 	}
 
 	@LuaInterface
-	public void teleportTo(Position newPos) {
+	public void teleportTo(@NotNull Position newPos) {
 		if (newPos.levelId.equals(levelId)) {
 			newPos.computeCell(level());
 			WandOfBlink.appear( this, newPos.cellId );
