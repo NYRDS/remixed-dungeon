@@ -2554,4 +2554,36 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="ShieldWeaponInfo">Quando usado como arma, este escudo irá infligir %1$d danos em média.</string>
   <string name="TownPortal_Name">Portal da Cidade</string>
   <string name="TownPortal_Info">Este feitiço permite-lhe regressar instantaneamente à segurança. No entanto, uma fonte mágica poderosa nas proximidades pode impedi-lo de funcionar como pretendido.</string>
+  <string name="MedicineMask_Name">Máscara cirúrgica</string>
+  <string name="MedicineMask_Info">Uma máscara cirúrgica é projetada para capturar microorganismos lançados em gotas e aerossóis da boca e nariz do usuário.
+\n\nUsar uma máscara significa que você se importa com os outros.</string>
+  <string name="MedicineMask_Obtained">Máscara cirúrgica obtida</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Você ainda está aqui? Tome! Pegue isso.</string>
+  <string name="FilteredMask_Name">Máscara respiratória</string>
+  <string name="FilteredMask_Info">Uma máscara respiratória é um dispositivo feito para proteger o usuário de inalar atmosferas perigosas, incluindo fumaças, vapores, gases e outras coisas como poeira e microrganismos transportados pelo ar.
+  \n\nEssa máscara no entanto só serve como decoração.</string>
+  <string name="FullFaceMask_Name">Máscara de gás</string>
+  <string name="FullFaceMask_Info">Uma máscara de gás é uma máscara utilizada para proteger o usuário de poluentes e gases tóxicos transportados pelo ar. A máscara forma uma cobertura selada sobre o nariz, boca e olhos.
+\n\nOs filtros dessa máscara sumiram, mas ela parece bem legal mesmo assim</string>
+  <string name="StartScene_DifficultyEasyNoAds">Fácil</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">Normal com save</string>
+  <string name="Backstab_Name">Apunhalar</string>
+  <string name="Backstab_Info">Um golpe silencioso nas costas. Desonesto, mas extremamente eficaz, o dano de apunhalar irá aumentar com o nível de habilidade do usuário.\n\nUma punhalada bem sucedida irá ignorar completamente a armadura ou habilidades defensivas da vítima.</string>
+  <string name="Backstab_TooFar">A vítima está muito longe para conseguir acertar.</string>
+  <string name="Backstab_Aware">A vítima não deve perceber você para conseguir a apunhalar</string>
+  <string name="KunaiThrow_Name">Arremesso de Kunai</string>
+  <string name="KunaiThrow_Info">O arremesso mortal de kunai será feito extremamente rápido, tão rápido que você nem será nem capaz de selecionar um alvo.\n\nVerdadeiros mestres são capazes de jogar mais de uma kunai por vez.</string>
+  <string name="Haste_Name">Pressa Extrema</string>
+  <string name="Haste_Info">A Pressa permitirá que o usuário se mova com extrema velocidade, pois tudo ao seu redor irá parecer estático. Essa pressa consumirá muita energia então só é possível apenas por curtos períodos de tempo.\ n\nUm mestre habilidoso  será capaz de agir com pressa por um período mais longo.</string>
+  <string name="Welcome_Text_29_5">
+    remix.29.5\n
+    - Jogabilidade:\n
+    -- Habilidades do Ladino!\n
+    - Modding:\n
+    -- Armaduras Personalizadas!\n
+    - Defeitos Consertados\n
+    </string>
+  <string name="Char_Stole_0">%1$s roubou %2$s de  %3$s!</string>
+  <string name="Char_Stole_1">%1$s roubou %2$s de  %3$s!</string>
+  <string name="Char_Stole_2">%1$s roubou %2$s de  %3$s!</string>
 </resources>
