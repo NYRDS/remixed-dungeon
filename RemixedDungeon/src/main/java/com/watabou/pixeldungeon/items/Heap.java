@@ -409,7 +409,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 	public void destroy() {
 		Dungeon.level.removeHeap( this.pos );
 		if (sprite != null) {
-			sprite.kill();
+			sprite.killAndErase();
 		}
 		items.clear();
 	}

@@ -21,10 +21,10 @@ public class ThiefFleeing extends MobAi implements AiState {
     public void act(Mob me) {
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
-            me.target = me.getEnemy().getPos();
+            me.setTarget(me.getEnemy().getPos());
         }
 
-        if(!me.doStepFrom(me.target)) {
+        if(!me.doStepFrom(me.getTarget())) {
             me.spend(Actor.TICK);
             me.getSprite().showStatus( CharSprite.NEGATIVE, Mob.TXT_RAGE );
             me.setState(MobAi.getStateByClass(Hunting.class));

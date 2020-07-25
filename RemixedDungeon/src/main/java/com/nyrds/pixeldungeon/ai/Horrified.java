@@ -24,10 +24,10 @@ public class Horrified extends MobAi implements AiState{
 
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
-            me.target = me.getEnemy().getPos();
+            me.setTarget(me.getEnemy().getPos());
         }
 
-        if(!me.doStepFrom(me.target)) {
+        if(!me.doStepFrom(me.getTarget())) {
             me.spend(Actor.TICK);
         }
     }

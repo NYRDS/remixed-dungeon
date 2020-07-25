@@ -84,6 +84,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {
@@ -91,7 +93,6 @@ public abstract class Mob extends Char {
 	public static final String TXT_RAGE = "#$%^";
 
 	private static final float SPLIT_DELAY = 1f;
-
 
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 
@@ -103,7 +104,10 @@ public abstract class Mob extends Char {
 	protected Object spriteClass;
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
-	public int target = Level.INVALID_CELL;
+	@LuaInterface
+	@Getter
+	@Setter
+	private int target = Level.INVALID_CELL;
 
 	protected int defenseSkill = 0;
 
@@ -528,7 +532,7 @@ public abstract class Mob extends Char {
 
 		setState(MobAi.getStateByClass(Wandering.class));
 
-		target = cell;
+		setTarget(cell);
 	}
 
 	public String description() {
@@ -738,7 +742,7 @@ public abstract class Mob extends Char {
 
 		if(action.equals(CommonActions.MAC_TAUNT)) {
 			setState(MobAi.getStateByClass(Hunting.class));
-			target=hero.getId();
+			setTarget(hero.getPos());
 			hero.spend(0.1f);
 			return;
 		}

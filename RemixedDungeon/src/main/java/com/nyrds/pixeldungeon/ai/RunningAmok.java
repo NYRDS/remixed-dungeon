@@ -24,15 +24,15 @@ public class RunningAmok extends MobAi implements AiState {
         me.enemySeen = me.isEnemyInFov();
 
         if(me.enemySeen) {
-            me.target = me.getEnemy().getPos();
+            me.setTarget(me.getEnemy().getPos());
         } else {
-            me.target = me.level().randomDestination();
+            me.setTarget(me.level().randomDestination());
         }
 
         if (me.canAttack(me.getEnemy())) {
             me.doAttack(me.getEnemy());
         } else {
-            me.doStepTo(me.target);
+            me.doStepTo(me.getTarget());
         }
     }
 
