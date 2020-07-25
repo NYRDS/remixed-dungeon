@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
@@ -146,9 +145,9 @@ public abstract class Actor implements Bundlable {
 	}
 	
 	/*protected*/final public void next() {
-		Log.i("Main loop", String.format("next:\nNext: %s Current: %s", this, current));
+		//Log.i("Main loop", String.format("next:\nNext: %s Current: %s", this, current));
 		if (current == this) {
-			Log.i("Main loop", "next == current");
+			//Log.i("Main loop", "next == current");
 
 			current = null;
 		}
@@ -179,27 +178,29 @@ public abstract class Actor implements Bundlable {
 
 		// action still in progress
 		if (current != null && !current.timeout()) {
-			Log.i("Main loop", String.format("current: %s %4.1f", current, current.time));
+			//Log.i("Main loop", String.format("current: %s %4.1f", current, current.time));
 			return;
 		}
 
 		Actor actor;
-		if ((actor=getNextActor(Float.MAX_VALUE)) != null) {
+		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-			Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
+			//Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
 
 			if (actor instanceof Char && ((Char)actor).getSprite().isMoving) {
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
-				Log.i("Main loop","skipped");
+				//Log.i("Main loop","skipped");
 				return;
 			}
 
-			Log.i("Main loop", "act");
+			//Log.i("Main loop", "act");
 
 			current = actor;
-			if (actor.act()) {
+			if (actor.act() || !Dungeon.hero.isAlive()) {
 				actor.next();
+			} else {
+				break;
 			}
 		}
 	}
@@ -218,7 +219,7 @@ public abstract class Actor implements Bundlable {
 
 		chars.clear();
 
-		Log.i("Main loop","getNextActor");
+		//Log.i("Main loop","getNextActor");
 
 		for (Actor actor : all) {
 			//select actor to act
