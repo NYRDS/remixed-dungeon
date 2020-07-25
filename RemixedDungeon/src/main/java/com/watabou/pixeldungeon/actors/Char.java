@@ -1268,7 +1268,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	@LuaInterface
-	@Deprecated
+	@Deprecated // keep it for old version of Remixed Additions
 	public void setSoulPoints(int i) {
 	}
 
