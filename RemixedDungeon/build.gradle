@@ -29,8 +29,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 916
-        versionName "29.5.beta.4"
+        versionCode 917
+        versionName "29.5.rc.1"
     }
 
     aaptOptions {
@@ -94,7 +94,7 @@ dependencies {
     implementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
     implementation 'com.google.android.gms:play-services-base:17.3.0'
-    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
     implementation "com.google.android.gms:play-services-games:19.0.0"
 
     implementation 'androidx.multidex:multidex:2.0.1'
@@ -105,24 +105,22 @@ dependencies {
     implementation 'commons-io:commons-io:2.6'
 
     implementation 'com.google.firebase:firebase-analytics:17.4.4'
-    implementation 'com.google.firebase:firebase-ads:19.2.0'
+    implementation 'com.google.firebase:firebase-ads:19.3.0'
     implementation 'com.google.firebase:firebase-crashlytics:17.1.1'
 
 
-    implementation 'com.appodeal.ads.sdk:core:2.7.1'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.7.1.3'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.7.1.4'
-    implementation 'com.appodeal.ads.sdk.networks:appodealx:2.7.1.1'
-    //implementation 'com.appodeal.ads.sdk.networks:chartboost:2.7.1.2'
-    implementation 'com.appodeal.ads.sdk.networks:inmobi:2.7.1.2'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.1.4'
-    implementation 'com.appodeal.ads.sdk.networks:mraid:2.7.1.1'
-    implementation 'com.appodeal.ads.sdk.networks:my_target:2.7.1.3'
-    implementation 'com.appodeal.ads.sdk.networks:smaato:2.7.1.2'
-    //implementation 'com.appodeal.ads.sdk.networks:tapjoy:2.7.1.3'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.1.3'
-    implementation 'com.appodeal.ads.sdk.networks:vast:2.7.1.1'
-    //implementation 'com.appodeal.ads.sdk.networks:vungle:2.7.1.1' // google don't like it
+    implementation 'com.appodeal.ads.sdk:core:2.7.2'
+    implementation 'com.appodeal.ads.sdk.networks:a4g:2.7.2.3'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.7.2.5'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.7.2.5'
+    implementation 'com.appodeal.ads.sdk.networks:appodealx:2.7.2.2'
+    implementation 'com.appodeal.ads.sdk.networks:inmobi:2.7.2.3'
+    implementation 'com.appodeal.ads.sdk.networks:inner-active:2.7.2.2'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.2.5'
+    implementation 'com.appodeal.ads.sdk.networks:mraid:2.7.2.2'
+    implementation 'com.appodeal.ads.sdk.networks:smaato:2.7.2.3'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.2.4'
+    implementation 'com.appodeal.ads.sdk.networks:vast:2.7.2.2'
 
     implementation 'org.jetbrains:annotations:15.0'
 
