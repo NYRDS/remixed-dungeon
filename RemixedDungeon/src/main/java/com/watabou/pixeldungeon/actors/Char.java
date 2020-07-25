@@ -1249,26 +1249,38 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		GLog.w("select cell for %s niy.", getEntityKind());
 	}
 
+	@LuaInterface
 	public int getSkillPointsMax() {
 		return 10;
 	}
 
+	@LuaInterface
 	public int getSkillPoints() {
 		return 10;
 	}
 
+	@LuaInterface
 	public void spendSkillPoints(int cost) {
 	}
 
+	@LuaInterface
 	public void setSkillPoints(int i) {
 	}
 
+	@LuaInterface
+	@Deprecated
+	public void setSoulPoints(int i) {
+	}
+
+	@LuaInterface
 	public void eat(Item food, float energy, String message) {
 	}
 
+	@LuaInterface
 	public void skillLevelUp() {
 	}
 
+	@LuaInterface
 	public void teleportTo(Position target) {
 	}
 
