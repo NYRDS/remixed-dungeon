@@ -46,36 +46,54 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	private class RewardVideoAdListener implements RewardedVideoAdListener {
 
-		@Override
-		public void onRewardedVideoAdLoaded() { }
+		private boolean rewarded = false;
 
 		@Override
-		public void onRewardedVideoAdOpened() { }
+		public void onRewardedVideoAdLoaded() {
+			//GLog.i("onRewardedVideoAdLoaded");
+		}
 
 		@Override
-		public void onRewardedVideoStarted() { }
+		public void onRewardedVideoAdOpened() {
+			rewarded = false;
+			//GLog.i("onRewardedVideoAdOpened");
+		}
+
+		@Override
+		public void onRewardedVideoStarted() {
+			rewarded = false;
+			//GLog.i("onRewardedVideoStarted");
+		}
 
 		@Override
 		public void onRewardedVideoAdClosed() {
 			Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
+			returnTo.returnToWork(rewarded);
 		}
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
+			//GLog.i("onRewarded %s", rewardItem);
 			returnTo.returnToWork(true);
 		}
 
 		@Override
 		public void onRewardedVideoAdLeftApplication() {
+			//GLog.i("onRewardedVideoAdLeftApplication");
 			returnTo.returnToWork(true);
 		}
 
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
+			//GLog.i("onRewardedVideoFailedToLoad %d", i);
 		}
 
 		@Override
-		public void onRewardedVideoCompleted() {}
+		public void onRewardedVideoCompleted()
+		{
+			rewarded = true;
+			//GLog.i("onRewardedVideoCompleted");
+		}
 	}
 
 }

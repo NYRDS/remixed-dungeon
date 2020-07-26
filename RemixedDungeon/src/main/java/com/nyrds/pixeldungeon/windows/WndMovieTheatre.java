@@ -57,10 +57,9 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 
 	@Override
 	public void returnToWork(final boolean result) {
-		if(result) {
-			Hero.movieRewardPending = result;
-			Dungeon.save(true);
-		}
+
+		Hero.movieRewardPending = result;
+		Dungeon.save(true);
 
 		RemixedDungeon.pushUiTask(() -> {
 			Game.softPaused = false;
