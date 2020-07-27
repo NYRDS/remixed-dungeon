@@ -33,7 +33,7 @@ quest.state = function(name,state)
     if state then
         storage.gamePut(questDataIndex(name),state)
     end
-    return storage.gameGet(questDataIndex(name))
+    return storage.gameGet(questDataIndex(name)) or {}
 end
 --[[
 -- .kills.BlackRat = 5
