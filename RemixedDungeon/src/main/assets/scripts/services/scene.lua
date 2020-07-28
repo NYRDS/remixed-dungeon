@@ -27,10 +27,29 @@ local function stdModeOnStep(self, scene)
     end
 end
 
+local function heroAiStep()
+    local hero = RPD.Dungeon.hero
+
+    if not hero:isReady() then
+        return
+    end
+
+    hero:handle(RPD.Dungeon.level:randomVisibleDestination())
+end
+
 local function levelsTestModeOnStep(self, scene)
     if scene == "GameScene" then
 
         framesOnLevel = framesOnLevel + 1
+
+        local hero = RPD.Dungeon.hero
+
+        hero:ht(10000)
+        hero:hp(hero:ht())
+
+        if hero:myMove() then
+            heroAiStep()
+        end
 
         if framesOnLevel > 100 then
             currentLevel = currentLevel + 1

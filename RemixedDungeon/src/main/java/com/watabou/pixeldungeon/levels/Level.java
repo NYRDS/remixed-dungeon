@@ -95,6 +95,7 @@ import com.watabou.utils.SparseArray;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.TestOnly;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -884,6 +885,20 @@ public abstract class Level implements Bundlable {
 				|| getTopLevelObject(cell) != null
 				|| cell == entrance);
 		return cell;
+	}
+
+	@LuaInterface
+	@TestOnly
+	public int randomVisibleDestination() {
+
+		ArrayList<Integer> cells = new ArrayList<>();
+		for(int i=0;i<getLength();++i) {
+			if(Dungeon.visible[i] && passable[i]) {
+				cells.add(i);
+			}
+		}
+
+		return oneCellFrom(cells);
 	}
 
 	public int randomDestination() {
