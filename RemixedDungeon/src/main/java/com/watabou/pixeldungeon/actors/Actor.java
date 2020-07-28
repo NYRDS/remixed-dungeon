@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -160,14 +161,15 @@ public abstract class Actor implements Bundlable {
 		Actor next;
 		while ((next=getNextActor(now)) != null) {
 
-//			Log.i("Main loop", String.format("%s %4.2f %4.2f",actor.getClass().getSimpleName(),now,actor.time));
+			//Log.i("Main loop", String.format("%s %4.2f %4.2f",next.getClass().getSimpleName(),now,next.time));
 
 			float timeBefore = next.time;
 
+			current = next;
 			next.act();
 /*
 			if(!(next.time>timeBefore)) {
-				Log.i("Main loop", String.format("%s %4.2f, time not increased!",next.getClass().getSimpleName(),next.time));
+				//Log.i("Main loop", String.format("%s %4.2f, time not increased!",next.getClass().getSimpleName(),next.time));
 			}
 */
 		}
@@ -183,8 +185,10 @@ public abstract class Actor implements Bundlable {
 		}
 
 		Actor actor;
+
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
+			//time = actor.time;
 			//Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
 
 			if (actor instanceof Char && ((Char)actor).getSprite().isMoving) {
@@ -200,6 +204,10 @@ public abstract class Actor implements Bundlable {
 			if (actor.act() || !Dungeon.hero.isAlive()) {
 				actor.next();
 			} else {
+				break;
+			}
+
+			if(SystemTime.timeSinceTick() > 40) {
 				break;
 			}
 		}
@@ -291,6 +299,7 @@ public abstract class Actor implements Bundlable {
 		return chars.get(pos);
 	}
 
+	@LuaInterface
 	public boolean myMove() {
 		return current == this;
 	}
