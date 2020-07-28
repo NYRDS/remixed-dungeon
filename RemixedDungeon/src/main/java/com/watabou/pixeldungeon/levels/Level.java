@@ -1293,9 +1293,11 @@ public abstract class Level implements Bundlable {
 		int cx = cellX(c.getPos());
 		int cy = cellY(c.getPos());
 
-		boolean sighted = !c.hasBuff(Blindness.class) && !c.hasBuff(Shadows.class) && c.isAlive();
+		int viewDistance = c.hasBuff(Shadows.class) ? 1 : c.getViewDistance();
+		boolean sighted = !c.hasBuff(Blindness.class) && c.isAlive();
+
 		if (sighted) {
-			ShadowCaster.castShadow(cx, cy, fieldOfView, c.getViewDistance());
+			ShadowCaster.castShadow(cx, cy, fieldOfView, viewDistance);
 		} else {
 			Arrays.fill(fieldOfView, false);
 		}

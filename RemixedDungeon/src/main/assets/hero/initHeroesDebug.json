@@ -15,16 +15,16 @@
         "level": 1000
       },
       {
-        "kind": "ScrollOfUpgrade",
+        "kind": "ScrollOfMagicMapping",
         "quantity": 100,
         "level": 10
       },
       {
-        "kind": "PotionOfMindVision",
+        "kind": "PotionOfInvisibility",
         "quantity": 100
       },
       {
-        "kind": "ScrollOfRemoveCurse",
+        "kind": "ScrollOfDomination",
         "quantity": 100
       },
       {
