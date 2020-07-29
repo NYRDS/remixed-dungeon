@@ -1315,7 +1315,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	@LuaInterface
-	boolean canStepOn() {
+	public boolean canStepOn() {
     	return walkingType.canSpawnAt(level(),getPos()) && (Actor.findChar(pos) == null);
 	}
 

@@ -530,7 +530,7 @@ public class GameScene extends PixelScene {
         }
     }
 
-    private void addLevelObjectSprite(LevelObject obj) {
+    private void addLevelObjectSprite(@NotNull LevelObject obj) {
         (obj.sprite = (LevelObjectSprite) objects.recycle(LevelObjectSprite.class)).reset(obj);
     }
 

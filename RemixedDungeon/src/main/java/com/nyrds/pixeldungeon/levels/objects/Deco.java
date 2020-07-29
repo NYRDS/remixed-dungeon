@@ -158,8 +158,9 @@ public class Deco extends LevelObject {
 	public void resetVisualState() {
 		if(basic==null) {
 			basic = loadAnimation("basic");
-			sprite.playAnim(basic, Util.nullCallback);
 		}
+
+		sprite.playAnim(basic, Util.nullCallback);
 		updateEffect();
 	}
 
