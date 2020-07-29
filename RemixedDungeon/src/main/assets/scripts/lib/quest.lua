@@ -16,25 +16,35 @@ local RPD = require "scripts/lib/commonClasses"
 local conditionsList = {}
 conditionsList.kills = {}
 
-conditionsList = storage.gameGet("__quest__conditionsList") or conditionsList
-
 
 local function questDataIndex(name)
     return "__quest_"..name
 end
 
+local function storeConditions()
+    storage.gamePut("__quest__conditionsList", conditionsList)
+end
+
+local function getConditions()
+    conditionsList = storage.gameGet("__quest__conditionsList") or conditionsList
+    return conditionsList
+end
+
+
 local quest = {}
 
 quest.debug = function(val)
-    conditionsList.debug = val
+    getConditions().debug = val
+    storeConditions()
 end
 
 quest.state = function(name,state)
     if state then
         storage.gamePut(questDataIndex(name),state)
     end
-    return storage.gameGet(questDataIndex(name)) or {}
+    return storage.gameGet(questDataIndex(name))
 end
+
 --[[
 -- .kills.BlackRat = 5
 -- ]]
@@ -43,6 +53,8 @@ quest.give = function(name, chr, conditions)
 
     quest.state(name, {hero = chr, conditions = conditions, kills = {}})
 
+    getConditions()
+
     if conditions.kills then
         for _,kind in pairs(conditions.kills) do
             conditionsList.kills[kind] = conditionsList.kills[kind] or {}
@@ -50,8 +62,7 @@ quest.give = function(name, chr, conditions)
         end
     end
 
-    storage.gamePut("__quest__conditionsList", conditionsList)
-
+    storeConditions()
 end
 
 quest.isGiven = function(name)
@@ -68,13 +79,19 @@ quest.complete = function(name)
     state.completed = true
     quest.state(name,state)
 
+    getConditions()
+
     for _, quests in pairs(conditionsList.kills) do
         quests[name] = nil
     end
+
+    storeConditions()
 end
 
 quest.mobDied = function(mob,cause)
     local kind = mob:getMobClassName()
+
+    getConditions()
 
     local affectedQuests = conditionsList.kills[kind] or {}
 
