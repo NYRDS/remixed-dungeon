@@ -1045,9 +1045,14 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void drop(Item item, int cell, Heap.Type type) {
+		if(!cellValid(cell)) {
+			return;
+		}
+
 		if(item == CharsList.DUMMY_ITEM) {
 			return;
 		}
+
 		drop(item, cell).type = type;
 	}
 
