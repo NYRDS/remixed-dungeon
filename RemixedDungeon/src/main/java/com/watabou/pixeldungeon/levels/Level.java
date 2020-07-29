@@ -1056,6 +1056,7 @@ public abstract class Level implements Bundlable {
 		drop(item, cell).type = type;
 	}
 
+	@LuaInterface
 	public void animatedDrop(Item item, int cell) {
 		if(item == CharsList.DUMMY_ITEM) {
 			return;
@@ -1065,7 +1066,9 @@ public abstract class Level implements Bundlable {
 		heap.sprite.drop();
 	}
 
+
 	@NotNull
+	@LuaInterface
 	public Heap drop(Item item, int cell) {
 
 		item = Treasury.getLevelTreasury().check(item);
