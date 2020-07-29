@@ -29,8 +29,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 919
-        versionName "29.5.rc.3"
+        versionCode 920
+        versionName "29.5.rc.4"
     }
 
     aaptOptions {
@@ -110,17 +110,11 @@ dependencies {
 
 
     implementation 'com.appodeal.ads.sdk:core:2.7.2'
-    implementation 'com.appodeal.ads.sdk.networks:a4g:2.7.2.3'
     implementation 'com.appodeal.ads.sdk.networks:adcolony:2.7.2.5'
     implementation 'com.appodeal.ads.sdk.networks:applovin:2.7.2.5'
     implementation 'com.appodeal.ads.sdk.networks:appodealx:2.7.2.2'
-    implementation 'com.appodeal.ads.sdk.networks:inmobi:2.7.2.3'
-    implementation 'com.appodeal.ads.sdk.networks:inner-active:2.7.2.2'
     implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.2.5'
-    implementation 'com.appodeal.ads.sdk.networks:mraid:2.7.2.2'
-    implementation 'com.appodeal.ads.sdk.networks:smaato:2.7.2.3'
     implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.2.4'
-    implementation 'com.appodeal.ads.sdk.networks:vast:2.7.2.2'
 
     implementation 'org.jetbrains:annotations:15.0'
 
