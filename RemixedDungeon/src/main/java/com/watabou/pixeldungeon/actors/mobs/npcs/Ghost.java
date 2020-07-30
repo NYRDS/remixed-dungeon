@@ -78,7 +78,17 @@ public class Ghost extends NPC {
 		addImmunity( Paralysis.class );
 		addImmunity( Roots.class );
 	}
-	
+
+	@Override
+	public boolean act() {
+
+		if(Quest.given && Math.random() < 0.1) {
+			setTarget(Dungeon.hero.getControlTarget().getPos());
+		}
+
+		return super.act();
+	}
+
 	@Override
 	public int defenseSkill( Char enemy ) {
 		return 1000;
