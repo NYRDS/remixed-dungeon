@@ -319,6 +319,8 @@ public abstract class Mob extends Char {
 
 		setEnemy(enemy);
 
+		spend(attackDelay());
+
 		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
 			if(Dungeon.visible[getPos()]) {
 				getSprite().attack(enemy.getPos());
@@ -326,14 +328,12 @@ public abstract class Mob extends Char {
 				onAttackComplete();
 			}
 		} else {
-			if(Dungeon.isPathVisible(getPos(), enemy.getPos())) {
+			if (Dungeon.isPathVisible(getPos(), enemy.getPos())) {
 				getSprite().zap(enemy.getPos());
 			} else {
 				onZapComplete();
 			}
 		}
-
-		spend(attackDelay());
 	}
 
 	@Override
