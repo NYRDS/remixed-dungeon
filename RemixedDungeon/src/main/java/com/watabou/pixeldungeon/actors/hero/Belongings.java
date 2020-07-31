@@ -54,6 +54,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -489,10 +490,16 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public void dropAll() {
+		var itemsToDrop = new ArrayList<Item>();
+
 		for (Item item : this) {
 			if (item.quantity()>0) {
-				item.doDrop(owner);
+				itemsToDrop.add(item);
 			}
+		}
+
+		for (Item item: itemsToDrop) {
+			item.doDrop(owner);
 		}
 	}
 
