@@ -412,6 +412,9 @@ public class DungeonGenerator {
 		var levelIds = mGraph.names();
 
 		for(int i = 0;i<levelIds.length();++i) {
+			if(levelIds.getString(i).equals("0")) {
+				continue;
+			}
 			ret.add(levelIds.getString(i));
 		}
 

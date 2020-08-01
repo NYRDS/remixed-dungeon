@@ -120,7 +120,7 @@ return item.init{
         end
 
         if action == "inputText" then
-            RPD.System.Input:showInputDialog("Text title", "Text subtitle")
+            --RPD.System.Input:showInputDialog("Text title", "Text subtitle")
         end
 
         if action == "checkText" then
