@@ -13,16 +13,13 @@ import com.watabou.pixeldungeon.windows.elements.Tool;
  * This file is part of Remixed Pixel Dungeon.
  */
 class InventoryTool extends Tool {
-    private GoldIndicator gold;
-    private PickedUpItem  pickedUpItem;
+    private GoldIndicator gold = new GoldIndicator();
+    private PickedUpItem  pickedUpItem = new PickedUpItem();
 
     public InventoryTool() {
         super(10, Chrome.Type.ACTION_BUTTON);
-        gold = new GoldIndicator();
         gold.setPos(x,y);
         add(gold);
-
-        pickedUpItem = new PickedUpItem();
         add(pickedUpItem);
     }
 

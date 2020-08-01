@@ -63,9 +63,6 @@ public class ArmoryPainter extends Painter {
 	}
 	
 	private static Item prize(Level level) {
-		return Treasury.getLevelTreasury().random( Random.oneOf(
-			Treasury.Category.ARMOR,
-			Treasury.Category.WEAPON
-		) );
+		return Treasury.weaponOrArmorPrize(1);
 	}
 }

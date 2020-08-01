@@ -1095,7 +1095,7 @@ public abstract class Level implements Bundlable {
 
 		Heap heap = heaps.get(cell);
 
-		if (heap  != null && (heap.type == Heap.Type.LOCKED_CHEST
+		if (heap != null && (heap.type == Heap.Type.LOCKED_CHEST
 				|| heap.type == Heap.Type.CRYSTAL_CHEST)) {
 			int n;
 			do {

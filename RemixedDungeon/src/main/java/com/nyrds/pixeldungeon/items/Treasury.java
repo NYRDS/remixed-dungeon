@@ -251,4 +251,22 @@ public class Treasury {
             }
         }
     }
+
+    public static Item weaponOrArmorPrize(int level) {
+        Item prize = getLevelTreasury().random( Random.oneOf(
+                Category.WEAPON,
+                Category.ARMOR
+        ) );
+
+        for (int i=0; i < level; i++) {
+            Item another = getLevelTreasury().random( Random.oneOf(
+                    Category.WEAPON,
+                    Category.ARMOR
+            ) );
+            if (another.level() > prize.level()) {
+                prize = another;
+            }
+        }
+        return prize;
+    }
 }

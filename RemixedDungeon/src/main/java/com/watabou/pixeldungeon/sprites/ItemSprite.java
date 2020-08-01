@@ -50,7 +50,7 @@ public class ItemSprite extends MovieClip {
 
 	protected TextureFilm film;
 
-	public Heap heap;
+	protected Heap heap;
 
 	@Nullable
 	private Glowing glowing;
@@ -103,6 +103,12 @@ public class ItemSprite extends MovieClip {
 	}
 
 	@Override
+	public void kill() {
+		super.kill();
+		heap = null;
+	}
+
+	@Override
 	public void revive() {
 		super.revive();
 
@@ -128,7 +134,6 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public void drop() {
-
 		if (heap != null && heap.isEmpty()) {
 			return;
 		}
@@ -145,21 +150,18 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public void drop(int from) {
-
 		if (heap!= null && heap.pos == from) {
 			drop();
 		} else {
 			float px = x;
 			float py = y;
 			drop();
-
 			place(from);
-
 			speed.offset((px - x) / DROP_INTERVAL, (py - y) / DROP_INTERVAL);
 		}
 	}
 
-	public ItemSprite view(Item item) {
+	public ItemSprite view(@NotNull Item item) {
 
 		if(item.overlayIndex()>=0) {
 			overlay = new Image(item.overlayFile(),16,item.overlayIndex());
@@ -205,15 +207,11 @@ public class ItemSprite extends MovieClip {
 		if (getVisible())
 			if (glowing != null) {
 				if (glowUp && (phase += Game.elapsed) > glowing.period) {
-
 					glowUp = false;
 					phase = glowing.period;
-
 				} else if (!glowUp && (phase -= Game.elapsed) < 0) {
-
 					glowUp = true;
 					phase = 0;
-
 				}
 
 				float value = phase / glowing.period * 0.6f;
@@ -228,7 +226,6 @@ public class ItemSprite extends MovieClip {
 	@Override
 	public void draw() {
 		super.draw();
-
 
 		if(overlay != null) {
 			NoosaScript script = NoosaScript.get();
