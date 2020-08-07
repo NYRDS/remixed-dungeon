@@ -145,7 +145,7 @@
   <string name="town_deco_wooden_bench_desc">Скамья, из дерева, неудобная.</string>
   <string name="town_deco_covered_table_name">Стол</string>
   <string name="town_deco_covered_table_desc">Деревянный стол накрытый белой скатертью.</string>
-  <string name="town_deco_pedestal_name">Пюпитр.</string>
+  <string name="town_deco_pedestal_name">Пьедестал</string>
   <string name="town_deco_pedestal_desc">Пюпитр, на котором лежит священная книга.</string>
   <string name="town_deco_shelf_name">Полки</string>
   <string name="town_deco_shelf_desc">Пустые полки.</string>
@@ -1001,7 +1001,7 @@
   <string name="Weapon_Identify">Ты достаточно хорошо знаком с предметом %1$s, чтобы его опознать. Это %2$s.</string>
   <string name="Weapon_Incompatible">Взаимодействие несовместимых типов магии разрушило чары, наложенные на это оружие!</string>
   <string name="MeleeWeapon_Info1a">%1$s - %2$s оружие ближнего боя %3$d порядка.</string>
-  <string name="MeleeWeapon_Info1b"> </string>
+  <string name="MeleeWeapon_Info1b">а</string>
   <string name="MeleeWeapon_Info1c">улучшенное</string>
   <string name="MeleeWeapon_Info1d">ослабленное</string>
   <string name="MeleeWeapon_Info2a">Средний урон %d единиц за удар.</string>
@@ -1613,7 +1613,7 @@
   <string name="WndMovieTheatre_Watch">посмотреть фильм</string>
   <string name="WndMovieTheatre_No">уйти</string>
   <string name="WndMovieTheatre_Bye">Возвращайтесь в любое время, мы вам всегда рады!</string>
-  <string name="WndMovieTheatre_Instruction">Здравствуйте и добро пожаловать в наш кинотеатр! Вы можете принять участие в особой акции, посмотрите фильм, причём совершенно бесплатно. И если вы просмотрите его до конца то вы получите вознаграждение в размере %d золотых монет!</string>
+  <string name="WndMovieTheatre_Instruction">Здравствуйте и добро пожаловать в наш кинотеатр! Мы предоставляем особую акцию, где вы можете посмотреть фильм совершенно бесплатно. А также если ты полностью посмотришь фильм, то мы наградим тебя%d золотыми монетами! </string>
   <string name="WndMovieTheatre_Title">Кинотеатр</string>
   <string name="WndMovieTheatre_Thank_You">Спасибо вам за участие!</string>
   <string name="WndPriest_Heal">лечение - %d золотых монет</string>
@@ -2168,22 +2168,22 @@
   <string name="KindOfBow_SelectArrowKind">Какие стрелы мне использовать?</string>
   <string name="KindOfBow_ChooseArrows">ВЫБРАТЬ СТРЕЛЫ</string>
   <string name="BodyArmorSpell_Name">Тело-щит</string>
-  <string name="BodyArmorSpell_Info">Активирует скрытые резервы мышц, делая их крепче и повышая защиту ценой скорости передвижения.</string>
+  <string name="BodyArmorSpell_Info">Активирует скрытую мышечную силу, временно делая их сильнее, увеличивая защиту ценой скорости передвижения.</string>
   <string name="BodyArmorBuff_Name">Тело-щит</string>
-  <string name="BodyArmorBuff_Info">Броня улучшена за счет скорости ходьбы.</string>
+  <string name="BodyArmorBuff_Info">Защита увеличивается за счёт уменьшения скорости передвижения.</string>
   <string name="DieHardSpell_Name">Крепкий Орешек</string>
-  <string name="DieHardSpell_Info">Временно повышает регенерацию делая тебя настоящим Крепким Орешком.</string>
+  <string name="DieHardSpell_Info">Увеличивает регенерацию, делая тебя настоящим Крепким Орешком.</string>
   <string name="DieHardBuff_Name">Крепкий Орешек</string>
   <string name="DieHardBuff_Info">Скорость регенерации увеличена </string>
   <string name="SmashSpell_Name">Сокрушительный Удар</string>
-  <string name="SmashSpell_Info">Прыгает вверх, с силой врезается в землю, оглушая противников вокруг и нанося физический урон.</string>
+  <string name="SmashSpell_Info">Прыгает вверх и создаёт мощную ударную волну, ударяя по земле, что временно оглушает врагов вокруг и нанося физический  урон. </string>
   <string name="SmashSpell_NeedWeapon">Необходимо оружие для данного действия.</string>
   <string name="DashSpell_Name">Рывок</string>
-  <string name="DashSpell_Info">Совершает рывок в указанном направлении, нанося увечья попавшемуся на пути противнику.</string>
+  <string name="DashSpell_Info">Совершает рывок в определённом направлении когда сталкивается с врагом, наносит урон и травмирует. </string>
   <string name="DashSpell_OnSelf">Я не могу сделать рывок на месте.</string>
-  <string name="DashSpell_TooFar">Нельзя выполнить рывок так далеко.</string>
+  <string name="DashSpell_TooFar">Я не могу совершать рывок так далеко. </string>
   <string name="CloakSpell_Name">Укрытие</string>
-  <string name="CloakSpell_Info">Шагните в тень, чтобы остаться незамеченным. Значительно уменьшит ваши шансы быть обнаруженным. Не может быть использовано, когда рядом враги.</string>
+  <string name="CloakSpell_Info">Вступи в тень, чтобы стать невидимым. Сильно уменьшает твои шансы быть замеченным. Не работает, когда враги рядом. </string>
   <string name="CloakSpell_EnemiesNearby">Когда враги рядом,вы не можете уйти в тень</string>
   <string name="CloakBuff_Name">Укрыт</string>
   <string name="CloakBuff_Info">Укрыт в тени</string>
@@ -2193,91 +2193,91 @@
   <string name="WndHero_AttackSkill">Навыки Атаки</string>
   <string name="WndHero_DefenceSkill">Навыки Защиты</string>
   <string name="town_deco_grave_name">Могила</string>
-  <string name="town_deco_grave_desc">Обычное надгробие со стертыми надписями.</string>
+  <string name="town_deco_grave_desc">Обычный надгробный камень с выветренной гравюрой.</string>
   <string name="town_deco_pillar_name">Столб</string>
-  <string name="town_deco_pillar_desc">Когда-то давно это столб был прекрасной опорой и украшением.</string>
+  <string name="town_deco_pillar_desc">Когда-то этот столб служил отличной опорой и украшением.</string>
   <string name="town_deco_wood_wall_name">Бревенчатая стена</string>
-  <string name="town_deco_wood_wall_desc">Бревенчатая стена, выглядит надежно.</string>
+  <string name="town_deco_wood_wall_desc">На вид крепкая деревянная стена</string>
   <string name="town_deco_entrance_name">Вход</string>
-  <string name="town_deco_entrance_desc">Проход к верхним уровням подземелья.</string>
+  <string name="town_deco_entrance_desc">Этот вход ведет на верхние уровни подземелья.</string>
   <string name="town_deco_exit_name">Выход</string>
-  <string name="town_deco_exit_desc">Что же ждет тебя там внизу?</string>
-  <string name="town_deco_tile_name">Плитка</string>
-  <string name="town_deco_tile_desc">Время не пощадило эти плитки. </string>
+  <string name="town_deco_exit_desc">Неизвестно, что ждёт тебя там, когда ты спустишься по этим ступеням</string>
+  <string name="town_deco_tile_name">Слот</string>
+  <string name="town_deco_tile_desc">Эти плитки довольно сильно износились временем.</string>
   <string name="town_deco_snowdrift_name">Сугроб</string>
-  <string name="town_deco_snowdrift_desc">Огромный сугроб и похоже убирать его никто не собирается.</string>
+  <string name="town_deco_snowdrift_desc">Это достаточно большой сугроб и, по всей видимости, никто не собирается его убирать.</string>
   <string name="town_deco_misc_name">Барахло</string>
-  <string name="town_deco_misc_desc">Куча барахла и побрякушек.</string>
-  <string name="town_deco_broken_roof_name">Дырявая крыша</string>
-  <string name="town_deco_broken_roof_desc">Черепица на этой крыше вся в трещинах, нужен ремонт.</string>
+  <string name="town_deco_misc_desc">Груда барахла и побрякушек.</string>
+  <string name="town_deco_broken_roof_name">Сломанная крыша</string>
+  <string name="town_deco_broken_roof_desc">Черепица на этой крыше вся в трещинах и нуждается в замене.</string>
   <string name="town_deco_broken_wall_name">Разрушенная стена</string>
-  <string name="town_deco_broken_wall_desc">Бревна в этой стене давно прогнили и утратили былую прочность.</string>
+  <string name="town_deco_broken_wall_desc">Бревна в этой стене долгое время гнили и потеряли свою обычную устойчивость.</string>
   <string name="town_deco_mud_name">Грязь</string>
-  <string name="town_deco_mud_desc">Оттаявший клочок грязи в этом царстве вечной зимы.</string>
-  <string name="town_deco_stock_name">Припасы</string>
-  <string name="town_deco_stock_desc">Здесь хранится провиант вперемежку с кучей разносортного барахла. </string>
+  <string name="town_deco_mud_desc">Талая земля в этой области вечной мерзлоты.</string>
+  <string name="town_deco_stock_name">Акция</string>
+  <string name="town_deco_stock_desc">Здесь хранятся запасы еды вместе с грудой мусора различного вида и цвета.</string>
   <string name="town_deco_barrel_name">Бочка</string>
-  <string name="town_deco_barrel_desc">Просто бочка, причем лучшие времена её уже прошли.</string>
+  <string name="town_deco_barrel_desc">Обыкновенная бочка, не в очень то и хорошем состоянии.</string>
   <string name="town_deco_hay_name">Сено</string>
-  <string name="town_deco_hay_desc">Стожок ароматного сена.</string>
+  <string name="town_deco_hay_desc">Небольшая кучка приятно пахнущего сена.</string>
   <string name="town_deco_firewood_name">Дрова</string>
-  <string name="town_deco_firewood_desc">Необходимая вещь, особенно в такой дикий холод.</string>
+  <string name="town_deco_firewood_desc">Необходимая вещь в такие сильные морозы.</string>
   <string name="town_deco_stakes_name">Колья</string>
-  <string name="town_deco_stakes_desc">Эти заостренные бревна выглядят угрожающе, но сами по себе довольно бесполезны.</string>
+  <string name="town_deco_stakes_desc">Эти заострённые брёвна имеют крайне устрашающий вид, хотя на деле они сами по себе бесполезны.</string>
   <string name="town_deco_fence_name">Забор</string>
-  <string name="town_deco_fence_desc">Деревянный забор припорошенный снегом.</string>
-  <string name="town_deco_pole_name">Шест</string>
-  <string name="town_deco_pole_desc">Длинный шест, как раз подходит для натягивания веревок.</string>
+  <string name="town_deco_fence_desc">Деревянный забор покрытый снегом.</string>
+  <string name="town_deco_pole_name">Столб</string>
+  <string name="town_deco_pole_desc">Высокий столб, предназначенный для натягивания веревки.</string>
   <string name="town_deco_rope_name">Верёвка</string>
-  <string name="town_deco_rope_desc">Веревка скрученная вручную.</string>
-  <string name="town_deco_slush_name">Слякоть</string>
-  <string name="town_deco_slush_desc">Этот снег подтаивает, так что он теперь не снег, а грязная мокрая кашица.</string>
+  <string name="town_deco_rope_desc">Вручную скрученная веревка.</string>
+  <string name="town_deco_slush_name">Грязь</string>
+  <string name="town_deco_slush_desc">Этот снег начал таять, превращая место вокруг в кашицу.</string>
   <string name="town_deco_chest_name">Сундук</string>
-  <string name="town_deco_chest_desc">Удобный предмет обстановки для хранения всяких вещиц и украшений.</string>
-  <string name="town_deco_emptyboard_name">Стеллаж</string>
-  <string name="town_deco_emptyboard_desc">Обыкновеннейший стеллаж для всяческих предметов.</string>
-  <string name="town_deco_grandclock_name">Напольные часы</string>
-  <string name="town_deco_grandclock_desc">Старинный, но все ещё рабочий механизм.</string>
+  <string name="town_deco_chest_desc">Удобная мебель для хранения различных вещей и драгоценностей.</string>
+  <string name="town_deco_emptyboard_name">Стойка</string>
+  <string name="town_deco_emptyboard_desc">Самая обыкновенная стойка для выставления вещей.</string>
+  <string name="town_deco_grandclock_name">Часы</string>
+  <string name="town_deco_grandclock_desc">Довольно старый, но по-прежнему функционирующий механизм.</string>
   <string name="town_deco_wall_beam_name">Балка</string>
-  <string name="town_deco_wall_beam_desc">Надежная опора для этого сооружения.</string>
+  <string name="town_deco_wall_beam_desc">Служит надёжной поддержкой для этой конструкции.</string>
   <string name="town_deco_wall_candles_name">Свечи</string>
-  <string name="town_deco_wall_candles_desc">Свечи погасли, но аромат благовоний все ещё витает в воздухе.</string>
+  <string name="town_deco_wall_candles_desc">Потухшие свечи, от которых по-прежнему чувствуется приятный аромат.</string>
   <string name="town_deco_wooden_drawer_name">Художник</string>
-  <string name="town_deco_wooden_drawer_desc">Интересно что же там внутри?</string>
+  <string name="town_deco_wooden_drawer_desc">Интересно, что хранится внутри.</string>
   <string name="town_deco_scrolls_name">Свитки</string>
-  <string name="town_deco_scrolls_desc">Пыльный шкаф с кучей свитков и книг.</string>
+  <string name="town_deco_scrolls_desc">Пыльная полка полная различных видов свитками и книгами.</string>
   <string name="town_deco_medicine_name">Медицина</string>
-  <string name="town_deco_medicine_desc">Пузырьки, и прочие ингредиенты аккуратно расставлены по этим полкам.</string>
+  <string name="town_deco_medicine_desc">Колбы и другие медицинские принадлежности бережно расставлены по этим полкам.</string>
   <string name="town_deco_wooden_stairs_name">Ступеньки</string>
-  <string name="town_deco_wooden_stairs_desc">Они добавят тебе немного роста.</string>
+  <string name="town_deco_wooden_stairs_desc">Они делают тебя немного выше.</string>
   <string name="town_deco_canvas_name">Холст</string>
-  <string name="town_deco_canvas_desc">Толстый кусок ткани натянутый на стене.</string>
+  <string name="town_deco_canvas_desc">Толстый кусок ткани висящий на стене.</string>
   <string name="town_deco_projector_name">Кинопроектор</string>
-  <string name="town_deco_projector_desc">Старое устройство для проигрывания кинопленок людям на радость.</string>
-  <string name="town_deco_filmtape_name">Кинопленка</string>
-  <string name="town_deco_filmtape_desc">Интересно, что на ней?</string>
+  <string name="town_deco_projector_desc">Старое устройство для показа фильмов и развлечения людей.</string>
+  <string name="town_deco_filmtape_name">Фильм</string>
+  <string name="town_deco_filmtape_desc">Интересно, что хранит этот кусок.</string>
   <string name="town_deco_painting_name">Картина</string>
-  <string name="town_deco_painting_desc">Прекрасное произведение искусства.</string>
-  <string name="town_deco_curtains_name">Занавес</string>
-  <string name="town_deco_curtains_desc">Не пропускает лишний свет и выглядит красиво.</string>
-  <string name="town_deco_rug_name">Ковер</string>
-  <string name="town_deco_rug_desc">Выткан со вкусом.</string>
+  <string name="town_deco_painting_desc">Красиво выглядящее произведение искусства.</string>
+  <string name="town_deco_curtains_name">Шторы</string>
+  <string name="town_deco_curtains_desc">Останавливают любой ненужный свет, а также служат отличным декором.</string>
+  <string name="town_deco_rug_name">Ковёр</string>
+  <string name="town_deco_rug_desc">Сделан с хорошим вкусом.</string>
   <string name="town_deco_trapdoor_name">Люк</string>
-  <string name="town_deco_trapdoor_desc">Куда же он ведет?</string>
+  <string name="town_deco_trapdoor_desc">Куда он может вести.</string>
   <string name="town_deco_glass_stained_name">Витраж</string>
-  <string name="town_deco_glass_stained_desc">Похож автор этого витража не плохо постарался.</string>
+  <string name="town_deco_glass_stained_desc">Автор этого витража, вероятно, приложил немало усилий.</string>
   <string name="town_deco_glass_name">Широкое окно</string>
-  <string name="town_deco_glass_desc">Это окно шире остальных и уж точно пропускает внутрь больше света.</string>
-  <string name="town_deco_counter_name">Стойка</string>
-  <string name="town_deco_counter_desc">Позволяет сохранить приличную дистанцию между тобой и тем кто стоит за ней.</string>
-  <string name="town_deco_library_books_name">Периодика.</string>
-  <string name="town_deco_library_books_desc">Даже это лучше книг из подземелья.</string>
+  <string name="town_deco_glass_desc">Это шире, чем другие, и, конечно, дает больше света.</string>
+  <string name="town_deco_counter_name">Прилавок</string>
+  <string name="town_deco_counter_desc">Позволяет держать хорошее расстояние между вами и человеком, стоящим за ним.</string>
+  <string name="town_deco_library_books_name">Предметы для чтения</string>
+  <string name="town_deco_library_books_desc">Все еще лучше, чем книги из темницы.</string>
   <string name="town_deco_wallpaper_name">Обои</string>
-  <string name="town_deco_wallpaper_desc">Отличный дизайнерский ход для такого места.</string>
+  <string name="town_deco_wallpaper_desc">Отличное декоративное решение для такого места.</string>
   <string name="town_deco_stones_name">Камни</string>
-  <string name="town_deco_stones_desc">Просто куча камней.</string>
-  <string name="town_deco_fireplace_name">Кострище</string>
-  <string name="town_deco_fireplace_desc">Отлично подойдет для согрева в таком холодном месте.</string>
+  <string name="town_deco_stones_desc">Просто кучка камней.</string>
+  <string name="town_deco_fireplace_name">Камин</string>
+  <string name="town_deco_fireplace_desc">Отлично подходит для разогрева в таком холодном месте, как это.</string>
   <string name="Badges_GamesPlayed5">5000 игр сыграно</string>
   <string name="Badges_PotionsCooked5">25 зелий сварено</string>
   <string name="Badges_ItemLvl5">Получен предмет 15 уровня</string>
@@ -2286,12 +2286,12 @@
   <string name="Badges_LevelReached5">Уровень 30 достигнут</string>
   <string name="Badges_GoldCollected5">35000 золота собрано</string>
   <string name="Badges_MonsterSlain5">1000 врагов побеждено</string>
-  <string name="Spells_NotInOwnBody">Ты не можешь использовать %s пока душа твоя вне тела.</string>
+  <string name="Spells_NotInOwnBody">Ты не можешь выполнить  %s, пока твоя душа отделена от тела.</string>
   <string name="WndHero_Satiety">Сытость</string>
   <string name="Ring_Gems_0">бриллиантом</string>
   <string name="Ring_Gems_1">опалом</string>
   <string name="Ring_Gems_2">гранатом</string>
-  <string name="Ring_Gems_3">рубином</string>
+  <string name="Ring_Gems_3">рубин</string>
   <string name="Ring_Gems_4">аметистом</string>
   <string name="Ring_Gems_5">топазом</string>
   <string name="Ring_Gems_6">ониксом</string>
@@ -2322,17 +2322,17 @@
   <string name="BlackCat_Phrases_1">Мяу...</string>
   <string name="BlackCat_Phrases_2">Мяу!</string>
   <string name="Char_Hit_0">%1$s ударило %2$s</string>
-  <string name="Char_Hit_1">%1$s ударил %2$s</string>
-  <string name="Char_Hit_2">%1$s ударила %2$s</string>
+  <string name="Char_Hit_1">%1$s ударило %2$s</string>
+  <string name="Char_Hit_2">%1$s ударило %2$s</string>
   <string name="Char_Kill_0">%s убило тебя</string>
-  <string name="Char_Kill_1">%s убил тебя</string>
-  <string name="Char_Kill_2">%s убила тебя</string>
+  <string name="Char_Kill_1">%s убило тебя</string>
+  <string name="Char_Kill_2">%s убило тебя</string>
   <string name="Char_Defeat_0">%1$s одолело %2$s</string>
-  <string name="Char_Defeat_1">%1$s одолел %2$s</string>
-  <string name="Char_Defeat_2">%1$s одолела %2$s</string>
+  <string name="Char_Defeat_1">%1$s одолело %2$s</string>
+  <string name="Char_Defeat_2">%1$s одолело %2$s</string>
   <string name="Char_StaDodged_0">уклонилось</string>
-  <string name="Char_StaDodged_1">уклонился</string>
-  <string name="Char_StaDodged_2">уклонилась</string>
+  <string name="Char_StaDodged_1">уклонилось</string>
+  <string name="Char_StaDodged_2">уклонилось</string>
   <string name="Dungeon_Tips_0">Не будь самоуверенным, используй доступные тебе оружие и броню.</string>
   <string name="Dungeon_Tips_1">Не всякая дверь в подземелье заметна с первого взгляда. Если не знаешь куда идти, попробуй поискать тайные двери.</string>
   <string name="Dungeon_Tips_2">Помни, что повышение силы - не единственный способ использовать лучшее снаряжение, ты можешь пойти другим путём, понижая требования предмета с помощью Свитка Улучшения.</string>
@@ -2356,7 +2356,7 @@
   <string name="Dungeon_Tips_20">Pixel-Mart. Охотникам на демонов скидки!</string>
   <string name="Dungeon_Tips_21">Этот текст написан на языке демонов.</string>
   <string name="Dungeon_Tips_22">Этот текст написан на языке демонов.</string>
-  <string name="Dungeon_Tips_23">Этот текст написан на языке демонов</string>
+  <string name="Dungeon_Tips_23">Этот текст написан на языке демонов.</string>
   <string name="Challenges_Names_0">На диете</string>
   <string name="Challenges_Names_1">Вера заменит мне броню</string>
   <string name="Challenges_Names_2">Никаких лекарств!</string>
@@ -2364,11 +2364,11 @@
   <string name="Challenges_Names_4">Коллективный разум</string>
   <string name="Challenges_Names_5">Во Тьме</string>
   <string name="Hunger_Hungry_0">Ты голодно.</string>
-  <string name="Hunger_Hungry_1">Ты голоден.</string>
-  <string name="Hunger_Hungry_2">Ты голодна.</string>
-  <string name="Hunger_Starving_0">Ты истощено!</string>
+  <string name="Hunger_Hungry_1">Ты голодно.</string>
+  <string name="Hunger_Hungry_2">Ты голодно.</string>
+  <string name="Hunger_Starving_0">Ты истощён!</string>
   <string name="Hunger_Starving_1">Ты истощён!</string>
-  <string name="Hunger_Starving_2">Ты истощена!</string>
+  <string name="Hunger_Starving_2">Ты истощён!</string>
   <string name="HeroClass_NecromancerPerks_0">Некроманты начинают с 15 очками Здоровья.</string>
   <string name="HeroClass_NecromancerPerks_1">Некроманты используют ману для заклятий Смерти.</string>
   <string name="HeroClass_NecromancerPerks_2">Некроманты начинают с уникальной робой некроманта, которая восстанавливает одно очко маны за каждое убитое существо.</string>
@@ -2402,39 +2402,39 @@
   <string name="HeroClass_ElfPerks_3">Эльфы восхитительно владеют луками и очень проворны.</string>
   <string name="HeroClass_ElfPerks_4">Эльфы восстанавливают намного больше здоровья с помощью росинок.</string>
   <string name="HeroClass_ElfPerks_5">Эльфы не слишком хороши в ближнем бою</string>
-  <string name="Death_Name_0">Мрачное %s</string>
-  <string name="Death_Name_1">Мрачный %s</string>
+  <string name="Death_Name_0">Мрачная %s</string>
+  <string name="Death_Name_1">Мрачная %s</string>
   <string name="Death_Name_2">Мрачная %s</string>
-  <string name="Fire_Name_0">Искрящее %s</string>
+  <string name="Fire_Name_0">Искрящий %s</string>
   <string name="Fire_Name_1">Искрящий %s</string>
-  <string name="Fire_Name_2">Искрящая %s</string>
-  <string name="Horror_Name_0">Жуткое %s</string>
+  <string name="Fire_Name_2">Искрящий %s</string>
+  <string name="Horror_Name_0">Жуткий %s</string>
   <string name="Horror_Name_1">Жуткий %s</string>
-  <string name="Horror_Name_2">Жуткая %s</string>
-  <string name="Instability_Name_0">Нестабильное %s</string>
-  <string name="Instability_Name_1">Нестабильный %s</string>
+  <string name="Horror_Name_2">Жуткий %s</string>
+  <string name="Instability_Name_0">Нестабильная %s</string>
+  <string name="Instability_Name_1">Нестабильная %s</string>
   <string name="Instability_Name_2">Нестабильная %s</string>
-  <string name="Leech_Name_0">Вампирическое %s</string>
+  <string name="Leech_Name_0">Вампирический %s</string>
   <string name="Leech_Name_1">Вампирический %s</string>
-  <string name="Leech_Name_2">Вампирическая %s</string>
-  <string name="Luck_Name_0">Счастливое %s</string>
+  <string name="Leech_Name_2">Вампирический %s</string>
+  <string name="Luck_Name_0">Счастливый %s</string>
   <string name="Luck_Name_1">Счастливый %s</string>
-  <string name="Luck_Name_2">Счастливая %s</string>
-  <string name="Paralysis_Name_0">Ошеломляющее %s</string>
+  <string name="Luck_Name_2">Счастливый %s</string>
+  <string name="Paralysis_Name_0">Ошеломляющий %s</string>
   <string name="Paralysis_Name_1">Ошеломляющий %s</string>
-  <string name="Paralysis_Name_2">Ошеломляющая %s</string>
-  <string name="Piercing_Name_0">Пронзающее %s</string>
-  <string name="Piercing_Name_1">Пронзающий %s</string>
+  <string name="Paralysis_Name_2">Ошеломляющий %s</string>
+  <string name="Piercing_Name_0">Пронзающая %s</string>
+  <string name="Piercing_Name_1">Пронзающая %s</string>
   <string name="Piercing_Name_2">Пронзающая %s</string>
-  <string name="Poison_Name_0">Отравленное %s</string>
-  <string name="Poison_Name_1">Отравленный %s</string>
+  <string name="Poison_Name_0">Отравленная %s</string>
+  <string name="Poison_Name_1">Отравленная %s</string>
   <string name="Poison_Name_2">Отравленная %s</string>
   <string name="Slow_Name_0">Морозное %s</string>
-  <string name="Slow_Name_1">Морозный %s</string>
-  <string name="Slow_Name_2">Морозная %s</string>
-  <string name="Swing_Name_0">Дикое %s</string>
+  <string name="Slow_Name_1">Морозное %s</string>
+  <string name="Slow_Name_2">Морозное %s</string>
+  <string name="Swing_Name_0">Дикий %s</string>
   <string name="Swing_Name_1">Дикий %s</string>
-  <string name="Swing_Name_2">Дикая %s</string>
+  <string name="Swing_Name_2">Дикий %s</string>
   <string name="Codex_Story_0">И создал Watabou Pixel Dungeon. И посмотрел он на дело рук своих. И увидел он, что это хорошо!</string>
   <string name="Codex_Story_1">Глиф Упругости - отталкивает врага после того, как тот ударит Героя.</string>
   <string name="Codex_Story_2">Глиф Влечения - очаровывает врага на несколько ходов, Герой также подвергается очарованию на некоторое время, но не дольше, чем враг.</string>
@@ -2489,7 +2489,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Scroll_Runes_15">ДАГАЗ</string>
   <string name="HeroClass_GnollPerks_0">Гноллы стартуют с 15 очками силы</string>
   <string name="HeroClass_GnollPerks_1">Гноллы стартуют с 5 очками здоровья</string>
-  <string name="HeroClass_GnollPerks_2">Гноллы стартуют без брони, зато с уникальным томагавком</string>
+  <string name="HeroClass_GnollPerks_2">Гноллы начинают без какой-либо брони, но с уникальным тамагавком</string>
   <string name="HeroClass_GnollPerks_3">Гноллы не умеют читать или писать</string>
   <string name="HeroClass_GnollPerks_4">Гноллы не атакуют других Гноллов просто так</string>
   <string name="Potion_Colors_0">голубое</string>
@@ -2503,101 +2503,101 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Potion_Colors_8">янтарное</string>
   <string name="Potion_Colors_9">коричневое</string>
   <string name="Potion_Colors_10">фиолетовое</string>
-  <string name="Potion_Colors_11">серебряное</string>
+  <string name="Potion_Colors_11">серебрянный</string>
   <string name="Welcome_Text_29_1">
     remix.29.1\n
-    - Моды:\n
-    -- Моды могут управлять появлением предметов на уровнях и у торговцев\n
+    - Mодификация:\n
+    -- Модифицируемая частота появления предметов\n
     - Переводы:\n
-    -- Добавлен Венгерский перевод\n
-    - Исправлено множество ошибок\n
+    --Добавлен перевод на венгерский\n
+    - Исправлены баги\n
     </string>
   <string name="town_deco_stone_wall_broken_name">Разрушенная стена</string>
-  <string name="town_deco_stone_wall_broken_desc">Старая стена, в довольно плохом состоянии</string>
-  <string name="Challenges_Names_6">Запретные Руны</string>
+  <string name="town_deco_stone_wall_broken_desc">Старая каменная стена, в плохом состоянии</string>
+  <string name="Challenges_Names_6">Запретные руны</string>
   <string name="Challenges_Names_7">Пацифизм</string>
   <string name="Welcome_Text_29_2">
     remix.29.2\n
-    - Геймплей:\n
+    - Игровой процесс:\n
     -- Новые испытания:\n
-    --- Запретные Руны\n
+    --- Запретные руны\n
     --- Пацифизм\n
-    - Моддинг:\n
-    -- Ксатомизируемые Артефакты\n
-    - Исправления ошибок\n
+    - Модификация:\n
+    -- Кастомизируемые артефакты\n
+    - Исправлены баги\n
     </string>
-  <string name="town_deco_crossroad_name">Дорожный указатель</string>
-  <string name="town_deco_crossroad_desc">Грубо сделанный деревянный столб с приколоченными дощечками в форме стрелок, текст на них давно выцвел, похоже что из-за суровой погоды.</string>
+  <string name="town_deco_crossroad_name">Знак перекрестка</string>
+  <string name="town_deco_crossroad_desc">Сырая деревянная колонна с табличками в форме стрелок, текст на которых давно поблек, вероятно, из-за суровых погодных условий.</string>
   <string name="ShieldBuffReady_Name">Готов</string>
-  <string name="ShieldBuffNotReady_Name">Не Готов</string>
+  <string name="ShieldBuffNotReady_Name">Не готов</string>
   <string name="WoodenShield_name">Деревянный щит</string>
-  <string name="WoodenShield_desc">Грубо сделанный деревянный щит - самый простой из доступных вариантов. Он круглый и время от времени может заблокировать немного урона.</string>
+  <string name="WoodenShield_desc">Грубый деревянный щит - самый простой из доступных щитов. Он круглый и может время от времени блокировать некоторый урон.</string>
   <string name="ToughShield_name">Усиленный кожаный щит</string>
-  <string name="ToughShield_desc">Этот щит усиленный кожаными ремнями выглядит надежнее просто деревянного. Он точно может принять на себя больше урона.</string>
-  <string name="StrongShield_name">Покрытый бронзой щит</string>
-  <string name="StrongShield_desc">Этот прямоугольный щит покрыт бронзовыми пластинами и украшен цветной тканью. Он значительно тяжелее, однако блокирует урон куда как лучше.</string>
-  <string name="RoyalShield_name">Королевский щит</string>
-  <string name="RoyalShield_desc">Цельнометаллический щит. О да, он тяжел, но только он может обеспечить максимальную защиту.</string>
-  <string name="ShieldInfoTemplate">Этот щит заблокирует до %1$d очков урона. С шансом %2$d %%. Потребуется %3$3.1f секунд что бы привести его в готовность после успешного блока. </string>
-  <string name="Belongings_CantWearBoth">Ты не можешь использовать %1$s и %2$s одновременно!</string>
+  <string name="ToughShield_desc">Этот щит, усиленный кожаными ремешками, выглядит крепче, чем деревянный. Наверняка он может заблокировать больше урона.</string>
+  <string name="StrongShield_name">Бронзовый щит</string>
+  <string name="StrongShield_desc">Это прямоугольный щит, покрытый бронзовыми листами и украшенный цветной тканью. Он крайне тяжел, но может блокировать гораздо больший урон.</string>
+  <string name="RoyalShield_name">Королевский Щит</string>
+  <string name="RoyalShield_desc">Цельнометаллический щит. Да, он тяжелый, но только он может обеспечить вам лучшую защиту.</string>
+  <string name="ShieldInfoTemplate">Этот щит будет блокировать до %1$d входящего урона. С %2$d %% шансом. Восстановление займет %3$3.1f секунд после успешной блокировки.</string>
+  <string name="Belongings_CantWearBoth">Вы не можете экипировать %1$s и %2$s одновременно!</string>
   <string name="Welcome_Text_29_3">
     remix.29.3\n
-    - Геймплей:\n
+    - Игровой процесс:\n
     -- Щиты!\n
-    - Моддинг:\n
-    -- Полностью моддабельные щиты!\n
-    - Багофиксы\n
+    - Модификация:\n
+    -- Кастомизируемые щиты!\n
+    - Исправлены баги\n
     </string>
-  <string name="ShieldStrTemplate">Чтобы использовать этот щит как следует, его обладателю потребуется не меньше чем %1$d очков Силы.</string>
+  <string name="ShieldStrTemplate">Носящий щит должен иметь как минимум %1$d очков Силы, чтобы правильно его использовать.</string>
   <string name="town_deco_flowerinthepot_name">Цветок в горшке</string>
-  <string name="town_deco_flowerinthepot_desc">Декоративное растение в милом горшке</string>
+  <string name="town_deco_flowerinthepot_desc">Декоративный цветок со сладким ароматом.</string>
   <string name="Welcome_Text_29_4">
     remix.29.4\n
-    - Геймплей:\n
-    -- Двуручность\n
-    - Моддинг:\n
+    - Игровой процесс:\n
+    -- Двуручность!\n
+    - Модификация:\n
     -- Кастомизируемое оружие!\n
-    - Исправления ошибок\n
+    - Исправлены баги\n
     </string>
   <string name="Mods_Disclaimer">
-        Моды создаются игроками для игроков\n
-        Моды могут изменять игру непредсказуемым, и иногда странным образом, вас предупредили!\n
-        Команда NYRDS никоим образом не отвечает за содержимое, качество или стабильность модов.\n
-        Загружайте их на свой страх и риск. Развлекайтесь!\n
-    </string>
-  <string name="ShieldWeaponInfo">Будучи использованным в качестве оружия этот щит в среднем нанесет %1$dочков урона .</string>
-  <string name="TownPortal_Name">Городской Портал</string>
-  <string name="TownPortal_Info">Это заклятье позволит вам мгновенно вернуться в безопасное место. Однако вблизи мощных источников магии оно может работать не так как ожидалось.</string>
-  <string name="MedicineMask_Name">Медицинская маска</string>
-  <string name="MedicineMask_Info">Медицинская маска предназначена, чтобы улавливать микробные частицы в капельках жидкости и аэрозоля в выдохе носителя.
-\n\nНошение маски показывает что вы заботитесь о здоровье окружающих.</string>
-  <string name="MedicineMask_Obtained">Медицинская маска получена</string>
-  <string name="PlagueDoctorNPC_After_Quest_2">Ты ещё здесь? Вот! Возьми это.</string>
-  <string name="FilteredMask_Name">Респиратор</string>
-  <string name="FilteredMask_Info">Респиратор это устройство предназначенное защищать носителя от вдыхания дымов, паров, газов и микрочастиц таких как пыль и микроорганизмы.
-\n\nЭтот респиратор, однако, исключительно декоративный.</string>
+Моды создаются игроками для игроков.\n
+Моды иногда изменяют игровой процесс непредсказуемым или странным образом, мы вас предупредили!\n
+Команда NYRDS никоим образом не отвечает за содержание, качество и стабильность модов.\n
+Скачивайте их на свой страх и риск и получайте удовольствие!\n
+ </string>
+  <string name="ShieldWeaponInfo">При использовании в качестве оружия этот щит в среднем наносит %1$d урона.</string>
+  <string name="TownPortal_Name">Городской портал</string>
+  <string name="TownPortal_Info">Это заклинание позволяет мгновенно вернуться в безопасное место. Тем не менее, мощный источник магии поблизости может помешать ему работать по назначению.</string>
+  <string name="MedicineMask_Name">Хирургическая маска</string>
+  <string name="MedicineMask_Info">Хирургическая маска предназначена для улавливания микроорганизмов, выделяющихся в виде капель жидкости и мельчайших твёрдых частиц изо рта и носа носителя.
+\n\nНошение маски означает, что вы заботитесь о других.</string>
+  <string name="MedicineMask_Obtained">Хирургическая маска получена</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Вы все еще здесь? Вот! Возьмите это.</string>
+  <string name="FilteredMask_Name">Маска N95</string>
+  <string name="FilteredMask_Info">Респиратор - это устройство, предназначенное для защиты пользователя от вдыхания опасного воздуха, включая, пары, газы и твердые частицы, такие как пыль и находящиеся в воздухе микроорганизмы.
+ \n\nОднако эта маска служит исключительно декоративным целям.</string>
   <string name="FullFaceMask_Name">Противогаз</string>
-  <string name="FullFaceMask_Info">Противогаз защищает носителя от попадания загрязнений и токсичных газов в дыхательные пути и в глаза. Противогаз полностью защищает нос, рот и глаза.
-\n\nВ этом экземпляре не хватает фильтров, но все равно выглядит очень круто.</string>
-  <string name="StartScene_DifficultyEasyNoAds">Легкий</string>
+  <string name="FullFaceMask_Info">Противогаз - это маска, используемая для защиты пользователя от вдыхания переносимых по воздуху загрязнителей и токсичных газов. Противогаз образует герметичное пространство над носом, ртом и глазами.
+\n\nФильтры отсутствуют в этой маске, но, тем не менее, она выглядит круто.</string>
+  <string name="StartScene_DifficultyEasyNoAds">Просто</string>
   <string name="StartScene_DifficultyNormalWithSavesNoAds">Нормальный с сохранениями</string>
-  <string name="Backstab_Name">Удар в спину</string>
-  <string name="Backstab_Info">Бесшумный удар в спину. Бесчестно, но весьма эффективно, урон от закалывания растет вместе с уровнем мастерства.\n\nУспешный удар в спину полностью игнорирует броню или специальные защитные техники жертвы.</string>
-  <string name="Backstab_TooFar">Жертва слишком далеко для успешного удара.</string>
-  <string name="Backstab_Aware">Внимание жертвы не должно быть обращено к тебе для успешного удара в спину.</string>
-  <string name="KunaiThrow_Name">Бросок Кунай</string>
-  <string name="KunaiThrow_Info">Смертельный бросок Кунай выполняется быстро, так быстро что ты даже не сможешь выбрать для него цели.\n\nНастоящие мастера могут метать больше чем один Кунай одновременно.</string>
-  <string name="Haste_Name">Неимоверная Спешка</string>
-  <string name="Haste_Info">Спешка позволяет двигаться с настолько невообразимой скоростью что все вокруг выглядит замершим. Движение с такой скоростью требует огромного напряжения сил и возможно только на краткий период времени.\n\nВеликие мастера способны дольше выдерживать такую скорость. </string>
+  <string name="Backstab_Name">Удар сзади</string>
+  <string name="Backstab_Info">Тихий удар в спину. Грубо, но экстримально эффективно, урон сзади будет расти с опытом использующего.\n\nУдачный удар в спину абсолютно игнорирует броню или специальные защитные способности жертвы. </string>
+  <string name="Backstab_TooFar">Жертва слишком далеко для удачной атаки. </string>
+  <string name="Backstab_Aware">Жертва не должна знать о твоём присутствии для хорошего удара в спину</string>
+  <string name="KunaiThrow_Name">Бросок Кунаи</string>
+  <string name="KunaiThrow_Info">Бросок смертельного куная будет совершён экстримально быстро, так быстро, что ты даже не сможешь выбрать цель.\n\nНастоящие Мастера мугут кидать больше одного куная за раз. </string>
+  <string name="Haste_Name">Экстримальная скорость</string>
+  <string name="Haste_Info">Скорость позволит двигаться с экстримальной скоростью, при том всё вокруг станет статичным. Но скорость требует кучу энергии, потлму возможна лишь на короткий период времени..\n\nОпытный мастер может действовать со скоростью болший период времени. </string>
   <string name="Welcome_Text_29_5">
     remix.29.5\n
-    - Геймплей:\n
-    -- Способности Разбойника!\n
-    - Моддинг:\n
+    - Игровой процесс:\n
+    -- Способности вора!\n
+    - Модификация:\n
     -- Кастомизируемая броня!\n
-    - Исправления ошибок\n
+    - Исправлены баги\n
     </string>
-  <string name="Char_Stole_0">%1$s украло предмет %2$s у %3$s!</string>
-  <string name="Char_Stole_1">%1$s украл предмет %2$s у %3$s!</string>
-  <string name="Char_Stole_2">%1$s украла предмет %2$s у %3$s!</string>
+  <string name="Char_Stole_0">%1$s украл  %2$s у %3$s!</string>
+  <string name="Char_Stole_1">%1$s украл  %2$s у %3$s!</string>
+  <string name="Char_Stole_2">%1$s украл  %2$s у %3$s!</string>
 </resources>
