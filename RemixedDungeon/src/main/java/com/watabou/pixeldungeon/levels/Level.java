@@ -1076,8 +1076,8 @@ public abstract class Level implements Bundlable {
 		if (solid[cell] && map[cell] != Terrain.DOOR){
 			for (int n : Level.NEIGHBOURS8) {
 				int p = n + cell;
-				if (cellValid(p)){
-					if (!solid[p]){
+				if (cellValid(p)) {
+					if (!solid[p]) {
 						cell = p;
 						break;
 					}
@@ -1104,14 +1104,17 @@ public abstract class Level implements Bundlable {
 			return drop(item, n);
 		}
 
+		boolean newHeap = false;
+
 		if (heap == null) {
 			heap = new Heap();
 			heap.pos = cell;
+			newHeap = true;
 		}
 
 		heap.drop(item);
 
-		if(heap.items.size()==1) {
+		if(newHeap) {
 			if (map[cell] == Terrain.CHASM || pit[cell]) {
 				GameScene.discard(heap);
 			} else {

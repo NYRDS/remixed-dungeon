@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -51,6 +52,7 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -93,7 +95,8 @@ public class Heap implements Bundlable, NamedEntityKind {
 
 	@Packable
 	public int pos = Level.INVALID_CELL;
-	
+
+	@Nullable
 	public ItemSprite sprite;
 
 	@NotNull
@@ -107,8 +110,9 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 
 	public float scale() {
-		if (items.peek() != null) {
-			return items.peek().heapScale();
+		Item topItem = items.peek();
+		if (topItem != null) {
+			return topItem.heapScale();
 		}
 		return 1.f;
 	}
@@ -194,14 +198,18 @@ public class Heap implements Bundlable, NamedEntityKind {
 		return items.peek();
 	}
 	
-	public void drop( Item item ) {
+	public void drop(@NotNull Item item ) {
+
+		if(item instanceof DummyItem) {
+			EventCollector.logException("DummyItem");
+			return;
+		}
 
 		if(items.contains(item)) { //TODO fix me
 			return;
 		}
 
 		if (item.stackable) {
-			
 			String c = item.getClassName();
 			for (Item i : items) {
 				if (i.getClassName().equals(c)) {
@@ -238,12 +246,14 @@ public class Heap implements Bundlable, NamedEntityKind {
 	private void updateHeap(){
 		if (isEmpty()) {
 			destroy();
-		} else if (sprite != null) {
-			float scale = scale();
-			sprite.setScale(scale,scale);
-			sprite.view(imageFile(), image(), glowing() );
-			sprite.place(pos);
-		}		
+		} else {
+			if (sprite != null) {
+				float scale = scale();
+				sprite.setScale(scale, scale);
+				sprite.view(imageFile(), image(), glowing());
+				sprite.place(pos);
+			}
+		}
 	}
 	
 	public void burn() {
@@ -368,7 +378,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 				return Treasury.getLevelTreasury().random( Treasury.Category.POTION );
 				
 			} else {
-				
+
 				Seed proto = (Seed)items.get( Random.chances( chances ) );
 				Class<? extends Item> itemClass = proto.alchemyClass;
 				
@@ -407,7 +417,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 	
 	public void destroy() {
-		Dungeon.level.removeHeap( this.pos );
+		Dungeon.level.removeHeap( pos );
 		if (sprite != null) {
 			sprite.killAndErase();
 		}

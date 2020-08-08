@@ -94,7 +94,7 @@ public class ItemSprite extends MovieClip {
 		link(heap);
 	}
 
-	public void link(Heap heap) {
+	public void link(@NotNull Heap heap) {
 		this.heap = heap;
 		float scale = heap.scale();
 		setScale(scale, scale);
