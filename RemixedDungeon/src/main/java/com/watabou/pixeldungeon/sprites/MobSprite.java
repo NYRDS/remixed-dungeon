@@ -20,10 +20,7 @@ package com.watabou.pixeldungeon.sprites;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.tweeners.AlphaTweener;
-import com.watabou.noosa.tweeners.FallTweener;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.utils.Random;
 
 public class MobSprite extends CharSprite {
 
@@ -55,12 +52,5 @@ public class MobSprite extends CharSprite {
 			} );
 		}
 	}
-	
-	public void fall() {
-		
-		origin.set( width / 2, height - DungeonTilemap.SIZE / 2 );
-		angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
-		
-		getParent().add( new FallTweener(this));
-	}
+
 }

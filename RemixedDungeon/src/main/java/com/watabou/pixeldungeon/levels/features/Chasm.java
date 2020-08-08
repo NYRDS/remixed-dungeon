@@ -35,7 +35,6 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.pixeldungeon.sprites.MobSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
@@ -90,7 +89,7 @@ public class Chasm implements Doom {
 	private static void mobFall( Mob mob ) {
 		mob.die(new Chasm());
 
-		((MobSprite)mob.getSprite()).fall();
+		mob.getSprite().fall();
 	}
 
 	private static void heroFall(int pos, Hero hero) {

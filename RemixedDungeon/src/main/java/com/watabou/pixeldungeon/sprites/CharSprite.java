@@ -29,6 +29,7 @@ import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.tweeners.AlphaTweener;
+import com.watabou.noosa.tweeners.FallTweener;
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
@@ -74,6 +75,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Nullable
     protected Image avatar;
+
+    public void fall() {
+
+        origin.set( width / 2, height - DungeonTilemap.SIZE / 2 );
+        angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
+
+        getParent().add( new FallTweener(this));
+        die();
+    }
 
     public enum State {
         NONE, BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED

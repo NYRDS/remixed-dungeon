@@ -563,7 +563,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void die(NamedEntityKind src) {
 		destroy();
-		getSprite().die();
+		if(level().pit[getPos()]) {
+			getSprite().fall();
+		} else {
+			getSprite().die();
+		}
 	}
 
 	public boolean isAlive() {
