@@ -282,21 +282,14 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public final Item detachAll(@NotNull Bag container) {
-		for (Item item : container.items) {
-			if (item == this) {
-				container.items.remove(this);
-				item.onDetach();
-				QuickSlot.refresh(getOwner());
-				return this;
-			} else if (item instanceof Bag) {
-				Bag bag = (Bag) item;
-				if (bag.contains(this)) {
-					return detachAll(bag);
-				}
-			}
+
+    	if (container.contains(this)) {
+    		onDetach();
+    		container.remove(this);
 		}
+
 		QuickSlot.refresh(getOwner());
-		return this;
+    	return this;
 	}
 
 	protected void onDetach() {
