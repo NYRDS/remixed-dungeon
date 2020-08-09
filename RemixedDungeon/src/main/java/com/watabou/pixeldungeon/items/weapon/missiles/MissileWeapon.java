@@ -22,13 +22,15 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,7 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (!Utils.isOneOf(hero.getHeroClass(), HeroClass.HUNTRESS, HeroClass.ROGUE, HeroClass.GNOLL)) {
 			actions.remove( AC_EQUIP );
@@ -51,27 +53,27 @@ public class MissileWeapon extends Weapon {
 	}
 
 	@Override
-	protected void onThrow( int cell ) {
+	protected void onThrow(int cell, Char thrower) {
 		Char enemy = Actor.findChar( cell );
-		if (enemy == null || enemy == getUser()) {
-			super.onThrow( cell );
+		if (enemy == null || enemy == thrower) {
+			super.onThrow( cell, thrower);
 		} else {
-			if (!getUser().shoot( enemy, this )) {
-				miss( cell );
+			if (!thrower.shoot( enemy, this )) {
+				miss( cell,thrower );
 			}
 		}
 	}
 	
-	protected void miss( int cell ) {
+	protected void miss(int cell, Char thrower) {
 		
 		if(this instanceof Arrow) {
 			Arrow arrow = (Arrow) this;
 			if(arrow.firedFrom != null ) {
-				arrow.firedFrom.onMiss();
+				arrow.firedFrom.onMiss(thrower);
 			}
 		}
 		
-		super.onThrow( cell );
+		super.onThrow( cell, thrower);
 	}
 	
 	@Override
@@ -98,7 +100,7 @@ public class MissileWeapon extends Weapon {
 	}
 	
 	@Override
-	public boolean doEquip( final Hero hero ) {
+	public boolean doEquip(@NotNull final Char hero ) {
 		if(notUsableInMelee()) {
 			GameScene.show(
 					new WndOptions(Game.getVar(R.string.MissileWeapon_Missiles),
@@ -170,5 +172,10 @@ public class MissileWeapon extends Weapon {
 	@Override
 	public String getVisualName() {
 		return "none";
+	}
+
+	@Override
+	public String bag() {
+		return Quiver.class.getSimpleName();
 	}
 }

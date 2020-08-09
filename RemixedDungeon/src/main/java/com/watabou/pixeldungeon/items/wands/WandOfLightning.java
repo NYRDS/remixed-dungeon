@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
@@ -47,7 +48,7 @@ public class WandOfLightning extends SimpleWand  {
 	@Override
 	protected void onZap( int cell ) {
 
-		if (getUser()!=null && !getUser().isAlive()) {
+		if ((getOwner() instanceof Hero) && !getOwner().isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfLightning_Info1));
 		}
@@ -88,7 +89,7 @@ public class WandOfLightning extends SimpleWand  {
 	protected void fx( int cell, Callback callback ) {
 		
 		nPoints = 0;
-		points[nPoints++] = wandUser.getPos();
+		points[nPoints++] = getOwner().getPos();
 		
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
@@ -103,7 +104,7 @@ public class WandOfLightning extends SimpleWand  {
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
 			
 		}
-		wandUser.getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
+		getOwner().getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
 	}
 	
 	@Override

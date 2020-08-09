@@ -2,8 +2,6 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
@@ -17,7 +15,6 @@ import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -147,21 +144,8 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	}
 
 	@Override
-	public boolean zap(@NotNull Char enemy) {
-		if (enemy == CharsList.DUMMY) {
-			EventCollector.logException("zapping dummy enemy");
-			return false;
-		}
-
-		if (hit(this, enemy, true)) {
-			ensureWand().mobWandUse(this, enemy.getPos());
-
-			return true;
-		} else {
-			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
-			return false;
-		}
-
+	protected int zapProc(@NotNull Char enemy, int damage) {
+		ensureWand().mobWandUse(this, enemy.getPos());
+		return 0;
 	}
-
 }

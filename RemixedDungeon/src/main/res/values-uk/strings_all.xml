@@ -2301,18 +2301,6 @@
   <string name="town_deco_stones_desc">Просто купа каміння.</string>
   <string name="town_deco_fireplace_name">Вогнище</string>
   <string name="town_deco_fireplace_desc">Гарне місце, аби зігрітися.</string>
-  <string name="Welcome_Text_28_6">
-    remix.28.6\n
-    - Ігрова механіка:\n
-    -- Можливості воїна!\n
-    -- Герої тепер не так швидко відчувають голод\n
-    -- Закляття некроманта - Одержимість\n
-    -- Можливість крадія - Маскування\n
-    -- Нові значки\n
-    - Модифікації:\n
-    -- Налаштовані бафи з підтримкою скриптів\n
-    -- Налаштована графіка\n
-    </string>
   <string name="Badges_GamesPlayed5">5000 ігор зіграно</string>
   <string name="Badges_PotionsCooked5">Приготовлено 25 зілля</string>
   <string name="Badges_ItemLvl5">Придбано предмет 15 рівня</string>
@@ -2323,10 +2311,6 @@
   <string name="Badges_MonsterSlain5">1000 супротивників подолано</string>
   <string name="Spells_NotInOwnBody">Ти не можеш використовувати %sдоки твоя душа поза тілом.</string>
   <string name="WndHero_Satiety">Насичення</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - Реновація міста!\n
-    </string>
   <string name="Ring_Gems_0">діамантом</string>
   <string name="Ring_Gems_1">опалом</string>
   <string name="Ring_Gems_2">гранатом</string>

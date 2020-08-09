@@ -74,10 +74,7 @@ public class Hedgehog extends NPC {
 			
 			case 3:
 				say(Game.getVar(R.string.Hedgehog_Info4));
-				
-				Pasty pie = new Pasty();
-				
-				level().drop( pie, getPos() ).sprite.drop();
+				new Pasty().doDrop(this);
 			break;
 			
 			default:

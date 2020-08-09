@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -42,7 +43,7 @@ public class WarehousePainter extends Painter {
 				} else {
 					Item prize = Random.oneOf(Treasury.getLevelTreasury().random(Treasury.Category.BULLETS),
 							Treasury.getLevelTreasury().random(Treasury.Category.THROWABLE));
-					level.drop(prize, level.cell(i,j));
+					level.drop(prize, level.cell(i,j), Heap.Type.HEAP);
 				}
 			}
 		}

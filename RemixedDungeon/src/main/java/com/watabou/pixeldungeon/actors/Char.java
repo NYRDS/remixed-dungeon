@@ -30,8 +30,10 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.audio.Sample;
@@ -45,6 +47,7 @@ import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
+import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
@@ -68,6 +71,8 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
+import com.watabou.pixeldungeon.mechanics.ShadowCaster;
+import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -78,6 +83,7 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.TestOnly;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -86,6 +92,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.Getter;
+
+import static com.watabou.pixeldungeon.Dungeon.level;
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKind {
 
@@ -96,26 +106,36 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
+	private Belongings belongings;
+
+
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-	protected int owner = -1;
+	private int owner = EntityIdSource.INVALID_ID;
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
+	@Getter
 	private int pos     = Level.INVALID_CELL;
+
 	private int prevPos = Level.INVALID_CELL;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	@Getter
 	private int id = EntityIdSource.INVALID_ID;
 
 	public  Fraction fraction = Fraction.DUNGEON;
 
 	protected CharSprite sprite;
 
+	@Getter
 	protected String name           = Game.getVar(R.string.Char_Name);
+	@Getter
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
 
+	@Getter
 	protected String description = Game.getVar(R.string.Mob_Desc);
+	@Getter
 	protected String defenceVerb = null;
-
+	@Getter
 	protected int gender = Utils.NEUTER;
 
 	protected WalkingType walkingType = WalkingType.NORMAL;
@@ -131,7 +151,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected boolean flying    = false;
 	public    int     invisible = 0;
 
-	public int viewDistance = 8;
+	private int viewDistance = 8;
 
 	protected Set<String> immunities = new HashSet<>();
 	protected Set<String> resistances = new HashSet<>();
@@ -144,6 +164,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	//TODO store&restore it for all chars
 	private int lvl = Scrambler.scramble(1);
+
+	public Char() {
+	}
 
 	public boolean canSpawnAt(Level level,int cell) {
 		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
@@ -180,6 +203,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		bundle.put(TAG_HT, ht());
 		bundle.put(BUFFS, buffs);
 		bundle.put(SPELLS_USAGE, spellsUsage);
+
+		getBelongings().storeInBundle(bundle);
 	}
 
 	@Override
@@ -196,11 +221,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
 				b.attachTo(this);
-			}
+		}
 
 		spellsUsage = bundle.getMap(SPELLS_USAGE);
 
 		setupCharData();
+
+		getBelongings().restoreFromBundle(bundle);
 	}
 
 	private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
@@ -214,17 +241,34 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             CharsList.add(this,id);
         }
 
+		if(getOwnerId() < 0) { //fix pre 29.4.fix.6 saves
+			setOwnerId(id);
+		}
+
+		setBelongings(new Belongings(this));
+
+		if(this instanceof CustomMob) {
+			return;
+		}
+
 		name = getClassParam("Name", name, true);
 		name_objective = getClassParam("Name_Objective", name, true);
+
+		if(this instanceof Hero) {
+			return;
+		}
+
 		description = getClassParam("Desc", description, true);
 		gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
 		defenceVerb = getClassParam("Defense", null, false);
 	}
 
+	@LuaInterface
 	public void yell(String str) {
         GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
     }
 
+    @LuaInterface
     public void say(String str) {
         GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
     }
@@ -234,6 +278,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
     }
 
+    @LuaInterface
     public void say(String str, int index) {
         GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str,index));
     }
@@ -275,11 +320,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			enemy.damage(effectiveDamage, this);
 
 			if (visibleFight) {
-				Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
-			}
+                Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
 
-			enemy.getSprite().bloodBurstA(getSprite().center(), effectiveDamage);
-			enemy.getSprite().flash();
+                enemy.getSprite().bloodBurstA(
+                        getSprite().center(), effectiveDamage);
+                enemy.getSprite().flash();
+            }
 
 			if (!enemy.isAlive() && visibleFight) {
 				if (enemy == Dungeon.hero) {
@@ -326,7 +372,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
-	public static boolean hit(Char attacker, Char defender, boolean magic) {
+	public static boolean hit(@NotNull Char attacker, Char defender, boolean magic) {
 		if(attacker.invisible>0) {
 			return true;
 		}
@@ -366,21 +412,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 
 	public int defenceRoll(Char enemy) {
-
 		if(enemy.ignoreDr()) {
 			return 0;
 		}
 
 		final int[] dr = {dr()};
-
 		forEachBuff(b-> dr[0] +=b.drBonus());
-
 		return  Random.IntRange(0, dr[0]);
-
 	}
 
 	public int dr() {
-		return 0;
+		return getBelongings().armor.effectiveDr();
 	}
 
 	protected boolean inFury() {
@@ -394,18 +436,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int defenseProc(Char enemy, int baseDamage) {
-
 		int dr = defenceRoll(enemy);
-
 		final int[] damage = {baseDamage - dr};
-
 		forEachBuff(b->damage[0] = b.defenceProc(this, enemy, damage[0]));
-
-		if (getBelongings().armor != null) {
-			damage[0] = getBelongings().armor.proc(enemy, this, damage[0]);
-		}
-
-		return damage[0];
+		return getBelongings().armor.defenceProc(enemy, this, damage[0]);
 	}
 
 	@NotNull
@@ -414,20 +448,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return rangedWeapon;
 		}
 
-		EquipableItem weapon = getBelongings().weapon;
-
-		if(weapon!=null) {
-			return weapon;
-		}
-
-		return CharsList.DUMMY_ITEM;
+		return getBelongings().weapon;
 	}
 
 	@NotNull
 	public EquipableItem getSecondaryWeapon() {
 	    EquipableItem leftItem = getBelongings().leftHand;
 
-	    if(leftItem!=null && leftItem.goodForMelee()) {
+	    if(leftItem.goodForMelee()) {
 	        return leftItem;
         }
 
@@ -464,7 +492,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         heal = resist(heal, src);
-
         heal = Math.min(ht()-hp(),heal);
 
         if(heal<0) {
@@ -536,7 +563,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void die(NamedEntityKind src) {
 		destroy();
-		getSprite().die();
+		if(level().pit[getPos()]) {
+			getSprite().fall();
+		} else {
+			getSprite().die();
+		}
 	}
 
 	public boolean isAlive() {
@@ -558,7 +589,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void spend(float time) {
 
 		float timeScale = 1f;
-		timeScale *= 0.5f/(1+buffLevel(Slow.class));
+		timeScale *= 1.f/(1+buffLevel(Slow.class));
 		timeScale *= (1 + buffLevel(Speed.class));
 
 		float scaledTime = time / timeScale;
@@ -617,6 +648,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return level;
 	}
 
+	@Deprecated
 	public int buffLevel(Class<? extends Buff> c) {
 		int level = 0;
 		for (Buff b : buffs) {
@@ -627,6 +659,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return level;
 	}
 
+	@Deprecated
 	public boolean hasBuff(Class<? extends Buff> c) {
 		for (Buff b : buffs) {
 			if (c.isInstance(b)) {
@@ -637,7 +670,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void add(Buff buff) {
-
 		if(!isAlive()) {
 			return;
 		}
@@ -653,7 +685,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void remove(@Nullable Buff buff) {
-
 		buffs.remove(buff);
 		Actor.remove(buff);
 
@@ -664,7 +695,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@NotNull
 	public Hunger hunger() {
-
 		if(!(this instanceof Hero)) { //fix it later
 			return new Hunger();
 		}
@@ -682,7 +712,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		return hunger;
-
 	}
 
     public boolean isStarving() {
@@ -720,7 +749,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void move(int step) {
-		
 		if(!isMovable()) {
 			return;
 		}
@@ -833,12 +861,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int getOwnerId() {
+		if(owner<0) {
+			setOwnerId(getId());
+		}
 		return owner;
 	}
 
+	@NotNull
 	@LuaInterface
 	public Char getOwner() {
-		return CharsList.getById(owner);
+		return CharsList.getById(getOwnerId());
 	}
 
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
@@ -864,22 +896,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		HP = Scrambler.scramble(hP);
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public String getName_objective() {
-		return name_objective;
-	}
-
-	public int getGender() {
-		return gender;
-	}
-
-	public int getPos() {
-		return pos;
-	}
-
 	public void _stepBack() {
 		if(level().cellValid(prevPos)){
 			setPos(prevPos);
@@ -903,7 +919,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public boolean collect(@NotNull Item item) {
 		if (!item.collect(this)) {
 			if (level() != null && level().cellValid(getPos())) {
-				level().drop(item, getPos()).sprite.drop();
+				level().animatedDrop(item, getPos());
 			}
 			return false;
 		}
@@ -929,6 +945,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return !paralysed && (flying || hasBuff(Levitation.class));
 	}
 
+	@LuaInterface
+	public boolean isParalysed() {
+		return paralysed;
+	}
+
 	public void paralyse(boolean paralysed) {
 		this.paralysed = paralysed;
 		if(paralysed && GameScene.isSceneReady()) {
@@ -941,9 +962,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public Level level(){
-		return Dungeon.level;
+		return level;
 	}
 
+	@LuaInterface
 	public boolean valid(){
 	    return !(this instanceof DummyChar);
     }
@@ -985,6 +1007,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return visibleEnemies.get(index);
 	}
 
+	@LuaInterface
+	public Char randomEnemy() {
+		return Random.element(visibleEnemies);
+	}
+
 	public void checkIfFurious() {
 		if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
 			if (!hasBuff(Fury.class)) {
@@ -999,7 +1026,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@NotNull
 	@Override
 	public Belongings getBelongings() {
-		return Belongings.empty;
+		if(belongings == null) {
+			belongings = new Belongings(this);
+		}
+		return belongings;
 	}
 
     public int gold() {
@@ -1010,10 +1040,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 		return 0;
     }
-
-	public int getId() {
-		return id;
-	}
 
 	public void spellCasted(String spellName) {
 		spellsUsage.put(spellName, 0.f);
@@ -1104,7 +1130,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public boolean swapPosition(final Char chr) {
-
 		if(!walkingType.canSpawnAt(level(),chr.getPos())) {
 			return false;
 		}
@@ -1203,4 +1228,102 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public abstract Char makeClone();
+
+	public ArrayList<String> actions(Char hero) {
+		ArrayList<String> actions = new ArrayList<>();
+		//actions.add(CommonActions.MAC_STEAL);
+		//actions.add(CommonActions.MAC_TAUNT);
+		return actions;
+	}
+
+	public void execute(Char hero, String action) {
+	}
+
+	protected void setOwnerId(int owner) {
+		this.owner = owner;
+	}
+
+	@TestOnly
+	public void resetBelongings(Belongings belongings) {
+		setBelongings(belongings);
+		updateSprite();
+	}
+
+	public void selectCell(CellSelector.Listener listener) {
+		GLog.w("select cell for %s niy.", getEntityKind());
+	}
+
+	@LuaInterface
+	public int getSkillPointsMax() {
+		return 10;
+	}
+
+	@LuaInterface
+	public int getSkillPoints() {
+		return 10;
+	}
+
+	@LuaInterface
+	public void spendSkillPoints(int cost) {
+	}
+
+	@LuaInterface
+	public void setSkillPoints(int i) {
+	}
+
+	@LuaInterface
+	@Deprecated // keep it for old version of Remixed Additions
+	public void setSoulPoints(int i) {
+	}
+
+	@LuaInterface
+	public void eat(Item food, float energy, String message) {
+	}
+
+	@LuaInterface
+	public void skillLevelUp() {
+	}
+
+	@LuaInterface
+	public void teleportTo(Position target) {
+	}
+
+	private Map<String, String> layersOverrides =  new HashMap<>();
+
+    public Map<String, String> getLayersOverrides() {
+        return layersOverrides;
+    }
+
+	@LuaInterface
+    public void overrideSpriteLayer(String layer, String texture) {
+        layersOverrides.put(layer, texture);
+    }
+
+    public int getViewDistance() {
+		int computedViewDistance = viewDistance;
+
+		if(hasBuff(Light.class)) {
+			computedViewDistance = Utils.max(computedViewDistance,Level.MIN_VIEW_DISTANCE + 1, level().getViewDistance());
+		}
+
+		return Math.min(computedViewDistance, ShadowCaster.MAX_DISTANCE);
+    }
+
+    public void setViewDistance(int viewDistance) {
+        this.viewDistance = viewDistance;
+    }
+
+	@Override
+	public boolean useBags() {
+		return true;
+	}
+
+	@LuaInterface
+	public boolean canStepOn() {
+    	return walkingType.canSpawnAt(level(),getPos()) && (Actor.findChar(pos) == null);
+	}
+
+	public void setBelongings(Belongings belongings) {
+		this.belongings = belongings;
+	}
 }

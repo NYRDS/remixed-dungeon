@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.Key;
-import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Keyring extends Bag {
@@ -27,12 +24,7 @@ public class Keyring extends Bag {
 	{
 		image = ItemSpriteSheet.KEYRING;
 	}
-	
-	@Override
-	public boolean grab( Item item ) {
-		return super.grab(item) || item instanceof Key || item instanceof Ring;
-	}
-	
+
 	@Override
 	public int price() {
 		return 50;

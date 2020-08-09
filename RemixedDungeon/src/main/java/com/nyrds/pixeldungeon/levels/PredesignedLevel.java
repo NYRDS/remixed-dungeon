@@ -11,6 +11,7 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 
@@ -191,9 +192,7 @@ public class PredesignedLevel extends CustomLevel {
 
 					if (cellValid(x, y)) {
 						Item item = ItemFactory.createItemFromDesc(itemDesc);
-						if(item != null) {
-							drop(item, cell(x, y));
-						}
+						drop(item, cell(x, y), Heap.Type.HEAP);
 					}
 				}
 			}

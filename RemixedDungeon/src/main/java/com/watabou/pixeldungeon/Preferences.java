@@ -54,6 +54,7 @@ public enum Preferences {
 	public static final String KEY_COLLECT_STATS    = "collect_stats";
 	public static final String KEY_MOVE_TIMEOUT     = "move_timeout";
 	public static final String KEY_USE_PLAY_GAMES   = "use_play_games";
+	public static final String KEY_PLAY_GAMES_CONNECT_FAILURES   = "play_games_connect_failures";
 
 	public static final String KEY_UI_ZOOM        = "ui_zoom";
 	public static final String KEY_VERSION_STRING = "version_string";

@@ -5,15 +5,13 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -61,13 +59,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 				Buff.prolong( enemy, Slow.class, 1 );
 			}
 
-			enemy.damage(damageRoll(), this);
-
-			if (!enemy.isAlive() && enemy == Dungeon.hero) {
-				Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-						Utils.indefinite(getName()), Dungeon.depth));
-				GLog.n(Game.getVar(R.string.KoboldIcemancer_Killed), getName());
-			}
+			CharUtils.checkDeathReport(this ,enemy, Game.getVar(R.string.KoboldIcemancer_Killed));
 			return true;
 		}
 		return false;

@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class ScrollHolder extends Bag {
@@ -26,12 +24,7 @@ public class ScrollHolder extends Bag {
 	{
 		image = ItemSpriteSheet.HOLDER;
 	}
-	
-	@Override
-	public boolean grab( Item item ) {
-		return super.grab(item) || item instanceof Scroll;
-	}
-	
+
 	@Override
 	public int price() {
 		return 50;

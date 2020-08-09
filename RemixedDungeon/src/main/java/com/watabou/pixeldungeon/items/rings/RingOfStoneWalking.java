@@ -5,7 +5,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -24,7 +24,7 @@ public class RingOfStoneWalking extends Artifact{
 		return new StoneWalking();
 	}
 	
-	public class StoneWalking extends ArtifactBuff implements Hero.Doom{
+	public class StoneWalking extends ArtifactBuff implements Doom {
 		@Override
 		public int icon() {
 			return BuffIndicator.STONEBLOOD;

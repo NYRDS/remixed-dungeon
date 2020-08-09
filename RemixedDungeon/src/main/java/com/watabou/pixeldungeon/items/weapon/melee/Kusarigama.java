@@ -12,8 +12,9 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.KusarigamaChain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -36,17 +37,17 @@ public class Kusarigama extends SpecialWeapon {
 
     private static CellSelector.Listener impaler = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer target) {
+        public void onSelect(Integer target, Char selector) {
 
             if (target != null) {
-                getUser().spendAndNext(TIME_TO_IMPALE);
-                int hitCell = Ballistica.cast(getUser().getPos(), target, false, true);
+                selector.spendAndNext(TIME_TO_IMPALE);
+                int hitCell = Ballistica.cast(selector.getPos(), target, false, true);
 
-                if (hitCell == getUser().getPos()) {
+                if (hitCell == selector.getPos()) {
                     return;
                 }
 
-                if (Dungeon.level.distance(getUser().getPos(), hitCell) < 4) {
+                if (Dungeon.level.distance(selector.getPos(), hitCell) < 4) {
                     Char chr = Actor.findChar(hitCell);
 
                     if (chr != null && chr.isMovable()) {
@@ -56,9 +57,9 @@ public class Kusarigama extends SpecialWeapon {
                         Dungeon.observe();
                     }
 
-                    drawChain(hitCell);
+                    drawChain(hitCell, selector);
                 } else {
-                    drawChain(Ballistica.trace[4]);
+                    drawChain(Ballistica.trace[4], selector);
                 }
             }
         }
@@ -69,26 +70,26 @@ public class Kusarigama extends SpecialWeapon {
         }
     };
 
-    private static void drawChain(int tgt) {
-        getUser().getSprite().zap(tgt);
-        getUser().getSprite()
+    private static void drawChain(int tgt, Char caster) {
+        caster.getSprite().zap(tgt);
+        caster.getSprite()
                 .getParent()
-                .add(new KusarigamaChain(getUser().getSprite().center(),
+                .add(new KusarigamaChain(caster.getSprite().center(),
                         DungeonTilemap.tileCenterToWorld(tgt)));
     }
 
     @Override
-    public void execute(Hero hero, String action) {
-        setUser(hero);
+    public void execute(@NotNull Char chr, @NotNull String action) {
+
         if (action.equals(AC_PULL)) {
-            GameScene.selectCell(impaler);
+            chr.selectCell(impaler);
         } else {
-            super.execute(hero, action);
+            super.execute(chr, action);
         }
     }
 
     @Override
-    public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
         if (isEquipped(hero)) {
             actions.add(AC_PULL);
@@ -98,9 +99,8 @@ public class Kusarigama extends SpecialWeapon {
 
     @Override
     public void preAttack(Hero user, Char tgt) {
-        setUser(user);
         if (user.level().distance(user.getPos(), tgt.getPos()) > 1) {
-            drawChain(tgt.getPos());
+            drawChain(tgt.getPos(), user);
         }
     }
 

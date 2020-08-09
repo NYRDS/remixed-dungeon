@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -43,33 +44,33 @@ public class Bag extends Item implements Iterable<Item> {
 		
 		setDefaultAction(AC_OPEN);
 	}
-	
-	public Char owner;
+
 	public ArrayList<Item> items = new ArrayList<>();
-	public int size = Belongings.getBackpackSize();
 		
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add(AC_OPEN);
 		return actions;
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_OPEN )) {
-			GameScene.show( new WndBag(owner.getBelongings(), this, null, WndBag.Mode.ALL, null ) );
+			GameScene.show( new WndBag(chr.getBelongings(), this, null, WndBag.Mode.ALL, null ) );
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 	
 	@Override
-	public boolean collect( Bag container ) {
+	public boolean collect(@NotNull Bag container ) {
 		if (super.collect( container )) {	
-			
-			owner = container.owner;
-			
+
+			for(Item item : items) {
+				item.setOwner(getOwner());
+			}
+
 			for (Item item : container.items.toArray(new Item[0])) {
 				if (grab( item )) {
 					item.detachAll( container );
@@ -91,13 +92,13 @@ public class Bag extends Item implements Iterable<Item> {
 		for (Item item : items.toArray(new Item[0])) {
 			if (grab( item )) {
 				item.detachAll( this );
-				if(owner.isAlive()) {
-					owner.collect(item);
+				if(getOwner().isAlive()) {
+					getOwner().collect(item);
 				}
 			}
 		}
 
-		this.owner = null;
+		this.setOwner(CharsList.DUMMY);
 	}
 	
 	@Override
@@ -126,11 +127,7 @@ public class Bag extends Item implements Iterable<Item> {
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		for (Item item : bundle.getCollection( ITEMS,Item.class )) {
-			if(owner!=null) {
-				owner.getBelongings().collect(item);
-			} else {
-				item.collect(this);
-			}
+			item.collect(this);
 		}
 	}
 	
@@ -145,13 +142,13 @@ public class Bag extends Item implements Iterable<Item> {
 		return false;
 	}
 	
-	public boolean grab( Item item ) {
-		return item.bag().equals(getClassName());
+	public boolean grab(@NotNull Item item ) {
+		return getOwner().useBags() && item.bag().equals(getClassName());
 	}
 
 	@Override
 	public String desc() {
-		return Utils.format(super.desc(),size);
+		return Utils.format(super.desc(), getSize());
 	}
 
 
@@ -173,6 +170,9 @@ public class Bag extends Item implements Iterable<Item> {
 		return new BagIterator();
 	}
 
+	public int getSize() {
+		return getOwner() instanceof Hero ? Belongings.getBackpackSize() : Belongings.getBackpackSize() + 1;
+	}
 
 
 	private class BagIterator implements Iterator<Item> {

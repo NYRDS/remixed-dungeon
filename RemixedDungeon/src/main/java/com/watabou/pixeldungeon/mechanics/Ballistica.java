@@ -33,7 +33,7 @@ public class Ballistica {
 
 	@LuaInterface
 	public static int getBacktraceCell(int distFromEnd) {
-		distFromEnd = distFromEnd > distance - 1 ? distance - 1 : distFromEnd;
+		distFromEnd = Math.min(distFromEnd, distance - 1);
 		return trace[distance - 1 - distFromEnd];
 	}
 

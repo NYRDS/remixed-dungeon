@@ -26,16 +26,16 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import org.jetbrains.annotations.NotNull;
 
 public class WarriorArmor extends ClassArmor {
 	
@@ -52,12 +52,12 @@ public class WarriorArmor extends ClassArmor {
 	}
 	
 	@Override
-	public void doSpecial() {
-		GameScene.selectCell( leaper );
+	public void doSpecial(@NotNull Char user) {
+		user.selectCell( leaper );
 	}
 	
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		if (hero.getHeroClass() == HeroClass.WARRIOR) {
 			return super.doEquip( hero );
 		} else {
@@ -74,28 +74,28 @@ public class WarriorArmor extends ClassArmor {
 	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
 		
 		@Override
-		public void onSelect( Integer target ) {
-			if (target != null && target != getUser().getPos()) {
+		public void onSelect(Integer target, Char selector) {
+			if (target != null && target != selector.getPos()) {
 				
-				int cell = Ballistica.cast( getUser().getPos(), target, false, true );
-				if (Actor.findChar( cell ) != null && cell != getUser().getPos()) {
+				int cell = Ballistica.cast( selector.getPos(), target, false, true );
+				if (Actor.findChar( cell ) != null && cell != selector.getPos()) {
 					cell = Ballistica.trace[Ballistica.distance - 2];
 				}
 				
-				getUser().checkIfFurious();
+				selector.checkIfFurious();
 				
-				Invisibility.dispel(getUser());
+				Invisibility.dispel(selector);
 				
 				final int dest = cell;
-				getUser().busy();
-				((HeroSpriteDef) getUser().getSprite()).jump( getUser().getPos(), cell, () -> {
-					getUser().placeTo( dest );
-					Dungeon.level.press( dest, getUser() );
+				selector.busy();
+				((HeroSpriteDef) selector.getSprite()).jump( selector.getPos(), cell, () -> {
+					selector.placeTo( dest );
+					Dungeon.level.press( dest, selector );
 					Dungeon.observe();
 
 					for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-						Char mob = Actor.findChar( getUser().getPos() + Level.NEIGHBOURS8[i] );
-						if (mob != null && mob != getUser()) {
+						Char mob = Actor.findChar( selector.getPos() + Level.NEIGHBOURS8[i] );
+						if (mob != null && mob != selector) {
 							Buff.prolong( mob, Paralysis.class, SHOCK_TIME );
 						}
 					}
@@ -103,7 +103,7 @@ public class WarriorArmor extends ClassArmor {
 					CellEmitter.center( dest ).burst( Speck.factory( Speck.DUST ), 10 );
 					Camera.main.shake( 2, 0.5f );
 
-					getUser().spendAndNext( LEAP_TIME );
+					selector.spendAndNext( LEAP_TIME );
 				});
 			}
 		}

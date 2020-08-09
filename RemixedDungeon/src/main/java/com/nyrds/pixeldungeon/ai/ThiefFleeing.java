@@ -10,6 +10,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ThiefFleeing extends MobAi implements AiState {
 
     public ThiefFleeing() {
@@ -19,10 +21,10 @@ public class ThiefFleeing extends MobAi implements AiState {
     public void act(Mob me) {
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
-            me.target = me.getEnemy().getPos();
+            me.setTarget(me.getEnemy().getPos());
         }
 
-        if(!me.doStepFrom(me.target)) {
+        if(!me.doStepFrom(me.getTarget())) {
             me.spend(Actor.TICK);
             me.getSprite().showStatus( CharSprite.NEGATIVE, Mob.TXT_RAGE );
             me.setState(MobAi.getStateByClass(Hunting.class));
@@ -30,7 +32,7 @@ public class ThiefFleeing extends MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         Char enemy = me.getEnemy();
         if(enemy != CharsList.DUMMY) {
             return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus2),

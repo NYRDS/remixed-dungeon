@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -42,9 +43,9 @@ public class Bones {
 	
 	public static void leave() {
 		
-		item = null;
+		item = CharsList.DUMMY_ITEM;
 
-		switch (2) {
+		switch (Random.Int( 4 )) {
 		case 0:
 			item = Dungeon.hero.getBelongings().weapon;
 			break;
@@ -58,7 +59,7 @@ public class Bones {
 			item = Dungeon.hero.getBelongings().ring2;
 			break;
 		}
-		if (item == null || (item instanceof Artifact && !(item instanceof Ring))) {
+		if (item == CharsList.DUMMY_ITEM || (item instanceof Artifact && !(item instanceof Ring))) {
 			if (Dungeon.hero.gold() > 0) {
 				item = new Gold( Random.IntRange( 1, Dungeon.hero.gold()) );
 			} else {
@@ -71,7 +72,7 @@ public class Bones {
 		Bundle bundle = new Bundle();
 		bundle.put( LEVEL, depth );
 		bundle.put( ITEM, item );
-		
+
 		try {
 			OutputStream output = FileSystem.getOutputStream(BONES_FILE);
 			Bundle.write( bundle, output );
@@ -83,33 +84,27 @@ public class Bones {
 	
 	public static Item get() {
 		if (depth == -1) {
-			
 			try {
-				InputStream input = Game.instance().openFileInput( BONES_FILE ) ;
-				Bundle bundle = Bundle.read( input );
+				InputStream input = Game.instance().openFileInput(BONES_FILE);
+				Bundle bundle = Bundle.read(input);
 				input.close();
-				
-				if(bundle != null) {
-					depth = bundle.getInt( LEVEL );
-					item = (Item)bundle.get( ITEM );
-				
+
+				if (bundle.contains(LEVEL) && bundle.contains(ITEM)) {
+					depth = bundle.getInt(LEVEL);
+					item = (Item) bundle.get(ITEM);
 					return get();
 				}
-				
-				return null;
-				
-			} catch (IOException e) {
-				return null;
+			}  catch (Exception ignored) {
 			}
-			
+			return CharsList.DUMMY_ITEM;
 		} else {
 			if (depth == Dungeon.depth) {
 				Game.instance().deleteFile( BONES_FILE );
 				depth = 0;
 				
 				if (!item.stackable) {
-					item.cursed = true;
-					item.cursedKnown = true;
+					item.setCursed(true);
+					item.setCursedKnown(true);
 					if (item.isUpgradable()) {
 						int lvl = (Dungeon.depth - 1) * 3 / 5 + 1;
 						if (lvl < item.level()) {
@@ -125,7 +120,7 @@ public class Bones {
 				
 				return item;
 			} else {
-				return null;
+				return CharsList.DUMMY_ITEM;
 			}
 		}
 	}

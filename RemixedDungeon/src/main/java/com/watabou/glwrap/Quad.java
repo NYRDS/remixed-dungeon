@@ -27,9 +27,10 @@ public class Quad {
 	// 0---1
 	// | \ |
 	// 3---2
-	private static final short[] VALUES = {0, 1, 2, 0, 2, 3};
+	//private static final short[] VALUES = {0, 1, 2, 0, 2, 3};
 	
-	public static final int SIZE = VALUES.length;
+	//public static final int SIZE = VALUES.length;
+	public static final int SIZE = 6;
 	
 	private static ShortBuffer indices;
 	private static int indexSize = 0;

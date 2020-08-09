@@ -28,13 +28,14 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Earthroot extends Plant {
 
@@ -73,13 +74,13 @@ public class Earthroot extends Plant {
 		}
 		
 		@Override
-		public void execute( Hero hero, String action ) {
+		public void execute(@NotNull Char chr, @NotNull String action ) {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 			if (action.equals( CommonActions.AC_EAT )) {
-				Buff.affect(hero, Roots.class, 25);
-				Buff.affect(hero, Barkskin.class).level(hero.effectiveSTR() / 4);
+				Buff.affect(chr, Roots.class, 25);
+				Buff.affect(chr, Barkskin.class).level(chr.effectiveSTR() / 4);
 			}
 		}
 	}

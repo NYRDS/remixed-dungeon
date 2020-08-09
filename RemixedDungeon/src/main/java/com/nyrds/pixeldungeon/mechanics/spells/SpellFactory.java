@@ -42,7 +42,6 @@ public class SpellFactory {
 
 	private static void initSpellsMap() {
 		registerSpellClass(SummonDeathling.class);
-		//registerSpellClass(Desecrate.class);
 
 		registerSpellClass(WindGust.class);
 		registerSpellClass(Ignite.class);
@@ -51,14 +50,13 @@ public class SpellFactory {
 
 		registerSpellClass(MagicTorch.class);
 		registerSpellClass(Healing.class);
-		//registerSpellClass(TownPortal.class);
 	}
 
 	public static boolean hasSpellForName (String name) {
 		if (mSpellsList.get(name) != null) {
 			return true;
 		}
-		;
+
 		return script.run("haveSpell", name).checkboolean();
 	}
 

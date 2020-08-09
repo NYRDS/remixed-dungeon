@@ -100,30 +100,16 @@ public class Lich extends Boss {
 
     @Override
     public boolean canAttack(@NotNull Char enemy) {
-        return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
+        return level().distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
     }
 
     @Override
-    public boolean doAttack(Char enemy) {
-
+    public void doAttack(Char enemy) {
         if(timeToJump) {
-            jump();
-            return true;
+            jump();;
         }
 
-        if (Dungeon.level.distance(getPos(), enemy.getPos()) <= 1) {
-            return super.doAttack(enemy);
-        } else {
-
-            getSprite().zap(enemy.getPos());
-
-            spend(1);
-
-            if (hit(this, enemy, true)) {
-                enemy.damage(damageRoll(), this);
-            }
-            return true;
-        }
+        super.doAttack(enemy);
     }
 
     private void jump() {
@@ -263,7 +249,7 @@ public class Lich extends Boss {
     @Override
     public void die(NamedEntityKind cause) {
         super.die( cause );
-        Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+        level().animatedDrop(new SkeletonKey(), getPos() );
 
         //Kill everything
         skulls.clear();

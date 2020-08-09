@@ -43,6 +43,7 @@ import androidx.core.content.PermissionChecker;
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.ReportingExecutor;
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -121,7 +122,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     // Accumulated key events
     private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
-    public Executor executor = new ReportingExecutor();
+    private Executor executor = new ReportingExecutor();
+    public Executor serviceExecutor = new ReportingExecutor();
 
     private Runnable doOnResume;
 
@@ -129,7 +131,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public Game(Class<? extends Scene> c) {
         super();
-        instance(this);
+        instance = this;
         sceneClass = c;
     }
 
@@ -255,8 +257,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static void syncAdsState() {
 
-        //GLog.w("diff %d", getDifficulty());
-
         if(RemixedDungeon.donated() > 0) {
             AdsUtils.removeTopBanner();
             return;
@@ -337,7 +337,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
         if (keyCode == Keys.VOLUME_DOWN || keyCode == Keys.VOLUME_UP) {
-            return super.onKeyUp(keyCode, event);
+            return super.onKeyDown(keyCode, event);
         }
 
         synchronized (keysEvents) {
@@ -384,6 +384,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
                 step();
             } catch (LuaError e) {
                 throw ModdingMode.modException(e);
+            } catch (Exception e) {
+                throw new TrackedRuntimeException(e);
             }
         }
 
@@ -432,6 +434,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return paused;
     }
 
+    @LuaInterface
     public static void resetScene() {
         switchScene(instance().sceneClass);
     }
@@ -502,10 +505,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public synchronized static Game instance() {
         return instance;
-    }
-
-    private synchronized static void instance(Game instance) {
-        Game.instance = instance;
     }
 
     public static boolean smallResScreen() {
@@ -587,5 +586,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     static public void pushUiTask(Runnable task) {
         instance().uiTasks.add(task);
+    }
+
+    static public void execute(Runnable task) {
+        instance().executor.execute(task);
     }
 }

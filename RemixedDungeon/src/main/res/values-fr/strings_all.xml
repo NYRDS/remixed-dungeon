@@ -2271,18 +2271,6 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="town_deco_stones_desc">Juste un tas de pierres.</string>
   <string name="town_deco_fireplace_name">Foyer</string>
   <string name="town_deco_fireplace_desc">Idéal pour se réchauffer dans un endroit froid comme celui-ci.</string>
-  <string name="Welcome_Text_28_6">
-    remix.28.6\n
-    - Mécanique de jeu :\n
-    -- Des capacités spéciales pour le Guerrier !\n
-    -- Faim des Héros réduite\n
-    -- Des sorts pour le Nécromancier\n
-    -- Capacité de furtivité pour le Voleur\n
-    -- Nouveaux Badges\n
-    - Modding:\n
-    -- scripte de Buffs modifiable\n
-    -- gfx personisable\n
-    </string>
   <string name="Badges_GamesPlayed5">5.000 parties jouées</string>
   <string name="Badges_PotionsCooked5">25 potions préparées</string>
   <string name="Badges_ItemLvl5">Objet de niveau 15 acquis</string>
@@ -2293,10 +2281,6 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Badges_MonsterSlain5">1.000 ennemis vaincus</string>
   <string name="Spells_NotInOwnBody">Vous ne pouvez pas continuer %s tant que votre âme est séparée de votre corps.</string>
   <string name="WndHero_Satiety">Satiété</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - Ville rénovée !\n
-    </string>
   <string name="Ring_Gems_0">diamant</string>
   <string name="Ring_Gems_1">opale</string>
   <string name="Ring_Gems_2">grenat</string>

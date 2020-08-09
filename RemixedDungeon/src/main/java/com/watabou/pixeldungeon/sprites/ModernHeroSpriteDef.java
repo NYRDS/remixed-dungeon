@@ -4,6 +4,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
@@ -11,8 +12,6 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -52,8 +51,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private static final String LAYER_LEFT_ITEM_BACK  = "left_back_item";
 	private static final String LAYER_RIGHT_ITEM_BACK = "right_back_item";
 
-
-
 	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON   = "hero_modern/spritesDesc/Hero.json";
 	private static final String HERO_MODERN_SPRITES_DESC_STATUE_JSON = "hero_modern/spritesDesc/Statue.json";
 
@@ -83,7 +80,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		LAYER_RIGHT_ITEM,
 	};
 
-	private Map<String,String> layersDesc = new HashMap<>();
+	private Map<String,String> layerOverrides = new HashMap<>();
+	private Map<String,String> layersDesc    = new HashMap<>();
 
 	private String deathEffectDesc;
 
@@ -93,9 +91,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		applyLayersDesc(lookDesc);
 	}
 
-	public ModernHeroSpriteDef(Armor armor){
+	public ModernHeroSpriteDef(@NotNull EquipableItem item){
 		super(HERO_MODERN_SPRITES_DESC_STATUE_JSON,0);
-		createStatueSprite(armor);
+		createStatueSprite(item);
 		applyLayersDesc(getLayersDesc());
 	}
 
@@ -111,18 +109,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		applyLayersDesc(getLayersDesc());
 	}
 
-	public ModernHeroSpriteDef(Weapon weapon) {
-		super(HERO_MODERN_SPRITES_DESC_STATUE_JSON,0);
-		createStatueSprite(weapon);
-		applyLayersDesc(getLayersDesc());
-	}
-
 	private void createLayersDesc(Hero hero) {
 		Accessory accessory = Accessory.equipped();
 		createLayersDesc(hero, accessory);
 	}
 
 	private void createLayersDesc(Hero hero, Accessory accessory) {
+
+		layerOverrides = hero.getLayersOverrides();
+
 		layersDesc.clear();
 		boolean drawHair = true;
 
@@ -133,24 +128,25 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String hairDescriptor = HERO_EMPTY_PNG;
 		String helmetDescriptor = HERO_EMPTY_PNG;
 
-		if(classDescriptor.equals("MAGE_WARLOCK")
-				|| classDescriptor.equals("MAGE_BATTLEMAGE")
-				|| classDescriptor.equals("WARRIOR_BERSERKER")
-				|| classDescriptor.equals("NECROMANCER_NONE")){
-			facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
-		}
-
-		if (accessory  == null){
-			if(hero.getBelongings().armor  != null && hero.getBelongings().armor.hasHelmet()){
-				helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
-				if(hero.getBelongings().armor.isCoveringHair()){
-					drawHair = false;
-				}
+		if(accessory == null || !accessory.isCoverFacialHair()) {
+			if (classDescriptor.equals("MAGE_WARLOCK")
+					|| classDescriptor.equals("MAGE_BATTLEMAGE")
+					|| classDescriptor.equals("WARRIOR_BERSERKER")
+					|| classDescriptor.equals("NECROMANCER_NONE")) {
+				facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 			}
 		}
-		else{
+
+		if (accessory == null){
+			if(hero.getBelongings().armor.hasHelmet()) {
+                helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
+            }
+            if(hero.getBelongings().armor.isCoveringHair()){
+                drawHair = false;
+            }
+		} else {
 			accessoryDescriptor = accessory.getLayerFile();
-			if(accessory.isCoveringHair()){
+			if(accessory.isCoveringHair()) {
 				drawHair = false;
 			}
 		}
@@ -174,16 +170,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		Armor armor = hero.getBelongings().armor;
 
 		EquipableItem weapon = hero.getBelongings().weapon;
-
-		if(weapon !=null) {
-			weaponAnimationClassRight = weapon.getAttackAnimationClass();
-		}
+		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();
 
 		EquipableItem leftHand = hero.getBelongings().leftHand;
-
-		if(leftHand != null) {
-			weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
-		}
+		String weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassRight + "_right.png");
@@ -207,37 +197,30 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		deathEffectDesc = "hero_modern/death/" +deathDescriptor+".png";
 	}
 
-	private void createStatueSprite(Weapon weapon) {
+	private void createStatueSprite(@NotNull EquipableItem item) {
 		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
-
-		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
-		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
-
-		if(weapon !=null) {
-			weaponAnimationClassRight = weapon.getAttackAnimationClass();
-		}
-
-		layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
-		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
-
-		//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/empty.png");
-		layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
-
-
-		deathEffectDesc = "hero_modern/death/statue.png";
-	}
-
-	private void createStatueSprite(Armor armor) {
-		layersDesc.put(LAYER_BODY, "hero_modern/body/statue.png");
-		layersDesc.put(LAYER_HEAD, "hero_modern/head/statue.png");
-		layersDesc.put(LAYER_ARMOR,       armorDescriptor(armor));
-
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/statue_none_left.png");
 		layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_none_right.png");
 
 		deathEffectDesc = "hero_modern/death/statue.png";
+
+		if (ItemUtils.usableAsArmor(item)) {
+			layersDesc.put(LAYER_ARMOR, armorDescriptor(item));
+		}
+
+
+		if (ItemUtils.usableAsWeapon(item)) {
+			String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
+			String weaponAnimationClassRight = item.getAttackAnimationClass();
+
+			layersDesc.put(LAYER_LEFT_HAND,  "hero_modern/body/hands/statue_" +weaponAnimationClassLeft+"_left.png");
+			layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
+
+			//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/empty.png");
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(item, "right"));
+		}
 	}
 
 	public void heroUpdated(Hero hero) {
@@ -259,8 +242,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			EquipableItem weapon = hero.getBelongings().weapon;
 			EquipableItem leftHand = hero.getBelongings().leftHand;
 
-			boolean right = weapon != null && weapon.goodForMelee();
-			boolean left  = leftHand != null && leftHand.goodForMelee();
+			boolean right = weapon.goodForMelee();
+			boolean left  = leftHand.goodForMelee();
 
 			if(right && left) {
 				zap = attack = weapon_anims.get("dual");
@@ -281,9 +264,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	public String[] getLayersDesc() {
 		ArrayList<String> ret= new ArrayList<>();
-		for (String aLayersOrder : layersOrder) {
-			if (layersDesc.containsKey(aLayersOrder)) {
-				ret.add(layersDesc.get(aLayersOrder));
+		for (String layer : layersOrder) {
+			if (layersDesc.containsKey(layer)) {
+				String override = layerOverrides.get(layer);
+				if(override==null) {
+					ret.add(layersDesc.get(layer));
+					continue;
+				}
+
+				if(override.equals("remove")) {
+					continue;
+				}
+
+				ret.add(override);
 			}
 		}
 
@@ -298,8 +291,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
 
-	private String armorDescriptor(Armor armor) {
-		if(armor==null) {
+	private String armorDescriptor(EquipableItem armor) {
+		String visualName = armor.getVisualName();
+		if(visualName.equals("none")) {
 			return HERO_EMPTY_PNG;
 		}
 		return "hero_modern/armor/" +armor.getVisualName()+".png";
@@ -315,10 +309,6 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 
 	private String itemHandDescriptor(EquipableItem item, String hand) {
-		if(item==null) {
-			return HERO_EMPTY_PNG;
-		}
-
 		String visualName = item.getVisualName();
 		if(visualName.equals("none")) {
 			return HERO_EMPTY_PNG;
@@ -330,30 +320,24 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private String itemBackDescriptor(EquipableItem item, String hand) {
 		String defaultLayerFile = "hero_modern/empty.png";
 
-		if(item!=null) {
-			String itemLayerFile = "hero_modern/items/" +item.getVisualName()+"_back_"+hand+".png";
-			if(ModdingMode.isResourceExist(itemLayerFile)) {
-				return itemLayerFile;
-			}
+		String itemLayerFile = "hero_modern/items/" +item.getVisualName()+"_back_"+hand+".png";
+		if(ModdingMode.isResourceExist(itemLayerFile)) {
+			return itemLayerFile;
 		}
 		return defaultLayerFile;
 	}
 
 
-	private String helmetDescriptor(Armor armor, Hero hero) {
-		if(armor!=null) {
-			if(hero.getBelongings().armor.hasHelmet()){
-				return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
-			}
+	private String helmetDescriptor(EquipableItem armor, Hero hero) {
+		if(hero.getBelongings().armor.hasHelmet()){
+			return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 		}
-			return HERO_EMPTY_PNG;
+		return HERO_EMPTY_PNG;
 	}
 
-	private String collarDescriptor(Armor armor, Hero hero) {
-		if(armor!=null) {
-			if(hero.getBelongings().armor.hasCollar()){
-				return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";
-			}
+	private String collarDescriptor(EquipableItem armor, Hero hero) {
+		if(hero.getBelongings().armor.hasCollar()){
+			return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}

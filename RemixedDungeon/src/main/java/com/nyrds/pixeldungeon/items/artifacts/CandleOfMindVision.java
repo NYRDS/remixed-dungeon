@@ -6,9 +6,10 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.CandleOfMindVisionBuff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.utils.Bundle;
+
+import org.jetbrains.annotations.NotNull;
 
 public class CandleOfMindVision extends Artifact implements IActingItem {
 
@@ -49,7 +50,7 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 	}
 
 	@Override
-	public boolean doEquip(Hero hero) {
+	public boolean doEquip(@NotNull Char hero) {
 		boolean ret = super.doEquip(hero);
 		
 		if(ret) {

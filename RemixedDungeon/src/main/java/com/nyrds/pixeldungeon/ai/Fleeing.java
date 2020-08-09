@@ -9,6 +9,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Fleeing extends MobAi implements AiState {
 
 
@@ -18,16 +20,16 @@ public class Fleeing extends MobAi implements AiState {
     public void act(Mob me) {
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
-            me.target = me.getEnemy().getPos();
+            me.setTarget(me.getEnemy().getPos());
         }
 
-        if(!me.doStepFrom(me.target)) {
+        if(!me.doStepFrom(me.getTarget())) {
             me.spend(Actor.TICK);
         }
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         Char enemy = me.getEnemy();
         if(enemy != CharsList.DUMMY) {
             return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus2),

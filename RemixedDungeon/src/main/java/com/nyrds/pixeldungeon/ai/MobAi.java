@@ -52,7 +52,7 @@ public abstract class MobAi implements AiState {
         if (me.isEnemyInFov()) {
             me.setState(MobAi.getStateByClass(Hunting.class));
         } else {
-            me.target = me.respawnCell(me.level());
+            me.setTarget(me.respawnCell(me.level()));
             me.setState(MobAi.getStateByClass(Wandering.class));
         }
     }
@@ -122,7 +122,7 @@ public abstract class MobAi implements AiState {
 
         if (me.getEnemy().valid()) {
             me.enemySeen = true;
-            me.target = me.getEnemy().getPos();
+            me.setTarget(me.getEnemy().getPos());
 
             me.notice();
             me.setState(getStateByClass(Hunting.class));
@@ -131,7 +131,7 @@ public abstract class MobAi implements AiState {
                 for (Mob mob : me.level().mobs) {
                     if (me != mob && mob.getOwnerId() != me.getEnemy().getId()) {
                         mob.setEnemy(me.getEnemy());
-                        mob.target = me.getEnemy().getPos();
+                        mob.setTarget(me.getEnemy().getPos());
                         mob.notice();
                         mob.setState(getStateByClass(Hunting.class));
                     }
@@ -144,9 +144,9 @@ public abstract class MobAi implements AiState {
 
     public boolean returnToOwnerIfTooFar(@NotNull Mob me, int maxDist) {
         if(     me.level().distance(me.getPos(),me.getOwnerPos())>maxDist
-            &&  me.level().distance(me.target,  me.getOwnerPos())>maxDist
+            &&  me.level().distance(me.getTarget(),  me.getOwnerPos())>maxDist
         ) {
-            me.target = me.getOwnerPos();
+            me.setTarget(me.getOwnerPos());
             me.setState(getStateByClass(Wandering.class));
             return true;
         }

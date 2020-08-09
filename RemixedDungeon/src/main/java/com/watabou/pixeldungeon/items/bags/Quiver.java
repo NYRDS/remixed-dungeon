@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Quiver extends Bag {
@@ -26,12 +24,7 @@ public class Quiver extends Bag {
 	{
 		image = ItemSpriteSheet.QUIVER_COMMON;
 	}
-	
-	@Override
-	public boolean grab( Item item ) {
-		return super.grab(item) || item instanceof MissileWeapon;
-	}
-	
+
 	@Override
 	public int price() {
 		return 50;

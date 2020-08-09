@@ -17,35 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class WandHolster extends Bag {
 
 	{
 		image = ItemSpriteSheet.HOLSTER;
-	}
-	
-	@Override
-	public boolean grab( Item item ) {
-		return super.grab(item) || item instanceof Wand;
-	}
-	
-	@Override
-	public boolean collect( Bag container ) {
-		if (super.collect( container )) {
-			if (owner != null) {
-				for (Item item : items) {
-					if(item instanceof Wand) {
-						((Wand) item).charge(owner);
-					}
-				}
-			}
-			return true;
-		} else {
-			return false;
-		}
 	}
 
 	@Override

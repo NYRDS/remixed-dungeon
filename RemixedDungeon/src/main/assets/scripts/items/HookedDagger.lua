@@ -26,14 +26,24 @@ return item.init{
     end,
 
     getVisualName = function()
-        return "Dagger"
+        return "Wand"
+    end,
+
+    getAttackAnimationClass = function()
+        return "staff"  --look at KindOfWeapon.java for possible values
     end,
 
     slot = function(self, item, belongings)
+ --[[
         if belongings:slotBlocked(RPD.Slots.weapon) then
             return RPD.Slots.leftHand
         end
+]]--
         return RPD.Slots.weapon
+    end,
+
+    blockSlot = function(self, item, belongings)
+        return RPD.Slots.leftHand
     end,
 
     accuracyFactor    = function(self, item, user)
@@ -53,7 +63,4 @@ return item.init{
         RPD.affectBuff(defender,"Bleeding",3)
         return damage
     end,
-
-
-
 }

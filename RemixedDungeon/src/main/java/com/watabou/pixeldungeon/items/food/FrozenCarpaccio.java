@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.food;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -28,11 +29,12 @@ import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class FrozenCarpaccio extends Food {
 
@@ -42,31 +44,31 @@ public class FrozenCarpaccio extends Food {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		
-		super.execute( hero, action );
+		super.execute(chr, action );
 		
 		if (action.equals( CommonActions.AC_EAT )) {
 			
 			switch (Random.Int( 5 )) {
 			case 0:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info1));
-				Buff.affect( hero, Invisibility.class, Invisibility.DURATION );
+				Buff.affect(chr, Invisibility.class, Invisibility.DURATION );
 				break;
 			case 1:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info2));
-				Buff.affect( hero, Barkskin.class ).level( hero.ht() / 4 );
+				Buff.affect(chr, Barkskin.class ).level( chr.ht() / 4 );
 				break;
 			case 2:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info3));
-				Buff.detach( hero, Poison.class );
-				Buff.detach( hero, Cripple.class );
-				Buff.detach( hero, Weakness.class );
-				Buff.detach( hero, Bleeding.class );
+				Buff.detach(chr, Poison.class );
+				Buff.detach(chr, Cripple.class );
+				Buff.detach(chr, Weakness.class );
+				Buff.detach(chr, Bleeding.class );
 				break;
 			case 3:
 				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info4));
-				hero.heal(hero.hp() + hero.ht() / 4, this);
+				chr.heal(chr.hp() + chr.ht() / 4, this);
 				break;
 			}
 		}

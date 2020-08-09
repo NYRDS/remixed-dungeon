@@ -83,7 +83,7 @@ public class WndWandmaker extends Window {
 		if (reward.doPickUp( Dungeon.hero )) {
 			GLog.i( Hero.getHeroYouNowHave(), reward.name() );
 		} else {
-			Dungeon.level.drop( reward, wandmaker.getPos() ).sprite.drop();
+			reward.doDrop(wandmaker);
 		}
 		
 		wandmaker.say(Utils.format( Game.getVar(R.string.WndWandmaker_Farawell), Dungeon.hero.className() ) );

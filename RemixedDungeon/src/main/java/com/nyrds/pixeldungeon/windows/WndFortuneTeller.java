@@ -79,10 +79,10 @@ public class WndFortuneTeller extends WndQuest {
 	}
 
 	public WndBag identify() {
-		return GameScene.selectItem( itemSelector, WndBag.Mode.UNIDENTIFED, Game.getVar(R.string.ScrollOfIdentify_InvTitle));
+		return GameScene.selectItem(hero, itemSelector, WndBag.Mode.UNIDENTIFED, Game.getVar(R.string.ScrollOfIdentify_InvTitle));
 	}
 
-	private WndBag.Listener itemSelector = item -> {
+	private WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
 			ScrollOfIdentify.identify(hero,item);
 		}

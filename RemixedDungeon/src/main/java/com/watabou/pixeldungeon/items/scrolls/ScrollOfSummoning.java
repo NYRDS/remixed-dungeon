@@ -5,6 +5,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -14,10 +15,12 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfSummoning extends Scroll {
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 		Level level = Dungeon.level;
 
 		if(level.isBossLevel() || !level.cellValid(level.randomRespawnCell())) {
@@ -25,13 +28,13 @@ public class ScrollOfSummoning extends Scroll {
 			return;
 		}
 
-		int cell = level.getEmptyCellNextTo(getUser().getPos());
+		int cell = level.getEmptyCellNextTo(reader.getPos());
 
 		if(level.cellValid(cell)){
 			Mob mob = Bestiary.mob( level );
 			GLog.i(Game.getVar(R.string.ScrollOfSummoning_Info_2));
 			if(mob.canBePet()){
-				Mob.makePet(mob, getUser().getId());
+				Mob.makePet(mob, reader.getId());
 			} else {
 				GLog.w( Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}
@@ -42,10 +45,10 @@ public class ScrollOfSummoning extends Scroll {
 
 		setKnown();
 
-		SpellSprite.show( getUser(), SpellSprite.SUMMON );
+		SpellSprite.show( reader, SpellSprite.SUMMON );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(reader);
 
-		getUser().spendAndNext( TIME_TO_READ );
+		reader.spendAndNext( TIME_TO_READ );
 	}
 }

@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
@@ -29,6 +29,9 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.SystemTime;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -41,10 +44,6 @@ public abstract class Actor implements Bundlable {
 
 	@Packable
 	private float time;
-
-	public Actor() {
-		time = now;
-	}
 
 	public static void setRealTimeMultiplier(float realTimeMultiplier) {
 		Actor.realTimeMultiplier = realTimeMultiplier;
@@ -120,7 +119,7 @@ public abstract class Actor implements Bundlable {
 		now = 0;
 	}
 	
-	public static void init(Level level) {
+	public static void init(@NotNull Level level) {
 		clear();
 		
 		addDelayed( Dungeon.hero, -Float.MIN_VALUE );
@@ -135,7 +134,7 @@ public abstract class Actor implements Bundlable {
 		}
 	}
 	
-	public static void occupyCell( Char ch ) {
+	public static void occupyCell(@NotNull Char ch ) {
 		if(ch.getPos() == Level.INVALID_CELL && ! (ch instanceof DummyChar)) {
 			throw new TrackedRuntimeException("trying to spawn mob in void");
 		}
@@ -146,8 +145,11 @@ public abstract class Actor implements Bundlable {
 		chars.remove(pos);
 	}
 	
-	/*protected*/public void next() {
+	/*protected*/final public void next() {
+		//Log.i("Main loop", String.format("next:\nNext: %s Current: %s", this, current));
 		if (current == this) {
+			//Log.i("Main loop", "next == current");
+
 			current = null;
 		}
 	}
@@ -156,120 +158,103 @@ public abstract class Actor implements Bundlable {
 
 		now += elapsed * realTimeMultiplier;
 
-		do {
-			current = null;
+		Actor next;
+		while ((next=getNextActor(now)) != null) {
 
-			chars.clear();
-			float justNow = now;
+			//Log.i("Main loop", String.format("%s %4.2f %4.2f",next.getClass().getSimpleName(),now,next.time));
 
-			//select actor to act
-			for (Actor actor : all) {
-				if (actor.time < justNow) {
-					current = actor;
-					justNow = current.time;
-				}
+			float timeBefore = next.time;
 
-				//also fill chars positions
-				if (actor instanceof Char) {
-					Char ch = (Char) actor;
-					chars.put(ch.getPos(), ch);
-				}
+			current = next;
+			next.act();
+/*
+			if(!(next.time>timeBefore)) {
+				//Log.i("Main loop", String.format("%s %4.2f, time not increased!",next.getClass().getSimpleName(),next.time));
 			}
-
-			if(current!= null) {
-				Actor actor = current;
-//				Log.i("Main loop", String.format("%s %4.2f %4.2f",actor.getClass().getSimpleName(),now,actor.time));
-
-				float timeBefore = actor.time;
-
-				actor.act();
-
-				if(!(actor.time>timeBefore)) {
-					Log.i("Main loop", String.format("%s %4.2f, time not increased!",actor.getClass().getSimpleName(),actor.time));
-				}
-			}
-
-		} while (current != null);
+*/
+		}
 
 	}
-	
-	public static void process(float elapsed) {
-		
-		if(Dungeon.realtime()) {
-			processReaTime(elapsed);
-			return;
-		}
+
+	public static void processTurnBased() {
 
 		// action still in progress
 		if (current != null && !current.timeout()) {
+			//Log.i("Main loop", String.format("current: %s %4.1f", current, current.time));
 			return;
 		}
-	
-		boolean doNext;
-		
-		Actor toRemove = null;
-		
-		do {
-			now = Float.MAX_VALUE;
-			current = null;
-			
-			chars.clear();
-			
-			
-			for (Actor actor : all) {
 
-				//select actor to act
-				if (actor.time < now) {
-					now = actor.time;
-					current = actor;
-				}
+		Actor actor;
 
-				//fill chars
-				if (actor instanceof Char) {
-					Char ch = (Char)actor;
+		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-					//some old dirty hack
-					if(!Dungeon.level.cellValid(ch.getPos())) {
-						current = null;
-						toRemove = actor;
-						continue;
-					}
+			//time = actor.time;
+			//Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
 
-					chars.put(ch.getPos(), ch);
-				}
+			if (actor instanceof Char && ((Char)actor).getSprite().isMoving) {
+				// If it's character's turn to act, but its sprite
+				// is moving, wait till the movement is over
+				//Log.i("Main loop","skipped");
+				return;
 			}
 
-			if(toRemove != null) {
-				remove(toRemove);
-				toRemove = null;
-			}
+			//Log.i("Main loop", "act");
 
-			// have candidate to act
-			if (current != null) {
-
-				//Log.i("Main loop", String.format("%s %4.2f",current.getClass().getSimpleName(),current.time));
-
-				if (current instanceof Char && ((Char)current).getSprite().isMoving) {
-					// If it's character's turn to act, but its sprite 
-					// is moving, wait till the movement is over
-					//Log.i("Main loop","skipped");
-					current = null;
-					break;
-				}
-
-				//Log.i("Main loop", "act");
-				doNext = current.act();
-
-				if (doNext && !Dungeon.hero.isAlive()) {
-					doNext = false;
-					current = null;
-				}
-
+			current = actor;
+			if (actor.act() || !Dungeon.hero.isAlive()) {
+				actor.next();
 			} else {
-				doNext = false;
+				break;
 			}
-			
-		} while (doNext);
+
+			if(SystemTime.timeSinceTick() > 40) {
+				break;
+			}
+		}
+	}
+
+	public static void process(float elapsed) {
+		if(Dungeon.realtime()) {
+			processReaTime(elapsed);
+		} else {
+			processTurnBased();
+		}
+	}
+
+	public static Actor getNextActor(float upTo) {
+		Actor toRemove = null;
+		Actor next     = null;
+
+		chars.clear();
+
+		//Log.i("Main loop","getNextActor");
+
+		for (Actor actor : all) {
+			//select actor to act
+			if (actor.time < upTo) {
+				upTo = actor.time;
+				next = actor;
+			}
+
+			//fill chars
+			if (actor instanceof Char) {
+				Char ch = (Char)actor;
+
+				//filter out badly placed chars, is this still happens?
+				if(!ch.level().cellValid(ch.getPos())) {
+					actor.next();
+					toRemove = actor;
+					continue;
+				}
+
+				chars.put(ch.getPos(), ch);
+			}
+		}
+
+		Actor.now = upTo;
+
+		remove(toRemove);
+		return next;
 	}
 
 	protected boolean timeout() {
@@ -304,9 +289,7 @@ public abstract class Actor implements Bundlable {
 	public static void remove( Actor actor ) {
 		
 		if (actor != null) {
-			if(current == actor) {
-				current = null;
-			}
+			actor.next();
 			
 			all.remove( actor );
 		}
@@ -316,11 +299,22 @@ public abstract class Actor implements Bundlable {
 		return chars.get(pos);
 	}
 
+	@LuaInterface
 	public boolean myMove() {
 		return current == this;
 	}
 
 	public static HashSet<Actor> all() {
 		return all;
+	}
+
+	@LuaInterface
+	public float actorTime() {
+		return time;
+	}
+
+	@LuaInterface
+	static public float localTime() {
+		return now;
 	}
 }

@@ -30,5 +30,9 @@ return buff.init{
 
     stealthBonus = function(self,buff)
         return buff.target:skillLevel()
+    end,
+
+    charSpriteStatus = function(self, buff)
+        return "INVISIBLE"
     end
 }

@@ -30,7 +30,7 @@ public class GoldenSword extends SpecialWeapon {
 		if (Random.Int(10) == 1){
 			int price = this.price() / 10;
 			if ( price > 500) { price = 500;}
-			defender.level().drop(new Gold(price), defender.getPos());
+			new Gold(price).doDrop(defender);
 		}
 		usedForHit();
 	}

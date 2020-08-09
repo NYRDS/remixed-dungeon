@@ -5,7 +5,7 @@
    "tiles":"tiles0.png",
    "water":"water0.png",
 
-   "rooms" : ["MAGIC_WELL","MAGIC_WELL","MAGIC_WELL","MAGIC_WELL","MAGIC_WELL","MAGIC_WELL","MAGIC_WELL"],
+   "rooms" : ["GARDEN","GARDEN","GARDEN","GARDEN","GARDEN"],
 
    "mobs" : [
       {"kind":"GoldenStatue","loot":{"kind":"Codex","text":"Это кодекс отобранный у статуи"} },

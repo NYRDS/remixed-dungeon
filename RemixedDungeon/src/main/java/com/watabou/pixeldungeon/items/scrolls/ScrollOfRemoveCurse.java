@@ -30,31 +30,33 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Iterator;
 
 public class ScrollOfRemoveCurse extends Scroll {
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 
-		new Flare(6, 32).show(getUser().getSprite(), 2f);
+		new Flare(6, 32).show(reader.getSprite(), 2f);
 		Sample.INSTANCE.play(Assets.SND_READ);
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(reader);
 
-		boolean procced = uncurse(getUser().getBelongings());
+		boolean procced = uncurse(reader.getBelongings());
 
-		Weakness.detach(getUser(), Weakness.class);
+		Weakness.detach(reader, Weakness.class);
 
 		if (procced) {
 			GLog.p(Game.getVar(R.string.ScrollOfRemoveCurse_Proced));
-			getUser().getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
+			reader.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
 		} else {
 			GLog.i(Game.getVar(R.string.ScrollOfRemoveCurse_NoProced));
 		}
 
 		setKnown();
 
-		getUser().spendAndNext(TIME_TO_READ);
+		reader.spendAndNext(TIME_TO_READ);
 	}
 
 	public static void uncurse(Char hero, Item ... items) {
@@ -70,8 +72,8 @@ public class ScrollOfRemoveCurse extends Scroll {
 	}
 
 	private static boolean uncurseItem(boolean procced, Item item) {
-		if (item != null && item.cursed) {
-			item.cursed = false;
+		if (item != null && item.isCursed()) {
+			item.setCursed(false);
 			procced = true;
 		}
 		return procced;

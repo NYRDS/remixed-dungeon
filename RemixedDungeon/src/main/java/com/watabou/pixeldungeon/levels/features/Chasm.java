@@ -28,19 +28,19 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.pixeldungeon.sprites.MobSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Random;
 
-public class Chasm implements Hero.Doom {
+public class Chasm implements Doom {
 
 	public static boolean jumpConfirmed = false;
 	
@@ -89,7 +89,7 @@ public class Chasm implements Hero.Doom {
 	private static void mobFall( Mob mob ) {
 		mob.die(new Chasm());
 
-		((MobSprite)mob.getSprite()).fall();
+		mob.getSprite().fall();
 	}
 
 	private static void heroFall(int pos, Hero hero) {

@@ -84,7 +84,7 @@ public class Blacksmith extends NPC {
 					if (pick.doPickUp( hero )) {
 						GLog.i( Hero.getHeroYouNowHave(), pick.name() );
 					} else {
-						Dungeon.level.drop( pick, hero.getPos() ).sprite.drop();
+						pick.doDrop(hero);
 					}
 				}
 			} );
@@ -129,16 +129,11 @@ public class Blacksmith extends NPC {
 					Quest.completed = true;
 					Quest.reforged = false;
 				}
-				
 			}
 		} else if (!Quest.reforged) {
-			
 			GameScene.show( new WndBlacksmith( this) );
-			
 		} else {
-			
 			tell( Game.getVar(R.string.Blacksmith_GetLost) );
-			
 		}
 		return true;
 	}
@@ -161,7 +156,7 @@ public class Blacksmith extends NPC {
 			return Game.getVar(R.string.Blacksmith_Verify3);
 		}
 		
-		if (item1.cursed || item2.cursed) {
+		if (item1.isCursed() || item2.isCursed()) {
 			return Game.getVar(R.string.Blacksmith_Verify4);
 		}
 		

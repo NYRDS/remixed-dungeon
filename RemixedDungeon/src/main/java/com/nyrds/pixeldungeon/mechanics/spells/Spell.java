@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -13,11 +12,13 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
+
+import lombok.val;
+import lombok.var;
 
 public class Spell implements NamedEntityKind {
 
@@ -38,8 +39,6 @@ public class Spell implements NamedEntityKind {
     protected int image = 0;
 
     private SpellItem spellItem;
-
-    private Image spellImage;
 
     protected boolean cast(Char chr, int cell) {
         return true;
@@ -93,9 +92,9 @@ public class Spell implements NamedEntityKind {
             final Hero hero = (Hero) chr;
 
             if (targetingType.equals(SpellHelper.TARGET_CELL)) {
-                GameScene.selectCell(new CellSelector.Listener() {
+                chr.selectCell(new CellSelector.Listener() {
                     @Override
-                    public void onSelect(Integer cell) {
+                    public void onSelect(Integer cell, Char selector) {
                         if (cell != null) {
                             cast(chr, cell);
 
@@ -121,10 +120,7 @@ public class Spell implements NamedEntityKind {
 
     protected void castCallback(Char chr) {
         chr.spellCasted(getClassName());
-
-        if (chr instanceof Hero) {
-            ((Hero) chr).spendSkillPoints(spellCost());
-        }
+        chr.spendSkillPoints(spellCost());
     }
 
     public String getClassName() {
@@ -147,13 +143,17 @@ public class Spell implements NamedEntityKind {
         return imageFile;
     }
 
-    public Image image() {
-        if(spellImage==null) {
-            SmartTexture texture = TextureCache.get(texture());
-            spellImage = new Image(texture);
-            spellImage.frame(new TextureFilm(texture, 16, 16).get(image));
-        }
+    public Image image(Char caster) {
+        val texture = TextureCache.get(texture());
+        var spellImage = new Image(texture);
+
+        spellImage.frame(new TextureFilm(texture, 16, 16).get(getImage(caster)));
+
         return spellImage;
+    }
+
+    protected int getImage(Char caster) {
+        return image;
     }
 
     public int spellCost() {
@@ -187,11 +187,11 @@ public class Spell implements NamedEntityKind {
 
                 @Override
                 public int image() {
-                    return Spell.this.image;
+                    return Spell.this.getImage(Dungeon.hero);
                 }
 
                 @Override
-                public void execute(Hero hero) {
+                public void execute(@NotNull Char hero) {
                     Spell.this.cast(hero);
                 }
 

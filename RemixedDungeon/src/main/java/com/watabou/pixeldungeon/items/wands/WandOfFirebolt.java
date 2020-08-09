@@ -46,7 +46,7 @@ public class WandOfFirebolt extends SimpleWand  {
 	protected void onZap( int cell ) {
 
 		int wandLevel = effectiveLevel();
-		Level level = wandUser.level();
+		Level level = getOwner().level();
 
 
 		for (int i=1; i < Ballistica.distance - 1; i++) {
@@ -72,7 +72,7 @@ public class WandOfFirebolt extends SimpleWand  {
 			
 			ch.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
 			
-			if (ch == getUser() && !ch.isAlive()) {
+			if (ch == getOwner() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfFirebolt_Info1));
 			}
@@ -80,7 +80,7 @@ public class WandOfFirebolt extends SimpleWand  {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.fire( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		MagicMissile.fire( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

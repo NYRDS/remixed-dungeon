@@ -4,16 +4,14 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -42,18 +40,15 @@ public class SpiderMindAmber extends MultiKindMob {
 	
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
-		return !Dungeon.level.adjacent( getPos(), enemy.getPos() ) && Ballistica.cast( getPos(), enemy.getPos(), false, true ) == enemy.getPos();
+		return CharUtils.canDoOnlyRangedAttack(this, enemy);
 	}
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public int attackProc(@NotNull Char enemy, int damage ) {
-		
-		if(enemy instanceof Hero) {
-			Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);		
-			Buff.prolong( enemy, buffClass, 3 );
-		}
-		
+	public int zapProc(@NotNull Char enemy, int damage ) {
+		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);
+		Buff.prolong( enemy, buffClass, 3 );
+
 		return damage;
 	}
 	
@@ -86,12 +81,4 @@ public class SpiderMindAmber extends MultiKindMob {
 		super.die( cause );
 		Badges.validateRare( this );
 	}
-
-	@Override
-	public boolean zap(@NotNull Char enemy) {
-		attackProc(enemy, damageRoll());
-		super.zap(enemy);
-		return true;
-	}
-
 }

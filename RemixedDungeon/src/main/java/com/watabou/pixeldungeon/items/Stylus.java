@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -30,6 +31,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -46,33 +49,32 @@ public class Stylus extends Item {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_INSCRIBE );
 		return actions;
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_INSCRIBE)) {
 
-			setUser(hero);
-			GameScene.selectItem(item -> {
-				if (item != null) {
-					if(item instanceof Armor){
-						inscribeArmor ( (Armor)item );
-					}
-					if(item instanceof BlankScroll){
-						inscribeScroll( (BlankScroll)item );
-					}
-				}
-			},
-			WndBag.Mode.INSCRIBABLE,
-			Game.getVar(R.string.Stylus_SelectArmor) );
+			GameScene.selectItem(chr,
+                    (item, selector) -> {
+                        if (item != null) {
+                            if(item instanceof Armor){
+                                inscribeArmor ( (Armor)item );
+                            }
+                            if(item instanceof BlankScroll){
+                                inscribeScroll( (BlankScroll)item );
+                            }
+                        }
+                    },
+                    WndBag.Mode.INSCRIBABLE, Game.getVar(R.string.Stylus_SelectArmor));
 			
 		} else {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}
@@ -88,14 +90,16 @@ public class Stylus extends Item {
 	}
 	
 	private void inscribeEffect(){
-		detach( getUser().getBelongings().backpack );
+		Char owner = getOwner();
+		
+		detach( owner.getBelongings().backpack );
 
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
+		owner.getSprite().operate( owner.getPos() );
+		owner.getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
 		Sample.INSTANCE.play( Assets.SND_BURNING );
 		
-		getUser().spend( TIME_TO_INSCRIBE );
-		getUser().busy();
+		owner.spend( TIME_TO_INSCRIBE );
+		owner.busy();
 	}
 	
 	private void inscribeArmor ( Armor armor ) {
@@ -113,12 +117,12 @@ public class Stylus extends Item {
 		inscribeEffect();
 	}
 	
-	private void inscribeScroll (BlankScroll scroll){
+	private void inscribeScroll (@NotNull BlankScroll scroll){
 		
-		scroll.detach( getUser().getBelongings().backpack );
+		scroll.detach( getOwner().getBelongings().backpack );
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
-		getUser().collect(inscribedScroll);
+		getOwner().collect(inscribedScroll);
 		GLog.i(Hero.getHeroYouNowHave(), inscribedScroll.name());	// Let know which scroll was inscribed
 
 		inscribeEffect();

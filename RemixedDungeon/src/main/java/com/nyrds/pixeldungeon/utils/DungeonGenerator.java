@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
@@ -41,9 +42,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import lombok.SneakyThrows;
+import lombok.var;
 
 public class DungeonGenerator {
 	private static final String DEAD_END_LEVEL = "DeadEndLevel";
@@ -210,6 +216,18 @@ public class DungeonGenerator {
 		} catch (JSONException e) {
 			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
+	}
+
+	public static Set<String> getLevelPropertySet(String id, String property) {
+		var ret = new HashSet<String>();
+		try {
+			JSONObject levelDesc = mLevels.getJSONObject(id);
+			JsonHelper.readStringSet(levelDesc,property,ret);
+		} catch (JSONException e) {
+			//default value is ok
+		}
+
+		return ret;
 	}
 
 	public static String getLevelProperty(String id, String property, String defaultValue) {
@@ -386,4 +404,20 @@ public class DungeonGenerator {
 		mCurrentLevelKind  = getLevelKind(mCurrentLevelId);
 	}
 
+	@SneakyThrows
+	@LuaInterface
+	public static List<String> getLevelsList() {
+		var ret = new ArrayList<String>();
+
+		var levelIds = mGraph.names();
+
+		for(int i = 0;i<levelIds.length();++i) {
+			if(levelIds.getString(i).equals("0")) {
+				continue;
+			}
+			ret.add(levelIds.getString(i));
+		}
+
+		return ret;
+	}
 }

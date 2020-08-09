@@ -78,7 +78,17 @@ public class Ghost extends NPC {
 		addImmunity( Paralysis.class );
 		addImmunity( Roots.class );
 	}
-	
+
+	@Override
+	public boolean act() {
+
+		if(Quest.given && Math.random() < 0.1) {
+			setTarget(Dungeon.hero.getControlTarget().getPos());
+		}
+
+		return super.act();
+	}
+
 	@Override
 	public int defenseSkill( Char enemy ) {
 		return 1000;
@@ -295,7 +305,7 @@ public class Ghost extends NPC {
 				} else {
 					
 					if (Random.Int( left2kill ) == 0) {
-						Dungeon.level.drop( new DriedRose(), pos ).sprite.drop();
+						Dungeon.level.animatedDrop( new DriedRose(), pos );
 						processed = true;
 					} else {
 						left2kill--;

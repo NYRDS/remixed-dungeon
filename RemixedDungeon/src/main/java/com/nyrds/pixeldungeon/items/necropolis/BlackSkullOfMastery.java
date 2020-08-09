@@ -2,12 +2,13 @@ package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndChooseWay;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );		
 		actions.add( AC_NECROMANCY );
 		
@@ -38,14 +39,12 @@ public class BlackSkullOfMastery extends MasteryItem {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_NECROMANCY )) {
 
-			setUser(hero);
-			
 			HeroSubClass way;
 
-			if (hero.getHeroClass() == HeroClass.NECROMANCER) {
+			if (chr.getHeroClass() == HeroClass.NECROMANCER) {
 				way = HeroSubClass.LICH;
 			} else {
 				GLog.w("Error: How did you get this item?! You're not supposed to be able to obtain it!!");
@@ -53,7 +52,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 			}
 			GameScene.show( new WndChooseWay( this, way ) );
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 }

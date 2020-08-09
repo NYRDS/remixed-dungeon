@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
@@ -54,7 +55,7 @@ public class ArmoryPainter extends Painter {
 			do {
 				pos = room.random(level);
 			} while (level.map[pos] != Terrain.EMPTY || level.getHeap( pos ) != null);
-			level.drop( prize(level), pos );
+			level.drop( prize(level), pos, Heap.Type.HEAP );
 		}
 		
 		entrance.set( Room.Door.Type.LOCKED );
@@ -62,9 +63,6 @@ public class ArmoryPainter extends Painter {
 	}
 	
 	private static Item prize(Level level) {
-		return Treasury.getLevelTreasury().random( Random.oneOf(
-			Treasury.Category.ARMOR,
-			Treasury.Category.WEAPON
-		) );
+		return Treasury.weaponOrArmorPrize(1);
 	}
 }

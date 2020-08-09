@@ -116,4 +116,23 @@ mob.fillStats = function(self,mob)
     return not not (self.stats and self.stats(mob))
 end
 
+mob.onSelectCell = function(self, mob)
+    return not not (self.selectCell and self.selectCell(mob))
+end
+
+mob.actionsList = function(self, mob, hero)
+    if not self.actions then
+        return {}
+    end
+    return self.actions(mob, hero)
+end
+
+mob.executeAction = function(self, mob, hero, action)
+    if not self.execute then
+        return
+    end
+    return self.execute(mob, hero, action)
+end
+
+
 return mob

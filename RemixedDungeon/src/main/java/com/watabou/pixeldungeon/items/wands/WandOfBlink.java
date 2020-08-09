@@ -42,7 +42,7 @@ public class WandOfBlink extends Wand {
 
 		int level = effectiveLevel();
 
-		int userPos = wandUser.getPos();
+		int userPos = getOwner().getPos();
 
 		int newCell = Ballistica.trace[Ballistica.distance-1];
 
@@ -61,15 +61,15 @@ public class WandOfBlink extends Wand {
 	@Override
 	protected void onZap( int cell ) {
 
-		wandUser.getSprite().setVisible(true);
-		appear( wandUser, cell);
+		getOwner().getSprite().setVisible(true);
+		appear( getOwner(), cell);
 		Dungeon.observe();
 	}
 	
 	@Override
 	protected void fx( int cell, Callback callback ) {
-		wandUser.getSprite().setVisible(false);
-		MagicMissile.whiteLight( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		getOwner().getSprite().setVisible(false);
+		MagicMissile.whiteLight( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 

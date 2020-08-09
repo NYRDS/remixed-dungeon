@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -31,10 +32,12 @@ import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfMagicMapping extends Scroll {
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 		
 		int length = Dungeon.level.getLength();
 		int[] map = Dungeon.level.map;
@@ -71,13 +74,13 @@ public class ScrollOfMagicMapping extends Scroll {
 			Sample.INSTANCE.play( Assets.SND_SECRET );
 		}
 		
-		SpellSprite.show( getUser(), SpellSprite.MAP );
+		SpellSprite.show( reader, SpellSprite.MAP );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(reader);
 		
 		setKnown();
-		
-		getUser().spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

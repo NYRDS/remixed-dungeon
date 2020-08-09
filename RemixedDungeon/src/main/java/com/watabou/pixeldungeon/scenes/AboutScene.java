@@ -25,6 +25,7 @@ import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -125,7 +126,36 @@ public class AboutScene extends PixelScene {
 		nyrdie.x = align( text.x + (text.width() - nyrdie.width) / 2 );
 		nyrdie.y = text.y - nyrdie.height - 8;
 		add( nyrdie );
-		
+
+		TouchArea area = new TouchArea( nyrdie ) {
+			private int clickCounter = 0;
+
+			@Override
+			protected void onClick( Touch touch ) {
+				clickCounter++;
+
+				if(clickCounter > 11) {
+					return;
+				}
+
+				if(clickCounter>10) {
+					Game.toast("Levels test mode enabled");
+					Scene.setMode("levelsTest");
+					return;
+				}
+
+				if(clickCounter>7) {
+					Game.toast("Are you sure?");
+					return;
+				}
+
+				if(clickCounter>3) {
+					Game.toast("%d", clickCounter);
+				}
+			}
+		};
+		add(area);
+
 		new Flare( 7, 64 ).color( 0x332211, true ).show( nyrdie, 0 ).angularSpeed = -20;
 		
 		Archs archs = new Archs();

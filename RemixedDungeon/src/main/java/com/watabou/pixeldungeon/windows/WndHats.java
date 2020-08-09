@@ -87,11 +87,14 @@ public class WndHats extends Window {
 
 		//List
 		for (final String item : hats) {
-			String price = RemixedDungeon.instance().iap.getSkuPrice(item);
 			Accessory accessory = Accessory.getByName(item);
+
+			String price;
 
 			if (accessory.haveIt()) {
 				price = Game.getVar(R.string.WndHats_Purchased);
+			} else {
+				price = RemixedDungeon.instance().iap.getSkuPrice(item);
 			}
 
 			//Image
@@ -113,24 +116,20 @@ public class WndHats extends Window {
 			content.add(name);
 			float rbY = name.bottom() + GAP * 2;
 
-			if (!price.isEmpty()) {
-				//Pricetag
-				SystemText priceTag = new SystemText(price, GuiProperties.titleFontSize(), false);
+			//Pricetag
+			SystemText priceTag = new SystemText(price, GuiProperties.regularFontSize(), false);
 
-				priceTag.hardlight(0xFFFF00);
-				priceTag.y = name.bottom() + GAP;
-				priceTag.maxWidth((int) hat.width());
-				priceTag.x = name.x;
+			priceTag.hardlight(0xFFFF00);
+			priceTag.y = name.bottom() + GAP;
+			priceTag.maxWidth((int) hat.width());
+			priceTag.x = name.x;
 
-				content.add(priceTag);
-
-				//rbY = priceTag.bottom() + GAP;
-			}
+			content.add(priceTag);
 
 			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
 			final Accessory finalAccessory = accessory;
 
-			if (accessory.haveIt()) {
+			if (accessory.haveIt() && accessory.usableBy(Dungeon.hero)) {
 				buttonText = Game.getVar(R.string.WndHats_EquipButton);
 			}
 
@@ -145,7 +144,6 @@ public class WndHats extends Window {
 
 					if (finalAccessory.haveIt()) {
 						finalAccessory.equip();
-						Dungeon.hero.updateSprite();
 						onBackPressed();
 						return;
 					}
@@ -154,7 +152,6 @@ public class WndHats extends Window {
 			};
 
 			rb.setRect(slot.x + slot.width() * 2 + GAP, rbY, slot.width() * 2, slot.height() / 2);
-			//rb.setRect(WIDTH / 4, rbY, WIDTH / 2, BUTTON_HEIGHT);
 
 			content.add(rb);
 			yPos = (int) (rb.bottom() + GAP * 2);
@@ -175,7 +172,6 @@ public class WndHats extends Window {
 		add(list);
 
 		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
-
 	}
 
 	public boolean updateSlotImage() {

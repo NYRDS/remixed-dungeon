@@ -7,7 +7,8 @@
     "testLevelSewers":{"kind":"PredesignedLevel", "file":"levelsDesc/TestLevelSewers.json"},
     "missingLevel":{"kind":"PredesignedLevel", "file":"levelsDesc/MissingLevel.json"},
 
-    "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1"},
+    "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1",
+        "script":["scripts/actors/town/Compass", "scripts/actors/Snow", "scripts/actors/Burn"]},
     "cinema_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1"},
     "church_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
     "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
@@ -43,7 +44,7 @@
 
     "random":{"kind":"RandomLevel", "depth":1,       "size":[32,32], "file": "levelsDesc/TestLevelRandom.json"},
 
-    "1":{"kind":"SewerLevel", "depth":1,       "size":[32,32]},
+    "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32]},
     "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32]},
     "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32]},
     "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32]},
@@ -77,8 +78,9 @@
     "32":{"kind":"LastLevel", "depth":32,       "size":[32,32]}
     },
     "Graph":{
-    "0":[["town_2"],[]],
+    "0":[["20"],[]],
     "testLevel":[[],[]],
+    "random":[[],[]],
 
     "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],
     "church_2":[[],["town_2"]],

@@ -2003,8 +2003,8 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="Level_TileWall">Ściana</string>
   <string name="Level_TileClosedDoor">Zamknięte drzwi</string>
   <string name="Level_TileOpenDoor">Otwarte drzwi</string>
-  <string name="Level_TileEntrance">Przejście w dół</string>
-  <string name="Level_TileExit">Wyjście na górę</string>
+  <string name="Level_TileEntrance">Przejście w górę</string>
+  <string name="Level_TileExit">Zejście niżej</string>
   <string name="Level_TileEmbers">Rozżarzone węgielki</string>
   <string name="Level_TileLockedDoor">Zablokowane drzwi</string>
   <string name="Level_TilePedestal">Piedestał</string>
@@ -2284,20 +2284,6 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="town_deco_stones_desc">Zwykły stos kamieni</string>
   <string name="town_deco_fireplace_name">Kominek</string>
   <string name="town_deco_fireplace_desc">Dobre ogrzania się w zimnych miejscach jak to.</string>
-  <string name="Welcome_Text_28_6">
-remix.28.6
--Mechaniki gry
---Specjalne zdolności wojownika!
--- Głód bohaterów zredukowany!
--- Czar opętania nekromanty!
---Peleryna niewidka złodzieja!
---Nowe odznaki!
--Mody
---Niestandardowo skryptowane efekty
---Niestandardowa grafika
- 
-
- </string>
   <string name="Badges_GamesPlayed5">Zagrano 5000 razy!</string>
   <string name="Badges_PotionsCooked5">Uwarzono 25 mikstur. </string>
   <string name="Badges_ItemLvl5">Przedmiot poziomu 15 zdobyty!</string>
@@ -2308,10 +2294,6 @@ remix.28.6
   <string name="Badges_MonsterSlain5">Pokonano 1000 wrogów</string>
   <string name="Spells_NotInOwnBody">Nie możesz wykonywać! %s, gdy twoja dusza oddzieliła się od ciała.</string>
   <string name="WndHero_Satiety">Sytość</string>
-  <string name="Welcome_Text_29">
-    remix.29/n
-    -Remont miasta!/n
-         </string>
   <string name="Ring_Gems_0">diamentowy</string>
   <string name="Ring_Gems_1">opalowy</string>
   <string name="Ring_Gems_2">granatowy</string>
@@ -2575,7 +2557,7 @@ remix.29.3/n
   <string name="Welcome_Text_29_4">
     remix.29.4\n
     - Rozgrywka:\n
-    -- Dwóręczne władanie!\n
+    -- Dwuręczne władanie!\n
     - Modowanie:\n
     -- Customowe bronie!\n
     - Błędy naprawione\n
@@ -2589,4 +2571,34 @@ remix.29.3/n
   <string name="ShieldWeaponInfo">Kiedy użyte jako broń ta tarcza pochłonie średnio%1$d obrażeń. </string>
   <string name="TownPortal_Name">Portal miejski</string>
   <string name="TownPortal_Info">To zaklęcie pozwala ci natychmiast powrócić do bezpiecznego miejsca. Jednak potężne źródło magii w pobliżu może uniemożliwić jego działanie zgodnie z przeznaczeniem.</string>
+  <string name="MedicineMask_Name">Maska Chirurgiczna</string>
+  <string name="MedicineMask_Info">Maska chirurgiczna przeznaczona jest do wychwytywania mikroorganizmów wydychanych  z ust i nosa użytkownika.
+\n\n Noszenie maski oznacza, że ​​zależy Ci na innych.</string>
+  <string name="MedicineMask_Obtained">Maska Chirurgiczna Zdobyta!</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Jesteś tam jeszcze? Masz! Weź to.</string>
+  <string name="FilteredMask_Name">Maska N95</string>
+  <string name="FilteredMask_Info">Maska oddechowa to urządzenie zaprojektowane w celu ochrony użytkownika przed wdychaniem niebezpiecznych gazów i cząstek stałych, takich jak pyły i mikroorganizmy zawieszone w powietrzu.
+  \ n\n  a maska ​​służy jednak wyłącznie do celów dekoracyjnych.</string>
+  <string name="FullFaceMask_Name">Maska Przeciwgazowa</string>
+  <string name="FullFaceMask_Info">Maska przeciwgazowa jest używana do ochrony użytkownika przed wdychaniem zanieczyszczeń i toksycznych gazów. Maska tworzy szczelną osłonę na nosie, ustach i oczach.
+ \n\n Filtrów brakuje w tej masce, ale mimo to wygląda fajnie.</string>
+  <string name="StartScene_DifficultyEasyNoAds">Łatwy</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">Normalny z zapisem</string>
+  <string name="Backstab_Name">Cios w plecy</string>
+  <string name="Backstab_Info">Cichy cios w plecy. Nieuczciwy ale ekstremalnie efektywny, obrażenia będą rosnąc razem z poziom postaci.n\n Udany cios ignoruje pancerz  i specjalne umiejętności obronne ofiary.</string>
+  <string name="Backstab_TooFar">Ofiara jest za daleko.</string>
+  <string name="Backstab_Aware">Ofiara nie powinna się spodziewać twojego ciosu</string>
+  <string name="KunaiThrow_Name">Rzut Kunai</string>
+  <string name="KunaiThrow_Info">Śmiercionośny rzut kunai będzie wykonany ekstremalnie szybko, tak szybko że nawet nie będziesz w stanie wybrać celu.\n\nPrawdziwi mistrzowie są zdolni rzucić więcej niż jednym Kunai jednocześnie.</string>
+  <string name="Haste_Name">Ekstremalny Pośpiech</string>
+  <string name="Haste_Info">Pośpiech pozwoli poruszać się z ekstremalną prędkością, wszystko wokół niego będzie się wydawać statyczne. Taki pośpiech zużywa dużo energii, więc jest to możliwe tylko przez krótki okres czasu.\n\nUzdolniony mistrz jest w stanie działać w pośpiechu przez dłuższy czas.</string>
+  <string name="Welcome_Text_29_5"> remix.29.5\n
+- Rozgrywka:\n
+-- Nowe umięjetności Łotra!!\n
+- Mody:\n
+-- Customowe zbroje!\n
+- Naprawy błędów\n</string>
+  <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
+  <string name="Char_Stole_1">%1$sukradł %2$s od %3$s</string>
+  <string name="Char_Stole_2">%1$sukradł %2$s od %3$s</string>
 </resources>

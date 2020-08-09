@@ -3,8 +3,8 @@ package com.nyrds.pixeldungeon.support.Google;
 import android.text.TextUtils;
 import android.util.Base64;
 
-import com.android.billingclient.util.BillingHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;
@@ -39,7 +39,7 @@ public class GoogleIapCheck {
                                          String signature) throws IOException {
         if (TextUtils.isEmpty(signedData) || TextUtils.isEmpty(base64PublicKey)
                 || TextUtils.isEmpty(signature)) {
-            BillingHelper.logWarn(TAG, "Purchase verification failed: missing data.");
+            EventCollector.logException("Purchase verification failed: missing data.");
             return false;
         }
 
@@ -54,7 +54,7 @@ public class GoogleIapCheck {
      * @throws IOException if encoding algorithm is not supported or key specification
      * is invalid
      */
-    public static PublicKey generatePublicKey(String encodedPublicKey) throws IOException {
+    private static PublicKey generatePublicKey(String encodedPublicKey) throws IOException {
         try {
             byte[] decodedKey = Base64.decode(encodedPublicKey, Base64.DEFAULT);
             KeyFactory keyFactory = KeyFactory.getInstance(KEY_FACTORY_ALGORITHM);
@@ -64,7 +64,7 @@ public class GoogleIapCheck {
             throw new TrackedRuntimeException(e);
         } catch (InvalidKeySpecException e) {
             String msg = "Invalid key specification: " + e;
-            BillingHelper.logWarn(TAG, msg);
+            EventCollector.logException(msg);
             throw new IOException(msg);
         }
     }
@@ -78,12 +78,12 @@ public class GoogleIapCheck {
      * @param signature server signature
      * @return true if the data and signature match
      */
-    public static boolean verify(PublicKey publicKey, String signedData, String signature) {
+    private static boolean verify(PublicKey publicKey, String signedData, String signature) {
         byte[] signatureBytes;
         try {
             signatureBytes = Base64.decode(signature, Base64.DEFAULT);
         } catch (IllegalArgumentException e) {
-            BillingHelper.logWarn(TAG, "Base64 decoding failed.");
+            EventCollector.logException("Base64 decoding failed.");
             return false;
         }
         try {
@@ -91,7 +91,7 @@ public class GoogleIapCheck {
             signatureAlgorithm.initVerify(publicKey);
             signatureAlgorithm.update(signedData.getBytes());
             if (!signatureAlgorithm.verify(signatureBytes)) {
-                BillingHelper.logWarn(TAG, "Signature verification failed.");
+                EventCollector.logException("Signature verification failed.");
                 return false;
             }
             return true;
@@ -99,9 +99,9 @@ public class GoogleIapCheck {
             // "RSA" is guaranteed to be available.
             throw new TrackedRuntimeException(e);
         } catch (InvalidKeyException e) {
-            BillingHelper.logWarn(TAG, "Invalid key specification.");
+            EventCollector.logException("Invalid key specification.");
         } catch (SignatureException e) {
-            BillingHelper.logWarn(TAG, "Signature exception.");
+            EventCollector.logException("Signature exception.");
         }
         return false;
     }

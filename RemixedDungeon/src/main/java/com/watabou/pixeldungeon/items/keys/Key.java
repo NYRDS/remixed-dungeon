@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.items.bags.Keyring;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -30,35 +30,15 @@ public class Key extends Item {
 
 	public static final float TIME_TO_UNLOCK = 1f;
 
-	public int depth;
-
 	@NotNull
+	@Packable(defaultValue = "unknown")
 	public String levelId;
 	
 	public Key() {
-		depth     = DungeonGenerator.getCurrentLevelDepth();
 		levelId   = DungeonGenerator.getCurrentLevelId();
 		stackable = false;
 	}
-	
-	private static final String DEPTH = "depth";
-	private static final String LEVELID = "levelId";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		//bundle.put( DEPTH,   depth );
-		bundle.put( LEVELID, levelId);
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		levelId = bundle.optString(LEVELID, Utils.UNKNOWN);
-		depth = bundle.optInt( DEPTH,DungeonGenerator.getLevelDepth(levelId) );
 
-	}
-	
 	@Override
 	public boolean isUpgradable() {
 		return false;
@@ -71,14 +51,21 @@ public class Key extends Item {
 	
 	@Override
 	public String status() {
-		return depth + "*";
+		return getDepth() + "*";
 	}
 
 	@Override
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 		levelId = itemDesc.optString("levelId",levelId);
-		depth   = DungeonGenerator.getLevelDepth(levelId);
-		depth   = itemDesc.optInt("depth",depth);
+	}
+
+	public int getDepth() {
+		return DungeonGenerator.getLevelDepth(levelId);
+	}
+
+	@Override
+	public String bag() {
+		return Keyring.class.getSimpleName();
 	}
 }

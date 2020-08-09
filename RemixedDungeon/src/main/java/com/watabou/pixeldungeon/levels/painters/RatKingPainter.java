@@ -89,6 +89,6 @@ public class RatKingPainter extends Painter {
 			break;
 		}
 		
-		level.drop( prize, pos ).type = Heap.Type.CHEST;
+		level.drop( prize, pos,  Heap.Type.CHEST);
 	}
 }

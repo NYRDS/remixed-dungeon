@@ -4,7 +4,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -74,7 +74,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
-		if(hero.getBelongings().armor  != null && hero.getBelongings().armor.hasHelmet()){
+		if(hero.getBelongings().armor.hasHelmet()){
 			helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
 			if(hero.getBelongings().armor.isCoveringHair()){
 				drawHair = false;
@@ -116,27 +116,25 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		}
 	}
 
-	private String armorDescriptor(Armor armor) {
-		if(armor==null) {
+	private String armorDescriptor(EquipableItem armor) {
+		String visualName = armor.getVisualName();
+		if(visualName.equals("none")) {
 			return HERO_EMPTY_PNG;
 		}
-		return "hero/armor/" +armor.getClass().getSimpleName()+".png";
+		return "hero/armor/" +visualName+".png";
 	}
 
-	private String helmetDescriptor(Armor armor, Hero hero) {
-		if(armor!=null) {
-			if(hero.getBelongings().armor.hasHelmet()){
-				return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
-			}
+	private String helmetDescriptor(EquipableItem armor, Hero hero) {
+		if(hero.getBelongings().armor.hasHelmet()){
+			return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}
 
-	private String collarDescriptor(Armor armor, Hero hero) {
-		if(armor!=null) {
-			if(hero.getBelongings().armor.hasCollar()){
-				return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";
-			}
+	private String collarDescriptor(EquipableItem armor, Hero hero) {
+
+		if(hero.getBelongings().armor.hasCollar()){
+			return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}

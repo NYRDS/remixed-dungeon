@@ -23,9 +23,10 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.AmuletScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -39,23 +40,23 @@ public class Amulet extends Item {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_END );
 		return actions;
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_END)) {
 			showAmuletScene( false );
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 	
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		if (super.doPickUp( hero )) {
 			
 			if (!Statistics.amuletObtained) {
@@ -72,7 +73,7 @@ public class Amulet extends Item {
 	}
 	
 	private void showAmuletScene( boolean showText ) {
-		Dungeon.save();
+		Dungeon.save(false);
 		AmuletScene.noText = !showText;
 		Game.switchScene( AmuletScene.class );
 	}

@@ -8,13 +8,14 @@ import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.MimicPie;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+
+import org.jetbrains.annotations.NotNull;
 
 public class PseudoPasty extends Food {
 
@@ -49,13 +50,13 @@ public class PseudoPasty extends Food {
 	}
 
 	@Override
-	public void execute(Hero hero, String action) {
+	public void execute(@NotNull Char chr, @NotNull String action) {
 		if (action.equals(CommonActions.AC_EAT)) {
-			pick(hero, Dungeon.level.getEmptyCellNextTo(hero.getPos()));
-			this.removeItemFrom(hero);
+			pick(chr, Dungeon.level.getEmptyCellNextTo(chr.getPos()));
+			this.removeItemFrom(chr);
 			return;
 		}
 
-		super.execute(hero, action);
+		super.execute(chr, action);
 	}
 }

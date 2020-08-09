@@ -20,7 +20,7 @@ public class Nightmare extends Mob {
     {
         hp(ht(80));
         defenseSkill = 24;
-
+        flying = true;
         exp = 0;
     }
 

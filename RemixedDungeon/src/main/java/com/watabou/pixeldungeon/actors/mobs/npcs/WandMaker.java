@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -269,9 +268,7 @@ public class WandMaker extends NPC {
 						pos = Dungeon.level.randomRespawnCell();
 					}
 					
-					Heap heap = Dungeon.level.drop( new CorpseDust(), pos );
-					heap.type = Heap.Type.SKELETON;
-					heap.sprite.link();
+					Dungeon.level.drop( new CorpseDust(), pos, Heap.Type.SKELETON );
 				}
 				
 			} else {
@@ -305,7 +302,7 @@ public class WandMaker extends NPC {
 		public void effect(int pos, Presser ch) {
 			GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
 
-			Dungeon.level.drop( new Seed(), pos ).sprite.drop();
+			level().animatedDrop( new Seed(), pos );
 
 			if (ch instanceof Char) {
 				Buff.prolong( (Char)ch, Roots.class, TICK * 3 );
@@ -329,13 +326,13 @@ public class WandMaker extends NPC {
 			}
 			
 			@Override
-			public void execute( Hero hero, String action ) {
+			public void execute(@NotNull Char chr, @NotNull String action ) {
 				
-				super.execute( hero, action );
+				super.execute(chr, action );
 				
 				if (action.equals( CommonActions.AC_EAT )) {
-					GameScene.add( Blob.seed( hero.getPos(), 100, ToxicGas.class ) );
-					GameScene.add( Blob.seed( hero.getPos(), 100, ParalyticGas.class ) );					
+					GameScene.add( Blob.seed( chr.getPos(), 100, ToxicGas.class ) );
+					GameScene.add( Blob.seed( chr.getPos(), 100, ParalyticGas.class ) );
 				}
 			}
 
@@ -345,12 +342,13 @@ public class WandMaker extends NPC {
 			}
 
 			@Override
-			public boolean collect( Bag container ) {
+			public boolean collect(@NotNull Bag container ) {
 				if (super.collect( container )) {
 
-					Dungeon.challengeAllMobs(Dungeon.hero,Assets.SND_CHALLENGE);
-					
-					GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
+					Dungeon.challengeAllMobs(getOwner(), Assets.SND_CHALLENGE);
+					if(getOwner()==Dungeon.hero) {
+						GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
+					}
 					return true;
 				} else {
 					return false;

@@ -19,9 +19,9 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -34,7 +34,7 @@ public class PotionOfLevitation extends UpgradablePotion {
 	}
 
 	@Override
-	protected void apply( Hero hero ) {
+	protected void apply(Char hero ) {
 		setKnown();
 		Buff.affect( hero, Levitation.class, (float) (Levitation.DURATION *qualityFactor()));
 		GLog.i(Game.getVar(R.string.PotionOfLevitation_Apply));

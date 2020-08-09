@@ -84,13 +84,13 @@ public class WandOfTelekinesis extends Wand {
 			if (heap == null && (heap = level.getHeap(c)) != null) {
 				switch (heap.type) {
 					case HEAP:
-						if (wandUser instanceof Hero) {
+						if (getOwner() instanceof Hero) {
 							transport(heap);
 						}
 						break;
 					case CHEST:
 					case MIMIC:
-						heap.open(wandUser);
+						heap.open(getOwner());
 						break;
 					default:
 				}
@@ -111,7 +111,7 @@ public class WandOfTelekinesis extends Wand {
 
 			LevelObject levelObject;
 			if((levelObject = level.getTopLevelObject(c) )!=null) {
-				levelObject.push(wandUser);
+				levelObject.push(getOwner());
 			}
 		}
 
@@ -122,18 +122,19 @@ public class WandOfTelekinesis extends Wand {
 
 	private void transport(Heap heap) {
 		Item item = heap.pickUp();
-		item = item.pick(getUser(), heap.pos);
+		Char owner = getOwner();
+		item = item.pick(owner, heap.pos);
 		if (item != null) {
-			if (item.doPickUp(getUser())) {
-				getUser().itemPickedUp(item);
+			if (item.doPickUp(owner)) {
+				owner.itemPickedUp(item);
 			} else {
-				Dungeon.level.drop(item, getUser().getPos()).sprite.drop();
+				item.doDrop(owner);
 			}
 		}
 	}
 
 	protected void fx(int cell, Callback callback) {
-		MagicMissile.force(wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback);
+		MagicMissile.force(getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback);
 		Sample.INSTANCE.play(Assets.SND_ZAP);
 	}
 

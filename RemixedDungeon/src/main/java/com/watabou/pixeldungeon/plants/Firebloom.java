@@ -22,18 +22,20 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Firebloom extends Plant {
 
@@ -71,13 +73,13 @@ public class Firebloom extends Plant {
 		}
 
 		@Override
-		public void execute(Hero hero, String action) {
+		public void execute(@NotNull Char chr, @NotNull String action) {
 
-			super.execute(hero, action);
+			super.execute(chr, action);
 
 			if (action.equals(CommonActions.AC_EAT)) {
-				Buff.affect(hero, Burning.class).reignite(hero);
-				Buff.affect(hero, Speed.class, Speed.DURATION);
+				Buff.affect(chr, Burning.class).reignite(chr);
+				Buff.affect(chr, Speed.class, Speed.DURATION);
 			}
 		}
 	}

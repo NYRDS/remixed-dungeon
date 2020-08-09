@@ -23,16 +23,12 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
-import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -103,28 +99,12 @@ public class Shaman extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean zap(@NotNull Char enemy) {
-		if (zapHit(enemy)) {
-			int dmg = damageRoll() * 2;
-			if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {
-				dmg *= 1.5f;
-			}
-			enemy.damage(dmg, LightningTrap.LIGHTNING);
+	protected int zapProc(@NotNull Char enemy, int damage) {
+		int dmg = damageRoll() * 2;
 
-			enemy.getSprite().centerEmitter().burst(SparkParticle.FACTORY, 3);
-			enemy.getSprite().flash();
+		CharUtils.lightningProc(enemy, damage);
 
-			if (enemy == Dungeon.hero) {
-				Camera.main.shake(2, 0.3f);
-
-				if (!enemy.isAlive()) {
-					Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-							Utils.indefinite(getName()), Dungeon.depth));
-					GLog.n(Game.getVar(R.string.Shaman_Killed), getName());
-				}
-			}
-			return true;
-		}
-		return false;
+		CharUtils.checkDeathReport(this, enemy, Game.getVar(R.string.Shaman_Killed));
+		return dmg;
 	}
 }

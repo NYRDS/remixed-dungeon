@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -32,6 +33,8 @@ import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Fadeleaf extends Plant {
 
@@ -84,15 +87,15 @@ public class Fadeleaf extends Plant {
 		}
 		
 		@Override
-		public void execute( Hero hero, String action ) {
+		public void execute(@NotNull Char chr, @NotNull String action ) {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 			if (action.equals( CommonActions.AC_EAT )) {
-				ScrollOfTeleportation.teleportHero( hero );
-				hero.spendAndNext(1);
-				hero.curAction = null;
-				Buff.affect(hero, Vertigo.class, Vertigo.DURATION * 2);
+				ScrollOfTeleportation.teleportHero(chr);
+				chr.spendAndNext(1);
+				chr.curAction = null;
+				Buff.affect(chr, Vertigo.class, Vertigo.DURATION * 2);
 			}
 		}
 	}

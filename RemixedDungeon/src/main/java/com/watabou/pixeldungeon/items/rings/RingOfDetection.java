@@ -20,12 +20,14 @@ package com.watabou.pixeldungeon.items.rings;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
+
+import org.jetbrains.annotations.NotNull;
 
 public class RingOfDetection extends Ring {
 	
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		if (super.doEquip( hero )) {
 			Dungeon.hero.search( false );
 			return true;

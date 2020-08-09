@@ -44,7 +44,7 @@ public class SpiderNest extends Mob {
 		Mob newSpider = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
 		
 		if(isPet()) {
-			Mob.makePet(newSpider, owner);
+			Mob.makePet(newSpider, getOwnerId());
 		}
 		setState(MobAi.getStateByClass(Sleeping.class));
 

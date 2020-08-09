@@ -83,10 +83,9 @@ public class Tengu extends Boss implements IZapper {
 	public void die(NamedEntityKind cause) {
 
 		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
-			Dungeon.level.drop( new TomeOfMastery(), getPos() ).sprite.drop();
+			new TomeOfMastery().doDrop(this);
 		}
-
-		Dungeon.level.drop( new SkeletonKey(), getPos() ).sprite.drop();
+		new SkeletonKey().doDrop(this);
 		super.die(cause);
 		
 		Badges.validateBossSlain(Badge.BOSS_SLAIN_2);
@@ -96,7 +95,7 @@ public class Tengu extends Boss implements IZapper {
 	
 	@Override
 	public boolean getCloser(int target) {
-		if (Dungeon.level.fieldOfView[target]) {
+		if (level().fieldOfView[target]) {
 			jump();
 			return true;
 		} else {
@@ -110,13 +109,12 @@ public class Tengu extends Boss implements IZapper {
 	}
 	
 	@Override
-	public boolean doAttack(Char enemy) {
+	public void doAttack(Char enemy) {
 		timeToJump--;
 		if (timeToJump <= 0 && Dungeon.level.adjacent( getPos(), enemy.getPos() )) {
 			jump();
-			return true;
 		} else {
-			return super.doAttack( enemy );
+			super.doAttack( enemy );
 		}
 	}
 	
@@ -124,10 +122,10 @@ public class Tengu extends Boss implements IZapper {
 		timeToJump = JUMP_DELAY;
 
 		for (int i=0; i < 4; i++) {
-			int trapPos = Dungeon.level.getRandomTerrainCell(Terrain.INACTIVE_TRAP);
+			int trapPos = level().getRandomTerrainCell(Terrain.INACTIVE_TRAP);
 
-			if (Dungeon.level.cellValid(trapPos)) {
-				Dungeon.level.set( trapPos, Terrain.POISON_TRAP );
+			if (level().cellValid(trapPos)) {
+				level().set( trapPos, Terrain.POISON_TRAP );
 				GameScene.updateMap( trapPos );
 				ScrollOfMagicMapping.discover( trapPos );
 			} else {
@@ -137,10 +135,10 @@ public class Tengu extends Boss implements IZapper {
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 		int enemyPos = getEnemy().getPos();
-		for(int i = 0;i<Dungeon.level.getLength();++i) {
-			if(Dungeon.level.fieldOfView[i]
-					&& Dungeon.level.passable[i]
-					&& !Dungeon.level.adjacent( i, enemyPos )
+		for(int i = 0;i<level().getLength();++i) {
+			if(level().fieldOfView[i]
+					&& level().passable[i]
+					&& !level().adjacent( i, enemyPos )
 					&& Actor.findChar(i) == null) {
 				candidates.add(i);
 			}

@@ -8,13 +8,12 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 
@@ -36,6 +35,7 @@ public class CustomItem extends EquipableItem {
 
     private LuaScript script;
     private int price;
+    private float heapScale;
 
     @Keep
     public CustomItem() {
@@ -64,6 +64,7 @@ public class CustomItem extends EquipableItem {
 
         price        = desc.rawget("price").checkint();
         equipable    = desc.rawget("equipable").checkjstring();
+        heapScale    = (float) desc.rawget("heapScale").optdouble(1.);
     }
 
     @Override
@@ -77,15 +78,12 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void execute(Hero hero, String action) {
-        super.execute(hero,action);
-        script.run("execute", hero, action);
-    }
-
-
-    @Override
     public Belongings.Slot slot(Belongings belongings) {
         return Belongings.Slot.valueOf(script.runOptional("slot",_slot().name(), belongings));
+    }
+
+    public Belongings.Slot blockSlot() {
+        return Belongings.Slot.valueOf(script.runOptional("blockSlot",super.blockSlot().name()));
     }
 
     private Belongings.Slot _slot() {
@@ -99,7 +97,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void activate(Char ch) {
+    public void activate(@NotNull Char ch) {
         super.activate(ch);
         script.run("activate", ch);
     }
@@ -111,7 +109,13 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public ArrayList<String> actions(Hero hero) {
+    public void execute(@NotNull Char chr, @NotNull String action) {
+        super.execute(chr,action);
+        script.run("execute", chr, action);
+    }
+
+    @Override
+    public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
 
         if(equipable.isEmpty()) {
@@ -121,15 +125,7 @@ public class CustomItem extends EquipableItem {
 
         LuaValue ret = script.run("actions", hero);
 
-        if(ret.istable()) {
-            LuaTable luaActions = ret.checktable();
-
-            int n = luaActions.rawlen();
-
-            for(int i =1;i<=n;++i){
-                actions.add(luaActions.rawget(i).checkjstring());
-            }
-        }
+        LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
 
         return actions;
     }
@@ -138,7 +134,7 @@ public class CustomItem extends EquipableItem {
         CellSelector.Listener cellSelectorListener= new CellSelector.Listener(){
 
             @Override
-            public void onSelect(Integer cell) {
+            public void onSelect(Integer cell, Char selector) {
                 script.run("cellSelected", action, cell);
             }
 
@@ -148,7 +144,7 @@ public class CustomItem extends EquipableItem {
             }
         };
 
-        GameScene.selectCell(cellSelectorListener);
+        getOwner().selectCell(cellSelectorListener);
     }
 
     @Override
@@ -196,8 +192,8 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    protected void onThrow(int cell) {
-        script.run("onThrow", cell);
+    protected void onThrow(int cell, Char thrower) {
+        script.run("onThrow", cell, thrower);
     }
 
     @Override
@@ -236,6 +232,11 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public int effectiveDr() {
+        return script.runOptional("effectiveDr", super.effectiveDr());
+    }
+
+    @Override
     public float accuracyFactor(Char user) {
         return script.runOptional("accuracyFactor", super.accuracyFactor(user), user);
     }
@@ -254,6 +255,15 @@ public class CustomItem extends EquipableItem {
                     defender,
                     damage
                 );
+    }
+
+    public int defenceProc(Char attacker, Char defender, int damage ) {
+        return script.runOptional("defenceProc",
+                super.defenceProc(attacker,defender,damage),
+                attacker,
+                defender,
+                damage
+        );
     }
 
     public String getAttackAnimationClass() {
@@ -282,5 +292,25 @@ public class CustomItem extends EquipableItem {
     @Override
     public boolean isFliesFastRotating() {
         return script.runOptional("isFliesFastRotating",super.isFliesFastRotating());
+    }
+
+    @Override
+    public boolean hasCollar() {
+        return script.runOptional("hasCollar",super.hasCollar());
+    }
+
+    @Override
+    public boolean hasHelmet() {
+        return script.runOptional("hasHelmet",super.hasHelmet());
+    }
+
+    @Override
+    public boolean isCoveringHair() {
+        return script.runOptional("isCoveringHair",super.isCoveringHair());
+    }
+
+    @Override
+    public float heapScale() {
+        return heapScale;
     }
 }

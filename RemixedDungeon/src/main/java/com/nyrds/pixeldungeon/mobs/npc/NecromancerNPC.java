@@ -71,7 +71,7 @@ public class NecromancerNPC extends ImmortalNPC {
 			if (key.doPickUp( hero )) {
 				GLog.i( Hero.getHeroYouNowHave(), key.name() );
 			} else {
-				level().drop( key, hero.getPos() ).sprite.drop();
+				level().animatedDrop( key, hero.getPos() );
 			}
 
 		} else {

@@ -28,13 +28,17 @@ import javax.lang.model.type.TypeMirror;
 import javax.tools.JavaFileObject;
 
 @AutoService(Processor.class)
-public class PdAnnotationProcessor extends AbstractProcessor{
+public class
+PdAnnotationProcessor extends AbstractProcessor{
 
 
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
 		final TypeMirror bundlable = processingEnv.getElementUtils().getTypeElement("com.watabou.utils.Bundlable").asType();
+		//final TypeMirror CharList = processingEnv.getElementUtils().getTypeElement("com.nyrds.pixeldungeon.utils.CharList").asType();
+
+		ClassName charList = ClassName.get("com.nyrds.pixeldungeon.utils", "CharsList");
 
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
 		Map<Element, String>       defaultValues = new HashMap<>();
@@ -149,8 +153,14 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 */
 
 				if(processingEnv.getTypeUtils().isAssignable(field.asType(),bundlable)) {
+					if(defaultValue==null) {
+						unpackerBlock = unpackerBlock.toBuilder()
+								.addStatement("$L.set(arg,bundle.get($S))", fieldName, fieldName)
+								.build();
+						continue;
+					}
 					unpackerBlock = unpackerBlock.toBuilder()
-							.addStatement("$L.set(arg,bundle.get($S))",fieldName,fieldName)
+							.addStatement("$L.set(arg,bundle.opt($S,$L))", fieldName, fieldName, defaultValue)
 							.build();
 					continue;
 				}
@@ -181,6 +191,7 @@ public class PdAnnotationProcessor extends AbstractProcessor{
 				.build();
 
 		JavaFile javaFile = JavaFile.builder("com.nyrds.generated", BundleHelper)
+				.addStaticImport(charList,"DUMMY_ITEM")
 				.build();
 
 		try { // write the file

@@ -62,7 +62,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.SneakyThrows;
+import lombok.var;
 
 public class Item implements Bundlable, Presser, NamedEntityKind {
 
@@ -105,14 +108,22 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	private int     level      = Scrambler.scramble(0);
 
 	@Packable
+	@Getter
+	@Setter
 	private boolean levelKnown = false;
 
 	@Packable
+	@Getter
+	@Setter
 	public boolean cursed;
 
 	@Packable
-	public boolean cursedKnown;
+	@Getter
+	@Setter
+	private boolean cursedKnown;
 
+	@Setter
+	@Getter
 	@Packable(defaultValue = "-1")
 	private int quickSlotIndex = -1;
 
@@ -133,49 +144,45 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return lhs.price() - rhs.price();
 	};
 
-    public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		setUser(hero);
 		actions.add(AC_DROP);
 		actions.add(AC_THROW);
 		return actions;
 	}
 
-	public boolean doPickUp(Char hero) {
+	public boolean doPickUp(@NotNull Char hero) {
 		if (collect(hero.getBelongings().backpack)) {
-
 			GameScene.pickUp(this);
 			Sample.INSTANCE.play(Assets.SND_ITEM);
 			hero.spendAndNext(TIME_TO_PICK_UP);
 			return true;
-
 		} else {
 			return false;
 		}
 	}
 
-	public void doDrop(Char chr) {
+	public void doDrop(@NotNull Char chr) {
 		chr.spendAndNext(TIME_TO_DROP);
 		int pos = chr.getPos();
-		Dungeon.level.drop(detachAll(chr.getBelongings().backpack), pos).sprite.drop(pos);
+		chr.level().animatedDrop(detachAll(chr.getBelongings().backpack), pos);
 	}
 
-	public void doThrow(Hero hero) {
-		GameScene.selectCell(thrower);
+	public void doThrow(@NotNull Char chr) {
+		chr.selectCell(thrower);
 	}
 
-	public void execute(Hero hero, String action) {
-		setUser(hero);
-		curItem = this;
+	public void execute(@NotNull Char chr, @NotNull String action) {
+		chr.getBelongings().setSelectedItem(this);
 
 		if (action.equals(AC_DROP)) {
-			doDrop(hero);
+			doDrop(chr);
 		} else if (action.equals(AC_THROW)) {
-			doThrow(hero);
+			doThrow(chr);
 		}
 	}
 
-	public void execute(Hero hero) {
+	public void execute(@NotNull Char hero) {
 		if(hero.getHeroClass().forbidden(getDefaultAction())){
 			setDefaultAction(AC_THROW);
 		}
@@ -185,26 +192,22 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	protected void onThrow(int cell) {
-		dropTo(cell);
+	protected void onThrow(int cell, Char thrower) {
+		dropTo(cell, thrower);
 	}
 
-	public void dropTo(int cell) {
+	public void dropTo(int cell, Char thrower) {
 		if(quickSlotIndex!=-1) {
-			QuickSlot.refresh();
+			QuickSlot.refresh(thrower);
 		}
 
-		Heap heap = Dungeon.level.drop(this, cell);
-		if (!heap.isEmpty()) {
-			heap.sprite.drop(cell);
-		}
+		Dungeon.level.animatedDrop(this, cell);
 	}
 
-	public boolean collect(Bag container) {
+	public boolean collect(@NotNull Bag container) {
+		setOwner(container.getOwner());
 
 		ArrayList<Item> items = container.items;
-
-		setOwner(container.owner);
 
 		if (items.contains(this)) {
 			return true;
@@ -217,29 +220,33 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 
 		if (stackable) {
-			String c = getClassName();
 			for (Item item : items) {
-				if (item.getClassName().equals(c) && item.level() == level()) {
+				if (item.getEntityKind().equals(getEntityKind()) && item.level() == level()) {
 					item.quantity(item.quantity() + quantity());
-					QuickSlot.refresh();
+					QuickSlot.refresh(getOwner());
 					return true;
 				}
 			}
 		}
 
-		if (items.size() < (container instanceof Backpack ? container.size + 1 : container.size)) {
-			if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
+		if (items.size() < (container instanceof Backpack ? container.getSize() + 1 : container.getSize())) {
+			items.add(this);
+			Collections.sort(items, itemComparator);
+
+			if (owner == Dungeon.hero && owner.isAlive()) {
 				Badges.validateItemLevelAcquired(this);
+				QuickSlot.refresh(getOwner());
 			}
 
-			items.add(this);
-			QuickSlot.refresh();
-			Collections.sort(items, itemComparator);
 			return true;
 		}
 
+		if (owner == Dungeon.hero && owner.isAlive()) {
+			GLog.n(Game.getVar(R.string.Item_PackFull), name());
+		}
+
 		setOwner(CharsList.DUMMY);
-		GLog.n(Game.getVar(R.string.Item_PackFull), name());
+
 		return false;
 	}
 
@@ -261,8 +268,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 				return detachAll(container);
 			} else {
 				quantity(quantity() - n);
-				if(container.owner instanceof Hero) {
-					QuickSlot.refresh();
+				if(container.getOwner() instanceof Hero) {
+					QuickSlot.refresh(getOwner());
 				}
 
 				Item detached = ItemFactory.itemByName(getClassName());
@@ -274,25 +281,15 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 	}
 
-	public final Item detachAll(Bag container) {
+	public final Item detachAll(@NotNull Bag container) {
 
-		for (Item item : container.items) {
-			if (item == this) {
-				container.items.remove(this);
-				item.onDetach();
-				if(container.owner instanceof Hero) {
-					QuickSlot.refresh();
-				}
-				return this;
-			} else if (item instanceof Bag) {
-				Bag bag = (Bag) item;
-				if (bag.contains(this)) {
-					return detachAll(bag);
-				}
-			}
+    	if (container.contains(this)) {
+    		onDetach();
+    		container.remove(this);
 		}
-		QuickSlot.refresh();
-		return this;
+
+		QuickSlot.refresh(getOwner());
+    	return this;
 	}
 
 	protected void onDetach() {
@@ -300,9 +297,11 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	public Item upgrade() {
 
-		cursed = false;
-		cursedKnown = true;
+		setCursed(false);
+		setCursedKnown(true);
 		this.level(this.level() + 1);
+
+		QuickSlot.refresh(getOwner());
 
 		return this;
 	}
@@ -316,8 +315,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public Item degrade() {
-
 		this.level(this.level() - 1);
+
+		QuickSlot.refresh(owner);
 
 		return this;
 	}
@@ -339,29 +339,29 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public boolean isIdentified() {
-		return isLevelKnown() && cursedKnown;
+		return isLevelKnown() && isCursedKnown();
 	}
 
 	public boolean isEquipped(@NotNull Char chr) {
     	return chr.getBelongings().isEquipped(this);
 	}
 
-	public void removeItemFrom(Char hero) {
+	public void removeItemFrom(@NotNull Char hero) {
 		onDetach();
-		cursed = false;
+		setCursed(false);
 		if (!(this instanceof EquipableItem) || !isEquipped(hero) || !((EquipableItem) this).doUnequip(hero, false)) {
 			hero.getBelongings().removeItem(this);
 		}
 
-		QuickSlot.refresh();
+		QuickSlot.refresh(hero);
 	}
 
 	public Item identify() {
 
 		setLevelKnown(true);
-		cursedKnown = true;
+		setCursedKnown(true);
 
-		Library.identify(Library.ITEM,getClassName());
+		Library.identify(Library.ITEM,getEntityKind());
 
 		return this;
 	}
@@ -412,7 +412,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public Item quantity(int value) {
 
 		if(value < 0) {
-			EventCollector.logException();
+			EventCollector.logException("negative quantity for:" + getEntityKind());
 		}
 
 		quantity = Scrambler.scramble(value);
@@ -424,7 +424,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	protected int adjustPrice(int price) {
-		if (cursed && cursedKnown) {
+		if (isCursed() && isCursedKnown()) {
 			price /= 2;
 		}
 		if (isLevelKnown()) {
@@ -433,6 +433,10 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			} else if (level() < 0) {
 				price /= (1 - level());
 			}
+		}
+
+		if (price < 1) {
+			price = 1;
 		}
 
 		return price;
@@ -472,7 +476,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		}
 
 		//We still need this because upgrade erase cursed flag
-		cursed = bundle.optBoolean("cursed",false);
+		setCursed(bundle.optBoolean("cursed",false));
 
 		if(quickSlotIndex >= 0 ) {
 			QuickSlot.selectItem(this, quickSlotIndex);
@@ -488,8 +492,6 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	    if(quantity()<=0) {
 	        return;
         }
-
-		setUser(user);
 
 	    int pos = user.getPos();
 
@@ -513,24 +515,28 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 		final Item item = detach(user.getBelongings().backpack);
 
-		((MissileSprite) user.getSprite().getParent().recycle(MissileSprite.class)).
-				reset(pos, cell, this, () -> {
+		var sprite = ((MissileSprite) user.
+				getSprite().
+				getParent().
+				recycle(MissileSprite.class));
+
+		sprite.reset(pos, cell, this, () -> {
 					user.spendAndNext(finalDelay);
-					item.onThrow(cell);
+					item.onThrow(cell, user);
 				});
 	}
 
-	private static Char user = null;
-	protected static Item curItem = null;
-
 	@NotNull
+	@LuaInterface
+	@Setter
+	@Getter
 	private Char owner = CharsList.DUMMY;
 
 	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
-		public void onSelect(Integer target) {
+		public void onSelect(Integer target, Char selector) {
 			if (target != null) {
-				curItem.cast(getUser(), target);
+				selector.getBelongings().getSelectedItem().cast(selector, target);
 			}
 		}
 
@@ -610,12 +616,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return ItemSpritesDescription.isFliesFastRotating(this);
 	}
 
-	public static Char getUser() {
-		return user;
-	}
-
-	protected static void setUser(Char user) {
-		Item.user = user;
+	@Deprecated
+	public Char getUser() {
+		return getOwner();
 	}
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
@@ -631,7 +634,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			degrade(-level);
 		}
 
-		cursed = itemDesc.optBoolean("cursed", false);
+		setCursed(itemDesc.optBoolean("cursed", false));
 
 		if(itemDesc.optBoolean("identified",false)) {
 			identify();
@@ -652,18 +655,9 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return 0;
 	}
 
-	public void setQuickSlotIndex(int quickSlotIndex) {
-		this.quickSlotIndex = quickSlotIndex;
-	}
-
-	public int getQuickSlotIndex() {
-		return quickSlotIndex;
-	}
-
 	public String getClassName() {
 		return ItemFactory.itemNameByClass(getClass());
 	}
-
 
 	public Item quickSlotContent() {
 		if(!stackable) {
@@ -693,14 +687,7 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	@LuaInterface
 	public void setDefaultAction(@NotNull String newDefaultAction) {
-		Char hero = getUser();
-
-		if(hero==null) {
-			this.defaultAction = newDefaultAction;
-			return;
-		}
-
-		if(hero.getHeroClass().forbidden(newDefaultAction)) {
+		if(getOwner().getHeroClass().forbidden(newDefaultAction)) {
 			newDefaultAction = AC_THROW;
 		}
 
@@ -723,25 +710,11 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 		return id;
 	}
 
-	public boolean isLevelKnown() {
-		return levelKnown;
-	}
-
-	public void setLevelKnown(boolean levelKnown) {
-		this.levelKnown = levelKnown;
-	}
-
 	public String bag() {
 		return Utils.EMPTY_STRING;
 	}
 
-	@LuaInterface
-	@NotNull
-	public Char getOwner() {
-		return owner;
-	}
-
-	public void setOwner(@NotNull Char owner) {
-		this.owner = owner;
+	public float heapScale() {
+		return 1.f;
 	}
 }

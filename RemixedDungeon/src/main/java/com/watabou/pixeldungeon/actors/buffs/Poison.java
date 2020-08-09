@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
@@ -32,7 +32,7 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class Poison extends Buff implements Hero.Doom {
+public class Poison extends Buff implements Doom {
 
 	@Override
 	public int icon() {

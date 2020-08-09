@@ -149,7 +149,7 @@ public class Font extends TextureFilm {
 				}
 				
 				//GLog.w("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
-				add( (int) chars.charAt(charsProcessed),
+				add(chars.charAt(charsProcessed),
 					new RectF( (float)(charColumn)/bWidth, 
 							   (float)lineTop/bHeight, 
 							   (float)(glyphBorder)/bWidth, 
@@ -207,7 +207,7 @@ public class Font extends TextureFilm {
 					.replaceAll("[śş]", "s");
 
 			tmp = str.charAt(0);
-			rec = super.get((int)(autoUppercase ? Character.toUpperCase(tmp) : tmp));
+			rec = super.get(autoUppercase ? Character.toUpperCase(tmp) : tmp);
 		}
 
 		return rec;

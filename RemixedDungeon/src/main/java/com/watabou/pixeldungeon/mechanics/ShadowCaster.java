@@ -89,9 +89,7 @@ public final class ShadowCaster {
 					
 					int pos = y * w + x;
 
-					if (obs.isBlocked( a0 ) && obs.isBlocked( a1 ) && obs.isBlocked( a2 )) {
-
-					} else {
+					if (!obs.isBlocked(a0) || !obs.isBlocked(a1) || !obs.isBlocked(a2)) {
 						fieldOfView[pos] = true;
 					}
 
@@ -123,16 +121,11 @@ public final class ShadowCaster {
 		public void add( float o1, float o2 ) {
 			
 			if (length > limit && o1 <= a2[length-1]) {
-				
 				a2[length-1] = o2;
-				
 			} else {
-				
 				a1[length] = o1;
 				a2[length++] = o2;
-				
 			}
-			
 		}
 		
 		public boolean isBlocked( float a ) {

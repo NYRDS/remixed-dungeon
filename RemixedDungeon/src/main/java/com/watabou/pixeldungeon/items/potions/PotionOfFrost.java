@@ -72,6 +72,6 @@ public class PotionOfFrost extends UpgradablePotion {
 		int quantity = reallyMoistArrows(arrow);
 		
 		FrostArrow moistenArrows = new FrostArrow(quantity);
-		getUser().collect(moistenArrows);
+		getOwner().collect(moistenArrows);
 	}
 }

@@ -23,6 +23,8 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RingOfHaggler extends Ring {
 	
 	@Override
@@ -37,7 +39,7 @@ public class RingOfHaggler extends Ring {
 	}
 	
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		identify();
 		Badges.validateRingOfHaggler();
 		Badges.validateItemLevelAcquired( this );

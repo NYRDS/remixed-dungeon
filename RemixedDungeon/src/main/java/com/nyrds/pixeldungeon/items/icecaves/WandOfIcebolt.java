@@ -43,7 +43,7 @@ public class WandOfIcebolt extends Wand {
 			Buff.affect( ch, Frost.class, Frost.duration( ch ) / 2 + effectiveLevel() );
 			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 2 + effectiveLevel() );
 
-			if (ch == getUser() && !ch.isAlive()) {
+			if (ch == getOwner() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfIcebolt_Info1));
 			}
@@ -51,7 +51,7 @@ public class WandOfIcebolt extends Wand {
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.ice( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		MagicMissile.ice( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

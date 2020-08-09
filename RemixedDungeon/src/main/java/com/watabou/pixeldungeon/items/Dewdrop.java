@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Dewdrop extends Item {
 
 	private static final String TXT_VALUE	= "%+dHP";
@@ -38,10 +40,17 @@ public class Dewdrop extends Item {
 	}
 	
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		boolean collected = false;
 
-		if(hero.hp() < hero.ht()) {
+		DewVial vial = hero.getBelongings().getItem( DewVial.class );
+
+		if (vial != null && !vial.isFull()) {
+			vial.collectDew( this );
+			collected = true;
+		}
+
+		if(!collected && hero.hp() < hero.ht()) {
 			final int[] value = {1 + (Dungeon.depth - 1) / 5};
 
 			hero.forEachBuff(b-> value[0] +=b.dewBonus());
@@ -52,13 +61,6 @@ public class Dewdrop extends Item {
 				hero.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
 				collected = true;
 			}
-		}
-
-		DewVial vial = hero.getBelongings().getItem( DewVial.class );
-
-		if (!collected && vial != null && !vial.isFull()) {
-			vial.collectDew( this );
-			collected = true;
 		}
 
 		if (collected) {

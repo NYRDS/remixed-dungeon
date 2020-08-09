@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.potions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.weapon.missiles.AmokArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -33,14 +34,16 @@ public class PotionOfStrength extends Potion {
 	}
 
 	@Override
-	protected void apply( Hero hero ) {
+	protected void apply(Char chr ) {
 		setKnown();
-		
-		hero.STR(hero.STR() + 1);
-		hero.getSprite().showStatus( CharSprite.POSITIVE, Game.getVar(R.string.PotionOfStrength_StaApply));
-		GLog.p(Game.getVar(R.string.PotionOfStrength_Apply));
+		if(chr instanceof Hero) {
+			Hero hero = (Hero) chr;
+			hero.STR(hero.STR() + 1);
+			hero.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.PotionOfStrength_StaApply));
+			GLog.p(Game.getVar(R.string.PotionOfStrength_Apply));
 
-		Badges.validateStrengthAttained(hero);
+			Badges.validateStrengthAttained(hero);
+		}
 	}
 	
 	@Override
@@ -58,6 +61,6 @@ public class PotionOfStrength extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 
 		AmokArrow moistenArrows = new AmokArrow(quantity);
-		getUser().collect(moistenArrows);
+		getOwner().collect(moistenArrows);
 	}
 }

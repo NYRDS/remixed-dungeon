@@ -21,6 +21,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.utils.PointF;
 
+import lombok.val;
+
 public class ZapEffect {
     public static final float SPEED	= 240f;
 
@@ -90,17 +92,19 @@ public class ZapEffect {
                 return;
             }
 
+            val emitter = CellEmitter.get(pos);
+
             if (effect.equals("Bones")) {
-                CellEmitter.get(pos).burst( Speck.factory( Speck.BONE ), 6 );
+                emitter.burst( Speck.factory( Speck.BONE ), 6 );
             }
 
             if(effect.equals("Succubus")) {
-                CellEmitter.get(pos).burst( Speck.factory( Speck.HEART ), 6 );
-                CellEmitter.get(pos).burst( ShadowParticle.UP, 8 );
+                emitter.burst( Speck.factory( Speck.HEART ), 6 );
+                emitter.burst( ShadowParticle.UP, 8 );
             }
 
             if(effect.equals("Golem")) {
-                CellEmitter.get(pos).burst( ElmoParticle.FACTORY, 4 );
+                emitter.burst( ElmoParticle.FACTORY, 4 );
             }
         }
     }

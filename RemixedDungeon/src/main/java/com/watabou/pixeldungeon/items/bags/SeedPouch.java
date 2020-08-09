@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class SeedPouch extends Bag {
@@ -26,12 +24,7 @@ public class SeedPouch extends Bag {
 	{
 		image = ItemSpriteSheet.POUCH;
 	}
-	
-	@Override
-	public boolean grab( Item item ) {
-		return super.grab(item) || item instanceof Seed;
-	}
-	
+
 	@Override
 	public int price() {
 		return 50;

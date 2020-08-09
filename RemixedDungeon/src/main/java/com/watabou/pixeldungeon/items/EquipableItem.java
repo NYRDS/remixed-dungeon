@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
@@ -35,25 +34,25 @@ public abstract class EquipableItem extends Item {
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
-	private Belongings.Slot equipedTo = Belongings.Slot.NONE;
+	protected Belongings.Slot equipedTo = Belongings.Slot.NONE;
 
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		switch (action) {
 			case AC_EQUIP:
-				doEquip(hero);
+				doEquip(chr);
 				break;
 			case AC_UNEQUIP:
-				doUnequip(hero, true);
+				doUnequip(chr, true);
 				break;
 			default:
-				super.execute(hero, action);
+				super.execute(chr, action);
 				break;
 		}
 	}
 	
 	@Override
-	public void doDrop( Char hero ) {
+	public void doDrop(@NotNull Char hero ) {
 		if (!isEquipped( hero ) || doUnequip( hero, false, false )) {
 			super.doDrop( hero );
 		}
@@ -76,19 +75,18 @@ public abstract class EquipableItem extends Item {
 	}
 
 	@Override
-	public ArrayList<String> actions(Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( isEquipped( hero ) ? AC_UNEQUIP : AC_EQUIP );
 		return actions;
 	}
 
-	public boolean doEquip(Hero hero ) {
-		setUser(hero);
+	public boolean doEquip(@NotNull Char hero ) {
 		Belongings belongings = hero.getBelongings();
 		return belongings.equip(this, slot(belongings));
 	}
 
-	public void activate(Char ch) {
+	public void activate(@NotNull Char ch) {
 		equipedTo = ch.getBelongings().usedSlots.get(this);
 		if(equipedTo==null) {
 			equipedTo = Belongings.Slot.NONE;
@@ -105,7 +103,7 @@ public abstract class EquipableItem extends Item {
 
 	protected boolean doUnequip(Char hero, boolean collect, boolean single) {
 		
-		if (cursed) {
+		if (isCursed()) {
 			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );
 			return false;
 		}
@@ -123,7 +121,7 @@ public abstract class EquipableItem extends Item {
 		}
 		
 		if (collect && !collect( hero.getBelongings().backpack )) {
-			hero.level().drop( this, hero.getPos() );
+			doDrop(hero);
 		}
 				
 		return true;
@@ -197,5 +195,26 @@ public abstract class EquipableItem extends Item {
 
 	public int requiredSTR() {
 		return 0;
+	}
+
+	public int effectiveDr() {
+		return 0;
+	}
+
+    public int defenceProc(Char attacker, Char defender, int damage) {
+		return damage;
+    }
+
+    //Armor visuals
+	public boolean hasHelmet(){
+		return false;
+	}
+
+	public boolean hasCollar() {
+		return false;
+	}
+
+	public boolean isCoveringHair() {
+		return false;
 	}
 }

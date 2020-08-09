@@ -170,7 +170,7 @@ public enum HeroSubClass implements CharModifier {
 					if (wand.curCharges() < wand.maxCharges() && damage > 0) {
 
 						wand.curCharges(wand.curCharges() + 1);
-						QuickSlot.refresh();
+						QuickSlot.refresh(attacker);
 
 						ScrollOfRecharging.charge(attacker);
 					}

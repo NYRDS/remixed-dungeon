@@ -34,12 +34,8 @@ public class SacrificialSword extends SpecialWeapon {
 	}
 
 	private double baseChance(Hero hero) {
-		double armorPenalty = 1;
-		
-		if(hero.getBelongings().armor != null) {
-			armorPenalty += hero.getBelongings().armor.tier;
-		}
-		
+		double armorPenalty = hero.getBelongings().armor.effectiveDr() / 8.f;
+
 		double classBonus = 1;
 		if(hero.getSubClass() == HeroSubClass.WARDEN ) {
 			classBonus = 1.5;

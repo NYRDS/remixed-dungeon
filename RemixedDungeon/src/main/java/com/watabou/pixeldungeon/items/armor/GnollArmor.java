@@ -5,13 +5,15 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 10.01.2018.
@@ -33,34 +35,34 @@ public class GnollArmor extends ClassArmor {
     }
 
     @Override
-    public void doSpecial() {
+    public void doSpecial(@NotNull Char user) {
 
-        SpellSprite.show( getUser(), SpellSprite.DOMINATION );
+        SpellSprite.show( user, SpellSprite.DOMINATION );
         Sample.INSTANCE.play( Assets.SND_DOMINANCE );
 
-        int mobsDominated = getUser().countPets();
-        Level level = getUser().level();
+        int mobsDominated = user.countPets();
+        Level level = user.level();
 
         for (Mob mob : level.getCopyOfMobsArray()) {
 
             if (level.fieldOfView[mob.getPos()]) {
-                if(mobsDominated > getUser().lvl() / 6) {
+                if(mobsDominated > user.lvl() / 6) {
                     break;
                 }
 
                 if(mob.canBePet()) {
-                    Mob.makePet(mob, getUser().getId());
+                    Mob.makePet(mob, user.getId());
                     new Flare(3, 32).show(mob.getSprite(), 2f);
                     mobsDominated++;
                 }
             }
         }
 
-        getUser().spend( Actor.TICK );
+        user.spend( Actor.TICK );
     }
 
     @Override
-    public boolean doEquip( Hero hero ) {
+    public boolean doEquip(@NotNull Char hero ) {
         if (hero.getHeroClass() == HeroClass.GNOLL) {
             return super.doEquip( hero );
         } else {

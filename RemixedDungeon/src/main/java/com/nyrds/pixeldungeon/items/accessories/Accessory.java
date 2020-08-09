@@ -24,6 +24,7 @@ import lombok.SneakyThrows;
 public class Accessory {
 
     protected boolean coverHair;
+    protected boolean coverFacialHair;
     protected boolean coverItems;
 
     protected int image = 0;
@@ -55,6 +56,9 @@ public class Accessory {
         registerAccessory(GnollCostume.class);
         registerAccessory(ChaosHelmet.class);
         registerAccessory(DogeMask.class);
+        registerAccessory(MedicineMask.class);
+        registerAccessory(FilteredMask.class);
+        registerAccessory(FullFaceMask.class);
     }
 
     public static List<String> getAccessoriesList() {
@@ -65,13 +69,14 @@ public class Accessory {
         return "hero_modern/accessories/" + getClass().getSimpleName() + ".png";
     }
 
-    Accessory() {
-        coverHair  = false;
-        coverItems = false;
-    }
+    Accessory() { }
 
     public boolean isCoveringHair() {
         return coverHair;
+    }
+
+    public boolean isCoverFacialHair() {
+        return coverFacialHair;
     }
 
     public boolean isCoveringItems() {
@@ -149,6 +154,7 @@ public class Accessory {
         }
 
         Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());
+        Dungeon.hero.updateSprite();
     }
 
     public static void unequip() {

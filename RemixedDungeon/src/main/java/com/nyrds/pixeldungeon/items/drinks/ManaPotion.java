@@ -4,9 +4,11 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import org.jetbrains.annotations.NotNull;
 
 public class ManaPotion extends Drink {
 
@@ -21,21 +23,21 @@ public class ManaPotion extends Drink {
 	}
 
 	@Override
-	public void execute(Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DRINK )) {
-			detach( hero.getBelongings().backpack );
+			detach( chr.getBelongings().backpack );
 			GLog.i( Game.getVar(R.string.Drink_Message) );
 
-			hero.setSoulPoints(hero.getSkillPoints() + hero.getSkillPointsMax()/3);
-			hero.getSprite().operate( hero.getPos() );
-			hero.busy();
+			chr.setSkillPoints(chr.getSkillPoints() + chr.getSkillPointsMax()/3);
+			chr.getSprite().operate( chr.getPos() );
+			chr.busy();
 
-			SpellSprite.show( hero, SpellSprite.FOOD );
+			SpellSprite.show(chr, SpellSprite.FOOD );
 			Sample.INSTANCE.play( Assets.SND_DRINK );
 
-			hero.spend( TIME_TO_DRINK );
+			chr.spend( TIME_TO_DRINK );
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 

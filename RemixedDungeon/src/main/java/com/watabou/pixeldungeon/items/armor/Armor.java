@@ -60,9 +60,6 @@ public class Armor extends EquipableItem {
 
 	public int tier;
 
-	public int STR;
-	public int DR;
-
 	private int hitsToKnow = 10;
 
 	@Packable
@@ -72,9 +69,7 @@ public class Armor extends EquipableItem {
 		imageFile = "items/armor.png";
 
 		this.tier = tier;
-		
-		STR = typicalSTR();
-		DR = typicalDR();
+
 		hasHelmet = false;
 		hasCollar = false;
 		coverHair = false;
@@ -105,25 +100,13 @@ public class Armor extends EquipableItem {
 				inscribe( Glyph.random() );
 			}
 		}
-		
-		DR += tier;
-		STR = Math.max(STR-1,2);
-		
+
 		return super.upgrade();
 	}
 
-	@Override
-	public Item degrade() {
-		DR -= tier;
-		STR++;
-		
-		return super.degrade();
-	}
-	
-	public int proc( Char attacker, Char defender, int damage ) {
-		
+	public int defenceProc(Char attacker, Char defender, int damage ) {
 		if (glyph != null) {
-			damage = glyph.proc( this, attacker, defender, damage );
+			damage = glyph.defenceProc( this, attacker, defender, damage );
 		}
 		
 		if (!isLevelKnown()) {
@@ -140,7 +123,7 @@ public class Armor extends EquipableItem {
 	@NotNull
     @Override
 	public String toString() {
-		return isLevelKnown() ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), STR ) : super.toString();
+		return isLevelKnown() ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), requiredSTR() ) : super.toString();
 	}
 	
 	@Override
@@ -158,9 +141,9 @@ public class Armor extends EquipableItem {
 		
 		if (isLevelKnown()) {
 			info.append(p);
-			info.append(Utils.capitalize(Utils.format(Game.getVar(R.string.Armor_Info1), name, Math.max( DR, 0 ))));
+			info.append(Utils.capitalize(Utils.format(Game.getVar(R.string.Armor_Info1), name, Math.max( effectiveDr(), 0 ))));
 			
-			if (STR > Dungeon.hero.effectiveSTR()) {
+			if (requiredSTR() > Dungeon.hero.effectiveSTR()) {
 				if (isEquipped( Dungeon.hero )) {
 					info.append(Game.getVar(R.string.Armor_Info2));
 				} else {
@@ -181,9 +164,9 @@ public class Armor extends EquipableItem {
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(Utils.format(Game.getVar(R.string.Armor_Info7a), name,
-				(cursed ? Game.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
+				(isCursed() ? Game.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {
-			if (cursedKnown && cursed) {
+			if (isCursedKnown() && isCursed()) {
 				info.append(Utils.format(Game.getVar(R.string.Armor_Info8), name));
 			}
 		}
@@ -205,7 +188,7 @@ public class Armor extends EquipableItem {
 				upgrade( n );
 			} else {
 				degrade( n );
-				cursed = true;
+				setCursed(true);
 			}
 		}
 		
@@ -223,7 +206,11 @@ public class Armor extends EquipableItem {
 	public int typicalDR() {
 		return tier * 2;
 	}
-	
+
+	public int effectiveDr() {
+		return tier * 2 + level() * tier + (glyph != null ? tier : 0);
+	}
+
 	@Override
 	public int price() {
 		int price = 10 * (1 << (tier - 1));
@@ -237,15 +224,7 @@ public class Armor extends EquipableItem {
 	}
 	
 	public void inscribe(Glyph glyph ) {
-		
-		if (glyph != null && this.glyph == null) {
-			DR += tier;
-		} else if (glyph == null && this.glyph != null) {
-			DR -= tier;
-		}
-		
 		this.glyph = glyph;
-
 	}
 
 	@Override
@@ -281,7 +260,7 @@ public class Armor extends EquipableItem {
 
 	@Override
 	public int requiredSTR() {
-		return STR;
+		return Math.max(typicalSTR() - level(),2);
 	}
 
 	public static abstract class Glyph implements Bundlable, NamedEntityKind {
@@ -293,7 +272,7 @@ public class Armor extends EquipableItem {
 		
 		private static final float[] chances= new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 			
-		public abstract int proc( Armor armor, Char attacker, Char defender, int damage );
+		public abstract int defenceProc(Armor armor, Char attacker, Char defender, int damage );
 		
 		public String name() {
 			return name( Game.getVar(R.string.Armor_Glyph));

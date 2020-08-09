@@ -1511,7 +1511,7 @@
   <string name="ScarecrowNPC_Desc">毫无疑问…这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
   <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
 </string>
-  <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
+  <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\\n 我有一个令你惊喜的消息！\\n\\n 如果你为我收集一些糖果的话，\\n 我会十分感激你的！\\n\\n
 </string>
   <string name="ScarecrowNPC_Quest_Reminder">我所需要的五个糖果。\n 你将的到很甜蜜的奖励！</string>
   <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n 为此，你可以得到一份实在的食物！</string>
@@ -2286,18 +2286,6 @@
   <string name="town_deco_stones_desc">只是一大堆石头。</string>
   <string name="town_deco_fireplace_name">石头篝火</string>
   <string name="town_deco_fireplace_desc">很适合在这种寒冷的地方热热身子。</string>
-  <string name="Welcome_Text_28_6">
-    remix.28.6\n
-    - 游戏机制:\n
-    -- 战士特殊技能!\n
-    -- 人物的饥饿感降低\n
-    -- 死灵法师拥有新法术\n
-    -- 盗贼斗篷能力\n
-    -- 新徽章\n
-    - 修改:\n
-    -- 一些Buff贴图\n
-    -- 重画一些图像\n
-    </string>
   <string name="Badges_GamesPlayed5">骨灰级玩家，进行5000次游戏</string>
   <string name="Badges_PotionsCooked5">制作25瓶药水</string>
   <string name="Badges_ItemLvl5">获得15级物品</string>
@@ -2308,10 +2296,6 @@
   <string name="Badges_MonsterSlain5">疯狂杀戮:击杀1000个敌人</string>
   <string name="Spells_NotInOwnBody">当你的灵魂与身体分离时，你不能%s。</string>
   <string name="WndHero_Satiety">饱食</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - 小镇改造!\n
-    </string>
   <string name="Ring_Gems_0">鑽石</string>
   <string name="Ring_Gems_1">蛋白石</string>
   <string name="Ring_Gems_2">石榴石</string>
@@ -2599,4 +2583,37 @@
         模组需要独立下载，祝您玩得开心!\n
     </string>
   <string name="ShieldWeaponInfo">当作为武器使用时，这个盾牌平均会造成 %1$d 点伤害。</string>
+  <string name="TownPortal_Name">回城卷轴</string>
+  <string name="TownPortal_Info">这个咒语可以让你立刻回到安全的地方。但是如果附近有强大的魔法源可能会阻止它的使用。</string>
+  <string name="MedicineMask_Name">医用口罩</string>
+  <string name="MedicineMask_Info">一种外科口罩被设计用来捕捉从佩戴者的口鼻中流出的液滴和气溶胶中的微生物。
+  \n\n自己戴口罩也是在关心他人。</string>
+  <string name="MedicineMask_Obtained">获得医用口罩</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">你还在吗？来这里！拿着这个。 </string>
+  <string name="FilteredMask_Name">N95面罩</string>
+  <string name="FilteredMask_Info">面罩上的呼吸器是一种保护佩戴者免受吸入有害气体（包括烟雾、蒸汽、气体和微粒物质，如粉尘和空气中的微生物）的装置。
+  \n\n不过这个面罩只起装饰作用。</string>
+  <string name="FullFaceMask_Name">防毒面具</string>
+  <string name="FullFaceMask_Info">防毒面具是用来防止佩戴者吸入空气中的污染物和有毒气体的面具。面具在鼻子、嘴和眼睛上形成一个密封罩。 
+ \n\n这个面具上没有过滤器，但是看起来很酷。</string>
+  <string name="StartScene_DifficultyEasyNoAds">容易</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">普通存档</string>
+  <string name="Backstab_Name">背刺</string>
+  <string name="Backstab_Info">背后无声的一击，不正直，但非常有效，背刺的伤害会随着施术者技能等级的提高而增加。\n\n成功的背刺将完全忽略受害者的护甲或特殊防御能力。</string>
+  <string name="Backstab_TooFar">距离太远了，无法命中。</string>
+  <string name="Backstab_Aware">完美的背刺使受害者没有注意到你。</string>
+  <string name="KunaiThrow_Name">投掷苦无</string>
+  <string name="KunaiThrow_Info">致命的苦无投掷速度非常快，快到你甚至无法选中目标。\n\n真正的大师能够同时投掷出多个苦无。</string>
+  <string name="Haste_Name">急速</string>
+  <string name="Haste_Info">施术者在短时间内消耗大量的能量并急速移动，使得周围的一切看起来都静止不动。\n\n熟练掌握后，能持续更长的时间。</string>
+  <string name="Welcome_Text_29_5">
+remix.29.5\n
+- 游戏性:\n
+-- 盗贼技能!\n
+- 修改:\n
+-- 盔甲贴图!\n
+- 修复了一些Bug\n</string>
+  <string name="Char_Stole_0">%1$s 从%3$s身上偷走了%2$s！</string>
+  <string name="Char_Stole_1">%1$s把%3$s的%2$s偷窃了！</string>
+  <string name="Char_Stole_2">%1$s把%3$s的%2$s偷窃了！</string>
 </resources>

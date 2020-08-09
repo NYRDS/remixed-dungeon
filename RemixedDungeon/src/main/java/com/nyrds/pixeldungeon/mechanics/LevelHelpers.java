@@ -5,8 +5,10 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 
+import org.jetbrains.annotations.NotNull;
+
 public class LevelHelpers {
-    static public int pushDst(Char chr, HasPositionOnLevel obj, boolean onlyRect) {
+    static public int pushDst(@NotNull Char chr, @NotNull HasPositionOnLevel obj, boolean onlyRect) {
 
         Level level = chr.level();
 

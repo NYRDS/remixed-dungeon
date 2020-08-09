@@ -19,15 +19,17 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -40,6 +42,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -115,7 +119,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_DRINK );
 		actions.add( AC_MOISTEN );
@@ -123,9 +127,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public void execute( final Hero hero, String action ) {
-		setUser(hero);
-
+	public void execute(@NotNull final Char chr, @NotNull String action ) {
 		switch (action) {
 			case AC_DRINK:
 				if (isKnown() && (
@@ -141,30 +143,30 @@ public class Potion extends Item implements UnknownItem {
 								@Override
 								public void onSelect(int index) {
 									if (index == 0) {
-										drink(hero);
+										drink(chr);
 									}
 								}
 							}
 					);
 
 				} else {
-					drink(hero);
+					drink(chr);
 				}
 
 				break;
 			case AC_MOISTEN:
-				moisten(hero);
+				moisten(chr);
 				break;
 			default:
 
-				super.execute(hero, action);
+				super.execute(chr, action);
 
 				break;
 		}
 	}
 	
 	@Override
-	public void doThrow( final Hero hero ) {
+	public void doThrow(@NotNull final Char chr) {
 
 		if (isKnown() && (
 			this instanceof PotionOfExperience || 
@@ -183,24 +185,24 @@ public class Potion extends Item implements UnknownItem {
 					@Override
 					public void onSelect(int index) {
 						if (index == 0) {
-							Potion.super.doThrow( hero );
+							Potion.super.doThrow(chr);
 						}
 					}
 				}
 			);
 			
 		} else {
-			super.doThrow( hero );
+			super.doThrow(chr);
 		}
 	}
 	
-	protected void drink( Hero hero ) {
+	protected void drink(Char hero ) {
 		
 		detach( hero.getBelongings().backpack );
 		
 		hero.spend( TIME_TO_DRINK );
 		hero.busy();
-		onThrow( hero.getPos() );
+		onThrow( hero.getPos(), hero);
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
@@ -208,28 +210,28 @@ public class Potion extends Item implements UnknownItem {
 		shatterd = false;
 	}
 	
-	private void moisten(Hero hero) {
+	private void moisten(Char hero) {
 		
 		hero.spend( TIME_TO_MOISTEN);
 		hero.busy();
 		
-		GameScene.selectItem( itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten) );
+		GameScene.selectItem(hero, itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten));
 		
 		hero.getSprite().operate( hero.getPos() );
 	}
 	
 	@Override
-	protected void onThrow( int cell ) {
-		if (Dungeon.hero.getPos() == cell) {
-			apply( Dungeon.hero );
+	protected void onThrow(int cell, Char thrower) {
+		if (thrower.getPos() == cell) {
+			apply( thrower );
 		} else if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
-			super.onThrow( cell );
+			super.onThrow( cell, thrower);
 		} else  {
 			shatter( cell );
 		}
 	}
 	
-	protected void apply( Hero hero ) {
+	protected void apply(Char hero ) {
 		shatter( hero.getPos() );
 	}
 
@@ -321,7 +323,7 @@ public class Potion extends Item implements UnknownItem {
 		return null;
 	}
 	
-	private final WndBag.Listener itemSelector = item -> {
+	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
 
 			if(item instanceof Arrow) {
@@ -343,11 +345,12 @@ public class Potion extends Item implements UnknownItem {
 		int quantity = item.quantity();
 		
 		if(quantity <= maxQuantity){
-			
-			if(item.equals(getUser().getBelongings().weapon)) {
-				getUser().getBelongings().weapon = null;
+			Char owner = getOwner();
+
+			if(item.equals(owner.getBelongings().weapon)) {
+				owner.getBelongings().weapon = CharsList.DUMMY_ITEM;
 			} else {
-				item.detachAll( getUser().getBelongings().backpack );
+				item.detachAll( owner.getBelongings().backpack );
 			}
 		} else {
 			item.quantity(item.quantity() - maxQuantity);
@@ -380,19 +383,23 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	private void moistenUseless() {
-		detach(getUser().getBelongings().backpack );
+		Char owner = getOwner();
+
+		detach(owner.getBelongings().backpack );
 		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().spend( TIME_TO_MOISTEN );
-		getUser().busy();
+		owner.getSprite().operate( owner.getPos() );
+		owner.spend( TIME_TO_MOISTEN );
+		owner.busy();
 	}
 	
 	protected void moistenEffective() {
-		detach(getUser().getBelongings().backpack );
+		Char owner = getOwner();
+
+		detach(owner.getBelongings().backpack );
 		identify();
-		getUser().getSprite().operate( getUser().getPos() );
-		getUser().spend( TIME_TO_MOISTEN );
-		getUser().busy();
+		owner.getSprite().operate( owner.getPos() );
+		owner.spend( TIME_TO_MOISTEN );
+		owner.busy();
 	}
 
 	@Override
@@ -401,5 +408,10 @@ public class Potion extends Item implements UnknownItem {
 			return super.overlayIndex();
 		}
 		return labelIndex;
+	}
+
+	@Override
+	public String bag() {
+		return PotionBelt.class.getSimpleName();
 	}
 }

@@ -60,6 +60,6 @@ public class PotionOfLiquidFlame extends UpgradablePotion {
 		int quantity = reallyMoistArrows(arrow);
 		
 		FireArrow moistenArrows = new FireArrow(quantity);
-		getUser().collect(moistenArrows);
+		getOwner().collect(moistenArrows);
 	}
 }

@@ -189,7 +189,8 @@ public class Badges {
 		DEATH_FROM_NECROTISM(Game.getVar(R.string.Badges_DeathNecrotism), 71),
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
 		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL,
-		GNOLL_UNLOCKED(Game.getVar(R.string.Badges_GnollUnlocked),72, true);
+		GNOLL_UNLOCKED(Game.getVar(R.string.Badges_GnollUnlocked),72, true),
+		DOCTOR_QUEST_COMPLETED(Game.getVar(R.string.MedicineMask_Obtained),81);
 
 		public boolean meta;
 
@@ -886,7 +887,7 @@ public class Badges {
 		displayBadge(Badge.CHAMPION);
 	}
 
-	private static void displayBadge(Badge badge) {
+	public static void displayBadge(Badge badge) {
 
 		if (badge == null) {
 			return;

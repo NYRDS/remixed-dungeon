@@ -90,7 +90,6 @@ public class Utils {
         return defaultValues;
     }
 
-
     public static String getClassParam(String className, String paramName, String defaultValue, boolean warnIfAbsent) {
         if (className.isEmpty()) {
             return defaultValue;
@@ -140,5 +139,9 @@ public class Utils {
             }
         }
         return false;
+    }
+
+    public static int max(int a, int b, int c) {
+        return Math.max(a,Math.max(b,c));
     }
 }

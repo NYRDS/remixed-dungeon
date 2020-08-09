@@ -22,16 +22,18 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Icecap extends Plant {
 
@@ -67,14 +69,14 @@ public class Icecap extends Plant {
 		}
 		
 		@Override
-		public void execute( Hero hero, String action ) {
+		public void execute(@NotNull Char chr, @NotNull String action ) {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 			if (action.equals( CommonActions.AC_EAT )) {
 
-				Buff.prolong( hero, Frost.class, Frost.duration( hero ) * 2);
-				hero.heal( Random.Int(0, Math.max((hero.ht() - hero.hp()) / 4, 10) ), this);
+				Buff.prolong(chr, Frost.class, Frost.duration(chr) * 2);
+				chr.heal( Random.Int(0, Math.max((chr.ht() - chr.hp()) / 4, 10) ), this);
 			}
 		}
 	}

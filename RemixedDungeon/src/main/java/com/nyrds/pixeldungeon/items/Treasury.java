@@ -147,7 +147,7 @@ public class Treasury {
                     currentCategory.names.add(item);
                     currentCategory.probs.add((float) catData.getDouble(item));
                 } else {
-                    ModError.doReport(item,new Exception("Treasury: unknown item"));
+                    ModError.doReport(item,new Exception("Treasury: unknown item: "+ item));
                 }
             }
         }
@@ -156,7 +156,7 @@ public class Treasury {
     public Item worstOf(Category cat, int n) {
         Item ret = random(cat);
 
-        for (int i=n+1; i < n; i++) {
+        for (int i=1; i < n; i++) {
             Item another = random(cat);
 
             if (another.level() < ret.level()) {
@@ -169,7 +169,7 @@ public class Treasury {
     public Item bestOf(Category cat, int n) {
         Item ret = random(cat);
 
-        for (int i=n+1; i < n; i++) {
+        for (int i=1; i < n; i++) {
             Item another = random(cat);
 
             if (another.level() > ret.level()) {
@@ -250,5 +250,23 @@ public class Treasury {
                 return;
             }
         }
+    }
+
+    public static Item weaponOrArmorPrize(int level) {
+        Item prize = getLevelTreasury().random( Random.oneOf(
+                Category.WEAPON,
+                Category.ARMOR
+        ) );
+
+        for (int i=0; i < level; i++) {
+            Item another = getLevelTreasury().random( Random.oneOf(
+                    Category.WEAPON,
+                    Category.ARMOR
+            ) );
+            if (another.level() > prize.level()) {
+                prize = another;
+            }
+        }
+        return prize;
     }
 }

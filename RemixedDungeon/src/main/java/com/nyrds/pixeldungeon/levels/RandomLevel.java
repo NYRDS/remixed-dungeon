@@ -75,15 +75,16 @@ public class RandomLevel extends RegularLevel {
 				for (int i = 0; i < itemsDesc.length(); ++i) {
 					JSONObject itemDesc = itemsDesc.optJSONObject(i);
 					Item item = ItemFactory.createItemFromDesc(itemDesc);
-					if(item!=null) {
-						addItemToSpawn(item);
-					}
+					addItemToSpawn(item);
 				}
 			}
 
 		} catch (JSONException e) {
 			throw ModdingMode.modException("RandomLevel",e);
 		}
+
+
+		if (noBuild()) return;
 
 		do {
 			Arrays.fill(map, feeling == Feeling.CHASM ? Terrain.CHASM

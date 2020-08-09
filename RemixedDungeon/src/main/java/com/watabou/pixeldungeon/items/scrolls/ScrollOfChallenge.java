@@ -21,18 +21,21 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfChallenge extends Scroll {
 
 	@Override
-	protected void doRead() {
+	protected void doRead(@NotNull Char reader) {
 		
-		Dungeon.challengeAllMobs(getUser(),Assets.SND_CHALLENGE);
+		Dungeon.challengeAllMobs(reader,Assets.SND_CHALLENGE);
 		
 		GLog.w(Game.getVar(R.string.ScrollOfChallenge_Info1));
 		setKnown();
-				
-		getUser().spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 }

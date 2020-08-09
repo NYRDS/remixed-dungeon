@@ -21,6 +21,8 @@ import android.annotation.SuppressLint;
 
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 @SuppressLint("FloatMath")
 public class PointF {
 	
@@ -143,6 +145,7 @@ public class PointF {
 		return (float)Math.atan2( end.y - start.y, end.x - start.x );
 	}
 	
+	@NotNull
 	@Override
 	public String toString() {
 		return Utils.EMPTY_STRING + x + ", " + y;

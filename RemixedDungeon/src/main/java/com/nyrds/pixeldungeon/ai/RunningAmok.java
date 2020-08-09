@@ -7,6 +7,8 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RunningAmok extends MobAi implements AiState {
 
     @Override
@@ -22,15 +24,15 @@ public class RunningAmok extends MobAi implements AiState {
         me.enemySeen = me.isEnemyInFov();
 
         if(me.enemySeen) {
-            me.target = me.getEnemy().getPos();
+            me.setTarget(me.getEnemy().getPos());
         } else {
-            me.target = me.level().randomDestination();
+            me.setTarget(me.level().randomDestination());
         }
 
         if (me.canAttack(me.getEnemy())) {
             me.doAttack(me.getEnemy());
         } else {
-            me.doStepTo(me.target);
+            me.doStepTo(me.getTarget());
         }
     }
 
@@ -39,7 +41,7 @@ public class RunningAmok extends MobAi implements AiState {
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         return Utils.format(Game.getVar(R.string.Mob_StaAmokStatus),
                 me.getName());
     }

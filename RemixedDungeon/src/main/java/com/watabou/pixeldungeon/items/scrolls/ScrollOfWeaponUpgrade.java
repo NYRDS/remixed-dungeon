@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -35,17 +35,17 @@ public class ScrollOfWeaponUpgrade extends InventoryScroll {
 	}
 	
 	@Override
-	protected void onItemSelected( Item item ) {
+	protected void onItemSelected(Item item, Char selector) {
 		
 		Weapon weapon = (Weapon)item;
 		
-		ScrollOfRemoveCurse.uncurse( Dungeon.hero, weapon );
+		ScrollOfRemoveCurse.uncurse( selector, weapon );
 		weapon.upgrade( true );
 		
 		GLog.p( Game.getVar(R.string.ScrollOfWeaponUpgrade_LooksBetter), weapon.name() );
 		
 		Badges.validateItemLevelAcquired( weapon );
 		
-		getUser().getSprite().emitter().start( Speck.factory( Speck.UP ), 0.2f, 3 );
+		selector.getSprite().emitter().start( Speck.factory( Speck.UP ), 0.2f, 3 );
 	}
 }

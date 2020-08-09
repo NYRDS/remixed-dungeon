@@ -26,7 +26,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -56,7 +56,7 @@ public class LloydsBeacon extends Item {
 	}
 
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_SET );
 		if (returnTo.cellId != -1) {
@@ -66,18 +66,18 @@ public class LloydsBeacon extends Item {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		
 		if (action.equals(AC_SET) || action.equals(AC_RETURN)) {
 			
 			if (Dungeon.bossLevel()) {
-				hero.spend( LloydsBeacon.TIME_TO_USE );
+				chr.spend( LloydsBeacon.TIME_TO_USE );
 				GLog.w( Game.getVar(R.string.LloidsBeacon_Preventing) );
 				return;
 			}
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-				if (Actor.findChar( hero.getPos() + Level.NEIGHBOURS8[i] ) != null) {
+				if (Actor.findChar( chr.getPos() + Level.NEIGHBOURS8[i] ) != null) {
 					GLog.w( Game.getVar(R.string.LloidsBeacon_Creatures) );
 					return;
 				}
@@ -88,10 +88,10 @@ public class LloydsBeacon extends Item {
 			
 			returnTo = Dungeon.currentPosition();
 			
-			hero.spend( LloydsBeacon.TIME_TO_USE );
-			hero.busy();
+			chr.spend( LloydsBeacon.TIME_TO_USE );
+			chr.busy();
 			
-			hero.getSprite().operate( hero.getPos() );
+			chr.getSprite().operate( chr.getPos() );
 			Sample.INSTANCE.play( Assets.SND_BEACON );
 			
 			GLog.i( Game.getVar(R.string.LloidsBeacon_Return) );
@@ -99,9 +99,9 @@ public class LloydsBeacon extends Item {
 		} else if (action.equals(AC_RETURN)) {
 			Position target = new Position(returnTo);
 			reset();
-			hero.teleportTo(target);
+			chr.teleportTo(target);
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 	

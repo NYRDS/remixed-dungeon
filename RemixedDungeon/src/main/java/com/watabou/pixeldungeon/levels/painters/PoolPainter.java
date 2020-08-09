@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
@@ -65,8 +66,7 @@ public class PoolPainter extends Painter {
 		}
 		
 		int pos = x + y * level.getWidth();
-		level.drop( prize( level ), pos ).type = 
-			Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP;
+		level.drop( prize( level ), pos, Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP);
 		set( level, pos, Terrain.PEDESTAL );
 		
 		level.addItemToSpawn( new PotionOfInvisibility() );
@@ -87,24 +87,11 @@ public class PoolPainter extends Painter {
 	private static Item prize( Level level ) {
 		
 		Item prize = level.itemToSpanAsPrize();
-		if (prize != null) {
+		if (! (prize instanceof DummyItem)) {
 			return prize;
 		}
 		
-		prize = Treasury.getLevelTreasury().random( Random.oneOf(
-				Treasury.Category.WEAPON,
-				Treasury.Category.ARMOR
-		) );
-
-		for (int i=0; i < 4; i++) {
-			Item another = Treasury.getLevelTreasury().random( Random.oneOf(
-					Treasury.Category.WEAPON,
-					Treasury.Category.ARMOR
-			) );
-			if (another.level() > prize.level()) {
-				prize = another;
-			}
-		}
+		prize = Treasury.weaponOrArmorPrize(4);
 		
 		return prize;
 	}

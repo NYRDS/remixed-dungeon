@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
 
-public class Hunger extends Buff implements Hero.Doom {
+public class Hunger extends Buff implements Doom {
 
 	private static final float STEP	= 10f;
 	
@@ -48,9 +48,9 @@ public class Hunger extends Buff implements Hero.Doom {
 	public boolean act() {
 		if (target.isAlive()) {
 
-			int difficulty = Dungeon.hero.getDifficulty();
+			int difficulty = Game.getDifficulty();
 
-			if (!Dungeon.level.isSafe() && isStarving()) {
+			if (!target.level().isSafe() && isStarving()) {
 
 				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
 
@@ -83,7 +83,7 @@ public class Hunger extends Buff implements Hero.Doom {
 
 				delta *= RemixedDungeon.getDifficultyFactor() / 1.5f;
 
-				if(Dungeon.level.isSafe()){
+				if(target.level().isSafe()){
 					delta = 0;
 				}
 				
@@ -116,7 +116,6 @@ public class Hunger extends Buff implements Hero.Doom {
 			step *= Dungeon.realtime() ? 10f : 1;
 
 			spend( step );
-			
 		} else {
 			deactivate();
 		}

@@ -27,8 +27,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -38,6 +37,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class WandOfMagicMissile extends SimpleWand  {
@@ -45,15 +46,13 @@ public class WandOfMagicMissile extends SimpleWand  {
 	public static final String AC_DISENCHANT    = "WandOfMagicMissile_ACDisenchant";
 	
 	private static final float TIME_TO_DISENCHANT	= 2f;
-	
-	private boolean disenchantEquipped;
-	
+
 	{
 		image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
 	}
 
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (effectiveLevel() > 0) {
 			actions.add( AC_DISENCHANT );
@@ -73,7 +72,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			
 			ch.getSprite().burst( 0xFF99CCFF, level / 2 + 2 );
 			
-			if (ch == getUser() && !ch.isAlive()) {
+			if (ch == getOwner() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 				GLog.n(Game.getVar(R.string.WandOfMagicMissile_Info1));
 			}
@@ -81,24 +80,14 @@ public class WandOfMagicMissile extends SimpleWand  {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DISENCHANT )) {
-			
-			if (hero.getBelongings().weapon == this) {
-				disenchantEquipped = true;
-				hero.getBelongings().weapon = null;
-                QuickSlot.refresh();
-            } else {
-				disenchantEquipped = false;
-				detach( hero.getBelongings().backpack );
-			}
-			
-			setUser(hero);
-			GameScene.selectItem( itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand) );
-			
+
+			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand));
+			chr.getBelongings().removeItem(this);
 		} else {
 		
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}
@@ -121,30 +110,27 @@ public class WandOfMagicMissile extends SimpleWand  {
 		return Game.getVar(R.string.WandOfMagicMissile_Info);
 	}
 	
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect( Item item ) {
-			if (item != null) {
-				
-				Sample.INSTANCE.play( Assets.SND_EVOKE );
-				ScrollOfUpgrade.upgrade( getUser() );
-				ItemUtils.evoke( getUser() );
-				
-				GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
-				
-				item.upgrade();
-				getUser().spendAndNext( TIME_TO_DISENCHANT );
-				
-				Badges.validateItemLevelAcquired( item );
-				
+	private final WndBag.Listener itemSelector = (item, selector) -> {
+		if (item != null) {
+
+			Sample.INSTANCE.play( Assets.SND_EVOKE );
+			ScrollOfUpgrade.upgrade( selector );
+			ItemUtils.evoke( selector );
+
+			GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
+
+			item.upgrade();
+			selector.spendAndNext( TIME_TO_DISENCHANT );
+
+			Badges.validateItemLevelAcquired( item );
+
+		} else {
+			if (equipedTo != Belongings.Slot.NONE) {
+				selector.getBelongings().equip(WandOfMagicMissile.this, equipedTo);
 			} else {
-				if (disenchantEquipped) {
-					getUser().getBelongings().weapon = WandOfMagicMissile.this;
-                    QuickSlot.refresh();
-                } else {
-					collect( getUser().getBelongings().backpack );
-				}
+				collect( selector.getBelongings().backpack );
 			}
 		}
+		QuickSlot.refresh(selector);
 	};
 }

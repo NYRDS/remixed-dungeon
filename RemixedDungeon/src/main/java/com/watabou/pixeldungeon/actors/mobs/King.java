@@ -93,7 +93,8 @@ public class King extends Boss {
 		int x = level().cellX(getPos());
 		int y = level().cellY(getPos());
 
- 		targetPedestal = level().getNearestTerrain(x,y, Terrain.PEDESTAL, lastPedestal);
+ 		targetPedestal = level().getNearestTerrain(x,y,
+				(level, cell) -> cell != lastPedestal && level.map[cell] == Terrain.PEDESTAL);
 
 		if(canTryToSummon()) {
 			return super.getCloser( targetPedestal );
@@ -136,8 +137,8 @@ public class King extends Boss {
 	@Override
 	public void die(NamedEntityKind cause) {
 
-		level().drop( new ArmorKit(), getPos() ).sprite.drop();
-		level().drop( new SkeletonKey(), getPos() ).sprite.drop();
+		new ArmorKit().doDrop(this);
+		new SkeletonKey().doDrop(this);
 		
 		super.die( cause );
 		

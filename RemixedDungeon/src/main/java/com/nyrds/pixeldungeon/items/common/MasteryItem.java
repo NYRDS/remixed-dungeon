@@ -15,12 +15,14 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class MasteryItem extends Item {
 
 	public static final float TIME_TO_READ = 10;
 
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		if(givesMasteryTo(hero)) {
 			Badges.validateMastery();
 		}
@@ -47,11 +49,12 @@ public class MasteryItem extends Item {
 
 	public void choose( HeroSubClass way ) {
 
-		if(! (getUser() instanceof Hero) ) {
+		Char owner = getOwner();
+		if(! (owner instanceof Hero) ) {
 			throw new TrackedRuntimeException("Mobs can't subclass yet");
 		}
 
-		Hero hero = (Hero)getUser();
+		Hero hero = (Hero)owner;
 		detach( hero.getBelongings().backpack );
 
 		hero.setSubClass(way);

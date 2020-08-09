@@ -7,6 +7,8 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Hunting extends MobAi implements AiState {
 
     public Hunting() { }
@@ -33,18 +35,18 @@ public class Hunting extends MobAi implements AiState {
             me.doAttack(me.getEnemy());
         } else {
             if (me.enemySeen) {
-                me.target = me.getEnemy().getPos();
+                me.setTarget(me.getEnemy().getPos());
             }
 
-            if(!me.doStepTo(me.target)) {
-                me.target = me.level().randomDestination();
+            if(!me.doStepTo(me.getTarget())) {
+                me.setTarget(me.level().randomDestination());
                 me.setState(getStateByClass(Wandering.class));
             }
         }
     }
 
     @Override
-    public String status(Mob me) {
+    public String status(@NotNull Mob me) {
         if (me.getEnemy().valid()) {
             return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus2),
                     me.getName(), me.getEnemy().getName_objective());

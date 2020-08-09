@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.WeakOptional;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -28,6 +29,7 @@ import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.tweeners.AlphaTweener;
+import com.watabou.noosa.tweeners.FallTweener;
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Assets;
@@ -55,6 +57,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
 
+import lombok.val;
+
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
 
     // Color constants for floating text
@@ -71,6 +75,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Nullable
     protected Image avatar;
+
+    public void fall() {
+
+        origin.set( width / 2, height - DungeonTilemap.SIZE / 2 );
+        angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
+
+        getParent().add( new FallTweener(this));
+        die();
+    }
 
     public enum State {
         NONE, BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED
@@ -164,7 +177,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
     }
 
-
     public void showStatus(int color, String text, Object... args) {
         showStatus(color, Utils.format(text, args));
     }
@@ -217,6 +229,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             animCallback = callback;
             turnTo(chr.getPos(), cell);
             play(attack);
+        });
+    }
+
+    @LuaInterface
+    public void dummyAttack(int cell) {
+        ch.ifPresent(chr -> {
+            if(Dungeon.visible[chr.getPos()]) {
+                attack(cell, this::idle);
+            }
         });
     }
 
@@ -493,8 +514,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             }
 
             if (animCallback != null) {
-                animCallback.call();
+                val callback = animCallback;
                 animCallback = null;
+                callback.call();
             } else {
                 if (anim == attack) {
                     chr.onAttackComplete();
@@ -552,9 +574,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         interruptMotion();
         interruptAnimation();
         animCallback = null;
-        /*if (curAnim != null) {
-            onComplete(curAnim);
-        }*/
+
         reset();
     }
 }

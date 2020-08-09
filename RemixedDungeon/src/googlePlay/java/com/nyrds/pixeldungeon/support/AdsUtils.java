@@ -71,14 +71,7 @@ public class AdsUtils {
                     return;
                 }
 
-                if (adview instanceof BannerView) {
-                    Appodeal.hide(Game.instance(), Appodeal.BANNER);
-                }
-
-                if(adview instanceof AdView) {
-                    ((AdView)adview).destroy();
-                }
-                Game.instance().getLayout().removeViewAt(index);
+                removeBannerView(index, adview);
             }
 
             try {
@@ -96,15 +89,19 @@ public class AdsUtils {
 
                 View adview = Game.instance().getLayout().getChildAt(index);
 
-                if (adview instanceof BannerView) {
-                    Appodeal.hide(Game.instance(), Appodeal.BANNER);
-                }
-                if(adview instanceof AdView) {
-                    ((AdView)adview).destroy();
-                }
-
-                Game.instance().getLayout().removeViewAt(index);
+                removeBannerView(index, adview);
             }
         });
+    }
+
+    private static void removeBannerView(int index, View adview) {
+        if (adview instanceof BannerView) {
+            Appodeal.hide(Game.instance(), Appodeal.BANNER);
+        }
+        if (adview instanceof AdView) {
+            ((AdView) adview).destroy();
+        }
+
+        Game.instance().getLayout().removeViewAt(index);
     }
 }

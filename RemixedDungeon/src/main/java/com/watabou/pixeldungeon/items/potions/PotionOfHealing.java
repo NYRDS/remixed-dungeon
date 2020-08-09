@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.HealthArrow;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -43,7 +42,7 @@ public class PotionOfHealing extends Potion {
 	}
 
 	@Override
-	protected void apply( Hero hero ) {
+	protected void apply(Char hero ) {
 		setKnown();
 		heal( Dungeon.hero, 1f );
 		GLog.p(Game.getVar(R.string.PotionOfHealing_Apply));
@@ -87,6 +86,6 @@ public class PotionOfHealing extends Potion {
 		int quantity = reallyMoistArrows(arrow);
 
 		HealthArrow moistenArrows = new HealthArrow(quantity);
-		getUser().collect(moistenArrows);
+		getOwner().collect(moistenArrows);
 	}
 }

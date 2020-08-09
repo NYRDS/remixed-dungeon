@@ -45,28 +45,38 @@ public abstract class CustomLevel extends CommonLevel {
 	}
 
 	@Override
+	public boolean getProperty(String key, boolean defVal) {
+		return mLevelDesc.optBoolean(key, defVal);
+	}
+
+	@Override
+	public float getProperty(String key, float defVal) {
+		return (float) mLevelDesc.optDouble(key, defVal);
+	}
+
+	@Override
 	public String getProperty(String key, String defVal) {
 		return mLevelDesc.optString(key, defVal);
 	}
 
 	@Override
 	public String tilesTex() {
-		return mLevelDesc.optString("tiles", "tiles0.png");
+		return getProperty("tiles", "tiles0.png");
 	}
 
 	@Override
 	public String tilesTexEx() {
-		return mLevelDesc.optString("tiles_x", null);
+		return getProperty("tiles_x", null);
 	}
 
 	@Override
 	public String waterTex() {
-		return mLevelDesc.optString("water", "water0.png");
+		return getProperty("water", "water0.png");
 	}
 
 	@Override
 	public boolean isBossLevel() {
-		return mLevelDesc.optBoolean("boss_level",super.isBossLevel());
+		return getProperty("boss_level",super.isBossLevel());
 	}
 
 	@Override

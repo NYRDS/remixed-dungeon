@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -66,10 +67,10 @@ public class TrapsPainter extends Painter {
 			if (lastRow == Terrain.CHASM) {
 				set( level, pos, Terrain.EMPTY );
 			}
-			level.drop( prize( level ), pos ).type = Heap.Type.CHEST;
+			level.drop( prize( level ), pos, Heap.Type.CHEST);
 		} else {
 			set( level, pos, Terrain.PEDESTAL );
-			level.drop( prize( level ), pos );
+			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		
 		level.addItemToSpawn( new PotionOfLevitation() );
@@ -78,24 +79,11 @@ public class TrapsPainter extends Painter {
 	private static Item prize( Level level ) {
 		
 		Item prize = level.itemToSpanAsPrize();
-		if (prize != null) {
+		if (! (prize instanceof DummyItem)) {
 			return prize;
 		}
 		
-		prize = Treasury.getLevelTreasury().random( Random.oneOf(
-				Treasury.Category.WEAPON,
-				Treasury.Category.ARMOR
-		) );
-
-		for (int i=0; i < 3; i++) {
-			Item another = Treasury.getLevelTreasury().random( Random.oneOf(
-				Treasury.Category.WEAPON,
-				Treasury.Category.ARMOR
-			) );
-			if (another.level() > prize.level()) {
-				prize = another;
-			}
-		}
+		prize = Treasury.weaponOrArmorPrize(3);
 		
 		return prize;
 	}

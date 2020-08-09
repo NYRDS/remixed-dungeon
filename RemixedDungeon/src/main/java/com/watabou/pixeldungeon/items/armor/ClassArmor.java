@@ -17,23 +17,29 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
 
 	private int specialCostModifier = 3;
-	
+
+	@Packable
+	public int STR;
+	@Packable
+	public int DR;
+
 	{
 		setLevelKnown(true);
-		cursedKnown = true;
+		setCursedKnown(true);
 		setDefaultAction(special());
 	}
 	
@@ -44,39 +50,35 @@ abstract public class ClassArmor extends Armor {
 	public static Armor upgrade (Char owner, Armor armor ) {
 
 		ClassArmor classArmor;
+
 		if(owner.getSubClass() == HeroSubClass.NONE) {
 			classArmor = owner.getHeroClass().classArmor();
 		} else {
 			classArmor = owner.getSubClass().classArmor();
 		}
 
-		classArmor.STR = armor.STR;
-		classArmor.DR  = armor.DR;
+		classArmor.setOwner(owner);
+
+		classArmor.STR = armor.requiredSTR();
+		classArmor.DR  = armor.effectiveDr();
 		
 		classArmor.inscribe( armor.glyph );
 		
 		return classArmor;
 	}
-	
-	private static final String ARMOR_STR	= "STR";
-	private static final String ARMOR_DR	= "DR";
 
 	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( ARMOR_STR, STR );
-		bundle.put( ARMOR_DR, DR );
+	public int effectiveDr() {
+		return DR;
 	}
-	
+
 	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		STR = bundle.getInt( ARMOR_STR );
-		DR = bundle.getInt( ARMOR_DR );
+	public int requiredSTR() {
+		return STR;
 	}
-	
+
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (hero.getSkillPoints() >= hero.getSkillPointsMax()/specialCostModifier + 1 && isEquipped( hero )) {
 			actions.add( special() );
@@ -85,31 +87,30 @@ abstract public class ClassArmor extends Armor {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(special())) {
 
-			int cost = hero.getSkillPointsMax()/specialCostModifier;
+			int cost = chr.getSkillPointsMax()/specialCostModifier;
 
-			if (hero.getSkillPoints() < cost) {
+			if (chr.getSkillPoints() < cost) {
 				GLog.w( Game.getVar(R.string.ClassArmor_LowMana) );
 				return;
 			}
-			if (!isEquipped( hero )) {
+			if (!isEquipped(chr)) {
 				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
 				return;
 			}
 
-			setUser(hero);
-			doSpecial();
-			hero.spendSkillPoints(cost);
+			doSpecial(chr);
+			chr.spendSkillPoints(cost);
 			return;
 		}
 
-		super.execute( hero, action );
+		super.execute(chr, action );
 	}
 	
 	abstract public String special();
-	abstract public void doSpecial();
+	abstract public void doSpecial(@NotNull Char user);
 	
 	@Override
 	public boolean isUpgradable() {

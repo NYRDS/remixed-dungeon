@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
@@ -32,7 +32,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
-public class ToxicGas extends Blob implements Hero.Doom {
+public class ToxicGas extends Blob implements Doom {
 	
 	@Override
 	protected void evolve() {
@@ -47,7 +47,7 @@ public class ToxicGas extends Blob implements Hero.Doom {
 		Blob blob = Dungeon.level.blobs.get( ParalyticGas.class );
 		if (blob != null) {
 			
-			int par[] = blob.cur;
+			int[] par = blob.cur;
 			
 			for (int i=0; i < getLength(); i++) {
 				

@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfCurse extends Scroll {
 
 	private static Class<?>[] badBuffs = {
@@ -46,19 +48,19 @@ public class ScrollOfCurse extends Scroll {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	protected void doRead() {
-		Invisibility.dispel(getUser());
+	protected void doRead(@NotNull Char reader) {
+		Invisibility.dispel(reader);
 
-		getUser().getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
+		reader.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
 		Sample.INSTANCE.play( Assets.SND_CURSED );
 
 		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(badBuffs);
-		Buff.prolong( getUser(), buffClass, 10);
+		Buff.prolong( reader, buffClass, 10);
 
-		getUser().getBelongings().curseEquipped();
+		reader.getBelongings().curseEquipped();
 
 		setKnown();
-		getUser().spendAndNext( TIME_TO_READ );
+		reader.spendAndNext( TIME_TO_READ );
 	}
 
 
@@ -66,9 +68,11 @@ public class ScrollOfCurse extends Scroll {
 
 		boolean procced = false;
 		for(Item item:items) {
-			if(item!=null && !item.cursed) {
-				item.cursed = true;
-				procced = true;
+			if(!item.isCursed()) {
+				item.setCursed(true);
+				if(item.isCursed()) {
+					procced = true;
+				}
 			}
 		}
 

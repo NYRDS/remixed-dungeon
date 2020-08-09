@@ -53,6 +53,7 @@ import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.BannerSprites;
@@ -211,12 +212,10 @@ public class GameScene extends PixelScene {
             tiles.addLayer(Level.LayerId.Deco2);
             baseTiles = tiles;
 
-            //if(level.hasTilesetForLayer(Level.LayerId.Roof_Base)) {
-                tiles = new CustomLayerTilemap(level, Level.LayerId.Roof_Base);
-                tiles.addLayer(Level.LayerId.Roof_Deco);
-                tiles.setTransparent(true);
-                roofTiles = tiles;
-            //}
+            tiles = new CustomLayerTilemap(level, Level.LayerId.Roof_Base);
+            tiles.addLayer(Level.LayerId.Roof_Deco);
+            tiles.setTransparent(true);
+            roofTiles = tiles;
         }
         terrain.add(baseTiles);
 
@@ -438,8 +437,14 @@ public class GameScene extends PixelScene {
     @Override
     public synchronized void pause() {
         if(!Game.softPaused) {
-            Dungeon.save();
+            Dungeon.save(false);
         }
+    }
+
+    private static transient boolean observeRequested = false;
+
+    public static void observeRequest() {
+        observeRequested = true;
     }
 
     @Override
@@ -476,6 +481,11 @@ public class GameScene extends PixelScene {
             cellSelector.enabled = Dungeon.hero.isAlive();
         }
 
+        if(observeRequested) {
+            observeRequested = false;
+            Dungeon.observeImpl();
+        }
+
     }
 
     @Override
@@ -488,13 +498,13 @@ public class GameScene extends PixelScene {
     @Override
     protected void onMenuPressed() {
         if (Dungeon.hero.isReady()) {
-            selectItem(null, WndBag.Mode.ALL, null);
+            selectItem(Dungeon.hero, null, Mode.ALL, null);
         }
     }
 
     public void brightness(boolean value) {
 
-        float levelLimit = Math.min(Dungeon.level.getPropertyFloat("maxBrightness", MAX_BRIGHTNESS),
+        float levelLimit = Math.min(Dungeon.level.getProperty("maxBrightness", MAX_BRIGHTNESS),
                 DungeonGenerator.getLevelProperty(Dungeon.level.levelId,"maxBrightness", MAX_BRIGHTNESS));
 
 
@@ -520,18 +530,18 @@ public class GameScene extends PixelScene {
         }
     }
 
-    private void addLevelObjectSprite(LevelObject obj) {
+    private void addLevelObjectSprite(@NotNull LevelObject obj) {
         (obj.sprite = (LevelObjectSprite) objects.recycle(LevelObjectSprite.class)).reset(obj);
     }
 
-    private void addHeapSprite(Heap heap) {
+    private void addHeapSprite(@NotNull Heap heap) {
         ItemSprite sprite = heap.sprite = (ItemSprite) heaps.recycle(ItemSprite.class);
         sprite.revive();
         sprite.link(heap);
         heaps.add(sprite);
     }
 
-    private void addDiscardedSprite(Heap heap) {
+    private void addDiscardedSprite(@NotNull Heap heap) {
         heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
         heap.sprite.revive();
         heap.sprite.link(heap);
@@ -754,14 +764,19 @@ public class GameScene extends PixelScene {
         }
     }
 
+    @LuaInterface
     public static void handleCell(int cell) {
-        cellSelector.select(cell);
+        if(isSceneReady()) {
+            cellSelector.select(cell);
+        }
     }
 
-    public static void selectCell(CellSelector.Listener listener) {
-        cellSelector.listener = listener;
+    public static void selectCell(CellSelector.Listener listener, Char selector) {
         if(isSceneReady()) {
+            cellSelector.listener = listener;
+            cellSelector.selector = selector;
             scene.prompt(listener.prompt());
+            script.runOptional("selectCell");
         }
     }
 
@@ -781,7 +796,7 @@ public class GameScene extends PixelScene {
         return wnd;
     }
 
-    public static WndBag selectItem(WndBag.Listener listener, WndBag.Mode mode, String title) {
+    public static WndBag selectItem(Char selector, WndBag.Listener listener, Mode mode, String title) {
         cancelCellSelector();
 
         WndBag wnd = WndBag.lastBag(listener, mode, title);
@@ -810,13 +825,13 @@ public class GameScene extends PixelScene {
     }
 
     public static void ready() {
-        selectCell(defaultCellListener);
+        selectCell(defaultCellListener, Dungeon.hero);
         QuickSlot.cancel();
     }
 
     private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer cell) {
+        public void onSelect(Integer cell, Char selector) {
             if (Dungeon.hero.handle(cell)) {
                 Dungeon.hero.next();
             }

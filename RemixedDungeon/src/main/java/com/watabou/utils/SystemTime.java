@@ -30,6 +30,10 @@ public class SystemTime {
 		return now;
 	}
 
+	public static long timeSinceTick() {
+		return System.currentTimeMillis() - now;
+	}
+
 	public static long getLastActionTime() {
 		return lastActionTime;
 	}

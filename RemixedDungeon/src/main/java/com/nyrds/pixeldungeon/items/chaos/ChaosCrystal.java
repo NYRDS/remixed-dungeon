@@ -4,7 +4,6 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.rings.UsableArtifact;
@@ -19,6 +18,8 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -54,17 +55,17 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	private CellSelector.Listener chaosMark = new CellSelector.Listener() {
 		@Override
-		public void onSelect(Integer cell) {
+		public void onSelect(Integer cell, Char selector) {
 			if (cell != null) {
 
-				if (cursed) {
-					cell = getUser().getPos();
+				if (isCursed()) {
+					cell = selector.getPos();
 				}
 
 				ChaosCommon.doChaosMark(cell, charge);
 				charge = 0;
 			}
-			getUser().spendAndNext(TIME_TO_USE);
+			selector.spendAndNext(TIME_TO_USE);
 		}
 
 		@Override
@@ -73,65 +74,63 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 		}
 	};
 
-	private final WndBag.Listener itemSelector = item -> {
+	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
-
+			
 			if (item.quantity() > 1) {
-				item.detach(getUser().getBelongings().backpack);
+				item.detach(selector.getBelongings().backpack);
 			} else {
-				item.removeItemFrom(getUser());
+				item.removeItemFrom(selector);
 			}
 
-			removeItemFrom(getUser());
+			removeItemFrom(selector);
 
-			getUser().getSprite().operate(getUser().getPos());
-			getUser().spend(TIME_TO_FUSE);
-			getUser().busy();
+			selector.getSprite().operate(selector.getPos());
+			selector.spend(TIME_TO_FUSE);
+			selector.busy();
 
 			if (item instanceof Scroll) {
 				Item newItem = new ScrollOfWeaponUpgrade();
-				getUser().collect(newItem);
+				selector.collect(newItem);
 				GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
 				return;
 			}
 
 			if (item instanceof KindOfBow) {
-				getUser().collect(new ChaosBow());
+				selector.collect(new ChaosBow());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
 				return;
 			}
 
 			if (item instanceof MeleeWeapon) {
-				getUser().collect(new ChaosSword());
+				selector.collect(new ChaosSword());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
 				return;
 			}
 
 			if (item instanceof Armor) {
-				getUser().collect(new ChaosArmor());
+				selector.collect(new ChaosArmor());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
 				return;
 			}
 
 			if (item instanceof Wand) {
-				getUser().collect(new ChaosStaff());
+				selector.collect(new ChaosStaff());
 				GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
 			}
 		}
 	};
 
-	private void fuse(Hero hero) {
-		GameScene.selectItem(itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
+	private void fuse(Char hero) {
+		GameScene.selectItem(hero, itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
 		hero.getSprite().operate(hero.getPos());
 	}
 
 	@Override
-	public void execute(final Hero ch, String action) {
-		setUser(ch);
-
+	public void execute(@NotNull final Char ch, @NotNull String action) {
 		switch (action) {
 			case AC_USE:
-				GameScene.selectCell(chaosMark);
+				ch.selectCell(chaosMark);
 				break;
 			case AC_FUSE:
 				fuse(ch);
@@ -143,7 +142,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	}
 
 	@Override
-	public ArrayList<String> actions(Hero hero) {
+	public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = super.actions(hero);
 		if (charge == 0 || identetifyLevel == 0) {
 			actions.remove(AC_USE);
@@ -213,7 +212,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	@Override
 	public void ownerDoesDamage(Char ch,int damage) {
-		if (cursed) {
+		if (isCursed()) {
 			if (charge > 0) {
 				ChaosCommon.doChaosMark(ch.getPos(), charge);
 			}

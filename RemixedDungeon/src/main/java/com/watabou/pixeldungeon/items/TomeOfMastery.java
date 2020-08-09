@@ -23,13 +23,14 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndChooseWay;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -43,7 +44,7 @@ public class TomeOfMastery extends MasteryItem {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );		
 		actions.add( AC_READ );
 		
@@ -62,7 +63,7 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		if (hero.getHeroClass() != HeroClass.NECROMANCER)
 		{
 			Badges.validateMastery();
@@ -71,24 +72,22 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_READ )) {
 			
-			if (hero.hasBuff( Blindness.class )) {
+			if (chr.hasBuff( Blindness.class )) {
 				GLog.w( Game.getVar(R.string.TomeOfMastery_Blinded) );
 				return;
 			}
 
-			if(hero.getSubClass() != HeroSubClass.NONE) {
+			if(chr.getSubClass() != HeroSubClass.NONE) {
 				GLog.w( Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen) );
 				return;
 			}
 
-			setUser(hero);
-			
 			HeroSubClass way1;
 			HeroSubClass way2;
-			switch (hero.getHeroClass()) {
+			switch (chr.getHeroClass()) {
 			case WARRIOR:
 				way1 = HeroSubClass.GLADIATOR;
 				way2 = HeroSubClass.BERSERKER;
@@ -116,7 +115,7 @@ public class TomeOfMastery extends MasteryItem {
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );
 			
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 }

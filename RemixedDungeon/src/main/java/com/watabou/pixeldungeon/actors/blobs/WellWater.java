@@ -75,18 +75,15 @@ public class WellWater extends Blob {
 			Item newItem = affectItem( oldItem );
 			
 			if (newItem != null) {
-				
-				if (newItem == oldItem) {
-
-				} else if (oldItem.quantity() > 1) {
-
-					oldItem.quantity( oldItem.quantity() - 1 );
-					heap.drop( newItem );
-					
-				} else {
-					heap.replace( oldItem, newItem );
+				if (newItem != oldItem) {
+					if (oldItem.quantity() > 1) {
+						oldItem.quantity( oldItem.quantity() - 1 );
+						heap.drop( newItem );
+					} else {
+						heap.replace( oldItem, newItem );
+					}
 				}
-				
+
 				heap.sprite.link();
 				volume = off[pos] = cur[pos] = 0;
 				
@@ -98,7 +95,7 @@ public class WellWater extends Blob {
 				do {
 					newPlace = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
 				} while (!Dungeon.level.passable[newPlace] && !Dungeon.level.avoid[newPlace]);
-				Dungeon.level.drop( heap.pickUp(), newPlace ).sprite.drop( pos );
+				Dungeon.level.animatedDrop( heap.pickUp(), newPlace );
 				
 				return false;
 				

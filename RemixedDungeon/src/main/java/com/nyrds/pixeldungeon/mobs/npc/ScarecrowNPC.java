@@ -58,7 +58,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 				if (reward.doPickUp(Dungeon.hero)) {
 					GLog.i(Hero.getHeroYouNowHave(), reward.name());
 				} else {
-					Dungeon.level.drop(reward, hero.getPos()).sprite.drop();
+					level().animatedDrop(reward, hero.getPos());
 				}
 				Quest.complete();
 				GameScene.show(new WndQuest(this, Game.getVar(R.string.ScarecrowNPC_Quest_End)));
@@ -130,7 +130,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 			if (given && !processed) {
 				killed++;
 				if (killed != 0 && ((killed % 5) == 0)) {
-					Dungeon.level.drop(new Candy(), pos).sprite.drop();
+					Dungeon.level.animatedDrop(new Candy(), pos);
 				}
 				if (killed >= 25) {
 					processed = true;

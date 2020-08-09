@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -12,10 +11,14 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.List;
+
+import lombok.var;
 
 public class TestLevel extends RegularLevel {
 
@@ -39,7 +42,7 @@ public class TestLevel extends RegularLevel {
 	@Override
 	protected boolean build() {
 		super.build();
-		Tools.makeEmptyLevel(this);
+		Tools.makeEmptyLevel(this, true);
 		return true;
 	}
 
@@ -94,14 +97,20 @@ public class TestLevel extends RegularLevel {
 	public void runEquipTest() {
 		List<Item> items = ItemFactory.allItems();
 
-		Hero hero = Dungeon.hero;
+		Hero hero = new Hero(2);
+		hero.setPos(entrance+1);
+
 		hero.spend(-10000);
+
+
 
 		Belongings initial = hero.getBelongings();
 
 		for(Item item:items) {
 			GLog.i(item.name());
-			item.actions(hero);
+
+			GLog.i("unequipped");
+			testItemActions(hero, item);
 
 			if(item instanceof EquipableItem) {
 
@@ -111,6 +120,9 @@ public class TestLevel extends RegularLevel {
 
 				equipableItem.actions(hero);
 
+				GLog.i("equipped");
+				testItemActions(hero, equipableItem);
+
 				int itemDialog = Game.scene().findByClass(WndOptions.class,0);
 				if( itemDialog > 0) {
 					WndOptions dialog = (WndOptions) Game.scene().getMember(itemDialog);
@@ -118,11 +130,37 @@ public class TestLevel extends RegularLevel {
 					dialog.hide();
 				}
 
-				equipableItem.cursed = false;
+				equipableItem.setCursed(false);
 				equipableItem.doUnequip(hero,false);
 			}
 		}
 		hero.resetBelongings(initial);
 		hero.postpone(0);
+	}
+
+	protected void testItemActions(Hero hero, Item item) {
+
+		if(item.getEntityKind().equals("Amulet")) {
+			return;
+		}
+
+		if(item.getEntityKind().equals("CandyOfDeath")) {
+			return;
+		}
+
+		if(item.getEntityKind().equals("SpellBook")) {
+			return;
+		}
+
+
+		var actions = item.actions(hero);
+
+		for (String action:actions) {
+			GLog.i("%s : %s", item.getEntityKind(), action);
+			item.setOwner(hero);
+			item.execute(hero,action);
+			hero.hp(hero.ht());
+			GameScene.handleCell(getRandomTerrainCell(Terrain.EMPTY));
+		}
 	}
 }

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -25,26 +26,12 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.utils.Bundle;
 
 public class Shadows extends Invisibility {
 
+	@Packable
 	protected float left;
-	
-	private static final String LEFT	= "left";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( LEFT, left );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		left = bundle.getFloat( LEFT );
-	}
-	
+
 	@Override
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
@@ -68,7 +55,7 @@ public class Shadows extends Invisibility {
 			
 			spend( TICK * 2 );
 			
-			if (--left <= 0 || Dungeon.hero.visibleEnemies() > 0) {
+			if (--left <= 0 || target.visibleEnemies() > 0) {
 				detach();
 			}
 		} else {

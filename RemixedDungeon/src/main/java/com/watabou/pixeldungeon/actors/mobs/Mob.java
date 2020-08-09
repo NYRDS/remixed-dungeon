@@ -45,6 +45,7 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -83,6 +84,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {
@@ -90,7 +93,6 @@ public abstract class Mob extends Char {
 	public static final String TXT_RAGE = "#$%^";
 
 	private static final float SPLIT_DELAY = 1f;
-
 
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 
@@ -102,7 +104,10 @@ public abstract class Mob extends Char {
 	protected Object spriteClass;
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
-	public int target = Level.INVALID_CELL;
+	@LuaInterface
+	@Getter
+	@Setter
+	private int target = Level.INVALID_CELL;
 
 	protected int defenseSkill = 0;
 
@@ -123,12 +128,13 @@ public abstract class Mob extends Char {
 	private static final String FRACTION   = "fraction";
 
 	public Mob() {
+		super();
 		setupCharData();
 	}
 
 	public void releasePet() {
 		setFraction(Fraction.DUNGEON);
-		owner = EntityIdSource.INVALID_ID;
+		setOwnerId(getId());
 	}
 
 	@LuaInterface
@@ -141,22 +147,18 @@ public abstract class Mob extends Char {
 	public static Mob makePet(@NotNull Mob pet, int ownerId) {
 		if (pet.canBePet()) {
 			pet.setFraction(Fraction.HEROES);
-			pet.owner = ownerId;
+			pet.setOwnerId(ownerId);
 		}
 		return pet;
 	}
 
 	@Override
 	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
-		return owner >= 0 && getOwner() instanceof Hero;
+		return getOwner() instanceof Hero;
 	}
 
 	@LuaInterface
 	public int getOwnerPos() {
-		if(owner<0) {
-			return getPos();
-		}
-
 		return getOwner().getPos();
 	}
 
@@ -167,7 +169,6 @@ public abstract class Mob extends Char {
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
-
 		super.storeInBundle(bundle);
 
 		bundle.put(STATE,  getState().getTag());
@@ -250,7 +251,7 @@ public abstract class Mob extends Char {
 	public void moveSprite(int from, int to) {
 
 		if (getSprite().isVisible()
-				&& (Dungeon.visible[from] || Dungeon.visible[to])) {
+				&& (Dungeon.isPathVisible(from, to))) {
 			getSprite().move(from, to);
 		} else {
 			getSprite().place(to);
@@ -314,19 +315,25 @@ public abstract class Mob extends Char {
 		super.move(step);
 	}
 
-	public boolean doAttack(Char enemy) {
+	public void doAttack(Char enemy) {
 
 		setEnemy(enemy);
 
-		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
-			getSprite().attack(enemy.getPos());
-		} else {
-			getSprite().zap( enemy.getPos() );
-		}
-
 		spend(attackDelay());
 
-		return false;
+		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
+			if(Dungeon.visible[getPos()]) {
+				getSprite().attack(enemy.getPos());
+			} else {
+				onAttackComplete();
+			}
+		} else {
+			if (Dungeon.isPathVisible(getPos(), enemy.getPos())) {
+				getSprite().zap(enemy.getPos());
+			} else {
+				onZapComplete();
+			}
+		}
 	}
 
 	@Override
@@ -348,21 +355,24 @@ public abstract class Mob extends Char {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage) {
-		return script.run("onAttackProc", enemy, damage).optint(damage);
+		int baseDamage = super.attackProc(enemy, damage);
+		return script.run("onAttackProc", enemy, baseDamage).optint(baseDamage);
 	}
 
 	@Override
 	public int defenseProc(Char enemy, int damage) {
+		int baseDamage = super.defenseProc(enemy, damage);
+
 		if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
-			damage += Random.Int(1, damage);
+			baseDamage += Random.Int(1, baseDamage);
 			Wound.hit(this);
 		}
 
-		if(owner!=enemy.getId()) {
+		if(getOwnerId() !=enemy.getId()) {
 			setEnemy(enemy);
 		}
 
-		return script.run("onDefenceProc", enemy, damage).optint(damage);
+		return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
 	}
 
 	@Override
@@ -506,8 +516,10 @@ public abstract class Mob extends Char {
 			} else {
 				item = (Item) loot;
 			}
-			level().drop(item, getPos()).sprite.drop();
+			item.doDrop(this);
 		}
+
+		getBelongings().dropAll();
 	}
 
 	public boolean reset() {
@@ -520,7 +532,7 @@ public abstract class Mob extends Char {
 
 		setState(MobAi.getStateByClass(Wandering.class));
 
-		target = cell;
+		setTarget(cell);
 	}
 
 	public String description() {
@@ -546,6 +558,8 @@ public abstract class Mob extends Char {
 			loot = ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot"));
 			lootChance = (float) mobDesc.optDouble("lootChance", 1f);
 		}
+
+		getBelongings().setupFromJson(mobDesc);
 
 		if (this instanceof IDepthAdjustable) {
 			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
@@ -597,7 +611,7 @@ public abstract class Mob extends Char {
 
 		if(getEnemy() == chr) {return false;}
 
-		if(owner == chr.getId()) {
+		if(getOwnerId() == chr.getId()) {
 			return true;
 		}
 
@@ -607,7 +621,7 @@ public abstract class Mob extends Char {
 
 		if(chr instanceof Mob) {
 			Mob mob = (Mob)chr;
-			if(owner >= 0 && owner == mob.owner) {
+			if(getOwnerId() == mob.getOwnerId()) {
 				return true;
 			}
 		}
@@ -653,7 +667,7 @@ public abstract class Mob extends Char {
 			}
 
 			if (enemyId != enemy.getId() && enemy != CharsList.DUMMY) {
-				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
+//				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
 				GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
 			}
 		}
@@ -674,7 +688,7 @@ public abstract class Mob extends Char {
 		return false;
 	}
 
-	private int zapProc(@NotNull Char enemy, int damage) {
+	protected int zapProc(@NotNull Char enemy, int damage) {
 		return script.run("onZapProc", enemy, damage).optint(damage);
 	}
 
@@ -716,5 +730,23 @@ public abstract class Mob extends Char {
 	@Override
 	protected float _attackDelay() {
 		return 1f;
+	}
+
+	@Override
+	public void execute(Char hero, String action) {
+		if(action.equals(CommonActions.MAC_STEAL)) {
+			CharUtils.steal(hero, this);
+			hero.spend(1);
+			return;
+		}
+
+		if(action.equals(CommonActions.MAC_TAUNT)) {
+			setState(MobAi.getStateByClass(Hunting.class));
+			setTarget(hero.getPos());
+			hero.spend(0.1f);
+			return;
+		}
+
+		super.execute(hero, action);
 	}
 }

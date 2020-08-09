@@ -71,6 +71,9 @@ public class PlayGames {
 		if(isConnected() || connecting) {
 			return;
 		}
+
+		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
+
 		connecting = true;
 
 		Intent intent = GoogleSignIn.getClient(Game.instance(), signInOptions)
@@ -99,13 +102,20 @@ public class PlayGames {
 			GoogleSignIn.getClient(Game.instance(), signInOptions)
 					.silentSignIn()
 					.addOnCompleteListener(
-							Game.instance().executor,
+							Game.instance().serviceExecutor,
 							task -> {
 								if (task.isSuccessful()) {
 									 signedInAccount = task.getResult();
+									Preferences.INSTANCE.put(Preferences.KEY_PLAY_GAMES_CONNECT_FAILURES, 0);
 									 onConnected();
 								} else {
-                                    //Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+								    connecting = false;
+									int failCount = Preferences.INSTANCE.getInt(Preferences.KEY_PLAY_GAMES_CONNECT_FAILURES, 0);
+									failCount++;
+									Preferences.INSTANCE.put(Preferences.KEY_PLAY_GAMES_CONNECT_FAILURES, failCount);
+									if(failCount > 5) {
+										Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, false);
+									}
                                 }
 							});
 		}
@@ -116,7 +126,7 @@ public class PlayGames {
 
 		GoogleSignInClient signInClient = GoogleSignIn.getClient(Game.instance(),
 				GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
-		signInClient.signOut().addOnCompleteListener(Game.instance().executor,
+		signInClient.signOut().addOnCompleteListener(Game.instance().serviceExecutor,
 				task -> {
 					signedInAccount = null;
 					// at this point, the user is signed out.
@@ -231,7 +241,6 @@ public class PlayGames {
 
 	private void onConnected() {
 		connecting = false;
-		Preferences.INSTANCE.put(Preferences.KEY_USE_PLAY_GAMES, true);
 		loadSnapshots(null);
 	}
 
@@ -308,7 +317,7 @@ public class PlayGames {
 			return;
 		}
 
-		Game.instance().executor.execute(() -> {
+		Game.instance().serviceExecutor.execute(() -> {
 			try {
 				boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), new FileFilter() {
 					@Override
@@ -342,7 +351,7 @@ public class PlayGames {
 			return;
 		}
 
-		Game.instance().executor.execute(() -> {
+		Game.instance().serviceExecutor.execute(() -> {
 			unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING),
 					res -> resultCallback.status(res));
 		});

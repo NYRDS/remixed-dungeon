@@ -2,11 +2,13 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -54,7 +56,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 		return 1;
 	}
 
-	public void onMiss() {}
+	public void onMiss(Char user) {}
 
 	@Override
 	public boolean goodForMelee() {
@@ -62,7 +64,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 	}
 
 	@Override
-	public ArrayList<String> actions(Hero hero) {
+	public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = super.actions( hero );
 		if(isEquipped(hero) && hero.getBelongings().getItem(Arrow.class)!=null) {
 			actions.add(AC_CHOOSE_ARROWS);
@@ -74,20 +76,20 @@ public abstract class KindOfBow extends MeleeWeapon {
 	}
 
 	@Override
-	public void execute(Hero hero, String action) {
+	public void execute(@NotNull Char chr, @NotNull String action) {
 		if(AC_CHOOSE_ARROWS.equals(action)) {
-			GameScene.selectItem(item -> {
-						if (item != null) {
-							if(item instanceof Arrow){
-								useArrowType((Arrow)item);
-							}
-						}
-					},
-					WndBag.Mode.ARROWS,
-					Game.getVar(R.string.KindOfBow_SelectArrowKind) );
+			GameScene.selectItem(chr,
+                    (item, selector) -> {
+                                if (item != null) {
+                                    if(item instanceof Arrow){
+                                        useArrowType((Arrow)item);
+                                    }
+                                }
+                            },
+                    WndBag.Mode.ARROWS, Game.getVar(R.string.KindOfBow_SelectArrowKind));
 			return;
 		}
-		super.execute(hero, action);
+		super.execute(chr, action);
 	}
 
 	@Override

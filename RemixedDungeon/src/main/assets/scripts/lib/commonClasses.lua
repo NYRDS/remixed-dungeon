@@ -9,6 +9,8 @@ local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
 local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
 
+local DungeonGenerator = luajava.bindClass("com.nyrds.pixeldungeon.utils.DungeonGenerator")
+
 local Sample           = luajava.bindClass("com.watabou.noosa.audio.Sample")
 local Music            = luajava.bindClass("com.watabou.noosa.audio.Music")
 local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
@@ -93,6 +95,9 @@ local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
 
 local Position = "com.nyrds.pixeldungeon.utils.Position"
 
+local CharsList = luajava.newInstance("com.nyrds.pixeldungeon.utils.CharsList")
+
+
 local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfBlink")
 local wandOfTelekinesis = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis")
 local wandOfFirebolt = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfFirebolt")
@@ -148,12 +153,14 @@ local RPD = {
     RemixedDungeon = RemixedDungeon,
     GameScene = GameScene,
     Dungeon = Dungeon,
+    DungeonGenerator = DungeonGenerator,
 
     System = {
         Input = luajava.bindClass("com.nyrds.platform.Input")
     },
 
     Slots = {
+        none         = "NONE",
         weapon       = "WEAPON",
         armor        = "ARMOR",
         leftHand     = "LEFT_HAND",
@@ -243,6 +250,11 @@ local RPD = {
     end,
 
     glogn = function (text,...)
+        GLog:n(tostring(text),{...})
+    end,
+
+    debug = function (text,...)
+        GLog:toFile(tostring(text),{...})
         GLog:n(tostring(text),{...})
     end,
 

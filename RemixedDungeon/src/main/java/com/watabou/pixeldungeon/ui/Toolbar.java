@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
@@ -100,7 +101,7 @@ public class Toolbar extends Component {
             @Override
             protected void onClick() {
                 if (hero.isReady()) {
-                    GameScene.selectCell(informer);
+                    hero.selectCell(informer);
                 }
             }
         };
@@ -232,7 +233,7 @@ public class Toolbar extends Component {
 
     private static CellSelector.Listener informer = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer cell) {
+        public void onSelect(Integer cell, Char selector) {
             if (cell == null) {
                 return;
             }

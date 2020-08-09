@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -29,6 +29,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -44,19 +46,18 @@ public class ArmorKit extends Item {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_APPLY );
 		return actions;
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
-			setUser(hero);
-			GameScene.selectItem( itemSelector, WndBag.Mode.ARMOR, Game.getVar(R.string.ArmorKit_SelectArmor) );
+			GameScene.selectItem(chr, itemSelector, WndBag.Mode.ARMOR, Game.getVar(R.string.ArmorKit_SelectArmor));
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 	
@@ -71,29 +72,30 @@ public class ArmorKit extends Item {
 	}
 	
 	private void upgrade( Armor armor ) {
-		
-		detach( getUser().getBelongings().backpack );
-		
-		getUser().getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
-		getUser().spend( TIME_TO_UPGRADE );
-		getUser().busy();
+		Char owner = getOwner();
+
+		detach( owner.getBelongings().backpack );
+
+		owner.getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
+		owner.spend( TIME_TO_UPGRADE );
+		owner.busy();
 		
 		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
-		Armor classArmor = ClassArmor.upgrade( getUser(), armor );
-		if (getUser().getBelongings().armor == armor) {
-			getUser().getBelongings().armor = classArmor;
-			getUser().updateSprite();
+		Armor classArmor = ClassArmor.upgrade( owner, armor );
+		if (owner.getBelongings().armor == armor) {
+			owner.getBelongings().armor = classArmor;
+			owner.updateSprite();
 		} else {
-			armor.detach( getUser().getBelongings().backpack );
-			getUser().collect(classArmor);
+			armor.detach( owner.getBelongings().backpack );
+			owner.collect(classArmor);
 		}
 		
-		getUser().getSprite().operate( getUser().getPos() );
+		owner.getSprite().operate( owner.getPos() );
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	
-	private final WndBag.Listener itemSelector = item -> {
+	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
 			ArmorKit.this.upgrade( (Armor)item );
 		}

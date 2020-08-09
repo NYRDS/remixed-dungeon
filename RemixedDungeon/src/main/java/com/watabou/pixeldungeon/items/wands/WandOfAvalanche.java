@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -79,14 +80,14 @@ public class WandOfAvalanche extends SimpleWand {
 			}
 		}
 		
-		if (getUser() != null && !getUser().isAlive()) {
+		if ((getOwner() instanceof Hero)  && !getOwner().isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfAvalanche_Info1));
 		}
 	}
 	
 	protected void fx( int cell, Callback callback ) {
-		MagicMissile.earth( wandUser.getSprite().getParent(), wandUser.getPos(), cell, callback );
+		MagicMissile.earth( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 	

@@ -27,8 +27,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class MindVision extends FlavourBuff {
 
 	public static final float DURATION = 20f;
-	
-	public int distance = 2;
+
 
 	static public void reportMindVisionEffect() {
 		Dungeon.observe();

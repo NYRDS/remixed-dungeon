@@ -26,6 +26,8 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -66,7 +68,7 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem1;
-				GameScene.selectItem( itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select) );
+				GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select));
 			}
 		};
 		btnItem1.setRect( (WIDTH - BTN_GAP) / 2 - BTN_SIZE, message.y + message.height() + BTN_GAP, BTN_SIZE, BTN_SIZE );
@@ -76,7 +78,7 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem2;
-				GameScene.selectItem( itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select) );
+				GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select));
 			}
 		};
 		btnItem2.setRect( btnItem1.right() + BTN_GAP, btnItem1.top(), BTN_SIZE, BTN_SIZE );
@@ -99,7 +101,7 @@ public class WndBlacksmith extends Window {
 
 	protected WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
-		public void onSelect( Item item ) {
+		public void onSelect(Item item, Char selector) {
 			if (item != null) {
 				btnPressed.item( item );
 				

@@ -6,12 +6,15 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -34,7 +37,7 @@ public class Seed extends Item {
     public Class<? extends Item> alchemyClass;
 
     @Override
-    public ArrayList<String> actions(Hero hero) {
+    public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
         actions.add(AC_PLANT);
         actions.add(CommonActions.AC_EAT);
@@ -42,37 +45,37 @@ public class Seed extends Item {
     }
 
     @Override
-    protected void onThrow(int cell) {
+    protected void onThrow(int cell, Char thrower) {
         if (Dungeon.level.map[cell] == Terrain.ALCHEMY || Dungeon.level.pit[cell]) {
-            super.onThrow(cell);
+            super.onThrow(cell, thrower);
         } else {
             Dungeon.level.plant(this, cell);
         }
     }
 
     @Override
-    public void execute(Hero hero, String action) {
+    public void execute(@NotNull Char chr, @NotNull String action) {
         if (action.equals(AC_PLANT)) {
 
-            hero.spend(TIME_TO_PLANT);
-            hero.busy();
-            ((Seed) detach(hero.getBelongings().backpack)).onThrow(hero.getPos());
+            chr.spend(TIME_TO_PLANT);
+            chr.busy();
+            ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos(), chr);
 
-            hero.getSprite().operate(hero.getPos());
+            chr.getSprite().operate(chr.getPos());
 
         } else if (action.equals(CommonActions.AC_EAT)) {
-            detach(hero.getBelongings().backpack);
+            detach(chr.getBelongings().backpack);
 
-            hero.getSprite().operate(hero.getPos());
-            hero.busy();
+            chr.getSprite().operate(chr.getPos());
+            chr.busy();
 
-            SpellSprite.show(hero, SpellSprite.FOOD);
+            SpellSprite.show(chr, SpellSprite.FOOD);
             Sample.INSTANCE.play(Assets.SND_EAT);
 
-            hero.spend(Food.TIME_TO_EAT);
+            chr.spend(Food.TIME_TO_EAT);
         }
 
-        super.execute(hero, action);
+        super.execute(chr, action);
     }
 
 
@@ -107,5 +110,10 @@ public class Seed extends Item {
     @Override
     public String info() {
         return Utils.format(Game.getVar(R.string.Plant_Info), Utils.indefinite(plantName), desc());
+    }
+
+    @Override
+    public String bag() {
+        return SeedPouch.class.getSimpleName();
     }
 }

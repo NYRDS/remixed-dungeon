@@ -40,7 +40,7 @@ public class Viscosity extends Glyph {
 	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
 	
 	@Override
-	public int proc( Armor armor, Char attacker, Char defender, int damage ) {
+	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {
 
 		if (damage == 0) {
 			return 0;
@@ -123,11 +123,8 @@ public class Viscosity extends Glyph {
 				if (--damage <= 0) {
 					detach();
 				}
-				
 			} else {
-				
 				detach();
-				
 			}
 			
 			return true;

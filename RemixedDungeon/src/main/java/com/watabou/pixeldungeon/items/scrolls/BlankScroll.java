@@ -2,9 +2,12 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import org.jetbrains.annotations.NotNull;
 
 public class BlankScroll extends Scroll {
 	{
@@ -33,9 +36,9 @@ public class BlankScroll extends Scroll {
 	}
 
 	@Override
-	protected void doRead() {
-		curItem.collect( getUser().getBelongings().backpack );
-		getUser().spendAndNext( TIME_TO_READ );
+	protected void doRead(@NotNull Char reader) {
+		collect( reader.getBelongings().backpack );
+		reader.spendAndNext( TIME_TO_READ );
 		
 		GLog.i(Game.getVar(R.string.BlankScroll_ReallyBlank));
 	}

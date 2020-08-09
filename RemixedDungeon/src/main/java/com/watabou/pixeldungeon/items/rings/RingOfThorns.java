@@ -24,6 +24,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RingOfThorns extends Ring {
 	
 	@Override
@@ -38,7 +40,7 @@ public class RingOfThorns extends Ring {
 	}
 	
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		identify();
 		Badges.validateRingOfThorns();
 		Badges.validateItemLevelAcquired( this );

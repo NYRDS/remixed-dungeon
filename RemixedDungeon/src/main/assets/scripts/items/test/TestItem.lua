@@ -36,6 +36,7 @@ return item.init{
             defaultAction = "action1",
             price         = 0,
             isArtifact    = true,
+            heapScale     = 3.;
             data = {
                 activationCount = 0
             }
@@ -63,6 +64,7 @@ return item.init{
                     "action4",
                     "inputText",
                     "checkText",
+                    "runAsCommand",
                     tostring(item:getId()),
                     tostring(self.data.activationCount),
                     tostring(self)
@@ -71,9 +73,14 @@ return item.init{
     end,
 
     cellSelected = function(self, thisItem, action, cell)
+
+        local owner = thisItem:getOwner()
+
+        RPD.glog("cellSelected owner: %s", tostring(owner))
+
         if action == "action1" then
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
-            RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
+            RPD.zapEffect(thisItem:getOwner():getPos(), cell, "Lightning")
             --local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
             --RPD.Dungeon.level:drop(book, cell)
             RPD.createLevelObject(chest, cell)
@@ -82,6 +89,11 @@ return item.init{
     end,
 
     execute = function(self, item, hero, action)
+
+        local owner = item:getOwner()
+
+        RPD.glog("execute owner: %s", tostring(owner))
+
         if action == "action1" then
             item:selectCell("action1","Please select cell for action 1")
         end
@@ -108,12 +120,20 @@ return item.init{
         end
 
         if action == "inputText" then
-            RPD.System.Input:showInputDialog("Text title", "Text subtitle")
+            --RPD.System.Input:showInputDialog("Text title", "Text subtitle")
         end
 
         if action == "checkText" then
             local userText = RPD.System.Input:getInputString()
             RPD.glog(userText)
+        end
+
+        if action == "runAsCommand" then
+            local userText = RPD.System.Input:getInputString()
+            local res, ret = pcall(load(userText, nil,nil, RPD))
+            if not res then
+                RPD.glogn(ret)
+            end
         end
     end,
 

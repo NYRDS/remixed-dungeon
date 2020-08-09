@@ -20,9 +20,11 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
@@ -221,12 +223,12 @@ public class WndBag extends WndTabbed {
 
 
 	private void placeEquipped(Item item,Belongings.Slot slot, int image) {
-		if(item!=null) {
+		if(item != CharsList.DUMMY_ITEM) {
 			placeItem(item);
 			return;
 		}
 
-		if(stuff.blockedSlots.get(slot)!=null) {
+		if(stuff.slotBlocked(slot)) {
 			placeItem(new ItemPlaceholder(ItemPlaceholder.LOCKED));
 			return;
 		}
@@ -243,7 +245,7 @@ public class WndBag extends WndTabbed {
 			placeEquipped(stuff.armor,    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
 			placeEquipped(stuff.leftHand, Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
 			placeEquipped(stuff.ring1,    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
-			placeEquipped(stuff.ring2,    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
+			placeEquipped(stuff.ring2,    Belongings.Slot.LEFT_ARTIFACT,  ItemPlaceholder.ARTIFACT);
 		}
 
 		// Unequipped items
@@ -256,7 +258,7 @@ public class WndBag extends WndTabbed {
 		// Empty slots
 		//int margin = stuff.getOwner() instanceof Hero ?  4 :  5;
 		int margin = 5;
-		while (count - margin < container.size) {
+		while (count - margin < container.getSize()) {
 			placeItem( null );
 		}
 
@@ -303,7 +305,7 @@ public class WndBag extends WndTabbed {
 	@Override
 	public void onBackPressed() {
 		if (listener != null) {
-			listener.onSelect( null );
+			listener.onSelect( null, Dungeon.hero);
 		}
 		super.onBackPressed();
 	}
@@ -323,6 +325,6 @@ public class WndBag extends WndTabbed {
 	}
 
 	public interface Listener {
-		void onSelect( Item item );
+		void onSelect(Item item, Char selector);
 	}
 }

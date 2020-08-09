@@ -1,9 +1,6 @@
 package com.nyrds.android.util;
 
-import android.os.AsyncTask;
-
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.File;
@@ -17,27 +14,27 @@ import javax.net.ssl.HttpsURLConnection;
 import info.guardianproject.netcipher.NetCipher;
 import info.guardianproject.netcipher.client.TlsOnlySocketFactory;
 
-public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
+public class DownloadTask implements Runnable {
 
     private DownloadStateListener m_listener;
     private String                m_url;
+    private String                m_downloadTo;
 
-    public DownloadTask(DownloadStateListener listener) {
+    public DownloadTask(DownloadStateListener listener, String url, String downloadTo) {
         m_listener = listener;
+        m_url = url;
+        m_downloadTo = downloadTo;
     }
 
     @Override
-    protected Boolean doInBackground(String... args) {
+    public void run() {
         boolean result = false;
-        m_url = args[0];
 
-        publishProgress(0);
+        m_listener.DownloadProgress(m_url, 0);
 
         try {
             URL url = new URL(m_url);
-            File file = new File(args[1]);
-
-            EventCollector.startTrace("download");
+            File file = new File(m_downloadTo);
 
             HttpsURLConnection ucon = NetCipher.getCompatibleHttpsURLConnection(url);
 
@@ -64,12 +61,10 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
                 while ((count = is.read(buffer)) != -1) {
                     fos.write(buffer, 0, count);
                     bytesDownloaded += count;
-                    publishProgress(bytesDownloaded);
+                    m_listener.DownloadProgress(m_url, bytesDownloaded);
                 }
 
                 fos.close();
-                EventCollector.stopTrace("download", "download", m_url, "");
-                publishProgress(100);
 
                 result = true;
             }
@@ -78,21 +73,6 @@ public class DownloadTask extends AsyncTask<String, Integer, Boolean> {
             EventCollector.logException(new ModError("Downloading",e));
         }
 
-        return result;
+         m_listener.DownloadComplete(m_url, result);
     }
-
-
-    protected void onProgressUpdate(Integer... progress) {
-        m_listener.DownloadProgress(m_url, progress[0]);
-    }
-
-    protected void onPostExecute(Boolean result) {
-        m_listener.DownloadComplete(m_url, result);
-    }
-
-
-    public void download(String url, String downloadTo) {
-        this.executeOnExecutor(Game.instance().executor, url, downloadTo);
-    }
-
 }

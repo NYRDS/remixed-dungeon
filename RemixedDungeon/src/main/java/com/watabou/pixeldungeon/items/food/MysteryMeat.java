@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.food;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -27,11 +28,12 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class MysteryMeat extends Food {
 
@@ -42,28 +44,28 @@ public class MysteryMeat extends Food {
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		
-		super.execute( hero, action );
+		super.execute(chr, action );
 		
 		if (action.equals( CommonActions.AC_EAT )) {
 			
 			switch (Random.Int( 5 )) {
 			case 0:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info1));
-				Buff.affect( hero, Burning.class ).reignite( hero );
+				Buff.affect(chr, Burning.class ).reignite(chr);
 				break;
 			case 1:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info2));
-				Buff.prolong( hero, Roots.class, Paralysis.duration( hero ) );
+				Buff.prolong(chr, Roots.class, Paralysis.duration(chr) );
 				break;
 			case 2:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info3));
-				Buff.affect( hero, Poison.class,Poison.durationFactor( hero ) * hero.ht() / 5 );
+				Buff.affect(chr, Poison.class,Poison.durationFactor(chr) * chr.ht() / 5 );
 				break;
 			case 3:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info4));
-				Buff.prolong( hero, Slow.class, Slow.duration( hero ) );
+				Buff.prolong(chr, Slow.class, Slow.duration(chr) );
 				break;
 			}
 		}

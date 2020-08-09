@@ -32,7 +32,7 @@ public class DriedRose extends Artifact {
 
 	@Override
 	protected ArtifactBuff buff() {
-		if (!cursed) {
+		if (!isCursed()) {
 			return new OneWayLoveBuff();
 		} else {
 			return new OneWayCursedLoveBuff();

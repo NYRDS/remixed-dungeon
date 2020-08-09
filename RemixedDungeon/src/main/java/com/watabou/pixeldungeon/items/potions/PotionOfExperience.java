@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class PotionOfExperience extends Potion {
@@ -28,9 +29,12 @@ public class PotionOfExperience extends Potion {
 	}
 
 	@Override
-	protected void apply( Hero hero ) {
+	protected void apply(Char chr ) {
 		setKnown();
-		hero.earnExp( hero.maxExp() - hero.getExp());
+		if(chr instanceof Hero) {
+			Hero hero = (Hero)chr;
+			hero.earnExp(hero.maxExp() - hero.getExp());
+		}
 	}
 	
 	@Override

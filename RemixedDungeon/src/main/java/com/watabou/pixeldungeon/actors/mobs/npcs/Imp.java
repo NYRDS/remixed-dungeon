@@ -202,9 +202,9 @@ public class Imp extends NPC {
 				
 				do {
 					reward = Treasury.getLevelTreasury().random( Treasury.Category.RING );
-				} while (reward.cursed);
+				} while (reward.isCursed());
 				reward.upgrade( 2 );
-				reward.cursed = true;
+				reward.setCursed(true);
 			}
 		}
 		
@@ -212,8 +212,8 @@ public class Imp extends NPC {
 			if (spawned && given && !completed) {
 				if ((alternative && mob instanceof Monk) ||
 					(!alternative && mob instanceof Golem)) {
-					
-					Dungeon.level.drop( new DwarfToken(), mob.getPos() ).sprite.drop();
+
+					new DwarfToken().doDrop(mob);
 				}
 			}
 		}

@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.armor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -28,6 +28,8 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Shuriken;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
@@ -47,8 +49,8 @@ public class HuntressArmor extends ClassArmor {
 	}
 
 	@Override
-	public void doSpecial() {
-		
+	public void doSpecial(@NotNull Char user) {
+
 		Item proto = new Shuriken();
 		
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
@@ -57,16 +59,16 @@ public class HuntressArmor extends ClassArmor {
 				Callback callback = new Callback() {	
 					@Override
 					public void call() {
-						getUser().attack( targets.get( this ) );
+						user.attack( targets.get( this ) );
 						targets.remove( this );
 						if (targets.isEmpty()) {
-							getUser().spendAndNext( getUser().attackDelay() );
+							user.spendAndNext( user.attackDelay() );
 						}
 					}
 				};
 				
-				((MissileSprite) getUser().getSprite().getParent().recycle( MissileSprite.class )).
-					reset( getUser().getPos(), mob.getPos(), proto, callback );
+				((MissileSprite) user.getSprite().getParent().recycle( MissileSprite.class )).
+					reset( user.getPos(), mob.getPos(), proto, callback );
 				
 				targets.put( callback, mob );
 			}
@@ -77,12 +79,12 @@ public class HuntressArmor extends ClassArmor {
 			return;
 		}
 
-		getUser().getSprite().zap( getUser().getPos() );
-		getUser().busy();
+		user.getSprite().zap( user.getPos() );
+		user.busy();
 	}
 	
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip(@NotNull Char hero ) {
 		if (hero.getHeroClass() == HeroClass.HUNTRESS) {
 			return super.doEquip( hero );
 		} else {

@@ -3,9 +3,11 @@ package com.nyrds.pixeldungeon.items.food;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import org.jetbrains.annotations.NotNull;
 
 abstract public class Mushroom extends Food {
 	{
@@ -15,14 +17,14 @@ abstract public class Mushroom extends Food {
 	}
 
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
-			applyEffect(hero);
+			applyEffect(chr);
 			GLog.i( message );
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 
-	protected void applyEffect(Hero hero){}
+	protected void applyEffect(Char hero){}
 }

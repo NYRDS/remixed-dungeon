@@ -4,8 +4,6 @@ import android.os.Bundle;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import com.google.firebase.perf.FirebasePerformance;
-import com.google.firebase.perf.metrics.Trace;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
@@ -14,7 +12,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -25,8 +22,6 @@ public class EventCollector {
 
     static private FirebaseAnalytics mFirebaseAnalytics;
 	static private boolean mDisabled = true;
-
-	static private HashMap<String,Trace> timings = new HashMap<>();
 
 	private static boolean analyticsUsable() {
 		return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS,1) > 0;
@@ -161,44 +156,13 @@ public class EventCollector {
 		}
 	}
 
-	static public void startTrace(String id) {
-		if(!mDisabled) {
-			Game.instance().runOnUiThread(
-					() -> {
-						Trace trace = FirebasePerformance.getInstance().newTrace(id);
-						trace.start();
-						timings.put(id,trace);
-
-					}
-			);
-		}
-	}
-
-	static public void stopTrace(String id, String category, String variable, String label) {
-
-		if(!mDisabled) {
-			Game.instance().runOnUiThread(
-					() -> {
-						Trace trace = timings.get(id);
-						if (trace==null) {
-							logException("attempt to stop null timer:"+id);
-							return;
-						}
-
-						trace.putAttribute("category", category);
-						trace.putAttribute("variable", variable);
-						trace.putAttribute("label",    label);
-
-						trace.stop();
-						timings.remove(id);
-					}
-			);
-		}
-	}
-
 	public static void collectSessionData(String key, String value) {
 		if(!mDisabled) {
 			FirebaseCrashlytics.getInstance().setCustomKey(key, value);
 		}
 	}
+
+    public static void disable() {
+		mDisabled = true;
+    }
 }

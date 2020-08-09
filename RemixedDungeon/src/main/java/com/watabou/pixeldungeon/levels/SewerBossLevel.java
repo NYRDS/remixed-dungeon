@@ -21,10 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
@@ -178,18 +175,6 @@ public class SewerBossLevel extends BossLevel {
 		if (!enteredArena && getRoomExit().inside( cell )) {
 			enteredArena = true;
 			spawnBoss(getEmptyCellFromRoom(getRoomExit()));
-		}
-	}
-
-	@Override
-	protected void createItems() {
-		Item item = Bones.get();
-		if (item != null) {
-			int pos;
-			do {
-				pos = roomEntrance.random(this);
-			} while (pos == entrance);
-			drop( item, pos ).type = Heap.Type.SKELETON;
 		}
 	}
 

@@ -23,7 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -34,6 +34,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
 import com.watabou.pixeldungeon.windows.WndBag;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -51,22 +53,21 @@ public class Weightstone extends Item {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_APPLY );
 		return actions;
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
 
-			setUser(hero);
-			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.Weightstone_Select) );
+			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.Weightstone_Select));
 			
 		} else {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}
@@ -82,8 +83,9 @@ public class Weightstone extends Item {
 	}
 	
 	private void apply( Weapon weapon, boolean forSpeed ) {
+		Char owner = getOwner();
 		
-		detach( getUser().getBelongings().backpack );
+		detach( owner.getBelongings().backpack );
 		
 		if (forSpeed) {
 			weapon.imbue = Weapon.Imbue.SPEED;
@@ -93,11 +95,11 @@ public class Weightstone extends Item {
 			GLog.p( Game.getVar(R.string.Weightstone_Accurate), weapon.name() );
 		}
 		
-		getUser().getSprite().operate( getUser().getPos() );
+		owner.getSprite().operate( owner.getPos() );
 		Sample.INSTANCE.play( Assets.SND_MISS );
 		
-		getUser().spend( TIME_TO_APPLY );
-		getUser().busy();
+		owner.spend( TIME_TO_APPLY );
+		owner.busy();
 	}
 	
 	@Override
@@ -105,7 +107,7 @@ public class Weightstone extends Item {
 		return 40 * quantity();
 	}
 	
-	private final WndBag.Listener itemSelector = item -> {
+	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
 			GameScene.show( new WndBalance( (Weapon)item ) );
 		}

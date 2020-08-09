@@ -2,23 +2,18 @@ package com.nyrds.pixeldungeon.support;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.RemixedDungeon;
-import com.watabou.pixeldungeon.utils.Utils;
 
 class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider {
 
-    private static final String APPODEAL_REWARD_VIDEO = "appodeal_reward_video";
     private static InterstitialPoint returnTo;
-    private static boolean firstLoad = true;
 
     public static void init() {
 
         Game.instance().runOnUiThread(() -> {
             AppodealAdapter.init();
-            EventCollector.startTrace(APPODEAL_REWARD_VIDEO);
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
@@ -27,18 +22,10 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoLoaded(boolean b) {
-                    if(firstLoad) {
-                        firstLoad = false;
-                        EventCollector.stopTrace(APPODEAL_REWARD_VIDEO, APPODEAL_REWARD_VIDEO, "ok", Utils.EMPTY_STRING);
-                    }
                 }
 
                 @Override
                 public void onRewardedVideoFailedToLoad() {
-                    if(firstLoad) {
-                        firstLoad = false;
-                        EventCollector.stopTrace(APPODEAL_REWARD_VIDEO, APPODEAL_REWARD_VIDEO, "fail", Utils.EMPTY_STRING);
-                    }
                 }
 
                 @Override
@@ -51,8 +38,8 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
                 }
 
                 @Override
-                public void onRewardedVideoFinished(double v, String s) {
-
+                public void onRewardedVideoFinished(double amount, String name) {
+                    returnTo.returnToWork(true);
                 }
 
                 @Override
@@ -66,6 +53,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoClicked() {
+                    returnTo.returnToWork(true);
                 }
             });
         });

@@ -172,7 +172,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             return;
         }
 
-        GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
+        GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
     }
 
     @Override
@@ -180,7 +180,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         if (Dungeon.hero.spellUser) {
             GameScene.selectSpell(this);
         } else {
-            GameScene.selectItem(this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
+            GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
         }
         return true;
     }
@@ -253,14 +253,14 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         item(quickslotItem);
     }
 
-    public static void refresh() {
-        Game.pushUiTask(() -> {
-            if(Dungeon.hero != null) {
-                for (QuickSlot slot : slots) {
-                    slot.refreshSelf();
-                }
-            }
-        });
+    private static boolean refreshRequested;
+
+    public static void refresh(Char owner) {
+        if(owner!=Dungeon.hero) {
+            return;
+        }
+
+        refreshRequested = true;
     }
 
     public static void target(Item item, Char target) {
@@ -343,32 +343,32 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                 selectItem(ItemFactory.itemByName(classes[i]).quickSlotContent(), i);
             }
         }
-        refresh();
+        refresh(Dungeon.hero);
     }
 
     public static void selectItem(Item object, int n) {
         if (n < slots.size()) {
             QuickSlot slot = slots.get(n);
             slot.quickslotItem(object);
-            slot.onSelect(slot.quickslotItem);
+            slot.onSelect(slot.quickslotItem, Dungeon.hero);
         } else {
             qsStorage.put(n, object);
         }
     }
 
     @Override
-    public void onSelect(Item item) {
+    public void onSelect(Item item, Char selector) {
         if (item != null) {
             quickslotItem(item.quickSlotContent());
-            refresh();
+            refresh(selector);
         }
     }
 
     @Override
-    public void onSelect(Spell.SpellItem spell) {
+    public void onSelect(Spell.SpellItem spell, Char hero) {
         if (spell != null) {
             quickslotItem(spell);
-            refresh();
+            refresh(hero);
         }
     }
 
@@ -393,5 +393,19 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     public Item getQuickslotItem() {
         return quickslotItem;
+    }
+
+    @Override
+    public void update() {
+        super.update();
+
+        if(refreshRequested) {
+            if(Dungeon.hero != null) {
+                for (QuickSlot slot : slots) {
+                    slot.refreshSelf();
+                }
+            }
+            refreshRequested = false;
+        }
     }
 }

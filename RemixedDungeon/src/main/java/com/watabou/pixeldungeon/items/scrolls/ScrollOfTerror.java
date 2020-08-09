@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -30,21 +31,23 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfTerror extends Scroll {
 
 	@Override
-	protected void doRead() {
-		
-		new Flare( 5, 32 ).color( 0xFF0000, true ).show( getUser().getSprite(), 2f );
+	protected void doRead(@NotNull Char reader) {
+
+		new Flare( 5, 32 ).color( 0xFF0000, true ).show( reader.getSprite(), 2f );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(reader);
 		
 		int count = 0;
 		Mob affected = null;
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {
 				Terror terror = Buff.affect( mob, Terror.class, Terror.DURATION );
-				terror.source = getUser();
+				terror.source = reader;
 				
 				count++;
 				affected = mob;
@@ -62,8 +65,8 @@ public class ScrollOfTerror extends Scroll {
 			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info3));
 		}
 		setKnown();
-		
-		getUser().spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 	
 	@Override

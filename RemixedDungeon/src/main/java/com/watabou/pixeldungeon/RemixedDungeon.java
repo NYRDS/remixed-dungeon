@@ -60,7 +60,7 @@ public class RemixedDungeon extends Game {
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
-		
+
 		// remix 0.5
 		com.watabou.utils.Bundle.addAlias(
 				com.watabou.pixeldungeon.items.food.Ration.class,

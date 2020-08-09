@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -31,26 +32,25 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
-import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.val;
+
 public class Statue extends Mob {
-	
-	protected Weapon weapon;
-	
+
 	public Statue() {
 		exp = 0;
 		setState(MobAi.getStateByClass(Passive.class));
@@ -65,68 +65,32 @@ public class Statue extends Mob {
 		addImmunity( Leech.class );
 		addImmunity(Bleeding.class);
 	}
-	
-	private static final String WEAPON	= "weapon";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( WEAPON, getWeapon());
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		weapon = (Weapon)bundle.get( WEAPON );
-	}
-	
+
 	@Override
     public boolean act() {
 		if (!isPet() && CharUtils.isVisible(this)) {
-			Journal.add( Journal.Feature.STATUE.desc() );
+			Journal.add( R.string.Journal_Statue );
 		}
 		return super.act();
 	}
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( getWeapon().MIN, getWeapon().MAX );
+		return Random.NormalIntRange( Dungeon.depth/4, Dungeon.depth );
 	}
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return (int)((9 + Dungeon.depth) * getWeapon().ACU);
-	}
-	
-	@Override
-	protected float _attackDelay() {
-		return getWeapon().DLY;
-	}
-	
-	@Override
-	public int dr() {
-		return Dungeon.depth;
+		return (9 + Dungeon.depth);
 	}
 
 	@Override
-	public int attackProc(@NotNull Char enemy, int damage ) {
-		getWeapon().attackProc( this, enemy, damage );
-		return damage;
-	}
-	
-	@Override
 	public void beckon( int cell ) {
 	}
-	
-	@Override
-	public void die(NamedEntityKind cause) {
-		Dungeon.level.drop(getWeapon(), getPos() ).sprite.drop();
-		super.die( cause );
-	}
-	
+
 	@Override
 	public void destroy() {
-		Journal.remove( Journal.Feature.STATUE.desc() );
+		Journal.remove( R.string.Journal_Statue );
 		super.destroy();
 	}
 	
@@ -138,30 +102,45 @@ public class Statue extends Mob {
 
 	@Override
 	public String description() {
-		return Utils.format(Game.getVar(R.string.Statue_Desc), getWeapon().name());
+		val item = getItem();
+
+		if(ItemUtils.usableAsWeapon(item)) {
+			return Utils.format(Game.getVar(R.string.Statue_Desc), getItem().name());
+		}
+
+		if(ItemUtils.usableAsArmor(item)) {
+			return Utils.format(Game.getVar(R.string.ArmoredStatue_Desc), getItem().name());
+		}
+
+		throw new TrackedRuntimeException("Can't equip statue with " + item.getEntityKind());
 	}
 
 	@Override
 	public CharSprite sprite() {
-		if(getWeapon() ==null) {
-			weapon = new Dagger();
-			EventCollector.logException("no weapon");
-		}
-
-		return HeroSpriteDef.createHeroSpriteDef(getWeapon());
+		return HeroSpriteDef.createHeroSpriteDef(getItem());
 	}
 
-	public Weapon getWeapon() {
-		if(weapon==null) {
+	@NotNull
+	public EquipableItem getItem() {
+		if(getBelongings().weapon==CharsList.DUMMY_ITEM) {
 			Item weaponCandidate;
 			do {
 				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
-			} while (!(weaponCandidate instanceof MeleeWeapon) || weaponCandidate.level() < 0);
-			weapon = (Weapon) weaponCandidate;
+			} while (!(weaponCandidate instanceof EquipableItem)
+					||!(((EquipableItem) weaponCandidate).goodForMelee())
+					|| !ItemUtils.usableAsWeapon((EquipableItem) weaponCandidate)
+					|| weaponCandidate.level() < 0
+					|| weaponCandidate instanceof MissileWeapon
+			);
+			EquipableItem chosenItem = ((EquipableItem) weaponCandidate);
+			chosenItem.identify();
 
-			weapon.identify();
-			weapon.enchant( Enchantment.random() );
+			if(chosenItem instanceof MeleeWeapon) {
+				((MeleeWeapon) chosenItem).enchant(Enchantment.random());
+			}
+
+			chosenItem.doEquip(this);
 		}
-		return weapon;
+		return getBelongings().weapon;
 	}
 }

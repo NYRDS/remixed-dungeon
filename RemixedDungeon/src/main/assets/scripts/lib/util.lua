@@ -8,17 +8,36 @@ local util = {}
 
 
 ---@param tbl table
-function util.clone_table(tbl)
+local function table_clone(tbl)
     local ret = {}
 
     for k,v in pairs(tbl) do
         if type(v)=="table" then
-            ret[k] = util.clone_table(v)
+            ret[k] = table_clone(v)
         else
             ret[k] = v
         end
     end
     return ret
 end
+
+local function table_foreach_deep(tbl, action, level)
+    local ret = {}
+
+    level = level or 0
+
+    for k,v in pairs(tbl) do
+        if type(v)=="table" then
+            table_foreach_deep(v, action)
+        else
+            action(k,v, level)
+        end
+    end
+    return ret
+end
+
+util.table_clone        = table_clone
+util.table_foreach_deep = table_foreach_deep
+
 
 return util

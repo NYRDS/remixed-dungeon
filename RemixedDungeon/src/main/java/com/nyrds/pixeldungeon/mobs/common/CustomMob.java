@@ -14,13 +14,15 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
+
+import java.util.ArrayList;
 
 import lombok.SneakyThrows;
 
@@ -125,6 +127,23 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
+	@Override
+	public void execute(Char chr, String action) {
+		super.execute(chr,action);
+		script.run("executeAction", chr, action);
+	}
+
+	@Override
+	public ArrayList<String> actions(Char hero) {
+		ArrayList<String> actions = super.actions(hero);
+
+		LuaValue ret = script.run("actionsList", hero);
+		LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
+
+		return actions;
+	}
+
+
 	@SneakyThrows
 	private void fillMobStats(boolean restoring) {
 		JSONObject classDesc = getClassDef();
@@ -157,8 +176,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			loot = ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot"));
 		}
 
-		viewDistance = classDesc.optInt("viewDistance",viewDistance);
-		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
+		setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));
 
 		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
 

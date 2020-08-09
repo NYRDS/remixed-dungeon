@@ -17,30 +17,35 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 
 public class Bandit extends Thief {
 
 	@Override
-	protected boolean steal( Hero hero ) {
-		if (super.steal( hero )) {
-			
-			Buff.prolong( getEnemy(), Blindness.class, Random.Int( 5, 12 ) );
-			Dungeon.observe();
-			
-			return true;
-		} else {
-			return false;
+	public int attackProc(@NotNull Char enemy, int damage) {
+		if (CharUtils.steal(this, enemy)) {
+			setState(MobAi.getStateByClass(ThiefFleeing.class));
+			Buff.prolong(getEnemy(), Blindness.class, Random.Int(5, 12));
+
+			if(enemy==Dungeon.hero) {
+				Dungeon.observe();
+			}
 		}
+		return damage;
 	}
-	
+
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die( cause );

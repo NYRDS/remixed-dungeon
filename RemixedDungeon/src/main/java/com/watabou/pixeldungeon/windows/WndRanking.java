@@ -18,9 +18,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
@@ -244,25 +246,15 @@ public class WndRanking extends WndTabbed {
 			add(list);
 
 			Belongings stuff = Dungeon.hero.getBelongings();
-			if (stuff.weapon != null) {
-				addItem( stuff.weapon );
-			}
-			if (stuff.armor != null) {
-				addItem( stuff.armor );
-			}
-			if (stuff.leftHand != null) {
-				addItem( stuff.leftHand );
-			}
-			if (stuff.ring1 != null) {
-				addItem( stuff.ring1 );
-			}
-			if (stuff.ring2 != null) {
-				addItem( stuff.ring2 );
-			}
-			
+			addItem( stuff.weapon );
+			addItem( stuff.leftHand );
+			addItem( stuff.armor );
+			addItem( stuff.ring1 );
+			addItem( stuff.ring2 );
+
 			for(int i = 0;i<25;++i) {
 				Item qsItem = QuickSlot.getEarlyLoadItem(i);
-				if(qsItem != null && (stuff.backpack.contains(qsItem) || qsItem instanceof Spell.SpellItem)){
+				if(stuff.backpack.contains(qsItem) || (qsItem instanceof Spell.SpellItem)){
 					addItem(qsItem);
 				}
 			}
@@ -273,8 +265,12 @@ public class WndRanking extends WndTabbed {
 		}
 		
 		private void addItem( Item item ) {
+			if(item== CharsList.DUMMY_ITEM) {
+				return;
+			}
+
 			ItemButton slot = new ItemButton( item );
-			slot.setRect( 0, posY, width, ItemButton.HEIGHT );
+			slot.setRect( 0, posY, width, ItemButton.SIZE);
 			list.content().add( slot );
 			
 			posY += slot.height() + 1;
@@ -297,7 +293,7 @@ public class WndRanking extends WndTabbed {
 	
 	private class ItemButton extends Button {
 		
-		public static final int HEIGHT	= 23;
+		public static final int SIZE = 23;
 		
 		private Item item;
 		
@@ -306,25 +302,16 @@ public class WndRanking extends WndTabbed {
 		private Text name;
 		
 		public ItemButton( Item item ) {
-			
 			super();
-
 			this.item = item;
-			
 			slot.item( item );
-			if (item.cursed && item.cursedKnown) {
-				bg.ra = +0.2f;
-				bg.ga = -0.1f;
-			} else if (!item.isIdentified()) {
-				bg.ra = 0.1f;
-				bg.ba = 0.1f;
-			}
+			ItemUtils.tintBackground(item,bg);
 		}
 		
 		@Override
 		protected void createChildren() {	
 			
-			bg = new ColorBlock( HEIGHT, HEIGHT, 0xFF4A4D44 );
+			bg = new ColorBlock(SIZE, SIZE, 0xFF4A4D44 );
 			add( bg );
 			
 			slot = new ItemSlot();
@@ -341,12 +328,12 @@ public class WndRanking extends WndTabbed {
 			bg.x = x;
 			bg.y = y;
 			
-			slot.setRect( x, y, HEIGHT, HEIGHT );
+			slot.setRect( x, y, SIZE, SIZE);
 
 			hotArea.x = x;
 			hotArea.y = y;
-			hotArea.width = HEIGHT;
-			hotArea.height = HEIGHT;
+			hotArea.width = SIZE;
+			hotArea.height = SIZE;
 
 			name.x = slot.right() + 2;
 			name.y = y + (height - name.baseLine()) / 2;

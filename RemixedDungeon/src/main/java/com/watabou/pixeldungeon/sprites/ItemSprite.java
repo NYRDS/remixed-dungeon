@@ -50,7 +50,7 @@ public class ItemSprite extends MovieClip {
 
 	protected TextureFilm film;
 
-	public Heap heap;
+	protected Heap heap;
 
 	@Nullable
 	private Glowing glowing;
@@ -73,13 +73,11 @@ public class ItemSprite extends MovieClip {
 
 	public ItemSprite(String file, int imageIndex, Glowing glowing) {
 		super();
-
 		view(file, imageIndex, glowing);
 	}
 
 	public ItemSprite(Heap heap) {
 		super();
-
 		link(heap);
 	}
 
@@ -89,17 +87,25 @@ public class ItemSprite extends MovieClip {
 	}
 
 	protected void originToCenter() {
-		origin.set(SIZE / 2);
+		origin.set(scale.x * SIZE / 2, scale.y * SIZE / 2);
 	}
 
 	public void link() {
 		link(heap);
 	}
 
-	public void link(Heap heap) {
+	public void link(@NotNull Heap heap) {
 		this.heap = heap;
+		float scale = heap.scale();
+		setScale(scale, scale);
 		view(heap.imageFile(), heap.image(), heap.glowing());
 		place(heap.pos);
+	}
+
+	@Override
+	public void kill() {
+		super.kill();
+		heap = null;
 	}
 
 	@Override
@@ -113,12 +119,13 @@ public class ItemSprite extends MovieClip {
 		heap = null;
 	}
 
-	private PointF worldToCamera(int cell) {
+
+	protected PointF worldToCamera(int cell) {
 		final int csize = DungeonTilemap.SIZE;
 
 		return new PointF(
-				Dungeon.level.cellX(cell) * csize + (csize - SIZE) * 0.5f,
-				Dungeon.level.cellY(cell) * csize + (csize - SIZE) * 0.5f
+				Dungeon.level.cellX(cell) * csize + (csize - SIZE * scale.x) * 0.5f,
+				Dungeon.level.cellY(cell) * csize + (csize - SIZE * scale.y) * 0.5f
 		);
 	}
 
@@ -127,7 +134,6 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public void drop() {
-
 		if (heap != null && heap.isEmpty()) {
 			return;
 		}
@@ -144,22 +150,18 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public void drop(int from) {
-
 		if (heap!= null && heap.pos == from) {
 			drop();
 		} else {
-
 			float px = x;
 			float py = y;
 			drop();
-
 			place(from);
-
 			speed.offset((px - x) / DROP_INTERVAL, (py - y) / DROP_INTERVAL);
 		}
 	}
 
-	public ItemSprite view(Item item) {
+	public ItemSprite view(@NotNull Item item) {
 
 		if(item.overlayIndex()>=0) {
 			overlay = new Image(item.overlayFile(),16,item.overlayIndex());
@@ -205,15 +207,11 @@ public class ItemSprite extends MovieClip {
 		if (getVisible())
 			if (glowing != null) {
 				if (glowUp && (phase += Game.elapsed) > glowing.period) {
-
 					glowUp = false;
 					phase = glowing.period;
-
 				} else if (!glowUp && (phase -= Game.elapsed) < 0) {
-
 					glowUp = true;
 					phase = 0;
-
 				}
 
 				float value = phase / glowing.period * 0.6f;
@@ -228,7 +226,6 @@ public class ItemSprite extends MovieClip {
 	@Override
 	public void draw() {
 		super.draw();
-
 
 		if(overlay != null) {
 			NoosaScript script = NoosaScript.get();

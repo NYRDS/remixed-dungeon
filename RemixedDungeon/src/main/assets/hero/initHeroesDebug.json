@@ -6,7 +6,7 @@
     },
     "items": [
       {
-        "kind": "Gold",
+        "kind": "TomeOfKnowledge",
         "quantity": 100
       },
       {
@@ -15,16 +15,16 @@
         "level": 1000
       },
       {
-        "kind": "ScrollOfUpgrade",
+        "kind": "ScrollOfMagicMapping",
         "quantity": 100,
         "level": 10
       },
       {
-        "kind": "PotionOfStrength",
+        "kind": "PotionOfInvisibility",
         "quantity": 100
       },
       {
-        "kind": "Sorrowmoss.Seed",
+        "kind": "ScrollOfDomination",
         "quantity": 100
       },
       {
@@ -34,7 +34,7 @@
         "kind": "WoodenShield"
       },
       {
-        "kind": "Longsword"
+        "kind": "WandHolster"
       },
       {
         "kind": "LloydsBeacon"
@@ -43,17 +43,18 @@
         "kind": "TomeOfMastery"
       },
       {
-        "kind": "ShortSword"
+        "kind": "BattleAxe"
       },
       {
-        "kind": "Sword"
+        "kind": "Gold",
+        "quantity": 10000
       },
       {
         "kind": "Mace"
       },
 
       {
-        "kind": "WandOfFirebolt"
+        "kind": "WandOfPoison"
       },
 
       {
@@ -74,7 +75,8 @@
     "hp": 20000000,
     "magicAffinity": "Common",
     "sp": 10,
-    "maxSp": 10
+    "maxSp": 10,
+    "sl" : 2
   },
   "non_expert": {
     "items": [

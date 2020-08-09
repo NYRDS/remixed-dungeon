@@ -6,11 +6,9 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.utils.Utils;
 
 /**
  * Created by mike on 30.01.2017.
@@ -19,7 +17,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
-	private static final String GOOGLE_REWARD_VIDEO = "google_reward_video";
 	private static RewardedVideoAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
 
@@ -31,8 +28,6 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	@MainThread
 	private void loadNextVideo() {
-		EventCollector.startTrace(GOOGLE_REWARD_VIDEO);
-
 		mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
 		mCinemaRewardAd.setRewardedVideoAdListener(new RewardVideoAdListener());
 		mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
@@ -51,43 +46,53 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	private class RewardVideoAdListener implements RewardedVideoAdListener {
 
-		private boolean videoCompleted = false;
+		private boolean rewarded = false;
 
 		@Override
 		public void onRewardedVideoAdLoaded() {
-			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"ok", Utils.EMPTY_STRING);
-			videoCompleted = false;
+			//GLog.i("onRewardedVideoAdLoaded");
 		}
 
 		@Override
-		public void onRewardedVideoAdOpened() { }
+		public void onRewardedVideoAdOpened() {
+			rewarded = false;
+			//GLog.i("onRewardedVideoAdOpened");
+		}
 
 		@Override
-		public void onRewardedVideoStarted() { }
+		public void onRewardedVideoStarted() {
+			rewarded = false;
+			//GLog.i("onRewardedVideoStarted");
+		}
 
 		@Override
 		public void onRewardedVideoAdClosed() {
 			Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
-			Game.pushUiTask(() -> returnTo.returnToWork(videoCompleted));
+			returnTo.returnToWork(rewarded);
 		}
 
 		@Override
 		public void onRewarded(RewardItem rewardItem) {
-			videoCompleted = true;
+			//GLog.i("onRewarded %s", rewardItem);
+			returnTo.returnToWork(true);
 		}
 
 		@Override
 		public void onRewardedVideoAdLeftApplication() {
+			//GLog.i("onRewardedVideoAdLeftApplication");
+			returnTo.returnToWork(true);
 		}
 
 		@Override
 		public void onRewardedVideoAdFailedToLoad(int i) {
-			EventCollector.stopTrace(GOOGLE_REWARD_VIDEO, GOOGLE_REWARD_VIDEO,"fail", Utils.EMPTY_STRING);
+			//GLog.i("onRewardedVideoFailedToLoad %d", i);
 		}
 
 		@Override
-		public void onRewardedVideoCompleted() {
-			videoCompleted = true;
+		public void onRewardedVideoCompleted()
+		{
+			rewarded = true;
+			//GLog.i("onRewardedVideoCompleted");
 		}
 	}
 

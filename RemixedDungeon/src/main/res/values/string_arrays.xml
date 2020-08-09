@@ -45,6 +45,14 @@
     <item>@string/Char_Hit_1</item>
     <item>@string/Char_Hit_2</item>
   </string-array>
+
+  <string-array name="Char_Stole">
+    <item>@string/Char_Stole_0</item>
+    <item>@string/Char_Stole_1</item>
+    <item>@string/Char_Stole_2</item>
+  </string-array>
+
+
   <string-array name="Char_Kill">
     <item>@string/Char_Kill_0</item>
     <item>@string/Char_Kill_1</item>

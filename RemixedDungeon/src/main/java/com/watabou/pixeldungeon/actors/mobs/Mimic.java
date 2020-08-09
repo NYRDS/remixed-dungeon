@@ -21,7 +21,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -36,12 +35,10 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Mimic extends Mob implements IDepthAdjustable {
@@ -51,23 +48,6 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	public Mimic() {
 		addImmunity(ScrollOfPsionicBlast.class);
 		adjustStats(Dungeon.depth);
-	}
-
-	@NotNull
-	public ArrayList<Item> items = new ArrayList<>();
-
-	private static final String ITEMS = "items";
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		bundle.put(ITEMS, items);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		items.addAll(bundle.getCollection(ITEMS, Item.class));
 	}
 
 	@Override
@@ -85,8 +65,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		if (enemy == Dungeon.hero && Random.Int(3) == 0) {
 			int gp = Random.Int(1, hp());
 			if (gp > 0) {
-				Gold gold = new Gold(gp);
-				Dungeon.level.drop(gold, getPos()).sprite.drop();
+				new Gold(gp).doDrop(this);
 			}
 		}
 		return super.attackProc(enemy, damage);
@@ -100,16 +79,6 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		defenseSkill = attackSkill(null) / 2;
 
 		enemySeen = true;
-	}
-
-	@Override
-	public void die(NamedEntityKind cause) {
-
-		super.die(cause);
-
-		for (Item item : items) {
-			Dungeon.level.drop(item, getPos()).sprite.drop();
-		}
 	}
 
 	@Override
@@ -137,7 +106,10 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		}
 
 		Mimic m = new Mimic();
-		m.items.addAll(items);
+
+		for(Item item:items) {
+			m.collect(item);
+		}
 		m.hp(m.ht());
 		m.setPos(pos);
 		m.setState(MobAi.getStateByClass(Hunting.class));

@@ -46,7 +46,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
@@ -207,7 +206,7 @@ public class Dungeon {
     }
 
     @NotNull
-    public static Level newLevel(Position pos) {
+    public static Level newLevel(@NotNull Position pos) {
         try {
             loading.incrementAndGet();
             updateStatistics();
@@ -292,8 +291,6 @@ public class Dungeon {
         } else {
             hero.setPos(level.entrance);
         }
-
-        hero.viewDistance = hero.hasBuff(Light.class) ? Math.max(Level.MIN_VIEW_DISTANCE + 1, level.getViewDistance()) : level.getViewDistance();
 
         for(Mob mob : followers) {
                 int cell = level.getEmptyCellNextTo(hero.getPos());
@@ -451,8 +448,6 @@ public class Dungeon {
         }
 
         if (level != null && hero!= null && hero.isAlive()) {
-            EventCollector.startTrace("saveGame");
-
             Level thisLevel = Dungeon.level;
 
             Actor.fixTime();
@@ -477,8 +472,6 @@ public class Dungeon {
 
             GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
 
-            EventCollector.stopTrace("saveGame", "saveGame", level.levelId, Game.version);
-
         } else if (WndResurrect.instance != null) {
 
             WndResurrect.instance.hide();
@@ -496,9 +489,9 @@ public class Dungeon {
                 current.levelId);
     }
 
-    public synchronized static void save() {
+    public synchronized static void save(boolean force) {
 
-        if (SystemTime.now() - lastSaveTimestamp < 1000) {
+        if (!force && SystemTime.now() - lastSaveTimestamp < 1000) {
             return;
         }
 
@@ -690,20 +683,18 @@ public class Dungeon {
     }
 
     public static void win(String desc, gameOver kind) {
-
         if (getChallenges() != 0) {
             Badges.validateChampion();
         }
-
         Rankings.INSTANCE.submit(kind, desc);
     }
 
+
     public static void observe() {
+        GameScene.observeRequest();
+    }
 
-        if (isLoading()) {
-            return;
-        }
-
+    public static void observeImpl() {
         level.updateFieldOfView(hero.getControlTarget());
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
 
@@ -883,5 +874,9 @@ public class Dungeon {
     public static void setChallenges(int challenges) {
         EventCollector.collectSessionData("challenges",String.valueOf(challenges));
         Dungeon.challenges = challenges;
+    }
+
+    public static boolean isPathVisible(int from, int to) {
+        return visible[from] || visible[to];
     }
 }

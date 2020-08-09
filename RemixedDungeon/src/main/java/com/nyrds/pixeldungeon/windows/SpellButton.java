@@ -14,11 +14,12 @@ class SpellButton extends Button {
     private final Char caster;
     private final Image image;
 
+
     protected ColorBlock bg;
     protected ColorBlock cooldownMeter;
 
     public SpellButton(WndHeroSpells wndHeroSpells, Char caster, Spell spell) {
-        this.image = spell.image();
+        this.image = spell.image(caster);
         this.wndHeroSpells = wndHeroSpells;
         this.spell = spell;
         this.caster = caster;
@@ -31,7 +32,7 @@ class SpellButton extends Button {
 
         add(image);
 
-        cooldownMeter = new ColorBlock(width, height, 0xff000000);
+        cooldownMeter = new ColorBlock(width, height, 0x7f000000);
         add(cooldownMeter);
     }
 
@@ -63,5 +64,4 @@ class SpellButton extends Button {
         QuickSlot.selectSlotFor(spell.itemForSlot());
         return true;
     }
-
 }

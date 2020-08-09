@@ -151,7 +151,7 @@ public class Random {
 	
 	@Nullable
 	@SuppressWarnings("unchecked")
-	public static<T> T element( Collection<? extends T> collection ) {
+	public static<T> T element(@NotNull Collection<? extends T> collection ) {
 		int size = collection.size();
 		return size > 0 ? 
 			(T)collection.toArray()[Int( size )] : 

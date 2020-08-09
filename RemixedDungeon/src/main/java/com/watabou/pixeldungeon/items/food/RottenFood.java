@@ -6,18 +6,20 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 abstract public class RottenFood extends Food{
 	{
@@ -54,23 +56,23 @@ abstract public class RottenFood extends Food{
 	}
 	
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		
-		super.execute( hero, action );
+		super.execute(chr, action );
 		
 		if (action.equals( CommonActions.AC_EAT )) {
 			GLog.w(message);
-			molder(hero.getPos());
+			molder(chr.getPos());
 		}
 	}
 	
 	@Override
-	protected void onThrow( int cell ) {
+	protected void onThrow(int cell, Char thrower) {
 	   if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
-			super.onThrow( cell );
+			super.onThrow( cell, thrower);
 		} else  {
 			if(! molder( cell )){
-				super.onThrow(cell);
+				super.onThrow(cell, thrower);
 			}
 		}
 	}

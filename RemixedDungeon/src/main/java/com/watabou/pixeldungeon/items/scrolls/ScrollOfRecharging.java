@@ -27,27 +27,29 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.particles.EnergyParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ScrollOfRecharging extends Scroll {
 	
 	@Override
-	protected void doRead() {
-		
-		int count = getUser().getBelongings().charge( true );
-		charge( getUser() );
+	protected void doRead(@NotNull Char reader) {
+
+		int count = reader.getBelongings().charge( true );
+		charge( reader );
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(getUser());
+		Invisibility.dispel(reader);
 		
 		if (count > 0) {
 			GLog.i((count > 1 ? Game.getVar(R.string.ScrollOfRecharging_Info1b) 
 					          : Game.getVar(R.string.ScrollOfRecharging_Info1a)) );
-			SpellSprite.show( getUser(), SpellSprite.CHARGE );
+			SpellSprite.show( reader, SpellSprite.CHARGE );
 		} else {
 			GLog.i(Game.getVar(R.string.ScrollOfRecharging_Info2));
 		}
 		setKnown();
-		
-		getUser().spendAndNext( TIME_TO_READ );
+
+		reader.spendAndNext( TIME_TO_READ );
 	}
 
 	public static void charge(Char hero ) {

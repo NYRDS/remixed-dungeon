@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
   <string name="ChaosHelmet_Name">Casco del caos</string>
-  <string name="ChaosHelmet_Info">Un casco de color rojo sangre. Un gran símbolo de un guerreo del caos.</string>
+  <string name="ChaosHelmet_Info">Un casco de color rojo sangre. Un gran símbolo de un guerrero del caos.</string>
   <string name="Spells_SummonLimitReached">¡%1$s: Límite de invocación alcanzado (Máximo actual: %2$d)!</string>
   <string name="Mana_Title">Mana</string>
   <string name="Mana_Cost">Costo de Mana:</string>
@@ -2273,18 +2273,6 @@
   <string name="town_deco_stones_desc">Solo una pila de piedras.</string>
   <string name="town_deco_fireplace_name">Fogata</string>
   <string name="town_deco_fireplace_desc">Genial para calentarse en un lugar frío como este.</string>
-  <string name="Welcome_Text_28_6">
-    remix.28.6\n
-    - Mecánicas del juego:\n
-    -- Habilidades especiales del Guerrero!\n
-    -- El hambre de los héroes se ha reducido\n
-    -- Hechizo de Posesión del Nigromante\n
-    -- Habilidad de Ocultarse del Ladrón\n
-    -- Nuevas insignias\n
-    - Modding:\n
-    -- Buffs programables customizables\n
-    -- GFX customizables\n
-    </string>
   <string name="Badges_GamesPlayed5">5000 partidas jugadas</string>
   <string name="Badges_PotionsCooked5">25 pociones cocinadas</string>
   <string name="Badges_ItemLvl5">Objeto de nivel 15 adquirido</string>
@@ -2295,10 +2283,6 @@
   <string name="Badges_MonsterSlain5">1000 enemigos asesinados</string>
   <string name="Spells_NotInOwnBody">No puedes realizar %s mientras tu alma se encuentra separada de tu cuerpo.</string>
   <string name="WndHero_Satiety">Saciedad</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - Renovación del pueblo!\n
-    </string>
   <string name="Ring_Gems_0">de diamante</string>
   <string name="Ring_Gems_1">de ópalo</string>
   <string name="Ring_Gems_2">de granate</string>
@@ -2558,4 +2542,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     - Errores corregidos\n
     </string>
   <string name="ShieldStrTemplate">El portador del escudo debe tener al menos %1$d puntos de Fuerza para usarlo apropiadamente.</string>
+  <string name="town_deco_flowerinthepot_name">Flor en una maceta</string>
+  <string name="town_deco_flowerinthepot_desc">Flor decorativa con sabor dulce</string>
+  <string name="TownPortal_Name">Portal a la ciudad.</string>
 </resources>

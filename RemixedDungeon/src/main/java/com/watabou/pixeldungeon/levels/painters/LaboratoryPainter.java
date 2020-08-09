@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.actors.blobs.Alchemy;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.potions.Potion;
@@ -61,7 +63,7 @@ public class LaboratoryPainter extends Painter {
 			} while (
 				level.map[pos] != Terrain.EMPTY_SP || 
 				level.getHeap( pos ) != null);
-			level.drop( prize( level ), pos );
+			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		
 		entrance.set( Room.Door.Type.LOCKED );
@@ -73,7 +75,7 @@ public class LaboratoryPainter extends Painter {
 		Item prize = level.itemToSpanAsPrize();
 		if (prize instanceof Potion) {
 			return prize;
-		} else if (prize != null) {
+		} else if (prize != CharsList.DUMMY_ITEM) {
 			level.addItemToSpawn( prize );
 		}
 		

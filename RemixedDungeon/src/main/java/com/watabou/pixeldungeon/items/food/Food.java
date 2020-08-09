@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.items.food;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -38,7 +40,7 @@ abstract public class Food extends Item {
 	}
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( CommonActions.AC_EAT );
 		return actions;
@@ -46,11 +48,11 @@ abstract public class Food extends Item {
 
 
 	@Override
-	public void execute( Hero hero, String action ) {
+	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
-			hero.eat(this, energy, message);
+			chr.eat(this, energy, message);
 		} else {
-			super.execute( hero, action );
+			super.execute(chr, action );
 		}
 	}
 

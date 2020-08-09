@@ -34,7 +34,7 @@ import org.jetbrains.annotations.NotNull;
 public class Bounce extends Glyph {
 
 	@Override
-	public int proc(Armor armor, @NotNull Char attacker, Char defender, int damage) {
+	public int defenceProc(Armor armor, @NotNull Char attacker, Char defender, int damage) {
 
 		int armorLevel = Math.max( 0, armor.level() );
 

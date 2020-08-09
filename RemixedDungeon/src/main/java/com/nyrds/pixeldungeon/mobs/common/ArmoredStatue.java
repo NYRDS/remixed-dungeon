@@ -2,76 +2,25 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Bleeding;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.Statue;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
-import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-public class ArmoredStatue extends Mob {
+import lombok.val;
 
-	private Armor armor;
+public class ArmoredStatue extends Statue {
 
 	public ArmoredStatue() {
-		exp = 0;
-		setState(MobAi.getStateByClass(Passive.class));
 		defenseSkill = 4 + Dungeon.depth*2;
-
-		hp(ht(15 + Dungeon.depth * 5));
-
-		addImmunity( ToxicGas.class );
-		addImmunity( Poison.class );
-		addResistance( Death.class );
-		addResistance( ScrollOfPsionicBlast.class );
-		addImmunity( Leech.class );
-		addImmunity( Bleeding.class );
-	}
-
-
-	private static final String ARMOR	= "armor";
-
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		bundle.put( ARMOR, getArmor());
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		armor = (Armor) bundle.get( ARMOR );
-	}
-	
-	@Override
-    public boolean act() {
-		if (!isPet() && CharUtils.isVisible(this)) {
-			Journal.add( Journal.Feature.STATUE.desc() );
-		}
-		return super.act();
-	}
-
-	@Override
-	public int dr() {
-		return Dungeon.depth + getArmor().DR;
 	}
 
 	@Override
@@ -85,55 +34,38 @@ public class ArmoredStatue extends Mob {
 	}
 
 	@Override
-	public int defenseProc(Char enemy, int damage) {
-		damage = super.defenseProc(enemy, damage);
-		return getArmor().proc(enemy, this, damage);
-	}
-
-	@Override
 	public void beckon( int cell ) {
 	}
-	
-	@Override
-	public void die(NamedEntityKind cause) {
-		Dungeon.level.drop(getArmor(), getPos() ).sprite.drop();
-		super.die( cause );
-	}
-	
-	@Override
-	public void destroy() {
-		Journal.remove( Journal.Feature.STATUE.desc() );
-		super.destroy();
-	}
-	
+
 	@Override
 	public boolean reset() {
 		setState(MobAi.getStateByClass(Passive.class));
 		return true;
 	}
 
-	@Override
-	public String description() {
-		return Utils.format(Game.getVar(R.string.ArmoredStatue_Desc), getArmor().name());
-	}
-
-	@Override
-	public CharSprite sprite() {
-		return HeroSpriteDef.createHeroSpriteDef(getArmor());
-	}
 
 	@NotNull
-	public Armor getArmor() {
-		if(armor==null) {
+    @Override
+	public EquipableItem getItem() {
+		if(getBelongings().armor == CharsList.DUMMY_ITEM) {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
-			} while (!(armorCandidate instanceof Armor) || armorCandidate.level() < 0);
+			} while (!(armorCandidate instanceof EquipableItem)
+						|| armorCandidate.level() < 0
+						|| !(ItemUtils.usableAsArmor((EquipableItem) armorCandidate))
+					);
 
-			armor = (Armor) armorCandidate;
+
+			val armor = (EquipableItem)armorCandidate;
 			armor.identify();
-			armor.inscribe(Armor.Glyph.random());
+
+			if(armor instanceof Armor) {
+				((Armor)armor).inscribe(Armor.Glyph.random());
+			}
+
+			armor.doEquip(this);
 		}
-		return armor;
+		return getBelongings().armor;
 	}
 }

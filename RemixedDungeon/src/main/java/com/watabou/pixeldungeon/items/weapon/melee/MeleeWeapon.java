@@ -156,9 +156,9 @@ public class MeleeWeapon extends Weapon {
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(p);
-			info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
+			info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (isCursed() ? Game.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
 		} else {
-			if (cursedKnown && cursed) {
+			if (isCursedKnown() && isCursed()) {
 				info.append(p);
 				info.append(Utils.format(R.string.MeleeWeapon_Info7c, name));
 			}

@@ -98,7 +98,7 @@ public class WandOfDisintegration extends SimpleWand  {
 	@Override
 	protected void fx( int cell, Callback callback ) {
 		cell = Ballistica.trace[Math.min( Ballistica.distance, distance() ) - 1];
-		wandUser.getSprite().getParent().add( new DeathRay( wandUser.getPos(),  cell  ) );
+		getOwner().getSprite().getParent().add( new DeathRay( getOwner().getPos(),  cell  ) );
 		callback.call();
 	}
 	

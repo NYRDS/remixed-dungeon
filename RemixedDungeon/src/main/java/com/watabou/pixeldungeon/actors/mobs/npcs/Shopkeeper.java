@@ -17,46 +17,41 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.levels.PredesignedLevel;
-import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
-import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
+
+import lombok.var;
 
 public class Shopkeeper extends NPC {
 
 	{
 		spriteClass = ShopkeeperSprite.class;
 		movable = false;
-		belongings = new Belongings(this);
 		addImmunity(Regeneration.class);
 	}
-
-	private Belongings belongings;
 
 	@Override
     public boolean act() {
@@ -72,12 +67,7 @@ public class Shopkeeper extends NPC {
 	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		flee();
 	}
-	
-	@Override
-	public void add( Buff buff ) {
-		flee();
-	}
-	
+
 	private void flee() {
 		destroy();
 		
@@ -90,19 +80,9 @@ public class Shopkeeper extends NPC {
 		return true;
 	}
 
-
-	@Override
-	public void onSpawn(Level level) {
-		super.onSpawn(level);
-
-		if(level instanceof PredesignedLevel) {
-			TownShopLevel.fillInventory(this);
-		}
-	}
-
 	private WndBag.Listener sellItemSelector = new WndBag.Listener() {
 		@Override
-		public void onSelect( Item item ) {
+		public void onSelect(Item item, Char selector) {
 			if (item != null) {
 
 				if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
@@ -115,7 +95,7 @@ public class Shopkeeper extends NPC {
 		}
 	};
 
-	private WndBag.Listener buyItemSelector = item -> {
+	private WndBag.Listener buyItemSelector = (item, selector) -> {
 		if (item != null) {
 			GameScene.show( new WndTradeItem( item, Shopkeeper.this, true) );
 		}
@@ -125,7 +105,16 @@ public class Shopkeeper extends NPC {
 	public boolean interact(final Char hero) {
 
 		int attempts = 0;
-		while(getBelongings().backpack.items.size() < getBelongings().backpack.size + 2 && attempts < 100) {
+
+		if(!ModdingMode.inMod() && Game.getDifficulty() < 2) {
+			if (getBelongings().countFood() < 3) {
+				var foodSupply = new OverpricedRation();
+				foodSupply.quantity(5);
+				addItem(foodSupply);
+			}
+		}
+
+		while(getBelongings().backpack.items.size() < getBelongings().backpack.getSize() + 2 && attempts < 100) {
 			generateNewItem();
 			attempts++;
 		}
@@ -145,7 +134,7 @@ public class Shopkeeper extends NPC {
 						wndBag = new WndBag(hero.getBelongings(),hero.getBelongings().backpack,sellItemSelector,WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
 						break;
 					case 1:
-						wndBag = new WndBag(belongings,belongings.backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
+						wndBag = new WndBag(getBelongings(), getBelongings().backpack,buyItemSelector,WndBag.Mode.FOR_BUY, Game.getVar(R.string.Shopkeeper_Buy));
 						break;
 				}
 
@@ -165,17 +154,22 @@ public class Shopkeeper extends NPC {
 			return;
 		}
 
-		if(newItem.cursed) {
+		if(newItem.isCursed()) {
 			return;
 		}
 
-		if(!newItem.stackable && getBelongings().getItem(newItem.getEntityKind())!=null) {
+		var supply = getBelongings().getItem(newItem.getEntityKind());
+
+		if(!newItem.stackable && supply != null) {
+			return;
+		}
+
+		if(newItem.stackable && supply != null && supply.price() > 100) {
 			return;
 		}
 
 		addItem(newItem);
 	}
-
 
 	public void addItem(Item item) {
 		if(item instanceof Bag && Dungeon.hero != null) {
@@ -192,21 +186,8 @@ public class Shopkeeper extends NPC {
 		item.collect(this);
 	}
 
-	@NotNull
 	@Override
-	public Belongings getBelongings() {
-		return belongings;
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		belongings.storeInBundle(bundle);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		belongings.restoreFromBundle(bundle);
+	public boolean useBags() {
+		return false;
 	}
 }

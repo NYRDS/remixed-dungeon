@@ -46,7 +46,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 	@Override
 	public void ownerDoesDamage(Char ch,int damage) {
 		
-		if(cursed) {
+		if(isCursed()) {
 			return;
 		}
 		
@@ -78,7 +78,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 	}
 	
 	@Override
-	public void onMiss() {
-		ChaosCommon.doChaosMark(getUser().getPos(), charge + 3*level());
+	public void onMiss(Char user) {
+		ChaosCommon.doChaosMark(user.getPos(), charge + 3*level());
 	}
 }

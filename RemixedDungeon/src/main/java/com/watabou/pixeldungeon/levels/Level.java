@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels;
 
 import android.annotation.SuppressLint;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
@@ -26,7 +27,9 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
@@ -38,6 +41,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -48,7 +52,6 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.WellWater;
 import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Shadows;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -92,6 +95,7 @@ import com.watabou.utils.SparseArray;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.TestOnly;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -401,8 +405,6 @@ public abstract class Level implements Bundlable {
 	private static final String EXIT           = "exit";
 	private static final String HEAPS          = "heaps";
 
-	@Deprecated
-	private static final String PLANTS         = "plants";
 	private static final String MOBS           = "mobs";
 	private static final String BLOBS          = "blobs";
 	private static final String WIDTH          = "width";
@@ -549,6 +551,8 @@ public abstract class Level implements Bundlable {
 
 		boolean pitNeeded = Dungeon.depth > 1 && weakFloorCreated;
 
+		if (noBuild()) return;
+
 		do {
 			Arrays.fill(map, feeling == Feeling.CHASM ? Terrain.CHASM
 					: Terrain.WALL);
@@ -558,18 +562,34 @@ public abstract class Level implements Bundlable {
 
 		} while (!build());
 		decorate();
-
 		buildFlagMaps();
 		cleanWalls();
-
 		createMobs();
 		createItems();
 		createScript();
 	}
 
+	protected boolean noBuild() {
+		if(DungeonGenerator.getLevelProperty(levelId, "noBuild", false)) {
+			Tools.makeEmptyLevel(this, true);
+			createScript();
+			buildFlagMaps();
+			cleanWalls();
+			return true;
+		}
+		return false;
+	}
+
 	protected void createScript() {
-		String script = DungeonGenerator.getLevelProperty(levelId,"script", null);
-		if(script !=null) {
+		var scriptSet = DungeonGenerator.getLevelPropertySet(levelId, "script");
+
+		if(scriptSet.isEmpty()) {
+			scriptSet.add(DungeonGenerator.getLevelProperty(levelId, "script", null));
+		}
+
+		scriptSet.remove(null);
+
+		for(var script:scriptSet) {
 			addScriptedActor(new ScriptedActor(script));
 		}
 	}
@@ -631,11 +651,6 @@ public abstract class Level implements Bundlable {
 			heaps.put(heap.pos, heap);
 		}
 
-
-		///Pre 28.6 saves compatibility
-		for (Plant plant : bundle.getCollection(PLANTS, Plant.class)) {
-			putLevelObject(plant);
-		}
 
 		for (LevelObject object : bundle.getCollection(OBJECTS, LevelObject.class)) {
 			putLevelObject(object);
@@ -872,6 +887,20 @@ public abstract class Level implements Bundlable {
 		return cell;
 	}
 
+	@LuaInterface
+	@TestOnly
+	public int randomVisibleDestination() {
+
+		ArrayList<Integer> cells = new ArrayList<>();
+		for(int i=0;i<getLength();++i) {
+			if(Dungeon.visible[i] && passable[i]) {
+				cells.add(i);
+			}
+		}
+
+		return oneCellFrom(cells);
+	}
+
 	public int randomDestination() {
 		int cell;
 		do {
@@ -880,23 +909,24 @@ public abstract class Level implements Bundlable {
 		return cell;
 	}
 
-	public void addItemToSpawn(@Nullable Item item) {
-		if (item != null) {
+	public void addItemToSpawn(@NotNull Item item) {
+		if (!(item instanceof DummyItem)) {
 			itemsToSpawn.add(item);
 		}
 	}
 
+	@NotNull
 	public Item itemToSpanAsPrize() {
 		if (Random.Int(itemsToSpawn.size() + 1) > 0) {
 			Item item = Random.element(itemsToSpawn);
 			itemsToSpawn.remove(item);
 			return item;
-		} else {
-			return null;
 		}
+		return CharsList.DUMMY_ITEM;
 	}
 
-	protected void buildFlagMaps() {
+	@LuaInterface
+	public void buildFlagMaps() {
 
 		for (int i = 0; i < getLength(); i++) {
 			int flags = TerrainFlags.flags[map[i]];
@@ -963,7 +993,8 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	protected void cleanWalls() {
+	@LuaInterface
+	public void cleanWalls() {
 		for (int i = 0; i < getLength(); i++) {
 
 			boolean d = false;
@@ -1013,7 +1044,31 @@ public abstract class Level implements Bundlable {
 				|| terrain >= Terrain.WATER_TILES;
 	}
 
+	public void drop(Item item, int cell, Heap.Type type) {
+		if(!cellValid(cell)) {
+			return;
+		}
+
+		if(item == CharsList.DUMMY_ITEM) {
+			return;
+		}
+
+		drop(item, cell).type = type;
+	}
+
+	@LuaInterface
+	public void animatedDrop(Item item, int cell) {
+		if(item == CharsList.DUMMY_ITEM) {
+			return;
+		}
+		var heap = drop(item,cell);
+
+		heap.sprite.drop();
+	}
+
+
 	@NotNull
+	@LuaInterface
 	public Heap drop(Item item, int cell) {
 
 		item = Treasury.getLevelTreasury().check(item);
@@ -1021,8 +1076,8 @@ public abstract class Level implements Bundlable {
 		if (solid[cell] && map[cell] != Terrain.DOOR){
 			for (int n : Level.NEIGHBOURS8) {
 				int p = n + cell;
-				if (cellValid(p)){
-					if (!solid[p]){
+				if (cellValid(p)) {
+					if (!solid[p]) {
 						cell = p;
 						break;
 					}
@@ -1039,28 +1094,34 @@ public abstract class Level implements Bundlable {
 		}
 
 		Heap heap = heaps.get(cell);
-		if (heap == null) {
-			heap = new Heap();
-			heap.pos = cell;
-			if (map[cell] == Terrain.CHASM || pit[cell]) {
-				GameScene.discard(heap);
 
-			} else {
-				heaps.put(cell, heap);
-				GameScene.add(heap);
-			}
-
-		} else if (heap.type == Heap.Type.LOCKED_CHEST
-				|| heap.type == Heap.Type.CRYSTAL_CHEST) {
-
+		if (heap != null && (heap.type == Heap.Type.LOCKED_CHEST
+				|| heap.type == Heap.Type.CRYSTAL_CHEST)) {
 			int n;
 			do {
 				n = cell + Level.NEIGHBOURS8[Random.Int(8)];
 			} while (!passable[n] && !avoid[n]);
 			return drop(item, n);
-
 		}
+
+		boolean newHeap = false;
+
+		if (heap == null) {
+			heap = new Heap();
+			heap.pos = cell;
+			newHeap = true;
+		}
+
 		heap.drop(item);
+
+		if(newHeap) {
+			if (map[cell] == Terrain.CHASM || pit[cell]) {
+				GameScene.discard(heap);
+			} else {
+				heaps.put(cell, heap);
+				GameScene.add(heap);
+			}
+		}
 
 		if (!Dungeon.isLoading()) {
 			press(cell, item);
@@ -1113,6 +1174,10 @@ public abstract class Level implements Bundlable {
 
 	public int pitCell() {
 		return randomRespawnCell();
+	}
+
+	protected void dropBones() {
+		drop( Bones.get(), getRandomTerrainCell(Terrain.EMPTY), Heap.Type.SKELETON);
 	}
 
 	protected void pressHero(int cell, Hero hero) {
@@ -1254,22 +1319,18 @@ public abstract class Level implements Bundlable {
 		int cx = cellX(c.getPos());
 		int cy = cellY(c.getPos());
 
-		boolean sighted = !c.hasBuff(Blindness.class) && !c.hasBuff(Shadows.class) && c.isAlive();
+		int viewDistance = c.hasBuff(Shadows.class) ? 1 : c.getViewDistance();
+		boolean sighted = !c.hasBuff(Blindness.class) && c.isAlive();
+
 		if (sighted) {
-			ShadowCaster.castShadow(cx, cy, fieldOfView, c.viewDistance);
+			ShadowCaster.castShadow(cx, cy, fieldOfView, viewDistance);
 		} else {
 			Arrays.fill(fieldOfView, false);
 		}
 
-		int sense = 1;
-		if (c.isAlive()) {
-			for (Buff b : c.buffs(MindVision.class)) {
-				sense = Math.max(((MindVision) b).distance, sense);
-			}
-		}
+		int sense = c.buffLevel(MindVision.class);
 
 		if (!sighted || sense > 1) {
-
 			int ax = Math.max(0, cx - sense);
 			int bx = Math.min(cx + sense, getWidth() - 1);
 			int ay = Math.max(0, cy - sense);
@@ -1286,7 +1347,6 @@ public abstract class Level implements Bundlable {
 				fieldOfView[from] &= discoverable[from];
 			}
 		}
-
 
 		if(c instanceof Hero) {
 			for (Integer mobId: c.getPets()) {
@@ -1546,22 +1606,18 @@ public abstract class Level implements Bundlable {
 		return minima;
 	}
 
-	public int getDistToNearestTerrain(int x, int y, int terr) {
-		return getDistToNearestTerrain(cell(x, y), terr);
-	}
+	public interface cellCondition {
+		boolean pass(Level level, int cell);
+	};
 
-	public int getNearestTerrain(int x, int y, int terr) {
-		return getNearestTerrain(x, y, terr, INVALID_CELL);
-	}
-
-	public int getNearestTerrain(int x, int y, int terr, int ignoreCell) {
+	public int getNearestTerrain(int x, int y, cellCondition condition) {
 		int minima = getLength();
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		int cell = cell(x, y);
 		for (int i = 0; i < getLength(); i++) {
-			if (i != ignoreCell && map[i] == terr) {
+			if (condition.pass(this, i)) {
 				int delta = distance(cell, i);
 
 				if(delta < minima) {
@@ -1578,7 +1634,7 @@ public abstract class Level implements Bundlable {
 		return oneCellFrom(candidates);
 	}
 
-	private int oneCellFrom(ArrayList<Integer> candidates) {
+	private int oneCellFrom(@NotNull ArrayList<Integer> candidates) {
 		if (!candidates.isEmpty()) {
 			return Random.element(candidates);
 		}
@@ -1717,10 +1773,12 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public float getPropertyFloat(String key, float defVal) {
-		String propValue = getProperty(key, Float.toString(defVal));
+	public boolean getProperty(String key, boolean defVal) {
+		return defVal;
+	}
 
-		return Float.parseFloat(propValue);
+	public float getProperty(String key, float defVal) {
+		return defVal;
 	}
 
 	public String getProperty(String key, String defVal) {

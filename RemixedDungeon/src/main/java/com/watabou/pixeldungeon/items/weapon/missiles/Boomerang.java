@@ -26,6 +26,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Boomerang extends MissileWeapon {
 
 	{
@@ -55,8 +57,6 @@ public class Boomerang extends MissileWeapon {
 		MAX += 2;
 		super.upgrade( enchant );
 
-        QuickSlot.refresh();
-
         return this;
 	}
 	
@@ -85,22 +85,22 @@ public class Boomerang extends MissileWeapon {
 	}
 	
 	@Override
-	protected void miss( int cell ) {
-		circleBack( cell, getUser() );
+	protected void miss(int cell, Char thrower) {
+		circleBack( cell, thrower);
 	}
 	
-	private void circleBack(int from, final Char owner) {
+	private void circleBack(int from, @NotNull final Char owner) {
 
-		((MissileSprite) getUser().getSprite().getParent()
-				.recycle(MissileSprite.class)).reset(from, getUser().getPos(),
-				curItem, ()-> {
+		((MissileSprite) owner.getSprite().getParent()
+				.recycle(MissileSprite.class)).reset(from, owner.getPos(),
+				this, ()-> {
 					if (throwEquiped) {
 						owner.spend(-TIME_TO_EQUIP);
 						owner.getBelongings().weapon = this;
 					} else {
 						owner.collect(this);
 					}
-					QuickSlot.refresh();
+					QuickSlot.refresh(owner);
 				});
 	}
 	

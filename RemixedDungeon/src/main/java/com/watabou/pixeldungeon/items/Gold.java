@@ -25,11 +25,12 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -49,12 +50,12 @@ public class Gold extends Item {
 	}
 
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		return new ArrayList<>();
 	}
 
 	@Override
-	public boolean doPickUp(Char hero ) {
+	public boolean doPickUp(@NotNull Char hero ) {
 		collect(hero);
 
 		Statistics.goldCollected += quantity();
@@ -90,34 +91,33 @@ public class Gold extends Item {
 			return Utils.format( Game.getVar(R.string.Gold_Info)+" "+Game.getVar(R.string.Gold_Collect), quantity() );
 		}
 	}
-	
+
 	@Override
-	public Item quantity(int value) {
+	public int image() {
+		int value = quantity();
 
-		image = 0;
-		
-		if(value > 9 ) {
-			image = 1;
-		}
-		
-		if(value > 99) {
-			image = 2;
-		}
-		
-		if(value > 999) {
-			image = 3;
-		}
-		
 		if(value > 9999) {
-			image = 4;
+			return  4;
 		}
 
-		return super.quantity(value);
+		if(value > 999) {
+			return  3;
+		}
+
+		if(value > 99) {
+			return  2;
+		}
+
+		if(value > 9 ) {
+			return  1;
+		}
+
+		return 0;
 	}
-	
+
 	@Override
 	public Item random() {
-		quantity(Random.Int( 20 + Dungeon.depth * 10, 40 + Dungeon.depth * 20 ));
+		quantity(Math.max(Random.Int( 20 + Dungeon.depth * 10, 40 + Dungeon.depth * 20 ),0));
 		return this;
 	}
 }

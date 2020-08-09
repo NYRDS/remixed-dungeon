@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -39,7 +40,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -61,18 +63,19 @@ public class Pickaxe extends Weapon {
 		MAX = 12;
 		animation_class = SWORD_ATTACK;
 	}
-	
+
+	@Packable
 	public boolean bloodStained = false;
 	
 	@Override
-	public ArrayList<String> actions( Hero hero ) {
+	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_MINE );
 		return actions;
 	}
 	
 	@Override
-	public void execute( final Hero hero, String action ) {
+	public void execute(@NotNull final Char chr, @NotNull String action ) {
 		
 		if (action.equals(AC_MINE)) {
 			
@@ -83,13 +86,13 @@ public class Pickaxe extends Weapon {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				
-				final int pos = hero.getPos() + Level.NEIGHBOURS8[i];
+				final int pos = chr.getPos() + Level.NEIGHBOURS8[i];
 				if (Dungeon.level.map[pos] == Terrain.WALL_DECO) {
 				
-					hero.spend( TIME_TO_MINE );
-					hero.busy();
+					chr.spend( TIME_TO_MINE );
+					chr.busy();
 					
-					hero.getSprite().attack( pos, () -> {
+					chr.getSprite().attack( pos, () -> {
 
 						CellEmitter.center( pos ).burst( Speck.factory( Speck.STAR ), 7 );
 						Sample.INSTANCE.play( Assets.SND_EVOKE );
@@ -101,13 +104,13 @@ public class Pickaxe extends Weapon {
 						if (gold.doPickUp( Dungeon.hero )) {
 							GLog.i( Hero.getHeroYouNowHave(), gold.name() );
 						} else {
-							Dungeon.level.drop( gold, hero.getPos() ).sprite.drop();
+							gold.doDrop(chr);
 						}
 
-						hero.hunger().satisfy( -Hunger.STARVING / 10 );
+						chr.hunger().satisfy( -Hunger.STARVING / 10 );
 						BuffIndicator.refreshHero();
 
-						hero.onOperateComplete();
+						chr.onOperateComplete();
 					});
 					
 					return;
@@ -118,7 +121,7 @@ public class Pickaxe extends Weapon {
 			
 		} else {
 			
-			super.execute( hero, action );
+			super.execute(chr, action );
 			
 		}
 	}
@@ -137,26 +140,10 @@ public class Pickaxe extends Weapon {
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		if (!bloodStained && defender instanceof Bat && (defender.hp() <= damage)) {
 			bloodStained = true;
-            QuickSlot.refresh();
+            QuickSlot.refresh(attacker);
         }
 	}
-	
-	private static final String BLOODSTAINED = "bloodStained";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		
-		bundle.put( BLOODSTAINED, bloodStained );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		
-		bloodStained = bundle.getBoolean( BLOODSTAINED );
-	}
-	
+
 	@Override
 	public Glowing glowing() {
 		return bloodStained ? BLOODY : null;

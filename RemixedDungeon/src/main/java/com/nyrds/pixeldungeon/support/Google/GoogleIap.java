@@ -23,6 +23,8 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +32,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
+
+import lombok.var;
 
 public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
 
@@ -69,14 +73,20 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
     }
 
     public void doPurchase(final String skuId) {
-        Runnable purchaseFlowRequest = () -> {
-            BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
-                    .setSkuDetails(mSkuDetails.get(skuId))
-                    .build();
-            mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
-        };
+        if(mSkuDetails.containsKey(skuId)) {
+            var sku = mSkuDetails.get(skuId);
 
-        executeServiceRequest(purchaseFlowRequest);
+            Runnable purchaseFlowRequest = () -> {
+                BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
+                        .setSkuDetails(sku)
+                        .build();
+                mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
+            };
+
+            executeServiceRequest(purchaseFlowRequest);
+        } else {
+            EventCollector.logException("No sku: |"+ skuId+"|");
+        }
     }
 
     private void handlePurchase(Purchase purchase) {
@@ -136,7 +146,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         mIsServiceConnecting = true;
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
-            public void onBillingSetupFinished(BillingResult billingResult) {
+            public void onBillingSetupFinished(@NotNull BillingResult billingResult) {
 
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     mIsServiceConnected = true;
@@ -182,18 +192,19 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
         return mPurchases.containsKey(item.toLowerCase(Locale.ROOT));
     }
 
-    public String getSkuPrice(String sku) {
+    @NotNull
+    public String getSkuPrice(@NotNull String sku) {
         String skuLowerCase = sku.toLowerCase(Locale.ROOT);
         if (mSkuDetails.containsKey(skuLowerCase)) {
             return mSkuDetails.get(skuLowerCase).getPrice();
         } else {
             EventCollector.logException(sku);
-            return "N/A";
+            return "";
         }
     }
 
     private Executor getExecutor() {
-        return Game.instance().executor;
+        return Game.instance().serviceExecutor;
     }
 
     public boolean isServiceConnected() {
@@ -202,7 +213,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
 
 
     @Override
-    public void onConsumeResponse(BillingResult billingResult, String s) {
+    public void onConsumeResponse(BillingResult billingResult, @NotNull String s) {
         GLog.w("consumed: %d %s", billingResult.getDebugMessage(), s);
     }
 

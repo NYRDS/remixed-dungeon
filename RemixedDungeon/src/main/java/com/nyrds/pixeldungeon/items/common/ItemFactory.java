@@ -40,6 +40,7 @@ import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -198,7 +199,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -478,12 +478,12 @@ public class ItemFactory {
         return item;
     }
 
-    @Nullable
+    @NotNull
     public static Item createItemFromDesc(@NotNull JSONObject itemDesc) throws  JSONException {
         String kind = itemDesc.getString("kind");
 
         if (kind.equals("NoItem") || Treasury.get().isForbidden(kind)) {
-            return null;
+            return CharsList.DUMMY_ITEM;
         }
 
         Item item = ItemFactory.itemByName(kind);

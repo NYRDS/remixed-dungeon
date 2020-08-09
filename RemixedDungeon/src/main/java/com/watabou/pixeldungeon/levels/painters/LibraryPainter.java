@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.items.Codex;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
@@ -75,13 +77,13 @@ public class LibraryPainter extends Painter {
 				pos = room.random(level);
 			} while (level.map[pos] != Terrain.EMPTY
 					|| level.getHeap(pos) != null);
-			level.drop(prize(level), pos);
+			level.drop(prize(level), pos, Heap.Type.HEAP);
 
 			if (Random.Int(4) == 0) {
-				level.drop(new BlankScroll(), pos);
+				level.drop(new BlankScroll(), pos, Heap.Type.HEAP);
 			} else {
 				if (Random.Int(4) == 0) {
-					level.drop(new Codex(), pos);
+					level.drop(new Codex(), pos, Heap.Type.HEAP);
 				}
 			}
 		}
@@ -95,7 +97,7 @@ public class LibraryPainter extends Painter {
 		Item prize = level.itemToSpanAsPrize();
 		if (prize instanceof Scroll) {
 			return prize;
-		} else if (prize != null) {
+		} else if (prize != CharsList.DUMMY_ITEM) {
 			level.addItemToSpawn(prize);
 		}
 
