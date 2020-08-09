@@ -24,6 +24,7 @@ import com.nyrds.android.util.Unzip;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Preferences;
@@ -140,7 +141,8 @@ public class PlayGames {
 	}
 
 	public static boolean usable() {
-		return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
+		return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1
+				&& RemixedDungeonApp.checkOwnSignature();
 	}
 
 

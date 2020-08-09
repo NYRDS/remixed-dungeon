@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.ml;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import androidx.multidex.MultiDex;
@@ -12,6 +13,8 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.RemixedDungeon;
+
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class RemixedDungeonApp extends MultiDexApplication {
 
@@ -35,6 +38,11 @@ public class RemixedDungeonApp extends MultiDexApplication {
         super.onCreate();
 
         remixedDungeonApp = this;
+
+        if(AsyncTask.THREAD_POOL_EXECUTOR instanceof ThreadPoolExecutor) {
+            ThreadPoolExecutor defaultExecutor = (ThreadPoolExecutor) AsyncTask.THREAD_POOL_EXECUTOR;
+            defaultExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+        }
 
         if(checkOwnSignature()) {
             FirebaseApp.initializeApp(this);
@@ -83,6 +91,9 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     static public boolean checkOwnSignature() {
         //Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
+        if(BuildConfig.DEBUG) {
+            return true;
+        };
         return Util.getSignature(getContext()).equals(StringsManager.getVar(R.string.ownSignature));
     }
 
