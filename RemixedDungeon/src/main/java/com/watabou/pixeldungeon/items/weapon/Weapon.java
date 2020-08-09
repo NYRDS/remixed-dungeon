@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.weapon;
 
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -196,27 +197,12 @@ public class Weapon extends KindOfWeapon {
 	public String name() {
 		return getEnchantment() == null ? super.name() : getEnchantment().name( super.name(), gender );
 	}
-	
+
 	@Override
 	public Item random() {
-		if (Random.Float() < 0.4) {
-			int n = 1;
-			if (Random.Int( 3 ) == 0) {
-				n++;
-				if (Random.Int( 3 ) == 0) {
-					n++;
-				}
-			}
-			if (Random.Int( 2 ) == 0) {
-				upgrade( n );
-			} else {
-				degrade( n );
-				setCursed(true);
-			}
-		}
-		return this;
+		return ItemUtils.random(this);
 	}
-	
+
 	public Weapon enchant( Enchantment ench ) {
 		if(enchatable) {
 			enchantment = ench;

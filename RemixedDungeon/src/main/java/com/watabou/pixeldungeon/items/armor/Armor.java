@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -176,22 +177,9 @@ public class Armor extends EquipableItem {
 	
 	@Override
 	public Item random() {
-		if (Random.Float() < 0.4) {
-			int n = 1;
-			if (Random.Int( 3 ) == 0) {
-				n++;
-				if (Random.Int( 3 ) == 0) {
-					n++;
-				}
-			}
-			if (Random.Int( 2 ) == 0) {
-				upgrade( n );
-			} else {
-				degrade( n );
-				setCursed(true);
-			}
-		}
-		
+
+		ItemUtils.random(this);
+
 		if (Random.Int( 10 ) == 0) {
 			inscribe( Glyph.random() );
 		}

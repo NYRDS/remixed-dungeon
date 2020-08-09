@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -52,5 +53,24 @@ public class ItemUtils {
             bg.ra = 0.1f;
             bg.ba = 0.1f;
         }
+    }
+
+    public static Item random(Item item) {
+        if (Random.Float() < 0.4) {
+            int n = 1;
+            if (Random.Int( 3 ) == 0) {
+                n++;
+                if (Random.Int( 3 ) == 0) {
+                    n++;
+                }
+            }
+            if (Random.Int( 2 ) == 0) {
+                item.upgrade( n );
+            } else {
+                item.degrade( n );
+                item.setCursed(true);
+            }
+        }
+        return item;
     }
 }
