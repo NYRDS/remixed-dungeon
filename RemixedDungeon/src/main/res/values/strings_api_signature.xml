@@ -30,6 +30,7 @@
     <string name="achievement_shadow_lord_slain" translatable="false"></string>
     <string name="achievement_yog_slain" translatable="false"></string>
     <string name="achievement_gnoll_unlocked" translatable="false"></string>
+    <string name="achievement_surgical_mask_obtained" translatable="false"></string>
 
 
     <string name="leaderboard_easy_mode" translatable="false"></string>
