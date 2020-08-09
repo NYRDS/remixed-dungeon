@@ -36,7 +36,7 @@ public class ModdingMode {
 	public static boolean useRetroHeroSprites = false;
 
 	private static Set<String> pathsChecked = new HashSet<>();
-	private static Map<String, Boolean> assetsExistanceCache = new HashMap<>();
+	private static Map<String, Boolean> assetsExistenceCache = new HashMap<>();
 
 	private static Map<String, String> resourcesRemap = new HashMap<>();
 
@@ -54,7 +54,7 @@ public class ModdingMode {
 
 	public static void selectMod(String mod) {
 		try {
-			assetsExistanceCache.clear();
+			assetsExistenceCache.clear();
 
 			File modPath = FileSystem.getExternalStorageFile(mod);
 			if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
@@ -120,7 +120,7 @@ public class ModdingMode {
 	}
 
 	public static boolean isAssetExist(String resName) {
-		Boolean isExist = assetsExistanceCache.get(resName);
+		Boolean isExist = assetsExistenceCache.get(resName);
 
 		if(isExist != null) {
 			return isExist;
@@ -130,16 +130,20 @@ public class ModdingMode {
 		try {
 			str = RemixedDungeonApp.getContext().getAssets().open(resName);
 			str.close();
-			assetsExistanceCache.put(resName, true);
+			assetsExistenceCache.put(resName, true);
 			return true;
 		} catch (IOException e) {
-			assetsExistanceCache.put(resName, false);
+			assetsExistenceCache.put(resName, false);
 			return false;
 		}
 	}
 
 	public static boolean inMod() {
 		return !mActiveMod.equals(REMIXED);
+	}
+
+	public static boolean isResourceExists(String resName) {
+		return isAssetExist(resName) || isResourceExistInMod(resName);
 	}
 
 	public static boolean isResourceExistInMod(String resName) {

@@ -6,6 +6,7 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
@@ -163,11 +164,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-
-		String weaponAnimationClassLeft  = EquipableItem.NO_ANIMATION;
-		String weaponAnimationClassRight = EquipableItem.NO_ANIMATION;
-
-		Armor armor = hero.getBelongings().armor;
+		EquipableItem armor = hero.getBelongings().armor;
 
 		EquipableItem weapon = hero.getBelongings().weapon;
 		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();
@@ -187,7 +184,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(leftHand,"left"));
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
-			if(armor!=null) {
+			if(armor != CharsList.DUMMY_ITEM) {
 				layersDesc.put(LAYER_LEFT_ARMOR, armorShoulderDescriptor(armor,leftHand,"left"));
 				layersDesc.put(LAYER_RIGHT_ARMOR, armorShoulderDescriptor(armor,weapon,"right"));
 			}
@@ -286,7 +283,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void applyLayersDesc(String[] lookDesc) {
 		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
-			addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
+			if(ModdingMode.isResourceExists(lookDesc[i])) {
+				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
+			}
 		}
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
 	}
@@ -299,7 +298,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		return "hero_modern/armor/" +armor.getVisualName()+".png";
 	}
 
-	private String armorShoulderDescriptor(Armor armor, EquipableItem item, String hand) {
+	private String armorShoulderDescriptor(EquipableItem armor, EquipableItem item, String hand) {
 		if(item==null || item.blockSlot()==Belongings.Slot.NONE) {
 			return "hero_modern/armor/shoulders/" + armor.getClassName() + "_" + hand + ".png";
 		}
