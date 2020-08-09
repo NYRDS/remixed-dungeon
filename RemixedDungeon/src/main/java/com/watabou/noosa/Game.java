@@ -448,6 +448,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return instance().scene;
     }
 
+    private ArrayList<MotionEvent> motionEventsCopy = new ArrayList<>();
+    private ArrayList<KeyEvent>    keyEventsCopy    = new ArrayList<>();
     @SneakyThrows
     private void step() {
 
@@ -459,14 +461,25 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         Game.elapsed = Game.timeScale * step * 0.001f;
 
+
+
         synchronized (motionEvents) {
-            Touchscreen.processTouchEvents(motionEvents);
+            motionEventsCopy.addAll(motionEvents);
             motionEvents.clear();
         }
+
+        Touchscreen.processTouchEvents(motionEventsCopy);
+        motionEventsCopy.clear();
+
+
         synchronized (keysEvents) {
-            Keys.processTouchEvents(keysEvents);
+            keyEventsCopy.addAll(keysEvents);
             keysEvents.clear();
         }
+
+        Keys.processTouchEvents(keyEventsCopy);
+        keyEventsCopy.clear();
+
 
         scene.update();
         Camera.updateAll();
