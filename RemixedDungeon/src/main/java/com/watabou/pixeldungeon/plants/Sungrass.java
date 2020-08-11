@@ -101,6 +101,10 @@ public class Sungrass extends Plant {
 				detach();
 			} else {
 				target.heal(Math.max( target.ht() / 10, 1),this);
+
+				if (Dungeon.visible[pos]) {
+					CellEmitter.get(pos).start(ShaftParticle.FACTORY, 0.2f, 3);
+				}
 			}
 			spend(STEP);
 			return true;
