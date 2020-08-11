@@ -43,9 +43,7 @@ return spell.init{
         for i = 1, n do
             local tgt = caster:randomEnemy()
 
-            RPD.glog("kunai: %d %s", i, tgt:getEntityKind())
-
-            RPD.zapEffect(ownPos,tgt:getPos(),"Dart")
+            RPD.zapEffect(ownPos,tgt:getPos(),"Kunai")
             tgt:damage(math.random(n,n + caster:lvl()), caster)
         end
 

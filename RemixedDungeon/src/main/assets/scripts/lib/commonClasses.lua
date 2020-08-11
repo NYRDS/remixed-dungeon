@@ -255,7 +255,7 @@ local RPD = {
 
     debug = function (text,...)
         GLog:toFile(tostring(text),{...})
-        GLog:n(tostring(text),{...})
+        --GLog:n(tostring(text),{...})
     end,
 
     getXy = function (chr)
