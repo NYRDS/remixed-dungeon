@@ -32,8 +32,8 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 		getSprite().turnTo(getPos(), hero.getPos());
 		if (Quest.completed) {
 
-			if(!Badges.isUnlocked(Badges.Badge.DOCTOR_QUEST_COMPLETED)) {
-				Badges.displayBadge(Badges.Badge.DOCTOR_QUEST_COMPLETED);
+			if(!Badges.isUnlocked(Badges.Badge.SURGICAL_MASK_OBTAINED)) {
+				Badges.displayBadge(Badges.Badge.SURGICAL_MASK_OBTAINED);
 
 				var mask = new MedicineMask();
 				mask.equip();
