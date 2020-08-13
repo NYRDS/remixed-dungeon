@@ -10,6 +10,6 @@ public class MedicineMask extends Accessory {
 
     @Override
     public boolean haveIt() {
-        return Badges.isUnlocked(Badges.Badge.SURGICAL_MASK_OBTAINED);
+        return Badges.isUnlocked(Badges.Badge.DOCTOR_QUEST_COMPLETED);
     }
 }

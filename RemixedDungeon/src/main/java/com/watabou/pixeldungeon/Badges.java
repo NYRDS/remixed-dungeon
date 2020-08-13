@@ -62,7 +62,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
-import java.util.Set;
 
 import lombok.var;
 
@@ -190,7 +189,7 @@ public class Badges {
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
 		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL,
 		GNOLL_UNLOCKED(Game.getVar(R.string.Badges_GnollUnlocked),72, true),
-		SURGICAL_MASK_OBTAINED(Game.getVar(R.string.MedicineMask_Obtained),81);
+		DOCTOR_QUEST_COMPLETED(Game.getVar(R.string.MedicineMask_Obtained),81);
 
 		public boolean meta;
 
@@ -212,20 +211,6 @@ public class Badges {
 		}
 	}
 
-	static private Set<Badge> playGamesList = new HashSet<>();
-
-	static {
-		playGamesList.add(Badge.BOSS_SLAIN_1);
-		playGamesList.add(Badge.BOSS_SLAIN_2);
-		playGamesList.add(Badge.BOSS_SLAIN_3);
-		playGamesList.add(Badge.BOSS_SLAIN_4);
-		playGamesList.add(Badge.YOG_SLAIN);
-		playGamesList.add(Badge.SPIDER_QUEEN_SLAIN);
-		playGamesList.add(Badge.SHADOW_LORD_SLAIN);
-		playGamesList.add(Badge.LICH_SLAIN);
-		playGamesList.add(Badge.ICE_GUARDIAN_SLAIN);
-		playGamesList.add(Badge.GNOLL_UNLOCKED);
-	}
 
 	private static HashSet<Badge> global;
 	private static HashSet<Badge> local = new HashSet<>();
@@ -246,9 +231,6 @@ public class Badges {
 		String[] names = bundle.getStringArray(BADGES);
 
 		for (String name : names) {
-			if(name.equals("DOCTOR_QUEST_COMPLETED")) { // badge rename fix
-				name = "SURGICAL_MASK_OBTAINED";
-			}
 			try {
 				badges.add(Badge.valueOf(name));
 			} catch (IllegalArgumentException ignored) { //Allow badge renaming
@@ -922,19 +904,19 @@ public class Badges {
 	}
 
 	private static void unlockPlayGamesBadge(Badge badge) {
-		if (playGamesList.contains(badge) && !ModdingMode.inMod()) {
+		if (/*playGamesList.contains(badge) &&*/ !ModdingMode.inMod()) {
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
 
 			if(achievementCode.isEmpty()) {
-				EventCollector.logException("empty achievement " + badge.name());
+				//EventCollector.logException("empty achievement " + badge.name());
 				return;
 			}
 
-			if(Preferences.INSTANCE.getBoolean(achievementCode,false)) {
-				return;
-			}
+			//if(Preferences.INSTANCE.getBoolean(achievementCode,false)) {
+			//	return;
+			//}
 
-			Preferences.INSTANCE.put(achievementCode,true);
+			//Preferences.INSTANCE.put(achievementCode,true);
 
 			Game.instance().playGames.unlockAchievement(achievementCode);
 		}
