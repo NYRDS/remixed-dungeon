@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.EquipableItem;
@@ -228,8 +229,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		for (Item item : backpack) {
 			if (item instanceof Key && item.getClass() == kind) {
 				Key key = (Key) item;
-				if (levelId.equals(key.levelId) || (Utils.UNKNOWN.equals(key.levelId) && key.getDepth() == depth)) {
-					return (T) item;
+				if (levelId.equals(key.levelId)
+						|| (Utils.UNKNOWN.equals(key.levelId) && key.getDepth() == depth)) {
+					return (T) key;
 				}
 			}
 		}
@@ -248,11 +250,16 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public void countIronKeys() {
-		
+		if (getOwner() != Dungeon.hero) {
+			return;
+		}
+
 		IronKey.curDepthQuantity = 0;
-		
+
+		var levelId = DungeonGenerator.getCurrentLevelId();
+
 		for (Item item : backpack) {
-			if (item instanceof IronKey && ((IronKey)item).levelId.equals(DungeonGenerator.getCurrentLevelId())) {
+			if (item instanceof IronKey && ((IronKey)item).levelId.equals(levelId)) {
 				IronKey.curDepthQuantity++;
 			}
 		}

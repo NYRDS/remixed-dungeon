@@ -689,14 +689,15 @@ public class Hero extends Char {
 	private boolean actUnlock(CharAction.Unlock action) {
 		int doorCell = action.dst;
 
-		if (Dungeon.level.adjacent(getPos(), doorCell)) {
+		Level level = level();
+		if (level.adjacent(getPos(), doorCell)) {
 			theKey = null;
-			int door = Dungeon.level.map[doorCell];
+			int door = level.map[doorCell];
 
 			if (door == Terrain.LOCKED_DOOR) {
-				theKey = getBelongings().getKey(IronKey.class, Dungeon.depth, Dungeon.level.levelId);
+				theKey = getBelongings().getKey(IronKey.class, Dungeon.depth, level.levelId);
 			} else if (door == Terrain.LOCKED_EXIT) {
-				theKey = getBelongings().getKey(SkeletonKey.class, Dungeon.depth, Dungeon.level.levelId);
+				theKey = getBelongings().getKey(SkeletonKey.class, Dungeon.depth, level.levelId);
 			}
 
 			if (theKey != null) {

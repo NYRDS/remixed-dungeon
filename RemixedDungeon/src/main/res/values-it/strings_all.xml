@@ -1,10 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
   <string name="ChaosHelmet_Name">Elmo del Caos</string>
-  <string name="ChaosHelmet_Info">Un elmetto rosso sangue un simbolo essenziale di un guerriero del caos.</string>
+  <string name="ChaosHelmet_Info">Un elmetto rosso sangue è un simbolo essenziale di un guerriero del caos.</string>
   <string name="Spells_SummonLimitReached">%1$s: limite di evocazioni raggiunto (Limite attuale: %2$d)!</string>
   <string name="Mana_Title">Mana</string>
   <string name="Mana_Cost">Costo di Mana:</string>
-  <string name="Spells_NotEnoughSP">Non hai abbastanza mana per lanciare la magia\"%1$s\"</string>
+  <string name="Spells_NotEnoughSP">Non hai abbastanza mana per lanciare la magia \"%1$s\"</string>
   <string name="SummonDeathling_Name">Evoca Gregario della Morte</string>
   <string name="SummonDeathling_Info">Evoca un Gregario della Morte. I suoi HP e danni crescono con il livello dell\'eroe. \n\nLimite di evocazione: %1$d (+1 ogni Livello di Magia)</string>
   <string name="Ignite_Name">Accendi</string>
@@ -151,12 +151,15 @@
   <string name="town_deco_shelf_desc">Scaffali vuoti.</string>
   <string name="WndPriest_Instruction2_m">Benvenuto figlio mio, benvenuto nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
   <string name="WndPriest_Instruction2_f">Benvenuta figlia mia, benvenuta nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
+  <string name="WndPriest_Instruction2">Se desideri aiuto, posso fornire servizi di guarigione per %d monete d\'oro! Se cerchi la santa Benedizione, o, Signore non voglia, sei stato maledetto, per favore dirigiti dal Vescovo nella nostra umile chiesa.</string>
   <string name="WndDontLikeAds_NotThisTime">Non ora</string>
   <string name="Item_Info2">qualcosa</string>
+  <string name="NecromancerArmor_Info2">Indossare quest\'armatura permette al negromante di usare l\'abilità \"Necrotismo\", che spargerà una piaga magica che potrebbe infettare ogni creatura nelle vicinanze, che sia morta o viva.</string>
+  <string name="NecromancerRobe_Info2">Questa tunica è intrisa di magia nera e permetterà al Negromante di consumare le anime dei mostri caduti.</string>
   <string name="Necrotism_Info">Necrotismo</string>
   <string name="Necrotism_ACSpecial">NECROTISMO</string>
   <string name="ResultDescriptions_Necrotism">Morto di Necrotismo al livello %d</string>
-  <string name="Necrotism_Death">Sei morto di necrotismo</string>
+  <string name="Necrotism_Death">Sei morto di necrotismo...</string>
   <string name="Badges_DeathNecrotism">Morte da necrotismo</string>
   <string name="Spell_SelectACell">Seleziona una cella bersaglio.</string>
   <string name="WndJournal_Levels">Livelli</string>
@@ -891,6 +894,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="CagedKobold_Message1">Per favore...</string>
   <string name="CagedKobold_Message2">Devi aiutarmi ad uscire, amico</string>
   <string name="Journal_Caged_Kobold">Coboldo imprigionato</string>
+  <string name="IceCaves_TileStatue">Gnoll Congelato</string>
+  <string name="IceCaves_TileDescStatue">Un\'altra orribile statua... Oh, aspetta. È uno gnoll congelato.</string>
   <string name="GoldenSword_Name">spada d\'oro</string>
   <string name="GoldenSword_Info">Le armi forgiate con un metallo cosí morbido come l\'oro vengono considerate solitamente nient\'altro che decorazioni. Nonostante ció, questa lama sembra essere in grado di tagliare bene.</string>
   <string name="GoldenSword_Gender">maschile</string>
@@ -1380,7 +1385,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="TownsfolkMovieNPC_Name">paesano</string>
   <string name="TownsfolkMovieNPC_Gender">maschile</string>
   <string name="TownsfolkMovieNPC_Name_Objective">paesano</string>
+  <string name="LibrarianNPC_Name">bibliotecaria</string>
   <string name="LibrarianNPC_Gender">maschile</string>
+  <string name="LibrarianNPC_Name_Objective">bibliotecaria</string>
   <string name="TownsfolkSilentNPC_Name">paesano</string>
   <string name="TownsfolkSilentNPC_Gender">maschile</string>
   <string name="TownsfolkSilentNPC_Name_Objective">paesano</string>
@@ -1415,7 +1422,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="ServiceManNPC_Gender">maschile</string>
   <string name="ServiceManNPC_Name_Objective">lavoratore</string>
   <string name="TownShopkeeper_Name">Negoziante</string>
-  <string name="WndMovieTheatre_Instruction">Ossequi e benvenuti al nostro cinema! Forniamo un servizio speciale, puoi guardare un film gratis! E se lo guarderai tutto sarai ricompensato con %d monete d\'oro!</string>
   <string name="WndPriest_Instruction_m">Benvenuto figlio mio, benvenuto nella sacra chiesa del grande Santa, il Signore delle Profondità! Sfortunatamente ora non posso farti entrare, l\'edificio è ancora in costruzione ma, se sei in cera di aiuto, posso fornire guarigione e cibo per sole %d monete d\'oro!</string>
   <string name="WndPriest_Instruction_f">Benvenuta figlia mia, benvenuta nella sacra chiesa del grande Santa, il Signore delle Profondità! Sfortunatamente ora non posso farti entrare, l\'edificio è ancora in costruzione ma, se sei in cera di aiuto, posso fornire guarigione e cibo per sole %d monete d\'oro!</string>
   <string name="WndPriest_Title">Prete di paese</string>
@@ -1972,6 +1978,7 @@ Potrebbe bruciare?</string>
   <string name="town_deco_wooden_drawer_name">Cassetto</string>
   <string name="town_deco_scrolls_name">Pergamene</string>
   <string name="town_deco_medicine_name">Medicina</string>
+  <string name="town_deco_medicine_desc">Fiaschette e altri ingredienti medici vengono messi con cautela su questi scaffali.</string>
   <string name="town_deco_wooden_stairs_name">Scale</string>
   <string name="town_deco_wooden_stairs_desc">Ti fanno un po\' più alto</string>
   <string name="town_deco_filmtape_name">Film</string>
@@ -2068,6 +2075,10 @@ Potrebbe bruciare?</string>
   <string name="HeroClass_WarPerks_2">I guerrieri sono meno abili con armi da lancio.</string>
   <string name="HeroClass_WarPerks_3">Ogni pezzo di cibo ripristina alcuni punti salute se consumato.</string>
   <string name="HeroClass_WarPerks_4">Le pozioni di forza si identificano fin dall\'inizio.</string>
+  <string name="HeroClass_MagPerks_0">I maghi iniziano con un\'unica Bacchetta del Missile Magico. Questa bacchetta potrà successivamente essere \"disincantata\" per un\'altra.</string>
+  <string name="HeroClass_MagPerks_1">I maghi ricaricano più velocemente le proprie bacchette.</string>
+  <string name="HeroClass_MagPerks_3">I maghi possono usare le bacchette come armi da mischia.</string>
+  <string name="HeroClass_MagPerks_4">I maghi usano il mana per lanciare magie Elementali.</string>
   <string name="HeroClass_RogPerks_0">I furfanti iniziano con un anello di Ombre +1.</string>
   <string name="HeroClass_RogPerks_1">I furfanti identificano il tipo di un anello equipaggiandolo.</string>
   <string name="HeroClass_RogPerks_2">I furfanti sono abili con armature leggere, schivando meglio mentre lo indossano.</string>
@@ -2079,6 +2090,12 @@ Potrebbe bruciare?</string>
   <string name="HeroClass_HunPerks_2">Le cacciatrici sono abili con armi da tiro ed ottengono un bonus di danno per la forza eccessiva quando li utilizzano.</string>
   <string name="HeroClass_HunPerks_3">Le cacciatrici guadagnano più salute da gocce di rugiada.</string>
   <string name="HeroClass_HunPerks_4">Le cacciatrici avvertono mostri vicini, anche se sono nascosti dietro ostacoli.</string>
+  <string name="HeroClass_ElfPerks_0">Gli elfi iniziano con 15 HP e 9 STR.</string>
+  <string name="HeroClass_ElfPerks_1">Gli elfi sono immuni al radicamento.</string>
+  <string name="HeroClass_ElfPerks_2">Gli elfi iniziano con un aggiornato arco di legno e delle frecce.</string>
+  <string name="HeroClass_ElfPerks_3">Gli elfi sono estremamente bravi con gli archi e sono agili.</string>
+  <string name="HeroClass_ElfPerks_4">Gli elfi guadagnano molta più salute dalle gocce di ruggiada.</string>
+  <string name="HeroClass_ElfPerks_5">Gli elfi sono meno bravi con le armi da mischia.</string>
   <string name="Death_Name_0">Lugubre %s</string>
   <string name="Death_Name_1">Lugubre %s</string>
   <string name="Death_Name_2">Lugubre %s</string>

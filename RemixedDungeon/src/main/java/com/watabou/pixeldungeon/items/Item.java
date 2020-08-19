@@ -284,8 +284,8 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 	public final Item detachAll(@NotNull Bag container) {
 
     	if (container.contains(this)) {
-    		onDetach();
     		container.remove(this);
+			onDetach();
 		}
 
 		QuickSlot.refresh(getOwner());

@@ -1511,7 +1511,7 @@
   <string name="ScarecrowNPC_Desc">毫无疑问…这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
   <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
 </string>
-  <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\\n 我有一个令你惊喜的消息！\\n\\n 如果你为我收集一些糖果的话，\\n 我会十分感激你的！\\n\\n
+  <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\n 我有一个令你惊喜的消息！\n\n 如果你为我收集一些糖果的话，\n 我会十分感激你的！\n\n
 </string>
   <string name="ScarecrowNPC_Quest_Reminder">我所需要的五个糖果。\n 你将的到很甜蜜的奖励！</string>
   <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n 为此，你可以得到一份实在的食物！</string>
@@ -2612,7 +2612,8 @@ remix.29.5\n
 -- 盗贼技能!\n
 - 修改:\n
 -- 盔甲贴图!\n
-- 修复了一些Bug\n</string>
+- 修复了一些Bug\n
+</string>
   <string name="Char_Stole_0">%1$s 从%3$s身上偷走了%2$s！</string>
   <string name="Char_Stole_1">%1$s把%3$s的%2$s偷窃了！</string>
   <string name="Char_Stole_2">%1$s把%3$s的%2$s偷窃了！</string>

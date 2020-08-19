@@ -2069,7 +2069,7 @@
   <string name="LastShopLevel_TileWater">Подозрительно окрашенная вода</string>
   <string name="LastShopLevel_TileHighGrass">Большой цветущий куст</string>
   <string name="LastShopLevel_TileDescEntrance">Лестница в преисподнюю.</string>
-  <string name="LastShopLevel_TileDescExit">Пролёт, ведущий наверх.</string>
+  <string name="LastShopLevel_TileDescExit">Пролёт, ведущий вниз, в Преисподнюю.</string>
   <string name="LastShopLevel_TileDescDeco">Здесь недостаёт нескольких плиток.</string>
   <string name="LastShopLevel_TileDescEmptySP">Пол укрыт плотным ковром.</string>
   <string name="Prison_TileWater">Тёмная холодная вода.</string>
@@ -2592,7 +2592,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Welcome_Text_29_5">
     remix.29.5\n
     - Геймплей:\n
-    -- Способности Разбойника!\n
+    -- Способности Вора!\n
     - Моддинг:\n
     -- Кастомизируемая броня!\n
     - Исправления ошибок\n
