@@ -1,5 +1,5 @@
 1. Lendir berhasil dibunuh
-Teror di saluran sudah tidak ada lagi.
+Teror di saluran air sudah tidak ada lagi.
 
 2. Tengu berhasil dibunuh
 Roh yang licik itu tidak akan menyiksa siapapun lagi.
@@ -10,7 +10,7 @@ Mesin yang sudah kehilangan kegunaannya telah dinonaktifkan.
 4. Raja berhasil dibunuh
 Raja kuno dari kerajaan yang telah mati akhirnya berhasil dikalahkan.
 
-Lich berhasil dibunuh
+5. Lich berhasil dibunuh
 Bahkan kematian pun menemukan akhirnya.
 
 6. Penjaga Es berhasil dibunuh
@@ -23,7 +23,10 @@ Kerajaan lain telah kehilangan pemimpinnya.
 Manifestasi terburuk dari kegelapan berhasil dikalahkan!
 
 9. Dewa Kuno berhasil dikalahkan
-Yog-Dzewa dan kengeriannya tidak ada lagi.
+Tidak ada lagi Yog-Dzewa dan kengeriannya.
 
-Gnoll baru didalam kota!
+10. Gnoll baru didalam kota!
 Keberanian, kebaikan dan beberapa koin emas, dan bahkan Groll yang brutal akan menemani perjalananmu.
+
+11. Mendapatkan masker bedah
+Menggunakan masker berarti kamu peduli pada orang lain.
