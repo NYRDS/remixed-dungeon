@@ -1609,7 +1609,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="WndMovieTheatre_Watch">Schaue einen Film</string>
   <string name="WndMovieTheatre_No">Verlassen</string>
   <string name="WndMovieTheatre_Bye">Komm jederzeit zurück, wir freuen uns auf dich!</string>
-  <string name="WndMovieTheatre_Instruction">Hallo und herzlich willkommen in unserem Film Theater! Wir bieten einen speziellen Service an. Du kannst hier kostenlos ein Video schauen und wenn du es zu Ende geschaut hast, erhältst du %d Münzen.</string>
   <string name="WndMovieTheatre_Title">Kino</string>
   <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
   <string name="WndPriest_Heal">Heilen -%d Gold</string>
@@ -2282,17 +2281,6 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="town_deco_stones_desc">Nur ein Haufen Steine.</string>
   <string name="town_deco_fireplace_name">Feuerstelle</string>
   <string name="town_deco_fireplace_desc">Gut um sich an kalten Orten wie diesem aufzuwärmen.</string>
-  <string name="Welcome_Text_28_6">
-remix.28.6\n
-- Spielmechaniken:\n
--- Krieger Spezialfähigkeiten!\n
--- Helden Hunger reduziert\n
--- Nekromant Besessenheits Zauber\n
--- Dieb Verhüllen Fähigkeit\n
--- Neue Abzeichen\n
-- Modding:\n
--- Eigene Buffs mit Skripten\n
--- Eigene gfx\n</string>
   <string name="Badges_GamesPlayed5">5000 Spiele gespielt</string>
   <string name="Badges_PotionsCooked5">25 Tränke gebraut</string>
   <string name="Badges_ItemLvl5">Gegenstand mit Level 15 errungen</string>
@@ -2303,9 +2291,6 @@ remix.28.6\n
   <string name="Badges_MonsterSlain5">1000 Gegner getötet</string>
   <string name="Spells_NotInOwnBody">Du kannst %s nicht ausführen, solange deine Seele von deinem Körper getrennt ist.</string>
   <string name="WndHero_Satiety">Sättigung</string>
-  <string name="Welcome_Text_29">
-remix.29\n
- - Stadt überarbeitet!\n</string>
   <string name="Ring_Gems_0">Diamant</string>
   <string name="Ring_Gems_1">Opal</string>
   <string name="Ring_Gems_2">Granat</string>

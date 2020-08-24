@@ -904,19 +904,12 @@ public class Badges {
 	}
 
 	private static void unlockPlayGamesBadge(Badge badge) {
-		if (/*playGamesList.contains(badge) &&*/ !ModdingMode.inMod()) {
+		if (!ModdingMode.inMod()) {
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
 
 			if(achievementCode.isEmpty()) {
-				//EventCollector.logException("empty achievement " + badge.name());
 				return;
 			}
-
-			//if(Preferences.INSTANCE.getBoolean(achievementCode,false)) {
-			//	return;
-			//}
-
-			//Preferences.INSTANCE.put(achievementCode,true);
 
 			Game.instance().playGames.unlockAchievement(achievementCode);
 		}

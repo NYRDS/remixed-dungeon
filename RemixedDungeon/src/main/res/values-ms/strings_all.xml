@@ -1597,7 +1597,6 @@
   <string name="WndMovieTheatre_Watch">tonton cereka</string>
   <string name="WndMovieTheatre_No">keluar</string>
   <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
-  <string name="WndMovieTheatre_Instruction">Selamat datang ke panggung wayang kami! Kami menyediakan perkhidmatan istimewa, iaitu anda boleh tonton cereka secara percuma, dan jika anda melihat sehingga tamat, anda akan diberi hadiah iaitu sebanyak %d syiling emas!</string>
   <string name="WndMovieTheatre_Title">Panggung Wayang</string>
   <string name="WndMovieTheatre_Thank_You">Terima kasih atas sumbangan anda!</string>
   <string name="WndPriest_Heal">sembuh - %d emas</string>
@@ -2262,18 +2261,6 @@
   <string name="town_deco_stones_desc">Hanyalah timbunan batu.</string>
   <string name="town_deco_fireplace_name">Pendiangan</string>
   <string name="town_deco_fireplace_desc">Boleh menghangatkan tempat sejuk seperti ini.</string>
-  <string name="Welcome_Text_28_6">
-    remix.28.6\n
-    - Mekanisma Permainan:\n
-    -- Keupayaan istimewa Satria!\n
-    -- Rasa lapar adiwira dikurangkan\n
-    -- Jampi Merasuk Necromancer\n
-    -- Keupayaan Selubung Pemburu\n
-    -- Lencana Baharu\n
-    - Pengemodan:\n
-    -- Buff boleh skrip suai\n
-    -- gfx suai\n
-    </string>
   <string name="Badges_GamesPlayed5">5000 permainan telah dimainkan</string>
   <string name="Badges_PotionsCooked5">25 potion dibru</string>
   <string name="Badges_ItemLvl5">Item aras 15 diperoleh</string>
@@ -2284,10 +2271,6 @@
   <string name="Badges_MonsterSlain5">1000 pihak musuh dibunuh</string>
   <string name="Spells_NotInOwnBody">Anda tidak boleh buat %s ketika roh anda  tidak berada di dalam jasad anda.</string>
   <string name="WndHero_Satiety">Muak</string>
-  <string name="Welcome_Text_29">
-    remix.29\n
-    - Renovasi pekan!\n
-    </string>
   <string name="Ring_Gems_0">berlian</string>
   <string name="Ring_Gems_1">baiduri</string>
   <string name="Ring_Gems_2">garnet</string>
