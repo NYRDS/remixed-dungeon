@@ -90,7 +90,7 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 
-	private class resLoader extends OneArgFunction {
+	private static class resLoader extends OneArgFunction {
 		public LuaValue call(LuaValue x) {
 			return LuaValue.valueOf(ModdingMode.getResource(x.tojstring()));
 		}

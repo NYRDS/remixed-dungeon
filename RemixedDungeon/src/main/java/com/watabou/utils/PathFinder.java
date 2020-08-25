@@ -59,9 +59,9 @@ public class PathFinder {
 			int minD = distance[s];
 			int mins = s;
 
-			for (int i = 0; i < dir.length; i++) {
+			for (int value : dir) {
 
-				int n = s + dir[i];
+				int n = s + value;
 
 				int thisD = distance[n];
 				if (thisD < minD) {
@@ -91,9 +91,9 @@ public class PathFinder {
 
 		int step, stepD;
 
-		for (int i = 0; i < dir.length; i++) {
+		for (int value : dir) {
 
-			step = from + dir[i];
+			step = from + value;
 
 			if (step > 0 && step < size) {
 				if ((stepD = distance[step]) < minD) {
@@ -120,9 +120,9 @@ public class PathFinder {
 		int minD = distance[cur];
 		int mins = cur;
 
-		for (int i = 0; i < dir.length; i++) {
+		for (int value : dir) {
 
-			int n = cur + dir[i];
+			int n = cur + value;
 			if (n > 0 && n < size) {
 				int thisD = distance[n];
 
@@ -163,9 +163,9 @@ public class PathFinder {
 			}
 			int nextDistance = distance[step] + 1;
 
-			for (int i = 0; i < dir.length; i++) {
+			for (int value : dir) {
 
-				int n = step + dir[i];
+				int n = step + value;
 				if (n == from
 						|| (n >= 0 && n < size && passable[n] && (distance[n] > nextDistance))) {
 					// Add to queue
@@ -200,9 +200,9 @@ public class PathFinder {
 				return;
 			}
 
-			for (int i = 0; i < dir.length; i++) {
+			for (int value : dir) {
 
-				int n = step + dir[i];
+				int n = step + value;
 				if (n >= 0 && n < size && passable[n]
 						&& (distance[n] > nextDistance)) {
 					// Add to queue
@@ -246,9 +246,9 @@ public class PathFinder {
 			}
 			int nextDistance = distance[step] + 1;
 
-			for (int i = 0; i < dir.length; i++) {
+			for (int value : dir) {
 
-				int n = step + dir[i];
+				int n = step + value;
 				if (n == from
 						|| (n >= 0 && n < size && passable[n] && (distance[n] > nextDistance))) {
 					// Add to queue
@@ -294,9 +294,9 @@ public class PathFinder {
 
 			int nextDistance = dist + 1;
 
-			for (int i = 0; i < dir.length; i++) {
+			for (int value : dir) {
 
-				int n = step + dir[i];
+				int n = step + value;
 				if (n >= 0 && n < size && passable[n]
 						&& distance[n] > nextDistance) {
 					// Add to queue
@@ -328,9 +328,9 @@ public class PathFinder {
 			int step = queue[head++];
 			int nextDistance = distance[step] + 1;
 
-			for (int i = 0; i < dir.length; i++) {
+			for (int value : dir) {
 
-				int n = step + dir[i];
+				int n = step + value;
 				if (n >= 0 && n < size && passable[n]
 						&& (distance[n] > nextDistance)) {
 					// Add to queue

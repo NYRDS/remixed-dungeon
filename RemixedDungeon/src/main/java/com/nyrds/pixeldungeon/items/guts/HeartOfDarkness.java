@@ -26,7 +26,7 @@ public class HeartOfDarkness extends Artifact {
 		return new HeartOfDarknessBuff();
 	}
 
-	public class HeartOfDarknessBuff extends ArtifactBuff {
+	public static class HeartOfDarknessBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
 			return BuffIndicator.DARKVEIL;

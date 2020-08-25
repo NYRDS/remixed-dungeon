@@ -209,7 +209,7 @@ public class Trap extends LevelObject {
 		return !secret && uses > 0;
 	}
 
-	class ScriptTrap implements ITrigger {
+	static class ScriptTrap implements ITrigger {
 		private String scriptFile;
 		private String data;
 

@@ -63,9 +63,9 @@ public class Program {
 	
 	public static Program create( Shader ...shaders ) {
 		Program program = new Program();
-		for (int i=0; i < shaders.length; i++) {
-			program.attach( shaders[i] );
-		}
+        for (Shader shader : shaders) {
+            program.attach(shader);
+        }
 		program.link();
 		return program;
 	}

@@ -25,7 +25,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings.Slot;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -80,35 +79,32 @@ public class ShortSword extends MeleeWeapon {
 		return Game.getVar(R.string.ShortSword_Info);
 	}
 	
-	private final WndBag.Listener itemSelector = new WndBag.Listener() {
-		@Override
-		public void onSelect(Item item, Char selector) {
-			if (item != null && !(item instanceof Boomerang)) {
-				
-				Sample.INSTANCE.play( Assets.SND_EVOKE );
-				ScrollOfUpgrade.upgrade( selector );
-				ItemUtils.evoke( selector );
-				
-				GLog.w( Game.getVar(R.string.ShortSword_Reforged), item.name() );
-				
-				((MeleeWeapon)item).safeUpgrade();
-				selector.spendAndNext( TIME_TO_REFORGE );
-				
-				Badges.validateItemLevelAcquired( item );
-				
-			} else {
-				
-				if (item instanceof Boomerang) {
-					GLog.w( Game.getVar(R.string.ShortSword_NotBoomerang) );
-				}
-				
-				if (equipedTo != Slot.NONE) {
-					selector.getBelongings().equip(ShortSword.this, equipedTo);
-				} else {
-					collect( selector.getBelongings().backpack );
-				}
+	private final WndBag.Listener itemSelector = (item, selector) -> {
+		if (item != null && !(item instanceof Boomerang)) {
+
+			Sample.INSTANCE.play( Assets.SND_EVOKE );
+			ScrollOfUpgrade.upgrade( selector );
+			ItemUtils.evoke( selector );
+
+			GLog.w( Game.getVar(R.string.ShortSword_Reforged), item.name() );
+
+			((MeleeWeapon)item).safeUpgrade();
+			selector.spendAndNext( TIME_TO_REFORGE );
+
+			Badges.validateItemLevelAcquired( item );
+
+		} else {
+
+			if (item instanceof Boomerang) {
+				GLog.w( Game.getVar(R.string.ShortSword_NotBoomerang) );
 			}
-			QuickSlot.refresh(selector);
+
+			if (equipedTo != Slot.NONE) {
+				selector.getBelongings().equip(ShortSword.this, equipedTo);
+			} else {
+				collect( selector.getBelongings().backpack );
+			}
 		}
+		QuickSlot.refresh(selector);
 	};
 }

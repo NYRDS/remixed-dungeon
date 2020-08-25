@@ -53,7 +53,7 @@ public class RingOfFrost extends Artifact {
 		return true;
 	}
 
-	public class FrostAura extends ArtifactBuff {
+	public static class FrostAura extends ArtifactBuff {
 		@Override
 		public int icon() {
 			return BuffIndicator.FROSTAURA;

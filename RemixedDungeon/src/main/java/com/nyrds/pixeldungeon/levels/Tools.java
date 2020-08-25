@@ -70,9 +70,9 @@ public class Tools {
 		}
 
 		int[] doorPositions = {144, 87, 150, 93, 156, 264, 207, 270, 213, 276, 327, 333};
-		for (int i = 0; i < doorPositions.length; i++) {
-			level.set(doorPositions[i], Terrain.DOOR);
-		}
+        for (int doorPosition : doorPositions) {
+            level.set(doorPosition, Terrain.DOOR);
+        }
 
 		GameScene.updateMap();
 	}

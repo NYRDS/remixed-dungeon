@@ -74,7 +74,7 @@ public abstract class WndMenuCommon extends Window {
     }
 
 
-    public class MenuButton extends RedButton {
+    public static class MenuButton extends RedButton {
 		protected MenuButton(String txt){
 			super(txt);
 			setSize(WIDTH,BUTTON_HEIGHT);
@@ -87,7 +87,7 @@ public abstract class WndMenuCommon extends Window {
         }
 	}
 
-    public class MenuCheckBox extends CheckBox{
+    public static class MenuCheckBox extends CheckBox{
 
 		public MenuCheckBox(String label, boolean checked) {
 			super(label, checked);

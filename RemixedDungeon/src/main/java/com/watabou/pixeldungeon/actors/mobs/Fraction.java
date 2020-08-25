@@ -15,11 +15,10 @@ public enum Fraction {
 			case DUNGEON:
 				return fr==HEROES;
 			case NEUTRAL:
+			case ANY:
 				return false;
 			case HEROES:
 				return fr==DUNGEON;
-			case ANY:
-				return false;
 		}
 		return false;
 	}

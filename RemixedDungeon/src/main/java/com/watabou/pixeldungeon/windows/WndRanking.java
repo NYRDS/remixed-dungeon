@@ -139,7 +139,7 @@ public class WndRanking extends WndTabbed {
 		select( 0 );
 	}
 	
-	private class StatsTab extends Group {
+	private static class StatsTab extends Group {
 		
 		private static final int GAP	= 4;
 
@@ -269,7 +269,7 @@ public class WndRanking extends WndTabbed {
 				return;
 			}
 
-			ItemButton slot = new ItemButton( item );
+			ItemButton slot = new ItemButton(item);
 			slot.setRect( 0, posY, width, ItemButton.SIZE);
 			list.content().add( slot );
 			
@@ -291,7 +291,7 @@ public class WndRanking extends WndTabbed {
 		}
 	}
 	
-	private class ItemButton extends Button {
+	private static class ItemButton extends Button {
 		
 		public static final int SIZE = 23;
 		

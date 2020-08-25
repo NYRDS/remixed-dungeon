@@ -13,7 +13,7 @@ public class CompositeMovieClip extends MovieClip {
 
 	private ArrayList<LayerDesc> mLayers;
 
-	private class LayerDesc {
+	private static class LayerDesc {
 		String id;
 		Texture texture;
 

@@ -37,7 +37,7 @@ public class SystemText extends Text {
 	private static Typeface tf;
 	private static float    oversample;
 
-	private boolean needWidth = false;
+	private boolean needWidth;
 
 	private static float fontScale = Float.NaN;
 

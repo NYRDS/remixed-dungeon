@@ -137,7 +137,8 @@ public class Random {
 		return (int)(Math.random() * collection.size());
 	}
 	
-	public static<T> T oneOf( T... array ) {
+	@SafeVarargs
+	public static<T> T oneOf(T... array ) {
 		return array[(int)(Math.random() * array.length)];
 	}
 	

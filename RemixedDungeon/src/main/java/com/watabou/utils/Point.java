@@ -17,6 +17,8 @@
 
 package com.watabou.utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Point {
 
 	public int x;
@@ -46,6 +48,7 @@ public class Point {
 		return this;
 	}
 	
+	@NotNull
 	@Override
 	public Point clone() {
 		return new Point( this );

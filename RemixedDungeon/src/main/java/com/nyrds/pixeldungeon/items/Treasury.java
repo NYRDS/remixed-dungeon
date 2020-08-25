@@ -43,7 +43,7 @@ public class Treasury {
         UNIQUE
     }
 
-    private class CategoryItems {
+    private static class CategoryItems {
         ArrayList<String> names = new ArrayList<>();
         ArrayList<Float>  probs = new ArrayList<>();
     }

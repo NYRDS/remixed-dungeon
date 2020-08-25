@@ -49,7 +49,7 @@ public class DriedRose extends Artifact {
 		return super.info() + "\n\n" + Game.getVar(R.string.DriedRose_Info2);
 	}
 
-	public class OneWayLoveBuff extends ArtifactBuff {
+	public static class OneWayLoveBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
 			return BuffIndicator.ROSE;
@@ -61,7 +61,7 @@ public class DriedRose extends Artifact {
 		}
 	}
 
-	public class OneWayCursedLoveBuff extends ArtifactBuff {
+	public static class OneWayCursedLoveBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
 			return BuffIndicator.CURSED_ROSE;

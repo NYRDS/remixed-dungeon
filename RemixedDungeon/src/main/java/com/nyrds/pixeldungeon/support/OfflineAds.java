@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
@@ -27,23 +26,20 @@ class OfflineAds {
 
 	static void displayBanner() {
 		if (BuildConfig.DEBUG) {
-			Game.instance().runOnUiThread(new Runnable() {
-				@Override
-				public void run() {
-					LinearLayout layout = Game.instance().getLayout();
-					if (layout.getChildCount() == 1) {
+			Game.instance().runOnUiThread(() -> {
+				LinearLayout layout = Game.instance().getLayout();
+				if (layout.getChildCount() == 1) {
 
-						WebView adView = new WebView(Game.instance());
+					WebView adView = new WebView(Game.instance());
 
-						int adViewHeight = Math.max(50, layout.getHeight() / 10);
+					int adViewHeight = Math.max(50, layout.getHeight() / 10);
 
-						ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, adViewHeight);
-						adView.setLayoutParams(params);
+					ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, adViewHeight);
+					adView.setLayoutParams(params);
 
-						adView.loadDataWithBaseURL(null, Utils.format(adTemplate, "Рекламко"), "text/html", "utf-8", null);
-						Game.instance().getLayout().addView(adView, 0);
-						Game.setNeedSceneRestart(true);
-					}
+					adView.loadDataWithBaseURL(null, Utils.format(adTemplate, "Рекламко"), "text/html", "utf-8", null);
+					Game.instance().getLayout().addView(adView, 0);
+					Game.setNeedSceneRestart(true);
 				}
 			});
 		}
@@ -51,35 +47,28 @@ class OfflineAds {
 
 	static void displayIsAd(final InterstitialPoint work) {
 		if (BuildConfig.DEBUG) {
-			Game.instance().runOnUiThread(new Runnable() {
+			Game.instance().runOnUiThread(() -> {
 
-				                              @Override
-				                              public void run() {
+				final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
 
-					                              final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
+				WebView adView = new WebView(Game.instance());
 
-					                              WebView adView = new WebView(Game.instance());
+				ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+				adView.setLayoutParams(params);
 
-					                              ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-					                              adView.setLayoutParams(params);
+				adView.loadDataWithBaseURL(null, Utils.format(isAdTemplate, "Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко"), "text/html", "utf-8", null);
+				alert.setView(adView);
+				alert.setCustomTitle(null);
 
-					                              adView.loadDataWithBaseURL(null, Utils.format(isAdTemplate, "Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко Рекламко"), "text/html", "utf-8", null);
-					                              alert.setView(adView);
-					                              alert.setCustomTitle(null);
+				final AlertDialog dialog = alert.create();
 
-					                              final AlertDialog dialog = alert.create();
-
-					                              dialog.setCanceledOnTouchOutside(true);
-					                              dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-						                              @Override
-						                              public void onCancel(DialogInterface dialog) {
-							                              dialog.dismiss();
-							                              work.returnToWork(true);
-						                              }
-					                              });
-					                              dialog.show();
-				                              }
-			                              }
+				dialog.setCanceledOnTouchOutside(true);
+				dialog.setOnCancelListener(dialog1 -> {
+					dialog1.dismiss();
+					work.returnToWork(true);
+				});
+				dialog.show();
+			}
 			);
 		} else {
 			work.returnToWork(true);

@@ -28,7 +28,7 @@ import lombok.SneakyThrows;
 
 public class Blob extends Actor implements NamedEntityKind {
 
-	public int volume = 0;
+	public int volume;
 
 	public    int[] cur;
 	protected int[] off;

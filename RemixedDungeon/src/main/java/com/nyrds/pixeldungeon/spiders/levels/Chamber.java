@@ -12,8 +12,8 @@ public class Chamber {
 	int y;
 	int r;
 
-	int shape    = 0;
-	int interior = 0;
+	int shape;
+	int interior;
 
 	public Chamber(int x, int y, int r) {
 		this.x = x;

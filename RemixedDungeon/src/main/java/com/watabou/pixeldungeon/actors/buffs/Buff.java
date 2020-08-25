@@ -111,13 +111,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     @SneakyThrows
     public static <T extends Buff> T affect(@NotNull Char target, Class<T> buffClass) {
         T buff = target.buff(buffClass);
-        if (buff != null) {
-            return buff;
-        } else {
+        if (buff == null) {
             buff = buffClass.newInstance();
             buff.attachTo(target);
-            return buff;
         }
+        return buff;
     }
 
     @LuaInterface

@@ -248,7 +248,7 @@ public class Spell implements NamedEntityKind {
         return getClassName();
     }
 
-    public abstract class SpellItem extends Item {
+    public abstract static class SpellItem extends Item {
             abstract public Spell spell();
     }
 }

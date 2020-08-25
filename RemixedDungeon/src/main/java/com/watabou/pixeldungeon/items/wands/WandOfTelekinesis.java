@@ -143,7 +143,7 @@ public class WandOfTelekinesis extends Wand {
 		return Game.getVar(R.string.WandOfTelekinesis_Info);
 	}
 
-	public class Effect implements Presser {
+	public static class Effect implements Presser {
 		@Override
 		public boolean affectLevelObjects() {
 			return false;

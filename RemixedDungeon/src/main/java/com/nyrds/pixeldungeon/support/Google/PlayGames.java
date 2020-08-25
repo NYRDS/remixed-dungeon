@@ -235,10 +235,7 @@ public class PlayGames {
 	}
 
 	public boolean isConnected() {
-		if(signedInAccount != null && !signedInAccount.isExpired()) {
-			return true;
-		}
-		return false;
+		return signedInAccount != null && !signedInAccount.isExpired();
 	}
 
 	private void onConnected() {
@@ -321,25 +318,22 @@ public class PlayGames {
 
 		Game.instance().serviceExecutor.execute(() -> {
 			try {
-				boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), new FileFilter() {
-					@Override
-					public boolean accept(File pathname) {
-						String filename = pathname.getName();
-							if (filename.equals(Badges.BADGES_FILE)) {
-								return true;
-							}
+				boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), pathname -> {
+					String filename = pathname.getName();
+						if (filename.equals(Badges.BADGES_FILE)) {
+							return true;
+						}
 
-							if (filename.equals(Library.getLibraryFile())) {
-								return true;
-							}
+						if (filename.equals(Library.getLibraryFile())) {
+							return true;
+						}
 
-							if (filename.equals(Rankings.RANKINGS_FILE)) {
-								return true;
-							}
+						if (filename.equals(Rankings.RANKINGS_FILE)) {
+							return true;
+						}
 
-                            return filename.startsWith("game_") && filename.endsWith(".dat");
-                        }
-					});
+return filename.startsWith("game_") && filename.endsWith(".dat");
+});
 					resultCallback.status(res);
 				} catch (Exception e) {
 					ModError.doReport("Error while uploading save to cloud: %s", e);

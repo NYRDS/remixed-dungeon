@@ -23,7 +23,7 @@ public class RatKingCrown extends Artifact {
 		return new RatKingAuraBuff();
 	}
 
-	public class RatKingAuraBuff extends ArtifactBuff {
+	public static class RatKingAuraBuff extends ArtifactBuff {
 		@Override
 		public int icon() {
 			return BuffIndicator.RATTNESS;

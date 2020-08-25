@@ -303,6 +303,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean removeItem(Item itemToRemove) {
+		//noinspection SuspiciousMethodCalls
 		usedSlots.remove(itemToRemove);
 		itemToRemove.setOwner(CharsList.DUMMY);
 

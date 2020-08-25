@@ -67,7 +67,7 @@ public class WndLibrary extends Window {
 					GameScene.show(new WndLibraryCatalogue(entry.getKey(),entry.getValue()));
 				}
 			};
-			int w = 0;
+			int w;
 
 			if(categoriesMap.size() == 2){
 				w = (int) ( (WIDTH / 2) - (BTN_WIDTH * 0.5));

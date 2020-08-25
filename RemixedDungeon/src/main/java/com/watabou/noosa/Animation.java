@@ -2,6 +2,7 @@ package com.watabou.noosa;
 
 import android.graphics.RectF;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import java.util.List;
@@ -41,6 +42,7 @@ public class Animation {
 		}
 	}
 
+	@NotNull
 	public Animation clone() {
 		return new Animation(Math.round(1 / delay), looped).frames(frames);
 	}

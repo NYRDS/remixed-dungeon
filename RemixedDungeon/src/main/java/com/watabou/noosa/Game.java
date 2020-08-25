@@ -220,7 +220,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NotNull Bundle outState) {
         super.onSaveInstanceState(outState);
     }
 

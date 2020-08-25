@@ -24,7 +24,7 @@ public class SClient {
 
     public AtomicBoolean isInitialized = new AtomicBoolean(false);
     // sends message received notifications
-    private OnMessageReceived mMessageListener = null;
+    private OnMessageReceived mMessageListener;
     // while this is true, the server will continue running
     private AtomicBoolean mRun = new AtomicBoolean(false);
     // used to send messages
@@ -48,12 +48,7 @@ public class SClient {
      * @param message text entered by client
      */
     public void sendMessage(final String message) {
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                sendMessageSc(message);
-            }
-        };
+        Runnable runnable = () -> sendMessageSc(message);
         Thread thread = new Thread(runnable);
         thread.start();
     }
@@ -81,7 +76,7 @@ public class SClient {
     }
 
     public void run() {
-        String mServerMessage = "";
+        String mServerMessage;
 
         mRun.set(true);
 

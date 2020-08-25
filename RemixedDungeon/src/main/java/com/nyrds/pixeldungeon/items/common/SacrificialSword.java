@@ -66,15 +66,10 @@ public class SacrificialSword extends SpecialWeapon {
 			return;
 		}
 
-		if(!(user instanceof Hero)) {
-			return;
-		}
-
-		Hero hero = user;
 		Mob mob = (Mob) tgt;
 
-		double conversionChance =     baseChance(hero) + 
-									- mob.defenseSkill(hero)*0.01*mob.speed()
+		double conversionChance =     baseChance(user) +
+									- mob.defenseSkill(user)*0.01*mob.speed()
 									- tgt.hp()*0.01;
 
 		double roll = Math.random();
@@ -82,7 +77,7 @@ public class SacrificialSword extends SpecialWeapon {
 		//GLog.i("chance %.3f roll %.3f\n", conversionChance, roll);
 
 		if(roll < conversionChance ) {
-			Mob.makePet(mob, hero.getId());
+			Mob.makePet(mob, user.getId());
 		}
 	}
 }

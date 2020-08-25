@@ -132,6 +132,7 @@ public class Utils {
                 || localeCode.startsWith("tr"));
     }
 
+    @SafeVarargs
     public static<T> boolean isOneOf(T value, T... array ) {
         for (T item:array) {
             if(value.equals(item)) {

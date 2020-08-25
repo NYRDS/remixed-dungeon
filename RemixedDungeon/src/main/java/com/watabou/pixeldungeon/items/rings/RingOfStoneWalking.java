@@ -24,7 +24,7 @@ public class RingOfStoneWalking extends Artifact{
 		return new StoneWalking();
 	}
 	
-	public class StoneWalking extends ArtifactBuff implements Doom {
+	public static class StoneWalking extends ArtifactBuff implements Doom {
 		@Override
 		public int icon() {
 			return BuffIndicator.STONEBLOOD;

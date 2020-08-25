@@ -45,7 +45,7 @@ public class RatSkull extends Artifact {
 		return super.info() + "\n\n" + Game.getVar(R.string.RatSkull_Info2);
 	}
 
-	public class RatterAura extends ArtifactBuff {
+	public static class RatterAura extends ArtifactBuff {
 		@Override
 		public int icon() {
 			return BuffIndicator.RAT_SKULL;
