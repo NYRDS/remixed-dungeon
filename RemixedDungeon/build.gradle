@@ -109,26 +109,18 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
 
 
-    implementation 'com.appodeal.ads.sdk:core:2.7.2'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.7.2.5'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.7.2.5'
-    implementation 'com.appodeal.ads.sdk.networks:appodealx:2.7.2.2'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.2.5'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.2.4'
+    implementation 'com.appodeal.ads.sdk:core:2.7.3'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.7.3.7'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.7.3.6'
+    implementation 'com.appodeal.ads.sdk.networks:appodealx:2.7.3.2'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.3.6'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.3.6'
 
     implementation 'org.jetbrains:annotations:15.0'
 
     compileOnly 'org.projectlombok:lombok:1.18.10'
     annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
-/*
-    //noinspection GradleDependency
-    implementation ("com.squareup.okhttp3:okhttp:3.12.12"){
-        force = true //API 16 support
-    }
-    //noinspection GradleDependency
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.12'
-*/
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation 'androidx.test:core:1.2.0'
