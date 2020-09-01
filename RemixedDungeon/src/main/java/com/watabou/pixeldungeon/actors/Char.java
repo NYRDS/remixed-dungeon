@@ -1224,6 +1224,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void busy(){}
 
+	public void interrupt() {
+	}
+
 	public void itemPickedUp(Item item) {
 	}
 

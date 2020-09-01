@@ -111,6 +111,8 @@ public class WndBag extends WndTabbed {
 			instance.hide();
 		}
 
+		stuff.getOwner().interrupt();
+
 		nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
 		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
 		

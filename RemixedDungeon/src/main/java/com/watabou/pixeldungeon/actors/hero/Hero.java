@@ -507,11 +507,11 @@ public class Hero extends Char {
 		getSprite().idle();
 	}
 
+	@Override
 	public void interrupt() {
 		if (curAction != null && curAction.dst != getPos()) {
 			lastAction = curAction;
 		}
-		//getSprite().interruptMotion();
 
 		curAction = null;
 	}
