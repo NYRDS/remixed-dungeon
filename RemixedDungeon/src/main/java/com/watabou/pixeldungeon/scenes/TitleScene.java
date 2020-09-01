@@ -45,8 +45,6 @@ import com.watabou.pixeldungeon.ui.StatisticsButton;
 
 public class TitleScene extends PixelScene {
 
-	private static final String REMIXED_TITLE = "ui/title.png";
-
 	private Text         pleaseSupport;
 	private DonateButton btnDonate;
 	private boolean      changelogUpdated;
@@ -66,7 +64,7 @@ public class TitleScene extends PixelScene {
 
 		float height = 180;
 
-		Image title = new Image(REMIXED_TITLE);
+		Image title = new Image(Assets.getTitle());
 		add(title);
 
 		title.x = (w - title.width()) / 2;

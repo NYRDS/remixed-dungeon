@@ -196,6 +196,8 @@ public class Assets {
                 return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_2.png";
             case 3:
                 return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_3.png";
+            case 4:
+                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_4.png";
         }
     }
 
@@ -212,6 +214,8 @@ public class Assets {
                 return "ui/chrome_supporter_3.png";
             case 4:
                 return "ui/chrome_marble.png";
+            case 5:
+                return "ui/chrome_supporter_4.png";
         }
     }
 
@@ -225,6 +229,8 @@ public class Assets {
                 return "ui/status_pane_supporter_2.png";
             case 3:
                 return "ui/status_pane_supporter_3.png";
+            case 4:
+                return "ui/status_pane_supporter_4.png";
         }
     }
 
@@ -251,6 +257,20 @@ public class Assets {
         premiumSettings.put(KEY_BANNERS, bannersType);
 
         Preferences.INSTANCE.put(Preferences.KEY_PREMIUM_SETTINGS, premiumSettings.serialize());
+    }
 
+    public static String getTitle() {
+        switch (bannersType) {
+            default:
+                return "ui/title.png";
+            case 1:
+                return "ui/title_supporter_1.png";
+            case 2:
+                return "ui/title_supporter_2.png";
+            case 3:
+                return "ui/title_supporter_3.png";
+            case 4:
+                return "ui/title_supporter_4.png";
+        }
     }
 }

@@ -21,6 +21,7 @@ public class WndPremiumSettings extends Window {
 		material2level.put(Game.getVar(R.string.WndPremiumSettings_gold),2);
 		material2level.put(Game.getVar(R.string.WndPremiumSettings_marble),2);
 		material2level.put(Game.getVar(R.string.WndPremiumSettings_ruby),3);
+		material2level.put(Game.getVar(R.string.WndPremiumSettings_royal),4);
 	}
 
 	private static final int WIDTH      = 112;
@@ -36,21 +37,24 @@ public class WndPremiumSettings extends Window {
 				Game.getVar(R.string.WndPremiumSettings_silver),
 				Game.getVar(R.string.WndPremiumSettings_gold),
 				Game.getVar(R.string.WndPremiumSettings_ruby),
-				Game.getVar(R.string.WndPremiumSettings_marble)
+				Game.getVar(R.string.WndPremiumSettings_marble),
+				Game.getVar(R.string.WndPremiumSettings_royal)
 		);
 		createAssetsSelector("status",
 				Game.getVar(R.string.WndPremiumSettings_status),
 				Game.getVar(R.string.WndPremiumSettings_std),
 				Game.getVar(R.string.WndPremiumSettings_silver),
 				Game.getVar(R.string.WndPremiumSettings_gold),
-				Game.getVar(R.string.WndPremiumSettings_ruby)
+				Game.getVar(R.string.WndPremiumSettings_ruby),
+				Game.getVar(R.string.WndPremiumSettings_royal)
 		);
 		createAssetsSelector("banners",
 				Game.getVar(R.string.WndPremiumSettings_banners),
 				Game.getVar(R.string.WndPremiumSettings_std),
 				Game.getVar(R.string.WndPremiumSettings_silver),
 				Game.getVar(R.string.WndPremiumSettings_gold),
-				Game.getVar(R.string.WndPremiumSettings_ruby)
+				Game.getVar(R.string.WndPremiumSettings_ruby),
+				Game.getVar(R.string.WndPremiumSettings_royal)
 		);
 		
 		resize(WIDTH, curBottom);
