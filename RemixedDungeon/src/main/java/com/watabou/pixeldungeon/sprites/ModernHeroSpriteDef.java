@@ -227,7 +227,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 		avatar = null;
 
-		zap = attack = weapon_anims.get(EquipableItem.NO_ANIMATION);
+		attack = weapon_anims.get(EquipableItem.NO_ANIMATION);
+		zap = attack.clone();
 
 		Accessory accessory = Accessory.equipped();
 
@@ -243,17 +244,20 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			boolean left  = leftHand.goodForMelee();
 
 			if(right && left) {
-				zap = attack = weapon_anims.get("dual");
+				attack = weapon_anims.get("dual");
+				zap = attack.clone();
 				return;
 			}
 
 			if(right) {
-				zap = attack = weapon_anims.get("right");
+				attack = weapon_anims.get("right");
+				zap = attack.clone();
 				return;
 			}
 
 			if(left) {
-				zap = attack = weapon_anims.get("left");
+				attack = weapon_anims.get("left");
+				zap = attack.clone();
 			}
 		}
 
