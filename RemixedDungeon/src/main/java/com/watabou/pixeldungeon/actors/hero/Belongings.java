@@ -303,8 +303,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean removeItem(Item itemToRemove) {
-		//noinspection SuspiciousMethodCalls
-		usedSlots.remove(itemToRemove);
+
+		if(itemToRemove instanceof EquipableItem && isEquipped(itemToRemove)) {
+			var eItem = (EquipableItem) itemToRemove;
+			eItem.deactivate(owner);
+			usedSlots.remove(eItem);
+		}
+
 		itemToRemove.setOwner(CharsList.DUMMY);
 
 		if(itemToRemove.equals(weapon)) {
@@ -478,7 +483,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public boolean unequip(EquipableItem item) {
 		if(checkItem(item)!=null) {
-			item.deactivate(owner);
 			removeItem(item);
 			activatedItems.remove(item);
 			blockSlots();
