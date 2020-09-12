@@ -68,6 +68,9 @@ public class King extends Boss {
 		addResistance( WandOfDisintegration.class );
 		
 		addImmunity( Paralysis.class );
+
+		collect(new SkeletonKey());
+		collect(new ArmorKit());
 	}
 
 
@@ -136,10 +139,6 @@ public class King extends Boss {
 
 	@Override
 	public void die(NamedEntityKind cause) {
-
-		new ArmorKit().doDrop(this);
-		new SkeletonKey().doDrop(this);
-		
 		super.die( cause );
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);

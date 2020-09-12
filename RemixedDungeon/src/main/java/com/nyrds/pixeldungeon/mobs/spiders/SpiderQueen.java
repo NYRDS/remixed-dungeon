@@ -26,13 +26,14 @@ public class SpiderQueen extends Boss {
 
 		float dice = Random.Float();
 		if( dice < 0.33 ) {
-			loot = new ChaosCrystal();
+			collect(new ChaosCrystal());
 		} else if( dice < 0.66 ){
-			loot = new SpiderCharm();
+			collect(new SpiderCharm());
 		} else{
-			loot = new SpiderArmor();
+			collect(new SpiderArmor());
 		}
-		lootChance = 1f;
+
+		collect(new SkeletonKey());
 	}
 	
 	@Override
@@ -88,7 +89,6 @@ public class SpiderQueen extends Boss {
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
-		new SkeletonKey().doDrop(this);
 		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);
 	}
 }

@@ -19,8 +19,7 @@ public class ExplodingSkull extends UndeadMob {
         exp = 1;
         maxLvl = 1;
 
-        loot = Gold.class;
-        lootChance = 0.02f;
+        loot(Gold.class, 0.02f);
     }
 
     @Override

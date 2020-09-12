@@ -19,8 +19,7 @@ public class Zombie extends UndeadMob {
         exp = 6;
         maxLvl = 15;
 
-        loot = Gold.class;
-        lootChance = 0.02f;
+        loot(Gold.class, 0.02f);
     }
 
     @Override

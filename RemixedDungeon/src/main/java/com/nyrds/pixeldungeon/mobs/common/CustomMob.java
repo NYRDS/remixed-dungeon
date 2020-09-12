@@ -170,10 +170,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		flying = classDesc.optBoolean("flying", flying);
 
-		lootChance = (float) classDesc.optDouble("lootChance", lootChance);
+		float lootChance = (float) classDesc.optDouble("lootChance", 1);
 
 		if (classDesc.has("loot")) {
-			loot = ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot"));
+			loot(ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot")), lootChance);
 		}
 
 		setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));

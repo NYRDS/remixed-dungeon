@@ -23,8 +23,7 @@ public class TreacherousSpirit extends Mob {
         maxLvl = 30;
 
         setState(MobAi.getStateByClass(Wandering.class));
-        lootChance = 1f;
-        loot = HeartOfDarkness.class;
+        collect( new HeartOfDarkness());
     }
 
     @Override

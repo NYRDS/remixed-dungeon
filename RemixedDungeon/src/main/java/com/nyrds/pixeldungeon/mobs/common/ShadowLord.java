@@ -51,8 +51,7 @@ public class ShadowLord extends Boss implements IZapper {
 
 		exp = 60;
 
-		lootChance = 0.5f;
-		loot = new ScrollOfWeaponUpgrade();
+		collect(new ScrollOfWeaponUpgrade());
 
 		walkingType = WalkingType.ABSOLUTE;
 	}

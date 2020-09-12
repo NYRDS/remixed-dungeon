@@ -48,8 +48,7 @@ public class Eye extends Mob {
 
         flying = true;
 
-        loot = Dewdrop.class;
-        lootChance = 0.5f;
+        loot(Dewdrop.class, 0.5f);
 
         addResistance(WandOfDisintegration.class);
         addResistance(Death.class);

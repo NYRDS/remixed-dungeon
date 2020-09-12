@@ -42,8 +42,7 @@ public class Spinner extends Mob {
 		exp = 9;
 		maxLvl = 16;
 		
-		loot = new MysteryMeat();
-		lootChance = 0.125f;
+		loot(new MysteryMeat(), 0.125f);
 
 		addResistance( Poison.class );
 		addImmunity( Roots.class );

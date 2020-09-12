@@ -19,8 +19,7 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 
 		level = Dungeon.depth;
 
-		loot = new RottenPasty();
-		lootChance = 1;
+		collect(new RottenPasty());
 
 		addImmunity( ToxicGas.class );
 		addImmunity( Paralysis.class );

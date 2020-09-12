@@ -31,8 +31,7 @@ public class ZombieGnoll extends Mob {
         exp = 7;
         maxLvl = 35;
 
-        loot = Gold.class;
-        lootChance = 0.02f;
+        loot(Gold.class, 0.02f);
 
         addImmunity(Paralysis.class);
         addImmunity(ToxicGas.class);

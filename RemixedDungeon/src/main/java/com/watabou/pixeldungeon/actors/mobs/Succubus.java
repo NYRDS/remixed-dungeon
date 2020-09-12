@@ -50,8 +50,7 @@ public class Succubus extends Mob {
 		exp = 12;
 		maxLvl = 25;
 
-		loot = new ScrollOfLullaby();
-		lootChance = 0.05f;
+		loot(new ScrollOfLullaby(), 0.05f);
 
 		addResistance(Leech.class);
 		addImmunity(Sleep.class);

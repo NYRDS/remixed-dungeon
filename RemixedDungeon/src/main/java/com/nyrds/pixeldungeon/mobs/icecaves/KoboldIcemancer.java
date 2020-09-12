@@ -25,8 +25,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 		exp = 11;
 		maxLvl = 21;
 
-		loot = Treasury.Category.POTION;
-		lootChance = 0.83f;
+		loot(Treasury.Category.POTION,  0.83f);
 
 		addResistance(Death.class);
 	}

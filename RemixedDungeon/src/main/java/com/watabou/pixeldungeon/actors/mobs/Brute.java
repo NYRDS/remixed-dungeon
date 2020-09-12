@@ -41,8 +41,7 @@ public class Brute extends Mob {
 		exp = 8;
 		maxLvl = 15;
 		
-		loot = Gold.class;
-		lootChance = 0.5f;
+		loot(Gold.class, 0.5f);
 		
 		addImmunity( Terror.class );
 	}

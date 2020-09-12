@@ -172,12 +172,7 @@ public abstract class Mob extends Char {
 		super.storeInBundle(bundle);
 
 		bundle.put(STATE,  getState().getTag());
-
 		bundle.put(FRACTION, fraction.ordinal());
-
-		if (loot instanceof Item) {
-			bundle.put(LOOT, (Item) loot);
-		}
 	}
 
 	@Override
@@ -190,9 +185,8 @@ public abstract class Mob extends Char {
 
 		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
 
-		if (bundle.contains(LOOT)) {
-			loot = bundle.get(LOOT);
-			lootChance = 1;
+		if (bundle.contains(LOOT)) { //pre 29.6 saves compatibility
+			loot(bundle.get(LOOT), 1);
 		}
 	}
 
@@ -446,8 +440,8 @@ public abstract class Mob extends Char {
 
 		Library.identify(Library.MOB, getEntityKind());
 
-		if (hero.lvl() <= maxLvl + 2 && !(cause instanceof Chasm)) {
-			dropLoot();
+		if (!(cause instanceof Chasm)) {
+			getBelongings().dropAll();
 		}
 
 		if (hero.isAlive() && !CharUtils.isVisible(this)) {
@@ -456,10 +450,6 @@ public abstract class Mob extends Char {
 	}
 
 	private final String LOOT = "loot";
-
-	@Nullable
-	protected Object loot       = null;
-	protected float  lootChance = 0;
 
 	public Mob split(int cell, int damage) {
 
@@ -502,26 +492,6 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
-	private void dropLoot() {
-		Object loot = getLoot();
-		if (loot != null && Random.Float() <= lootChance) {
-			Item item;
-			if (loot instanceof Treasury.Category) {
-				item = Treasury.getLevelTreasury().random((Treasury.Category) loot);
-			} else if (loot instanceof Class<?>) {
-				item = Treasury.getLevelTreasury().random((Class<? extends Item>) loot);
-			} else if(loot instanceof String) {
-				item = Treasury.getLevelTreasury().random((String) loot);
-			} else {
-				item = (Item) loot;
-			}
-			item.doDrop(this);
-		}
-
-		getBelongings().dropAll();
-	}
-
 	public boolean reset() {
 		return false;
 	}
@@ -555,8 +525,8 @@ public abstract class Mob extends Char {
 
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		if (mobDesc.has("loot")) {
-			loot = ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot"));
-			lootChance = (float) mobDesc.optDouble("lootChance", 1f);
+			float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
+			loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot")), lootChance);
 		}
 
 		getBelongings().setupFromJson(mobDesc);
@@ -592,9 +562,6 @@ public abstract class Mob extends Char {
 		script.run("onSpawn",level);
 	}
 
-	public void loot(Item loot) {
-		this.loot = loot;
-	}
 
 	public boolean isPet() {
 		return fraction == Fraction.HEROES;
@@ -719,7 +686,7 @@ public abstract class Mob extends Char {
 	@Nullable
 	@LuaInterface
 	public Object getLoot() {
-		return loot;
+		return getBelongings().randomUnequipped();
 	}
 
 	@Override
@@ -748,5 +715,26 @@ public abstract class Mob extends Char {
 		}
 
 		super.execute(hero, action);
+	}
+
+	public void loot(Object loot, float lootChance) {
+
+		if(Dungeon.hero.lvl() > maxLvl + 2) {
+			return;
+		}
+
+		if (loot != null && Random.Float() <= lootChance) {
+			Item item;
+			if (loot instanceof Treasury.Category) {
+				item = Treasury.getLevelTreasury().random((Treasury.Category) loot);
+			} else if (loot instanceof Class<?>) {
+				item = Treasury.getLevelTreasury().random((Class<? extends Item>) loot);
+			} else if(loot instanceof String) {
+				item = Treasury.getLevelTreasury().random((String) loot);
+			} else {
+				item = (Item) loot;
+			}
+			collect(item);
+		}
 	}
 }

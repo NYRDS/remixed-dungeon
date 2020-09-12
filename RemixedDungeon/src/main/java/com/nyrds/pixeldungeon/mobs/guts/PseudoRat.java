@@ -19,8 +19,7 @@ public class PseudoRat extends Mob {
         exp = 20;
         maxLvl = 35;
 
-        loot = Gold.class;
-        lootChance = 0.8f;
+        loot(Gold.class, 0.8f);
 
         setState(MobAi.getStateByClass(Hunting.class));
 

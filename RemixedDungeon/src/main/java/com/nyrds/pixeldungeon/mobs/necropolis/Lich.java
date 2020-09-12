@@ -75,13 +75,13 @@ public class Lich extends Boss {
         addImmunity( Blindness.class );
         addImmunity( Sleep.class );
 
-        lootChance = 1.f;
+        collect(new SkeletonKey());
 
         if ( Dungeon.hero.getHeroClass() == HeroClass.NECROMANCER){
-            loot = new BlackSkullOfMastery();
+            collect(new BlackSkullOfMastery());
         }
         else {
-            loot =  new BlackSkull();
+            collect(new BlackSkull());
         }
     }
 
@@ -249,7 +249,6 @@ public class Lich extends Boss {
     @Override
     public void die(NamedEntityKind cause) {
         super.die( cause );
-        level().animatedDrop(new SkeletonKey(), getPos() );
 
         //Kill everything
         skulls.clear();

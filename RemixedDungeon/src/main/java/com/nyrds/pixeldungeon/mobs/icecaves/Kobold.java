@@ -16,8 +16,7 @@ public class Kobold extends Mob {
 		exp = 10;
 		maxLvl = 20;
 		
-		loot = new PotionOfFrost();
-		lootChance = 0.1f;
+		loot(new PotionOfFrost(), 0.1f);
 		
 		addImmunity( Terror.class );
 	}

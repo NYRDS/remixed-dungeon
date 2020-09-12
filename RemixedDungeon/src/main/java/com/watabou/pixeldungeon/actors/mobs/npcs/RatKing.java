@@ -47,8 +47,7 @@ public class RatKing extends NPC {
 		hp(ht(30));
 		exp = 1;
 
-		lootChance = 1;
-		loot = RatKingCrown.class;
+		collect(new RatKingCrown() );
 	}
 	
 	@Override

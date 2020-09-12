@@ -33,8 +33,7 @@ public class Gnoll extends Mob {
 		exp = 2;
 		maxLvl = 12;
 		
-		loot = Gold.class;
-		lootChance = 0.5f;
+		loot(Gold.class, 0.5f);
 	}
 	
 	@Override

@@ -41,22 +41,19 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	@NotNull
 	private Wand ensureWand() {
-		if (loot instanceof  Wand) {
-			return (Wand) loot;
+		Wand wand = getBelongings().getItem(Wand.class);
+		if (wand != null) {
+			return wand;
 		}
 
 		if(kind == 2) {
-			lootChance = 0.12f;
-			loot = new WandOfShadowbolt();
-			((Wand) loot).upgrade(Dungeon.depth / 3);
-			return (Wand) loot;
+			collect(new WandOfShadowbolt().upgrade(Dungeon.depth / 3));
+			return ensureWand();
 		}
 
-		loot = SimpleWand.createRandomSimpleWand();
-		((Wand) loot).upgrade(Dungeon.depth / 3);
+		collect(SimpleWand.createRandomSimpleWand().upgrade(Dungeon.depth / 3));
 
-		lootChance = 0.25f;
-		return ((Wand) loot);
+		return ensureWand();
 	}
 
 	public void adjustStats(int depth) {

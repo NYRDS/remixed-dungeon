@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
@@ -48,7 +47,7 @@ public class WandOfLightning extends SimpleWand  {
 	@Override
 	protected void onZap( int cell ) {
 
-		if ((getOwner() instanceof Hero) && !getOwner().isAlive()) {
+		if ((getOwner() == Dungeon.hero) && !getOwner().isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfLightning_Info1));
 		}

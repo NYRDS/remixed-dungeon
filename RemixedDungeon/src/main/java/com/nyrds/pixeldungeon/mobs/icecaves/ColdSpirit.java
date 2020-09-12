@@ -23,8 +23,7 @@ public class ColdSpirit extends Mob {
         exp = 8;
         maxLvl = 20;
 
-        loot = Gold.class;
-        lootChance = 0.02f;
+        loot(Gold.class, 0.02f);
     }
 
     @Override

@@ -23,8 +23,7 @@ public class Worm extends Mob {
         exp = 18;
         maxLvl = 35;
 
-        loot = Gold.class;
-        lootChance = 0.4f;
+        loot(Gold.class, 0.4f);
 
         addImmunity(Paralysis.class);
         addImmunity(ToxicGas.class);

@@ -57,15 +57,15 @@ public class DM300 extends Boss {
 		
 		float dice = Random.Float();
 		if( dice < 0.5 ) {
-			loot = new ChaosCrystal();
+			loot(new ChaosCrystal(), 0.333f);
 		} else {
-			loot = new RingOfThorns().random();
+			loot(new RingOfThorns().random(), 0.333f);
 		}
-		
-		lootChance = 0.333f;
-		
+
 		addImmunity( ToxicGas.class );
 		addImmunity( Bleeding.class );
+
+		collect(new SkeletonKey());
 	}
 	
 	@Override
@@ -129,11 +129,8 @@ public class DM300 extends Boss {
 	
 	@Override
 	public void die(NamedEntityKind cause) {
-		
 		super.die( cause );
-		
-		new SkeletonKey().doDrop(this);
-		
+
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
 		
 		yell(Game.getVar(R.string.DM300_Info2));

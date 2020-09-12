@@ -26,6 +26,8 @@ public class MimicAmulet extends Mob {
 		
 		addImmunity( ToxicGas.class );
 		addImmunity( Paralysis.class );
+
+		collect(new SkeletonKey());
 	}
 	
 	private static final String LEVEL	= "level";
@@ -55,7 +57,6 @@ public class MimicAmulet extends Mob {
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
-		new SkeletonKey().doDrop(this);
 	}
 
 	@Override

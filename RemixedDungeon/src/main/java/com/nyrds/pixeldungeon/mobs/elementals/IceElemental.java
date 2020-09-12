@@ -20,8 +20,7 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 	public IceElemental() {
 		adjustStats(Dungeon.depth);
 
-		loot = new FrozenCarpaccio();
-		lootChance = 0.1f;
+		loot(new FrozenCarpaccio(), 0.1f);
 	}
 
 	public void adjustStats(int depth) {

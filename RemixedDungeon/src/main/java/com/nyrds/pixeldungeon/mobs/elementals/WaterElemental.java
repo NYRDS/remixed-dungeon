@@ -21,8 +21,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	public WaterElemental() {
 		adjustStats(Dungeon.depth);
 		
-		loot = new PotionOfFrost();
-		lootChance = 0.1f;
+		loot(new PotionOfFrost(), 0.1f);
 	}
 	
 	public void adjustStats(int depth) {

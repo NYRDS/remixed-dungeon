@@ -78,6 +78,8 @@ public class Yog extends Boss {
 		addImmunity(Burning.class);
 		addImmunity(ToxicGas.class);
 		addImmunity(ScrollOfPsionicBlast.class);
+
+		collect(new SkeletonKey());
 	}
 
 	public void spawnFists() {
@@ -146,7 +148,6 @@ public class Yog extends Boss {
 			mob = Dungeon.level.getRandomMob();
 		}
 
-		level().animatedDrop(new SkeletonKey(), getPos());
 		Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
 		super.die(cause);
 

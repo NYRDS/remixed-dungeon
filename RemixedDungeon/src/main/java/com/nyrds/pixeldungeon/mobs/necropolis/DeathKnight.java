@@ -18,8 +18,7 @@ public class DeathKnight extends UndeadMob {
         exp = 7;
         maxLvl = 15;
 
-        loot = Gold.class;
-        lootChance = 0.02f;
+        loot(Gold.class, 0.02f);
     }
 
     @Override

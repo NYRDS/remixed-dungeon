@@ -41,8 +41,7 @@ public class Thief extends Mob {
 		exp = 5;
 		maxLvl = 10;
 		
-		loot = RingOfHaggler.class;
-		lootChance = 0.01f;
+		loot(RingOfHaggler.class, 0.01f);
 	}
 
 	@Override

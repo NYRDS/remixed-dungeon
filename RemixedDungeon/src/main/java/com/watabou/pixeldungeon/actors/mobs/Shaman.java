@@ -44,8 +44,7 @@ public class Shaman extends Mob implements IZapper {
 		exp = 6;
 		maxLvl = 14;
 
-		loot = Treasury.Category.SCROLL;
-		lootChance = 0.33f;
+		loot(Treasury.Category.SCROLL, 0.33f);
 
 		addResistance(LightningTrap.Electricity.class);
 	}

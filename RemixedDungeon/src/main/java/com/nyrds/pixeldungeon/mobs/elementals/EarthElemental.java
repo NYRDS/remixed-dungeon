@@ -24,8 +24,7 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 	public EarthElemental() {
 		adjustStats(Dungeon.depth);
 
-		loot = new Earthroot.Seed();
-		lootChance = 0.1f;
+		loot(new Earthroot.Seed(), 0.1f);
 	}
 
 	public void adjustStats(int depth) {

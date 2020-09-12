@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -44,9 +45,7 @@ public class Piranha extends Mob {
 		
 		exp = 0;
 
-		lootChance = 1f;
-
-		loot = "RawFish";
+		collect(ItemFactory.itemByName("RawFish"));
 
 		addImmunity( Burning.class );
 		addImmunity( Paralysis.class );

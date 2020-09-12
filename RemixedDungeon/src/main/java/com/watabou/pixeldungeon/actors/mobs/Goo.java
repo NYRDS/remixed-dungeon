@@ -47,11 +47,11 @@ public class Goo extends Boss {
 		defenseSkill = 12;
 		spriteClass = GooSprite.class;
 
-		loot = Treasury.Category.POTION;
-
-		lootChance = 0.8f;
+		loot(Treasury.Category.POTION, 0.8f);
 		
 		addResistance( ToxicGas.class );
+
+		collect(new SkeletonKey());
 	}
 	
 	private static final String GOO_PUMPED_STATE = "goo_pumped_state";
@@ -153,11 +153,8 @@ public class Goo extends Boss {
 
 	@Override
 	public void die(NamedEntityKind cause) {
-		
 		super.die( cause );
 
-		new SkeletonKey().doDrop(this);
-		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_1);
 		
 		yell(Game.getVar(R.string.Goo_Info2));

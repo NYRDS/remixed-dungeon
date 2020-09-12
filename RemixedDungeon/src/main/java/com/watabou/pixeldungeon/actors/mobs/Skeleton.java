@@ -44,10 +44,8 @@ public class Skeleton extends UndeadMob {
 		maxLvl = 10;
 
 		if (Random.Int(5) == 0) {
-			lootChance = 1;
-		} else {
-			lootChance = 0;
-		}
+        } else {
+        }
 
 
 	}

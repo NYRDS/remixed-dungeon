@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -16,7 +15,6 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 public class IceGuardianCore extends Boss {
@@ -27,8 +25,7 @@ public class IceGuardianCore extends Boss {
 		defenseSkill = 10;
 
 		baseSpeed = 0.5f;
-		loot = new WandOfIcebolt().upgrade(1);
-		lootChance = 1.0f;
+		collect(new WandOfIcebolt().upgrade(1));
 
 		addImmunity( Paralysis.class );
 		addImmunity( ToxicGas.class );
@@ -37,6 +34,10 @@ public class IceGuardianCore extends Boss {
 		addImmunity( Amok.class );
 		addImmunity( Blindness.class );
 		addImmunity( Sleep.class );
+
+		collect(new SkeletonKey());
+		collect(new IceKey());
+
 	}
 	
 	@Override
@@ -58,16 +59,11 @@ public class IceGuardianCore extends Boss {
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
 
-		Level level = Dungeon.level;
-
-		for (Mob mob : level.getCopyOfMobsArray()) {
+		for (Mob mob : level().getCopyOfMobsArray()) {
 			if (mob instanceof IceGuardian) {
 				mob.die(cause);
 			}
 		}
-
-		new SkeletonKey().doDrop(this);
-		new IceKey().doDrop(this);
 
 		Badges.validateBossSlain(Badges.Badge.ICE_GUARDIAN_SLAIN);
 	}

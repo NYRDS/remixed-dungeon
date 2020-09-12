@@ -21,8 +21,7 @@ public class SpiderNest extends Mob {
 		
 		postpone(20);
 		
-		loot = new PotionOfHealing();
-		lootChance = 0.2f;
+		loot(new PotionOfHealing(), 0.2f);
 
 		movable = false;
 	}

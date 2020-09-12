@@ -21,8 +21,7 @@ public class DreadKnight extends UndeadMob {
         exp = 8;
         maxLvl = 15;
 
-        loot = Gold.class;
-        lootChance = 0.02f;
+        loot(Gold.class, 0.02f);
     }
 
     @Override

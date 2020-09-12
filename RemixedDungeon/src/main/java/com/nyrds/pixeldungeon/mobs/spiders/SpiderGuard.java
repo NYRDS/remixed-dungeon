@@ -23,8 +23,7 @@ public class SpiderGuard extends MultiKindMob {
 		
 		kind = 1;
 		
-		loot = new MysteryMeat();
-		lootChance = 0.067f;
+		loot(new MysteryMeat(), 0.067f);
 	}
 	
 	@Override

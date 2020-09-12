@@ -15,8 +15,7 @@ public class YogsEye extends Mob {
 
         exp = 25;
 
-        loot = Gold.class;
-        lootChance = 0.5f;
+        loot(Gold.class, 0.5f);
     }
 
     @Override

@@ -44,9 +44,8 @@ public class Monk extends Mob {
 		exp = 11;
 		maxLvl = 21;
 		
-		loot = Treasury.Category.FOOD;
-		lootChance = 0.153f;
-		
+		loot(Treasury.Category.FOOD, 0.153f);
+
 		addImmunity( Amok.class );
 		addImmunity( Terror.class );
 	}

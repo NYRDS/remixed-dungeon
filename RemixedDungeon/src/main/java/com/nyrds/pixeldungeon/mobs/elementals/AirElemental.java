@@ -25,8 +25,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 		flying = true;
 		
-		loot = new PotionOfLevitation();
-		lootChance = 0.1f;
+		loot(new PotionOfLevitation(),0.1f);
 
 		addImmunity(Bleeding.class);
 	}

@@ -31,8 +31,7 @@ public class SpiderExploding extends MultiKindMob {
 
         kind = Random.IntRange(0, 6);
 
-        loot = new MysteryMeat();
-        lootChance = 0.067f;
+        loot(new MysteryMeat(), 0.067f);
     }
 
     @Override

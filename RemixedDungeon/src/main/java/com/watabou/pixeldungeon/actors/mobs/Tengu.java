@@ -60,6 +60,11 @@ public class Tengu extends Boss implements IZapper {
 		
 		addResistance( ToxicGas.class );
 		addResistance( Poison.class );
+
+		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
+			collect(new TomeOfMastery());
+		}
+		collect(new SkeletonKey());
 	}
 	
 	private int timeToJump = JUMP_DELAY;
@@ -81,11 +86,6 @@ public class Tengu extends Boss implements IZapper {
 	
 	@Override
 	public void die(NamedEntityKind cause) {
-
-		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
-			new TomeOfMastery().doDrop(this);
-		}
-		new SkeletonKey().doDrop(this);
 		super.die(cause);
 		
 		Badges.validateBossSlain(Badge.BOSS_SLAIN_2);

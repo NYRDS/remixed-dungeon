@@ -26,8 +26,7 @@ public class IceGuardian extends MultiKindMob {
 
 		baseSpeed = 0.7f;
 		
-		loot = new FrozenCarpaccio();
-		lootChance = 0.2f;
+		loot(new FrozenCarpaccio(), 0.2f);
 
 		addImmunity( Paralysis.class );
 		addImmunity( ToxicGas.class );

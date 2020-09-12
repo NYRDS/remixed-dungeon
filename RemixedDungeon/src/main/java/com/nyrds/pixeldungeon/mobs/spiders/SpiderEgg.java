@@ -21,8 +21,7 @@ public class SpiderEgg extends Mob {
 
 		postpone(20);
 		
-		loot = Treasury.Category.SEED;
-		lootChance = 0.2f;
+		loot(Treasury.Category.SEED, 0.2f);
 
 		movable = false;
 	}
