@@ -95,7 +95,8 @@ return item.init{
         RPD.glog("execute owner: %s", tostring(owner))
 
         if action == "action1" then
-            item:selectCell("action1","Please select cell for action 1")
+            RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
+            --item:selectCell("action1","Please select cell for action 1")
         end
 
         if action == "action2" then

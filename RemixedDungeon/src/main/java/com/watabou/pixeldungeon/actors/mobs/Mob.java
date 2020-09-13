@@ -185,8 +185,8 @@ public abstract class Mob extends Char {
 
 		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
 
-		if (bundle.contains(LOOT)) { //pre 29.6 saves compatibility
-			loot(bundle.get(LOOT), 1);
+		if (bundle.contains("loot")) { //pre 29.6 saves compatibility
+			loot(bundle.get("loot"), 1);
 		}
 	}
 
@@ -448,8 +448,6 @@ public abstract class Mob extends Char {
 			GLog.i(Game.getVar(R.string.Mob_Died));
 		}
 	}
-
-	private final String LOOT = "loot";
 
 	public Mob split(int cell, int damage) {
 
