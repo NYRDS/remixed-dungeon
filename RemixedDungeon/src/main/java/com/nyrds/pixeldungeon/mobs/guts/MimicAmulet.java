@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -14,6 +15,7 @@ import com.watabou.utils.Random;
 
 public class MimicAmulet extends Mob {
 
+	@Packable
 	private int level;
 
 	public MimicAmulet() {
@@ -29,19 +31,17 @@ public class MimicAmulet extends Mob {
 
 		collect(new SkeletonKey());
 	}
-	
-	private static final String LEVEL	= "level";
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle(bundle);
-		bundle.put(LEVEL, level);
-	}
+
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
-		adjustStats(bundle.getInt(LEVEL));
+
+		if(getBelongings().getItem(SkeletonKey.class)==null) {
+			collect(new SkeletonKey());
+		}
+
+		adjustStats(level);
 	}
 	
 	@Override
@@ -56,6 +56,7 @@ public class MimicAmulet extends Mob {
 	
 	@Override
 	public void die(NamedEntityKind cause) {
+		level().animatedDrop(new SkeletonKey(), getPos());
 		super.die(cause);
 	}
 

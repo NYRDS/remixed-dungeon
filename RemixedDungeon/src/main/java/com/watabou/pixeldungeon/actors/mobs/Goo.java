@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -32,7 +33,6 @@ import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.GooSprite;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -54,24 +54,10 @@ public class Goo extends Boss {
 		collect(new SkeletonKey());
 	}
 	
-	private static final String GOO_PUMPED_STATE = "goo_pumped_state";
-	
+
+	@Packable
 	private boolean pumpedUp = false;
-	
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-		
-		bundle.put(GOO_PUMPED_STATE, pumpedUp);
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		
-		super.restoreFromBundle( bundle );
-		pumpedUp = bundle.getBoolean(GOO_PUMPED_STATE);
-	}
-	
+
 	@Override
 	public int damageRoll() {
 		if (pumpedUp) {

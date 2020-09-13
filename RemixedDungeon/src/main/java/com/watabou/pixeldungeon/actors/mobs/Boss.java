@@ -4,9 +4,11 @@ import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.noosa.audio.Music;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -42,6 +44,7 @@ abstract public class Boss extends Mob {
 	public void die(NamedEntityKind cause) {
 		GameScene.playLevelMusic();
 		GameScene.bossSlain();
+
 		level().unseal();
 		super.die(cause);
 	}
@@ -50,5 +53,14 @@ abstract public class Boss extends Mob {
 	protected void setupCharData() {
 		super.setupCharData();
 		battleMusic = getClassDef().optString(BATTLE_MUSIC, null);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+
+		if(getBelongings().getItem(SkeletonKey.class)==null) {
+			collect(new SkeletonKey());
+		}
 	}
 }
