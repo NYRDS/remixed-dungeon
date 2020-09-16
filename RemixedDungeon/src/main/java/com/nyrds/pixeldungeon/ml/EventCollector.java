@@ -7,6 +7,7 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.ByteArrayOutputStream;
@@ -142,6 +143,8 @@ public class EventCollector {
 			ps.close();
 
 			FirebaseCrashlytics.getInstance().log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
+
+			GLog.toFile(baos.toString());
 		}
 	}
 

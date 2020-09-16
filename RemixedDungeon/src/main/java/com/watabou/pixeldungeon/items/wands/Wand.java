@@ -36,7 +36,6 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
-import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.rings.RingOfPower.Power;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -64,7 +63,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	private int maxCharges = Scrambler.scramble(initialCharges());
 	private int curCharges = Scrambler.scramble(maxCharges());
 
-	private Charger charger;
+	transient private Charger charger = new Charger(this);
 
 	@Packable
 	private boolean curChargeKnown = false;
@@ -142,12 +141,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public void activate(@NotNull Char chr) {
-		super.activate(chr);
-		charge(chr);
-	}
-
-	@Override
 	public void execute(@NotNull Char chr, @NotNull String action) {
 		if (action.equals(AC_ZAP)) {
 			chr.getBelongings().setSelectedItem(this);
@@ -166,25 +159,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	protected abstract void onZap(int cell);
 
 	@Override
-	public boolean collect(@NotNull Bag container) {
-		if (super.collect(container)) {
-			charge(container.getOwner());
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	public void charge(Char owner) {
-		(charger = new Charger(this)).attachTo(owner);
-	}
-
-	@Override
-	public void onDetach() {
-		if (charger != null) {
-			charger.detach();
-			charger = null;
-		}
+	public void setOwner(@NotNull Char owner) {
+		super.setOwner(owner);
+		charger.detach();
+		charger.attachTo(owner);
 	}
 
 	public int effectiveLevel() {

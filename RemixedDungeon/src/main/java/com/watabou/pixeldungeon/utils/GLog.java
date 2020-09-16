@@ -133,7 +133,6 @@ public class GLog {
 
 	public static void debug( String text, Object... args ) {
 		if(BuildConfig.DEBUG) {
-			toFile(text, args);
 			glog(text, args);
 		}
 	}

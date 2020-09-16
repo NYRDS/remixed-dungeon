@@ -126,7 +126,7 @@ public class Bag extends Item implements Iterable<Item> {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		for (Item item : bundle.getCollection( ITEMS,Item.class )) {
+		for (Item item : bundle.getCollection( ITEMS, Item.class )) {
 			item.collect(this);
 		}
 	}

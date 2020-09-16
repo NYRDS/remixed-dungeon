@@ -45,7 +45,7 @@ import lombok.SneakyThrows;
 public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
-    public Char target;
+    public Char target = CharsList.DUMMY;
 
     @Packable(defaultValue = "1")
     protected int level = 1;

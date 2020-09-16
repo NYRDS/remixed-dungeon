@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.gltextures.SmartTexture;
@@ -47,16 +48,15 @@ public class WndHero extends WndTabbed {
 	
 	private StatsTab stats;
 	private BuffsTab buffs;
-	
-	private SmartTexture icons;
+
 	private TextureFilm film;
 	
 	public WndHero() {
 		
 		super();
-		
-		icons = TextureCache.get( Assets.BUFFS_LARGE );
-		film = new TextureFilm( icons, 16, 16 );
+
+		SmartTexture icons = TextureCache.get(Assets.BUFFS_LARGE);
+		film = new TextureFilm(icons, 16, 16 );
 		
 		stats = new StatsTab();
 		add( stats );
@@ -191,7 +191,6 @@ public class WndHero extends WndTabbed {
 			int index = buff.icon();
 			
 			if (index != BuffIndicator.NONE) {
-				
 				Image icon = new Image( TextureCache.get(buff.textureLarge()) );
 				icon.frame( film.get( index ) );
 				icon.y = pos;
@@ -203,6 +202,15 @@ public class WndHero extends WndTabbed {
 				add( txt );
 				
 				pos += GAP + icon.height;
+			} else {
+				if(BuildConfig.DEBUG) {
+					Text txt = PixelScene.createText(buff.name(), GuiProperties.regularFontSize());
+					txt.x = GAP;
+					txt.y = pos + (int) (16 - txt.baseLine()) / 2;
+					add(txt);
+
+					pos += GAP + 16;
+				}
 			}
 		}
 		
