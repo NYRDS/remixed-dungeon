@@ -674,6 +674,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return;
 		}
 
+		GLog.debug("%s added to %s", buff.getEntityKind(), getEntityKind());
+
 		buffs.add(buff);
 		Actor.add(buff);
 
@@ -687,6 +689,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void remove(@Nullable Buff buff) {
 		buffs.remove(buff);
 		Actor.remove(buff);
+
+		if(buff!=null) {
+			GLog.debug("%s removed from %s", buff.getEntityKind(), getEntityKind());
+		}
 
 		if(buff!=null && sprite != null) {
 			sprite.remove(buff.charSpriteStatus());

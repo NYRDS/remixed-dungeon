@@ -288,11 +288,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 			onDetach();
 		}
 
-		QuickSlot.refresh(getOwner());
+		QuickSlot.refresh(container.getOwner());
     	return this;
 	}
 
 	protected void onDetach() {
+    	setOwner(CharsList.DUMMY);
 	}
 
 	public Item upgrade() {

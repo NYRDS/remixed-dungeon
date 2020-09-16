@@ -21,7 +21,6 @@ import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -143,12 +142,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public void deactivate(Char ch) {
-		super.deactivate(ch);
-		onDetach();
-	}
-
-	@Override
 	public void activate(@NotNull Char chr) {
 		super.activate(chr);
 		charge(chr);
@@ -175,9 +168,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public boolean collect(@NotNull Bag container) {
 		if (super.collect(container)) {
-			if (container.getOwner() != CharsList.DUMMY) {
-				charge(container.getOwner());
-			}
+			charge(container.getOwner());
 			return true;
 		} else {
 			return false;
@@ -190,10 +181,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	@Override
 	public void onDetach() {
-		stopCharging();
-	}
-
-	public void stopCharging() {
 		if (charger != null) {
 			charger.detach();
 			charger = null;
