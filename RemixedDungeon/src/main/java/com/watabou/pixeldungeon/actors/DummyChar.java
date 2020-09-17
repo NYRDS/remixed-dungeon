@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.DummySprite;
 
 public class DummyChar extends Char {
 
@@ -16,8 +17,8 @@ public class DummyChar extends Char {
     }
 
     @Override
-    public CharSprite sprite() {
-        return null;
+    public CharSprite newSprite() {
+        return new DummySprite();
     }
 
     @Override

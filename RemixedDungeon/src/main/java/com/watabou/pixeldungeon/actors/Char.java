@@ -850,11 +850,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			if(!GameScene.mayCreateSprites()) {
 				throw new TrackedRuntimeException("scene not ready for "+ this.getClass().getSimpleName());
 			}
-			sprite = sprite();
+			sprite = newSprite();
 		}
 		if(sprite == null) {
 			throw new TrackedRuntimeException("Sprite creation for: "+getClass().getSimpleName()+" failed");
 		}
+
 		if(sprite.getParent()==null) {
 			updateSprite(sprite);
 		}
@@ -883,7 +884,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return false;
 	}
 
-	public abstract CharSprite sprite();
+	public abstract CharSprite newSprite();
 
 	public int ht() {
 		return Scrambler.descramble(HT);

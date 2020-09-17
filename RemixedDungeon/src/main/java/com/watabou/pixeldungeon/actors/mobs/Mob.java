@@ -199,7 +199,7 @@ public abstract class Mob extends Char {
 	}
 
 	@SneakyThrows
-	public CharSprite sprite() {
+	public CharSprite newSprite() {
 		String descName = "spritesDesc/" + getEntityKind() + ".json";
 		if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
 			return new MobSpriteDef(descName, getKind());

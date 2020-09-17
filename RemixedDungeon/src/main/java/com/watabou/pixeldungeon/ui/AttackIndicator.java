@@ -121,7 +121,7 @@ public class AttackIndicator extends Tag {
 			sprite.killAndErase();
 		}
 
-		sprite = target.sprite().avatar();
+		sprite = target.newSprite().avatar();
 		add(sprite);
 
 		sprite.x = x + (width - sprite.width()) / 2 + 1;

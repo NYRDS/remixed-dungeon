@@ -106,7 +106,7 @@ public class WndInfoMob extends WndTitledMessage {
 			name.hardlight( TITLE_COLOR );
 			add( name );
 			
-			image = mob.sprite();
+			image = mob.newSprite();
 			add( image );
 			
 			hpBg = new ColorBlock( 1, 1, COLOR_BG );

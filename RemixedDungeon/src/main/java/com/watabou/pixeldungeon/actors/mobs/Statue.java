@@ -116,7 +116,7 @@ public class Statue extends Mob {
 	}
 
 	@Override
-	public CharSprite sprite() {
+	public CharSprite newSprite() {
 		return HeroSpriteDef.createHeroSpriteDef(getItem());
 	}
 

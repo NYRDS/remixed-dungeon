@@ -25,7 +25,7 @@ import com.watabou.utils.Random;
 public class WndQuest extends WndTitledMessage {
 	
 	public WndQuest(Char questgiver, String text ) {
-		super( questgiver.sprite(), Utils.capitalize( questgiver.getName() ), text );
+		super( questgiver.newSprite(), Utils.capitalize( questgiver.getName() ), text );
 	}
 
 	public WndQuest( Char questgiver, int ... phrases ) {

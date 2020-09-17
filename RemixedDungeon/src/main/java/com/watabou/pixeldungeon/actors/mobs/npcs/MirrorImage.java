@@ -83,7 +83,7 @@ public class MirrorImage extends Mob {
 	}
 
 	@Override
-	public CharSprite sprite() {
+	public CharSprite newSprite() {
 		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {
 			return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
 		} else { // first sprite generation
@@ -98,7 +98,7 @@ public class MirrorImage extends Mob {
 				deathEffect = spriteDef.getDeathEffect();
 			}
 
-			return sprite();
+			return newSprite();
 		}
 	}
 }

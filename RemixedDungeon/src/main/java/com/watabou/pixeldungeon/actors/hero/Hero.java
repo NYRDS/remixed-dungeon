@@ -1521,7 +1521,7 @@ public class Hero extends Char {
 	}
 
 	@Override
-    public CharSprite sprite() {
+    public CharSprite newSprite() {
 		return HeroSpriteDef.createHeroSpriteDef(this);
 	}
 

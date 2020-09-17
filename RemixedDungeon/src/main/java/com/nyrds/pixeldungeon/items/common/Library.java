@@ -144,7 +144,7 @@ public class Library {
 				Mob mob = MobFactory.mobByName(clazz);
 				return new EntryHeader(
 					Utils.capitalize(mob.getName()),
-					mob.sprite().avatar());
+					mob.newSprite().avatar());
 			}
 		}
 
