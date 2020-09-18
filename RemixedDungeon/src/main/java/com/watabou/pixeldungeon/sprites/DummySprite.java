@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.noosa.Animation;
-import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.TextureFilm;
 
 public class DummySprite extends MobSprite {
@@ -26,7 +25,7 @@ public class DummySprite extends MobSprite {
 	public DummySprite() {
 		super();
 		
-		texture(new ColorBlock(16,16,0));
+		texture("hero/empty.png");
 		
 		TextureFilm frames = new TextureFilm( texture, 1, 1 );
 

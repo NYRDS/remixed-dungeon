@@ -51,7 +51,7 @@ local function levelsTestModeOnStep(self, scene)
             heroAiStep()
         end
 
-        if framesOnLevel > 100 then
+        if framesOnLevel > 1000 then
             currentLevel = currentLevel + 1
 
             if currentLevel < levelsSize then

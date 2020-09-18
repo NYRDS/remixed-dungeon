@@ -156,7 +156,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected Set<String> immunities = new HashSet<>();
 	protected Set<String> resistances = new HashSet<>();
 
-	private Set<Buff> buffs = new HashSet<>();
+	protected Set<Buff> buffs = new HashSet<>();
 
 	private Map<String, Number> spellsUsage = new HashMap<>();
 
