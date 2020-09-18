@@ -1,5 +1,5 @@
-1. Goo kesildi
-Lağımın terör estiren varlığı yok edildi.
+1. Goo öldürüldü
+Lağımdaki terör artık bitti.
 
 2. Tengu kesildi
 Aldatıcı ruh artık kimseye işkence uygulayamayacak.
@@ -19,11 +19,14 @@ Büyülü teknolojilerin şaheseri yenildi!
 7. Örümcek Kraliçe kesildi
 Bir başka krallık daha hükümdarını kaybetti.
 
-8. Gölge Efendisi kesildi
+8. Gölgelerin Efendisi kesildi
 Karanlığın tezahürü yok edildi!
 
 9. Kadim Tanrı kesildi
 Yog-Dzewa ve dehşetleri artık yok.
 
-10. Kasabada yeni bir Gnoll!
-Cesaret, Nezaket ve biraz da altın, ve ayrıca maceranıza eşlik edecek acımasız bir Gnoll.
+10. Kasabada yeni bir Sırtlanadam!
+Cesaret, Nezaket ve biraz da altın, hatta acımasız bir Sırtlanadam maceranıza katılacak.
+
+Cerrahi maske elde edildi.
+Maske takmak diğerlerini düşündüğünüz anlamına gelir.
