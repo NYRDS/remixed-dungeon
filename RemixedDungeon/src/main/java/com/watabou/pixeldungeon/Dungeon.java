@@ -17,6 +17,7 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
@@ -879,4 +880,10 @@ public class Dungeon {
     public static boolean isPathVisible(int from, int to) {
         return visible[from] || visible[to];
     }
+
+    @LuaInterface
+    public static boolean isCellVisible(int cell) {
+        return visible[cell];
+    }
+
 }

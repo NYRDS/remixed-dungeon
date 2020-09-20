@@ -34,6 +34,23 @@ local function heroAiStep()
         return
     end
 
+    local level = hero:level()
+
+    if hero:visibleEnemies() > 0 then
+        local enemyPos = hero:visibleEnemy(0):getPos()
+        if level:cellValid(enemyPos) then
+            hero:handle(enemyPos)
+        end
+        return
+    end
+
+    local exitCell = level:getRandomTerrainCell(RPD.Terrain.EXIT)
+
+    if level:cellValid(exitCell) and RPD.Dungeon:isCellVisible(exitCell) then
+        hero:handle(exitCell)
+        return
+    end
+
     hero:handle(RPD.Dungeon.level:randomVisibleDestination())
 end
 
