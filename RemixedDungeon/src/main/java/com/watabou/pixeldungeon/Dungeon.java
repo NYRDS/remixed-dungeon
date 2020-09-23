@@ -729,6 +729,7 @@ public class Dungeon {
 
             if(!level.cellValid(pos)) {
                 GLog.debug("WTF?");
+                return;
             }
 
             if (visible[pos]) {

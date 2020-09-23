@@ -36,12 +36,22 @@ local function heroAiStep()
 
     local level = hero:level()
 
-    if hero:visibleEnemies() > 0 then
+    if hero:buffLevel('Blindness') > 0 then
+        local cell = level:getEmptyCellNextTo(hero:getPos())
+        if level:cellValid(cell) then
+            hero:handle(cell)
+        else
+            hero:rest(false)
+        end
+        return
+    end
+
+    if hero:visibleEnemies() > 0 and hero:buffLevel('Charmed') == 0 then
         local enemyPos = hero:visibleEnemy(0):getPos()
         if level:cellValid(enemyPos) then
             hero:handle(enemyPos)
+            return
         end
-        return
     end
 
     local exitCell = level:getRandomTerrainCell(RPD.Terrain.EXIT)
