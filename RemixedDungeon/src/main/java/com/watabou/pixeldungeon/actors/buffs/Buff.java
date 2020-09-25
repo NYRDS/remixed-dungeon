@@ -82,7 +82,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         void carrierFx();
     }
 
-    public boolean attachTo(Char target) {
+    public boolean attachTo(@NotNull Char target) {
 
         if (target.immunities().contains(getEntityKind())) {
             return false;

@@ -220,7 +220,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		ht(bundle.getInt(TAG_HT));
 
 		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
-				b.attachTo(this);
+			b.attachTo(this);
 		}
 
 		spellsUsage = bundle.getMap(SPELLS_USAGE);

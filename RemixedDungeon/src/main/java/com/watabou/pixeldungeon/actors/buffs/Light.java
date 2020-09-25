@@ -31,7 +31,7 @@ public class Light extends FlavourBuff {
 	@Override
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {
-			if(target == Dungeon.hero.getControlTarget()) {
+			if(!Dungeon.isLoading() && target == Dungeon.hero.getControlTarget()) {
 				Dungeon.observe();
 			}
 			return true;
