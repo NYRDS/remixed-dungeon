@@ -6,6 +6,7 @@ package com.nyrds.pixeldungeon.items.accessories;
 public class ChaosHelmet extends Accessory{
 
     {
+        coverFacialHair = true;
         coverHair = true;
         image = 17;
     }

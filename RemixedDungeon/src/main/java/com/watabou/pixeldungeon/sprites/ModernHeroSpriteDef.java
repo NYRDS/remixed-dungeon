@@ -133,7 +133,9 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			if (classDescriptor.equals("MAGE_WARLOCK")
 					|| classDescriptor.equals("MAGE_BATTLEMAGE")
 					|| classDescriptor.equals("WARRIOR_BERSERKER")
-					|| classDescriptor.equals("NECROMANCER_NONE")) {
+					|| classDescriptor.equals("NECROMANCER_NONE")
+					|| classDescriptor.equals("GNOLL_NONE"))
+			{
 				facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 			}
 		}

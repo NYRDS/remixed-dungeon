@@ -6,6 +6,7 @@ package com.nyrds.pixeldungeon.items.accessories;
 public class ZombieMask extends Accessory{
 
     {
+        coverFacialHair = true;
         coverHair = true;
         image = 11;
     }

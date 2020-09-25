@@ -6,6 +6,7 @@ package com.nyrds.pixeldungeon.items.accessories;
  */
 class DogeMask extends Accessory {
     {
+        coverFacialHair = true;
         coverHair = true;
         image = 18;
     }

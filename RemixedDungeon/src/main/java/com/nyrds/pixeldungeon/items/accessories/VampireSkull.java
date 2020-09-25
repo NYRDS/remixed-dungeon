@@ -7,6 +7,7 @@ public class VampireSkull extends Accessory{
 
     {
         coverHair = true;
+        coverFacialHair = true;
         image = 12;
     }
 

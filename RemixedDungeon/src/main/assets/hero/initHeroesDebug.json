@@ -43,10 +43,10 @@
         "kind": "TomeOfMastery"
       },
       {
-        "kind": "BattleAxe"
+        "kind": "ArmorKit"
       },
       {
-        "kind": "Gold",
+        "kind": "SpellBook",
         "quantity": 10000
       },
       {
