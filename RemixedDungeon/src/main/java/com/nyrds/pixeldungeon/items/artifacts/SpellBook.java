@@ -32,6 +32,7 @@ public class SpellBook extends Artifact {
 
 	public Spell spell(){
 		if(spell == null || spell.equals("")) {
+			identify();
 
 			ArrayList<String> spells = SpellFactory.getSpellsByAffinity(SpellHelper.AFFINITY_COMMON);
 			spell(Random.element(spells));
@@ -62,10 +63,18 @@ public class SpellBook extends Artifact {
 
 	@Override
 	public String desc(){
-		if(this.isIdentified()){
+		if(isIdentified()){
 			return  Utils.format(R.string.SpellBook_Info_Identified, spell().name(), spell().desc());
 		}
 		return super.desc();
+	}
+
+	@Override
+	public String name(){
+		if(isIdentified()){
+			return  String.format("%s (%s)", super.name(), spell().name());
+		}
+		return super.name();
 	}
 
 	@Override

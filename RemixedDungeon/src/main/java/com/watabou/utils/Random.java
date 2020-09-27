@@ -155,7 +155,7 @@ public class Random {
 	public static<T> T element(@NotNull Collection<? extends T> collection ) {
 		int size = collection.size();
 		return size > 0 ? 
-			(T)collection.toArray()[Int( size )] : 
+				(T)(collection.toArray()[(int) (Math.random() * size)]):
 			null;
 	}
 }
