@@ -14,6 +14,9 @@ local levels = RPD.DungeonGenerator:getLevelsList()
 local levelsSize = levels:size()
 local currentLevel = 0
 local framesOnLevel = 0
+local framesOnScene = 0
+local prevScene
+
 
 local service = {}
 
@@ -32,6 +35,12 @@ local function heroAiStep()
 
     if not hero:isReady() then
         return
+    end
+
+    local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
+
+    if  activeWindow then
+        activeWindow:hide()
     end
 
     local level = hero:level()
@@ -54,6 +63,11 @@ local function heroAiStep()
         end
     end
 
+    if hero:buffLevel('Roots') > 0 or math.random() < 0.1 then
+        hero:search(true)
+        return
+    end
+
     local exitCell = level:getRandomTerrainCell(RPD.Terrain.EXIT)
 
     if level:cellValid(exitCell) and RPD.Dungeon:isCellVisible(exitCell) then
@@ -65,6 +79,14 @@ local function heroAiStep()
 end
 
 local function levelsTestModeOnStep(self, scene)
+
+    if scene ~= prevScene then
+        prevScene = scene
+        framesOnScene = 0
+    else
+        framesOnScene = framesOnScene + 1
+    end
+
     if scene == "GameScene" then
 
         framesOnLevel = framesOnLevel + 1
@@ -94,7 +116,8 @@ local function levelsTestModeOnStep(self, scene)
         end
     end
 
-    if scene == "TitleScene" then
+    if scene == "TitleScene" and framesOnScene > 2 then
+        levels = RPD.DungeonGenerator:getLevelsList()
         GameControl:startNewGame("WARRIOR", 2, true)
     end
 end

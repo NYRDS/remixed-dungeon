@@ -102,8 +102,6 @@ public class TestLevel extends RegularLevel {
 
 		hero.spend(-10000);
 
-
-
 		Belongings initial = hero.getBelongings();
 
 		for(Item item:items) {

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class SpellBook extends Artifact {
 
-	@Packable(defaultValue = "MagicTorch")
+	@Packable(defaultValue = "")
 	private String spell;
 
 	public SpellBook() {
@@ -31,7 +31,7 @@ public class SpellBook extends Artifact {
 	}
 
 	public Spell spell(){
-		if(spell == null || spell.equals("")){
+		if(spell == null || spell.equals("")) {
 
 			ArrayList<String> spells = SpellFactory.getSpellsByAffinity(SpellHelper.AFFINITY_COMMON);
 			spell(Random.element(spells));

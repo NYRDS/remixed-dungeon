@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -129,6 +130,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.var;
 
 public class Hero extends Char {
 	private static final String TXT_EXP = "%+dEXP";
@@ -1785,5 +1788,16 @@ public class Hero extends Char {
 	@Override
 	public void selectCell(CellSelector.Listener listener) {
 		GameScene.selectCell(listener, this);
+	}
+
+	public static void performTests() {
+		var hero = new Hero(2);
+
+		var buffsNames = BuffFactory.getAllBuffsNames();
+
+		for(var buffName: buffsNames) {
+			var buff = Buff.affect(hero, buffName, 10);
+			buff.detach();
+		}
 	}
 }

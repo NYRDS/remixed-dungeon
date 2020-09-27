@@ -15,12 +15,16 @@
         "level": 1000
       },
       {
-        "kind": "ScrollOfMagicMapping",
+        "kind": "CommonArrow",
         "quantity": 100,
         "level": 10
       },
       {
-        "kind": "PotionOfInvisibility",
+        "kind": "PotionOfParalyticGas",
+        "quantity": 100
+      },
+      {
+        "kind": "PotionOfPurity",
         "quantity": 100
       },
       {
@@ -37,7 +41,8 @@
         "kind": "WandHolster"
       },
       {
-        "kind": "ScrollOfPsionicBlast"
+        "kind": "RottenRation",
+        "quantity": 100
       },
       {
         "kind": "TomeOfMastery"

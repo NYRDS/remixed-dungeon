@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 
-class Charger extends Buff {
+public class Charger extends Buff {
     private static final float TIME_TO_CHARGE = 40f;
 
     private Wand wand;

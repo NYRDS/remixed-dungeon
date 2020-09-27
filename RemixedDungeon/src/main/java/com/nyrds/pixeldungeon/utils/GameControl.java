@@ -1,12 +1,14 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.IntroScene;
@@ -26,7 +28,12 @@ public class GameControl {
     static public void startNewGame(String className, int difficulty, boolean testMode) {
         Dungeon.setDifficulty(difficulty);
         Dungeon.hero = null;
+        Dungeon.level = null;
         Dungeon.heroClass = HeroClass.valueOf(className);
+
+        if(BuildConfig.DEBUG) {
+            Hero.performTests();
+        }
 
         if(testMode) {
             EventCollector.disable();

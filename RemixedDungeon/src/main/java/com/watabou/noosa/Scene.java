@@ -17,13 +17,18 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.input.Keys;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.utils.Signal;
+
+import java.util.ArrayList;
 
 public class Scene extends Group {
 	
 	private Signal.Listener<Keys.Key> keyListener;
+	private ArrayList<Window> activeWindows = new ArrayList<>();
 
 	static protected LuaScript script = new LuaScript("scripts/services/scene", null);
 
@@ -42,8 +47,23 @@ public class Scene extends Group {
 		});
 	}
 
+	@LuaInterface
+	public Window getWindow(int i) {
+		if(i< activeWindows.size()) {
+			return activeWindows.get(i);
+		}
+
+		return null;
+	}
+
 	@Override
 	public void update() {
+
+		activeWindows.clear();
+		int windowIndex = -1;
+		while((windowIndex = findByClass(Window.class, windowIndex+1))>0) {
+			activeWindows.add((Window)getMember(windowIndex));
+		}
 		script.runOptionalNoRet("onStep", this.getClass().getSimpleName());
 
 		super.update();
