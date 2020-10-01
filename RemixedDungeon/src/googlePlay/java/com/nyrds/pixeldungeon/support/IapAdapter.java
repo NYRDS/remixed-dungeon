@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.support.Google;
+package com.nyrds.pixeldungeon.support;
 
 import android.content.Context;
 
@@ -18,7 +18,7 @@ import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.IPurchasesUpdated;
+import com.nyrds.pixeldungeon.support.Google.GoogleIapCheck;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -35,7 +35,7 @@ import java.util.concurrent.Executor;
 
 import lombok.var;
 
-public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
+public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
 
     private final Map<String, Purchase> mPurchases = new HashMap<>();
     private BillingClient mBillingClient;
@@ -46,7 +46,7 @@ public class GoogleIap implements PurchasesUpdatedListener, PurchaseHistoryRespo
 
     private ConcurrentLinkedQueue<Runnable> mRequests = new ConcurrentLinkedQueue<>();
 
-    public GoogleIap(Context context, IPurchasesUpdated purchasesUpdatedListener) {
+    public IapAdapter(Context context, IPurchasesUpdated purchasesUpdatedListener) {
         mBillingClient = BillingClient.newBuilder(context)
                 .enablePendingPurchases()
                 .setListener(this)

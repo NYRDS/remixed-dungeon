@@ -21,7 +21,7 @@ import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.NewFireball;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Google.PlayGames;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;

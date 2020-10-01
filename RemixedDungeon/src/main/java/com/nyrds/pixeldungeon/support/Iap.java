@@ -4,7 +4,6 @@ import android.app.Activity;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.support.Google.GoogleIap;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
@@ -24,12 +23,12 @@ public class Iap implements IPurchasesUpdated {
     private static final String SKU_LEVEL_3 = "supporter_level_3";
     private static final String SKU_LEVEL_4 = "supporter_level_4";
 
-    private GoogleIap mIap;
+    private IapAdapter mIap;
 
     private IIapCallback mIapCallback = null;
 
     public Iap(Activity context) {
-        mIap = new GoogleIap(context, this);
+        mIap = new IapAdapter(context, this);
 
         List<String> items = new ArrayList<>();
 

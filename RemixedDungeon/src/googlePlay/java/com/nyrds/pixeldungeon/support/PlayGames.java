@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.support.Google;
+package com.nyrds.pixeldungeon.support;
 
 import android.app.AlertDialog;
 import android.app.PendingIntent;
@@ -282,7 +282,7 @@ public class PlayGames {
 		}
 
 		GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-		
+
 		if (result.isSuccess()) {
 			signedInAccount = result.getSignInAccount();
 			onConnected();

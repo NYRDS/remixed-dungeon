@@ -31,7 +31,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
-import com.nyrds.pixeldungeon.support.Google.PlayGames;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
