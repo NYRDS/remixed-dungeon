@@ -6,8 +6,11 @@ import android.webkit.WebView;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.nyrds.android.RemixedDungeonApp;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
 import java.util.HashMap;
@@ -19,7 +22,17 @@ public class AdsUtils {
     static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
     static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
 
+    static InitializationStatus initializationStatus;
+
     static {
+
+        MobileAds.initialize(RemixedDungeonApp.getContext(), new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+                AdsUtils.initializationStatus = initializationStatus;
+            }
+        });
+
         bannerFails.put(new AdMobComboProvider(),-2);
         interstitialFails.put(new AdMobComboProvider(), -2);
 
