@@ -1,8 +1,8 @@
 package com.nyrds.android.lua;
 
+import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
 

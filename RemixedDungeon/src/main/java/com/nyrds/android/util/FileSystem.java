@@ -2,7 +2,7 @@ package com.nyrds.android.util;
 
 import android.content.Context;
 
-import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
+import com.nyrds.android.RemixedDungeonApp;
 
 import org.jetbrains.annotations.NotNull;
 

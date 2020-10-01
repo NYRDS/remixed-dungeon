@@ -6,8 +6,8 @@ import android.webkit.WebView;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.android.RemixedDungeonApp;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
 import java.util.HashMap;

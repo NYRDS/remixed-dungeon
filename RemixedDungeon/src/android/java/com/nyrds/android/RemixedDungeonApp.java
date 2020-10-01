@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.ml;
+package com.nyrds.android;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,6 +11,9 @@ import androidx.multidex.MultiDexApplication;
 import com.google.firebase.FirebaseApp;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.RemixedDungeon;
 

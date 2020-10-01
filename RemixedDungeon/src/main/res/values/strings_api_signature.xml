@@ -1,41 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="testDevice" translatable="false"></string>
-    <string name="saveLoadAdUnitId" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="easyModeAdUnitId" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="easyModeSmallScreenAdUnitId" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="cinemaRewardAdUnitId" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
-    <string name="appodealRewardAdUnitId" translatable="false"></string>
-    <string name="iapKey" translatable="false"></string>
-    <string name="ownSignature" translatable="false"></string>
-    <string name="app_id" translatable="false"></string>
-    <string name="admob_publisher_id" translatable="false"></string>
+    <string name="testDevice"></string>
+    <string name="saveLoadAdUnitId">ca-app-pub-4791779564989579/8957634845</string>
+    <string name="easyModeAdUnitId">ca-app-pub-4791779564989579/2728116843</string>
+    <string name="easyModeSmallScreenAdUnitId">ca-app-pub-4791779564989579/4419686049</string>
+    <string name="cinemaRewardAdUnitId">ca-app-pub-4791779564989579/4152664443</string>
+    <string name="appodealRewardAdUnitId">843ce15d3d6555bd92b2eb12f63bd87b363f9482ef7174b3</string>
+    <string name="iapKey">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQRfPt11/KWsITVw7wAt6FSQjl2sK+JaiiGm83JLlq+j1DFaMRFtx52/zbjOt+fu6LaiH9tyjcaaJrGbq/YfMjr2z1yr7Qru83iqqXMsiMLKWuW+nSnQd5/yqJwRge8Oymz6m9ddCpyj5MbmMQ4pnh6eoGdeZaInuZh5TbuvP4004wAW1HYwvtkWl3p7SR+YcOGeQX1nfcTNflwFYunQLoKB+rQHjL3y+FTEJAUSISKDI47J1cOjFoN/upOsxIKHYyU8FI0mAq8lim6zkxa/kapojgpKw+UJNmJShnWzMutf/3JeVWVWFiXi6XX7aE0MJnfcMgU/IeI37f17au3ClQIDAQAB</string>
+    <string name="ownSignature">Jw5WWI9rrwVRRpDbjoF0b8-TmfE=</string>
+    
+    <string name="admob_publisher_id">pub-4791779564989579</string>
 
-    <string name="fabric_api_key" translatable="false">0</string>
-    <string name="pollfish_key" translatable="false">0</string>
-    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="gow_app_id" translatable="false"></string>
+  	<string name="app_id" translatable="false">30037695623</string>
+  
+    <string name="fabric_api_key">0ee09a9ccba35c2c54ebadf599dc35ee96cea070</string>
+    <string name="admob_app_id">ca-app-pub-4791779564989579~7480901647</string>>
+    <string name="gow_app_id">5e5cf073b03a0770eb6b4b46</string>
 
-    <!--
-    Google Play game services IDs.
-    Save this file as res/values/games-ids.xml in your project.
-    -->
-    <string name="achievement_boss_slain_1" translatable="false"></string>
-    <string name="achievement_boss_slain_2" translatable="false"></string>
-    <string name="achievement_boss_slain_3" translatable="false"></string>
-    <string name="achievement_boss_slain_4" translatable="false"></string>
-    <string name="achievement_lich_slain" translatable="false"></string>
-    <string name="achievement_ice_guardian_slain" translatable="false"></string>
-    <string name="achievement_spider_queen_slain" translatable="false"></string>
-    <string name="achievement_shadow_lord_slain" translatable="false"></string>
-    <string name="achievement_yog_slain" translatable="false"></string>
-    <string name="achievement_gnoll_unlocked" translatable="false"></string>
-    <string name="achievement_surgical_mask_obtained" translatable="false"></string>
+    <string name="pollfish_key">d70cc888-04eb-48b0-aa1d-0e6bc6316c03</string>
 
 
-    <string name="leaderboard_easy_mode" translatable="false"></string>
-    <string name="leaderboard_normal_with_saves" translatable="false"></string>
-    <string name="leaderboard_normal" translatable="false"></string>
-    <string name="leaderboard_expert" translatable="false"></string>
-
+  <!--package_name-->
+  <string name="package_name" translatable="false">com.nyrds.pixeldungeon.ml</string>
+  <!--achievement Surgical mask obtained-->
+  <string name="achievement_doctor_quest_completed" translatable="false">CggIh7mL828QAhAP</string>
+  <!--achievement Goo has been slain-->
+  <string name="achievement_boss_slain_1" translatable="false">CggIh7mL828QAhAB</string>
+  <!--achievement Tengu has been slain-->
+  <string name="achievement_boss_slain_2" translatable="false">CggIh7mL828QAhAC</string>
+  <!--achievement DM-300  has been slain-->
+  <string name="achievement_boss_slain_3" translatable="false">CggIh7mL828QAhAD</string>
+  <!--achievement King has been slain-->
+  <string name="achievement_boss_slain_4" translatable="false">CggIh7mL828QAhAE</string>
+  <!--achievement Lich has been slain-->
+  <string name="achievement_lich_slain" translatable="false">CggIh7mL828QAhAF</string>
+  <!--achievement Ice Guardian has been slain-->
+  <string name="achievement_ice_guardian_slain" translatable="false">CggIh7mL828QAhAG</string>
+  <!--achievement Spider Queen has been slain-->
+  <string name="achievement_spider_queen_slain" translatable="false">CggIh7mL828QAhAH</string>
+  <!--achievement Shadow Lord has been slain-->
+  <string name="achievement_shadow_lord_slain" translatable="false">CggIh7mL828QAhAI</string>
+  <!--achievement The Old God has been slain-->
+  <string name="achievement_yog_slain" translatable="false">CggIh7mL828QAhAJ</string>
+  <!--achievement New Gnoll in the town!-->
+  <string name="achievement_gnoll_unlocked" translatable="false">CggIh7mL828QAhAK</string>
+  <!--leaderboard Easy Mode-->
+  <string name="leaderboard_easy_mode" translatable="false">CggIh7mL828QAhAL</string>
+  <!--leaderboard Normal with Saves-->
+  <string name="leaderboard_normal_with_saves" translatable="false">CggIh7mL828QAhAM</string>
+  <!--leaderboard Normal-->
+  <string name="leaderboard_normal" translatable="false">CggIh7mL828QAhAN</string>
+  <!--leaderboard Expert-->
+  <string name="leaderboard_expert" translatable="false">CggIh7mL828QAhAO</string>
 </resources>

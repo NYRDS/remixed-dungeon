@@ -21,9 +21,9 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.SharedPreferences;
 
+import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.UserKey;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.HashMap;

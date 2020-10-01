@@ -41,11 +41,11 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.ReportingExecutor;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Google.PlayGames;

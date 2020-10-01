@@ -1,7 +1,7 @@
 package com.nyrds.android.util;
 
+import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.RemixedDungeonApp;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
 import org.jetbrains.annotations.NotNull;

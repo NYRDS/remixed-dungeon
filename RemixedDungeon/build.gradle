@@ -31,6 +31,15 @@ android {
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 935
         versionName "29.5.fix.5"
+
+        buildToolsVersion = '29.0.2'
+        targetSdkVersion 29
+        minSdkVersion 16
+        compileSdkVersion = 29
+
+        versionCode defaultConfig.versionCode + 10000
+        // Enabling multidex support.
+        multiDexEnabled true
     }
 
     aaptOptions {
@@ -64,20 +73,26 @@ android {
         abortOnError false
     }
 
-    flavorDimensions "minApi"
+    flavorDimensions "platform","market"
+
     productFlavors {
         googlePlay {
-            buildToolsVersion = '29.0.2'
-            targetSdkVersion 29
-            minSdkVersion 16
-            compileSdkVersion = 29
-
-            versionCode defaultConfig.versionCode + 10000
-            // Enabling multidex support.
-            multiDexEnabled true
-            dimension "minApi"
+            dimension "market"
         }
 
+        fdroid {
+            dimension "market"
+            applicationIdSuffix ".fdroid"
+        }
+
+        huawei {
+            dimension "market"
+            applicationIdSuffix ".huawei"
+        }
+
+        android {
+            dimension "platform"
+        }
     }
 }
 
