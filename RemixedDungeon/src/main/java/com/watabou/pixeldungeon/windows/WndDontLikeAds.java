@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -18,33 +19,19 @@ class WndDontLikeAds extends WndQuest {
             @Override
             protected void onClick() {
                 WndDontLikeAds.this.add(new WndDonate());
-                EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT,"DonateButtonClicked");
+                EventCollector.logEvent(Util.SAVE_ADS_EXPERIMENT,"DonateButtonClicked");
             }
         };
         btnDonate.setSize(width-6*GAP, BUTTON_HEIGHT);
         btnDonate.setPos((width - btnDonate.width()) / 2, y + GAP*4);
         add(btnDonate);
 
-        y=btnDonate.bottom();
-/*
-        RedButton btnNo = new RedButton(R.string.WndDontLikeAds_NotThisTime){
-            @Override
-            protected void onClick() {
-                EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT,"NotThisTimeClicked");
-                hide();
-            }
-        };
-        btnNo.setSize(width-6*GAP, BUTTON_HEIGHT);
-        btnNo.setPos((width - btnNo.width()) / 2, y + GAP*2);
-
-        add(btnNo);
-*/
         resize(width, (int) btnDonate.bottom()+GAP);
     }
 
     @Override
     public void hide() {
         super.hide();
-        EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT,"DialogClosed");
+        EventCollector.logEvent(Util.SAVE_ADS_EXPERIMENT,"DialogClosed");
     }
 }

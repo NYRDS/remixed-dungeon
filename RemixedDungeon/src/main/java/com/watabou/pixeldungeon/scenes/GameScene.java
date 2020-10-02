@@ -864,8 +864,6 @@ public class GameScene extends PixelScene {
                 resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
                 resume.update();
             }
-        } else {
-            EventCollector.logException();
         }
     }
 

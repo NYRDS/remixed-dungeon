@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -329,10 +330,10 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                         Game.pushUiTask(() -> {
                             Iap iap = Game.instance().iap;
                             if (iap != null && iap.isReady() || BuildConfig.DEBUG) {
-                                EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogShown");
+                                EventCollector.logEvent(Util.SAVE_ADS_EXPERIMENT, "DialogShown");
                                 Hero.doOnNextAction = () -> Game.addToScene(new WndDontLikeAds());
                             } else {
-                                EventCollector.logEvent(EventCollector.SAVE_ADS_EXPERIMENT, "DialogNotShownIapNotReady");
+                                EventCollector.logEvent(Util.SAVE_ADS_EXPERIMENT, "DialogNotShownIapNotReady");
                             }
                         });
                     }

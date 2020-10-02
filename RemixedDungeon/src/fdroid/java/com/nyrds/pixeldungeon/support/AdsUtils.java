@@ -5,9 +5,8 @@ import android.webkit.WebView;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
-import com.google.android.gms.ads.AdView;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.android.RemixedDungeonApp;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
 import java.util.HashMap;
@@ -20,40 +19,24 @@ public class AdsUtils {
     static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
 
     static {
-        bannerFails.put(new AdMobComboProvider(),-2);
-        interstitialFails.put(new AdMobComboProvider(), -2);
-
         if(!RemixedDungeonApp.checkOwnSignature()) {
             bannerFails.put(new AAdsComboProvider(), 0);
             interstitialFails.put(new AAdsComboProvider(), 0);
-        }
-
-        if(AppodealAdapter.usable()) {
-            AppodealAdapter.init();
-            bannerFails.put(AppodealBannerProvider.getInstance(), -1);
-            interstitialFails.put(new AppodealInterstitialProvider(), -1);
         }
     }
 
 
     public static void initRewardVideo() {
-
         if(!rewardVideoFails.isEmpty()) {
             return;
         }
-
-        if(AppodealAdapter.usable()) {
-            AppodealRewardVideoProvider.init();
-            rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
-        }
-        rewardVideoFails.put(new GoogleRewardVideoAds(), -2);
     }
 
     static int bannerIndex() {
         int childs = Game.instance().getLayout().getChildCount();
         for (int i = 0; i < childs; ++i) {
             View view = Game.instance().getLayout().getChildAt(i);
-            if (view instanceof AdView || view instanceof WebView || view instanceof BannerView) {
+            if (view instanceof WebView || view instanceof BannerView) {
                 return i;
             }
         }
@@ -96,10 +79,6 @@ public class AdsUtils {
 
     private static void removeBannerView(int index, View adview) {
         if (adview instanceof BannerView) {
-            Appodeal.hide(Game.instance(), Appodeal.BANNER);
-        }
-        if (adview instanceof AdView) {
-            ((AdView) adview).destroy();
         }
 
         Game.instance().getLayout().removeViewAt(index);

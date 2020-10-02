@@ -76,13 +76,11 @@ android {
     productFlavors {
         googlePlay {
             dimension "market"
-
             versionCode defaultConfig.versionCode + 10000
         }
 
         fdroid {
             dimension "market"
-            applicationIdSuffix ".fdroid"
         }
 
         huawei {
