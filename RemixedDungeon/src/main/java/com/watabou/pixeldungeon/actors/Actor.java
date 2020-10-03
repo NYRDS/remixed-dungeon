@@ -37,6 +37,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
+import lombok.var;
+
 public abstract class Actor implements Bundlable {
 	
 	public static final float TICK	= 1f;
@@ -93,7 +95,7 @@ public abstract class Actor implements Bundlable {
 	@SuppressLint("UseSparseArrays")
 	public static Map<Integer, Char> chars = new HashMap<>();
 	
-	public static void clear() {
+	public static void clearActors() {
 		now = 0;
 		chars.clear();
 		all.clear();
@@ -120,7 +122,7 @@ public abstract class Actor implements Bundlable {
 	}
 	
 	public static void init(@NotNull Level level) {
-		clear();
+		clearActors();
 		
 		addDelayed( Dungeon.hero, -Float.MIN_VALUE );
 		
@@ -163,7 +165,7 @@ public abstract class Actor implements Bundlable {
 
 			//Log.i("Main loop", String.format("%s %4.2f %4.2f",next.getClass().getSimpleName(),now,next.time));
 
-			float timeBefore = next.time;
+			//float timeBefore = next.time;
 
 			current = next;
 			next.act();
@@ -188,7 +190,6 @@ public abstract class Actor implements Bundlable {
 
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-			//time = actor.time;
 			//Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
 
 			if (actor instanceof Char && ((Char)actor).getSprite().isMoving) {
@@ -282,6 +283,11 @@ public abstract class Actor implements Bundlable {
 			Char ch = (Char)actor;
 			chars.put(ch.getPos(), ch);
 			all.addAll(ch.buffs());
+
+			for(var item: ch.getBelongings()) {
+				all.add(item);
+			}
+
 		}
 
 	}

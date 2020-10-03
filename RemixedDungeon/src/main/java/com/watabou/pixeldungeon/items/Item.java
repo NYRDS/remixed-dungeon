@@ -67,7 +67,7 @@ import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.var;
 
-public class Item implements Bundlable, Presser, NamedEntityKind {
+public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 
 	private static final String TXT_TO_STRING       = "%s";
 	private static final String TXT_TO_STRING_X     = "%s x%d";
@@ -453,6 +453,12 @@ public class Item implements Bundlable, Presser, NamedEntityKind {
 
 	private static final String QUANTITY     = "quantity";
 	private static final String LEVEL        = "level";
+
+	@Override
+	protected boolean act() {
+		deactivate();
+		return true;
+	}
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
