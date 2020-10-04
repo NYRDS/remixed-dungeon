@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.windows.WndMessage;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-class WndPlayGames extends Window {
+public class WndPlayGames extends Window {
 
     private int y = GAP;
 
@@ -101,7 +101,7 @@ class WndPlayGames extends Window {
         y += btn.height();
     }
 
-    private static class ResultHandler implements PlayGames.IResult {
+    public static class ResultHandler implements PlayGames.IResult {
 
         private WndMessage working;
         ResultHandler() {

@@ -187,6 +187,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		forEachBuff(CharModifier::charAct);
 
+		for(Item item: getBelongings()) {
+			item.charAct();
+		}
+
 		return false;
 	}
 

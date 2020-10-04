@@ -30,6 +30,7 @@ import lombok.SneakyThrows;
  * Created by mike on 01.03.2016.
  */
 public class Util {
+    public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment2";
     public static Callback nullCallback = () -> {};
 
     private static String stackTraceToString(Throwable e) {

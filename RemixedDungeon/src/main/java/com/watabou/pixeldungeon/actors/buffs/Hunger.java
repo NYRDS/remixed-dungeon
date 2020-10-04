@@ -117,7 +117,7 @@ public class Hunger extends Buff implements Doom {
 
 			spend( step );
 		} else {
-			deactivate();
+			deactivateActor();
 		}
 		
 		return true;

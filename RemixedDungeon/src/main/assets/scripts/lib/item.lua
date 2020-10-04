@@ -32,6 +32,10 @@ function item.poison(self, item, cell)
     return item
 end
 
+function item.act(self, item)
+    item:deactivateActor()
+end
+
 function item.onThrow(self, item, cell)
     item:dropTo(cell)
 end

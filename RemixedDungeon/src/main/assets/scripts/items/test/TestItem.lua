@@ -149,6 +149,11 @@ return item.init{
         RPD.removeBuff(hero,"TestBuff")
     end,
 
+    act = function(self,item)
+        self.data.counter = (self.data.counter or 0) + 1
+        item:getOwner():getSprite():showStatus( 0xFF00FF, tostring(self.data.counter))
+        item:spend(1)
+    end
 --[[
     bag = function(self, item)
         return "SeedPouch"

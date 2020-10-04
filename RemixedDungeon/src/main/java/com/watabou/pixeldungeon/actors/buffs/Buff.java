@@ -100,7 +100,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @Override
     public boolean act() {
-        deactivate();
+        deactivateActor();
         return true;
     }
 
@@ -122,14 +122,14 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     public static Buff permanent(Char target, String buffClass) {
         Buff buff = BuffFactory.getBuffByName(buffClass);
         buff.attachTo(target);
-        buff.deactivate();
+        buff.deactivateActor();
         return buff;
     }
 
     @LuaInterface
     public static <T extends Buff> T permanent(Char target, Class<T> buffClass) {
         T buff = affect(target, buffClass);
-        buff.deactivate();
+        buff.deactivateActor();
         return buff;
     }
 

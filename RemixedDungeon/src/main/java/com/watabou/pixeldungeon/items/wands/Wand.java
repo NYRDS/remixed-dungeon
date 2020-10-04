@@ -59,11 +59,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	private static final String AC_ZAP = "Wand_ACZap";
 
 	private static final float TIME_TO_ZAP = 1f;
+	static final float TIME_TO_CHARGE = 40f;
 
 	private int maxCharges = Scrambler.scramble(initialCharges());
 	private int curCharges = Scrambler.scramble(maxCharges());
-
-	transient private Charger charger = new Charger(this);
 
 	@Packable
 	private boolean curChargeKnown = false;
@@ -161,17 +160,10 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	@Override
 	public void setOwner(@NotNull Char owner) {
 		super.setOwner(owner);
-		charger.detach();
-		charger.attachTo(owner);
 	}
 
 	public int effectiveLevel() {
-		if (charger != null) {
-			Power power = charger.target.buff(Power.class);
-			return power == null ? super.level() : Math.max(super.level() + power.level(), 0);
-		} else {
-			return super.level();
-		}
+		return level() + getOwner().buffLevel(Power.class.getSimpleName());
 	}
 
 	public boolean isKnown() {
@@ -445,4 +437,22 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	public String bag() {
 		return WandHolster.class.getSimpleName();
 	}
+
+	@Override
+	protected boolean act() {
+
+		if (curCharges() < maxCharges()) {
+			curCharges(curCharges() + 1);
+			QuickSlot.refresh(getOwner());
+		}
+
+		float time2charge = getOwner().getHeroClass() == HeroClass.MAGE ? Wand.TIME_TO_CHARGE
+				/ (float) Math.sqrt(1 + effectiveLevel())
+				: Wand.TIME_TO_CHARGE;
+		time2charge -= (float) 0;
+		spend(time2charge);
+
+		return true;
+	}
+
 }
