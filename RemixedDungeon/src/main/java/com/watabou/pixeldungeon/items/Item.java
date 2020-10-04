@@ -724,4 +724,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	public float heapScale() {
 		return 1.f;
 	}
+
+	public void charAct() {
+	}
 }

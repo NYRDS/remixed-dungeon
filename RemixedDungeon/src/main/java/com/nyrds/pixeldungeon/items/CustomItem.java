@@ -319,4 +319,9 @@ public class CustomItem extends EquipableItem {
         script.run("act");
         return true;
     }
+
+    @Override
+    public void charAct() {
+        script.runOptional("charAct");
+    }
 }
