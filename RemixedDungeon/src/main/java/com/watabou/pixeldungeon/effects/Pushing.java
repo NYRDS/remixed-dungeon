@@ -45,7 +45,7 @@ public class Pushing extends Actor {
 			if (effect == null) {
 				effect = new Effect();
 			}
-			deactivate();
+			deactivateActor();
 			return false;
 	}
 

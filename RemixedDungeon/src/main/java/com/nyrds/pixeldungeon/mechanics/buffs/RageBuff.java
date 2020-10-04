@@ -23,7 +23,7 @@ public class RageBuff extends ArtifactBuff {
                 Sample.INSTANCE.play(Assets.SND_CURSED);
             }
         } else {
-            deactivate();
+            deactivateActor();
         }
         spend(1);
         return true;

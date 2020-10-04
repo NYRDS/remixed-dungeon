@@ -313,4 +313,10 @@ public class CustomItem extends EquipableItem {
     public float heapScale() {
         return heapScale;
     }
+
+    @Override
+    protected boolean act() {
+        script.run("act");
+        return true;
+    }
 }

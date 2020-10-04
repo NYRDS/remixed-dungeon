@@ -66,8 +66,9 @@ public abstract class Actor implements Bundlable {
 	protected float cooldown() {
 		return time - now;
 	}
-	
-	protected void deactivate() {
+
+	@LuaInterface
+	public void deactivateActor() {
 		time = Float.MAX_VALUE;
 	}
 

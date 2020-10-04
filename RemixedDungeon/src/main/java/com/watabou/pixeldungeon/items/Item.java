@@ -456,7 +456,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 
 	@Override
 	protected boolean act() {
-		deactivate();
+		deactivateActor();
 		return true;
 	}
 

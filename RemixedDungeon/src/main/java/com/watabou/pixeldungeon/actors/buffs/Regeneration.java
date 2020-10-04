@@ -37,7 +37,7 @@ public class Regeneration extends Buff {
 
             spend((float) (REGENERATION_DELAY / Math.pow(1.2, bonus[0])));
         } else {
-            deactivate();
+            deactivateActor();
         }
         return true;
     }
