@@ -162,6 +162,9 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		});
 	}
 
+
+	private WndMessage        unzipProgress;
+
 	@Override
 	public void UnzipComplete(final Boolean result) {
 		Game.pushUiTask(() -> {
@@ -178,8 +181,6 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		});
 
 	}
-
-	private WndMessage        unzipProgress;
 
 	@Override
 	public void UnzipProgress(Integer unpacked) {

@@ -114,12 +114,12 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'com.appodeal.ads.sdk:core:2.7.3'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.7.3.7'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.7.3.6'
-    implementation 'com.appodeal.ads.sdk.networks:appodealx:2.7.3.2'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.7.3.6'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.7.3.6'
+    googlePlayImplementation 'com.appodeal.ads.sdk:core:2.8.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.8.0.7'
+    googlePlayImplementation 'com.appodeal.ads.sdk.networks:applovin:2.8.0.6'
+    googlePlayImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.8.0.2'
+    googlePlayImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.8.0.6'
+    googlePlayImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.8.0.6'
 
     implementation 'org.jetbrains:annotations:15.0'
 
