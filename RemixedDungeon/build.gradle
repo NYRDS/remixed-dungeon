@@ -120,6 +120,7 @@ dependencies {
     googlePlayImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.8.0.2'
     googlePlayImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.8.0.6'
     googlePlayImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.8.0.6'
+    googlePlayImplementation 'com.appodeal.ads.sdk.networks:vungle:2.8.0.3'
 
     implementation 'org.jetbrains:annotations:15.0'
 
