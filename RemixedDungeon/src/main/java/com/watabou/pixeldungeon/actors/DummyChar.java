@@ -101,4 +101,9 @@ public class DummyChar extends Char {
     @Override
     public void forEachBuff(BuffCallback cb) {
     }
+
+    @Override
+    public boolean isAlive() {
+        return false;
+    }
 }

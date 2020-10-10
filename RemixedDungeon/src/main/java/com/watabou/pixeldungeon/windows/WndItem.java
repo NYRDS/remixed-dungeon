@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -35,7 +35,7 @@ public class WndItem extends Window {
 
 	private static final float BUTTON_WIDTH		= 36;
 
-	public WndItem( final WndBag owner, final Item item ) {	
+	public WndItem( final WndBag bag, final Item item ) {
 		
 		super();
 
@@ -63,19 +63,21 @@ public class WndItem extends Window {
 		actions.setAlign(HBox.Align.Width);
 		actions.setGap(GAP);
 
-		if (Dungeon.hero.isAlive() && owner != null) {
-			for (final String action:item.actions( Dungeon.hero )) {
+		Char owner = item.getOwner();
 
-				if(Dungeon.hero.getHeroClass().forbidden(action)){
+		if (bag != null && item.getOwner().isAlive()) {
+			for (final String action:item.actions( owner )) {
+
+				if(owner.getHeroClass().forbidden(action)){
 					continue;
 				}
 
 				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
 					@Override
 					protected void onClick() {
-						item.execute( Dungeon.hero, action );
+						item.execute( owner, action );
 						hide();
-						owner.hide();
+						bag.hide();
 					}
 				};
 				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );
