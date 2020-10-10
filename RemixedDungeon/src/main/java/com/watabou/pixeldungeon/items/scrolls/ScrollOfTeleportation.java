@@ -17,15 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -37,34 +33,10 @@ public class ScrollOfTeleportation extends Scroll {
 		Sample.INSTANCE.play( Assets.SND_READ );
 		Invisibility.dispel(reader);
 		
-		teleportHero( reader);
+		CharUtils.teleportRandom( reader);
 		setKnown();
 
 		reader.spendAndNext( TIME_TO_READ );
-	}
-	
-	public static void teleportHero( Char hero ) {
-
-		if(Dungeon.level.isBossLevel()) {
-			GLog.w( Game.getVar(R.string.ScrollOfTeleportation_NoTeleport) );
-			return;
-		}
-
-		int pos = Dungeon.level.randomRespawnCell();
-
-		if (!Dungeon.level.cellValid(pos)) {
-			
-			GLog.w( Game.getVar(R.string.ScrollOfTeleportation_NoTeleport) );
-			
-		} else {
-
-			WandOfBlink.appear( hero, pos );
-			Dungeon.level.press( pos, hero );
-			Dungeon.observe();
-			
-			GLog.i( Game.getVar(R.string.ScrollOfTeleportation_Teleport) );
-			
-		}
 	}
 
 	@Override

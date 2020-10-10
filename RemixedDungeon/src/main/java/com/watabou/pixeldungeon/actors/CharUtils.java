@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -74,5 +75,23 @@ public class CharUtils {
         thief.collect(item);
 
         return true;
+    }
+
+    public static void teleportRandom(Char ch ) {
+        if(Dungeon.level.isBossLevel() || !ch.isMovable()) {
+            GLog.w( Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()) );
+            return;
+        }
+
+        int pos = Dungeon.level.randomRespawnCell();
+
+        if (!Dungeon.level.cellValid(pos)) {
+            GLog.w( Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()) );
+        } else {
+            WandOfBlink.appear( ch, pos );
+            Dungeon.level.press( pos, ch );
+            Dungeon.observe();
+            GLog.i( Utils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()) );
+        }
     }
 }

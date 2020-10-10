@@ -23,14 +23,12 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -44,22 +42,10 @@ public class Fadeleaf extends Plant {
 	
 	public void effect(int pos, Presser ch) {
 
-		if (ch instanceof Hero) {
-			Hero hero = (Hero)ch;
-			ScrollOfTeleportation.teleportHero( hero );
-			hero.spendAndNext(1);
-			hero.curAction = null;
-			
-		} else if (ch instanceof Mob && ((Mob)ch).isMovable()) {
-			Mob mob = (Mob)ch;
-			int newPos = mob.respawnCell(mob.level());
-			if (mob.level().cellValid(newPos)) {
-				mob.setPos(newPos);
-				mob.getSprite().place(mob.getPos());
-				mob.getSprite().setVisible(Dungeon.visible[pos]);
-			}
+		if(ch instanceof Char) {
+			CharUtils.teleportRandom((Char) ch);
 		}
-		
+
 		if (Dungeon.visible[pos]) {
 			CellEmitter.get( pos ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 		}		
@@ -92,7 +78,7 @@ public class Fadeleaf extends Plant {
 			super.execute(chr, action );
 			
 			if (action.equals( CommonActions.AC_EAT )) {
-				ScrollOfTeleportation.teleportHero(chr);
+				CharUtils.teleportRandom(chr);
 				chr.spendAndNext(1);
 				chr.curAction = null;
 				Buff.affect(chr, Vertigo.class, Vertigo.DURATION * 2);

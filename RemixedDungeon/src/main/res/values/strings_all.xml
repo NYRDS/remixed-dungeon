@@ -2584,4 +2584,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Char_Stole_0">%1$s stole %2$s from %3$s!</string>
   <string name="Char_Stole_1">%1$s stole %2$s from %3$s!</string>
   <string name="Char_Stole_2">%1$s stole %2$s from %3$s!</string>
+
+  <string name="ScrollOfTeleportation_Teleport2">In a blink of an eye %s were teleported to
+    another location of the level.</string>
+  <string name="ScrollOfTeleportation_NoTeleport2">Strong magic aura of this place prevents %s
+    from teleporting!</string>
+
 </resources>
