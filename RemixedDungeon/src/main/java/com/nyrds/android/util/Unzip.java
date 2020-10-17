@@ -1,7 +1,9 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -13,6 +15,8 @@ import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+import lombok.var;
+
 public class Unzip {
 
 	private static final int    BUFFER_SIZE = 16384;
@@ -23,6 +27,40 @@ public class Unzip {
 		if (!f.exists() || !f.isDirectory()) {
 			f.mkdirs();
 		}
+	}
+
+	static public Mods.ModDesc inspectMod(InputStream fin, String tgtDir) {
+		Mods.ModDesc ret = new Mods.ModDesc();
+		ret.name = Utils.EMPTY_STRING;
+
+		String primaryStrings = Utils.format("strings_%s.json", RemixedDungeon.uiLanguage());
+		String fallbackStrings = Utils.format("strings_en.json");
+
+		try {
+			ZipInputStream zin = new ZipInputStream(fin);
+			ZipEntry ze;
+
+			while ((ze = zin.getNextEntry()) != null) {
+				GLog.debug( "Unzipping " + ze.getName());
+
+				if (ze.isDirectory() && ret.name.isEmpty()) {
+					ret.name = ze.getName().replace("/","");
+				} else {
+					if(ze.getName().contains("version.json")) {
+						var modVersion = JsonHelper.readJsonFromStream(zin);
+						ret.version = modVersion.getInt("version");
+					}
+					zin.closeEntry();
+				}
+
+			}
+			zin.close();
+		} catch (Exception e) {
+			EventCollector.logException(e);
+			return ret;
+		}
+
+		return ret;
 	}
 
 	static public boolean unzipStream(InputStream fin, String tgtDir, @Nullable UnzipProgress listener) {
@@ -70,14 +108,6 @@ public class Unzip {
 	static public boolean unzip(String zipFile, String tgtDir, @Nullable UnzipProgress listener) {
 		try {
 			return unzipStream(new FileInputStream(zipFile), tgtDir, listener);
-		} catch (FileNotFoundException e) {
-			return false;
-		}
-	}
-
-	static public boolean unzip(String zipFile, String tgtDir) {
-		try {
-			return unzipStream(new FileInputStream(zipFile), tgtDir, null);
 		} catch (FileNotFoundException e) {
 			return false;
 		}

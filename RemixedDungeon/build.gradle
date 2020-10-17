@@ -110,8 +110,6 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
- //   implementation "io.humanteq.hqm:hqm-core:2.1.2"
-
     implementation 'commons-io:commons-io:2.6'
 
     googlePlayImplementation 'com.appodeal.ads.sdk:core:2.8.0'
@@ -136,7 +134,7 @@ dependencies {
 
     googlePlayImplementation 'com.android.billingclient:billing:3.0.1'
 
-    googlePlayImplementation 'com.google.firebase:firebase-analytics:17.5.0'
+    googlePlayImplementation 'com.google.firebase:firebase-analytics:17.6.0'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics:17.2.2'
 
 

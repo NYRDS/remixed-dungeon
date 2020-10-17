@@ -1,20 +1,31 @@
 package com.nyrds.android.util;
 
 import java.io.File;
+import java.io.FileInputStream;
+
+import lombok.SneakyThrows;
 
 public class UnzipTask implements Runnable {
 
-	private UnzipStateListener m_listener;
-	private String m_zipFile;
+	private final UnzipStateListener m_listener;
+	private final String m_zipFile;
+	static private final String tmpDirName = "tmp";
+
 
 	public UnzipTask(UnzipStateListener listener, String zipFile) {
 		m_listener = listener;
 		m_zipFile = zipFile;
 	}
 
+
+	@SneakyThrows
+	public Mods.ModDesc previewMod() {
+		return Unzip.inspectMod(new FileInputStream(m_zipFile),
+				FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath());
+	}
+
 	@Override
 	public void run() {
-		String tmpDirName = "tmp";
 
 		File tmpDirFile = FileSystem.getExternalStorageFile(tmpDirName);
 		if (tmpDirFile.exists()) {
@@ -23,14 +34,15 @@ public class UnzipTask implements Runnable {
 
 		if (Unzip.unzip(m_zipFile,
 				FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath(),
-				unpacked -> m_listener.UnzipProgress(unpacked))) {
+				m_listener::UnzipProgress)) {
 
 			File[] unpackedList = tmpDirFile.listFiles();
 
 			for (File file : unpackedList) {
 				if (file.isDirectory()) {
 
-					String modDir = m_zipFile.substring(0, m_zipFile.length() - 4);
+					File zipFile = new File(m_zipFile);
+					String modDir = FileSystem.getExternalStorageFileName(zipFile.getName().split("\\.")[0]);
 
 					if (file.renameTo(new File(modDir))) {
 						FileSystem.deleteRecursive(tmpDirFile);

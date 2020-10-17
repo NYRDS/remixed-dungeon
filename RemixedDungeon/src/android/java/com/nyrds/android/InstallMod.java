@@ -1,39 +1,47 @@
 package com.nyrds.android;
 
+import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 
 import com.nyrds.android.util.UnzipStateListener;
 import com.nyrds.android.util.UnzipTask;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
+import com.watabou.pixeldungeon.windows.WndOptions;
+
+import org.jetbrains.annotations.NotNull;
 
 import javax.microedition.khronos.opengles.GL10;
 
-public class InstallMod extends RemixedDungeon implements UnzipStateListener {
+import lombok.var;
+
+public class InstallMod extends RemixedDungeon implements UnzipStateListener, @NotNull InterstitialPoint {
+
+    private UnzipTask modUnzipTask;
+
+    private boolean permissionsRequested = false;
+
     public InstallMod() {
     }
 
-    private String modFile = Utils.EMPTY_STRING;
+    private String modFileName = Utils.EMPTY_STRING;
+
 
     @Override
     public void onDrawFrame(GL10 gl) {
         super.onDrawFrame(gl);
 
-        if(scene != null && modFile.isEmpty()) {
-            Intent intent = getIntent();
-            Uri data = intent.getData();
+        if(!permissionsRequested) {
+            permissionsRequested = false;
 
-
-
-            toast(data.getPath());
-
-            modFile = data.getPath();
-            Game.execute(new UnzipTask(this, modFile));
+            String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
+            Game.instance().doPermissionsRequest(this, requiredPermissions);
         }
     }
 
@@ -50,7 +58,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener {
             if (result) {
                 Game.addToScene(new WndModSelect());
             } else {
-                Game.addToScene(new WndError(Utils.format("unzipping %s failed", modFile)));
+                Game.addToScene(new WndError(Utils.format("unzipping %s failed", modFileName)));
             }
         });
 
@@ -67,5 +75,35 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener {
                 unzipProgress.setText(Utils.format("Unpacking: %d", unpacked));
             }
         });
+    }
+
+    @Override
+    public void returnToWork(boolean result) {
+        if(result) {
+            if(scene != null && modFileName.isEmpty()) {
+                Intent intent = getIntent();
+                Uri data = intent.getData();
+
+                modFileName = data.getLastPathSegment().split(":")[1];
+
+                modUnzipTask = new UnzipTask(this, modFileName);
+
+                var modDesc = modUnzipTask.previewMod();
+
+                WndOptions installModOptions = new WndOptions("Install mod?", modDesc.name + " version:" + modDesc.version, "Yes", "No") {
+                    @Override
+                    public void onSelect(int index) {
+                        if (index == 0) {
+                            Game.execute(modUnzipTask);
+                        } else {
+                            Game.shutdown();
+                        }
+                    }
+                };
+
+                scene.add(installModOptions);
+            }
+
+        }
     }
 }
