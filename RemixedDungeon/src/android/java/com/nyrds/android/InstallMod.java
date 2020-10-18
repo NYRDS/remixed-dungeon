@@ -12,8 +12,8 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndMessage;
+import com.watabou.pixeldungeon.windows.WndModInstall;
 import com.watabou.pixeldungeon.windows.WndModSelect;
-import com.watabou.pixeldungeon.windows.WndOptions;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -86,22 +86,18 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
 
                 modFileName = data.getLastPathSegment().split(":")[1];
 
-                modUnzipTask = new UnzipTask(this, modFileName);
+                modUnzipTask = new UnzipTask(this, modFileName, false);
 
                 var modDesc = modUnzipTask.previewMod();
 
-                WndOptions installModOptions = new WndOptions("Install mod?", modDesc.name + " version:" + modDesc.version, "Yes", "No") {
+                WndModInstall wndModInstall = new WndModInstall(modDesc, new WndModInstall.onAgree() {
                     @Override
-                    public void onSelect(int index) {
-                        if (index == 0) {
-                            Game.execute(modUnzipTask);
-                        } else {
-                            Game.shutdown();
-                        }
+                    public void onAgree() {
+                        Game.execute(modUnzipTask);
                     }
-                };
+                });
 
-                scene.add(installModOptions);
+                scene.add(wndModInstall);
             }
 
         }

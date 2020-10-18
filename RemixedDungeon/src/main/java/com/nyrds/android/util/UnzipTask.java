@@ -10,13 +10,14 @@ public class UnzipTask implements Runnable {
 	private final UnzipStateListener m_listener;
 	private final String m_zipFile;
 	static private final String tmpDirName = "tmp";
+	private boolean m_deleteSrc;
 
 
-	public UnzipTask(UnzipStateListener listener, String zipFile) {
+	public UnzipTask(UnzipStateListener listener, String zipFile, boolean deleteSrc) {
 		m_listener = listener;
 		m_zipFile = zipFile;
+		m_deleteSrc = deleteSrc;
 	}
-
 
 	@SneakyThrows
 	public Mods.ModDesc previewMod() {
@@ -46,7 +47,9 @@ public class UnzipTask implements Runnable {
 
 					if (file.renameTo(new File(modDir))) {
 						FileSystem.deleteRecursive(tmpDirFile);
-						FileSystem.deleteRecursive(new File(m_zipFile));
+						if(m_deleteSrc) {
+							FileSystem.deleteRecursive(zipFile);
+						}
 						break;
 					} else {
 						m_listener.UnzipComplete(false);

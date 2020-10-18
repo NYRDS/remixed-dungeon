@@ -48,7 +48,12 @@ public class Unzip {
 				} else {
 					if(ze.getName().contains("version.json")) {
 						var modVersion = JsonHelper.readJsonFromStream(zin);
-						ret.version = modVersion.getInt("version");
+						ret.version   = modVersion.getInt("version");
+						ret.author    = modVersion.optString("author", "Unknown");
+						ret.description = modVersion.optString("description", "");
+						ret.name      = modVersion.optString("name", "Unnamed");
+						ret.url       = modVersion.optString("url", "");
+						ret.hrVersion = modVersion.optString("hr_version", String.valueOf(ret.version));
 					}
 					zin.closeEntry();
 				}

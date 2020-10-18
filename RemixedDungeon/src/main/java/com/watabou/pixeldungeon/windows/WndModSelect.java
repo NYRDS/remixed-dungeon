@@ -155,7 +155,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	public void DownloadComplete(String url, final Boolean result) {
 		Game.pushUiTask(() -> {
 			if (result) {
-				Game.execute(new UnzipTask(WndModSelect.this, downloadTo));
+				Game.execute(new UnzipTask(WndModSelect.this, downloadTo, true));
 			} else {
 				Game.addToScene(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 			}

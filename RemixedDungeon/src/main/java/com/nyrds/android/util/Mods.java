@@ -134,6 +134,9 @@ public class Mods {
 	static public class ModDesc {
 		public String  url;
 		public String  name;
+		public String  author;
+		public String  hrVersion;
+		public String  description;
 		public int     version;
 		public int     rpdVersion;
 		public boolean needUpdate = false;
