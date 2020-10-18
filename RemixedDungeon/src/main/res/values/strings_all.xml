@@ -2590,4 +2590,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ScrollOfTeleportation_NoTeleport2">Strong magic aura of this place prevents %s
     from teleporting!</string>
 
+  <string name="WndModInstall_InstallingMod">Installing mod</string>
+  <string name="WndModInstall_Version">version</string>
+
 </resources>

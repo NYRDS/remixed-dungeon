@@ -1,7 +1,6 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -33,9 +32,6 @@ public class Unzip {
 		Mods.ModDesc ret = new Mods.ModDesc();
 		ret.name = Utils.EMPTY_STRING;
 
-		String primaryStrings = Utils.format("strings_%s.json", RemixedDungeon.uiLanguage());
-		String fallbackStrings = Utils.format("strings_en.json");
-
 		try {
 			ZipInputStream zin = new ZipInputStream(fin);
 			ZipEntry ze;
@@ -43,15 +39,15 @@ public class Unzip {
 			while ((ze = zin.getNextEntry()) != null) {
 				GLog.debug( "Unzipping " + ze.getName());
 
-				if (ze.isDirectory() && ret.name.isEmpty()) {
-					ret.name = ze.getName().replace("/","");
+				if (ze.isDirectory() && ret.installTo.isEmpty()) {
+					ret.installTo = ze.getName().replace("/","");
 				} else {
 					if(ze.getName().contains("version.json")) {
 						var modVersion = JsonHelper.readJsonFromStream(zin);
 						ret.version   = modVersion.getInt("version");
 						ret.author    = modVersion.optString("author", "Unknown");
 						ret.description = modVersion.optString("description", "");
-						ret.name      = modVersion.optString("name", "Unnamed");
+						ret.name      = modVersion.optString("name", ret.installTo);
 						ret.url       = modVersion.optString("url", "");
 						ret.hrVersion = modVersion.optString("hr_version", String.valueOf(ret.version));
 					}

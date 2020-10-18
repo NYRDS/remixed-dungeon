@@ -2,6 +2,7 @@ package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -132,11 +133,12 @@ public class Mods {
 	}
 
 	static public class ModDesc {
-		public String  url;
-		public String  name;
-		public String  author;
-		public String  hrVersion;
-		public String  description;
+		public String  url         = Utils.EMPTY_STRING;
+		public String  name        = Utils.EMPTY_STRING;
+		public String  author      = Utils.EMPTY_STRING;
+		public String  hrVersion   = Utils.EMPTY_STRING;
+		public String  description = Utils.EMPTY_STRING;
+		public String  installTo   = Utils.EMPTY_STRING;
 		public int     version;
 		public int     rpdVersion;
 		public boolean needUpdate = false;

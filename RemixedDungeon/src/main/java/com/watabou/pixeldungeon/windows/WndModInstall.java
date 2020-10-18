@@ -28,23 +28,40 @@ public class WndModInstall extends Window {
 
         Text title = PixelScene.createMultiline(GuiProperties.titleFontSize());
         title.maxWidth(width);
-        title.text("Installing mod: "+desc.name + "\n\n");
+        title.text(Game.getVar(R.string.WndModInstall_InstallingMod)+"\n\n");
         title.hardlight(Window.TITLE_COLOR);
-
         mainLayout.add(title);
 
-        Text author = PixelScene.createMultiline(GuiProperties.regularFontSize());
+        Text modInfo = PixelScene.createMultiline();
+        modInfo.maxWidth(width);
+        modInfo.text("\""+desc.name + "\" " + Game.getVar(R.string.WndModInstall_Version) + " " + desc.hrVersion +  "\n\n");
+        mainLayout.add(modInfo);
+
+        Text description = PixelScene.createMultiline();
+        description.maxWidth(width);
+        description.text(desc.description + "\n\n");
+        mainLayout.add(description);
+
+        Text author = PixelScene.createMultiline();
         author.maxWidth(width);
-        author.text(Game.getVar(R.string.Mods_CreatedBy) + ":" + desc.author + "\n\n");
+        author.text(Game.getVar(R.string.Mods_CreatedBy) + "\n" +  desc.author + "\n\n");
 
         mainLayout.add(author);
 
         final String siteUrl = desc.url;
 
         if (!siteUrl.isEmpty()) {
-            Text site = PixelScene.createMultiline(GuiProperties.regularFontSize());
+            Text siteTitle = PixelScene.createMultiline();
+            siteTitle.maxWidth(width);
+            siteTitle.text(Game.getVar(R.string.Mods_AuthorSite) + "\n");
+
+            mainLayout.add(siteTitle);
+
+            Text site = PixelScene.createMultiline();
             site.maxWidth(width);
-            site.text(Game.getVar(R.string.Mods_AuthorSite) + ":\n" + siteUrl + "\n\n");
+            site.text( siteUrl + "\n\n");
+
+            site.hardlight(Window.TITLE_COLOR);
             mainLayout.add(site);
 
             TouchArea siteTouch = new TouchArea(site) {
@@ -57,17 +74,12 @@ public class WndModInstall extends Window {
             add(siteTouch);
         }
 
-        Text description = PixelScene.createMultiline(GuiProperties.regularFontSize());
-        description.maxWidth(width);
-        description.text(desc.description + "\n\n");
-        mainLayout.add(description);
-
         HBox buttons = new HBox(width);
 
         var ok = new RedButton(R.string.Wnd_Button_Yes) {
             @Override
             protected void onClick() {
-                action.onAgree();
+                action.onAgreed();
             }
         };
         ok.setSize(width/2f - 4 , BUTTON_HEIGHT );
@@ -99,6 +111,6 @@ public class WndModInstall extends Window {
     }
 
     public interface onAgree {
-        void onAgree();
+        void onAgreed();
     }
 }

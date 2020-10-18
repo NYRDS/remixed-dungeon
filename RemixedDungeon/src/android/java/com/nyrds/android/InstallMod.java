@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.UnzipStateListener;
 import com.nyrds.android.util.UnzipTask;
 import com.watabou.noosa.Game;
@@ -85,18 +86,10 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
                 Uri data = intent.getData();
 
                 modFileName = data.getLastPathSegment().split(":")[1];
-
                 modUnzipTask = new UnzipTask(this, modFileName, false);
-
                 var modDesc = modUnzipTask.previewMod();
-
-                WndModInstall wndModInstall = new WndModInstall(modDesc, new WndModInstall.onAgree() {
-                    @Override
-                    public void onAgree() {
-                        Game.execute(modUnzipTask);
-                    }
-                });
-
+                modUnzipTask.setTgtDir(FileSystem.getExternalStorageFileName(modDesc.name));
+                WndModInstall wndModInstall = new WndModInstall(modDesc, () -> Game.execute(modUnzipTask));
                 scene.add(wndModInstall);
             }
 

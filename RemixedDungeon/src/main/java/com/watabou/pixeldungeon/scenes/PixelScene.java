@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import android.opengl.GLES20;
 
+import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.input.Touchscreen;
@@ -154,6 +155,10 @@ public class PixelScene extends Scene {
 		result.Scale().set(scale);
 
 		return result;
+	}
+
+	public static Text createMultiline() {
+		return createMultiline(Utils.EMPTY_STRING, GuiProperties.regularFontSize());
 	}
 
 	public static Text createMultiline(float size) {
