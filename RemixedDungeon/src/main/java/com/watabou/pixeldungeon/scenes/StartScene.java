@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
@@ -83,8 +82,6 @@ public class StartScene extends PixelScene {
     @Override
     public void create() {
         super.create();
-
-        RemixedDungeonApp.startScene();
 
         Badges.loadGlobal();
 
