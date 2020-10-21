@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.nyrds.android.InstallMod;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Mods;
 import com.nyrds.pixeldungeon.ml.R;
@@ -26,13 +27,13 @@ public class WndModInstall extends Window {
 
         VBox mainLayout = new VBox();
 
-        Text title = PixelScene.createMultiline(GuiProperties.titleFontSize());
+        Text title = PixelScene.createMultiline(GuiProperties.mediumTitleFontSize());
         title.maxWidth(width);
         title.text(Game.getVar(R.string.WndModInstall_InstallingMod)+"\n\n");
         title.hardlight(Window.TITLE_COLOR);
         mainLayout.add(title);
 
-        Text modInfo = PixelScene.createMultiline();
+        Text modInfo = PixelScene.createMultiline(GuiProperties.titleFontSize());
         modInfo.maxWidth(width);
         modInfo.text("\""+desc.name + "\" " + Game.getVar(R.string.WndModInstall_Version) + " " + desc.hrVersion +  "\n\n");
         mainLayout.add(modInfo);
@@ -75,34 +76,54 @@ public class WndModInstall extends Window {
         }
 
         HBox buttons = new HBox(width);
+        if (desc.isCompatible()) {
 
-        var ok = new RedButton(R.string.Wnd_Button_Yes) {
-            @Override
-            protected void onClick() {
-                action.onAgreed();
-            }
-        };
-        ok.setSize(width/2f - 4 , BUTTON_HEIGHT );
+            var ok = new RedButton(R.string.Wnd_Button_Yes) {
+                @Override
+                protected void onClick() {
+                    action.onAgreed();
+                }
+            };
+            ok.setSize(width / 2f - 4, BUTTON_HEIGHT);
 
-        buttons.add(ok);
+            buttons.add(ok);
 
-        var no = new RedButton(R.string.Wnd_Button_Cancel) {
-            @Override
-            protected void onClick() {
-                hide();
-            }
-        };
-        no.setSize(width/2f - 4, BUTTON_HEIGHT );
+            var no = new RedButton(R.string.Wnd_Button_Cancel) {
+                @Override
+                protected void onClick() {
+                    hide();
+                }
+            };
+            no.setSize(width / 2f - 4, BUTTON_HEIGHT);
 
+            buttons.setGap(2);
+            buttons.add(no);
 
-        buttons.setGap(2);
-        buttons.add(no);
+            buttons.setAlign(HBox.Align.Width);
+            buttons.setRect(0, 0, width, ok.height());
 
-        buttons.setAlign(HBox.Align.Width);
-        buttons.setRect(0,0, width, ok.height());
+        } else {
+            Text pleaseUpdate = PixelScene.createMultiline(GuiProperties.titleFontSize());
+            pleaseUpdate.maxWidth(width);
+            pleaseUpdate.text(Game.getVar(R.string.WndModInstall_PleaseUpdate) + "\n\n");
 
+            mainLayout.add(pleaseUpdate);
+
+            var pleaseUpdateButton = new RedButton(R.string.Wnd_Button_Ok) {
+                @Override
+                protected void onClick() {
+                    InstallMod.openPlayStore();
+                }
+            };
+            pleaseUpdateButton.setSize(width / 2f - 4, BUTTON_HEIGHT);
+
+            buttons.add(pleaseUpdateButton);
+
+            buttons.setAlign(HBox.Align.Center);
+            buttons.setRect(0, 0, width, pleaseUpdate.height());
+
+        }
         mainLayout.add(buttons);
-
         add(mainLayout);
 
         mainLayout.setRect(0,0, width, mainLayout.childsHeight());

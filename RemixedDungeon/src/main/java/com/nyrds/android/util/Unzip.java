@@ -28,7 +28,7 @@ public class Unzip {
 		}
 	}
 
-	static public Mods.ModDesc inspectMod(InputStream fin, String tgtDir) {
+	static public Mods.ModDesc inspectMod(InputStream fin) {
 		Mods.ModDesc ret = new Mods.ModDesc();
 		ret.name = Utils.EMPTY_STRING;
 
@@ -50,6 +50,7 @@ public class Unzip {
 						ret.name      = modVersion.optString("name", ret.installTo);
 						ret.url       = modVersion.optString("url", "");
 						ret.hrVersion = modVersion.optString("hr_version", String.valueOf(ret.version));
+						ret.rpdVersion = modVersion.optInt("rpd_version", 0);
 					}
 					zin.closeEntry();
 				}

@@ -27,8 +27,7 @@ public class UnzipTask implements Runnable {
 
 	@SneakyThrows
 	public Mods.ModDesc previewMod() {
-		return Unzip.inspectMod(new FileInputStream(m_zipFile),
-				FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath());
+		return Unzip.inspectMod(new FileInputStream(m_zipFile));
 	}
 
 	@Override

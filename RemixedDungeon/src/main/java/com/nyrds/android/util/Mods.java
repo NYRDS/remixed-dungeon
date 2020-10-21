@@ -52,9 +52,7 @@ public class Mods {
 				ModDesc netDesc = entry.getValue();
 				netDesc.needUpdate = true;
 
-				int rpdVersion = RemixedDungeon.versionCode % 2000;
-
-				if(netDesc.rpdVersion <= rpdVersion) {
+				if(netDesc.isCompatible()) {
 					modsList.put(name, netDesc);
 				}
 			}
@@ -143,5 +141,9 @@ public class Mods {
 		public int     rpdVersion;
 		public boolean needUpdate = false;
 		public boolean installed  = false;
+
+		public boolean isCompatible() {
+			return rpdVersion <= (RemixedDungeon.versionCode % 2000);
+		}
 	}
 }

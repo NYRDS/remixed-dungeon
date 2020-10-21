@@ -2593,4 +2593,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndModInstall_InstallingMod">Installing mod</string>
   <string name="WndModInstall_Version">version</string>
 
+  <string name="WndModInstall_PleaseUpdate">Please update Remixed Dungeon before installing this mod</string>
+  <string name="Wnd_Button_Ok">Ok</string>
+
 </resources>
