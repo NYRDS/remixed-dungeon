@@ -7,7 +7,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
@@ -35,7 +36,8 @@ public class RunicSkull extends MultiKindMob {
 		kind = Random.Int(4);
 		setState(MobAi.getStateByClass(Wandering.class));
 
-		addImmunity( Paralysis.class );
+		addImmunity( GasParalysis.class );
+		addImmunity( NatureParalysis.class );
 		addImmunity( ToxicGas.class );
 		addImmunity( Terror.class );
 		addImmunity( Death.class );

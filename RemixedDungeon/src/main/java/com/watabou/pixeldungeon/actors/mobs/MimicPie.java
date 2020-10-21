@@ -4,7 +4,8 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.items.food.RottenPasty;
 import com.watabou.utils.Random;
 
@@ -22,7 +23,8 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 		collect(new RottenPasty());
 
 		addImmunity( ToxicGas.class );
-		addImmunity( Paralysis.class );
+		addImmunity( GasParalysis.class );
+		addImmunity( NatureParalysis.class );
 		adjustStats(level);
 	}
 

@@ -7,7 +7,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Bundle;
@@ -27,7 +28,8 @@ public class MimicAmulet extends Mob {
 		level = Dungeon.depth;
 		
 		addImmunity( ToxicGas.class );
-		addImmunity( Paralysis.class );
+		addImmunity( GasParalysis.class );
+		addImmunity( NatureParalysis.class );
 
 		collect(new SkeletonKey());
 	}

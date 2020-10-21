@@ -37,7 +37,7 @@ public class Paralysis extends Weapon.Enchantment {
 		
 		if (Random.Int( level + 8 ) >= 7) {
 			
-			Buff.prolong( defender, com.watabou.pixeldungeon.actors.buffs.Paralysis.class, 
+			Buff.prolong( defender, com.watabou.pixeldungeon.actors.buffs.NatureParalysis.class, 
 				Random.Float( 1, 1.5f + level ) );
 			
 			return true;

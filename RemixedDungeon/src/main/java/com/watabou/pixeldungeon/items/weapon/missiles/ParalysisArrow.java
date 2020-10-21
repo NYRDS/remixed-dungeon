@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 
 public class ParalysisArrow extends Arrow {
 
@@ -34,7 +34,7 @@ public class ParalysisArrow extends Arrow {
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		if(activateSpecial(attacker, defender, damage)) {
-			Buff.prolong( defender, Paralysis.class, DURATION );
+			Buff.prolong( defender, NatureParalysis.class, DURATION );
 		}
 		super.attackProc( attacker, defender, damage );
 	}

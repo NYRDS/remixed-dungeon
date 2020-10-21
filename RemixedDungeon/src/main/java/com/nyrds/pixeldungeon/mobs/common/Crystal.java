@@ -8,7 +8,8 @@ import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
+import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -66,7 +67,8 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 		addImmunity(ScrollOfPsionicBlast.class);
 		addImmunity(ToxicGas.class);
-		addImmunity(Paralysis.class);
+		addImmunity(GasParalysis.class);
+		addImmunity(NatureParalysis.class);
 		addImmunity(ConfusionGas.class);
 	}
 

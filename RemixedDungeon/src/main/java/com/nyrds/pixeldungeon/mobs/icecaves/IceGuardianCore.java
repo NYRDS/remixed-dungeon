@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
@@ -27,7 +27,7 @@ public class IceGuardianCore extends Boss {
 		baseSpeed = 0.5f;
 		collect(new WandOfIcebolt().upgrade(1));
 
-		addImmunity( Paralysis.class );
+		addImmunity( GasParalysis.class );
 		addImmunity( ToxicGas.class );
 		addImmunity( Terror.class );
 		addImmunity( Death.class );
