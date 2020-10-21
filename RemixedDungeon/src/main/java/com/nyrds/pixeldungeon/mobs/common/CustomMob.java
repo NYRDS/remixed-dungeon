@@ -3,8 +3,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
-import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.ml.R;

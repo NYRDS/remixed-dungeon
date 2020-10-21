@@ -79,13 +79,25 @@ return item.init{
         RPD.glog("cellSelected owner: %s", tostring(owner))
 
         if action == "action1" then
+
+            local function cellAction(cell)
+                RPD.placeBlob(RPD.Blobs.ToxicGas,cell, 50)
+            end
+
+            local tgt = RPD.forEachCellOnRay(owner:getPos(),
+                                             cell,
+                                             false,
+                                             true,
+                                             true,
+                                             cellAction)
+
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getOwner():getPos(), cell, "Lightning")
             --local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
             --RPD.Dungeon.level:drop(book, cell)
             RPD.createLevelObject(chest, cell)
             --RPD.GameScene:particleEffect("BloodSink", cell);
-        end
+            end
     end,
 
     execute = function(self, item, hero, action)
@@ -95,8 +107,8 @@ return item.init{
         RPD.glog("execute owner: %s", tostring(owner))
 
         if action == "action1" then
-            RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
-            --item:selectCell("action1","Please select cell for action 1")
+            --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
+            item:selectCell("action1","Please select cell for action 1")
         end
 
         if action == "action2" then

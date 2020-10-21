@@ -155,6 +155,8 @@ local RPD = {
     Dungeon = Dungeon,
     DungeonGenerator = DungeonGenerator,
 
+    Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
+
     System = {
         Input = luajava.bindClass("com.nyrds.platform.Input")
     },
@@ -360,6 +362,21 @@ local RPD = {
             end
         end
     end,
+
+    forEachCellOnRay = function(from,to,magic,hitChars,hitObjects, action )
+        local tgt = Ballistica:cast(from, to, magic, hitChars, hitObjects)
+
+        for i=2, Ballistica.trace.length do
+            local cell = Ballistica.trace[i]
+            action(cell)
+            if cell == tgt then
+                break
+            end
+        end
+
+        return tgt
+    end,
+
 
     shakeCamera = function(time, power)
         Camera.main:shake(time, power)

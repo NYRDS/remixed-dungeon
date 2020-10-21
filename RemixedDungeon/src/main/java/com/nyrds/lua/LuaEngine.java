@@ -1,10 +1,11 @@
-package com.nyrds.android.lua;
+package com.nyrds.lua;
 
 /**
  * Created by mike on 16.06.2017.
  * This file is part of Remixed Pixel Dungeon.
  */
 
+import com.nyrds.android.lua.MultiDexLuajavaLib;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;

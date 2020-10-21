@@ -37,6 +37,7 @@ public class Ballistica {
 		return trace[distance - 1 - distFromEnd];
 	}
 
+	@LuaInterface
 	public static int cast( int from, int to, boolean magic, boolean hitChars, boolean hitObjects ) {
 
 		Level level = Dungeon.level;

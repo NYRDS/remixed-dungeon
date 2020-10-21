@@ -1,4 +1,4 @@
-package com.nyrds.android.lua;
+package com.nyrds.lua;
 
 import org.luaj.vm2.LuaValue;
 
