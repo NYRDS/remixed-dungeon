@@ -2596,4 +2596,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndModInstall_PleaseUpdate">Please update Remixed Dungeon before installing this mod</string>
   <string name="Wnd_Button_Ok">Ok</string>
 
+  <string name="CharAction_Taunt">taunt</string>
+  <string name="CharAction_Push">push</string>
+  <string name="CharAction_Steal">steal</string>
+  <string name="CharAction_Charm">charm</string>
+  <string name="CharAction_Order">order</string>
+  <string name="CharAction_Give">give</string>
+  <string name="CharAction_Take">take</string>
+
+
 </resources>
