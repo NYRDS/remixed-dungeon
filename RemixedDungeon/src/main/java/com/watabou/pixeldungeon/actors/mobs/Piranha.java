@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.sprites.PiranhaSprite;
 import com.watabou.utils.Random;
@@ -48,7 +48,7 @@ public class Piranha extends Mob {
 		collect(ItemFactory.itemByName("RawFish"));
 
 		addImmunity( Burning.class );
-		addImmunity( GasParalysis.class );
+		addImmunity( Paralysis.class );
 		addImmunity( ToxicGas.class );
 		addImmunity( Roots.class );
 		addImmunity( Frost.class );

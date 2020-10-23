@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
@@ -31,7 +31,7 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 		maxLvl = depth + 2;
 		
 		addImmunity(Roots.class);
-		addImmunity(GasParalysis.class);
+		addImmunity(Paralysis.class);
 		addImmunity(NatureParalysis.class);
 		addImmunity(ToxicGas.class);
 	}

@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -23,7 +23,7 @@ public class PseudoRat extends Mob {
 
         setState(MobAi.getStateByClass(Hunting.class));
 
-        addImmunity(GasParalysis.class);
+        addImmunity(Paralysis.class);
     }
 
     @Override

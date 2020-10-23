@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -29,7 +29,7 @@ public class YogsTeeth extends Mob {
 
         addResistance(ToxicGas.class);
 
-        addImmunity(GasParalysis.class);
+        addImmunity(Paralysis.class);
         addImmunity(Amok.class);
         addImmunity(Sleep.class);
         addImmunity(Terror.class);

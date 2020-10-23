@@ -36,7 +36,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -76,7 +76,7 @@ public class Ghost extends NPC {
 	private WndSadGhostNecro window;
 
 	public Ghost() {
-		addImmunity( GasParalysis.class );
+		addImmunity( Paralysis.class );
 		addImmunity( NatureParalysis.class );
 		addImmunity( Roots.class );
 	}
@@ -356,7 +356,7 @@ public class Ghost extends NPC {
 			setState(MobAi.getStateByClass(Wandering.class));
 
 			collect( new RatSkull() );
-			addImmunity( GasParalysis.class );
+			addImmunity( Paralysis.class );
 		}
 		
 		@Override

@@ -17,7 +17,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -67,7 +67,7 @@ public class Lich extends Boss {
         exp = 25;
         defenseSkill = 23;
 
-        addImmunity( GasParalysis.class );
+        addImmunity( Paralysis.class );
         addImmunity( ToxicGas.class );
         addImmunity( Terror.class );
         addImmunity( Death.class );

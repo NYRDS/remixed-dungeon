@@ -22,7 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 
@@ -35,7 +35,7 @@ public class ParalyticGas extends Blob {
 		Char ch;
 		for (int i=0; i < getLength(); i++) {
 			if (cur[i] > 0 && (ch = Actor.findChar( i )) != null) {
-				Buff.prolong( ch, GasParalysis.class, GasParalysis.duration( ch ) );
+				Buff.prolong( ch, Paralysis.class, Paralysis.duration( ch ) );
 			}
 		}
 	}

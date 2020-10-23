@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
-public class GasParalysis extends FlavourBuff {
+public class Paralysis extends FlavourBuff {
 
 	private static final float DURATION	= 10f;
 	

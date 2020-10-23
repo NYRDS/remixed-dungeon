@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
@@ -26,7 +26,7 @@ public class Worm extends Mob {
 
         loot(Gold.class, 0.4f);
 
-        addImmunity(GasParalysis.class);
+        addImmunity(Paralysis.class);
 		addImmunity(NatureParalysis.class);
         addImmunity(ToxicGas.class);
     }

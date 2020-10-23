@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -33,7 +33,7 @@ public class ZombieGnoll extends Mob {
 
         loot(Gold.class, 0.02f);
 
-        addImmunity(GasParalysis.class);
+        addImmunity(Paralysis.class);
         addImmunity(ToxicGas.class);
     }
 

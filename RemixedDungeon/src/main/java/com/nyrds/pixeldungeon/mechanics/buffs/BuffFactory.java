@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
@@ -99,7 +99,7 @@ public class BuffFactory {
         registerBuffClass(Blindness.class);
         registerBuffClass(Vertigo.class);
         registerBuffClass(NatureParalysis.class);
-		registerBuffClass(GasParalysis.class);
+		registerBuffClass(Paralysis.class);
         registerBuffClass(Terror.class);
         registerBuffClass(Weakness.class);
         registerBuffClass(Light.class);

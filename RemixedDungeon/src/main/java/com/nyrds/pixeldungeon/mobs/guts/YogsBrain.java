@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
-import com.watabou.pixeldungeon.actors.buffs.GasParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -40,7 +40,7 @@ public class YogsBrain extends Mob implements IZapper {
         addResistance( LightningTrap.Electricity.class );
         addResistance(ToxicGas.class);
 
-        addImmunity(GasParalysis.class);
+        addImmunity(Paralysis.class);
         addImmunity(Amok.class);
         addImmunity(Sleep.class);
         addImmunity(Terror.class);
