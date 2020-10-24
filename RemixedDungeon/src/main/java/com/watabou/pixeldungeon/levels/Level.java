@@ -21,10 +21,10 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.lua.LuaEngine;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.DummyItem;

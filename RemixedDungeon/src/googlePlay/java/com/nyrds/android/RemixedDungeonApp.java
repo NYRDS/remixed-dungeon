@@ -23,19 +23,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     @SuppressLint("StaticFieldLeak")
     static RemixedDungeonApp remixedDungeonApp;
-/*
-    static class HqSdkCrash extends Exception {
-        HqSdkCrash(Throwable cause) {
-            super(cause);
-        }
-    }
 
-    static class HqSdkError extends Exception {
-        HqSdkError(Throwable cause) {
-            super(cause);
-        }
-    }
-*/
     @Override
     public void onCreate() {
         super.onCreate();
@@ -51,25 +39,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
             FirebaseApp.initializeApp(this);
             EventCollector.init();
         }
-/*
-        try {
-            HQSdk.enableAttribution(false);
-            HQSdk.init(getApplicationContext(), "22b4f34f2616d7f", BuildConfig.DEBUG, new HQCallback<Void>(){
-
-                @Override
-                public void onSuccess(Void aVoid) {
-
-                }
-
-                @Override
-                public void onError(Throwable throwable) {
-                    EventCollector.logException(new HqSdkError(throwable));
-                }
-            });
-        } catch (Throwable hqSdkCrash) {
-            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
-        }
-*/
 
         try {
             ModdingMode.selectMod(RemixedDungeon.activeMod());
@@ -104,16 +73,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
-    }
-
-    static public void startScene() {
-/*
-        try {
-            HQSdk.start(getContext());
-        } catch (Throwable hqSdkCrash) {
-            EventCollector.logException(new HqSdkCrash(hqSdkCrash));
-        }
- */
     }
 
     static public Context getContext() {

@@ -50,6 +50,8 @@ public class ModdingMode {
 	@NotNull
 	static private String mActiveMod = REMIXED;
 
+	static private ArrayList<String> mActiveModsList;
+
 	static private boolean mTextRenderingMode = false;
 
 	public static void selectMod(String mod) {

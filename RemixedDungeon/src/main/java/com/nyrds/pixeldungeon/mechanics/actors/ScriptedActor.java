@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.actors;
 
 import com.nyrds.Packable;
-import com.nyrds.android.lua.LuaEngine;
+import com.nyrds.lua.LuaEngine;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.utils.Bundle;
 

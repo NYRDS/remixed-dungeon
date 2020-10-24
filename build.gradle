@@ -29,7 +29,6 @@ allprojects {
 
         jcenter()
 
-        maven { url 'https://dl.bintray.com/humanteq/hqm-sdk/' }
         maven { url "https://artifactory.appodeal.com/appodeal" }
         maven { url 'http://developer.huawei.com/repo/' }
     }
