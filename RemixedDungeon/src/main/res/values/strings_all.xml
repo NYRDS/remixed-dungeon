@@ -2603,6 +2603,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharAction_Order">order</string>
   <string name="CharAction_Give">give</string>
   <string name="CharAction_Take">take</string>
+  <string name="CharAction_Scare">scare</string>
+  <string name="CharAction_Hit">hit</string>
 
 
 </resources>
