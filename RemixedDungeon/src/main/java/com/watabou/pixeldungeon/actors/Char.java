@@ -848,6 +848,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		sprite = null;
 	}
 
+	@LuaInterface
 	public CharSprite getSprite() {
 		if (sprite == null) {
 

@@ -185,6 +185,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         play(idle);
     }
 
+    @LuaInterface
     public void move(int from, int to) {
         move(from, to, true);
     }
