@@ -28,8 +28,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 936
-        versionName "29.6.pre_alpha.1"
+        versionCode 937
+        versionName "29.6.pre_alpha.2"
 
         buildToolsVersion = '29.0.2'
         targetSdkVersion 29
@@ -126,15 +126,15 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
 
-    googlePlayImplementation 'com.google.firebase:firebase-ads:19.4.0'
+    googlePlayImplementation 'com.google.firebase:firebase-ads:19.5.0'
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:17.4.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:17.5.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:18.1.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:20.0.1"
 
     googlePlayImplementation 'com.android.billingclient:billing:3.0.1'
 
-    googlePlayImplementation 'com.google.firebase:firebase-analytics:17.6.0'
+    googlePlayImplementation 'com.google.firebase:firebase-analytics:18.0.0'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics:17.2.2'
 
 
