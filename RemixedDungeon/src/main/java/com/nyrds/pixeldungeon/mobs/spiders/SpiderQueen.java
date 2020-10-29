@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -56,7 +55,7 @@ public class SpiderQueen extends Boss {
 	
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
-		return Dungeon.level.adjacent(getPos(), enemy.getPos()) && hp() > ht() / 2;
+		return level().adjacent(getPos(), enemy.getPos()) && hp() > ht() / 2;
 	}
 	
 	@Override

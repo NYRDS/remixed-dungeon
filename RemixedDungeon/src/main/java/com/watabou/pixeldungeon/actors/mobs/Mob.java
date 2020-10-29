@@ -621,19 +621,19 @@ public abstract class Mob extends Char {
 	public void setEnemy(@NotNull Char enemy) {
 
 		if(enemy == this) {
-			EventCollector.logException(enemy.getName()+" gonna suicidal");
+			EventCollector.logException(enemy.getEntityKind() + " gonna suicidal");
 		}
 
 		if(BuildConfig.DEBUG) {
 
 			if(enemy == this) {
 				GLog.i("WTF???");
-				throw new TrackedRuntimeException(enemy.getName());
+				throw new TrackedRuntimeException(enemy.getEntityKind());
 			}
 
-			if (enemyId != enemy.getId() && enemy != CharsList.DUMMY) {
+			if (enemyId != enemy.getId() && enemy.valid()) {
 //				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
-				GLog.i("%s  my enemy is %s now ", this.getName(), enemy.getName());
+				GLog.i("%s  my enemy is %s now ", this.getEntityKind(), enemy.getEntityKind());
 			}
 		}
 
@@ -659,12 +659,12 @@ public abstract class Mob extends Char {
 
 	protected boolean zapHit(@NotNull Char enemy) {
 		if (enemy == CharsList.DUMMY) {
-			EventCollector.logException("zapping dummy enemy");
+			EventCollector.logException(String.format("%s zapping dummy enemy", getEntityKind()));
 			return false;
 		}
 
 		if(!level().cellValid(enemy.getPos())) {
-			EventCollector.logException(getMobClassName() + " zapping "+enemy.getEntityKind()+" on invalid cell");
+			EventCollector.logException(getEntityKind() + " zapping "+enemy.getEntityKind()+" on invalid cell");
 			return false;
 		}
 

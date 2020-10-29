@@ -171,7 +171,7 @@ public class Lich extends Boss {
     }
 
     private void useSkull(){
-        getSprite().attack(getPos(), Util.nullCallback);
+        getSprite().zap(getPos(), Util.nullCallback);
 
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:

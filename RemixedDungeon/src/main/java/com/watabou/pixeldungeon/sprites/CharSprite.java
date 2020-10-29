@@ -227,7 +227,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public void attack(int cell, Callback callback) {
         ch.ifPresent(chr -> {
-            animCallback = callback;
+            if(callback!=null) {
+                animCallback = callback;
+            }
             turnTo(chr.getPos(), cell);
             play(attack);
         });
@@ -246,6 +248,16 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         ch.ifPresent(chr -> {
             turnTo(chr.getPos(), cell);
             play(operate);
+        });
+    }
+
+    public void zap(int cell, Callback callback) {
+        ch.ifPresent(chr -> {
+            if(callback!=null) {
+                animCallback = callback;
+            }
+            turnTo(chr.getPos(), cell);
+            play(zap);
         });
     }
 
@@ -535,20 +547,28 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Override
     public void play(Animation anim) {
+        if (curAnim == die) {
+            return;
+        }
+
+        boolean skipAnim[] = {false};
+
         ch.ifPresent(chr -> {
             if (anim == null) {
                 EventCollector.logException(String.format(Locale.ROOT, "null anim for %s", chr.getClass()));
                 chr.next();
+                skipAnim[0] = true;
                 return;
             }
 
             if (!Dungeon.visible[chr.getPos()]) {
                 onComplete(anim);
+                skipAnim[0] = true;
             }
 
         });
 
-        if (curAnim == die) {
+        if(skipAnim[0]) {
             return;
         }
 
