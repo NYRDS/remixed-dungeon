@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.CustomMob;
@@ -293,13 +294,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public boolean attack(@NotNull Char enemy) {
 
-		if (enemy == CharsList.DUMMY) {
-			EventCollector.logException(getName() + " attacking dummy enemy");
+		if (enemy.invalid()) {
+			EventCollector.logException(getEntityKind() + " attacking dummy enemy");
 			return false;
 		}
 
 		if(!level().cellValid(enemy.getPos())) {
-			EventCollector.logException(getName() + " attacking " +enemy.getName() + "on invalid cell" );
+			EventCollector.logException(getEntityKind() + " attacking " +enemy.getEntityKind() + "on invalid cell" );
 			return false;
 		}
 
@@ -510,6 +511,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
 	public void damage(int dmg, @NotNull NamedEntityKind src) {
+
+		if(BuildConfig.DEBUG){
+			GLog.i("%s: <- %d dmg from %s", getEntityKind(), dmg, src.getEntityKind());
+		}
 
 		if (!isAlive()) {
 			return;
@@ -848,6 +853,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		sprite = null;
 	}
 
+	@LuaInterface
 	public CharSprite getSprite() {
 		if (sprite == null) {
 
@@ -1339,5 +1345,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void setBelongings(Belongings belongings) {
 		this.belongings = belongings;
+	}
+
+	public boolean invalid() {
+    	return !valid();
 	}
 }

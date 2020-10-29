@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.Packable;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
@@ -170,7 +171,7 @@ public class Lich extends Boss {
     }
 
     private void useSkull(){
-        getSprite().zap(getPos());
+        getSprite().zap(getPos(), Util.nullCallback);
 
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:

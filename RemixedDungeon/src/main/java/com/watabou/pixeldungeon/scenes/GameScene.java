@@ -424,6 +424,8 @@ public class GameScene extends PixelScene {
         if(Dungeon.level instanceof TestLevel) {
             TestLevel level = (TestLevel)Dungeon.level;
             level.runEquipTest();
+            level.runMobsTest();
+            level.reset();
         }
     }
 

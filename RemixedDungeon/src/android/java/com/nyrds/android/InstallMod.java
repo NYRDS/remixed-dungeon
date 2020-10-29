@@ -7,6 +7,7 @@ import android.net.Uri;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.UnzipStateListener;
 import com.nyrds.android.util.UnzipTask;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -17,6 +18,9 @@ import com.watabou.pixeldungeon.windows.WndModInstall;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -94,12 +98,24 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
                 Intent intent = getIntent();
                 Uri data = intent.getData();
 
-                modFileName = data.getLastPathSegment().split(":")[1];
-                modUnzipTask = new UnzipTask(this, modFileName, false);
-                var modDesc = modUnzipTask.previewMod();
-                modUnzipTask.setTgtDir(FileSystem.getExternalStorageFileName(modDesc.name));
-                WndModInstall wndModInstall = new WndModInstall(modDesc, () -> Game.execute(modUnzipTask));
-                scene.add(wndModInstall);
+                if(data!=null) {
+                    Map<String, String> installModInfo = new HashMap<>();
+
+                    installModInfo.put("path", data.getPath());
+                    installModInfo.put("lastPathSegment", data.getLastPathSegment());
+                    installModInfo.put("intent", data.toString());
+
+                    EventCollector.logEvent("InstallMod", installModInfo);
+
+                    modFileName = data.getLastPathSegment().split(":")[1];
+                    modUnzipTask = new UnzipTask(this, modFileName, false);
+                    var modDesc = modUnzipTask.previewMod();
+                    modUnzipTask.setTgtDir(FileSystem.getExternalStorageFileName(modDesc.name));
+                    WndModInstall wndModInstall = new WndModInstall(modDesc, () -> Game.execute(modUnzipTask));
+                    scene.add(wndModInstall);
+                } else {
+                    shutdown();
+                }
             }
 
         }

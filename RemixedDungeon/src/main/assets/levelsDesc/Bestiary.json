@@ -82,6 +82,9 @@
   "PredesignedLevel":{
     "any":{"Rat":1}
   },
+  "TestLevel":{
+     "any":{"Rat":1}
+  },
   "Feelings":{
     "Chance":0.2,
     "CHASM":{"AirElemental":1},

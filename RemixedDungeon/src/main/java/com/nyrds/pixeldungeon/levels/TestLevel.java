@@ -94,6 +94,27 @@ public class TestLevel extends RegularLevel {
 		return false;
 	}
 
+	public void runMobsTest() {
+		List<Mob> mobs = MobFactory.allMobs();
+
+		for(Mob mob:mobs) {
+
+			int cell = randomRespawnCell(passable);
+			if(!cellValid(cell)) {
+				GLog.debug("no cell for %s", mob.getMobClassName());
+				continue;
+			}
+
+			mob.setPos(cell);
+			spawnMob(mob);
+		}
+
+		while(!this.mobs.isEmpty()) {
+			getRandomMob().heal(getRandomMob().hp() / 2 - 2, getRandomMob());
+			getRandomMob().damage(getRandomMob().hp() / 2 + 2, getRandomMob());
+		}
+	}
+
 	public void runEquipTest() {
 		List<Item> items = ItemFactory.allItems();
 

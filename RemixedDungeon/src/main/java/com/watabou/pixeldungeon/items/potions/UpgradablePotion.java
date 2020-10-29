@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.items.potions;
 
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
@@ -25,7 +24,7 @@ public class UpgradablePotion extends Potion {
 
 	@Override
 	public Item upgrade() {
-		if(getOwner()!= CharsList.DUMMY && quantity() > 1) {
+		if(getOwner().valid() && quantity() > 1) {
 			Item potion = detach(getOwner().getBelongings().backpack);
 			getOwner().collect(potion.upgrade());
 			return this;
@@ -36,7 +35,7 @@ public class UpgradablePotion extends Potion {
 	@Override
 	public Item degrade() {
 
-		if(getOwner()!= CharsList.DUMMY && quantity() > 1) {
+		if(getOwner().valid() && quantity() > 1) {
 			Item potion = detach(getOwner().getBelongings().backpack);
 			getOwner().collect(potion.degrade());
 			return this;

@@ -135,7 +135,9 @@ public class CustomItem extends EquipableItem {
 
             @Override
             public void onSelect(Integer cell, Char selector) {
-                script.run("cellSelected", action, cell);
+                if(cell!=null) {
+                    script.run("cellSelected", action, cell);
+                }
             }
 
             @Override

@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ai;
 
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Challenges;
@@ -38,15 +39,17 @@ public abstract class MobAi implements AiState {
         return getClass().getSimpleName().toUpperCase(Locale.ROOT);
     }
 
-    protected void seekRevenge(Mob me, Object src) {
+    protected void seekRevenge(Mob me, NamedEntityKind src) {
         if(src == me) { //no selfharm
             return;
         }
 
         if (src instanceof Char && !me.friendly((Char)src)) {
             me.setEnemy((Char) src);
-        }else {
-            me.setEnemy(chooseEnemy(me,1.0f));
+        } else {
+            if(!me.getEnemy().valid()) {
+                me.setEnemy(chooseEnemy(me, 1.0f));
+            }
         }
 
         if (me.isEnemyInFov()) {

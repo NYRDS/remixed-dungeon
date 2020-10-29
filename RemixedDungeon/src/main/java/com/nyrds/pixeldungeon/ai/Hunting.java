@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -20,7 +19,7 @@ public class Hunting extends MobAi implements AiState {
             return;
         }
 
-        if(me.getEnemy() == CharsList.DUMMY) {
+        if(me.getEnemy().invalid()) {
             me.setEnemy(chooseEnemy(me,1.0f));
         }
 

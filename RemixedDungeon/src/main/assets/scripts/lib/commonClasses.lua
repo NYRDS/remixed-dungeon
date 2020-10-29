@@ -364,6 +364,7 @@ local RPD = {
     end,
 
     forEachCellOnRay = function(from,to,magic,hitChars,hitObjects, action )
+        GLog:i(tostring(from) .." " ..tostring(to).." "..tostring(magic).." "..tostring(hitChars).." "..tostring(hitObjects).." "..tostring(action),{""})
         local tgt = Ballistica:cast(from, to, magic, hitChars, hitObjects)
 
         for i=2, Ballistica.trace.length do
