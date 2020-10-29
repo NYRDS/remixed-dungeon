@@ -5,8 +5,8 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
 
@@ -32,7 +32,7 @@ public class Nightmare extends Mob {
         }
         //Paralysis proc
         if (Random.Int(10) == 1){
-            Buff.affect(enemy, NatureParalysis.class);
+            Buff.affect(enemy, Stun.class);
         }
         return damage;
     }

@@ -10,8 +10,8 @@ import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.plants.Earthroot;
@@ -38,7 +38,7 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 		
 		addImmunity(Roots.class);
 		addImmunity(Paralysis.class);
-		addImmunity(NatureParalysis.class);
+		addImmunity(Stun.class);
 		addImmunity(ToxicGas.class);
 		addImmunity(Fire.class);
 		addImmunity(Bleeding.class);

@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
-public class NatureParalysis extends FlavourBuff {
+public class Stun extends FlavourBuff {
 
 	private static final float DURATION	= 10f;
 	
@@ -51,7 +51,7 @@ public class NatureParalysis extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Paralysis_Info);
+		return Game.getVar(R.string.Stun_Info);
 	}
 	
 	public static float duration( Char ch ) {
@@ -67,6 +67,6 @@ public class NatureParalysis extends FlavourBuff {
 	@Override
 	public void attachVisual() {
 		target.getSprite().add(CharSprite.State.PARALYSED);
-		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
+		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaStunned));
 	}
 }

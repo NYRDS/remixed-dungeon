@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Bundle;
@@ -29,7 +29,7 @@ public class MimicAmulet extends Mob {
 		
 		addImmunity( ToxicGas.class );
 		addImmunity( Paralysis.class );
-		addImmunity( NatureParalysis.class );
+		addImmunity( Stun.class );
 
 		collect(new SkeletonKey());
 	}

@@ -9,8 +9,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndQuest;
@@ -23,7 +23,7 @@ public class AzuterronNPC extends Shopkeeper {
 	public AzuterronNPC() {
 		movable = false;
 		addImmunity( Paralysis.class );
-		addImmunity( NatureParalysis.class );
+		addImmunity( Stun.class );
 		addImmunity( Roots.class );
 	}
 	

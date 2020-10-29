@@ -11,9 +11,9 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
@@ -51,7 +51,7 @@ public class YogsBrain extends Mob implements IZapper {
     public int attackProc(@NotNull Char enemy, int damage ) {
         //Paralysis proc
         if (Random.Int(3) == 1){
-            Buff.affect(enemy, NatureParalysis.class);
+            Buff.affect(enemy, Stun.class);
         }
         return damage;
     }

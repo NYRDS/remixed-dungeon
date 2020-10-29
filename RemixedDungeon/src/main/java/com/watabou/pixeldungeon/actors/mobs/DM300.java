@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.NatureParalysis;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
@@ -123,7 +123,7 @@ public class DM300 extends Boss {
 
 		Char ch = Actor.findChar( cell );
 		if (ch != null && ch != this) {
-			Buff.prolong( ch, NatureParalysis.class, 2 );
+			Buff.prolong( ch, Stun.class, 2 );
 		}
 	}
 	
