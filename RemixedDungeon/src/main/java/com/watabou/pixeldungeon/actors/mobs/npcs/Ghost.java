@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -76,6 +77,7 @@ public class Ghost extends NPC {
 
 	public Ghost() {
 		addImmunity( Paralysis.class );
+		addImmunity( Stun.class );
 		addImmunity( Roots.class );
 	}
 

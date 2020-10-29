@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -23,6 +24,7 @@ import com.watabou.utils.Random;
 public class UndeadMob extends Mob {
 	{
 		addImmunity(Paralysis.class);
+		addImmunity(Stun.class);
 		addImmunity(ToxicGas.class);
 		addImmunity(Terror.class);
 		addImmunity(Death.class);

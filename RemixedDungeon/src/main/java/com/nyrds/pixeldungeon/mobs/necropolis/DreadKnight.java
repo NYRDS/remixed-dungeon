@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 import com.nyrds.pixeldungeon.effects.DeathStroke;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
@@ -35,7 +35,7 @@ public class DreadKnight extends UndeadMob {
         }
         //Paralysis proc
         if (Random.Int(10) == 1){
-            Buff.affect(enemy, Paralysis.class);
+            Buff.affect(enemy, Stun.class);
         }
         return damage;
     }

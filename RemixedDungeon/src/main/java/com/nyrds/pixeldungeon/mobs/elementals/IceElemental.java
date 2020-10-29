@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
@@ -31,6 +32,7 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 		
 		addImmunity(Roots.class);
 		addImmunity(Paralysis.class);
+		addImmunity(Stun.class);
 		addImmunity(ToxicGas.class);
 	}
 

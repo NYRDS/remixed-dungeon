@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -38,6 +39,7 @@ public class MirrorImage extends Mob {
 		setState(MobAi.getStateByClass(Hunting.class));
 
         addImmunity( ToxicGas.class );
+		addImmunity( Paralysis.class );
         addImmunity( Burning.class );
         hp(ht(1));
 	}

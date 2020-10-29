@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
@@ -97,7 +98,8 @@ public class BuffFactory {
         registerBuffClass(CandleOfMindVisionBuff.class);
         registerBuffClass(Blindness.class);
         registerBuffClass(Vertigo.class);
-        registerBuffClass(Paralysis.class);
+        registerBuffClass(Stun.class);
+		registerBuffClass(Paralysis.class);
         registerBuffClass(Terror.class);
         registerBuffClass(Weakness.class);
         registerBuffClass(Light.class);

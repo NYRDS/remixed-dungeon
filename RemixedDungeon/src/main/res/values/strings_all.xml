@@ -2606,5 +2606,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharAction_Scare">scare</string>
   <string name="CharAction_Hit">hit</string>
 
+  <string name="Stun_Info">Stunned</string>>
+  <string name="Char_StaStunned">stunned</string>>
 
 </resources>

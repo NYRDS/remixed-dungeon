@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
 
@@ -29,7 +29,7 @@ public class SpiderGuard extends MultiKindMob {
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 10 ) == 0) {
-			Buff.prolong( enemy, Paralysis.class, 3);
+			Buff.prolong( enemy, Stun.class, 3);
 		}
 		return damage;
 	}

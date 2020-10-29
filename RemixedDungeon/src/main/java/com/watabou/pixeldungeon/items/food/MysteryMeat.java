@@ -24,10 +24,10 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -57,7 +57,7 @@ public class MysteryMeat extends Food {
 				break;
 			case 1:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info2));
-				Buff.prolong(chr, Roots.class, Paralysis.duration(chr) );
+				Buff.prolong(chr, Roots.class, Stun.duration(chr) );
 				break;
 			case 2:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info3));

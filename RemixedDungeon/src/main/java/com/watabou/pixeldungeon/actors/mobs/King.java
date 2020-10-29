@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.ArmorKit;
@@ -67,8 +68,9 @@ public class King extends Boss {
 		addResistance( ToxicGas.class );
 		addResistance( WandOfDisintegration.class );
 		
+		addImmunity( Stun.class );
 		addImmunity( Paralysis.class );
-
+		
 		collect(new SkeletonKey());
 		collect(new ArmorKit());
 	}
@@ -209,7 +211,7 @@ public class King extends Boss {
 		@Override
 		public int attackProc(@NotNull Char enemy, int damage ) {
 			if (Random.Int( MAX_ARMY_SIZE ) == 0) {
-				Buff.prolong( enemy, Paralysis.class, 1 );
+				Buff.prolong( enemy, Stun.class, 1 );
 			}
 			
 			return damage;
