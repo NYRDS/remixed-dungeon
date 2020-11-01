@@ -155,6 +155,7 @@ local RPD = {
     Dungeon = Dungeon,
     DungeonGenerator = DungeonGenerator,
 
+    CharsList = CharsList,
     Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
 
     System = {

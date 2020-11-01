@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.DummyChar;
@@ -23,6 +24,7 @@ public class CharsList {
 
     static public List<Mob> emptyMobList = Collections.unmodifiableList(new ArrayList<>());
 
+    @LuaInterface
     @NotNull
     static public Char getById(int id) {
         Char ret = charsMap.get(id);
