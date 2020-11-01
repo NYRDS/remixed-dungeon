@@ -2,6 +2,7 @@ package com.nyrds.android;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 
 import com.nyrds.android.util.FileSystem;
@@ -93,6 +94,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
 
     @Override
     public void returnToWork(boolean result) {
+        IntentFilter a = new IntentFilter();
         if(result) {
             if(scene != null && modFileName.isEmpty()) {
                 Intent intent = getIntent();

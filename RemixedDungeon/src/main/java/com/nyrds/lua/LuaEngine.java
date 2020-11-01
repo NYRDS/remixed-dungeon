@@ -6,9 +6,10 @@ package com.nyrds.lua;
  */
 
 import com.nyrds.android.lua.MultiDexLuajavaLib;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
@@ -16,16 +17,20 @@ import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LoadState;
 import org.luaj.vm2.LuaError;
+import org.luaj.vm2.LuaString;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.Varargs;
 import org.luaj.vm2.compiler.LuaC;
 import org.luaj.vm2.lib.Bit32Lib;
 import org.luaj.vm2.lib.CoroutineLib;
+import org.luaj.vm2.lib.DebugLib;
 import org.luaj.vm2.lib.OneArgFunction;
 import org.luaj.vm2.lib.PackageLib;
 import org.luaj.vm2.lib.ResourceFinder;
 import org.luaj.vm2.lib.StringLib;
 import org.luaj.vm2.lib.TableLib;
+import org.luaj.vm2.lib.VarArgFunction;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JseBaseLib;
 import org.luaj.vm2.lib.jse.JseIoLib;
@@ -38,18 +43,30 @@ import lombok.var;
 
 public class LuaEngine implements ResourceFinder {
 
+	class traceback extends VarArgFunction {
+		public Varargs invoke(Varargs args) {
+
+			if(stp!=null) {
+				GLog.toFile("\n%s\n",LuaString.valueOf(args.arg1() + ":" + stp.get("stacktrace").call()));
+			}
+
+			return LuaString.valueOf(args.arg1() + ":" + globals.debuglib.traceback(1));
+		}
+	}
+
 	public static final String    SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
     public static final String    LUA_DATA = "luaData";
 	public static final LuaTable  emptyTable = new LuaTable();
 
     static private      LuaEngine engine              = new LuaEngine();
 
+    private LuaValue stp;
+
 	private Globals globals;
 
 	public static void reset() {
 		engine = new LuaEngine();
 	}
-
 	public LuaValue call(String method) {
 		return globals.get(method).call();
 	}
@@ -59,9 +76,8 @@ public class LuaEngine implements ResourceFinder {
 			LuaValue methodForData = globals.get(method);
 			return methodForData.call(CoerceJavaToLua.coerce(arg1));
 		} catch (LuaError err) {
-			reportLuaError(err);
+			throw new ModError( String.format("Error when calling %s", method), err);
 		}
-		return LuaValue.NIL;
 	}
 
 	@Nullable
@@ -101,6 +117,7 @@ public class LuaEngine implements ResourceFinder {
 		return engine;
 	}
 
+
 	private LuaEngine() {
 		globals = new Globals();
 		globals.load(new JseBaseLib());
@@ -113,15 +130,17 @@ public class LuaEngine implements ResourceFinder {
 		globals.load(new JseIoLib());
 		globals.load(new JseOsLib());
 		globals.load(new MultiDexLuajavaLib());
+		globals.load(new DebugLib());
+
 		LoadState.install(globals);
 		LuaC.install(globals);
 
+		globals.running.errorfunc = new traceback();
+
 		globals.finder = this;
 		globals.set("loadResource", new resLoader());
-	}
 
-	private void reportLuaError(LuaError err) {
-		throw new TrackedRuntimeException(err);
+		stp = call("require","scripts/lib/StackTracePlus");
 	}
 
 	public LuaTable require(String module) {
@@ -132,7 +151,7 @@ public class LuaEngine implements ResourceFinder {
 		try {
 			globals.loadfile(fileName).call();
 		} catch (LuaError err) {
-			reportLuaError(err);
+			throw new ModError( String.format("Error when running %s", fileName), err);
 		}
 	}
 

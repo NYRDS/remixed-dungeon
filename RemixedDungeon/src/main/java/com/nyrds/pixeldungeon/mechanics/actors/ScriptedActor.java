@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.actors;
 
+import androidx.annotation.Keep;
+
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -16,7 +18,9 @@ public class ScriptedActor extends Actor {
 	@Packable
 	private String sourceFile;
 
-	public ScriptedActor() {}
+	@Keep
+	public ScriptedActor() {
+	}
 
 	public ScriptedActor(String sSourceFile) {
 		sourceFile = sSourceFile;
