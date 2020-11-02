@@ -109,7 +109,13 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
 
                     EventCollector.logEvent("InstallMod", installModInfo);
 
-                    modFileName = data.getLastPathSegment().split(":")[1];
+                    String [] lastPathSegments = data.getLastPathSegment().split(":");
+                    if(lastPathSegments.length>1) {
+                        modFileName = lastPathSegments[1];
+                    } else {
+                        modFileName = lastPathSegments[0];
+                    }
+
                     modUnzipTask = new UnzipTask(this, modFileName, false);
                     var modDesc = modUnzipTask.previewMod();
                     modUnzipTask.setTgtDir(FileSystem.getExternalStorageFileName(modDesc.name));
