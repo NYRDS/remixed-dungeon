@@ -37,7 +37,6 @@ public class Unzip {
 			ZipEntry ze;
 
 			while ((ze = zin.getNextEntry()) != null) {
-				GLog.debug( "Unzipping " + ze.getName());
 
 				if (ze.isDirectory() && ret.installTo.isEmpty()) {
 					ret.installTo = ze.getName().replace("/","");

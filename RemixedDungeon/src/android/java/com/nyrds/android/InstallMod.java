@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndMessage;
@@ -44,7 +45,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
         super.onDrawFrame(gl);
 
         if(!permissionsRequested) {
-            permissionsRequested = false;
+            permissionsRequested = true;
 
             String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
             Game.instance().doPermissionsRequest(this, requiredPermissions);
@@ -109,12 +110,14 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
 
                     EventCollector.logEvent("InstallMod", installModInfo);
 
-                    String [] lastPathSegments = data.getPath().split(":");
-                    if(lastPathSegments.length>1) {
-                        modFileName = lastPathSegments[1];
+                    String [] pathSegments = data.getPath().split(":");
+                    if(pathSegments.length>1) {
+                        modFileName = pathSegments[1];
                     } else {
-                        modFileName = lastPathSegments[0];
+                        modFileName = pathSegments[0];
                     }
+
+                    GLog.debug("%s", modFileName);
 
                     modUnzipTask = new UnzipTask(this, modFileName, false);
                     var modDesc = modUnzipTask.previewMod();
