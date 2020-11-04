@@ -16,9 +16,9 @@ import info.guardianproject.netcipher.client.TlsOnlySocketFactory;
 
 public class DownloadTask implements Runnable {
 
-    private DownloadStateListener m_listener;
-    private String                m_url;
-    private String                m_downloadTo;
+    private final DownloadStateListener m_listener;
+    private final String                m_url;
+    private final String                m_downloadTo;
 
     public DownloadTask(DownloadStateListener listener, String url, String downloadTo) {
         m_listener = listener;
@@ -51,20 +51,17 @@ public class DownloadTask implements Runnable {
 
                 GLog.debug("bytes in file: " + bytesTotal);
 
-                InputStream is = ucon.getInputStream();
-
-                FileOutputStream fos = new FileOutputStream(file);
-
-                byte[] buffer = new byte[16384];
-                int count;
-                int bytesDownloaded = 0;
-                while ((count = is.read(buffer)) != -1) {
-                    fos.write(buffer, 0, count);
-                    bytesDownloaded += count;
-                    m_listener.DownloadProgress(m_url, bytesDownloaded);
+                try (InputStream is = ucon.getInputStream();
+                     FileOutputStream fos = new FileOutputStream(file)) {
+                    byte[] buffer = new byte[16384];
+                    int count;
+                    int bytesDownloaded = 0;
+                    while ((count = is.read(buffer)) != -1) {
+                        fos.write(buffer, 0, count);
+                        bytesDownloaded += count;
+                        m_listener.DownloadProgress(m_url, bytesDownloaded);
+                    }
                 }
-
-                fos.close();
 
                 result = true;
             }

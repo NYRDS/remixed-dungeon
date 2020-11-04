@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
@@ -23,8 +24,8 @@ public class Unzip {
 	private static void ensureDir(String dir) {
 		File f = new File(dir);
 
-		if (!f.exists() || !f.isDirectory()) {
-			f.mkdirs();
+		if (!f.mkdirs() || !f.isDirectory()) {
+			throw new ModError("Can't create directory:"+dir);
 		}
 	}
 
@@ -82,11 +83,12 @@ public class Unzip {
 
 				GLog.debug( "Unzipping " + ze.getName());
 
-				if (ze.isDirectory()) {
-					ensureDir(tgtDir + "/" + ze.getName());
-				} else {
+				String exPath = sanitizeExtractPath(tgtDir, ze);
 
-					FileOutputStream fout = new FileOutputStream(tgtDir + "/" + ze.getName());
+				if (ze.isDirectory()) {
+					ensureDir(exPath);
+				} else {
+					FileOutputStream fout = new FileOutputStream(exPath);
 
 					int bytesRead;
 					while ((bytesRead = zin.read(data)) != -1) {
@@ -104,6 +106,16 @@ public class Unzip {
 		}
 
 		return true;
+	}
+
+	@NotNull
+	public static String sanitizeExtractPath(String tgtDir, ZipEntry ze) {
+		String exPath = new File(tgtDir + "/" + ze.getName()).getAbsolutePath();
+
+		if(!exPath.startsWith(tgtDir)) {
+			throw new ModError("Zip traversal attack attempt: " + exPath);
+		}
+		return exPath;
 	}
 
 	static public boolean unzip(String zipFile, String tgtDir, @Nullable UnzipProgress listener) {

@@ -2,7 +2,6 @@ package com.nyrds.android;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.Uri;
 
 import com.nyrds.android.util.FileSystem;
@@ -95,40 +94,41 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
 
     @Override
     public void returnToWork(boolean result) {
-        IntentFilter a = new IntentFilter();
-        if(result) {
-            if(scene != null && modFileName.isEmpty()) {
-                Intent intent = getIntent();
-                Uri data = intent.getData();
-
-                if(data!=null) {
-                    Map<String, String> installModInfo = new HashMap<>();
-
-                    installModInfo.put("path", data.getPath());
-                    installModInfo.put("lastPathSegment", data.getLastPathSegment());
-                    installModInfo.put("intent", data.toString());
-
-                    EventCollector.logEvent("InstallMod", installModInfo);
-
-                    String [] pathSegments = data.getPath().split(":");
-                    if(pathSegments.length>1) {
-                        modFileName = pathSegments[1];
-                    } else {
-                        modFileName = pathSegments[0];
-                    }
-
-                    GLog.debug("%s", modFileName);
-
-                    modUnzipTask = new UnzipTask(this, modFileName, false);
-                    var modDesc = modUnzipTask.previewMod();
-                    modUnzipTask.setTgtDir(FileSystem.getExternalStorageFileName(modDesc.name));
-                    WndModInstall wndModInstall = new WndModInstall(modDesc, () -> Game.execute(modUnzipTask));
-                    scene.add(wndModInstall);
-                } else {
-                    shutdown();
-                }
-            }
-
+        if(!result) {
+            return;
         }
+
+        if(scene == null ||  modFileName.isEmpty()) {
+            return;
+        }
+
+        Intent intent = getIntent();
+        Uri data = intent.getData();
+
+        if(data==null) {
+            shutdown();
+        }
+
+        Map<String, String> installModInfo = new HashMap<>();
+
+        installModInfo.put("path", data.getPath());
+        installModInfo.put("intent", data.toString());
+
+        EventCollector.logEvent("InstallMod", installModInfo);
+
+        String [] pathSegments = data.getPath().split(":");
+        if(pathSegments.length>1) {
+            modFileName = pathSegments[1];
+        } else {
+            modFileName = pathSegments[0];
+        }
+
+        GLog.debug("%s", modFileName);
+
+        modUnzipTask = new UnzipTask(this, modFileName, false);
+        var modDesc = modUnzipTask.previewMod();
+        modUnzipTask.setTgtDir(FileSystem.getExternalStorageFileName(modDesc.name));
+        WndModInstall wndModInstall = new WndModInstall(modDesc, () -> Game.execute(modUnzipTask));
+        scene.add(wndModInstall);
     }
 }
