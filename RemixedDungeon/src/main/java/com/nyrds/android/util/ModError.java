@@ -28,10 +28,20 @@ public class ModError extends RuntimeException {
 
                 String[] fields = elements[i].split(":");
 
-                stackTraceElements.add(0,new StackTraceElement("lua",
-                                                "call",
-                                                            fields[0],
-                                                            Integer.valueOf(fields[1])));
+                String file = fields[0];
+                int lineNumber = Integer.parseInt(fields[1]);
+
+                fields = elements[i].split("function");
+                String method = "unknown";
+
+                if(fields[1] != null) {
+                    method = fields[1].replace('\'',' ').trim();
+                }
+
+                stackTraceElements.add(0,new StackTraceElement(file,
+                                                method,
+                                                file,
+                                                lineNumber));
             }
             setStackTrace(stackTraceElements.toArray(new StackTraceElement[0]));
         }
