@@ -146,13 +146,11 @@ public class DungeonGenerator {
 		}
 	}
 
-	@Nullable
-	public static Position ascend(Position current) {
+	public static @NotNull Position ascend(Position current) {
 		return descendOrAscend(current, false);
 	}
 
-	@Nullable
-	private static Position descendOrAscend(Position current, boolean descend) {
+	private static @NotNull Position descendOrAscend(Position current, boolean descend) {
 		try {
 
 			if (current.levelId.equals("unknown")) {
@@ -186,7 +184,7 @@ public class DungeonGenerator {
 
 			if(!mLevels.has(mCurrentLevelId)) {
 				ModError.doReport("Dungeon.json", new Exception("There is no level "+ mCurrentLevelId) );
-				return null;
+				return current;
 			}
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);

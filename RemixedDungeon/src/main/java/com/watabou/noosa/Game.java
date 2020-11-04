@@ -450,8 +450,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     private ArrayList<MotionEvent> motionEventsCopy = new ArrayList<>();
     private ArrayList<KeyEvent>    keyEventsCopy    = new ArrayList<>();
+
     @SneakyThrows
-    private void step() {
+    protected void step() {
 
         if (requestedReset) {
             requestedReset = false;
@@ -460,8 +461,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
        }
 
         Game.elapsed = Game.timeScale * step * 0.001f;
-
-
 
         synchronized (motionEvents) {
             motionEventsCopy.addAll(motionEvents);

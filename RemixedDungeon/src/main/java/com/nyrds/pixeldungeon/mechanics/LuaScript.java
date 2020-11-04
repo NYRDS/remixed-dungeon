@@ -114,10 +114,6 @@ public class LuaScript {
         runOptional(method, null, args);
     }
 
-    public boolean hasMethod(String method) {
-        return getScript().get(method).isfunction();
-    }
-
     public <T> T runOptional(String method, T defaultValue, Object... args) {
         try {
             if (!getScript().get(method).isfunction()) {

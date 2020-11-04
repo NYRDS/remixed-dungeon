@@ -258,7 +258,12 @@ public class ModdingMode {
 		}
 	}
 
-	private static boolean isModdingAllowed(String resName) {
+	private static boolean isModdingAllowed(@NotNull String resName) {
+
+		if(resName.startsWith("scripts/services")) {
+			return false;
+		}
+
 		return trustedMod() || !(resName.contains("accessories") || resName.contains("banners"));
 	}
 

@@ -318,7 +318,7 @@ public class CustomItem extends EquipableItem {
 
     @Override
     protected boolean act() {
-        script.run("act");
+        script.runOptional("act");
         return true;
     }
 

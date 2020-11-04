@@ -56,7 +56,7 @@
         </activity>
 
         <activity android:name="com.nyrds.android.InstallMod">
-            <intent-filter tools:ignore="AppLinkUrlError">
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -67,6 +67,10 @@
                 <data android:host="*" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.nyrds.android.QuickModTest"
+            android:exported="true" />
 
 
         <receiver android:name="com.nyrds.pixeldungeon.support.GooglePlayReferrer"

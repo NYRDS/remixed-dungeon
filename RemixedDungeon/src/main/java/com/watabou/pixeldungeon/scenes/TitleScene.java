@@ -42,6 +42,7 @@ import com.watabou.pixeldungeon.ui.PlayGamesButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.watabou.pixeldungeon.ui.StatisticsButton;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class TitleScene extends PixelScene {
 
@@ -202,7 +203,7 @@ public class TitleScene extends PixelScene {
 		add(btnExit);
 
 		if (RemixedDungeon.version() != Game.versionCode) {
-			if(RemixedDungeon.differentVersions(RemixedDungeon.versionString(),Game.version)) {
+			if(Utils.differentVersions(RemixedDungeon.versionString(),Game.version)) {
 				changelogUpdated = true;
 			}
 		}

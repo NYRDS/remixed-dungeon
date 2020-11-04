@@ -25,6 +25,8 @@ import com.watabou.noosa.Game;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import lombok.SneakyThrows;
 
@@ -144,5 +146,27 @@ public class Utils {
 
     public static int max(int a, int b, int c) {
         return Math.max(a,Math.max(b,c));
+    }
+
+    public static boolean differentVersions(String v1, String v2) {
+        try {
+            Pattern p = Pattern.compile("\\d+(\\.\\d+)?");
+            Matcher m = p.matcher(v1);
+            if (m.find()) {
+                v1 = m.group();
+            }
+
+
+            m = p.matcher(v2);
+            if (m.find()) {
+                v2 = m.group();
+            }
+
+            return !v1.equals(v2);
+
+        } catch (Exception e) {
+            EventCollector.logException(e);
+        }
+        return false;
     }
 }

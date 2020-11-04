@@ -1795,9 +1795,15 @@ public class Hero extends Char {
 
 		var buffsNames = BuffFactory.getAllBuffsNames();
 
+
+
 		for(var buffName: buffsNames) {
-			var buff = Buff.affect(hero, buffName, 10);
-			buff.detach();
+			try {
+				var buff = Buff.affect(hero, buffName, 10);
+				buff.detach();
+			} catch (Exception e) {
+				GLog.toFile("Buffs auto-test: %s caused %s", buffName, e);
+			}
 		}
 	}
 }

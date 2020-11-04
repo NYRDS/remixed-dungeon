@@ -47,8 +47,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
 import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -143,42 +141,18 @@ public class RemixedDungeon extends Game {
 		}
 	}
 
-	public static boolean differentVersions(String v1, String v2) {
-		try {
-			Pattern p = Pattern.compile("\\d+(\\.\\d+)?");
-			Matcher m = p.matcher(v1);
-			if (m.find()) {
-				v1 = m.group();
-			}
-
-
-			m = p.matcher(v2);
-			if (m.find()) {
-				v2 = m.group();
-			}
-
-			return !v1.equals(v2);
-
-		} catch (Exception e) {
-			EventCollector.logException(e);
-		}
-		return false;
-	}
-
 	public void setSelectedLanguage() {
 		useLocale(uiLanguage());
 	}
 
 	@Override
 	public void onWindowFocusChanged(boolean hasFocus) {
-
 		super.onWindowFocusChanged(hasFocus);
 
 		if (hasFocus) {
 			updateImmersiveMode();
 		}
 	}
-
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
