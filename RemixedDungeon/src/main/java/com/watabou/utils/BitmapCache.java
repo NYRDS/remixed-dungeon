@@ -26,6 +26,8 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.SneakyThrows;
+
 public class BitmapCache {
 
 	private static final String DEFAULT = "__default";
@@ -41,8 +43,8 @@ public class BitmapCache {
 		return get(DEFAULT, assetName);
 	}
 
+	@SneakyThrows
 	public static Bitmap get(String layerName, String assetName) {
-
 		Layer layer;
 		if (!layers.containsKey(layerName)) {
 			layer = new Layer();
@@ -54,13 +56,11 @@ public class BitmapCache {
 		if (layer.containsKey(assetName)) {
 			return layer.get(assetName);
 		} else {
-			InputStream stream = ModdingMode.getInputStream(assetName);
-			if (stream != null) {
+			try(InputStream stream = ModdingMode.getInputStream(assetName)) {
 				Bitmap bmp = BitmapFactory.decodeStream(stream, null, opts);
 				layer.put(assetName, bmp);
 				return bmp;
 			}
-			return null;
 		}
 	}
 

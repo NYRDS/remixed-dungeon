@@ -141,12 +141,13 @@ public class FileSystem {
 	private static void addFileToZip(File rootFolder, File file, ZipOutputStream zip) throws IOException {
 			byte[] buf = new byte[4096];
 			int len;
-			FileInputStream in = new FileInputStream(file);
-			zip.putNextEntry(new ZipEntry(getRelativePath(file,rootFolder)));
-			while ((len = in.read(buf)) > 0) {
-				zip.write(buf, 0, len);
+			try(FileInputStream in = new FileInputStream(file)) {
+				zip.putNextEntry(new ZipEntry(getRelativePath(file, rootFolder)));
+				while ((len = in.read(buf)) > 0) {
+					zip.write(buf, 0, len);
+				}
+				zip.closeEntry();
 			}
-			zip.closeEntry();
 		}
 
 	public static String getRelativePath(File file, File folder) {

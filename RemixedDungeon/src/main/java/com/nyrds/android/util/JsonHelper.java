@@ -62,20 +62,20 @@ public class JsonHelper {
 	@NotNull
 	public static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
 			StringBuilder jsonDef = new StringBuilder();
+			Object value = null;
 
-			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+			try(BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
 
-			String line = reader.readLine();
+				String line = reader.readLine();
 
-			while (line != null) {
-				jsonDef.append(line);
-				line = reader.readLine();
-			}
-			reader.close();
+				while (line != null) {
+					jsonDef.append(line);
+					line = reader.readLine();
+				}
+				reader.close();
 
-			Object value = new JSONTokener(jsonDef.toString()).nextValue();
+				value = new JSONTokener(jsonDef.toString()).nextValue();
 
-			try {
 				return (JSONObject) (value);
 			} catch (ClassCastException e) {
 				EventCollector.logException(e, value.toString());

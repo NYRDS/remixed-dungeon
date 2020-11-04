@@ -225,17 +225,13 @@ public class ModdingMode {
 
 		StringBuilder resource = new StringBuilder();
 
-		BufferedReader reader = new BufferedReader(new InputStreamReader(getInputStream(resName)));
-
-		try {
+		try(BufferedReader reader = new BufferedReader(new InputStreamReader(getInputStream(resName)))) {
 			String line = reader.readLine();
 
 			while (line != null) {
 				resource.append(line);
 				line = reader.readLine();
 			}
-			reader.close();
-
 		} catch (IOException e) {
 			EventCollector.logException(e, resName);
 		}
@@ -243,7 +239,7 @@ public class ModdingMode {
 		return resource.toString();
 	}
 
-	public static InputStream getInputStream(String resName) {
+	public static @NotNull InputStream getInputStream(String resName) {
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
 				File file = FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);

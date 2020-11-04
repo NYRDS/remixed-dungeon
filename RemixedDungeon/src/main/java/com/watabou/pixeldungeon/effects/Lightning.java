@@ -124,19 +124,19 @@ public class Lightning extends Group {
 				
 				float dx = x2 - sx;
 				float dy = y2 - sy;
-				Image arc = arcsS[i];
-				arc.am = alpha;
-				arc.angle = (float)(Math.atan2( dy, dx ) * A);
-				arc.Scale().x = (float)Math.sqrt( dx * dx + dy * dy ) / arc.width;
+				Image arcS = arcsS[i];
+				arcS.am = alpha;
+				arcS.angle = (float)(Math.atan2( dy, dx ) * A);
+				arcS.Scale().x = (float)Math.sqrt( dx * dx + dy * dy ) / arcS.width;
 				
 				dx = ex - x2;
 				dy = ey - y2;
-				arc = arcsE[i];
-				arc.am = alpha;
-				arc.angle = (float)(Math.atan2( dy, dx ) * A);
-				arc.Scale().x = (float)Math.sqrt( dx * dx + dy * dy ) / arc.width;
-				arc.x = x2 - arc.origin.x;
-				arc.y = y2 - arc.origin.x;
+				Image arcE = arcsE[i];
+				arcE.am = alpha;
+				arcE.angle = (float)(Math.atan2( dy, dx ) * A);
+				arcE.Scale().x = (float)Math.sqrt( dx * dx + dy * dy ) / arcE.width;
+				arcE.x = x2 - arcE.origin.x;
+				arcE.y = y2 - arcE.origin.x;
 			}
 		}
 	}

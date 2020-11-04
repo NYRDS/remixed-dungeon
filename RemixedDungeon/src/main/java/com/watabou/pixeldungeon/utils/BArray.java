@@ -17,6 +17,10 @@
  */
 package com.watabou.pixeldungeon.utils;
 
+import androidx.annotation.Nullable;
+
+import org.jetbrains.annotations.NotNull;
+
 public class BArray {
 
 	public static boolean[] and( boolean[] a, boolean[] b, boolean[] result ) {
@@ -49,7 +53,7 @@ public class BArray {
 		return result;
 	}
 	
-	public static boolean[] not( boolean[] a, boolean[] result ) {
+	public static boolean[] not(@NotNull boolean[] a, @Nullable boolean[] result ) {
 		
 		int length = a.length;
 		

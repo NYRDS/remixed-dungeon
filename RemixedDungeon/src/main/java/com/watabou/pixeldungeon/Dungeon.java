@@ -574,7 +574,6 @@ public class Dungeon {
             Badges.reset();
         }
 
-        @SuppressWarnings("unused")
         String version = bundle.getString(VERSION);
 
         hero = (Hero) bundle.get(HERO);
@@ -619,30 +618,30 @@ public class Dungeon {
 
             GLog.toFile("loading level: %s", loadFrom);
 
-            InputStream input;
 
-            if (!DungeonGenerator.isStatic(levelId) && FileSystem.getFile(loadFrom).exists()) {
-                input = new FileInputStream(FileSystem.getFile(loadFrom));
-            } else {
-                GLog.toFile("File %s not found!", loadFrom);
+            if(DungeonGenerator.isStatic(levelId)) {
                 return newLevel(next);
             }
 
-            Bundle bundle = Bundle.read(input);
-
-            input.close();
-
-            Level level = (Level) bundle.get("level");
-            LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
-
-            if (level == null) {
-                level = newLevel(next);
+            if(!FileSystem.getFile(loadFrom).exists()) {
+                return newLevel(next);
             }
 
-            level.levelId = next.levelId;
-            initSizeDependentStuff(level.getWidth(), level.getHeight());
+            try(InputStream input =  new FileInputStream(FileSystem.getFile(loadFrom))) {
+                Bundle bundle = Bundle.read(input);
 
-            return level;
+                Level level = (Level) bundle.get("level");
+                LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
+
+                if (level == null) {
+                    level = newLevel(next);
+                }
+
+                level.levelId = next.levelId;
+                initSizeDependentStuff(level.getWidth(), level.getHeight());
+
+                return level;
+            }
         } finally {
             loading.decrementAndGet();
         }

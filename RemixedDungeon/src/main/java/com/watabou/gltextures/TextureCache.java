@@ -26,8 +26,11 @@ import com.watabou.glwrap.Texture;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+
+import lombok.SneakyThrows;
 
 public class TextureCache {
 
@@ -98,10 +101,13 @@ public class TextureCache {
 		}
 	}
 
+	@SneakyThrows
 	private static Bitmap getBitmap(Object src) {
 		if (src instanceof String) {
 			String resName = (String) src;
-			return BitmapFactory.decodeStream(ModdingMode.getInputStream(resName));
+			try(InputStream is = ModdingMode.getInputStream(resName)) {
+				return BitmapFactory.decodeStream(is);
+			}
 		} else if (src instanceof Bitmap) {
 			return (Bitmap) src;
 		}

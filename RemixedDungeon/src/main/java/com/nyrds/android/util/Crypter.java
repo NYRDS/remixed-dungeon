@@ -58,6 +58,7 @@ public class Crypter {
 		SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
 		// deepcode ignore HardcodedSecret~javax.crypto.spec.PBEKeySpec: <please specify a reason of ignoring this>
 		KeySpec spec = new PBEKeySpec(encryptionKey.toCharArray(), salt, 1, 256);
+		// deepcode ignore CipherModeWithNoIntegrity: <please specify a reason of ignoring this>
 		SecretKey tmp = factory.generateSecret(spec);
 		SecretKey secret = new SecretKeySpec(tmp.getEncoded(), "AES");
 		
