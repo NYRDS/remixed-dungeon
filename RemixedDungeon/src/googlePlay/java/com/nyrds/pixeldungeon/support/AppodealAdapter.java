@@ -6,7 +6,6 @@ import android.os.Build;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.utils.Log;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -21,15 +20,6 @@ public class AppodealAdapter {
 
     public static boolean usable() {
         return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1;
-    }
-
-    public static double logEcpm(int adType, boolean spared) {
-        if(usable() && Appodeal.isInitialized(adType)) {
-            double ecpm = Appodeal.getPredictedEcpm(adType);
-            EventCollector.logEvent("Appodeal_ecpm_"+adType+"_"+spared, ecpm);
-            return ecpm;
-        }
-        return 0;
     }
 
     public static void init() {

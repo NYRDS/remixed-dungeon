@@ -6,6 +6,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.LoadAdError;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -91,8 +92,9 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
             AdsUtils.updateBanner(adView);
         }
 
-        public void onAdFailedToLoad(int result) {
-            EventCollector.logException( "admob banner" + result);
+        @Override
+        public void onAdFailedToLoad(LoadAdError reason) {
+            EventCollector.logException( "admob banner:" + reason.toString());
             AdsUtilsCommon.bannerFailed(AdMobComboProvider.this);
         }
     }
@@ -104,9 +106,8 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
         }
 
         @Override
-        public void onAdFailedToLoad(int errorCode) {
-            super.onAdFailedToLoad(errorCode);
-            EventCollector.logException("admob_error " + errorCode);
+        public void onAdFailedToLoad(LoadAdError reason) {
+            EventCollector.logException( "admob is:" + reason.toString());
         }
 
         @Override

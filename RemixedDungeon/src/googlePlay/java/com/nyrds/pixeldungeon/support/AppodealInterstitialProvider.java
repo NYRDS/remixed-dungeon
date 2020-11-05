@@ -40,7 +40,7 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
 
         @Override
         public void onInterstitialFailedToLoad() {
-            EventCollector.logException("appodeal_error");
+            EventCollector.logException("appodeal load error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 
@@ -50,7 +50,7 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
 
         @Override
         public void onInterstitialShowFailed() {
-            EventCollector.logException("appodeal_error");
+            EventCollector.logException("appodeal show error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 
