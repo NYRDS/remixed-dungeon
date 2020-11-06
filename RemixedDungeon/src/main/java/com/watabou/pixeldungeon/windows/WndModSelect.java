@@ -12,6 +12,7 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -85,16 +86,14 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				btn.setRect(GAP, pos, width - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
                 list.content().add(btn);
 
-				pos += BUTTON_HEIGHT;
+				pos += BUTTON_HEIGHT + GAP;
 			}
 		}
 
-		if(pos + SMALL_GAP + tfTitle.height() + GAP < height ) {
-			resize(120, (int) (pos + SMALL_GAP + tfTitle.height() + GAP));
-		}
+		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
 
 		list.content().setSize(width, pos);
-		list.setRect(0, tfTitle.height() + GAP, width, height - tfTitle.height() - GAP);
+		list.setRect(0, tfTitle.bottom() + GAP, width, height - tfTitle.height() - GAP);
 		list.scrollTo(0,0);
 	}
 

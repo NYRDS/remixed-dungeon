@@ -39,12 +39,13 @@ public class Window extends Group implements Signal.Listener<Key> {
 
 	public static final    int GAP           = 2;
 	protected static final int MARGIN        = 4;
-	protected static final int SMALL_GAP     = 1;
 	protected static final int BUTTON_HEIGHT = 18;
 	protected static final int STD_WIDTH     = 120;
 
 	protected static final int STD_WIDTH_P = 120;
 	protected static final int STD_WIDTH_L = 160;
+
+	protected static final int WINDOW_MARGIN = 10;
 
 	protected int width;
 	protected int height;

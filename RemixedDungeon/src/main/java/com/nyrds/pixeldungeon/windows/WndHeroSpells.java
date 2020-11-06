@@ -21,10 +21,8 @@ import lombok.var;
 
 public class WndHeroSpells extends Window {
 
-    private static final int WINDOW_MARGIN = 10;
-
-    private Listener listener;
-    private Hero     hero;
+    private final Listener listener;
+    private final Hero     hero;
 
     public WndHeroSpells(Listener listener) {
         super();
