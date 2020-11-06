@@ -4,13 +4,18 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.levels.objects.ConcreteBlock;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
+
+import lombok.var;
 
 public abstract class BossLevel extends RegularLevel {
 
@@ -34,6 +39,7 @@ public abstract class BossLevel extends RegularLevel {
 
     @Override
     public void seal() {
+        /*
         if (entrance != 0) {
 
             set( entrance, Terrain.WATER_TILES );
@@ -43,13 +49,26 @@ public abstract class BossLevel extends RegularLevel {
             stairs = entrance;
             entrance = 0;
         }
+*/
 
         if(cellValid(arenaDoor)) {
             set(arenaDoor, Terrain.LOCKED_DOOR);
             GameScene.updateMap(arenaDoor);
         }
 
+
         Dungeon.observe();
+    }
+
+    private void sealEntrance() {
+        if(entrance != 0 ) {
+            addLevelObject(new ConcreteBlock(entrance, 50));
+        }
+
+        for(var cell: exitMap.values()) {
+            addLevelObject(new ConcreteBlock(cell, 50));
+        }
+
     }
 
     public void unseal() {
@@ -67,6 +86,19 @@ public abstract class BossLevel extends RegularLevel {
 
             set(arenaDoor, Terrain.EMPTY_DECO);
             GameScene.updateMap(arenaDoor);
+        }
+
+        LevelObject obj;
+        if(entrance != 0 ) {
+            while ((obj = getLevelObject(entrance))!=null) {
+                remove(obj);
+            }
+        }
+
+        for(var cell: exitMap.values()) {
+            while ((obj = getLevelObject(cell))!=null) {
+                remove(obj);
+            }
         }
 
         Dungeon.observe();
@@ -89,6 +121,14 @@ public abstract class BossLevel extends RegularLevel {
     @Override
     public boolean isBossLevel() {
         return true;
+    }
+
+    @Override
+    protected void pressHero(int cell, Hero hero) {
+        super.pressHero(cell, hero);
+        if (cell != entrance && getLevelObject(entrance) == null) {
+            sealEntrance();
+        }
     }
 
     protected void spawnBoss(int pos) {

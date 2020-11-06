@@ -378,7 +378,7 @@ public abstract class Level implements Bundlable {
 	private int compassTarget = INVALID_CELL;	// Where compass should point
 
 	@SuppressLint("UseSparseArrays")
-	private HashMap<Integer, Integer> exitMap = new HashMap<>();
+	protected HashMap<Integer, Integer> exitMap = new HashMap<>();
 
 	public String levelId;
 
