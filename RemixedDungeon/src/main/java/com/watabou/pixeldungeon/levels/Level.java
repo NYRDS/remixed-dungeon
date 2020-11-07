@@ -1653,6 +1653,24 @@ public abstract class Level implements Bundlable {
 		return candidates;
 	}
 
+	public ArrayList<Integer> getAllVisibleTerrainCells(int terrainType) {
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		for (int i = 0; i < getLength(); i++) {
+			if (map[i] == terrainType && Dungeon.visible[i]) {
+				candidates.add(i);
+			}
+		}
+		return candidates;
+	}
+
+
+	@LuaInterface
+	public int getRandomVisibleTerrainCell(int terrainType) {
+		return oneCellFrom(getAllVisibleTerrainCells(terrainType));
+	}
+
+	@LuaInterface
 	public int getRandomTerrainCell(int terrainType) {
 		return oneCellFrom(getAllTerrainCells(terrainType));
 	}
@@ -1805,6 +1823,15 @@ public abstract class Level implements Bundlable {
 			}
 		}
 		return ret;
+	}
+
+	@LuaInterface
+	public boolean isCellVisited(int cell) {
+		if(cellValid(cell)) {
+			return visited[cell];
+		}
+
+		return false;
 	}
 
 }

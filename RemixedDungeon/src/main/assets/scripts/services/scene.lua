@@ -68,12 +68,20 @@ local function heroAiStep()
         return
     end
 
-    local exitCell = level:getRandomTerrainCell(RPD.Terrain.EXIT)
+\    local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
 
-    if level:cellValid(exitCell) and RPD.Dungeon:isCellVisible(exitCell) then
+    if level:cellValid(exitCell) then
         hero:handle(exitCell)
         return
     end
+
+    local doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.DOOR)
+
+    if level:cellValid(doorCell) and  not level:isCellVisited(doorCell) then
+        hero:handle(doorCell)
+        return
+    end
+
 
     hero:handle(RPD.Dungeon.level:randomVisibleDestination())
 end
