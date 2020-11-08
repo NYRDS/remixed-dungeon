@@ -66,6 +66,9 @@ public abstract class BossLevel extends RegularLevel {
         }
 
         for(var cell: exitMap.values()) {
+            if (map[cell]==Terrain.LOCKED_DOOR) {
+                continue;
+            }
             addLevelObject(new ConcreteBlock(cell, 50));
         }
 
@@ -91,13 +94,13 @@ public abstract class BossLevel extends RegularLevel {
         LevelObject obj;
         if(entrance != 0 ) {
             while ((obj = getLevelObject(entrance))!=null) {
-                remove(obj);
+                obj.remove();
             }
         }
 
         for(var cell: exitMap.values()) {
             while ((obj = getLevelObject(cell))!=null) {
-                remove(obj);
+                obj.remove();
             }
         }
 
@@ -126,7 +129,7 @@ public abstract class BossLevel extends RegularLevel {
     @Override
     protected void pressHero(int cell, Hero hero) {
         super.pressHero(cell, hero);
-        if (cell != entrance && getLevelObject(entrance) == null) {
+        if (cell != entrance && (!enteredArena) && getLevelObject(entrance) == null) {
             sealEntrance();
         }
     }

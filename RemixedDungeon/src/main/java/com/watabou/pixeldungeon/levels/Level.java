@@ -1155,7 +1155,7 @@ public abstract class Level implements Bundlable {
 		GameScene.add(plant);
 	}
 
-	public boolean remove(LevelObject levelObject) {
+	public boolean remove(@NotNull LevelObject levelObject) {
 
 		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
 
@@ -1833,5 +1833,4 @@ public abstract class Level implements Bundlable {
 
 		return false;
 	}
-
 }

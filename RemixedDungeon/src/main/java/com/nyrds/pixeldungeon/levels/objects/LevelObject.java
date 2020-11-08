@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
@@ -56,7 +57,8 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
         return false;
     }
 
-    protected void remove() {
+    @LuaInterface
+    public void remove() {
         level().remove(this);
         sprite.kill();
     }

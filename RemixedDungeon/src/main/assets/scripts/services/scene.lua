@@ -68,9 +68,9 @@ local function heroAiStep()
         return
     end
 
-\    local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
+    local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
 
-    if level:cellValid(exitCell) then
+    if level:cellValid(exitCell) and not level:getTopLevelObject() then
         hero:handle(exitCell)
         return
     end
