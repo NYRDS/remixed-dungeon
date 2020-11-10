@@ -1,0 +1,25 @@
+package com.watabou.pixeldungeon.actors.hero;
+
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.levels.features.AlchemyPot;
+
+public class Cook extends CharAction {
+    public Cook(int pot ) {
+        this.dst = pot;
+    }
+
+    @Override
+    public boolean act(Hero hero) {
+
+        if (Dungeon.visible[dst]) {
+            hero.readyAndIdle();
+            AlchemyPot.operate(hero, dst);
+            return false;
+        } else if (hero.getCloser(dst)) {
+            return true;
+        } else {
+            hero.readyAndIdle();
+            return false;
+        }
+    }
+}

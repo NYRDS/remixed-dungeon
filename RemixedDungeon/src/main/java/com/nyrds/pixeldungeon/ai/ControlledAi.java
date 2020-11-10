@@ -5,7 +5,9 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.hero.CharAction;
+import com.watabou.pixeldungeon.actors.hero.Attack;
+import com.watabou.pixeldungeon.actors.hero.Interact;
+import com.watabou.pixeldungeon.actors.hero.Move;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -16,7 +18,7 @@ public class ControlledAi extends MobAi implements AiState {
     @Override
     public void act(Mob me) {
 
-        if (me.curAction instanceof CharAction.Move) {
+        if (me.curAction instanceof Move) {
             if (me.getPos() != me.curAction.dst) {
                 if(me.doStepTo(me.curAction.dst)) {
                     Dungeon.observe();
@@ -26,8 +28,8 @@ public class ControlledAi extends MobAi implements AiState {
                 return;
             }
 
-        } else if (me.curAction instanceof CharAction.Attack) {
-            CharAction.Attack attack = (CharAction.Attack) me.curAction;
+        } else if (me.curAction instanceof Attack) {
+            Attack attack = (Attack) me.curAction;
 
             if(!attack.target.isAlive()){
                 me.curAction = null;
@@ -49,7 +51,7 @@ public class ControlledAi extends MobAi implements AiState {
                 return;
             }
 
-        } else if (me.curAction instanceof CharAction.Interact) {
+        } else if (me.curAction instanceof Interact) {
 
             // return actAttack((CharAction.Attack) curAction);
         }

@@ -193,7 +193,9 @@ public abstract class Actor implements Bundlable {
 
 			//Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
 
-			if (actor instanceof Char && ((Char)actor).getSprite().isMoving) {
+			if (actor instanceof Char &&
+					((Char)actor).getSprite().isMoving &&
+					((Char)actor).getSprite().doingSomething()) {
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
 				//Log.i("Main loop","skipped");

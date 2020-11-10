@@ -17,65 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
-import com.watabou.pixeldungeon.actors.Char;
-
-public class CharAction {
+public abstract class CharAction {
 	
 	public int dst;
-	
-	public static class Move extends CharAction {
-		public Move( int dst ) {
-			this.dst = dst;
-		}
-	}
-	
-	public static class PickUp extends CharAction {
-		public PickUp( int dst ) {
-			this.dst = dst;
-		}
-	}
-	
-	public static class OpenChest extends CharAction {
-		public OpenChest( int dst ) {
-			this.dst = dst;
-		}
-	}
 
-	public static class Interact extends CharAction {
-		public Char chr;
-		public Interact( Char chr) {
-			this.chr = chr;
-		}
-	}
-	
-	public static class Unlock extends CharAction {
-		public Unlock( int door ) {
-			this.dst = door;
-		}
-	}
-	
-	public static class Descend extends CharAction {
-		public Descend( int stairs ) {
-			this.dst = stairs;
-		}
-	}
-	
-	public static class Ascend extends CharAction {
-		public Ascend( int stairs ) {
-			this.dst = stairs;
-		}
-	}
-	
-	public static class Cook extends CharAction {
-		public Cook( int pot ) {
-			this.dst = pot;
-		}
-	}
-	
-	public static class Attack extends CharAction {
-		public Char target;
-		public Attack( Char target ) {
-			this.target = target;
-		}
-	}
+	abstract public boolean act(Hero hero);
+
 }

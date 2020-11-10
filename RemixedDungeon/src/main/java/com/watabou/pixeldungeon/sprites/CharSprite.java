@@ -421,6 +421,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
     }
 
+    public boolean doingSomething() {
+        return curAnim != null && curAnim != idle;
+    }
+
     @Override
     public void update() {
 

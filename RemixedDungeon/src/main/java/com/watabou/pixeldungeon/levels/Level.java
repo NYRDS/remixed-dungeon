@@ -500,6 +500,10 @@ public abstract class Level implements Bundlable {
 		width = w;
 		height = h;
 
+		if(width < 9 || height < 9) {
+			throw new ModError(String.format("%s: %dx%d - too small for regular level",levelId, width, height));
+		}
+
 		initSizeDependentStuff();
 
 		if (!isBossLevel()) {

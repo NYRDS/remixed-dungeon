@@ -82,8 +82,16 @@ local function heroAiStep()
         return
     end
 
+    local cell = -1
 
-    hero:handle(RPD.Dungeon.level:randomVisibleDestination())
+    for i = 1,10 do
+        cell = level:randomVisibleDestination()
+        if not level:isCellVisited(cell) then
+            break
+        end
+    end
+
+    hero:handle(cell)
 end
 
 local function levelsTestModeOnStep(self, scene)

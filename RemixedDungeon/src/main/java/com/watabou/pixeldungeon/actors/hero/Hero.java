@@ -32,7 +32,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
@@ -44,9 +43,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
-import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.RemixedDungeon;
-import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -75,7 +72,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
-import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Heap;
@@ -83,10 +79,6 @@ import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.keys.GoldenKey;
-import com.watabou.pixeldungeon.items.keys.IronKey;
-import com.watabou.pixeldungeon.items.keys.Key;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
@@ -102,21 +94,18 @@ import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.pixeldungeon.scenes.SurfaceScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 import com.watabou.utils.Bundle;
@@ -158,7 +147,7 @@ public class Hero extends Char {
 	private boolean    ready      = false;
 	public CharAction  lastAction = null;
 
-	private Char enemy;
+	public Char enemy;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int controlTargetId;
@@ -168,7 +157,7 @@ public class Hero extends Char {
 
 	public Armor.Glyph killerGlyph = null;
 
-	private Item theKey;
+	public Item theKey;
 
 	public boolean restoreHealth = false;
 
@@ -443,54 +432,16 @@ public class Hero extends Char {
 			}
 			return false;
 
-		} else {
-
-			SystemTime.updateLastActionTime();
-
-			restoreHealth = false;
-			if(!Dungeon.realtime()) {
-				busy();
-			}
-
-			if (curAction instanceof CharAction.Move) {
-
-				return actMove((CharAction.Move) curAction);
-
-			} else if (curAction instanceof CharAction.Interact) {
-
-				return actInteract((CharAction.Interact) curAction);
-
-			} else if (curAction instanceof CharAction.PickUp) {
-
-				return actPickUp((CharAction.PickUp) curAction);
-
-			} else if (curAction instanceof CharAction.OpenChest) {
-
-				return actOpenChest((CharAction.OpenChest) curAction);
-
-			} else if (curAction instanceof CharAction.Unlock) {
-
-				return actUnlock((CharAction.Unlock) curAction);
-
-			} else if (curAction instanceof CharAction.Descend) {
-
-				return actDescend((CharAction.Descend) curAction);
-
-			} else if (curAction instanceof CharAction.Ascend) {
-
-				return actAscend((CharAction.Ascend) curAction);
-
-			} else if (curAction instanceof CharAction.Attack) {
-
-				return actAttack((CharAction.Attack) curAction);
-
-			} else if (curAction instanceof CharAction.Cook) {
-
-				return actCook((CharAction.Cook) curAction);
-
-			}
 		}
-		return false;
+
+		SystemTime.updateLastActionTime();
+
+		restoreHealth = false;
+		if(!Dungeon.realtime()) {
+			busy();
+		}
+
+		return curAction.act(this);
 	}
 
 	@Override
@@ -527,101 +478,6 @@ public class Hero extends Char {
 		getControlTarget().act();
 	}
 
-	private boolean actMove(CharAction.Move action) {
-		if (getCloser(action.dst)) {
-			return true;
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
-	private boolean actInteract(CharAction.Interact action) {
-
-		Char chr = action.chr;
-
-		if (Dungeon.level.adjacent(getPos(), chr.getPos())) {
-
-			readyAndIdle();
-			getSprite().turnTo(getPos(), chr.getPos());
-			if (!chr.interact(this)) {
-				actAttack(new CharAction.Attack(chr));
-			}
-			return false;
-
-		} else {
-
-			if (Dungeon.level.fieldOfView[chr.getPos()] && getCloser(chr.getPos())) {
-				return true;
-			} else {
-				readyAndIdle();
-				return false;
-			}
-		}
-	}
-
-	private boolean actCook(CharAction.Cook action) {
-		int dst = action.dst;
-		if (Dungeon.visible[dst]) {
-
-			readyAndIdle();
-			AlchemyPot.operate(this, dst);
-			return false;
-
-		} else if (getCloser(dst)) {
-
-			return true;
-
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
-	private boolean actPickUp(CharAction.PickUp action) {
-		int dst = action.dst;
-		if (getPos() == dst) {
-
-			Heap heap = Dungeon.level.getHeap(getPos());
-			if (heap != null) {
-				Item item = heap.pickUp();
-				item = item.pick(this, getPos());
-				if (item != null) {
-					if (item.doPickUp(this)) {
-
-						itemPickedUp(item);
-
-						if (!heap.isEmpty()) {
-							GLog.i(Game.getVar(R.string.Hero_SomethingElse));
-						}
-						curAction = null;
-					} else {
-						Heap newHeap = level().drop(item, getPos());
-
-						newHeap.sprite.drop();
-						newHeap.pickUpFailed();
-
-						readyAndIdle();
-					}
-				} else {
-					readyAndIdle();
-				}
-			} else {
-				readyAndIdle();
-			}
-
-			return false;
-
-		} else if (getCloser(dst)) {
-
-			return true;
-
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
 	public void itemPickedUp(Item item) {
 		if (item.announcePickUp()) {
 			if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
@@ -638,161 +494,7 @@ public class Hero extends Char {
 		return new MirrorImage(this);
 	}
 
-	private boolean actOpenChest(CharAction.OpenChest action) {
-		int dst = action.dst;
-		if (Dungeon.level.adjacent(getPos(), dst) || getPos() == dst) {
-
-			Heap heap = Dungeon.level.getHeap(dst);
-			if (heap != null && (heap.type == Type.CHEST || heap.type == Type.TOMB || heap.type == Type.SKELETON
-					|| heap.type == Type.LOCKED_CHEST || heap.type == Type.CRYSTAL_CHEST || heap.type == Type.MIMIC)) {
-
-				theKey = null;
-
-				if (heap.type == Type.LOCKED_CHEST || heap.type == Type.CRYSTAL_CHEST) {
-
-					theKey = getBelongings().getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
-
-					if (theKey == null) {
-						GLog.w(Game.getVar(R.string.Hero_LockedChest));
-						readyAndIdle();
-						return false;
-					}
-				}
-
-				switch (heap.type) {
-					case TOMB:
-						Sample.INSTANCE.play(Assets.SND_TOMB);
-						Camera.main.shake(1, 0.5f);
-						break;
-					case SKELETON:
-						break;
-					default:
-						Sample.INSTANCE.play(Assets.SND_UNLOCK);
-				}
-
-				spend(Key.TIME_TO_UNLOCK);
-				getSprite().operate(dst);
-
-			} else {
-				readyAndIdle();
-			}
-
-			return false;
-
-		} else if (getCloser(dst)) {
-
-			return true;
-
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
-	private boolean actUnlock(CharAction.Unlock action) {
-		int doorCell = action.dst;
-
-		Level level = level();
-		if (level.adjacent(getPos(), doorCell)) {
-			theKey = null;
-			int door = level.map[doorCell];
-
-			if (door == Terrain.LOCKED_DOOR) {
-				theKey = getBelongings().getKey(IronKey.class, Dungeon.depth, level.levelId);
-			} else if (door == Terrain.LOCKED_EXIT) {
-				theKey = getBelongings().getKey(SkeletonKey.class, Dungeon.depth, level.levelId);
-			}
-
-			if (theKey != null) {
-				spend(Key.TIME_TO_UNLOCK);
-				getSprite().operate(doorCell);
-				Sample.INSTANCE.play(Assets.SND_UNLOCK);
-			} else {
-				GLog.w(Game.getVar(R.string.Hero_LockedDoor));
-				readyAndIdle();
-			}
-
-			return false;
-
-		} else if (getCloser(doorCell)) {
-			return true;
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
-	private boolean actDescend(CharAction.Descend action) {
-
-		int stairs = action.dst;
-		if (getPos() == stairs && Dungeon.level.isExit(getPos())) {
-
-			Dungeon.level.onHeroDescend(getPos());
-
-			clearActions();
-
-			if (!Dungeon.level.isSafe()) {
-				hunger().satisfy(-Hunger.STARVING / 10);
-			}
-
-			InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
-
-			return false;
-
-		} else if (getCloser(stairs)) {
-
-			return true;
-
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
-	private boolean actAscend(CharAction.Ascend action) {
-
-		int stairs = action.dst;
-		if (getPos() == stairs && getPos() == Dungeon.level.entrance) {
-
-			Position nextLevel = DungeonGenerator.ascend(Dungeon.currentPosition());
-
-			if (nextLevel.levelId.equals("0")) {
-
-				if (getBelongings().getItem(Amulet.class) == null) {
-					GameScene.show(new WndMessage(Game.getVar(R.string.Hero_Leave)));
-					readyAndIdle();
-				} else {
-					Dungeon.win(ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_HAPPY);
-
-					Dungeon.gameOver();
-
-					Game.switchScene(SurfaceScene.class);
-				}
-
-			} else {
-
-				clearActions();
-
-				if (!Dungeon.level.isSafe()) {
-					hunger().satisfy(-Hunger.STARVING / 10);
-				}
-
-				InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
-			}
-
-			return false;
-
-		} else if (getCloser(stairs)) {
-
-			return true;
-
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
-	private boolean getCloserToEnemy(int pos) {
+	public boolean getCloserToEnemy(int pos) {
 		if (Dungeon.level.fieldOfView[pos] && getCloser(pos)) {
 			return true;
 		} else {
@@ -801,7 +503,7 @@ public class Hero extends Char {
 		}
 	}
 
-	private boolean actMeleeAttack(Char enemy) {
+	public boolean actMeleeAttack(Char enemy) {
 
 		if (canAttack(enemy)) {
 			spend(attackDelay());
@@ -812,7 +514,7 @@ public class Hero extends Char {
 		return getCloserToEnemy(enemy.getPos());
 	}
 
-	private boolean actBowAttack(Char enemy) {
+	public boolean actBowAttack(Char enemy) {
 
 		KindOfBow kindOfBow = (KindOfBow) getBelongings().weapon;
 
@@ -831,23 +533,6 @@ public class Hero extends Char {
 
 		return actMeleeAttack(enemy);
 	}
-
-    private boolean actAttack(CharAction.Attack action) {
-
-        enemy = action.target;
-
-        if (enemy.isAlive() && !pacified) {
-
-            if (bowEquipped()) {
-                if (level().adjacent(getPos(), enemy.getPos()) && getBelongings().weapon.goodForMelee()) {
-                    return actMeleeAttack(enemy);
-                }
-                return actBowAttack(enemy);
-            }
-            return actMeleeAttack(enemy);
-        }
-        return getCloserToEnemy(enemy.getPos());
-    }
 
 	public void rest(boolean tillHealthy) {
 		spendAndNext(TIME_TO_REST);
@@ -1075,39 +760,39 @@ public class Hero extends Char {
 
 		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
 
-			curAction = new CharAction.Cook(cell);
+			curAction = new Cook(cell);
 
 		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null && ch != getControlTarget()) {
 
 			if (ch.friendly(getControlTarget())) {
-				curAction = new CharAction.Interact(ch);
+				curAction = new Interact(ch);
 			} else {
-				curAction = new CharAction.Attack(ch);
+				curAction = new Attack(ch);
 			}
 
 		} else if ((heap = level.getHeap(cell)) != null) {
 
 			if (heap.type == Type.HEAP) {
-				curAction = new CharAction.PickUp(cell);
+				curAction = new PickUp(cell);
 			} else {
-				curAction = new CharAction.OpenChest(cell);
+				curAction = new OpenChest(cell);
 			}
 
 		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
 
-			curAction = new CharAction.Unlock(cell);
+			curAction = new Unlock(cell);
 
 		} else if (level.isExit(cell)) {
 
-			curAction = new CharAction.Descend(cell);
+			curAction = new Descend(cell);
 
 		} else if (cell == level.entrance) {
 
-			curAction = new CharAction.Ascend(cell);
+			curAction = new Ascend(cell);
 
 		} else {
 
-			curAction = new CharAction.Move(cell);
+			curAction = new Move(cell);
 			lastAction = null;
 
 		}
@@ -1373,14 +1058,14 @@ public class Hero extends Char {
 	@Override
 	public void onOperateComplete() {
 
-		if (curAction instanceof CharAction.Unlock) {
+		if (curAction instanceof Unlock) {
 
 			if (theKey != null) {
 				theKey.detach(getBelongings().backpack);
 				theKey = null;
 			}
 
-			int doorCell = ((CharAction.Unlock) curAction).dst;
+			int doorCell = ((Unlock) curAction).dst;
 			int door = Dungeon.level.map[doorCell];
 
 			switch (door) {
@@ -1395,14 +1080,14 @@ public class Hero extends Char {
 			}
 			GameScene.updateMap(doorCell);
 
-		} else if (curAction instanceof CharAction.OpenChest) {
+		} else if (curAction instanceof OpenChest) {
 
 			if (theKey != null) {
 				theKey.detach(getBelongings().backpack);
 				theKey = null;
 			}
 
-			Heap heap = Dungeon.level.getHeap(((CharAction.OpenChest) curAction).dst);
+			Heap heap = Dungeon.level.getHeap(((OpenChest) curAction).dst);
 			if (heap != null) {
 				if (heap.type == Type.SKELETON) {
 					Sample.INSTANCE.play(Assets.SND_BONES);
