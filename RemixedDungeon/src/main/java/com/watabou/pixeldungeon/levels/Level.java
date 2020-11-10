@@ -167,9 +167,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int exitIndex(int pos) {
-		for (Integer index : exitMap.keySet()) {
-			if (exitMap.get(index) == pos) {
-				return index;
+		for (var entry : exitMap.entrySet()) {
+			if (entry.getValue() == pos) {
+				return entry.getKey();
 			}
 		}
 		throw new ModError("no exit at"+ levelId + "["+ pos +"]");

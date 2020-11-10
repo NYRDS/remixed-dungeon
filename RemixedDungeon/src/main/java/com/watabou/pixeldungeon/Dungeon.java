@@ -660,12 +660,9 @@ public class Dungeon {
 
     public static Bundle gameBundle(String fileName) throws IOException {
 
-        InputStream input = new FileInputStream(FileSystem.getFile(fileName));
-
-        Bundle bundle = Bundle.read(input);
-        input.close();
-
-        return bundle;
+        try(InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
+            return Bundle.read(input);
+        }
     }
 
     public static void preview(GamesInProgress.Info info, Bundle bundle) {
