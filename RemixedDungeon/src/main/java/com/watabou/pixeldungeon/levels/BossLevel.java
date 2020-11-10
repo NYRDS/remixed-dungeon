@@ -66,7 +66,7 @@ public abstract class BossLevel extends RegularLevel {
         }
 
         for(var cell: exitMap.values()) {
-            if (map[cell]==Terrain.LOCKED_DOOR) {
+            if (cellValid(cell) && map[cell]==Terrain.LOCKED_DOOR) {
                 continue;
             }
             addLevelObject(new ConcreteBlock(cell, 50));
