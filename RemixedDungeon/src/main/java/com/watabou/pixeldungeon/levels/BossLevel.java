@@ -62,6 +62,7 @@ public abstract class BossLevel extends RegularLevel {
 
     private void sealEntrance() {
         if(entrance != 0 ) {
+            CellEmitter.get(entrance).start(Speck.factory(Speck.ROCK), 0.07f, 10);
             addLevelObject(new ConcreteBlock(entrance, 50));
         }
 
@@ -69,13 +70,14 @@ public abstract class BossLevel extends RegularLevel {
             if (!cellValid(cell) || map[cell]==Terrain.LOCKED_DOOR) {
                 continue;
             }
+            CellEmitter.get(cell).start(Speck.factory(Speck.ROCK), 0.07f, 10);
             addLevelObject(new ConcreteBlock(cell, 50));
         }
 
     }
 
     public void unseal() {
-        if (cellValid(stairs)) {
+        if (cellValid(stairs)) { //for old saves compatibility
 
             entrance = stairs;
             stairs = INVALID_CELL;
@@ -94,12 +96,14 @@ public abstract class BossLevel extends RegularLevel {
         LevelObject obj;
         if(entrance != 0 ) {
             while ((obj = getLevelObject(entrance))!=null) {
+                CellEmitter.get(entrance).start(Speck.factory(Speck.ROCK), 0.07f, 10);
                 obj.remove();
             }
         }
 
         for(var cell: exitMap.values()) {
             while ((obj = getLevelObject(cell))!=null) {
+                CellEmitter.get(cell).start(Speck.factory(Speck.ROCK), 0.07f, 10);
                 obj.remove();
             }
         }
