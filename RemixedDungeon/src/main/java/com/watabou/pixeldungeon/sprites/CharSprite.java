@@ -244,8 +244,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         });
     }
 
-    public void operate(int cell) {
+    public void operate(int cell, @Nullable Callback callback) {
         ch.ifPresent(chr -> {
+            if(callback!=null) {
+                animCallback = callback;
+            }
             turnTo(chr.getPos(), cell);
             play(operate);
         });

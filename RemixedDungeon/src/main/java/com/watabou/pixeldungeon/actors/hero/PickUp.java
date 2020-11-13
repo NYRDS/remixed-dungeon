@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -13,7 +14,7 @@ public class PickUp extends CharAction {
     }
 
     @Override
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
         if (hero.getPos() == dst) {
 
             Heap heap = Dungeon.level.getHeap(hero.getPos());

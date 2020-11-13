@@ -95,7 +95,7 @@ public class Weightstone extends Item {
 			GLog.p( Game.getVar(R.string.Weightstone_Accurate), weapon.name() );
 		}
 		
-		owner.getSprite().operate( owner.getPos() );
+		owner.getSprite().operate( owner.getPos(), null);
 		Sample.INSTANCE.play( Assets.SND_MISS );
 		
 		owner.spend( TIME_TO_APPLY );

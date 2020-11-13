@@ -9,7 +9,7 @@ public class Attack extends CharAction {
     }
 
     @Override
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
 
         hero.enemy = target;
 
@@ -23,6 +23,6 @@ public class Attack extends CharAction {
             }
             return hero.actMeleeAttack(target);
         }
-        return hero.getCloserToEnemy(target.getPos());
+        return hero.getCloserIfVisible(target.getPos());
     }
 }

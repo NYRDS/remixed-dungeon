@@ -85,7 +85,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 			removeItemFrom(selector);
 
-			selector.getSprite().operate(selector.getPos());
+			selector.getSprite().operate(selector.getPos(), null);
 			selector.spend(TIME_TO_FUSE);
 			selector.busy();
 
@@ -123,7 +123,7 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 
 	private void fuse(Char hero) {
 		GameScene.selectItem(hero, itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
-		hero.getSprite().operate(hero.getPos());
+		hero.getSprite().operate(hero.getPos(), null);
 	}
 
 	@Override

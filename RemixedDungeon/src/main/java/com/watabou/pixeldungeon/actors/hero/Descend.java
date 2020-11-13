@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 
@@ -10,7 +11,7 @@ public class Descend extends CharAction {
     }
 
     @Override
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
 
         if (hero.getPos() == dst && Dungeon.level.isExit(hero.getPos())) {
             Dungeon.level.onHeroDescend(hero.getPos());

@@ -61,12 +61,12 @@ public class Seed extends Item {
             chr.busy();
             ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos(), chr);
 
-            chr.getSprite().operate(chr.getPos());
+            chr.getSprite().operate(chr.getPos(), null);
 
         } else if (action.equals(CommonActions.AC_EAT)) {
             detach(chr.getBelongings().backpack);
 
-            chr.getSprite().operate(chr.getPos());
+            chr.getSprite().operate(chr.getPos(), null);
             chr.busy();
 
             SpellSprite.show(chr, SpellSprite.FOOD);

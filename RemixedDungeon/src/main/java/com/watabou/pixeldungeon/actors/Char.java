@@ -68,6 +68,7 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
+import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -104,7 +105,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public static final String RESISTANCES       = "resistances";
     public MissileWeapon rangedWeapon = null;
 
-    @NotNull
+	public Char enemy;
+
+	@NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
 
 	private Belongings belongings;
@@ -434,6 +437,53 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return (hasBuff(Fury.class) || hasBuff(RageBuff.class) );
 	}
 
+	public boolean actMeleeAttack(Char enemy) {
+
+		if (canAttack(enemy)) {
+			spend(attackDelay());
+			getSprite().attack(enemy.getPos());
+
+			return false;
+		}
+		return getCloserIfVisible(enemy.getPos());
+	}
+
+	public boolean canAttack(@NotNull Char enemy) {
+		return false;
+	}
+
+	public boolean actBowAttack(Char enemy) {
+
+		KindOfBow kindOfBow = (KindOfBow) getBelongings().weapon;
+
+		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
+
+		Arrow arrow = getBelongings().getItem(arrowType);
+		if(arrow==null || arrow.quantity() == 0) {
+			arrow = getBelongings().getItem(Arrow.class);
+		}
+
+		if (arrow != null && arrow.quantity() > 0) { // We have arrows!
+			arrow.cast(this, enemy.getPos());
+			ready();
+			return false;
+		} // no arrows? Go Melee
+
+		return actMeleeAttack(enemy);
+	}
+
+	private void ready() {
+	}
+
+	public boolean getCloserIfVisible(int pos) {
+		if (level.fieldOfView[pos] && getCloser(pos)) {
+			return true;
+		} else {
+			readyAndIdle();
+			return false;
+		}
+	}
+
 	public int attackProc(@NotNull Char enemy, int damage) {
 		final int[] dmg = {damage};
 		forEachBuff(b->dmg[0] = b.attackProc(this, enemy, dmg[0]));
@@ -499,8 +549,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         heal = resist(heal, src);
         heal = Math.min(ht()-hp(),heal);
 
-        if(heal<0) {
+        if(heal<=0) {
         	return;
+		}
+
+        if(BuildConfig.DEBUG) {
+        	GLog.i("%s <- heal %d (%s)", getEntityKind(), heal, src.getEntityKind());
 		}
 
         hp(hp() + heal);
@@ -1037,7 +1091,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
-	protected abstract boolean getCloser(final int cell);
+	public abstract boolean getCloser(final int cell);
 	protected abstract boolean getFurther(final int cell);
 
 	@NotNull
@@ -1349,5 +1403,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public boolean invalid() {
     	return !valid();
+	}
+
+	public void readyAndIdle() {
+	}
+
+	public void clearActions() {
+	}
+
+	public void handle(int cell) {
 	}
 }

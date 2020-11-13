@@ -1,11 +1,13 @@
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.watabou.pixeldungeon.actors.Char;
+
 public class Move extends CharAction {
     public Move(int dst ) {
         this.dst = dst;
     }
 
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
         if (hero.getCloser(dst)) {
             return true;
         } else {

@@ -59,7 +59,7 @@ public class MasteryItem extends Item {
 
 		hero.setSubClass(way);
 
-		hero.getSprite().operate( hero.getPos() );
+		hero.getSprite().operate( hero.getPos(), null);
 		Sample.INSTANCE.play( Assets.SND_MASTERY );
 
 		SpellSprite.show(hero, SpellSprite.MASTERY );

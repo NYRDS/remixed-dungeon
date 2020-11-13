@@ -7,6 +7,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -20,7 +21,7 @@ public class Ascend extends CharAction {
     }
 
     @Override
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
         if (hero.getPos() == dst && hero.getPos() == Dungeon.level.entrance) {
 
             Position nextLevel = DungeonGenerator.ascend(Dungeon.currentPosition());

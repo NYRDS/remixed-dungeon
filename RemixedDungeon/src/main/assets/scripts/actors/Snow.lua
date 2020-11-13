@@ -19,6 +19,6 @@ return actor.init({
         end
     end,
     actionTime = function()
-        return math.huge
+        return 86400
     end
 })

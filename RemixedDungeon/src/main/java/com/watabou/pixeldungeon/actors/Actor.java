@@ -248,6 +248,7 @@ public abstract class Actor implements Bundlable {
 				if(!ch.level().cellValid(ch.getPos())) {
 					actor.next();
 					toRemove = actor;
+					ch.getSprite().killAndErase();
 					continue;
 				}
 

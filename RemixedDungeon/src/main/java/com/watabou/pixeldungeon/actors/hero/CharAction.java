@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.watabou.pixeldungeon.actors.Char;
+
 public abstract class CharAction {
 	
 	public int dst;
 
-	abstract public boolean act(Hero hero);
+	abstract public boolean act(Char hero);
 
 }

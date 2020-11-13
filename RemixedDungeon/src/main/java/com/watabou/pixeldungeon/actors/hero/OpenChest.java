@@ -6,6 +6,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
 import com.watabou.pixeldungeon.items.keys.Key;
@@ -17,20 +18,20 @@ public class OpenChest extends CharAction {
     }
 
     @Override
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
         if (Dungeon.level.adjacent(hero.getPos(), dst) || hero.getPos() == dst) {
 
             Heap heap = Dungeon.level.getHeap(dst);
             if (heap != null && (heap.type == Heap.Type.CHEST || heap.type == Heap.Type.TOMB || heap.type == Heap.Type.SKELETON
                     || heap.type == Heap.Type.LOCKED_CHEST || heap.type == Heap.Type.CRYSTAL_CHEST || heap.type == Heap.Type.MIMIC)) {
 
-                hero.theKey = null;
+                final Key[] theKey = {null};
 
                 if (heap.type == Heap.Type.LOCKED_CHEST || heap.type == Heap.Type.CRYSTAL_CHEST) {
 
-                    hero.theKey = hero.getBelongings().getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
+                    theKey[0] = hero.getBelongings().getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
 
-                    if (hero.theKey == null) {
+                    if (theKey[0] == null) {
                         GLog.w(Game.getVar(R.string.Hero_LockedChest));
                         hero.readyAndIdle();
                         return false;
@@ -49,7 +50,19 @@ public class OpenChest extends CharAction {
                 }
 
                 hero.spend(Key.TIME_TO_UNLOCK);
-                hero.getSprite().operate(dst);
+                hero.getSprite().operate(dst, () -> {
+                    if (theKey[0] != null) {
+                        theKey[0].removeItemFrom(hero);
+                    }
+
+                    Heap OpenedHeap = Dungeon.level.getHeap(dst);
+                    if (OpenedHeap != null) {
+                        if (OpenedHeap.type == Heap.Type.SKELETON) {
+                            Sample.INSTANCE.play(Assets.SND_BONES);
+                        }
+                        OpenedHeap.open(hero);
+                    }
+                });
 
             } else {
                 hero.readyAndIdle();

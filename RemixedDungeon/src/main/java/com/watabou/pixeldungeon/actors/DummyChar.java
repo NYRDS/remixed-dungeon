@@ -33,7 +33,7 @@ public class DummyChar extends Char {
     }
 
     @Override
-    protected boolean getCloser(int cell) {
+    public boolean getCloser(int cell) {
         return false;
     }
 

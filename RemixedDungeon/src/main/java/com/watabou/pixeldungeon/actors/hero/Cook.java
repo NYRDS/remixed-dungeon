@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 
 public class Cook extends CharAction {
@@ -9,7 +10,7 @@ public class Cook extends CharAction {
     }
 
     @Override
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
 
         if (Dungeon.visible[dst]) {
             hero.readyAndIdle();

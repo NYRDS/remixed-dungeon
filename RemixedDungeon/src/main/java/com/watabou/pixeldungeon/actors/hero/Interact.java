@@ -9,7 +9,7 @@ public class Interact extends CharAction {
         this.chr = chr;
     }
 
-    public boolean act(Hero hero) {
+    public boolean act(Char hero) {
         if (Dungeon.level.adjacent(hero.getPos(), chr.getPos())) {
 
             hero.readyAndIdle();

@@ -147,8 +147,6 @@ public class Hero extends Char {
 	private boolean    ready      = false;
 	public CharAction  lastAction = null;
 
-	public Char enemy;
-
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int controlTargetId;
 
@@ -449,15 +447,11 @@ public class Hero extends Char {
 		ready = false;
 	}
 
-	private void ready() {
+	public void readyAndIdle() {
 		curAction = null;
 		ready = true;
 
 		GameScene.ready();
-	}
-
-	public void readyAndIdle() {
-		ready();
 		getSprite().idle();
 	}
 
@@ -492,46 +486,6 @@ public class Hero extends Char {
 	@Override
 	public Char makeClone() {
 		return new MirrorImage(this);
-	}
-
-	public boolean getCloserToEnemy(int pos) {
-		if (Dungeon.level.fieldOfView[pos] && getCloser(pos)) {
-			return true;
-		} else {
-			readyAndIdle();
-			return false;
-		}
-	}
-
-	public boolean actMeleeAttack(Char enemy) {
-
-		if (canAttack(enemy)) {
-			spend(attackDelay());
-			getSprite().attack(enemy.getPos());
-
-			return false;
-		}
-		return getCloserToEnemy(enemy.getPos());
-	}
-
-	public boolean actBowAttack(Char enemy) {
-
-		KindOfBow kindOfBow = (KindOfBow) getBelongings().weapon;
-
-		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
-
-		Arrow arrow = getBelongings().getItem(arrowType);
-		if(arrow==null || arrow.quantity() == 0) {
-			arrow = getBelongings().getItem(Arrow.class);
-		}
-
-		if (arrow != null && arrow.quantity() > 0) { // We have arrows!
-			arrow.cast(this, enemy.getPos());
-			ready();
-			return false;
-		} // no arrows? Go Melee
-
-		return actMeleeAttack(enemy);
 	}
 
 	public void rest(boolean tillHealthy) {
@@ -618,7 +572,7 @@ public class Hero extends Char {
 		return nearest;
 	}
 
-	protected boolean getCloser(final int target) {
+	public boolean getCloser(final int target) {
 
 		if (hasBuff(Roots.class)) {
 			return false;
@@ -713,7 +667,6 @@ public class Hero extends Char {
 			move(step);
 			moveSprite(oldPos,getPos());
 
-
 			if (wallWalkerBuff != null) {
 				int dmg = hp() / 2 > 2 ? hp() / 2 : 2;
 				damage(dmg, wallWalkerBuff);
@@ -722,10 +675,9 @@ public class Hero extends Char {
 			spend(1 / speed());
 
 			return true;
-
-		} else {
-			return false;
 		}
+
+		return false;
 	}
 
     @Override
@@ -733,24 +685,29 @@ public class Hero extends Char {
         return false;
     }
 
-    public boolean handle(int cell) {
+    @Override
+    public void handle(int cell) {
 
 		if (doOnNextAction != null) {
 			doOnNextAction.run();
 			doOnNextAction = null;
-			return false;
+			return;
 		}
 
 		if(movieRewardPending) {
 			new MovieRewardTask(true).run();
 			movieRewardPending = false;
-			return false;
+			return;
+		}
+
+		if(!isReady()) {
+			return;
 		}
 
 		Level level = level();
 
 		if (!level.cellValid(cell)) {
-			return false;
+			return;
 		}
 
 		Char ch;
@@ -759,46 +716,32 @@ public class Hero extends Char {
 		level.updateFieldOfView(getControlTarget());
 
 		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
-
 			curAction = new Cook(cell);
-
 		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null && ch != getControlTarget()) {
-
 			if (ch.friendly(getControlTarget())) {
 				curAction = new Interact(ch);
 			} else {
 				curAction = new Attack(ch);
 			}
-
 		} else if ((heap = level.getHeap(cell)) != null) {
-
 			if (heap.type == Type.HEAP) {
 				curAction = new PickUp(cell);
 			} else {
 				curAction = new OpenChest(cell);
 			}
-
 		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
-
 			curAction = new Unlock(cell);
-
 		} else if (level.isExit(cell)) {
-
 			curAction = new Descend(cell);
-
 		} else if (cell == level.entrance) {
-
 			curAction = new Ascend(cell);
-
 		} else {
-
 			curAction = new Move(cell);
 			lastAction = null;
-
 		}
 
+		GLog.debug("action: %s", curAction);
 		getControlTarget().curAction = curAction;
-		return act();
 	}
 
 	public void earnExp(int exp) {
@@ -1055,51 +998,6 @@ public class Hero extends Char {
 		super.onAttackComplete();
 	}
 
-	@Override
-	public void onOperateComplete() {
-
-		if (curAction instanceof Unlock) {
-
-			if (theKey != null) {
-				theKey.detach(getBelongings().backpack);
-				theKey = null;
-			}
-
-			int doorCell = ((Unlock) curAction).dst;
-			int door = Dungeon.level.map[doorCell];
-
-			switch (door) {
-				case Terrain.LOCKED_DOOR:
-					Dungeon.level.set(doorCell, Terrain.DOOR);
-					break;
-				case Terrain.LOCKED_EXIT:
-					Dungeon.level.set(doorCell, Terrain.UNLOCKED_EXIT);
-					break;
-				default:
-					EventCollector.logException("trying to unlock tile:" + door);
-			}
-			GameScene.updateMap(doorCell);
-
-		} else if (curAction instanceof OpenChest) {
-
-			if (theKey != null) {
-				theKey.detach(getBelongings().backpack);
-				theKey = null;
-			}
-
-			Heap heap = Dungeon.level.getHeap(((OpenChest) curAction).dst);
-			if (heap != null) {
-				if (heap.type == Type.SKELETON) {
-					Sample.INSTANCE.play(Assets.SND_BONES);
-				}
-				heap.open(this);
-			}
-		}
-		curAction = null;
-
-		super.onOperateComplete();
-	}
-
 	public boolean search(boolean intentional) {
 
 		boolean smthFound = false;
@@ -1165,7 +1063,7 @@ public class Hero extends Char {
 
 		if (intentional) {
 			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Search));
-			getSprite().operate(getPos());
+			getSprite().operate(getPos(), null);
 			if (smthFound) {
 				spendAndNext(Random.Float() < searchLevel ? TIME_TO_SEARCH : TIME_TO_SEARCH * 2);
 			} else {
@@ -1236,7 +1134,8 @@ public class Hero extends Char {
 		this.exp = Scrambler.scramble(exp);
 	}
 
-	public boolean canAttack(Char enemy) {
+	@Override
+	public boolean canAttack(@NotNull Char enemy) {
 		if (level().adjacent(getPos(), enemy.getPos())) {
 			return true;
 		}
@@ -1285,7 +1184,7 @@ public class Hero extends Char {
             break;
         }
 
-		getSprite().operate( getPos() );
+		getSprite().operate( getPos(), null);
 		busy();
 		SpellSprite.show(this, SpellSprite.FOOD );
 		Sample.INSTANCE.play( Assets.SND_EAT );
@@ -1477,10 +1376,7 @@ public class Hero extends Char {
 
 	public static void performTests() {
 		var hero = new Hero(2);
-
 		var buffsNames = BuffFactory.getAllBuffsNames();
-
-
 
 		for(var buffName: buffsNames) {
 			try {

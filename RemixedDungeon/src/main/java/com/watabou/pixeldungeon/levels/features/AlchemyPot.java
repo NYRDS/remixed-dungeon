@@ -20,17 +20,16 @@ package com.watabou.pixeldungeon.levels.features;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class AlchemyPot {
 	
-	private static Hero hero;
+	private static Char hero;
 	private static int pos;
 	
-	public static void operate( Hero hero, int pos ) {
+	public static void operate(Char hero, int pos ) {
 		
 		AlchemyPot.hero = hero;
 		AlchemyPot.pos = pos;
