@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.graphics.Color;
+import android.util.DisplayMetrics;
+import android.view.Display;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
@@ -11,6 +13,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider, AdsUtilsCommon.IBannerProvider {
     private static InterstitialAd mInterstitialAd;
@@ -70,15 +73,27 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
 
     @Override
     public void displayBanner() {
-
         adView = new AdView(Game.instance());
-        adView.setAdSize(AdSize.SMART_BANNER);
         adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
         adView.setBackgroundColor(Color.TRANSPARENT);
         adView.setAdListener(new AdmobBannerListener());
-
+        adView.setAdSize(getAdSize());
         adView.loadAd(AdMob.makeAdRequest());
     }
+
+    private AdSize getAdSize() {
+        Display display = RemixedDungeon.instance().getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float widthPixels = outMetrics.widthPixels;
+        float density = outMetrics.density;
+
+        int adWidth = (int) (widthPixels / density);
+
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(RemixedDungeon.instance(), adWidth);
+    }
+
 
     @Override
     public boolean isReady() {

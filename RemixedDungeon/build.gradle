@@ -28,8 +28,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 944
-        versionName "29.6.pre_alpha.9"
+        versionCode 945
+        versionName "29.6.pre_alpha.10"
 
         buildToolsVersion = '29.0.2'
         targetSdkVersion 29
@@ -133,7 +133,7 @@ dependencies {
 
     googlePlayImplementation 'com.google.firebase:firebase-ads:19.5.0'
     googlePlayImplementation 'com.google.firebase:firebase-analytics:18.0.0'
-    googlePlayImplementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+    googlePlayImplementation 'com.google.firebase:firebase-crashlytics:17.3.0'
 
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
