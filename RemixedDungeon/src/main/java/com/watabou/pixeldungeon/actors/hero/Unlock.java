@@ -15,12 +15,14 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Unlock extends CharAction {
     public Unlock(int door ) {
         this.dst = door;
     }
 
-    public boolean act(Char hero) {
+    public boolean act(@NotNull Char hero) {
         Level level = hero.level();
         if (level.adjacent(hero.getPos(), dst)) {
             Key theKey = null;
@@ -50,6 +52,7 @@ public class Unlock extends CharAction {
                     }
                     GameScene.updateMap(dst);
 
+                    hero.readyAndIdle();
                 });
                 Sample.INSTANCE.play(Assets.SND_UNLOCK);
             } else {

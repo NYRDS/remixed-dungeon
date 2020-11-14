@@ -62,6 +62,7 @@ public class OpenChest extends CharAction {
                         }
                         OpenedHeap.open(hero);
                     }
+                    hero.readyAndIdle();
                 });
 
             } else {
