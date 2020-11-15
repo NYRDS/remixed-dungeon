@@ -25,4 +25,10 @@ public abstract class CharAction {
 
 	abstract public boolean act(Char hero);
 
+	@Override
+	public String toString() {
+		return   getClass().getSimpleName() +
+				"{dst=" + dst +
+				'}';
+	}
 }

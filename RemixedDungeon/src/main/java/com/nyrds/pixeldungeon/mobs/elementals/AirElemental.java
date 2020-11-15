@@ -70,7 +70,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
 
-		if (level().adjacent(getPos(), enemy.getPos())) {
+		if (adjacent(enemy)) {
 			return false;
 		}
 

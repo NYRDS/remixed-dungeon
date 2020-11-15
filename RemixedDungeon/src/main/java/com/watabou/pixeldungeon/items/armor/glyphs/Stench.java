@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -40,7 +39,7 @@ public class Stench extends Glyph {
 
 		int level = Math.max( 0, armor.level() );
 		
-		if (Dungeon.level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( level + 5 ) >= 4) {
+		if (attacker.adjacent(defender) && Random.Int( level + 5 ) >= 4) {
 			GameScene.add( Blob.seed( attacker.getPos(), 20, ToxicGas.class ) );
 		}
 		

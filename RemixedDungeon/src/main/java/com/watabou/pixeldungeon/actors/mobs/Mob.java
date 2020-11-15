@@ -273,7 +273,7 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean canAttack(@NotNull Char enemy) {
-		return level().adjacent(getPos(), enemy.getPos()) && !pacified;
+		return adjacent(enemy) && !pacified;
 	}
 
 	public boolean getCloser(int target) {

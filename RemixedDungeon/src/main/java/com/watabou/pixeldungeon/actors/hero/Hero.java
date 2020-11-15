@@ -717,7 +717,7 @@ public class Hero extends Char {
 		}
 		next();
 
-		GLog.debug("action: %s", curAction);
+		GLog.debug("action: %s", curAction.toString());
 		getControlTarget().curAction = curAction;
 	}
 
@@ -1143,7 +1143,7 @@ public class Hero extends Char {
 
 	@Override
 	public boolean canAttack(@NotNull Char enemy) {
-		if (level().adjacent(getPos(), enemy.getPos())) {
+		if (adjacent(enemy)) {
 			return true;
 		}
 

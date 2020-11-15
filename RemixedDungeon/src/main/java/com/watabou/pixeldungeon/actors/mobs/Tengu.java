@@ -111,7 +111,7 @@ public class Tengu extends Boss implements IZapper {
 	@Override
 	public void doAttack(Char enemy) {
 		timeToJump--;
-		if (timeToJump <= 0 && Dungeon.level.adjacent( getPos(), enemy.getPos() )) {
+		if (timeToJump <= 0 && adjacent(enemy)) {
 			jump();
 		} else {
 			super.doAttack( enemy );

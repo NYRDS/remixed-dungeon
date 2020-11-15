@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
@@ -41,7 +40,7 @@ public class Affection extends Glyph {
 
 		int level = (int) GameMath.gate(0, armor.level(), 6);
 
-		if (Dungeon.level.adjacent(attacker.getPos(), defender.getPos()) && Random.Int(level / 2 + 5) >= 4) {
+		if (attacker.adjacent(defender) && Random.Int(level / 2 + 5) >= 4) {
 
 			int duration = Random.IntRange(2, 5);
 

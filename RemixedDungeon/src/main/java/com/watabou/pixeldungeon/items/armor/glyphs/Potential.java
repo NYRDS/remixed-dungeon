@@ -40,7 +40,7 @@ public class Potential extends Glyph {
 
 		int level = Math.max( 0, armor.level() );
 		
-		if (Dungeon.level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( level + 7 ) >= 6) {
+		if (attacker.adjacent(defender) && Random.Int( level + 7 ) >= 6) {
 			
 			int dmg = Random.IntRange( 1, damage );
 			attacker.damage( dmg, LightningTrap.LIGHTNING );

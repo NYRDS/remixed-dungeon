@@ -10,7 +10,8 @@ public class Interact extends CharAction {
     }
 
     public boolean act(Char hero) {
-        if (Dungeon.level.adjacent(hero.getPos(), chr.getPos())) {
+
+        if (hero.adjacent(chr)) {
 
             hero.readyAndIdle();
             hero.getSprite().turnTo(hero.getPos(), chr.getPos());

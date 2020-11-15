@@ -40,7 +40,7 @@ public class Bounce extends Glyph {
 
 		Level level = Dungeon.level;
 
-		if (attacker.isMovable() && level.adjacent( attacker.getPos(), defender.getPos() ) && Random.Int( armorLevel + 5) >= 4) {
+		if (attacker.isMovable() && attacker.adjacent(defender) && Random.Int( armorLevel + 5) >= 4) {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				int ofs = Level.NEIGHBOURS8[i];

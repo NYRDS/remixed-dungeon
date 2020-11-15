@@ -56,7 +56,7 @@ public class CharUtils {
     }
 
     public static boolean canDoOnlyRangedAttack(@NotNull Char attacker, @NotNull Char enemy) {
-        return !Dungeon.level.adjacent( attacker.getPos(), enemy.getPos() )
+        return !attacker.adjacent(enemy)
                 && Ballistica.cast( attacker.getPos(), enemy.getPos(), false, true ) == enemy.getPos();
     }
 

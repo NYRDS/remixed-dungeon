@@ -120,7 +120,7 @@ public class Lich extends Boss {
 
             if(level.fieldOfView[newPos] &&
                     level.passable[newPos] &&
-                    !level.adjacent( newPos, getEnemy().getPos()) &&
+                    !adjacent(getEnemy()) &&
                     Actor.findChar( newPos ) == null)
             {
                 getSprite().move( getPos(), newPos );

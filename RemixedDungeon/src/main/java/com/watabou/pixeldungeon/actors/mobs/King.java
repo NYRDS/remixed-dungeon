@@ -112,7 +112,7 @@ public class King extends Boss {
     public boolean canAttack(@NotNull Char enemy) {
 		return canTryToSummon() ? 
 			getPos() == targetPedestal :
-			Dungeon.level.adjacent( getPos(), enemy.getPos() );
+			adjacent(enemy);
 	}
 
 	private int countServants() {

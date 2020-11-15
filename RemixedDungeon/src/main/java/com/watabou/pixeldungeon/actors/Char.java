@@ -1415,4 +1415,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void handle(int cell) {
 	}
+
+	public boolean adjacent(@NotNull Char chr) {
+    	return level().adjacent(getPos(),chr.getPos());
+	}
 }

@@ -284,7 +284,7 @@ public class Yog extends Boss {
 		@Override
 		public boolean attack(@NotNull Char enemy) {
 			if(super.attack(enemy)) {
-				if (!Dungeon.level.adjacent(getPos(), enemy.getPos())) {
+				if (!adjacent(enemy)) {
 					enemy.getSprite().flash();
 				}
 				return true;
