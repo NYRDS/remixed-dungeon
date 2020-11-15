@@ -62,6 +62,10 @@ public class CharUtils {
 
     public static boolean steal(@NotNull Char thief, @NotNull Char victim) {
 
+        if(!thief.adjacent(victim)) {
+            return false;
+        }
+
         if (victim.getBelongings().isBackpackEmpty()) {
             return false;
         }

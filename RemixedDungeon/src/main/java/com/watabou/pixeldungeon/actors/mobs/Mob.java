@@ -712,6 +712,11 @@ public abstract class Mob extends Char {
 			return;
 		}
 
+		if(action.equals(CommonActions.MAC_PUSH)) {
+			hero.push(this);
+			hero.spend(1);
+		}
+
 		super.execute(hero, action);
 	}
 

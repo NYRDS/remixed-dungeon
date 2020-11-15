@@ -1306,9 +1306,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		actions.add(CommonActions.MAC_STEAL);
+		if(adjacent(hero) && hero.stealth() > 2) {
+			actions.add(CommonActions.MAC_STEAL);
+		}
 		actions.add(CommonActions.MAC_TAUNT);
-		actions.add(CommonActions.MAC_PUSH);
+		if(adjacent(hero)) {
+			actions.add(CommonActions.MAC_PUSH);
+		}
 		return actions;
 	}
 
