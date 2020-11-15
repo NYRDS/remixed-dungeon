@@ -238,7 +238,7 @@ public class Toolbar extends Component {
                 return;
             }
 
-            Level level = Dungeon.level;
+            Level level = selector.level();
 
             if (!level.cellValid(cell)
                     || (!level.visited[cell] && !level.mapped[cell])) {
@@ -259,11 +259,11 @@ public class Toolbar extends Component {
 
             Mob mob = (Mob) Actor.findChar(cell);
             if (mob != null) {
-                GameScene.show(new WndInfoMob(mob));
+                GameScene.show(new WndInfoMob(mob, selector));
                 return;
             }
 
-            Heap heap = Dungeon.level.getHeap(cell);
+            Heap heap = level.getHeap(cell);
             if (heap != null) {
                 GameScene.show(new WndInfoItem(heap));
                 return;

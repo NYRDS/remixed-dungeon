@@ -22,7 +22,6 @@ public abstract class BossLevel extends RegularLevel {
     protected static final String DOOR	    = "door";
     protected static final String ENTERED	= "entered";
 
-
     protected int arenaDoor = INVALID_CELL;
 
     protected boolean enteredArena = false;
@@ -67,7 +66,7 @@ public abstract class BossLevel extends RegularLevel {
         }
 
         for(var cell: exitMap.values()) {
-            if (!cellValid(cell) || map[cell]==Terrain.LOCKED_DOOR) {
+            if (!cellValid(cell) || map[cell]==Terrain.LOCKED_EXIT) {
                 continue;
             }
             CellEmitter.get(cell).start(Speck.factory(Speck.ROCK), 0.07f, 10);

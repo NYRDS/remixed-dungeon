@@ -42,10 +42,10 @@ public class Unlock extends CharAction {
 
                     switch (door) {
                         case Terrain.LOCKED_DOOR:
-                            Dungeon.level.set(dst, Terrain.DOOR);
+                            level.set(dst, Terrain.DOOR);
                             break;
                         case Terrain.LOCKED_EXIT:
-                            Dungeon.level.set(dst, Terrain.UNLOCKED_EXIT);
+                            level.set(dst, Terrain.UNLOCKED_EXIT);
                             break;
                         default:
                             EventCollector.logException("trying to unlock tile:" + door);

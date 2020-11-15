@@ -24,7 +24,7 @@ import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -32,30 +32,31 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WndInfoMob extends WndTitledMessage {
 
 	private static final float BUTTON_WIDTH		= 36;
 
-	public WndInfoMob( Mob mob ) {
+	public WndInfoMob( Mob mob, Char selector ) {
 		super( new MobTitle( mob ), desc( mob, true ) );
 
 		VHBox actions = new VHBox(width - 2* GAP);
 		actions.setAlign(HBox.Align.Width);
 		actions.setGap(GAP);
 
-		//if (Dungeon.hero.isAlive() && mob.getOwner() == Dungeon.hero) {
-		if (Dungeon.hero.isAlive()) {
+		if (selector.isAlive()) {
 
-			for (final String action:mob.actions( Dungeon.hero )) {
+			for (final String action:mob.actions( selector )) {
 
-				if(Dungeon.hero.getHeroClass().forbidden(action)){
+				if(selector.getHeroClass().forbidden(action)){
 					continue;
 				}
 
 				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
 					@Override
 					protected void onClick() {
-						mob.execute( Dungeon.hero, action );
+						mob.execute( selector, action );
 						hide();
 					}
 				};
@@ -98,7 +99,7 @@ public class WndInfoMob extends WndTitledMessage {
 		
 		private float hp;
 		
-		public MobTitle( Mob mob ) {
+		public MobTitle(@NotNull Mob mob ) {
 
 			hp = (float)mob.hp() / mob.ht();
 			
