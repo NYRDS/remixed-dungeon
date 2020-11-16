@@ -13,4 +13,5 @@ public class CommonActions {
     public static final String MAC_STEAL = "CharAction_Steal";
     public static final String MAC_TAUNT = "CharAction_Taunt";
     public static final String MAC_PUSH = "CharAction_Push";
+    public static final String MAC_ORDER = "CharAction_Order";
 }

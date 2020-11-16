@@ -55,11 +55,20 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
+import com.watabou.pixeldungeon.actors.hero.Ascend;
+import com.watabou.pixeldungeon.actors.hero.Attack;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.CharAction;
+import com.watabou.pixeldungeon.actors.hero.Cook;
+import com.watabou.pixeldungeon.actors.hero.Descend;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.actors.hero.Interact;
+import com.watabou.pixeldungeon.actors.hero.Move;
+import com.watabou.pixeldungeon.actors.hero.OpenChest;
+import com.watabou.pixeldungeon.actors.hero.PickUp;
+import com.watabou.pixeldungeon.actors.hero.Unlock;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -67,6 +76,7 @@ import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -240,7 +250,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+		return Utils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
 	}
 
 	protected void setupCharData() {
@@ -310,7 +320,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		boolean visibleFight = CharUtils.isVisible(this) || CharUtils.isVisible(enemy);
 
-		if (hit(this, enemy, false)) {
+		if (CharUtils.hit(this, enemy, false)) {
 
 			if (visibleFight) {
 				GLog.i(Game.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
@@ -381,17 +391,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
-	public static boolean hit(@NotNull Char attacker, Char defender, boolean magic) {
-		if(attacker.invisible>0) {
-			return true;
-		}
-
-		float acuRoll = Random.Float(attacker.attackSkill(defender));
-		float defRoll = Random.Float(defender.defenseSkill(attacker));
-		return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
-	}
-
-    public boolean shoot(Char enemy, MissileWeapon wep) {
+	public boolean shoot(Char enemy, MissileWeapon wep) {
 
         rangedWeapon = wep;
         boolean result = attack(enemy);
@@ -731,6 +731,36 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			}
 		}
 		return false;
+	}
+
+	public CharAction actionForCell(int cell, @NotNull Level level) {
+		Char ch;
+		Heap heap;
+		CharAction action;
+		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
+			action = new Cook(cell);
+		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null && ch != getControlTarget()) {
+			if (ch.friendly(getControlTarget())) {
+				action = new Interact(ch);
+			} else {
+				action = new Attack(ch);
+			}
+		} else if ((heap = level.getHeap(cell)) != null) {
+			if (heap.type == Heap.Type.HEAP) {
+				action = new PickUp(cell);
+			} else {
+				action = new OpenChest(cell);
+			}
+		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
+			action = new Unlock(cell);
+		} else if (level.isExit(cell)) {
+			action = new Descend(cell);
+		} else if (cell == level.entrance) {
+			action = new Ascend(cell);
+		} else {
+			action = new Move(cell);
+		}
+		return action;
 	}
 
 	public void add(Buff buff) {
@@ -1309,9 +1339,15 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if(adjacent(hero) && hero.stealth() > 2) {
 			actions.add(CommonActions.MAC_STEAL);
 		}
+
 		actions.add(CommonActions.MAC_TAUNT);
+
 		if(adjacent(hero)) {
 			actions.add(CommonActions.MAC_PUSH);
+		}
+
+		if(getOwnerId()==hero.getId()) {
+			actions.add(CommonActions.MAC_ORDER);
 		}
 		return actions;
 	}
@@ -1422,5 +1458,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public boolean adjacent(@NotNull Char chr) {
     	return level().adjacent(getPos(),chr.getPos());
+	}
+
+	@NotNull
+	public Char getControlTarget() {
+    	return this;
 	}
 }

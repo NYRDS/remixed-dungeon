@@ -41,23 +41,18 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Ankh;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -810,32 +805,6 @@ public class Dungeon {
         passable[cur] = true;
 
         return PathFinder.getStepBack(cur, from, passable);
-    }
-
-    public static void challengeAllMobs(Char ch, String sound) {
-
-        if (!GameScene.isSceneReady()) {
-            return;
-        }
-
-        for (Mob mob : Dungeon.level.mobs) {
-            mob.beckon(ch.getPos());
-        }
-
-        for (Heap heap : Dungeon.level.allHeaps()) {
-            if (heap.type == Heap.Type.MIMIC) {
-                Mimic m = Mimic.spawnAt(heap.pos, heap.items);
-                if (m != null) {
-                    m.beckon(ch.getPos());
-                    heap.destroy();
-                }
-            }
-        }
-
-        ch.getSprite().centerEmitter().start(Speck.factory(Speck.SCREAM), 0.3f, 3);
-
-        Sample.INSTANCE.play(sound);
-        Invisibility.dispel(ch);
     }
 
     public static Position currentPosition() {

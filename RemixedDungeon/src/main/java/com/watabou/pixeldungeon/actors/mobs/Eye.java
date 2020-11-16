@@ -100,7 +100,7 @@ public class Eye extends Mob {
 
             Char victim = Actor.findChar(cell);
             if (victim != null) {
-                if (hit(this, victim, true)) {
+                if (CharUtils.hit(this, victim, true)) {
                     victim.damage(Random.NormalIntRange(14, 20), this);
                     int pos = victim.getPos();
 

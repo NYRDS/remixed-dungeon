@@ -74,8 +74,6 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
@@ -721,36 +719,6 @@ public class Hero extends Char {
 		getControlTarget().curAction = curAction;
 	}
 
-	public CharAction actionForCell(int cell, @NotNull Level level) {
-		Char ch;
-		Heap heap;
-		CharAction action;
-		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
-			action = new Cook(cell);
-		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null && ch != getControlTarget()) {
-			if (ch.friendly(getControlTarget())) {
-				action = new Interact(ch);
-			} else {
-				action = new Attack(ch);
-			}
-		} else if ((heap = level.getHeap(cell)) != null) {
-			if (heap.type == Type.HEAP) {
-				action = new PickUp(cell);
-			} else {
-				action = new OpenChest(cell);
-			}
-		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
-			action = new Unlock(cell);
-		} else if (level.isExit(cell)) {
-			action = new Descend(cell);
-		} else if (cell == level.entrance) {
-			action = new Ascend(cell);
-		} else {
-			action = new Move(cell);
-		}
-		return action;
-	}
-
 	public void earnExp(int exp) {
 
 		this.setExp(this.getExp() + exp);
@@ -1170,7 +1138,7 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public void eat(Item food, float energy, String message) {
+	public void eat(@NotNull Item food, float energy, String message) {
 		food.detach( getBelongings().backpack );
 
 		hunger().satisfy(energy);
@@ -1214,6 +1182,7 @@ public class Hero extends Char {
 	}
 
 	@NotNull
+	@Override
 	public Char getControlTarget() {
 
 		Char controlTarget = CharsList.getById(controlTargetId);

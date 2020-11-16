@@ -2609,4 +2609,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Stun_Info">Stunned</string>
   <string name="Char_StaStunned">stunned</string>
 
+  <string name="Mob_ReadyForOrder">%s ready for your order.</string>
+  <string name="Mob_CantDoIt">I can\'t do it. I have a paws.</string>>
+
 </resources>

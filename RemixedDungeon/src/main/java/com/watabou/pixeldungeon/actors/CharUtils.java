@@ -4,15 +4,23 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.mobs.Mimic;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -97,5 +105,41 @@ public class CharUtils {
             Dungeon.observe();
             GLog.i( Utils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()) );
         }
+    }
+
+    public static boolean hit(@NotNull Char attacker, Char defender, boolean magic) {
+        if(attacker.invisible>0) {
+            return true;
+        }
+
+        float acuRoll = Random.Float(attacker.attackSkill(defender));
+        float defRoll = Random.Float(defender.defenseSkill(attacker));
+        return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
+    }
+
+    public static void challengeAllMobs(Char ch, String sound) {
+
+        if (!GameScene.isSceneReady()) {
+            return;
+        }
+
+        for (Mob mob : ch.level().mobs) {
+            mob.beckon(ch.getPos());
+        }
+
+        for (Heap heap : ch.level().allHeaps()) {
+            if (heap.type == Heap.Type.MIMIC) {
+                Mimic m = Mimic.spawnAt(heap.pos, heap.items);
+                if (m != null) {
+                    m.beckon(ch.getPos());
+                    heap.destroy();
+                }
+            }
+        }
+
+        ch.getSprite().centerEmitter().start(Speck.factory(Speck.SCREAM), 0.3f, 3);
+
+        Sample.INSTANCE.play(sound);
+        Invisibility.dispel(ch);
     }
 }

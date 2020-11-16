@@ -72,6 +72,6 @@ public class ControlledAi extends MobAi implements AiState {
 
     @Override
     public String status(@NotNull Mob me) {
-        return Utils.format(Game.getVar(R.string.Mob_StaControlledStatus),me.getEntityKind());
+        return Utils.format(Game.getVar(R.string.Mob_StaControlledStatus),me.name());
     }
 }

@@ -130,7 +130,7 @@ public abstract class MobAi implements AiState {
             me.notice();
             me.setState(getStateByClass(Hunting.class));
 
-            if (Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
+            if (me.getOwnerId()==me.getId() && Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
                 for (Mob mob : me.level().mobs) {
                     if (me != mob && mob.getOwnerId() != me.getEnemy().getId()) {
                         mob.setEnemy(me.getEnemy());
@@ -140,8 +140,6 @@ public abstract class MobAi implements AiState {
                     }
                 }
             }
-
-
         }
     }
 
@@ -166,7 +164,7 @@ public abstract class MobAi implements AiState {
         }
     }
 
-    public static AiState getStateByTag(@NotNull String stateTag) {
+    public static @NotNull AiState getStateByTag(@NotNull String stateTag) {
         String tag = stateTag.toUpperCase(Locale.ROOT);
         AiState aiState = aiStateInstances.get(tag);
 

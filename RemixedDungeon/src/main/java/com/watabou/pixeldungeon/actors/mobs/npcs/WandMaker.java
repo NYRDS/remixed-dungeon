@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -345,7 +346,7 @@ public class WandMaker extends NPC {
 			public boolean collect(@NotNull Bag container ) {
 				if (super.collect( container )) {
 
-					Dungeon.challengeAllMobs(getOwner(), Assets.SND_CHALLENGE);
+					CharUtils.challengeAllMobs(getOwner(), Assets.SND_CHALLENGE);
 					if(getOwner()==Dungeon.hero) {
 						GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
 					}

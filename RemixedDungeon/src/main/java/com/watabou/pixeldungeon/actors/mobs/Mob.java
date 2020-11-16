@@ -59,20 +59,25 @@ import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.hero.Attack;
+import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.actors.hero.Move;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.features.Chasm;
+import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -495,11 +500,8 @@ public abstract class Mob extends Char {
 	}
 
 	public void beckon(int cell) {
-
 		notice();
-
 		setState(MobAi.getStateByClass(Wandering.class));
-
 		setTarget(cell);
 	}
 
@@ -668,7 +670,7 @@ public abstract class Mob extends Char {
 			return false;
 		}
 
-		if (hit(this, enemy, true)) {
+		if (CharUtils.hit(this, enemy, true)) {
 			return true;
 		} else {
 			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
@@ -701,23 +703,50 @@ public abstract class Mob extends Char {
 	public void execute(Char hero, String action) {
 		if(action.equals(CommonActions.MAC_STEAL)) {
 			CharUtils.steal(hero, this);
-			hero.spend(1);
+			hero.spend(TICK);
 			return;
 		}
 
 		if(action.equals(CommonActions.MAC_TAUNT)) {
 			setState(MobAi.getStateByClass(Hunting.class));
 			setTarget(hero.getPos());
-			hero.spend(0.1f);
+			hero.spend(TICK/10);
 			return;
 		}
 
 		if(action.equals(CommonActions.MAC_PUSH)) {
-			hero.push(this);
-			hero.spend(1);
+			this.push(hero);
+			hero.spend(TICK);
+			return;
 		}
 
-		super.execute(hero, action);
+		if(action.equals(CommonActions.MAC_ORDER)) {
+			hero.spend(TICK);
+			hero.selectCell(new CellSelector.Listener() {
+				@Override
+				public void onSelect(Integer cell, Char selector) {
+					CharAction action = actionForCell(cell,level());
+
+					if(action instanceof Move) {
+						beckon(action.dst);
+						return;
+					}
+
+					if(action instanceof Attack) {
+						Attack attack = (Attack)action;
+						setState(MobAi.getStateByClass(Hunting.class));
+						setEnemy(attack.target);
+						return;
+					}
+					say(Utils.format(Game.getVar(R.string.Mob_CantDoIt)));
+				}
+
+				@Override
+				public String prompt() {
+					return Utils.capitalize(Utils.format(Game.getVar(R.string.Mob_ReadyForOrder), name()));
+				}
+			});
+		}
 	}
 
 	public void loot(Object loot, float lootChance) {
