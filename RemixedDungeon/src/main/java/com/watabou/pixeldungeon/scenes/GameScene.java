@@ -782,7 +782,7 @@ public class GameScene extends PixelScene {
         }
     }
 
-    private static boolean cancelCellSelector() {
+    public static boolean cancelCellSelector() {
         if (cellSelector != null && cellSelector.listener != null && cellSelector.listener != defaultCellListener) {
             cellSelector.cancel();
             return true;
@@ -816,7 +816,7 @@ public class GameScene extends PixelScene {
         return wnd;
     }
 
-    static boolean cancel() {
+    static public boolean cancel() {
         if (Dungeon.hero != null && (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth)) {
             Dungeon.hero.curAction = null;
             Dungeon.hero.restoreHealth = false;

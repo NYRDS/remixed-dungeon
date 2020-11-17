@@ -36,13 +36,16 @@ import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.Attack;
+import com.nyrds.pixeldungeon.ml.actions.Order;
+import com.nyrds.pixeldungeon.ml.actions.Push;
+import com.nyrds.pixeldungeon.ml.actions.Steal;
+import com.nyrds.pixeldungeon.ml.actions.Taunt;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.CommonActions;
@@ -59,25 +62,20 @@ import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
-import com.watabou.pixeldungeon.actors.hero.Attack;
-import com.watabou.pixeldungeon.actors.hero.CharAction;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.actors.hero.Move;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.features.Chasm;
-import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -89,8 +87,6 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import lombok.Getter;
-import lombok.Setter;
 import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {
@@ -104,30 +100,19 @@ public abstract class Mob extends Char {
 	@NotNull
 	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
 
-	private AiState state = MobAi.getStateByClass(Sleeping.class);
-
 	protected Object spriteClass;
-
-	@Packable(defaultValue = "-1")//Level.INVALID_CELL
-	@LuaInterface
-	@Getter
-	@Setter
-	private int target = Level.INVALID_CELL;
 
 	protected int defenseSkill = 0;
 
 	protected int exp    = 1;
 	protected int maxLvl = 50;
 
-	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-	private int enemyId = EntityIdSource.INVALID_ID;
-
 	@Packable(defaultValue = "false")
 	public boolean enemySeen;
 
 	public static final float TIME_TO_WAKE_UP = 1f;
 
-	static private Map<String, JSONObject> defMap = new HashMap<>();
+	static private final Map<String, JSONObject> defMap = new HashMap<>();
 
 	private static final String STATE      = "state";
 	private static final String FRACTION   = "fraction";
@@ -542,13 +527,6 @@ public abstract class Mob extends Char {
 		return state;
 	}
 
-	public void setState(AiState state) {
-		if(!state.equals(this.state)) {
-			spend(Actor.TICK/10.f);
-			this.state = state;
-		}
-	}
-
 	protected JSONObject getClassDef(){
 		if (!defMap.containsKey(getEntityKind())) {
 			defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
@@ -605,7 +583,6 @@ public abstract class Mob extends Char {
 				super.interact(chr);
 	}
 
-
 	@Override
 	public boolean swapPosition(Char chr) {
 		if(super.swapPosition(chr)) {
@@ -613,33 +590,6 @@ public abstract class Mob extends Char {
 			return true;
 		}
 		return false;
-	}
-
-	@NotNull
-	public Char getEnemy() {
-		return CharsList.getById(enemyId);
-	}
-
-	public void setEnemy(@NotNull Char enemy) {
-
-		if(enemy == this) {
-			EventCollector.logException(enemy.getEntityKind() + " gonna suicidal");
-		}
-
-		if(BuildConfig.DEBUG) {
-
-			if(enemy == this) {
-				GLog.i("WTF???");
-				throw new TrackedRuntimeException(enemy.getEntityKind());
-			}
-
-			if (enemyId != enemy.getId() && enemy.valid()) {
-//				enemy.getSprite().showStatus(CharSprite.NEGATIVE, "FUCK!");
-				GLog.i("%s  my enemy is %s now ", this.getEntityKind(), enemy.getEntityKind());
-			}
-		}
-
-		enemyId = enemy.getId();
 	}
 
 	public boolean zap(@NotNull Char enemy) {
@@ -700,52 +650,30 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void execute(Char hero, String action) {
+	public void execute(Char hero, @NotNull String action) {
 		if(action.equals(CommonActions.MAC_STEAL)) {
-			CharUtils.steal(hero, this);
-			hero.spend(TICK);
+			hero.nextAction(new Steal(this));
 			return;
 		}
 
 		if(action.equals(CommonActions.MAC_TAUNT)) {
-			setState(MobAi.getStateByClass(Hunting.class));
-			setTarget(hero.getPos());
-			hero.spend(TICK/10);
+			hero.nextAction(new Taunt(this));
 			return;
 		}
 
 		if(action.equals(CommonActions.MAC_PUSH)) {
-			this.push(hero);
-			hero.spend(TICK);
+			hero.nextAction(new Push(this));
+			return;
+		}
+
+		if(action.equals(CommonActions.MAC_HIT)) {
+			hero.nextAction(new Attack(this));
 			return;
 		}
 
 		if(action.equals(CommonActions.MAC_ORDER)) {
-			hero.spend(TICK);
-			hero.selectCell(new CellSelector.Listener() {
-				@Override
-				public void onSelect(Integer cell, Char selector) {
-					CharAction action = actionForCell(cell,level());
-
-					if(action instanceof Move) {
-						beckon(action.dst);
-						return;
-					}
-
-					if(action instanceof Attack) {
-						Attack attack = (Attack)action;
-						setState(MobAi.getStateByClass(Hunting.class));
-						setEnemy(attack.target);
-						return;
-					}
-					say(Utils.format(Game.getVar(R.string.Mob_CantDoIt)));
-				}
-
-				@Override
-				public String prompt() {
-					return Utils.capitalize(Utils.format(Game.getVar(R.string.Mob_ReadyForOrder), name()));
-				}
-			});
+			hero.nextAction(new Order(this));
+			return;
 		}
 	}
 

@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PointF;
 
@@ -55,6 +56,7 @@ public class CellSelector extends TouchArea {
 	
 	public void select( int cell ) {
 		if (enabled && listener != null && cell != Level.INVALID_CELL) {
+			GLog.debug("%s -> %d", listener, cell);
 			listener.onSelect( cell, selector);
 			GameScene.ready();
 		} else {

@@ -143,7 +143,6 @@ public class Hero extends Char {
 	private int defenseSkill = 5;
 
 	private boolean    ready      = false;
-	public CharAction  lastAction = null;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int controlTargetId;
@@ -152,8 +151,6 @@ public class Hero extends Char {
 	public static boolean movieRewardPending;
 
 	public Armor.Glyph killerGlyph = null;
-
-	public Item theKey;
 
 	public boolean restoreHealth = false;
 
@@ -709,14 +706,7 @@ public class Hero extends Char {
 
 		level.updateFieldOfView(getControlTarget());
 
-		curAction = actionForCell(cell, level);
-		if(curAction instanceof Move) {
-			lastAction = null;
-		}
-		next();
-
-		GLog.debug("action: %s", curAction.toString());
-		getControlTarget().curAction = curAction;
+		nextAction(actionForCell(cell, level));
 	}
 
 	public void earnExp(int exp) {
@@ -942,6 +932,7 @@ public class Hero extends Char {
 	@Override
 	public void onAttackComplete() {
 
+		Char enemy = getEnemy();
 		if (enemy != null) { // really strange crash here
 
 			if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
@@ -966,7 +957,7 @@ public class Hero extends Char {
 		}
 
 		curAction = null;
-		enemy     = null;
+		setEnemy(CharsList.DUMMY);
 
 		Invisibility.dispel(this);
 

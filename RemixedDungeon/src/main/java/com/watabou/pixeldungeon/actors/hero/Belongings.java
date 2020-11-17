@@ -70,7 +70,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	private Item selectedItem = CharsList.DUMMY_ITEM;
 
-    private Char owner;
+    private final Char owner;
 	
 	public Bag backpack;
 
@@ -184,30 +184,29 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return Slot.NONE.name();
 	}
 
-	public boolean isEquipped(Item item) {
+	public boolean isEquipped(@NotNull Item item) {
 		return item.equals(weapon) || item.equals(armor) || item.equals(leftHand) || item.equals(ring1) || item.equals(ring2);
 	}
 
+	@LuaInterface
 	public Item checkItem( Item src ) {
-		if(src==CharsList.DUMMY_ITEM){
-			return null;
-		}
-
 		for (Item item : this) {
 			if (item == src ) {
 				return item;
 			}
 		}
-		return null;
+
+		return CharsList.DUMMY_ITEM;
 	}
 
+	@LuaInterface
 	public Item getItem( String itemClass ) {
 		for (Item item : this) {
 			if (itemClass.equals( item.getClassName() )) {
 				return item;
 			}
 		}
-		return null;
+		return CharsList.DUMMY_ITEM;
 	}
 
 	@Deprecated
@@ -482,7 +481,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean unequip(EquipableItem item) {
-		if(checkItem(item)!=null) {
+		if(checkItem(item).valid()) {
 			removeItem(item);
 			activatedItems.remove(item);
 			blockSlots();

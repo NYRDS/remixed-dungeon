@@ -2,12 +2,12 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.Attack;
+import com.nyrds.pixeldungeon.ml.actions.Interact;
+import com.nyrds.pixeldungeon.ml.actions.Move;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.hero.Attack;
-import com.watabou.pixeldungeon.actors.hero.Interact;
-import com.watabou.pixeldungeon.actors.hero.Move;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 

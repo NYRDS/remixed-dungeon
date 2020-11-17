@@ -21,6 +21,9 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.ai.AiState;
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
@@ -31,6 +34,16 @@ import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.Ascend;
+import com.nyrds.pixeldungeon.ml.actions.Attack;
+import com.nyrds.pixeldungeon.ml.actions.CharAction;
+import com.nyrds.pixeldungeon.ml.actions.Cook;
+import com.nyrds.pixeldungeon.ml.actions.Descend;
+import com.nyrds.pixeldungeon.ml.actions.Interact;
+import com.nyrds.pixeldungeon.ml.actions.Move;
+import com.nyrds.pixeldungeon.ml.actions.OpenChest;
+import com.nyrds.pixeldungeon.ml.actions.PickUp;
+import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
@@ -55,20 +68,10 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
-import com.watabou.pixeldungeon.actors.hero.Ascend;
-import com.watabou.pixeldungeon.actors.hero.Attack;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.CharAction;
-import com.watabou.pixeldungeon.actors.hero.Cook;
-import com.watabou.pixeldungeon.actors.hero.Descend;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.actors.hero.Interact;
-import com.watabou.pixeldungeon.actors.hero.Move;
-import com.watabou.pixeldungeon.actors.hero.OpenChest;
-import com.watabou.pixeldungeon.actors.hero.PickUp;
-import com.watabou.pixeldungeon.actors.hero.Unlock;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -107,6 +110,7 @@ import java.util.Map;
 import java.util.Set;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import static com.watabou.pixeldungeon.Dungeon.level;
 
@@ -116,10 +120,20 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public static final String RESISTANCES       = "resistances";
     public MissileWeapon rangedWeapon = null;
 
-	public Char enemy;
+	public CharAction  lastAction = null;
+	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
+	protected
+	int enemyId = EntityIdSource.INVALID_ID;
+
+	@Packable(defaultValue = "-1")//Level.INVALID_CELL
+	@LuaInterface
+	@Getter
+	@Setter
+	private int target = Level.INVALID_CELL;
 
 	@NotNull
 	protected ArrayList<Char> visibleEnemies = new ArrayList<>();
+	protected AiState state = MobAi.getStateByClass(Sleeping.class);
 
 	private Belongings belongings;
 
@@ -763,6 +777,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return action;
 	}
 
+	public void nextAction(CharAction action) {
+		curAction = action;
+
+		if(curAction instanceof Move) {
+			lastAction = null;
+		}
+		next();
+
+		GLog.debug("action: %s", curAction.toString());
+		getControlTarget().curAction = curAction;
+	}
+
 	public void add(Buff buff) {
 		if(!isAlive()) {
 			return;
@@ -1059,6 +1085,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 	}
 
+	public void setState(AiState state) {
+		if(!state.equals(this.state)) {
+			spend(Actor.TICK/10.f);
+			this.state = state;
+		}
+	}
+
 	public boolean friendly(@NotNull Char chr){
 		return !fraction.isEnemy(chr.fraction);
 	}
@@ -1332,6 +1365,32 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void itemPickedUp(Item item) {
 	}
 
+	public void setEnemy(@NotNull Char enemy) {
+
+		if(enemy == this) {
+			EventCollector.logException(enemy.getEntityKind() + " gonna suicidal");
+		}
+
+		if(BuildConfig.DEBUG) {
+
+			if(enemy == this) {
+				GLog.i("WTF???");
+				throw new TrackedRuntimeException(enemy.getEntityKind());
+			}
+
+			if (enemyId != enemy.getId() && enemy.valid()) {
+				GLog.i("%s  my enemy is %s now ", this.getEntityKind(), enemy.getEntityKind());
+			}
+		}
+
+		enemyId = enemy.getId();
+	}
+
+	@NotNull
+	public Char getEnemy() {
+		return CharsList.getById(enemyId);
+	}
+
 	public abstract Char makeClone();
 
 	public ArrayList<String> actions(Char hero) {
@@ -1341,6 +1400,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		actions.add(CommonActions.MAC_TAUNT);
+
+		if(hero.canAttack(this)) {
+			actions.add(CommonActions.MAC_HIT);
+		}
 
 		if(adjacent(hero)) {
 			actions.add(CommonActions.MAC_PUSH);

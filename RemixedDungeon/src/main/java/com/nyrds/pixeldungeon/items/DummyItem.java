@@ -54,4 +54,14 @@ public class DummyItem extends EquipableItem {
     public int requiredSTR() {
         return 0;
     }
+
+    @Override
+    public int quantity() {
+        return 0;
+    }
+
+    @Override
+    public boolean valid() {
+        return false;
+    }
 }

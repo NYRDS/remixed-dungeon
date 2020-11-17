@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.watabou.pixeldungeon.actors.hero;
+package com.nyrds.pixeldungeon.ml.actions;
 
 import com.watabou.pixeldungeon.actors.Char;
 

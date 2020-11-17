@@ -1,4 +1,4 @@
-package com.watabou.pixeldungeon.actors.hero;
+package com.nyrds.pixeldungeon.ml.actions;
 
 import com.watabou.pixeldungeon.actors.Char;
 
@@ -12,7 +12,7 @@ public class Attack extends CharAction {
     @Override
     public boolean act(Char hero) {
 
-        hero.enemy = target;
+        hero.setEnemy(target);
 
         if (target.isAlive() && !hero.pacified) {
 

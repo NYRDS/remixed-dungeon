@@ -539,7 +539,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	@Getter
 	private Char owner = CharsList.DUMMY;
 
-	private static   CellSelector.Listener thrower = new CellSelector.Listener() {
+	private static final CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
 		public void onSelect(Integer target, Char selector) {
 			if (target != null) {
@@ -679,7 +679,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public boolean usableByHero() {
-		return quantity() >= 1 && (Dungeon.hero.getBelongings().getItem(getClassName()) != null || isEquipped(Dungeon.hero));
+		return quantity() >= 1 && (Dungeon.hero.getBelongings().getItem(getClassName()).valid() || isEquipped(Dungeon.hero));
 	}
 
 	public boolean announcePickUp() {
@@ -726,5 +726,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	}
 
 	public void charAct() {
+	}
+
+	public boolean valid() {
+		return true;
 	}
 }

@@ -160,11 +160,11 @@ public class Shopkeeper extends NPC {
 
 		var supply = getBelongings().getItem(newItem.getEntityKind());
 
-		if(!newItem.stackable && supply != null) {
+		if(!newItem.stackable && supply.valid()) {
 			return;
 		}
 
-		if(newItem.stackable && supply != null && supply.price() > 100) {
+		if(newItem.stackable && supply.valid() && supply.price() > 100) {
 			return;
 		}
 
@@ -173,7 +173,7 @@ public class Shopkeeper extends NPC {
 
 	public void addItem(Item item) {
 		if(item instanceof Bag && Dungeon.hero != null) {
-			if(Dungeon.hero.getBelongings().getItem(item.getClassName())!=null) {
+			if(Dungeon.hero.getBelongings().getItem(item.getClassName()).valid()) {
 				return;
 			}
 		}

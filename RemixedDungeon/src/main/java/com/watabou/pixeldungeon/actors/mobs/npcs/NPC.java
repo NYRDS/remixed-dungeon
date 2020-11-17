@@ -84,21 +84,21 @@ public abstract class NPC extends Mob {
 		say(Game.getVar(phrases[index]));
 	}
 
-	public boolean exchangeItem(Char hero ,String itemClass, String rewardClass) {
+	public boolean exchangeItem(@NotNull Char hero , String itemClass, String rewardClass) {
 		Item item = hero.getBelongings().getItem(itemClass );
-		if (item != null) {
-
-			item.removeItemFrom(Dungeon.hero);
-
-			Item reward = ItemFactory.itemByName(rewardClass);
-
-			if (reward.doPickUp(hero)) {
-				GLog.i(Hero.getHeroYouNowHave(), reward.name());
-			} else {
-				reward.doDrop(hero);
-			}
-			return true;
+		if(!item.valid()) {
+			return false;
 		}
-		return false;
+
+		item.removeItemFrom(Dungeon.hero);
+
+		Item reward = ItemFactory.itemByName(rewardClass);
+
+		if (reward.doPickUp(hero)) {
+			GLog.i(Hero.getHeroYouNowHave(), reward.name());
+		} else {
+			reward.doDrop(hero);
+		}
+		return true;
 	}
 }

@@ -1,4 +1,4 @@
-package com.watabou.pixeldungeon.actors.hero;
+package com.nyrds.pixeldungeon.ml.actions;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
