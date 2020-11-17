@@ -6,6 +6,7 @@ public class Attack extends CharAction {
     public Char target;
     public Attack(Char target ) {
         this.target = target;
+        dst = target.getPos();
     }
 
     @Override
@@ -23,6 +24,6 @@ public class Attack extends CharAction {
             }
             return hero.actMeleeAttack(target);
         }
-        return hero.getCloserIfVisible(target.getPos());
+        return hero.getCloserIfVisible(dst);
     }
 }
