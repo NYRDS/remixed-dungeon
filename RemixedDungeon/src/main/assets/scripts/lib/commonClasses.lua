@@ -325,7 +325,7 @@ local RPD = {
         return item
     end,
 
-    creteItem = function(itemClass, itemDesc)
+    createItem = function(itemClass, itemDesc)
         local json = require("scripts/lib/json")
         local item = ItemFactory:createItem(itemClass, json.encode(itemDesc))
         return item
