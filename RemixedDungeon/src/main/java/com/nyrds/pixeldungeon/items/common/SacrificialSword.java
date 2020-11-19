@@ -2,16 +2,15 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
-import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 
-public class SacrificialSword extends SpecialWeapon {
+public class SacrificialSword extends MeleeWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 4;
@@ -33,7 +32,7 @@ public class SacrificialSword extends SpecialWeapon {
 		
 	}
 
-	private double baseChance(Hero hero) {
+	private double baseChance(Char hero) {
 		double armorPenalty = hero.getBelongings().armor.effectiveDr() / 8.f;
 
 		double classBonus = 1;
@@ -52,7 +51,7 @@ public class SacrificialSword extends SpecialWeapon {
 		return (0.25 + (hero.lvl() * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
 	}
 	
-	public void postAttack(Hero user, Char tgt ) {
+	public void postAttack(Char user, Char tgt ) {
 		
 		if(tgt instanceof Boss) {
 			return;

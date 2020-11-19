@@ -3,10 +3,10 @@ package com.nyrds.pixeldungeon.items.chaos;
 import com.nyrds.Packable;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.utils.Bundle;
 
-public class ChaosSword extends SpecialWeapon implements IChaosItem {
+public class ChaosSword extends MeleeWeapon implements IChaosItem {
 
 	@Packable
 	private int charge = 0;

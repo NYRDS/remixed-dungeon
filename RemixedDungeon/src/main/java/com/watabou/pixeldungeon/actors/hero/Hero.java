@@ -88,7 +88,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
-import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -941,14 +940,10 @@ public class Hero extends Char {
 			} else {
 				AttackIndicator.target(enemy);
 
-				if (getBelongings().weapon instanceof SpecialWeapon) {
-					((SpecialWeapon) getBelongings().weapon).preAttack(this, enemy);
-				}
+				getBelongings().weapon.preAttack(this, enemy);
 
 				if (attack(enemy)) {
-					if (getBelongings().weapon instanceof SpecialWeapon) {
-						((SpecialWeapon) getBelongings().weapon).postAttack(this, enemy);
-					}
+					getBelongings().weapon.postAttack(this, enemy);
 				}
 
 			}
@@ -1106,16 +1101,14 @@ public class Hero extends Char {
 			return true;
 		}
 
-		if (getBelongings().weapon instanceof SpecialWeapon) {
-			SpecialWeapon weapon = (SpecialWeapon) getBelongings().weapon;
+		var weapon = getBelongings().weapon;
 
-			Ballistica.cast(getPos(), enemy.getPos(), false, true);
+		Ballistica.cast(getPos(), enemy.getPos(), false, true);
 
-			for (int i = 1; i <= Math.min(Ballistica.distance, weapon.getRange()); i++) {
-				Char chr = Actor.findChar(Ballistica.trace[i]);
-				if (chr == enemy) {
-					return true;
-				}
+		for (int i = 1; i <= Math.min(Ballistica.distance, weapon.range()); i++) {
+			Char chr = Actor.findChar(Ballistica.trace[i]);
+			if (chr == enemy) {
+				return true;
 			}
 		}
 

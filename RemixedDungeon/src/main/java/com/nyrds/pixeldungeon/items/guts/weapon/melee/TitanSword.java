@@ -1,9 +1,9 @@
 package com.nyrds.pixeldungeon.items.guts.weapon.melee;
 
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 
-public class TitanSword extends SpecialWeapon {
+public class TitanSword extends MeleeWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 6;

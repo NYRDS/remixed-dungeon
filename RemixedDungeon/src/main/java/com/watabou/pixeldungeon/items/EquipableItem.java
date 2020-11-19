@@ -217,4 +217,14 @@ public abstract class EquipableItem extends Item {
 	public boolean isCoveringHair() {
 		return false;
 	}
+
+	//former SpecialWeapon
+	public int range() {
+		return 1;
+	}
+	public void preAttack(Char hero, Char tgt ) {
+	}
+
+	public void postAttack(Char hero, Char tgt ) {
+	}
 }

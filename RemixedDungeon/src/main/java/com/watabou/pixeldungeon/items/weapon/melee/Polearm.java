@@ -2,11 +2,10 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 
-public class Polearm extends SpecialWeapon {
+public class Polearm extends MeleeWeapon {
 
 	{
 		//imageFile = "items/polearms.png";
-		range = 2;
 		animation_class = SPEAR_ATTACK;
 	}
 
@@ -27,5 +26,10 @@ public class Polearm extends SpecialWeapon {
 	@Override
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.LEFT_HAND;
+	}
+
+	@Override
+	public int range() {
+		return 2;
 	}
 }

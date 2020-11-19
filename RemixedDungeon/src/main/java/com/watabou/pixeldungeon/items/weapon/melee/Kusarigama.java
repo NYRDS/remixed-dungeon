@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.KusarigamaChain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -18,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class Kusarigama extends SpecialWeapon {
+public class Kusarigama extends MeleeWeapon {
     {
         animation_class = SWORD_ATTACK;
     }
@@ -31,8 +30,6 @@ public class Kusarigama extends SpecialWeapon {
 
         image = 0;
         imageFile = "items/kusarigama.png";
-
-        range = 2;
     }
 
     private static CellSelector.Listener impaler = new CellSelector.Listener() {
@@ -98,16 +95,21 @@ public class Kusarigama extends SpecialWeapon {
     }
 
     @Override
-    public void preAttack(Hero user, Char tgt) {
+    public void preAttack(Char user, Char tgt) {
         if (user.level().distance(user.getPos(), tgt.getPos()) > 1) {
             drawChain(tgt.getPos(), user);
         }
     }
 
     @Override
-    public void postAttack(Hero user, Char tgt) {
+    public void postAttack(Char user, Char tgt) {
         if (Random.Float(1) < 0.1f) {
             Buff.prolong(tgt, Vertigo.class, 3);
         }
+    }
+
+    @Override
+    public int range() {
+        return 2;
     }
 }

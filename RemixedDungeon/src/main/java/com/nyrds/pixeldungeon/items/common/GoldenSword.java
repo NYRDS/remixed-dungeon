@@ -2,11 +2,11 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.items.weapon.melee.SpecialWeapon;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.utils.Random;
 
-public class GoldenSword extends SpecialWeapon {
+public class GoldenSword extends MeleeWeapon {
 	{
 		imageFile = "items/swords.png";
 		image = 5;

@@ -326,4 +326,19 @@ public class CustomItem extends EquipableItem {
     public void charAct() {
         script.runOptional("charAct");
     }
+
+    @Override
+    public int range() {
+        return script.runOptional("range",super.range());
+    }
+
+    @Override
+    public void preAttack(Char hero, Char tgt) {
+        script.runOptionalNoRet("preAttack",tgt);
+    }
+
+    @Override
+    public void postAttack(Char hero, Char tgt) {
+        script.runOptionalNoRet("postAttack",tgt);
+    }
 }
