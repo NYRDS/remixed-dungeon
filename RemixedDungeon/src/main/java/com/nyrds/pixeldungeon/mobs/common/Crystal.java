@@ -61,7 +61,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		kind = (ctr++) % 2;
 
 		hp(ht(depth * 4 + 1));
-		defenseSkill = depth * 2 + 1;
+		baseDefenseSkill = depth * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 

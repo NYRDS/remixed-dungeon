@@ -95,14 +95,15 @@ public class Kusarigama extends MeleeWeapon {
     }
 
     @Override
-    public void preAttack(Char user, Char tgt) {
+    public void preAttack(Char tgt) {
+        Char user = getOwner();
         if (user.level().distance(user.getPos(), tgt.getPos()) > 1) {
             drawChain(tgt.getPos(), user);
         }
     }
 
     @Override
-    public void postAttack(Char user, Char tgt) {
+    public void postAttack(Char tgt) {
         if (Random.Float(1) < 0.1f) {
             Buff.prolong(tgt, Vertigo.class, 3);
         }

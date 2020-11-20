@@ -60,7 +60,7 @@ public class King extends Boss {
 	public King() {
 		hp(ht(300));
 		exp = 40;
-		defenseSkill = 25;
+		baseDefenseSkill = 25;
 
 		lastPedestal   = -1;
 		targetPedestal = -1;
@@ -191,7 +191,7 @@ public class King extends Boss {
 
 		public Undead() {
 			hp(ht(28));
-			defenseSkill = 15;
+			baseDefenseSkill = 15;
 			
 			exp = 0;
 			

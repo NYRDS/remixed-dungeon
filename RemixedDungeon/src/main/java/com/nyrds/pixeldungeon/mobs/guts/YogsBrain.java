@@ -33,7 +33,7 @@ public class YogsBrain extends Mob implements IZapper {
     {
 
         hp(ht(350));
-        defenseSkill = 30;
+        baseDefenseSkill = 30;
 
         exp = 25;
 

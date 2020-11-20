@@ -148,7 +148,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	private void fillMobStats(boolean restoring) {
 		JSONObject classDesc = getClassDef();
 
-		defenseSkill = classDesc.optInt("defenseSkill", defenseSkill);
+		baseDefenseSkill = classDesc.optInt("defenseSkill", baseDefenseSkill);
 		attackSkill = classDesc.optInt("attackSkill", attackSkill);
 
 		exp = classDesc.optInt("exp", exp);

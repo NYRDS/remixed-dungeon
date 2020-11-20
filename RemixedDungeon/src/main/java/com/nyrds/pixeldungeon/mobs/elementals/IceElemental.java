@@ -26,7 +26,7 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 
 	public void adjustStats(int depth) {
 		hp(ht(depth * 10 + 1));
-		defenseSkill = depth * 2 + 1;
+		baseDefenseSkill = depth * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		
@@ -43,7 +43,7 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public int attackSkill(Char target) {
-		return defenseSkill / 3;
+		return baseDefenseSkill / 3;
 	}
 
 	@Override

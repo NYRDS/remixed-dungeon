@@ -62,7 +62,7 @@ public class Wraith extends Mob implements IDepthAdjustable {
 	
 	public void adjustStats( int level ) {
 		this.level = level;
-		defenseSkill = attackSkill( null ) * 5;
+		baseDefenseSkill = attackSkill( null ) * 5;
 		enemySeen = true;
 	}
 	

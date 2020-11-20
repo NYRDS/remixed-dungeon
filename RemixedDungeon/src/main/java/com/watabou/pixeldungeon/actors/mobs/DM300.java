@@ -53,7 +53,7 @@ public class DM300 extends Boss {
 		
 		hp(ht(200));
 		exp = 30;
-		defenseSkill = 18;
+		baseDefenseSkill = 18;
 		
 		float dice = Random.Float();
 		if( dice < 0.5 ) {

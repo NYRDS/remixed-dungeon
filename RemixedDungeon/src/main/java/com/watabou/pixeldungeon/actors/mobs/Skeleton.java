@@ -38,7 +38,7 @@ public class Skeleton extends UndeadMob {
 
 	public Skeleton() {
 		hp(ht(25));
-		defenseSkill = 9;
+		baseDefenseSkill = 9;
 		
 		exp = 5;
 		maxLvl = 10;

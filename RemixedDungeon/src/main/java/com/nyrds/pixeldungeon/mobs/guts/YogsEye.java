@@ -11,7 +11,7 @@ import com.watabou.utils.Random;
 public class YogsEye extends Mob {
     {
         hp(ht(165));
-        defenseSkill = 25;
+        baseDefenseSkill = 25;
 
         exp = 25;
 

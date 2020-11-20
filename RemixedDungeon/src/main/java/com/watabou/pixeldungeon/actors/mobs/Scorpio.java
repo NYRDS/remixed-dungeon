@@ -37,7 +37,7 @@ public class Scorpio extends Mob implements IZapper {
 	public Scorpio() {
 
 		hp(ht(95));
-		defenseSkill = 24;
+		baseDefenseSkill = 24;
 		
 		exp = 14;
 		maxLvl = 25;

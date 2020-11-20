@@ -1,12 +1,11 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
 import com.nyrds.Packable;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.utils.Bundle;
 
 
-public class ChaosArmor extends Armor implements IChaosItem {
+public class ChaosArmor extends Armor {
 
 	@Packable
 	private int charge = 0;
@@ -44,7 +43,7 @@ public class ChaosArmor extends Armor implements IChaosItem {
 	}
 
 	@Override
-	public void ownerDoesDamage(Char ch, int damage) {
+	public void ownerDoesDamage(int damage) {
 
 		if(isCursed()) {
 			return;

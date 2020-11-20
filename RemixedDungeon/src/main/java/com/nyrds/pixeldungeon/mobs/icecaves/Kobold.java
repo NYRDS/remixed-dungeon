@@ -11,7 +11,7 @@ public class Kobold extends Mob {
 	public Kobold() {
 		
 		hp(ht(60));
-		defenseSkill = 18;
+		baseDefenseSkill = 18;
 		
 		exp = 10;
 		maxLvl = 20;

@@ -102,8 +102,6 @@ public abstract class Mob extends Char {
 
 	protected Object spriteClass;
 
-	protected int defenseSkill = 0;
-
 	protected int exp    = 1;
 	protected int maxLvl = 50;
 
@@ -263,7 +261,7 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean canAttack(@NotNull Char enemy) {
-		return adjacent(enemy) && !pacified;
+		return !pacified && super.canAttack(enemy);
 	}
 
 	public boolean getCloser(int target) {
@@ -321,12 +319,6 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public final void onAttackComplete() {
-		attack(getEnemy());
-		super.onAttackComplete();
-	}
-
-	@Override
 	public final void onZapComplete() {
 		zap(getEnemy());
 		super.onZapComplete();
@@ -334,7 +326,7 @@ public abstract class Mob extends Char {
 
 	@Override
 	public int defenseSkill(Char enemy) {
-		return enemySeen && !paralysed ? defenseSkill : 0;
+		return enemySeen ? super.defenseSkill(enemy) : 0;
 	}
 
 	@Override

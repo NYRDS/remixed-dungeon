@@ -17,7 +17,7 @@ public class ColdSpirit extends Mob {
         hp(ht(50));
 
         baseSpeed = 1.3f;
-        defenseSkill = 16;
+        baseDefenseSkill = 16;
         flying = true;
 
         exp = 8;

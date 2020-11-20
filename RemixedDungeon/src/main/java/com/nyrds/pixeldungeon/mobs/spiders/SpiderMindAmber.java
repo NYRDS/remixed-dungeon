@@ -26,7 +26,7 @@ public class SpiderMindAmber extends MultiKindMob {
 
 	public SpiderMindAmber() {
 		hp(ht(30));
-		defenseSkill = 5;
+		baseDefenseSkill = 5;
 		baseSpeed = 0.9f;
 		
 		exp = 9;

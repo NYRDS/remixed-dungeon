@@ -56,7 +56,7 @@ public class Tengu extends Boss implements IZapper {
 		
 		hp(ht(120));
 		exp = 20;
-		defenseSkill = 20;
+		baseDefenseSkill = 20;
 		
 		addResistance( ToxicGas.class );
 		addResistance( Poison.class );

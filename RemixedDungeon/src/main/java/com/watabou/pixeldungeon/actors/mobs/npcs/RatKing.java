@@ -42,7 +42,7 @@ public class RatKing extends NPC {
 	
 	public RatKing() {
 		setState(MobAi.getStateByClass(Sleeping.class));
-		defenseSkill = 20;
+		baseDefenseSkill = 20;
 		
 		hp(ht(30));
 		exp = 1;

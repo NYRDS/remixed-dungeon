@@ -17,7 +17,7 @@ public class Deathling extends UndeadMob {
         hp(ht(HEALTH + getModifier()));
 
         baseSpeed = 1.1f;
-        defenseSkill = 1 + getModifier();
+        baseDefenseSkill = 1 + getModifier();
         flying = true;
 
         exp = 0;

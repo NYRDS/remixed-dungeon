@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 public class Zombie extends UndeadMob {
     {
         hp(ht(33));
-        defenseSkill = 10;
+        baseDefenseSkill = 10;
 
         exp = 6;
         maxLvl = 15;

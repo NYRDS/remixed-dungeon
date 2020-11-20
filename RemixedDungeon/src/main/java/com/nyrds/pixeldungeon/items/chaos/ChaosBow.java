@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.ranged.Bow;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.utils.Bundle;
 
-public class ChaosBow extends Bow implements IChaosItem {
+public class ChaosBow extends Bow {
 
 	@Packable
 	private int charge = 0;
@@ -44,7 +44,7 @@ public class ChaosBow extends Bow implements IChaosItem {
 	}
 	
 	@Override
-	public void ownerDoesDamage(Char ch,int damage) {
+	public void ownerDoesDamage(int damage) {
 		
 		if(isCursed()) {
 			return;

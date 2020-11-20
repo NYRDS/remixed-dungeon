@@ -41,7 +41,7 @@ public class Eye extends Mob {
 
     public Eye() {
         hp(ht(100));
-        defenseSkill = 20;
+        baseDefenseSkill = 20;
 
         exp = 13;
         maxLvl = 25;

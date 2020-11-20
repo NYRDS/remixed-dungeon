@@ -37,7 +37,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 	public void adjustStats(int depth) {
 		hp(ht(depth * 3 + 1));
-		defenseSkill = depth * 2 + 1;
+		baseDefenseSkill = depth * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 	}
@@ -49,7 +49,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 
 	@Override
 	public int attackSkill(Char target) {
-		return defenseSkill * 2;
+		return baseDefenseSkill * 2;
 	}
 
 	@Override

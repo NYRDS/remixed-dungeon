@@ -28,7 +28,7 @@ public class Gnoll extends Mob {
 	
 	{
 		hp(ht(12));
-		defenseSkill = 4;
+		baseDefenseSkill = 4;
 		
 		exp = 2;
 		maxLvl = 12;

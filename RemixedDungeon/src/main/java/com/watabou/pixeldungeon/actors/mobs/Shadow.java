@@ -8,7 +8,7 @@ import com.watabou.utils.Random;
 public class Shadow extends Mob {
 	{
 		hp(ht(20));
-		defenseSkill = 15;
+		baseDefenseSkill = 15;
 		
 		exp = 5;
 		maxLvl = 10;

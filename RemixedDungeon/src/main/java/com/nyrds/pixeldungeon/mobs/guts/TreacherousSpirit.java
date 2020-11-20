@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class TreacherousSpirit extends Mob {
     {
         hp(ht(200));
-        defenseSkill = 35;
+        baseDefenseSkill = 35;
 
         exp = 45;
         maxLvl = 30;

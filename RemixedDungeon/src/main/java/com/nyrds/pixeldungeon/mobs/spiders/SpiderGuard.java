@@ -15,7 +15,7 @@ public class SpiderGuard extends MultiKindMob {
 
 	public SpiderGuard() {
 		hp(ht(35));
-		defenseSkill = 15;
+		baseDefenseSkill = 15;
 		baseSpeed = 1.2f;
 		
 		exp = 4;

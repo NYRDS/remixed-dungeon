@@ -43,7 +43,7 @@ public class Warlock extends Mob implements IZapper {
 
 	public Warlock() {
 		hp(ht(70));
-		defenseSkill = 18;
+		baseDefenseSkill = 18;
 
 		exp = 11;
 		maxLvl = 21;

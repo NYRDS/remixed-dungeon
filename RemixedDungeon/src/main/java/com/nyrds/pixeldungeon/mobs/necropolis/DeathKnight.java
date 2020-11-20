@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 public class DeathKnight extends UndeadMob {
     {
         hp(ht(35));
-        defenseSkill = 12;
+        baseDefenseSkill = 12;
 
         exp = 7;
         maxLvl = 15;

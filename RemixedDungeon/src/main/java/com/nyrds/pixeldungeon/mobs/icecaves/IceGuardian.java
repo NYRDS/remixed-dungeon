@@ -19,7 +19,7 @@ public class IceGuardian extends MultiKindMob {
 	public IceGuardian() {
 		hp(ht(70));
 		exp = 5;
-		defenseSkill = 30;
+		baseDefenseSkill = 30;
 
 		kind = 1;
 

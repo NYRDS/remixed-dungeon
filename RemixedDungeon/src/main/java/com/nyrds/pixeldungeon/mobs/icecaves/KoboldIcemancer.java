@@ -20,7 +20,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 
 	public KoboldIcemancer() {
 		hp(ht(70));
-		defenseSkill = 18;
+		baseDefenseSkill = 18;
 
 		exp = 11;
 		maxLvl = 21;

@@ -333,12 +333,22 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void preAttack(Char hero, Char tgt) {
+    public void preAttack(Char tgt) {
         script.runOptionalNoRet("preAttack",tgt);
     }
 
     @Override
-    public void postAttack(Char hero, Char tgt) {
+    public void postAttack( Char tgt) {
         script.runOptionalNoRet("postAttack",tgt);
+    }
+
+    @Override
+    public void ownerDoesDamage(int damage) {
+        script.runOptionalNoRet("ownerDoesDamage",damage);
+    }
+
+    @Override
+    public void ownerTakesDamage(int damage) {
+        script.runOptionalNoRet("ownerTakesDamage",damage);
     }
 }

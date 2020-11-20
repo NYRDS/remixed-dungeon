@@ -35,7 +35,7 @@ public class FireElemental extends Mob {
 	public FireElemental() {
 
 		hp(ht(65));
-		defenseSkill = 20;
+		baseDefenseSkill = 20;
 		
 		exp = 10;
 		maxLvl = 20;

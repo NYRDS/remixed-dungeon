@@ -47,7 +47,7 @@ public class ShadowLord extends Boss implements IZapper {
 
 	public ShadowLord() {
 		hp(ht(260));
-		defenseSkill = 40;
+		baseDefenseSkill = 40;
 
 		exp = 60;
 

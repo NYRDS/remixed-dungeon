@@ -23,7 +23,7 @@ public class SpiderExploding extends MultiKindMob {
 
     public SpiderExploding() {
         hp(ht(5));
-        defenseSkill = 1;
+        baseDefenseSkill = 1;
         baseSpeed = 2f;
 
         exp = 3;

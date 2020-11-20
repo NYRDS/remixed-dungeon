@@ -173,7 +173,7 @@ public class Yog extends Boss {
 			spriteClass = RottingFistSprite.class;
 
 			hp(ht(500));
-			defenseSkill = 25;
+			baseDefenseSkill = 25;
 
 			exp = 0;
 
@@ -244,7 +244,7 @@ public class Yog extends Boss {
 		{
 
 			hp(ht(400));
-			defenseSkill = 25;
+			baseDefenseSkill = 25;
 
 			exp = 0;
 
@@ -319,7 +319,7 @@ public class Yog extends Boss {
 			spriteClass = LarvaSprite.class;
 
 			hp(ht(120));
-			defenseSkill = 20;
+			baseDefenseSkill = 20;
 
 			exp = 0;
 

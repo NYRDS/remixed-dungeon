@@ -66,7 +66,7 @@ public class Lich extends Boss {
     public Lich() {
         hp(ht(HEALTH));
         exp = 25;
-        defenseSkill = 23;
+        baseDefenseSkill = 23;
 
         addImmunity( Paralysis.class );
         addImmunity( ToxicGas.class );

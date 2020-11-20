@@ -13,7 +13,7 @@ public class SpiderNest extends Mob {
 	public SpiderNest() {
 		
 		hp(ht(10));
-		defenseSkill = 1;
+		baseDefenseSkill = 1;
 		baseSpeed = 0f;
 
 		exp = 0;

@@ -19,7 +19,7 @@ import com.watabou.utils.Random;
 public class YogsHeart extends Mob {
     {
         hp(ht(450));
-        defenseSkill = 40;
+        baseDefenseSkill = 40;
 
         exp = 12;
 

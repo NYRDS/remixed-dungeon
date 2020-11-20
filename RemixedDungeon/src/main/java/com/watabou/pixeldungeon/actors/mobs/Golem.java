@@ -32,7 +32,7 @@ public class Golem extends Mob {
 	public Golem() {
 
 		hp(ht(85));
-		defenseSkill = 18;
+		baseDefenseSkill = 18;
 		
 		exp = 12;
 		maxLvl = 22;

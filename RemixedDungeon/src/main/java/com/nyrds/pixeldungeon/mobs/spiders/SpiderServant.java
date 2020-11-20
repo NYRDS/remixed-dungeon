@@ -13,7 +13,7 @@ public class SpiderServant extends MultiKindMob {
 	
 	public SpiderServant() {
 		hp(ht(25));
-		defenseSkill = 5;
+		baseDefenseSkill = 5;
 		baseSpeed = 1.1f;
 		
 		exp = 2;

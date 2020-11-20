@@ -44,7 +44,7 @@ public class Goo extends Boss {
 	public Goo() {
 		hp(ht(68));
 		exp = 9;
-		defenseSkill = 12;
+		baseDefenseSkill = 12;
 		spriteClass = GooSprite.class;
 
 		loot(Treasury.Category.POTION, 0.8f);

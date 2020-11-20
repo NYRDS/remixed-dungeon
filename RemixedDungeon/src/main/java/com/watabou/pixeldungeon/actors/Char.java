@@ -55,12 +55,14 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
+import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -81,12 +83,14 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -111,6 +115,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.var;
 
 import static com.watabou.pixeldungeon.Dungeon.level;
 
@@ -150,6 +155,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	@Getter
 	private int id = EntityIdSource.INVALID_ID;
+
+	protected int baseDefenseSkill;
 
 	public  Fraction fraction = Fraction.DUNGEON;
 
@@ -423,7 +430,34 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int defenseSkill(Char enemy) {
-		return 0;
+
+		int defenseSkill = baseDefenseSkill + lvl();
+
+		int bonus = buffLevel(RingOfEvasion.Evasion.class.getSimpleName())
+				+ buffLevel(Blessed.class.getSimpleName());
+
+		float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
+		if (paralysed) {
+			evasion /= 2;
+		}
+
+		int aEnc = getBelongings().armor.requiredSTR() - effectiveSTR();
+
+		if (aEnc > 0) {
+			return (int) (defenseSkill * evasion / Math.pow(1.5, aEnc));
+		} else {
+
+			if (getHeroClass() == HeroClass.ROGUE) {
+
+				if (curAction != null && getSubClass() == HeroSubClass.FREERUNNER && !isStarving()) {
+					evasion *= 2;
+				}
+
+				return (int) ((defenseSkill - aEnc) * evasion);
+			} else {
+				return (int) (defenseSkill * evasion);
+			}
+		}
 	}
 
 	public String defenseVerb() {
@@ -461,10 +495,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return false;
 		}
 		return getCloserIfVisible(enemy.getPos());
-	}
-
-	public boolean canAttack(@NotNull Char enemy) {
-		return false;
 	}
 
 	public boolean actBowAttack(Char enemy) {
@@ -910,6 +940,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void onAttackComplete() {
+		Char enemy = getEnemy();
+		getBelongings().weapon.preAttack(enemy);
+
+		if (attack(enemy)) {
+			getBelongings().weapon.postAttack(enemy);
+		}
+
+		curAction = null;
+
+		Invisibility.dispel(this);
+
 		next();
 	}
 
@@ -1453,6 +1494,33 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@LuaInterface
 	@Deprecated // keep it for old version of Remixed Additions
 	public void setSoulPoints(int i) {
+	}
+
+	public boolean canAttack(@NotNull Char enemy) {
+		if (adjacent(enemy)) {
+			return true;
+		}
+
+		var weapon = getBelongings().weapon;
+
+		if(weapon.range() > 1) {
+			Ballistica.cast(getPos(), enemy.getPos(), false, true);
+
+			for (int i = 1; i <= Math.min(Ballistica.distance, weapon.range()); i++) {
+				Char chr = Actor.findChar(Ballistica.trace[i]);
+				if (chr == enemy) {
+					return true;
+				}
+			}
+		}
+
+		if(getBelongings().weapon instanceof KindOfBow) {
+			if(getBelongings().getItem(Arrow.class)!=null) {
+				return enemy.getPos() == Ballistica.cast(getPos(), enemy.getPos(), false, true);
+			}
+		}
+
+		return false;
 	}
 
 	@LuaInterface

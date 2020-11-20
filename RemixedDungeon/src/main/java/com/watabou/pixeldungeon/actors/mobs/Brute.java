@@ -36,7 +36,7 @@ public class Brute extends Mob {
 	public Brute() {
 
 		hp(ht(40));
-		defenseSkill = 15;
+		baseDefenseSkill = 15;
 		
 		exp = 8;
 		maxLvl = 15;

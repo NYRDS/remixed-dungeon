@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 public class ExplodingSkull extends UndeadMob {
     {
         hp(ht(10));
-        defenseSkill = 1;
+        baseDefenseSkill = 1;
 
         baseSpeed = 1.5f;
 

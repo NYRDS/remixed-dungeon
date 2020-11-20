@@ -29,7 +29,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 		if ( kind > 5 ) { kind = 5; }
 
 		hp(ht(depth * 5 + 1));
-		defenseSkill = depth * 2 + 1;
+		baseDefenseSkill = depth * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		
@@ -45,7 +45,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return defenseSkill / 2;
+		return baseDefenseSkill / 2;
 	}
 	
 	@Override

@@ -56,7 +56,7 @@ public class Statue extends Mob {
 		setState(MobAi.getStateByClass(Passive.class));
 
 		hp(ht(15 + Dungeon.depth * 5));
-		defenseSkill = 4 + Dungeon.depth;
+		baseDefenseSkill = 4 + Dungeon.depth;
 
 		addImmunity( ToxicGas.class );
 		addImmunity( Poison.class );

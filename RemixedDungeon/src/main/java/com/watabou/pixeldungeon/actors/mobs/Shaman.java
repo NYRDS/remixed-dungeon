@@ -39,7 +39,7 @@ public class Shaman extends Mob implements IZapper {
 
 	public Shaman() {
 		hp(ht(18));
-		defenseSkill = 8;
+		baseDefenseSkill = 8;
 
 		exp = 6;
 		maxLvl = 14;

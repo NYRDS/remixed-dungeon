@@ -17,7 +17,7 @@ import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class ChaosStaff extends Wand implements IChaosItem {
+public class ChaosStaff extends Wand {
 
     @Packable
     private int charge = 0;
@@ -48,7 +48,7 @@ public class ChaosStaff extends Wand implements IChaosItem {
     }
 
     @Override
-    public void ownerDoesDamage(Char ch, int damage) {
+    public void ownerDoesDamage(int damage) {
     }
 
     private void selectImage() {

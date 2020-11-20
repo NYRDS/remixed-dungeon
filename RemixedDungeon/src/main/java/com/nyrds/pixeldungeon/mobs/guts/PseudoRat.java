@@ -14,7 +14,7 @@ import com.watabou.utils.Random;
 public class PseudoRat extends Mob {
     {
         hp(ht(320));
-        defenseSkill = 30;
+        baseDefenseSkill = 30;
 
         exp = 20;
         maxLvl = 35;

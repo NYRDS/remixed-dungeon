@@ -20,7 +20,7 @@ import lombok.val;
 public class ArmoredStatue extends Statue {
 
 	public ArmoredStatue() {
-		defenseSkill = 4 + Dungeon.depth*2;
+		baseDefenseSkill = 4 + Dungeon.depth*2;
 	}
 
 	@Override

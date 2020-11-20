@@ -19,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class Worm extends Mob {
     {
         hp(ht(195));
-        defenseSkill = 15;
+        baseDefenseSkill = 15;
 
         exp = 18;
         maxLvl = 35;

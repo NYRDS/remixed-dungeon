@@ -116,9 +116,12 @@ public class AttackIndicator extends Tag {
 	}
 	
 	private void updateImage(@NotNull Char target) {
-		
 		if (sprite != null) {
 			sprite.killAndErase();
+		}
+
+		if(target.invalid()) {
+			return;
 		}
 
 		sprite = target.newSprite().avatar();

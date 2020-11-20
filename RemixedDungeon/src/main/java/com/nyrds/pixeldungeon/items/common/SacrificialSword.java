@@ -50,8 +50,9 @@ public class SacrificialSword extends MeleeWeapon {
 
 		return (0.25 + (hero.lvl() * 4 + Math.pow(level(),2)) * 0.01) * classBonus / armorPenalty;
 	}
-	
-	public void postAttack(Char user, Char tgt ) {
+
+	@Override
+	public void postAttack(Char tgt ) {
 		
 		if(tgt instanceof Boss) {
 			return;
@@ -66,6 +67,7 @@ public class SacrificialSword extends MeleeWeapon {
 		}
 
 		Mob mob = (Mob) tgt;
+		Char user = getOwner();
 
 		double conversionChance =     baseChance(user) +
 									- mob.defenseSkill(user)*0.01*mob.speed()

@@ -16,7 +16,7 @@ public class GoldenStatue extends Statue {
 
 	public GoldenStatue() {
 		hp(ht(15 + Dungeon.depth * 5));
-		defenseSkill = 4 + Dungeon.depth;
+		baseDefenseSkill = 4 + Dungeon.depth;
 	}
 
 	@Override

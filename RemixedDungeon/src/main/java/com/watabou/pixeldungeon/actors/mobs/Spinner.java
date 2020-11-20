@@ -37,7 +37,7 @@ public class Spinner extends Mob {
 	
 	public Spinner() {
 		hp(ht(50));
-		defenseSkill = 14;
+		baseDefenseSkill = 14;
 		
 		exp = 9;
 		maxLvl = 16;

@@ -23,7 +23,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class ChaosCrystal extends UsableArtifact implements IChaosItem {
+public class ChaosCrystal extends UsableArtifact {
 
 	private static final float TIME_TO_USE = 1;
 
@@ -211,10 +211,10 @@ public class ChaosCrystal extends UsableArtifact implements IChaosItem {
 	}
 
 	@Override
-	public void ownerDoesDamage(Char ch,int damage) {
+	public void ownerDoesDamage(int damage) {
 		if (isCursed()) {
 			if (charge > 0) {
-				ChaosCommon.doChaosMark(ch.getPos(), charge);
+				ChaosCommon.doChaosMark(getOwner().getPos(), charge);
 			}
 		}
 	}

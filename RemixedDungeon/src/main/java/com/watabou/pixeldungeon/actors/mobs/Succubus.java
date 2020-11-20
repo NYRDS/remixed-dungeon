@@ -45,7 +45,7 @@ public class Succubus extends Mob {
 	public Succubus() {
 
 		hp(ht(80));
-		defenseSkill = 25;
+		baseDefenseSkill = 25;
 
 		exp = 12;
 		maxLvl = 25;

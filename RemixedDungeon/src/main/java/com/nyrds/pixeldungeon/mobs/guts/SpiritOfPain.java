@@ -13,7 +13,7 @@ public class SpiritOfPain extends Mob {
 
     {
         hp(ht(80));
-        defenseSkill = 30;
+        baseDefenseSkill = 30;
 
         exp = 0;
 

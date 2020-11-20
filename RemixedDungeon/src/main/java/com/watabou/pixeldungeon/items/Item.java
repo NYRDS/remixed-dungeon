@@ -731,4 +731,13 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	public boolean valid() {
 		return true;
 	}
+
+	//former IChaosItem
+	public void ownerTakesDamage(int damage) {
+
+	}
+
+	public void ownerDoesDamage(int damage) {
+
+	}
 }

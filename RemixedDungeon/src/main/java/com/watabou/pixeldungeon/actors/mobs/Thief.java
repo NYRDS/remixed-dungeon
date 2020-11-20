@@ -36,7 +36,7 @@ import lombok.val;
 public class Thief extends Mob {
 	{
 		hp(ht(20));
-		defenseSkill = 12;
+		baseDefenseSkill = 12;
 		
 		exp = 5;
 		maxLvl = 10;

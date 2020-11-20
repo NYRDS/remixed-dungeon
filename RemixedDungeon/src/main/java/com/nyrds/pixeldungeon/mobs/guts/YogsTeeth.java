@@ -23,7 +23,7 @@ import org.jetbrains.annotations.NotNull;
 public class YogsTeeth extends Mob {
     {
         hp(ht(350));
-        defenseSkill = 44;
+        baseDefenseSkill = 44;
 
         exp = 26;
 

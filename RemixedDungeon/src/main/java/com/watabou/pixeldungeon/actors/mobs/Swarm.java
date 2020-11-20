@@ -31,7 +31,7 @@ public class Swarm extends Mob {
 
 	{
 		hp(ht(80));
-		defenseSkill = 5;
+		baseDefenseSkill = 5;
 		
 		maxLvl = 10;
 		

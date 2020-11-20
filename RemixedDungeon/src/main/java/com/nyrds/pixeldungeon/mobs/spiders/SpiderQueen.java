@@ -19,7 +19,7 @@ public class SpiderQueen extends Boss {
 	
 	public SpiderQueen() {
 		hp(ht(120));
-		defenseSkill = 18;
+		baseDefenseSkill = 18;
 		
 		exp = 11;
 

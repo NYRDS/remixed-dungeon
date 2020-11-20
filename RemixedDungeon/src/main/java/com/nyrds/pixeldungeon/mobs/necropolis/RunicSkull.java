@@ -30,7 +30,7 @@ public class RunicSkull extends MultiKindMob {
 
 		hp(ht(70));
 		exp = 5;
-		defenseSkill = 15;
+		baseDefenseSkill = 15;
 
 		pacified = true;
 		kind = Random.Int(4);

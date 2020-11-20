@@ -27,7 +27,7 @@ public class Crab extends Mob {
 
 	{
 		hp(ht(15));
-		defenseSkill = 5;
+		baseDefenseSkill = 5;
 		baseSpeed = 2f;
 		
 		exp = 3;

@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.Badges;
 public class Shielded extends Brute {
 
 	{
-		defenseSkill = 20;
+		baseDefenseSkill = 20;
 	}
 	
 	@Override

@@ -33,7 +33,7 @@ public class EnslavedSoul extends UndeadMob {
         hp(ht(25));
 
         baseSpeed = 1.1f;
-        defenseSkill = 11;
+        baseDefenseSkill = 11;
         flying = true;
 
         exp = 5;

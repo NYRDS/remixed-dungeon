@@ -26,7 +26,7 @@ import com.watabou.utils.Random;
 public class ZombieGnoll extends Mob {
     {
         hp(ht(210));
-        defenseSkill = 27;
+        baseDefenseSkill = 27;
 
         exp = 7;
         maxLvl = 35;

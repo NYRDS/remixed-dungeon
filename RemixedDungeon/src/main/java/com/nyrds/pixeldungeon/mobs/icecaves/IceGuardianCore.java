@@ -22,7 +22,7 @@ public class IceGuardianCore extends Boss {
 	public IceGuardianCore() {
 		hp(ht(1000));
 		exp = 5;
-		defenseSkill = 10;
+		baseDefenseSkill = 10;
 
 		baseSpeed = 0.5f;
 		collect(new WandOfIcebolt().upgrade(1));

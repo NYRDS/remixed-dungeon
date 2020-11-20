@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
-import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.audio.Sample;
@@ -106,7 +105,7 @@ class ItemButton extends ItemSlot {
                         enableItem=(item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood);
                         break;
                     case FUSEABLE:
-                        enableItem=((item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof KindOfBow || item instanceof Wand) && !(item instanceof IChaosItem));
+                        enableItem=((item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof KindOfBow || item instanceof Wand));
                         break;
                     case UPGRADABLE_WEAPON:
                         enableItem=((item instanceof MeleeWeapon || item instanceof Boomerang) && (item.isUpgradable()));

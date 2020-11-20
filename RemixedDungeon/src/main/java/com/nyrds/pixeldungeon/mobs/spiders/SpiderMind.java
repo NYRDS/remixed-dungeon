@@ -24,7 +24,7 @@ public class SpiderMind extends Mob {
 
 	public SpiderMind() {
 		hp(ht(5));
-		defenseSkill = 1;
+		baseDefenseSkill = 1;
 		baseSpeed = 1f;
 		
 		exp = 6;

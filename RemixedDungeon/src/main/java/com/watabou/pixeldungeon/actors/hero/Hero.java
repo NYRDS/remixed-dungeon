@@ -24,8 +24,6 @@ import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
-import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
-import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -56,7 +54,6 @@ import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -66,7 +63,6 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
@@ -80,20 +76,16 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
-import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.levels.traps.TrapHelper;
-import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -136,10 +128,7 @@ public class Hero extends Char {
 	public boolean spellUser;
 
 	@Packable
-	private int attackSkill = 10;
-
-	@Packable
-	private int defenseSkill = 5;
+	protected int attackSkill = 10;
 
 	private boolean    ready      = false;
 
@@ -180,6 +169,7 @@ public class Hero extends Char {
 
 		STR(STARTING_STR);
 		awareness = 0.1f;
+		baseDefenseSkill = 5;
 
 		controlTargetId = getId();
 	}
@@ -282,6 +272,17 @@ public class Hero extends Char {
 	}
 
 	@Override
+	public int defenseSkill(Char enemy) {
+
+		float skillFactor = 1;
+		if (getDifficulty()==0) {
+			skillFactor = 1.2f;
+		}
+
+		return (int) (super.defenseSkill(enemy) * skillFactor);
+	}
+
+	@Override
 	public int attackSkill(Char target) {
 
 		int bonus = buffLevel(RingOfAccuracy.Accuracy.class)
@@ -303,38 +304,6 @@ public class Hero extends Char {
 		return (int) (attackSkill * accuracy);
 	}
 
-	@Override
-	public int defenseSkill(Char enemy) {
-
-		int bonus = buffLevel(RingOfEvasion.Evasion.class) + buffLevel(Blessed.class);
-
-		float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
-		if (paralysed) {
-			evasion /= 2;
-		}
-
-		if (getDifficulty() == 0) {
-			evasion *= 1.2;
-		}
-
-		int aEnc = getBelongings().armor.requiredSTR() - effectiveSTR();
-
-		if (aEnc > 0) {
-			return (int) (defenseSkill * evasion / Math.pow(1.5, aEnc));
-		} else {
-
-			if (heroClass == HeroClass.ROGUE) {
-
-				if (curAction != null && subClass == HeroSubClass.FREERUNNER && !isStarving()) {
-					evasion *= 2;
-				}
-
-				return (int) ((defenseSkill - aEnc) * evasion);
-			} else {
-				return (int) (defenseSkill * evasion);
-			}
-		}
-	}
 
 	@Override
 	public int dr() {
@@ -496,8 +465,8 @@ public class Hero extends Char {
 
 		if (!(enemy instanceof NPC)) {
 			for (Item item : getBelongings()) {
-				if (item instanceof IChaosItem && item.isEquipped(this)) {
-					((IChaosItem) item).ownerDoesDamage(this, damage);
+				if (item.isEquipped(this)) {
+					item.ownerDoesDamage(damage);
 				}
 			}
 		}
@@ -519,9 +488,9 @@ public class Hero extends Char {
 		}
 
 		for (Item item : getBelongings()) {
-			if (item instanceof IChaosItem && item.isEquipped(this)) {
+			if (item.isEquipped(this)) {
 				if (!(src instanceof Hunger)) {
-					((IChaosItem) item).ownerTakesDamage(dmg);
+					item.ownerTakesDamage(dmg);
 				}
 			}
 		}
@@ -726,7 +695,7 @@ public class Hero extends Char {
 			heal(5, this);
 
 			attackSkill++;
-			defenseSkill++;
+			baseDefenseSkill++;
 
 			if (lvl() < 10) {
 				updateAwareness();
@@ -930,31 +899,10 @@ public class Hero extends Char {
 
 	@Override
 	public void onAttackComplete() {
-
-		Char enemy = getEnemy();
-		if (enemy != null) { // really strange crash here
-
-			if (enemy instanceof Rat && hasBuff(RatKingCrown.RatKingAuraBuff.class)) {
-				Rat rat = (Rat) enemy;
-				Mob.makePet(rat, getId());
-			} else {
-				AttackIndicator.target(enemy);
-
-				getBelongings().weapon.preAttack(this, enemy);
-
-				if (attack(enemy)) {
-					getBelongings().weapon.postAttack(this, enemy);
-				}
-
-			}
-		} else {
-			EventCollector.logException("hero attacks null enemy");
-		}
+		AttackIndicator.target(getEnemy());
 
 		curAction = null;
 		setEnemy(CharsList.DUMMY);
-
-		Invisibility.dispel(this);
 
 		super.onAttackComplete();
 	}
@@ -1093,32 +1041,6 @@ public class Hero extends Char {
 
 	public void setExp(int exp) {
 		this.exp = Scrambler.scramble(exp);
-	}
-
-	@Override
-	public boolean canAttack(@NotNull Char enemy) {
-		if (adjacent(enemy)) {
-			return true;
-		}
-
-		var weapon = getBelongings().weapon;
-
-		Ballistica.cast(getPos(), enemy.getPos(), false, true);
-
-		for (int i = 1; i <= Math.min(Ballistica.distance, weapon.range()); i++) {
-			Char chr = Actor.findChar(Ballistica.trace[i]);
-			if (chr == enemy) {
-				return true;
-			}
-		}
-
-		if(getBelongings().weapon instanceof KindOfBow) {
-			if(getBelongings().getItem(Arrow.class)!=null) {
-				return enemy.getPos() == Ballistica.cast(getPos(), enemy.getPos(), false, true);
-			}
-		}
-
-		return false;
 	}
 
 	@Override

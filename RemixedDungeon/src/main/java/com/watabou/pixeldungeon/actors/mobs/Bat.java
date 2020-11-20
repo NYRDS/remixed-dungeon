@@ -28,7 +28,7 @@ public class Bat extends Mob {
 
 	public Bat() {
 		hp(ht(30));
-		defenseSkill = 15;
+		baseDefenseSkill = 15;
 		baseSpeed = 2f;
 		
 		exp = 7;

@@ -36,7 +36,7 @@ public class Rat extends Mob {
 
 	public Rat() {
 		hp(ht(8));
-		defenseSkill = 3;
+		baseDefenseSkill = 3;
 
 		maxLvl = 7;
 	}

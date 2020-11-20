@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 public class DreadKnight extends UndeadMob {
     {
         hp(ht(40));
-        defenseSkill = 15;
+        baseDefenseSkill = 15;
 
         exp = 8;
         maxLvl = 15;
