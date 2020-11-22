@@ -20,7 +20,7 @@ public class SpiderQueen extends Boss {
 	public SpiderQueen() {
 		hp(ht(120));
 		baseDefenseSkill = 18;
-		
+		baseAttackSkill  = 21;
 		exp = 11;
 
 		float dice = Random.Float();
@@ -74,12 +74,7 @@ public class SpiderQueen extends Boss {
 	public int damageRoll() {
 		return Random.NormalIntRange( 12, 20 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 22;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 10;

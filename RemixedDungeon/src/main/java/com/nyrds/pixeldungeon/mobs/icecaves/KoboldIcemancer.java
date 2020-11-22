@@ -21,6 +21,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 	public KoboldIcemancer() {
 		hp(ht(70));
 		baseDefenseSkill = 18;
+		baseAttackSkill  = 25;
 
 		exp = 11;
 		maxLvl = 21;
@@ -33,11 +34,6 @@ public class KoboldIcemancer extends Mob implements IZapper {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange(15, 17);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return 25;
 	}
 
 	@Override

@@ -46,7 +46,6 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
-import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -74,7 +73,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
@@ -127,9 +125,6 @@ public class Hero extends Char {
 
 	public boolean spellUser;
 
-	@Packable
-	protected int attackSkill = 10;
-
 	private boolean    ready      = false;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -170,6 +165,7 @@ public class Hero extends Char {
 		STR(STARTING_STR);
 		awareness = 0.1f;
 		baseDefenseSkill = 5;
+		baseAttackSkill  = 10;
 
 		controlTargetId = getId();
 	}
@@ -285,23 +281,12 @@ public class Hero extends Char {
 	@Override
 	public int attackSkill(Char target) {
 
-		int bonus = buffLevel(RingOfAccuracy.Accuracy.class)
-				  + buffLevel(Blessed.class);
-
-		float accuracy = (float) Math.pow(1.4, bonus);
-
-		if (rangedWeapon != null && level().distance(getPos(), target.getPos()) == 1) {
-			accuracy *= 0.5f;
-		}
-
+		float attackSkillFactor = 1;
 		if (getDifficulty() == 0) {
-			accuracy *= 1.2;
+			attackSkillFactor *= 1.2;
 		}
 
-		accuracy = getActiveWeapon().impactAccuracyFactor(this, accuracy);
-		accuracy = getSecondaryWeapon().impactAccuracyFactor(this, accuracy);
-
-		return (int) (attackSkill * accuracy);
+		return (int) (super.attackSkill(target) * attackSkillFactor);
 	}
 
 
@@ -693,9 +678,6 @@ public class Hero extends Char {
 
 			ht(ht() + 5);
 			heal(5, this);
-
-			attackSkill++;
-			baseDefenseSkill++;
 
 			if (lvl() < 10) {
 				updateAwareness();

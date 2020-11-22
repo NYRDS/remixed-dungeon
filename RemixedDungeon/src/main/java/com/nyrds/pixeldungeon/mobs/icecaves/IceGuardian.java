@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.icecaves;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -20,6 +19,7 @@ public class IceGuardian extends MultiKindMob {
 		hp(ht(70));
 		exp = 5;
 		baseDefenseSkill = 30;
+		baseAttackSkill  = 31;
 
 		kind = 1;
 
@@ -41,11 +41,7 @@ public class IceGuardian extends MultiKindMob {
 	public int damageRoll() {
 		return Random.NormalIntRange( 10, 15 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 31;
-	}
+
 	
 	@Override
 	public int dr() {

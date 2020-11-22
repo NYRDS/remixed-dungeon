@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -27,6 +26,7 @@ public class ZombieGnoll extends Mob {
     {
         hp(ht(210));
         baseDefenseSkill = 27;
+        baseAttackSkill  = 25;
 
         exp = 7;
         maxLvl = 35;
@@ -40,11 +40,6 @@ public class ZombieGnoll extends Mob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(15, 35);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 25;
     }
 
     @Override

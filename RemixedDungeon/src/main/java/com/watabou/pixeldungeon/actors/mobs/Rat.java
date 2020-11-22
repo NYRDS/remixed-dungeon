@@ -37,6 +37,7 @@ public class Rat extends Mob {
 	public Rat() {
 		hp(ht(8));
 		baseDefenseSkill = 3;
+		baseAttackSkill  = 8;
 
 		maxLvl = 7;
 	}
@@ -45,12 +46,7 @@ public class Rat extends Mob {
 	public int damageRoll() {
 		return Random.NormalIntRange( 1, 5 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 8;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 1;

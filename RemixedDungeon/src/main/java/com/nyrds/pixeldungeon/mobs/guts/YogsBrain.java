@@ -27,13 +27,13 @@ import org.jetbrains.annotations.NotNull;
  */
 public class YogsBrain extends Mob implements IZapper {
 
-    private static final float TIME_TO_ZAP	= 3f;
     private static final float TIME_TO_SUMMON	= 3f;
 
     {
 
         hp(ht(350));
         baseDefenseSkill = 30;
+        baseAttackSkill  = 31;
 
         exp = 25;
 
@@ -59,11 +59,6 @@ public class YogsBrain extends Mob implements IZapper {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(15, 25);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 31;
     }
 
     @Override

@@ -34,6 +34,7 @@ public class EnslavedSoul extends UndeadMob {
 
         baseSpeed = 1.1f;
         baseDefenseSkill = 11;
+        baseAttackSkill  = 10;
         flying = true;
 
         exp = 5;
@@ -59,11 +60,6 @@ public class EnslavedSoul extends UndeadMob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(5, 8);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 10;
     }
 
     @Override

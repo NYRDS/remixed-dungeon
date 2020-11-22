@@ -26,6 +26,7 @@ public class SuspiciousRat extends Mob {
 	{
 		hp(ht(140));
 		baseDefenseSkill = 25;
+		baseAttackSkill  = 25;
 
 		exp = 1;
 		maxLvl = 30;
@@ -41,11 +42,6 @@ public class SuspiciousRat extends Mob {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange(10, 15);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return 25;
 	}
 
 	@Override

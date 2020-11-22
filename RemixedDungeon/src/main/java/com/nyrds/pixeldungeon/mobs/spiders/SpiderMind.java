@@ -25,6 +25,7 @@ public class SpiderMind extends Mob {
 	public SpiderMind() {
 		hp(ht(5));
 		baseDefenseSkill = 1;
+		baseAttackSkill  = 10;
 		baseSpeed = 1f;
 		
 		exp = 6;
@@ -59,12 +60,7 @@ public class SpiderMind extends Mob {
 	public int damageRoll() {
 		return 0;
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 10;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 0;

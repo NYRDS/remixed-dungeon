@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
@@ -28,6 +27,7 @@ public class Crab extends Mob {
 	{
 		hp(ht(15));
 		baseDefenseSkill = 5;
+		baseAttackSkill  = 12;
 		baseSpeed = 2f;
 		
 		exp = 3;
@@ -40,12 +40,7 @@ public class Crab extends Mob {
 	public int damageRoll() {
 		return Random.NormalIntRange( 3, 6 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 12;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 4;

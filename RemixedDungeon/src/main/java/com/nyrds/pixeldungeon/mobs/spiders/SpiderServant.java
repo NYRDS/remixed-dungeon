@@ -14,6 +14,7 @@ public class SpiderServant extends MultiKindMob {
 	public SpiderServant() {
 		hp(ht(25));
 		baseDefenseSkill = 5;
+		baseAttackSkill  = 11;
 		baseSpeed = 1.1f;
 		
 		exp = 2;
@@ -34,12 +35,7 @@ public class SpiderServant extends MultiKindMob {
 	public int damageRoll() {
 		return Random.NormalIntRange( 4, 6 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 11;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 5;

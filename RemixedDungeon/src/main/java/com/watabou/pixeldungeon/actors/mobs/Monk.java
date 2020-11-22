@@ -40,6 +40,7 @@ public class Monk extends Mob {
 		
 		hp(ht(70));
 		baseDefenseSkill = 30;
+		baseAttackSkill  = 30;
 		
 		exp = 11;
 		maxLvl = 21;
@@ -53,11 +54,6 @@ public class Monk extends Mob {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 12, 16 );
-	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 30;
 	}
 	
 	@Override

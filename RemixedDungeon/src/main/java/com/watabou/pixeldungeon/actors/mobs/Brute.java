@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.Gold;
@@ -37,7 +36,8 @@ public class Brute extends Mob {
 
 		hp(ht(40));
 		baseDefenseSkill = 15;
-		
+		baseDefenseSkill = 20;
+
 		exp = 8;
 		maxLvl = 15;
 		
@@ -60,12 +60,7 @@ public class Brute extends Mob {
 			Random.NormalIntRange( 10, 40 ) :	
 			Random.NormalIntRange( 8, 18 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 20;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 8;

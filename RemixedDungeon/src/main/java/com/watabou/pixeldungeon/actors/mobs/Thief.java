@@ -37,7 +37,8 @@ public class Thief extends Mob {
 	{
 		hp(ht(20));
 		baseDefenseSkill = 12;
-		
+		baseAttackSkill  = 12;
+
 		exp = 5;
 		maxLvl = 10;
 		
@@ -54,11 +55,6 @@ public class Thief extends Mob {
 		return 0.5f;
 	}
 
-	@Override
-	public int attackSkill( Char target ) {
-		return 12;
-	}
-	
 	@Override
 	public int dr() {
 		return 3;

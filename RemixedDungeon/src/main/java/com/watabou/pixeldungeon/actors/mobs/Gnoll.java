@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -29,6 +28,7 @@ public class Gnoll extends Mob {
 	{
 		hp(ht(12));
 		baseDefenseSkill = 4;
+		baseAttackSkill  = 11;
 		
 		exp = 2;
 		maxLvl = 12;
@@ -40,12 +40,7 @@ public class Gnoll extends Mob {
 	public int damageRoll() {
 		return Random.NormalIntRange( 2, 5 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 11;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 2;

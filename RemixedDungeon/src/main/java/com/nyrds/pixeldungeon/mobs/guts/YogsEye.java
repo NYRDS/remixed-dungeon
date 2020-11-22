@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -12,6 +11,7 @@ public class YogsEye extends Mob {
     {
         hp(ht(165));
         baseDefenseSkill = 25;
+        baseAttackSkill  = 24;
 
         exp = 25;
 
@@ -21,11 +21,6 @@ public class YogsEye extends Mob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(40, 45);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 24;
     }
 
     @Override

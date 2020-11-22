@@ -13,6 +13,7 @@ public class ExplodingSkull extends UndeadMob {
     {
         hp(ht(10));
         baseDefenseSkill = 1;
+        baseAttackSkill  = 125;
 
         baseSpeed = 1.5f;
 
@@ -34,11 +35,6 @@ public class ExplodingSkull extends UndeadMob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(25, 45);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 125;
     }
 
     @Override

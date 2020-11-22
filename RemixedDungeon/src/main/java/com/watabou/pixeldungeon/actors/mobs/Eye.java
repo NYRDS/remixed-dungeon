@@ -42,7 +42,7 @@ public class Eye extends Mob {
     public Eye() {
         hp(ht(100));
         baseDefenseSkill = 20;
-
+        baseAttackSkill  = 30;
         exp = 13;
         maxLvl = 25;
 
@@ -79,11 +79,6 @@ public class Eye extends Mob {
             }
         }
         return false;
-    }
-
-    @Override
-    public int attackSkill(Char target) {
-        return 30;
     }
 
     @Override

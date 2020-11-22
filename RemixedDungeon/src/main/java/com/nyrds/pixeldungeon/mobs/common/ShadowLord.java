@@ -48,6 +48,7 @@ public class ShadowLord extends Boss implements IZapper {
 	public ShadowLord() {
 		hp(ht(260));
 		baseDefenseSkill = 40;
+		baseAttackSkill  = 30;
 
 		exp = 60;
 
@@ -197,11 +198,6 @@ public class ShadowLord extends Boss implements IZapper {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange(30, 40);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return 30;
 	}
 
 	@Override

@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
 
@@ -14,16 +13,12 @@ public class SpiritOfPain extends Mob {
     {
         hp(ht(80));
         baseDefenseSkill = 30;
+        baseAttackSkill  = 30;
 
         exp = 0;
 
         setState(MobAi.getStateByClass(Hunting.class));
         flying = true;
-    }
-
-    @Override
-    public int attackSkill(Char target) {
-        return 30;
     }
 
     @Override

@@ -40,6 +40,7 @@ public class Shaman extends Mob implements IZapper {
 	public Shaman() {
 		hp(ht(18));
 		baseDefenseSkill = 8;
+		baseAttackSkill  = 11;
 
 		exp = 6;
 		maxLvl = 14;
@@ -52,11 +53,6 @@ public class Shaman extends Mob implements IZapper {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange(2, 6);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return 11;
 	}
 
 	@Override

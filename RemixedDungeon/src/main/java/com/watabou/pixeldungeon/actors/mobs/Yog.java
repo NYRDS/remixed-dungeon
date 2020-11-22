@@ -174,6 +174,7 @@ public class Yog extends Boss {
 
 			hp(ht(500));
 			baseDefenseSkill = 25;
+			baseAttackSkill  = 36;
 
 			exp = 0;
 
@@ -190,11 +191,6 @@ public class Yog extends Boss {
 		}
 
 		public RottingFist() {
-		}
-
-		@Override
-		public int attackSkill(Char target) {
-			return 36;
 		}
 
 		@Override
@@ -245,6 +241,7 @@ public class Yog extends Boss {
 
 			hp(ht(400));
 			baseDefenseSkill = 25;
+			baseAttackSkill  = 26;
 
 			exp = 0;
 
@@ -259,11 +256,6 @@ public class Yog extends Boss {
 		}
 
 		public BurningFist() {
-		}
-
-		@Override
-		public int attackSkill(Char target) {
-			return 36;
 		}
 
 		@Override
@@ -320,15 +312,11 @@ public class Yog extends Boss {
 
 			hp(ht(120));
 			baseDefenseSkill = 20;
+			baseAttackSkill  = 30;
 
 			exp = 0;
 
 			setState(MobAi.getStateByClass(Hunting.class));
-		}
-
-		@Override
-		public int attackSkill(Char target) {
-			return 30;
 		}
 
 		@Override

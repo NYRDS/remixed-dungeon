@@ -24,6 +24,7 @@ public class SpiderExploding extends MultiKindMob {
     public SpiderExploding() {
         hp(ht(5));
         baseDefenseSkill = 1;
+        baseAttackSkill  = 125;
         baseSpeed = 2f;
 
         exp = 3;
@@ -51,11 +52,6 @@ public class SpiderExploding extends MultiKindMob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(3, 6);
-    }
-
-    @Override
-    public int attackSkill(Char target) {
-        return 1000;
     }
 
     @Override

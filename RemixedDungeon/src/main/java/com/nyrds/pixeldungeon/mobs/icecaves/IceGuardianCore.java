@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -23,6 +22,7 @@ public class IceGuardianCore extends Boss {
 		hp(ht(1000));
 		exp = 5;
 		baseDefenseSkill = 10;
+		baseAttackSkill  = 26;
 
 		baseSpeed = 0.5f;
 		collect(new WandOfIcebolt().upgrade(1));
@@ -44,12 +44,7 @@ public class IceGuardianCore extends Boss {
 	public int damageRoll() {
 		return Random.NormalIntRange( 13, 23 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 26;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 11;

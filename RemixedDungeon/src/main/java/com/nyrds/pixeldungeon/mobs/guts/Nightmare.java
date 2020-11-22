@@ -20,6 +20,7 @@ public class Nightmare extends Mob {
     {
         hp(ht(80));
         baseDefenseSkill = 24;
+        baseAttackSkill  = 26;
         flying = true;
         exp = 0;
     }
@@ -41,9 +42,6 @@ public class Nightmare extends Mob {
     public int damageRoll() {
         return Random.NormalIntRange(20, 25);
     }
-
-    @Override
-    public int attackSkill( Char target ) { return 26; }
 
     @Override
     public int dr() { return 10; }

@@ -350,6 +350,7 @@ public class Ghost extends NPC {
 			
 			hp(ht(15));
 			baseDefenseSkill = 5;
+			baseAttackSkill  = 12;
 			
 			exp = 0;
 			
@@ -362,11 +363,6 @@ public class Ghost extends NPC {
 		@Override
 		public int damageRoll() {
 			return Random.NormalIntRange( 2, 6 );
-		}
-		
-		@Override
-		public int attackSkill( Char target ) {
-			return 12;
 		}
 		
 		@Override

@@ -20,6 +20,7 @@ public class Worm extends Mob {
     {
         hp(ht(195));
         baseDefenseSkill = 15;
+        baseAttackSkill  = 20;
 
         exp = 18;
         maxLvl = 35;
@@ -47,11 +48,6 @@ public class Worm extends Mob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(22, 45);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 20;
     }
 
     @Override

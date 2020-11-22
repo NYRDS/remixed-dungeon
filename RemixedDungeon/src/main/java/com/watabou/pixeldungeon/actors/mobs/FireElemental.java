@@ -36,6 +36,7 @@ public class FireElemental extends Mob {
 
 		hp(ht(65));
 		baseDefenseSkill = 20;
+		baseAttackSkill  = 25;
 		
 		exp = 10;
 		maxLvl = 20;
@@ -54,12 +55,7 @@ public class FireElemental extends Mob {
 	public int damageRoll() {
 		return Random.NormalIntRange( 16, 20 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 25;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 5;

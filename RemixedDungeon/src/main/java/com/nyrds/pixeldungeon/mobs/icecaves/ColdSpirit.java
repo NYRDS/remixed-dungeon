@@ -18,6 +18,7 @@ public class ColdSpirit extends Mob {
 
         baseSpeed = 1.3f;
         baseDefenseSkill = 16;
+        baseAttackSkill  = 22;
         flying = true;
 
         exp = 8;
@@ -38,11 +39,6 @@ public class ColdSpirit extends Mob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(12, 15);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 22;
     }
 
     @Override

@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
@@ -33,6 +32,7 @@ public class Golem extends Mob {
 
 		hp(ht(85));
 		baseDefenseSkill = 18;
+		baseAttackSkill  = 28;
 		
 		exp = 12;
 		maxLvl = 22;
@@ -49,12 +49,7 @@ public class Golem extends Mob {
 	public int damageRoll() {
 		return Random.NormalIntRange( 20, 40 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 28;
-	}
-	
+
 	@Override
 	protected float _attackDelay() {
 		return 1.5f;

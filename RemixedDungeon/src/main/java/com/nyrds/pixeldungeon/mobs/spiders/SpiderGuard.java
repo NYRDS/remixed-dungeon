@@ -16,6 +16,7 @@ public class SpiderGuard extends MultiKindMob {
 	public SpiderGuard() {
 		hp(ht(35));
 		baseDefenseSkill = 15;
+		baseAttackSkill  = 17;
 		baseSpeed = 1.2f;
 		
 		exp = 4;
@@ -37,11 +38,6 @@ public class SpiderGuard extends MultiKindMob {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 8, 14 );
-	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 17;
 	}
 	
 	@Override

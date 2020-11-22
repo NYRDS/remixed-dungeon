@@ -43,6 +43,7 @@ public class RatKing extends NPC {
 	public RatKing() {
 		setState(MobAi.getStateByClass(Sleeping.class));
 		baseDefenseSkill = 20;
+		baseAttackSkill  = 15;
 		
 		hp(ht(30));
 		exp = 1;
@@ -54,12 +55,7 @@ public class RatKing extends NPC {
 	public int damageRoll() {
 		return Random.NormalIntRange( 4, 10 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 15;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 5;

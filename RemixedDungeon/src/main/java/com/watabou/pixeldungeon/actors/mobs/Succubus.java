@@ -46,6 +46,7 @@ public class Succubus extends Mob {
 
 		hp(ht(80));
 		baseDefenseSkill = 25;
+		baseAttackSkill  = 40;
 
 		exp = 12;
 		maxLvl = 25;
@@ -115,11 +116,6 @@ public class Succubus extends Mob {
 		WandOfBlink.appear(this, cell);
 
 		delay = BLINK_DELAY;
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return 40;
 	}
 
 	@Override

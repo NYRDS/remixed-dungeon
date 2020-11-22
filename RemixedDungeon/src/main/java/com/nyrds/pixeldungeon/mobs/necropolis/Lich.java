@@ -67,6 +67,7 @@ public class Lich extends Boss {
         hp(ht(HEALTH));
         exp = 25;
         baseDefenseSkill = 23;
+        baseAttackSkill  = 35;
 
         addImmunity( Paralysis.class );
         addImmunity( ToxicGas.class );
@@ -235,11 +236,6 @@ public class Lich extends Boss {
         }
 
         return damage;
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 30;
     }
 
     @Override

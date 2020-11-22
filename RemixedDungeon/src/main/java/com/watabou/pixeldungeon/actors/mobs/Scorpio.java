@@ -38,6 +38,7 @@ public class Scorpio extends Mob implements IZapper {
 
 		hp(ht(95));
 		baseDefenseSkill = 24;
+		baseAttackSkill  = 36;
 		
 		exp = 14;
 		maxLvl = 25;
@@ -63,12 +64,7 @@ public class Scorpio extends Mob implements IZapper {
 	public int damageRoll() {
 		return Random.NormalIntRange( 20, 32 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 36;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 16;

@@ -14,6 +14,7 @@ public class DeathKnight extends UndeadMob {
     {
         hp(ht(35));
         baseDefenseSkill = 12;
+        baseAttackSkill  = 15;
 
         exp = 7;
         maxLvl = 15;
@@ -36,11 +37,6 @@ public class DeathKnight extends UndeadMob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(7, 14);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 15;
     }
 
     @Override

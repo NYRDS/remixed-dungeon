@@ -39,15 +39,12 @@ public class Skeleton extends UndeadMob {
 	public Skeleton() {
 		hp(ht(25));
 		baseDefenseSkill = 9;
+		baseAttackSkill  = 12;
 		
 		exp = 5;
 		maxLvl = 10;
 
-		if (Random.Int(5) == 0) {
-        } else {
-        }
-
-
+		loot(getLoot(), 0.2f);
 	}
 
 	@Override
@@ -90,11 +87,6 @@ public class Skeleton extends UndeadMob {
 		}
 	}
 
-	@Override
-	public int attackSkill( Char target ) {
-		return 12;
-	}
-	
 	@Override
 	public int dr() {
 		return 5;

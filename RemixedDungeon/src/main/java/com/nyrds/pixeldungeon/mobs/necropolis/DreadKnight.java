@@ -17,6 +17,7 @@ public class DreadKnight extends UndeadMob {
     {
         hp(ht(40));
         baseDefenseSkill = 15;
+        baseAttackSkill  = 17;
 
         exp = 8;
         maxLvl = 15;
@@ -43,11 +44,6 @@ public class DreadKnight extends UndeadMob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(8, 16);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 17;
     }
 
     @Override

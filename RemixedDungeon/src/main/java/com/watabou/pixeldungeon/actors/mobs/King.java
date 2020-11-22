@@ -61,6 +61,7 @@ public class King extends Boss {
 		hp(ht(300));
 		exp = 40;
 		baseDefenseSkill = 25;
+		baseAttackSkill  = 32;
 
 		lastPedestal   = -1;
 		targetPedestal = -1;
@@ -79,11 +80,6 @@ public class King extends Boss {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 20, 38 );
-	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 32;
 	}
 	
 	@Override
@@ -192,6 +188,7 @@ public class King extends Boss {
 		public Undead() {
 			hp(ht(28));
 			baseDefenseSkill = 15;
+			baseAttackSkill  = 16;
 			
 			exp = 0;
 			
@@ -202,12 +199,7 @@ public class King extends Boss {
 		public int damageRoll() {
 			return Random.NormalIntRange( 12, 16 );
 		}
-		
-		@Override
-		public int attackSkill( Char target ) {
-			return 16;
-		}
-		
+
 		@Override
 		public int attackProc(@NotNull Char enemy, int damage ) {
 			if (Random.Int( MAX_ARMY_SIZE ) == 0) {

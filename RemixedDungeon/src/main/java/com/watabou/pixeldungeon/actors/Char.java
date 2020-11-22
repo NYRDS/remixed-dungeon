@@ -83,6 +83,7 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -130,6 +131,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected
 	int enemyId = EntityIdSource.INVALID_ID;
 
+
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
 	@LuaInterface
 	@Getter
@@ -156,7 +158,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Getter
 	private int id = EntityIdSource.INVALID_ID;
 
-	protected int baseDefenseSkill;
+	protected int baseAttackSkill = 0;
+	protected int baseDefenseSkill = 0;
 
 	public  Fraction fraction = Fraction.DUNGEON;
 
@@ -426,7 +429,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int attackSkill(Char target) {
-		return 0;
+		int bonus = buffLevel(RingOfAccuracy.Accuracy.class.getSimpleName())
+				+ buffLevel(Blessed.class.getSimpleName());
+
+		float accuracy = (float) Math.pow(1.4, bonus);
+
+		if (rangedWeapon != null && level().distance(getPos(), target.getPos()) == 1) {
+			accuracy *= 0.5f;
+		}
+
+		accuracy = getActiveWeapon().impactAccuracyFactor(this, accuracy);
+		accuracy = getSecondaryWeapon().impactAccuracyFactor(this, accuracy);
+
+		return (int) ((baseAttackSkill + lvl()) * accuracy);
 	}
 
 	public int defenseSkill(Char enemy) {

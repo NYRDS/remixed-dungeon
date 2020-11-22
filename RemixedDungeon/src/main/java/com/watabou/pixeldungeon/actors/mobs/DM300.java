@@ -54,7 +54,8 @@ public class DM300 extends Boss {
 		hp(ht(200));
 		exp = 30;
 		baseDefenseSkill = 18;
-		
+		baseAttackSkill  = 28;
+
 		float dice = Random.Float();
 		if( dice < 0.5 ) {
 			loot(new ChaosCrystal(), 0.333f);
@@ -72,12 +73,7 @@ public class DM300 extends Boss {
 	public int damageRoll() {
 		return Random.NormalIntRange( 18, 24 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 28;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 10;

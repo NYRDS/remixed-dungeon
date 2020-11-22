@@ -57,6 +57,7 @@ public class Tengu extends Boss implements IZapper {
 		hp(ht(120));
 		exp = 20;
 		baseDefenseSkill = 20;
+		baseAttackSkill  = 20;
 		
 		addResistance( ToxicGas.class );
 		addResistance( Poison.class );
@@ -73,12 +74,7 @@ public class Tengu extends Boss implements IZapper {
 	public int damageRoll() {
 		return Random.NormalIntRange( 8, 15 );
 	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 20;
-	}
-	
+
 	@Override
 	public int dr() {
 		return 5;

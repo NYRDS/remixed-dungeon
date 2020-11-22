@@ -15,6 +15,7 @@ public class Zombie extends UndeadMob {
     {
         hp(ht(33));
         baseDefenseSkill = 10;
+        baseAttackSkill  = 10;
 
         exp = 6;
         maxLvl = 15;
@@ -35,11 +36,6 @@ public class Zombie extends UndeadMob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(3, 10);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 10;
     }
 
     @Override

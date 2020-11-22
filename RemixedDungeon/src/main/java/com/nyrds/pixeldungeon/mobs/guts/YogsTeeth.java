@@ -24,6 +24,7 @@ public class YogsTeeth extends Mob {
     {
         hp(ht(350));
         baseDefenseSkill = 44;
+        baseAttackSkill  = 46;
 
         exp = 26;
 
@@ -62,9 +63,6 @@ public class YogsTeeth extends Mob {
     public int damageRoll() {
         return Random.NormalIntRange(50, 80);
     }
-
-    @Override
-    public int attackSkill( Char target ) { return 46; }
 
     @Override
     public int dr() { return 21; }

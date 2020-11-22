@@ -44,6 +44,7 @@ public class Warlock extends Mob implements IZapper {
 	public Warlock() {
 		hp(ht(70));
 		baseDefenseSkill = 18;
+		baseAttackSkill  = 25;
 
 		exp = 11;
 		maxLvl = 21;
@@ -56,11 +57,6 @@ public class Warlock extends Mob implements IZapper {
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange(12, 20);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return 25;
 	}
 
 	@Override

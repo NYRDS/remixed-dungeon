@@ -20,6 +20,7 @@ public class YogsHeart extends Mob {
     {
         hp(ht(450));
         baseDefenseSkill = 40;
+        baseAttackSkill  = 26;
 
         exp = 12;
 
@@ -34,11 +35,6 @@ public class YogsHeart extends Mob {
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(35, 45);
-    }
-
-    @Override
-    public int attackSkill( Char target ) {
-        return 21;
     }
 
     @Override
