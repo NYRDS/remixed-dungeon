@@ -29,6 +29,7 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
@@ -37,6 +38,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHats;
 import com.watabou.pixeldungeon.windows.WndHero;
@@ -57,6 +59,9 @@ public class StatusPane extends Component {
     private Text level;
     private Text depth;
     private Text keys;
+    private Text hpText;
+    private Text manaText;
+
 
     private DangerIndicator danger;
     private LootIndicator   loot;
@@ -126,6 +131,16 @@ public class StatusPane extends Component {
         exp = new Image(Assets.XP_BAR);
         add(exp);
 
+        hpText = new BitmapText(PixelScene.font1x);
+        hpText.hardlight(0x777777);
+        hpText.setScale(0.5f,0.5f);
+        add(hpText);
+
+        manaText = new BitmapText(PixelScene.font1x);
+        manaText.hardlight(0xaaaaaa);
+        manaText.setScale(0.5f,0.5f);
+        add(manaText);
+
         level = new BitmapText(PixelScene.font1x);
         level.hardlight(0xFFEBA4);
         add(level);
@@ -176,6 +191,12 @@ public class StatusPane extends Component {
         sp.x = 30;
         sp.y = 9;
 
+        hpText.x = 30;
+        hpText.y = 3;
+
+        manaText.x = 30;
+        manaText.y = 9;
+
         level.x = PixelScene.align(27.0f - level.width() / 2);
         level.y = PixelScene.align(27.5f - level.baseLine() / 2);
 
@@ -204,16 +225,24 @@ public class StatusPane extends Component {
     public void update() {
         super.update();
 
-        float health = (float) hero.getControlTarget().hp() / hero.getControlTarget().ht();
+        Char chr = hero.getControlTarget();
 
-        float sPoints = 0;
-        if(hero.getControlTarget().getId() == hero.getId()) {
-            sPoints=(float) hero.getSkillPoints() / hero.getSkillPointsMax();
-        }
+        int hp = chr.hp();
+        int ht = chr.ht();
 
-        if(avatar!=hero.getControlTarget().getSprite().avatar()) {
+        float health =  (float) hp / ht;
+
+        hpText.text(Utils.format("%d/%d",hp, ht));
+
+        int sp = chr.getSkillPoints();
+        int st = chr.getSkillPointsMax();
+
+        float sPoints = (float) sp / st;
+        manaText.text(Utils.format("%d/%d",sp, st));
+
+        if(avatar!=chr.getSprite().avatar()) {
             remove(avatar);
-            avatar = hero.getControlTarget().getSprite().avatar();
+            avatar = chr.getSprite().avatar();
             add(avatar);
             layout();
         }
@@ -229,11 +258,11 @@ public class StatusPane extends Component {
             blood.on = false;
         }
 
-        hp.Scale().x = health;
-        sp.Scale().x = sPoints;
+        this.hp.Scale().x = health;
+        this.sp.Scale().x = sPoints;
         exp.Scale().x = (width / exp.width) * hero.getExp() / hero.maxExp();
 
-        if (hero.lvl() != lastLvl) {
+        if (chr.lvl() != lastLvl) {
 
             if (lastLvl != -1) {
                 Emitter emitter = (Emitter) recycle(Emitter.class);
@@ -242,7 +271,7 @@ public class StatusPane extends Component {
                 emitter.burst(Speck.factory(Speck.STAR), 12);
             }
 
-            lastLvl = hero.lvl();
+            lastLvl = chr.lvl();
             level.text(Integer.toString(lastLvl));
             level.x = PixelScene.align(27.0f - level.width() / 2);
             level.y = PixelScene.align(27.5f - level.baseLine() / 2);
