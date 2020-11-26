@@ -2,6 +2,17 @@ package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.Ascend;
+import com.nyrds.pixeldungeon.ml.actions.Attack;
+import com.nyrds.pixeldungeon.ml.actions.CharAction;
+import com.nyrds.pixeldungeon.ml.actions.Cook;
+import com.nyrds.pixeldungeon.ml.actions.Descend;
+import com.nyrds.pixeldungeon.ml.actions.Examine;
+import com.nyrds.pixeldungeon.ml.actions.Interact;
+import com.nyrds.pixeldungeon.ml.actions.Move;
+import com.nyrds.pixeldungeon.ml.actions.OpenChest;
+import com.nyrds.pixeldungeon.ml.actions.PickUp;
+import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -15,6 +26,8 @@ import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -141,5 +154,44 @@ public class CharUtils {
 
         Sample.INSTANCE.play(sound);
         Invisibility.dispel(ch);
+    }
+
+    @NotNull
+    public static  CharAction actionForCell(Char actor, int cell, @NotNull Level level) {
+        if (level.map[cell] == Terrain.ALCHEMY && cell != actor.getPos()) {
+            return new Cook(cell);
+        }
+
+        Char target;
+        if (level.fieldOfView[cell] && (target = Actor.findChar(cell)) != null && target != actor.getControlTarget()) {
+            if (target.friendly(actor.getControlTarget())) {
+                return new Interact(target);
+            } else {
+                if(target.getEnemy() == actor) {
+                    return new Attack(target);
+                } else {
+                    return new Examine(target);
+                }
+            }
+        }
+
+        Heap heap;
+        if ((heap = level.getHeap(cell)) != null) {
+            if (heap.type == Heap.Type.HEAP) {
+                return new PickUp(cell);
+            } else {
+                return new OpenChest(cell);
+            }
+        }
+        if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
+            return new Unlock(cell);
+        }
+        if (level.isExit(cell)) {
+            return new Descend(cell);
+        }
+        if (cell == level.entrance) {
+            return new Ascend(cell);
+        }
+        return new Move(cell);
     }
 }

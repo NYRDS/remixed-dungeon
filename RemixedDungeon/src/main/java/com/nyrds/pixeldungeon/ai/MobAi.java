@@ -61,7 +61,7 @@ public abstract class MobAi implements AiState {
     }
 
     @Override
-    public String status(@NotNull Mob me) {
+    public String status(Char me) {
         return Utils.format("This %s is %s", me.getName(), getTag());
     }
 

@@ -35,7 +35,7 @@ public class CellSelector extends TouchArea {
 	
 	public boolean enabled;
 	
-	private float dragThreshold;
+	private final float dragThreshold;
 	
 	public CellSelector( DungeonTilemap map ) {
 		super( map );

@@ -482,23 +482,9 @@ public abstract class Mob extends Char {
 		setTarget(cell);
 	}
 
-	public String description() {
-		/*
-		String isuffix = name+"  immune to:";
-		if(!immunities.isEmpty()) {
-			for(String item: immunities) {
-				isuffix
-			}
-		}
-		*/
-
-		return description;
-	}
-
 	public void notice() {
 		getSprite().showAlert();
 	}
-
 
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		if (mobDesc.has("loot")) {

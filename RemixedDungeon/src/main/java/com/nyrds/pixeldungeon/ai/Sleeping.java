@@ -8,8 +8,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Sleeping extends MobAi implements AiState {
 
     public Sleeping(){}
@@ -44,7 +42,7 @@ public class Sleeping extends MobAi implements AiState {
     }
 
     @Override
-    public String status(@NotNull Mob me) {
+    public String status(Char me) {
         return Utils.format(Game.getVar(R.string.Mob_StaSleepingStatus),
                 me.getName());
     }

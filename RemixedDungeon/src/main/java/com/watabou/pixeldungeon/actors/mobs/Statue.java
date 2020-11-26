@@ -101,7 +101,7 @@ public class Statue extends Mob {
 	}
 
 	@Override
-	public String description() {
+	public String getDescription() {
 		val item = getItem();
 
 		if(ItemUtils.usableAsWeapon(item)) {

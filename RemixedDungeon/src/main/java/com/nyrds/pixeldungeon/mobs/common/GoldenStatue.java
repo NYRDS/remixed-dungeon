@@ -20,7 +20,7 @@ public class GoldenStatue extends Statue {
 	}
 
 	@Override
-	public String description() {
+	public String getDescription() {
 		return Utils.format(Game.getVar(R.string.GoldenStatue_Desc), getItem().name());
 	}
 

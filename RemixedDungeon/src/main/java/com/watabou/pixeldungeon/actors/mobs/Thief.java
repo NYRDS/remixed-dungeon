@@ -79,7 +79,7 @@ public class Thief extends Mob {
 	}
 
 	@Override
-	public String description() {
+	public String getDescription() {
 		String desc = Game.getVar(R.string.Thief_Desc);
 		val item = getBelongings().randomUnequipped();
 		if (item != CharsList.DUMMY_ITEM) {

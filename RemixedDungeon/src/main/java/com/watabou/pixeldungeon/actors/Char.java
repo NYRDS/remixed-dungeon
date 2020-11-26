@@ -23,6 +23,7 @@ import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -34,16 +35,8 @@ import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.ml.actions.Ascend;
-import com.nyrds.pixeldungeon.ml.actions.Attack;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
-import com.nyrds.pixeldungeon.ml.actions.Cook;
-import com.nyrds.pixeldungeon.ml.actions.Descend;
-import com.nyrds.pixeldungeon.ml.actions.Interact;
 import com.nyrds.pixeldungeon.ml.actions.Move;
-import com.nyrds.pixeldungeon.ml.actions.OpenChest;
-import com.nyrds.pixeldungeon.ml.actions.PickUp;
-import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
@@ -81,7 +74,6 @@ import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
@@ -792,36 +784,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return false;
 	}
 
-	public CharAction actionForCell(int cell, @NotNull Level level) {
-		Char ch;
-		Heap heap;
-		CharAction action;
-		if (level.map[cell] == Terrain.ALCHEMY && cell != getPos()) {
-			action = new Cook(cell);
-		} else if (level.fieldOfView[cell] && (ch = Actor.findChar(cell)) != null && ch != getControlTarget()) {
-			if (ch.friendly(getControlTarget())) {
-				action = new Interact(ch);
-			} else {
-				action = new Attack(ch);
-			}
-		} else if ((heap = level.getHeap(cell)) != null) {
-			if (heap.type == Heap.Type.HEAP) {
-				action = new PickUp(cell);
-			} else {
-				action = new OpenChest(cell);
-			}
-		} else if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
-			action = new Unlock(cell);
-		} else if (level.isExit(cell)) {
-			action = new Descend(cell);
-		} else if (cell == level.entrance) {
-			action = new Ascend(cell);
-		} else {
-			action = new Move(cell);
-		}
-		return action;
-	}
-
 	public void nextAction(CharAction action) {
 		curAction = action;
 
@@ -1468,6 +1430,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if(getOwnerId()==hero.getId()) {
 			actions.add(CommonActions.MAC_ORDER);
 		}
+
 		return actions;
 	}
 
@@ -1609,5 +1572,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@NotNull
 	public Char getControlTarget() {
     	return this;
+	}
+
+	public AiState getState() {
+		return MobAi.getStateByClass(Passive.class);
 	}
 }

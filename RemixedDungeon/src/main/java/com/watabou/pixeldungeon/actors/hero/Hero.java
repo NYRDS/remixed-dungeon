@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -659,7 +660,7 @@ public class Hero extends Char {
 
 		level.updateFieldOfView(getControlTarget());
 
-		nextAction(actionForCell(cell, level));
+		nextAction(CharUtils.actionForCell(this, cell, level));
 	}
 
 	public void earnExp(int exp) {

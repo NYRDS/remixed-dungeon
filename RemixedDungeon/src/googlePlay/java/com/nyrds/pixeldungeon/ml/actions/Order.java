@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -23,7 +24,7 @@ public class Order extends CharAction {
 
     @Override
     public boolean act(Char hero) {
-        hero.spend(TICK);
+        hero.spend(TICK/10);
         hero.readyAndIdle();
         hero.selectCell(new OrderCellSelector());
         return false;
@@ -36,7 +37,7 @@ public class Order extends CharAction {
                 return;
             }
 
-            CharAction action = target.actionForCell(cell,target.level());
+            CharAction action = CharUtils.actionForCell(target, cell,target.level());
 
             if(action instanceof Move) {
                 target.setState(MobAi.getStateByClass(Wandering.class));

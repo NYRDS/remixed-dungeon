@@ -141,11 +141,10 @@ public class Yog extends Boss {
 
 	@Override
 	public void die(NamedEntityKind cause) {
-
-		Mob mob = Dungeon.level.getRandomMob();
+		Mob mob = level().getRandomMob();
 		while(mob != null){
 			mob.remove();
-			mob = Dungeon.level.getRandomMob();
+			mob = level().getRandomMob();
 		}
 
 		Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
@@ -158,11 +157,6 @@ public class Yog extends Boss {
 	public void notice() {
 		super.notice();
 		yell(Game.getVar(R.string.Yog_Info2));
-	}
-
-	@Override
-	public String description() {
-		return Game.getVar(R.string.Yog_Desc);
 	}
 
 	public static class RottingFist extends Mob {
@@ -225,7 +219,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public String description() {
+		public String getDescription() {
 			return Game.getVar(R.string.Yog_Desc);
 		}
 
@@ -295,7 +289,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public String description() {
+		public String getDescription() {
 			return Game.getVar(R.string.Yog_Desc);
 		}
 
@@ -330,7 +324,7 @@ public class Yog extends Boss {
 		}
 
 		@Override
-		public String description() {
+		public String getDescription() {
 			return Game.getVar(R.string.Yog_Desc);
 
 		}

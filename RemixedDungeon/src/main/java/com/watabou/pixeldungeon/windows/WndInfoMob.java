@@ -38,7 +38,7 @@ public class WndInfoMob extends WndTitledMessage {
 
 	private static final float BUTTON_WIDTH		= 36;
 
-	public WndInfoMob( Mob mob, Char selector ) {
+	public WndInfoMob(Char mob, @NotNull Char selector ) {
 		super( new MobTitle( mob ), desc( mob, true ) );
 
 		VHBox actions = new VHBox(width - 2* GAP);
@@ -76,11 +76,11 @@ public class WndInfoMob extends WndTitledMessage {
 		super( new MobTitle( mob ), desc( mob, false) );
 	}
 
-	private static String desc( Mob mob, boolean withStatus ) {
+	private static String desc(Char mob, boolean withStatus ) {
 		if(withStatus) {
-			return mob.description() + "\n\n" + Utils.capitalize(mob.getState().status(mob)) + ".";
+			return mob.getDescription() + "\n\n" + Utils.capitalize(mob.getState().status(mob)) + ".";
 		} else {
-			return mob.description();
+			return mob.getDescription();
 		}
 	}
 
@@ -99,7 +99,7 @@ public class WndInfoMob extends WndTitledMessage {
 		
 		private float hp;
 		
-		public MobTitle(@NotNull Mob mob ) {
+		public MobTitle(@NotNull Char mob ) {
 
 			hp = (float)mob.hp() / mob.ht();
 			
