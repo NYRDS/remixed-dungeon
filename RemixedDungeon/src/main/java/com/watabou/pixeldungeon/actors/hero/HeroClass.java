@@ -55,6 +55,7 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 
 public enum HeroClass implements CharModifier {
@@ -76,6 +77,7 @@ public enum HeroClass implements CharModifier {
 
     private final Class<? extends ClassArmor> armorClass;
 
+    @Getter
     private Set<String> forbiddenActions = new HashSet<>();
     private Set<String> friendlyMobs     = new HashSet<>();
     private Set<String> immunities       = new HashSet<>();

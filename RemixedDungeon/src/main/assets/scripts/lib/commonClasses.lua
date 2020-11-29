@@ -14,6 +14,7 @@ local DungeonGenerator = luajava.bindClass("com.nyrds.pixeldungeon.utils.Dungeon
 local Sample           = luajava.bindClass("com.watabou.noosa.audio.Sample")
 local Music            = luajava.bindClass("com.watabou.noosa.audio.Music")
 local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
+local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
 
 local Buffs  = {
     Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),
@@ -156,6 +157,7 @@ local RPD = {
     DungeonGenerator = DungeonGenerator,
 
     CharsList = CharsList,
+    CharUtils = CharUtils,
     Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
 
     System = {

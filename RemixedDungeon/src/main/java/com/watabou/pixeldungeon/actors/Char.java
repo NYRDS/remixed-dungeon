@@ -47,7 +47,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Blessed;
@@ -1411,32 +1410,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public abstract Char makeClone();
 
-	public ArrayList<String> actions(Char hero) {
-		ArrayList<String> actions = new ArrayList<>();
-		if(adjacent(hero) && hero.stealth() > 2) {
-			actions.add(CommonActions.MAC_STEAL);
-		}
-
-		actions.add(CommonActions.MAC_TAUNT);
-
-		if(hero.canAttack(this)) {
-			actions.add(CommonActions.MAC_HIT);
-		}
-
-		if(adjacent(hero)) {
-			actions.add(CommonActions.MAC_PUSH);
-		}
-
-		if(getOwnerId()==hero.getId()) {
-			actions.add(CommonActions.MAC_ORDER);
-		}
-
-		return actions;
-	}
-
-	public void execute(Char hero, String action) {
-	}
-
 	protected void setOwnerId(int owner) {
 		this.owner = owner;
 	}
@@ -1585,4 +1558,5 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 		return id;
 	}
+
 }

@@ -39,8 +39,15 @@ local function heroAiStep()
 
     local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
 
-    if  activeWindow then
+    if activeWindow then
+        if tostring(activeWindow:getClass()):match('WndInfoMob') then
+            local target = activeWindow:getTarget()
+            local action = RPD.CharUtils:randomAction(target,hero)
+            RPD.CharUtils:execute(target, hero, action);
+        end
+
         activeWindow:hide()
+        return
     end
 
     local level = hero:level()

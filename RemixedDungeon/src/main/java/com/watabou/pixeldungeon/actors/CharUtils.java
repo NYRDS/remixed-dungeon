@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.actors;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -11,7 +12,11 @@ import com.nyrds.pixeldungeon.ml.actions.Examine;
 import com.nyrds.pixeldungeon.ml.actions.Interact;
 import com.nyrds.pixeldungeon.ml.actions.Move;
 import com.nyrds.pixeldungeon.ml.actions.OpenChest;
+import com.nyrds.pixeldungeon.ml.actions.Order;
 import com.nyrds.pixeldungeon.ml.actions.PickUp;
+import com.nyrds.pixeldungeon.ml.actions.Push;
+import com.nyrds.pixeldungeon.ml.actions.Steal;
+import com.nyrds.pixeldungeon.ml.actions.Taunt;
 import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -39,6 +44,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -176,7 +182,7 @@ public class CharUtils {
                 } else {
 
                     Set<String> actions = new HashSet<>();
-                    actions.addAll(target.actions(actor));
+                    actions.addAll(actions(target, actor));
 
                     actions.remove(CommonActions.MAC_HIT);
                     actions.remove(CommonActions.MAC_TAUNT);
@@ -209,4 +215,62 @@ public class CharUtils {
         }
         return new Move(cell);
     }
+
+    public static void execute(Char target, Char hero, @NotNull String action) {
+        if(action.equals(CommonActions.MAC_STEAL)) {
+            hero.nextAction(new Steal(target));
+            return;
+        }
+
+        if(action.equals(CommonActions.MAC_TAUNT)) {
+            hero.nextAction(new Taunt(target));
+            return;
+        }
+
+        if(action.equals(CommonActions.MAC_PUSH)) {
+            hero.nextAction(new Push(target));
+            return;
+        }
+
+        if(action.equals(CommonActions.MAC_HIT)) {
+            hero.nextAction(new Attack(target));
+            return;
+        }
+
+        if(action.equals(CommonActions.MAC_ORDER)) {
+            hero.nextAction(new Order(target));
+            return;
+        }
+    }
+
+    public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {
+        ArrayList<String> actions = new ArrayList<>();
+        if(target.adjacent(hero) && hero.stealth() > 2) {
+            actions.add(CommonActions.MAC_STEAL);
+        }
+
+        actions.add(CommonActions.MAC_TAUNT);
+
+        if(hero.canAttack(target)) {
+            actions.add(CommonActions.MAC_HIT);
+        }
+
+        if(target.adjacent(hero)) {
+            actions.add(CommonActions.MAC_PUSH);
+        }
+
+        if(target.getOwnerId()==hero.getId()) {
+            actions.add(CommonActions.MAC_ORDER);
+        }
+
+        actions.removeAll(hero.getHeroClass().getForbiddenActions());
+
+        return actions;
+    }
+
+    @LuaInterface //for auto tests
+    public static String randomAction(@NotNull Char target, Char hero) {
+        return Random.element(actions(target,hero));
+    }
+
 }

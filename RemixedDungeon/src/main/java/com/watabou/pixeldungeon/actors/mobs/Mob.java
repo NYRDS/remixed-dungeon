@@ -38,17 +38,11 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.ml.actions.Attack;
-import com.nyrds.pixeldungeon.ml.actions.Order;
-import com.nyrds.pixeldungeon.ml.actions.Push;
-import com.nyrds.pixeldungeon.ml.actions.Steal;
-import com.nyrds.pixeldungeon.ml.actions.Taunt;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -620,34 +614,6 @@ public abstract class Mob extends Char {
 	@Override
 	public Char makeClone() {
 		return MobFactory.mobByName(getEntityKind());
-	}
-
-	@Override
-	public void execute(Char hero, @NotNull String action) {
-		if(action.equals(CommonActions.MAC_STEAL)) {
-			hero.nextAction(new Steal(this));
-			return;
-		}
-
-		if(action.equals(CommonActions.MAC_TAUNT)) {
-			hero.nextAction(new Taunt(this));
-			return;
-		}
-
-		if(action.equals(CommonActions.MAC_PUSH)) {
-			hero.nextAction(new Push(this));
-			return;
-		}
-
-		if(action.equals(CommonActions.MAC_HIT)) {
-			hero.nextAction(new Attack(this));
-			return;
-		}
-
-		if(action.equals(CommonActions.MAC_ORDER)) {
-			hero.nextAction(new Order(this));
-			return;
-		}
 	}
 
 	public void loot(Object loot, float lootChance) {

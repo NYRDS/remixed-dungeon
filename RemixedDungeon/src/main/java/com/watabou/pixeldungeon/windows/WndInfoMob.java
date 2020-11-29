@@ -25,6 +25,7 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -34,29 +35,31 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.Getter;
+
 public class WndInfoMob extends WndTitledMessage {
 
 	private static final float BUTTON_WIDTH		= 36;
 
+	@Getter
+	private Char target;
+
 	public WndInfoMob(Char mob, @NotNull Char selector ) {
 		super( new MobTitle( mob ), desc( mob, true ) );
 
+		target = mob;
 		VHBox actions = new VHBox(width - 2* GAP);
 		actions.setAlign(HBox.Align.Width);
 		actions.setGap(GAP);
 
 		if (selector.isAlive()) {
 
-			for (final String action:mob.actions( selector )) {
+			for (final String action: CharUtils.actions(target, selector )) {
 
-				if(selector.getHeroClass().forbidden(action)){
-					continue;
-				}
-
-				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
+				RedButton btn = new RedButton(StringsManager.maybeId(action)) {
 					@Override
 					protected void onClick() {
-						mob.execute( selector, action );
+						CharUtils.execute(mob, selector, action);
 						hide();
 					}
 				};

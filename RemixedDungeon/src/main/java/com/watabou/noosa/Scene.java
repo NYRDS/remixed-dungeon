@@ -49,7 +49,7 @@ public class Scene extends Group {
 
 	@LuaInterface
 	public Window getWindow(int i) {
-		if(i< activeWindows.size()) {
+		if(i < activeWindows.size()) {
 			return activeWindows.get(i);
 		}
 
@@ -58,7 +58,6 @@ public class Scene extends Group {
 
 	@Override
 	public void update() {
-
 		activeWindows.clear();
 		int windowIndex = -1;
 		while((windowIndex = findByClass(Window.class, windowIndex+1))>0) {
@@ -68,6 +67,7 @@ public class Scene extends Group {
 
 		super.update();
 	}
+
 
 	@Override
 	public void destroy() {

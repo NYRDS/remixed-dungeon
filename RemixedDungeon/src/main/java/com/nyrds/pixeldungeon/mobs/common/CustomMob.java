@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -127,15 +128,14 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-	@Override
 	public void execute(Char chr, String action) {
-		super.execute(chr,action);
+		CharUtils.execute(this, chr, action);
 		script.run("executeAction", chr, action);
 	}
 
-	@Override
+
 	public ArrayList<String> actions(Char hero) {
-		ArrayList<String> actions = super.actions(hero);
+		ArrayList<String> actions = CharUtils.actions(this, hero);
 
 		LuaValue ret = script.run("actionsList", hero);
 		LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
