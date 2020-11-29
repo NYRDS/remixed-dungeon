@@ -27,6 +27,8 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Terror extends FlavourBuff {
 
 	public static final float DURATION = 10f;
@@ -58,7 +60,7 @@ public class Terror extends FlavourBuff {
 	}
 
 	@Override
-	public boolean attachTo(Char target) {
+	public boolean attachTo(@NotNull Char target) {
 		if(super.attachTo(target)) {
 			if(target instanceof Mob && target.fraction!=Fraction.NEUTRAL) {
 				Mob tgt = (Mob)target;

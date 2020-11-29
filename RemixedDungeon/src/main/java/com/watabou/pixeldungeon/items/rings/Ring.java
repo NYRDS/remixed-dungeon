@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
@@ -32,6 +33,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Ring extends Artifact implements UnknownItem{
 
@@ -96,17 +99,14 @@ public class Ring extends Artifact implements UnknownItem{
 	
 	@Override
 	public Item upgrade() {
-
 		super.upgrade();
 
+		Buff.detachAllBySource(getOwner(),this);
+
+		Buff buff = buff();
 		if (buff != null) {
-			
-			Char owner = buff.target;
-			buff.detach();
-			if ((buff = buff()) != null) {
-				buff.setSource(this);
-				buff.attachTo( owner );
-			}
+			buff.setSource(this);
+			buff.attachTo( getOwner() );
 		}
 		
 		return this;
@@ -187,7 +187,7 @@ public class Ring extends Artifact implements UnknownItem{
 		}
 		
 		@Override
-		public boolean attachTo( Char target ) {
+		public boolean attachTo(@NotNull Char target ) {
 	
 			if (target.getHeroClass() == HeroClass.ROGUE && !isKnown()) {
 				setKnown();

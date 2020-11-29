@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -82,7 +82,7 @@ public class Thief extends Mob {
 	public String getDescription() {
 		String desc = Game.getVar(R.string.Thief_Desc);
 		val item = getBelongings().randomUnequipped();
-		if (item != CharsList.DUMMY_ITEM) {
+		if (item != ItemsList.DUMMY) {
 			desc += Utils.format( Game.getVar(R.string.Thief_Carries),
 						Utils.capitalize( this.getName() ), item.name() );
 		}

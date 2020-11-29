@@ -90,12 +90,6 @@ shields.makeShield         = function(shieldLevel, shieldDesc)
             end
         end,
 
-        deactivate        = function(self, item, hero)
-            if item:slotName() == RPD.Slots.leftHand then
-                RPD.removeBuff(hero, "ShieldLeft")
-            end
-        end,
-
         info              = function(self, item)
             local hero = item:getOwner()
             local str  = hero:effectiveSTR()

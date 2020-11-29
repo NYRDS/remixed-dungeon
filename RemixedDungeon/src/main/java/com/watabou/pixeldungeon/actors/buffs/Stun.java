@@ -24,12 +24,14 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Stun extends FlavourBuff {
 
 	private static final float DURATION	= 10f;
 	
 	@Override
-	public boolean attachTo( Char target ) {
+	public boolean attachTo(@NotNull Char target ) {
 		if (super.attachTo( target )) {
 			target.paralyse(true);
 			return true;

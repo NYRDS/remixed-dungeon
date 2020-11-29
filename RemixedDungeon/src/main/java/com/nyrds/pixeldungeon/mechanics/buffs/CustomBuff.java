@@ -7,15 +7,14 @@ import com.nyrds.android.util.ModError;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
 
 import java.util.HashSet;
@@ -35,8 +34,6 @@ public class CustomBuff extends Buff {
     private String scriptFile;
 
     private LuaScript script;
-
-    private Item source = CharsList.DUMMY_ITEM;
 
     @Keep
     public CustomBuff() {
@@ -95,7 +92,7 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public boolean attachTo(Char target) {
+    public boolean attachTo(@NotNull Char target) {
         try {
             if (super.attachTo(target)) {
                 return script.run("attachTo", target).checkboolean();
@@ -161,14 +158,6 @@ public class CustomBuff extends Buff {
     @Override
     public boolean dontPack() {
         return script.runOptional("dontPack", false);
-    }
-
-    public Item getSource() {
-        return source;
-    }
-
-    public void setSource(Item source) {
-        this.source = source;
     }
 
     @Override

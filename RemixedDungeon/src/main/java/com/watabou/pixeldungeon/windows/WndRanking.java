@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
@@ -265,7 +265,7 @@ public class WndRanking extends WndTabbed {
 		}
 		
 		private void addItem( Item item ) {
-			if(item== CharsList.DUMMY_ITEM) {
+			if(item== ItemsList.DUMMY) {
 				return;
 			}
 

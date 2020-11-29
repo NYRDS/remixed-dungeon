@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -122,7 +122,7 @@ public class Statue extends Mob {
 
 	@NotNull
 	public EquipableItem getItem() {
-		if(getBelongings().weapon==CharsList.DUMMY_ITEM) {
+		if(getBelongings().weapon== ItemsList.DUMMY) {
 			Item weaponCandidate;
 			do {
 				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );

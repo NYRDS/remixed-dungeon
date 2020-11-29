@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.items.rings;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -12,27 +13,15 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class Artifact extends EquipableItem {
-	@Nullable
-	protected ArtifactBuff buff;
 
 	@Override
 	public Belongings.Slot slot(Belongings belongings) {
 		return Belongings.Slot.ARTIFACT;
 	}
 
-	@Override
-	public void deactivate(Char ch) {
-		super.deactivate(ch);
-
-		if(buff!=null) {
-			ch.remove(buff);
-			buff = null;
-		}
-	}
-
 	public void activate(@NotNull Char ch) {
 		super.activate(ch);
-		buff = buff();
+		Buff buff = buff();
 		if (buff != null) {
 			buff.setSource(this);
 			buff.attachTo(ch);

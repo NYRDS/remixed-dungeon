@@ -45,7 +45,7 @@ public class Burning extends Buff implements Doom {
 	@Packable
 	private float left;
 
-	class burnItem implements itemAction{
+	class burnItem implements ItemAction {
 		public Item act(Item srcItem){
 			return srcItem.burn(target.getPos());
 		}

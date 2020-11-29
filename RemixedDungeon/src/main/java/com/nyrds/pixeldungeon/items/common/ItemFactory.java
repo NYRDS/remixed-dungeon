@@ -40,7 +40,7 @@ import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -483,7 +483,7 @@ public class ItemFactory {
         String kind = itemDesc.getString("kind");
 
         if (kind.equals("NoItem") || Treasury.get().isForbidden(kind)) {
-            return CharsList.DUMMY_ITEM;
+            return ItemsList.DUMMY;
         }
 
         Item item = ItemFactory.itemByName(kind);

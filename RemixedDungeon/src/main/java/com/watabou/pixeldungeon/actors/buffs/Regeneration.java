@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.watabou.pixeldungeon.actors.Char;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Regeneration extends Buff {
 
     private static final float REGENERATION_DELAY = 10;
@@ -43,7 +45,7 @@ public class Regeneration extends Buff {
     }
 
 	@Override
-	public boolean attachTo( Char target ) {
+	public boolean attachTo(@NotNull Char target ) {
         return target.hasBuff(Regeneration.class) || super.attachTo(target);
     }
 }

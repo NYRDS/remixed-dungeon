@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -43,7 +43,7 @@ public class Bones {
 	
 	public static void leave() {
 		
-		item = CharsList.DUMMY_ITEM;
+		item = ItemsList.DUMMY;
 
 		switch (Random.Int( 4 )) {
 		case 0:
@@ -59,7 +59,7 @@ public class Bones {
 			item = Dungeon.hero.getBelongings().ring2;
 			break;
 		}
-		if (item == CharsList.DUMMY_ITEM || (item instanceof Artifact && !(item instanceof Ring))) {
+		if (item == ItemsList.DUMMY || (item instanceof Artifact && !(item instanceof Ring))) {
 			if (Dungeon.hero.gold() > 0) {
 				item = new Gold( Random.IntRange( 1, Dungeon.hero.gold()) );
 			} else {
@@ -96,7 +96,7 @@ public class Bones {
 				}
 			}  catch (Exception ignored) {
 			}
-			return CharsList.DUMMY_ITEM;
+			return ItemsList.DUMMY;
 		} else {
 			if (depth == Dungeon.depth) {
 				Game.instance().deleteFile( BONES_FILE );
@@ -120,7 +120,7 @@ public class Bones {
 				
 				return item;
 			} else {
-				return CharsList.DUMMY_ITEM;
+				return ItemsList.DUMMY;
 			}
 		}
 	}

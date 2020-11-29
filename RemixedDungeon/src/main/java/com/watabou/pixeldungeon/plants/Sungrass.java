@@ -90,7 +90,7 @@ public class Sungrass extends Plant {
 		private int pos;
 
 		@Override
-		public boolean attachTo(Char target) {
+		public boolean attachTo(@NotNull Char target) {
 			pos = target.getPos();
 			return super.attachTo(target);
 		}

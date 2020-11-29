@@ -29,7 +29,7 @@ public class ChaosCrystal extends UsableArtifact {
 
 	private static final String AC_FUSE             = "ChaosCrystal_Fuse";
 
-	private static final int CHAOS_CRYSTALL_IMAGE = 9;
+	private static final int CHAOS_CRYSTAL_IMAGE = 9;
 	private static final float TIME_TO_FUSE = 10;
 
 	@Packable
@@ -40,7 +40,7 @@ public class ChaosCrystal extends UsableArtifact {
 
 	public ChaosCrystal() {
 		imageFile = "items/artifacts.png";
-		image = CHAOS_CRYSTALL_IMAGE;
+		image = CHAOS_CRYSTAL_IMAGE;
 	}
 
 	@Override

@@ -23,6 +23,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Weakness extends FlavourBuff {
 
 	private static final float DURATION = 40f;
@@ -38,7 +40,7 @@ public class Weakness extends FlavourBuff {
 	}
 	
 	@Override
-	public boolean attachTo( Char target ) {
+	public boolean attachTo(@NotNull Char target ) {
 		if (super.attachTo( target )) {
 			target.getBelongings().discharge();
 			return true;

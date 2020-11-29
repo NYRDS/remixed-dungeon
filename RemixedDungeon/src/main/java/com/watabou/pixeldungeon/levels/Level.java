@@ -37,6 +37,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
@@ -926,7 +927,7 @@ public abstract class Level implements Bundlable {
 			itemsToSpawn.remove(item);
 			return item;
 		}
-		return CharsList.DUMMY_ITEM;
+		return ItemsList.DUMMY;
 	}
 
 	@LuaInterface
@@ -1053,7 +1054,7 @@ public abstract class Level implements Bundlable {
 			return;
 		}
 
-		if(item == CharsList.DUMMY_ITEM) {
+		if(item == ItemsList.DUMMY) {
 			return;
 		}
 
@@ -1062,7 +1063,7 @@ public abstract class Level implements Bundlable {
 
 	@LuaInterface
 	public void animatedDrop(Item item, int cell) {
-		if(item == CharsList.DUMMY_ITEM) {
+		if(item == ItemsList.DUMMY) {
 			return;
 		}
 		var heap = drop(item,cell);

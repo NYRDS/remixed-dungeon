@@ -23,10 +23,12 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Roots extends FlavourBuff {
 	
 	@Override
-	public boolean attachTo( Char target ) {
+	public boolean attachTo(@NotNull Char target ) {
 		if (target.isFlying()) {
 			return false;
 		}

@@ -6,7 +6,7 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
@@ -186,7 +186,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(leftHand,"left"));
 			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
 
-			if(armor != CharsList.DUMMY_ITEM) {
+			if(armor != ItemsList.DUMMY) {
 				layersDesc.put(LAYER_LEFT_ARMOR, armorShoulderDescriptor(armor,leftHand,"left"));
 				layersDesc.put(LAYER_RIGHT_ARMOR, armorShoulderDescriptor(armor,weapon,"right"));
 			}

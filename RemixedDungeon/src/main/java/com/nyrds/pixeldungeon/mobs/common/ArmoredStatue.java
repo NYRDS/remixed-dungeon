@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
@@ -47,7 +47,7 @@ public class ArmoredStatue extends Statue {
 	@NotNull
     @Override
 	public EquipableItem getItem() {
-		if(getBelongings().armor == CharsList.DUMMY_ITEM) {
+		if(getBelongings().armor == ItemsList.DUMMY) {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);

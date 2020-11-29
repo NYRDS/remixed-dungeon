@@ -20,9 +20,11 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -40,7 +42,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
+import lombok.var;
 
 public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
@@ -49,6 +53,10 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @Packable(defaultValue = "1")
     protected int level = 1;
+
+    @Getter
+    @Packable(defaultValue = "-1")
+    protected int source = -1;
 
     @Override
     public String getEntityKind() {
@@ -72,14 +80,6 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     public void attachVisual() {
         target.getSprite().add(charSpriteStatus());
-    }
-
-    interface itemAction {
-        Item act(Item srcItem);
-
-        String actionText(Item srcItem);
-
-        void carrierFx();
     }
 
     public boolean attachTo(@NotNull Char target) {
@@ -174,13 +174,27 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @LuaInterface
-    public static void detach(Char target, String cl) {
+    public static void detach(@NotNull Char target, String cl) {
         detach(target.buff(cl));
     }
 
     @LuaInterface
-    public static void detach(Char target, Class<? extends Buff> cl) {
+    public static void detach(@NotNull Char target, Class<? extends Buff> cl) {
         detach(target.buff(cl));
+    }
+
+    @LuaInterface
+    public static void detachAllBySource(@NotNull Char target, NamedEntityKindWithId source) {
+        var buffsToRemove = new HashSet<Buff>();
+        for(Buff buff:target.buffs()) {
+            if(buff.getSource() == source.getId()) {
+                buffsToRemove.add(buff);
+            }
+        }
+
+        for(Buff buff:buffsToRemove) {
+            buff.detach();
+        }
     }
 
     public void level(int level) {
@@ -246,7 +260,16 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         }
     }
 
-    protected void applyToCarriedItems(itemAction action) {
+    @LuaInterface
+    public void setSource(@NotNull NamedEntityKindWithId source) {
+        setSource(source.getId());
+    }
+
+    private void setSource(int id) {
+        source = id;
+    }
+
+    protected void applyToCarriedItems(ItemAction action) {
         int n = 1;
 
         if (Game.getDifficulty() >= 3) {
@@ -256,7 +279,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         for (int i = 0; i < n; i++) {
             Item item = target.getBelongings().randomUnequipped();
 
-            if (item == CharsList.DUMMY_ITEM || item instanceof Bag || item instanceof Gold) {
+            if (item == ItemsList.DUMMY || item instanceof Bag || item instanceof Gold) {
                 continue;
             }
 
@@ -276,7 +299,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
             String actionText = null;
 
-            if (item == null || item == CharsList.DUMMY_ITEM) {
+            if (item == null || item == ItemsList.DUMMY) {
                 actionText = action.actionText(srcItem);
                 action.carrierFx();
             } else {

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -97,7 +97,7 @@ public class LibraryPainter extends Painter {
 		Item prize = level.itemToSpanAsPrize();
 		if (prize instanceof Scroll) {
 			return prize;
-		} else if (prize != CharsList.DUMMY_ITEM) {
+		} else if (prize != ItemsList.DUMMY) {
 			level.addItemToSpawn(prize);
 		}
 

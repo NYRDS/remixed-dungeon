@@ -61,11 +61,11 @@ public class DummyChar extends Char {
 
         GLog.debug("%s added to %s", buff.getEntityKind(), getEntityKind());
 
-        buffs.add(buff);
+        //buffs.add(buff);
     }
 
     public void remove(@Nullable Buff buff) {
-        buffs.remove(buff);
+        //buffs.remove(buff);
 
         if(buff!=null) {
             GLog.debug("%s removed from %s", buff.getEntityKind(), getEntityKind());

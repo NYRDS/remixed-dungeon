@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.watabou.noosa.Camera;
@@ -299,7 +300,7 @@ public class Hero extends Char {
 	@Override
 	public float speed() {
 
-		int aEnc = getBelongings().armor != CharsList.DUMMY_ITEM ? getBelongings().armor.requiredSTR() - effectiveSTR() : 0;
+		int aEnc = getBelongings().armor != ItemsList.DUMMY ? getBelongings().armor.requiredSTR() - effectiveSTR() : 0;
 		if (aEnc > 0) {
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));
 		} else {

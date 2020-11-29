@@ -27,10 +27,12 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Frost extends FlavourBuff {
 	private static final float DURATION	= 5f;
 	
-	class freezeItem implements itemAction{
+	class freezeItem implements ItemAction {
 		public Item act(Item srcItem){
 			return srcItem.freeze(target.getPos());
 		}
@@ -46,7 +48,7 @@ public class Frost extends FlavourBuff {
 	}
 	
 	@Override
-	public boolean attachTo( Char target ) {
+	public boolean attachTo(@NotNull Char target ) {
 		if (super.attachTo( target )) {
 			
 			target.paralyse(true);

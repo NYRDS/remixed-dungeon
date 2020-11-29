@@ -34,6 +34,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Hunger extends Buff implements Doom {
 
 	private static final float STEP	= 10f;
@@ -156,7 +158,7 @@ public class Hunger extends Buff implements Doom {
 	}
 
 	@Override
-	public boolean attachTo( Char target ) {
+	public boolean attachTo(@NotNull Char target ) {
 		return target.hasBuff(Hunger.class) || super.attachTo(target);
 	}
 

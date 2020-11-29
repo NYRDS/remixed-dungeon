@@ -15,65 +15,17 @@
         "level": 1000
       },
       {
-        "kind": "CommonArrow",
-        "quantity": 100,
-        "level": 10
-      },
-      {
-        "kind": "PotionOfParalyticGas",
-        "quantity": 100
-      },
-      {
-        "kind": "PotionOfPurity",
-        "quantity": 100
-      },
-      {
-        "kind": "ScrollOfDomination",
-        "quantity": 100
-      },
-      {
         "kind": "HookedDagger"
       },
       {
-        "kind": "Sungrass.Seed"
+        "kind": "WoodenShield"
       },
       {
-        "kind": "WandHolster"
+        "kind": "ChaosCrystal"
       },
       {
-        "kind": "RottenRation",
+        "kind": "ScrollOfIdentify",
         "quantity": 100
-      },
-      {
-        "kind": "TomeOfMastery"
-      },
-      {
-        "kind": "ArmorKit"
-      },
-      {
-        "kind": "SpellBook",
-        "quantity": 10000
-      },
-      {
-        "kind": "Mace"
-      },
-
-      {
-        "kind": "WandOfPoison"
-      },
-
-      {
-        "kind": "test/TestItem"
-      },
-
-      {
-        "kind": "Kusarigama"
-      },
-
-      {
-        "kind": "SpellBook",
-        "quantity": 100,
-        "level": 10
       }
     ],
     "str": 10,

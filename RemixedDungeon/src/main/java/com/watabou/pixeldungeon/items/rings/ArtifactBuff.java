@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items.rings;
 
+import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 
 /**
@@ -8,16 +9,9 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
  */
 public class ArtifactBuff extends Buff {
 
-    private Artifact source;
-
-    public void setSource(Artifact source) {
-        this.source = source;
-    }
-
-
     @Override
     public boolean act() {
-        if(source==null) { // non-artifact source
+        if(getSource()== EntityIdSource.INVALID_ID) { // non-artifact source
             detach();
         }
         return super.act();
@@ -25,6 +19,6 @@ public class ArtifactBuff extends Buff {
 
     @Override
     public boolean dontPack() {
-        return source != null;
+        return getSource() != EntityIdSource.INVALID_ID;
     }
 }

@@ -24,11 +24,12 @@ import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
@@ -67,7 +68,7 @@ import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.var;
 
-public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
+public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWithId {
 
 	private static final String TXT_TO_STRING       = "%s";
 	private static final String TXT_TO_STRING_X     = "%s x%d";
@@ -350,9 +351,10 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	public void removeItemFrom(@NotNull Char hero) {
 		onDetach();
 		setCursed(false);
-		if (!(this instanceof EquipableItem) || !isEquipped(hero) || !((EquipableItem) this).doUnequip(hero, false)) {
-			hero.getBelongings().removeItem(this);
+		if (isEquipped(hero)) {
+			((EquipableItem) this).doUnequip(hero, false);
 		}
+		hero.getBelongings().removeItem(this);
 
 		QuickSlot.refresh(hero);
 	}
@@ -469,9 +471,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 
-		if(id==EntityIdSource.INVALID_ID) {
-			id = EntityIdSource.getNextId();
-		}
+		getId();
 
 		quantity(bundle.getInt(QUANTITY));
 
@@ -713,6 +713,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 	public int getId() {
 		if(id==EntityIdSource.INVALID_ID) {
 			id = EntityIdSource.getNextId();
+			ItemsList.add(this,id);
 		}
 		return id;
 	}
@@ -734,10 +735,8 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKind {
 
 	//former IChaosItem
 	public void ownerTakesDamage(int damage) {
-
 	}
 
 	public void ownerDoesDamage(int damage) {
-
 	}
 }

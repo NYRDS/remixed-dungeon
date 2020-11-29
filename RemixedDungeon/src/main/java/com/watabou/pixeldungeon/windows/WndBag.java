@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -225,7 +225,7 @@ public class WndBag extends WndTabbed {
 
 
 	private void placeEquipped(Item item,Belongings.Slot slot, int image) {
-		if(item != CharsList.DUMMY_ITEM) {
+		if(item != ItemsList.DUMMY) {
 			placeItem(item);
 			return;
 		}

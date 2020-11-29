@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -40,6 +41,7 @@ import com.nyrds.pixeldungeon.ml.actions.Move;
 import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
@@ -112,7 +114,7 @@ import lombok.var;
 
 import static com.watabou.pixeldungeon.Dungeon.level;
 
-public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKind {
+public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKindWithId {
 
     public static final String IMMUNITIES        = "immunities";
 	public static final String RESISTANCES       = "resistances";
@@ -147,7 +149,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	private int prevPos = Level.INVALID_CELL;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-	@Getter
 	private int id = EntityIdSource.INVALID_ID;
 
 	protected int baseAttackSkill = 0;
@@ -271,10 +272,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	protected void setupCharData() {
         ///freshly created char or pre 28.6 save
-        if(id==EntityIdSource.INVALID_ID) {
-            id = EntityIdSource.getNextId();
-            CharsList.add(this,id);
-        }
+		getId();
 
 		if(getOwnerId() < 0) { //fix pre 29.4.fix.6 saves
 			setOwnerId(id);
@@ -566,7 +564,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	        return leftItem;
         }
 
-	    return CharsList.DUMMY_ITEM;
+	    return ItemsList.DUMMY;
     }
 
 	public int damageRoll() {
@@ -1578,5 +1576,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public AiState getState() {
 		return MobAi.getStateByClass(Passive.class);
+	}
+
+	public int getId() {
+		if(id==EntityIdSource.INVALID_ID) {
+			id = EntityIdSource.getNextId();
+			CharsList.add(this,id);
+		}
+		return id;
 	}
 }

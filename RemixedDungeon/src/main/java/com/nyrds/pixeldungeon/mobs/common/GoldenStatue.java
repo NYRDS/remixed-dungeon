@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
@@ -27,7 +27,7 @@ public class GoldenStatue extends Statue {
 	@NotNull
     @Override
 	public EquipableItem getItem() {
-		if(getBelongings().weapon == CharsList.DUMMY_ITEM) {
+		if(getBelongings().weapon == ItemsList.DUMMY) {
 			Weapon weapon = new GoldenSword();
 			weapon.identify();
 			weapon.upgrade(4);

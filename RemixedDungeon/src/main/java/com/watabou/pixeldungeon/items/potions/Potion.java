@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -348,7 +348,7 @@ public class Potion extends Item implements UnknownItem {
 			Char owner = getOwner();
 
 			if(item.equals(owner.getBelongings().weapon)) {
-				owner.getBelongings().weapon = CharsList.DUMMY_ITEM;
+				owner.getBelongings().weapon = ItemsList.DUMMY;
 			} else {
 				item.detachAll( owner.getBelongings().backpack );
 			}

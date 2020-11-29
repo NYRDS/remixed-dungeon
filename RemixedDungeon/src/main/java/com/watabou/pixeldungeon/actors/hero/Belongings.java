@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -68,7 +69,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public static final int BACKPACK_SIZE	= 18;
 
-	private Item selectedItem = CharsList.DUMMY_ITEM;
+	private Item selectedItem = ItemsList.DUMMY;
 
     private final Char owner;
 	
@@ -96,21 +97,21 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	private Set<EquipableItem> activatedItems = new HashSet<>();
 
-	@Packable(defaultValue = "DUMMY_ITEM")
+	@Packable(defaultValue = "DUMMY")
 	@NotNull
-	public EquipableItem weapon = CharsList.DUMMY_ITEM;
-	@Packable(defaultValue = "DUMMY_ITEM")
+	public EquipableItem weapon = ItemsList.DUMMY;
+	@Packable(defaultValue = "DUMMY")
 	@NotNull
-	public EquipableItem leftHand = CharsList.DUMMY_ITEM;
-	@Packable(defaultValue = "DUMMY_ITEM")
+	public EquipableItem leftHand = ItemsList.DUMMY;
+	@Packable(defaultValue = "DUMMY")
 	@NotNull
-	public EquipableItem armor  = CharsList.DUMMY_ITEM;
-	@Packable(defaultValue = "DUMMY_ITEM")
+	public EquipableItem armor  = ItemsList.DUMMY;
+	@Packable(defaultValue = "DUMMY")
 	@NotNull
-	public EquipableItem ring1  = CharsList.DUMMY_ITEM;
-	@Packable(defaultValue = "DUMMY_ITEM")
+	public EquipableItem ring1  = ItemsList.DUMMY;
+	@Packable(defaultValue = "DUMMY")
 	@NotNull
-	public EquipableItem ring2  = CharsList.DUMMY_ITEM;
+	public EquipableItem ring2  = ItemsList.DUMMY;
 
 	public Belongings( Char owner ) {
 		this.owner = owner;
@@ -146,7 +147,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public boolean slotBlocked(Slot slot) {
-		return itemBySlot(slot) != CharsList.DUMMY_ITEM || blockedSlots.containsKey(slot);
+		return itemBySlot(slot) != ItemsList.DUMMY || blockedSlots.containsKey(slot);
 	}
 
 	private void blockSlots() {
@@ -196,7 +197,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			}
 		}
 
-		return CharsList.DUMMY_ITEM;
+		return ItemsList.DUMMY;
 	}
 
 	@LuaInterface
@@ -206,7 +207,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				return item;
 			}
 		}
-		return CharsList.DUMMY_ITEM;
+		return ItemsList.DUMMY;
 	}
 
 	@Deprecated
@@ -296,13 +297,12 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public Item randomUnequipped() {
 		Item ret = Random.element( backpack.items );
 		if (ret == null) {
-			return CharsList.DUMMY_ITEM;
+			return ItemsList.DUMMY;
 		}
 		return ret;
 	}
 
 	public boolean removeItem(Item itemToRemove) {
-
 		if(itemToRemove instanceof EquipableItem && isEquipped(itemToRemove)) {
 			var eItem = (EquipableItem) itemToRemove;
 			eItem.deactivate(owner);
@@ -312,27 +312,27 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		itemToRemove.setOwner(CharsList.DUMMY);
 
 		if(itemToRemove.equals(weapon)) {
-			weapon = CharsList.DUMMY_ITEM;
+			weapon = ItemsList.DUMMY;
 			return true;
 		}
 
 		if(itemToRemove.equals(armor)) {
-			armor = CharsList.DUMMY_ITEM;
+			armor = ItemsList.DUMMY;
 			return true;
 		}
 
 		if(itemToRemove.equals(leftHand)) {
-			leftHand = CharsList.DUMMY_ITEM;
+			leftHand = ItemsList.DUMMY;
 			return true;
 		}
 
 		if(itemToRemove.equals(ring1)) {
-			ring1 = CharsList.DUMMY_ITEM;
+			ring1 = ItemsList.DUMMY;
 			return true;
 		}
 
 		if(itemToRemove.equals(ring2)) {
-			ring2 = CharsList.DUMMY_ITEM;
+			ring2 = ItemsList.DUMMY;
 			return true;
 		}
 
@@ -446,7 +446,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		public boolean hasNextEquipped(){
 			for (int i = index; i < equipped.length; i++) {
-				if (equipped[i] != CharsList.DUMMY_ITEM && equipped[i] != null) {
+				if (equipped[i] != ItemsList.DUMMY && equipped[i] != null) {
 					return true;
 				}
 			}
@@ -462,7 +462,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		public Item next() {
 			while (index < equipped.length) {
 				Item item = equipped[index++];
-				if (item != CharsList.DUMMY_ITEM && item != null) {
+				if (item != ItemsList.DUMMY && item != null) {
 					return item;
 				}
 			}
@@ -538,7 +538,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			case LEFT_ARTIFACT:
 				return ring2;
 		}
-		return CharsList.DUMMY_ITEM;
+		return ItemsList.DUMMY;
 	}
 
 	public boolean equip(@NotNull EquipableItem item, Slot slot) {
@@ -552,7 +552,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			blockingItem = itemBySlot(item.blockSlot());
 		}
 
-		if(blockingItem!=CharsList.DUMMY_ITEM) {
+		if(blockingItem!= ItemsList.DUMMY) {
 			GLog.w(Game.getVar(R.string.Belongings_CantWearBoth),
 					item.name(),
 					blockingItem.name());
@@ -584,11 +584,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.ARTIFACT || slot==Slot.LEFT_ARTIFACT) {
-			if (ring1 != CharsList.DUMMY_ITEM && ring2 != CharsList.DUMMY_ITEM) {
+			if (ring1 != ItemsList.DUMMY && ring2 != ItemsList.DUMMY) {
 				GLog.w(Game.getVar(R.string.Artifact_Limit));
 				return false;
 			} else {
-				if (ring1 == CharsList.DUMMY_ITEM) {
+				if (ring1 == ItemsList.DUMMY) {
 					ring1 = (EquipableItem) item.detach(backpack);;
 				} else {
 					ring2 = (EquipableItem) item.detach(backpack);;

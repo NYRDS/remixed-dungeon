@@ -9,6 +9,8 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by mike on 25.03.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -40,7 +42,7 @@ public class RageBuff extends ArtifactBuff {
     }
 
     @Override
-    public boolean attachTo( Char target ) {
+    public boolean attachTo(@NotNull Char target ) {
         return target.hasBuff(RageBuff.class) || super.attachTo(target);
     }
 }

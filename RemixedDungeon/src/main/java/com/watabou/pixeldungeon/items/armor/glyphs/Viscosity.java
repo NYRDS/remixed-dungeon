@@ -35,6 +35,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Viscosity extends Glyph {
 
 	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
@@ -82,7 +84,7 @@ public class Viscosity extends Glyph {
 		protected int damage = 0;
 
 		@Override
-		public boolean attachTo( Char target ) {
+		public boolean attachTo(@NotNull Char target ) {
 			if (super.attachTo( target )) {
 				postpone( TICK );
 				return true;

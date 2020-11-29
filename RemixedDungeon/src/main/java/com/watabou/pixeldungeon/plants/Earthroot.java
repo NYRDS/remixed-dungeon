@@ -95,7 +95,7 @@ public class Earthroot extends Plant {
 		private int level;
 		
 		@Override
-		public boolean attachTo( Char target ) {
+		public boolean attachTo(@NotNull Char target ) {
 			pos = target.getPos();
 			return super.attachTo( target );
 		}

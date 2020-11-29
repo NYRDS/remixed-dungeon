@@ -39,6 +39,7 @@ PdAnnotationProcessor extends AbstractProcessor{
 		//final TypeMirror CharList = processingEnv.getElementUtils().getTypeElement("com.nyrds.pixeldungeon.utils.CharList").asType();
 
 		ClassName charList = ClassName.get("com.nyrds.pixeldungeon.utils", "CharsList");
+		ClassName itemsList = ClassName.get("com.nyrds.pixeldungeon.utils", "ItemsList");
 
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
 		Map<Element, String>       defaultValues = new HashMap<>();
@@ -191,7 +192,7 @@ PdAnnotationProcessor extends AbstractProcessor{
 				.build();
 
 		JavaFile javaFile = JavaFile.builder("com.nyrds.generated", BundleHelper)
-				.addStaticImport(charList,"DUMMY_ITEM")
+				.addStaticImport(itemsList,"DUMMY")
 				.build();
 
 		try { // write the file
