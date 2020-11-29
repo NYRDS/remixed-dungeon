@@ -16,6 +16,7 @@ import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -37,6 +38,9 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class CharUtils {
     static public boolean isVisible(@Nullable Char ch) {
@@ -170,6 +174,17 @@ public class CharUtils {
                 if(target.getEnemy() == actor) {
                     return new Attack(target);
                 } else {
+
+                    Set<String> actions = new HashSet<>();
+                    actions.addAll(target.actions(actor));
+
+                    actions.remove(CommonActions.MAC_HIT);
+                    actions.remove(CommonActions.MAC_TAUNT);
+
+                    if(actions.isEmpty()) {
+                        return new Attack(target);
+                    }
+
                     return new Examine(target);
                 }
             }

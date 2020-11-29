@@ -820,11 +820,6 @@ public class Hero extends Char {
 		}
 	}
 
-	@Override
-	protected float _attackDelay() {
-		return 1f;
-	}
-
 	public void clearActions() {
 		curAction = null;
 		lastAction = null;
@@ -882,12 +877,12 @@ public class Hero extends Char {
 
 	@Override
 	public void onAttackComplete() {
+		super.onAttackComplete();
+
 		AttackIndicator.target(getEnemy());
 
 		curAction = null;
 		setEnemy(CharsList.DUMMY);
-
-		super.onAttackComplete();
 	}
 
 	public boolean search(boolean intentional) {

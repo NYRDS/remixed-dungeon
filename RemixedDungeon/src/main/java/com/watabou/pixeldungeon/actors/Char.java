@@ -689,7 +689,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return hp() > 0;
 	}
 
-	abstract protected float _attackDelay();
+	protected float _attackDelay(){
+		return 1.f;
+	}
 
 	public float attackDelay() {
 		float delayFactor = 1;

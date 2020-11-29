@@ -623,11 +623,6 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	protected float _attackDelay() {
-		return 1f;
-	}
-
-	@Override
 	public void execute(Char hero, @NotNull String action) {
 		if(action.equals(CommonActions.MAC_STEAL)) {
 			hero.nextAction(new Steal(this));
