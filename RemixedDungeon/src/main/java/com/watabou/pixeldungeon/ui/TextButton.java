@@ -28,7 +28,7 @@ public class TextButton extends Button {
 		bg.size( width, height );
 		
 		text.x = x + (int)(width - text.width()) / 2;
-		text.y = y + (int)(height - text.baseLine()) / 2;
+		text.y = y + (int)(height - Math.max(text.height(),text.baseLine())) / 2;
 
 		if (icon != null) {
 			icon.x = x + text.x - icon.width() - 2;
@@ -73,6 +73,6 @@ public class TextButton extends Button {
 	}
 	
 	public float reqHeight() {
-		return text.baseLine() + 4;
+		return text.height() + 4;
 	}
 }

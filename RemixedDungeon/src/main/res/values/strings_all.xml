@@ -2488,14 +2488,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Potion_Colors_9">bistre</string>
   <string name="Potion_Colors_10">indigo</string>
   <string name="Potion_Colors_11">silver</string>
-  <string name="Welcome_Text_29_1">
-    remix.29.1\n
-    - Modding:\n
-    -- Moddable item spawn rate\n
-    - Translations:\n
-    --Hungarian translation added\n
-    - Bugs fixed\n
-    </string>
   <string name="town_deco_stone_wall_broken_name">Broken wall</string>
   <string name="town_deco_stone_wall_broken_desc">Old stone wall, in bad condition</string>
   <string name="Challenges_Names_6">Forbidden Runes</string>
@@ -2611,5 +2603,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="Mob_ReadyForOrder">%s ready for your order.</string>
   <string name="Mob_CantDoIt">I can\'t do it. I have a paws.</string>>
+
+  <string name="Welcome_Text_29_6">
+    remix.29.6\n
+    - Gameplay:\n
+    -- Additional actions to perform on mobs!\n
+    - Modding:\n
+    -- Item actors!\n
+    -- Special weapon properties!\n
+    -- More uncategorized stuff!\nФв
+    - Bugs fixed\n
+    </string>
+
 
 </resources>

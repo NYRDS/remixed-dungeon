@@ -51,7 +51,7 @@ public abstract class Text extends Visual {
 		if(!ModdingMode.getClassicTextRenderingMode()) {
 			return new SystemText(text, font.baseLine*2, false);
 		}
-		return new BitmapText(text, font);
+		return new BitmapTextMultiline(text, font);
 	}
 	
 	public static Text createMultiline(String text, Font font) {

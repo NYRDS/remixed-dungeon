@@ -15,8 +15,6 @@ public class WndOptionsLua extends WndOptions {
 
     public WndOptionsLua(Object callback, String title, String message, String... options) {
         super(title, message, options);
-
-
         this.callback = (LuaFunction) callback;
     }
 
