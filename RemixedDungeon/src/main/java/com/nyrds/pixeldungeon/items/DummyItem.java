@@ -64,4 +64,8 @@ public class DummyItem extends EquipableItem {
     public boolean valid() {
         return false;
     }
+
+    @Override
+    public void activate(@NotNull Char ch) {
+    }
 }

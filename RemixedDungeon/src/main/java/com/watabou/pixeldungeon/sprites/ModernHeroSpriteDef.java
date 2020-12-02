@@ -141,10 +141,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if (accessory == null){
-			if(hero.getBelongings().armor.hasHelmet()) {
-                helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
+			if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()) {
+				helmetDescriptor = helmetDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero);
             }
-            if(hero.getBelongings().armor.isCoveringHair()){
+			if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
                 drawHair = false;
             }
 		} else {
@@ -159,19 +159,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String bodyType = bodyDescriptor(hero);
 
 		layersDesc.put(LAYER_BODY, "hero_modern/body/" +bodyType+".png" );
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().armor, hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero));
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().armor));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR)));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-		EquipableItem armor = hero.getBelongings().armor;
+		EquipableItem armor = hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR);
 
-		EquipableItem weapon = hero.getBelongings().weapon;
+		EquipableItem weapon = hero.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
 		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();
 
-		EquipableItem leftHand = hero.getBelongings().leftHand;
+		EquipableItem leftHand = hero.getBelongings().getItemFromSlot(Belongings.Slot.LEFT_HAND);
 		String weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
@@ -239,8 +239,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if(!weapon_anims.isEmpty()) { //old mods compatibility
-			EquipableItem weapon = hero.getBelongings().weapon;
-			EquipableItem leftHand = hero.getBelongings().leftHand;
+			EquipableItem weapon = hero.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+			EquipableItem leftHand = hero.getBelongings().getItemFromSlot(Belongings.Slot.LEFT_HAND);
 
 			boolean right = weapon.goodForMelee();
 			boolean left  = leftHand.goodForMelee();
@@ -334,14 +334,14 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 
 	private String helmetDescriptor(EquipableItem armor, Hero hero) {
-		if(hero.getBelongings().armor.hasHelmet()){
+		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
 			return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}
 
 	private String collarDescriptor(EquipableItem armor, Hero hero) {
-		if(hero.getBelongings().armor.hasCollar()){
+		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
 			return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";
 		}
 		return HERO_EMPTY_PNG;

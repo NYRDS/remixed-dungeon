@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
@@ -347,8 +348,8 @@ public class Potion extends Item implements UnknownItem {
 		if(quantity <= maxQuantity){
 			Char owner = getOwner();
 
-			if(item.equals(owner.getBelongings().weapon)) {
-				owner.getBelongings().weapon = ItemsList.DUMMY;
+			if(item.equals(owner.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON))) {
+				owner.getBelongings().setItemForSlot(ItemsList.DUMMY, Belongings.Slot.WEAPON);
 			} else {
 				item.detachAll( owner.getBelongings().backpack );
 			}

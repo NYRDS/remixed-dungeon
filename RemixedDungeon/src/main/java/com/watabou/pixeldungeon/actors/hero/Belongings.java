@@ -83,6 +83,56 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		this.selectedItem = selectedItem;
 	}
 
+	@NotNull
+	public EquipableItem getItemFromSlot(@NotNull Slot slot) {
+		switch (slot) {
+			case NONE:
+				return ItemsList.DUMMY;
+			case WEAPON:
+				return weapon;
+			case LEFT_HAND:
+				return leftHand;
+			case ARMOR:
+				return armor;
+			case ARTIFACT:
+				return ring1;
+			case LEFT_ARTIFACT:
+				return ring2;
+		}
+		return ItemsList.DUMMY;
+	}
+
+	public void setItemForSlot(EquipableItem item, Slot slot) {
+		usedSlots.put(item, slot);
+		item.setOwner(owner);
+
+		if(!activatedItems.contains(item)) {
+			activatedItems.add(item);
+			item.activate(owner);
+		}
+		blockedSlots.put(item.blockSlot(), item);
+
+		switch (slot) {
+			case NONE:
+				break;
+			case WEAPON:
+				weapon = item;
+				break;
+			case LEFT_HAND:
+				leftHand = item;
+				break;
+			case ARMOR:
+				armor = item;
+				break;
+			case ARTIFACT:
+				ring1 = item;
+				break;
+			case LEFT_ARTIFACT:
+				ring2 = item;
+				break;
+		}
+	}
+
 	public enum Slot{
 		NONE,
 		WEAPON,
@@ -133,12 +183,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	public void restoreFromBundle( Bundle bundle ) {
-		
 		backpack.clear();
 		backpack.restoreFromBundle(bundle);
 		BundleHelper.UnPack(this,bundle);
 
-		activateEquippedItems();
+		for( Slot slot : Slot.values()) { //activate equipped items
+			setItemForSlot(getItemFromSlot(slot), slot);
+		}
 	}
 
 	@LuaInterface
@@ -150,43 +201,25 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return itemBySlot(slot) != ItemsList.DUMMY || blockedSlots.containsKey(slot);
 	}
 
-	private void blockSlots() {
-		blockedSlots.clear();
-		var itemIterator = iterator();
-
-		while (itemIterator.hasNextEquipped()) {
-			EquipableItem item = (EquipableItem) itemIterator.next();
-
-			blockedSlots.put(item.blockSlot(), item);
-		}
-	}
-
-	private void activateEquippedItems() {
-		var itemIterator = iterator();
-
-		while (itemIterator.hasNextEquipped()) {
-			EquipableItem item = (EquipableItem) itemIterator.next();
-			if(item!=null) {
-				item.setOwner(owner);
-				if (!activatedItems.contains(item)) {
-					item.activate(owner);
-					activatedItems.add(item);
-				}
-			}
-		}
-		blockSlots();
-	}
-
+	@NotNull
 	@LuaInterface
-	public String itemSlotName(EquipableItem item) {
+	public String itemSlotName(Item item) {
 		if (usedSlots.containsKey(item)) {
 			return usedSlots.get(item).name();
 		}
 		return Slot.NONE.name();
 	}
 
+	@NotNull
+	public Slot itemSlot(Item item) {
+		if (usedSlots.containsKey(item)) {
+			return usedSlots.get(item);
+		}
+		return Slot.NONE;
+	}
+
 	public boolean isEquipped(@NotNull Item item) {
-		return item.equals(weapon) || item.equals(armor) || item.equals(leftHand) || item.equals(ring1) || item.equals(ring2);
+		return item.equals(getItemFromSlot(Slot.WEAPON)) || item.equals(getItemFromSlot(Slot.ARMOR)) || item.equals(getItemFromSlot(Slot.LEFT_HAND)) || item.equals(getItemFromSlot(Slot.ARTIFACT)) || item.equals(getItemFromSlot(Slot.LEFT_ARTIFACT));
 	}
 
 	@LuaInterface
@@ -286,11 +319,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 	
 	public void uncurseEquipped() {
-		ScrollOfRemoveCurse.uncurse( owner, armor, weapon, leftHand, ring1, ring2 );
+		ScrollOfRemoveCurse.uncurse( owner, getItemFromSlot(Slot.ARMOR), getItemFromSlot(Slot.WEAPON), getItemFromSlot(Slot.LEFT_HAND), getItemFromSlot(Slot.ARTIFACT), getItemFromSlot(Slot.LEFT_ARTIFACT));
 	}
 
 	public void curseEquipped() {
-		ScrollOfCurse.curse( owner, armor, weapon, leftHand, ring1, ring2 );
+		ScrollOfCurse.curse( owner, getItemFromSlot(Slot.ARMOR), getItemFromSlot(Slot.WEAPON), getItemFromSlot(Slot.LEFT_HAND), getItemFromSlot(Slot.ARTIFACT), getItemFromSlot(Slot.LEFT_ARTIFACT));
 	}
 
 	@NotNull
@@ -311,28 +344,29 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		itemToRemove.setOwner(CharsList.DUMMY);
 
-		if(itemToRemove.equals(weapon)) {
-			weapon = ItemsList.DUMMY;
+		if(itemToRemove.equals(getItemFromSlot(Slot.WEAPON))) {
+			setItemForSlot(ItemsList.DUMMY, Slot.WEAPON);
 			return true;
 		}
 
-		if(itemToRemove.equals(armor)) {
-			armor = ItemsList.DUMMY;
+		if(itemToRemove.equals(getItemFromSlot(Slot.ARMOR))) {
+			setItemForSlot(ItemsList.DUMMY, Slot.ARMOR);
 			return true;
 		}
 
-		if(itemToRemove.equals(leftHand)) {
-			leftHand = ItemsList.DUMMY;
+		if(itemToRemove.equals(getItemFromSlot(Slot.LEFT_HAND))) {
+			setItemForSlot(ItemsList.DUMMY, Slot.LEFT_HAND);
 			return true;
 		}
 
-		if(itemToRemove.equals(ring1)) {
-			ring1 = ItemsList.DUMMY;
+		if(itemToRemove.equals(getItemFromSlot(Slot.ARTIFACT))) {
+			setItemForSlot(ItemsList.DUMMY, Slot.ARTIFACT);
+			this.ring1 = ItemsList.DUMMY;
 			return true;
 		}
 
-		if(itemToRemove.equals(ring2)) {
-			ring2 = ItemsList.DUMMY;
+		if(itemToRemove.equals(getItemFromSlot(Slot.LEFT_ARTIFACT))) {
+			setItemForSlot(ItemsList.DUMMY, Slot.LEFT_ARTIFACT);
 			return true;
 		}
 
@@ -354,7 +388,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		uncurseEquipped();
-		activateEquippedItems();
 	}
 	
 	public int charge( boolean full) {
@@ -391,23 +424,25 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public void setupFromJson(@NotNull JSONObject desc) throws JSONException {
 		try {
 			if (desc.has("armor")) {
-				armor = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
+				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("armor")), Slot.ARMOR);
 			}
 
 			if (desc.has("weapon")) {
-				weapon = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
+				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon")), Slot.WEAPON);
 			}
 
 			if (desc.has("left_hand")) {
-				leftHand = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("left_hand"));
+				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("left_hand")), Slot.LEFT_HAND);
 			}
 
 			if (desc.has("ring1")) {
-				ring1 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
+				EquipableItem ring11 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
+				setItemForSlot(ring11, Slot.ARTIFACT);
+				this.ring1 = ring11;
 			}
 
 			if (desc.has("ring2")) {
-				ring2 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2"));
+				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2")), Slot.LEFT_ARTIFACT);
 			}
 		} catch (ClassCastException e) {
 			throw ModdingMode.modException(e);
@@ -420,8 +455,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				collect(item);
 			}
 		}
-
-		activateEquippedItems();
 	}
 
 	@Override
@@ -442,11 +475,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		
 		private Iterator<Item> backpackIterator = backpack.iterator();
 		
-		private Item[] equipped = {weapon, armor, leftHand, ring1, ring2};
+		private EquipableItem[] equipped = {getItemFromSlot(Slot.WEAPON), getItemFromSlot(Slot.ARMOR), getItemFromSlot(Slot.LEFT_HAND), getItemFromSlot(Slot.ARTIFACT), getItemFromSlot(Slot.LEFT_ARTIFACT)};
 
 		public boolean hasNextEquipped(){
 			for (int i = index; i < equipped.length; i++) {
-				if (equipped[i] != ItemsList.DUMMY && equipped[i] != null) {
+				if (equipped[i].valid()) {
 					return true;
 				}
 			}
@@ -484,7 +517,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		if(checkItem(item).valid()) {
 			removeItem(item);
 			activatedItems.remove(item);
-			blockSlots();
+			blockedSlots.remove(item.blockSlot());
 			owner.updateSprite();
 			return true;
 		}
@@ -528,15 +561,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	public Item itemBySlot(Belongings.Slot slot) {
 		switch (slot) {
 			case WEAPON:
-				return weapon;
+				return getItemFromSlot(Slot.WEAPON);
 			case LEFT_HAND:
-				return leftHand;
+				return getItemFromSlot(Slot.LEFT_HAND);
 			case ARMOR:
-				return armor;
+				return getItemFromSlot(Slot.ARMOR);
 			case ARTIFACT:
-				return ring1;
+				return getItemFromSlot(Slot.ARTIFACT);
 			case LEFT_ARTIFACT:
-				return ring2;
+				return getItemFromSlot(Slot.LEFT_ARTIFACT);
 		}
 		return ItemsList.DUMMY;
 	}
@@ -560,38 +593,42 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(slot==Slot.WEAPON) {
-			if (weapon.doUnequip( owner, true )) {
-				weapon = (EquipableItem) item.detach(backpack);
+			if (getItemFromSlot(Slot.WEAPON).doUnequip( owner, true )) {
+				setItemForSlot((EquipableItem) item.detach(backpack), Slot.WEAPON);
 			} else {
 				return false;
 			}
 		}
 
 		if(slot==Slot.ARMOR) {
-			if (armor.doUnequip( owner, true)) {
-				armor = (EquipableItem) item.detach(backpack);
+			if (getItemFromSlot(Slot.ARMOR).doUnequip( owner, true)) {
+				setItemForSlot((EquipableItem) item.detach(backpack), Slot.ARMOR);
 			} else {
 				return false;
 			}
 		}
 
 		if(slot==Slot.LEFT_HAND) {
-			if (leftHand.doUnequip( owner, true)) {
-				leftHand = (EquipableItem) item.detach(backpack);
+			if (getItemFromSlot(Slot.LEFT_HAND).doUnequip( owner, true)) {
+				setItemForSlot((EquipableItem) item.detach(backpack), Slot.LEFT_HAND);
 			} else {
 				return false;
 			}
 		}
 
 		if(slot==Slot.ARTIFACT || slot==Slot.LEFT_ARTIFACT) {
-			if (ring1 != ItemsList.DUMMY && ring2 != ItemsList.DUMMY) {
+			if (getItemFromSlot(Slot.ARTIFACT) != ItemsList.DUMMY && getItemFromSlot(Slot.LEFT_ARTIFACT) != ItemsList.DUMMY) {
 				GLog.w(Game.getVar(R.string.Artifact_Limit));
 				return false;
 			} else {
-				if (ring1 == ItemsList.DUMMY) {
-					ring1 = (EquipableItem) item.detach(backpack);;
+				if (getItemFromSlot(Slot.ARTIFACT) == ItemsList.DUMMY) {
+					EquipableItem ring11 = (EquipableItem) item.detach(backpack);
+					setItemForSlot(ring11, Slot.ARTIFACT);
+					this.ring1 = ring11;
+					;
 				} else {
-					ring2 = (EquipableItem) item.detach(backpack);;
+					setItemForSlot((EquipableItem) item.detach(backpack), Slot.LEFT_ARTIFACT);
+					;
 				}
 			}
 		}
@@ -602,10 +639,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			item.equippedCursed();
 		}
 
-		usedSlots.put(item, slot);
-
-		activateEquippedItems();
-		blockSlots();
 		QuickSlot.refresh(owner);
 		owner.updateSprite();
 

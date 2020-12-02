@@ -42,7 +42,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
-import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.var;
 
@@ -54,7 +53,6 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     @Packable(defaultValue = "1")
     protected int level = 1;
 
-    @Getter
     @Packable(defaultValue = "-1")
     protected int source = -1;
 
@@ -187,7 +185,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     public static void detachAllBySource(@NotNull Char target, NamedEntityKindWithId source) {
         var buffsToRemove = new HashSet<Buff>();
         for(Buff buff:target.buffs()) {
-            if(buff.getSource() == source.getId()) {
+            if(buff.getSourceId() == source.getId()) {
                 buffsToRemove.add(buff);
             }
         }
@@ -195,6 +193,23 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         for(Buff buff:buffsToRemove) {
             buff.detach();
         }
+    }
+
+    @LuaInterface
+    public NamedEntityKindWithId getSource() {
+        NamedEntityKindWithId ret = ItemsList.getById(source);
+        if(ret.valid()) {
+            return ret;
+        }
+        ret = CharsList.getById(source);
+        if(ret.valid()) {
+            return ret;
+        }
+        return ItemsList.DUMMY;
+    }
+
+    private int getSourceId() {
+        return source;
     }
 
     public void level(int level) {

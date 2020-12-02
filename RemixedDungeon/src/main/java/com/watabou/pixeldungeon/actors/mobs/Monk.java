@@ -24,6 +24,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -77,7 +78,7 @@ public class Monk extends Mob {
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		if (Random.Int( 6 ) == 0) {
-			EquipableItem weapon = enemy.getBelongings().weapon;
+			EquipableItem weapon = enemy.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
 
 			if (!(weapon instanceof Knuckles) && !weapon.isCursed() && enemy.getBelongings().drop(weapon)) {
 				GLog.w( Game.getVar(R.string.Monk_Disarm), getName(), weapon.name() );

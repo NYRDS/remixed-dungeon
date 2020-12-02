@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
@@ -33,7 +34,7 @@ public class SacrificialSword extends MeleeWeapon {
 	}
 
 	private double baseChance(Char hero) {
-		double armorPenalty = hero.getBelongings().armor.effectiveDr() / 8.f;
+		double armorPenalty = hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() / 8.f;
 
 		double classBonus = 1;
 		if(hero.getSubClass() == HeroSubClass.WARDEN ) {

@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
@@ -66,7 +67,7 @@ public abstract class Arrow extends MissileWeapon {
 				return;
 			}
 
-			firedFrom = (KindOfBow) thrower.getBelongings().weapon;
+			firedFrom = (KindOfBow) thrower.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
 
 			MAX = (int) (baseMax * firedFrom.dmgFactor());
 			MIN = (int) (baseMin * firedFrom.dmgFactor());

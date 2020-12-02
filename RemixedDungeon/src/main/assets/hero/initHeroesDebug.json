@@ -15,10 +15,11 @@
         "level": 1000
       },
       {
-        "kind": "HookedDagger"
+        "kind": "SpellBook"
       },
       {
-        "kind": "WoodenShield"
+        "kind": "WoodenShield",
+        "quantity": 100
       },
       {
         "kind": "ChaosCrystal"

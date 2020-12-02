@@ -35,6 +35,7 @@ public abstract class EquipableItem extends Item {
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
+	@NotNull
 	protected Belongings.Slot equipedTo = Belongings.Slot.NONE;
 
 	@Override
@@ -88,11 +89,9 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public void activate(@NotNull Char ch) {
-		equipedTo = ch.getBelongings().usedSlots.get(this);
-		if(equipedTo==null) {
-			equipedTo = Belongings.Slot.NONE;
-		}
+		equipedTo = ch.getBelongings().itemSlot(this);
 	}
+
 	public void deactivate(Char ch) {
 		equipedTo = Belongings.Slot.NONE;
 		Buff.detachAllBySource(ch,this);
@@ -146,7 +145,6 @@ public abstract class EquipableItem extends Item {
 	public Belongings.Slot blockSlot() {
 		return Belongings.Slot.NONE;
 	}
-
 
 	public float accuracyFactor(Char user) {
 		return 1f;

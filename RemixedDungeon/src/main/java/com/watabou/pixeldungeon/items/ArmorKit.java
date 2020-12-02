@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -83,8 +84,8 @@ public class ArmorKit extends Item {
 		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
 		Armor classArmor = ClassArmor.upgrade( owner, armor );
-		if (owner.getBelongings().armor == armor) {
-			owner.getBelongings().armor = classArmor;
+		if (owner.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) == armor) {
+			owner.getBelongings().setItemForSlot(classArmor, Belongings.Slot.ARMOR);
 			owner.updateSprite();
 		} else {
 			armor.detach( owner.getBelongings().backpack );

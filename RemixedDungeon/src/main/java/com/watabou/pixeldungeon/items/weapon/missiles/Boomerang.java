@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
@@ -96,7 +97,7 @@ public class Boomerang extends MissileWeapon {
 				this, ()-> {
 					if (throwEquiped) {
 						owner.spend(-TIME_TO_EQUIP);
-						owner.getBelongings().weapon = this;
+						owner.getBelongings().setItemForSlot(this, Belongings.Slot.WEAPON);
 					} else {
 						owner.collect(this);
 					}

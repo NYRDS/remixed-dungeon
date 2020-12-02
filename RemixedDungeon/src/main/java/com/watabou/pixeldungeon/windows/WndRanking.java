@@ -246,11 +246,11 @@ public class WndRanking extends WndTabbed {
 			add(list);
 
 			Belongings stuff = Dungeon.hero.getBelongings();
-			addItem( stuff.weapon );
-			addItem( stuff.leftHand );
-			addItem( stuff.armor );
-			addItem( stuff.ring1 );
-			addItem( stuff.ring2 );
+			addItem(stuff.getItemFromSlot(Belongings.Slot.WEAPON));
+			addItem(stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND));
+			addItem(stuff.getItemFromSlot(Belongings.Slot.ARMOR));
+			addItem(stuff.getItemFromSlot(Belongings.Slot.ARTIFACT));
+			addItem(stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT));
 
 			for(int i = 0;i<25;++i) {
 				Item qsItem = QuickSlot.getEarlyLoadItem(i);

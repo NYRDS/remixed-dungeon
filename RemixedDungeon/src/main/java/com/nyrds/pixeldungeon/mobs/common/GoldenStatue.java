@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -27,12 +28,12 @@ public class GoldenStatue extends Statue {
 	@NotNull
     @Override
 	public EquipableItem getItem() {
-		if(getBelongings().weapon == ItemsList.DUMMY) {
+		if(getBelongings().getItemFromSlot(Belongings.Slot.WEAPON) == ItemsList.DUMMY) {
 			Weapon weapon = new GoldenSword();
 			weapon.identify();
 			weapon.upgrade(4);
 			weapon.doEquip(this);
 		}
-		return getBelongings().weapon;
+		return getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
 	}
 }

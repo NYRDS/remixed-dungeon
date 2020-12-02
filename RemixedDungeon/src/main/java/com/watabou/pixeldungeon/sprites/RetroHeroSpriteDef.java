@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.gltextures.TextureCache;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -74,9 +75,9 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
-		if(hero.getBelongings().armor.hasHelmet()){
-			helmetDescriptor = helmetDescriptor(hero.getBelongings().armor, hero);
-			if(hero.getBelongings().armor.isCoveringHair()){
+		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
+			helmetDescriptor = helmetDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero);
+			if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
 				drawHair = false;
 			}
 		}
@@ -84,10 +85,10 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
 
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().armor, hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero));
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().armor));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR)));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 		layersDesc.put(LAYER_DEATH, "hero/death/" +deathDescriptor+".png");
@@ -125,7 +126,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	}
 
 	private String helmetDescriptor(EquipableItem armor, Hero hero) {
-		if(hero.getBelongings().armor.hasHelmet()){
+		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
 			return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
 		}
 		return HERO_EMPTY_PNG;
@@ -133,7 +134,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 
 	private String collarDescriptor(EquipableItem armor, Hero hero) {
 
-		if(hero.getBelongings().armor.hasCollar()){
+		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
 			return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";
 		}
 		return HERO_EMPTY_PNG;

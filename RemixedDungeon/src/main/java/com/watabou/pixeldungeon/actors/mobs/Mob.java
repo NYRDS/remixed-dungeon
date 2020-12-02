@@ -56,6 +56,7 @@ import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -378,7 +379,7 @@ public abstract class Mob extends Char {
 			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.getHeroClass() == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
-					if(hero.getBelongings().armor instanceof NecromancerRobe){
+					if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe){
 						hero.accumulateSkillPoints();
 					}
 				}

@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -47,16 +48,16 @@ public class Bones {
 
 		switch (Random.Int( 4 )) {
 		case 0:
-			item = Dungeon.hero.getBelongings().weapon;
+			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
 			break;
 		case 1:
-			item = Dungeon.hero.getBelongings().armor;
+			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR);
 			break;
 		case 2:
-			item = Dungeon.hero.getBelongings().ring1;
+			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.ARTIFACT);
 			break;
 		case 3:
-			item = Dungeon.hero.getBelongings().ring2;
+			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT);
 			break;
 		}
 		if (item == ItemsList.DUMMY || (item instanceof Artifact && !(item instanceof Ring))) {
