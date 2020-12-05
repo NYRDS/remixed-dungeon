@@ -25,6 +25,7 @@ import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.lua.LuaUtils;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.DummyItem;
@@ -97,6 +98,7 @@ import com.watabou.utils.SparseArray;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
+import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -188,6 +190,22 @@ public abstract class Level implements Bundlable {
 			return null;
 		}
 		return objectsLayer.get(pos);
+	}
+
+	@LuaInterface
+	public LuaTable getLevelObjects() {
+		return LuaUtils.arrayToTable(getAllLevelObjects().toArray());
+	}
+
+	public List<LevelObject> getAllLevelObjects() {
+		ArrayList<LevelObject> ret = new ArrayList<>();
+
+		for (int i = 0; i < objects.size(); i++) {
+			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
+			ret.addAll(objectLayer.values());
+		}
+
+		return ret;
 	}
 
 	@Nullable
@@ -655,7 +673,6 @@ public abstract class Level implements Bundlable {
 		for (Heap heap : bundle.getCollection(HEAPS, Heap.class)) {
 			heaps.put(heap.pos, heap);
 		}
-
 
 		for (LevelObject object : bundle.getCollection(OBJECTS, LevelObject.class)) {
 			putLevelObject(object);
@@ -1702,7 +1719,7 @@ public abstract class Level implements Bundlable {
 
 	@SneakyThrows
 	public void fillAreaWith(Class<? extends Blob> blobClass, int x, int y, int xs, int ys, int amount) {
-		Blob blob = Dungeon.level.blobs.get(blobClass);
+		Blob blob = blobs.get(blobClass);
 		if (blob == null) {
 			blob = blobClass.newInstance();
 
@@ -1724,7 +1741,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void clearAreaFrom(Class<? extends Blob> blobClass, int x, int y, int xs, int ys) {
-		Blob blob = Dungeon.level.blobs.get(blobClass);
+		Blob blob = blobs.get(blobClass);
 		if (blob == null) {
 			return;
 		}
@@ -1739,7 +1756,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int blobAmountAt(Class<? extends Blob> blobClass, int cell) {
-		Blob blob = Dungeon.level.blobs.get(blobClass);
+		Blob blob = blobs.get(blobClass);
 		if (blob == null) {
 			return 0;
 		}

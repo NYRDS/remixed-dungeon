@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
@@ -21,13 +22,13 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 
 /**
  * Created by mike on 01.07.2016.
  */
 public class Deco extends LevelObject {
-
 
 	private static final String ANIMATIONS = "animations";
 	static private Map<String, JSONObject> defMap = new HashMap<>();
@@ -41,8 +42,10 @@ public class Deco extends LevelObject {
 
 	private Group effect = new Group();
 
+	@Getter
+	@LuaInterface
 	@Packable
-	protected String object_desc;
+	protected String objectDesc;
 
 	private int width = 16;
 	private int height = 16;
@@ -72,12 +75,9 @@ public class Deco extends LevelObject {
 	@Override
 	void setupFromJson(Level level, JSONObject obj) throws JSONException {
 		super.setupFromJson(level,obj);
-
-		object_desc = obj.optString("object_desc",object_desc);
-
+		objectDesc = obj.optString("object_desc", objectDesc);
 		readObjectDesc();
 	}
-
 
 	@SneakyThrows
 	@Override
@@ -87,11 +87,11 @@ public class Deco extends LevelObject {
 	}
 
 	private void readObjectDesc() throws JSONException {
-		if (!defMap.containsKey(object_desc)) {
-			defMap.put(object_desc, JsonHelper.readJsonFromAsset("levelObjects/"+object_desc+".json"));
+		if (!defMap.containsKey(objectDesc)) {
+			defMap.put(objectDesc, JsonHelper.readJsonFromAsset("levelObjects/"+ objectDesc +".json"));
 		}
 
-		JSONObject objectDesc = defMap.get(object_desc);
+		JSONObject objectDesc = defMap.get(this.objectDesc);
 		JSONObject appearance  = objectDesc.getJSONObject("appearance");
 
 		effectName = appearance.optString("particles", effectName);

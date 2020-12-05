@@ -5,7 +5,6 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.nyrds.lua.LuaEngine;
-import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -19,7 +18,6 @@ import com.watabou.pixeldungeon.levels.traps.ParalyticTrap;
 import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
 import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
 import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -52,9 +50,6 @@ public class Trap extends LevelObject {
 
 	@Packable
 	private String script;
-
-	@Packable
-	private String data;
 
 	@Packable
 	private boolean activatedByItem = false;
@@ -158,7 +153,6 @@ public class Trap extends LevelObject {
 		activatedByMob = obj.optBoolean("activatedByMob", false);
 
 		script = obj.optString("script", "");
-		data = StringsManager.maybeId(obj.optString("data", Utils.EMPTY_STRING));
 
 		usedImageIndex = obj.optInt("usedImageIndex", usedImageIndex);
 	}

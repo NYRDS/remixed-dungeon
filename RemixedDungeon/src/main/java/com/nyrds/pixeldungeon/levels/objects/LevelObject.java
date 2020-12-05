@@ -7,17 +7,21 @@ import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.Position;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLevel, NamedEntityKind {
+import lombok.Getter;
+
+public abstract class LevelObject extends Actor implements Bundlable, Presser, HasPositionOnLevel, NamedEntityKind {
 
     @Packable
     protected int pos;
@@ -30,6 +34,11 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
 
     @Packable(defaultValue = "0")
     protected int imageIndex = 0;
+
+    @LuaInterface
+    @Getter
+    @Packable(defaultValue = "")
+    protected String data;
 
     public LevelObjectSprite sprite;
 
@@ -44,6 +53,7 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
     void setupFromJson(Level level, JSONObject obj) throws JSONException {
         textureFile = obj.optString("textureFile", textureFile);
         imageIndex = obj.optInt("imageIndex", imageIndex);
+        data = StringsManager.maybeId(obj.optString("data", Utils.EMPTY_STRING));
     }
 
     public boolean interact(Char hero) {
@@ -102,7 +112,7 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
     public void setPos(int pos) {
         if (sprite != null) {
             sprite.move(this.pos, pos);
-            Dungeon.level.levelObjectMoved(this);
+            level().levelObjectMoved(this);
         }
 
         this.pos = pos;
@@ -160,6 +170,12 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
     }
 
     @Override
+    protected boolean act() {
+        spend(TICK);
+        return true;
+    }
+
+    @Override
     public boolean affectLevelObjects() {
         return false;
     }
@@ -177,7 +193,7 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
     }
 
     public Position getPosition() {
-        return new Position(Dungeon.level.levelId, pos);
+        return new Position(level().levelId, pos);
     }
 
     public void resetVisualState(){}
