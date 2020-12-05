@@ -11,7 +11,7 @@ public class ArtifactBuff extends Buff {
 
     @Override
     public boolean act() {
-        if(getSourceId()!= EntityIdSource.INVALID_ID) { // non-artifact source
+        if(getSourceId()!=EntityIdSource.INVALID_ID) { // non-artifact source
             detach();
         }
         return super.act();

@@ -154,7 +154,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
                         getExecutor().execute(runnable);
                     }
                 } else {
-                    EventCollector.logException("google play billing:" + billingResult.getDebugMessage());
+                    //EventCollector.logException("google play billing:" + billingResult.getDebugMessage());
                 }
                 mIsServiceConnecting = false;
             }
