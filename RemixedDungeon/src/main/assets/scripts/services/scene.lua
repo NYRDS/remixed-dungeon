@@ -91,7 +91,7 @@ local function heroAiStep()
 
     local cell = -1
 
-    for i = 1,10 do
+    for i = 1,50 do
         cell = level:randomVisibleDestination()
         if not level:isCellVisited(cell) then
             break

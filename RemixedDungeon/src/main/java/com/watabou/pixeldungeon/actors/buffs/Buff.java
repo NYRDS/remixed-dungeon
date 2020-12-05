@@ -208,7 +208,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return ItemsList.DUMMY;
     }
 
-    private int getSourceId() {
+    public int getSourceId() {
         return source;
     }
 

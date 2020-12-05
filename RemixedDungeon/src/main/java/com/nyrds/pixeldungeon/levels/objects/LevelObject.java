@@ -5,6 +5,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -16,7 +17,7 @@ import com.watabou.utils.Bundle;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLevel {
+public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLevel, NamedEntityKind {
 
     @Packable
     protected int pos;
@@ -183,5 +184,10 @@ public abstract class LevelObject implements Bundlable, Presser, HasPositionOnLe
 
     public Level level() {
         return Dungeon.level;
+    }
+
+    @Override
+    public String getEntityKind() {
+        return getClass().getSimpleName();
     }
 }

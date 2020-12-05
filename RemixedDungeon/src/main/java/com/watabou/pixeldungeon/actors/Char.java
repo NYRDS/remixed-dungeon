@@ -1559,4 +1559,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return id;
 	}
 
+	@LuaInterface
+	@NotNull
+	public EquipableItem getItemFromSlot(@NotNull String slot) {
+		return getBelongings().getItemFromSlot(Belongings.Slot.valueOf(slot));
+	}
+
+
 }

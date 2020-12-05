@@ -17,11 +17,10 @@ local time = 0
 return actor.init({
     act = function()
         local hero = RPD.Dungeon.hero
-        local belongings = hero:getBelongings()
 
         time = time + 1
 
-        if belongings.weapon or belongings.leftHand then
+        if not hero:getItemFromSlot("WEAPON") or not hero:getItemFromSlot("LEFT_HAND")  then
             RPD.Dungeon.level:setCompassTarget(table.unpack(dungeonEntrance))
         else
             RPD.Dungeon.level:setCompassTarget(table.unpack(shopEntrance))

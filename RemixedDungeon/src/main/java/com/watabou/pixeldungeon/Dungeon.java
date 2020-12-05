@@ -707,6 +707,11 @@ public class Dungeon {
             SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
             for (int j = 0; j < objectLayer.size(); j++) {
                 LevelObject object = objectLayer.valueAt(j);
+                int pos = object.getPos();
+                if(!level.cellValid(pos)) {
+                    EventCollector.logException("Invalid object "+object.getEntityKind() + "pos in layer "+ i);
+                    continue;
+                }
                 if (object.nonPassable(ch)) {
                     passable[object.getPos()] = false;
                 }
