@@ -60,6 +60,7 @@ import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.BArray;
@@ -284,8 +285,10 @@ public class Dungeon {
 
         if (level.cellValid(pos)) {
             hero.setPos(pos);
-        } else {
+        } else if(level.cellValid(level.entrance)){
             hero.setPos(level.entrance);
+        } else {
+            hero.setPos(level.getRandomTerrainCell(Terrain.EMPTY));
         }
 
         for(Mob mob : followers) {
@@ -710,6 +713,7 @@ public class Dungeon {
                 int pos = object.getPos();
                 if(!level.cellValid(pos)) {
                     EventCollector.logException("Invalid object "+object.getEntityKind() + "pos in layer "+ i);
+                    level.remove(object);
                     continue;
                 }
                 if (object.nonPassable(ch)) {

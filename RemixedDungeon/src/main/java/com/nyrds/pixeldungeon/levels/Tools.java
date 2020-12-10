@@ -19,8 +19,8 @@ public class Tools {
 			level.set(level.entrance, Terrain.EMPTY_DECO);
 			level.set(level.getExit(0), Terrain.EMPTY_DECO);
 		}
-		level.entrance = -1;
-		level.setExit(-1,0);
+		level.entrance = level.INVALID_CELL;
+		level.setExit(level.INVALID_CELL,0);
 
 		int im = (int) (Math.floor((float)(w)/roomStep)*roomStep+2);
 		int jm = (int) (Math.floor((float)(h)/roomStep)*roomStep+2);

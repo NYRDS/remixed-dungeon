@@ -20,18 +20,17 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.BlinkAwayFromChar;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.effects.MagicMissile;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
@@ -73,42 +72,18 @@ public class Warlock extends Mob implements IZapper {
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 		getSprite().setVisible(false);
 	}
-	
-	private void blink(int epos) {
-
-		int cell = getPos();
-
-		Ballistica.cast(cell, epos, true, false);
-
-		for (int i = 1; i < 4 && i < Ballistica.distance; i++) {
-			int next = Ballistica.trace[i + 1];
-			if (level().cellValid(next)
-					&& (level().passable[next] || level().avoid[next])
-					&& Actor.findChar(next) == null) {
-				cell = next;
-			}
-		}
-		
-		if (cell != getPos()) {
-			final int tgt = cell;
-			final Char ch = this;
-
-			fx(cell, () -> WandOfBlink.appear(ch, tgt));
-			placeTo(cell);
-			Dungeon.observe();
-		}
-	}
 
 	@Override
 	public int defenseProc(Char enemy, int damage) {
 
 		if (hp() > 2 * ht() / 3 && hp() - damage / 2 < 2 * ht() / 3) {
-			blink(enemy.getPos());
+			CharUtils.blinkAway(this,
+					new BlinkAwayFromChar(enemy,2));
 			return damage / 2;
 		}
 
 		if (hp() > ht() / 3 && hp() - damage / 2 < ht() / 3) {
-			blink(enemy.getPos());
+			CharUtils.blinkAway(this, new BlinkAwayFromChar(enemy,3));
 			return damage / 2;
 		}
 
@@ -133,4 +108,5 @@ public class Warlock extends Mob implements IZapper {
 		}
 		return false;
 	}
+
 }

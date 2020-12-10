@@ -97,8 +97,7 @@ public class Yog extends Boss {
 
         for(var candidate:names) {
         	var organ = MobFactory.mobByName(candidate);
-        	organ.setPos(level().getNearestTerrain(level().cellX(getPos()),
-					level().cellY(getPos()),
+        	organ.setPos(level().getNearestTerrain(getPos(),
 					(level, cell) -> level.passable[cell] && Actor.findChar(cell) == null)
 			);
         	level().spawnMob(organ);

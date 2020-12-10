@@ -38,29 +38,16 @@ public abstract class BossLevel extends RegularLevel {
 
     @Override
     public void seal() {
-        /*
-        if (entrance != 0) {
-
-            set( entrance, Terrain.WATER_TILES );
-            GameScene.updateMap( entrance );
-            GameScene.ripple( entrance );
-
-            stairs = entrance;
-            entrance = 0;
-        }
-*/
-
         if(cellValid(arenaDoor)) {
             set(arenaDoor, Terrain.LOCKED_DOOR);
             GameScene.updateMap(arenaDoor);
         }
 
-
         Dungeon.observe();
     }
 
     private void sealEntrance() {
-        if(entrance != 0 ) {
+        if(cellValid(entrance)) {
             CellEmitter.get(entrance).start(Speck.factory(Speck.ROCK), 0.07f, 10);
             addLevelObject(new ConcreteBlock(entrance, 50));
         }
@@ -93,7 +80,7 @@ public abstract class BossLevel extends RegularLevel {
         }
 
         LevelObject obj;
-        if(entrance != 0 ) {
+        if(cellValid(entrance)) {
             while ((obj = getLevelObject(entrance))!=null) {
                 CellEmitter.get(entrance).start(Speck.factory(Speck.ROCK), 0.07f, 10);
                 obj.remove();

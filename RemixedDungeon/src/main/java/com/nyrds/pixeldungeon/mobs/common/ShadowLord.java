@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
@@ -85,7 +86,7 @@ public class ShadowLord extends Boss implements IZapper {
 			return;
 		}
 
-		Level level = Dungeon.level;
+		Level level = level();
 
 		if(!levelCreated)
 		{
@@ -120,32 +121,10 @@ public class ShadowLord extends Boss implements IZapper {
 
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
-		return Dungeon.level.distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
+		return level().distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 
-	private void blink(int epos) {
-
-		if (Dungeon.level.distance(getPos(), epos) == 1) {
-			int y = Dungeon.level.cellX(getPos());
-			int x = Dungeon.level.cellY(getPos());
-
-			int ey = Dungeon.level.cellX(epos);
-			int ex = Dungeon.level.cellY(epos);
-
-			int dx = x - ex;
-			int dy = y - ey;
-
-			x += 2 * dx;
-			y += 2 * dy;
-
-			final int tgt = Dungeon.level.cell(x, y);
-			if (Dungeon.level.cellValid(tgt)) {
-				final Char ch = this;
-				fx(getPos(), () -> WandOfBlink.appear(ch, tgt));
-			}
-		}
-	}
-
+	@Override
 	protected void fx(int cell, Callback callback) {
 		MagicMissile.purpleLight(getSprite().getParent(), getPos(), cell, callback);
 		Sample.INSTANCE.play(Assets.SND_ZAP);
@@ -159,7 +138,8 @@ public class ShadowLord extends Boss implements IZapper {
 			if (dmg > 0 && cooldown < 0) {
 				setState(MobAi.getStateByClass(Fleeing.class));
 				if (src instanceof Char) {
-					blink(((Char) src).getPos());
+					CharUtils.blinkAway(this,
+							(level, cell) -> level.distance(cell, ((Char) src).getPos())>2 && Actor.findChar(cell) == null);
 				}
 				twistLevel();
 				cooldown = 10;

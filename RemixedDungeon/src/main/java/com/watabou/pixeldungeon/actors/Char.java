@@ -93,6 +93,7 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -1569,5 +1570,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return getBelongings().getItemFromSlot(Belongings.Slot.valueOf(slot));
 	}
 
+	protected void fx(int cell, Callback callback) { }
 
 }

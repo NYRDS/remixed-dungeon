@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
@@ -392,8 +393,10 @@ public abstract class Level implements Bundlable {
 
 	protected Feeling feeling = Feeling.UNDEFINED;
 
-	public int entrance;
+	@Packable(defaultValue = "-1")
+	public int entrance = INVALID_CELL;
 
+	@Packable(defaultValue = "-1")
 	private int compassTarget = INVALID_CELL;	// Where compass should point
 
 	@SuppressLint("UseSparseArrays")
@@ -419,8 +422,6 @@ public abstract class Level implements Bundlable {
 
 	private static final String VISITED        = "visited";
 	private static final String MAPPED         = "mapped";
-	private static final String ENTRANCE       = "entrance";
-	private static final String COMPASS_TARGET = "compassTarget";
 	private static final String EXIT           = "exit";
 	private static final String HEAPS          = "heaps";
 
@@ -652,9 +653,6 @@ public abstract class Level implements Bundlable {
 		visited = bundle.getBooleanArray(VISITED);
 		mapped = bundle.getBooleanArray(MAPPED);
 
-		entrance = bundle.getInt(ENTRANCE);
-		compassTarget = bundle.optInt(COMPASS_TARGET, INVALID_CELL);
-
 		int[] exits = bundle.getIntArray(EXIT);
 		if (exits.length > 0) {
 			for (int i = 0; i < exits.length; ++i) {
@@ -708,8 +706,6 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(VISITED, visited);
 		bundle.put(MAPPED, mapped);
-		bundle.put(ENTRANCE, entrance);
-		bundle.put(COMPASS_TARGET, compassTarget);
 
 		int[] exits = new int[exitMap.size()];
 
@@ -1628,16 +1624,15 @@ public abstract class Level implements Bundlable {
 		return minima;
 	}
 
-	public interface cellCondition {
-		boolean pass(Level level, int cell);
-	};
+	public int getNearestTerrain(int cell, cellCondition condition) {
+		if(!cellValid(cell)) {
+			return INVALID_CELL;
+		}
 
-	public int getNearestTerrain(int x, int y, cellCondition condition) {
 		int minima = getLength();
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
-		int cell = cell(x, y);
 		for (int i = 0; i < getLength(); i++) {
 			if (condition.pass(this, i)) {
 				int delta = distance(cell, i);
@@ -1792,7 +1787,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	private int rollViewDistance() {
-		if (this.isSafe()) {
+		if (isSafe()) {
 			return 8;
 		} else {
 			return Dungeon.isChallenged(Challenges.DARKNESS) ? 2 : Random.Int(3, 8);

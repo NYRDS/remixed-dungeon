@@ -91,10 +91,7 @@ public class King extends Boss {
 	@Override
 	public boolean getCloser(int target) {
 
-		int x = level().cellX(getPos());
-		int y = level().cellY(getPos());
-
- 		targetPedestal = level().getNearestTerrain(x,y,
+ 		targetPedestal = level().getNearestTerrain(getPos(),
 				(level, cell) -> cell != lastPedestal && level.map[cell] == Terrain.PEDESTAL);
 
 		if(canTryToSummon()) {

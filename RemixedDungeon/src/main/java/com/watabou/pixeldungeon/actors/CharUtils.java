@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -273,4 +274,13 @@ public class CharUtils {
         return Random.element(actions(target,hero));
     }
 
+    public static void blinkAway(@NotNull Char chr, cellCondition condition) {
+        int tgt = chr.level().getNearestTerrain(chr.getPos(), condition);
+
+        if (chr.level().cellValid(tgt)) {
+            final Char ch = chr;
+            chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
+        }
+        Dungeon.observe();
+    }
 }

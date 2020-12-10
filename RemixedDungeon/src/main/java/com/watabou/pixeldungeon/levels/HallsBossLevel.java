@@ -118,7 +118,6 @@ public class HallsBossLevel extends BossLevel {
 				doMagic( i * getWidth() + _RoomLeft() - 1 );
 				doMagic( i * getWidth() + _RoomRight() + 1 );
 			}
-			doMagic( entrance );
 			GameScene.updateMap();
 
 			Dungeon.observe();
@@ -129,14 +128,11 @@ public class HallsBossLevel extends BossLevel {
 			} while (
 				!passable[boss.getPos()] ||
 				Dungeon.visible[boss.getPos()]);
-			Dungeon.level.spawnMob(boss);
+			spawnMob(boss);
 			boss.spawnFists();
-			
-			stairs = entrance;
-			entrance = -1;
 		}
 	}
-	
+
 	private void doMagic( int cell ) {
 		set( cell, Terrain.EMPTY_SP );
 		CellEmitter.get( cell ).start( FlameParticle.FACTORY, 0.1f, 3 );
