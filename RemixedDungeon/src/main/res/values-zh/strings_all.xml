@@ -2521,14 +2521,6 @@
   <string name="Potion_Colors_9">深褐</string>
   <string name="Potion_Colors_10">靛蓝</string>
   <string name="Potion_Colors_11">白銀</string>
-  <string name="Welcome_Text_29_1">
-    remix.29.1\n
-    - 修改:\n
-    -- 修改了一些项目的生成率\n
-    - 翻译:\n
-    --增加匈牙利语翻译\n
-    - 修复了bug\n
-    </string>
   <string name="town_deco_stone_wall_broken_name">破旧的墙</string>
   <string name="town_deco_stone_wall_broken_desc">老旧的石墙，看起来状况很差</string>
   <string name="Challenges_Names_6">禁忌符文</string>

@@ -2496,13 +2496,6 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="Potion_Colors_9">noir-brun</string>
   <string name="Potion_Colors_10">indigo</string>
   <string name="Potion_Colors_11">argentée</string>
-  <string name="Welcome_Text_29_1">
-remix.29.1\n
-- Modding:\n
--- Taux d\'apparition d\'objets modifiables\n
-- Traductions:\n
--- Ajout de la traduction en hongrois\n
-- Bugs fixé</string>
   <string name="town_deco_stone_wall_broken_name">Mur effondré</string>
   <string name="town_deco_stone_wall_broken_desc">Mur d\'anciennes pierres en mauvais état</string>
   <string name="Challenges_Names_6">Runes interdites</string>
