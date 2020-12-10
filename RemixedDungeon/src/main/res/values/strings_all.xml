@@ -2576,18 +2576,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Char_Stole_0">%1$s stole %2$s from %3$s!</string>
   <string name="Char_Stole_1">%1$s stole %2$s from %3$s!</string>
   <string name="Char_Stole_2">%1$s stole %2$s from %3$s!</string>
-
   <string name="ScrollOfTeleportation_Teleport2">In a blink of an eye %s were teleported to
     another location of the level.</string>
   <string name="ScrollOfTeleportation_NoTeleport2">Strong magic aura of this place prevents %s
     from teleporting!</string>
-
   <string name="WndModInstall_InstallingMod">Installing mod</string>
   <string name="WndModInstall_Version">version</string>
-
   <string name="WndModInstall_PleaseUpdate">Please update Remixed Dungeon before installing this mod</string>
   <string name="Wnd_Button_Ok">Ok</string>
-
   <string name="CharAction_Taunt">taunt</string>
   <string name="CharAction_Push">push</string>
   <string name="CharAction_Steal">steal</string>
@@ -2597,7 +2593,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharAction_Take">take</string>
   <string name="CharAction_Scare">scare</string>
   <string name="CharAction_Hit">hit</string>
-
   <string name="Stun_Info">Stunned</string>
   <string name="Char_StaStunned">stunned</string>
 
@@ -2611,7 +2606,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     - Modding:\n
     -- Item actors!\n
     -- Special weapon properties!\n
-    -- More uncategorized stuff!\nФв
+    -- More uncategorized stuff!\n
     - Bugs fixed\n
     </string>
 

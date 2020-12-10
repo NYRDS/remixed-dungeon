@@ -2571,6 +2571,23 @@ Ez a maszk azonban csak dekoratív célt szolgál.</string>
   <string name="FullFaceMask_Name">Gázmaszk</string>
   <string name="FullFaceMask_Info">A Gázmaszk megvédi viselőjét a szennyező levegőtől és más mérgező gázoktól. A maszk egyszerre zárja le az orrot, a szájat és a szemeket.
 A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetlenül.</string>
+  <string name="StartScene_DifficultyEasyNoAds">Könnyű</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">Normál, mentéssel</string>
+  <string name="Backstab_Name">Hátbaszúrás</string>
+  <string name="Backstab_Info">Nesztelen hátbadöfés. Sunyi, de extrém hatásos, a hátbadöfés hatékonysága a végrehajtó szintjével nő.\n\nEgy sikeres döfés teljesen lényegtelenné teszi, hogy az áldozat milyen páncélt visel vagy milyen speciális védelme van.</string>
+  <string name="Backstab_TooFar">Az áldozat túl messze van egy sikeres támadáshoz.</string>
+  <string name="Backstab_Aware">Az áldozat nem tudhat rólad, hogy sikeresen hátbadöfhesd.</string>
+  <string name="KunaiThrow_Name">Kunai Dobás</string>
+  <string name="KunaiThrow_Info">A Halálos Kunai-dobás olyan extrém gyors, hogy még a célpontot sem tudod kiválasztani.\n\nAz igazi Kunai Mesterek több Kunai-t is tudnak dobni egyszerre.</string>
+  <string name="Haste_Name">Extrém Gyorsaság</string>
+  <string name="Welcome_Text_29_5">
+    remix.29.5\n
+    - Játékmenet:\n
+    -- Tolvaj képességek!\n
+    - Modding:\n
+    -- Egyedi páncél!\n
+    - Bugok javítva\n
+    </string>
   <string name="Char_Stole_0">%1$s ellopta: %2$s innen: %3$s !</string>
   <string name="Char_Stole_1">%1$s ellopta: %2$s innen: %3$s !</string>
   <string name="Char_Stole_2">%1$s ellopta: %2$s innen: %3$s !</string>

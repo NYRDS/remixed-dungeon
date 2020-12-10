@@ -2600,29 +2600,23 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Char_Stole_0">%1$s украло предмет %2$s у %3$s!</string>
   <string name="Char_Stole_1">%1$s украл предмет %2$s у %3$s!</string>
   <string name="Char_Stole_2">%1$s украла предмет %2$s у %3$s!</string>
-
   <string name="ScrollOfTeleportation_Teleport2">В мгновение ока %s были телепортированы в
 другое расположения уровня.</string>
   <string name="ScrollOfTeleportation_NoTeleport2">Сильная магическая аура этого места %s
 мешает телепортации!</string>
-
   <string name="WndModInstall_InstallingMod">Установка мода</string>
-  <string name="WndModInstall_Version">Версия</string>
-
+  <string name="WndModInstall_Version">версия</string>
   <string name="WndModInstall_PleaseUpdate">Пожалуйста, обновите Remixed Dungeon, прежде чем устанавливать этот мод</string>
-  <string name="Wnd_Button_Ok">Хорошо</string>
-
-  <string name="CharAction_Taunt">Насмешка</string>
-  <string name="CharAction_Push">Толкать</string>
-  <string name="CharAction_Steal">Своровать</string>
-  <string name="CharAction_Charm">Зачаровать</string>
-  <string name="CharAction_Order">Приказать</string>
-  <string name="CharAction_Give">Дать</string>
-  <string name="CharAction_Take">Взять</string>
-  <string name="CharAction_Scare">Напугать</string>
-  <string name="CharAction_Hit">Ударить</string>
-
-  <string name="Stun_Info">Оглушен</string>
-  <string name="Char_StaStunned">Оглушен</string>
-
+  <string name="Wnd_Button_Ok">Ок</string>
+  <string name="CharAction_Taunt">насмешка</string>
+  <string name="CharAction_Push">толкнуть</string>
+  <string name="CharAction_Steal">украсть</string>
+  <string name="CharAction_Charm">очаровать</string>
+  <string name="CharAction_Order">приказать</string>
+  <string name="CharAction_Give">дать</string>
+  <string name="CharAction_Take">взять</string>
+  <string name="CharAction_Scare">напугать</string>
+  <string name="CharAction_Hit">ударить</string>
+  <string name="Stun_Info">Оглушён</string>
+  <string name="Char_StaStunned">oглушён</string>
 </resources>
