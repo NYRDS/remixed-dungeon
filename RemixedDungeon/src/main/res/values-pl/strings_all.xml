@@ -2508,13 +2508,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="Potion_Colors_9">ciemnobrunatna</string>
   <string name="Potion_Colors_10">indigo</string>
   <string name="Potion_Colors_11">srebny</string>
-  <string name="Welcome_Text_29_1">
-remix.29.1
--Modowanie:\n
---Modyfikowanie częstotliwości spawnu  przedmiotów\n
--Tłumaczenie:\n
---Dodano do gry język Węgierski\n
--Naprawiono błędy:\n</string>
   <string name="town_deco_stone_wall_broken_name">Zniszczona ściana</string>
   <string name="town_deco_stone_wall_broken_desc">Stara , uszkodzona kamienna ściana.</string>
   <string name="Challenges_Names_6">Zapomniane runy</string>
@@ -2601,16 +2594,12 @@ remix.29.3/n
   <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_1">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_2">%1$sukradł %2$s od %3$s</string>
-
   <string name="ScrollOfTeleportation_Teleport2">W mgnieniu oka %szostali teleportowani w inne miejsce na poziomie.</string>
   <string name="ScrollOfTeleportation_NoTeleport2">Silna aura magiczna tego miejsca nie pozwala %s teleportować się!</string>
-
   <string name="WndModInstall_InstallingMod">Instalowanie moda...</string>
   <string name="WndModInstall_Version">wersja</string>
-
   <string name="WndModInstall_PleaseUpdate">Proszę zaktualizować Remixed Dungeon przed instalacją moda.</string>
   <string name="Wnd_Button_Ok">ok</string>
-
   <string name="CharAction_Taunt">kpina</string>
   <string name="CharAction_Push">Pchnij</string>
   <string name="CharAction_Steal">Ukradnij</string>
@@ -2620,8 +2609,16 @@ remix.29.3/n
   <string name="CharAction_Take">weź</string>
   <string name="CharAction_Scare">wystrasz</string>
   <string name="CharAction_Hit">uderz</string>
-
   <string name="Stun_Info">Ogłuszony</string>
   <string name="Char_StaStunned">ogłuszony</string>
-
+  <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
+  <string name="Mob_CantDoIt">Nie mogę tego zrobić, Mam łapy</string>
+  <string name="Welcome_Text_29_6">
+remix.29.6\n
+-Rozgrywka:\n
+--Więcej akcji które mogą wykonać postacie niegrywalne!/n
+-Mody:\n
+--Nowe specjalne właściwości broni:\n
+-- Więcej różnych rzeczy!:\n
+-Poprawki błędów:\n</string>
 </resources>
