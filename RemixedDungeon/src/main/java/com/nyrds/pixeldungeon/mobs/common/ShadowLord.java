@@ -59,9 +59,9 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	private void spawnShadow() {
-		int cell = Dungeon.level.getSolidCellNextTo(getPos());
+		int cell = level().getSolidCellNextTo(getPos());
 
-		if (cell != -1) {
+		if (level().cellValid(cell)) {
 			Mob mob = new Shadow();
 
 			mob.setState(MobAi.getStateByClass(Wandering.class));
@@ -72,9 +72,9 @@ public class ShadowLord extends Boss implements IZapper {
 
 	private void spawnWraith() {
 		for (int i = 0; i < 4; i++) {
-			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
+			int cell = level().getEmptyCellNextTo(getPos());
 
-			if (cell != -1) {
+			if (level().cellValid(cell)) {
 				Wraith.spawnAt(cell);
 			}
 		}
@@ -163,11 +163,11 @@ public class ShadowLord extends Boss implements IZapper {
 			}
 		}
 
-		if (Dungeon.level.blobAmountAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
+		if (level().blobAmountAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
 			heal((ht() - hp()) / 4, Dungeon.level.blobs.get(Darkness.class));
 		}
 
-		if (Dungeon.level.blobAmountAt(Foliage.class, getPos()) > 0) {
+		if (level().blobAmountAt(Foliage.class, getPos()) > 0) {
 			getSprite().emitter().burst(Speck.factory(Speck.BONE), 1);
 			damage(1, this);
 		}
@@ -189,7 +189,7 @@ public class ShadowLord extends Boss implements IZapper {
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
 		yell(Game.getVar(R.string.ShadowLord_Death));
-		Tools.makeEmptyLevel(Dungeon.level, false);
+		Tools.makeEmptyLevel(level(), false);
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}
 

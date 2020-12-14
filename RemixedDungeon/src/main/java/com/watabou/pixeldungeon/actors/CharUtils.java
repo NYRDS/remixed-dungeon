@@ -246,11 +246,12 @@ public class CharUtils {
 
     public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {
         ArrayList<String> actions = new ArrayList<>();
+
+        actions.add(CommonActions.MAC_TAUNT);
+
         if(target.adjacent(hero) && hero.stealth() > 2) {
             actions.add(CommonActions.MAC_STEAL);
         }
-
-        actions.add(CommonActions.MAC_TAUNT);
 
         if(hero.canAttack(target)) {
             actions.add(CommonActions.MAC_HIT);
