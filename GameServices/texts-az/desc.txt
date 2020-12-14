@@ -1,0 +1,31 @@
+Bu bir açıq mənbəli piksel grafikalı roguelike oyundur
+
+Bir vaxtlar kiçik bir qəsəbə var idi.Qəsəbə əhalisi xoşbəxt yaşayırdı, lakin o qədər kasib idilər ki, tətil üçün bir yerə getməyə kifayət qədər imkanları yox idi.Ancaq hamının ümidsizləndiyi bir gündə bir möcüzə meydana gəldi.Bu zaman qəsəbənin, üzərində durduğu yer şiddətlə tərpəndi və saysız-hesabsız çirkin yaratıq yer üzünə çıxdı.O gündən etibarən həyatta qalan bütün əhali daha xoşbəxt yaşadı.Bəs niyə?Çünki bu yaranan zindan bütün qəhrəman və macəracıların diqqətini cəlb etmişdir.Onlar buradakı günahsız insanları qorumuş və yüksək miqdarda pul xərcləyərək qəsəbənin təsərrüfatını genişləndirmişlər.
+Və beləcə bu kiçik qəsəbə, vəfat etmiş macəracılar və onların yazıq ruhları ilə dolan bu təhlükəli zindan vasitəsi ilə çiçəklənmişdir.
+
+Oyun xüsusiyyətləri:
+- Bu oyun istifadəçi tərəfindən hazırlanmış modları dəstəkləyir! Bu xüsusiyyət inkişaf etdirildikcə sən də Remixed Dungean'da yeni bir oyun hazırlaya biləcəksən!
+- Yüksək çətinlikli roguelike (vulqar sözdür, msln:dələduz kimi) təcrübəsi!
+- Seçə biləcəyiniz 7 qəhrəman sinfi
+- Sizi səyahətinizə hazırlamaq və oyun dünyası ilə tanış etmək üçün şəhər mərkəzinə müraciət edin.
+- 6 növə ayrılmış 30-a çox, əsas zindan səviyyyəsi
+- 3 tipik zindan var: Hörümçək yuvası, Ölülər şəhəri, Buz mağaraları
+- Onlarla əşyalar və canavarlar
+- Cürbəcür bosslar
+- Papaqlar! Hər kəs papaqları sevər
+
+Discord serverimizə qoşulun:
+https://discordapp.com/invite/AMXrhQZ
+
+Bizi Tvitterdə izləyin:
+https://twitter.com/nyrds
+
+Bu oyun GPLv3 lisansı altında açıq mənbəli bir proqram təminatıdır.Remixed Dungeon'ın mənbə kodu buradan tapa bilərsiniz:
+https://github.com/NYRDS/remixed-dungeon
+
+Başqa dillərə tərcümə etməkdə iştirak etmək istəyirsənizsə, xahiş olunur bu adresi nəzərdən keçirin:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Oyunda olan dəyişiklərdən
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+adresindən istifadə etməklə xəbərdar ola bilərsiniz.
