@@ -77,7 +77,7 @@ public class WarriorArmor extends ClassArmor {
 		public void onSelect(Integer target, Char selector) {
 			if (target != null && target != selector.getPos()) {
 				
-				int cell = Ballistica.cast( selector.getPos(), target, false, true );
+				int cell = Ballistica.cast( selector.getPos(), target, false, true, true );
 				if (Actor.findChar( cell ) != null && cell != selector.getPos()) {
 					cell = Ballistica.trace[Ballistica.distance - 2];
 				}

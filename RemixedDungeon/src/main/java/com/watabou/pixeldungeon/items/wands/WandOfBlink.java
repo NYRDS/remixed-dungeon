@@ -36,23 +36,28 @@ import org.jetbrains.annotations.NotNull;
 
 public class WandOfBlink extends Wand {
 
+	{
+		hitObjects = true;
+	}
+
 	@Override
 	protected int getDestinationCell(int src, int target) {
 		int cell = super.getDestinationCell(src, target);
 
-		int level = effectiveLevel();
+		int wandLevel = effectiveLevel();
 
 		int userPos = getOwner().getPos();
 
 		int newCell = Ballistica.trace[Ballistica.distance-1];
 
-		if (Ballistica.distance > level + 4) {
-			newCell = Ballistica.trace[level + 3];
+		if (Ballistica.distance > wandLevel + 4) {
+			newCell = Ballistica.trace[wandLevel + 3];
 		} else if (Actor.findChar( newCell ) != null && Ballistica.distance > 1) {
 			newCell = Ballistica.trace[Ballistica.distance - 2];
 		}
 
-		if(Dungeon.level.distance(userPos,cell)<Dungeon.level.distance(userPos,newCell)) {
+		Level level = getOwner().level();
+		if(level.distance(userPos,cell)<level.distance(userPos,newCell)) {
 			newCell = cell;
 		}
 		return newCell;
@@ -75,7 +80,7 @@ public class WandOfBlink extends Wand {
 
 	public static void appear(@NotNull Char ch, int pos ) {
 
-		Level level = Dungeon.level;
+		Level level = ch.level();
 
 		if(level.cellValid(ch.getPos())) { //ch already on level
 			ch.getSprite().interruptMotion();

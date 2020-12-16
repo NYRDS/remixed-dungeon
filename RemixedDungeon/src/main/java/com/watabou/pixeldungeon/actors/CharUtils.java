@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Heap;
@@ -114,18 +115,19 @@ public class CharUtils {
     }
 
     public static void teleportRandom(Char ch ) {
-        if(Dungeon.level.isBossLevel() || !ch.isMovable()) {
+        Level level = ch.level();
+        if(level.isBossLevel() || !ch.isMovable()) {
             GLog.w( Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()) );
             return;
         }
 
-        int pos = Dungeon.level.randomRespawnCell();
+        int pos = level.randomRespawnCell();
 
-        if (!Dungeon.level.cellValid(pos)) {
+        if (!level.cellValid(pos)) {
             GLog.w( Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()) );
         } else {
             WandOfBlink.appear( ch, pos );
-            Dungeon.level.press( pos, ch );
+            level.press( pos, ch );
             Dungeon.observe();
             GLog.i( Utils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()) );
         }
@@ -247,7 +249,13 @@ public class CharUtils {
     public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {
         ArrayList<String> actions = new ArrayList<>();
 
-        actions.add(CommonActions.MAC_TAUNT);
+        if(target instanceof NPC) {
+            return actions;
+        }
+
+        if(!target.friendly(hero)) {
+            actions.add(CommonActions.MAC_TAUNT);
+        }
 
         if(target.adjacent(hero) && hero.stealth() > 2) {
             actions.add(CommonActions.MAC_STEAL);

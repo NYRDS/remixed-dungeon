@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -76,16 +77,18 @@ public class RogueArmor extends ClassArmor {
 		public void onSelect(Integer target, Char selector) {
 			if (target != null) {
 
-				if (!Dungeon.level.fieldOfView[target] || 
-					!(Dungeon.level.passable[target] || Dungeon.level.avoid[target]) || 
-					Actor.findChar( target ) != null) {
+				Level level = selector.level();
+
+				if (!level.fieldOfView[target] ||
+					!(level.passable[target] || level.avoid[target]) ||
+					Actor.findChar( target ) != null || level.getLevelObject(target) != null) {
 					
 					GLog.w( Game.getVar(R.string.RogueArmor_Fov) );
 					return;
 				}
 				
-				for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
-					if (Dungeon.level.fieldOfView[mob.getPos()] && !(mob instanceof NPC)) {
+				for (Mob mob : level.getCopyOfMobsArray()) {
+					if (level.fieldOfView[mob.getPos()] && !(mob instanceof NPC)) {
 						Buff.prolong( mob, Blindness.class, 2 );
 						mob.setState(MobAi.getStateByClass(Wandering.class));
 						mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );
@@ -95,7 +98,7 @@ public class RogueArmor extends ClassArmor {
 				WandOfBlink.appear( selector, target );
 				CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
 				Sample.INSTANCE.play( Assets.SND_PUFF );
-				Dungeon.level.press( target, selector );
+				level.press( target, selector );
 				Dungeon.observe();
 				
 				selector.spendAndNext( Actor.TICK );

@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -53,8 +52,8 @@ public class HuntressArmor extends ClassArmor {
 
 		Item proto = new Shuriken();
 		
-		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
-			if (Dungeon.level.fieldOfView[mob.getPos()]) {
+		for (Mob mob : user.level().getCopyOfMobsArray()) {
+			if (user.level().fieldOfView[mob.getPos()]) {
 				
 				Callback callback = new Callback() {	
 					@Override

@@ -34,9 +34,9 @@ import com.watabou.utils.Callback;
 public class WandOfTeleportation extends Wand {
 
 	public static void teleport(Char ch, Char caster) {
-		int pos = Dungeon.level.randomRespawnCell();
+		int pos = ch.level().randomRespawnCell();
 		
-		if(!Dungeon.level.cellValid(pos)) {
+		if(!ch.level().cellValid(pos)) {
 			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
 			return;
 		}
@@ -54,14 +54,10 @@ public class WandOfTeleportation extends Wand {
 		Char ch = Actor.findChar(cell);
 
 		if (ch == getOwner()) {
-
 			setKnown();
 			CharUtils.teleportRandom(getOwner());
-
 		} else if (ch != null && ! (ch instanceof Boss) && ch.isMovable() ) {
-
 			teleport(ch, getOwner());
-
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
 		}

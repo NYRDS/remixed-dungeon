@@ -535,7 +535,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 	@NotNull
 	@LuaInterface
-	@Setter
 	@Getter
 	private Char owner = CharsList.DUMMY;
 
@@ -738,5 +737,10 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void ownerDoesDamage(int damage) {
+	}
+
+	public void setOwner(Char owner) {
+		add(this);
+		this.owner = owner;
 	}
 }

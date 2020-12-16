@@ -157,11 +157,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	
 	protected abstract void onZap(int cell);
 
-	@Override
-	public void setOwner(@NotNull Char owner) {
-		super.setOwner(owner);
-	}
-
 	public int effectiveLevel() {
 		return level() + getOwner().buffLevel(Power.class.getSimpleName());
 	}
@@ -440,7 +435,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 	@Override
 	protected boolean act() {
-
 		if (curCharges() < maxCharges()) {
 			curCharges(curCharges() + 1);
 			QuickSlot.refresh(getOwner());
@@ -454,5 +448,4 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		return true;
 	}
-
 }
