@@ -40,6 +40,9 @@
       "23":{"Succubus":1,"Eye":2,"Scorpio":1,"Acidic":0.03},
       "24":{"Succubus":1,"Eye":2,"Scorpio":3,"Acidic":0.09}
    },
+   "ShadowLordLevel":{
+      "any":{"ShadowLord":1}
+   },
    "HallsBossLevel":{
       "any":{"Yog":1,"YogsBrain":1,"YogsEye":1,"YogsHeart":1,"YogsTeeth":1}
    },

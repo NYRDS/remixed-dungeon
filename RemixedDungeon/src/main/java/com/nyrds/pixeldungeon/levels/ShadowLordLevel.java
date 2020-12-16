@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.BossLevel;
 
 public class ShadowLordLevel extends BossLevel {
@@ -34,10 +34,18 @@ public class ShadowLordLevel extends BossLevel {
 	}
 
 	@Override
+	protected void pressHero(int cell, Hero ch) {
+
+		super.pressHero( cell, ch );
+
+		if (!enteredArena) {
+			enteredArena = true;
+			spawnBoss(cell(width/2,height / 2));
+		}
+	}
+
+	@Override
 	protected void createMobs() {
-		ShadowLord lord = new ShadowLord();
-		lord.setPos(cell(width/2,height / 2));
-		mobs.add(lord);
 	}
 
 	@Override

@@ -12,7 +12,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -164,7 +163,7 @@ public class ShadowLord extends Boss implements IZapper {
 		}
 
 		if (level().blobAmountAt(Darkness.class, getPos()) > 0 && hp() < ht()) {
-			heal((ht() - hp()) / 4, Dungeon.level.blobs.get(Darkness.class));
+			heal((ht() - hp()) / 4, level().blobs.get(Darkness.class));
 		}
 
 		if (level().blobAmountAt(Foliage.class, getPos()) > 0) {
@@ -190,6 +189,7 @@ public class ShadowLord extends Boss implements IZapper {
 		super.die(cause);
 		yell(Game.getVar(R.string.ShadowLord_Death));
 		Tools.makeEmptyLevel(level(), false);
+		level().unseal();
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}
 

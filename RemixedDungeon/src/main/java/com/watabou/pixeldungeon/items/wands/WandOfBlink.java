@@ -42,13 +42,9 @@ public class WandOfBlink extends Wand {
 
 	@Override
 	protected int getDestinationCell(int src, int target) {
-		int cell = super.getDestinationCell(src, target);
-
 		int wandLevel = effectiveLevel();
 
-		int userPos = getOwner().getPos();
-
-		int newCell = Ballistica.trace[Ballistica.distance-1];
+		int newCell = super.getDestinationCell(src, target);
 
 		if (Ballistica.distance > wandLevel + 4) {
 			newCell = Ballistica.trace[wandLevel + 3];
@@ -56,10 +52,6 @@ public class WandOfBlink extends Wand {
 			newCell = Ballistica.trace[Ballistica.distance - 2];
 		}
 
-		Level level = getOwner().level();
-		if(level.distance(userPos,cell)<level.distance(userPos,newCell)) {
-			newCell = cell;
-		}
 		return newCell;
 	}
 
