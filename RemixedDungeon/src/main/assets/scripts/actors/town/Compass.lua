@@ -20,7 +20,7 @@ return actor.init({
 
         time = time + 1
 
-        if not hero:getItemFromSlot("WEAPON") or not hero:getItemFromSlot("LEFT_HAND")  then
+        if hero:getItemFromSlot("WEAPON"):valid() or hero:getItemFromSlot("LEFT_HAND"):valid()  then
             RPD.Dungeon.level:setCompassTarget(table.unpack(dungeonEntrance))
         else
             RPD.Dungeon.level:setCompassTarget(table.unpack(shopEntrance))
