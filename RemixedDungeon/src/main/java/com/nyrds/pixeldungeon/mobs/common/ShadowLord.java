@@ -136,10 +136,17 @@ public class ShadowLord extends Boss implements IZapper {
 		if (src != this) {
 			if (dmg > 0 && cooldown < 0) {
 				setState(MobAi.getStateByClass(Fleeing.class));
+
+				Char jumpFrom = this;
+
 				if (src instanceof Char) {
-					CharUtils.blinkAway(this,
-							(level, cell) -> level.distance(cell, ((Char) src).getPos())>2 && Actor.findChar(cell) == null);
+					jumpFrom = (Char)src;
 				}
+				Char finalJumpFrom = jumpFrom;
+
+				CharUtils.blinkAway(this,
+							(level, cell) -> level.distance(cell, finalJumpFrom.getPos())>3 && Actor.findChar(cell) == null);
+
 				twistLevel();
 				cooldown = 10;
 			}
@@ -148,8 +155,9 @@ public class ShadowLord extends Boss implements IZapper {
 
 	@Override
     public boolean act() {
+		cooldown--;
+
 		if (getState() instanceof Fleeing) {
-			cooldown--;
 			if (cooldown < 0) {
 				setState(MobAi.getStateByClass(Wandering.class));
 				if (Math.random() < 0.7) {
