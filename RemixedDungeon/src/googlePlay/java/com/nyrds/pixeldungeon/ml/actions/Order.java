@@ -51,6 +51,7 @@ public class Order extends CharAction {
                 target.setEnemy(attack.target);
                 return;
             }
+
             target.say(Utils.format(Game.getVar(R.string.Mob_CantDoIt)));
         }
 

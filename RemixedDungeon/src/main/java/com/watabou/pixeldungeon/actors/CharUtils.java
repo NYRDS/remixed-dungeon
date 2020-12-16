@@ -190,7 +190,7 @@ public class CharUtils {
                     actions.remove(CommonActions.MAC_HIT);
                     actions.remove(CommonActions.MAC_TAUNT);
 
-                    if(actions.isEmpty()) {
+                    if(actions.isEmpty() || actor instanceof Mob) {
                         return new Attack(target);
                     }
 
@@ -207,15 +207,19 @@ public class CharUtils {
                 return new OpenChest(cell);
             }
         }
+
         if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
             return new Unlock(cell);
         }
+
         if (level.isExit(cell)) {
             return new Descend(cell);
         }
+
         if (cell == level.entrance) {
             return new Ascend(cell);
         }
+
         return new Move(cell);
     }
 
@@ -253,7 +257,7 @@ public class CharUtils {
             return actions;
         }
 
-        if(!target.friendly(hero)) {
+        if(!target.friendly(hero) && target.movable) {
             actions.add(CommonActions.MAC_TAUNT);
         }
 
@@ -265,7 +269,7 @@ public class CharUtils {
             actions.add(CommonActions.MAC_HIT);
         }
 
-        if(target.adjacent(hero)) {
+        if(target.adjacent(hero) && target.movable) {
             actions.add(CommonActions.MAC_PUSH);
         }
 
