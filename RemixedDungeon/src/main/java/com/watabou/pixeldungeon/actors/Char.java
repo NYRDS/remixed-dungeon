@@ -1552,6 +1552,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     	return this;
 	}
 
+	public void notice() {
+		getSprite().showAlert();
+	}
+
 	public AiState getState() {
 		return MobAi.getStateByClass(Passive.class);
 	}

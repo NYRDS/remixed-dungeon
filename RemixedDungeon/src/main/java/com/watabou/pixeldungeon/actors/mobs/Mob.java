@@ -477,10 +477,6 @@ public abstract class Mob extends Char {
 		setTarget(cell);
 	}
 
-	public void notice() {
-		getSprite().showAlert();
-	}
-
 	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
 		if (mobDesc.has("loot")) {
 			float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
