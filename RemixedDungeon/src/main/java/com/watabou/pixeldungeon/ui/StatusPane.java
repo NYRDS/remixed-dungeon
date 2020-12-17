@@ -149,7 +149,7 @@ public class StatusPane extends Component {
         depth.hardlight(0xCACFC2);
         add(depth);
 
-        hero.getBelongings().countIronKeys();
+        IronKey.countIronKeys();
         keys = new BitmapText(PixelScene.font1x);
         keys.hardlight(0xCACFC2);
         add(keys);

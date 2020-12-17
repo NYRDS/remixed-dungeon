@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -98,7 +97,7 @@ public class Bag extends Item implements Iterable<Item> {
 			}
 		}
 
-		this.setOwner(CharsList.DUMMY);
+		super.onDetach();
 	}
 	
 	@Override

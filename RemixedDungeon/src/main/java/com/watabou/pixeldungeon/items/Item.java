@@ -349,12 +349,12 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void removeItemFrom(@NotNull Char hero) {
-		onDetach();
 		setCursed(false);
 		if (isEquipped(hero)) {
 			((EquipableItem) this).doUnequip(hero, false);
 		}
 		hero.getBelongings().removeItem(this);
+		onDetach();
 
 		QuickSlot.refresh(hero);
 	}

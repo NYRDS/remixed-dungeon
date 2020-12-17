@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
@@ -53,7 +54,18 @@ public class Shopkeeper extends NPC {
 		addImmunity(Regeneration.class);
 	}
 
-	@Override
+    public static int countFood(Bag backpack) {
+        int ret = 0;
+
+        for (Item item : backpack) {
+            if (item instanceof Food) {
+                ret+=item.quantity();
+            }
+        }
+        return ret;
+    }
+
+    @Override
     public boolean act() {
 
 		ItemUtils.throwItemAway(getPos());
@@ -107,7 +119,7 @@ public class Shopkeeper extends NPC {
 		int attempts = 0;
 
 		if(!ModdingMode.inMod() && Game.getDifficulty() < 2) {
-			if (getBelongings().countFood() < 3) {
+			if (countFood(getBelongings().backpack) < 3) {
 				var foodSupply = new OverpricedRation();
 				foodSupply.quantity(5);
 				addItem(foodSupply);

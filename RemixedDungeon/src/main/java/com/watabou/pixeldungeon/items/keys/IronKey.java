@@ -18,12 +18,17 @@
 package com.watabou.pixeldungeon.items.keys;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
+
+import lombok.var;
 
 public class IronKey extends Key {
 
@@ -32,19 +37,32 @@ public class IronKey extends Key {
 	{
 		image = ItemSpriteSheet.IRON_KEY;
 	}
-	
+
+	public static void countIronKeys() {
+		curDepthQuantity = 0;
+
+		var levelId = DungeonGenerator.getCurrentLevelId();
+
+		for (Item item : Dungeon.hero.getBelongings().backpack) {
+			if (item instanceof IronKey && ((IronKey)item).levelId.equals(levelId)) {
+				curDepthQuantity++;
+			}
+		}
+	}
+
 	@Override
 	public boolean collect(@NotNull Bag bag ) {
 		boolean result = super.collect( bag );
 		if (result) {
-			getOwner().getBelongings().countIronKeys();
+			countIronKeys();
 		}
 		return result;
 	}
 	
 	@Override
 	public void onDetach( ) {
-		getOwner().getBelongings().countIronKeys();
+		countIronKeys();
+		super.onDetach();
 	}
 	
 	@NotNull

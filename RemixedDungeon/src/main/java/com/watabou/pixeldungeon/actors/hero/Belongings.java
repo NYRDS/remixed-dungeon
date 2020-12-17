@@ -25,19 +25,15 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
@@ -271,33 +267,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return null;
 	}
 
-	public int countFood() {
-		int ret = 0;
-
-		for (Item item : backpack) {
-			if (item instanceof Food) {
-				ret+=item.quantity();
-			}
-		}
-		return ret;
-	}
-
-	public void countIronKeys() {
-		if (getOwner() != Dungeon.hero) {
-			return;
-		}
-
-		IronKey.curDepthQuantity = 0;
-
-		var levelId = DungeonGenerator.getCurrentLevelId();
-
-		for (Item item : backpack) {
-			if (item instanceof IronKey && ((IronKey)item).levelId.equals(levelId)) {
-				IronKey.curDepthQuantity++;
-			}
-		}
-	}
-	
 	public void identify() {
 		for (Item item : this) {
 			item.identify();
