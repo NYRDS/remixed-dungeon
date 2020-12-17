@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Text;
@@ -40,6 +39,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
+
+import org.jetbrains.annotations.NotNull;
 
 public class WndBag extends WndTabbed {
 
@@ -191,9 +192,7 @@ public class WndBag extends WndTabbed {
 		instance = this;
 	}
 	
-	public static WndBag lastBag( Listener listener, Mode mode, String title ) {
-
-		ItemOwner owner = Dungeon.hero;
+	public static WndBag lastBag(@NotNull Char owner, Listener listener, Mode mode, String title ) {
 
 		Belongings belongings = owner.getBelongings();
 

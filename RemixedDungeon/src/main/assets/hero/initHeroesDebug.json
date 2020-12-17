@@ -10,6 +10,11 @@
         "quantity": 100
       },
       {
+        "kind": "ShortSword",
+        "level" : 2,
+        "identified": true
+      },
+      {
         "kind": "ManaPotion",
         "quantity": 100,
         "level": 1000
@@ -46,6 +51,7 @@
   "WARRIOR": {
     "weapon": {
       "kind": "ShortSword",
+      "level" : 2,
       "identified": true
     },
     "str": 11,

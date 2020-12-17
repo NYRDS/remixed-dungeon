@@ -801,7 +801,7 @@ public class GameScene extends PixelScene {
     public static WndBag selectItem(Char selector, WndBag.Listener listener, Mode mode, String title) {
         cancelCellSelector();
 
-        WndBag wnd = WndBag.lastBag(listener, mode, title);
+        WndBag wnd = WndBag.lastBag(selector, listener, mode, title);
         scene.add(wnd);
 
         return wnd;

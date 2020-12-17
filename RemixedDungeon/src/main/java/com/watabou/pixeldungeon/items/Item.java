@@ -743,4 +743,8 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		add(this);
 		this.owner = owner;
 	}
+
+	public boolean selectedForAction() {
+		return getOwner().getBelongings().getSelectedItem() == this;
+	}
 }

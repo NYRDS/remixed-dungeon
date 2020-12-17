@@ -82,13 +82,10 @@ public class WandOfMagicMissile extends SimpleWand  {
 	@Override
 	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DISENCHANT )) {
-
+			chr.getBelongings().setSelectedItem(this);
 			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand));
-			chr.getBelongings().removeItem(this);
 		} else {
-		
 			super.execute(chr, action );
-			
 		}
 	}
 	
@@ -112,7 +109,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 	
 	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
-
+			selector.getBelongings().removeItem(this);
 			Sample.INSTANCE.play( Assets.SND_EVOKE );
 			ScrollOfUpgrade.upgrade( selector );
 			ItemUtils.evoke( selector );
@@ -123,7 +120,6 @@ public class WandOfMagicMissile extends SimpleWand  {
 			selector.spendAndNext( TIME_TO_DISENCHANT );
 
 			Badges.validateItemLevelAcquired( item );
-
 		} else {
 			if (equipedTo != Belongings.Slot.NONE) {
 				selector.getBelongings().equip(WandOfMagicMissile.this, equipedTo);

@@ -66,7 +66,8 @@ class ItemButton extends ItemSlot {
 
             bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
             ItemUtils.tintBackground(item, bg);
-            if (item instanceof ItemPlaceholder) {
+
+            if(item.selectedForAction() || item instanceof ItemPlaceholder) {
                 enable(false);
             } else {
                 boolean enableItem = false;

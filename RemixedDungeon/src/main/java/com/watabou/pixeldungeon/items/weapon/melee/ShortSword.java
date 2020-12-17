@@ -67,8 +67,8 @@ public class ShortSword extends MeleeWeapon {
 	@Override
 	public void execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_REFORGE)) {
+			chr.getBelongings().setSelectedItem(this);
 			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select));
-			chr.getBelongings().removeItem(this);
 		} else {
 			super.execute(chr, action );
 		}
@@ -81,7 +81,7 @@ public class ShortSword extends MeleeWeapon {
 	
 	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null && !(item instanceof Boomerang)) {
-
+			selector.getBelongings().removeItem(this);
 			Sample.INSTANCE.play( Assets.SND_EVOKE );
 			ScrollOfUpgrade.upgrade( selector );
 			ItemUtils.evoke( selector );
@@ -94,7 +94,6 @@ public class ShortSword extends MeleeWeapon {
 			Badges.validateItemLevelAcquired( item );
 
 		} else {
-
 			if (item instanceof Boomerang) {
 				GLog.w( Game.getVar(R.string.ShortSword_NotBoomerang) );
 			}
