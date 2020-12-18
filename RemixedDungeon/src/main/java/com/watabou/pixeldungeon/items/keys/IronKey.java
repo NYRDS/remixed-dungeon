@@ -39,6 +39,10 @@ public class IronKey extends Key {
 	}
 
 	public static void countIronKeys() {
+		if(Dungeon.isLoading()) {
+			return;
+		}
+
 		curDepthQuantity = 0;
 
 		var levelId = DungeonGenerator.getCurrentLevelId();

@@ -593,9 +593,9 @@ public class Dungeon {
         try {
             loading.incrementAndGet();
             Bundle bundle = gameBundle(fileName);
-
             loadGameFromBundle(bundle, fullLoad);
-        }  finally {
+        }
+        finally {
             loading.decrementAndGet();
         }
     }
