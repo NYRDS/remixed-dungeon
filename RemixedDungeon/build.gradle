@@ -112,13 +112,13 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    googlePlayImplementation 'com.appodeal.ads.sdk:core:2.8.0'
-    googlePlayImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.8.0.7'
-    googlePlayImplementation 'com.appodeal.ads.sdk.networks:applovin:2.8.0.6'
-    googlePlayImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.8.0.2'
-    googlePlayImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.8.0.6'
-    googlePlayImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.8.0.6'
-    googlePlayImplementation 'com.appodeal.ads.sdk.networks:vungle:2.8.0.3'
+    implementation 'com.appodeal.ads.sdk:core:2.8.1'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.8.1.8'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.8.1.9'
+    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.8.1.3'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.8.1.8'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.8.1.7'
+    implementation 'com.appodeal.ads.sdk.networks:vungle:2.8.1.5'
 
     implementation 'org.jetbrains:annotations:15.0'
 
@@ -126,12 +126,12 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:17.5.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:18.1.0'
-    googlePlayImplementation "com.google.android.gms:play-services-games:20.0.1"
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:19.0.0'
+    googlePlayImplementation "com.google.android.gms:play-services-games:21.0.0"
 
-    googlePlayImplementation 'com.android.billingclient:billing:3.0.1'
+    googlePlayImplementation 'com.android.billingclient:billing:3.0.2'
 
-    googlePlayImplementation 'com.google.firebase:firebase-ads:19.5.0'
+    googlePlayImplementation 'com.google.firebase:firebase-ads:19.6.0'
     googlePlayImplementation 'com.google.firebase:firebase-analytics:18.0.0'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics:17.3.0'
 
