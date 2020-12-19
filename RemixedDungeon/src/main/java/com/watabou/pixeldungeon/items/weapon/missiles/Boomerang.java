@@ -108,7 +108,7 @@ public class Boomerang extends MissileWeapon {
 	private Belongings.Slot throwSlot;
 	
 	@Override
-	public void cast(Char user, int dst ) {
+	public void cast(@NotNull Char user, int dst ) {
 		throwSlot = getOwner().getBelongings().itemSlot(this);
 		super.cast( user, dst );
 	}

@@ -9,6 +9,8 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Tamahawk;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by mike on 31.01.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -37,7 +39,7 @@ public class GnollTamahawk extends Tamahawk {
     }
 
     @Override
-    protected void onThrow(int cell, Char thrower) {
+    protected void onThrow(int cell, @NotNull Char thrower) {
         Char enemy = Actor.findChar( cell );
         if (enemy != null && enemy != thrower) {
             thrower.shoot( enemy, this );

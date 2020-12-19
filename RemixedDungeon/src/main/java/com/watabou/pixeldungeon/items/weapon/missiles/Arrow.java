@@ -7,6 +7,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public abstract class Arrow extends MissileWeapon {
 
 	
@@ -58,7 +60,7 @@ public abstract class Arrow extends MissileWeapon {
 	}
 
 	@Override
-	protected void onThrow(int cell, Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower) {
 		if (thrower.bowEquipped()) {
 
 			if (thrower.level().adjacent(thrower.getPos(), cell)

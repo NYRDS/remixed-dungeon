@@ -55,7 +55,7 @@ public class ChaosCrystal extends UsableArtifact {
 
 	private CellSelector.Listener chaosMark = new CellSelector.Listener() {
 		@Override
-		public void onSelect(Integer cell, Char selector) {
+		public void onSelect(Integer cell, @NotNull Char selector) {
 			if (cell != null) {
 
 				if (isCursed()) {

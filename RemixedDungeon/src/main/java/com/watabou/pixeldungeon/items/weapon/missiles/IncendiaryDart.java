@@ -27,6 +27,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class IncendiaryDart extends Dart {
 
 	public IncendiaryDart() {
@@ -47,7 +49,7 @@ public class IncendiaryDart extends Dart {
 	}
 	
 	@Override
-	protected void onThrow(int cell, Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower) {
 		Char enemy = Actor.findChar( cell );
 		if (enemy == null || enemy == thrower) {
 			if (thrower.level().flammable[cell]) {

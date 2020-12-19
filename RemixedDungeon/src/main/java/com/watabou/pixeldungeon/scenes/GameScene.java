@@ -833,7 +833,7 @@ public class GameScene extends PixelScene {
 
     private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer cell, Char selector) {
+        public void onSelect(Integer cell, @NotNull Char selector) {
             selector.handle(cell);
             selector.next();
         }

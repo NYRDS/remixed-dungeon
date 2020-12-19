@@ -5,6 +5,8 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 
+import org.jetbrains.annotations.NotNull;
+
 class Thrower implements CellSelector.Listener {
     private final Item item;
 
@@ -13,7 +15,7 @@ class Thrower implements CellSelector.Listener {
     }
 
     @Override
-    public void onSelect(Integer target, Char selector) {
+    public void onSelect(Integer target, @NotNull Char selector) {
         if (target != null) {
             item.cast(selector, target);
         }

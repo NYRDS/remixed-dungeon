@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.windows.WndInfoMob;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -233,7 +234,7 @@ public class Toolbar extends Component {
 
     private static CellSelector.Listener informer = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer cell, Char selector) {
+        public void onSelect(Integer cell, @NotNull Char selector) {
             if (cell == null) {
                 return;
             }

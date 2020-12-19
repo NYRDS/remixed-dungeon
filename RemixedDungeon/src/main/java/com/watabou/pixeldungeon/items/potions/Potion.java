@@ -222,7 +222,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	protected void onThrow(int cell, Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower) {
 		if (thrower.getPos() == cell) {
 			apply( thrower );
 		} else if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {

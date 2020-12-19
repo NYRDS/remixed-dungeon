@@ -20,10 +20,10 @@
         "level": 1000
       },
       {
-        "kind": "IronKey"
+        "kind": "RoyalShield"
       },
       {
-        "kind": "WoodenShield",
+        "kind": "Firebloom.Seed",
         "quantity": 100
       },
       {

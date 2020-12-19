@@ -67,7 +67,7 @@ abstract public class RottenFood extends Food{
 	}
 	
 	@Override
-	protected void onThrow(int cell, Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower) {
 	   if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
 			super.onThrow( cell, thrower);
 		} else  {

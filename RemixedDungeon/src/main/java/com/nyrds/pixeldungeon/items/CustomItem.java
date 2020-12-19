@@ -134,7 +134,7 @@ public class CustomItem extends EquipableItem {
         CellSelector.Listener cellSelectorListener= new CellSelector.Listener(){
 
             @Override
-            public void onSelect(Integer cell, Char selector) {
+            public void onSelect(Integer cell, @NotNull Char selector) {
                 if(cell!=null) {
                     script.run("cellSelected", action, cell);
                 }
@@ -194,7 +194,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    protected void onThrow(int cell, Char thrower) {
+    protected void onThrow(int cell, @NotNull Char thrower) {
         script.run("onThrow", cell, thrower);
     }
 

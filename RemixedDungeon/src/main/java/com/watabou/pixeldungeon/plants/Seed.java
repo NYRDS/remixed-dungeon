@@ -45,7 +45,7 @@ public class Seed extends Item {
     }
 
     @Override
-    protected void onThrow(int cell, Char thrower) {
+    protected void onThrow(int cell, @NotNull Char thrower) {
         if (Dungeon.level.map[cell] == Terrain.ALCHEMY || Dungeon.level.pit[cell]) {
             super.onThrow(cell, thrower);
         } else {

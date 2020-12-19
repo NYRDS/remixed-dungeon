@@ -34,7 +34,7 @@ public class Kusarigama extends MeleeWeapon {
 
     private static CellSelector.Listener impaler = new CellSelector.Listener() {
         @Override
-        public void onSelect(Integer target, Char selector) {
+        public void onSelect(Integer target, @NotNull Char selector) {
 
             if (target != null) {
                 selector.spendAndNext(TIME_TO_IMPALE);

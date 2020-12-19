@@ -6,6 +6,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import org.jetbrains.annotations.NotNull;
+
 class Zapper implements CellSelector.Listener {
     private final Wand wand;
 
@@ -14,7 +16,7 @@ class Zapper implements CellSelector.Listener {
     }
 
     @Override
-    public void onSelect(Integer target, Char selector) {
+    public void onSelect(Integer target, @NotNull Char selector) {
 
         if (target != null) {
             if (target == selector.getPos()) {

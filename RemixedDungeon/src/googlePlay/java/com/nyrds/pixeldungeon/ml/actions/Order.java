@@ -32,7 +32,7 @@ public class Order extends CharAction {
 
     private class OrderCellSelector implements CellSelector.Listener {
         @Override
-        public void onSelect(Integer cell, Char selector) {
+        public void onSelect(Integer cell, @NotNull Char selector) {
             if(cell == null) {
                 return;
             }

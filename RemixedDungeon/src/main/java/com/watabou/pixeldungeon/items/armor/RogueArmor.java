@@ -74,7 +74,7 @@ public class RogueArmor extends ClassArmor {
 	protected static CellSelector.Listener teleporter = new  CellSelector.Listener() {
 		
 		@Override
-		public void onSelect(Integer target, Char selector) {
+		public void onSelect(Integer target, @NotNull Char selector) {
 			if (target != null) {
 
 				Level level = selector.level();

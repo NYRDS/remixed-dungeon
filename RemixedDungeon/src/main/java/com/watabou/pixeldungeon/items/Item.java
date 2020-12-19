@@ -196,11 +196,16 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		}
 	}
 
-	protected void onThrow(int cell, Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower) {
 		dropTo(cell, thrower);
 	}
 
-	public void dropTo(int cell, Char thrower) {
+	@LuaInterface
+	public void dropTo(int cell) {
+		dropTo(cell, getOwner());
+	}
+
+	public void dropTo(int cell, @NotNull Char thrower) {
 		if(quickSlotIndex!=-1) {
 			QuickSlot.refresh(thrower);
 		}
@@ -497,7 +502,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return false;
 	}
 
-	public void cast(final Char user, int dst) {
+	public void cast(final @NotNull Char user, int dst) {
 
 	    if(quantity()<=0) {
 	        return;

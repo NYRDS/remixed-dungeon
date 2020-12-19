@@ -28,6 +28,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PointF;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CellSelector extends TouchArea {
 
 	public Listener listener = null;
@@ -150,7 +152,7 @@ public class CellSelector extends TouchArea {
 	}
 	
 	public interface Listener {
-		void onSelect(Integer cell, Char selector);
+		void onSelect(Integer cell, @NotNull Char selector);
 		String prompt();
 	}
 }

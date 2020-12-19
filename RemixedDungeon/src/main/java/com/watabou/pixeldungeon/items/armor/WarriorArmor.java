@@ -74,7 +74,7 @@ public class WarriorArmor extends ClassArmor {
 	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
 		
 		@Override
-		public void onSelect(Integer target, Char selector) {
+		public void onSelect(Integer target, @NotNull Char selector) {
 			if (target != null && target != selector.getPos()) {
 				
 				int cell = Ballistica.cast( selector.getPos(), target, false, true, true );

@@ -62,7 +62,7 @@ public class DarkGold extends Item {
 	}
 
 	@Override
-	protected void onThrow(int cell, Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower) {
 		if(Dungeon.depth > 0) {
 			super.onThrow(cell, thrower);
 		}   else {
