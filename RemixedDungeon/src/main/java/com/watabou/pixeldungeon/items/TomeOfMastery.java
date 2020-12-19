@@ -72,7 +72,7 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_READ )) {
 			
 			if (chr.hasBuff( Blindness.class )) {
@@ -115,7 +115,7 @@ public class TomeOfMastery extends MasteryItem {
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );
 			
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 }

@@ -29,7 +29,7 @@ public class SpiderCharm extends UsableArtifact {
 	}
 	
 	@Override
-	public void execute(@NotNull final Char ch, @NotNull String action ) {
+	public void _execute(@NotNull final Char ch, @NotNull String action ) {
 
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);
@@ -47,6 +47,6 @@ public class SpiderCharm extends UsableArtifact {
 			}
 			return;
 		}
-		super.execute( ch, action );
+		super._execute( ch, action );
 	}
 }

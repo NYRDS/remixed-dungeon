@@ -39,7 +39,6 @@ import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.rings.RingOfPower.Power;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -140,14 +139,14 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action) {
+	public void _execute(@NotNull Char chr, @NotNull String action) {
 		if (action.equals(AC_ZAP)) {
 			chr.getBelongings().setSelectedItem(this);
-			chr.selectCell(zapper);
+			chr.selectCell(new Zapper(this));
 			return;
 		}
 
-		super.execute(chr, action);
+		super._execute(chr, action);
 	}
 
 	public void zapCell(Char chr, int cell) {
@@ -320,7 +319,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	protected void wandEffect(final int cell, Char selector) {
 		setKnown();
 
-		QuickSlot.target(selector.getBelongings().getSelectedItem(), Actor.findChar(cell));
+		QuickSlot.target(this, Actor.findChar(cell));
 
 		if (curCharges() > 0) {
 			selector.busy();
@@ -345,29 +344,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         }
 
 	}
-
-	protected static CellSelector.Listener zapper = new CellSelector.Listener() {
-		@Override
-		public void onSelect(Integer target, Char selector) {
-
-			if (target != null) {
-				if (target == selector.getPos()) {
-					GLog.i(Game.getVar(R.string.Wand_SelfTarget));
-					return;
-				}
-
-				final Wand curWand = (Wand) selector.getBelongings().getSelectedItem();
-				final int cell = curWand.getDestinationCell(selector.getPos(),target);
-				selector.getSprite().zap(cell);
-				curWand.wandEffect(cell, selector);
-			}
-		}
-
-		@Override
-		public String prompt() {
-			return Game.getVar(R.string.Wand_Prompt);
-		}
-	};
 
 	protected int getDestinationCell(int src, int target) {
 		return Ballistica.cast(src, target, directional, hitChars, hitObjects);
@@ -448,4 +424,5 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
 		return true;
 	}
+
 }

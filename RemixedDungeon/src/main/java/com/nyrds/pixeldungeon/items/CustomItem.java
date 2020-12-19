@@ -109,8 +109,8 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void execute(@NotNull Char chr, @NotNull String action) {
-        super.execute(chr,action);
+    public void _execute(@NotNull Char chr, @NotNull String action) {
+        super._execute(chr,action);
         script.run("execute", chr, action);
     }
 

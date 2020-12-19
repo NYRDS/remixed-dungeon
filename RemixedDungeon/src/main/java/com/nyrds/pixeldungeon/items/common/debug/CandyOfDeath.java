@@ -15,8 +15,8 @@ public class CandyOfDeath extends Food {
 	}
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
-		super.execute(chr, action );
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
+		super._execute(chr, action );
 		chr.damage(chr.ht(), this);
 	}
 

@@ -327,9 +327,9 @@ public class WandMaker extends NPC {
 			}
 			
 			@Override
-			public void execute(@NotNull Char chr, @NotNull String action ) {
+			public void _execute(@NotNull Char chr, @NotNull String action ) {
 				
-				super.execute(chr, action );
+				super._execute(chr, action );
 				
 				if (action.equals( CommonActions.AC_EAT )) {
 					GameScene.add( Blob.seed( chr.getPos(), 100, ToxicGas.class ) );

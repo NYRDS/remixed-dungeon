@@ -54,7 +54,7 @@ public class Seed extends Item {
     }
 
     @Override
-    public void execute(@NotNull Char chr, @NotNull String action) {
+    public void _execute(@NotNull Char chr, @NotNull String action) {
         if (action.equals(AC_PLANT)) {
 
             chr.spend(TIME_TO_PLANT);
@@ -75,7 +75,7 @@ public class Seed extends Item {
             chr.spend(Food.TIME_TO_EAT);
         }
 
-        super.execute(chr, action);
+        super._execute(chr, action);
     }
 
 

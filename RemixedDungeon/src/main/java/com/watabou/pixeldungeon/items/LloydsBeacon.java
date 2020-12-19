@@ -66,7 +66,7 @@ public class LloydsBeacon extends Item {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		
 		if (action.equals(AC_SET) || action.equals(AC_RETURN)) {
 			
@@ -101,7 +101,7 @@ public class LloydsBeacon extends Item {
 			reset();
 			chr.teleportTo(target);
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 	

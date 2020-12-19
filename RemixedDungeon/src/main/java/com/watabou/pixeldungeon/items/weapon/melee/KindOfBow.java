@@ -76,7 +76,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 	}
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action) {
+	public void _execute(@NotNull Char chr, @NotNull String action) {
 		if(AC_CHOOSE_ARROWS.equals(action)) {
 			GameScene.selectItem(chr,
                     (item, selector) -> {
@@ -89,7 +89,7 @@ public abstract class KindOfBow extends MeleeWeapon {
                     WndBag.Mode.ARROWS, Game.getVar(R.string.KindOfBow_SelectArrowKind));
 			return;
 		}
-		super.execute(chr, action);
+		super._execute(chr, action);
 	}
 
 	@Override

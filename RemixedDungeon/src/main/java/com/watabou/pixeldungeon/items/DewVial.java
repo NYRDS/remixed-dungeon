@@ -69,7 +69,7 @@ public class DewVial extends Item {
 	private static final double POW = Math.log10( NUM );
 	
 	@Override
-	public void execute(@NotNull final Char chr, @NotNull String action ) {
+	public void _execute(@NotNull final Char chr, @NotNull String action ) {
 		if (action.equals( AC_DRINK )) {
 			
 			if (getVolume() > 0) {
@@ -96,7 +96,7 @@ public class DewVial extends Item {
 			}
 			
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 	

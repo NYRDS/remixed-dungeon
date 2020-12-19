@@ -20,7 +20,7 @@ public class Candy extends Food {
 	}
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 
 			detach( chr.getBelongings().backpack );
@@ -36,7 +36,7 @@ public class Candy extends Food {
 
 		} else {
 
-			super.execute(chr, action );
+			super._execute(chr, action );
 
 		}
 	}

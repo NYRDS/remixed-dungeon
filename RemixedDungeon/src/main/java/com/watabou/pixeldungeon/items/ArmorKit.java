@@ -54,11 +54,11 @@ public class ArmorKit extends Item {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
 			GameScene.selectItem(chr, itemSelector, WndBag.Mode.ARMOR, Game.getVar(R.string.ArmorKit_SelectArmor));
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 	

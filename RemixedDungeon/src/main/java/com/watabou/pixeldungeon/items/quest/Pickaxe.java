@@ -75,7 +75,7 @@ public class Pickaxe extends Weapon {
 	}
 	
 	@Override
-	public void execute(@NotNull final Char chr, @NotNull String action ) {
+	public void _execute(@NotNull final Char chr, @NotNull String action ) {
 		
 		if (action.equals(AC_MINE)) {
 			
@@ -121,7 +121,7 @@ public class Pickaxe extends Weapon {
 			
 		} else {
 			
-			super.execute(chr, action );
+			super._execute(chr, action );
 			
 		}
 	}

@@ -95,9 +95,9 @@ public class Boomerang extends MissileWeapon {
 		((MissileSprite) owner.getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, owner.getPos(),
 				this, ()-> {
-					if (throwEquiped) {
+					if (throwSlot!= Belongings.Slot.NONE) {
 						owner.spend(-TIME_TO_EQUIP);
-						owner.getBelongings().setItemForSlot(this, Belongings.Slot.WEAPON);
+						owner.getBelongings().setItemForSlot(this, throwSlot);
 					} else {
 						owner.collect(this);
 					}
@@ -105,11 +105,11 @@ public class Boomerang extends MissileWeapon {
 				});
 	}
 	
-	private boolean throwEquiped;
+	private Belongings.Slot throwSlot;
 	
 	@Override
 	public void cast(Char user, int dst ) {
-		throwEquiped = isEquipped( user );
+		throwSlot = getOwner().getBelongings().itemSlot(this);
 		super.cast( user, dst );
 	}
 

@@ -1,0 +1,35 @@
+package com.watabou.pixeldungeon.items.wands;
+
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.utils.GLog;
+
+class Zapper implements CellSelector.Listener {
+    private final Wand wand;
+
+    public Zapper(Wand wand) {
+        this.wand = wand;
+    }
+
+    @Override
+    public void onSelect(Integer target, Char selector) {
+
+        if (target != null) {
+            if (target == selector.getPos()) {
+                GLog.i(Game.getVar(R.string.Wand_SelfTarget));
+                return;
+            }
+
+            final int cell = wand.getDestinationCell(selector.getPos(),target);
+            selector.getSprite().zap(cell);
+            wand.wandEffect(cell, selector);
+        }
+    }
+
+    @Override
+    public String prompt() {
+        return Game.getVar(R.string.Wand_Prompt);
+    }
+}

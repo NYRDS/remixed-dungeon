@@ -80,12 +80,12 @@ public class WandOfMagicMissile extends SimpleWand  {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DISENCHANT )) {
 			chr.getBelongings().setSelectedItem(this);
 			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand));
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 	

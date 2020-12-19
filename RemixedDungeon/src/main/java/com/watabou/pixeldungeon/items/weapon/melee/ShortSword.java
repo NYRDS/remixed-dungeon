@@ -65,12 +65,12 @@ public class ShortSword extends MeleeWeapon {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_REFORGE)) {
 			chr.getBelongings().setSelectedItem(this);
 			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select));
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 	

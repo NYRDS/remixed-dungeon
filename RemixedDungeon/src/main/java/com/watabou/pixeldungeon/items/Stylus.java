@@ -56,7 +56,7 @@ public class Stylus extends Item {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_INSCRIBE)) {
 
 			GameScene.selectItem(chr,
@@ -74,7 +74,7 @@ public class Stylus extends Item {
 			
 		} else {
 			
-			super.execute(chr, action );
+			super._execute(chr, action );
 			
 		}
 	}

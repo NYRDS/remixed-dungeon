@@ -53,11 +53,11 @@ public class SpellBook extends Artifact {
 	}
 
 	@Override
-	public void execute(@NotNull final Char ch, @NotNull String action) {
+	public void _execute(@NotNull final Char ch, @NotNull String action) {
 		if (action.equals(CommonActions.AC_READ)) {
 			spell().cast(ch);
 		} else {
-			super.execute(ch, action);
+			super._execute(ch, action);
 		}
 	}
 

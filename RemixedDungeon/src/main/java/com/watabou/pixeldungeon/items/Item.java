@@ -44,7 +44,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
@@ -170,12 +169,16 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void doThrow(@NotNull Char chr) {
-		chr.selectCell(thrower);
+		chr.selectCell(new Thrower(this));
 	}
 
 	public void execute(@NotNull Char chr, @NotNull String action) {
 		chr.getBelongings().setSelectedItem(this);
+		_execute(chr, action);
+		chr.getBelongings().setSelectedItem(ItemsList.DUMMY);
+	}
 
+	protected void _execute(@NotNull Char chr, @NotNull String action) {
 		if (action.equals(AC_DROP)) {
 			doDrop(chr);
 		} else if (action.equals(AC_THROW)) {
@@ -202,7 +205,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 			QuickSlot.refresh(thrower);
 		}
 
-		Dungeon.level.animatedDrop(this, cell);
+		thrower.level().animatedDrop(this, cell);
 	}
 
 	public boolean collect(@NotNull Bag container) {
@@ -538,20 +541,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	@Getter
 	private Char owner = CharsList.DUMMY;
 
-	private static final CellSelector.Listener thrower = new CellSelector.Listener() {
-		@Override
-		public void onSelect(Integer target, Char selector) {
-			if (target != null) {
-				selector.getBelongings().getSelectedItem().cast(selector, target);
-			}
-		}
-
-		@Override
-		public String prompt() {
-			return Game.getVar(R.string.Item_DirThrow);
-		}
-	};
-
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
 		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
 	}
@@ -747,4 +736,5 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	public boolean selectedForAction() {
 		return getOwner().getBelongings().getSelectedItem() == this;
 	}
+
 }

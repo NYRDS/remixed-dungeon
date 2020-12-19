@@ -127,7 +127,7 @@ public class ChaosCrystal extends UsableArtifact {
 	}
 
 	@Override
-	public void execute(@NotNull final Char ch, @NotNull String action) {
+	public void _execute(@NotNull final Char ch, @NotNull String action) {
 		switch (action) {
 			case AC_USE:
 				ch.selectCell(chaosMark);
@@ -136,7 +136,7 @@ public class ChaosCrystal extends UsableArtifact {
 				fuse(ch);
 				break;
 			default:
-				super.execute(ch, action);
+				super._execute(ch, action);
 				break;
 		}
 	}

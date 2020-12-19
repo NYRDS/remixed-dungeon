@@ -17,12 +17,12 @@ abstract public class Mushroom extends Food {
 	}
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_EAT )) {
 			applyEffect(chr);
 			GLog.i( message );
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 

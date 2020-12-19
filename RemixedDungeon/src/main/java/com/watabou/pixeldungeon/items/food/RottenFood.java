@@ -56,9 +56,9 @@ abstract public class RottenFood extends Food{
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		
-		super.execute(chr, action );
+		super._execute(chr, action );
 		
 		if (action.equals( CommonActions.AC_EAT )) {
 			GLog.w(message);

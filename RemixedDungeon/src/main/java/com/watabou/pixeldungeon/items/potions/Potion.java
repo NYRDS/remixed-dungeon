@@ -128,7 +128,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	public void execute(@NotNull final Char chr, @NotNull String action ) {
+	public void _execute(@NotNull final Char chr, @NotNull String action ) {
 		switch (action) {
 			case AC_DRINK:
 				if (isKnown() && (
@@ -160,7 +160,7 @@ public class Potion extends Item implements UnknownItem {
 				break;
 			default:
 
-				super.execute(chr, action);
+				super._execute(chr, action);
 
 				break;
 		}

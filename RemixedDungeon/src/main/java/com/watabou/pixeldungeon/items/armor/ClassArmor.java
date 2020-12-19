@@ -87,7 +87,7 @@ abstract public class ClassArmor extends Armor {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(special())) {
 
 			int cost = chr.getSkillPointsMax()/specialCostModifier;
@@ -106,7 +106,7 @@ abstract public class ClassArmor extends Armor {
 			return;
 		}
 
-		super.execute(chr, action );
+		super._execute(chr, action );
 	}
 	
 	abstract public String special();

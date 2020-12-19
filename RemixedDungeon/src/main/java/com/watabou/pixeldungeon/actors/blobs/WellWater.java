@@ -65,7 +65,6 @@ public class WellWater extends Blob {
 		Heap heap;
 		
 		if (pos == Dungeon.hero.getPos() && affectHero( Dungeon.hero )) {
-			
 			volume = off[pos] = cur[pos] = 0;
 			return true;
 			
@@ -73,7 +72,7 @@ public class WellWater extends Blob {
 			
 			Item oldItem = heap.peek();
 			Item newItem = affectItem( oldItem );
-			
+
 			if (newItem != null) {
 				if (newItem != oldItem) {
 					if (oldItem.quantity() > 1) {
@@ -83,14 +82,10 @@ public class WellWater extends Blob {
 						heap.replace( oldItem, newItem );
 					}
 				}
-
 				heap.sprite.link();
 				volume = off[pos] = cur[pos] = 0;
-				
 				return true;
-				
 			} else {
-				
 				int newPlace;
 				do {
 					newPlace = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
@@ -98,13 +93,9 @@ public class WellWater extends Blob {
 				Dungeon.level.animatedDrop( heap.pickUp(), newPlace );
 				
 				return false;
-				
 			}
-			
 		} else {
-			
 			return false;
-			
 		}
 	}
 	
@@ -133,11 +124,9 @@ public class WellWater extends Blob {
 				water.volume > 0 && 
 				water.pos == cell && 
 				water.affect()) {
-				
-				Dungeon.level.set( cell, Terrain.EMPTY_WELL );
-				GameScene.updateMap( cell );
-				
-				return;
+					Dungeon.level.set( cell, Terrain.EMPTY_WELL );
+					GameScene.updateMap( cell );
+					return;
 			}
 		}
 	}

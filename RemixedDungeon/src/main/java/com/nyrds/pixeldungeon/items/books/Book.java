@@ -29,7 +29,7 @@ abstract public class Book extends Item {
 
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 
 			if (chr.hasBuff( Blindness.class )) {
@@ -40,7 +40,7 @@ abstract public class Book extends Item {
 
 		} else {
 
-			super.execute(chr, action );
+			super._execute(chr, action );
 
 		}
 	}

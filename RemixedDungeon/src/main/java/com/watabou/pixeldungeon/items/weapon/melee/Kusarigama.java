@@ -76,12 +76,12 @@ public class Kusarigama extends MeleeWeapon {
     }
 
     @Override
-    public void execute(@NotNull Char chr, @NotNull String action) {
+    public void _execute(@NotNull Char chr, @NotNull String action) {
 
         if (action.equals(AC_PULL)) {
             chr.selectCell(impaler);
         } else {
-            super.execute(chr, action);
+            super._execute(chr, action);
         }
     }
 

@@ -60,11 +60,11 @@ public class Weightstone extends Item {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
 			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.Weightstone_Select));
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 	

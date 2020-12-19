@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -47,13 +48,14 @@ public class WaterOfAwareness extends WellWater {
 		emitter.getParent().add( new Identification( DungeonTilemap.tileCenterToWorld( pos ) ) );
 		
 		hero.getBelongings().observe();
-		
-		for (int i=0; i < Dungeon.level.getLength(); i++) {
+		Level level = hero.level();
+
+		for (int i=0; i < level.getLength(); i++) {
 			
-			int terr = Dungeon.level.map[i];
+			int terr = level.map[i];
 			if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
 				
-				Dungeon.level.set( i, Terrain.discover( terr ) );						
+				level.set( i, Terrain.discover( terr ) );
 				GameScene.updateMap( i );
 				
 				if (Dungeon.visible[i]) {
@@ -65,7 +67,7 @@ public class WaterOfAwareness extends WellWater {
 		Buff.affect( hero, Awareness.class, Awareness.DURATION );
 		Dungeon.observe();
 
-		Dungeon.hero.interrupt();
+		hero.interrupt();
 	
 		GLog.p( Game.getVar(R.string.WaterOfAwareness_Procced) );
 

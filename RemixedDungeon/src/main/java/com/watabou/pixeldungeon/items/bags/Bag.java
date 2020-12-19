@@ -54,11 +54,11 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_OPEN )) {
 			GameScene.show( new WndBag(chr.getBelongings(), this, null, WndBag.Mode.ALL, null ) );
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 	

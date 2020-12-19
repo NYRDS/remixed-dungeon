@@ -23,7 +23,7 @@ public class ManaPotion extends Drink {
 	}
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DRINK )) {
 			detach( chr.getBelongings().backpack );
 			GLog.i( Game.getVar(R.string.Drink_Message) );
@@ -37,7 +37,7 @@ public class ManaPotion extends Drink {
 
 			chr.spend( TIME_TO_DRINK );
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 

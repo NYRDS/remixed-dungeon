@@ -39,7 +39,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 	}
 	
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_NECROMANCY )) {
 
 			HeroSubClass way;
@@ -52,7 +52,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 			}
 			GameScene.show( new WndChooseWay( this, way ) );
 		} else {
-			super.execute(chr, action );
+			super._execute(chr, action );
 		}
 	}
 }

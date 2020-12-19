@@ -39,7 +39,7 @@ public abstract class EquipableItem extends Item {
 	protected Belongings.Slot equipedTo = Belongings.Slot.NONE;
 
 	@Override
-	public void execute(@NotNull Char chr, @NotNull String action ) {
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		switch (action) {
 			case AC_EQUIP:
 				doEquip(chr);
@@ -48,7 +48,7 @@ public abstract class EquipableItem extends Item {
 				doUnequip(chr, true);
 				break;
 			default:
-				super.execute(chr, action);
+				super._execute(chr, action);
 				break;
 		}
 	}
