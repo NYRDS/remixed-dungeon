@@ -907,16 +907,10 @@ public abstract class Level implements Bundlable {
 
 	@LuaInterface
 	@TestOnly
-	public int randomVisibleDestination() {
-
-		ArrayList<Integer> cells = new ArrayList<>();
-		for(int i=0;i<getLength();++i) {
-			if(Dungeon.visible[i] && passable[i]) {
-				cells.add(i);
-			}
-		}
-
-		return oneCellFrom(cells);
+	public int randomTestDestination() {
+		return getNearestTerrain(Dungeon.hero.getPos(), (level, cell) -> {
+			return !level.visited[cell] && level.mapped[cell] && !level.avoid[cell] && level.passable[cell] && level.getLevelObject(cell) == null;
+		});
 	}
 
 	public int randomDestination() {
@@ -1846,6 +1840,15 @@ public abstract class Level implements Bundlable {
 	public boolean isCellVisited(int cell) {
 		if(cellValid(cell)) {
 			return visited[cell];
+		}
+
+		return false;
+	}
+
+	@LuaInterface
+	public boolean isCellMapped(int cell) {
+		if(cellValid(cell)) {
+			return mapped[cell];
 		}
 
 		return false;

@@ -91,11 +91,9 @@ local function heroAiStep()
 
     local cell = -1
 
-    for i = 1,50 do
-        cell = level:randomVisibleDestination()
-        if not level:isCellVisited(cell) then
-            break
-        end
+    cell = level:randomTestDestination()
+    if not level:cellValid(cell) then
+        cell = level:randomDestination()
     end
 
     hero:handle(cell)
@@ -123,7 +121,7 @@ local function levelsTestModeOnStep(self, scene)
             heroAiStep()
         end
 
-        if framesOnLevel > 1000 then
+        if framesOnLevel > 10000 then
             currentLevel = currentLevel + 1
 
             if currentLevel < levelsSize then
