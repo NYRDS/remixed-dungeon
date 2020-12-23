@@ -46,6 +46,10 @@ local function heroAiStep()
             RPD.CharUtils:execute(target, hero, action);
         end
 
+        if tostring(activeWindow:getClass()):match('WndStepOnTrap') then
+            activeWindow:onSelect(0)
+        end
+
         activeWindow:hide()
         return
     end
