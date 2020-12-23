@@ -583,7 +583,7 @@ public class Hero extends Char {
 			step = Dungeon.findPath(this, target, passable, level.fieldOfView);
 		}
 
-		if (step != Level.INVALID_CELL) {
+		if (level.cellValid(step)) {
 
 			int oldPos = getPos();
 

@@ -245,7 +245,7 @@ public abstract class Level implements Bundlable {
 
 	@NotNull
 	public String music() {
-		return DungeonGenerator.getLevelProperty(levelId, "music", Assets.TUNE);
+		return DungeonGenerator.getLevelProperty(levelId, "music", DungeonGenerator.getLevelProperty(levelId, "fallbackMusic", Assets.TUNE));
 	}
 
 	public Feeling getFeeling() {
@@ -1869,5 +1869,4 @@ public abstract class Level implements Bundlable {
 
 		return false;
 	}
-
 }

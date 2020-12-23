@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Random;
 
 public class Chasm implements Doom {
@@ -45,19 +44,8 @@ public class Chasm implements Doom {
 	public static boolean jumpConfirmed = false;
 	
 	public static void heroJump( final Hero hero ) {
-		GameScene.show( 
-			new WndOptions( Game.getVar(R.string.Chasm_Chasm),
-					Game.getVar(R.string.Chasm_Jump),
-					Game.getVar(R.string.Chasm_Yes),
-					Game.getVar(R.string.Chasm_No) ) {
-				@Override
-				public void onSelect(int index) {
-					if (index == 0) {
-						jumpConfirmed = true;
-						hero.resume();
-					}
-				}
-			}
+		GameScene.show(
+				new WndChasmJump(hero)
 		);
 	}
 
@@ -131,4 +119,5 @@ public class Chasm implements Doom {
 	public String name() {
 		return getEntityKind();
 	}
+
 }

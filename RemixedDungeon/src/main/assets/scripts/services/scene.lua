@@ -10,6 +10,8 @@ local gameScene = require "scripts/services/gameScene"
 
 local GameControl = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
 
+local autoTestAi = require "scripts/services/autoTestAi"
+
 local levels = RPD.DungeonGenerator:getLevelsList()
 local levelsSize = levels:size()
 local currentLevel = 0
@@ -28,91 +30,6 @@ local function stdModeOnStep(self, scene)
     if scene == "GameScene" then
         gameScene.onStep()
     end
-end
-
-local function heroAiStep()
-    local hero = RPD.Dungeon.hero
-
-    if not hero:isReady() then
-        return
-    end
-
-    local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
-
-    if activeWindow then
-        if tostring(activeWindow:getClass()):match('WndInfoMob') then
-            local target = activeWindow:getTarget()
-            local action = RPD.CharUtils:randomAction(target,hero)
-            RPD.CharUtils:execute(target, hero, action);
-        end
-
-        if tostring(activeWindow:getClass()):match('WndStepOnTrap') then
-            activeWindow:onSelect(0)
-        end
-
-        activeWindow:hide()
-        return
-    end
-
-    local level = hero:level()
-
-    if hero:buffLevel('Blindness') > 0 then
-        local cell = level:getEmptyCellNextTo(hero:getPos())
-        if level:cellValid(cell) then
-            hero:handle(cell)
-        else
-            hero:rest(false)
-        end
-        return
-    end
-
-    local enemyPos = hero:getNearestEnemy():getPos()
-    if level:cellValid(enemyPos) then
-        hero:handle(enemyPos)
-        return
-    end
-
-    if hero:buffLevel('Roots') > 0 or math.random() < 0.1 then
-        hero:search(true)
-        return
-    end
-
-    local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
-
-    if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) then
-        hero:handle(exitCell)
-        return
-    end
-
-    exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_EXIT)
-    if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) and hero:getBelongings():getItem("SkeletonKey"):valid() then
-        hero:handle(exitCell)
-        return
-    end
-
-    local doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.DOOR)
-
-    if level:cellValid(doorCell) and  not level:isCellVisited(doorCell) then
-        hero:handle(doorCell)
-        return
-    end
-
-    doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_DOOR)
-
-    if level:cellValid(doorCell) and hero:getBelongings():getItem("IronKey"):valid() then
-        hero:handle(doorCell)
-        return
-    end
-
-
-    local cell = -1
-
-    cell = level:randomTestDestination()
-    if not level:cellValid(cell) then
-        cell = level:randomDestination()
-    end
-
-    hero:handle(cell)
 end
 
 local function levelsTestModeOnStep(self, scene)
@@ -134,7 +51,7 @@ local function levelsTestModeOnStep(self, scene)
         hero:hp(hero:ht())
 
         if hero:myMove() then
-            heroAiStep()
+            autoTestAi.step()
         end
 
         if framesOnLevel > 10000 then

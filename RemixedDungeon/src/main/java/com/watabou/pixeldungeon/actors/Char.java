@@ -882,7 +882,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void move(int step) {
-		if(!isMovable()) {
+		if(!isMovable() || hasBuff(Roots.class)) {
 			return;
 		}
 
@@ -1140,7 +1140,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		int oldPos = getPos();
 		spend(1 / speed());
 		if (level().cellValid(target) && getFurther(target)) {
-
 			moveSprite(oldPos, getPos());
 			return true;
 		}
