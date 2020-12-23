@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -87,7 +88,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         super.destroy();
         slots.clear();
         lastItem = null;
-        lastTarget = null;
+        lastTarget = CharsList.DUMMY;
     }
 
     @Override
@@ -103,7 +104,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                     return;
                 }
 
-                if (targeting && lastTarget != null) {
+                if (targeting && lastTarget.valid()) {
                     GameScene.handleCell(lastTarget.getPos());
                 } else {
                     if (quickslotItem == lastItem) {
@@ -221,13 +222,13 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                 crossM.point(DungeonTilemap.tileToWorld(lastTarget.getPos()));
                 crossB.setVisible(true);
             } else {
-                lastTarget = null;
+                lastTarget = CharsList.DUMMY;
             }
         }
     }
 
     private void updateTargetingState() {
-        targeting = lastTarget != null && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
+        targeting = lastTarget.valid() && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
     }
 
     private void refreshSelf() {

@@ -17,6 +17,8 @@
 
 package com.watabou.utils;
 
+import com.watabou.pixeldungeon.levels.Level;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -78,11 +80,11 @@ public class PathFinder {
 
 	public static int getStep(int from, int to, boolean[] passable) {
 		if(to<0 || to>size-1) {
-			return -1;
+			return Level.INVALID_CELL;
 		}
 		
 		if (!buildDistanceMap(from, to, passable)) {
-			return -1;
+			return Level.INVALID_CELL;
 		}
 
 		// From the starting position we are making one step downwards

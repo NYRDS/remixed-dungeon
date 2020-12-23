@@ -17,6 +17,8 @@
  */
 package com.nyrds.pixeldungeon.ml.actions;
 
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 
 public abstract class CharAction {
@@ -29,6 +31,9 @@ public abstract class CharAction {
 	public String toString() {
 		return   getClass().getSimpleName() +
 				"{dst=" + dst +
+				  "("+ Dungeon.level.tileNameByCell(dst) + "," +
+				(Actor.findChar(dst) != null	? Actor.findChar(dst).getEntityKind() : "") + "," +
+				(Dungeon.level.getTopLevelObject(dst) != null ? Dungeon.level.getTopLevelObject(dst).getEntityKind() : "") + ")" +
 				'}';
 	}
 }

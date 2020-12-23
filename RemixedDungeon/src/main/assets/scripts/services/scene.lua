@@ -62,12 +62,10 @@ local function heroAiStep()
         return
     end
 
-    if hero:visibleEnemies() > 0 and hero:buffLevel('Charmed') == 0 then
-        local enemyPos = hero:visibleEnemy(0):getPos()
-        if level:cellValid(enemyPos) then
-            hero:handle(enemyPos)
-            return
-        end
+    local enemyPos = hero:getNearestEnemy():getPos()
+    if level:cellValid(enemyPos) then
+        hero:handle(enemyPos)
+        return
     end
 
     if hero:buffLevel('Roots') > 0 or math.random() < 0.1 then
@@ -77,7 +75,13 @@ local function heroAiStep()
 
     local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
 
-    if level:cellValid(exitCell) and not level:getTopLevelObject() then
+    if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) then
+        hero:handle(exitCell)
+        return
+    end
+
+    exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_EXIT)
+    if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) and hero:getBelongings():getItem("SkeletonKey"):valid() then
         hero:handle(exitCell)
         return
     end
@@ -88,6 +92,14 @@ local function heroAiStep()
         hero:handle(doorCell)
         return
     end
+
+    doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_DOOR)
+
+    if level:cellValid(doorCell) and hero:getBelongings():getItem("IronKey"):valid() then
+        hero:handle(doorCell)
+        return
+    end
+
 
     local cell = -1
 

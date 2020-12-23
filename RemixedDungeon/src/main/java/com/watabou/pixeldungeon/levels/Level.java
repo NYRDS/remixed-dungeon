@@ -121,6 +121,8 @@ public abstract class Level implements Bundlable {
 	public static final int INVALID_CELL = -1;
 
 
+	public ArrayList<Integer> candidates = new ArrayList<>();
+
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
 			return exitMap.get(index);
@@ -908,9 +910,7 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	@TestOnly
 	public int randomTestDestination() {
-		return getNearestTerrain(Dungeon.hero.getPos(), (level, cell) -> {
-			return !level.visited[cell] && level.mapped[cell] && !level.avoid[cell] && level.passable[cell] && level.getLevelObject(cell) == null;
-		});
+		return getNearestTerrain(Dungeon.hero.getPos(), new RandomDestinationForAutoTest());
 	}
 
 	public int randomDestination() {
@@ -1618,14 +1618,30 @@ public abstract class Level implements Bundlable {
 		return minima;
 	}
 
+	public int getRandomTerrain(int cell, cellCondition condition) {
+		if(!cellValid(cell)) {
+			return INVALID_CELL;
+		}
+
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		for (int i = 0; i < getLength(); i++) {
+			if (i != cell && condition.pass(this, i)) {
+				candidates.add(i);
+			}
+		}
+
+		return oneCellFrom(candidates);
+	}
+
+
 	public int getNearestTerrain(int cell, cellCondition condition) {
 		if(!cellValid(cell)) {
 			return INVALID_CELL;
 		}
 
 		int minima = getLength();
-
-		ArrayList<Integer> candidates = new ArrayList<>();
+		candidates.clear();
 
 		for (int i = 0; i < getLength(); i++) {
 			if (condition.pass(this, i)) {
@@ -1853,4 +1869,5 @@ public abstract class Level implements Bundlable {
 
 		return false;
 	}
+
 }

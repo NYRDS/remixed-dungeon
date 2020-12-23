@@ -693,7 +693,7 @@ public class Dungeon {
         level.updateFieldOfView(hero.getControlTarget());
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
 
-        BArray.or(level.visited, visible, level.visited);
+        BArray.or(level.mapped, visible, level.mapped);
 
         GameScene.afterObserve();
     }
@@ -741,7 +741,9 @@ public class Dungeon {
     }
 
 
-    public static int findPath(Hero ch, int from, int to, boolean pass[], boolean[] visible) {
+    public static int findPath(@NotNull Hero ch, int to, boolean pass[], boolean[] visible) {
+
+        int from  = ch.getPos();
 
         if (level.adjacent(from, to)) {
             if (!(pass[to] || level.avoid[to])) {
@@ -773,17 +775,17 @@ public class Dungeon {
     }
 
 
-    public static int findPath(Char ch, int from, int to, boolean pass[]) {
+    public static int findPath(@NotNull Char ch, int to, boolean pass[]) {
+
+        int from = ch.getPos();
 
         if (level.adjacent(from, to)) {
 
             if (!(pass[to] || level.avoid[to])) {
-                return -1;
+                return Level.INVALID_CELL;
             }
 
-            Char chr = Actor.findChar(to);
-
-            return chr == null ? to : -1;
+            return Actor.findChar(to) == null ? to : Level.INVALID_CELL;
         }
 
         if (ch.isFlying() || ch.hasBuff(Amok.class)) {
@@ -800,7 +802,9 @@ public class Dungeon {
 
     }
 
-    public static int flee(Char ch, int cur, int from, boolean pass[]) {
+    public static int flee(Char ch,  int from, boolean pass[]) {
+
+        int cur = ch.getPos();
 
         if (ch.isFlying()) {
             BArray.or(pass, level.avoid, passable);

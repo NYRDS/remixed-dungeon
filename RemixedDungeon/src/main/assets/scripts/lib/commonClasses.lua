@@ -10,6 +10,7 @@ local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
 
 local DungeonGenerator = luajava.bindClass("com.nyrds.pixeldungeon.utils.DungeonGenerator")
+local PathFinder       = luajava.bindClass("com.watabou.utils.PathFinder")
 
 local Sample           = luajava.bindClass("com.watabou.noosa.audio.Sample")
 local Music            = luajava.bindClass("com.watabou.noosa.audio.Music")
@@ -155,6 +156,7 @@ local RPD = {
     GameScene = GameScene,
     Dungeon = Dungeon,
     DungeonGenerator = DungeonGenerator,
+    PathFinder = PathFinder,
 
     CharsList = CharsList,
     CharUtils = CharUtils,

@@ -264,9 +264,9 @@ public abstract class Mob extends Char {
 		if (hasBuff(Roots.class)) {
 			return false;
 		}
-		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(level()));
+		int step = Dungeon.findPath(this, target, walkingType.passableCells(level()));
 
-		if (step != -1) {
+		if (step != Level.INVALID_CELL) {
 			move(step);
 			return true;
 		} else {
@@ -275,9 +275,9 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean getFurther(int target) {
-		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(level()));
+		int step = Dungeon.flee(this, target, walkingType.passableCells(level()));
 
-		if (step != -1) {
+		if (step != -Level.INVALID_CELL) {
 			move(step);
 			return true;
 		} else {
