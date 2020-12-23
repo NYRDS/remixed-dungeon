@@ -6,6 +6,7 @@ Remixed Dungeon
 [![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6Ik5ZUkRTIiwicmVwbzEiOiJyZW1peGVkLWR1bmdlb24iLCJpbmNsdWRlTGludCI6ZmFsc2UsImF1dGhvcklkIjoxNjYyOCwiaWF0IjoxNjA0OTY5NTkyfQ.ifcTm3nWSy3eXTmj_F9OwbZsWsQCOkNpWAkwLIMginM)](https://www.deepcode.ai/app/gh/NYRDS/remixed-dungeon/_/dashboard?utm_content=gh%2FNYRDS%2Fremixed-dungeon)
 [![CodeFactor](https://www.codefactor.io/repository/github/nyrds/remixed-dungeon/badge)](https://www.codefactor.io/repository/github/nyrds/remixed-dungeon)
 [![Twitter Follow](https://img.shields.io/twitter/follow/NYRDS?style=social)](https://twitter.com/intent/follow?screen_name=NYRDS)
+[![Chat on Discord](https://img.shields.io/discord/643581763247013908?style=social)](https://discord.gg/AMXrhQZ)
 =====================
 
 Classic roguelike with pixel graphics and simple interface.
