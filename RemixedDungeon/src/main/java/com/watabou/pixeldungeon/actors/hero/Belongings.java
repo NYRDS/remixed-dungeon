@@ -138,10 +138,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		LEFT_ARTIFACT
 	}
 
-	private Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
+	private final Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
 	public Map<EquipableItem, Slot> usedSlots    = new HashMap<>();
 
-	private Set<EquipableItem> activatedItems = new HashSet<>();
+	private final Set<EquipableItem> activatedItems = new HashSet<>();
 
 	@Packable(defaultValue = "DUMMY")
 	@NotNull
@@ -232,7 +232,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	@LuaInterface
 	public Item getItem( String itemClass ) {
 		for (Item item : this) {
-			if (itemClass.equals( item.getClassName() )) {
+			if (itemClass.equals( item.getEntityKind() )) {
 				return item;
 			}
 		}
@@ -525,6 +525,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return true;
 	}
 
+	@LuaInterface
+	public boolean isBackpackFull() {
+		return backpack.items.size() == getBackpackSize();
+	}
 
 	@NotNull
 	public Item itemBySlot(Belongings.Slot slot) {

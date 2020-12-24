@@ -8,17 +8,10 @@ local RPD = require "scripts.lib.commonClasses"
 
 local ai = {}
 
-ai.step = function()
-    local hero = RPD.Dungeon.hero
-
-    if not hero:isReady() then
-        return
-    end
-
+local function handleWindow(hero)
     local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
 
     if activeWindow then
-
         local wndClass = tostring(activeWindow:getClass())
 
         if wndClass:match('WndInfoMob') then
@@ -40,6 +33,20 @@ ai.step = function()
         end
 
         activeWindow:hide()
+        return true
+    end
+end
+
+ai.step = function()
+    local hero = RPD.Dungeon.hero
+
+    if not hero:isReady() then
+        return
+    end
+
+    local heroPos = hero:getPos()
+
+    if handleWindow(hero) then
         return
     end
 
@@ -64,6 +71,26 @@ ai.step = function()
     if hero:buffLevel('Roots') > 0 or math.random() < 0.1 then
         hero:search(true)
         return
+    end
+
+    if not hero:getBelongings():isBackpackFull() then
+        local heapPos = level:getNearestVisibleHeapPosition(heroPos)
+
+        if level:cellValid(heapPos) and heapPos ~= heroPos then
+            hero:handle(heapPos)
+            return
+        end
+    end
+
+    local objectPos = level:getNearestVisibleLevelObject(heroPos)
+
+    if level:cellValid(objectPos) then
+        local objectKind = level:getLevelObject(objectPos):getEntityKind()
+
+        if objectKind == 'Barrel' and not hero:getBelongings():isBackpackEmpty() and objectPos ~= heroPos then
+            hero:getBelongings():randomUnequipped():cast(hero, objectPos)
+            return
+        end
     end
 
     local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
@@ -95,7 +122,7 @@ ai.step = function()
 
 
     local cell = level:randomTestDestination()
-    if not level:cellValid(cell) then
+    if not level:cellValid(cell) and cell ~= heroPos then
         cell = level:randomDestination()
     end
 

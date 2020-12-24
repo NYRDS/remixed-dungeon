@@ -502,6 +502,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return false;
 	}
 
+	@LuaInterface
 	public void cast(final @NotNull Char user, int dst) {
 
 	    if(quantity()<=0) {

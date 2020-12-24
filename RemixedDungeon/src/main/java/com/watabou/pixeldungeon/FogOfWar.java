@@ -19,12 +19,15 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.Bitmap;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;
 import com.watabou.noosa.Image;
 
 import java.util.Arrays;
+
+import lombok.var;
 
 public class FogOfWar extends Image {
 
@@ -84,8 +87,10 @@ public class FogOfWar extends Image {
 				pos++;
 				int c = INVISIBLE;
 
-				if(Dungeon.level.candidates.contains(pos) || Dungeon.level.candidates.contains(pos-1)
-					|| Dungeon.level.candidates.contains(pos - (pWidth-1)) || Dungeon.level.candidates.contains(pos - (pWidth - 1) - 1)
+				var candidates = Dungeon.level.candidates;
+
+				if(BuildConfig.DEBUG && (candidates.contains(pos) || candidates.contains(pos-1)
+					|| candidates.contains(pos - (pWidth-1)) || candidates.contains(pos - (pWidth - 1) - 1))
 				) {
 					c = 0xaa444499;
 				} else if (visible[pos] && visible[pos - (pWidth - 1)] &&

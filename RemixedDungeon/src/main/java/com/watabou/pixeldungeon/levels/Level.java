@@ -1869,4 +1869,14 @@ public abstract class Level implements Bundlable {
 
 		return false;
 	}
+
+	@LuaInterface
+	public int getNearestVisibleHeapPosition(int cell) {
+		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getHeap(cell1)!=null));
+	}
+
+	@LuaInterface
+	public int getNearestVisibleLevelObject(int cell) {
+		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getLevelObject(cell1)!=null));
+	}
 }

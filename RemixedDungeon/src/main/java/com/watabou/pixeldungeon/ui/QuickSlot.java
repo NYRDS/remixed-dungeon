@@ -42,6 +42,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -54,9 +55,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private static final String QUICKSLOT       = "quickslot";
 
-    private static ArrayList<QuickSlot>     slots   = new ArrayList<>();
+    private static final ArrayList<QuickSlot>     slots   = new ArrayList<>();
     @SuppressLint("UseSparseArrays")
-    private static Map<Integer, Item> qsStorage = new HashMap<>();
+    private static final Map<Integer, Item> qsStorage = new HashMap<>();
 
     private Item quickslotItem;
 
@@ -67,9 +68,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private boolean targeting  = false;
     private Item    lastItem   = null;
-    private Char    lastTarget = null;
 
-    private int index;
+    @NotNull
+    private Char    lastTarget = CharsList.DUMMY;
+
+    private final int index;
 
     public QuickSlot() {
         super();
