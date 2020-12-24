@@ -1,7 +1,6 @@
 {
    "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/InnKeeperNPC.json",
-   "scriptFile"    :"scripts/npc/Innkeeper",
+   "spriteDesc"    :"spritesDesc/ServantNPC.json",
    "friendly"      :true,
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL"
