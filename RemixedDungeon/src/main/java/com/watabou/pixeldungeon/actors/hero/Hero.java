@@ -507,6 +507,7 @@ public class Hero extends Char {
 		AttackIndicator.updateState(this);
 	}
 
+	@NotNull
 	public Char getNearestEnemy() {
 
 		Char nearest = CharsList.DUMMY;

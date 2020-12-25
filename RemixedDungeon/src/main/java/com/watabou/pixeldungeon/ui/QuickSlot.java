@@ -268,10 +268,17 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     public static void target(Item item, Char target) {
+
+        Char newTarget = target;
+
+        if(newTarget==null) {
+            newTarget = CharsList.DUMMY;
+        }
+
         for (QuickSlot slot : slots) {
-            if (item == slot.lastItem && target != Dungeon.hero) {
-                slot.lastTarget = target;
-                HealthIndicator.instance.target(target);
+            if (item == slot.lastItem && newTarget != Dungeon.hero) {
+                slot.lastTarget = newTarget;
+                HealthIndicator.instance.target(newTarget);
             }
         }
     }
