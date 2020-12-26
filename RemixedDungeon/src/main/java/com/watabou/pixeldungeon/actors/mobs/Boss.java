@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 abstract public class Boss extends Mob {
 
-	private static final String BATTLE_MUSIC = "battleMusic";
+	private static final String BATTLE_MUSIC = "battleMusic";private static final String BATTLE_MUSIC_FALLBACK = "battleMusicFallback";
 
 	@Nullable
 	private String battleMusic;
@@ -52,7 +52,7 @@ abstract public class Boss extends Mob {
 	@Override
 	protected void setupCharData() {
 		super.setupCharData();
-		battleMusic = getClassDef().optString(BATTLE_MUSIC, null);
+		battleMusic = getClassDef().optString(BATTLE_MUSIC, getClassDef().optString(BATTLE_MUSIC_FALLBACK, null));
 	}
 
 	@Override
