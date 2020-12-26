@@ -16,7 +16,7 @@ public class Steal extends CharAction {
     public boolean act(Char hero) {
         CharUtils.steal(hero, target);
         hero.spend(Actor.TICK);
-
+        hero.readyAndIdle();
         return false;
     }
 }
