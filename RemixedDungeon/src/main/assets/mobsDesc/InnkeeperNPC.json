@@ -1,5 +1,7 @@
 {
-   "baseSpeed"     :0,
+   "baseSpeed"		 :0,
+   "attackDelay"	 :1,
+   "ht"            :5,
    "spriteDesc"    :"spritesDesc/InnKeeperNPC.json",
    "scriptFile"    :"scripts/npc/Innkeeper",
    "friendly"      :true,

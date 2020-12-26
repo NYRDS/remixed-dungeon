@@ -1,5 +1,5 @@
 {
-   "baseSpeed"     :0,
+   "baseSpeed"		 :0,
    "spriteDesc"    :"spritesDesc/DrunkardNPC.json",
    "friendly"      :true,
    "aiState"       :"Passive",
