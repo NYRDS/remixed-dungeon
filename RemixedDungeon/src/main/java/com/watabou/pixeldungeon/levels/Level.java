@@ -245,7 +245,17 @@ public abstract class Level implements Bundlable {
 
 	@NotNull
 	public String music() {
-		return DungeonGenerator.getLevelProperty(levelId, "music", DungeonGenerator.getLevelProperty(levelId, "fallbackMusic", Assets.TUNE));
+		String music = DungeonGenerator.getLevelProperty(levelId, "music", ModdingMode.NO_FILE);
+		if(ModdingMode.isSoundExists(music)) {
+			return music;
+		}
+
+		music = DungeonGenerator.getLevelProperty(levelId, "fallbackMusic", ModdingMode.NO_FILE);
+		if(ModdingMode.isSoundExists(music)) {
+			return music;
+		}
+
+		return Assets.TUNE;
 	}
 
 	public Feeling getFeeling() {
