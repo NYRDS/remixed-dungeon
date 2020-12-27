@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="2020.12.26" orientation="orthogonal" renderorder="left-up" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="22">
- <tileset firstgid="1" name="tiles_town_outside_winter" tilewidth="16" tileheight="16" tilecount="256" columns="16">
-  <image source="Png/tiles_town_outside_winter.png" width="256" height="256"/>
- </tileset>
+ <tileset firstgid="1" source="tilesets/tiles_town_outside_winter.tsx"/>
  <tileset firstgid="257" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="513" source="tilesets/logic.tsx"/>
  <layer id="1" name="logic" width="32" height="32" locked="1">
