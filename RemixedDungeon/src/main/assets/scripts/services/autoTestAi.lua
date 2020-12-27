@@ -5,6 +5,10 @@
 ---
 
 local RPD = require "scripts.lib.commonClasses"
+local lru = require "scripts.lib.lru"
+
+
+local explorationCache = lru.new(10);
 
 local ai = {}
 
@@ -37,6 +41,16 @@ local function handleWindow(hero)
     end
 end
 
+local function handleItem(hero, item)
+    local actions = item:actions_l(hero)
+
+    if #actions > 0 then
+        local action = actions[math.random(#actions)]
+        item:execute(hero, action)
+    end
+end
+
+
 ai.step = function()
     local hero = RPD.Dungeon.hero
 
@@ -68,7 +82,7 @@ ai.step = function()
         return
     end
 
-    if hero:buffLevel('Roots') > 0 or math.random() < 0.1 then
+    if hero:buffLevel('Roots') > 0 or math.random() < 0.025 then
         hero:search(true)
         return
     end
@@ -76,7 +90,8 @@ ai.step = function()
     if not hero:getBelongings():isBackpackFull() then
         local heapPos = level:getNearestVisibleHeapPosition(heroPos)
 
-        if level:cellValid(heapPos) and heapPos ~= heroPos then
+        if level:cellValid(heapPos) and heapPos ~= heroPos and not explorationCache:get(heapPos) then
+            explorationCache:set(heapPos, true)
             hero:handle(heapPos)
             return
         end
@@ -87,10 +102,21 @@ ai.step = function()
     if level:cellValid(objectPos) then
         local objectKind = level:getLevelObject(objectPos):getEntityKind()
 
+        if not explorationCache:get(objectPos) then
+            explorationCache:set(objectPos, true)
+            hero:handle(objectPos)
+            return
+        end
+
         if objectKind == 'Barrel' and not hero:getBelongings():isBackpackEmpty() and objectPos ~= heroPos then
             hero:getBelongings():randomUnequipped():cast(hero, objectPos)
             return
         end
+    end
+
+    if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.01 then
+        handleItem(hero, hero:getBelongings():randomUnequipped())
+        return
     end
 
     local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
@@ -120,11 +146,12 @@ ai.step = function()
         return
     end
 
-
     local cell = level:randomTestDestination()
-    if not level:cellValid(cell) and cell ~= heroPos then
+    if not level:cellValid(cell) or cell == heroPos or cell == level:getEntrance() or explorationCache:get(cell) then
         cell = level:randomDestination()
     end
+
+    explorationCache:set(cell, true)
 
     hero:handle(cell)
 end

@@ -112,6 +112,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.var;
 
@@ -406,6 +407,7 @@ public abstract class Level implements Bundlable {
 	protected Feeling feeling = Feeling.UNDEFINED;
 
 	@Packable(defaultValue = "-1")
+	@Getter
 	public int entrance = INVALID_CELL;
 
 	@Packable(defaultValue = "-1")

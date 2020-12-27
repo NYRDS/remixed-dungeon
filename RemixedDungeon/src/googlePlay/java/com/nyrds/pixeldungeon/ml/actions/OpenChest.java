@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
 import com.watabou.pixeldungeon.items.keys.Key;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class OpenChest extends CharAction {
@@ -19,9 +20,12 @@ public class OpenChest extends CharAction {
 
     @Override
     public boolean act(Char hero) {
-        if (Dungeon.level.adjacent(hero.getPos(), dst) || hero.getPos() == dst) {
+        Level level = hero.level();
+        int heroPos = hero.getPos();
 
-            Heap heap = Dungeon.level.getHeap(dst);
+        if (level.adjacent(heroPos, dst) || heroPos == dst) {
+
+            Heap heap = level.getHeap(dst);
             if (heap != null && (heap.type == Heap.Type.CHEST || heap.type == Heap.Type.TOMB || heap.type == Heap.Type.SKELETON
                     || heap.type == Heap.Type.LOCKED_CHEST || heap.type == Heap.Type.CRYSTAL_CHEST || heap.type == Heap.Type.MIMIC)) {
 
@@ -29,7 +33,7 @@ public class OpenChest extends CharAction {
 
                 if (heap.type == Heap.Type.LOCKED_CHEST || heap.type == Heap.Type.CRYSTAL_CHEST) {
 
-                    theKey[0] = hero.getBelongings().getKey(GoldenKey.class, Dungeon.depth, Dungeon.level.levelId);
+                    theKey[0] = hero.getBelongings().getKey(GoldenKey.class, Dungeon.depth, level.levelId);
 
                     if (theKey[0] == null) {
                         GLog.w(Game.getVar(R.string.Hero_LockedChest));
@@ -55,7 +59,7 @@ public class OpenChest extends CharAction {
                         theKey[0].removeItemFrom(hero);
                     }
 
-                    Heap OpenedHeap = Dungeon.level.getHeap(dst);
+                    Heap OpenedHeap = level.getHeap(dst);
                     if (OpenedHeap != null) {
                         if (OpenedHeap.type == Heap.Type.SKELETON) {
                             Sample.INSTANCE.play(Assets.SND_BONES);

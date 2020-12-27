@@ -58,6 +58,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
+import lombok.Getter;
+
 public class Heap implements Bundlable, NamedEntityKind {
 
 	private static final int SEEDS_TO_POTION = 3;
@@ -83,6 +85,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 
 	@NotNull
+	@Getter
 	public Type type = Type.HEAP;
 
 	public static Map<Type, Float> regularHeaps = new HashMap<>();
