@@ -747,7 +747,7 @@ public class Dungeon {
 
         if (level.adjacent(from, to)) {
             if (!(pass[to] || level.avoid[to])) {
-                return -1;
+                return Level.INVALID_CELL;
             }
 
             Char chr = Actor.findChar(to);
@@ -758,7 +758,7 @@ public class Dungeon {
                     return to;
                 }
             }
-            return chr == null ? to : -1;
+            return chr == null ? to : Level.INVALID_CELL;
         }
 
         if (ch.isFlying() || ch.hasBuff(Amok.class)) {

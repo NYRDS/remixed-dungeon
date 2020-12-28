@@ -50,7 +50,6 @@ local function handleItem(hero, item)
     end
 end
 
-
 ai.step = function()
     local hero = RPD.Dungeon.hero
 
@@ -67,7 +66,7 @@ ai.step = function()
     local level = hero:level()
 
     if hero:buffLevel('Blindness') > 0 then
-        local cell = level:getEmptyCellNextTo(hero:getPos())
+        local cell = level:getEmptyCellNextTo(heroPos)
         if level:cellValid(cell) then
             hero:handle(cell)
         else
@@ -77,7 +76,7 @@ ai.step = function()
     end
 
     local enemyPos = hero:getNearestEnemy():getPos()
-    if level:cellValid(enemyPos) then
+    if level:cellValid(enemyPos) and level:adjacent(enemyPos, heroPos) then
         hero:handle(enemyPos)
         return
     end

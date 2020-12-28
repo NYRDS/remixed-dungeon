@@ -180,6 +180,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void execute(@NotNull Char chr, @NotNull String action) {
+		GLog.debug("%s: %s by %s", getEntityKind(), action, chr.getEntityKind());
 		chr.getBelongings().setSelectedItem(this);
 		_execute(chr, action);
 		chr.getBelongings().setSelectedItem(ItemsList.DUMMY);
