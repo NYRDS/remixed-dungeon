@@ -75,10 +75,12 @@ ai.step = function()
         return
     end
 
-    local enemyPos = hero:getNearestEnemy():getPos()
-    if level:cellValid(enemyPos) and level:adjacent(enemyPos, heroPos) then
-        hero:handle(enemyPos)
-        return
+    if hero:buffLevel('Charm') == 0 then
+        local enemyPos = hero:getNearestEnemy():getPos()
+        if level:cellValid(enemyPos) and level:adjacent(enemyPos, heroPos) then
+            hero:handle(enemyPos)
+            return
+        end
     end
 
     if hero:buffLevel('Roots') > 0 or math.random() < 0.025 then
