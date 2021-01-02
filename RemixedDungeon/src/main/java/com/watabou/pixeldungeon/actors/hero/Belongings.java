@@ -230,13 +230,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
 	}
 
 	@LuaInterface
-	public Item getItem( String itemClass ) {
+	@Nullable
+	@Deprecated
+	public Item getItem( String itemClass ) { //Still here for old mods
 		for (Item item : this) {
 			if (itemClass.equals( item.getEntityKind() )) {
 				return item;
 			}
 		}
-		return ItemsList.DUMMY;
+		return null;
 	}
 
 	@Deprecated

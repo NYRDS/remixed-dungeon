@@ -1575,4 +1575,21 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	protected void fx(int cell, Callback callback) { }
 
+
+	@LuaInterface
+	@NotNull
+	public Item getItem(String itemClass) {
+		for (Item item : getBelongings()) {
+			if (itemClass.equals( item.getEntityKind() )) {
+				return item;
+			}
+		}
+		return ItemsList.DUMMY;
+	}
+
+	@LuaInterface
+	@Deprecated
+	public String description() { // Still used in Remixed Additions
+    	return description;
+	}
 }

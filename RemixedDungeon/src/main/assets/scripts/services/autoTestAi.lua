@@ -128,7 +128,7 @@ ai.step = function()
     end
 
     exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_EXIT)
-    if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) and hero:getBelongings():getItem("SkeletonKey"):valid() then
+    if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) and hero:getItem("SkeletonKey"):valid() then
         hero:handle(exitCell)
         return
     end
@@ -142,7 +142,7 @@ ai.step = function()
 
     doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_DOOR)
 
-    if level:cellValid(doorCell) and hero:getBelongings():getItem("IronKey"):valid() then
+    if level:cellValid(doorCell) and hero:getItem("IronKey"):valid() then
         hero:handle(doorCell)
         return
     end

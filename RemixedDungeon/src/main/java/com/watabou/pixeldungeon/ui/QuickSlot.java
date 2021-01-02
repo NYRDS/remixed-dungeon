@@ -241,7 +241,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             if(quickslotItem.quantity()>0) {
                 item = belongings.checkItem(quickslotItem);
             } else {
-                item = belongings.getItem(quickslotItem.getClassName());
+                item = Dungeon.hero.getItem(quickslotItem.getClassName());
             }
             if(item.valid()) {
                 quickslotItem = item.quickSlotContent();

@@ -193,6 +193,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		}
 
 		friendly = classDesc.optBoolean("friendly",friendly);
+		movable = classDesc.optBoolean("movable",movable);
 
 		JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
 		JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);

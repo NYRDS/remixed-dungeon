@@ -170,7 +170,7 @@ public class Shopkeeper extends NPC {
 			return;
 		}
 
-		var supply = getBelongings().getItem(newItem.getEntityKind());
+		var supply = getItem(newItem.getEntityKind());
 
 		if(!newItem.stackable && supply.valid()) {
 			return;
@@ -185,7 +185,7 @@ public class Shopkeeper extends NPC {
 
 	public void addItem(Item item) {
 		if(item instanceof Bag && Dungeon.hero != null) {
-			if(Dungeon.hero.getBelongings().getItem(item.getClassName()).valid()) {
+			if(Dungeon.hero.getItem(item.getClassName()).valid()) {
 				return;
 			}
 		}

@@ -681,7 +681,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public boolean usableByHero() {
-		return quantity() >= 1 && (Dungeon.hero.getBelongings().getItem(getClassName()).valid() || isEquipped(Dungeon.hero));
+		return quantity() >= 1 && (Dungeon.hero.getItem(getClassName()).valid() || isEquipped(Dungeon.hero));
 	}
 
 	public boolean announcePickUp() {

@@ -3,6 +3,7 @@
    "spriteDesc"    :"spritesDesc/InquirerNPC.json",
    "scriptFile"    :"scripts/npc/Inquirer",
    "friendly"      :true,
+   "movable"       :false,
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL"
 }
