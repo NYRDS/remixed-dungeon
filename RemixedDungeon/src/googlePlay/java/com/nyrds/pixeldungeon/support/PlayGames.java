@@ -202,7 +202,7 @@ public class PlayGames {
 
 		// Open the saved game using its name.
 		snapshotsClient.open(snapshotId, true, SnapshotsClient.RESOLUTION_POLICY_MOST_RECENTLY_MODIFIED)
-				.addOnFailureListener(e1 -> EventCollector.logException(e1))
+				.addOnFailureListener(EventCollector::logException)
 				.continueWith(task -> {
 					Snapshot snapshot = task.getResult().getData();
 
@@ -349,7 +349,7 @@ return filename.startsWith("game_") && filename.endsWith(".dat");
 
 		Game.instance().serviceExecutor.execute(() -> {
 			unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING),
-					res -> resultCallback.status(res));
+					resultCallback);
 		});
 	}
 

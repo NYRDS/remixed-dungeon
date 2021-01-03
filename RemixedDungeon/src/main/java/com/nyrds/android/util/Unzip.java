@@ -21,14 +21,6 @@ public class Unzip {
 
 	private static final int    BUFFER_SIZE = 16384;
 
-	private static void ensureDir(String dir) {
-		File f = new File(dir);
-
-		if (!f.mkdirs() || !f.isDirectory()) {
-			throw new ModError("Can't create directory:"+dir);
-		}
-	}
-
 	static public Mods.ModDesc inspectMod(InputStream fin) {
 		Mods.ModDesc ret = new Mods.ModDesc();
 		ret.name = Utils.EMPTY_STRING;
@@ -66,7 +58,7 @@ public class Unzip {
 	}
 
 	static public boolean unzipStream(InputStream fin, String tgtDir, @Nullable UnzipProgress listener) {
-		ensureDir(tgtDir);
+		FileSystem.ensureDir(tgtDir);
 		try {
 			ZipInputStream zin = new ZipInputStream(fin);
 			ZipEntry ze;
@@ -86,7 +78,7 @@ public class Unzip {
 				String exPath = sanitizeExtractPath(tgtDir, ze);
 
 				if (ze.isDirectory()) {
-					ensureDir(exPath);
+					FileSystem.ensureDir(exPath);
 				} else {
 					FileOutputStream fout = new FileOutputStream(exPath);
 

@@ -116,4 +116,5 @@ public class Util {
         EventCollector.collectSessionData("FreeInternalMemorySize", Long.toString(ret));
         return ret;
     }
+
 }
