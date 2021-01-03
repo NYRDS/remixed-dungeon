@@ -5,6 +5,7 @@
    "spriteDesc"    :"spritesDesc/InnKeeperNPC.json",
    "scriptFile"    :"scripts/npc/Innkeeper",
    "friendly"      :true,
+   "movable"       :false,
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL"
 }

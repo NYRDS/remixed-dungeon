@@ -2,6 +2,7 @@
    "baseSpeed"		 :0,
    "spriteDesc"    :"spritesDesc/ServantNPC.json",
    "friendly"      :true,
+   "movable"       :false,
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL"
 }
