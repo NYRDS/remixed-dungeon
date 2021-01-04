@@ -48,6 +48,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.TestOnly;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -96,6 +97,12 @@ public class Belongings implements Iterable<Item>, Bundlable {
 				return ring2;
 		}
 		return ItemsList.DUMMY;
+	}
+
+	@LuaInterface
+	@TestOnly
+	public Item randomEquipped() {
+		return getItemFromSlot(Random.oneOf(Slot.values()));
 	}
 
 	public void setItemForSlot(EquipableItem item, Slot slot) {

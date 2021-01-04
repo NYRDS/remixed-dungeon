@@ -115,8 +115,13 @@ ai.step = function()
         end
     end
 
-    if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.01 then
+    if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.05 then
         handleItem(hero, hero:getBelongings():randomUnequipped())
+        return
+    end
+
+    if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.05 then
+        handleItem(hero, hero:getBelongings():randomEquipped())
         return
     end
 
