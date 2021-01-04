@@ -41,12 +41,14 @@ local function handleWindow(hero)
     end
 end
 
-local function handleItem(hero, item)
+local function handleItem(hero, item, ignoreAction)
     local actions = item:actions_l(hero)
 
     if #actions > 0 then
         local action = actions[math.random(#actions)]
-        item:execute(hero, action)
+        if action ~=ignoreAction then
+            item:execute(hero, action)
+        end
     end
 end
 
@@ -116,12 +118,12 @@ ai.step = function()
     end
 
     if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.05 then
-        handleItem(hero, hero:getBelongings():randomUnequipped())
+        handleItem(hero, hero:getBelongings():randomUnequipped(), RPD.Actions.drop)
         return
     end
 
-    if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.05 then
-        handleItem(hero, hero:getBelongings():randomEquipped())
+    if math.random() < 0.01 then
+        handleItem(hero, hero:getBelongings():randomEquipped(), RPD.Actions.throw)
         return
     end
 

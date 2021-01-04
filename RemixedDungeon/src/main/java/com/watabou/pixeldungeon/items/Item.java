@@ -153,7 +153,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		actions.add(AC_DROP);
+		if(!isEquipped(hero)) {
+			actions.add(AC_DROP);
+		}
 		actions.add(AC_THROW);
 		return actions;
 	}

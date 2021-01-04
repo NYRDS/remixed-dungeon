@@ -71,7 +71,9 @@ local actions = {
     zap = "Wand_ACZap",
     read = "Scroll_ACRead",
     drink = "Drink_ACDrink",
-    equip ="EquipableItem_ACEquip"
+    equip ="EquipableItem_ACEquip",
+    throw ="Item_ACThrow",
+    drop ="Item_ACDrop"
 }
 
 local Bundle           = "com.watabou.utils.Bundle"
