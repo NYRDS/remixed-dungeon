@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="tiles_town_outside_winter" tilewidth="16" tileheight="16" tilecount="256" columns="16">
- <image source="../Png/tiles_town_outside_winter.png" trans="000000" width="256" height="256"/>
+ <image source="../Png/tiles_town_outside_winter.png" width="256" height="256"/>
  <tile id="0">
   <properties>
    <property name="deco_desc" value="town_deco_roof_desc"/>
@@ -1244,17 +1244,20 @@
  </tile>
  <tile id="211">
   <properties>
-   <property name="deco_name" value=""/>
+   <property name="deco_desc" value="town_deco_stone_wall_broken_desc"/>
+   <property name="deco_name" value="town_deco_stone_wall_broken_name"/>
   </properties>
  </tile>
  <tile id="212">
   <properties>
-   <property name="deco_name" value=""/>
+   <property name="deco_desc" value="town_deco_stone_wall_broken_desc"/>
+   <property name="deco_name" value="town_deco_stone_wall_broken_name"/>
   </properties>
  </tile>
  <tile id="213">
   <properties>
-   <property name="deco_name" value=""/>
+   <property name="deco_desc" value="town_deco_stone_wall_broken_desc"/>
+   <property name="deco_name" value="town_deco_stone_wall_broken_name"/>
   </properties>
  </tile>
  <tile id="214">
@@ -1361,8 +1364,8 @@
  </tile>
  <tile id="231">
   <properties>
-   <property name="deco_desc" value="town_deco_tree_desc"/>
-   <property name="deco_name" value="town_deco_tree_name"/>
+   <property name="deco_desc" value="town_deco_crossroad_desc"/>
+   <property name="deco_name" value="town_deco_crossroad_name"/>
   </properties>
  </tile>
  <tile id="232">

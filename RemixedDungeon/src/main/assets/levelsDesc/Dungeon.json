@@ -2,13 +2,13 @@
    "Levels":{
       "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
 
-      "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script": "scripts/actors/town/Compass"},
+    "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script": "scripts/actors/town/Compass"},
 	  "cinema_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1"},
 	  "church_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
 	  "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
 	  "library_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json","noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1"},
-      "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json",
-         "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","treasury":"TownShopTreasury.json"},
+    "inn_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Inn.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
+    "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","treasury":"TownShopTreasury.json"},
 
       "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
       "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
@@ -70,9 +70,10 @@
    },
 
    "Graph":{
-      "0":[["town_2"],[]],
+    "0":[["town_2"],[]],
 
-      "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],
+    "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","inn_2","fortune_2"],[]],
+    "inn_2":[[],["town_2"]],
 	  "church_2":[[],["town_2"]],
 	  "shop_town_2":[[],["town_2"]],
 	  "cinema_2":[[],["town_2"]],
