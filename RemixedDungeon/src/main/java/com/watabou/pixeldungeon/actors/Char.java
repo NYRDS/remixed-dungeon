@@ -1452,7 +1452,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public boolean canAttack(@NotNull Char enemy) {
-		if(enemy.invalid()) {
+		if(enemy.invalid() || enemy.friendly(this)) {
 			return false;
 		}
 
