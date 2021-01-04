@@ -1282,6 +1282,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public boolean swapPosition(final Char chr) {
+		if(!movable) {
+			return false;
+		}
+
 		if(!walkingType.canSpawnAt(level(),chr.getPos())) {
 			return false;
 		}

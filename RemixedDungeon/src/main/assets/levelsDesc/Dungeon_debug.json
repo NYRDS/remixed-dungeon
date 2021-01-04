@@ -7,6 +7,7 @@
         "church_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
         "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
         "library_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json","noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1"},
+        "inn_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Inn.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
         "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json",
             "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","treasury":"TownShopTreasury.json"},
 
@@ -72,9 +73,10 @@
     },
 
     "Graph":{
-        "0":[["ice5"],[]],
+        "0":[["town_2"],[]],
         "testLevel":[[],[]],
-        "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2"],[]],
+        "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","inn_2","fortune_2"],[]],
+        "inn_2":[[],["town_2"]],
         "church_2":[[],["town_2"]],
         "shop_town_2":[[],["town_2"]],
         "cinema_2":[[],["town_2"]],
