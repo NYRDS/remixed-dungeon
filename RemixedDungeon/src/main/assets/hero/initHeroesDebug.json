@@ -17,6 +17,9 @@
     "items": [
       {
         "kind": "Ration"
+      },
+      {
+        "kind": "SpellBook"
       }
     ]
   },
@@ -151,6 +154,8 @@
         "quantity": 8
       }
     ],
+    "isSpellUser": true,
+    "magicAffinity": "Witchcraft",
     "quickslot": [
       {
         "kind": "Dart"
