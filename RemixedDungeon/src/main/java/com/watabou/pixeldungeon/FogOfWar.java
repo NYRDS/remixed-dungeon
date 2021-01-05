@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.Bitmap;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;
@@ -26,11 +27,13 @@ import com.watabou.noosa.Image;
 
 import java.util.Arrays;
 
+import lombok.var;
+
 public class FogOfWar extends Image {
 
 	private static final int VISIBLE	= 0x00000000;
-	private static final int VISITED	= 0xcc111111;
-	private static final int MAPPED		= 0xcc442211;
+	private static final int VISITED	= 0xcc442211;
+	private static final int MAPPED		= 0xcc111111;
 	private static final int INVISIBLE	= 0xFF000000;
 	
 	private int[] pixels;
@@ -83,16 +86,20 @@ public class FogOfWar extends Image {
 			for (int j=1; j < pWidth - 1; j++) {
 				pos++;
 				int c = INVISIBLE;
-				if (visible[pos] && visible[pos - (pWidth - 1)] && 
+
+				var candidates = Dungeon.level.candidates;
+
+				if(BuildConfig.DEBUG && (candidates.contains(pos) || candidates.contains(pos-1)
+					|| candidates.contains(pos - (pWidth-1)) || candidates.contains(pos - (pWidth - 1) - 1))
+				) {
+					c = 0xaa444499;
+				} else if (visible[pos] && visible[pos - (pWidth - 1)] &&
 					visible[pos - 1] && visible[pos - (pWidth - 1) - 1]) {
 					c = VISIBLE;
-				} else 
-				if (visited[pos] && visited[pos - (pWidth - 1)] && 
-					visited[pos - 1] && visited[pos - (pWidth - 1) - 1]) {
+				} else if (visited[pos] || visited[pos - (pWidth - 1)] ||
+							visited[pos - 1] || visited[pos - (pWidth - 1) - 1]) {
 					c = VISITED;
-				}
-				else 
-				if (mapped[pos] && mapped[pos - (pWidth - 1)] && 
+				} else if (mapped[pos] && mapped[pos - (pWidth - 1)] &&
 					mapped[pos - 1] && mapped[pos - (pWidth - 1) - 1]) {
 					c = MAPPED;
 				}

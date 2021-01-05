@@ -3,6 +3,7 @@
    "spriteDesc"    :"spritesDesc/BishopNPC.json",
    "scriptFile"    :"scripts/npc/Bishop",
    "friendly"      :true,
+   "movable"       :false,
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL"
 }

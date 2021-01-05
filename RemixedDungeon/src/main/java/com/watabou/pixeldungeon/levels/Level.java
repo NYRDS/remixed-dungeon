@@ -112,6 +112,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.var;
 
@@ -120,6 +121,8 @@ public abstract class Level implements Bundlable {
 	private static final String SCRIPTS = "scripts";
 	public static final int INVALID_CELL = -1;
 
+
+	public ArrayList<Integer> candidates = new ArrayList<>();
 
 	public int getExit(Integer index) {
 		if (hasExit(index)) {
@@ -243,7 +246,17 @@ public abstract class Level implements Bundlable {
 
 	@NotNull
 	public String music() {
-		return DungeonGenerator.getLevelProperty(levelId, "music", Assets.TUNE);
+		String music = DungeonGenerator.getLevelProperty(levelId, "music", ModdingMode.NO_FILE);
+		if(ModdingMode.isSoundExists(music)) {
+			return music;
+		}
+
+		music = DungeonGenerator.getLevelProperty(levelId, "fallbackMusic", ModdingMode.NO_FILE);
+		if(ModdingMode.isSoundExists(music)) {
+			return music;
+		}
+
+		return Assets.TUNE;
 	}
 
 	public Feeling getFeeling() {
@@ -394,6 +407,7 @@ public abstract class Level implements Bundlable {
 	protected Feeling feeling = Feeling.UNDEFINED;
 
 	@Packable(defaultValue = "-1")
+	@Getter
 	public int entrance = INVALID_CELL;
 
 	@Packable(defaultValue = "-1")
@@ -908,9 +922,7 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	@TestOnly
 	public int randomTestDestination() {
-		return getNearestTerrain(Dungeon.hero.getPos(), (level, cell) -> {
-			return !level.visited[cell] && level.mapped[cell] && !level.avoid[cell] && level.passable[cell] && level.getLevelObject(cell) == null;
-		});
+		return getNearestTerrain(Dungeon.hero.getPos(), new RandomDestinationForAutoTest());
 	}
 
 	public int randomDestination() {
@@ -1618,14 +1630,30 @@ public abstract class Level implements Bundlable {
 		return minima;
 	}
 
+	public int getRandomTerrain(int cell, cellCondition condition) {
+		if(!cellValid(cell)) {
+			return INVALID_CELL;
+		}
+
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		for (int i = 0; i < getLength(); i++) {
+			if (i != cell && condition.pass(this, i)) {
+				candidates.add(i);
+			}
+		}
+
+		return oneCellFrom(candidates);
+	}
+
+
 	public int getNearestTerrain(int cell, cellCondition condition) {
 		if(!cellValid(cell)) {
 			return INVALID_CELL;
 		}
 
 		int minima = getLength();
-
-		ArrayList<Integer> candidates = new ArrayList<>();
+		candidates.clear();
 
 		for (int i = 0; i < getLength(); i++) {
 			if (condition.pass(this, i)) {
@@ -1852,5 +1880,15 @@ public abstract class Level implements Bundlable {
 		}
 
 		return false;
+	}
+
+	@LuaInterface
+	public int getNearestVisibleHeapPosition(int cell) {
+		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getHeap(cell1)!=null));
+	}
+
+	@LuaInterface
+	public int getNearestVisibleLevelObject(int cell) {
+		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getLevelObject(cell1)!=null));
 	}
 }

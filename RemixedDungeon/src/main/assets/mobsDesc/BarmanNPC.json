@@ -3,6 +3,7 @@
    "spriteDesc"    :"spritesDesc/BarmanNPC.json",
    "scriptFile"    :"scripts/npc/Barman",
    "friendly"      :true,
+   "movable"       :false,
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL"
 }

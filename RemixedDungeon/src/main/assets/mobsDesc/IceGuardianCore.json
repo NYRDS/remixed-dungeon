@@ -1,3 +1,4 @@
 {
-  "battleMusic":"ost_boss_1_fight"
+  "battleMusic":"ost_boss_ice_fight",
+  "battleMusicFallback":"ost_boss_fight"
 }

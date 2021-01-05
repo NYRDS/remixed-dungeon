@@ -5,34 +5,6 @@
       "identified": true
     },
     "items": [
-      {
-        "kind": "TomeOfKnowledge",
-        "quantity": 100
-      },
-      {
-        "kind": "ShortSword",
-        "level" : 2,
-        "identified": true
-      },
-      {
-        "kind": "ManaPotion",
-        "quantity": 100,
-        "level": 1000
-      },
-      {
-        "kind": "RoyalShield"
-      },
-      {
-        "kind": "Firebloom.Seed",
-        "quantity": 100
-      },
-      {
-        "kind": "ScrollOfMagicMapping"
-      },
-      {
-        "kind": "ScrollOfIdentify",
-        "quantity": 100
-      }
     ],
     "str": 10,
     "hp": 20000000,

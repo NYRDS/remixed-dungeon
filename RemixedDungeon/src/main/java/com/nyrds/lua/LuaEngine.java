@@ -47,10 +47,10 @@ public class LuaEngine implements ResourceFinder {
 		public Varargs invoke(Varargs args) {
 
 			if(stp!=null) {
-				GLog.toFile("\n%s\n",LuaString.valueOf(args.arg1() + ":" + stp.get("stacktrace").call()));
+				GLog.toFile("\n%s\n",LuaString.valueOf(args.arg1() + "\n" + stp.get("stacktrace").call()));
 			}
 
-			return LuaString.valueOf(args.arg1() + ":" + globals.debuglib.traceback(1));
+			return LuaString.valueOf(args.arg1() + "\n" + globals.debuglib.traceback(1));
 		}
 	}
 

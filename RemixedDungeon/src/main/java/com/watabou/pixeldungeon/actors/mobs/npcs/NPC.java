@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
@@ -85,12 +84,13 @@ public abstract class NPC extends Mob {
 	}
 
 	public boolean exchangeItem(@NotNull Char hero , String itemClass, String rewardClass) {
-		Item item = hero.getBelongings().getItem(itemClass );
+		Item item = hero.getItem(itemClass);
+
 		if(!item.valid()) {
 			return false;
 		}
 
-		item.removeItemFrom(Dungeon.hero);
+		item.removeItemFrom(hero);
 
 		Item reward = ItemFactory.itemByName(rewardClass);
 

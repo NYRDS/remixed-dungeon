@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.items.Amulet;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.SurfaceScene;
@@ -22,7 +23,9 @@ public class Ascend extends CharAction {
 
     @Override
     public boolean act(Char hero) {
-        if (hero.getPos() == dst && hero.getPos() == Dungeon.level.entrance) {
+        Level level = hero.level();
+        int heroPos = hero.getPos();
+        if (heroPos == dst && heroPos == level.getEntrance()) {
 
             Position nextLevel = DungeonGenerator.ascend(Dungeon.currentPosition());
 
@@ -38,7 +41,7 @@ public class Ascend extends CharAction {
                 }
             } else {
                 hero.clearActions();
-                if (!Dungeon.level.isSafe()) {
+                if (!level.isSafe()) {
                     hero.hunger().satisfy(-Hunger.STARVING / 10);
                 }
                 InterlevelScene.Do(InterlevelScene.Mode.ASCEND);

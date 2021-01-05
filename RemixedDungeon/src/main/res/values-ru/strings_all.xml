@@ -2262,11 +2262,11 @@
   <string name="town_deco_wall_beam_desc">Надежная опора для этого сооружения.</string>
   <string name="town_deco_wall_candles_name">Свечи</string>
   <string name="town_deco_wall_candles_desc">Свечи погасли, но аромат благовоний все ещё витает в воздухе.</string>
-  <string name="town_deco_wooden_drawer_name">Художник</string>
+  <string name="town_deco_wooden_drawer_name">Ящик</string>
   <string name="town_deco_wooden_drawer_desc">Интересно что же там внутри?</string>
   <string name="town_deco_scrolls_name">Свитки</string>
   <string name="town_deco_scrolls_desc">Пыльный шкаф с кучей свитков и книг.</string>
-  <string name="town_deco_medicine_name">Медицина</string>
+  <string name="town_deco_medicine_name">Лекарства</string>
   <string name="town_deco_medicine_desc">Пузырьки, и прочие ингредиенты аккуратно расставлены по этим полкам.</string>
   <string name="town_deco_wooden_stairs_name">Ступеньки</string>
   <string name="town_deco_wooden_stairs_desc">Они добавят тебе немного роста.</string>

@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -41,6 +42,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -53,9 +55,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private static final String QUICKSLOT       = "quickslot";
 
-    private static ArrayList<QuickSlot>     slots   = new ArrayList<>();
+    private static final ArrayList<QuickSlot>     slots   = new ArrayList<>();
     @SuppressLint("UseSparseArrays")
-    private static Map<Integer, Item> qsStorage = new HashMap<>();
+    private static final Map<Integer, Item> qsStorage = new HashMap<>();
 
     private Item quickslotItem;
 
@@ -66,9 +68,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private boolean targeting  = false;
     private Item    lastItem   = null;
-    private Char    lastTarget = null;
 
-    private int index;
+    @NotNull
+    private Char    lastTarget = CharsList.DUMMY;
+
+    private final int index;
 
     public QuickSlot() {
         super();
@@ -87,7 +91,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         super.destroy();
         slots.clear();
         lastItem = null;
-        lastTarget = null;
+        lastTarget = CharsList.DUMMY;
     }
 
     @Override
@@ -103,7 +107,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                     return;
                 }
 
-                if (targeting && lastTarget != null) {
+                if (targeting && lastTarget.valid()) {
                     GameScene.handleCell(lastTarget.getPos());
                 } else {
                     if (quickslotItem == lastItem) {
@@ -221,13 +225,13 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                 crossM.point(DungeonTilemap.tileToWorld(lastTarget.getPos()));
                 crossB.setVisible(true);
             } else {
-                lastTarget = null;
+                lastTarget = CharsList.DUMMY;
             }
         }
     }
 
     private void updateTargetingState() {
-        targeting = lastTarget != null && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
+        targeting = lastTarget.valid() && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
     }
 
     private void refreshSelf() {
@@ -237,7 +241,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             if(quickslotItem.quantity()>0) {
                 item = belongings.checkItem(quickslotItem);
             } else {
-                item = belongings.getItem(quickslotItem.getClassName());
+                item = Dungeon.hero.getItem(quickslotItem.getClassName());
             }
             if(item.valid()) {
                 quickslotItem = item.quickSlotContent();
@@ -264,10 +268,17 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     public static void target(Item item, Char target) {
+
+        Char newTarget = target;
+
+        if(newTarget==null) {
+            newTarget = CharsList.DUMMY;
+        }
+
         for (QuickSlot slot : slots) {
-            if (item == slot.lastItem && target != Dungeon.hero) {
-                slot.lastTarget = target;
-                HealthIndicator.instance.target(target);
+            if (item == slot.lastItem && newTarget != Dungeon.hero) {
+                slot.lastTarget = newTarget;
+                HealthIndicator.instance.target(newTarget);
             }
         }
     }

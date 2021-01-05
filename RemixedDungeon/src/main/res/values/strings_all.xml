@@ -2512,16 +2512,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_stone_wall_broken_desc">Old stone wall, in bad condition</string>
   <string name="Challenges_Names_6">Forbidden Runes</string>
   <string name="Challenges_Names_7">Pacifism</string>
-  <string name="Welcome_Text_29_2">
-    remix.29.2\n
-    - Gameplay:\n
-    -- New challenges:\n
-    --- Forbidden Runes\n
-    --- Pacifism\n
-    - Modding:\n
-    -- Custom Artifacts\n
-    - Bugs fixed\n
-    </string>
   <string name="town_deco_crossroad_name">Crossroads sign</string>
   <string name="town_deco_crossroad_desc">Crude wooden pillar with arrow shaped plates text on which was faded long ago probably due to harsh weather conditions.</string>
   <string name="ShieldBuffReady_Name">Ready</string>
@@ -2627,4 +2617,41 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- More uncategorized stuff!\n
     - Bugs fixed\n
     </string>
+
+
+
+  masculine
+  <string name="InnKeeperNPC_Name">inn keeper</string>
+  <string name="InnKeeperNPC_Name_Objective">inn keeper</string>
+  <string name="InnKeeperNPC_Gender">masculine</string>
+  <string name="InnKeeperNPC_Desc"></string>
+
+
+  <string name="DrunkardNPC_Name">drunkard</string>
+  <string name="DrunkardNPC_Name_Objective">drunkard</string>
+  <string name="DrunkardNPC_Gender">masculine</string>
+  <string name="DrunkardNPC_Desc"></string>
+
+
+  <string name="MercenaryNPC_Name">mercenary</string>
+  <string name="MercenaryNPC_Name_Objective">mercenary</string>
+  <string name="MercenaryNPC_Gender">>masculine</string>
+  <string name="MercenaryNPC_Desc"></string>
+
+
+  <string name="ServantNPC_Name">inn servant</string>
+  <string name="ServantNPC_Name_Objective">inn servant</string>
+  <string name="ServantNPC_Gender">feminine</string>
+  <string name="ServantNPC_Desc"></string>
+
+  <string name="Welcome_Text_30">
+    remix.29.6\n
+    - Gameplay:\n
+    -- Gnoll subclasses!\n
+    -- Abilities for everyone!\n
+    -- Inn are opened now!\n
+    - Bugs fixed\n
+    </string>
+
+
 </resources>

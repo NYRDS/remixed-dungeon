@@ -507,9 +507,10 @@ public class Hero extends Char {
 		AttackIndicator.updateState(this);
 	}
 
+	@NotNull
 	public Char getNearestEnemy() {
 
-		Char nearest = null;
+		Char nearest = CharsList.DUMMY;
 		int dist = Integer.MAX_VALUE;
 		for (Char mob : visibleEnemies) {
 			int mobDist = level().distance(getPos(), mob.getPos());
@@ -530,6 +531,7 @@ public class Hero extends Char {
 		int step = -1;
 
 		Level level = level();
+
 		Buff wallWalkerBuff = null;
 
 		if (!level.isBossLevel()) {
@@ -579,10 +581,10 @@ public class Hero extends Char {
 				passable[i] = p[i] && (v[i] || m[i]);
 			}
 
-			step = Dungeon.findPath(this, getPos(), target, passable, level.fieldOfView);
+			step = Dungeon.findPath(this, target, passable, level.fieldOfView);
 		}
 
-		if (step != -1) {
+		if (level.cellValid(step)) {
 
 			int oldPos = getPos();
 
@@ -1246,6 +1248,14 @@ public class Hero extends Char {
 			} catch (Exception e) {
 				GLog.toFile("Buffs auto-test: %s caused %s", buffName, e);
 			}
+		}
+	}
+
+	@Override
+	public void setPos(int pos) {
+		super.setPos(pos);
+		if(!Dungeon.isLoading()) {
+			level().visited[pos] = true;
 		}
 	}
 }

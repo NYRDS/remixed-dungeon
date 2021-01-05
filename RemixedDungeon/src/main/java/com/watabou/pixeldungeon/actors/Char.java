@@ -882,7 +882,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void move(int step) {
-		if(!isMovable()) {
+		if(!isMovable() || hasBuff(Roots.class)) {
 			return;
 		}
 
@@ -1140,7 +1140,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		int oldPos = getPos();
 		spend(1 / speed());
 		if (level().cellValid(target) && getFurther(target)) {
-
 			moveSprite(oldPos, getPos());
 			return true;
 		}
@@ -1283,6 +1282,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public boolean swapPosition(final Char chr) {
+		if(!movable) {
+			return false;
+		}
+
 		if(!walkingType.canSpawnAt(level(),chr.getPos())) {
 			return false;
 		}
@@ -1449,7 +1452,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public boolean canAttack(@NotNull Char enemy) {
-		if(enemy.invalid()) {
+		if(enemy.invalid() || enemy.friendly(this)) {
 			return false;
 		}
 
@@ -1576,4 +1579,21 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	protected void fx(int cell, Callback callback) { }
 
+
+	@LuaInterface
+	@NotNull
+	public Item getItem(String itemClass) {
+		for (Item item : getBelongings()) {
+			if (itemClass.equals( item.getEntityKind() )) {
+				return item;
+			}
+		}
+		return ItemsList.DUMMY;
+	}
+
+	@LuaInterface
+	@Deprecated
+	public String description() { // Still used in Remixed Additions
+    	return description;
+	}
 }

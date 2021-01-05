@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
+import com.nyrds.lua.LuaUtils;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -57,6 +58,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -144,9 +146,16 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return lhs.price() - rhs.price();
 	};
 
+	@LuaInterface
+	public LuaTable actions_l(Char hero) {
+		return LuaUtils.CollectionToTable(actions(hero));
+	}
+
     public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = new ArrayList<>();
-		actions.add(AC_DROP);
+		if(!isEquipped(hero)) {
+			actions.add(AC_DROP);
+		}
 		actions.add(AC_THROW);
 		return actions;
 	}
@@ -173,6 +182,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void execute(@NotNull Char chr, @NotNull String action) {
+		GLog.debug("%s: %s by %s", getEntityKind(), action, chr.getEntityKind());
 		chr.getBelongings().setSelectedItem(this);
 		_execute(chr, action);
 		chr.getBelongings().setSelectedItem(ItemsList.DUMMY);
@@ -502,6 +512,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return false;
 	}
 
+	@LuaInterface
 	public void cast(final @NotNull Char user, int dst) {
 
 	    if(quantity()<=0) {
@@ -672,7 +683,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public boolean usableByHero() {
-		return quantity() >= 1 && (Dungeon.hero.getBelongings().getItem(getClassName()).valid() || isEquipped(Dungeon.hero));
+		return quantity() >= 1 && (Dungeon.hero.getItem(getClassName()).valid() || isEquipped(Dungeon.hero));
 	}
 
 	public boolean announcePickUp() {

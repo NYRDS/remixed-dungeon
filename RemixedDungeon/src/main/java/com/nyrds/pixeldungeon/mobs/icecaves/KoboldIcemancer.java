@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -49,8 +48,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 	@Override
 	public boolean zap(@NotNull Char enemy) {
 		if(zapHit(enemy)) {
-
-			if (enemy == Dungeon.hero && Random.Int(2) == 0) {
+			if (Random.Int(2) == 0) {
 				Buff.prolong( enemy, Slow.class, 1 );
 			}
 

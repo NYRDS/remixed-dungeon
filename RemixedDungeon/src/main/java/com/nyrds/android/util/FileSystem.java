@@ -163,4 +163,20 @@ public class FileSystem {
 	private static Context getContext() {
 		return RemixedDungeonApp.getContext();
 	}
+
+	public static void ensureDir(String dir) {
+		File f = new File(dir);
+
+		if(f.exists() && f.isDirectory()){
+			return;
+		}
+
+		if(f.exists() && !f.delete()) {
+			throw new ModError("Can't cleanup:"+dir);
+		}
+
+		if (!f.mkdirs()) {
+			throw new ModError("Can't create directory:"+dir);
+		}
+	}
 }

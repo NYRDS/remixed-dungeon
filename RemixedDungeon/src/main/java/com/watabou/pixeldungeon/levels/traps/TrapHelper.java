@@ -1,11 +1,8 @@
 package com.watabou.pixeldungeon.levels.traps;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.WndOptions;
 
 public class TrapHelper {
 
@@ -16,20 +13,11 @@ public class TrapHelper {
 	}
 
 	public static void heroTriggerTrap( final Hero hero ) {
-		GameScene.show(
-				new WndOptions( Game.getVar(R.string.TrapWnd_Title), Game.getVar(R.string.TrapWnd_Step), Game.getVar(R.string.Chasm_Yes), Game.getVar(R.string.Chasm_No) ) {
-					@Override
-					public void onSelect(int index) {
-						if (index == 0) {
-							stepConfirmed = true;
-							hero.resume();
-						}
-					}
-				}
-		);
+		GameScene.show(new WndStepOnTrap(hero));
 	}
 
 	public static void heroPressed(){
 		stepConfirmed = false;
 	}
+
 }

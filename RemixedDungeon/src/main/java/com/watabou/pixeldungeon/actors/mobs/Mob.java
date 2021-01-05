@@ -53,7 +53,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -260,29 +259,21 @@ public abstract class Mob extends Char {
 	}
 
 	public boolean getCloser(int target) {
-
-		if (hasBuff(Roots.class)) {
-			return false;
-		}
-		int step = Dungeon.findPath(this, getPos(), target, walkingType.passableCells(level()));
-
-		if (step != -1) {
-			move(step);
-			return true;
-		} else {
-			return false;
-		}
+		int step = Dungeon.findPath(this, target, walkingType.passableCells(level()));
+		return _doStep(step);
 	}
 
 	public boolean getFurther(int target) {
-		int step = Dungeon.flee(this, getPos(), target, walkingType.passableCells(level()));
+		int step = Dungeon.flee(this, target, walkingType.passableCells(level()));
+		return _doStep(step);
+	}
 
-		if (step != -1) {
+	public boolean _doStep(int step) {
+		if (level().cellValid(step)) {
 			move(step);
 			return true;
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	@Override

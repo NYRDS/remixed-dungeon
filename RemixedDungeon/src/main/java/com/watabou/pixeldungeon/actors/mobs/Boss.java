@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.ai.AiState;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.noosa.audio.Music;
@@ -15,6 +15,7 @@ import org.jetbrains.annotations.Nullable;
 abstract public class Boss extends Mob {
 
 	private static final String BATTLE_MUSIC = "battleMusic";
+	private static final String BATTLE_MUSIC_FALLBACK = "battleMusicFallback";
 
 	@Nullable
 	private String battleMusic;
@@ -31,13 +32,13 @@ abstract public class Boss extends Mob {
 	}
 
 	@Override
-	public void setState(AiState state) {
+	public boolean act() {
 		if (state instanceof Hunting) {
 			if (battleMusic != null) {
 				Music.INSTANCE.play(battleMusic, true);
 			}
 		}
-		super.setState(state);
+		return super.act();
 	}
 
 	@Override
@@ -52,7 +53,12 @@ abstract public class Boss extends Mob {
 	@Override
 	protected void setupCharData() {
 		super.setupCharData();
-		battleMusic = getClassDef().optString(BATTLE_MUSIC, null);
+		battleMusic = getClassDef().optString(BATTLE_MUSIC, ModdingMode.NO_FILE);
+		if(ModdingMode.isSoundExists(battleMusic)) {
+			return;
+		}
+
+		battleMusic = getClassDef().optString(BATTLE_MUSIC_FALLBACK, null);
 	}
 
 	@Override

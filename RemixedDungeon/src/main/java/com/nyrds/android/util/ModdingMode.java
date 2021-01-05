@@ -30,6 +30,7 @@ import lombok.var;
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";
+	public static final String NO_FILE = "___no_file";
 
 	private static final Set<String> trustedMods = new HashSet<>();
 
@@ -119,6 +120,12 @@ public class ModdingMode {
 		}
 
 		return id;
+	}
+
+	public static boolean isSoundExists(String id) {
+		String resourceId = "sound/"+id;
+		String foundId = getSoundById(resourceId);
+		return  !foundId.equals(resourceId);
 	}
 
 	public static boolean isAssetExist(String resName) {
