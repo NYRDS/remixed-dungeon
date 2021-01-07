@@ -126,26 +126,26 @@ public class Accessory {
         }
 
         for (String item : allAccessoriesList.keySet()) {
-            if ( iap.checkPurchase(item)) {
-                getByName(item).ownIt(true);
-            } else {
-                getByName(item).ownIt(false);
-            }
+            getByName(item).ownIt(iap.checkPurchase(item));
         }
 
 
     }
 
     public boolean haveIt() {
-        return RemixedDungeon.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), "").equals(getClass().getSimpleName());
+        return RemixedDungeon.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
     }
 
     public void ownIt(boolean reallyOwn) {
         if (reallyOwn) {
             Preferences.INSTANCE.put(prefProperty(), getClass().getSimpleName());
         } else {
-            Preferences.INSTANCE.put(prefProperty(), "");
+            Preferences.INSTANCE.put(prefProperty(), Utils.EMPTY_STRING);
         }
+    }
+
+    public boolean nonIap() {
+        return false;
     }
 
     public void equip() {
@@ -158,13 +158,13 @@ public class Accessory {
     }
 
     public static void unequip() {
-        Preferences.INSTANCE.put(Accessory.class.getSimpleName(), "");
+        Preferences.INSTANCE.put(Accessory.class.getSimpleName(), Utils.EMPTY_STRING);
         Dungeon.hero.updateSprite();
     }
 
     static public Accessory equipped() {
-        String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(), "");
-        if (!itemName.equals("")) {
+        String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(), Utils.EMPTY_STRING);
+        if (!itemName.equals(Utils.EMPTY_STRING)) {
             return getByName(itemName);
         }
 
