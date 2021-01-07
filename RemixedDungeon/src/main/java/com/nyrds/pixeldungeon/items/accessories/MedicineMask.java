@@ -9,6 +9,11 @@ public class MedicineMask extends Accessory {
     }
 
     @Override
+    public boolean nonIap() {
+        return true;
+    }
+
+    @Override
     public boolean haveIt() {
         return Badges.isUnlocked(Badges.Badge.DOCTOR_QUEST_COMPLETED);
     }

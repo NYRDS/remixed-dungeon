@@ -26,7 +26,7 @@ public class PredesignedLevel extends CustomLevel {
 
 	private boolean useCustomTiles;
 
-	private  LayerId[] descOrder = {LayerId.Roof_Deco,LayerId.Roof_Base,LayerId.Deco2,LayerId.Deco,LayerId.Base};
+	private final LayerId[] descOrder = {LayerId.Roof_Deco,LayerId.Roof_Base,LayerId.Deco2,LayerId.Deco,LayerId.Base};
 
 	@Keep
 	public PredesignedLevel() {
@@ -224,8 +224,7 @@ public class PredesignedLevel extends CustomLevel {
 				int tile = customLayers.get(layerId)[cell];
 				String descId = mLevelDesc.getJSONArray(property).getString(tile);
 				if(!descId.isEmpty()) {
-					String desc = StringsManager.maybeId(descId);
-					return desc;
+					return StringsManager.maybeId(descId);
 				}
 			} catch (JSONException e) {
 				return null;
