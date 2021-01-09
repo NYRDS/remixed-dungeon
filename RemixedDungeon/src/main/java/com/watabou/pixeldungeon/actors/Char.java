@@ -515,14 +515,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		if (arrow != null && arrow.quantity() > 0) { // We have arrows!
 			arrow.cast(this, enemy.getPos());
-			ready();
+			readyAndIdle();
 			return false;
 		} // no arrows? Go Melee
 
 		return actMeleeAttack(enemy);
-	}
-
-	private void ready() {
 	}
 
 	public boolean getCloserIfVisible(int pos) {

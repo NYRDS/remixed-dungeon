@@ -123,7 +123,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
         EventCollector.logEvent("InstallMod", installModInfo);
 
         GLog.i("Install mod: %s", installModInfo);
-
+        // https://stackoverflow.com/questions/36128077/android-opening-a-file-with-action-get-content-results-into-different-uris
         String [] pathSegments = data.getPath().split(":");
         if(pathSegments.length>1) {
             modFileName = pathSegments[1];
