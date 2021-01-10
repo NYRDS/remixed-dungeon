@@ -153,6 +153,8 @@
         "quantity": 8
       }
     ],
+    "isSpellUser": true,
+    "magicAffinity": "Witchcraft",
     "quickslot": [
       {
         "kind": "Dart"
