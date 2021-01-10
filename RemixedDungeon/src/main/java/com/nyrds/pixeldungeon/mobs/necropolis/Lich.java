@@ -61,7 +61,7 @@ public class Lich extends Boss {
     @Packable
     private boolean timeToJump = false;
 
-	private HashSet<RunicSkull> skulls = new HashSet<>();
+	private final HashSet<RunicSkull> skulls = new HashSet<>();
 
     public Lich() {
         hp(ht(HEALTH));
@@ -108,7 +108,7 @@ public class Lich extends Boss {
     @Override
     public void doAttack(Char enemy) {
         if(timeToJump) {
-            jump();;
+            jump();
         }
 
         super.doAttack(enemy);
@@ -249,11 +249,11 @@ public class Lich extends Boss {
 
         //Kill everything
         skulls.clear();
-        Mob mob = Dungeon.level.getRandomMob();
-        while(mob != null){
+
+        for(Mob mob:level().getCopyOfMobsArray()) {
             mob.remove();
-            mob = Dungeon.level.getRandomMob();
         }
+
         Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
     }
 
