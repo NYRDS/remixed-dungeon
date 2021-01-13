@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -58,10 +59,10 @@ public class PotionOfToxicGas extends UpgradablePotion {
 	}
 
 	@Override
-	protected void moistenArrow(Arrow arrow) {
+	protected void moistenArrow(Arrow arrow, Char owner) {
 		int quantity = reallyMoistArrows(arrow);
 		
 		PoisonArrow moistenArrows = new PoisonArrow(quantity);
-		getOwner().collect(moistenArrows);
+		owner.collect(moistenArrows);
 	}
 }

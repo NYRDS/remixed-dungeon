@@ -5,6 +5,12 @@
       "identified": true
     },
     "items": [
+      {
+        "kind": "PotionOfPurity"
+      },
+      {
+        "kind": "FireArrow"
+      }
     ],
     "str": 10,
     "hp": 20000000,

@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -56,10 +57,10 @@ public class PotionOfLiquidFlame extends UpgradablePotion {
 	}
 
 	@Override
-	protected void moistenArrow(Arrow arrow) {
+	protected void moistenArrow(Arrow arrow, Char owner) {
 		int quantity = reallyMoistArrows(arrow);
 		
 		FireArrow moistenArrows = new FireArrow(quantity);
-		getOwner().collect(moistenArrows);
+		owner.collect(moistenArrows);
 	}
 }

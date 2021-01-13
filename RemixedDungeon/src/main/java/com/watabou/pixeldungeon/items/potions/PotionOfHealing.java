@@ -82,10 +82,10 @@ public class PotionOfHealing extends Potion {
 	}
 
 	@Override
-	protected void moistenArrow(Arrow arrow) {
+	protected void moistenArrow(Arrow arrow, Char owner) {
 		int quantity = reallyMoistArrows(arrow);
 
 		HealthArrow moistenArrows = new HealthArrow(quantity);
-		getOwner().collect(moistenArrows);
+		owner.collect(moistenArrows);
 	}
 }

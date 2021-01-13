@@ -328,15 +328,15 @@ public class Potion extends Item implements UnknownItem {
 		if (item != null) {
 
 			if(item instanceof Arrow) {
-				moistenArrow ((Arrow) item );
+				moistenArrow ((Arrow) item, item.getOwner());
 			}
 
 			if(item instanceof Scroll) {
-				moistenScroll ((Scroll) item );
+				moistenScroll ((Scroll) item, item.getOwner());
 			}
 
 			if(item instanceof RottenFood) {
-				moistenRottenFood((RottenFood) item);
+				moistenRottenFood((RottenFood) item, item.getOwner());
 			}
 		}
 	};
@@ -371,15 +371,15 @@ public class Potion extends Item implements UnknownItem {
 		return quantity;
 	}
 
-	protected void moistenRottenFood(RottenFood scroll) {
+	protected void moistenRottenFood(RottenFood scroll, Char owner) {
 		moistenUseless();
 	}
 	
-	protected void moistenScroll(Scroll scroll) {
+	protected void moistenScroll(Scroll scroll, Char owner) {
 		moistenUseless();
 	}
 	
-	protected void moistenArrow(Arrow arrow) {
+	protected void moistenArrow(Arrow arrow, Char owner) {
 		moistenUseless();
 	}
 	
