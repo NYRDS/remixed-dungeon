@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
@@ -42,7 +43,11 @@ public class GameControl {
         Map<String,String> resDesc = new HashMap<>();
         resDesc.put("class",className);
         resDesc.put("mod", RemixedDungeon.activeMod());
+        resDesc.put("modVersion", String.valueOf(ModdingMode.activeModVersion()));
         resDesc.put("difficulty",  String.valueOf(difficulty));
+
+        resDesc.put("version", Game.version);
+        resDesc.put("donation",Integer.toString(RemixedDungeon.donated()));
 
         EventCollector.logEvent("game", resDesc);
 

@@ -10,6 +10,9 @@
       },
       {
         "kind": "FireArrow"
+      },
+      {
+        "kind": "SpellBook"
       }
     ],
     "str": 10,

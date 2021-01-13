@@ -32,7 +32,7 @@ import lombok.var;
 public class FogOfWar extends Image {
 
 	private static final int VISIBLE	= 0x00000000;
-	private static final int VISITED	= 0xcc442211;
+	private static final int VISITED	= 0xcc222222;
 	private static final int MAPPED		= 0xcc111111;
 	private static final int INVISIBLE	= 0xFF000000;
 	
