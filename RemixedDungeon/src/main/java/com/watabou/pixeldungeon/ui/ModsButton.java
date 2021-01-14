@@ -14,6 +14,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.InterstitialPoint;
+import com.watabou.noosa.Scene;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
@@ -84,7 +85,13 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
     public void returnToWork(final boolean result) {
         final Group parent = getParent();
 
-        Game.scene().add(new WndMessage(Game.getVar(R.string.Mods_Disclaimer)) {
+        Scene scene = Game.scene();
+
+        if(scene==null) {
+            return;
+        }
+
+        scene.add(new WndMessage(Game.getVar(R.string.Mods_Disclaimer)) {
                              @Override
                              public void hide() {
                                  super.hide();

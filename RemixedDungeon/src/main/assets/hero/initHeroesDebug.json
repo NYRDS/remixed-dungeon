@@ -13,6 +13,12 @@
       },
       {
         "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "WoodenShield"
       }
     ],
     "str": 10,
