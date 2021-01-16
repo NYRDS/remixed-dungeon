@@ -20,11 +20,13 @@ import com.watabou.pixeldungeon.windows.WndModSelect;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.microedition.khronos.opengles.GL10;
 
+import lombok.SneakyThrows;
 import lombok.var;
 
 public class InstallMod extends RemixedDungeon implements UnzipStateListener, @NotNull InterstitialPoint {
@@ -92,13 +94,17 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
         }
     }
 
+    @SneakyThrows
     @Override
     public void returnToWork(boolean result) {
+
+        GLog.i("Install mod: %b", result);
+
         if(!result) {
             return;
         }
 
-        if(scene == null ||  modFileName.isEmpty()) {
+        if(scene == null) {
             return;
         }
 
@@ -116,12 +122,21 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
 
         EventCollector.logEvent("InstallMod", installModInfo);
 
+        GLog.i("Install mod: %s", installModInfo);
+        // https://stackoverflow.com/questions/36128077/android-opening-a-file-with-action-get-content-results-into-different-uris
         String [] pathSegments = data.getPath().split(":");
         if(pathSegments.length>1) {
             modFileName = pathSegments[1];
         } else {
             modFileName = pathSegments[0];
         }
+
+
+        File  modFile = new File(modFileName);
+        modFileName = modFile.getCanonicalPath();
+
+
+        GLog.i("Install mod: %s", modFileName);
 
         GLog.debug("%s", modFileName);
 

@@ -36,10 +36,10 @@ public class ModdingMode {
 
 	public static boolean useRetroHeroSprites = false;
 
-	private static Set<String> pathsChecked = new HashSet<>();
-	private static Map<String, Boolean> assetsExistenceCache = new HashMap<>();
+	private static final Set<String> pathsChecked = new HashSet<>();
+	private static final Map<String, Boolean> assetsExistenceCache = new HashMap<>();
 
-	private static Map<String, String> resourcesRemap = new HashMap<>();
+	private static final Map<String, String> resourcesRemap = new HashMap<>();
 
 	static {
 		trustedMods.add("Maze");

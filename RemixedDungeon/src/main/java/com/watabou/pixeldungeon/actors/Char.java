@@ -361,12 +361,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             }
 
 			if (!enemy.isAlive() && visibleFight) {
-				if (enemy == Dungeon.hero) {
+				Hero hero = Dungeon.hero;
+				if (enemy == hero) {
 
-					if (Dungeon.hero.killerGlyph != null) {
+					if (hero.killerGlyph != null) {
 
-						Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), Dungeon.hero.killerGlyph.name(), Dungeon.depth));
-						GLog.n(Game.getVars(R.array.Char_Kill)[Dungeon.hero.gender], Dungeon.hero.killerGlyph.name());
+						Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), hero.killerGlyph.name(), Dungeon.depth));
+						GLog.n(Game.getVars(R.array.Char_Kill)[hero.gender], hero.killerGlyph.name());
 
 					} else {
 						if (this instanceof Boss) {
@@ -383,9 +384,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 					GLog.i(Game.getVars(R.array.Char_Defeat)[gender], name, enemy.getName_objective());
 				}
 			}
-
 			return true;
-
 		} else {
 
 			if (visibleFight) {
@@ -399,9 +398,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 				Sample.INSTANCE.play(Assets.SND_MISS);
 			}
-
 			return false;
-
 		}
 	}
 
@@ -515,14 +512,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		if (arrow != null && arrow.quantity() > 0) { // We have arrows!
 			arrow.cast(this, enemy.getPos());
-			ready();
+			readyAndIdle();
 			return false;
 		} // no arrows? Go Melee
 
 		return actMeleeAttack(enemy);
-	}
-
-	private void ready() {
 	}
 
 	public boolean getCloserIfVisible(int pos) {
@@ -964,8 +958,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return ret;
 	}
 
-	public void updateSprite(){
-		updateSprite(getSprite());
+	public void updateSprite() {
+		Level level = level();
+
+		if(level != null && level.cellValid(getPos())) {
+			updateSprite(getSprite());
+		}
 	}
 
 	private void updateSprite(CharSprite sprite){

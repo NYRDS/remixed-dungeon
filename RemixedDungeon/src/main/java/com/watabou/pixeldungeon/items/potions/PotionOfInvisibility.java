@@ -53,7 +53,7 @@ public class PotionOfInvisibility extends UpgradablePotion {
 	}
 
 	@Override
-	protected void moistenScroll(Scroll scroll) {
+	protected void moistenScroll(Scroll scroll, Char owner) {
 		int quantity = detachMoistenItems(scroll, (int) (3*qualityFactor()));
 		
 		GLog.i(Game.getVar(R.string.Potion_RuneDissaperaed), scroll.name());
@@ -62,6 +62,6 @@ public class PotionOfInvisibility extends UpgradablePotion {
 		
 		BlankScroll moistenScroll = new BlankScroll();
 		moistenScroll.quantity(quantity);
-		getOwner().collect(moistenScroll);
+		owner.collect(moistenScroll);
 	}
 }

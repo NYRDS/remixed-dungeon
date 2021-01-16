@@ -5,13 +5,28 @@
       "identified": true
     },
     "items": [
+      {
+        "kind": "PotionOfPurity"
+      },
+      {
+        "kind": "FireArrow"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "WoodenShield"
+      }
     ],
     "str": 10,
     "hp": 20000000,
     "magicAffinity": "Common",
-    "sp": 10,
-    "maxSp": 10,
-    "sl" : 2
+    "sp": 100000,
+    "maxSp": 100000,
+    "sl" : 20
   },
   "non_expert": {
     "items": [

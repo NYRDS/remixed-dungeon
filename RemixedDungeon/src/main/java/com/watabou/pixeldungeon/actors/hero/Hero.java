@@ -781,7 +781,7 @@ public class Hero extends Char {
 		deathDesc.put("class", heroClass.name());
 		deathDesc.put("subClass", subClass.name());
 		deathDesc.put("level", Dungeon.level.levelId);
-		deathDesc.put("cause", cause.getClass().getSimpleName());
+		deathDesc.put("cause", cause.getEntityKind());
 		deathDesc.put("duration", Float.toString(Statistics.duration));
 
 		deathDesc.put("difficulty", Integer.toString(Game.getDifficulty()));

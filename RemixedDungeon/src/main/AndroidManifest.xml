@@ -35,8 +35,8 @@
         android:networkSecurityConfig="@xml/network_security_config"
         tools:replace="android:fullBackupContent"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:requestLegacyExternalStorage="true"
-        >
+        android:requestLegacyExternalStorage="true">
+
 
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 

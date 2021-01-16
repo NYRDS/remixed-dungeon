@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.Packable;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -63,9 +62,9 @@ public class Swarm extends Mob {
 	public int defenseProc( Char enemy, int damage ) {
 
 		if (hp() >= damage + 2) {
-			int cell = Dungeon.level.getEmptyCellNextTo(getPos());
+			int cell = level().getEmptyCellNextTo(getPos());
 
-			if (Dungeon.level.cellValid(cell)) {
+			if (level().cellValid(cell)) {
 				int cloneHp = split(cell, damage).hp();
 
 				hp(hp() - cloneHp);

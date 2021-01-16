@@ -251,6 +251,12 @@ public class Bundle {
             value = Float.MAX_VALUE;
             EventCollector.logException(key+" is infinity");
         }
+
+        if(Float.isNaN(value)) {
+            value = Float.MAX_VALUE;
+            EventCollector.logException(key+" is NaN");
+        }
+
         data.put(key, value);
     }
 

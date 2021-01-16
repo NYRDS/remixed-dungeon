@@ -54,7 +54,7 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
             }
 
             if (!mInterstitialAd.isLoaded()) {
-                EventCollector.logException("not loaded");
+                //EventCollector.logException("not loaded");
                 AdsUtilsCommon.interstitialFailed(AdMobComboProvider.this, ret);
                 return;
             }

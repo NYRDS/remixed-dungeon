@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -55,10 +56,10 @@ public class PotionOfParalyticGas extends UpgradablePotion {
 	}
 
 	@Override
-	protected void moistenArrow(Arrow arrow) {
+	protected void moistenArrow(Arrow arrow, Char owner) {
 		int quantity = reallyMoistArrows(arrow);
 		
 		ParalysisArrow moistenArrows = new ParalysisArrow(quantity);
-		getOwner().collect(moistenArrows);
+		owner.collect(moistenArrows);
 	}
 }
