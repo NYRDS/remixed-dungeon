@@ -558,7 +558,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             return;
         }
 
-        boolean skipAnim[] = {false};
+        boolean[] skipAnim = {false};
 
         ch.ifPresent(chr -> {
             if (anim == null) {
