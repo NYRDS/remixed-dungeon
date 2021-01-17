@@ -74,7 +74,7 @@ public class CharUtils {
 
     public static void lightningProc(@NotNull Char enemy, int damage) {
 
-        if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {
+        if (enemy.level().water[enemy.getPos()] && !enemy.isFlying()) {
             damage *= 2f;
         }
 

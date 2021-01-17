@@ -18,14 +18,26 @@ return spell.init{
             name          = "Heal_Name",
             info          = "Heal_Info",
             magicAffinity = "Witchcraft",
-            targetingType = "self",
+            targetingType = "cell",
             level         = 1,
             castTime      = 0,
             spellCost     = 1
         }
     end,
 
-    cast = function(self, spell, caster)
-        return true
+    castOnCell = function(self, spell, caster, cell)
+        local target = RPD.Actor:findChar(cell)
+
+        if target then
+            RPD.glogn("Heal_NeedChar")
+            return false
+        end
+
+        if target then
+
+            local heal = target:ht() / 5. * caster:skillLevel()
+            target:heal(math.max(1, heal))
+        end
+
     end
 }

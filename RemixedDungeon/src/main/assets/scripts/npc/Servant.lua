@@ -11,6 +11,6 @@ local mob = require"scripts/lib/mob"
 
 return mob.init({
     interact = function(self, chr)
-        self:say("Hello Sweaty, ready to order something?")
+        self:say("Hello, ready to order something?")
     end
 })

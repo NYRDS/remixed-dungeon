@@ -34,6 +34,7 @@ local Buffs  = {
     MindVision   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.MindVision"),
     Necrotism    = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.Necrotism"),
     RageBuff     = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.RageBuff"),
+    Terror       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Terror"),
     Amok         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Amok"),
     Awareness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Awareness"),
     Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),

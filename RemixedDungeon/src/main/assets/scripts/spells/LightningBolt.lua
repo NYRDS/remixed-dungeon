@@ -25,7 +25,18 @@ return spell.init{
         }
     end,
 
-    cast = function(self, spell, caster)
+    castOnCell = function(self, spell, caster, cell)
+
+        local target = RPD.Actor:findChar(cell)
+
+        if target then
+            RPD.glogn("LightningBolt_NeedChar")
+            return false
+        end
+
+        local damage = math.random(caster:lvl(),caster:skillLevel() * caster:lvl())
+        RPD.CharUtils:lightningProc(target, damage)
+
         return true
     end
 }

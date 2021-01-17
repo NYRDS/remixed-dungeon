@@ -24,7 +24,6 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
@@ -86,7 +85,7 @@ public class Shaman extends Mob implements IZapper {
 	@Override
     public boolean getFurther(int target) {
 
-		if (Dungeon.level.distance(getPos(), target) > 2) {
+		if (level().distance(getPos(), target) > 2) {
 			setState(MobAi.getStateByClass(Hunting.class));
 		}
 

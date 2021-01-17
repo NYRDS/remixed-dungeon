@@ -26,6 +26,14 @@ return spell.init{
     end,
 
     cast = function(self, spell, caster)
+
+        RPD.playSound("snd_challenge")
+
+        for i = 1, caster:skillLevel() do
+            local tgt = caster:randomEnemy()
+            RPD.affectBuff(tgt, RPD.Buffs.Terror, caster:lvl())
+        end
+
         return true
     end
 }
