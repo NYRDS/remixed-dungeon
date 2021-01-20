@@ -74,7 +74,12 @@ local actions = {
     drink = "Drink_ACDrink",
     equip ="EquipableItem_ACEquip",
     throw ="Item_ACThrow",
-    drop ="Item_ACDrop"
+    drop ="Item_ACDrop",
+    ch_steal = "CharAction_Steal",
+    ch_taunt = "CharAction_Taunt",
+    ch_push = "CharAction_Push",
+    ch_order = "CharAction_Order",
+    ch_hit = "CharAction_Hit"
 }
 
 local Bundle           = "com.watabou.utils.Bundle"
@@ -150,6 +155,7 @@ local Sfx = {
     SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
     DeathStroke= luajava.bindClass("com.nyrds.pixeldungeon.effects.DeathStroke"),
     Wound = luajava.bindClass("com.watabou.pixeldungeon.effects.Wound"),
+    Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare")
 }
 
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")

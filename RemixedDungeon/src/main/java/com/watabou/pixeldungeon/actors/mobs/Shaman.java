@@ -96,7 +96,7 @@ public class Shaman extends Mob implements IZapper {
 	protected int zapProc(@NotNull Char enemy, int damage) {
 		int dmg = damageRoll() * 2;
 
-		CharUtils.lightningProc(enemy, damage);
+		CharUtils.lightningProc(this ,enemy.getPos(), damage);
 
 		CharUtils.checkDeathReport(this, enemy, Game.getVar(R.string.Shaman_Killed));
 		return dmg;

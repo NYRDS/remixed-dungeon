@@ -48,7 +48,7 @@ public class ScrollOfTerror extends Scroll {
 		Mob affected = null;
 		for (Mob mob : level.getCopyOfMobsArray()) {
 			if (level.fieldOfView[mob.getPos()]) {
-				Buff.affect( mob, Terror.class, Terror.DURATION );
+				Buff.affect( mob, Terror.class, Terror.DURATION ).setSource(reader);
 				count++;
 				affected = mob;
 			}

@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.levels.cellCondition;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -22,13 +23,13 @@ import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Heap;
@@ -72,7 +73,16 @@ public class CharUtils {
         }
     }
 
-    public static void lightningProc(@NotNull Char enemy, int damage) {
+    public static void lightningProc(@NotNull Char caster, int targetCell, int damage) {
+
+        int [] points = {caster.getPos(), targetCell};
+        caster.getSprite().getParent().add( new Lightning(points) );
+
+        Char enemy = Actor.findChar(targetCell);
+
+        if(enemy == null) {
+            return;
+        }
 
         if (enemy.level().water[enemy.getPos()] && !enemy.isFlying()) {
             damage *= 2f;
@@ -184,8 +194,7 @@ public class CharUtils {
                     return new Attack(target);
                 } else {
 
-                    Set<String> actions = new HashSet<>();
-                    actions.addAll(actions(target, actor));
+                    Set<String> actions = new HashSet<>(actions(target, actor));
 
                     actions.remove(CommonActions.MAC_HIT);
                     actions.remove(CommonActions.MAC_TAUNT);
@@ -248,6 +257,8 @@ public class CharUtils {
             hero.nextAction(new Order(target));
             return;
         }
+
+        hero.getScript().run("executeAction", target, action);
     }
 
     public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {

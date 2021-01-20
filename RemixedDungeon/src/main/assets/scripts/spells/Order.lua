@@ -18,14 +18,29 @@ return spell.init{
             name          = "Order_Name",
             info          = "Order_Info",
             magicAffinity = "Witchcraft",
-            targetingType = "self",
+            targetingType = "cell",
             level         = 1,
             castTime      = 0,
             spellCost     = 1
         }
     end,
 
-    cast = function(self, spell, caster)
+    castOnCell = function(self, spell, caster, cell)
+
+        local target = RPD.Actor:findChar(cell)
+
+        if not target then
+            caster:yell("Order_NeedChar")
+            return false
+        end
+
+        if not target:canBePet() then
+            target:yell("Order_Resist")
+            return false
+        end
+
+        target:execute(caster, RPD.Actions.ch_order)
+
         return true
     end
 }

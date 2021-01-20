@@ -5,6 +5,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.CustomItem;
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
@@ -432,6 +433,8 @@ public class ItemFactory {
         registerItemClass(AmokArrow.class);
         registerItemClass(CandyOfDeath.class);
         //registerItemClass(TacticalCrossbow.class); // no item pic
+
+        registerItemClass(DummyItem.class);
     }
 
     public static boolean isValidItemClass(String itemClass) {

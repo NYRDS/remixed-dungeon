@@ -34,7 +34,6 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
-import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -88,11 +87,6 @@ public abstract class Mob extends Char {
 	public static final String TXT_RAGE = "#$%^";
 
 	private static final float SPLIT_DELAY = 1f;
-
-	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
-
-	@NotNull
-	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
 
 	protected Object spriteClass;
 

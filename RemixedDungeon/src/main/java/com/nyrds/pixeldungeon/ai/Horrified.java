@@ -15,18 +15,17 @@ public class Horrified extends MobAi implements AiState{
     @Override
     public void act(Mob me) {
 
-        if(! me.hasBuff(Terror.class)) {
+        if(!me.hasBuff(Terror.class)) {
             me.getSprite().showStatus(CharSprite.NEGATIVE, Mob.TXT_RAGE);
             me.setState(MobAi.getStateByClass(Hunting.class));
             return;
         }
 
-        me.enemySeen = me.isEnemyInFov();
-        if (me.enemySeen) {
-            me.setTarget(me.getEnemy().getPos());
-        }
+        Terror terror = me.buff(Terror.class);
+        NamedEntityKind src = terror.getSource();
 
-        if(!me.doStepFrom(me.getTarget())) {
+        if(src instanceof Char) {
+            me.doStepFrom(((Char) src).getPos());
             me.spend(Actor.TICK);
         }
     }
@@ -38,9 +37,12 @@ public class Horrified extends MobAi implements AiState{
 
     @Override
     public String status(Char me) {
-        if (me.getEnemy().valid()) {
+        Terror terror = me.buff(Terror.class);
+        NamedEntityKind src = terror.getSource();
+
+        if(src instanceof Char) {
             return Utils.format(Game.getVar(R.string.Mob_StaTerrorStatus2),
-                    me.getName(), me.getEnemy().getName_objective());
+                    me.getName(), ((Char) src).getName_objective());
         }
         return Utils.format(Game.getVar(R.string.Mob_StaTerrorStatus),
                 me.getName());

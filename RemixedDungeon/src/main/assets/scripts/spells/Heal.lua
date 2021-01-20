@@ -28,16 +28,15 @@ return spell.init{
     castOnCell = function(self, spell, caster, cell)
         local target = RPD.Actor:findChar(cell)
 
-        if target then
-            RPD.glogn("Heal_NeedChar")
+        if not target then
+            caster:say("Heal_NeedChar")
             return false
         end
 
         if target then
-
             local heal = target:ht() / 5. * caster:skillLevel()
-            target:heal(math.max(1, heal))
+            target:heal(math.max(1, heal), caster)
         end
-
+        return true
     end
 }

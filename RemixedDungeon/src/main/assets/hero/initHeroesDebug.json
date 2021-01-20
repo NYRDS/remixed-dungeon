@@ -19,6 +19,9 @@
       },
       {
         "kind": "WoodenShield"
+      },
+      {
+        "kind": "ScrollOfTerror"
       }
     ],
     "str": 10,

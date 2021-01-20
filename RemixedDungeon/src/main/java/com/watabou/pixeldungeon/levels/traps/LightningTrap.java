@@ -61,11 +61,11 @@ public class LightningTrap implements ITrigger{
 			
 			points[0] = pos - Dungeon.level.getWidth();
 			points[1] = pos + Dungeon.level.getWidth();
-			ch.getSprite().getParent().add( new Lightning( points, 2, null ) );
+			ch.getSprite().getParent().add( new Lightning( points) );
 			
 			points[0] = pos - 1;
 			points[1] = pos + 1;
-			ch.getSprite().getParent().add( new Lightning( points, 2, null ) );
+			ch.getSprite().getParent().add( new Lightning( points) );
 		}
 		
 		CellEmitter.center( pos ).burst( SparkParticle.FACTORY, Random.IntRange( 3, 4 ) );

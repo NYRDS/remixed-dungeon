@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.effects;
 
 import android.opengl.GLES20;
 
+import com.nyrds.LuaInterface;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Visual;
@@ -32,6 +34,7 @@ import java.nio.ShortBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
+@LuaInterface
 public class Flare extends Visual {
 	
 	private float duration = 0;
@@ -45,18 +48,18 @@ public class Flare extends Visual {
 	private ShortBuffer indices;
 	
 	private int nRays;
-	
+
+	@LuaInterface
 	public Flare( int nRays, float radius ) {
 		
 		super( 0, 0, 0, 0 );
-		
-		// FIXME
-		// Texture is incorrectly created every time we need
-		// to show the effect, it must be refactored
-		
-		int gradient[] = {0xFFFFFFFF, 0x00FFFFFF};
-		texture = new Gradient( gradient );
-		
+
+		texture = TextureCache.getOrCreate(Flare.class, () ->
+		{
+			int gradient[] = {0xFFFFFFFF, 0x00FFFFFF};
+			return new Gradient(gradient);
+		});
+
 		this.nRays = nRays;
 		
 		angle = 45;
@@ -102,14 +105,16 @@ public class Flare extends Visual {
 		
 		indices.position( 0 );
 	}
-	
+
+	@LuaInterface
 	public Flare color( int color, boolean lightMode ) {
 		this.lightMode = lightMode;
 		hardlight( color );
 		
 		return this;
 	}
-	
+
+	@LuaInterface
 	public Flare show( Visual visual, float duration ) {
 		point( visual.center() );
 		visual.getParent().addToBack( this );
@@ -118,7 +123,12 @@ public class Flare extends Visual {
 		
 		return this;
 	}
-	
+
+	@LuaInterface
+	static public void attach(int nRays, float radius, int color, boolean lightMode, Visual sprite, float duration) {
+		new Flare(nRays, radius).color(color, lightMode).show(sprite, duration);
+	}
+
 	@Override
 	public void update() {
 		super.update();

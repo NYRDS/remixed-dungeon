@@ -2662,10 +2662,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="Heal_Name">Heal</string>
   <string name="Heal_Info">NIY</string>
+  <string name="Heal_NeedChar">I can\'t heal this.</string>
 
   <string name="Order_Name">Order</string>
   <string name="Order_Info">NIY</string>
-
+  <string name="Order_NeedChar">I can\'t order this.</string>
+  <string name="Order_Resist">How you ever dare to try it?!!</string>
 
   <string name="BardNPC_Name">bard</string>
   <string name="BardNPC_Name_Objective">bard</string>

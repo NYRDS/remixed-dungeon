@@ -103,7 +103,7 @@ public class WandOfLightning extends SimpleWand  {
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
 			
 		}
-		getOwner().getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
+		getOwner().getSprite().getParent().add( new Lightning( points, callback ) );
 	}
 	
 	@Override

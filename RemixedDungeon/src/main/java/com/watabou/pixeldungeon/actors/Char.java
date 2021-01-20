@@ -30,6 +30,7 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
@@ -118,12 +119,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public static final String IMMUNITIES        = "immunities";
 	public static final String RESISTANCES       = "resistances";
-    public MissileWeapon rangedWeapon = null;
+	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
+	public MissileWeapon rangedWeapon = null;
 
 	public CharAction  lastAction = null;
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	protected
 	int enemyId = EntityIdSource.INVALID_ID;
+
+	@Getter
+	@NotNull
+	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
 
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
@@ -795,7 +801,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return;
 		}
 
-		GLog.debug("%s added to %s", buff.getEntityKind(), getEntityKind());
+		GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
 
 		buffs.add(buff);
 		Actor.add(buff);
@@ -1157,8 +1163,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return visibleEnemies.get(index);
 	}
 
+	@NotNull
 	@LuaInterface
 	public Char randomEnemy() {
+		if(visibleEnemies.isEmpty()) {
+			return CharsList.DUMMY;
+		}
 		return Random.element(visibleEnemies);
 	}
 
@@ -1593,5 +1603,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Deprecated
 	public String description() { // Still used in Remixed Additions
     	return description;
+	}
+
+	public void execute(Char chr, String action) {
+		CharUtils.execute(this, chr, action);
 	}
 }

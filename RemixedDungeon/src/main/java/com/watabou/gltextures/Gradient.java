@@ -32,7 +32,5 @@ public class Gradient extends SmartTexture {
 		
 		filter( LINEAR, LINEAR );
 		wrap( CLAMP, CLAMP );
-		
-		TextureCache.add( Gradient.class, this );
 	}
 }
