@@ -156,8 +156,6 @@ public enum HeroSubClass implements CharModifier {
 	public int attackProc(Char attacker, Char defender, int damage) {
 		EquipableItem wep = attacker.getActiveWeapon();
 
-		wep.attackProc(attacker, defender, damage);
-
 		switch (this) {
 			case GLADIATOR:
 				if (wep instanceof MeleeWeapon) {
@@ -194,8 +192,6 @@ public enum HeroSubClass implements CharModifier {
 				break;
 			default:
 		}
-
-		attacker.getSecondaryWeapon().attackProc(attacker, defender, damage);
 
 		return damage;
 	}

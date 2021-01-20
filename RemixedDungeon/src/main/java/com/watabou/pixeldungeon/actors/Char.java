@@ -73,6 +73,7 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
@@ -537,6 +538,25 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public int attackProc(@NotNull Char enemy, int damage) {
 		final int[] dmg = {damage};
 		forEachBuff(b->dmg[0] = b.attackProc(this, enemy, dmg[0]));
+
+		if (!(enemy instanceof NPC)) {
+			for (Item item : getBelongings()) {
+				if (item.isEquipped(this)) {
+					item.ownerDoesDamage(damage);
+				}
+			}
+		}
+
+		int d = level().distance(getPos(), enemy.getPos());
+
+		if(d<=getActiveWeapon().range()) {
+			getActiveWeapon().attackProc(this, enemy, damage);
+		}
+
+		if(d<=getSecondaryWeapon().range()) {
+			getSecondaryWeapon().attackProc(this, enemy, damage);
+		}
+
 		return dmg[0];
 	}
 
@@ -1502,7 +1522,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void teleportTo(Position target) {
 	}
 
-	private Map<String, String> layersOverrides =  new HashMap<>();
+	private final Map<String, String> layersOverrides =  new HashMap<>();
 
     public Map<String, String> getLayersOverrides() {
         return layersOverrides;

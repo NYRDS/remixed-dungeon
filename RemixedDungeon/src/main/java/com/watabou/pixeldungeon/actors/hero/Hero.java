@@ -65,7 +65,6 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -443,22 +442,6 @@ public class Hero extends Char {
 			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Wait));
 		}
 		restoreHealth = tillHealthy;
-	}
-
-	@Override
-	public int attackProc(@NotNull Char enemy, int damage) {
-
-		damage = super.attackProc(enemy,damage);
-
-		if (!(enemy instanceof NPC)) {
-			for (Item item : getBelongings()) {
-				if (item.isEquipped(this)) {
-					item.ownerDoesDamage(damage);
-				}
-			}
-		}
-
-		return damage;
 	}
 
 	@Override
