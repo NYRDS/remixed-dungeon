@@ -474,7 +474,7 @@ public class Dungeon {
         } else if (WndResurrect.instance != null) {
 
             WndResurrect.instance.hide();
-            Hero.reallyDie(WndResurrect.causeOfDeath);
+            Hero.reallyDie(hero, WndResurrect.causeOfDeath);
         } else {
             EventCollector.logException(new Exception("spurious save"));
         }

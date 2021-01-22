@@ -797,7 +797,7 @@ public class Hero extends Char {
 				this.setSkillPoints(0);
 				GameScene.show(new WndResurrect(null, cause));
 			} else {
-				reallyDie(cause);
+				reallyDie(this, cause);
 			}
 		} else {
 			while (getBelongings().removeItem(ankh)) {
@@ -811,14 +811,14 @@ public class Hero extends Char {
 		lastAction = null;
 	}
 
-	private static void reallyReallyDie(Object cause) {
+	private static void reallyReallyDie(Hero hero,Object cause) {
 		Dungeon.level.discover();
 
-		Bones.leave();
+		Bones.leave(hero);
 
 		Dungeon.observe();
 
-		Dungeon.hero.getBelongings().identify();
+		hero.getBelongings().identify();
 
 		GameScene.gameOver();
 
@@ -829,14 +829,14 @@ public class Hero extends Char {
 		Dungeon.gameOver();
 	}
 
-	public static void reallyDie(final Object cause) {
+	public static void reallyDie(Hero hero,final Object cause) {
 
-		if (Dungeon.hero.getDifficulty() < 2 && !Game.isPaused()) {
+		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
 			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)));
 			return;
 		}
 
-		reallyReallyDie(cause);
+		reallyReallyDie(hero,cause);
 	}
 
 	@Override

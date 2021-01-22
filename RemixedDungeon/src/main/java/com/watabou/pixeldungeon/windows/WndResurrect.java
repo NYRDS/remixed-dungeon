@@ -84,7 +84,7 @@ public class WndResurrect extends Window {
 			protected void onClick() {
 				hide();
 				Dungeon.deleteGame(false);
-				Hero.reallyDie( WndResurrect.causeOfDeath );
+				Hero.reallyDie(Dungeon.hero, WndResurrect.causeOfDeath );
 			}
 		};
 		btnNo.setRect( 0, btnYes.bottom() + GAP, width, BTN_HEIGHT );
